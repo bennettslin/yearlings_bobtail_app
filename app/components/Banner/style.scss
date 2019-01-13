@@ -29,7 +29,7 @@
 
     .DW__phone
     & {
-        top: $js__height__menu__phone;
+        top: $js__height__menu__twoRowMenu;
     }
 }
 
@@ -38,19 +38,4 @@
     padding: 0 5px;
 
     justify-content: space-between;
-
-    // .RW__twoRowMenu
-    // & {
-    //     font-size: 0.85em;
-    // }
-
-    // .PlW__song
-    // .RW__twoRowMenu
-    // .ShW__overlayShown
-    // &,
-    // .RW__twoRowMenu
-    // .ShW__lyricExpanded
-    // & {
-    //     opacity: 0;
-    // }
 }

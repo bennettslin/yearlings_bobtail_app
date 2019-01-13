@@ -1,7 +1,6 @@
 import {
     LS_HEIGHT_MENU,
-    LS_TOP_OFFSET_TWO_ROW_MENU,
-    LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
+    LS_TOP_TWO_ROW_MENU,
     LS_HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
@@ -14,7 +13,7 @@ import {
  * STAGE *
  *********/
 
-const _getEarColumnHeight = (
+const _getLyricColumnHeight = (
     deviceWidthIndex,
     isHeightlessLyric,
     windowHeight
@@ -33,23 +32,19 @@ export const getCentreFieldHeight = ({
     windowHeight,
     isHeightlessLyric
 }) => {
-    const earColumnHeight = _getEarColumnHeight(
-        deviceWidthIndex, isHeightlessLyric, windowHeight
+    const lyricColumnHeight = _getLyricColumnHeight(
+        deviceWidthIndex,
+        isHeightlessLyric,
+        windowHeight
     )
 
     let menuHeight = LS_HEIGHT_MENU
 
     if (getIsTwoRowMenu(deviceWidthIndex)) {
-
-        if (getIsPhoneWidth(deviceWidthIndex)) {
-            menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU_PHONE
-
-        } else {
-            menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU
-        }
+        menuHeight = LS_TOP_TWO_ROW_MENU
     }
 
-    return windowHeight - menuHeight - earColumnHeight
+    return windowHeight - menuHeight - lyricColumnHeight
 }
 
 export const getCeilingFloorHeight = ({
@@ -61,7 +56,7 @@ export const getCeilingFloorHeight = ({
 }) => {
 
     const
-        earColumnHeight = _getEarColumnHeight(
+        lyricColumnHeight = _getLyricColumnHeight(
             deviceWidthIndex,
             isHeightlessLyric,
             windowHeight
@@ -77,13 +72,13 @@ export const getCeilingFloorHeight = ({
             windowHeight
             - centreFieldHeight
             + stageTop
-            - earColumnHeight,
+            - lyricColumnHeight,
 
         floorHeight =
             centreFieldHeight
             - stageTop
             - stageHeight * 0.9 // Overlap part of stage scene.
-            + earColumnHeight
+            + lyricColumnHeight
 
     return {
         ceilingHeight: Number(ceilingHeight.toFixed(2)),
@@ -114,7 +109,7 @@ export const getLyricHeightRatio = ({
 
     const rawHeight = (
         windowHeight
-        - LS_TOP_OFFSET_TWO_ROW_MENU_PHONE
+        - LS_TOP_TWO_ROW_MENU
         - stageHeight
     ) / windowHeight
 

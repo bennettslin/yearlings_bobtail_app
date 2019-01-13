@@ -1,12 +1,8 @@
-import {
-    getIsMiniWidth,
-    getIsDesktopWidth
-} from 'helpers/responsive'
+import { getIsDesktopWidth } from 'helpers/responsive'
 
 import {
     LS_HEIGHT_MENU,
-    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE,
-    LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
+    LS_TOP_TWO_ROW_MENU
 } from 'constants/responsive'
 
 const _getLyricSectionRect = ({
@@ -35,13 +31,7 @@ const _getLyricSectionRect = ({
         top = windowHeight * (1 - lyricHeightRatio)
 
     } else if (isTwoRowMenu) {
-
-        if (getIsMiniWidth(deviceWidthIndex)) {
-            top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU
-
-        } else {
-            top = LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE
-        }
+        top = LS_TOP_TWO_ROW_MENU
 
     } else {
         // Lyric is expanded in tablet or mini.

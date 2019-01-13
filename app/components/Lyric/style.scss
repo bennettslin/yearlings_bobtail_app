@@ -36,25 +36,15 @@
         z-index: $zIndex__lyricColumn;
     }
 
-    .DW__mobileWidth
-    .PlW__song
     .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__height__menu});
     }
 
-    .PlW__song
     .RW__twoRowMenu
     .ShW__lyricExpanded
     & {
-        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
-    }
-
-    .DW__phone
-    .PlW__song
-    .ShW__lyricExpanded
-    & {
-        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
+        height: calc(100% - #{$js__top__twoRowMenu});
     }
 }
 

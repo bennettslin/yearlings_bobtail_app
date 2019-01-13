@@ -54,7 +54,10 @@ const _getLeftShelfOverflow = (deviceWidthIndex) => {
     return (toggleButtonWidth + LS_MARGIN_THIN)
 }
 
-const _getCentreFieldWidth = (deviceWidthIndex, windowWidth) => {
+const _getCentreFieldWidth = (
+    deviceWidthIndex,
+    windowWidth
+) => {
     let lyricWidth = 0,
         overflowPercentage = 1
 
@@ -83,7 +86,10 @@ export const getStageCoordinates = ({
         leftShelfOverflow =
             _getLeftShelfOverflow(deviceWidthIndex),
 
-        centreFieldWidth = _getCentreFieldWidth(deviceWidthIndex, windowWidth) - leftShelfOverflow,
+        centreFieldWidth = _getCentreFieldWidth(
+            deviceWidthIndex,
+            windowWidth
+        ) - leftShelfOverflow,
 
         isPhoneWidth = getIsPhoneWidth(deviceWidthIndex),
 

@@ -8,8 +8,14 @@
     max-width: $js__width__laptop;
 
     // These calculations are just kind of arbitrary.
-    width: calc(100% - #{$js__length__iconLarge} * 2 - #{$js__padding__popupContent__wide} * 2);
-    height: calc(100% - #{$js__length__iconLarge} * 1.25);
+    width: calc(
+        100%
+        - #{$js__length__iconLarge * 2 + $js__padding__popupContent__wide * 2}
+    );
+    height: calc(
+        100%
+        - #{$js__length__iconLarge * 1.25}
+    );
 
     .DW__phoneOrMiniWidth
     & {
@@ -90,12 +96,18 @@
 
     // Establish max height for popups that are not full size.
     // overflow: scroll;
-    max-height: calc(100vh - #{$js__height__menu} - #{$js__margin__thin} * 2);
+    max-height: calc(
+        100vh
+        - #{$js__height__menu + $js__margin__thin * 2}
+    );
 
     .DW__phone
     & {
         // Make room for popup buttons, which are at the bottom in phone.
-        max-height: calc(100vh - #{$js__topOffsetTruncated__twoRowMenu__phone} - #{$js__length__icon} * 1.25);
+        max-height: calc(
+            100vh
+            - #{$js__top__twoRowMenu + $js__length__icon * 1.25}
+        );
     }
 }
 

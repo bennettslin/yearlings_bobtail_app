@@ -19,22 +19,9 @@
         height: calc(100% - #{$js__height__menu});
     }
 
-    .DW__phone
+    .RW__twoRowMenu
     & {
-        top: $js__topOffsetTruncated__twoRowMenu__phone;
-        height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu__phone});
+        top: $js__top__twoRowMenu;
+        height: calc(100% - #{$js__top__twoRowMenu});
     }
-}
-
-// Always apply this styling for OverlayPopups.
-.RW__twoRowMenu
-.topHeight__overlayPopups,
-
-// Only apply this styling for OverviewLogue in mobile.
-.DW__mobileWidth
-.RW__twoRowMenu
-.topHeight__overlayPopups__mobile {
-
-    top: $js__topOffsetTruncated__twoRowMenu;
-    height: calc(100% - #{$js__topOffsetTruncated__twoRowMenu});
 }

@@ -26,12 +26,6 @@
 
         top: -$js__height__nav;
     }
-
-    .DW__mobileWidth
-    .RW__twoRowMenu
-    & {
-        top: -$js__height__nav - $js__height__banner__twoRowMenu__truncated;
-    }
 }
 
 .NavColumn__right {
