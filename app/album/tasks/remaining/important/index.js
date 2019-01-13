@@ -30,9 +30,9 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `No carousel in low processor.`,
+        taskName: `No carousel in low processor. This should include a fix for going straight to nav when dots are deselected.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     },
     {
         taskName: `Add title to lyric column in desktop. Also choose font.`,
