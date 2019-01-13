@@ -45,9 +45,8 @@ $js__width__menu__desktopCentre: 720px;
     .PlW__logue
     &,
 
-    // In desktop, also centre menu mainTop in overlay when lower processor.
-    .DW__desktopWidth.DW__lowerProcessor
-    .PlW__song
+    // In desktop, also centre menu mainTop in overlay.
+    .DW__desktopWidth
     .ShW__overlayShown
     & {
         max-width: $js__width__menu__desktopCentre;
@@ -58,13 +57,9 @@ $js__width__menu__desktopCentre: 720px;
      * centred. Override them when it's not. Not happy about doing it this way,
      * but I wasn't able to keep the animation smooth in Safari otherwise.
      */
-    .DW__desktopWidth.DW__lowerProcessor
+    .DW__desktopWidth
     .PlW__song
     .ShW__overlayHidden
-    &,
-
-    .DW__desktopWidth.DW__higherProcessor
-    .PlW__song
     & {
         // This keeps the menu mainTop to the right.
         margin: 0 !important;
