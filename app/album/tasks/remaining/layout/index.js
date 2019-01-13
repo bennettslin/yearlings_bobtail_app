@@ -1,4 +1,15 @@
 export default [
+    {
+        taskName: `Fix Underline gradient mask.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Consider whether to transition slider hide for anchor text and underline.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Buttons and dots UI.
     {
         taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs.`,
@@ -45,8 +56,13 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Figure out VerseTracker gradient.`,
+        taskName: `Finalise cursor UI, including VerseTracker gradient.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Finalise slider UI.`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

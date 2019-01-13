@@ -4435,5 +4435,10 @@ export default [
         taskName: `Clicking autoScroll in mobile doesn't turn on autoScroll the first time. It's because automatic scrolling registers the scrolling event. Solution is to listen for ontouchmove, not scroll, event when in mobile.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Begin work for low processor mode. Include not mounting score, and fixing verseBar determination and autoScroll in mobile.`,
+        workedHours: 10,
+        neededHours: 10
     }
 ]

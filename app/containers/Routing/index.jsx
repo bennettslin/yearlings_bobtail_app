@@ -141,6 +141,7 @@ class RoutingContainer extends PureComponent {
             songIndex, verseIndex, annotationIndex
         )
 
+        // TODO: Why does changing verse or annotation not add to history, but changing song does?
         this.props.history.replace(pathName)
     }
 
