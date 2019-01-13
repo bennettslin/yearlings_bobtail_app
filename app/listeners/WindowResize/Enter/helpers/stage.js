@@ -98,7 +98,6 @@ export const getStageCoordinates = ({
 
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,
-            windowWidth,
             windowHeight,
             isHeightlessLyric
         }) - navHeight,

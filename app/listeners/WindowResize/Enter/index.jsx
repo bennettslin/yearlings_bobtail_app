@@ -101,7 +101,6 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
             } = getCeilingFloorHeight({
                 deviceWidthIndex,
-                windowWidth,
                 windowHeight,
                 stageHeight,
                 stageTop,
@@ -147,10 +146,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth
             }),
-            isTwoRowMenu: getIsTwoRowMenu({
-                deviceWidthIndex,
-                windowWidth
-            }),
+            isTwoRowMenu: getIsTwoRowMenu(deviceWidthIndex),
             showShrunkNavIcon: getShowShrunkNavIcon({
                 deviceWidthIndex,
                 windowWidth

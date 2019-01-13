@@ -1,34 +1,14 @@
+$width__childAbout: 120px; // Arbitrary.
+
+$width__childAbout__phone: 80px;
+
 .AboutToggle,
 .Button__aboutSize {
     height: 100%;
 }
 
 .AboutToggle {
-
-    .RW__oneRowMenu
-    & {
-        padding: $js__margin__thin 0 $js__margin__thin $js__margin__thin;
-        box-sizing: border-box;
-    }
-}
-
-.AboutToggleButton__animatable {
-
-    transition:
-        top $animationDuration__default,
-        opacity $animationDuration__default;
-
-    .PlW__song
-    .ShW__overlayShown
-    & {
-        top: -$js__height__menu;
-        opacity: 0;
-    }
-}
-
-.AboutToggle__inAudio {
-
-    width: $js__width__childAbout;
+    width: $width__childAbout;
 
     .DW__phone
     & {

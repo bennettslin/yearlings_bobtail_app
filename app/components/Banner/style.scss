@@ -1,10 +1,9 @@
-$height__audioBanner__display:
-    ($js__height__menu - $paddingY__audio * 2) / 2;
+@import "./Timer/style";
 
-.AudioBanner {
-    flex-grow: 10;
+.Banner {
+    height: 100%;
+    flex-grow: 1;
 
-    min-width: $js__minWidth__audioBanner;
     line-height: 1em;
 
     border-radius: $borderRadius__narrow;
@@ -23,38 +22,21 @@ $height__audioBanner__display:
     }
 }
 
-.AudioBanner__belowMenu {
+.Banner__belowMenu {
     top: $js__height__menu;
     width: calc(100% - #{$js__margin__thin * 2});
-    height:
-        $js__height__banner__twoRowMenu
-        - $js__margin__thin;
-
     margin: 0 $js__margin__thin $js__margin__thin;
-
-    transition:
-        height $animationDuration__default;
 
     .DW__phone
     & {
         top: $js__height__menu__phone;
     }
-
-    .PlW__song
-    .ShW__overlayShown
-    &,
-    .PlW__song
-    .ShW__lyricExpanded
-    & {
-        height: $js__height__banner__twoRowMenu__truncated;
-    }
 }
 
-.AudioBannerDisplay {
+.BannerDisplay {
     box-sizing: border-box;
     padding: 0 5px;
 
-    height: $height__audioBanner__display;
     justify-content: space-between;
 
     .RW__twoRowMenu

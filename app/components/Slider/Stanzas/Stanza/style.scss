@@ -10,8 +10,9 @@ $width__sliderStanzaTab: 9px;
     position: absolute;
 
     // Default height when not cursored.
-    height: 50%;
-    transition: height $animationDuration__default;
+    height: $js__length__icon;
+    transition:
+        height $animationDuration__default;
 
     bottom: 0;
     border-top-right-radius: $borderRadius__narrower;

@@ -2,10 +2,7 @@ import {
     LS_HEIGHT_MENU,
     LS_TOP_OFFSET_TWO_ROW_MENU,
     LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
-    LS_HEIGHT_LYRIC_COLLAPSED,
-
-    TWO_ROW_MENU_BREAKPOINT_LAPTOP,
-    TWO_ROW_MENU_BREAKPOINT_MINI
+    LS_HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
 import {
@@ -27,21 +24,12 @@ const _getEarColumnHeight = (
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
 }
 
-export const getIsTwoRowMenu = ({
-    deviceWidthIndex, windowWidth
-}) => {
-
-    const isDesktopWidth = getIsDesktopWidth(deviceWidthIndex),
-        twoRowMenuBreakpoint = isDesktopWidth ?
-            TWO_ROW_MENU_BREAKPOINT_LAPTOP :
-            TWO_ROW_MENU_BREAKPOINT_MINI
-
-    return windowWidth < twoRowMenuBreakpoint
+export const getIsTwoRowMenu = (deviceWidthIndex) => {
+    return getIsPhoneWidth(deviceWidthIndex)
 }
 
 export const getCentreFieldHeight = ({
     deviceWidthIndex,
-    windowWidth,
     windowHeight,
     isHeightlessLyric
 }) => {
@@ -51,9 +39,7 @@ export const getCentreFieldHeight = ({
 
     let menuHeight = LS_HEIGHT_MENU
 
-    if (getIsTwoRowMenu({
-        deviceWidthIndex, windowWidth
-    })) {
+    if (getIsTwoRowMenu(deviceWidthIndex)) {
 
         if (getIsPhoneWidth(deviceWidthIndex)) {
             menuHeight = LS_TOP_OFFSET_TWO_ROW_MENU_PHONE
@@ -68,7 +54,6 @@ export const getCentreFieldHeight = ({
 
 export const getCeilingFloorHeight = ({
     deviceWidthIndex,
-    windowWidth,
     windowHeight,
     stageHeight,
     stageTop,
@@ -84,7 +69,6 @@ export const getCeilingFloorHeight = ({
 
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,
-            windowWidth,
             windowHeight,
             isHeightlessLyric
         }),

@@ -1,15 +1,7 @@
-/**
- * Needed by JavaScript to calculate scores tips in main breakpoints.
- */
-$minWidth__childAudio: 720px; // Arbitrary.
-$maxWidth__childAudio: 1000px; // Arbitrary.
-
-$js__width__childAbout: 120px; // Arbitrary.
-
-$width__childAbout__phone: 80px;
-
 .Menu {
     height: $js__height__menu;
+
+    z-index: $zIndex__menuField;
 
     .DW__phone
     & {
@@ -17,11 +9,15 @@ $width__childAbout__phone: 80px;
     }
 }
 
-.Menu__responsive {
+.Menu__field {
+    padding: $js__margin__thin;
+    box-sizing: border-box;
+}
+
+.Menu__mainTop {
     position: relative;
     width: 100%;
     height: 100%;
-    z-index: $zIndex__menuField;
 
     display: flex;
     align-items: center;
@@ -54,97 +50,14 @@ $width__childAbout__phone: 80px;
     &.width__mainColumn {
         max-width: $js__width__mini;
     }
-}
 
-.MenuChild {
-    height: 100%;
-}
-
-.MenuChild__about {
-    position: relative;
-
-    width: $js__width__childAbout;
-
-    .RW__twoRowMenu
-    & {
-        /**
-         * Don't bother to show if about in audio. Child component also will
-         * not be rendered.
-         */
-        display: none;
+    // Margin between menu children.
+    & > :not(:last-child) {
+        margin-right: $js__margin__thick;
     }
 }
 
-.MenuChild__audio {
-    $margin__menuChild: 10px;
-
-    // Audio should shrink at a slower rate than about.
-    flex-grow: 10;
-
-    min-width: $minWidth__childAudio;
-    max-width: $maxWidth__childAudio;
-
-    transition: margin $animationDuration__default;
-
-    // Applies to monitor and tablet.
-    margin: 0 $margin__menuChild;
-
-    .DW__laptop
-    &,
-    .DW__mini
-    & {
-        margin: 0 $js__margin__thin;
-    }
-
-    .DW__mobileWidth
-    & {
-        justify-content: flex-end;
-    }
-
-    .DW__mini
-    & {
-        min-width:
-        $js__minWidth__audioButtons__minusPlayer
-        + $js__length__iconLarge__mini
-        + $js__margin__thick * 3
-        + $js__margin__thin;
-    }
-
-    .RW__twoRowMenu
-    & {
-        // If about is hidden, remove audio subfield's left margin.
-        margin-left: 0;
-
-        // Once about is in audio, minWidth doesn't matter.
-        min-width: 0;
-    }
-
-    .PlW__song
-    .ShW__overlayShown
-    & {
-        max-width: 100%;
-        margin-right: 0;
-    }
-
-    .DW__notPhoneWidth
-    .PlW__song
-    .ShW__overlayShown
-    & {
-        margin-left: 0;
-    }
-}
-
-.widths__hiddenInOverlay {
-
-    transition:
-        width $animationDuration__slow,
-        opacity $animationDuration__slow;
-
-    // Specific selector to override access letter opacity.
-    .PlW__song
-    .ShW__overlayShown
-    & {
-        width: 0;
-        opacity: 0;
-    }
+.Menu__lyricTop {
+    padding-left: $margin__scrollbar;
+    padding-right: $margin__scrollbar;
 }

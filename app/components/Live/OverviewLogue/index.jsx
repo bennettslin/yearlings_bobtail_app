@@ -8,6 +8,7 @@ import OverviewPopup from '../../Popups/Overview'
 const OverviewLogue = memo(() => (
     <div className={cx(
         'OverviewLogue',
+        'width__lyricColumn__desktop',
         'position__lyricColumn__desktop',
         'topHeight__overlayPopups__mobile'
     )}>

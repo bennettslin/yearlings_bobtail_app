@@ -54,9 +54,9 @@ class Slider extends PureComponent {
                     onTouchStart: this._handleTouchDown
                 }}
             >
+                <SliderScenes />
                 <SliderTimes />
                 <SliderStanzas />
-                <SliderScenes />
                 <SliderAccess />
                 <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
             </div>

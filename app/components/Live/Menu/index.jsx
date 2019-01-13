@@ -10,25 +10,39 @@ import cx from 'classnames'
 
 import AboutToggle from '../../About/Toggle'
 import Audio from '../../Audio'
+import Banner from '../../Banner'
+import Slider from '../../Slider'
 
 import { getMenuMarginInOverlay } from './helper'
 
 const mapStateToProps = ({
-    viewportStore: { windowWidth }
+    viewportStore: {
+        windowWidth,
+        isDesktopWidth
+    },
+    mobileStore: { isHigherProcessor }
 }) => ({
-    windowWidth
+    windowWidth,
+    isDesktopWidth,
+    isHigherProcessor
 })
 
 class Menu extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        windowWidth: PropTypes.number.isRequired
+        windowWidth: PropTypes.number.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
+        isHigherProcessor: PropTypes.bool.isRequired
     }
 
     render() {
         const
-            { windowWidth } = this.props,
+            {
+                windowWidth,
+                isDesktopWidth,
+                isHigherProcessor
+            } = this.props,
             /**
              * This is necessary because transform animation in Safari is janky.
              */
@@ -44,7 +58,8 @@ class Menu extends PureComponent {
             >
                 <div
                     className={cx(
-                        'Menu__responsive',
+                        'Menu__mainTop',
+                        'Menu__field',
                         'width__mainColumn',
                         'abF'
                     )}
@@ -53,21 +68,23 @@ class Menu extends PureComponent {
                         marginRight: menuMarginInOverlay
                     }}
                 >
-                    <div className={cx(
-                        'MenuChild__about',
-                        'MenuChild',
-                        'widths__hiddenInOverlay'
-                    )}>
-                        <AboutToggle />
-                    </div>
-
-                    <div className={cx(
-                        'MenuChild__audio',
-                        'MenuChild'
-                    )}>
-                        <Audio />
-                    </div>
+                    <AboutToggle />
+                    <Banner />
+                    <Audio />
                 </div>
+
+                {isHigherProcessor && isDesktopWidth && (
+                    <div
+                        className={cx(
+                            'Menu__lyricTop',
+                            'Menu__field',
+                            'width__lyricColumn__desktop',
+                            'abF'
+                        )}
+                    >
+                        <Slider />
+                    </div>
+                )}
             </div>
         )
     }

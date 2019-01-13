@@ -12,10 +12,12 @@ $js__height__audio:
     - $js__margin__thin * 2;
 
 // Arbitrary for now.
-$js__height__banner__twoRowMenu: $js__height__audio;
+$js__height__banner__twoRowMenu:
+    $js__height__audio;
 
 // Arbitrary for now.
-$js__height__banner__twoRowMenu__truncated: $js__height__banner__twoRowMenu / 2;
+$js__height__banner__twoRowMenu__truncated:
+    $js__height__banner__twoRowMenu / 2;
 
 // Two row menu in mini. Includes menu, banner, and slider.
 $js__topOffset__twoRowMenu:
@@ -38,17 +40,17 @@ $js__topOffsetTruncated__twoRowMenu__phone:
     + $js__height__banner__twoRowMenu__truncated;
 
 // Audio.
-$js__minWidth__audioBanner: 320px;
+// $js__minWidth__audioBanner: 320px;
 
-$paddingX__twoRowMenu: 6px;
-$paddingY__audio:
-    ($js__height__menu - $js__height__audio) / 2;
+// $paddingX__twoRowMenu: 6px;
+// $paddingY__audio:
+//     ($js__height__menu - $js__height__audio) / 2;
 
 /**
  * Three regular buttons, plus two thin margins between player buttons, plus
  * one thick margin between player buttons and option button. Should be 232px.
  */
-$js__minWidth__audioButtons__minusPlayer:
-    $js__length__icon * 3
-    + $js__margin__thin * 2
-    + $js__margin__thick;
+// $js__minWidth__audioButtons__minusPlayer:
+//     $js__length__icon * 3
+//     + $js__margin__thin * 2
+//     + $js__margin__thick;

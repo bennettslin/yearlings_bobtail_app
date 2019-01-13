@@ -97,6 +97,7 @@ class Lyric extends PureComponent {
                         {...{
                             className: cx(
                                 'Lyric',
+                                'width__lyricColumn__desktop',
                                 'position__lyricColumn__desktop',
                                 'position__lyricColumn__mobile',
                                 'gradientMask__lyricColumn__desktop'
