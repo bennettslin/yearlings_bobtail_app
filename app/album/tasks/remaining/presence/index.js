@@ -18,7 +18,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Cube and presence transition order`,
+        taskName: `Cube and presence transition order.`,
         workedHours: 0,
         neededHours: 8
     },

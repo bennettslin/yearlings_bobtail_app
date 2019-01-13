@@ -203,5 +203,4 @@ class TempGlobalAnnotations extends PureComponent {
     }
 }
 
-
 export default TempGlobalAnnotations

@@ -2,7 +2,6 @@ import {
     GRAVESTONE
 } from '../../../fixtureKeys'
 
-
 const ARRANGEMENTS_MAP = {
     [GRAVESTONE]: {
         yIndex: 5,

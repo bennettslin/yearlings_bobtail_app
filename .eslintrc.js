@@ -86,7 +86,7 @@ module.exports = {
         ],
         "comma-style": [
             'error',
-            "last"
+            'last'
         ],
         "complexity": 0,
         "computed-property-spacing": [
@@ -185,7 +185,10 @@ module.exports = {
         "no-mixed-requires": 'off',
         "no-multi-spaces": 'off',
         "no-multi-str": 'error',
-        "no-multiple-empty-lines": 'error',
+        "no-multiple-empty-lines": [
+            'error',
+            { max: 1 }
+        ],
         "no-native-reassign": 'error',
         "no-negated-condition": 'off',
         "no-negated-in-lhs": 'error',

@@ -40,7 +40,6 @@ const _getAccessibleWikiWormholesLength = ({
     }
 }
 
-
 export const getAnnotationTitleData = ({
     songIndex,
     annotationIndex,

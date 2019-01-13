@@ -8,7 +8,6 @@ import { HYPHENATED_SONG_PATHS } from '../../constants/paths'
 const _getIndexForPrefix = (string, prefix = '') => {
     // For example, if prefix is 'a' and string is 'a5', scrubbedString is '5.'
 
-
     const underscoreIndex = string.indexOf('_'),
 
         // Remove anything after underscore in song index.
@@ -122,7 +121,6 @@ export const getValidRoutingIndices = (routingParamString = '') => {
         ) {
             routingIndicesObject.routingVerseIndex = rawVerseIndex
         }
-
 
         /**
          * Routing annotation index is optional.

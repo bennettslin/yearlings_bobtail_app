@@ -3,7 +3,6 @@ import {
     VASELINE
 } from '../../../fixtureKeys'
 
-
 const ARRANGEMENTS_MAP = {
     [NUDE_DRAWINGS]: {
         yIndex: 5,

@@ -2,7 +2,6 @@ import {
     EVIAN_BOTTLES
 } from '../../../fixtureKeys'
 
-
 const ARRANGEMENTS_MAP = {
     [EVIAN_BOTTLES]: {
         yIndex: 3,

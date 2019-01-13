@@ -73,7 +73,6 @@ const TipsIcon = ({
     )
 }
 
-
 TipsIcon.propTypes = propTypes
 
 export default TipsIcon

@@ -8,7 +8,6 @@ import {
     LIZ_PHONE_BASE_REFLECTION
 } from '../../../fixtureKeys'
 
-
 const ARRANGEMENTS_MAP = {
     [LIZ_PHONE]: {
         yIndex: 4,

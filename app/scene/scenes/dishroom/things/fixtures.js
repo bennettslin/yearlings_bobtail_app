@@ -6,7 +6,6 @@ import {
     DISH_PILE
 } from '../../../fixtureKeys'
 
-
 const ARRANGEMENTS_MAP = {
     [CONVEYOR_BELT]: {
         yIndex: 1,

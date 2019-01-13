@@ -4,7 +4,6 @@ import {
     GUITAR_CASE_OPEN
 } from '../../../fixtureKeys'
 
-
 const ARRANGEMENTS_MAP = {
     [STAGE_MIC_SIDE]: {
         yIndex: 3,
