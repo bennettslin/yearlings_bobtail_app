@@ -42,7 +42,7 @@ class ScrollRenderListener extends PureComponent {
             this.props.updateScrollCarouselStore({
                 queuedScrollCarouselLog: 'Carousel entered.',
                 queuedScrollCarouselIndex: selectedAnnotationIndex || 1,
-                queuedScrollCarouselFromRender: true
+                queuedScrollCarouselNoDuration: true
             })
         }
     }
@@ -63,7 +63,7 @@ class ScrollRenderListener extends PureComponent {
             this.props.updateScrollLyricStore({
                 queuedScrollLyricLog: 'Lyric entered.',
                 queuedScrollLyricByVerse: true,
-                queuedScrollLyricFromRender: true,
+                queuedScrollLyricNoDuration: true,
                 queuedScrollLyricAlways: true,
                 queuedSceneChangeExitScrollCallback: true
             })

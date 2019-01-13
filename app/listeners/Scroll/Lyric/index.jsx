@@ -2,7 +2,10 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSceneStore } from 'flux/scene/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import {
+    updateScrollLyricStore,
+    resetScrollLyricQueue
+} from 'flux/scrollLyric/action'
 import {
     updateVerseBarsStore,
     resetVerseBars
@@ -26,7 +29,7 @@ class ScrollLyricListener extends PureComponent {
         queuedScrollLyricByVerse: PropTypes.bool.isRequired,
         queuedScrollLyricIndex: PropTypes.number.isRequired,
         queuedScrollLyricAlways: PropTypes.bool.isRequired,
-        queuedScrollLyricFromRender: PropTypes.bool.isRequired,
+        queuedScrollLyricNoDuration: PropTypes.bool.isRequired,
         queuedScrollLyricFromAutoScroll: PropTypes.bool.isRequired,
         queuedSceneChangeExitScrollCallback: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -40,6 +43,7 @@ class ScrollLyricListener extends PureComponent {
         updateSceneStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
+        resetScrollLyricQueue: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
 
         // From parent.
@@ -109,7 +113,7 @@ class ScrollLyricListener extends PureComponent {
                         queuedScrollLyricLog,
                         queuedScrollLyricByVerse,
                         queuedScrollLyricIndex,
-                        queuedScrollLyricFromRender,
+                        queuedScrollLyricNoDuration,
                         deviceWidthIndex,
                         selectedVerseIndex,
                         isSelectedLogue
@@ -134,7 +138,7 @@ class ScrollLyricListener extends PureComponent {
                     scrollParent: this.lyricParentElement,
                     scrollChildren: this._getScrollElementsArray(scrollClass),
                     index,
-                    doScrollImmediately: queuedScrollLyricFromRender,
+                    noDuration: queuedScrollLyricNoDuration,
                     deviceWidthIndex,
                     isLyricExpanded,
                     isSelectedLogue,
@@ -154,7 +158,7 @@ class ScrollLyricListener extends PureComponent {
                 }
             }
 
-            this.props.updateScrollLyricStore()
+            this.props.resetScrollLyricQueue()
         }
     }
 
@@ -220,7 +224,7 @@ const mapStateToProps = ({
         queuedScrollLyricByVerse,
         queuedScrollLyricIndex,
         queuedScrollLyricAlways,
-        queuedScrollLyricFromRender,
+        queuedScrollLyricNoDuration,
         queuedScrollLyricFromAutoScroll,
         queuedSceneChangeExitScrollCallback
     },
@@ -240,7 +244,7 @@ const mapStateToProps = ({
     queuedScrollLyricByVerse,
     queuedScrollLyricIndex,
     queuedScrollLyricAlways,
-    queuedScrollLyricFromRender,
+    queuedScrollLyricNoDuration,
     queuedScrollLyricFromAutoScroll,
     queuedSceneChangeExitScrollCallback,
     selectedVerseIndex,
@@ -258,6 +262,7 @@ export default connect(
         updateSceneStore,
         updateScrollLyricStore,
         updateVerseBarsStore,
+        resetScrollLyricQueue,
         resetVerseBars
     }
 )(ScrollLyricListener)

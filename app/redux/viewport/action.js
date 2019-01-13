@@ -29,9 +29,7 @@ export const updateViewportStore = (payload = VIEWPORT_DEFAULTS) => {
     })
 }
 
-export const resetViewportForTransition = () => {
-    return ({
-        type: VIEWPORT_STORE,
-        payload: VIEWPORT_TRANSITION_DEFAULTS
-    })
-}
+export const resetViewportForTransition = () => ({
+    type: VIEWPORT_STORE,
+    payload: VIEWPORT_TRANSITION_DEFAULTS
+})

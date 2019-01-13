@@ -211,17 +211,22 @@ export const SCENE_DEFAULTS = {
 export const SCROLL_CAROUSEL_DEFAULTS = {
     queuedScrollCarouselLog: '',
     queuedScrollCarouselIndex: 0,
-    queuedScrollCarouselFromRender: false
+    queuedScrollCarouselNoDuration: false
 }
 
-export const SCROLL_LYRIC_DEFAULTS = {
+export const SCROLL_LYRIC_QUEUE_DEFAULTS = {
     queuedScrollLyricLog: '',
     queuedScrollLyricByVerse: false,
     queuedScrollLyricIndex: -1,
     queuedScrollLyricAlways: false,
-    queuedScrollLyricFromRender: false,
+    queuedScrollLyricNoDuration: false,
     queuedScrollLyricFromAutoScroll: false,
     queuedSceneChangeExitScrollCallback: false
+}
+
+export const SCROLL_LYRIC_DEFAULTS = {
+    ...SCROLL_LYRIC_QUEUE_DEFAULTS,
+    isScrollingLyric: false
 }
 
 const storedTime = getStartTimeForVerseIndex(

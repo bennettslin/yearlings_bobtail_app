@@ -4,18 +4,13 @@ import { getDefinedOnlyPayload } from '../actionHelper'
 import { ANNOTATION_STORE } from '../storeKeys'
 import { ANNOTATION_DEFAULTS } from '../defaultStates'
 
-export const updateAnnotationStore = (payload = ANNOTATION_DEFAULTS) => {
+export const updateAnnotationStore = (payload = ANNOTATION_DEFAULTS) => ({
+    type: ANNOTATION_STORE,
+    payload: getDefinedOnlyPayload(payload)
+})
 
-    return ({
-        type: ANNOTATION_STORE,
-        payload: getDefinedOnlyPayload(payload)
-    })
-}
+export const resetAnnotationQueue = () => ({
+    type: ANNOTATION_STORE,
+    payload: ANNOTATION_DEFAULTS
+})
 
-export const resetAnnotationQueue = () => {
-
-    return ({
-        type: ANNOTATION_STORE,
-        payload: ANNOTATION_DEFAULTS
-    })
-}

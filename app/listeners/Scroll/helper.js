@@ -73,7 +73,7 @@ export const scrollElementIntoView = ({
     scrollParent,
     scrollChildren,
     index,
-    doScrollImmediately,
+    noDuration,
     deviceWidthIndex,
     windowWidth,
     isLyricExpanded,
@@ -85,7 +85,7 @@ export const scrollElementIntoView = ({
     }
 
     const
-        time = doScrollImmediately ? 0 : 500,
+        time = noDuration ? 0 : 500,
         scrollElement = scrollChildren[index]
 
     let element = scrollElement

@@ -7,9 +7,7 @@ import { SCROLL_CAROUSEL_DEFAULTS } from '../defaultStates'
 export const updateScrollCarouselStore = (
     payload = SCROLL_CAROUSEL_DEFAULTS
 
-) => {
-    return ({
-        type: SCROLL_CAROUSEL_STORE,
-        payload: getDefinedOnlyPayload(payload)
-    })
-}
+) => ({
+    type: SCROLL_CAROUSEL_STORE,
+    payload: getDefinedOnlyPayload(payload)
+})
