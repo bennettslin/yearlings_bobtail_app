@@ -90,7 +90,7 @@ export const logAccess = (log) => {
 export const logEvent = (componentName, e) => {
     const { type } = e
     _logInfo({
-        log: `Event ${type} from ${componentName}.`,
+        log: `Event "${type}" from ${componentName}.`,
         styles: EVENT_STYLE
     })
 }

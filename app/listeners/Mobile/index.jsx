@@ -14,39 +14,34 @@ class MobileListener extends PureComponent {
     }
 
     componentDidMount() {
-        this._checkDesktopProcessor()
-        this._checkDeviceSupport()
+        this._checkHigherProcessor()
+        this._checkTouchSupport()
     }
 
-    _checkDesktopProcessor() {
+    _checkHigherProcessor() {
         /**
          * FIXME: This uses user agent sniffing to detect whether this is a
-         * mobile device, assuming that mobile devices have low processing
-         * power. This approach is very not future-proof!
+         * mobile device, assuming that mobile devices have lower processing
+         * power. This approach is not accurate to begin with, and very much
+         * not future-proof!
          */
 
         const
             md = new MobileDetect(window.navigator.userAgent),
             isMobileDevice = md.mobile()
 
-        this.props.updateMobileStore({ isDesktopProcessor: !isMobileDevice })
+        this.props.updateMobileStore({ isHigherProcessor: !isMobileDevice })
     }
 
-    _checkDeviceSupport() {
+    _checkTouchSupport() {
         const
             isTouchSupported =
                 // http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml
                 'ontouchstart' in window ||
                 navigator.maxTouchPoints > 0 ||
-                navigator.msMaxTouchPoints > 0,
+                navigator.msMaxTouchPoints > 0
 
-            isWheelSupported =
-                'onwheel' in window
-
-        this.props.updateMobileStore({
-            isTouchSupported,
-            isWheelSupported
-        })
+        this.props.updateMobileStore({ isTouchSupported })
     }
 
     render() {

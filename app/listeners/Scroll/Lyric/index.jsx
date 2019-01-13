@@ -2,14 +2,8 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSceneStore } from 'flux/scene/action'
-import {
-    updateScrollLyricStore,
-    resetScrollLyricQueue
-} from 'flux/scrollLyric/action'
-import {
-    updateVerseBarsStore,
-    resetVerseBars
-} from 'flux/verseBars/action'
+import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { updateVerseBarsStore } from 'flux/verseBars/action'
 
 import {
     scrollElementIntoView,
@@ -43,8 +37,6 @@ class ScrollLyricListener extends PureComponent {
         updateSceneStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
-        resetScrollLyricQueue: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -93,7 +85,7 @@ class ScrollLyricListener extends PureComponent {
                  * the scene change callback right away.
                  */
                 if (queuedSceneChangeExitScrollCallback) {
-                    this._completeSceneChangeExitScroll()
+                    this._completeSceneChangeExit()
                 }
 
             } else if (
@@ -142,37 +134,22 @@ class ScrollLyricListener extends PureComponent {
                     deviceWidthIndex,
                     isLyricExpanded,
                     isSelectedLogue,
-                    callback:
-                        queuedSceneChangeExitScrollCallback ?
-                            this._completeSceneChangeExit :
-                            this._determineVerseBars
+                    ...queuedSceneChangeExitScrollCallback && {
+                        callback: this._setTimeoutForSceneChangeExit
+                    }
                 })
-
-                if (queuedSceneChangeExitScrollCallback) {
-                    /**
-                     * We know we're scrolling to selected verse, so just reset
-                     * verse bars here. We'll then forego determining them in
-                     * callback.
-                     */
-                    this.props.resetVerseBars()
-                }
             }
 
-            this.props.resetScrollLyricQueue()
+            this.props.updateScrollLyricStore()
         }
     }
 
-    _completeSceneChangeExit = () => {
+    _setTimeoutForSceneChangeExit = () => {
         // This timeout is necessary to fully complete scroll animation.
-        setTimeout(this._completeSceneChangeExitScroll, 0)
+        setTimeout(this._completeSceneChangeExit, 0)
     }
 
-    _determineVerseBars = () => {
-        // Determine verse bars.
-        this.props.updateVerseBarsStore({ queuedDetermineVerseBars: true })
-    }
-
-    _completeSceneChangeExitScroll = () => {
+    _completeSceneChangeExit = () => {
         this.props.updateSceneStore({ didSceneScrollExit: true })
     }
 
@@ -261,8 +238,6 @@ export default connect(
     {
         updateSceneStore,
         updateScrollLyricStore,
-        updateVerseBarsStore,
-        resetScrollLyricQueue,
-        resetVerseBars
+        updateVerseBarsStore
     }
 )(ScrollLyricListener)

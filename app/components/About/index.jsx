@@ -7,20 +7,17 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = ({
     mobileStore: {
-        isDesktopProcessor,
-        isTouchSupported,
-        isWheelSupported
+        isHigherProcessor,
+        isTouchSupported
     }
 }) => ({
-    isDesktopProcessor,
-    isTouchSupported,
-    isWheelSupported
+    isHigherProcessor,
+    isTouchSupported
 })
 
 const About = memo(({
-    isDesktopProcessor,
-    isTouchSupported,
-    isWheelSupported
+    isHigherProcessor,
+    isTouchSupported
 }) => (
     <div className={cx(
         'About',
@@ -34,21 +31,19 @@ const About = memo(({
         </p>
         {/* TODO: Eventually delete this, of course. */}
         <p>
-            isDesktopProcessor: {isDesktopProcessor ? 'true' : 'false'}
+            isHigherProcessor: {isHigherProcessor ? 'true' : 'false'}
         </p>
         <p>
             isTouchSupported: {isTouchSupported ? 'true' : 'false'}
         </p>
         <p>
-            isWheelSupported: {isWheelSupported ? 'true' : 'false'}
         </p>
     </div>
 ))
 
 About.propTypes = {
-    isDesktopProcessor: PropTypes.bool.isRequired,
-    isTouchSupported: PropTypes.bool.isRequired,
-    isWheelSupported: PropTypes.bool.isRequired
+    isHigherProcessor: PropTypes.bool.isRequired,
+    isTouchSupported: PropTypes.bool.isRequired
 }
 
 export default connect(mapStateToProps)(About)
