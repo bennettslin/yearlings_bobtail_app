@@ -16,6 +16,7 @@ class DeviceWrapper extends PureComponent {
         deviceWidthIndex: PropTypes.number.isRequired,
         isPhoneWidth: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
+        isHigherProcessor: PropTypes.bool.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -27,6 +28,7 @@ class DeviceWrapper extends PureComponent {
                 deviceWidthIndex,
                 isPhoneWidth,
                 isDesktopWidth,
+                isHigherProcessor,
                 children
             } = this.props,
             deviceWidthKey =
@@ -49,6 +51,8 @@ class DeviceWrapper extends PureComponent {
                             'DW__miniOrTabletWidth': !isPhoneWidth,
                             'DW__phoneOrMiniWidth': !isTabletWidth
                         },
+                        isHigherProcessor &&
+                            'DW__higherProcessor',
                         'abF'
                     )
                 }}
@@ -64,11 +68,13 @@ const mapStateToProps = ({
         deviceWidthIndex,
         isPhoneWidth,
         isDesktopWidth
-    }
+    },
+    mobileStore: { isHigherProcessor }
 }) => ({
     deviceWidthIndex,
     isPhoneWidth,
-    isDesktopWidth
+    isDesktopWidth,
+    isHigherProcessor
 })
 
 export default connect(mapStateToProps)(DeviceWrapper)

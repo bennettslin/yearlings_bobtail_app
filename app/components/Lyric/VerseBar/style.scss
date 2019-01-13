@@ -31,31 +31,36 @@
 
 .VerseBar__above {
     margin-top: $js__margin__thin;
+    top: 0;
 
     transition:
-        top $animationDuration__fast,
         transform $animationDuration__fast,
         opacity $animationDuration__fast;
 
     &.VerseBar__shown {
-        top: 0;
         transform: scale(1);
         opacity: 1;
         cursor: pointer;
         z-index: $zIndex__lyricChild__topMost;
     }
+
+    .DW__higherProcessor.DW__desktopWidth
+    & {
+        margin-top:
+            $js__height__menu
+            + $js__margin__thin;
+    }
 }
 
 .VerseBar__below {
     margin-bottom: $js__margin__thin;
+    bottom: 0;
 
     transition:
-        bottom $animationDuration__fast,
         transform $animationDuration__fast,
         opacity $animationDuration__fast;
 
     &.VerseBar__shown {
-        bottom: 0;
         transform: scale(1);
         opacity: 1;
         cursor: pointer;

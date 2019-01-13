@@ -12,6 +12,7 @@ import {
 const _getLyricSectionRect = ({
     deviceWidthIndex,
     windowHeight,
+    isHigherProcessor,
     isLyricExpanded,
     lyricHeightRatio,
     isTwoRowMenu
@@ -21,10 +22,10 @@ const _getLyricSectionRect = ({
 
     if (getIsDesktopWidth(deviceWidthIndex)) {
         /**
-         * If monitor or laptop width, then lyric section rect is simply the
-         * entire window height.
+         * If desktop, accommodate the menu height if it's a desktop processor.
+         * Otherwise, lyric section rect is simply the entire window height.
          */
-        top = 0
+        top = isHigherProcessor ? LS_HEIGHT_MENU : 0
 
     } else if (!isLyricExpanded) {
         /**
@@ -56,6 +57,7 @@ const _getLyricSectionRect = ({
 export const getVerseBarStatus = ({
     deviceWidthIndex,
     windowHeight,
+    isHigherProcessor,
     isLyricExpanded,
     lyricHeightRatio,
     isHeightlessLyric,
@@ -78,6 +80,7 @@ export const getVerseBarStatus = ({
     const lyricSectionRect = _getLyricSectionRect({
             deviceWidthIndex,
             windowHeight,
+            isHigherProcessor,
             isLyricExpanded,
             lyricHeightRatio,
             isTwoRowMenu

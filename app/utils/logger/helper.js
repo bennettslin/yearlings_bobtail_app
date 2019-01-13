@@ -39,7 +39,8 @@ const
         fontSize: '1.1em'
     }),
     EVENT_STYLE = _getStyles({
-        color: '#8ad'
+        color: '#8ad',
+        fontSize: '1em'
     }),
     FOCUS_STYLE = _getStyles({
         color: '#874',

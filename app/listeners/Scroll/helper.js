@@ -14,9 +14,12 @@ const _getLyricTopAlign = (deviceWidthIndex, isLyricExpanded) => {
 
     // If in desktop or lyric column is expanded, set closer to top.
     if (getIsDesktopWidth(deviceWidthIndex) || isLyricExpanded) {
-        return {
-            top: 0.33
-        }
+
+        /**
+         * This doesn't accommodate menu height with desktop processor, but
+         * this is fine for now.
+         */
+        return { top: 0.33 }
 
     // Otherwise set halfway, which is the default.
     } else {

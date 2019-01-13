@@ -11,6 +11,13 @@
 
 .LyricToggle__inLyric {
     top: $margin__scrollbar / 2;
+
+    .DW__higherProcessor.DW__desktopWidth
+    & {
+        top:
+            $js__height__menu
+            + $margin__scrollbar / 2;
+    }
 }
 
 .LyricToggleScroll {

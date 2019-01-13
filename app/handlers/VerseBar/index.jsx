@@ -17,6 +17,7 @@ class VerseBar extends PureComponent {
         queuedVerseBarsTimeout: PropTypes.number.isRequired,
         deviceWidthIndex: PropTypes.number.isRequired,
         windowHeight: PropTypes.number.isRequired,
+        isHigherProcessor: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         lyricHeightRatio: PropTypes.number.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
@@ -104,6 +105,7 @@ class VerseBar extends PureComponent {
         const {
                 deviceWidthIndex,
                 windowHeight,
+                isHigherProcessor,
                 isLyricExpanded,
                 lyricHeightRatio,
                 isHeightlessLyric,
@@ -117,6 +119,7 @@ class VerseBar extends PureComponent {
             const verseBarStatusObject = getVerseBarStatus({
                     deviceWidthIndex,
                     windowHeight,
+                    isHigherProcessor,
                     isLyricExpanded,
                     lyricHeightRatio,
                     isHeightlessLyric,
@@ -156,6 +159,9 @@ const mapStateToProps = ({
         deviceWidthIndex,
         windowHeight
     },
+    mobileStore: {
+        isHigherProcessor
+    },
     responsiveStore: {
         isHeightlessLyric,
         isTwoRowMenu
@@ -175,6 +181,7 @@ const mapStateToProps = ({
     queuedVerseBarsTimeout,
     deviceWidthIndex,
     windowHeight,
+    isHigherProcessor,
     isLyricExpanded,
     lyricHeightRatio,
     isVerseBarAbove,

@@ -90,23 +90,58 @@
 
 .gradientMask__lyricColumn__desktop {
 
-    $gradient__lyric__desktop: linear-gradient(
-        0deg,
-        rgba(0, 0, 0, 0.1),
-        rgba(0, 0, 0, 0) $height__chivalry * 0.25,
-        rgba(0, 0, 0, 0) $height__chivalry * 0.75,
-        rgba(0, 0, 0, 0.4) $height__chivalry,
-        black $height__chivalry * 1.1
+    $gradient__lyric__desktopProcessor: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0) $js__height__menu * 0.8,
+        rgba(0, 0, 0, 1) $js__height__menu * 1.2,
+        rgba(0, 0, 0, 1)
     );
+
+    $gradient__lyric__desktopCarousel: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 1) calc(100% - #{$height__chivalry}),
+        rgba(0, 0, 0, 0) calc(100% - #{$height__chivalry * 0.75}),
+        rgba(0, 0, 0, 0)
+    );
+
+    $gradient__lyric__desktopCarouselProcessor: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0) $js__height__menu * 0.8,
+        rgba(0, 0, 0, 1) $js__height__menu * 1.2,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 1) calc(100% - #{$height__chivalry}),
+        rgba(0, 0, 0, 0) calc(100% - #{$height__chivalry * 0.75}),
+        rgba(0, 0, 0, 0)
+    );
+
+    .DW__higherProcessor.DW__desktopWidth
+    & {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: $gradient__lyric__desktopProcessor;
+        mask-image: $gradient__lyric__desktopProcessor;
+    }
+
     .DW__desktopWidth
     .RW__carouselNavShowable
     .ShW__annotationShown.ShW__carouselExpanded
     & {
         // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: $gradient__lyric__desktop;
-        mask-image: $gradient__lyric__desktop;
+        -webkit-mask-image: $gradient__lyric__desktopCarousel;
+        mask-image: $gradient__lyric__desktopCarousel;
 
         // When carousel annotation is selected, switch z-index with carousel.
         z-index: $zIndex__annotation;
+    }
+
+    .DW__higherProcessor.DW__desktopWidth
+    .RW__carouselNavShowable
+    .ShW__annotationShown.ShW__carouselExpanded
+    & {
+        // Not taken care of by autoprefixer, unfortunately.
+        -webkit-mask-image: $gradient__lyric__desktopCarouselProcessor;
+        mask-image: $gradient__lyric__desktopCarouselProcessor;
     }
 }
