@@ -40,7 +40,7 @@ class LeftShelf extends PureComponent {
             )}>
                 <OverviewToggle inLeftShelf />
                 <DotsSlideToggle />
-                <ScoresTips inLeftShelf />
+                <ScoresTips />
             </div>
         )
     }

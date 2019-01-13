@@ -10,7 +10,6 @@ import cx from 'classnames'
 
 import AboutToggle from '../../About/Toggle'
 import Audio from '../../Audio'
-import ScoresTips from '../../ScoresTips'
 
 import { getMenuMarginInOverlay } from './helper'
 
@@ -67,14 +66,6 @@ class Menu extends PureComponent {
                         'MenuChild'
                     )}>
                         <Audio />
-                    </div>
-
-                    <div className={cx(
-                        'MenuChild__scoresTips',
-                        'MenuChild',
-                        'widths__hiddenInOverlay'
-                    )}>
-                        <ScoresTips inMenu />
                     </div>
                 </div>
             </div>

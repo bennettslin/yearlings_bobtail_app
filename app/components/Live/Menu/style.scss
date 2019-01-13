@@ -1,7 +1,7 @@
 /**
  * Needed by JavaScript to calculate scores tips in main breakpoints.
  */
-$js__minWidth__childAudio: 720px; // Arbitrary.
+$minWidth__childAudio: 720px; // Arbitrary.
 $maxWidth__childAudio: 1000px; // Arbitrary.
 
 $js__width__childAbout: 120px; // Arbitrary.
@@ -18,21 +18,19 @@ $width__childAbout__phone: 80px;
 }
 
 .Menu__responsive {
-
     position: relative;
     width: 100%;
     height: 100%;
     z-index: $zIndex__menuField;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     .PlW__logue
     & {
         // This just needs to be below the popup overlay in logues.
         z-index: $zIndex__lyricColumn;
-    }
-
-    .RW__scoresTipsMain
-    & {
-        justify-content: space-between;
     }
 
     transition:
@@ -56,12 +54,6 @@ $width__childAbout__phone: 80px;
     &.width__mainColumn {
         max-width: $js__width__mini;
     }
-}
-
-.Menu__responsive,
-.MenuChild__scoresTips {
-    display: flex;
-    align-items: center;
 }
 
 .MenuChild {
@@ -89,7 +81,7 @@ $width__childAbout__phone: 80px;
     // Audio should shrink at a slower rate than about.
     flex-grow: 10;
 
-    min-width: $js__minWidth__childAudio;
+    min-width: $minWidth__childAudio;
     max-width: $maxWidth__childAudio;
 
     transition: margin $animationDuration__default;
@@ -104,37 +96,9 @@ $width__childAbout__phone: 80px;
         margin: 0 $js__margin__thin;
     }
 
-    .RW__scoresTipsMain
-    & {
-        // If scores tips is hidden, remove audio subfield's right margin.
-        margin-right: 0;
-
-        /**
-         * Total padding is two thick margins at each end, and thick plus
-         * thin margin between children.
-         */
-        min-width:
-            $js__minWidth__audioBanner
-            + $js__minWidth__audioButtons__minusPlayer
-            + $js__length__iconLarge
-            + $js__margin__thick * 3
-            + $js__margin__thin;
-    }
-
     .DW__mobileWidth
     & {
         justify-content: flex-end;
-    }
-
-    .DW__tablet
-    .RW__scoresTipsMain
-    & {
-        min-width:
-        $js__minWidth__audioBanner
-        + $js__minWidth__audioButtons__minusPlayer
-        + $js__length__iconLarge__tablet
-        + $js__margin__thick * 3
-        + $js__margin__thin;
     }
 
     .DW__mini
@@ -167,18 +131,6 @@ $width__childAbout__phone: 80px;
     .ShW__overlayShown
     & {
         margin-left: 0;
-    }
-}
-
-.MenuChild__scoresTips {
-
-    .RW__scoresTipsMain
-    & {
-        /**
-         * Don't bother to show if scores tips in main. Child component also
-         * will not be rendered.
-         */
-        display: none;
     }
 }
 

@@ -1,14 +1,13 @@
 // Constants prefixed with LS *must* be the same in Less.
 
-const
+export const LS_WIDTH_GOLDEN_CORD = 745
+export const LS_WIDTH_UNCANNY_VALLEY = 570
 
-    LS_WIDTH_GOLDEN_CORD = 745,
-    LS_WIDTH_UNCANNY_VALLEY = 570,
-
-    /*****************
+/*****************
  * BUTTON VALUES *
  *****************/
 
+const
     LS_LENGTH_ICON = 44,
     LS_LENGTH_ICON_LARGE = 54,
     LS_LENGTH_ICON_LARGE_TABLET = 50,
@@ -17,8 +16,8 @@ const
     LS_MARGIN_THICK = 12,
 
     /**************
- * NAV VALUES *
- **************/
+     * NAV VALUES *
+     **************/
 
     // Keep for now.
     LS_MARGIN_NAV_LAST_TITLE = 0,
@@ -46,8 +45,8 @@ const
     + LS_COUNT_GAPS_SINGLE,
 
     /***************
- * MENU VALUES *
- ***************/
+     * MENU VALUES *
+     ***************/
 
     LS_HEIGHT_MENU = 72,
 
@@ -80,12 +79,11 @@ const
     LS_HEIGHT_MENU_PHONE
     + LS_HEIGHT_BANNER_TWO_ROW_MENU_TRUNCATED,
 
-    LS_MINWIDTH_CHILD_AUDIO = 720,
     LS_WIDTH_CHILD_TITLE = 120,
 
     /****************
- * AUDIO VALUES *
- ****************/
+     * AUDIO VALUES *
+     ****************/
 
     // Minimum laptop width prevents this from being wider.
     LS_MINWIDTH_AUDIO_BANNER = 320,
@@ -104,35 +102,9 @@ const
     LS_MARGIN_X_SLIDER = 3,
     LS_OVERLAP_MARGIN_X_SLIDER = 2,
 
-    /**********************
- * SCORES TIPS VALUES *
- **********************/
-
-    // Scores tips in main when 1688px or below.
-    WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT =
-
-    // Menu.
-    LS_MINWIDTH_CHILD_AUDIO
-    + LS_WIDTH_CHILD_TITLE
-    + LS_MARGIN_THICK * 2
-
-    // Scores tips.
-    + LS_LENGTH_ICON_LARGE * 2
-    + LS_MARGIN_THIN * 2
-    + LS_MARGIN_THICK,
-
-    // Scores tips in main when 935px or below.
-    WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET =
-
-    // Menu.
-    LS_MINWIDTH_CHILD_AUDIO
-    + LS_WIDTH_CHILD_TITLE
-    + LS_MARGIN_THICK * 2
-
-    // Scores tips.
-    + LS_LENGTH_ICON_LARGE_TABLET * 2
-    + LS_MARGIN_THIN * 2
-    + LS_MARGIN_THICK,
+    /***********************
+     * TWO-ROW MENU VALUES *
+     ***********************/
 
     TWO_ROW_MENU_BREAKPOINT_LAPTOP =
     LS_WIDTH_UNCANNY_VALLEY
@@ -149,14 +121,18 @@ const
 
     LS_PADDING_SIDE_POPUP_CONTENT = 20,
     LS_HEIGHT_LYRIC_COLLAPSED = 0.32,
+    HEIGHTLESS_LYRIC_MIN = 540,
+    HEIGHTLESS_LYRIC_PHONE_MIN = 450,
+    HEIGHTLESS_LYRIC_MAX = 720,
+    UNRENDERABLE_NAV_MIN = 400,
 
     WIKI_SIDE_PADDING_TOTAL =
     LS_PADDING_SIDE_POPUP_CONTENT * 2
     + LS_LENGTH_ICON_LARGE * 2,
 
     /************************
- * DEVICE WIDTH OBJECTS *
- ************************/
+     * DEVICE WIDTH CONFIGS *
+     ************************/
 
     PHONE_WIDTH_KEY = 'phone',
     LS_MINI_WIDTH_KEY = 'mini',
@@ -175,10 +151,6 @@ const
         singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_LENGTH_ICON_LARGE_MINI
-    /**
-     * NOTE: Mini always has scores tips section in main column, so scores tips
-     * breakpoint is unnecessary.
-     */
     },
     TABLET_WIDTH_CONFIG = {
         deviceWidthKey: TABLET_WIDTH_KEY,
@@ -191,9 +163,7 @@ const
         + LS_LENGTH_ICON_LARGE_TABLET,
         singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
-        + LS_LENGTH_ICON_LARGE_TABLET,
-        isScoresTipsInMainBreakpoint:
-        WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT_TABLET
+        + LS_LENGTH_ICON_LARGE_TABLET
     },
     LAPTOP_WIDTH_CONFIG = {
         deviceWidthKey: LS_LAPTOP_WIDTH_KEY,
@@ -203,10 +173,6 @@ const
         + LS_MARGIN_NAV_LAST_TITLE
         + LS_WIDTH_UNCANNY_VALLEY
         + LS_LENGTH_ICON_LARGE
-    /**
-     * NOTE: Laptop always has scores tips section in main column, so scores
-     * tips breakpoint is unnecessary.
-     */
     },
     MONITOR_WIDTH_CONFIG = {
         deviceWidthKey: MONITOR_WIDTH_KEY,
@@ -224,13 +190,19 @@ const
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + LS_MARGIN_NAV_LAST_TITLE
         + LS_WIDTH_GOLDEN_CORD
-        + LS_LENGTH_ICON_LARGE,
-        isScoresTipsInMainBreakpoint:
-        WIDTH_SCORES_TIPS_IN_MAIN_BREAKPOINT
-        + LS_WIDTH_GOLDEN_CORD
-    }
+        + LS_LENGTH_ICON_LARGE
+    },
 
-module.exports = {
+    DEVICE_WIDTH_CONFIGS = [
+        PHONE_WIDTH_CONFIG,
+        MINI_WIDTH_CONFIG,
+        TABLET_WIDTH_CONFIG,
+        LAPTOP_WIDTH_CONFIG,
+        MONITOR_WIDTH_CONFIG,
+        {} // Default when app mounts.
+    ]
+
+export {
     PHONE_WIDTH_KEY,
     LS_MINI_WIDTH_KEY,
     TABLET_WIDTH_KEY,
@@ -249,19 +221,12 @@ module.exports = {
     LS_LENGTH_ICON_LARGE,
     LS_MARGIN_THIN,
 
-    DEVICE_WIDTH_CONFIGS: [
-        PHONE_WIDTH_CONFIG,
-        MINI_WIDTH_CONFIG,
-        TABLET_WIDTH_CONFIG,
-        LAPTOP_WIDTH_CONFIG,
-        MONITOR_WIDTH_CONFIG,
-        {} // Default when app mounts.
-    ],
+    DEVICE_WIDTH_CONFIGS,
 
     LS_HEIGHT_LYRIC_COLLAPSED,
-    HEIGHTLESS_LYRIC_MIN: 540,
-    HEIGHTLESS_LYRIC_PHONE_MIN: 450,
-    HEIGHTLESS_LYRIC_MAX: 720,
+    HEIGHTLESS_LYRIC_MIN,
+    HEIGHTLESS_LYRIC_PHONE_MIN,
+    HEIGHTLESS_LYRIC_MAX,
 
     LS_MARGIN_X_SLIDER,
     LS_OVERLAP_MARGIN_X_SLIDER,
@@ -274,13 +239,10 @@ module.exports = {
     LS_TOP_OFFSET_TWO_ROW_MENU_PHONE,
     LS_TOP_OFFSET_TRUNCATED_TWO_ROW_MENU_PHONE,
 
-    UNRENDERABLE_NAV_MIN: 400,
+    UNRENDERABLE_NAV_MIN,
     WIKI_SIDE_PADDING_TOTAL,
 
     LS_HEIGHT_NAV,
-
-    LS_WIDTH_GOLDEN_CORD,
-    LS_WIDTH_UNCANNY_VALLEY,
 
     TWO_ROW_MENU_BREAKPOINT_LAPTOP,
     TWO_ROW_MENU_BREAKPOINT_MINI

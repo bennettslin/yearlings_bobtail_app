@@ -1,22 +1,28 @@
 .ScoresTips {
     display: flex;
-    // background-color: rgba(225, 250, 200, 0.5);
-
     padding: $js__margin__thin;
-}
-
-.ScoresTips__inMenu {
-    justify-content: space-between;
-    align-items: center;
-}
-
-.ScoresTips__inMain {
     flex-direction: column;
     align-items: flex-start;
+
+    z-index: $zIndex__centreFieldChild;
 }
 
 .ScoresTips__inLeftShelf {
     padding: 0;
+
+    transition: margin $animationDuration__default;
+
+    .ShW__overviewShown
+    & {
+        margin-left: -$width__overviewToggle;
+    }
+}
+
+.Button {
+    .ScoresTips__inLeftShelf
+    &:not(:last-child) {
+        margin-bottom: $js__margin__thick;
+    }
 }
 
 .ScoresTips__inMainRight {
@@ -39,34 +45,5 @@
     .TrW__canLyricCarouselEnter
     & {
         right: 0;
-    }
-}
-
-.ScoresTipsButton {
-    // Ensure that these buttons are above the carousel.
-    z-index: $zIndex__centreFieldChild;
-
-    transition:
-        transform $animationDuration__default,
-        opacity $animationDuration__default;
-
-    .ScoresTips__inMenu
-    &:not(:last-child) {
-        margin-right: $js__margin__thick;
-    }
-
-    .ScoresTips__inMain
-    &:not(:last-child) {
-        margin-bottom: $js__margin__thick;
-    }
-
-    .PlW__logue
-    &,
-    .PlW__song
-    .RW__scoresTipsMain
-    .ShW__overviewShown
-    & {
-        transform: scale(0);
-        opacity: 0;
     }
 }

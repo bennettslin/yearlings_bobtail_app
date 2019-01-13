@@ -14,7 +14,6 @@ class ResponsiveWrapper extends PureComponent {
         isEarShown: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         showShrunkNavIcon: PropTypes.bool.isRequired,
-        isScoresTipsInMain: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
 
         // From parent.
@@ -28,7 +27,6 @@ class ResponsiveWrapper extends PureComponent {
                 isEarShown,
                 isHeightlessLyric,
                 showShrunkNavIcon,
-                isScoresTipsInMain,
                 isTwoRowMenu,
                 children
             } = this.props,
@@ -50,10 +48,6 @@ class ResponsiveWrapper extends PureComponent {
 
                         isCarouselNavShowable ?
                             'RW__carouselNavShowable' : 'RW__carouselNavUnshowable',
-
-                        isScoresTipsInMain ?
-                            'RW__scoresTipsMain' :
-                            'RW__scoresTipsMenu',
 
                         isTwoRowMenu ?
                             'RW__twoRowMenu' :
@@ -83,7 +77,6 @@ const mapStateToProps = ({
     },
     responsiveStore: {
         isHeightlessLyric,
-        isScoresTipsInMain,
         isTwoRowMenu,
         showShrunkNavIcon
     }
@@ -93,7 +86,6 @@ const mapStateToProps = ({
     isEarShown,
     isHeightlessLyric,
     showShrunkNavIcon,
-    isScoresTipsInMain,
     isTwoRowMenu
 })
 

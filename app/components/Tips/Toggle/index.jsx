@@ -22,10 +22,7 @@ class TipsToggle extends PureComponent {
 
     static propTypes = {
     // Through Redux.
-        selectedTipsOption: PropTypes.string.isRequired,
-
-        // From parent.
-        className: PropTypes.any
+        selectedTipsOption: PropTypes.string.isRequired
     }
 
     handleTipsClick = () => {
@@ -37,17 +34,13 @@ class TipsToggle extends PureComponent {
     }
 
     render() {
-        const {
-            selectedTipsOption,
-            className
-        } = this.props
+        const { selectedTipsOption } = this.props
 
         return (
             <___>
                 <Button
                     isLargeSize
                     {...{
-                        className,
                         buttonName: TIPS_BUTTON_KEY,
                         buttonIdentifier: selectedTipsOption,
                         accessKey: TIPS_TOGGLE_KEY,

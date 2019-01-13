@@ -9,69 +9,45 @@ import ScoreToggle from '../Score/Toggle'
 import TipsToggle from '../Tips/Toggle'
 
 const mapStateToProps = ({
-    viewportStore: { isDesktopWidth },
-    responsiveStore: { isScoresTipsInMain }
+    viewportStore: { isDesktopWidth }
 }) => ({
-    isDesktopWidth,
-    isScoresTipsInMain
+    isDesktopWidth
 })
 
 class ScoresTips extends PureComponent {
 
     static defaultProps = {
-        inMenu: false,
-        inMainRightSide: false,
-        inLeftShelf: false
+        inMainRight: false
     }
 
     static propTypes = {
         // Through Redux.
         isDesktopWidth: PropTypes.bool.isRequired,
-        isScoresTipsInMain: PropTypes.bool.isRequired,
 
         // From parent.
-        inMenu: PropTypes.bool.isRequired,
-        inMainRightSide: PropTypes.bool.isRequired,
-        inLeftShelf: PropTypes.bool.isRequired
+        inMainRight: PropTypes.bool.isRequired
     }
 
     render() {
         const {
                 isDesktopWidth,
-                isScoresTipsInMain,
-
-                inMenu,
-                inMainRightSide,
-                inLeftShelf
+                inMainRight
             } = this.props,
 
-            // Render if scores tips is...
-            shouldRender = isScoresTipsInMain ?
+            inLeftShelf = !inMainRight
 
-                (
-                    // ...in main on the right in mobile.
-                    (inMainRightSide && !isDesktopWidth) ||
-
-                    // ...in main on the left in dots overview on desktop.
-                    (inLeftShelf && isDesktopWidth)
-                ) :
-
-            // ...otherwise, render in menu.
-                inMenu
-
-        return shouldRender && (
+        // Render in left shelf on desktop, in main right on mobile.
+        return isDesktopWidth === inLeftShelf && (
             <div className={cx(
                 'ScoresTips',
                 {
-                    'ScoresTips__inMenu': inMenu,
-                    'ScoresTips__inMain': inMainRightSide || inLeftShelf,
-                    'ScoresTips__inMainRight': inMainRightSide,
+                    'ScoresTips__inMainRight': inMainRight,
                     'ScoresTips__inLeftShelf': inLeftShelf,
                     'LeftShelf__child': inLeftShelf
                 }
             )}>
                 <ScoreToggle />
-                <TipsToggle {...{ className: 'ScoresTipsButton' }} />
+                <TipsToggle />
             </div>
         )
     }

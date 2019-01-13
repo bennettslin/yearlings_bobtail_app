@@ -48,7 +48,7 @@ class Main extends PureComponent {
                 </div>
                 <LyricToggleExpand inMain />
                 <DotsSlide />
-                <ScoresTips inMainRightSide />
+                <ScoresTips inMainRight />
                 <TipsPopup />
                 <CarouselToggle />
                 <CarouselSelect />

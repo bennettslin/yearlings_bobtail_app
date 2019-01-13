@@ -165,7 +165,6 @@ export const PLAYERS_DEFAULTS = {
 export const RESPONSIVE_DEFAULTS = {
     isHeightlessLyric: false,
     isMobileWiki: false,
-    isScoresTipsInMain: false,
     isTwoRowMenu: false,
     showShrunkNavIcon: false,
     showSingleNavBook: false,

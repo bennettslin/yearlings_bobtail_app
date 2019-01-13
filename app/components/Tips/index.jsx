@@ -11,26 +11,20 @@ import Texts from '../Texts'
 import { getSongTip } from './helper'
 
 const mapStateToProps = ({
-    lyricStore: { lyricSongIndex },
-    responsiveStore: { isScoresTipsInMain }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    lyricSongIndex,
-    isScoresTipsInMain
+    lyricSongIndex
 })
 
 class Tips extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-        isScoresTipsInMain: PropTypes.bool.isRequired
+        lyricSongIndex: PropTypes.number.isRequired
     }
 
     render() {
-        const {
-                lyricSongIndex,
-                isScoresTipsInMain
-            } = this.props,
+        const { lyricSongIndex } = this.props,
 
             tipText = getSongTip(lyricSongIndex)
 
@@ -42,11 +36,9 @@ class Tips extends PureComponent {
                     'Tips__textContainer',
                     'fontSize__verse'
                 )}>
-                    {isScoresTipsInMain && (
-                        <div className="Tips__toggleFloatContainer">
-                            <TipsToggle />
-                        </div>
-                    )}
+                    <div className="Tips__toggleFloatContainer">
+                        <TipsToggle />
+                    </div>
 
                     {tipText && (
                         <Texts {...{ text: tipText }} />

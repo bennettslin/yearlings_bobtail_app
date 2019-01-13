@@ -18,7 +18,6 @@ import {
     getIsLyricExpandable,
     getHasRoomForScore
 } from './helpers/responsive'
-import { getIsScoresTipsInMain } from './helpers/scoresTips'
 import {
     getIsTwoRowMenu,
     getCeilingFloorHeight,
@@ -145,10 +144,6 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 isHeightlessLyric
             }),
             isMobileWiki: getIsMobileWiki({
-                deviceWidthIndex,
-                windowWidth
-            }),
-            isScoresTipsInMain: getIsScoresTipsInMain({
                 deviceWidthIndex,
                 windowWidth
             }),
