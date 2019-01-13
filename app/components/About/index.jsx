@@ -36,8 +36,6 @@ const About = memo(({
         <p>
             isTouchSupported: {isTouchSupported ? 'true' : 'false'}
         </p>
-        <p>
-        </p>
     </div>
 ))
 

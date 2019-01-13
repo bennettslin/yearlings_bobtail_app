@@ -18,13 +18,6 @@
     }
 }
 
-.Button {
-    .ScoresTips__inLeftShelf
-    &:not(:last-child) {
-        margin-bottom: $js__margin__thick;
-    }
-}
-
 .ScoresTips__inMainRight {
     position: absolute;
 
@@ -45,5 +38,12 @@
     .TrW__canLyricCarouselEnter
     & {
         right: 0;
+    }
+}
+
+.Button {
+    .ScoresTips
+    &:not(:last-child) {
+        margin-bottom: $js__margin__thick;
     }
 }

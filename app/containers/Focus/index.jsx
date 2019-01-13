@@ -18,10 +18,14 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
+    mobileStore: { isHigherProcessor },
+    viewportStore: { isDesktopWidth },
     responsiveStore: { isHeightlessLyric },
     toggleStore: { isLyricExpanded },
     focusStore: { queuedFocus }
 }) => ({
+    isHigherProcessor,
+    isDesktopWidth,
     isHeightlessLyric,
     isLyricExpanded,
     queuedFocus
@@ -31,6 +35,8 @@ class FocusContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isHigherProcessor: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         queuedFocus: PropTypes.bool.isRequired,
@@ -170,6 +176,14 @@ class FocusContainer extends PureComponent {
     }
 
     render() {
+        const
+            {
+                isHigherProcessor,
+                isDesktopWidth
+            } = this.props,
+
+            shouldSliderMount = isHigherProcessor && isDesktopWidth
+
         return (
             <div
                 {...{
@@ -178,16 +192,17 @@ class FocusContainer extends PureComponent {
                     tabIndex: -1,
                     onClick: this._handleBodyClick,
 
+                    onKeyDown: this._handleKeyDownPress,
+                    onKeyUp: this._handleKeyUpPress
+                }}
+                {...shouldSliderMount && {
                     onMouseMove: this._handleTouchMove,
                     onTouchMove: this._handleTouchMove,
 
                     onMouseUp: this._handleTouchEnd,
                     onMouseLeave: this._handleTouchEnd,
                     onTouchEnd: this._handleTouchEnd,
-                    onTouchCancel: this._handleTouchEnd,
-
-                    onKeyDown: this._handleKeyDownPress,
-                    onKeyUp: this._handleKeyUpPress
+                    onTouchCancel: this._handleTouchEnd
                 }}
             >
                 <CloseHandler {...{ getRefs: this._getRefs }} />
@@ -201,7 +216,9 @@ class FocusContainer extends PureComponent {
 
                     }}
                 />
-                <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
+                {shouldSliderMount && (
+                    <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
+                )}
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
