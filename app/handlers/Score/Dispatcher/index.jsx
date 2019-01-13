@@ -9,8 +9,9 @@ class ScoreDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isHigherProcessor: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
-        isScoreShowable: PropTypes.bool.isRequired,
+        hasRoomForScore: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
@@ -31,8 +32,11 @@ class ScoreDispatcher extends PureComponent {
         // Turning off is always successful.
         const isScoreShown = triedIsScoreShown &&
 
+            // Score does not render if not higher processor.
+            this.props.isHigherProcessor &&
+
             // If trying to turn on, score must be showable, and...
-            this.props.isScoreShowable &&
+            this.props.hasRoomForScore &&
 
             // ... also must not be in logue.
             !this.props.isSelectedLogue
@@ -49,12 +53,14 @@ class ScoreDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
+    mobileStore: { isHigherProcessor },
     toggleStore: { isScoreShown },
-    responsiveStore: { isScoreShowable },
+    responsiveStore: { hasRoomForScore },
     selectedStore: { isSelectedLogue }
 }) => ({
+    isHigherProcessor,
     isScoreShown,
-    isScoreShowable,
+    hasRoomForScore,
     isSelectedLogue
 })
 

@@ -9,7 +9,7 @@ class ScoreListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isScoreShowable: PropTypes.bool.isRequired,
+        hasRoomForScore: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired
     }
@@ -21,17 +21,17 @@ class ScoreListener extends PureComponent {
     _closeScoreIfNeeded(prevProps) {
         const
             {
-                isScoreShowable,
+                hasRoomForScore,
                 isSelectedLogue
             } = this.props,
             {
-                isScoreShowable: wasScoreShowable,
+                hasRoomForScore: wasScoreShowable,
                 isSelectedLogue: wasSelectedLogue
             } = prevProps
 
         if (
             (isSelectedLogue && !wasSelectedLogue) ||
-            (!isScoreShowable && wasScoreShowable)
+            (!hasRoomForScore && wasScoreShowable)
         ) {
             this.props.updateToggleStore({ isScoreShown: false })
         }
@@ -43,10 +43,10 @@ class ScoreListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isScoreShowable },
+    responsiveStore: { hasRoomForScore },
     selectedStore: { isSelectedLogue }
 }) => ({
-    isScoreShowable,
+    hasRoomForScore,
     isSelectedLogue
 })
 

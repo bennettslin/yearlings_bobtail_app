@@ -5,31 +5,15 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import ScoreDispatcher from '../../handlers/Score/Dispatcher'
+import ScoreToggle from '../Score/Toggle'
 import TipsToggle from '../Tips/Toggle'
-import Button from '../Button'
-
-import { populateRefs } from 'helpers/ref'
-
-import { SCORE_TOGGLE_KEY } from 'constants/access'
-import { SCORES_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
-    viewportStore: {
-        isDesktopWidth,
-        isPhoneWidth
-    },
-    mobileStore: { isHigherProcessor },
-    responsiveStore: { isScoresTipsInMain },
-    toggleStore: { isScoreShown },
-    loadStore: { isScoreLoaded }
+    viewportStore: { isDesktopWidth },
+    responsiveStore: { isScoresTipsInMain }
 }) => ({
     isDesktopWidth,
-    isPhoneWidth,
-    isHigherProcessor,
-    isScoresTipsInMain,
-    isScoreShown,
-    isScoreLoaded
+    isScoresTipsInMain
 })
 
 class ScoresTips extends PureComponent {
@@ -41,12 +25,8 @@ class ScoresTips extends PureComponent {
     }
 
     static propTypes = {
-    // Through Redux.
+        // Through Redux.
         isDesktopWidth: PropTypes.bool.isRequired,
-        isPhoneWidth: PropTypes.bool.isRequired,
-        isHigherProcessor: PropTypes.bool.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
-        isScoreLoaded: PropTypes.bool.isRequired,
         isScoresTipsInMain: PropTypes.bool.isRequired,
 
         // From parent.
@@ -55,20 +35,9 @@ class ScoresTips extends PureComponent {
         inLeftShelf: PropTypes.bool.isRequired
     }
 
-    handleScoreButtonClick = () => {
-        this.dispatchScore()
-    }
-
-    _getRefs = (payload) => {
-        populateRefs(this, payload)
-    }
-
     render() {
         const {
                 isDesktopWidth,
-                isPhoneWidth,
-                isHigherProcessor,
-                isScoreLoaded,
                 isScoresTipsInMain,
 
                 inMenu,
@@ -88,9 +57,7 @@ class ScoresTips extends PureComponent {
                 ) :
 
             // ...otherwise, render in menu.
-                inMenu,
-
-            showScoreToggleButton = isHigherProcessor && !isPhoneWidth
+                inMenu
 
         return shouldRender && (
             <div className={cx(
@@ -103,20 +70,8 @@ class ScoresTips extends PureComponent {
                     'LeftShelf__child': inLeftShelf
                 }
             )}>
-                {showScoreToggleButton &&
-                <Button
-                    isLargeSize
-                    {...{
-                        buttonName: SCORES_BUTTON_KEY,
-                        className: 'ScoresTipsButton',
-                        accessKey: SCORE_TOGGLE_KEY,
-                        isDisabled: !isScoreLoaded,
-                        handleButtonClick: this.handleScoreButtonClick
-                    }}
-                />
-                }
+                <ScoreToggle />
                 <TipsToggle {...{ className: 'ScoresTipsButton' }} />
-                <ScoreDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

@@ -171,7 +171,7 @@ export const RESPONSIVE_DEFAULTS = {
     showSingleNavBook: false,
     isLyricExpandable: false,
     isUnrenderableCarouselNav: true,
-    isScoreShowable: true
+    hasRoomForScore: true
 }
 
 // Begin in default stage scene.

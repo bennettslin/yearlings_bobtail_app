@@ -16,7 +16,7 @@ import {
 } from './helpers/nav'
 import {
     getIsLyricExpandable,
-    getIsScoreShowable
+    getHasRoomForScore
 } from './helpers/responsive'
 import { getIsScoresTipsInMain } from './helpers/scoresTips'
 import {
@@ -164,7 +164,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth
             }),
-            isScoreShowable: getIsScoreShowable(deviceWidthIndex),
+            hasRoomForScore: getHasRoomForScore(deviceWidthIndex),
             isLyricExpandable: getIsLyricExpandable(deviceWidthIndex)
         })
     }

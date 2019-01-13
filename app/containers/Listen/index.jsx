@@ -1,4 +1,6 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 
 import AccessListener from '../../listeners/Access'
 import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
@@ -36,13 +38,31 @@ import LogManager from '../../managers/Log'
 
 import FocusContainer from '../Focus'
 
+const mapStateToProps = ({
+    mobileStore: { isHigherProcessor },
+    responsiveStore: { hasRoomForScore }
+}) => ({
+    isHigherProcessor,
+    hasRoomForScore
+})
+
 class ListenContainer extends PureComponent {
+
+    static propTypes = {
+        isHigherProcessor: PropTypes.bool.isRequired,
+        hasRoomForScore: PropTypes.bool.isRequired
+    }
 
     componentDidMount() {
         logMount('ListenContainer')
     }
 
     render() {
+        const {
+            isHigherProcessor,
+            hasRoomForScore
+        } = this.props
+
         return (
             <___>
                 <AccessListener />
@@ -63,7 +83,9 @@ class ListenContainer extends PureComponent {
                 <PopupAnnotationListener />
                 <SceneChangeExitListener />
                 <SceneChangeEnterListener />
-                <ScoreListener />
+                {isHigherProcessor && hasRoomForScore && (
+                    <ScoreListener />
+                )}
                 <ScrollRenderListener />
                 <SliderListener />
                 <SongListener />
@@ -85,4 +107,4 @@ class ListenContainer extends PureComponent {
     }
 }
 
-export default ListenContainer
+export default connect(mapStateToProps)(ListenContainer)
