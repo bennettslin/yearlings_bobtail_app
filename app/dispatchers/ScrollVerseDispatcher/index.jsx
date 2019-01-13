@@ -5,14 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateToggleStore } from 'flux/toggle/action'
-import { resetVerseBars } from 'flux/verseBars/action'
 
 class ScrollVerseDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         updateScrollLyricStore: PropTypes.func.isRequired,
-        resetVerseBars: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -34,7 +32,6 @@ class ScrollVerseDispatcher extends PureComponent {
             queuedScrollLyricAlways: true
         })
 
-        this.props.resetVerseBars()
         this.props.updateToggleStore({
             ...isAutoScroll && { isAutoScroll }
         })
@@ -51,7 +48,6 @@ export default connect(
     mapStateToProps,
     {
         updateScrollLyricStore,
-        updateToggleStore,
-        resetVerseBars
+        updateToggleStore
     }
 )(ScrollVerseDispatcher)

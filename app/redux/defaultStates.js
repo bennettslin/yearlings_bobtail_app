@@ -139,11 +139,8 @@ export const LYRIC_DEFAULTS = {
 }
 
 export const MOBILE_DEFAULTS = {
-    isDesktopProcessor: false,
-    isTouchSupported: false,
-
-    // NOTE: This might not be needed, as I've never seen it to be false.
-    isWheelSupported: false
+    isHigherProcessor: false,
+    isTouchSupported: false
 }
 
 export const OPTION_DEFAULTS = {
@@ -214,7 +211,7 @@ export const SCROLL_CAROUSEL_DEFAULTS = {
     queuedScrollCarouselNoDuration: false
 }
 
-export const SCROLL_LYRIC_QUEUE_DEFAULTS = {
+export const SCROLL_LYRIC_DEFAULTS = {
     queuedScrollLyricLog: '',
     queuedScrollLyricByVerse: false,
     queuedScrollLyricIndex: -1,
@@ -222,11 +219,6 @@ export const SCROLL_LYRIC_QUEUE_DEFAULTS = {
     queuedScrollLyricNoDuration: false,
     queuedScrollLyricFromAutoScroll: false,
     queuedSceneChangeExitScrollCallback: false
-}
-
-export const SCROLL_LYRIC_DEFAULTS = {
-    ...SCROLL_LYRIC_QUEUE_DEFAULTS,
-    isScrollingLyric: false
 }
 
 const storedTime = getStartTimeForVerseIndex(

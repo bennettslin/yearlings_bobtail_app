@@ -19,60 +19,54 @@ class LyricWheelDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchLyricScroll: this.dispatchLyricScroll,
+            dispatchLyricTouchMoveOrWheel: this.dispatchLyricTouchMoveOrWheel,
             dispatchVerseBarWheel: this.dispatchVerseBarWheel
         })
     }
 
-    dispatchLyricScroll = (e, lyricElement) => {
+    dispatchLyricTouchMoveOrWheel = (e, lyricElement) => {
         let hasRoomToScroll = false
 
-        // Determine whether there is room to scroll.
-        if (e) {
+        const {
+                deltaY = 0,
+                type
+            } = e,
+            isTouchMoveEvent = type !== 'wheel',
+            { scrollTop } = lyricElement
+
+        // Only wheel event has deltaY.
+        if (deltaY > 0 || isTouchMoveEvent) {
             const {
-                    deltaY = 0,
-                    type
-                } = e,
-                isScrollEvent = type !== 'wheel',
-                { scrollTop } = lyricElement
+                scrollHeight,
+                clientHeight
+            } = lyricElement
 
-            // Only wheel event has deltaY.
-            if (deltaY > 0 || isScrollEvent) {
-                const {
-                    scrollHeight,
-                    clientHeight
-                } = lyricElement
-
-                if (scrollTop < scrollHeight - clientHeight) {
-                    hasRoomToScroll = true
-                }
-
-            } else if (deltaY < 0) {
-                if (scrollTop) {
-                    hasRoomToScroll = true
-                }
+            if (scrollTop < scrollHeight - clientHeight) {
+                hasRoomToScroll = true
             }
 
-            if (hasRoomToScroll) {
-                if (
-                    // To improve performance, only set in Redux if needed.
-                    this.props.isAutoScroll &&
+        /**
+         * TODO: I no longer understand this code. Why should a negative deltaY
+         * make a difference?
+         */
+        } else if (deltaY < 0) {
+            if (scrollTop) {
+                hasRoomToScroll = true
+            }
+        }
 
-                    /**
-                     * Select manual scroll only if wheel moved far enough, or
-                     * if it's a scroll event.
-                     */
-                    (deltaY > 1 || deltaY < -1 || isScrollEvent)
-                ) {
-                    this.props.updateToggleStore({ isAutoScroll: false })
-                }
+        if (hasRoomToScroll) {
+            if (
+                // To improve performance, only set in Redux if needed.
+                this.props.isAutoScroll &&
 
-                this.props.determineVerseBars()
-
-            } else {
-
-                // If no room to scroll, don't bother to send event.
-                e.preventDefault()
+                /**
+                 * Select manual scroll only if wheel moved far enough, or
+                 * if it's a scroll event.
+                 */
+                (deltaY > 1 || deltaY < -1 || isTouchMoveEvent)
+            ) {
+                this.props.updateToggleStore({ isAutoScroll: false })
             }
         }
     }

@@ -13,16 +13,16 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    mobileStore: { isDesktopProcessor }
+    mobileStore: { isHigherProcessor }
 }) => ({
-    isDesktopProcessor
+    isHigherProcessor
 })
 
 class Anchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isDesktopProcessor: PropTypes.bool.isRequired,
+        isHigherProcessor: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string,
@@ -58,7 +58,7 @@ class Anchor extends PureComponent {
 
         const {
                 className,
-                isDesktopProcessor,
+                isHigherProcessor,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
                 isSelected,
@@ -73,14 +73,14 @@ class Anchor extends PureComponent {
 
             // If in mobile, only show dot sequence if annotation title.
             showDotSequence = Boolean(sequenceDotKeys) && (
-                isDesktopProcessor || isAnnotationTitle
+                isHigherProcessor || isAnnotationTitle
             ),
 
             /**
              * Don't show access if in mobile, even though access behaviour is
              * still technically possible.
              */
-            isAccessed = isAccessedBeforeDesktop && isDesktopProcessor
+            isAccessed = isAccessedBeforeDesktop && isHigherProcessor
 
         return (
             <a
@@ -132,7 +132,7 @@ class Anchor extends PureComponent {
                 {isDotAnchor && (
                     <AnchorDot
                         {...{
-                            isDesktopProcessor,
+                            isHigherProcessor,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys
@@ -143,7 +143,7 @@ class Anchor extends PureComponent {
                 {Boolean(text) && (
                     <AnchorText
                         {...{
-                            isDesktopProcessor,
+                            isHigherProcessor,
                             isAccessed,
                             isSelected,
                             isWikiTextAnchor,

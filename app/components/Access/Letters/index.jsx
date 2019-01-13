@@ -8,14 +8,14 @@ import { connect } from 'react-redux'
 import AccessLetter from '../Letter'
 
 const mapStateToProps = ({
-    mobileStore: { isDesktopProcessor }
+    mobileStore: { isHigherProcessor }
 }) => ({
-    isDesktopProcessor
+    isHigherProcessor
 })
 
 const propTypes = {
     // Through Redux.
-    isDesktopProcessor: PropTypes.bool.isRequired,
+    isHigherProcessor: PropTypes.bool.isRequired,
 
     // From parent.
     accessIconsName: PropTypes.string,
@@ -27,14 +27,14 @@ const propTypes = {
 }
 
 const AccessLetters = memo(({
-    isDesktopProcessor,
+    isHigherProcessor,
     accessIconsName,
     isShadow,
     showIfAccessed,
     accessKeys
 
 }) => {
-    return isDesktopProcessor && (
+    return isHigherProcessor && (
         <div className={cx(
             'AccessLetters',
             accessIconsName && `AccessLetters__${accessIconsName}`

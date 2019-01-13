@@ -18,15 +18,11 @@ const mapStateToProps = ({
         canLyricCarouselUpdate,
         lyricSongIndex
     },
-    mobileStore: {
-        isTouchSupported,
-        isWheelSupported
-    }
+    mobileStore: { isTouchSupported }
 }) => ({
     canLyricCarouselUpdate,
     lyricSongIndex,
-    isTouchSupported,
-    isWheelSupported
+    isTouchSupported
 })
 
 /*************
@@ -40,7 +36,6 @@ class LyricScroll extends PureComponent {
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         isTouchSupported: PropTypes.bool.isRequired,
-        isWheelSupported: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -87,8 +82,12 @@ class LyricScroll extends PureComponent {
         this.dispatchVerseBarWheel(e, this.lyricElement)
     }
 
-    _handleScroll = (e) => {
-        this.dispatchLyricScroll(e, this.lyricElement)
+    _handleTouchMoveOrWheel = (e) => {
+        this.dispatchLyricTouchMoveOrWheel(e, this.lyricElement)
+    }
+
+    _handleScroll = () => {
+        this.props.determineVerseBars()
     }
 
     _handleTransitionEntered = () => {
@@ -103,7 +102,6 @@ class LyricScroll extends PureComponent {
         const {
             canLyricCarouselUpdate,
             isTouchSupported,
-            isWheelSupported,
             determineVerseBars
         } = this.props
 
@@ -130,15 +128,12 @@ class LyricScroll extends PureComponent {
                                  */
                                 'gradientMask__lyricColumn__mobileCollapsed'
                             ),
-                            tabIndex: -1
+                            tabIndex: -1,
+                            onScroll: this._handleScroll,
+                            onWheel: this._handleTouchMoveOrWheel
                         }}
                         {...isTouchSupported && {
-                            // Pass touch event in touch device...
-                            onTouchMove: this._handleScroll
-                        }}
-                        {...isWheelSupported && {
-                            // ... and/or pass wheel event in wheel device.
-                            onWheel: this._handleScroll
+                            onTouchMove: this._handleTouchMoveOrWheel
                         }}
                     >
                         {/* TODO: Undo this. */}
