@@ -14,7 +14,6 @@ import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import MainListener from '../../listeners/Main'
-import MountListener from '../../listeners/Mount'
 import NavListener from '../../handlers/Nav/Listener'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
@@ -83,7 +82,6 @@ class ListenContainer extends PureComponent {
                 <LyricListener />
                 <LyricIndicesListener />
                 <MainListener />
-                <MountListener />
                 <NavListener />
                 <OverviewListener />
                 <PopupAnnotationListener />

@@ -10,6 +10,22 @@ import {
     LS_HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
+export const getCanScoreMount = ({
+    deviceWidthIndex,
+    isHigherProcessor
+}) => {
+    // Score can mount if higher processor and not phone width.
+    return isHigherProcessor && !getIsPhoneWidth(deviceWidthIndex)
+}
+
+export const getCanSliderMount = ({
+    deviceWidthIndex,
+    isHigherProcessor
+}) => {
+    // Slider can mount if higher processor and desktop width.
+    return isHigherProcessor && getIsDesktopWidth(deviceWidthIndex)
+}
+
 export const getCanCarouselMount = ({
     isHigherProcessor,
     deviceWidthIndex,
@@ -18,16 +34,16 @@ export const getCanCarouselMount = ({
 
 }) => {
 
-    // Render carousel nav if it's a higher processor...
+    // Carousel can mount if higher processor...
     return isHigherProcessor &&
 
-        // and not a heightless lyric...
+        // and not heightless lyric...
         !isHeightlessLyric &&
 
-        // and not in phone...
+        // and not phone...
         !getIsPhoneWidth(deviceWidthIndex) &&
 
-        // and if window height is above a minimum.
+        // and if window height is above minimum.
         windowHeight >= UNRENDERABLE_NAV_MIN
 }
 

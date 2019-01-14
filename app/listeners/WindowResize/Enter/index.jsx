@@ -9,8 +9,10 @@ import { updateMountStore } from 'flux/mount/action'
 
 import {
     getCanCarouselMount,
+    getCanScoreMount,
+    getCanSliderMount,
     getLyricHeightRatio
-} from 'helpers/mount'
+} from './helpers/mount'
 
 import {
     getIsHeightlessLyric,
@@ -134,6 +136,14 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
         this.props.updateMountStore({
             canCarouselMount,
+            canScoreMount: getCanScoreMount({
+                deviceWidthIndex,
+                isHigherProcessor
+            }),
+            canSliderMount: getCanSliderMount({
+                deviceWidthIndex,
+                isHigherProcessor
+            }),
             lyricHeightRatio: getLyricHeightRatio({
                 canCarouselMount,
                 deviceWidthIndex,
