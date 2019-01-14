@@ -11,7 +11,7 @@ class SongChangeDoneListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isUnrenderableCarouselNav: PropTypes.bool.isRequired,
+        cannotMountCarouselNav: PropTypes.bool.isRequired,
         didCarouselEnter: PropTypes.bool.isRequired,
         didLyricEnter: PropTypes.bool.isRequired,
         didCurtainEnter: PropTypes.bool.isRequired
@@ -24,7 +24,7 @@ class SongChangeDoneListener extends PureComponent {
     _checkSongChangeEnter(prevProps) {
         const
             {
-                isUnrenderableCarouselNav,
+                cannotMountCarouselNav,
                 didLyricEnter,
                 didCarouselEnter,
                 didCurtainEnter
@@ -41,7 +41,7 @@ class SongChangeDoneListener extends PureComponent {
                 // All these conditions are needed to enter transition.
                 didLyricEnter &&
                 (
-                    didCarouselEnter || isUnrenderableCarouselNav
+                    didCarouselEnter || cannotMountCarouselNav
                 ) &&
                 didCurtainEnter
 
@@ -49,7 +49,7 @@ class SongChangeDoneListener extends PureComponent {
                 // At least one of these conditions was previously false.
                 !hadLyricEntered ||
                 (
-                    !hadCarouselEntered && !isUnrenderableCarouselNav
+                    !hadCarouselEntered && !cannotMountCarouselNav
                 ) ||
                 !hadCurtainEntered
             )
@@ -74,14 +74,14 @@ class SongChangeDoneListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { isUnrenderableCarouselNav },
+    responsiveStore: { cannotMountCarouselNav },
     lyricStore: {
         didCarouselEnter,
         didLyricEnter,
         didCurtainEnter
     }
 }) => ({
-    isUnrenderableCarouselNav,
+    cannotMountCarouselNav,
     didCarouselEnter,
     didLyricEnter,
     didCurtainEnter

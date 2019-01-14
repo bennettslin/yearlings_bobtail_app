@@ -29,7 +29,7 @@ import {
     getIsMonitorWidth
 } from 'helpers/responsive'
 
-import { getIsUnrenderableCarouselNav } from './hidden'
+import { getCannotMountCarouselNav } from './hidden'
 import { getCentreFieldHeight } from './theatre'
 
 const _getLeftShelfOverflow = (deviceWidthIndex) => {
@@ -93,14 +93,13 @@ export const getStageCoordinates = ({
 
         isPhoneWidth = getIsPhoneWidth(deviceWidthIndex),
 
-        isUnrenderableCarouselNav = getIsUnrenderableCarouselNav({
-            deviceWidthIndex, windowHeight, windowWidth
+        cannotMountCarouselNav = getCannotMountCarouselNav({
+            deviceWidthIndex,
+            windowHeight,
+            isHeightlessLyric
         }),
 
-        navHeight =
-            isPhoneWidth ||
-            isHeightlessLyric ||
-            isUnrenderableCarouselNav ? 0 : LS_HEIGHT_NAV,
+        navHeight = cannotMountCarouselNav ? 0 : LS_HEIGHT_NAV,
 
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,

@@ -8,7 +8,7 @@ import { updateResponsiveStore } from 'flux/responsive/action'
 
 import {
     getIsHeightlessLyric,
-    getIsUnrenderableCarouselNav
+    getCannotMountCarouselNav
 } from './helpers/hidden'
 import {
     getShowShrunkNavIcon,
@@ -37,14 +37,14 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchBeginEnterTransition: this.beginEnterTransitionWithNewState
+            dispatchBeginEnterTransition: this.beginEnterTransition
         })
 
         // Set state based on initial window size.
-        this.beginEnterTransitionWithNewState()
+        this.beginEnterTransition()
     }
 
-    beginEnterTransitionWithNewState = () => {
+    beginEnterTransition = () => {
         logTransition('Theatre can enter.')
 
         const {
@@ -132,10 +132,9 @@ class WindowResizeEnterDispatcher extends PureComponent {
     }) {
         this.props.updateResponsiveStore({
             isHeightlessLyric,
-            isUnrenderableCarouselNav: getIsUnrenderableCarouselNav({
+            cannotMountCarouselNav: getCannotMountCarouselNav({
                 deviceWidthIndex,
                 windowHeight,
-                windowWidth,
                 isHeightlessLyric
             }),
             isMobileWiki: getIsMobileWiki({

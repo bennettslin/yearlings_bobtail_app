@@ -14,13 +14,13 @@ import { populateRefs } from '../../../helpers/ref'
 import { getCarouselNavIdentifier } from '../../../constants/options'
 
 const mapStateToProps = ({
-    responsiveStore: { isUnrenderableCarouselNav },
+    responsiveStore: { cannotMountCarouselNav },
     toggleStore: {
         isCarouselShown,
         isNavShown
     }
 }) => ({
-    isUnrenderableCarouselNav,
+    cannotMountCarouselNav,
     isCarouselShown,
     isNavShown
 })
@@ -29,7 +29,7 @@ class CarouselToggle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isUnrenderableCarouselNav: PropTypes.bool.isRequired,
+        cannotMountCarouselNav: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         isNavShown: PropTypes.bool.isRequired
     }
@@ -44,12 +44,12 @@ class CarouselToggle extends PureComponent {
 
     render() {
         const {
-            isUnrenderableCarouselNav,
+            cannotMountCarouselNav,
             isCarouselShown,
             isNavShown
         } = this.props
 
-        return !isUnrenderableCarouselNav && (
+        return !cannotMountCarouselNav && (
             <div className={cx(
                 'CarouselToggle',
                 'width__leftShelf'

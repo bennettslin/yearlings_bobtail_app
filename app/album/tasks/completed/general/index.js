@@ -4337,7 +4337,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Handle situations where carousel is not expected to render, so it will never do enter or exit callbacks. Solve by having listeners check isUnrenderableCarouselNav.`,
+        taskName: `Handle situations where carousel is not expected to render, so it will never do enter or exit callbacks. Solve by having listeners check cannotMountCarouselNav.`,
         workedHours: 1,
         neededHours: 1
     },
