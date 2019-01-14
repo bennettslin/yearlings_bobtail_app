@@ -42,16 +42,21 @@ class Stage extends PureComponent {
         } = this.props
 
         return (
-            <div className={cx(
-                'Stage',
+            <div
+                {...{
+                    className: cx(
+                        'Stage',
 
-                /**
-                 * Not the most elegant solution. Moving stage from Main to
-                 * Live means it is no longer positioned to accommodate the
-                 * menu. This positions it as if it were still a child of Main.
-                 */
-                'position__mainColumn'
-            )}>
+                        /**
+                         * Not the most elegant solution. Moving stage from
+                         * Main to Live means it is no longer positioned to
+                         * accommodate the menu. This positions it as if it
+                         * were still a child of Main.
+                         */
+                        'position__mainColumn'
+                    )
+                }}
+            >
                 <div
                     {...{
                         className: cx(

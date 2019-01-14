@@ -8,12 +8,8 @@ import { connect } from 'react-redux'
 import NavColumn from './Column'
 
 const mapStateToProps = ({
-    responsiveStore: {
-        cannotMountCarouselNav,
-        showSingleNavBook
-    }
+    responsiveStore: { showSingleNavBook }
 }) => ({
-    cannotMountCarouselNav,
     showSingleNavBook
 })
 
@@ -21,7 +17,6 @@ class Nav extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        cannotMountCarouselNav: PropTypes.bool.isRequired,
         showSingleNavBook: PropTypes.bool.isRequired
     }
 
@@ -30,12 +25,9 @@ class Nav extends PureComponent {
     }
 
     render() {
-        const {
-            cannotMountCarouselNav,
-            showSingleNavBook
-        } = this.props
+        const { showSingleNavBook } = this.props
 
-        return !cannotMountCarouselNav && (
+        return (
             <div
                 className={cx(
                     'Nav',

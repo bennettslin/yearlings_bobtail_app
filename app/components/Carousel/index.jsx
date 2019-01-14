@@ -13,11 +13,9 @@ import CarouselScroll from './Scroll'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter },
-    responsiveStore: { cannotMountCarouselNav }
+    lyricStore: { canLyricCarouselEnter }
 }) => ({
-    canLyricCarouselEnter,
-    cannotMountCarouselNav
+    canLyricCarouselEnter
 })
 
 class Carousel extends PureComponent {
@@ -25,7 +23,6 @@ class Carousel extends PureComponent {
     static propTypes = {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
-        cannotMountCarouselNav: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired
     }
 
@@ -54,16 +51,13 @@ class Carousel extends PureComponent {
     }
 
     render() {
-        const {
-            canLyricCarouselEnter,
-            cannotMountCarouselNav
-        } = this.props
+        const { canLyricCarouselEnter } = this.props
 
         return (
             <CSSTransition
                 mountOnEnter
                 {...{
-                    in: !cannotMountCarouselNav && canLyricCarouselEnter,
+                    in: canLyricCarouselEnter,
                     timeout: 250,
                     classNames: { enterDone: 'Carousel__visible' },
                     onExited: this._handleTransitionExited,

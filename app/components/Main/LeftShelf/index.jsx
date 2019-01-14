@@ -19,24 +19,17 @@ class LeftShelf extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isPhoneWidth: PropTypes.bool.isRequired,
-
-        // From parent.
-        className: PropTypes.any
+        isPhoneWidth: PropTypes.bool.isRequired
     }
 
     render() {
-        const {
-            className,
-            isPhoneWidth
-        } = this.props
+        const { isPhoneWidth } = this.props
 
         return (
             <div className={cx(
                 'LeftShelf',
                 'width__leftShelf',
-                isPhoneWidth && 'abF',
-                className
+                isPhoneWidth && 'abF'
             )}>
                 <OverviewToggle inLeftShelf />
                 <DotsSlideToggle />

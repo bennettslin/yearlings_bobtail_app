@@ -170,8 +170,7 @@ export const RESPONSIVE_DEFAULTS = {
     isTwoRowMenu: false,
     showShrunkNavIcon: false,
     showSingleNavBook: false,
-    isLyricExpandable: false,
-    cannotMountCarouselNav: true
+    isLyricExpandable: false
 }
 
 // Begin in default stage scene.

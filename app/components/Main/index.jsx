@@ -3,8 +3,10 @@
  * should not update.
  */
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
 import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
@@ -19,13 +21,26 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
+const mapStateToProps = ({
+    mountStore: { canCarouselMount }
+}) => ({
+    canCarouselMount
+})
+
 class Main extends PureComponent {
+
+    static propTypes = {
+        // Through Redux.
+        canCarouselMount: PropTypes.bool.isRequired
+    }
 
     componentDidMount() {
         logMount('Main')
     }
 
     render() {
+        const { canCarouselMount } = this.props
+
         /**
          * In phone, flex container's children have absolute position.
          */
@@ -37,8 +52,12 @@ class Main extends PureComponent {
             )}>
 
                 <AnnotationPopup inMain />
-                <Nav />
-                <Carousel />
+                {canCarouselMount && (
+                    <___>
+                        <Nav />
+                        <Carousel />
+                    </___>
+                )}
                 <div className={cx(
                     'Main__flexContainer',
                     'abF'
@@ -50,11 +69,15 @@ class Main extends PureComponent {
                 <DotsSlide />
                 <ScoresTips inMainRight />
                 <TipsPopup />
-                <CarouselToggle />
-                <CarouselSelect />
+                {canCarouselMount && (
+                    <___>
+                        <CarouselToggle />
+                        <CarouselSelect />
+                    </___>
+                )}
             </div>
         )
     }
 }
 
-export default Main
+export default connect(mapStateToProps)(Main)

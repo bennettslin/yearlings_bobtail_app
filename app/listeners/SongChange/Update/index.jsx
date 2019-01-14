@@ -11,7 +11,7 @@ class SongChangeUpdateListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        cannotMountCarouselNav: PropTypes.bool.isRequired,
+        canCarouselMount: PropTypes.bool.isRequired,
         isSongSelectInFlux: PropTypes.bool.isRequired,
 
         didCarouselExit: PropTypes.bool.isRequired,
@@ -32,7 +32,7 @@ class SongChangeUpdateListener extends PureComponent {
     _checkSongChange(prevProps) {
         const
             {
-                cannotMountCarouselNav,
+                canCarouselMount,
                 isSongSelectInFlux,
                 didCarouselExit,
                 didCurtainExit,
@@ -51,7 +51,7 @@ class SongChangeUpdateListener extends PureComponent {
                 // All these conditions are needed to update state.
                 !isSongSelectInFlux &&
                 (
-                    didCarouselExit || cannotMountCarouselNav
+                    didCarouselExit || !canCarouselMount
                 ) &&
                 didCurtainExit &&
                 didLyricExit
@@ -60,7 +60,7 @@ class SongChangeUpdateListener extends PureComponent {
                 // At least one of these conditions was previously false.
                 wasSongSelectInFlux ||
                 (
-                    !hadCarouselExited && !cannotMountCarouselNav
+                    !hadCarouselExited && canCarouselMount
                 ) ||
                 !hadCurtainExited ||
                 !hadLyricExited
@@ -104,7 +104,7 @@ class SongChangeUpdateListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { cannotMountCarouselNav },
+    mountStore: { canCarouselMount },
     lyricStore: {
         didCarouselExit,
         didLyricExit,
@@ -117,7 +117,7 @@ const mapStateToProps = ({
         selectedAnnotationIndex
     }
 }) => ({
-    cannotMountCarouselNav,
+    canCarouselMount,
     isSongSelectInFlux,
     didCarouselExit,
     didCurtainExit,

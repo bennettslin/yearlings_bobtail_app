@@ -10,7 +10,7 @@ class CarouselDispatcher extends PureComponent {
         // Through Redux.
         isPhoneWidth: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        cannotMountCarouselNav: PropTypes.bool.isRequired,
+        canCarouselMount: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
@@ -35,7 +35,7 @@ class CarouselDispatcher extends PureComponent {
             isPhoneWidth,
             dotsBitNumber,
             isSelectedLogue,
-            cannotMountCarouselNav,
+            canCarouselMount,
             isDotsSlideShown,
             selectedAnnotationIndex
         } = this.props
@@ -45,7 +45,7 @@ class CarouselDispatcher extends PureComponent {
             isPhoneWidth ||
             !dotsBitNumber ||
             isSelectedLogue ||
-            cannotMountCarouselNav
+            !canCarouselMount
         ) {
             return false
         }
@@ -91,7 +91,7 @@ class CarouselDispatcher extends PureComponent {
 const mapStateToProps = ({
     viewportStore: { isPhoneWidth },
     dotsStore: { dotsBitNumber },
-    responsiveStore: { cannotMountCarouselNav },
+    mountStore: { canCarouselMount },
     accessStore: { accessedAnnotationIndex },
     selectedStore: {
         selectedAnnotationIndex,
@@ -104,7 +104,7 @@ const mapStateToProps = ({
 }) => ({
     isPhoneWidth,
     dotsBitNumber,
-    cannotMountCarouselNav,
+    canCarouselMount,
     accessedAnnotationIndex,
     selectedAnnotationIndex,
     isSelectedLogue,

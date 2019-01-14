@@ -7,7 +7,7 @@ class SongChangeEnterListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        cannotMountCarouselNav: PropTypes.bool.isRequired,
+        canCarouselMount: PropTypes.bool.isRequired,
         didSceneUpdate: PropTypes.bool.isRequired,
         didLyricUpdate: PropTypes.bool.isRequired,
         didCarouselUpdate: PropTypes.bool.isRequired,
@@ -21,7 +21,7 @@ class SongChangeEnterListener extends PureComponent {
     _checkSongUpdate(prevProps) {
         const
             {
-                cannotMountCarouselNav,
+                canCarouselMount,
                 didSceneUpdate,
                 didCarouselUpdate,
                 didLyricUpdate
@@ -38,7 +38,7 @@ class SongChangeEnterListener extends PureComponent {
                 // All conditions needed to begin enter transition.
                 didSceneUpdate &&
                 (
-                    didCarouselUpdate || cannotMountCarouselNav
+                    didCarouselUpdate || !canCarouselMount
                 ) &&
                 didLyricUpdate
 
@@ -46,7 +46,7 @@ class SongChangeEnterListener extends PureComponent {
                 // At least one of these conditions was previously false.
                 !hadSceneUpdated ||
                 (
-                    !hadCarouselUpdated && !cannotMountCarouselNav
+                    !hadCarouselUpdated && canCarouselMount
                 ) ||
                 !hadLyricUpdated
             )
@@ -66,14 +66,14 @@ class SongChangeEnterListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    responsiveStore: { cannotMountCarouselNav },
+    mountStore: { canCarouselMount },
     lyricStore: {
         didLyricUpdate,
         didCarouselUpdate
     },
     sceneStore: { didSceneUpdate }
 }) => ({
-    cannotMountCarouselNav,
+    canCarouselMount,
     didLyricUpdate,
     didCarouselUpdate,
     didSceneUpdate

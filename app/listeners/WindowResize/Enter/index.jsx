@@ -14,10 +14,7 @@ import {
     getLyricHeightRatio
 } from './helpers/mount'
 
-import {
-    getIsHeightlessLyric,
-    getCannotMountCarouselNav
-} from './helpers/hidden'
+import { getIsHeightlessLyric } from './helpers/hidden'
 import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
@@ -77,7 +74,6 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
         this._updateResponsiveStore({
             deviceWidthIndex,
-            windowHeight,
             windowWidth,
             isHeightlessLyric
         })
@@ -156,23 +152,11 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
     _updateResponsiveStore({
         deviceWidthIndex,
-        windowHeight,
         windowWidth,
         isHeightlessLyric
     }) {
-
-        const { isHigherProcessor } = this.props
-
         this.props.updateResponsiveStore({
             isHeightlessLyric,
-
-            // TODO: Get rid of this.
-            cannotMountCarouselNav: getCannotMountCarouselNav({
-                isHigherProcessor,
-                deviceWidthIndex,
-                windowHeight,
-                isHeightlessLyric
-            }),
             isMobileWiki: getIsMobileWiki({
                 deviceWidthIndex,
                 windowWidth

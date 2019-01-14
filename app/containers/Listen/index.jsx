@@ -39,11 +39,13 @@ import FocusContainer from '../Focus'
 
 const mapStateToProps = ({
     mountStore: {
+        canCarouselMount,
         canScoreMount,
         canSliderMount
     },
     viewportStore: { isDesktopWidth }
 }) => ({
+    canCarouselMount,
     canScoreMount,
     canSliderMount,
     isDesktopWidth
@@ -53,6 +55,7 @@ class ListenContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        canCarouselMount: PropTypes.bool.isRequired,
         canScoreMount: PropTypes.bool.isRequired,
         canSliderMount: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired
@@ -64,6 +67,7 @@ class ListenContainer extends PureComponent {
 
     render() {
         const {
+            canCarouselMount,
             canScoreMount,
             canSliderMount
         } = this.props
@@ -75,14 +79,18 @@ class ListenContainer extends PureComponent {
                 <AnnotationListener />
                 <AppLoadListener />
                 <AudioListener />
-                <CarouselListener />
+                {canCarouselMount && (
+                    <___>
+                        <CarouselListener />
+                        <NavListener />
+                    </___>
+                )}
                 <DotsSlideListener />
                 <DoublespeakerListener />
                 <LogueListener />
                 <LyricListener />
                 <LyricIndicesListener />
                 <MainListener />
-                <NavListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
                 <SceneChangeExitListener />
