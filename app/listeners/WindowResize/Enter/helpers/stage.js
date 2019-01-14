@@ -25,11 +25,9 @@ import {
 
 import {
     getIsDesktopWidth,
-    getIsPhoneWidth,
     getIsMonitorWidth
 } from 'helpers/responsive'
 
-import { getCannotMountCarouselNav } from './hidden'
 import { getCentreFieldHeight } from './theatre'
 
 const _getLeftShelfOverflow = (deviceWidthIndex) => {
@@ -78,7 +76,8 @@ export const getStageCoordinates = ({
     deviceWidthIndex,
     windowWidth,
     windowHeight,
-    isHeightlessLyric
+    isHeightlessLyric,
+    canCarouselMount
 }) => {
 
     const isDesktopWidth = getIsDesktopWidth(deviceWidthIndex),
@@ -91,15 +90,7 @@ export const getStageCoordinates = ({
             windowWidth
         ) - leftShelfOverflow,
 
-        isPhoneWidth = getIsPhoneWidth(deviceWidthIndex),
-
-        cannotMountCarouselNav = getCannotMountCarouselNav({
-            deviceWidthIndex,
-            windowHeight,
-            isHeightlessLyric
-        }),
-
-        navHeight = cannotMountCarouselNav ? 0 : LS_HEIGHT_NAV,
+        navHeight = canCarouselMount ? LS_HEIGHT_NAV : 0,
 
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,
@@ -132,15 +123,13 @@ export const getStageCoordinates = ({
 
     } else {
         /**
-         * If stage height is adjustable, put closer to bottom in mobile, but
-         * not phone.
+         * If stage height is adjustable, put closer to bottom if carousel can
+         * mount.
          */
-        const mobileNotPhoneOffset =
-            isPhoneWidth ?
-                0 :
-                (centreFieldHeight - height) * 0.9
+        const carouselOffset = canCarouselMount ?
+            (centreFieldHeight - height) * 0.9 : 0
 
-        top = navHeight + mobileNotPhoneOffset
+        top = navHeight + carouselOffset
 
         // Keep centred in mobile, even with dots overview.
         left = (leftShelfOverflow + centreFieldWidth - width) * 0.5

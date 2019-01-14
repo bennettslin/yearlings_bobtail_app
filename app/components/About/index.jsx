@@ -6,7 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 const mapStateToProps = ({
-    mobileStore: {
+    appStore: {
         isHigherProcessor,
         isTouchSupported
     }

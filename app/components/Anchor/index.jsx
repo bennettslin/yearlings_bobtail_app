@@ -13,7 +13,7 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    mobileStore: { isHigherProcessor }
+    appStore: { isHigherProcessor }
 }) => ({
     isHigherProcessor
 })

@@ -23,7 +23,7 @@ const mapStateToProps = ({
     },
     dotsStore: { dotsBitNumber },
     dotsSlideStore: { dotsSlideBitNumber },
-    mobileStore: { isTouchSupported }
+    appStore: { isTouchSupported }
 }) => ({
     accessedDotIndex,
     isAccessOn,

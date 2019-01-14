@@ -15,7 +15,7 @@ import { populateRefs } from 'helpers/ref'
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
 const mapStateToProps = ({
-    mobileStore: { isHigherProcessor },
+    appStore: { isHigherProcessor },
     lyricStore: {
         lyricSongIndex,
         lyricAnnotationIndex

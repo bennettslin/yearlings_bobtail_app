@@ -70,7 +70,7 @@ const mapStateToProps = ({
         isPhoneWidth,
         isDesktopWidth
     },
-    mobileStore: { isHigherProcessor }
+    appStore: { isHigherProcessor }
 }) => ({
     deviceWidthIndex,
     isPhoneWidth,

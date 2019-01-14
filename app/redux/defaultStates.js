@@ -138,15 +138,11 @@ export const LYRIC_DEFAULTS = {
     isLyricLogue: isStoredLogue
 }
 
-export const MOBILE_DEFAULTS = {
-    isHigherProcessor: false,
-    isTouchSupported: false
-}
-
 export const MOUNT_DEFAULTS = {
     canCarouselMount: false,
     canScoreMount: false,
-    canSliderMount: false
+    canSliderMount: false,
+    lyricHeightRatio: 0
 }
 
 export const OPTION_DEFAULTS = {
@@ -302,6 +298,5 @@ export const VIEWPORT_DEFAULTS = {
     stageWidth: 100,
     stageHeight: 100,
     ceilingHeight: 0,
-    floorHeight: 0,
-    lyricDynamicHeightRatio: 0
+    floorHeight: 0
 }

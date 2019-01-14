@@ -18,7 +18,7 @@ const mapStateToProps = ({
         canLyricCarouselUpdate,
         lyricSongIndex
     },
-    mobileStore: { isTouchSupported }
+    appStore: { isTouchSupported }
 }) => ({
     canLyricCarouselUpdate,
     lyricSongIndex,

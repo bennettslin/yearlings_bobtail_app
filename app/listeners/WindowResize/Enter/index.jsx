@@ -5,6 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateViewportStore } from 'flux/viewport/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
+import { updateMountStore } from 'flux/mount/action'
+
+import {
+    getCanCarouselMount,
+    getLyricHeightRatio
+} from 'helpers/mount'
 
 import {
     getIsHeightlessLyric,
@@ -17,8 +23,7 @@ import {
 import { getIsLyricExpandable } from './helpers/responsive'
 import {
     getIsTwoRowMenu,
-    getCeilingFloorHeight,
-    getLyricDynamicHeightRatio
+    getCeilingFloorHeight
 } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
@@ -28,8 +33,10 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isHigherProcessor: PropTypes.bool.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
+        updateMountStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -59,7 +66,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 windowWidth
             })
 
-        this._updateViewportStore({
+        this._updateViewportAndMountStores({
             deviceWidthIndex,
             windowHeight,
             windowWidth,
@@ -74,13 +81,20 @@ class WindowResizeEnterDispatcher extends PureComponent {
         })
     }
 
-    _updateViewportStore({
+    _updateViewportAndMountStores({
         deviceWidthIndex,
         windowHeight,
         windowWidth,
         isHeightlessLyric
     }) {
-        const {
+        const { isHigherProcessor } = this.props,
+            canCarouselMount = getCanCarouselMount({
+                isHigherProcessor,
+                deviceWidthIndex,
+                windowHeight,
+                isHeightlessLyric
+            }),
+            {
                 stageTop,
                 stageLeft,
                 stageWidth,
@@ -90,7 +104,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth,
                 windowHeight,
-                isHeightlessLyric
+                isHeightlessLyric,
+                canCarouselMount
             }),
             {
                 ceilingHeight,
@@ -102,11 +117,6 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 stageHeight,
                 stageTop,
                 isHeightlessLyric
-            }),
-            lyricDynamicHeightRatio = getLyricDynamicHeightRatio({
-                deviceWidthIndex,
-                windowHeight,
-                stageHeight
             })
 
         this.props.updateViewportStore({
@@ -119,8 +129,18 @@ class WindowResizeEnterDispatcher extends PureComponent {
             stageWidth,
             stageHeight,
             ceilingHeight,
-            floorHeight,
-            lyricDynamicHeightRatio
+            floorHeight
+        })
+
+        this.props.updateMountStore({
+            canCarouselMount,
+            lyricHeightRatio: getLyricHeightRatio({
+                canCarouselMount,
+                deviceWidthIndex,
+                windowHeight,
+                stageHeight,
+                isHeightlessLyric
+            })
         })
     }
 
@@ -130,9 +150,15 @@ class WindowResizeEnterDispatcher extends PureComponent {
         windowWidth,
         isHeightlessLyric
     }) {
+
+        const { isHigherProcessor } = this.props
+
         this.props.updateResponsiveStore({
             isHeightlessLyric,
+
+            // TODO: Get rid of this.
             cannotMountCarouselNav: getCannotMountCarouselNav({
+                isHigherProcessor,
                 deviceWidthIndex,
                 windowHeight,
                 isHeightlessLyric
@@ -159,12 +185,16 @@ class WindowResizeEnterDispatcher extends PureComponent {
     }
 }
 
-const mapStateToProps = null
-
+const mapStateToProps = ({
+    appStore: { isHigherProcessor }
+}) => ({
+    isHigherProcessor
+})
 export default connect(
     mapStateToProps,
     {
         updateViewportStore,
-        updateResponsiveStore
+        updateResponsiveStore,
+        updateMountStore
     }
 )(WindowResizeEnterDispatcher)

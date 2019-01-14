@@ -6,20 +6,31 @@ import { connect } from 'react-redux'
 import { updateMountStore } from 'flux/mount/action'
 
 import {
+    getCanCarouselMount,
+    getLyricHeightRatio
+} from 'helpers/mount'
+
+import {
     getHasRoomForScore,
     getHasRoomForSlider
 } from './helper'
 
 const mapStateToProps = ({
-    mobileStore: { isHigherProcessor },
+    appStore: { isHigherProcessor },
     viewportStore: {
         isDesktopWidth,
-        deviceWidthIndex
-    }
+        deviceWidthIndex,
+        windowHeight,
+        stageHeight
+    },
+    responsiveStore: { isHeightlessLyric }
 }) => ({
     isHigherProcessor,
     isDesktopWidth,
-    deviceWidthIndex
+    deviceWidthIndex,
+    windowHeight,
+    stageHeight,
+    isHeightlessLyric
 })
 
 class MountListener extends PureComponent {
@@ -29,12 +40,54 @@ class MountListener extends PureComponent {
         isHigherProcessor: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
         deviceWidthIndex: PropTypes.number.isRequired,
+        windowHeight: PropTypes.number.isRequired,
+        stageHeight: PropTypes.number.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         updateMountStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
+        this._checkCarouselMount(prevProps)
         this._checkScoreMount(prevProps)
         this._checkSliderMount(prevProps)
+    }
+
+    _checkCarouselMount(prevProps) {
+        const
+            { isHigherProcessor } = this.props,
+            { isHigherProcessor: wasHigherProcessor } = prevProps
+
+        if (isHigherProcessor !== wasHigherProcessor) {
+            /**
+             * Mount listener updates these values upon processor change.
+             * Window listener will update them on viewport size changes.
+             */
+            const
+                {
+                    deviceWidthIndex,
+                    windowHeight,
+                    stageHeight,
+                    isHeightlessLyric
+                } = this.props,
+                canCarouselMount = getCanCarouselMount({
+                    isHigherProcessor,
+                    deviceWidthIndex,
+                    windowHeight,
+                    isHeightlessLyric
+                }),
+                lyricHeightRatio = getLyricHeightRatio({
+                    canCarouselMount,
+                    deviceWidthIndex,
+                    windowHeight,
+                    stageHeight,
+                    isHeightlessLyric
+                })
+
+            this.props.updateMountStore({
+                canCarouselMount,
+                lyricHeightRatio
+            })
+        }
     }
 
     _checkScoreMount(prevProps) {
@@ -54,16 +107,9 @@ class MountListener extends PureComponent {
         ) {
             const hasRoomForScore = getHasRoomForScore(deviceWidthIndex)
 
-            // To mount score, must have higher processor and room for it.
             this.props.updateMountStore({
-                canScoreMount: isHigherProcessor && hasRoomForScore,
-
-                /**
-                 * This assumes that the criteria for mounting carousel and
-                 * score are the same. This may change, but let's cross that
-                 * bridge when we get there.
-                 */
-                canCarouselMount: isHigherProcessor && hasRoomForScore
+                // To mount score, must have higher processor and room for it.
+                canScoreMount: isHigherProcessor && hasRoomForScore
             })
         }
     }

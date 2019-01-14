@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
 import AnnotationReducer from './annotation/reducer'
+import AppReducer from './app/reducer'
 import AudioReducer from './audio/reducer'
 import DeviceReducer from './viewport/reducer'
 import DotsReducer from './dots/reducer'
@@ -8,7 +9,6 @@ import DotsSlideReducer from './dotsSlide/reducer'
 import FocusReducer from './focus/reducer'
 import LoadReducer from './load/reducer'
 import LyricReducer from './lyric/reducer'
-import MobileReducer from './mobile/reducer'
 import MountReducer from './mount/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
@@ -33,7 +33,7 @@ import {
     FOCUS_STORE,
     LOAD_STORE,
     LYRIC_STORE,
-    MOBILE_STORE,
+    APP_STORE,
     MOUNT_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
@@ -50,6 +50,9 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [APP_STORE]: AppReducer,
+    [MOUNT_STORE]: MountReducer,
+
     [SELECTED_STORE]: SelectedReducer,
     [LYRIC_STORE]: LyricReducer,
     [SCENE_STORE]: SceneReducer,
@@ -59,8 +62,6 @@ const rootReducer = combineReducers({
     [ACCESS_STORE]: AccessReducer,
     [SESSION_STORE]: SessionReducer,
     [PLAYERS_STORE]: PlayersReducer,
-    [MOBILE_STORE]: MobileReducer,
-    [MOUNT_STORE]: MountReducer,
 
     [RESPONSIVE_STORE]: ResponsiveReducer,
 
