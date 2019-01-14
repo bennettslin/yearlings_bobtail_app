@@ -61,6 +61,11 @@ export default [
         neededHours: 2
     },
     {
+        taskName: `Finalise banner UI, including max widths, plus in overlay, for both desktop and mobile.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Finalise slider UI.`,
         workedHours: 0,
         neededHours: 5

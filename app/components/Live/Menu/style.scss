@@ -1,3 +1,19 @@
+// Constants prefixed with js *must* be the same in JavaScript.
+$js__height__menu: 72px;
+
+// This works out to 52px;
+$js__height__menu__twoRowMenu:
+    $js__length__icon
+    + $js__margin__thin * 2;
+
+// Arbitrary for now.
+$js__height__banner__twoRowMenu: 48px;
+
+// Phone always has two rows in menu. Includes menu, banner, and slider.
+$js__top__twoRowMenu:
+    $js__height__menu__twoRowMenu
+    + $js__height__banner__twoRowMenu;
+
 $js__width__menu__desktopCentre: 720px;
 
 .Menu {
@@ -33,7 +49,7 @@ $js__width__menu__desktopCentre: 720px;
 
     // Margin between menu children.
     & > :not(:last-child) {
-        margin-right: $js__margin__thick;
+        margin-right: $js__margin__thick * 2;
     }
 
     transition:
@@ -64,6 +80,35 @@ $js__width__menu__desktopCentre: 720px;
         // This keeps the menu mainTop to the right.
         margin: 0 !important;
         max-width: auto;
+    }
+
+    // When in two-row menu...
+    .RW__twoRowMenu
+    & {
+        // Wrap children.
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+.Audio {
+    .RW__twoRowMenu
+    & {
+        // In two-row menu, Audio is second child.
+        order: 2;
+    }
+}
+
+.Banner {
+    .RW__twoRowMenu
+    & {
+        // In two-row menu, Banner is last child.
+        order: 3;
+        margin-right: 0;
+        margin-top: $js__margin__thick;
+        height:
+            $js__height__banner__twoRowMenu
+            - $js__margin__thick;
     }
 }
 

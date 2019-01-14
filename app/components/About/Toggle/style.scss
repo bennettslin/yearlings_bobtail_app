@@ -8,10 +8,30 @@ $width__childAbout__phone: 80px;
 }
 
 .AboutToggle {
-    width: $width__childAbout;
+    width: $height__overviewToggle;
+    height: $width__overviewToggle;
+
+    .DW__laptop
+    & {
+        width: $height__overviewToggle__laptop;
+        height: $width__overviewToggle__laptop;
+    }
+
+    .DW__tablet
+    & {
+        width: $height__overviewToggle__tablet;
+        height: $width__overviewToggle__tablet;
+    }
+
+    .DW__mini
+    & {
+        width: $height__overviewToggle__mini;
+        height: $width__overviewToggle__mini;
+    }
 
     .DW__phone
     & {
-        width: $width__childAbout__phone;
+        width: $height__overviewToggle__phone;
+        height: $width__overviewToggle__phone;
     }
 }

@@ -1,6 +1,6 @@
 $overviewToggleRatio: 1.5;
 
-$width__overviewToggle: 75px;
+$width__overviewToggle: 64px;
 $height__overviewToggle:
     $width__overviewToggle
     * $overviewToggleRatio;
@@ -23,10 +23,10 @@ $height__overviewToggle__mini:
     $width__overviewToggle__mini
     * $overviewToggleRatio;
 
-$width___overviewToggle__phone:
+$width__overviewToggle__phone:
     $js__length__icon;
-$height___overviewToggle__phone:
-    $width___overviewToggle__phone
+$height__overviewToggle__phone:
+    $width__overviewToggle__phone
     * $overviewToggleRatio;
 
 .LeftShelf {
@@ -87,13 +87,18 @@ $height___overviewToggle__phone:
 .LeftShelf__child {
 
     &:not(:last-child) {
-        margin-bottom: $js__margin__thick;
+        margin-bottom: $js__margin__thick * 2;
     }
 
     .DW__miniOrTabletWidth
     &:not(:last-child) {
         margin-top: $js__margin__thick;
         margin-bottom: 0;
+    }
+
+    .DW__phone
+    &:not(:last-child) {
+        margin-bottom: $js__margin__thick;
     }
 }
 
@@ -116,6 +121,6 @@ $height___overviewToggle__phone:
 
     .DW__phone
     & {
-        width: $width___overviewToggle__phone;
+        width: $width__overviewToggle__phone;
     }
 }

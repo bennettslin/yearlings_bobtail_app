@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Code splitting timebox.`,
+        taskName: `Code splitting and API server timebox.`,
         workedHours: 0,
         neededHours: 20
     },
@@ -30,13 +30,8 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `No carousel in low processor. This should include a fix for going straight to nav when dots are deselected.`,
+        taskName: `No carousel in low processor. This should include a fix for going straight to nav when dots are deselected. When doing this, create a single flag for whether to mount, and also add similar flags for score and slider.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Add title to lyric column in desktop. Also choose font.`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]

@@ -8,17 +8,6 @@
 
     // Tip popup is in centre by default.
 
-    /**
-     * When tip button is in menu, show tip popup closer to menu.
-     */
-    .RW__scoresTipsMenu
-    &,
-    .DW__phone
-    & {
-        top: $js__margin__thick;
-        right: $js__margin__thick;
-    }
-
     .DW__miniOrTabletWidth
     & {
 
@@ -28,6 +17,12 @@
          */
         position: absolute;
         bottom: $js__margin__thick;
+        right: $js__margin__thick;
+    }
+
+    .DW__phone
+    & {
+        top: $js__margin__thick;
         right: $js__margin__thick;
     }
 }
