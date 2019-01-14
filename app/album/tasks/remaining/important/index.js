@@ -20,11 +20,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Slider only renders in high processor on desktop. This includes completely rethinking the menu layout.`,
-        workedHours: 0,
-        neededHours: 20
-    },
-    {
         taskName: `If lyric expandable, always have either expanded lyric or heightless lyric in low processor. Include rotate screen icon in place of lyric expand button.`,
         workedHours: 0,
         neededHours: 5

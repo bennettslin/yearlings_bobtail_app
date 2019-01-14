@@ -18,14 +18,12 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    mobileStore: { isHigherProcessor },
-    viewportStore: { isDesktopWidth },
+    mountStore: { canSliderMount },
     responsiveStore: { isHeightlessLyric },
     toggleStore: { isLyricExpanded },
     focusStore: { queuedFocus }
 }) => ({
-    isHigherProcessor,
-    isDesktopWidth,
+    canSliderMount,
     isHeightlessLyric,
     isLyricExpanded,
     queuedFocus
@@ -35,8 +33,7 @@ class FocusContainer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isHigherProcessor: PropTypes.bool.isRequired,
-        isDesktopWidth: PropTypes.bool.isRequired,
+        canSliderMount: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         queuedFocus: PropTypes.bool.isRequired,
@@ -176,13 +173,7 @@ class FocusContainer extends PureComponent {
     }
 
     render() {
-        const
-            {
-                isHigherProcessor,
-                isDesktopWidth
-            } = this.props,
-
-            shouldSliderMount = isHigherProcessor && isDesktopWidth
+        const { canSliderMount } = this.props
 
         return (
             <div
@@ -195,7 +186,7 @@ class FocusContainer extends PureComponent {
                     onKeyDown: this._handleKeyDownPress,
                     onKeyUp: this._handleKeyUpPress
                 }}
-                {...shouldSliderMount && {
+                {...canSliderMount && {
                     onMouseMove: this._handleTouchMove,
                     onTouchMove: this._handleTouchMove,
 
@@ -216,7 +207,7 @@ class FocusContainer extends PureComponent {
 
                     }}
                 />
-                {shouldSliderMount && (
+                {canSliderMount && (
                     <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
                 )}
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />

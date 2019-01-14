@@ -14,10 +14,7 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from './helpers/nav'
-import {
-    getIsLyricExpandable,
-    getHasRoomForScore
-} from './helpers/responsive'
+import { getIsLyricExpandable } from './helpers/responsive'
 import {
     getIsTwoRowMenu,
     getCeilingFloorHeight,
@@ -155,7 +152,6 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth
             }),
-            hasRoomForScore: getHasRoomForScore(deviceWidthIndex),
             isLyricExpandable: getIsLyricExpandable(deviceWidthIndex)
         })
     }

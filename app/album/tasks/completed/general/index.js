@@ -4440,5 +4440,10 @@ export default [
         taskName: `Begin work for low processor mode. Include not mounting score, and fixing verseBar determination and autoScroll in mobile.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Slider only renders in high processor on desktop. This includes completely rethinking the menu layout.`,
+        workedHours: 9,
+        neededHours: 9
     }
 ]

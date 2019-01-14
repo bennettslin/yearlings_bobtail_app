@@ -9,19 +9,16 @@ import ScorePopup from '../../Popups/Score'
 import WikiPopup from '../../Popups/Wiki'
 
 const mapStateToProps = ({
-    mobileStore: { isHigherProcessor },
-    responsiveStore: { hasRoomForScore }
+    mountStore: { canScoreMount }
 }) => ({
-    isHigherProcessor,
-    hasRoomForScore
+    canScoreMount
 })
 
 class OverlayPopups extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isHigherProcessor: PropTypes.bool.isRequired,
-        hasRoomForScore: PropTypes.bool.isRequired,
+        canScoreMount: PropTypes.bool.isRequired,
 
         // From parent.
         setScoreFocusElement: PropTypes.func.isRequired,
@@ -31,8 +28,7 @@ class OverlayPopups extends PureComponent {
     render() {
 
         const {
-            isHigherProcessor,
-            hasRoomForScore,
+            canScoreMount,
             setScoreFocusElement,
             setWikiFocusElement
         } = this.props
@@ -47,7 +43,7 @@ class OverlayPopups extends PureComponent {
             )}>
                 <AnnotationPopup />
                 <AboutPopup />
-                {isHigherProcessor && hasRoomForScore && (
+                {canScoreMount && (
                     <ScorePopup {...{ setScoreFocusElement }} />
                 )}
                 <WikiPopup {...{ setWikiFocusElement }} />

@@ -15,6 +15,7 @@ import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import MainListener from '../../listeners/Main'
 import MobileListener from '../../listeners/Mobile'
+import MountListener from '../../listeners/Mount'
 import NavListener from '../../handlers/Nav/Listener'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
@@ -39,20 +40,23 @@ import LogManager from '../../managers/Log'
 import FocusContainer from '../Focus'
 
 const mapStateToProps = ({
-    mobileStore: { isHigherProcessor },
-    responsiveStore: { hasRoomForScore },
+    mountStore: {
+        canScoreMount,
+        canSliderMount
+    },
     viewportStore: { isDesktopWidth }
 }) => ({
-    isHigherProcessor,
-    hasRoomForScore,
+    canScoreMount,
+    canSliderMount,
     isDesktopWidth
 })
 
 class ListenContainer extends PureComponent {
 
     static propTypes = {
-        isHigherProcessor: PropTypes.bool.isRequired,
-        hasRoomForScore: PropTypes.bool.isRequired,
+        // Through Redux.
+        canScoreMount: PropTypes.bool.isRequired,
+        canSliderMount: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired
     }
 
@@ -62,9 +66,8 @@ class ListenContainer extends PureComponent {
 
     render() {
         const {
-            isHigherProcessor,
-            hasRoomForScore,
-            isDesktopWidth
+            canScoreMount,
+            canSliderMount
         } = this.props
 
         return (
@@ -82,16 +85,17 @@ class ListenContainer extends PureComponent {
                 <LyricIndicesListener />
                 <MainListener />
                 <MobileListener />
+                <MountListener />
                 <NavListener />
                 <OverviewListener />
                 <PopupAnnotationListener />
                 <SceneChangeExitListener />
                 <SceneChangeEnterListener />
-                {isHigherProcessor && hasRoomForScore && (
+                {canScoreMount && (
                     <ScoreListener />
                 )}
                 <ScrollRenderListener />
-                {isHigherProcessor && isDesktopWidth && (
+                {canSliderMount && (
                     <SliderListener />
                 )}
                 <SongListener />

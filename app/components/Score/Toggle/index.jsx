@@ -14,20 +14,17 @@ import { SCORES_BUTTON_KEY } from 'constants/buttons'
 
 const mapStateToProps = ({
     loadStore: { isScoreLoaded },
-    responsiveStore: { hasRoomForScore },
-    mobileStore: { isHigherProcessor }
+    mountStore: { canScoreMount }
 }) => ({
     isScoreLoaded,
-    hasRoomForScore,
-    isHigherProcessor
+    canScoreMount
 })
 
 class ScoreToggle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        hasRoomForScore: PropTypes.bool.isRequired,
-        isHigherProcessor: PropTypes.bool.isRequired,
+        canScoreMount: PropTypes.bool.isRequired,
         isScoreLoaded: PropTypes.bool.isRequired
     }
 
@@ -41,14 +38,11 @@ class ScoreToggle extends PureComponent {
 
     render() {
         const {
-                isScoreLoaded,
-                hasRoomForScore,
-                isHigherProcessor
-            } = this.props,
+            isScoreLoaded,
+            canScoreMount
+        } = this.props
 
-            showScoreToggle = isHigherProcessor && hasRoomForScore
-
-        return showScoreToggle && (
+        return canScoreMount && (
             <___>
                 <Button
                     isLargeSize

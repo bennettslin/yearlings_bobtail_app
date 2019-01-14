@@ -9,6 +9,7 @@ import FocusReducer from './focus/reducer'
 import LoadReducer from './load/reducer'
 import LyricReducer from './lyric/reducer'
 import MobileReducer from './mobile/reducer'
+import MountReducer from './mount/reducer'
 import OptionReducer from './option/reducer'
 import PlayersReducer from './players/reducer'
 import ResponsiveReducer from './responsive/reducer'
@@ -33,6 +34,7 @@ import {
     LOAD_STORE,
     LYRIC_STORE,
     MOBILE_STORE,
+    MOUNT_STORE,
     OPTION_STORE,
     PLAYERS_STORE,
     RESPONSIVE_STORE,
@@ -58,6 +60,7 @@ const rootReducer = combineReducers({
     [SESSION_STORE]: SessionReducer,
     [PLAYERS_STORE]: PlayersReducer,
     [MOBILE_STORE]: MobileReducer,
+    [MOUNT_STORE]: MountReducer,
 
     [RESPONSIVE_STORE]: ResponsiveReducer,
 

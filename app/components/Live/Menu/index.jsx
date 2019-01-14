@@ -20,11 +20,11 @@ const mapStateToProps = ({
         windowWidth,
         isDesktopWidth
     },
-    mobileStore: { isHigherProcessor }
+    mountStore: { canSliderMount }
 }) => ({
     windowWidth,
     isDesktopWidth,
-    isHigherProcessor
+    canSliderMount
 })
 
 class Menu extends PureComponent {
@@ -33,7 +33,7 @@ class Menu extends PureComponent {
         // Through Redux.
         windowWidth: PropTypes.number.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
-        isHigherProcessor: PropTypes.bool.isRequired
+        canSliderMount: PropTypes.bool.isRequired
     }
 
     render() {
@@ -41,8 +41,9 @@ class Menu extends PureComponent {
             {
                 windowWidth,
                 isDesktopWidth,
-                isHigherProcessor
+                canSliderMount
             } = this.props,
+
             /**
              * This is necessary because transform animation in Safari is janky.
              */
@@ -76,7 +77,7 @@ class Menu extends PureComponent {
                     <Audio />
                 </div>
 
-                {isHigherProcessor && isDesktopWidth && (
+                {canSliderMount && (
                     <div
                         className={cx(
                             'Menu__lyricTop',

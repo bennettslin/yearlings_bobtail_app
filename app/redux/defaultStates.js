@@ -143,6 +143,12 @@ export const MOBILE_DEFAULTS = {
     isTouchSupported: false
 }
 
+export const MOUNT_DEFAULTS = {
+    canCarouselMount: false,
+    canScoreMount: false,
+    canSliderMount: false
+}
+
 export const OPTION_DEFAULTS = {
     selectedOverviewOption:
         getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
@@ -169,8 +175,7 @@ export const RESPONSIVE_DEFAULTS = {
     showShrunkNavIcon: false,
     showSingleNavBook: false,
     isLyricExpandable: false,
-    isUnrenderableCarouselNav: true,
-    hasRoomForScore: true
+    isUnrenderableCarouselNav: true
 }
 
 // Begin in default stage scene.
