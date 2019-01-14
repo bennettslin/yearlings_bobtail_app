@@ -7,10 +7,7 @@ import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
-import ScrollCarouselListener from '../../listeners/Scroll/Carousel'
 import CarouselScroll from './Scroll'
-
-import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter }
@@ -30,24 +27,12 @@ class Carousel extends PureComponent {
         logMount('Carousel')
     }
 
-    _setCarouselParent = (node) => {
-        return this.setCarouselParent(node)
-    }
-
-    _setCarouselAnnotationElement = (payload) => {
-        return this.setCarouselAnnotationElement(payload)
-    }
-
     _handleTransitionExited = () => {
         this.props.updateLyricStore({ didCarouselExit: true })
     }
 
     _handleTransitionEntered = () => {
         this.props.updateLyricStore({ didCarouselEnter: true })
-    }
-
-    _getRefs = (payload) => {
-        populateRefs(this, payload)
     }
 
     render() {
@@ -70,15 +55,7 @@ class Carousel extends PureComponent {
                         'gradientMask__carousel__desktop'
                     )}
                 >
-                    <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
-                    <CarouselScroll
-                        {...{
-                            setCarouselParent:
-                                this._setCarouselParent,
-                            setCarouselAnnotationElement:
-                                this._setCarouselAnnotationElement
-                        }}
-                    />
+                    <CarouselScroll />
                 </div>
             </CSSTransition>
         )

@@ -6,10 +6,12 @@ import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import Transition from 'react-transition-group/Transition'
+import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 
 import { getAnnotationsCount } from 'album/api/annotations'
 import { getArrayOfLength } from 'helpers/general'
+import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     lyricStore: {
@@ -38,11 +40,7 @@ class CarouselScroll extends PureComponent {
         lyricAnnotationIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
-        updateLyricStore: PropTypes.func.isRequired,
-
-        // From parent.
-        setCarouselParent: PropTypes.func.isRequired,
-        setCarouselAnnotationElement: PropTypes.func.isRequired
+        updateLyricStore: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -53,15 +51,25 @@ class CarouselScroll extends PureComponent {
         this.props.updateLyricStore({ didCarouselUpdate: true })
     }
 
+    _setCarouselParent = (node) => {
+        return this.setCarouselParent(node)
+    }
+
+    _setCarouselAnnotationElement = (payload) => {
+        return this.setCarouselAnnotationElement(payload)
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         const {
             canLyricCarouselUpdate,
             lyricSongIndex,
             lyricAnnotationIndex,
             accessedAnnotationIndex,
-            isAccessedIndexedAnchorShown,
-            setCarouselParent,
-            setCarouselAnnotationElement
+            isAccessedIndexedAnchorShown
         } = this.props
 
         const annotationsCount = getAnnotationsCount(lyricSongIndex),
@@ -82,9 +90,10 @@ class CarouselScroll extends PureComponent {
                 }}
             >
                 <div
-                    ref={setCarouselParent}
+                    ref={this._setCarouselParent}
                     className="CarouselScroll"
                 >
+                    <ScrollCarouselListener {...{ getRefs: this._getRefs }} />
                     {annotationsIndices.map(index => {
 
                         const annotationIndex = index + 1,
@@ -103,7 +112,7 @@ class CarouselScroll extends PureComponent {
                                     annotationIndex,
                                     isAccessed,
                                     isSelected,
-                                    setCarouselAnnotationElement
+                                    setCarouselAnnotationElement: this._setCarouselAnnotationElement
                                 }}
                             />
                         )
