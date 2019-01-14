@@ -19,7 +19,7 @@ class VerseBar extends PureComponent {
         windowHeight: PropTypes.number.isRequired,
         isHigherProcessor: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        lyricHeightRatio: PropTypes.number.isRequired,
+        lyricDynamicHeightRatio: PropTypes.number.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
@@ -107,7 +107,7 @@ class VerseBar extends PureComponent {
                 windowHeight,
                 isHigherProcessor,
                 isLyricExpanded,
-                lyricHeightRatio,
+                lyricDynamicHeightRatio,
                 isHeightlessLyric,
                 isTwoRowMenu
             } = this.props,
@@ -121,7 +121,7 @@ class VerseBar extends PureComponent {
                     windowHeight,
                     isHigherProcessor,
                     isLyricExpanded,
-                    lyricHeightRatio,
+                    lyricDynamicHeightRatio,
                     isHeightlessLyric,
                     isTwoRowMenu,
                     verseElement
@@ -167,7 +167,7 @@ const mapStateToProps = ({
         isTwoRowMenu
     },
     toggleStore: { isLyricExpanded },
-    viewportStore: { lyricHeightRatio },
+    viewportStore: { lyricDynamicHeightRatio },
     verseBarsStore: {
         isVerseBarAbove,
         isVerseBarBelow
@@ -183,7 +183,7 @@ const mapStateToProps = ({
     windowHeight,
     isHigherProcessor,
     isLyricExpanded,
-    lyricHeightRatio,
+    lyricDynamicHeightRatio,
     isVerseBarAbove,
     isVerseBarBelow,
     isHeightlessLyric,

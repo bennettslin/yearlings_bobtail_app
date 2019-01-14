@@ -86,32 +86,41 @@ export const getCeilingFloorHeight = ({
     }
 }
 
-export const getLyricHeightRatio = ({
+export const getLyricDynamicHeightRatio = ({
     deviceWidthIndex,
     windowHeight,
-    stageHeight,
-    isHeightlessLyric
+    stageHeight
 }) => {
+
+    // // Desktop is always 100%.
+    // if (getIsDesktopWidth(deviceWidthIndex)) {
+    //     return 1
+
+    // // Heightless lyric is 0%, obviously.
+    // } else if (isHeightlessLyric) {
+    //     return 0
+    // }
+
+    // // If carousel can mount, allow lyric height to be constant.
+    // if (canCarouselMount) {
+    //     return LS_HEIGHT_LYRIC_COLLAPSED
+    // }
 
     // Desktop is always 100%.
     if (getIsDesktopWidth(deviceWidthIndex)) {
         return 1
-
-    // Heightless lyric is 0%, obviously.
-    } else if (isHeightlessLyric) {
-        return 0
     }
 
-    // Mobile not phone is always 32%.
-    if (!getIsPhoneWidth(deviceWidthIndex)) {
-        return LS_HEIGHT_LYRIC_COLLAPSED
-    }
+    const
+        menuHeight = getIsPhoneWidth(deviceWidthIndex) ?
+            LS_TOP_TWO_ROW_MENU :
+            LS_HEIGHT_MENU,
 
-    const rawHeight = (
-        windowHeight
-        - LS_TOP_TWO_ROW_MENU
-        - stageHeight
-    ) / windowHeight
+        rawHeight = (
+            windowHeight
+            - menuHeight
+            - stageHeight
+        ) / windowHeight
 
     return Number(rawHeight.toFixed(2))
 }

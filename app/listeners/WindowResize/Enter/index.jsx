@@ -18,7 +18,7 @@ import { getIsLyricExpandable } from './helpers/responsive'
 import {
     getIsTwoRowMenu,
     getCeilingFloorHeight,
-    getLyricHeightRatio
+    getLyricDynamicHeightRatio
 } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
 import { resizeWindow } from './helpers/window'
@@ -103,11 +103,10 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 stageTop,
                 isHeightlessLyric
             }),
-            lyricHeightRatio = getLyricHeightRatio({
+            lyricDynamicHeightRatio = getLyricDynamicHeightRatio({
                 deviceWidthIndex,
                 windowHeight,
-                stageHeight,
-                isHeightlessLyric
+                stageHeight
             })
 
         this.props.updateViewportStore({
@@ -121,7 +120,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
             stageHeight,
             ceilingHeight,
             floorHeight,
-            lyricHeightRatio
+            lyricDynamicHeightRatio
         })
     }
 

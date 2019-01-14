@@ -36,6 +36,16 @@
         z-index: $zIndex__lyricColumn;
     }
 
+    .RW__lyricHeightless
+    & {
+        height: 0;
+    }
+
+    .RW__lyricHeighted
+    & {
+        height: $js__height__lyricCollapsed;
+    }
+
     .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__height__menu});

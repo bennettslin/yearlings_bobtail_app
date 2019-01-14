@@ -19,13 +19,17 @@ import VerseBar from './VerseBar'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    viewportStore: { lyricHeightRatio },
+    viewportStore: { lyricDynamicHeightRatio },
     lyricStore: { canLyricCarouselEnter },
-    toggleStore: { isLyricExpanded }
+    toggleStore: { isLyricExpanded },
+    responsiveStore: { isHeightlessLyric },
+    mountStore: { canCarouselMount }
 }) => ({
-    lyricHeightRatio,
+    lyricDynamicHeightRatio,
     canLyricCarouselEnter,
-    isLyricExpanded
+    isLyricExpanded,
+    isHeightlessLyric,
+    canCarouselMount
 })
 
 /*************
@@ -36,9 +40,11 @@ class Lyric extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        lyricDynamicHeightRatio: PropTypes.number.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        lyricHeightRatio: PropTypes.number.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
+        canCarouselMount: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -77,7 +83,9 @@ class Lyric extends PureComponent {
         const {
             canLyricCarouselEnter,
             isLyricExpanded,
-            lyricHeightRatio,
+            isHeightlessLyric,
+            lyricDynamicHeightRatio,
+            canCarouselMount,
             setLyricFocusElement
         } = this.props
 
@@ -103,13 +111,15 @@ class Lyric extends PureComponent {
                                 'gradientMask__lyricColumn__desktop'
                             )
                         }}
-                        {...!isLyricExpanded && {
+                        {...!canCarouselMount &&
+                            !isLyricExpanded &&
+                            !isHeightlessLyric && {
                             /**
                              * If lyric is expanded, height is straightforward,
                              * so we'll handle it in CSS instead.
                              */
                             style: {
-                                height: `${lyricHeightRatio * 100}%`
+                                height: `${lyricDynamicHeightRatio * 100}%`
                             }
                         }}
                     >
