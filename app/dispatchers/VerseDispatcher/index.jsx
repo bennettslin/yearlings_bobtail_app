@@ -5,6 +5,7 @@ import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
+import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/scenes'
@@ -18,6 +19,7 @@ class VerseDispatcher extends PureComponent {
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
+        resetVerseBars: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -56,6 +58,9 @@ class VerseDispatcher extends PureComponent {
         // Ensure that no verse is interactivated.
         this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
 
+        // Selecting a verse necessarily resets the verse bars.
+        this.props.resetVerseBars()
+
         this.props.updateScrollLyricStore({
             queuedScrollLyricLog: scrollLog,
             queuedScrollLyricByVerse: true,
@@ -82,6 +87,7 @@ export default connect(
         updateAudioStore,
         updateScrollLyricStore,
         updateSessionStore,
-        updateSelectedStore
+        updateSelectedStore,
+        resetVerseBars
     }
 )(VerseDispatcher)

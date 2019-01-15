@@ -126,7 +126,7 @@ class LyricScroll extends PureComponent {
                                  * This gradient does not obscure the lyric
                                  * toggle buttons.
                                  */
-                                'gradientMask__lyricColumn__mobileCollapsed'
+                                'gradientMask__lyricScroll'
                             ),
                             tabIndex: -1,
                             onScroll: this._handleScroll,

@@ -4450,5 +4450,10 @@ export default [
         taskName: `No carousel in low processor. This should include a fix for going straight to nav when dots are deselected. When doing this, create a single flag for whether to mount, and also add similar flags for score and slider.`,
         workedHours: 7,
         neededHours: 7
+    },
+    {
+        taskName: `Minor work on lyric top gradient mask and other bug fixes.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

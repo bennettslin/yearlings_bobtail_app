@@ -13,8 +13,9 @@ class ResponsiveWrapper extends PureComponent {
         earColumnIndex: PropTypes.number.isRequired,
         isEarShown: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
-        showShrunkNavIcon: PropTypes.bool.isRequired,
+        isLyricExpandable: PropTypes.bool.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
+        showShrunkNavIcon: PropTypes.bool.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -26,6 +27,7 @@ class ResponsiveWrapper extends PureComponent {
                 isCarouselNavShowable,
                 isEarShown,
                 isHeightlessLyric,
+                isLyricExpandable,
                 showShrunkNavIcon,
                 isTwoRowMenu,
                 children
@@ -59,7 +61,10 @@ class ResponsiveWrapper extends PureComponent {
 
                         isHeightlessLyric ?
                             'RW__lyricHeightless' :
-                            'RW__lyricHeighted'
+                            'RW__lyricHeighted',
+
+                        isLyricExpandable &&
+                            'RW__lyricExpandable'
                     )
                 }}
             >
@@ -77,6 +82,7 @@ const mapStateToProps = ({
     },
     responsiveStore: {
         isHeightlessLyric,
+        isLyricExpandable,
         isTwoRowMenu,
         showShrunkNavIcon
     }
@@ -85,8 +91,9 @@ const mapStateToProps = ({
     earColumnIndex,
     isEarShown,
     isHeightlessLyric,
-    showShrunkNavIcon,
-    isTwoRowMenu
+    isLyricExpandable,
+    isTwoRowMenu,
+    showShrunkNavIcon
 })
 
 export default connect(mapStateToProps)(ResponsiveWrapper)
