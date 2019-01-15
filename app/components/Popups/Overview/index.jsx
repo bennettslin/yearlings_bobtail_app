@@ -12,6 +12,7 @@ import { SHOWN } from 'constants/options'
 const mapStateToProps = ({
     viewportStore: { isPhoneWidth },
     lyricStore: { canLyricCarouselEnter },
+    transientStore: { isOverlayShown },
     optionStore: {
         selectedOverviewOption,
         selectedTipsOption
@@ -20,6 +21,7 @@ const mapStateToProps = ({
 }) => ({
     isPhoneWidth,
     canLyricCarouselEnter,
+    isOverlayShown,
     selectedOverviewOption,
     selectedTipsOption,
     isLyricLogue
@@ -31,6 +33,7 @@ class OverviewPopup extends PureComponent {
         // Through Redux.
         isPhoneWidth: PropTypes.bool.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
+        isOverlayShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -45,6 +48,7 @@ class OverviewPopup extends PureComponent {
                 inMain,
                 isPhoneWidth,
                 canLyricCarouselEnter,
+                isOverlayShown,
                 selectedOverviewOption,
                 isLyricLogue,
                 selectedTipsOption
@@ -52,12 +56,12 @@ class OverviewPopup extends PureComponent {
 
             // Switch between logue and song overview sections.
             isVisibleBasedOnSong = isLyricLogue ?
-                !inMain :
 
-                /**
-                 * Always hide overview section when about is open, or when tip
-                 * is shown in song.
-                 */
+                // Hide when overlay is shown in logue.
+                !inMain &&
+                !isOverlayShown :
+
+                // Hide when tip is shown in song.
                 Boolean(inMain) &&
                 selectedTipsOption !== SHOWN &&
                 selectedOverviewOption === SHOWN,
