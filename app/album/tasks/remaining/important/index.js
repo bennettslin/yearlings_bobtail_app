@@ -23,10 +23,5 @@ export default [
         taskName: `If lyric expandable, always have either expanded lyric or heightless lyric in low processor. Include rotate screen icon in place of lyric expand button.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `No carousel in low processor. This should include a fix for going straight to nav when dots are deselected. When doing this, create a single flag for whether to mount, and also add similar flags for score and slider.`,
-        workedHours: 2,
-        neededHours: 5
     }
 ]

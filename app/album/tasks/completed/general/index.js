@@ -4445,5 +4445,10 @@ export default [
         taskName: `Slider only renders in high processor on desktop. This includes completely rethinking the menu layout.`,
         workedHours: 9,
         neededHours: 9
+    },
+    {
+        taskName: `No carousel in low processor. This should include a fix for going straight to nav when dots are deselected. When doing this, create a single flag for whether to mount, and also add similar flags for score and slider.`,
+        workedHours: 7,
+        neededHours: 7
     }
 ]
