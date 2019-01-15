@@ -40,6 +40,7 @@ class Carousel extends PureComponent {
 
         return (
             <CSSTransition
+                appear
                 mountOnEnter
                 {...{
                     in: canLyricCarouselEnter,

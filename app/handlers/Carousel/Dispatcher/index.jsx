@@ -8,7 +8,6 @@ class CarouselDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isPhoneWidth: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
         canCarouselMount: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
@@ -32,7 +31,6 @@ class CarouselDispatcher extends PureComponent {
         isCarouselShown = !this.props.isCarouselShown
     ) => {
         const {
-            isPhoneWidth,
             dotsBitNumber,
             isSelectedLogue,
             canCarouselMount,
@@ -42,7 +40,6 @@ class CarouselDispatcher extends PureComponent {
 
         // We shouldn't be able to toggle the carousel under these conditions.
         if (
-            isPhoneWidth ||
             !dotsBitNumber ||
             isSelectedLogue ||
             !canCarouselMount
@@ -89,7 +86,6 @@ class CarouselDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    viewportStore: { isPhoneWidth },
     dotsStore: { dotsBitNumber },
     mountStore: { canCarouselMount },
     accessStore: { accessedAnnotationIndex },
@@ -102,7 +98,6 @@ const mapStateToProps = ({
         isCarouselShown
     }
 }) => ({
-    isPhoneWidth,
     dotsBitNumber,
     canCarouselMount,
     accessedAnnotationIndex,

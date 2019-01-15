@@ -21,17 +21,27 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
+import { getMainHeight } from './helper'
+
 const mapStateToProps = ({
-    mountStore: { canCarouselMount }
+    mountStore: {
+        canCarouselMount,
+        lyricHeightRatio
+    },
+    responsiveStore: { isTwoRowMenu }
 }) => ({
-    canCarouselMount
+    canCarouselMount,
+    lyricHeightRatio,
+    isTwoRowMenu
 })
 
 class Main extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canCarouselMount: PropTypes.bool.isRequired
+        canCarouselMount: PropTypes.bool.isRequired,
+        lyricHeightRatio: PropTypes.number.isRequired,
+        isTwoRowMenu: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -39,17 +49,35 @@ class Main extends PureComponent {
     }
 
     render() {
-        const { canCarouselMount } = this.props
+        const {
+                canCarouselMount,
+                lyricHeightRatio,
+                isTwoRowMenu
+            } = this.props,
+
+            mainHeight = getMainHeight({
+                canCarouselMount,
+                lyricHeightRatio,
+                isTwoRowMenu
+            })
 
         /**
          * In phone, flex container's children have absolute position.
          */
         return (
-            <div className={cx(
-                'Main',
-                'position__mainColumn',
-                'width__mainColumn'
-            )}>
+            <div
+                {...{
+                    className: cx(
+                        'Main',
+                        'position__mainColumn',
+                        'height__mainColumn',
+                        'width__mainColumn'
+                    )
+                }}
+                {...mainHeight && {
+                    style: { height: mainHeight }
+                }}
+            >
 
                 <AnnotationPopup inMain />
                 {canCarouselMount && (

@@ -2,7 +2,7 @@
 $js__height__menu: 72px;
 
 // This works out to 52px;
-$js__height__menu__twoRowMenu:
+$js__height__top__twoRowMenu:
     $js__length__icon
     + $js__margin__thin * 2;
 
@@ -10,8 +10,8 @@ $js__height__menu__twoRowMenu:
 $js__height__banner__twoRowMenu: 48px;
 
 // Phone always has two rows in menu. Includes menu, banner, and slider.
-$js__top__twoRowMenu:
-    $js__height__menu__twoRowMenu
+$js__height__twoRowMenu:
+    $js__height__top__twoRowMenu
     + $js__height__banner__twoRowMenu;
 
 $js__width__menu__desktopCentre: 720px;
@@ -23,7 +23,7 @@ $js__width__menu__desktopCentre: 720px;
 
     .DW__phone
     & {
-        height: $js__height__menu__twoRowMenu;
+        height: $js__height__top__twoRowMenu;
     }
 }
 

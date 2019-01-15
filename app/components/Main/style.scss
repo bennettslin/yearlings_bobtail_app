@@ -23,6 +23,16 @@ $js__height__lyricCollapsed: 32%;
     position: absolute;
     left: 0;
     top: $js__height__menu;
+
+    .RW__twoRowMenu
+    & {
+        top: $js__height__twoRowMenu;
+    }
+}
+
+.height__mainColumn {
+    // If carousel cannot mount, these heights are overridden in JavaScript.
+
     height: calc(
         100%
         - #{$js__height__menu}
@@ -31,24 +41,9 @@ $js__height__lyricCollapsed: 32%;
     .DW__miniOrTabletWidth
     .RW__lyricHeighted
     & {
-        // This ensures that main toggle buttons sit above collapsed lyric.
         height: calc(
-            100%
+            #{100 - $js__height__lyricCollapsed}
             - #{$js__height__menu}
-            - #{$js__height__lyricCollapsed}
-        );
-    }
-
-    .RW__twoRowMenu
-    & {
-        /**
-         * Since main toggle buttons are at the top in phone, there's no need
-         to worry about subtracting the lyric height.
-         */
-        top: $js__top__twoRowMenu;
-        height: calc(
-            100%
-            - #{$js__top__twoRowMenu}
         );
     }
 }

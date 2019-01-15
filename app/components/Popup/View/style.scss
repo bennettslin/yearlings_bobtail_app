@@ -106,7 +106,7 @@
         // Make room for popup buttons, which are at the bottom in phone.
         max-height: calc(
             100vh
-            - #{$js__top__twoRowMenu + $js__length__icon * 1.25}
+            - #{$js__height__twoRowMenu + $js__length__icon * 1.25}
         );
     }
 }

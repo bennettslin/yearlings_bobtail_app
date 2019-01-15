@@ -46,13 +46,6 @@ class Stage extends PureComponent {
                 {...{
                     className: cx(
                         'Stage',
-
-                        /**
-                         * Not the most elegant solution. Moving stage from
-                         * Main to Live means it is no longer positioned to
-                         * accommodate the menu. This positions it as if it
-                         * were still a child of Main.
-                         */
                         'position__mainColumn'
                     )
                 }}

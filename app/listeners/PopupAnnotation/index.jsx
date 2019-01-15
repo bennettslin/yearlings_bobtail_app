@@ -11,16 +11,18 @@ const mapStateToProps = ({
         lyricAnnotationIndex
     },
     toggleStore: {
-        isCarouselShown,
+        isAboutShown,
         isScoreShown,
-        isAboutShown
+        isCarouselShown
     },
+    mountStore: { canCarouselMount },
     transientStore: { isOverlayingAnnotation },
     sessionStore: { selectedWikiIndex }
 }) => ({
-    isCarouselShown,
-    isScoreShown,
     isAboutShown,
+    isScoreShown,
+    isCarouselShown,
+    canCarouselMount,
     isOverlayingAnnotation,
     canLyricCarouselEnter,
     lyricAnnotationIndex,
@@ -33,9 +35,10 @@ class PopupAnnotationListener extends PureComponent {
         // Through Redux.
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
-        isCarouselShown: PropTypes.bool.isRequired,
-        isScoreShown: PropTypes.bool.isRequired,
         isAboutShown: PropTypes.bool.isRequired,
+        isScoreShown: PropTypes.bool.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
+        canCarouselMount: PropTypes.bool.isRequired,
         isOverlayingAnnotation: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         updateTransientStore: PropTypes.func.isRequired
@@ -50,10 +53,11 @@ class PopupAnnotationListener extends PureComponent {
         const {
                 canLyricCarouselEnter,
                 lyricAnnotationIndex,
-                isCarouselShown,
-                isOverlayingAnnotation,
-                isScoreShown,
                 isAboutShown,
+                isScoreShown,
+                isCarouselShown,
+                canCarouselMount,
+                isOverlayingAnnotation,
                 selectedWikiIndex
             } = this.props,
 
@@ -67,9 +71,14 @@ class PopupAnnotationListener extends PureComponent {
                  */
                 (
                     !isCarouselShown ||
+                    !canCarouselMount ||
                     isOverlayingAnnotation
                 ) &&
 
+                /**
+                 * These are here because they only hide, not close, the
+                 * popup annotation.
+                 */
                 !isScoreShown &&
                 !isAboutShown &&
                 !selectedWikiIndex

@@ -6,7 +6,7 @@ import {
 import {
     UNRENDERABLE_NAV_MIN,
     LS_HEIGHT_MENU,
-    LS_TOP_TWO_ROW_MENU,
+    LS_HEIGHT_TWO_ROW_MENU,
     LS_HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
@@ -75,7 +75,7 @@ export const getLyricHeightRatio = ({
     const
         // This is a dynamic value.
         menuHeight = getIsPhoneWidth(deviceWidthIndex) ?
-            LS_TOP_TWO_ROW_MENU :
+            LS_HEIGHT_TWO_ROW_MENU :
             LS_HEIGHT_MENU,
 
         rawHeight = (

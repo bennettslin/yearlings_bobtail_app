@@ -21,7 +21,7 @@
 
     .RW__twoRowMenu
     & {
-        top: $js__top__twoRowMenu;
-        height: calc(100% - #{$js__top__twoRowMenu});
+        top: $js__height__twoRowMenu;
+        height: calc(100% - #{$js__height__twoRowMenu});
     }
 }

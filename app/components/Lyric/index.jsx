@@ -84,6 +84,7 @@ class Lyric extends PureComponent {
         return (
             <___>
                 <CSSTransition
+                    appear
                     mountOnEnter
                     {...{
                         in: canLyricCarouselEnter,

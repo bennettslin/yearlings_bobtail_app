@@ -1,6 +1,6 @@
 import {
     LS_HEIGHT_MENU,
-    LS_TOP_TWO_ROW_MENU,
+    LS_HEIGHT_TWO_ROW_MENU,
     LS_HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
@@ -41,7 +41,7 @@ export const getCentreFieldHeight = ({
     let menuHeight = LS_HEIGHT_MENU
 
     if (getIsTwoRowMenu(deviceWidthIndex)) {
-        menuHeight = LS_TOP_TWO_ROW_MENU
+        menuHeight = LS_HEIGHT_TWO_ROW_MENU
     }
 
     return windowHeight - menuHeight - lyricColumnHeight
