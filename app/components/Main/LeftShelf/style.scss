@@ -1,34 +1,3 @@
-$overviewToggleRatio: 1.5;
-
-$width__overviewToggle: 64px;
-$height__overviewToggle:
-    $width__overviewToggle
-    * $overviewToggleRatio;
-
-$width__overviewToggle__laptop:
-    $js__length__iconLarge;
-$height__overviewToggle__laptop:
-    $width__overviewToggle__laptop
-    * $overviewToggleRatio;
-
-$width__overviewToggle__tablet:
-    $js__length__iconLarge__tablet;
-$height__overviewToggle__tablet:
-    $width__overviewToggle__tablet
-    * $overviewToggleRatio;
-
-$width__overviewToggle__mini:
-    $js__length__iconLarge__mini;
-$height__overviewToggle__mini:
-    $width__overviewToggle__mini
-    * $overviewToggleRatio;
-
-$width__overviewToggle__phone:
-    $js__length__icon;
-$height__overviewToggle__phone:
-    $width__overviewToggle__phone
-    * $overviewToggleRatio;
-
 .LeftShelf {
 
     transition:
@@ -55,12 +24,6 @@ $height__overviewToggle__phone:
         flex-direction: column-reverse;
     }
 
-    // Widths for all other devices are set by "width__leftShelf" class.
-    .DW__desktopWidth
-    & {
-        width: $width__overviewToggle;
-    }
-
     // Hidden to left in these scenarios.
     .PlW__logue
     &,
@@ -74,13 +37,17 @@ $height__overviewToggle__phone:
     &,
     .ShW__lyricExpanded
     &,
-    .DW__phone
-    .ShW__overviewShown
-    &,
     .TrW__cannotLyricCarouselEnter
     & {
         opacity: 0;
         margin-left: -$width__overviewToggle;
+    }
+
+    .DW__phone
+    .ShW__overviewShown
+    & {
+        opacity: 0;
+        margin-left: -$js__margin__thin - $js__length__icon;
     }
 }
 
@@ -99,28 +66,5 @@ $height__overviewToggle__phone:
     .DW__phone
     &:not(:last-child) {
         margin-bottom: $js__margin__thick;
-    }
-}
-
-.width__leftShelf {
-
-    .DW__laptop
-    & {
-        width: $width__overviewToggle__laptop;
-    }
-
-    .DW__tablet
-    & {
-        width: $width__overviewToggle__tablet;
-    }
-
-    .DW__mini
-    & {
-        width: $width__overviewToggle__mini;
-    }
-
-    .DW__phone
-    & {
-        width: $width__overviewToggle__phone;
     }
 }

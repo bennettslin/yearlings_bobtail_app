@@ -78,7 +78,6 @@ class Main extends PureComponent {
                     style: { height: mainHeight }
                 }}
             >
-
                 <AnnotationPopup inMain />
                 {canCarouselMount && (
                     <___>
@@ -86,13 +85,8 @@ class Main extends PureComponent {
                         <Carousel />
                     </___>
                 )}
-                <div className={cx(
-                    'Main__flexContainer',
-                    'abF'
-                )}>
-                    <LeftShelf />
-                    <OverviewPopup inMain />
-                </div>
+                <LeftShelf />
+                <OverviewPopup inMain />
                 <LyricToggleExpand inMain />
                 <DotsSlide />
                 <ScoresTips inMainRight />

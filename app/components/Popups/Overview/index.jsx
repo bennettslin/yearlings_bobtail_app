@@ -10,7 +10,6 @@ import Popup from '../../Popup'
 import { SHOWN } from 'constants/options'
 
 const mapStateToProps = ({
-    viewportStore: { isPhoneWidth },
     lyricStore: { canLyricCarouselEnter },
     transientStore: { isOverlayShown },
     optionStore: {
@@ -19,7 +18,6 @@ const mapStateToProps = ({
     },
     lyricStore: { isLyricLogue }
 }) => ({
-    isPhoneWidth,
     canLyricCarouselEnter,
     isOverlayShown,
     selectedOverviewOption,
@@ -31,7 +29,6 @@ class OverviewPopup extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isPhoneWidth: PropTypes.bool.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
@@ -46,7 +43,6 @@ class OverviewPopup extends PureComponent {
         const
             {
                 inMain,
-                isPhoneWidth,
                 canLyricCarouselEnter,
                 isOverlayShown,
                 selectedOverviewOption,
@@ -74,13 +70,11 @@ class OverviewPopup extends PureComponent {
                 doUnmountOnExit
                 bounceAnimate
                 hasNarrowPadding
+                noAbsoluteFull
                 {...{
                     popupName: 'Overview',
                     isVisible,
-                    noFlexCentre: inMain,
-
-                    // Only position absolute when in main and is phone.
-                    noAbsoluteFull: isLyricLogue || !isPhoneWidth
+                    noFlexCentre: inMain
                 }}
             >
                 <Overview />

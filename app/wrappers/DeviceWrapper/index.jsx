@@ -16,6 +16,7 @@ class DeviceWrapper extends PureComponent {
         deviceWidthIndex: PropTypes.number.isRequired,
         isPhoneWidth: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
+        canCarouselMount: PropTypes.bool.isRequired,
         canSliderMount: PropTypes.bool.isRequired,
 
         // From parent.
@@ -28,12 +29,15 @@ class DeviceWrapper extends PureComponent {
                 deviceWidthIndex,
                 isPhoneWidth,
                 isDesktopWidth,
+                canCarouselMount,
                 canSliderMount,
                 children
             } = this.props,
+
             deviceWidthKey =
                 DEVICE_WIDTH_CONFIGS[deviceWidthIndex] &&
                 DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey,
+
             isTabletWidth = getIsTabletWidth(deviceWidthIndex)
 
         return (
@@ -51,6 +55,9 @@ class DeviceWrapper extends PureComponent {
                             'DW__miniOrTabletWidth': !isPhoneWidth,
                             'DW__phoneOrMiniWidth': !isTabletWidth
                         },
+                        canCarouselMount ?
+                            'DW__canCarouselMount' :
+                            'DW__cannotCarouselMount',
                         canSliderMount &&
                             'DW__canSliderMount',
                         'abF'
@@ -69,11 +76,15 @@ const mapStateToProps = ({
         isPhoneWidth,
         isDesktopWidth
     },
-    mountStore: { canSliderMount }
+    mountStore: {
+        canCarouselMount,
+        canSliderMount
+    }
 }) => ({
     deviceWidthIndex,
     isPhoneWidth,
     isDesktopWidth,
+    canCarouselMount,
     canSliderMount
 })
 

@@ -14,12 +14,6 @@
         bottom $animationDuration__fast,
         box-shadow $animationDuration__fast;
 
-    // Widths for all other devices are set by "width__leftShelf" class.
-    .DW__desktopWidth
-    & {
-        width: $width__overviewToggle__laptop;
-    }
-
     .DW__desktopWidth
     .ShW__carouselExpanded
     & {

@@ -1,16 +1,12 @@
+@import "./OverviewToggle/style";
 @import "./LeftShelf/style";
 @import "./CarouselSelect/style";
 @import "./CarouselToggle/style";
 @import "./DotsSlideToggle/style";
-@import "./OverviewToggle/style";
 
 $js__height__lyricCollapsed: 32%;
 
 .Main {
-    flex-grow: 1;
-}
-
-.Main__flexContainer {
     display: flex;
 
     .DW__miniOrTabletWidth

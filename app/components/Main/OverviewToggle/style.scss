@@ -1,32 +1,66 @@
-.Button__overviewSize {
+$overviewToggleRatio: 1.5;
 
-    width: 100%;
-    height: $height__overviewToggle;
+$width__overviewToggle: 64px;
+$height__overviewToggle:
+    $width__overviewToggle
+    * $overviewToggleRatio;
 
-    .DW__laptop
-    & {
-        height: $height__overviewToggle__laptop;
-    }
+$width__overviewToggle__laptop:
+    $js__length__iconLarge;
+$height__overviewToggle__laptop:
+    $width__overviewToggle__laptop
+    * $overviewToggleRatio;
 
-    .DW__tablet
-    & {
-        height: $height__overviewToggle__tablet;
-    }
+$width__overviewToggle__tablet:
+    $js__length__iconLarge__tablet;
+$height__overviewToggle__tablet:
+    $width__overviewToggle__tablet
+    * $overviewToggleRatio;
 
-    .DW__mini
-    & {
-        height: $height__overviewToggle__mini;
-    }
+$width__overviewToggle__mini:
+    $js__length__iconLarge__mini;
+$height__overviewToggle__mini:
+    $width__overviewToggle__mini
+    * $overviewToggleRatio;
 
-    .DW__phone
-    & {
-        height: $height__overviewToggle__phone;
-    }
-}
+$width__overviewToggle__phone:
+    $js__length__icon;
+$height__overviewToggle__phone:
+    $width__overviewToggle__phone
+    * $overviewToggleRatio;
 
 .OverviewToggle {
     position: relative;
 
     // Ensure toggle button is above its popup container and the carousel.
     z-index: $zIndex__centreFieldChild;
+}
+
+.Button__overviewSize {
+    height: $height__overviewToggle;
+    width: $width__overviewToggle;
+
+    .DW__laptop
+    & {
+        height: $height__overviewToggle__laptop;
+        width: $width__overviewToggle__laptop;
+    }
+
+    .DW__tablet
+    & {
+        height: $height__overviewToggle__tablet;
+        width: $width__overviewToggle__tablet;
+    }
+
+    .DW__mini
+    & {
+        height: $height__overviewToggle__mini;
+        width: $width__overviewToggle__mini;
+    }
+
+    .DW__phone
+    & {
+        height: $height__overviewToggle__phone;
+        width: $width__overviewToggle__phone;
+    }
 }

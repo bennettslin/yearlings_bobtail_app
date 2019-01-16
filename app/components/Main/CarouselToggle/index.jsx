@@ -47,8 +47,7 @@ class CarouselToggle extends PureComponent {
 
         return (
             <div className={cx(
-                'CarouselToggle',
-                'width__leftShelf'
+                'CarouselToggle'
             )}>
                 <Button
                     isLargeSize
