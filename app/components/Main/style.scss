@@ -2,16 +2,24 @@
 @import "./LeftShelf/style";
 @import "./CarouselSelect/style";
 @import "./CarouselToggle/style";
-@import "./DotsSlideToggle/style";
 
 $js__height__lyricCollapsed: 32%;
 
 .Main {
+    padding-top: $js__margin__thick;
     display: flex;
 
-    .DW__miniOrTabletWidth
+    .DW__desktopWidth.DW__cannotCarouselMount
+    &,
+    .DW__miniOrTabletWidth.DW__canCarouselMount
     & {
+        padding-bottom: $margin__scrollbar;
         align-items: flex-end;
+    }
+
+    .DW__phoneWidth
+    & {
+        padding-top: $js__margin__thin;
     }
 }
 

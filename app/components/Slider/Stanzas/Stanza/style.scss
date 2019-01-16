@@ -49,7 +49,6 @@ $width__sliderStanzaTab: 9px;
 .SliderStanza__sheet {
     padding: $js__marginY__slider 0 0 $js__marginX__slider;
 
-    box-sizing: border-box;
     display: flex;
 
     .SliderStanza:not(:last-child)

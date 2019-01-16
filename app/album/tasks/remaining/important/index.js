@@ -23,5 +23,15 @@ export default [
         taskName: `If lyric expandable, always have either expanded lyric or heightless lyric in low processor. Include rotate screen icon in place of lyric expand button.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Selecting carousel should go straight to nav when dots are deselected. Also move carousel nav toggle to left shelf.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Left shelf and scores tips refactor.`,
+        workedHours: 4,
+        neededHours: 8
     }
 ]

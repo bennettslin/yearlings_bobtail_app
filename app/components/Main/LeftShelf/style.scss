@@ -48,10 +48,7 @@
 }
 
 .flex__mainSideButtons {
-    box-sizing: border-box;
-
     height: 100%;
-    padding-top: $js__margin__thick;
 
     display: flex;
     flex-direction: column;
@@ -69,7 +66,6 @@
     &,
     .DW__miniOrTabletWidth.DW__canCarouselMount
     & {
-        padding-bottom: $margin__scrollbar;
         flex-direction: column-reverse;
 
         & > :not(:last-child) {

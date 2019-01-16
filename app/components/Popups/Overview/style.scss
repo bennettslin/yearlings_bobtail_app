@@ -4,36 +4,25 @@
  */
 
 .OverviewPopup {
+    margin-left: $js__margin__thick;
+
+    .DW__mobileWidth
     .Main
     & {
-        margin-top: $js__margin__thin;
-        margin-left: $js__margin__thick;
+        margin-right: $js__margin__thin;
+    }
 
-        .DW__miniOrTabletWidth
-        & {
-            margin-top: 0;
-            margin-right: $js__margin__thin;
-            margin-bottom: $margin__scrollbar;
-        }
-
-        .DW__phoneWidth
-        & {
-            margin: 0;
-        }
+    .DW__phoneWidth
+    .Main
+    & {
+        margin-left: $js__margin__thin;
     }
 }
 
 .OverviewPopupView {
     // Needed to prevent closing upon popup click.
     z-index: $zIndex__centreFieldChild;
-
-    max-width: 480px;
-
-    .DW__phoneWidth
-    & {
-        box-sizing: border-box;
-        padding: $js__margin__thin;
-    }
+    max-width: 480px; // Arbitrary.
 }
 
 .OverviewPopupViewContent {

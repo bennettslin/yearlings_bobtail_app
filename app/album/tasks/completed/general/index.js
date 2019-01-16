@@ -4447,7 +4447,7 @@ export default [
         neededHours: 9
     },
     {
-        taskName: `No carousel in low processor. This should include a fix for going straight to nav when dots are deselected. When doing this, create a single flag for whether to mount, and also add similar flags for score and slider.`,
+        taskName: `No carousel in low processor. When doing this, create a single flag for whether to mount, and also add similar flags for score and slider.`,
         workedHours: 7,
         neededHours: 7
     },

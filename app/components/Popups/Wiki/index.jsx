@@ -37,6 +37,8 @@ class WikiPopup extends PureComponent {
 
         return (
             <Popup
+                doMountonEnter
+                doUnmountOnExit
                 shrinkAnimate
                 displaysInOverlay
                 isFullSize
