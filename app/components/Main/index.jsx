@@ -11,7 +11,7 @@ import { connect } from 'react-redux'
 import CarouselSelect from './CarouselSelect'
 import CarouselToggle from './CarouselToggle'
 
-import LeftShelf from './LeftShelf'
+import ShelfLeft from './ShelfLeft'
 import Nav from '../Nav'
 import Carousel from '../Carousel'
 import DotsSlide from '../DotsSlide'
@@ -19,7 +19,7 @@ import LyricToggleExpand from '../Lyric/Toggle/Expand'
 import AnnotationPopup from '../Popups/Annotation'
 import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
-import ScoresTips from '../ScoresTips'
+import ShelfRight from './ShelfRight'
 
 import { getMainDynamicHeight } from './helper'
 
@@ -90,12 +90,44 @@ class Main extends PureComponent {
                         <Carousel />
                     </___>
                 )}
-                <LeftShelf />
-                <OverviewPopup inMain />
+                <div
+                    {...{
+                        className: cx(
+                            'Main__flexContainer',
+                            'Main__flexContainer__side',
+                            'abF'
+                        )
+                    }}
+                >
+                    <ShelfLeft />
+                    <OverviewPopup inMain />
+                </div>
+                <div
+                    {...{
+                        className: cx(
+                            'Main__flexContainer',
+
+                            /**
+                             * In desktop, tips popup is centred. In mobile, it
+                             * is on right, aligned either top or bottom.
+                             */
+                            isDesktopWidth ?
+                                'flexCentreContainer' :
+                                [
+                                    'Main__flexContainer__side',
+                                    'Main__flexContainer__right'
+                                ],
+                            'abF'
+                        )
+                    }}
+                >
+                    {!isDesktopWidth && (
+                        <ShelfRight />
+                    )}
+                    <TipsPopup />
+                </div>
                 <LyricToggleExpand inMain />
                 <DotsSlide />
-                <ScoresTips />
-                <TipsPopup />
                 {canCarouselMount && (
                     <___>
                         <CarouselToggle />

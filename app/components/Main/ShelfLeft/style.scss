@@ -1,4 +1,4 @@
-.LeftShelf {
+.ShelfLeft {
 
     transition:
         opacity $animationDuration__default,
@@ -35,7 +35,7 @@
     /**
      * When overview is shown, hide all left shelf children except the overview * toggle itself.
      */
-    .LeftShelf
+    .ShelfLeft
     > & {
 
         transition: margin $animationDuration__default;

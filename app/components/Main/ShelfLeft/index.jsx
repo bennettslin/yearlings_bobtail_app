@@ -16,7 +16,7 @@ const mapStateToProps = ({
     isDesktopWidth
 })
 
-class LeftShelf extends PureComponent {
+class ShelfLeft extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -28,7 +28,7 @@ class LeftShelf extends PureComponent {
 
         return (
             <div className={cx(
-                'LeftShelf',
+                'ShelfLeft',
                 'flex__mainSideButtons'
             )}>
                 <OverviewToggle />
@@ -44,4 +44,4 @@ class LeftShelf extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(LeftShelf)
+export default connect(mapStateToProps)(ShelfLeft)

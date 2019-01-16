@@ -1,18 +1,17 @@
-.ScoresTips {
-    position: absolute;
+.ShelfRight {
     padding-right: $js__margin__thin;
 
-    right:
+    margin-right:
         -$js__length__iconLarge__tablet
         - $js__margin__thin * 2;
 
     transition:
-        right $animationDuration__default;
+        margin-right $animationDuration__default;
 
     .RW__carouselNavShowable
     .ShW__annotationHidden.ShW__dotsHidden
     .TrW__canLyricCarouselEnter
     & {
-        right: 0;
+        margin-right: 0;
     }
 }

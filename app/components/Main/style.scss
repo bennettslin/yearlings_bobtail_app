@@ -1,11 +1,12 @@
 @import "./OverviewToggle/style";
-@import "./LeftShelf/style";
+@import "./ShelfLeft/style";
 @import "./CarouselSelect/style";
 @import "./CarouselToggle/style";
+@import "./ShelfRight/style";
 
 $js__height__lyricCollapsed: 32%;
 
-.Main {
+.Main__flexContainer {
     padding-top: $js__margin__thick;
     display: flex;
 
@@ -14,13 +15,27 @@ $js__height__lyricCollapsed: 32%;
     .DW__miniOrTabletWidth.DW__canCarouselMount
     & {
         padding-bottom: $margin__scrollbar;
-        align-items: flex-end;
     }
 
     .DW__phoneWidth
     & {
         padding-top: $js__margin__thin;
     }
+}
+
+.Main__flexContainer__side {
+    align-items: flex-start;
+
+    .DW__desktopWidth.DW__cannotCarouselMount
+    &,
+    .DW__miniOrTabletWidth.DW__canCarouselMount
+    & {
+        align-items: flex-end;
+    }
+}
+
+.Main__flexContainer__right {
+    flex-direction: row-reverse;
 }
 
 .position__mainColumn {
@@ -35,7 +50,10 @@ $js__height__lyricCollapsed: 32%;
 }
 
 .height__mainColumn {
-    // If carousel cannot mount, these heights are overridden in JavaScript.
+    /**
+     * If carousel cannot mount, these heights get overridden by the dynamic
+     * height calculated in JavaScript.
+     */
 
     height: calc(
         100%
