@@ -65,7 +65,7 @@ class CarouselAnnotation extends PureComponent {
                     `${CAROUSEL_SCROLL}__${annotationIndex}`,
 
                     columnKey &&
-                    `CarouselAnnotation__inEarColumn__${columnKey}`,
+                        `CarouselAnnotation__inEarColumn__${columnKey}`,
 
                     getPrefixedDotLetterClassNames(
                         dotKeys,
