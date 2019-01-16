@@ -76,7 +76,7 @@
     left: 50%;
     opacity: 1;
     transform: translateX(-50%) scale(1);
-    z-index: $zIndex__leftShelf;
+    z-index: $zIndex__mainSideShelf;
 
     transition:
         opacity $animationDuration__default,

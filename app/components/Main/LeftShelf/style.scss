@@ -31,6 +31,22 @@
     }
 }
 
+*:not(.OverviewToggle) {
+    /**
+     * When overview is shown, hide all left shelf children except the overview * toggle itself.
+     */
+    .LeftShelf
+    > & {
+
+        transition: margin $animationDuration__default;
+
+        .ShW__overviewShown
+        & {
+            margin-left: -$width__overviewToggle;
+        }
+    }
+}
+
 .flex__mainSideButtons {
     box-sizing: border-box;
 
@@ -40,7 +56,10 @@
     display: flex;
     flex-direction: column;
 
-    z-index: $zIndex__leftShelf;
+    z-index: $zIndex__mainSideShelf;
+    & > * {
+        z-index: $zIndex__centreFieldChild;
+    }
 
     & > :not(:last-child) {
         margin-bottom: $js__margin__thick * 1.5;

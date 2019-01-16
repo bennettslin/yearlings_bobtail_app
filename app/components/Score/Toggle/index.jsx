@@ -48,7 +48,6 @@ class ScoreToggle extends PureComponent {
                     isLargeSize
                     {...{
                         buttonName: SCORES_BUTTON_KEY,
-                        className: 'ScoresTipsButton',
                         accessKey: SCORE_TOGGLE_KEY,
                         isDisabled: !isScoreLoaded,
                         handleButtonClick: this._handleScoreButtonClick

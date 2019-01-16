@@ -31,9 +31,6 @@ $height__overviewToggle__phone:
 
 .OverviewToggle {
     position: relative;
-
-    // Ensure toggle button is above its popup container and the carousel.
-    z-index: $zIndex__centreFieldChild;
 }
 
 .Button__overviewSize {

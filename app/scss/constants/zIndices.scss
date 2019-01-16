@@ -23,8 +23,8 @@ $zIndex__navCustomSubfield: $zIndex__adminToggle + 1;
 // Both carousel and popup annotation.
 $zIndex__annotation: $zIndex__navCustomSubfield + 1;
 
-$zIndex__leftShelf: $zIndex__annotation + 1;
-$zIndex__centreFieldChild: $zIndex__leftShelf + 1;
+$zIndex__mainSideShelf: $zIndex__annotation + 1;
+$zIndex__centreFieldChild: $zIndex__mainSideShelf + 1;
 
 // This needs to be above annotation text in carousel.
 $zIndex__carouselNavButton: $zIndex__centreFieldChild + 1;

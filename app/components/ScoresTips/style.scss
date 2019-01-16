@@ -1,24 +1,6 @@
-// .ScoresTips {
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
-
-    // z-index: $zIndex__centreFieldChild;
-// }
-
-.ScoresTips__inLeftShelf {
-    transition: margin $animationDuration__default;
-
-    .ShW__overviewShown
-    & {
-        margin-left: -$width__overviewToggle;
-    }
-}
-
-.ScoresTips__inMainRight {
+.ScoresTips {
     position: absolute;
     padding-right: $js__margin__thin;
-    // padding: $js__margin__thin;
 
     right:
         -$js__length__iconLarge__tablet

@@ -1,15 +1,30 @@
 // Section for dots and overview toggle buttons.
 
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
+import { connect } from 'react-redux'
 
-import ScoresTips from '../../ScoresTips'
+import ScoreToggle from '../../Score/Toggle'
+import TipsToggle from '../../Tips/Toggle'
 import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 
+const mapStateToProps = ({
+    viewportStore: { isDesktopWidth }
+}) => ({
+    isDesktopWidth
+})
+
 class LeftShelf extends PureComponent {
 
+    static propTypes = {
+        // Through Redux.
+        isDesktopWidth: PropTypes.bool.isRequired
+    }
+
     render() {
+        const { isDesktopWidth } = this.props
 
         return (
             <div className={cx(
@@ -18,10 +33,15 @@ class LeftShelf extends PureComponent {
             )}>
                 <OverviewToggle />
                 <DotsSlideToggle />
-                <ScoresTips />
+                {isDesktopWidth && (
+                    <___>
+                        <ScoreToggle />
+                        <TipsToggle />
+                    </___>
+                )}
             </div>
         )
     }
 }
 
-export default LeftShelf
+export default connect(mapStateToProps)(LeftShelf)

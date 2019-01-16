@@ -94,7 +94,7 @@ class Main extends PureComponent {
                 <OverviewPopup inMain />
                 <LyricToggleExpand inMain />
                 <DotsSlide />
-                <ScoresTips inMainRight />
+                <ScoresTips />
                 <TipsPopup />
                 {canCarouselMount && (
                     <___>

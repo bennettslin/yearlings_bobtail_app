@@ -16,35 +16,19 @@ const mapStateToProps = ({
 
 class ScoresTips extends PureComponent {
 
-    static defaultProps = {
-        inMainRight: false
-    }
-
     static propTypes = {
         // Through Redux.
-        isDesktopWidth: PropTypes.bool.isRequired,
-
-        // From parent.
-        inMainRight: PropTypes.bool.isRequired
+        isDesktopWidth: PropTypes.bool.isRequired
     }
 
     render() {
-        const {
-                isDesktopWidth,
-                inMainRight
-            } = this.props,
+        const { isDesktopWidth } = this.props
 
-            inLeftShelf = !inMainRight
-
-        // Render in left shelf on desktop, in main right on mobile.
-        return isDesktopWidth === inLeftShelf && (
+        // Render only in mobile.
+        return !isDesktopWidth && (
             <div className={cx(
                 'ScoresTips',
-                {
-                    'ScoresTips__inMainRight': inMainRight,
-                    'flex__mainSideButtons': inMainRight,
-                    'ScoresTips__inLeftShelf': inLeftShelf
-                }
+                'flex__mainSideButtons'
             )}>
                 <TipsToggle />
                 <ScoreToggle />
