@@ -5,12 +5,12 @@ $paddingX__carouselAnnotation: 8px;
 
 $padding__annotationCard: 5px;
 
-$width__annotationCard: 364px;
+$width__annotation: 384px;
 
-$width__annotationCard__mini:
-    $width__annotationCard
+$width__annotation__mini:
+    $width__annotation
     * $multiplier__fontSize__mini;
 
-$width__annotationCard__phone:
-    $width__annotationCard
+$width__annotation__phone:
+    $width__annotation
     * $multiplier__fontSize__phone;

@@ -4,7 +4,7 @@
     .RsD#{$dotLetter} .CcA#{$dotLetter} {
 
         min-width:
-            $width__annotationCard
+            $width__annotation
             + $js__padding__popupContent__wide * 2;
 
             padding-left: $js__margin__thin * 2.5;
@@ -19,7 +19,7 @@
     .RsD#{$dotLetter} .CcA#{$dotLetter} {
 
         min-width:
-            $width__annotationCard__mini
+            $width__annotation__mini
             + $js__padding__popupContent__wide * 2;
     }
 }

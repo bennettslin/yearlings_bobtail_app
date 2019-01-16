@@ -49,6 +49,7 @@ class TipsPopup extends PureComponent {
                 isCardSize
                 bounceAnimate
                 hasNarrowPadding
+                noAbsoluteFull
                 {...{
                     popupName: 'Tips',
                     isVisible

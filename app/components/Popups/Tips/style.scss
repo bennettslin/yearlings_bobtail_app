@@ -1,12 +1,14 @@
 // TipsPopup is positioned absolute full.
 
-.TipsPopupView {
-    position: absolute;
+.TipsPopup {
+    // position: absolute;
 
     // Needed to prevent closing upon popup click.
-    z-index: $zIndex__centreFieldChild;
+    // z-index: $zIndex__centreFieldChild;
 
     // Tip popup is in centre by default.
+
+
 
     .DW__miniOrTabletWidth
     & {
@@ -15,14 +17,14 @@
          * In tablet and mini, when tip button is in main, show it closer to
          * tip button.
          */
-        position: absolute;
-        bottom: $js__margin__thick;
-        right: $js__margin__thick;
+        // position: absolute;
+        // bottom: $js__margin__thick;
+        // right: $js__margin__thick;
     }
 
     .DW__phoneWidth
     & {
-        top: $js__margin__thick;
-        right: $js__margin__thick;
+        // top: $js__margin__thick;
+        // right: $js__margin__thick;
     }
 }
