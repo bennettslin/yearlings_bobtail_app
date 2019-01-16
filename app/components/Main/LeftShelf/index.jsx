@@ -13,9 +13,10 @@ class LeftShelf extends PureComponent {
 
         return (
             <div className={cx(
-                'LeftShelf'
+                'LeftShelf',
+                'flex__mainSideButtons'
             )}>
-                <OverviewToggle inLeftShelf />
+                <OverviewToggle />
                 <DotsSlideToggle />
                 <ScoresTips />
             </div>

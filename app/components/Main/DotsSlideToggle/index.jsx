@@ -25,8 +25,7 @@ class DotsSlideToggle extends PureComponent {
     render() {
         return (
             <div className={cx(
-                'DotsSlideToggle',
-                'LeftShelf__child'
+                'DotsSlideToggle'
             )}>
                 <Button
                     isLargeSize

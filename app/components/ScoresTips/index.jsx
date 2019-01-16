@@ -42,12 +42,12 @@ class ScoresTips extends PureComponent {
                 'ScoresTips',
                 {
                     'ScoresTips__inMainRight': inMainRight,
-                    'ScoresTips__inLeftShelf': inLeftShelf,
-                    'LeftShelf__child': inLeftShelf
+                    'flex__mainSideButtons': inMainRight,
+                    'ScoresTips__inLeftShelf': inLeftShelf
                 }
             )}>
-                <ScoreToggle />
                 <TipsToggle />
+                <ScoreToggle />
             </div>
         )
     }

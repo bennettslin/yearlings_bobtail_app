@@ -3,13 +3,14 @@ import {
     LS_HEIGHT_TWO_ROW_MENU
 } from 'constants/responsive'
 
-export const getMainHeight = ({
+export const getMainDynamicHeight = ({
     canCarouselMount,
     lyricHeightRatio,
-    isTwoRowMenu
+    isTwoRowMenu,
+    isDesktopWidth
 
 }) => {
-    if (canCarouselMount) {
+    if (isDesktopWidth || canCarouselMount) {
         return false
     }
 

@@ -21,18 +21,20 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ScoresTips from '../ScoresTips'
 
-import { getMainHeight } from './helper'
+import { getMainDynamicHeight } from './helper'
 
 const mapStateToProps = ({
     mountStore: {
         canCarouselMount,
         lyricHeightRatio
     },
-    responsiveStore: { isTwoRowMenu }
+    responsiveStore: { isTwoRowMenu },
+    viewportStore: { isDesktopWidth }
 }) => ({
     canCarouselMount,
     lyricHeightRatio,
-    isTwoRowMenu
+    isTwoRowMenu,
+    isDesktopWidth
 })
 
 class Main extends PureComponent {
@@ -41,7 +43,8 @@ class Main extends PureComponent {
         // Through Redux.
         canCarouselMount: PropTypes.bool.isRequired,
         lyricHeightRatio: PropTypes.number.isRequired,
-        isTwoRowMenu: PropTypes.bool.isRequired
+        isTwoRowMenu: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired
     }
 
     componentDidMount() {
@@ -52,13 +55,15 @@ class Main extends PureComponent {
         const {
                 canCarouselMount,
                 lyricHeightRatio,
-                isTwoRowMenu
+                isTwoRowMenu,
+                isDesktopWidth
             } = this.props,
 
-            mainHeight = getMainHeight({
+            mainDynamicHeight = getMainDynamicHeight({
                 canCarouselMount,
                 lyricHeightRatio,
-                isTwoRowMenu
+                isTwoRowMenu,
+                isDesktopWidth
             })
 
         /**
@@ -74,8 +79,8 @@ class Main extends PureComponent {
                         'width__mainColumn'
                     )
                 }}
-                {...mainHeight && {
-                    style: { height: mainHeight }
+                {...mainDynamicHeight && {
+                    style: { height: mainDynamicHeight }
                 }}
             >
                 <AnnotationPopup inMain />

@@ -4,25 +4,7 @@
         opacity $animationDuration__default,
         margin-left $animationDuration__default;
 
-    margin-left: 0;
-    margin-bottom: $margin__scrollbar;
-
-    // Align with scores tips on other side.
-    padding: $js__margin__thin 0 $js__margin__thin $js__margin__thin;
-
-    display: flex;
-    flex-direction: column;
-
-    /**
-     * Allow the left shelf not to lose stacking order despite transitioning
-     * opacity.
-     */
-     z-index: $zIndex__leftShelf;
-
-    .DW__miniOrTabletWidth
-    & {
-        flex-direction: column-reverse;
-    }
+    padding-left: $js__margin__thin;
 
     // Hidden to left in these scenarios.
     .PlW__logue
@@ -38,33 +20,49 @@
     .ShW__lyricExpanded
     &,
     .TrW__cannotLyricCarouselEnter
-    & {
-        opacity: 0;
-        margin-left: -$width__overviewToggle;
-    }
-
+    &,
     .DW__phoneWidth
     .ShW__overviewShown
     & {
         opacity: 0;
-        margin-left: -$js__margin__thin - $js__length__icon;
+
+        // This value only needs to be accurate for phone.
+        margin-left: -$js__length__icon - $js__margin__thin;
     }
 }
 
-.LeftShelf__child {
+.flex__mainSideButtons {
+    box-sizing: border-box;
 
-    &:not(:last-child) {
-        margin-bottom: $js__margin__thick * 2;
+    height: 100%;
+    padding-top: $js__margin__thick;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: $zIndex__leftShelf;
+
+    & > :not(:last-child) {
+        margin-bottom: $js__margin__thick * 1.5;
     }
 
-    .DW__miniOrTabletWidth
-    &:not(:last-child) {
-        margin-top: $js__margin__thick;
-        margin-bottom: 0;
+    .DW__desktopWidth.DW__cannotCarouselMount
+    &,
+    .DW__miniOrTabletWidth.DW__canCarouselMount
+    & {
+        padding-bottom: $margin__scrollbar;
+        flex-direction: column-reverse;
+
+        & > :not(:last-child) {
+            margin-top: $js__margin__thick;
+            margin-bottom: 0;
+        }
     }
 
     .DW__phoneWidth
-    &:not(:last-child) {
-        margin-bottom: $js__margin__thick;
+    & {
+        & > :not(:last-child) {
+            margin-bottom: $js__margin__thin * 2;
+        }
     }
 }

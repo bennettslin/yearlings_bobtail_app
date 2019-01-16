@@ -26,10 +26,7 @@ class OverviewToggle extends PureComponent {
     static propTypes = {
         // Through Redux.
         isLyricLogue: PropTypes.bool.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired,
-
-        // From props.
-        inLeftShelf: PropTypes.bool
+        selectedOverviewOption: PropTypes.string.isRequired
     }
 
     handleOverviewClick = () => {
@@ -44,15 +41,13 @@ class OverviewToggle extends PureComponent {
 
     render() {
         const {
-            inLeftShelf,
             isLyricLogue,
             selectedOverviewOption
         } = this.props
 
         return (
             <div className={cx(
-                'OverviewToggle',
-                inLeftShelf && 'LeftShelf__child'
+                'OverviewToggle'
             )}>
                 <Button
                     isCustomSize
