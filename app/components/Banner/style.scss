@@ -27,7 +27,7 @@
     width: calc(100% - #{$js__margin__thin * 2});
     margin: 0 $js__margin__thin $js__margin__thin;
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         top: $js__height__top__twoRowMenu;
     }

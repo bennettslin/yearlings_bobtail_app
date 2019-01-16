@@ -6,7 +6,7 @@
     min-width: $width__navToggle;
 }
 
-.DW__monitor {
+.DW__monitorWidth {
     .RW__navIconStatic {
         .Nav__showDoubleBook {
             .CarouselNavToggle__placeholder {
@@ -97,7 +97,7 @@
  * LAPTOP STYLES *
  *****************/
 
-.DW__laptop {
+.DW__laptopWidth {
     .RW__navIconStatic {
         .Nav__showSingleBook {
             .CarouselNavToggle__placeholder {
@@ -171,7 +171,7 @@
  * TABLET STYLES *
  *****************/
 
-.DW__tablet {
+.DW__tabletWidth {
     .CarouselNavToggle__placeholder {
         min-width: $width__navToggle__tablet;
     }
@@ -267,7 +267,7 @@
  * MINI STYLES *
  ***************/
 
-.DW__mini {
+.DW__miniWidth {
     .CarouselNavToggle__placeholder {
         min-width: $width__navToggle__mini;
     }

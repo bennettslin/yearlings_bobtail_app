@@ -22,12 +22,12 @@
         width: 100%;
     }
 
-    .DW__mini
+    .DW__miniWidth
     & {
         height: calc(100% - #{$js__length__iconLarge__mini});
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         height: calc(100% - #{$js__length__icon});
     }
@@ -36,13 +36,13 @@
 .PopupView__cardSize {
     max-width: $width__popupCard;
 
-    .DW__mini
+    .DW__miniWidth
     & {
         // Multiplier is .9, just like for lyric text in mini.
         max-width: $width__popupCard__mini;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         // Multiplier is .98, just like for lyric text in phone.
         max-width: $width__popupCard__phone;
@@ -101,7 +101,7 @@
         - #{$js__height__menu + $js__margin__thin * 2}
     );
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         // Make room for popup buttons, which are at the bottom in phone.
         max-height: calc(

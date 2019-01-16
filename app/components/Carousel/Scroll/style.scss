@@ -12,12 +12,12 @@
         padding-left: $width__overviewToggle__laptop;
     }
 
-    .DW__tablet
+    .DW__tabletWidth
     & {
         padding-left: $width__overviewToggle__tablet;
     }
 
-    .DW__mini
+    .DW__miniWidth
     & {
         padding-left: $width__overviewToggle__mini;
     }
@@ -30,13 +30,13 @@
         content: '';
     }
 
-    .DW__monitor
+    .DW__monitorWidth
     &:after {
         padding-right:
             $js__width__goldenCord;
     }
 
-    .DW__laptop
+    .DW__laptopWidth
     &:after {
         padding-right:
             $js__width__uncannyValley;
@@ -54,12 +54,12 @@
         $js__length__iconLarge__mini * 2
         + $js__margin__thin * 3;
 
-    .DW__tablet
+    .DW__tabletWidth
     &:after {
         padding-right: $width__carouselSelect__tablet;
     }
 
-    .DW__mini
+    .DW__miniWidth
     &:after {
         padding-right: $width__carouselSelect__mini;
     }

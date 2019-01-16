@@ -32,7 +32,7 @@
 
 .LyricToggleEar {
     // When in mobile, expand toggle will *always* be present.
-    .DW__tablet
+    .DW__tabletWidth
     & {
         top:
             $margin__scrollbar / 2
@@ -41,7 +41,7 @@
             + $js__margin__thick;
     }
 
-    .DW__mini
+    .DW__miniWidth
     & {
         top:
             $margin__scrollbar / 2
@@ -50,7 +50,7 @@
             + $js__margin__thick;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         top:
             $margin__scrollbar / 2

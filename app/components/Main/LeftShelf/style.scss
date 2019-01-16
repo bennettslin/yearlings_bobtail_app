@@ -43,7 +43,7 @@
         margin-left: -$width__overviewToggle;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     .ShW__overviewShown
     & {
         opacity: 0;
@@ -63,7 +63,7 @@
         margin-bottom: 0;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     &:not(:last-child) {
         margin-bottom: $js__margin__thick;
     }

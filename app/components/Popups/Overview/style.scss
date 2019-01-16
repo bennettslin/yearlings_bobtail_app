@@ -16,7 +16,7 @@
             margin-bottom: $margin__scrollbar;
         }
 
-        .DW__phone
+        .DW__phoneWidth
         & {
             margin: 0;
         }
@@ -29,7 +29,7 @@
 
     max-width: 480px;
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         box-sizing: border-box;
         padding: $js__margin__thin;

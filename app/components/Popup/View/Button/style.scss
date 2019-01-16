@@ -15,14 +15,14 @@ $offset__popupButton: 0.75;
         top: -$js__length__iconLarge * $offset__popupButton;
         left: -$js__length__iconLarge * $offset__popupButton;
     }
-    .DW__tablet
+    .DW__tabletWidth
     & {
         // Top left corner.
         top: -$js__length__iconLarge__tablet * $offset__popupButton;
         left: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .DW__mini
+    .DW__miniWidth
     & {
 
         // Top left corner.
@@ -30,7 +30,7 @@ $offset__popupButton: 0.75;
         left: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
 
         &.PopupViewButton__inCardSize {
@@ -40,9 +40,9 @@ $offset__popupButton: 0.75;
         }
     }
 
-    .DW__mini
+    .DW__miniWidth
     &,
-    .DW__phone
+    .DW__phoneWidth
     & {
         &.PopupViewButton__inFullSize {
             left: 10%;
@@ -58,18 +58,18 @@ $offset__popupButton: 0.75;
         top: -$js__length__iconLarge * $offset__popupButton;
     }
 
-    .DW__tablet
+    .DW__tabletWidth
     &.PopupViewButton__notInOverlay {
         // Buttons on bottom so they don't shift regardless of content height.
         bottom: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .DW__mini
+    .DW__miniWidth
     &.PopupViewButton__notInOverlay {
         bottom: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         bottom: -$js__length__icon * $offset__popupButton;
     }
@@ -85,15 +85,15 @@ $offset__popupButton: 0.75;
         top: $js__padding__popupContent__wide;
     }
 
-    .DW__tablet
+    .DW__tabletWidth
     &.PopupViewButton__inFullSize,
 
-    .DW__tablet
+    .DW__tabletWidth
     &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
         top: calc(50% - #{$js__length__iconLarge__tablet} * 0.5);
     }
 
-    .DW__mini
+    .DW__miniWidth
     &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
         top: calc(50% - #{$js__length__iconLarge__mini} * 0.5);
     }
@@ -106,26 +106,26 @@ $offset__popupButton: 0.75;
         left: -$js__length__iconLarge * $offset__popupButton;
     }
 
-    .DW__tablet
+    .DW__tabletWidth
     & {
         left: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .DW__mini
+    .DW__miniWidth
     & {
         left: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     &,
     .DW__mobileWidth
     &.PopupViewButton__notInOverlay {
         left: 10%;
     }
 
-    .DW__mini
+    .DW__miniWidth
     &,
-    .DW__phone
+    .DW__phoneWidth
     & {
         &.PopupViewButton__inFullSize {
             left: auto;
@@ -141,17 +141,17 @@ $offset__popupButton: 0.75;
         right: -$js__length__iconLarge * $offset__popupButton;
     }
 
-    .DW__tablet
+    .DW__tabletWidth
     & {
         right: -$js__length__iconLarge__tablet * $offset__popupButton;
     }
 
-    .DW__mini
+    .DW__miniWidth
     & {
         right: -$js__length__iconLarge__mini * $offset__popupButton;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     &,
     .DW__mobileWidth
     &.PopupViewButton__notInOverlay {
@@ -162,9 +162,9 @@ $offset__popupButton: 0.75;
      * Keeping this as a separate style. They are currently the same, but this
      * might change.
      */
-    .DW__mini
+    .DW__miniWidth
     &,
-    .DW__phone
+    .DW__phoneWidth
     & {
         &.PopupViewButton__inFullSize {
             right: 10%;
@@ -174,12 +174,12 @@ $offset__popupButton: 0.75;
 
 .PopupViewButton__inFullSize {
 
-    .DW__mini
+    .DW__miniWidth
     & {
         top: -$js__length__iconLarge__mini + $js__margin__thick;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         top: -$js__length__icon + $js__margin__thick;
     }

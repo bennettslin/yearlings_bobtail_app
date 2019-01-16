@@ -45,7 +45,7 @@ class DeviceWrapper extends PureComponent {
                 {...{
                     className: cx(
                         'DeviceWrapper',
-                        `DW__${deviceWidthKey}`,
+                        `DW__${deviceWidthKey}Width`,
                         isDesktopWidth ?
                             'DW__desktopWidth' :
                             'DW__mobileWidth',

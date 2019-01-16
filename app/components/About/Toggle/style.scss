@@ -11,25 +11,25 @@ $width__childAbout__phone: 80px;
     width: $height__overviewToggle;
     height: $width__overviewToggle;
 
-    .DW__laptop
+    .DW__laptopWidth
     & {
         width: $height__overviewToggle__laptop;
         height: $width__overviewToggle__laptop;
     }
 
-    .DW__tablet
+    .DW__tabletWidth
     & {
         width: $height__overviewToggle__tablet;
         height: $width__overviewToggle__tablet;
     }
 
-    .DW__mini
+    .DW__miniWidth
     & {
         width: $height__overviewToggle__mini;
         height: $width__overviewToggle__mini;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         width: $height__overviewToggle__phone;
         height: $width__overviewToggle__phone;

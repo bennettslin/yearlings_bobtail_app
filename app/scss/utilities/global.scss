@@ -85,12 +85,12 @@ h1, h2, h3 {
 .fontSize__title {
     font-size: $fontSize__title;
 
-    .DW__mini
+    .DW__miniWidth
     & {
         font-size: $fontSize__title__mini;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         font-size: $fontSize__title__phone;
     }
@@ -99,12 +99,12 @@ h1, h2, h3 {
 .fontSize__verse {
     font-size: $fontSize__verse;
 
-    .DW__mini
+    .DW__miniWidth
     & {
         font-size: $fontSize__verse__mini;
     }
 
-    .DW__phone
+    .DW__phoneWidth
     & {
         font-size: $fontSize__verse__phone;
     }
@@ -118,13 +118,13 @@ h1, h2, h3 {
     .DW__desktopWidth
     .RW__bothEarColumnsShown
     &,
-    .DW__tablet
+    .DW__tabletWidth
     .RW__bothEarColumnsShown
     & {
         font-size: $fontSize__bothColumnsShown;
     }
 
-    .DW__mini
+    .DW__miniWidth
     .RW__bothEarColumnsShown
     & {
         font-size:

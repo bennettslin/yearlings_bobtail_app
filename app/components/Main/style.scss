@@ -47,12 +47,12 @@ $js__height__lyricCollapsed: 32%;
 .width__mainColumn {
     width: 100%;
 
-    .DW__monitor
+    .DW__monitorWidth
     & {
         max-width: calc(100% - #{$js__width__goldenCord});
     }
 
-    .DW__laptop
+    .DW__laptopWidth
     & {
         max-width: calc(100% - #{$js__width__uncannyValley});
     }
