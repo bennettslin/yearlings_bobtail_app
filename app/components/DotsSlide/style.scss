@@ -1,37 +1,40 @@
 @import "./Select/style";
 
-$margin__dotsContainer: 16px;
+$margin__dotsContainer: 12px;
 $margin__dotsContainer__phone: 8px;
 
 .DotsSlide {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -$js__length__iconLarge;
     opacity: 0;
-    margin-left: -$margin__dotsContainer;
-    margin-top: $margin__dotsContainer / 2;
+    margin-top: $margin__dotsContainer;
+    margin-left: $margin__dotsContainer;
     border-radius: $borderRadius__narrow;
 
     z-index: $zIndex__mainSideShelf;
 
-    // TODO: Ideal for dots section to fade to halfway left, then move all the way out to prevent user interaction.
     transition:
         opacity $animationDuration__default,
-        margin-left $animationDuration__slow,
-        transform $animationDuration__slow;
-
-    transform: translateX(-100%);
+        left $animationDuration__slow;
 
     box-shadow: $boxShadow__mainCard;
     background-color: $bgColour__afterSelected;
 
-    .DW__miniOrTabletWidth
+    .DW__desktopWidth.DW__cannotCarouselMount
+    &,
+    .DW__miniOrTabletWidth.DW__canCarouselMount
     & {
         top: auto;
         bottom: 0;
-
         margin-top: 0;
-        margin-bottom: $margin__dotsContainer / 2;
+        margin-bottom: $margin__dotsContainer;
+    }
+
+    .DW__phoneWidth
+    & {
+        margin-left: $js__margin__thin;
+        margin-top: $js__margin__thin;
     }
 }
 
@@ -41,13 +44,7 @@ $margin__dotsContainer__phone: 8px;
     .TrW__canLyricCarouselEnter
     & {
         opacity: 1;
-        margin-left: $margin__dotsContainer;
-        transform: translateX(0);
-    }
-
-    .DW__phoneOrMiniWidth
-    & {
-        margin-left: $margin__dotsContainer__phone;
+        left: 0;
     }
 }
 

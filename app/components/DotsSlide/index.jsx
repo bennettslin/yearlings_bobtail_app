@@ -80,6 +80,7 @@ class DotsSlide extends PureComponent {
         return (
             <CSSTransition
                 mountOnEnter
+                unmountOnExit
                 {...{
                     in: isDotsSlideShown,
                     timeout: 200,
