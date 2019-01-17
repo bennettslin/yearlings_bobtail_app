@@ -3,14 +3,14 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateAdminStore } from 'flux/admin/action'
 
 class AdminDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isAdminOn: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+        updateAdminStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -27,7 +27,7 @@ class AdminDispatcher extends PureComponent {
         isAdminOn = !this.props.isAdminOn
     ) => {
         // Turning on or off is always successful.
-        this.props.updateToggleStore({ isAdminOn })
+        this.props.updateAdminStore({ isAdminOn })
         return true
     }
 
@@ -37,12 +37,12 @@ class AdminDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isAdminOn }
+    adminStore: { isAdminOn }
 }) => ({
     isAdminOn
 })
 
 export default connect(
     mapStateToProps,
-    { updateToggleStore }
+    { updateAdminStore }
 )(AdminDispatcher)

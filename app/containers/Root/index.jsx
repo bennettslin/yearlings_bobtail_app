@@ -79,7 +79,7 @@ class RootContainer extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isAdminOn }
+    adminStore: { isAdminOn }
 }) => ({
     isAdminOn
 })

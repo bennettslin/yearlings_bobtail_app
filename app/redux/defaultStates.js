@@ -100,6 +100,10 @@ export const ACCESS_DEFAULTS = {
     accessedNavSongIndex: storedSongIndex
 }
 
+export const ADMIN_DEFAULTS = {
+    isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false
+}
+
 export const ANNOTATION_DEFAULTS = {
     queuedAnnotationIndex: 0,
     queuedAnnotationFromCarousel: false,
@@ -257,7 +261,6 @@ export const SLIDER_DEFAULTS = {
 
 export const TOGGLE_DEFAULTS = {
     isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
-    isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
     isAutoScroll: true,
     isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
     isNavShown: false,

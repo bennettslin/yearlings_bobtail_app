@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
+import AdminReducer from './admin/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AppReducer from './app/reducer'
 import AudioReducer from './audio/reducer'
@@ -25,6 +26,7 @@ import VerseBarsReducer from './verseBars/reducer'
 
 import {
     ACCESS_STORE,
+    ADMIN_STORE,
     ANNOTATION_STORE,
     AUDIO_STORE,
     VIEWPORT_STORE,
@@ -50,6 +52,7 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [ADMIN_STORE]: AdminReducer,
     [APP_STORE]: AppReducer,
     [MOUNT_STORE]: MountReducer,
 

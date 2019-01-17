@@ -1,4 +1,5 @@
 export const ACCESS_STORE = 'accessStore'
+export const ADMIN_STORE = 'adminStore'
 export const ANNOTATION_STORE = 'annotationStore'
 export const APP_STORE = 'appStore'
 export const AUDIO_STORE = 'audioStore'
