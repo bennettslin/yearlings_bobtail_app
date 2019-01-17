@@ -14,9 +14,10 @@ import {
 } from 'constants/lyrics'
 
 export const registerAnnotation = ({
-    rootVerseIndex = -1,
     song,
     verse,
+    columnKey,
+    rootVerseIndex = -1,
     lyricAnnotation,
     textKey
 
@@ -61,11 +62,19 @@ export const registerAnnotation = ({
     // Add formatted title to annotation.
     annotation.title = getFormattedAnnotationTitle(lyricAnnotation)
 
-    // Let annotation know if it's in a doublespeaker column.
-    if (textKey === LEFT) {
+    if (
+        // Let annotation know if it's in a doublespeaker column.
+        textKey === LEFT ||
+
+        // Or else let it know if its unit has a side card.
+        columnKey === LEFT
+    ) {
         annotation[COLUMN_INDEX] = 0
 
-    } else if (textKey === RIGHT) {
+    } else if (
+        textKey === RIGHT ||
+        columnKey === RIGHT
+    ) {
         annotation[COLUMN_INDEX] = 1
     }
 

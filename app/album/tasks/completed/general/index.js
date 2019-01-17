@@ -4455,5 +4455,15 @@ export default [
         taskName: `Minor work on lyric top gradient mask and other bug fixes.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Left shelf and scores tips refactor.`,
+        workedHours: 6,
+        neededHours: 6
+    },
+    {
+        taskName: `Fix bug where annotations in units with side cards were not registering as left or right column.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

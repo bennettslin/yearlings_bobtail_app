@@ -28,10 +28,5 @@ export default [
         taskName: `Selecting carousel should go straight to nav when dots are deselected. Also move carousel nav toggle to left shelf.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Left shelf and scores tips refactor.`,
-        workedHours: 4,
-        neededHours: 8
     }
 ]

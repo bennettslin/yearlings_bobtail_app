@@ -4,13 +4,16 @@ import { registerAnnotation } from './helpers'
 
 import {
     ANNOTATION_SEARCH_KEYS,
-    ANCHOR
+    ANCHOR,
+    LEFT,
+    RIGHT
 } from 'constants/lyrics'
 
 const _recurseToFindAnnotations = ({
-    rootVerseIndex = -1,
     song,
     verse,
+    columnKey,
+    rootVerseIndex = -1,
     lyricEntity = verse,
     textKey
 }) => {
@@ -36,9 +39,10 @@ const _recurseToFindAnnotations = ({
 
         lyricEntity.forEach(childEntity => {
             _recurseToFindAnnotations({
-                rootVerseIndex,
                 song,
                 verse,
+                columnKey,
+                rootVerseIndex,
                 lyricEntity: childEntity,
                 textKey
             })
@@ -48,9 +52,10 @@ const _recurseToFindAnnotations = ({
 
         if (lyricEntity[ANCHOR]) {
             registerAnnotation({
-                rootVerseIndex,
                 song,
                 verse,
+                columnKey,
+                rootVerseIndex,
                 lyricAnnotation: lyricEntity,
                 textKey
             })
@@ -59,9 +64,10 @@ const _recurseToFindAnnotations = ({
             ANNOTATION_SEARCH_KEYS.forEach(childKey => {
                 if (lyricEntity[childKey]) {
                     _recurseToFindAnnotations({
-                        rootVerseIndex,
                         song,
                         verse,
+                        columnKey,
+                        rootVerseIndex,
                         lyricEntity: lyricEntity[childKey],
                         textKey: (textKey || childKey)
                     })
@@ -90,10 +96,25 @@ export const addAnnotations = (song) => {
                 ]
 
             mainVersesAndUnitMap.forEach(verse => {
+                let columnKey
+
+                // If this unit has a side card...
+                if (unitMap.sideCard) {
+
+                    // ... and this verse is in it, show in right column.
+                    if (verse.sideCard) {
+                        columnKey = RIGHT
+
+                    // ... otherwise, show in left column.
+                    } else {
+                        columnKey = LEFT
+                    }
+                }
 
                 _recurseToFindAnnotations({
                     song,
-                    verse
+                    verse,
+                    columnKey
                 })
             })
         })
