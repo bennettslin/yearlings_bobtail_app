@@ -12,6 +12,7 @@ class CarouselDispatcher extends PureComponent {
         canCarouselMount: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
+        isNavShown: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -35,29 +36,36 @@ class CarouselDispatcher extends PureComponent {
             isSelectedLogue,
             canCarouselMount,
             isDotsSlideShown,
+            isNavShown,
             selectedAnnotationIndex
         } = this.props
 
         // We shouldn't be able to toggle the carousel under these conditions.
         if (
-            !dotsBitNumber ||
             isSelectedLogue ||
             !canCarouselMount
         ) {
             return false
         }
 
-        this.props.updateToggleStore({
-            isCarouselShown,
-            isNavShown:
-                !isCarouselShown &&
+        // If this would otherwise
+        if (isCarouselShown && !dotsBitNumber) {
+            isCarouselShown = false
+        }
 
-                /**
-                 * If dots slide is expanded or annotation is selected, don't
-                 * show nav.
-                 */
+        this.props.updateToggleStore({
+            // Do not toggle carousel if no dots are selected.
+            ...Boolean(dotsBitNumber) && { isCarouselShown },
+
+            isNavShown:
+            dotsBitNumber ?
+                // If dots are selected, toggle nav under these conditions.
+                !isCarouselShown &&
                 !isDotsSlideShown &&
-                !selectedAnnotationIndex
+                !selectedAnnotationIndex :
+
+                // If no dots are selected, just toggle nav.
+                !isNavShown
         })
 
         // If showing carousel, scroll to selected or accessed annotation.
@@ -95,7 +103,8 @@ const mapStateToProps = ({
     },
     toggleStore: {
         isDotsSlideShown,
-        isCarouselShown
+        isCarouselShown,
+        isNavShown
     }
 }) => ({
     dotsBitNumber,
@@ -104,7 +113,8 @@ const mapStateToProps = ({
     selectedAnnotationIndex,
     isSelectedLogue,
     isDotsSlideShown,
-    isCarouselShown
+    isCarouselShown,
+    isNavShown
 })
 
 export default connect(

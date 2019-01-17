@@ -4465,5 +4465,10 @@ export default [
         taskName: `Fix bug where annotations in units with side cards were not registering as left or right column.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Selecting carousel should go straight to nav when dots are deselected.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
