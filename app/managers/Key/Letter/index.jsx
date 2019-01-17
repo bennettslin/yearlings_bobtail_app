@@ -26,7 +26,6 @@ import { populateRefs } from '../../../helpers/ref'
 import {
     AUDIO_REWIND_KEY,
     AUDIO_FAST_FORWARD_KEY,
-
     ADMIN_TOGGLE_KEY,
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
@@ -34,6 +33,7 @@ import {
     AUDIO_NEXT_SONG_KEY,
     CAROUSEL_TOGGLE_KEY,
     DOTS_SLIDE_TOGGLE_KEY,
+    GLOBAL_ANNOTATIONS_TOGGLE_KEY,
     LYRIC_COLUMN_TOGGLE_KEY,
     LYRIC_SECTION_EXPAND_KEY,
     LYRIC_SCROLL_TOGGLE_KEY,
@@ -43,7 +43,8 @@ import {
     SCENE_FORWARD_KEY,
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY
-} from 'constants/access'
+} from '../../../constants/access'
+
 import {
     SHOWN,
     HIDDEN
@@ -84,6 +85,9 @@ class LetterManager extends PureComponent {
         switch (keyName) {
             case ADMIN_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchAdmin()
+                break
+            case GLOBAL_ANNOTATIONS_TOGGLE_KEY:
+                keyWasRegistered = this.dispatchGlobalAnnotations()
                 break
             case AUDIO_OPTIONS_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchAudioOption()
