@@ -14,12 +14,14 @@ import { populateRefs } from 'helpers/ref'
 import TempGlobalAnnotations from './TempGlobalAnnotations'
 
 const mapStateToProps = ({
+    adminStore: { isGlobalAnnotationsOn },
     lyricStore: {
         canLyricCarouselUpdate,
         lyricSongIndex
     },
     appStore: { isTouchSupported }
 }) => ({
+    isGlobalAnnotationsOn,
     canLyricCarouselUpdate,
     lyricSongIndex,
     isTouchSupported
@@ -33,6 +35,7 @@ class LyricScroll extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isGlobalAnnotationsOn: PropTypes.bool.isRequired,
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         isTouchSupported: PropTypes.bool.isRequired,
@@ -100,6 +103,7 @@ class LyricScroll extends PureComponent {
 
     render() {
         const {
+            isGlobalAnnotationsOn,
             canLyricCarouselUpdate,
             isTouchSupported,
             determineVerseBars
@@ -136,8 +140,9 @@ class LyricScroll extends PureComponent {
                             onTouchMove: this._handleTouchMoveOrWheel
                         }}
                     >
-                        {/* TODO: Undo this. */}
-                        {true && (
+                        {isGlobalAnnotationsOn ? (
+                            <TempGlobalAnnotations />
+                        ) : (
                             <Stanzas
                                 {...{
                                     setLyricAnnotationElement:
@@ -145,9 +150,6 @@ class LyricScroll extends PureComponent {
                                     setVerseRef: this._setVerseElement
                                 }}
                             />
-                        )}
-                        {false && (
-                            <TempGlobalAnnotations />
                         )}
                     </div>
                 </Transition>

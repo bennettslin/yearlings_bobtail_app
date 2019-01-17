@@ -12,7 +12,7 @@ $margin__dotsContainer__phone: 8px;
     margin-left: $margin__dotsContainer;
     border-radius: $borderRadius__narrow;
 
-    z-index: $zIndex__mainSideShelf;
+    z-index: $zIndex__mainShelf;
 
     transition:
         opacity $animationDuration__default,

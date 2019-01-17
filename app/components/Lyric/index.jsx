@@ -11,9 +11,7 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import VerseBarHandler from '../../handlers/VerseBar'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
-import LyricToggleEar from './Toggle/Ear'
-import LyricToggleExpand from './Toggle/Expand'
-import LyricToggleScroll from './Toggle/Scroll'
+import LyricToggles from './Toggles'
 import VerseBar from './VerseBar'
 
 import { populateRefs } from 'helpers/ref'
@@ -127,9 +125,8 @@ class Lyric extends PureComponent {
                                 setLyricFocusElement
                             }}
                         />
-                        <LyricToggleEar />
-                        <LyricToggleExpand />
-                        <LyricToggleScroll />
+                        <LyricToggles />
+                        <LyricToggles isOnRight />
                         <LyricAccess />
 
                         {/* These are the only two flex children. */}

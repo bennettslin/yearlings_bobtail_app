@@ -34,7 +34,6 @@ class LyricToggleScroll extends PureComponent {
                     isLargeSize
                     {...{
                         buttonName: LYRIC_SCROLL_BUTTON_KEY,
-                        buttonIdentifier: 'auto',
                         accessKey: LYRIC_SCROLL_TOGGLE_KEY,
                         handleButtonClick: this._handleScrollClick
                     }}

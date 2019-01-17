@@ -15,6 +15,7 @@ import DotsSlideIcon from './Icons/DotsSlideIcon'
 import LyricEarIcon from './Icons/LyricEarIcon'
 import LyricExpandIcon from './Icons/LyricExpandIcon'
 import LyricScrollIcon from './Icons/LyricScrollIcon'
+import LyricGlobalAnnotationsIcon from './Icons/LyricGlobalAnnotationsIcon'
 import NavBookIcon from './Icons/NavBookIcon'
 import NavSongIcon from './Icons/NavSongIcon'
 import OverviewIcon from './Icons/OverviewIcon'
@@ -37,6 +38,7 @@ import {
     LYRIC_EAR_BUTTON_KEY,
     LYRIC_EXPAND_BUTTON_KEY,
     LYRIC_SCROLL_BUTTON_KEY,
+    LYRIC_GLOBAL_ANNOTATIONS_BUTTON_KEY,
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
     OVERVIEW_BUTTON_KEY,
@@ -60,6 +62,7 @@ const BUTTON_ICONS_MAP = {
         [LYRIC_EAR_BUTTON_KEY]: LyricEarIcon,
         [LYRIC_EXPAND_BUTTON_KEY]: LyricExpandIcon,
         [LYRIC_SCROLL_BUTTON_KEY]: LyricScrollIcon,
+        [LYRIC_GLOBAL_ANNOTATIONS_BUTTON_KEY]: LyricGlobalAnnotationsIcon,
         [NAV_BOOK_BUTTON_KEY]: NavBookIcon,
         [NAV_SONG_BUTTON_KEY]: NavSongIcon,
         [OVERVIEW_BUTTON_KEY]: OverviewIcon,

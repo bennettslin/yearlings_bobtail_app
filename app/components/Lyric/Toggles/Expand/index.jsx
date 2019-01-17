@@ -64,9 +64,8 @@ class LyricToggleExpand extends PureComponent {
                 'LyricToggleExpand',
                 'LyricToggle',
                 inMain ?
-                    'LyricToggle__inMain' :
+                    'LyricToggleExpand__inMain' :
                     'LyricToggle__inLyric',
-                { 'LyricToggleExpand__inLyric': !inMain },
                 'length__buttonLarge'
             )}>
                 <Button

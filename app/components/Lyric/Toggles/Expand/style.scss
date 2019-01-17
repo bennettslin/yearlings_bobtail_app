@@ -1,0 +1,36 @@
+.LyricToggleExpand__inMain {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    // transform: translateX(-50%) scale(1);
+    z-index: $zIndex__mainShelf;
+    opacity: 1;
+
+    transition:
+        opacity $animationDuration__default,
+        transform $animationDuration__default;
+
+    /**
+     * TODO: Ideally, this would be a single selector for when the toggle is
+     * shown.
+     */
+    .PlW__logue
+    &,
+    .ShW__overviewShown
+    &,
+    .ShW__dotsShown
+    &,
+    .ShW__overlayShown
+    &,
+    .ShW__tipsShown
+    &,
+    .ShW__annotationShown
+    &,
+    .ShW__lyricExpanded
+    &,
+    .TrW__cannotLyricCarouselEnter
+    & {
+        opacity: 0;
+        // transform: translateX(-50%) scale(0);
+    }
+}

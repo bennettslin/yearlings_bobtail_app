@@ -1,6 +1,6 @@
 // Section for dots and overview toggle buttons.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { memo, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -16,32 +16,27 @@ const mapStateToProps = ({
     isDesktopWidth
 })
 
-class ShelfLeft extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        isDesktopWidth: PropTypes.bool.isRequired
-    }
-
-    render() {
-        const { isDesktopWidth } = this.props
-
-        return (
-            <div className={cx(
-                'ShelfLeft',
-                'flex__mainSideButtons'
-            )}>
-                <OverviewToggle />
-                <DotsSlideToggle />
-                {isDesktopWidth && (
-                    <___>
-                        <ScoreToggle />
-                        <TipsToggle />
-                    </___>
-                )}
-            </div>
-        )
-    }
+const propTypes = {
+    // Through Redux.
+    isDesktopWidth: PropTypes.bool.isRequired
 }
+
+const ShelfLeft = memo(({ isDesktopWidth }) => (
+    <div className={cx(
+        'ShelfLeft',
+        'flex__mainSideButtons'
+    )}>
+        <OverviewToggle />
+        <DotsSlideToggle />
+        {isDesktopWidth && (
+            <___>
+                <ScoreToggle />
+                <TipsToggle />
+            </___>
+        )}
+    </div>
+))
+
+ShelfLeft.propTypes = propTypes
 
 export default connect(mapStateToProps)(ShelfLeft)
