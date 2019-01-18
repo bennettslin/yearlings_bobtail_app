@@ -1,14 +1,12 @@
 .LyricToggleExpand__inMain {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    // transform: translateX(-50%) scale(1);
-    z-index: $zIndex__mainShelf;
-    opacity: 1;
+    bottom: $js__margin__thin;
+    left: $js__margin__thin;
 
-    transition:
-        opacity $animationDuration__default,
-        transform $animationDuration__default;
+    z-index: $zIndex__mainShelf;
+
+    opacity: 1;
+    transition: opacity $animationDuration__default;
 
     /**
      * TODO: Ideally, this would be a single selector for when the toggle is
@@ -31,6 +29,5 @@
     .TrW__cannotLyricCarouselEnter
     & {
         opacity: 0;
-        // transform: translateX(-50%) scale(0);
     }
 }

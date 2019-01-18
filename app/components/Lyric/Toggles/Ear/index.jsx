@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
+import CSSTransition from 'react-transition-group/CSSTransition'
 import EarColumnDispatcher from '../../../../dispatchers/EarColumnDispatcher'
 import Button from '../../../Button'
 
@@ -44,25 +45,38 @@ class LyricToggleEar extends PureComponent {
             earColumnIndex
         } = this.props
 
-        return isEarShown && (
-            <div className={cx(
-                'LyricToggleEar',
-                'LyricToggle',
-                'LyricToggle__inLyric',
-                'length__buttonLarge'
-            )}>
-                <Button
-                    isLargeSize
-                    {...{
-                        buttonName: LYRIC_EAR_BUTTON_KEY,
-                        buttonIdentifier:
-                        EAR_COLUMN_KEYS[earColumnIndex],
-                        accessKey: LYRIC_COLUMN_TOGGLE_KEY,
-                        handleButtonClick: this.handleDoublespeakerClick
-                    }}
-                />
-                <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
-            </div>
+        return (
+            <CSSTransition
+                appear
+                mountOnEnter
+                unmountOnExit
+                {...{
+                    in: isEarShown,
+                    timeout: 200,
+                    classNames: {
+                        enterActive: 'LyricToggle__shown',
+                        enterDone: 'LyricToggle__shown'
+                    }
+                }}
+            >
+                <div className={cx(
+                    'LyricToggleEar',
+                    'LyricToggle',
+                    'length__buttonLarge'
+                )}>
+                    <Button
+                        isLargeSize
+                        {...{
+                            buttonName: LYRIC_EAR_BUTTON_KEY,
+                            buttonIdentifier:
+                            EAR_COLUMN_KEYS[earColumnIndex],
+                            accessKey: LYRIC_COLUMN_TOGGLE_KEY,
+                            handleButtonClick: this.handleDoublespeakerClick
+                        }}
+                    />
+                    <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
+                </div>
+            </CSSTransition>
         )
     }
 }

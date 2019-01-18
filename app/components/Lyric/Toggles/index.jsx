@@ -23,8 +23,8 @@ const LyricToggles = memo(({ isOnRight }) => (
             </___>
         ) : (
             <___>
-                <LyricToggleEar />
                 <LyricToggleExpand />
+                <LyricToggleEar />
             </___>
         )}
     </div>

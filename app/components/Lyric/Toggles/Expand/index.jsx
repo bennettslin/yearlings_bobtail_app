@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
 import Button from '../../../Button'
 
@@ -57,28 +58,42 @@ class LyricToggleExpand extends PureComponent {
             } = this.props,
 
             // Render button in main if lyric column is heightless.
-            shouldRender = inMain ? isHeightlessLyric : true
+            shouldRender =
+                Boolean(inMain) === (isHeightlessLyric && !isLyricExpanded)
 
-        return isLyricExpandable && shouldRender && (
-            <div className={cx(
-                'LyricToggleExpand',
-                'LyricToggle',
-                inMain ?
-                    'LyricToggleExpand__inMain' :
-                    'LyricToggle__inLyric',
-                'length__buttonLarge'
-            )}>
-                <Button
-                    isLargeSize
-                    {...{
-                        buttonName: LYRIC_EXPAND_BUTTON_KEY,
-                        buttonIdentifier: isLyricExpanded,
-                        accessKey: LYRIC_SECTION_EXPAND_KEY,
-                        handleButtonClick: this.handleLyricClick
-                    }}
-                />
-                <LyricDispatcher {...{ getRefs: this._getRefs }} />
-            </div>
+        return (
+            <CSSTransition
+                appear
+                mountOnEnter
+                unmountOnExit
+                {...{
+                    in: isLyricExpandable && shouldRender,
+                    timeout: 200,
+                    classNames: {
+                        enterActive: 'LyricToggle__shown',
+                        enterDone: 'LyricToggle__shown'
+                    }
+                }}
+            >
+                <div className={cx(
+                    'LyricToggleExpand',
+                    'LyricToggle',
+                    inMain &&
+                        'LyricToggleExpand__inMain',
+                    'length__buttonLarge'
+                )}>
+                    <Button
+                        isLargeSize
+                        {...{
+                            buttonName: LYRIC_EXPAND_BUTTON_KEY,
+                            buttonIdentifier: isLyricExpanded,
+                            accessKey: LYRIC_SECTION_EXPAND_KEY,
+                            handleButtonClick: this.handleLyricClick
+                        }}
+                    />
+                    <LyricDispatcher {...{ getRefs: this._getRefs }} />
+                </div>
+            </CSSTransition>
         )
     }
 }

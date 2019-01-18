@@ -15,7 +15,7 @@ import { LYRIC_GLOBAL_ANNOTATIONS_BUTTON_KEY } from 'constants/buttons'
 class LyricToggleGlobalAnnotations extends PureComponent {
 
     _handleButtonClick = () => {
-        this.dispatchGlobalAnnotations(true)
+        this.dispatchGlobalAnnotations()
     }
 
     _getRefs = (payload) => {
@@ -27,7 +27,7 @@ class LyricToggleGlobalAnnotations extends PureComponent {
             <div className={cx(
                 'LyricToggleGlobalAnnotations',
                 'LyricToggle',
-                'LyricToggle__inLyric',
+                'LyricToggle__shown',
                 'length__buttonLarge'
             )}>
                 <Button
