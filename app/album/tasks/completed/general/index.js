@@ -4475,5 +4475,10 @@ export default [
         taskName: `Toggle global annotations, refactor lyric toggles.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Tips ordering.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
