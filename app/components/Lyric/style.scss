@@ -38,12 +38,11 @@
     .ShW__lyricExpanded
     & {
         height: calc(100% - #{$js__height__menu});
-    }
 
-    .RW__twoRowMenu
-    .ShW__lyricExpanded
-    & {
-        height: calc(100% - #{$js__height__twoRowMenu});
+        .RW__twoRowMenu
+        & {
+            height: calc(100% - #{$js__height__twoRowMenu});
+        }
     }
 }
 
