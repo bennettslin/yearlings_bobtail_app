@@ -6,9 +6,10 @@ import { connect } from 'react-redux'
 import Svg from 'modules/Svg'
 import WallBalcony from './Balcony'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
-
-import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../constants'
+import {
+    getBalconyColumnCoordinates,
+    getWallWidth
+} from './helper'
 
 const mapStateToProps = ({
     viewportStore: {
@@ -59,22 +60,22 @@ class Wall extends PureComponent {
                 floorHeight
             } = this.props,
 
-            leftWidth = stageLeft,
-            rightWidth = windowWidth - stageLeft - stageWidth,
+            wallWidth = getWallWidth({
+                isRight,
+                stageLeft,
+                stageWidth,
+                windowWidth
+            }),
 
-            wallWidth = isRight ? rightWidth : leftWidth,
-            wallHeight = windowHeight - ceilingHeight - floorHeight,
-
-            // Arbitrary values for now.
-            firstColumnBalconyHeight = stageHeight,
-            firstColumnBalconyWidth =
-                firstColumnBalconyHeight * BALCONY_WIDTH_TO_HEIGHT_RATIO,
-
-            balconyColumnCoordinates = getArrayOfCoordinatesForFactoredLengths({
-                minLength: wallWidth,
-                firstLength: firstColumnBalconyWidth,
-                multiplyFactor: 1.05, // Gets taller faster with larger value.
-                overlapRatio: 0.05 // Less bunched up when closer to 0.
+            balconyColumnCoordinates = getBalconyColumnCoordinates({
+                isRight,
+                windowWidth,
+                windowHeight,
+                stageLeft,
+                stageWidth,
+                stageHeight,
+                ceilingHeight,
+                floorHeight
             })
 
         return (
@@ -99,27 +100,22 @@ class Wall extends PureComponent {
                         viewBoxHeight: windowHeight
                     }}
                 >
-                    {balconyColumnCoordinates.map((currentCoordinates, index) => {
+                    {balconyColumnCoordinates.map((coordinates, index) => {
                         const {
-                                length: balconyWidth,
-                                position: xPosition
-                            } = currentCoordinates,
-
-                            balconyHeight = balconyWidth /
-                                BALCONY_WIDTH_TO_HEIGHT_RATIO,
-                            balconyTop = ceilingHeight +
-                                (wallHeight - balconyHeight) / 2,
-                            balconyLeft = isRight ?
-                                xPosition : wallWidth - balconyWidth - xPosition
+                            top,
+                            left,
+                            width,
+                            height
+                        } = coordinates
 
                         return (
                             <WallBalcony
                                 key={index}
                                 {...{
-                                    top: balconyTop,
-                                    left: balconyLeft,
-                                    width: balconyWidth,
-                                    height: balconyHeight
+                                    top,
+                                    left,
+                                    width,
+                                    height
                                 }}
                             />
                         )
