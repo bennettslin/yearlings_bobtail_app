@@ -4470,5 +4470,10 @@ export default [
         taskName: `Selecting carousel should go straight to nav when dots are deselected.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Toggle global annotations, refactor lyric toggles.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
