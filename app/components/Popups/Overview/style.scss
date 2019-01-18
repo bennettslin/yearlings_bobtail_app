@@ -1,16 +1,17 @@
 .OverviewPopup {
     margin-left: $js__margin__thick;
 
-    .DW__mobileWidth
     .Main
     & {
-        margin-right: $js__margin__thin;
-    }
+        .DW__mobileWidth
+        & {
+            margin-right: $js__margin__thin;
+        }
 
-    .DW__phoneWidth
-    .Main
-    & {
-        margin-left: $js__margin__thin;
+        .DW__phoneWidth
+        & {
+            margin-left: $js__margin__thin;
+        }
     }
 }
 

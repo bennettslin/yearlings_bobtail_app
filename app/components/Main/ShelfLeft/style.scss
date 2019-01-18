@@ -31,20 +31,20 @@
     }
 }
 
-*:not(.OverviewToggle) {
+.hidden__overviewShown {
     /**
      * When overview is shown, hide all left shelf children except the overview * toggle itself.
      */
     .ShelfLeft
-    > & {
-
-        transition: margin $animationDuration__default;
+    & {
+        transition: margin-left $animationDuration__default;
 
         .ShW__overviewShown
         & {
             margin-left: -$width__overviewToggle;
         }
     }
+
 }
 
 .flex__mainSideButtons {

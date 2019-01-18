@@ -2,7 +2,7 @@
 
 import React, { PureComponent } from 'react'
 // import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import cx from 'classnames'
 
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import Button from '../../Button'
@@ -25,7 +25,12 @@ class DotsSlideToggle extends PureComponent {
     render() {
         return (
             <div
-                {...{ className: 'DotsSlideToggle' }}
+                {...{
+                    className: cx(
+                        'DotsSlideToggle',
+                        'hidden__overviewShown'
+                    )
+                }}
             >
                 <Button
                     isLargeSize

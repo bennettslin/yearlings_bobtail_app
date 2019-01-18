@@ -41,6 +41,7 @@ class TipsToggle extends PureComponent {
                 <Button
                     isLargeSize
                     {...{
+                        className: 'hidden__overviewShown',
                         buttonName: TIPS_BUTTON_KEY,
                         buttonIdentifier: selectedTipsOption,
                         accessKey: TIPS_TOGGLE_KEY,
