@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+// import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateToggleStore } from 'flux/toggle/action'
 

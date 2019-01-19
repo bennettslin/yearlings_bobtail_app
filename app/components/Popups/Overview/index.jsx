@@ -7,9 +7,13 @@ import { connect } from 'react-redux'
 import Overview from '../../Overview'
 import Popup from '../../Popup'
 
-import { SHOWN } from 'constants/options'
+import {
+    getIsOverviewVisibleBySection,
+    getIsOverviewVisibleBySong
+} from './helper'
 
 const mapStateToProps = ({
+    responsiveStore: { isHeightlessLyric },
     lyricStore: { canLyricCarouselEnter },
     transientStore: { isOverlayShown },
     optionStore: {
@@ -18,6 +22,7 @@ const mapStateToProps = ({
     },
     lyricStore: { isLyricLogue }
 }) => ({
+    isHeightlessLyric,
     canLyricCarouselEnter,
     isOverlayShown,
     selectedOverviewOption,
@@ -27,42 +32,52 @@ const mapStateToProps = ({
 
 class OverviewPopup extends PureComponent {
 
+    static defaultProps = {
+        inMain: false
+    }
+
     static propTypes = {
         // Through Redux.
-        canLyricCarouselEnter: PropTypes.bool.isRequired,
+        isLyricLogue: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
 
         // From parent.
-        inMain: PropTypes.bool
+        inMain: PropTypes.bool.isRequired
     }
 
     render() {
         const
             {
                 inMain,
-                canLyricCarouselEnter,
+                isLyricLogue,
+                isHeightlessLyric,
                 isOverlayShown,
                 selectedOverviewOption,
-                isLyricLogue,
-                selectedTipsOption
+                selectedTipsOption,
+                canLyricCarouselEnter
             } = this.props,
 
-            // Switch between logue and song overview sections.
-            isVisibleBasedOnSong = isLyricLogue ?
+            isVisibleBySection = getIsOverviewVisibleBySection({
+                inMain,
+                isLyricLogue,
+                isHeightlessLyric
+            }),
 
-                // Hide when overlay is shown in logue.
-                !inMain &&
-                !isOverlayShown :
+            isVisibleBySong = getIsOverviewVisibleBySong({
+                isLyricLogue,
+                isOverlayShown,
+                selectedTipsOption,
+                selectedOverviewOption
+            }),
 
-                // Hide when tip is shown in song.
-                Boolean(inMain) &&
-                selectedTipsOption !== SHOWN &&
-                selectedOverviewOption === SHOWN,
-
-            isVisible = canLyricCarouselEnter && isVisibleBasedOnSong
+            isVisible =
+                canLyricCarouselEnter &&
+                isVisibleBySection &&
+                isVisibleBySong
 
         return (
             <Popup
@@ -73,10 +88,6 @@ class OverviewPopup extends PureComponent {
                 noAbsoluteFull
                 {...{
                     popupName: 'Overview',
-                    className:
-                        inMain ?
-                            'OverviewPopup__inMain' :
-                            'OverviewPopup__inLyric',
                     isVisible,
                     noFlexCentre: inMain
                 }}
