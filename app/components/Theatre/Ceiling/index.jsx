@@ -8,9 +8,7 @@ import { connect } from 'react-redux'
 import Svg from 'modules/Svg'
 import CeilingRafter from './Rafter'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
-
-import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../constants'
+import { getRaftersRowCoordinates } from './helper'
 
 const mapStateToProps = ({
     viewportStore: {
@@ -44,17 +42,10 @@ class Ceiling extends PureComponent {
                 ceilingHeight
             } = this.props,
 
-            stageCentreFromLeft = stageLeft + (stageWidth / 2),
-
-            // Arbitrary values for now.
-            firstRowRafterWidth = stageWidth * 1.1,
-            firstRowRafterHeight = firstRowRafterWidth * RAFTER_HEIGHT_TO_WIDTH_RATIO,
-
-            raftersRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
-                minLength: ceilingHeight,
-                firstLength: firstRowRafterHeight,
-                multiplyFactor: 1.2, // Gets wider faster with larger value.
-                overlapRatio: 0.3 // Less bunched up when closer to 0.
+            raftersRowCoordinates = getRaftersRowCoordinates({
+                stageLeft,
+                stageWidth,
+                ceilingHeight
             })
 
         return (
@@ -78,31 +69,22 @@ class Ceiling extends PureComponent {
                         viewBoxHeight: ceilingHeight
                     }}
                 >
-                    {raftersRowCoordinates.map((currentCoordinates, index) => {
+                    {raftersRowCoordinates.map((coordinates, index) => {
                         const {
-                                length: rafterHeight,
-                                position: rafterBottom
-                            } = currentCoordinates,
-
-                            rafterWidth = rafterHeight /
-                                RAFTER_HEIGHT_TO_WIDTH_RATIO,
-
-                            rafterTop =
-                                ceilingHeight
-                                - rafterHeight
-                                - rafterBottom,
-                            rafterLeft =
-                                stageCentreFromLeft
-                                - rafterWidth / 2
+                            top,
+                            left,
+                            width,
+                            height
+                        } = coordinates
 
                         return (
                             <CeilingRafter
                                 key={index}
                                 {...{
-                                    top: rafterTop,
-                                    left: rafterLeft,
-                                    width: rafterWidth,
-                                    height: rafterHeight
+                                    top,
+                                    left,
+                                    width,
+                                    height
                                 }}
                             />
                         )
