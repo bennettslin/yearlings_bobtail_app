@@ -4480,5 +4480,10 @@ export default [
         taskName: `Tips ordering.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Window size shouldn't readjust if iOS viewport just changed height?`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

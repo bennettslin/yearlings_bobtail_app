@@ -9,18 +9,8 @@ export default [
         workedHours: 0,
         neededHours: 5
     },
-
-    /**
-     * Work to make app performant in mobile. This requires some layout
-     * decisions.
-     */
     {
-        taskName: `Window size shouldn't readjust if iOS viewport just changed height?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `If lyric expandable, always have either expanded lyric or heightless lyric in low processor. Include rotate screen icon in place of lyric expand button.`,
+        taskName: `If lyric expandable, always have either expanded lyric or heightless lyric in low processor. Include rotate screen icon in place of lyric expand button. Wait until after dynamic asset loading, to see if still needed.`,
         workedHours: 0,
         neededHours: 5
     }
