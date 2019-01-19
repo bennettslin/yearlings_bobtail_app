@@ -7,7 +7,6 @@ import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
-import VerseBarHandler from '../../handlers/VerseBar'
 import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
@@ -40,10 +39,6 @@ class Lyric extends PureComponent {
         logMount(Lyric.name)
     }
 
-    determineVerseBars = () => {
-        this.dispatchVerseBarsTimeout()
-    }
-
     _handleVerseBarWheel = (e) => {
         this.handleVerseBarWheel(e)
     }
@@ -54,10 +49,6 @@ class Lyric extends PureComponent {
 
     _handleTransitionEntered = () => {
         this.props.updateLyricStore({ didLyricEnter: true })
-    }
-
-    _getVerseElement = (verseIndex) => {
-        return this.getVerseElement(verseIndex)
     }
 
     _getRefs = (payload) => {
@@ -92,12 +83,6 @@ class Lyric extends PureComponent {
                             )
                         }}
                     >
-                        <VerseBarHandler
-                            {...{
-                                getRefs: this._getRefs,
-                                getVerseElement: this._getVerseElement
-                            }}
-                        />
                         <LyricScroll
                             {...{
                                 getRefs: this._getRefs,

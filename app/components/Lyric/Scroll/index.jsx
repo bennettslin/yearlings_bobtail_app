@@ -5,8 +5,9 @@ import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import Transition from 'react-transition-group/Transition'
-import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
+import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
+import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 
 import { populateRefs } from 'helpers/ref'
@@ -42,16 +43,18 @@ class LyricScroll extends PureComponent {
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
-        determineVerseBars: PropTypes.func.isRequired,
         setLyricFocusElement: PropTypes.func.isRequired,
         getRefs: PropTypes.func.isRequired
     }
 
     componentDidMount() {
         this.props.getRefs({
-            handleVerseBarWheel: this.handleVerseBarWheel,
-            getVerseElement: this.getVerseElement
+            handleVerseBarWheel: this.handleVerseBarWheel
         })
+    }
+
+    handleVerseBarWheel = (e) => {
+        this.dispatchVerseBarWheel(e, this.lyricElement)
     }
 
     _getVerseElement = (verseIndex) => {
@@ -81,16 +84,12 @@ class LyricScroll extends PureComponent {
         return this.setLyricAnnotationElement(payload)
     }
 
-    handleVerseBarWheel = (e) => {
-        this.dispatchVerseBarWheel(e, this.lyricElement)
+    _handleDetermineVerseBars = () => {
+        this.dispatchVerseBarsTimeout()
     }
 
-    _handleTouchMoveOrWheel = (e) => {
+    _handleDetermineAutoScroll = (e) => {
         this.dispatchLyricTouchMoveOrWheel(e, this.lyricElement)
-    }
-
-    _handleScroll = () => {
-        this.props.determineVerseBars()
     }
 
     _handleTransitionEntered = () => {
@@ -105,8 +104,7 @@ class LyricScroll extends PureComponent {
         const {
             isGlobalAnnotationsOn,
             canLyricCarouselUpdate,
-            isTouchSupported,
-            determineVerseBars
+            isTouchSupported
         } = this.props
 
         return (
@@ -133,11 +131,11 @@ class LyricScroll extends PureComponent {
                                 'gradientMask__lyricScroll'
                             ),
                             tabIndex: -1,
-                            onScroll: this._handleScroll,
-                            onWheel: this._handleTouchMoveOrWheel
+                            onScroll: this._handleDetermineVerseBars,
+                            onWheel: this._handleDetermineAutoScroll
                         }}
                         {...isTouchSupported && {
-                            onTouchMove: this._handleTouchMoveOrWheel
+                            onTouchMove: this._handleDetermineAutoScroll
                         }}
                     >
                         {isGlobalAnnotationsOn ? (
@@ -153,10 +151,16 @@ class LyricScroll extends PureComponent {
                         )}
                     </div>
                 </Transition>
+                <VerseBarHandler
+                    {...{
+                        getRefs: this._getRefs,
+                        getVerseElement: this._getVerseElement
+                    }}
+                />
                 <LyricWheelDispatcher
                     {...{
                         getRefs: this._getRefs,
-                        determineVerseBars
+                        determineVerseBars: this._handleDetermineVerseBars
                     }}
                 />
             </___>
