@@ -61,7 +61,7 @@ class AnnotationPopup extends PureComponent {
                 showArrows
                 bounceAnimate
                 {...{
-                    popupName: 'Annotation',
+                    popupName: AnnotationPopup.name,
                     isVisible:
                         /**
                          * Annotation popup is in main, unless lyric column is

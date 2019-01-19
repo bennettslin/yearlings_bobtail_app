@@ -40,7 +40,7 @@ const propTypes = {
         return (
             <div className={cx(
                 'PopupView',
-                `${popupName}PopupView`,
+                `${popupName}View`,
                 {
                     'PopupView__bounceAnimate': bounceAnimate,
                     'PopupView__shrinkAnimate': shrinkAnimate,
@@ -84,16 +84,13 @@ const propTypes = {
                 <div
                     className={cx(
                         'PopupViewContent',
-                        `${popupName}PopupViewContent`,
+                        `${popupName}ViewContent`,
                         {
                             'PopupViewContent__narrowPadding': hasNarrowPadding,
                             'PopupViewContent__widePadding': hasWidePadding
                         },
 
                         !isFullSize && 'PopupViewContent__notFullSize',
-
-                        // In other words, not annotation.
-                        // (hasNarrowPadding || hasWidePadding) &&
                         'boxShadow__popupView'
                     )}
                     {...{

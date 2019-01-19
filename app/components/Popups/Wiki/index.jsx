@@ -36,9 +36,11 @@ class WikiPopup extends PureComponent {
                 shrinkAnimate
                 displaysInOverlay
                 isFullSize
-                isVisible={Boolean(selectedWikiIndex)}
-                popupName="Wiki"
-                handleCloseClick={this.closeWiki}
+                {...{
+                    isVisible: Boolean(selectedWikiIndex),
+                    popupName: WikiPopup.name,
+                    handleCloseClick: this.closeWiki
+                }}
             >
                 <Wiki />
             </Popup>

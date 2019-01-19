@@ -70,7 +70,7 @@ class Popup extends PureComponent {
             >
                 <div
                     className={cx(
-                        `${popupName}Popup`,
+                        popupName,
                         'Popup',
 
                         isFullSize && 'Popup__fullSize',
