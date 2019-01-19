@@ -65,9 +65,14 @@ export const getArrayOfCoordinatesForFactoredLengths = ({
 
         arrayOfLengths.push({
             length: currentLength,
-            position
+            position,
+            index:
+                reversePosition ?
+                    // If reverse position, begin from -1 and decrement.
+                    arrayOfLengths.length * -1 - 1 :
+                    arrayOfLengths.length
         })
     }
 
-    return reversePosition ? arrayOfLengths.reverse() : arrayOfLengths
+    return arrayOfLengths
 }

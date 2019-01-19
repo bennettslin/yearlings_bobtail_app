@@ -52,7 +52,9 @@ const FloorSeat = memo(({
         ellipseRy = height / 2,
 
         chairIndexString = chairIndex < 0 ?
-            `n${chairIndex * -1}` : chairIndex
+            // Prefix with "n" for negative.
+            `seat__n${chairIndex * -1}` :
+            `seat__${chairIndex}`
 
     return (
         <g

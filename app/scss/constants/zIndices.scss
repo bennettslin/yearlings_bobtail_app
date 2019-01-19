@@ -12,9 +12,9 @@ $zIndex__theatre: 0;
 
 // The theatre front elements then sits above the scene cubes.
 $zIndex__curtains: 72;
-$zIndex__theatreFloor: $zIndex__curtains + 1;
+$zIndex__theatre: $zIndex__curtains + 1;
 
-$zIndex__popupContainer: $zIndex__theatreFloor + 1;
+$zIndex__popupContainer: $zIndex__theatre + 1;
 
 $zIndex__adminToggle: $zIndex__popupContainer + 1;
 

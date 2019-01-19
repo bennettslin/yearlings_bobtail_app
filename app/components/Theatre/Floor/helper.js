@@ -1,6 +1,30 @@
 import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
+/* eslint-disable */
+const _zipTwoArrays = (leftArray, rightArray) => {
+
+    const
+        zippedArray = [],
+        minLength = Math.min(leftArray.length, rightArray.length)
+
+    // Alternate between left and right arrays.
+    for (let i = 0; i < minLength; i++) {
+        zippedArray.push(
+            rightArray[i],
+            leftArray[i]
+        )
+    }
+
+    // Push the remainder of whichever was the lengthier array.
+    zippedArray.push(
+        ...rightArray.slice(minLength),
+        ...leftArray.slice(minLength)
+    )
+
+    return zippedArray
+}
+
 export const getSeatingRowCoordinates = ({
     windowWidth,
     stageLeft,
@@ -71,19 +95,24 @@ export const getSeatingRowCoordinates = ({
                         - seatWidthOffset
                 }),
 
-            // Combine left and right side seating.
-            seatsArray = leftSeatsArray.concat(rightSeatsArray),
+            seatsArray = _zipTwoArrays(
+                leftSeatsArray,
+                rightSeatsArray
 
-            centreSeatIndex =
-                leftSeatsArray.length - (isEven ? 0 : 0.5)
+            // Reverse so that seats in centre are rendered last.
+            ).reverse()
 
-        return seatsArray.map((seat, seatIndex) => {
+        return seatsArray.map(seat => {
             const {
                     length: seatWidth,
-                    position: seatLeft
+                    position: seatLeft,
+                    index
                 } = seat,
 
-                chairIndex = seatIndex - centreSeatIndex
+                chairIndex =
+                    isEven ?
+                        index :
+                        index + 0.5
 
             return {
                 chairIndex,
