@@ -55,9 +55,7 @@ class Ceiling extends PureComponent {
                         'Ceiling',
                         'Theatre__field'
                     ),
-                    style: {
-                        height: `${ceilingHeight}px`
-                    }
+                    style: { height: `${ceilingHeight}px` }
                 }}
             >
                 <Svg

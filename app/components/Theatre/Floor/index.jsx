@@ -6,9 +6,7 @@ import { connect } from 'react-redux'
 import Svg from 'modules/Svg'
 import FloorSeat from './Seat'
 
-import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
-
-import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../constants'
+import { getSeatingRowCoordinates } from './helper'
 
 const mapStateToProps = ({
     viewportStore: {
@@ -42,25 +40,11 @@ class Floor extends PureComponent {
                 floorHeight
             } = this.props,
 
-            stageCentreFromLeft = stageLeft + (stageWidth / 2),
-
-            firstRowSeatWidth = stageWidth / 9, // Arbitrary value.
-            firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
-
-            seatingRowCoordinates = getArrayOfCoordinatesForFactoredLengths({
-                maxCount: 5,
-
-                minLength: floorHeight,
-                firstLength: firstRowSeatHeight,
-
-                // Gets wider faster with larger value.
-                multiplyFactor: 1.6,
-
-                // Beginning values are closer together with larger value.
-                bunchFactor: 1.8,
-
-                // Values are closer together in general when closer to 1.
-                overlapRatio: 0.99
+            seatingRowCoordinates = getSeatingRowCoordinates({
+                windowWidth,
+                stageLeft,
+                stageWidth,
+                floorHeight
             })
 
         return (
@@ -70,9 +54,7 @@ class Floor extends PureComponent {
                         'Floor',
                         'Theatre__field'
                     ),
-                    style: {
-                        height: `${floorHeight}px`
-                    }
+                    style: { height: `${floorHeight}px` }
                 }}
             >
                 <Svg
@@ -84,86 +66,37 @@ class Floor extends PureComponent {
                         viewBoxHeight: floorHeight
                     }}
                 >
-                    {seatingRowCoordinates.map((currentRowCoordinates, rowIndex) => {
-                        const {
-                                length: rowHeight,
-                                position: rowTop
-                            } = currentRowCoordinates,
+                    {seatingRowCoordinates.map((seatsArray, rowIndex) => (
+                        <g
+                            key={rowIndex}
+                            className={`FloorSeats__${rowIndex}`}
+                        >
+                            {seatsArray.map(seat => {
+                                const {
+                                    chairIndex,
+                                    rowIndex,
+                                    top,
+                                    left,
+                                    width,
+                                    height
+                                } = seat
 
-                            seatWidth = rowHeight / SEAT_HEIGHT_TO_WIDTH_RATIO,
-
-                            /**
-                             * If row is even, have centre seat by offsetting
-                             * right side with one more half seat, and left
-                             * side with one less.
-                             */
-                            isEven = rowIndex % 2 === 0,
-                            seatWidthOffset = isEven ? seatWidth / 2 : 0,
-                            maxSeats = 10, // Arbitrary for now.
-
-                            leftSeatsArray =
-                                getArrayOfCoordinatesForFactoredLengths({
-                                    minLength:
-                                        stageCentreFromLeft
-                                        - seatWidthOffset,
-                                    firstLength: seatWidth,
-                                    maxCount: maxSeats,
-
-                                    // Start from centre, and go towards left.
-                                    reversePosition: true
-                                }),
-
-                            rightSeatsArray =
-                                getArrayOfCoordinatesForFactoredLengths({
-                                    minLength:
-                                        windowWidth
-                                        - stageCentreFromLeft
-                                        + seatWidthOffset,
-                                    firstLength: seatWidth,
-                                    maxCount: maxSeats + (isEven ? 1 : 0),
-                                    positionOffset:
-                                        stageCentreFromLeft
-                                        - seatWidthOffset
-                                }),
-
-                            // Combine left and right side seating.
-                            seatsArray = leftSeatsArray.concat(rightSeatsArray),
-
-                            centreSeatIndex =
-                                leftSeatsArray.length - (isEven ? 0 : 0.5)
-
-                        return (
-                            <g
-                                key={rowIndex}
-                                className={`FloorSeats__${rowIndex}`}
-                            >
-                                {seatsArray.map((seat, seatIndex) => {
-
-                                    const {
-                                            length: seatWidth,
-                                            position: seatLeft
-                                        } = seat,
-
-                                        chairIndex =
-                                            seatIndex - centreSeatIndex
-
-                                    return (
-                                        <FloorSeat
-                                            key={chairIndex}
-                                            {...{
-                                                chairIndex,
-                                                rowIndex,
-                                                top: rowTop,
-                                                left: seatLeft,
-                                                width: seatWidth,
-                                                height: rowHeight
-                                            }}
-                                        />
-                                    )
-                                })}
-                            </g>
-                        )
-                    })}
+                                return (
+                                    <FloorSeat
+                                        key={chairIndex}
+                                        {...{
+                                            chairIndex,
+                                            rowIndex,
+                                            top,
+                                            left,
+                                            width,
+                                            height
+                                        }}
+                                    />
+                                )
+                            })}
+                        </g>
+                    ))}
                 </Svg>
             </div>
         )

@@ -86,9 +86,7 @@ class Wall extends PureComponent {
                         'Theatre__field',
                         { 'Wall__right': isRight }
                     ),
-                    style: {
-                        width: `${wallWidth}px`
-                    }
+                    style: { width: `${wallWidth}px` }
                 }}
             >
                 <Svg
