@@ -17,6 +17,7 @@ const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter },
     transientStore: { isOverlayShown },
     optionStore: {
+        isLogueOverviewShown,
         selectedOverviewOption,
         selectedTipsOption
     },
@@ -25,6 +26,7 @@ const mapStateToProps = ({
     isHeightlessLyric,
     canLyricCarouselEnter,
     isOverlayShown,
+    isLogueOverviewShown,
     selectedOverviewOption,
     selectedTipsOption,
     isLyricLogue
@@ -41,6 +43,7 @@ class OverviewPopup extends PureComponent {
         isLyricLogue: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
+        isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
@@ -56,6 +59,7 @@ class OverviewPopup extends PureComponent {
                 isLyricLogue,
                 isHeightlessLyric,
                 isOverlayShown,
+                isLogueOverviewShown,
                 selectedOverviewOption,
                 selectedTipsOption,
                 canLyricCarouselEnter
@@ -70,6 +74,7 @@ class OverviewPopup extends PureComponent {
             isVisibleBySong = getIsOverviewVisibleBySong({
                 isLyricLogue,
                 isOverlayShown,
+                isLogueOverviewShown,
                 selectedTipsOption,
                 selectedOverviewOption
             }),

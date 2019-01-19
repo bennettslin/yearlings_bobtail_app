@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 import {
     SHOWN,
     HIDDEN,
-    DISABLED
+    DISABLED,
+    OVERVIEW_BUBBLE
 } from 'constants/options'
 
 const
@@ -24,13 +25,12 @@ const
     HIDDEN_ICON = ({
         className
     }) => (
-        <rect
+        <path
             {...{
                 className,
                 x: 0,
                 y: 0,
-                width: 100,
-                height: 100
+                d: 'M 75,0 L 100,75 L 25,100 L0,25 Z'
             }}
         />
     ),
@@ -46,10 +46,24 @@ const
             }}
         />
     ),
+    OVERVIEW_BUBBLE_ICON = ({
+        className
+    }) => (
+        <rect
+            {...{
+                className,
+                x: 0,
+                y: 0,
+                width: 100,
+                height: 100
+            }}
+        />
+    ),
     OVERVIEW_MAP = {
         [SHOWN]: SHOWN_ICON,
         [HIDDEN]: HIDDEN_ICON,
-        [DISABLED]: DISABLED_ICON
+        [DISABLED]: DISABLED_ICON,
+        [OVERVIEW_BUBBLE]: OVERVIEW_BUBBLE_ICON
     }
 
 const propTypes = {

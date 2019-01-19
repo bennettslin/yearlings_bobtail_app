@@ -15,13 +15,17 @@ export const getIsOverviewVisibleBySection = ({
 export const getIsOverviewVisibleBySong = ({
     isLyricLogue,
     isOverlayShown,
+    isLogueOverviewShown,
     selectedTipsOption,
     selectedOverviewOption
 
 }) => {
     // If in logue, hide when overlay is shown.
     if (isLyricLogue) {
-        return !isOverlayShown
+        return (
+            !isOverlayShown &&
+            isLogueOverviewShown
+        )
 
     // If in song, hide when tip is shown.
     } else {

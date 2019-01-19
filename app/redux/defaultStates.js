@@ -153,6 +153,7 @@ export const MOUNT_DEFAULTS = {
 }
 
 export const OPTION_DEFAULTS = {
+    isLogueOverviewShown: isStoredLogue,
     selectedOverviewOption:
         getOptionFromStorage(SELECTED_OVERVIEW_OPTION) || SHOWN,
     selectedTipsOption:

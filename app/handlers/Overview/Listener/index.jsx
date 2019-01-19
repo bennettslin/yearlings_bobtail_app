@@ -14,6 +14,7 @@ class OverviewListener extends PureComponent {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         updateOptionStore: PropTypes.func.isRequired
     }
@@ -24,6 +25,7 @@ class OverviewListener extends PureComponent {
 
     componentDidUpdate(prevProps) {
         this._handleSongChange(prevProps)
+        this._handleHeightlessChange(prevProps)
     }
 
     _handleSongChange(prevProps = {}) {
@@ -37,19 +39,46 @@ class OverviewListener extends PureComponent {
                 selectedOverviewOption
             } = this.props
 
-            // If just hidden, show overview when now in new song.
-            if (!isSelectedLogue && selectedOverviewOption === HIDDEN) {
+            if (isSelectedLogue) {
                 this.props.updateOptionStore({
-                    selectedOverviewOption: SHOWN,
-                    isSongShownOverview: true
+                    // Always show logue overview when switching to logue.
+                    isLogueOverviewShown: true,
+
+                    // If shown, hide song overview when now in logue.
+                    ...selectedOverviewOption === SHOWN && {
+                        selectedOverviewOption: HIDDEN
+                    }
                 })
 
-            // If shown, hide when now in logue.
-            } else if (isSelectedLogue && selectedOverviewOption === SHOWN) {
+            } else {
                 this.props.updateOptionStore({
-                    selectedOverviewOption: HIDDEN
+                    // Hide logue overview when switching to song.
+                    isLogueOverviewShown: false,
+
+                    // If just hidden, show song overview when now in new song.
+                    ...selectedOverviewOption === HIDDEN && {
+                        selectedOverviewOption: SHOWN,
+                        isSongShownOverview: true
+                    }
                 })
             }
+        }
+    }
+
+    _handleHeightlessChange(prevProps) {
+        const
+            {
+                isHeightlessLyric,
+                isSelectedLogue
+            } = this.props,
+            { isHeightlessLyric: wasHeightlessLyric } = prevProps
+
+        if (
+            isSelectedLogue &&
+            !isHeightlessLyric && wasHeightlessLyric
+        ) {
+            // Logue overview is always shown if heighted lyric.
+            this.props.updateOptionStore({ isLogueOverviewShown: true })
         }
     }
 
@@ -63,13 +92,15 @@ const mapStateToProps = ({
         isSelectedLogue,
         selectedSongIndex
     },
+    responsiveStore: { isHeightlessLyric },
     optionStore: {
         selectedOverviewOption
     }
 }) => ({
     isSelectedLogue,
-    selectedOverviewOption,
-    selectedSongIndex
+    selectedSongIndex,
+    isHeightlessLyric,
+    selectedOverviewOption
 })
 
 export default connect(

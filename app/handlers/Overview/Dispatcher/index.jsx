@@ -12,6 +12,7 @@ class OverviewDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         toggleShowsOverviewImmediately: PropTypes.bool.isRequired,
@@ -22,27 +23,47 @@ class OverviewDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            dispatchOverview: this.dispatchOverview
-        })
+        this.props.getRefs({ dispatchOverview: this.dispatchOverview })
     }
 
     dispatchOverview = ({
         isToggled,
         overviewOption
     } = {}) => {
+        const { isSelectedLogue } = this.props
 
+        return isSelectedLogue ?
+            this._dispatchLogueOverview() :
+            this._dispatchSongOverview({
+                isToggled,
+                overviewOption
+            })
+
+    }
+
+    _dispatchLogueOverview({
+        isLogueOverviewShown = !this.props.isLogueOverviewShown
+    } = {}) {
+        const { isHeightlessLyric } = this.props
+
+        // Don't allow overview to be toggled if not heightless.
+        if (!isHeightlessLyric) {
+            return false
+        }
+
+        this.props.updateOptionStore({ isLogueOverviewShown })
+        return true
+    }
+
+    _dispatchSongOverview({
+        isToggled,
+        overviewOption
+    }) {
         const {
-            isSelectedLogue,
             toggleShowsOverviewImmediately,
             selectedOverviewOption: prevOverviewOption,
             selectedTipsOption
         } = this.props
-
-        // Don't allow toggling if in logue.
-        if (isSelectedLogue) {
-            return false
-        }
 
         const selectedOverviewOption = getNextOption({
                 isToggled,
@@ -76,13 +97,17 @@ class OverviewDispatcher extends PureComponent {
 
 const mapStateToProps = ({
     selectedStore: { isSelectedLogue },
+    responsiveStore: { isHeightlessLyric },
     optionStore: {
+        isLogueOverviewShown,
         selectedOverviewOption,
         selectedTipsOption
     },
     transientStore: { toggleShowsOverviewImmediately }
 }) => ({
     isSelectedLogue,
+    isHeightlessLyric,
+    isLogueOverviewShown,
     selectedOverviewOption,
     selectedTipsOption,
     toggleShowsOverviewImmediately

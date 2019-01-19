@@ -62,7 +62,7 @@ class Overview extends PureComponent {
             )}>
                 {isToggleInOverview &&
                     <div className="Overview__toggleFloatContainer">
-                        <OverviewToggle />
+                        <OverviewToggle isToggleInOverview />
                     </div>
                 }
                 <Texts {...{ text: overviewText }} />

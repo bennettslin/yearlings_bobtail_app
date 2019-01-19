@@ -4,6 +4,7 @@ export const PAUSE_AT_END = 'pauseAtEnd'
 export const SHOWN = 'shown'
 export const HIDDEN = 'hidden'
 export const DISABLED = 'disabled'
+export const OVERVIEW_BUBBLE = 'overviewBubble'
 
 export const AUDIO_OPTIONS = [
     CONTINUE,

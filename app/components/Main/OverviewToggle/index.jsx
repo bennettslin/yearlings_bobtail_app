@@ -10,8 +10,10 @@ import Button from '../../Button'
 
 import { populateRefs } from 'helpers/ref'
 
-import { OVERVIEW_TOGGLE_KEY } from 'constants/access'
-import { OVERVIEW_BUTTON_KEY } from 'constants/buttons'
+import { OVERVIEW_TOGGLE_KEY } from '../../../constants/access'
+import { OVERVIEW_BUTTON_KEY } from '../../../constants/buttons'
+
+import { getOverviewToggleIdentifier } from './helper'
 
 const mapStateToProps = ({
     lyricStore: { isLyricLogue },
@@ -25,14 +27,15 @@ class OverviewToggle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isLyricLogue: PropTypes.bool.isRequired,
-        selectedOverviewOption: PropTypes.string.isRequired
+        selectedOverviewOption: PropTypes.string.isRequired,
+
+        // From parent.
+        isToggleInOverview: PropTypes.bool
     }
 
     handleOverviewClick = () => {
-        if (!this.props.isLyricLogue) {
-            this.dispatchOverview({ isToggled: true })
-        }
+        // The isToggled argument is ignored by logue overview.
+        this.dispatchOverview({ isToggled: true })
     }
 
     _getRefs = (payload) => {
@@ -41,9 +44,16 @@ class OverviewToggle extends PureComponent {
 
     render() {
         const {
-            isLyricLogue,
-            selectedOverviewOption
-        } = this.props
+                isLyricLogue,
+                selectedOverviewOption,
+                isToggleInOverview
+            } = this.props,
+
+            buttonIdentifier = getOverviewToggleIdentifier({
+                isLyricLogue,
+                selectedOverviewOption,
+                isToggleInOverview
+            })
 
         return (
             <div className={cx(
@@ -53,9 +63,8 @@ class OverviewToggle extends PureComponent {
                     isCustomSize
                     {...{
                         buttonName: OVERVIEW_BUTTON_KEY,
-                        isDisabled: isLyricLogue,
                         accessKey: OVERVIEW_TOGGLE_KEY,
-                        buttonIdentifier: selectedOverviewOption,
+                        buttonIdentifier,
                         handleButtonClick: this.handleOverviewClick
                     }}
                 />
