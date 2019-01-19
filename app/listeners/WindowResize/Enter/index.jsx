@@ -117,10 +117,13 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 isHeightlessLyric
             })
 
+        const rootContainerHeight = document.getElementsByClassName('RootContainer')[0].getBoundingClientRect().height
+
         this.props.updateViewportStore({
             canTheatreEnter: true,
             deviceWidthIndex,
             windowWidth,
+            rootContainerHeight,
             windowHeight,
             stageTop,
             stageLeft,

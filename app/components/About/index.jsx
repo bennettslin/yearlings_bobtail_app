@@ -9,15 +9,24 @@ const mapStateToProps = ({
     appStore: {
         isHigherProcessor,
         isTouchSupported
+    },
+    viewportStore: {
+        rootContainerHeight,
+        windowHeight
     }
 }) => ({
     isHigherProcessor,
-    isTouchSupported
+    isTouchSupported,
+    rootContainerHeight,
+    windowHeight
 })
 
 const About = memo(({
     isHigherProcessor,
-    isTouchSupported
+    isTouchSupported,
+    rootContainerHeight,
+    windowHeight
+
 }) => (
     <div className={cx(
         'About',
@@ -36,12 +45,20 @@ const About = memo(({
         <p>
             isTouchSupported: {isTouchSupported ? 'true' : 'false'}
         </p>
+        <p>
+            rootContainerHeight: {rootContainerHeight}
+        </p>
+        <p>
+            windowHeight: {windowHeight}
+        </p>
     </div>
 ))
 
 About.propTypes = {
     isHigherProcessor: PropTypes.bool.isRequired,
-    isTouchSupported: PropTypes.bool.isRequired
+    isTouchSupported: PropTypes.bool.isRequired,
+    rootContainerHeight: PropTypes.number.isRequired,
+    windowHeight: PropTypes.number.isRequired
 }
 
 export default connect(mapStateToProps)(About)
