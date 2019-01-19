@@ -14,13 +14,15 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    viewportStore: { deviceWidthIndex },
+    viewportStore: { isPhoneWidth },
+    responsiveStore: { isHeightlessLyric },
     lyricStore: {
         lyricSongIndex,
         isLyricLogue
     }
 }) => ({
-    deviceWidthIndex,
+    isPhoneWidth,
+    isHeightlessLyric,
     lyricSongIndex,
     isLyricLogue
 })
@@ -29,28 +31,27 @@ class Overview extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        deviceWidthIndex: PropTypes.number.isRequired,
+        isPhoneWidth: PropTypes.bool.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         isLyricLogue: PropTypes.bool.isRequired
     }
 
     render() {
         const {
-                deviceWidthIndex,
+                isPhoneWidth,
+                isHeightlessLyric,
                 lyricSongIndex,
                 isLyricLogue
             } = this.props,
 
             overviewText = getSongOverview(lyricSongIndex),
 
-            // TODO: Revisit whether to show toggle in logue when it is heightless lyric.
-            /**
-             * Always show toggle in overview when it's a song in phone. Also
-             * show when it's a logue and is heightless lyric.
-             */
-            isToggleInOverview =
-                !isLyricLogue &&
-                getIsToggleInOverview(deviceWidthIndex)
+            isToggleInOverview = getIsToggleInOverview({
+                isPhoneWidth,
+                isHeightlessLyric,
+                isLyricLogue
+            })
 
         return (
             <div className={cx(
