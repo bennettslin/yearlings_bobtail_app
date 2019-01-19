@@ -296,7 +296,6 @@ export const VIEWPORT_DEFAULTS = {
     deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
     isPhoneWidth: false,
     isDesktopWidth: false,
-    rootContainerHeight: 0,
     windowHeight: 0,
     windowWidth: 0,
     stageTop: 0,

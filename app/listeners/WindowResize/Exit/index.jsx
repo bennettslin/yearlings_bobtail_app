@@ -8,11 +8,18 @@ import WindowResizeEnterDispatcher from '../Enter'
 
 import { populateRefs } from 'helpers/ref'
 
+import { getWindowHeightAndWidth } from '../helper'
+
 class WindowResizeExitListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        resetViewportForTransition: PropTypes.func.isRequired
+        windowHeight: PropTypes.number.isRequired,
+        windowWidth: PropTypes.number.isRequired,
+        resetViewportForTransition: PropTypes.func.isRequired,
+
+        // From parent.
+        getRefs: PropTypes.func.isRequired
     }
 
     state = {
@@ -20,14 +27,46 @@ class WindowResizeExitListener extends PureComponent {
     }
 
     componentDidMount() {
-        window.onresize = debounce(this._beginExitTransition, 0)
+        this.props.getRefs({ passRootContainer: this.passRootContainer })
+        window.onresize = debounce(this._checkIfGenuineResize, 0)
     }
 
     componentWillUnmount() {
         window.onresize = null
     }
 
-    _beginExitTransition = () => {
+    passRootContainer = (node) => {
+        this.rootElement = node
+        this.setRootContainer(node)
+    }
+
+    _checkIfGenuineResize = () => {
+        /**
+         * This check is needed because iOS will arbitrarily set window height
+         * based on whether browser header and footer are shown. So we'll use
+         * the height of the root element to be the official window height.
+         * Doing this in all cases for now, not just iOS, for simplicity.
+         */
+        const
+            {
+                windowHeight: newHeight,
+                windowWidth: newWidth
+            } = getWindowHeightAndWidth(this.rootElement),
+            {
+                windowHeight: prevHeight,
+                windowWidth: prevWidth
+            } = this.props
+
+        if (
+            newHeight !== prevHeight ||
+            newWidth !== prevWidth
+        ) {
+            this._beginExitTransition()
+        }
+
+    }
+
+    _beginExitTransition() {
         this.props.resetViewportForTransition()
 
         // Clear previous timeout.
@@ -40,9 +79,7 @@ class WindowResizeExitListener extends PureComponent {
             this._completeWindowResize, 250
         )
 
-        this.setState({
-            windowResizeTimeoutId
-        })
+        this.setState({ windowResizeTimeoutId })
     }
 
     _completeWindowResize = () => {
@@ -60,11 +97,17 @@ class WindowResizeExitListener extends PureComponent {
     }
 }
 
-const mapStateToProps = null
+const mapStateToProps = ({
+    viewportStore: {
+        windowHeight,
+        windowWidth
+    }
+}) => ({
+    windowHeight,
+    windowWidth
+})
 
 export default connect(
     mapStateToProps,
-    {
-        resetViewportForTransition
-    }
+    { resetViewportForTransition }
 )(WindowResizeExitListener)

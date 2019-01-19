@@ -15,9 +15,12 @@ import ShownWrapper from '../../wrappers/ShownWrapper'
 import TouchWrapper from '../../wrappers/TouchWrapper'
 import TransitionWrapper from '../../wrappers/TransitionWrapper'
 import LogicWrapper from '../../wrappers/LogicWrapper'
+import WindowResizeExitListener from '../../listeners/WindowResize/Exit'
 
 import Live from '../../components/Live'
 import Admin from '../../components/Admin'
+
+import { populateRefs } from 'helpers/ref'
 
 class RootContainer extends PureComponent {
 
@@ -35,6 +38,14 @@ class RootContainer extends PureComponent {
         logMount('RootContainer')
     }
 
+    _setRootElement = (node) => {
+        return this.passRootContainer(node)
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
     render() {
         const {
             isAdminOn,
@@ -45,10 +56,14 @@ class RootContainer extends PureComponent {
 
         return (
             <div
-                className={cx(
-                    'RootContainer'
-                )}
+                {...{
+                    ref: this._setRootElement,
+                    className: cx(
+                        'RootContainer'
+                    )
+                }}
             >
+                <WindowResizeExitListener {...{ getRefs: this._getRefs }} />
                 <DeviceWrapper>
                     <PlayingWrapper>
                         <ResponsiveWrapper>

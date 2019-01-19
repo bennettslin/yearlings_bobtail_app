@@ -8,13 +8,16 @@ import { updateResponsiveStore } from 'flux/responsive/action'
 import { updateMountStore } from 'flux/mount/action'
 
 import {
+    getDeviceWidthIndex,
+    getWindowHeightAndWidth
+} from '../helper'
+import { getIsHeightlessLyric } from './helpers/hidden'
+import {
     getCanCarouselMount,
     getCanScoreMount,
     getCanSliderMount,
     getLyricHeightRatio
 } from './helpers/mount'
-
-import { getIsHeightlessLyric } from './helpers/hidden'
 import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
@@ -25,7 +28,6 @@ import {
     getCeilingFloorHeight
 } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
-import { resizeWindow } from './helpers/window'
 import { getStageCoordinates } from './helpers/stage'
 
 class WindowResizeEnterDispatcher extends PureComponent {
@@ -43,21 +45,30 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
+            setRootContainer: this.setRootContainer,
             dispatchBeginEnterTransition: this.beginEnterTransition
         })
+    }
 
-        // Set state based on initial window size.
+    setRootContainer = (node) => {
+        this.rootElement = node
+
+        /**
+         * As soon as we have a reference to the root container, set state
+         * based on initial window size.
+         */
         this.beginEnterTransition()
     }
 
     beginEnterTransition = () => {
         logTransition('Theatre can enter.')
 
-        const {
-                deviceWidthIndex,
+        const
+            deviceWidthIndex = getDeviceWidthIndex(),
+            {
                 windowHeight,
                 windowWidth
-            } = resizeWindow(),
+            } = getWindowHeightAndWidth(this.rootElement),
 
             isHeightlessLyric = getIsHeightlessLyric({
                 deviceWidthIndex,
@@ -117,13 +128,10 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 isHeightlessLyric
             })
 
-        const rootContainerHeight = document.getElementsByClassName('RootContainer')[0].getBoundingClientRect().height
-
         this.props.updateViewportStore({
             canTheatreEnter: true,
             deviceWidthIndex,
             windowWidth,
-            rootContainerHeight,
             windowHeight,
             stageTop,
             stageLeft,
@@ -187,6 +195,7 @@ const mapStateToProps = ({
 }) => ({
     isHigherProcessor
 })
+
 export default connect(
     mapStateToProps,
     {
