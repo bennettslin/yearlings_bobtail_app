@@ -1,0 +1,35 @@
+.LyricOverview {
+    position: absolute;
+    width: 100%;
+
+    transition: height $animationDuration__default;
+
+    .ShW__lyricExpanded
+    & {
+        height: calc(100% - #{$js__height__menu});
+
+        .RW__twoRowMenu
+        & {
+            height: calc(100% - #{$js__height__twoRowMenu});
+        }
+    }
+}
+
+.width__lyricColumn__desktop {
+    .DW__desktopWidth
+    & {
+        width: $js__width__goldenCord;
+        left: auto;
+        right: 0;
+    }
+
+    .DW__laptopWidth
+    & {
+        width: $js__width__uncannyValley;
+    }
+}
+
+.position__lyricColumn__mobile {
+    width: 100%;
+    bottom: 0;
+}

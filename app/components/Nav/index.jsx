@@ -21,7 +21,7 @@ class Nav extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('Nav')
+        logMount(Nav.name)
     }
 
     render() {

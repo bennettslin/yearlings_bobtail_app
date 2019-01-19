@@ -16,9 +16,7 @@ $zIndex__theatre: $zIndex__curtains + 1;
 
 $zIndex__popupContainer: $zIndex__theatre + 1;
 
-$zIndex__adminToggle: $zIndex__popupContainer + 1;
-
-$zIndex__navCustomSubfield: $zIndex__adminToggle + 1;
+$zIndex__navCustomSubfield: $zIndex__popupContainer + 1;
 
 // Both carousel and popup annotation.
 $zIndex__annotation: $zIndex__navCustomSubfield + 1;

@@ -35,7 +35,7 @@ class RootContainer extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('RootContainer')
+        logMount(RootContainer.name)
     }
 
     _setRootElement = (node) => {

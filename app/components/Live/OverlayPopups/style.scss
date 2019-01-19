@@ -1,23 +1,7 @@
-/**
- * Used by OverlayPopups only. For desktop, OverviewLogue shares styling with
- * Lyric.
- */
-.topHeight__overlayPopups__desktop {
+.OverlayPopups {
 
     top: $js__height__menu;
     height: calc(100% - #{$js__height__menu});
-}
-
-/**
- * Used by both OverlayPopups and OverviewLogue.
- */
-.topHeight__overlayPopups__mobile {
-
-    .DW__mobileWidth
-    & {
-        top: $js__height__menu;
-        height: calc(100% - #{$js__height__menu});
-    }
 
     .RW__twoRowMenu
     & {

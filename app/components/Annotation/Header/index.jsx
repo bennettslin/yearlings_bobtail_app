@@ -13,7 +13,7 @@ const propTypes = {
         annotationIndex: PropTypes.number.isRequired
     },
 
-    AnnotationHeader = memo(({
+    AnnotationHeader = ({
         inCarousel,
         isShadow,
         isAccessed,
@@ -38,8 +38,8 @@ const propTypes = {
                 }}
             />
         </div>
-    ))
+    )
 
 AnnotationHeader.propTypes = propTypes
 
-export default AnnotationHeader
+export default memo(AnnotationHeader)

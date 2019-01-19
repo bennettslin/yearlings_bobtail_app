@@ -4,12 +4,8 @@
 @import "./VerseBar/style";
 
 .Lyric {
-    position: absolute;
-
     opacity: 0;
-    transition:
-        opacity $animationDuration__fast,
-        height $animationDuration__default;
+    transition: opacity $animationDuration__fast;
 
     // Keeps elements inside window!
     overflow: hidden;
@@ -34,16 +30,6 @@
          */
         z-index: $zIndex__lyricColumn;
     }
-
-    .ShW__lyricExpanded
-    & {
-        height: calc(100% - #{$js__height__menu});
-
-        .RW__twoRowMenu
-        & {
-            height: calc(100% - #{$js__height__twoRowMenu});
-        }
-    }
 }
 
 .Lyric__visible {
@@ -51,35 +37,6 @@
     & {
         opacity: 1;
     }
-}
-
-// Used by Lyric and OverviewLogue.
-.position__lyricColumn__desktop {
-
-    .DW__desktopWidth
-    & {
-        height: 100%;
-    }
-}
-
-.width__lyricColumn__desktop {
-    .DW__desktopWidth
-    & {
-        width: $js__width__goldenCord;
-        left: auto;
-        right: 0;
-    }
-
-    .DW__laptopWidth
-    & {
-        width: $js__width__uncannyValley;
-    }
-}
-
-// Used by Lyric only.
-.position__lyricColumn__mobile {
-    width: 100%;
-    bottom: 0;
 }
 
 .gradientMask__lyricColumn__desktop {

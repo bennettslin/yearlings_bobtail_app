@@ -43,7 +43,7 @@ class FocusContainer extends PureComponent {
     state = { isSliderTouchEnding: false }
 
     componentDidMount() {
-        logMount('FocusContainer')
+        logMount(FocusContainer.name)
 
         // Focus lyric section when app is mounted.
         this._focusElementForAccess()

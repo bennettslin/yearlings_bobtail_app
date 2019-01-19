@@ -73,6 +73,10 @@ class OverviewPopup extends PureComponent {
                 noAbsoluteFull
                 {...{
                     popupName: 'Overview',
+                    className:
+                        inMain ?
+                            'OverviewPopup__inMain' :
+                            'OverviewPopup__inLyric',
                     isVisible,
                     noFlexCentre: inMain
                 }}

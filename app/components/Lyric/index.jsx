@@ -6,7 +6,6 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
-import Transition from 'react-transition-group/Transition'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import VerseBarHandler from '../../handlers/VerseBar'
 import LyricAccess from './Access'
@@ -17,13 +16,9 @@ import VerseBar from './VerseBar'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    lyricStore: { canLyricCarouselEnter },
-    toggleStore: { isLyricExpanded },
-    mountStore: { lyricHeightRatio }
+    lyricStore: { canLyricCarouselEnter }
 }) => ({
-    lyricHeightRatio,
-    canLyricCarouselEnter,
-    isLyricExpanded
+    canLyricCarouselEnter
 })
 
 /*************
@@ -34,9 +29,7 @@ class Lyric extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        lyricHeightRatio: PropTypes.number.isRequired,
         canLyricCarouselEnter: PropTypes.bool.isRequired,
-        isLyricExpanded: PropTypes.bool.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -44,7 +37,7 @@ class Lyric extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('Lyric')
+        logMount(Lyric.name)
     }
 
     determineVerseBars = () => {
@@ -55,16 +48,16 @@ class Lyric extends PureComponent {
         this.handleVerseBarWheel(e)
     }
 
-    _getVerseElement = (verseIndex) => {
-        return this.getVerseElement(verseIndex)
-    }
-
     _handleTransitionExited = () => {
         this.props.updateLyricStore({ didLyricExit: true })
     }
 
     _handleTransitionEntered = () => {
         this.props.updateLyricStore({ didLyricEnter: true })
+    }
+
+    _getVerseElement = (verseIndex) => {
+        return this.getVerseElement(verseIndex)
     }
 
     _getRefs = (payload) => {
@@ -74,8 +67,6 @@ class Lyric extends PureComponent {
     render() {
         const {
             canLyricCarouselEnter,
-            isLyricExpanded,
-            lyricHeightRatio,
             setLyricFocusElement
         } = this.props
 
@@ -96,20 +87,9 @@ class Lyric extends PureComponent {
                         {...{
                             className: cx(
                                 'Lyric',
-                                'width__lyricColumn__desktop',
-                                'position__lyricColumn__desktop',
-                                'position__lyricColumn__mobile',
-                                'gradientMask__lyricColumn__desktop'
+                                'gradientMask__lyricColumn__desktop',
+                                'abF'
                             )
-                        }}
-                        {...!isLyricExpanded && {
-                            /**
-                             * If lyric is expanded, height is straightforward,
-                             * so we'll handle it in CSS instead.
-                             */
-                            style: {
-                                height: `${lyricHeightRatio * 100}%`
-                            }
                         }}
                     >
                         <VerseBarHandler
@@ -141,18 +121,6 @@ class Lyric extends PureComponent {
                                 handleVerseBarWheel: this._handleVerseBarWheel
                             }}
                         />
-                        <Transition
-                            {...{
-                                in: isLyricExpanded,
-                                timeout: 200,
-                                onExited: this.determineVerseBars,
-                                onEntered: this.determineVerseBars
-                            }}
-                        >
-                            <div
-                                {...{ className: 'displayNoneContainer' }}
-                            />
-                        </Transition>
                     </div>
                 </CSSTransition>
             </___>

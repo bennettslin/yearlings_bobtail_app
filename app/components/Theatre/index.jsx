@@ -31,7 +31,7 @@ class Theatre extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('Theatre')
+        logMount(Theatre.name)
     }
 
     _handleTransitionEntered = () => {

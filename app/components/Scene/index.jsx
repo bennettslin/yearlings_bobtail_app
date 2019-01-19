@@ -31,7 +31,7 @@ class Scene extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('Scene')
+        logMount(Scene.name)
     }
 
     _handleTransitionUpdated = () => {

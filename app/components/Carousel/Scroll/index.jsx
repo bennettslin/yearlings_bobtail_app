@@ -44,7 +44,7 @@ class CarouselScroll extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('CarouselScroll')
+        logMount(CarouselScroll.name)
     }
 
     _handleTransitionEntered = () => {

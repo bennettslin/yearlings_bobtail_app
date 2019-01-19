@@ -1,9 +1,4 @@
-// .Overview {
-//     overflow: auto;
-// }
-
 .Overview__toggleFloatContainer {
-
     position: relative;
     margin-right: 10px;
     float: left;
@@ -24,5 +19,26 @@
     & {
         width: $width__overviewToggle__phone;
         height: $height__overviewToggle__phone;
+    }
+}
+
+.Overview__toggleInOverview {
+    // When toggle is in overview, force minimum height to be toggle height.
+
+    min-height: $height__overviewToggle;
+
+    .DW__tabletWidth
+    & {
+        min-height: $height__overviewToggle__tablet;
+    }
+
+    .DW__miniWidth
+    & {
+        min-height: $height__overviewToggle__mini;
+    }
+
+    .DW__phoneWidth
+    & {
+        min-height: $height__overviewToggle__phone;
     }
 }

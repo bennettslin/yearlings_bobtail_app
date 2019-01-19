@@ -45,8 +45,8 @@ class Overview extends PureComponent {
 
             // TODO: Revisit whether to show toggle in logue when it is heightless lyric.
             /**
-             * Always show when it's song in phone. Also show when it's logue
-             * and is heightless lyric.
+             * Always show toggle in overview when it's a song in phone. Also
+             * show when it's a logue and is heightless lyric.
              */
             isToggleInOverview =
                 !isLyricLogue &&
@@ -55,7 +55,9 @@ class Overview extends PureComponent {
         return (
             <div className={cx(
                 'Overview',
-                'fontSize__verse'
+                'fontSize__verse',
+                isToggleInOverview &&
+                    'Overview__toggleInOverview'
             )}>
                 {isToggleInOverview &&
                     <div className="Overview__toggleFloatContainer">

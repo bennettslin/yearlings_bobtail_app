@@ -17,7 +17,7 @@ const mapStateToProps = ({
     windowHeight
 })
 
-const About = memo(({
+const About = ({
     isHigherProcessor,
     isTouchSupported,
     windowHeight
@@ -49,7 +49,7 @@ const About = memo(({
             </p>
         </div>
     )
-})
+}
 
 About.propTypes = {
     isHigherProcessor: PropTypes.bool.isRequired,
@@ -57,4 +57,4 @@ About.propTypes = {
     windowHeight: PropTypes.number.isRequired
 }
 
-export default connect(mapStateToProps)(About)
+export default connect(mapStateToProps)(memo(About))

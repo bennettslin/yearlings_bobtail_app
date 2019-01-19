@@ -1,8 +1,16 @@
 .OverviewPopup {
-    margin-left: $js__margin__thick;
+
+    .DW__mobileWidth
+    .LyricOverview
+    & {
+        margin-left: $js__margin__thin;
+        margin-right: $js__margin__thin;
+    }
 
     .Main
     & {
+        margin-left: $js__margin__thick;
+
         .DW__mobileWidth
         & {
             margin-right: $js__margin__thin;

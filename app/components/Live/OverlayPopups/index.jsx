@@ -36,9 +36,6 @@ class OverlayPopups extends PureComponent {
         return (
             <div className={cx(
                 'OverlayPopups',
-                'topHeight__overlayPopups',
-                'topHeight__overlayPopups__desktop',
-                'topHeight__overlayPopups__mobile',
                 'abF'
             )}>
                 <AnnotationPopup />

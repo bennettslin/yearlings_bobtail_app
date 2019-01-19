@@ -48,7 +48,7 @@ class Main extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('Main')
+        logMount(Main.name)
     }
 
     render() {
