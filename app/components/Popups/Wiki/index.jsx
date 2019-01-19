@@ -19,10 +19,7 @@ class WikiPopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedWikiIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
-
-        // From parent.
-        setWikiFocusElement: PropTypes.func.isRequired
+        updateSessionStore: PropTypes.func.isRequired
     }
 
     closeWiki = () => {
@@ -30,10 +27,7 @@ class WikiPopup extends PureComponent {
     }
 
     render() {
-        const {
-            selectedWikiIndex,
-            setWikiFocusElement
-        } = this.props
+        const { selectedWikiIndex } = this.props
 
         return (
             <Popup
@@ -46,7 +40,7 @@ class WikiPopup extends PureComponent {
                 popupName="Wiki"
                 handleCloseClick={this.closeWiki}
             >
-                <Wiki {...{ setWikiFocusElement }} />
+                <Wiki />
             </Popup>
         )
     }

@@ -18,10 +18,7 @@ class Score extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        setScoreFocusElement: PropTypes.func.isRequired
+        lyricSongIndex: PropTypes.number.isRequired
     }
 
     onIframeLoad = () => {
@@ -29,10 +26,7 @@ class Score extends PureComponent {
     }
 
     render() {
-        const {
-                lyricSongIndex,
-                setScoreFocusElement
-            } = this.props,
+        const { lyricSongIndex } = this.props,
             score = getSongScore(lyricSongIndex)
 
         return (
@@ -46,7 +40,6 @@ class Score extends PureComponent {
             >
                 <iframe
                     {...{
-                        ref: setScoreFocusElement,
                         className: 'iframeContainer__iframe',
                         tabIndex: -1,
                         src: score,

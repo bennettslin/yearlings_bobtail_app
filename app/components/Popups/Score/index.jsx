@@ -19,10 +19,7 @@ class ScorePopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         isScoreShown: PropTypes.bool.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
-
-        // From parent.
-        setScoreFocusElement: PropTypes.func.isRequired
+        updateToggleStore: PropTypes.func.isRequired
     }
 
     closeScore = () => {
@@ -30,10 +27,7 @@ class ScorePopup extends PureComponent {
     }
 
     render() {
-        const {
-            isScoreShown,
-            setScoreFocusElement
-        } = this.props
+        const { isScoreShown } = this.props
 
         return (
             <Popup
@@ -45,7 +39,7 @@ class ScorePopup extends PureComponent {
                     handleCloseClick: this.closeScore
                 }}
             >
-                <Score {...{ setScoreFocusElement }} />
+                <Score />
             </Popup>
         )
     }

@@ -18,20 +18,12 @@ class OverlayPopups extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canScoreMount: PropTypes.bool.isRequired,
-
-        // From parent.
-        setScoreFocusElement: PropTypes.func.isRequired,
-        setWikiFocusElement: PropTypes.func.isRequired
+        canScoreMount: PropTypes.bool.isRequired
     }
 
     render() {
 
-        const {
-            canScoreMount,
-            setScoreFocusElement,
-            setWikiFocusElement
-        } = this.props
+        const { canScoreMount } = this.props
 
         return (
             <div className={cx(
@@ -41,9 +33,9 @@ class OverlayPopups extends PureComponent {
                 <AnnotationPopup />
                 <AboutPopup />
                 {canScoreMount && (
-                    <ScorePopup {...{ setScoreFocusElement }} />
+                    <ScorePopup />
                 )}
-                <WikiPopup {...{ setWikiFocusElement }} />
+                <WikiPopup />
             </div>
         )
     }

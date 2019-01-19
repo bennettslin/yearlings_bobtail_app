@@ -29,9 +29,7 @@ class RootContainer extends PureComponent {
         isAdminOn: PropTypes.bool.isRequired,
 
         // From parent.
-        setLyricFocusElement: PropTypes.func.isRequired,
-        setScoreFocusElement: PropTypes.func.isRequired,
-        setWikiFocusElement: PropTypes.func.isRequired
+        setLyricFocusElement: PropTypes.func.isRequired
     }
 
     componentDidMount() {
@@ -49,9 +47,7 @@ class RootContainer extends PureComponent {
     render() {
         const {
             isAdminOn,
-            setLyricFocusElement,
-            setScoreFocusElement,
-            setWikiFocusElement
+            setLyricFocusElement
         } = this.props
 
         return (
@@ -72,11 +68,7 @@ class RootContainer extends PureComponent {
                                     <TransitionWrapper>
                                         <LogicWrapper>
                                             <Live
-                                                {...{
-                                                    setLyricFocusElement,
-                                                    setScoreFocusElement,
-                                                    setWikiFocusElement
-                                                }}
+                                                {...{ setLyricFocusElement }}
                                             />
                                             {isAdminOn && (
                                                 <Admin />

@@ -154,16 +154,6 @@ class FocusContainer extends PureComponent {
         this._focusElementForAccess()
     }
 
-    setScoreFocusElement = (node) => {
-        this.scoreElement = node
-        this._focusElementForAccess()
-    }
-
-    setWikiFocusElement = (node) => {
-        this.wikiElement = node
-        this._focusElementForAccess()
-    }
-
     _setRootElement = node => this.rootElement = node
     _handleKeyDownPress = e => this.handleKeyDownPress(e)
     _handleKeyUpPress = e => this.handleKeyUpPress(e)
@@ -200,12 +190,7 @@ class FocusContainer extends PureComponent {
                 <AccessStylesheet />
                 <KeyManager {...{ getRefs: this._getRefs }} />
                 <RootContainer
-                    {...{
-                        setLyricFocusElement: this.setLyricFocusElement,
-                        setScoreFocusElement: this.setScoreFocusElement,
-                        setWikiFocusElement: this.setWikiFocusElement
-
-                    }}
+                    {...{ setLyricFocusElement: this.setLyricFocusElement }}
                 />
                 {canSliderMount && (
                     <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
