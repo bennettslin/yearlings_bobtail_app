@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import {
     CONTINUE,
     REPEAT,
-    PAUSE_AT_END,
     AUDIO_OPTIONS
 } from 'constants/options'
 
@@ -19,19 +18,6 @@ const
                 cx: 50,
                 cy: 50,
                 r: 50
-            }}
-        />
-    ),
-    PAUSE_AT_END_ICON = ({
-        className
-    }) => (
-        <rect
-            {...{
-                className,
-                x: 0,
-                y: 0,
-                width: 100,
-                height: 100
             }}
         />
     ),
@@ -49,7 +35,6 @@ const
     ),
     AUDIO_OPTIONS_MAP = {
         [CONTINUE]: CONTINUE_ICON,
-        [PAUSE_AT_END]: PAUSE_AT_END_ICON,
         [REPEAT]: REPEAT_ICON
     }
 

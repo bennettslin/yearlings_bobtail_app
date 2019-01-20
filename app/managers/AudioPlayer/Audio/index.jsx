@@ -9,7 +9,6 @@ import { populateRefs } from 'helpers/ref'
 
 import {
     CONTINUE,
-    PAUSE_AT_END,
     AUDIO_OPTIONS
 } from 'constants/options'
 
@@ -64,8 +63,6 @@ class AudioManager extends PureComponent {
                 queuedScrollLyricAlways: true
             })
         }
-
-        return true
     }
 
     handleSongEnd = () => {
@@ -80,29 +77,16 @@ class AudioManager extends PureComponent {
 
             selectedAudioOption = AUDIO_OPTIONS[selectedAudioOptionIndex]
 
-        // If option is to pause at end, stop play.
-        if (selectedAudioOption === PAUSE_AT_END) {
-            this._togglePlay()
+        /**
+         * If option is to continue, advance to next song. Otherwise, stay on
+         * same song, and start at beginning. (True evaluates to 1, false 0.)
+         */
+        const nextSongIndex = selectedSongIndex
+            + (selectedAudioOption === CONTINUE)
 
-            // Just select first verse of current song.
-            this.dispatchSong({
-                selectedSongIndex,
-                selectedVerseIndex: 0
-            })
-
-        } else {
-
-            /**
-             * If option is to continue, advance to next song. Otherwise, stay
-             * on same song, and start at beginning. (True evaluates to 1, false 0.)
-             */
-            const nextSongIndex = selectedSongIndex
-                + (selectedAudioOption === CONTINUE)
-
-            this.dispatchSong({
-                selectedSongIndex: nextSongIndex
-            })
-        }
+        this.dispatchSong({
+            selectedSongIndex: nextSongIndex
+        })
     }
 
     _getRefs = (payload) => {
