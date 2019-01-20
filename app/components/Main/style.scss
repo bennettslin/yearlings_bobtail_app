@@ -38,17 +38,6 @@ $js__height__lyricCollapsed: 32%;
     flex-direction: row-reverse;
 }
 
-.position__mainColumn {
-    position: absolute;
-    left: 0;
-    top: $js__height__menu;
-
-    .RW__twoRowMenu
-    & {
-        top: $js__height__twoRowMenu;
-    }
-}
-
 .height__mainColumn {
     /**
      * If carousel cannot mount, these heights get overridden by the dynamic

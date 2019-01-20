@@ -9,27 +9,40 @@ import ScorePopup from '../../Popups/Score'
 import WikiPopup from '../../Popups/Wiki'
 
 const mapStateToProps = ({
-    mountStore: { canScoreMount }
+    mountStore: { canScoreMount },
+    responsiveStore: { menuHeight }
 }) => ({
-    canScoreMount
+    canScoreMount,
+    menuHeight
 })
 
 class OverlayPopups extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canScoreMount: PropTypes.bool.isRequired
+        canScoreMount: PropTypes.bool.isRequired,
+        menuHeight: PropTypes.number.isRequired
     }
 
     render() {
-
-        const { canScoreMount } = this.props
+        const {
+            canScoreMount,
+            menuHeight
+        } = this.props
 
         return (
-            <div className={cx(
-                'OverlayPopups',
-                'abF'
-            )}>
+            <div
+                {...{
+                    className: cx(
+                        'OverlayPopups',
+                        'abF'
+                    ),
+                    style: {
+                        top: `${menuHeight}px`,
+                        height: `calc(100% - ${menuHeight}px)`
+                    }
+                }}
+            >
                 <AnnotationPopup />
                 <AboutPopup />
                 {canScoreMount && (

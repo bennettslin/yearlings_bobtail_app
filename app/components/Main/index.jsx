@@ -74,13 +74,17 @@ class Main extends PureComponent {
                 {...{
                     className: cx(
                         'Main',
-                        'position__mainColumn',
                         'height__mainColumn',
-                        'width__mainColumn'
-                    )
-                }}
-                {...mainDynamicHeight && {
-                    style: { height: mainDynamicHeight }
+                        'width__mainColumn',
+                        'abF'
+                    ),
+                    style: {
+                        top: `${menuHeight}px`,
+
+                        ...mainDynamicHeight && {
+                            height: mainDynamicHeight
+                        }
+                    }
                 }}
             >
                 <AnnotationPopup inMain />

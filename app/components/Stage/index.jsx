@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 const mapStateToProps = ({
+    responsiveStore: { menuHeight },
     viewportStore: {
         stageTop,
         stageLeft,
@@ -13,6 +14,7 @@ const mapStateToProps = ({
         stageHeight
     }
 }) => ({
+    menuHeight,
     stageTop,
     stageLeft,
     stageWidth,
@@ -23,6 +25,7 @@ class Stage extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        menuHeight: PropTypes.number.isRequired,
         stageTop: PropTypes.number.isRequired,
         stageLeft: PropTypes.number.isRequired,
         stageWidth: PropTypes.number.isRequired,
@@ -34,6 +37,7 @@ class Stage extends PureComponent {
     render() {
 
         const {
+            menuHeight,
             stageTop,
             stageLeft,
             stageWidth,
@@ -46,8 +50,11 @@ class Stage extends PureComponent {
                 {...{
                     className: cx(
                         'Stage',
-                        'position__mainColumn'
-                    )
+                        'abF'
+                    ),
+                    style: {
+                        top: `${menuHeight}px`
+                    }
                 }}
             >
                 <div
