@@ -7,6 +7,23 @@
         margin-right: $js__margin__thin;
     }
 
+    .RW__lyricHeighted
+    .LyricOverview
+    & {
+        /**
+         * These are eyeballed numbers. They ensure that the overview stays
+         * above the bottom in logues on mobile.
+         */
+        .DW__miniOrTabletWidth
+        & {
+            margin-bottom: 40px;
+        }
+        .DW__phoneWidth
+        & {
+            margin-bottom: 80px;
+        }
+    }
+
     .Main
     & {
         margin-left: $js__margin__thick;
