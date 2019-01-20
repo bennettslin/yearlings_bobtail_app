@@ -17,6 +17,7 @@ class SceneDispatcher extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
+        didSceneEnter: PropTypes.bool.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -28,7 +29,12 @@ class SceneDispatcher extends PureComponent {
     }
 
     dispatchScene = (direction) => {
-        if (this.props.isSelectedLogue) {
+        const {
+            isSelectedLogue,
+            didSceneEnter
+        } = this.props
+
+        if (isSelectedLogue || !didSceneEnter) {
             return false
         }
 
@@ -67,11 +73,13 @@ const mapStateToProps = ({
         isSelectedLogue,
         selectedSongIndex,
         selectedVerseIndex
-    }
+    },
+    sceneStore: { didSceneEnter }
 }) => ({
     isSelectedLogue,
     selectedSongIndex,
-    selectedVerseIndex
+    selectedVerseIndex,
+    didSceneEnter
 })
 
 export default connect(
