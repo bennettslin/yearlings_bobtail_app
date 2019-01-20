@@ -2,6 +2,8 @@
     flex-grow: 1;
     justify-content: space-between;
 
+    z-index: $zIndex__menuChild;
+
     // Give audio banner more room.
     max-width: 240px;
 }

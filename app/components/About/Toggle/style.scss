@@ -4,6 +4,8 @@
 }
 
 .AboutToggle {
+    z-index: $zIndex__menuChild;
+
     width: $height__overviewToggle;
     height: $width__overviewToggle;
 

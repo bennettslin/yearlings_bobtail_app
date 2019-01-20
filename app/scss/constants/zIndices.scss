@@ -51,7 +51,8 @@ $zIndex__popupOverlayContent: $zIndex__popupOverlay + 1;
 $zIndex__popupButton: $zIndex__popupOverlayContent + 1;
 
 // MenuTopRow should be higher than popup overlay.
-$zIndex__menuField: $zIndex__popupButton + 1;
+$zIndex__slider: $zIndex__popupButton + 1;
+$zIndex__menuChild: $zIndex__slider + 1;
 
 // The overlay preventing popup interaction should be the highest.
-$zIndex__touchOverlay: $zIndex__menuField + 1;
+$zIndex__touchOverlay: $zIndex__menuChild + 1;
