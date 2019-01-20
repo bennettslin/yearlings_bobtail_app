@@ -4485,5 +4485,10 @@ export default [
         taskName: `Window size shouldn't readjust if iOS viewport just changed height?`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Overview in logue refactor.`,
+        workedHours: 10,
+        neededHours: 10
     }
 ]
