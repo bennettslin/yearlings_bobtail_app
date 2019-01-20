@@ -76,7 +76,10 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 windowHeight,
                 windowWidth
             }),
-            isTwoRowMenu = getIsTwoRowMenu(deviceWidthIndex)
+            isTwoRowMenu = getIsTwoRowMenu({
+                deviceWidthIndex,
+                windowWidth
+            })
 
         this._updateViewportAndMountStores({
             deviceWidthIndex,

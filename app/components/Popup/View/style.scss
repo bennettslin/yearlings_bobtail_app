@@ -94,18 +94,14 @@
 
     // Establish max height for popups that are not full size.
     // overflow: scroll;
-    max-height: calc(
-        100vh
-        - #{$js__height__menu + $js__margin__thin * 2}
-    );
+    max-height:
+        calc( 100vh - #{$js__height__menu + $js__margin__thin * 2});
 
     .DW__phoneWidth
     & {
         // Make room for popup buttons, which are at the bottom in phone.
-        max-height: calc(
-            100vh
-            - #{$js__height__twoRowMenu + $js__length__icon * 1.25}
-        );
+        max-height:
+            calc(100vh - #{$js__height__twoRowMenu + $js__length__icon * 1.25});
     }
 }
 

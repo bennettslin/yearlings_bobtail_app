@@ -1,23 +1,43 @@
 import {
     LS_HEIGHT_MENU,
-    LS_HEIGHT_TWO_ROW_MENU
+    LS_HEIGHT_TWO_ROW_MENU,
+    LS_WIDTH_UNCANNY_VALLEY,
+    LS_WIDTH_GOLDEN_CORD,
+    TWO_ROW_MENU_WIDTH_BREAKPOINT
 } from '../../../../constants/responsive'
 
 import {
     getIsDesktopWidth,
-    getIsPhoneWidth
+    getIsMonitorWidth,
+    getIsLaptopWidth
 } from '../../../../helpers/responsive'
 
 export const getIsLyricExpandable = (deviceWidthIndex) => {
     return !getIsDesktopWidth(deviceWidthIndex)
 }
 
-export const getIsTwoRowMenu = (deviceWidthIndex) => {
-    return getIsPhoneWidth(deviceWidthIndex)
+export const getIsTwoRowMenu = ({
+    deviceWidthIndex,
+    windowWidth
+
+}) => {
+    let lyricColumnExtraWidth = 0
+
+    if (getIsMonitorWidth(deviceWidthIndex)) {
+        lyricColumnExtraWidth = LS_WIDTH_GOLDEN_CORD
+
+    } else if (getIsLaptopWidth(deviceWidthIndex)) {
+        lyricColumnExtraWidth = LS_WIDTH_UNCANNY_VALLEY
+    }
+
+    return windowWidth <
+        TWO_ROW_MENU_WIDTH_BREAKPOINT
+        + lyricColumnExtraWidth
 }
 
 export const getMenuHeight = ({
     isTwoRowMenu
+
 }) => {
     const menuHeight =
         isTwoRowMenu ?
