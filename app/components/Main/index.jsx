@@ -21,18 +21,22 @@ import OverviewPopup from '../Popups/Overview'
 import TipsPopup from '../Popups/Tips'
 import ShelfRight from './ShelfRight'
 
-import { getMainDynamicHeight } from './helper'
+import { getMainHeight } from './helper'
 
 const mapStateToProps = ({
     mountStore: {
         canCarouselMount,
         lyricDynamicHeight
     },
-    responsiveStore: { menuHeight },
+    responsiveStore: {
+        isHeightlessLyric,
+        menuHeight
+    },
     viewportStore: { isDesktopWidth }
 }) => ({
     canCarouselMount,
     lyricDynamicHeight,
+    isHeightlessLyric,
     menuHeight,
     isDesktopWidth
 })
@@ -43,6 +47,7 @@ class Main extends PureComponent {
         // Through Redux.
         canCarouselMount: PropTypes.bool.isRequired,
         lyricDynamicHeight: PropTypes.number.isRequired,
+        isHeightlessLyric: PropTypes.bool.isRequired,
         menuHeight: PropTypes.number.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired
     }
@@ -55,13 +60,15 @@ class Main extends PureComponent {
         const {
                 canCarouselMount,
                 lyricDynamicHeight,
+                isHeightlessLyric,
                 menuHeight,
                 isDesktopWidth
             } = this.props,
 
-            mainDynamicHeight = getMainDynamicHeight({
+            mainHeight = getMainHeight({
                 canCarouselMount,
                 lyricDynamicHeight,
+                isHeightlessLyric,
                 menuHeight,
                 isDesktopWidth
             })
@@ -74,16 +81,12 @@ class Main extends PureComponent {
                 {...{
                     className: cx(
                         'Main',
-                        'height__mainColumn',
                         'width__mainColumn',
                         'abF'
                     ),
                     style: {
                         top: `${menuHeight}px`,
-
-                        ...mainDynamicHeight && {
-                            height: mainDynamicHeight
-                        }
+                        height: mainHeight
                     }
                 }}
             >

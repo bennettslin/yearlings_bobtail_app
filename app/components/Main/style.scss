@@ -38,27 +38,6 @@ $js__height__lyricCollapsed: 32%;
     flex-direction: row-reverse;
 }
 
-.height__mainColumn {
-    /**
-     * If carousel cannot mount, these heights get overridden by the dynamic
-     * height calculated in JavaScript.
-     */
-
-    height: calc(
-        100%
-        - #{$js__height__menu}
-    );
-
-    .DW__miniOrTabletWidth
-    .RW__lyricHeighted
-    & {
-        height: calc(
-            #{100 - $js__height__lyricCollapsed}
-            - #{$js__height__menu}
-        );
-    }
-}
-
 .width__mainColumn {
     width: 100%;
 
