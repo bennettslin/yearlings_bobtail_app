@@ -1,69 +1,21 @@
 // Constants prefixed with js *must* be the same in JavaScript.
 $js__height__menu: 72px;
 
-// This works out to 52px;
-$js__height__top__twoRowMenu:
-    $js__length__icon
-    + $js__margin__thin * 2;
-
-// Arbitrary for now.
-$js__height__banner__twoRowMenu: 48px;
-
-// Phone always has two rows in menu. Includes menu, banner, and slider.
-$js__height__twoRowMenu:
-    $js__height__top__twoRowMenu
-    + $js__height__banner__twoRowMenu;
-
-$js__width__menu__desktopCentre: 720px;
-
-.Menu {
+.Menu__topField {
     height: $js__height__menu;
-
-    .DW__phoneWidth
-    & {
-        height: $js__height__top__twoRowMenu;
-    }
-}
-
-.Menu__field {
     padding: $js__margin__thin;
 }
 
-.Menu__mainTop {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+.Menu__main {
     .PlW__logue
     & {
         // This just needs to be below the popup overlay in logues.
         z-index: $zIndex__lyricColumn;
     }
 
-    // Margin between menu children.
-    & > :not(:last-child) {
-        margin-right: $js__margin__thick * 2;
-    }
-
     transition:
         margin $animationDuration__slow,
         max-width $animationDuration__slow;
-
-    // In desktop, when in logue, centre menu mainTop.
-    .DW__desktopWidth
-    .PlW__logue
-    &,
-
-    // In desktop, also centre menu mainTop in overlay.
-    .DW__desktopWidth
-    .ShW__overlayShown
-    & {
-        max-width: $js__width__menu__desktopCentre;
-    }
 
     /**
      * Dynamic margins are calculated by JavaScript when menu mainTop is
@@ -79,33 +31,34 @@ $js__width__menu__desktopCentre: 720px;
         max-width: auto;
     }
 
+        // In desktop, when in logue, centre menu main.
+        .DW__desktopWidth
+        .PlW__logue
+        &,
+
+        // In desktop, also centre menu main in overlay.
+        .DW__desktopWidth
+        .ShW__overlayShown
+        & {
+            $js__width__menu__overlay: 720px;
+            max-width: $js__width__menu__overlay;
+        }
+}
+
+.Menu__mainTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    // Margin between menu children.
+    & > :not(:last-child) {
+        margin-right: $js__margin__thick * 2;
+    }
+
     // When in two-row menu...
     .RW__twoRowMenu
     & {
-        // Wrap children.
-        flex-wrap: wrap;
         justify-content: space-evenly;
-    }
-}
-
-.Audio {
-    .RW__twoRowMenu
-    & {
-        // In two-row menu, Audio is second child.
-        order: 2;
-    }
-}
-
-.Banner {
-    .RW__twoRowMenu
-    & {
-        // In two-row menu, Banner is last child.
-        order: 3;
-        margin-right: 0;
-        margin-top: $js__margin__thick;
-        height:
-            $js__height__banner__twoRowMenu
-            - $js__margin__thick;
     }
 }
 

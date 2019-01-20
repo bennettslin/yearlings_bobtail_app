@@ -20,11 +20,17 @@ const mapStateToProps = ({
         windowWidth,
         isDesktopWidth
     },
-    mountStore: { canSliderMount }
+    mountStore: { canSliderMount },
+    responsiveStore: {
+        isTwoRowMenu,
+        menuHeight
+    }
 }) => ({
     windowWidth,
     isDesktopWidth,
-    canSliderMount
+    canSliderMount,
+    isTwoRowMenu,
+    menuHeight
 })
 
 class Menu extends PureComponent {
@@ -33,7 +39,9 @@ class Menu extends PureComponent {
         // Through Redux.
         windowWidth: PropTypes.number.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
-        canSliderMount: PropTypes.bool.isRequired
+        canSliderMount: PropTypes.bool.isRequired,
+        isTwoRowMenu: PropTypes.bool.isRequired,
+        menuHeight: PropTypes.number.isRequired
     }
 
     render() {
@@ -41,7 +49,9 @@ class Menu extends PureComponent {
             {
                 windowWidth,
                 isDesktopWidth,
-                canSliderMount
+                canSliderMount,
+                isTwoRowMenu,
+                menuHeight
             } = this.props,
 
             /**
@@ -55,33 +65,64 @@ class Menu extends PureComponent {
         // Prevent menu from rendering before windowWidth has been set.
         return windowWidth && (
             <div
-                className={cx(
-                    'Menu',
-                    'abF'
-                )}
+                {...{
+                    className: cx(
+                        'Menu',
+                        'abF'
+                    ),
+                    style: {
+                        height: `${menuHeight}px`
+                    }
+                }}
             >
                 <div
-                    className={cx(
-                        'Menu__mainTop',
-                        'Menu__field',
-                        'width__mainColumn',
-                        'abF'
-                    )}
-                    style={{
-                        marginLeft: menuMarginInOverlay,
-                        marginRight: menuMarginInOverlay
+                    {...{
+                        className: cx(
+                            'Menu__main',
+                            'width__mainColumn',
+                            'abF'
+                        ),
+                        style: {
+                            marginLeft: menuMarginInOverlay,
+                            marginRight: menuMarginInOverlay
+                        }
                     }}
                 >
-                    <AboutToggle />
-                    <Banner />
-                    <Audio />
+                    <div
+                        {...{
+                            className: cx(
+                                'Menu__mainTop',
+                                'Menu__topField',
+                                'abF'
+                            )
+                        }}
+                    >
+                        <AboutToggle />
+                        {!isTwoRowMenu && (
+                            <Banner />
+                        )}
+                        <Audio />
+                    </div>
+
+                    {isTwoRowMenu && (
+                        <div
+                            {...{
+                                className: cx(
+                                    'Menu__mainBottom',
+                                    'abF'
+                                )
+                            }}
+                        >
+                            <Banner />
+                        </div>
+                    )}
                 </div>
 
                 {canSliderMount && (
                     <div
                         className={cx(
                             'Menu__lyricTop',
-                            'Menu__field',
+                            'Menu__topField',
                             'width__lyricColumn__desktop',
                             'abF'
                         )}

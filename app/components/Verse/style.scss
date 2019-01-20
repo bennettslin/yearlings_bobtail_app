@@ -10,8 +10,7 @@
     border-left: $border;
     border-right: $border;
 
-    // transition:
-    //     color $animationDuration__fast;
+    line-height: 150%;
 
     &:first-child {
         border-top: $border;
@@ -59,11 +58,6 @@
 .Verse__interactable {
     position: relative;
 }
-
-// .Verse__title {
-//     $paddingX__title: 15px;
-//     padding: 0 $paddingX__title;
-// }
 
 .Verse__noIndexColour {
     /**

@@ -90,7 +90,7 @@ const propTypes = {
                             'PopupViewContent__widePadding': hasWidePadding
                         },
 
-                        !isFullSize && 'PopupViewContent__notFullSize',
+                        // !isFullSize && 'PopupViewContent__notFullSize',
                         'boxShadow__popupView'
                     )}
                     {...{

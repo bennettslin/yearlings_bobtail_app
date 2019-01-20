@@ -4,34 +4,22 @@
     height: 100%;
     flex-grow: 10;
 
-    line-height: 1em;
-
-    border-radius: $borderRadius__narrow;
-
-    z-index: $zIndex__menuChild;
-
     overflow: hidden;
 
+    border-radius: $borderRadius__narrow;
+    z-index: $zIndex__menuChild;
+
+    line-height: 1em;
     color: #ffe;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
-
     background-color: #8b8;
 
-    .RW__twoRowMenu
-    & {
-        min-width: 200px;
-    }
-}
-
-.Banner__belowMenu {
-    top: $js__height__menu;
-    width: calc(100% - #{$js__margin__thin * 2});
-    margin: 0 $js__margin__thin $js__margin__thin;
-
-    .DW__phoneWidth
-    & {
-        top: $js__height__top__twoRowMenu;
-    }
+    // .RW__twoRowMenu
+    // & {
+    //     position: absolute;
+    //     width: 100%;
+    //     bottom: 0;
+    // }
 }
 
 .BannerDisplay {

@@ -1,13 +1,14 @@
 @import "./TempGlobalAnnotations/style";
 
 .LyricScroll {
+    top: auto;
+    bottom: 0;
+
     width: 100%;
     overflow-y: scroll;
 
     // Make scrolling smooth in iOS.
     -webkit-overflow-scrolling: touch;
-
-    line-height: 150%;
 
     &:focus {
         outline: none;
@@ -15,7 +16,7 @@
 
     .DW__canSliderMount
     & {
-        margin-top: $js__height__menu;
+        height: calc(100% - #{$js__height__menu});
     }
 }
 
