@@ -46,7 +46,13 @@ const webpack = require('webpack'),
             ] : [
                 new webpack.optimize.DedupePlugin(),
                 new webpack.optimize.OccurrenceOrderPlugin(),
-                new webpack.optimize.UglifyJsPlugin()
+                new webpack.optimize.UglifyJsPlugin({
+                    uglifyOptions: {
+                        output: {
+                            comments: false
+                        }
+                    }
+                })
             ],
 
             resolve: {
