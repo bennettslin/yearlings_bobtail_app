@@ -47,7 +47,7 @@ export const getCanCarouselMount = ({
         windowHeight >= UNRENDERABLE_NAV_MIN
 }
 
-export const getLyricHeightRatio = ({
+export const getLyricDynamicHeight = ({
     canCarouselMount,
     deviceWidthIndex,
     windowHeight,

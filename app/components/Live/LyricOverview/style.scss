@@ -3,16 +3,6 @@
     width: 100%;
 
     transition: height $animationDuration__default;
-
-    .ShW__lyricExpanded
-    & {
-        height: calc(100% - #{$js__height__menu});
-
-        .RW__twoRowMenu
-        & {
-            height: calc(100% - #{$js__height__twoRowMenu});
-        }
-    }
 }
 
 .width__lyricColumn__desktop {

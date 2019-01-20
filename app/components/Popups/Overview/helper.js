@@ -2,14 +2,11 @@ import { SHOWN } from 'constants/options'
 
 export const getIsOverviewVisibleBySection = ({
     inMain,
-    isLyricLogue,
-    isHeightlessLyric
+    isLyricLogue
 
 }) => {
-    // If in song or heightless logue, show in main. Otherwise, show in lyric.
-    const showInMain = !isLyricLogue || (isLyricLogue && isHeightlessLyric)
-
-    return inMain === showInMain
+    // If in song, show in main. Otherwise, show in lyric.
+    return inMain !== isLyricLogue
 }
 
 export const getIsOverviewVisibleBySong = ({

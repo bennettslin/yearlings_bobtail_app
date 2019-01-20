@@ -10,7 +10,7 @@ const _getLyricSectionRect = ({
     windowHeight,
     isHigherProcessor,
     isLyricExpanded,
-    lyricHeightRatio,
+    lyricDynamicHeight,
     isTwoRowMenu
 }) => {
     const bottom = windowHeight
@@ -28,7 +28,7 @@ const _getLyricSectionRect = ({
          * If lyric is collapsed, top is always a fixed percentage of the
          * window height.
          */
-        top = windowHeight * (1 - lyricHeightRatio)
+        top = windowHeight * (1 - lyricDynamicHeight)
 
     } else if (isTwoRowMenu) {
         top = LS_HEIGHT_TWO_ROW_MENU
@@ -49,7 +49,7 @@ export const getVerseBarStatus = ({
     windowHeight,
     isHigherProcessor,
     isLyricExpanded,
-    lyricHeightRatio,
+    lyricDynamicHeight,
     isHeightlessLyric,
     isTwoRowMenu,
     verseElement
@@ -72,7 +72,7 @@ export const getVerseBarStatus = ({
             windowHeight,
             isHigherProcessor,
             isLyricExpanded,
-            lyricHeightRatio,
+            lyricDynamicHeight,
             isTwoRowMenu
         }),
 

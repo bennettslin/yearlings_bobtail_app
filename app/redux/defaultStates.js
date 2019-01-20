@@ -149,7 +149,7 @@ export const MOUNT_DEFAULTS = {
     canCarouselMount: false,
     canScoreMount: false,
     canSliderMount: false,
-    lyricHeightRatio: 0
+    lyricDynamicHeight: 0
 }
 
 export const OPTION_DEFAULTS = {

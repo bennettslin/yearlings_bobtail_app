@@ -13,7 +13,6 @@ import {
 } from './helper'
 
 const mapStateToProps = ({
-    responsiveStore: { isHeightlessLyric },
     lyricStore: { canLyricCarouselEnter },
     transientStore: { isOverlayShown },
     optionStore: {
@@ -23,7 +22,6 @@ const mapStateToProps = ({
     },
     lyricStore: { isLyricLogue }
 }) => ({
-    isHeightlessLyric,
     canLyricCarouselEnter,
     isOverlayShown,
     isLogueOverviewShown,
@@ -41,7 +39,6 @@ class OverviewPopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         isLyricLogue: PropTypes.bool.isRequired,
-        isHeightlessLyric: PropTypes.bool.isRequired,
         isOverlayShown: PropTypes.bool.isRequired,
         isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
@@ -57,7 +54,6 @@ class OverviewPopup extends PureComponent {
             {
                 inMain,
                 isLyricLogue,
-                isHeightlessLyric,
                 isOverlayShown,
                 isLogueOverviewShown,
                 selectedOverviewOption,
@@ -67,8 +63,7 @@ class OverviewPopup extends PureComponent {
 
             isVisibleBySection = getIsOverviewVisibleBySection({
                 inMain,
-                isLyricLogue,
-                isHeightlessLyric
+                isLyricLogue
             }),
 
             isVisibleBySong = getIsOverviewVisibleBySong({

@@ -26,13 +26,13 @@ import { getMainDynamicHeight } from './helper'
 const mapStateToProps = ({
     mountStore: {
         canCarouselMount,
-        lyricHeightRatio
+        lyricDynamicHeight
     },
     responsiveStore: { isTwoRowMenu },
     viewportStore: { isDesktopWidth }
 }) => ({
     canCarouselMount,
-    lyricHeightRatio,
+    lyricDynamicHeight,
     isTwoRowMenu,
     isDesktopWidth
 })
@@ -42,7 +42,7 @@ class Main extends PureComponent {
     static propTypes = {
         // Through Redux.
         canCarouselMount: PropTypes.bool.isRequired,
-        lyricHeightRatio: PropTypes.number.isRequired,
+        lyricDynamicHeight: PropTypes.number.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired
     }
@@ -54,14 +54,14 @@ class Main extends PureComponent {
     render() {
         const {
                 canCarouselMount,
-                lyricHeightRatio,
+                lyricDynamicHeight,
                 isTwoRowMenu,
                 isDesktopWidth
             } = this.props,
 
             mainDynamicHeight = getMainDynamicHeight({
                 canCarouselMount,
-                lyricHeightRatio,
+                lyricDynamicHeight,
                 isTwoRowMenu,
                 isDesktopWidth
             })

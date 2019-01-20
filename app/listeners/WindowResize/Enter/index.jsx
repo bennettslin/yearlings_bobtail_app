@@ -16,7 +16,7 @@ import {
     getCanCarouselMount,
     getCanScoreMount,
     getCanSliderMount,
-    getLyricHeightRatio
+    getLyricDynamicHeight
 } from './helpers/mount'
 import {
     getShowShrunkNavIcon,
@@ -151,7 +151,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 isHigherProcessor
             }),
-            lyricHeightRatio: getLyricHeightRatio({
+            lyricDynamicHeight: getLyricDynamicHeight({
                 canCarouselMount,
                 deviceWidthIndex,
                 windowHeight,

@@ -5,7 +5,7 @@ import {
 
 export const getMainDynamicHeight = ({
     canCarouselMount,
-    lyricHeightRatio,
+    lyricDynamicHeight,
     isTwoRowMenu,
     isDesktopWidth
 
@@ -19,5 +19,5 @@ export const getMainDynamicHeight = ({
             LS_HEIGHT_TWO_ROW_MENU :
             LS_HEIGHT_MENU
 
-    return `calc(${100 * (1 - lyricHeightRatio)}% - ${menuHeight}px)`
+    return `calc(${100 * (1 - lyricDynamicHeight)}% - ${menuHeight}px)`
 }
