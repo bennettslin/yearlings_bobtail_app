@@ -51,16 +51,14 @@ class ResponsiveWrapper extends PureComponent {
                         isCarouselNavShowable ?
                             'RW__carouselNavShowable' : 'RW__carouselNavUnshowable',
 
-                        isTwoRowMenu ?
-                            'RW__twoRowMenu' :
-                            'RW__oneRowMenu',
+                        isTwoRowMenu &&
+                            'RW__twoRowMenu',
 
                         singleShownEarColumnKey ?
                             `RW__${singleShownEarColumnKey}EarColumnOnly` :
                             'RW__bothEarColumnsShown',
 
-                        isHeightlessLyric ?
-                            'RW__lyricHeightless' :
+                        !isHeightlessLyric &&
                             'RW__lyricHeighted',
 
                         isLyricExpandable &&

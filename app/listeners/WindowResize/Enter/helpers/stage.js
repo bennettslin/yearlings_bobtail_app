@@ -77,6 +77,7 @@ export const getStageCoordinates = ({
     windowWidth,
     windowHeight,
     isHeightlessLyric,
+    isTwoRowMenu,
     canCarouselMount
 }) => {
 
@@ -95,7 +96,8 @@ export const getStageCoordinates = ({
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,
             windowHeight,
-            isHeightlessLyric
+            isHeightlessLyric,
+            isTwoRowMenu
         }) - navHeight,
 
         centreFieldRatio = centreFieldWidth / centreFieldHeight

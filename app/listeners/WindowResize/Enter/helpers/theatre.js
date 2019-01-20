@@ -30,19 +30,20 @@ export const getIsTwoRowMenu = (deviceWidthIndex) => {
 export const getCentreFieldHeight = ({
     deviceWidthIndex,
     windowHeight,
-    isHeightlessLyric
+    isHeightlessLyric,
+    isTwoRowMenu
 }) => {
-    const lyricColumnHeight = _getLyricColumnHeight(
-        deviceWidthIndex,
-        isHeightlessLyric,
-        windowHeight
-    )
+    const
+        lyricColumnHeight = _getLyricColumnHeight(
+            deviceWidthIndex,
+            isHeightlessLyric,
+            windowHeight
+        ),
 
-    let menuHeight = LS_HEIGHT_MENU
-
-    if (getIsTwoRowMenu(deviceWidthIndex)) {
-        menuHeight = LS_HEIGHT_TWO_ROW_MENU
-    }
+        menuHeight =
+            isTwoRowMenu ?
+                LS_HEIGHT_TWO_ROW_MENU :
+                LS_HEIGHT_MENU
 
     return windowHeight - menuHeight - lyricColumnHeight
 }
@@ -52,7 +53,8 @@ export const getCeilingFloorHeight = ({
     windowHeight,
     stageHeight,
     stageTop,
-    isHeightlessLyric
+    isHeightlessLyric,
+    isTwoRowMenu
 }) => {
 
     const
@@ -65,7 +67,8 @@ export const getCeilingFloorHeight = ({
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,
             windowHeight,
-            isHeightlessLyric
+            isHeightlessLyric,
+            isTwoRowMenu
         }),
 
         ceilingHeight =

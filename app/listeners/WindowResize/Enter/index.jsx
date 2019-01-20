@@ -74,19 +74,22 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowHeight,
                 windowWidth
-            })
+            }),
+            isTwoRowMenu = getIsTwoRowMenu(deviceWidthIndex)
 
         this._updateViewportAndMountStores({
             deviceWidthIndex,
             windowHeight,
             windowWidth,
-            isHeightlessLyric
+            isHeightlessLyric,
+            isTwoRowMenu
         })
 
         this._updateResponsiveStore({
             deviceWidthIndex,
             windowWidth,
-            isHeightlessLyric
+            isHeightlessLyric,
+            isTwoRowMenu
         })
     }
 
@@ -94,7 +97,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
         deviceWidthIndex,
         windowHeight,
         windowWidth,
-        isHeightlessLyric
+        isHeightlessLyric,
+        isTwoRowMenu
     }) {
         const { isHigherProcessor } = this.props,
             canCarouselMount = getCanCarouselMount({
@@ -114,6 +118,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 windowWidth,
                 windowHeight,
                 isHeightlessLyric,
+                isTwoRowMenu,
                 canCarouselMount
             }),
             {
@@ -125,7 +130,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 windowHeight,
                 stageHeight,
                 stageTop,
-                isHeightlessLyric
+                isHeightlessLyric,
+                isTwoRowMenu
             })
 
         this.props.updateViewportStore({
@@ -164,15 +170,16 @@ class WindowResizeEnterDispatcher extends PureComponent {
     _updateResponsiveStore({
         deviceWidthIndex,
         windowWidth,
-        isHeightlessLyric
+        isHeightlessLyric,
+        isTwoRowMenu
     }) {
         this.props.updateResponsiveStore({
             isHeightlessLyric,
+            isTwoRowMenu,
             isMobileWiki: getIsMobileWiki({
                 deviceWidthIndex,
                 windowWidth
             }),
-            isTwoRowMenu: getIsTwoRowMenu(deviceWidthIndex),
             showShrunkNavIcon: getShowShrunkNavIcon({
                 deviceWidthIndex,
                 windowWidth
