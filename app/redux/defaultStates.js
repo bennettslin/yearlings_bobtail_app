@@ -275,6 +275,7 @@ export const TOGGLE_DEFAULTS = {
 }
 
 export const TRANSIENT_DEFAULTS = {
+    isShelfLeftShown: false,
     isCarouselNavShowable: false,
     isOverlayingAnnotation: false,
     isOverlayShown: false,

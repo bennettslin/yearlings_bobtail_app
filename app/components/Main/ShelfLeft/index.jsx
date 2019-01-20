@@ -11,19 +11,27 @@ import DotsSlideToggle from '../DotsSlideToggle'
 import OverviewToggle from '../OverviewToggle'
 
 const mapStateToProps = ({
-    viewportStore: { isDesktopWidth }
+    viewportStore: { isDesktopWidth },
+    transientStore: { isShelfLeftShown }
 }) => ({
-    isDesktopWidth
+    isDesktopWidth,
+    isShelfLeftShown
 })
 
 const propTypes = {
     // Through Redux.
-    isDesktopWidth: PropTypes.bool.isRequired
+    isDesktopWidth: PropTypes.bool.isRequired,
+    isShelfLeftShown: PropTypes.bool.isRequired
 }
 
-const ShelfLeft = memo(({ isDesktopWidth }) => (
+const ShelfLeft = ({
+    isDesktopWidth,
+    isShelfLeftShown
+
+}) => (
     <div className={cx(
         'ShelfLeft',
+        isShelfLeftShown && 'ShelfLeft__shown',
         'flex__mainSideButtons'
     )}>
         <OverviewToggle />
@@ -35,8 +43,8 @@ const ShelfLeft = memo(({ isDesktopWidth }) => (
             </___>
         )}
     </div>
-))
+)
 
 ShelfLeft.propTypes = propTypes
 
-export default connect(mapStateToProps)(ShelfLeft)
+export default connect(mapStateToProps)(memo(ShelfLeft))

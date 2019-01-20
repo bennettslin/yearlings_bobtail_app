@@ -192,9 +192,7 @@ class CloseHandler extends PureComponent {
             this.closeOverlayPopups()
             this.closeMainSections({
                 exemptInteractivatedVerse: true,
-                exemptLyric: true,
-                exemptOverview: true,
-                exemptTips: true
+                exemptLyric: true
             })
         }
     }

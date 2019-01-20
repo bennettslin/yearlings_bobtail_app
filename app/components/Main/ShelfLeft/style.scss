@@ -1,50 +1,40 @@
 .ShelfLeft {
-
     transition:
         opacity $animationDuration__default,
         margin-left $animationDuration__default;
 
     padding-left: $js__margin__thin;
 
-    // Hidden to left in these scenarios.
-    .PlW__logue
-    &,
-    .ShW__dotsShown
-    &,
-    .ShW__tipsShown
-    &,
-    .ShW__overlayShown
-    &,
-    .ShW__annotationShown
-    &,
-    .ShW__lyricExpanded
-    &,
-    .TrW__cannotLyricCarouselEnter
-    &,
-    .DW__phoneWidth
-    .ShW__overviewShown
-    & {
-        opacity: 0;
+    opacity: 0;
 
-        // This value only needs to be accurate for phone.
-        margin-left: -$js__length__icon - $js__margin__thin;
-    }
+    // This value only needs to be accurate for phone.
+    margin-left: -$js__length__icon - $js__margin__thin;
 }
 
-.hidden__overviewShown {
-    /**
-     * When overview is shown, hide all left shelf children except the overview * toggle itself.
-     */
+.ShelfLeft__shown {
+    opacity: 1;
+    margin-left: 0;
+}
+
+.hidden__overviewStatus {
+
     .ShelfLeft
     & {
         transition: margin-left $animationDuration__default;
 
+        /**
+         * When overview is shown in song or hidden in logue, the overview
+         * toggle should be the only left shelf child shown. So hide the rest.
+         */
+        .PlW__song
         .ShW__overviewShown
+        &,
+        .PlW__logue
+        .ShW__overviewHidden
         & {
             margin-left: -$width__overviewToggle;
         }
     }
-
 }
 
 .flex__mainSideButtons {

@@ -53,6 +53,7 @@ import {
 
 const rootReducer = combineReducers({
     [OPTION_STORE]: OptionReducer,
+    [TRANSIENT_STORE]: TransientReducer,
     [ADMIN_STORE]: AdminReducer,
     [APP_STORE]: AppReducer,
     [MOUNT_STORE]: MountReducer,
@@ -70,7 +71,6 @@ const rootReducer = combineReducers({
     [RESPONSIVE_STORE]: ResponsiveReducer,
 
     [TOGGLE_STORE]: ToggleReducer,
-    [TRANSIENT_STORE]: TransientReducer,
     [DOTS_STORE]: DotsReducer,
     [DOTS_SLIDE_STORE]: DotsSlideReducer,
     [SLIDER_STORE]: SliderReducer,

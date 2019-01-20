@@ -6,8 +6,10 @@ import { connect } from 'react-redux'
 import { updateTransientStore } from 'flux/transient/action'
 
 import {
+    getIsShelfLeftShown,
     getIsOverlayingAnnotation,
-    getIsOverlayShown
+    getIsOverlayShown,
+    getToggleShowsImmediately
 } from './helper'
 
 import { SHOWN } from 'constants/options'
@@ -16,14 +18,16 @@ class MainListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        deviceWidthIndex: PropTypes.number.isRequired,
+        isPhoneWidth: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isAboutShown: PropTypes.bool.isRequired,
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
+        isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
@@ -36,27 +40,28 @@ class MainListener extends PureComponent {
 
     _determineOverlayAndCarouselNav() {
         const {
-            deviceWidthIndex,
-            isDotsSlideShown,
-            isLyricExpanded,
-            lyricAnnotationIndex,
-            isLyricLogue,
-            isScoreShown,
-            isAboutShown,
-            selectedOverviewOption,
-            selectedTipsOption,
-            selectedWikiIndex,
-            interactivatedVerseIndex
-        } = this.props
+                isPhoneWidth,
+                isDotsSlideShown,
+                isLyricExpanded,
+                lyricAnnotationIndex,
+                isLyricLogue,
+                isLogueOverviewShown,
+                isScoreShown,
+                isAboutShown,
+                canLyricCarouselEnter,
+                selectedOverviewOption,
+                selectedTipsOption,
+                selectedWikiIndex,
+                interactivatedVerseIndex
+            } = this.props,
 
-        const isOverlayingAnnotation = getIsOverlayingAnnotation({
-                deviceWidthIndex,
+            isOverlayingAnnotation = getIsOverlayingAnnotation({
+                isPhoneWidth,
                 isLyricExpanded
             }),
 
             isOverlayShown = getIsOverlayShown({
-                deviceWidthIndex,
-                isLyricExpanded,
+                isOverlayingAnnotation,
                 lyricAnnotationIndex,
                 isScoreShown,
                 isAboutShown,
@@ -74,22 +79,36 @@ class MainListener extends PureComponent {
                 !isLyricExpanded &&
                 interactivatedVerseIndex < 0,
 
-            initialToggleConditions =
-                Boolean(lyricAnnotationIndex) ||
-                isDotsSlideShown ||
-                isOverlayShown ||
-                isLyricExpanded ||
-                interactivatedVerseIndex > -1,
+            isShelfLeftShown = getIsShelfLeftShown({
+                isPhoneWidth,
+                isDotsSlideShown,
+                isLyricExpanded,
+                interactivatedVerseIndex,
+                isOverlayShown,
+                canLyricCarouselEnter,
+                lyricAnnotationIndex,
+                isLyricLogue,
+                isLogueOverviewShown,
+                overviewShown,
+                tipsShown
+            }),
 
-            // Toggle overview immediately under these conditions.
-            toggleShowsOverviewImmediately =
-                tipsShown || initialToggleConditions,
+            {
+                toggleShowsOverviewImmediately,
+                toggleShowsTipsImmediately
 
-            // Toggle tips immediately under these conditions.
-            toggleShowsTipsImmediately =
-                (!tipsShown && overviewShown) || initialToggleConditions
+            } = getToggleShowsImmediately({
+                lyricAnnotationIndex,
+                isDotsSlideShown,
+                isOverlayShown,
+                isLyricExpanded,
+                interactivatedVerseIndex,
+                overviewShown,
+                tipsShown
+            })
 
         this.props.updateTransientStore({
+            isShelfLeftShown,
             isOverlayingAnnotation,
             isOverlayShown,
             isCarouselNavShowable,
@@ -104,7 +123,7 @@ class MainListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    viewportStore: { deviceWidthIndex },
+    viewportStore: { isPhoneWidth },
     toggleStore: {
         isDotsSlideShown,
         isLyricExpanded,
@@ -112,6 +131,7 @@ const mapStateToProps = ({
         isAboutShown
     },
     lyricStore: {
+        canLyricCarouselEnter,
         lyricAnnotationIndex,
         isLyricLogue
     },
@@ -120,18 +140,21 @@ const mapStateToProps = ({
         selectedWikiIndex
     },
     optionStore: {
+        isLogueOverviewShown,
         selectedOverviewOption,
         selectedTipsOption
     }
 }) => ({
-    deviceWidthIndex,
+    isPhoneWidth,
     isDotsSlideShown,
     isLyricExpanded,
     isScoreShown,
     isAboutShown,
+    canLyricCarouselEnter,
     lyricAnnotationIndex,
     isLyricLogue,
     interactivatedVerseIndex,
+    isLogueOverviewShown,
     selectedOverviewOption,
     selectedTipsOption,
     selectedWikiIndex

@@ -9,7 +9,9 @@ class ShownWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isLyricLogue: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
+        isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
@@ -24,7 +26,9 @@ class ShownWrapper extends PureComponent {
 
     render() {
         const {
+                isLyricLogue,
                 lyricAnnotationIndex,
+                isLogueOverviewShown,
                 selectedOverviewOption,
                 selectedTipsOption,
                 isCarouselShown,
@@ -35,7 +39,10 @@ class ShownWrapper extends PureComponent {
                 children
             } = this.props,
 
-            overviewShown = selectedOverviewOption === SHOWN,
+            overviewShown =
+                isLyricLogue ?
+                    isLogueOverviewShown :
+                    selectedOverviewOption === SHOWN,
             tipsShown = selectedTipsOption === SHOWN
 
         return (
@@ -48,8 +55,9 @@ class ShownWrapper extends PureComponent {
                             'ShW__annotationShown' :
                             'ShW__annotationHidden',
 
-                        overviewShown &&
-                            'ShW__overviewShown',
+                        overviewShown ?
+                            'ShW__overviewShown' :
+                            'ShW__overviewHidden',
                         tipsShown &&
                             'ShW__tipsShown',
 
@@ -78,8 +86,12 @@ class ShownWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    lyricStore: { lyricAnnotationIndex },
+    lyricStore: {
+        isLyricLogue,
+        lyricAnnotationIndex
+    },
     optionStore: {
+        isLogueOverviewShown,
         selectedOverviewOption,
         selectedTipsOption
     },
@@ -91,7 +103,9 @@ const mapStateToProps = ({
     },
     transientStore: { isOverlayShown }
 }) => ({
+    isLyricLogue,
     lyricAnnotationIndex,
+    isLogueOverviewShown,
     selectedOverviewOption,
     selectedTipsOption,
     isCarouselShown,
