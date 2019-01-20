@@ -25,10 +25,12 @@ class SceneDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({ dispatchScene: this.dispatchScene })
+        this.props.getRefs({
+            dispatchSceneDirection: this.dispatchSceneDirection
+        })
     }
 
-    dispatchScene = (direction) => {
+    dispatchSceneDirection = (direction) => {
         const {
             isSelectedLogue,
             didSceneEnter

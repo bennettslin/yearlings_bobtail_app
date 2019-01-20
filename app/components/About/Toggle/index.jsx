@@ -13,7 +13,7 @@ import { ABOUT_BUTTON_KEY } from 'constants/buttons'
 
 class AboutToggle extends PureComponent {
 
-    handleButtonClick = () => {
+    _handleButtonClick = () => {
         this.dispatchAbout()
     }
 
@@ -30,7 +30,7 @@ class AboutToggle extends PureComponent {
                     isCustomSize
                     buttonName={ABOUT_BUTTON_KEY}
                     accessKey={ABOUT_TOGGLE_KEY}
-                    handleButtonClick={this.handleButtonClick}
+                    handleButtonClick={this._handleButtonClick}
                 />
                 <AboutDispatcher {...{ getRefs: this._getRefs }} />
             </div>

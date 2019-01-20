@@ -129,10 +129,10 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchOverview()
                 break
             case SCENE_REWIND_KEY:
-                keyWasRegistered = this.dispatchScene(-1)
+                keyWasRegistered = this.dispatchSceneDirection(-1)
                 break
             case SCENE_FORWARD_KEY:
-                keyWasRegistered = this.dispatchScene(1)
+                keyWasRegistered = this.dispatchSceneDirection(1)
                 break
             case SCORE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchScore()
