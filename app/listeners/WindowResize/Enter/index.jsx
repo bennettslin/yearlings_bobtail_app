@@ -22,11 +22,12 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from './helpers/nav'
-import { getIsLyricExpandable } from './helpers/responsive'
 import {
+    getIsLyricExpandable,
     getIsTwoRowMenu,
-    getCeilingFloorHeight
-} from './helpers/theatre'
+    getMenuHeight
+} from './helpers/responsive'
+import { getCeilingFloorHeight } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
 import { getStageCoordinates } from './helpers/stage'
 
@@ -176,6 +177,9 @@ class WindowResizeEnterDispatcher extends PureComponent {
         this.props.updateResponsiveStore({
             isHeightlessLyric,
             isTwoRowMenu,
+            menuHeight: getMenuHeight({
+                isTwoRowMenu
+            }),
             isMobileWiki: getIsMobileWiki({
                 deviceWidthIndex,
                 windowWidth

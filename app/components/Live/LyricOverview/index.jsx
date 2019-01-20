@@ -11,14 +11,14 @@ import { getLyricOverviewHeight } from './helper'
 const mapStateToProps = ({
     responsiveStore: {
         isHeightlessLyric,
-        isTwoRowMenu
+        menuHeight
     },
     toggleStore: { isLyricExpanded },
     mountStore: { lyricDynamicHeight },
     lyricStore: { isLyricLogue }
 }) => ({
     isHeightlessLyric,
-    isTwoRowMenu,
+    menuHeight,
     lyricDynamicHeight,
     isLyricExpanded,
     isLyricLogue
@@ -29,7 +29,7 @@ const LyricOverview = ({
     lyricDynamicHeight,
     isLyricLogue,
     isHeightlessLyric,
-    isTwoRowMenu,
+    menuHeight,
     setLyricFocusElement
 
 }) => {
@@ -38,7 +38,7 @@ const LyricOverview = ({
         lyricDynamicHeight,
         isLyricLogue,
         isHeightlessLyric,
-        isTwoRowMenu
+        menuHeight
     })
 
     return (
@@ -66,7 +66,7 @@ const propTypes = {
     // Through Redux.
     lyricDynamicHeight: PropTypes.number.isRequired,
     isHeightlessLyric: PropTypes.bool.isRequired,
-    isTwoRowMenu: PropTypes.bool.isRequired,
+    menuHeight: PropTypes.number.isRequired,
     isLyricExpanded: PropTypes.bool.isRequired,
     isLyricLogue: PropTypes.bool.isRequired,
 

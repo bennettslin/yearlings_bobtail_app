@@ -1,41 +1,29 @@
-import { getIsDesktopWidth } from 'helpers/responsive'
-
-import {
-    LS_HEIGHT_MENU,
-    LS_HEIGHT_TWO_ROW_MENU
-} from 'constants/responsive'
-
 const _getLyricSectionRect = ({
-    deviceWidthIndex,
+    isLyricExpandable,
+    canSliderMount,
     windowHeight,
-    isHigherProcessor,
     isLyricExpanded,
     lyricDynamicHeight,
-    isTwoRowMenu
+    menuHeight
 }) => {
     const bottom = windowHeight
-    let top
+    let top = menuHeight
 
-    if (getIsDesktopWidth(deviceWidthIndex)) {
+    if (!isLyricExpandable && !canSliderMount) {
         /**
-         * If desktop, accommodate the menu height if it's a desktop processor.
-         * Otherwise, lyric section rect is simply the entire window height.
+         * If lyric is not expandable and there is no slider, then the lyric
+         * section is just the entire window height. Otherwise, the top is the
+         * menu height to accommodate the slider.
          */
-        top = isHigherProcessor ? LS_HEIGHT_MENU : 0
+        top = 0
 
-    } else if (!isLyricExpanded) {
+    } else if (isLyricExpandable && !isLyricExpanded) {
         /**
-         * If lyric is collapsed, top is always a fixed percentage of the
-         * window height.
+         * If lyric is expandable and it's collapsed, then use the stored
+         * dynamic height. Otherwise, it's expanded and so the top is the menu
+         * height.
          */
         top = windowHeight * (1 - lyricDynamicHeight)
-
-    } else if (isTwoRowMenu) {
-        top = LS_HEIGHT_TWO_ROW_MENU
-
-    } else {
-        // Lyric is expanded in tablet or mini.
-        top = LS_HEIGHT_MENU
     }
 
     return {
@@ -45,13 +33,13 @@ const _getLyricSectionRect = ({
 }
 
 export const getVerseBarStatus = ({
-    deviceWidthIndex,
+    isLyricExpandable,
+    canSliderMount,
     windowHeight,
-    isHigherProcessor,
     isLyricExpanded,
     lyricDynamicHeight,
     isHeightlessLyric,
-    isTwoRowMenu,
+    menuHeight,
     verseElement
 }) => {
 
@@ -68,12 +56,12 @@ export const getVerseBarStatus = ({
     }
 
     const lyricSectionRect = _getLyricSectionRect({
-            deviceWidthIndex,
+            isLyricExpandable,
+            canSliderMount,
             windowHeight,
-            isHigherProcessor,
             isLyricExpanded,
             lyricDynamicHeight,
-            isTwoRowMenu
+            menuHeight
         }),
 
         selectedVerseRect = verseElement.getBoundingClientRect(),

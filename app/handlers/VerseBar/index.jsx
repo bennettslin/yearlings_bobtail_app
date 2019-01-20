@@ -15,13 +15,13 @@ class VerseBar extends PureComponent {
         // Through Redux.
         queuedDetermineVerseBars: PropTypes.bool.isRequired,
         queuedVerseBarsTimeout: PropTypes.number.isRequired,
-        deviceWidthIndex: PropTypes.number.isRequired,
+        isLyricExpandable: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
-        isHigherProcessor: PropTypes.bool.isRequired,
+        canSliderMount: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         lyricDynamicHeight: PropTypes.number.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
-        isTwoRowMenu: PropTypes.bool.isRequired,
+        menuHeight: PropTypes.number.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
@@ -103,13 +103,13 @@ class VerseBar extends PureComponent {
     } = {}) => {
 
         const {
-                deviceWidthIndex,
+                isLyricExpandable,
+                canSliderMount,
                 windowHeight,
-                isHigherProcessor,
                 isLyricExpanded,
                 lyricDynamicHeight,
                 isHeightlessLyric,
-                isTwoRowMenu
+                menuHeight
             } = this.props,
             verseElement = this.props.getVerseElement(verseIndex)
 
@@ -117,13 +117,13 @@ class VerseBar extends PureComponent {
         if (verseElement) {
 
             const verseBarStatusObject = getVerseBarStatus({
-                    deviceWidthIndex,
+                    isLyricExpandable,
+                    canSliderMount,
                     windowHeight,
-                    isHigherProcessor,
                     isLyricExpanded,
                     lyricDynamicHeight,
                     isHeightlessLyric,
-                    isTwoRowMenu,
+                    menuHeight,
                     verseElement
                 }),
                 {
@@ -155,15 +155,15 @@ const mapStateToProps = ({
         queuedDetermineVerseBars,
         queuedVerseBarsTimeout
     },
-    viewportStore: {
-        deviceWidthIndex,
-        windowHeight
+    viewportStore: { windowHeight },
+    mountStore: {
+        canSliderMount,
+        lyricDynamicHeight
     },
-    appStore: { isHigherProcessor },
-    mountStore: { lyricDynamicHeight },
     responsiveStore: {
+        isLyricExpandable,
         isHeightlessLyric,
-        isTwoRowMenu
+        menuHeight
     },
     toggleStore: { isLyricExpanded },
     verseBarsStore: {
@@ -177,15 +177,15 @@ const mapStateToProps = ({
 }) => ({
     queuedDetermineVerseBars,
     queuedVerseBarsTimeout,
-    deviceWidthIndex,
+    isLyricExpandable,
     windowHeight,
-    isHigherProcessor,
+    canSliderMount,
     isLyricExpanded,
     lyricDynamicHeight,
     isVerseBarAbove,
     isVerseBarBelow,
     isHeightlessLyric,
-    isTwoRowMenu,
+    menuHeight,
     selectedVerseIndex,
     sliderVerseIndex
 })

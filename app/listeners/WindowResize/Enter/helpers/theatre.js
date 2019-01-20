@@ -4,10 +4,7 @@ import {
     LS_HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
-import {
-    getIsPhoneWidth,
-    getIsDesktopWidth
-} from 'helpers/responsive'
+import { getIsDesktopWidth } from 'helpers/responsive'
 
 /*********
  * STAGE *
@@ -21,10 +18,6 @@ const _getLyricColumnHeight = (
     return (
         isHeightlessLyric || getIsDesktopWidth(deviceWidthIndex)
     ) ? 0 : windowHeight * LS_HEIGHT_LYRIC_COLLAPSED
-}
-
-export const getIsTwoRowMenu = (deviceWidthIndex) => {
-    return getIsPhoneWidth(deviceWidthIndex)
 }
 
 export const getCentreFieldHeight = ({
