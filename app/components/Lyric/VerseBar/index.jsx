@@ -51,7 +51,7 @@ class VerseBar extends PureComponent {
     }
 
     _handleVerseBarSelect = (e) => {
-        logEvent('VerseBar', e)
+        logEvent(VerseBar.name, e)
         if (this.getIsShown()) {
             this.dispatchScrollVerse()
         }

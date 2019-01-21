@@ -30,7 +30,7 @@ class UnitCard extends PureComponent {
     }
 
     handleStanzaTabClick = (e) => {
-        logEvent('UnitCard', e)
+        logEvent(UnitCard.name, e)
 
         const {
                 handleVerseSelect,

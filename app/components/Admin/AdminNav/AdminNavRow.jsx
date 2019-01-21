@@ -23,7 +23,7 @@ class AdminNavRow extends PureComponent {
     }
 
     _handleSongClick = (e) => {
-        logEvent('AdminNavRow', e)
+        logEvent(AdminNavRow.name, e)
         this.dispatchSong({ selectedSongIndex: this.props.songIndex })
     }
 

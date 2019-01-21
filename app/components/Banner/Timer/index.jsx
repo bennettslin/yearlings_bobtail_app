@@ -26,19 +26,16 @@ class PlayTimer extends PureComponent {
     }
 
     render() {
-
         const {
-                isSelectedLogue,
-                selectedTime
-            } = this.props,
-
-            baseTime = getFormattedTime(selectedTime)
+            isSelectedLogue,
+            selectedTime
+        } = this.props
 
         return !isSelectedLogue && (
             <div className={cx(
                 'PlayTimer'
             )}>
-                {baseTime}
+                {getFormattedTime(selectedTime)}
             </div>
         )
     }

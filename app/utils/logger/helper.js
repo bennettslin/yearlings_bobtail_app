@@ -101,9 +101,9 @@ export const logFocus = (log) => {
         styles: FOCUS_STYLE
     })
 }
-export const logMount = (text) => {
+export const logMount = (componentName) => {
     _logInfo({
-        log: `${text} mounted.`,
+        log: `${componentName} mounted.`,
         styles: MOUNT_STYLE
     })
 }
