@@ -1,0 +1,18 @@
+.BannerScene {
+    position: absolute;
+    height: 100%;
+
+    // Anchor to bottom and right!
+    bottom: 0;
+    right: 0;
+
+    cursor: pointer;
+}
+
+.BannerScene__odd {
+    background-color: #b88;
+}
+
+.BannerScene__even {
+    background-color: #88b;
+}

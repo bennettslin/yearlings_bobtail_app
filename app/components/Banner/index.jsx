@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import AudioTimer from './Timer'
 import BannerAccess from './Access'
-
-import { getSongTitle } from 'album/api/songs'
+import BannerScenes from './Scenes'
+import PlayTimer from './Timer'
+import SongTitle from './Title'
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex }
@@ -23,19 +23,15 @@ class Banner extends PureComponent {
     }
 
     render() {
-        const
-            { selectedSongIndex } = this.props,
-            songTitle = getSongTitle({ songIndex: selectedSongIndex })
-
         return (
             <div className={cx(
                 'Banner',
                 'boxShadow__popupView',
-                'BannerDisplay',
                 'flexAlignContainer'
             )}>
-                {songTitle}
-                <AudioTimer />
+                <BannerScenes />
+                <SongTitle />
+                <PlayTimer />
                 <BannerAccess />
             </div>
         )

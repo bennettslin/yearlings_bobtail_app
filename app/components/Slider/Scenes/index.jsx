@@ -22,36 +22,44 @@ class SliderScenes extends PureComponent {
     }
 
     render() {
-        const { lyricSongIndex } = this.props,
+        const
+            { lyricSongIndex } = this.props,
             totalTime = getSongTotalTime(lyricSongIndex),
             songSceneConfigs = getSongSceneConfigs(lyricSongIndex)
 
         return (
-            <div className="SliderScenes">
+            <div
+                {...{
+                    className: cx(
+                        'SliderScenes',
+                        'abF'
+                    )
+                }}
+            >
                 {songSceneConfigs.map((sceneConfig, sceneIndex) => {
 
                     const { sceneStartTime } = sceneConfig,
 
                         sceneWidth =
-                        (totalTime - sceneStartTime) / totalTime * 100,
-
-                        sceneStyle = {
-                            width: `${sceneWidth}%`
-                        },
+                            (totalTime - sceneStartTime)
+                            / totalTime * 100,
 
                         isOdd = sceneIndex % 2
 
                     return (
                         <div
                             key={sceneIndex}
-                            className={cx(
-                                'SliderSceneBar',
-                                'Slider__dynamicBar',
-                                isOdd ?
-                                    'SliderSceneBar__even' :
-                                    'SliderSceneBar__odd'
-                            )}
-                            style={sceneStyle}
+                            {...{
+                                className: cx(
+                                    'SliderSceneBar',
+                                    isOdd ?
+                                        'SliderSceneBar__even' :
+                                        'SliderSceneBar__odd'
+                                ),
+                                style: {
+                                    width: `${sceneWidth}%`
+                                }
+                            }}
                         />
                     )
                 })}

@@ -17,21 +17,17 @@ const mapStateToProps = ({
     selectedTime
 })
 
-class AudioTimer extends PureComponent {
+class PlayTimer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
-        selectedTime: PropTypes.number.isRequired,
-
-        // From parent.
-        isAboutTimer: PropTypes.bool
+        selectedTime: PropTypes.number.isRequired
     }
 
     render() {
 
         const {
-                isAboutTimer,
                 isSelectedLogue,
                 selectedTime
             } = this.props,
@@ -39,26 +35,13 @@ class AudioTimer extends PureComponent {
             baseTime = getFormattedTime(selectedTime)
 
         return !isSelectedLogue && (
-
             <div className={cx(
-                'AudioTimer',
-
-                {
-                    'AudioTimer__aboutTimer': isAboutTimer,
-                    'abF': isAboutTimer
-                },
-
-                'flexCentreContainer'
+                'PlayTimer'
             )}>
-                <div className="AudioTimer__child">
-
-                    <span className="AudioTimer__base">
-                        {baseTime}
-                    </span>
-                </div>
+                {baseTime}
             </div>
         )
     }
 }
 
-export default connect(mapStateToProps)(AudioTimer)
+export default connect(mapStateToProps)(PlayTimer)

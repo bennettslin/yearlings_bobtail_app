@@ -13,9 +13,9 @@ $boxShadow__mainCard__selected:
     0 0 15px 4px $colour__boxShadow__cursoredBright,
     0 3px 10px 3px $colour__boxShadow__dark;
 
+$dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);
 $dropShadow__button: drop-shadow(0 4px 4px $colour__boxShadow__dark);
-$dropShadow__button__inOverlay:
-    drop-shadow(0 4px 4px $colour__boxShadow__darker);
+$dropShadow__buttonOverlay: drop-shadow(0 4px 4px $colour__boxShadow__darker);
 
 // Lyric.
 $boxShadow__verseBar__above: 0 3px 10px 6px $colour__boxShadow__dark;

@@ -1,5 +1,25 @@
 import albumScenes from 'album/scenes'
 
+const _addDurationsToSceneConfigs = (sceneConfigs, { totalTime }) => {
+    // This is a duplicate of the same method for verse configs.
+
+    sceneConfigs.forEach((sceneConfig, sceneIndex) => {
+        const { sceneStartTime } = sceneConfig
+        let nextTime
+
+        // It is followed by another scene.
+        if (sceneIndex < sceneConfigs.length - 1) {
+            nextTime = sceneConfigs[sceneIndex + 1].sceneStartTime
+
+        // It is the last scene.
+        } else {
+            nextTime = totalTime
+        }
+
+        sceneConfig.sceneDuration = nextTime - sceneStartTime
+    })
+}
+
 export const addSceneConfigs = (song) => {
 
     const {
@@ -39,6 +59,7 @@ export const addSceneConfigs = (song) => {
             }
         })
 
+        _addDurationsToSceneConfigs(sceneConfigs, song)
         song.songSceneConfigs = sceneConfigs
     }
 }

@@ -1,12 +1,19 @@
 @import "./Access/style";
+@import "./Scenes/style";
 @import "./Timer/style";
+@import "./Title/style";
 
 .Banner {
-    position: relative;
-    height: 100%;
     flex-grow: 10;
 
+    position: relative;
+    height: 100%;
     overflow: hidden;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: $js__margin__thin * 2;
 
     border-radius: $borderRadius__narrow;
     z-index: $zIndex__menuChild;
@@ -21,10 +28,4 @@
         position: relative;
         width: 100%;
     }
-}
-
-.BannerDisplay {
-    padding: 0 5px;
-
-    justify-content: space-between;
 }
