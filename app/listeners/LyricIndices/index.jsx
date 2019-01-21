@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
+import { getSceneIndexForVerseIndex } from 'album/api/verses'
 import { populateRefs } from 'helpers/ref'
 
 class LyricIndicesListener extends PureComponent {
@@ -65,7 +66,11 @@ class LyricIndicesListener extends PureComponent {
             selectedVerseIndex !== prevVerseIndex
         ) {
             this.props.updateLyricStore({
-                lyricVerseIndex: selectedVerseIndex
+                lyricVerseIndex: selectedVerseIndex,
+                lyricSceneIndex: getSceneIndexForVerseIndex(
+                    selectedSongIndex,
+                    selectedVerseIndex
+                )
             })
         }
     }

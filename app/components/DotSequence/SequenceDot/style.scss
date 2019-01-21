@@ -22,6 +22,7 @@
         animation: bounceHover $animationDuration__slow;
     }
 
+    // FIXME: I don't think this logic works anymore...
     // "Root accessed letter Enter, child accessed letter Enter."
     .PaLEnter
     .CaLEnter

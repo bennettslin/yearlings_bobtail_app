@@ -10,6 +10,8 @@ class BannerScene extends PureComponent {
     static propTypes = {
         // From parent.
         isOdd: PropTypes.bool.isRequired,
+        isInteractivated: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool.isRequired,
         sceneIndex: PropTypes.number.isRequired,
         sceneLeft: PropTypes.number.isRequired,
         sceneWidth: PropTypes.number.isRequired,
@@ -26,6 +28,8 @@ class BannerScene extends PureComponent {
     render() {
         const {
             isOdd,
+            isInteractivated,
+            isSelected,
             sceneLeft,
             sceneWidth
         } = this.props
@@ -37,7 +41,11 @@ class BannerScene extends PureComponent {
                         'BannerScene',
                         isOdd ?
                             'BannerScene__even' :
-                            'BannerScene__odd'
+                            'BannerScene__odd',
+                        isInteractivated &&
+                            'BannerScene__interactivated',
+                        isSelected &&
+                            'BannerScene__selected'
                     ),
                     style: {
                         left: `${sceneLeft}%`,

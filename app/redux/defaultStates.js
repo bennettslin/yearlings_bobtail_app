@@ -140,6 +140,7 @@ export const LYRIC_DEFAULTS = {
     lyricSongIndex: storedSongIndex,
     lyricAnnotationIndex: storedAnnotationIndex,
     lyricVerseIndex: storedVerseIndex,
+    lyricSceneIndex: storedSceneIndex,
     isLyricLogue: isStoredLogue
 }
 

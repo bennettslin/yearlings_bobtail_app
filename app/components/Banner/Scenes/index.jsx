@@ -12,16 +12,24 @@ import { getSongTotalTime } from 'album/api/time'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    lyricStore: { lyricSongIndex }
+    lyricStore: {
+        lyricSongIndex,
+        lyricSceneIndex
+    },
+    sessionStore: { interactivatedSceneIndex }
 }) => ({
-    lyricSongIndex
+    lyricSongIndex,
+    lyricSceneIndex,
+    interactivatedSceneIndex
 })
 
 class BannerScenes extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired
+        lyricSongIndex: PropTypes.number.isRequired,
+        lyricSceneIndex: PropTypes.number.isRequired,
+        interactivatedSceneIndex: PropTypes.number.isRequired
     }
 
     _getRefs = (payload) => {
@@ -33,7 +41,12 @@ class BannerScenes extends PureComponent {
     }
 
     render() {
-        const { lyricSongIndex } = this.props,
+        const {
+                lyricSongIndex,
+                lyricSceneIndex,
+                interactivatedSceneIndex
+            } = this.props,
+
             totalTime = getSongTotalTime(lyricSongIndex),
             songSceneConfigs = getSongSceneConfigs(lyricSongIndex)
 
@@ -53,6 +66,11 @@ class BannerScenes extends PureComponent {
                         } = sceneConfig,
 
                         isOdd = Boolean(sceneIndex % 2),
+                        isInteractivated =
+                            interactivatedSceneIndex === sceneIndex,
+                        isSelected =
+                            lyricSceneIndex === sceneIndex,
+
                         sceneLeft = sceneStartTime / totalTime * 100,
                         sceneWidth = sceneDuration / totalTime * 100
 
@@ -61,6 +79,8 @@ class BannerScenes extends PureComponent {
                             key={sceneIndex}
                             {...{
                                 isOdd,
+                                isInteractivated,
+                                isSelected,
                                 sceneIndex,
                                 sceneLeft,
                                 sceneWidth,

@@ -83,7 +83,8 @@ class RoutingContainer extends PureComponent {
             this.props.updateLyricStore({
                 lyricSongIndex: routingSongIndex,
                 lyricVerseIndex: routingVerseIndex,
-                lyricAnnotationIndex: routingAnnotationIndex
+                lyricAnnotationIndex: routingAnnotationIndex,
+                lyricSceneIndex: routingSceneIndex
             })
 
             this.dispatchCanSceneEnter({
