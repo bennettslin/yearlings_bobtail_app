@@ -245,9 +245,14 @@ export const SELECTED_DEFAULTS = {
     earColumnIndex: storedEarColumnIndex || 0
 }
 
-export const SESSION_DEFAULTS = {
-    carouselAnnotationIndex: 0,
+export const SESSION_INTERACTIVATED_DEFAULTS = {
     interactivatedVerseIndex: -1,
+    interactivatedSceneIndex: -1
+}
+
+export const SESSION_DEFAULTS = {
+    ...SESSION_INTERACTIVATED_DEFAULTS,
+    carouselAnnotationIndex: 0,
     shownNavBookIndex: getBookForSongIndex(storedSongIndex),
     selectedAudioOptionIndex:
         getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),

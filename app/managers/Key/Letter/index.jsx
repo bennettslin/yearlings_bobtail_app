@@ -1,7 +1,10 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSessionStore } from 'flux/session/action'
+import {
+    updateSessionStore,
+    resetInteractivated
+} from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -66,6 +69,7 @@ class LetterManager extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
+        resetInteractivated: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -193,7 +197,7 @@ class LetterManager extends PureComponent {
         // Turn access off.
         } else {
             this.props.updateToggleStore({ isAccessOn: false })
-            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
+            this.props.resetInteractivated()
         }
     }
 
@@ -255,6 +259,7 @@ export default connect(
     {
         updateSessionStore,
         updateSelectedStore,
-        updateToggleStore
+        updateToggleStore,
+        resetInteractivated
     }
 )(LetterManager)

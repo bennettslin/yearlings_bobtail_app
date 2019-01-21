@@ -7,7 +7,10 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from 'flux/option/action'
-import { updateSessionStore } from 'flux/session/action'
+import {
+    updateSessionStore,
+    resetInteractivated
+} from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -36,6 +39,7 @@ class CloseHandler extends PureComponent {
         updateSessionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
+        resetInteractivated: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -307,7 +311,7 @@ class CloseHandler extends PureComponent {
         }
 
         if (!exemptInteractivatedVerse) {
-            this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
+            this.props.resetInteractivated()
         }
     }
 
@@ -356,6 +360,7 @@ export default connect(
         updateOptionStore,
         updateSessionStore,
         updateSelectedStore,
-        updateToggleStore
+        updateToggleStore,
+        resetInteractivated
     }
 )(CloseHandler)

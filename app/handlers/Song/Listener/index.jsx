@@ -5,7 +5,10 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
 import { updateLoadStore } from 'flux/load/action'
-import { updateSessionStore } from 'flux/session/action'
+import {
+    updateSessionStore,
+    resetInteractivated
+} from 'flux/session/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getBookForSongIndex } from 'album/api/songs'
@@ -18,6 +21,7 @@ class SongListener extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
+        resetInteractivated: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired
     }
 
@@ -38,10 +42,10 @@ class SongListener extends PureComponent {
             })
             this.props.updateLoadStore({ isScoreLoaded: false })
             this.props.updateSessionStore({
-                interactivatedVerseIndex: -1,
                 selectedWikiIndex: 0,
                 shownNavBookIndex
             })
+            this.props.resetInteractivated()
             this.props.resetVerseBars()
         }
     }
@@ -63,6 +67,7 @@ export default connect(
         updateAccessStore,
         updateLoadStore,
         updateSessionStore,
+        resetInteractivated,
         resetVerseBars
     }
 )(SongListener)

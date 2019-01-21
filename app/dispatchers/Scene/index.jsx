@@ -1,14 +1,15 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-
 import { updateToggleStore } from 'flux/toggle/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 
+import {
+    getVerseIndexForSceneIndex,
+    getVerseIndexForNextScene
+} from '../../album/api/scenes'
 import { populateRefs } from 'helpers/ref'
-
-import { getVerseIndexForNextScene } from './helper'
 
 class SceneDispatcher extends PureComponent {
 
@@ -27,6 +28,20 @@ class SceneDispatcher extends PureComponent {
     componentDidMount() {
         this.props.getRefs({
             dispatchSceneDirection: this.dispatchSceneDirection
+        })
+    }
+
+    dispatchSceneIndex = (sceneIndex) => {
+        const
+            { selectedSongIndex } = this.props,
+            nextVerseIndex = getVerseIndexForSceneIndex(
+                selectedSongIndex,
+                sceneIndex
+            )
+
+        this.dispatchVerse({
+            selectedVerseIndex: nextVerseIndex,
+            scrollLog: 'Scene index selected verse.'
         })
     }
 
@@ -53,7 +68,7 @@ class SceneDispatcher extends PureComponent {
 
         this.dispatchVerse({
             selectedVerseIndex: nextVerseIndex,
-            scrollLog: 'Manual scene selected verse.'
+            scrollLog: 'Scene direction selected verse.'
         })
 
         return true

@@ -23,11 +23,46 @@ export const getSongSceneConfigs = (songIndex) => {
     return songSceneConfigs || []
 }
 
-export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
+export const getVerseIndexForSceneIndex = (
+    songIndex,
+    sceneIndex
+) => {
+    const songSceneConfigs = getSongSceneConfigs(songIndex)
+    return songSceneConfigs[sceneIndex].firstVerseIndex
+}
+
+export const getSceneIndexForVerseIndex = (
+    songIndex,
+    verseIndex
+) => {
     const songVerseConfigs = getSongVerseConfigs(songIndex)
     return songVerseConfigs.length ?
         songVerseConfigs[verseIndex].sceneIndex :
         0
+}
+
+export const getVerseIndexForNextScene = (
+    songIndex,
+    verseIndex,
+    direction = 0
+) => {
+    const
+        songSceneConfigs = getSongSceneConfigs(songIndex),
+
+        sceneIndex = getSceneIndexForVerseIndex(
+            songIndex,
+            verseIndex
+        ),
+
+        scenesCount = songSceneConfigs.length,
+
+        nextSceneIndex = (
+            sceneIndex
+            + direction
+            + scenesCount
+        ) % scenesCount
+
+    return songSceneConfigs[nextSceneIndex].firstVerseIndex
 }
 
 export const getScene = (

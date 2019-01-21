@@ -23,7 +23,7 @@
 12. Garryowen
     * Score
 13. On a Golden Cord
-    * Acccess navigation
+    * SceneSlider
 14. Kyon?
     * Hide tips
 15. Uncanny Valley Boy

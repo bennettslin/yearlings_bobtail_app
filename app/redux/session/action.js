@@ -10,7 +10,10 @@ import {
     SESSION_STORE,
     SELECTED_AUDIO_OPTION_INDEX
 } from '../storeKeys'
-import { SESSION_DEFAULTS } from '../defaultStates'
+import {
+    SESSION_DEFAULTS,
+    SESSION_INTERACTIVATED_DEFAULTS
+} from '../defaultStates'
 
 export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
 
@@ -32,5 +35,12 @@ export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
     return ({
         type: SESSION_STORE,
         payload: getDefinedOnlyPayload(payload)
+    })
+}
+
+export const resetInteractivated = () => {
+    return ({
+        type: SESSION_STORE,
+        payload: SESSION_INTERACTIVATED_DEFAULTS
     })
 }

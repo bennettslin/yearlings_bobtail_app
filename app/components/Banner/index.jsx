@@ -22,23 +22,19 @@ class Banner extends PureComponent {
     }
 
     render() {
-        const {
-                selectedSongIndex
-            } = this.props,
-
+        const
+            { selectedSongIndex } = this.props,
             songTitle = getSongTitle({ songIndex: selectedSongIndex })
 
         return (
             <div className={cx(
                 'Banner',
-
                 'boxShadow__popupView',
                 'BannerDisplay',
                 'flexAlignContainer'
             )}>
                 {songTitle}
                 <AudioTimer />
-
             </div>
         )
     }

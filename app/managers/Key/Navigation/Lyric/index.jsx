@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSessionStore } from 'flux/session/action'
+import { resetInteractivated } from 'flux/session/action'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
@@ -22,7 +22,7 @@ class LyricNavigation extends PureComponent {
         interactivatedVerseIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
+        resetInteractivated: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -79,7 +79,7 @@ class LyricNavigation extends PureComponent {
             })
 
             if (isVerseInteractivated) {
-                this.props.updateSessionStore({ interactivatedVerseIndex: -1 })
+                this.props.resetInteractivated()
             }
 
         } else {
@@ -120,5 +120,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateSessionStore }
+    { resetInteractivated }
 )(LyricNavigation)
