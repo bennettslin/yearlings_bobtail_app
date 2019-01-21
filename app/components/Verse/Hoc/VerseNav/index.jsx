@@ -63,7 +63,7 @@ class VerseNav extends PureComponent {
                         {...{
                             buttonName: AUDIO_NEXT_BUTTON_KEY,
                             accessKey: ENTER,
-                            canShowAccessIcon: isInteractivated,
+                            isAccessed: isInteractivated,
                             isDisabled: !isInteractivated,
                             buttonIdentifier: false,
                             handleButtonClick: this._handleButtonClick

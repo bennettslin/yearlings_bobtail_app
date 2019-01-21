@@ -53,14 +53,16 @@
 
 .ButtonAnimatable {
 
+    .Button__accessed
+    &,
     .Button__enabled:hover
     & {
         animation: bounceHover $animationDuration__default;
     }
 
-    // "Root accessed letter Enter, child accessed letter Enter."
+    // "Root accessed letter Enter."
     .PaLEnter
-    .CaLEnter
+    .Button__accessed
     &,
     .Button__enabled:active
     & {

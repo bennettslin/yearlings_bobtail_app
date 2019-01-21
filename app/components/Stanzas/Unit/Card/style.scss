@@ -79,6 +79,14 @@
     top: 0.6em;
     padding-left: $js__margin__thin;
     padding-right: $js__margin__thin * 1.5;
+
+    &:hover {
+        animation: bounceHover $animationDuration__default;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
 }
 
 $height: $height__stanzaTypeTab * 4;

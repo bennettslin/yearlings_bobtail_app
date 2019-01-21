@@ -47,7 +47,13 @@ class DotsSlideSelect extends PureComponent {
 
         return (
             <___>
-                <div className="DotsSlideSelect">
+                <div
+                    {...{
+                        className: cx(
+                            'DotsSlideSelect'
+                        )
+                    }}
+                >
                     <Button
                         isCustomSize
                         {...{
@@ -62,7 +68,7 @@ class DotsSlideSelect extends PureComponent {
                             }),
                             buttonName: 'slideSelect',
                             accessKey: ENTER,
-                            canShowAccessIcon: isAccessed,
+                            isAccessed: isAccessed,
                             handleButtonClick: this._toggleSelectedDot
                         }}
                     >

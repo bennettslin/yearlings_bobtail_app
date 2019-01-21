@@ -16,16 +16,16 @@
 .SequenceDot__textAnchor {
     height: $length__lyricAnchorDot;
 
-    // TODO: Eventually put this in Anchor styling?
+    .Anchor__accessed
+    &,
     .Anchor__selectable:hover
     & {
         animation: bounceHover $animationDuration__slow;
     }
 
-    // FIXME: I don't think this logic works anymore...
-    // "Root accessed letter Enter, child accessed letter Enter."
+    // "Root accessed letter Enter."
     .PaLEnter
-    .CaLEnter
+    .Anchor__accessed
     &,
     .Anchor__selectable:active
     & {
