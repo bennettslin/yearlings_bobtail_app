@@ -159,8 +159,10 @@ class TextLyricAnchor extends PureComponent {
             }
         }
 
-        // Don't split wiki anchor text in mobile.
-        const words = isWikiTextAnchor && isHigherProcessor ? text.split(' ') : [text]
+        // Only split wiki anchor text in higher processor.
+        const words =
+            isWikiTextAnchor
+            && isHigherProcessor ? text.split(' ') : [text]
 
         return (
             <___>
