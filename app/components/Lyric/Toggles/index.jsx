@@ -15,7 +15,10 @@ const LyricToggles = ({ isBottomRight }) => (
 
         isBottomRight ?
             'LyricToggles__bottomRight' :
-            'LyricToggles__leftOrTop'
+            [
+                'LyricToggles__leftOrTop',
+                'top__lyricChild'
+            ]
     )}>
         {isBottomRight ? (
             <___>

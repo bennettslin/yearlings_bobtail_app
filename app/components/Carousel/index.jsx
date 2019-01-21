@@ -7,6 +7,7 @@ import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
+import CarouselAccess from './Access'
 import CarouselScroll from './Scroll'
 
 const mapStateToProps = ({
@@ -57,6 +58,7 @@ class Carousel extends PureComponent {
                     )}
                 >
                     <CarouselScroll />
+                    <CarouselAccess />
                 </div>
             </CSSTransition>
         )

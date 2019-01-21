@@ -1,14 +1,4 @@
-.AccessLetters {
-    .Lyric
-    & {
-        bottom: $margin__lyricColumn__accessIcons;
-    }
-}
-
-.AccessLetters__lyricLeftRight {
-    left: $margin__lyricColumn__accessIcons;
-}
-
-.AccessLetters__lyricUpDown {
-    right: $margin__lyricColumn__accessIcons;
+.AccessLetters__lyric {
+    top: $js__margin__thin;
+    left: $margin__scrollBar;
 }

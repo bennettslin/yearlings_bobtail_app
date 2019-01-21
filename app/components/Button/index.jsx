@@ -22,7 +22,7 @@ class Button extends Component {
 
     static propTypes = {
         buttonName: PropTypes.string.isRequired,
-        className: PropTypes.any,
+        className: PropTypes.string,
         isCustomSize: PropTypes.bool,
         isSmallSize: PropTypes.bool,
         isLargeSize: PropTypes.bool,

@@ -13,20 +13,23 @@ const propTypes = {
     showIfAccessed: PropTypes.bool,
     accessKeys: PropTypes.arrayOf(
         PropTypes.string.isRequired
-    ).isRequired
+    ).isRequired,
+    className: PropTypes.string
 }
 
 const AccessLetters = memo(({
     accessIconsName,
     isShadow,
     showIfAccessed,
-    accessKeys
+    accessKeys,
+    className
 
 }) => (
     <div className={cx(
         'AccessLetters',
         accessIconsName &&
-            `AccessLetters__${accessIconsName}`
+            `AccessLetters__${accessIconsName}`,
+        className
     )}>
         {accessKeys.map(accessKey => (
             <AccessLetter

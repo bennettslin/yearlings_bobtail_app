@@ -10,34 +10,42 @@
     }
 }
 
-.LyricToggles__leftOrTop {
+.top__lyricChild {
+    // Position at same level as play button.
+    top: (
+        $js__height__menu
+        - $js__length__iconLarge
+    ) * 0.5;
 
+    .DW__canSliderMount
+    & {
+        top: $js__height__menu
+            + $js__margin__thin;
+    }
+}
+
+.LyricToggles__leftOrTop {
     .RW__lyricNotExpandable
     & {
-        right: $margin__scrollbar;
-
-        // Position at same level as play button.
-        top: (
-            $js__height__menu
-            - $js__length__iconLarge
-        ) * 0.5;
-
-        .DW__canSliderMount
-        & {
-            top: $js__height__menu
-                + $js__margin__thin;
-        }
+        right: $margin__scrollBar;
     }
 
     .RW__lyricExpandable
     & {
-        left: $margin__scrollbar;
+        left: $margin__scrollBar;
+    }
+
+    .RW__lyricExpandable
+    & {
+        // This overrides the top lyric child rule, so make sure it's after it.
+        top: auto;
         bottom: $js__margin__thin;
     }
 }
 
+
 .LyricToggles__bottomRight {
-    right: $margin__scrollbar;
+    right: $margin__scrollBar;
     bottom: $js__margin__thin;
 }
 

@@ -1,7 +1,5 @@
-$margin__slider__accessIcons: 3px;
-
 .AccessLetters__slider {
-    left: $margin__slider__accessIcons;
-    bottom: $margin__slider__accessIcons;
+    left: $js__margin__thin;
+    bottom: $js__margin__thin;
     z-index: $zIndex__menuChild;
 }

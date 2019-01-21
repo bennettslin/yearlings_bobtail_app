@@ -18,9 +18,9 @@
         bottom:
             -$js__length__iconLarge
             - $js__margin__thin * 2
-            - $margin__scrollbar;
+            - $margin__scrollBar;
 
-        margin-bottom: $margin__scrollbar;
+        margin-bottom: $margin__scrollBar;
     }
 
     .DW__miniOrTabletWidth
