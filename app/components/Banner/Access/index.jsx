@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import AccessLetters from '../../Access/Letters'
 
 import {
-    PREVIOUS_VERSE_KEY,
-    NEXT_VERSE_KEY
+    PREVIOUS_SCENE_KEY,
+    NEXT_SCENE_KEY
 } from 'constants/access'
 
 const mapStateToProps = ({
@@ -15,7 +15,7 @@ const mapStateToProps = ({
     isLyricLogue
 })
 
-class SliderAccess extends PureComponent {
+class BannerAccess extends PureComponent {
 
     static propTypes = {
         // From Redux.
@@ -28,11 +28,11 @@ class SliderAccess extends PureComponent {
         return (
             <AccessLetters
                 {...{
-                    accessIconsName: 'slider',
+                    accessIconsName: 'banner',
                     showIfAccessed: !isLyricLogue,
                     accessKeys: [
-                        PREVIOUS_VERSE_KEY,
-                        NEXT_VERSE_KEY
+                        PREVIOUS_SCENE_KEY,
+                        NEXT_SCENE_KEY
                     ]
                 }}
             />
@@ -40,4 +40,4 @@ class SliderAccess extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(SliderAccess)
+export default connect(mapStateToProps)(BannerAccess)

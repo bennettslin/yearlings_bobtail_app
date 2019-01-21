@@ -1,20 +1,7 @@
-$margin__audioBanner__accessIcons: 3px;
+$margin__slider__accessIcons: 3px;
 
-.AccessLetters {
-    .Slider
-    & {
-        bottom: $margin__audioBanner__accessIcons;
-
-        z-index: $zIndex__negative;
-    }
-
-    .PlW__accessOn
-    .Slider
-    & {
-        z-index: $zIndex__menuChild;
-    }
-}
-
-.AccessLetters__sliderRewindForward {
-    left: $margin__audioBanner__accessIcons;
+.AccessLetters__slider {
+    left: $margin__slider__accessIcons;
+    bottom: $margin__slider__accessIcons;
+    z-index: $zIndex__slider;
 }

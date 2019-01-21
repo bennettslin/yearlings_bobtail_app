@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import AudioTimer from './Timer'
+import BannerAccess from './Access'
 
 import { getSongTitle } from 'album/api/songs'
 
@@ -35,6 +36,7 @@ class Banner extends PureComponent {
             )}>
                 {songTitle}
                 <AudioTimer />
+                <BannerAccess />
             </div>
         )
     }
