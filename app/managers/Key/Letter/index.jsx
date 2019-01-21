@@ -2,8 +2,8 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {
-    updateSessionStore,
-    resetInteractivated
+    resetInteractivated,
+    resetWiki
 } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
@@ -66,10 +66,10 @@ class LetterManager extends PureComponent {
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
         resetInteractivated: PropTypes.func.isRequired,
+        resetWiki: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -152,7 +152,7 @@ class LetterManager extends PureComponent {
                 break
         }
 
-        logAccess(`Key "${keyName}" was ${keyWasRegistered ? '' : 'not '}registered.`)
+        logAccess(`Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`)
 
         return {
             annotationIndexWasAccessed,
@@ -172,7 +172,7 @@ class LetterManager extends PureComponent {
 
         // Close wiki popup.
         } else if (this.props.selectedWikiIndex) {
-            this.props.updateSessionStore({ selectedWikiIndex: 0 })
+            this.props.resetWiki()
 
         // Close tips popup.
         } else if (this.props.selectedTipsOption === SHOWN) {
@@ -257,9 +257,9 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateSessionStore,
         updateSelectedStore,
         updateToggleStore,
-        resetInteractivated
+        resetInteractivated,
+        resetWiki
     }
 )(LetterManager)

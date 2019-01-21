@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 import { updateSelectedStore } from 'flux/selected/action'
-import { updateSessionStore } from 'flux/session/action'
+import { resetWiki } from 'flux/session/action'
 import { updateTransientStore } from 'flux/transient/action'
 
 import ListenContainer from '../Listen'
@@ -28,8 +28,8 @@ class RoutingContainer extends PureComponent {
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
         updateTransientStore: PropTypes.func.isRequired,
+        resetWiki: PropTypes.func.isRequired,
 
         // From parent.
         match: PropTypes.object.isRequired,
@@ -97,8 +97,7 @@ class RoutingContainer extends PureComponent {
                 popupAnnotationIndex: routingAnnotationIndex
             })
 
-            // Reset wiki.
-            this.props.updateSessionStore({ selectedWikiIndex: 0 })
+            this.props.resetWiki()
         }
 
         // Always replace path for consistency.
@@ -177,7 +176,7 @@ export default connect(
         updateLyricStore,
         updateSceneStore,
         updateSelectedStore,
-        updateSessionStore,
-        updateTransientStore
+        updateTransientStore,
+        resetWiki
     }
 )(RoutingContainer)

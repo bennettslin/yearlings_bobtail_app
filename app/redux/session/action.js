@@ -12,24 +12,16 @@ import {
 } from '../storeKeys'
 import {
     SESSION_DEFAULTS,
-    SESSION_INTERACTIVATED_DEFAULTS
+    SESSION_INTERACTIVATED_DEFAULTS,
+    SESSION_WIKI_DEFAULTS
 } from '../defaultStates'
 
 export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
 
-    const {
-        selectedAudioOptionIndex,
-        selectedWikiIndex
-    } = payload
+    const { selectedAudioOptionIndex } = payload
 
     if (hasKey(selectedAudioOptionIndex)) {
         setInStorage(SELECTED_AUDIO_OPTION_INDEX, selectedAudioOptionIndex)
-    }
-
-    // If wiki is being reset, also reset related state.
-    if (selectedWikiIndex === 0) {
-        payload.carouselAnnotationIndex = 0
-        payload.selectedWikiUrl = ''
     }
 
     return ({
@@ -42,5 +34,12 @@ export const resetInteractivated = () => {
     return ({
         type: SESSION_STORE,
         payload: SESSION_INTERACTIVATED_DEFAULTS
+    })
+}
+
+export const resetWiki = () => {
+    return ({
+        type: SESSION_STORE,
+        payload: SESSION_WIKI_DEFAULTS
     })
 }

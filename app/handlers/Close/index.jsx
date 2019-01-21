@@ -8,8 +8,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from 'flux/option/action'
 import {
-    updateSessionStore,
-    resetInteractivated
+    resetInteractivated,
+    resetWiki
 } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
@@ -36,10 +36,10 @@ class CloseHandler extends PureComponent {
         selectedWikiIndex: PropTypes.number.isRequired,
         interactivatedVerseIndex: PropTypes.number.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
         resetInteractivated: PropTypes.func.isRequired,
+        resetWiki: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -247,7 +247,7 @@ class CloseHandler extends PureComponent {
 
         // If popup is open, close it and do nothing else.
         if (selectedWikiIndex && !exemptWiki) {
-            this.props.updateSessionStore({ selectedWikiIndex: 0 })
+            this.props.resetWiki({ selectedWikiIndex: 0 })
 
         } else if (isScoreShown && !exemptScore) {
             this.props.updateToggleStore({ isScoreShown: false })
@@ -358,9 +358,9 @@ export default connect(
     mapStateToProps,
     {
         updateOptionStore,
-        updateSessionStore,
         updateSelectedStore,
         updateToggleStore,
-        resetInteractivated
+        resetInteractivated,
+        resetWiki
     }
 )(CloseHandler)

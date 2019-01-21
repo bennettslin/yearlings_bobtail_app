@@ -250,14 +250,18 @@ export const SESSION_INTERACTIVATED_DEFAULTS = {
     interactivatedSceneIndex: -1
 }
 
+export const SESSION_WIKI_DEFAULTS = {
+    selectedWikiIndex: 0,
+    carouselAnnotationIndex: 0,
+    selectedWikiUrl: ''
+}
+
 export const SESSION_DEFAULTS = {
     ...SESSION_INTERACTIVATED_DEFAULTS,
-    carouselAnnotationIndex: 0,
+    ...SESSION_WIKI_DEFAULTS,
     shownNavBookIndex: getBookForSongIndex(storedSongIndex),
     selectedAudioOptionIndex:
-        getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX),
-    selectedWikiIndex: 0,
-    selectedWikiUrl: ''
+        getIndexFromStorage(SELECTED_AUDIO_OPTION_INDEX)
 }
 
 export const SLIDER_DEFAULTS = {

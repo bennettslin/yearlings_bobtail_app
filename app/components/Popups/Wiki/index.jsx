@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSessionStore } from 'flux/session/action'
+import { resetWiki } from 'flux/session/action'
 
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'
@@ -19,11 +19,11 @@ class WikiPopup extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedWikiIndex: PropTypes.number.isRequired,
-        updateSessionStore: PropTypes.func.isRequired
+        resetWiki: PropTypes.func.isRequired
     }
 
     closeWiki = () => {
-        this.props.updateSessionStore({ selectedWikiIndex: 0 })
+        this.props.resetWiki()
     }
 
     render() {
@@ -50,5 +50,5 @@ class WikiPopup extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { updateSessionStore }
+    { resetWiki }
 )(WikiPopup)
