@@ -62,7 +62,7 @@ class NavigationManager extends PureComponent {
 
                 keyWasRegistered = this.dispatchVerse({
                     selectedVerseIndex: interactivatedVerseIndex,
-                    scrollLog: 'Access selected interactivated verse.'
+                    scrollLog: `Key select interactivated verse ${interactivatedVerseIndex}.`
                 })
 
                 annotationIndexWasAccessed = true

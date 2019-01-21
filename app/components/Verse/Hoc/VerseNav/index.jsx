@@ -29,7 +29,7 @@ class VerseNav extends PureComponent {
 
         handleVerseSelect({
             selectedVerseIndex: verseIndex,
-            scrollLog: 'Select interactivated verse.'
+            scrollLog: `Click select interactivated verse ${verseIndex}.`
         })
     }
 

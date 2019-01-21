@@ -156,7 +156,7 @@ class SliderTouchDispatcher extends PureComponent {
                 // Selected verse is wherever touch ended on slider.
                 this.dispatchVerse({
                     selectedVerseIndex: sliderVerseIndex,
-                    scrollLog: 'Slider selected verse.'
+                    scrollLog: `Select slider verse ${sliderVerseIndex}.`
                 })
             }
 
