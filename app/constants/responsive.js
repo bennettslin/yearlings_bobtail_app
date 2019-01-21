@@ -2,7 +2,7 @@
 
 export const LS_WIDTH_GOLDEN_CORD = 745
 export const LS_WIDTH_UNCANNY_VALLEY = 570
-export const TWO_ROW_MENU_WIDTH_BREAKPOINT = 640
+export const TWO_ROW_MENU_WIDTH_BREAKPOINT = 720
 
 /*****************
  * BUTTON VALUES *

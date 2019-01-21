@@ -40,7 +40,7 @@ $height__carouselHidden: $height__chivalry * 0.05;
         opacity: 1;
 
         // Allows the lyric to scroll when carousel has higher z-index.
-        z-index: $zIndex__annotation;
+        z-index: $zIndex__carouselNav;
     }
 
     .DW__desktopWidth

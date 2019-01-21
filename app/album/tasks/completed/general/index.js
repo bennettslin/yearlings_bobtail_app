@@ -4490,5 +4490,10 @@ export default [
         taskName: `Overview in logue refactor.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Begin work to make banner select scenes.`,
+        workedHours: 13,
+        neededHours: 13
     }
 ]

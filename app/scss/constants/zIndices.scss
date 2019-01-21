@@ -1,5 +1,3 @@
-$zIndex__negative: -1;
-
 // This should be the lowest shown element.
 $zIndex__theatre: 0;
 
@@ -16,16 +14,15 @@ $zIndex__theatre: $zIndex__curtains + 1;
 
 $zIndex__popupContainer: $zIndex__theatre + 1;
 
-$zIndex__navCustomSubfield: $zIndex__popupContainer + 1;
-
 // Both carousel and popup annotation.
-$zIndex__annotation: $zIndex__navCustomSubfield + 1;
+$zIndex__annotation: $zIndex__popupContainer + 1;
 
 $zIndex__mainShelf: $zIndex__annotation + 1;
 $zIndex__centreFieldChild: $zIndex__mainShelf + 1;
+$zIndex__carouselNav: $zIndex__centreFieldChild + 1;
 
 // This needs to be above annotation text in carousel.
-$zIndex__carouselNavButton: $zIndex__centreFieldChild + 1;
+$zIndex__carouselNavButton: $zIndex__carouselNav + 1;
 
 // Lyrics should be higher than anything in centre field.
 $zIndex__lyricColumn: $zIndex__carouselNavButton + 1;
