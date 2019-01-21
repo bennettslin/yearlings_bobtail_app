@@ -1,4 +1,4 @@
-import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive'
+import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
 
 export const getWindowHeightAndWidth = (rootElement) => {
     const { innerWidth } = window,

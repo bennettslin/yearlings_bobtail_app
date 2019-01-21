@@ -8,7 +8,7 @@ import {
 import {
     LS_WIDTH_GOLDEN_CORD,
     LS_WIDTH_UNCANNY_VALLEY
-} from 'constants/responsive'
+} from 'constants/responsive/deviceWidth'
 
 const _getLyricTopAlign = (deviceWidthIndex, isLyricExpanded) => {
 

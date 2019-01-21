@@ -8,7 +8,7 @@ import {
 import {
     DEVICE_WIDTH_CONFIGS,
     MINI_WIDTH_CONFIG
-} from '../../../../constants/responsive'
+} from '../../../../constants/responsive/deviceWidth'
 
 const _getShowShrunkNavIconForDeviceObject = (
     windowWidth,

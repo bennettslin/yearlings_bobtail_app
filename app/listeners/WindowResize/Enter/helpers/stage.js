@@ -1,34 +1,34 @@
 import {
-    LS_STAGE_ASPECT_RATIO,
-    STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
-} from 'constants/stage'
-
-import {
-    PHONE_WIDTH_KEY,
-    LS_MINI_WIDTH_KEY,
-    TABLET_WIDTH_KEY,
-    LS_LAPTOP_WIDTH_KEY,
-    MONITOR_WIDTH_KEY,
-    DEVICE_WIDTH_CONFIGS,
-
-    LS_WIDTH_GOLDEN_CORD,
-    LS_WIDTH_UNCANNY_VALLEY,
-
-    LS_LENGTH_ICON,
-    LS_LENGTH_ICON_LARGE_MINI,
-    LS_LENGTH_ICON_LARGE_TABLET,
-    LS_LENGTH_ICON_LARGE,
-    LS_MARGIN_THIN,
-
-    LS_HEIGHT_NAV
-} from 'constants/responsive'
-
-import {
     getIsDesktopWidth,
     getIsMonitorWidth
 } from 'helpers/responsive'
 
 import { getCentreFieldHeight } from './theatre'
+
+import {
+    LS_STAGE_ASPECT_RATIO,
+    STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
+} from 'constants/stage'
+
+import {
+    LS_LENGTH_ICON,
+    LS_LENGTH_ICON_LARGE_MINI,
+    LS_LENGTH_ICON_LARGE_TABLET,
+    LS_LENGTH_ICON_LARGE,
+    LS_MARGIN_THIN
+} from 'constants/responsive'
+
+import {
+    LS_HEIGHT_NAV,
+    LS_WIDTH_GOLDEN_CORD,
+    LS_WIDTH_UNCANNY_VALLEY,
+    PHONE_WIDTH_KEY,
+    LS_MINI_WIDTH_KEY,
+    TABLET_WIDTH_KEY,
+    LS_LAPTOP_WIDTH_KEY,
+    MONITOR_WIDTH_KEY,
+    DEVICE_WIDTH_CONFIGS
+} from 'constants/responsive/deviceWidth'
 
 const _getLeftShelfOverflow = (deviceWidthIndex) => {
     let toggleButtonWidth = 0

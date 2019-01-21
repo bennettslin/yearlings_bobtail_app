@@ -1,10 +1,12 @@
 import {
     LS_HEIGHT_MENU,
-    LS_HEIGHT_TWO_ROW_MENU,
-    LS_WIDTH_UNCANNY_VALLEY,
-    LS_WIDTH_GOLDEN_CORD,
-    TWO_ROW_MENU_WIDTH_BREAKPOINT
+    LS_HEIGHT_TWO_ROW_MENU
 } from '../../../../constants/responsive'
+import {
+    LS_WIDTH_MENU_BREAKPOINT,
+    LS_WIDTH_UNCANNY_VALLEY,
+    LS_WIDTH_GOLDEN_CORD
+} from '../../../../constants/responsive/deviceWidth'
 
 import {
     getIsDesktopWidth,
@@ -31,7 +33,7 @@ export const getIsTwoRowMenu = ({
     }
 
     return windowWidth <
-        TWO_ROW_MENU_WIDTH_BREAKPOINT
+        LS_WIDTH_MENU_BREAKPOINT
         + lyricColumnExtraWidth
 }
 

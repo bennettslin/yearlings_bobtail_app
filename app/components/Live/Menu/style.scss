@@ -35,8 +35,8 @@ $js__height__menu__bottom: 48px;
         .DW__desktopWidth
         .ShW__overlayShown
         & {
-            $js__width__menu__overlay: 720px;
-            max-width: $js__width__menu__overlay;
+            $js__width__menu__breakpoint: 720px;
+            max-width: $js__width__menu__breakpoint;
         }
 }
 

@@ -9,7 +9,7 @@ import {
 } from './storageHelper'
 
 import { SHOWN } from 'constants/options'
-import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive'
+import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
 
 import { getCubesForKey } from 'scene/cubes'
 

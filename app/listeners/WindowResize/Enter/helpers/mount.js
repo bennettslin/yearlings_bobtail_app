@@ -4,7 +4,7 @@ import {
 } from 'helpers/responsive'
 
 import {
-    UNRENDERABLE_NAV_MIN,
+    MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV,
     LS_HEIGHT_MENU,
     LS_HEIGHT_TWO_ROW_MENU,
     LS_HEIGHT_LYRIC_COLLAPSED
@@ -44,7 +44,7 @@ export const getCanCarouselMount = ({
         !getIsPhoneWidth(deviceWidthIndex) &&
 
         // and if window height is above minimum.
-        windowHeight >= UNRENDERABLE_NAV_MIN
+        windowHeight >= MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV
 }
 
 export const getLyricDynamicHeight = ({

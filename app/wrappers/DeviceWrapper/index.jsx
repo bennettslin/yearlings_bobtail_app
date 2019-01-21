@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive'
+import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
 
 import { getIsTabletWidth } from 'helpers/responsive'
 

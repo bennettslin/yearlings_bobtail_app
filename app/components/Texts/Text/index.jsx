@@ -3,7 +3,7 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import TextLyricAnchor from './LyricAnchor'
-import Texts from '../'
+import Texts from '..'
 import TextSpan from './Span'
 
 const propTypes = {
