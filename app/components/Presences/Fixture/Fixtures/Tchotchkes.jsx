@@ -6,7 +6,7 @@ import Svg from 'modules/Svg'
 
 const propTypes = {
     // From parent.
-    className: PropTypes.any
+    className: PropTypes.string
 }
 
 const Tchotchkes = ({

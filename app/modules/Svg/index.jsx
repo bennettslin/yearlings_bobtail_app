@@ -9,7 +9,7 @@ const defaultProps = {
 }
 
 const propTypes = {
-    className: PropTypes.any,
+    className: PropTypes.string,
     style: PropTypes.object,
     viewBoxWidth: PropTypes.number,
     viewBoxHeight: PropTypes.number,

@@ -10,7 +10,7 @@ import DotIcon from './Icon'
 const propTypes = {
         // From parent.
         showFieldOnly: PropTypes.bool,
-        className: PropTypes.any
+        className: PropTypes.string
     },
 
     Dot = ({

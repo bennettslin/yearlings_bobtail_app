@@ -5,7 +5,7 @@ import cx from 'classnames'
 class Stylesheet extends Component {
 
     static propTypes = {
-        className: PropTypes.any,
+        className: PropTypes.string,
         children: PropTypes.any.isRequired
     }
 
