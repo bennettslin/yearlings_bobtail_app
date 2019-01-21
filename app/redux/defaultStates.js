@@ -18,11 +18,9 @@ import {
     SEASON_INDOOR
 } from 'scene/sky'
 
-import {
-    getSceneIndexForVerseIndex,
-    getScene
-} from 'album/api/scenes'
+import { getScene } from 'album/api/scenes'
 import { getStartTimeForVerseIndex } from 'album/api/time'
+import { getSceneIndexForVerseIndex } from 'album/api/verses'
 import {
     getSongIsLogue,
     getBookForSongIndex

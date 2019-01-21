@@ -14,12 +14,12 @@ import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import CarouselDispatcher from '../../../handlers/Carousel/Dispatcher'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
-import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerse'
+import InteractivatedSceneDispatcher from '../../../dispatchers/Interactivated/Scene'
+import InteractivatedVerseDispatcher from '../../../dispatchers/Interactivated/Verse'
 import LyricDispatcher from '../../../handlers/Lyric/Dispatcher'
 import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import PlayDispatcher from '../../../dispatchers/PlayDispatcher'
 import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
-import SceneDispatcher from '../../../dispatchers/Scene'
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
@@ -27,13 +27,13 @@ import SongDispatcher from '../../../handlers/Song/Dispatcher'
 import { populateRefs } from '../../../helpers/ref'
 
 import {
-    AUDIO_REWIND_KEY,
-    AUDIO_FAST_FORWARD_KEY,
+    PREVIOUS_VERSE_KEY,
+    NEXT_VERSE_KEY,
     ADMIN_TOGGLE_KEY,
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
-    AUDIO_PREVIOUS_SONG_KEY,
-    AUDIO_NEXT_SONG_KEY,
+    PREVIOUS_SONG_KEY,
+    NEXT_SONG_KEY,
     CAROUSEL_TOGGLE_KEY,
     DOTS_SLIDE_TOGGLE_KEY,
     GLOBAL_ANNOTATIONS_TOGGLE_KEY,
@@ -42,8 +42,8 @@ import {
     LYRIC_SCROLL_TOGGLE_KEY,
     OVERVIEW_TOGGLE_KEY,
     SCORE_TOGGLE_KEY,
-    SCENE_REWIND_KEY,
-    SCENE_FORWARD_KEY,
+    PREVIOUS_SCENE_KEY,
+    NEXT_SCENE_KEY,
     TIPS_TOGGLE_KEY,
     ABOUT_TOGGLE_KEY
 } from '../../../constants/access'
@@ -99,19 +99,19 @@ class LetterManager extends PureComponent {
             case AUDIO_PLAY_KEY:
                 keyWasRegistered = this.dispatchPlay()
                 break
-            case AUDIO_PREVIOUS_SONG_KEY:
+            case PREVIOUS_SONG_KEY:
                 keyWasRegistered = this.dispatchSong({ direction: -1 })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
-            case AUDIO_NEXT_SONG_KEY:
+            case NEXT_SONG_KEY:
                 keyWasRegistered = this.dispatchSong({ direction: 1 })
                 annotationIndexWasAccessed = keyWasRegistered
                 break
-            case AUDIO_REWIND_KEY:
-                keyWasRegistered = this.dispatchInteractivatedVerseDirection(-1)
+            case PREVIOUS_VERSE_KEY:
+                keyWasRegistered = this.interactivateVerseDirection(-1)
                 break
-            case AUDIO_FAST_FORWARD_KEY:
-                keyWasRegistered = this.dispatchInteractivatedVerseDirection(1)
+            case NEXT_VERSE_KEY:
+                keyWasRegistered = this.interactivateVerseDirection(1)
                 break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchCarouselNav()
@@ -132,11 +132,11 @@ class LetterManager extends PureComponent {
             case OVERVIEW_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchOverview()
                 break
-            case SCENE_REWIND_KEY:
-                keyWasRegistered = this.dispatchSceneDirection(-1)
+            case PREVIOUS_SCENE_KEY:
+                keyWasRegistered = this.interactivateSceneDirection(-1)
                 break
-            case SCENE_FORWARD_KEY:
-                keyWasRegistered = this.dispatchSceneDirection(1)
+            case NEXT_SCENE_KEY:
+                keyWasRegistered = this.interactivateSceneDirection(1)
                 break
             case SCORE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchScore()
@@ -213,11 +213,11 @@ class LetterManager extends PureComponent {
                 <CarouselDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
                 <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
+                <InteractivatedSceneDispatcher {...{ getRefs: this._getRefs }} />
                 <InteractivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <LyricDispatcher {...{ getRefs: this._getRefs }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
-                <SceneDispatcher {...{ getRefs: this._getRefs }} />
                 <ScoreDispatcher {...{ getRefs: this._getRefs }} />
                 <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />

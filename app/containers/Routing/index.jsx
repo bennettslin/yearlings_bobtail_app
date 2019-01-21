@@ -11,7 +11,7 @@ import ListenContainer from '../Listen'
 import SceneChangeUpdateDispatcher from '../../listeners/SceneChange/Update'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
-import { getSceneIndexForVerseIndex } from 'album/api/scenes'
+import { getSceneIndexForVerseIndex } from 'album/api/verses'
 import {
     getValidRoutingIndices,
     getPathForIndices

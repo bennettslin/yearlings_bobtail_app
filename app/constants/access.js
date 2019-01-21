@@ -3,17 +3,17 @@ export const OVERVIEW_TOGGLE_KEY = 'b'
 export const CAROUSEL_TOGGLE_KEY = 'c'
 export const DOTS_SLIDE_TOGGLE_KEY = 'd'
 export const LYRIC_COLUMN_TOGGLE_KEY = 'e'
-export const AUDIO_FAST_FORWARD_KEY = 'f'
 export const ADMIN_TOGGLE_KEY = 'g'
 export const GLOBAL_ANNOTATIONS_TOGGLE_KEY = 'h'
-export const AUDIO_PREVIOUS_SONG_KEY = 'j'
-export const AUDIO_NEXT_SONG_KEY = 'k'
+export const PREVIOUS_SONG_KEY = 'r'
+export const NEXT_SONG_KEY = 'f'
 export const LYRIC_SECTION_EXPAND_KEY = 'l'
-export const SCENE_FORWARD_KEY = 'm'
-export const SCENE_REWIND_KEY = 'n'
+export const PREVIOUS_SCENE_KEY = 'n'
+export const NEXT_SCENE_KEY = 'm'
 export const AUDIO_OPTIONS_TOGGLE_KEY = 'o'
 export const AUDIO_PLAY_KEY = 'p'
-export const AUDIO_REWIND_KEY = 'r'
+export const PREVIOUS_VERSE_KEY = 'j'
+export const NEXT_VERSE_KEY = 'k'
 export const SCORE_TOGGLE_KEY = 's'
 export const TIPS_TOGGLE_KEY = 't'
 export const LYRIC_SCROLL_TOGGLE_KEY = 'v'
@@ -46,17 +46,17 @@ export const STYLE_LOGIC_ACCESS_LETTERS = [
     ADMIN_TOGGLE_KEY,
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
-    AUDIO_PREVIOUS_SONG_KEY,
-    AUDIO_NEXT_SONG_KEY,
-    AUDIO_REWIND_KEY,
-    AUDIO_FAST_FORWARD_KEY,
+    PREVIOUS_SONG_KEY,
+    NEXT_SONG_KEY,
+    PREVIOUS_VERSE_KEY,
+    NEXT_VERSE_KEY,
     CAROUSEL_TOGGLE_KEY,
     DOTS_SLIDE_TOGGLE_KEY,
     LYRIC_COLUMN_TOGGLE_KEY,
     LYRIC_SCROLL_TOGGLE_KEY,
     LYRIC_SECTION_EXPAND_KEY,
-    SCENE_REWIND_KEY,
-    SCENE_FORWARD_KEY,
+    PREVIOUS_SCENE_KEY,
+    NEXT_SCENE_KEY,
     OVERVIEW_TOGGLE_KEY,
     SCORE_TOGGLE_KEY,
     TIPS_TOGGLE_KEY,

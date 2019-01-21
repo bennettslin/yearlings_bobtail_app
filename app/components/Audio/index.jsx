@@ -12,8 +12,8 @@ import Button from '../Button'
 import {
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
-    AUDIO_PREVIOUS_SONG_KEY,
-    AUDIO_NEXT_SONG_KEY
+    PREVIOUS_SONG_KEY,
+    NEXT_SONG_KEY
 } from 'constants/access'
 
 import {
@@ -95,7 +95,7 @@ class Audio extends PureComponent {
                         buttonName: AUDIO_NEXT_BUTTON_KEY,
                         className: 'AudioButton',
                         buttonIdentifier: isPrologue,
-                        accessKey: AUDIO_PREVIOUS_SONG_KEY,
+                        accessKey: PREVIOUS_SONG_KEY,
                         isDisabled: isPrologue,
                         handleButtonClick: this._handlePreviousClick
                     }}
@@ -120,7 +120,7 @@ class Audio extends PureComponent {
                         buttonName: AUDIO_PREVIOUS_BUTTON_KEY,
                         className: 'AudioButton',
                         buttonIdentifier: isEpilogue,
-                        accessKey: AUDIO_NEXT_SONG_KEY,
+                        accessKey: NEXT_SONG_KEY,
                         isDisabled: isEpilogue,
                         handleButtonClick: this._handleNextClick
                     }}

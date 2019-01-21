@@ -1,7 +1,6 @@
 import albumScenes from 'album/scenes'
 
 import { getSong } from 'album/api/songs'
-import { getSongVerseConfigs } from 'album/api/verses'
 
 import { DEFAULT_STAGE_KEY } from 'scene/cubesKeys'
 import {
@@ -23,46 +22,21 @@ export const getSongSceneConfigs = (songIndex) => {
     return songSceneConfigs || []
 }
 
+export const getSongScenesCount = (songIndex) => {
+    return getSongSceneConfigs(songIndex).length
+}
+
 export const getVerseIndexForSceneIndex = (
     songIndex,
     sceneIndex
+
 ) => {
+    if (sceneIndex === -1) {
+        return -1
+    }
+
     const songSceneConfigs = getSongSceneConfigs(songIndex)
     return songSceneConfigs[sceneIndex].firstVerseIndex
-}
-
-export const getSceneIndexForVerseIndex = (
-    songIndex,
-    verseIndex
-) => {
-    const songVerseConfigs = getSongVerseConfigs(songIndex)
-    return songVerseConfigs.length ?
-        songVerseConfigs[verseIndex].sceneIndex :
-        0
-}
-
-export const getVerseIndexForNextScene = (
-    songIndex,
-    verseIndex,
-    direction = 0
-) => {
-    const
-        songSceneConfigs = getSongSceneConfigs(songIndex),
-
-        sceneIndex = getSceneIndexForVerseIndex(
-            songIndex,
-            verseIndex
-        ),
-
-        scenesCount = songSceneConfigs.length,
-
-        nextSceneIndex = (
-            sceneIndex
-            + direction
-            + scenesCount
-        ) % scenesCount
-
-    return songSceneConfigs[nextSceneIndex].firstVerseIndex
 }
 
 export const getScene = (

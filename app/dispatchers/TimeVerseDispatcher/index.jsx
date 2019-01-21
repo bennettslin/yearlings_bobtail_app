@@ -8,7 +8,7 @@ import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateVerseBarsStore } from 'flux/verseBars/action'
 
-import { getSceneIndexForVerseIndex } from 'album/api/scenes'
+import { getSceneIndexForVerseIndex } from 'album/api/verses'
 
 class TimeVerseDispatcher extends PureComponent {
 

@@ -32,8 +32,20 @@ export const getSongVerseConfigs = (songIndex) => {
 }
 
 export const getSongVersesCount = (songIndex) => {
-    const { songVerseConfigs } = getSong(songIndex)
-    return songVerseConfigs ?
-        songVerseConfigs.length :
+    return getSongVerseConfigs(songIndex).length
+}
+
+export const getSceneIndexForVerseIndex = (
+    songIndex,
+    verseIndex
+
+) => {
+    if (verseIndex === -1) {
+        return -1
+    }
+
+    const songVerseConfigs = getSongVerseConfigs(songIndex)
+    return songVerseConfigs.length ?
+        songVerseConfigs[verseIndex].sceneIndex :
         0
 }

@@ -14,7 +14,7 @@ import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
-import { getSceneIndexForVerseIndex } from 'album/api/scenes'
+import { getSceneIndexForVerseIndex } from 'album/api/verses'
 
 import { getSongsAndLoguesCount } from 'album/api/songs'
 

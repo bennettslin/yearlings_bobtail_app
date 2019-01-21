@@ -1,8 +1,8 @@
 import {
     SPACE,
     ENTER,
-    AUDIO_REWIND_KEY,
-    AUDIO_FAST_FORWARD_KEY
+    PREVIOUS_VERSE_KEY,
+    NEXT_VERSE_KEY
 } from 'constants/access'
 
 export const getKeyName = (e) => {
@@ -50,8 +50,8 @@ export const getShouldHandleOnKeyDown = (keyName) => {
         isNavKey ||
 
         // But these are not nav keys, and they are handled on key down...
-        keyName === AUDIO_REWIND_KEY ||
-        keyName === AUDIO_FAST_FORWARD_KEY
+        keyName === PREVIOUS_VERSE_KEY ||
+        keyName === NEXT_VERSE_KEY
 
     // And this is a nav key, but it's handled on key up.
     ) && keyName !== ENTER

@@ -3,12 +3,12 @@ import { getSongVersesCount } from 'album/api/verses'
 export const getInteractivatedVerseForDirection = ({
     selectedSongIndex,
     selectedVerseIndex,
-    currentInteractivatedVerseIndex,
+    currentVerseIndex,
     direction
 }) => {
     const songVersesCount = getSongVersesCount(selectedSongIndex)
 
-    let interactivatedVerseIndex = currentInteractivatedVerseIndex
+    let interactivatedVerseIndex = currentVerseIndex
 
     // Ensure modulo.
     if (direction === -1) {

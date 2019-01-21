@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import AccessLetters from '../../Access/Letters'
 
 import {
-    AUDIO_REWIND_KEY,
-    AUDIO_FAST_FORWARD_KEY
+    PREVIOUS_VERSE_KEY,
+    NEXT_VERSE_KEY
 } from 'constants/access'
 
 const mapStateToProps = ({
@@ -32,8 +32,8 @@ class SliderAccess extends PureComponent {
                 accessIconsName="sliderRewindForward"
                 showIfAccessed={!isLyricLogue}
                 accessKeys={[
-                    AUDIO_REWIND_KEY,
-                    AUDIO_FAST_FORWARD_KEY
+                    PREVIOUS_VERSE_KEY,
+                    NEXT_VERSE_KEY
                 ]}
             />
         )

@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 
+import { getSceneIndexForVerseIndex } from 'album/api/verses'
 import { getInteractivatedVerseForDirection } from './helper'
 
 class InteractivatedVerseDispatcher extends PureComponent {
@@ -25,16 +26,12 @@ class InteractivatedVerseDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchInteractivatedVerseIndex: this.dispatchInteractivatedVerseIndex,
-            dispatchInteractivatedVerseDirection: this.dispatchInteractivatedVerseDirection
+            interactivateVerseIndex: this.interactivateVerseIndex,
+            interactivateVerseDirection: this.interactivateVerseDirection
         })
     }
 
-    dispatchInteractivatedVerseIndex = (interactivatedVerseIndex = -1) => {
-        this.props.updateSessionStore({ interactivatedVerseIndex })
-    }
-
-    dispatchInteractivatedVerseDirection = (direction) => {
+    interactivateVerseDirection = (direction) => {
         if (this.props.isSelectedLogue) {
             return false
         }
@@ -42,30 +39,42 @@ class InteractivatedVerseDispatcher extends PureComponent {
         const {
                 selectedSongIndex,
                 selectedVerseIndex,
-                interactivatedVerseIndex: currentInteractivatedVerseIndex
+                interactivatedVerseIndex: currentVerseIndex
             } = this.props,
 
             interactivatedVerseIndex = getInteractivatedVerseForDirection({
                 selectedSongIndex,
                 selectedVerseIndex,
-                currentInteractivatedVerseIndex,
+                currentVerseIndex,
                 direction
             })
 
-        this.props.updateSessionStore({ interactivatedVerseIndex })
-
-        this.props.updateScrollLyricStore({
-            queuedScrollLyricLog:
-                `Access interactivated verse ${interactivatedVerseIndex}.`,
-            queuedScrollLyricByVerse: true,
-
-            /**
-             * If interactivation remains on, scroll to interactivated verse.
-             */
-            queuedScrollLyricIndex: interactivatedVerseIndex
-        })
+        this.interactivateVerseIndex(interactivatedVerseIndex)
+        this._queueScrollToInteractivatedVerse(interactivatedVerseIndex)
 
         return true
+    }
+
+    interactivateVerseIndex = (interactivatedVerseIndex) => {
+        const { selectedSongIndex } = this.props,
+            interactivatedSceneIndex = getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                interactivatedVerseIndex
+            )
+
+        this.props.updateSessionStore({
+            interactivatedSceneIndex,
+            interactivatedVerseIndex
+        })
+    }
+
+    _queueScrollToInteractivatedVerse = (interactivatedVerseIndex) => {
+        this.props.updateScrollLyricStore({
+            queuedScrollLyricLog:
+                `Interactivate verse ${interactivatedVerseIndex}.`,
+            queuedScrollLyricByVerse: true,
+            queuedScrollLyricIndex: interactivatedVerseIndex
+        })
     }
 
     render() {
@@ -79,9 +88,7 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedVerseIndex
     },
-    sessionStore: {
-        interactivatedVerseIndex
-    }
+    sessionStore: { interactivatedVerseIndex }
 }) => ({
     isSelectedLogue,
     selectedSongIndex,

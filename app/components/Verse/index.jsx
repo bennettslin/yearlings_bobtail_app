@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import InteractivatedVerseDispatcher from '../../dispatchers/InteractivatedVerse'
+import InteractivatedVerseDispatcher from '../../dispatchers/Interactivated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import VerseLines from './Lines'
@@ -50,7 +50,7 @@ class Verse extends PureComponent {
         // Allow clicks on interactable verses.
         if (this.getIsInteractable()) {
             this.dispatchStopPropagation(e)
-            this.dispatchInteractivatedVerseIndex(this.props.verseIndex)
+            this.interactivateVerseIndex(this.props.verseIndex)
         }
     }
 

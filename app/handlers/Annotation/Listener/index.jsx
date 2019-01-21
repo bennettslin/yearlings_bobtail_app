@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { resetAnnotationQueue } from 'flux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
-import InteractivatedVerseDispatcher from '../../../dispatchers/InteractivatedVerse'
+import InteractivatedVerseDispatcher from '../../../dispatchers/Interactivated/Verse'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotationIndex } from 'album/api/annotations'
@@ -57,7 +57,7 @@ class AnnotationListener extends PureComponent {
              */
             if (queuedAnnotationFromLyricVerse && !canDispatchAnnotation) {
                 const { selectedSongIndex } = this.props
-                this.dispatchInteractivatedVerseIndex(
+                this.interactivateVerseIndex(
                     getVerseIndexForAnnotationIndex(
                         selectedSongIndex,
                         queuedAnnotationIndex

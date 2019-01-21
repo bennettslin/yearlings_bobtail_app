@@ -8,7 +8,7 @@ import { resetInteractivated } from 'flux/session/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
-import { getSceneIndexForVerseIndex } from 'album/api/scenes'
+import { getSceneIndexForVerseIndex } from 'album/api/verses'
 
 class VerseDispatcher extends PureComponent {
 
