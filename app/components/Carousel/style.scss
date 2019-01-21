@@ -10,6 +10,8 @@ $height__carouselHidden: $height__chivalry * 0.05;
     width: 100vw;
 
     opacity: 0;
+
+    // Carousel just needs to be above theatre.
     z-index: $zIndex__theatre;
 
     .DW__desktopWidth
@@ -38,9 +40,6 @@ $height__carouselHidden: $height__chivalry * 0.05;
     .ShW__carouselExpanded
     &.Carousel__visible {
         opacity: 1;
-
-        // Allows the lyric to scroll when carousel has higher z-index.
-        z-index: $zIndex__carouselNav;
     }
 
     .DW__desktopWidth
