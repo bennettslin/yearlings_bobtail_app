@@ -46,6 +46,11 @@ export default [
      * Final UI.
      */
     {
+        taskName: `Establish lyric toggle positioning, slider positioning.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Establish stanza, dot, and selected, interactivated, accessed, disabled, and before, after, and on cursor colours.`,
         workedHours: 1,
         neededHours: 5

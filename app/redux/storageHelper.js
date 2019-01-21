@@ -19,7 +19,7 @@ import {
     DISABLED,
     AUDIO_OPTIONS
 } from 'constants/options'
-import { WINDOW_STORAGE } from 'constants/state'
+import { getWindowStorage } from 'utils/window'
 
 import {
     DOTS_BIT_NUMBER,
@@ -42,7 +42,7 @@ const _getValidatedStoredSongIndex = () => {
 
 const _validateIndexForKey = (key) => {
     const
-        parsedValue = parseInt(WINDOW_STORAGE[key]),
+        parsedValue = parseInt(getWindowStorage()[key]),
         isNumber = !isNaN(parsedValue)
 
     let isValid
@@ -98,7 +98,7 @@ const _validateIndexForKey = (key) => {
 
 const _getValidatedDotsBitNumber = () => {
     const
-        parsedBitNumber = parseInt(WINDOW_STORAGE[DOTS_BIT_NUMBER]),
+        parsedBitNumber = parseInt(getWindowStorage()[DOTS_BIT_NUMBER]),
         isNumber = !isNaN(parsedBitNumber),
         maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length),
         isValid = isNumber && parsedBitNumber < maxBitNumber
@@ -118,7 +118,7 @@ export const getIndexFromStorage = (key) => {
 }
 
 export const setInStorage = (key, value) => {
-    WINDOW_STORAGE[key] = value
+    getWindowStorage()[key] = value
 }
 
 // TODO: Put this in a better place. This isn't really a storage helper.
@@ -153,7 +153,7 @@ export const getDotsFromStorage = () => {
 }
 
 export const getBoolFromStorage = (key) => {
-    const storedValue = WINDOW_STORAGE[key]
+    const storedValue = getWindowStorage()[key]
     switch (storedValue) {
         case 'true':
             return true
@@ -165,11 +165,11 @@ export const getBoolFromStorage = (key) => {
 }
 
 export const setBoolInStorage = (key, value) => {
-    WINDOW_STORAGE[key] = value ? 'true' : 'false'
+    getWindowStorage()[key] = value ? 'true' : 'false'
 }
 
 export const getOptionFromStorage = (key) => {
-    const storedValue = WINDOW_STORAGE[key]
+    const storedValue = getWindowStorage()[key]
 
     if (
         storedValue === SHOWN ||
@@ -191,5 +191,5 @@ export const setOptionInStorage = (key, value) => {
         value = HIDDEN
     }
 
-    WINDOW_STORAGE[key] = value
+    getWindowStorage()[key] = value
 }

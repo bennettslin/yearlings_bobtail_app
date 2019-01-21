@@ -18,7 +18,7 @@ import {
     getVerse
 } from 'album/api/verses'
 
-import { WINDOW_STORAGE } from 'constants/state'
+import { getWindowStorage } from '../../utils/window'
 import { getAnnotation } from 'album/api/annotations'
 
 class LogManager extends PureComponent {
@@ -149,7 +149,7 @@ class LogManager extends PureComponent {
 
     logStorage = () => {
         // Global helper's storage object is the default.
-        return this._logObject('window storage', WINDOW_STORAGE)
+        return this._logObject('window storage', getWindowStorage())
     }
 
     _logObject(description, object) {

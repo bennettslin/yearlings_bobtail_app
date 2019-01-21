@@ -3,16 +3,14 @@
 .LyricToggles {
     position: absolute;
 
-    padding-top: $js__margin__thick;
+    // padding-top: $js__margin__thick;
 
     display: flex;
     flex-direction: column;
 
     .DW__canSliderMount
     & {
-        top:
-            $js__height__menu
-            + $margin__scrollbar / 2;
+        top: $js__height__menu;
     }
 
     & > :not(:last-child) {
