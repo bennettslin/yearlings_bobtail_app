@@ -8,12 +8,6 @@ $js__height__menu__bottom: 48px;
 }
 
 .Menu__main {
-    .PlW__logue
-    & {
-        // This just needs to be below the popup overlay in logues.
-        z-index: $zIndex__lyricColumn;
-    }
-
     transition:
         margin $animationDuration__slow,
         max-width $animationDuration__slow;
