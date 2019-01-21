@@ -9,30 +9,31 @@ import LyricToggleExpand from './Expand'
 import LyricToggleScroll from './Scroll'
 import LyricToggleGlobalAnnotations from './GlobalAnnotations'
 
-const LyricToggles = memo(({ isOnRight }) => (
+const LyricToggles = ({ isBottomRight }) => (
     <div className={cx(
         'LyricToggles',
-        isOnRight ?
-            'LyricToggles__right' :
-            'LyricToggles__left'
+
+        isBottomRight ?
+            'LyricToggles__bottomRight' :
+            'LyricToggles__leftOrTop'
     )}>
-        {isOnRight ? (
+        {isBottomRight ? (
             <___>
-                <LyricToggleScroll />
                 <LyricToggleGlobalAnnotations />
+                <LyricToggleScroll />
             </___>
         ) : (
             <___>
-                <LyricToggleExpand />
                 <LyricToggleEar />
+                <LyricToggleExpand />
             </___>
         )}
     </div>
-))
+)
 
 LyricToggles.propTypes = {
     // From parent.
-    isOnRight: PropTypes.bool
+    isBottomRight: PropTypes.bool
 }
 
-export default LyricToggles
+export default memo(LyricToggles)

@@ -2,28 +2,43 @@
 
 .LyricToggles {
     position: absolute;
-
-    // padding-top: $js__margin__thick;
-
     display: flex;
     flex-direction: column;
-
-    .DW__canSliderMount
-    & {
-        top: $js__height__menu;
-    }
 
     & > :not(:last-child) {
         margin-bottom: $js__margin__thick;
     }
 }
 
-.LyricToggles__left {
-    left: $margin__scrollbar;
+.LyricToggles__leftOrTop {
+
+    .RW__lyricNotExpandable
+    & {
+        right: $margin__scrollbar;
+
+        // Position at same level as play button.
+        top: (
+            $js__height__menu
+            - $js__length__iconLarge
+        ) * 0.5;
+
+        .DW__canSliderMount
+        & {
+            top: $js__height__menu
+                + $js__margin__thin;
+        }
+    }
+
+    .RW__lyricExpandable
+    & {
+        left: $margin__scrollbar;
+        bottom: $js__margin__thin;
+    }
 }
 
-.LyricToggles__right {
+.LyricToggles__bottomRight {
     right: $margin__scrollbar;
+    bottom: $js__margin__thin;
 }
 
 .LyricToggle {

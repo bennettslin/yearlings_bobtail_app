@@ -91,7 +91,7 @@ class Lyric extends PureComponent {
                             }}
                         />
                         <LyricToggles />
-                        <LyricToggles isOnRight />
+                        <LyricToggles isBottomRight />
                         <LyricAccess />
 
                         {/* These are the only two flex children. */}

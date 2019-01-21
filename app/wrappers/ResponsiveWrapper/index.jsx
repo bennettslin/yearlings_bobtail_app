@@ -56,8 +56,9 @@ class ResponsiveWrapper extends PureComponent {
                         !isHeightlessLyric &&
                             'RW__lyricHeighted',
 
-                        isLyricExpandable &&
-                            'RW__lyricExpandable'
+                        isLyricExpandable ?
+                            'RW__lyricExpandable' :
+                            'RW__lyricNotExpandable'
                     )
                 }}
             >
