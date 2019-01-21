@@ -1,5 +1,6 @@
 // Constants prefixed with js *must* be the same in JavaScript.
 $js__height__menu: 72px;
+$js__height__menu__bottom: 48px;
 
 .Menu__topField {
     height: $js__height__menu;
@@ -54,12 +55,14 @@ $js__height__menu: 72px;
     & > :not(:last-child) {
         margin-right: $js__margin__thick * 2;
     }
+}
 
-    // When in two-row menu...
-    .RW__twoRowMenu
-    & {
-        justify-content: space-evenly;
-    }
+.Menu__mainBottom {
+    height: $js__height__menu__bottom;
+    top: auto;
+    bottom: 0;
+
+    padding: 0 $js__margin__thin;
 }
 
 .Menu__lyricTop {

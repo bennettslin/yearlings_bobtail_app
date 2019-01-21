@@ -2,7 +2,7 @@
 
 export const LS_WIDTH_GOLDEN_CORD = 745
 export const LS_WIDTH_UNCANNY_VALLEY = 570
-export const TWO_ROW_MENU_WIDTH_BREAKPOINT = 600
+export const TWO_ROW_MENU_WIDTH_BREAKPOINT = 640
 
 /*****************
  * BUTTON VALUES *
@@ -50,12 +50,11 @@ const
 
     LS_WIDTH_MENU_OVERLAY = 720,
     LS_HEIGHT_MENU = 72,
-
-    HEIGHT_BANNER_TWO_ROW_MENU = 48,
+    LS_HEIGHT_MENU_BOTTOM = 48,
 
     LS_HEIGHT_TWO_ROW_MENU =
         LS_HEIGHT_MENU
-        + HEIGHT_BANNER_TWO_ROW_MENU,
+        + LS_HEIGHT_MENU_BOTTOM,
 
     /****************
      * AUDIO VALUES *
