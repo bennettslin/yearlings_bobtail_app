@@ -10,17 +10,32 @@
 }
 
 .BannerScene__odd {
-    background-color: #b88;
+    background-color: $bgColour__beforeSlider;
 }
 
 .BannerScene__even {
-    background-color: #88b;
-}
-
-.BannerScene__interactivated {
-    background-color: #bb8;
+    background-color: $bgColour__beforeSlider__even;
 }
 
 .BannerScene__selected {
-    background-color: #8b8;
+    background-color: $bgColour__audioNeutral;
+}
+
+.BannerScene__afterSelected {
+
+    &.BannerScene__odd {
+        background-color: $bgColour__afterSlider;
+    }
+
+    &.BannerScene__even {
+        background-color: $bgColour__afterSlider__even;
+    }
+}
+
+.BannerScene__interactivated {
+
+    // Make selector specific to override default colour.
+    &.BannerScene {
+        background-color: $bgColour__interactivated;
+    }
 }

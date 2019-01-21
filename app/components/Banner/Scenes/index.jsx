@@ -70,6 +70,7 @@ class BannerScenes extends PureComponent {
                             interactivatedSceneIndex === sceneIndex,
                         isSelected =
                             lyricSceneIndex === sceneIndex,
+                        isAfterSelected = lyricSceneIndex < sceneIndex,
 
                         sceneLeft = sceneStartTime / totalTime * 100,
                         sceneWidth = sceneDuration / totalTime * 100
@@ -81,6 +82,7 @@ class BannerScenes extends PureComponent {
                                 isOdd,
                                 isInteractivated,
                                 isSelected,
+                                isAfterSelected,
                                 sceneIndex,
                                 sceneLeft,
                                 sceneWidth,

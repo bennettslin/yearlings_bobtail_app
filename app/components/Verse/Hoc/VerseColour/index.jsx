@@ -13,7 +13,7 @@ const propTypes = {
         inSlider: PropTypes.bool
     },
 
-    VerseColour = memo(({
+    VerseColour = ({
         isInteractivated,
         verseIndex,
         inUnit,
@@ -77,8 +77,8 @@ const propTypes = {
                 )}
             </div>
         )
-    })
+    }
 
 VerseColour.propTypes = propTypes
 
-export default VerseColour
+export default memo(VerseColour)
