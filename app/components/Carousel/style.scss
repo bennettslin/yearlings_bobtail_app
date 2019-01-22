@@ -2,7 +2,11 @@
 @import "./Annotation/style";
 @import "./Scroll/style";
 
-$height__carouselHidden: $height__chivalry * 0.05;
+/**
+ * Make this the full height of the carousel itself, to ensure that nothing is
+ * clickable when carousel is hidden.
+ */
+$height__carouselHidden: $height__chivalry;
 
 .Carousel {
     position: absolute;
