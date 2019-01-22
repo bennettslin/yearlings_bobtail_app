@@ -68,7 +68,6 @@ const _getValidTarget = (scrollParent) => {
     }
 }
 
-// TODO: Maybe just split into two helpers, one for each scroll listener?
 export const scrollElementIntoView = ({
     isCarousel,
     log = '',
@@ -82,6 +81,7 @@ export const scrollElementIntoView = ({
     isLyricExpanded,
     isSelectedLogue,
     callback
+
 }) => {
     if (isSelectedLogue || index < 0) {
         return
@@ -93,21 +93,20 @@ export const scrollElementIntoView = ({
 
     let element = scrollElement
 
-    /**
-     * TODO: This is a fallback that should never get called. Delete once
-     * confident that it doesn't.
-     */
     if (!element) {
+        /**
+         * This is a fallback. As long as all refs have been set, it should
+         * never get called. Unfortunately, it does happen, though rarely.
+         */
         const selector =
             isNaN(index) ?
-                scrollClass : `${scrollClass}__${index}`
+                scrollClass :
+                `${scrollClass}__${index}`
         element = document.getElementsByClassName(selector)[0]
-
-        logError(`${log}\nScroll by selector: ${scrollClass} ${index}`)
+        logError(`${log}\nNo ref found, scrolled by selector: ${scrollClass} ${index}`)
     }
 
     if (element) {
-        // logScroll(`${log}\nScroll by ref: ${scrollClass} ${index}, in ${time}`)
         logScroll(log)
 
         const

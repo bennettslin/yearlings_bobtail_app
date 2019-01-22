@@ -7,6 +7,15 @@
     right: 0;
 
     cursor: pointer;
+
+    &:hover {
+        animation: bounceHover $animationDuration__default;
+        background-color: $bgColour__interactivated;
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
 }
 
 .BannerScene__odd {

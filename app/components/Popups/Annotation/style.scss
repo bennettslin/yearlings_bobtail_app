@@ -4,15 +4,14 @@
     .Main
     & {
         position: absolute;
-        right: $js__length__icon;
+        right: 0;
 
         .DW__desktopWidth
         & {
             top: 0;
 
             // Wider margin top to make room for buttons.
-            margin-top:
-                $js__length__icon;
+            margin-top: $js__length__icon;
         }
 
         .DW__mobileWidth
@@ -21,9 +20,7 @@
             margin-right: $js__margin__thick;
 
             // Wider margin bottom to make room for buttons.
-            margin-bottom:
-                $js__length__iconLarge__tablet * 0.5
-                + $js__margin__thin;
+            margin-bottom: $js__length__icon;
         }
     }
 }
