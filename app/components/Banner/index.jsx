@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import BannerAccess from './Access'
+import BannerCursor from './Cursor'
 import BannerScenes from './Scenes'
 import PlayTimer from './Timer'
 import SongTitle from './Title'
@@ -29,6 +30,7 @@ class Banner extends PureComponent {
                 'boxShadow__popupView',
                 'flexAlignContainer'
             )}>
+                <BannerCursor />
                 <BannerScenes />
                 <SongTitle />
                 <PlayTimer />
