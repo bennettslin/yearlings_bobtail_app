@@ -29,7 +29,7 @@ class SliderAccess extends PureComponent {
             <AccessLetters
                 {...{
                     accessIconsName: 'slider',
-                    showIfAccessed: !isLyricLogue,
+                    showIfAccessOn: !isLyricLogue,
                     accessKeys: [
                         PREVIOUS_VERSE_KEY,
                         NEXT_VERSE_KEY

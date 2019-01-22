@@ -47,7 +47,7 @@ class CarouselAccess extends PureComponent {
                 dotsBitNumber
             } = this.props,
 
-            showIfAccessed = Boolean(
+            showIfAccessOn = Boolean(
                 /**
                  * Must have at least one selected dot, and no selected
                  * annotation.
@@ -68,7 +68,7 @@ class CarouselAccess extends PureComponent {
             <AccessLetters
                 {...{
                     accessIconsName: 'carousel',
-                    showIfAccessed,
+                    showIfAccessOn,
                     accessKeys: [
                         ARROW_LEFT,
                         ARROW_RIGHT

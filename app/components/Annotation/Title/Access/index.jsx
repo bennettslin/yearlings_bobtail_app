@@ -27,7 +27,7 @@ class AnnotationAccess extends PureComponent {
                 {...{
                     accessIconsName: 'annotationUpDown',
                     isShadow,
-                    showIfAccessed: showUpDown,
+                    showIfAccessOn: showUpDown,
                     accessKeys: [
                         ARROW_UP,
                         ARROW_DOWN

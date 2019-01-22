@@ -33,7 +33,7 @@ class LyricAccess extends PureComponent {
                 isDotsSlideShown
             } = this.props,
 
-            showIfAccessed = Boolean(
+            showIfAccessOn = Boolean(
                 !isDotsSlideShown &&
                 !lyricAnnotationIndex
             )
@@ -43,7 +43,7 @@ class LyricAccess extends PureComponent {
                 {...{
                     accessIconsName: 'lyric',
                     className: 'top__lyricChild',
-                    showIfAccessed,
+                    showIfAccessOn,
                     accessKeys: [
                         ARROW_UP,
                         ARROW_DOWN

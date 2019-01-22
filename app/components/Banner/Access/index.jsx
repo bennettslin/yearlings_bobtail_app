@@ -29,7 +29,7 @@ class BannerAccess extends PureComponent {
             <AccessLetters
                 {...{
                     accessIconsName: 'banner',
-                    showIfAccessed: !isLyricLogue,
+                    showIfAccessOn: !isLyricLogue,
                     accessKeys: [
                         PREVIOUS_SCENE_KEY,
                         NEXT_SCENE_KEY

@@ -12,6 +12,7 @@ import AccessLetter from '../Access/Letter'
 import { populateRefs } from 'helpers/ref'
 import { getPropsAreShallowEqual } from 'helpers/general'
 
+import { ENTER } from 'constants/access'
 import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 
 class Button extends Component {
@@ -72,8 +73,21 @@ class Button extends Component {
                 children
             } = this.props,
 
-            isDefaultSize = !isLargeSize && !isSmallSize && !isCustomSize,
-            showIfAccessed = isAccessed && !isDisabled
+            isDefaultSize =
+                !isLargeSize &&
+                !isSmallSize &&
+                !isCustomSize,
+
+            isAccessEnter = accessKey === ENTER,
+
+            showIfAccessOn = !isDisabled && (
+
+                // If its access key is not Enter, always show if access is on.
+                !isAccessEnter ||
+
+                // If it's Enter, show if it's the one accessed index.
+                isAccessed
+            )
 
         return (
             <div
@@ -83,10 +97,11 @@ class Button extends Component {
                         `Button__${buttonName}`,
                         isPopupButton && 'Button__popup',
                         isCustomSize && `Button__${buttonName}Size`,
-                        showIfAccessed && [
-                            `${CHILD_ACCESS_PREFIX}${accessKey}`,
-                            'Button__accessed'
-                        ],
+
+                        isAccessEnter ? {
+                            'Button__accessed': showIfAccessOn
+                        } : `${CHILD_ACCESS_PREFIX}${accessKey}`,
+
                         {
                             'Button__indexSelected': isIndexSelected,
                             'Button__enabled': !isDisabled,
@@ -119,7 +134,7 @@ class Button extends Component {
                         <AccessLetter
                             inButtonOrDotAnchor
                             {...{
-                                showIfAccessed,
+                                showIfAccessOn,
                                 accessKey
                             }}
                         />

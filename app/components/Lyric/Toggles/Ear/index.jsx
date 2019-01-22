@@ -41,9 +41,11 @@ class LyricToggleEar extends PureComponent {
 
     render() {
         const {
-            isEarShown,
-            earColumnIndex
-        } = this.props
+                isEarShown,
+                earColumnIndex
+            } = this.props,
+
+            buttonIdentifier = EAR_COLUMN_KEYS[earColumnIndex]
 
         return (
             <CSSTransition
@@ -68,8 +70,7 @@ class LyricToggleEar extends PureComponent {
                         isLargeSize
                         {...{
                             buttonName: LYRIC_EAR_BUTTON_KEY,
-                            buttonIdentifier:
-                            EAR_COLUMN_KEYS[earColumnIndex],
+                            buttonIdentifier,
                             accessKey: LYRIC_COLUMN_TOGGLE_KEY,
                             handleButtonClick: this.handleDoublespeakerClick
                         }}

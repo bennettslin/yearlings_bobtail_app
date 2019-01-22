@@ -28,9 +28,11 @@ class AboutToggle extends PureComponent {
             )}>
                 <Button
                     isCustomSize
-                    buttonName={ABOUT_BUTTON_KEY}
-                    accessKey={ABOUT_TOGGLE_KEY}
-                    handleButtonClick={this._handleButtonClick}
+                    {...{
+                        buttonName: ABOUT_BUTTON_KEY,
+                        accessKey: ABOUT_TOGGLE_KEY,
+                        handleButtonClick: this._handleButtonClick
+                    }}
                 />
                 <AboutDispatcher {...{ getRefs: this._getRefs }} />
             </div>

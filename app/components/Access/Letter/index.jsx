@@ -25,7 +25,7 @@ const propTypes = {
     inTextAnchor: PropTypes.bool,
     inButtonOrDotAnchor: PropTypes.bool,
     isShadow: PropTypes.bool,
-    showIfAccessed: PropTypes.bool,
+    showIfAccessOn: PropTypes.bool,
     animateStandaloneOnKeyDown: PropTypes.bool,
     accessKey: PropTypes.string.isRequired
 }
@@ -35,7 +35,7 @@ const AccessLetter = memo(({
     inTextAnchor,
     inButtonOrDotAnchor,
     isShadow,
-    showIfAccessed,
+    showIfAccessOn,
     animateStandaloneOnKeyDown,
     accessKey
 
@@ -46,7 +46,7 @@ const AccessLetter = memo(({
             mountOnEnter
             unmountOnExit
             {...{
-                in: isAccessOn && showIfAccessed,
+                in: isAccessOn && showIfAccessOn,
                 timeout: 200,
                 classNames: {
                     enterActive: 'AccessLetter__shown',

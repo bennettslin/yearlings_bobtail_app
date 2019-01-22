@@ -108,10 +108,10 @@ class NavButton extends PureComponent {
                         buttonIdentifier,
                         isDisabled: !isEnabled,
                         isIndexSelected: isSelected,
+                        accessKey: isToggle ? '' : ENTER,
                         isAccessed:
                             isAccessed &&
                             isNavigable,
-                        accessKey: isToggle ? '' : ENTER,
                         handleButtonClick: this._handleButtonClick
                     }}
                 />

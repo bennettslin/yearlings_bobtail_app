@@ -103,8 +103,8 @@ class AnnotationWormhole extends PureComponent {
                     <Button
                         {...{
                             accessKey: ENTER,
-                            buttonName: WORMHOLE_BUTTON_KEY,
                             isAccessed: isAccessed && isSelected,
+                            buttonName: WORMHOLE_BUTTON_KEY,
                             handleButtonClick: this._handleWormholeClick
                         }}
                     />

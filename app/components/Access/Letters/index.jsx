@@ -10,7 +10,7 @@ const propTypes = {
     // From parent.
     accessIconsName: PropTypes.string,
     isShadow: PropTypes.bool,
-    showIfAccessed: PropTypes.bool,
+    showIfAccessOn: PropTypes.bool,
     accessKeys: PropTypes.arrayOf(
         PropTypes.string.isRequired
     ).isRequired,
@@ -20,7 +20,7 @@ const propTypes = {
 const AccessLetters = memo(({
     accessIconsName,
     isShadow,
-    showIfAccessed,
+    showIfAccessOn,
     accessKeys,
     className
 
@@ -38,7 +38,7 @@ const AccessLetters = memo(({
                 {...{
                     accessKey,
                     isShadow,
-                    showIfAccessed
+                    showIfAccessOn
                 }}
             />
         ))}
