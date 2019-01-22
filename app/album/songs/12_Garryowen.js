@@ -315,7 +315,14 @@ export default {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `In traditional counterpoint, the chords and harmonic rhythm are byproducts of the melodic contour. The chord progressions for this song were already set, however. So I was left to figure out on my own how counterpoint might be scored in this scenario, since I didn't know of any working examples.`,
+                        description: [
+                            `In traditional`,
+                            {
+                                anchor: `counterpoint,`,
+                                wiki: `Counterpoint`
+                            },
+                            `a harmonic progression arises as the natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of extracting individual notes from the harmonic progression, then linking them to create interweaving melodies.`
+                        ],
                         dotKeys: {
                             [REFERENCE]: true,
                             [SONGWRITING]: true

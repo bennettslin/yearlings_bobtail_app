@@ -142,10 +142,10 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`
                                     },
-                                    `of the Soviet Union were centrally planned mandates for rapid economic growth. The first few were particularly brutal, as the disruptive shock of industrialising an agrarian society led to widespread famine and death. Similarly, given how much lost ground I needed to recover, in hindsight it may have been naive to think that my own five-year plan for rapid intellectual growth could be free of unintended negative effects.`
+                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus felt like the perfect time frame to complete my own plan for rapid character growth.`
                                 ],
                                 dotKeys: {
-                                    [OBSERVATION]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },
@@ -182,7 +182,7 @@ export default {
                         {
                             anchor: `mystery mensch.`,
                             card: {
-                                description: `Up to this point, I'd managed to attract a smattering of women, all of whom were drawn to my brooding, cynical personality. And all of them were eventually turned off in the same way, upon concluding that nothing of greater substance lay beneath. It made perfect sense, then, to start by legitimately becoming what they mistakenly assumed me to be.`,
+                                description: `Up to this point, I'd managed to attract a smattering of women through my brooding, cynical personality. And all of them were eventually turned off in the same way, upon concluding that nothing of greater substance lay beneath. It made perfect sense, then, to start by legitimately becoming what I was mistakenly assumed to be.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true
@@ -286,7 +286,25 @@ export default {
             mainVerses: [
                 {
                     time: 75,
-                    lyric: `Year five, and now the one who dug me up`
+                    lyric: [
+                        {
+                            anchor: `Year five,`,
+                            card: {
+                                description: [
+                                    `The`,
+                                    {
+                                        anchor: `first five-year plan`,
+                                        wiki: `First_five-year_plan`
+                                    },
+                                    `of the Soviet Union was quite brutal, as the disruptive shock of industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting from, it was naive to think that my own five-year plan could be free of unintended negative effects.`
+                                ],
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        },
+                        `and now the one who dug me up`
+                    ]
                 },
                 {
                     time: 77,

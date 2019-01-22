@@ -31,17 +31,17 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `In Chinese,`,
+                            `In Mandarin Chinese,`,
                             {
                                 isItalic: true,
                                 lyric: `didi`
                             },
-                            `means "little brother." While my family is from`,
+                            `means "little brother." My family hails from`,
                             {
                                 anchor: `Taiwan,`,
                                 wiki: `Taiwan`
                             },
-                            `the Chinese took over the island in 1949 and imposed their language. The Taiwanese we spoke at home thus included a healthy sprinkle of Chinese words.`
+                            `an island that was taken over by the Chinese in 1949. The Taiwanese we speak at home thus includes a healthy sprinkle of Chinese words.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true
@@ -56,7 +56,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `In this song sung from my sister's perspective when we were children, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
+                            `In this song sung from the perspective of my sister as a child, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
                             {
                                 isItalic: true,
                                 lyric: {
