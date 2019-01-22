@@ -17,10 +17,10 @@
         padding-left: $width__overviewToggle__tablet;
     }
 
-    .DW__miniWidth
-    & {
-        padding-left: $width__overviewToggle__mini;
-    }
+    // .DW__miniWidth
+    // & {
+    //     padding-left: $width__overviewToggle__mini;
+    // }
 
     /**
      * I'm baffled why padding-right can't just be applied to the scroll parent
@@ -59,8 +59,8 @@
         padding-right: $width__carouselSelect__tablet;
     }
 
-    .DW__miniWidth
-    &:after {
-        padding-right: $width__carouselSelect__mini;
-    }
+    // .DW__miniWidth
+    // &:after {
+    //     padding-right: $width__carouselSelect__mini;
+    // }
 }

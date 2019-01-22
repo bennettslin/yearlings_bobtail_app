@@ -79,21 +79,24 @@ class WindowResizeEnterDispatcher extends PureComponent {
             isTwoRowMenu = getIsTwoRowMenu({
                 deviceWidthIndex,
                 windowWidth
-            })
+            }),
+            menuHeight = getMenuHeight({ isTwoRowMenu })
 
         this._updateViewportAndMountStores({
             deviceWidthIndex,
             windowHeight,
             windowWidth,
             isHeightlessLyric,
-            isTwoRowMenu
+            isTwoRowMenu,
+            menuHeight
         })
 
         this._updateResponsiveStore({
             deviceWidthIndex,
             windowWidth,
             isHeightlessLyric,
-            isTwoRowMenu
+            isTwoRowMenu,
+            menuHeight
         })
     }
 
@@ -102,7 +105,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
         windowHeight,
         windowWidth,
         isHeightlessLyric,
-        isTwoRowMenu
+        isTwoRowMenu,
+        menuHeight
     }) {
         const { isHigherProcessor } = this.props,
             canCarouselMount = getCanCarouselMount({
@@ -166,7 +170,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowHeight,
                 stageHeight,
-                isHeightlessLyric
+                isHeightlessLyric,
+                menuHeight
             })
         })
     }
@@ -175,14 +180,13 @@ class WindowResizeEnterDispatcher extends PureComponent {
         deviceWidthIndex,
         windowWidth,
         isHeightlessLyric,
-        isTwoRowMenu
+        isTwoRowMenu,
+        menuHeight
     }) {
         this.props.updateResponsiveStore({
             isHeightlessLyric,
             isTwoRowMenu,
-            menuHeight: getMenuHeight({
-                isTwoRowMenu
-            }),
+            menuHeight,
             isMobileWiki: getIsMobileWiki({
                 deviceWidthIndex,
                 windowWidth

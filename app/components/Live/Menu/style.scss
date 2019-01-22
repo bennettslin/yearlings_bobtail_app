@@ -1,6 +1,5 @@
 // Constants prefixed with js *must* be the same in JavaScript.
 $js__height__menu: 72px;
-$js__height__menu__bottom: 48px;
 
 .Menu__topField {
     height: $js__height__menu;
@@ -52,11 +51,16 @@ $js__height__menu__bottom: 48px;
 }
 
 .Menu__mainBottom {
-    height: $js__height__menu__bottom;
-    top: auto;
-    bottom: 0;
+    top: $js__height__menu;
+    padding-top: $js__margin__thin;
 
-    padding: 0 $js__margin__thin;
+    height:
+        $js__length__iconLarge
+        + $js__margin__thin;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .Menu__lyricTop {

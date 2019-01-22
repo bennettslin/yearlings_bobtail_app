@@ -1,3 +1,10 @@
+.Audio {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .AudioButton {
     z-index: $zIndex__menuChild;
 }

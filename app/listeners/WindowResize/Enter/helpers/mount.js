@@ -1,12 +1,11 @@
 import {
     getIsPhoneWidth,
+    getIsMiniWidth,
     getIsDesktopWidth
 } from 'helpers/responsive'
 
 import {
     MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV,
-    LS_HEIGHT_MENU,
-    LS_HEIGHT_TWO_ROW_MENU,
     LS_HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
@@ -40,8 +39,11 @@ export const getCanCarouselMount = ({
         // and not heightless lyric...
         !isHeightlessLyric &&
 
-        // and not phone...
-        !getIsPhoneWidth(deviceWidthIndex) &&
+        // and not phone or mini width...
+        !(
+            getIsPhoneWidth(deviceWidthIndex) ||
+            getIsMiniWidth(deviceWidthIndex)
+        ) &&
 
         // and if window height is above minimum.
         windowHeight >= MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV
@@ -52,7 +54,8 @@ export const getLyricDynamicHeight = ({
     deviceWidthIndex,
     windowHeight,
     stageHeight,
-    isHeightlessLyric
+    isHeightlessLyric,
+    menuHeight
 
 }) => {
 
@@ -72,17 +75,11 @@ export const getLyricDynamicHeight = ({
         return LS_HEIGHT_LYRIC_COLLAPSED
     }
 
-    const
-        // This is a dynamic value.
-        menuHeight = getIsPhoneWidth(deviceWidthIndex) ?
-            LS_HEIGHT_TWO_ROW_MENU :
-            LS_HEIGHT_MENU,
+    const lyricDynamicHeight = (
+        windowHeight
+        - menuHeight
+        - stageHeight
+    ) / windowHeight
 
-        rawHeight = (
-            windowHeight
-            - menuHeight
-            - stageHeight
-        ) / windowHeight
-
-    return Number(rawHeight.toFixed(2))
+    return Number(lyricDynamicHeight.toFixed(2))
 }

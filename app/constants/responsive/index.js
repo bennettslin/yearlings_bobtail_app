@@ -21,11 +21,16 @@ export const LS_MARGIN_THIN = 4
  * MENU VALUES *
  ***************/
 
-const LS_HEIGHT_MENU_BOTTOM = 48
+/**
+ * This value only needs to accommodate the extra height added by the menu
+ * button. It does not need to equal it exactly.
+ */
+const HEIGHT_MENU_BOTTOM_OFFSET = LS_LENGTH_ICON_LARGE
+
 export const LS_HEIGHT_MENU = 72
 export const LS_HEIGHT_TWO_ROW_MENU =
     LS_HEIGHT_MENU
-    + LS_HEIGHT_MENU_BOTTOM
+    + HEIGHT_MENU_BOTTOM_OFFSET
 
 /***************
  * MAIN VALUES *

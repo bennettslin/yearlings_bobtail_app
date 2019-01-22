@@ -1,7 +1,8 @@
 // Component to show buttons for audio navigation.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import AudioOptionDispatcher from '../../dispatchers/AudioOptionDispatcher'
@@ -31,12 +32,14 @@ const mapStateToProps = ({
     playersStore: { playersBitNumber },
     audioStore: { isPlaying },
     sessionStore: { selectedAudioOptionIndex },
-    selectedStore: { selectedSongIndex }
+    selectedStore: { selectedSongIndex },
+    responsiveStore: { isTwoRowMenu }
 }) => ({
     isPlaying,
     playersBitNumber,
     selectedAudioOptionIndex,
-    selectedSongIndex
+    selectedSongIndex,
+    isTwoRowMenu
 })
 
 class Audio extends PureComponent {
@@ -46,7 +49,8 @@ class Audio extends PureComponent {
         isPlaying: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired
+        selectedSongIndex: PropTypes.number.isRequired,
+        isTwoRowMenu: PropTypes.bool.isRequired
     }
 
     _handleAudioOptionClick = () => {
@@ -75,7 +79,8 @@ class Audio extends PureComponent {
                 playersBitNumber,
 
                 isPlaying,
-                selectedAudioOptionIndex
+                selectedAudioOptionIndex,
+                isTwoRowMenu
             } = this.props,
 
             isPrologue = selectedSongIndex === 0,
@@ -88,7 +93,24 @@ class Audio extends PureComponent {
             })
 
         return (
-            <___>
+            <div
+                {...{
+                    className: cx(
+                        'Audio'
+                    )
+                }}
+            >
+                {/* Placeholder to create space. */}
+                {isTwoRowMenu && (
+                    <div
+                        {...{
+                            className: cx(
+                                'Audio__flexPlaceholder'
+                            )
+                        }}
+                    />
+                )}
+
                 {/* Previous button. */}
                 <Button
                     {...{
@@ -135,10 +157,22 @@ class Audio extends PureComponent {
                         handleButtonClick: this._handleAudioOptionClick
                     }}
                 />
+
+                {/* Placeholder to create space. */}
+                {isTwoRowMenu && (
+                    <div
+                        {...{
+                            className: cx(
+                                'Audio__flexPlaceholder'
+                            )
+                        }}
+                    />
+                )}
+
                 <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </div>
         )
     }
 }

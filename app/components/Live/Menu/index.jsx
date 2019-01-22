@@ -111,10 +111,10 @@ class Menu extends PureComponent {
                         }}
                     >
                         <AboutToggle />
+                        <Banner />
                         {!isTwoRowMenu && (
-                            <Banner />
+                            <Audio />
                         )}
-                        <Audio />
                     </div>
 
                     {isTwoRowMenu && (
@@ -126,7 +126,7 @@ class Menu extends PureComponent {
                                 )
                             }}
                         >
-                            <Banner />
+                            <Audio />
                         </div>
                     )}
                 </div>
