@@ -1,9 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
 
-const mapStateToProps = null
+import BannerSceneSquare from './Square'
 
 class BannerScene extends PureComponent {
 
@@ -41,15 +40,7 @@ class BannerScene extends PureComponent {
                 {...{
                     className: cx(
                         'BannerScene',
-                        isOdd ?
-                            'BannerScene__even' :
-                            'BannerScene__odd',
-                        isInteractivated &&
-                            'BannerScene__interactivated',
-                        isSelected &&
-                            'BannerScene__selected',
-                        isAfterSelected &&
-                            'BannerScene__afterSelected'
+                        'abF'
                     ),
                     style: {
                         left: `${sceneLeft}%`,
@@ -57,9 +48,18 @@ class BannerScene extends PureComponent {
                     },
                     onClick: this._handleSceneClick
                 }}
-            />
+            >
+                <BannerSceneSquare
+                    {...{
+                        isOdd,
+                        isInteractivated,
+                        isSelected,
+                        isAfterSelected
+                    }}
+                />
+            </div>
         )
     }
 }
 
-export default connect(mapStateToProps)(BannerScene)
+export default BannerScene

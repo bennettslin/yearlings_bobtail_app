@@ -37,13 +37,20 @@ class BannerCursor extends PureComponent {
                     className: cx(
                         'BannerCursor',
                         'abF'
-                    ),
-                    style: {
-                        width: `${cursorWidth}%`
-                    }
+                    )
                 }}
             >
-
+                <div
+                    {...{
+                        className: cx(
+                            'BannerTracker',
+                            'abF'
+                        ),
+                        style: {
+                            width: `${cursorWidth}%`
+                        }
+                    }}
+                />
             </div>
         )
     }

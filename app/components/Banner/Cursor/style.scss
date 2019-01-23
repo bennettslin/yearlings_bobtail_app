@@ -1,5 +1,12 @@
 .BannerCursor {
+    height: 45%;
+    top: auto;
+    bottom: 0;
+    background-color: #8a6;
+}
+
+.BannerTracker {
     background-color: #6a8;
     transition:
-        width $animationDuration__slow,
+        width $animationDuration__slow;
 }

@@ -1,4 +1,9 @@
 .PlayTimer {
     position: relative;
     font-size: 1.2em;
+
+    .Banner__smallText
+    & {
+        font-size: 0.9em;
+    }
 }

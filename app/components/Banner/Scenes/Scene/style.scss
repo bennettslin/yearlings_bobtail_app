@@ -1,50 +1,5 @@
+@import "./Square/style";
+
 .BannerScene {
-    position: absolute;
-    height: 100%;
-
-    // Anchor to bottom and right!
-    bottom: 0;
-    right: 0;
-
     cursor: pointer;
-
-    &:hover {
-        animation: bounceHover $animationDuration__default;
-        background-color: $bgColour__interactivated;
-    }
-
-    &:active {
-        transform: scale(0.9);
-    }
-}
-
-.BannerScene__odd {
-    background-color: $bgColour__beforeSlider;
-}
-
-.BannerScene__even {
-    background-color: $bgColour__beforeSlider__even;
-}
-
-.BannerScene__selected {
-    background-color: $bgColour__audioNeutral;
-}
-
-.BannerScene__afterSelected {
-
-    &.BannerScene__odd {
-        background-color: $bgColour__afterSlider;
-    }
-
-    &.BannerScene__even {
-        background-color: $bgColour__afterSlider__even;
-    }
-}
-
-.BannerScene__interactivated {
-
-    // Make selector specific to override default colour.
-    &.BannerScene {
-        background-color: $bgColour__interactivated;
-    }
 }

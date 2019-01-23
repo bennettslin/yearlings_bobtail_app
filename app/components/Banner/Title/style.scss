@@ -1,4 +1,9 @@
 .SongTitle {
     position: relative;
     font-size: 1.4em;
+
+    .Banner__smallText
+    & {
+        font-size: 1.1em;
+    }
 }

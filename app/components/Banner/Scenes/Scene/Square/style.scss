@@ -1,0 +1,48 @@
+.BannerSceneSquare {
+    height: 45%;
+
+    transition:
+        background-color $animationDuration__default;
+
+    .BannerScene:hover
+    & {
+        animation: bounceHover $animationDuration__default;
+        background-color: $bgColour__interactivated;
+    }
+
+    .BannerScene:active
+    & {
+        transform: scale(0.9);
+    }
+}
+
+.BannerSceneSquare__odd {
+    background-color: $bgColour__beforeSlider;
+}
+
+.BannerSceneSquare__even {
+    background-color: $bgColour__beforeSlider__even;
+}
+
+.BannerSceneSquare__selected {
+    background-color: $bgColour__audioNeutral;
+}
+
+.BannerSceneSquare__afterSelected {
+
+    &.BannerSceneSquare__odd {
+        background-color: $bgColour__afterSlider;
+    }
+
+    &.BannerSceneSquare__even {
+        background-color: $bgColour__afterSlider__even;
+    }
+}
+
+.BannerSceneSquare__interactivated {
+
+    // Make selector specific to override default colour.
+    &.BannerSceneSquare {
+        background-color: $bgColour__interactivated;
+    }
+}

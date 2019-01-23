@@ -6,6 +6,7 @@ import {
     LS_MARGIN_THIN
 } from '..'
 
+export const BANNER_SMALL_TEXT_WIDTH = 400 // Eyeballed.
 export const LS_WIDTH_GOLDEN_CORD = 745
 export const LS_WIDTH_UNCANNY_VALLEY = 570
 export const LS_WIDTH_MENU_BREAKPOINT = 720

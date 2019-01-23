@@ -11,30 +11,34 @@ import PlayTimer from './Timer'
 import SongTitle from './Title'
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
+    responsiveStore: { isSmallBannerText }
 }) => ({
-    selectedSongIndex
+    isSmallBannerText
 })
 
 class Banner extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired
+        isSmallBannerText: PropTypes.bool.isRequired
     }
 
     render() {
+        const { isSmallBannerText } = this.props
+
         return (
             <div className={cx(
                 'Banner',
+                isSmallBannerText &&
+                    'Banner__smallText',
                 'boxShadow__popupView',
                 'flexAlignContainer'
             )}>
                 <BannerCursor />
-                <BannerScenes />
                 <SongTitle />
                 <PlayTimer />
                 <BannerAccess />
+                <BannerScenes />
             </div>
         )
     }

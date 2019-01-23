@@ -25,7 +25,8 @@ import {
 import {
     getIsLyricExpandable,
     getIsTwoRowMenu,
-    getMenuHeight
+    getMenuHeight,
+    getIsSmallBannerText
 } from './helpers/responsive'
 import { getCeilingFloorHeight } from './helpers/theatre'
 import { getIsMobileWiki } from './helpers/wiki'
@@ -199,7 +200,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth
             }),
-            isLyricExpandable: getIsLyricExpandable(deviceWidthIndex)
+            isLyricExpandable: getIsLyricExpandable(deviceWidthIndex),
+            isSmallBannerText: getIsSmallBannerText(windowWidth)
         })
     }
 
