@@ -417,10 +417,10 @@ export default {
                         {
                             anchor: `claws you built from scratches,`,
                             card: {
-                                description: `A cat scratches to keep its claws sharp, just like I had sharpened my emotional defences to guard against a lifetime of scratches.`,
+                                description: `Cats scratch to keep their claws sharp, just like I had learned to sharpen my emotional defenses after a lifetime of getting scratched and clawed.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [PUN]: true
                                 }
                             }
                         },
