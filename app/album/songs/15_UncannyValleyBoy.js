@@ -1253,10 +1253,10 @@ export default {
                                             wiki: `Bildungsroman`
                                         }
                                     },
-                                    `is a literary coming-of-age story, of which James Joyce's first novel,`,
+                                    `is a literary coming-of-age story, of which James Joyce's`,
                                     {
                                         isItalic: true,
-                                        lyric: `A Portrait of the Artist as a Young Man,`
+                                        lyric: `A Portrait of the Artist as a Young Man`
                                     },
                                     `is a well-known example. My conceit for`,
                                     {

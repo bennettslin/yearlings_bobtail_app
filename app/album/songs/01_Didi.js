@@ -104,6 +104,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
+                            `My ambition for this album was to do for rock music what James Joyce did for modern literature. Since his semi-autobiographical first novel,`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -111,7 +112,7 @@ export default {
                                     wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
                                 }
                             },
-                            `James Joyce's semi-autobiographical novel, begins in the simple prose of a child, so I did the same for this first song of the album.`
+                            `begins in the simple prose of a child, I did the same with this first song of the album.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -133,7 +134,14 @@ export default {
                             anchor: `tie his shoes?`,
                             cards: [
                                 {
-                                    description: `Being left-handed, I struggled as a child to learn the proper way to tie shoelaces, where one bunny goes around the tree. So I came up with my own version that looked like the real thing, but was always coming undone.`,
+                                    description: [
+                                        `In preschool, we were taught to tie our shoes by making the`,
+                                        {
+                                            anchor: `bunny criss-cross the tree.`,
+                                            wiki: `Shoelace_knot`
+                                        },
+                                        `But being left-handed, I was never clear on which hand was the bunny, and my shoelaces always came undone as a result.`
+                                    ],
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
