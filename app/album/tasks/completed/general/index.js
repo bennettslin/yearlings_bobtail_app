@@ -4495,5 +4495,10 @@ export default [
         taskName: `Make banner select scenes.`,
         workedHours: 25,
         neededHours: 25
+    },
+    {
+        taskName: `Tips content`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
