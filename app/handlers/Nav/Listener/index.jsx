@@ -12,6 +12,7 @@ class NavListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isAccessOn: PropTypes.bool.isRequired,
         isNavShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
@@ -19,24 +20,58 @@ class NavListener extends PureComponent {
     }
 
     componentDidUpdate(prevProps) {
-        this._handleNavExpandIfNeeded(prevProps)
+        this._updateNavBook(prevProps)
+        this._checkAccessedNav(prevProps)
     }
 
-    _handleNavExpandIfNeeded(prevProps) {
-        const
-            { isNavShown } = this.props,
+    _updateNavBook(prevProps) {
+        const {
+                selectedSongIndex,
+                isNavShown
+            } = this.props,
             { isNavShown: wasNavShown } = prevProps
 
         if (isNavShown && !wasNavShown) {
+            this.props.updateSessionStore({
+                shownNavBookIndex: getBookForSongIndex(selectedSongIndex)
+            })
+        }
+    }
 
-            const
-                { selectedSongIndex } = this.props,
-                shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
+    _checkAccessedNav = (prevProps = {}) => {
+        const {
+                isAccessOn,
+                isNavShown,
+                selectedSongIndex
+            } = this.props,
+            {
+                isAccessOn: wasAccessOn,
+                isNavShown: wasNavShown
+            } = prevProps
 
+        if (
+            // If access is on, and nav is shown, and...
+            isAccessOn && isNavShown && (
+
+                // ... access was just now turned on, or...
+                !wasAccessOn ||
+
+                // ... nav was just now shown.
+                !wasNavShown
+            )
+        ) {
             this.props.updateAccessStore({
                 accessedNavSongIndex: selectedSongIndex
             })
-            this.props.updateSessionStore({ shownNavBookIndex })
+
+        } else if (
+            // If access was just now turned off, or...
+            !isAccessOn && wasAccessOn ||
+
+            // ... nav is just now hidden.
+            (!isNavShown && wasNavShown)
+        ) {
+            this.props.updateAccessStore({ accessedNavSongIndex: -1 })
         }
     }
 
@@ -46,11 +81,15 @@ class NavListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex },
-    toggleStore: { isNavShown }
+    toggleStore: {
+        isAccessOn,
+        isNavShown
+    },
+    selectedStore: { selectedSongIndex }
 }) => ({
-    selectedSongIndex,
-    isNavShown
+    isAccessOn,
+    isNavShown,
+    selectedSongIndex
 })
 
 export default connect(

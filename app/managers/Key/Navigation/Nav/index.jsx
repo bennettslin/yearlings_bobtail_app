@@ -24,7 +24,6 @@ class NavNavigation extends PureComponent {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
         accessedNavSongIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
         shownNavBookIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
 
@@ -39,19 +38,15 @@ class NavNavigation extends PureComponent {
     }
 
     navigateNav = (e, keyName) => {
-        const {
-            isAccessOn,
-            interactivatedVerseIndex
-        } = this.props
+        const { isAccessOn } = this.props
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
         /**
-         * If access is off, just turn it on. Also ensure there is no
-         * interactivated verse.
+         * Only navigate once access is already on.
          */
-        if (isAccessOn && interactivatedVerseIndex < 0) {
+        if (isAccessOn) {
             let { accessedNavSongIndex } = this.props,
                 direction
 
@@ -120,13 +115,11 @@ class NavNavigation extends PureComponent {
 const mapStateToProps = ({
     toggleStore: { isAccessOn },
     sessionStore: {
-        interactivatedVerseIndex,
         shownNavBookIndex
     },
     accessStore: { accessedNavSongIndex }
 }) => ({
     isAccessOn,
-    interactivatedVerseIndex,
     accessedNavSongIndex,
     shownNavBookIndex
 })

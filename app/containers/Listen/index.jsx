@@ -7,14 +7,13 @@ import AnnotationAccessListener from '../../handlers/AnnotationAccess/Listener'
 import AnnotationListener from '../../handlers/Annotation/Listener'
 import AppLoadListener from '../../listeners/AppLoad'
 import AudioListener from '../../listeners/Audio'
-import CarouselListener from '../../handlers/Carousel/Listener'
+import CarouselNavListener from '../../handlers/CarouselNav/Listener'
 import DotsSlideListener from '../../handlers/DotsSlide/Listener'
 import DoublespeakerListener from '../../listeners/Doublespeaker'
 import LogueListener from '../../listeners/Logue'
 import LyricListener from '../../handlers/Lyric/Listener'
 import LyricIndicesListener from '../../listeners/LyricIndices'
 import MainListener from '../../listeners/Main'
-import NavListener from '../../handlers/Nav/Listener'
 import OverviewListener from '../../handlers/Overview/Listener'
 import PopupAnnotationListener from '../../listeners/PopupAnnotation'
 import SceneChangeExitListener from '../../listeners/SceneChange/Exit'
@@ -66,7 +65,6 @@ class ListenContainer extends PureComponent {
 
     render() {
         const {
-            canCarouselMount,
             canScoreMount,
             canSliderMount
         } = this.props
@@ -78,12 +76,7 @@ class ListenContainer extends PureComponent {
                 <AnnotationListener />
                 <AppLoadListener />
                 <AudioListener />
-                {canCarouselMount && (
-                    <___>
-                        <CarouselListener />
-                        <NavListener />
-                    </___>
-                )}
+                <CarouselNavListener />
                 <DotsSlideListener />
                 <DoublespeakerListener />
                 <LogueListener />

@@ -38,10 +38,6 @@ class SongListener extends PureComponent {
 
         if (selectedSongIndex !== prevSongIndex) {
             const shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
-
-            this.props.updateAccessStore({
-                accessedNavSongIndex: selectedSongIndex
-            })
             this.props.updateLoadStore({ isScoreLoaded: false })
             this.props.updateSessionStore({ shownNavBookIndex })
             this.props.resetInteractivated()

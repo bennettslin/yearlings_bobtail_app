@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import CarouselDispatcher from '../../../handlers/Carousel/Dispatcher'
+import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
 import Button from '../../Button'
 import { CAROUSEL_TOGGLE_KEY } from 'constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from 'constants/buttons'
@@ -61,7 +61,7 @@ class CarouselToggle extends PureComponent {
                         handleButtonClick: this.handleButtonClick
                     }}
                 />
-                <CarouselDispatcher {...{ getRefs: this._getRefs }} />
+                <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

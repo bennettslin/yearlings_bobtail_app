@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
+import NavListener from '../../handlers/Nav/Listener'
 import NavColumn from './Column'
 
 const mapStateToProps = ({
@@ -37,6 +38,7 @@ class Nav extends PureComponent {
                     'abF'
                 )}
             >
+                <NavListener />
                 {/* Placeholder, has no other purpose. */}
                 <div className="CarouselNavToggle__placeholder" />
 

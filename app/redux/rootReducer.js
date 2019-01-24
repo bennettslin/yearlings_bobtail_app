@@ -52,6 +52,8 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [ACCESS_STORE]: AccessReducer,
+    [TOGGLE_STORE]: ToggleReducer,
     [SESSION_STORE]: SessionReducer,
     [RESPONSIVE_STORE]: ResponsiveReducer,
     [OPTION_STORE]: OptionReducer,
@@ -66,10 +68,8 @@ const rootReducer = combineReducers({
     [VIEWPORT_STORE]: DeviceReducer,
 
     [AUDIO_STORE]: AudioReducer,
-    [ACCESS_STORE]: AccessReducer,
     [PLAYERS_STORE]: PlayersReducer,
 
-    [TOGGLE_STORE]: ToggleReducer,
     [DOTS_STORE]: DotsReducer,
     [DOTS_SLIDE_STORE]: DotsSlideReducer,
     [SLIDER_STORE]: SliderReducer,

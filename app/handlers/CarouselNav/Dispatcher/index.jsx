@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
-class CarouselDispatcher extends PureComponent {
+class CarouselNavDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -48,7 +48,10 @@ class CarouselDispatcher extends PureComponent {
             return false
         }
 
-        // If this would otherwise
+        /**
+         * If this would otherwise show the carousel, but there are no dots
+         * selected, don't show the carousel.
+         */
         if (isCarouselShown && !dotsBitNumber) {
             isCarouselShown = false
         }
@@ -123,4 +126,4 @@ export default connect(
         updateScrollCarouselStore,
         updateToggleStore
     }
-)(CarouselDispatcher)
+)(CarouselNavDispatcher)

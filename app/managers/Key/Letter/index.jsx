@@ -11,7 +11,7 @@ import { updateToggleStore } from 'flux/toggle/action'
 import AboutDispatcher from '../../../dispatchers/About'
 import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
-import CarouselDispatcher from '../../../handlers/Carousel/Dispatcher'
+import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
 import InteractivatedSceneDispatcher from '../../../dispatchers/Interactivated/Scene'
@@ -210,7 +210,7 @@ class LetterManager extends PureComponent {
             <___>
                 <AdminDispatcher {...{ getRefs: this._getRefs }} />
                 <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
-                <CarouselDispatcher {...{ getRefs: this._getRefs }} />
+                <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
                 <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
                 <InteractivatedSceneDispatcher {...{ getRefs: this._getRefs }} />
