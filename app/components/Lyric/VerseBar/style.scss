@@ -1,10 +1,37 @@
 .VerseBar {
-
     opacity: 0;
     transform: scale(0.5);
 
+    transition:
+        transform $animationDuration__fast,
+        opacity $animationDuration__fast;
+
     $js__margin__thick__double: $js__margin__thick * 2;
     max-width: calc(100% - #{$js__margin__thick__double});
+}
+
+.VerseBar__above {
+    margin-top: $js__margin__thin;
+    top: 0;
+
+    .DW__canSliderMount
+    & {
+        margin-top:
+            $js__height__menu
+            + $js__margin__thin;
+    }
+}
+
+.VerseBar__below {
+    margin-bottom: $js__margin__thin;
+    bottom: 0;
+}
+
+.VerseBar__shown {
+    transform: scale(1);
+    opacity: 1;
+    cursor: pointer;
+    z-index: $zIndex__lyricChild__topMost;
 }
 
 .VerseBar__animatable {
@@ -27,45 +54,6 @@
 
 .VerseBar__animatable__below {
     box-shadow: $boxShadow__verseBar__below;
-}
-
-.VerseBar__above {
-    margin-top: $js__margin__thin;
-    top: 0;
-
-    transition:
-        transform $animationDuration__fast,
-        opacity $animationDuration__fast;
-
-    &.VerseBar__shown {
-        transform: scale(1);
-        opacity: 1;
-        cursor: pointer;
-        z-index: $zIndex__lyricChild__topMost;
-    }
-
-    .DW__canSliderMount
-    & {
-        margin-top:
-            $js__height__menu
-            + $js__margin__thin;
-    }
-}
-
-.VerseBar__below {
-    margin-bottom: $js__margin__thin;
-    bottom: 0;
-
-    transition:
-        transform $animationDuration__fast,
-        opacity $animationDuration__fast;
-
-    &.VerseBar__shown {
-        transform: scale(1);
-        opacity: 1;
-        cursor: pointer;
-        z-index: $zIndex__lyricChild__topMost;
-    }
 }
 
 .Verse__inBar {

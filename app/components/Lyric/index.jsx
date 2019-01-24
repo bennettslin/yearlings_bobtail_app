@@ -83,17 +83,6 @@ class Lyric extends PureComponent {
                             )
                         }}
                     >
-                        <LyricScroll
-                            {...{
-                                getRefs: this._getRefs,
-                                determineVerseBars: this.determineVerseBars,
-                                setLyricFocusElement
-                            }}
-                        />
-                        <LyricToggles />
-                        <LyricToggles isBottomRight />
-                        <LyricAccess />
-
                         {/* These are the only two flex children. */}
                         <VerseBar
                             isAbove
@@ -106,6 +95,16 @@ class Lyric extends PureComponent {
                                 handleVerseBarWheel: this._handleVerseBarWheel
                             }}
                         />
+                        <LyricScroll
+                            {...{
+                                getRefs: this._getRefs,
+                                determineVerseBars: this.determineVerseBars,
+                                setLyricFocusElement
+                            }}
+                        />
+                        <LyricToggles />
+                        <LyricToggles isBottomRight />
+                        <LyricAccess />
                     </div>
                 </CSSTransition>
             </___>

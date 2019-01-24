@@ -64,8 +64,11 @@ class VerseHoc extends PureComponent {
                 // "Child in lyric."
                 (
                     inUnit || (
-                        inVerseBar && isShownInVerseBar
+                        inVerseBar &&
+                        isShownInVerseBar
                     )
+
+                // This class applies background colour and zIndex.
                 ) && 'ChL'
             ),
 
