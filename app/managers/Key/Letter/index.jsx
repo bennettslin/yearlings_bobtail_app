@@ -6,7 +6,7 @@ import {
     resetWiki
 } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateAccessStore } from 'flux/access/action'
 
 import AboutDispatcher from '../../../dispatchers/About'
 import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
@@ -67,7 +67,7 @@ class LetterManager extends PureComponent {
         selectedTipsOption: PropTypes.string.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
         resetInteractivated: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
 
@@ -196,7 +196,7 @@ class LetterManager extends PureComponent {
 
         // Turn access off.
         } else {
-            this.props.updateToggleStore({ isAccessOn: false })
+            this.props.updateAccessStore({ isAccessOn: false })
             this.props.resetInteractivated()
         }
     }
@@ -229,8 +229,8 @@ class LetterManager extends PureComponent {
 }
 
 const mapStateToProps = ({
+    accessStore: { isAccessOn },
     toggleStore: {
-        isAccessOn,
         isDotsSlideShown,
         isLyricExpanded,
         isScoreShown,
@@ -258,7 +258,7 @@ export default connect(
     mapStateToProps,
     {
         updateSelectedStore,
-        updateToggleStore,
+        updateAccessStore,
         resetInteractivated,
         resetWiki
     }

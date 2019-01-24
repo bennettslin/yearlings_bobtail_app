@@ -4,14 +4,14 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateFocusStore } from 'flux/focus/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateAccessStore } from 'flux/access/action'
 
 class StopPropagationDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         updateFocusStore: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired,
+        updateAccessStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -29,7 +29,7 @@ class StopPropagationDispatcher extends PureComponent {
 
             // Turn access off if not from a keyboard event.
             if (type === 'click' || type === 'mousedown') {
-                this.props.updateToggleStore({ isAccessOn: false })
+                this.props.updateAccessStore({ isAccessOn: false })
             }
 
             if (e.stopPropagation) {
@@ -51,6 +51,6 @@ export default connect(
     mapStateToProps,
     {
         updateFocusStore,
-        updateToggleStore
+        updateAccessStore
     }
 )(StopPropagationDispatcher)

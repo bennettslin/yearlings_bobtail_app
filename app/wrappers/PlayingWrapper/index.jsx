@@ -58,8 +58,10 @@ class PlayingWrapper extends PureComponent {
 const mapStateToProps = ({
     audioStore: { isPlaying },
     lyricStore: { isLyricLogue },
-    toggleStore: { isAccessOn },
-    accessStore: { accessedKey }
+    accessStore: {
+        isAccessOn,
+        accessedKey
+    }
 }) => ({
     isPlaying,
     isLyricLogue,

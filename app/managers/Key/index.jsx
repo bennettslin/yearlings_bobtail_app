@@ -64,7 +64,7 @@ class KeyManager extends PureComponent {
          * Turn on access if any key other than escape was registered.
          */
         if (keyName !== ESCAPE) {
-            this.props.updateToggleStore({ isAccessOn: true })
+            this.props.updateAccessStore({ isAccessOn: true })
         }
 
         /**
@@ -197,7 +197,7 @@ class KeyManager extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isAccessOn },
+    accessStore: { isAccessOn },
     selectedStore: {
         selectedVerseIndex,
         selectedAnnotationIndex

@@ -16,11 +16,11 @@ import { populateRefs } from 'helpers/ref'
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 
 const mapStateToProps = ({
-    accessStore: { accessedDotIndex },
-    toggleStore: {
+    accessStore: {
         isAccessOn,
-        isDotsSlideShown
+        accessedDotIndex
     },
+    toggleStore: { isDotsSlideShown },
     dotsStore: { dotsBitNumber },
     dotsSlideStore: { dotsSlideBitNumber },
     appStore: { isTouchSupported }

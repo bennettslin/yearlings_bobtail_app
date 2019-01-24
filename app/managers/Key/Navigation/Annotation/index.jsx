@@ -134,7 +134,7 @@ class AnnotationNavigation extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isAccessOn },
+    accessStore: { isAccessOn },
     accessStore: { accessedWikiWormholeIndex },
     selectedStore: {
         selectedSongIndex,

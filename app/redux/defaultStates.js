@@ -91,6 +91,7 @@ const
     )
 
 export const ACCESS_DEFAULTS = {
+    isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
     isAccessedIndexedAnchorShown: false,
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 1,
@@ -274,7 +275,6 @@ export const SLIDER_DEFAULTS = {
 }
 
 export const TOGGLE_DEFAULTS = {
-    isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
     isAutoScroll: true,
     isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
     isNavShown: false,

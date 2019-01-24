@@ -81,10 +81,8 @@ class NavListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: {
-        isAccessOn,
-        isNavShown
-    },
+    accessStore: { isAccessOn },
+    toggleStore: { isNavShown },
     selectedStore: { selectedSongIndex }
 }) => ({
     isAccessOn,

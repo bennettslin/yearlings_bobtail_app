@@ -12,7 +12,7 @@ import AccessIcon from './Icon'
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
 const mapStateToProps = ({
-    toggleStore: { isAccessOn }
+    accessStore: { isAccessOn }
 }) => ({
     isAccessOn
 })

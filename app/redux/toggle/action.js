@@ -7,7 +7,6 @@ import {
 
 import {
     TOGGLE_STORE,
-    IS_ACCESS_ON,
     IS_ADMIN_ON,
     IS_CAROUSEL_SHOWN
 } from '../storeKeys'
@@ -16,14 +15,10 @@ import { TOGGLE_DEFAULTS } from '../defaultStates'
 export const updateToggleStore = (payload = TOGGLE_DEFAULTS) => {
 
     const {
-        isAccessOn,
         isAdminOn,
         isCarouselShown
     } = payload
 
-    if (hasKey(isAccessOn)) {
-        setBoolInStorage(IS_ACCESS_ON, isAccessOn)
-    }
     if (hasKey(isAdminOn)) {
         setBoolInStorage(IS_ADMIN_ON, isAdminOn)
     }

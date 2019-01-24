@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateAccessStore } from 'flux/access/action'
 import { resetInteractivated } from 'flux/session/action'
 
 class SliderListener extends PureComponent {
@@ -12,7 +12,7 @@ class SliderListener extends PureComponent {
         // Through Redux.
         isSliderTouched: PropTypes.bool.isRequired,
         resetInteractivated: PropTypes.func.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateAccessStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -26,7 +26,7 @@ class SliderListener extends PureComponent {
 
         if (isSliderTouched && !wasSliderTouched) {
             this.props.resetInteractivated()
-            this.props.updateToggleStore({ isAccessOn: false })
+            this.props.updateAccessStore({ isAccessOn: false })
         }
     }
 
@@ -44,7 +44,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateToggleStore,
+        updateAccessStore,
         resetInteractivated
     }
 )(SliderListener)

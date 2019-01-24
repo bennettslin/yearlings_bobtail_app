@@ -1,10 +1,26 @@
 // Actions for accessed values.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import { setBoolInStorage } from '../storageHelper'
+import {
+    hasKey,
+    getDefinedOnlyPayload
+} from '../actionHelper'
 
-import { ACCESS_STORE } from '../storeKeys'
+import {
+    IS_ACCESS_ON,
+    ACCESS_STORE
+} from '../storeKeys'
 import { ACCESS_DEFAULTS } from '../defaultStates'
 
-export const updateAccessStore = (payload = ACCESS_DEFAULTS) => ({
-    type: ACCESS_STORE,
-    payload: getDefinedOnlyPayload(payload)
-})
+export const updateAccessStore = (payload = ACCESS_DEFAULTS) => {
+
+    const { isAccessOn } = payload
+
+    if (hasKey(isAccessOn)) {
+        setBoolInStorage(IS_ACCESS_ON, isAccessOn)
+    }
+
+    return {
+        type: ACCESS_STORE,
+        payload: getDefinedOnlyPayload(payload)
+    }
+}

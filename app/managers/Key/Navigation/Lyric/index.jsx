@@ -107,8 +107,10 @@ class LyricNavigation extends PureComponent {
 }
 
 const mapStateToProps = ({
-    toggleStore: { isAccessOn },
-    accessStore: { accessedAnnotationIndex },
+    accessStore: {
+        isAccessOn,
+        accessedAnnotationIndex
+    },
     sessionStore: { interactivatedVerseIndex },
     selectedStore: { selectedVerseIndex }
 }) => ({

@@ -7,12 +7,12 @@ import PropTypes from 'prop-types'
 import NavButton from '../Button'
 
 const mapStateToProps = ({
-    toggleStore: {
+    accessStore: {
         isAccessOn,
-        isDotsSlideShown
+        accessedNavSongIndex
     },
-    selectedStore: { selectedSongIndex },
-    accessStore: { accessedNavSongIndex }
+    toggleStore: { isDotsSlideShown },
+    selectedStore: { selectedSongIndex }
 }) => ({
     isAccessOn,
     selectedSongIndex,

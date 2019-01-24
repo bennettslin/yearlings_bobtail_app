@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
 
 const mapStateToProps = ({
+    accessStore: { isAccessOn },
     toggleStore: {
-        isAccessOn,
         isNavShown,
         isDotsSlideShown,
         isLyricExpanded
