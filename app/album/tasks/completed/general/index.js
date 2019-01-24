@@ -4500,5 +4500,10 @@ export default [
         taskName: `Tips content`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column. Solve by not showing wormhole to same song.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

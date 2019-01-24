@@ -107,11 +107,20 @@ const giveEachSourceLinkItsDestination = () => {
                 card = cards[cardIndex]
 
             // Let it know every other link for this wormhole key.
-            card.wormholeLinks = tempLinks.filter((nothing, thisIndex) => {
+            card.wormholeLinks =
+                tempLinks.filter((destinationLink, thisIndex) => {
 
-                // Don't add link to its own wormhole.
-                return index !== thisIndex
-            })
+                    return (
+                        // Don't add link to its own wormhole.
+                        index !== thisIndex &&
+
+                        /**
+                         * Don't add link from the same song. Applies to the
+                         * two "shiv" wormholes in Odin.
+                         */
+                        songIndex !== destinationLink.songIndex
+                    )
+                })
         })
 
     }
@@ -166,10 +175,18 @@ const addWormholeLinksToCard = () => {
                 } = annotation,
                 card = cards[cardIndex]
 
-            card.wormholeLinks = tempLinks.filter((nothing, thisIndex) => {
+            card.wormholeLinks = tempLinks.filter((destinationLink, thisIndex) => {
 
-                // Don't add link to its own wormhole.
-                return index !== thisIndex
+                return (
+                    // Don't add link to its own wormhole.
+                    index !== thisIndex &&
+
+                    /**
+                     * Don't add link from the same song. Applies to the
+                     * two "shiv" wormholes in Odin.
+                     */
+                    songIndex !== destinationLink.songIndex
+                )
 
             }).map(sourceLink => {
                 const {
