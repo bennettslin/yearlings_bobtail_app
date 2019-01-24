@@ -65,7 +65,13 @@ class VerseBar extends PureComponent {
             } = this.props,
             isBelow = !isAbove
 
-        return (isAbove && isVerseBarAbove) || (isBelow && isVerseBarBelow)
+        return (
+            isAbove &&
+            isVerseBarAbove
+        ) || (
+            isBelow &&
+            isVerseBarBelow
+        )
     }
 
     _getRefs = (payload) => {
@@ -128,6 +134,7 @@ class VerseBar extends PureComponent {
                         <VerseHoc
                             inVerseBar
                             {...{
+                                isShownInVerseBar: isShown,
                                 verseIndex,
                                 verseObject,
                                 VerseComponent: Verse

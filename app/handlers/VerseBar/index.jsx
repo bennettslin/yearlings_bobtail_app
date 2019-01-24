@@ -16,6 +16,7 @@ class VerseBar extends PureComponent {
         queuedDetermineVerseBars: PropTypes.bool.isRequired,
         queuedVerseBarsTimeout: PropTypes.number.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
         windowHeight: PropTypes.number.isRequired,
         canSliderMount: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -105,6 +106,7 @@ class VerseBar extends PureComponent {
         const {
                 isLyricExpandable,
                 canSliderMount,
+                isDesktopWidth,
                 windowHeight,
                 isLyricExpanded,
                 lyricDynamicHeight,
@@ -119,6 +121,7 @@ class VerseBar extends PureComponent {
             const verseBarStatusObject = getVerseBarStatus({
                     isLyricExpandable,
                     canSliderMount,
+                    isDesktopWidth,
                     windowHeight,
                     isLyricExpanded,
                     lyricDynamicHeight,
@@ -155,7 +158,10 @@ const mapStateToProps = ({
         queuedDetermineVerseBars,
         queuedVerseBarsTimeout
     },
-    viewportStore: { windowHeight },
+    viewportStore: {
+        isDesktopWidth,
+        windowHeight
+    },
     mountStore: {
         canSliderMount,
         lyricDynamicHeight
@@ -178,6 +184,7 @@ const mapStateToProps = ({
     queuedDetermineVerseBars,
     queuedVerseBarsTimeout,
     isLyricExpandable,
+    isDesktopWidth,
     windowHeight,
     canSliderMount,
     isLyricExpanded,

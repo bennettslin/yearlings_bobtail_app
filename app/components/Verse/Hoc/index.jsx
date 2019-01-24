@@ -23,8 +23,9 @@ class VerseHoc extends PureComponent {
         VerseComponent: PropTypes.func.isRequired,
 
         inSlider: PropTypes.bool,
-        inVerseBar: PropTypes.bool,
         inUnit: PropTypes.bool,
+        inVerseBar: PropTypes.bool,
+        isShownInVerseBar: PropTypes.bool,
 
         handleVerseSelect: PropTypes.func
     }
@@ -36,6 +37,7 @@ class VerseHoc extends PureComponent {
                 interactivatedVerseIndex,
                 handleVerseSelect,
                 inUnit,
+                isShownInVerseBar,
                 ...other
             } = this.props,
 
@@ -60,7 +62,11 @@ class VerseHoc extends PureComponent {
                 'ChV',
 
                 // "Child in lyric."
-                (inUnit || inVerseBar) && 'ChL'
+                (
+                    inUnit || (
+                        inVerseBar && isShownInVerseBar
+                    )
+                ) && 'ChL'
             ),
 
             isInteractivated = verseIndex === interactivatedVerseIndex

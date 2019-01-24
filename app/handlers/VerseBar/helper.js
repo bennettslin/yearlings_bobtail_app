@@ -1,13 +1,19 @@
+import { LS_HEIGHT_MENU } from '../../constants/responsive'
+
 const _getLyricSectionRect = ({
     isLyricExpandable,
     canSliderMount,
+    isDesktopWidth,
     windowHeight,
     isLyricExpanded,
     lyricDynamicHeight,
     menuHeight
 }) => {
     const bottom = windowHeight
-    let top = menuHeight
+    let top =
+        isDesktopWidth ?
+            LS_HEIGHT_MENU :
+            menuHeight
 
     if (!isLyricExpandable && !canSliderMount) {
         /**
@@ -35,6 +41,7 @@ const _getLyricSectionRect = ({
 export const getVerseBarStatus = ({
     isLyricExpandable,
     canSliderMount,
+    isDesktopWidth,
     windowHeight,
     isLyricExpanded,
     lyricDynamicHeight,
@@ -58,6 +65,7 @@ export const getVerseBarStatus = ({
     const lyricSectionRect = _getLyricSectionRect({
             isLyricExpandable,
             canSliderMount,
+            isDesktopWidth,
             windowHeight,
             isLyricExpanded,
             lyricDynamicHeight,
