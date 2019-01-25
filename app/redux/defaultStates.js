@@ -90,18 +90,22 @@ const
         storedVerseIndex
     )
 
+export const ACCESS_DOT_DEFAULTS = {
+    accessedDotIndex: -1
+}
+
 export const ACCESS_NAV_DEFAULTS = {
     accessedNavIndex: -1
 }
 
 export const ACCESS_DEFAULTS = {
+    ...ACCESS_DOT_DEFAULTS,
     ...ACCESS_NAV_DEFAULTS,
     isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
     isAccessedIndexedAnchorShown: false,
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 1,
-    accessedWikiWormholeIndex: 1,
-    accessedDotIndex: -1
+    accessedWikiWormholeIndex: 1
 }
 
 export const ADMIN_DEFAULTS = {
