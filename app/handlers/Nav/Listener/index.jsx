@@ -66,7 +66,7 @@ class NavListener extends PureComponent {
 
         } else if (
             // If access was just now turned off, or...
-            !isAccessOn && wasAccessOn ||
+            (!isAccessOn && wasAccessOn) ||
 
             // ... nav is just now hidden.
             (!isNavShown && wasNavShown)
