@@ -90,14 +90,18 @@ const
         storedVerseIndex
     )
 
+export const ACCESS_NAV_DEFAULTS = {
+    accessedNavIndex: -1
+}
+
 export const ACCESS_DEFAULTS = {
+    ...ACCESS_NAV_DEFAULTS,
     isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
     isAccessedIndexedAnchorShown: false,
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 1,
     accessedWikiWormholeIndex: 1,
-    accessedDotIndex: -1,
-    accessedNavIndex: -1
+    accessedDotIndex: -1
 }
 
 export const ADMIN_DEFAULTS = {
@@ -296,11 +300,19 @@ export const TRANSIENT_DEFAULTS = {
     toggleShowsTipsImmediately: false
 }
 
-export const VERSE_BARS_DEFAULTS = {
+export const VERSE_BARS_POSITION_DEFAULTS = {
     isVerseBarAbove: false,
-    isVerseBarBelow: false,
+    isVerseBarBelow: false
+}
+
+export const VERSE_BARS_QUEUE_DEFAULTS = {
     queuedDetermineVerseBars: false,
     queuedVerseBarsTimeout: 0
+}
+
+export const VERSE_BARS_DEFAULTS = {
+    ...VERSE_BARS_POSITION_DEFAULTS,
+    ...VERSE_BARS_QUEUE_DEFAULTS
 }
 
 export const VIEWPORT_DEFAULTS = {

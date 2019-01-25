@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
+import { resetAccessedNav } from 'flux/access/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 class CarouselNavListener extends PureComponent {
@@ -12,7 +12,8 @@ class CarouselNavListener extends PureComponent {
         // Through Redux.
         canCarouselMount: PropTypes.bool.isRequired,
         dotsBitNumber: PropTypes.number.isRequired,
-        updateToggleStore: PropTypes.func.isRequired
+        updateToggleStore: PropTypes.func.isRequired,
+        resetAccessedNav: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -30,7 +31,7 @@ class CarouselNavListener extends PureComponent {
                 isCarouselShown: false,
                 isNavShown: false
             })
-            this.props.updateAccessStore({ accessedNavIndex: -1 })
+            this.props.resetAccessedNav()
         }
     }
 
@@ -61,7 +62,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateAccessStore,
+        resetAccessedNav,
         updateToggleStore
     }
 )(CarouselNavListener)
