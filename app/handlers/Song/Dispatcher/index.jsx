@@ -86,8 +86,7 @@ class SongDispatcher extends PureComponent {
         this.props.updateAccessStore({
             accessedAnnotationIndex:
                 isWormholeSelected ?
-                    selectedAnnotationIndex :
-                    1,
+                    selectedAnnotationIndex : 1,
             ...isWormholeSelected && {
                 accessedWikiWormholeIndex: destinationWormholeIndex
             }
