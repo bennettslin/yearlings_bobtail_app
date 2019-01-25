@@ -9,7 +9,7 @@ import NavButton from '../Button'
 const mapStateToProps = ({
     accessStore: {
         isAccessOn,
-        accessedNavSongIndex
+        accessedNavIndex
     },
     toggleStore: { isDotsSlideShown },
     selectedStore: { selectedSongIndex }
@@ -17,14 +17,14 @@ const mapStateToProps = ({
     isAccessOn,
     selectedSongIndex,
     isDotsSlideShown,
-    accessedNavSongIndex
+    accessedNavIndex
 })
 
 class NavButtonIndexed extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        accessedNavSongIndex: PropTypes.number.isRequired,
+        accessedNavIndex: PropTypes.number.isRequired,
         isAccessOn: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -44,7 +44,7 @@ class NavButtonIndexed extends PureComponent {
                 isAccessOn,
                 selectedSongIndex,
                 isDotsSlideShown,
-                accessedNavSongIndex,
+                accessedNavIndex,
 
                 ...other
             } = this.props,
@@ -55,7 +55,7 @@ class NavButtonIndexed extends PureComponent {
             isAccessed =
                 isAccessOn &&
                 !isDotsSlideShown &&
-                accessedNavSongIndex === songIndex
+                accessedNavIndex === songIndex
 
         return (
             <NavButton {...other}

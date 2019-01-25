@@ -96,8 +96,8 @@ export const ACCESS_DEFAULTS = {
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 1,
     accessedWikiWormholeIndex: 1,
-    accessedDotIndex: 0,
-    accessedNavSongIndex: -1
+    accessedDotIndex: -1,
+    accessedNavIndex: -1
 }
 
 export const ADMIN_DEFAULTS = {

@@ -30,7 +30,7 @@ class CarouselNavListener extends PureComponent {
                 isCarouselShown: false,
                 isNavShown: false
             })
-            this.props.updateAccessStore({ accessedNavSongIndex: -1 })
+            this.props.updateAccessStore({ accessedNavIndex: -1 })
         }
     }
 

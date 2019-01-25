@@ -23,7 +23,7 @@ class NavNavigation extends PureComponent {
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
-        accessedNavSongIndex: PropTypes.number.isRequired,
+        accessedNavIndex: PropTypes.number.isRequired,
         shownNavBookIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
 
@@ -47,7 +47,7 @@ class NavNavigation extends PureComponent {
          * Only navigate once access is already on.
          */
         if (isAccessOn) {
-            let { accessedNavSongIndex } = this.props,
+            let { accessedNavIndex } = this.props,
                 direction
 
             // Skip appropriate songs if showing single book column.
@@ -60,7 +60,7 @@ class NavNavigation extends PureComponent {
                     break
                 case ENTER:
                     keyWasRegistered = this.dispatchSong({
-                        selectedSongIndex: accessedNavSongIndex,
+                        selectedSongIndex: accessedNavIndex,
                         doDismissNav: true
                     })
                     /**
@@ -77,18 +77,18 @@ class NavNavigation extends PureComponent {
                 const { shownNavBookIndex } = this.props,
                     songsCount = getSongsAndLoguesCount()
 
-                accessedNavSongIndex = (
-                    accessedNavSongIndex + songsCount + direction
+                accessedNavIndex = (
+                    accessedNavIndex + songsCount + direction
                 ) % songsCount
 
                 // Select the book column that contains the accessed song index.
                 if (
-                    shownNavBookIndex !== getBookForSongIndex(accessedNavSongIndex)
+                    shownNavBookIndex !== getBookForSongIndex(accessedNavIndex)
                 ) {
                     this.dispatchNavBook()
                 }
 
-                this.props.updateAccessStore({ accessedNavSongIndex })
+                this.props.updateAccessStore({ accessedNavIndex })
             }
         }
 
@@ -116,11 +116,11 @@ const mapStateToProps = ({
     sessionStore: { shownNavBookIndex },
     accessStore: {
         isAccessOn,
-        accessedNavSongIndex
+        accessedNavIndex
     }
 }) => ({
     isAccessOn,
-    accessedNavSongIndex,
+    accessedNavIndex,
     shownNavBookIndex
 })
 

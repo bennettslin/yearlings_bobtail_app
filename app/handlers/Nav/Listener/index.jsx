@@ -61,7 +61,7 @@ class NavListener extends PureComponent {
             )
         ) {
             this.props.updateAccessStore({
-                accessedNavSongIndex: selectedSongIndex
+                accessedNavIndex: selectedSongIndex
             })
 
         } else if (
@@ -71,7 +71,7 @@ class NavListener extends PureComponent {
             // ... nav is just now hidden.
             (!isNavShown && wasNavShown)
         ) {
-            this.props.updateAccessStore({ accessedNavSongIndex: -1 })
+            this.props.updateAccessStore({ accessedNavIndex: -1 })
         }
     }
 
