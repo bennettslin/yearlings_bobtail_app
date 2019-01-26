@@ -29,14 +29,22 @@ class LyricNavigation extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            navigateLyric: this.navigateLyric
-        })
+        this.props.getRefs({ navigateLyric: this.navigateLyric })
     }
 
-    navigateLyric = (e, keyName) => {
+    navigateLyric = (keyName) => {
+        if (
+            keyName !== ARROW_LEFT &&
+            keyName !== ARROW_RIGHT &&
+            keyName !== ENTER
+        ) {
+            return false
+        }
+
         const
             {
+                isAccessOn,
+                selectedVerseIndex,
                 interactivatedVerseIndex,
                 accessedAnnotationIndex
             } = this.props,
@@ -52,26 +60,17 @@ class LyricNavigation extends PureComponent {
             case ARROW_RIGHT:
                 direction = 1
                 break
-            case ENTER:
-                return this.dispatchAnnotationIndex({
-                    selectedAnnotationIndex: accessedAnnotationIndex
-                })
-            default:
-                return false
         }
 
         /**
-         * If this key will turn on access, choose annotation based on selected
-         * verse.
+         * Access is getting turned on, so just choose annotation based on
+         * selected verse.
          */
-        if (
-            !this.props.isAccessOn ||
-            isVerseInteractivated
-        ) {
-            const
-                verseIndex = isVerseInteractivated ?
+        if (!isAccessOn || isVerseInteractivated) {
+            const verseIndex =
+                isVerseInteractivated ?
                     interactivatedVerseIndex :
-                    this.props.selectedVerseIndex
+                    selectedVerseIndex
 
             this.dispatchAccessedAnnotation({
                 verseIndex,
@@ -82,11 +81,22 @@ class LyricNavigation extends PureComponent {
                 this.props.resetInteractivated()
             }
 
+        /**
+         * Access is already turned on, so select annotation if enter, or
+         * continue to access if left or right arrow.
+         */
         } else {
-            this.dispatchAccessedAnnotation({
-                annotationIndex: accessedAnnotationIndex,
-                direction
-            })
+            if (keyName === ENTER) {
+                return this.dispatchAnnotationIndex({
+                    selectedAnnotationIndex: accessedAnnotationIndex
+                })
+
+            } else if (!isNaN(direction)) {
+                this.dispatchAccessedAnnotation({
+                    annotationIndex: accessedAnnotationIndex,
+                    direction
+                })
+            }
         }
 
         return true

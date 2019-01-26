@@ -41,7 +41,7 @@ class AnnotationNavigation extends PureComponent {
         })
     }
 
-    navigateAnnotation = (e, keyName) => {
+    navigateAnnotation = (keyName) => {
         let { accessedWikiWormholeIndex } = this.props,
             annotationIndexWasAccessed = false,
             keyWasRegistered = true

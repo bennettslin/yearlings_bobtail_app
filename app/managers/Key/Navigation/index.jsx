@@ -36,7 +36,7 @@ class NavigationManager extends PureComponent {
         })
     }
 
-    handleNavigation = (e, keyName) => {
+    handleNavigation = (keyName) => {
 
         const {
                 isHeightlessLyric,
@@ -72,11 +72,11 @@ class NavigationManager extends PureComponent {
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this.navigateAnnotation(e, keyName))
+                } = this.navigateAnnotation(keyName))
 
             // We're in dots section.
             } else if (isDotsSlideShown) {
-                keyWasRegistered = this.navigateDotsSlide(e, keyName)
+                keyWasRegistered = this.navigateDotsSlide(keyName)
 
             // We're in nav section.
             } else if (
@@ -88,11 +88,11 @@ class NavigationManager extends PureComponent {
                 ({
                     annotationIndexWasAccessed,
                     keyWasRegistered
-                } = this.navigateNav(e, keyName))
+                } = this.navigateNav(keyName))
 
             // We're in lyrics section.
             } else if (!isHeightlessLyric || isLyricExpanded) {
-                keyWasRegistered = this.navigateLyric(e, keyName)
+                keyWasRegistered = this.navigateLyric(keyName)
 
                 // If key was registered, then annotation index was accessed.
                 annotationIndexWasAccessed = keyWasRegistered

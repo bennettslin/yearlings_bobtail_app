@@ -37,7 +37,7 @@ class NavNavigation extends PureComponent {
         })
     }
 
-    navigateNav = (e, keyName) => {
+    navigateNav = (keyName) => {
         const { isAccessOn } = this.props
 
         let annotationIndexWasAccessed = false,

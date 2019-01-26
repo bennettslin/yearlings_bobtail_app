@@ -34,7 +34,7 @@ class DotsSlideNavigation extends PureComponent {
         })
     }
 
-    navigateDotsSlide = (e, keyName) => {
+    navigateDotsSlide = (keyName) => {
         const { isAccessOn } = this.props
 
         if (isAccessOn) {

@@ -41,7 +41,9 @@ class NavListener extends PureComponent {
              * to be the nav index for as long as the nav stays up, even if
              * access is turned on and off in between.
              */
-            this.props.updateAccessStore({ accessedNavIndex: selectedSongIndex })
+            this.props.updateAccessStore({
+                accessedNavIndex: selectedSongIndex
+            })
             this.props.updateSessionStore({
                 shownNavBookIndex: getBookForSongIndex(selectedSongIndex)
             })

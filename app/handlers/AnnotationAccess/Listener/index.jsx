@@ -70,14 +70,14 @@ class AnnotationAccessListener extends PureComponent {
             if (interactivatedVerseIndex > -1) {
                 newAccessedVerseIndex = interactivatedVerseIndex
 
+                this.dispatchAccessedAnnotation({
+                    verseIndex: newAccessedVerseIndex
+                })
+
             // ... otherwise, access annotation of newly selected verse.
             } else {
                 newAccessedVerseIndex = this.props.selectedVerseIndex
             }
-
-            this.dispatchAccessedAnnotation({
-                verseIndex: newAccessedVerseIndex
-            })
         }
     }
 

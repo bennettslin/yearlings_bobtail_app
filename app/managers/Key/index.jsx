@@ -14,7 +14,7 @@ import { populateRefs } from 'helpers/ref'
 
 import {
     getKeyName,
-    getIsNavKey,
+    getIsNavKeyOrEnter,
     getShouldHandleOnKeyDown
 } from './helper'
 
@@ -61,18 +61,15 @@ class KeyManager extends PureComponent {
         this.props.updateAccessStore({ accessedKey: keyName })
 
         /**
-         * Turn on access if any key other than escape was registered.
-         */
-        if (keyName !== ESCAPE) {
-            this.props.updateAccessStore({ isAccessOn: true })
-        }
-
-        /**
          * Once access is turned on and key letter is displayed, ignore non-nav
          * keys and enter key, which are handled on key up.
          */
         if (!getShouldHandleOnKeyDown(keyName)) {
             return false
+
+        } else {
+            // Turn on access.
+            this.props.updateAccessStore({ isAccessOn: true })
         }
 
         /**
@@ -115,6 +112,10 @@ class KeyManager extends PureComponent {
          */
         if (getShouldHandleOnKeyDown(keyName)) {
             return false
+
+        // Turn on access.
+        } else if (keyName !== ESCAPE) {
+            this.props.updateAccessStore({ isAccessOn: true })
         }
 
         // Handle escape key.
@@ -143,12 +144,11 @@ class KeyManager extends PureComponent {
             return false
         }
 
-        const {
-            keyWasRegistered
-
-        } = getIsNavKey(keyName) ?
-            this.handleNavigation(e, keyName) :
-            this.handleLetter(e, keyName)
+        const
+            { keyWasRegistered } =
+                getIsNavKeyOrEnter(keyName) ?
+                    this.handleNavigation(keyName) :
+                    this.handleLetter(keyName)
 
         // Prevent default for registered key.
         if (keyWasRegistered) {

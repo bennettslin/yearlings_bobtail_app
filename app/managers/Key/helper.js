@@ -2,7 +2,9 @@ import {
     SPACE,
     ENTER,
     PREVIOUS_VERSE_KEY,
-    NEXT_VERSE_KEY
+    NEXT_VERSE_KEY,
+    PREVIOUS_SCENE_KEY,
+    NEXT_SCENE_KEY
 } from 'constants/access'
 
 export const getKeyName = (e) => {
@@ -35,24 +37,25 @@ export const getKeyName = (e) => {
     return keyName
 }
 
-export const getIsNavKey = (keyName) => {
-    return (
-        keyName.indexOf('Arrow') > -1 ||
-        keyName === ENTER
-    )
+const _getIsNavKey = (keyName) => {
+    return keyName.indexOf('Arrow') > -1
+}
+
+export const getIsNavKeyOrEnter = (keyName) => {
+    return _getIsNavKey(keyName) || keyName === ENTER
 }
 
 export const getShouldHandleOnKeyDown = (keyName) => {
-    const isNavKey = getIsNavKey(keyName)
+    const isNavKey = _getIsNavKey(keyName)
 
     return (
         // By default, nav keys are handled on key down, non-nav on key up...
         isNavKey ||
 
-        // But these are not nav keys, and they are handled on key down...
+        // But these are not nav keys, and they are handled on key down.
         keyName === PREVIOUS_VERSE_KEY ||
-        keyName === NEXT_VERSE_KEY
-
-    // And this is a nav key, but it's handled on key up.
-    ) && keyName !== ENTER
+        keyName === NEXT_VERSE_KEY ||
+        keyName === PREVIOUS_SCENE_KEY ||
+        keyName === NEXT_SCENE_KEY
+    )
 }

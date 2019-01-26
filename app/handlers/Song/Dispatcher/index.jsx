@@ -84,6 +84,7 @@ class SongDispatcher extends PureComponent {
         })
 
         this.props.updateAccessStore({
+            accessedNavIndex: selectedSongIndex,
             accessedAnnotationIndex:
                 isWormholeSelected ?
                     selectedAnnotationIndex : 1,
