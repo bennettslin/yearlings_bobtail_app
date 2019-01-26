@@ -25,10 +25,6 @@ class WikiWormholeListener extends PureComponent {
     }
 
     _accessWikiWormhole(prevProps) {
-        /**
-         * If closing dots slide, check if accessed annotation index is now
-         * invalid, and change if so.
-         */
         const
             {
                 selectedSongIndex,

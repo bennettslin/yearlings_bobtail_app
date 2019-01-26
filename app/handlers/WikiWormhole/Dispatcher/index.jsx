@@ -34,23 +34,23 @@ class WikiWormholeDispatcher extends PureComponent {
                 selectedSongIndex,
                 selectedAnnotationIndex,
                 dotsBitNumber,
-                accessedWikiWormholeIndex: defaultWikiWormholeIndex
+                accessedWikiWormholeIndex: prevWikiWormholeIndex
             } = this.props,
             selectedDotKeys = getDotKeysFromBitNumber(dotsBitNumber),
 
             initialWikiWormholeIndex =
-                defaultWikiWormholeIndex ?
-                    defaultWikiWormholeIndex :
-                    1,
+                // If no direction is given, reset the index.
+                isNaN(direction) ?
+                    1 :
+                    prevWikiWormholeIndex,
 
-            accessedWikiWormholeIndex =
-                getWikiWormholeIndexForDirection({
-                    selectedSongIndex,
-                    selectedAnnotationIndex,
-                    selectedDotKeys,
-                    initialWikiWormholeIndex,
-                    direction
-                })
+            accessedWikiWormholeIndex = getWikiWormholeIndexForDirection({
+                selectedSongIndex,
+                selectedAnnotationIndex,
+                selectedDotKeys,
+                initialWikiWormholeIndex,
+                direction
+            })
 
         this.props.updateAccessStore({ accessedWikiWormholeIndex })
     }

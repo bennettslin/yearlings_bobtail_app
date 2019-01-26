@@ -105,7 +105,7 @@ export const ACCESS_DEFAULTS = {
     isAccessedIndexedAnchorShown: false,
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 1,
-    accessedWikiWormholeIndex: 1
+    accessedWikiWormholeIndex: 0
 }
 
 export const ADMIN_DEFAULTS = {
