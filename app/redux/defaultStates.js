@@ -104,7 +104,7 @@ export const ACCESS_DEFAULTS = {
     isAccessOn: getBoolFromStorage(IS_ACCESS_ON) || false,
     isAccessedIndexedAnchorShown: false,
     accessedKey: '',
-    accessedAnnotationIndex: storedAnnotationIndex || 1,
+    accessedAnnotationIndex: storedAnnotationIndex || 0,
     accessedWikiWormholeIndex: 0
 }
 

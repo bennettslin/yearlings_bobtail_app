@@ -4505,5 +4505,10 @@ export default [
         taskName: `Scroll does not work perfectly when selecting shiv wormhole with ear column. Solve by not showing wormhole to same song.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Refactor access index so that it is only set when access is on, and resets when access is off. Enter is not functional until access on is first set by another key.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

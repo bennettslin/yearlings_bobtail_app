@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Refactor access index so that it is only set when access is on, and resets when access is off. Enter is not functional until access on is first set by another key.`,
-        workedHours: 2,
-        neededHours: 5
-    },
-    {
         taskName: `Code splitting and API server timebox.`,
         workedHours: 0,
         neededHours: 20
