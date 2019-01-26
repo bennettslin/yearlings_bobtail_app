@@ -100,7 +100,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Curtains`,
+        taskName: `Stage curtains`,
         workedHours: 0,
         neededHours: 5
     }
