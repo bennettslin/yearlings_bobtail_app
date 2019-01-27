@@ -2,11 +2,13 @@
 import {
     VIEWPORT_STORE,
     PROSCENIUM_STORE,
+    STAGE_STORE,
     THEATRE_STORE
 } from '../storeKeys'
 import { VIEWPORT_DEFAULTS } from '../defaultStates'
 
 import ProsceniumReducer from './proscenium/reducer'
+import StageReducer from './stage/reducer'
 import TheatreReducer from './theatre/reducer'
 
 export default (
@@ -24,6 +26,14 @@ export default (
                 ...state,
                 [PROSCENIUM_STORE]: ProsceniumReducer(
                     state[PROSCENIUM_STORE],
+                    action
+                )
+            }
+        case STAGE_STORE:
+            return {
+                ...state,
+                [STAGE_STORE]: StageReducer(
+                    state[STAGE_STORE],
                     action
                 )
             }

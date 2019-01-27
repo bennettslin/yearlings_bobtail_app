@@ -23,6 +23,7 @@ export const TRANSIENT_STORE = 'transientStore'
 export const VERSE_BARS_STORE = 'verseBarsStore'
 export const VIEWPORT_STORE = 'viewportStore'
 export const PROSCENIUM_STORE = 'prosceniumStore'
+export const STAGE_STORE = 'stageStore'
 export const THEATRE_STORE = 'theatreStore'
 
 export const IS_ACCESS_ON = 'isAccessOn'

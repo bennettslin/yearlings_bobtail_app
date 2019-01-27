@@ -7,6 +7,7 @@ import { updateMountStore } from 'flux/mount/action'
 import { updateResponsiveStore } from 'flux/responsive/action'
 import { updateViewportStore } from 'flux/viewport/action'
 import { updateProsceniumStore } from 'flux/viewport/proscenium/action'
+import { updateStageStore } from 'flux/viewport/stage/action'
 import { updateTheatreStore } from 'flux/viewport/theatre/action'
 
 import {
@@ -44,6 +45,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
         updateResponsiveStore: PropTypes.func.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
         updateProsceniumStore: PropTypes.func.isRequired,
+        updateStageStore: PropTypes.func.isRequired,
         updateTheatreStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -137,15 +139,18 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 canCarouselMount
             })
 
-        this.props.updateViewportStore({
-            canTheatreEnter: true,
-            deviceWidthIndex,
-            windowWidth,
-            windowHeight,
+        this.props.updateStageStore({
             stageTop,
             stageLeft,
             stageWidth,
             stageHeight
+        })
+
+        this.props.updateViewportStore({
+            canTheatreEnter: true,
+            deviceWidthIndex,
+            windowWidth,
+            windowHeight
         })
 
         this.props.updateMountStore({
@@ -276,6 +281,7 @@ export default connect(
         updateResponsiveStore,
         updateViewportStore,
         updateProsceniumStore,
+        updateStageStore,
         updateTheatreStore
     }
 )(WindowResizeEnterDispatcher)

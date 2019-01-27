@@ -15,9 +15,11 @@ const mapStateToProps = ({
     viewportStore: {
         windowHeight,
         windowWidth,
-        stageLeft,
-        stageWidth,
-        stageHeight,
+        stageStore: {
+            stageLeft,
+            stageWidth,
+            stageHeight
+        },
         theatreStore: {
             ceilingHeight,
             floorHeight

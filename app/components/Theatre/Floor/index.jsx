@@ -11,8 +11,10 @@ import { getSeatingRowCoordinates } from './helper'
 const mapStateToProps = ({
     viewportStore: {
         windowWidth,
-        stageLeft,
-        stageWidth,
+        stageStore: {
+            stageLeft,
+            stageWidth
+        },
         theatreStore: { floorHeight }
     }
 }) => ({

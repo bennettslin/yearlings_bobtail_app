@@ -13,8 +13,10 @@ import { getRaftersRowCoordinates } from './helper'
 const mapStateToProps = ({
     viewportStore: {
         windowWidth,
-        stageLeft,
-        stageWidth,
+        stageStore: {
+            stageLeft,
+            stageWidth
+        },
         theatreStore: { ceilingHeight }
     }
 }) => ({

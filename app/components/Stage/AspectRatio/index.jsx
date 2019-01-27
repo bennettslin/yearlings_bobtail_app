@@ -5,10 +5,12 @@ import cx from 'classnames'
 
 const mapStateToProps = ({
     viewportStore: {
-        stageTop,
-        stageLeft,
-        stageWidth,
-        stageHeight
+        stageStore: {
+            stageTop,
+            stageLeft,
+            stageWidth,
+            stageHeight
+        }
     }
 }) => ({
     stageTop,

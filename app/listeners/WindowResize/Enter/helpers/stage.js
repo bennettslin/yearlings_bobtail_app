@@ -139,7 +139,7 @@ export const getStageCoordinates = ({
     }
 
     return {
-        stageTop: menuHeight + Number(top.toFixed(2)),
+        stageTop: Number((top + menuHeight).toFixed(2)),
         stageLeft: Number(left.toFixed(2)),
         stageWidth: Number(width.toFixed(2)),
         stageHeight: Number(height.toFixed(2))

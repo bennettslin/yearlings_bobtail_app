@@ -42,6 +42,7 @@ import {
     SELECTED_TIPS_OPTION,
 
     PROSCENIUM_STORE,
+    STAGE_STORE,
     THEATRE_STORE
 } from './storeKeys'
 
@@ -329,6 +330,13 @@ export const PROSCENIUM_DEFAULTS = {
     prosceniumHeight: 100
 }
 
+export const STAGE_DEFAULTS = {
+    stageTop: 0,
+    stageLeft: 0,
+    stageWidth: 100,
+    stageHeight: 100
+}
+
 export const THEATRE_DEFAULTS = {
     ceilingHeight: 0,
     floorHeight: 0
@@ -341,11 +349,8 @@ export const VIEWPORT_DEFAULTS = {
     isDesktopWidth: false,
     windowHeight: 0,
     windowWidth: 0,
-    stageTop: 0,
-    stageLeft: 0,
-    stageWidth: 100,
-    stageHeight: 100,
 
     [PROSCENIUM_STORE]: PROSCENIUM_DEFAULTS,
+    [STAGE_STORE]: STAGE_DEFAULTS,
     [THEATRE_STORE]: THEATRE_DEFAULTS
 }
