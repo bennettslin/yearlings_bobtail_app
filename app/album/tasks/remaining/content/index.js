@@ -2,8 +2,8 @@ export default [
 
     {
         taskName: `Editing timebox.`,
-        workedHours: 3,
-        neededHours: 40
+        workedHours: 6,
+        neededHours: 250
     },
     {
         taskName: `Finalise text styling of different annotation cards.`,

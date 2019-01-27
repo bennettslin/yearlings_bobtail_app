@@ -32,10 +32,10 @@ const About = ({
             'fontSize__verse'
         )}>
             <p>
-                Album written, performed, and recorded by Bennett Lin.
+                Album written, arranged, and recorded by Bennett Lin.
             </p>
             <p>
-                Website designed, illustrated, and coded by Bennett Lin.
+                Website designed, coded, and illustrated by Bennett Lin.
             </p>
             {/* TODO: Eventually delete this, of course. */}
             <p>

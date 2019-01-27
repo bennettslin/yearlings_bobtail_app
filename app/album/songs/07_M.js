@@ -142,7 +142,7 @@ export default {
                                         anchor: `five-year plans`,
                                         wiki: `Five-year_plans_for_the_national_economy_of_the_Soviet_Union`
                                     },
-                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus felt like the perfect time frame to complete my own plan for rapid character growth.`
+                                    `of the Soviet Union were centrally organized mandates for rapid economic development. Five years thus seemed like the optimal time frame for my own plan for rapid character growth.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true

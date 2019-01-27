@@ -400,7 +400,7 @@ export default {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `To capture the liveliness of a fiddle, as well as to pull off all the glissandos I had scored, I held the violin at chest level. I'd never tried this before, so a bit of practise was needed. As well as a lot of spliced tracks.`,
+                        description: `Though I'd taken violin lessons as a child, my skills were horribly rusty by the time I made this album. Rather than get up to speed through intensified practice, I just recorded the fiddle track here by playing fragments of two or three notes at a time, then splicing them into a single take. To justify my cop-out, I threw in a complicated glissando whenever the score permitted.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -435,12 +435,12 @@ export default {
                             anchor: `scapegirl,`,
                             card: {
                                 description: [
-                                    `In Biblical times, a community would absolve itself of its sins by symbolically placing them on a`,
+                                    `In Biblical times, a community would absolve itself by symbolically placing its`,
                                     {
-                                        anchor: `goat`,
+                                        anchor: `sins on a goat`,
                                         wiki: `Scapegoat`
                                     },
-                                    `that was then banished into the desert. For me, banishing Sita from my life would serve a similar purpose. As long as she was around to cast judgment on my hypocrisy, I would have to own up to my mistakes, rather than run away from them.`
+                                    `that was then cast into the desert. For me, banishing Sita from my life served a similar purpose. Without her around to cast judgment, I would never need to own up to my hypocrisy.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
@@ -491,7 +491,7 @@ export default {
                         {
                             anchor: `make her strip bare`,
                             card: {
-                                description: `Sita learned early on that however occupied I might be in the moment, she could always lure me away for some lovemaking by hovering naked over me and feigning to shiver from the cold. But in time, I grew tired of this brazen appeal to both my primal and protective instincts, and found myself enjoying the cruelty of leaving her to shiver indefinitely.`,
+                                description: `Early in our relationship, Sita learned that she could always lure me away for some lovemaking by hovering naked beside me and feigning to shiver from the cold. But in time I grew tired of this brazen appeal to both my primal and protective instincts, and found myself enjoying the cruelty of leaving her to shiver indefinitely.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

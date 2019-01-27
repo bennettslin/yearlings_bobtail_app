@@ -258,7 +258,7 @@ export default {
                         {
                             anchor: `made an "accident"`,
                             card: {
-                                description: `After I soil my pants, the nurse places them in a shopping bag for me to carry home, and fits me into an abandoned pair of overalls.`,
+                                description: `After I soiled my pants, the nurse placed them in a shopping bag for me to carry home, and fitted me into an abandoned pair of overalls.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
