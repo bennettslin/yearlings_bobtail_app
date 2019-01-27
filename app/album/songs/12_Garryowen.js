@@ -21,7 +21,7 @@ import {
 export default {
     title: 'Garryowen',
     totalTime: 187,
-    overview: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. Without Sita.`,
+    overview: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
     lyricUnits: [
         {
             unitMap: {
@@ -94,10 +94,10 @@ export default {
                     lyric: [
                         `with your`,
                         {
-                            anchor: `crew of chefs and thieves.`,
+                            anchor: `crew of cooks and thieves.`,
                             cards: [
                                 {
-                                    description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then prepare whatever was brought back into a meal for all to share. I was always in the thieving half.`,
+                                    description: `During this time, I was staying with some crust punks who were friends of Ana's. Every so often, half of us would go out to shoplift groceries, while the other half would then prepare whatever was brought back for all to share. I was always in the thieving half.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -491,7 +491,7 @@ export default {
                         {
                             anchor: `make her strip bare`,
                             card: {
-                                description: `Early in our relationship, Sita learned that she could always lure me away for some lovemaking by hovering naked beside me and feigning to shiver from the cold. But in time I grew tired of this brazen appeal to both my primal and protective instincts, and found myself enjoying the cruelty of leaving her to shiver indefinitely.`,
+                                description: `Sita learned early on that she could always whisk me away for some lovemaking by hovering naked beside me and shivering dramatically from the cold. But as our relationship soured, I grew tired of this brazen appeal to my primal and protective instincts, and drew some cruel pleasure in letting her shiver for ever just a bit longer.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
