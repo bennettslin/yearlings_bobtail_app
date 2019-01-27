@@ -18,7 +18,7 @@ export const getRaftersRowCoordinates = ({
             minLength: ceilingHeight,
             firstLength: firstRowRafterHeight,
             multiplyFactor: 1.2, // Gets wider faster with larger value.
-            overlapRatio: 0.3 // Less bunched up when closer to 0.
+            overlapRatio: 0.25 // Less bunched up when closer to 0.
         })
 
     return rawCoordinatesArray.map(rawCoordinates => {

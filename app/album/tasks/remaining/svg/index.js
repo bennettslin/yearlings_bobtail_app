@@ -53,29 +53,5 @@ export default [
         taskName: `nav images. (Just take from existing heads.)`,
         workedHours: 0,
         neededHours: 5
-    },
-
-    /**
-     * Stage
-     */
-    {
-        taskName: `Theatre seat.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Theater balcony`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Theatre proscenium`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Theatre rafters`,
-        workedHours: 0,
-        neededHours: 5
     }
 ]

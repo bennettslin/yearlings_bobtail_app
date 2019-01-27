@@ -76,7 +76,7 @@ export const getCeilingFloorHeight = ({
             centreFieldHeight
             - prosceniumTop
             + menuHeight
-            - prosceniumHeight * 0.9 // Overlap part of stage scene.
+            - prosceniumHeight * 0.85 // Overlap part of stage scene.
             + lyricColumnHeight
 
     return {

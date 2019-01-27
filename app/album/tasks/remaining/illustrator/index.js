@@ -602,5 +602,34 @@ export default [
         taskName: 'weddingPlatform panel, crowd, foreboding trees',
         workedHours: 2,
         neededHours: 4
+    },
+
+    /*********
+     * STAGE *
+     *********/
+    {
+        taskName: `Theatre seat.`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Theater balcony`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: `Theatre proscenium`,
+        workedHours: 4,
+        neededHours: 5
+    },
+    {
+        taskName: `Theatre rafters`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Stage curtains`,
+        workedHours: 2,
+        neededHours: 3
     }
 ]

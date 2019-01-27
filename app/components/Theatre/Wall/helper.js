@@ -1,6 +1,6 @@
 import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 
-const BALCONY_WIDTH_TO_HEIGHT_RATIO = 0.3 // How wide is the balcony.
+const BALCONY_WIDTH_TO_HEIGHT_RATIO = 0.25 // How wide is the balcony.
 
 export const getWallWidth = ({
     isRight,
@@ -21,12 +21,10 @@ export const getWallWidth = ({
 export const getBalconyColumnCoordinates = ({
     isRight,
     windowWidth,
-    windowHeight,
     prosceniumLeft,
     prosceniumWidth,
     prosceniumHeight,
-    ceilingHeight,
-    floorHeight
+    ceilingHeight
 
 }) => {
     const
@@ -41,13 +39,10 @@ export const getBalconyColumnCoordinates = ({
                 rightWidth :
                 leftWidth,
 
-        wallHeight =
-            windowHeight
-            - ceilingHeight
-            - floorHeight,
+        wallHeight = prosceniumHeight,
 
         // Arbitrary values for now.
-        firstColumnBalconyHeight = prosceniumHeight,
+        firstColumnBalconyHeight = wallHeight,
 
         firstColumnBalconyWidth =
             firstColumnBalconyHeight
@@ -56,7 +51,7 @@ export const getBalconyColumnCoordinates = ({
         rawCoordinatesArray = getArrayOfCoordinatesForFactoredLengths({
             minLength: wallWidth,
             firstLength: firstColumnBalconyWidth,
-            multiplyFactor: 1.05, // Gets taller faster with larger value.
+            multiplyFactor: 1.075, // Gets taller faster with larger value.
             overlapRatio: 0.05 // Less bunched up when closer to 0.
         })
 
@@ -72,8 +67,7 @@ export const getBalconyColumnCoordinates = ({
                 / BALCONY_WIDTH_TO_HEIGHT_RATIO,
 
             balconyTop =
-                ceilingHeight
-                + (wallHeight - balconyHeight) / 2,
+                ceilingHeight - (balconyHeight - wallHeight) * 0.5,
 
             balconyLeft =
                 isRight ?

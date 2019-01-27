@@ -56,9 +56,9 @@ class Theatre extends PureComponent {
                 )}>
                     <Stage />
                     <Curtains />
-                    <Ceiling />
                     <Wall />
                     <Wall isRight />
+                    <Ceiling />
                     <Proscenium />
                     <Floor />
                 </div>

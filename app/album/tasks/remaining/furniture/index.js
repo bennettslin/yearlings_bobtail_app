@@ -98,10 +98,5 @@ export default [
         taskName: 'hospitalMattress',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Stage curtains`,
-        workedHours: 0,
-        neededHours: 5
     }
 ]

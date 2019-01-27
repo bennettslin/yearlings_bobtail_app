@@ -20,10 +20,7 @@ const mapStateToProps = ({
             prosceniumWidth,
             prosceniumHeight
         },
-        theatreStore: {
-            ceilingHeight,
-            floorHeight
-        }
+        theatreStore: { ceilingHeight }
     }
 }) => ({
     windowHeight,
@@ -31,8 +28,7 @@ const mapStateToProps = ({
     prosceniumLeft,
     prosceniumWidth,
     prosceniumHeight,
-    ceilingHeight,
-    floorHeight
+    ceilingHeight
 })
 
 class Wall extends PureComponent {
@@ -45,7 +41,6 @@ class Wall extends PureComponent {
         prosceniumWidth: PropTypes.number.isRequired,
         prosceniumHeight: PropTypes.number.isRequired,
         ceilingHeight: PropTypes.number.isRequired,
-        floorHeight: PropTypes.number.isRequired,
 
         // From parent.
         isRight: PropTypes.bool
@@ -60,8 +55,7 @@ class Wall extends PureComponent {
                 prosceniumLeft,
                 prosceniumWidth,
                 prosceniumHeight,
-                ceilingHeight,
-                floorHeight
+                ceilingHeight
             } = this.props,
 
             wallWidth = getWallWidth({
@@ -74,12 +68,10 @@ class Wall extends PureComponent {
             balconyColumnCoordinates = getBalconyColumnCoordinates({
                 isRight,
                 windowWidth,
-                windowHeight,
                 prosceniumLeft,
                 prosceniumWidth,
                 prosceniumHeight,
-                ceilingHeight,
-                floorHeight
+                ceilingHeight
             })
 
         return (
