@@ -45,8 +45,8 @@ export const getCeilingFloorHeight = ({
     deviceWidthIndex,
     windowHeight,
     menuHeight,
-    stageHeight,
-    stageTop,
+    prosceniumTop,
+    prosceniumHeight,
     isHeightlessLyric,
     isTwoRowMenu
 }) => {
@@ -68,15 +68,15 @@ export const getCeilingFloorHeight = ({
         ceilingHeight =
             windowHeight
             - centreFieldHeight
-            + stageTop
+            + prosceniumTop
             - menuHeight
             - lyricColumnHeight,
 
         floorHeight =
             centreFieldHeight
-            - stageTop
+            - prosceniumTop
             + menuHeight
-            - stageHeight * 0.9 // Overlap part of stage scene.
+            - prosceniumHeight * 0.9 // Overlap part of stage scene.
             + lyricColumnHeight
 
     return {

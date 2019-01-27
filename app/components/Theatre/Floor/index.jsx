@@ -11,16 +11,16 @@ import { getSeatingRowCoordinates } from './helper'
 const mapStateToProps = ({
     viewportStore: {
         windowWidth,
-        stageStore: {
-            stageLeft,
-            stageWidth
+        prosceniumStore: {
+            prosceniumLeft,
+            prosceniumWidth
         },
         theatreStore: { floorHeight }
     }
 }) => ({
     windowWidth,
-    stageLeft,
-    stageWidth,
+    prosceniumLeft,
+    prosceniumWidth,
     floorHeight
 })
 
@@ -29,23 +29,23 @@ class Floor extends PureComponent {
     static propTypes = {
         // Through Redux.
         windowWidth: PropTypes.number.isRequired,
-        stageLeft: PropTypes.number.isRequired,
-        stageWidth: PropTypes.number.isRequired,
+        prosceniumLeft: PropTypes.number.isRequired,
+        prosceniumWidth: PropTypes.number.isRequired,
         floorHeight: PropTypes.number.isRequired
     }
 
     render() {
         const {
                 windowWidth,
-                stageLeft,
-                stageWidth,
+                prosceniumLeft,
+                prosceniumWidth,
                 floorHeight
             } = this.props,
 
             seatingRowCoordinates = getSeatingRowCoordinates({
                 windowWidth,
-                stageLeft,
-                stageWidth,
+                prosceniumLeft,
+                prosceniumWidth,
                 floorHeight
             })
 

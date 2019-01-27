@@ -3,15 +3,15 @@ import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 const RAFTER_HEIGHT_TO_WIDTH_RATIO = 0.02 // How tall is the rafter.
 
 export const getRaftersRowCoordinates = ({
-    stageLeft,
-    stageWidth,
+    prosceniumLeft,
+    prosceniumWidth,
     ceilingHeight
 
 }) => {
-    const stageCentreFromLeft = stageLeft + (stageWidth / 2),
+    const stageCentreFromLeft = prosceniumLeft + (prosceniumWidth / 2),
 
         // Arbitrary values for now.
-        firstRowRafterWidth = stageWidth * 1.1,
+        firstRowRafterWidth = prosceniumWidth * 1.1,
         firstRowRafterHeight = firstRowRafterWidth * RAFTER_HEIGHT_TO_WIDTH_RATIO,
 
         rawCoordinatesArray = getArrayOfCoordinatesForFactoredLengths({

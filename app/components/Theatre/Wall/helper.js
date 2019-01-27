@@ -4,37 +4,37 @@ const BALCONY_WIDTH_TO_HEIGHT_RATIO = 0.3 // How wide is the balcony.
 
 export const getWallWidth = ({
     isRight,
-    stageLeft,
-    stageWidth,
+    prosceniumLeft,
+    prosceniumWidth,
     windowWidth
 
 }) => {
     return isRight ? (
 
         windowWidth
-        - stageLeft
-        - stageWidth
+        - prosceniumLeft
+        - prosceniumWidth
 
-    ) : stageLeft
+    ) : prosceniumLeft
 }
 
 export const getBalconyColumnCoordinates = ({
     isRight,
     windowWidth,
     windowHeight,
-    stageLeft,
-    stageWidth,
-    stageHeight,
+    prosceniumLeft,
+    prosceniumWidth,
+    prosceniumHeight,
     ceilingHeight,
     floorHeight
 
 }) => {
     const
-        leftWidth = stageLeft,
+        leftWidth = prosceniumLeft,
         rightWidth =
             windowWidth
-            - stageLeft
-            - stageWidth,
+            - prosceniumLeft
+            - prosceniumWidth,
 
         wallWidth =
             isRight ?
@@ -47,7 +47,7 @@ export const getBalconyColumnCoordinates = ({
             - floorHeight,
 
         // Arbitrary values for now.
-        firstColumnBalconyHeight = stageHeight,
+        firstColumnBalconyHeight = prosceniumHeight,
 
         firstColumnBalconyWidth =
             firstColumnBalconyHeight

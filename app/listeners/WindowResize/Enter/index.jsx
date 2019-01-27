@@ -216,8 +216,8 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowHeight,
                 menuHeight,
-                stageHeight,
-                stageTop,
+                prosceniumTop,
+                prosceniumHeight,
                 isHeightlessLyric,
                 isTwoRowMenu
             })

@@ -27,14 +27,14 @@ const _zipTwoArrays = (leftArray, rightArray) => {
 
 export const getSeatingRowCoordinates = ({
     windowWidth,
-    stageLeft,
-    stageWidth,
+    prosceniumLeft,
+    prosceniumWidth,
     floorHeight
 
 }) => {
     const
-        stageCentreFromLeft = stageLeft + (stageWidth / 2),
-        firstRowSeatWidth = stageWidth / 9, // Arbitrary value.
+        stageCentreFromLeft = prosceniumLeft + (prosceniumWidth / 2),
+        firstRowSeatWidth = prosceniumWidth / 9, // Arbitrary value.
         firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
         rowCoordinatesArray = getArrayOfCoordinatesForFactoredLengths({

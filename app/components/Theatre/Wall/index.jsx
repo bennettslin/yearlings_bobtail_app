@@ -15,10 +15,10 @@ const mapStateToProps = ({
     viewportStore: {
         windowHeight,
         windowWidth,
-        stageStore: {
-            stageLeft,
-            stageWidth,
-            stageHeight
+        prosceniumStore: {
+            prosceniumLeft,
+            prosceniumWidth,
+            prosceniumHeight
         },
         theatreStore: {
             ceilingHeight,
@@ -28,9 +28,9 @@ const mapStateToProps = ({
 }) => ({
     windowHeight,
     windowWidth,
-    stageLeft,
-    stageWidth,
-    stageHeight,
+    prosceniumLeft,
+    prosceniumWidth,
+    prosceniumHeight,
     ceilingHeight,
     floorHeight
 })
@@ -41,9 +41,9 @@ class Wall extends PureComponent {
         // Through Redux.
         windowHeight: PropTypes.number.isRequired,
         windowWidth: PropTypes.number.isRequired,
-        stageLeft: PropTypes.number.isRequired,
-        stageWidth: PropTypes.number.isRequired,
-        stageHeight: PropTypes.number.isRequired,
+        prosceniumLeft: PropTypes.number.isRequired,
+        prosceniumWidth: PropTypes.number.isRequired,
+        prosceniumHeight: PropTypes.number.isRequired,
         ceilingHeight: PropTypes.number.isRequired,
         floorHeight: PropTypes.number.isRequired,
 
@@ -57,17 +57,17 @@ class Wall extends PureComponent {
                 isRight,
                 windowWidth,
                 windowHeight,
-                stageLeft,
-                stageWidth,
-                stageHeight,
+                prosceniumLeft,
+                prosceniumWidth,
+                prosceniumHeight,
                 ceilingHeight,
                 floorHeight
             } = this.props,
 
             wallWidth = getWallWidth({
                 isRight,
-                stageLeft,
-                stageWidth,
+                prosceniumLeft,
+                prosceniumWidth,
                 windowWidth
             }),
 
@@ -75,9 +75,9 @@ class Wall extends PureComponent {
                 isRight,
                 windowWidth,
                 windowHeight,
-                stageLeft,
-                stageWidth,
-                stageHeight,
+                prosceniumLeft,
+                prosceniumWidth,
+                prosceniumHeight,
                 ceilingHeight,
                 floorHeight
             })

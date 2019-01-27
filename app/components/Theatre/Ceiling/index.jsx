@@ -13,16 +13,16 @@ import { getRaftersRowCoordinates } from './helper'
 const mapStateToProps = ({
     viewportStore: {
         windowWidth,
-        stageStore: {
-            stageLeft,
-            stageWidth
+        prosceniumStore: {
+            prosceniumLeft,
+            prosceniumWidth
         },
         theatreStore: { ceilingHeight }
     }
 }) => ({
     windowWidth,
-    stageLeft,
-    stageWidth,
+    prosceniumLeft,
+    prosceniumWidth,
     ceilingHeight
 })
 
@@ -31,22 +31,22 @@ class Ceiling extends PureComponent {
     static propTypes = {
         // Through Redux.
         windowWidth: PropTypes.number.isRequired,
-        stageLeft: PropTypes.number.isRequired,
-        stageWidth: PropTypes.number.isRequired,
+        prosceniumLeft: PropTypes.number.isRequired,
+        prosceniumWidth: PropTypes.number.isRequired,
         ceilingHeight: PropTypes.number.isRequired
     }
 
     render() {
         const {
                 windowWidth,
-                stageLeft,
-                stageWidth,
+                prosceniumLeft,
+                prosceniumWidth,
                 ceilingHeight
             } = this.props,
 
             raftersRowCoordinates = getRaftersRowCoordinates({
-                stageLeft,
-                stageWidth,
+                prosceniumLeft,
+                prosceniumWidth,
                 ceilingHeight
             })
 
