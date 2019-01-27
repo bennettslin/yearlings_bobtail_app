@@ -140,7 +140,7 @@ export default {
                                             anchor: `bunny criss-cross the tree.`,
                                             wiki: `Shoelace_knot`
                                         },
-                                        `But being left-handed, I was never clear on which hand was the bunny, and my shoelaces always came undone as a result.`
+                                        `But being left-handed, I was never clear on which hand held the bunny, and my shoelaces always came undone as a result.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -178,7 +178,7 @@ export default {
                         {
                             anchor: `didn't want you here.`,
                             card: {
-                                description: `My sister was fiercely protective of me, but she was also outgoing and independent. While I was welcome to tag along with her and her friends, there were times when they preferred to do girl stuff by themselves. I always panicked when this happened.`,
+                                description: `I was always tagging along with my sister, who was fiercely protective of me. But there were times when she and her friends preferred to do girl stuff by themselves. This would leave me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -198,12 +198,17 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `The nonstop modulations between the`,
+                            `I wanted the music here to evoke the flurry of activity and transience of emotion experienced by a child from one day to the next. And so the rhythm lurches to and from a`,
                             {
-                                anchor: `distantly related`,
+                                anchor: `half-time beat,`,
+                                wiki: `Half-time_(music)`
+                            },
+                            `while the harmonic progression tirelessly modulates between the`,
+                            {
+                                anchor: `distantly related keys`,
                                 wiki: `Closely_related_key`
                             },
-                            `major keys of A, C, and E\u2011flat evoke the flurry of activity and transience of emotion experienced by a child from one day to the next.`
+                            `of A, C, and E\u2011flat major.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
