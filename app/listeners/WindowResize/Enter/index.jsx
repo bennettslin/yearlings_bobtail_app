@@ -126,6 +126,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 deviceWidthIndex,
                 windowWidth,
                 windowHeight,
+                menuHeight,
                 isHeightlessLyric,
                 isTwoRowMenu,
                 canCarouselMount
@@ -137,6 +138,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
             } = getCeilingFloorHeight({
                 deviceWidthIndex,
                 windowHeight,
+                menuHeight,
                 stageHeight,
                 stageTop,
                 isHeightlessLyric,

@@ -7,7 +7,7 @@ const Proscenium = () => (
     <___>
         {/* Layout is all handled in css. */}
         <div className={cx(
-            'Proscenium__top',
+            'Proscenium__pit',
             'Proscenium__horizontal',
             'Proscenium__child'
         )} />
@@ -22,7 +22,7 @@ const Proscenium = () => (
             'Proscenium__child'
         )} />
         <div className={cx(
-            'Proscenium__pit',
+            'Proscenium__top',
             'Proscenium__horizontal',
             'Proscenium__child'
         )} />

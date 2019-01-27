@@ -76,6 +76,7 @@ export const getStageCoordinates = ({
     deviceWidthIndex,
     windowWidth,
     windowHeight,
+    menuHeight,
     isHeightlessLyric,
     isTwoRowMenu,
     canCarouselMount
@@ -138,7 +139,7 @@ export const getStageCoordinates = ({
     }
 
     return {
-        stageTop: Number(top.toFixed(2)),
+        stageTop: menuHeight + Number(top.toFixed(2)),
         stageLeft: Number(left.toFixed(2)),
         stageWidth: Number(width.toFixed(2)),
         stageHeight: Number(height.toFixed(2))

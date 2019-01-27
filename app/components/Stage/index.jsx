@@ -1,81 +1,66 @@
-// Section to show the stage illustrations.
+// Stage elements that change based on the scene.
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { connect } from 'react-redux'
+import { updateSceneStore } from 'flux/scene/action'
+
+import Transition from 'react-transition-group/Transition'
+import AspectRatio from './AspectRatio'
+import Scene from '../Scene'
+import Sky from '../Scene/Sky'
+import Wood from '../Scene/Wood'
 
 const mapStateToProps = ({
-    responsiveStore: { menuHeight },
-    viewportStore: {
-        stageTop,
-        stageLeft,
-        stageWidth,
-        stageHeight
-    }
+    sceneStore: { canSceneEnter }
 }) => ({
-    menuHeight,
-    stageTop,
-    stageLeft,
-    stageWidth,
-    stageHeight
+    canSceneEnter
 })
 
 class Stage extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        menuHeight: PropTypes.number.isRequired,
-        stageTop: PropTypes.number.isRequired,
-        stageLeft: PropTypes.number.isRequired,
-        stageWidth: PropTypes.number.isRequired,
-        stageHeight: PropTypes.number.isRequired,
+        canSceneEnter: PropTypes.bool.isRequired,
+        updateSceneStore: PropTypes.func.isRequired
+    }
 
-        children: PropTypes.any.isRequired
+    componentDidMount() {
+        logMount(Stage.name)
+    }
+
+    _handleTransitionEntered = () => {
+        this.props.updateSceneStore({ didSceneEnter: true })
     }
 
     render() {
-
-        const {
-            menuHeight,
-            stageTop,
-            stageLeft,
-            stageWidth,
-            stageHeight,
-            children
-        } = this.props
+        const { canSceneEnter } = this.props
 
         return (
-            <div
-                {...{
-                    className: cx(
-                        'Stage',
-                        'abF'
-                    ),
-                    style: {
-                        top: `${menuHeight}px`
-                    }
-                }}
-            >
-                <div
+            <AspectRatio>
+                <Transition
                     {...{
-                        className: cx(
-                            'Stage__aspectRatioContainer',
-                            'abF'
-                        ),
-                        style: {
-                            top: `${stageTop}px`,
-                            left: `${stageLeft}px`,
-                            width: `${stageWidth}px`,
-                            height: `${stageHeight}px`
-                        }
+                        in: canSceneEnter,
+                        timeout: 200,
+                        onEntered: this._handleTransitionEntered
                     }}
                 >
-                    {children}
-                </div>
-            </div>
+                    <div className={cx(
+                        'Stage',
+                        'abF'
+                    )}>
+                        <Sky />
+                        <Wood />
+                        <Scene />
+                    </div>
+                </Transition>
+            </AspectRatio>
         )
     }
 }
 
-export default connect(mapStateToProps)(Stage)
+export default connect(
+    mapStateToProps,
+    { updateSceneStore }
+)(Stage)

@@ -1,23 +1,19 @@
-// Stage elements that change based on the scene.
-
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateSceneStore } from 'flux/scene/action'
 
 import Transition from 'react-transition-group/Transition'
-import Layers from './Layers'
-import Sky from './Sky'
-import Wood from './Wood'
+import Cubes from '../Cubes'
+import PresencesConfig from '../Presences'
+import PresenceZIndexStylesheet from './Stylesheet'
+
+import { CUBE_Y_INDICES } from 'constants/cubeIndex'
 
 const mapStateToProps = ({
-    sceneStore: {
-        canSceneEnter,
-        canSceneUpdate
-    }
+    sceneStore: { canSceneUpdate }
 }) => ({
-    canSceneEnter,
     canSceneUpdate
 })
 
@@ -25,7 +21,6 @@ class Scene extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        canSceneEnter: PropTypes.bool.isRequired,
         canSceneUpdate: PropTypes.bool.isRequired,
         updateSceneStore: PropTypes.func.isRequired
     }
@@ -38,39 +33,37 @@ class Scene extends PureComponent {
         this.props.updateSceneStore({ didSceneUpdate: true })
     }
 
-    _handleTransitionEntered = () => {
-        this.props.updateSceneStore({ didSceneEnter: true })
-    }
-
     render() {
-        const {
-            canSceneUpdate,
-            canSceneEnter
-        } = this.props
+        const { canSceneUpdate } = this.props
 
         return (
             <Transition
-                // mountOnEnter
                 {...{
-                    in: canSceneEnter,
+                    in: canSceneUpdate,
                     timeout: 200,
-                    onEntered: this._handleTransitionEntered
+                    onEntered: this._handleTransitionUpdated
                 }}
             >
-                <div className={cx(
-                    'Scene'
-                )}>
-                    <Sky />
-                    <Wood />
-                    <Transition
-                        {...{
-                            in: canSceneUpdate,
-                            timeout: 200,
-                            onEntered: this._handleTransitionUpdated
-                        }}
-                    >
-                        <Layers />
-                    </Transition>
+                <div
+                    className={cx(
+                        'Scene',
+                        'abF'
+                    )}
+                >
+                    <PresenceZIndexStylesheet />
+
+                    {CUBE_Y_INDICES.map(yIndex => {
+                        const Presences = PresencesConfig[yIndex]
+
+                        return (
+                            <___
+                                key={yIndex}
+                            >
+                                <Cubes {...{ yIndex }} />
+                                <Presences />
+                            </___>
+                        )
+                    })}
                 </div>
             </Transition>
         )

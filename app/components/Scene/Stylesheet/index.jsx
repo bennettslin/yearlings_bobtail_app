@@ -7,7 +7,7 @@ import DynamicStylesheet from 'modules/Stylesheet/Dynamic'
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Y_INDICES
-} from '../../../../constants/cubeIndex'
+} from '../../../constants/cubeIndex'
 
 const PresenceZIndexStylesheet = memo(() => {
 

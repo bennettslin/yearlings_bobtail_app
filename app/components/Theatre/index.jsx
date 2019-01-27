@@ -7,8 +7,8 @@ import { connect } from 'react-redux'
 import { updateViewportStore } from 'flux/viewport/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
-import Scene from '../Scene'
 import Stage from '../Stage'
+import AspectRatio from '../Stage/AspectRatio'
 import Curtains from '../Stage/Curtains'
 import Proscenium from '../Stage/Proscenium'
 
@@ -55,18 +55,15 @@ class Theatre extends PureComponent {
                     'Theatre',
                     'abF'
                 )}>
-                    <Stage>
-                        <Scene />
-                    </Stage>
-
+                    <Stage />
                     <Ceiling />
                     <Wall />
                     <Wall isRight />
 
-                    <Stage>
+                    <AspectRatio>
                         <Curtains />
                         <Proscenium />
-                    </Stage>
+                    </AspectRatio>
 
                     <Floor />
                 </div>
