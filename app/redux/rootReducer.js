@@ -4,7 +4,6 @@ import AdminReducer from './admin/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AppReducer from './app/reducer'
 import AudioReducer from './audio/reducer'
-import DeviceReducer from './viewport/reducer'
 import DotsReducer from './dots/reducer'
 import DotsSlideReducer from './dotsSlide/reducer'
 import FocusReducer from './focus/reducer'
@@ -23,6 +22,7 @@ import SliderReducer from './slider/reducer'
 import ToggleReducer from './toggle/reducer'
 import TransientReducer from './transient/reducer'
 import VerseBarsReducer from './verseBars/reducer'
+import ViewportReducer from './viewport/reducer'
 
 import {
     ACCESS_STORE,
@@ -52,6 +52,7 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [VIEWPORT_STORE]: ViewportReducer,
     [ACCESS_STORE]: AccessReducer,
     [TOGGLE_STORE]: ToggleReducer,
     [SESSION_STORE]: SessionReducer,
@@ -65,7 +66,6 @@ const rootReducer = combineReducers({
     [SELECTED_STORE]: SelectedReducer,
     [LYRIC_STORE]: LyricReducer,
     [SCENE_STORE]: SceneReducer,
-    [VIEWPORT_STORE]: DeviceReducer,
 
     [AUDIO_STORE]: AudioReducer,
     [PLAYERS_STORE]: PlayersReducer,

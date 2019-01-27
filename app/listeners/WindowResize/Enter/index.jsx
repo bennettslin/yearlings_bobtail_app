@@ -3,9 +3,11 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateViewportStore } from 'flux/viewport/action'
-import { updateResponsiveStore } from 'flux/responsive/action'
 import { updateMountStore } from 'flux/mount/action'
+import { updateResponsiveStore } from 'flux/responsive/action'
+import { updateViewportStore } from 'flux/viewport/action'
+import { updateProsceniumStore } from 'flux/viewport/proscenium/action'
+import { updateTheatreStore } from 'flux/viewport/theatre/action'
 
 import {
     getDeviceWidthIndex,
@@ -22,6 +24,7 @@ import {
     getShowShrunkNavIcon,
     getShowSingleNavBook
 } from './helpers/nav'
+import { getProsceniumCoordinates } from './helpers/proscenium'
 import {
     getIsLyricExpandable,
     getIsTwoRowMenu,
@@ -37,9 +40,11 @@ class WindowResizeEnterDispatcher extends PureComponent {
     static propTypes = {
         // Through Redux.
         isHigherProcessor: PropTypes.bool.isRequired,
-        updateViewportStore: PropTypes.func.isRequired,
-        updateResponsiveStore: PropTypes.func.isRequired,
         updateMountStore: PropTypes.func.isRequired,
+        updateResponsiveStore: PropTypes.func.isRequired,
+        updateViewportStore: PropTypes.func.isRequired,
+        updateProsceniumStore: PropTypes.func.isRequired,
+        updateTheatreStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -130,19 +135,6 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 isHeightlessLyric,
                 isTwoRowMenu,
                 canCarouselMount
-            }),
-            {
-                ceilingHeight,
-                floorHeight
-
-            } = getCeilingFloorHeight({
-                deviceWidthIndex,
-                windowHeight,
-                menuHeight,
-                stageHeight,
-                stageTop,
-                isHeightlessLyric,
-                isTwoRowMenu
             })
 
         this.props.updateViewportStore({
@@ -153,9 +145,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
             stageTop,
             stageLeft,
             stageWidth,
-            stageHeight,
-            ceilingHeight,
-            floorHeight
+            stageHeight
         })
 
         this.props.updateMountStore({
@@ -176,6 +166,67 @@ class WindowResizeEnterDispatcher extends PureComponent {
                 isHeightlessLyric,
                 menuHeight
             })
+        })
+
+        this._updateProsceniumStore({
+            deviceWidthIndex,
+            windowHeight,
+            menuHeight,
+            stageTop,
+            stageLeft,
+            stageWidth,
+            stageHeight,
+            isHeightlessLyric,
+            isTwoRowMenu
+        })
+    }
+
+    _updateProsceniumStore({
+        deviceWidthIndex,
+        windowHeight,
+        menuHeight,
+        stageTop,
+        stageLeft,
+        stageWidth,
+        stageHeight,
+        isHeightlessLyric,
+        isTwoRowMenu
+    }) {
+        const {
+                prosceniumTop,
+                prosceniumLeft,
+                prosceniumWidth,
+                prosceniumHeight
+            } = getProsceniumCoordinates({
+                stageTop,
+                stageLeft,
+                stageWidth,
+                stageHeight
+            }),
+            {
+                ceilingHeight,
+                floorHeight
+
+            } = getCeilingFloorHeight({
+                deviceWidthIndex,
+                windowHeight,
+                menuHeight,
+                stageHeight,
+                stageTop,
+                isHeightlessLyric,
+                isTwoRowMenu
+            })
+
+        this.props.updateProsceniumStore({
+            prosceniumTop,
+            prosceniumLeft,
+            prosceniumWidth,
+            prosceniumHeight
+        })
+
+        this.props.updateTheatreStore({
+            ceilingHeight,
+            floorHeight
         })
     }
 
@@ -221,8 +272,10 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateViewportStore,
+        updateMountStore,
         updateResponsiveStore,
-        updateMountStore
+        updateViewportStore,
+        updateProsceniumStore,
+        updateTheatreStore
     }
 )(WindowResizeEnterDispatcher)

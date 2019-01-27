@@ -39,7 +39,10 @@ import {
 
     SELECTED_AUDIO_OPTION_INDEX,
     SELECTED_OVERVIEW_OPTION,
-    SELECTED_TIPS_OPTION
+    SELECTED_TIPS_OPTION,
+
+    PROSCENIUM_STORE,
+    THEATRE_STORE
 } from './storeKeys'
 
 /**
@@ -319,6 +322,18 @@ export const VERSE_BARS_DEFAULTS = {
     ...VERSE_BARS_QUEUE_DEFAULTS
 }
 
+export const PROSCENIUM_DEFAULTS = {
+    prosceniumTop: 0,
+    prosceniumLeft: 0,
+    prosceniumWidth: 100,
+    prosceniumHeight: 100
+}
+
+export const THEATRE_DEFAULTS = {
+    ceilingHeight: 0,
+    floorHeight: 0
+}
+
 export const VIEWPORT_DEFAULTS = {
     ...VIEWPORT_TRANSITION_DEFAULTS,
     deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
@@ -330,6 +345,7 @@ export const VIEWPORT_DEFAULTS = {
     stageLeft: 0,
     stageWidth: 100,
     stageHeight: 100,
-    ceilingHeight: 0,
-    floorHeight: 0
+
+    [PROSCENIUM_STORE]: PROSCENIUM_DEFAULTS,
+    [THEATRE_STORE]: THEATRE_DEFAULTS
 }

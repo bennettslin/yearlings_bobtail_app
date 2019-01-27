@@ -3,9 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-// TODO: This is dumb. Just make this a better HOC.
-const PROSCENIUM_MULTIPLIER = 0.05
-
 const mapStateToProps = ({
     viewportStore: {
         stageTop,
@@ -25,48 +22,26 @@ const AspectRatio = ({
     stageLeft,
     stageWidth,
     stageHeight,
-    isProscenium,
     children
 
-}) => {
-
-    let top = stageTop,
-        left = stageLeft,
-        width = stageWidth,
-        height = stageHeight
-
-    if (isProscenium) {
-        const
-            widthOffset = PROSCENIUM_MULTIPLIER * stageWidth,
-            heightOffset = PROSCENIUM_MULTIPLIER * stageHeight
-
-        top = stageTop - heightOffset
-        left = stageLeft - widthOffset
-        width = stageWidth + widthOffset * 2
-        height = stageHeight + heightOffset * 2
-    }
-
-    return (
-        <div
-            {...{
-                className: cx(
-                    'AspectRatio',
-                    isProscenium &&
-                        'AspectRatio__proscenium',
-                    'abF'
-                ),
-                style: {
-                    top: `${top}px`,
-                    left: `${left}px`,
-                    width: `${width}px`,
-                    height: `${height}px`
-                }
-            }}
-        >
-            {children}
-        </div>
-    )
-}
+}) => (
+    <div
+        {...{
+            className: cx(
+                'AspectRatio',
+                'abF'
+            ),
+            style: {
+                top: `${stageTop}px`,
+                left: `${stageLeft}px`,
+                width: `${stageWidth}px`,
+                height: `${stageHeight}px`
+            }
+        }}
+    >
+        {children}
+    </div>
+)
 
 AspectRatio.propTypes = {
     // Through Redux.
@@ -76,7 +51,6 @@ AspectRatio.propTypes = {
     stageHeight: PropTypes.number.isRequired,
 
     // From parent.
-    isProscenium: PropTypes.bool,
     children: PropTypes.any.isRequired
 }
 

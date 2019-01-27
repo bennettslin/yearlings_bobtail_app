@@ -22,6 +22,8 @@ export const TOGGLE_STORE = 'toggleStore'
 export const TRANSIENT_STORE = 'transientStore'
 export const VERSE_BARS_STORE = 'verseBarsStore'
 export const VIEWPORT_STORE = 'viewportStore'
+export const PROSCENIUM_STORE = 'prosceniumStore'
+export const THEATRE_STORE = 'theatreStore'
 
 export const IS_ACCESS_ON = 'isAccessOn'
 export const IS_ADMIN_ON = 'isAdminOn'
