@@ -98,26 +98,22 @@ class Wall extends PureComponent {
                         viewBoxHeight: windowHeight
                     }}
                 >
-                    {balconyColumnCoordinates.map((coordinates, index) => {
-                        const {
-                            top,
-                            left,
-                            width,
-                            height
-                        } = coordinates
-
-                        return (
-                            <WallBalcony
-                                key={index}
-                                {...{
-                                    top,
-                                    left,
-                                    width,
-                                    height
-                                }}
-                            />
-                        )
-                    })}
+                    {balconyColumnCoordinates.map(({
+                        top,
+                        left,
+                        width,
+                        height
+                    }, index) => (
+                        <WallBalcony
+                            key={index}
+                            {...{
+                                top,
+                                left,
+                                width,
+                                height
+                            }}
+                        />
+                    ))}
                 </Svg>
             </div>
         )

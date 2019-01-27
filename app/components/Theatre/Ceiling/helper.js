@@ -1,6 +1,6 @@
 import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 
-import { RAFTER_HEIGHT_TO_WIDTH_RATIO } from '../constants'
+const RAFTER_HEIGHT_TO_WIDTH_RATIO = 0.02 // How tall is the rafter.
 
 export const getRaftersRowCoordinates = ({
     stageLeft,

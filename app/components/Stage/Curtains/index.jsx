@@ -7,6 +7,8 @@ import { connect } from 'react-redux'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
+import AspectRatio from '../AspectRatio'
+import Svg from '../../../modules/Svg'
 
 const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter }
@@ -39,40 +41,42 @@ class Curtains extends PureComponent {
         const { canLyricCarouselEnter } = this.props
 
         return (
-            <CSSTransition
-                mountOnEnter
-                {...{
-                    in: canLyricCarouselEnter,
-                    timeout: 250,
-                    classNames: { enterDone: 'Curtains__parted' },
-                    onExited: this._handleTransitionExited,
-                    onEntered: this._handleTransitionEntered
-                }}
-            >
-                <div
+            <AspectRatio>
+                <CSSTransition
+                    mountOnEnter
                     {...{
-                        className: cx(
-                            'Curtains',
-                            'abF'
-                        )
+                        in: canLyricCarouselEnter,
+                        timeout: 250,
+                        classNames: { enterDone: 'Curtains__parted' },
+                        onExited: this._handleTransitionExited,
+                        onEntered: this._handleTransitionEntered
                     }}
                 >
-                    <div className={cx(
-                        'Curtains__left',
-                        'Curtains__side',
-                        'Curtains__child'
-                    )} />
-                    <div className={cx(
-                        'Curtains__right',
-                        'Curtains__side',
-                        'Curtains__child'
-                    )} />
-                    <div className={cx(
-                        'Curtains__top',
-                        'Curtains__child'
-                    )} />
-                </div>
-            </CSSTransition>
+                    <div
+                        {...{
+                            className: cx(
+                                'Curtains',
+                                'abF'
+                            )
+                        }}
+                    >
+                        <Svg className={cx(
+                            'Curtains__left',
+                            'Curtains__side',
+                            'Curtains__child'
+                        )} />
+                        <Svg className={cx(
+                            'Curtains__right',
+                            'Curtains__side',
+                            'Curtains__child'
+                        )} />
+                        <Svg className={cx(
+                            'Curtains__top',
+                            'Curtains__child'
+                        )} />
+                    </div>
+                </CSSTransition>
+            </AspectRatio>
         )
     }
 }

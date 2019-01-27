@@ -67,26 +67,22 @@ class Ceiling extends PureComponent {
                         viewBoxHeight: ceilingHeight
                     }}
                 >
-                    {raftersRowCoordinates.map((coordinates, index) => {
-                        const {
-                            top,
-                            left,
-                            width,
-                            height
-                        } = coordinates
-
-                        return (
-                            <CeilingRafter
-                                key={index}
-                                {...{
-                                    top,
-                                    left,
-                                    width,
-                                    height
-                                }}
-                            />
-                        )
-                    })}
+                    {raftersRowCoordinates.map(({
+                        top,
+                        left,
+                        width,
+                        height
+                    }, index) => (
+                        <CeilingRafter
+                            key={index}
+                            {...{
+                                top,
+                                left,
+                                width,
+                                height
+                            }}
+                        />
+                    ))}
                 </Svg>
             </div>
         )

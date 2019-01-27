@@ -1,7 +1,7 @@
 import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
-import { SEAT_HEIGHT_TO_WIDTH_RATIO } from '../constants'
 
-/* eslint-disable */
+const SEAT_HEIGHT_TO_WIDTH_RATIO = 1.55 // How tall is the seat.
+
 const _zipTwoArrays = (leftArray, rightArray) => {
 
     const

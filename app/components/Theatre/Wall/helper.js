@@ -1,5 +1,6 @@
 import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
-import { BALCONY_WIDTH_TO_HEIGHT_RATIO } from '../constants'
+
+const BALCONY_WIDTH_TO_HEIGHT_RATIO = 0.3 // How wide is the balcony.
 
 export const getWallWidth = ({
     isRight,

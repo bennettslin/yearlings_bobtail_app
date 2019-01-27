@@ -8,7 +8,6 @@ import { updateViewportStore } from 'flux/viewport/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
-import AspectRatio from '../Stage/AspectRatio'
 import Curtains from '../Stage/Curtains'
 import Proscenium from '../Stage/Proscenium'
 
@@ -56,15 +55,11 @@ class Theatre extends PureComponent {
                     'abF'
                 )}>
                     <Stage />
+                    <Curtains />
                     <Ceiling />
                     <Wall />
                     <Wall isRight />
-
-                    <AspectRatio>
-                        <Curtains />
-                        <Proscenium />
-                    </AspectRatio>
-
+                    <Proscenium />
                     <Floor />
                 </div>
             </CSSTransition>

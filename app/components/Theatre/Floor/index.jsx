@@ -71,30 +71,26 @@ class Floor extends PureComponent {
                             key={rowIndex}
                             className={`FloorSeats__${rowIndex}`}
                         >
-                            {seatsArray.map(seat => {
-                                const {
-                                    chairIndex,
-                                    rowIndex,
-                                    top,
-                                    left,
-                                    width,
-                                    height
-                                } = seat
-
-                                return (
-                                    <FloorSeat
-                                        key={chairIndex}
-                                        {...{
-                                            chairIndex,
-                                            rowIndex,
-                                            top,
-                                            left,
-                                            width,
-                                            height
-                                        }}
-                                    />
-                                )
-                            })}
+                            {seatsArray.map(({
+                                chairIndex,
+                                rowIndex,
+                                top,
+                                left,
+                                width,
+                                height
+                            }) => (
+                                <FloorSeat
+                                    key={chairIndex}
+                                    {...{
+                                        chairIndex,
+                                        rowIndex,
+                                        top,
+                                        left,
+                                        width,
+                                        height
+                                    }}
+                                />
+                            ))}
                         </g>
                     ))}
                 </Svg>

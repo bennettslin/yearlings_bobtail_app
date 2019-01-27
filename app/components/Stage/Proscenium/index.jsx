@@ -1,32 +1,36 @@
 // Section to show the stage proscenium.
 
-import React, { Fragment as ___ } from 'react'
+import React from 'react'
 import cx from 'classnames'
 
+import Svg from '../../../modules/Svg'
+import AspectRatio from '../AspectRatio'
+
 const Proscenium = () => (
-    <___>
-        {/* Layout is all handled in css. */}
-        <div className={cx(
-            'Proscenium__pit',
-            'Proscenium__horizontal',
-            'Proscenium__child'
-        )} />
-        <div className={cx(
-            'Proscenium__left',
-            'Proscenium__vertical',
-            'Proscenium__child'
-        )} />
-        <div className={cx(
-            'Proscenium__right',
-            'Proscenium__vertical',
-            'Proscenium__child'
-        )} />
-        <div className={cx(
-            'Proscenium__top',
-            'Proscenium__horizontal',
-            'Proscenium__child'
-        )} />
-    </___>
+    <AspectRatio
+        isProscenium
+    >
+        <Svg
+            {...{
+                className: cx(
+                    'Proscenium',
+                    'abF'
+                )
+            }}
+        >
+            <rect
+                {...{
+                    className: cx(
+                        'Proscenium__rect'
+                    ),
+                    x: 0,
+                    y: 0,
+                    width: 100,
+                    height: 100
+                }}
+            />
+        </Svg>
+    </AspectRatio>
 )
 
 export default Proscenium
