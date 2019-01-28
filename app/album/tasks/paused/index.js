@@ -267,5 +267,10 @@ export default [
         taskName: `Dot unit animation? Do based on visibility or opacity instead of display none? Looks like styling won't be so easy, so punting this.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `nav images. (Just take from existing heads.)`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

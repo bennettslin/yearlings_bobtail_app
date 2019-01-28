@@ -32,11 +32,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Make nav books svgs.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Align annotation title access letters.`,
         workedHours: 0,
         neededHours: 1
@@ -54,6 +49,11 @@ export default [
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Lettering strategy for accessibility icons and nav buttons. Remember to draw Roman numeral I on book in globes backdrop.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `Finalise cursor UI, including VerseTracker gradient.`,

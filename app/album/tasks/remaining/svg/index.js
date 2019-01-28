@@ -8,33 +8,13 @@ export default [
         neededHours: 9
     },
     {
-        taskName: `dot icons`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `button icons`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `accessibility icon`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `tip images`,
+        taskName: `dot icons, shapes, and dots slide button.`,
         workedHours: 0,
         neededHours: 8
     },
 
     {
-        taskName: `dot shapes`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `audio slider. Mimic lyric stanza borders.`,
+        taskName: `tip images`,
         workedHours: 0,
         neededHours: 8
     },
@@ -45,12 +25,7 @@ export default [
         neededHours: 8
     },
     {
-        taskName: `nav books`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `nav images. (Just take from existing heads.)`,
+        taskName: `Nav books. Connect nav buttons to logues with path.`,
         workedHours: 0,
         neededHours: 5
     }

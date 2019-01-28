@@ -631,5 +631,14 @@ export default [
         taskName: `Stage curtains`,
         workedHours: 2,
         neededHours: 3
+    },
+
+    /***********
+     * BUTTONS *
+     ***********/
+    {
+        taskName: `buttons.`,
+        workedHours: 6,
+        neededHours: 9
     }
 ]
