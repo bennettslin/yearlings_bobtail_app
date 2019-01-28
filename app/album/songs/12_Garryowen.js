@@ -530,7 +530,7 @@ export default {
                         {
                             anchor: `have her for your pet.`,
                             card: {
-                                description: `Despite everything, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
+                                description: `Despite the headache and drama, I really did love Sita, and I never once doubted that the breakup would be wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

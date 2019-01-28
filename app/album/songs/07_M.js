@@ -182,7 +182,7 @@ export default {
                         {
                             anchor: `mystery mensch.`,
                             card: {
-                                description: `Up to this point, I'd managed to attract a smattering of women through my brooding, cynical personality. And all of them were eventually turned off in the same way, upon concluding that nothing of greater substance lay beneath. It made perfect sense, then, to start by legitimately becoming what I was mistakenly assumed to be.`,
+                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All had been taken in by my standing as a weird, artsy loner, only to be turned off upon seeing that nothing of greater substance lay beneath. The crux of my mission, then, was to take this mistaken assumption that already existed, and simply turn it into a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true
