@@ -182,7 +182,7 @@ export default {
                         {
                             anchor: `mystery mensch.`,
                             card: {
-                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All had been taken in by my standing as a weird, artsy loner, only to be turned off upon seeing that nothing of greater substance lay beneath. The crux of my mission, then, was to take this mistaken assumption that already existed, and simply turn it into a correct one.`,
+                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All had been taken in by my standing as a weird, artsy loner, only then to be turned off upon seeing that nothing of greater substance lay beneath. The crux of my mission, then, was to take this mistaken assumption that already existed, and simply turn it into a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true
@@ -196,7 +196,13 @@ export default {
                     lyric: {
                         anchor: `No minutiae left unmastered,`,
                         card: {
-                            description: `Though my ultimate goal was to be versed in all general subjects, the most rewarding moments came when I could demonstrate some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like memorising the periodic table.`,
+                            description: [
+                                `Though the main goal was to be well versed in all the important subjects, I derived the most satisfaction from being able to display some random skill with seeming nonchalance. So I made sure to set aside time for purely fanciful pursuits, like learning to solve the`,
+                                {
+                                    anchor: `Rubik's cube.`,
+                                    wiki: `Rubik%27s_Cube`
+                                }
+                            ],
                             dotKeys: {
                                 [BACKSTORY]: true,
                                 [NARRATIVE]: true
@@ -211,7 +217,7 @@ export default {
                             anchor: `music cred`,
                             cards: [
                                 {
-                                    description: `During this time, I consulted friends and record store clerks to expand my musical palette. Interestingly, while the offerings they suggested for classical and world music still enrich me to this day, those from the indie rock subgenre have paled into insignificance.`,
+                                    description: `To expand my musical palette, I consulted friends and record store clerks. Interestingly, while the offerings they suggested for classical and world music still enrich me to this day, those from the indie rock subgenre have paled into insignificance.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
@@ -235,7 +241,7 @@ export default {
                         {
                             anchor: `mindful manners`,
                             card: {
-                                description: `I also quit cursing during this time. I figured it would be a turn-on for any woman who didn't curse, while those who did would still find its quaintness charming.`,
+                                description: `I also quit cursing during this time. I figured it would be a plus for any woman who didn't curse, while all those who did would still find this quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -296,7 +302,7 @@ export default {
                                         anchor: `first five-year plan`,
                                         wiki: `First_five-year_plan`
                                     },
-                                    `of the Soviet Union was quite brutal, as the disruptive shock of industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting from, it was naive to think that my own five-year plan could be free of unintended negative effects.`
+                                    `of the Soviet Union was quite brutal, as the disruptive shock of industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting from, it seems naive in hindsight to think that my own five-year plan could be free of unintended negative effects.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
