@@ -336,7 +336,7 @@ export default {
                         {
                             anchor: `been in the bath`,
                             card: {
-                                description: `After coming home, I soaked in the bathtub until well into the evening.`,
+                                description: `After my mother came to pick me up and drop me off at home, I spent a good long while trying to bathe myself. Since I didn't know how to take showers and was too afraid to try, I had to just keep draining and refilling the bathtub until I was clean.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
