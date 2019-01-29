@@ -378,7 +378,14 @@ export default {
                         {
                             anchor: `sheriff's badge and gun…`,
                             card: {
-                                description: `After China stripped Taiwan of international recognition, a bootleg industry emerged to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records and watching old Westerns.`,
+                                description: [
+                                    `In 1971, the United Nations revoked its recognition of`,
+                                    {
+                                        anchor: `Taiwan's sovereignty`,
+                                        wiki: `Political_status_of_Taiwan`
+                                    },
+                                    `due to pressure from China. Since international law could no longer be enforced, a bootleg industry sprang up to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records, and held a fascination for cowboys and the Old West that was more typical of a prior generation of American children.`
+                                ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [REFERENCE]: true
