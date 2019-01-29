@@ -45,14 +45,7 @@ const webpack = require('webpack'),
                 })
             ] : [
                 new webpack.optimize.DedupePlugin(),
-                new webpack.optimize.OccurrenceOrderPlugin(),
-                new webpack.optimize.UglifyJsPlugin({
-                    uglifyOptions: {
-                        output: {
-                            comments: false
-                        }
-                    }
-                })
+                new webpack.optimize.OccurrenceOrderPlugin()
             ],
 
             resolve: {
@@ -119,7 +112,7 @@ const webpack = require('webpack'),
                 devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
             }
         },
-        // parts.loadBundleAnalyzer(),
+        parts.loadBundleAnalyzer(),
         parts.generateSourceMaps({ type: 'cheap-module-eval-source-map' }),
         parts.devServer({
             /**

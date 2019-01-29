@@ -3,7 +3,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin'),
     CleanPlugin = require('clean-webpack-plugin'),
     BabelMinifyPlugin = require('babel-minify-webpack-plugin'),
     OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-    cssnano = require('cssnano')
+    cssnano = require('cssnano'),
+    UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 exports.devServer = ({ host, port } = {}) => ({
     devServer: {
@@ -63,6 +64,17 @@ exports.loadJavaScript = ({ include }) => ({
 })
 
 exports.minifyJavaScript = () => ({
+    optimization: {
+        minimizer: [
+            new UglifyJsPlugin({
+                uglifyOptions: {
+                    output: {
+                        comments: false
+                    }
+                }
+            })
+        ]
+    },
     plugins: [
         new BabelMinifyPlugin()
     ]
