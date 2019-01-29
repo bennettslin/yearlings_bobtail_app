@@ -4510,5 +4510,10 @@ export default [
         taskName: `Refactor access index so that it is only set when access is on, and resets when access is off. Enter is not functional until access on is first set by another key.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Implement CloudFront.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

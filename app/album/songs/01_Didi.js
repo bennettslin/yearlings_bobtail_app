@@ -258,7 +258,7 @@ export default {
                         {
                             anchor: `made an "accident"`,
                             card: {
-                                description: `After I soiled my pants, the nurse placed them in a shopping bag for me to carry home, and fitted me into an abandoned pair of overalls.`,
+                                description: `Upon pooping my pants, I kept quiet. I think someone finally noticed the stink and alerted the teacher, who then brought me to the nurse's office.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -285,7 +285,7 @@ export default {
                                             anchor: `Safeway`,
                                             wiki: `Safeway_Inc.`
                                         },
-                                        `is a supermarket chain located in the western and central United States.`
+                                        `was the most visible supermarket chain in my area when I was growing up.`
                                     ]
                                 },
                                 {
@@ -299,7 +299,18 @@ export default {
                 },
                 {
                     time: 80,
-                    lyric: `decked in overalls from the lost and found.`
+                    lyric: [
+                        {
+                            anchor: `decked in overalls`,
+                            card: {
+                                description: `Since I was the smallest child in my grade, the only item of clothing that fit me was an abandoned pair of girls' overalls. After helping me dress, the nurse placed my soiled pants in a shopping bag for me to take home.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        },
+                        `from the lost and found.`
+                    ]
                 }
             ]
         },
@@ -325,7 +336,7 @@ export default {
                         {
                             anchor: `been in the bath`,
                             card: {
-                                description: `After coming home, I soak in the bathtub until well into the evening.`,
+                                description: `After coming home, I soaked in the bathtub until well into the evening.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
