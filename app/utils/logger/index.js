@@ -1,5 +1,6 @@
 import {
     logAccess,
+    logAnalytics,
     logEvent,
     logFocus,
     logMount,
@@ -21,6 +22,7 @@ import {
 // }
 
 global.logAccess = logAccess
+global.logAnalytics = logAnalytics
 global.logEvent = logEvent
 global.logFocus = logFocus
 global.logMount = logMount

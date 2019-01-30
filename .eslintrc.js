@@ -22,7 +22,9 @@ module.exports = {
     ],
     "globals": {
         "expect": true,
+        "ga": true,
         "logAccess": true,
+        "logAnalytics": true,
         "logEvent": true,
         "logFocus": true,
         "logMount": true,
@@ -32,7 +34,8 @@ module.exports = {
         "logSuccess": true,
         "logTransition": true,
         "logError": true,
-        "process": true
+        "process": true,
+        "sendEvent": true
     },
     "parser": 'babel-eslint',
     "parserOptions": {

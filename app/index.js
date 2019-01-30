@@ -11,9 +11,12 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 
 import { Provider } from 'react-redux'
 
-// Import this here to make it available.
-// eslint-disable-next-line no-unused-vars
+// Import these here just to make them available.
+
+/* eslint-disable no-unused-vars */
 import logger from './utils/logger'
+import sendEvent from './utils/analytics'
+/* eslint-enable no-unused-vars */
 
 import rootReducer from './redux/rootReducer'
 

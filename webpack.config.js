@@ -31,7 +31,7 @@ const webpack = require('webpack'),
 
             output: {
                 path: PATHS.build,
-                filename: '[name].js'
+                filename: '[name]-[hash].js'
             },
 
             plugins: process.env.NODE_ENV !== 'production' ? [
@@ -40,7 +40,6 @@ const webpack = require('webpack'),
                 // https://www.codecademy.com/articles/react-setup-iv
                 new HtmlWebpackPlugin({
                     template: PATHS.template,
-                    filename: 'index.html',
                     inject: 'body'
                 })
             ] : [

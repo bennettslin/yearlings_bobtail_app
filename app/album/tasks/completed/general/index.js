@@ -4515,5 +4515,15 @@ export default [
         taskName: `Implement CloudFront.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Host app on actual domain.`,
+        workedHours: 8,
+        neededHours: 8
+    },
+    {
+        taskName: `Set up GA. Add a test GA event tag.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
