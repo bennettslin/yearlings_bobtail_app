@@ -5,8 +5,8 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Timebox for getting app on actual website, with domain.`,
+        taskName: `Timebox for band website.`,
         workedHours: 0,
-        neededHours: 20
+        neededHours: 10
     }
 ]

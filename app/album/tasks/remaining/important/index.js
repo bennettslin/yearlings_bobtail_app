@@ -15,7 +15,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Periodically website is down, and shows server IP address could not be found. (But then after a while, on its own, it will load the page without further interaction.) Need to understand this behaviour!`,
+        taskName: `Periodically, if I haven't visited in a while, website is down, and shows server IP address could not be found. (But then after a while, on its own, it will load the page without further interaction.) Need to understand this behaviour!`,
         workedHours: 0,
         neededHours: 3
     },
@@ -25,13 +25,13 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Add a GA event tag, just to see it work in action.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Confirm that new changes to the code will get picked up by the website.`,
+        taskName: `Confirm that new changes to the code will get picked up by CloudFront. Whether hash alone does the trick, or does it need to wait 24 hours? `,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Check that GA events work.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]
