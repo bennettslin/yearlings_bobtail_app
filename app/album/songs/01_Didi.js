@@ -384,7 +384,7 @@ export default {
                                         anchor: `Taiwan's sovereignty`,
                                         wiki: `Political_status_of_Taiwan`
                                     },
-                                    `due to pressure from China. Since international law could no longer be enforced, a bootleg industry sprang up to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records, and held a fascination for cowboys and the Old West that was more typical of a prior generation of American children.`
+                                    `due to pressure from China. Since international law was no longer enforced as a result, a bootleg industry sprang up to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records, and held a fascination for the Old West that was more typical of a prior generation of American children.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,

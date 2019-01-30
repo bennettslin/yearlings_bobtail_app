@@ -54,6 +54,14 @@ class Main extends PureComponent {
 
     componentDidMount() {
         logMount(Main.name)
+
+        /* eslint-disable */
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'test',
+            eventAction: 'click',
+            eventLabel: 'testName'
+        })
     }
 
     render() {
