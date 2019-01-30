@@ -4,20 +4,22 @@ const sendEvent = ({
     label = 'label'
 
 }) => {
-    if (ga) {
-        ga('send', {
-            hitType: 'event',
-            eventCategory: category,
-            eventAction: action,
-            eventLabel: label
-        })
-
-        logAnalytics({
-            category,
-            action,
-            label
-        })
+    if (typeof ga === 'undefined') {
+        return
     }
+
+    ga('send', {
+        hitType: 'event',
+        eventCategory: category,
+        eventAction: action,
+        eventLabel: label
+    })
+
+    logAnalytics({
+        category,
+        action,
+        label
+    })
 }
 
 global.sendEvent = sendEvent
