@@ -54,14 +54,11 @@ class Main extends PureComponent {
 
     componentDidMount() {
         logMount(Main.name)
-        logMount('012919, testing GA event.')
 
-        /* eslint-disable */
-        ga('send', {
-            hitType: 'event',
-            eventCategory: 'test',
-            eventAction: 'click',
-            eventLabel: 'testName'
+        sendEvent({
+            category: 'test',
+            event: 'mount',
+            label: '012919'
         })
     }
 

@@ -38,6 +38,10 @@ const
         color: '#b84',
         fontSize: '1.1em'
     }),
+    ANALYTICS_STYLE = _getStyles({
+        color: '#888',
+        fontSize: '0.75em'
+    }),
     EVENT_STYLE = _getStyles({
         color: '#8ad',
         fontSize: '1em'
@@ -86,6 +90,16 @@ export const logAccess = (log) => {
     _logInfo({
         log,
         styles: ACCESS_STYLE
+    })
+}
+export const logAnalytics = ({
+    category,
+    action,
+    label
+}) => {
+    _logInfo({
+        log: `${category}, ${action}: ${label}`,
+        styles: ANALYTICS_STYLE
     })
 }
 export const logEvent = (componentName, e) => {
