@@ -55,9 +55,18 @@ class AnnotationCard extends PureComponent {
                 songIndex: lyricSongIndex,
                 annotationIndex,
                 cardIndex
-            }),
+            })
 
-            annotationCardChild = (
+        return (
+            <div className={cx(
+                'AnnotationCardAnimatable',
+                getPrefixedDotLetterClassNames(
+                    dotKeys,
+
+                    // "Child annotation card letter."
+                    'CaC'
+                )
+            )}>
                 <div className={cx(
                     'AnnotationCard',
                     !inCarousel && 'AnnotationCard__inPopup',
@@ -90,22 +99,7 @@ class AnnotationCard extends PureComponent {
                         />
                     )}
                 </div>
-            )
-
-        return inCarousel ? (
-            <div className={cx(
-                'AnnotationCardAnimatable',
-                getPrefixedDotLetterClassNames(
-                    dotKeys,
-                    // "Child annotation card letter."
-                    'CaC'
-                )
-            )}>
-                {annotationCardChild}
             </div>
-
-        ) : (
-            annotationCardChild
         )
     }
 }
