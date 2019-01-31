@@ -247,7 +247,7 @@ class CloseHandler extends PureComponent {
 
         // If popup is open, close it and do nothing else.
         if (selectedWikiIndex && !exemptWiki) {
-            this.props.resetWiki({ selectedWikiIndex: 0 })
+            this.props.resetWiki()
 
         } else if (isScoreShown && !exemptScore) {
             this.props.updateToggleStore({ isScoreShown: false })

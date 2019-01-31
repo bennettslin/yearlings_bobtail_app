@@ -10,7 +10,7 @@ export default (
         case DOTS_SLIDE_STORE:
             return {
                 ...state,
-                ...action.payload
+                ...action.payload || DOTS_SLIDE_DEFAULTS
             }
         default:
             return state
