@@ -104,7 +104,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `My ambition for this album was to do for rock music what James Joyce did for modern literature. Since his semi-autobiographical first novel,`,
+                            `My ambition for this album was to do for rock music what James Joyce did for modern literature. When faced with a creative decision, I would ask myself what Joyce would do. Since his semi-autobiographical first novel,`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -112,7 +112,7 @@ export default {
                                     wiki: `A_Portrait_of_the_Artist_as_a_Young_Man`
                                 }
                             },
-                            `begins in the simple prose of a child, I did the same with this first song of the album.`
+                            `begins in the simple prose of a child, this album does the same with its opening song.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -258,7 +258,7 @@ export default {
                         {
                             anchor: `made an "accident"`,
                             card: {
-                                description: `Upon pooping my pants, I kept quiet. I think someone finally noticed the stink and alerted the teacher, who then brought me to the nurse's office.`,
+                                description: `Upon pooping my pants, I kept quiet at my desk. I think someone finally noticed the stink and alerted the teacher, who then brought me to the nurse's office.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -378,17 +378,9 @@ export default {
                         {
                             anchor: `sheriff's badge and gun…`,
                             card: {
-                                description: [
-                                    `In 1971, the United Nations revoked its recognition of`,
-                                    {
-                                        anchor: `Taiwan's sovereignty`,
-                                        wiki: `Political_status_of_Taiwan`
-                                    },
-                                    `due to pressure from China. Since international law was no longer enforced as a result, a bootleg industry sprang up to serve a generation of Taiwanese teenagers like my mother who prized all things deemed American. My sister and I thus grew up listening to her country records, and held a fascination for the Old West that was more typical of a prior generation of American children.`
-                                ],
+                                description: `While the Taiwanese teenagers of my mother's generation prized all things American, their understanding of what America had to offer was largely shaped by a bootleg industry that recycled material from decades past. Years later, my sister and I would grow up listening to my mother's old country records and sharing her fondness for old Westerns.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [REFERENCE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
@@ -401,7 +393,7 @@ export default {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
+                        description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
@@ -422,7 +414,7 @@ export default {
                         {
                             anchor: `girls' mirrors.`,
                             card: {
-                                description: `My sister would cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
+                                description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -499,12 +491,12 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `The song ends in G\u2011flat major, the remaining major triad belonging to the`,
+                            `The major triads of the keys heard throughout this song belong to a single`,
                             {
-                                anchor: `octatonic collection`,
+                                anchor: `octatonic collection.`,
                                 wiki: `Octatonic_scale`
                             },
-                            `shared by the major triads of A, C, and E\u2011flat, to suggest the excitement of undiscovered vistas ahead.`
+                            `The song now ends on a chord of G\u2011flat major, the one major triad from this collection that remains to be heard, to suggest the excitement of undiscovered vistas that await.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
