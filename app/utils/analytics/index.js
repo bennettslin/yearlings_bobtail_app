@@ -1,3 +1,5 @@
+ga('create', 'UA-133481555-1', 'auto')
+
 const sendEvent = ({
     category = 'category',
     action = 'action',

@@ -58,7 +58,7 @@ class Main extends PureComponent {
         sendEvent({
             category: 'test',
             event: 'mount',
-            label: '012919_1915'
+            label: '013119_1542'
         })
     }
 
