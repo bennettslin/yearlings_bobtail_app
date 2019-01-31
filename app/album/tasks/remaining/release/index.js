@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Timebox for band website.`,
-        workedHours: 0,
-        neededHours: 10
+        workedHours: 10,
+        neededHours: 20
     }
 ]
