@@ -491,12 +491,12 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `The major triads of the keys heard throughout this song belong to a single`,
+                            `A, C, and E\u2011flat, the three distantly related major keys we have visited thus far, also comprise three of the four triads of an`,
                             {
                                 anchor: `octatonic collection.`,
                                 wiki: `Octatonic_scale`
                             },
-                            `The song now ends on a chord of G\u2011flat major, the one major triad from this collection that remains to be heard, to suggest the excitement of undiscovered vistas that await.`
+                            `The song now ends on the yet unheard major chord of G\u2011flat, the fourth and final triad of the collection, to suggest the excitement of undiscovered vistas that await a young child.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

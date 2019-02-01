@@ -1,4 +1,18 @@
-ga('create', 'UA-133481555-1', 'auto')
+let isGaTrackerCreated = false
+
+const canGaSendEvent = () => {
+
+    if (typeof ga === 'undefined') {
+        return false
+    }
+
+    if (!isGaTrackerCreated) {
+        ga('create', 'UA-133481555-1', 'auto')
+        isGaTrackerCreated = true
+    }
+
+    return true
+}
 
 const sendEvent = ({
     category = 'category',
@@ -6,22 +20,20 @@ const sendEvent = ({
     label = 'label'
 
 }) => {
-    if (typeof ga === 'undefined') {
-        return
+    if (canGaSendEvent()) {
+        ga('send', {
+            hitType: 'event',
+            eventCategory: category,
+            eventAction: action,
+            eventLabel: label
+        })
+
+        logAnalytics({
+            category,
+            action,
+            label
+        })
     }
-
-    ga('send', {
-        hitType: 'event',
-        eventCategory: category,
-        eventAction: action,
-        eventLabel: label
-    })
-
-    logAnalytics({
-        category,
-        action,
-        label
-    })
 }
 
 global.sendEvent = sendEvent
