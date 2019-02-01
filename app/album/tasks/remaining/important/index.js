@@ -31,7 +31,7 @@ export default [
     },
     {
         taskName: `Check that GA events work.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 1
     }
 ]
