@@ -530,7 +530,7 @@ export default {
                         {
                             anchor: `have her for your pet.`,
                             card: {
-                                description: `Despite the emotional turmoil, I really did love Sita, and I never once doubted that the breakup would be equally wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
+                                description: `TODO: Improve grammar obviously. Despite the emotional turmoil, I really did love Sita, and I never once doubted that the breakup would be equally wrenching for us both. Sita's strategy of leaving herself vulnerable and in a helpless state, thereby forcing me into the role of her defender and protector, was at once both infuriating and heartbreakingly endearing. More than just the foundational basis of my love for her, it was all I knew of how to love, period. I would never be asked to love in this way ever again, certainly not by the carefree hipster women that I pined after. Which made it legitimate to fear that I could never truly love anyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

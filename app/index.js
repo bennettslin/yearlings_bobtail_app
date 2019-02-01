@@ -12,7 +12,6 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 import { Provider } from 'react-redux'
 
 // Import these here just to make them available.
-
 /* eslint-disable no-unused-vars */
 import logger from './utils/logger'
 import sendEvent from './utils/analytics'
