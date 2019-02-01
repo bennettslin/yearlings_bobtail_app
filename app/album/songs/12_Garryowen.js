@@ -530,7 +530,7 @@ export default {
                         {
                             anchor: `have her for your pet.`,
                             card: {
-                                description: `Despite the emotional turmoil, I really did love Sita, and I never doubted that the breakup would be equally wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
+                                description: `Despite the emotional turmoil, I really did love Sita, and I never once doubted that the breakup would be equally wrenching for us both. And so I kept putting it off, even as putting it off just made things worse.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -668,7 +668,7 @@ export default {
                             {
                                 anchor: `as well in you."`,
                                 card: {
-                                    description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone close to me. And harm Sita I did.`,
+                                    description: `But my capacity to injure myself also meant that I would have few compunctions about harming anyone close to me. And harm Sita, I did.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
