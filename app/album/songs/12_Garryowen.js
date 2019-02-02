@@ -91,7 +91,7 @@ export default {
                         {
                             anchor: `Brushed her off`,
                             card: {
-                                description: `TODO: Rewrite. Whenever Sita could sense that I was withdrawing from our relationship, she would reach out by groveling. Stung by my conscience, I would then respond by reaching back to comfort her. But it was never without adding to my reserve of exasperation, which grew and became more visible on the surface. At which point she would grovel further. At some point this strategy proved completely ineffective, and I would respond negatively just as much as positively, but by then it was too late to change the codependent path we were on.`,
+                                description: `Whenever Sita could sense that I was withdrawing from our relationship, she would reach out by groveling. And stung by my conscience, I would reach back to comfort her. But as my patience grew thinner over time, I would lash out in passive-aggressive ways, whereupon she would grovel even further. It became all we knew of how to speak for ourselves.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -556,7 +556,7 @@ export default {
                         {
                             anchor: `she won't be there;`,
                             card: {
-                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters whom I pined for after every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely had to fear whether I could ever truly love anyone else.`,
+                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters whom I pined for after every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely feared whether I could ever truly love anyone else.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

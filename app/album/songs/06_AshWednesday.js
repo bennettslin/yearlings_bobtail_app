@@ -752,12 +752,12 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza corresponded with their`,
+                            `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza were`,
                             {
                                 anchor: `homophones`,
                                 wiki: `Homophone`
                             },
-                            `in the second, so I made a game of matching the two stanzas as closely as possible. This later gave me the idea for doublespeaker rhyme.`],
+                            `of their counterparts in the second, so I made a game of matching the two stanzas as closely as possible. This later gave me the idea for doublespeaker rhyme.`],
                         dotKeys: {
                             [SONGWRITING]: true
                         }
