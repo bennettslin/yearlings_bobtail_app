@@ -91,10 +91,7 @@ export default {
                         {
                             anchor: `Brushed her off`,
                             card: {
-                                description: `TODO: As Sita sensed that I was withdrawing from our relationship, she would reach out by groveling. Stung by my conscience, I would
-
-
-                                My initial response was always to comfort her, but soon I would give in to my exasperation, whereupon she would have to grovel further just to elicit the same sympathy, until finally, all her .`,
+                                description: `TODO: Rewrite. Whenever Sita sensed that I was withdrawing from our relationship, she would reach out by groveling. Stung by my conscience, I would then respond by reaching back to comfort her, but never without exasperation. But over time as my patience wore thinner, I would allow the effects of this exasperation that much more visible on the surface, at which point she would grovel further. At some point this strategy proved completely ineffective, and I would respond negatively just as much as positively, but by then it was too late to change the codependent path we were on.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -544,7 +541,7 @@ export default {
                         {
                             anchor: `have her for your pet.`,
                             card: {
-                                description: `Sita's manner of prostrating herself, which forced upon me an absolute power that I never asked for, was in no small way infuriating. But it was also heartbreakingly endearing, and thus guaranteed to make me love her, in the way that one necessarily loves a pet. And love her, I did. So I never doubted that the impending breakup would be equally wrenching for both of us.`,
+                                description: `Sita's manner of prostrating herself, which forced me to wield an absolute power that I never asked for, was in no small way infuriating. But it was also heartbreakingly endearing, and thus it was guaranteed to make me love her, in the way that one necessarily loves a pet. And love her, I did. So I never doubted that the impending breakup would be equally wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
