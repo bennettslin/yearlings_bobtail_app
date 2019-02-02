@@ -66,7 +66,7 @@ import {
 import {
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
-    HOSPITAL_MATTRESS
+    HOSPITAL_PILLOW
 } from '../../scene/furnitureKeys'
 
 import {
@@ -216,7 +216,7 @@ export default [
                 [HOSPITAL_RECORD_PLAYER]: true
             },
             [FURNITURES]: {
-                [HOSPITAL_MATTRESS]: true
+                [HOSPITAL_PILLOW]: true
             },
             [PANELS]: {
                 [DEATHBED_THOUGHT_PANEL]: true
@@ -247,7 +247,7 @@ export default [
                 [HOSPITAL_RECORD_PLAYER]: true
             },
             [FURNITURES]: {
-                [HOSPITAL_MATTRESS]: true
+                [HOSPITAL_PILLOW]: true
             },
             [PANELS]: {
                 [DEATHBED_THOUGHT_PANEL]: true,

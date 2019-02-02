@@ -10,7 +10,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'captainBedMattress',
+        taskName: 'captainBedPillow',
         workedHours: 0,
         neededHours: 2
     },
@@ -95,7 +95,12 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'hospitalMattress',
+        taskName: 'hospitalPillow',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'hospitalBed side (technically a panel.)',
         workedHours: 0,
         neededHours: 2
     }

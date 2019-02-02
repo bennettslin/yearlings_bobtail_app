@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const CaptainBedMattress = ({
+const HospitalPillow = ({
 
     className,
 
@@ -19,7 +19,7 @@ const CaptainBedMattress = ({
     return (
         <Svg
             className={cx(
-                'CaptainBedMattress',
+                'HospitalPillow',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const CaptainBedMattress = ({
                 {...other}
             >
                 {cx(
-                    'CaptainBedMattress'
+                    'HospitalPillow'
                 )}
             </text>
         </Svg>
     )
 }
 
-CaptainBedMattress.propTypes = propTypes
+HospitalPillow.propTypes = propTypes
 
-export default CaptainBedMattress
+export default HospitalPillow

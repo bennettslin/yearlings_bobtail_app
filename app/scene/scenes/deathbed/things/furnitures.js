@@ -1,10 +1,10 @@
 import {
-    HOSPITAL_MATTRESS,
-    HOSPITAL_MATTRESS_LOWERED
+    HOSPITAL_PILLOW,
+    HOSPITAL_PILLOW_LOWERED
 } from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
-    [HOSPITAL_MATTRESS]: {
+    [HOSPITAL_PILLOW]: {
         yIndex: 3,
         arrangement: {
             xFloat: 2.5,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 1
         }
     },
-    [HOSPITAL_MATTRESS_LOWERED]: {
+    [HOSPITAL_PILLOW_LOWERED]: {
         yIndex: 3,
         arrangement: {
             xFloat: 2.5,

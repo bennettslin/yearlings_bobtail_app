@@ -104,7 +104,7 @@ import {
 
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED_MATTRESS
+    CAPTAIN_BED_PILLOW
 } from '../../scene/furnitureKeys'
 
 import {
@@ -134,7 +134,7 @@ export default [
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED_MATTRESS]: true
+                [CAPTAIN_BED_PILLOW]: true
             },
             [PANELS]: {
                 [CAPTAIN_BED_DRAWERS]: true
@@ -201,7 +201,7 @@ export default [
                 [RED_ENVELOPE_MONEY]: true
             },
             [FURNITURES]: {
-                [CAPTAIN_BED_MATTRESS]: true,
+                [CAPTAIN_BED_PILLOW]: true,
                 [BEDROOM_DESK]: true
             },
             [PANELS]: {
@@ -236,7 +236,7 @@ export default [
                 [MICHAEL_JACKSON_POSTER]: true
             },
             [FURNITURES]: {
-                [CAPTAIN_BED_MATTRESS]: true
+                [CAPTAIN_BED_PILLOW]: true
             },
             [PANELS]: {
                 [CAPTAIN_BED_DRAWERS]: true

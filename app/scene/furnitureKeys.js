@@ -2,7 +2,7 @@
 export const BEDROOM_DESK = 'bedroomDesk'
 
 // TODO
-export const CAPTAIN_BED_MATTRESS = 'captainBedMattress'
+export const CAPTAIN_BED_PILLOW = 'captainBedPillow'
 
 // TODO
 export const SCHOOLBUS_SEAT_FRONT = 'schoolbusSeatFront'
@@ -58,5 +58,5 @@ export const REATTA_SEAT = 'reattaSeat'
 export const REATTA_SEAT_LOWERED = 'reattaSeatLowered'
 
 // TODO
-export const HOSPITAL_MATTRESS = 'hospitalMattress'
-export const HOSPITAL_MATTRESS_LOWERED = 'hospitalMattressLowered'
+export const HOSPITAL_PILLOW = 'hospitalPillow'
+export const HOSPITAL_PILLOW_LOWERED = 'hospitalPillowLowered'

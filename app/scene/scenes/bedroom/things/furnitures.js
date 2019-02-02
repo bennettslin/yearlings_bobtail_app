@@ -1,6 +1,6 @@
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED_MATTRESS
+    CAPTAIN_BED_PILLOW
 } from '../../../furnitureKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 1
         }
     },
-    [CAPTAIN_BED_MATTRESS]: {
+    [CAPTAIN_BED_PILLOW]: {
         yIndex: 4,
         arrangement: {
             xFloat: 8,

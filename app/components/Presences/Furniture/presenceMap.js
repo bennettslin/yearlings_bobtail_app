@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 import BedroomDesk from './Furnitures/BedroomDesk'
-import CaptainBedMattress from './Furnitures/CaptainBedMattress'
+import CaptainBedPillow from './Furnitures/CaptainBedPillow'
 import SchoolbusSeatFront from './Furnitures/SchoolbusSeatFront'
 import SchoolbusSeatRear from './Furnitures/SchoolbusSeatRear'
 import BuoyFloat from './Furnitures/BuoyFloat'
@@ -24,12 +24,12 @@ import LizCushions from './Furnitures/LizCushions'
 import MiriamCushions from './Furnitures/MiriamCushions'
 import ReattaSeat from './Furnitures/ReattaSeat'
 import ReattaSeatLowered from './Furnitures/ReattaSeatLowered'
-import HospitalMattress from './Furnitures/HospitalMattress'
-import HospitalMattressLowered from './Furnitures/HospitalMattressLowered'
+import HospitalPillow from './Furnitures/HospitalPillow'
+import HospitalPillowLowered from './Furnitures/HospitalPillowLowered'
 
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED_MATTRESS,
+    CAPTAIN_BED_PILLOW,
     SCHOOLBUS_SEAT_FRONT,
     SCHOOLBUS_SEAT_REAR,
     BUOY_FLOAT,
@@ -53,13 +53,13 @@ import {
     MIRIAM_CUSHIONS,
     REATTA_SEAT,
     REATTA_SEAT_LOWERED,
-    HOSPITAL_MATTRESS,
-    HOSPITAL_MATTRESS_LOWERED
+    HOSPITAL_PILLOW,
+    HOSPITAL_PILLOW_LOWERED
 } from 'scene/furnitureKeys'
 
 export const propTypes = {
     [BEDROOM_DESK]: PropTypes.bool,
-    [CAPTAIN_BED_MATTRESS]: PropTypes.bool,
+    [CAPTAIN_BED_PILLOW]: PropTypes.bool,
     [SCHOOLBUS_SEAT_FRONT]: PropTypes.bool,
     [SCHOOLBUS_SEAT_REAR]: PropTypes.bool,
     [BUOY_FLOAT]: PropTypes.bool,
@@ -83,13 +83,13 @@ export const propTypes = {
     [MIRIAM_CUSHIONS]: PropTypes.bool,
     [REATTA_SEAT]: PropTypes.bool,
     [REATTA_SEAT_LOWERED]: PropTypes.bool,
-    [HOSPITAL_MATTRESS]: PropTypes.bool,
-    [HOSPITAL_MATTRESS_LOWERED]: PropTypes.bool
+    [HOSPITAL_PILLOW]: PropTypes.bool,
+    [HOSPITAL_PILLOW_LOWERED]: PropTypes.bool
 }
 
 export default {
     [BEDROOM_DESK]: BedroomDesk,
-    [CAPTAIN_BED_MATTRESS]: CaptainBedMattress,
+    [CAPTAIN_BED_PILLOW]: CaptainBedPillow,
     [SCHOOLBUS_SEAT_FRONT]: SchoolbusSeatFront,
     [SCHOOLBUS_SEAT_REAR]: SchoolbusSeatRear,
     [BUOY_FLOAT]: BuoyFloat,
@@ -113,6 +113,6 @@ export default {
     [MIRIAM_CUSHIONS]: MiriamCushions,
     [REATTA_SEAT]: ReattaSeat,
     [REATTA_SEAT_LOWERED]: ReattaSeatLowered,
-    [HOSPITAL_MATTRESS]: HospitalMattress,
-    [HOSPITAL_MATTRESS_LOWERED]: HospitalMattressLowered
+    [HOSPITAL_PILLOW]: HospitalPillow,
+    [HOSPITAL_PILLOW_LOWERED]: HospitalPillowLowered
 }

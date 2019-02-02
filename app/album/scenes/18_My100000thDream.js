@@ -74,7 +74,7 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    HOSPITAL_MATTRESS_LOWERED
+    HOSPITAL_PILLOW_LOWERED
 } from '../../scene/furnitureKeys'
 
 import {
@@ -259,7 +259,7 @@ export default [
                 [INVERSE_THOUGHT_BACKDROP]: true
             },
             [FURNITURES]: {
-                [HOSPITAL_MATTRESS_LOWERED]: true
+                [HOSPITAL_PILLOW_LOWERED]: true
             }
         },
         cubes: CLIFF_DEATHBED_KEY,
