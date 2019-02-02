@@ -142,7 +142,7 @@ export default {
                                             wiki: `The_Giving_Tree`
                                         }
                                     },
-                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, her gifts become increasingly self-sacrificing in nature. Many read it as an allegory for unhealthy codependency in children.`
+                                    `is a children's book about a tree's nurturing love for a boy. As the boy grows into a man, her gifts become increasingly self-sacrificing in nature. Many read it as an allegory for unhealthy, codependent parent-child relationships.`
                                 ]
                             }
                         }

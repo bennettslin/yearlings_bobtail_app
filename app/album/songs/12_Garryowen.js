@@ -21,7 +21,7 @@ import {
 export default {
     title: 'Garryowen',
     totalTime: 187,
-    overview: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I had soured on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
+    overview: `My mood changed when I drank, leading friends to joke that I had a sinister alter ego. It wasn't far from the truth. I was souring on my relationship with Sita by this point, and being drunk provided both an escape and an excuse to act out. But I didn't like myself during such moments. I missed the hapless kid that I still was in my head, and knowing now how to get it right, I longed for a do-over, without the mess this time. And without Sita.`,
     lyricUnits: [
         {
             unitMap: {
@@ -87,7 +87,21 @@ export default {
             mainVerses: [
                 {
                     time: 17,
-                    lyric: `Brushed her off tonight, to swipe meats and wine`
+                    lyric: [
+                        {
+                            anchor: `Brushed her off`,
+                            card: {
+                                description: `TODO: As Sita sensed that I was withdrawing from our relationship, she would reach out by groveling. Stung by my conscience, I would
+
+
+                                My initial response was always to comfort her, but soon I would give in to my exasperation, whereupon she would have to grovel further just to elicit the same sympathy, until finally, all her .`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        },
+                        `tonight, to swipe meats and wine`
+                    ]
                 },
                 {
                     time: 20,
@@ -513,7 +527,7 @@ export default {
                                 anchor: `Irish ones,`,
                                 wiki: `Uilleann_pipes`
                             },
-                            `I mimicked the sound by overdubbing multiple melodica tracks, with one set acting as the chanter, and another as the drone.`
+                            `I mimicked the sound by overdubbing multiple takes of a two-part harmony on the melodica, with one part acting as the chanter, and the other as the drone.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -530,7 +544,7 @@ export default {
                         {
                             anchor: `have her for your pet.`,
                             card: {
-                                description: `TODO: Improve grammar obviously. Despite the emotional turmoil, I really did love Sita, and I never once doubted that the breakup would be equally wrenching for us both. Sita's strategy of leaving herself vulnerable and in a helpless state, thereby forcing me into the role of her defender and protector, was at once both infuriating and heartbreakingly endearing. More than just the foundational basis of my love for her, it was all I knew of how to love, period. I would never be asked to love in this way ever again, certainly not by the carefree hipster women that I pined after. Which made it legitimate to fear that I could never truly love anyone else.`,
+                                description: `Sita's manner of prostrating herself, which forced upon me an absolute power that I never asked for, was in no small way infuriating. But it was also heartbreakingly endearing, and thus guaranteed to make me love her, in the way that one necessarily loves a pet. And love her, I did. So I never doubted that the impending breakup would be equally wrenching for both of us.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -540,7 +554,19 @@ export default {
                 },
                 {
                     time: 111,
-                    lyric: `Someday she won't be there; someday yet!`
+                    lyric: [
+                        `Someday`,
+                        {
+                            anchor: `she won't be there;`,
+                            card: {
+                                description: `But this codependency wasn't just the foundational basis of my love for Sita. It was really all I knew of how to love, period. I would never be asked to love in this way again, certainly not by any of the carefree scenesters whom I pined for after every show. And so it wasn't just cowardice that prevented me from cutting the cord. I genuinely had to fear whether I could ever truly love anyone else.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
+                                }
+                            }
+                        },
+                        `someday yet!`
+                    ]
                 }
             ]
         },
