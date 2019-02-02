@@ -15,19 +15,9 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'schoolbusSeats',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'bennettCushions',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: 'goKartSeats',
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: 'bennettMattress',
@@ -70,11 +60,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'saturnSeats',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'atticCushions',
         workedHours: 0,
         neededHours: 2
@@ -88,11 +73,6 @@ export default [
         taskName: 'miriamCushions',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: 'reattaSeats',
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: 'hospitalPillow',

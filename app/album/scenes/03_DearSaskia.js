@@ -4,7 +4,6 @@ import {
     BUBBLES,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS,
     PUPPETS
 } from 'constants/scene'
@@ -62,11 +61,6 @@ import {
     VAN_NUYS_SCHOOLHOUSE_LEFT,
     VAN_NUYS_SCHOOLHOUSE_RIGHT
 } from '../../scene/flatKeys'
-
-import {
-    SCHOOLBUS_SEAT_FRONT,
-    SCHOOLBUS_SEAT_REAR
-} from '../../scene/furnitureKeys'
 
 import {
     SCHOOLBUS_EXTERIOR,
@@ -162,10 +156,6 @@ export default [
                 [BACKPACK_BENNETT]: true,
                 [BACKPACK_SASHA]: true,
                 [BACKPACK_JEWISH_BOY]: true
-            },
-            [FURNITURES]: {
-                [SCHOOLBUS_SEAT_REAR]: true,
-                [SCHOOLBUS_SEAT_FRONT]: true
             },
             [PANELS]: {
                 [SCHOOLBUS_INTERIOR]: true,

@@ -64,8 +64,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    REATTA_SEAT,
-    REATTA_SEAT_LOWERED,
     HOSPITAL_PILLOW
 } from '../../scene/furnitureKeys'
 
@@ -109,9 +107,6 @@ export default [
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
-            [FURNITURES]: {
-                [REATTA_SEAT]: true
-            },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
@@ -146,9 +141,6 @@ export default [
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
-            [FURNITURES]: {
-                [REATTA_SEAT]: true
-            },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
@@ -182,9 +174,6 @@ export default [
             [FLATS]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
-            },
-            [FURNITURES]: {
-                [REATTA_SEAT_LOWERED]: true
             },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,
@@ -287,9 +276,6 @@ export default [
             [FLATS]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
-            },
-            [FURNITURES]: {
-                [REATTA_SEAT]: true
             },
             [PANELS]: {
                 [REATTA_EXTERIOR]: true,

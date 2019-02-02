@@ -5,7 +5,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 
@@ -65,11 +64,6 @@ import {
 import {
     MUSEUM_DISPLAY
 } from '../../scene/flatKeys'
-
-import {
-    GO_KART_SEAT_LEFT,
-    GO_KART_SEAT_RIGHT
-} from '../../scene/furnitureKeys'
 
 import {
     GO_KART_LEFT_EXTERIOR,
@@ -209,10 +203,6 @@ export default [
             },
             [BACKDROPS]: {
                 [GO_KART_BACKDROP]: true
-            },
-            [FURNITURES]: {
-                [GO_KART_SEAT_LEFT]: true,
-                [GO_KART_SEAT_RIGHT]: true
             },
             [PANELS]: {
                 [GO_KART_LEFT_EXTERIOR]: true,

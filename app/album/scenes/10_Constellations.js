@@ -78,8 +78,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    SATURN_SEAT_FRONT,
-    SATURN_SEAT_REAR,
     ATTIC_CUSHIONS
 } from '../../scene/furnitureKeys'
 
@@ -298,10 +296,6 @@ export default [
             },
             [FIXTURES]: {
                 [EVIAN_BOTTLES]: true
-            },
-            [FURNITURES]: {
-                [SATURN_SEAT_REAR]: true,
-                [SATURN_SEAT_FRONT]: true
             },
             [PANELS]: {
                 [SATURN_EXTERIOR]: true,
