@@ -91,7 +91,7 @@ export default {
                         {
                             anchor: `Brushed her off`,
                             card: {
-                                description: `TODO: Rewrite. Whenever Sita sensed that I was withdrawing from our relationship, she would reach out by groveling. Stung by my conscience, I would then respond by reaching back to comfort her, but never without exasperation. But over time as my patience wore thinner, I would allow the effects of this exasperation that much more visible on the surface, at which point she would grovel further. At some point this strategy proved completely ineffective, and I would respond negatively just as much as positively, but by then it was too late to change the codependent path we were on.`,
+                                description: `TODO: Rewrite. Whenever Sita could sense that I was withdrawing from our relationship, she would reach out by groveling. Stung by my conscience, I would then respond by reaching back to comfort her. But it was never without adding to my reserve of exasperation, which grew and became more visible on the surface. At which point she would grovel further. At some point this strategy proved completely ineffective, and I would respond negatively just as much as positively, but by then it was too late to change the codependent path we were on.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
