@@ -1,17 +1,14 @@
 import {
     BUBBLES,
-    CUTOUTS,
-    FURNITURES
+    CUTOUTS
 } from 'constants/scene'
 
 import ARRANGEMENTS_BUBBLES from './things/bubbles'
 import ARRANGEMENTS_CUTOUTS from './things/cutouts'
-import ARRANGEMENTS_FURNITURES from './things/furnitures'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLES]: ARRANGEMENTS_BUBBLES,
-    [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FURNITURES]: ARRANGEMENTS_FURNITURES
+    [CUTOUTS]: ARRANGEMENTS_CUTOUTS
 }
 
 export default ARRANGEMENTS_THINGS

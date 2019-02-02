@@ -20,37 +20,12 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'bennettMattress',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'bennettPillows',
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: 'armchairLeft',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'armchairRight',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'lizMattress',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'lizPillows',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'lizMattressReflection',
         workedHours: 0,
         neededHours: 2
     },

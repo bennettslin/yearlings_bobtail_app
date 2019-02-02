@@ -86,9 +86,7 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    LIZ_MATTRESS,
     LIZ_PILLOWS,
-    LIZ_MATTRESS_REFLECTION,
     LIZ_PILLOWS_REFLECTION
 } from '../../scene/furnitureKeys'
 
@@ -289,8 +287,6 @@ export default [
                 [BENNETT_SHOE_REFLECTION]: true
             },
             [FURNITURES]: {
-                [LIZ_MATTRESS]: true,
-                [LIZ_MATTRESS_REFLECTION]: true,
                 [LIZ_PILLOWS]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
             }

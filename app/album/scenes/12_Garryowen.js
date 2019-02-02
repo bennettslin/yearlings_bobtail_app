@@ -79,7 +79,6 @@ import {
 
 import {
     LIZ_CUSHIONS,
-    BENNETT_MATTRESS,
     BENNETT_PILLOWS
 } from '../../scene/furnitureKeys'
 
@@ -179,7 +178,6 @@ export default [
                 [NAS_ALBUM]: true
             },
             [FURNITURES]: {
-                [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },

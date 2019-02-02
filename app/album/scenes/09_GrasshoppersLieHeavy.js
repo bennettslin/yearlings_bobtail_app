@@ -91,13 +91,8 @@ import {
 
 import {
     LIGHT_SWITCH,
-    BENNETT_MATTRESS,
     BENNETT_PILLOWS,
-    ARMCHAIR_LEFT,
-    ARMCHAIR_RIGHT,
-    LIZ_MATTRESS,
     LIZ_PILLOWS,
-    LIZ_MATTRESS_REFLECTION,
     LIZ_PILLOWS_REFLECTION
 } from '../../scene/furnitureKeys'
 
@@ -309,7 +304,6 @@ export default [
             },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,
-                [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
@@ -345,7 +339,6 @@ export default [
             },
             [FURNITURES]: {
                 [LIGHT_SWITCH]: true,
-                [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
@@ -374,10 +367,6 @@ export default [
                 [CLIPBOARD]: true,
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
-            },
-            [FURNITURES]: {
-                [ARMCHAIR_LEFT]: true,
-                [ARMCHAIR_RIGHT]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -403,10 +392,6 @@ export default [
                 [CLIPBOARD]: true,
                 [PAINTING]: true,
                 [WAITING_ROOM_PLANT]: true
-            },
-            [FURNITURES]: {
-                [ARMCHAIR_LEFT]: true,
-                [ARMCHAIR_RIGHT]: true
             }
         },
         cubes: WAITING_ROOM_OPEN_KEY,
@@ -442,9 +427,7 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true
             },
             [FURNITURES]: {
-                [LIZ_MATTRESS]: true,
                 [LIZ_PILLOWS]: true,
-                [LIZ_MATTRESS_REFLECTION]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
             }
         },
@@ -481,9 +464,7 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true
             },
             [FURNITURES]: {
-                [LIZ_MATTRESS]: true,
                 [LIZ_PILLOWS]: true,
-                [LIZ_MATTRESS_REFLECTION]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
             }
         },
@@ -521,9 +502,7 @@ export default [
                 [BLOODY_TOWEL]: true
             },
             [FURNITURES]: {
-                [LIZ_MATTRESS]: true,
                 [LIZ_PILLOWS]: true,
-                [LIZ_MATTRESS_REFLECTION]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
             }
         },

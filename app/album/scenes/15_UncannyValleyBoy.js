@@ -89,7 +89,6 @@ import {
 } from '../../scene/flatKeys'
 
 import {
-    BENNETT_MATTRESS,
     BENNETT_PILLOWS,
     LIZ_CUSHIONS,
     LIZ_CUSHIONS_THOUGHT,
@@ -125,7 +124,6 @@ export default [
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
             },
             [FURNITURES]: {
-                [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
@@ -160,7 +158,6 @@ export default [
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
             },
             [FURNITURES]: {
-                [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
@@ -361,7 +358,6 @@ export default [
                 [CRACKED_PICTURE]: true
             },
             [FURNITURES]: {
-                [BENNETT_MATTRESS]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
