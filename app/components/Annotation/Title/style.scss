@@ -1,13 +1,11 @@
 @import "./Access/style";
 
 .AnnotationTitle {
+    position: relative;
     text-align: center;
 
     display: flex;
     align-items: flex-start;
-
-    border-top-left-radius: $borderRadius__narrow;
-    border-top-right-radius: $borderRadius__narrow;
 
     // Unlike lyric title, annotation title maxes out at mini font size.
     &.fontSize__title {
@@ -18,6 +16,21 @@
         $js__margin__thick
         $js__padding__popupContent__wide
         0;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &, &:before {
+        border-top-left-radius: $borderRadius__narrow;
+        border-top-right-radius: $borderRadius__narrow;
+    }
 }
 
 .AnnotationTitle__dot {

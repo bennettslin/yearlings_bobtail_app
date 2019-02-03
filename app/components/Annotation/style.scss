@@ -18,7 +18,13 @@
     border-radius: $borderRadius__narrow;
 }
 
-.boxShadow__mainCard__selected {
+.boxShadow__annotation,
+.boxShadow__annotationTab:before {
+    box-shadow: $boxShadow__mainCard;
+}
+
+.boxShadow__annotation__selected,
+.boxShadow__annotationTab__selected:before {
     box-shadow: $boxShadow__mainCard__selected;
 }
 

@@ -1,20 +1,12 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 
 import Anchor from '../../../Anchor'
 
-import { getPrefixedDotLetterClassNames } from 'helpers/dot'
-
 class AnnotationTitleDot extends PureComponent {
-
-    static defaultProps = {
-        isShadow: false
-    }
 
     static propTypes = {
         // From parent.
-        isShadow: PropTypes.bool.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         stanzaDotKeys: PropTypes.object.isRequired,
@@ -23,28 +15,13 @@ class AnnotationTitleDot extends PureComponent {
 
     render() {
         const {
-            isShadow,
             isAccessed,
             isSelected,
             stanzaDotKeys,
             handleAnchorClick
         } = this.props
 
-        return isShadow ? (
-            <div
-                {...{
-                    className: cx(
-                        'AnchorDot',
-                        getPrefixedDotLetterClassNames(
-                            stanzaDotKeys,
-
-                            // "Child dot anchor letter."
-                            'CdA'
-                        )
-                    )
-                }}
-            />
-        ) : (
+        return (
             <Anchor
                 {...{
                     isAccessed,

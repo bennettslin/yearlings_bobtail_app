@@ -9,7 +9,6 @@ import AccessLetter from '../Letter'
 const propTypes = {
     // From parent.
     accessIconsName: PropTypes.string,
-    isShadow: PropTypes.bool,
     showIfAccessOn: PropTypes.bool,
     accessKeys: PropTypes.arrayOf(
         PropTypes.string.isRequired
@@ -19,7 +18,6 @@ const propTypes = {
 
 const AccessLetters = memo(({
     accessIconsName,
-    isShadow,
     showIfAccessOn,
     accessKeys,
     className
@@ -37,7 +35,6 @@ const AccessLetters = memo(({
                 animateStandaloneOnKeyDown
                 {...{
                     accessKey,
-                    isShadow,
                     showIfAccessOn
                 }}
             />

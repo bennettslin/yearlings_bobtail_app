@@ -122,27 +122,9 @@ const propTypes = {
                 isSubCard && 'UnitCard__subCard',
                 isTabbed && 'UnitCard__tabbed'
             )}>
-
-                {/* This is the tab's box shadow. */}
-                {isTabbed && (
-                    <div
-                        className={cx(
-                            'UnitCard__tab',
-                            'UnitCard__tabShadow',
-                            'boxShadow__mainCard'
-                        )}
-                    >
-                        <div
-                            {...{ className: 'UnitCard__tabText' }}
-                        >
-                            {tabText}
-                        </div>
-                    </div>
-                )}
-
                 <div className={cx(
                     'UnitCard__sheet',
-                    'boxShadow__mainCard',
+                    'boxShadow__stanza',
                     'bgColour__unit__pattern',
                     `bgColour__stanzaType__${stanzaType}`
                 )}>
@@ -170,6 +152,7 @@ const propTypes = {
                         className={cx(
                             'UnitCard__tab',
                             'UnitCard__tabTop',
+                            'boxShadow__stanza__tab',
                             'bgColour__unit__pattern',
                             'bgColour__unit__pattern__reverse',
                             `bgColour__stanzaType__${stanzaType}`

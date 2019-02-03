@@ -7,21 +7,31 @@
     height: $height__stanzaTypeTab;
     top: -$height__stanzaTypeTab;
     left: 0;
-    border-radius: $borderRadius__narrow $borderRadius__narrow 0 0;
 
     padding: 0 5px;
     text-transform: uppercase;
     white-space: nowrap;
     font-size: 0.6em;
     text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
-}
 
-.UnitCard__tabShadow {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /**
+        * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
+        */
+        height: $height__stanzaTypeTab - 4px;
+        box-shadow: $boxShadow__mainCard;
+        z-index: -1;
+    }
 
-    /**
-     * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
-     */
-    height: $height__stanzaTypeTab - 4px;
+    &, &:before {
+        border-top-left-radius: $borderRadius__narrow;
+        border-top-right-radius: $borderRadius__narrow;
+    }
 }
 
 .UnitCard__tabTop {

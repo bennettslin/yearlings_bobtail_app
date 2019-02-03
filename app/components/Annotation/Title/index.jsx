@@ -24,10 +24,6 @@ const mapStateToProps = ({
 
 class AnnotationTitle extends PureComponent {
 
-    static defaultProps = {
-        isShadow: false
-    }
-
     static propTypes = {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
@@ -35,7 +31,6 @@ class AnnotationTitle extends PureComponent {
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
-        isShadow: PropTypes.bool.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         annotationIndex: PropTypes.number.isRequired
@@ -60,7 +55,6 @@ class AnnotationTitle extends PureComponent {
 
     render() {
         const {
-                isShadow,
                 isAccessed,
                 isSelected,
                 lyricSongIndex,
@@ -86,36 +80,29 @@ class AnnotationTitle extends PureComponent {
             isDot = title === IS_UNIT_DOT
 
         return (
-            <div className={cx(
-                'AnnotationTitle',
+            <div
+                {...{
+                    className: cx(
+                        'AnnotationTitle',
 
-                isShadow && 'AnnotationTitle__shadow',
-                {
-                    ...!isShadow && {
-                    /**
-                     * This includes transition animation, so it's always
-                     * applied.
-                     */
-                        'bgColour__annotation': true,
-                        'bgColour__annotation__pattern': true,
-                        'bgColour__annotation__pattern__reverse': true,
-                        'bgColour__annotation__selected': isSelected
-                    },
+                        isDot && 'AnnotationTitle__dot',
 
-                    ...isShadow && {
-                        'boxShadow__mainCard': !isSelected,
-                        'boxShadow__mainCard__selected': isSelected
-                    },
+                        'bgColour__annotation',
+                        'bgColour__annotation__pattern',
+                        'bgColour__annotation__pattern__reverse',
 
-                    'AnnotationTitle__dot': isDot
-                },
+                        isSelected && 'bgColour__annotation__selected',
+                        isSelected ?
+                            'boxShadow__annotationTab__selected' :
+                            'boxShadow__annotationTab',
 
-                'fontSize__title'
-            )}>
+                        'fontSize__title'
+                    )
+                }}
+            >
                 {isDot ? (
                     <AnnotationTitleDot
                         {...{
-                            isShadow,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys: dotKeys,
@@ -125,7 +112,6 @@ class AnnotationTitle extends PureComponent {
                 ) : (
                     <AnnotationTitleText
                         {...{
-                            isShadow,
                             isAccessed,
                             isSelected,
                             text: `\u201c${title}\u201d`,
@@ -135,7 +121,6 @@ class AnnotationTitle extends PureComponent {
                     />
                 )}
                 <AnnotationAccess {...{
-                    isShadow,
                     showUpDown
                 }} />
             </div>

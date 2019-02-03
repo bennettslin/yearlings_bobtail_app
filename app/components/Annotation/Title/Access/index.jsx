@@ -12,21 +12,16 @@ class AnnotationAccess extends PureComponent {
 
     static propTypes = {
         // From parent.
-        isShadow: PropTypes.bool.isRequired,
         showUpDown: PropTypes.bool.isRequired
     }
 
     render() {
-        const {
-            isShadow,
-            showUpDown
-        } = this.props
+        const { showUpDown } = this.props
 
         return showUpDown && (
             <AccessLetters
                 {...{
                     accessIconsName: 'annotationUpDown',
-                    isShadow,
                     showIfAccessOn: showUpDown,
                     accessKeys: [
                         ARROW_UP,

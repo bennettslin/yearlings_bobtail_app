@@ -24,7 +24,6 @@ const propTypes = {
     // From parent.
     inTextAnchor: PropTypes.bool,
     inButtonOrDotAnchor: PropTypes.bool,
-    isShadow: PropTypes.bool,
     showIfAccessOn: PropTypes.bool,
     animateStandaloneOnKeyDown: PropTypes.bool,
     accessKey: PropTypes.string.isRequired
@@ -34,7 +33,6 @@ const AccessLetter = memo(({
     isAccessOn,
     inTextAnchor,
     inButtonOrDotAnchor,
-    isShadow,
     showIfAccessOn,
     animateStandaloneOnKeyDown,
     accessKey
@@ -57,8 +55,6 @@ const AccessLetter = memo(({
             <div
                 className={cx(
                     'AccessLetter',
-
-                    !isShadow && 'AccessLetter__isNotShadow',
 
                     animateStandaloneOnKeyDown &&
                         `${CHILD_ACCESS_PREFIX}${accessKey}`,

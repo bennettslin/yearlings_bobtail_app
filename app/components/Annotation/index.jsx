@@ -68,16 +68,6 @@ class Annotation extends PureComponent {
                         onClick: this._handleContainerClick
                     }}
                 >
-                    <AnnotationHeader
-                        isShadow
-                        {...{
-                            inCarousel,
-                            isAccessed,
-                            isSelected,
-                            annotationIndex
-                        }}
-                    />
-
                     <div
                         {...{
                             className: cx(
@@ -86,8 +76,8 @@ class Annotation extends PureComponent {
                                 'bgColour__annotation__pattern',
                                 isSelected && 'bgColour__annotation__selected',
                                 isSelected ?
-                                    'boxShadow__mainCard__selected' :
-                                    'boxShadow__mainCard',
+                                    'boxShadow__annotation__selected' :
+                                    'boxShadow__annotation',
                                 'abF'
                             )
                         }}
