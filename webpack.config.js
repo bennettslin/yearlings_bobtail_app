@@ -9,7 +9,6 @@
 
 const webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    SitemapWebpackPlugin = require('sitemap-webpack-plugin').default,
     path = require('path'),
     merge = require('webpack-merge'),
     parts = require('./webpack.parts'),
@@ -45,11 +44,7 @@ const webpack = require('webpack'),
                 })
             ] : [
                 new webpack.optimize.DedupePlugin(),
-                new webpack.optimize.OccurrenceOrderPlugin(),
-                new SitemapWebpackPlugin('https://yearlingsbobtail.com', [
-                    '/test1',
-                    '/test2'
-                ])
+                new webpack.optimize.OccurrenceOrderPlugin()
             ],
 
             resolve: {
@@ -105,7 +100,8 @@ const webpack = require('webpack'),
         parts.generateSourceMaps({ type: 'source-map' }),
         parts.extractStyles({
             include: PATHS.scss
-        })
+        }),
+        parts.sitemap()
     ]),
     developmentConfig = merge([
         parts.loadUrls({
