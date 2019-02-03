@@ -1,9 +1,10 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin'),
-    BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin,
-    CleanPlugin = require('clean-webpack-plugin'),
-    BabelMinifyPlugin = require('babel-minify-webpack-plugin'),
-    OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
+const
     cssnano = require('cssnano'),
+    BabelMinifyPlugin = require('babel-minify-webpack-plugin'),
+    { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),
+    CleanPlugin = require('clean-webpack-plugin'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin'),
+    OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
     UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 exports.devServer = ({ host, port } = {}) => ({

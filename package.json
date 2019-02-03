@@ -76,6 +76,7 @@
     "react-test-renderer": "^16.1.1",
     "redux-devtools-extension": "^2.13.2",
     "sass-loader": "^7.0.3",
+    "sitemap-webpack-plugin": "^0.6.0",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^2.1.1",
     "url-loader": "^1.0.1",

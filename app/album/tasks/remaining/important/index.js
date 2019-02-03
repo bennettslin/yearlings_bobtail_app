@@ -28,10 +28,5 @@ export default [
         taskName: `Confirm that new changes to the code will get picked up by CloudFront. Whether hash alone does the trick, or does it need to wait 24 hours? `,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Check that GA events work.`,
-        workedHours: 1,
-        neededHours: 1
     }
 ]

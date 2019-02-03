@@ -4525,5 +4525,10 @@ export default [
         taskName: `Set up GA. Add a test GA event tag.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Check that GA events work.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
