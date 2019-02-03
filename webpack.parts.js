@@ -5,8 +5,7 @@ const
     CleanPlugin = require('clean-webpack-plugin'),
     ExtractTextPlugin = require('extract-text-webpack-plugin'),
     OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin'),
-    UglifyJsPlugin = require('uglifyjs-webpack-plugin'),
-    SitemapWebpackPlugin = require('sitemap-webpack-plugin').default
+    UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 exports.devServer = ({ host, port } = {}) => ({
     devServer: {
@@ -209,14 +208,5 @@ exports.loadUrls = ({ include, isProduction }) => {
 exports.clean = (path) => ({
     plugins: [
         new CleanPlugin([path])
-    ]
-})
-
-exports.sitemap = () => ({
-    plugins: [
-        new SitemapWebpackPlugin('https://yearlingsbobtail.com', [
-            '/test1',
-            '/test2'
-        ])
     ]
 })

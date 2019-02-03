@@ -100,8 +100,7 @@ const webpack = require('webpack'),
         parts.generateSourceMaps({ type: 'source-map' }),
         parts.extractStyles({
             include: PATHS.scss
-        }),
-        parts.sitemap()
+        })
     ]),
     developmentConfig = merge([
         parts.loadUrls({
