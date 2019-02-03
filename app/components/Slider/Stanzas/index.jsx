@@ -27,28 +27,24 @@ class SliderStanzas extends PureComponent {
     render() {
         const
             { lyricSongIndex } = this.props,
-            songStanzasCount = getSongStanzasCount(lyricSongIndex),
-            stanzaIndicesArray = getArrayOfLength(songStanzasCount)
+            stanzaIndicesArray = getArrayOfLength(
+                getSongStanzasCount(lyricSongIndex)
+            )
 
         return (
             <div className={cx(
                 'SliderStanzas',
                 'abF'
             )}>
-                {stanzaIndicesArray.map(stanzaIndex => {
-                    const isLastStanza = stanzaIndex === songStanzasCount - 1
-
-                    return (
-                        <StanzaHoc
-                            key={stanzaIndex}
-                            {...{
-                                stanzaIndex,
-                                isLastStanza,
-                                StanzaComponent: SliderStanza
-                            }}
-                        />
-                    )
-                })}
+                {stanzaIndicesArray.map(stanzaIndex => (
+                    <StanzaHoc
+                        key={stanzaIndex}
+                        {...{
+                            stanzaIndex,
+                            StanzaComponent: SliderStanza
+                        }}
+                    />
+                ))}
             </div>
         )
     }

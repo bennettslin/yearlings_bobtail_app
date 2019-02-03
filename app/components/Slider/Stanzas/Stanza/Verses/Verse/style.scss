@@ -10,6 +10,7 @@
         &,
         .VerseColour {
             border-top-left-radius: $borderRadius__narrow;
+            border-bottom-left-radius: $borderRadius__narrower;
         }
     }
 
@@ -17,6 +18,7 @@
         &,
         .VerseColour {
             border-top-right-radius: $borderRadius__narrow;
+            border-bottom-right-radius: $borderRadius__narrower;
         }
     }
 }

@@ -15,7 +15,8 @@
     -moz-user-select: none;
     user-select: none;
 
-    background-color: #222;
+    // background-color: #222;
+    background-color: #bbb;
 
     // Keeping these together for consistency.
     @include mixin__textAndLinkColours();

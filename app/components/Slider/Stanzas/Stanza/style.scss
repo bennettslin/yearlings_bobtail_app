@@ -33,8 +33,6 @@ $width__sliderStanzaTab: 9px;
     height:
         $height__sliderStanzaTab
         - 2px;
-
-    // top: -$height__sliderStanzaTab;
 }
 
 .SliderStanza__tabTop {
@@ -47,14 +45,23 @@ $width__sliderStanzaTab: 9px;
 }
 
 .SliderStanza__sheet {
-    padding: $js__marginY__slider 0 0 $js__marginX__slider;
+    padding:
+        $js__marginY__slider
+        $js__overlap__marginX__slider
+        0
+        $js__marginX__slider;
 
     display: flex;
+    border-top-right-radius: $borderRadius__narrow;
 
-    .SliderStanza:not(:last-child)
+    .SliderStanza:first-child
     & {
-        border-top-right-radius: $borderRadius__narrower;
-        padding-right: $js__overlap__marginX__slider;
+        border-bottom-left-radius: $borderRadius__narrow;
+    }
+
+    .SliderStanza:last-child
+    & {
+        border-bottom-right-radius: $borderRadius__narrow;
     }
 }
 

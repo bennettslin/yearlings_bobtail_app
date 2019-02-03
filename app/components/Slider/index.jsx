@@ -6,7 +6,6 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
-import SliderScenes from './Scenes'
 import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
 import SliderAccess from './Access'
@@ -54,7 +53,6 @@ class Slider extends PureComponent {
                     onTouchStart: this._handleTouchDown
                 }}
             >
-                <SliderScenes />
                 <SliderTimes />
                 <SliderStanzas />
                 <SliderAccess />

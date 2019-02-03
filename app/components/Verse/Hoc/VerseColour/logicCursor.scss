@@ -35,12 +35,16 @@
 
         // "Grandchild in slider."
         .GcS {
-            box-shadow: $boxShadow__cursorVerse;
+            box-shadow: $boxShadow__cursorVerse__slider;
 
-            border-radius: $borderRadius__narrow $borderRadius__narrow 0 0;
+            border-radius:
+                $borderRadius__narrow
+                $borderRadius__narrow
+                $borderRadius__narrower
+                $borderRadius__narrower;
             top: -2px;
             left: -0.5px;
-            height: calc(100% + 2px);
+            height: calc(100% + 3px);
             width: calc(100% + 1px);
         }
     }

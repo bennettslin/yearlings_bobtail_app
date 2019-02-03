@@ -24,16 +24,14 @@ class SliderStanza extends PureComponent {
 
         // From parents.
         stanzaIndex: PropTypes.number.isRequired,
-        logicSelectors: PropTypes.string.isRequired,
-        isLastStanza: PropTypes.bool.isRequired
+        logicSelectors: PropTypes.string.isRequired
     }
 
     render() {
         const {
                 lyricSongIndex,
                 stanzaIndex,
-                logicSelectors,
-                isLastStanza
+                logicSelectors
             } = this.props,
             {
                 stanzaVerseConfigs,
@@ -58,11 +56,9 @@ class SliderStanza extends PureComponent {
                 (songTotalTime - stanzaEndTime) / songTotalTime * 100,
 
             formattedStanzaRight =
-                isLastStanza ?
-                    `${stanzaRightPercentage}%` :
-                    `calc(${stanzaRightPercentage}% - ${
-                        LS_OVERLAP_MARGIN_X_SLIDER
-                    }px)`,
+                `calc(${stanzaRightPercentage}% - ${
+                    LS_OVERLAP_MARGIN_X_SLIDER
+                }px)`,
 
             /**
              * Stanza width ends where the next one begins. Its right edge that
@@ -73,11 +69,9 @@ class SliderStanza extends PureComponent {
                 (stanzaEndTime - stanzaStartTime) / songTotalTime * 100,
 
             formattedStanzaWidth =
-                isLastStanza ?
-                    `${stanzaWidthPercentage}%` :
-                    `calc(${stanzaWidthPercentage}% + ${
-                        LS_OVERLAP_MARGIN_X_SLIDER
-                    }px)`,
+                `calc(${stanzaWidthPercentage}% + ${
+                    LS_OVERLAP_MARGIN_X_SLIDER
+                }px)`,
 
             stanzaStyle = {
                 right: formattedStanzaRight,
