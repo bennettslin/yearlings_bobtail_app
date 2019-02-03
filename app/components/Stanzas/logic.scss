@@ -14,7 +14,8 @@
             height: $js__length__iconLarge;
         }
 
-        .boxShadow__mainCard {
+        .boxShadow__stanza,
+        .boxShadow__stanzaTab:before {
             box-shadow: $boxShadow__mainCard__selected;
         }
     }

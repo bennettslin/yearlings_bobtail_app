@@ -152,7 +152,7 @@ const propTypes = {
                         className={cx(
                             'UnitCard__tab',
                             'UnitCard__tabTop',
-                            'boxShadow__stanza__tab',
+                            'boxShadow__stanzaTab',
                             'bgColour__unit__pattern',
                             'bgColour__unit__pattern__reverse',
                             `bgColour__stanzaType__${stanzaType}`

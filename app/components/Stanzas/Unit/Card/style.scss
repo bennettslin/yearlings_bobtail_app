@@ -24,7 +24,6 @@
         * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
         */
         height: $height__stanzaTypeTab - 4px;
-        box-shadow: $boxShadow__mainCard;
         z-index: -1;
     }
 
@@ -32,6 +31,11 @@
         border-top-left-radius: $borderRadius__narrow;
         border-top-right-radius: $borderRadius__narrow;
     }
+}
+
+.boxShadow__stanza,
+.boxShadow__stanzaTab:before {
+    box-shadow: $boxShadow__mainCard;
 }
 
 .UnitCard__tabTop {
