@@ -4540,5 +4540,15 @@ export default [
         taskName: `Periodically, if I haven't visited in a while, website is down, and shows server IP address could not be found. (But then after a while, on its own, it will load the page without further interaction.) Need to understand this behaviour! (Hasn't happened for a few days now. Fingers crossed.)`,
         workedHours: 0,
         neededHours: 0
+    },
+    {
+        taskName: `Make all tab shadows a pseudo element.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Finalise slider UI.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

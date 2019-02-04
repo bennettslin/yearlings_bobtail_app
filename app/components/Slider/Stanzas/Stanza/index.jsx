@@ -89,13 +89,6 @@ class SliderStanza extends PureComponent {
                     style: stanzaStyle
                 }}
             >
-                {/* This is the tab's box shadow. */}
-                <div className={cx(
-                    'SliderStanza__tab',
-                    'SliderStanza__tabShadow',
-                    'boxShadow__sliderStanza'
-                )}/>
-
                 <div className={cx(
                     'SliderStanza__sheet',
                     'boxShadow__sliderStanza',
@@ -114,7 +107,7 @@ class SliderStanza extends PureComponent {
                 {/* This tab covers the sheet's box shadow. */}
                 <div className={cx(
                     'SliderStanza__tab',
-                    'SliderStanza__tabTop',
+                    'boxShadow__sliderStanzaTab',
                     'bgColour__sliderStanza__pattern',
                     'bgColour__sliderStanza__pattern__reverse',
                     `bgColour__stanzaType__${stanzaType}`

@@ -22,25 +22,34 @@ $width__sliderStanzaTab: 9px;
     position: absolute;
     top: -$height__sliderStanzaTab;
     left: 0;
-    width: $width__sliderStanzaTab;
-    border-radius: $borderRadius__narrower $borderRadius__narrower 0 0;
-}
-
-.SliderStanza__tabShadow {
-    /**
-     * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
-     */
-    height:
-        $height__sliderStanzaTab
-        - 2px;
-}
-
-.SliderStanza__tabTop {
-    // Ensure that tab covers sheet.
     height: $height__sliderStanzaTab;
+    width: $width__sliderStanzaTab;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /**
+         * Minimise overlap of tab and sheet box shadows. Eyeballed.
+         */
+        height: 0;
+        z-index: -1;
+    }
+
+    &, &:before {
+        border-top-left-radius: $borderRadius__narrower;
+        border-top-right-radius: $borderRadius__narrower;
+    }
 }
 
 .boxShadow__sliderStanza {
+    filter: $dropShadow__sliderStanza;
+}
+
+.boxShadow__sliderStanzaTab:before {
+    // filter: $dropShadow__sliderStanza;
     box-shadow: $boxShadow__sliderStanza;
 }
 
@@ -53,6 +62,19 @@ $width__sliderStanzaTab: 9px;
 
     display: flex;
     border-top-right-radius: $borderRadius__narrow;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /**
+         * Minimise overlap of sheet and slider box shadows. Eyeballed.
+         */
+        height: calc(100% - 10px);
+        z-index: -1;
+    }
 
     .SliderStanza:first-child
     & {

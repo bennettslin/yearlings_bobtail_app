@@ -64,10 +64,5 @@ export default [
         taskName: `Finalise banner UI.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `Finalise slider UI.`,
-        workedHours: 0,
-        neededHours: 5
     }
 ]

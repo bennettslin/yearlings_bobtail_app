@@ -19,16 +19,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Don't have annotation and unit tabs in mobile.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Make slider tabs a pseudo element, and apply drop shadow instead of box shadow.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Get rid of getDefinedOnlyPayload, once I've confirmed that nothing ever passes undefined value.`,
         workedHours: 0,
         neededHours: 1

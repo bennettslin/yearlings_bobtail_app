@@ -1,7 +1,7 @@
 // Box shadow colours.
 $colour__boxShadow: rgba(75, 75, 100, 0.4);
-$colour__boxShadow__dark: rgba(25, 25, 50, 0.6);
-$colour__boxShadow__darker: rgba(25, 25, 50, 0.8);
+$colour__boxShadow__dark: rgba(25, 25, 50, 0.7);
+$colour__boxShadow__darker: rgba(25, 25, 50, 0.9);
 $colour__boxShadow__cursoredBright: rgba(225, 255, 200, 0.5);
 
 // Admin.
@@ -14,8 +14,8 @@ $boxShadow__mainCard__selected:
     0 3px 10px 3px $colour__boxShadow__dark;
 
 $dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);
-$dropShadow__button: drop-shadow(0 4px 4px $colour__boxShadow__dark);
-$dropShadow__buttonOverlay: drop-shadow(0 4px 4px $colour__boxShadow__darker);
+$dropShadow__button: drop-shadow(0 3px 4px $colour__boxShadow__dark);
+$dropShadow__buttonOverlay: drop-shadow(0 3px 4px $colour__boxShadow__darker);
 
 // Lyric.
 $boxShadow__verseBar__above: 0 3px 10px 6px $colour__boxShadow__dark;
@@ -30,7 +30,8 @@ $boxShadow__activeVerse: inset 0 0 5px $colour__boxShadow__dark;
 $boxShadow__cursorVerse: $boxShadow__mainCard;
 
 // Slider.
-$boxShadow__sliderStanza: 0 1px 1px 1px $colour__boxShadow;
+$boxShadow__sliderStanza: 0 3px 6px 2px $colour__boxShadow__dark;
+$dropShadow__sliderStanza: drop-shadow(0 2px 4px $colour__boxShadow__darker);
 $boxShadow__cursorVerse__slider: 0 1px 4px 2px $colour__boxShadow__dark;
 
 // Popup.
