@@ -11,12 +11,13 @@ const
     LEFT_BOOK_ICON = ({
         className
     }) => (
-        <circle
+        <rect
             {...{
                 className,
-                cx: 50,
-                cy: 50,
-                r: 50
+                x: 0,
+                y: 0,
+                width: 100,
+                height: 100
             }}
         />
     ),

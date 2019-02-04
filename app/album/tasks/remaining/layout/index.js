@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Fix Underline gradient mask.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Consider whether to transition slider hide for anchor text and underline.`,
         workedHours: 0,
         neededHours: 1

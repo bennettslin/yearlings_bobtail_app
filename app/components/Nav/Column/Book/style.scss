@@ -4,6 +4,14 @@
 @import "./Toggle/style";
 
 .NavBook {
+    position: absolute;
+
+    display: flex;
     align-items: center;
+
+    height: 100%;
+    min-width: $js__length__icon;
+    padding: 0 $js__padding__navColumnChild;
+
     z-index: $zIndex__carouselNav;
 }

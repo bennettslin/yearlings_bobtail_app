@@ -54,14 +54,3 @@ $width__underline__bleed: 0.125em;
         visibility: hidden;
     }
 }
-
-// .gradientMask__underline {
-//     $gradient__underline: linear-gradient(
-//         rgba(0, 0, 0, 0.5),
-//         rgba(0, 0, 0, 1.0)
-//     );
-
-//     // Not taken care of by autoprefixer, unfortunately.
-//     -webkit-mask-image: $gradient__underline;
-//     mask-image: $gradient__underline;
-// }

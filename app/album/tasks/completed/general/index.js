@@ -4550,5 +4550,15 @@ export default [
         taskName: `Finalise slider UI.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Fix Underline gradient mask. (Just got rid of it instead.)`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Fix carousel and nav positioning.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

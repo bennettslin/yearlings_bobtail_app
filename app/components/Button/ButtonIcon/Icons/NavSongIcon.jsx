@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -24,16 +24,17 @@ const NavSongIcon = ({
     }
 
     return (
-        <Fragment>
-            <circle
-                className={cx(
-                    'NavSongIcon__field',
-                    className
-                )}
+        <___>
+            <rect
                 {...{
-                    cx: 50,
-                    cy: 50,
-                    r: 50
+                    className: cx(
+                        'NavSongIcon__field',
+                        className
+                    ),
+                    x: 0,
+                    y: 0,
+                    width: 100,
+                    height: 100
                 }}
             />
             <text
@@ -49,7 +50,7 @@ const NavSongIcon = ({
             >
                 {characterIndex}
             </text>
-        </Fragment>
+        </___>
     )
 }
 

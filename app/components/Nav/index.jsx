@@ -34,15 +34,14 @@ class Nav extends PureComponent {
                     'Nav',
                     showSingleNavBook ?
                         'Nav__showSingleBook' :
-                        'Nav__showDoubleBook',
-                    'abF'
+                        'Nav__showDoubleBook'
                 )}
             >
                 <NavListener />
                 {/* Placeholder, has no other purpose. */}
                 <div className="CarouselNavToggle__placeholder" />
 
-                <div className="NavColumns">
+                <div>
                     <NavColumn {...{ bookIndex: 0 }} />
                     <NavColumn {...{ bookIndex: 1 }} />
                 </div>

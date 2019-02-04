@@ -4,6 +4,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Svg from '../../../../../modules/Svg'
 import NavButtonIndexed from '../ButtonIndexed'
 
 import {
@@ -37,6 +38,26 @@ const navBookSongsPropTypes = {
                 'NavBookSongs',
                 'NavBook'
             )}>
+                <Svg
+                    {...{
+                        className: cx(
+                            'NavRoad',
+                            'abF'
+                        )
+                    }}
+                >
+                    <rect
+                        className={cx(
+                            'NavRoad__rect'
+                        )}
+                        {...{
+                            x: 0,
+                            y: 85,
+                            width: 100,
+                            height: 15
+                        }}
+                    />
+                </Svg>
                 {Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
                     const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
                     return (

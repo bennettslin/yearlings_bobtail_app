@@ -99,8 +99,8 @@ class Main extends PureComponent {
                 <AnnotationPopup inMain />
                 {canCarouselMount && (
                     <___>
-                        <Nav />
                         <Carousel />
+                        <Nav />
                     </___>
                 )}
                 <div

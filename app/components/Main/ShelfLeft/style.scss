@@ -43,8 +43,6 @@
     display: flex;
     flex-direction: column;
 
-    z-index: $zIndex__mainShelf;
-
     & > :not(:last-child) {
         margin-bottom: $js__margin__thick * 1.5;
     }
@@ -66,5 +64,12 @@
         & > :not(:last-child) {
             margin-bottom: $js__margin__thin * 2;
         }
+    }
+}
+
+.Button {
+    .flex__mainSideButtons
+    & {
+        z-index: $zIndex__mainShelf;
     }
 }

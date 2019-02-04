@@ -1,17 +1,16 @@
 @import "./Book/style";
 
-.NavColumn,
-.NavBook {
-    position: absolute;
-}
-
 .NavColumn {
+    position: absolute;
     height: $js__height__nav;
+
+    opacity: 0;
 
     .DW__desktopWidth
     & {
         transition:
-            bottom $animationDuration__fast;
+            bottom $animationDuration__default,
+            opacity $animationDuration__default;
 
         bottom: -$js__height__nav;
     }
@@ -19,7 +18,8 @@
     .DW__miniOrTabletWidth
     & {
         transition:
-            top $animationDuration__fast;
+            top $animationDuration__default,
+            opacity $animationDuration__default;
 
         top: -$js__height__nav;
     }
@@ -42,6 +42,7 @@
     .DW__miniOrTabletWidth
     & {
         .NavColumn {
+            opacity: 1;
             top: 0;
         }
     }
@@ -50,6 +51,7 @@
     & {
         .NavColumn {
             bottom: 0;
+            opacity: 1;
         }
     }
 }
