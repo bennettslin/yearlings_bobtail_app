@@ -45,6 +45,7 @@ class BannerCursor extends PureComponent {
                         'BannerCursor',
                         isSmallBannerText &&
                             'BannerCursor__smallText',
+                        'textShadow__banner',
                         'abF'
                     )
                 }}

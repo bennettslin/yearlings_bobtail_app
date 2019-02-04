@@ -7,13 +7,11 @@
 
 .NavColumn {
     height: $js__height__nav;
-    opacity: 0;
 
     .DW__desktopWidth
     & {
         transition:
-            bottom $animationDuration__fast,
-            opacity $animationDuration__fast;
+            bottom $animationDuration__fast;
 
         bottom: -$js__height__nav;
     }
@@ -21,8 +19,7 @@
     .DW__miniOrTabletWidth
     & {
         transition:
-            top $animationDuration__fast,
-            opacity $animationDuration__fast;
+            top $animationDuration__fast;
 
         top: -$js__height__nav;
     }
@@ -41,10 +38,6 @@
 .RW__carouselNavShowable
 .ShW__navExpanded
 .TrW__canLyricCarouselEnter {
-
-    .NavColumn {
-        opacity: 1;
-    }
 
     .DW__miniOrTabletWidth
     & {

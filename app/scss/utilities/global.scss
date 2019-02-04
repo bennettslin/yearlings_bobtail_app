@@ -52,6 +52,11 @@
     align-items: center;
 }
 
+.textShadow__banner {
+    color: #ffe;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
 .boxShadow__popupView {
     box-shadow: $boxShadow__popupView;
 

@@ -1,9 +1,6 @@
 @import "./Time/style";
 
 .SliderTimes {
-    // White text with black outline.
-    color: $colour__text__light;
-    @include mixin__textShadow($colour__text__dark);
 
     .TW__sliderMoving
     & {

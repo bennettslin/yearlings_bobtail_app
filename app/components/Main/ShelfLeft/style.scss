@@ -44,10 +44,6 @@
     flex-direction: column;
 
     z-index: $zIndex__mainShelf;
-    // TODO: Currently broken.
-    // & > * {
-    //     z-index: $zIndex__carouselNavButton;
-    // }
 
     & > :not(:last-child) {
         margin-bottom: $js__margin__thick * 1.5;

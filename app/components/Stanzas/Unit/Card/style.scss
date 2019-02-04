@@ -11,8 +11,8 @@
     padding: 0 5px;
     text-transform: uppercase;
     white-space: nowrap;
+
     font-size: 0.6em;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
 
     &:before {
         content: '';
@@ -40,8 +40,6 @@
 
 .UnitCard__tabTop {
     // Ensure that tab covers sheet.
-    color: $colour__text__light;
-
     cursor: pointer;
 
     transition: color $animationDuration__default;

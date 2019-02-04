@@ -62,7 +62,7 @@ export default [
     },
     {
         taskName: `Finalise banner UI.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 5
     }
 ]

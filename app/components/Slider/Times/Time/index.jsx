@@ -15,9 +15,10 @@ const sliderTimePropTypes = {
     }) => (
         <div className={cx(
             'SliderTime',
-            'textShadow__text',
             isSpent ?
-                'SliderTime__spent' : 'SliderTime__remain'
+                'SliderTime__spent' :
+                'SliderTime__remain',
+            'textShadow__banner'
         )}>
             {time}
         </div>
