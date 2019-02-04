@@ -86,6 +86,7 @@ export default {
                         {
                             anchor: `futile trip`,
                             card: {
+                                // TODO: Specifically mention UC Berkeley.
                                 description: [
                                     `I headed for the`,
                                     {

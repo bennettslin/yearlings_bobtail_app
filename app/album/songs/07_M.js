@@ -215,27 +215,12 @@ export default {
                     lyric: [
                         {
                             anchor: `music cred`,
-                            cards: [
-                                {
-                                    description: `To expand my musical palette, I consulted friends and record store clerks. Interestingly, while the offerings they suggested for classical and world music still enrich me to this day, those from the indie rock subgenre have paled into insignificance.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
-                                },
-                                {
-                                    description: [
-                                        `Honestly, I wasted a`,
-                                        {
-                                            isEmphasis: true,
-                                            lyric: `lot`
-                                        },
-                                        `of time on indie rock and its countercultural pretenses, and it remains one of my deepest regrets. But I won't be fooled again.`
-                                    ],
-                                    dotKeys: {
-                                        [OBSERVATION]: true
-                                    }
+                            card: {
+                                description: `I could always detect a whiff of disdain from the Berkeley record store clerks as they rang up my purchases. This mysterious league of enlightened insiders clearly knew something that I didn't. With my quest for self-betterment, I finally overcame my feelings of intimidation and began to ask them for recommended listening.`,
+                                dotKeys: {
+                                    [BACKSTORY]: true
                                 }
-                            ]
+                            }
                         },
                         `with`,
                         {
