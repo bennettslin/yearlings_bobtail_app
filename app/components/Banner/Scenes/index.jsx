@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import BannerScene from './Scene'
+import BannerAccess from '../Access'
 import SceneDispatcher from '../../../dispatchers/Scene'
 
 import { getSongSceneConfigs } from 'album/api/scenes'
@@ -91,6 +92,7 @@ class BannerScenes extends PureComponent {
                         />
                     )
                 })}
+                <BannerAccess />
                 <SceneDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

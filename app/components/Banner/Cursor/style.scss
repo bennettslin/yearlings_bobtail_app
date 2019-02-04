@@ -1,8 +1,31 @@
 .BannerCursor {
-    height: 45%;
+    height: 50%;
     top: auto;
     bottom: 0;
+    padding: $js__margin__thin * 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: $borderRadius__narrow;
+
+    line-height: 1em;
+    color: #ffe;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+
     background-color: #8a6;
+}
+
+// TODO: Same as button, so maybe consolidate.
+.BannerCursor {
+    filter: $dropShadow__button;
+
+    .ShW__overlayShown
+    & {
+        filter: $dropShadow__buttonOverlay;
+    }
 }
 
 .BannerTracker {
