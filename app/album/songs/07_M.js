@@ -160,7 +160,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this fashion would be.`
+                            `I quickly abandoned my original plan to pack the lyrics with M words after this stanza proved how unfeasible an entire song written in this manner would be.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -286,7 +286,7 @@ export default {
                                         anchor: `first five-year plan`,
                                         wiki: `First_five-year_plan`
                                     },
-                                    `of the Soviet Union was quite brutal, as the disruptive shock of industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting from, it seems naive in hindsight to think that my own five-year plan could be free of unintended negative effects.`
+                                    `of the Soviet Union was rather brutal, as the disruptive shock of industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting from, it was naive in hindsight to think that my own five-year plan could be free of unintended negative effects.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
