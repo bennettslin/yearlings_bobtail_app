@@ -226,7 +226,7 @@ export default {
                         {
                             anchor: `mindful manners`,
                             card: {
-                                description: `I also quit cursing during this time. I figured it would be a plus for any woman who didn't curse, while all those who did would still find this quaintness charming.`,
+                                description: `During this time, I also decided to stop using swear words. I figured it would be a definite win with any woman who didn't curse, while all others would find its quaintness charming.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -238,17 +238,16 @@ export default {
                 {
                     time: 69,
                     lyric: [
-                        `Once I`,
                         {
-                            anchor: `metamorphose, certain`,
+                            anchor: `Once I metamorphose,`,
                             card: {
-                                description: `Or else, once I "met a Mara, for certain" I'd impress.`,
+                                description: `In other words, upon completion of my metamorphosis, it would then be the case that "once I met a Mara," I was "for certain" to impress her.`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
                             }
                         },
-                        `I'd impress.`
+                        `certain I'd impress.`
                     ]
                 }
             ]
