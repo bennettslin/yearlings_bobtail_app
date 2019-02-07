@@ -56,7 +56,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `In this song sung from the perspective of my sister as a child, toy instruments abound, including an autoharp and glockenspiel in the intro that evoke the opening of The Beach Boys'`,
+                            `Toy instruments abound in this song sung in the character of my sister as a child. Autoharp and glockenspiel lead the parade with an intro that recalls the first few measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -353,6 +353,22 @@ export default {
         },
         {
             unitMap: {
+                unitDot: {
+                    anchor: IS_UNIT_DOT,
+                    card: {
+                        description: [
+                            `The song once again evokes "Wouldn't It Be Nice," this time by modulating down a minor third to segue into the bridge. In its time,`,
+                            {
+                                isItalic: true,
+                                lyric: `Pet Sounds`
+                            },
+                            `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. I wanted my album to demonstrate new ways of artistic thinking that were only made possible by the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I didn't bother to keep the homage subtle.`
+                        ],
+                        dotKeys: {
+                            [SONGWRITING]: true
+                        }
+                    }
+                },
                 stanzaType: BRIDGE
             },
             mainVerses: [
@@ -538,6 +554,9 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
+                            `Understandably, it was never performed live in its own time.`,
+                            `, with the same underlying faith that feasibility of live performance could be an afterthought`,
+
                             `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,
                             {
                                 isItalic: true,
