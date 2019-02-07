@@ -362,7 +362,7 @@ export default {
                                 isItalic: true,
                                 lyric: `Pet Sounds`
                             },
-                            `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. I wanted my album to demonstrate new ways of artistic thinking that were only made possible by the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I didn't bother to keep the homage subtle.`
+                            `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by demonstrating new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I didn't bother to keep the homage here subtle.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
