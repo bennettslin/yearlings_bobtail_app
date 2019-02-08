@@ -56,7 +56,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `Toy instruments abound in this song sung in the character of my sister as a child. Autoharp and glockenspiel lead the parade with an intro that recalls the first few measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
+                            `Toy instruments abound in this song sung in the character of my sister as a child. Here, autoharp and glockenspiel lead the pack with an intro that recalls the first measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
                             {
                                 isItalic: true,
                                 lyric: {
@@ -362,7 +362,7 @@ export default {
                                 isItalic: true,
                                 lyric: `Pet Sounds`
                             },
-                            `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by demonstrating new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I didn't bother to keep the homage here subtle.`
+                            `was a pioneering work in the field of sound recording, and with the increasing affordability of home studios in the early 2000s, I sensed that the next wave of advancement was afoot. My hope was to be part of this wave by pointing to new artistic directions that were only now made possible with the latest tools, much like Beach Boys leader Brian Wilson had done with his magnum opus. And so I wanted this homage to be anything but subtle.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -554,25 +554,17 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `Understandably, it was never performed live in its own time.`,
-                            `, with the same underlying faith that feasibility of live performance could be an afterthought`,
-
-                            `As I made this album, indie rock was congealing around the belief that recordings merely serve to showcase live shows. So my homage to`,
+                            `Since`,
                             {
                                 isItalic: true,
                                 lyric: `Pet Sounds`
                             },
-                            `was also meant as a gentle reminder that`,
-                            {
-                                anchor: `Brian Wilson's`,
-                                wiki: `Brian_Wilson`
-                            },
-                            `masterpiece was never performed live in its own time, precisely because it was paving the way for what had yet to be achieved onstage. And far from being dismissed as a hobby project, it now tops most lists of rock's greatest albums. But`,
+                            `was never performed live in its own time, I had faith that feasibility of live performance could once again be an afterthought, as masses of new artists pushed the limits of sound recording to new heights. Instead, indie rock stuck to its guns, insisting as always that new artists could hope to gain exposure only by playing live shows. At best, the excitement lay in seeing all the ways in which the latest technology might guide them along this familiar path. But no new paths were to be forged. And so upon its release,`,
                             {
                                 isItalic: true,
                                 lyric: `Yearling's Bobtail`
                             },
-                            `was dead upon arrival, proving my fears well-founded. So this Didi did have to know some things after all…`
+                            `quickly fell by the wayside, as there was no part for it to play in the narrative of our times that was being written.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true,
