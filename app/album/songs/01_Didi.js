@@ -23,7 +23,7 @@ import {
 export default {
     title: 'Didi (弟弟)',
     totalTime: 177,
-    overview: `As a child, I depended on my older sister to do most everything for me, like zipping up my jacket. One day when she wasn't around to help, I pooped in my pants and had to be sent home from school.`,
+    overview: `As a child, I depended on my older sister to do most everything for me, like zipping my jacket. One day when she wasn't around to help, I pooped my pants and had to be sent home from school.`,
     lyricUnits: [
         {
             unitMap: {
@@ -559,12 +559,12 @@ export default {
                                 isItalic: true,
                                 lyric: `Pet Sounds`
                             },
-                            `was never performed live in its own time, I had faith that feasibility of live performance could once again be an afterthought, as masses of new artists pushed the limits of sound recording to new heights. Instead, indie rock stuck to its guns, insisting as always that new artists could hope to gain exposure only by playing live shows. At best, the excitement lay in seeing all the ways in which the latest technology might guide them along this familiar path. But no new paths were to be forged. And so upon its release,`,
+                            `was never performed live in its own time, I had faith that feasibility of live performance could once again be an afterthought, as masses of new artists pushed the limits of sound recording to new heights. Instead, indie rock stuck to its guns, insisting as always that new artists could hope to gain exposure only by playing live shows. The excitement lay in seeing how the latest technology might be used to navigate this familiar path. But no new paths were to be forged. And so upon its release,`,
                             {
                                 isItalic: true,
                                 lyric: `Yearling's Bobtail`
                             },
-                            `quickly fell by the wayside, as there was no part for it to play in the narrative of our times that was being written.`
+                            `quickly fell by the wayside. There was no part for it to play in the narrative of our times that was being written.`
                         ],
                         dotKeys: {
                             [AFTERWORD]: true,

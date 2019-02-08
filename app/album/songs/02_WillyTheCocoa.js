@@ -22,14 +22,14 @@ import {
 export default {
     title: 'Willy the Cocoa',
     totalTime: 207,
-    overview: `Willy the Cocoa was a mentally disabled man who wandered our neighbourhood collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
+    overview: `Willy the Cocoa was a mentally disabled man who wandered our streets collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyricUnits: [
         {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `Kids in the neighbourhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit "cuckoo." I don't think there was an official way to spell it.`,
+                        description: `The kids in the neighborhood knew Willy as "The Cocoa," referring both to the Coke bottles he collected and to his seeming a bit cuckoo. There wasn't an official way to spell it.`,
                         dotKeys: {
                             [BACKSTORY]: true
                         }
@@ -43,12 +43,12 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `In the past, the developmentally disabled were often thought to be`,
+                            `In the past, the mentally disabled were often thought to be trolls in disguise known as`,
                             {
                                 anchor: `changelings,`,
                                 wiki: `Changeling`
                             },
-                            `or disguised trolls left in place of stolen human children. So I wanted to capture the sound of woodland trolls in secluded revelry after such a heist, and figured it was akin to the swamp rock of`,
+                            `who were left in place of stolen human children. I wanted to capture the sound of woodland trolls in secluded revelry after such a heist, and I figured it would be akin to the swamp rock of`,
                             {
                                 anchor: `Creedence Clearwater Revival,`,
                                 wiki: `Creedence_Clearwater_Revival`
@@ -99,20 +99,27 @@ export default {
                         `the`,
                         {
                             anchor: `valley somersaults`,
-                            card: {
-                                description: [
-                                    `I grew up in the`,
-                                    {
-                                        anchor: `San Fernando Valley`,
-                                        wiki: `San_Fernando_Valley`
-                                    },
-                                    `area of Los Angeles, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides. In the mirages created by the summer heat, reflections of these mountains naturally point inwards, as if their jagged peaks had caused the cracks in the asphalt.`
-                                ],
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true
+                            cards: [
+                                {
+                                    description: [
+                                        `I grew up in the`,
+                                        {
+                                            anchor: `San Fernando Valley`,
+                                            wiki: `San_Fernando_Valley`
+                                        },
+                                        `of Los Angeles, where wide boulevards stretch endlessly along a grid plan, and mountains block the horizon on all sides.`
+                                    ],
+                                    dotKeys: {
+                                        [BACKSTORY]: true
+                                    }
+                                },
+                                {
+                                    description: `In the mirages created by the summer heat, the reflections of the surrounding mountains naturally point downwards, suggesting that their jagged peaks had caused the cracks in the asphalt.`,
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `in tarred pavement mirage.`
                     ]
@@ -123,7 +130,7 @@ export default {
                         {
                             anchor: `Hydrants burst`,
                             card: {
-                                description: `To keep cool during the summer, kids would sometimes crack open a fire hydrant, to the dismay of city officials. The water often failed to drain, forming stagnant pools and posing a health hazard.`,
+                                description: `To keep us kids cool during the summer, neighbors would sometimes crack open a fire hydrant. The water often failed to drain and eventually formed stagnant pools, to the dismay of city officials.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -134,13 +141,13 @@ export default {
                             anchor: `dying coyote's jaw.`,
                             cards: [
                                 {
-                                    description: `Occasionally, a coyote would wander down from the surrounding hillsides and get hit by traffic.`,
+                                    description: `Every so often, a coyote would wander down from the hillsides and get hit by traffic. Its body might then lay decomposing for days before being found.`,
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
                                 },
                                 {
-                                    description: `The Valley is like one big lower jaw of a carcass, and all its residents like decomposers furthering its decay.`,
+                                    description: `If the surrounding mountains of the Valley are like the lower jaw of a dying coyote, then the bustle of its morning commuters are like tiny scavengers ready to go to town on the carcass.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
