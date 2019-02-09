@@ -172,7 +172,7 @@ export default {
                                 {
                                     anchor: `Chilled cola's free`,
                                     card: {
-                                        description: `Willy eagerly awaits the complimentary soft drink that is part of his reimbursement at the recycling center.`,
+                                        description: `Willy eagerly awaits the cold soft drink that comes along with his reimbursement at the recycling center.`,
                                         dotKeys: {
                                             [NARRATIVE]: true
                                         }
@@ -214,7 +214,7 @@ export default {
                                             anchor: `microcephaly,`,
                                             wiki: `Microcephaly`
                                         },
-                                        `a medical condition in which the brain fails to develop properly. As such, his head was abnormally small in size.`
+                                        `a medical condition in which the brain fails to develop properly. As such, his head was abnormally small in size, like the "pinheads" of carnival sideshows from bygone days.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
