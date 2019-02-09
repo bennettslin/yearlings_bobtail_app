@@ -48,7 +48,7 @@ export default {
                                 anchor: `changelings,`,
                                 wiki: `Changeling`
                             },
-                            `who had been left in place of stolen human children. I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having just pulled off such a heist. I figured their style would be akin to the swamp rock of`,
+                            `who had been left in place of a stolen human child. I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having just pulled off such a heist. I figured their style would be akin to the swamp rock of`,
                             {
                                 anchor: `Creedence Clearwater Revival,`,
                                 wiki: `Creedence_Clearwater_Revival`
@@ -214,7 +214,7 @@ export default {
                                             anchor: `microcephaly,`,
                                             wiki: `Microcephaly`
                                         },
-                                        `a medical condition in which the brain fails to develop properly. As such, his head was abnormally small in size, like the "pinheads" of carnival sideshows from bygone days.`
+                                        `a medical condition in which the brain fails to develop properly. And so his head was abnormally small in size, like the "pinheads" of carnival sideshows from bygone days.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
@@ -246,11 +246,10 @@ export default {
                         {
                             anchor: `he ends his stroll.`,
                             card: {
-                                description: `In most legends, changelings wittingly participate in the deceit and take pains to hide their true form. And so, preparing to drop off his recyclables where he'll rejoin the company of others, Willy "ends as troll."`,
+                                description: `In most legends, the changeling left in place of a stolen human child is a witting participant in the deceit. As such, it takes pains to hide its true form in the company of its human family and neighbors. And so before Willy goes off to cash in his recyclables, he "ends as troll" by putting on his human guise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
-                                    [PUN]: true,
-                                    [REFERENCE]: true
+                                    [PUN]: true
                                 }
                             }
                         }
@@ -263,10 +262,16 @@ export default {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `In some legends, trolls inadvertently reveal their true identity by using some tool in a wrong manner, so I figured they would also have a peculiar way of playing instruments. As such, I muted the lead guitar and mandolin while throwing in a slew of legato slides.`,
+                        description: [
+                            `In some legends, a changeling hints at its true identity by using some tool in a peculiar manner. I figured trolls would have just as peculiar a way of playing instruments, and so I experimented with unconventional techniques, like pairing`,
+                            {
+                                anchor: `palm mutes`,
+                                wiki: `Palm_mute`
+                            },
+                            `with legato slides on the lead guitar and mandolin here.`
+                        ],
                         dotKeys: {
                             [OBSERVATION]: true,
-                            [REFERENCE]: true,
                             [SONGWRITING]: true
                         }
                     }
@@ -285,7 +290,7 @@ export default {
                         {
                             anchor: `our tins and our jars`,
                             card: {
-                                description: `Some households would help Willy by leaving out their discarded recyclables for him to collect.`,
+                                description: `Like many other households in the neighborhood, my family would leave our recyclables out on the porch for Willy to come by and collect.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
@@ -301,7 +306,7 @@ export default {
                         {
                             anchor: `haircutting to the sun`,
                             card: {
-                                description: `Or else, to the "son." My mother is cutting my brother's hair on the front lawn, since the cleanup afterwards will be easier.`,
+                                description: `Or else, to the "son." My mother is cutting my brother's hair on the front porch, where the cleanup afterward will be easier.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -317,7 +322,7 @@ export default {
                         {
                             anchor: `suddenly baby shrieks…`,
                             card: {
-                                description: `My brother, the baby of our family, was typically calm and quiet in demeanour. However, when made to do things he didn't enjoy or understand, such as sitting through a haircut, he could erupt in a frenzied outburst.`,
+                                description: `My brother, the baby of our family, was typically calm and quiet in demeanor. However, when made to do things he didn't enjoy or understand, like sitting through a haircut, he could erupt without warning in a frenzied outburst.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
