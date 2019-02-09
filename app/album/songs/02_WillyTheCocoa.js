@@ -43,12 +43,12 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `In the past, the mentally disabled were often thought to be trolls in disguise known as`,
+                            `In the past, mentally disabled children were sometimes thought to be trolls in disguise known as`,
                             {
                                 anchor: `changelings,`,
                                 wiki: `Changeling`
                             },
-                            `who were left in place of stolen human children. I wanted to capture the sound of woodland trolls in secluded revelry after such a heist, and I figured it would be akin to the swamp rock of`,
+                            `who had been left in place of stolen human children. I wanted the music for this song to sound like a band of woodland trolls in secluded revelry after having just pulled off such a heist. I figured their style would be akin to the swamp rock of`,
                             {
                                 anchor: `Creedence Clearwater Revival,`,
                                 wiki: `Creedence_Clearwater_Revival`
@@ -79,7 +79,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `The chord progression here zigzags between a minor third down, followed by a whole step up. In mimicry, the melodicas play a sped-up and warped version of this descending pattern at the cadence of each line.`
+                            `The root progression here traces a zigzag in which every minor-third drop is followed by a whole-step rise. At the cadence of each line, melodicas hurriedly catch up by condensing a warped version of this descending pattern into a single measure.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -192,7 +192,7 @@ export default {
                         {
                             anchor: `wayside bottle,`,
                             card: {
-                                description: `Willy begins his daily rounds by filling his shopping cart with recyclables found littered along the sidewalks.`,
+                                description: `Willy begins his daily rounds by filling his shopping cart with discarded bottles and cans found littered along the byways.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -214,7 +214,7 @@ export default {
                                             anchor: `microcephaly,`,
                                             wiki: `Microcephaly`
                                         },
-                                        `a medical condition in which the brain fails to develop properly, resulting in a head that is abnormally small in size.`
+                                        `a medical condition in which the brain fails to develop properly. As such, his head was abnormally small in size.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
