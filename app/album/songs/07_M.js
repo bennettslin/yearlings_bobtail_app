@@ -281,12 +281,12 @@ export default {
                             anchor: `Year five,`,
                             card: {
                                 description: [
-                                    `The`,
+                                    `As it turns out, the`,
                                     {
                                         anchor: `first five-year plan`,
                                         wiki: `First_five-year_plan`
                                     },
-                                    `of the Soviet Union turned out to be quite brutal, as the disruptive shock of industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting from, it was naive in hindsight to think that my own five-year plan could be free of unintended negative effects.`
+                                    `of the Soviet Union was quite brutal, as the disruptive shock of industrializing an agrarian society led to widespread famine and death. Similarly, given how far behind I was starting from, it was naive in hindsight to think that my own five-year plan could be free of unintended negative effects.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true

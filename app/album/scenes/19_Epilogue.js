@@ -136,7 +136,7 @@ export default [
                 },
                 [WADE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'10"`,
                     description: 'standing',
                     instance: EPILOGUE
