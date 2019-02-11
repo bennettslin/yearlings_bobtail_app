@@ -355,7 +355,7 @@ export default {
                             anchor: `gap-toothed coma`,
                             cards: [
                                 {
-                                    description: `My brother's facial expression is blank, right up until the moment he is ruffled by my mother's "gap-toothed comb."`,
+                                    description: `With mouth partially open, my brother wears a blank expression. At least, right up until he gets ruffled by my mother's "gap-toothed comb."`,
                                     dotKeys: {
                                         [NARRATIVE]: true,
                                         [PUN]: true
@@ -373,8 +373,9 @@ export default {
                         {
                             anchor: `pair of seizures`,
                             card: {
-                                description: `My mother also wields a pair of "scissors."`,
+                                description: `My brother's outburst also knocks the "scissors" from my mother's hand and sends it flying into the lawn.`,
                                 dotKeys: {
+                                    [NARRATIVE]: true,
                                     [PUN]: true
                                 }
                             }
@@ -394,13 +395,13 @@ export default {
                             anchor: `see your kid with whiskers,`,
                             cards: [
                                 {
-                                    description: `Given my brother's distaste for haircuts, Willy jokingly predicts that he will sport an unshaven look as an adult.`,
+                                    description: `Observing my brother's distaste for haircuts, Willy jokingly predicts that my brother will choose to sport an unshaven look as an adult.`,
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
                                 },
                                 {
-                                    description: `Willy might be hinting that he literally sees my brother wearing a beard, here and now. After all, in many legends the changeling is not a child at all, but rather a fully grown troll who is perhaps centuries old.`,
+                                    description: `In many legends, the changeling is not a child at all but a fully grown troll, one who is perhaps even centuries old. And so Willy's phrasing leaves open the possibility that my brother, being a changeling, in fact already wears a beard.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [REFERENCE]: true
@@ -417,7 +418,7 @@ export default {
                         {
                             anchor: `creepers on his cheek,`,
                             card: {
-                                description: `But it should come as no surprise if Willy is immune to whatever enchantment disguises my brother's true form, since Willy is possibly a changeling himself, as evinced by his own unkempt facial hair.`,
+                                description: `Whatever magic spell disguises my brother's true form, it should be no surprise that Willy does not fall under its enchantment. After all, Willy is a changeling himself, as evinced by his own unkempt facial hair.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -439,7 +440,14 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `Willy observes that my brother has yet to outgrow his "colic," a period of excessive crying in infants. In the past, such inexplicable lack of development gave rise to a belief in changelings.`,
+                                    description: [
+                                        `Willy observes that my brother has yet to outgrow his`,
+                                        {
+                                            anchor: `"colic,"`,
+                                            wiki: `Baby_colic`
+                                        },
+                                        `a period of excessive crying in infants. In the past, such inexplicable lack of development gave rise to a belief in changelings.`
+                                    ],
                                     dotKeys: {
                                         [PUN]: true,
                                         [REFERENCE]: true
