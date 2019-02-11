@@ -2,7 +2,7 @@ export default [
 
     {
         taskName: `Editing timebox.`,
-        workedHours: 43,
+        workedHours: 44,
         neededHours: 250
     },
     {

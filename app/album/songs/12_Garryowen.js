@@ -579,7 +579,7 @@ export default {
                             anchor: `Final trip on a tanker,`,
                             cards: [
                                 {
-                                    description: `A tanker is a marine vessel that transports crude oil, but also a drinking spree.`,
+                                    description: `A tanker is a marine vessel that transports crude oil. It can also be slang for a drinking spree.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }
