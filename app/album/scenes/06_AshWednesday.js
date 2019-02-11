@@ -196,7 +196,7 @@ export default [
                 [WADE]: {
                     catholic: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side angle, walking, looking pious',
                         instance: CATHOLIC_GUY
                     }
