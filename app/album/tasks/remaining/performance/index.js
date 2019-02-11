@@ -22,5 +22,10 @@ export default [
         taskName: `Get rid of getDefinedOnlyPayload, once I've confirmed that nothing ever passes undefined value.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Remove transitions from mobile.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

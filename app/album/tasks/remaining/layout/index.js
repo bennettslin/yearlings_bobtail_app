@@ -31,6 +31,11 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
+    {
+        taskName: `Determine how to show access letters in slider and banner.`,
+        workedHours: 0,
+        neededHours: 2
+    },
 
     /**
      * Final UI.
