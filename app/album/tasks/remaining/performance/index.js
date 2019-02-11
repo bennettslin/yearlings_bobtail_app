@@ -1,7 +1,7 @@
 export default [
     /**
      * Low priority tasks to reduce DOM nodes. Max is currently Constellations,
-     * with 5270 upon load. (document.querySelectorAll('*').length)
+     * with 5113 upon load. (document.querySelectorAll('*').length)
      */
     {
         taskName: `Just have a single span of text in anchors, rather than both plain text and link.`,
