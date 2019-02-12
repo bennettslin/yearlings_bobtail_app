@@ -55,7 +55,12 @@ class RoutingContainer extends PureComponent {
                 routingSongIndex,
                 routingVerseIndex,
                 routingAnnotationIndex
-            } = getValidRoutingIndices(routingParamString)
+            } = getValidRoutingIndices({
+                selectedSongIndex,
+                selectedVerseIndex,
+                selectedAnnotationIndex,
+                routingParamString
+            })
 
         // Update storage to be consistent with route if necessary.
         if (

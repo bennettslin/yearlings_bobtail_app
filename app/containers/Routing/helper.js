@@ -29,9 +29,9 @@ const _getIndexForPrefix = (string, prefix = '') => {
 
 const _getRoutingIndices = (routingParamString = '') => {
     const rawIndicesObject = {
-            rawSongIndex: 0,
-            rawVerseIndex: 0,
-            rawAnnotationIndex: 0
+            rawSongIndex: undefined,
+            rawVerseIndex: undefined,
+            rawAnnotationIndex: undefined
         },
 
         // Split along hyphen, and only allow three values.
@@ -88,7 +88,12 @@ const _isValidAnnotationIndex = (songIndex, annotationIndex) => {
     return Boolean(getAnnotation(songIndex, annotationIndex))
 }
 
-export const getValidRoutingIndices = (routingParamString = '') => {
+export const getValidRoutingIndices = ({
+    selectedSongIndex,
+    selectedVerseIndex,
+    selectedAnnotationIndex,
+    routingParamString = ''
+}) => {
     /**
      * We now have an array of up to three numbers. If they exist, the first is
      * the song index, second is the verse index, third is the annotation index.
@@ -99,15 +104,25 @@ export const getValidRoutingIndices = (routingParamString = '') => {
             rawAnnotationIndex
         } = _getRoutingIndices(routingParamString),
 
+        // Default to the selected indices.
         routingIndicesObject = {
-            routingSongIndex: 0,
-            routingVerseIndex: 0,
-            routingAnnotationIndex: 0
+            routingSongIndex: selectedSongIndex,
+            routingVerseIndex: selectedVerseIndex,
+            routingAnnotationIndex: selectedAnnotationIndex
         }
 
     // Only set routing song index if valid.
     if (_isValidSongIndex(rawSongIndex)) {
+
         routingIndicesObject.routingSongIndex = rawSongIndex
+
+        /**
+         * If routing song index is valid, then either get verse or annotation
+         * indices from routing param as well, or else reset them. But do not
+         * keep the selected indices.
+         */
+        routingIndicesObject.routingVerseIndex = 0
+        routingIndicesObject.routingAnnotationIndex = 0
 
         /**
          * If routing song index is set, always set routing verse index.

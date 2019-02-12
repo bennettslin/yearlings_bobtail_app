@@ -4560,5 +4560,10 @@ export default [
         taskName: `Fix carousel and nav positioning.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Routing is broken when URL is blank. Should go to stored song if there is one.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
