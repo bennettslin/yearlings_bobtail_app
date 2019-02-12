@@ -158,7 +158,7 @@ export default [
                 },
                 [NESTOR]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, eager',
                     instance: GREETING
                 }
