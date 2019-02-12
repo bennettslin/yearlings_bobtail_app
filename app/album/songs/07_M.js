@@ -303,7 +303,7 @@ export default {
                         {
                             anchor: `wishes on a friend,`,
                             card: {
-                                description: `As my five-year plan neared its end, I conducted a review of all that my diligent effort had brought me. Seeing how easily Jacob got together with Mara after one of our shows, while noting that such ease in my own pursuits felt no less elusive than ever, I could only conclude that my plan was a total washout. I was like a genie freed from a lamp, with good fortunes to bestow on all others but myself.`,
+                                description: `As my five-year plan neared its end, I took stock of all that my patience and sacrifice had brought me. Seeing how easily Jacob hooked up with Mara after one of our shows, while noting that such ease in my own romantic pursuits felt no less elusive than ever, I could only conclude that my plan was a total washout. I felt like a genie freed from a lamp, with good fortunes to bestow on all others but myself.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
