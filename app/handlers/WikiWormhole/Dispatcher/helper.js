@@ -1,3 +1,4 @@
+import isNumber from 'lodash.isnumber'
 import { getAnnotation } from 'album/api/annotations'
 
 import {
@@ -29,7 +30,7 @@ export const getWikiWormholeIndexForDirection = ({
         // Consider each anchor index only once.
         while (counter < wikiWormholesCount) {
             // If no direction given, start at first index...
-            if (isNaN(direction)) {
+            if (!isNumber(direction)) {
                 direction = 0
 
             // ... then proceed in forward direction.

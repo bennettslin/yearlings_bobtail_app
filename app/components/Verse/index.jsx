@@ -5,6 +5,7 @@ import React, {
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+import isNumber from 'lodash.isnumber'
 
 import InteractivatedVerseDispatcher from '../../dispatchers/Interactivated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
@@ -60,7 +61,7 @@ class Verse extends PureComponent {
             verseIndex
         } = this.props
 
-        return !isNaN(verseIndex) && !inVerseBar
+        return isNumber(verseIndex) && !inVerseBar
     }
 
     setVerseRef = (node) => {
@@ -160,7 +161,7 @@ const verseViewPropTypes = {
 
                         inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-                        !isNaN(verseIndex) &&
+                        isNumber(verseIndex) &&
                             `${VERSE_SCROLL}__${verseIndex}`,
 
                         // title, even, odd, inSide.

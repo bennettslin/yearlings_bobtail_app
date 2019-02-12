@@ -1,5 +1,5 @@
 // Helper for getting and setting state persisted in user's local storage.
-
+import isNumber from 'lodash.isnumber'
 import album from 'album'
 
 import { getSongVersesCount } from 'album/api/verses'
@@ -43,7 +43,7 @@ const _getValidatedStoredSongIndex = () => {
 const _validateIndexForKey = (key) => {
     const
         parsedValue = parseInt(getWindowStorage()[key]),
-        isNumber = !isNaN(parsedValue)
+        valueIsNumber = isNumber(parsedValue)
 
     let isValid
 
@@ -51,14 +51,14 @@ const _validateIndexForKey = (key) => {
 
         // These are dependent on the album object.
         case SELECTED_SONG_INDEX:
-            isValid = isNumber && parsedValue < album.songs.length
+            isValid = valueIsNumber && parsedValue < album.songs.length
             break
         case SELECTED_ANNOTATION_INDEX:
         {
             const annotations = _getValidatedStoredSong().annotations
 
             // Logues do not have annotations.
-            isValid = isNumber && annotations ?
+            isValid = valueIsNumber && annotations ?
                 parsedValue <= annotations.length : parsedValue === 0
             break
         }
@@ -69,18 +69,18 @@ const _validateIndexForKey = (key) => {
             )
 
             // Logues do not have songVersesCount.
-            isValid = isNumber && songVersesCount ?
+            isValid = valueIsNumber && songVersesCount ?
                 parsedValue < songVersesCount :
                 parsedValue === 0
             break
         }
         // These must be less than the length of options.
         case SELECTED_AUDIO_OPTION_INDEX:
-            isValid = isNumber && parsedValue < AUDIO_OPTIONS.length
+            isValid = valueIsNumber && parsedValue < AUDIO_OPTIONS.length
             break
 
         default:
-            isValid = isNumber
+            isValid = valueIsNumber
     }
 
     /**
@@ -99,9 +99,9 @@ const _validateIndexForKey = (key) => {
 const _getValidatedDotsBitNumber = () => {
     const
         parsedBitNumber = parseInt(getWindowStorage()[DOTS_BIT_NUMBER]),
-        isNumber = !isNaN(parsedBitNumber),
+        valueIsNumber = isNumber(parsedBitNumber),
         maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length),
-        isValid = isNumber && parsedBitNumber < maxBitNumber
+        isValid = valueIsNumber && parsedBitNumber < maxBitNumber
 
     if (isValid) {
         return parsedBitNumber

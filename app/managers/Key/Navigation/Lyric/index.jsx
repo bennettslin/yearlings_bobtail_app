@@ -1,6 +1,8 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import isNumber from 'lodash.isnumber'
+
 import { resetInteractivated } from 'flux/session/action'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
@@ -91,7 +93,7 @@ class LyricNavigation extends PureComponent {
                     selectedAnnotationIndex: accessedAnnotationIndex
                 })
 
-            } else if (!isNaN(direction)) {
+            } else if (isNumber(direction)) {
                 this.dispatchAccessedAnnotation({
                     annotationIndex: accessedAnnotationIndex,
                     direction

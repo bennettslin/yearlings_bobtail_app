@@ -1,3 +1,4 @@
+import isNumber from 'lodash.isnumber'
 import scrollIntoView from 'scroll-into-view'
 
 import {
@@ -99,7 +100,7 @@ export const scrollElementIntoView = ({
          * never get called. Unfortunately, it does happen, though rarely.
          */
         const selector =
-            isNaN(index) ?
+            !isNumber(index) ?
                 scrollClass :
                 `${scrollClass}__${index}`
         element = document.getElementsByClassName(selector)[0]

@@ -30,6 +30,7 @@
     "date-fns": "^1.29.0",
     "debounce": "^1.0.2",
     "lodash.findindex": "^4.6.0",
+    "lodash.isnumber": "^3.0.3",
     "lodash.keys": "^4.2.0",
     "lodash.pickby": "^4.6.0",
     "mobile-detect": "^1.4.3",

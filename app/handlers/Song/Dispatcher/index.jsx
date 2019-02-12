@@ -7,6 +7,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import isNumber from 'lodash.isnumber'
 
 import { updateAccessStore } from 'flux/access/action'
 import { updateAudioStore } from 'flux/audio/action'
@@ -80,7 +81,7 @@ class SongDispatcher extends PureComponent {
                 selectedSongIndex,
                 selectedVerseIndex
             ),
-            ...!isNaN(earColumnIndex) && { earColumnIndex }
+            ...isNumber(earColumnIndex) && { earColumnIndex }
         })
 
         this.props.updateAccessStore({

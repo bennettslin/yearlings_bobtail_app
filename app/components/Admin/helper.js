@@ -1,3 +1,4 @@
+import isNumber from 'lodash.isnumber'
 import tasks from 'album/tasks'
 import albumTasks from 'album/tasks/songs'
 
@@ -28,10 +29,10 @@ export const getSumOfTasks = (tasks = []) => {
 }
 
 const _addTaskToSum = (sumTasks, task) => {
-    if (!isNaN(task.workedHours)) {
+    if (isNumber(task.workedHours)) {
         sumTasks.workedHours += task.workedHours
     }
-    if (!isNaN(task.neededHours)) {
+    if (isNumber(task.neededHours)) {
         sumTasks.neededHours += task.neededHours
     }
 }

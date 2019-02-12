@@ -3,6 +3,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import isNumber from 'lodash.isnumber'
+
 import { updateAccessStore } from 'flux/access/action'
 
 import { getWikiWormholeIndexForDirection } from './helper'
@@ -40,7 +42,7 @@ class WikiWormholeDispatcher extends PureComponent {
 
             initialWikiWormholeIndex =
                 // If no direction is given, reset the index.
-                isNaN(direction) ?
+                !isNumber(direction) ?
                     1 :
                     prevWikiWormholeIndex,
 

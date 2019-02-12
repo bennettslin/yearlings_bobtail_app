@@ -1,3 +1,4 @@
+import isNumber from 'lodash.isnumber'
 import keys from 'lodash.keys'
 import albumScenes from 'album/scenes'
 
@@ -132,14 +133,14 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             }
 
             // Let song know its individual todos.
-            if (isNaN(drawings.songTasks[songIndex].actorsTodoCount)) {
+            if (!isNumber(drawings.songTasks[songIndex].actorsTodoCount)) {
                 drawings.songTasks[songIndex].actorsTodoCount = 0
                 drawings.songTasks[songIndex].actorsTotalCount = 0
             }
-            if (isNaN(drawings.songTasks[songIndex].actorsWorkedHours)) {
+            if (!isNumber(drawings.songTasks[songIndex].actorsWorkedHours)) {
                 drawings.songTasks[songIndex].actorsWorkedHours = 0
             }
-            if (isNaN(drawings.songTasks[songIndex].actorsNeededHours)) {
+            if (!isNumber(drawings.songTasks[songIndex].actorsNeededHours)) {
                 drawings.songTasks[songIndex].actorsNeededHours = 0
             }
 

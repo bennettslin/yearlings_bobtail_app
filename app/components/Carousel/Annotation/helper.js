@@ -1,3 +1,4 @@
+import isNumber from 'lodash.isnumber'
 import { getAnnotation } from 'album/api/annotations'
 import { EAR_COLUMN_KEYS } from 'constants/lyrics'
 
@@ -16,7 +17,7 @@ export const getCarouselAnnotationData = ({
             dotKeys
         } = annotationObject,
 
-        columnKey = !isNaN(columnIndex) ? EAR_COLUMN_KEYS[columnIndex] : ''
+        columnKey = isNumber(columnIndex) ? EAR_COLUMN_KEYS[columnIndex] : ''
 
     return {
         columnKey,

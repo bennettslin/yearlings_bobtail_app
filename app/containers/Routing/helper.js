@@ -1,4 +1,6 @@
 // Helper for getting param values from routing.
+import isNumber from 'lodash.isnumber'
+
 import { getSongsAndLoguesCount } from 'album/api/songs'
 import { getVerse } from 'album/api/verses'
 import { getAnnotation } from 'album/api/annotations'
@@ -41,7 +43,7 @@ const _getRoutingIndices = (routingParamString = '') => {
     if (routingIndices.length) {
         const rawSongIndex = _getIndexForPrefix(routingIndices[0])
 
-        if (!isNaN(rawSongIndex)) {
+        if (isNumber(rawSongIndex)) {
             rawIndicesObject.rawSongIndex = rawSongIndex
         }
     }
@@ -65,10 +67,10 @@ const _getRoutingIndices = (routingParamString = '') => {
             rawAnnotationIndex = _getIndexForPrefix(routingIndices[1], 'a')
         }
 
-        if (!isNaN(rawVerseIndex)) {
+        if (isNumber(rawVerseIndex)) {
             rawIndicesObject.rawVerseIndex = rawVerseIndex
         }
-        if (!isNaN(rawAnnotationIndex)) {
+        if (isNumber(rawAnnotationIndex)) {
             rawIndicesObject.rawAnnotationIndex = rawAnnotationIndex
         }
     }

@@ -1,3 +1,5 @@
+import isNumber from 'lodash.isnumber'
+
 export const getParentOfVerseClassNamesForIndices = ({
     entities = [],
 
@@ -8,7 +10,7 @@ export const getParentOfVerseClassNamesForIndices = ({
     const classNames = entities.map(entity => {
         const { verseIndex } = entity
 
-        return !isNaN(verseIndex) ?
+        return isNumber(verseIndex) ?
             `${prefix}${verseIndex}` :
             null
     })

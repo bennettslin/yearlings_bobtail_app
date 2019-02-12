@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import isNumber from 'lodash.isnumber'
 
 import Button from '../../../../Button'
 
@@ -51,7 +52,7 @@ class NavButton extends PureComponent {
 
         if (isCarouselNavShowable) {
             // Select song or logue.
-            if (!isNaN(songIndex)) {
+            if (isNumber(songIndex)) {
                 handleButtonClick(songIndex)
 
             // Select book column.
@@ -73,7 +74,7 @@ class NavButton extends PureComponent {
                 songIndex
             } = this.props,
 
-            isBook = !isNaN(bookIndex),
+            isBook = isNumber(bookIndex),
 
             buttonIdentifier = isBook ? bookIndex : songIndex,
 
