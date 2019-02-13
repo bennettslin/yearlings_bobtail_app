@@ -46,11 +46,7 @@ class CloseHandler extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({
-            closeForBodyClick: this.closeForBodyClick
-        })
-        // this._handleOverviewShown()
-        // this._handleTipsShown()
+        this.props.getRefs({ closeForBodyClick: this.closeForBodyClick })
     }
 
     componentDidUpdate(prevProps) {
@@ -150,8 +146,6 @@ class CloseHandler extends PureComponent {
                 this.props.updateOptionStore({ isSongShownOverview: false })
             }
 
-            console.error(isSongShownOverview, 'called by overview shown', isOverviewShown, wasOverviewShown)
-
             if (!wasOverviewShown) {
                 this.closeOverlayPopups()
                 this.closeMainSections({
@@ -178,8 +172,6 @@ class CloseHandler extends PureComponent {
             if (isSongShownTips) {
                 this.props.updateOptionStore({ isSongShownTips: false })
             }
-
-            console.error(isSongShownTips, 'called by tips shown', isTipsShown, wasTipsShown)
 
             if (!wasTipsShown) {
                 this.closeOverlayPopups()
@@ -281,7 +273,6 @@ class CloseHandler extends PureComponent {
         } = this.props
 
         if (!exemptAnnotation) {
-            console.error('closing')
             this.props.updateSelectedStore({ selectedAnnotationIndex: 0 })
         }
 

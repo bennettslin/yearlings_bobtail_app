@@ -13,6 +13,7 @@ class TipsListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isRoutingComplete: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -21,29 +22,38 @@ class TipsListener extends PureComponent {
         updateOptionStore: PropTypes.func.isRequired
     }
 
-    componentDidMount() {
-        this._handleSongChange()
-    }
-
     componentDidUpdate(prevProps) {
+        this._handleRoutingComplete(prevProps)
         this._handleSongChange(prevProps)
         this._handleForcedOverview(prevProps)
     }
 
-    _handleSongChange(prevProps = {}) {
+    _handleRoutingComplete(prevProps) {
         const
-            {
-                selectedSongIndex,
-                selectedAnnotationIndex
-            } = this.props,
+            { isRoutingComplete } = this.props,
+            { isRoutingComplete: wasRoutingComplete } = prevProps
+
+        if (isRoutingComplete && !wasRoutingComplete) {
+            this._handleTipsUpdate()
+        }
+    }
+
+    _handleSongChange(prevProps) {
+        const
+            { selectedSongIndex } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps
 
-        if (
-            selectedSongIndex !== prevSongIndex &&
+        if (selectedSongIndex !== prevSongIndex) {
+            this._handleTipsUpdate()
+        }
+    }
 
-            // There also cannot be a selected annotation.
-            !selectedAnnotationIndex
-        ) {
+    _handleTipsUpdate() {
+        const
+            { selectedAnnotationIndex } = this.props
+
+        // There also cannot be a selected annotation.
+        if (!selectedAnnotationIndex) {
             const {
                 isSelectedLogue,
                 selectedTipsOption
@@ -91,6 +101,7 @@ class TipsListener extends PureComponent {
 
 const mapStateToProps = ({
     selectedStore: {
+        isRoutingComplete,
         isSelectedLogue,
         selectedSongIndex,
         selectedAnnotationIndex
@@ -100,6 +111,7 @@ const mapStateToProps = ({
         isForcedShownOverview
     }
 }) => ({
+    isRoutingComplete,
     isSelectedLogue,
     selectedTipsOption,
     isForcedShownOverview,

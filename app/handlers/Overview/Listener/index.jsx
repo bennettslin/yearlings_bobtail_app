@@ -12,6 +12,7 @@ class OverviewListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isRoutingComplete: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -20,29 +21,37 @@ class OverviewListener extends PureComponent {
         updateOptionStore: PropTypes.func.isRequired
     }
 
-    componentDidMount() {
-        this._handleSongChange()
-    }
-
     componentDidUpdate(prevProps) {
+        this._handleRoutingComplete(prevProps)
         this._handleSongChange(prevProps)
         this._handleHeightlessChange(prevProps)
     }
 
-    _handleSongChange(prevProps = {}) {
+    _handleRoutingComplete(prevProps) {
         const
-            {
-                selectedSongIndex,
-                selectedAnnotationIndex
-            } = this.props,
+            { isRoutingComplete } = this.props,
+            { isRoutingComplete: wasRoutingComplete } = prevProps
+
+        if (isRoutingComplete && !wasRoutingComplete) {
+            this._handleOverviewUpdate()
+        }
+    }
+
+    _handleSongChange(prevProps) {
+        const
+            { selectedSongIndex } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps
 
-        if (
-            selectedSongIndex !== prevSongIndex &&
+        if (selectedSongIndex !== prevSongIndex) {
+            this._handleOverviewUpdate()
+        }
+    }
 
-            // There also cannot be a selected annotation.
-            !selectedAnnotationIndex
-        ) {
+    _handleOverviewUpdate() {
+        const { selectedAnnotationIndex } = this.props
+
+        // There cannot be a selected annotation.
+        if (!selectedAnnotationIndex) {
             const {
                 isSelectedLogue,
                 selectedOverviewOption
@@ -98,15 +107,15 @@ class OverviewListener extends PureComponent {
 
 const mapStateToProps = ({
     selectedStore: {
+        isRoutingComplete,
         isSelectedLogue,
         selectedSongIndex,
         selectedAnnotationIndex
     },
     responsiveStore: { isHeightlessLyric },
-    optionStore: {
-        selectedOverviewOption
-    }
+    optionStore: { selectedOverviewOption }
 }) => ({
+    isRoutingComplete,
     isSelectedLogue,
     selectedSongIndex,
     selectedAnnotationIndex,

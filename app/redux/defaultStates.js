@@ -253,6 +253,7 @@ export const SELECTED_DEFAULTS = {
     selectedAnnotationIndex: storedAnnotationIndex,
     selectedVerseIndex: storedVerseIndex,
     selectedSceneIndex: storedSceneIndex,
+    isRoutingComplete: false,
     isSelectedLogue: isStoredLogue,
     selectedTime: storedTime,
     earColumnIndex: storedEarColumnIndex || 0

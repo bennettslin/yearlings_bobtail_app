@@ -106,6 +106,13 @@ class RoutingContainer extends PureComponent {
             this.props.resetWiki()
         }
 
+        /**
+         * Either way, tell store that routing is complete. Not sure I like
+         * this solution, but overview and tips should not determine whether to
+         * show until this is set.
+         */
+        this.props.updateSelectedStore({ isRoutingComplete: true })
+
         // Always replace path for consistency.
         this.replacePath(
             routingSongIndex,
