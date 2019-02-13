@@ -15,6 +15,7 @@ class TipsListener extends PureComponent {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         isForcedShownOverview: PropTypes.bool.isRequired,
         updateOptionStore: PropTypes.func.isRequired
@@ -31,10 +32,18 @@ class TipsListener extends PureComponent {
 
     _handleSongChange(prevProps = {}) {
         const
-            { selectedSongIndex } = this.props,
+            {
+                selectedSongIndex,
+                selectedAnnotationIndex
+            } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps
 
-        if (selectedSongIndex !== prevSongIndex) {
+        if (
+            selectedSongIndex !== prevSongIndex &&
+
+            // There also cannot be a selected annotation.
+            !selectedAnnotationIndex
+        ) {
             const {
                 isSelectedLogue,
                 selectedTipsOption
@@ -83,7 +92,8 @@ class TipsListener extends PureComponent {
 const mapStateToProps = ({
     selectedStore: {
         isSelectedLogue,
-        selectedSongIndex
+        selectedSongIndex,
+        selectedAnnotationIndex
     },
     optionStore: {
         selectedTipsOption,
@@ -93,7 +103,8 @@ const mapStateToProps = ({
     isSelectedLogue,
     selectedTipsOption,
     isForcedShownOverview,
-    selectedSongIndex
+    selectedSongIndex,
+    selectedAnnotationIndex
 })
 
 export default connect(

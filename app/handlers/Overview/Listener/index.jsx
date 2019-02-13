@@ -14,6 +14,7 @@ class OverviewListener extends PureComponent {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        selectedAnnotationIndex: PropTypes.number.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         updateOptionStore: PropTypes.func.isRequired
@@ -30,10 +31,18 @@ class OverviewListener extends PureComponent {
 
     _handleSongChange(prevProps = {}) {
         const
-            { selectedSongIndex } = this.props,
+            {
+                selectedSongIndex,
+                selectedAnnotationIndex
+            } = this.props,
             { selectedSongIndex: prevSongIndex } = prevProps
 
-        if (selectedSongIndex !== prevSongIndex) {
+        if (
+            selectedSongIndex !== prevSongIndex &&
+
+            // There also cannot be a selected annotation.
+            !selectedAnnotationIndex
+        ) {
             const {
                 isSelectedLogue,
                 selectedOverviewOption
@@ -90,7 +99,8 @@ class OverviewListener extends PureComponent {
 const mapStateToProps = ({
     selectedStore: {
         isSelectedLogue,
-        selectedSongIndex
+        selectedSongIndex,
+        selectedAnnotationIndex
     },
     responsiveStore: { isHeightlessLyric },
     optionStore: {
@@ -99,6 +109,7 @@ const mapStateToProps = ({
 }) => ({
     isSelectedLogue,
     selectedSongIndex,
+    selectedAnnotationIndex,
     isHeightlessLyric,
     selectedOverviewOption
 })
