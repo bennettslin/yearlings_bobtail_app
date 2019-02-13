@@ -434,19 +434,26 @@ export default {
                             anchor: `longest cowlick`,
                             cards: [
                                 {
-                                    description: `Being acquainted with my family over the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`,
+                                    description: [
+                                        `A`,
+                                        {
+                                            anchor: `cowlick`,
+                                            wiki: `Cowlick`
+                                        },
+                                        `is a section of hair that sticks out on a person's head. Being acquainted with my family through the years, Willy understands that my brother's tantrums are the reason my mother allows his hair to reach unruly lengths.`
+                                    ],
                                     dotKeys: {
                                         [NARRATIVE]: true
                                     }
                                 },
                                 {
                                     description: [
-                                        `Willy observes that my brother has yet to outgrow his`,
+                                        `Willy might in fact be observing that my brother has yet to outgrow his`,
                                         {
                                             anchor: `"colic,"`,
                                             wiki: `Baby_colic`
                                         },
-                                        `a period of excessive crying in infants. In the past, such inexplicable lack of development gave rise to a belief in changelings.`
+                                        `a period of excessive crying in infants. In the past, an inability to explain such lack of development is what gave rise to a belief in changelings.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true,
