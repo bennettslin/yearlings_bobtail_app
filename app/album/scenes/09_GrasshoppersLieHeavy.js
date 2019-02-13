@@ -237,7 +237,7 @@ export default [
                 [NESTOR]: {
                     jogger: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4,
                         description: 'side, jogging, spry',
                         instance: JOGGER
                     }

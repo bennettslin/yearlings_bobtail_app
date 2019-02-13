@@ -158,7 +158,7 @@ export default [
                 },
                 [NESTOR]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     description: 'side, eager',
                     instance: GREETING
                 }
@@ -290,7 +290,7 @@ export default [
                 [WADE]: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4,
                         description: 'standing, demonstrating',
                         instance: PROTESTER
                     }
