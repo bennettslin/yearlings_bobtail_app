@@ -9,6 +9,8 @@
 
     // This value only needs to be accurate for phone.
     margin-left: -$js__length__icon - $js__margin__thin;
+
+    z-index: $zIndex__theatre;
 }
 
 .ShelfLeft__shown {
