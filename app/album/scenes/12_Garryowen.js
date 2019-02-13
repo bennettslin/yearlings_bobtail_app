@@ -135,7 +135,7 @@ export default [
                 },
                 [NESTOR]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 4,
                     description: 'front, clutching at fist, laughing through pain',
                     instance: INJURED
                 }
