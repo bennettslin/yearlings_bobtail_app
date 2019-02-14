@@ -337,7 +337,7 @@ export default {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `Lyrically, I tried to recreate my mishearings of adult conversation when my parents were first learning about autism. I spent a week telling everyone that my brother was "artistic," for example.`,
+                        description: `I first learned of autism after overhearing my parents discuss my brother's condition in their Taiwanese accents. I then spent the next few days telling everyone that my brother was "artistic." And so I wanted the lyrics for this song to explore such ways in which mishearings of adult conversation might lead to roundabout understanding for a child.`,
                         dotKeys: {
                             [BACKSTORY]: true,
                             [SONGWRITING]: true
@@ -481,7 +481,7 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `Back then, the back pages of comic books were filled with ads for novelty items such as`,
+                                    `In those days, the back pages of comic books were often filled with ads for novelty items such as`,
                                     {
                                         anchor: `X-Ray Specs,`,
                                         wiki: `X-Ray_Specs_(novelty)`
