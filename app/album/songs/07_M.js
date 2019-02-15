@@ -182,7 +182,7 @@ export default {
                         {
                             anchor: `mystery mensch.`,
                             card: {
-                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All had been taken in by my standing as a weird, artsy loner, only to then be turned off upon seeing that nothing of greater substance lay beneath. The crux of my mission, then, was to take this mistaken assumption that already existed, and simply turn it into a correct one.`,
+                                description: `There was an obvious lesson to draw from the smattering of women I had somehow managed to attract up to this point in my life. All had been taken in by my standing as a weird, artsy loner, only then to be turned off upon seeing that nothing of greater substance lay beneath. The crux of my mission, then, was to take this mistaken assumption that already existed, and simply turn it into a correct one.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true

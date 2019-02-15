@@ -486,7 +486,7 @@ export default {
                                         anchor: `X-Ray Specs,`,
                                         wiki: `X-Ray_Specs_(novelty)`
                                     },
-                                    `special glasses that purportedly allow one to see through objects. Having sent away for a pair some time ago, I am now trying them on.`
+                                    `special glasses that purported to allow its wearer to see through objects. Having just received a pair after placing an order weeks ago, I am now trying them on.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true

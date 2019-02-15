@@ -199,17 +199,17 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `When I asked Owen to recommend some great lyricists, he named just one: Nas. I hadn't given serious thought to hip hop at the time, believing it too far removed from my own songwriting approach to offer much useful wisdom. I've since corrected this oversight, but even as my lone point of reference back then,`,
+                            `When I asked Owen to recommend some great lyricists, he pointed me to Nas. I hadn't given serious thought to hip hop at the time, believing it to be too far removed from my own method of songwriting to offer much useful wisdom. (I've since corrected this heinous oversight.) But even as my lone point of reference for hip hop back then, Nas's debut album`,
                             {
                                 anchor: `Illmatic`,
                                 wiki: `Illmatic`
                             },
-                            `offered some great pointers on the flexibility of`,
+                            `offered great pointers on the flexibility of`,
                             {
                                 anchor: `internal rhyme,`,
                                 wiki: `Internal_rhyme`
                             },
-                            `which I use in these verses.`
+                            `which I used in these verses.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
