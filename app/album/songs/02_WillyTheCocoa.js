@@ -481,12 +481,12 @@ export default {
                             properNoun: true,
                             card: {
                                 description: [
-                                    `In those days, the back pages of comic books were often filled with ads for novelty items such as`,
+                                    `In those days, the back pages of comic books were filled with ads for novelty items such as`,
                                     {
                                         anchor: `X-Ray Specs,`,
                                         wiki: `X-Ray_Specs_(novelty)`
                                     },
-                                    `special glasses that purported to allow its wearer to see through objects. Having just received a pair after placing an order weeks ago, I am now trying them on.`
+                                    `which purportedly allowed its wearer to see through objects. Having sent away weeks ago for a pair of these novelty glasses, I have just received them in the mail and am now trying them on.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true
@@ -497,7 +497,7 @@ export default {
                         {
                             anchor: `pages clawed,`,
                             card: {
-                                description: `My brother enjoyed cutting shapes of alphabet letters out of paper, an activity encouraged by my parents since it was creative and kept him occupied. Unfortunately, if I left a comic book lying on the floor, he might easily mistake it for an old magazine from his scrap pile.`,
+                                description: `My brother enjoyed cutting shapes of alphabet letters out of scrap paper. Since this was a creative activity that kept him occupied, my parents happily encouraged it and kept a pile of old magazines freshly stocked for this purpose. Unfortunately, the comic book that I had been reading on the floor just a moment ago has somehow made its way into this scrap pile.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true
