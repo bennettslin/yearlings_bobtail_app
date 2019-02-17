@@ -258,12 +258,12 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `I learned to play banjo by reading`,
+                            `Back when I was learning to play the banjo, I would practice Earl Scruggs's`,
                             {
-                                anchor: `Earl Scruggs's`,
-                                wiki: `Earl_Scruggs`
+                                anchor: `three-finger roll`,
+                                wiki: `Scruggs_style`
                             },
-                            `instruction book. His uptempo bluegrass licks weren't easy to tailor to a slower rock beat, so I never made that leap with the banjo. But his three-finger roll became a staple guitar technique of mine, which I use here.`
+                            `by strumming the motions on my jeans throughout the day. From there, it easily crossed over into my guitar technique, as can be heard on the Spanish guitar here.`
                         ],
                         dotKeys: {
                             [BACKSTORY]: true,
@@ -303,7 +303,14 @@ export default {
                         {
                             anchor: `wishes on a friend,`,
                             card: {
-                                description: `As my five-year plan neared its end, I took stock of all that my patience and sacrifice had brought me. Seeing how easily Jacob hooked up with Mara after one of our shows, while noting that such ease in my own romantic pursuits felt no less elusive than ever, I could only conclude that my plan was a total washout. I felt like a genie freed from a lamp, with good fortunes to bestow on all others but myself.`,
+                                description: [
+                                    `Towards the end of my five-year plan, the Yearlings were regularly playing local shows. I was thrilled when I first spotted Mara in the audience, thinking that all my hard work putting this band together was about to pay off. But it was Jacob who caught her eye. I felt like the`,
+                                    {
+                                        anchor: `bottled genie`,
+                                        wiki: `Jinn`
+                                    },
+                                    `of Arabian folklore, with good fortunes to bestow upon others but only freedom from self-imposed isolation to grant myself.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -314,7 +321,18 @@ export default {
                 },
                 {
                     time: 80,
-                    lyric: `while forever I'll hold in peace`
+                    lyric: [
+                        `while forever I'll`,
+                        {
+                            anchor: `hold in peace`,
+                            card: {
+                                description: `While Jacob got together with Mara without any effort, romantic fulfillment for me felt no less elusive than ever. And so I had to come to terms with the reality that my five-year plan was a total washout.`,
+                                dotKeys: {
+                                    [NARRATIVE]: true
+                                }
+                            }
+                        }
+                    ]
                 },
                 {
                     time: 82,
@@ -360,7 +378,7 @@ export default {
                         {
                             anchor: `tomorrow never sent.`,
                             card: {
-                                description: `Or else, "before, to Mara," never sent.`,
+                                description: `Or else, hopes that never before were sent "to Mara."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -374,7 +392,7 @@ export default {
                         {
                             anchor: `Signed off "love me"`,
                             card: {
-                                description: `Back when emails were treated more like personal letters, I used to end them with "Love Bennett," absent a comma out of laziness. A friend joked that it sounded like a command spoken in desperation.`,
+                                description: `Back when emails were still treated like personal letters, I would sign off with "love Bennett," absent a comma out of laziness. Catherine joked that it sounded like a command spoken in desperation.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
