@@ -152,7 +152,7 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, friendly',
                     instance: DOUBLE_ALBERT
                 },

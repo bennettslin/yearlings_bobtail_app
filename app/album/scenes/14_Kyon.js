@@ -163,7 +163,7 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, cheery in a low-key way',
                     instance: ARRIVED
                 }
@@ -193,7 +193,7 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, seated, eating, judgmental',
                     instance: JUDGMENTAL
                 }
@@ -227,7 +227,7 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'back angle, concerned',
                     instance: CONCERNED
                 }

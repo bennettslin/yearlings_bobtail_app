@@ -123,7 +123,7 @@ export default [
                 },
                 [TRISTAN]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, eagerly aggressive, about to punch car',
                     instance: PUNCHING
                 },
@@ -200,7 +200,7 @@ export default [
                 },
                 [MIRIAM_TRISTAN]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.875,
                     compound: 2,
                     description: 'side, greeting Bennett',
                     instance: NOOGIE

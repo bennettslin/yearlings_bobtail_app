@@ -270,7 +270,7 @@ export default [
                 [HOWIE]: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side angle, pointing at shoe, pushing Willy',
                         instance: GANGBANGER
                     }
@@ -278,7 +278,7 @@ export default [
                 [TOMER]: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'pulling bottle from cart, about to strike, threatening',
                         instance: GANGBANGER
                     }

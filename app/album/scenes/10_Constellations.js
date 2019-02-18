@@ -106,13 +106,13 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 }
@@ -149,13 +149,13 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, holding large bottle',
                     instance: WALGREENS
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, feigning superiority',
                     instance: WALGREENS
                 }
@@ -192,13 +192,13 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, bored by conversation',
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, play fighting',
                     instance: STEAM_TUNNEL
                 }
@@ -229,14 +229,14 @@ export default [
                 },
                 [ANA_HOWIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'side angle, shivering, feeling comforted',
                     instance: CEMETERY
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, squatting, pouring water on grave',
                     instance: CEMETERY
                 }
@@ -276,13 +276,13 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'driving car, alert, wigging out',
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'back angle, sleeping in car',
                     instance: STATION_WAGON
                 }
@@ -321,7 +321,7 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'downstairs, in agony',
                     instance: ATTIC
                 }

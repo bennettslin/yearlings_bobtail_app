@@ -212,7 +212,7 @@ export default [
                 },
                 [JACOB]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'wiping sweat, chatting with Mara, laughing',
                     instance: FLIRTING
                 },
@@ -231,7 +231,7 @@ export default [
                 [TOMER]: {
                     shane: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'chatting with Bennett, gushing about music',
                         instance: SHANE_BUYING
                     }
@@ -269,7 +269,7 @@ export default [
                 },
                 [JACOB_MARA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'sitting, eating burger, holding Mara\'s hand',
                     instance: EATING
@@ -380,7 +380,7 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'looking at Bennett',
                         instance: USHER_LOOKING
                     }

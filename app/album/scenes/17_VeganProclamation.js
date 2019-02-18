@@ -111,7 +111,7 @@ export default [
                 },
                 [KHARI_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'side, protective, judgmental',
                     instance: PROTECTIVE_CONCERNED
@@ -151,7 +151,7 @@ export default [
                 },
                 [MIRIAM_TRISTAN]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.875,
                     compound: 2,
                     description: 'side, flirting',
                     instance: GREETING
@@ -225,7 +225,7 @@ export default [
                 },
                 [KHARI_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'lying in bed, caressing Sita',
                     instance: CARESS
@@ -233,7 +233,7 @@ export default [
                 [KHARI_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.375,
                         compound: 2,
                         description: 'reflection',
                         instance: CARESS_REFLECTION

@@ -86,14 +86,14 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `6'0"`,
                     description: 'standing',
                     instance: EPILOGUE
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'6"`,
                     description: 'standing',
                     instance: EPILOGUE
@@ -122,7 +122,7 @@ export default [
                 },
                 [TRISTAN]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'8"`,
                     description: 'standing',
                     instance: EPILOGUE
@@ -157,7 +157,7 @@ export default [
                 },
                 [JACOB]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'11"`,
                     description: 'standing',
                     instance: EPILOGUE
@@ -185,7 +185,7 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'9"`,
                     description: 'standing',
                     instance: EPILOGUE

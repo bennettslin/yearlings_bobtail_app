@@ -403,7 +403,7 @@ export default [
                 [TRISTAN]: {
                     principal: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, confused, defensive, apologetic',
                         instance: PRINCIPAL
                     }
