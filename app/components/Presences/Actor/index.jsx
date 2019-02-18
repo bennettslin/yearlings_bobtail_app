@@ -31,6 +31,7 @@ import JacobMara from './Actors/JacobMara'
 import Ana from './Actors/Ana'
 import AnaHowie from './Actors/AnaHowie'
 import Howie from './Actors/Howie'
+import HowieWilly from './Actors/HowieWilly'
 import Tomer from './Actors/Tomer'
 import Liz from './Actors/Liz'
 import Khari from './Actors/Khari'
@@ -80,6 +81,7 @@ const ActorLayer = memo(({
     ana,
     anaHowie,
     howie,
+    howieWilly,
     tomer,
     liz,
     khari,
@@ -100,7 +102,6 @@ const ActorLayer = memo(({
     lizReflection,
     khariLizReflection
 }) => {
-
     return (
         <___>
             <YoungBennett {...{ instanceKey: youngBennett }} />
@@ -133,6 +134,7 @@ const ActorLayer = memo(({
             <Ana {...{ instanceKey: ana }} />
             <AnaHowie {...{ instanceKey: anaHowie }} />
             <Howie {...{ instanceKey: howie }} />
+            <HowieWilly {...{ instanceKey: howieWilly }} />
             <Tomer {...{ instanceKey: tomer }} />
             <Liz {...{ instanceKey: liz }} />
             <Khari {...{ instanceKey: khari }} />

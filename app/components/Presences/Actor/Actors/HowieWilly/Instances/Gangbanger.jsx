@@ -9,18 +9,17 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const Fighting = ({
+const Gangbanger = ({
 
     className,
 
     ...other
 }) => {
-
     return (
         <Svg
             className={cx(
                 className,
-                'Fighting'
+                'Gangbanger'
             )}
         >
             <rect
@@ -36,13 +35,13 @@ const Fighting = ({
                 {...other}
             >
                 {cx(
-                    'Fighting'
+                    'Gangbanger'
                 )}
             </text>
         </Svg>
     )
 }
 
-Fighting.propTypes = propTypes
+Gangbanger.propTypes = propTypes
 
-export default Fighting
+export default Gangbanger

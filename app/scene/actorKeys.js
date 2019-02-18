@@ -34,6 +34,7 @@ export const ANA = 'ana'
 export const ANA_HOWIE = 'anaHowie'
 
 export const HOWIE = 'howie'
+export const HOWIE_WILLY = 'howieWilly'
 export const TOMER = 'tomer'
 
 export const LIZ = 'liz'

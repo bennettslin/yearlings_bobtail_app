@@ -29,7 +29,7 @@ import {
     FATHER,
     CHRISTOPHER,
     CHRISTOPHER_BENNETT,
-    HOWIE,
+    HOWIE_WILLY,
     TOMER
 } from '../../scene/actorKeys'
 
@@ -41,8 +41,7 @@ import {
 
 import {
     COLLECTING,
-    DUCKING,
-    FIGHTING
+    DUCKING
 } from '../../scene/instanceKeys/willy'
 
 import {
@@ -261,19 +260,12 @@ export default [
         description: `Willy is in a fight with two gangbangers. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
         presences: {
             [ACTORS]: {
-                [WILLY]: {
+                [HOWIE_WILLY]: {
                     todo: true,
-                    workedHours: 3,
-                    description: 'side angle, defending himself, fearful',
-                    instance: FIGHTING
-                },
-                [HOWIE]: {
-                    gangbanger: {
-                        todo: true,
-                        workedHours: 3.75,
-                        description: 'side angle, pointing at shoe, pushing Willy',
-                        instance: GANGBANGER
-                    }
+                    workedHours: 3.375,
+                    compound: 2,
+                    description: 'side angle, pointing at shoe, pushing Willy',
+                    instance: GANGBANGER
                 },
                 [TOMER]: {
                     gangbanger: {

@@ -28,6 +28,7 @@ import jacobMaraMap from './Actors/JacobMara/instanceMap'
 import anaMap from './Actors/Ana/instanceMap'
 import anaHowieMap from './Actors/AnaHowie/instanceMap'
 import howieMap from './Actors/Howie/instanceMap'
+import howieWillyMap from './Actors/HowieWilly/instanceMap'
 import tomerMap from './Actors/Tomer/instanceMap'
 import lizMap from './Actors/Liz/instanceMap'
 import khariMap from './Actors/Khari/instanceMap'
@@ -78,6 +79,7 @@ import {
     ANA,
     ANA_HOWIE,
     HOWIE,
+    HOWIE_WILLY,
     TOMER,
     LIZ,
     KHARI,
@@ -129,6 +131,7 @@ const ACTOR_KEY_MAP = {
     [ANA]: anaMap,
     [ANA_HOWIE]: anaHowieMap,
     [HOWIE]: howieMap,
+    [HOWIE_WILLY]: howieWillyMap,
     [TOMER]: tomerMap,
     [LIZ]: lizMap,
     [KHARI]: khariMap,

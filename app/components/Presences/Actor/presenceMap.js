@@ -30,6 +30,7 @@ import JacobMara from './Actors/JacobMara'
 import Ana from './Actors/Ana'
 import AnaHowie from './Actors/AnaHowie'
 import Howie from './Actors/Howie'
+import HowieWilly from './Actors/HowieWilly'
 import Tomer from './Actors/Tomer'
 import Liz from './Actors/Liz'
 import Khari from './Actors/Khari'
@@ -80,6 +81,7 @@ import {
     ANA,
     ANA_HOWIE,
     HOWIE,
+    HOWIE_WILLY,
     TOMER,
     LIZ,
     KHARI,
@@ -131,6 +133,7 @@ export const propTypes = {
     [ANA]: PropTypes.string,
     [ANA_HOWIE]: PropTypes.string,
     [HOWIE]: PropTypes.string,
+    [HOWIE_WILLY]: PropTypes.string,
     [TOMER]: PropTypes.string,
     [LIZ]: PropTypes.string,
     [KHARI]: PropTypes.string,
@@ -182,6 +185,7 @@ export default {
     [ANA]: Ana,
     [ANA_HOWIE]: AnaHowie,
     [HOWIE]: Howie,
+    [HOWIE_WILLY]: HowieWilly,
     [TOMER]: Tomer,
     [LIZ]: Liz,
     [KHARI]: Khari,

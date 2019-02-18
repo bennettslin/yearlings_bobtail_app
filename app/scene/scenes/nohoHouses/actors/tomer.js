@@ -6,7 +6,7 @@ const ARRANGEMENTS_MAP = {
     [GANGBANGER]: {
         yIndex: 5,
         arrangement: {
-            xFloat: 5.5,
+            xFloat: 6.5,
             xWidth: 1,
             zHeight: 5
         }
