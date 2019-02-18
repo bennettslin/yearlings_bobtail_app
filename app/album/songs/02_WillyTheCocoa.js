@@ -513,9 +513,9 @@ export default {
                         {
                             anchor: `kick slams`,
                             card: {
-                                description: `There were times I was so angry at my brother that I laid down some serious hurt. He never fought back.`,
+                                description: `Upon catching my brother in the act of cutting up my comic book, I explode and lay down some serious hurt.`,
                                 dotKeys: {
-                                    [BACKSTORY]: true
+                                    [NARRATIVE]: true
                                 }
                             }
                         },
@@ -523,7 +523,7 @@ export default {
                         {
                             anchor: `bearded baby`,
                             card: {
-                                description: `It would have been the height of irony if my brother were actually centuries old, as it frustrated me that I always had to engage with him at a level far below his actual age.`,
+                                description: `It frustrated me to no end that my brother's behavior didn't make any sense. I longed to believe that he was simply displaying wisdom meant for a different world. So upon reading about changeling legends many years later, I could sympathize with those villagers in times past who told tales of grown-up trolls disguised as human children.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -540,7 +540,7 @@ export default {
                         {
                             anchor: `baffled sobs.`,
                             card: {
-                                description: `The hardest thing about having hurt my brother is that I could never really apologise, since he could never truly comprehend that I was sorry. I suppose that for him, it was just another part of what life was.`,
+                                description: `And so the hardest thing about the hurt that I caused my brother was knowing that he could never understand that I was sorry. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -613,7 +613,7 @@ export default {
                             anchor: `Killcrop`,
                             card: {
                                 description: [
-                                    `In Germanic folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a primary concern of past times, when children unable to work for their keep could lead to a farmer's ruin.`
+                                    `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a primary concern of past times, when children unable to work for their keep could lead to a farmer's ruin.`
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true

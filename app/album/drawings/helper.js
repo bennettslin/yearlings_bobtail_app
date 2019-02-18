@@ -104,11 +104,11 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
 
                 /**
                  * FIXME: Keep modifying this conditional so that it reflects
-                 * the latest task. Currently it's faces, assumed to take one
-                 * hour. Leave another hour for svg prep.
+                 * the latest task. Currently it's faces, assumed to take 45
+                 * minutes. Leave another hour for svg prep.
                  */
                 if (roleObject.todo) {
-                    if (descriptionEntity.workedHours < 4) {
+                    if (descriptionEntity.workedHours < 3.75) {
                         rolesTodoCount++
 
                     } else {

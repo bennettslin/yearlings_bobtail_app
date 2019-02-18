@@ -56,9 +56,7 @@ const AdminNavSection = ({
                 })}
             </div>
             <div className="row">
-                <ProgressFooter
-                    sumTask={sumAllTasks}
-                />
+                <ProgressFooter {...{ sumTask: sumAllTasks }} />
             </div>
         </div>
     )

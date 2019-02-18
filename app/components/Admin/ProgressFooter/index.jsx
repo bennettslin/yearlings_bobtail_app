@@ -29,7 +29,7 @@ const ProgressFooter = ({ sumTask }) => {
                     <div>needed time: {neededTime}</div>
                     <div>worked time: {workedTime}</div>
                     <div>remaining time: {remainingTime}</div>
-                    <div>next check-in: {nextCheckInDate}</div>
+                    <div>finish date: {nextCheckInDate}</div>
                 </div>
             }
         </div>

@@ -579,10 +579,14 @@ export default {
                             anchor: `Final trip on a tanker,`,
                             cards: [
                                 {
-                                    description: `A tanker is a marine vessel that transports crude oil. It can also be slang for a drinking spree.`,
-                                    dotKeys: {
-                                        [REFERENCE]: true
-                                    }
+                                    description: [
+                                        `A`,
+                                        {
+                                            anchor: `tanker`,
+                                            wiki: `Tanker_(ship)`
+                                        },
+                                        `is a marine vessel that transports crude oil. It can also be slang for a drinking spree.`
+                                    ]
                                 },
                                 {
                                     description: `As part of my plan to start afresh, I made many attempts to stay sober. Since each time was to be my last, I would indulge myself and drink to oblivion, only to repeat the motions several nights later. But after finally mustering the courage to break up with Sita, I really did go for a long stretch without alcohol. My new reality was jarring enough by itself, after all.`,

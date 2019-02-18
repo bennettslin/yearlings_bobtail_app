@@ -154,7 +154,7 @@ export default {
                         {
                             anchor: `hit your baby brother,`,
                             card: {
-                                description: `The times that I hit my brother were actually rare. They just stick out in my memory.`,
+                                description: `The times that I physically hurt my brother were actually rare. They just cast a long shadow in my memory. Since he could never understand or acknowledge my remorse, I could never truly feel forgiven.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

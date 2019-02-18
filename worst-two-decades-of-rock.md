@@ -1,3 +1,5 @@
+Indie rock is exactly as racist as the standards of its respective society. How would indie rock have behaved in the 1930s Deep South?
+
 Indie rock is a reverse-engineered ideology.
 Because of this, there is no coherent underlying spirit.
 Because of this, minorities don't have any opening to participate.
