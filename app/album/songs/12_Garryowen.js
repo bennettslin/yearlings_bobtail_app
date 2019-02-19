@@ -332,7 +332,7 @@ export default {
                                 anchor: `counterpoint,`,
                                 wiki: `Counterpoint`
                             },
-                            `a harmonic progression arises as the natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of extracting individual notes from the harmonic progression, then linking them to create interweaving melodies.`
+                            `the harmonic progression is simply a natural byproduct of chords built in sequence from a single melodic line. But since the chords for this song were already in place, I took the reverse approach of taking individual notes from the harmonic progression and linking them to create interweaving melodies.`
                         ],
                         dotKeys: {
                             [REFERENCE]: true,
