@@ -345,7 +345,7 @@ export default {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `I wanted the recording of this song to match the tempo that we performed it as the Yearlings. Not being an actual drummer, I wasn't able to play the drums at Jacob's speed. So I ended up recording them at a lower tape speed, which then made them sped up upon playback.`,
+                        description: `As the Yearlings, we would perform this song at breakneck speed. I moderated the tempo in this recording to make the lyrics intelligible. But even then, my own drumming skills were not up to par. So I recorded the drum tracks at a lower tape speed, which brought them to the proper tempo upon playback.`,
                         dotKeys: {
                             [SONGWRITING]: true
                         }
