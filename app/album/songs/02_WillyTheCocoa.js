@@ -540,7 +540,7 @@ export default {
                         {
                             anchor: `baffled sobs.`,
                             card: {
-                                description: `And so the hardest thing about the hurt that I caused my brother was knowing that he could never understand that I was sorry. For him, it was just another part of what life was.`,
+                                description: `My brother could never truly understand that I was sorry, and that was the hardest part about the hurt that I caused him. For him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

@@ -378,7 +378,7 @@ export default {
                         {
                             anchor: `tomorrow never sent.`,
                             card: {
-                                description: `Or else, hopes that never before were sent "to Mara."`,
+                                description: `Or else, hopes that were never before sent "to Mara."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
