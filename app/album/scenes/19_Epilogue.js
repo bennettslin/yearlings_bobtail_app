@@ -65,7 +65,7 @@ export default [
                 },
                 [WILLY]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'3"`,
                     description: 'standing',
                     instance: EPILOGUE
@@ -79,7 +79,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'4"`,
                     description: 'standing',
                     instance: EPILOGUE

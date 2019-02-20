@@ -140,7 +140,7 @@ export default [
             [ACTORS]: {
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, accusatory',
                     instance: ACCUSATORY
                 },
@@ -180,7 +180,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, gesturing to scene below',
                     instance: PAST
                 },
@@ -227,7 +227,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front angle, gesturing with blame',
                     instance: PRESENT
                 },
@@ -291,7 +291,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front angle, arms crossed, righteous',
                     instance: FUTURE
                 },
@@ -339,7 +339,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, knocked over',
                     instance: REELING
                 },

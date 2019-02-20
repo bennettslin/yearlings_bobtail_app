@@ -269,7 +269,7 @@ export default [
                 [WILLY]: {
                     crossingGuard: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'front, holding up stop sign',
                         instance: CROSSING_GUARD
                     }
