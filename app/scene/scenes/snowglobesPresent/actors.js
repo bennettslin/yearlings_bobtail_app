@@ -1,19 +1,16 @@
 import {
-    BENNETT,
+    BENNETT_FATHER,
     MOTHER,
-    FATHER,
     MIRIAM_STEPHANIE
 } from '../../actorKeys'
 
-import ARRANGEMENTS_BENNETT from './actors/bennett'
+import ARRANGEMENTS_BENNETT_FATHER from './actors/bennettFather'
 import ARRANGEMENTS_MOTHER from './actors/mother'
-import ARRANGEMENTS_FATHER from './actors/father'
 import ARRANGEMENTS_MIRIAM_STEPHANIE from './actors/miriamStephanie'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
+    [BENNETT_FATHER]: ARRANGEMENTS_BENNETT_FATHER,
     [MOTHER]: ARRANGEMENTS_MOTHER,
-    [FATHER]: ARRANGEMENTS_FATHER,
     [MIRIAM_STEPHANIE]: ARRANGEMENTS_MIRIAM_STEPHANIE
 }
 

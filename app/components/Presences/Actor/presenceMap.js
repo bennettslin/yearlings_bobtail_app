@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import YoungBennett from './Actors/YoungBennett'
 import PreteenBennett from './Actors/PreteenBennett'
 import Bennett from './Actors/Bennett'
+import BennettFather from './Actors/BennettFather'
 import BennettLiz from './Actors/BennettLiz'
 import BennettLizReflection from './Actors/BennettLizReflection'
 import BennettsChristopherLiz from './Actors/BennettsChristopherLiz'
@@ -54,6 +55,7 @@ import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
+    BENNETT_FATHER,
     BENNETT_LIZ,
     BENNETT_LIZ_REFLECTION,
     BENNETTS_CHRISTOPHER_LIZ,
@@ -106,6 +108,7 @@ export const propTypes = {
     [YOUNG_BENNETT]: PropTypes.string,
     [PRETEEN_BENNETT]: PropTypes.string,
     [BENNETT]: PropTypes.string,
+    [BENNETT_FATHER]: PropTypes.string,
     [BENNETT_LIZ]: PropTypes.string,
     [BENNETT_LIZ_REFLECTION]: PropTypes.string,
     [BENNETTS_CHRISTOPHER_LIZ]: PropTypes.string,
@@ -158,6 +161,7 @@ export default {
     [YOUNG_BENNETT]: YoungBennett,
     [PRETEEN_BENNETT]: PreteenBennett,
     [BENNETT]: Bennett,
+    [BENNETT_FATHER]: BennettFather,
     [BENNETT_LIZ]: BennettLiz,
     [BENNETT_LIZ_REFLECTION]: BennettLizReflection,
     [BENNETTS_CHRISTOPHER_LIZ]: BennettsChristopherLiz,

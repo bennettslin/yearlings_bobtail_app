@@ -2,6 +2,7 @@
 export const YOUNG_BENNETT = 'youngBennett'
 export const PRETEEN_BENNETT = 'preteenBennett'
 export const BENNETT = 'bennett'
+export const BENNETT_FATHER = 'bennettFather'
 export const BENNETT_LIZ = 'bennettLiz'
 export const BENNETT_STEPHANIE = 'bennettStephanie'
 export const BENNETTS_CHRISTOPHER_LIZ = 'bennettsChristopherLiz'

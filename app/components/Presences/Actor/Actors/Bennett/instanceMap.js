@@ -40,7 +40,6 @@ import LeavingCrumbled from './Instances/LeavingCrumbled'
 import CordSide from './Instances/CordSide'
 import CordRear from './Instances/CordRear'
 import Past from './Instances/Past'
-import Present from './Instances/Present'
 import Future from './Instances/Future'
 import RemovingPants from './Instances/RemovingPants'
 import Infirm from './Instances/Infirm'
@@ -104,7 +103,6 @@ import {
     GREETING,
     LEAVING_CRUMBLED,
     PAST,
-    PRESENT,
     FUTURE,
     EL_TORITO
 } from 'scene/instanceKeys/songs'
@@ -150,7 +148,6 @@ export const propTypes = {
     [CORD_SIDE]: PropTypes.bool,
     [CORD_REAR]: PropTypes.bool,
     [PAST]: PropTypes.bool,
-    [PRESENT]: PropTypes.bool,
     [FUTURE]: PropTypes.bool,
     [REMOVING_PANTS]: PropTypes.bool,
     [INFIRM]: PropTypes.bool,
@@ -204,7 +201,6 @@ export default {
     [CORD_SIDE]: CordSide,
     [CORD_REAR]: CordRear,
     [PAST]: Past,
-    [PRESENT]: Present,
     [FUTURE]: Future,
     [REMOVING_PANTS]: RemovingPants,
     [INFIRM]: Infirm,

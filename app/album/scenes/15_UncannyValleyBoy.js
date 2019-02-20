@@ -26,6 +26,7 @@ import {
 
 import {
     BENNETT,
+    BENNETT_FATHER,
     ESTHER_MOTHER,
     MOTHER,
     FATHER,
@@ -213,9 +214,10 @@ export default [
         description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, as in the first scene of Kyon, while Bennett is playing guitar next to Miriam on her bed.`,
         presences: {
             [ACTORS]: {
-                [BENNETT]: {
+                [BENNETT_FATHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
+                    compound: 2,
                     description: 'front, dismissive, not feeling bad',
                     instance: PRESENT
                 },
@@ -223,12 +225,6 @@ export default [
                     todo: true,
                     workedHours: 3,
                     description: 'side angle, gesturing with empathy',
-                    instance: PRESENT
-                },
-                [FATHER]: {
-                    todo: true,
-                    workedHours: 3.75,
-                    description: 'front angle, gesturing with blame',
                     instance: PRESENT
                 },
                 [LIZ]: {

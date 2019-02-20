@@ -1,6 +1,7 @@
 import youngBennettMap from './Actors/YoungBennett/instanceMap'
 import preteenBennettMap from './Actors/PreteenBennett/instanceMap'
 import bennettMap from './Actors/Bennett/instanceMap'
+import bennettFatherMap from './Actors/BennettFather/instanceMap'
 import bennettLizMap from './Actors/BennettLiz/instanceMap'
 import bennettLizReflectionMap from './Actors/BennettLizReflection/instanceMap'
 import bennettsChristopherLizMap from './Actors/BennettsChristopherLiz/instanceMap'
@@ -52,6 +53,7 @@ import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
+    BENNETT_FATHER,
     BENNETT_LIZ,
     BENNETT_LIZ_REFLECTION,
     BENNETTS_CHRISTOPHER_LIZ,
@@ -104,6 +106,7 @@ const ACTOR_KEY_MAP = {
     [YOUNG_BENNETT]: youngBennettMap,
     [PRETEEN_BENNETT]: preteenBennettMap,
     [BENNETT]: bennettMap,
+    [BENNETT_FATHER]: bennettFatherMap,
     [BENNETT_LIZ]: bennettLizMap,
     [BENNETT_LIZ_REFLECTION]: bennettLizReflectionMap,
     [BENNETTS_CHRISTOPHER_LIZ]: bennettsChristopherLizMap,
