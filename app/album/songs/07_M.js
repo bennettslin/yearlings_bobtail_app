@@ -362,7 +362,7 @@ export default {
                         {
                             anchor: `marinaded confections,`,
                             card: {
-                                description: `Or else, "Mara-needed confessions."`,
+                                description: `Or else, they were wrapped in my "Mara-needed confessions."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -378,7 +378,7 @@ export default {
                         {
                             anchor: `tomorrow never sent.`,
                             card: {
-                                description: `Or else, hopes that were never before sent "to Mara."`,
+                                description: `Or else, they were never before sent "to Mara."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -418,7 +418,7 @@ export default {
                         {
                             anchor: `Morphined,`,
                             card: {
-                                description: `Or else, "Mara-fiend."`,
+                                description: `Or else, I would be a "Mara fiend," a slightly different kind of addict.`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
