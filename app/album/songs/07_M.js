@@ -326,7 +326,7 @@ export default {
                         {
                             anchor: `hold in peace`,
                             card: {
-                                description: `While Jacob got together with Mara without any effort, romantic fulfillment for me felt no less elusive than ever. And so I had to come to terms with the reality that my five-year plan was a total washout.`,
+                                description: `While Jacob got together with Mara without any effort, romantic fulfillment for me felt no less elusive than ever. I had to come to terms with the reality that my five-year plan was a total washout.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -378,7 +378,7 @@ export default {
                         {
                             anchor: `tomorrow never sent.`,
                             card: {
-                                description: `Or else, they were never before sent "to Mara."`,
+                                description: `Or else, these hopes were never before sent "to Mara."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -428,7 +428,8 @@ export default {
                         {
                             anchor: `die pushing forty,`,
                             card: {
-                                description: `The conclusion of my five-year plan was occasion to reflect on my mortality. I had banked on rapid growth, and I couldn't cut my losses now. I had nothing to my name other than what another five-year plan might gain for me, or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I had only so much lifetime remaining.`,
+                                description: `
+                                Like the Soviet Union, I had to take the failures of my first five-year plan in stride.   I had banked on rapid character growth, and I couldn't cut my losses now. I had nothing to my name other than what another five-year plan might gain for me. Or failing that, another one. Yet five years is such a huge chunk of lifetime to mete out all at once, and I had only so much lifetime remaining. The occasion was inevitable to reflect on my mortality.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -444,7 +445,7 @@ export default {
                         {
                             anchor: `sand castle built by low tide.`,
                             card: {
-                                description: `Not only did my five-year plan fail to realise its objective, it was clear that I had missed out on some crucial growth in the interim. And there was no guarantee that the next one wouldn't blindside me in the same manner. I feared a future as an emotionally stunted man-child, forever pursuing ambitions at once both infantile and futile.`,
+                                description: `To compound the failures of my first five-year plan, it was clear that I had missed out in the interim on some crucial maturity that others like Jacob had naturally come by. And there was no guarantee that the next five-year plan would not blindside me in the same manner. I feared a future as a stunted man-child, forever chasing an ambition at once both infantile and futile, like shaping castles out of sand.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -474,7 +475,7 @@ export default {
                         {
                             anchor: `mariner's child`,
                             card: {
-                                description: `Or else, "a Mara-nursed child."`,
+                                description: `Or else, I would die as a "Mara-nursed" child.`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -502,10 +503,10 @@ export default {
                                 description: [
                                     `The`,
                                     {
-                                        anchor: `Unification Church`,
+                                        anchor: `Unification Church,`,
                                         wiki: `Unification_Church`
                                     },
-                                    `led by Sun Myung Moon is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, often referred to as Moonies, are paired into couples and married en masse. To avoid the long, hard slog of finding a mate, I humoured myself with the enticing thought of resorting to such measures.`
+                                    `founded by Sun Myung Moon, is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, informally known as Moonies, are paired off with perfect strangers. I found the thought humorously enticing that this could be my last resort in the long, hard slog of finding a romantic partner.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -523,13 +524,13 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `The pairings in these mass weddings are often international by design. Were I to participate in one, I might very well be matched with a foreigner who was solely interested in getting a green card and raising a family in America.`,
+                                    description: `The pairings in these mass weddings are often international by design. Were I to participate in one, I might very well be paired with a foreigner who was solely interested in getting a green card and raising a family in America.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
                                 },
                                 {
-                                    description: `Or else, fools expecting their "maiden Mara cosigns."`,
+                                    description: `Or else, I would be another one of these fools who believes their "maiden Mara co-signs" in good faith.`,
                                     dotKeys: {
                                         [PUN]: true
                                     }
