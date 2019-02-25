@@ -78,7 +78,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, awkward, wanting to make a move',
                     instance: DATE_ENDING
                 },
@@ -105,7 +105,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front, leaning towards Sita',
                     instance: MUSEUM
                 },
@@ -138,7 +138,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, jealous',
                     instance: BACKSTAGE
                 },
@@ -188,7 +188,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, in go-kart, leaning forward',
                     instance: GO_KARTS
                 },
@@ -222,7 +222,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, walking away dejected, slumped over',
                     instance: DATE_ENDED
                 },

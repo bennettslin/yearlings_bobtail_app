@@ -396,7 +396,7 @@ export default [
                 },
                 [MOTHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, angry, accusatory',
                     instance: ARGUING
                 },

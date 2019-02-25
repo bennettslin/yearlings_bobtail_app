@@ -4,7 +4,7 @@ export default [
      */
     {
         taskName: `Bennett avatars`,
-        workedHours: 4,
+        workedHours: 6,
         neededHours: 9
     },
     {

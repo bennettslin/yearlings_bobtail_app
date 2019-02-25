@@ -176,7 +176,7 @@ export default [
                 },
                 [MOTHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'squatting, righting chair, exasperated, concerned',
                     instance: STOOPING
                 },
@@ -304,7 +304,7 @@ export default [
             [ACTORS]: {
                 [MOTHER]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'getting up to close curtain, trying to be reassuring',
                     instance: COMFORTING
                 },

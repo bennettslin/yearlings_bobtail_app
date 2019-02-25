@@ -524,7 +524,7 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `The pairings in these mass weddings are often international by design. Were I to participate in one, I might very well be paired with a foreigner who was solely interested in getting a green card and raising a family in America.`,
+                                    description: `As these mass weddings are meant to promote cross-cultural harmony, the pairings are often international by design. Were I to participate in one, I might very well be paired with a foreigner who was solely interested in getting a green card and raising a family in America.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
