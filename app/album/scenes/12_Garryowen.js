@@ -94,7 +94,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'front, putting on jacket, cold, distant',
                     instance: BRUSH_OFF
@@ -117,7 +117,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front, tripping as meats fall out of pockets',
                     instance: DROPPING_MEATS
                 },
@@ -164,7 +164,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'on couch, ignoring Sita, drunk',
                     instance: CELIBATE_FREEZING
@@ -194,7 +194,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, sweaty, giddy',
                     instance: GREETING
                 },
@@ -236,7 +236,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'standing, cold, looking away',
                     instance: LEAVING_CRUMBLED
                 },

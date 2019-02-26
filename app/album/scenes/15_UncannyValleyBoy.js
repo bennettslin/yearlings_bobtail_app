@@ -55,6 +55,7 @@ import {
 } from '../../scene/instanceKeys/liz'
 
 import {
+    ASLEEP,
     ASLEEP_FEARFUL,
     FENDING_OFF
 } from '../../scene/instanceKeys/miriamBennett'
@@ -112,10 +113,10 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.875,
                     compound: 2,
                     description: 'side, asleep',
-                    instance: ASLEEP_FEARFUL
+                    instance: ASLEEP
                 }
             },
             [CUTOUTS]: {
@@ -139,6 +140,12 @@ export default [
         description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Chinese garb. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
         presences: {
             [ACTORS]: {
+                [MIRIAM_BENNETT]: {
+                    compound: 2,
+                    duplicate: true,
+                    description: 'side, asleep',
+                    instance: ASLEEP_FEARFUL
+                },
                 [FATHER]: {
                     todo: true,
                     workedHours: 3.75,
@@ -175,7 +182,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front angle, wincing',
                     instance: PAST
                 },
@@ -216,7 +223,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_FATHER]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'front, dismissive, not feeling bad',
                     instance: PRESENT
@@ -267,7 +274,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'concerned',
                     instance: FUTURE
                 },
@@ -328,7 +335,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.875,
                     compound: 2,
                     description: 'side sitting, vindictive, magical gesture',
                     instance: FENDING_OFF

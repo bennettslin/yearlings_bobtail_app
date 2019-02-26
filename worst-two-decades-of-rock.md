@@ -1,3 +1,5 @@
+The great artists of the 21st century, just like the greats of every other century, will be the driven, ambitious type. The problem is that there is something inherently unlikable about the driven and the ambitious. Society prefers instead to root for the reluctant hero. But those on the side of the driven and the ambitious do have a secret weapon. The transparent observation that the reluctant hero is pretty much always a person of privilege.
+
 Indie rock is like MAGA. White people think they're drawn to it because they're underprivileged by class, but it's really because they're privileged by race. It appeals to the part of them that's privileged, not the part that's underprivileged.
 
 Indie rock is exactly as racist as the standards of its respective society. How would indie rock have behaved in the 1930s Deep South?

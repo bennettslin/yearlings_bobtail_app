@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types'
 
+import Asleep from './Instances/Asleep'
 import AsleepFearful from './Instances/AsleepFearful'
 import FendingOff from './Instances/FendingOff'
 import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
 
 import {
+    ASLEEP,
     ASLEEP_FEARFUL,
     FENDING_OFF,
     COWGIRL,
@@ -13,6 +15,7 @@ import {
 } from 'scene/instanceKeys/miriamBennett'
 
 export const propTypes = {
+    [ASLEEP]: PropTypes.bool,
     [ASLEEP_FEARFUL]: PropTypes.bool,
     [FENDING_OFF]: PropTypes.bool,
     [COWGIRL]: PropTypes.bool,
@@ -20,6 +23,7 @@ export const propTypes = {
 }
 
 export default {
+    [ASLEEP]: Asleep,
     [ASLEEP_FEARFUL]: AsleepFearful,
     [FENDING_OFF]: FendingOff,
     [COWGIRL]: Cowgirl,
