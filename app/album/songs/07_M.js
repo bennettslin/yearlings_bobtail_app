@@ -362,7 +362,7 @@ export default {
                         {
                             anchor: `marinaded confections,`,
                             card: {
-                                description: `Or else, they were wrapped in my "Mara-needed confessions."`,
+                                description: `Or they were wrapped in my "Mara-needed confessions."`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -418,7 +418,7 @@ export default {
                         {
                             anchor: `Morphined,`,
                             card: {
-                                description: `Or else, I would be a "Mara fiend," a slightly different kind of addict.`,
+                                description: `Or I would be a "Mara fiend," a slightly different kind of addict.`,
                                 dotKeys: {
                                     [PUN]: true
                                 }
@@ -524,13 +524,13 @@ export default {
                             properNoun: true,
                             cards: [
                                 {
-                                    description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie wife would likely be a foreigner, and as such, would be eager to raise a family of native-born American children.`,
+                                    description: `To promote cross-cultural harmony, the pairings in these mass weddings are often international by design. So my Moonie bride might possibly be a foreigner, one who was foolish enough to choose this venture solely for the chance to raise a family of native-born American children.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
                                 },
                                 {
-                                    description: `Or else, I would be another one of these fools who believes their "maiden Mara co-signs" in good faith.`,
+                                    description: `Of course, I would be just as foolish to believe that my "maiden Mara co-signs" the marriage license in good faith.`,
                                     dotKeys: {
                                         [PUN]: true
                                     }
@@ -552,7 +552,7 @@ export default {
                                         anchor: `time capsule`,
                                         wiki: `Time_capsule`
                                     },
-                                    `is a vessel of contemporary objects that will become historical artifacts once rediscovered at a later age. In a way, it allows a past generation to communicate with the future. Similarly, in my dejected state, it was hard to envision my next five-year plan being anything more than a forum for me to air my present grievances to a captive future audience.`
+                                    `is a vessel of contemporary objects that will be treated as historical artifacts once rediscovered in a later era. In a way, it allows a past generation to speak to a future one. Similarly, in my dejected state, I could only envision my next five-year plan as a forum to air my grievances to a captive future audience.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -576,10 +576,10 @@ export default {
                                 description: [
                                     `I was like a`,
                                     {
-                                        anchor: `marionette`,
+                                        anchor: `marionette,`,
                                         wiki: `Marionette`
                                     },
-                                    `ensnared in his wires after Mara tired of controlling him from above. Of course, it was my own fault for believing in such "lies that Mara you'll net."`
+                                    `ensnared in my wires after Mara tired of controlling me from above. Of course, it was my own fault for believing in such "lies that Mara you'll net."`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
