@@ -506,7 +506,7 @@ export default {
                                         anchor: `Unification Church,`,
                                         wiki: `Unification_Church`
                                     },
-                                    `founded by Sun Myung Moon, is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, informally known as Moonies, are paired off with perfect strangers. I found the thought humorously enticing that this could be my last resort in the long, hard slog of finding a romantic partner.`
+                                    `founded by Sun Myung Moon, is widely seen as a cult due to its aggressive proselytism. It is perhaps best known for its mass weddings in which thousands of congregants, informally known as Moonies, are paired off with perfect strangers. I found the thought humorously enticing that if I simply accepted one of their pamphlets, then my long, hard struggle to find a romantic partner would be over in an instant.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
