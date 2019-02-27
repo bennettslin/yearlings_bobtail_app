@@ -86,7 +86,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'sitting in car, taking off pants',
                     instance: REMOVING_PANTS
                 },
@@ -125,7 +125,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.875,
                     compound: 2,
                     description: 'back angle, eyes closed, trying to get off',
                     instance: COWGIRL
@@ -159,7 +159,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.875,
                     compound: 2,
                     description: 'back angle, giving blowjob',
                     instance: BLOWJOB
@@ -193,7 +193,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front angle, dying, infirm',
                     instance: INFIRM
                 }
@@ -222,6 +222,11 @@ export default [
         description: `In the same scene, Miriam now appears in Bennett's thought bubble. She is playing tennis.`,
         presences: {
             [ACTORS]: {
+                [BENNETT]: {
+                    duplicate: true,
+                    description: 'front angle, dying, infirm',
+                    instance: INFIRM
+                },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 2.5,

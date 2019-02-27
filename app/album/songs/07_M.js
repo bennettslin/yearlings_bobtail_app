@@ -573,13 +573,14 @@ export default {
                         {
                             anchor: `lies that marionette`,
                             card: {
+                                // TODO: My own strings.
                                 description: [
-                                    `I was like a`,
+                                    `I felt like a`,
                                     {
                                         anchor: `marionette,`,
                                         wiki: `Marionette`
                                     },
-                                    `ensnared in my wires after Mara tired of controlling me from above. Of course, it was my own fault for believing in such "lies that Mara you'll net."`
+                                    `lying ensnared in my strings after Mara tired of controlling me from above. Of course, it was my own fault for believing in these "lies that Mara you'll net."`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,

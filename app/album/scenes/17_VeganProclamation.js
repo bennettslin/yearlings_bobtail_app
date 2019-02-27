@@ -105,7 +105,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, slumped over, despondent',
                     instance: CAMPUS_ASHAMED
                 },
@@ -145,7 +145,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'back, looking to side, annoyed',
                     instance: SHOW_ANNOYED
                 },
@@ -191,7 +191,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'walking through alley',
                     instance: ALLEY
                 }
@@ -219,7 +219,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, on phone, hunched over, sobbing',
                     instance: BROKEN_HEARTED
                 },
@@ -267,7 +267,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, desperately hopeful',
                     instance: DEMONSTRATION
                 },
