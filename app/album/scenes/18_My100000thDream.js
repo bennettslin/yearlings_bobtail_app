@@ -93,7 +93,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, walking, pleasantly confused',
                     instance: EL_TORITO
                 },
@@ -120,7 +120,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'sitting cross-legged, playing recorder, content',
                     instance: PAMPAS
@@ -170,7 +170,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'back angle, confusedly being rushed',
                     instance: GETTING_DARK
@@ -205,7 +205,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'front angle, reacting to threat',
                     instance: CLIFF
@@ -235,7 +235,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'calm, accepting of impending doom',
                     instance: FINAL_DREAM

@@ -575,12 +575,14 @@ export default {
                             card: {
                                 // TODO: My own strings.
                                 description: [
-                                    `I felt like a`,
+                                    `The five-year plan settled all my priorities in advance. , as if I were a`,
                                     {
-                                        anchor: `marionette,`,
+                                        anchor: `marionette`,
                                         wiki: `Marionette`
                                     },
-                                    `lying ensnared in my strings after Mara tired of controlling me from above. Of course, it was my own fault for believing in these "lies that Mara you'll net."`
+                                    `being controlled by the person I was at the start of it.
+
+                                    lying ensnared in my strings after Mara tired of controlling me from above. Of course, it was my own fault for believing in these "lies that Mara you'll net."`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true,
