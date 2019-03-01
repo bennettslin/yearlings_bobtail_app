@@ -161,7 +161,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'back, shaking fist at sky',
                         instance: BENNETT_DEFIANT
                     }
@@ -197,7 +197,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_STEPHANIE]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side angle, playful, waving',
                     instance: HORSING
@@ -237,7 +237,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_STEPHANIE]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'back, consoling',
                     instance: DRYING_TEARS

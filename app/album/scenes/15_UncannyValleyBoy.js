@@ -243,7 +243,7 @@ export default [
                 },
                 [MIRIAM_STEPHANIE]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 2.875,
                     compound: 2,
                     description: 'side, jumping on Bennett, grabbing his banjo',
                     instance: MISCHIEVOUS_BANJO
@@ -281,7 +281,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'back, squatting, recording, dejected',
                         instance: BENNETT_RECORDING
                     }

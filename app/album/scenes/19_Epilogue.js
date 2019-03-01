@@ -150,7 +150,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'4"`,
                     description: 'standing',
                     instance: EPILOGUE

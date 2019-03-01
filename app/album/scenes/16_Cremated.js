@@ -261,7 +261,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'pensive, laying condom on ground',
                     instance: DISPOSING_CONDOM
                 },

@@ -124,7 +124,7 @@ export default [
                 },
                 [AMY_STEPHANIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'side, squeezing through, apologetic',
                     instance: SQUEEZING
@@ -222,7 +222,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, talking to Wade',
                     instance: MINGLING
                 },

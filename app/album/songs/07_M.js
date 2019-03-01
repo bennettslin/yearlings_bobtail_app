@@ -572,23 +572,29 @@ export default {
                     lyric: [
                         {
                             anchor: `lies that marionette`,
-                            card: {
-                                // TODO: My own strings.
-                                description: [
-                                    `The five-year plan settled all my priorities in advance. , as if I were a`,
-                                    {
-                                        anchor: `marionette`,
-                                        wiki: `Marionette`
-                                    },
-                                    `being controlled by the person I was at the start of it.
+                            cards: [
+                                {
+                                    description: [
+                                        `Since the five-year plan settled all my priorities in advance, every action I took during those years felt predetermined, and there was a comfort in having that certainty.
 
-                                    lying ensnared in my strings after Mara tired of controlling me from above. Of course, it was my own fault for believing in these "lies that Mara you'll net."`
-                                ],
-                                dotKeys: {
-                                    [OBSERVATION]: true,
-                                    [PUN]: true
+                                        But once those five years were up, I no longer felt certainty in my actions, discomfort. I was like a`,
+                                        {
+                                            anchor: `marionette,`,
+                                            wiki: `Marionette`
+                                        },
+                                        `once guided by the hidden hand of my younger self, now a contorted wreck.`
+                                    ],
+                                    dotKeys: {
+                                        [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    description: `Of course, it was my own fault for believing in these "lies that Mara you'll net."`,
+                                    dotKeys: {
+                                        [PUN]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `in this heap of twisted twine.`
                     ]

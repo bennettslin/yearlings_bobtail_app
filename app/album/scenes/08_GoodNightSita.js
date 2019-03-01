@@ -159,7 +159,7 @@ export default [
                 [STEPHANIE]: {
                     actor: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, rushing',
                         instance: FLAPPER
                     }

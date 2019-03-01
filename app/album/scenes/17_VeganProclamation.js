@@ -282,7 +282,7 @@ export default [
                 [STEPHANIE]: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'standing, demonstrating',
                         instance: PROTESTER
                     }
