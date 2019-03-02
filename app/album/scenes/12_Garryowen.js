@@ -129,7 +129,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, holding paper bottle, laughing',
                     instance: CHUCKLING
                 },
@@ -207,7 +207,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front, removing bass, rolling eyes',
                     instance: SMIRKING
                 }

@@ -104,7 +104,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, playing bass, looking cool',
                     instance: PERFORMING
                 },
@@ -204,7 +204,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front, leaning against wall, waiting for Jacob',
                     instance: WAITING
                 },

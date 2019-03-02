@@ -100,7 +100,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 },
@@ -143,7 +143,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, reading bottle intently',
                     instance: WALGREENS
                 },
@@ -186,7 +186,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, play fighting',
                     instance: STEAM_TUNNEL
                 },
@@ -229,7 +229,7 @@ export default [
                 },
                 [ANA_HOWIE]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side angle, shivering, feeling comforted',
                     instance: CEMETERY
@@ -270,7 +270,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, sleeping in car',
                     instance: STATION_WAGON
                 },
