@@ -580,14 +580,14 @@ export default {
                                             anchor: `marionette,`,
                                             wiki: `Marionette`
                                         },
-                                        `being made to posture with confidence by the hidden hand of my naive younger self.`
+                                        `being made to posture by the hidden hand of my naive younger self.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
                                 },
                                 {
-                                    description: `But also, my hopes proved to be lies that some "Mara you'll net" upon donning these marionette strings.`,
+                                    description: `But also, I eagerly donned these marionette strings only because I believed the lies that some "Mara you'll net" by doing so.`,
                                     dotKeys: {
                                         [PUN]: true
                                     }
@@ -598,7 +598,7 @@ export default {
                         {
                             anchor: `heap of twisted twine.`,
                             card: {
-                                description: `With no results to show after five years of diligent effort, however, I was suddenly paralyzed by uncertainty. Like a puppet, I just couldn't move without some hidden hand to provide guidance from above.`,
+                                description: `With no results to show after five years of diligent effort, I was suddenly paralyzed by uncertainty. I could no longer prescribe any future actions with confidence, and so my future self was left to lie like a motionless puppet in my mind.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
