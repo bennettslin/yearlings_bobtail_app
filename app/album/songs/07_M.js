@@ -575,28 +575,35 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Since the five-year plan settled all my priorities in advance, every action I took during those years felt predetermined, and there was a comfort in having that certainty.
-
-                                        But once those five years were up, I no longer felt certainty in my actions, discomfort. I was like a`,
+                                        `There was a comfort in having all my priorities settled in advance by the five-year plan. Since I always knew with certainty the right course of action, I could undertake it with conviction. I was like a`,
                                         {
                                             anchor: `marionette,`,
                                             wiki: `Marionette`
                                         },
-                                        `once guided by the hidden hand of my younger self, now a contorted wreck.`
+                                        `being made to posture with confidence by the hidden hand of my naive younger self.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
                                 },
                                 {
-                                    description: `Of course, it was my own fault for believing in these "lies that Mara you'll net."`,
+                                    description: `But also, my hopes proved to be lies that some "Mara you'll net" upon donning these marionette strings.`,
                                     dotKeys: {
                                         [PUN]: true
                                     }
                                 }
                             ]
                         },
-                        `in this heap of twisted twine.`
+                        `in this`,
+                        {
+                            anchor: `heap of twisted twine.`,
+                            card: {
+                                description: `With no results to show after five years of diligent effort, however, I was suddenly paralyzed by uncertainty. Like a puppet, I just couldn't move without some hidden hand to provide guidance from above.`,
+                                dotKeys: {
+                                    [OBSERVATION]: true
+                                }
+                            }
+                        }
                     ]
                 }
             ]
