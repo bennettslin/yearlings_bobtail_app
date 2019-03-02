@@ -129,7 +129,7 @@ export default [
                 },
                 [CATHERINE]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `4'11"`,
                     description: 'standing',
                     instance: EPILOGUE
