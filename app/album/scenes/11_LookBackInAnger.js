@@ -124,7 +124,7 @@ export default [
                 },
                 [AMY_STEPHANIE]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side, squeezing through, apologetic',
                     instance: SQUEEZING
@@ -158,7 +158,7 @@ export default [
                 },
                 [AMY]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, same Mara pose',
                     instance: FLIRTING
                 },
@@ -216,7 +216,7 @@ export default [
                 },
                 [AMY]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, looking back, uncertain',
                     instance: MINGLING
                 },
