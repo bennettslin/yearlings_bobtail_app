@@ -540,7 +540,7 @@ export default {
                         {
                             anchor: `baffled sobs.`,
                             card: {
-                                description: `My brother had no way to understand the reason for my anger, and so the times when I would turn on him and cause him physical hurt would always remain without explanation. I suppose that for him, it was just another part of what life was.`,
+                                description: `The hardest part about hurting my brother was knowing that he had no way to understand the cause of my anger. The times when I turned on him and caused him physical pain would always remain without explanation. I suppose that for him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -560,7 +560,7 @@ export default {
                             anchor: `smarts he could've took`,
                             cards: [
                                 {
-                                    description: `I spent a long time wondering why my brother was autistic and I was not, when our circumstances weren't any different. It didn't seem far-fetched to suppose that cognitive skills are a fixed supply in a mother's womb, and that I had selfishly taken my brother's share.`,
+                                    description: `I grew up puzzling over why my brother had been born with autism and I had not, when our circumstances were no different. It wasn't far-fetched to suppose that every mother's womb begins with a fixed supply of reasoning skills to dole out to each child, and that I had selfishly taken my brother's share.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -613,7 +613,7 @@ export default {
                             anchor: `Killcrop`,
                             card: {
                                 description: [
-                                    `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a primary concern of past times, when children unable to work for their keep could lead to a farmer's ruin.`
+                                    `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a family's ruin.`
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true
@@ -629,7 +629,7 @@ export default {
                         {
                             anchor: `soused loafers`,
                             card: {
-                                description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangbangers idling nearby. "Soused loafers" here refers to these drunken layabouts, as well as to their drenched shoes.`,
+                                description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangbangers idling nearby. "Soused loafers" here refers to drunken layabouts, as well as to their drenched shoes.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
