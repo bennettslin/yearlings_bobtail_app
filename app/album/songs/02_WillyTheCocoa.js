@@ -540,7 +540,7 @@ export default {
                         {
                             anchor: `baffled sobs.`,
                             card: {
-                                description: `My brother had no way to understand the reason for my anger, and so the times when I would turn on him and cause him physical hurt had to remain without explanation. I suppose that for him, it was just another part of what life was.`,
+                                description: `My brother had no way to understand the reason for my anger, and so the times when I would turn on him and cause him physical hurt would always remain without explanation. I suppose that for him, it was just another part of what life was.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
