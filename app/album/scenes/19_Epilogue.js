@@ -178,7 +178,7 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3.25,
                     realHeight: `5'1"`,
                     description: 'standing',
                     instance: EPILOGUE

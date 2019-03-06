@@ -144,7 +144,7 @@ export default [
                 [MIRIAM]: {
                     gopi: {
                         todo: true,
-                        workedHours: 2.5,
+                        workedHours: 3.25,
                         description: 'dancing',
                         instance: GOPI
                     }

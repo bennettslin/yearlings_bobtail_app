@@ -92,7 +92,7 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3.25,
                     description: 'sitting in car, putting on perfume',
                     instance: PERFUMING
                 }
@@ -125,7 +125,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.875,
+                    workedHours: 3.25,
                     compound: 2,
                     description: 'back angle, eyes closed, trying to get off',
                     instance: COWGIRL
@@ -159,7 +159,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.875,
+                    workedHours: 3.25,
                     compound: 2,
                     description: 'back angle, giving blowjob',
                     instance: BLOWJOB
@@ -229,7 +229,7 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3.25,
                     description: 'serving in tennis',
                     instance: TENNIS
                 }
@@ -267,7 +267,7 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 2.5,
+                    workedHours: 3.25,
                     description: 'side, looking back, reversing car',
                     instance: REVERSING
                 }

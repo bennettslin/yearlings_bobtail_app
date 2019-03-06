@@ -113,7 +113,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.875,
+                    workedHours: 3.25,
                     compound: 2,
                     description: 'side, asleep',
                     instance: ASLEEP
@@ -243,7 +243,7 @@ export default [
                 },
                 [MIRIAM_STEPHANIE]: {
                     todo: true,
-                    workedHours: 2.875,
+                    workedHours: 3.25,
                     compound: 2,
                     description: 'side, jumping on Bennett, grabbing his banjo',
                     instance: MISCHIEVOUS_BANJO
@@ -335,7 +335,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 2.875,
+                    workedHours: 3.25,
                     compound: 2,
                     description: 'side sitting, vindictive, magical gesture',
                     instance: FENDING_OFF
