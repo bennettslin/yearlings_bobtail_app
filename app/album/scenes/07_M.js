@@ -218,7 +218,7 @@ export default [
                 },
                 [MARA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'flirting with Jacob',
                     instance: FLIRTING
                 },
@@ -269,7 +269,7 @@ export default [
                 },
                 [JACOB_MARA]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'sitting, eating burger, holding Mara\'s hand',
                     instance: EATING

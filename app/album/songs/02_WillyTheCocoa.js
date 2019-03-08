@@ -22,7 +22,7 @@ import {
 export default {
     title: 'Willy the Cocoa',
     totalTime: 207,
-    overview: `Willy the Cocoa was a mentally disabled man who wandered our streets collecting recyclables for a living. One day, some gangbangers decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
+    overview: `Willy the Cocoa was a mentally disabled man who wandered our streets collecting recyclables for a living. One day, some delinquents decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyricUnits: [
         {
             unitMap: {
@@ -613,7 +613,7 @@ export default {
                             anchor: `Killcrop`,
                             card: {
                                 description: [
-                                    `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a family's ruin.`
+                                    `In English folklore, a killcrop is an infant suspected of being a changeling due to its voracious appetite. The etymology is straightforward— one who "kills crops"— and reflects a concern of past times, when children unable to earn their keep could lead to a peasant family's ruin.`
                                 ],
                                 dotKeys: {
                                     [REFERENCE]: true
@@ -628,13 +628,20 @@ export default {
                     lyric: [
                         {
                             anchor: `soused loafers`,
-                            card: {
-                                description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangbangers idling nearby. "Soused loafers" here refers to drunken layabouts, as well as to their drenched shoes.`,
-                                dotKeys: {
-                                    [NARRATIVE]: true,
-                                    [PUN]: true
+                            cards: [
+                                {
+                                    description: `In his zeal to reach a discarded beer bottle, Willy steps into a puddle and splashes standing water onto a pair of gangsters idling nearby.`,
+                                    dotKeys: {
+                                        [NARRATIVE]: true
+                                    }
+                                },
+                                {
+                                    description: `"Soused loafers" can refer to drunken layabouts, as well as to their drenched shoes.`,
+                                    dotKeys: {
+                                        [PUN]: true
+                                    }
                                 }
-                            }
+                            ]
                         },
                         `shouting 'tard payment is due.`
                     ]
@@ -646,7 +653,7 @@ export default {
                             anchor: `Hit this witch`,
                             cards: [
                                 {
-                                    description: `A switch is a flexible rod used for punishment. It was believed that beating a changeling would provoke it to reveal its true nature and return the stolen child, and past cases of such abuse leading to death have been recorded. So if Willy is a changeling, then it seems predestined for him to meet a violent end.`,
+                                    description: `A switch is a flexible rod used for punishment. In some legends, beating a changeling badly enough will provoke it to tire of its charade and return the stolen child. Indeed, the historical records tell of many incidents in which the abuse of sickly children led to their deaths. So if Willy is a changeling, then it seems predestined for him to meet a violent end.`,
                                     dotKeys: {
                                         [OBSERVATION]: true,
                                         [REFERENCE]: true

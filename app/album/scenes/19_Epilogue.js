@@ -164,7 +164,7 @@ export default [
                 },
                 [MARA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `5'0"`,
                     description: 'standing',
                     instance: EPILOGUE

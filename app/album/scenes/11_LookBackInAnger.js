@@ -170,7 +170,7 @@ export default [
                 },
                 [MARA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, walking, carrying cymbal, talking',
                     instance: CARRYING
                 }
@@ -210,7 +210,7 @@ export default [
                 },
                 [MARA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, looking at watch',
                     instance: WAITING
                 },
