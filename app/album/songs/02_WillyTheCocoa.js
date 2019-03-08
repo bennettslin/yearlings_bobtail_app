@@ -653,10 +653,9 @@ export default {
                             anchor: `Hit this witch`,
                             cards: [
                                 {
-                                    description: `A switch is a flexible rod used for punishment. In some legends, beating a changeling badly enough will provoke it to tire of its charade and return the stolen child. Indeed, the historical records tell of many incidents in which the abuse of sickly children led to their deaths. So if Willy is a changeling, then it seems predestined for him to meet a violent end.`,
+                                    description: `In some legends, beating a changeling badly enough will provoke it to tire of its charade and return the stolen child. These legends reflected and justified a historical reality in which sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
                                     dotKeys: {
-                                        [OBSERVATION]: true,
-                                        [REFERENCE]: true
+                                        [OBSERVATION]: true
                                     }
                                 },
                                 {
@@ -664,7 +663,16 @@ export default {
                                 }
                             ]
                         },
-                        `with switch, whispers wind, to fix his switcheroo…`
+                        {
+                            anchor: `with switch,`,
+                            card: {
+                                description: `A switch is a flexible rod used for punishment.`,
+                                dotKeys: {
+                                    [REFERENCE]: true
+                                }
+                            }
+                        },
+                        `whispers wind, to fix his switcheroo…`
                     ]
                 }
             ]
@@ -713,7 +721,7 @@ export default {
                         {
                             anchor: `sack-spilled glass`,
                             card: {
-                                description: `Eager for a fight, the gangbangers start pushing Willy around. Amidst the commotion, his shopping cart is upturned, spilling empty beer bottles onto the ground.`,
+                                description: `Eager for a fight, the gangsters start to push Willy around. The commotion causes Willy's shopping cart to overturn, spilling empty beer bottles onto the ground.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -723,7 +731,7 @@ export default {
                         {
                             anchor: `past-noon toll.`,
                             card: {
-                                description: `One gangbanger grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighbourhood, like the ring of a town bell.`,
+                                description: `One gangster grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighbourhood like the ring of a town bell.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
