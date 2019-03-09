@@ -721,7 +721,7 @@ export default {
                         {
                             anchor: `sack-spilled glass`,
                             card: {
-                                description: `Eager for a fight, the gangsters start to push Willy around. The commotion causes Willy's shopping cart to overturn, spilling empty beer bottles onto the ground.`,
+                                description: `Eager for a fight, the gangsters start to push Willy around. His shopping cart gets overturned in the commotion, causing empty bottles and cans to spill onto the ground.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -731,7 +731,7 @@ export default {
                         {
                             anchor: `past-noon toll.`,
                             card: {
-                                description: `One gangster grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighbourhood like the ring of a town bell.`,
+                                description: `One of the gangsters grabs a bottle and smashes it against Willy's face. The sound reverberates throughout the neighborhood like the peal of a town bell striking once at one o'clock.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
