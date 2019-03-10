@@ -653,7 +653,7 @@ export default {
                             anchor: `Hit this witch`,
                             cards: [
                                 {
-                                    description: `In some legends, beating a changeling badly enough will provoke it to tire of its charade and return the stolen child. These legends reflected and justified a historical reality in which sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
+                                    description: `In some legends, beating a changeling badly enough will provoke it to tire of its charade and return the stolen child. These legends reflected a historical reality in which sickly children were often abused to death, if not killed outright. So if Willy is a changeling, then it seems predestined that he should meet a violent end.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
@@ -693,7 +693,7 @@ export default {
                                     anchor: `unsalvaged soul…`,
                                     cards: [
                                         {
-                                            description: `Religious doctrine in the past often sanctioned the abuse of disabled children by giving assurance that they were devoid of souls. But I came to a different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.`,
+                                            description: `To justify the abuse of sickly children, religious doctrine in the past would often claim that such children were devoid of souls.`,
                                             dotKeys: {
                                                 [OBSERVATION]: true,
                                                 [REFERENCE]: true

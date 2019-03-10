@@ -1236,6 +1236,8 @@ export default {
                         `pray for`,
                         {
                             anchor: `soulless solace`,
+                            // From Willy the Cocoa ("unsalvaged souls")
+                            // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
                             card: {
                                 description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
                                 dotKeys: {
