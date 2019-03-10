@@ -225,7 +225,7 @@ export default [
                 },
                 [KHARI_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'lying in bed, caressing Sita',
                     instance: CARESS

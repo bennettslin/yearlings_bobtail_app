@@ -112,7 +112,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, hands behind back, guarded',
                         instance: MUSEUM
                     }
@@ -145,7 +145,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, warm, guard down',
                         instance: BACKSTAGE
                     }
@@ -195,7 +195,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, in go-kart, relaxed',
                         instance: GO_KARTS
                     }

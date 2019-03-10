@@ -268,7 +268,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, hesitantly greeting',
                         instance: GATE_CODE
                     }
@@ -382,7 +382,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'sitting, abruptly woken',
                     instance: CHEEK_UNVEILED
@@ -407,7 +407,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side, standing beside bed, unsure',
                     instance: HARD_ON
@@ -444,7 +444,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side, about to stick it in',
                     instance: MISSIONARY
@@ -481,7 +481,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'lying down, warm, content, slightly worried',
                     instance: AFTERGLOW
@@ -489,7 +489,7 @@ export default [
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3.375,
+                        workedHours: 3.75,
                         compound: 2,
                         description: 'reflection',
                         instance: AFTERGLOW_REFLECTION

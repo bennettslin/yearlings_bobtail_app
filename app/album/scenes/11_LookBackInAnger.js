@@ -266,7 +266,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'lying, reaching forward to touch Bennett',
                         instance: ASLEEP_REACHING
                     }
@@ -274,7 +274,7 @@ export default [
                 [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'reflection',
                         instance: REACHING_REFLECTION
                     }
