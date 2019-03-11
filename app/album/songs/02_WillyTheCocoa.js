@@ -759,10 +759,10 @@ export default {
                                 description: [
                                     `Willy's brain is severed from his spine, like a bulb snapped off from its stalk. But a`,
                                     {
-                                        anchor: `bulb`,
+                                        anchor: `flower bulb`,
                                         wiki: `Ornamental_bulbous_plant`
                                     },
-                                    `planted in a flower bed can grow a new stem and bloom again.`
+                                    `planted in the earth can grow a new stem and bloom again.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -798,7 +798,7 @@ export default {
                         {
                             anchor: `sawdust month`,
                             card: {
-                                description: `Later in this "saddest" month when Willy was killed, I help my mother in our backyard garden as we spread the leftover sawdust from my father's carpentry.`,
+                                description: `Later in this "saddest" month of Willy's murder, I helped my mother spread sawdust from my father's carpentry onto our flower beds.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -815,7 +815,7 @@ export default {
                             anchor: `mulch soften asphodel.`,
                             card: {
                                 description: [
-                                    `We are planting`,
+                                    `We planted`,
                                     {
                                         anchor: `asphodels,`,
                                         wiki: `Asphodelus`
