@@ -111,7 +111,7 @@ export default [
                 },
                 [KHARI_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side, protective, judgmental',
                     instance: PROTECTIVE_CONCERNED
@@ -233,7 +233,7 @@ export default [
                 [KHARI_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3.375,
+                        workedHours: 3.75,
                         compound: 2,
                         description: 'reflection',
                         instance: CARESS_REFLECTION

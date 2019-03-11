@@ -100,7 +100,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side angle, opening a door, pleasantly surprised',
                         instance: EL_TORITO
                     }
@@ -205,7 +205,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'front angle, reacting to threat',
                     instance: CLIFF

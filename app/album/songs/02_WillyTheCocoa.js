@@ -756,7 +756,14 @@ export default {
                             anchor: `Willy's stalkless bulb.`,
                             properNoun: true,
                             card: {
-                                description: `The "stalkless bulb" here refers to Willy's brain, which has just been severed from its spine, as well as to a dormant plant ready to be set in the ground.`,
+                                description: [
+                                    `Willy's brain is severed from his spine, like a bulb snapped off from its stalk. But a`,
+                                    {
+                                        anchor: `bulb`,
+                                        wiki: `Ornamental_bulbous_plant`
+                                    },
+                                    `planted in a flower bed can grow a new stem and bloom again.`
+                                ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -791,7 +798,7 @@ export default {
                         {
                             anchor: `sawdust month`,
                             card: {
-                                description: `Later in this "saddest" month when Willy was killed, I am helping my mother in our backyard garden as we spread the leftover sawdust from my father's carpentry.`,
+                                description: `Later in this "saddest" month when Willy was killed, I help my mother in our backyard garden as we spread the leftover sawdust from my father's carpentry.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true

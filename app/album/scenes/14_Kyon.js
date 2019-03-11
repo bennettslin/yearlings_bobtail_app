@@ -253,7 +253,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, seated, asleep',
                         instance: ASLEEP_COUCH
                     }

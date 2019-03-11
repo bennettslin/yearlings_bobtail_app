@@ -147,7 +147,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, taken aback, politely friendly',
                         instance: DISHROOM_LANCET
                     }
@@ -292,7 +292,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'front, opening gate, silent, attentive',
                     instance: GINGERBREAD_PRISON
@@ -327,8 +327,8 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
-                        description: 'side, surprised, embarrassed smile',
+                        workedHours: 3.75,
+                        description: 'side, wincing, embarrassed smile',
                         instance: RUMPLED_LINENS
                     }
                 }
@@ -415,7 +415,7 @@ export default [
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3.375,
+                        workedHours: 3.75,
                         compound: 2,
                         description: 'reflection',
                         instance: HARD_ON_REFLECTION
@@ -452,7 +452,7 @@ export default [
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3.375,
+                        workedHours: 3.75,
                         compound: 2,
                         description: 'reflection',
                         instance: MISSIONARY_REFLECTION

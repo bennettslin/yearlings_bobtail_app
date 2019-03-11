@@ -85,7 +85,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, friendly, guarded',
                         instance: DATE_ENDING
                     }
@@ -229,7 +229,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'front, closing gate, looking concerned',
                         instance: DATE_ENDED
                     }
