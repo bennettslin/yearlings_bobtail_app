@@ -72,7 +72,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, seated, petting cat, sad',
                         instance: PETTING_SEATED
                     }
@@ -100,7 +100,7 @@ export default [
                     sita: {
                         todo: true,
                         workedHours: 3,
-                        description: 'side, seated, petting cat, sad',
+                        description: 'side, standing, petting cat, exhausted',
                         instance: PETTING_STANDING
                     }
                 }
@@ -156,7 +156,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side angle, glumly welcoming',
                         instance: OPENING_DOOR
                     }
@@ -186,7 +186,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, seated, defensive',
                         instance: DEFENDING
                     }
@@ -220,7 +220,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, seated, exhausted',
                         instance: NOT_HUNGRY
                     }
@@ -276,6 +276,15 @@ export default [
         unitIndex: 12,
         description: `Same scene. Peacocks.`,
         presences: {
+            [ACTORS]: {
+                [LIZ]: {
+                    sita: {
+                        duplicate: true,
+                        description: 'side, seated, asleep',
+                        instance: ASLEEP_COUCH
+                    }
+                }
+            },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true
             },

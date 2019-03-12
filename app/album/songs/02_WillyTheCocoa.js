@@ -798,7 +798,7 @@ export default {
                         {
                             anchor: `sawdust month`,
                             card: {
-                                description: `Later in this "saddest" month of Willy's murder, I helped my mother spread sawdust from my father's carpentry onto our flower beds.`,
+                                description: `Later in this "saddest" month of Willy's murder, I helped my mother spread wood shavings from my father's carpentry onto our flower beds.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
@@ -815,12 +815,12 @@ export default {
                             anchor: `mulch soften asphodel.`,
                             card: {
                                 description: [
-                                    `We planted`,
+                                    `We were planting`,
                                     {
                                         anchor: `asphodels,`,
                                         wiki: `Asphodelus`
                                     },
-                                    `a popular garden plant as well as the immortal flower of the underworld in Greek mythology. As we spread mulch to soften the soil, I remark that Willy's body must have also softened the "asphalt" beneath which it lay.`
+                                    `a popular garden plant named after the immortal flower of the underworld in Greek mythology. By softening the soil, the mulch gave new life to our flower beds. And perhaps Willy's body did the same for our neighborhood by softening the "asphalt" beneath which it had lain.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
