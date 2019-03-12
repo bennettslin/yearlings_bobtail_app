@@ -99,7 +99,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, standing, petting cat, exhausted',
                         instance: PETTING_STANDING
                     }
@@ -126,7 +126,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, seated, pensive',
                         instance: SIFTING_TCHOTCHKES
                     }

@@ -94,7 +94,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'front, putting on jacket, cold, distant',
                     instance: BRUSH_OFF
@@ -164,7 +164,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'on couch, ignoring Sita, drunk',
                     instance: CELIBATE_FREEZING
@@ -243,7 +243,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'crumbled on floor, begging, sobbing',
                         instance: LEAVING_CRUMBLED
                     }

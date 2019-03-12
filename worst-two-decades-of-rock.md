@@ -1,3 +1,8 @@
+Indie rock is about competitive self-reliance.
+
+
+Reluctant hero who wasn't driven to do anything bold or great.
+
 Reverse engineered ideology, versus sound or aesthetic.
 
 Trust falling onto society.
@@ -11,6 +16,8 @@ Indie rock is exactly as racist as the standards of its respective society. How 
 Indie rock is a reverse-engineered ideology.
 Because of this, there is no coherent underlying spirit.
 Because of this, minorities don't have any opening to participate.
+
+Disabled novice test
 
 There is no uplifting way for a truly disadvantaged person to endure real-life hardship and overcome real-world hurdles to become an indie rock darling, just like there is no uplifting way for a poor person to work hard and scrimp and save to buy a designer handbag. If paying for that handbag hurts you financially, you should just not do it. And if the reality of what building up a grassroots following necessarily entails poses undue burdens on you, you should just not do that either. Because in both cases, we as a society have inflated its value to be far greater than its actual worth. And we know this, but as long as the only people paying its high cost are the ones who can afford it, then we're happy to maintain the charade. But we're not jerks. The minute a truly disadvantaged person starts wondering whether to buy in, we know the charade has to end.
 
