@@ -780,7 +780,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `I played the electric guitar riff here with both a slide and the whammy bar, which is another nonsensical thing that I could picture trolls doing.`
+                            `To play the electric guitar riff here, I used both a glass slide and the whammy bar. Since each of these offers the capability to bend pitch, it doesn't make sense to combine them. But perhaps this is just the kind of nonsensical thing that a troll musician would happily do.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
@@ -837,12 +837,11 @@ export default {
                             anchor: `Baby bluebonnets`,
                             card: {
                                 description: [
-                                    `The`,
                                     {
-                                        anchor: `bluebonnet`,
+                                        anchor: `Bluebonnets`,
                                         wiki: 'Bluebonnet_(plant)'
                                     },
-                                    `is another garden flower, and a bonnet is what my mother has tucked my brother's head in to protect him from the sun. But in light of Willy's murder, I wonder how protected his head is against other things.`
+                                    `were another popular flower in our garden, and a blue bonnet is what my mother had tucked my brother's head in to protect him from the sun. In light of Willy's murder, however, I had to wonder how protected my brother was against other things.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -861,7 +860,7 @@ export default {
                         {
                             anchor: `forgotten amongst the mail.`,
                             card: {
-                                description: `Having recently assaulted my brother in anger over a shredded comic book, I am now indifferent to the latest release from my monthly subscription.`,
+                                description: `Having recently assaulted my brother in anger over a shredded comic book, I was now indifferent to the latest issue from my monthly subscription.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -883,7 +882,7 @@ export default {
                         {
                             anchor: `how marbleless,`,
                             card: {
-                                description: `Or, "how marvellous." Sometimes friends of my parents, in a poor attempt to empathise with my brother's autism, would remark on how blissful it must be to go through life without all of one's "marbles," so to speak.`,
+                                description: `Sometimes friends of my parents, in a poor attempt to sympathize with my parents' struggle to raise my brother, would remark on how "marvellous" it must be for those with autism to go through life blissfully unaware, without all of one's "marbles," so to speak.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
@@ -1092,7 +1091,7 @@ export default {
                             ],
                             card: {
                                 description: [
-                                    `My favourite word as a child was "bobtail." I think I was just so proud of myself when I realised that the line "bells on bobtail ring" from the song`,
+                                    `My favorite word as a child was "bobtail." I think I was just so proud of myself when I realised that the line "bells on bobtail ring" from the song`,
                                     {
                                         anchor: `"Jingle Bells"`,
                                         wiki: `Jingle_Bells`

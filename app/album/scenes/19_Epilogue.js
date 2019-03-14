@@ -108,7 +108,7 @@ export default [
                 },
                 [BRAD]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     realHeight: `4'6"`,
                     description: 'standing',
                     instance: EPILOGUE

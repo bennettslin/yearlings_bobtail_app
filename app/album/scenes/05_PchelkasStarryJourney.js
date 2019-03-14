@@ -296,8 +296,8 @@ export default [
                 },
                 [BRAD]: {
                     todo: true,
-                    workedHours: 3,
-                    description: 'front angle, gesturing at friend to leave',
+                    workedHours: 3.75,
+                    description: 'front angle, gesturing at Andrew to leave',
                     instance: GESTURING
                 },
                 [ANDREW]: {
@@ -340,7 +340,7 @@ export default [
                 },
                 [BRAD]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'eating chips',
                     instance: SNACKING
                 },
