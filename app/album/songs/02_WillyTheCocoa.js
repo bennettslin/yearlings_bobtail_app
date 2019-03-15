@@ -841,7 +841,7 @@ export default {
                                         anchor: `Bluebonnets`,
                                         wiki: 'Bluebonnet_(plant)'
                                     },
-                                    `were another popular flower in our garden, and a blue bonnet is what my mother had tucked my brother's head in to protect him from the sun. In light of Willy's murder, however, I had to wonder how protected my brother was against other things.`
+                                    `were another popular flower in our garden, and a blue bonnet is what my mother had tucked my brother's head in to protect him from the sun. But after Willy's murder, I had to wonder how protected my brother was against other things.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -882,7 +882,7 @@ export default {
                         {
                             anchor: `how marbleless,`,
                             card: {
-                                description: `Sometimes friends of my parents, in a poor attempt to sympathize with my parents' struggle to raise my brother, would remark on how "marvellous" it must be for those with autism to go through life blissfully unaware, without all of one's "marbles," so to speak.`,
+                                description: `Occasionally, a friend or neighbor would make a clumsy attempt to ease my parents' worries by claiming to envy the lives of those with autism. For example, one might remark how "marvellous" it must be to live without all of one's "marbles." `,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
