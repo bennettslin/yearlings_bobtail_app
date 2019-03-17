@@ -880,6 +880,7 @@ export default {
                     lyric: [
                         `But`,
                         {
+                            // TODO: Already done in other laptop. Remember to git pull it in.
                             anchor: `how marbleless,`,
                             card: {
                                 description: `Occasionally, a friend or neighbor would make a clumsy attempt to ease my parents' worries by claiming to envy the lives of those with autism. For example, one might remark how "marvellous" it must be to live without all of one's "marbles." `,
@@ -901,11 +902,12 @@ export default {
                             cards: [
                                 {
                                     description: [
+                                        `Every time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother.`,
                                         {
                                             anchor: `"Imprinting"`,
                                             wiki: `Imprinting_(psychology)`
                                         },
-                                        `is a period during which a child acquires certain behaviour, such as emotional attachment. Each time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother.`
+                                        `is a period during which a child acquires certain behaviour, such as emotional attachment.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

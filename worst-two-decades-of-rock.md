@@ -2,7 +2,7 @@ Indie rock is like MAGA. White people think they're drawn to it because they're 
 Indie rock is about competitive self-reliance.
 And it's impossible to measure self-reliance independent of privilege, because everything that is gained through self-reliance is something that can also be gained through privilege.
 
-Reluctant hero who wasn't driven to do anything bold or great.
+Nothing worse than aspiring to change the world, and falling short. The reluctant hero isn't driven to do anything bold or great.
 
 Reverse engineered ideology, versus sound or aesthetic.
 
@@ -14,7 +14,7 @@ Underprivileged artists are always going to be works in progress. They are likel
 
 The great artists of the 21st century, just like the greats of every other century, will be the driven, ambitious type. The problem is that there is something inherently unlikable about the driven and the ambitious. Society prefers instead to root for the reluctant hero. But those on the side of the driven and the ambitious do have a secret weapon. The transparent observation that the reluctant hero is pretty much always a person of privilege.
 
-Indie rock is exactly as racist as the standards of its respective society. How would indie rock have behaved in the 1930s Deep South?
+How would indie rock have behaved in the 1930s Deep South? It would refuse to challenge, and instead affirm, the prejudices of its time. Indie rock is exactly as racist as the standards of its respective society.
 
 Indie rock is a reverse-engineered ideology.
 Because of this, there is no coherent underlying spirit.

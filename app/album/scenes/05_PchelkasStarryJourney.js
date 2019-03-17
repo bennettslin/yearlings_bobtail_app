@@ -153,7 +153,7 @@ export default [
             [ACTORS]: {
                 [CHRISTOPHER_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'w-sitting, blissful',
                     instance: BLISSFUL_GUILTY
@@ -186,7 +186,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, sitting up in bed, feigning sick',
                     instance: FEIGNING_SICK
                 }
@@ -290,7 +290,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, stoic',
                     instance: STOIC
                 },
@@ -334,7 +334,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, wistful',
                     instance: WISTFUL
                 },
@@ -384,7 +384,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'front, sitting, sheepish',
                     instance: SHEEPISH
                 },

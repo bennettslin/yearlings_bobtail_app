@@ -129,7 +129,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, looking down stairs',
                     instance: STAIRS
                 }
@@ -155,7 +155,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, peeking out from gate',
                     instance: GATE
                 }
@@ -184,7 +184,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'getting off rickshaw bike',
                     instance: RICKSHAW
                 }
@@ -213,7 +213,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side back, looking out to ocean',
                     instance: SHORE
                 }
@@ -268,7 +268,7 @@ export default [
             [ACTORS]: {
                 [SASHA_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     description: 'mermaid',
                     instance: MERMAID
@@ -299,7 +299,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, crouched in sand, looking back',
                     instance: OCEAN_FLOOR
                 }
