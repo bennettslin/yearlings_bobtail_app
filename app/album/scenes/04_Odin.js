@@ -101,7 +101,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, lying on floor, propped up',
                     instance: MAT
                 }
@@ -242,7 +242,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'peering down from buoy',
                     instance: BUOY
                 }

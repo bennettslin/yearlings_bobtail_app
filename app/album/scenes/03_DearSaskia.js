@@ -137,7 +137,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side seated, pretending to read, panicked',
                     instance: PANICKED
                 },
@@ -175,7 +175,7 @@ export default [
             [ACTORS]: {
                 [BRAD_BENNETT]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'tied up, greeting Sasha with nervous laughter',
                     instance: TYING_TETHER
@@ -188,7 +188,7 @@ export default [
                 },
                 [ANDREW]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'laughing, feigning fear of Sasha',
                     instance: FEIGNING_FEAR
                 }

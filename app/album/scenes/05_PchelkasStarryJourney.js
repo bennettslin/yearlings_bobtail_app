@@ -221,7 +221,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'in bed, asleep, turned away',
                     instance: ASLEEP
                 }
@@ -258,7 +258,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, sitting, shaken, scared',
                     instance: SHAKEN
                 }
@@ -302,7 +302,7 @@ export default [
                 },
                 [ANDREW]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, throwing rocks, angry',
                     instance: THROWING
                 }
@@ -346,7 +346,7 @@ export default [
                 },
                 [ANDREW]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'playing guitar like an amateur',
                     instance: NOODLING
                 },

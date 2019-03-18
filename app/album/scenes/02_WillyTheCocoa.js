@@ -226,7 +226,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side angle, aggressive stance, angry',
                     instance: ENRAGED
                 }
