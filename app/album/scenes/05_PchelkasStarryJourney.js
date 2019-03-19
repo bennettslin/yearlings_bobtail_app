@@ -353,7 +353,7 @@ export default [
                 [SASHA]: {
                     popularGirl: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'back',
                         instance: POPULAR_GIRL
                     }

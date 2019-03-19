@@ -50,7 +50,7 @@ export default [
                 },
                 [ANITA_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.375,
                     compound: 2,
                     realHeight: `3'9", 3'6"`,
                     description: 'standing',
@@ -100,7 +100,7 @@ export default [
                 },
                 [SASHA_BENNETT]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     realHeight: `4'1"`,
                     description: 'standing',

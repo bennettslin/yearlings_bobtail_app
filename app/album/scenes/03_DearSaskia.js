@@ -143,7 +143,7 @@ export default [
                 },
                 [BRAD_SASHA]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side seated, laughing, braids trailing',
                     instance: CHARMED_SCHOOLBUS
@@ -182,7 +182,7 @@ export default [
                 },
                 [SASHA]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'indignant, yelling at bullies',
                     instance: INDIGNANT
                 },

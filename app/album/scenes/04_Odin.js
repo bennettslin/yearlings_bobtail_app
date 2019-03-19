@@ -268,7 +268,7 @@ export default [
             [ACTORS]: {
                 [SASHA_BENNETT]: {
                     todo: true,
-                    workedHours: 3.375,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'mermaid',
                     instance: MERMAID

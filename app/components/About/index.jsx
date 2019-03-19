@@ -17,14 +17,15 @@ const mapStateToProps = ({
     windowHeight
 })
 
+// eslint-disable-next-line no-empty-pattern
 const About = ({
-    isHigherProcessor,
-    isTouchSupported,
-    windowHeight
+    // isHigherProcessor,
+    // isTouchSupported,
+    // windowHeight
 
 }) => {
 
-    const actualWindowHeight = window.innerHeight
+    // const actualWindowHeight = window.innerHeight
 
     return (
         <div className={cx(
@@ -35,18 +36,18 @@ const About = ({
                 Album written, arranged, and performed by Bennett Lin.
             </p>
             <p>
-                Website designed, coded, annotated, and illustrated by Bennett Lin.
+                Website annotated, illustrated, and developed by Bennett Lin.
             </p>
             {/* TODO: Eventually delete this, of course. */}
-            <p>
+            {/* <p>
                 isHigherProcessor: {isHigherProcessor ? 'true' : 'false'}
-            </p>
-            <p>
+            </p> */}
+            {/* <p>
                 isTouchSupported: {isTouchSupported ? 'true' : 'false'}
-            </p>
-            <p>
+            </p> */}
+            {/* <p>
                 {`windowHeight (stored, actual): ${windowHeight}, ${actualWindowHeight}`}
-            </p>
+            </p> */}
         </div>
     )
 }
