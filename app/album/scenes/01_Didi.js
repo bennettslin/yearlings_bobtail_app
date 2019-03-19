@@ -118,7 +118,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
-                    workedHours: 3,
+                    workedHours: 3.75,
                     description: 'side, running, panicked',
                     instance: PANICKED
                 }
