@@ -1,3 +1,7 @@
+Indie rock gaslights minorities. Foundational assumption is that the world is your playground. Must always refute anyone who says otherwise.
+
+Bon Iver is like Donald Trump. There can never be a movie celebrating the guy, because the official narrative about the greatness of their achievement will always ring less true for future generations than the meta-narrative that exposes the official narrative to be a sham.
+
 Indie rock is like MAGA. White people think they're drawn to it because they're underprivileged by class, but it's really because they're privileged by race. It appeals to the part of them that's privileged, not the part that's underprivileged.
 Indie rock is about competitive self-reliance.
 And it's impossible to measure self-reliance independent of privilege, because everything that is gained through self-reliance is something that can also be gained through privilege.
