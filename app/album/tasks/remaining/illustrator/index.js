@@ -60,11 +60,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'michaelJackson poster',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
         taskName: 'pchelka, mushka, and rocket',
         workedHours: 2,
         neededHours: 4

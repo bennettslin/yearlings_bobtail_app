@@ -810,5 +810,10 @@ export default [
         taskName: `GoKart helmets`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Michael Jackson poster',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

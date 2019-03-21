@@ -30,7 +30,7 @@ import BennettOceanFloor from './Cutouts/BennettOceanFloor'
 import OdinOceanFloor from './Cutouts/OdinOceanFloor'
 import BennettMat from './Cutouts/BennettMat'
 import OdinMat from './Cutouts/OdinMat'
-import MichaelJacksonPoster from './Cutouts/MichaelJacksonPoster'
+import BloomCountyPoster from './Cutouts/BloomCountyPoster'
 import TrashCan from './Cutouts/TrashCan'
 import VanNuysPlant from './Cutouts/VanNuysPlant'
 import VanNuysLogo from './Cutouts/VanNuysLogo'
@@ -106,7 +106,7 @@ import {
     ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT,
-    MICHAEL_JACKSON_POSTER,
+    BLOOM_COUNTY_POSTER,
     TRASH_CAN_LOCKERS,
     TRASH_CAN_QUAD,
     VAN_NUYS_PLANT_LOCKERS,
@@ -190,7 +190,7 @@ export const propTypes = {
     [ODIN_OCEAN_FLOOR]: PropTypes.bool,
     [BENNETT_MAT]: PropTypes.bool,
     [ODIN_MAT]: PropTypes.bool,
-    [MICHAEL_JACKSON_POSTER]: PropTypes.bool,
+    [BLOOM_COUNTY_POSTER]: PropTypes.bool,
     [TRASH_CAN_LOCKERS]: PropTypes.bool,
     [TRASH_CAN_QUAD]: PropTypes.bool,
     [VAN_NUYS_PLANT_LOCKERS]: PropTypes.bool,
@@ -274,7 +274,7 @@ export default {
     [ODIN_OCEAN_FLOOR]: OdinOceanFloor,
     [BENNETT_MAT]: BennettMat,
     [ODIN_MAT]: OdinMat,
-    [MICHAEL_JACKSON_POSTER]: MichaelJacksonPoster,
+    [BLOOM_COUNTY_POSTER]: BloomCountyPoster,
     [TRASH_CAN_LOCKERS]: TrashCan,
     [TRASH_CAN_QUAD]: TrashCan,
     [VAN_NUYS_PLANT_LOCKERS]: VanNuysPlant,

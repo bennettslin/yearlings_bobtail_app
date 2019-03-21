@@ -77,7 +77,7 @@ export const BENNETT_MAT = 'bennettMat'
 export const ODIN_MAT = 'odinMat'
 
 // Together on one page with marquee frame. Requires editing.
-export const MICHAEL_JACKSON_POSTER = 'michaelJacksonPoster'
+export const BLOOM_COUNTY_POSTER = 'bloomCountyPoster'
 export const CINEMA_POSTER_RIGHT = 'cinemaPosterRight'
 export const CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal'
 

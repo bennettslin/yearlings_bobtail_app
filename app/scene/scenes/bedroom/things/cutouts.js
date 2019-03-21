@@ -1,6 +1,6 @@
 import {
     TINTIN_POSTER,
-    MICHAEL_JACKSON_POSTER
+    BLOOM_COUNTY_POSTER
 } from '../../../cutoutKeys'
 
 const ARRANGEMENTS_MAP = {
@@ -13,7 +13,7 @@ const ARRANGEMENTS_MAP = {
             zOffset: 2
         }
     },
-    [MICHAEL_JACKSON_POSTER]: {
+    [BLOOM_COUNTY_POSTER]: {
         yIndex: 1,
         arrangement: {
             xFloat: 9,

@@ -81,7 +81,7 @@ import {
 } from '../../scene/bubbleKeys'
 
 import {
-    MICHAEL_JACKSON_POSTER,
+    BLOOM_COUNTY_POSTER,
     TRASH_CAN_LOCKERS,
     TRASH_CAN_QUAD,
     VAN_NUYS_PLANT_LOCKERS,
@@ -130,7 +130,7 @@ export default [
                 [BEDROOM_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,
@@ -163,7 +163,7 @@ export default [
                 [BEDROOM_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true
             },
             [FIXTURES]: {
                 [CAPTAIN_BED_LAMP]: true,
@@ -195,7 +195,7 @@ export default [
                 [BEDROOM_BUS_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true
             },
             [FIXTURES]: {
                 [RED_ENVELOPE_MONEY]: true
@@ -233,7 +233,7 @@ export default [
                 [DOGS_SKETCHBOOK]: true
             },
             [CUTOUTS]: {
-                [MICHAEL_JACKSON_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true
             },
             [FURNITURES]: {
                 [CAPTAIN_BED_PILLOW]: true

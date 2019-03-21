@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const MichaelJacksonPoster = ({
+const BloomCountyPoster = ({
 
     className,
 
@@ -19,7 +19,7 @@ const MichaelJacksonPoster = ({
     return (
         <Svg
             className={cx(
-                'MichaelJacksonPoster',
+                'BloomCountyPoster',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const MichaelJacksonPoster = ({
                 {...other}
             >
                 {cx(
-                    'MichaelJacksonPoster'
+                    'BloomCountyPoster'
                 )}
             </text>
         </Svg>
     )
 }
 
-MichaelJacksonPoster.propTypes = propTypes
+BloomCountyPoster.propTypes = propTypes
 
-export default MichaelJacksonPoster
+export default BloomCountyPoster
