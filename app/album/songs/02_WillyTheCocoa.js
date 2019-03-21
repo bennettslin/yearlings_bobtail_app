@@ -902,7 +902,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Every time my mother learned a new concept related to child development, she would blame herself for not having known it soon enough to help my brother.`,
+                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. Every time she learned a new concept, she would blame herself for having studied it too late to help my brother.`,
                                         {
                                             anchor: `"Imprinting"`,
                                             wiki: `Imprinting_(psychology)`
@@ -915,7 +915,14 @@ export default {
                                     }
                                 },
                                 {
-                                    description: `An "imp-runt" literally refers to the weakest in a litter of goblins, and thus a prime choice for them to replace with a human.`,
+                                    description: [
+                                        `A`,
+                                        {
+                                            anchor: `runt`,
+                                            wiki: `Runt`
+                                        },
+                                        `is the weakest member of a litter. An imp runt is literally the weakest infant in a litter of troll infants. and thus a prime choice for them to replace with a human.`
+                                    ],
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }

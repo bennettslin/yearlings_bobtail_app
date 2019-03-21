@@ -253,7 +253,7 @@ export default [
                 [ANITA]: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 3,
+                        workedHours: 3.75,
                         description: 'side, walking',
                         instance: YOUNG_CHILD
                     }
