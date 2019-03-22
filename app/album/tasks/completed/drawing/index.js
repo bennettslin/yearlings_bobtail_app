@@ -815,5 +815,10 @@ export default [
         taskName: 'Michael Jackson poster',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'Timebox for more accurate Epilogue character faces.',
+        workedHours: 5,
+        neededHours: 5
     }
 ]
