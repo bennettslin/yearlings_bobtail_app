@@ -1,5 +1,5 @@
 import bubble from './bubble' // 12 days.
-import cutout from './cutout' // 9 days.
+import cutout from './cutout' // 10 days.
 import furniture from './furniture' // 5 days.
 
 // Additional work on presences.
@@ -8,15 +8,12 @@ import fabric from './fabric' // 2 days.
 import illustrator from './illustrator' // 29 days.
 import scene from './scene' // 12 days.
 import svg from './svg' // 14 days.
-import next from './next'
 
-import important from './important'
-import bugs from './bugs'
-import content from './content'
-import layout from './layout'
-import performance from './performance'
-import presence from './presence'
-import release from './release'
+import important from './important' // 7 days.
+import bugs from './bugs' // 1 day.
+import content from './content' // 39 days.
+import layout from './layout' // 5 days.
+import presence from './presence' // 7 days.
 
 export default [
     ...bubble,
@@ -26,13 +23,10 @@ export default [
     ...illustrator,
     ...scene,
     ...svg,
-    ...next,
 
     ...important,
     ...bugs,
     ...content,
     ...layout,
-    ...performance,
-    ...presence,
-    ...release
+    ...presence
 ]

@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Illustrator tutorial`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `North Hollywood houses (Didi, Willy)`,
         workedHours: 3,
         neededHours: 4

@@ -25,6 +25,7 @@
     * unique shape
     * upper lips are full for females, none or partial for males
     * correct teeth and tongue
+    * gums if needed
 * Chin
     * correct level
     * wider for men, narrower for women and children

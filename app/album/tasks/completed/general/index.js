@@ -4565,5 +4565,16 @@ export default [
         taskName: `Routing is broken when URL is blank. Should go to stored song if there is one.`,
         workedHours: 2,
         neededHours: 2
+    },
+
+    {
+        taskName: `Timebox for band website.`,
+        workedHours: 10,
+        neededHours: 10
+    },
+    {
+        taskName: `Editing timebox.`,
+        workedHours: 61,
+        neededHours: 61
     }
 ]

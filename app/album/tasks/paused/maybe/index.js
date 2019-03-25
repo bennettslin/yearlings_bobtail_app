@@ -254,7 +254,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `See if heavy data stuff can be loaded server side. I would like to see this get done, but it's going to take way, way more than I have.`,
+        taskName: `See if heavy data stuff can be loaded server side. I would like to see this get done, but it's going to take way, way more time than I have.`,
         workedHours: 0,
         neededHours: 3
     },
@@ -272,5 +272,59 @@ export default [
         taskName: `nav images. (Just take from existing heads.)`,
         workedHours: 0,
         neededHours: 5
+    },
+
+    /**
+     * Performance.
+     */
+
+    /**
+     * Low priority tasks to reduce DOM nodes. Max is currently Constellations,
+     * with 5113 upon load. (document.querySelectorAll('*').length)
+     */
+    {
+        taskName: `Just have a single span of text in anchors, rather than both plain text and link.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Remove VerseColor by just applying its classes to parent.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Mount VerseTracker upon transition.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Get rid of getDefinedOnlyPayload, once I've confirmed that nothing ever passes undefined value.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    /**
+     * Presence.
+     */
+
+    {
+        taskName: `Try out Vivus animations.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Wire on puppets and others.`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Shadows for presences.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Three-dimensionality of cutouts.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Bug where upon selecting new song, neither lyric nor carousel have gradient? Only seen in home laptop so far.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `If annotation in URL requires a selected dot, force select that dot. Use dot bit number.`,
         workedHours: 0,
         neededHours: 3
