@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `Illustrator tutorial`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 5
     },
     {

@@ -880,10 +880,9 @@ export default {
                     lyric: [
                         `But`,
                         {
-                            // TODO: Already done in other laptop. Remember to git pull it in.
                             anchor: `how marbleless,`,
                             card: {
-                                description: `Occasionally, a friend or neighbor would make a clumsy attempt to ease my parents' worries by claiming to envy the lives of those with autism. For example, one might remark how "marvellous" it must be to live without all of one's "marbles." `,
+                                description: `Occasionally, someone would make a clumsy attempt to ease my parents' worries by claiming to envy my brother. This person might remark on how "marvelous" it must be to live without one's "marbles," for example. I always had to wonder how gladly they would embrace the greater likelihood of being murdered as well.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [PUN]: true
