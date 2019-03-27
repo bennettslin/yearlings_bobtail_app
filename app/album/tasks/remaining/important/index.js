@@ -23,5 +23,10 @@ export default [
         taskName: `Remove transitions from mobile for performance.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Show placeholder for Book II scenes.`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

@@ -15,11 +15,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Sita's blanket on couch (Kyon)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Bennett's blanket and pillows (Grasshoppers, Uncanny)`,
         workedHours: 0,
         neededHours: 2
