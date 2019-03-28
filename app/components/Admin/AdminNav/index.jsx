@@ -20,12 +20,14 @@ const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
 const AdminNavSection = ({
     selectedSongIndex,
-    allTasks
+    allTasks,
+    allTasksV2
 }) => {
 
     const
         maxTotalNeededHours = getMaxTotalNeededHoursFromSongs(),
         sumAllTasks = allTasks ? getSumOfTasks(allTasks) : null,
+        sumAllTasksV2 = allTasksV2 ? getSumOfTasks(allTasksV2) : null,
 
         navItemProps = {
             selectedSongIndex,
@@ -57,6 +59,12 @@ const AdminNavSection = ({
             </div>
             <div className="row">
                 <ProgressFooter {...{ sumTask: sumAllTasks }} />
+                <ProgressFooter
+                    isV2
+                    {...{
+                        sumTask: sumAllTasksV2
+                    }}
+                />
             </div>
         </div>
     )
@@ -67,7 +75,8 @@ AdminNavSection.propTypes = {
     selectedSongIndex: PropTypes.number.isRequired,
 
     // From parent.
-    allTasks: PropTypes.array
+    allTasks: PropTypes.array,
+    allTasksV2: PropTypes.array
 }
 
 const mapStateToProps = ({

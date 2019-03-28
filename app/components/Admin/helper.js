@@ -1,9 +1,14 @@
 import isNumber from 'lodash.isnumber'
 import tasks from 'album/tasks'
+import tasksV2 from 'album/tasks/v2'
 import albumTasks from 'album/tasks/songs'
 
 export const getAllTasks = () => (
     tasks
+)
+
+export const getAllTasksV2 = () => (
+    tasksV2
 )
 
 export const getSongTasks = (songIndex) => (

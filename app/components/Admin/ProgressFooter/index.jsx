@@ -8,7 +8,10 @@ import {
     getNextCheckInDateFromHours
 } from './helper'
 
-const ProgressFooter = ({ sumTask }) => {
+const ProgressFooter = ({
+    isV2,
+    sumTask
+}) => {
 
     const neededHours = sumTask.neededHours,
         workedHours = sumTask.workedHours,
@@ -21,15 +24,21 @@ const ProgressFooter = ({ sumTask }) => {
     return (
         <div className={cx(
             'ProgressFooter',
-            'text-cell-wrapper'
+            'text-cell-wrapper',
+            isV2 && 'ProgressFooter__v2'
         )}>
             {neededHours &&
                 <div className="text-cell footer">
+                    {Boolean(isV2) && (
+                        <div>v2 work</div>
+                    )}
                     <div>{parseInt(neededHours)}h - {parseInt(workedHours)}h = {parseInt(remainingHours)}h</div>
                     <div>needed time: {neededTime}</div>
                     <div>worked time: {workedTime}</div>
                     <div>remaining time: {remainingTime}</div>
-                    <div>finish date: {nextCheckInDate}</div>
+                    {!isV2 && (
+                        <div>finish date: {nextCheckInDate}</div>
+                    )}
                 </div>
             }
         </div>

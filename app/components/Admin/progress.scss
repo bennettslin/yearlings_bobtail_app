@@ -33,6 +33,15 @@ $secondary-row-font-size: 0.9em;
     }
 }
 
+.ProgressFooter {
+    font-size: 1.25em;
+}
+
+.ProgressFooter__v2 {
+    color: #bbb;
+    font-size: 0.9em;
+}
+
 .text-cell-wrapper {
     $height-margin: 4px;
     $width-margin: 12px;
@@ -54,10 +63,6 @@ $secondary-row-font-size: 0.9em;
 
         &.footer, &.figure {
             text-align: right;
-        }
-
-        &.footer {
-            font-size: 1.35em;
         }
     }
 }

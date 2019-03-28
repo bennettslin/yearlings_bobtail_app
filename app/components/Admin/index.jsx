@@ -3,8 +3,8 @@ import cx from 'classnames'
 
 import Shared from './Shared'
 
-import AdminNavSection from './AdminNav'
-import { getAllTasks } from './helper'
+import AdminNav from './AdminNav'
+import { getAllTasks, getAllTasksV2 } from './helper'
 
 /*************
  * CONTAINER *
@@ -18,7 +18,8 @@ class Admin extends PureComponent {
                 ...other
             } = this.props,
 
-            allTasks = getAllTasks()
+            allTasks = getAllTasks(),
+            allTasksV2 = getAllTasksV2()
 
         return (
             <div
@@ -28,7 +29,12 @@ class Admin extends PureComponent {
             >
                 <div className="Admin__column">
                     <div className="Admin__field album">
-                        <AdminNavSection {...{ allTasks }} />
+                        <AdminNav
+                            {...{
+                                allTasks,
+                                allTasksV2
+                            }}
+                        />
                     </div>
                     <Shared {...other} />
                 </div>

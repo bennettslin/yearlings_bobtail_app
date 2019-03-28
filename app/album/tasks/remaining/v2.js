@@ -1,37 +1,18 @@
+import bubble from './bubble/v2'
+import fabric from './fabric/v2'
+import furniture from './furniture/v2'
+
+import illustrator from './illustrator/v2'
+import important from './important/v2'
+import presence from './presence/v2'
+import scene from './scene/v2'
+
 export default [
-    {
-        taskName: `Figure out how to let bots access sitemap.xml and robots.txt.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Remove admin.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
-        taskName: `Timebox for band website.`,
-        workedHours: 0,
-        neededHours: 10
-    },
-
-    /**
-     * Content.
-     */
-
-    {
-        taskName: `Editing timebox.`,
-        workedHours: 0,
-        neededHours: 200
-    },
-    {
-        taskName: `Finalise text styling of different annotation cards.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Finalise wormholes`,
-        workedHours: 0,
-        neededHours: 1
-    }
+    ...bubble,
+    ...furniture,
+    ...fabric,
+    ...illustrator,
+    ...important,
+    ...presence,
+    ...scene
 ]
