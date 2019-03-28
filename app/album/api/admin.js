@@ -9,7 +9,7 @@ export const getGlobalAnnotation = (globalIndex) => {
 
 export const getIsV2 = (songIndex) => {
     return (
-        getBookForSongIndex(songIndex) === 0 ||
-        getSongIsLogue(songIndex)
+        getBookForSongIndex(songIndex) === 1 &&
+        !getSongIsLogue(songIndex)
     )
 }

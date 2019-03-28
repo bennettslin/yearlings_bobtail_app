@@ -4576,5 +4576,10 @@ export default [
         taskName: `Editing timebox.`,
         workedHours: 61,
         neededHours: 61
+    },
+    {
+        taskName: `Separate out v2 tasks.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
