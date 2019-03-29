@@ -817,8 +817,8 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'Timebox for more accurate Epilogue character faces.',
-        workedHours: 12,
-        neededHours: 12
+        taskName: 'Timebox for more accurate character faces.',
+        workedHours: 17,
+        neededHours: 17
     }
 ]

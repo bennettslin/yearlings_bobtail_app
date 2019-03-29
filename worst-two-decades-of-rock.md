@@ -1,3 +1,5 @@
+Choosing fantasy as official narrative, not recognising that history recognises the greater meta-narrative. Examples: Trump, Pavement, Bon Iver.
+
 Indie rock gaslights minorities. Foundational assumption is that the world is your playground. Must always refute anyone who says otherwise.
 
 Bon Iver is like Donald Trump. There can never be a movie celebrating the guy, because the official narrative about the greatness of their achievement will always ring less true for future generations than the meta-narrative that exposes the official narrative to be a sham.
