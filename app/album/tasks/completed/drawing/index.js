@@ -818,7 +818,7 @@ export default [
     },
     {
         taskName: 'Timebox for more accurate character faces.',
-        workedHours: 17,
-        neededHours: 17
+        workedHours: 21,
+        neededHours: 21
     }
 ]

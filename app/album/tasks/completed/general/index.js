@@ -4581,5 +4581,10 @@ export default [
         taskName: `Separate out v2 tasks.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Global annotation indices only look at v1 songs.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

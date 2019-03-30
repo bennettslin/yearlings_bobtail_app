@@ -75,8 +75,6 @@ const TempGlobalAnnotation = ({
 
 class TempGlobalAnnotations extends PureComponent {
 
-    // static propTypes = {}
-
     state = {
         first: null,
         second: null,
