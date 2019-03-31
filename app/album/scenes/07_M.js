@@ -118,7 +118,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'looking at Leonard Cohen poster',
                     instance: PONDERING
                 }
@@ -144,7 +144,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting on couch, figuring out Rubiks Cube',
                     instance: RUBIKS_CUBE
                 }
@@ -171,7 +171,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting on couch, reading a book',
                     instance: COUCH_READING
                 },
@@ -206,7 +206,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'chatting with hipster, paying attention to Mara',
                     instance: DISTRACTED
                 },
@@ -263,7 +263,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting, silently eating burger, uncomfortable',
                     instance: EATING
                 },
@@ -303,7 +303,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, walking, sulking with head down',
                     instance: HOPELESSLY_CRUSHED
                 },
@@ -334,7 +334,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, looking back at baby',
                     instance: WONDERING_BABY
                 },
@@ -373,7 +373,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, inspired by sudden thought',
                     instance: MERRILY_DERANGED
                 },

@@ -91,7 +91,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'standing forward, disappointed, defeated',
                     instance: BREAKUP_DEJECTED
                 },
@@ -119,7 +119,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting slouched, showing lyrics to Catherine',
                     instance: SOLICITING_OPINION
                 },
@@ -158,7 +158,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'standing, back forward, hands in pocket',
                     instance: CATHOLIC_PENSIVE
                 }
@@ -189,7 +189,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, noticing Catholic',
                     instance: CATHOLIC_IDEA
                 },
@@ -233,7 +233,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, walking, looking pious',
                     instance: PIOUS
                 },

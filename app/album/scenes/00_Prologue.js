@@ -19,7 +19,7 @@ export default [
             [ACTORS]: {
                 [OLD_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'standing, facing forward, welcoming',
                     instance: PROLOGUE
                 }

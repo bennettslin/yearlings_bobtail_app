@@ -108,7 +108,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                  * minutes. Leave another hour for svg prep.
                  */
                 if (roleObject.todo) {
-                    if (descriptionEntity.workedHours < 3.75) {
+                    if (descriptionEntity.workedHours < 4.25) {
                         rolesTodoCount++
 
                     } else {

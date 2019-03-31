@@ -50,6 +50,11 @@ export default [
         neededHours: 3
     },
     {
+        taskName: 'bloomCounty poster',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Beethoven bust`,
         workedHours: 0,
         neededHours: 2

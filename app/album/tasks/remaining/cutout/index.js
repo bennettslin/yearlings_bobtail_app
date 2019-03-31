@@ -76,11 +76,5 @@ export default [
         taskName: 'odinMat',
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: 'bloomCounty poster',
-        workedHours: 0,
-        neededHours: 3
     }
 ]
