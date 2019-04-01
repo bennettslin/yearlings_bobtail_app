@@ -97,7 +97,7 @@ export default [
                 },
                 [CATHERINE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'walking away, in a bad mood',
                     instance: WEEPING
                 }
@@ -125,7 +125,7 @@ export default [
                 },
                 [CATHERINE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting upright, droll smile',
                     instance: QUIPPING
                 }
@@ -239,7 +239,7 @@ export default [
                 },
                 [CATHERINE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'walking forward, confused and curious at Bennett',
                     instance: PUZZLED
                 }
