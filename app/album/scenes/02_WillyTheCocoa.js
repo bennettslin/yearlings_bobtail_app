@@ -188,7 +188,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'stepping off porch, cautious, trying to calm Christopher',
                     instance: CAUTIOUS
                 }
@@ -226,7 +226,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, aggressive stance, angry',
                     instance: ENRAGED
                 }
@@ -310,7 +310,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'lying in bed, worried, scared',
                     instance: FEARFUL
                 }
@@ -351,7 +351,7 @@ export default [
                 },
                 [CHRISTOPHER_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'side angle, looking up at Bennett, reassuring',
                     instance: REASSURING_ENCHANTED
