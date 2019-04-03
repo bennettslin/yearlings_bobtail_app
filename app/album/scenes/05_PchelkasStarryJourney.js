@@ -153,7 +153,7 @@ export default [
             [ACTORS]: {
                 [CHRISTOPHER_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'w-sitting, blissful',
                     instance: BLISSFUL_GUILTY
@@ -186,7 +186,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, sitting up in bed, feigning sick',
                     instance: FEIGNING_SICK
                 }
@@ -221,7 +221,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'in bed, asleep, turned away',
                     instance: ASLEEP
                 }
@@ -258,7 +258,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, sitting, shaken, scared',
                     instance: SHAKEN
                 }
@@ -290,7 +290,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, stoic',
                     instance: STOIC
                 },
@@ -334,7 +334,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, wistful',
                     instance: WISTFUL
                 },
@@ -384,7 +384,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front, sitting, sheepish',
                     instance: SHEEPISH
                 },

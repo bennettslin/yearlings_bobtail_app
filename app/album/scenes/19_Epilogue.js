@@ -102,7 +102,7 @@ export default [
                 },
                 [SASHA_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     realHeight: `4'1"`,
                     description: 'standing',

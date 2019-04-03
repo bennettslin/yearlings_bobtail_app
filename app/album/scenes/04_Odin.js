@@ -268,7 +268,7 @@ export default [
             [ACTORS]: {
                 [SASHA_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'mermaid',
                     instance: MERMAID
@@ -299,7 +299,7 @@ export default [
             [ACTORS]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, crouched in sand, looking back',
                     instance: OCEAN_FLOOR
                 }
