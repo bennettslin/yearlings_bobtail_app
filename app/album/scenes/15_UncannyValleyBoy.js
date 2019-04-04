@@ -194,7 +194,7 @@ export default [
                 },
                 [SASHA_BENNETT]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'sitting, hurt, lashing out in anger',
                     instance: COMFORTING_HUMILIATED
