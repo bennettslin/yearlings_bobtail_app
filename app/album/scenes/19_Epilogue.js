@@ -50,7 +50,7 @@ export default [
                 },
                 [ANITA_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     // TODO: Make Anita shorter?
                     realHeight: `3'9", 3'6"`,

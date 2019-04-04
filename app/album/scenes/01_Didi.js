@@ -118,7 +118,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, running, panicked',
                     instance: PANICKED
                 }
@@ -159,7 +159,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting, flustered',
                     instance: FLUSTERED
                 }
@@ -194,7 +194,7 @@ export default [
             [ACTORS]: {
                 [YOUNG_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, in bathtub, downcast',
                     instance: BATHING
                 }
@@ -226,7 +226,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, facing front, singing, smiling',
                     instance: SINGING
                 }

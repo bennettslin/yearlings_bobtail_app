@@ -261,7 +261,7 @@ export default [
                 [YOUNG_BENNETT]: {
                     youngBoy: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'side, turned, looking at Bennetts',
                         instance: YOUNG_CHILD
                     }
