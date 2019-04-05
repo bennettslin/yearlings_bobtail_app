@@ -110,14 +110,14 @@ export default [
                 },
                 [BRAD]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     realHeight: `4'6"`,
                     description: 'standing',
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     realHeight: `4'7"`,
                     description: 'standing',
                     instance: EPILOGUE

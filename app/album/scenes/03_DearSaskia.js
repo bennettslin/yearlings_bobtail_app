@@ -143,7 +143,7 @@ export default [
                 },
                 [BRAD_SASHA]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'side seated, laughing, braids trailing',
                     instance: CHARMED_SCHOOLBUS
@@ -175,7 +175,7 @@ export default [
             [ACTORS]: {
                 [BRAD_BENNETT]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'tied up, greeting Sasha with nervous laughter',
                     instance: TYING_TETHER
@@ -188,7 +188,7 @@ export default [
                 },
                 [ANDREW]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'laughing, feigning fear of Sasha',
                     instance: FEIGNING_FEAR
                 }

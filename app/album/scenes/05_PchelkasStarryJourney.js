@@ -296,13 +296,13 @@ export default [
                 },
                 [BRAD]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front angle, gesturing at Andrew to leave',
                     instance: GESTURING
                 },
                 [ANDREW]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, throwing rocks, angry',
                     instance: THROWING
                 }
@@ -340,13 +340,13 @@ export default [
                 },
                 [BRAD]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'eating chips',
                     instance: SNACKING
                 },
                 [ANDREW]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'playing guitar like an amateur',
                     instance: NOODLING
                 },
