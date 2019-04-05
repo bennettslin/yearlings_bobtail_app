@@ -245,7 +245,7 @@ export default [
                 [ESTHER]: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'side, walking',
                         instance: YOUNG_CHILD
                     }

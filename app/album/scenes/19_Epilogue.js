@@ -59,7 +59,7 @@ export default [
                 },
                 [ESTHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     // TODO: Make Esther shorter?
                     realHeight: `3'10"`,
                     description: 'standing',

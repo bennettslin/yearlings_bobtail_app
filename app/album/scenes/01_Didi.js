@@ -106,7 +106,7 @@ export default [
             [ACTORS]: {
                 [ESTHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, looking at Anita',
                     instance: CURIOUS
                 },
@@ -153,7 +153,7 @@ export default [
                 },
                 [ESTHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, running, pointing back',
                     instance: SNICKERING
                 },
