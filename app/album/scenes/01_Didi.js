@@ -112,7 +112,7 @@ export default [
                 },
                 [ANITA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, rushing, exasperated',
                     instance: EXASPERATED
                 },
@@ -147,7 +147,7 @@ export default [
             [ACTORS]: {
                 [ANITA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front, playing ball, offended',
                     instance: CONCERNED
                 },
@@ -220,7 +220,7 @@ export default [
             [ACTORS]: {
                 [ANITA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'back, squatting, smiling',
                     instance: CHEERING
                 },
