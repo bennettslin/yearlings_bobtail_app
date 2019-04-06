@@ -182,7 +182,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'off balance, having a tantrum',
                     instance: TANTRUM
                 },
@@ -220,7 +220,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'lying on side, in pain, clenching stomach',
                     instance: SOBBING
                 },
@@ -351,7 +351,7 @@ export default [
                 },
                 [CHRISTOPHER_BENNETT]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'side angle, looking up at Bennett, reassuring',
                     instance: REASSURING_ENCHANTED

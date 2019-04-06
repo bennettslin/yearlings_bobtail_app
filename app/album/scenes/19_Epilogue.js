@@ -42,7 +42,7 @@ export default [
             [ACTORS]: {
                 [BENNETTS_CHRISTOPHER_LIZ]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.125,
                     compound: 4,
                     realHeight: `5'4", 3'5", 4'9"`,
                     description: 'standing',

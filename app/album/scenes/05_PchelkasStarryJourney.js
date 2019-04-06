@@ -153,7 +153,7 @@ export default [
             [ACTORS]: {
                 [CHRISTOPHER_BENNETT]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'w-sitting, blissful',
                     instance: BLISSFUL_GUILTY
@@ -390,7 +390,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front, sitting, staring',
                     instance: STARING
                 },
