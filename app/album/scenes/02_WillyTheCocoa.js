@@ -214,7 +214,7 @@ export default [
             [ACTORS]: {
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, running, angry',
                     instance: ROARING
                 },
