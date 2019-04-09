@@ -173,7 +173,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     realHeight: `5'8"`,
                     description: 'standing',
                     instance: EPILOGUE

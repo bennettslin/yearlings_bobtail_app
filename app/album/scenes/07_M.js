@@ -224,7 +224,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'squatting, back turned, putting bass back in case',
                     instance: SQUATTING
                 },
@@ -276,7 +276,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting, eating fries, laughing',
                     instance: EATING
                 }
