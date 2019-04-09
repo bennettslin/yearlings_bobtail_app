@@ -111,7 +111,7 @@ export default [
                 [TOMER]: {
                     shane: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'side angle, holding beer, turning to make room',
                         instance: SHANE_SPILLING
                     }

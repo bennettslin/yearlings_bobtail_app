@@ -231,7 +231,7 @@ export default [
                 [TOMER]: {
                     shane: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'chatting with Bennett, gushing about music',
                         instance: SHANE_BUYING
                     }

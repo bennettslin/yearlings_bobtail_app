@@ -141,7 +141,7 @@ export default [
             [ACTORS]: {
                 [WILLY]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, holding up a bottle, squinting',
                     instance: COLLECTING
                 }
@@ -170,7 +170,7 @@ export default [
             [ACTORS]: {
                 [WILLY]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, ducking behind post, chuckling',
                     instance: DUCKING
                 },
@@ -262,7 +262,7 @@ export default [
             [ACTORS]: {
                 [HOWIE_WILLY]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'side angle, pointing at shoe, pushing Willy',
                     instance: GANGBANGER
@@ -345,7 +345,7 @@ export default [
             [ACTORS]: {
                 [WILLY]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, merrily greeting trolls',
                     instance: GREETING
                 },
