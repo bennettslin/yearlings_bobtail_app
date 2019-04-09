@@ -178,7 +178,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'sitting on floor, back turned, playing keyboard',
                         instance: BENNETT_KEYBOARD
                     }
