@@ -41,38 +41,28 @@ export const BUDDHA_SHRINE = 'buddhaShrine'
 // Own page.
 export const TAIWAN_FRIDGE_FRONT = 'taiwanFridgeFront'
 
-// TODO
+// Together on one page.
 export const BENNETT_TAIWAN_STAIRS = 'bennettTaiwanStairs'
 export const ODIN_TAIWAN_STAIRS = 'odinTaiwanStairs'
-
-// TODO
 export const BENNETT_TAIWAN_GATE = 'bennettTaiwanGate'
 export const ODIN_TAIWAN_GATE = 'odinTaiwanGate'
 
-// TODO
+// Together on one page.
 export const BENNETT_ODIN_RICKSHAW = 'bennettOdinRickshaw'
-
-// TODO
 export const BENNETT_SHORE = 'bennettShore'
 export const ODIN_SHORE = 'odinShore'
 
-// TODO
+// Together on one page.
 export const BENNETT_ODIN_BUOY = 'bennettOdinBuoy'
+export const BENNETT_ODIN_DEPTHS = 'bennettOdinDepths'
+export const SEA_SERPENTS = 'seaSerpents'
 
 // Own page.
 export const YELLOW_TAPED_GRILL = 'yellowTapedGrill'
 
-// TODO
-export const BENNETT_ODIN_DEPTHS = 'bennettOdinDepths'
-
-// TODO
-export const SEA_SERPENTS = 'seaSerpents'
-
-// TODO
+// Together on one page with Taiwan pillow.
 export const BENNETT_OCEAN_FLOOR = 'bennettOceanFloor'
 export const ODIN_OCEAN_FLOOR = 'odinOceanFloor'
-
-// TODO
 export const BENNETT_MAT = 'bennettMat'
 export const ODIN_MAT = 'odinMat'
 
