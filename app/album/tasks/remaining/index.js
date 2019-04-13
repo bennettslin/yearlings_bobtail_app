@@ -1,5 +1,4 @@
 import bubble from './bubble' // 12 days.
-import cutout from './cutout' // 10 days.
 import furniture from './furniture' // 5 days.
 
 // Additional work on presences.
@@ -17,7 +16,6 @@ import presence from './presence' // 7 days.
 
 export default [
     ...bubble,
-    ...cutout,
     ...furniture,
     ...fabric,
     ...illustrator,

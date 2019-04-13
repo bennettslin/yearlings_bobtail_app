@@ -95,6 +95,11 @@ export default [
         neededHours: 4
     },
     {
+        taskName: 'seaSerpents',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
         taskName: 'bennettOdinDepths',
         workedHours: 3,
         neededHours: 4
