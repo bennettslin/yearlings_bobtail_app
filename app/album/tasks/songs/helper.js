@@ -1,5 +1,5 @@
 import drawings from 'album/drawings'
-import { getIsV2 } from 'album/api/admin'
+import { getIsV2, getV2Array } from 'album/api/admin'
 
 export const addDrawingTasksToSongTasks = (songTasksArray) => {
 
@@ -30,7 +30,7 @@ export const addDrawingTasksToSongTasks = (songTasksArray) => {
 
 export const addDrawingTasksToSongTasksV2 = (songTasksArrayV2) => {
 
-    [10, 11, 12, 13, 14, 15, 16, 17, 18].forEach(songIndex => {
+    getV2Array().forEach(songIndex => {
         const
             songDrawingTasks = drawings.songTasks[songIndex],
             {
