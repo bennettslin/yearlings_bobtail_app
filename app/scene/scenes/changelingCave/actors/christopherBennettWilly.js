@@ -1,10 +1,10 @@
 import {
     REASSURING_ENCHANTED
-} from '../../../instanceKeys/christopherBennett'
+} from '../../../instanceKeys/christopherBennettWilly'
 
 const ARRANGEMENTS_MAP = {
     [REASSURING_ENCHANTED]: {
-        yIndex: 5,
+        yIndex: 3,
         arrangement: {
             xFloat: 5.5,
             xWidth: 1,

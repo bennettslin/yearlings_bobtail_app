@@ -162,6 +162,9 @@ export default [
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
             },
+            [BUBBLES]: {
+                [DOGS_SKETCHBOOK]: true
+            },
             [CUTOUTS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
@@ -228,9 +231,6 @@ export default [
             },
             [BACKDROPS]: {
                 [BEDROOM_BACKDROP]: true
-            },
-            [BUBBLES]: {
-                [DOGS_SKETCHBOOK]: true
             },
             [CUTOUTS]: {
                 [BLOOM_COUNTY_POSTER]: true

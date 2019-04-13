@@ -18,6 +18,7 @@ export const MOTHER = 'mother'
 export const FATHER = 'father'
 export const CHRISTOPHER = 'christopher'
 export const CHRISTOPHER_BENNETT = 'christopherBennett'
+export const CHRISTOPHER_BENNETT_WILLY = 'christopherBennettWilly'
 
 export const SASHA = 'sasha'
 export const SASHA_BENNETT = 'sashaBennett'

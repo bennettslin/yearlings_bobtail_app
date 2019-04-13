@@ -16,6 +16,7 @@ import motherMap from './Actors/Mother/instanceMap'
 import fatherMap from './Actors/Father/instanceMap'
 import christopherMap from './Actors/Christopher/instanceMap'
 import christopherBennettMap from './Actors/ChristopherBennett/instanceMap'
+import christopherBennettWillyMap from './Actors/ChristopherBennettWilly/instanceMap'
 import sashaMap from './Actors/Sasha/instanceMap'
 import sashaBennettMap from './Actors/SashaBennett/instanceMap'
 import bradMap from './Actors/Brad/instanceMap'
@@ -68,6 +69,7 @@ import {
     FATHER,
     CHRISTOPHER,
     CHRISTOPHER_BENNETT,
+    CHRISTOPHER_BENNETT_WILLY,
     SASHA,
     SASHA_BENNETT,
     BRAD,
@@ -121,6 +123,7 @@ const ACTOR_KEY_MAP = {
     [FATHER]: fatherMap,
     [CHRISTOPHER]: christopherMap,
     [CHRISTOPHER_BENNETT]: christopherBennettMap,
+    [CHRISTOPHER_BENNETT_WILLY]: christopherBennettWillyMap,
     [SASHA]: sashaMap,
     [SASHA_BENNETT]: sashaBennettMap,
     [BRAD]: bradMap,

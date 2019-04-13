@@ -28,7 +28,7 @@ import {
     MOTHER,
     FATHER,
     CHRISTOPHER,
-    CHRISTOPHER_BENNETT,
+    CHRISTOPHER_BENNETT_WILLY,
     HOWIE_WILLY,
     TOMER
 } from '../../scene/actorKeys'
@@ -60,11 +60,10 @@ import {
 
 import {
     REASSURING_ENCHANTED
-} from '../../scene/instanceKeys/christopherBennett'
+} from '../../scene/instanceKeys/christopherBennettWilly'
 
 import {
-    GANGBANGER,
-    GREETING
+    GANGBANGER
 } from '../../scene/instanceKeys/songs'
 
 import {
@@ -343,13 +342,7 @@ export default [
         description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`,
         presences: {
             [ACTORS]: {
-                [WILLY]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    description: 'side angle, merrily greeting trolls',
-                    instance: GREETING
-                },
-                [CHRISTOPHER_BENNETT]: {
+                [CHRISTOPHER_BENNETT_WILLY]: {
                     todo: true,
                     workedHours: 4.25,
                     compound: 2,

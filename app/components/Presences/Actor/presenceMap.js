@@ -18,6 +18,7 @@ import Mother from './Actors/Mother'
 import Father from './Actors/Father'
 import Christopher from './Actors/Christopher'
 import ChristopherBennett from './Actors/ChristopherBennett'
+import ChristopherBennettWilly from './Actors/ChristopherBennettWilly'
 import Sasha from './Actors/Sasha'
 import SashaBennett from './Actors/SashaBennett'
 import Brad from './Actors/Brad'
@@ -70,6 +71,7 @@ import {
     FATHER,
     CHRISTOPHER,
     CHRISTOPHER_BENNETT,
+    CHRISTOPHER_BENNETT_WILLY,
     SASHA,
     SASHA_BENNETT,
     BRAD,
@@ -123,6 +125,7 @@ export const propTypes = {
     [FATHER]: PropTypes.string,
     [CHRISTOPHER]: PropTypes.string,
     [CHRISTOPHER_BENNETT]: PropTypes.string,
+    [CHRISTOPHER_BENNETT_WILLY]: PropTypes.string,
     [SASHA]: PropTypes.string,
     [SASHA_BENNETT]: PropTypes.string,
     [BRAD]: PropTypes.string,
@@ -176,6 +179,7 @@ export default {
     [FATHER]: Father,
     [CHRISTOPHER]: Christopher,
     [CHRISTOPHER_BENNETT]: ChristopherBennett,
+    [CHRISTOPHER_BENNETT_WILLY]: ChristopherBennettWilly,
     [SASHA]: Sasha,
     [SASHA_BENNETT]: SashaBennett,
     [BRAD]: Brad,

@@ -18,6 +18,7 @@ import Mother from './Actors/Mother'
 import Father from './Actors/Father'
 import Christopher from './Actors/Christopher'
 import ChristopherBennett from './Actors/ChristopherBennett'
+import ChristopherBennettWilly from './Actors/ChristopherBennettWilly'
 import Sasha from './Actors/Sasha'
 import SashaBennett from './Actors/SashaBennett'
 import Brad from './Actors/Brad'
@@ -68,6 +69,7 @@ const ActorLayer = memo(({
     father,
     christopher,
     christopherBennett,
+    christopherBennettWilly,
     sasha,
     sashaBennett,
     brad,
@@ -121,6 +123,7 @@ const ActorLayer = memo(({
             <Father {...{ instanceKey: father }} />
             <Christopher {...{ instanceKey: christopher }} />
             <ChristopherBennett {...{ instanceKey: christopherBennett }} />
+            <ChristopherBennettWilly {...{ instanceKey: christopherBennettWilly }} />
             <Sasha {...{ instanceKey: sasha }} />
             <SashaBennett {...{ instanceKey: sashaBennett }} />
             <Brad {...{ instanceKey: brad }} />
