@@ -70,6 +70,46 @@ export default [
         neededHours: 2
     },
     {
+        taskName: 'bennettOdinStairs',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinGate',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinRickshaw',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinShore',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinBuoy',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinDepths',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinFloor',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinMat',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
         taskName: 'pchelka, mushka, and rocket',
         workedHours: 2,
         neededHours: 4
