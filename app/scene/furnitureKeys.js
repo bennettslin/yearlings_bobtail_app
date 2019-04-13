@@ -4,6 +4,9 @@ export const BEDROOM_DESK = 'bedroomDesk'
 // TODO
 export const CAPTAIN_BED_PILLOW = 'captainBedPillow'
 
+// With Bennett Odin cutouts.
+export const TAIWAN_PILLOW = 'taiwanPillow'
+
 // Own page.
 export const BUOY_FLOAT = 'buoy'
 

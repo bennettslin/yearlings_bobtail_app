@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 
 import BedroomDesk from './Furnitures/BedroomDesk'
 import CaptainBedPillow from './Furnitures/CaptainBedPillow'
+import TaiwanPillow from './Furnitures/TaiwanPillow'
 import BuoyFloat from './Furnitures/BuoyFloat'
 import BennettCushions from './Furnitures/BennettCushions'
 import LightSwitch from './Furnitures/LightSwitch'
@@ -17,6 +18,7 @@ import HospitalPillowLowered from './Furnitures/HospitalPillowLowered'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED_PILLOW,
+    TAIWAN_PILLOW,
     BUOY_FLOAT,
     BENNETT_CUSHIONS,
     LIGHT_SWITCH,
@@ -34,6 +36,7 @@ import {
 export const propTypes = {
     [BEDROOM_DESK]: PropTypes.bool,
     [CAPTAIN_BED_PILLOW]: PropTypes.bool,
+    [TAIWAN_PILLOW]: PropTypes.bool,
     [BUOY_FLOAT]: PropTypes.bool,
     [BENNETT_CUSHIONS]: PropTypes.bool,
     [LIGHT_SWITCH]: PropTypes.bool,
@@ -51,6 +54,7 @@ export const propTypes = {
 export default {
     [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED_PILLOW]: CaptainBedPillow,
+    [TAIWAN_PILLOW]: TaiwanPillow,
     [BUOY_FLOAT]: BuoyFloat,
     [BENNETT_CUSHIONS]: BennettCushions,
     [LIGHT_SWITCH]: LightSwitch,

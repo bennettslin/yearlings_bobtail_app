@@ -85,6 +85,7 @@ import {
 } from '../../scene/flatKeys'
 
 import {
+    TAIWAN_PILLOW,
     BUOY_FLOAT
 } from '../../scene/furnitureKeys'
 
@@ -114,6 +115,9 @@ export default [
             },
             [FIXTURES]: {
                 [FRIDGE_DRAWINGS]: true
+            },
+            [FURNITURES]: {
+                [TAIWAN_PILLOW]: true
             }
         },
         cubes: TAIWAN_ROOM_KEY,
