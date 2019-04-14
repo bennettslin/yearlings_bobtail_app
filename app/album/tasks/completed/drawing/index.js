@@ -820,5 +820,10 @@ export default [
         taskName: 'Timebox for more accurate character faces.',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Illustrator tutorial`,
+        workedHours: 6,
+        neededHours: 6
     }
 ]

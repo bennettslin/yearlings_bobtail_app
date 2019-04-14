@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Illustrator tutorial`,
-        workedHours: 6,
-        neededHours: 6
-    },
-    {
         taskName: `North Hollywood houses (Didi, Willy)`,
         workedHours: 3,
         neededHours: 4
@@ -56,7 +51,7 @@ export default [
     },
     {
         taskName: `Beethoven bust`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 2
     },
     {
@@ -385,7 +380,7 @@ export default [
     },
     {
         taskName: 'leonardCohenPoster',
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 3
     },
     {
@@ -500,5 +495,29 @@ export default [
         taskName: `buttons.`,
         workedHours: 6,
         neededHours: 9
+    },
+
+    /***********
+     * BUBBLES *
+     ***********/
+    {
+        taskName: 'togetherSketchbook',
+        workedHours: 4,
+        neededHours: 5
+    },
+    {
+        taskName: 'apartSketchbook',
+        workedHours: 4,
+        neededHours: 5
+    },
+    {
+        taskName: 'dogsSketchbook',
+        workedHours: 4,
+        neededHours: 5
+    },
+    {
+        taskName: 'escapePodSketchbook',
+        workedHours: 4,
+        neededHours: 5
     }
 ]
