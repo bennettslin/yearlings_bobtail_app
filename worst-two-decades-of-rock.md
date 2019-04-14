@@ -1,4 +1,6 @@
-Choosing fantasy as official narrative, not recognising that history recognises the greater meta-narrative. Examples: Trump, Pavement, Bon Iver.
+Compound interest is the most powerful force in the universe. Best investment is in yourself. Combine those two ideas.
+
+Choosing fantasy as official narrative, not recognising that history recognises the greater meta-narrative. Examples: Trump, Pavement, Bon Iver, Clap Your Hands Say Yeah.
 
 Indie rock gaslights minorities. Foundational assumption is that the world is your playground. Must always refute anyone who says otherwise.
 
