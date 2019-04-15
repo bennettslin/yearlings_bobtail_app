@@ -269,7 +269,7 @@ export default [
                 [TOMER]: {
                     gangbanger: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'pulling bottle from cart, about to strike, threatening',
                         instance: GANGBANGER
                     }

@@ -204,7 +204,7 @@ export default [
                 [AMY]: {
                     smoker: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'walking up stairs, back forward, exhaling smoke',
                         instance: SMOKER
                     }

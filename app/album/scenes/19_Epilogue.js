@@ -95,7 +95,7 @@ export default [
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     realHeight: `5'6"`,
                     description: 'standing',
                     instance: EPILOGUE
