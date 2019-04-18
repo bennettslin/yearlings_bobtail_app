@@ -519,5 +519,15 @@ export default [
         taskName: 'escapePodSketchbook',
         workedHours: 4,
         neededHours: 5
+    },
+    {
+        taskName: 'cinemaThoughts',
+        workedHours: 8,
+        neededHours: 10
+    },
+    {
+        taskName: 'waitingRoomThoughts',
+        workedHours: 8,
+        neededHours: 10
     }
 ]

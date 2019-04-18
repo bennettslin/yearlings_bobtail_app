@@ -1,17 +1,20 @@
-// TODO
+// Together on one page.
 export const TOGETHER_SKETCHBOOK = 'togetherSketchbook'
-// TODO
 export const APART_SKETCHBOOK = 'apartSketchbook'
-// TODO
+
+// Together on one page.
 export const DOGS_SKETCHBOOK = 'dogsSketchbook'
-// TODO
 export const ESCAPE_POD_SKETCHBOOK = 'escapePodSketchbook'
-// TODO
+
+// Own page. Requires editing.
 export const CINEMA_THOUGHTS = 'cinemaThoughts'
+
 // TODO
 export const GO_KART_THOUGHT = 'goKartThought'
-// TODO
+
+// Own page.
 export const WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts'
+
 // TODO
 export const TARPIT_THOUGHT = 'tarpitThought'
 // TODO
