@@ -1,4 +1,3 @@
-import bubble from './bubble' // 12 days.
 import furniture from './furniture' // 5 days.
 
 // Additional work on presences.
@@ -15,7 +14,6 @@ import layout from './layout' // 5 days.
 import presence from './presence' // 7 days.
 
 export default [
-    ...bubble,
     ...furniture,
     ...fabric,
     ...illustrator,

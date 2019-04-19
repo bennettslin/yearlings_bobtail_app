@@ -8,8 +8,6 @@ export const ESCAPE_POD_SKETCHBOOK = 'escapePodSketchbook'
 
 // Own page. Requires editing.
 export const CINEMA_THOUGHTS = 'cinemaThoughts'
-
-// TODO
 export const GO_KART_THOUGHT = 'goKartThought'
 
 // Own page.

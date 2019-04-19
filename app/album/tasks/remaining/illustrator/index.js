@@ -529,5 +529,10 @@ export default [
         taskName: 'waitingRoomThoughts',
         workedHours: 8,
         neededHours: 10
+    },
+    {
+        taskName: 'goKartThought',
+        workedHours: 1,
+        neededHours: 2
     }
 ]
