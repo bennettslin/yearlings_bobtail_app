@@ -300,7 +300,7 @@ export default [
                 },
                 [KHARI_LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'side angle, cheerful, making a point',
                     instance: JOKING_LAUGHING

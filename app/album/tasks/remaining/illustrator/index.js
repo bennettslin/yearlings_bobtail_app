@@ -1,4 +1,13 @@
 export default [
+    /***********
+     * BUTTONS *
+     ***********/
+    {
+        taskName: `buttons.`,
+        workedHours: 6,
+        neededHours: 9
+    },
+
     {
         taskName: `North Hollywood houses (Didi, Willy)`,
         workedHours: 3,
@@ -486,15 +495,6 @@ export default [
         taskName: `Stage curtains`,
         workedHours: 2,
         neededHours: 3
-    },
-
-    /***********
-     * BUTTONS *
-     ***********/
-    {
-        taskName: `buttons.`,
-        workedHours: 6,
-        neededHours: 9
     },
 
     /***********
