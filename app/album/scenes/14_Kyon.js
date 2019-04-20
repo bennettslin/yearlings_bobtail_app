@@ -163,7 +163,7 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, cheery in a low-key way',
                     instance: ARRIVED
                 }

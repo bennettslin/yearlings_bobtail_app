@@ -225,7 +225,7 @@ export default [
                 },
                 [KHARI_LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'lying in bed, caressing Sita',
                     instance: CARESS
@@ -233,7 +233,7 @@ export default [
                 [KHARI_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4,
                         compound: 2,
                         description: 'reflection',
                         instance: CARESS_REFLECTION
