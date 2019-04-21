@@ -118,7 +118,7 @@ export default [
                 },
                 [WADE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, drinking beer',
                     instance: WATCHING
                 },
@@ -228,7 +228,7 @@ export default [
                 },
                 [WADE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front, talking to Stephanie',
                     instance: MINGLING
                 }
