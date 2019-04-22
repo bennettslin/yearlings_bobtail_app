@@ -98,7 +98,7 @@ export const UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight'
 export const PROGRESS_CHART_EARLY = 'progressChartEarly'
 export const PROGRESS_CHART_LATE = 'progressChartLate'
 
-// Together on one page. Requires editing.
+// With crowd flats. Requires editing.
 export const MONITOR_SPEAKER_LEFT = 'monitorSpeakerLeft'
 export const MONITOR_SPEAKER_RIGHT = 'monitorSpeakerRight'
 export const WALL_SPEAKER_LEFT = 'wallSpeakerLeft'

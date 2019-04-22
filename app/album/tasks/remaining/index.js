@@ -3,7 +3,7 @@ import furniture from './furniture' // 5 days.
 // Additional work on presences.
 import fabric from './fabric' // 2 days.
 
-import illustrator from './illustrator' // 29 days.
+import illustrator from './illustrator' // Now 23 days.
 import scene from './scene' // 12 days.
 import svg from './svg' // 14 days.
 

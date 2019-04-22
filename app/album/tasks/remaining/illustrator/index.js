@@ -1,4 +1,10 @@
 export default [
+    {
+        taskName: `Timebox for actor Photoshop edits.`,
+        workedHours: 2,
+        neededHours: 30
+    },
+
     /***********
      * BUTTONS *
      ***********/
@@ -8,15 +14,39 @@ export default [
         neededHours: 9
     },
 
+    /*********
+     * STAGE *
+     *********/
+    {
+        taskName: `Theatre seat.`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Theater balcony`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: `Theatre proscenium`,
+        workedHours: 4,
+        neededHours: 5
+    },
+    {
+        taskName: `Theatre rafters`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Stage curtains`,
+        workedHours: 2,
+        neededHours: 3
+    },
+
     {
         taskName: `North Hollywood houses (Didi, Willy)`,
         workedHours: 3,
         neededHours: 4
-    },
-    {
-        taskName: `Johnny Horton album`,
-        workedHours: 1,
-        neededHours: 2
     },
     {
         taskName: `Playground (Didi)`,
@@ -49,21 +79,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `tintinPoster`,
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: 'bloomCounty poster',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: `Beethoven bust`,
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
         taskName: 'Taiwan fridge',
         workedHours: 1,
         neededHours: 2
@@ -74,61 +89,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'bennettOdinStairs',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'bennettOdinGate',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'bennettOdinRickshaw',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'bennettOdinShore',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'bennettOdinBuoy',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'seaSerpents',
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: 'bennettOdinDepths',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'bennettOdinFloor',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'bennettOdinMat',
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: 'pchelka, mushka, and rocket',
-        workedHours: 2,
-        neededHours: 4
-    },
-    {
-        taskName: 'earth and spaceColony',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
         taskName: `corkboard`,
         workedHours: 1,
         neededHours: 2
@@ -137,46 +97,6 @@ export default [
         taskName: `St Joseph the Worker church and surroundings (Ash)`,
         workedHours: 2,
         neededHours: 3
-    },
-    {
-        taskName: 'nirvanaPoster',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: `Police album`,
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: 'progressCharts',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: `Television album`,
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: `Bobtail Yearlings album`,
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: `Yearlings logo on kick drum (M, Garryowen)`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'cinemaPoster left',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: 'cinemaPosters right',
-        workedHours: 2,
-        neededHours: 4
     },
     {
         taskName: 'lightSwitch',
@@ -253,26 +173,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'puppetFamilyBegin',
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: 'puppetFamilyMiddle',
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: 'puppetFamilyEnd',
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
-        taskName: 'puppetKhariLiz',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
         taskName: 'taiwanStairsBackdrop',
         workedHours: 2,
         neededHours: 3
@@ -333,11 +233,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'vanNuysLogo',
-        workedHours: 1,
-        neededHours: 2
-    },
-    {
         taskName: `Locker bank (Pchelka)`,
         workedHours: 1,
         neededHours: 2
@@ -388,11 +283,6 @@ export default [
         neededHours: 4
     },
     {
-        taskName: 'leonardCohenPoster',
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
         taskName: `2 * Stage monitors (M, Look Back, Garryowen)`,
         workedHours: 1,
         neededHours: 2
@@ -418,7 +308,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'goKartbackdrop',
+        taskName: 'goKart backdrop',
         workedHours: 2,
         neededHours: 3
     },
@@ -468,33 +358,122 @@ export default [
         neededHours: 3
     },
 
-    /*********
-     * STAGE *
-     *********/
+    /**********
+     * PRINTS *
+     **********/
     {
-        taskName: `Theatre seat.`,
+        taskName: `Johnny Horton album`,
         workedHours: 1,
         neededHours: 2
     },
     {
-        taskName: `Theater balcony`,
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: `Theatre proscenium`,
-        workedHours: 4,
-        neededHours: 5
-    },
-    {
-        taskName: `Theatre rafters`,
+        taskName: `Police album`,
         workedHours: 1,
         neededHours: 2
     },
     {
-        taskName: `Stage curtains`,
+        taskName: `Television album`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `Bobtail Yearlings album`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: `tintinPoster`,
         workedHours: 2,
         neededHours: 3
+    },
+    {
+        taskName: 'nirvanaPoster',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'leonardCohenPoster',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'bloomCounty poster',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'cinemaPoster left',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'cinemaPosters right',
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
+        taskName: 'vanNuysLogo',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'progressCharts',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: `Yearlings logo on kick drum`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    /****************
+     * ODIN CUTOUTS *
+     ****************/
+    {
+        taskName: 'bennettOdinStairs',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinGate',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinRickshaw',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinShore',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinBuoy',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'seaSerpents',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'bennettOdinDepths',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinFloor',
+        workedHours: 3,
+        neededHours: 4
+    },
+    {
+        taskName: 'bennettOdinMat',
+        workedHours: 3,
+        neededHours: 4
     },
 
     /***********
@@ -534,5 +513,44 @@ export default [
         taskName: 'goKartThought',
         workedHours: 1,
         neededHours: 2
+    },
+
+    /***********
+     * PUPPETS *
+     ***********/
+    {
+        taskName: `Beethoven bust`,
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetFamilyBegin',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetFamilyMiddle',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetFamilyEnd',
+        workedHours: 1,
+        neededHours: 2
+    },
+    {
+        taskName: 'pchelka, mushka, and rocket',
+        workedHours: 2,
+        neededHours: 4
+    },
+    {
+        taskName: 'earth and spaceColony',
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
+        taskName: 'puppetKhariLiz',
+        workedHours: 2,
+        neededHours: 3
     }
 ]
