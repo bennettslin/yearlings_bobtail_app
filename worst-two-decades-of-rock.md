@@ -1,3 +1,7 @@
+Indie rock didn't want to hear the story of a demo that can't be refused. Because it's a system for picking winners from losers, grounded in the unfortunate reality that artists need to hustle to be heard. But the winners of this system *don't* see this reality as unfortunate. Quite the opposite, they're loyal to it. And they will then recreate the world in their likeness.
+
+What makes indie rock unfeasible in the 21st century is that it was catalysed by major label horror stories. The problem is that Generation X's nightmare story will be Generation Z's fantasy. Selling millions of albums while not seeing a penny from each one... Generation Z won't care about the pennies, they'll see the leverage that comes with having a fanbase of millions. That's a startup.
+
 Compound interest is the most powerful force in the universe. Best investment is in yourself. Combine those two ideas.
 
 Choosing fantasy as official narrative, not recognising that history recognises the greater meta-narrative. Examples: Trump, Pavement, Bon Iver, Clap Your Hands Say Yeah.
