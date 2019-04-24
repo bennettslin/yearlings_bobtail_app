@@ -901,12 +901,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. Every time she learned a new concept, she would blame herself for having studied it too late to help my brother.`,
+                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. She would often come home from her classes racked with guilt, believing that she was learning these concepts too late to help my brother.`,
                                         {
-                                            anchor: `"Imprinting"`,
+                                            anchor: `"imprinting,"`,
                                             wiki: `Imprinting_(psychology)`
                                         },
-                                        `is a period during which a child acquires certain behaviour, such as emotional attachment.`
+                                        `is a period during which a child acquires emotional attachment.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
