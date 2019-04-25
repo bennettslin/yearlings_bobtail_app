@@ -1,39 +1,40 @@
 # Amy
-* protester
-* smoker
+<!-- * protester -->
+<!-- * smoker -->
 
 # AmyNestorTomer
-* officer
+<!-- * officer -->
 
 # AmyStephanie
-* squeezing
+<!-- * squeezing -->
 
 # Ana
-* eating
-* smirking
-* squatting
-* walgreens
+<!-- * eating -->
+<!-- * smirking -->
+<!-- * squatting -->
+<!-- * walgreens -->
 
 # AnaHowie
-* cemetery
+<!-- * cemetery -->
 
 # Andrew
-* feigningFear
+<!-- * feigningFear -->
 
 # Bennett
-* backstage
+<!-- * backstage -->
 * breakupDejected
 * couchReading
-* future
-* museum
-* past
-* pious
+* cordRear
+<!-- * future -->
+<!-- * museum -->
+<!-- * past -->
+<!-- * pious -->
 * rubiksCube
 * solicitingOpinion
 * waitingRoomAsleep
 
 # BennettFather
-* present_bennett
+<!-- * present_bennett -->
 
 # BennettLiz
 * brushOff_liz
@@ -44,7 +45,7 @@
 * pampas
 
 # BennettLizReflection
-* afterglowReflection
+<!-- * afterglowReflection -->
 
 # BennettsChristopherLiz
 * epilogue_oldBennett
@@ -104,7 +105,7 @@
 * mischievousBanjo
 
 # Nestor
-* greeting
+<!-- * greeting -->
 
 # PreteenBennett
 * buoy
@@ -130,8 +131,42 @@
 
 # Wade
 * mingling
+* protester
 * watching
 
 # Willy
 * ducking
 * epilogue
+* greeting
+
+# Scenes to reverse
+* Ash Wednesday breakup
+* Odin
+    * shore
+    * stairs
+    * oceanFloor
+* M club
+* Good Night backstage (just flapper)
+* Grasshoppers mirror
+* Look Back mirror
+* Garryowen brushoff
+* Garryowen crumbled
+* Uncanny Valley future
+* Vegan mirror
+
+# To straighten (if not already fixing)
+* Andrew
+    * feigningFear (just remove comment)
+* Bennett
+    * attic
+    * catholicPensive
+* Catherine
+    * gopi
+* Liz
+    * dateEnding
+* Stephanie
+    * mingling
+* Tristan
+    * punching
+* Wade
+    * catholicGuy
