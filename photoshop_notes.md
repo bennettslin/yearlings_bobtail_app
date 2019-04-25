@@ -23,13 +23,13 @@
 # Bennett
 <!-- * backstage -->
 * breakupDejected
-* couchReading
-* cordRear
+<!-- * couchReading -->
+<!-- * cordRear -->
 <!-- * future -->
 <!-- * museum -->
 <!-- * past -->
 <!-- * pious -->
-* rubiksCube
+<!-- * rubiksCube -->
 * solicitingOpinion
 * waitingRoomAsleep
 
@@ -54,8 +54,7 @@
 * charmedSchoolbus
 
 # Catherine
-* puzzled
-* quipping
+<!-- * quipping -->
 
 # ChristopherBennett
 * blissfulGuilty
@@ -69,13 +68,13 @@
 * steamTunnel
 
 # HowieWilly
-* gangbanger_howie
+<!-- * gangbanger_howie -->
 
 # JacobMara
-* eating
+<!-- * eating -->
 
 # Khari
-* doubleAlbert
+<!-- * doubleAlbert -->
 
 # KhariLiz
 * caress
@@ -91,11 +90,11 @@
 * notHungry
 
 # Mara
-* gopi
+<!-- * gopi -->
 
 # Miriam
-* infantCurious
-* infantNursing
+<!-- * infantCurious -->
+<!-- * infantNursing -->
 * reversing
 
 # MiriamBennett
@@ -130,9 +129,10 @@
 * steamTunnel
 
 # Wade
-* mingling
+<!-- * catholicGuy -->
+<!-- * mingling -->
 * protester
-* watching
+<!-- * watching -->
 
 # Willy
 * ducking
@@ -168,5 +168,3 @@
     * mingling
 * Tristan
     * punching
-* Wade
-    * catholicGuy

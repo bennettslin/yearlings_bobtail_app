@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `Timebox for actor Photoshop edits.`,
-        workedHours: 6,
+        workedHours: 8,
         neededHours: 30
     },
 
