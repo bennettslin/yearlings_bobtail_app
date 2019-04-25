@@ -901,7 +901,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. She would often come home from her classes racked with guilt, believing that she was learning these concepts too late to help my brother.`,
+                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. She would often come home from her classes feeling guilty that she was learning these concepts too late to help my brother.`,
                                         {
                                             anchor: `"imprinting,"`,
                                             wiki: `Imprinting_(psychology)`

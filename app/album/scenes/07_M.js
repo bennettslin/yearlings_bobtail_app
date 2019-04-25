@@ -380,7 +380,7 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'looking at Bennett',
                         instance: USHER_LOOKING
                     }
