@@ -108,9 +108,9 @@
 
 # PreteenBennett
 * buoy
-* stairs
-* stoic
-* wistful
+<!-- * stairs -->
+<!-- * stoic -->
+<!-- * wistful -->
 
 # Sasha
 * indignant
@@ -119,7 +119,7 @@
 * mermaid
 
 # Stephanie
-* bennettRecording
+<!-- * bennettRecording -->
 
 # Tomer
 <!-- * abbeyRoad -->
@@ -131,13 +131,13 @@
 # Wade
 <!-- * catholicGuy -->
 <!-- * mingling -->
-* protester
+<!-- * protester -->
 <!-- * watching -->
 
 # Willy
-* ducking
-* epilogue
-* greeting
+<!-- * ducking -->
+<!-- * epilogue -->
+<!-- * greeting -->
 
 # Scenes to reverse
 * Odin
@@ -152,8 +152,6 @@
 * Vegan mirror
 
 # To straighten (if not already fixing)
-* Andrew
-    * feigningFear (just remove comment)
 * Bennett
     * attic
     * catholicPensive
