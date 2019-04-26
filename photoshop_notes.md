@@ -22,7 +22,7 @@
 
 # Bennett
 <!-- * backstage -->
-* breakupDejected
+<!-- * breakupDejected -->
 <!-- * couchReading -->
 <!-- * cordRear -->
 <!-- * future -->
@@ -30,8 +30,8 @@
 <!-- * past -->
 <!-- * pious -->
 <!-- * rubiksCube -->
-* solicitingOpinion
-* waitingRoomAsleep
+<!-- * solicitingOpinion -->
+<!-- * waitingRoomAsleep -->
 
 # BennettFather
 <!-- * present_bennett -->
@@ -39,10 +39,10 @@
 # BennettLiz
 * brushOff_liz
 * celibateFreezing_bennett
-* celibateFreezing_liz
+<!-- * celibateFreezing_liz -->
 * cheekUnveiled_bennett
-* gingerbreadPrison_liz
-* pampas
+<!-- * gingerbreadPrison_liz -->
+<!-- * pampas -->
 
 # BennettLizReflection
 <!-- * afterglowReflection -->
@@ -60,12 +60,12 @@
 * blissfulGuilty
 
 # Father
-* past
-* roaring
+<!-- * past -->
+<!-- * roaring -->
 
 # Howie
-* stationWagon
-* steamTunnel
+<!-- * stationWagon -->
+<!-- * steamTunnel -->
 
 # HowieWilly
 <!-- * gangbanger_howie -->
@@ -122,11 +122,11 @@
 * bennettRecording
 
 # Tomer
-* abbeyRoad
-* cemetery
-* shaneBuying
-* stationWagon
-* steamTunnel
+<!-- * abbeyRoad -->
+<!-- * cemetery -->
+<!-- * shaneBuying -->
+<!-- * stationWagon -->
+<!-- * steamTunnel -->
 
 # Wade
 <!-- * catholicGuy -->
@@ -140,13 +140,10 @@
 * greeting
 
 # Scenes to reverse
-* Ash Wednesday breakup
 * Odin
     * shore
     * stairs
     * oceanFloor
-* M club
-* Good Night backstage (just flapper)
 * Grasshoppers mirror
 * Look Back mirror
 * Garryowen brushoff
