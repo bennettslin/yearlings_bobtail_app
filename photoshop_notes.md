@@ -37,7 +37,7 @@
 <!-- * present_bennett -->
 
 # BennettLiz
-* brushOff_liz
+<!-- * brushOff_liz -->
 * celibateFreezing_bennett
 <!-- * celibateFreezing_liz -->
 * cheekUnveiled_bennett
@@ -78,16 +78,17 @@
 
 # KhariLiz
 * caress
-* jokingLaughing
+<!-- * jokingLaughing -->
 
 # KhariLizReflection
 * caressReflection
 
 # Liz
-* defending
-* goKarts
-* museum
-* notHungry
+<!-- * dateEnding -->
+<!-- * defending -->
+<!-- * goKarts -->
+<!-- * museum -->
+<!-- * notHungry -->
 
 # Mara
 <!-- * gopi -->
@@ -95,19 +96,19 @@
 # Miriam
 <!-- * infantCurious -->
 <!-- * infantNursing -->
-* reversing
+<!-- * reversing -->
 
 # MiriamBennett
 * asleepFearful
 
 # MiriamStephanie
-* mischievousBanjo
+<!-- * mischievousBanjo -->
 
 # Nestor
 <!-- * greeting -->
 
 # PreteenBennett
-* buoy
+<!-- * buoy -->
 <!-- * stairs -->
 <!-- * stoic -->
 <!-- * wistful -->
@@ -138,28 +139,3 @@
 <!-- * ducking -->
 <!-- * epilogue -->
 <!-- * greeting -->
-
-# Scenes to reverse
-* Odin
-    * shore
-    * stairs
-    * oceanFloor
-* Grasshoppers mirror
-* Look Back mirror
-* Garryowen brushoff
-* Garryowen crumbled
-* Uncanny Valley future
-* Vegan mirror
-
-# To straighten (if not already fixing)
-* Bennett
-    * attic
-    * catholicPensive
-* Catherine
-    * gopi
-* Liz
-    * dateEnding
-* Stephanie
-    * mingling
-* Tristan
-    * punching
