@@ -44,6 +44,7 @@ const
     YOUNG_CHILD = 'youngChild',
 
     // Uncanny Valley.
+    ASLEEP = 'asleep',
     PAST = 'past',
     PRESENT = 'present',
     FUTURE = 'future',
@@ -83,6 +84,7 @@ export {
     WAITING,
     LEAVING_CRUMBLED,
     YOUNG_CHILD,
+    ASLEEP,
     PAST,
     PRESENT,
     FUTURE,

@@ -7,12 +7,13 @@ import Cowgirl from './Instances/Cowgirl'
 import Blowjob from './Instances/Blowjob'
 
 import {
-    ASLEEP,
     ASLEEP_FEARFUL,
     FENDING_OFF,
     COWGIRL,
     BLOWJOB
 } from 'scene/instanceKeys/miriamBennett'
+
+import { ASLEEP } from 'scene/instanceKeys/songs'
 
 export const propTypes = {
     [ASLEEP]: PropTypes.bool,

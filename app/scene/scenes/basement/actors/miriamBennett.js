@@ -1,8 +1,9 @@
 import {
-    ASLEEP,
     ASLEEP_FEARFUL,
     FENDING_OFF
 } from '../../../instanceKeys/miriamBennett'
+
+import { ASLEEP } from '../../../instanceKeys/songs'
 
 const ARRANGEMENTS_MAP = {
     [ASLEEP]: {

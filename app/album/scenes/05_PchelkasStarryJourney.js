@@ -58,7 +58,6 @@ import { ARGUING } from '../../scene/instanceKeys/mother'
 
 import {
     FEIGNING_SICK,
-    ASLEEP,
     SHAKEN,
     STOIC,
     WISTFUL,
@@ -66,6 +65,8 @@ import {
 } from '../../scene/instanceKeys/preteenBennett'
 
 import { POPULAR_GIRL } from '../../scene/instanceKeys/sasha'
+
+import { ASLEEP } from '../../scene/instanceKeys/songs'
 
 import { PRINCIPAL } from '../../scene/instanceKeys/tristan'
 

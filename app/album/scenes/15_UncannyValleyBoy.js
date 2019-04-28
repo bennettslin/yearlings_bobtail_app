@@ -55,7 +55,6 @@ import {
 } from '../../scene/instanceKeys/liz'
 
 import {
-    ASLEEP,
     ASLEEP_FEARFUL,
     FENDING_OFF
 } from '../../scene/instanceKeys/miriamBennett'
@@ -66,6 +65,7 @@ import { COMFORTING_HUMILIATED } from '../../scene/instanceKeys/sashaBennett'
 import { BENNETT_RECORDING } from '../../scene/instanceKeys/stephanie'
 
 import {
+    ASLEEP,
     PAST,
     PRESENT,
     FUTURE

@@ -31,12 +31,13 @@ import {
     BUOY,
     OCEAN_FLOOR,
     FEIGNING_SICK,
-    ASLEEP,
     SHAKEN,
     STOIC,
     WISTFUL,
     SHEEPISH
 } from 'scene/instanceKeys/preteenBennett'
+
+import { ASLEEP } from 'scene/instanceKeys/songs'
 
 export const propTypes = {
     [CAUTIOUS]: PropTypes.bool,

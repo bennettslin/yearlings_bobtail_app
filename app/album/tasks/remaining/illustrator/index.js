@@ -1,10 +1,4 @@
 export default [
-    {
-        taskName: `Timebox for actor Photoshop edits.`,
-        workedHours: 19,
-        neededHours: 30
-    },
-
     /***********
      * BUTTONS *
      ***********/

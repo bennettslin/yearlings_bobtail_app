@@ -38,9 +38,9 @@
 
 # BennettLiz
 <!-- * brushOff_liz -->
-* celibateFreezing_bennett
+<!-- * celibateFreezing_bennett -->
 <!-- * celibateFreezing_liz -->
-* cheekUnveiled_bennett
+<!-- * cheekUnveiled_bennett -->
 <!-- * gingerbreadPrison_liz -->
 <!-- * pampas -->
 
@@ -48,16 +48,16 @@
 <!-- * afterglowReflection -->
 
 # BennettsChristopherLiz
-* epilogue_oldBennett
+* epilogue_oldBennett (to scan)
 
 # BradSasha
-* charmedSchoolbus
+<!-- * charmedSchoolbus -->
 
 # Catherine
 <!-- * quipping -->
 
 # ChristopherBennett
-* blissfulGuilty
+<!-- * blissfulGuilty -->
 
 # Father
 <!-- * past -->
@@ -77,11 +77,11 @@
 <!-- * doubleAlbert -->
 
 # KhariLiz
-* caress
+* caress (to scan)
 <!-- * jokingLaughing -->
 
 # KhariLizReflection
-* caressReflection
+<!-- * caressReflection -->
 
 # Liz
 <!-- * dateEnding -->
@@ -99,7 +99,7 @@
 <!-- * reversing -->
 
 # MiriamBennett
-* asleepFearful
+<!-- * asleepFearful -->
 
 # MiriamStephanie
 <!-- * mischievousBanjo -->
@@ -114,10 +114,10 @@
 <!-- * wistful -->
 
 # Sasha
-* indignant
+* indignant (to scan)
 
 # SashaBennett
-* mermaid
+<!-- * mermaid -->
 
 # Stephanie
 <!-- * bennettRecording -->
