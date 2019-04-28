@@ -47,9 +47,6 @@
 # BennettLizReflection
 <!-- * afterglowReflection -->
 
-# BennettsChristopherLiz
-* epilogue_oldBennett (to scan)
-
 # BradSasha
 <!-- * charmedSchoolbus -->
 
@@ -77,7 +74,6 @@
 <!-- * doubleAlbert -->
 
 # KhariLiz
-* caress (to scan)
 <!-- * jokingLaughing -->
 
 # KhariLizReflection
@@ -114,7 +110,7 @@
 <!-- * wistful -->
 
 # Sasha
-* indignant (to scan)
+<!-- * indignant -->
 
 # SashaBennett
 <!-- * mermaid -->
