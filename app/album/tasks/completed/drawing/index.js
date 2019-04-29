@@ -827,8 +827,8 @@ export default [
         neededHours: 6
     },
     {
-        taskName: `Timebox for actor Photoshop edits.`,
-        workedHours: 31,
-        neededHours: 31
+        taskName: `Timebox for actor Photoshop fixes.`,
+        workedHours: 32,
+        neededHours: 32
     }
 ]

@@ -1,26 +1,28 @@
-# Amy
+# Actor fixes
+
+## Amy
 <!-- * protester -->
 <!-- * smoker -->
 
-# AmyNestorTomer
+## AmyNestorTomer
 <!-- * officer -->
 
-# AmyStephanie
+## AmyStephanie
 <!-- * squeezing -->
 
-# Ana
+## Ana
 <!-- * eating -->
 <!-- * smirking -->
 <!-- * squatting -->
 <!-- * walgreens -->
 
-# AnaHowie
+## AnaHowie
 <!-- * cemetery -->
 
-# Andrew
+## Andrew
 <!-- * feigningFear -->
 
-# Bennett
+## Bennett
 <!-- * backstage -->
 <!-- * breakupDejected -->
 <!-- * couchReading -->
@@ -33,10 +35,10 @@
 <!-- * solicitingOpinion -->
 <!-- * waitingRoomAsleep -->
 
-# BennettFather
+## BennettFather
 <!-- * present_bennett -->
 
-# BennettLiz
+## BennettLiz
 <!-- * brushOff_liz -->
 <!-- * celibateFreezing_bennett -->
 <!-- * celibateFreezing_liz -->
@@ -44,94 +46,94 @@
 <!-- * gingerbreadPrison_liz -->
 <!-- * pampas -->
 
-# BennettLizReflection
+## BennettLizReflection
 <!-- * afterglowReflection -->
 
-# BradSasha
+## BradSasha
 <!-- * charmedSchoolbus -->
 
-# Catherine
+## Catherine
 <!-- * quipping -->
 
-# ChristopherBennett
+## ChristopherBennett
 <!-- * blissfulGuilty -->
 
-# Father
+## Father
 <!-- * past -->
 <!-- * roaring -->
 
-# Howie
+## Howie
 <!-- * stationWagon -->
 <!-- * steamTunnel -->
 
-# HowieWilly
+## HowieWilly
 <!-- * gangbanger_howie -->
 
-# JacobMara
+## JacobMara
 <!-- * eating -->
 
-# Khari
+## Khari
 <!-- * doubleAlbert -->
 
-# KhariLiz
+## KhariLiz
 <!-- * jokingLaughing -->
 
-# KhariLizReflection
+## KhariLizReflection
 <!-- * caressReflection -->
 
-# Liz
+## Liz
 <!-- * dateEnding -->
 <!-- * defending -->
 <!-- * goKarts -->
 <!-- * museum -->
 <!-- * notHungry -->
 
-# Mara
+## Mara
 <!-- * gopi -->
 
-# Miriam
+## Miriam
 <!-- * infantCurious -->
 <!-- * infantNursing -->
 <!-- * reversing -->
 
-# MiriamBennett
+## MiriamBennett
 <!-- * asleepFearful -->
 
-# MiriamStephanie
+## MiriamStephanie
 <!-- * mischievousBanjo -->
 
-# Nestor
+## Nestor
 <!-- * greeting -->
 
-# PreteenBennett
+## PreteenBennett
 <!-- * buoy -->
 <!-- * stairs -->
 <!-- * stoic -->
 <!-- * wistful -->
 
-# Sasha
+## Sasha
 <!-- * indignant -->
 
-# SashaBennett
+## SashaBennett
 <!-- * mermaid -->
 
-# Stephanie
+## Stephanie
 <!-- * bennettRecording -->
 
-# Tomer
+## Tomer
 <!-- * abbeyRoad -->
 <!-- * cemetery -->
 <!-- * shaneBuying -->
 <!-- * stationWagon -->
 <!-- * steamTunnel -->
 
-# Wade
+## Wade
 <!-- * catholicGuy -->
 <!-- * mingling -->
 <!-- * protester -->
 <!-- * watching -->
 
-# Willy
+## Willy
 <!-- * ducking -->
 <!-- * epilogue -->
 <!-- * greeting -->

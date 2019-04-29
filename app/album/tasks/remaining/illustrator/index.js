@@ -1,4 +1,15 @@
 export default [
+    {
+        taskName: `Timebox for actor Photoshop edits and merges.`,
+        workedHours: 0,
+        neededHours: 16
+    },
+    {
+        taskName: `Timebox for separating things into own files.`,
+        workedHours: 0,
+        neededHours: 16
+    },
+
     /***********
      * BUTTONS *
      ***********/

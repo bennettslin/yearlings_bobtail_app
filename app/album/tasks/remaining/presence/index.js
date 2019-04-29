@@ -1,9 +1,4 @@
 export default [
-    {
-        taskName: `Combine Bennett, Chris, and Willy in last scene of Willy.`,
-        workedHours: 0,
-        neededHours: 1
-    },
     /**
      * Do once the presence svgs are mostly done.
      */

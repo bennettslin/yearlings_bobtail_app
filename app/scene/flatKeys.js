@@ -58,7 +58,7 @@ export const PHARMACY_AISLE = 'pharmacyAisle'
 // Own page.
 export const STEAM_PIPES = 'steamPipes'
 
-// With cemetery flat. Requires editing.
+// With cemetery backdrop. Requires editing.
 export const CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
 
 // With stage cutouts. Requires editing.
