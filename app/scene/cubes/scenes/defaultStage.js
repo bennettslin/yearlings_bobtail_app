@@ -1,12 +1,12 @@
-import { DEFAULT_STAGE_KEY } from '../../cubesKeys'
+import { DEFAULT_STAGE_KEY } from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     k
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

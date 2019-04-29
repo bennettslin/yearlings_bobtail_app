@@ -12,7 +12,7 @@ import {
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

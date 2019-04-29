@@ -15,7 +15,7 @@ import {
     WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

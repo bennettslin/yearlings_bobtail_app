@@ -12,7 +12,7 @@ import {
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

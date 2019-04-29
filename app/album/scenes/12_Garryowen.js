@@ -13,7 +13,7 @@ import {
     BASEMENT_BED_KEY,
     CLUB_FRONT_KEY,
     OAKLAND_VOLKSWAGEN_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

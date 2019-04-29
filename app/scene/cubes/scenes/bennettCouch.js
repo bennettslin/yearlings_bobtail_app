@@ -1,7 +1,7 @@
 import {
     BENNETT_COUCH_KEY,
     BENNETT_COUCH_THOUGHT_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
@@ -10,11 +10,11 @@ import {
     WALL_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     g
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     G = GROUND_HSLA,

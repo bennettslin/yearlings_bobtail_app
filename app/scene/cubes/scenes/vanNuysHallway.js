@@ -1,4 +1,4 @@
-import { VAN_NUYS_HALLWAY_KEY } from '../../cubesKeys'
+import { VAN_NUYS_HALLWAY_KEY } from '../../keys/cubes'
 
 import {
     CEILING_HSLA,
@@ -6,12 +6,12 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     SEAT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     d,
     g
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     C = CEILING_HSLA,

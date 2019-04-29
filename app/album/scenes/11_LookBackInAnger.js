@@ -11,7 +11,7 @@ import {
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
     CLUB_LOADING
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

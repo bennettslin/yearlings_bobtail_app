@@ -1,14 +1,14 @@
-import { PAMPAS_KEY } from '../../cubesKeys'
+import { PAMPAS_KEY } from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     HILL_HSLA,
     HILL_DARKER_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     RIGHT
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     G = GROUND_HSLA,

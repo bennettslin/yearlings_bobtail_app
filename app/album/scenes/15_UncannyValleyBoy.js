@@ -13,7 +13,7 @@ import {
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

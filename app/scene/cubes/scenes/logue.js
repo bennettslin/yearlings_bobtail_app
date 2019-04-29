@@ -1,9 +1,9 @@
-import { LOGUE_KEY } from '../../cubesKeys'
+import { LOGUE_KEY } from '../../keys/cubes'
 
 import {
     STAGE_FLOOR_HSLA,
     STAGE_PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     G = STAGE_FLOOR_HSLA,

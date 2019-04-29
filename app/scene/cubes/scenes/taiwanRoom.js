@@ -1,4 +1,4 @@
-import { TAIWAN_ROOM_KEY } from '../../cubesKeys'
+import { TAIWAN_ROOM_KEY } from '../../keys/cubes'
 
 import {
     CEILING_HSLA,
@@ -6,13 +6,13 @@ import {
     WALL_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     e,
     f,
     g
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     C = CEILING_HSLA,

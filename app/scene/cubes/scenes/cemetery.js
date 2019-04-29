@@ -1,14 +1,14 @@
-import { CEMETERY_KEY } from '../../cubesKeys'
+import { CEMETERY_KEY } from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     HILL_HSLA,
     HILL_DARKER_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     LEFT
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     G = GROUND_HSLA,

@@ -1,10 +1,10 @@
-import { OAKLAND_COMMERCIAL_KEY } from '../../cubesKeys'
+import { OAKLAND_COMMERCIAL_KEY } from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA,
     STREET_HSLA,
     PAVEMENT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     D = DEFAULT_HSLA,

@@ -1,4 +1,4 @@
-import { ATTIC_KEY } from '../../cubesKeys'
+import { ATTIC_KEY } from '../../keys/cubes'
 
 import {
     CEILING_HSLA,
@@ -7,14 +7,14 @@ import {
     PLATFORM_HSLA,
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     c,
     e,
     f,
     g
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     C = CEILING_HSLA,

@@ -20,7 +20,7 @@ import {
     ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

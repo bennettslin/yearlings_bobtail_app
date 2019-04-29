@@ -1,10 +1,10 @@
-import { FREEWAY_KEY } from '../../cubesKeys'
+import { FREEWAY_KEY } from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     PAVEMENT_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     G = GROUND_HSLA,

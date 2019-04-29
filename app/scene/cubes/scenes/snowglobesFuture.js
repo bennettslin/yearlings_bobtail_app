@@ -1,13 +1,13 @@
 import {
     SNOWGLOBES_FUTURE_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     FLOOR_HSLA,
     PLATFORM_HSLA,
     UPHOLSTERY_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 /**
  * Couch should match in lizCouch.

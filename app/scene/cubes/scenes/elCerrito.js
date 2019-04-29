@@ -1,7 +1,7 @@
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
@@ -10,10 +10,10 @@ import {
     STREET_HSLA,
     PLATFORM_HSLA,
     SEAT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 import {
     RIGHT
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     G = GROUND_HSLA,

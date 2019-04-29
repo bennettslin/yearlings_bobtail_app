@@ -1,9 +1,9 @@
-import { NOHO_HOUSES_KEY } from '../../cubesKeys'
+import { NOHO_HOUSES_KEY } from '../../keys/cubes'
 
 import {
     LAWN_HSLA,
     PAVEMENT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     V = PAVEMENT_HSLA,

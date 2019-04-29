@@ -1,20 +1,20 @@
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     d,
     e,
     g
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     C = CEILING_HSLA,

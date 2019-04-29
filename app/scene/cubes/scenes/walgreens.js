@@ -1,9 +1,9 @@
-import { WALGREENS_KEY } from '../../cubesKeys'
+import { WALGREENS_KEY } from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     FLOOR_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     G = GROUND_HSLA,

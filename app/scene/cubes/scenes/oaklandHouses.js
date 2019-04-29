@@ -1,13 +1,13 @@
 import {
     OAKLAND_HOUSES_KEY,
     OAKLAND_VOLKSWAGEN_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     PAVEMENT_HSLA,
     STREET_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     G = GROUND_HSLA,

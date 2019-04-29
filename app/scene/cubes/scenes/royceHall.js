@@ -1,8 +1,8 @@
-import { ROYCE_HALL_KEY } from '../../cubesKeys'
+import { ROYCE_HALL_KEY } from '../../keys/cubes'
 
 import {
     PAVEMENT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     V = PAVEMENT_HSLA,

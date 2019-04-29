@@ -1,4 +1,4 @@
-import { DISHROOM_KEY } from '../../cubesKeys'
+import { DISHROOM_KEY } from '../../keys/cubes'
 
 import {
     CEILING_HSLA,
@@ -7,13 +7,13 @@ import {
     DOOR_HSLA,
     PLATFORM_HSLA,
     FURNITURE_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     b,
     f,
     g
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     C = CEILING_HSLA,

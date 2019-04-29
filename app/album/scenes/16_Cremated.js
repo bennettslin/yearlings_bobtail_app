@@ -14,7 +14,7 @@ import {
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

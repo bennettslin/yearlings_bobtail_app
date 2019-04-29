@@ -1,16 +1,16 @@
-import { TAIWAN_GATE_KEY } from '../../cubesKeys'
+import { TAIWAN_GATE_KEY } from '../../keys/cubes'
 
 import {
     STREET_HSLA,
     PAVEMENT_HSLA,
     GATE_HSLA,
     WALL_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     d,
     g
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     T = STREET_HSLA,

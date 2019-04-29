@@ -2,7 +2,7 @@ import {
     LIZ_BED_KEY,
     LIZ_BED_OPEN_KEY,
     LIZ_BED_OPEN_PHONE_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA,
@@ -12,13 +12,13 @@ import {
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
     SEAT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     e,
     g,
     k
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

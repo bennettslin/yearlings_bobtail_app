@@ -17,7 +17,7 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     BENNETT_GATE_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

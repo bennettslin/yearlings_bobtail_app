@@ -1,4 +1,4 @@
-import { TAIWAN_STAIRS_KEY } from '../../cubesKeys'
+import { TAIWAN_STAIRS_KEY } from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA,
@@ -9,13 +9,13 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     e,
     g,
     k
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

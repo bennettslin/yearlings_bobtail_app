@@ -13,7 +13,7 @@ import {
     BASEMENT_KEY,
     CINEMA_KEY,
     CINEMA_STREET_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

@@ -1,4 +1,4 @@
-import { EL_TORITO_KEY } from '../../cubesKeys'
+import { EL_TORITO_KEY } from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA,
@@ -8,14 +8,14 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     e,
     f,
     g,
     k
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

@@ -1,7 +1,7 @@
 import {
     CINEMA_KEY,
     CINEMA_STREET_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA,
@@ -11,13 +11,13 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     DOOR_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     e,
     f,
     k
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

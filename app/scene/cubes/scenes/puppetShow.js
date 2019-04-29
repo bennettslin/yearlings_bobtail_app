@@ -1,9 +1,9 @@
-import { PUPPET_SHOW_KEY } from '../../cubesKeys'
+import { PUPPET_SHOW_KEY } from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     PLATFORM_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     G = GROUND_HSLA,

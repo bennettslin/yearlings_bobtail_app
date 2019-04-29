@@ -1,6 +1,6 @@
 import { ACTORS } from 'constants/scene'
 
-import { LOGUE_KEY } from '../../scene/cubesKeys'
+import { LOGUE_KEY } from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

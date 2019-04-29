@@ -1,4 +1,4 @@
-import { COURTYARD_KEY } from '../../cubesKeys'
+import { COURTYARD_KEY } from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA,
@@ -7,14 +7,14 @@ import {
     CEILING_HSLA,
     WALL_HSLA,
     DOOR_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     d,
     e,
     f,
     k
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 /**
  * Blinds and door should match in bennettBed.

@@ -2,7 +2,7 @@ import {
     BASEMENT_KEY,
     BASEMENT_BED_KEY,
     BASEMENT_MAGIC_KEY
-} from '../../cubesKeys'
+} from '../../keys/cubes'
 
 import {
     DEFAULT_HSLA,
@@ -15,13 +15,13 @@ import {
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
     SEAT_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     c,
     f,
     k
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

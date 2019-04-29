@@ -15,7 +15,7 @@ import {
     PORCH_KEY,
     NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

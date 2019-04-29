@@ -1,13 +1,13 @@
-import { SHORE_KEY } from '../../cubesKeys'
+import { SHORE_KEY } from '../../keys/cubes'
 
 import {
     SAND_HSLA,
     OCEAN_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 import {
     RIGHT
-} from '../../zIndexKeys'
+} from '../../keys/zIndex'
 
 const
     N = SAND_HSLA,

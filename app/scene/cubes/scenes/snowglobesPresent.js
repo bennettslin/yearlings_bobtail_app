@@ -1,10 +1,10 @@
-import { SNOWGLOBES_PRESENT_KEY } from '../../cubesKeys'
+import { SNOWGLOBES_PRESENT_KEY } from '../../keys/cubes'
 
 import {
     GROUND_HSLA,
     PLATFORM_HSLA,
     UPHOLSTERY_HSLA
-} from '../../hslaKeys'
+} from '../../keys/hsla'
 
 const
     G = GROUND_HSLA,

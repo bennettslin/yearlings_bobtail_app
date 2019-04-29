@@ -12,7 +12,7 @@ import {
     NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

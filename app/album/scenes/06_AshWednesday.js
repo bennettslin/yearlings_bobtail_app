@@ -13,7 +13,7 @@ import {
     CATHOLIC_CHURCH_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

@@ -17,7 +17,7 @@ import {
     BUOY_KEY,
     OCEAN_DEPTHS_KEY,
     OCEAN_FLOOR_KEY
-} from '../../scene/cubesKeys'
+} from '../../scene/keys/cubes'
 
 import {
     TIME_ANYTIME,

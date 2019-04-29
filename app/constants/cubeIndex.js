@@ -1,5 +1,5 @@
 import { getArrayOfLength } from 'helpers/general'
-import { k } from 'scene/zIndexKeys'
+import { k } from 'scene/keys/zIndex'
 
 const
     CUBE_X_AXIS_LENGTH = 12,
