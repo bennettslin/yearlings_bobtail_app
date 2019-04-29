@@ -17,13 +17,13 @@ import {
     BUOY_KEY,
     OCEAN_DEPTHS_KEY,
     OCEAN_FLOOR_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_OCEAN
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     PRETEEN_BENNETT,

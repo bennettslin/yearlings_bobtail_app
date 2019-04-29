@@ -14,13 +14,13 @@ import {
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_THOUGHT
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

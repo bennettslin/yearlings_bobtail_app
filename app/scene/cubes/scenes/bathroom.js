@@ -1,7 +1,7 @@
 import {
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     GROUND_HSLA,
@@ -9,11 +9,11 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     FURNITURE_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     f
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     G = GROUND_HSLA,

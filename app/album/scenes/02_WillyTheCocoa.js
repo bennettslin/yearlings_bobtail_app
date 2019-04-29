@@ -15,12 +15,12 @@ import {
     PORCH_KEY,
     NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     PRETEEN_BENNETT,

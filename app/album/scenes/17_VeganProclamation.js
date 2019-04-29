@@ -15,13 +15,13 @@ import {
     ALLEY_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_WINTER,
     SEASON_LOVE
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

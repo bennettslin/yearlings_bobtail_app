@@ -1,4 +1,4 @@
-import { CLUB_LOADING } from '../../keys/cubes'
+import { CLUB_LOADING } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -6,13 +6,13 @@ import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
     f,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

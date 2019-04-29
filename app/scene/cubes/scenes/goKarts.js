@@ -1,11 +1,11 @@
-import { GO_KARTS_KEY } from '../../keys/cubes'
+import { GO_KARTS_KEY } from '../../scenes/keys'
 
 import {
     STREET_HSLA,
     CROSSWALK_HSLA,
     LAWN_HSLA,
     SEAT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 const
     T = STREET_HSLA,

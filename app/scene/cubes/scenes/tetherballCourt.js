@@ -1,9 +1,9 @@
-import { TETHERBALL_COURT_KEY } from '../../keys/cubes'
+import { TETHERBALL_COURT_KEY } from '../../scenes/keys'
 
 import {
     GROUND_HSLA,
     PAVEMENT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 const
     G = GROUND_HSLA,

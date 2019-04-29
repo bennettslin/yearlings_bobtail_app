@@ -4594,7 +4594,7 @@ export default [
     },
     {
         taskName: `Rearrange scene arrangements and cubes.`,
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 2,
+        neededHours: 2
     }
 ]

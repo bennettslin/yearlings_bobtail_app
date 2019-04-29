@@ -1,4 +1,4 @@
-import { BENNETT_GATE_KEY } from '../../keys/cubes'
+import { BENNETT_GATE_KEY } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -6,7 +6,7 @@ import {
     GATE_HSLA,
     CEILING_HSLA,
     DOOR_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
@@ -14,7 +14,7 @@ import {
     f,
     g,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 /**
  * Gate should match in courtyard.

@@ -1,7 +1,7 @@
 import {
     WAITING_ROOM_KEY,
     WAITING_ROOM_OPEN_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     GROUND_HSLA,
@@ -10,12 +10,12 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     UPHOLSTERY_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
     g
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     G = GROUND_HSLA,

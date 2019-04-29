@@ -4,7 +4,7 @@ import {
     BEDROOM_OPEN_KEY,
     BEDROOM_DOGS_KEY,
     BEDROOM_SPACE_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -15,14 +15,14 @@ import {
     FURNITURE_HSLA,
     UPHOLSTERY_HSLA,
     SEAT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
     g,
     k,
     LEFT
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

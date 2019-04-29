@@ -1,4 +1,4 @@
-import { VAN_NUYS_QUAD_KEY } from '../../keys/cubes'
+import { VAN_NUYS_QUAD_KEY } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -7,12 +7,12 @@ import {
     CEILING_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     f,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

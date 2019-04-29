@@ -15,13 +15,13 @@ import {
     WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_THOUGHT
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

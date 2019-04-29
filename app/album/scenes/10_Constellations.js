@@ -20,13 +20,13 @@ import {
     ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_THOUGHT
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

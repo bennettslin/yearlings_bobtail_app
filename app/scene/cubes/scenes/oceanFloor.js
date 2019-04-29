@@ -1,12 +1,12 @@
-import { OCEAN_FLOOR_KEY } from '../../keys/cubes'
+import { OCEAN_FLOOR_KEY } from '../../scenes/keys'
 
 import {
     SAND_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     RIGHT
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     S = SAND_HSLA,

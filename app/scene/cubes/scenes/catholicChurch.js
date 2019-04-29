@@ -1,10 +1,10 @@
-import { CATHOLIC_CHURCH_KEY } from '../../keys/cubes'
+import { CATHOLIC_CHURCH_KEY } from '../../scenes/keys'
 
 import {
     GROUND_HSLA,
     STREET_HSLA,
     PAVEMENT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 const
     G = GROUND_HSLA,

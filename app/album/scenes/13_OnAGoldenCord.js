@@ -12,13 +12,13 @@ import {
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_THOUGHT
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     YOUNG_BENNETT,

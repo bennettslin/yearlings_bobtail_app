@@ -1,15 +1,15 @@
-import { BACKSTAGE_KEY } from '../../keys/cubes'
+import { BACKSTAGE_KEY } from '../../scenes/keys'
 
 import {
     GROUND_HSLA,
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     g
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     G  = GROUND_HSLA,

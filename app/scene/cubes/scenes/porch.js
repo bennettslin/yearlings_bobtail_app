@@ -1,4 +1,4 @@
-import { PORCH_KEY } from '../../keys/cubes'
+import { PORCH_KEY } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -7,13 +7,13 @@ import {
     PLATFORM_HSLA,
     WALL_HSLA,
     DOOR_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     e,
     f,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

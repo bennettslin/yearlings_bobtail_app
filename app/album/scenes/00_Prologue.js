@@ -1,11 +1,11 @@
 import { ACTORS } from 'constants/scene'
 
-import { LOGUE_KEY } from '../../scene/keys/cubes'
+import { LOGUE_KEY } from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import { OLD_BENNETT } from '../../scene/actors/keys'
 

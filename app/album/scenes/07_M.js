@@ -13,12 +13,12 @@ import {
     BASEMENT_KEY,
     CINEMA_KEY,
     CINEMA_STREET_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

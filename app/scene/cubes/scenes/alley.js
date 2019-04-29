@@ -1,4 +1,4 @@
-import { ALLEY_KEY } from '../../keys/cubes'
+import { ALLEY_KEY } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -6,13 +6,13 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     PLATFORM_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     e,
     g,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     D = DEFAULT_HSLA,

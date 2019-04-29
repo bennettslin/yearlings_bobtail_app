@@ -10,7 +10,7 @@ import { getScene } from 'album/api/scenes'
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from 'scene/sky'
+} from 'scene/sky/keys'
 
 class SceneChangeUpdateDispatcher extends PureComponent {
 

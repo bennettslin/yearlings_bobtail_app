@@ -1,10 +1,10 @@
-import { NOHO_SCHOOL_KEY } from '../../keys/cubes'
+import { NOHO_SCHOOL_KEY } from '../../scenes/keys'
 
 import {
     PAVEMENT_HSLA,
     FLOOR_HSLA,
     SEAT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 const
     V = PAVEMENT_HSLA,

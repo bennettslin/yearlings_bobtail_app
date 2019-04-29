@@ -1,7 +1,7 @@
 import {
     BENNETT_BED_KEY,
     BENNETT_BED_OPEN_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -11,13 +11,13 @@ import {
     WALL_HSLA,
     DOOR_HSLA,
     UPHOLSTERY_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
     g,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 /**
  * Blinds and door should match in courtyard.

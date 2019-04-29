@@ -1,7 +1,7 @@
 import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -11,13 +11,13 @@ import {
     CEILING_HSLA,
     WALL_HSLA,
     DOOR_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
     f,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 /**
  * Blinds and gate should match in lizCouch.

@@ -1,15 +1,15 @@
 import {
     RICKSHAW_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     SAND_HSLA,
     STREET_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     LEFT
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     N = SAND_HSLA,

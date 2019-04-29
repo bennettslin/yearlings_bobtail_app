@@ -11,13 +11,13 @@ import {
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
     CLUB_LOADING
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR,
     SEASON_SUMMER
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

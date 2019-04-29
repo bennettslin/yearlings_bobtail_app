@@ -1,15 +1,15 @@
-import { STEAM_TUNNEL_KEY } from '../../keys/cubes'
+import { STEAM_TUNNEL_KEY } from '../../scenes/keys'
 
 import {
     FLOOR_HSLA,
     CEILING_HSLA,
     WALL_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     b,
     d
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     F = FLOOR_HSLA,

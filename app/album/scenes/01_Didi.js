@@ -12,7 +12,7 @@ import {
     NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
@@ -21,7 +21,7 @@ import {
     TIME_NOON,
     TIME_AFTERNOON,
     SEASON_SPRING
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     YOUNG_BENNETT,

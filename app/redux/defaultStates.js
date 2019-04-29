@@ -16,7 +16,7 @@ import { getCubesForKey } from 'scene/cubes'
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from 'scene/sky'
+} from 'scene/sky/keys'
 
 import { getScene } from 'album/api/scenes'
 import { getStartTimeForVerseIndex } from 'album/api/time'

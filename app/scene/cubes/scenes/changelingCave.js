@@ -1,9 +1,9 @@
-import { CHANGELING_CAVE_KEY } from '../../keys/cubes'
+import { CHANGELING_CAVE_KEY } from '../../scenes/keys'
 
 import {
     GROUND_HSLA,
     PAVEMENT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 const
     G = GROUND_HSLA,

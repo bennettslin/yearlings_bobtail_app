@@ -2,11 +2,11 @@ import albumScenes from 'album/scenes'
 
 import { getSong } from 'album/api/songs'
 
-import { DEFAULT_STAGE_KEY } from 'scene/keys/cubes'
+import { DEFAULT_STAGE_KEY } from 'scene/scenes/keys'
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
-} from 'scene/sky'
+} from 'scene/sky/keys'
 
 const DEFAULT_SCENE = {
     cubes: DEFAULT_STAGE_KEY,

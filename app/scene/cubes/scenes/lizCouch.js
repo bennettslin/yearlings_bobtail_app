@@ -5,7 +5,7 @@ import {
     LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY,
     LIZ_COUCH_THOUGHT_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -18,13 +18,13 @@ import {
     DOOR_HSLA,
     UPHOLSTERY_HSLA,
     SEAT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
     g,
     k
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 /**
  * Blinds and gate should match in lizGate.

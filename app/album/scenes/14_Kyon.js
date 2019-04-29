@@ -12,12 +12,12 @@ import {
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     LIZ,

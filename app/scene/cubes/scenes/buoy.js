@@ -1,9 +1,9 @@
-import { BUOY_KEY } from '../../keys/cubes'
+import { BUOY_KEY } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
     OCEAN_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     // a,
@@ -15,7 +15,7 @@ import {
     // g,
     // k,
     RIGHT
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     // Default.

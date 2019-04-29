@@ -1,11 +1,11 @@
-import { SCHOOLBUS_KEY } from '../../keys/cubes'
+import { SCHOOLBUS_KEY } from '../../scenes/keys'
 
 import {
     STREET_HSLA,
     CROSSWALK_HSLA,
     PLATFORM_HSLA,
     SEAT_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 const
     T = STREET_HSLA,

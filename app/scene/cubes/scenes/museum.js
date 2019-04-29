@@ -1,16 +1,16 @@
-import { MUSEUM_KEY } from '../../keys/cubes'
+import { MUSEUM_KEY } from '../../scenes/keys'
 
 import {
     CEILING_HSLA,
     FLOOR_HSLA,
     WALL_HSLA,
     FURNITURE_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     d,
     g
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     C = CEILING_HSLA,

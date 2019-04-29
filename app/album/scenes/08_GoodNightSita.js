@@ -14,12 +14,12 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     GO_KARTS_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

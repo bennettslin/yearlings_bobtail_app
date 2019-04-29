@@ -2,7 +2,7 @@ import {
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY,
     CLIFF_DEATHBED_KEY
-} from '../../keys/cubes'
+} from '../../scenes/keys'
 
 import {
     GROUND_HSLA,
@@ -12,12 +12,12 @@ import {
     PLATFORM_HSLA,
     UPHOLSTERY_HSLA,
     FURNITURE_HSLA
-} from '../../keys/hsla'
+} from '../keys/hsla'
 
 import {
     // g,
     RIGHT
-} from '../../keys/zIndex'
+} from '../keys/zIndex'
 
 const
     G = GROUND_HSLA,

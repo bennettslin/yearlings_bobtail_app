@@ -12,13 +12,13 @@ import {
     PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_COURT_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_PRESENT,
     SEASON_THOUGHT
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     PRETEEN_BENNETT,

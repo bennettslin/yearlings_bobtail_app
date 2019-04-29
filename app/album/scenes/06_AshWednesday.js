@@ -13,13 +13,13 @@ import {
     CATHOLIC_CHURCH_KEY,
     BANCROFT_LIBRARY_KEY,
     CAMPANILE_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_THOUGHT
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     BENNETT,

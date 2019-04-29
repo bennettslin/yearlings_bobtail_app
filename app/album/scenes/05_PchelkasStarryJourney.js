@@ -18,12 +18,12 @@ import {
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY
-} from '../../scene/keys/cubes'
+} from '../../scene/scenes/keys'
 
 import {
     TIME_ANYTIME,
     SEASON_WINTER
-} from '../../scene/sky'
+} from '../../scene/sky/keys'
 
 import {
     PRETEEN_BENNETT,
