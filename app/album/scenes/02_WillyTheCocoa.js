@@ -31,47 +31,47 @@ import {
     CHRISTOPHER_BENNETT_WILLY,
     HOWIE_WILLY,
     TOMER
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL
-} from '../../scene/instanceKeys/preteenBennett'
+} from '../../scene/actors/keys/instances/preteenBennett'
 
 import {
     COLLECTING,
     DUCKING
-} from '../../scene/instanceKeys/willy'
+} from '../../scene/actors/keys/instances/willy'
 
 import {
     STOOPING,
     COMFORTING
-} from '../../scene/instanceKeys/mother'
+} from '../../scene/actors/keys/instances/mother'
 
 import {
     ROARING
-} from '../../scene/instanceKeys/father'
+} from '../../scene/actors/keys/instances/father'
 
 import {
     TANTRUM,
     SOBBING
-} from '../../scene/instanceKeys/christopher'
+} from '../../scene/actors/keys/instances/christopher'
 
 import {
     REASSURING_ENCHANTED
-} from '../../scene/instanceKeys/christopherBennettWilly'
+} from '../../scene/actors/keys/instances/christopherBennettWilly'
 
 import {
     GANGBANGER
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     NOHO_HOUSES_BACKDROP,
     VALLEY_BACKDROP,
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     OVERPASS_SIGN_FRONT,
@@ -84,7 +84,7 @@ import {
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
     STALACTITES
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     SHOPPING_CART,
@@ -93,23 +93,23 @@ import {
     SHOPPING_CART_FULL,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
     CAVE_SHADOWS
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     BEDROOM_DESK,
     CAPTAIN_BED_PILLOW
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     CAPTAIN_BED_DRAWERS
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 export default [
     {

@@ -1,6 +1,6 @@
 import {
     ASLEEP_REACHING
-} from '../../../../instanceKeys/liz'
+} from '../../../keys/instances/liz'
 
 const ARRANGEMENTS_MAP = {
     [ASLEEP_REACHING]: {

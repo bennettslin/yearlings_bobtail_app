@@ -2,7 +2,7 @@ import {
     PRETEEN_BENNETT,
     BRAD,
     ANDREW
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import ARRANGEMENTS_BRAD from './actors/brad'

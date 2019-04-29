@@ -2,7 +2,7 @@ import {
     TWIN_STREETLAMP_FAR,
     TWIN_STREETLAMP_MIDDLE,
     TWIN_STREETLAMP_NEAR
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [TWIN_STREETLAMP_FAR]: {

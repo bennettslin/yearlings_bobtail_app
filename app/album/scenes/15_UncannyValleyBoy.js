@@ -36,44 +36,44 @@ import {
     MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
     STEPHANIE
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from '../../scene/instanceKeys/estherMother'
+} from '../../scene/actors/keys/instances/estherMother'
 
 import {
     ACCUSATORY,
     REELING
-} from '../../scene/instanceKeys/father'
+} from '../../scene/actors/keys/instances/father'
 
-import { JOKING_LAUGHING } from '../../scene/instanceKeys/khariLiz'
+import { JOKING_LAUGHING } from '../../scene/actors/keys/instances/khariLiz'
 
 import {
     PETTING_SEATED
-} from '../../scene/instanceKeys/liz'
+} from '../../scene/actors/keys/instances/liz'
 
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF
-} from '../../scene/instanceKeys/miriamBennett'
+} from '../../scene/actors/keys/instances/miriamBennett'
 
-import { MISCHIEVOUS_BANJO } from '../../scene/instanceKeys/miriamStephanie'
-import { COMFORTING_HUMILIATED } from '../../scene/instanceKeys/sashaBennett'
+import { MISCHIEVOUS_BANJO } from '../../scene/actors/keys/instances/miriamStephanie'
+import { COMFORTING_HUMILIATED } from '../../scene/actors/keys/instances/sashaBennett'
 
-import { BENNETT_RECORDING } from '../../scene/instanceKeys/stephanie'
+import { BENNETT_RECORDING } from '../../scene/actors/keys/instances/stephanie'
 
 import {
     ASLEEP,
     PAST,
     PRESENT,
     FUTURE
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     ELLIOTT_SMITH_POSTER
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     BENNETT_RECORD_PLAYER_BASEMENT,
@@ -82,20 +82,20 @@ import {
     RECORDING_CONSOLE,
     RECORDING_BEERS,
     CRACKED_PICTURE
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     BENNETT_PILLOWS,
     LIZ_CUSHIONS,
     LIZ_CUSHIONS_THOUGHT,
     MIRIAM_CUSHIONS
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     SNOWGLOBE_TETHERBALL,
@@ -103,7 +103,7 @@ import {
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 export default [
     {

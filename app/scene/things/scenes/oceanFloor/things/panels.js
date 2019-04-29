@@ -1,7 +1,7 @@
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_CAVE_INTERIOR]: {

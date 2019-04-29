@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
 import LayerHoc from '../../../LayerHoc'
-import { BENNETT_REFLECTION } from '../../../../../scene/actorKeys'
+import { BENNETT_REFLECTION } from '../../../../../scene/actors/keys'
 
 const BennettReflectionLayer = memo(({ instanceKey }) => {
     return (

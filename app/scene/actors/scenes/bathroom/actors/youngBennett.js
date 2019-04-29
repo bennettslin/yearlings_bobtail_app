@@ -1,7 +1,7 @@
 import {
     BATHING,
     SINGING
-} from '../../../../instanceKeys/youngBennett'
+} from '../../../keys/instances/youngBennett'
 
 const ARRANGEMENTS_MAP = {
     [BATHING]: {

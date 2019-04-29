@@ -1,7 +1,7 @@
 import {
     RECORD_PLAYER_STOOL,
     JOHNNY_HORTON_ALBUM
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [RECORD_PLAYER_STOOL]: {

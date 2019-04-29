@@ -1,6 +1,6 @@
 import {
     SHOW_ANNOYED
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [SHOW_ANNOYED]: {

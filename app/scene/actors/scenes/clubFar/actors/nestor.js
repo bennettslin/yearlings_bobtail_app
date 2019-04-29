@@ -1,6 +1,6 @@
 import {
     GREETING
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [GREETING]: {

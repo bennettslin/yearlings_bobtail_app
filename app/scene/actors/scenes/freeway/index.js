@@ -1,6 +1,6 @@
 import {
     WILLY
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_WILLY from './actors/willy'
 

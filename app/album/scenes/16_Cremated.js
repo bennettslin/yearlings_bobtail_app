@@ -26,57 +26,57 @@ import {
     BENNETT,
     MIRIAM,
     MIRIAM_BENNETT
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from '../../scene/instanceKeys/miriam'
+} from '../../scene/actors/keys/instances/miriam'
 
 import {
     COWGIRL,
     BLOWJOB
-} from '../../scene/instanceKeys/miriamBennett'
+} from '../../scene/actors/keys/instances/miriamBennett'
 
 import {
     GOLDEN_GATE_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     EL_CERRITO_TREE,
     IV_DRIP
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     HOSPITAL_RECORD_PLAYER
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     HOSPITAL_PILLOW
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 import {
     PUPPET_REATTA
-} from '../../scene/puppetKeys'
+} from '../../scene/things/keys/puppets'
 
 export default [
     {

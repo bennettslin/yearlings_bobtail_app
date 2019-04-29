@@ -3,7 +3,7 @@ import {
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [STORAGE_BOXES]: {

@@ -1,6 +1,6 @@
 import {
     WAITING_ROOM_THOUGHTS
-} from '../../../../bubbleKeys'
+} from '../../../keys/bubbles'
 
 const ARRANGEMENTS_MAP = {
     [WAITING_ROOM_THOUGHTS]: {

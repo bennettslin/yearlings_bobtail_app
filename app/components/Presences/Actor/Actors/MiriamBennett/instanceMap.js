@@ -11,9 +11,9 @@ import {
     FENDING_OFF,
     COWGIRL,
     BLOWJOB
-} from 'scene/instanceKeys/miriamBennett'
+} from 'scene/actors/keys/instances/miriamBennett'
 
-import { ASLEEP } from 'scene/instanceKeys/songs'
+import { ASLEEP } from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [ASLEEP]: PropTypes.bool,

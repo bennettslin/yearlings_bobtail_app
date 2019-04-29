@@ -2,7 +2,7 @@ import {
     BASS_CASE_SIDE,
     DRUMS_STACKED_BASEMENT,
     DRUMS_STACKED_CLUB
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [BASS_CASE_SIDE]: {

@@ -2,7 +2,7 @@ import {
     CLIPBOARD,
     PAINTING,
     WAITING_ROOM_PLANT
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [CLIPBOARD]: {

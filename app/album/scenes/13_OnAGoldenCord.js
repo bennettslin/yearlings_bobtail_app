@@ -30,43 +30,43 @@ import {
     WILLY,
     AMY_NESTOR_TOMER,
     STEPHANIE
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
-import { OFFICER } from '../../scene/instanceKeys/amyNestorTomer'
+import { OFFICER } from '../../scene/actors/keys/instances/amyNestorTomer'
 
 import {
     CORD_SIDE,
     CORD_REAR
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     AWKWARD_CONSOLATION
-} from '../../scene/instanceKeys/bennettLiz'
+} from '../../scene/actors/keys/instances/bennettLiz'
 
 import {
     HORSING,
     DRYING_TEARS
-} from '../../scene/instanceKeys/bennettStephanie'
+} from '../../scene/actors/keys/instances/bennettStephanie'
 
 import {
     BENNETT_DEFIANT
-} from '../../scene/instanceKeys/stephanie'
+} from '../../scene/actors/keys/instances/stephanie'
 
-import { CROSSING_GUARD } from '../../scene/instanceKeys/willy'
+import { CROSSING_GUARD } from '../../scene/actors/keys/instances/willy'
 
-import { YOUNG_CHILD } from '../../scene/instanceKeys/songs'
+import { YOUNG_CHILD } from '../../scene/actors/keys/instances/songs'
 
 import {
     OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     TWIN_STREETLAMP_FAR,
     TWIN_STREETLAMP_MIDDLE,
     TWIN_STREETLAMP_NEAR
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     OAKLAND_HOUSE_LEFT,
@@ -88,11 +88,11 @@ import {
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     LIZ_CUSHIONS_THOUGHT
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 export default [
     {

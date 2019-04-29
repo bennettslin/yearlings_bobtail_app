@@ -1,6 +1,6 @@
 import {
     SIDELONG_HESITANCE
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [SIDELONG_HESITANCE]: {

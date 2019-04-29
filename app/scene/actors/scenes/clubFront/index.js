@@ -5,7 +5,7 @@ import {
     ANA,
     TOMER,
     MIRIAM_TRISTAN
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_MARA from './actors/mara'

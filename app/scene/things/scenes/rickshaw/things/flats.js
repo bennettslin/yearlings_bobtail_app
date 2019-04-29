@@ -1,6 +1,6 @@
 import {
     RICKSHAW_TOWN
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [RICKSHAW_TOWN]: {

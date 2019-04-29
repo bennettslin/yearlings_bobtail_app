@@ -1,7 +1,7 @@
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [OAKLAND_HOUSE_LEFT]: {

@@ -4,7 +4,7 @@ import {
     FATHER,
     KHARI_LIZ,
     STEPHANIE
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_MOTHER from './actors/mother'

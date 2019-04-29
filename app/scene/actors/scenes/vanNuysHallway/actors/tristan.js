@@ -1,6 +1,6 @@
 import {
     PRINCIPAL
-} from '../../../../instanceKeys/tristan'
+} from '../../../keys/instances/tristan'
 
 const ARRANGEMENTS_MAP = {
     [PRINCIPAL]: {

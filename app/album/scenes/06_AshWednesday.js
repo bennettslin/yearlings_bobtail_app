@@ -26,11 +26,11 @@ import {
     CATHERINE,
     AMY,
     WADE
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     SMOKER
-} from '../../scene/instanceKeys/amy'
+} from '../../scene/actors/keys/instances/amy'
 
 import {
     BREAKUP_DEJECTED,
@@ -38,21 +38,21 @@ import {
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
     PIOUS
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from '../../scene/instanceKeys/catherine'
+} from '../../scene/actors/keys/instances/catherine'
 
-import { CATHOLIC_GUY } from '../../scene/instanceKeys/wade'
+import { CATHOLIC_GUY } from '../../scene/actors/keys/instances/wade'
 
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     RECYCLABLES,
@@ -64,24 +64,24 @@ import {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE_LEFT,
     UC_BERKELEY_TREE_RIGHT
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     POLICE_ALBUM,
     BENNETT_RECORD_PLAYER_COUCH,
     BENNETT_COUCH_LAMP,
     ASH_CAN
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
     CAMPANILE
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     BENNETT_CUSHIONS
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 export default [
     {

@@ -1,6 +1,6 @@
 import {
     VAN_NUYS_THOUGHT_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [VAN_NUYS_THOUGHT_BACKDROP]: {

@@ -2,7 +2,7 @@ import {
     PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY
-} from '../../../../puppetKeys'
+} from '../../../keys/puppets'
 
 const ARRANGEMENTS_MAP = {
     [PCHELKA_MUSHKA_ROCKET]: {

@@ -3,7 +3,7 @@ import {
     TRASH_CAN_QUAD,
     VAN_NUYS_PLANT_LOCKERS,
     VAN_NUYS_PLANT_QUAD
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [TRASH_CAN_LOCKERS]: {

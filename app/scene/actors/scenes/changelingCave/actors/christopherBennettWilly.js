@@ -1,6 +1,6 @@
 import {
     REASSURING_ENCHANTED
-} from '../../../../instanceKeys/christopherBennettWilly'
+} from '../../../keys/instances/christopherBennettWilly'
 
 const ARRANGEMENTS_MAP = {
     [REASSURING_ENCHANTED]: {

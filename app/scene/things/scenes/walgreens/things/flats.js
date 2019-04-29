@@ -1,6 +1,6 @@
 import {
     PHARMACY_AISLE
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [PHARMACY_AISLE]: {

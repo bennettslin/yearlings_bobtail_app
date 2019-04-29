@@ -6,11 +6,11 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from '../../../../instanceKeys/liz'
+} from '../../../keys/instances/liz'
 
 import {
     LEAVING_CRUMBLED
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [LEAVING_CRUMBLED]: {

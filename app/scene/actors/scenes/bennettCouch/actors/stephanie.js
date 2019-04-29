@@ -1,6 +1,6 @@
 import {
     BENNETT_KEYBOARD
-} from '../../../../instanceKeys/stephanie'
+} from '../../../keys/instances/stephanie'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_KEYBOARD]: {

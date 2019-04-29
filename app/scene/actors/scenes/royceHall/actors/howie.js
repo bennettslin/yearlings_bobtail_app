@@ -1,4 +1,4 @@
-import { ABBEY_ROAD } from '../../../../instanceKeys/songs'
+import { ABBEY_ROAD } from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [ABBEY_ROAD]: {

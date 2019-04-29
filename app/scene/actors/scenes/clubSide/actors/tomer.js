@@ -1,6 +1,6 @@
 import {
     SHANE_SPILLING
-} from '../../../../instanceKeys/tomer'
+} from '../../../keys/instances/tomer'
 
 const ARRANGEMENTS_MAP = {
     [SHANE_SPILLING]: {

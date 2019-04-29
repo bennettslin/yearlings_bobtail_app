@@ -31,59 +31,59 @@ import {
     LIZ,
     MIRIAM,
     AMY
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     DOCTOR
-} from '../../scene/instanceKeys/amy'
+} from '../../scene/actors/keys/instances/amy'
 
 import {
     EL_TORITO,
     GOPI
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from '../../scene/instanceKeys/bennettLiz'
+} from '../../scene/actors/keys/instances/bennettLiz'
 
 import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     INVERSE_THOUGHT_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     WEDDING_CROWD,
     IV_DRIP,
     CLIFF_TREE
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     HOSPITAL_RECORD_PLAYER
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR,
     FOREBODING_TREES
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     HOSPITAL_PILLOW_LOWERED
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     WEDDING_PLATFORM
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 import {
     PUPPET_KHARI_LIZ
-} from '../../scene/puppetKeys'
+} from '../../scene/things/keys/puppets'
 
 export default [
     {

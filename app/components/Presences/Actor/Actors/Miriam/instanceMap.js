@@ -14,12 +14,12 @@ import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from 'scene/instanceKeys/miriam'
+} from 'scene/actors/keys/instances/miriam'
 
 import {
     GOPI,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [INFANT_CURIOUS]: PropTypes.bool,

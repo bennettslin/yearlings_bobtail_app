@@ -1,7 +1,7 @@
 import {
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [PORCH_PLANTS_LEFT]: {

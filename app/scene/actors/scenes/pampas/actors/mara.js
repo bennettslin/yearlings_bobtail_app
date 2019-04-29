@@ -1,6 +1,6 @@
 import {
     GOPI
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [GOPI]: {

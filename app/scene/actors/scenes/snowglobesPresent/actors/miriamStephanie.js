@@ -1,6 +1,6 @@
 import {
     MISCHIEVOUS_BANJO
-} from '../../../../instanceKeys/miriamStephanie'
+} from '../../../keys/instances/miriamStephanie'
 
 const ARRANGEMENTS_MAP = {
     [MISCHIEVOUS_BANJO]: {

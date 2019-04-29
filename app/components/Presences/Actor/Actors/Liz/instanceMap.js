@@ -28,7 +28,7 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from 'scene/instanceKeys/liz'
+} from 'scene/actors/keys/instances/liz'
 
 import {
     DATE_ENDING,
@@ -41,7 +41,7 @@ import {
     RUMPLED_LINENS,
     LEAVING_CRUMBLED,
     EL_TORITO
-} from 'scene/instanceKeys/songs'
+} from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [DATE_ENDING]: PropTypes.bool,

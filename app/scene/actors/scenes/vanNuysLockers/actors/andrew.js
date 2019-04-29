@@ -1,6 +1,6 @@
 import {
     THROWING
-} from '../../../../instanceKeys/andrew'
+} from '../../../keys/instances/andrew'
 
 const ARRANGEMENTS_MAP = {
     [THROWING]: {

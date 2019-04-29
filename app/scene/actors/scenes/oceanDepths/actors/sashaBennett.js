@@ -1,6 +1,6 @@
 import {
     MERMAID
-} from '../../../../instanceKeys/sashaBennett'
+} from '../../../keys/instances/sashaBennett'
 
 const ARRANGEMENTS_MAP = {
     [MERMAID]: {

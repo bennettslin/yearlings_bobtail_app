@@ -3,7 +3,7 @@ import {
     BENNETT_LIZ,
     MIRIAM,
     AMY
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_BENNETT_LIZ from './actors/bennettLiz'

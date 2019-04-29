@@ -7,9 +7,9 @@ import {
     SEASON_INDOOR
 } from '../../scene/sky'
 
-import { OLD_BENNETT } from '../../scene/actorKeys'
+import { OLD_BENNETT } from '../../scene/actors/keys'
 
-import { PROLOGUE } from '../../scene/instanceKeys/songs'
+import { PROLOGUE } from '../../scene/actors/keys/instances/songs'
 
 export default [
     {

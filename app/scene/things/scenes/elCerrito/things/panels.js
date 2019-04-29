@@ -1,7 +1,7 @@
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [REATTA_EXTERIOR]: {

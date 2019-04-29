@@ -2,7 +2,7 @@ import {
     BENNETT,
     ANA_HOWIE,
     TOMER
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_ANA_HOWIE from './actors/anaHowie'

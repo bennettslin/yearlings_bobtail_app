@@ -1,6 +1,6 @@
 import {
     MIRIAM_CUSHIONS
-} from '../../../../furnitureKeys'
+} from '../../../keys/furniture'
 
 const ARRANGEMENTS_MAP = {
     [MIRIAM_CUSHIONS]: {

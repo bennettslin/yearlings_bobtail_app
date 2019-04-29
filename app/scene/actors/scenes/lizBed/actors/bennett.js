@@ -1,7 +1,7 @@
 import {
     REMOVING_SHOES,
     BROKEN_HEARTED
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [REMOVING_SHOES]: {

@@ -1,6 +1,6 @@
 import {
     WISTFUL
-} from '../../../../instanceKeys/preteenBennett'
+} from '../../../keys/instances/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [WISTFUL]: {

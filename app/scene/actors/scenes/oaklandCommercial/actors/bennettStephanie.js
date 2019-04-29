@@ -1,6 +1,6 @@
 import {
     HORSING
-} from '../../../../instanceKeys/bennettStephanie'
+} from '../../../keys/instances/bennettStephanie'
 
 const ARRANGEMENTS_MAP = {
     [HORSING]: {

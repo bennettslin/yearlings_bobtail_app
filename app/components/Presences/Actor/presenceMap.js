@@ -104,7 +104,7 @@ import {
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION
-} from 'scene/actorKeys'
+} from 'scene/actors/keys'
 
 export const propTypes = {
     [YOUNG_BENNETT]: PropTypes.string,

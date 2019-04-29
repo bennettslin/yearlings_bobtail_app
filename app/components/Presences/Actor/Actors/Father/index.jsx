@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
 import LayerHoc from '../../../LayerHoc'
-import { FATHER } from '../../../../../scene/actorKeys'
+import { FATHER } from '../../../../../scene/actors/keys'
 
 const FatherLayer = memo(({ instanceKey }) => {
     return (

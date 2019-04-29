@@ -1,6 +1,6 @@
 import {
     NOOGIE
-} from '../../../../instanceKeys/miriamTristan'
+} from '../../../keys/instances/miriamTristan'
 
 const ARRANGEMENTS_MAP = {
     [NOOGIE]: {

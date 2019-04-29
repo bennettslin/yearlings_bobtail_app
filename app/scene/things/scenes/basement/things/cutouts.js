@@ -1,6 +1,6 @@
 import {
     ELLIOTT_SMITH_POSTER
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [ELLIOTT_SMITH_POSTER]: {

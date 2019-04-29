@@ -1,7 +1,7 @@
 import {
     OVERPASS_SIGN_BACK,
     OVERPASS_SIGN_FRONT
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [OVERPASS_SIGN_BACK]: {

@@ -1,6 +1,6 @@
 import {
     EL_TORITO
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [EL_TORITO]: {

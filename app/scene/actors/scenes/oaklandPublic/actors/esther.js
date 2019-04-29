@@ -1,6 +1,6 @@
 import {
     YOUNG_CHILD
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [YOUNG_CHILD]: {

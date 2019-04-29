@@ -8,7 +8,7 @@ import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
     CARESS
-} from 'scene/instanceKeys/khariLiz'
+} from 'scene/actors/keys/instances/khariLiz'
 
 export const propTypes = {
     [JOKING_LAUGHING]: PropTypes.bool,

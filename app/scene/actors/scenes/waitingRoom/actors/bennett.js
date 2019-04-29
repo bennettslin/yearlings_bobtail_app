@@ -1,6 +1,6 @@
 import {
     WAITING_ROOM_ASLEEP
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [WAITING_ROOM_ASLEEP]: {

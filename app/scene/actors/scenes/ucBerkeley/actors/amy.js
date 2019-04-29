@@ -1,10 +1,10 @@
 import {
     SMOKER
-} from '../../../../instanceKeys/amy'
+} from '../../../keys/instances/amy'
 
 import {
     PROTESTER
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [SMOKER]: {

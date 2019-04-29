@@ -1,7 +1,7 @@
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [CLIFF_GRAVES_FAR]: {

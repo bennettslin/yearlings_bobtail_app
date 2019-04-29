@@ -1,6 +1,6 @@
 import {
     CLIFF_TREE
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [CLIFF_TREE]: {

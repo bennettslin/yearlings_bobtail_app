@@ -1,6 +1,6 @@
 import {
     WAITING
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [WAITING]: {

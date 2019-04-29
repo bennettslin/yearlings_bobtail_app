@@ -1,6 +1,6 @@
 import {
     CROSSING_GUARD
-} from '../../../../instanceKeys/willy'
+} from '../../../keys/instances/willy'
 
 const ARRANGEMENTS_MAP = {
     [CROSSING_GUARD]: {

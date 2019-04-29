@@ -1,6 +1,6 @@
 import {
     BURGER_WRAPPER
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [BURGER_WRAPPER]: {

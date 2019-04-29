@@ -1,6 +1,6 @@
 import {
     DUCKING
-} from '../../../../instanceKeys/willy'
+} from '../../../keys/instances/willy'
 
 const ARRANGEMENTS_MAP = {
     [DUCKING]: {

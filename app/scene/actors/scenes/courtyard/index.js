@@ -1,7 +1,7 @@
 import {
     BENNETT,
     CATHERINE
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_CATHERINE from './actors/catherine'

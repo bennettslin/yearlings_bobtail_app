@@ -1,7 +1,7 @@
 import {
     DATE_ENDING,
     DATE_ENDED
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [DATE_ENDING]: {

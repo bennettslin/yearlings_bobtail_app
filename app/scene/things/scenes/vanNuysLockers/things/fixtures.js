@@ -1,6 +1,6 @@
 import {
     THROWN_FRUIT
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [THROWN_FRUIT]: {

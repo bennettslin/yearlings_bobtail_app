@@ -1,6 +1,6 @@
 import {
     INFIRM
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [INFIRM]: {

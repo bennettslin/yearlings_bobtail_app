@@ -1,7 +1,7 @@
 import {
     COWGIRL,
     BLOWJOB
-} from '../../../../instanceKeys/miriamBennett'
+} from '../../../keys/instances/miriamBennett'
 
 const ARRANGEMENTS_MAP = {
     [COWGIRL]: {

@@ -1,6 +1,6 @@
 import {
     REACHING_REFLECTION
-} from '../../../../instanceKeys/liz'
+} from '../../../keys/instances/liz'
 
 const ARRANGEMENTS_MAP = {
     [REACHING_REFLECTION]: {

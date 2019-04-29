@@ -8,7 +8,7 @@ import {
     TANTRUM,
     SOBBING,
     STARING
-} from 'scene/instanceKeys/christopher'
+} from 'scene/actors/keys/instances/christopher'
 
 export const propTypes = {
     [TANTRUM]: PropTypes.bool,

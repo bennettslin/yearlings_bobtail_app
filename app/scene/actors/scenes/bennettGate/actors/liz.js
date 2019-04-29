@@ -1,6 +1,6 @@
 import {
     GATE_CODE
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [GATE_CODE]: {

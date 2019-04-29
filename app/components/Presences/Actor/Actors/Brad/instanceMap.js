@@ -7,9 +7,9 @@ import Epilogue from './Instances/Epilogue'
 import {
     GESTURING,
     SNACKING
-} from 'scene/instanceKeys/brad'
+} from 'scene/actors/keys/instances/brad'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import { EPILOGUE } from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [GESTURING]: PropTypes.bool,

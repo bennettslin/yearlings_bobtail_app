@@ -2,7 +2,7 @@ import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
-} from '../../../../bubbleKeys'
+} from '../../../keys/bubbles'
 
 const ARRANGEMENTS_MAP = {
     [KHARI_ATTACK_SPEECH]: {

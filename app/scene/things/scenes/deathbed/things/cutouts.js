@@ -1,6 +1,6 @@
 import {
     IV_DRIP
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [IV_DRIP]: {

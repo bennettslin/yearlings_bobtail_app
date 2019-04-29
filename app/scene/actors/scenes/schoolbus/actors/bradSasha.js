@@ -1,6 +1,6 @@
 import {
     CHARMED_SCHOOLBUS
-} from '../../../../instanceKeys/bradSasha'
+} from '../../../keys/instances/bradSasha'
 
 const ARRANGEMENTS_MAP = {
     [CHARMED_SCHOOLBUS]: {

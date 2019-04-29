@@ -1,6 +1,6 @@
 import {
     STATION_WAGON_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [STATION_WAGON_BACKDROP]: {

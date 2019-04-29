@@ -6,7 +6,7 @@ import {
     BENNETT_SHOE_REFLECTION,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [LIZ_PHONE]: {

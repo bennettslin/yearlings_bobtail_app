@@ -1,6 +1,6 @@
 import {
     SHORE_CARNIVAL
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [SHORE_CARNIVAL]: {

@@ -1,6 +1,6 @@
 import {
     PHARMACY_THOUGHT_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [PHARMACY_THOUGHT_BACKDROP]: {

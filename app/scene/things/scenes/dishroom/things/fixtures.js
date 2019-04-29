@@ -4,7 +4,7 @@ import {
     GLASS_CART,
     GLASS_RACK,
     DISH_PILE
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [CONVEYOR_BELT]: {

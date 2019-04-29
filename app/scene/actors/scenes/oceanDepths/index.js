@@ -1,6 +1,6 @@
 import {
     SASHA_BENNETT
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_SASHA_BENNETT from './actors/sashaBennett'
 

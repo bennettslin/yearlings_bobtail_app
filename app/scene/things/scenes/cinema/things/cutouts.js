@@ -2,7 +2,7 @@ import {
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT,
     CINEMA_POSTER_RIGHT_NORMAL
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [CINEMA_POSTER_LEFT]: {

@@ -3,7 +3,7 @@ import {
     PIOUS,
     CAMPUS_ASHAMED,
     DEMONSTRATION
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [CATHOLIC_IDEA]: {

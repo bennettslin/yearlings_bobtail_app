@@ -1,7 +1,7 @@
 import {
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [DEATHBED_THOUGHT_PANEL]: {

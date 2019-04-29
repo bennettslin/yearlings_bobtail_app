@@ -1,7 +1,7 @@
 import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_BOTTOM_MIDDLE]: {

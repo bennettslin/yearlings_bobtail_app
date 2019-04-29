@@ -1,7 +1,7 @@
 import {
     DROPPING_MEATS,
     CORD_SIDE
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [DROPPING_MEATS]: {

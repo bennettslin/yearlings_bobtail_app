@@ -1,4 +1,4 @@
-import { WALGREENS } from '../../../../instanceKeys/songs'
+import { WALGREENS } from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [WALGREENS]: {

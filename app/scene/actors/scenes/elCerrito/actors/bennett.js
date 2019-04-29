@@ -1,7 +1,7 @@
 import {
     REMOVING_PANTS,
     DISPOSING_CONDOM
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [REMOVING_PANTS]: {

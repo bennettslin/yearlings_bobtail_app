@@ -1,6 +1,6 @@
 import {
     RUMPLED_LINENS
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [RUMPLED_LINENS]: {

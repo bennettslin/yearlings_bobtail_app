@@ -2,7 +2,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../../../instanceKeys/bennettLiz'
+} from '../../../keys/instances/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
     [HARD_ON_REFLECTION]: {

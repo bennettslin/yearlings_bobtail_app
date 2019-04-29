@@ -10,12 +10,12 @@ import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from 'scene/instanceKeys/catherine'
+} from 'scene/actors/keys/instances/catherine'
 
 import {
     GOPI,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [WEEPING]: PropTypes.bool,

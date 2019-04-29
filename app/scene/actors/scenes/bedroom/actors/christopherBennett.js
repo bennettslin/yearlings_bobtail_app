@@ -1,6 +1,6 @@
 import {
     BLISSFUL_GUILTY
-} from '../../../../instanceKeys/christopherBennett'
+} from '../../../keys/instances/christopherBennett'
 
 const ARRANGEMENTS_MAP = {
     [BLISSFUL_GUILTY]: {

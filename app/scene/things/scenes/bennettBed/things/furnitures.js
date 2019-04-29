@@ -1,7 +1,7 @@
 import {
     LIGHT_SWITCH,
     BENNETT_PILLOWS
-} from '../../../../furnitureKeys'
+} from '../../../keys/furniture'
 
 const ARRANGEMENTS_MAP = {
     [LIGHT_SWITCH]: {

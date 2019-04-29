@@ -4,7 +4,7 @@ import {
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [SNOWGLOBE_TETHERBALL]: {

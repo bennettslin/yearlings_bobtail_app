@@ -1,6 +1,6 @@
 import {
     PROTESTER
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [PROTESTER]: {

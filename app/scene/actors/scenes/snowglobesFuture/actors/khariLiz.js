@@ -1,6 +1,6 @@
 import {
     JOKING_LAUGHING
-} from '../../../../instanceKeys/khariLiz'
+} from '../../../keys/instances/khariLiz'
 
 const ARRANGEMENTS_MAP = {
     [JOKING_LAUGHING]: {

@@ -3,7 +3,7 @@ import {
     MONITOR_SIDE_STAGE,
     WALL_SPEAKER_SIDE_CROWD,
     WALL_SPEAKER_SIDE_STAGE
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [MONITOR_SIDE_CROWD]: {

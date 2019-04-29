@@ -1,6 +1,6 @@
 import {
     CATHOLIC_PENSIVE
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [CATHOLIC_PENSIVE]: {

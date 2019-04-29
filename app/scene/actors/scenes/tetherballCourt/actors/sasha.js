@@ -1,6 +1,6 @@
 import {
     INDIGNANT
-} from '../../../../instanceKeys/sasha'
+} from '../../../keys/instances/sasha'
 
 const ARRANGEMENTS_MAP = {
     [INDIGNANT]: {

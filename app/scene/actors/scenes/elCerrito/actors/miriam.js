@@ -1,7 +1,7 @@
 import {
     PERFUMING,
     REVERSING
-} from '../../../../instanceKeys/miriam'
+} from '../../../keys/instances/miriam'
 
 const ARRANGEMENTS_MAP = {
     [PERFUMING]: {

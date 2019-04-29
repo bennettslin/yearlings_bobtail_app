@@ -1,7 +1,7 @@
 import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_HOUSE_FAR]: {

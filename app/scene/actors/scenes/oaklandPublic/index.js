@@ -4,7 +4,7 @@ import {
     ANITA,
     ESTHER,
     WILLY
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
 import ARRANGEMENTS_BENNETT_STEPHANIE from './actors/bennettStephanie'

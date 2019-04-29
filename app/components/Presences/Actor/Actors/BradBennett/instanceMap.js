@@ -4,7 +4,7 @@ import TyingTether from './Instances/TyingTether'
 
 import {
     TYING_TETHER
-} from 'scene/instanceKeys/bradBennett'
+} from 'scene/actors/keys/instances/bradBennett'
 
 export const propTypes = {
     [TYING_TETHER]: PropTypes.bool

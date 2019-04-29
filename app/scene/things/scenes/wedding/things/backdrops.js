@@ -1,6 +1,6 @@
 import {
     WEDDING_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [WEDDING_BACKDROP]: {

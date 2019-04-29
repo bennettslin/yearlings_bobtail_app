@@ -1,7 +1,7 @@
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [EL_CERRITO_FAR]: {

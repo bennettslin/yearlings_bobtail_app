@@ -1,6 +1,6 @@
 import {
     FOREBODING_TREES
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [FOREBODING_TREES]: {

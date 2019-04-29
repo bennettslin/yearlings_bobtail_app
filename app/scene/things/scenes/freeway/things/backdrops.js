@@ -1,6 +1,6 @@
 import {
     VALLEY_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [VALLEY_BACKDROP]: {

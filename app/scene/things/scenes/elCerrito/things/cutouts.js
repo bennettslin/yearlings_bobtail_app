@@ -1,6 +1,6 @@
 import {
     EL_CERRITO_TREE
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [EL_CERRITO_TREE]: {

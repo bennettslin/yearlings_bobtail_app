@@ -3,7 +3,7 @@ import {
     MOTHER,
     CHRISTOPHER,
     TRISTAN
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import ARRANGEMENTS_MOTHER from './actors/mother'

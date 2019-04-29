@@ -1,6 +1,6 @@
 import {
     PROTECTIVE_CONCERNED
-} from '../../../../instanceKeys/khariLiz'
+} from '../../../keys/instances/khariLiz'
 
 const ARRANGEMENTS_MAP = {
     [PROTECTIVE_CONCERNED]: {

@@ -7,9 +7,9 @@ import Epilogue from './Instances/Epilogue'
 import {
     PRINCIPAL,
     PUNCHING
-} from 'scene/instanceKeys/tristan'
+} from 'scene/actors/keys/instances/tristan'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import { EPILOGUE } from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [PRINCIPAL]: PropTypes.bool,

@@ -2,7 +2,7 @@ import {
     BENNETT,
     MIRIAM_TRISTAN,
     NESTOR
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_MIRIAM_TRISTAN from './actors/miriamTristan'

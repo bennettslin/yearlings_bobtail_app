@@ -1,6 +1,6 @@
 import {
     TAIWAN_STAIRS_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_STAIRS_BACKDROP]: {

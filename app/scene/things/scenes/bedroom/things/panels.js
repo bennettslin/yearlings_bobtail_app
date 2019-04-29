@@ -1,6 +1,6 @@
 import {
     CAPTAIN_BED_DRAWERS
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [CAPTAIN_BED_DRAWERS]: {

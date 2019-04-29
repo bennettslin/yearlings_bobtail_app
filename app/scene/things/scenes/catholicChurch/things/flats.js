@@ -1,7 +1,7 @@
 import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [ST_JOSEPHS_ANNEX]: {

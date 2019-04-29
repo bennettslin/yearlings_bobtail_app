@@ -1,6 +1,6 @@
 import {
     ROAD_PRESENT
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [ROAD_PRESENT]: {

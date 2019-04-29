@@ -1,7 +1,7 @@
 import {
     LIZ_CUSHIONS,
     LIZ_CUSHIONS_THOUGHT
-} from '../../../../furnitureKeys'
+} from '../../../keys/furniture'
 
 const ARRANGEMENTS_MAP = {
     [LIZ_CUSHIONS]: {

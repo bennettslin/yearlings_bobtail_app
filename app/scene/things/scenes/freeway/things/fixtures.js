@@ -1,6 +1,6 @@
 import {
     SHOPPING_CART
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [SHOPPING_CART]: {

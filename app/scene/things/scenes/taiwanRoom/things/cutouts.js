@@ -3,7 +3,7 @@ import {
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [BUDDHA_SHRINE]: {

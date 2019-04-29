@@ -1,7 +1,7 @@
 import {
     GO_KART_LEFT_EXTERIOR,
     GO_KART_RIGHT_EXTERIOR
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_LEFT_EXTERIOR]: {

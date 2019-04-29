@@ -1,7 +1,7 @@
 import {
     PRETEEN_BENNETT,
     BRAD_SASHA
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 import ARRANGEMENTS_BRAD_SASHA from './actors/bradSasha'

@@ -1,6 +1,6 @@
 import {
     CAMPANILE
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [CAMPANILE]: {

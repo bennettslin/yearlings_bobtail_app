@@ -120,7 +120,7 @@ import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR
-} from 'scene/flatKeys'
+} from 'scene/things/keys/flats'
 
 export const propTypes = {
     [NOHO_HOUSE_LEFT]: PropTypes.bool,

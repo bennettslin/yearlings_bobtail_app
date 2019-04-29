@@ -12,7 +12,7 @@ import {
     WAITING,
     GOPI,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [FLIRTING]: PropTypes.bool,

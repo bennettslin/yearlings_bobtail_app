@@ -4,7 +4,7 @@ import Squeezing from './Instances/Squeezing'
 
 import {
     SQUEEZING
-} from 'scene/instanceKeys/amyStephanie'
+} from 'scene/actors/keys/instances/amyStephanie'
 
 export const propTypes = {
     [SQUEEZING]: PropTypes.bool

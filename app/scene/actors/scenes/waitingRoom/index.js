@@ -1,7 +1,7 @@
 import {
     BENNETT,
     BENNETT_LIZ
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_BENNETT_LIZ from './actors/bennettLiz'

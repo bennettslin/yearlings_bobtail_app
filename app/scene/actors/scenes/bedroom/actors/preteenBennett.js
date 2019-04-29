@@ -3,9 +3,9 @@ import {
     FEARFUL,
     FEIGNING_SICK,
     SHAKEN
-} from '../../../../instanceKeys/preteenBennett'
+} from '../../../keys/instances/preteenBennett'
 
-import { ASLEEP } from '../../../../instanceKeys/songs'
+import { ASLEEP } from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [ENRAGED]: {

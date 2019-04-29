@@ -1,6 +1,6 @@
 import {
     OCEAN_FLOOR
-} from '../../../../instanceKeys/preteenBennett'
+} from '../../../keys/instances/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_FLOOR]: {

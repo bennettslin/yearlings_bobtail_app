@@ -1,6 +1,6 @@
 import {
     GO_KART_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_BACKDROP]: {

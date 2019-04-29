@@ -1,6 +1,6 @@
 import {
     BENNETT_RECORDING
-} from '../../../../instanceKeys/stephanie'
+} from '../../../keys/instances/stephanie'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_RECORDING]: {

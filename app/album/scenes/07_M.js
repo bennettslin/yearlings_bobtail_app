@@ -30,11 +30,11 @@ import {
     TOMER,
     MIRIAM,
     STEPHANIE
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     SQUATTING
-} from '../../scene/instanceKeys/ana'
+} from '../../scene/actors/keys/instances/ana'
 
 import {
     PONDERING,
@@ -44,34 +44,34 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from '../../scene/instanceKeys/howie'
+} from '../../scene/actors/keys/instances/howie'
 
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
-} from '../../scene/instanceKeys/miriam'
+} from '../../scene/actors/keys/instances/miriam'
 
-import { BENNETT_KEYBOARD } from '../../scene/instanceKeys/stephanie'
+import { BENNETT_KEYBOARD } from '../../scene/actors/keys/instances/stephanie'
 
-import { SHANE_BUYING } from '../../scene/instanceKeys/tomer'
+import { SHANE_BUYING } from '../../scene/actors/keys/instances/tomer'
 
 import {
     FLIRTING,
     EATING
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     OAKLAND_FRONT_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     CINEMA_THOUGHTS
-} from '../../scene/bubbleKeys'
+} from '../../scene/things/keys/bubbles'
 
 import {
     LEONARD_COHEN_POSTER,
@@ -84,7 +84,7 @@ import {
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT,
     CINEMA_POSTER_RIGHT_NORMAL
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     BENNETT_RECORD_PLAYER_COUCH,
@@ -101,14 +101,14 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 export default [
     {

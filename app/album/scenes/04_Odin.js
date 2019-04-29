@@ -28,7 +28,7 @@ import {
 import {
     PRETEEN_BENNETT,
     SASHA_BENNETT
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     MAT,
@@ -38,9 +38,9 @@ import {
     SHORE,
     BUOY,
     OCEAN_FLOOR
-} from '../../scene/instanceKeys/preteenBennett'
+} from '../../scene/actors/keys/instances/preteenBennett'
 
-import { MERMAID } from '../../scene/instanceKeys/sashaBennett'
+import { MERMAID } from '../../scene/actors/keys/instances/sashaBennett'
 
 import {
     TAIWAN_STAIRS_BACKDROP,
@@ -49,7 +49,7 @@ import {
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     BUDDHA_SHRINE,
@@ -69,11 +69,11 @@ import {
     ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     FRIDGE_DRAWINGS
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     TAIWAN_HOUSE_FAR,
@@ -82,17 +82,17 @@ import {
     SHORE_CARNIVAL,
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     TAIWAN_PILLOW,
     BUOY_FLOAT
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 export default [
     {

@@ -45,7 +45,7 @@ import {
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
     WEDDING_PLATFORM
-} from 'scene/panelKeys'
+} from 'scene/things/keys/panels'
 
 export const propTypes = {
     [ESTHER_SPEECH_PANEL]: PropTypes.bool,

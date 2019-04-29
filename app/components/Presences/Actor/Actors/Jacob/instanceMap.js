@@ -8,7 +8,7 @@ import {
     FLIRTING,
     CARRYING,
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [CARRYING]: PropTypes.bool,

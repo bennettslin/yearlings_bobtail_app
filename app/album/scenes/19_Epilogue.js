@@ -30,9 +30,9 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
-import { EPILOGUE } from '../../scene/instanceKeys/songs'
+import { EPILOGUE } from '../../scene/actors/keys/instances/songs'
 
 export default [
     {

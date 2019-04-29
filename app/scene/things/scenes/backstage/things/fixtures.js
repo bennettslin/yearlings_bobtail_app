@@ -3,7 +3,7 @@ import {
     PUSH_BROOM_TUNNEL,
     STEPLADDER,
     MANNEQUIN
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [PUSH_BROOM_BACKSTAGE]: {

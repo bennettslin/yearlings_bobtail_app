@@ -32,7 +32,7 @@ import {
     STEPHANIE,
     WADE,
     KHARI_LIZ_REFLECTION
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     CAMPUS_ASHAMED,
@@ -40,22 +40,22 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION
-} from '../../scene/instanceKeys/khariLiz'
+} from '../../scene/actors/keys/instances/khariLiz'
 
 import {
     GREETING,
     PROTESTER
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     UC_BERKELEY_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     SIGNPOST,
@@ -65,7 +65,7 @@ import {
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
     DUMPSTER
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     ASH_CAN,
@@ -73,29 +73,29 @@ import {
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     CAMPANILE,
     CROWD_BACK_NEAR,
     CROWD_BACK_FAR
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     PHONE_CALL_PANEL
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION
-} from '../../scene/puppetKeys'
+} from '../../scene/things/keys/puppets'
 
 export default [
     {

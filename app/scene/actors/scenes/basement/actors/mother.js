@@ -1,7 +1,7 @@
 import {
     CONSOLING,
     SHIELDING
-} from '../../../../instanceKeys/mother'
+} from '../../../keys/instances/mother'
 
 const ARRANGEMENTS_MAP = {
     [CONSOLING]: {

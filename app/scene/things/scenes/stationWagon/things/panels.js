@@ -1,7 +1,7 @@
 import {
     SATURN_INTERIOR,
     SATURN_EXTERIOR
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [SATURN_INTERIOR]: {

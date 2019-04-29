@@ -1,6 +1,6 @@
 import {
     DOCTOR
-} from '../../../../instanceKeys/amy'
+} from '../../../keys/instances/amy'
 
 const ARRANGEMENTS_MAP = {
     [DOCTOR]: {

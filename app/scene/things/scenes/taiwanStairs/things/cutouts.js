@@ -1,7 +1,7 @@
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_TAIWAN_GATE]: {

@@ -1,6 +1,6 @@
 import {
     CAUTIOUS
-} from '../../../../instanceKeys/preteenBennett'
+} from '../../../keys/instances/preteenBennett'
 
 const ARRANGEMENTS_MAP = {
     [CAUTIOUS]: {

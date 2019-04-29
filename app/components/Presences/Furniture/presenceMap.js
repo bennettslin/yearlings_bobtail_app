@@ -31,7 +31,7 @@ import {
     MIRIAM_CUSHIONS,
     HOSPITAL_PILLOW,
     HOSPITAL_PILLOW_LOWERED
-} from 'scene/furnitureKeys'
+} from 'scene/things/keys/furniture'
 
 export const propTypes = {
     [BEDROOM_DESK]: PropTypes.bool,

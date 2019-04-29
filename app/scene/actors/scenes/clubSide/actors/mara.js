@@ -1,6 +1,6 @@
 import {
     CARRYING
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [CARRYING]: {

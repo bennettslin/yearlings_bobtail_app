@@ -22,7 +22,7 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETTS_CHRISTOPHER_LIZ from './actors/bennettsChristopherLiz'
 import ARRANGEMENTS_OLD_BENNETT from './actors/oldBennett'

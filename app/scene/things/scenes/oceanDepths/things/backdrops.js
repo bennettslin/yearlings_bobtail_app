@@ -1,6 +1,6 @@
 import {
     OCEAN_BOTTOM_FAR
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [OCEAN_BOTTOM_FAR]: {

@@ -1,6 +1,6 @@
 import {
     CLIFF
-} from '../../../../instanceKeys/bennettLiz'
+} from '../../../keys/instances/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
     [CLIFF]: {

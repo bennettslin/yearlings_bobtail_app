@@ -1,7 +1,7 @@
 import {
     TARPIT_THOUGHT,
     SIBLING_THOUGHT
-} from '../../../../bubbleKeys'
+} from '../../../keys/bubbles'
 
 const ARRANGEMENTS_MAP = {
     [TARPIT_THOUGHT]: {

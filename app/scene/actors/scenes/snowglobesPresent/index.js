@@ -2,7 +2,7 @@ import {
     BENNETT_FATHER,
     MOTHER,
     MIRIAM_STEPHANIE
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT_FATHER from './actors/bennettFather'
 import ARRANGEMENTS_MOTHER from './actors/mother'

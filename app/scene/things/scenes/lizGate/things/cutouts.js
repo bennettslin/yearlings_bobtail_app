@@ -1,6 +1,6 @@
 import {
     TRAFFIC_LIGHT
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [TRAFFIC_LIGHT]: {

@@ -1,7 +1,7 @@
 import {
     TINTIN_POSTER,
     BLOOM_COUNTY_POSTER
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [TINTIN_POSTER]: {

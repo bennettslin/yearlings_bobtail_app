@@ -1,6 +1,6 @@
 import {
     SCHOOLBUS_THOUGHT_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [SCHOOLBUS_THOUGHT_BACKDROP]: {

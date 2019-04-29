@@ -1,6 +1,6 @@
 import {
     POPULAR_GIRL
-} from '../../../../instanceKeys/sasha'
+} from '../../../keys/instances/sasha'
 
 const ARRANGEMENTS_MAP = {
     [POPULAR_GIRL]: {

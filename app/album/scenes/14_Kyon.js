@@ -22,13 +22,13 @@ import {
 import {
     LIZ,
     KHARI
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from '../../scene/instanceKeys/khari'
+} from '../../scene/actors/keys/instances/khari'
 
 import {
     PETTING_SEATED,
@@ -38,21 +38,21 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from '../../scene/instanceKeys/liz'
+} from '../../scene/actors/keys/instances/liz'
 
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
-} from '../../scene/bubbleKeys'
+} from '../../scene/things/keys/bubbles'
 
 import {
     TCHOTCHKES
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     LIZ_CUSHIONS
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     OPAL_LAP,
@@ -61,7 +61,7 @@ import {
     OPAL_LICKING,
     PEAHEN,
     PEACOCK
-} from '../../scene/puppetKeys'
+} from '../../scene/things/keys/puppets'
 
 export default [
     {

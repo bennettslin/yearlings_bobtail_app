@@ -1,6 +1,6 @@
 import {
     ASH_CAN
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [ASH_CAN]: {

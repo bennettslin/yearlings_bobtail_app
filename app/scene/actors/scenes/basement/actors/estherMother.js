@@ -1,7 +1,7 @@
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from '../../../../instanceKeys/estherMother'
+} from '../../../keys/instances/estherMother'
 
 const ARRANGEMENTS_MAP = {
     [HURT_CONSOLING]: {

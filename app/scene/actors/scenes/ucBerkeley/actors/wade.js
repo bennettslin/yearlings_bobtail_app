@@ -1,10 +1,10 @@
 import {
     CATHOLIC_GUY
-} from '../../../../instanceKeys/wade'
+} from '../../../keys/instances/wade'
 
 import {
     PROTESTER
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [CATHOLIC_GUY]: {

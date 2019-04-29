@@ -11,11 +11,11 @@ import {
     FLUSTERED,
     BATHING,
     SINGING
-} from 'scene/instanceKeys/youngBennett'
+} from 'scene/actors/keys/instances/youngBennett'
 
 import {
     YOUNG_CHILD
-} from 'scene/instanceKeys/songs'
+} from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [PANICKED]: PropTypes.bool,

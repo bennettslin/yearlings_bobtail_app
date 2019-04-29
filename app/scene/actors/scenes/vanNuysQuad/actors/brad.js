@@ -1,6 +1,6 @@
 import {
     SNACKING
-} from '../../../../instanceKeys/brad'
+} from '../../../keys/instances/brad'
 
 const ARRANGEMENTS_MAP = {
     [SNACKING]: {

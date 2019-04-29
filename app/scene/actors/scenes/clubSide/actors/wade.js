@@ -1,6 +1,6 @@
 import {
     WATCHING
-} from '../../../../instanceKeys/wade'
+} from '../../../keys/instances/wade'
 
 const ARRANGEMENTS_MAP = {
     [WATCHING]: {

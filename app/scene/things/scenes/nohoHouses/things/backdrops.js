@@ -1,6 +1,6 @@
 import {
     NOHO_HOUSES_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [NOHO_HOUSES_BACKDROP]: {

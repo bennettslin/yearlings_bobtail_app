@@ -1,7 +1,7 @@
 import {
     VAN_NUYS_SCHOOLHOUSE_LEFT,
     VAN_NUYS_SCHOOLHOUSE_RIGHT
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [VAN_NUYS_SCHOOLHOUSE_LEFT]: {

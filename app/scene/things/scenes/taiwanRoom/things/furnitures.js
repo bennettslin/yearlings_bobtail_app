@@ -1,6 +1,6 @@
 import {
     TAIWAN_PILLOW
-} from '../../../../furnitureKeys'
+} from '../../../keys/furniture'
 
 const ARRANGEMENTS_MAP = {
     [TAIWAN_PILLOW]: {

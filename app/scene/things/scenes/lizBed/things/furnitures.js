@@ -1,7 +1,7 @@
 import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
-} from '../../../../furnitureKeys'
+} from '../../../keys/furniture'
 
 const ARRANGEMENTS_MAP = {
     [LIZ_PILLOWS]: {

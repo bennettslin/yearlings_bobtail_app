@@ -1,10 +1,10 @@
 import {
     MOP_SOPPED
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 import {
     GATE_CODE
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [MOP_SOPPED]: {

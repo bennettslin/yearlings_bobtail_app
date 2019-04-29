@@ -1,6 +1,6 @@
 import {
     BATHTUB
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [BATHTUB]: {

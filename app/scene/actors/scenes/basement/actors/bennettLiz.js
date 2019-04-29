@@ -1,6 +1,6 @@
 import {
     CELIBATE_FREEZING
-} from '../../../../instanceKeys/bennettLiz'
+} from '../../../keys/instances/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
     [CELIBATE_FREEZING]: {

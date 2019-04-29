@@ -1,7 +1,7 @@
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
-} from '../../../../instanceKeys/miriam'
+} from '../../../keys/instances/miriam'
 
 const ARRANGEMENTS_MAP = {
     [INFANT_CURIOUS]: {

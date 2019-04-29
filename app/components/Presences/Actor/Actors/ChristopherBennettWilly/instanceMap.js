@@ -4,7 +4,7 @@ import ReassuringEnchanted from './Instances/ReassuringEnchanted'
 
 import {
     REASSURING_ENCHANTED
-} from 'scene/instanceKeys/christopherBennettWilly'
+} from 'scene/actors/keys/instances/christopherBennettWilly'
 
 export const propTypes = {
     [REASSURING_ENCHANTED]: PropTypes.bool

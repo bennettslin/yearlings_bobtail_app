@@ -1,6 +1,6 @@
 import {
     GRAVESTONE
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [GRAVESTONE]: {

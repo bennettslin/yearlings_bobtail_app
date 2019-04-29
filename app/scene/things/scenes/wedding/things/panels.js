@@ -1,6 +1,6 @@
 import {
     WEDDING_PLATFORM
-} from '../../../../panelKeys'
+} from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
     [WEDDING_PLATFORM]: {

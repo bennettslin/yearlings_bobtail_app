@@ -1,7 +1,7 @@
 import {
     BRUSH_OFF,
     AWKWARD_CONSOLATION
-} from '../../../../instanceKeys/bennettLiz'
+} from '../../../keys/instances/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
     [BRUSH_OFF]: {

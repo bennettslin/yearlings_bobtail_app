@@ -8,7 +8,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from 'scene/instanceKeys/bennettLiz'
+} from 'scene/actors/keys/instances/bennettLiz'
 
 export const propTypes = {
     [HARD_ON_REFLECTION]: PropTypes.bool,

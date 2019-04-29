@@ -32,26 +32,26 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from '../../scene/instanceKeys/liz'
+} from '../../scene/actors/keys/instances/liz'
 
-import { SHANE_SPILLING } from '../../scene/instanceKeys/tomer'
+import { SHANE_SPILLING } from '../../scene/actors/keys/instances/tomer'
 
-import { WATCHING } from '../../scene/instanceKeys/wade'
+import { WATCHING } from '../../scene/actors/keys/instances/wade'
 
 import {
     SQUEEZING
-} from '../../scene/instanceKeys/amyStephanie'
+} from '../../scene/actors/keys/instances/amyStephanie'
 
 import {
     PERFORMING,
@@ -59,14 +59,14 @@ import {
     CARRYING,
     MINGLING,
     WAITING
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     MONITOR_SIDE_CROWD,
     MONITOR_SIDE_STAGE,
     WALL_SPEAKER_SIDE_CROWD,
     WALL_SPEAKER_SIDE_STAGE
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     STAGE_MIC_SIDE,
@@ -78,17 +78,17 @@ import {
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     CROWD_SIDE_FAR,
     CROWD_SIDE_NEAR
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 export default [
     {

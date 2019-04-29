@@ -1,4 +1,4 @@
-import { PRETEEN_BENNETT } from '../../../actorKeys'
+import { PRETEEN_BENNETT } from '../../keys'
 
 import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
 

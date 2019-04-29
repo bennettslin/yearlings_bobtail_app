@@ -1,7 +1,7 @@
 import {
     GARBAGE_BAG,
     SHOPPING_CART_FULL
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [GARBAGE_BAG]: {

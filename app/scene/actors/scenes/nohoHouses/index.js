@@ -4,7 +4,7 @@ import {
     ESTHER,
     HOWIE_WILLY,
     TOMER
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
 import ARRANGEMENTS_ANITA from './actors/anita'

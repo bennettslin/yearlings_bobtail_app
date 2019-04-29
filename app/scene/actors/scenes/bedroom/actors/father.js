@@ -1,6 +1,6 @@
 import {
     ROARING
-} from '../../../../instanceKeys/father'
+} from '../../../keys/instances/father'
 
 const ARRANGEMENTS_MAP = {
     [ROARING]: {

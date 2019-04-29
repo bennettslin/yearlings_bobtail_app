@@ -64,7 +64,7 @@ import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     INVERSE_THOUGHT_BACKDROP
-} from 'scene/backdropKeys'
+} from 'scene/things/keys/backdrops'
 
 export const propTypes = {
     [NOHO_HOUSES_BACKDROP]: PropTypes.bool,

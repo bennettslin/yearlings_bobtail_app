@@ -4,7 +4,7 @@ import BlissfulGuilty from './Instances/BlissfulGuilty'
 
 import {
     BLISSFUL_GUILTY
-} from 'scene/instanceKeys/christopherBennett'
+} from 'scene/actors/keys/instances/christopherBennett'
 
 export const propTypes = {
     [BLISSFUL_GUILTY]: PropTypes.bool

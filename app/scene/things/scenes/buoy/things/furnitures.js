@@ -1,6 +1,6 @@
 import {
     BUOY_FLOAT
-} from '../../../../furnitureKeys'
+} from '../../../keys/furniture'
 
 const ARRANGEMENTS_MAP = {
     [BUOY_FLOAT]: {

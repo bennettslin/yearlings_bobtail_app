@@ -1,6 +1,6 @@
 import {
     SOBBING
-} from '../../../../instanceKeys/christopher'
+} from '../../../keys/instances/christopher'
 
 const ARRANGEMENTS_MAP = {
     [SOBBING]: {

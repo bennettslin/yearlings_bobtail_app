@@ -2,7 +2,7 @@ import {
     HARD_ON,
     MISSIONARY,
     AFTERGLOW
-} from '../../../../instanceKeys/bennettLiz'
+} from '../../../keys/instances/bennettLiz'
 
 const ARRANGEMENTS_MAP = {
     [HARD_ON]: {

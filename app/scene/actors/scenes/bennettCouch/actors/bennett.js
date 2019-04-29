@@ -3,7 +3,7 @@ import {
     PONDERING,
     COUCH_READING,
     RUBIKS_CUBE
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 const ARRANGEMENTS_MAP = {
     [SOLICITING_OPINION]: {

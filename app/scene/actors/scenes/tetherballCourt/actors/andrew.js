@@ -1,6 +1,6 @@
 import {
     FEIGNING_FEAR
-} from '../../../../instanceKeys/andrew'
+} from '../../../keys/instances/andrew'
 
 const ARRANGEMENTS_MAP = {
     [FEIGNING_FEAR]: {

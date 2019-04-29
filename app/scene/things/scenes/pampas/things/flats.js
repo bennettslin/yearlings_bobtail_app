@@ -1,6 +1,6 @@
 import {
     PAMPAS_FAR
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [PAMPAS_FAR]: {

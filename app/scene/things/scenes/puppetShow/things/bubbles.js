@@ -1,7 +1,7 @@
 import {
     TOGETHER_SKETCHBOOK,
     APART_SKETCHBOOK
-} from '../../../../bubbleKeys'
+} from '../../../keys/bubbles'
 
 const ARRANGEMENTS_MAP = {
     [TOGETHER_SKETCHBOOK]: {

@@ -1,6 +1,6 @@
 import {
     STOOPING
-} from '../../../../instanceKeys/mother'
+} from '../../../keys/instances/mother'
 
 const ARRANGEMENTS_MAP = {
     [STOOPING]: {

@@ -28,34 +28,34 @@ import {
     MIRIAM_TRISTAN,
     TRISTAN,
     NESTOR
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     CHUCKLING,
     SMIRKING
-} from '../../scene/instanceKeys/ana'
+} from '../../scene/actors/keys/instances/ana'
 
 import {
     DROPPING_MEATS
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     BRUSH_OFF,
     CELIBATE_FREEZING
-} from '../../scene/instanceKeys/bennettLiz'
+} from '../../scene/actors/keys/instances/bennettLiz'
 
-import { NOOGIE } from '../../scene/instanceKeys/miriamTristan'
-import { INJURED } from '../../scene/instanceKeys/nestor'
-import { PUNCHING } from '../../scene/instanceKeys/tristan'
+import { NOOGIE } from '../../scene/actors/keys/instances/miriamTristan'
+import { INJURED } from '../../scene/actors/keys/instances/nestor'
+import { PUNCHING } from '../../scene/actors/keys/instances/tristan'
 
 import {
     GREETING,
     LEAVING_CRUMBLED
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     OAKLAND_SIDE_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     ELLIOTT_SMITH_POSTER,
@@ -63,28 +63,28 @@ import {
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     GUITAR,
     DRUMKIT,
     BENNETT_RECORD_PLAYER_BASEMENT,
     NAS_ALBUM
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     LIZ_CUSHIONS,
     BENNETT_PILLOWS
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     VOLKSWAGEN
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 export default [
     {

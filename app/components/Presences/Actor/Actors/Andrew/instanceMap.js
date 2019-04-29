@@ -9,9 +9,9 @@ import {
     FEIGNING_FEAR,
     THROWING,
     NOODLING
-} from 'scene/instanceKeys/andrew'
+} from 'scene/actors/keys/instances/andrew'
 
-import { EPILOGUE } from 'scene/instanceKeys/songs'
+import { EPILOGUE } from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [FEIGNING_FEAR]: PropTypes.bool,

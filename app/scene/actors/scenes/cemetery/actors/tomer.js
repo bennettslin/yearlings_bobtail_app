@@ -1,4 +1,4 @@
-import { CEMETERY } from '../../../../instanceKeys/songs'
+import { CEMETERY } from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [CEMETERY]: {

@@ -1,6 +1,6 @@
 import {
     EVIAN_BOTTLES
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [EVIAN_BOTTLES]: {

@@ -1,7 +1,7 @@
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [NOHO_HOUSE_LEFT]: {

@@ -1,7 +1,7 @@
 import {
     HOSPITAL_PILLOW,
     HOSPITAL_PILLOW_LOWERED
-} from '../../../../furnitureKeys'
+} from '../../../keys/furniture'
 
 const ARRANGEMENTS_MAP = {
     [HOSPITAL_PILLOW]: {

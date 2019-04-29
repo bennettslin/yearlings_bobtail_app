@@ -1,7 +1,7 @@
 import {
     BENNETT_MAT,
     ODIN_MAT
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [BENNETT_MAT]: {

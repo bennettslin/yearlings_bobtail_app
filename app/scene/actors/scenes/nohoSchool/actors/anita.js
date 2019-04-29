@@ -1,6 +1,6 @@
 import {
     CONCERNED
-} from '../../../../instanceKeys/anita'
+} from '../../../keys/instances/anita'
 
 const ARRANGEMENTS_MAP = {
     [CONCERNED]: {

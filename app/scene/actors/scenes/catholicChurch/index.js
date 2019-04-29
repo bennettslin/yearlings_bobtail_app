@@ -1,6 +1,6 @@
 import {
     BENNETT
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 

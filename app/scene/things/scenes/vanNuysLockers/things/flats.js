@@ -1,6 +1,6 @@
 import {
     LOCKER_BANK
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [LOCKER_BANK]: {

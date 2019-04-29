@@ -1,6 +1,6 @@
 import {
     GO_KART_THOUGHT
-} from '../../../../bubbleKeys'
+} from '../../../keys/bubbles'
 
 const ARRANGEMENTS_MAP = {
     [GO_KART_THOUGHT]: {

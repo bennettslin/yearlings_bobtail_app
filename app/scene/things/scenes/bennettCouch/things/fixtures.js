@@ -5,7 +5,7 @@ import {
     BENNETT_COUCH_LAMP,
     TELEVISION_ALBUM,
     KEYBOARD
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [POLICE_ALBUM]: {

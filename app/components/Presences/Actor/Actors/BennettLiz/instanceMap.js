@@ -26,7 +26,7 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from 'scene/instanceKeys/bennettLiz'
+} from 'scene/actors/keys/instances/bennettLiz'
 
 export const propTypes = {
     [GINGERBREAD_PRISON]: PropTypes.bool,

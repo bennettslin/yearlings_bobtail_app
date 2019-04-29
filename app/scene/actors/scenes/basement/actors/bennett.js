@@ -1,11 +1,11 @@
 import {
     WAKENED_FEARFUL,
     SEEKING_PROTECTION
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 import {
     EATING
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [EATING]: {

@@ -26,31 +26,31 @@ import {
     ANDREW,
     BRAD_BENNETT,
     BRAD_SASHA
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
-import { FEIGNING_FEAR } from '../../scene/instanceKeys/andrew'
-import { TYING_TETHER } from '../../scene/instanceKeys/bradBennett'
-import { CHARMED_SCHOOLBUS } from '../../scene/instanceKeys/bradSasha'
-import { PANICKED } from '../../scene/instanceKeys/preteenBennett'
-import { INDIGNANT } from '../../scene/instanceKeys/sasha'
+import { FEIGNING_FEAR } from '../../scene/actors/keys/instances/andrew'
+import { TYING_TETHER } from '../../scene/actors/keys/instances/bradBennett'
+import { CHARMED_SCHOOLBUS } from '../../scene/actors/keys/instances/bradSasha'
+import { PANICKED } from '../../scene/actors/keys/instances/preteenBennett'
+import { INDIGNANT } from '../../scene/actors/keys/instances/sasha'
 
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     TOGETHER_SKETCHBOOK,
     APART_SKETCHBOOK
-} from '../../scene/bubbleKeys'
+} from '../../scene/things/keys/bubbles'
 
 import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY,
     TETHERBALL_POLE
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     TAIWAN_CLOUDS,
@@ -60,12 +60,12 @@ import {
     TAIWAN_MOUNTAIN_RIGHT,
     VAN_NUYS_SCHOOLHOUSE_LEFT,
     VAN_NUYS_SCHOOLHOUSE_RIGHT
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 import {
     PUPPET_BENNETT_BEGIN,
@@ -74,7 +74,7 @@ import {
     PUPPET_FAMILY_MIDDLE,
     PUPPET_BENNETT_END,
     PUPPET_FAMILY_END
-} from '../../scene/puppetKeys'
+} from '../../scene/things/keys/puppets'
 
 export default [
     {

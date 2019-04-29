@@ -1,6 +1,6 @@
 import {
     CAVEMAN_BONES
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [CAVEMAN_BONES]: {

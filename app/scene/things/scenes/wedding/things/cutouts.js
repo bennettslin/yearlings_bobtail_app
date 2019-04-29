@@ -1,6 +1,6 @@
 import {
     WEDDING_CROWD
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [WEDDING_CROWD]: {

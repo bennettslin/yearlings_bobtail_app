@@ -1,6 +1,6 @@
 import {
     PUZZLED
-} from '../../../../instanceKeys/catherine'
+} from '../../../keys/instances/catherine'
 
 const ARRANGEMENTS_MAP = {
     [PUZZLED]: {

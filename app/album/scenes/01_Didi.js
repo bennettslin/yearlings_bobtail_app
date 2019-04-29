@@ -27,55 +27,55 @@ import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
     SINGING
-} from '../../scene/instanceKeys/youngBennett'
+} from '../../scene/actors/keys/instances/youngBennett'
 
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from '../../scene/instanceKeys/anita'
+} from '../../scene/actors/keys/instances/anita'
 
 import {
     CURIOUS,
     SNICKERING
-} from '../../scene/instanceKeys/esther'
+} from '../../scene/actors/keys/instances/esther'
 
 import {
     NOHO_HOUSES_BACKDROP,
     NOHO_SCHOOL_BACKDROP
-} from '../../scene/backdropKeys'
+} from '../../scene/things/keys/backdrops'
 
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
     TOWEL_RACK
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL,
     JOHNNY_HORTON_ALBUM
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE
-} from '../../scene/flatKeys'
+} from '../../scene/things/keys/flats'
 
 import {
     ESTHER_SPEECH_PANEL,
     BATHTUB
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 export default [
     {

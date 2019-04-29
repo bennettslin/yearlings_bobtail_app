@@ -1,12 +1,12 @@
 import {
     SHOES_REFLECTION
-} from '../../../../instanceKeys/bennett'
+} from '../../../keys/instances/bennett'
 
 import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../../../instanceKeys/songs'
+} from '../../../keys/instances/songs'
 
 const ARRANGEMENTS_MAP = {
     [HARD_ON_REFLECTION]: {

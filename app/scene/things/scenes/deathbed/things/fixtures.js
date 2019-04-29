@@ -1,6 +1,6 @@
 import {
     HOSPITAL_RECORD_PLAYER
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [HOSPITAL_RECORD_PLAYER]: {

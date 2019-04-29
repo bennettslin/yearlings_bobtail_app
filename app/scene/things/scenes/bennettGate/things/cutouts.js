@@ -1,7 +1,7 @@
 import {
     APARTMENT_PLANT,
     CODE_BOX
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [APARTMENT_PLANT]: {

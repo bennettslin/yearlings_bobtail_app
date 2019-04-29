@@ -2,7 +2,7 @@ import {
     BEDROOM_BACKDROP,
     BEDROOM_SIREN_BACKDROP,
     BEDROOM_BUS_BACKDROP
-} from '../../../../backdropKeys'
+} from '../../../keys/backdrops'
 
 const ARRANGEMENTS_MAP = {
     [BEDROOM_BACKDROP]: {

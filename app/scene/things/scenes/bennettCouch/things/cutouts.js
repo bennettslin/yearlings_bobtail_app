@@ -3,7 +3,7 @@ import {
     LEONARD_COHEN_POSTER,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [NIRVANA_POSTER]: {

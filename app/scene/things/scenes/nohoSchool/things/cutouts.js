@@ -1,6 +1,6 @@
 import {
     PLAYGROUND_SLIDE
-} from '../../../../cutoutKeys'
+} from '../../../keys/cutouts'
 
 const ARRANGEMENTS_MAP = {
     [PLAYGROUND_SLIDE]: {

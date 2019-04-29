@@ -3,7 +3,7 @@ import {
     ANA,
     HOWIE,
     TOMER
-} from '../../../actorKeys'
+} from '../../keys'
 
 import ARRANGEMENTS_BENNETT from './actors/bennett'
 import ARRANGEMENTS_ANA from './actors/ana'

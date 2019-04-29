@@ -1,6 +1,6 @@
 import {
     ESCAPE_POD_SKETCHBOOK
-} from '../../../../bubbleKeys'
+} from '../../../keys/bubbles'
 
 const ARRANGEMENTS_MAP = {
     [ESCAPE_POD_SKETCHBOOK]: {

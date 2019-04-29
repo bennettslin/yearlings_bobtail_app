@@ -32,17 +32,17 @@ import {
     LIZ,
     NESTOR,
     BENNETT_LIZ_REFLECTION
-} from '../../scene/actorKeys'
+} from '../../scene/actors/keys'
 
 import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
-} from '../../scene/instanceKeys/bennett'
+} from '../../scene/actors/keys/instances/bennett'
 
 import {
     JOGGER
-} from '../../scene/instanceKeys/nestor'
+} from '../../scene/actors/keys/instances/nestor'
 
 import {
     DISHROOM_LANCET,
@@ -50,7 +50,7 @@ import {
     DATE_ENDED,
     GATE_CODE,
     RUMPLED_LINENS
-} from '../../scene/instanceKeys/songs'
+} from '../../scene/actors/keys/instances/songs'
 
 import {
     GINGERBREAD_PRISON,
@@ -61,11 +61,11 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../scene/instanceKeys/bennettLiz'
+} from '../../scene/actors/keys/instances/bennettLiz'
 
 import {
     WAITING_ROOM_THOUGHTS
-} from '../../scene/bubbleKeys'
+} from '../../scene/things/keys/bubbles'
 
 import {
     TRAFFIC_LIGHT,
@@ -74,7 +74,7 @@ import {
     CLIPBOARD,
     PAINTING,
     WAITING_ROOM_PLANT
-} from '../../scene/cutoutKeys'
+} from '../../scene/things/keys/cutouts'
 
 import {
     CONVEYOR_BELT,
@@ -87,18 +87,18 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
     BLOODY_TOWEL
-} from '../../scene/fixtureKeys'
+} from '../../scene/things/keys/fixtures'
 
 import {
     LIGHT_SWITCH,
     BENNETT_PILLOWS,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
-} from '../../scene/furnitureKeys'
+} from '../../scene/things/keys/furniture'
 
 import {
     DISHROOM_SINK
-} from '../../scene/panelKeys'
+} from '../../scene/things/keys/panels'
 
 /**
  * All of these scenes repeat twice.

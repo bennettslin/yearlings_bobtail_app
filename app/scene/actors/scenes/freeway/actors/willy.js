@@ -1,6 +1,6 @@
 import {
     COLLECTING
-} from '../../../../instanceKeys/willy'
+} from '../../../keys/instances/willy'
 
 const ARRANGEMENTS_MAP = {
     [COLLECTING]: {

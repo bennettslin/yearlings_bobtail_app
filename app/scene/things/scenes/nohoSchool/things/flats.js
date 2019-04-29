@@ -1,6 +1,6 @@
 import {
     NOHO_SCHOOLHOUSE
-} from '../../../../flatKeys'
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
     [NOHO_SCHOOLHOUSE]: {

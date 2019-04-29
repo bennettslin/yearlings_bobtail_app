@@ -1,7 +1,7 @@
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from '../../../../instanceKeys/howie'
+} from '../../../keys/instances/howie'
 
 const ARRANGEMENTS_MAP = {
     [USHER_WAITING]: {

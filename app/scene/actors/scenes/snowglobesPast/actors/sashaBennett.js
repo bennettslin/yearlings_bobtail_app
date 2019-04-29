@@ -1,6 +1,6 @@
 import {
     COMFORTING_HUMILIATED
-} from '../../../../instanceKeys/sashaBennett'
+} from '../../../keys/instances/sashaBennett'
 
 const ARRANGEMENTS_MAP = {
     [COMFORTING_HUMILIATED]: {

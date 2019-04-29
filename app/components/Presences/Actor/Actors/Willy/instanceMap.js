@@ -9,11 +9,11 @@ import {
     COLLECTING,
     DUCKING,
     CROSSING_GUARD
-} from 'scene/instanceKeys/willy'
+} from 'scene/actors/keys/instances/willy'
 
 import {
     EPILOGUE
-} from 'scene/instanceKeys/songs'
+} from 'scene/actors/keys/instances/songs'
 
 export const propTypes = {
     [COLLECTING]: PropTypes.bool,

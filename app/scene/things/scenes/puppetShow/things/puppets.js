@@ -5,7 +5,7 @@ import {
     PUPPET_FAMILY_MIDDLE,
     PUPPET_BENNETT_END,
     PUPPET_FAMILY_END
-} from '../../../../puppetKeys'
+} from '../../../keys/puppets'
 
 const ARRANGEMENTS_MAP = {
     [PUPPET_BENNETT_BEGIN]: {

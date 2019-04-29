@@ -2,7 +2,7 @@ import {
     RECORDING_MIC,
     RECORDING_CONSOLE,
     RECORDING_BEERS
-} from '../../../../fixtureKeys'
+} from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
     [RECORDING_MIC]: {

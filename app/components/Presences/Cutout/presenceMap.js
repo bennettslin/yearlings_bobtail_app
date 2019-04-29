@@ -157,7 +157,7 @@ import {
     WEDDING_CROWD,
     CLIFF_TREE,
     IV_DRIP
-} from 'scene/cutoutKeys'
+} from 'scene/things/keys/cutouts'
 
 export const propTypes = {
     [FIRE_HYDRANT]: PropTypes.bool,

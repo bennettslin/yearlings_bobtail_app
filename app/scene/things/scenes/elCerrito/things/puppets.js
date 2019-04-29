@@ -1,6 +1,6 @@
 import {
     PUPPET_REATTA
-} from '../../../../puppetKeys'
+} from '../../../keys/puppets'
 
 const ARRANGEMENTS_MAP = {
     [PUPPET_REATTA]: {

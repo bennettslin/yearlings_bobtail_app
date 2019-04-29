@@ -1,6 +1,6 @@
 import {
     DOGS_SKETCHBOOK
-} from '../../../../bubbleKeys'
+} from '../../../keys/bubbles'
 
 const ARRANGEMENTS_MAP = {
     [DOGS_SKETCHBOOK]: {

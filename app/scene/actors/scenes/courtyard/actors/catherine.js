@@ -1,6 +1,6 @@
 import {
     WEEPING
-} from '../../../../instanceKeys/catherine'
+} from '../../../keys/instances/catherine'
 
 const ARRANGEMENTS_MAP = {
     [WEEPING]: {

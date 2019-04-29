@@ -5,7 +5,7 @@ import {
     OPAL_LICKING,
     PEAHEN,
     PEACOCK
-} from '../../../../puppetKeys'
+} from '../../../keys/puppets'
 
 const ARRANGEMENTS_MAP = {
     [OPAL_LAP]: {
