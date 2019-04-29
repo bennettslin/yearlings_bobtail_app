@@ -4591,5 +4591,10 @@ export default [
         taskName: `Plan out upcoming Photoshop work.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Rearrange scene arrangements and cubes.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

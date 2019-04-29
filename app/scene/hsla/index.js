@@ -20,7 +20,7 @@ import {
     UPHOLSTERY_HSLA,
     SEAT_HSLA,
     OCEAN_HSLA
-} from '../scenes/hslaKeys'
+} from '../hslaKeys'
 
 const
     /**

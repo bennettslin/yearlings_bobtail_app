@@ -9,7 +9,7 @@ import panelsMap from './Panel/presenceMap'
 import puppetsMap from './Puppet/presenceMap'
 
 import ALL_ARRANGEMENTS_ACTORS from 'scene/arrangements/actors'
-import ALL_ARRANGEMENTS_THINGS from 'scene/things'
+import ALL_ARRANGEMENTS_THINGS from 'scene/arrangements/things'
 
 import {
     ACTORS,
