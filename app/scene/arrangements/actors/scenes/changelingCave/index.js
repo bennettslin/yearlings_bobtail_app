@@ -1,0 +1,11 @@
+import {
+    CHRISTOPHER_BENNETT_WILLY
+} from '../../../../actorKeys'
+
+import ARRANGEMENTS_CHRISTOPHER_BENNETT_WILLY from './actors/christopherBennettWilly'
+
+const ARRANGEMENTS_ACTORS = {
+    [CHRISTOPHER_BENNETT_WILLY]: ARRANGEMENTS_CHRISTOPHER_BENNETT_WILLY
+}
+
+export default ARRANGEMENTS_ACTORS
