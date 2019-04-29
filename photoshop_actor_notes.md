@@ -63,7 +63,10 @@
 # Finish face revisions (Liz, Nestor, Tristan).
 
 # Scan faces.
-# Scale to correct proportions.
+
+# Edit faces as needed.
+
+# Scale bodies to correct proportions.
 
 # Position all faces on bodies as placeholders.
 

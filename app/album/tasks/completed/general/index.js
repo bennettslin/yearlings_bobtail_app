@@ -4586,5 +4586,10 @@ export default [
         taskName: `Global annotation indices only look at v1 songs.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Plan out upcoming Photoshop work.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
