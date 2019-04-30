@@ -56,9 +56,9 @@ import {
 
 import {
     OPAL_LAP,
-    OPAL_GAZING,
-    OPAL_COUCH,
     OPAL_LICKING,
+    OPAL_COUCH,
+    OPAL_GAZING,
     PEAHEN,
     PEACOCK
 } from '../../scene/things/keys/puppets'

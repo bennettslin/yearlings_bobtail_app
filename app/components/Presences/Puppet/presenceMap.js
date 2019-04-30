@@ -10,9 +10,9 @@ import PchelkaMushkaRocket from './Puppets/PchelkaMushkaRocket'
 import Earth from './Puppets/Earth'
 import SpaceColony from './Puppets/SpaceColony'
 import OpalLap from './Puppets/OpalLap'
-import OpalGazing from './Puppets/OpalGazing'
-import OpalCouch from './Puppets/OpalCouch'
 import OpalLicking from './Puppets/OpalLicking'
+import OpalCouch from './Puppets/OpalCouch'
+import OpalGazing from './Puppets/OpalGazing'
 import Peahen from './Puppets/Peahen'
 import Peacock from './Puppets/Peacock'
 import PuppetReatta from './Puppets/PuppetReatta'
@@ -33,9 +33,9 @@ import {
     EARTH,
     SPACE_COLONY,
     OPAL_LAP,
-    OPAL_GAZING,
-    OPAL_COUCH,
     OPAL_LICKING,
+    OPAL_COUCH,
+    OPAL_GAZING,
     PEAHEN,
     PEACOCK,
     PUPPET_REATTA,
@@ -57,9 +57,9 @@ export const propTypes = {
     [EARTH]: PropTypes.bool,
     [SPACE_COLONY]: PropTypes.bool,
     [OPAL_LAP]: PropTypes.bool,
-    [OPAL_GAZING]: PropTypes.bool,
-    [OPAL_COUCH]: PropTypes.bool,
     [OPAL_LICKING]: PropTypes.bool,
+    [OPAL_COUCH]: PropTypes.bool,
+    [OPAL_GAZING]: PropTypes.bool,
     [PEAHEN]: PropTypes.bool,
     [PEACOCK]: PropTypes.bool,
     [PUPPET_REATTA]: PropTypes.bool,
@@ -81,9 +81,9 @@ export default {
     [EARTH]: Earth,
     [SPACE_COLONY]: SpaceColony,
     [OPAL_LAP]: OpalLap,
-    [OPAL_GAZING]: OpalGazing,
-    [OPAL_COUCH]: OpalCouch,
     [OPAL_LICKING]: OpalLicking,
+    [OPAL_COUCH]: OpalCouch,
+    [OPAL_GAZING]: OpalGazing,
     [PEAHEN]: Peahen,
     [PEACOCK]: Peacock,
     [PUPPET_REATTA]: PuppetReatta,

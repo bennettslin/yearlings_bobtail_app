@@ -1,3 +1,7 @@
+// Own file.
+
+// Own file, still to edit.
+
 // TODO
 export const BEDROOM_DESK = 'bedroomDesk'
 

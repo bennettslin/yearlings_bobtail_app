@@ -1,3 +1,7 @@
+// Own file.
+
+// Own file, still to edit.
+
 // With nohoHouses backdrop. Requires editing.
 export const NOHO_HOUSE_LEFT = 'nohoHouseLeft'
 export const NOHO_HOUSE_RIGHT = 'nohoHouseRight'

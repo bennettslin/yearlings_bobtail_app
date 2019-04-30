@@ -1,3 +1,7 @@
+// Own file.
+
+// Own file, still to edit.
+
 // Together on one page.
 export const TOGETHER_SKETCHBOOK = 'togetherSketchbook'
 export const APART_SKETCHBOOK = 'apartSketchbook'

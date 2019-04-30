@@ -1,3 +1,7 @@
+// Own file.
+
+// Own file, still to edit.
+
 // Together on one page. Requires editing.
 export const FIRE_HYDRANT = 'fireHydrant'
 export const BERKELEY_LAMPPOST = 'berkeleyLamppost'

@@ -901,12 +901,12 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain such concepts as `,
+                                        `After my brother was diagnosed with autism, my mother went back to school to learn child development. At the dinner table, she would explain to us such concepts as`,
                                         {
                                             anchor: `"imprinting,"`,
                                             wiki: `Imprinting_(psychology)`
                                         },
-                                        `in which a child acquires emotional attachment. She would then voice her regret that she began these studies too late to be a more effective mother to my .`
+                                        `the phase during which a child learns emotional attachment. She would then voice her regret that she began her studies too late to be more effective at raising my brother.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

@@ -1,3 +1,7 @@
+// Own file.
+
+// Own file, still to edit.
+
 // Together on one page.
 export const ESTHER_SPEECH_PANEL = 'estherSpeechPanel'
 export const PHONE_CALL_PANEL = 'phoneCallPanel'
