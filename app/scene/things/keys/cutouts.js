@@ -1,21 +1,37 @@
 // Own file.
+export const MIRRORED_SINK = 'mirroredSink'
+export const TOWEL_RACK = 'towelRack'
 
-// Own file, still to edit.
-
-// Together on one page. Requires editing.
 export const FIRE_HYDRANT = 'fireHydrant'
+
+export const YELLOW_TAPED_GRILL = 'yellowTapedGrill'
+
+export const CORKBOARD = 'corkboard'
+
+export const RECYCLABLES = 'recyclables'
 export const BERKELEY_LAMPPOST = 'berkeleyLamppost'
+
+export const APARTMENT_PLANT = 'apartmentPlant'
+export const CODE_BOX = 'codeBox'
+
+export const TELEVISION = 'television'
+
 export const TWIN_STREETLAMP_FAR = 'twinStreetlampFar'
 export const TWIN_STREETLAMP_MIDDLE = 'twinStreetlampMiddle'
 export const TWIN_STREETLAMP_NEAR = 'twinStreetlampNear'
+
+export const DISPENSER_LEFT = 'dispenserLeft'
+export const DISPENSER_RIGHT = 'dispenserRight'
+export const SIGNPOST = 'signPost'
+
+export const DUMPSTER = 'dumpster'
+export const IV_DRIP = 'ivDrip'
+
+// Own file, still to edit.
 export const TRAFFIC_LIGHT = 'trafficLight'
 
 // With nohoSchool backdrop and flat.
 export const PLAYGROUND_SLIDE = 'playgroundSlide'
-
-// Together on one page.
-export const MIRRORED_SINK = 'mirroredSink'
-export const TOWEL_RACK = 'towelRack'
 
 // Together on one page.
 export const OVERPASS_SIGN_FRONT = 'overpassSignFront'
@@ -62,7 +78,6 @@ export const BENNETT_ODIN_DEPTHS = 'bennettOdinDepths'
 export const SEA_SERPENTS = 'seaSerpents'
 
 // Own page.
-export const YELLOW_TAPED_GRILL = 'yellowTapedGrill'
 
 // Together on one page with Taiwan pillow.
 export const BENNETT_OCEAN_FLOOR = 'bennettOceanFloor'
@@ -81,17 +96,6 @@ export const TRASH_CAN_QUAD = 'trashCanQuad'
 export const VAN_NUYS_PLANT_LOCKERS = 'vanNuysPlantLockers'
 export const VAN_NUYS_PLANT_QUAD = 'vanNuysPlantQuad'
 export const VAN_NUYS_LOGO = 'vanNuysLogo'
-
-// Together on one page.
-export const CORKBOARD = 'corkboard'
-export const RECYCLABLES = 'recyclables'
-export const APARTMENT_PLANT = 'apartmentPlant'
-export const CODE_BOX = 'codeBox'
-
-// Together on one page.
-export const DISPENSER_LEFT = 'dispenserLeft'
-export const DISPENSER_RIGHT = 'dispenserRight'
-export const SIGNPOST = 'signPost'
 
 // With ucBerkeley backdrop and flat.
 export const BANCROFT_SHRUBS = 'bancroftShrubs'
@@ -128,15 +132,8 @@ export const STORAGE_CHEST = 'storageChest'
 export const HOWIE_FRIDGE = 'howieFridge'
 
 // Together on one page.
-export const TELEVISION = 'television'
-export const IV_DRIP = 'ivDrip'
-
-// Together on one page.
 export const EL_CERRITO_TREE = 'elCerritoTree'
 export const CLIFF_TREE = 'cliffTree'
-
-// Own page.
-export const DUMPSTER = 'dumpster'
 
 // With wedding backdrop, wedding platform panel, and foreboding trees flat.
 export const WEDDING_CROWD = 'weddingCrowd'

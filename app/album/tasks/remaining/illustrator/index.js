@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Timebox for separating things into own files.`,
-        workedHours: 2,
+        workedHours: 3,
         neededHours: 16
     },
 

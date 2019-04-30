@@ -1,4 +1,5 @@
 // Own file.
+export const LIGHT_SWITCH = 'lightSwitch'
 
 // Own file, still to edit.
 
@@ -16,9 +17,6 @@ export const BUOY_FLOAT = 'buoy'
 
 // TODO
 export const BENNETT_CUSHIONS = 'bennettCushions'
-
-// With apartment cutouts.
-export const LIGHT_SWITCH = 'lightSwitch'
 
 // TODO
 export const BENNETT_PILLOWS = 'bennettPillows'
