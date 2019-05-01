@@ -2,6 +2,9 @@
 export const ESTHER_SPEECH_PANEL = 'estherSpeechPanel'
 export const BATHTUB = 'bathtub'
 
+export const OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior'
+export const OCEAN_CAVE_INTERIOR = 'oceanCaveInterior'
+
 export const GO_KART_LEFT_EXTERIOR = 'goKartExteriorLeft'
 export const GO_KART_RIGHT_EXTERIOR = 'goKartExteriorRight'
 
@@ -29,10 +32,6 @@ export const TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel'
 
 // TODO
 export const CAPTAIN_BED_DRAWERS = 'captainBedDrawers'
-
-// With buddha shrine cutout and ocean floor backdrop.
-export const OCEAN_CAVE_INTERIOR = 'oceanCaveInterior'
-export const OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior'
 
 // With dishroom fixtures.
 export const DISHROOM_SINK = 'dishroomSink'

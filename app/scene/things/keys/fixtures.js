@@ -15,6 +15,7 @@ export const HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
 // Own file, still to edit.
 export const CAVEMAN_BONES = 'cavemanBones'
 export const EVIAN_BOTTLES = 'evianBottles'
+export const FRIDGE_DRAWINGS = 'fridgeDrawings'
 
 // With concerned Anita.
 export const PLAYGROUND_BALL = 'playgroundBall'
@@ -42,9 +43,6 @@ export const BACKPACK_BENNETT = 'backpackBennett'
 // With charmed Sasha and jewishBoy Brad.
 export const BACKPACK_SASHA = 'backpackSasha'
 export const BACKPACK_JEWISH_BOY = 'backpackJewishBoy'
-
-// With attic and Howie fridge cutouts, accidentally. Requires editing.
-export const FRIDGE_DRAWINGS = 'fridgeDrawings'
 
 // With guiltRidden PreteenBennett and blissful Christopher. Requires editing.
 export const BENNETT_LETTERS = 'bennettLetters'

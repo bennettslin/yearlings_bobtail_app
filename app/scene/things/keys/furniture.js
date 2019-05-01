@@ -1,4 +1,5 @@
 // Own file.
+export const TAIWAN_PILLOW = 'taiwanPillow'
 export const LIGHT_SWITCH = 'lightSwitch'
 
 // Own file, still to edit.
@@ -8,9 +9,6 @@ export const BEDROOM_DESK = 'bedroomDesk'
 
 // TODO
 export const CAPTAIN_BED_PILLOW = 'captainBedPillow'
-
-// With Bennett Odin cutouts.
-export const TAIWAN_PILLOW = 'taiwanPillow'
 
 // Own page.
 export const BUOY_FLOAT = 'buoy'
