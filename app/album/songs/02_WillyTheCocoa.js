@@ -906,7 +906,7 @@ export default {
                                             anchor: `"imprinting,"`,
                                             wiki: `Imprinting_(psychology)`
                                         },
-                                        `the phase during which a child learns emotional attachment. She would then voice her regret that she began her studies too late to be more effective at raising my brother.`
+                                        `the phase during which a child learns emotional attachment. She would then voice her regret that she began her studies too late to be a more effective parent to my brother.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,

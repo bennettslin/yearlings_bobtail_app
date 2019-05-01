@@ -1,6 +1,20 @@
 // Own file.
+export const JOHNNY_HORTON_ALBUM = 'johnnyHortonAlbum'
+export const BEETHOVEN_BUST = 'beethovenBust'
+export const BENNETT_RECORD_PLAYER_COUCH = 'bennettRecordPlayerCouch'
+export const BENNETT_RECORD_PLAYER_BASEMENT = 'bennettRecordPlayerBasement'
+export const POLICE_ALBUM = 'policeAlbum'
+export const TELEVISION_ALBUM = 'televisionAlbum'
+export const PUSH_BROOM_BACKSTAGE = 'pushBroomBackstage'
+export const PUSH_BROOM_TUNNEL = 'pushBroomTunnel'
+export const STEPLADDER = 'stepladder'
+export const MANNEQUIN = 'mannequin'
+export const NAS_ALBUM = 'nasAlbum'
+export const HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
 
 // Own file, still to edit.
+export const CAVEMAN_BONES = 'cavemanBones'
+export const EVIAN_BOTTLES = 'evianBottles'
 
 // With concerned Anita.
 export const PLAYGROUND_BALL = 'playgroundBall'
@@ -10,13 +24,6 @@ export const SAFEWAY_BAG = 'safewayBag'
 
 // With singing YoungBennett. Requires editing.
 export const RECORD_PLAYER_STOOL = 'recordPlayerStool'
-
-// Together on one page. Requires editing.
-export const JOHNNY_HORTON_ALBUM = 'johnnyHortonAlbum'
-export const BEETHOVEN_BUST = 'beethovenBust'
-export const POLICE_ALBUM = 'policeAlbum'
-export const TELEVISION_ALBUM = 'televisionAlbum'
-export const NAS_ALBUM = 'nasAlbum'
 
 // Together on one page. Requires editing.
 export const SHOPPING_CART = 'shoppingCart'
@@ -52,11 +59,6 @@ export const BEYONDER_ENVELOPE = 'beyonderEnvelope'
 // With stoic PreteenBennett. Requires editing.
 export const THROWN_FRUIT = 'thrownFruit'
 
-// Together on one page.
-export const BENNETT_RECORD_PLAYER_COUCH = 'bennettRecordPlayerCouch'
-export const BENNETT_RECORD_PLAYER_BASEMENT = 'bennettRecordPlayerBasement'
-export const HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
-
 // With solicitingOpinion Bennett.
 export const BENNETT_COUCH_LAMP = 'bennettCouchLamp'
 
@@ -89,15 +91,6 @@ export const BASEMENT_BEER_CASE = 'basementBeerCase'
 export const BASEMENT_BEER_MARA = 'basementBeerMara'
 export const BASEMENT_BEER_BENNETT = 'basementBeerBennett'
 
-// Own page.
-export const CAVEMAN_BONES = 'cavemanBones'
-
-// Together on one page.
-export const PUSH_BROOM_BACKSTAGE = 'pushBroomBackstage'
-export const PUSH_BROOM_TUNNEL = 'pushBroomTunnel'
-export const STEPLADDER = 'stepladder'
-export const MANNEQUIN = 'mannequin'
-
 // Together on one page. Requires editing.
 export const CONVEYOR_BELT = 'conveyorBelt'
 export const GLASS_CART = 'glassCart'
@@ -116,9 +109,6 @@ export const LIZ_PHONE_REFLECTION = 'lizPhoneReflection'
 
 // With cemetery Tomer. Requires editing.
 export const GRAVESTONE = 'gravestone'
-
-// With saturn panel. Requires editing.
-export const EVIAN_BOTTLES = 'evianBottles'
 
 // With performing Bennett. Requires editing.
 export const STAGE_MIC_SIDE = 'stageMicSide'

@@ -1,4 +1,10 @@
 // Own file.
+export const LOCKER_BANK = 'lockerBank'
+export const MUSEUM_DISPLAY = 'museumDisplay'
+
+export const ROYCE_HALL = 'royceHall'
+export const PHARMACY_AISLE = 'pharmacyAisle'
+export const STEAM_PIPES = 'steamPipes'
 
 // Own file, still to edit.
 
@@ -40,27 +46,12 @@ export const SHORE_CARNIVAL = 'shoreCarnival'
 export const OCEAN_BOTTOM_MIDDLE = 'oceanBottomMiddle'
 export const OCEAN_BOTTOM_NEAR = 'oceanBottomNear'
 
-// Own page.
-export const LOCKER_BANK = 'lockerBank'
-
 // Together on one page.
 export const ST_JOSEPHS_ANNEX = 'stJosephsAnnex'
 export const ST_JOSEPHS_CHURCH = 'stJosephsChurch'
 
 // With ucBerkeley backdrop and cutouts. Requires editing.
 export const CAMPANILE = 'campanile'
-
-// Own page.
-export const MUSEUM_DISPLAY = 'museumDisplay'
-
-// Own page.
-export const ROYCE_HALL = 'royceHall'
-
-// Own page.
-export const PHARMACY_AISLE = 'pharmacyAisle'
-
-// Own page.
-export const STEAM_PIPES = 'steamPipes'
 
 // With cemetery backdrop. Requires editing.
 export const CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
