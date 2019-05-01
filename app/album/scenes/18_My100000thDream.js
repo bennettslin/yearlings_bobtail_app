@@ -57,6 +57,8 @@ import {
 } from '../../scene/things/keys/backdrops'
 
 import {
+    DISPENSER_LEFT,
+    DISPENSER_RIGHT,
     WEDDING_CROWD,
     IV_DRIP,
     CLIFF_TREE
@@ -105,6 +107,10 @@ export default [
                         instance: EL_TORITO
                     }
                 }
+            },
+            [CUTOUTS]: {
+                [DISPENSER_LEFT]: true,
+                [DISPENSER_RIGHT]: true
             }
         },
         cubes: EL_TORITO_KEY,

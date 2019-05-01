@@ -65,8 +65,7 @@ import {
     YELLOW_TAPED_GRILL,
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENTS,
-    BENNETT_OCEAN_FLOOR,
-    ODIN_OCEAN_FLOOR,
+    BENNETT_ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT
 } from '../../scene/things/keys/cutouts'
@@ -282,8 +281,7 @@ export default [
                 [OCEAN_BOTTOM_FAR]: true
             },
             [CUTOUTS]: {
-                [BENNETT_OCEAN_FLOOR]: true,
-                [ODIN_OCEAN_FLOOR]: true
+                [BENNETT_ODIN_OCEAN_FLOOR]: true
             },
             [FLATS]: {
                 [OCEAN_BOTTOM_MIDDLE]: true,

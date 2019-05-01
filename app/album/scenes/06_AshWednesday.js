@@ -57,8 +57,6 @@ import {
 import {
     RECYCLABLES,
     NIRVANA_POSTER,
-    DISPENSER_LEFT,
-    DISPENSER_RIGHT,
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
@@ -167,8 +165,6 @@ export default [
                 [WEST_BERKELEY_BACKDROP]: true
             },
             [CUTOUTS]: {
-                [DISPENSER_LEFT]: true,
-                [DISPENSER_RIGHT]: true,
                 [BERKELEY_LAMPPOST]: true
             },
             [FLATS]: {

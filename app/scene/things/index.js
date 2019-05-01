@@ -56,6 +56,7 @@ import THINGS_SNOWGLOBES_PRESENT from './scenes/snowglobesPresent'
 import THINGS_SNOWGLOBES_FUTURE from './scenes/snowglobesFuture'
 import THINGS_EL_CERRITO from './scenes/elCerrito'
 import THINGS_ALLEY from './scenes/alley'
+import THINGS_EL_TORITO from './scenes/elTorito'
 import THINGS_PAMPAS from './scenes/pampas'
 import THINGS_WEDDING from './scenes/wedding'
 import THINGS_CLIFF from './scenes/cliff'
@@ -118,6 +119,7 @@ const SCENE_ARRANGEMENTS = [
     THINGS_SNOWGLOBES_FUTURE,
     THINGS_EL_CERRITO,
     THINGS_ALLEY,
+    THINGS_EL_TORITO,
     THINGS_PAMPAS,
     THINGS_WEDDING,
     THINGS_CLIFF,

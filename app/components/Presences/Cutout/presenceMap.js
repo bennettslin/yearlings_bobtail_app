@@ -27,7 +27,6 @@ import YellowTapedGrill from './Cutouts/YellowTapedGrill'
 import BennettOdinDepths from './Cutouts/BennettOdinDepths'
 import SeaSerpents from './Cutouts/SeaSerpents'
 import BennettOceanFloor from './Cutouts/BennettOceanFloor'
-import OdinOceanFloor from './Cutouts/OdinOceanFloor'
 import BennettMat from './Cutouts/BennettMat'
 import OdinMat from './Cutouts/OdinMat'
 import BloomCountyPoster from './Cutouts/BloomCountyPoster'
@@ -102,8 +101,7 @@ import {
     YELLOW_TAPED_GRILL,
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENTS,
-    BENNETT_OCEAN_FLOOR,
-    ODIN_OCEAN_FLOOR,
+    BENNETT_ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT,
     BLOOM_COUNTY_POSTER,
@@ -186,8 +184,7 @@ export const propTypes = {
     [YELLOW_TAPED_GRILL]: PropTypes.bool,
     [BENNETT_ODIN_DEPTHS]: PropTypes.bool,
     [SEA_SERPENTS]: PropTypes.bool,
-    [BENNETT_OCEAN_FLOOR]: PropTypes.bool,
-    [ODIN_OCEAN_FLOOR]: PropTypes.bool,
+    [BENNETT_ODIN_OCEAN_FLOOR]: PropTypes.bool,
     [BENNETT_MAT]: PropTypes.bool,
     [ODIN_MAT]: PropTypes.bool,
     [BLOOM_COUNTY_POSTER]: PropTypes.bool,
@@ -270,8 +267,7 @@ export default {
     [YELLOW_TAPED_GRILL]: YellowTapedGrill,
     [BENNETT_ODIN_DEPTHS]: BennettOdinDepths,
     [SEA_SERPENTS]: SeaSerpents,
-    [BENNETT_OCEAN_FLOOR]: BennettOceanFloor,
-    [ODIN_OCEAN_FLOOR]: OdinOceanFloor,
+    [BENNETT_ODIN_OCEAN_FLOOR]: BennettOceanFloor,
     [BENNETT_MAT]: BennettMat,
     [ODIN_MAT]: OdinMat,
     [BLOOM_COUNTY_POSTER]: BloomCountyPoster,
