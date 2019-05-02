@@ -84,8 +84,7 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    TAIWAN_PILLOW,
-    BUOY_FLOAT
+    TAIWAN_PILLOW
 } from '../../scene/things/keys/furniture'
 
 import {
@@ -253,9 +252,6 @@ export default [
             [CUTOUTS]: {
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENTS]: true
-            },
-            [FURNITURES]: {
-                [BUOY_FLOAT]: true
             }
         },
         cubes: BUOY_KEY,

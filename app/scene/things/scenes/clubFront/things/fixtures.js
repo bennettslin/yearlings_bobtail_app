@@ -1,7 +1,6 @@
 import {
     CASH_BOX,
     GUITAR,
-    BASS_CASE_OPEN,
     DRUMKIT
 } from '../../../keys/fixtures'
 
@@ -20,14 +19,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 1,
             xWidth: 1,
             zHeight: 3
-        }
-    },
-    [BASS_CASE_OPEN]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 8,
-            xWidth: 4,
-            zHeight: 1
         }
     },
     [DRUMKIT]: {

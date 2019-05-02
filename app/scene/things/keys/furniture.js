@@ -10,9 +10,6 @@ export const BEDROOM_DESK = 'bedroomDesk'
 // TODO
 export const CAPTAIN_BED_PILLOW = 'captainBedPillow'
 
-// Own page.
-export const BUOY_FLOAT = 'buoy'
-
 // TODO
 export const BENNETT_CUSHIONS = 'bennettCushions'
 

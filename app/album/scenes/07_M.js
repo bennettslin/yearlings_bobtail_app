@@ -93,7 +93,6 @@ import {
     KEYBOARD,
     CASH_BOX,
     GUITAR,
-    BASS_CASE_OPEN,
     DRUMKIT,
     DRUMS_STACKED_BASEMENT,
     BASS_CASE_UPRIGHT,
@@ -246,7 +245,6 @@ export default [
             [FIXTURES]: {
                 [CASH_BOX]: true,
                 [GUITAR]: true,
-                [BASS_CASE_OPEN]: true,
                 [DRUMKIT]: true
             }
         },

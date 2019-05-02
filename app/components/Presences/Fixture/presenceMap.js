@@ -27,7 +27,6 @@ import TelevisionAlbum from './Fixtures/TelevisionAlbum'
 import Keyboard from './Fixtures/Keyboard'
 import CashBox from './Fixtures/CashBox'
 import Guitar from './Fixtures/Guitar'
-import BassCaseOpen from './Fixtures/BassCaseOpen'
 import DrumKit from './Fixtures/DrumKit'
 import BassCaseUpright from './Fixtures/BassCaseUpright'
 import GuitarCaseUpright from './Fixtures/GuitarCaseUpright'
@@ -99,7 +98,6 @@ import {
     KEYBOARD,
     CASH_BOX,
     GUITAR,
-    BASS_CASE_OPEN,
     DRUMKIT,
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
@@ -175,7 +173,6 @@ export const propTypes = {
     [CASH_BOX]: PropTypes.bool,
     [GUITAR]: PropTypes.bool,
     [STAGE_MIC_SIDE]: PropTypes.bool,
-    [BASS_CASE_OPEN]: PropTypes.bool,
     [DRUMKIT]: PropTypes.bool,
     [BASS_CASE_UPRIGHT]: PropTypes.bool,
     [GUITAR_CASE_UPRIGHT]: PropTypes.bool,
@@ -250,7 +247,6 @@ export default {
     [CASH_BOX]: CashBox,
     [GUITAR]: Guitar,
     [STAGE_MIC_SIDE]: StageMicSide,
-    [BASS_CASE_OPEN]: BassCaseOpen,
     [DRUMKIT]: DrumKit,
     [BASS_CASE_UPRIGHT]: BassCaseUpright,
     [GUITAR_CASE_UPRIGHT]: GuitarCaseUpright,
