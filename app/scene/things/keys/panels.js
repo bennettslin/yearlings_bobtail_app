@@ -1,3 +1,5 @@
+// All accounted for, with todos left.
+
 // Own file.
 export const ESTHER_SPEECH_PANEL = 'estherSpeechPanel'
 export const BATHTUB = 'bathtub'
@@ -6,22 +8,26 @@ export const OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior'
 export const OCEAN_CAVE_INTERIOR = 'oceanCaveInterior'
 
 export const GO_KART_LEFT_EXTERIOR = 'goKartExteriorLeft'
-export const GO_KART_RIGHT_EXTERIOR = 'goKartExteriorRight'
+export const GO_KART_RIGHT_EXTERIOR = 'goKartExteriorRight' // Duplicate.
+
+export const DISHROOM_SINK = 'dishroomSink'
 
 export const SATURN_EXTERIOR = 'saturnExterior'
 
 export const VOLKSWAGEN = 'volkswagen'
 
 export const SNOWGLOBE_TETHERBALL = 'snowglobeTetherball'
-export const SNOWGLOBE_LIZ_ALONE = 'snowglobeLizAlone'
-export const SNOWGLOBE_BENNETT_MIRIAM = 'snowglobeBennettMiriam'
-export const SNOWGLOBE_LIZ_KHARI = 'snowglobeLizKhari'
-export const SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone'
+export const SNOWGLOBE_LIZ_ALONE = 'snowglobeLizAlone' // Duplicate.
+export const SNOWGLOBE_BENNETT_MIRIAM = 'snowglobeBennettMiriam' // Duplicate.
+export const SNOWGLOBE_LIZ_KHARI = 'snowglobeLizKhari' // Duplicate.
+export const SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone' // Duplicate.
 
 export const REATTA_INTERIOR = 'reattaInterior'
 export const REATTA_EXTERIOR = 'reattaExterior'
 
 export const PHONE_CALL_PANEL = 'phoneCallPanel'
+
+export const WEDDING_PLATFORM = 'weddingPlatform'
 
 // Own file, still to edit.
 export const SCHOOLBUS_INTERIOR = 'schoolbusInterior'
@@ -32,9 +38,3 @@ export const TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel'
 
 // TODO
 export const CAPTAIN_BED_DRAWERS = 'captainBedDrawers'
-
-// With dishroom fixtures.
-export const DISHROOM_SINK = 'dishroomSink'
-
-// With wedding backdrop, wedding crowd cutout, and foreboding trees flat.
-export const WEDDING_PLATFORM = 'weddingPlatform'

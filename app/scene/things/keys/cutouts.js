@@ -1,5 +1,8 @@
+// All accounted for!
+
 // Own file.
 export const FIRE_HYDRANT = 'fireHydrant'
+export const PLAYGROUND_SLIDE = 'playgroundSlide'
 export const MIRRORED_SINK = 'mirroredSink'
 export const TOWEL_RACK = 'towelRack'
 
@@ -15,15 +18,26 @@ export const YELLOW_TAPED_GRILL = 'yellowTapedGrill'
 
 export const BLOOM_COUNTY_POSTER = 'bloomCountyPoster'
 export const TRASH_CAN_LOCKERS = 'trashCanLockers'
-export const TRASH_CAN_QUAD = 'trashCanQuad'
+export const TRASH_CAN_QUAD = 'trashCanQuad' // Duplicate.
 export const VAN_NUYS_LOGO = 'vanNuysLogo'
 export const CORKBOARD = 'corkboard'
 
 export const RECYCLABLES = 'recyclables'
 export const BERKELEY_LAMPPOST = 'berkeleyLamppost'
 export const NIRVANA_POSTER = 'nirvanaPoster'
+
+export const MONITOR_SPEAKER_LEFT = 'monitorSpeakerLeft'
+export const MONITOR_SPEAKER_RIGHT = 'monitorSpeakerRight'
+export const WALL_SPEAKER_LEFT = 'wallSpeakerLeft'
+export const WALL_SPEAKER_RIGHT = 'wallSpeakerRight'
+export const MONITOR_SIDE_CROWD = 'monitorSideCrowd'
+export const MONITOR_SIDE_STAGE = 'monitorSideStage' // Duplicate.
+export const WALL_SPEAKER_SIDE_CROWD = 'wallSpeakerSideCrowd'
+export const WALL_SPEAKER_SIDE_STAGE = 'wallSpeakerSideStage' // Duplicate.
+
 export const BANCROFT_SHRUBS = 'bancroftShrubs'
-export const UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight'
+export const UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft'
+export const UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight' // Duplicate.
 export const SIGNPOST = 'signPost'
 
 export const SANDBAGS = 'sandbags'
@@ -38,18 +52,20 @@ export const WAITING_ROOM_PLANT = 'waitingRoomPlant'
 export const TELEVISION = 'television'
 export const STORAGE_BOXES = 'storageBoxes'
 
-export const TWIN_STREETLAMP_FAR = 'twinStreetlampFar'
-export const TWIN_STREETLAMP_MIDDLE = 'twinStreetlampMiddle'
 export const TWIN_STREETLAMP_NEAR = 'twinStreetlampNear'
+export const TWIN_STREETLAMP_MIDDLE = 'twinStreetlampMiddle' // Duplicate.
+export const TWIN_STREETLAMP_FAR = 'twinStreetlampFar' // Duplicate.
 
 export const EL_CERRITO_TREE = 'elCerritoTree'
 export const CLIFF_TREE = 'cliffTree'
 
-export const DISPENSER_LEFT = 'dispenserLeft'
-export const DISPENSER_RIGHT = 'dispenserRight'
+export const IV_DRIP = 'ivDrip'
 
 export const DUMPSTER = 'dumpster'
-export const IV_DRIP = 'ivDrip'
+
+export const DISPENSER_LEFT = 'dispenserLeft'
+export const DISPENSER_RIGHT = 'dispenserRight'
+export const WEDDING_CROWD = 'weddingCrowd'
 
 // Own file, still to edit.
 export const OVERPASS_SIGN_FRONT = 'overpassSignFront'
@@ -70,9 +86,10 @@ export const BENNETT_ODIN_OCEAN_FLOOR = 'bennettOdinOceanFloor'
 export const BENNETT_MAT = 'bennettMat'
 export const ODIN_MAT = 'odinMat'
 export const VAN_NUYS_PLANT_LOCKERS = 'vanNuysPlantLockers'
-export const VAN_NUYS_PLANT_QUAD = 'vanNuysPlantQuad'
+export const VAN_NUYS_PLANT_QUAD = 'vanNuysPlantQuad' // Duplicate.
 export const LEONARD_COHEN_POSTER = 'leonardCohenPoster'
-export const UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft'
+export const PROGRESS_CHART_EARLY = 'progressChartEarly'
+export const PROGRESS_CHART_LATE = 'progressChartLate'
 export const CINEMA_POSTER_LEFT = 'cinemaPosterLeft'
 export const CINEMA_POSTER_RIGHT = 'cinemaPosterRight'
 export const CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal'
@@ -80,23 +97,3 @@ export const TRAFFIC_LIGHT = 'trafficLight'
 export const STORAGE_CHEST = 'storageChest'
 export const HOWIE_FRIDGE = 'howieFridge'
 export const ELLIOTT_SMITH_POSTER = 'elliottSmithPoster'
-
-// With nohoSchool backdrop and flat.
-export const PLAYGROUND_SLIDE = 'playgroundSlide'
-
-// With nude drawing, vaseline, and bloody towel fixtures. Requires editing.
-export const PROGRESS_CHART_EARLY = 'progressChartEarly'
-export const PROGRESS_CHART_LATE = 'progressChartLate'
-
-// With crowd flats. Requires editing.
-export const MONITOR_SPEAKER_LEFT = 'monitorSpeakerLeft'
-export const MONITOR_SPEAKER_RIGHT = 'monitorSpeakerRight'
-export const WALL_SPEAKER_LEFT = 'wallSpeakerLeft'
-export const WALL_SPEAKER_RIGHT = 'wallSpeakerRight'
-export const MONITOR_SIDE_CROWD = 'monitorSideCrowd'
-export const MONITOR_SIDE_STAGE = 'monitorSideStage'
-export const WALL_SPEAKER_SIDE_CROWD = 'wallSpeakerSideCrowd'
-export const WALL_SPEAKER_SIDE_STAGE = 'wallSpeakerSideStage'
-
-// With wedding backdrop, wedding platform panel, and foreboding trees flat.
-export const WEDDING_CROWD = 'weddingCrowd'

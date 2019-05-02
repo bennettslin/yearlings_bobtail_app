@@ -1,3 +1,5 @@
+// All accounted for!
+
 // Own file.
 export const PUPPET_BENNETT_BEGIN = 'puppetBennettBegin'
 export const PUPPET_FAMILY_BEGIN = 'puppetFamilyBegin'

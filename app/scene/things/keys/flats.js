@@ -1,4 +1,10 @@
+// All accounted for!
+
 // Own file.
+export const NOHO_HOUSE_LEFT = 'nohoHouseLeft'
+export const NOHO_HOUSE_RIGHT = 'nohoHouseRight'
+export const NOHO_SCHOOLHOUSE = 'nohoSchoolhouse'
+
 export const FAMILY_HOUSE = 'familyHouse'
 export const CAVE_SHADOWS = 'caveShadows'
 
@@ -7,6 +13,8 @@ export const TAIWAN_FOG = 'taiwanFog'
 export const TAIWAN_MOUNTAINS_BRIDGED = 'taiwanMountainsBridged'
 export const TAIWAN_MOUNTAIN_LEFT = 'taiwanMountainLeft'
 export const TAIWAN_MOUNTAIN_RIGHT = 'taiwanMountainRight'
+export const VAN_NUYS_SCHOOLHOUSE_LEFT = 'vanNuysSchoolhouseLeft'
+export const VAN_NUYS_SCHOOLHOUSE_RIGHT = 'vanNuysSchoolhouseRight'
 
 export const TAIWAN_HOUSE_FAR = 'taiwanHouseFar'
 export const TAIWAN_HOUSE_NEAR = 'taiwanHouseNear'
@@ -26,6 +34,7 @@ export const MUSEUM_DISPLAY = 'museumDisplay'
 export const ROYCE_HALL = 'royceHall'
 export const PHARMACY_AISLE = 'pharmacyAisle'
 export const STEAM_PIPES = 'steamPipes'
+export const CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
 
 export const RESIDENTIAL_FAR_LEFT = 'residentialFarLeft'
 export const RESIDENTIAL_MIDDLE_LEFT = 'residentialMiddleLeft'
@@ -49,35 +58,17 @@ export const EL_CERRITO_FAR = 'elCerritoFar'
 export const EL_CERRITO_NEAR = 'elCerritoNear'
 
 export const PAMPAS_FAR = 'pampasFar'
+export const FOREBODING_TREES = 'forebodingTrees'
 export const CLIFF_GRAVES_FAR = 'cliffGravesFar'
 export const CLIFF_GRAVES_NEAR = 'cliffGravesNear'
 
 // Own file, still to edit.
+export const CROWD_NEAR_SIDE = 'crowdNearSide'
+export const CROWD_NEAR_BACK = 'crowdNearBack' // Duplicate.
+export const CROWD_FAR_SIDE = 'crowdFarSide'
+export const CROWD_FAR_BACK = 'crowdFarBack' // Duplicate.
 export const OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft'
 export const OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight'
 export const ROAD_PAST = 'roadPast'
 export const ROAD_PRESENT = 'roadPresent'
 export const ROAD_FUTURE = 'roadFuture'
-
-// With nohoHouses backdrop. Requires editing.
-export const NOHO_HOUSE_LEFT = 'nohoHouseLeft'
-export const NOHO_HOUSE_RIGHT = 'nohoHouseRight'
-
-// With nohoSchool backdrop and cutout.
-export const NOHO_SCHOOLHOUSE = 'nohoSchoolhouse'
-
-// With vanNuys backdrop. Requires editing.
-export const VAN_NUYS_SCHOOLHOUSE_LEFT = 'vanNuysSchoolhouseLeft'
-export const VAN_NUYS_SCHOOLHOUSE_RIGHT = 'vanNuysSchoolhouseRight'
-
-// With cemetery backdrop. Requires editing.
-export const CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
-
-// With stage cutouts. Requires editing.
-export const CROWD_SIDE_NEAR = 'crowdSideNear'
-export const CROWD_SIDE_FAR = 'crowdSideFar'
-export const CROWD_BACK_NEAR = 'crowdBackNear'
-export const CROWD_BACK_FAR = 'crowdBackFar'
-
-// With wedding backdrop, wedding platform panel, and wedding crowd cutout. Requires editing.
-export const FOREBODING_TREES = 'forebodingTrees'

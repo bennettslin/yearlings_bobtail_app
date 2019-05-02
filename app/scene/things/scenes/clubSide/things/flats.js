@@ -1,10 +1,10 @@
 import {
-    CROWD_SIDE_NEAR,
-    CROWD_SIDE_FAR
+    CROWD_NEAR_SIDE,
+    CROWD_FAR_SIDE
 } from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
-    [CROWD_SIDE_FAR]: {
+    [CROWD_FAR_SIDE]: {
         yIndex: 1,
         arrangement: {
             xFloat: 7,
@@ -12,7 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 4
         }
     },
-    [CROWD_SIDE_NEAR]: {
+    [CROWD_NEAR_SIDE]: {
         yIndex: 2,
         arrangement: {
             xFloat: 7,

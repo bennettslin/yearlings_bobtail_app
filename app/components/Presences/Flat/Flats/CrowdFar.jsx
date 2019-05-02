@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const CrowdBackNear = ({
+const CrowdFar = ({
 
     className,
 
@@ -19,7 +19,7 @@ const CrowdBackNear = ({
     return (
         <Svg
             className={cx(
-                'CrowdBackNear',
+                'CrowdFar',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const CrowdBackNear = ({
                 {...other}
             >
                 {cx(
-                    'CrowdBackNear'
+                    'CrowdFar'
                 )}
             </text>
         </Svg>
     )
 }
 
-CrowdBackNear.propTypes = propTypes
+CrowdFar.propTypes = propTypes
 
-export default CrowdBackNear
+export default CrowdFar

@@ -27,8 +27,8 @@ import RoyceHall from './Flats/RoyceHall'
 import PharmacyAisle from './Flats/PharmacyAisle'
 import SteamPipes from './Flats/SteamPipes'
 import CemeteryHillsNear from './Flats/CemeteryHillsNear'
-import CrowdSideNear from './Flats/CrowdSideNear'
-import CrowdSideFar from './Flats/CrowdSideFar'
+import CrowdNear from './Flats/CrowdNear'
+import CrowdFar from './Flats/CrowdFar'
 import OaklandHouseLeft from './Flats/OaklandHouseLeft'
 import OaklandHouseRight from './Flats/OaklandHouseRight'
 import ResidentialFarLeft from './Flats/ResidentialFarLeft'
@@ -53,8 +53,6 @@ import RoadPresent from './Flats/RoadPresent'
 import RoadFuture from './Flats/RoadFuture'
 import ElCerritoFar from './Flats/ElCerritoFar'
 import ElCerritoNear from './Flats/ElCerritoNear'
-import CrowdBackNear from './Flats/CrowdBackNear'
-import CrowdBackFar from './Flats/CrowdBackFar'
 import ForebodingTrees from './Flats/ForebodingTrees'
 import CliffGravesFar from './Flats/CliffGravesFar'
 import CliffGravesNear from './Flats/CliffGravesNear'
@@ -88,8 +86,8 @@ import {
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR,
-    CROWD_SIDE_NEAR,
-    CROWD_SIDE_FAR,
+    CROWD_NEAR_SIDE,
+    CROWD_FAR_SIDE,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     RESIDENTIAL_FAR_LEFT,
@@ -114,8 +112,8 @@ import {
     ROAD_FUTURE,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
-    CROWD_BACK_NEAR,
-    CROWD_BACK_FAR,
+    CROWD_NEAR_BACK,
+    CROWD_FAR_BACK,
     FOREBODING_TREES,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
@@ -150,8 +148,8 @@ export const propTypes = {
     [PHARMACY_AISLE]: PropTypes.bool,
     [STEAM_PIPES]: PropTypes.bool,
     [CEMETERY_HILLS_NEAR]: PropTypes.bool,
-    [CROWD_SIDE_NEAR]: PropTypes.bool,
-    [CROWD_SIDE_FAR]: PropTypes.bool,
+    [CROWD_NEAR_SIDE]: PropTypes.bool,
+    [CROWD_FAR_SIDE]: PropTypes.bool,
     [OAKLAND_HOUSE_LEFT]: PropTypes.bool,
     [OAKLAND_HOUSE_RIGHT]: PropTypes.bool,
     [RESIDENTIAL_FAR_LEFT]: PropTypes.bool,
@@ -176,8 +174,8 @@ export const propTypes = {
     [ROAD_FUTURE]: PropTypes.bool,
     [EL_CERRITO_FAR]: PropTypes.bool,
     [EL_CERRITO_NEAR]: PropTypes.bool,
-    [CROWD_BACK_NEAR]: PropTypes.bool,
-    [CROWD_BACK_FAR]: PropTypes.bool,
+    [CROWD_NEAR_BACK]: PropTypes.bool,
+    [CROWD_FAR_BACK]: PropTypes.bool,
     [FOREBODING_TREES]: PropTypes.bool,
     [CLIFF_GRAVES_FAR]: PropTypes.bool,
     [CLIFF_GRAVES_NEAR]: PropTypes.bool,
@@ -212,8 +210,8 @@ export default {
     [PHARMACY_AISLE]: PharmacyAisle,
     [STEAM_PIPES]: SteamPipes,
     [CEMETERY_HILLS_NEAR]: CemeteryHillsNear,
-    [CROWD_SIDE_NEAR]: CrowdSideNear,
-    [CROWD_SIDE_FAR]: CrowdSideFar,
+    [CROWD_NEAR_SIDE]: CrowdNear,
+    [CROWD_FAR_SIDE]: CrowdFar,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
     [RESIDENTIAL_FAR_LEFT]: ResidentialFarLeft,
@@ -238,8 +236,8 @@ export default {
     [ROAD_FUTURE]: RoadFuture,
     [EL_CERRITO_FAR]: ElCerritoFar,
     [EL_CERRITO_NEAR]: ElCerritoNear,
-    [CROWD_BACK_NEAR]: CrowdBackNear,
-    [CROWD_BACK_FAR]: CrowdBackFar,
+    [CROWD_NEAR_BACK]: CrowdNear,
+    [CROWD_FAR_BACK]: CrowdFar,
     [FOREBODING_TREES]: ForebodingTrees,
     [CLIFF_GRAVES_FAR]: CliffGravesFar,
     [CLIFF_GRAVES_NEAR]: CliffGravesNear,

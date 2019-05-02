@@ -9,11 +9,19 @@ export const PUSH_BROOM_BACKSTAGE = 'pushBroomBackstage'
 export const PUSH_BROOM_TUNNEL = 'pushBroomTunnel'
 export const STEPLADDER = 'stepladder'
 export const MANNEQUIN = 'mannequin'
+export const GLASS_CART = 'glassCart'
+export const TRAY_CART = 'trayCart'
+export const GLASS_RACK = 'glassRack'
+export const DISH_PILE = 'dishPile'
 export const NAS_ALBUM = 'nasAlbum'
 export const HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
 
 // Own file, still to edit.
 export const CAVEMAN_BONES = 'cavemanBones'
+export const CONVEYOR_BELT = 'conveyorBelt'
+export const NUDE_DRAWINGS = 'nudeDrawings'
+export const VASELINE = 'vaseline'
+export const BLOODY_TOWEL = 'bloodyTowel'
 export const EVIAN_BOTTLES = 'evianBottles'
 export const FRIDGE_DRAWINGS = 'fridgeDrawings'
 
@@ -88,18 +96,6 @@ export const GUITAR_CASE_OPEN = 'guitarCaseOpen'
 export const BASEMENT_BEER_CASE = 'basementBeerCase'
 export const BASEMENT_BEER_MARA = 'basementBeerMara'
 export const BASEMENT_BEER_BENNETT = 'basementBeerBennett'
-
-// Together on one page. Requires editing.
-export const CONVEYOR_BELT = 'conveyorBelt'
-export const GLASS_CART = 'glassCart'
-export const TRAY_CART = 'trayCart'
-export const GLASS_RACK = 'glassRack'
-export const DISH_PILE = 'dishPile'
-
-// With progress chart cutouts. Requires editing.
-export const NUDE_DRAWINGS = 'nudeDrawings'
-export const VASELINE = 'vaseline'
-export const BLOODY_TOWEL = 'bloodyTowel'
 
 // With caressed Liz.
 export const LIZ_PHONE = 'lizPhone'

@@ -81,8 +81,8 @@ import {
 } from '../../scene/things/keys/fixtures'
 
 import {
-    CROWD_SIDE_FAR,
-    CROWD_SIDE_NEAR
+    CROWD_FAR_SIDE,
+    CROWD_NEAR_SIDE
 } from '../../scene/things/keys/flats'
 
 import {
@@ -135,8 +135,8 @@ export default [
                 [WALL_SPEAKER_SIDE_CROWD]: true
             },
             [FLATS]: {
-                [CROWD_SIDE_FAR]: true,
-                [CROWD_SIDE_NEAR]: true
+                [CROWD_FAR_SIDE]: true,
+                [CROWD_NEAR_SIDE]: true
             }
         },
         cubes: CLUB_SIDE_CROWD_KEY,

@@ -77,8 +77,8 @@ import {
 
 import {
     CAMPANILE,
-    CROWD_BACK_NEAR,
-    CROWD_BACK_FAR
+    CROWD_NEAR_BACK,
+    CROWD_FAR_BACK
 } from '../../scene/things/keys/flats'
 
 import {
@@ -171,8 +171,8 @@ export default [
                 [STAGE_MIC_FAR]: true
             },
             [FLATS]: {
-                [CROWD_BACK_FAR]: true,
-                [CROWD_BACK_NEAR]: true
+                [CROWD_FAR_BACK]: true,
+                [CROWD_NEAR_BACK]: true
             },
             [PUPPETS]: {
                 [GHOST_ODIN_CLUB]: true
