@@ -1,6 +1,7 @@
 import {
     STAGE_MIC_SIDE,
     KICK_DRUM,
+    DRUM_THRONE,
     GUITAR_CASE_OPEN
 } from '../../../keys/fixtures'
 
@@ -14,6 +15,14 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [KICK_DRUM]: {
+        yIndex: 1,
+        arrangement: {
+            xFloat: 3.5,
+            xWidth: 1.5,
+            zHeight: 1.5
+        }
+    },
+    [DRUM_THRONE]: {
         yIndex: 1,
         arrangement: {
             xFloat: 3.5,

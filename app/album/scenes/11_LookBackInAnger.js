@@ -71,6 +71,7 @@ import {
 import {
     STAGE_MIC_SIDE,
     KICK_DRUM,
+    DRUM_THRONE,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
     DRUMS_STACKED_CLUB,
@@ -182,6 +183,7 @@ export default [
             [FIXTURES]: {
                 [STAGE_MIC_SIDE]: true,
                 [KICK_DRUM]: true,
+                [DRUM_THRONE]: true,
                 [GUITAR_CASE_OPEN]: true
             }
         },

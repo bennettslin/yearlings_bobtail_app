@@ -51,6 +51,7 @@ import Gravestone from './Fixtures/Gravestone'
 import EvianBottles from './Fixtures/EvianBottles'
 import StageMicSide from './Fixtures/StageMicSide'
 import KickDrum from './Fixtures/KickDrum'
+import DrumThrone from './Fixtures/DrumThrone'
 import GuitarCaseOpen from './Fixtures/GuitarCaseOpen'
 import BassCaseSide from './Fixtures/BassCaseSide'
 import DrumsStacked from './Fixtures/DrumsStacked'
@@ -123,6 +124,7 @@ import {
     EVIAN_BOTTLES,
     STAGE_MIC_SIDE,
     KICK_DRUM,
+    DRUM_THRONE,
     GUITAR_CASE_OPEN,
     BASS_CASE_SIDE,
     DRUMS_STACKED_BASEMENT,
@@ -197,6 +199,7 @@ export const propTypes = {
     [GRAVESTONE]: PropTypes.bool,
     [EVIAN_BOTTLES]: PropTypes.bool,
     [KICK_DRUM]: PropTypes.bool,
+    [DRUM_THRONE]: PropTypes.bool,
     [GUITAR_CASE_OPEN]: PropTypes.bool,
     [BASS_CASE_SIDE]: PropTypes.bool,
     [DRUMS_STACKED_BASEMENT]: PropTypes.bool,
@@ -271,6 +274,7 @@ export default {
     [GRAVESTONE]: Gravestone,
     [EVIAN_BOTTLES]: EvianBottles,
     [KICK_DRUM]: KickDrum,
+    [DRUM_THRONE]: DrumThrone,
     [GUITAR_CASE_OPEN]: GuitarCaseOpen,
     [BASS_CASE_SIDE]: BassCaseSide,
     [DRUMS_STACKED_BASEMENT]: DrumsStacked,
