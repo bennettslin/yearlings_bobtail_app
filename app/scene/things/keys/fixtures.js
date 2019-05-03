@@ -12,6 +12,7 @@ export const BACKPACK_JEWISH_BOY = 'backpackJewishBoy'
 
 export const CAPTAIN_BED_LAMP = 'captainBedLamp'
 export const BEYONDER_ENVELOPE = 'beyonderEnvelope'
+export const THROWN_FRUIT = 'thrownFruit'
 
 export const BENNETT_COUCH_LAMP = 'bennettCouchLamp'
 
@@ -31,7 +32,7 @@ export const DRUMS_STACKED_BASEMENT = 'drumsStackedBasement'
 export const DRUMS_STACKED_CLUB = 'drumsStackedClub' // Duplicate.
 
 export const PUSH_BROOM_BACKSTAGE = 'pushBroomBackstage'
-export const PUSH_BROOM_TUNNEL = 'pushBroomTunnel'
+export const PUSH_BROOM_TUNNEL = 'pushBroomTunnel' // Duplicate.
 export const STEPLADDER = 'stepladder'
 export const MANNEQUIN = 'mannequin'
 
@@ -40,6 +41,8 @@ export const TRAY_CART = 'trayCart'
 export const GLASS_RACK = 'glassRack'
 export const DISH_PILE = 'dishPile'
 
+export const STAGE_MIC_SIDE = 'stageMicSide'
+export const STAGE_MIC_FAR = 'stageMicFar'
 export const GUITAR = 'guitar'
 export const GUITAR_CASE_OPEN = 'guitarCaseOpen'
 export const KICK_DRUM = 'kickDrum'
@@ -51,6 +54,7 @@ export const BENNETT_SHOE_REFLECTION = 'bennettShoeReflection'
 export const NAS_ALBUM = 'nasAlbum'
 
 export const TETHERBALL_POLE = 'tetherballPole'
+export const RECORDING_MIC = 'recordingMic'
 
 export const HOSPITAL_RECORD_PLAYER = 'hospitalRecordPlayer'
 
@@ -83,11 +87,4 @@ export const LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection'
 export const SHOPPING_CART = 'shoppingCart'
 export const GARBAGE_BAG = 'garbageBag'
 export const SHOPPING_CART_FULL = 'shoppingCartFull'
-export const THROWN_FRUIT = 'thrownFruit'
 
-// With performing Bennett. Requires editing.
-export const STAGE_MIC_SIDE = 'stageMicSide'
-export const STAGE_MIC_FAR = 'stageMicFar'
-
-// With cymbal stand fixtures.
-export const RECORDING_MIC = 'recordingMic'
