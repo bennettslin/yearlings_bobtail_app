@@ -52,10 +52,10 @@
 * carrying (cymbal bag)
 
 ## MiriamTristan
-* greeting
+* greeting (merge)
 
 ## PreteenBennett
-* buoy
+* buoy (buoy)
 
 ## Willy
 * crossingGuard (skew sign)
@@ -70,7 +70,14 @@
 
 # Position all faces on bodies as placeholders.
 
+## Amy
+* flirting (playing with hair)
+
 # Make sure that all cases of touched cubes are correctly laid out.
+
+## Amy
+* doctor (fabric)
+
 
 # Complete necks and hair (Miriam).
 # Draw blankets, cushions, pillows.
