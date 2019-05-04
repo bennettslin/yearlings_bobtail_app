@@ -4,12 +4,10 @@ import PlaygroundBall from './Fixtures/PlaygroundBall'
 import SafewayBag from './Fixtures/SafewayBag'
 import RecordPlayerStool from './Fixtures/RecordPlayerStool'
 import JohnnyHortonAlbum from './Fixtures/JohnnyHortonAlbum'
-import ShoppingCart from './Fixtures/ShoppingCart'
+import ShoppingCartFull from './Fixtures/ShoppingCartFull'
 import HaircutScissors from './Fixtures/HaircutScissors'
 import BeethovenBust from './Fixtures/BeethovenBust'
 import ChristopherLetters from './Fixtures/ChristopherLetters'
-import GarbageBag from './Fixtures/GarbageBag'
-import ShoppingCartFull from './Fixtures/ShoppingCartFull'
 import BackpackBennett from './Fixtures/BackpackBennett'
 import BackpackSasha from './Fixtures/BackpackSasha'
 import BackpackJewishBoy from './Fixtures/BackpackJewishBoy'
@@ -75,12 +73,10 @@ import {
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL,
     JOHNNY_HORTON_ALBUM,
-    SHOPPING_CART,
+    SHOPPING_CART_FULL,
     HAIRCUT_SCISSORS,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
-    GARBAGE_BAG,
-    SHOPPING_CART_FULL,
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY,
@@ -150,12 +146,10 @@ export const propTypes = {
     [SAFEWAY_BAG]: PropTypes.bool,
     [RECORD_PLAYER_STOOL]: PropTypes.bool,
     [JOHNNY_HORTON_ALBUM]: PropTypes.bool,
-    [SHOPPING_CART]: PropTypes.bool,
+    [SHOPPING_CART_FULL]: PropTypes.bool,
     [HAIRCUT_SCISSORS]: PropTypes.bool,
     [BEETHOVEN_BUST]: PropTypes.bool,
     [CHRISTOPHER_LETTERS]: PropTypes.bool,
-    [GARBAGE_BAG]: PropTypes.bool,
-    [SHOPPING_CART_FULL]: PropTypes.bool,
     [BACKPACK_BENNETT]: PropTypes.bool,
     [BACKPACK_SASHA]: PropTypes.bool,
     [BACKPACK_JEWISH_BOY]: PropTypes.bool,
@@ -225,12 +219,10 @@ export default {
     [SAFEWAY_BAG]: SafewayBag,
     [RECORD_PLAYER_STOOL]: RecordPlayerStool,
     [JOHNNY_HORTON_ALBUM]: JohnnyHortonAlbum,
-    [SHOPPING_CART]: ShoppingCart,
+    [SHOPPING_CART_FULL]: ShoppingCartFull,
     [HAIRCUT_SCISSORS]: HaircutScissors,
     [BEETHOVEN_BUST]: BeethovenBust,
     [CHRISTOPHER_LETTERS]: ChristopherLetters,
-    [GARBAGE_BAG]: GarbageBag,
-    [SHOPPING_CART_FULL]: ShoppingCartFull,
     [BACKPACK_BENNETT]: BackpackBennett,
     [BACKPACK_SASHA]: BackpackSasha,
     [BACKPACK_JEWISH_BOY]: BackpackJewishBoy,

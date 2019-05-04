@@ -87,10 +87,8 @@ import {
 } from '../../scene/things/keys/cutouts'
 
 import {
-    SHOPPING_CART,
-    HAIRCUT_SCISSORS,
-    GARBAGE_BAG,
     SHOPPING_CART_FULL,
+    HAIRCUT_SCISSORS,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
 } from '../../scene/things/keys/fixtures'
@@ -123,9 +121,6 @@ export default [
             [CUTOUTS]: {
                 [OVERPASS_SIGN_FRONT]: true,
                 [OVERPASS_SIGN_BACK]: true
-            },
-            [FIXTURES]: {
-                [SHOPPING_CART]: true
             }
         },
         sky: {
@@ -153,7 +148,7 @@ export default [
                 [OVERPASS_SIGN_BACK]: true
             },
             [FIXTURES]: {
-                [SHOPPING_CART]: true
+                [SHOPPING_CART_FULL]: true
             }
         },
         cubes: FREEWAY_KEY,
@@ -282,7 +277,6 @@ export default [
                 [FIRE_HYDRANT]: true
             },
             [FIXTURES]: {
-                [GARBAGE_BAG]: true,
                 [SHOPPING_CART_FULL]: true
             },
             [FLATS]: {

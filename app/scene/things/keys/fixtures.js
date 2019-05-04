@@ -4,6 +4,7 @@ export const SAFEWAY_BAG = 'safewayBag'
 export const JOHNNY_HORTON_ALBUM = 'johnnyHortonAlbum'
 export const HAIRCUT_SCISSORS = 'haircutScissors'
 
+export const SHOPPING_CART_FULL = 'shoppingCartFull'
 export const BEETHOVEN_BUST = 'beethovenBust'
 
 export const BACKPACK_BENNETT = 'backpackBennett'
@@ -82,9 +83,4 @@ export const LIZ_PHONE = 'lizPhone'
 export const LIZ_PHONE_REFLECTION = 'lizPhoneReflection'
 export const LIZ_PHONE_BASE = 'lizPhoneBase'
 export const LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection'
-
-// Together on one page. Requires editing.
-export const SHOPPING_CART = 'shoppingCart'
-export const GARBAGE_BAG = 'garbageBag'
-export const SHOPPING_CART_FULL = 'shoppingCartFull'
 

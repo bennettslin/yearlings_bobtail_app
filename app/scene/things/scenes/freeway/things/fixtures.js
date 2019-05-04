@@ -1,9 +1,9 @@
 import {
-    SHOPPING_CART
+    SHOPPING_CART_FULL
 } from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
-    [SHOPPING_CART]: {
+    [SHOPPING_CART_FULL]: {
         yIndex: 3,
         arrangement: {
             xFloat: 8,
