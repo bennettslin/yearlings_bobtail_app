@@ -51,7 +51,7 @@
 <!-- * carrying (cymbal bag) -->
 
 ## MiriamTristan
-* greeting (merge)
+<!-- * greeting (merge) -->
 
 ## PreteenBennett
 <!-- * buoy (buoy) -->
@@ -76,6 +76,58 @@
 
 ## Amy
 * doctor (fabric)
+
+## Ana
+* eating (seated)
+* stationWagon (seated)
+
+## Anita
+* cheering (leaning on tub)
+
+## Bennett
+* attic (fabric)
+* brokenHearted (seated)
+* couchReading (seated, armrest)
+* disposingCondom (seated)
+* eating (seated)
+* goKarts (seated)
+* infirm (fabric)
+* pondering (leaning, armrest)
+* removingPants (seated)
+* removingShoes (seated)
+* rubiksCube (armrest)
+* rumpledLinens (light switch)
+* solicitingOpinion (seated)
+* stationWagon (seated)
+* waitingRoomAsleep (seated, armrest)
+
+## BennettLiz
+* awkwardConsolation (seated)
+* celibateFreezing (seated)
+* cheekUnveiled (seated, armrest)
+* finalDream (seated)
+* hardOn (Liz seated)
+
+## BradSasha
+* charmedSchoolbus (seated, braid on rest)
+
+## Catherine
+* quipping (seated)
+
+## Christopher
+* staring (seated)
+
+## Howie
+* stationWagon (seated)
+
+## JacobMara
+* eating (seated)
+
+## Khari
+* judgmental (seated)
+
+## Khari
+* jokingLaughing (seated)
 
 # Complete necks and hair (Miriam).
 # Draw blankets, cushions, pillows.
