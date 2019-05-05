@@ -46,6 +46,7 @@
 ## Liz
 <!-- * pettingSeated (opal puppet scaled 75%) -->
 <!-- * pettingStanding (opal puppet scaled 75%) -->
+* gateEnded (hand on wall)
 
 ## Mara
 <!-- * carrying (cymbal bag) -->
@@ -71,6 +72,9 @@
 
 ## Amy
 * flirting (playing with hair)
+
+## Miriam
+* reversing (sunglasses on hair)
 
 # Make sure that all cases of touched cubes are correctly laid out.
 
@@ -128,6 +132,54 @@
 
 ## Khari
 * jokingLaughing (seated)
+
+## Liz
+* asleepCouch (fabric)
+* asleepReaching (fabric)
+* dateEnded (hand on gate)
+* defending (seated)
+* goKarts (seated)
+* notHungry (seated)
+* pettingSeated (seated)
+* pettingStanding (window)
+
+## LizReflection
+* reachingReflection (fabric)
+
+## Miriam
+* perfuming (seated)
+* reversing (seated)
+
+## MiriamBennett
+* asleep and asleepFearful (fabric)
+* blowjob (seated)
+* cowgirl (seated)
+* fendingOff (fabric)
+
+## MiriamStephanie
+* mischievousBanjo (couch)
+
+## Mother
+* comforting (seated)
+
+## PreteenBennett
+* asleep (fabric)
+* fearful (fabric)
+* feigningSick (fabric)
+* gate (wall)
+* mat (fabric)
+* panicked (seated)
+* shaken (seated)
+* sheepish (seated)
+
+## Tomer
+* stationWagon (seated)
+
+## Willy
+* ducking (wall)
+
+## YoungBennett
+* flustered (seated)
 
 # Complete necks and hair (Miriam).
 # Draw blankets, cushions, pillows.

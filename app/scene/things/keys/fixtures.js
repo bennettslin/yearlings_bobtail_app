@@ -20,7 +20,7 @@ export const THROWN_FRUIT = 'thrownFruit'
 export const BENNETT_COUCH_LAMP = 'bennettCouchLamp'
 
 export const BENNETT_RECORD_PLAYER_COUCH = 'bennettRecordPlayerCouch'
-export const BENNETT_RECORD_PLAYER_BASEMENT = 'bennettRecordPlayerBasement'
+export const BENNETT_RECORD_PLAYER_BASEMENT = 'bennettRecordPlayerBasement' // Duplicate.
 export const POLICE_ALBUM = 'policeAlbum'
 export const ASH_CAN = 'ashCan'
 
