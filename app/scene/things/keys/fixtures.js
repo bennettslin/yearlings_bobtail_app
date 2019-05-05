@@ -50,7 +50,6 @@ export const GUITAR = 'guitar'
 export const GUITAR_CASE_OPEN = 'guitarCaseOpen'
 export const KICK_DRUM = 'kickDrum'
 export const DRUM_THRONE = 'drumThrone'
-export const BASS_CASE_SIDE = 'bassCaseSide'
 export const BENNETT_SHOE = 'bennettShoe'
 export const BENNETT_SHOE_REFLECTION = 'bennettShoeReflection'
 

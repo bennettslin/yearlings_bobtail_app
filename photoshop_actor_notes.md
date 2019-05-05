@@ -3,17 +3,17 @@
 # Edits and merges.
 
 ## Amy
-* protester (sign)
+<!-- * protester (sign) -->
 
 ## Ana
-* squatting (bass case)
+<!-- * squatting (bass case) -->
 
 ## AnitaBennett
 * epilogue (merge)
 
 ## Bennett
-* disposingCondom (condom)
-* sidelongHesitance (guitar case)
+<!-- * disposingCondom (condom) -->
+<!-- * sidelongHesitance (guitar case and bass case scaled 109%) -->
 
 ## BennettFather
 * present (merge)
@@ -29,36 +29,35 @@
 * epilogue (merge)
 
 ## BradBennett
-* tyingTether (tetherball pole)
+<!-- * tyingTether (tetherball pole) -->
 
 ## ChristopherBennettWilly
 * reassuringEnchanted (merge)
 
 ## EstherMother
-* hurtConsoling (lotus flower)
-* sobbingShielding (glass crack)
+<!-- * hurtConsoling (lotus flower) -->
 
 ## HowieWilly
 * gangbanger (merge)
 
 ## Jacob
-* carrying (stacked drums)
+<!-- * carrying (stacked drums) -->
 
 ## Liz
-* pettingSeated (opal puppet)
-* pettingStanding (opal puppet)
+<!-- * pettingSeated (opal puppet scaled 75%) -->
+<!-- * pettingStanding (opal puppet scaled 75%) -->
 
 ## Mara
-* carrying (cymbal bag)
+<!-- * carrying (cymbal bag) -->
 
 ## MiriamTristan
 * greeting (merge)
 
 ## PreteenBennett
-* buoy (buoy)
+<!-- * buoy (buoy) -->
 
 ## Willy
-* crossingGuard (skew sign)
+<!-- * crossingGuard (skew sign) -->
 
 # Finish face revisions (Liz, Nestor, Tristan).
 
@@ -77,7 +76,6 @@
 
 ## Amy
 * doctor (fabric)
-
 
 # Complete necks and hair (Miriam).
 # Draw blankets, cushions, pillows.

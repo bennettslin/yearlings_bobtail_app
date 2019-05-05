@@ -1,6 +1,4 @@
 import {
-    OPAL_LAP,
-    OPAL_LICKING,
     OPAL_COUCH,
     OPAL_GAZING,
     PEAHEN,
@@ -8,22 +6,6 @@ import {
 } from '../../../keys/puppets'
 
 const ARRANGEMENTS_MAP = {
-    [OPAL_LAP]: {
-        yIndex: 4,
-        arrangement: {
-            xFloat: 2.5,
-            xWidth: 1,
-            zHeight: 0.5
-        }
-    },
-    [OPAL_LICKING]: {
-        yIndex: 1,
-        arrangement: {
-            xFloat: 6,
-            xWidth: 1,
-            zHeight: 0.5
-        }
-    },
     [OPAL_COUCH]: {
         yIndex: 4,
         arrangement: {

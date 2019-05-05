@@ -13,8 +13,6 @@ export const PEACOCK = 'peacock'
 export const PEAHEN = 'peahen'
 export const PUPPET_REATTA = 'puppetReatta'
 
-export const OPAL_LAP = 'opalLap'
-export const OPAL_LICKING = 'opalLicking'
 export const OPAL_COUCH = 'opalCouch'
 export const OPAL_GAZING = 'opalGazing'
 

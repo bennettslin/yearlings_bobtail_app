@@ -51,7 +51,6 @@ import StageMicSide from './Fixtures/StageMicSide'
 import KickDrum from './Fixtures/KickDrum'
 import DrumThrone from './Fixtures/DrumThrone'
 import GuitarCaseOpen from './Fixtures/GuitarCaseOpen'
-import BassCaseSide from './Fixtures/BassCaseSide'
 import DrumsStacked from './Fixtures/DrumsStacked'
 import BennettShoe from './Fixtures/BennettShoe'
 import BennettShoeReflection from './Fixtures/BennettShoeReflection'
@@ -122,7 +121,6 @@ import {
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
-    BASS_CASE_SIDE,
     DRUMS_STACKED_BASEMENT,
     DRUMS_STACKED_CLUB,
     BENNETT_SHOE,
@@ -195,7 +193,6 @@ export const propTypes = {
     [KICK_DRUM]: PropTypes.bool,
     [DRUM_THRONE]: PropTypes.bool,
     [GUITAR_CASE_OPEN]: PropTypes.bool,
-    [BASS_CASE_SIDE]: PropTypes.bool,
     [DRUMS_STACKED_BASEMENT]: PropTypes.bool,
     [DRUMS_STACKED_CLUB]: PropTypes.bool,
     [BENNETT_SHOE]: PropTypes.bool,
@@ -268,7 +265,6 @@ export default {
     [KICK_DRUM]: KickDrum,
     [DRUM_THRONE]: DrumThrone,
     [GUITAR_CASE_OPEN]: GuitarCaseOpen,
-    [BASS_CASE_SIDE]: BassCaseSide,
     [DRUMS_STACKED_BASEMENT]: DrumsStacked,
     [DRUMS_STACKED_CLUB]: DrumsStacked,
     [BENNETT_SHOE]: BennettShoe,

@@ -9,8 +9,6 @@ import PuppetFamilyEnd from './Puppets/PuppetFamilyEnd'
 import PchelkaMushkaRocket from './Puppets/PchelkaMushkaRocket'
 import Earth from './Puppets/Earth'
 import SpaceColony from './Puppets/SpaceColony'
-import OpalLap from './Puppets/OpalLap'
-import OpalLicking from './Puppets/OpalLicking'
 import OpalCouch from './Puppets/OpalCouch'
 import OpalGazing from './Puppets/OpalGazing'
 import Peahen from './Puppets/Peahen'
@@ -32,8 +30,6 @@ import {
     PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY,
-    OPAL_LAP,
-    OPAL_LICKING,
     OPAL_COUCH,
     OPAL_GAZING,
     PEAHEN,
@@ -56,8 +52,6 @@ export const propTypes = {
     [PCHELKA_MUSHKA_ROCKET]: PropTypes.bool,
     [EARTH]: PropTypes.bool,
     [SPACE_COLONY]: PropTypes.bool,
-    [OPAL_LAP]: PropTypes.bool,
-    [OPAL_LICKING]: PropTypes.bool,
     [OPAL_COUCH]: PropTypes.bool,
     [OPAL_GAZING]: PropTypes.bool,
     [PEAHEN]: PropTypes.bool,
@@ -80,8 +74,6 @@ export default {
     [PCHELKA_MUSHKA_ROCKET]: PchelkaMushkaRocket,
     [EARTH]: Earth,
     [SPACE_COLONY]: SpaceColony,
-    [OPAL_LAP]: OpalLap,
-    [OPAL_LICKING]: OpalLicking,
     [OPAL_COUCH]: OpalCouch,
     [OPAL_GAZING]: OpalGazing,
     [PEAHEN]: Peahen,

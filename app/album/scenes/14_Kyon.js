@@ -55,8 +55,6 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    OPAL_LAP,
-    OPAL_LICKING,
     OPAL_COUCH,
     OPAL_GAZING,
     PEAHEN,
@@ -80,9 +78,6 @@ export default [
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true
-            },
-            [PUPPETS]: {
-                [OPAL_LAP]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -107,9 +102,6 @@ export default [
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true
-            },
-            [PUPPETS]: {
-                [OPAL_LICKING]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

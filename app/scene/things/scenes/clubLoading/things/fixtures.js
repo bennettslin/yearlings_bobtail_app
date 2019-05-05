@@ -1,18 +1,9 @@
 import {
-    BASS_CASE_SIDE,
     DRUMS_STACKED_BASEMENT,
     DRUMS_STACKED_CLUB
 } from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
-    [BASS_CASE_SIDE]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 1,
-            xWidth: 3,
-            zHeight: 2
-        }
-    },
     [DRUMS_STACKED_BASEMENT]: {
         yIndex: 3,
         arrangement: {

@@ -73,7 +73,6 @@ import {
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
-    BASS_CASE_SIDE,
     DRUMS_STACKED_CLUB,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
@@ -236,7 +235,6 @@ export default [
                 }
             },
             [FIXTURES]: {
-                [BASS_CASE_SIDE]: true,
                 [DRUMS_STACKED_CLUB]: true
             }
         },
