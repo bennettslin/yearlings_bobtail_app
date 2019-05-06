@@ -1,5 +1,6 @@
 import {
-    CAPTAIN_BED_DRAWERS
+    CAPTAIN_BED_DRAWERS,
+    BEDROOM_FENCE
 } from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
@@ -9,6 +10,14 @@ const ARRANGEMENTS_MAP = {
             xFloat: 6,
             xWidth: 3,
             zHeight: 2.5
+        }
+    },
+    [BEDROOM_FENCE]: {
+        yIndex: 0,
+        arrangement: {
+            xFloat: 3,
+            xWidth: 6,
+            zHeight: 8
         }
     }
 }

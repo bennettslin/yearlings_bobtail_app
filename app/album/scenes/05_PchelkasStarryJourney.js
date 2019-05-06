@@ -71,8 +71,6 @@ import { ASLEEP } from '../../scene/actors/keys/instances/songs'
 import { PRINCIPAL } from '../../scene/actors/keys/instances/tristan'
 
 import {
-    BEDROOM_BACKDROP,
-    BEDROOM_BUS_BACKDROP,
     VAN_NUYS_SCHOOL_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
@@ -100,6 +98,7 @@ import {
 } from '../../scene/things/keys/fixtures'
 
 import {
+    BEDROOM_BUS,
     LOCKER_BANK
 } from '../../scene/things/keys/flats'
 
@@ -109,7 +108,8 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    CAPTAIN_BED_DRAWERS
+    CAPTAIN_BED_DRAWERS,
+    BEDROOM_FENCE
 } from '../../scene/things/keys/panels'
 
 import {
@@ -127,9 +127,6 @@ export default [
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
         presences: {
-            [BACKDROPS]: {
-                [BEDROOM_BACKDROP]: true
-            },
             [CUTOUTS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
@@ -138,7 +135,8 @@ export default [
                 [CAPTAIN_BED_PILLOW]: true
             },
             [PANELS]: {
-                [CAPTAIN_BED_DRAWERS]: true
+                [CAPTAIN_BED_DRAWERS]: true,
+                [BEDROOM_FENCE]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -160,9 +158,6 @@ export default [
                     instance: BLISSFUL_GUILTY
                 }
             },
-            [BACKDROPS]: {
-                [BEDROOM_BACKDROP]: true
-            },
             [BUBBLES]: {
                 [DOGS_SKETCHBOOK]: true
             },
@@ -175,6 +170,9 @@ export default [
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true
+            },
+            [PANELS]: {
+                [BEDROOM_FENCE]: true
             }
         },
         cubes: BEDROOM_OPEN_KEY,
@@ -195,14 +193,14 @@ export default [
                     instance: FEIGNING_SICK
                 }
             },
-            [BACKDROPS]: {
-                [BEDROOM_BUS_BACKDROP]: true
-            },
             [CUTOUTS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
             [FIXTURES]: {
                 [RED_ENVELOPE_MONEY]: true
+            },
+            [FLATS]: {
+                [BEDROOM_BUS]: true
             },
             [FURNITURES]: {
                 [CAPTAIN_BED_PILLOW]: true,
@@ -230,9 +228,6 @@ export default [
                     instance: ASLEEP
                 }
             },
-            [BACKDROPS]: {
-                [BEDROOM_BACKDROP]: true
-            },
             [CUTOUTS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
@@ -240,7 +235,8 @@ export default [
                 [CAPTAIN_BED_PILLOW]: true
             },
             [PANELS]: {
-                [CAPTAIN_BED_DRAWERS]: true
+                [CAPTAIN_BED_DRAWERS]: true,
+                [BEDROOM_FENCE]: true
             },
             [PUPPETS]: {
                 [PCHELKA_MUSHKA_ROCKET]: true
@@ -264,14 +260,14 @@ export default [
                     instance: SHAKEN
                 }
             },
-            [BACKDROPS]: {
-                [BEDROOM_BACKDROP]: true
-            },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true
             },
             [FIXTURES]: {
                 [BEYONDER_ENVELOPE]: true
+            },
+            [PANELS]: {
+                [BEDROOM_FENCE]: true
             },
             [PUPPETS]: {
                 [EARTH]: true,

@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import NohoHouseLeft from './Flats/NohoHouseLeft'
 import NohoHouseRight from './Flats/NohoHouseRight'
 import NohoSchoolhouse from './Flats/NohoSchoolhouse'
+import BedroomBus from './Flats/BedroomBus'
+import BedroomSiren from './Flats/BedroomSiren'
 import FamilyHouse from './Flats/FamilyHouse'
 import CaveShadows from './Flats/CaveShadows'
 import TaiwanClouds from './Flats/TaiwanClouds'
@@ -62,6 +64,8 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE,
+    BEDROOM_BUS,
+    BEDROOM_SIREN,
     FAMILY_HOUSE,
     CAVE_SHADOWS,
     TAIWAN_CLOUDS,
@@ -124,6 +128,8 @@ export const propTypes = {
     [NOHO_HOUSE_LEFT]: PropTypes.bool,
     [NOHO_HOUSE_RIGHT]: PropTypes.bool,
     [NOHO_SCHOOLHOUSE]: PropTypes.bool,
+    [BEDROOM_BUS]: PropTypes.bool,
+    [BEDROOM_SIREN]: PropTypes.bool,
     [FAMILY_HOUSE]: PropTypes.bool,
     [CAVE_SHADOWS]: PropTypes.bool,
     [TAIWAN_CLOUDS]: PropTypes.bool,
@@ -186,6 +192,8 @@ export default {
     [NOHO_HOUSE_LEFT]: NohoHouseLeft,
     [NOHO_HOUSE_RIGHT]: NohoHouseRight,
     [NOHO_SCHOOLHOUSE]: NohoSchoolhouse,
+    [BEDROOM_BUS]: BedroomBus,
+    [BEDROOM_SIREN]: BedroomSiren,
     [FAMILY_HOUSE]: FamilyHouse,
     [CAVE_SHADOWS]: CaveShadows,
     [TAIWAN_CLOUDS]: TaiwanClouds,

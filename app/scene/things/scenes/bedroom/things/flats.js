@@ -1,11 +1,10 @@
 import {
-    BEDROOM_BACKDROP,
-    BEDROOM_SIREN_BACKDROP,
-    BEDROOM_BUS_BACKDROP
-} from '../../../keys/backdrops'
+    BEDROOM_SIREN,
+    BEDROOM_BUS
+} from '../../../keys/flats'
 
 const ARRANGEMENTS_MAP = {
-    [BEDROOM_BACKDROP]: {
+    [BEDROOM_SIREN]: {
         yIndex: 0,
         arrangement: {
             xFloat: 3,
@@ -13,15 +12,7 @@ const ARRANGEMENTS_MAP = {
             zHeight: 8
         }
     },
-    [BEDROOM_SIREN_BACKDROP]: {
-        yIndex: 0,
-        arrangement: {
-            xFloat: 3,
-            xWidth: 6,
-            zHeight: 8
-        }
-    },
-    [BEDROOM_BUS_BACKDROP]: {
+    [BEDROOM_BUS]: {
         yIndex: 0,
         arrangement: {
             xFloat: 3,

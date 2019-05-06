@@ -5,6 +5,9 @@ export const NOHO_HOUSE_LEFT = 'nohoHouseLeft'
 export const NOHO_HOUSE_RIGHT = 'nohoHouseRight'
 export const NOHO_SCHOOLHOUSE = 'nohoSchoolhouse'
 
+export const BEDROOM_SIREN = 'bedroomSiren'
+export const BEDROOM_BUS = 'bedroomBus'
+
 export const FAMILY_HOUSE = 'familyHouse'
 export const CAVE_SHADOWS = 'caveShadows'
 

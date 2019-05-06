@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import EstherSpeechPanel from './Panels/EstherSpeechPanel'
 import Bathtub from './Panels/Bathtub'
 import CaptainBedDrawers from './Panels/CaptainBedDrawers'
+import BedroomFence from './Panels/BedroomFence'
 import SchoolbusInterior from './Panels/SchoolbusInterior'
 import SchoolbusExterior from './Panels/SchoolbusExterior'
 import OceanCaveInterior from './Panels/OceanCaveInterior'
@@ -24,6 +25,7 @@ import {
     ESTHER_SPEECH_PANEL,
     BATHTUB,
     CAPTAIN_BED_DRAWERS,
+    BEDROOM_FENCE,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     OCEAN_CAVE_INTERIOR,
@@ -51,6 +53,7 @@ export const propTypes = {
     [ESTHER_SPEECH_PANEL]: PropTypes.bool,
     [BATHTUB]: PropTypes.bool,
     [CAPTAIN_BED_DRAWERS]: PropTypes.bool,
+    [BEDROOM_FENCE]: PropTypes.bool,
     [SCHOOLBUS_INTERIOR]: PropTypes.bool,
     [SCHOOLBUS_EXTERIOR]: PropTypes.bool,
     [OCEAN_CAVE_INTERIOR]: PropTypes.bool,
@@ -78,6 +81,7 @@ export default {
     [ESTHER_SPEECH_PANEL]: EstherSpeechPanel,
     [BATHTUB]: Bathtub,
     [CAPTAIN_BED_DRAWERS]: CaptainBedDrawers,
+    [BEDROOM_FENCE]: BedroomFence,
     [SCHOOLBUS_INTERIOR]: SchoolbusInterior,
     [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
     [OCEAN_CAVE_INTERIOR]: OceanCaveInterior,

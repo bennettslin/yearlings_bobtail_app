@@ -68,9 +68,7 @@ import {
 
 import {
     NOHO_HOUSES_BACKDROP,
-    VALLEY_BACKDROP,
-    BEDROOM_BACKDROP,
-    BEDROOM_SIREN_BACKDROP
+    VALLEY_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
 import {
@@ -97,7 +95,8 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
-    CAVE_SHADOWS
+    CAVE_SHADOWS,
+    BEDROOM_SIREN
 } from '../../scene/things/keys/flats'
 
 import {
@@ -106,7 +105,8 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    CAPTAIN_BED_DRAWERS
+    CAPTAIN_BED_DRAWERS,
+    BEDROOM_FENCE
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -225,9 +225,6 @@ export default [
                     instance: ENRAGED
                 }
             },
-            [BACKDROPS]: {
-                [BEDROOM_BACKDROP]: true
-            },
             [CUTOUTS]: {
                 [TINTIN_POSTER]: true
             },
@@ -240,7 +237,8 @@ export default [
                 [CAPTAIN_BED_PILLOW]: true
             },
             [PANELS]: {
-                [CAPTAIN_BED_DRAWERS]: true
+                [CAPTAIN_BED_DRAWERS]: true,
+                [BEDROOM_FENCE]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -308,14 +306,14 @@ export default [
                     instance: FEARFUL
                 }
             },
-            [BACKDROPS]: {
-                [BEDROOM_SIREN_BACKDROP]: true
-            },
             [CUTOUTS]: {
                 [TINTIN_POSTER]: true
             },
             [FIXTURES]: {
                 [BEETHOVEN_BUST]: true
+            },
+            [FLATS]: {
+                [BEDROOM_SIREN]: true
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,

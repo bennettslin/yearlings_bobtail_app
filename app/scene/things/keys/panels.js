@@ -4,6 +4,8 @@
 export const ESTHER_SPEECH_PANEL = 'estherSpeechPanel'
 export const BATHTUB = 'bathtub'
 
+export const BEDROOM_FENCE = 'bedroomFence'
+
 export const OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior'
 export const OCEAN_CAVE_INTERIOR = 'oceanCaveInterior'
 

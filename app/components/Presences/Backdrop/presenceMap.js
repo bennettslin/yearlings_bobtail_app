@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import NohoHousesBackdrop from './Backdrops/NohoHousesBackdrop'
 import NohoSchoolBackdrop from './Backdrops/NohoSchoolBackdrop'
 import ValleyBackdrop from './Backdrops/ValleyBackdrop'
-import BedroomBackdrop from './Backdrops/BedroomBackdrop'
-import BedroomSirenBackdrop from './Backdrops/BedroomSirenBackdrop'
 import TaiwanMountainsBackdrop from './Backdrops/TaiwanMountainsBackdrop'
 import SchoolbusThoughtBackdrop from './Backdrops/SchoolbusThoughtBackdrop'
 import VanNuysThoughtBackdrop from './Backdrops/VanNuysThoughtBackdrop'
@@ -14,7 +12,6 @@ import ShoreRickshawBackdrop from './Backdrops/ShoreRickshawBackdrop'
 import ShoreBuoyBackdrop from './Backdrops/ShoreBuoyBackdrop'
 import OceanBottomFar from './Backdrops/OceanBottomFar'
 import OceanFloorFar from './Backdrops/OceanFloorFar'
-import BedroomBusBackdrop from './Backdrops/BedroomBusBackdrop'
 import VanNuysSchoolBackdrop from './Backdrops/VanNuysSchoolBackdrop'
 import BennettCouchThoughtBackdrop from './Backdrops/BennettCouchThoughtBackdrop'
 import WestBerkeleyBackdrop from './Backdrops/WestBerkeleyBackdrop'
@@ -36,8 +33,6 @@ import {
     NOHO_HOUSES_BACKDROP,
     NOHO_SCHOOL_BACKDROP,
     VALLEY_BACKDROP,
-    BEDROOM_BACKDROP,
-    BEDROOM_SIREN_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP,
@@ -47,7 +42,6 @@ import {
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
-    BEDROOM_BUS_BACKDROP,
     VAN_NUYS_SCHOOL_BACKDROP,
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
@@ -70,8 +64,6 @@ export const propTypes = {
     [NOHO_HOUSES_BACKDROP]: PropTypes.bool,
     [NOHO_SCHOOL_BACKDROP]: PropTypes.bool,
     [VALLEY_BACKDROP]: PropTypes.bool,
-    [BEDROOM_BACKDROP]: PropTypes.bool,
-    [BEDROOM_SIREN_BACKDROP]: PropTypes.bool,
     [TAIWAN_MOUNTAINS_BACKDROP]: PropTypes.bool,
     [SCHOOLBUS_THOUGHT_BACKDROP]: PropTypes.bool,
     [VAN_NUYS_THOUGHT_BACKDROP]: PropTypes.bool,
@@ -81,7 +73,6 @@ export const propTypes = {
     [SHORE_BUOY_BACKDROP]: PropTypes.bool,
     [OCEAN_BOTTOM_FAR]: PropTypes.bool,
     [OCEAN_FLOOR_FAR]: PropTypes.bool,
-    [BEDROOM_BUS_BACKDROP]: PropTypes.bool,
     [VAN_NUYS_SCHOOL_BACKDROP]: PropTypes.bool,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: PropTypes.bool,
     [WEST_BERKELEY_BACKDROP]: PropTypes.bool,
@@ -104,8 +95,6 @@ export default {
     [NOHO_HOUSES_BACKDROP]: NohoHousesBackdrop,
     [NOHO_SCHOOL_BACKDROP]: NohoSchoolBackdrop,
     [VALLEY_BACKDROP]: ValleyBackdrop,
-    [BEDROOM_BACKDROP]: BedroomBackdrop,
-    [BEDROOM_SIREN_BACKDROP]: BedroomSirenBackdrop,
     [TAIWAN_MOUNTAINS_BACKDROP]: TaiwanMountainsBackdrop,
     [SCHOOLBUS_THOUGHT_BACKDROP]: SchoolbusThoughtBackdrop,
     [VAN_NUYS_THOUGHT_BACKDROP]: VanNuysThoughtBackdrop,
@@ -115,7 +104,6 @@ export default {
     [SHORE_BUOY_BACKDROP]: ShoreBuoyBackdrop,
     [OCEAN_BOTTOM_FAR]: OceanBottomFar,
     [OCEAN_FLOOR_FAR]: OceanFloorFar,
-    [BEDROOM_BUS_BACKDROP]: BedroomBusBackdrop,
     [VAN_NUYS_SCHOOL_BACKDROP]: VanNuysSchoolBackdrop,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: BennettCouchThoughtBackdrop,
     [WEST_BERKELEY_BACKDROP]: WestBerkeleyBackdrop,

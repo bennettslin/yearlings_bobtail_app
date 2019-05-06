@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const BedroomBackdrop = ({
+const BedroomBus = ({
 
     className,
 
@@ -19,13 +19,13 @@ const BedroomBackdrop = ({
     return (
         <Svg
             className={cx(
-                'BedroomBackdrop',
+                'BedroomBus',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Backdrop__temporaryRect'
+                    'Flat__temporaryRect'
                 )}
                 {...other}
             />
@@ -36,13 +36,13 @@ const BedroomBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'BedroomBackdrop'
+                    'BedroomBus'
                 )}
             </text>
         </Svg>
     )
 }
 
-BedroomBackdrop.propTypes = propTypes
+BedroomBus.propTypes = propTypes
 
-export default BedroomBackdrop
+export default BedroomBus

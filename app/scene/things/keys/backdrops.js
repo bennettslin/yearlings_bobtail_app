@@ -37,11 +37,6 @@ export const UC_BERKELEY_BACKDROP = 'ucBerkeleyBackdrop'
 export const UCLA_BACKDROP = 'uclaBackdrop'
 export const OAKLAND_SIDE_BACKDROP = 'oaklandSideBackdrop'
 
-// Own page. Requires editing.
-export const BEDROOM_BACKDROP = 'bedroomBackdrop'
-export const BEDROOM_SIREN_BACKDROP = 'bedroomSirenBackdrop'
-export const BEDROOM_BUS_BACKDROP = 'bedroomBusBackdrop'
-
 // Combine stationWagon and lizCouchThought backdrops.
 export const SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop'
 
