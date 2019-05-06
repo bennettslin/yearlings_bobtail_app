@@ -1,7 +1,7 @@
 export default [
     {
-        taskName: `Timebox for actor Photoshop edits and merges.`,
-        workedHours: 10,
+        taskName: `Timebox for actor Photoshop scales and merges.`,
+        workedHours: 0,
         neededHours: 16
     },
     {

@@ -830,5 +830,10 @@ export default [
         taskName: `Timebox for actor Photoshop fixes.`,
         workedHours: 32,
         neededHours: 32
+    },
+    {
+        taskName: `Timebox for actor Photoshop fixture edits.`,
+        workedHours: 14,
+        neededHours: 14
     }
 ]

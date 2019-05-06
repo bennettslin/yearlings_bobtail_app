@@ -15,10 +15,15 @@ export const OCEAN_FLOOR_FAR = 'oceanFloorFar'
 
 export const VAN_NUYS_SCHOOL_BACKDROP = 'vanNuysSchoolBackdrop'
 
+export const BENNETT_COUCH_THOUGHT_BACKDROP = 'bennettCouchThoughtBackdrop'
+
 export const GO_KART_BACKDROP = 'goKartBackdrop'
 
+export const PHARMACY_THOUGHT_BACKDROP = 'pharmacyThought'
 export const CEMETERY_BACKDROP = 'cemeteryBackdrop'
+export const STATION_WAGON_BACKDROP = 'stationWagonBackdrop'
 
+export const LIZ_COUCH_THOUGHT_BACKDROP = 'lizCouchThought'
 export const OAKLAND_FRONT_BACKDROP = 'oaklandFrontBackdrop'
 
 export const GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop'
@@ -37,17 +42,11 @@ export const BEDROOM_BACKDROP = 'bedroomBackdrop'
 export const BEDROOM_SIREN_BACKDROP = 'bedroomSirenBackdrop'
 export const BEDROOM_BUS_BACKDROP = 'bedroomBusBackdrop'
 
-// On two pages. Requires editing.
+// Combine stationWagon and lizCouchThought backdrops.
 export const SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop'
-export const STATION_WAGON_BACKDROP = 'stationWagonBackdrop'
-export const LIZ_COUCH_THOUGHT_BACKDROP = 'lizCouchThought'
 
-// With vanNuys schoolhouse flat on two pages. Both require editing.
+// Combine vanNuysSchool and bennettCouchThought backdrops.
 export const VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop'
-export const BENNETT_COUCH_THOUGHT_BACKDROP = 'bennettCouchThoughtBackdrop'
-
-// Own page.
-export const PHARMACY_THOUGHT_BACKDROP = 'pharmacyThought'
 
 // Together with deathbed and tennis thought panels. Requires editing.
 export const INVERSE_THOUGHT_BACKDROP = 'inverseThoughtBackdrop'

@@ -1,5 +1,7 @@
 # Draw masks at some point.
 
+# Character sizes.
+
 # Edits and merges.
 
 ## Amy
@@ -46,7 +48,6 @@
 ## Liz
 <!-- * pettingSeated (opal puppet scaled 75%) -->
 <!-- * pettingStanding (opal puppet scaled 75%) -->
-* gateEnded (hand on wall)
 
 ## Mara
 <!-- * carrying (cymbal bag) -->
