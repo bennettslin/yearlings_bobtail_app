@@ -30,6 +30,7 @@ export const REATTA_EXTERIOR = 'reattaExterior'
 export const PHONE_CALL_PANEL = 'phoneCallPanel'
 
 export const WEDDING_PLATFORM = 'weddingPlatform'
+export const INVERSE_THOUGHT_PANEL = 'inverseThoughtBackdrop'
 
 // Own file, still to edit.
 export const SCHOOLBUS_INTERIOR = 'schoolbusInterior'

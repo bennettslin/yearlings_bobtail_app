@@ -52,8 +52,7 @@ import {
 import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
-    GOLDEN_GATE_BACKDROP,
-    INVERSE_THOUGHT_BACKDROP
+    GOLDEN_GATE_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
 import {
@@ -80,7 +79,8 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    WEDDING_PLATFORM
+    WEDDING_PLATFORM,
+    INVERSE_THOUGHT_PANEL
 } from '../../scene/things/keys/panels'
 
 import {
@@ -261,11 +261,14 @@ export default [
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [BACKDROPS]: {
-                [INVERSE_THOUGHT_BACKDROP]: true
+            [FLATS]: {
+                [CLIFF_GRAVES_FAR]: true
             },
             [FURNITURES]: {
                 [HOSPITAL_PILLOW_LOWERED]: true
+            },
+            [PANELS]: {
+                [INVERSE_THOUGHT_PANEL]: true
             }
         },
         cubes: CLIFF_DEATHBED_KEY,

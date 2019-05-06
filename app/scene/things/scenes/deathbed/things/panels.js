@@ -1,6 +1,7 @@
 import {
     DEATHBED_THOUGHT_PANEL,
-    TENNIS_THOUGHT_PANEL
+    TENNIS_THOUGHT_PANEL,
+    INVERSE_THOUGHT_PANEL
 } from '../../../keys/panels'
 
 const ARRANGEMENTS_MAP = {
@@ -18,6 +19,14 @@ const ARRANGEMENTS_MAP = {
             xFloat: 9,
             xWidth: 5,
             zHeight: 4
+        }
+    },
+    [INVERSE_THOUGHT_PANEL]: {
+        yIndex: 0,
+        arrangement: {
+            xFloat: 5.5,
+            xWidth: 12,
+            zHeight: 8
         }
     }
 }

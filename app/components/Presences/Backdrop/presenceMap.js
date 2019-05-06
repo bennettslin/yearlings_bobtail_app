@@ -27,7 +27,6 @@ import OaklandFrontBackdrop from './Backdrops/OaklandFrontBackdrop'
 import GoldenGateBackdrop from './Backdrops/GoldenGateBackdrop'
 import PampasBackdrop from './Backdrops/PampasBackdrop'
 import WeddingBackdrop from './Backdrops/WeddingBackdrop'
-import InverseThoughtBackdrop from './Backdrops/InverseThoughtBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -56,8 +55,7 @@ import {
     OAKLAND_FRONT_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     PAMPAS_BACKDROP,
-    WEDDING_BACKDROP,
-    INVERSE_THOUGHT_BACKDROP
+    WEDDING_BACKDROP
 } from 'scene/things/keys/backdrops'
 
 export const propTypes = {
@@ -87,8 +85,7 @@ export const propTypes = {
     [OAKLAND_FRONT_BACKDROP]: PropTypes.bool,
     [GOLDEN_GATE_BACKDROP]: PropTypes.bool,
     [PAMPAS_BACKDROP]: PropTypes.bool,
-    [WEDDING_BACKDROP]: PropTypes.bool,
-    [INVERSE_THOUGHT_BACKDROP]: PropTypes.bool
+    [WEDDING_BACKDROP]: PropTypes.bool
 }
 
 export default {
@@ -118,6 +115,5 @@ export default {
     [OAKLAND_FRONT_BACKDROP]: OaklandFrontBackdrop,
     [GOLDEN_GATE_BACKDROP]: GoldenGateBackdrop,
     [PAMPAS_BACKDROP]: PampasBackdrop,
-    [WEDDING_BACKDROP]: WeddingBackdrop,
-    [INVERSE_THOUGHT_BACKDROP]: InverseThoughtBackdrop
+    [WEDDING_BACKDROP]: WeddingBackdrop
 }

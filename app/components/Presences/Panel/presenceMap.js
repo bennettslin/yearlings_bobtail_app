@@ -20,6 +20,7 @@ import PhoneCallPanel from './Panels/PhoneCallPanel'
 import DeathbedThoughtPanel from './Panels/DeathbedThoughtPanel'
 import TennisThoughtPanel from './Panels/TennisThoughtPanel'
 import WeddingPlatform from './Panels/WeddingPlatform'
+import InverseThoughtPanel from './Panels/InverseThoughtPanel'
 
 import {
     ESTHER_SPEECH_PANEL,
@@ -46,7 +47,8 @@ import {
     PHONE_CALL_PANEL,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
-    WEDDING_PLATFORM
+    WEDDING_PLATFORM,
+    INVERSE_THOUGHT_PANEL
 } from 'scene/things/keys/panels'
 
 export const propTypes = {
@@ -74,7 +76,8 @@ export const propTypes = {
     [PHONE_CALL_PANEL]: PropTypes.bool,
     [DEATHBED_THOUGHT_PANEL]: PropTypes.bool,
     [TENNIS_THOUGHT_PANEL]: PropTypes.bool,
-    [WEDDING_PLATFORM]: PropTypes.bool
+    [WEDDING_PLATFORM]: PropTypes.bool,
+    [INVERSE_THOUGHT_PANEL]: PropTypes.bool
 }
 
 export default {
@@ -102,5 +105,6 @@ export default {
     [PHONE_CALL_PANEL]: PhoneCallPanel,
     [DEATHBED_THOUGHT_PANEL]: DeathbedThoughtPanel,
     [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel,
-    [WEDDING_PLATFORM]: WeddingPlatform
+    [WEDDING_PLATFORM]: WeddingPlatform,
+    [INVERSE_THOUGHT_PANEL]: InverseThoughtPanel
 }

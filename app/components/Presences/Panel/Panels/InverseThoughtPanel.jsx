@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const InverseThoughtBackdrop = ({
+const InverseThoughtPanel = ({
 
     className,
 
@@ -19,13 +19,13 @@ const InverseThoughtBackdrop = ({
     return (
         <Svg
             className={cx(
-                'InverseThoughtBackdrop',
+                'InverseThoughtPanel',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Backdrop__temporaryRect'
+                    'Panel__temporaryRect'
                 )}
                 {...other}
             />
@@ -36,13 +36,13 @@ const InverseThoughtBackdrop = ({
                 {...other}
             >
                 {cx(
-                    'InverseThoughtBackdrop'
+                    'InverseThoughtPanel'
                 )}
             </text>
         </Svg>
     )
 }
 
-InverseThoughtBackdrop.propTypes = propTypes
+InverseThoughtPanel.propTypes = propTypes
 
-export default InverseThoughtBackdrop
+export default InverseThoughtPanel
