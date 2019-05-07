@@ -3,9 +3,12 @@
 // Own file.
 export const PUPPET_BENNETT_BEGIN = 'puppetBennettBegin'
 export const PUPPET_FAMILY_BEGIN = 'puppetFamilyBegin'
+export const PUPPET_FAMILY_MIDDLE = 'puppetFamilyMiddle'
+export const PUPPET_FAMILY_END = 'puppetFamilyEnd'
 export const PUPPET_BENNETT_MIDDLE = 'puppetBennettMiddle'
 export const PUPPET_BENNETT_END = 'puppetBennettEnd'
 
+export const PCHELKA_MUSHKA_ROCKET = 'pchelkaMushkaRocket'
 export const EARTH = 'earth'
 export const SPACE_COLONY = 'spaceColony'
 
@@ -21,8 +24,4 @@ export const GHOST_ODIN_CLUB = 'ghostOdinClub'
 export const GHOST_ODIN_ALLEY = 'ghostOdinAlley'
 export const GHOST_ODIN_DEMONSTRATION = 'ghostOdinDemonstration'
 
-// Own file, still to edit.
-export const PCHELKA_MUSHKA_ROCKET = 'pchelkaMushkaRocket'
-export const PUPPET_FAMILY_MIDDLE = 'puppetFamilyMiddle'
-export const PUPPET_FAMILY_END = 'puppetFamilyEnd'
 export const PUPPET_KHARI_LIZ = 'puppetKhariLiz'

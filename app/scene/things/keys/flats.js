@@ -39,6 +39,9 @@ export const PHARMACY_AISLE = 'pharmacyAisle'
 export const STEAM_PIPES = 'steamPipes'
 export const CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
 
+export const OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft'
+export const OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight'
+
 export const RESIDENTIAL_FAR_LEFT = 'residentialFarLeft'
 export const RESIDENTIAL_MIDDLE_LEFT = 'residentialMiddleLeft'
 export const RESIDENTIAL_NEAR_LEFT = 'residentialNearLeft'
@@ -70,8 +73,6 @@ export const CROWD_NEAR_SIDE = 'crowdNearSide'
 export const CROWD_NEAR_BACK = 'crowdNearBack' // Duplicate.
 export const CROWD_FAR_SIDE = 'crowdFarSide'
 export const CROWD_FAR_BACK = 'crowdFarBack' // Duplicate.
-export const OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft'
-export const OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight'
 export const ROAD_PAST = 'roadPast'
 export const ROAD_PRESENT = 'roadPresent'
 export const ROAD_FUTURE = 'roadFuture'
