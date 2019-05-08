@@ -1,15 +1,12 @@
-// All accounted for, with todos left.
-
-// Own file.
+export const CINEMA_THOUGHTS = 'cinemaThoughts'
+export const GO_KART_THOUGHT = 'goKartThought'
+export const WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts'
 
 // Own file, still to edit.
 export const TOGETHER_SKETCHBOOK = 'togetherSketchbook'
 export const APART_SKETCHBOOK = 'apartSketchbook'
 export const DOGS_SKETCHBOOK = 'dogsSketchbook'
 export const ESCAPE_POD_SKETCHBOOK = 'escapePodSketchbook'
-export const CINEMA_THOUGHTS = 'cinemaThoughts'
-export const GO_KART_THOUGHT = 'goKartThought'
-export const WAITING_ROOM_THOUGHTS = 'waitingRoomThoughts'
 
 // TODO
 export const TARPIT_THOUGHT = 'tarpitThought'

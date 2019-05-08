@@ -1,6 +1,3 @@
-// All accounted for!
-
-// Own file.
 export const FIRE_HYDRANT = 'fireHydrant'
 export const PLAYGROUND_SLIDE = 'playgroundSlide'
 export const MIRRORED_SINK = 'mirroredSink'
@@ -44,6 +41,10 @@ export const CORKBOARD = 'corkboard'
 export const RECYCLABLES = 'recyclables'
 export const BERKELEY_LAMPPOST = 'berkeleyLamppost'
 export const NIRVANA_POSTER = 'nirvanaPoster'
+export const BANCROFT_SHRUBS = 'bancroftShrubs'
+export const UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft'
+export const UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight' // Duplicate.
+export const SIGNPOST = 'signPost'
 
 export const LEONARD_COHEN_POSTER = 'leonardCohenPoster'
 export const PROGRESS_CHART_EARLY = 'progressChartEarly'
@@ -56,11 +57,9 @@ export const MONITOR_SIDE_CROWD = 'monitorSideCrowd'
 export const MONITOR_SIDE_STAGE = 'monitorSideStage' // Duplicate.
 export const WALL_SPEAKER_SIDE_CROWD = 'wallSpeakerSideCrowd'
 export const WALL_SPEAKER_SIDE_STAGE = 'wallSpeakerSideStage' // Duplicate.
-
-export const BANCROFT_SHRUBS = 'bancroftShrubs'
-export const UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft'
-export const UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight' // Duplicate.
-export const SIGNPOST = 'signPost'
+export const CINEMA_POSTER_LEFT = 'cinemaPosterLeft'
+export const CINEMA_POSTER_RIGHT = 'cinemaPosterRight'
+export const CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal'
 
 export const SANDBAGS = 'sandbags'
 export const STAGE_LIGHTS = 'stageLights'
@@ -84,8 +83,6 @@ export const TWIN_STREETLAMP_MIDDLE = 'twinStreetlampMiddle' // Duplicate.
 export const TWIN_STREETLAMP_FAR = 'twinStreetlampFar' // Duplicate.
 
 export const EL_CERRITO_TREE = 'elCerritoTree'
-export const CLIFF_TREE = 'cliffTree'
-
 export const IV_DRIP = 'ivDrip'
 
 export const DUMPSTER = 'dumpster'
@@ -93,8 +90,4 @@ export const DUMPSTER = 'dumpster'
 export const DISPENSER_LEFT = 'dispenserLeft'
 export const DISPENSER_RIGHT = 'dispenserRight'
 export const WEDDING_CROWD = 'weddingCrowd'
-
-// Own file, still to edit.
-export const CINEMA_POSTER_LEFT = 'cinemaPosterLeft'
-export const CINEMA_POSTER_RIGHT = 'cinemaPosterRight'
-export const CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal'
+export const CLIFF_TREE = 'cliffTree'

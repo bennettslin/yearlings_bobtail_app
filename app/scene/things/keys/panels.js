@@ -1,6 +1,3 @@
-// All accounted for, with todos left.
-
-// Own file.
 export const ESTHER_SPEECH_PANEL = 'estherSpeechPanel'
 export const BATHTUB = 'bathtub'
 

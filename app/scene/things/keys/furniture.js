@@ -1,8 +1,5 @@
-// Own file.
 export const TAIWAN_PILLOW = 'taiwanPillow'
 export const LIGHT_SWITCH = 'lightSwitch'
-
-// Own file, still to edit.
 
 // TODO
 export const BEDROOM_DESK = 'bedroomDesk'

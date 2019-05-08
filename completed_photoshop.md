@@ -138,3 +138,40 @@
 <!-- * ducking -->
 <!-- * epilogue -->
 <!-- * greeting -->
+
+# Edits and easy merges.
+
+## Amy
+<!-- * protester (sign) -->
+
+## Ana
+<!-- * squatting (bass case) -->
+
+## Bennett
+<!-- * disposingCondom (condom) -->
+<!-- * sidelongHesitance (guitar case and bass case scaled 109%) -->
+
+## BradBennett
+<!-- * tyingTether (tetherball pole) -->
+
+## EstherMother
+<!-- * hurtConsoling (lotus flower) -->
+
+## Jacob
+<!-- * carrying (stacked drums) -->
+
+## Liz
+<!-- * pettingSeated (opal puppet scaled 75%) -->
+<!-- * pettingStanding (opal puppet scaled 75%) -->
+
+## Mara
+<!-- * carrying (cymbal bag) -->
+
+## MiriamTristan
+<!-- * greeting (merge) -->
+
+## PreteenBennett
+<!-- * buoy (buoy) -->
+
+## Willy
+<!-- * crossingGuard (skew sign) -->

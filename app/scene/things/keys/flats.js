@@ -1,6 +1,3 @@
-// All accounted for!
-
-// Own file.
 export const NOHO_HOUSE_LEFT = 'nohoHouseLeft'
 export const NOHO_HOUSE_RIGHT = 'nohoHouseRight'
 export const NOHO_SCHOOLHOUSE = 'nohoSchoolhouse'
@@ -65,6 +62,10 @@ export const PUBLIC_NEAR_LEFT = 'publicNearLeft'
 export const PUBLIC_FAR_RIGHT = 'publicFarRight'
 export const PUBLIC_NEAR_RIGHT = 'publicNearRight'
 
+export const ROAD_PAST = 'roadPast'
+export const ROAD_PRESENT = 'roadPresent'
+export const ROAD_FUTURE = 'roadFuture'
+
 export const EL_CERRITO_FAR = 'elCerritoFar'
 export const EL_CERRITO_NEAR = 'elCerritoNear'
 
@@ -72,8 +73,3 @@ export const PAMPAS_FAR = 'pampasFar'
 export const FOREBODING_TREES = 'forebodingTrees'
 export const CLIFF_GRAVES_FAR = 'cliffGravesFar'
 export const CLIFF_GRAVES_NEAR = 'cliffGravesNear'
-
-// Own file, still to edit.
-export const ROAD_PAST = 'roadPast'
-export const ROAD_PRESENT = 'roadPresent'
-export const ROAD_FUTURE = 'roadFuture'
