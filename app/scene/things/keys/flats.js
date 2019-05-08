@@ -39,6 +39,11 @@ export const PHARMACY_AISLE = 'pharmacyAisle'
 export const STEAM_PIPES = 'steamPipes'
 export const CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
 
+export const CROWD_NEAR_SIDE = 'crowdNearSide'
+export const CROWD_NEAR_BACK = 'crowdNearBack' // Duplicate.
+export const CROWD_FAR_SIDE = 'crowdFarSide'
+export const CROWD_FAR_BACK = 'crowdFarBack' // Duplicate.
+
 export const OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft'
 export const OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight'
 
@@ -69,10 +74,6 @@ export const CLIFF_GRAVES_FAR = 'cliffGravesFar'
 export const CLIFF_GRAVES_NEAR = 'cliffGravesNear'
 
 // Own file, still to edit.
-export const CROWD_NEAR_SIDE = 'crowdNearSide'
-export const CROWD_NEAR_BACK = 'crowdNearBack' // Duplicate.
-export const CROWD_FAR_SIDE = 'crowdFarSide'
-export const CROWD_FAR_BACK = 'crowdFarBack' // Duplicate.
 export const ROAD_PAST = 'roadPast'
 export const ROAD_PRESENT = 'roadPresent'
 export const ROAD_FUTURE = 'roadFuture'

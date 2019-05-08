@@ -42,4 +42,3 @@ export const SCHOOLBUS_THOUGHT_BACKDROP = 'schoolbusThoughtBackdrop'
 
 // Combine vanNuysSchool and bennettCouchThought backdrops.
 export const VAN_NUYS_THOUGHT_BACKDROP = 'vanNuysThoughtBackdrop'
-
