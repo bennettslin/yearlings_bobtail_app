@@ -39,6 +39,9 @@
 * bassCaseUpright (perspective)
 * guitarCaseUpright (perspective)
 
+## Panels
+* deathbedThoughtPanel (layout)
+
 # Combine in svg.
 
 ## Backdrops
