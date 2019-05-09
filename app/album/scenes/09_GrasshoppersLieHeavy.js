@@ -90,7 +90,6 @@ import {
 } from '../../scene/things/keys/fixtures'
 
 import {
-    LIGHT_SWITCH,
     BENNETT_PILLOWS,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
@@ -303,7 +302,6 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURES]: {
-                [LIGHT_SWITCH]: true,
                 [BENNETT_PILLOWS]: true
             }
         },
@@ -338,7 +336,6 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURES]: {
-                [LIGHT_SWITCH]: true,
                 [BENNETT_PILLOWS]: true
             }
         },

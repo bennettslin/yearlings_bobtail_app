@@ -1,6 +1,3 @@
-export const TAIWAN_PILLOW = 'taiwanPillow'
-export const LIGHT_SWITCH = 'lightSwitch'
-
 // TODO
 export const BEDROOM_DESK = 'bedroomDesk'
 

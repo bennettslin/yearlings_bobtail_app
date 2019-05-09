@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Timebox for thing Photoshop edits and fixes.`,
-        workedHours: 11,
+        workedHours: 12,
         neededHours: 16
     },
 

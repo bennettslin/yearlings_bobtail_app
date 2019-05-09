@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 
@@ -84,10 +83,6 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    TAIWAN_PILLOW
-} from '../../scene/things/keys/furniture'
-
-import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from '../../scene/things/keys/panels'
@@ -113,9 +108,6 @@ export default [
             },
             [FIXTURES]: {
                 [FRIDGE_DRAWINGS]: true
-            },
-            [FURNITURES]: {
-                [TAIWAN_PILLOW]: true
             }
         },
         cubes: TAIWAN_ROOM_KEY,

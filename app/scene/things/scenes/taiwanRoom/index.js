@@ -1,20 +1,17 @@
 import {
     BACKDROPS,
     CUTOUTS,
-    FIXTURES,
-    FURNITURES
+    FIXTURES
 } from 'constants/scene'
 
 import ARRANGEMENTS_BACKDROPS from './things/backdrops'
 import ARRANGEMENTS_CUTOUTS from './things/cutouts'
 import ARRANGEMENTS_FIXTURES from './things/fixtures'
-import ARRANGEMENTS_FURNITURES from './things/furnitures'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
     [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FIXTURES]: ARRANGEMENTS_FIXTURES,
-    [FURNITURES]: ARRANGEMENTS_FURNITURES
+    [FIXTURES]: ARRANGEMENTS_FIXTURES
 }
 
 export default ARRANGEMENTS_THINGS

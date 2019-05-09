@@ -2,9 +2,7 @@ import PropTypes from 'prop-types'
 
 import BedroomDesk from './Furnitures/BedroomDesk'
 import CaptainBedPillow from './Furnitures/CaptainBedPillow'
-import TaiwanPillow from './Furnitures/TaiwanPillow'
 import BennettCushions from './Furnitures/BennettCushions'
-import LightSwitch from './Furnitures/LightSwitch'
 import BennettPillows from './Furnitures/BennettPillows'
 import LizPillows from './Furnitures/LizPillows'
 import LizPillowsReflection from './Furnitures/LizPillowsReflection'
@@ -17,9 +15,7 @@ import HospitalPillowLowered from './Furnitures/HospitalPillowLowered'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED_PILLOW,
-    TAIWAN_PILLOW,
     BENNETT_CUSHIONS,
-    LIGHT_SWITCH,
     BENNETT_PILLOWS,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
@@ -34,9 +30,7 @@ import {
 export const propTypes = {
     [BEDROOM_DESK]: PropTypes.bool,
     [CAPTAIN_BED_PILLOW]: PropTypes.bool,
-    [TAIWAN_PILLOW]: PropTypes.bool,
     [BENNETT_CUSHIONS]: PropTypes.bool,
-    [LIGHT_SWITCH]: PropTypes.bool,
     [BENNETT_PILLOWS]: PropTypes.bool,
     [LIZ_PILLOWS]: PropTypes.bool,
     [LIZ_PILLOWS_REFLECTION]: PropTypes.bool,
@@ -51,9 +45,7 @@ export const propTypes = {
 export default {
     [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED_PILLOW]: CaptainBedPillow,
-    [TAIWAN_PILLOW]: TaiwanPillow,
     [BENNETT_CUSHIONS]: BennettCushions,
-    [LIGHT_SWITCH]: LightSwitch,
     [BENNETT_PILLOWS]: BennettPillows,
     [LIZ_PILLOWS]: LizPillows,
     [LIZ_PILLOWS_REFLECTION]: LizPillowsReflection,
