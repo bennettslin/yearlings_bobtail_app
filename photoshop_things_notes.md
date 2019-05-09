@@ -38,6 +38,7 @@
 * bennettLetters (perspective)
 * bassCaseUpright (perspective)
 * guitarCaseUpright (perspective)
+* conveyorBelt (layout, resize)
 
 ## Panels
 * deathbedThoughtPanel (layout)
