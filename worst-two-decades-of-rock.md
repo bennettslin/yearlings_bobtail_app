@@ -1,3 +1,5 @@
+Indie rock is history's villain. History wants to reverse and undo all of indie rock's judgments.
+
 Indie rock is like open carry laws. The minute it truly benefits everyone as it purports to do, you'll get rid of it.
 
 Indie rock didn't want to hear the story of a demo that can't be refused. Because it's a system for picking winners from losers, grounded in the unfortunate reality that artists need to hustle to be heard. But the winners of this system *don't* see this reality as unfortunate. Quite the opposite, they're loyal to it. And they will then recreate the world in their likeness.

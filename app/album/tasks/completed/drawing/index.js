@@ -840,5 +840,10 @@ export default [
         taskName: `Timebox for separating things into own files.`,
         workedHours: 22,
         neededHours: 22
+    },
+    {
+        taskName: `Timebox for thing Photoshop edits and fixes.`,
+        workedHours: 12,
+        neededHours: 12
     }
 ]

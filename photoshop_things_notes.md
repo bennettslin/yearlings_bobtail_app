@@ -14,8 +14,11 @@
 
 # Edit after placement.
 
+## All
+* artistic warps
+* heights for backdrops, others
+
 ## Backdrops
-* all backdrop heights
 * ucBerkeleyBackdrop (layout)
 * uclaBackdrop (layout)
 * oaklandSideBackdrop (layout)
