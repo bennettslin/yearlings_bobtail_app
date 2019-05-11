@@ -52,7 +52,6 @@ export default [
                     todo: true,
                     workedHours: 4.25,
                     compound: 2,
-                    // TODO: Make Anita shorter?
                     realHeight: `3'9", 3'6"`,
                     description: 'standing',
                     instance: EPILOGUE
@@ -60,7 +59,6 @@ export default [
                 [ESTHER]: {
                     todo: true,
                     workedHours: 4.25,
-                    // TODO: Make Esther shorter?
                     realHeight: `3'10"`,
                     description: 'standing',
                     instance: EPILOGUE
