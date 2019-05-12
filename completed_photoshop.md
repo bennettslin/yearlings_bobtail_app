@@ -175,3 +175,83 @@
 
 ## Willy
 <!-- * crossingGuard (skew sign) -->
+
+# Rescales.
+<!-- ## Christopher
+* character height: 3'5"
+* scale: 85.4% -->
+<!-- ## YoungBennett
+* character height: 3'6"
+* scale: 87.5% -->
+<!-- ## Anita
+* character height: 3'9"
+* scale: 93.8% -->
+<!-- ## Esther
+* character height: 3'10"
+* scale: 95.8% -->
+<!-- ## Sasha
+* character height: 4'1"
+* scale: 92.8% -->
+<!-- ## PreteenBennett
+* character height: 4'2"
+* scale: 94.7% -->
+<!-- ## Brad
+* character height: 4'6"
+* scale: 102.3% -->
+<!-- ## Andrew
+* character height: 4'7"
+* scale: 104.2% -->
+<!-- ## Liz
+* character height: 4'9"
+* scale: 89.0% -->
+<!-- ## Catherine
+* character height: 4'11"
+* scale: 92.2% -->
+<!-- ## Mother
+* character height: 5'
+* scale: 93.8% -->
+<!-- ## Mara
+* character height: 5'
+* scale: 93.8% -->
+<!-- ## Miriam
+* character height: 5'1"
+* scale: 95.3% -->
+<!-- ## Willy
+* character height: -5'3"
+* scale: -98.4%- 110.0% -->
+<!-- ## Bennett
+* character height: 5'4"
+* scale: 100.0%
+## Father
+* character height: 5'4"
+* scale: 100.0%
+## Stephanie
+* character height: 5'4"
+* scale: 100.0% -->
+<!-- ## Amy
+* character height: 5'6"
+* scale: 103.1% -->
+<!-- ## Tomer
+* character height: 5'6"
+* scale: 103.1% -->
+<!-- ## Nestor
+* character height: 5'7"
+* scale: 104.7% -->
+<!-- ## Ana
+* character height: 5'8"
+* scale: 106.3% -->
+<!-- ## Tristan
+* character height: 5'8"
+* scale: 106.3% -->
+<!-- ## Khari
+* character height: 5'9"
+* scale: 107.8% -->
+<!-- ## Wade
+* character height: 5'10"
+* scale: 109.4% -->
+<!-- ## Jacob
+* character height: 5'11"
+* scale: 110.9% -->
+<!-- ## Howie
+* character height: 6'
+* scale: 112.5% -->
