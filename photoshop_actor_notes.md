@@ -1,29 +1,5 @@
 # Draw masks at some point.
 
-# Character scaled merges.
-
-## AnitaBennett
-* epilogue (merge)
-
-## BennettFather
-* present (merge)
-
-## BennettLiz
-* brushOff (merge)
-* celibateFreezing (merge)
-* cheekUnveiled (merge)
-* gettingDark (merge)
-* gingerbreadPrison (merge)
-
-## BennettsChristopherLiz
-* epilogue (merge)
-
-## ChristopherBennettWilly
-* reassuringEnchanted (merge)
-
-## HowieWilly
-<!-- * gangbanger (merge) -->
-
 # Finish face revisions (Liz, Nestor, Tristan).
 
 # Scan faces.

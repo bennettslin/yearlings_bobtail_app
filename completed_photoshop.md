@@ -203,7 +203,7 @@
 * scale: 104.2% -->
 <!-- ## Liz
 * character height: 4'9"
-* scale: 89.0% -->
+* scale: 89.0% (increased slightly for some merges.) -->
 <!-- ## Catherine
 * character height: 4'11"
 * scale: 92.2% -->
@@ -218,7 +218,7 @@
 * scale: 95.3% -->
 <!-- ## Willy
 * character height: -5'3"
-* scale: -98.4%- 110.0% -->
+* scale: -98.4%- 110.0% (shortened slightly for some merges.) -->
 <!-- ## Bennett
 * character height: 5'4"
 * scale: 100.0%
@@ -255,3 +255,27 @@
 <!-- ## Howie
 * character height: 6'
 * scale: 112.5% -->
+
+# Character scaled merges.
+
+## AnitaBennett
+<!-- * epilogue (merge) -->
+
+## BennettFather
+<!-- * present (merge) -->
+
+## BennettLiz
+<!-- * brushOff (merge) -->
+<!-- * celibateFreezing (merge) -->
+<!-- * cheekUnveiled (merge) -->
+<!-- * gettingDark (merge) -->
+<!-- * gingerbreadPrison (merge) -->
+
+## BennettsChristopherLiz
+<!-- * epilogue (merge) -->
+
+## ChristopherBennettWilly
+<!-- * reassuringEnchanted (merge) -->
+
+## HowieWilly
+<!-- * gangbanger (merge) -->

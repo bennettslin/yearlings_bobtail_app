@@ -850,5 +850,10 @@ export default [
         taskName: `Timebox for actor Photoshop rescales.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Timebox for actor Photoshop merges.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

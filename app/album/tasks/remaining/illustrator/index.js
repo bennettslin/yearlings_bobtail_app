@@ -1,9 +1,4 @@
 export default [
-    {
-        taskName: `Timebox for actor Photoshop merges.`,
-        workedHours: 0,
-        neededHours: 8
-    },
 
     /***********
      * BUTTONS *
