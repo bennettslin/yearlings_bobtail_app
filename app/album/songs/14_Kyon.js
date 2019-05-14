@@ -201,7 +201,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of facing the very gang that had emboldened me to leave her. The circus`,
+                            `Every time we got back together, Sita would reassert our status as a couple by insisting that I bring her along to see my friends, despite the humiliation of having to face the very gang that had emboldened me to leave her. The circus`,
                             {
                                 anchor: `calliope`,
                                 wiki: `Calliope_(music)`

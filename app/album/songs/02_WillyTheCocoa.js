@@ -906,7 +906,7 @@ export default {
                                             anchor: `"imprinting,"`,
                                             wiki: `Imprinting_(psychology)`
                                         },
-                                        `the phase during which a child learns emotional attachment. She would then voice her regret that she began her studies too late to be a more effective parent to my brother.`
+                                        `the phase during which a child learns emotional attachment. She would then voice her regret that she began these studies too late to be a better parent to my brother.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -915,12 +915,12 @@ export default {
                                 },
                                 {
                                     description: [
-                                        `A`,
+                                        `Since an imp`,
                                         {
                                             anchor: `runt`,
                                             wiki: `Runt`
                                         },
-                                        `is the weakest member of a litter. An imp runt is literally the weakest infant in a litter of troll infants. and thus a prime choice for them to replace with a human.`
+                                        `is literally the weakest member in a litter of troll infants, it is surely the one that its parents would most likely replace with a stolen human child.`
                                     ],
                                     dotKeys: {
                                         [OBSERVATION]: true

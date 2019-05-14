@@ -124,7 +124,7 @@ export default [
                 },
                 [AMY_STEPHANIE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'side, squeezing through, apologetic',
                     instance: SQUEEZING

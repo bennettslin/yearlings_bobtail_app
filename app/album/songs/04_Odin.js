@@ -738,7 +738,7 @@ export default {
                                         anchor: `Adam`,
                                         wiki: `Adam`
                                     },
-                                    `ate the forbidden fruit of knowledge, the piece that lodged in his throat now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me with a permanent lump in my throat.`
+                                    `ate the forbidden fruit of knowledge, the piece that lodged in his throat now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
