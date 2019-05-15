@@ -158,7 +158,7 @@ export default [
                 },
                 [AMY]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, same Mara pose',
                     instance: FLIRTING
                 },
@@ -217,7 +217,7 @@ export default [
                 },
                 [AMY]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, looking back, uncertain',
                     instance: MINGLING
                 },
