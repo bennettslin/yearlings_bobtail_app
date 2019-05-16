@@ -733,12 +733,12 @@ export default {
                                         anchor: `"Adam's apple."`,
                                         wiki: `Adam%27s_apple`
                                     },
-                                    `An apocryphal tale thus took shape that because`,
+                                    `And so an apocryphal tale was born that when`,
                                     {
                                         anchor: `Adam`,
                                         wiki: `Adam`
                                     },
-                                    `ate the forbidden fruit of knowledge, the piece that lodged in his throat now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`
+                                    `ate the forbidden fruit of knowledge, a piece lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me feeling a permanent lump in my throat.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
