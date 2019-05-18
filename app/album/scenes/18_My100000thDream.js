@@ -249,7 +249,7 @@ export default [
                 [AMY]: {
                     doctor: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'pulling sheet over Bennett',
                         instance: DOCTOR
                     }

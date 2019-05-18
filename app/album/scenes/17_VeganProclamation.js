@@ -274,7 +274,7 @@ export default [
                 [AMY]: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'back, passing out flyers',
                         instance: PROTESTER
                     }

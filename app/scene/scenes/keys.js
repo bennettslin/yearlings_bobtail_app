@@ -5,7 +5,7 @@ export const LOGUE_KEY = 'logue'
 export const NOHO_HOUSES_KEY = 'nohoHouses'
 export const NOHO_SCHOOL_KEY = 'nohoSchool'
 export const BATHROOM_KEY = 'bathroom'
-export const BATHROOM_OPEN_KEY = 'familyBathroomOpen'
+export const BATHROOM_OPEN_KEY = 'bathroomOpen'
 
 export const FREEWAY_KEY = 'freeway'
 export const PORCH_KEY = 'porch'

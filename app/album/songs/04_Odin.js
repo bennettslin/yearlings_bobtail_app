@@ -728,7 +728,7 @@ export default {
                             anchor: `stored in this neck?`,
                             card: {
                                 description: [
-                                    `Due to another mistranslation, "man's swelling" in Biblical Hebrew entered the English lexicon as`,
+                                    `Due to another mistranslation, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
                                     {
                                         anchor: `"Adam's apple."`,
                                         wiki: `Adam%27s_apple`
@@ -738,7 +738,7 @@ export default {
                                         anchor: `Adam`,
                                         wiki: `Adam`
                                     },
-                                    `ate the forbidden fruit of knowledge, a piece lodged in his throat, which now marks his descendants as a permanent reminder of their sin. Similarly, my newly gained knowledge of where I stood with Sasha left me feeling a permanent lump in my throat.`
+                                    `ate the forbidden fruit of knowledge, a piece lodged in his throat to mark all his descendants with a reminder of their original sin. Similarly, my knowledge of where I stood with Sasha left me to feel a permanent lump in my throat.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
