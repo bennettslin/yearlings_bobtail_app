@@ -205,7 +205,7 @@ export default [
                 [AMY_NESTOR_TOMER]: {
                     officer: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'back, facing back, waving',
                         instance: OFFICER
                     }
