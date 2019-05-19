@@ -22,9 +22,12 @@ import THINGS_VAN_NUYS_LOCKERS from './scenes/vanNuysLockers'
 import THINGS_VAN_NUYS_QUAD from './scenes/vanNuysQuad'
 import THINGS_VAN_NUYS_HALLWAY from './scenes/vanNuysHallway'
 import THINGS_CATHOLIC_CHURCH from './scenes/catholicChurch'
-import THINGS_UC_BERKELEY from './scenes/ucBerkeley'
+import THINGS_BERKELEY_BANCROFT from './scenes/berkeleyBancroft'
+import THINGS_BERKELEY_CAMPANILE from './scenes/berkeleyCampanile'
 import THINGS_CINEMA from './scenes/cinema'
+import THINGS_CINEMA_STREET from './scenes/cinemaStreet'
 import THINGS_BASEMENT from './scenes/basement'
+import THINGS_BASEMENT_BED from './scenes/basementBed'
 import THINGS_MUSEUM from './scenes/museum'
 import THINGS_BACKSTAGE from './scenes/backstage'
 import THINGS_GO_KARTS from './scenes/goKarts'
@@ -85,9 +88,12 @@ const SCENE_ARRANGEMENTS = [
     THINGS_VAN_NUYS_QUAD,
     THINGS_VAN_NUYS_HALLWAY,
     THINGS_CATHOLIC_CHURCH,
-    THINGS_UC_BERKELEY,
+    THINGS_BERKELEY_BANCROFT,
+    THINGS_BERKELEY_CAMPANILE,
     THINGS_CINEMA,
+    THINGS_CINEMA_STREET,
     THINGS_BASEMENT,
+    THINGS_BASEMENT_BED,
     THINGS_MUSEUM,
     THINGS_BACKSTAGE,
     THINGS_GO_KARTS,

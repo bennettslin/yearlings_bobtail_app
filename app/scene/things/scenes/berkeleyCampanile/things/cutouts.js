@@ -1,7 +1,6 @@
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE_LEFT,
     UC_BERKELEY_TREE_RIGHT
 } from '../../../keys/cutouts'
 
@@ -20,14 +19,6 @@ const ARRANGEMENTS_MAP = {
             xFloat: 2.5,
             xWidth: 3,
             zHeight: 3
-        }
-    },
-    [UC_BERKELEY_TREE_LEFT]: {
-        yIndex: 2,
-        arrangement: {
-            xFloat: 1,
-            xWidth: 2,
-            zHeight: 4
         }
     },
     [UC_BERKELEY_TREE_RIGHT]: {

@@ -1,11 +1,10 @@
 import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
+    DRUMS_STACKED_BASEMENT,
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
-    BASEMENT_BEER_BENNETT,
-    NAS_ALBUM,
-    CRACKED_PICTURE
+    BASEMENT_BEER_BENNETT
 } from '../../../keys/fixtures'
 
 const ARRANGEMENTS_MAP = {
@@ -25,6 +24,14 @@ const ARRANGEMENTS_MAP = {
             zHeight: 4
         }
     },
+    [DRUMS_STACKED_BASEMENT]: {
+        yIndex: 3,
+        arrangement: {
+            xFloat: 3.5,
+            xWidth: 1.5,
+            zHeight: 5
+        }
+    },
     [BASEMENT_BEER_CASE]: {
         yIndex: 3,
         arrangement: {
@@ -42,22 +49,6 @@ const ARRANGEMENTS_MAP = {
         }
     },
     [BASEMENT_BEER_BENNETT]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 9.5,
-            xWidth: 1,
-            zHeight: 4
-        }
-    },
-    [NAS_ALBUM]: {
-        yIndex: 3,
-        arrangement: {
-            xFloat: 9.5,
-            xWidth: 1,
-            zHeight: 4
-        }
-    },
-    [CRACKED_PICTURE]: {
         yIndex: 3,
         arrangement: {
             xFloat: 9.5,
