@@ -1,7 +1,4 @@
-import {
-    BERKELEY_BANCROFT_KEY,
-    BERKELEY_CAMPANILE_KEY
-} from '../../scenes/keys'
+import { BERKELEY_CAMPANILE_KEY } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -9,12 +6,10 @@ import {
     PAVEMENT_HSLA,
     GATE_HSLA,
     WALL_HSLA,
-    DOOR_HSLA,
     PLATFORM_HSLA
 } from '../keys/hsla'
 
 import {
-    f,
     g,
     k
 } from '../keys/zIndex'
@@ -25,43 +20,8 @@ const
     V = PAVEMENT_HSLA,
     A = GATE_HSLA,
     W = WALL_HSLA,
-    E = DOOR_HSLA,
     P = PLATFORM_HSLA,
 
-    BANCROFT_LIBRARY_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D],
-                [D],
-                [D, D, D, D, D, W],
-                [D]
-            ],
-            zIndices: [
-                [k],
-                [k],
-                [k, k, k, k, k, g, g, g, f, f, f, g],
-                [k]
-            ]
-        },
-        floor: {
-            hslaColours: [
-                [G],
-                [V],
-                [V, V, V, V, A, W, W, W, E, E, E, W],
-                [V, V, V, V, A, A, A, P, P, P, P, P],
-                [V, V, V, V, V, V, V, P, P, P, P, P],
-                [V]
-            ],
-            zIndices: [
-                [0],
-                [1],
-                [1, 1, 1, 1, 9, g, g, g, f, f, f, g],
-                [1, 1, 1, 1, 9, 9, 9, 3, 3, 3, 3, 3],
-                [1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2],
-                [1]
-            ]
-        }
-    },
     CAMPANILE_CUBES = {
         ceiling: {
             hslaColours: [
@@ -98,7 +58,6 @@ const
     },
 
     CUBES = {
-        [BERKELEY_BANCROFT_KEY]: BANCROFT_LIBRARY_CUBES,
         [BERKELEY_CAMPANILE_KEY]: CAMPANILE_CUBES
     }
 

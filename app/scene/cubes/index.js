@@ -24,9 +24,12 @@ import CUBES_VAN_NUYS_LOCKERS from './scenes/vanNuysLockers'
 import CUBES_VAN_NUYS_QUAD from './scenes/vanNuysQuad'
 import CUBES_VAN_NUYS_HALLWAY from './scenes/vanNuysHallway'
 import CUBES_CATHOLIC_CHURCH from './scenes/catholicChurch'
-import CUBES_UC_BERKELEY from './scenes/ucBerkeley'
+import CUBES_BERKELEY_BANCROFT from './scenes/berkeleyBancroft'
+import CUBES_BERKELEY_CAMPANILE from './scenes/berkeleyCampanile'
 import CUBES_CINEMA from './scenes/cinema'
+import CUBES_CINEMA_STREET from './scenes/cinemaStreet'
 import CUBES_BASEMENT from './scenes/basement'
+import CUBES_BASEMENT_BED from './scenes/basementBed'
 import CUBES_MUSEUM from './scenes/museum'
 import CUBES_BACKSTAGE from './scenes/backstage'
 import CUBES_GO_KARTS from './scenes/goKarts'
@@ -89,9 +92,12 @@ const CUBES = {
     ...CUBES_VAN_NUYS_QUAD,
     ...CUBES_VAN_NUYS_HALLWAY,
     ...CUBES_CATHOLIC_CHURCH,
-    ...CUBES_UC_BERKELEY,
+    ...CUBES_BERKELEY_BANCROFT,
+    ...CUBES_BERKELEY_CAMPANILE,
     ...CUBES_CINEMA,
+    ...CUBES_CINEMA_STREET,
     ...CUBES_BASEMENT,
+    ...CUBES_BASEMENT_BED,
     ...CUBES_MUSEUM,
     ...CUBES_BACKSTAGE,
     ...CUBES_GO_KARTS,

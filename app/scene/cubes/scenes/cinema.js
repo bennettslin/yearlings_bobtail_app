@@ -1,7 +1,4 @@
-import {
-    CINEMA_KEY,
-    CINEMA_STREET_KEY
-} from '../../scenes/keys'
+import { CINEMA_KEY } from '../../scenes/keys'
 
 import {
     DEFAULT_HSLA,
@@ -58,40 +55,9 @@ const
             ]
         }
     },
-    CINEMA_STREET_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D],
-                [C, C, C, C, C, D]
-            ],
-            zIndices: [
-                [k],
-                [f, f, f, f, f, k]
-            ]
-        },
-        floor: {
-            hslaColours: [
-                [T],
-                [W, W, W, V],
-                [W, W, W, V, V, T, T, T, V],
-                [W, W, W, V, V, T, T, T, T, V],
-                [V, V, V, V, V, T, T, T, T, T, V],
-                [V, V, V, V, V, T]
-            ],
-            zIndices: [
-                [0],
-                [f, f, f, 1],
-                [f, f, f, 1, 1, 0, 0, 0, 1],
-                [f, f, f, 1, 1, 0, 0, 0, 0, 1],
-                [1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1],
-                [1, 1, 1, 1, 1, 0]
-            ]
-        }
-    },
 
     CUBES = {
-        [CINEMA_KEY]: CINEMA_CUBES,
-        [CINEMA_STREET_KEY]: CINEMA_STREET_CUBES
+        [CINEMA_KEY]: CINEMA_CUBES
     }
 
 export default CUBES
