@@ -28,30 +28,6 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [LIZ_PHONE_BASE]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 2,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [BENNETT_SHOE]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 2,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [BLOODY_TOWEL]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 2,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
         [LIZ_PHONE_REFLECTION]: {
             yIndex: 2,
             arrangement: {
@@ -59,23 +35,6 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 1,
                 zHeight: 1,
                 zOffset: 6.5
-            }
-        },
-        [LIZ_PHONE_BASE_REFLECTION]: {
-            yIndex: 2,
-            arrangement: {
-                xFloat: 2,
-                xWidth: 1,
-                zHeight: 1,
-                zOffset: 6.5
-            }
-        },
-        [BENNETT_SHOE_REFLECTION]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 2,
-                xWidth: 1,
-                zHeight: 1
             }
         }
     },
@@ -95,6 +54,62 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 5,
                 zHeight: 1,
                 zOffset: 5.5
+            }
+        }
+    }
+}
+
+export const THINGS_LIZ_BED_AFTERGLOW = {
+    [FIXTURES]: {
+        [BLOODY_TOWEL]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    }
+}
+
+export const THINGS_LIZ_BED_LOOK_BACK = {
+    [FIXTURES]: {
+        [BENNETT_SHOE]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [BENNETT_SHOE_REFLECTION]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    }
+}
+
+export const THINGS_LIZ_BED_VEGAN = {
+    [FIXTURES]: {
+        [LIZ_PHONE_BASE]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [LIZ_PHONE_BASE_REFLECTION]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1,
+                zOffset: 6.5
             }
         }
     },

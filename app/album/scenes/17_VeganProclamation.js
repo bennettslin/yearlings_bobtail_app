@@ -250,8 +250,6 @@ export default [
             [FURNITURES]: {
                 [LIZ_PILLOWS]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
-            },
-            [PUPPETS]: {
             }
         },
         cubes: LIZ_BED_OPEN_PHONE_KEY,

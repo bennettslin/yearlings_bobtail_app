@@ -51,7 +51,7 @@ const ARRANGEMENTS_THINGS = {
     }
 }
 
-export const THINGS_BENETT_COUCH_OPINION = {
+export const THINGS_BENNETT_COUCH_OPINION = {
     [BACKDROPS]: {
         [BENNETT_COUCH_THOUGHT_BACKDROP]: {
             yIndex: 0,
@@ -85,7 +85,7 @@ export const THINGS_BENETT_COUCH_OPINION = {
     }
 }
 
-export const THINGS_BENETT_COUCH_PONDERING = {
+export const THINGS_BENNETT_COUCH_PONDERING = {
     [CUTOUTS]: {
         [LEONARD_COHEN_POSTER]: {
             yIndex: 1,
@@ -99,7 +99,7 @@ export const THINGS_BENETT_COUCH_PONDERING = {
     }
 }
 
-export const THINGS_BENETT_COUCH_RUBIKS = {
+export const THINGS_BENNETT_COUCH_RUBIKS = {
     [CUTOUTS]: {
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
@@ -123,7 +123,7 @@ export const THINGS_BENETT_COUCH_RUBIKS = {
     }
 }
 
-export const THINGS_BENETT_COUCH_READING = {
+export const THINGS_BENNETT_COUCH_READING = {
     [CUTOUTS]: {
         [PROGRESS_CHART_LATE]: {
             yIndex: 1,

@@ -24,6 +24,19 @@ import {
 } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
+    [FURNITURES]: {
+        [LIZ_CUSHIONS]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 2,
+                zHeight: 0.5
+            }
+        }
+    }
+}
+
+export const THINGS_LIZ_COUCH_GOLDEN = {
     [BACKDROPS]: {
         [LIZ_COUCH_THOUGHT_BACKDROP]: {
             yIndex: 0,
@@ -34,6 +47,42 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
+    [FURNITURES]: {
+        [LIZ_CUSHIONS_THOUGHT]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 2,
+                zHeight: 0.5
+            }
+        }
+    }
+}
+
+export const THINGS_LIZ_COUCH_TCHOTCHKES = {
+    [FIXTURES]: {
+        [TCHOTCHKES]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 6.5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    },
+    [PUPPETS]: {
+        [OPAL_COUCH]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 1,
+                xWidth: 1,
+                zHeight: 0.5
+            }
+        }
+    }
+}
+
+export const THINGS_LIZ_COUCH_DEFENDING = {
     [BUBBLES]: {
         [KHARI_ATTACK_SPEECH]: {
             yIndex: 5,
@@ -52,7 +101,26 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 3,
                 zOffset: 4
             }
-        },
+        }
+    }
+}
+
+export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
+    [BUBBLES]: {
+        [LIZ_THOUGHT]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        }
+    }
+}
+
+export const THINGS_LIZ_COUCH_ASLEEP = {
+    [BUBBLES]: {
         [LIZ_THOUGHT]: {
             yIndex: 5,
             arrangement: {
@@ -63,43 +131,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
-        [TCHOTCHKES]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 6.5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        }
-    },
-    [FURNITURES]: {
-        [LIZ_CUSHIONS]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 2.5,
-                xWidth: 2,
-                zHeight: 0.5
-            }
-        },
-        [LIZ_CUSHIONS_THOUGHT]: {
-            yIndex: 3,
-            arrangement: {
-                xFloat: 2.5,
-                xWidth: 2,
-                zHeight: 0.5
-            }
-        }
-    },
     [PUPPETS]: {
-        [OPAL_COUCH]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 1,
-                xWidth: 1,
-                zHeight: 0.5
-            }
-        },
         [OPAL_GAZING]: {
             yIndex: 1,
             arrangement: {
@@ -107,7 +139,12 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 1,
                 zHeight: 0.5
             }
-        },
+        }
+    }
+}
+
+export const THINGS_LIZ_COUCH_PEAFOWL = {
+    [PUPPETS]: {
         [PEAHEN]: {
             yIndex: 4,
             arrangement: {

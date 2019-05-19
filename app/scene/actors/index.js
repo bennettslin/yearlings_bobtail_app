@@ -75,7 +75,7 @@ import ACTORS_LIZ_BED_AFTERGLOW from './scenes/lizBed/afterglow'
 import ACTORS_LIZ_BED_LOOK_BACK from './scenes/lizBed/lookBack'
 import ACTORS_LIZ_BED_VEGAN from './scenes/lizBed/vegan'
 import ACTORS_LIZ_COUCH_ASLEEP from './scenes/lizCouch/asleep'
-import ACTORS_LIZ_COUCH_AWKWARD from './scenes/lizCouch/awkward'
+import ACTORS_LIZ_COUCH_GOLDEN from './scenes/lizCouch/golden'
 import ACTORS_LIZ_COUCH_BRUSH_OFF from './scenes/lizCouch/brushOff'
 import ACTORS_LIZ_COUCH_DEFENDING from './scenes/lizCouch/defending'
 import ACTORS_LIZ_COUCH_LEAVING from './scenes/lizCouch/leaving'
@@ -182,7 +182,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_LIZ_BED_LOOK_BACK,
     ACTORS_LIZ_BED_VEGAN,
     ACTORS_LIZ_COUCH_ASLEEP,
-    ACTORS_LIZ_COUCH_AWKWARD,
+    ACTORS_LIZ_COUCH_GOLDEN,
     ACTORS_LIZ_COUCH_BRUSH_OFF,
     ACTORS_LIZ_COUCH_DEFENDING,
     ACTORS_LIZ_COUCH_LEAVING,
