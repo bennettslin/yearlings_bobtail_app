@@ -1,9 +1,7 @@
 import {
-    BACKDROPS,
     CUTOUTS,
     FIXTURES
 } from 'constants/scene'
-import { TAIWAN_STAIRS_BACKDROP } from '../../keys/backdrops'
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE_FRONT,
@@ -13,16 +11,6 @@ import {
 import { FRIDGE_DRAWINGS } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
-        [TAIWAN_STAIRS_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xFloat: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
-        }
-    },
     [CUTOUTS]: {
         [BUDDHA_SHRINE]: {
             yIndex: 4,

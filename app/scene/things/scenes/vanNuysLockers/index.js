@@ -7,7 +7,6 @@ import {
 import { VAN_NUYS_SCHOOL_BACKDROP } from '../../keys/backdrops'
 import {
     TRASH_CAN_LOCKERS,
-    TRASH_CAN_QUAD,
     VAN_NUYS_PLANT_LOCKERS
 } from '../../keys/cutouts'
 import { THROWN_FRUIT } from '../../keys/fixtures'
@@ -29,14 +28,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             arrangement: {
                 xFloat: 10.5,
-                xWidth: 1.5,
-                zHeight: 3
-            }
-        },
-        [TRASH_CAN_QUAD]: {
-            yIndex: 3,
-            arrangement: {
-                xFloat: 0.5,
                 xWidth: 1.5,
                 zHeight: 3
             }
