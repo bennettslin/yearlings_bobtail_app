@@ -4,11 +4,6 @@ export default [
         workedHours: 2,
         neededHours: 8
     },
-    {
-        taskName: `Arrangement organisation.`,
-        workedHours: 10,
-        neededHours: 12
-    },
 
     /***********
      * BUTTONS *

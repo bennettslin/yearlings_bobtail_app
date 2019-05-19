@@ -855,5 +855,10 @@ export default [
         taskName: `Timebox for actor Photoshop merges.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Timebox for further arrangement organisation.`,
+        workedHours: 14,
+        neededHours: 14
     }
 ]
