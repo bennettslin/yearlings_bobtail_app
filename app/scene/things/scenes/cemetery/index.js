@@ -3,15 +3,41 @@ import {
     FIXTURES,
     FLATS
 } from 'constants/scene'
-
-import ARRANGEMENTS_BACKDROPS from './things/backdrops'
-import ARRANGEMENTS_FIXTURES from './things/fixtures'
-import ARRANGEMENTS_FLATS from './things/flats'
+import { CEMETERY_BACKDROP } from '../../keys/backdrops'
+import { GRAVESTONE } from '../../keys/fixtures'
+import { CEMETERY_HILLS_NEAR } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
-    [FIXTURES]: ARRANGEMENTS_FIXTURES,
-    [FLATS]: ARRANGEMENTS_FLATS
+    [BACKDROPS]: {
+        [CEMETERY_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 4
+            }
+        }
+    },
+    [FIXTURES]: {
+        [GRAVESTONE]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 3,
+                zHeight: 2
+            }
+        }
+    },
+    [FLATS]: {
+        [CEMETERY_HILLS_NEAR]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 4
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

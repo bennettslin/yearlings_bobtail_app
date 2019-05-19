@@ -2,13 +2,30 @@ import {
     BACKDROPS,
     FLATS
 } from 'constants/scene'
-
-import ARRANGEMENTS_BACKDROPS from './things/backdrops'
-import ARRANGEMENTS_FLATS from './things/flats'
+import { UCLA_BACKDROP } from '../../keys/backdrops'
+import { ROYCE_HALL } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
-    [FLATS]: ARRANGEMENTS_FLATS
+    [BACKDROPS]: {
+        [UCLA_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 4
+            }
+        }
+    },
+    [FLATS]: {
+        [ROYCE_HALL]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 10,
+                zHeight: 3
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

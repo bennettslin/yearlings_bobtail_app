@@ -4,17 +4,76 @@ import {
     FIXTURES,
     PANELS
 } from 'constants/scene'
-
-import ARRANGEMENTS_BACKDROPS from './things/backdrops'
-import ARRANGEMENTS_BUBBLES from './things/bubbles'
-import ARRANGEMENTS_FIXTURES from './things/fixtures'
-import ARRANGEMENTS_PANELS from './things/panels'
+import { STATION_WAGON_BACKDROP } from '../../keys/backdrops'
+import {
+    TARPIT_THOUGHT,
+    SIBLING_THOUGHT
+} from '../../keys/bubbles'
+import { EVIAN_BOTTLES } from '../../keys/fixtures'
+import {
+    SATURN_INTERIOR,
+    SATURN_EXTERIOR
+} from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
-    [BUBBLES]: ARRANGEMENTS_BUBBLES,
-    [FIXTURES]: ARRANGEMENTS_FIXTURES,
-    [PANELS]: ARRANGEMENTS_PANELS
+    [BACKDROPS]: {
+        [STATION_WAGON_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 4
+            }
+        }
+    },
+    [BUBBLES]: {
+        [TARPIT_THOUGHT]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 3,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4.5
+            }
+        },
+        [SIBLING_THOUGHT]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 8,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4.5
+            }
+        }
+    },
+    [FIXTURES]: {
+        [EVIAN_BOTTLES]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 1.5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    },
+    [PANELS]: {
+        [SATURN_INTERIOR]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 10,
+                zHeight: 5
+            }
+        },
+        [SATURN_EXTERIOR]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 10,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

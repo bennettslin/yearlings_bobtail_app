@@ -3,15 +3,111 @@ import {
     FURNITURES,
     PANELS
 } from 'constants/scene'
-
-import ARRANGEMENTS_FIXTURES from './things/fixtures'
-import ARRANGEMENTS_FURNITURES from './things/furnitures'
-import ARRANGEMENTS_PANELS from './things/panels'
+import {
+    LIZ_PHONE,
+    LIZ_PHONE_REFLECTION,
+    BLOODY_TOWEL,
+    BENNETT_SHOE,
+    BENNETT_SHOE_REFLECTION,
+    LIZ_PHONE_BASE,
+    LIZ_PHONE_BASE_REFLECTION
+} from '../../keys/fixtures'
+import {
+    LIZ_PILLOWS,
+    LIZ_PILLOWS_REFLECTION
+} from '../../keys/furniture'
+import { PHONE_CALL_PANEL } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: ARRANGEMENTS_FIXTURES,
-    [FURNITURES]: ARRANGEMENTS_FURNITURES,
-    [PANELS]: ARRANGEMENTS_PANELS
+    [FIXTURES]: {
+        [LIZ_PHONE]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [LIZ_PHONE_REFLECTION]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1,
+                zOffset: 6.5
+            }
+        },
+        [BLOODY_TOWEL]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [BENNETT_SHOE]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [BENNETT_SHOE_REFLECTION]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [LIZ_PHONE_BASE]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [LIZ_PHONE_BASE_REFLECTION]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1,
+                zOffset: 6.5
+            }
+        }
+    },
+    [FURNITURES]: {
+        [LIZ_PILLOWS]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 5,
+                zHeight: 0.5
+            }
+        },
+        [LIZ_PILLOWS_REFLECTION]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 5,
+                zHeight: 1,
+                zOffset: 5.5
+            }
+        }
+    },
+    [PANELS]: {
+        [PHONE_CALL_PANEL]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 3,
+                zHeight: 3
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

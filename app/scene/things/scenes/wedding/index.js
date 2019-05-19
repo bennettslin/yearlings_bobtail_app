@@ -5,19 +5,63 @@ import {
     PANELS,
     PUPPETS
 } from 'constants/scene'
-
-import ARRANGEMENTS_BACKDROPS from './things/backdrops'
-import ARRANGEMENTS_CUTOUTS from './things/cutouts'
-import ARRANGEMENTS_FLATS from './things/flats'
-import ARRANGEMENTS_PANELS from './things/panels'
-import ARRANGEMENTS_PUPPETS from './things/puppets'
+import { WEDDING_BACKDROP } from '../../keys/backdrops'
+import { WEDDING_CROWD } from '../../keys/cutouts'
+import { FOREBODING_TREES } from '../../keys/flats'
+import { WEDDING_PLATFORM } from '../../keys/panels'
+import { PUPPET_KHARI_LIZ } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
-    [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FLATS]: ARRANGEMENTS_FLATS,
-    [PANELS]: ARRANGEMENTS_PANELS,
-    [PUPPETS]: ARRANGEMENTS_PUPPETS
+    [BACKDROPS]: {
+        [WEDDING_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 4
+            }
+        }
+    },
+    [CUTOUTS]: {
+        [WEDDING_CROWD]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 3,
+                zHeight: 1
+            }
+        }
+    },
+    [FLATS]: {
+        [FOREBODING_TREES]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 3,
+                zHeight: 2
+            }
+        }
+    },
+    [PANELS]: {
+        [WEDDING_PLATFORM]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 1.5,
+                xWidth: 3.5,
+                zHeight: 3
+            }
+        }
+    },
+    [PUPPETS]: {
+        [PUPPET_KHARI_LIZ]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 1,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

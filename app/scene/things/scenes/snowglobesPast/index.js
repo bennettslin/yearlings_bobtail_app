@@ -2,13 +2,30 @@ import {
     FLATS,
     PANELS
 } from 'constants/scene'
-
-import ARRANGEMENTS_FLATS from './things/flats'
-import ARRANGEMENTS_PANELS from './things/panels'
+import { ROAD_PAST } from '../../keys/flats'
+import { SNOWGLOBE_TETHERBALL } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FLATS]: ARRANGEMENTS_FLATS,
-    [PANELS]: ARRANGEMENTS_PANELS
+    [FLATS]: {
+        [ROAD_PAST]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        }
+    },
+    [PANELS]: {
+        [SNOWGLOBE_TETHERBALL]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 7,
+                xWidth: 6,
+                zHeight: 5.5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

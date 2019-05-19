@@ -1,11 +1,19 @@
 import {
     CUTOUTS
 } from 'constants/scene'
-
-import ARRANGEMENTS_CUTOUTS from './things/cutouts'
+import { RECYCLABLES } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: ARRANGEMENTS_CUTOUTS
+    [CUTOUTS]: {
+        [RECYCLABLES]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 2.5,
+                zHeight: 1.5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

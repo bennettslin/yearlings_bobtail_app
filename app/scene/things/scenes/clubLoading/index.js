@@ -1,11 +1,19 @@
 import {
     FIXTURES
 } from 'constants/scene'
-
-import ARRANGEMENTS_FIXTURES from './things/fixtures'
+import { DRUMS_STACKED_CLUB } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: ARRANGEMENTS_FIXTURES
+    [FIXTURES]: {
+        [DRUMS_STACKED_CLUB]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 1.5,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

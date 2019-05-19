@@ -2,13 +2,41 @@ import {
     FIXTURES,
     FURNITURES
 } from 'constants/scene'
-
-import ARRANGEMENTS_FIXTURES from './things/fixtures'
-import ARRANGEMENTS_FURNITURES from './things/furnitures'
+import {
+    NUDE_DRAWINGS,
+    VASELINE
+} from '../../keys/fixtures'
+import { BENNETT_PILLOWS } from '../../keys/furniture'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: ARRANGEMENTS_FIXTURES,
-    [FURNITURES]: ARRANGEMENTS_FURNITURES
+    [FIXTURES]: {
+        [NUDE_DRAWINGS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 7,
+                xWidth: 0.5,
+                zHeight: 0.5
+            }
+        },
+        [VASELINE]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 8,
+                xWidth: 0.5,
+                zHeight: 0.5
+            }
+        }
+    },
+    [FURNITURES]: {
+        [BENNETT_PILLOWS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 1,
+                zHeight: 0.5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

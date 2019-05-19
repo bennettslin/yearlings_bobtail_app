@@ -1,17 +1,42 @@
 import {
     BACKDROPS,
-    BUBBLES,
     PANELS
 } from 'constants/scene'
-
-import ARRANGEMENTS_BACKDROPS from './things/backdrops'
-import ARRANGEMENTS_BUBBLES from './things/bubbles'
-import ARRANGEMENTS_PANELS from './things/panels'
+import { GO_KART_BACKDROP } from '../../keys/backdrops'
+import {
+    GO_KART_LEFT_EXTERIOR,
+    GO_KART_RIGHT_EXTERIOR
+} from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
-    [BUBBLES]: ARRANGEMENTS_BUBBLES,
-    [PANELS]: ARRANGEMENTS_PANELS
+    [BACKDROPS]: {
+        [GO_KART_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        }
+    },
+    [PANELS]: {
+        [GO_KART_LEFT_EXTERIOR]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 5,
+                zHeight: 2
+            }
+        },
+        [GO_KART_RIGHT_EXTERIOR]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 8.5,
+                xWidth: 5,
+                zHeight: 2
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

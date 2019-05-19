@@ -1,11 +1,31 @@
 import {
+    FIXTURES,
     FLATS
 } from 'constants/scene'
-
-import ARRANGEMENTS_FLATS from './things/flats'
+import { PUSH_BROOM_TUNNEL } from '../../keys/fixtures'
+import { STEAM_PIPES } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [FLATS]: ARRANGEMENTS_FLATS
+    [FIXTURES]: {
+        [PUSH_BROOM_TUNNEL]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 4,
+                xWidth: 1,
+                zHeight: 3
+            }
+        }
+    },
+    [FLATS]: {
+        [STEAM_PIPES]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 8,
+                zHeight: 6
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

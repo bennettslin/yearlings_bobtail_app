@@ -2,13 +2,41 @@ import {
     CUTOUTS,
     FLATS
 } from 'constants/scene'
-
-import ARRANGEMENTS_CUTOUTS from './things/cutouts'
-import ARRANGEMENTS_FLATS from './things/flats'
+import { CLIFF_TREE } from '../../keys/cutouts'
+import {
+    CLIFF_GRAVES_FAR,
+    CLIFF_GRAVES_NEAR
+} from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: ARRANGEMENTS_CUTOUTS,
-    [FLATS]: ARRANGEMENTS_FLATS
+    [CUTOUTS]: {
+        [CLIFF_TREE]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 6,
+                zHeight: 6
+            }
+        }
+    },
+    [FLATS]: {
+        [CLIFF_GRAVES_FAR]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 5,
+                zHeight: 2
+            }
+        },
+        [CLIFF_GRAVES_NEAR]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 5,
+                zHeight: 1
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS

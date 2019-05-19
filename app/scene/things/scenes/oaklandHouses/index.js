@@ -3,15 +3,52 @@ import {
     FLATS,
     PANELS
 } from 'constants/scene'
-
-import ARRANGEMENTS_BACKDROPS from './things/backdrops'
-import ARRANGEMENTS_FLATS from './things/flats'
-import ARRANGEMENTS_PANELS from './things/panels'
+import { OAKLAND_SIDE_BACKDROP } from '../../keys/backdrops'
+import {
+    OAKLAND_HOUSE_LEFT,
+    OAKLAND_HOUSE_RIGHT
+} from '../../keys/flats'
+import { VOLKSWAGEN } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: ARRANGEMENTS_BACKDROPS,
-    [FLATS]: ARRANGEMENTS_FLATS,
-    [PANELS]: ARRANGEMENTS_PANELS
+    [BACKDROPS]: {
+        [OAKLAND_SIDE_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 12,
+                zHeight: 4
+            }
+        }
+    },
+    [FLATS]: {
+        [OAKLAND_HOUSE_LEFT]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 5,
+                zHeight: 3
+            }
+        },
+        [OAKLAND_HOUSE_RIGHT]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 5,
+                zHeight: 3
+            }
+        }
+    },
+    [PANELS]: {
+        [VOLKSWAGEN]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 6.5,
+                xWidth: 8,
+                zHeight: 4
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_THINGS
