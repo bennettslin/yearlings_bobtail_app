@@ -73,7 +73,10 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 4
             }
         }
-    },
+    }
+}
+
+export const THINGS_EL_CERRITO_REATTA = {
     [PUPPETS]: {
         [PUPPET_REATTA]: {
             yIndex: 3,

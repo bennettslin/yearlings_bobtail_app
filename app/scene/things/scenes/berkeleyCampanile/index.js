@@ -47,7 +47,10 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 7.5
             }
         }
-    },
+    }
+}
+
+export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
     [PUPPETS]: {
         [GHOST_ODIN_CAMPUS]: {
             yIndex: 1,

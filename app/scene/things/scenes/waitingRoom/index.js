@@ -10,17 +10,6 @@ import {
 } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [BUBBLES]: {
-        [WAITING_ROOM_THOUGHTS]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
-        }
-    },
     [CUTOUTS]: {
         [CLIPBOARD]: {
             yIndex: 2,
@@ -46,6 +35,20 @@ const ARRANGEMENTS_THINGS = {
                 xFloat: 8,
                 xWidth: 1,
                 zHeight: 4
+            }
+        }
+    }
+}
+
+export const THINGS_WAITING_ROOM_ASLEEP = {
+    [BUBBLES]: {
+        [WAITING_ROOM_THOUGHTS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
             }
         }
     }

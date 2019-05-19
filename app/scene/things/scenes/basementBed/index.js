@@ -22,14 +22,6 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURES]: {
-        [NAS_ALBUM]: {
-            yIndex: 3,
-            arrangement: {
-                xFloat: 9.5,
-                xWidth: 1,
-                zHeight: 4
-            }
-        },
         [BENNETT_RECORD_PLAYER_BASEMENT]: {
             yIndex: 3,
             arrangement: {
@@ -38,6 +30,32 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 2
             }
         },
+        [CRACKED_PICTURE]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 9.5,
+                xWidth: 1,
+                zHeight: 4
+            }
+        }
+    }
+}
+
+export const THINGS_BASEMENT_BED_GARRYOWEN = {
+    [FIXTURES]: {
+        [NAS_ALBUM]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 9.5,
+                xWidth: 1,
+                zHeight: 4
+            }
+        }
+    }
+}
+
+export const THINGS_BASEMENT_BED_FENDING = {
+    [FIXTURES]: {
         [CRACKED_PICTURE]: {
             yIndex: 3,
             arrangement: {

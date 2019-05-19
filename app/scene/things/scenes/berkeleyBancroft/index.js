@@ -39,7 +39,10 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 3
             }
         }
-    },
+    }
+}
+
+export const THINGS_BERKELEY_BANCROFT_VEGAN = {
     [PUPPETS]: {
         [GHOST_ODIN_DEMONSTRATION]: {
             yIndex: 1,

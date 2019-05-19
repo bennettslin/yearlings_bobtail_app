@@ -14,6 +14,19 @@ import {
 import { BATHTUB } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
+    [PANELS]: {
+        [BATHTUB]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 4.5,
+                xWidth: 5,
+                zHeight: 1.5
+            }
+        }
+    }
+}
+
+export const THINGS_BATHROOM_BATHING = {
     [CUTOUTS]: {
         [MIRRORED_SINK]: {
             yIndex: 1,
@@ -32,7 +45,10 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 3
             }
         }
-    },
+    }
+}
+
+export const THINGS_BATHROOM_SINGING = {
     [FIXTURES]: {
         [RECORD_PLAYER_STOOL]: {
             yIndex: 5,
@@ -48,16 +64,6 @@ const ARRANGEMENTS_THINGS = {
                 xFloat: 6.5,
                 xWidth: 1,
                 zHeight: 1
-            }
-        }
-    },
-    [PANELS]: {
-        [BATHTUB]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 4.5,
-                xWidth: 5,
-                zHeight: 1.5
             }
         }
     }

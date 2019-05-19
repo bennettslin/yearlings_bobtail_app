@@ -52,14 +52,6 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURES]: {
-        [CASH_BOX]: {
-            yIndex: 3,
-            arrangement: {
-                xFloat: 1,
-                xWidth: 1,
-                zHeight: 3
-            }
-        },
         [GUITAR]: {
             yIndex: 3,
             arrangement: {
@@ -73,6 +65,19 @@ const ARRANGEMENTS_THINGS = {
             arrangement: {
                 xFloat: 5.5,
                 xWidth: 4,
+                zHeight: 3
+            }
+        }
+    }
+}
+
+export const THINGS_CLUB_FRONT_M = {
+    [FIXTURES]: {
+        [CASH_BOX]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 1,
+                xWidth: 1,
                 zHeight: 3
             }
         }

@@ -234,9 +234,6 @@ export default [
             [BACKDROPS]: {
                 [NOHO_HOUSES_BACKDROP]: true
             },
-            [CUTOUTS]: {
-                [MIRRORED_SINK]: true
-            },
             [FIXTURES]: {
                 [RECORD_PLAYER_STOOL]: true,
                 [JOHNNY_HORTON_ALBUM]: true

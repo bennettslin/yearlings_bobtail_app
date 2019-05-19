@@ -38,7 +38,10 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 3
             }
         }
-    },
+    }
+}
+
+export const THINGS_OAKLAND_HOUSES_GARRYOWEN = {
     [PANELS]: {
         [VOLKSWAGEN]: {
             yIndex: 3,

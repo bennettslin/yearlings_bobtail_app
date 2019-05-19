@@ -75,8 +75,8 @@ import {
     ACTORS_WAITING_ROOM_CHEEK
 } from './scenes/waitingRoom'
 import {
-    ACTORS_CLUB_FRONT_GARRYOWEN,
-    ACTORS_CLUB_FRONT_M
+    ACTORS_CLUB_FRONT_M,
+    ACTORS_CLUB_FRONT_GARRYOWEN
 } from './scenes/clubFront'
 import ACTORS_CLUB_SIDE_CROWD from './scenes/clubSideCrowd'
 import ACTORS_CLUB_SIDE_STAGE from './scenes/clubSideStage'

@@ -36,17 +36,12 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         }
-    },
+    }
+}
+
+export const THINGS_DEATHBED_CREMATED = {
     [FURNITURES]: {
         [HOSPITAL_PILLOW]: {
-            yIndex: 3,
-            arrangement: {
-                xFloat: 2.5,
-                xWidth: 4,
-                zHeight: 1
-            }
-        },
-        [HOSPITAL_PILLOW_LOWERED]: {
             yIndex: 3,
             arrangement: {
                 xFloat: 2.5,
@@ -71,7 +66,22 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 5,
                 zHeight: 4
             }
-        },
+        }
+    }
+}
+
+export const THINGS_DEATHBED_DREAM = {
+    [FURNITURES]: {
+        [HOSPITAL_PILLOW_LOWERED]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 4,
+                zHeight: 1
+            }
+        }
+    },
+    [PANELS]: {
         [INVERSE_THOUGHT_PANEL]: {
             yIndex: 0,
             arrangement: {

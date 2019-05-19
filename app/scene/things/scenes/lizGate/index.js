@@ -5,7 +5,7 @@ import {
 import { GO_KART_THOUGHT } from '../../keys/bubbles'
 import { TRAFFIC_LIGHT } from '../../keys/cutouts'
 
-const ARRANGEMENTS_THINGS = {
+export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLES]: {
         [GO_KART_THOUGHT]: {
             yIndex: 5,
@@ -28,5 +28,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS
