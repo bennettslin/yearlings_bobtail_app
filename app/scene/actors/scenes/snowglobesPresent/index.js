@@ -3,15 +3,42 @@ import {
     MOTHER,
     MIRIAM_STEPHANIE
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT_FATHER from './actors/bennettFather'
-import ARRANGEMENTS_MOTHER from './actors/mother'
-import ARRANGEMENTS_MIRIAM_STEPHANIE from './actors/miriamStephanie'
+import { PRESENT } from '../../keys/instances/songs'
+import { MISCHIEVOUS_BANJO } from '../../keys/instances/miriamStephanie'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT_FATHER]: ARRANGEMENTS_BENNETT_FATHER,
-    [MOTHER]: ARRANGEMENTS_MOTHER,
-    [MIRIAM_STEPHANIE]: ARRANGEMENTS_MIRIAM_STEPHANIE
+    [BENNETT_FATHER]: {
+        [PRESENT]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 5,
+                zOffset: 2
+            }
+        }
+    },
+    [MOTHER]: {
+        [PRESENT]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 3,
+                xWidth: 1,
+                zHeight: 5,
+                zOffset: 1.5
+            }
+        }
+    },
+    [MIRIAM_STEPHANIE]: {
+        [MISCHIEVOUS_BANJO]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

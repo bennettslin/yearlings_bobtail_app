@@ -6,21 +6,73 @@ import {
     STEPHANIE,
     WADE
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_MARA from './actors/mara'
-import ARRANGEMENTS_ANA from './actors/ana'
-import ARRANGEMENTS_AMY from './actors/amy'
-import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
-import ARRANGEMENTS_WADE from './actors/wade'
+import {
+    MINGLING,
+    WAITING
+} from '../../keys/instances/songs'
+import { SIDELONG_HESITANCE } from '../../keys/instances/bennett'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [MARA]: ARRANGEMENTS_MARA,
-    [ANA]: ARRANGEMENTS_ANA,
-    [AMY]: ARRANGEMENTS_AMY,
-    [STEPHANIE]: ARRANGEMENTS_STEPHANIE,
-    [WADE]: ARRANGEMENTS_WADE
+    [BENNETT]: {
+        [SIDELONG_HESITANCE]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [MARA]: {
+        [WAITING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ANA]: {
+        [WAITING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [AMY]: {
+        [MINGLING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [STEPHANIE]: {
+        [MINGLING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [WADE]: {
+        [MINGLING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

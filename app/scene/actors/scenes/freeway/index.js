@@ -1,11 +1,19 @@
 import {
     WILLY
 } from '../../keys'
-
-import ARRANGEMENTS_WILLY from './actors/willy'
+import { COLLECTING } from '../../keys/instances/willy'
 
 const ARRANGEMENTS_ACTORS = {
-    [WILLY]: ARRANGEMENTS_WILLY
+    [WILLY]: {
+        [COLLECTING]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 4.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

@@ -2,13 +2,30 @@ import {
     BENNETT_STEPHANIE,
     AMY_NESTOR_TOMER
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT_STEPHANIE from './actors/bennettStephanie'
-import ARRANGEMENTS_AMY_NESTOR_TOMER from './actors/amyNestorTomer'
+import { OFFICER } from '../../keys/instances/amyNestorTomer'
+import { HORSING } from '../../keys/instances/bennettStephanie'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT_STEPHANIE]: ARRANGEMENTS_BENNETT_STEPHANIE,
-    [AMY_NESTOR_TOMER]: ARRANGEMENTS_AMY_NESTOR_TOMER
+    [BENNETT_STEPHANIE]: {
+        [HORSING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [AMY_NESTOR_TOMER]: {
+        [OFFICER]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 7.5,
+                xWidth: 2,
+                zHeight: 6
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

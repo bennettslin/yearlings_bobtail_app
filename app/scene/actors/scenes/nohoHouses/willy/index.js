@@ -1,0 +1,30 @@
+import {
+    HOWIE_WILLY,
+    TOMER
+} from '../../../keys'
+import { GANGBANGER } from '../../../keys/instances/songs'
+
+const ARRANGEMENTS_ACTORS = {
+    [HOWIE_WILLY]: {
+        [GANGBANGER]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 4.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [TOMER]: {
+        [GANGBANGER]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 6.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
+}
+
+export default ARRANGEMENTS_ACTORS

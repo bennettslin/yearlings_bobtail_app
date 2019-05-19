@@ -1,11 +1,17 @@
-import {
-    BENNETT
-} from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
+import { BENNETT } from '../../keys'
+import { ALLEY } from '../../keys/instances/bennett'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT
+    [BENNETT]: {
+        [ALLEY]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

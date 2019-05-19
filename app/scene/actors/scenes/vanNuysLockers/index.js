@@ -3,15 +3,41 @@ import {
     BRAD,
     ANDREW
 } from '../../keys'
-
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
-import ARRANGEMENTS_BRAD from './actors/brad'
-import ARRANGEMENTS_ANDREW from './actors/andrew'
+import { THROWING } from '../../keys/instances/andrew'
+import { GESTURING } from '../../keys/instances/brad'
+import { STOIC } from '../../keys/instances/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
-    [BRAD]: ARRANGEMENTS_BRAD,
-    [ANDREW]: ARRANGEMENTS_ANDREW
+    [PRETEEN_BENNETT]: {
+        [STOIC]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 7.5,
+                xWidth: 2,
+                zHeight: 3
+            }
+        }
+    },
+    [BRAD]: {
+        [GESTURING]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 1,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ANDREW]: {
+        [THROWING]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 3,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

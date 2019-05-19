@@ -4,17 +4,51 @@ import {
     KHARI,
     STEPHANIE
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_LIZ from './actors/liz'
-import ARRANGEMENTS_KHARI from './actors/khari'
-import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
+import { BACKSTAGE } from '../../keys/instances/songs'
+import { DOUBLE_ALBERT } from '../../keys/instances/khari'
+import { FLAPPER } from '../../keys/instances/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [LIZ]: ARRANGEMENTS_LIZ,
-    [KHARI]: ARRANGEMENTS_KHARI,
-    [STEPHANIE]: ARRANGEMENTS_STEPHANIE
+    [BENNETT]: {
+        [BACKSTAGE]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [LIZ]: {
+        [BACKSTAGE]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [KHARI]: {
+        [DOUBLE_ALBERT]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [STEPHANIE]: {
+        [FLAPPER]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

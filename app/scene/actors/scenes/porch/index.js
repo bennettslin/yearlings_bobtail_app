@@ -4,17 +4,52 @@ import {
     MOTHER,
     CHRISTOPHER
 } from '../../keys'
-
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
-import ARRANGEMENTS_WILLY from './actors/willy'
-import ARRANGEMENTS_MOTHER from './actors/mother'
-import ARRANGEMENTS_CHRISTOPHER from './actors/christopher'
+import { TANTRUM } from '../../keys/instances/christopher'
+import { STOOPING } from '../../keys/instances/mother'
+import { CAUTIOUS } from '../../keys/instances/preteenBennett'
+import { DUCKING } from '../../keys/instances/willy'
 
 const ARRANGEMENTS_ACTORS = {
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
-    [WILLY]: ARRANGEMENTS_WILLY,
-    [MOTHER]: ARRANGEMENTS_MOTHER,
-    [CHRISTOPHER]: ARRANGEMENTS_CHRISTOPHER
+    [PRETEEN_BENNETT]: {
+        [CAUTIOUS]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 7,
+                xWidth: 1.5,
+                zHeight: 4
+            }
+        }
+    },
+    [WILLY]: {
+        [DUCKING]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 0.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [MOTHER]: {
+        [STOOPING]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 4,
+                xWidth: 2,
+                zHeight: 4
+            }
+        }
+    },
+    [CHRISTOPHER]: {
+        [TANTRUM]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 9.5,
+                xWidth: 1,
+                zHeight: 3
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

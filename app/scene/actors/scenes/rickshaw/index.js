@@ -1,9 +1,17 @@
 import { PRETEEN_BENNETT } from '../../keys'
-
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
+import { RICKSHAW } from '../../keys/instances/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT
+    [PRETEEN_BENNETT]: {
+        [RICKSHAW]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 3,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

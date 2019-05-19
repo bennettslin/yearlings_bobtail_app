@@ -2,13 +2,29 @@ import {
     BENNETT,
     LIZ
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_LIZ from './actors/liz'
+import { MUSEUM } from '../../keys/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [LIZ]: ARRANGEMENTS_LIZ
+    [BENNETT]: {
+        [MUSEUM]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [LIZ]: {
+        [MUSEUM]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

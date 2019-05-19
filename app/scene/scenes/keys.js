@@ -35,8 +35,8 @@ export const VAN_NUYS_QUAD_KEY = 'vanNuysQuad'
 export const VAN_NUYS_HALLWAY_KEY = 'vanNuysHallway'
 
 export const CATHOLIC_CHURCH_KEY = 'catholicChurch'
-export const BANCROFT_LIBRARY_KEY = 'bancroftLibrary'
-export const CAMPANILE_KEY = 'campanile'
+export const BERKELEY_BANCROFT_KEY = 'berkeleyBancroft'
+export const BERKELEY_CAMPANILE_KEY = 'berkeleyCampanile'
 
 export const CINEMA_KEY = 'cinema'
 export const CINEMA_STREET_KEY = 'cinemaStreet'

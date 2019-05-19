@@ -4,17 +4,49 @@ import {
     HOWIE,
     TOMER
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_ANA from './actors/ana'
-import ARRANGEMENTS_HOWIE from './actors/howie'
-import ARRANGEMENTS_TOMER from './actors/tomer'
+import { WALGREENS } from '../../keys/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [ANA]: ARRANGEMENTS_ANA,
-    [HOWIE]: ARRANGEMENTS_HOWIE,
-    [TOMER]: ARRANGEMENTS_TOMER
+    [BENNETT]: {
+        [WALGREENS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ANA]: {
+        [WALGREENS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [HOWIE]: {
+        [WALGREENS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [TOMER]: {
+        [WALGREENS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

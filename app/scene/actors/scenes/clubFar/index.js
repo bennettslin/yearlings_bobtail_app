@@ -3,15 +3,40 @@ import {
     MIRIAM_TRISTAN,
     NESTOR
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_MIRIAM_TRISTAN from './actors/miriamTristan'
-import ARRANGEMENTS_NESTOR from './actors/nestor'
+import { SHOW_ANNOYED } from '../../keys/instances/bennett'
+import { GREETING } from '../../keys/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [MIRIAM_TRISTAN]: ARRANGEMENTS_MIRIAM_TRISTAN,
-    [NESTOR]: ARRANGEMENTS_NESTOR
+    [BENNETT]: {
+        [SHOW_ANNOYED]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [MIRIAM_TRISTAN]: {
+        [GREETING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 7,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [NESTOR]: {
+        [GREETING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

@@ -5,19 +5,64 @@ import {
     KHARI_LIZ,
     STEPHANIE
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_MOTHER from './actors/mother'
-import ARRANGEMENTS_FATHER from './actors/father'
-import ARRANGEMENTS_KHARI_LIZ from './actors/khariLiz'
-import ARRANGEMENTS_STEPHANIE from './actors/stephanie'
+import { FUTURE } from '../../keys/instances/songs'
+import { JOKING_LAUGHING } from '../../keys/instances/khariLiz'
+import { BENNETT_RECORDING } from '../../keys/instances/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [MOTHER]: ARRANGEMENTS_MOTHER,
-    [FATHER]: ARRANGEMENTS_FATHER,
-    [KHARI_LIZ]: ARRANGEMENTS_KHARI_LIZ,
-    [STEPHANIE]: ARRANGEMENTS_STEPHANIE
+    [BENNETT]: {
+        [FUTURE]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 6,
+                xWidth: 1,
+                zHeight: 5,
+                zOffset: 2
+            }
+        }
+    },
+    [MOTHER]: {
+        [FUTURE]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 8,
+                xWidth: 1,
+                zHeight: 5,
+                zOffset: 2
+            }
+        }
+    },
+    [FATHER]: {
+        [FUTURE]: {
+            yIndex: 1,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 5,
+                zOffset: 2
+            }
+        }
+    },
+    [KHARI_LIZ]: {
+        [JOKING_LAUGHING]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 3,
+                xWidth: 2,
+                zHeight: 3.5
+            }
+        }
+    },
+    [STEPHANIE]: {
+        [BENNETT_RECORDING]: {
+            yIndex: 3,
+            arrangement: {
+                xFloat: 8.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

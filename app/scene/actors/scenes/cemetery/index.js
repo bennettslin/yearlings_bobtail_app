@@ -3,15 +3,39 @@ import {
     ANA_HOWIE,
     TOMER
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_ANA_HOWIE from './actors/anaHowie'
-import ARRANGEMENTS_TOMER from './actors/tomer'
+import { CEMETERY } from '../../keys/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [ANA_HOWIE]: ARRANGEMENTS_ANA_HOWIE,
-    [TOMER]: ARRANGEMENTS_TOMER
+    [BENNETT]: {
+        [CEMETERY]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ANA_HOWIE]: {
+        [CEMETERY]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [TOMER]: {
+        [CEMETERY]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

@@ -13,8 +13,8 @@ import {
     CLUB_FAR_KEY,
     LIZ_BED_OPEN_PHONE_KEY,
     ALLEY_KEY,
-    BANCROFT_LIBRARY_KEY,
-    CAMPANILE_KEY
+    BERKELEY_BANCROFT_KEY,
+    BERKELEY_CAMPANILE_KEY
 } from '../../scene/scenes/keys'
 
 import {
@@ -132,7 +132,7 @@ export default [
                 [GHOST_ODIN_CAMPUS]: true
             }
         },
-        cubes: CAMPANILE_KEY,
+        cubes: BERKELEY_CAMPANILE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -309,7 +309,7 @@ export default [
                 [GHOST_ODIN_DEMONSTRATION]: true
             }
         },
-        cubes: BANCROFT_LIBRARY_KEY,
+        cubes: BERKELEY_BANCROFT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER

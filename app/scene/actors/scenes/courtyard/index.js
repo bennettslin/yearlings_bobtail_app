@@ -2,13 +2,30 @@ import {
     BENNETT,
     CATHERINE
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_CATHERINE from './actors/catherine'
+import { BREAKUP_DEJECTED } from '../../keys/instances/bennett'
+import { WEEPING } from '../../keys/instances/catherine'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [CATHERINE]: ARRANGEMENTS_CATHERINE
+    [BENNETT]: {
+        [BREAKUP_DEJECTED]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [CATHERINE]: {
+        [WEEPING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

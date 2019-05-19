@@ -1,32 +1,41 @@
 import {
     BENNETT,
-    BENNETT_LIZ,
-    ESTHER_MOTHER,
-    MOTHER,
-    FATHER,
     JACOB_MARA,
-    ANA,
-    MIRIAM_BENNETT
+    ANA
 } from '../../keys'
-
-import ARRANGEMENTS_BENNETT from './actors/bennett'
-import ARRANGEMENTS_BENNETT_LIZ from './actors/bennettLiz'
-import ARRANGEMENTS_ESTHER_MOTHER from './actors/estherMother'
-import ARRANGEMENTS_MOTHER from './actors/mother'
-import ARRANGEMENTS_FATHER from './actors/father'
-import ARRANGEMENTS_JACOB_MARA from './actors/jacobMara'
-import ARRANGEMENTS_ANA from './actors/ana'
-import ARRANGEMENTS_MIRIAM_BENNETT from './actors/miriamBennett'
+import { EATING } from '../../keys/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
-    [BENNETT]: ARRANGEMENTS_BENNETT,
-    [BENNETT_LIZ]: ARRANGEMENTS_BENNETT_LIZ,
-    [ESTHER_MOTHER]: ARRANGEMENTS_ESTHER_MOTHER,
-    [MOTHER]: ARRANGEMENTS_MOTHER,
-    [FATHER]: ARRANGEMENTS_FATHER,
-    [JACOB_MARA]: ARRANGEMENTS_JACOB_MARA,
-    [ANA]: ARRANGEMENTS_ANA,
-    [MIRIAM_BENNETT]: ARRANGEMENTS_MIRIAM_BENNETT
+    [BENNETT]: {
+        [EATING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [JACOB_MARA]: {
+        [EATING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ANA]: {
+        [EATING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

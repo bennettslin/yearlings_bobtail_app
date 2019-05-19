@@ -4,17 +4,52 @@ import {
     CHRISTOPHER,
     TRISTAN
 } from '../../keys'
-
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
-import ARRANGEMENTS_MOTHER from './actors/mother'
-import ARRANGEMENTS_CHRISTOPHER from './actors/christopher'
-import ARRANGEMENTS_TRISTAN from './actors/tristan'
+import { STARING } from '../../keys/instances/christopher'
+import { ARGUING } from '../../keys/instances/mother'
+import { SHEEPISH } from '../../keys/instances/preteenBennett'
+import { PRINCIPAL } from '../../keys/instances/tristan'
 
 const ARRANGEMENTS_ACTORS = {
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
-    [MOTHER]: ARRANGEMENTS_MOTHER,
-    [CHRISTOPHER]: ARRANGEMENTS_CHRISTOPHER,
-    [TRISTAN]: ARRANGEMENTS_TRISTAN
+    [PRETEEN_BENNETT]: {
+        [SHEEPISH]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [MOTHER]: {
+        [ARGUING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [CHRISTOPHER]: {
+        [STARING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [TRISTAN]: {
+        [PRINCIPAL]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

@@ -11,8 +11,8 @@ import {
     BENNETT_COUCH_THOUGHT_KEY,
     COURTYARD_KEY,
     CATHOLIC_CHURCH_KEY,
-    BANCROFT_LIBRARY_KEY,
-    CAMPANILE_KEY
+    BERKELEY_BANCROFT_KEY,
+    BERKELEY_CAMPANILE_KEY
 } from '../../scene/scenes/keys'
 
 import {
@@ -216,7 +216,7 @@ export default [
                 [ASH_CAN]: true
             }
         },
-        cubes: BANCROFT_LIBRARY_KEY,
+        cubes: BERKELEY_BANCROFT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING
@@ -252,7 +252,7 @@ export default [
                 [CAMPANILE]: true
             }
         },
-        cubes: CAMPANILE_KEY,
+        cubes: BERKELEY_CAMPANILE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_SPRING

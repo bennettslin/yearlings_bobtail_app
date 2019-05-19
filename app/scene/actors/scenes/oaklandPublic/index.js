@@ -5,19 +5,61 @@ import {
     ESTHER,
     WILLY
 } from '../../keys'
-
-import ARRANGEMENTS_YOUNG_BENNETT from './actors/youngBennett'
-import ARRANGEMENTS_BENNETT_STEPHANIE from './actors/bennettStephanie'
-import ARRANGEMENTS_ANITA from './actors/anita'
-import ARRANGEMENTS_ESTHER from './actors/esther'
-import ARRANGEMENTS_WILLY from './actors/willy'
+import { YOUNG_CHILD } from '../../keys/instances/songs'
+import { DRYING_TEARS } from '../../keys/instances/bennettStephanie'
+import { CROSSING_GUARD } from '../../keys/instances/willy'
 
 const ARRANGEMENTS_ACTORS = {
-    [YOUNG_BENNETT]: ARRANGEMENTS_YOUNG_BENNETT,
-    [BENNETT_STEPHANIE]: ARRANGEMENTS_BENNETT_STEPHANIE,
-    [ANITA]: ARRANGEMENTS_ANITA,
-    [ESTHER]: ARRANGEMENTS_ESTHER,
-    [WILLY]: ARRANGEMENTS_WILLY
+    [YOUNG_BENNETT]: {
+        [YOUNG_CHILD]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [BENNETT_STEPHANIE]: {
+        [DRYING_TEARS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ANITA]: {
+        [YOUNG_CHILD]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ESTHER]: {
+        [YOUNG_CHILD]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [WILLY]: {
+        [CROSSING_GUARD]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS

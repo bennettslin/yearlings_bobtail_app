@@ -1,6 +1,6 @@
 import {
-    BANCROFT_LIBRARY_KEY,
-    CAMPANILE_KEY
+    BERKELEY_BANCROFT_KEY,
+    BERKELEY_CAMPANILE_KEY
 } from '../../scenes/keys'
 
 import {
@@ -98,8 +98,8 @@ const
     },
 
     CUBES = {
-        [BANCROFT_LIBRARY_KEY]: BANCROFT_LIBRARY_CUBES,
-        [CAMPANILE_KEY]: CAMPANILE_CUBES
+        [BERKELEY_BANCROFT_KEY]: BANCROFT_LIBRARY_CUBES,
+        [BERKELEY_CAMPANILE_KEY]: CAMPANILE_CUBES
     }
 
 export default CUBES

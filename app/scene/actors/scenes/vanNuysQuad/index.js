@@ -4,17 +4,52 @@ import {
     BRAD,
     ANDREW
 } from '../../keys'
-
-import ARRANGEMENTS_PRETEEN_BENNETT from './actors/preteenBennett'
-import ARRANGEMENTS_SASHA from './actors/sasha'
-import ARRANGEMENTS_BRAD from './actors/brad'
-import ARRANGEMENTS_ANDREW from './actors/andrew'
+import { NOODLING } from '../../keys/instances/andrew'
+import { SNACKING } from '../../keys/instances/brad'
+import { WISTFUL } from '../../keys/instances/preteenBennett'
+import { POPULAR_GIRL } from '../../keys/instances/sasha'
 
 const ARRANGEMENTS_ACTORS = {
-    [PRETEEN_BENNETT]: ARRANGEMENTS_PRETEEN_BENNETT,
-    [SASHA]: ARRANGEMENTS_SASHA,
-    [BRAD]: ARRANGEMENTS_BRAD,
-    [ANDREW]: ARRANGEMENTS_ANDREW
+    [PRETEEN_BENNETT]: {
+        [WISTFUL]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 3.5,
+                xWidth: 2,
+                zHeight: 3
+            }
+        }
+    },
+    [SASHA]: {
+        [POPULAR_GIRL]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 7.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [BRAD]: {
+        [SNACKING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 9,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [ANDREW]: {
+        [NOODLING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 6,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    }
 }
 
 export default ARRANGEMENTS_ACTORS
