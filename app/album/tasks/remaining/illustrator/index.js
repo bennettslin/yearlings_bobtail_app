@@ -2,7 +2,12 @@ export default [
     {
         taskName: `Timebox for creating scene files in Illustrator.`,
         workedHours: 2,
-        neededHours: 16
+        neededHours: 8
+    },
+    {
+        taskName: `Arrangement organisation.`,
+        workedHours: 10,
+        neededHours: 12
     },
 
     /***********
