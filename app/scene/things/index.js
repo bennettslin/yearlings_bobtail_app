@@ -6,7 +6,11 @@ import THINGS_BATHROOM from './scenes/bathroom'
 import THINGS_FREEWAY from './scenes/freeway'
 import THINGS_PORCH from './scenes/porch'
 import THINGS_CHANGELING_CAVE from './scenes/changelingCave'
-import THINGS_PUPPET_SHOW from './scenes/puppetShow'
+import THINGS_PUPPET_SHOW, {
+    THINGS_PUPPET_SHOW_BEGIN,
+    THINGS_PUPPET_SHOW_MIDDLE,
+    THINGS_PUPPET_SHOW_END
+} from './scenes/puppetShow'
 import THINGS_SCHOOLBUS from './scenes/schoolbus'
 import THINGS_TETHERBALL_COURT from './scenes/tetherballCourt'
 import THINGS_TAIWAN_ROOM from './scenes/taiwanRoom'
@@ -17,7 +21,14 @@ import THINGS_SHORE from './scenes/shore'
 import THINGS_BUOY from './scenes/buoy'
 import THINGS_OCEAN_DEPTHS from './scenes/oceanDepths'
 import THINGS_OCEAN_FLOOR from './scenes/oceanFloor'
-import THINGS_BEDROOM from './scenes/bedroom'
+import THINGS_BEDROOM, {
+    THINGS_BEDROOM_ENRAGED,
+    THINGS_BEDROOM_FEARFUL,
+    THINGS_BEDROOM_GUILTY,
+    THINGS_BEDROOM_FEIGNING,
+    THINGS_BEDROOM_ASLEEP,
+    THINGS_BEDROOM_SHAKEN
+} from './scenes/bedroom'
 import THINGS_VAN_NUYS_LOCKERS from './scenes/vanNuysLockers'
 import THINGS_VAN_NUYS_QUAD from './scenes/vanNuysQuad'
 import THINGS_VAN_NUYS_HALLWAY from './scenes/vanNuysHallway'
@@ -34,11 +45,17 @@ import THINGS_GO_KARTS from './scenes/goKarts'
 import THINGS_DISHROOM from './scenes/dishroom'
 import THINGS_WAITING_ROOM from './scenes/waitingRoom'
 import THINGS_CLUB_FRONT from './scenes/clubFront'
-import THINGS_CLUB_SIDE from './scenes/clubSide'
+import THINGS_CLUB_SIDE_CROWD from './scenes/clubSideCrowd'
+import THINGS_CLUB_SIDE_STAGE from './scenes/clubSideStage'
 import THINGS_CLUB_FAR from './scenes/clubFar'
 import THINGS_CLUB_LOADING from './scenes/clubLoading'
 import THINGS_BENNETT_BED from './scenes/bennettBed'
-import THINGS_BENNETT_COUCH from './scenes/bennettCouch'
+import THINGS_BENNETT_COUCH, {
+    THINGS_BENETT_COUCH_OPINION,
+    THINGS_BENETT_COUCH_PONDERING,
+    THINGS_BENETT_COUCH_RUBIKS,
+    THINGS_BENETT_COUCH_READING
+} from './scenes/bennettCouch'
 import THINGS_COURTYARD from './scenes/courtyard'
 import THINGS_BENNETT_GATE from './scenes/bennettGate'
 import THINGS_LIZ_BED from './scenes/lizBed'
@@ -73,6 +90,9 @@ const SCENE_ARRANGEMENTS = [
     THINGS_PORCH,
     THINGS_CHANGELING_CAVE,
     THINGS_PUPPET_SHOW,
+    THINGS_PUPPET_SHOW_BEGIN,
+    THINGS_PUPPET_SHOW_MIDDLE,
+    THINGS_PUPPET_SHOW_END,
     THINGS_SCHOOLBUS,
     THINGS_TETHERBALL_COURT,
     THINGS_TAIWAN_ROOM,
@@ -84,6 +104,12 @@ const SCENE_ARRANGEMENTS = [
     THINGS_OCEAN_DEPTHS,
     THINGS_OCEAN_FLOOR,
     THINGS_BEDROOM,
+    THINGS_BEDROOM_ENRAGED,
+    THINGS_BEDROOM_FEARFUL,
+    THINGS_BEDROOM_GUILTY,
+    THINGS_BEDROOM_FEIGNING,
+    THINGS_BEDROOM_ASLEEP,
+    THINGS_BEDROOM_SHAKEN,
     THINGS_VAN_NUYS_LOCKERS,
     THINGS_VAN_NUYS_QUAD,
     THINGS_VAN_NUYS_HALLWAY,
@@ -100,11 +126,16 @@ const SCENE_ARRANGEMENTS = [
     THINGS_DISHROOM,
     THINGS_WAITING_ROOM,
     THINGS_CLUB_FRONT,
-    THINGS_CLUB_SIDE,
+    THINGS_CLUB_SIDE_CROWD,
+    THINGS_CLUB_SIDE_STAGE,
     THINGS_CLUB_FAR,
     THINGS_CLUB_LOADING,
     THINGS_BENNETT_BED,
     THINGS_BENNETT_COUCH,
+    THINGS_BENETT_COUCH_OPINION,
+    THINGS_BENETT_COUCH_PONDERING,
+    THINGS_BENETT_COUCH_RUBIKS,
+    THINGS_BENETT_COUCH_READING,
     THINGS_COURTYARD,
     THINGS_BENNETT_GATE,
     THINGS_LIZ_BED,

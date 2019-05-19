@@ -36,26 +36,6 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [BUBBLES]: {
-        [TOGETHER_SKETCHBOOK]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
-        },
-        [APART_SKETCHBOOK]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 2.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
-        }
-    },
     [FLATS]: {
         [TAIWAN_CLOUDS]: {
             yIndex: 1,
@@ -98,7 +78,10 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 3
             }
         }
-    },
+    }
+}
+
+export const THINGS_PUPPET_SHOW_BEGIN = {
     [PUPPETS]: {
         [PUPPET_BENNETT_BEGIN]: {
             yIndex: 2,
@@ -115,7 +98,23 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 0.5,
                 zHeight: 1
             }
-        },
+        }
+    }
+}
+
+export const THINGS_PUPPET_SHOW_MIDDLE = {
+    [BUBBLES]: {
+        [TOGETHER_SKETCHBOOK]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4.5
+            }
+        }
+    },
+    [PUPPETS]: {
         [PUPPET_BENNETT_MIDDLE]: {
             yIndex: 2,
             arrangement: {
@@ -131,7 +130,23 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 0.5,
                 zHeight: 1
             }
-        },
+        }
+    }
+}
+
+export const THINGS_PUPPET_SHOW_END = {
+    [BUBBLES]: {
+        [APART_SKETCHBOOK]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 2.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4.5
+            }
+        }
+    },
+    [PUPPETS]: {
         [PUPPET_BENNETT_END]: {
             yIndex: 2,
             arrangement: {

@@ -69,7 +69,8 @@ import {
 } from '../../scene/things/keys/cutouts'
 
 import {
-    STAGE_MIC_SIDE,
+    STAGE_MIC_SIDE_CROWD,
+    STAGE_MIC_SIDE_STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
@@ -134,6 +135,9 @@ export default [
                 [MONITOR_SIDE_CROWD]: true,
                 [WALL_SPEAKER_SIDE_CROWD]: true
             },
+            [FIXTURES]: {
+                [STAGE_MIC_SIDE_CROWD]: true
+            },
             [FLATS]: {
                 [CROWD_FAR_SIDE]: true,
                 [CROWD_NEAR_SIDE]: true
@@ -180,7 +184,7 @@ export default [
                 [WALL_SPEAKER_SIDE_STAGE]: true
             },
             [FIXTURES]: {
-                [STAGE_MIC_SIDE]: true,
+                [STAGE_MIC_SIDE_STAGE]: true,
                 [KICK_DRUM]: true,
                 [DRUM_THRONE]: true,
                 [GUITAR_CASE_OPEN]: true

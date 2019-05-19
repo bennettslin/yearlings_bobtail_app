@@ -57,7 +57,8 @@ export const BLOODY_TOWEL = 'bloodyTowel'
 export const GRAVESTONE = 'gravestone'
 export const EVIAN_BOTTLES = 'evianBottles'
 
-export const STAGE_MIC_SIDE = 'stageMicSide'
+export const STAGE_MIC_SIDE_CROWD = 'stageMicSideCrowd'
+export const STAGE_MIC_SIDE_STAGE = 'stageMicSideStage' // Duplicate.
 export const STAGE_MIC_FAR = 'stageMicFar'
 export const GUITAR = 'guitar'
 export const GUITAR_CASE_OPEN = 'guitarCaseOpen'

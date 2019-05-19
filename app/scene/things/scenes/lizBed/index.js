@@ -28,16 +28,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [LIZ_PHONE_REFLECTION]: {
-            yIndex: 2,
-            arrangement: {
-                xFloat: 2,
-                xWidth: 1,
-                zHeight: 1,
-                zOffset: 6.5
-            }
-        },
-        [BLOODY_TOWEL]: {
+        [LIZ_PHONE_BASE]: {
             yIndex: 4,
             arrangement: {
                 xFloat: 2,
@@ -53,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [BENNETT_SHOE_REFLECTION]: {
+        [BLOODY_TOWEL]: {
             yIndex: 4,
             arrangement: {
                 xFloat: 2,
@@ -61,12 +52,13 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [LIZ_PHONE_BASE]: {
-            yIndex: 4,
+        [LIZ_PHONE_REFLECTION]: {
+            yIndex: 2,
             arrangement: {
                 xFloat: 2,
                 xWidth: 1,
-                zHeight: 1
+                zHeight: 1,
+                zOffset: 6.5
             }
         },
         [LIZ_PHONE_BASE_REFLECTION]: {
@@ -76,6 +68,14 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 1,
                 zHeight: 1,
                 zOffset: 6.5
+            }
+        },
+        [BENNETT_SHOE_REFLECTION]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
             }
         }
     },

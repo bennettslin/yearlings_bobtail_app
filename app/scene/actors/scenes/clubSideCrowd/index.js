@@ -1,17 +1,18 @@
 import {
     BENNETT,
-    AMY,
-    MARA,
-    JACOB
-} from '../../../keys'
-import {
-    FLIRTING,
-    CARRYING
-} from '../../../keys/instances/songs'
+    ANA,
+    TOMER,
+    AMY_STEPHANIE,
+    WADE
+} from '../../keys'
+import { PERFORMING } from '../../keys/instances/songs'
+import { SQUEEZING } from '../../keys/instances/amyStephanie'
+import { SHANE_SPILLING } from '../../keys/instances/tomer'
+import { WATCHING } from '../../keys/instances/wade'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
-        [FLIRTING]: {
+        [PERFORMING]: {
             yIndex: 5,
             arrangement: {
                 xFloat: 5.5,
@@ -20,8 +21,8 @@ const ARRANGEMENTS_ACTORS = {
             }
         }
     },
-    [AMY]: {
-        [FLIRTING]: {
+    [ANA]: {
+        [PERFORMING]: {
             yIndex: 5,
             arrangement: {
                 xFloat: 5.5,
@@ -30,8 +31,8 @@ const ARRANGEMENTS_ACTORS = {
             }
         }
     },
-    [MARA]: {
-        [CARRYING]: {
+    [TOMER]: {
+        [SHANE_SPILLING]: {
             yIndex: 5,
             arrangement: {
                 xFloat: 5.5,
@@ -40,8 +41,18 @@ const ARRANGEMENTS_ACTORS = {
             }
         }
     },
-    [JACOB]: {
-        [CARRYING]: {
+    [AMY_STEPHANIE]: {
+        [SQUEEZING]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5.5,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [WADE]: {
+        [WATCHING]: {
             yIndex: 5,
             arrangement: {
                 xFloat: 5.5,

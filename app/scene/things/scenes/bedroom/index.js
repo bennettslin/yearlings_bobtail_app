@@ -39,16 +39,6 @@ import {
 } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BUBBLES]: {
-        [DOGS_SKETCHBOOK]: {
-            yIndex: 4,
-            arrangement: {
-                xFloat: 6,
-                xWidth: 3,
-                zHeight: 4
-            }
-        }
-    },
     [CUTOUTS]: {
         [TINTIN_POSTER]: {
             yIndex: 1,
@@ -76,64 +66,6 @@ const ARRANGEMENTS_THINGS = {
                 xFloat: 5,
                 xWidth: 1,
                 zHeight: 1
-            }
-        },
-        [CHRISTOPHER_LETTERS]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [CAPTAIN_BED_LAMP]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [BENNETT_LETTERS]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [RED_ENVELOPE_MONEY]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [BEYONDER_ENVELOPE]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        }
-    },
-    [FLATS]: {
-        [BEDROOM_SIREN]: {
-            yIndex: 0,
-            arrangement: {
-                xFloat: 3,
-                xWidth: 6,
-                zHeight: 8
-            }
-        },
-        [BEDROOM_BUS]: {
-            yIndex: 0,
-            arrangement: {
-                xFloat: 3,
-                xWidth: 6,
-                zHeight: 8
             }
         }
     },
@@ -172,7 +104,90 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 8
             }
         }
+    }
+}
+
+export const THINGS_BEDROOM_ENRAGED = {
+    [FIXTURES]: {
+        [CHRISTOPHER_LETTERS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    }
+}
+
+export const THINGS_BEDROOM_FEARFUL = {
+    [FLATS]: {
+        [BEDROOM_SIREN]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 3,
+                xWidth: 6,
+                zHeight: 8
+            }
+        }
+    }
+}
+
+export const THINGS_BEDROOM_GUILTY = {
+    [BUBBLES]: {
+        [DOGS_SKETCHBOOK]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 6,
+                xWidth: 3,
+                zHeight: 4
+            }
+        }
     },
+    [FIXTURES]: {
+        [CAPTAIN_BED_LAMP]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [BENNETT_LETTERS]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    }
+}
+
+export const THINGS_BEDROOM_FEIGNING = {
+    [FIXTURES]: {
+        [RED_ENVELOPE_MONEY]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    },
+    [FLATS]: {
+        [BEDROOM_BUS]: {
+            yIndex: 0,
+            arrangement: {
+                xFloat: 3,
+                xWidth: 6,
+                zHeight: 8
+            }
+        }
+    }
+}
+
+export const THINGS_BEDROOM_ASLEEP = {
     [PUPPETS]: {
         [PCHELKA_MUSHKA_ROCKET]: {
             yIndex: 1,
@@ -181,7 +196,22 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 5,
                 zHeight: 3
             }
-        },
+        }
+    }
+}
+
+export const THINGS_BEDROOM_SHAKEN = {
+    [FIXTURES]: {
+        [BEYONDER_ENVELOPE]: {
+            yIndex: 5,
+            arrangement: {
+                xFloat: 5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        }
+    },
+    [PUPPETS]: {
         [EARTH]: {
             yIndex: 4,
             arrangement: {
