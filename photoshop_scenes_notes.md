@@ -9,5 +9,17 @@
     * Canvas is 15 by 22.5 inches real life, 1080 by 1620 pixels.
 * Have six Photoshop layers, one for each cubes layer.
     * All at same scale.
-* Have grid guidelines
-* Label each actor with specific song and scene index, if necessary.
+
+* Have grid guidelines based on cubes. Do between cubes as well. Have locked layer with numbered x and z indices.
+* Recopy files.
+
+# File placement
+
+* Show cubes in browser.
+* Determine xIndex and yIndex for each file.
+* Place the file in the appropriate yIndex layer and xIndex coordinate.
+* Generally resize the file.
+
+# Placement resizing.
+
+* TODO.
