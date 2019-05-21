@@ -12,6 +12,7 @@
 
 * Have grid guidelines based on cubes. Do between cubes as well. Have locked layer with numbered x and z indices.
 * Recopy files.
+* Just place files first.
 
 # File placement
 
