@@ -768,7 +768,7 @@ export default {
                                         anchor: `Eris`,
                                         wiki: `Eris_(mythology)`
                                     },
-                                    `was the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labelled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
+                                    `is the Greek goddess of discord. As revenge for being denied invitation to a feast attended by the other gods, she tossed a golden apple labeled "for the fairest" into their midst. When Paris was asked to judge its rightful owner, he chose Aphrodite, who rewarded him with the hand of Helen.`
                                 ]
                             }
                         }
@@ -795,7 +795,7 @@ export default {
                             anchor: `the Society,`,
                             card: {
                                 description: [
-                                    `In my dream, I am making sense of the news that day that a family friend had taken Odin's remains to the`,
+                                    `Odin's remains had been taken to the`,
                                     {
                                         anchor: `Humane Society,`,
                                         wiki: `The_Humane_Society_of_the_United_States`
@@ -803,7 +803,7 @@ export default {
                                     `which offers pet cremation services.`
                                 ],
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         }
