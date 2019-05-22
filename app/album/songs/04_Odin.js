@@ -863,7 +863,7 @@ export default {
                             // CONSIDER: wormhole: Hope chest in M?
                             anchor: `hopeless rests.`,
                             card: {
-                                description: `Hope was all that remained in the box opened by Pandora. By contrast, upon having all the hard truths of the world revealed to me by Sasha, all I had left was my own hopeless state.`,
+                                description: `Hope was all that remained in Pandora's box. By contrast, upon having the hard truths of the world revealed to me by Sasha, I was left only with my own hopeless state.`,
                                 dotKeys: {
                                     [REFERENCE]: true,
                                     [OBSERVATION]: true
