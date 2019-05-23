@@ -880,7 +880,8 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `Recording vocals in doublespeaker rhyme turned out to be trickier than I had assumed. The lines rarely lined up naturally, because even when speaking in rhythm, we tend to shorten or lengthen our syllables based on the relative strength of consonants, the spaces between words, and so on. I ended up improvising a system of`,
+                            // TODO
+                            `Recording vocals in doublespeaker rhyme proved to be trickier than anticipated. I came to discover that each phrase has a natural cadence based on its unique clustering of syllables into words. Because of this, even when I sang each line in perfect rhythm, the consonants of counterpart lines never lined up perfectly, leading to a muddled sound overall. To get around this problem, I improvised my own system of`,
                             {
                                 anchor: `ligature`,
                                 wiki: `Ligature_(music)`
@@ -930,7 +931,7 @@ export default {
                         {
                             anchor: `guard's whistle`,
                             card: {
-                                description: `Standing on the ocean beach, I notice a steel whistle buried in the sand. Once blown by a lifeguard to give warning, it is now forever lost. Some dangers come with no warning, after all.`,
+                                description: `Standing on the ocean beach, I notice a steel whistle buried in the sand. Having once been blown by a lifeguard to warn of danger, it is now forever lost. Some dangers come with no warning, after all.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
