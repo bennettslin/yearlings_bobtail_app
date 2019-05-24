@@ -112,7 +112,7 @@ import {
 export default [
     {
         unitIndex: 1,
-        description: ``,
+        description: `San Fernando valley in the morning.`,
         cubes: FREEWAY_KEY,
         presences: {
             [BACKDROPS]: {

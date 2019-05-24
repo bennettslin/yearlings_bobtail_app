@@ -860,5 +860,10 @@ export default [
         taskName: `Timebox for further arrangement organisation.`,
         workedHours: 14,
         neededHours: 14
+    },
+    {
+        taskName: `Timebox for creating and placing scene files in Illustrator.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

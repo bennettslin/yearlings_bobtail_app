@@ -48,8 +48,7 @@ import {
 import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
-    BACKPACK_JEWISH_BOY,
-    TETHERBALL_POLE
+    BACKPACK_JEWISH_BOY
 } from '../../scene/things/keys/fixtures'
 
 import {
@@ -195,9 +194,6 @@ export default [
             },
             [BACKDROPS]: {
                 [VAN_NUYS_THOUGHT_BACKDROP]: true
-            },
-            [FIXTURES]: {
-                [TETHERBALL_POLE]: true
             },
             [FLATS]: {
                 [VAN_NUYS_SCHOOLHOUSE_LEFT]: true,
