@@ -86,7 +86,7 @@ import {
 
 import {
     SHOPPING_CART_FULL,
-    HAIRCUT_SCISSORS,
+
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
 } from '../../scene/things/keys/fixtures'
@@ -190,9 +190,6 @@ export default [
             [CUTOUTS]: {
                 [PORCH_PLANTS_LEFT]: true,
                 [PORCH_PLANTS_RIGHT]: true
-            },
-            [FIXTURES]: {
-                [HAIRCUT_SCISSORS]: true
             }
         },
         cubes: PORCH_KEY,

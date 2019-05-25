@@ -3,7 +3,6 @@ export const SAFEWAY_BAG = 'safewayBag'
 export const JOHNNY_HORTON_ALBUM = 'johnnyHortonAlbum'
 export const RECORD_PLAYER_STOOL = 'recordPlayerStool'
 
-export const HAIRCUT_SCISSORS = 'haircutScissors'
 export const SHOPPING_CART_FULL = 'shoppingCartFull'
 export const BEETHOVEN_BUST = 'beethovenBust'
 export const CHRISTOPHER_LETTERS = 'christopherLetters'

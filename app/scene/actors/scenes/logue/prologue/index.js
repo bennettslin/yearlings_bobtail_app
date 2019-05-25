@@ -4,7 +4,7 @@ import { PROLOGUE } from '../../../keys/instances/songs'
 const ARRANGEMENTS_ACTORS = {
     [OLD_BENNETT]: {
         [PROLOGUE]: {
-            yIndex: 3,
+            yIndex: 4,
             arrangement: {
                 xFloat: 5.5,
                 xWidth: 1,

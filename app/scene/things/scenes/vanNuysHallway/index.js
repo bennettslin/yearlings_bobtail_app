@@ -6,7 +6,7 @@ import { CORKBOARD } from '../../keys/cutouts'
 const ARRANGEMENTS_THINGS = {
     [CUTOUTS]: {
         [CORKBOARD]: {
-            yIndex: 1,
+            yIndex: 4,
             arrangement: {
                 xFloat: 9,
                 xWidth: 2,

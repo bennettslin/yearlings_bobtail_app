@@ -5,7 +5,6 @@ import SafewayBag from './Fixtures/SafewayBag'
 import RecordPlayerStool from './Fixtures/RecordPlayerStool'
 import JohnnyHortonAlbum from './Fixtures/JohnnyHortonAlbum'
 import ShoppingCartFull from './Fixtures/ShoppingCartFull'
-import HaircutScissors from './Fixtures/HaircutScissors'
 import BeethovenBust from './Fixtures/BeethovenBust'
 import ChristopherLetters from './Fixtures/ChristopherLetters'
 import BackpackBennett from './Fixtures/BackpackBennett'
@@ -73,7 +72,6 @@ import {
     RECORD_PLAYER_STOOL,
     JOHNNY_HORTON_ALBUM,
     SHOPPING_CART_FULL,
-    HAIRCUT_SCISSORS,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
     BACKPACK_BENNETT,
@@ -146,7 +144,6 @@ export const propTypes = {
     [RECORD_PLAYER_STOOL]: PropTypes.bool,
     [JOHNNY_HORTON_ALBUM]: PropTypes.bool,
     [SHOPPING_CART_FULL]: PropTypes.bool,
-    [HAIRCUT_SCISSORS]: PropTypes.bool,
     [BEETHOVEN_BUST]: PropTypes.bool,
     [CHRISTOPHER_LETTERS]: PropTypes.bool,
     [BACKPACK_BENNETT]: PropTypes.bool,
@@ -219,7 +216,6 @@ export default {
     [RECORD_PLAYER_STOOL]: RecordPlayerStool,
     [JOHNNY_HORTON_ALBUM]: JohnnyHortonAlbum,
     [SHOPPING_CART_FULL]: ShoppingCartFull,
-    [HAIRCUT_SCISSORS]: HaircutScissors,
     [BEETHOVEN_BUST]: BeethovenBust,
     [CHRISTOPHER_LETTERS]: ChristopherLetters,
     [BACKPACK_BENNETT]: BackpackBennett,

@@ -12,19 +12,9 @@ import { PRINCIPAL } from '../../keys/instances/tristan'
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [SHEEPISH]: {
-            yIndex: 5,
+            yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
-        }
-    },
-    [MOTHER]: {
-        [ARGUING]: {
-            yIndex: 5,
-            arrangement: {
-                xFloat: 5.5,
+                xFloat: 8,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -32,9 +22,19 @@ const ARRANGEMENTS_ACTORS = {
     },
     [CHRISTOPHER]: {
         [STARING]: {
-            yIndex: 5,
+            yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xFloat: 6,
+                xWidth: 1,
+                zHeight: 5
+            }
+        }
+    },
+    [MOTHER]: {
+        [ARGUING]: {
+            yIndex: 2,
+            arrangement: {
+                xFloat: 2.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -42,9 +42,9 @@ const ARRANGEMENTS_ACTORS = {
     },
     [TRISTAN]: {
         [PRINCIPAL]: {
-            yIndex: 5,
+            yIndex: 2,
             arrangement: {
-                xFloat: 5.5,
+                xFloat: 3.5,
                 xWidth: 1,
                 zHeight: 5
             }
