@@ -52,6 +52,7 @@ export const CONVEYOR_BELT = 'conveyorBelt'
 export const NUDE_DRAWINGS = 'nudeDrawings'
 export const VASELINE = 'vaseline'
 export const BLOODY_TOWEL = 'bloodyTowel'
+export const BLOODY_TOWEL_REFLECTION = 'bloodyTowelReflection'
 
 export const GRAVESTONE = 'gravestone'
 export const EVIAN_BOTTLES = 'evianBottles'

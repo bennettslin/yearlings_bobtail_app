@@ -44,6 +44,7 @@ import Vaseline from './Fixtures/Vaseline'
 import LizPhone from './Fixtures/LizPhone'
 import LizPhoneReflection from './Fixtures/LizPhoneReflection'
 import BloodyTowel from './Fixtures/BloodyTowel'
+import BloodyTowelReflection from './Fixtures/BloodyTowelReflection'
 import Gravestone from './Fixtures/Gravestone'
 import EvianBottles from './Fixtures/EvianBottles'
 import StageMicSide from './Fixtures/StageMicSide'
@@ -113,6 +114,7 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
     BLOODY_TOWEL,
+    BLOODY_TOWEL_REFLECTION,
     GRAVESTONE,
     EVIAN_BOTTLES,
     STAGE_MIC_SIDE_CROWD,
@@ -187,6 +189,7 @@ export const propTypes = {
     [LIZ_PHONE]: PropTypes.bool,
     [LIZ_PHONE_REFLECTION]: PropTypes.bool,
     [BLOODY_TOWEL]: PropTypes.bool,
+    [BLOODY_TOWEL_REFLECTION]: PropTypes.bool,
     [GRAVESTONE]: PropTypes.bool,
     [EVIAN_BOTTLES]: PropTypes.bool,
     [KICK_DRUM]: PropTypes.bool,
@@ -259,6 +262,7 @@ export default {
     [LIZ_PHONE]: LizPhone,
     [LIZ_PHONE_REFLECTION]: LizPhoneReflection,
     [BLOODY_TOWEL]: BloodyTowel,
+    [BLOODY_TOWEL_REFLECTION]: BloodyTowelReflection,
     [GRAVESTONE]: Gravestone,
     [EVIAN_BOTTLES]: EvianBottles,
     [KICK_DRUM]: KickDrum,

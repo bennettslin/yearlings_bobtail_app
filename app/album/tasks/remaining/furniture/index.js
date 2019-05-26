@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `bloodyTowelReflection (technically a fixture)`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `captainBedDrawers (technically a panel)`,
         workedHours: 0,
         neededHours: 2

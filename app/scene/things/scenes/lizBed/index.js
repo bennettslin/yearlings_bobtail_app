@@ -7,6 +7,7 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
     BLOODY_TOWEL,
+    BLOODY_TOWEL_REFLECTION,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
     LIZ_PHONE_BASE,
@@ -62,6 +63,14 @@ const ARRANGEMENTS_THINGS = {
 export const THINGS_LIZ_BED_AFTERGLOW = {
     [FIXTURES]: {
         [BLOODY_TOWEL]: {
+            yIndex: 4,
+            arrangement: {
+                xFloat: 2,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [BLOODY_TOWEL_REFLECTION]: {
             yIndex: 4,
             arrangement: {
                 xFloat: 2,
