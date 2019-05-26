@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Timebox for arranging v2 scene files in Illustrator.`,
+        workedHours: 0,
+        neededHours: 9
+    },
+    {
         taskName: `Pharmacy aisle (Constellations)`,
         workedHours: 2,
         neededHours: 3
