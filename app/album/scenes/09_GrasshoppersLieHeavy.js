@@ -292,7 +292,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 4.25,
+                    workedHours: 4,
                     compound: 2,
                     description: 'front, opening gate, silent, attentive',
                     instance: GINGERBREAD_PRISON
@@ -380,7 +380,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 4.25,
+                    workedHours: 4,
                     compound: 2,
                     description: 'sitting, abruptly woken',
                     instance: CHEEK_UNVEILED
@@ -405,7 +405,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 4.25,
+                    workedHours: 4,
                     compound: 2,
                     description: 'side, standing beside bed, unsure',
                     instance: HARD_ON
@@ -413,7 +413,7 @@ export default [
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4.25,
+                        workedHours: 4,
                         compound: 2,
                         description: 'reflection',
                         instance: HARD_ON_REFLECTION
@@ -442,7 +442,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 4.25,
+                    workedHours: 4,
                     compound: 2,
                     description: 'side, about to stick it in',
                     instance: MISSIONARY
@@ -450,7 +450,7 @@ export default [
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4.25,
+                        workedHours: 4,
                         compound: 2,
                         description: 'reflection',
                         instance: MISSIONARY_REFLECTION
@@ -479,7 +479,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 4.25,
+                    workedHours: 4,
                     compound: 2,
                     description: 'lying down, warm, content, slightly worried',
                     instance: AFTERGLOW
@@ -487,7 +487,7 @@ export default [
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4.25,
+                        workedHours: 4,
                         compound: 2,
                         description: 'reflection',
                         instance: AFTERGLOW_REFLECTION
