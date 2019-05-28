@@ -99,7 +99,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, playing guitar, singing',
                     instance: PERFORMING
                 },
@@ -156,7 +156,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, charmed',
                     instance: FLIRTING
                 },
@@ -203,7 +203,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, carrying gear, looking back, hesitant',
                     instance: SIDELONG_HESITANCE
                 },
@@ -255,14 +255,14 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, sitting on edge of bed, discontented',
                     instance: REMOVING_SHOES
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'reflection',
                         instance: SHOES_REFLECTION
                     }
