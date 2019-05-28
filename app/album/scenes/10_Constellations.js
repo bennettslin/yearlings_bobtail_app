@@ -137,7 +137,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, holding body and gesturing its smallness',
                     instance: WALGREENS
                 },
@@ -223,7 +223,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front, looking upwards, inspired',
                     instance: CEMETERY
                 },
@@ -264,7 +264,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, sleeping in car',
                     instance: STATION_WAGON
                 },
@@ -315,7 +315,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'lying on couch, watching TV, alert',
                     instance: ATTIC
                 },
