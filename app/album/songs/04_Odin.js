@@ -880,13 +880,11 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            // TODO
-                            `Recording vocals in doublespeaker rhyme proved to be trickier than anticipated. I came to discover that each phrase has a natural cadence based on its unique clustering of syllables into words. Because of this, even when I sang each line in perfect rhythm, the consonants of counterpart lines never lined up perfectly, leading to a muddled sound overall. To get around this problem, I improvised my own system of`,
+                            `Recording vocals in doublespeaker rhyme proved to be trickier than anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounded fine on its own, they would become a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
                             {
-                                anchor: `ligature`,
+                                anchor: `ligature.`,
                                 wiki: `Ligature_(music)`
-                            },
-                            `to keep syllabic durations and offsets in sync.`
+                            }
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
