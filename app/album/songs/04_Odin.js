@@ -81,7 +81,7 @@ export default {
                             anchor: `By lot,`,
                             cards: [
                                 {
-                                    description: `Lots are drawn by chance to decide an outcome, and it was my lot to be born a non-Jew.`,
+                                    description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
                                     dotKeys: {
                                         [OBSERVATION]: true
                                     }
@@ -93,7 +93,7 @@ export default {
                                             anchor: `his wife`,
                                             wiki: `Lot%27s_wife`
                                         },
-                                        ` looked back, she was turned into a pillar of salt. This is understood by some to suggest that the fallen shall not cohabit with the faithful.`
+                                        `looked back, she was turned into a pillar of salt. This is understood by some to suggest that the fallen shall not cohabit with the faithful.`
                                     ],
                                     dotKeys: {
                                         [PUN]: true
@@ -157,7 +157,7 @@ export default {
                         {
                             anchor: `Indifferent galaxies`,
                             card: {
-                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as an endless stretch of cold, empty space in which we live and die to no concern. But this to me was the most disturbing prospect of all.`,
+                                description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as an endless stretch of cold, empty space in which we live and die to no greater concern.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -271,7 +271,7 @@ export default {
                                     ]
                                 },
                                 {
-                                    description: `I dreaded sleep as a child. The nightly ordeal of swapping out my reasoned thoughts for irrational dreams felt as burdensome and frightening as a blood transfusion, even when its restorative effects always proved to be glorious.`,
+                                    description: `I dreaded sleep as a child. The nightly ordeal of swapping out my reasoned thoughts for irrational dreams felt as burdensome and frightening as a blood transfusion. And yet, things always seemed better in the morning because of it.`,
                                     dotKeys: {
                                         [BACKSTORY]: true,
                                         [OBSERVATION]: true
@@ -432,7 +432,7 @@ export default {
                                         anchor: `"Oriental"`,
                                         wiki: `Orient`
                                     },
-                                    `wasn't a pejorative until determined to be such by academics. It's even printed on my birth certificate, after all. I learned of its incorrectness during the time when "queer" was being reclaimed by the gay community. The latter tactic made more sense to me.`
+                                    `wasn't a pejorative when I was growing up. It's even printed on my birth certificate, after all. I learned of its incorrectness during the time when "queer" was being reclaimed by the gay community. The latter tactic always made more sense to me.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true,
@@ -909,14 +909,8 @@ export default {
                                             anchor: `Hippocratic medicine,`,
                                             wiki: `Humorism`
                                         },
-                                        `black bile is the humour secreted by the spleen to induce melancholy.`
+                                        `the spleen was thought to secrete black bile, the humor that induces melancholy. In modern parlance, however, the spleen is associated with a foul temper. My expressions of resentment towards the bullies, which I confided to Sasha, were characteristic of both senses.`
                                     ]
-                                },
-                                {
-                                    description: `After the bullying began, my temperament changed. I became more cynical and sullen, and would confide to Sasha my vindictive thoughts.`,
-                                    dotKeys: {
-                                        [BACKSTORY]: true
-                                    }
                                 }
                             ]
                         }
@@ -957,7 +951,7 @@ export default {
                                             wiki: `The_Waste_Land`
                                         }
                                     },
-                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. She replies that she wants most to die.`
+                                    `begins with an epigraph in which the Sibyl, hanging in a jar, is asked what she wants most. She replies that what she wants most is to die.`
                                 ]
                             }
                         },
@@ -971,7 +965,7 @@ export default {
                         {
                             anchor: `yellow-taped grills`,
                             card: {
-                                description: `Barricade tape has been tied across the barbecue grills to prevent beachgoers from swimming in the shark-infested waters.`,
+                                description: `Barricade tape has been tied across the barbecue grills to prevent beachgoers from wading into the shark-infested waters.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1020,6 +1014,12 @@ export default {
                     right: [
                         {
                             anchor: `impart warmth`,
+                            // {
+                            //     description: `After the bullying began, my temperament changed. I became more cynical and sullen, and would confide to Sasha my vindictive thoughts.`,
+                            //     dotKeys: {
+                            //         [BACKSTORY]: true
+                            //     }
+                            // }
                             // CONSIDER: Wormhole Foreshadow M?
                             card: {
                                 description: `Cellophane is thin and see-through like gauze, but has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her tenderest feelings were strictly reserved for those who could show tenderness in return.`,
