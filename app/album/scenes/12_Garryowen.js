@@ -117,7 +117,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front, tripping as meats fall out of pockets',
                     instance: DROPPING_MEATS
                 },
