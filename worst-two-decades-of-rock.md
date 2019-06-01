@@ -1,7 +1,7 @@
-Indie rock is like Trump. We agree ahead of time that doing the job is not the trial that tests them. Getting the job is, and the job itself is the reward. Our Band Could Be Your Life. Which leads to the following:
-* They can never have their credentials revoked.
+The world of indie rock is like the world of Trump. The rules for acclaim are just different. We agree ahead of time that doing the job is not the trial that tests them. Getting the job is, and the job itself is the reward. Our Band Could Be Your Life. Which leads to the following:
+* Getting the job, not doing the job, is the basis for their acclaim. So once they successfully get the job, nothing they do on the job can ever make us question this.
 * They require us to believe that talent and ability are inborn traits.
-* Their narrative cannot allow for failure. And so their followers become complicit in recontextualising everything they do as a success.
+* If you're a natural, then any failure is fatal to your narrative. And so your followers become complicit in recontextualising everything you do as a success.
 * Only people of privilege find this kind of world interesting, because it can only ever happen for people of privilege.
 
 Indie rock is history's villain. History wants to reverse and undo all of indie rock's judgments.
