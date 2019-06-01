@@ -94,7 +94,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'front, putting on jacket, cold, distant',
                     instance: BRUSH_OFF
