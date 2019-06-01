@@ -965,7 +965,7 @@ export default {
                         {
                             anchor: `yellow-taped grills`,
                             card: {
-                                description: `Barricade tape has been tied across the barbecue grills to prevent beachgoers from wading into the shark-infested waters.`,
+                                description: `Barricade tape has been tied along the barbecue grills that line the shore, in an effort to prevent beachgoers from wading into the shark-infested waters.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1004,7 +1004,7 @@ export default {
                         },
                         `keen to drift`
                     ],
-                    right: `who cannot warm he who didn't`
+                    right: `who cannot warm he who`
                 },
                 {
                     time: 103,
@@ -1013,13 +1013,7 @@ export default {
                     ],
                     right: [
                         {
-                            anchor: `impart warmth`,
-                            // {
-                            //     description: `After the bullying began, my temperament changed. I became more cynical and sullen, and would confide to Sasha my vindictive thoughts.`,
-                            //     dotKeys: {
-                            //         [BACKSTORY]: true
-                            //     }
-                            // }
+                            anchor: `didn't impart warmth`,
                             // CONSIDER: Wormhole Foreshadow M?
                             card: {
                                 description: `Cellophane is thin and see-through like gauze, but has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her tenderest feelings were strictly reserved for those who could show tenderness in return.`,
