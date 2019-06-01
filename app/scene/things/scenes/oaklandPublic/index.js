@@ -13,7 +13,7 @@ const ARRANGEMENTS_THINGS = {
         [PUBLIC_FAR_LEFT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 3,
                 zHeight: 5
             }
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
         [PUBLIC_FAR_RIGHT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 10.5,
+                xPosition: 10.5,
                 xWidth: 2,
                 zHeight: 5
             }
@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
         [PUBLIC_NEAR_LEFT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 0.5,
+                xPosition: 0.5,
                 xWidth: 2,
                 zHeight: 6
             }
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
         [PUBLIC_NEAR_RIGHT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 11,
+                xPosition: 11,
                 xWidth: 1,
                 zHeight: 6
             }

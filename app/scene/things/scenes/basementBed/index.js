@@ -14,7 +14,7 @@ const ARRANGEMENTS_THINGS = {
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_RECORD_PLAYER_BASEMENT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 2,
                 zHeight: 2
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [CRACKED_PICTURE]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -46,7 +46,7 @@ export const THINGS_BASEMENT_BED_GARRYOWEN = {
         [NAS_ALBUM]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -59,7 +59,7 @@ export const THINGS_BASEMENT_BED_FENDING = {
         [CRACKED_PICTURE]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }

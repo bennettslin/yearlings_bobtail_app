@@ -13,7 +13,7 @@ const ARRANGEMENTS_THINGS = {
         [GO_KART_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 8
             }
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [GO_KART_LEFT_EXTERIOR]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 5,
                 zHeight: 2
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [GO_KART_RIGHT_EXTERIOR]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 5,
                 zHeight: 2
             }

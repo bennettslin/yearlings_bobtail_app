@@ -10,7 +10,7 @@ const ARRANGEMENTS_ACTORS = {
         [CAMPUS_ASHAMED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_ACTORS = {
         [PROTECTIVE_CONCERNED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

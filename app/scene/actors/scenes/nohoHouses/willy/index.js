@@ -9,7 +9,7 @@ const ARRANGEMENTS_ACTORS = {
         [GANGBANGER]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 4.5,
+                xPosition: 4.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -19,7 +19,7 @@ const ARRANGEMENTS_ACTORS = {
         [GANGBANGER]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 5
             }

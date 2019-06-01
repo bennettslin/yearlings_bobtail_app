@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
         [SIGNPOST]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 10.5,
+                xPosition: 10.5,
                 xWidth: 1,
                 zHeight: 7
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
         [BANCROFT_SHRUBS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 3,
                 zHeight: 3
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
         [UC_BERKELEY_TREE_RIGHT]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 2,
                 zHeight: 4
             }
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
         [CAMPANILE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 3,
                 zHeight: 7.5
             }
@@ -55,7 +55,7 @@ export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
         [GHOST_ODIN_CAMPUS]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 5,
                 zHeight: 3
             }

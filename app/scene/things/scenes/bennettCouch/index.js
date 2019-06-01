@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_RECORD_PLAYER_COUCH]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 2,
                 zHeight: 2
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 0.5,
                 zHeight: 1
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_CUSHIONS]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 5,
                 zHeight: 0.5
             }
@@ -56,7 +56,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
         [BENNETT_COUCH_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 8
             }
@@ -66,7 +66,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
         [NIRVANA_POSTER]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
@@ -77,7 +77,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
         [POLICE_ALBUM]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 2
             }
@@ -90,7 +90,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
         [LEONARD_COHEN_POSTER]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
@@ -104,7 +104,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
@@ -115,7 +115,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         [TELEVISION_ALBUM]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 2
             }
@@ -128,7 +128,7 @@ export const THINGS_BENNETT_COUCH_READING = {
         [PROGRESS_CHART_LATE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
@@ -139,7 +139,7 @@ export const THINGS_BENNETT_COUCH_READING = {
         [KEYBOARD]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 0.5,
                 zHeight: 1
             }

@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [GATE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 1,
                 zHeight: 5
             }

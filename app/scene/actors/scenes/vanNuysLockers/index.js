@@ -12,7 +12,7 @@ const ARRANGEMENTS_ACTORS = {
         [STOIC]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 7.5,
+                xPosition: 7.5,
                 xWidth: 2,
                 zHeight: 3
             }
@@ -22,7 +22,7 @@ const ARRANGEMENTS_ACTORS = {
         [GESTURING]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_ACTORS = {
         [THROWING]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 1,
                 zHeight: 5
             }

@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
         [MONITOR_SPEAKER_LEFT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 1.5,
                 zHeight: 1
             }
@@ -27,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
         [MONITOR_SPEAKER_RIGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 1.5,
                 zHeight: 1
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [WALL_SPEAKER_LEFT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 1.5,
                 zHeight: 2,
                 zOffset: 4
@@ -44,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
         [WALL_SPEAKER_RIGHT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1.5,
                 zHeight: 2,
                 zOffset: 4
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
         [GUITAR]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 1,
                 zHeight: 3
             }
@@ -63,7 +63,7 @@ const ARRANGEMENTS_THINGS = {
         [DRUMKIT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 4,
                 zHeight: 3
             }
@@ -76,7 +76,7 @@ export const THINGS_CLUB_FRONT_M = {
         [CASH_BOX]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 1,
                 zHeight: 3
             }

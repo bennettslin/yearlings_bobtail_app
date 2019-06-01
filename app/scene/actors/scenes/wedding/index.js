@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [GETTING_DARK]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 5
             }

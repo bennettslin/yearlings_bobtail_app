@@ -14,7 +14,7 @@ const ARRANGEMENTS_ACTORS = {
         [DROPPING_MEATS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_ACTORS = {
         [CHUCKLING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_ACTORS = {
         [PUNCHING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -44,7 +44,7 @@ const ARRANGEMENTS_ACTORS = {
         [INJURED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 5
             }

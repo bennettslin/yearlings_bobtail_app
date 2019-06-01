@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
         [SCHOOLBUS_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 7
             }
@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
         [BACKPACK_BENNETT]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
         [BACKPACK_SASHA]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -45,7 +45,7 @@ const ARRANGEMENTS_THINGS = {
         [BACKPACK_JEWISH_BOY]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
         [SCHOOLBUS_INTERIOR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 6
             }
@@ -63,7 +63,7 @@ const ARRANGEMENTS_THINGS = {
         [SCHOOLBUS_EXTERIOR]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 6
             }

@@ -10,7 +10,7 @@ const ARRANGEMENTS_THINGS = {
         [ROAD_PAST]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 8
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [SNOWGLOBE_TETHERBALL]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 6,
                 zHeight: 5.5
             }

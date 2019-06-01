@@ -12,7 +12,7 @@ const ARRANGEMENTS_ACTORS = {
         [FLUSTERED]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 1.5,
                 zHeight: 2.5,
                 zOffset: -2
@@ -23,7 +23,7 @@ const ARRANGEMENTS_ACTORS = {
         [CONCERNED]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 1,
                 zHeight: 3.75
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_ACTORS = {
         [SNICKERING]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 3.83
             }

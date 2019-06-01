@@ -14,7 +14,7 @@ const ARRANGEMENTS_THINGS = {
         [CLIPBOARD]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 2,
                 zOffset: 2
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [PAINTING]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 3,
                 zHeight: 2,
                 zOffset: 4
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
         [WAITING_ROOM_PLANT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -45,7 +45,7 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
         [WAITING_ROOM_THOUGHTS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4

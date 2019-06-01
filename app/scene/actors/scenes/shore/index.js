@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [SHORE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 5
             }

@@ -9,7 +9,7 @@ const ARRANGEMENTS_THINGS = {
         [DISPENSER_LEFT]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 2,
                 zHeight: 3
             }
@@ -17,7 +17,7 @@ const ARRANGEMENTS_THINGS = {
         [DISPENSER_RIGHT]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 2,
                 zHeight: 3
             }

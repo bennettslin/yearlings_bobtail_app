@@ -12,7 +12,7 @@ const ARRANGEMENTS_THINGS = {
         [CEMETERY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
         [GRAVESTONE]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 3,
                 zHeight: 2
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
         [CEMETERY_HILLS_NEAR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }

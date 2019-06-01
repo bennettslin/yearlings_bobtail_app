@@ -8,7 +8,7 @@ const ARRANGEMENTS_THINGS = {
         [CORKBOARD]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2

@@ -17,7 +17,7 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_SCHOOL_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -27,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
         [TRASH_CAN_LOCKERS]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 10.5,
+                xPosition: 10.5,
                 xWidth: 1.5,
                 zHeight: 3
             }
@@ -35,9 +35,8 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_PLANT_LOCKERS]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 8,
-                xWidth: 2,
-                zHeight: 1.5
+                xPosition: 8,
+                scaleFactor: 2
             }
         }
     },
@@ -45,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
         [THROWN_FRUIT]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 0.5
             }
@@ -55,7 +54,7 @@ const ARRANGEMENTS_THINGS = {
         [LOCKER_BANK]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 4.5,
                 zHeight: 4.5
             }

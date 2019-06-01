@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [STORAGE_BOXES]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 2,
                 zHeight: 3
             }
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [STORAGE_CHEST]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 1,
                 zHeight: 1.5
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [HOWIE_FRIDGE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2.5,
                 zHeight: 5
             }
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
         [TELEVISION]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 1.5,
                 zHeight: 1
             }
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
         [ATTIC_CUSHIONS]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 4,
                 zHeight: 0.5
             }

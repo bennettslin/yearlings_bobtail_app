@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [TINTIN_POSTER]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
@@ -52,7 +52,7 @@ const ARRANGEMENTS_THINGS = {
         [BLOOM_COUNTY_POSTER]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
@@ -63,7 +63,7 @@ const ARRANGEMENTS_THINGS = {
         [BEETHOVEN_BUST]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -73,7 +73,7 @@ const ARRANGEMENTS_THINGS = {
         [BEDROOM_DESK]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 4,
                 zHeight: 1
             }
@@ -81,7 +81,7 @@ const ARRANGEMENTS_THINGS = {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 4,
                 zHeight: 1
             }
@@ -91,7 +91,7 @@ const ARRANGEMENTS_THINGS = {
         [CAPTAIN_BED_DRAWERS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 3,
                 zHeight: 2.5
             }
@@ -99,7 +99,7 @@ const ARRANGEMENTS_THINGS = {
         [BEDROOM_FENCE]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 6,
                 zHeight: 8
             }
@@ -112,7 +112,7 @@ export const THINGS_BEDROOM_ENRAGED = {
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -125,7 +125,7 @@ export const THINGS_BEDROOM_FEARFUL = {
         [BEDROOM_SIREN]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 6,
                 zHeight: 8
             }
@@ -138,7 +138,7 @@ export const THINGS_BEDROOM_GUILTY = {
         [DOGS_SKETCHBOOK]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 3,
                 zHeight: 4
             }
@@ -148,7 +148,7 @@ export const THINGS_BEDROOM_GUILTY = {
         [CAPTAIN_BED_LAMP]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -156,7 +156,7 @@ export const THINGS_BEDROOM_GUILTY = {
         [BENNETT_LETTERS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -169,7 +169,7 @@ export const THINGS_BEDROOM_FEIGNING = {
         [RED_ENVELOPE_MONEY]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -179,7 +179,7 @@ export const THINGS_BEDROOM_FEIGNING = {
         [BEDROOM_BUS]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 6,
                 zHeight: 8
             }
@@ -192,7 +192,7 @@ export const THINGS_BEDROOM_ASLEEP = {
         [PCHELKA_MUSHKA_ROCKET]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 5,
                 zHeight: 3
             }
@@ -205,7 +205,7 @@ export const THINGS_BEDROOM_SHAKEN = {
         [BEYONDER_ENVELOPE]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -215,7 +215,7 @@ export const THINGS_BEDROOM_SHAKEN = {
         [EARTH]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 4,
                 zHeight: 1
             }
@@ -223,7 +223,7 @@ export const THINGS_BEDROOM_SHAKEN = {
         [SPACE_COLONY]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 4,
                 zHeight: 1
             }

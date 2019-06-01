@@ -18,7 +18,7 @@ const ARRANGEMENTS_THINGS = {
         [TROLL_SHADOW_LEFT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 3,
                 zHeight: 2
             }
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
         [TROLL_SHADOW_RIGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 4,
                 zHeight: 4
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
         [CAMPFIRE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 2,
                 zHeight: 1.5
             }
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
         [STALACTITES]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 1.5,
                 zOffset: 6.5
@@ -53,7 +53,7 @@ const ARRANGEMENTS_THINGS = {
         [FAMILY_HOUSE]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 3,
                 zHeight: 2
             }
@@ -61,7 +61,7 @@ const ARRANGEMENTS_THINGS = {
         [CAVE_SHADOWS]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 9,
                 zHeight: 7
             }

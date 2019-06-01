@@ -11,7 +11,7 @@ const ARRANGEMENTS_THINGS = {
         [APARTMENT_PLANT]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 3,
                 zHeight: 5
             }
@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
         [CODE_BOX]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 1,
                 zOffset: 3

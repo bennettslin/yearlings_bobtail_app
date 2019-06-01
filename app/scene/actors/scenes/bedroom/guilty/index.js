@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [BLISSFUL_GUILTY]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 4,
                 zHeight: 2
             }

@@ -12,7 +12,7 @@ const ARRANGEMENTS_ACTORS = {
         [DEMONSTRATION]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -22,7 +22,7 @@ const ARRANGEMENTS_ACTORS = {
         [PROTESTER]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_ACTORS = {
         [PROTESTER]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -42,7 +42,7 @@ const ARRANGEMENTS_ACTORS = {
         [PROTESTER]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

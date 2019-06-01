@@ -11,7 +11,7 @@ const ARRANGEMENTS_THINGS = {
         [CINEMA_POSTER_LEFT]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 2.5,
                 zHeight: 4,
                 zOffset: 2
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [CINEMA_POSTER_RIGHT]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 2.5,
                 zHeight: 4,
                 zOffset: 2

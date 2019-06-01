@@ -12,7 +12,7 @@ const ARRANGEMENTS_ACTORS = {
         [WONDERING_BABY]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -22,7 +22,7 @@ const ARRANGEMENTS_ACTORS = {
         [USHER_WAITING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_ACTORS = {
         [INFANT_NURSING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

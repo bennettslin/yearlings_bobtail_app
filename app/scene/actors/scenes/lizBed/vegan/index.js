@@ -14,7 +14,7 @@ const ARRANGEMENTS_ACTORS = {
         [BROKEN_HEARTED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_ACTORS = {
         [CARESS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_ACTORS = {
         [CARESS_REFLECTION]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

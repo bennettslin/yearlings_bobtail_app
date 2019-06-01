@@ -10,7 +10,7 @@ const ARRANGEMENTS_ACTORS = {
         [INFIRM]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 3,
                 zHeight: 3
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_ACTORS = {
         [TENNIS]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 1,
                 zHeight: 5
             }

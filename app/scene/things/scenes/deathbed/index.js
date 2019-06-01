@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
         [IV_DRIP]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [HOSPITAL_RECORD_PLAYER]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 1.5,
                 zHeight: 0.5
             }
@@ -44,7 +44,7 @@ export const THINGS_DEATHBED_CREMATED = {
         [HOSPITAL_PILLOW]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 4,
                 zHeight: 1
             }
@@ -54,7 +54,7 @@ export const THINGS_DEATHBED_CREMATED = {
         [DEATHBED_THOUGHT_PANEL]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 8,
                 zHeight: 6
             }
@@ -62,7 +62,7 @@ export const THINGS_DEATHBED_CREMATED = {
         [TENNIS_THOUGHT_PANEL]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 4
             }
@@ -75,7 +75,7 @@ export const THINGS_DEATHBED_DREAM = {
         [HOSPITAL_PILLOW_LOWERED]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 4,
                 zHeight: 1
             }
@@ -85,7 +85,7 @@ export const THINGS_DEATHBED_DREAM = {
         [INVERSE_THOUGHT_PANEL]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 8
             }

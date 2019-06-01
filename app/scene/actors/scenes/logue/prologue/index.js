@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [PROLOGUE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

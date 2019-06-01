@@ -17,7 +17,7 @@ const ARRANGEMENTS_THINGS = {
         [SANDBAGS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 3,
                 zHeight: 2,
                 zOffset: 4
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
         [STAGE_LIGHTS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 4,
                 zHeight: 3
             }
@@ -36,7 +36,7 @@ const ARRANGEMENTS_THINGS = {
         [PUSH_BROOM_BACKSTAGE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 3
             }
@@ -44,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
         [STEPLADDER]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 1,
                 zHeight: 3
             }
@@ -52,7 +52,7 @@ const ARRANGEMENTS_THINGS = {
         [MANNEQUIN]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }

@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [BRUSH_OFF]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

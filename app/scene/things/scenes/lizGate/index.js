@@ -10,7 +10,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [GO_KART_THOUGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4.5
@@ -21,7 +21,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [TRAFFIC_LIGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 1,
                 zHeight: 7
             }

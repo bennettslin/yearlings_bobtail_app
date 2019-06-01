@@ -11,7 +11,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 1,
                 zHeight: 1,
                 zOffset: 3.5
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [SEA_SERPENTS]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 5,
                 zHeight: 4,
                 zOffset: 2

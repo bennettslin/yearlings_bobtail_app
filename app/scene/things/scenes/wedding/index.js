@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
         [WEDDING_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
         [WEDDING_CROWD]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 3,
                 zHeight: 1
             }
@@ -36,7 +36,7 @@ const ARRANGEMENTS_THINGS = {
         [FOREBODING_TREES]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 3,
                 zHeight: 2
             }
@@ -46,7 +46,7 @@ const ARRANGEMENTS_THINGS = {
         [WEDDING_PLATFORM]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 3.5,
                 zHeight: 3
             }
@@ -56,7 +56,7 @@ const ARRANGEMENTS_THINGS = {
         [PUPPET_KHARI_LIZ]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 0.5,
                 zHeight: 1
             }

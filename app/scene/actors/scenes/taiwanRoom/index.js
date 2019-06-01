@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [MAT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 4,
                 zHeight: 2
             }

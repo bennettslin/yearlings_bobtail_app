@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [WEST_BERKELEY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [BERKELEY_LAMPPOST]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 11,
+                xPosition: 11,
                 xWidth: 1,
                 zHeight: 7
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [ST_JOSEPHS_ANNEX]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 4.5,
                 zHeight: 3
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [ST_JOSEPHS_CHURCH]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 6,
                 zHeight: 5
             }

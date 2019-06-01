@@ -14,7 +14,7 @@ const ARRANGEMENTS_ACTORS = {
         [WISTFUL]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 2,
                 zHeight: 3
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_ACTORS = {
         [POPULAR_GIRL]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 7.5,
+                xPosition: 7.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_ACTORS = {
         [SNACKING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -44,7 +44,7 @@ const ARRANGEMENTS_ACTORS = {
         [NOODLING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 5
             }

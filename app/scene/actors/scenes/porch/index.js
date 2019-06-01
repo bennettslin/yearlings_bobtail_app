@@ -14,7 +14,7 @@ const ARRANGEMENTS_ACTORS = {
         [CAUTIOUS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1.5,
                 zHeight: 4
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_ACTORS = {
         [DUCKING]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 0.5,
+                xPosition: 0.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_ACTORS = {
         [STOOPING]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 2,
                 zHeight: 4
             }
@@ -44,7 +44,7 @@ const ARRANGEMENTS_ACTORS = {
         [TANTRUM]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 3
             }

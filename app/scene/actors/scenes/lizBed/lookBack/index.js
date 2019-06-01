@@ -18,7 +18,7 @@ const ARRANGEMENTS_ACTORS = {
         [REMOVING_SHOES]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -28,7 +28,7 @@ const ARRANGEMENTS_ACTORS = {
         [ASLEEP_REACHING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -38,7 +38,7 @@ const ARRANGEMENTS_ACTORS = {
         [SHOES_REFLECTION]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -48,7 +48,7 @@ const ARRANGEMENTS_ACTORS = {
         [REACHING_REFLECTION]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

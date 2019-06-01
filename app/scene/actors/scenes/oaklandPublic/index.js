@@ -14,7 +14,7 @@ const ARRANGEMENTS_ACTORS = {
         [YOUNG_CHILD]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_ACTORS = {
         [DRYING_TEARS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_ACTORS = {
         [YOUNG_CHILD]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -44,7 +44,7 @@ const ARRANGEMENTS_ACTORS = {
         [YOUNG_CHILD]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -54,7 +54,7 @@ const ARRANGEMENTS_ACTORS = {
         [CROSSING_GUARD]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

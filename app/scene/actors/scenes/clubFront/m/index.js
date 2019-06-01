@@ -15,7 +15,7 @@ const ARRANGEMENTS_ACTORS = {
         [DISTRACTED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_ACTORS = {
         [FLIRTING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_ACTORS = {
         [FLIRTING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -45,7 +45,7 @@ const ARRANGEMENTS_ACTORS = {
         [SQUATTING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -55,7 +55,7 @@ const ARRANGEMENTS_ACTORS = {
         [SHANE_BUYING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

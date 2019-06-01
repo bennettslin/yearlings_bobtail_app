@@ -13,7 +13,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_STAIRS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 3
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 1
             }

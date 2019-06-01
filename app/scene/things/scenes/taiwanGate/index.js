@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_STREETS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 9,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 2.5,
                 zHeight: 4
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_HOUSE_FAR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 3,
                 zHeight: 4
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_HOUSE_NEAR]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 10.5,
+                xPosition: 10.5,
                 xWidth: 2,
                 zHeight: 5
             }

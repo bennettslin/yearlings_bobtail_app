@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [RICKSHAW]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 3,
                 zHeight: 5
             }

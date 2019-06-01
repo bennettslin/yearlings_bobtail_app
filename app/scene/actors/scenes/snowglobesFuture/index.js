@@ -14,7 +14,7 @@ const ARRANGEMENTS_ACTORS = {
         [FUTURE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 5,
                 zOffset: 2
@@ -25,7 +25,7 @@ const ARRANGEMENTS_ACTORS = {
         [FUTURE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 1,
                 zHeight: 5,
                 zOffset: 2
@@ -36,7 +36,7 @@ const ARRANGEMENTS_ACTORS = {
         [FUTURE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 5,
                 zOffset: 2
@@ -47,7 +47,7 @@ const ARRANGEMENTS_ACTORS = {
         [JOKING_LAUGHING]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 2,
                 zHeight: 3.5
             }
@@ -57,7 +57,7 @@ const ARRANGEMENTS_ACTORS = {
         [BENNETT_RECORDING]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 1,
                 zHeight: 5
             }

@@ -9,7 +9,7 @@ const ARRANGEMENTS_ACTORS = {
         [GO_KARTS]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 3,
                 zHeight: 3
             }
@@ -19,7 +19,7 @@ const ARRANGEMENTS_ACTORS = {
         [GO_KARTS]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 3,
                 zHeight: 3
             }

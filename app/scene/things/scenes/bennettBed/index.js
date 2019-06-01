@@ -13,7 +13,7 @@ const ARRANGEMENTS_THINGS = {
         [NUDE_DRAWINGS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 0.5,
                 zHeight: 0.5
             }
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
         [VASELINE]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 0.5,
                 zHeight: 0.5
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_PILLOWS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 0.5
             }

@@ -10,7 +10,7 @@ const ARRANGEMENTS_THINGS = {
         [PAMPAS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [PAMPAS_FAR]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 2
             }

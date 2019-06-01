@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [BUDDHA_SHRINE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 2,
                 zHeight: 2
             }
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_FRIDGE_FRONT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 2.5,
                 zHeight: 4
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 2,
                 zHeight: 1
             }
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
         [FRIDGE_DRAWINGS]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 0.5,
                 zOffset: 1

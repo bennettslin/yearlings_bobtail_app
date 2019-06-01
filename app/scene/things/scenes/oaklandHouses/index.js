@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [OAKLAND_SIDE_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [OAKLAND_HOUSE_LEFT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 5,
                 zHeight: 3
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [OAKLAND_HOUSE_RIGHT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 3
             }
@@ -46,7 +46,7 @@ export const THINGS_OAKLAND_HOUSES_GARRYOWEN = {
         [VOLKSWAGEN]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 8,
                 zHeight: 4
             }

@@ -14,7 +14,7 @@ const ARRANGEMENTS_THINGS = {
         [UC_BERKELEY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
         [UC_BERKELEY_TREE_LEFT]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 2,
                 zHeight: 4
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
         [ASH_CAN]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 3
             }
@@ -47,7 +47,7 @@ export const THINGS_BERKELEY_BANCROFT_VEGAN = {
         [GHOST_ODIN_DEMONSTRATION]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 5,
                 zHeight: 3
             }

@@ -10,7 +10,7 @@ const ARRANGEMENTS_ACTORS = {
         [FINAL_DREAM]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 11,
+                xPosition: 11,
                 xWidth: 1,
                 zHeight: 3
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_ACTORS = {
         [DOCTOR]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 1,
                 zHeight: 5
             }

@@ -17,20 +17,20 @@ import { getValueInAbridgedMatrix } from 'helpers/general'
 
 import { getCubesForKey } from 'scene/cubes'
 
-const _getNearestXIndex = (xFloat) => {
+const _getNearestXIndex = (xPosition) => {
     let xIndex
 
     /**
      * Get the index and offset from the float.
      */
-    if (xFloat < 0) {
+    if (xPosition < 0) {
         xIndex = 0
 
-    } else if (xFloat > CUBE_X_AXIS_LENGTH - 1) {
+    } else if (xPosition > CUBE_X_AXIS_LENGTH - 1) {
         xIndex = CUBE_X_AXIS_LENGTH - 1
 
     } else {
-        xIndex = Math.round(xFloat)
+        xIndex = Math.round(xPosition)
     }
 
     return xIndex
@@ -39,7 +39,7 @@ const _getNearestXIndex = (xFloat) => {
 const _getTileCentreForPresence = ({
 
     cubesKey,
-    xFloat,
+    xPosition,
     yIndex,
     zOffset = 0
 
@@ -53,9 +53,9 @@ const _getTileCentreForPresence = ({
             slantDirection = ''
         } = getCubesForKey(cubesKey),
 
-        xIndex = _getNearestXIndex(xFloat),
+        xIndex = _getNearestXIndex(xPosition),
 
-        xOffset = xFloat - xIndex,
+        xOffset = xPosition - xIndex,
 
         zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
 
@@ -117,7 +117,7 @@ export const getPresenceXYWidthAndHeight = ({
     cubesKey,
 
     // Where to centre on the xIndex axis. Can be a float.
-    xFloat,
+    xPosition,
 
     // Where to position on the yIndex axis.
     yIndex,
@@ -140,7 +140,7 @@ export const getPresenceXYWidthAndHeight = ({
 
         } = _getTileCentreForPresence({
             cubesKey,
-            xFloat,
+            xPosition,
             yIndex,
             zOffset
         }),
@@ -153,16 +153,20 @@ export const getPresenceXYWidthAndHeight = ({
             yIndex
         ),
 
+        // TODO: Eventually get rid of width and height.
         width = cubeWidthPercentage * xWidth,
         height = cubeHeightPercentage * zHeight,
 
-        x = xPercentage - width / 2,
-        y = yPercentage - height
+        // x = xPercentage - width / 2,
+        // y = yPercentage - height
+
+        x = xPercentage,
+        y = yPercentage
 
     return {
-        x: x.toFixed(2),
-        y: y.toFixed(2),
-        width: width.toFixed(2),
-        height: height.toFixed(2)
+        x,
+        y,
+        width,
+        height
     }
 }

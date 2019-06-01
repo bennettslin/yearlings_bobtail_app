@@ -10,7 +10,7 @@ const ARRANGEMENTS_ACTORS = {
         [COUCH_READING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_ACTORS = {
         [BENNETT_KEYBOARD]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

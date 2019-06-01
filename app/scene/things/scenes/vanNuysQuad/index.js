@@ -14,7 +14,7 @@ const ARRANGEMENTS_THINGS = {
         [ESCAPE_POD_SKETCHBOOK]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 3
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [TRASH_CAN_QUAD]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 0.5,
+                xPosition: 0.5,
                 xWidth: 1.5,
                 zHeight: 3
             }
@@ -33,15 +33,14 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_PLANT_QUAD]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3,
-                xWidth: 2,
-                zHeight: 1.5
+                xPosition: 3,
+                scaleFactor: 2
             }
         },
         [VAN_NUYS_LOGO]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 7.5,
+                xPosition: 7.5,
                 xWidth: 3,
                 zHeight: 3,
                 zOffset: 2.5

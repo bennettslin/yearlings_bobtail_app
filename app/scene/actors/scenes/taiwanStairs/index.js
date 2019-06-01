@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [STAIRS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 1,
                 zHeight: 5
             }

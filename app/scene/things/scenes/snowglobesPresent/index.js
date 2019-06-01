@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [ROAD_PRESENT]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 8
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [MIRIAM_CUSHIONS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 5,
                 zHeight: 0.5
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [SNOWGLOBE_LIZ_ALONE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 4.5,
                 zHeight: 4
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [SNOWGLOBE_BENNETT_MIRIAM]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 6,
                 zHeight: 5.5
             }

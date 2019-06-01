@@ -28,7 +28,7 @@ const ARRANGEMENTS_THINGS = {
         [LIZ_CUSHIONS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 2,
                 zHeight: 0.5
             }
@@ -41,7 +41,7 @@ export const THINGS_LIZ_COUCH_GOLDEN = {
         [LIZ_COUCH_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 4
             }
@@ -51,7 +51,7 @@ export const THINGS_LIZ_COUCH_GOLDEN = {
         [LIZ_CUSHIONS_THOUGHT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 2,
                 zHeight: 0.5
             }
@@ -64,7 +64,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
         [TCHOTCHKES]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -74,7 +74,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
         [OPAL_COUCH]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 1,
                 zHeight: 0.5
             }
@@ -87,7 +87,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
         [KHARI_ATTACK_SPEECH]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4
@@ -96,7 +96,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
         [LIZ_DEFENCE_SPEECH]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4
@@ -110,7 +110,7 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
         [LIZ_THOUGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4
@@ -124,7 +124,7 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
         [LIZ_THOUGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4
@@ -135,7 +135,7 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
         [OPAL_GAZING]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 0.5
             }
@@ -148,7 +148,7 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         [PEAHEN]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 2
             }
@@ -156,7 +156,7 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         [PEACOCK]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1,
                 zHeight: 2
             }

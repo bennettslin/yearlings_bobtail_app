@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [CELIBATE_FREEZING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

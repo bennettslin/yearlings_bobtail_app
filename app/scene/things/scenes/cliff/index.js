@@ -13,7 +13,7 @@ const ARRANGEMENTS_THINGS = {
         [CLIFF_TREE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 6,
                 zHeight: 6
             }
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [CLIFF_GRAVES_FAR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 2
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [CLIFF_GRAVES_NEAR]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 1
             }

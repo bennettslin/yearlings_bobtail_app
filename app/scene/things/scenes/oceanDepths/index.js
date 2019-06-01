@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [OCEAN_BOTTOM_FAR]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 0.5,
                 zHeight: 0.5
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [OCEAN_BOTTOM_MIDDLE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 3
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [OCEAN_BOTTOM_NEAR]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 2
             }

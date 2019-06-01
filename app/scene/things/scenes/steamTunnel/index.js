@@ -10,7 +10,7 @@ const ARRANGEMENTS_THINGS = {
         [PUSH_BROOM_TUNNEL]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 1,
                 zHeight: 3
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [STEAM_PIPES]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 8,
                 zHeight: 6
             }

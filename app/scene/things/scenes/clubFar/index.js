@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [STAGE_MIC_FAR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 0.5,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [CROWD_FAR_BACK]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 4
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [CROWD_NEAR_BACK]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 4
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [GHOST_ODIN_CLUB]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 5,
                 zHeight: 3
             }

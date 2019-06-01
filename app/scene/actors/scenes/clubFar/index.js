@@ -11,7 +11,7 @@ const ARRANGEMENTS_ACTORS = {
         [SHOW_ANNOYED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -21,7 +21,7 @@ const ARRANGEMENTS_ACTORS = {
         [GREETING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_ACTORS = {
         [GREETING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

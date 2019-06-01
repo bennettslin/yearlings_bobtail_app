@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [OAKLAND_FRONT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [TWIN_STREETLAMP_FAR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -41,7 +41,7 @@ const ARRANGEMENTS_THINGS = {
         [TWIN_STREETLAMP_MIDDLE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 6
             }
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
         [TWIN_STREETLAMP_NEAR]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 7
             }
@@ -59,7 +59,7 @@ const ARRANGEMENTS_THINGS = {
         [RESIDENTIAL_FAR_LEFT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 3,
                 zHeight: 4
             }
@@ -67,7 +67,7 @@ const ARRANGEMENTS_THINGS = {
         [RESIDENTIAL_FAR_RIGHT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 3,
                 zHeight: 4
             }
@@ -75,7 +75,7 @@ const ARRANGEMENTS_THINGS = {
         [RESIDENTIAL_MIDDLE_LEFT]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 3,
                 zHeight: 5
             }
@@ -83,7 +83,7 @@ const ARRANGEMENTS_THINGS = {
         [RESIDENTIAL_MIDDLE_RIGHT]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 3,
                 zHeight: 5
             }
@@ -91,7 +91,7 @@ const ARRANGEMENTS_THINGS = {
         [RESIDENTIAL_NEAR_LEFT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 1,
+                xPosition: 1,
                 xWidth: 3,
                 zHeight: 6
             }
@@ -99,7 +99,7 @@ const ARRANGEMENTS_THINGS = {
         [RESIDENTIAL_NEAR_RIGHT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 3,
                 zHeight: 6
             }

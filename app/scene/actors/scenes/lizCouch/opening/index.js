@@ -10,7 +10,7 @@ const ARRANGEMENTS_ACTORS = {
         [OPENING_DOOR]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_ACTORS = {
         [ARRIVED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

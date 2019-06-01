@@ -18,7 +18,7 @@ const ARRANGEMENTS_THINGS = {
         [BATHTUB]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 4.5,
+                xPosition: 4.5,
                 xWidth: 5,
                 zHeight: 1.5
             }
@@ -31,7 +31,7 @@ export const THINGS_BATHROOM_BATHING = {
         [MIRRORED_SINK]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 2,
                 zHeight: 3
             }
@@ -39,7 +39,7 @@ export const THINGS_BATHROOM_BATHING = {
         [TOWEL_RACK]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 2,
                 zHeight: 2,
                 zOffset: 3
@@ -53,7 +53,7 @@ export const THINGS_BATHROOM_SINGING = {
         [RECORD_PLAYER_STOOL]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -61,7 +61,7 @@ export const THINGS_BATHROOM_SINGING = {
         [JOHNNY_HORTON_ALBUM]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 1
             }

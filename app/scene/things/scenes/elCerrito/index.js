@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
         [GOLDEN_GATE_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 5
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
         [EL_CERRITO_TREE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 6,
                 zHeight: 6
             }
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
         [EL_CERRITO_FAR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 2
             }
@@ -50,7 +50,7 @@ const ARRANGEMENTS_THINGS = {
         [EL_CERRITO_NEAR]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 1
             }
@@ -60,7 +60,7 @@ const ARRANGEMENTS_THINGS = {
         [REATTA_EXTERIOR]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 9,
                 zHeight: 4
             }
@@ -68,7 +68,7 @@ const ARRANGEMENTS_THINGS = {
         [REATTA_INTERIOR]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 9,
                 zHeight: 4
             }
@@ -81,7 +81,7 @@ export const THINGS_EL_CERRITO_REATTA = {
         [PUPPET_REATTA]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 1,
                 zHeight: 0.5
             }

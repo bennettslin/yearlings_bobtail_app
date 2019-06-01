@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [BASS_CASE_UPRIGHT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [GUITAR_CASE_UPRIGHT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [DRUMS_STACKED_BASEMENT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 1.5,
                 zHeight: 5
             }
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
         [BASEMENT_BEER_CASE]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -47,7 +47,7 @@ const ARRANGEMENTS_THINGS = {
         [BASEMENT_BEER_MARA]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
         [BASEMENT_BEER_BENNETT]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9.5,
+                xPosition: 9.5,
                 xWidth: 1,
                 zHeight: 4
             }

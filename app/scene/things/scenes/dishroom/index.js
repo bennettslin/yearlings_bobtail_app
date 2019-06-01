@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
         [CONVEYOR_BELT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 5,
                 zHeight: 2,
                 zOffset: 2
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [TRAY_CART]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 1.5,
                 zHeight: 2
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [GLASS_CART]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1.5,
                 zHeight: 2
             }
@@ -41,7 +41,7 @@ const ARRANGEMENTS_THINGS = {
         [GLASS_RACK]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 1.5,
                 zHeight: 0.5
             }
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
         [DISH_PILE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 4.5,
+                xPosition: 4.5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -59,7 +59,7 @@ const ARRANGEMENTS_THINGS = {
         [DISHROOM_SINK]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 5,
                 zHeight: 3
             }

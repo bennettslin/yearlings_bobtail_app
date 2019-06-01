@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [SHORE_BUOY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 0.5,
                 zHeight: 2
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [YELLOW_TAPED_GRILL]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 2,
                 zHeight: 3
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [SHORE_CARNIVAL]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 5,
                 zHeight: 3
             }

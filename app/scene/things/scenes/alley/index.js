@@ -12,7 +12,7 @@ const ARRANGEMENTS_THINGS = {
         [DUMPSTER]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 4.5,
                 zHeight: 3
             }
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
         [BURGER_WRAPPER]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 0.5,
                 zHeight: 0.5,
                 zOffset: 1.5
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [GHOST_ODIN_ALLEY]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 7.5,
+                xPosition: 7.5,
                 xWidth: 1,
                 zHeight: 2
             }

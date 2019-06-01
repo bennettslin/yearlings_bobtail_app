@@ -14,7 +14,7 @@ const ARRANGEMENTS_ACTORS = {
         [SHEEPISH]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -24,7 +24,7 @@ const ARRANGEMENTS_ACTORS = {
         [STARING]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 6,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -34,7 +34,7 @@ const ARRANGEMENTS_ACTORS = {
         [ARGUING]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -44,7 +44,7 @@ const ARRANGEMENTS_ACTORS = {
         [PRINCIPAL]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 1,
                 zHeight: 5
             }

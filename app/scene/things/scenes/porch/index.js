@@ -11,7 +11,7 @@ const ARRANGEMENTS_THINGS = {
         [PORCH_PLANTS_LEFT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 0.5,
+                xPosition: 0.5,
                 xWidth: 2,
                 zHeight: 3
             }
@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
         [PORCH_PLANTS_RIGHT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 10.5,
+                xPosition: 10.5,
                 xWidth: 2,
                 zHeight: 3
             }

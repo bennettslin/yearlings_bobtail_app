@@ -18,7 +18,7 @@ const ARRANGEMENTS_THINGS = {
         [MONITOR_SIDE_STAGE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
         [WALL_SPEAKER_SIDE_STAGE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 10.5,
+                xPosition: 10.5,
                 xWidth: 2,
                 zHeight: 2,
                 zOffset: 5
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
         [STAGE_MIC_SIDE_STAGE]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 0.5,
                 zHeight: 4
             }
@@ -45,7 +45,7 @@ const ARRANGEMENTS_THINGS = {
         [KICK_DRUM]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 1.5,
                 zHeight: 1.5
             }
@@ -53,7 +53,7 @@ const ARRANGEMENTS_THINGS = {
         [DRUM_THRONE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 1.5,
                 zHeight: 1.5
             }
@@ -61,7 +61,7 @@ const ARRANGEMENTS_THINGS = {
         [GUITAR_CASE_OPEN]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 3,
                 zHeight: 1
             }

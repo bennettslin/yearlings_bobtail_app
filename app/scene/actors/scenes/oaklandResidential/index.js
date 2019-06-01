@@ -10,7 +10,7 @@ const ARRANGEMENTS_ACTORS = {
         [CORD_REAR]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_ACTORS = {
         [BENNETT_DEFIANT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

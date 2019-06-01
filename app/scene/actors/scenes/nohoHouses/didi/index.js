@@ -12,7 +12,7 @@ const ARRANGEMENTS_ACTORS = {
         [PANICKED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 3.5
             }
@@ -22,7 +22,7 @@ const ARRANGEMENTS_ACTORS = {
         [EXASPERATED]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 3.75
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_ACTORS = {
         [CURIOUS]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3.5,
+                xPosition: 3.5,
                 xWidth: 1,
                 zHeight: 3.83
             }

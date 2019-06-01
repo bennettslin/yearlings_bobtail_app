@@ -37,17 +37,26 @@ const PresenceHocView = memo(({
         }),
         {
             yIndex,
+            // Begin process to not nest xPosition.
+            xPosition: xPosition1,
             arrangement: {
-                xFloat,
+                // Allow older configurations to have nested xPosition.
+                xPosition: xPosition2,
                 zOffset,
+
+                // TODO: Get rid of xWidth and zHeight completely.
                 xWidth,
                 zHeight
             }
         } = arrangement,
+
+        // TODO: Get rid of this logic when xPositions are no longer nested.
+        xPosition = typeof xPosition1 === 'number' ? xPosition1 : xPosition2,
+
         xYWidthAndHeight = getPresenceXYWidthAndHeight({
             cubesKey,
             yIndex,
-            xFloat,
+            xPosition,
             zOffset,
             xWidth,
             zHeight

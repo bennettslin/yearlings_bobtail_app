@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [VALLEY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [OVERPASS_SIGN_BACK]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 4,
                 zHeight: 3
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [OVERPASS_SIGN_FRONT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 4,
                 zHeight: 3
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [SHOPPING_CART_FULL]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 4,
                 zHeight: 3
             }

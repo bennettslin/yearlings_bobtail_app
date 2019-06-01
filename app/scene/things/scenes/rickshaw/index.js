@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [SHORE_RICKSHAW_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_SHORE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 0.5,
                 zHeight: 2
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [ODIN_SHORE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 0.5,
                 zHeight: 0.5
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [RICKSHAW_TOWN]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 3
             }

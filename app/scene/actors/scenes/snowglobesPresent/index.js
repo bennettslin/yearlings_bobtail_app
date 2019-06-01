@@ -11,7 +11,7 @@ const ARRANGEMENTS_ACTORS = {
         [PRESENT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 5,
                 zOffset: 2
@@ -22,7 +22,7 @@ const ARRANGEMENTS_ACTORS = {
         [PRESENT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 1,
                 zHeight: 5,
                 zOffset: 1.5
@@ -33,7 +33,7 @@ const ARRANGEMENTS_ACTORS = {
         [MISCHIEVOUS_BANJO]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

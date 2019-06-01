@@ -12,7 +12,7 @@ const ARRANGEMENTS_ACTORS = {
         [PAMPAS]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -22,7 +22,7 @@ const ARRANGEMENTS_ACTORS = {
         [GOPI]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -32,7 +32,7 @@ const ARRANGEMENTS_ACTORS = {
         [GOPI]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -42,7 +42,7 @@ const ARRANGEMENTS_ACTORS = {
         [GOPI]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 1,
                 zHeight: 5
             }

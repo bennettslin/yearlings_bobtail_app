@@ -10,7 +10,7 @@ const ARRANGEMENTS_THINGS = {
         [PHARMACY_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 6
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [PHARMACY_AISLE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 8,
                 zHeight: 5
             }

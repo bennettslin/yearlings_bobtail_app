@@ -10,7 +10,7 @@ const ARRANGEMENTS_ACTORS = {
         [HORSING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5,
+                xPosition: 5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -20,7 +20,7 @@ const ARRANGEMENTS_ACTORS = {
         [OFFICER]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 7.5,
+                xPosition: 7.5,
                 xWidth: 2,
                 zHeight: 6
             }

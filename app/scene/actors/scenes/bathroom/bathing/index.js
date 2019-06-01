@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [BATHING]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1.5,
                 zHeight: 2.5
             }

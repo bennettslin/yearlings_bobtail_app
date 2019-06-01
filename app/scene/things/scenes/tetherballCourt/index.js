@@ -15,7 +15,7 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 7
             }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [TETHERBALL_POLE]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 0.5,
                 zHeight: 6
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_SCHOOLHOUSE_LEFT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 4,
                 zHeight: 3
             }
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_SCHOOLHOUSE_RIGHT]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4,
                 zHeight: 2
             }

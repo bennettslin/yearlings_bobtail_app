@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [STATION_WAGON_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -30,7 +30,7 @@ const ARRANGEMENTS_THINGS = {
         [TARPIT_THOUGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4.5
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
         [SIBLING_THOUGHT]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8,
+                xPosition: 8,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4.5
@@ -50,7 +50,7 @@ const ARRANGEMENTS_THINGS = {
         [EVIAN_BOTTLES]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 1.5,
+                xPosition: 1.5,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -60,7 +60,7 @@ const ARRANGEMENTS_THINGS = {
         [SATURN_INTERIOR]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 5
             }
@@ -68,7 +68,7 @@ const ARRANGEMENTS_THINGS = {
         [SATURN_EXTERIOR]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 5
             }

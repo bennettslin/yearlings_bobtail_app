@@ -8,7 +8,7 @@ const ARRANGEMENTS_THINGS = {
         [RECYCLABLES]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 2.5,
                 zHeight: 1.5
             }

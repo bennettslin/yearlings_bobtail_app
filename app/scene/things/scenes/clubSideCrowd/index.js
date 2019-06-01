@@ -18,7 +18,7 @@ const ARRANGEMENTS_THINGS = {
         [MONITOR_SIDE_CROWD]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
         [WALL_SPEAKER_SIDE_CROWD]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 4.5,
+                xPosition: 4.5,
                 xWidth: 2,
                 zHeight: 2,
                 zOffset: 5
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
         [STAGE_MIC_SIDE_CROWD]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 0.5,
                 zHeight: 4
             }
@@ -47,7 +47,7 @@ const ARRANGEMENTS_THINGS = {
         [CROWD_FAR_SIDE]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 7,
                 zHeight: 4
             }
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
         [CROWD_NEAR_SIDE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 7,
                 zHeight: 4
             }

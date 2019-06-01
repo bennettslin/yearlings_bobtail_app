@@ -13,7 +13,7 @@ const ARRANGEMENTS_ACTORS = {
         [HURT_CONSOLING]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -23,7 +23,7 @@ const ARRANGEMENTS_ACTORS = {
         [ACCUSATORY]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -33,7 +33,7 @@ const ARRANGEMENTS_ACTORS = {
         [ASLEEP]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -41,7 +41,7 @@ const ARRANGEMENTS_ACTORS = {
         [ASLEEP_FEARFUL]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 1,
                 zHeight: 5
             }

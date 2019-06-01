@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
         [RECORDING_MIC]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 0.5,
                 zHeight: 2
             }
@@ -27,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
         [RECORDING_CONSOLE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 2,
                 zHeight: 0.5
             }
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [RECORDING_BEERS]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 7,
+                xPosition: 7,
                 xWidth: 1,
                 zHeight: 1
             }
@@ -45,7 +45,7 @@ const ARRANGEMENTS_THINGS = {
         [ROAD_FUTURE]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 8
             }
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
         [SNOWGLOBE_LIZ_KHARI]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 5.5,
                 zHeight: 5
             }
@@ -63,7 +63,7 @@ const ARRANGEMENTS_THINGS = {
         [SNOWGLOBE_BENNETT_ALONE]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4.5,
                 zHeight: 4
             }

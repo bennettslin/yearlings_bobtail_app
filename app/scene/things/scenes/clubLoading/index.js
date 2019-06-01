@@ -8,7 +8,7 @@ const ARRANGEMENTS_THINGS = {
         [DRUMS_STACKED_CLUB]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 1.5,
                 zHeight: 5
             }

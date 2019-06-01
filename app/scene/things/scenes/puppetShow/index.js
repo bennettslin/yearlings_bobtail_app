@@ -30,7 +30,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_MOUNTAINS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 8
             }
@@ -40,7 +40,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_CLOUDS]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 3,
                 zOffset: 5
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_FOG]: {
             yIndex: 1,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 4
             }
@@ -57,7 +57,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_MOUNTAINS_BRIDGED]: {
             yIndex: 3,
             arrangement: {
-                xFloat: 5.5,
+                xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 6
             }
@@ -65,7 +65,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 5,
                 zHeight: 3
             }
@@ -73,7 +73,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_MOUNTAIN_RIGHT]: {
             yIndex: 4,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 3
             }
@@ -86,7 +86,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
         [PUPPET_BENNETT_BEGIN]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2,
+                xPosition: 2,
                 xWidth: 0.5,
                 zHeight: 1
             }
@@ -94,7 +94,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
         [PUPPET_FAMILY_BEGIN]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 3,
+                xPosition: 3,
                 xWidth: 0.5,
                 zHeight: 1
             }
@@ -107,7 +107,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         [TOGETHER_SKETCHBOOK]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 8.5,
+                xPosition: 8.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4.5
@@ -118,7 +118,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         [PUPPET_BENNETT_MIDDLE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 0.5,
                 zHeight: 1
             }
@@ -126,7 +126,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         [PUPPET_FAMILY_MIDDLE]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 4,
+                xPosition: 4,
                 xWidth: 0.5,
                 zHeight: 1
             }
@@ -139,7 +139,7 @@ export const THINGS_PUPPET_SHOW_END = {
         [APART_SKETCHBOOK]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 2.5,
+                xPosition: 2.5,
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 4.5
@@ -150,7 +150,7 @@ export const THINGS_PUPPET_SHOW_END = {
         [PUPPET_BENNETT_END]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 6.5,
+                xPosition: 6.5,
                 xWidth: 0.5,
                 zHeight: 1
             }
@@ -158,7 +158,7 @@ export const THINGS_PUPPET_SHOW_END = {
         [PUPPET_FAMILY_END]: {
             yIndex: 2,
             arrangement: {
-                xFloat: 10,
+                xPosition: 10,
                 xWidth: 0.5,
                 zHeight: 1
             }

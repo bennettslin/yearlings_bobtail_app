@@ -6,7 +6,7 @@ const ARRANGEMENTS_ACTORS = {
         [BUOY]: {
             yIndex: 5,
             arrangement: {
-                xFloat: 9,
+                xPosition: 9,
                 xWidth: 1,
                 zHeight: 5
             }
