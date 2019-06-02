@@ -111,7 +111,8 @@ const _getCubeWidthAndHeightPercentages = (yIndex) => {
     }
 }
 
-export const getPresenceXY = ({
+// TODO: Remove once all presences no longer need width and height.
+export const getPresenceXYWidthHeight = ({
 
     // Needed to determine cube's zIndex.
     cubesKey,
@@ -157,16 +158,49 @@ export const getPresenceXY = ({
         width = cubeWidthPercentage * xWidth,
         height = cubeHeightPercentage * zHeight,
 
-        // x = xPercentage - width / 2,
-        // y = yPercentage - height
-
-        x = xPercentage,
-        y = yPercentage
+        x = xPercentage - width / 2,
+        y = yPercentage - height
 
     return {
         x,
         y,
         width,
         height
+    }
+}
+
+export const getPresenceXY = ({
+
+    // Needed to determine cube's zIndex.
+    cubesKey,
+
+    // Where to centre on the xIndex axis. Can be a float.
+    xPosition,
+
+    // Where to position on the yIndex axis.
+    yIndex,
+
+    // Where to position above the given zIndex. Default is the zIndex.
+    zOffset
+}) => {
+
+    const
+        {
+            xPercentage,
+            yPercentage
+
+        } = _getTileCentreForPresence({
+            cubesKey,
+            xPosition,
+            yIndex,
+            zOffset
+        }),
+
+        x = xPercentage,
+        y = yPercentage
+
+    return {
+        x,
+        y
     }
 }

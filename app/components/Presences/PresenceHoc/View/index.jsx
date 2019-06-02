@@ -10,7 +10,7 @@ import {
 
 import { getMapForActorKey } from '../../Actor/helper'
 
-import { getPresenceXY } from './helper'
+import { getPresenceXY, getPresenceXYWidthHeight } from './helper'
 
 import { ACTORS } from 'constants/scene'
 
@@ -58,13 +58,18 @@ const PresenceHocView = memo(({
         xPosition = typeof xPosition1 === 'number' ? xPosition1 : xPosition2,
         zOffset = typeof zOffset1 === 'number' ? zOffset1 : zOffset2,
 
-        presenceXY = getPresenceXY({
+        presenceXY = xWidth && zHeight ? getPresenceXYWidthHeight({
             cubesKey,
             yIndex,
             xPosition,
             zOffset,
             xWidth,
             zHeight
+        }) : getPresenceXY({
+            cubesKey,
+            yIndex,
+            xPosition,
+            zOffset
         }),
 
         presencesMap = presenceType === ACTORS ?
