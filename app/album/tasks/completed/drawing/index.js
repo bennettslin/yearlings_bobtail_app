@@ -870,5 +870,10 @@ export default [
         taskName: `Timebox for arranging v1 scene files in Illustrator.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Timebox for getting svg into component.`,
+        workedHours: 10,
+        neededHours: 10
     }
 ]
