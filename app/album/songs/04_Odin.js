@@ -880,7 +880,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `Recording vocals in doublespeaker rhyme proved to be trickier than anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounded fine on its own, they would become a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
+                            `Recording vocals in doublespeaker rhyme proved to be trickier than anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounds fine on its own, they can turn into a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
                             {
                                 anchor: `ligature.`,
                                 wiki: `Ligature_(music)`
@@ -983,7 +983,7 @@ export default {
                                         anchor: `sylph`,
                                         wiki: `Sylph`
                                     },
-                                    `is the elemental of air, and is depicted as a fairy with wings of gauze.`
+                                    `is the elemental of air, and is depicted as a fairy with wings of gauze. Now, if the wings were made from cellophane, they would hold the additional properties of being transparent and sealing in heat.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1015,13 +1015,11 @@ export default {
                         {
                             anchor: `didn't impart warmth`,
                             // CONSIDER: Wormhole Foreshadow M?
-                            // TODO: Move cellophane part to sylph annotation.
                             card: {
-                                description: `Cellophane is thin and see-through like gauze, but has the additional property of sealing in heat where heat is present. In hindsight, Sasha's thoughts towards me were no less transparent. While she empathised with my need to lash out, her tenderest feelings were strictly reserved for those who could show tenderness in return.`,
+                                description: `Like cellophane, Sasha's intentions were fully transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth where none was offered. Once I became more open about my petty and vindictive thoughts towards the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
-                                    [OBSERVATION]: true,
-                                    [REFERENCE]: true
+                                    [OBSERVATION]: true
                                 }
                             }
                         },
