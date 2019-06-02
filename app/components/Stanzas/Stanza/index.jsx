@@ -27,7 +27,7 @@ const propTypes = {
         logicSelectors: PropTypes.string.isRequired
     },
 
-    Stanza = memo(({
+    Stanza = ({
         lyricSongIndex,
         stanzaIndex,
         logicSelectors,
@@ -58,8 +58,8 @@ const propTypes = {
                 })}
             </div>
         )
-    })
+    }
 
 Stanza.propTypes = propTypes
 
-export default connect(mapStateToProps)(Stanza)
+export default connect(mapStateToProps)(memo(Stanza))

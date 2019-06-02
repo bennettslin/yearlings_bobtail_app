@@ -22,7 +22,7 @@ const propTypes = {
         ])
     },
 
-    Texts = memo(({
+    Texts = ({
         hasRecursed,
         text: textEntity,
         beginsVerse: prevBeginsVerse,
@@ -79,9 +79,9 @@ const propTypes = {
                 }}
             />
         )
-    })
+    }
 
 Texts.defaultProps = defaultProps
 Texts.propTypes = propTypes
 
-export default Texts
+export default memo(Texts)

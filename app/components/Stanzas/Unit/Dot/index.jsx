@@ -113,7 +113,7 @@ const propTypes = {
         setLyricAnnotationElement: PropTypes.func.isRequired
     },
 
-    UnitDotView = memo(({
+    UnitDotView = ({
         // From controller.
         dotKeys,
         annotationIndex,
@@ -149,11 +149,11 @@ const propTypes = {
                 />
             </div>
         )
-    })
+    }
 
 UnitDotView.propTypes = propTypes
 
 export default connect(
     mapStateToProps,
     { updateAnnotationStore }
-)(UnitDot)
+)(memo(UnitDot))

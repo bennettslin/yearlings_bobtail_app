@@ -16,7 +16,7 @@ const propTypes = {
     ]).isRequired
 }
 
-const AnchorText = memo(({
+const AnchorText = ({
     isHigherProcessor,
     isAccessed,
     isSelected,
@@ -75,8 +75,8 @@ const AnchorText = memo(({
             )
         })
     )
-})
+}
 
 AnchorText.propTypes = propTypes
 
-export default AnchorText
+export default memo(AnchorText)

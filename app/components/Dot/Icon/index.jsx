@@ -41,7 +41,7 @@ const propTypes = {
         dotKey: PropTypes.string.isRequired
     },
 
-    DotIcon = memo(({
+    DotIcon = ({
         isAccessed,
 
         // Applies to selectable dots.
@@ -71,8 +71,8 @@ const propTypes = {
                 )}
             />
         )
-    })
+    }
 
 DotIcon.propTypes = propTypes
 
-export default DotIcon
+export default memo(DotIcon)

@@ -20,7 +20,7 @@ const propTypes = {
     hslaKey: PropTypes.string.isRequired
 }
 
-const Face = memo(({
+const Face = ({
     slantDirection,
     level,
     yIndex,
@@ -62,8 +62,8 @@ const Face = memo(({
             }}
         />
     )
-})
+}
 
 Face.propTypes = propTypes
 
-export default Face
+export default memo(Face)

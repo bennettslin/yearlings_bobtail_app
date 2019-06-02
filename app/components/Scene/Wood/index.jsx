@@ -1,13 +1,13 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 
-const Wood = memo(() => (
+const Wood = () => (
     <div
         className={cx(
             'Wood',
             'abF'
         )}
     />
-))
+)
 
-export default Wood
+export default memo(Wood)

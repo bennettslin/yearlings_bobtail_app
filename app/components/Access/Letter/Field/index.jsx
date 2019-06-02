@@ -5,7 +5,7 @@ import cx from 'classnames'
 
 import Svg from 'modules/Svg'
 
-const AccessField = memo(() => {
+const AccessField = () => {
 
     return (
         <Svg
@@ -26,6 +26,6 @@ const AccessField = memo(() => {
             />
         </Svg>
     )
-})
+}
 
-export default AccessField
+export default memo(AccessField)

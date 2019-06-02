@@ -12,7 +12,7 @@ const navBookLoguePropTypes = {
         bookIndex: PropTypes.number.isRequired
     },
 
-    NavBookLogue = memo(({
+    NavBookLogue = ({
 
         bookIndex,
 
@@ -31,8 +31,8 @@ const navBookLoguePropTypes = {
                 />
             </div>
         )
-    })
+    }
 
 NavBookLogue.propTypes = navBookLoguePropTypes
 
-export default NavBookLogue
+export default memo(NavBookLogue)

@@ -16,7 +16,7 @@ const propTypes = {
         ])
     },
 
-    Text = memo(({
+    Text = ({
         text: textEntity,
 
         ...props
@@ -122,8 +122,8 @@ const propTypes = {
 
         // Wormholes don't have a text description, so return null.
         return null
-    })
+    }
 
 Text.propTypes = propTypes
 
-export default Text
+export default memo(Text)

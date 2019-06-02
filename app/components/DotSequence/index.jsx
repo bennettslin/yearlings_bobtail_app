@@ -16,7 +16,7 @@ const dotBlockPropTypes = {
         inTextAnchor: PropTypes.bool
     },
 
-    DotSequence = memo(({
+    DotSequence = ({
 
         inAnnotationCard,
         inTextAnchor,
@@ -46,8 +46,8 @@ const dotBlockPropTypes = {
                 )
             })}
         </div>
-    ))
+    )
 
 DotSequence.propTypes = dotBlockPropTypes
 
-export default DotSequence
+export default memo(DotSequence)

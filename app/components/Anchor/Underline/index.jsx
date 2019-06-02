@@ -12,7 +12,7 @@ const propTypes = {
         isWikiLastChild: PropTypes.bool
     },
 
-    Underline = memo(({
+    Underline = ({
         isAccessed,
         isSelected,
         isDotAnchor,
@@ -55,8 +55,8 @@ const propTypes = {
             }}
         >
         </div>
-    ))
+    )
 
 Underline.propTypes = propTypes
 
-export default Underline
+export default memo(Underline)

@@ -19,7 +19,7 @@ const verseLinesPropTypes = {
         inVerseBar: PropTypes.bool
     },
 
-    VerseLines = memo(({
+    VerseLines = ({
         isDoublespeakerLine,
         ...other
     }) => {
@@ -48,7 +48,7 @@ const verseLinesPropTypes = {
         ) : (
             <VerseLinesChild {...other} />
         )
-    }),
+    },
 
     verseLinesChildPropTypes = {
     // From parent.
@@ -87,4 +87,4 @@ VerseLines.propTypes = verseLinesPropTypes
 
 VerseLinesChild.propTypes = verseLinesChildPropTypes
 
-export default VerseLines
+export default memo(VerseLines)

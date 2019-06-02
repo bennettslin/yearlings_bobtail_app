@@ -8,7 +8,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const WallBalcony = memo(({
+const WallBalcony = ({
     top,
     left,
     width,
@@ -27,8 +27,8 @@ const WallBalcony = memo(({
             }}
         />
     )
-})
+}
 
 WallBalcony.propTypes = propTypes
 
-export default WallBalcony
+export default memo(WallBalcony)

@@ -38,7 +38,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const AudioNextIcon = memo(({
+const AudioNextIcon = ({
 
     buttonIdentifier: isLogue,
     className
@@ -53,8 +53,8 @@ const AudioNextIcon = memo(({
             }}
         />
     )
-})
+}
 
 AudioNextIcon.propTypes = propTypes
 
-export default AudioNextIcon
+export default memo(AudioNextIcon)

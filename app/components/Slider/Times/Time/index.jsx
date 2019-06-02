@@ -7,7 +7,7 @@ const sliderTimePropTypes = {
         time: PropTypes.string.isRequired
     },
 
-    SliderTime = memo(({
+    SliderTime = ({
 
         isSpent,
         time
@@ -22,8 +22,8 @@ const sliderTimePropTypes = {
         )}>
             {time}
         </div>
-    ))
+    )
 
 SliderTime.propTypes = sliderTimePropTypes
 
-export default SliderTime
+export default memo(SliderTime)

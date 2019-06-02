@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 
 // TODO: Eventually replace with final spinner.
-const Spinner = memo(() => (
+const Spinner = () => (
     <svg
         width="120px"
         height="120px"
@@ -247,6 +247,6 @@ const Spinner = memo(() => (
             />
         </rect>
     </svg>
-))
+)
 
-export default Spinner
+export default memo(Spinner)

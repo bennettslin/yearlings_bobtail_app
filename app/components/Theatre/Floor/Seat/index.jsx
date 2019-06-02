@@ -22,7 +22,7 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
-const FloorSeat = memo(({
+const FloorSeat = ({
 
     chairIndex,
     rowIndex,
@@ -103,8 +103,8 @@ const FloorSeat = memo(({
             />
         </g>
     )
-})
+}
 
 FloorSeat.propTypes = propTypes
 
-export default FloorSeat
+export default memo(FloorSeat)

@@ -13,7 +13,7 @@ const transitionPropTypes = {
     resetRenderedState: PropTypes.func.isRequired
 }
 
-const PresenceHocTransition = memo(({
+const PresenceHocTransition = ({
     dynamicPresenceValue,
     resetRenderedState,
     ...other
@@ -33,8 +33,8 @@ const PresenceHocTransition = memo(({
             <PresenceHocView {...other} />
         </CSSTransition>
     )
-})
+}
 
 PresenceHocTransition.propTypes = transitionPropTypes
 
-export default PresenceHocTransition
+export default memo(PresenceHocTransition)

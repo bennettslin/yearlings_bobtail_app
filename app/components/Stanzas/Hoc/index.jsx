@@ -22,7 +22,7 @@ const propTypes = {
         StanzaComponent: PropTypes.func.isRequired
     },
 
-    StanzaHoc = memo(({
+    StanzaHoc = ({
         lyricSongIndex,
         StanzaComponent,
         ...other
@@ -60,8 +60,8 @@ const propTypes = {
                 {...{ logicSelectors }}
             />
         )
-    })
+    }
 
 StanzaHoc.propTypes = propTypes
 
-export default connect(mapStateToProps)(StanzaHoc)
+export default connect(mapStateToProps)(memo(StanzaHoc))

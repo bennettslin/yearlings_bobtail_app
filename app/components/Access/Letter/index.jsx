@@ -29,7 +29,7 @@ const propTypes = {
     accessKey: PropTypes.string.isRequired
 }
 
-const AccessLetter = memo(({
+const AccessLetter = ({
     isAccessOn,
     inTextAnchor,
     inButtonOrDotAnchor,
@@ -79,8 +79,8 @@ const AccessLetter = memo(({
             </div>
         </CSSTransition>
     )
-})
+}
 
 AccessLetter.propTypes = propTypes
 
-export default connect(mapStateToProps)(AccessLetter)
+export default connect(mapStateToProps)(memo(AccessLetter))

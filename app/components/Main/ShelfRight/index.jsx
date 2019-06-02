@@ -6,7 +6,7 @@ import cx from 'classnames'
 import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
 
-const ShelfRight = memo(() => (
+const ShelfRight = () => (
     <div className={cx(
         'ShelfRight',
         'flex__mainSideButtons'
@@ -14,6 +14,6 @@ const ShelfRight = memo(() => (
         <TipsToggle />
         <ScoreToggle />
     </div>
-))
+)
 
-export default ShelfRight
+export default memo(ShelfRight)

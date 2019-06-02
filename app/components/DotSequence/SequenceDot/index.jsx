@@ -17,7 +17,7 @@ const dotPropTypes = {
         inTextAnchor: PropTypes.bool
     },
 
-    SequenceDot = memo(({
+    SequenceDot = ({
 
         dotKey,
         inAnnotationCard,
@@ -40,8 +40,8 @@ const dotPropTypes = {
                 dotKey
             }}
         />
-    ))
+    )
 
 SequenceDot.propTypes = dotPropTypes
 
-export default SequenceDot
+export default memo(SequenceDot)

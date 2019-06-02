@@ -82,7 +82,7 @@ const propTypes = {
     buttonIdentifier: PropTypes.any
 }
 
-const ButtonIcon = memo(({
+const ButtonIcon = ({
 
     showAsDisabled,
     buttonName,
@@ -118,8 +118,8 @@ const ButtonIcon = memo(({
             </Svg>
         </div>
     )
-})
+}
 
 ButtonIcon.propTypes = propTypes
 
-export default ButtonIcon
+export default memo(ButtonIcon)

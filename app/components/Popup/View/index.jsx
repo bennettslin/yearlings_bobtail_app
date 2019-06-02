@@ -20,7 +20,7 @@ const propTypes = {
         children: PropTypes.any.isRequired
     },
 
-    PopupView = memo(({
+    PopupView = ({
 
         popupName,
         displaysInOverlay,
@@ -101,8 +101,8 @@ const propTypes = {
                 </div>
             </div>
         )
-    })
+    }
 
 PopupView.propTypes = propTypes
 
-export default PopupView
+export default memo(PopupView)

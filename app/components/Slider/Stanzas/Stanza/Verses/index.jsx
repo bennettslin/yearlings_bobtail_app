@@ -23,7 +23,7 @@ const propTypes = {
     stanzaDuration: PropTypes.number.isRequired
 }
 
-const SliderVerses = memo(({
+const SliderVerses = ({
     lyricSongIndex,
     stanzaIndex,
     stanzaDuration
@@ -75,8 +75,8 @@ const SliderVerses = memo(({
             })}
         </div>
     )
-})
+}
 
 SliderVerses.propTypes = propTypes
 
-export default connect(mapStateToProps)(SliderVerses)
+export default connect(mapStateToProps)(memo(SliderVerses))

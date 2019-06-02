@@ -23,7 +23,7 @@ const propTypes = {
     children: PropTypes.node
 }
 
-const PresenceSvg = memo(({
+const PresenceSvg = ({
     className,
     x,
     y,
@@ -57,9 +57,9 @@ const PresenceSvg = memo(({
             {children}
         </Svg>
     )
-})
+}
 
 PresenceSvg.defaultProps = defaultProps
 PresenceSvg.propTypes = propTypes
 
-export default PresenceSvg
+export default memo(PresenceSvg)

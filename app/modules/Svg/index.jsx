@@ -16,7 +16,7 @@ const propTypes = {
     children: PropTypes.node
 }
 
-const Svg = memo(({
+const Svg = ({
 
     className,
     style,
@@ -51,9 +51,9 @@ const Svg = memo(({
             {children}
         </svg>
     )
-})
+}
 
 Svg.defaultProps = defaultProps
 Svg.propTypes = propTypes
 
-export default Svg
+export default memo(Svg)

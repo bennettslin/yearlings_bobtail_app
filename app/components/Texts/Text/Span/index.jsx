@@ -26,7 +26,7 @@ const defaultProps = {
         isWikiTextAnchor: PropTypes.bool
     },
 
-    TextSpan = memo(({
+    TextSpan = ({
 
         text,
         isVerseLyric,
@@ -83,9 +83,9 @@ const defaultProps = {
                 {formattedText}
             </Tag>
         ) : formattedText
-    })
+    }
 
 TextSpan.defaultProps = defaultProps
 TextSpan.propTypes = propTypes
 
-export default TextSpan
+export default memo(TextSpan)

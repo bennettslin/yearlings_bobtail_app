@@ -17,7 +17,7 @@ const navBookSongsPropTypes = {
         bookIndex: PropTypes.number.isRequired
     },
 
-    NavBookSongs = memo(({
+    NavBookSongs = ({
 
         // From props.
         bookIndex,
@@ -69,8 +69,8 @@ const navBookSongsPropTypes = {
                 })}
             </div>
         )
-    })
+    }
 
 NavBookSongs.propTypes = navBookSongsPropTypes
 
-export default NavBookSongs
+export default memo(NavBookSongs)

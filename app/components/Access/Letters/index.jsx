@@ -16,7 +16,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const AccessLetters = memo(({
+const AccessLetters = ({
     accessIconsName,
     showIfAccessOn,
     accessKeys,
@@ -40,8 +40,8 @@ const AccessLetters = memo(({
             />
         ))}
     </div>
-))
+)
 
 AccessLetters.propTypes = propTypes
 
-export default AccessLetters
+export default memo(AccessLetters)

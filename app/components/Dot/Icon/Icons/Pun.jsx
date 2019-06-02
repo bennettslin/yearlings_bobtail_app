@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 
-const PunIcon = memo(({
+const PunIcon = ({
 
     className
 
@@ -15,7 +15,7 @@ const PunIcon = memo(({
             r: 25
         }}
     />
-))
+)
 
 const propTypes = {
     className: PropTypes.string
@@ -23,4 +23,4 @@ const propTypes = {
 
 PunIcon.propTypes = propTypes
 
-export default PunIcon
+export default memo(PunIcon)

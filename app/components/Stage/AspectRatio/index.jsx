@@ -1,7 +1,7 @@
-import React, { memo } from 'react'
+import { cloneElement, memo } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import cx from 'classnames'
+// import cx from 'classnames'
 
 const mapStateToProps = ({
     viewportStore: {
@@ -26,23 +26,16 @@ const AspectRatio = ({
     stageHeight,
     children
 
-}) => (
-    <div
-        {...{
-            className: cx(
-                'AspectRatio',
-                'abF'
-            ),
-            style: {
-                top: `${stageTop}px`,
-                left: `${stageLeft}px`,
-                width: `${stageWidth}px`,
-                height: `${stageHeight}px`
-            }
-        }}
-    >
-        {children}
-    </div>
+}) => cloneElement(
+    children,
+    {
+        style: {
+            top: `${stageTop}px`,
+            left: `${stageLeft}px`,
+            width: `${stageWidth}px`,
+            height: `${stageHeight}px`
+        }
+    }
 )
 
 AspectRatio.propTypes = {

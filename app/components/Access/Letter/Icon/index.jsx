@@ -24,7 +24,7 @@ const propTypes = {
         accessKey: PropTypes.string
     },
 
-    AccessIcon = memo(({
+    AccessIcon = ({
 
         accessKey
 
@@ -78,8 +78,8 @@ const propTypes = {
                 </text>
             </Svg>
         )
-    })
+    }
 
 AccessIcon.propTypes = propTypes
 
-export default AccessIcon
+export default memo(AccessIcon)

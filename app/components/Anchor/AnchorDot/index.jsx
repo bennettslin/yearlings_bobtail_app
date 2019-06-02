@@ -15,7 +15,7 @@ const propTypes = {
     stanzaDotKeys: PropTypes.object.isRequired
 }
 
-const AnchorDot = memo(({
+const AnchorDot = ({
     isHigherProcessor,
     isAccessed,
     isSelected,
@@ -52,8 +52,8 @@ const AnchorDot = memo(({
             />
         ))}
     </___>
-))
+)
 
 AnchorDot.propTypes = propTypes
 
-export default AnchorDot
+export default memo(AnchorDot)

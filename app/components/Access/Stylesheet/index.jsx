@@ -10,7 +10,7 @@ import {
     CHILD_ACCESS_PREFIX
 } from 'constants/prefixes'
 
-const AccessStylesheet = memo(() => {
+const AccessStylesheet = () => {
 
     return (
         <Stylesheet
@@ -30,6 +30,6 @@ const AccessStylesheet = memo(() => {
             />
         </Stylesheet>
     )
-})
+}
 
-export default AccessStylesheet
+export default memo(AccessStylesheet)
