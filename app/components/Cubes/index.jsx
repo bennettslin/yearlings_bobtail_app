@@ -33,9 +33,7 @@ class Cubes extends Component {
                     const Cube = CubeConfig[yIndex][xIndex]
 
                     return (
-                        <___
-                            key={`${xIndex}_${yIndex}`}
-                        >
+                        <___ {...{ key: `${xIndex}_${yIndex}` }}>
                             <Cube
                                 {...{
                                     xIndex,

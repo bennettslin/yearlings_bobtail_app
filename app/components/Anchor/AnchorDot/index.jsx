@@ -34,8 +34,8 @@ const AnchorDot = ({
         )}
         {ALL_DOT_KEYS.map(dotKey => stanzaDotKeys[dotKey] && (
             <Dot
-                key={dotKey}
                 {...{
+                    key: dotKey,
                     className: cx(
                         'AnchorDot',
 

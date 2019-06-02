@@ -39,8 +39,10 @@ const verseLinesPropTypes = {
             )}>
                 {EAR_COLUMN_KEYS.map(doublespeakerKey => (
                     <VerseLinesChild {...other}
-                        key={doublespeakerKey}
-                        {...{ doublespeakerKey }}
+                        {...{
+                            key: doublespeakerKey,
+                            doublespeakerKey
+                        }}
                     />
                 ))}
             </div>

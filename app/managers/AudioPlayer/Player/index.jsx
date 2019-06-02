@@ -321,8 +321,8 @@ class PlayerManager extends PureComponent {
 
                     return this._playerShouldRender(songIndex) && (
                         <Player
-                            key={index}
                             {...{
+                                key: index,
                                 mp3,
                                 songIndex,
                                 isSelected: songIndex === selectedSongIndex,

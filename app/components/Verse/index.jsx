@@ -153,8 +153,8 @@ const verseViewPropTypes = {
 
         return (
             <div
-                key={isInteractable ? verseIndex : undefined}
                 {...{
+                    key: isInteractable ? verseIndex : undefined,
                     ref: setRef,
                     className: cx(
                         'Verse',

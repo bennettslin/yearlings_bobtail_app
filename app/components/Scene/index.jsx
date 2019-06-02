@@ -56,9 +56,7 @@ class Scene extends PureComponent {
                         const Presences = PresencesConfig[yIndex]
 
                         return (
-                            <___
-                                key={yIndex}
-                            >
+                            <___ {...{ key: yIndex }}>
                                 <Cubes {...{ yIndex }} />
                                 <Presences />
                             </___>

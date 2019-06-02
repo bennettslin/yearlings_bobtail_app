@@ -94,8 +94,8 @@ class Annotation extends PureComponent {
 
                     {getArrayOfLength(cardsLength).map(cardIndex => (
                         <AnnotationCard
-                            key={cardIndex}
                             {...{
+                                key: cardIndex,
                                 inCarousel,
                                 isSelected,
                                 annotationIndex,

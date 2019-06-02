@@ -115,8 +115,10 @@ class DotsSlide extends PureComponent {
 
                             return (
                                 <div
-                                    key={arrayIndex}
-                                    className="DotsSlideSelects__row"
+                                    {...{
+                                        key: arrayIndex,
+                                        className: 'DotsSlideSelects__row'
+                                    }}
                                 >
                                     {dotKeysArray.map((dotKey, index) => {
                                         const
@@ -130,8 +132,8 @@ class DotsSlide extends PureComponent {
 
                                         return (
                                             <DotsSlideSelect
-                                                key={index}
                                                 {...{
+                                                    key: index,
                                                     dotIndex,
                                                     dotKey,
                                                     isAccessed,

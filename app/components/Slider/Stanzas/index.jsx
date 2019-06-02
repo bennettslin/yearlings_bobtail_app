@@ -38,8 +38,8 @@ class SliderStanzas extends PureComponent {
             )}>
                 {stanzaIndicesArray.map(stanzaIndex => (
                     <StanzaHoc
-                        key={stanzaIndex}
                         {...{
+                            key: stanzaIndex,
                             stanzaIndex,
                             StanzaComponent: SliderStanza
                         }}

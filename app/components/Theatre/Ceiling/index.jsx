@@ -51,42 +51,34 @@ class Ceiling extends PureComponent {
             })
 
         return (
-            <div
+            <Svg
                 {...{
                     className: cx(
                         'Ceiling',
                         'Theatre__field'
                     ),
-                    style: { height: `${ceilingHeight}px` }
+                    style: { height: `${ceilingHeight}px` },
+                    viewBoxWidth: windowWidth,
+                    viewBoxHeight: ceilingHeight
                 }}
             >
-                <Svg
-                    {...{
-                        className: cx(
-                            'Theatre__subfield'
-                        ),
-                        viewBoxWidth: windowWidth,
-                        viewBoxHeight: ceilingHeight
-                    }}
-                >
-                    {raftersRowCoordinates.map(({
-                        top,
-                        left,
-                        width,
-                        height
-                    }, index) => (
-                        <CeilingRafter
-                            key={index}
-                            {...{
-                                top,
-                                left,
-                                width,
-                                height
-                            }}
-                        />
-                    ))}
-                </Svg>
-            </div>
+                {raftersRowCoordinates.map(({
+                    top,
+                    left,
+                    width,
+                    height
+                }, index) => (
+                    <CeilingRafter
+                        {...{
+                            key: index,
+                            top,
+                            left,
+                            width,
+                            height
+                        }}
+                    />
+                ))}
+            </Svg>
         )
     }
 }

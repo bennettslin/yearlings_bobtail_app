@@ -20,8 +20,8 @@ const PresenceZIndexStylesheet = () => {
             {CUBE_Y_INDICES.map(yIndex => {
                 return (
                     <DynamicStylesheet
-                        key={yIndex}
                         {...{
+                            key: yIndex,
                             childPrefixes: [
                                 `Presences.y${
                                     yIndex

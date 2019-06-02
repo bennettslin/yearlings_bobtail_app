@@ -1,11 +1,5 @@
 .Wall {
     top: 0;
-
-    // Selector needs to be specific to override .Theatre__field styling.
-    &.Wall__right {
-        left: auto;
-        right: 0;
-    }
 }
 
 .WallBalcony {

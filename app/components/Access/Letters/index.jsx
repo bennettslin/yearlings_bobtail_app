@@ -31,9 +31,9 @@ const AccessLetters = ({
     )}>
         {accessKeys.map(accessKey => (
             <AccessLetter
-                key={accessKey}
                 animateStandaloneOnKeyDown
                 {...{
+                    key: accessKey,
                     accessKey,
                     showIfAccessOn
                 }}

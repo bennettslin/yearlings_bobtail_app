@@ -62,8 +62,10 @@ const navBookSongsPropTypes = {
                     const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
                     return (
                         <NavButtonIndexed {...other}
-                            key={currentIndex}
-                            {...{ songIndex }}
+                            {...{
+                                key: currentIndex,
+                                songIndex
+                            }}
                         />
                     )
                 })}

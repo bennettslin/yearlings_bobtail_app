@@ -48,8 +48,8 @@ class SliderScenes extends PureComponent {
 
                     return (
                         <div
-                            key={sceneIndex}
                             {...{
+                                key: sceneIndex,
                                 className: cx(
                                     'SliderSceneBar',
                                     isOdd ?

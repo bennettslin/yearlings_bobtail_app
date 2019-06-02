@@ -30,7 +30,7 @@ const AnchorText = ({
     return (
         words.map((word, index) => {
             return (
-                <___ key={index}>
+                <___ {...{ key: index }}>
                     {Boolean(index) && ' '}
                     <span className="AnchorText">
                         {isHigherProcessor && (

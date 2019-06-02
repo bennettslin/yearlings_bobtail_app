@@ -20,8 +20,8 @@ class AnnotationCards extends PureComponent {
             <div className="TempGlobalAnnotationCards">
                 {cards.map((card, index) => (
                     <AnnotationCard
-                        key={index}
                         {...{
+                            key: index,
                             card
                         }}
                     />

@@ -110,8 +110,8 @@ class Cube extends PureComponent {
             >
                 {FACES.map(face => (
                     <Face
-                        key={face}
                         {...{
+                            key: face,
                             slantDirection,
                             level: CEILING,
                             yIndex,
@@ -124,8 +124,8 @@ class Cube extends PureComponent {
                 ))}
                 {FACES.map(face => (
                     <Face
-                        key={face}
                         {...{
+                            key: face,
                             slantDirection,
                             level: FLOOR,
                             yIndex,

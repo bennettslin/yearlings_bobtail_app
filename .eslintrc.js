@@ -291,6 +291,7 @@ module.exports = {
             'as-needed'
         ],
         "react/display-name": 'off',
+        "react/jsx-key": 'off',
         "react/prop-types": 'off',
         "react/no-unused-prop-types": 'off',
         "require-await": 'error',

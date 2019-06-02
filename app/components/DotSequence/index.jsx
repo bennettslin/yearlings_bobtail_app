@@ -36,8 +36,8 @@ const dotBlockPropTypes = {
                 return dotKeys[dotKey] && (
 
                     <SequenceDot {...other}
-                        key={dotKey}
                         {...{
+                            key: dotKey,
                             dotKey,
                             inTextAnchor,
                             inAnnotationCard

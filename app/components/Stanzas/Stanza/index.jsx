@@ -51,8 +51,10 @@ const propTypes = {
                 {stanzaUnitIndices.map(unitIndex => {
                     return (
                         <Unit {...other}
-                            key={unitIndex}
-                            {...{ unitIndex }}
+                            {...{
+                                key: unitIndex,
+                                unitIndex
+                            }}
                         />
                     )
                 })}

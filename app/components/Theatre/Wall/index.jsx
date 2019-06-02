@@ -75,43 +75,41 @@ class Wall extends PureComponent {
             })
 
         return (
-            <div
+            <Svg
                 {...{
                     className: cx(
                         'Wall',
-                        'Theatre__field',
-                        { 'Wall__right': isRight }
+                        'Theatre__field'
                     ),
-                    style: { width: `${wallWidth}px` }
+                    style: {
+                        width: `${wallWidth}px`,
+
+                        ...isRight && {
+                            left: 'auto',
+                            right: 0
+                        }
+                    },
+                    viewBoxWidth: wallWidth,
+                    viewBoxHeight: windowHeight
                 }}
             >
-                <Svg
-                    {...{
-                        className: cx(
-                            'Theatre__subfield'
-                        ),
-                        viewBoxWidth: wallWidth,
-                        viewBoxHeight: windowHeight
-                    }}
-                >
-                    {balconyColumnCoordinates.map(({
-                        top,
-                        left,
-                        width,
-                        height
-                    }, index) => (
-                        <WallBalcony
-                            key={index}
-                            {...{
-                                top,
-                                left,
-                                width,
-                                height
-                            }}
-                        />
-                    ))}
-                </Svg>
-            </div>
+                {balconyColumnCoordinates.map(({
+                    top,
+                    left,
+                    width,
+                    height
+                }, index) => (
+                    <WallBalcony
+                        {...{
+                            key: index,
+                            top,
+                            left,
+                            width,
+                            height
+                        }}
+                    />
+                ))}
+            </Svg>
         )
     }
 }

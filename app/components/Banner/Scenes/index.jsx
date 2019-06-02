@@ -78,8 +78,8 @@ class BannerScenes extends PureComponent {
 
                     return (
                         <BannerScene
-                            key={sceneIndex}
                             {...{
+                                key: sceneIndex,
                                 isOdd,
                                 isInteractivated,
                                 isSelected,

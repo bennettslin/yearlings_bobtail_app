@@ -133,9 +133,9 @@ const propTypes = {
 
                         return (
                             <VerseHoc {...other}
-                                key={stanzaVerseIndex}
                                 inUnit
                                 {...{
+                                    key: stanzaVerseIndex,
                                     verseIndex,
                                     verseObject,
                                     VerseComponent: Verse

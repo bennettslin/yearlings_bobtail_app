@@ -50,53 +50,47 @@ class Floor extends PureComponent {
             })
 
         return (
-            <div
+            <Svg
                 {...{
                     className: cx(
                         'Floor',
                         'Theatre__field'
                     ),
-                    style: { height: `${floorHeight}px` }
+                    style: { height: `${floorHeight}px` },
+                    viewBoxWidth: windowWidth,
+                    viewBoxHeight: floorHeight
                 }}
             >
-                <Svg
-                    {...{
-                        className: cx(
-                            'Theatre__subfield'
-                        ),
-                        viewBoxWidth: windowWidth,
-                        viewBoxHeight: floorHeight
-                    }}
-                >
-                    {seatingRowCoordinates.map((seatsArray, rowIndex) => (
-                        <g
-                            key={rowIndex}
-                            className={`FloorSeats__${rowIndex}`}
-                        >
-                            {seatsArray.map(({
-                                chairIndex,
-                                rowIndex,
-                                top,
-                                left,
-                                width,
-                                height
-                            }) => (
-                                <FloorSeat
-                                    key={chairIndex}
-                                    {...{
-                                        chairIndex,
-                                        rowIndex,
-                                        top,
-                                        left,
-                                        width,
-                                        height
-                                    }}
-                                />
-                            ))}
-                        </g>
-                    ))}
-                </Svg>
-            </div>
+                {seatingRowCoordinates.map((seatsArray, rowIndex) => (
+                    <g
+                        {...{
+                            key: rowIndex,
+                            className: `FloorSeats__${rowIndex}`
+                        }}
+                    >
+                        {seatsArray.map(({
+                            chairIndex,
+                            rowIndex,
+                            top,
+                            left,
+                            width,
+                            height
+                        }) => (
+                            <FloorSeat
+                                {...{
+                                    key: chairIndex,
+                                    chairIndex,
+                                    rowIndex,
+                                    top,
+                                    left,
+                                    width,
+                                    height
+                                }}
+                            />
+                        ))}
+                    </g>
+                ))}
+            </Svg>
         )
     }
 }

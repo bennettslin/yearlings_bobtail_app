@@ -54,8 +54,8 @@ class SliderVerse extends PureComponent {
 
         return (
             <div
-                key={verseIndex}
                 {...{
+                    key: verseIndex,
                     className: cx(
                         'SliderVerse',
 

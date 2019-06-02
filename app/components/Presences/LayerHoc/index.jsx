@@ -58,8 +58,8 @@ class LayerHoc extends PureComponent {
 
                 return (
                     <PresenceHoc
-                        key={presenceKey}
                         {...{
+                            key: presenceKey,
                             cubesKey,
                             presenceType: presenceType || ACTORS,
                             actorKey,

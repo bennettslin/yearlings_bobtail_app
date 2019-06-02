@@ -54,8 +54,8 @@ class AnnotationWormholes extends PureComponent {
 
             return (
                 <AnnotationWormhole
-                    key={wormholeLinkIndex}
                     {...{
+                        key: wormholeLinkIndex,
                         wormholeLinkIndex,
                         isAccessed,
                         isSelected,

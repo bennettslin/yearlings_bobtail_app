@@ -52,9 +52,9 @@ const propTypes = {
 
                 return (
                     <Texts {...other}
-                        key={index}
                         hasRecursed
                         {...{
+                            key: index,
                             text: textEntry,
                             beginsVerse,
                             endsVerse

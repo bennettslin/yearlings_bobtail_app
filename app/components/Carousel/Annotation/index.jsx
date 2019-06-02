@@ -57,22 +57,24 @@ class CarouselAnnotation extends PureComponent {
 
         return (
             <div
-                key={annotationIndex}
-                ref={this.setCarouselAnnotationElement}
-                className={cx(
-                    'CarouselAnnotation',
+                {...{
+                    key: annotationIndex,
+                    ref: this.setCarouselAnnotationElement,
+                    className: cx(
+                        'CarouselAnnotation',
 
-                    `${CAROUSEL_SCROLL}__${annotationIndex}`,
+                        `${CAROUSEL_SCROLL}__${annotationIndex}`,
 
-                    columnKey &&
-                        `CarouselAnnotation__inEarColumn__${columnKey}`,
+                        columnKey &&
+                            `CarouselAnnotation__inEarColumn__${columnKey}`,
 
-                    getPrefixedDotLetterClassNames(
-                        dotKeys,
-                        // "Child carousel annotation letter."
-                        'CcA'
+                        getPrefixedDotLetterClassNames(
+                            dotKeys,
+                            // "Child carousel annotation letter."
+                            'CcA'
+                        )
                     )
-                )}
+                }}
             >
                 <Annotation
                     inCarousel

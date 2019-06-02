@@ -107,8 +107,8 @@ class CarouselScroll extends PureComponent {
 
                         return (
                             <CarouselAnnotation
-                                key={index}
                                 {...{
+                                    key: index,
                                     annotationIndex,
                                     isAccessed,
                                     isSelected,

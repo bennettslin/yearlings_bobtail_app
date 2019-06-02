@@ -74,8 +74,8 @@ class Stanzas extends PureComponent {
 
                 {stanzaIndicesArray.map(stanzaIndex => (
                     <StanzaHoc
-                        key={stanzaIndex}
                         {...{
+                            key: stanzaIndex,
                             stanzaIndex,
                             StanzaComponent: Stanza,
                             handleVerseSelect: this._handleVerseSelect,
