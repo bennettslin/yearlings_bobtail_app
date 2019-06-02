@@ -14,12 +14,14 @@ export const getGlobalAnnotation = (globalIndex) => {
 //     )
 // }
 
-export const getIsV2 = (songIndex) => {
-    return songIndex > 9
+export const getIsV2 = () => {
+    // return songIndex > 9
+    return false
 }
 
 export const getV2Array = () => {
     return (
-        [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+        []
+        // [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
     )
 }

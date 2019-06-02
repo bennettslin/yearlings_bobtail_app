@@ -21,7 +21,7 @@ const ProgressFooter = ({
         remainingTime = getRemainingTimeStringFromHours(remainingHours),
         nextCheckInDate = getNextCheckInDateFromHours(remainingHours)
 
-    return (
+    return !isV2 && (
         <div className={cx(
             'ProgressFooter',
             'text-cell-wrapper',

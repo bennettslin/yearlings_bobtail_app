@@ -1,9 +1,9 @@
-import completed from './completed/v2'
-import remaining from './remaining/v2'
-import songTasks from './songs/v2'
+import completedV2 from './completed/v2'
+import remainingV2 from './remaining/v2'
+import songTasksV2 from './songs/v2'
 
 export default [
-    ...completed,
-    ...remaining,
-    ...[].concat(...songTasks)
+    ...completedV2,
+    ...remainingV2,
+    ...[].concat(...songTasksV2)
 ]
