@@ -164,7 +164,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'on couch, ignoring Sita, drunk',
                     instance: CELIBATE_FREEZING
@@ -194,7 +194,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, sweaty, giddy',
                     instance: GREETING
                 },
