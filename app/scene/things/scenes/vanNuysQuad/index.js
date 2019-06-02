@@ -32,10 +32,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [VAN_NUYS_PLANT_QUAD]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 3,
-                scaleFactor: 2
-            }
+            xPosition: 3
         },
         [VAN_NUYS_LOGO]: {
             yIndex: 3,

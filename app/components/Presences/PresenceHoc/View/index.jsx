@@ -10,7 +10,7 @@ import {
 
 import { getMapForActorKey } from '../../Actor/helper'
 
-import { getPresenceXYWidthAndHeight } from './helper'
+import { getPresenceXY } from './helper'
 
 import { ACTORS } from 'constants/scene'
 
@@ -37,23 +37,28 @@ const PresenceHocView = memo(({
         }),
         {
             yIndex,
-            // Begin process to not nest xPosition.
+
+            // Begin process to not nest.
             xPosition: xPosition1,
+            zOffset: zOffset1,
+            scaleFactor,
+
             arrangement: {
-                // Allow older configurations to have nested xPosition.
+                // Allow older configurations to still nest.
                 xPosition: xPosition2,
-                zOffset,
+                zOffset: zOffset2,
 
                 // TODO: Get rid of xWidth and zHeight completely.
                 xWidth,
                 zHeight
-            }
+            } = {}
         } = arrangement,
 
-        // TODO: Get rid of this logic when xPositions are no longer nested.
+        // TODO: Get rid of this logic when no longer nested.
         xPosition = typeof xPosition1 === 'number' ? xPosition1 : xPosition2,
+        zOffset = typeof zOffset1 === 'number' ? zOffset1 : zOffset2,
 
-        xYWidthAndHeight = getPresenceXYWidthAndHeight({
+        presenceXY = getPresenceXY({
             cubesKey,
             yIndex,
             xPosition,
@@ -76,7 +81,10 @@ const PresenceHocView = memo(({
                     getClassNameForPresenceType(presenceType),
                     'abF'
                 ),
-                ...xYWidthAndHeight
+                ...scaleFactor && {
+                    scaleFactor
+                },
+                ...presenceXY
             }}
         />
     )

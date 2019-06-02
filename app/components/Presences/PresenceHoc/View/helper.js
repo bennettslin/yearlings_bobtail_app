@@ -111,7 +111,7 @@ const _getCubeWidthAndHeightPercentages = (yIndex) => {
     }
 }
 
-export const getPresenceXYWidthAndHeight = ({
+export const getPresenceXY = ({
 
     // Needed to determine cube's zIndex.
     cubesKey,

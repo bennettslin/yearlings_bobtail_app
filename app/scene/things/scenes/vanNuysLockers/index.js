@@ -34,10 +34,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [VAN_NUYS_PLANT_LOCKERS]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 8,
-                scaleFactor: 2
-            }
+            xPosition: 8
         }
     },
     [FIXTURES]: {
