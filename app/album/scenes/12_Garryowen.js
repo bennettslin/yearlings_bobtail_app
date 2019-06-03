@@ -236,7 +236,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'standing, cold, looking away',
                     instance: LEAVING_CRUMBLED
                 },
