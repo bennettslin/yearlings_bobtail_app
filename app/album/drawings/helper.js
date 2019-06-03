@@ -163,9 +163,9 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                     descriptionEntity.workedHours || 0
                 ) * compoundValue
 
-                // Assume 5.5 hours per drawing.
+                // Assume 6.5 hours per drawing.
                 drawings.songTasks[songIndex].actorsNeededHours += (
-                    descriptionEntity.neededHours || 5.5
+                    descriptionEntity.neededHours || 6.5
                 ) * compoundValue
 
             }
