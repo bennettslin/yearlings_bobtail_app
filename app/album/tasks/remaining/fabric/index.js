@@ -23,5 +23,10 @@ export default [
         taskName: `2 * Bennett's hospital blanket (Cremated, Dream)`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Sita's blanket on couch (Kyon)`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

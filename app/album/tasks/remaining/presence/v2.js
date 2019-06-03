@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Try out Vivus animations.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Wire on puppets and others.`,
         workedHours: 0,
         neededHours: 4
