@@ -2,7 +2,6 @@ export const FIRE_HYDRANT = 'fireHydrant'
 export const PLAYGROUND_SLIDE = 'playgroundSlide'
 export const MIRRORED_SINK = 'mirroredSink'
 export const TOWEL_RACK = 'towelRack'
-
 export const OVERPASS_SIGN_FRONT = 'overpassSignFront'
 export const OVERPASS_SIGN_BACK = 'overpassSignBack'
 export const PORCH_PLANTS_LEFT = 'porchPlantsLeft'
@@ -12,7 +11,6 @@ export const CAMPFIRE = 'campfire'
 export const TROLL_SHADOW_LEFT = 'trollShadowLeft'
 export const TROLL_SHADOW_RIGHT = 'trollShadowRight'
 export const STALACTITES = 'stalactites'
-
 export const BENNETT_TAIWAN_STAIRS = 'bennettTaiwanStairs'
 export const ODIN_TAIWAN_STAIRS = 'odinTaiwanStairs'
 export const BENNETT_TAIWAN_GATE = 'bennettTaiwanGate'
@@ -29,7 +27,6 @@ export const ODIN_MAT = 'odinMat'
 export const BUDDHA_SHRINE = 'buddhaShrine'
 export const TAIWAN_FRIDGE_FRONT = 'taiwanFridgeFront'
 export const YELLOW_TAPED_GRILL = 'yellowTapedGrill'
-
 export const BLOOM_COUNTY_POSTER = 'bloomCountyPoster'
 export const TRASH_CAN_LOCKERS = 'trashCanLockers'
 export const TRASH_CAN_QUAD = 'trashCanQuad' // Duplicate.
@@ -37,7 +34,6 @@ export const VAN_NUYS_PLANT_LOCKERS = 'vanNuysPlantLockers'
 export const VAN_NUYS_PLANT_QUAD = 'vanNuysPlantQuad' // Duplicate.
 export const VAN_NUYS_LOGO = 'vanNuysLogo'
 export const CORKBOARD = 'corkboard'
-
 export const RECYCLABLES = 'recyclables'
 export const BERKELEY_LAMPPOST = 'berkeleyLamppost'
 export const NIRVANA_POSTER = 'nirvanaPoster'
@@ -45,7 +41,6 @@ export const BANCROFT_SHRUBS = 'bancroftShrubs'
 export const UC_BERKELEY_TREE_LEFT = 'ucBerkeleyTreeLeft'
 export const UC_BERKELEY_TREE_RIGHT = 'ucBerkeleyTreeRight' // Duplicate.
 export const SIGNPOST = 'signPost'
-
 export const LEONARD_COHEN_POSTER = 'leonardCohenPoster'
 export const PROGRESS_CHART_EARLY = 'progressChartEarly'
 export const PROGRESS_CHART_LATE = 'progressChartLate'
@@ -60,33 +55,25 @@ export const WALL_SPEAKER_SIDE_STAGE = 'wallSpeakerSideStage' // Duplicate.
 export const CINEMA_POSTER_LEFT = 'cinemaPosterLeft'
 export const CINEMA_POSTER_RIGHT = 'cinemaPosterRight'
 export const CINEMA_POSTER_RIGHT_NORMAL = 'cinemaPosterRightNormal'
-
 export const SANDBAGS = 'sandbags'
 export const STAGE_LIGHTS = 'stageLights'
 export const TRAFFIC_LIGHT = 'trafficLight'
-
 export const APARTMENT_PLANT = 'apartmentPlant'
 export const CODE_BOX = 'codeBox'
 export const CLIPBOARD = 'clipboard'
 export const PAINTING = 'painting'
 export const WAITING_ROOM_PLANT = 'waitingRoomPlant'
-
 export const TELEVISION = 'television'
 export const STORAGE_BOXES = 'storageBoxes'
 export const STORAGE_CHEST = 'storageChest'
 export const HOWIE_FRIDGE = 'howieFridge'
-
 export const ELLIOTT_SMITH_POSTER = 'elliottSmithPoster'
-
 export const TWIN_STREETLAMP_NEAR = 'twinStreetlampNear'
 export const TWIN_STREETLAMP_MIDDLE = 'twinStreetlampMiddle' // Duplicate.
 export const TWIN_STREETLAMP_FAR = 'twinStreetlampFar' // Duplicate.
-
 export const EL_CERRITO_TREE = 'elCerritoTree'
 export const IV_DRIP = 'ivDrip'
-
 export const DUMPSTER = 'dumpster'
-
 export const DISPENSER_LEFT = 'dispenserLeft'
 export const DISPENSER_RIGHT = 'dispenserRight'
 export const WEDDING_CROWD = 'weddingCrowd'

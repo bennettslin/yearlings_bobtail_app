@@ -18,12 +18,6 @@ export default [
     /**
      * Content.
      */
-
-    {
-        taskName: `Editing timebox.`,
-        workedHours: 9,
-        neededHours: 200
-    },
     {
         taskName: `Finalise text styling of different annotation cards.`,
         workedHours: 0,

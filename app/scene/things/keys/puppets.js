@@ -4,21 +4,16 @@ export const PUPPET_FAMILY_MIDDLE = 'puppetFamilyMiddle'
 export const PUPPET_FAMILY_END = 'puppetFamilyEnd'
 export const PUPPET_BENNETT_MIDDLE = 'puppetBennettMiddle'
 export const PUPPET_BENNETT_END = 'puppetBennettEnd'
-
 export const PCHELKA_MUSHKA_ROCKET = 'pchelkaMushkaRocket'
 export const EARTH = 'earth'
 export const SPACE_COLONY = 'spaceColony'
-
 export const PEACOCK = 'peacock'
 export const PEAHEN = 'peahen'
 export const PUPPET_REATTA = 'puppetReatta'
-
 export const OPAL_COUCH = 'opalCouch'
 export const OPAL_GAZING = 'opalGazing'
-
 export const GHOST_ODIN_CAMPUS = 'ghostOdinCampus'
 export const GHOST_ODIN_CLUB = 'ghostOdinClub'
 export const GHOST_ODIN_ALLEY = 'ghostOdinAlley'
 export const GHOST_ODIN_DEMONSTRATION = 'ghostOdinDemonstration'
-
 export const PUPPET_KHARI_LIZ = 'puppetKhariLiz'

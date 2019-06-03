@@ -1,13 +1,10 @@
 export const NOHO_HOUSE_LEFT = 'nohoHouseLeft'
 export const NOHO_HOUSE_RIGHT = 'nohoHouseRight'
 export const NOHO_SCHOOLHOUSE = 'nohoSchoolhouse'
-
 export const BEDROOM_SIREN = 'bedroomSiren'
 export const BEDROOM_BUS = 'bedroomBus'
-
 export const FAMILY_HOUSE = 'familyHouse'
 export const CAVE_SHADOWS = 'caveShadows'
-
 export const TAIWAN_CLOUDS = 'taiwanClouds'
 export const TAIWAN_FOG = 'taiwanFog'
 export const TAIWAN_MOUNTAINS_BRIDGED = 'taiwanMountainsBridged'
@@ -15,35 +12,27 @@ export const TAIWAN_MOUNTAIN_LEFT = 'taiwanMountainLeft'
 export const TAIWAN_MOUNTAIN_RIGHT = 'taiwanMountainRight'
 export const VAN_NUYS_SCHOOLHOUSE_LEFT = 'vanNuysSchoolhouseLeft'
 export const VAN_NUYS_SCHOOLHOUSE_RIGHT = 'vanNuysSchoolhouseRight'
-
 export const TAIWAN_HOUSE_FAR = 'taiwanHouseFar'
 export const TAIWAN_HOUSE_NEAR = 'taiwanHouseNear'
 export const RICKSHAW_TOWN = 'rickshawTown'
 export const SHORE_CARNIVAL = 'shoreCarnival'
 export const OCEAN_BOTTOM_MIDDLE = 'oceanBottomMiddle'
 export const OCEAN_BOTTOM_NEAR = 'oceanBottomNear'
-
 export const LOCKER_BANK = 'lockerBank'
-
 export const ST_JOSEPHS_ANNEX = 'stJosephsAnnex'
 export const ST_JOSEPHS_CHURCH = 'stJosephsChurch'
 export const CAMPANILE = 'campanile'
-
 export const MUSEUM_DISPLAY = 'museumDisplay'
-
 export const ROYCE_HALL = 'royceHall'
 export const PHARMACY_AISLE = 'pharmacyAisle'
 export const STEAM_PIPES = 'steamPipes'
 export const CEMETERY_HILLS_NEAR = 'cemeteryHillsNear'
-
 export const CROWD_NEAR_SIDE = 'crowdNearSide'
 export const CROWD_NEAR_BACK = 'crowdNearBack' // Duplicate.
 export const CROWD_FAR_SIDE = 'crowdFarSide'
 export const CROWD_FAR_BACK = 'crowdFarBack' // Duplicate.
-
 export const OAKLAND_HOUSE_LEFT = 'oaklandHouseLeft'
 export const OAKLAND_HOUSE_RIGHT = 'oaklandHouseRight'
-
 export const RESIDENTIAL_FAR_LEFT = 'residentialFarLeft'
 export const RESIDENTIAL_MIDDLE_LEFT = 'residentialMiddleLeft'
 export const RESIDENTIAL_NEAR_LEFT = 'residentialNearLeft'
@@ -61,14 +50,11 @@ export const PUBLIC_FAR_LEFT = 'publicFarLeft'
 export const PUBLIC_NEAR_LEFT = 'publicNearLeft'
 export const PUBLIC_FAR_RIGHT = 'publicFarRight'
 export const PUBLIC_NEAR_RIGHT = 'publicNearRight'
-
 export const ROAD_PAST = 'roadPast'
 export const ROAD_PRESENT = 'roadPresent'
 export const ROAD_FUTURE = 'roadFuture'
-
 export const EL_CERRITO_FAR = 'elCerritoFar'
 export const EL_CERRITO_NEAR = 'elCerritoNear'
-
 export const PAMPAS_FAR = 'pampasFar'
 export const FOREBODING_TREES = 'forebodingTrees'
 export const CLIFF_GRAVES_FAR = 'cliffGravesFar'
