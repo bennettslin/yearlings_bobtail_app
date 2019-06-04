@@ -91,7 +91,7 @@ import {
 } from '../../scene/things/keys/fixtures'
 
 import {
-    BENNETT_PILLOWS,
+    BENNETT_PILLOWS_BLANKET,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
 } from '../../scene/things/keys/furniture'
@@ -303,7 +303,7 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURES]: {
-                [BENNETT_PILLOWS]: true
+                [BENNETT_PILLOWS_BLANKET]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -337,7 +337,7 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURES]: {
-                [BENNETT_PILLOWS]: true
+                [BENNETT_PILLOWS_BLANKET]: true
             }
         },
         cubes: BENNETT_BED_OPEN_KEY,

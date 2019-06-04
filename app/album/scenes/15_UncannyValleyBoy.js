@@ -91,7 +91,6 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    BENNETT_PILLOWS,
     LIZ_CUSHIONS,
     LIZ_CUSHIONS_THOUGHT,
     MIRIAM_CUSHIONS
@@ -124,9 +123,6 @@ export default [
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
-            },
-            [FURNITURES]: {
-                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BASEMENT_BED_KEY,
@@ -164,9 +160,6 @@ export default [
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
-            },
-            [FURNITURES]: {
-                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BASEMENT_MAGIC_KEY,
@@ -359,9 +352,6 @@ export default [
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true,
                 [CRACKED_PICTURE]: true
-            },
-            [FURNITURES]: {
-                [BENNETT_PILLOWS]: true
             }
         },
         cubes: BASEMENT_MAGIC_KEY,

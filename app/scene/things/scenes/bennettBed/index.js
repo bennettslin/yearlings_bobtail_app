@@ -6,7 +6,7 @@ import {
     NUDE_DRAWINGS,
     VASELINE
 } from '../../keys/fixtures'
-import { BENNETT_PILLOWS } from '../../keys/furniture'
+import { BENNETT_PILLOWS_BLANKET } from '../../keys/furniture'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURES]: {
@@ -28,7 +28,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FURNITURES]: {
-        [BENNETT_PILLOWS]: {
+        [BENNETT_PILLOWS_BLANKET]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 9,

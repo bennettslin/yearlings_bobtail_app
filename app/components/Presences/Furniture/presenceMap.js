@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 
 import BedroomDesk from './Furnitures/BedroomDesk'
-import CaptainBedPillow from './Furnitures/CaptainBedPillow'
+import CaptainBedPillowBlanket from './Furnitures/CaptainBedPillowBlanket'
 import BennettCushions from './Furnitures/BennettCushions'
-import BennettPillows from './Furnitures/BennettPillows'
+import BennettPillowsBlanket from './Furnitures/BennettPillowsBlanket'
 import LizPillows from './Furnitures/LizPillows'
 import LizPillowsReflection from './Furnitures/LizPillowsReflection'
 import AtticCushions from './Furnitures/AtticCushions'
@@ -14,9 +14,9 @@ import HospitalPillowLowered from './Furnitures/HospitalPillowLowered'
 
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED_PILLOW,
+    CAPTAIN_BED_PILLOW_BLANKET,
     BENNETT_CUSHIONS,
-    BENNETT_PILLOWS,
+    BENNETT_PILLOWS_BLANKET,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
     ATTIC_CUSHIONS,
@@ -29,9 +29,9 @@ import {
 
 export const propTypes = {
     [BEDROOM_DESK]: PropTypes.bool,
-    [CAPTAIN_BED_PILLOW]: PropTypes.bool,
+    [CAPTAIN_BED_PILLOW_BLANKET]: PropTypes.bool,
     [BENNETT_CUSHIONS]: PropTypes.bool,
-    [BENNETT_PILLOWS]: PropTypes.bool,
+    [BENNETT_PILLOWS_BLANKET]: PropTypes.bool,
     [LIZ_PILLOWS]: PropTypes.bool,
     [LIZ_PILLOWS_REFLECTION]: PropTypes.bool,
     [ATTIC_CUSHIONS]: PropTypes.bool,
@@ -44,9 +44,9 @@ export const propTypes = {
 
 export default {
     [BEDROOM_DESK]: BedroomDesk,
-    [CAPTAIN_BED_PILLOW]: CaptainBedPillow,
+    [CAPTAIN_BED_PILLOW_BLANKET]: CaptainBedPillowBlanket,
     [BENNETT_CUSHIONS]: BennettCushions,
-    [BENNETT_PILLOWS]: BennettPillows,
+    [BENNETT_PILLOWS_BLANKET]: BennettPillowsBlanket,
     [LIZ_PILLOWS]: LizPillows,
     [LIZ_PILLOWS_REFLECTION]: LizPillowsReflection,
     [ATTIC_CUSHIONS]: AtticCushions,

@@ -79,7 +79,7 @@ import {
 
 import {
     LIZ_CUSHIONS,
-    BENNETT_PILLOWS
+    BENNETT_PILLOWS_BLANKET
 } from '../../scene/things/keys/furniture'
 
 import {
@@ -178,7 +178,7 @@ export default [
                 [NAS_ALBUM]: true
             },
             [FURNITURES]: {
-                [BENNETT_PILLOWS]: true
+                [BENNETT_PILLOWS_BLANKET]: true
             }
         },
         cubes: BASEMENT_BED_KEY,

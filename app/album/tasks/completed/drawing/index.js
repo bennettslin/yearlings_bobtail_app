@@ -885,5 +885,10 @@ export default [
         taskName: `Spike to render with pencil tool in Illustrator. Not successful.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Timebox to think about fabrics and furniture.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

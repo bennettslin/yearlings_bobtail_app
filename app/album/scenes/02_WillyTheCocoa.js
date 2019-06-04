@@ -101,7 +101,7 @@ import {
 
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED_PILLOW
+    CAPTAIN_BED_PILLOW_BLANKET
 } from '../../scene/things/keys/furniture'
 
 import {
@@ -231,7 +231,7 @@ export default [
             },
             [FURNITURES]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED_PILLOW]: true
+                [CAPTAIN_BED_PILLOW_BLANKET]: true
             },
             [PANELS]: {
                 [CAPTAIN_BED_DRAWERS]: true,
@@ -313,8 +313,7 @@ export default [
                 [BEDROOM_SIREN]: true
             },
             [FURNITURES]: {
-                [BEDROOM_DESK]: true,
-                [CAPTAIN_BED_PILLOW]: true
+                [BEDROOM_DESK]: true
             },
             [PANELS]: {
                 [CAPTAIN_BED_DRAWERS]: true
