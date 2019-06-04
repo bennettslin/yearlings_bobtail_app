@@ -102,7 +102,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, cradling bracelet, blank',
                     instance: CORD_SIDE
                 }
@@ -128,7 +128,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'side angle, disingenuously consoling',
                     instance: AWKWARD_CONSOLATION
@@ -154,7 +154,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'back, cradling bracelet, blank',
                     instance: CORD_REAR
                 },
