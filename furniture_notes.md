@@ -2,20 +2,20 @@
 * Write code to let panel be flush against cubes.
 
 # Beds
-* Pillows and blankets are always separate.
-* Facades.
-    * Captain bed.
-    * Bennett bed.
-    * Liz bed.
-    * Hospital bed.
+* Pillows and blankets are with furniture or actors.
+* Panels.
+    * Captain bed. (front angle)
+    * Bennett bed. (side)
+    * Liz bed. (front, don't do reflection)
+    * Hospital bed. (side angle)
 
 # Couches and Armchairs
 * Facades and cushions.
-    * Bennett couch.
-    * Waiting room armchairs.
-    * Attic couch.
-    * Liz couch.
-    * Miriam couch.
+    * Bennett couch. (front)
+    * Waiting room armchairs. (front)
+    * Attic couch. (front)
+    * Liz couch. (side)
+    * Miriam couch. (front)
 
 # Desks
-* Facade.
+* Panel.

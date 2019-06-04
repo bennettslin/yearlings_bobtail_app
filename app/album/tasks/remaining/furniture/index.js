@@ -2,66 +2,80 @@ export default [
     {
         taskName: `bloodyTowelReflection (technically a fixture)`,
         workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `captainBedDrawers (technically a panel)`,
-        workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `bedroomDesk`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'captainBedPillow',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'bennettCushions',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'bennettPillows',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'lizPillows',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'lizPillowsReflection',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'atticCushions',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'lizCushions',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'miriamCushions',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'hospitalPillow',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
+    },
+
+    /**
+     * PANELS
+     */
+    {
+        taskName: 'captainBedPanel',
+        workedHours: 0,
+        neededHours: 1
     },
     {
-        taskName: 'hospitalBed side (technically a panel.)',
+        taskName: 'bennettBedPanel',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
+    },
+    {
+        taskName: 'lizBedPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'hospitalBedPanel',
+        workedHours: 0,
+        neededHours: 1
     }
 ]
