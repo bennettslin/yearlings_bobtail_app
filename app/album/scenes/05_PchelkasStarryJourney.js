@@ -108,7 +108,7 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    CAPTAIN_BED_DRAWERS,
+    CAPTAIN_BED_PANEL,
     BEDROOM_FENCE
 } from '../../scene/things/keys/panels'
 
@@ -135,7 +135,7 @@ export default [
                 [CAPTAIN_BED_PILLOW_BLANKET]: true
             },
             [PANELS]: {
-                [CAPTAIN_BED_DRAWERS]: true,
+                [CAPTAIN_BED_PANEL]: true,
                 [BEDROOM_FENCE]: true
             }
         },
@@ -206,7 +206,7 @@ export default [
                 [BEDROOM_DESK]: true
             },
             [PANELS]: {
-                [CAPTAIN_BED_DRAWERS]: true
+                [CAPTAIN_BED_PANEL]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -231,7 +231,7 @@ export default [
                 [BLOOM_COUNTY_POSTER]: true
             },
             [PANELS]: {
-                [CAPTAIN_BED_DRAWERS]: true,
+                [CAPTAIN_BED_PANEL]: true,
                 [BEDROOM_FENCE]: true
             },
             [PUPPETS]: {

@@ -83,7 +83,8 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    VOLKSWAGEN
+    VOLKSWAGEN,
+    BENNETT_BED_PANEL
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -179,6 +180,9 @@ export default [
             },
             [FURNITURES]: {
                 [BENNETT_PILLOWS_BLANKET]: true
+            },
+            [PANELS]: {
+                [BENNETT_BED_PANEL]: true
             }
         },
         cubes: BASEMENT_BED_KEY,

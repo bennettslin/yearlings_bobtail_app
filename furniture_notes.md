@@ -2,7 +2,6 @@
 * Write code to let panel be flush against cubes.
 
 # Beds
-* Make Bennett bed two cubes wide.
 * Pillows and blankets are always separate.
 * Facades.
     * Captain bed.

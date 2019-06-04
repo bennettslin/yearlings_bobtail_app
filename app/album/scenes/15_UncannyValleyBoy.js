@@ -101,7 +101,8 @@ import {
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
-    SNOWGLOBE_BENNETT_ALONE
+    SNOWGLOBE_BENNETT_ALONE,
+    BENNETT_BED_PANEL
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -123,6 +124,9 @@ export default [
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
+            },
+            [PANELS]: {
+                [BENNETT_BED_PANEL]: true
             }
         },
         cubes: BASEMENT_BED_KEY,
@@ -160,6 +164,9 @@ export default [
             },
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
+            },
+            [PANELS]: {
+                [BENNETT_BED_PANEL]: true
             }
         },
         cubes: BASEMENT_MAGIC_KEY,
@@ -352,6 +359,9 @@ export default [
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true,
                 [CRACKED_PICTURE]: true
+            },
+            [PANELS]: {
+                [BENNETT_BED_PANEL]: true
             }
         },
         cubes: BASEMENT_MAGIC_KEY,

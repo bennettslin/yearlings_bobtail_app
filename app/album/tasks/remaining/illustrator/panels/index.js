@@ -100,7 +100,22 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'captainBedDrawers',
+        taskName: 'captainBedPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettBedPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'lizBedPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'hospitalBedPanel',
         workedHours: 0,
         neededHours: 1
     }

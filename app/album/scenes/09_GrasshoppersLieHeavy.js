@@ -97,7 +97,9 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    DISHROOM_SINK
+    DISHROOM_SINK,
+    BENNETT_BED_PANEL,
+    LIZ_BED_PANEL
 } from '../../scene/things/keys/panels'
 
 /**
@@ -304,6 +306,9 @@ export default [
             },
             [FURNITURES]: {
                 [BENNETT_PILLOWS_BLANKET]: true
+            },
+            [PANELS]: {
+                [BENNETT_BED_PANEL]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -338,6 +343,9 @@ export default [
             },
             [FURNITURES]: {
                 [BENNETT_PILLOWS_BLANKET]: true
+            },
+            [PANELS]: {
+                [BENNETT_BED_PANEL]: true
             }
         },
         cubes: BENNETT_BED_OPEN_KEY,
@@ -427,6 +435,9 @@ export default [
             [FURNITURES]: {
                 [LIZ_PILLOWS]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
+            },
+            [PANELS]: {
+                [LIZ_BED_PANEL]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
@@ -464,6 +475,9 @@ export default [
             [FURNITURES]: {
                 [LIZ_PILLOWS]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
+            },
+            [PANELS]: {
+                [LIZ_BED_PANEL]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
@@ -503,6 +517,9 @@ export default [
             [FURNITURES]: {
                 [LIZ_PILLOWS]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
+            },
+            [PANELS]: {
+                [LIZ_BED_PANEL]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,

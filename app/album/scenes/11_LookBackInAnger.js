@@ -3,7 +3,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -90,6 +91,7 @@ import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
 } from '../../scene/things/keys/furniture'
+import { LIZ_BED_PANEL } from '../../scene/things/keys/panels'
 
 export default [
     {
@@ -293,6 +295,9 @@ export default [
             [FURNITURES]: {
                 [LIZ_PILLOWS]: true,
                 [LIZ_PILLOWS_REFLECTION]: true
+            },
+            [PANELS]: {
+                [LIZ_BED_PANEL]: true
             }
         },
         cubes: LIZ_BED_KEY,

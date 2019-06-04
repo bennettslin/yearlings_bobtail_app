@@ -17,7 +17,10 @@ import {
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION
 } from '../../keys/furniture'
-import { PHONE_CALL_PANEL } from '../../keys/panels'
+import {
+    PHONE_CALL_PANEL,
+    LIZ_BED_PANEL
+} from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURES]: {
@@ -55,6 +58,16 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 5,
                 zHeight: 1,
                 zOffset: 5.5
+            }
+        }
+    },
+    [PANELS]: {
+        [LIZ_BED_PANEL]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 1,
+                zHeight: 0.5
             }
         }
     }

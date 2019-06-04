@@ -29,7 +29,7 @@ import {
     CAPTAIN_BED_PILLOW_BLANKET
 } from '../../keys/furniture'
 import {
-    CAPTAIN_BED_DRAWERS,
+    CAPTAIN_BED_PANEL,
     BEDROOM_FENCE
 } from '../../keys/panels'
 import {
@@ -88,7 +88,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
-        [CAPTAIN_BED_DRAWERS]: {
+        [CAPTAIN_BED_PANEL]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 6,

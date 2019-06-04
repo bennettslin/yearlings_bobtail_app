@@ -23,5 +23,9 @@ export const TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel'
 export const PHONE_CALL_PANEL = 'phoneCallPanel'
 export const WEDDING_PLATFORM = 'weddingPlatform'
 export const INVERSE_THOUGHT_PANEL = 'inverseThoughtBackdrop'
+
 // TODO
-export const CAPTAIN_BED_DRAWERS = 'captainBedDrawers'
+export const CAPTAIN_BED_PANEL = 'captainBedPanel'
+export const BENNETT_BED_PANEL = 'bennettBedPanel'
+export const LIZ_BED_PANEL = 'lizBedPanel'
+export const HOSPITAL_BED_PANEL = 'hospitalBedPanel'

@@ -1,12 +1,14 @@
 import {
     FIXTURES,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 import {
     NUDE_DRAWINGS,
     VASELINE
 } from '../../keys/fixtures'
 import { BENNETT_PILLOWS_BLANKET } from '../../keys/furniture'
+import { BENNETT_BED_PANEL } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURES]: {
@@ -29,6 +31,16 @@ const ARRANGEMENTS_THINGS = {
     },
     [FURNITURES]: {
         [BENNETT_PILLOWS_BLANKET]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 1,
+                zHeight: 0.5
+            }
+        }
+    },
+    [PANELS]: {
+        [BENNETT_BED_PANEL]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 9,
