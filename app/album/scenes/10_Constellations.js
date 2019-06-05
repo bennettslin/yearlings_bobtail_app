@@ -83,7 +83,10 @@ import {
 
 import {
     SATURN_EXTERIOR,
-    SATURN_INTERIOR
+    SATURN_INTERIOR,
+    ATTIC_COUCH_PANEL,
+    ATTIC_COUCH_ARMREST_LEFT,
+    ATTIC_COUCH_ARMREST_RIGHT
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -334,6 +337,11 @@ export default [
             },
             [FURNITURES]: {
                 [ATTIC_CUSHIONS]: true
+            },
+            [PANELS]: {
+                [ATTIC_COUCH_PANEL]: true,
+                [ATTIC_COUCH_ARMREST_LEFT]: true,
+                [ATTIC_COUCH_ARMREST_RIGHT]: true
             }
         },
         cubes: ATTIC_KEY,

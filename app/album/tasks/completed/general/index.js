@@ -4596,5 +4596,10 @@ export default [
         taskName: `Rearrange scene arrangements and cubes.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Add bed and couch presences.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

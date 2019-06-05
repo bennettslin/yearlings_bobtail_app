@@ -1,6 +1,7 @@
 import {
     CUTOUTS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 import {
     STORAGE_BOXES,
@@ -9,6 +10,11 @@ import {
     TELEVISION
 } from '../../keys/cutouts'
 import { ATTIC_CUSHIONS } from '../../keys/furniture'
+import {
+    ATTIC_COUCH_PANEL,
+    ATTIC_COUCH_ARMREST_LEFT,
+    ATTIC_COUCH_ARMREST_RIGHT
+} from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUTS]: {
@@ -47,6 +53,32 @@ const ARRANGEMENTS_THINGS = {
     },
     [FURNITURES]: {
         [ATTIC_CUSHIONS]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 3.5,
+                xWidth: 4,
+                zHeight: 0.5
+            }
+        }
+    },
+    [PANELS]: {
+        [ATTIC_COUCH_PANEL]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 3.5,
+                xWidth: 4,
+                zHeight: 0.5
+            }
+        },
+        [ATTIC_COUCH_ARMREST_LEFT]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 3.5,
+                xWidth: 4,
+                zHeight: 0.5
+            }
+        },
+        [ATTIC_COUCH_ARMREST_RIGHT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 3.5,

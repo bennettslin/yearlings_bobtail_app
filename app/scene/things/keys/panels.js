@@ -26,9 +26,30 @@ export const INVERSE_THOUGHT_PANEL = 'inverseThoughtBackdrop'
 
 // TODO
 export const CAPTAIN_BED_PANEL = 'captainBedPanel'
-// TODO
+
 export const BENNETT_BED_PANEL = 'bennettBedPanel'
-// TODO
+
 export const LIZ_BED_PANEL = 'lizBedPanel'
-// TODO
+
 export const HOSPITAL_BED_PANEL = 'hospitalBedPanel'
+
+export const BENNETT_COUCH_PANEL = 'bennettCouchPanel'
+export const BENNETT_COUCH_ARMREST_LEFT = 'bennettCouchArmrestLeft'
+export const BENNETT_COUCH_ARMREST_RIGHT = 'bennettCouchArmrestRight'
+
+export const WAITING_ARMCHAIR_PANEL_BENNETT = 'waitingArmchairPanelBennett'
+export const WAITING_ARMCHAIR_PANEL_LIZ = 'waitingArmchairPanelLiz'
+export const WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT = 'waitingArmchairArmrestLeftBennett'
+export const WAITING_ARMCHAIR_ARMREST_LEFT_LIZ = 'waitingArmchairArmrestLeftLiz'
+export const WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT = 'waitingArmchairArmrestRightBennett'
+export const WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ = 'waitingArmchairArmrestRightLiz'
+
+export const ATTIC_COUCH_PANEL = 'atticCouchPanel'
+export const ATTIC_COUCH_ARMREST_LEFT = 'atticCouchArmrestLeft'
+export const ATTIC_COUCH_ARMREST_RIGHT = 'atticCouchArmrestRight'
+
+export const LIZ_COUCH_PANEL = 'lizCouchPanel'
+
+export const MIRIAM_COUCH_PANEL = 'miriamCouchPanel'
+export const MIRIAM_COUCH_ARMREST_LEFT = 'miriamCouchArmrestLeft'
+export const MIRIAM_COUCH_ARMREST_RIGHT = 'miriamCouchArmrestRight'

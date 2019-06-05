@@ -8,13 +8,26 @@ import SchoolbusInterior from './Panels/SchoolbusInterior'
 import SchoolbusExterior from './Panels/SchoolbusExterior'
 import OceanCaveInterior from './Panels/OceanCaveInterior'
 import OceanCaveExterior from './Panels/OceanCaveExterior'
+import BennettCouchPanel from './Panels/BennettCouchPanel'
+import BennettCouchArmrestLeft from './Panels/BennettCouchArmrestLeft'
+import BennettCouchArmrestRight from './Panels/BennettCouchArmrestRight'
 import GoKartExterior from './Panels/GoKartExterior'
 import DishroomSink from './Panels/DishroomSink'
 import BennettBedPanel from './Panels/BennettBedPanel'
+import WaitingArmchairPanel from './Panels/WaitingArmchairPanel'
+import WaitingArmchairArmrestLeft from './Panels/WaitingArmchairArmrestLeft'
+import WaitingArmchairArmrestRight from './Panels/WaitingArmchairArmrestRight'
 import LizBedPanel from './Panels/LizBedPanel'
 import SaturnInterior from './Panels/SaturnInterior'
 import SaturnExterior from './Panels/SaturnExterior'
+import AtticCouchPanel from './Panels/AtticCouchPanel'
+import AtticCouchArmrestLeft from './Panels/AtticCouchArmrestLeft'
+import AtticCouchArmrestRight from './Panels/AtticCouchArmrestRight'
 import Volkswagen from './Panels/Volkswagen'
+import LizCouchPanel from './Panels/LizCouchPanel'
+import MiriamCouchPanel from './Panels/MiriamCouchPanel'
+import MiriamCouchArmrestLeft from './Panels/MiriamCouchArmrestLeft'
+import MiriamCouchArmrestRight from './Panels/MiriamCouchArmrestRight'
 import Snowglobe from './Panels/Snowglobe'
 import ReattaInterior from './Panels/ReattaInterior'
 import ReattaExterior from './Panels/ReattaExterior'
@@ -34,14 +47,30 @@ import {
     SCHOOLBUS_INTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
+    BENNETT_COUCH_PANEL,
+    BENNETT_COUCH_ARMREST_LEFT,
+    BENNETT_COUCH_ARMREST_RIGHT,
     GO_KART_LEFT_EXTERIOR,
     GO_KART_RIGHT_EXTERIOR,
     DISHROOM_SINK,
     BENNETT_BED_PANEL,
+    WAITING_ARMCHAIR_PANEL_BENNETT,
+    WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT,
+    WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT,
+    WAITING_ARMCHAIR_PANEL_LIZ,
+    WAITING_ARMCHAIR_ARMREST_LEFT_LIZ,
+    WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ,
     LIZ_BED_PANEL,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
+    ATTIC_COUCH_PANEL,
+    ATTIC_COUCH_ARMREST_LEFT,
+    ATTIC_COUCH_ARMREST_RIGHT,
     VOLKSWAGEN,
+    LIZ_COUCH_PANEL,
+    MIRIAM_COUCH_PANEL,
+    MIRIAM_COUCH_ARMREST_LEFT,
+    MIRIAM_COUCH_ARMREST_RIGHT,
     SNOWGLOBE_TETHERBALL,
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
@@ -66,14 +95,30 @@ export const propTypes = {
     [SCHOOLBUS_EXTERIOR]: PropTypes.bool,
     [OCEAN_CAVE_INTERIOR]: PropTypes.bool,
     [OCEAN_CAVE_EXTERIOR]: PropTypes.bool,
+    [BENNETT_COUCH_PANEL]: PropTypes.bool,
+    [BENNETT_COUCH_ARMREST_LEFT]: PropTypes.bool,
+    [BENNETT_COUCH_ARMREST_RIGHT]: PropTypes.bool,
     [GO_KART_LEFT_EXTERIOR]: PropTypes.bool,
     [GO_KART_RIGHT_EXTERIOR]: PropTypes.bool,
     [DISHROOM_SINK]: PropTypes.bool,
     [BENNETT_BED_PANEL]: PropTypes.bool,
+    [WAITING_ARMCHAIR_PANEL_BENNETT]: PropTypes.bool,
+    [WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT]: PropTypes.bool,
+    [WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT]: PropTypes.bool,
+    [WAITING_ARMCHAIR_PANEL_LIZ]: PropTypes.bool,
+    [WAITING_ARMCHAIR_ARMREST_LEFT_LIZ]: PropTypes.bool,
+    [WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ]: PropTypes.bool,
     [LIZ_BED_PANEL]: PropTypes.bool,
     [SATURN_INTERIOR]: PropTypes.bool,
     [SATURN_EXTERIOR]: PropTypes.bool,
+    [ATTIC_COUCH_PANEL]: PropTypes.bool,
+    [ATTIC_COUCH_ARMREST_LEFT]: PropTypes.bool,
+    [ATTIC_COUCH_ARMREST_RIGHT]: PropTypes.bool,
     [VOLKSWAGEN]: PropTypes.bool,
+    [LIZ_COUCH_PANEL]: PropTypes.bool,
+    [MIRIAM_COUCH_PANEL]: PropTypes.bool,
+    [MIRIAM_COUCH_ARMREST_LEFT]: PropTypes.bool,
+    [MIRIAM_COUCH_ARMREST_RIGHT]: PropTypes.bool,
     [SNOWGLOBE_TETHERBALL]: PropTypes.bool,
     [SNOWGLOBE_LIZ_ALONE]: PropTypes.bool,
     [SNOWGLOBE_BENNETT_MIRIAM]: PropTypes.bool,
@@ -98,14 +143,30 @@ export default {
     [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
     [OCEAN_CAVE_INTERIOR]: OceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: OceanCaveExterior,
+    [BENNETT_COUCH_PANEL]: BennettCouchPanel,
+    [BENNETT_COUCH_ARMREST_LEFT]: BennettCouchArmrestLeft,
+    [BENNETT_COUCH_ARMREST_RIGHT]: BennettCouchArmrestRight,
     [GO_KART_LEFT_EXTERIOR]: GoKartExterior,
     [GO_KART_RIGHT_EXTERIOR]: GoKartExterior,
     [DISHROOM_SINK]: DishroomSink,
     [BENNETT_BED_PANEL]: BennettBedPanel,
+    [WAITING_ARMCHAIR_PANEL_BENNETT]: WaitingArmchairPanel,
+    [WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT]: WaitingArmchairArmrestLeft,
+    [WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT]: WaitingArmchairArmrestRight,
+    [WAITING_ARMCHAIR_PANEL_LIZ]: WaitingArmchairPanel,
+    [WAITING_ARMCHAIR_ARMREST_LEFT_LIZ]: WaitingArmchairArmrestLeft,
+    [WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ]: WaitingArmchairArmrestRight,
     [LIZ_BED_PANEL]: LizBedPanel,
     [SATURN_INTERIOR]: SaturnInterior,
     [SATURN_EXTERIOR]: SaturnExterior,
+    [ATTIC_COUCH_PANEL]: AtticCouchPanel,
+    [ATTIC_COUCH_ARMREST_LEFT]: AtticCouchArmrestLeft,
+    [ATTIC_COUCH_ARMREST_RIGHT]: AtticCouchArmrestRight,
     [VOLKSWAGEN]: Volkswagen,
+    [LIZ_COUCH_PANEL]: LizCouchPanel,
+    [MIRIAM_COUCH_PANEL]: MiriamCouchPanel,
+    [MIRIAM_COUCH_ARMREST_LEFT]: MiriamCouchArmrestLeft,
+    [MIRIAM_COUCH_ARMREST_RIGHT]: MiriamCouchArmrestRight,
     [SNOWGLOBE_TETHERBALL]: Snowglobe,
     [SNOWGLOBE_LIZ_ALONE]: Snowglobe,
     [SNOWGLOBE_BENNETT_MIRIAM]: Snowglobe,

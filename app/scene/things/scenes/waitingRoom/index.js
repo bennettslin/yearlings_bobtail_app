@@ -1,6 +1,7 @@
 import {
     BUBBLES,
-    CUTOUTS
+    CUTOUTS,
+    PANELS
 } from 'constants/scene'
 import { WAITING_ROOM_THOUGHTS } from '../../keys/bubbles'
 import {
@@ -8,6 +9,14 @@ import {
     PAINTING,
     WAITING_ROOM_PLANT
 } from '../../keys/cutouts'
+import {
+    WAITING_ARMCHAIR_PANEL_BENNETT,
+    WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT,
+    WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT,
+    WAITING_ARMCHAIR_PANEL_LIZ,
+    WAITING_ARMCHAIR_ARMREST_LEFT_LIZ,
+    WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ
+} from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUTS]: {
@@ -35,6 +44,62 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 8,
                 xWidth: 1,
                 zHeight: 4
+            }
+        }
+    },
+    [PANELS]: {
+        [WAITING_ARMCHAIR_PANEL_BENNETT]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 3,
+                zHeight: 2,
+                zOffset: 4
+            }
+        },
+        [WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 3,
+                zHeight: 2,
+                zOffset: 4
+            }
+        },
+        [WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 3,
+                zHeight: 2,
+                zOffset: 4
+            }
+        },
+        [WAITING_ARMCHAIR_PANEL_LIZ]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 3,
+                zHeight: 2,
+                zOffset: 4
+            }
+        },
+        [WAITING_ARMCHAIR_ARMREST_LEFT_LIZ]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 3,
+                zHeight: 2,
+                zOffset: 4
+            }
+        },
+        [WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 3,
+                zHeight: 2,
+                zOffset: 4
             }
         }
     }

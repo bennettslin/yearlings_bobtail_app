@@ -2,7 +2,8 @@ import {
     BACKDROPS,
     CUTOUTS,
     FIXTURES,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 import { BENNETT_COUCH_THOUGHT_BACKDROP } from '../../keys/backdrops'
 import {
@@ -18,6 +19,11 @@ import {
     TELEVISION_ALBUM,
     KEYBOARD
 } from '../../keys/fixtures'
+import {
+    BENNETT_COUCH_PANEL,
+    BENNETT_COUCH_ARMREST_LEFT,
+    BENNETT_COUCH_ARMREST_RIGHT
+} from '../../keys/panels'
 import { BENNETT_CUSHIONS } from '../../keys/furniture'
 
 const ARRANGEMENTS_THINGS = {
@@ -41,6 +47,32 @@ const ARRANGEMENTS_THINGS = {
     },
     [FURNITURES]: {
         [BENNETT_CUSHIONS]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 5,
+                xWidth: 5,
+                zHeight: 0.5
+            }
+        }
+    },
+    [PANELS]: {
+        [BENNETT_COUCH_PANEL]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 5,
+                xWidth: 5,
+                zHeight: 0.5
+            }
+        },
+        [BENNETT_COUCH_ARMREST_LEFT]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 5,
+                xWidth: 5,
+                zHeight: 0.5
+            }
+        },
+        [BENNETT_COUCH_ARMREST_RIGHT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,

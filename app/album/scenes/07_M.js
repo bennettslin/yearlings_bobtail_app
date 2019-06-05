@@ -4,7 +4,8 @@ import {
     BUBBLES,
     CUTOUTS,
     FIXTURES,
-    FLATS
+    FLATS,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -109,6 +110,12 @@ import {
     COMMERCIAL_NEAR_RIGHT
 } from '../../scene/things/keys/flats'
 
+import {
+    BENNETT_COUCH_PANEL,
+    BENNETT_COUCH_ARMREST_LEFT,
+    BENNETT_COUCH_ARMREST_RIGHT
+} from '../../scene/things/keys/panels'
+
 export default [
     {
         unitIndex: 1,
@@ -128,6 +135,11 @@ export default [
             [FIXTURES]: {
                 [BENNETT_RECORD_PLAYER_COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true
+            },
+            [PANELS]: {
+                [BENNETT_COUCH_PANEL]: true,
+                [BENNETT_COUCH_ARMREST_LEFT]: true,
+                [BENNETT_COUCH_ARMREST_RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -155,6 +167,11 @@ export default [
                 [TELEVISION_ALBUM]: true,
                 [BENNETT_RECORD_PLAYER_COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true
+            },
+            [PANELS]: {
+                [BENNETT_COUCH_PANEL]: true,
+                [BENNETT_COUCH_ARMREST_LEFT]: true,
+                [BENNETT_COUCH_ARMREST_RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -190,6 +207,11 @@ export default [
                 [BENNETT_RECORD_PLAYER_COUCH]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [KEYBOARD]: true
+            },
+            [PANELS]: {
+                [BENNETT_COUCH_PANEL]: true,
+                [BENNETT_COUCH_ARMREST_LEFT]: true,
+                [BENNETT_COUCH_ARMREST_RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,

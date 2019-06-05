@@ -118,5 +118,30 @@ export default [
         taskName: 'hospitalBedPanel',
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: 'bennettCouchPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'waitingArmchairPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'atticCouchPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'lizCouchPanel',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'miriamCouchPanel',
+        workedHours: 0,
+        neededHours: 1
     }
 ]

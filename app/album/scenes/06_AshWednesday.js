@@ -4,7 +4,8 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES
+    FURNITURES,
+    PANELS
 } from 'constants/scene'
 
 import {
@@ -81,6 +82,12 @@ import {
     BENNETT_CUSHIONS
 } from '../../scene/things/keys/furniture'
 
+import {
+    BENNETT_COUCH_PANEL,
+    BENNETT_COUCH_ARMREST_LEFT,
+    BENNETT_COUCH_ARMREST_RIGHT
+} from '../../scene/things/keys/panels'
+
 export default [
     {
         unitIndex: 1,
@@ -141,6 +148,11 @@ export default [
             },
             [FURNITURES]: {
                 [BENNETT_CUSHIONS]: true
+            },
+            [PANELS]: {
+                [BENNETT_COUCH_PANEL]: true,
+                [BENNETT_COUCH_ARMREST_LEFT]: true,
+                [BENNETT_COUCH_ARMREST_RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,

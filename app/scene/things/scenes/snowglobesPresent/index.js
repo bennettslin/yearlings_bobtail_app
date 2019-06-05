@@ -7,7 +7,10 @@ import { ROAD_PRESENT } from '../../keys/flats'
 import { MIRIAM_CUSHIONS } from '../../keys/furniture'
 import {
     SNOWGLOBE_LIZ_ALONE,
-    SNOWGLOBE_BENNETT_MIRIAM
+    SNOWGLOBE_BENNETT_MIRIAM,
+    MIRIAM_COUCH_PANEL,
+    MIRIAM_COUCH_ARMREST_LEFT,
+    MIRIAM_COUCH_ARMREST_RIGHT
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -41,6 +44,30 @@ const ARRANGEMENTS_THINGS = {
             }
         },
         [SNOWGLOBE_BENNETT_MIRIAM]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8,
+                xWidth: 6,
+                zHeight: 5.5
+            }
+        },
+        [MIRIAM_COUCH_PANEL]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8,
+                xWidth: 6,
+                zHeight: 5.5
+            }
+        },
+        [MIRIAM_COUCH_ARMREST_LEFT]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8,
+                xWidth: 6,
+                zHeight: 5.5
+            }
+        },
+        [MIRIAM_COUCH_ARMREST_RIGHT]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,

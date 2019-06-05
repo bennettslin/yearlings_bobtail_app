@@ -102,7 +102,11 @@ import {
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE,
-    BENNETT_BED_PANEL
+    BENNETT_BED_PANEL,
+    LIZ_COUCH_PANEL,
+    MIRIAM_COUCH_PANEL,
+    MIRIAM_COUCH_ARMREST_LEFT,
+    MIRIAM_COUCH_ARMREST_RIGHT
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -258,7 +262,10 @@ export default [
             },
             [PANELS]: {
                 [SNOWGLOBE_LIZ_ALONE]: true,
-                [SNOWGLOBE_BENNETT_MIRIAM]: true
+                [SNOWGLOBE_BENNETT_MIRIAM]: true,
+                [MIRIAM_COUCH_PANEL]: true,
+                [MIRIAM_COUCH_ARMREST_LEFT]: true,
+                [MIRIAM_COUCH_ARMREST_RIGHT]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
@@ -316,6 +323,9 @@ export default [
             },
             [FURNITURES]: {
                 [LIZ_CUSHIONS]: true
+            },
+            [PANELS]: {
+                [LIZ_COUCH_PANEL]: true
             },
             [PANELS]: {
                 [SNOWGLOBE_LIZ_KHARI]: true,
