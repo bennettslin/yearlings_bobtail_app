@@ -117,7 +117,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.25,
+                    workedHours: 3.75,
                     compound: 2,
                     description: 'side, asleep',
                     instance: ASLEEP

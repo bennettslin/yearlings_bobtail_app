@@ -197,7 +197,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_STEPHANIE]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'side angle, playful, waving',
                     instance: HORSING
@@ -237,7 +237,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_STEPHANIE]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'back, consoling',
                     instance: DRYING_TEARS
@@ -269,7 +269,7 @@ export default [
                 [WILLY]: {
                     crossingGuard: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         description: 'front, holding up stop sign',
                         instance: CROSSING_GUARD
                     }
