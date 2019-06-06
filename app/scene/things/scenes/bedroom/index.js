@@ -25,10 +25,10 @@ import {
     BEDROOM_BUS
 } from '../../keys/flats'
 import {
-    BEDROOM_DESK,
     CAPTAIN_BED_PILLOW_BLANKET
 } from '../../keys/furniture'
 import {
+    BEDROOM_DESK,
     CAPTAIN_BED_PANEL,
     BEDROOM_FENCE
 } from '../../keys/panels'
@@ -70,14 +70,6 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FURNITURES]: {
-        [BEDROOM_DESK]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 4,
-                zHeight: 1
-            }
-        },
         [CAPTAIN_BED_PILLOW_BLANKET]: {
             yIndex: 4,
             arrangement: {
@@ -88,6 +80,14 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
+        [BEDROOM_DESK]: {
+            yIndex: 4,
+            arrangement: {
+                xPosition: 8,
+                xWidth: 4,
+                zHeight: 1
+            }
+        },
         [CAPTAIN_BED_PANEL]: {
             yIndex: 4,
             arrangement: {

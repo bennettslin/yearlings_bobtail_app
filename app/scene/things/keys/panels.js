@@ -25,6 +25,8 @@ export const WEDDING_PLATFORM = 'weddingPlatform'
 export const INVERSE_THOUGHT_PANEL = 'inverseThoughtBackdrop'
 
 // TODO
+export const BEDROOM_DESK = 'bedroomDesk'
+
 export const CAPTAIN_BED_PANEL = 'captainBedPanel'
 
 export const BENNETT_BED_PANEL = 'bennettBedPanel'
@@ -36,6 +38,9 @@ export const HOSPITAL_BED_PANEL = 'hospitalBedPanel'
 export const BENNETT_COUCH_PANEL = 'bennettCouchPanel'
 export const BENNETT_COUCH_ARMREST_LEFT = 'bennettCouchArmrestLeft'
 export const BENNETT_COUCH_ARMREST_RIGHT = 'bennettCouchArmrestRight'
+export const MIRIAM_COUCH_PANEL = 'miriamCouchPanel' // Duplicate.
+export const MIRIAM_COUCH_ARMREST_LEFT = 'miriamCouchArmrestLeft' // Duplicate.
+export const MIRIAM_COUCH_ARMREST_RIGHT = 'miriamCouchArmrestRight' // Duplicate.
 
 export const WAITING_ARMCHAIR_PANEL_BENNETT = 'waitingArmchairPanelBennett'
 export const WAITING_ARMCHAIR_PANEL_LIZ = 'waitingArmchairPanelLiz'
@@ -50,6 +55,3 @@ export const ATTIC_COUCH_ARMREST_RIGHT = 'atticCouchArmrestRight'
 
 export const LIZ_COUCH_PANEL = 'lizCouchPanel'
 
-export const MIRIAM_COUCH_PANEL = 'miriamCouchPanel'
-export const MIRIAM_COUCH_ARMREST_LEFT = 'miriamCouchArmrestLeft'
-export const MIRIAM_COUCH_ARMREST_RIGHT = 'miriamCouchArmrestRight'

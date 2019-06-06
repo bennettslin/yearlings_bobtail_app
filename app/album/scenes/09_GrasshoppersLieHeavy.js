@@ -92,8 +92,10 @@ import {
 
 import {
     BENNETT_PILLOWS_BLANKET,
-    LIZ_PILLOWS,
-    LIZ_PILLOWS_REFLECTION
+    LIZ_PILLOWS_PILE,
+    LIZ_PILLOWS_PILE_REFLECTION,
+    LIZ_BLANKET_PILE,
+    LIZ_BLANKET_PILE_REFLECTION
 } from '../../scene/things/keys/furniture'
 
 import {
@@ -455,8 +457,10 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true
             },
             [FURNITURES]: {
-                [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_PILLOWS_PILE]: true,
+                [LIZ_PILLOWS_PILE_REFLECTION]: true,
+                [LIZ_BLANKET_PILE]: true,
+                [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
                 [LIZ_BED_PANEL]: true
@@ -495,8 +499,10 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true
             },
             [FURNITURES]: {
-                [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_PILLOWS_PILE]: true,
+                [LIZ_PILLOWS_PILE_REFLECTION]: true,
+                [LIZ_BLANKET_PILE]: true,
+                [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
                 [LIZ_BED_PANEL]: true
@@ -537,8 +543,8 @@ export default [
                 [BLOODY_TOWEL_REFLECTION]: true
             },
             [FURNITURES]: {
-                [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_BLANKET_PILE]: true,
+                [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
                 [LIZ_BED_PANEL]: true

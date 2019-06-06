@@ -14,8 +14,10 @@ import {
     LIZ_PHONE_BASE_REFLECTION
 } from '../../keys/fixtures'
 import {
-    LIZ_PILLOWS,
-    LIZ_PILLOWS_REFLECTION
+    LIZ_PILLOWS_PILE,
+    LIZ_PILLOWS_PILE_REFLECTION,
+    LIZ_BLANKET_PILE,
+    LIZ_BLANKET_PILE_REFLECTION
 } from '../../keys/furniture'
 import {
     PHONE_CALL_PANEL,
@@ -43,7 +45,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FURNITURES]: {
-        [LIZ_PILLOWS]: {
+        [LIZ_PILLOWS_PILE]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 5,
@@ -51,7 +53,24 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [LIZ_PILLOWS_REFLECTION]: {
+        [LIZ_PILLOWS_PILE_REFLECTION]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 5,
+                xWidth: 5,
+                zHeight: 1,
+                zOffset: 5.5
+            }
+        },
+        [LIZ_BLANKET_PILE]: {
+            yIndex: 4,
+            arrangement: {
+                xPosition: 5,
+                xWidth: 5,
+                zHeight: 0.5
+            }
+        },
+        [LIZ_BLANKET_PILE_REFLECTION]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 5,

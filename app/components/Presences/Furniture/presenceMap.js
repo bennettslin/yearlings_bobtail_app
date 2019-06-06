@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
 
-import BedroomDesk from './Furnitures/BedroomDesk'
 import CaptainBedPillowBlanket from './Furnitures/CaptainBedPillowBlanket'
 import BennettCushions from './Furnitures/BennettCushions'
 import BennettPillowsBlanket from './Furnitures/BennettPillowsBlanket'
-import LizPillows from './Furnitures/LizPillows'
-import LizPillowsReflection from './Furnitures/LizPillowsReflection'
+import LizPillowsPile from './Furnitures/LizPillowsPile'
+import LizPillowsPileReflection from './Furnitures/LizPillowsPileReflection'
+import LizBlanketPile from './Furnitures/LizBlanketPile'
+import LizBlanketPileReflection from './Furnitures/LizBlanketPileReflection'
 import AtticCushions from './Furnitures/AtticCushions'
 import LizCushions from './Furnitures/LizCushions'
 import MiriamCushions from './Furnitures/MiriamCushions'
@@ -13,12 +14,13 @@ import HospitalPillow from './Furnitures/HospitalPillow'
 import HospitalPillowLowered from './Furnitures/HospitalPillowLowered'
 
 import {
-    BEDROOM_DESK,
     CAPTAIN_BED_PILLOW_BLANKET,
     BENNETT_CUSHIONS,
     BENNETT_PILLOWS_BLANKET,
-    LIZ_PILLOWS,
-    LIZ_PILLOWS_REFLECTION,
+    LIZ_PILLOWS_PILE,
+    LIZ_PILLOWS_PILE_REFLECTION,
+    LIZ_BLANKET_PILE,
+    LIZ_BLANKET_PILE_REFLECTION,
     ATTIC_CUSHIONS,
     LIZ_CUSHIONS,
     LIZ_CUSHIONS_THOUGHT,
@@ -28,12 +30,13 @@ import {
 } from 'scene/things/keys/furniture'
 
 export const propTypes = {
-    [BEDROOM_DESK]: PropTypes.bool,
     [CAPTAIN_BED_PILLOW_BLANKET]: PropTypes.bool,
     [BENNETT_CUSHIONS]: PropTypes.bool,
     [BENNETT_PILLOWS_BLANKET]: PropTypes.bool,
-    [LIZ_PILLOWS]: PropTypes.bool,
-    [LIZ_PILLOWS_REFLECTION]: PropTypes.bool,
+    [LIZ_PILLOWS_PILE]: PropTypes.bool,
+    [LIZ_PILLOWS_PILE_REFLECTION]: PropTypes.bool,
+    [LIZ_BLANKET_PILE]: PropTypes.bool,
+    [LIZ_BLANKET_PILE_REFLECTION]: PropTypes.bool,
     [ATTIC_CUSHIONS]: PropTypes.bool,
     [LIZ_CUSHIONS]: PropTypes.bool,
     [LIZ_CUSHIONS_THOUGHT]: PropTypes.bool,
@@ -43,12 +46,13 @@ export const propTypes = {
 }
 
 export default {
-    [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED_PILLOW_BLANKET]: CaptainBedPillowBlanket,
     [BENNETT_CUSHIONS]: BennettCushions,
     [BENNETT_PILLOWS_BLANKET]: BennettPillowsBlanket,
-    [LIZ_PILLOWS]: LizPillows,
-    [LIZ_PILLOWS_REFLECTION]: LizPillowsReflection,
+    [LIZ_PILLOWS_PILE]: LizPillowsPile,
+    [LIZ_PILLOWS_PILE_REFLECTION]: LizPillowsPileReflection,
+    [LIZ_BLANKET_PILE]: LizBlanketPile,
+    [LIZ_BLANKET_PILE_REFLECTION]: LizBlanketPileReflection,
     [ATTIC_CUSHIONS]: AtticCushions,
     [LIZ_CUSHIONS]: LizCushions,
     [LIZ_CUSHIONS_THOUGHT]: LizCushions,

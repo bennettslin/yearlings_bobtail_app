@@ -82,8 +82,8 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    LIZ_PILLOWS,
-    LIZ_PILLOWS_REFLECTION
+    LIZ_BLANKET_PILE,
+    LIZ_BLANKET_PILE_REFLECTION
 } from '../../scene/things/keys/furniture'
 
 import {
@@ -249,8 +249,8 @@ export default [
                 [PHONE_CALL_PANEL]: true
             },
             [FURNITURES]: {
-                [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
+                [LIZ_BLANKET_PILE]: true,
+                [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
                 [LIZ_BED_PANEL]: true

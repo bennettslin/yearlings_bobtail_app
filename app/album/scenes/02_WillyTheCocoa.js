@@ -99,12 +99,10 @@ import {
     BEDROOM_SIREN
 } from '../../scene/things/keys/flats'
 
-import {
-    BEDROOM_DESK,
-    CAPTAIN_BED_PILLOW_BLANKET
-} from '../../scene/things/keys/furniture'
+import { CAPTAIN_BED_PILLOW_BLANKET } from '../../scene/things/keys/furniture'
 
 import {
+    BEDROOM_DESK,
     CAPTAIN_BED_PANEL,
     BEDROOM_FENCE
 } from '../../scene/things/keys/panels'
@@ -230,10 +228,10 @@ export default [
                 [CHRISTOPHER_LETTERS]: true
             },
             [FURNITURES]: {
-                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_PILLOW_BLANKET]: true
             },
             [PANELS]: {
+                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_PANEL]: true,
                 [BEDROOM_FENCE]: true
             }
@@ -312,10 +310,8 @@ export default [
             [FLATS]: {
                 [BEDROOM_SIREN]: true
             },
-            [FURNITURES]: {
-                [BEDROOM_DESK]: true
-            },
             [PANELS]: {
+                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_PANEL]: true
             }
         },

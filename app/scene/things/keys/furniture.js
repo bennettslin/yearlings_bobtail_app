@@ -1,5 +1,4 @@
 // TODO
-export const BEDROOM_DESK = 'bedroomDesk'
 
 // TODO
 export const CAPTAIN_BED_PILLOW_BLANKET = 'captainBedPillowBlanket'
@@ -11,10 +10,12 @@ export const BENNETT_CUSHIONS = 'bennettCushions'
 export const BENNETT_PILLOWS_BLANKET = 'bennettPillowsBlanket'
 
 // TODO
-export const LIZ_PILLOWS = 'lizPillows'
+export const LIZ_PILLOWS_PILE = 'lizPillowsPile'
+export const LIZ_BLANKET_PILE = 'lizBlanketPile'
 
 // TODO
-export const LIZ_PILLOWS_REFLECTION = 'lizPillowsReflection'
+export const LIZ_PILLOWS_PILE_REFLECTION = 'lizPillowsPileReflection'
+export const LIZ_BLANKET_PILE_REFLECTION = 'lizBlanketPileReflection'
 
 // TODO: Delete, as it's part of actor?
 export const ATTIC_CUSHIONS = 'atticCushions'

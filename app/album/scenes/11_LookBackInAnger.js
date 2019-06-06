@@ -3,7 +3,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 
@@ -87,10 +86,6 @@ import {
     CROWD_NEAR_SIDE
 } from '../../scene/things/keys/flats'
 
-import {
-    LIZ_PILLOWS,
-    LIZ_PILLOWS_REFLECTION
-} from '../../scene/things/keys/furniture'
 import { LIZ_BED_PANEL } from '../../scene/things/keys/panels'
 
 export default [
@@ -291,10 +286,6 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true,
                 [BENNETT_SHOE]: true,
                 [BENNETT_SHOE_REFLECTION]: true
-            },
-            [FURNITURES]: {
-                [LIZ_PILLOWS]: true,
-                [LIZ_PILLOWS_REFLECTION]: true
             },
             [PANELS]: {
                 [LIZ_BED_PANEL]: true

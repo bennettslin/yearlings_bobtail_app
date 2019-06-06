@@ -102,12 +102,10 @@ import {
     LOCKER_BANK
 } from '../../scene/things/keys/flats'
 
-import {
-    BEDROOM_DESK,
-    CAPTAIN_BED_PILLOW_BLANKET
-} from '../../scene/things/keys/furniture'
+import { CAPTAIN_BED_PILLOW_BLANKET } from '../../scene/things/keys/furniture'
 
 import {
+    BEDROOM_DESK,
     CAPTAIN_BED_PANEL,
     BEDROOM_FENCE
 } from '../../scene/things/keys/panels'
@@ -131,10 +129,10 @@ export default [
                 [BLOOM_COUNTY_POSTER]: true
             },
             [FURNITURES]: {
-                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_PILLOW_BLANKET]: true
             },
             [PANELS]: {
+                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_PANEL]: true,
                 [BEDROOM_FENCE]: true
             }
@@ -168,10 +166,8 @@ export default [
                 [CAPTAIN_BED_LAMP]: true,
                 [BENNETT_LETTERS]: true
             },
-            [FURNITURES]: {
-                [BEDROOM_DESK]: true
-            },
             [PANELS]: {
+                [BEDROOM_DESK]: true,
                 [BEDROOM_FENCE]: true
             }
         },
@@ -202,10 +198,8 @@ export default [
             [FLATS]: {
                 [BEDROOM_BUS]: true
             },
-            [FURNITURES]: {
-                [BEDROOM_DESK]: true
-            },
             [PANELS]: {
+                [BEDROOM_DESK]: true,
                 [CAPTAIN_BED_PANEL]: true
             }
         },
@@ -256,13 +250,11 @@ export default [
                     instance: SHAKEN
                 }
             },
-            [FURNITURES]: {
-                [BEDROOM_DESK]: true
-            },
             [FIXTURES]: {
                 [BEYONDER_ENVELOPE]: true
             },
             [PANELS]: {
+                [BEDROOM_DESK]: true,
                 [BEDROOM_FENCE]: true
             },
             [PUPPETS]: {

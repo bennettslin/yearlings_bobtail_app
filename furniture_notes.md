@@ -15,7 +15,6 @@
     * Waiting room armchairs. (front)
     * Attic couch. (front)
     * Liz couch. (side)
-    * Miriam couch. (front)
 
 # Desks
 * Panel.

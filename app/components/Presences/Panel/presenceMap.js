@@ -2,15 +2,16 @@ import PropTypes from 'prop-types'
 
 import EstherSpeechPanel from './Panels/EstherSpeechPanel'
 import Bathtub from './Panels/Bathtub'
+import BedroomDesk from './Panels/BedroomDesk'
 import CaptainBedPanel from './Panels/CaptainBedPanel'
 import BedroomFence from './Panels/BedroomFence'
 import SchoolbusInterior from './Panels/SchoolbusInterior'
 import SchoolbusExterior from './Panels/SchoolbusExterior'
 import OceanCaveInterior from './Panels/OceanCaveInterior'
 import OceanCaveExterior from './Panels/OceanCaveExterior'
-import BennettCouchPanel from './Panels/BennettCouchPanel'
-import BennettCouchArmrestLeft from './Panels/BennettCouchArmrestLeft'
-import BennettCouchArmrestRight from './Panels/BennettCouchArmrestRight'
+import BennettMiriamCouchPanel from './Panels/BennettMiriamCouchPanel'
+import BennettMiriamCouchArmrestLeft from './Panels/BennettMiriamCouchArmrestLeft'
+import BennettMiriamCouchArmrestRight from './Panels/BennettMiriamCouchArmrestRight'
 import GoKartExterior from './Panels/GoKartExterior'
 import DishroomSink from './Panels/DishroomSink'
 import BennettBedPanel from './Panels/BennettBedPanel'
@@ -25,9 +26,6 @@ import AtticCouchArmrestLeft from './Panels/AtticCouchArmrestLeft'
 import AtticCouchArmrestRight from './Panels/AtticCouchArmrestRight'
 import Volkswagen from './Panels/Volkswagen'
 import LizCouchPanel from './Panels/LizCouchPanel'
-import MiriamCouchPanel from './Panels/MiriamCouchPanel'
-import MiriamCouchArmrestLeft from './Panels/MiriamCouchArmrestLeft'
-import MiriamCouchArmrestRight from './Panels/MiriamCouchArmrestRight'
 import Snowglobe from './Panels/Snowglobe'
 import ReattaInterior from './Panels/ReattaInterior'
 import ReattaExterior from './Panels/ReattaExterior'
@@ -41,6 +39,7 @@ import InverseThoughtPanel from './Panels/InverseThoughtPanel'
 import {
     ESTHER_SPEECH_PANEL,
     BATHTUB,
+    BEDROOM_DESK,
     CAPTAIN_BED_PANEL,
     BEDROOM_FENCE,
     SCHOOLBUS_EXTERIOR,
@@ -89,6 +88,7 @@ import {
 export const propTypes = {
     [ESTHER_SPEECH_PANEL]: PropTypes.bool,
     [BATHTUB]: PropTypes.bool,
+    [BEDROOM_DESK]: PropTypes.bool,
     [CAPTAIN_BED_PANEL]: PropTypes.bool,
     [BEDROOM_FENCE]: PropTypes.bool,
     [SCHOOLBUS_INTERIOR]: PropTypes.bool,
@@ -137,15 +137,16 @@ export const propTypes = {
 export default {
     [ESTHER_SPEECH_PANEL]: EstherSpeechPanel,
     [BATHTUB]: Bathtub,
+    [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED_PANEL]: CaptainBedPanel,
     [BEDROOM_FENCE]: BedroomFence,
     [SCHOOLBUS_INTERIOR]: SchoolbusInterior,
     [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
     [OCEAN_CAVE_INTERIOR]: OceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: OceanCaveExterior,
-    [BENNETT_COUCH_PANEL]: BennettCouchPanel,
-    [BENNETT_COUCH_ARMREST_LEFT]: BennettCouchArmrestLeft,
-    [BENNETT_COUCH_ARMREST_RIGHT]: BennettCouchArmrestRight,
+    [BENNETT_COUCH_PANEL]: BennettMiriamCouchPanel,
+    [BENNETT_COUCH_ARMREST_LEFT]: BennettMiriamCouchArmrestLeft,
+    [BENNETT_COUCH_ARMREST_RIGHT]: BennettMiriamCouchArmrestRight,
     [GO_KART_LEFT_EXTERIOR]: GoKartExterior,
     [GO_KART_RIGHT_EXTERIOR]: GoKartExterior,
     [DISHROOM_SINK]: DishroomSink,
@@ -164,9 +165,9 @@ export default {
     [ATTIC_COUCH_ARMREST_RIGHT]: AtticCouchArmrestRight,
     [VOLKSWAGEN]: Volkswagen,
     [LIZ_COUCH_PANEL]: LizCouchPanel,
-    [MIRIAM_COUCH_PANEL]: MiriamCouchPanel,
-    [MIRIAM_COUCH_ARMREST_LEFT]: MiriamCouchArmrestLeft,
-    [MIRIAM_COUCH_ARMREST_RIGHT]: MiriamCouchArmrestRight,
+    [MIRIAM_COUCH_PANEL]: BennettMiriamCouchPanel,
+    [MIRIAM_COUCH_ARMREST_LEFT]: BennettMiriamCouchArmrestLeft,
+    [MIRIAM_COUCH_ARMREST_RIGHT]: BennettMiriamCouchArmrestRight,
     [SNOWGLOBE_TETHERBALL]: Snowglobe,
     [SNOWGLOBE_LIZ_ALONE]: Snowglobe,
     [SNOWGLOBE_BENNETT_MIRIAM]: Snowglobe,
