@@ -19,3 +19,8 @@
 
 # Desks
 * Panel.
+
+# TODO
+* Add lizPillowPile.
+* Add lizBlanketPile.
+* Change to bennettPillows and bennettBlanket.

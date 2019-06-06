@@ -64,32 +64,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'bennettBedPanel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizBedPanel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'hospitalBedPanel',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'bennettCouchPanel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'waitingArmchairPanel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'atticCouchPanel',
         workedHours: 0,
         neededHours: 1
     },

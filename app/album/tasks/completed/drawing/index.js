@@ -890,5 +890,25 @@ export default [
         taskName: `Timebox to think about fabrics and furniture.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'lizBedPanel',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'bennettBedPanel',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'atticCouchPanel',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'bennettCouchPanel',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

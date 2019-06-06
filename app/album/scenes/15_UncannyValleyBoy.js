@@ -186,7 +186,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front angle, wincing',
                     instance: PAST
                 },
@@ -227,7 +227,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_FATHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'front, dismissive, not feeling bad',
                     instance: PRESENT
