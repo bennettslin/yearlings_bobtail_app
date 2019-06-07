@@ -117,7 +117,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 3.5,
                     compound: 2,
                     description: 'side, asleep',
                     instance: ASLEEP
@@ -227,7 +227,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_FATHER]: {
                     todo: true,
-                    workedHours: 4.25,
+                    workedHours: 4,
                     compound: 2,
                     description: 'front, dismissive, not feeling bad',
                     instance: PRESENT
@@ -281,7 +281,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'concerned',
                     instance: FUTURE
                 },
@@ -345,7 +345,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.25,
+                    workedHours: 3.5,
                     compound: 2,
                     description: 'side sitting, vindictive, magical gesture',
                     instance: FENDING_OFF
