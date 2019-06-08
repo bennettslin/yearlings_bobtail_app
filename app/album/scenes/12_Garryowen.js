@@ -84,8 +84,8 @@ import {
 
 import {
     VOLKSWAGEN,
-    BENNETT_BED_PANEL,
-    LIZ_COUCH_PANEL
+    BENNETT_BED,
+    LIZ_COUCH
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -106,7 +106,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -186,7 +186,7 @@ export default [
                 [BENNETT_PILLOWS_BLANKET]: true
             },
             [PANELS]: {
-                [BENNETT_BED_PANEL]: true
+                [BENNETT_BED]: true
             }
         },
         cubes: BASEMENT_BED_KEY,
@@ -261,7 +261,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

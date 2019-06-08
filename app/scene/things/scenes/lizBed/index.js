@@ -21,7 +21,7 @@ import {
 } from '../../keys/furniture'
 import {
     PHONE_CALL_PANEL,
-    LIZ_BED_PANEL
+    LIZ_BED
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -81,7 +81,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
-        [LIZ_BED_PANEL]: {
+        [LIZ_BED]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 9,

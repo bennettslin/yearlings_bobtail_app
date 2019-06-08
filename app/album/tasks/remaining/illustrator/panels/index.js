@@ -100,22 +100,22 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'captainBedPanel',
+        taskName: 'captainBed',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'bennettBedPanel',
+        taskName: 'bennettBed',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'lizBedPanel',
+        taskName: 'lizBed',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'hospitalBedPanel',
+        taskName: 'hospitalBed',
         workedHours: 0,
         neededHours: 1
     },
@@ -130,12 +130,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'atticCouchPanel',
+        taskName: 'atticCouch',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'lizCouchPanel',
+        taskName: 'lizCouch',
         workedHours: 0,
         neededHours: 1
     }

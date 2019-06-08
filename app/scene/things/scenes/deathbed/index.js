@@ -14,7 +14,7 @@ import {
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
     INVERSE_THOUGHT_PANEL,
-    HOSPITAL_BED_PANEL
+    HOSPITAL_BED
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
-        [HOSPITAL_BED_PANEL]: {
+        [HOSPITAL_BED]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 9,

@@ -29,7 +29,7 @@ import {
 } from '../../keys/furniture'
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED_PANEL,
+    CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../keys/panels'
 import {
@@ -88,7 +88,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [CAPTAIN_BED_PANEL]: {
+        [CAPTAIN_BED]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 6,

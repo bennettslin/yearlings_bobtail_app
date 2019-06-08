@@ -66,8 +66,8 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    GO_KART_LEFT_EXTERIOR,
-    GO_KART_RIGHT_EXTERIOR
+    GO_KART_EXTERIOR_LEFT,
+    GO_KART_EXTERIOR_RIGHT
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -205,8 +205,8 @@ export default [
                 [GO_KART_BACKDROP]: true
             },
             [PANELS]: {
-                [GO_KART_LEFT_EXTERIOR]: true,
-                [GO_KART_RIGHT_EXTERIOR]: true
+                [GO_KART_EXTERIOR_LEFT]: true,
+                [GO_KART_EXTERIOR_RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const CaptainBedPanel = ({
+const LizBed = ({
 
     className,
 
@@ -19,7 +19,7 @@ const CaptainBedPanel = ({
     return (
         <Svg
             className={cx(
-                'CaptainBedPanel',
+                'LizBed',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const CaptainBedPanel = ({
                 {...other}
             >
                 {cx(
-                    'CaptainBedPanel'
+                    'LizBed'
                 )}
             </text>
         </Svg>
     )
 }
 
-CaptainBedPanel.propTypes = propTypes
+LizBed.propTypes = propTypes
 
-export default CaptainBedPanel
+export default LizBed

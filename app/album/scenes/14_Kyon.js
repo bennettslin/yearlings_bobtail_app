@@ -51,7 +51,7 @@ import { TCHOTCHKES } from '../../scene/things/keys/fixtures'
 
 import { LIZ_CUSHIONS } from '../../scene/things/keys/furniture'
 
-import { LIZ_COUCH_PANEL } from '../../scene/things/keys/panels'
+import { LIZ_COUCH } from '../../scene/things/keys/panels'
 
 import {
     OPAL_COUCH,
@@ -79,7 +79,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -106,7 +106,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -136,7 +136,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             },
             [PUPPETS]: {
                 [OPAL_COUCH]: true
@@ -172,7 +172,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_OPEN_KEY,
@@ -209,7 +209,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
@@ -245,7 +245,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_GATE_OPEN_KEY,
@@ -272,7 +272,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             },
             [PUPPETS]: {
                 [OPAL_GAZING]: true
@@ -301,7 +301,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             },
             [PUPPETS]: {
                 [PEAHEN]: true,

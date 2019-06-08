@@ -102,8 +102,8 @@ import {
     SNOWGLOBE_BENNETT_MIRIAM,
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE,
-    BENNETT_BED_PANEL,
-    LIZ_COUCH_PANEL,
+    BENNETT_BED,
+    LIZ_COUCH,
     MIRIAM_COUCH_PANEL,
     MIRIAM_COUCH_ARMREST_LEFT,
     MIRIAM_COUCH_ARMREST_RIGHT
@@ -130,7 +130,7 @@ export default [
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
             },
             [PANELS]: {
-                [BENNETT_BED_PANEL]: true
+                [BENNETT_BED]: true
             }
         },
         cubes: BASEMENT_BED_KEY,
@@ -170,7 +170,7 @@ export default [
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true
             },
             [PANELS]: {
-                [BENNETT_BED_PANEL]: true
+                [BENNETT_BED]: true
             }
         },
         cubes: BASEMENT_MAGIC_KEY,
@@ -325,7 +325,7 @@ export default [
                 [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
-                [LIZ_COUCH_PANEL]: true
+                [LIZ_COUCH]: true
             },
             [PANELS]: {
                 [SNOWGLOBE_LIZ_KHARI]: true,
@@ -371,7 +371,7 @@ export default [
                 [CRACKED_PICTURE]: true
             },
             [PANELS]: {
-                [BENNETT_BED_PANEL]: true
+                [BENNETT_BED]: true
             }
         },
         cubes: BASEMENT_MAGIC_KEY,

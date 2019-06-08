@@ -103,7 +103,7 @@ import { CAPTAIN_BED_PILLOW_BLANKET } from '../../scene/things/keys/furniture'
 
 import {
     BEDROOM_DESK,
-    CAPTAIN_BED_PANEL,
+    CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../scene/things/keys/panels'
 
@@ -232,7 +232,7 @@ export default [
             },
             [PANELS]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED_PANEL]: true,
+                [CAPTAIN_BED]: true,
                 [BEDROOM_FENCE]: true
             }
         },
@@ -312,7 +312,7 @@ export default [
             },
             [PANELS]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED_PANEL]: true
+                [CAPTAIN_BED]: true
             }
         },
         cubes: BEDROOM_STOOL_KEY,

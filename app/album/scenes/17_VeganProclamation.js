@@ -87,7 +87,7 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    LIZ_BED_PANEL,
+    LIZ_BED,
     PHONE_CALL_PANEL
 } from '../../scene/things/keys/panels'
 
@@ -253,7 +253,7 @@ export default [
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
-                [LIZ_BED_PANEL]: true
+                [LIZ_BED]: true
             }
         },
         cubes: LIZ_BED_OPEN_PHONE_KEY,

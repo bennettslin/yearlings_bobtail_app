@@ -17,7 +17,7 @@ import {
     LIZ_CUSHIONS,
     LIZ_CUSHIONS_THOUGHT
 } from '../../keys/furniture'
-import { LIZ_COUCH_PANEL } from '../../keys/panels'
+import { LIZ_COUCH } from '../../keys/panels'
 import {
     OPAL_COUCH,
     OPAL_GAZING,
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
-        [LIZ_COUCH_PANEL]: {
+        [LIZ_COUCH]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 2.5,

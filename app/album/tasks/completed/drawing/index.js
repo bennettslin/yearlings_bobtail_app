@@ -892,17 +892,17 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'lizBedPanel',
+        taskName: 'lizBed',
         workedHours: 0.5,
         neededHours: 0.5
     },
     {
-        taskName: 'bennettBedPanel',
+        taskName: 'bennettBed',
         workedHours: 0.5,
         neededHours: 0.5
     },
     {
-        taskName: 'atticCouchPanel',
+        taskName: 'atticCouch',
         workedHours: 0.5,
         neededHours: 0.5
     },

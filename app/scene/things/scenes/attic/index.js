@@ -11,9 +11,9 @@ import {
 } from '../../keys/cutouts'
 import { ATTIC_CUSHIONS } from '../../keys/furniture'
 import {
-    ATTIC_COUCH_PANEL,
-    ATTIC_COUCH_ARMREST_LEFT,
-    ATTIC_COUCH_ARMREST_RIGHT
+    ATTIC_COUCH,
+    ATTIC_LEFT_ARMREST,
+    ATTIC_RIGHT_ARMREST
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -62,7 +62,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
-        [ATTIC_COUCH_PANEL]: {
+        [ATTIC_COUCH]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 3.5,
@@ -70,7 +70,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [ATTIC_COUCH_ARMREST_LEFT]: {
+        [ATTIC_LEFT_ARMREST]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 3.5,
@@ -78,7 +78,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [ATTIC_COUCH_ARMREST_RIGHT]: {
+        [ATTIC_RIGHT_ARMREST]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 3.5,

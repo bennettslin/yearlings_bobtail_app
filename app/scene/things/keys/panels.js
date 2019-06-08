@@ -5,11 +5,29 @@ export const SCHOOLBUS_INTERIOR = 'schoolbusInterior'
 export const SCHOOLBUS_EXTERIOR = 'schoolbusExterior'
 export const OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior'
 export const OCEAN_CAVE_INTERIOR = 'oceanCaveInterior'
-export const GO_KART_LEFT_EXTERIOR = 'goKartExteriorLeft'
-export const GO_KART_RIGHT_EXTERIOR = 'goKartExteriorRight' // Duplicate.
+export const BENNETT_COUCH_PANEL = 'bennettCouchPanel'
+export const BENNETT_COUCH_ARMREST_LEFT = 'bennettCouchArmrestLeft'
+export const BENNETT_COUCH_ARMREST_RIGHT = 'bennettCouchArmrestRight'
+export const MIRIAM_COUCH_PANEL = 'miriamCouchPanel' // Duplicate.
+export const MIRIAM_COUCH_ARMREST_LEFT = 'miriamCouchArmrestLeft' // Duplicate.
+export const MIRIAM_COUCH_ARMREST_RIGHT = 'miriamCouchArmrestRight' // Duplicate.
+export const GO_KART_EXTERIOR_LEFT = 'goKartExteriorLeft'
+export const GO_KART_EXTERIOR_RIGHT = 'goKartExteriorRight' // Duplicate.
 export const DISHROOM_SINK = 'dishroomSink'
+export const BENNETT_BED = 'bennettBed'
+export const WAITING_ARMCHAIR_BENNETT = 'waitingArmchairBennett'
+export const WAITING_LEFT_ARMREST_BENNETT = 'waitingLeftArmrestBennett'
+export const WAITING_RIGHT_ARMREST_BENNETT = 'waitingRightArmrestBennett'
+export const WAITING_ARMCHAIR_LIZ = 'waitingArmchairLiz' // Duplicate.
+export const WAITING_LEFT_ARMREST_LIZ = 'waitingLeftArmrestLiz' // Duplicate.
+export const WAITING_RIGHT_ARMREST_LIZ = 'waitingRightArmrestLiz' // Duplicate.
+export const LIZ_BED = 'lizBed'
 export const SATURN_INTERIOR = 'saturnInterior'
 export const SATURN_EXTERIOR = 'saturnExterior'
+export const ATTIC_COUCH = 'atticCouch'
+export const ATTIC_LEFT_ARMREST = 'atticLeftArmrest'
+export const ATTIC_RIGHT_ARMREST = 'atticRightArmrest'
+export const LIZ_COUCH = 'lizCouch'
 export const VOLKSWAGEN = 'volkswagen'
 export const SNOWGLOBE_TETHERBALL = 'snowglobeTetherball'
 export const SNOWGLOBE_LIZ_ALONE = 'snowglobeLizAlone' // Duplicate.
@@ -26,32 +44,5 @@ export const INVERSE_THOUGHT_PANEL = 'inverseThoughtBackdrop'
 
 // TODO
 export const BEDROOM_DESK = 'bedroomDesk'
-
-export const CAPTAIN_BED_PANEL = 'captainBedPanel'
-
-export const BENNETT_BED_PANEL = 'bennettBedPanel'
-
-export const LIZ_BED_PANEL = 'lizBedPanel'
-
-export const HOSPITAL_BED_PANEL = 'hospitalBedPanel'
-
-export const BENNETT_COUCH_PANEL = 'bennettCouchPanel'
-export const BENNETT_COUCH_ARMREST_LEFT = 'bennettCouchArmrestLeft'
-export const BENNETT_COUCH_ARMREST_RIGHT = 'bennettCouchArmrestRight'
-export const MIRIAM_COUCH_PANEL = 'miriamCouchPanel' // Duplicate.
-export const MIRIAM_COUCH_ARMREST_LEFT = 'miriamCouchArmrestLeft' // Duplicate.
-export const MIRIAM_COUCH_ARMREST_RIGHT = 'miriamCouchArmrestRight' // Duplicate.
-
-export const WAITING_ARMCHAIR_PANEL_BENNETT = 'waitingArmchairPanelBennett'
-export const WAITING_ARMCHAIR_PANEL_LIZ = 'waitingArmchairPanelLiz'
-export const WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT = 'waitingArmchairArmrestLeftBennett'
-export const WAITING_ARMCHAIR_ARMREST_LEFT_LIZ = 'waitingArmchairArmrestLeftLiz'
-export const WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT = 'waitingArmchairArmrestRightBennett'
-export const WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ = 'waitingArmchairArmrestRightLiz'
-
-export const ATTIC_COUCH_PANEL = 'atticCouchPanel'
-export const ATTIC_COUCH_ARMREST_LEFT = 'atticCouchArmrestLeft'
-export const ATTIC_COUCH_ARMREST_RIGHT = 'atticCouchArmrestRight'
-
-export const LIZ_COUCH_PANEL = 'lizCouchPanel'
-
+export const CAPTAIN_BED = 'captainBed'
+export const HOSPITAL_BED = 'hospitalBed'

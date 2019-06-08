@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const WaitingArmchairPanel = ({
+const CaptainBed = ({
 
     className,
 
@@ -19,7 +19,7 @@ const WaitingArmchairPanel = ({
     return (
         <Svg
             className={cx(
-                'WaitingArmchairPanel',
+                'CaptainBed',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const WaitingArmchairPanel = ({
                 {...other}
             >
                 {cx(
-                    'WaitingArmchairPanel'
+                    'CaptainBed'
                 )}
             </text>
         </Svg>
     )
 }
 
-WaitingArmchairPanel.propTypes = propTypes
+CaptainBed.propTypes = propTypes
 
-export default WaitingArmchairPanel
+export default CaptainBed

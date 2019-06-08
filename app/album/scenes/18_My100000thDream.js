@@ -81,7 +81,7 @@ import {
 import {
     WEDDING_PLATFORM,
     INVERSE_THOUGHT_PANEL,
-    HOSPITAL_BED_PANEL
+    HOSPITAL_BED
 } from '../../scene/things/keys/panels'
 
 import {
@@ -269,7 +269,7 @@ export default [
                 [HOSPITAL_PILLOW_LOWERED]: true
             },
             [PANELS]: {
-                [HOSPITAL_BED_PANEL]: true,
+                [HOSPITAL_BED]: true,
                 [INVERSE_THOUGHT_PANEL]: true
             }
         },

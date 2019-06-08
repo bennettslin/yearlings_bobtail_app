@@ -72,7 +72,7 @@ import {
     REATTA_INTERIOR,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
-    HOSPITAL_BED_PANEL
+    HOSPITAL_BED
 } from '../../scene/things/keys/panels'
 
 import {
@@ -209,7 +209,7 @@ export default [
                 [HOSPITAL_PILLOW]: true
             },
             [PANELS]: {
-                [HOSPITAL_BED_PANEL]: true,
+                [HOSPITAL_BED]: true,
                 [DEATHBED_THOUGHT_PANEL]: true
             }
         },
@@ -246,7 +246,7 @@ export default [
                 [HOSPITAL_PILLOW]: true
             },
             [PANELS]: {
-                [HOSPITAL_BED_PANEL]: true,
+                [HOSPITAL_BED]: true,
                 [DEATHBED_THOUGHT_PANEL]: true,
                 [TENNIS_THOUGHT_PANEL]: true
             }

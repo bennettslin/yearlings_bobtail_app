@@ -100,14 +100,14 @@ import {
 
 import {
     DISHROOM_SINK,
-    BENNETT_BED_PANEL,
-    LIZ_BED_PANEL,
-    WAITING_ARMCHAIR_PANEL_BENNETT,
-    WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT,
-    WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT,
-    WAITING_ARMCHAIR_PANEL_LIZ,
-    WAITING_ARMCHAIR_ARMREST_LEFT_LIZ,
-    WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ
+    BENNETT_BED,
+    LIZ_BED,
+    WAITING_ARMCHAIR_BENNETT,
+    WAITING_LEFT_ARMREST_BENNETT,
+    WAITING_RIGHT_ARMREST_BENNETT,
+    WAITING_ARMCHAIR_LIZ,
+    WAITING_LEFT_ARMREST_LIZ,
+    WAITING_RIGHT_ARMREST_LIZ
 } from '../../scene/things/keys/panels'
 
 /**
@@ -316,7 +316,7 @@ export default [
                 [BENNETT_PILLOWS_BLANKET]: true
             },
             [PANELS]: {
-                [BENNETT_BED_PANEL]: true
+                [BENNETT_BED]: true
             }
         },
         cubes: BENNETT_BED_KEY,
@@ -353,7 +353,7 @@ export default [
                 [BENNETT_PILLOWS_BLANKET]: true
             },
             [PANELS]: {
-                [BENNETT_BED_PANEL]: true
+                [BENNETT_BED]: true
             }
         },
         cubes: BENNETT_BED_OPEN_KEY,
@@ -383,12 +383,12 @@ export default [
                 [WAITING_ROOM_PLANT]: true
             },
             [PANELS]: {
-                [WAITING_ARMCHAIR_PANEL_BENNETT]: true,
-                [WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT]: true,
-                [WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT]: true,
-                [WAITING_ARMCHAIR_PANEL_LIZ]: true,
-                [WAITING_ARMCHAIR_ARMREST_LEFT_LIZ]: true,
-                [WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ]: true
+                [WAITING_ARMCHAIR_BENNETT]: true,
+                [WAITING_LEFT_ARMREST_BENNETT]: true,
+                [WAITING_RIGHT_ARMREST_BENNETT]: true,
+                [WAITING_ARMCHAIR_LIZ]: true,
+                [WAITING_LEFT_ARMREST_LIZ]: true,
+                [WAITING_RIGHT_ARMREST_LIZ]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -416,12 +416,12 @@ export default [
                 [WAITING_ROOM_PLANT]: true
             },
             [PANELS]: {
-                [WAITING_ARMCHAIR_PANEL_BENNETT]: true,
-                [WAITING_ARMCHAIR_ARMREST_LEFT_BENNETT]: true,
-                [WAITING_ARMCHAIR_ARMREST_RIGHT_BENNETT]: true,
-                [WAITING_ARMCHAIR_PANEL_LIZ]: true,
-                [WAITING_ARMCHAIR_ARMREST_LEFT_LIZ]: true,
-                [WAITING_ARMCHAIR_ARMREST_RIGHT_LIZ]: true
+                [WAITING_ARMCHAIR_BENNETT]: true,
+                [WAITING_LEFT_ARMREST_BENNETT]: true,
+                [WAITING_RIGHT_ARMREST_BENNETT]: true,
+                [WAITING_ARMCHAIR_LIZ]: true,
+                [WAITING_LEFT_ARMREST_LIZ]: true,
+                [WAITING_RIGHT_ARMREST_LIZ]: true
             }
         },
         cubes: WAITING_ROOM_OPEN_KEY,
@@ -463,7 +463,7 @@ export default [
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
-                [LIZ_BED_PANEL]: true
+                [LIZ_BED]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
@@ -505,7 +505,7 @@ export default [
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
-                [LIZ_BED_PANEL]: true
+                [LIZ_BED]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
@@ -547,7 +547,7 @@ export default [
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANELS]: {
-                [LIZ_BED_PANEL]: true
+                [LIZ_BED]: true
             }
         },
         cubes: LIZ_BED_OPEN_KEY,

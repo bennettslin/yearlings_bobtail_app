@@ -86,7 +86,7 @@ import {
     CROWD_NEAR_SIDE
 } from '../../scene/things/keys/flats'
 
-import { LIZ_BED_PANEL } from '../../scene/things/keys/panels'
+import { LIZ_BED } from '../../scene/things/keys/panels'
 
 export default [
     {
@@ -288,7 +288,7 @@ export default [
                 [BENNETT_SHOE_REFLECTION]: true
             },
             [PANELS]: {
-                [LIZ_BED_PANEL]: true
+                [LIZ_BED]: true
             }
         },
         cubes: LIZ_BED_KEY,
