@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `bedroomDesk`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'captainBedPillow',
         workedHours: 0,
         neededHours: 1
@@ -59,17 +54,17 @@ export default [
      * PANELS
      */
     {
+        taskName: `bedroomDesk`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: 'captainBed',
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'hospitalBed',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizCouch',
         workedHours: 0,
         neededHours: 1
     }

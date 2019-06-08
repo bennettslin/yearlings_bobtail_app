@@ -915,5 +915,10 @@ export default [
         taskName: 'waitingArmchairPanel',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'lizCouchPanel',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
