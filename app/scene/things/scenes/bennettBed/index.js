@@ -13,7 +13,7 @@ import { BENNETT_BED } from '../../keys/panels'
 const ARRANGEMENTS_THINGS = {
     [FIXTURES]: {
         [NUDE_DRAWINGS]: {
-            yIndex: 5,
+            yIndex: 3,
             arrangement: {
                 xPosition: 7,
                 xWidth: 0.5,
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         },
         [VASELINE]: {
-            yIndex: 5,
+            yIndex: 3,
             arrangement: {
                 xPosition: 8,
                 xWidth: 0.5,
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
     },
     [FURNITURES]: {
         [BENNETT_PILLOWS_BLANKET]: {
-            yIndex: 5,
+            yIndex: 4,
             arrangement: {
                 xPosition: 9,
                 xWidth: 1,
@@ -43,9 +43,9 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_BED]: {
             yIndex: 5,
             arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 0.5
+                xPosition: 7.5,
+                xWidth: 6,
+                zHeight: 2
             }
         }
     }

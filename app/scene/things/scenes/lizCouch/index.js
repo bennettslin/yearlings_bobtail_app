@@ -38,11 +38,11 @@ const ARRANGEMENTS_THINGS = {
     },
     [PANELS]: {
         [LIZ_COUCH]: {
-            yIndex: 4,
+            yIndex: 5,
             arrangement: {
-                xPosition: 2.5,
-                xWidth: 2,
-                zHeight: 0.5
+                xPosition: 2,
+                xWidth: 3,
+                zHeight: 3
             }
         }
     }

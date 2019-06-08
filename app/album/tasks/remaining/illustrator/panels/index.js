@@ -120,12 +120,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'bennettCouchPanel',
+        taskName: 'bennettMiriamCouch',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'waitingArmchairPanel',
+        taskName: 'waitingArmchair',
         workedHours: 0,
         neededHours: 1
     },
