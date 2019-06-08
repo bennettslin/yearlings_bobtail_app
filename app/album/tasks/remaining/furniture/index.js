@@ -67,10 +67,5 @@ export default [
         taskName: 'hospitalBedPanel',
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: 'lizCouchPanel',
-        workedHours: 0,
-        neededHours: 1
     }
 ]

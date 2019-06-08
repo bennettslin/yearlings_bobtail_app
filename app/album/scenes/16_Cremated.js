@@ -87,7 +87,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'sitting in car, taking off pants',
                     instance: REMOVING_PANTS
                 },
@@ -126,7 +126,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.25,
+                    workedHours: 3.5,
                     compound: 2,
                     description: 'back angle, eyes closed, trying to get off',
                     instance: COWGIRL
