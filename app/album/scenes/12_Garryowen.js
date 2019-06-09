@@ -10,7 +10,7 @@ import {
 
 import {
     LIZ_COUCH_KEY,
-    BASEMENT_BED_KEY,
+    BASEMENT_COUCH_KEY,
     CLUB_FRONT_KEY,
     OAKLAND_VOLKSWAGEN_KEY
 } from '../../scene/scenes/keys'
@@ -68,6 +68,7 @@ import {
 import {
     GUITAR,
     DRUMKIT,
+    BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER_BASEMENT,
     NAS_ALBUM
 } from '../../scene/things/keys/fixtures'
@@ -84,7 +85,9 @@ import {
 
 import {
     VOLKSWAGEN,
-    BENNETT_BED,
+    BENNETT_COUCH_BASEMENT,
+    BENNETT_LEFT_ARMREST_BASEMENT,
+    BENNETT_RIGHT_ARMREST_BASEMENT,
     LIZ_COUCH
 } from '../../scene/things/keys/panels'
 
@@ -179,6 +182,7 @@ export default [
                 [ELLIOTT_SMITH_POSTER]: true
             },
             [FIXTURES]: {
+                [BENNETT_COUCH_LAMP]: true,
                 [BENNETT_RECORD_PLAYER_BASEMENT]: true,
                 [NAS_ALBUM]: true
             },
@@ -186,10 +190,12 @@ export default [
                 [BENNETT_PILLOWS_BLANKET]: true
             },
             [PANELS]: {
-                [BENNETT_BED]: true
+                [BENNETT_COUCH_BASEMENT]: true,
+                [BENNETT_LEFT_ARMREST_BASEMENT]: true,
+                [BENNETT_RIGHT_ARMREST_BASEMENT]: true
             }
         },
-        cubes: BASEMENT_BED_KEY,
+        cubes: BASEMENT_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

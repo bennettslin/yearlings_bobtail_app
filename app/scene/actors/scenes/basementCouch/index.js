@@ -1,5 +1,5 @@
-import { BENNETT_LIZ } from '../../../keys'
-import { CELIBATE_FREEZING } from '../../../keys/instances/bennettLiz'
+import { BENNETT_LIZ } from '../../keys'
+import { CELIBATE_FREEZING } from '../../keys/instances/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

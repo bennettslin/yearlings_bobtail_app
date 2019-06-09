@@ -20,9 +20,9 @@ import {
     KEYBOARD
 } from '../../keys/fixtures'
 import {
-    BENNETT_COUCH_PANEL,
-    BENNETT_COUCH_ARMREST_LEFT,
-    BENNETT_COUCH_ARMREST_RIGHT
+    BENNETT_COUCH_APARTMENT,
+    BENNETT_LEFT_ARMREST_APARTMENT,
+    BENNETT_RIGHT_ARMREST_APARTMENT
 } from '../../keys/panels'
 import { BENNETT_CUSHIONS } from '../../keys/furniture'
 
@@ -56,7 +56,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
-        [BENNETT_COUCH_PANEL]: {
+        [BENNETT_COUCH_APARTMENT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,
@@ -64,7 +64,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [BENNETT_COUCH_ARMREST_LEFT]: {
+        [BENNETT_LEFT_ARMREST_APARTMENT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,
@@ -72,7 +72,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [BENNETT_COUCH_ARMREST_RIGHT]: {
+        [BENNETT_RIGHT_ARMREST_APARTMENT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,

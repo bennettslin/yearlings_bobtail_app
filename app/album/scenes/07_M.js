@@ -67,12 +67,11 @@ import {
 } from '../../scene/actors/keys/instances/songs'
 
 import {
-    OAKLAND_FRONT_BACKDROP
+    OAKLAND_FRONT_BACKDROP,
+    WEST_BERKELEY_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
-import {
-    CINEMA_THOUGHTS
-} from '../../scene/things/keys/bubbles'
+import { CINEMA_THOUGHTS } from '../../scene/things/keys/bubbles'
 
 import {
     LEONARD_COHEN_POSTER,
@@ -111,9 +110,9 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    BENNETT_COUCH_PANEL,
-    BENNETT_COUCH_ARMREST_LEFT,
-    BENNETT_COUCH_ARMREST_RIGHT
+    BENNETT_COUCH_APARTMENT,
+    BENNETT_LEFT_ARMREST_APARTMENT,
+    BENNETT_RIGHT_ARMREST_APARTMENT
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -137,9 +136,9 @@ export default [
                 [BENNETT_COUCH_LAMP]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_PANEL]: true,
-                [BENNETT_COUCH_ARMREST_LEFT]: true,
-                [BENNETT_COUCH_ARMREST_RIGHT]: true
+                [BENNETT_COUCH_APARTMENT]: true,
+                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
+                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -169,9 +168,9 @@ export default [
                 [BENNETT_COUCH_LAMP]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_PANEL]: true,
-                [BENNETT_COUCH_ARMREST_LEFT]: true,
-                [BENNETT_COUCH_ARMREST_RIGHT]: true
+                [BENNETT_COUCH_APARTMENT]: true,
+                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
+                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -209,9 +208,9 @@ export default [
                 [KEYBOARD]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_PANEL]: true,
-                [BENNETT_COUCH_ARMREST_LEFT]: true,
-                [BENNETT_COUCH_ARMREST_RIGHT]: true
+                [BENNETT_COUCH_APARTMENT]: true,
+                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
+                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -300,6 +299,9 @@ export default [
                     description: 'sitting, eating fries, laughing',
                     instance: EATING
                 }
+            },
+            [BACKDROPS]: {
+                [WEST_BERKELEY_BACKDROP]: true
             },
             [FIXTURES]: {
                 [BASS_CASE_UPRIGHT]: true,

@@ -907,7 +907,7 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'bennettCouchPanel',
+        taskName: 'bennettCouchApartment',
         workedHours: 0.5,
         neededHours: 0.5
     },

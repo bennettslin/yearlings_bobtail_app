@@ -8,9 +8,9 @@ import { MIRIAM_CUSHIONS } from '../../keys/furniture'
 import {
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
-    MIRIAM_COUCH_PANEL,
-    MIRIAM_COUCH_ARMREST_LEFT,
-    MIRIAM_COUCH_ARMREST_RIGHT
+    BENNETT_COUCH_BUBBLE,
+    BENNETT_LEFT_ARMREST_BUBBLE,
+    BENNETT_RIGHT_ARMREST_BUBBLE
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -51,7 +51,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [MIRIAM_COUCH_PANEL]: {
+        [BENNETT_COUCH_BUBBLE]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -59,7 +59,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [MIRIAM_COUCH_ARMREST_LEFT]: {
+        [BENNETT_LEFT_ARMREST_BUBBLE]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -67,7 +67,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [MIRIAM_COUCH_ARMREST_RIGHT]: {
+        [BENNETT_RIGHT_ARMREST_BUBBLE]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,

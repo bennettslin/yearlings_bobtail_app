@@ -29,7 +29,6 @@ import CUBES_BERKELEY_CAMPANILE from './scenes/berkeleyCampanile'
 import CUBES_CINEMA from './scenes/cinema'
 import CUBES_CINEMA_STREET from './scenes/cinemaStreet'
 import CUBES_BASEMENT from './scenes/basement'
-import CUBES_BASEMENT_BED from './scenes/basementBed'
 import CUBES_MUSEUM from './scenes/museum'
 import CUBES_BACKSTAGE from './scenes/backstage'
 import CUBES_GO_KARTS from './scenes/goKarts'
@@ -53,9 +52,11 @@ import CUBES_CEMETERY from './scenes/cemetery'
 import CUBES_STATION_WAGON from './scenes/stationWagon'
 import CUBES_ATTIC from './scenes/attic'
 import CUBES_OAKLAND_HOUSES from './scenes/oaklandHouses'
+import CUBES_BASEMENT_SOFA from './scenes/basementCouch'
 import CUBES_OAKLAND_RESIDENTIAL from './scenes/oaklandResidential'
 import CUBES_OAKLAND_COMMERCIAL from './scenes/oaklandCommercial'
 import CUBES_OAKLAND_PUBLIC from './scenes/oaklandPublic'
+import CUBES_BASEMENT_BED from './scenes/basementBed'
 import CUBES_SNOWGLOBES_PAST from './scenes/snowglobesPast'
 import CUBES_SNOWGLOBES_PRESENT from './scenes/snowglobesPresent'
 import CUBES_SNOWGLOBES_FUTURE from './scenes/snowglobesFuture'
@@ -97,7 +98,6 @@ const CUBES = {
     ...CUBES_CINEMA,
     ...CUBES_CINEMA_STREET,
     ...CUBES_BASEMENT,
-    ...CUBES_BASEMENT_BED,
     ...CUBES_MUSEUM,
     ...CUBES_BACKSTAGE,
     ...CUBES_GO_KARTS,
@@ -121,9 +121,11 @@ const CUBES = {
     ...CUBES_STATION_WAGON,
     ...CUBES_ATTIC,
     ...CUBES_OAKLAND_HOUSES,
+    ...CUBES_BASEMENT_SOFA,
     ...CUBES_OAKLAND_RESIDENTIAL,
     ...CUBES_OAKLAND_COMMERCIAL,
     ...CUBES_OAKLAND_PUBLIC,
+    ...CUBES_BASEMENT_BED,
     ...CUBES_SNOWGLOBES_PAST,
     ...CUBES_SNOWGLOBES_PRESENT,
     ...CUBES_SNOWGLOBES_FUTURE,

@@ -1,60 +1,7 @@
-import {
-    CUTOUTS,
-    FIXTURES
-} from 'constants/scene'
-import { ELLIOTT_SMITH_POSTER } from '../../keys/cutouts'
-import {
-    NAS_ALBUM,
-    BENNETT_RECORD_PLAYER_BASEMENT,
-    CRACKED_PICTURE
-} from '../../keys/fixtures'
+import { FIXTURES } from 'constants/scene'
+import { CRACKED_PICTURE } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
-        [ELLIOTT_SMITH_POSTER]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 3,
-                zOffset: 2
-            }
-        }
-    },
-    [FIXTURES]: {
-        [BENNETT_RECORD_PLAYER_BASEMENT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 2,
-                zHeight: 2
-            }
-        },
-        [CRACKED_PICTURE]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 4
-            }
-        }
-    }
-}
-
-export const THINGS_BASEMENT_BED_GARRYOWEN = {
-    [FIXTURES]: {
-        [NAS_ALBUM]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 4
-            }
-        }
-    }
-}
-
-export const THINGS_BASEMENT_BED_FENDING = {
     [FIXTURES]: {
         [CRACKED_PICTURE]: {
             yIndex: 3,

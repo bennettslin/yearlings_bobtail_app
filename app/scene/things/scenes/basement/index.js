@@ -1,6 +1,4 @@
-import {
-    FIXTURES
-} from 'constants/scene'
+import { FIXTURES } from 'constants/scene'
 import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,

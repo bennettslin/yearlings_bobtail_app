@@ -83,9 +83,9 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    BENNETT_COUCH_PANEL,
-    BENNETT_COUCH_ARMREST_LEFT,
-    BENNETT_COUCH_ARMREST_RIGHT
+    BENNETT_COUCH_APARTMENT,
+    BENNETT_LEFT_ARMREST_APARTMENT,
+    BENNETT_RIGHT_ARMREST_APARTMENT
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -150,9 +150,9 @@ export default [
                 [BENNETT_CUSHIONS]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_PANEL]: true,
-                [BENNETT_COUCH_ARMREST_LEFT]: true,
-                [BENNETT_COUCH_ARMREST_RIGHT]: true
+                [BENNETT_COUCH_APARTMENT]: true,
+                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
+                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,

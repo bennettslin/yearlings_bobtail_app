@@ -11,8 +11,8 @@ import {
 } from '../keys/hsla'
 
 import {
+    a,
     c,
-    f,
     k
 } from '../keys/zIndex'
 
@@ -28,13 +28,13 @@ const
     ceiling = {
         hslaColours: [
             [D],
-            [C, W, W, C],
+            [C, C, W, W, C],
             [C]
         ],
         zIndices: [
             [k],
-            [f, c, c, f],
-            [f]
+            [c, c, a, a, c],
+            [c]
         ]
     },
 
@@ -43,19 +43,19 @@ const
         floor: {
             hslaColours: [
                 [G],
-                [W, G, G, W],
-                [W, P, P, P, P, P, P, P, P, P, P, W],
-                [W, P, P, F, F, S, F, F, S, F, F, W],
-                [W, P, P, F, S, F, F, F, F, F, F, W],
-                [W, P, P, F, F, F, F, F, F, S, F, W]
+                [W, W, G, G, W],
+                [W, F, P, P, F, F, F, F, F, F, F, W],
+                [W, F, P, P, F, F, F, F, S, F, F, W],
+                [W, F, P, P, F, S, F, F, F, F, F, W],
+                [W, F, F, F, S, F, F, F, F, S, F, W]
             ],
             zIndices: [
-                [4],
-                [f, 4, 4, f],
-                [f, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, f],
-                [f, 3, 3, 0, 0, 2, 0, 0, 2, 0, 0, f],
-                [f, 2, 2, 0, 2, 0, 0, 0, 0, 0, 0, f],
-                [f, 1, 1, 0, 0, 0, 0, 0, 0, 2, 0, f]
+                [2],
+                [c, c, 2, 2, c],
+                [c, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, c],
+                [c, 0, 1, 1, 0, 0, 0, 0, 2, 0, 0, c],
+                [c, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, c],
+                [c, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, c]
             ]
         }
     },

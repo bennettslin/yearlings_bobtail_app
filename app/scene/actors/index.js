@@ -58,11 +58,6 @@ import {
 } from './scenes/cinema'
 import ACTORS_CINEMA_STREET from './scenes/cinemaStreet'
 import ACTORS_BASEMENT from './scenes/basement'
-import {
-    ACTORS_BASEMENT_BED_GARRYOWEN,
-    ACTORS_BASEMENT_BED_FEARFUL,
-    ACTORS_BASEMENT_BED_FENDING
-} from './scenes/basementBed'
 import ACTORS_MUSEUM from './scenes/museum'
 import ACTORS_BACKSTAGE from './scenes/backstage'
 import ACTORS_GO_KARTS from './scenes/goKarts'
@@ -130,9 +125,14 @@ import {
     ACTORS_OAKLAND_HOUSES_GARRYOWEN,
     ACTORS_OAKLAND_HOUSES_GOLDEN
 } from './scenes/oaklandHouses'
+import ACTORS_BASEMENT_SOFA from './scenes/basementCouch'
 import ACTORS_OAKLAND_RESIDENTIAL from './scenes/oaklandResidential'
 import ACTORS_OAKLAND_COMMERCIAL from './scenes/oaklandCommercial'
 import ACTORS_OAKLAND_PUBLIC from './scenes/oaklandPublic'
+import {
+    ACTORS_BASEMENT_BED_FEARFUL,
+    ACTORS_BASEMENT_BED_FENDING
+} from './scenes/basementBed'
 import ACTORS_SNOWGLOBES_PAST from './scenes/snowglobesPast'
 import ACTORS_SNOWGLOBES_PRESENT from './scenes/snowglobesPresent'
 import ACTORS_SNOWGLOBES_FUTURE from './scenes/snowglobesFuture'
@@ -191,7 +191,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_CINEMA_WONDERING,
     ACTORS_CINEMA_STREET,
     ACTORS_BASEMENT,
-    ACTORS_BASEMENT_BED_GARRYOWEN,
+    ACTORS_BASEMENT_SOFA,
     ACTORS_BASEMENT_BED_FEARFUL,
     ACTORS_BASEMENT_BED_FENDING,
     ACTORS_MUSEUM,

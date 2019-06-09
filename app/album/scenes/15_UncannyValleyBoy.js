@@ -1,6 +1,6 @@
 import {
     ACTORS,
-    CUTOUTS,
+    BACKDROPS,
     FIXTURES,
     FLATS,
     FURNITURES,
@@ -50,9 +50,7 @@ import {
 
 import { JOKING_LAUGHING } from '../../scene/actors/keys/instances/khariLiz'
 
-import {
-    PETTING_SEATED
-} from '../../scene/actors/keys/instances/liz'
+import { PETTING_SEATED } from '../../scene/actors/keys/instances/liz'
 
 import {
     ASLEEP_FEARFUL,
@@ -71,12 +69,9 @@ import {
     FUTURE
 } from '../../scene/actors/keys/instances/songs'
 
-import {
-    ELLIOTT_SMITH_POSTER
-} from '../../scene/things/keys/cutouts'
+import { WEST_BERKELEY_BACKDROP } from '../../scene/things/keys/backdrops'
 
 import {
-    BENNETT_RECORD_PLAYER_BASEMENT,
     TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_CONSOLE,
@@ -104,9 +99,9 @@ import {
     SNOWGLOBE_BENNETT_ALONE,
     BENNETT_BED,
     LIZ_COUCH,
-    MIRIAM_COUCH_PANEL,
-    MIRIAM_COUCH_ARMREST_LEFT,
-    MIRIAM_COUCH_ARMREST_RIGHT
+    BENNETT_COUCH_BUBBLE,
+    BENNETT_LEFT_ARMREST_BUBBLE,
+    BENNETT_RIGHT_ARMREST_BUBBLE
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -123,11 +118,8 @@ export default [
                     instance: ASLEEP
                 }
             },
-            [CUTOUTS]: {
-                [ELLIOTT_SMITH_POSTER]: true
-            },
-            [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER_BASEMENT]: true
+            [BACKDROPS]: {
+                [WEST_BERKELEY_BACKDROP]: true
             },
             [PANELS]: {
                 [BENNETT_BED]: true
@@ -166,8 +158,8 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER_BASEMENT]: true
+            [BACKDROPS]: {
+                [WEST_BERKELEY_BACKDROP]: true
             },
             [PANELS]: {
                 [BENNETT_BED]: true
@@ -263,9 +255,9 @@ export default [
             [PANELS]: {
                 [SNOWGLOBE_LIZ_ALONE]: true,
                 [SNOWGLOBE_BENNETT_MIRIAM]: true,
-                [MIRIAM_COUCH_PANEL]: true,
-                [MIRIAM_COUCH_ARMREST_LEFT]: true,
-                [MIRIAM_COUCH_ARMREST_RIGHT]: true
+                [BENNETT_COUCH_BUBBLE]: true,
+                [BENNETT_LEFT_ARMREST_BUBBLE]: true,
+                [BENNETT_RIGHT_ARMREST_BUBBLE]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
@@ -366,8 +358,10 @@ export default [
                     }
                 }
             },
+            [BACKDROPS]: {
+                [WEST_BERKELEY_BACKDROP]: true
+            },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER_BASEMENT]: true,
                 [CRACKED_PICTURE]: true
             },
             [PANELS]: {

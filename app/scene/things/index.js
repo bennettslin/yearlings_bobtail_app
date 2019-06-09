@@ -45,10 +45,6 @@ import THINGS_BERKELEY_CAMPANILE, {
 import THINGS_CINEMA from './scenes/cinema'
 import THINGS_CINEMA_STREET from './scenes/cinemaStreet'
 import THINGS_BASEMENT from './scenes/basement'
-import THINGS_BASEMENT_BED, {
-    THINGS_BASEMENT_BED_GARRYOWEN,
-    THINGS_BASEMENT_BED_FENDING
-} from './scenes/basementBed'
 import THINGS_MUSEUM from './scenes/museum'
 import THINGS_BACKSTAGE from './scenes/backstage'
 import THINGS_GO_KARTS from './scenes/goKarts'
@@ -100,6 +96,8 @@ import THINGS_OAKLAND_HOUSES, {
 import THINGS_OAKLAND_RESIDENTIAL from './scenes/oaklandResidential'
 import THINGS_OAKLAND_COMMERCIAL from './scenes/oaklandCommercial'
 import THINGS_OAKLAND_PUBLIC from './scenes/oaklandPublic'
+import THINGS_BASEMENT_SOFA from './scenes/basementCouch'
+import THINGS_BASEMENT_BED from './scenes/basementBed'
 import THINGS_SNOWGLOBES_PAST from './scenes/snowglobesPast'
 import THINGS_SNOWGLOBES_PRESENT from './scenes/snowglobesPresent'
 import THINGS_SNOWGLOBES_FUTURE from './scenes/snowglobesFuture'
@@ -158,8 +156,6 @@ const SCENE_ARRANGEMENTS = [
     THINGS_CINEMA_STREET,
     THINGS_BASEMENT,
     THINGS_BASEMENT_BED,
-    THINGS_BASEMENT_BED_GARRYOWEN,
-    THINGS_BASEMENT_BED_FENDING,
     THINGS_MUSEUM,
     THINGS_BACKSTAGE,
     THINGS_GO_KARTS,
@@ -200,9 +196,11 @@ const SCENE_ARRANGEMENTS = [
     THINGS_ATTIC,
     THINGS_OAKLAND_HOUSES,
     THINGS_OAKLAND_HOUSES_GARRYOWEN,
+    THINGS_BASEMENT_SOFA,
     THINGS_OAKLAND_RESIDENTIAL,
     THINGS_OAKLAND_COMMERCIAL,
     THINGS_OAKLAND_PUBLIC,
+    THINGS_BASEMENT_BED,
     THINGS_SNOWGLOBES_PAST,
     THINGS_SNOWGLOBES_PRESENT,
     THINGS_SNOWGLOBES_FUTURE,
