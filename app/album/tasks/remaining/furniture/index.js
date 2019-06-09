@@ -34,11 +34,6 @@ export default [
      * PANELS
      */
     {
-        taskName: `bedroomDesk`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'captainBed',
         workedHours: 0,
         neededHours: 1

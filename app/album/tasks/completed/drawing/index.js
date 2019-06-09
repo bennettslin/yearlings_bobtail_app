@@ -893,32 +893,37 @@ export default [
     },
     {
         taskName: 'lizBed',
-        workedHours: 0.5,
-        neededHours: 0.5
+        workedHours: 1,
+        neededHours: 1
     },
     {
         taskName: 'bennettBed',
-        workedHours: 0.5,
-        neededHours: 0.5
+        workedHours: 1,
+        neededHours: 1
     },
     {
         taskName: 'atticCouch',
-        workedHours: 0.5,
-        neededHours: 0.5
+        workedHours: 1,
+        neededHours: 1
     },
     {
-        taskName: 'bennettCouchApartment',
-        workedHours: 0.5,
-        neededHours: 0.5
+        taskName: 'bennettCouch',
+        workedHours: 1,
+        neededHours: 1
     },
     {
-        taskName: 'waitingArmchairPanel',
-        workedHours: 0.5,
-        neededHours: 0.5
+        taskName: 'waitingArmchair',
+        workedHours: 1,
+        neededHours: 1
     },
     {
-        taskName: 'lizCouchPanel',
-        workedHours: 0.5,
-        neededHours: 0.5
+        taskName: 'lizCouch',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `bedroomDesk`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
