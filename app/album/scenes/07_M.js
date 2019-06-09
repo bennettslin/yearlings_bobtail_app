@@ -87,7 +87,7 @@ import {
 } from '../../scene/things/keys/cutouts'
 
 import {
-    BENNETT_RECORD_PLAYER_COUCH,
+    BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     TELEVISION_ALBUM,
     KEYBOARD,
@@ -110,9 +110,9 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    BENNETT_COUCH_APARTMENT,
-    BENNETT_LEFT_ARMREST_APARTMENT,
-    BENNETT_RIGHT_ARMREST_APARTMENT
+    BENNETT_COUCH,
+    BENNETT_LEFT_ARMREST,
+    BENNETT_RIGHT_ARMREST
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -132,13 +132,13 @@ export default [
                 [LEONARD_COHEN_POSTER]: true
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER_COUCH]: true,
+                [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_APARTMENT]: true,
-                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
-                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
+                [BENNETT_COUCH]: true,
+                [BENNETT_LEFT_ARMREST]: true,
+                [BENNETT_RIGHT_ARMREST]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -164,13 +164,13 @@ export default [
             },
             [FIXTURES]: {
                 [TELEVISION_ALBUM]: true,
-                [BENNETT_RECORD_PLAYER_COUCH]: true,
+                [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_APARTMENT]: true,
-                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
-                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
+                [BENNETT_COUCH]: true,
+                [BENNETT_LEFT_ARMREST]: true,
+                [BENNETT_RIGHT_ARMREST]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -203,14 +203,14 @@ export default [
                 [PROGRESS_CHART_LATE]: true
             },
             [FIXTURES]: {
-                [BENNETT_RECORD_PLAYER_COUCH]: true,
+                [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [KEYBOARD]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_APARTMENT]: true,
-                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
-                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
+                [BENNETT_COUCH]: true,
+                [BENNETT_LEFT_ARMREST]: true,
+                [BENNETT_RIGHT_ARMREST]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,

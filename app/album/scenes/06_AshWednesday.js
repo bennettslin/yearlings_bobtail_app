@@ -67,7 +67,7 @@ import {
 
 import {
     POLICE_ALBUM,
-    BENNETT_RECORD_PLAYER_COUCH,
+    BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN
 } from '../../scene/things/keys/fixtures'
@@ -83,9 +83,9 @@ import {
 } from '../../scene/things/keys/furniture'
 
 import {
-    BENNETT_COUCH_APARTMENT,
-    BENNETT_LEFT_ARMREST_APARTMENT,
-    BENNETT_RIGHT_ARMREST_APARTMENT
+    BENNETT_COUCH,
+    BENNETT_LEFT_ARMREST,
+    BENNETT_RIGHT_ARMREST
 } from '../../scene/things/keys/panels'
 
 export default [
@@ -143,16 +143,16 @@ export default [
             },
             [FIXTURES]: {
                 [POLICE_ALBUM]: true,
-                [BENNETT_RECORD_PLAYER_COUCH]: true,
+                [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },
             [FURNITURES]: {
                 [BENNETT_CUSHIONS]: true
             },
             [PANELS]: {
-                [BENNETT_COUCH_APARTMENT]: true,
-                [BENNETT_LEFT_ARMREST_APARTMENT]: true,
-                [BENNETT_RIGHT_ARMREST_APARTMENT]: true
+                [BENNETT_COUCH]: true,
+                [BENNETT_LEFT_ARMREST]: true,
+                [BENNETT_RIGHT_ARMREST]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,

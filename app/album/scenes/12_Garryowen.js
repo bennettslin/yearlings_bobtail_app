@@ -69,7 +69,7 @@ import {
     GUITAR,
     DRUMKIT,
     BENNETT_COUCH_LAMP,
-    BENNETT_RECORD_PLAYER_BASEMENT,
+    BENNETT_RECORD_PLAYER,
     NAS_ALBUM
 } from '../../scene/things/keys/fixtures'
 
@@ -78,16 +78,13 @@ import {
     OAKLAND_HOUSE_RIGHT
 } from '../../scene/things/keys/flats'
 
-import {
-    LIZ_CUSHIONS,
-    BENNETT_PILLOWS_BLANKET
-} from '../../scene/things/keys/furniture'
+import { LIZ_CUSHIONS } from '../../scene/things/keys/furniture'
 
 import {
     VOLKSWAGEN,
-    BENNETT_COUCH_BASEMENT,
-    BENNETT_LEFT_ARMREST_BASEMENT,
-    BENNETT_RIGHT_ARMREST_BASEMENT,
+    BENNETT_COUCH,
+    BENNETT_LEFT_ARMREST,
+    BENNETT_RIGHT_ARMREST,
     LIZ_COUCH
 } from '../../scene/things/keys/panels'
 
@@ -183,16 +180,13 @@ export default [
             },
             [FIXTURES]: {
                 [BENNETT_COUCH_LAMP]: true,
-                [BENNETT_RECORD_PLAYER_BASEMENT]: true,
+                [BENNETT_RECORD_PLAYER]: true,
                 [NAS_ALBUM]: true
             },
-            [FURNITURES]: {
-                [BENNETT_PILLOWS_BLANKET]: true
-            },
             [PANELS]: {
-                [BENNETT_COUCH_BASEMENT]: true,
-                [BENNETT_LEFT_ARMREST_BASEMENT]: true,
-                [BENNETT_RIGHT_ARMREST_BASEMENT]: true
+                [BENNETT_COUCH]: true,
+                [BENNETT_LEFT_ARMREST]: true,
+                [BENNETT_RIGHT_ARMREST]: true
             }
         },
         cubes: BASEMENT_COUCH_KEY,

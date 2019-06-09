@@ -14,21 +14,21 @@ import {
 } from '../../keys/cutouts'
 import {
     POLICE_ALBUM,
-    BENNETT_RECORD_PLAYER_COUCH,
+    BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     TELEVISION_ALBUM,
     KEYBOARD
 } from '../../keys/fixtures'
 import {
-    BENNETT_COUCH_APARTMENT,
-    BENNETT_LEFT_ARMREST_APARTMENT,
-    BENNETT_RIGHT_ARMREST_APARTMENT
+    BENNETT_COUCH,
+    BENNETT_LEFT_ARMREST,
+    BENNETT_RIGHT_ARMREST
 } from '../../keys/panels'
 import { BENNETT_CUSHIONS } from '../../keys/furniture'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURES]: {
-        [BENNETT_RECORD_PLAYER_COUCH]: {
+        [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 8.5,
@@ -39,9 +39,9 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,
             arrangement: {
-                xPosition: 2,
-                xWidth: 0.5,
-                zHeight: 1
+                xPosition: 1,
+                xWidth: 1,
+                zHeight: 2
             }
         }
     },
@@ -56,7 +56,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANELS]: {
-        [BENNETT_COUCH_APARTMENT]: {
+        [BENNETT_COUCH]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,
@@ -64,7 +64,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [BENNETT_LEFT_ARMREST_APARTMENT]: {
+        [BENNETT_LEFT_ARMREST]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,
@@ -72,7 +72,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [BENNETT_RIGHT_ARMREST_APARTMENT]: {
+        [BENNETT_RIGHT_ARMREST]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,

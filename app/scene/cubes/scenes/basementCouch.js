@@ -44,16 +44,16 @@ const
         floor: {
             hslaColours: [
                 [W],
-                [W, F, F, U, U, U, U, U, R, R, F, W],
-                [W, F, R, U, U, U, U, U, F, P, P, E],
-                [W, F, F, U, U, U, U, U, F, P, P, E],
+                [W, R, U, U, U, U, U, U, R, R, F, W],
+                [W, R, U, U, U, U, U, U, F, P, P, E],
+                [W, F, U, U, U, U, U, U, F, P, P, E],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [d],
-                [d, 0, 0, 6, 6, 6, 6, 6, 3, 3, 0, d],
+                [d, 4, 6, 6, 6, 6, 6, 6, 3, 3, 0, d],
+                [d, 4, 3, 3, 3, 3, 3, 3, 0, 1, 2, c],
                 [d, 0, 3, 3, 3, 3, 3, 3, 0, 1, 2, c],
-                [d, 0, 0, 3, 3, 3, 3, 3, 0, 1, 2, c],
                 [d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, d]
             ]
         }
