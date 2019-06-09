@@ -100,6 +100,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: 'bedroomDesk',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: 'captainBed',
         workedHours: 0,
         neededHours: 1
@@ -120,7 +125,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'bennettMiriamCouch',
+        taskName: 'bennettCouch',
         workedHours: 0,
         neededHours: 1
     },

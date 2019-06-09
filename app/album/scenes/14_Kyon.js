@@ -2,7 +2,6 @@ import {
     ACTORS,
     BUBBLES,
     FIXTURES,
-    FURNITURES,
     PANELS,
     PUPPETS
 } from 'constants/scene'
@@ -49,8 +48,6 @@ import {
 
 import { TCHOTCHKES } from '../../scene/things/keys/fixtures'
 
-import { LIZ_CUSHIONS } from '../../scene/things/keys/furniture'
-
 import { LIZ_COUCH } from '../../scene/things/keys/panels'
 
 import {
@@ -75,9 +72,6 @@ export default [
                     }
                 }
             },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
-            },
             [PANELS]: {
                 [LIZ_COUCH]: true
             }
@@ -101,9 +95,6 @@ export default [
                         instance: PETTING_STANDING
                     }
                 }
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true
@@ -131,9 +122,6 @@ export default [
             },
             [FIXTURES]: {
                 [TCHOTCHKES]: true
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true
@@ -167,9 +155,6 @@ export default [
                     description: 'side, cheery in a low-key way',
                     instance: ARRIVED
                 }
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true
@@ -205,9 +190,6 @@ export default [
                 [KHARI_ATTACK_SPEECH]: true,
                 [LIZ_DEFENCE_SPEECH]: true
             },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
-            },
             [PANELS]: {
                 [LIZ_COUCH]: true
             }
@@ -241,9 +223,6 @@ export default [
             [BUBBLES]: {
                 [LIZ_THOUGHT]: true
             },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
-            },
             [PANELS]: {
                 [LIZ_COUCH]: true
             }
@@ -267,9 +246,6 @@ export default [
                         instance: ASLEEP_COUCH
                     }
                 }
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true
@@ -296,9 +272,6 @@ export default [
                         instance: ASLEEP_COUCH
                     }
                 }
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true

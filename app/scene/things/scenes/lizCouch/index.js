@@ -2,7 +2,6 @@ import {
     BACKDROPS,
     BUBBLES,
     FIXTURES,
-    FURNITURES,
     PANELS,
     PUPPETS
 } from 'constants/scene'
@@ -13,10 +12,6 @@ import {
     LIZ_THOUGHT
 } from '../../keys/bubbles'
 import { TCHOTCHKES } from '../../keys/fixtures'
-import {
-    LIZ_CUSHIONS,
-    LIZ_CUSHIONS_THOUGHT
-} from '../../keys/furniture'
 import { LIZ_COUCH } from '../../keys/panels'
 import {
     OPAL_COUCH,
@@ -26,16 +21,6 @@ import {
 } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [FURNITURES]: {
-        [LIZ_CUSHIONS]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 2,
-                zHeight: 0.5
-            }
-        }
-    },
     [PANELS]: {
         [LIZ_COUCH]: {
             yIndex: 5,
@@ -56,16 +41,6 @@ export const THINGS_LIZ_COUCH_GOLDEN = {
                 xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 4
-            }
-        }
-    },
-    [FURNITURES]: {
-        [LIZ_CUSHIONS_THOUGHT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 2,
-                zHeight: 0.5
             }
         }
     }

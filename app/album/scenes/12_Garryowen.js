@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 
@@ -78,8 +77,6 @@ import {
     OAKLAND_HOUSE_RIGHT
 } from '../../scene/things/keys/flats'
 
-import { LIZ_CUSHIONS } from '../../scene/things/keys/furniture'
-
 import {
     VOLKSWAGEN,
     BENNETT_COUCH,
@@ -101,9 +98,6 @@ export default [
                     description: 'front, putting on jacket, cold, distant',
                     instance: BRUSH_OFF
                 }
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true
@@ -256,9 +250,6 @@ export default [
                         instance: LEAVING_CRUMBLED
                     }
                 }
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true

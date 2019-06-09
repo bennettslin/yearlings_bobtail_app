@@ -1,10 +1,8 @@
 import {
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 import { ROAD_PRESENT } from '../../keys/flats'
-import { MIRIAM_CUSHIONS } from '../../keys/furniture'
 import {
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
@@ -21,16 +19,6 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 5.5,
                 xWidth: 12,
                 zHeight: 8
-            }
-        }
-    },
-    [FURNITURES]: {
-        [MIRIAM_CUSHIONS]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 5,
-                zHeight: 0.5
             }
         }
     },

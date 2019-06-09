@@ -9,7 +9,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 
@@ -76,10 +75,6 @@ import {
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR
 } from '../../scene/things/keys/flats'
-
-import {
-    ATTIC_CUSHIONS
-} from '../../scene/things/keys/furniture'
 
 import {
     SATURN_EXTERIOR,
@@ -334,9 +329,6 @@ export default [
                 [STORAGE_CHEST]: true,
                 [HOWIE_FRIDGE]: true,
                 [TELEVISION]: true
-            },
-            [FURNITURES]: {
-                [ATTIC_CUSHIONS]: true
             },
             [PANELS]: {
                 [ATTIC_COUCH]: true,

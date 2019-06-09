@@ -1,6 +1,5 @@
 import {
     CUTOUTS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 import {
@@ -9,7 +8,6 @@ import {
     HOWIE_FRIDGE,
     TELEVISION
 } from '../../keys/cutouts'
-import { ATTIC_CUSHIONS } from '../../keys/furniture'
 import {
     ATTIC_COUCH,
     ATTIC_LEFT_ARMREST,
@@ -48,16 +46,6 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 3.5,
                 xWidth: 1.5,
                 zHeight: 1
-            }
-        }
-    },
-    [FURNITURES]: {
-        [ATTIC_CUSHIONS]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 4,
-                zHeight: 0.5
             }
         }
     },

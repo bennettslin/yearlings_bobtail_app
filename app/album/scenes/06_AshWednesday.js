@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 
@@ -79,10 +78,6 @@ import {
 } from '../../scene/things/keys/flats'
 
 import {
-    BENNETT_CUSHIONS
-} from '../../scene/things/keys/furniture'
-
-import {
     BENNETT_COUCH,
     BENNETT_LEFT_ARMREST,
     BENNETT_RIGHT_ARMREST
@@ -145,9 +140,6 @@ export default [
                 [POLICE_ALBUM]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
-            },
-            [FURNITURES]: {
-                [BENNETT_CUSHIONS]: true
             },
             [PANELS]: {
                 [BENNETT_COUCH]: true,

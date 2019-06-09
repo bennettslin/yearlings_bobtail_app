@@ -1,16 +1,6 @@
 export default [
     {
-        taskName: 'bedroomDesk',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'captainBedPillow',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'bennettCushions',
         workedHours: 0,
         neededHours: 1
     },
@@ -26,26 +16,6 @@ export default [
     },
     {
         taskName: 'lizPillowsReflection',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'atticCushions',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizCushions',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizCushionsThought',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'miriamCushions',
         workedHours: 0,
         neededHours: 1
     },

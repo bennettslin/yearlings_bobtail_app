@@ -2,8 +2,7 @@ import {
     ACTORS,
     BACKDROPS,
     CUTOUTS,
-    FLATS,
-    FURNITURES
+    FLATS
 } from 'constants/scene'
 
 import {
@@ -90,10 +89,6 @@ import {
     PUBLIC_NEAR_RIGHT
 } from '../../scene/things/keys/flats'
 
-import {
-    LIZ_CUSHIONS_THOUGHT
-} from '../../scene/things/keys/furniture'
-
 export default [
     {
         unitIndex: 1,
@@ -136,9 +131,6 @@ export default [
             },
             [BACKDROPS]: {
                 [LIZ_COUCH_THOUGHT_BACKDROP]: true
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS_THOUGHT]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

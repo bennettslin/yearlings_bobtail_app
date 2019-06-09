@@ -3,7 +3,6 @@ import {
     BACKDROPS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 
@@ -84,12 +83,6 @@ import {
     ROAD_PRESENT,
     ROAD_FUTURE
 } from '../../scene/things/keys/flats'
-
-import {
-    LIZ_CUSHIONS,
-    LIZ_CUSHIONS_THOUGHT,
-    MIRIAM_CUSHIONS
-} from '../../scene/things/keys/furniture'
 
 import {
     SNOWGLOBE_TETHERBALL,
@@ -248,10 +241,6 @@ export default [
             [FLATS]: {
                 [ROAD_PRESENT]: true
             },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS_THOUGHT]: true,
-                [MIRIAM_CUSHIONS]: true
-            },
             [PANELS]: {
                 [SNOWGLOBE_LIZ_ALONE]: true,
                 [SNOWGLOBE_BENNETT_MIRIAM]: true,
@@ -312,9 +301,6 @@ export default [
             },
             [FLATS]: {
                 [ROAD_FUTURE]: true
-            },
-            [FURNITURES]: {
-                [LIZ_CUSHIONS]: true
             },
             [PANELS]: {
                 [LIZ_COUCH]: true
