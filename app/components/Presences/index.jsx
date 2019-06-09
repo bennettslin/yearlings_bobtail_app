@@ -68,7 +68,7 @@ class Presences extends PureComponent {
                 puppets
             } = scenePresenceLayer
 
-            return (
+            return false && (
                 <div
                     {...{
                         className: cx(
