@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS,
     PUPPETS
 } from 'constants/scene'
@@ -73,10 +72,6 @@ import {
     PAMPAS_FAR,
     FOREBODING_TREES
 } from '../../scene/things/keys/flats'
-
-import {
-    HOSPITAL_PILLOW_LOWERED
-} from '../../scene/things/keys/furniture'
 
 import {
     WEDDING_PLATFORM,
@@ -264,9 +259,6 @@ export default [
             },
             [FLATS]: {
                 [CLIFF_GRAVES_FAR]: true
-            },
-            [FURNITURES]: {
-                [HOSPITAL_PILLOW_LOWERED]: true
             },
             [PANELS]: {
                 [HOSPITAL_BED]: true,

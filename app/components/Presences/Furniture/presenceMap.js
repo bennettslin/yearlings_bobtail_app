@@ -6,8 +6,6 @@ import LizPillowsPile from './Furnitures/LizPillowsPile'
 import LizPillowsPileReflection from './Furnitures/LizPillowsPileReflection'
 import LizBlanketPile from './Furnitures/LizBlanketPile'
 import LizBlanketPileReflection from './Furnitures/LizBlanketPileReflection'
-import HospitalPillow from './Furnitures/HospitalPillow'
-import HospitalPillowLowered from './Furnitures/HospitalPillowLowered'
 
 import {
     CAPTAIN_BED_PILLOW_BLANKET,
@@ -15,9 +13,7 @@ import {
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_BLANKET_PILE,
-    LIZ_BLANKET_PILE_REFLECTION,
-    HOSPITAL_PILLOW,
-    HOSPITAL_PILLOW_LOWERED
+    LIZ_BLANKET_PILE_REFLECTION
 } from 'scene/things/keys/furniture'
 
 export const propTypes = {
@@ -26,9 +22,7 @@ export const propTypes = {
     [LIZ_PILLOWS_PILE]: PropTypes.bool,
     [LIZ_PILLOWS_PILE_REFLECTION]: PropTypes.bool,
     [LIZ_BLANKET_PILE]: PropTypes.bool,
-    [LIZ_BLANKET_PILE_REFLECTION]: PropTypes.bool,
-    [HOSPITAL_PILLOW]: PropTypes.bool,
-    [HOSPITAL_PILLOW_LOWERED]: PropTypes.bool
+    [LIZ_BLANKET_PILE_REFLECTION]: PropTypes.bool
 }
 
 export default {
@@ -37,7 +31,5 @@ export default {
     [LIZ_PILLOWS_PILE]: LizPillowsPile,
     [LIZ_PILLOWS_PILE_REFLECTION]: LizPillowsPileReflection,
     [LIZ_BLANKET_PILE]: LizBlanketPile,
-    [LIZ_BLANKET_PILE_REFLECTION]: LizBlanketPileReflection,
-    [HOSPITAL_PILLOW]: HospitalPillow,
-    [HOSPITAL_PILLOW_LOWERED]: HospitalPillowLowered
+    [LIZ_BLANKET_PILE_REFLECTION]: LizBlanketPileReflection
 }

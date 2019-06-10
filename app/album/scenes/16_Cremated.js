@@ -4,7 +4,6 @@ import {
     CUTOUTS,
     FIXTURES,
     FLATS,
-    FURNITURES,
     PANELS,
     PUPPETS
 } from 'constants/scene'
@@ -62,10 +61,6 @@ import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
 } from '../../scene/things/keys/flats'
-
-import {
-    HOSPITAL_PILLOW
-} from '../../scene/things/keys/furniture'
 
 import {
     REATTA_EXTERIOR,
@@ -205,9 +200,6 @@ export default [
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [FURNITURES]: {
-                [HOSPITAL_PILLOW]: true
-            },
             [PANELS]: {
                 [HOSPITAL_BED]: true,
                 [DEATHBED_THOUGHT_PANEL]: true
@@ -241,9 +233,6 @@ export default [
             },
             [FIXTURES]: {
                 [HOSPITAL_RECORD_PLAYER]: true
-            },
-            [FURNITURES]: {
-                [HOSPITAL_PILLOW]: true
             },
             [PANELS]: {
                 [HOSPITAL_BED]: true,

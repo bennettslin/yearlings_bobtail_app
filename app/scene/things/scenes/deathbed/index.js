@@ -1,15 +1,10 @@
 import {
     CUTOUTS,
     FIXTURES,
-    FURNITURES,
     PANELS
 } from 'constants/scene'
 import { IV_DRIP } from '../../keys/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from '../../keys/fixtures'
-import {
-    HOSPITAL_PILLOW,
-    HOSPITAL_PILLOW_LOWERED
-} from '../../keys/furniture'
 import {
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
@@ -51,16 +46,6 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_DEATHBED_CREMATED = {
-    [FURNITURES]: {
-        [HOSPITAL_PILLOW]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4,
-                zHeight: 1
-            }
-        }
-    },
     [PANELS]: {
         [DEATHBED_THOUGHT_PANEL]: {
             yIndex: 0,
@@ -82,16 +67,6 @@ export const THINGS_DEATHBED_CREMATED = {
 }
 
 export const THINGS_DEATHBED_DREAM = {
-    [FURNITURES]: {
-        [HOSPITAL_PILLOW_LOWERED]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4,
-                zHeight: 1
-            }
-        }
-    },
     [PANELS]: {
         [INVERSE_THOUGHT_PANEL]: {
             yIndex: 0,

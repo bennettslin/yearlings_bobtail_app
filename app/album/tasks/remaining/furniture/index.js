@@ -1,45 +1,31 @@
 export default [
     {
-        taskName: `bloodyTowelReflection (technically a fixture)`,
+        taskName: 'captainBedPillowBlanket',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'captainBedPillow',
+        taskName: 'bennettPillowsBlanket',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'bennettPillows',
+        taskName: 'lizPillowsPile',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'lizPillows',
+        taskName: 'lizBlanketPile',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'lizPillowsReflection',
+        taskName: 'lizPillowsPileReflection',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'hospitalPillow',
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    /**
-     * PANELS
-     */
-    {
-        taskName: 'captainBed',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'hospitalBed',
+        taskName: 'lizBlanketPileReflection',
         workedHours: 0,
         neededHours: 1
     }

@@ -1,4 +1,10 @@
 export default [
+    {
+        taskName: `Artistic warps in Photoshop.`,
+        workedHours: 0,
+        neededHours: 10
+    },
+
     /**
      * Do once the presence svgs are mostly done.
      */
@@ -16,10 +22,5 @@ export default [
         taskName: `Cube and presence transition order.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Redo how presences are structured. Store info in a config?`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]

@@ -925,5 +925,15 @@ export default [
         taskName: `bedroomDesk`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'captainBed',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'hospitalBed',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -1,31 +1,31 @@
 export default [
     {
-        taskName: 'captainBedPillow',
+        taskName: 'captainBedPillowBlanket',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'bennettPillows',
+        taskName: 'bennettPillowsBlanket',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'lizPillows',
+        taskName: 'lizPillowsPile',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'lizPillowsReflection',
+        taskName: 'lizBlanketPile',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'hospitalPillow',
+        taskName: 'lizPillowsPileReflection',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'hospitalPillowLowered',
+        taskName: 'lizBlanketPileReflection',
         workedHours: 0,
         neededHours: 1
     }
