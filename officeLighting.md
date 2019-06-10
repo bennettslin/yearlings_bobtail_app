@@ -19,13 +19,12 @@ d) With 50% lighting, we are giving up more ground because we are twice their si
 e) It wouldn't be a strain on company resources. I have seen that when moving desks, the freight elevator is the only bottleneck. A crew of four would probably take no more than two hours to swap all the desks within our quadrant.
 f) A related solution proposed by Brittany is that we sit by Velocity again, however it can be made to happen. Because they also prefer bright lighting, and are also dealing with a lighting conflict in their quadrant. These two solutions are not mutually exclusive, obviously.
 
-4) If this solution is a nonstarter, here are some other suggestions that I hope our teams can ask for. I understand that it might not be realistic for some or even any of them to be granted, but I hope an attempt can at least be made.
+4) If this solution is a nonstarter, I would like to propose the following.
 
-a) Their teams allow us to claim the couch area. In other words, we can rearrange it to our liking, place our bookshelves and the dip station there, and create other "facts on the ground" to make it feel like ours.
-b) The lights are kept at 75% rather than 50%, given the points of consideration stated earlier.
-c) We can turn the lights back to 100% past a certain hour in the afternoon, when everyone on their teams can be expected to have left.
-d) The lights go back to 100% once light coverings are made available that do not violate safety codes, as the spirit of the original agreement can now be fulfilled with full approval by Facilities.
-e) I will act as a representative of the ADAPT Network, and work with individuals on either side to accommodate their lighting needs. If they would like someone on their side to act in this capacity as well, I will be happy to work together.
+a) For the three weeks that our original agreement was in effect, our rows were bright, theirs were dim, and no one outwardly complained. Therefore, once light coverings that conform to safety codes are approved by Facilities and made available, and everyone has installed one that needs one, the lights go back to 100%, in the spirit of the original agreement.
+b) I understand that certain individuals such as Ryan Crawford will continue to have concerns that need to be addressed. I will act as a representative of the ADAPT Network, send out a survey to understand each individual's concerns, and then work with them to ensure that their lighting needs are accommodated. If they would like someone on their side to act in this capacity as well, I will be happy to work together.
+c) In the meantime, their teams allow us to claim the couch area. In other words, we can rearrange it to our liking, place our bookshelves and the dip station there, and create other "facts on the ground" to make it feel like ours. There are many on our teams who really need a refuge with brightly lit surroundings, as desk lamps are insufficient. And they may not feel comfortable venturing over to the couch area, since its proximity to the other teams makes it feel more like theirs.
+d) Also, we can turn the lights back to 100% past a certain hour in the afternoon, to be determined by their teams.
 
 Thanks so much for listening. I hope to discuss all of these points in our one-on-one tomorrow.
 
