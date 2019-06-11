@@ -6,6 +6,47 @@ export default [
     },
 
     {
+        taskName: `Bennett's pillow when fearful in Willy.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bennett's pillow when feigning sick in Pchelka.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Bennett's pillow when asleep in Pchelka.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Fearful MiriamBennett's pillows in Uncanny.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Fending MiriamBennett's pillows in Uncanny.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Afterglow BennettLiz's pillows in Grasshoppers, plus reflection.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `KhariLiz's pillows in Vegan, plus reflection.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Liz's pillows in Look Back.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+
+    {
         taskName: `Bennett's blanket when fearful in Willy.`,
         workedHours: 0,
         neededHours: 2
@@ -26,14 +67,14 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Fearful MiriamBennett's blanket and pillows in Uncanny.`,
+        taskName: `Fearful MiriamBennett's blanket in Uncanny.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
-        taskName: `Fending MiriamBennett's blanket and pillows in Uncanny.`,
+        taskName: `Fending MiriamBennett's blanket in Uncanny.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
         taskName: `Bennett's blanket on attic couch in Constellations.`,
@@ -41,25 +82,16 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Afterglow BennettLiz's pillows in Grasshoppers, plus reflection.`,
+        taskName: `Liz's blanket in Look Back.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `KhariLiz's pillows in Vegan, plus reflection.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Liz's blanket and pillows in Look Back.`,
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: `Liz's blanket on couch in Kyon.`,
         workedHours: 0,
         neededHours: 2
     },
+
     {
         taskName: `Dying Bennett's hospital blanket in Cremated.`,
         workedHours: 0,

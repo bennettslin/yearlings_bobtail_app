@@ -1,11 +1,21 @@
 export default [
     {
-        taskName: 'captainBedPillowBlanket',
+        taskName: 'captainBedPillow',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'bennettPillowsBlanket',
+        taskName: 'bennettPillows',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'captainBedBlanket',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettBlanket',
         workedHours: 0,
         neededHours: 1
     },

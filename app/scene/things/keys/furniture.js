@@ -1,8 +1,10 @@
 // TODO
-export const CAPTAIN_BED_PILLOW_BLANKET = 'captainBedPillowBlanket'
+export const CAPTAIN_BED_PILLOW = 'captainBedPillow'
+export const CAPTAIN_BED_BLANKET = 'captainBedBlanket'
 
 // TODO
-export const BENNETT_PILLOWS_BLANKET = 'bennettPillowsBlanket'
+export const BENNETT_PILLOWS = 'bennettPillows'
+export const BENNETT_BLANKET = 'bennettBlanket'
 
 // TODO
 export const LIZ_PILLOWS_PILE = 'lizPillowsPile'

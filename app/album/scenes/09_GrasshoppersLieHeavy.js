@@ -91,7 +91,8 @@ import {
 } from '../../scene/things/keys/fixtures'
 
 import {
-    BENNETT_PILLOWS_BLANKET,
+    BENNETT_PILLOWS,
+    BENNETT_BLANKET,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_BLANKET_PILE,
@@ -313,7 +314,8 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURES]: {
-                [BENNETT_PILLOWS_BLANKET]: true
+                [BENNETT_PILLOWS]: true,
+                [BENNETT_BLANKET]: true
             },
             [PANELS]: {
                 [BENNETT_BED]: true
@@ -350,7 +352,8 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURES]: {
-                [BENNETT_PILLOWS_BLANKET]: true
+                [BENNETT_PILLOWS]: true,
+                [BENNETT_BLANKET]: true
             },
             [PANELS]: {
                 [BENNETT_BED]: true

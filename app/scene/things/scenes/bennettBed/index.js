@@ -7,7 +7,10 @@ import {
     NUDE_DRAWINGS,
     VASELINE
 } from '../../keys/fixtures'
-import { BENNETT_PILLOWS_BLANKET } from '../../keys/furniture'
+import {
+    BENNETT_PILLOWS,
+    BENNETT_BLANKET
+} from '../../keys/furniture'
 import { BENNETT_BED } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -30,7 +33,15 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FURNITURES]: {
-        [BENNETT_PILLOWS_BLANKET]: {
+        [BENNETT_PILLOWS]: {
+            yIndex: 4,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 1,
+                zHeight: 0.5
+            }
+        },
+        [BENNETT_BLANKET]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 9,

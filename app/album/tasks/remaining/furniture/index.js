@@ -1,13 +1,23 @@
 export default [
     {
-        taskName: 'captainBedPillowBlanket',
+        taskName: 'captainBedPillow',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'bennettPillowsBlanket',
+        taskName: 'bennettPillows',
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: 'captainBedBlanket',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: 'bennettBlanket',
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: 'lizPillowsPile',
@@ -17,7 +27,7 @@ export default [
     {
         taskName: 'lizBlanketPile',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: 'lizPillowsPileReflection',
@@ -27,6 +37,6 @@ export default [
     {
         taskName: 'lizBlanketPileReflection',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     }
 ]

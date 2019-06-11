@@ -99,7 +99,10 @@ import {
     BEDROOM_SIREN
 } from '../../scene/things/keys/flats'
 
-import { CAPTAIN_BED_PILLOW_BLANKET } from '../../scene/things/keys/furniture'
+import {
+    CAPTAIN_BED_PILLOW,
+    CAPTAIN_BED_BLANKET
+} from '../../scene/things/keys/furniture'
 
 import {
     BEDROOM_DESK,
@@ -228,7 +231,8 @@ export default [
                 [CHRISTOPHER_LETTERS]: true
             },
             [FURNITURES]: {
-                [CAPTAIN_BED_PILLOW_BLANKET]: true
+                [CAPTAIN_BED_PILLOW]: true,
+                [CAPTAIN_BED_BLANKET]: true
             },
             [PANELS]: {
                 [BEDROOM_DESK]: true,

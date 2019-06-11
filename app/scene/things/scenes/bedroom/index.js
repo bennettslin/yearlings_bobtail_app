@@ -25,7 +25,8 @@ import {
     BEDROOM_BUS
 } from '../../keys/flats'
 import {
-    CAPTAIN_BED_PILLOW_BLANKET
+    CAPTAIN_BED_PILLOW,
+    CAPTAIN_BED_BLANKET
 } from '../../keys/furniture'
 import {
     BEDROOM_DESK,
@@ -70,7 +71,15 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FURNITURES]: {
-        [CAPTAIN_BED_PILLOW_BLANKET]: {
+        [CAPTAIN_BED_PILLOW]: {
+            yIndex: 4,
+            arrangement: {
+                xPosition: 8,
+                xWidth: 4,
+                zHeight: 1
+            }
+        },
+        [CAPTAIN_BED_BLANKET]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 8,
