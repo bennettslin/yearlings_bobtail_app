@@ -91,7 +91,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, walking, pleasantly confused',
                     instance: EL_TORITO
                 },
@@ -122,7 +122,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'sitting cross-legged, playing recorder, content',
                     instance: PAMPAS
@@ -172,7 +172,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'back angle, confusedly being rushed',
                     instance: GETTING_DARK
