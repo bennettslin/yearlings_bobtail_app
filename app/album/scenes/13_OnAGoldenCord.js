@@ -123,7 +123,7 @@ export default [
             [ACTORS]: {
                 [BENNETT_LIZ]: {
                     todo: true,
-                    workedHours: 4.25,
+                    workedHours: 4,
                     compound: 2,
                     description: 'side angle, disingenuously consoling',
                     instance: AWKWARD_CONSOLATION
