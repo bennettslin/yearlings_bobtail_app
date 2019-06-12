@@ -935,5 +935,25 @@ export default [
         taskName: 'hospitalBed',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'captainBedPillow',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettPillows',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'lizPillowsPile',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'lizPillowsPileReflection',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

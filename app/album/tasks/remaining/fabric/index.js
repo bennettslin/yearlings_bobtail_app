@@ -6,47 +6,6 @@ export default [
     },
 
     {
-        taskName: `Bennett's pillow when fearful in Willy.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Bennett's pillow when feigning sick in Pchelka.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Bennett's pillow when asleep in Pchelka.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Fearful MiriamBennett's pillows in Uncanny.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Fending MiriamBennett's pillows in Uncanny.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Afterglow BennettLiz's pillows in Grasshoppers, plus reflection.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `KhariLiz's pillows in Vegan, plus reflection.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Liz's pillows in Look Back.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
         taskName: `Bennett's blanket when fearful in Willy.`,
         workedHours: 0,
         neededHours: 2
