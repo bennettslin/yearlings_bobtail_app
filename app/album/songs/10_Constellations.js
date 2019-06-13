@@ -283,7 +283,7 @@ export default {
                             cards: [
                                 {
                                     description: [
-                                        `Backtrack to earlier that night. We have arrived at a`,
+                                        `Back to earlier that night. We have arrived at a`,
                                         {
                                             anchor: `"Walgreens"`,
                                             wiki: `Walgreens`

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const BennettPillows = ({
+const BennettPillow = ({
 
     className,
 
@@ -19,7 +19,7 @@ const BennettPillows = ({
     return (
         <Svg
             className={cx(
-                'BennettPillows',
+                'BennettPillow',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const BennettPillows = ({
                 {...other}
             >
                 {cx(
-                    'BennettPillows'
+                    'BennettPillow'
                 )}
             </text>
         </Svg>
     )
 }
 
-BennettPillows.propTypes = propTypes
+BennettPillow.propTypes = propTypes
 
-export default BennettPillows
+export default BennettPillow

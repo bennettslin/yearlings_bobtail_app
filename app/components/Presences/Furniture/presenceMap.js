@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 import CaptainBedPillow from './Furnitures/CaptainBedPillow'
 import CaptainBedBlanket from './Furnitures/CaptainBedBlanket'
-import BennettPillows from './Furnitures/BennettPillows'
+import BennettPillow from './Furnitures/BennettPillow'
 import BennettBlanket from './Furnitures/BennettBlanket'
 import LizPillowsPile from './Furnitures/LizPillowsPile'
 import LizPillowsPileReflection from './Furnitures/LizPillowsPileReflection'
@@ -12,7 +12,7 @@ import LizBlanketPileReflection from './Furnitures/LizBlanketPileReflection'
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET,
-    BENNETT_PILLOWS,
+    BENNETT_PILLOW,
     BENNETT_BLANKET,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
@@ -23,7 +23,7 @@ import {
 export const propTypes = {
     [CAPTAIN_BED_PILLOW]: PropTypes.bool,
     [CAPTAIN_BED_BLANKET]: PropTypes.bool,
-    [BENNETT_PILLOWS]: PropTypes.bool,
+    [BENNETT_PILLOW]: PropTypes.bool,
     [BENNETT_BLANKET]: PropTypes.bool,
     [LIZ_PILLOWS_PILE]: PropTypes.bool,
     [LIZ_PILLOWS_PILE_REFLECTION]: PropTypes.bool,
@@ -34,7 +34,7 @@ export const propTypes = {
 export default {
     [CAPTAIN_BED_PILLOW]: CaptainBedPillow,
     [CAPTAIN_BED_BLANKET]: CaptainBedBlanket,
-    [BENNETT_PILLOWS]: BennettPillows,
+    [BENNETT_PILLOW]: BennettPillow,
     [BENNETT_BLANKET]: BennettBlanket,
     [LIZ_PILLOWS_PILE]: LizPillowsPile,
     [LIZ_PILLOWS_PILE_REFLECTION]: LizPillowsPileReflection,

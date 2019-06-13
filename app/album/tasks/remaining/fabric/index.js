@@ -26,17 +26,17 @@ export default [
         neededHours: 2
     },
     {
+        taskName: `Bennett's blanket on attic couch in Constellations.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Fearful MiriamBennett's blanket in Uncanny.`,
         workedHours: 0,
         neededHours: 2
     },
     {
         taskName: `Fending MiriamBennett's blanket in Uncanny.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Bennett's blanket on attic couch in Constellations.`,
         workedHours: 0,
         neededHours: 2
     },

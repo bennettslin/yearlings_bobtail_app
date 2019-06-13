@@ -974,7 +974,7 @@ export default {
                         {
                             anchor: `heavy fears,`,
                             card: {
-                                description: `On the night of Willy's murder, I wake up screaming in fear of my mortality. My mother rushes to my bedside to comfort me.`,
+                                description: `Back to the night of Willy's murder. I wake up screaming in fear of my mortality. My mother rushes to my bedside to comfort me.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -1065,7 +1065,7 @@ export default {
                                         anchor: `lazy eye,`,
                                         wiki: `Amblyopia`
                                     },
-                                    `which caused a lack of depth perception that led me to figure out perspective early on. Impressed by my drawings, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. I thus had it in my head that I would someday create an epic masterpiece, which we assumed at the time would be a comic book.`
+                                    `which caused a lack of depth perception that led me to figure out perspective early on. Impressed by my early drawings, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. I thus had it in my head that I would someday create an epic masterpiece, which we assumed at the time would be a comic book.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true

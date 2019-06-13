@@ -8,7 +8,7 @@ import {
     VASELINE
 } from '../../keys/fixtures'
 import {
-    BENNETT_PILLOWS,
+    BENNETT_PILLOW,
     BENNETT_BLANKET
 } from '../../keys/furniture'
 import { BENNETT_BED } from '../../keys/panels'
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FURNITURES]: {
-        [BENNETT_PILLOWS]: {
+        [BENNETT_PILLOW]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 9,
