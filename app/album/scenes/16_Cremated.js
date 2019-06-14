@@ -155,7 +155,7 @@ export default [
             [ACTORS]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.25,
+                    workedHours: 3.5,
                     compound: 2,
                     description: 'back angle, giving blowjob',
                     instance: BLOWJOB
@@ -253,7 +253,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'pensive, laying condom on ground',
                     instance: DISPOSING_CONDOM
                 },
