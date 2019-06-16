@@ -165,7 +165,7 @@ export default [
                 },
                 [JACOB]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, walking, carrying drums, smiling at Mara',
                     instance: CARRYING
                 },
