@@ -189,7 +189,7 @@ export default [
             [ACTORS]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front angle, dying, infirm',
                     instance: INFIRM
                 }
