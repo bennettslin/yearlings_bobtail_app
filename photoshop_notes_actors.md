@@ -1,6 +1,6 @@
 # Draw masks at some point.
 
-# Finish face revisions (Liz, Nestor, Tristan).
+# Finish face revisions.
 
 # Scan faces.
 
@@ -123,6 +123,6 @@
 * flustered (seated)
 
 # Complete necks and hair (Miriam).
-# Draw blankets, cushions, pillows.
+# Draw blankets.
 
 # Combine all actors and things for each scene into a single Illustrator file.

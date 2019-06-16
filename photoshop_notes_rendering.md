@@ -1,0 +1,48 @@
+<!-- # Create ~completed and ~todo folder for each actor and thing. -->
+
+# Order.
+* Cutouts
+* Flats
+* Panels
+* Backdrops
+* Bubbles
+* Furnitures (include shadow)
+* Puppets (include shadow)
+* Fixtures (include shadow)
+* Actors (include shadow)
+
+# Photoshop work.
+* Create temporary subfolder in ~todo.
+* For each tif, create just enough layers to trace each outline without touching.
+    * Shortcut is Shift-Command-N.
+* Create another layer for details that are open paths.
+* Quick export each isolated layer to PNG in subfolder.
+    * Custom shortcut is Command-Option-Alt-N.
+* File names don't matter. They're temporary.
+* Show all layers and save tif.
+
+# Illustrator work.
+* Create new file with instance name.
+* Create new layer for each image.
+    * Shortcut is Command-L.
+* Place each numbered image in its numbered layer.
+    * Shortcut is Shift-Command-P.
+* Image Trace > Line Art, then Expand for each image.
+* Smooth each object by joining corners.
+    * Shortcut for Join tool is J.
+* Join path for each object.
+    * Shortcut is Command-J.
+* In Layers settings, Flatten artwork.
+* Temporarily colour each object. Aim for final colour, but don't sweat it.
+* Set all strokes to 1pt.
+* Send objects backward or forward as needed.
+    * Shortcuts are Command-[ or ].
+* Create boundary path.
+    * Duplicate layer.
+    * Pathfinder > Unite.
+    * No fill.
+    * Set stroke to 2pt.
+* Fit artboard to artwork.
+    * Shortcut is Shift-Command-F.
+* Move file to ~completed folder.
+* Delete subfolder in ~todo of same instance name.

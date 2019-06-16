@@ -1,10 +1,4 @@
 export default [
-    {
-        taskName: `Artistic warps in Photoshop.`,
-        workedHours: 0,
-        neededHours: 10
-    },
-
     /**
      * Do once the presence svgs are mostly done.
      */

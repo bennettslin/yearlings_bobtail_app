@@ -1,12 +1,9 @@
-# Combine all actors and things for each scene into a single Illustrator file.
+<!-- # Combine all actors and things for each scene into a single Illustrator file. -->
 
 # Edit after placement.
 
-## All
-* artistic warps
-* heights for backdrops, others
-
 ## Backdrops
+* heights
 * ucBerkeleyBackdrop (layout)
 * uclaBackdrop (layout)
 * oaklandSideBackdrop (layout)
@@ -30,6 +27,9 @@
 * bassCaseUpright (perspective)
 * guitarCaseUpright (perspective)
 * conveyorBelt (layout, resize)
+
+## Flats
+* artistic warps
 
 ## Panels
 * deathbedThoughtPanel (layout)

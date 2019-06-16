@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `Timebox for exploring different ways to render svgs.`,
-        workedHours: 2,
+        workedHours: 6,
         neededHours: 10
     },
     {
