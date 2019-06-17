@@ -46,6 +46,11 @@ export default [
         neededHours: 5
     },
     {
+        taskName: `Hover over buttons gives tooltip.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2
@@ -61,8 +66,8 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Finalise banner UI.`,
+        taskName: `Finalise banner UI. Don't hover over banner cursor. Make banner scene squares like a film strip.`,
         workedHours: 1,
-        neededHours: 5
+        neededHours: 7
     }
 ]
