@@ -955,5 +955,25 @@ export default [
         taskName: 'lizPillowsPileReflection',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'tarpitThought',
+        workedHours: 4,
+        neededHours: 4
+    },
+    {
+        taskName: 'siblingThought',
+        workedHours: 4,
+        neededHours: 4
+    },
+    {
+        taskName: 'lizDefenceSpeech',
+        workedHours: 4,
+        neededHours: 4
+    },
+    {
+        taskName: 'lizThought',
+        workedHours: 4,
+        neededHours: 4
     }
 ]
