@@ -1,10 +1,4 @@
 export default [
-    {
-        taskName: `Consider whether to transition slider hide for anchor text and underline.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Buttons and dots UI.
     {
         taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs.`,
@@ -66,8 +60,8 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Finalise banner UI. Don't hover over banner cursor. Make banner scene squares like a film strip.`,
-        workedHours: 1,
+        taskName: `Finalise banner UI. Make banner scenes like a film strip.`,
+        workedHours: 3,
         neededHours: 7
     }
 ]

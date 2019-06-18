@@ -1,8 +1,11 @@
+@import "./Timer/style";
+@import "./Title/style";
+
 .BannerCursor {
-    height: 50%;
-    top: auto;
-    bottom: 0;
-    padding: $js__margin__thin * 2;
+    height: 28px;
+    top: 0;
+    padding-left: $js__margin__thin * 2;
+    padding-right: $js__margin__thin * 2;
 
     display: flex;
     justify-content: space-between;
@@ -13,21 +16,11 @@
 
     line-height: 1em;
 
-    background-color: #8a6;
-}
-
-// TODO: Same as button, so maybe consolidate.
-.BannerCursor {
-    filter: $dropShadow__button;
-
-    .ShW__overlayShown
-    & {
-        filter: $dropShadow__buttonOverlay;
-    }
+    background-color: $bgColour__audioPause;
 }
 
 .BannerTracker {
-    background-color: #6a8;
+    background-color: $bgColour__audioPlay;
     transition:
         width $animationDuration__slow;
 }

@@ -29,7 +29,8 @@ class SongTitle extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'SongTitle'
+                        'SongTitle',
+                        'flexCentreContainer'
                     )
                 }}
             >

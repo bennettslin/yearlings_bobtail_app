@@ -56,6 +56,7 @@ class BannerScenes extends PureComponent {
                 {...{
                     className: cx(
                         'BannerScenes',
+                        'dropShadow',
                         'abF'
                     )
                 }}

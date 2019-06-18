@@ -33,7 +33,8 @@ class PlayTimer extends PureComponent {
 
         return !isSelectedLogue && (
             <div className={cx(
-                'PlayTimer'
+                'PlayTimer',
+                'flexCentreContainer'
             )}>
                 {getFormattedTime(selectedTime)}
             </div>

@@ -28,8 +28,8 @@ const BannerSceneSquare = ({
                 isSelected &&
                     'BannerSceneSquare__selected',
                 isAfterSelected &&
-                    'BannerSceneSquare__afterSelected',
-                'abF'
+                    'BannerSceneSquare__afterSelected'
+                // 'abF'
             )
         }}
     />

@@ -1,12 +1,3 @@
-.ButtonIcon {
-    filter: $dropShadow__button;
-
-    .ShW__overlayShown
-    & {
-        filter: $dropShadow__buttonOverlay;
-    }
-}
-
 .ButtonIcon__about {
     fill: #d88;
 }

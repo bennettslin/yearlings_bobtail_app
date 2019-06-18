@@ -66,6 +66,15 @@
     }
 }
 
+.dropShadow {
+    filter: $dropShadow__button;
+
+    .ShW__overlayShown
+    & {
+        filter: $dropShadow__buttonOverlay;
+    }
+}
+
 body {
     margin: 0;
     color: $colour__text__dark;

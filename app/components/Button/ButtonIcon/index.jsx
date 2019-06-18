@@ -96,6 +96,7 @@ const ButtonIcon = ({
         <div
             className={cx(
                 'ButtonIcon',
+                'dropShadow',
                 'abF',
                 'flexCentreContainer'
             )}

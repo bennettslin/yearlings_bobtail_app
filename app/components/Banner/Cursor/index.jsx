@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import PlayTimer from '../Timer'
-import SongTitle from '../Title'
+import PlayTimer from './Timer'
+import SongTitle from './Title'
 
 import { getSongTotalTime } from 'album/api/time'
 
@@ -45,6 +45,7 @@ class BannerCursor extends PureComponent {
                         'BannerCursor',
                         isSmallBannerText &&
                             'BannerCursor__smallText',
+                        'dropShadow',
                         'textShadow__banner',
                         'abF'
                     )

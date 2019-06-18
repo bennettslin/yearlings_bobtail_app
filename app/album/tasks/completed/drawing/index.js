@@ -967,6 +967,11 @@ export default [
         neededHours: 4
     },
     {
+        taskName: 'khariAttackSpeech',
+        workedHours: 4,
+        neededHours: 4
+    },
+    {
         taskName: 'lizDefenceSpeech',
         workedHours: 4,
         neededHours: 4
