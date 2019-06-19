@@ -122,7 +122,7 @@ export default [
                 },
                 [TRISTAN]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, eagerly aggressive, about to punch car',
                     instance: PUNCHING
                 },
