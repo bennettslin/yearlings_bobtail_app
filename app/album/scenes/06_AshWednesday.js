@@ -55,7 +55,10 @@ import {
     UC_BERKELEY_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
-import { NIRVANA_POSTER } from '../../scene/things/keys/cardboards'
+import {
+    POLICE_ALBUM,
+    NIRVANA_POSTER
+} from '../../scene/things/keys/cardboards'
 
 import {
     RECYCLABLES,
@@ -67,7 +70,6 @@ import {
 } from '../../scene/things/keys/cutouts'
 
 import {
-    POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN
@@ -136,10 +138,10 @@ export default [
                 [BENNETT_COUCH_THOUGHT_BACKDROP]: true
             },
             [CARDBOARDS]: {
+                [POLICE_ALBUM]: true,
                 [NIRVANA_POSTER]: true
             },
             [FIXTURES]: {
-                [POLICE_ALBUM]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import PlaygroundBall from './Fixtures/PlaygroundBall'
 import SafewayBag from './Fixtures/SafewayBag'
 import RecordPlayerStool from './Fixtures/RecordPlayerStool'
-import JohnnyHortonAlbum from './Fixtures/JohnnyHortonAlbum'
 import ShoppingCartFull from './Fixtures/ShoppingCartFull'
 import BeethovenBust from './Fixtures/BeethovenBust'
 import ChristopherLetters from './Fixtures/ChristopherLetters'
@@ -16,11 +15,9 @@ import RedEnvelopeMoney from './Fixtures/RedEnvelopeMoney'
 import BeyonderEnvelope from './Fixtures/BeyonderEnvelope'
 import BennettLetters from './Fixtures/BennettLetters'
 import ThrownFruit from './Fixtures/ThrownFruit'
-import PoliceAlbum from './Fixtures/PoliceAlbum'
 import BennettRecordPlayer from './Fixtures/BennettRecordPlayer'
 import BennettCouchLamp from './Fixtures/BennettCouchLamp'
 import AshCan from './Fixtures/AshCan'
-import TelevisionAlbum from './Fixtures/TelevisionAlbum'
 import Keyboard from './Fixtures/Keyboard'
 import CashBox from './Fixtures/CashBox'
 import Guitar from './Fixtures/Guitar'
@@ -54,7 +51,6 @@ import GuitarCaseOpen from './Fixtures/GuitarCaseOpen'
 import DrumsStacked from './Fixtures/DrumsStacked'
 import BennettShoe from './Fixtures/BennettShoe'
 import BennettShoeReflection from './Fixtures/BennettShoeReflection'
-import NasAlbum from './Fixtures/NasAlbum'
 import Tchotchkes from './Fixtures/Tchotchkes'
 import TetherballPole from './Fixtures/TetherballPole'
 import RecordingConsole from './Fixtures/RecordingConsole'
@@ -71,7 +67,6 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL,
-    JOHNNY_HORTON_ALBUM,
     SHOPPING_CART_FULL,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
@@ -84,11 +79,9 @@ import {
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
     THROWN_FRUIT,
-    POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN,
-    TELEVISION_ALBUM,
     KEYBOARD,
     CASH_BOX,
     GUITAR,
@@ -125,7 +118,6 @@ import {
     DRUMS_STACKED_CLUB,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
-    NAS_ALBUM,
     TCHOTCHKES,
     TETHERBALL_POLE,
     RECORDING_MIC,
@@ -143,7 +135,6 @@ export const propTypes = {
     [PLAYGROUND_BALL]: PropTypes.bool,
     [SAFEWAY_BAG]: PropTypes.bool,
     [RECORD_PLAYER_STOOL]: PropTypes.bool,
-    [JOHNNY_HORTON_ALBUM]: PropTypes.bool,
     [SHOPPING_CART_FULL]: PropTypes.bool,
     [BEETHOVEN_BUST]: PropTypes.bool,
     [CHRISTOPHER_LETTERS]: PropTypes.bool,
@@ -156,11 +147,9 @@ export const propTypes = {
     [BEYONDER_ENVELOPE]: PropTypes.bool,
     [BENNETT_LETTERS]: PropTypes.bool,
     [THROWN_FRUIT]: PropTypes.bool,
-    [POLICE_ALBUM]: PropTypes.bool,
     [BENNETT_RECORD_PLAYER]: PropTypes.bool,
     [BENNETT_COUCH_LAMP]: PropTypes.bool,
     [ASH_CAN]: PropTypes.bool,
-    [TELEVISION_ALBUM]: PropTypes.bool,
     [KEYBOARD]: PropTypes.bool,
     [CASH_BOX]: PropTypes.bool,
     [GUITAR]: PropTypes.bool,
@@ -197,7 +186,6 @@ export const propTypes = {
     [DRUMS_STACKED_CLUB]: PropTypes.bool,
     [BENNETT_SHOE]: PropTypes.bool,
     [BENNETT_SHOE_REFLECTION]: PropTypes.bool,
-    [NAS_ALBUM]: PropTypes.bool,
     [TCHOTCHKES]: PropTypes.bool,
     [TETHERBALL_POLE]: PropTypes.bool,
     [RECORDING_MIC]: PropTypes.bool,
@@ -215,7 +203,6 @@ export default {
     [PLAYGROUND_BALL]: PlaygroundBall,
     [SAFEWAY_BAG]: SafewayBag,
     [RECORD_PLAYER_STOOL]: RecordPlayerStool,
-    [JOHNNY_HORTON_ALBUM]: JohnnyHortonAlbum,
     [SHOPPING_CART_FULL]: ShoppingCartFull,
     [BEETHOVEN_BUST]: BeethovenBust,
     [CHRISTOPHER_LETTERS]: ChristopherLetters,
@@ -228,11 +215,9 @@ export default {
     [BEYONDER_ENVELOPE]: BeyonderEnvelope,
     [BENNETT_LETTERS]: BennettLetters,
     [THROWN_FRUIT]: ThrownFruit,
-    [POLICE_ALBUM]: PoliceAlbum,
     [BENNETT_RECORD_PLAYER]: BennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: BennettCouchLamp,
     [ASH_CAN]: AshCan,
-    [TELEVISION_ALBUM]: TelevisionAlbum,
     [KEYBOARD]: Keyboard,
     [CASH_BOX]: CashBox,
     [GUITAR]: Guitar,
@@ -269,7 +254,6 @@ export default {
     [DRUMS_STACKED_CLUB]: DrumsStacked,
     [BENNETT_SHOE]: BennettShoe,
     [BENNETT_SHOE_REFLECTION]: BennettShoeReflection,
-    [NAS_ALBUM]: NasAlbum,
     [TCHOTCHKES]: Tchotchkes,
     [TETHERBALL_POLE]: TetherballPole,
     [RECORDING_MIC]: RecordingMic,

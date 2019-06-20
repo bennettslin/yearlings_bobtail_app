@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -52,6 +53,8 @@ import {
     NOHO_SCHOOL_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
+import { JOHNNY_HORTON_ALBUM } from '../../scene/things/keys/cardboards'
+
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
@@ -62,8 +65,7 @@ import {
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
-    RECORD_PLAYER_STOOL,
-    JOHNNY_HORTON_ALBUM
+    RECORD_PLAYER_STOOL
 } from '../../scene/things/keys/fixtures'
 
 import {
@@ -234,9 +236,11 @@ export default [
             [BACKDROPS]: {
                 [NOHO_HOUSES_BACKDROP]: true
             },
-            [FIXTURES]: {
-                [RECORD_PLAYER_STOOL]: true,
+            [CARDBOARDS]: {
                 [JOHNNY_HORTON_ALBUM]: true
+            },
+            [FIXTURES]: {
+                [RECORD_PLAYER_STOOL]: true
             },
             [PANELS]: {
                 [BATHTUB]: true

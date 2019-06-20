@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const TelevisionAlbum = ({
+const PoliceAlbum = ({
 
     className,
 
@@ -19,13 +19,13 @@ const TelevisionAlbum = ({
     return (
         <Svg
             className={cx(
-                'TelevisionAlbum',
+                'PoliceAlbum',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Fixture__temporaryRect'
+                    'Cardboard__temporaryRect'
                 )}
                 {...other}
             />
@@ -36,13 +36,13 @@ const TelevisionAlbum = ({
                 {...other}
             >
                 {cx(
-                    'TelevisionAlbum'
+                    'PoliceAlbum'
                 )}
             </text>
         </Svg>
     )
 }
 
-TelevisionAlbum.propTypes = propTypes
+PoliceAlbum.propTypes = propTypes
 
-export default TelevisionAlbum
+export default PoliceAlbum

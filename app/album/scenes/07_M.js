@@ -75,6 +75,7 @@ import {
 import { CINEMA_THOUGHTS } from '../../scene/things/keys/bubbles'
 
 import {
+    TELEVISION_ALBUM,
     LEONARD_COHEN_POSTER,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
@@ -93,7 +94,6 @@ import {
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
-    TELEVISION_ALBUM,
     KEYBOARD,
     CASH_BOX,
     GUITAR,
@@ -164,10 +164,10 @@ export default [
                 }
             },
             [CARDBOARDS]: {
+                [TELEVISION_ALBUM]: true,
                 [PROGRESS_CHART_EARLY]: true
             },
             [FIXTURES]: {
-                [TELEVISION_ALBUM]: true,
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },

@@ -1,12 +1,19 @@
+import { CARDBOARDS } from 'constants/scene'
 import {
-    CARDBOARDS,
-    FIXTURES
-} from 'constants/scene'
-import { ELLIOTT_SMITH_POSTER } from '../../keys/cardboards'
-import { NAS_ALBUM } from '../../keys/fixtures'
+    NAS_ALBUM,
+    ELLIOTT_SMITH_POSTER
+} from '../../keys/cardboards'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARDS]: {
+        [NAS_ALBUM]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 9.5,
+                xWidth: 1,
+                zHeight: 4
+            }
+        },
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,
             arrangement: {
@@ -14,16 +21,6 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
-            }
-        }
-    },
-    [FIXTURES]: {
-        [NAS_ALBUM]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 4
             }
         }
     }

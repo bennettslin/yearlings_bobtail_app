@@ -25,7 +25,7 @@ const NasAlbum = ({
         >
             <rect
                 className={cx(
-                    'Fixture__temporaryRect'
+                    'Cardboard__temporaryRect'
                 )}
                 {...other}
             />

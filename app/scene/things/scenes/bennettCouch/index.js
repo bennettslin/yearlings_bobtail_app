@@ -6,16 +6,16 @@ import {
 } from 'constants/scene'
 import { BENNETT_COUCH_THOUGHT_BACKDROP } from '../../keys/backdrops'
 import {
+    POLICE_ALBUM,
     NIRVANA_POSTER,
     LEONARD_COHEN_POSTER,
+    TELEVISION_ALBUM,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE
 } from '../../keys/cardboards'
 import {
-    POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
-    TELEVISION_ALBUM,
     KEYBOARD
 } from '../../keys/fixtures'
 import {
@@ -83,6 +83,14 @@ export const THINGS_BENNETT_COUCH_OPINION = {
         }
     },
     [CARDBOARDS]: {
+        [POLICE_ALBUM]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 2,
+                zHeight: 2
+            }
+        },
         [NIRVANA_POSTER]: {
             yIndex: 1,
             arrangement: {
@@ -90,16 +98,6 @@ export const THINGS_BENNETT_COUCH_OPINION = {
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
-            }
-        }
-    },
-    [FIXTURES]: {
-        [POLICE_ALBUM]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 2
             }
         }
     }
@@ -121,6 +119,14 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
 
 export const THINGS_BENNETT_COUCH_RUBIKS = {
     [CARDBOARDS]: {
+        [TELEVISION_ALBUM]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 2,
+                zHeight: 2
+            }
+        },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             arrangement: {
@@ -128,16 +134,6 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
                 xWidth: 2,
                 zHeight: 3,
                 zOffset: 2
-            }
-        }
-    },
-    [FIXTURES]: {
-        [TELEVISION_ALBUM]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 2
             }
         }
     }

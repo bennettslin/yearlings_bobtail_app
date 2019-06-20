@@ -4,7 +4,6 @@
 * Move tif inside folder with png.
 * Move Illustrator file outside of folder.
 * Create svg, put in scene folder.
-* Make Foam type for posters and albums.
 
 # Order.
 * Cutouts

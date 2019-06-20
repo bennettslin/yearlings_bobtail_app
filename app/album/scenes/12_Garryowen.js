@@ -57,7 +57,10 @@ import {
     OAKLAND_SIDE_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
-import { ELLIOTT_SMITH_POSTER } from '../../scene/things/keys/cardboards'
+import {
+    NAS_ALBUM,
+    ELLIOTT_SMITH_POSTER
+} from '../../scene/things/keys/cardboards'
 
 import {
     MONITOR_SPEAKER_LEFT,
@@ -70,8 +73,7 @@ import {
     GUITAR,
     DRUMKIT,
     BENNETT_COUCH_LAMP,
-    BENNETT_RECORD_PLAYER,
-    NAS_ALBUM
+    BENNETT_RECORD_PLAYER
 } from '../../scene/things/keys/fixtures'
 
 import {
@@ -172,12 +174,12 @@ export default [
                 }
             },
             [CARDBOARDS]: {
+                [NAS_ALBUM]: true,
                 [ELLIOTT_SMITH_POSTER]: true
             },
             [FIXTURES]: {
                 [BENNETT_COUCH_LAMP]: true,
-                [BENNETT_RECORD_PLAYER]: true,
-                [NAS_ALBUM]: true
+                [BENNETT_RECORD_PLAYER]: true
             },
             [PANELS]: {
                 [BENNETT_COUCH]: true,
