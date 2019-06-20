@@ -1,9 +1,7 @@
-# Quick todo.
+# Todo.
 * Move each scene to its own folder.
-* Move folder with png to completed.
-* Move tif inside folder with png.
-* Move Illustrator file outside of folder.
-* Create svg, put in scene folder.
+    * Relink tifs in scene files.
+* TODO: Figure out how to organise tasks.
 
 # Order.
 * Cutouts
@@ -21,12 +19,14 @@
 
 ## File creation.
 * Create temporary subfolder in ~todo.
+* Move tif inside folder.
 * For each tif, create enough layers for no shape to touch another.
     * Shortcut is Shift-Command-N.
 * Create another layer for details that are open paths.
 
 ## Tracing.
-* Just do it.
+* For detailed presences, scale image for better resolution.
+* Make sure all lines connect!
 
 ## Finish.
 * Quick export each isolated layer to PNG in subfolder.
@@ -63,8 +63,14 @@
     * Pathfinder > Unite.
     * No fill.
     * Set stroke to 2pt.
-* Fit artboard to artwork.
-    * Shortcut is Shift-Command-F.
 
 ## Finish.
-* Move file to ~completed folder.
+* Move subfolder with png files and layered tif to ~completed folder.
+* Move Illustrator file to actor or thing folder.
+
+## Create svg.
+* Fit artboard to artwork.
+    * Shortcut is Shift-Command-F.
+* TODO: Create the svg.
+* Place svg in scene folder.
+* Replace link to image with link to svg in scene file.
