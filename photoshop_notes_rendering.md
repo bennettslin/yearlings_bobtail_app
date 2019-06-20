@@ -4,8 +4,8 @@
 * Cutouts
 * Flats
 * Panels
-* Backdrops
 * Bubbles
+* Backdrops
 * Furnitures (include shadow)
 * Puppets (include shadow)
 * Fixtures (include shadow)
@@ -16,7 +16,7 @@
 * For each tif, create just enough layers to trace each outline without touching.
     * Shortcut is Shift-Command-N.
 * Create another layer for details that are open paths.
-* Quick export each isolated layer to PNG in subfolder.
+* Isolate each layer, and Quick export to PNG in subfolder.
     * Custom shortcut is Command-Option-Alt-N.
 * File names don't matter. They're temporary.
 * Show all layers and save tif.
