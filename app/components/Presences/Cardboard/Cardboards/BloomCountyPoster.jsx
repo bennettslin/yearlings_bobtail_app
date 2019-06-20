@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const ProgressChartEarly = ({
+const BloomCountyPoster = ({
 
     className,
 
@@ -19,13 +19,13 @@ const ProgressChartEarly = ({
     return (
         <Svg
             className={cx(
-                'ProgressChartEarly',
+                'BloomCountyPoster',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Cardboard__temporaryRect'
                 )}
                 {...other}
             />
@@ -36,13 +36,13 @@ const ProgressChartEarly = ({
                 {...other}
             >
                 {cx(
-                    'ProgressChartEarly'
+                    'BloomCountyPoster'
                 )}
             </text>
         </Svg>
     )
 }
 
-ProgressChartEarly.propTypes = propTypes
+BloomCountyPoster.propTypes = propTypes
 
-export default ProgressChartEarly
+export default BloomCountyPoster

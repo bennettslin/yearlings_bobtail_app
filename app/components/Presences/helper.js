@@ -1,6 +1,7 @@
 import actorsMap from './Actor/presenceMap'
 import backdropsMap from './Backdrop/presenceMap'
 import bubblesMap from './Bubble/presenceMap'
+import cardboardsMap from './Cardboard/presenceMap'
 import cutoutsMap from './Cutout/presenceMap'
 import fixturesMap from './Fixture/presenceMap'
 import flatsMap from './Flat/presenceMap'
@@ -15,6 +16,7 @@ import {
     ACTORS,
     BACKDROPS,
     BUBBLES,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -27,6 +29,7 @@ const PRESENCE_CLASS_NAME_MAP = {
     [ACTORS]: 'Actor',
     [BACKDROPS]: 'Backdrop',
     [BUBBLES]: 'Bubble',
+    [CARDBOARDS]: 'Cardboard',
     [CUTOUTS]: 'Cutout',
     [FIXTURES]: 'Fixture',
     [FLATS]: 'Flat',
@@ -39,6 +42,7 @@ const PRESENCE_TYPE_MAP = {
     [ACTORS]: actorsMap,
     [BACKDROPS]: backdropsMap,
     [BUBBLES]: bubblesMap,
+    [CARDBOARDS]: cardboardsMap,
     [CUTOUTS]: cutoutsMap,
     [FIXTURES]: fixturesMap,
     [FLATS]: flatsMap,

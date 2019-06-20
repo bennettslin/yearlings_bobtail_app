@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BUBBLES,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FURNITURES,
@@ -68,11 +69,14 @@ import {
 } from '../../scene/things/keys/bubbles'
 
 import {
+    CLIPBOARD,
+    PAINTING
+} from '../../scene/things/keys/cardboards'
+
+import {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     CODE_BOX,
-    CLIPBOARD,
-    PAINTING,
     WAITING_ROOM_PLANT
 } from '../../scene/things/keys/cutouts'
 
@@ -380,9 +384,11 @@ export default [
             [BUBBLES]: {
                 [WAITING_ROOM_THOUGHTS]: true
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [CLIPBOARD]: true,
-                [PAINTING]: true,
+                [PAINTING]: true
+            },
+            [CUTOUTS]: {
                 [WAITING_ROOM_PLANT]: true
             },
             [PANELS]: {
@@ -413,9 +419,11 @@ export default [
                     instance: CHEEK_UNVEILED
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [CLIPBOARD]: true,
-                [PAINTING]: true,
+                [PAINTING]: true
+            },
+            [CUTOUTS]: {
                 [WAITING_ROOM_PLANT]: true
             },
             [PANELS]: {

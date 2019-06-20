@@ -1,12 +1,13 @@
 import {
     BUBBLES,
+    CARDBOARDS,
     CUTOUTS
 } from 'constants/scene'
 import { ESCAPE_POD_SKETCHBOOK } from '../../keys/bubbles'
+import { VAN_NUYS_LOGO } from '../../keys/cardboards'
 import {
     TRASH_CAN_QUAD,
-    VAN_NUYS_PLANT_QUAD,
-    VAN_NUYS_LOGO
+    VAN_NUYS_PLANT_QUAD
 } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
@@ -18,6 +19,17 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 4,
                 zHeight: 3,
                 zOffset: 3
+            }
+        }
+    },
+    [CARDBOARDS]: {
+        [VAN_NUYS_LOGO]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 7.5,
+                xWidth: 3,
+                zHeight: 3,
+                zOffset: 2.5
             }
         }
     },
@@ -33,15 +45,6 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_PLANT_QUAD]: {
             yIndex: 4,
             xPosition: 3
-        },
-        [VAN_NUYS_LOGO]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 7.5,
-                xWidth: 3,
-                zHeight: 3,
-                zOffset: 2.5
-            }
         }
     }
 }

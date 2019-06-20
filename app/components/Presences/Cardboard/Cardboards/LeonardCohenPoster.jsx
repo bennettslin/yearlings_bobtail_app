@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const NirvanaPoster = ({
+const LeonardCohenPoster = ({
 
     className,
 
@@ -19,13 +19,13 @@ const NirvanaPoster = ({
     return (
         <Svg
             className={cx(
-                'NirvanaPoster',
+                'LeonardCohenPoster',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Cardboard__temporaryRect'
                 )}
                 {...other}
             />
@@ -36,13 +36,13 @@ const NirvanaPoster = ({
                 {...other}
             >
                 {cx(
-                    'NirvanaPoster'
+                    'LeonardCohenPoster'
                 )}
             </text>
         </Svg>
     )
 }
 
-NirvanaPoster.propTypes = propTypes
+LeonardCohenPoster.propTypes = propTypes
 
-export default NirvanaPoster
+export default LeonardCohenPoster

@@ -1,11 +1,18 @@
-<!-- # Create ~completed and ~todo folder for each actor and thing. -->
+# Quick todo.
+* Move each scene to its own folder.
+* Move folder with png to completed.
+* Move tif inside folder with png.
+* Move Illustrator file outside of folder.
+* Create svg, put in scene folder.
+* Make Foam type for posters and albums.
 
 # Order.
 * Cutouts
 * Flats
 * Panels
-* Backdrops
+* Cardboards
 * Bubbles
+* Backdrops
 * Furnitures (include shadow)
 * Puppets (include shadow)
 * Fixtures (include shadow)
@@ -62,4 +69,3 @@
 
 ## Finish.
 * Move file to ~completed folder.
-* Delete subfolder in ~todo of same instance name.

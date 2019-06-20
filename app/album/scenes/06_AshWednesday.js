@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -54,9 +55,10 @@ import {
     UC_BERKELEY_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
+import { NIRVANA_POSTER } from '../../scene/things/keys/cardboards'
+
 import {
     RECYCLABLES,
-    NIRVANA_POSTER,
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
@@ -133,7 +135,7 @@ export default [
             [BACKDROPS]: {
                 [BENNETT_COUCH_THOUGHT_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [NIRVANA_POSTER]: true
             },
             [FIXTURES]: {

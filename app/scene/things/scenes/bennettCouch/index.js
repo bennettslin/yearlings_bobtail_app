@@ -1,6 +1,6 @@
 import {
     BACKDROPS,
-    CUTOUTS,
+    CARDBOARDS,
     FIXTURES,
     PANELS
 } from 'constants/scene'
@@ -10,7 +10,7 @@ import {
     LEONARD_COHEN_POSTER,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE
-} from '../../keys/cutouts'
+} from '../../keys/cardboards'
 import {
     POLICE_ALBUM,
     BENNETT_RECORD_PLAYER,
@@ -82,7 +82,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CARDBOARDS]: {
         [NIRVANA_POSTER]: {
             yIndex: 1,
             arrangement: {
@@ -106,7 +106,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
 }
 
 export const THINGS_BENNETT_COUCH_PONDERING = {
-    [CUTOUTS]: {
+    [CARDBOARDS]: {
         [LEONARD_COHEN_POSTER]: {
             yIndex: 1,
             arrangement: {
@@ -120,7 +120,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
 }
 
 export const THINGS_BENNETT_COUCH_RUBIKS = {
-    [CUTOUTS]: {
+    [CARDBOARDS]: {
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             arrangement: {
@@ -144,7 +144,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
 }
 
 export const THINGS_BENNETT_COUCH_READING = {
-    [CUTOUTS]: {
+    [CARDBOARDS]: {
         [PROGRESS_CHART_LATE]: {
             yIndex: 1,
             arrangement: {
