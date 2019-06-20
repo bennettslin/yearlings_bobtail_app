@@ -25,7 +25,7 @@ const Clipboard = ({
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Cardboard__temporaryRect'
                 )}
                 {...other}
             />

@@ -25,6 +25,7 @@ export const FACES = [
 export const ACTORS = 'actors'
 export const BACKDROPS = 'backdrops'
 export const BUBBLES = 'bubbles'
+export const CARDBOARDS = 'cardboards'
 export const CUTOUTS = 'cutouts'
 export const FIXTURES = 'fixtures'
 export const FLATS = 'flats'
@@ -35,6 +36,7 @@ export const PRESENCE_TYPES = [
     ACTORS,
     BACKDROPS,
     BUBBLES,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,

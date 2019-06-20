@@ -1,12 +1,12 @@
 import {
-    CUTOUTS,
+    CARDBOARDS,
     FIXTURES
 } from 'constants/scene'
-import { ELLIOTT_SMITH_POSTER } from '../../keys/cutouts'
+import { ELLIOTT_SMITH_POSTER } from '../../keys/cardboards'
 import { NAS_ALBUM } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CARDBOARDS]: {
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,
             arrangement: {

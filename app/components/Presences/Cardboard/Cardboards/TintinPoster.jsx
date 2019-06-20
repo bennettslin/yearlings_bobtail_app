@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const Corkboard = ({
+const TintinPoster = ({
 
     className,
 
@@ -19,13 +19,13 @@ const Corkboard = ({
     return (
         <Svg
             className={cx(
-                'Corkboard',
+                'TintinPoster',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Cardboard__temporaryRect'
                 )}
                 {...other}
             />
@@ -36,13 +36,13 @@ const Corkboard = ({
                 {...other}
             >
                 {cx(
-                    'Corkboard'
+                    'TintinPoster'
                 )}
             </text>
         </Svg>
     )
 }
 
-Corkboard.propTypes = propTypes
+TintinPoster.propTypes = propTypes
 
-export default Corkboard
+export default TintinPoster

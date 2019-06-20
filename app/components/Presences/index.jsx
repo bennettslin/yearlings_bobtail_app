@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import ActorLayers from './Actor'
 import BackdropLayer from './Backdrop'
 import BubbleLayer from './Bubble'
+import CardboardLayer from './Cardboard'
 import CutoutLayer from './Cutout'
 import FixtureLayer from './Fixture'
 import FlatLayer from './Flat'
@@ -60,6 +61,7 @@ class Presences extends PureComponent {
                 actors,
                 backdrops,
                 bubbles,
+                cardboards,
                 cutouts,
                 fixtures,
                 flats,
@@ -80,6 +82,7 @@ class Presences extends PureComponent {
                 >
                     <BackdropLayer {...backdrops} />
                     <BubbleLayer {...bubbles} />
+                    <CardboardLayer {...cardboards} />
                     <CutoutLayer {...cutouts} />
                     <FixtureLayer {...fixtures} />
                     <FlatLayer {...flats} />

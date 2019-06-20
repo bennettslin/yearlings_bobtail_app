@@ -1,6 +1,6 @@
 import {
     BUBBLES,
-    CUTOUTS,
+    CARDBOARDS,
     FIXTURES,
     FLATS,
     FURNITURES,
@@ -11,7 +11,7 @@ import { DOGS_SKETCHBOOK } from '../../keys/bubbles'
 import {
     TINTIN_POSTER,
     BLOOM_COUNTY_POSTER
-} from '../../keys/cutouts'
+} from '../../keys/cardboards'
 import {
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
@@ -40,7 +40,7 @@ import {
 } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CARDBOARDS]: {
         [TINTIN_POSTER]: {
             yIndex: 1,
             arrangement: {

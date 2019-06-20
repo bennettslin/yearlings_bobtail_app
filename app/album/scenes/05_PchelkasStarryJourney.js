@@ -2,6 +2,7 @@ import {
     ACTORS,
     BACKDROPS,
     BUBBLES,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -81,12 +82,15 @@ import {
 
 import {
     BLOOM_COUNTY_POSTER,
+    VAN_NUYS_LOGO,
+    CORKBOARD
+} from '../../scene/things/keys/cardboards'
+
+import {
     TRASH_CAN_LOCKERS,
     TRASH_CAN_QUAD,
     VAN_NUYS_PLANT_LOCKERS,
-    VAN_NUYS_PLANT_QUAD,
-    VAN_NUYS_LOGO,
-    CORKBOARD
+    VAN_NUYS_PLANT_QUAD
 } from '../../scene/things/keys/cutouts'
 
 import {
@@ -128,7 +132,7 @@ export default [
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
         presences: {
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
             [FURNITURES]: {
@@ -163,7 +167,7 @@ export default [
             [BUBBLES]: {
                 [DOGS_SKETCHBOOK]: true
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
             [FIXTURES]: {
@@ -193,7 +197,7 @@ export default [
                     instance: FEIGNING_SICK
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
             [FIXTURES]: {
@@ -225,7 +229,7 @@ export default [
                     instance: ASLEEP
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
             [PANELS]: {
@@ -354,10 +358,12 @@ export default [
             [BUBBLES]: {
                 [ESCAPE_POD_SKETCHBOOK]: true
             },
+            [CARDBOARDS]: {
+                [VAN_NUYS_LOGO]: true
+            },
             [CUTOUTS]: {
                 [TRASH_CAN_QUAD]: true,
-                [VAN_NUYS_PLANT_QUAD]: true,
-                [VAN_NUYS_LOGO]: true
+                [VAN_NUYS_PLANT_QUAD]: true
             }
         },
         cubes: VAN_NUYS_QUAD_KEY,
@@ -398,7 +404,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [CORKBOARD]: true
             }
         },

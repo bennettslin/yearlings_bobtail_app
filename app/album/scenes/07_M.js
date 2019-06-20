@@ -2,6 +2,7 @@ import {
     ACTORS,
     BACKDROPS,
     BUBBLES,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -77,13 +78,16 @@ import {
     LEONARD_COHEN_POSTER,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
-    MONITOR_SPEAKER_LEFT,
-    MONITOR_SPEAKER_RIGHT,
-    WALL_SPEAKER_LEFT,
-    WALL_SPEAKER_RIGHT,
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT,
     CINEMA_POSTER_RIGHT_NORMAL
+} from '../../scene/things/keys/cardboards'
+
+import {
+    MONITOR_SPEAKER_LEFT,
+    MONITOR_SPEAKER_RIGHT,
+    WALL_SPEAKER_LEFT,
+    WALL_SPEAKER_RIGHT
 } from '../../scene/things/keys/cutouts'
 
 import {
@@ -128,7 +132,7 @@ export default [
                     instance: PONDERING
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [LEONARD_COHEN_POSTER]: true
             },
             [FIXTURES]: {
@@ -159,7 +163,7 @@ export default [
                     instance: RUBIKS_CUBE
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [PROGRESS_CHART_EARLY]: true
             },
             [FIXTURES]: {
@@ -199,7 +203,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [PROGRESS_CHART_LATE]: true
             },
             [FIXTURES]: {
@@ -338,7 +342,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
             }
@@ -377,7 +381,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
             }
@@ -414,7 +418,7 @@ export default [
             [BUBBLES]: {
                 [CINEMA_THOUGHTS]: true
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [CINEMA_POSTER_RIGHT_NORMAL]: true
             },
             [FLATS]: {

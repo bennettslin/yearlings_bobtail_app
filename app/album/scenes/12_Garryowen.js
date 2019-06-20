@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -56,8 +57,9 @@ import {
     OAKLAND_SIDE_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
+import { ELLIOTT_SMITH_POSTER } from '../../scene/things/keys/cardboards'
+
 import {
-    ELLIOTT_SMITH_POSTER,
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
@@ -169,7 +171,7 @@ export default [
                     instance: CELIBATE_FREEZING
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [ELLIOTT_SMITH_POSTER]: true
             },
             [FIXTURES]: {

@@ -1,6 +1,7 @@
 import {
     ACTORS,
     BACKDROPS,
+    CARDBOARDS,
     CUTOUTS,
     FIXTURES,
     FLATS,
@@ -71,12 +72,13 @@ import {
     VALLEY_BACKDROP
 } from '../../scene/things/keys/backdrops'
 
+import { TINTIN_POSTER } from '../../scene/things/keys/cardboards'
+
 import {
     OVERPASS_SIGN_FRONT,
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
-    TINTIN_POSTER,
     FIRE_HYDRANT,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
@@ -223,7 +225,7 @@ export default [
                     instance: ENRAGED
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [TINTIN_POSTER]: true
             },
             [FIXTURES]: {
@@ -305,7 +307,7 @@ export default [
                     instance: FEARFUL
                 }
             },
-            [CUTOUTS]: {
+            [CARDBOARDS]: {
                 [TINTIN_POSTER]: true
             },
             [FIXTURES]: {

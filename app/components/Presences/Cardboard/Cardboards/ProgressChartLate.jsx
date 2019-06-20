@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const Painting = ({
+const ProgressChartLate = ({
 
     className,
 
@@ -19,13 +19,13 @@ const Painting = ({
     return (
         <Svg
             className={cx(
-                'Painting',
+                'ProgressChartLate',
                 className
             )}
         >
             <rect
                 className={cx(
-                    'Cutout__temporaryRect'
+                    'Cardboard__temporaryRect'
                 )}
                 {...other}
             />
@@ -36,13 +36,13 @@ const Painting = ({
                 {...other}
             >
                 {cx(
-                    'Painting'
+                    'ProgressChartLate'
                 )}
             </text>
         </Svg>
     )
 }
 
-Painting.propTypes = propTypes
+ProgressChartLate.propTypes = propTypes
 
-export default Painting
+export default ProgressChartLate

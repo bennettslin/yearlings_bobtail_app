@@ -1,13 +1,13 @@
 import {
-    CUTOUTS
+    CARDBOARDS
 } from 'constants/scene'
 import {
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT
-} from '../../keys/cutouts'
+} from '../../keys/cardboards'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CARDBOARDS]: {
         [CINEMA_POSTER_LEFT]: {
             yIndex: 4,
             arrangement: {

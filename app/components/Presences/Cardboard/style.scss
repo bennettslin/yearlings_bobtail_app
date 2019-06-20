@@ -1,0 +1,40 @@
+.Cardboard__temporaryRect {
+    fill: rgba(200, 250, 200, 0.25);
+    vector-effect: non-scaling-stroke;
+    stroke-width: 1px;
+    stroke: #444;
+}
+
+// .Cardboard {
+//     transition: top $animationDuration__default;
+//     top: -100%;
+
+//     .Scene__shown
+//     & {
+//         top: 0;
+//     }
+// }
+
+// .Cardboard {
+//     transition: opacity $animationDuration__default;
+//     opacity: 0;
+
+//     .Scene__shown
+//     & {
+//         opacity: 1;
+//     }
+// }
+
+.Cardboard__outline {
+    fill: none;
+    stroke: #654321;
+    stroke-width: 1px;
+}
+
+.Cardboard__plantGreen__1 {
+    fill: #282;
+}
+
+.Cardboard__plantGreen__2 {
+    fill: #393;
+}
