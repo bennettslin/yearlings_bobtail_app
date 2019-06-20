@@ -39,7 +39,7 @@
 * Align all at once.
 
 ## Vectorisation.
-* Image Trace > Line Art, then Expand for each image.
+* For each image, Image Trace > Line Art, then Expand.
 * Smooth each object by joining corners.
     * Shortcut for Join tool is J.
 * Join path for each object.
@@ -47,11 +47,12 @@
 * In Layers settings, Flatten artwork.
 * Temporarily colour each object. Aim for final colour, but don't sweat it.
 * Set stroke widths.
-    * Closed paths are 1pt.
+    * Boundary path is 2pt.
+    * Other closed paths are 1pt.
     * Open paths are 0.5pt.
 * Send objects backward or forward as needed.
     * Shortcuts are Command-[ or ].
-* Create boundary path.
+* If not a single shape, create a boundary path.
     * Duplicate layer.
     * Pathfinder > Unite.
     * No fill.
