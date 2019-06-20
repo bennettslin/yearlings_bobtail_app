@@ -40,11 +40,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'tintinPoster',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'campfire',
         workedHours: 0,
         neededHours: 1
@@ -145,11 +140,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'bloomCountyPoster',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'trashCan',
         workedHours: 0,
         neededHours: 1
@@ -160,27 +150,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'vanNuysLogo',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'corkboard',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'recyclables',
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'berkeleyLamppost',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'nirvanaPoster',
         workedHours: 0,
         neededHours: 1
     },
@@ -196,21 +171,6 @@ export default [
     },
     {
         taskName: 'signPost',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'leonardCohenPoster',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'progressChartEarly',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'progressChartLate',
         workedHours: 0,
         neededHours: 1
     },
@@ -245,21 +205,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'cinemaPosterLeft',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'cinemaPosterRight',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'cinemaPosterRightNormal',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'sandbags',
         workedHours: 0,
         neededHours: 1
@@ -285,16 +230,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'clipboard',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'painting',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'waitingRoomPlant',
         workedHours: 0,
         neededHours: 1
@@ -316,11 +251,6 @@ export default [
     },
     {
         taskName: 'howieFridge',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'elliottSmithPoster',
         workedHours: 0,
         neededHours: 1
     },
