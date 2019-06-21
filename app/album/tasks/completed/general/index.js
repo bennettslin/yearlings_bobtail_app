@@ -4611,5 +4611,10 @@ export default [
         taskName: `Create new cardboard thing category.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Timebox for exploring different ways to render svgs.`,
+        workedHours: 9,
+        neededHours: 9
     }
 ]

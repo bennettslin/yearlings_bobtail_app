@@ -15,6 +15,21 @@ export default [
         neededHours: 1.5
     },
     {
+        taskName: 'policeAlbum',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'televisionAlbum',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'nasAlbum',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
         taskName: 'recordPlayerStool',
         workedHours: 0,
         neededHours: 1.5
@@ -90,17 +105,7 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'policeAlbum',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'ashCan',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'televisionAlbum',
         workedHours: 0,
         neededHours: 1.5
     },
@@ -261,11 +266,6 @@ export default [
     },
     {
         taskName: 'bennettShoeReflection',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'nasAlbum',
         workedHours: 0,
         neededHours: 1.5
     },

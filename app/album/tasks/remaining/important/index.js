@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Timebox for exploring different ways to render svgs.`,
-        workedHours: 6,
-        neededHours: 10
-    },
-    {
         taskName: `Disable ability to toggle admin in production.`,
         workedHours: 0,
         neededHours: 1
