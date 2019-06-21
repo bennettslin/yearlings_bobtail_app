@@ -1,8 +1,3 @@
-# Todo.
-* Move each scene to its own folder.
-    * Relink tifs in scene files.
-* TODO: Figure out how to organise tasks.
-
 # Order.
 * Cutouts
 * Flats
@@ -19,7 +14,6 @@
 
 ## File creation.
 * Create temporary subfolder in ~todo.
-* Move tif inside folder.
 * For each tif, create enough layers for no shape to touch another.
     * Shortcut is Shift-Command-N.
 * Create another layer for details that are open paths.
@@ -28,7 +22,7 @@
 * For detailed presences, scale image for better resolution.
 * Make sure all lines connect!
 
-## Finish.
+## Finalisation.
 * Quick export each isolated layer to PNG in subfolder.
     * Custom shortcut is Command-Option-Alt-N.
 * File names don't matter. They're temporary.
@@ -64,13 +58,25 @@
     * No fill.
     * Set stroke to 2pt.
 
-## Finish.
-* Move subfolder with png files and layered tif to ~completed folder.
+## Finalisation.
+* Move subfolder with png files to ~completed folder.
 * Move Illustrator file to actor or thing folder.
+
+* Log 50% done.
 
 ## Create svg.
 * Fit artboard to artwork.
     * Shortcut is Shift-Command-F.
-* TODO: Create the svg.
-* Place svg in scene folder.
-* Replace link to image with link to svg in scene file.
+* Make sure it's deselected, and Export as SVG.
+    * Shortcut is Shift-Command-E.
+    * Internal CSS, Layer Names, no minify, yes responsive.
+    * Move it to scene folder.
+* Place in scene, and Transform > Scale to adjust. (Maybe just 50% for ease.)
+    * Shortcut is Shift-Command-C.
+
+* Remove placed tif from scene.
+* Move layered tif to its completed folder.
+
+## Convert svg to React component.
+
+* Log the other 50% done.

@@ -4606,5 +4606,10 @@ export default [
         taskName: `Edit and place some furniture in Illustrator.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Create new cardboard thing category.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
