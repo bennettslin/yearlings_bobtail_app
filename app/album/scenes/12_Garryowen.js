@@ -206,7 +206,7 @@ export default [
                 },
                 [MIRIAM_TRISTAN]: {
                     todo: true,
-                    workedHours: 3.25,
+                    workedHours: 3.5,
                     compound: 2,
                     description: 'side, greeting Bennett',
                     instance: NOOGIE
