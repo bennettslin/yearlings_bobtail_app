@@ -55,8 +55,8 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Finalise banner UI. Make banner scenes like a film strip.`,
-        workedHours: 3,
+        taskName: `Finalise banner UI.`,
+        workedHours: 5,
         neededHours: 7
     }
 ]

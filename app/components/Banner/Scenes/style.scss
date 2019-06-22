@@ -1,8 +1,31 @@
 @import "./Scene/style";
 
+$colour__filmReel: #444;
+
 .BannerScenes {
     height: 32px;
     top: auto;
     bottom: 0;
-    background-color: #444;
+
+    // Film reel perforations.
+
+    // Outer solid edge.
+    border-top: $length__filmPerf solid $colour__filmReel;
+    border-bottom: $length__filmPerf solid $colour__filmReel;
+
+    // Film perforations.
+    background-image: linear-gradient(to right, $colour__filmReel 50%, transparent 50%);
+    background-size: $length__filmPerf * 3;
+    background-position: $length__filmPerf;
+
+    // Inner cell edge.
+    &:before {
+        content: '';
+        position: absolute;
+        top: $length__filmPerf;
+        left: 0;
+        width: 100%;
+        height: calc(100% - #{$length__filmPerf * 2});
+        background-color: $colour__filmReel;
+    }
 }
