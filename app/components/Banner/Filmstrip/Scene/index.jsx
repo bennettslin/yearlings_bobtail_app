@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import BannerSceneSquare from './Square'
+import FilmstripCell from './Cell'
 
-class BannerScene extends PureComponent {
+class FilmstripScene extends PureComponent {
 
     static propTypes = {
         // From parent.
@@ -19,7 +19,7 @@ class BannerScene extends PureComponent {
     }
 
     _handleSceneClick = (e) => {
-        logEvent(BannerScene.name, e)
+        logEvent(FilmstripScene.name, e)
 
         const { sceneIndex } = this.props
         this.props.dispatchScene(sceneIndex)
@@ -39,7 +39,7 @@ class BannerScene extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'BannerScene',
+                        'FilmstripScene',
                         'abF'
                     ),
                     style: {
@@ -49,7 +49,7 @@ class BannerScene extends PureComponent {
                     onClick: this._handleSceneClick
                 }}
             >
-                <BannerSceneSquare
+                <FilmstripCell
                     {...{
                         isOdd,
                         isInteractivated,
@@ -62,4 +62,4 @@ class BannerScene extends PureComponent {
     }
 }
 
-export default BannerScene
+export default FilmstripScene

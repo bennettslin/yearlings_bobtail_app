@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import cx from 'classnames'
 
 import BannerCursor from './Cursor'
-import BannerScenes from './Scenes'
+import Filmstrip from './Filmstrip'
 
 class Banner extends PureComponent {
     render() {
@@ -13,7 +13,7 @@ class Banner extends PureComponent {
                 'flexAlignContainer'
             )}>
                 <BannerCursor />
-                <BannerScenes />
+                <Filmstrip />
             </div>
         )
     }

@@ -10,7 +10,7 @@ const propTypes = {
     isAfterSelected: PropTypes.bool.isRequired
 }
 
-const BannerSceneSquare = ({
+const FilmstripCell = ({
     isOdd,
     isInteractivated,
     isSelected,
@@ -19,22 +19,21 @@ const BannerSceneSquare = ({
     <div
         {...{
             className: cx(
-                'BannerSceneSquare',
+                'FilmstripCell',
                 isOdd ?
-                    'BannerSceneSquare__even' :
-                    'BannerSceneSquare__odd',
+                    'FilmstripCell__even' :
+                    'FilmstripCell__odd',
                 isInteractivated &&
-                    'BannerSceneSquare__interactivated',
+                    'FilmstripCell__interactivated',
                 isSelected &&
-                    'BannerSceneSquare__selected',
+                    'FilmstripCell__selected',
                 isAfterSelected &&
-                    'BannerSceneSquare__afterSelected'
-                // 'abF'
+                    'FilmstripCell__afterSelected'
             )
         }}
     />
 )
 
-BannerSceneSquare.propTypes = propTypes
+FilmstripCell.propTypes = propTypes
 
-export default memo(BannerSceneSquare)
+export default memo(FilmstripCell)

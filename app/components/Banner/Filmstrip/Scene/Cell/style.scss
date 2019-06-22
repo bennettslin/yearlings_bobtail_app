@@ -1,4 +1,4 @@
-.BannerSceneSquare {
+.FilmstripCell {
     width: 100%;
     height: 100%;
     border-radius: 1px;
@@ -6,45 +6,45 @@
     transition:
         background-color $animationDuration__default;
 
-    .BannerScene:hover
+    FilmstripScene:hover
     & {
         animation: bounceHoverY $animationDuration__default;
         background-color: $bgColour__interactivated;
     }
 
-    .BannerScene:active
+    FilmstripScene:active
     & {
         transform: scaleY(0.9);
     }
 }
 
-.BannerSceneSquare__odd {
+.FilmstripCell__odd {
     background-color: $bgColour__beforeSlider;
 }
 
-.BannerSceneSquare__even {
+.FilmstripCell__even {
     background-color: $bgColour__beforeSlider__even;
 }
 
-.BannerSceneSquare__selected {
+.FilmstripCell__selected {
     background-color: $bgColour__audioNeutral;
 }
 
-.BannerSceneSquare__afterSelected {
+.FilmstripCell__afterSelected {
 
-    &.BannerSceneSquare__odd {
+    &.FilmstripCell__odd {
         background-color: $bgColour__afterSlider;
     }
 
-    &.BannerSceneSquare__even {
+    &.FilmstripCell__even {
         background-color: $bgColour__afterSlider__even;
     }
 }
 
-.BannerSceneSquare__interactivated {
+.FilmstripCell__interactivated {
 
     // Make selector specific to override default colour.
-    &.BannerSceneSquare {
+    &.FilmstripCell {
         background-color: $bgColour__interactivated;
     }
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import BannerScene from './Scene'
+import FilmstripScene from './Scene'
 import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 
@@ -29,7 +29,7 @@ const mapStateToProps = ({
     interactivatedSceneIndex
 })
 
-class BannerScenes extends PureComponent {
+class Filmstrip extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -60,7 +60,7 @@ class BannerScenes extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'BannerScenes',
+                        'Filmstrip',
                         'dropShadow',
                         'abF'
                     )
@@ -83,7 +83,7 @@ class BannerScenes extends PureComponent {
                         sceneWidth = sceneDuration / totalTime * 100
 
                     return (
-                        <BannerScene
+                        <FilmstripScene
                             {...{
                                 key: sceneIndex,
                                 isOdd,
@@ -110,4 +110,4 @@ class BannerScenes extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(BannerScenes)
+export default connect(mapStateToProps)(Filmstrip)
