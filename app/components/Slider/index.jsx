@@ -8,9 +8,14 @@ import { connect } from 'react-redux'
 import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
-import SliderAccess from './Access'
+import AccessDirectionLetter from '../Access/DirectionLetter'
 
 import { populateRefs } from 'helpers/ref'
+
+import {
+    PREVIOUS_VERSE_KEY,
+    NEXT_VERSE_KEY
+} from 'constants/access'
 
 const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter }
@@ -55,7 +60,15 @@ class Slider extends PureComponent {
             >
                 <SliderTimes />
                 <SliderStanzas />
-                <SliderAccess />
+                <AccessDirectionLetter
+                    alignTop
+                    {...{ accessKey: PREVIOUS_VERSE_KEY }}
+                />
+                <AccessDirectionLetter
+                    alignTop
+                    isNext
+                    {...{ accessKey: NEXT_VERSE_KEY }}
+                />
                 <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

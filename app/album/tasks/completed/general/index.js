@@ -4616,5 +4616,10 @@ export default [
         taskName: `Timebox for exploring different ways to render svgs.`,
         workedHours: 9,
         neededHours: 9
+    },
+    {
+        taskName: `Determine how to show access letters in slider and banner.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

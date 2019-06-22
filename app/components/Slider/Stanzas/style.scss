@@ -1,1 +1,8 @@
 @import "./Stanza/style";
+
+.SliderStanzas {
+    .PlW__song
+    & {
+        cursor: pointer;
+    }
+}

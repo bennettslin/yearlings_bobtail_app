@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import BannerScene from './Scene'
-import BannerAccessLetter from '../AccessLetter'
+import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 
 import { getSongSceneConfigs } from 'album/api/scenes'
@@ -98,9 +98,11 @@ class BannerScenes extends PureComponent {
                         />
                     )
                 })}
-                <div>hello</div>
-                <BannerAccessLetter {...{ accessKey: PREVIOUS_SCENE_KEY }} />
-                <BannerAccessLetter {...{ accessKey: NEXT_SCENE_KEY }} />
+                <AccessDirectionLetter {...{ accessKey: PREVIOUS_SCENE_KEY }} />
+                <AccessDirectionLetter
+                    isNext
+                    {...{ accessKey: NEXT_SCENE_KEY }}
+                />
 
                 <SceneDispatcher {...{ getRefs: this._getRefs }} />
             </div>

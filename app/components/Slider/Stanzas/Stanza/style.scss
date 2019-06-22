@@ -49,7 +49,6 @@ $width__sliderStanzaTab: 9px;
 }
 
 .boxShadow__sliderStanzaTab:before {
-    // filter: $dropShadow__sliderStanza;
     box-shadow: $boxShadow__sliderStanza;
 }
 

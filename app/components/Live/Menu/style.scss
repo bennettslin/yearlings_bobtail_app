@@ -64,6 +64,6 @@ $js__height__menu: 72px;
 }
 
 .Menu__lyricTop {
-    padding-left: $margin__scrollBar;
-    padding-right: $margin__scrollBar;
+    padding-left: $js__margin__thick * 2;
+    padding-right: $js__margin__thick * 2;
 }

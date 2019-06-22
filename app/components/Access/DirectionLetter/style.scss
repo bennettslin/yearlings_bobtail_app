@@ -1,0 +1,20 @@
+.AccessDirectionLetter {
+    position: absolute;
+    bottom: 0;
+    z-index: $zIndex__menuChild;
+}
+
+.AccessDirectionLetter__alignTop {
+    bottom: auto;
+    top: 0;
+}
+
+.AccessDirectionLetter__previous {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.AccessDirectionLetter__next {
+    right: 0;
+    transform: translateX(100%);
+}

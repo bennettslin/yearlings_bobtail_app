@@ -11,20 +11,24 @@ const mapStateToProps = ({
     isLyricLogue
 })
 
-class BannerAccessLetter extends PureComponent {
+class AccessDirectionLetter extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isLyricLogue: PropTypes.bool.isRequired,
 
         // From parent.
-        accessKey: PropTypes.string.isRequired
+        accessKey: PropTypes.string.isRequired,
+        alignTop: PropTypes.bool,
+        isNext: PropTypes.bool
     }
 
     render() {
         const {
             isLyricLogue,
-            accessKey
+            accessKey,
+            alignTop,
+            isNext
         } = this.props
 
         return (
@@ -32,8 +36,9 @@ class BannerAccessLetter extends PureComponent {
                 {...{
                     // Outer wrapper is necessary for proper transition.
                     className: cx(
-                        'BannerAccessLetter',
-                        `BannerAccessLetter__${accessKey}`,
+                        'AccessDirectionLetter',
+                        alignTop && 'AccessDirectionLetter__alignTop',
+                        `AccessDirectionLetter__${isNext ? 'next' : 'previous'}`
                     )
                 }}
             >
@@ -49,4 +54,4 @@ class BannerAccessLetter extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(BannerAccessLetter)
+export default connect(mapStateToProps)(AccessDirectionLetter)

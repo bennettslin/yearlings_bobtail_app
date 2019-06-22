@@ -1,4 +1,3 @@
-@import "./Access/style";
 @import "./Scenes/style";
 @import "./Stanzas/style";
 @import "./Times/style";
@@ -11,11 +10,6 @@
 
     opacity: 0;
     transition: opacity $animationDuration__fast;
-
-    .PlW__song
-    & {
-        cursor: pointer;
-    }
 }
 
 .ShW__overlayHidden
