@@ -1,4 +1,9 @@
 export default [
+    {
+        taskName: `Make Banner able to select song time. Rename cursor to Banner, and scenes to Filmstrip.`,
+        workedHours: 0,
+        neededHours: 5
+    },
     // Buttons and dots UI.
     {
         taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.) And for buttons that can be indexSelected, nav books and songs.`,
