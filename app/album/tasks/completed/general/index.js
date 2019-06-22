@@ -4621,5 +4621,10 @@ export default [
         taskName: `Determine how to show access letters in slider and banner.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Rename Cursor to Banner, and banner scenes to Filmstrip.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

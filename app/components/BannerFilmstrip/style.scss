@@ -1,10 +1,10 @@
 $length__filmPerf: 2px;
 $length__filmPerf: 2px;
 
-@import "./Cursor/style";
+@import "./Banner/style";
 @import "./Filmstrip/style";
 
-.Banner {
+.BannerFilmstrip {
     flex-grow: 3;
 
     position: relative;

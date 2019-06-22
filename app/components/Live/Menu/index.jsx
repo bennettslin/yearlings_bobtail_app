@@ -10,7 +10,7 @@ import cx from 'classnames'
 
 import AboutToggle from '../../About/Toggle'
 import Audio from '../../Audio'
-import Banner from '../../Banner'
+import BannerFilmstrip from '../../BannerFilmstrip'
 import Slider from '../../Slider'
 
 import { getMenuMarginInOverlay } from './helper'
@@ -111,7 +111,7 @@ class Menu extends PureComponent {
                         }}
                     >
                         <AboutToggle />
-                        <Banner />
+                        <BannerFilmstrip />
                         {!isTwoRowMenu && (
                             <Audio />
                         )}

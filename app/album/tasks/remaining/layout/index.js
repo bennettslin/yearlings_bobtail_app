@@ -1,8 +1,8 @@
 export default [
     {
-        taskName: `Make Banner able to select song time. Rename cursor to Banner, and scenes to Filmstrip.`,
+        taskName: `Make BannerFilmstrip able to select song time. Rename cursor to BannerFilmstrip, and scenes to Filmstrip.`,
         workedHours: 0,
-        neededHours: 5
+        neededHours: 4
     },
     // Buttons and dots UI.
     {
@@ -55,7 +55,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Finalise cursor UI, including VerseTracker gradient.`,
+        taskName: `Finalise verse colour UI, including VerseTracker gradient.`,
         workedHours: 0,
         neededHours: 2
     },

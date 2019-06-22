@@ -18,7 +18,7 @@ const mapStateToProps = ({
     selectedTime
 })
 
-class BannerCursor extends PureComponent {
+class Banner extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -42,9 +42,9 @@ class BannerCursor extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'BannerCursor',
+                        'Banner',
                         isSmallBannerText &&
-                            'BannerCursor__smallText',
+                            'Cursor__smallText',
                         'dropShadow',
                         'textShadow__banner',
                         'abF'
@@ -69,4 +69,4 @@ class BannerCursor extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(BannerCursor)
+export default connect(mapStateToProps)(Banner)
