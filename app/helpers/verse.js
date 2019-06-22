@@ -1,17 +1,13 @@
 import findIndex from 'lodash.findindex'
-import { LS_MARGIN_X_SLIDER } from 'constants/responsive'
 
 import { getSongTotalTime } from 'album/api/time'
 import { getSongStanzaConfigs } from 'album/api/stanzas'
 
 export const getVerseIndexforRatio = (
-
     songIndex,
-    touchInSliderRatio,
-    sliderWidth
+    touchInElementRatio
 
 ) => {
-
     const songStanzaConfigs = getSongStanzaConfigs(songIndex),
 
         totalTime = getSongTotalTime(songIndex),
@@ -27,7 +23,7 @@ export const getVerseIndexforRatio = (
             const stanzaEndRatio = stanzaObject.stanzaEndTime / totalTime,
 
                 // Stanza's end ratio should be greater than touch ratio.
-                isTouchInStanza = stanzaEndRatio > touchInSliderRatio
+                isTouchInStanza = stanzaEndRatio > touchInElementRatio
 
             return isTouchInStanza
         }),
@@ -49,33 +45,16 @@ export const getVerseIndexforRatio = (
         stanzaStartRatio = stanzaStartTime / totalTime,
         stanzaEndRatio = stanzaEndTime / totalTime,
 
-        // Width of stanza relative to slider.
+        // Width of stanza relative to element.
         stanzaWidthRatio = stanzaEndRatio - stanzaStartRatio,
 
-        // Get ratio of touch in stanza.
+        /**
+         * Get ratio of touch in stanza. This is the ratio that will accurately
+         * tell us the verse that the touch is in.
+         */
         touchInStanzaRatio =
-            (touchInSliderRatio - stanzaStartRatio) / stanzaWidthRatio,
+            (touchInElementRatio - stanzaStartRatio) / stanzaWidthRatio,
 
-        /**
-         * Get touch in verses ratio. Verses width is stanza width minus its
-         * margins.
-         */
-        stanzaWidth = stanzaWidthRatio * sliderWidth,
-        touchInStanzaWidth = touchInStanzaRatio * stanzaWidth,
-
-        /**
-         * All stanzas have a left margin.
-         */
-        startMarginWidth = LS_MARGIN_X_SLIDER,
-
-        versesWidth = stanzaWidth - startMarginWidth,
-        touchInVersesWidth = touchInStanzaWidth - startMarginWidth,
-
-        /**
-         * This is the ratio that will accurately tell us the verse that the
-         * touch is in.
-         */
-        touchInVersesRatio = touchInVersesWidth / versesWidth,
         totalStanzaTime = stanzaEndTime - stanzaStartTime,
 
         // Now figure out which verse the touch is in.
@@ -90,15 +69,13 @@ export const getVerseIndexforRatio = (
                     (stanzaVerseConfigs[index + 1].verseStartTime - stanzaStartTime) / totalStanzaTime,
 
                 // Verse's end ratio should be greater than touch ratio.
-                isTouchInVerse = verseEndRatio > touchInVersesRatio
+                isTouchInVerse = verseEndRatio > touchInStanzaRatio
 
             return isTouchInVerse
         }),
 
         // Add stanza's first verse index with the returned verse times index.
         verseIndex = stanzaFirstVerseIndex + verseTimesIndex
-
-    console.error('touch in slider ratio', touchInSliderRatio, verseIndex)
 
     return verseIndex
 }

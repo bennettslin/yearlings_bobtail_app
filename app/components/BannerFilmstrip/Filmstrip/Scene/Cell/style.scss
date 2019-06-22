@@ -6,13 +6,13 @@
     transition:
         background-color $animationDuration__default;
 
-    FilmstripScene:hover
+    .FilmstripScene:hover
     & {
         animation: bounceHoverY $animationDuration__default;
         background-color: $bgColour__interactivated;
     }
 
-    FilmstripScene:active
+    .FilmstripScene:active
     & {
         transform: scaleY(0.9);
     }

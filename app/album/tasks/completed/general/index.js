@@ -4626,5 +4626,10 @@ export default [
         taskName: `Rename Cursor to Banner, and banner scenes to Filmstrip.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make BannerFilmstrip able to select song time. Rename cursor to BannerFilmstrip, and scenes to Filmstrip.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

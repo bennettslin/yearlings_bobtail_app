@@ -12,14 +12,19 @@ import { getSongTotalTime } from 'album/api/time'
 
 import { getClientX, getElementRatioForClientX } from 'helpers/dom'
 import { populateRefs } from 'helpers/ref'
+import { getVerseIndexforRatio } from 'helpers/verse'
 
 const mapStateToProps = ({
     responsiveStore: { isSmallBannerText },
     lyricStore: { lyricSongIndex },
-    selectedStore: { selectedTime }
+    selectedStore: {
+        selectedSongIndex,
+        selectedTime
+    }
 }) => ({
     isSmallBannerText,
     lyricSongIndex,
+    selectedSongIndex,
     selectedTime
 })
 
@@ -29,6 +34,7 @@ class Banner extends PureComponent {
         // Through Redux.
         isSmallBannerText: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired
     }
 
@@ -48,15 +54,17 @@ class Banner extends PureComponent {
             { left, width } = this.bannerElement.getBoundingClientRect()
 
         if (isNumber(clientX)) {
-            const bannerRatio = getElementRatioForClientX({
-                clientX,
-                elementLeft: left,
-                elementWidth: width
-            })
+            const { selectedSongIndex } = this.props,
+                bannerRatio = getElementRatioForClientX({
+                    clientX,
+                    elementLeft: left,
+                    elementWidth: width
+                })
 
-            console.error('bannerRatio', bannerRatio)
-
-            const selectedVerseIndex = 0
+            const selectedVerseIndex = getVerseIndexforRatio(
+                selectedSongIndex,
+                bannerRatio
+            )
 
             this.dispatchVerse({
                 selectedVerseIndex,

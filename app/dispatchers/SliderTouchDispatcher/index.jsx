@@ -11,7 +11,7 @@ import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getClientX, getElementRatioForClientX } from 'helpers/dom'
 import { populateRefs } from 'helpers/ref'
 
-import { getVerseIndexforRatio } from './helper'
+import { getVerseIndexforRatio } from 'helpers/verse'
 
 class SliderTouchDispatcher extends PureComponent {
 
@@ -72,8 +72,7 @@ class SliderTouchDispatcher extends PureComponent {
 
             sliderVerseIndex = getVerseIndexforRatio(
                 selectedSongIndex,
-                sliderRatio,
-                sliderWidth
+                sliderRatio
             )
 
         this.props.updateSliderStore({
@@ -126,8 +125,7 @@ class SliderTouchDispatcher extends PureComponent {
 
             sliderVerseIndex = getVerseIndexforRatio(
                 selectedSongIndex,
-                sliderRatio,
-                sliderWidth
+                sliderRatio
             )
 
         // For better performance, only set in Redux upon actual change.
