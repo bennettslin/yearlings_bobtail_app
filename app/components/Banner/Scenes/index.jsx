@@ -4,13 +4,18 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import BannerScene from './Scene'
-import BannerAccess from '../Access'
+import BannerAccessLetter from '../AccessLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 
 import { getSongSceneConfigs } from 'album/api/scenes'
 import { getSongTotalTime } from 'album/api/time'
 
 import { populateRefs } from 'helpers/ref'
+
+import {
+    PREVIOUS_SCENE_KEY,
+    NEXT_SCENE_KEY
+} from 'constants/access'
 
 const mapStateToProps = ({
     lyricStore: {
@@ -93,7 +98,10 @@ class BannerScenes extends PureComponent {
                         />
                     )
                 })}
-                <BannerAccess />
+                <div>hello</div>
+                <BannerAccessLetter {...{ accessKey: PREVIOUS_SCENE_KEY }} />
+                <BannerAccessLetter {...{ accessKey: NEXT_SCENE_KEY }} />
+
                 <SceneDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

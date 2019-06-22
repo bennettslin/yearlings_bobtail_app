@@ -1,0 +1,17 @@
+$margin__banner__accessIcons: 3px;
+
+.BannerAccessLetter {
+    position: absolute;
+}
+
+.BannerAccessLetter__n {
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+}
+
+.BannerAccessLetter__m {
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+}

@@ -11,13 +11,13 @@ import puppets from './puppets'
 
 export default [
     ...app,
-    ...backdrops,
-    ...bubbles,
-    ...cardboards,
-    ...cutouts,
-    ...fixtures,
-    ...flats,
-    ...furniture,
-    ...panels,
-    ...puppets
-]
+    ...backdrops, // 27
+    ...bubbles, // 12
+    ...cardboards, // 18
+    ...cutouts, // 66
+    ...fixtures, // 65
+    ...flats, // 61
+    ...furniture, // 8
+    ...panels, // 46
+    ...puppets // 19
+] // 322 total

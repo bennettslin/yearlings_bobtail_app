@@ -1,6 +1,8 @@
 export const ESTHER_SPEECH_PANEL = 'estherSpeechPanel'
 export const BATHTUB = 'bathtub'
 export const BEDROOM_FENCE = 'bedroomFence'
+export const BEDROOM_DESK = 'bedroomDesk'
+export const CAPTAIN_BED = 'captainBed'
 export const SCHOOLBUS_INTERIOR = 'schoolbusInterior'
 export const SCHOOLBUS_EXTERIOR = 'schoolbusExterior'
 export const OCEAN_CAVE_EXTERIOR = 'oceanCaveExterior'
@@ -36,13 +38,9 @@ export const SNOWGLOBE_LIZ_KHARI = 'snowglobeLizKhari' // Duplicate.
 export const SNOWGLOBE_BENNETT_ALONE = 'snowglobeBennettAlone' // Duplicate.
 export const REATTA_INTERIOR = 'reattaInterior'
 export const REATTA_EXTERIOR = 'reattaExterior'
+export const HOSPITAL_BED = 'hospitalBed'
 export const DEATHBED_THOUGHT_PANEL = 'deathbedThoughtPanel'
 export const TENNIS_THOUGHT_PANEL = 'tennisThoughtPanel'
 export const PHONE_CALL_PANEL = 'phoneCallPanel'
 export const WEDDING_PLATFORM = 'weddingPlatform'
 export const INVERSE_THOUGHT_PANEL = 'inverseThoughtBackdrop'
-
-// TODO
-export const BEDROOM_DESK = 'bedroomDesk'
-export const CAPTAIN_BED = 'captainBed'
-export const HOSPITAL_BED = 'hospitalBed'
