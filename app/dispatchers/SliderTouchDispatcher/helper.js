@@ -4,19 +4,6 @@ import { LS_MARGIN_X_SLIDER } from 'constants/responsive'
 import { getSongTotalTime } from 'album/api/time'
 import { getSongStanzaConfigs } from 'album/api/stanzas'
 
-export const getSliderRatioForClientX = (clientX, sliderLeft, sliderWidth) => {
-    const sliderX = clientX - sliderLeft,
-        ratio = sliderX / sliderWidth
-
-    if (ratio < 0) {
-        return 0
-    } else if (ratio > 1) {
-        return 1
-    } else {
-        return ratio
-    }
-}
-
 export const getVerseIndexforRatio = (
 
     songIndex,
@@ -106,11 +93,12 @@ export const getVerseIndexforRatio = (
                 isTouchInVerse = verseEndRatio > touchInVersesRatio
 
             return isTouchInVerse
-        }
-        ),
+        }),
 
         // Add stanza's first verse index with the returned verse times index.
         verseIndex = stanzaFirstVerseIndex + verseTimesIndex
+
+    console.error('touch in slider ratio', touchInSliderRatio, verseIndex)
 
     return verseIndex
 }

@@ -2,11 +2,16 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
+import isNumber from 'lodash.isnumber'
 
+import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 import PlayTimer from './Timer'
 import SongTitle from './Title'
 
 import { getSongTotalTime } from 'album/api/time'
+
+import { getClientX, getElementRatioForClientX } from 'helpers/dom'
+import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
     responsiveStore: { isSmallBannerText },
@@ -27,20 +32,55 @@ class Banner extends PureComponent {
         selectedTime: PropTypes.number.isRequired
     }
 
-    render() {
+    getCursorWidth() {
         const {
-                isSmallBannerText,
                 lyricSongIndex,
                 selectedTime
             } = this.props,
 
-            totalTime = getSongTotalTime(lyricSongIndex),
+            totalTime = getSongTotalTime(lyricSongIndex)
 
-            cursorWidth = selectedTime / totalTime * 100
+        return selectedTime / totalTime * 100
+    }
+
+    handleBannerClick = (e) => {
+        const clientX = getClientX(e),
+            { left, width } = this.bannerElement.getBoundingClientRect()
+
+        if (isNumber(clientX)) {
+            const bannerRatio = getElementRatioForClientX({
+                clientX,
+                elementLeft: left,
+                elementWidth: width
+            })
+
+            console.error('bannerRatio', bannerRatio)
+
+            const selectedVerseIndex = 0
+
+            this.dispatchVerse({
+                selectedVerseIndex,
+                scrollLog: `Select banner verse ${selectedVerseIndex}.`
+            })
+        }
+    }
+
+    _getBannerElement = (node) => {
+        this.bannerElement = node
+    }
+
+    _getRefs = (payload) => {
+        populateRefs(this, payload)
+    }
+
+    render() {
+        const { isSmallBannerText } = this.props,
+            cursorWidth = this.getCursorWidth()
 
         return (
             <div
                 {...{
+                    ref: this._getBannerElement,
                     className: cx(
                         'Banner',
                         isSmallBannerText &&
@@ -48,7 +88,8 @@ class Banner extends PureComponent {
                         'dropShadow',
                         'textShadow__banner',
                         'abF'
-                    )
+                    ),
+                    onClick: this.handleBannerClick
                 }}
             >
                 <div
@@ -64,6 +105,7 @@ class Banner extends PureComponent {
                 />
                 <SongTitle />
                 <PlayTimer />
+                <VerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }
