@@ -22,6 +22,21 @@ $animationDuration__debug: 2s;
     }
 }
 
+@keyframes bounceHoverY {
+    0% {
+        transform: scaleY(1);
+    }
+    30% {
+        transform: scaleY(0.9);
+    }
+    72% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
 @keyframes bounceIn {
     0% {
         transform: scale(0.6);

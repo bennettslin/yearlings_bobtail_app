@@ -7,13 +7,13 @@
 
     .BannerScene:hover
     & {
-        animation: bounceHover $animationDuration__default;
+        animation: bounceHoverY $animationDuration__default;
         background-color: $bgColour__interactivated;
     }
 
     .BannerScene:active
     & {
-        transform: scale(0.95);
+        transform: scaleY(0.9);
     }
 }
 
