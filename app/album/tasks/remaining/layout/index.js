@@ -55,7 +55,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Finalise banner UI.`,
+        taskName: `Finalise banner UI. Consider logues and transitions between songs.`,
         workedHours: 5,
         neededHours: 7
     }
