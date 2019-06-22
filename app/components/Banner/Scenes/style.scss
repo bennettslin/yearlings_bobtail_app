@@ -7,9 +7,7 @@ $colour__filmReel: #444;
     top: auto;
     bottom: 0;
 
-    // Film reel perforations.
-
-    // Outer solid edge.
+    // Outer filmstrip borders.
     border-top: $length__filmPerf solid $colour__filmReel;
     border-bottom: $length__filmPerf solid $colour__filmReel;
 
@@ -18,7 +16,7 @@ $colour__filmReel: #444;
     background-size: $length__filmPerf * 3;
     background-position: $length__filmPerf;
 
-    // Inner cell edge.
+    // Inner cell borders.
     &:before {
         content: '';
         position: absolute;

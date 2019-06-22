@@ -104,7 +104,7 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 },
@@ -147,7 +147,7 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, holding large bottle',
                     instance: WALGREENS
                 },
