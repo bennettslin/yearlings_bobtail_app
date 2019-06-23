@@ -1,4 +1,4 @@
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 import tasks from 'album/tasks'
 import tasksV2 from 'album/tasks/v2'
 import albumTasks from 'album/tasks/songs'
@@ -34,10 +34,10 @@ export const getSumOfTasks = (tasks = []) => {
 }
 
 const _addTaskToSum = (sumTasks, task) => {
-    if (isNumber(task.workedHours)) {
+    if (isFinite(task.workedHours)) {
         sumTasks.workedHours += task.workedHours
     }
-    if (isNumber(task.neededHours)) {
+    if (isFinite(task.neededHours)) {
         sumTasks.neededHours += task.neededHours
     }
 }

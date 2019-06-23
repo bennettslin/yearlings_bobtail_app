@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 
 import { updateSliderStore } from 'flux/slider/action'
 
@@ -49,7 +49,7 @@ class SliderTouchDispatcher extends PureComponent {
         const clientX = getClientX(e),
             clientRect = sliderElement.getBoundingClientRect()
 
-        if (isNumber(clientX)) {
+        if (isFinite(clientX)) {
             this._touchSliderBegin(
                 clientRect,
                 clientX
@@ -105,7 +105,7 @@ class SliderTouchDispatcher extends PureComponent {
 
             const clientX = getClientX(e)
 
-            if (isNumber(clientX)) {
+            if (isFinite(clientX)) {
                 this._touchBodyMove(clientX)
             }
         }

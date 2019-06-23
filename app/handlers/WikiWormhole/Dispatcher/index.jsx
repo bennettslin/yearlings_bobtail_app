@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 
 import { updateAccessStore } from 'flux/access/action'
 
@@ -42,7 +42,7 @@ class WikiWormholeDispatcher extends PureComponent {
 
             initialWikiWormholeIndex =
                 // If no direction is given, reset the index.
-                !isNumber(direction) ?
+                !isFinite(direction) ?
                     1 :
                     prevWikiWormholeIndex,
 

@@ -1,5 +1,5 @@
 // TODO: This could be a little neater.
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 import { registerAnnotation } from './helpers'
 
 import {
@@ -23,7 +23,7 @@ const _recurseToFindAnnotations = ({
     /**
      * Let subsequent recursions know that we are in a timed verse.
      */
-    if (isNumber(verseIndex)) {
+    if (isFinite(verseIndex)) {
         const { annotations } = song
 
         rootVerseIndex = verseIndex

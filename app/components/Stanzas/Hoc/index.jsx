@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 import { getStanzaConfig } from 'album/api/stanzas'
@@ -39,14 +39,14 @@ const propTypes = {
             // "Child component stanza index."
 
                 // Aligned selector when on cursor.
-                isNumber(stanzaIndex) &&
+                isFinite(stanzaIndex) &&
                 `ChS${stanzaIndex}`,
 
                 /**
                  * General selector when before cursor, general
                  * sibling selector when after cursor.
                  */
-                isNumber(stanzaIndex) &&
+                isFinite(stanzaIndex) &&
                 'ChS',
 
                 // "Parent of verse index."

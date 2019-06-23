@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
@@ -55,7 +55,7 @@ class Banner extends PureComponent {
         const clientX = getClientX(e),
             { left, width } = this.bannerElement.getBoundingClientRect()
 
-        if (isNumber(clientX)) {
+        if (isFinite(clientX)) {
             const { selectedSongIndex } = this.props,
                 bannerRatio = getElementRatioForClientX({
                     clientX,

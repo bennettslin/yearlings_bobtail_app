@@ -1,4 +1,4 @@
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 import {
     getAnnotation,
     getAnnotationColumnIndex,
@@ -24,7 +24,7 @@ export const getShowAnnotationForColumn = ({
          */
         showAnnotationForColumn =
             !isEarShown ||
-            !isNumber(columnIndex) ||
+            !isFinite(columnIndex) ||
             columnIndex === earColumnIndex
 
     return showAnnotationForColumn
@@ -80,7 +80,7 @@ export const getAnnotationIndexForDirection = ({
              * This gets called upon initial load and upon deselecting a dot, so
              * allow for the possibility that we don't need to change the index.
              */
-            if (!isNumber(direction)) {
+            if (!isFinite(direction)) {
                 direction = 0
 
             // But if this is the second time around, then begin incrementing.

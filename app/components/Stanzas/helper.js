@@ -1,4 +1,4 @@
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 
 export const getParentOfVerseClassNamesForIndices = ({
     entities = [],
@@ -10,7 +10,7 @@ export const getParentOfVerseClassNamesForIndices = ({
     const classNames = entities.map(entity => {
         const { verseIndex } = entity
 
-        return isNumber(verseIndex) ?
+        return isFinite(verseIndex) ?
             `${prefix}${verseIndex}` :
             null
     })

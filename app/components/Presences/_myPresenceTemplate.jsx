@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import PresenceSvg from 'modules/PresenceSvg'
+import PresenceSvgInjector from 'modules/PresenceSvgInjector'
 
 const propTypes = {
     // From parent.
@@ -16,7 +16,7 @@ const MyPresence = ({
     className, x, y, scaleFactor
 
 }) => (
-    <PresenceSvg
+    <PresenceSvgInjector
         {...{
             className: cx(
                 'MyPresence',
@@ -30,7 +30,7 @@ const MyPresence = ({
         }}
     >
 
-    </PresenceSvg>
+    </PresenceSvgInjector>
 )
 
 MyPresence.propTypes = propTypes

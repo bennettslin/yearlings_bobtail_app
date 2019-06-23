@@ -187,8 +187,18 @@ exports.loadUrls = ({ include, isProduction }) => {
                 },
                 {
                     include,
-                    test: /\.(svg|png|jpg|gif)$/,
+                    test: /\.(png|jpg|gif)$/,
                     loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+                },
+                {
+                    include,
+                    test: /\.(svg)$/,
+                    loader: 'url-loader',
+                    options: {
+                        limit: 50000,
+                        name: 'assets/svgs/[name]-[hash].[ext]',
+                        publicPath: './'
+                    }
                 }
             ]
         }
@@ -197,8 +207,18 @@ exports.loadUrls = ({ include, isProduction }) => {
             rules: [
                 {
                     include,
-                    test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif|mp3|pdf)$/,
+                    test: /\.(htm|txt|ttf|mp3|pdf|png|jpg|gif|)$/,
                     loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+                },
+                {
+                    include,
+                    test: /\.(svg)$/,
+                    loader: 'url-loader',
+                    options: {
+                        limit: 50000,
+                        name: 'assets/svgs/[name]-[hash].[ext]',
+                        publicPath: './'
+                    }
                 }
             ]
         }

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
@@ -42,7 +42,7 @@ class VerseHoc extends PureComponent {
                 ...other
             } = this.props,
 
-            hasVerseIndex = isNumber(verseIndex)
+            hasVerseIndex = isFinite(verseIndex)
 
         if (!hasVerseIndex) {
             return (

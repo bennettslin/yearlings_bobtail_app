@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isNumber from 'lodash.isnumber'
+import isFinite from 'lodash.isfinite'
 
 import Button from '../../../../Button'
 
@@ -52,7 +52,7 @@ class NavButton extends PureComponent {
 
         if (isCarouselNavShowable) {
             // Select song or logue.
-            if (isNumber(songIndex)) {
+            if (isFinite(songIndex)) {
                 handleButtonClick(songIndex)
 
             // Select book column.
@@ -74,7 +74,7 @@ class NavButton extends PureComponent {
                 songIndex
             } = this.props,
 
-            isBook = isNumber(bookIndex),
+            isBook = isFinite(bookIndex),
 
             buttonIdentifier = isBook ? bookIndex : songIndex,
 
