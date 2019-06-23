@@ -45,7 +45,6 @@ import Sandbags from './Cutouts/Sandbags'
 import StageLights from './Cutouts/StageLights'
 import TrafficLight from './Cutouts/TrafficLight'
 import apartmentPlant from 'assets/svgs/apartmentPlant.svg'
-// import ApartmentPlant from './Cutouts/ApartmentPlant'
 import CodeBox from './Cutouts/CodeBox'
 import WaitingRoomPlant from './Cutouts/WaitingRoomPlant'
 import StorageBoxes from './Cutouts/StorageBoxes'
@@ -248,7 +247,6 @@ export default {
     [STAGE_LIGHTS]: StageLights,
     [TRAFFIC_LIGHT]: TrafficLight,
     [APARTMENT_PLANT]: apartmentPlant,
-    // [APARTMENT_PLANT]: ApartmentPlant,
     [CODE_BOX]: CodeBox,
     [WAITING_ROOM_PLANT]: WaitingRoomPlant,
     [STORAGE_BOXES]: StorageBoxes,
