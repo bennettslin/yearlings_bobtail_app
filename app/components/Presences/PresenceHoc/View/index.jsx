@@ -2,6 +2,8 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import PresenceSvgInjector from 'modules/PresenceSvgInjector'
+
 import {
     getClassNameForPresenceType,
     getMapForPresenceType,
@@ -11,6 +13,7 @@ import {
 import { getMapForActorKey } from '../../Actor/helper'
 
 import { getPresenceXY, getPresenceXYWidthHeight } from './helper'
+import { capitalise } from 'helpers/format'
 
 import { ACTORS } from 'constants/scene'
 
@@ -76,21 +79,31 @@ const PresenceHocView = ({
             getMapForActorKey(actorKey) :
             getMapForPresenceType(presenceType),
 
-        PresenceComponent = presencesMap[presenceKey]
+        PresenceComponent = presencesMap[presenceKey],
 
-    return (
+        presenceProps = {
+            className: cx(
+                'Presence',
+                getClassNameForPresenceType(presenceType),
+                capitalise(presenceKey),
+                'abF'
+            ),
+            ...scaleFactor && {
+                scaleFactor
+            },
+            ...presenceXY
+        }
+
+    // TODO: Get rid of this conditional once they are all asset svgs.
+    return typeof PresenceComponent === 'string' ? (
+        <PresenceSvgInjector
+            {...presenceProps}
+        >
+            {PresenceComponent}
+        </PresenceSvgInjector>
+    ) : (
         <PresenceComponent
-            {...{
-                className: cx(
-                    'Presence',
-                    getClassNameForPresenceType(presenceType),
-                    'abF'
-                ),
-                ...scaleFactor && {
-                    scaleFactor
-                },
-                ...presenceXY
-            }}
+            {...presenceProps}
         />
     )
 }

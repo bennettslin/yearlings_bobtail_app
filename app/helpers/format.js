@@ -2,6 +2,10 @@
 
 import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
 
+export const capitalise = (word) => {
+    return word.charAt(0).toUpperCase() + word.slice(1)
+}
+
 export const getFormattedTime = (time) => {
     if (time === -1) {
         time = 0

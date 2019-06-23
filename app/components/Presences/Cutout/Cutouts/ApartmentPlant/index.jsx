@@ -17,6 +17,7 @@ const ApartmentPlant = ({
     className, x, y, scaleFactor
 
 }) => {
+    console.error('typeof apartmentPlant', typeof apartmentPlant)
     return (
         <PresenceSvgInjector
             {...{
