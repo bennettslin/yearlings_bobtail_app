@@ -1,6 +1,6 @@
 import {
-    BACKDROPS,
-    CUTOUTS
+    BACKDROP,
+    CUTOUT
 } from 'constants/scene'
 import { TAIWAN_STAIRS_BACKDROP } from '../../keys/backdrops'
 import {
@@ -9,7 +9,7 @@ import {
 } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [TAIWAN_STAIRS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
             arrangement: {

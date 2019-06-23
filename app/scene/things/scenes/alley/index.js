@@ -1,14 +1,14 @@
 import {
-    CUTOUTS,
-    FIXTURES,
-    PUPPETS
+    CUTOUT,
+    FIXTURE,
+    PUPPET
 } from 'constants/scene'
 import { DUMPSTER } from '../../keys/cutouts'
 import { BURGER_WRAPPER } from '../../keys/fixtures'
 import { GHOST_ODIN_ALLEY } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [DUMPSTER]: {
             yIndex: 2,
             arrangement: {
@@ -18,7 +18,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BURGER_WRAPPER]: {
             yIndex: 4,
             arrangement: {
@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [GHOST_ODIN_ALLEY]: {
             yIndex: 4,
             arrangement: {

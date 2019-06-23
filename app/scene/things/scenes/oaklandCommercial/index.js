@@ -1,5 +1,5 @@
 import {
-    FLATS
+    FLAT
 } from 'constants/scene'
 import {
     COMMERCIAL_CENTRE,
@@ -12,7 +12,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [FLATS]: {
+    [FLAT]: {
         [COMMERCIAL_CENTRE]: {
             yIndex: 1,
             arrangement: {

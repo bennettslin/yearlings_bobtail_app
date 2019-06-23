@@ -1,6 +1,6 @@
 import {
-    CUTOUTS,
-    FIXTURES
+    CUTOUT,
+    FIXTURE
 } from 'constants/scene'
 import {
     MONITOR_SIDE_STAGE,
@@ -14,7 +14,7 @@ import {
 } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [MONITOR_SIDE_STAGE]: {
             yIndex: 4,
             arrangement: {
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [STAGE_MIC_SIDE_STAGE]: {
             yIndex: 3,
             arrangement: {

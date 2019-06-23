@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    FLATS,
-    PANELS
+    BACKDROP,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 import { OAKLAND_SIDE_BACKDROP } from '../../keys/backdrops'
 import {
@@ -11,7 +11,7 @@ import {
 import { VOLKSWAGEN } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [OAKLAND_SIDE_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [OAKLAND_HOUSE_LEFT]: {
             yIndex: 1,
             arrangement: {
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_OAKLAND_HOUSES_GARRYOWEN = {
-    [PANELS]: {
+    [PANEL]: {
         [VOLKSWAGEN]: {
             yIndex: 3,
             arrangement: {

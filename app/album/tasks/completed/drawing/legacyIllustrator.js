@@ -417,7 +417,7 @@ export default [
     },
 
     /****************
-     * ODIN CUTOUTS *
+     * ODIN CUTOUT *
      ****************/
     {
         taskName: 'bennettOdinStairs',
@@ -466,7 +466,7 @@ export default [
     },
 
     /***********
-     * BUBBLES *
+     * BUBBLE *
      ***********/
     {
         taskName: 'togetherSketchbook',
@@ -505,7 +505,7 @@ export default [
     },
 
     /***********
-     * PUPPETS *
+     * PUPPET *
      ***********/
     {
         taskName: `Beethoven bust`,

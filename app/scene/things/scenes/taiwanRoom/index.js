@@ -1,6 +1,6 @@
 import {
-    CUTOUTS,
-    FIXTURES
+    CUTOUT,
+    FIXTURE
 } from 'constants/scene'
 import {
     BUDDHA_SHRINE,
@@ -11,7 +11,7 @@ import {
 import { FRIDGE_DRAWINGS } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BUDDHA_SHRINE]: {
             yIndex: 4,
             arrangement: {
@@ -45,7 +45,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [FRIDGE_DRAWINGS]: {
             yIndex: 1,
             arrangement: {

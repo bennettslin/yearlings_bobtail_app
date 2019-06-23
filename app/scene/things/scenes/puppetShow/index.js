@@ -1,8 +1,8 @@
 import {
-    BACKDROPS,
-    BUBBLES,
-    FLATS,
-    PUPPETS
+    BACKDROP,
+    BUBBLE,
+    FLAT,
+    PUPPET
 } from 'constants/scene'
 import { TAIWAN_MOUNTAINS_BACKDROP } from '../../keys/backdrops'
 import {
@@ -26,7 +26,7 @@ import {
 } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [TAIWAN_MOUNTAINS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -36,7 +36,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [TAIWAN_CLOUDS]: {
             yIndex: 1,
             arrangement: {
@@ -82,7 +82,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_PUPPET_SHOW_BEGIN = {
-    [PUPPETS]: {
+    [PUPPET]: {
         [PUPPET_BENNETT_BEGIN]: {
             yIndex: 2,
             arrangement: {
@@ -103,7 +103,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
 }
 
 export const THINGS_PUPPET_SHOW_MIDDLE = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [TOGETHER_SKETCHBOOK]: {
             yIndex: 5,
             arrangement: {
@@ -114,7 +114,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [PUPPET_BENNETT_MIDDLE]: {
             yIndex: 2,
             arrangement: {
@@ -135,7 +135,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
 }
 
 export const THINGS_PUPPET_SHOW_END = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [APART_SKETCHBOOK]: {
             yIndex: 5,
             arrangement: {
@@ -146,7 +146,7 @@ export const THINGS_PUPPET_SHOW_END = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [PUPPET_BENNETT_END]: {
             yIndex: 2,
             arrangement: {

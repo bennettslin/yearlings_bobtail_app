@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -94,7 +94,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is putting on his jacket to leave Sita's house. Sita is in her nightgown, begging him to stay.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -103,7 +103,7 @@ export default [
                     instance: BRUSH_OFF
                 }
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             }
         },
@@ -117,7 +117,7 @@ export default [
         unitIndex: 4,
         description: `Tristan and another crust punk are smashing a car window. Ana is laughing at them. Bennett is sorting through the meat packages in his jacket.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -143,14 +143,14 @@ export default [
                     instance: INJURED
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [OAKLAND_SIDE_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [VOLKSWAGEN]: true
             }
         },
@@ -164,7 +164,7 @@ export default [
         unitIndex: 7,
         description: `Bennett and Sita are on the couch. Bennett is drunk, with a guitar in his lap, writing a song. Sita is naked and has taken his right hand and placed it on her breast, but he is unresponsive`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -173,15 +173,15 @@ export default [
                     instance: CELIBATE_FREEZING
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [NAS_ALBUM]: true,
                 [ELLIOTT_SMITH_POSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BENNETT_COUCH_LAMP]: true,
                 [BENNETT_RECORD_PLAYER]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_COUCH]: true,
                 [BENNETT_LEFT_ARMREST]: true,
                 [BENNETT_RIGHT_ARMREST]: true
@@ -197,7 +197,7 @@ export default [
         unitIndex: 10,
         description: `Bennett has just finished playing a show. Tristan introduces his kid sister Miriam, who is dressed more preppie, while giving her a noogie. Ana is removing her bass, rolling her eyes, as Bennett is clearly smitten.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -218,13 +218,13 @@ export default [
                     instance: SMIRKING
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [MONITOR_SPEAKER_LEFT]: true,
                 [MONITOR_SPEAKER_RIGHT]: true,
                 [WALL_SPEAKER_LEFT]: true,
                 [WALL_SPEAKER_RIGHT]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [GUITAR]: true,
                 [DRUMKIT]: true
             }
@@ -239,7 +239,7 @@ export default [
         unitIndex: 14,
         description: `Bennett is leaving Sita. She is crumbled on the floor, desperately begging him to stay.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -255,7 +255,7 @@ export default [
                     }
                 }
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             }
         },

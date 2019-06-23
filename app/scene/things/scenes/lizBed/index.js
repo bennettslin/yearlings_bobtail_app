@@ -1,7 +1,7 @@
 import {
-    FIXTURES,
-    FURNITURES,
-    PANELS
+    FIXTURE,
+    FURNITURE,
+    PANEL
 } from 'constants/scene'
 import {
     LIZ_PHONE,
@@ -25,7 +25,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [LIZ_PHONE]: {
             yIndex: 4,
             arrangement: {
@@ -44,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FURNITURES]: {
+    [FURNITURE]: {
         [LIZ_PILLOWS_PILE]: {
             yIndex: 4,
             arrangement: {
@@ -80,7 +80,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [LIZ_BED]: {
             yIndex: 5,
             arrangement: {
@@ -93,7 +93,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_LIZ_BED_AFTERGLOW = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BLOODY_TOWEL]: {
             yIndex: 4,
             arrangement: {
@@ -114,7 +114,7 @@ export const THINGS_LIZ_BED_AFTERGLOW = {
 }
 
 export const THINGS_LIZ_BED_LOOK_BACK = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BENNETT_SHOE]: {
             yIndex: 4,
             arrangement: {
@@ -135,7 +135,7 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
 }
 
 export const THINGS_LIZ_BED_VEGAN = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [LIZ_PHONE_BASE]: {
             yIndex: 4,
             arrangement: {
@@ -154,7 +154,7 @@ export const THINGS_LIZ_BED_VEGAN = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [PHONE_CALL_PANEL]: {
             yIndex: 3,
             arrangement: {

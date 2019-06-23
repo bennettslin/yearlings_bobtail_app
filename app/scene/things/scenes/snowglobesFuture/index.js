@@ -1,7 +1,7 @@
 import {
-    FIXTURES,
-    FLATS,
-    PANELS
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 import {
     RECORDING_MIC,
@@ -15,7 +15,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [RECORDING_MIC]: {
             yIndex: 1,
             arrangement: {
@@ -41,7 +41,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [ROAD_FUTURE]: {
             yIndex: 0,
             arrangement: {
@@ -51,7 +51,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [SNOWGLOBE_LIZ_KHARI]: {
             yIndex: 5,
             arrangement: {

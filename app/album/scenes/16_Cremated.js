@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BACKDROP,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 
 import {
@@ -79,7 +79,7 @@ export default [
         unitIndex: 1,
         description: `Bennett and Miriam are sitting in her car.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -93,17 +93,17 @@ export default [
                     instance: PERFUMING
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             }
@@ -118,7 +118,7 @@ export default [
         unitIndex: 3,
         description: `Bennett and Miriam are having sex in a car overlooking a cliff. Miriam is on top.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 3.5,
@@ -127,17 +127,17 @@ export default [
                     instance: COWGIRL
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             }
@@ -152,7 +152,7 @@ export default [
         unitIndex: 5,
         description: `Miriam is now giving Bennett a blowjob. Meanwhile, they are both thinking a thought bubble in which they are now married. Their child is a pinhead.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 3.5,
@@ -161,17 +161,17 @@ export default [
                     instance: BLOWJOB
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             }
@@ -186,7 +186,7 @@ export default [
         unitIndex: 7,
         description: `In a thought bubble, Bennett is dying in a hospital bed next to a record player. In another thought bubble, Miriam is playing tennis.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -194,13 +194,13 @@ export default [
                     instance: INFIRM
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [IV_DRIP]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [HOSPITAL_BED]: true,
                 [DEATHBED_THOUGHT_PANEL]: true
             }
@@ -215,7 +215,7 @@ export default [
         unitIndex: 8,
         description: `In the same scene, Miriam now appears in Bennett's thought bubble. She is playing tennis.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     duplicate: true,
                     description: 'front angle, dying, infirm',
@@ -228,13 +228,13 @@ export default [
                     instance: TENNIS
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [IV_DRIP]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [HOSPITAL_BED]: true,
                 [DEATHBED_THOUGHT_PANEL]: true,
                 [TENNIS_THOUGHT_PANEL]: true
@@ -250,7 +250,7 @@ export default [
         unitIndex: 9,
         description: `They drive away. Bennett, with his seat back, hesitantly drops the used condom on the ground, looking at it wistfully. Miriam is looking away, backing up the car.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -264,17 +264,17 @@ export default [
                     instance: REVERSING
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true
             }
@@ -289,17 +289,17 @@ export default [
         unitIndex: 11,
         description: `The car is in the background.`,
         presences: {
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [PUPPET_REATTA]: true
             }
         },

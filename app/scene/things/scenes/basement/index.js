@@ -1,4 +1,4 @@
-import { FIXTURES } from 'constants/scene'
+import { FIXTURE } from 'constants/scene'
 import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
@@ -9,7 +9,7 @@ import {
 } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BASS_CASE_UPRIGHT]: {
             yIndex: 3,
             arrangement: {

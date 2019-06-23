@@ -1,10 +1,10 @@
 import {
-    CUTOUTS
+    CUTOUT
 } from 'constants/scene'
 import { RECYCLABLES } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [RECYCLABLES]: {
             yIndex: 2,
             arrangement: {

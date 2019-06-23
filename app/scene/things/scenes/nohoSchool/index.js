@@ -1,9 +1,9 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    BACKDROP,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 import { NOHO_SCHOOL_BACKDROP } from '../../keys/backdrops'
 import { PLAYGROUND_SLIDE } from '../../keys/cutouts'
@@ -15,7 +15,7 @@ import { NOHO_SCHOOLHOUSE } from '../../keys/flats'
 import { ESTHER_SPEECH_PANEL } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [NOHO_SCHOOL_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [PLAYGROUND_SLIDE]: {
             yIndex: 1,
             arrangement: {
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [PLAYGROUND_BALL]: {
             yIndex: 4,
             arrangement: {
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [NOHO_SCHOOLHOUSE]: {
             yIndex: 1,
             arrangement: {
@@ -65,7 +65,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [ESTHER_SPEECH_PANEL]: {
             yIndex: 2,
             arrangement: {

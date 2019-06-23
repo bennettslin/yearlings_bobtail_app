@@ -1,12 +1,12 @@
 import {
-    FIXTURES,
-    FLATS
+    FIXTURE,
+    FLAT
 } from 'constants/scene'
 import { PUSH_BROOM_TUNNEL } from '../../keys/fixtures'
 import { STEAM_PIPES } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [PUSH_BROOM_TUNNEL]: {
             yIndex: 2,
             arrangement: {
@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [STEAM_PIPES]: {
             yIndex: 1,
             arrangement: {

@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS
+    BACKDROP,
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import { SHORE_RICKSHAW_BACKDROP } from '../../keys/backdrops'
 import {
@@ -11,7 +11,7 @@ import {
 import { RICKSHAW_TOWN } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [SHORE_RICKSHAW_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BENNETT_SHORE]: {
             yIndex: 2,
             arrangement: {
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [RICKSHAW_TOWN]: {
             yIndex: 1,
             arrangement: {

@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS
+    BACKDROP,
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import { OCEAN_BOTTOM_FAR } from '../../keys/backdrops'
 import { BENNETT_ODIN_OCEAN_FLOOR } from '../../keys/cutouts'
@@ -11,7 +11,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [OCEAN_BOTTOM_FAR]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,
             arrangement: {
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [OCEAN_BOTTOM_MIDDLE]: {
             yIndex: 1,
             arrangement: {

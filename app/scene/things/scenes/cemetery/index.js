@@ -1,14 +1,14 @@
 import {
-    BACKDROPS,
-    FIXTURES,
-    FLATS
+    BACKDROP,
+    FIXTURE,
+    FLAT
 } from 'constants/scene'
 import { CEMETERY_BACKDROP } from '../../keys/backdrops'
 import { GRAVESTONE } from '../../keys/fixtures'
 import { CEMETERY_HILLS_NEAR } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [CEMETERY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -18,7 +18,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [GRAVESTONE]: {
             yIndex: 5,
             arrangement: {
@@ -28,7 +28,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [CEMETERY_HILLS_NEAR]: {
             yIndex: 1,
             arrangement: {

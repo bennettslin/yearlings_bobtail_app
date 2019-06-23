@@ -1,6 +1,6 @@
 import {
-    CUTOUTS,
-    FLATS
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import {
     TROLL_SHADOW_LEFT,
@@ -14,7 +14,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [TROLL_SHADOW_LEFT]: {
             yIndex: 5,
             arrangement: {
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [FAMILY_HOUSE]: {
             yIndex: 0,
             arrangement: {

@@ -1,11 +1,11 @@
-import { CUTOUTS } from 'constants/scene'
+import { CUTOUT } from 'constants/scene'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT
 } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [DISPENSER_LEFT]: {
             yIndex: 4,
             arrangement: {

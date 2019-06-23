@@ -1,12 +1,12 @@
 import {
-    BACKDROPS,
-    FLATS
+    BACKDROP,
+    FLAT
 } from 'constants/scene'
 import { PAMPAS_BACKDROP } from '../../keys/backdrops'
 import { PAMPAS_FAR } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [PAMPAS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [PAMPAS_FAR]: {
             yIndex: 2,
             arrangement: {

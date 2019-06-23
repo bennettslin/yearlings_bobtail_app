@@ -17,6 +17,19 @@ import PuppetLayer from './Puppet'
 import { getScene } from 'album/api/scenes'
 import { CUBE_Y_INDICES } from 'constants/cubeIndex'
 
+import {
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
+} from 'constants/scene'
+
 const
     getMapStateToProps = (yIndex) => ({
         sceneStore: {
@@ -58,16 +71,16 @@ class Presences extends PureComponent {
         // If this layer has no presences, just don't render it at all.
         if (scenePresenceLayer) {
             const {
-                actors,
-                backdrops,
-                bubbles,
-                cardboards,
-                cutouts,
-                fixtures,
-                flats,
-                furnitures,
-                panels,
-                puppets
+                [ACTOR]: actors,
+                [BACKDROP]: backdrops,
+                [BUBBLE]: bubbles,
+                [CARDBOARD]: cardboards,
+                [CUTOUT]: cutouts,
+                [FIXTURE]: fixtures,
+                [FLAT]: flats,
+                [FURNITURE]: furnitures,
+                [PANEL]: panels,
+                [PUPPET]: puppets
             } = scenePresenceLayer
 
             return (

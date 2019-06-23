@@ -1,7 +1,7 @@
 import {
-    FIXTURES,
-    FLATS,
-    PUPPETS
+    FIXTURE,
+    FLAT,
+    PUPPET
 } from 'constants/scene'
 import { STAGE_MIC_FAR } from '../../keys/fixtures'
 import {
@@ -11,7 +11,7 @@ import {
 import { GHOST_ODIN_CLUB } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [STAGE_MIC_FAR]: {
             yIndex: 1,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [CROWD_FAR_BACK]: {
             yIndex: 3,
             arrangement: {
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [GHOST_ODIN_CLUB]: {
             yIndex: 1,
             arrangement: {

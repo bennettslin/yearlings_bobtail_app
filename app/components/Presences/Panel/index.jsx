@@ -2,13 +2,13 @@ import React, { memo } from 'react'
 import { propTypes } from './presenceMap'
 
 import LayerHoc from '../LayerHoc'
-import { PANELS } from 'constants/scene'
+import { PANEL } from 'constants/scene'
 
 const PanelLayer = memo((props) => {
     return (
         <LayerHoc
             {...props}
-            {...{ presenceType: PANELS }}
+            {...{ presenceType: PANEL }}
         />
     )
 })

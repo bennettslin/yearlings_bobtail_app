@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    FIXTURES,
-    FLATS
+    BACKDROP,
+    FIXTURE,
+    FLAT
 } from 'constants/scene'
 import { VAN_NUYS_THOUGHT_BACKDROP } from '../../keys/backdrops'
 import { TETHERBALL_POLE } from '../../keys/fixtures'
@@ -11,7 +11,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [VAN_NUYS_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [TETHERBALL_POLE]: {
             yIndex: 3,
             arrangement: {
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [VAN_NUYS_SCHOOLHOUSE_LEFT]: {
             yIndex: 1,
             arrangement: {

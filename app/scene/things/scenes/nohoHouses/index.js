@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS
+    BACKDROP,
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import { NOHO_HOUSES_BACKDROP } from '../../keys/backdrops'
 import { FIRE_HYDRANT } from '../../keys/cutouts'
@@ -11,7 +11,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [NOHO_HOUSES_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [FIRE_HYDRANT]: {
             yIndex: 5,
             arrangement: {
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [NOHO_HOUSE_LEFT]: {
             yIndex: 1,
             arrangement: {

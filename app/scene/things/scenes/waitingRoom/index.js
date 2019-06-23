@@ -1,8 +1,8 @@
 import {
-    BUBBLES,
-    CARDBOARDS,
-    CUTOUTS,
-    PANELS
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    PANEL
 } from 'constants/scene'
 import { WAITING_ROOM_THOUGHTS } from '../../keys/bubbles'
 import {
@@ -20,7 +20,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [CLIPBOARD]: {
             yIndex: 2,
             arrangement: {
@@ -40,7 +40,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [WAITING_ROOM_PLANT]: {
             yIndex: 3,
             arrangement: {
@@ -50,7 +50,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [WAITING_ARMCHAIR_BENNETT]: {
             yIndex: 2,
             arrangement: {
@@ -109,7 +109,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_WAITING_ROOM_ASLEEP = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [WAITING_ROOM_THOUGHTS]: {
             yIndex: 5,
             arrangement: {

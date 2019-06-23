@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    BUBBLES,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -75,7 +75,7 @@ export default [
         unitIndex: 1,
         description: `Bennett and Sita are standing outside her gate at night. In a thought bubble, he is reaching out to Sita, who is reaching back.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -102,7 +102,7 @@ export default [
         unitIndex: 5,
         description: `In a thought bubble, Bennett and Sita are at a museum, looking at the skeleton of an early human. Bennett is standing behind the display case, leaning in towards Sita.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -118,10 +118,10 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [CAVEMAN_BONES]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [MUSEUM_DISPLAY]: true
             }
         },
@@ -135,7 +135,7 @@ export default [
         unitIndex: 8,
         description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -165,11 +165,11 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [SANDBAGS]: true,
                 [STAGE_LIGHTS]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [PUSH_BROOM_BACKSTAGE]: true,
                 [STEPLADDER]: true,
                 [MANNEQUIN]: true
@@ -185,7 +185,7 @@ export default [
         unitIndex: 11,
         description: `In a thought bubble, Bennett and Sita are at a motorsports course, riding in separate go-karts.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -201,10 +201,10 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [GO_KART_BACKDROP]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [GO_KART_EXTERIOR_LEFT]: true,
                 [GO_KART_EXTERIOR_RIGHT]: true
             }
@@ -219,7 +219,7 @@ export default [
         unitIndex: 14,
         description: `Having bid each other good night, Bennett is walking away, looking dejected. Sita is closing the gate from the inside, looking towards him with concern. In his thought bubble, she is inviting him in.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -235,10 +235,10 @@ export default [
                     }
                 }
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [GO_KART_THOUGHT]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [TRAFFIC_LIGHT]: true
             }
         },

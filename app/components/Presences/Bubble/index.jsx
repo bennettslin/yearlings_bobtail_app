@@ -2,13 +2,13 @@ import React, { memo } from 'react'
 import { propTypes } from './presenceMap'
 
 import LayerHoc from '../LayerHoc'
-import { BUBBLES } from 'constants/scene'
+import { BUBBLE } from 'constants/scene'
 
 const BubbleLayer = memo((props) => {
     return (
         <LayerHoc
             {...props}
-            {...{ presenceType: BUBBLES }}
+            {...{ presenceType: BUBBLE }}
         />
     )
 })

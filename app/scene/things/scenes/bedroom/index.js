@@ -1,11 +1,11 @@
 import {
-    BUBBLES,
-    CARDBOARDS,
-    FIXTURES,
-    FLATS,
-    FURNITURES,
-    PANELS,
-    PUPPETS
+    BUBBLE,
+    CARDBOARD,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 import { DOGS_SKETCHBOOK } from '../../keys/bubbles'
 import {
@@ -40,7 +40,7 @@ import {
 } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [TINTIN_POSTER]: {
             yIndex: 1,
             arrangement: {
@@ -60,7 +60,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BEETHOVEN_BUST]: {
             yIndex: 5,
             arrangement: {
@@ -70,7 +70,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FURNITURES]: {
+    [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 4,
             arrangement: {
@@ -88,7 +88,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [BEDROOM_DESK]: {
             yIndex: 4,
             arrangement: {
@@ -117,7 +117,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_BEDROOM_ENRAGED = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
             arrangement: {
@@ -130,7 +130,7 @@ export const THINGS_BEDROOM_ENRAGED = {
 }
 
 export const THINGS_BEDROOM_FEARFUL = {
-    [FLATS]: {
+    [FLAT]: {
         [BEDROOM_SIREN]: {
             yIndex: 0,
             arrangement: {
@@ -143,7 +143,7 @@ export const THINGS_BEDROOM_FEARFUL = {
 }
 
 export const THINGS_BEDROOM_GUILTY = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [DOGS_SKETCHBOOK]: {
             yIndex: 4,
             arrangement: {
@@ -153,7 +153,7 @@ export const THINGS_BEDROOM_GUILTY = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [CAPTAIN_BED_LAMP]: {
             yIndex: 5,
             arrangement: {
@@ -174,7 +174,7 @@ export const THINGS_BEDROOM_GUILTY = {
 }
 
 export const THINGS_BEDROOM_FEIGNING = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [RED_ENVELOPE_MONEY]: {
             yIndex: 5,
             arrangement: {
@@ -184,7 +184,7 @@ export const THINGS_BEDROOM_FEIGNING = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [BEDROOM_BUS]: {
             yIndex: 0,
             arrangement: {
@@ -197,7 +197,7 @@ export const THINGS_BEDROOM_FEIGNING = {
 }
 
 export const THINGS_BEDROOM_ASLEEP = {
-    [PUPPETS]: {
+    [PUPPET]: {
         [PCHELKA_MUSHKA_ROCKET]: {
             yIndex: 1,
             arrangement: {
@@ -210,7 +210,7 @@ export const THINGS_BEDROOM_ASLEEP = {
 }
 
 export const THINGS_BEDROOM_SHAKEN = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BEYONDER_ENVELOPE]: {
             yIndex: 5,
             arrangement: {
@@ -220,7 +220,7 @@ export const THINGS_BEDROOM_SHAKEN = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [EARTH]: {
             yIndex: 4,
             arrangement: {

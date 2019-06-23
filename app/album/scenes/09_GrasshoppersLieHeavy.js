@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BUBBLES,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FURNITURES,
-    PANELS
+    ACTOR,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FURNITURE,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -123,7 +123,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is in a cafeteria dishroom, reading a novel while dishes gradually pile up. He eyes a lancing device on a tray.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -131,14 +131,14 @@ export default [
                     instance: DISHROOM_READING
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [CONVEYOR_BELT]: true,
                 [GLASS_CART]: true,
                 [TRAY_CART]: true,
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [DISHROOM_SINK]: true
             }
         },
@@ -152,7 +152,7 @@ export default [
         unitIndex: 4,
         description: `Same scene. Sita is asking for the lancing device. Bennett hands it to her, but simultaneously is asking her out on a date.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -168,14 +168,14 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [CONVEYOR_BELT]: true,
                 [GLASS_CART]: true,
                 [TRAY_CART]: true,
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [DISHROOM_SINK]: true
             }
         },
@@ -189,7 +189,7 @@ export default [
         unitIndex: 6,
         description: `Grasshoppers scene 1`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     duplicate: true,
                     description: 'side, awkward, wanting to make a move',
@@ -215,7 +215,7 @@ export default [
         description: `Grasshoppers scene 5`,
         cubes: LIZ_GATE_STREET_KEY,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     duplicate: true,
                     description: 'side, walking away dejected, slumped over',
@@ -229,7 +229,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [TRAFFIC_LIGHT]: true
             }
         },
@@ -242,7 +242,7 @@ export default [
         unitIndex: 8,
         description: `Bennett is walking home from work, looking dejected. In his thought bubble, he is remembering the night that he walked home from the date with Sita. A jogger passes by.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -258,7 +258,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
             }
@@ -273,7 +273,7 @@ export default [
         unitIndex: 10,
         description: `Same scene. As he begins to enter the front gate, he notices that Sita is standing several feet behind him.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -289,7 +289,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [APARTMENT_PLANT]: true,
                 [CODE_BOX]: true
             }
@@ -304,7 +304,7 @@ export default [
         unitIndex: 11,
         description: `Bennett's apartment is dark inside. Through a window, we see him opening the gate for Sita to pass through. She takes his arm.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -313,15 +313,15 @@ export default [
                     instance: GINGERBREAD_PRISON
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [BENNETT_PILLOW]: true,
                 [BENNETT_BLANKET]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_BED]: true
             }
         },
@@ -335,7 +335,7 @@ export default [
         unitIndex: 12,
         description: `Same scene. Bennett and Sita have now entered the apartment. Bennett has turned on a light switch. On his bed is a jar of Vaseline, along with sketches to which he has clearly been masturbating.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -351,15 +351,15 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [BENNETT_PILLOW]: true,
                 [BENNETT_BLANKET]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_BED]: true
             }
         },
@@ -373,7 +373,7 @@ export default [
         unitIndex: 13,
         description: `In an emergency room, Bennett is sitting in an armchair with his arm around Sita's purse. In his thought bubbles, he imagines the scenes of his burgeoning friendship with Sita.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -381,17 +381,17 @@ export default [
                     instance: WAITING_ROOM_ASLEEP
                 }
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [WAITING_ROOM_THOUGHTS]: true
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [CLIPBOARD]: true,
                 [PAINTING]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [WAITING_ROOM_PLANT]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [WAITING_ARMCHAIR_BENNETT]: true,
                 [WAITING_LEFT_ARMREST_BENNETT]: true,
                 [WAITING_RIGHT_ARMREST_BENNETT]: true,
@@ -410,7 +410,7 @@ export default [
         unitIndex: 15,
         description: `Same scene. Sita has come to get her purse, and is waking Bennett up.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -419,14 +419,14 @@ export default [
                     instance: CHEEK_UNVEILED
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [CLIPBOARD]: true,
                 [PAINTING]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [WAITING_ROOM_PLANT]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [WAITING_ARMCHAIR_BENNETT]: true,
                 [WAITING_LEFT_ARMREST_BENNETT]: true,
                 [WAITING_RIGHT_ARMREST_BENNETT]: true,
@@ -445,7 +445,7 @@ export default [
         unitIndex: 16,
         description: `Bennett and Sita are both naked in bed. Sita is lying down, while Bennett hovers over her, a look of uncertainty on his face.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -463,17 +463,17 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [LIZ_PILLOWS_PILE]: true,
                 [LIZ_PILLOWS_PILE_REFLECTION]: true,
                 [LIZ_BLANKET_PILE]: true,
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_BED]: true
             }
         },
@@ -487,7 +487,7 @@ export default [
         unitIndex: 17,
         description: `Same scene. `,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -505,17 +505,17 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [LIZ_PILLOWS_PILE]: true,
                 [LIZ_PILLOWS_PILE_REFLECTION]: true,
                 [LIZ_BLANKET_PILE]: true,
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_BED]: true
             }
         },
@@ -529,7 +529,7 @@ export default [
         unitIndex: 19,
         description: `Same scene. Bennett and Sita are together in bed, having just had sex, a look that is a mixture of serenity and uncertainty on both their faces.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -547,17 +547,17 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
                 [BLOODY_TOWEL]: true,
                 [BLOODY_TOWEL_REFLECTION]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [LIZ_BLANKET_PILE]: true,
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_BED]: true
             }
         },

@@ -1,12 +1,12 @@
 import {
-    BACKDROPS,
-    FLATS
+    BACKDROP,
+    FLAT
 } from 'constants/scene'
 import { PHARMACY_THOUGHT_BACKDROP } from '../../keys/backdrops'
 import { PHARMACY_AISLE } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [PHARMACY_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [PHARMACY_AISLE]: {
             yIndex: 1,
             arrangement: {

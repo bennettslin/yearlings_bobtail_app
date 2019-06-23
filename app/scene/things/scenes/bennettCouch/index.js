@@ -1,8 +1,8 @@
 import {
-    BACKDROPS,
-    CARDBOARDS,
-    FIXTURES,
-    PANELS
+    BACKDROP,
+    CARDBOARD,
+    FIXTURE,
+    PANEL
 } from 'constants/scene'
 import { BENNETT_COUCH_THOUGHT_BACKDROP } from '../../keys/backdrops'
 import {
@@ -25,7 +25,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
             arrangement: {
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [BENNETT_COUCH]: {
             yIndex: 3,
             arrangement: {
@@ -72,7 +72,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_BENNETT_COUCH_OPINION = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [BENNETT_COUCH_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -82,7 +82,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             }
         }
     },
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [POLICE_ALBUM]: {
             yIndex: 2,
             arrangement: {
@@ -104,7 +104,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
 }
 
 export const THINGS_BENNETT_COUCH_PONDERING = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [LEONARD_COHEN_POSTER]: {
             yIndex: 1,
             arrangement: {
@@ -118,7 +118,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
 }
 
 export const THINGS_BENNETT_COUCH_RUBIKS = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [TELEVISION_ALBUM]: {
             yIndex: 2,
             arrangement: {
@@ -140,7 +140,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
 }
 
 export const THINGS_BENNETT_COUCH_READING = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [PROGRESS_CHART_LATE]: {
             yIndex: 1,
             arrangement: {
@@ -151,7 +151,7 @@ export const THINGS_BENNETT_COUCH_READING = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [KEYBOARD]: {
             yIndex: 2,
             arrangement: {

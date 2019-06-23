@@ -1,5 +1,5 @@
 import {
-    CUTOUTS
+    CUTOUT
 } from 'constants/scene'
 import {
     PORCH_PLANTS_LEFT,
@@ -7,7 +7,7 @@ import {
 } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [PORCH_PLANTS_LEFT]: {
             yIndex: 1,
             arrangement: {

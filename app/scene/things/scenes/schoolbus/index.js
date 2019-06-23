@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    FIXTURES,
-    PANELS
+    BACKDROP,
+    FIXTURE,
+    PANEL
 } from 'constants/scene'
 import { SCHOOLBUS_THOUGHT_BACKDROP } from '../../keys/backdrops'
 import {
@@ -15,7 +15,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [SCHOOLBUS_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [BACKPACK_BENNETT]: {
             yIndex: 2,
             arrangement: {
@@ -51,7 +51,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [SCHOOLBUS_INTERIOR]: {
             yIndex: 1,
             arrangement: {

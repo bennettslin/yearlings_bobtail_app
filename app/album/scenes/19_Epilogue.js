@@ -1,4 +1,4 @@
-import { ACTORS } from 'constants/scene'
+import { ACTOR } from 'constants/scene'
 
 import { LOGUE_KEY } from '../../scene/scenes/keys'
 
@@ -39,7 +39,7 @@ export default [
         verseIndex: 0,
         description: `Everyone is standing at the end of the play. We are all really just actors.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETTS_CHRISTOPHER_LIZ]: {
                     todo: true,
                     workedHours: 4.25,

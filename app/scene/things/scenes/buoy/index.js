@@ -1,5 +1,5 @@
 import {
-    CUTOUTS
+    CUTOUT
 } from 'constants/scene'
 import {
     BENNETT_ODIN_DEPTHS,
@@ -7,7 +7,7 @@ import {
 } from '../../keys/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
             arrangement: {

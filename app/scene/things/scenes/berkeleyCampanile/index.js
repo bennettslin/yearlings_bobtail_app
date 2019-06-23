@@ -1,7 +1,7 @@
 import {
-    CUTOUTS,
-    FLATS,
-    PUPPETS
+    CUTOUT,
+    FLAT,
+    PUPPET
 } from 'constants/scene'
 import {
     SIGNPOST,
@@ -12,7 +12,7 @@ import { CAMPANILE } from '../../keys/flats'
 import { GHOST_ODIN_CAMPUS } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [SIGNPOST]: {
             yIndex: 5,
             arrangement: {
@@ -38,7 +38,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [CAMPANILE]: {
             yIndex: 1,
             arrangement: {
@@ -51,7 +51,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
-    [PUPPETS]: {
+    [PUPPET]: {
         [GHOST_ODIN_CAMPUS]: {
             yIndex: 1,
             arrangement: {

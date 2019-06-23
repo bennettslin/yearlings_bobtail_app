@@ -1,12 +1,12 @@
 import {
-    BUBBLES,
-    CARDBOARDS
+    BUBBLE,
+    CARDBOARD
 } from 'constants/scene'
 import { CINEMA_THOUGHTS } from '../../keys/bubbles'
 import { CINEMA_POSTER_RIGHT_NORMAL } from '../../keys/cardboards'
 
 const ARRANGEMENTS_THINGS = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [CINEMA_THOUGHTS]: {
             yIndex: 5,
             arrangement: {
@@ -17,7 +17,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [CINEMA_POSTER_RIGHT_NORMAL]: {
             yIndex: 4,
             arrangement: {

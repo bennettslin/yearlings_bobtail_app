@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BACKDROP,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 
 import {
@@ -88,7 +88,7 @@ export default [
         unitIndex: 1,
         description: `Bennett runs into Sita, who happens to be walking out of an El Torito restaurant, having finished her shift.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -104,7 +104,7 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [DISPENSER_LEFT]: true,
                 [DISPENSER_RIGHT]: true
             }
@@ -119,7 +119,7 @@ export default [
         unitIndex: 3,
         description: `Bennett and Sita are dancing on the pampas with some gopis.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -152,10 +152,10 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [PAMPAS_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [PAMPAS_FAR]: true
             }
         },
@@ -169,7 +169,7 @@ export default [
         unitIndex: 5,
         description: `In the background is an Indian wedding. Bennett is confused, because the bride appears to be Sita. But his Sita keeps dragging him forward, insistently.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -178,19 +178,19 @@ export default [
                     instance: GETTING_DARK
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [WEDDING_CROWD]: true
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [WEDDING_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [FOREBODING_TREES]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [WEDDING_PLATFORM]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [PUPPET_KHARI_LIZ]: true
             }
         },
@@ -204,7 +204,7 @@ export default [
         unitIndex: 7,
         description: `Sita and Bennett are at the edge of a cliff. Bennett is frightened. Sita is gesturing towards the edge.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -213,13 +213,13 @@ export default [
                     instance: CLIFF
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [GOLDEN_GATE_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [CLIFF_TREE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [CLIFF_GRAVES_FAR]: true,
                 [CLIFF_GRAVES_NEAR]: true
             }
@@ -234,7 +234,7 @@ export default [
         unitIndex: 9,
         description: `The whole thing turns out to have been a dream. Bennett is in bed, old and dying. A doctor is pulling the sheet over him. A thought bubble shows the previous scene, with Bennett now accepting his fate, and Sita comforting him.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -251,16 +251,16 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [IV_DRIP]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [CLIFF_GRAVES_FAR]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [HOSPITAL_BED]: true,
                 [INVERSE_THOUGHT_PANEL]: true
             }

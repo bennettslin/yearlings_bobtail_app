@@ -1,9 +1,9 @@
 import {
-    BACKDROPS,
-    BUBBLES,
-    FIXTURES,
-    PANELS,
-    PUPPETS
+    BACKDROP,
+    BUBBLE,
+    FIXTURE,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 import { LIZ_COUCH_THOUGHT_BACKDROP } from '../../keys/backdrops'
 import {
@@ -21,7 +21,7 @@ import {
 } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [PANELS]: {
+    [PANEL]: {
         [LIZ_COUCH]: {
             yIndex: 5,
             arrangement: {
@@ -34,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_LIZ_COUCH_GOLDEN = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [LIZ_COUCH_THOUGHT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -47,7 +47,7 @@ export const THINGS_LIZ_COUCH_GOLDEN = {
 }
 
 export const THINGS_LIZ_COUCH_TCHOTCHKES = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [TCHOTCHKES]: {
             yIndex: 5,
             arrangement: {
@@ -57,7 +57,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [OPAL_COUCH]: {
             yIndex: 4,
             arrangement: {
@@ -70,7 +70,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
 }
 
 export const THINGS_LIZ_COUCH_DEFENDING = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [KHARI_ATTACK_SPEECH]: {
             yIndex: 5,
             arrangement: {
@@ -93,7 +93,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
 }
 
 export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [LIZ_THOUGHT]: {
             yIndex: 5,
             arrangement: {
@@ -107,7 +107,7 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
 }
 
 export const THINGS_LIZ_COUCH_ASLEEP = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [LIZ_THOUGHT]: {
             yIndex: 5,
             arrangement: {
@@ -118,7 +118,7 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [OPAL_GAZING]: {
             yIndex: 1,
             arrangement: {
@@ -131,7 +131,7 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
 }
 
 export const THINGS_LIZ_COUCH_PEAFOWL = {
-    [PUPPETS]: {
+    [PUPPET]: {
         [PEAHEN]: {
             yIndex: 4,
             arrangement: {

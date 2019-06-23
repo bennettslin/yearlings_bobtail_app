@@ -1,12 +1,12 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    FURNITURES,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BACKDROP,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 
 import {
@@ -103,7 +103,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is walking with the ghost of Odin in a park. He passes Sita, who is holding hands with her friend. Bennett looks down, her friend looks up, while Sita looks concerned.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -118,18 +118,18 @@ export default [
                     instance: PROTECTIVE_CONCERNED
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [UC_BERKELEY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
                 [UC_BERKELEY_TREE_RIGHT]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [CAMPANILE]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [GHOST_ODIN_CAMPUS]: true
             }
         },
@@ -143,7 +143,7 @@ export default [
         unitIndex: 4,
         description: `Bennett is by himself with Odin at a show, looking agitated and bored. Miriam is on the other side of the crowd, being introduced by Tristan to her future boyfriend.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -164,18 +164,18 @@ export default [
                     instance: GREETING
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [WALL_SPEAKER_LEFT]: true,
                 [WALL_SPEAKER_RIGHT]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [STAGE_MIC_FAR]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [CROWD_FAR_BACK]: true,
                 [CROWD_NEAR_BACK]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [GHOST_ODIN_CLUB]: true
             }
         },
@@ -189,7 +189,7 @@ export default [
         unitIndex: 7,
         description: `Bennett is walking through an alley.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -197,13 +197,13 @@ export default [
                     instance: ALLEY
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [DUMPSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BURGER_WRAPPER]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [GHOST_ODIN_ALLEY]: true
             }
         },
@@ -217,7 +217,7 @@ export default [
         unitIndex: 10,
         description: `Bennett is in his apartment, in tears on the phone with Sita, who is in bed snuggling with her friend.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -241,18 +241,18 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [LIZ_PHONE_BASE]: true,
                 [LIZ_PHONE_BASE_REFLECTION]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [PHONE_CALL_PANEL]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [LIZ_BLANKET_PILE]: true,
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_BED]: true
             }
         },
@@ -266,7 +266,7 @@ export default [
         unitIndex: 12,
         description: `Bennett is with Odin, and happens upon a Peta demonstration. One of the demonstrators is petting Odin.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -298,16 +298,16 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [UC_BERKELEY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [UC_BERKELEY_TREE_LEFT]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [ASH_CAN]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [GHOST_ODIN_DEMONSTRATION]: true
             }
         },

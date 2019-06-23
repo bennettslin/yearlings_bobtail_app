@@ -1,8 +1,8 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES,
-    PUPPETS
+    BACKDROP,
+    CUTOUT,
+    FIXTURE,
+    PUPPET
 } from 'constants/scene'
 import { UC_BERKELEY_BACKDROP } from '../../keys/backdrops'
 import { UC_BERKELEY_TREE_LEFT } from '../../keys/cutouts'
@@ -10,7 +10,7 @@ import { ASH_CAN } from '../../keys/fixtures'
 import { GHOST_ODIN_DEMONSTRATION } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [UC_BERKELEY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [UC_BERKELEY_TREE_LEFT]: {
             yIndex: 2,
             arrangement: {
@@ -30,7 +30,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [ASH_CAN]: {
             yIndex: 4,
             arrangement: {
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_BERKELEY_BANCROFT_VEGAN = {
-    [PUPPETS]: {
+    [PUPPET]: {
         [GHOST_ODIN_DEMONSTRATION]: {
             yIndex: 1,
             arrangement: {

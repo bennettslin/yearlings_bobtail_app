@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -84,13 +84,13 @@ export default [
         unitIndex: 1,
         description: `North Hollywood houses.`,
         presences: {
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [NOHO_HOUSES_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [FIRE_HYDRANT]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -105,7 +105,7 @@ export default [
         unitIndex: 3,
         description: `It's a schoolday morning. Young Anita walks with hurried determination out of the house. Young Bennett rushes after her in panic, his jacket half on and clutching a knapsack.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [ESTHER]: {
                     todo: true,
                     workedHours: 4.25,
@@ -125,13 +125,13 @@ export default [
                     instance: PANICKED
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [NOHO_HOUSES_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [FIRE_HYDRANT]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -146,7 +146,7 @@ export default [
         unitIndex: 6,
         description: `Bennett looks sheepish, seated on a bench in the hallway outside the nurse's office, wearing oversized overalls. Beside him is a sealed grocery bag. Outside, a young girl tells the playground about this. Anita overhears and looks upset.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [ANITA]: {
                     todo: true,
                     workedHours: 4.25,
@@ -166,20 +166,20 @@ export default [
                     instance: FLUSTERED
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [NOHO_SCHOOL_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [PLAYGROUND_SLIDE]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [PLAYGROUND_BALL]: true,
                 [SAFEWAY_BAG]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [NOHO_SCHOOLHOUSE]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [ESTHER_SPEECH_PANEL]: true
             }
         },
@@ -193,7 +193,7 @@ export default [
         unitIndex: 8,
         description: `Bennett is soaking in a bathtub at home, looking downcast. A window shows that it is midday outside.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -201,11 +201,11 @@ export default [
                     instance: BATHING
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [MIRRORED_SINK]: true,
                 [TOWEL_RACK]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BATHTUB]: true
             }
         },
@@ -219,7 +219,7 @@ export default [
         unitIndex: 12,
         description: `The same scene. Anita is now crouched beside the bathtub. She has brought a phonograph and placed it on a chair. Bennett is still in the bathtub, now happily singing along, wearing a cowboy hat.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [ANITA]: {
                     todo: true,
                     workedHours: 4.25,
@@ -233,16 +233,16 @@ export default [
                     instance: SINGING
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [NOHO_HOUSES_BACKDROP]: true
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [JOHNNY_HORTON_ALBUM]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [RECORD_PLAYER_STOOL]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BATHTUB]: true
             }
         },

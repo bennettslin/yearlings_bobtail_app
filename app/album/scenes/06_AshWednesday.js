@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -92,7 +92,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is standing outside his doorway at night, drenched in rain. Catherine is getting into a taxicab.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -106,7 +106,7 @@ export default [
                     instance: WEEPING
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [RECYCLABLES]: true
             }
         },
@@ -120,7 +120,7 @@ export default [
         unitIndex: 3,
         description: `In Bennett's thoughts, he and Catherine are together on the couch. She is putting down the book she is reading, while he is playing the guitar, a pencil and notepad in hand, implying that he is writing a song, looking at her inquisitively.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -134,18 +134,18 @@ export default [
                     instance: QUIPPING
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [BENNETT_COUCH_THOUGHT_BACKDROP]: true
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [POLICE_ALBUM]: true,
                 [NIRVANA_POSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_COUCH]: true,
                 [BENNETT_LEFT_ARMREST]: true,
                 [BENNETT_RIGHT_ARMREST]: true
@@ -161,7 +161,7 @@ export default [
         unitIndex: 5,
         description: `Bennett is standing in the rain at night, staring at a Catholic church across the street.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -169,13 +169,13 @@ export default [
                     instance: CATHOLIC_PENSIVE
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [WEST_BERKELEY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BERKELEY_LAMPPOST]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [ST_JOSEPHS_ANNEX]: true,
                 [ST_JOSEPHS_CHURCH]: true
             }
@@ -190,7 +190,7 @@ export default [
         unitIndex: 7,
         description: `Bennett is staring at an outdoor ashtray. Someone with a cross on their forehead is walking behind him in the other direction, while someone who has just put out a cigarette in the ashtray is walking in front of him, exhaling the smoke. Bennett looks back at the person behind him.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -214,13 +214,13 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [UC_BERKELEY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [UC_BERKELEY_TREE_LEFT]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [ASH_CAN]: true
             }
         },
@@ -234,7 +234,7 @@ export default [
         unitIndex: 8,
         description: `Bennett now has an ashed cross on his forehead, eyes closed and head held high, looking both pious and pompous. Catherine walks towards him from the other side of the stage.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -248,15 +248,15 @@ export default [
                     instance: PUZZLED
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [UC_BERKELEY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
                 [UC_BERKELEY_TREE_RIGHT]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [CAMPANILE]: true
             }
         },

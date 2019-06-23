@@ -1,9 +1,9 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS,
-    PANELS,
-    PUPPETS
+    BACKDROP,
+    CUTOUT,
+    FLAT,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 import { GOLDEN_GATE_BACKDROP } from '../../keys/backdrops'
 import { EL_CERRITO_TREE } from '../../keys/cutouts'
@@ -18,7 +18,7 @@ import {
 import { PUPPET_REATTA } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [GOLDEN_GATE_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -28,7 +28,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [EL_CERRITO_TREE]: {
             yIndex: 1,
             arrangement: {
@@ -38,7 +38,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [EL_CERRITO_FAR]: {
             yIndex: 1,
             arrangement: {
@@ -56,7 +56,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [REATTA_EXTERIOR]: {
             yIndex: 5,
             arrangement: {
@@ -77,7 +77,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_EL_CERRITO_REATTA = {
-    [PUPPETS]: {
+    [PUPPET]: {
         [PUPPET_REATTA]: {
             yIndex: 3,
             arrangement: {

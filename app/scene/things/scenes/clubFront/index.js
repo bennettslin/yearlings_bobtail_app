@@ -1,6 +1,6 @@
 import {
-    CUTOUTS,
-    FIXTURES
+    CUTOUT,
+    FIXTURE
 } from 'constants/scene'
 import {
     MONITOR_SPEAKER_LEFT,
@@ -15,7 +15,7 @@ import {
 } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [MONITOR_SPEAKER_LEFT]: {
             yIndex: 5,
             arrangement: {
@@ -51,7 +51,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [GUITAR]: {
             yIndex: 3,
             arrangement: {
@@ -72,7 +72,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_CLUB_FRONT_M = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [CASH_BOX]: {
             yIndex: 3,
             arrangement: {

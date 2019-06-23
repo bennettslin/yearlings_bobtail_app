@@ -1,11 +1,11 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    BUBBLES,
-    FIXTURES,
-    FLATS,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    FIXTURE,
+    FLAT,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 
 import {
@@ -80,17 +80,17 @@ export default [
         unitIndex: 1,
         description: `Puppets of Bennett and family are crossing a rope bridge that spans several mountains in Taiwan.`,
         presences: {
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [TAIWAN_CLOUDS]: true,
                 [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAIN_LEFT]: true,
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [PUPPET_BENNETT_BEGIN]: true,
                 [PUPPET_FAMILY_BEGIN]: true
             }
@@ -105,20 +105,20 @@ export default [
         unitIndex: 4,
         description: `Bennett has drawn a picture of himself holding hands with Sasha, together exploring the mountains of Taiwan.`,
         presences: {
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [TOGETHER_SKETCHBOOK]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [TAIWAN_CLOUDS]: true,
                 [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAIN_LEFT]: true,
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [PUPPET_BENNETT_MIDDLE]: true,
                 [PUPPET_FAMILY_MIDDLE]: true
             }
@@ -133,7 +133,7 @@ export default [
         unitIndex: 6,
         description: `In Bennett's thought bubble, he recollects sitting one bus seat behind Sasha on the bus. She is chatting flirtatiously with a boy seated next to her who is wearing a yarmulke.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -148,15 +148,15 @@ export default [
                     instance: CHARMED_SCHOOLBUS
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [SCHOOLBUS_THOUGHT_BACKDROP]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BACKPACK_BENNETT]: true,
                 [BACKPACK_SASHA]: true,
                 [BACKPACK_JEWISH_BOY]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [SCHOOLBUS_INTERIOR]: true,
                 [SCHOOLBUS_EXTERIOR]: true
             }
@@ -171,7 +171,7 @@ export default [
         unitIndex: 9,
         description: `In Bennett's thought bubble, he is being tied to a tetherball pole by two bullies. Sasha is yelling at them, telling them to untie Bennett and to leave him alone. Bennett looks physically roughed up, and emotionally mortified.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BRAD_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -192,10 +192,10 @@ export default [
                     instance: FEIGNING_FEAR
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [VAN_NUYS_THOUGHT_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [VAN_NUYS_SCHOOLHOUSE_LEFT]: true,
                 [VAN_NUYS_SCHOOLHOUSE_RIGHT]: true
             }
@@ -210,20 +210,20 @@ export default [
         unitIndex: 12,
         description: `In Bennett's sketch, there is a drawing of Bennett by himself on the island of Taiwan, and Sasha and a Jewish boy on North America, with an ocean separating them.`,
         presences: {
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [APART_SKETCHBOOK]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [TAIWAN_CLOUDS]: true,
                 [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAIN_LEFT]: true,
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [PUPPET_BENNETT_END]: true,
                 [PUPPET_FAMILY_END]: true
             }

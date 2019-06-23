@@ -1,9 +1,9 @@
 import {
-    ACTORS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -93,7 +93,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -128,14 +128,14 @@ export default [
                     instance: SQUEEZING
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [MONITOR_SIDE_CROWD]: true,
                 [WALL_SPEAKER_SIDE_CROWD]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [STAGE_MIC_SIDE_CROWD]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [CROWD_FAR_SIDE]: true,
                 [CROWD_NEAR_SIDE]: true
             }
@@ -150,7 +150,7 @@ export default [
         unitIndex: 5,
         description: `After the show, Bennett is breaking down the set. Another band is setting up. The redhead has introduced herself to Bennett, and is flirting with him.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -176,11 +176,11 @@ export default [
                     instance: CARRYING
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [MONITOR_SIDE_STAGE]: true,
                 [WALL_SPEAKER_SIDE_STAGE]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [STAGE_MIC_SIDE_STAGE]: true,
                 [KICK_DRUM]: true,
                 [DRUM_THRONE]: true,
@@ -197,7 +197,7 @@ export default [
         unitIndex: 8,
         description: `At the end of the show, Bennett and his bandmates are loading their equipment into their van. The redhead and her friends are looking in his direction, but Bennett walks by them.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -235,7 +235,7 @@ export default [
                     instance: MINGLING
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [DRUMS_STACKED_CLUB]: true
             }
         },
@@ -249,7 +249,7 @@ export default [
         unitIndex: 12,
         description: `Bennett is back home, sitting on the edge of Sita's bed. Sita is half asleep, looking peaceful, and is reaching towards him. He does not respond. In his thought bubble, he is reaching for the redhead, who is in bed in place of Sita.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -281,13 +281,13 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
                 [BENNETT_SHOE]: true,
                 [BENNETT_SHOE_REFLECTION]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_BED]: true
             }
         },

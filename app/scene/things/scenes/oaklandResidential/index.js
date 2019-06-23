@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS
+    BACKDROP,
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import { OAKLAND_FRONT_BACKDROP } from '../../keys/backdrops'
 import {
@@ -19,7 +19,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [OAKLAND_FRONT_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [TWIN_STREETLAMP_FAR]: {
             yIndex: 1,
             arrangement: {
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [RESIDENTIAL_FAR_LEFT]: {
             yIndex: 1,
             arrangement: {

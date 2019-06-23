@@ -1,8 +1,8 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CUTOUTS,
-    FLATS
+    ACTOR,
+    BACKDROP,
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 
 import {
@@ -94,7 +94,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is walking down street.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -102,10 +102,10 @@ export default [
                     instance: CORD_SIDE
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [OAKLAND_SIDE_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [OAKLAND_HOUSE_LEFT]: true,
                 [OAKLAND_HOUSE_RIGHT]: true
             }
@@ -120,7 +120,7 @@ export default [
         unitIndex: 3,
         description: `Bennett and Sita are at her apartment, breaking up. Sita is a wreck, turning away from Bennett as she returns the gold bracelet to him. He is trying to console her, but in a mechanical way.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_LIZ]: {
                     todo: true,
                     workedHours: 4,
@@ -129,7 +129,7 @@ export default [
                     instance: AWKWARD_CONSOLATION
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [LIZ_COUCH_THOUGHT_BACKDROP]: true
             }
         },
@@ -143,7 +143,7 @@ export default [
         unitIndex: 4,
         description: `Bennett and Garry are walking along down the street. (Garry is the one wearing the jacket.) Garry is shaking his fist at the twin streetlights. Bennett turns around to face the audience, a look of uncertainty on his face. He is caressing the gold bracelet in his hand.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -159,15 +159,15 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [OAKLAND_FRONT_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [TWIN_STREETLAMP_FAR]: true,
                 [TWIN_STREETLAMP_MIDDLE]: true,
                 [TWIN_STREETLAMP_NEAR]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [RESIDENTIAL_FAR_LEFT]: true,
                 [RESIDENTIAL_FAR_RIGHT]: true,
                 [RESIDENTIAL_MIDDLE_LEFT]: true,
@@ -186,7 +186,7 @@ export default [
         unitIndex: 7,
         description: `Bennett and Garry are yucking it up, in a panicked and delirious kind of way. Bennett is yodelling, Garry is playing the banjo, saluting a female cop on a horse. The cop waves back.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_STEPHANIE]: {
                     todo: true,
                     workedHours: 4.25,
@@ -203,10 +203,10 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [OAKLAND_FRONT_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [COMMERCIAL_CENTRE]: true,
                 [COMMERCIAL_FAR_LEFT]: true,
                 [COMMERCIAL_FAR_RIGHT]: true,
@@ -226,7 +226,7 @@ export default [
         unitIndex: 10,
         description: `Garry is now facing the audience, his hand over his face, crying, and holding the gold bracelet over a group of kids crossing the street with a crossing guard. Bennett is trying to console him, as he faces forward.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_STEPHANIE]: {
                     todo: true,
                     workedHours: 4.25,
@@ -267,7 +267,7 @@ export default [
                     }
                 }
             },
-            [FLATS]: {
+            [FLAT]: {
                 [PUBLIC_FAR_LEFT]: true,
                 [PUBLIC_FAR_RIGHT]: true,
                 [PUBLIC_NEAR_LEFT]: true,

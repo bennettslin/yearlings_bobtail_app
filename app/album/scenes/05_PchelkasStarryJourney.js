@@ -1,14 +1,14 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    BUBBLES,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    FURNITURES,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 
 import {
@@ -132,14 +132,14 @@ export default [
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
         presences: {
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true,
                 [CAPTAIN_BED_BLANKET]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED]: true,
                 [BEDROOM_FENCE]: true
@@ -155,7 +155,7 @@ export default [
         unitIndex: 2,
         description: `Bennett and Christopher are under his bunk bed. Christopher is injured, but happily playing. Bennett looks guilty. There is a drawing of the two as dogs.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [CHRISTOPHER_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -164,17 +164,17 @@ export default [
                     instance: BLISSFUL_GUILTY
                 }
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [DOGS_SKETCHBOOK]: true
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [CAPTAIN_BED_LAMP]: true,
                 [BENNETT_LETTERS]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [BEDROOM_FENCE]: true
             }
@@ -189,7 +189,7 @@ export default [
         unitIndex: 6,
         description: `Bennett is at home in bed, pretending to be sick. He is stuffing money from red pouches into a postage envelope. In the window, the schoolbus is driving off, leaving him behind. The bullies are visible through the schoolbus windows, laughing at him.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -197,16 +197,16 @@ export default [
                     instance: FEIGNING_SICK
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [RED_ENVELOPE_MONEY]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [BEDROOM_BUS]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED]: true
             }
@@ -221,7 +221,7 @@ export default [
         unitIndex: 9,
         description: `Bennett is in bed sleeping. In his dream bubble, he imagines two dogs pulling a rocket.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -229,14 +229,14 @@ export default [
                     instance: ASLEEP
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [CAPTAIN_BED]: true,
                 [BEDROOM_FENCE]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [PCHELKA_MUSHKA_ROCKET]: true
             }
         },
@@ -250,7 +250,7 @@ export default [
         unitIndex: 10,
         description: `Bennett is at his desk, reading a letter and crying. In his thought bubble, he is standing alone on Earth, looking up into space.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -258,14 +258,14 @@ export default [
                     instance: SHAKEN
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BEYONDER_ENVELOPE]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [BEDROOM_FENCE]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [EARTH]: true,
                 [SPACE_COLONY]: true
             }
@@ -280,7 +280,7 @@ export default [
         unitIndex: 13,
         description: `Bennett is sitting by himself, away from the lunch crowd. The two bullies have been throwing food at him, trying to rile him up, but to no avail. One looks angry, the other is suggesting that they should leave.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -300,17 +300,17 @@ export default [
                     instance: THROWING
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [TRASH_CAN_LOCKERS]: true,
                 [VAN_NUYS_PLANT_LOCKERS]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [THROWN_FRUIT]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [LOCKER_BANK]: true
             }
         },
@@ -324,7 +324,7 @@ export default [
         unitIndex: 17,
         description: `Bennett is in his secluded spot, watching the bullies flirt with a girl.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -352,16 +352,16 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [ESCAPE_POD_SKETCHBOOK]: true
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [VAN_NUYS_LOGO]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [TRASH_CAN_QUAD]: true,
                 [VAN_NUYS_PLANT_QUAD]: true
             }
@@ -376,7 +376,7 @@ export default [
         unitIndex: 18,
         description: `Bennett is sitting next to Christopher on a bench outside the principal's office. Through the glass window on the door, Bennett's mother is chewing out the principal.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -404,7 +404,7 @@ export default [
                     }
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [CORKBOARD]: true
             }
         },

@@ -1,9 +1,9 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -102,7 +102,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is sleeping in bed with Miriam.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 3.5,
@@ -111,10 +111,10 @@ export default [
                     instance: ASLEEP
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [WEST_BERKELEY_BACKDROP]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_BED]: true
             }
         },
@@ -128,7 +128,7 @@ export default [
         unitIndex: 2,
         description: `Bennett's parents are ghosts, visiting him as he lies in bed with Miriam. They are dressed in traditional Chinese garb. His father is stern and disapproving, while his mother consoles a weeping Sita.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     compound: 2,
                     duplicate: true,
@@ -151,10 +151,10 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [WEST_BERKELEY_BACKDROP]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_BED]: true
             }
         },
@@ -168,7 +168,7 @@ export default [
         unitIndex: 4,
         description: `Bennett's father takes him to visit his childhood past. They watch as young Bennett, having just been bullied, lashes out in anger, to no one in particular. Sasha is with him, and is understanding but clearly keeping her distance. Bennett winces.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -189,13 +189,13 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [TETHERBALL_POLE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [ROAD_PAST]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [SNOWGLOBE_TETHERBALL]: true
             }
         },
@@ -209,7 +209,7 @@ export default [
         unitIndex: 8,
         description: `Bennett's mother is back. They next take him to visit the present. Sita is at home crying, as in the first scene of Kyon, while Bennett is playing guitar next to Miriam on her bed.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT_FATHER]: {
                     todo: true,
                     workedHours: 4,
@@ -238,10 +238,10 @@ export default [
                     instance: MISCHIEVOUS_BANJO
                 }
             },
-            [FLATS]: {
+            [FLAT]: {
                 [ROAD_PRESENT]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [SNOWGLOBE_LIZ_ALONE]: true,
                 [SNOWGLOBE_BENNETT_MIRIAM]: true,
                 [BENNETT_COUCH_BUBBLE]: true,
@@ -259,7 +259,7 @@ export default [
         unitIndex: 11,
         description: `Finally, they take him to visit the future. Unknowingly, they cross paths with Sita who is laughing with her friend in a park. Meanwhile, Bennett is at home alone, recording and depressed.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -294,18 +294,18 @@ export default [
                     instance: JOKING_LAUGHING
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [RECORDING_MIC]: true,
                 [RECORDING_CONSOLE]: true,
                 [RECORDING_BEERS]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [ROAD_FUTURE]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [SNOWGLOBE_LIZ_KHARI]: true,
                 [SNOWGLOBE_BENNETT_ALONE]: true
             }
@@ -320,7 +320,7 @@ export default [
         unitIndex: 14,
         description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is casting an imaginary spell to release him from their grasp. His father flinches, while his mother shields Sita from the view.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
                     workedHours: 3.5,
@@ -344,13 +344,13 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [WEST_BERKELEY_BACKDROP]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [CRACKED_PICTURE]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_BED]: true
             }
         },

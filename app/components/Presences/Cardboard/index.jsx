@@ -2,13 +2,13 @@ import React, { memo } from 'react'
 import { propTypes } from './presenceMap'
 
 import LayerHoc from '../LayerHoc'
-import { CARDBOARDS } from 'constants/scene'
+import { CARDBOARD } from 'constants/scene'
 
 const CardboardLayer = memo((props) => {
     return (
         <LayerHoc
             {...props}
-            {...{ presenceType: CARDBOARDS }}
+            {...{ presenceType: CARDBOARD }}
         />
     )
 })

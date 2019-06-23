@@ -5,7 +5,6 @@ import cx from 'classnames'
 import PresenceSvgInjector from 'modules/PresenceSvgInjector'
 
 import {
-    getClassNameForPresenceType,
     getMapForPresenceType,
     getArrangementForPresenceType
 } from '../../helper'
@@ -15,7 +14,7 @@ import { getMapForActorKey } from '../../Actor/helper'
 import { getPresenceXY, getPresenceXYWidthHeight } from './helper'
 import { capitalise } from 'helpers/format'
 
-import { ACTORS } from 'constants/scene'
+import { ACTOR } from 'constants/scene'
 
 const viewPropTypes = {
     // From parent.
@@ -75,7 +74,7 @@ const PresenceHocView = ({
             zOffset
         }),
 
-        presencesMap = presenceType === ACTORS ?
+        presencesMap = presenceType === ACTOR ?
             getMapForActorKey(actorKey) :
             getMapForPresenceType(presenceType),
 
@@ -84,7 +83,7 @@ const PresenceHocView = ({
         presenceProps = {
             className: cx(
                 'Presence',
-                getClassNameForPresenceType(presenceType),
+                capitalise(presenceType),
                 capitalise(presenceKey),
                 'abF'
             ),

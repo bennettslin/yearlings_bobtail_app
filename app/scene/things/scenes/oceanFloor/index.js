@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    PANELS
+    BACKDROP,
+    CUTOUT,
+    PANEL
 } from 'constants/scene'
 import { OCEAN_FLOOR_FAR } from '../../keys/backdrops'
 import {
@@ -14,7 +14,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [OCEAN_FLOOR_FAR]: {
             yIndex: 0,
             arrangement: {
@@ -24,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BENNETT_MAT]: {
             yIndex: 2,
             arrangement: {
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [OCEAN_CAVE_INTERIOR]: {
             yIndex: 1,
             arrangement: {

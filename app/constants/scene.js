@@ -22,25 +22,25 @@ export const FACES = [
     FRONT
 ]
 
-export const ACTORS = 'actors'
-export const BACKDROPS = 'backdrops'
-export const BUBBLES = 'bubbles'
-export const CARDBOARDS = 'cardboards'
-export const CUTOUTS = 'cutouts'
-export const FIXTURES = 'fixtures'
-export const FLATS = 'flats'
-export const FURNITURES = 'furnitures'
-export const PANELS = 'panels'
-export const PUPPETS = 'puppets'
+export const ACTOR = 'actor'
+export const BACKDROP = 'backdrop'
+export const BUBBLE = 'bubble'
+export const CARDBOARD = 'cardboard'
+export const CUTOUT = 'cutout'
+export const FIXTURE = 'fixture'
+export const FLAT = 'flat'
+export const FURNITURE = 'furniture'
+export const PANEL = 'panel'
+export const PUPPET = 'puppet'
 export const PRESENCE_TYPES = [
-    ACTORS,
-    BACKDROPS,
-    BUBBLES,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    FURNITURES,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
 ]

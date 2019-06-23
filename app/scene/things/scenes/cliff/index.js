@@ -1,6 +1,6 @@
 import {
-    CUTOUTS,
-    FLATS
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import { CLIFF_TREE } from '../../keys/cutouts'
 import {
@@ -9,7 +9,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [CLIFF_TREE]: {
             yIndex: 1,
             arrangement: {
@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [CLIFF_GRAVES_FAR]: {
             yIndex: 1,
             arrangement: {

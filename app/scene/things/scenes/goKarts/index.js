@@ -1,6 +1,6 @@
 import {
-    BACKDROPS,
-    PANELS
+    BACKDROP,
+    PANEL
 } from 'constants/scene'
 import { GO_KART_BACKDROP } from '../../keys/backdrops'
 import {
@@ -9,7 +9,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [GO_KART_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [GO_KART_EXTERIOR_LEFT]: {
             yIndex: 3,
             arrangement: {

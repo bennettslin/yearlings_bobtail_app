@@ -2,7 +2,7 @@ import isFinite from 'lodash.isfinite'
 import keys from 'lodash.keys'
 import albumScenes from 'album/scenes'
 
-import { ACTORS } from 'constants/scene'
+import { ACTOR } from 'constants/scene'
 
 export const initialiseDrawings = (drawings, songIndex) => {
 
@@ -13,11 +13,11 @@ export const initialiseDrawings = (drawings, songIndex) => {
         if (scene.presences) {
 
             // Initialise object for each presence type.
-            if (!drawings[ACTORS]) {
-                drawings[ACTORS] = {}
+            if (!drawings[ACTOR]) {
+                drawings[ACTOR] = {}
             }
 
-            const typePresences = scene.presences[ACTORS]
+            const typePresences = scene.presences[ACTOR]
 
             for (const name in typePresences) {
 
@@ -27,8 +27,8 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 }
 
                 // Initialise array for each actor, cutout, fixture.
-                if (!drawings[ACTORS][name]) {
-                    drawings[ACTORS][name] = []
+                if (!drawings[ACTOR][name]) {
+                    drawings[ACTOR][name] = []
                 }
 
                 /**
@@ -57,7 +57,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
 
                 // Don't count duplicate instances.
                 if (!descriptionEntity.duplicate) {
-                    drawings[ACTORS][name].push(presenceObject)
+                    drawings[ACTOR][name].push(presenceObject)
                 }
             }
         }
@@ -74,8 +74,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
     let actorsTotalCount = 0,
         actorsTodoCount = 0
 
-    keys(drawings.actors).forEach(actor => {
-        const roles = drawings.actors[actor],
+    keys(drawings[ACTOR]).forEach(actor => {
+        const roles = drawings[ACTOR][actor],
             rolesTotalCount = roles.length,
             characters = {}
 
@@ -183,7 +183,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
         })
     })
 
-    drawings.actors = actors
+    drawings[ACTOR] = actors
     drawings.actorsTodoCount = actorsTodoCount
     drawings.actorsTotalCount = actorsTotalCount
 }

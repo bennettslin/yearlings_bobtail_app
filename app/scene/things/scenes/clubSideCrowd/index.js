@@ -1,7 +1,7 @@
 import {
-    CUTOUTS,
-    FIXTURES,
-    FLATS
+    CUTOUT,
+    FIXTURE,
+    FLAT
 } from 'constants/scene'
 import {
     MONITOR_SIDE_CROWD,
@@ -14,7 +14,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [MONITOR_SIDE_CROWD]: {
             yIndex: 4,
             arrangement: {
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [STAGE_MIC_SIDE_CROWD]: {
             yIndex: 3,
             arrangement: {
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [CROWD_FAR_SIDE]: {
             yIndex: 1,
             arrangement: {

@@ -3,7 +3,7 @@ import keys from 'lodash.keys'
 import ALL_ARRANGEMENTS_ACTORS from 'scene/actors'
 import ALL_ARRANGEMENTS_THINGS from 'scene/things'
 
-import { ACTORS } from 'constants/scene'
+import { ACTOR } from 'constants/scene'
 
 const _addPresenceToSceneLayer = ({
     arrangementObject,
@@ -41,7 +41,7 @@ const _addPresenceToSceneLayerByType = ({
     let arrangementObject,
         value
 
-    if (presenceType === ACTORS) {
+    if (presenceType === ACTOR) {
         // This is an object with an instance key and boolean value.
         const actor = dynamicValue
         let { instance } = actor

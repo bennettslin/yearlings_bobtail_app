@@ -77,7 +77,7 @@
 * Move layered tif to its completed folder. -->
 
 ## Convert svg to React component.
-* For each thing, move presence component to own folder with style file.
+
 * Replace jsx with generic presence template.
     * Name component.
 * Put markup in jsx.

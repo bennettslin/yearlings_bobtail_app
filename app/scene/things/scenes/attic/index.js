@@ -1,6 +1,6 @@
 import {
-    CUTOUTS,
-    PANELS
+    CUTOUT,
+    PANEL
 } from 'constants/scene'
 import {
     STORAGE_BOXES,
@@ -15,7 +15,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [STORAGE_BOXES]: {
             yIndex: 1,
             arrangement: {
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [ATTIC_COUCH]: {
             yIndex: 3,
             arrangement: {

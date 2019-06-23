@@ -1,12 +1,12 @@
 import {
-    BACKDROPS,
-    FLATS
+    BACKDROP,
+    FLAT
 } from 'constants/scene'
 import { UCLA_BACKDROP } from '../../keys/backdrops'
 import { ROYCE_HALL } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [UCLA_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [ROYCE_HALL]: {
             yIndex: 1,
             arrangement: {

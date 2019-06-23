@@ -1,7 +1,7 @@
 import {
-    CUTOUTS,
-    FIXTURES,
-    PANELS
+    CUTOUT,
+    FIXTURE,
+    PANEL
 } from 'constants/scene'
 import { IV_DRIP } from '../../keys/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from '../../keys/fixtures'
@@ -13,7 +13,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [IV_DRIP]: {
             yIndex: 1,
             arrangement: {
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [HOSPITAL_RECORD_PLAYER]: {
             yIndex: 3,
             arrangement: {
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [HOSPITAL_BED]: {
             yIndex: 5,
             arrangement: {
@@ -46,7 +46,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_DEATHBED_CREMATED = {
-    [PANELS]: {
+    [PANEL]: {
         [DEATHBED_THOUGHT_PANEL]: {
             yIndex: 0,
             arrangement: {
@@ -67,7 +67,7 @@ export const THINGS_DEATHBED_CREMATED = {
 }
 
 export const THINGS_DEATHBED_DREAM = {
-    [PANELS]: {
+    [PANEL]: {
         [INVERSE_THOUGHT_PANEL]: {
             yIndex: 0,
             arrangement: {

@@ -1,8 +1,8 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS
+    BACKDROP,
+    CUTOUT,
+    FIXTURE,
+    FLAT
 } from 'constants/scene'
 import { VAN_NUYS_SCHOOL_BACKDROP } from '../../keys/backdrops'
 import {
@@ -13,7 +13,7 @@ import { THROWN_FRUIT } from '../../keys/fixtures'
 import { LOCKER_BANK } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [VAN_NUYS_SCHOOL_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [TRASH_CAN_LOCKERS]: {
             yIndex: 2,
             arrangement: {
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 8
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [THROWN_FRUIT]: {
             yIndex: 4,
             arrangement: {
@@ -47,7 +47,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [LOCKER_BANK]: {
             yIndex: 3,
             arrangement: {

@@ -1,11 +1,11 @@
-import { CARDBOARDS } from 'constants/scene'
+import { CARDBOARD } from 'constants/scene'
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
 } from '../../keys/cardboards'
 
 const ARRANGEMENTS_THINGS = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [NAS_ALBUM]: {
             yIndex: 3,
             arrangement: {

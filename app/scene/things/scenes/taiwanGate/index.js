@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS
+    BACKDROP,
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import { TAIWAN_STREETS_BACKDROP } from '../../keys/backdrops'
 import { BENNETT_ODIN_RICKSHAW } from '../../keys/cutouts'
@@ -11,7 +11,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [TAIWAN_STREETS_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
             arrangement: {
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [TAIWAN_HOUSE_FAR]: {
             yIndex: 1,
             arrangement: {

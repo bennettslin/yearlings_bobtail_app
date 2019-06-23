@@ -3,13 +3,13 @@
  * not being clear and being too obvious.
  */
 import {
-    ACTORS,
-    BACKDROPS,
-    BUBBLES,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -89,7 +89,7 @@ export default [
         unitIndex: 1,
         description: `Abbey Road`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -115,10 +115,10 @@ export default [
                     instance: ABBEY_ROAD
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [UCLA_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [ROYCE_HALL]: true
             }
         },
@@ -132,7 +132,7 @@ export default [
         unitIndex: 3,
         description: `The gang is at Walgreens, picking out cough syrup.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -158,10 +158,10 @@ export default [
                     instance: WALGREENS
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [PHARMACY_THOUGHT_BACKDROP]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [PHARMACY_AISLE]: true
             }
         },
@@ -175,7 +175,7 @@ export default [
         unitIndex: 6,
         description: `The gang is wandering through the steam tunnels. Bennett is blathering, Howie is half paying attention. Tomer and Ana are play fighting.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -201,10 +201,10 @@ export default [
                     instance: STEAM_TUNNEL
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [PUSH_BROOM_TUNNEL]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [STEAM_PIPES]: true
             }
         },
@@ -218,7 +218,7 @@ export default [
         unitIndex: 9,
         description: `The gang is at the cemetery, standing over Adam's grave. Tomer is kneeling and pouring a bottle of water over the gravestone. Bennett is looking up. Howie and Ana are tentatively cuddling.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -239,13 +239,13 @@ export default [
                     instance: CEMETERY
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [CEMETERY_BACKDROP]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [GRAVESTONE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [CEMETERY_HILLS_NEAR]: true
             }
         },
@@ -259,7 +259,7 @@ export default [
         unitIndex: 11,
         description: `The gang is driving in a car. Bennett is sitting in the back with his eyes closed. He pictures himself and Sita as a mastodon and a sabre-tooth tiger, and his brother and sister as Loki and Freyja.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -285,17 +285,17 @@ export default [
                     instance: STATION_WAGON
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [STATION_WAGON_BACKDROP]: true
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [TARPIT_THOUGHT]: true,
                 [SIBLING_THOUGHT]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [EVIAN_BOTTLES]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [SATURN_EXTERIOR]: true,
                 [SATURN_INTERIOR]: true
             }
@@ -310,7 +310,7 @@ export default [
         unitIndex: 15,
         description: `Bennett is in the attic, huddled under a blanket on a couch, lit up by an old television facing away from the audience. Howie is downstairs, in anguish, clutching at his head.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -324,13 +324,13 @@ export default [
                     instance: ATTIC
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [STORAGE_BOXES]: true,
                 [STORAGE_CHEST]: true,
                 [HOWIE_FRIDGE]: true,
                 [TELEVISION]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [ATTIC_COUCH]: true,
                 [ATTIC_LEFT_ARMREST]: true,
                 [ATTIC_RIGHT_ARMREST]: true

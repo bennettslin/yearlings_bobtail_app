@@ -1,12 +1,12 @@
 import {
-    BUBBLES,
-    CUTOUTS
+    BUBBLE,
+    CUTOUT
 } from 'constants/scene'
 import { GO_KART_THOUGHT } from '../../keys/bubbles'
 import { TRAFFIC_LIGHT } from '../../keys/cutouts'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
-    [BUBBLES]: {
+    [BUBBLE]: {
         [GO_KART_THOUGHT]: {
             yIndex: 5,
             arrangement: {
@@ -17,7 +17,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [TRAFFIC_LIGHT]: {
             yIndex: 5,
             arrangement: {

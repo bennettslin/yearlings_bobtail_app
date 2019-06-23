@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS
+    BACKDROP,
+    CUTOUT,
+    FLAT
 } from 'constants/scene'
 import { SHORE_BUOY_BACKDROP } from '../../keys/backdrops'
 import {
@@ -11,7 +11,7 @@ import {
 import { SHORE_CARNIVAL } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [SHORE_BUOY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
             arrangement: {
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [SHORE_CARNIVAL]: {
             yIndex: 1,
             arrangement: {

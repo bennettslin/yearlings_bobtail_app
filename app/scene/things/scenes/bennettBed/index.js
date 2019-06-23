@@ -1,7 +1,7 @@
 import {
-    FIXTURES,
-    FURNITURES,
-    PANELS
+    FIXTURE,
+    FURNITURE,
+    PANEL
 } from 'constants/scene'
 import {
     NUDE_DRAWINGS,
@@ -14,7 +14,7 @@ import {
 import { BENNETT_BED } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [NUDE_DRAWINGS]: {
             yIndex: 3,
             arrangement: {
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FURNITURES]: {
+    [FURNITURE]: {
         [BENNETT_PILLOW]: {
             yIndex: 4,
             arrangement: {
@@ -50,7 +50,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [BENNETT_BED]: {
             yIndex: 5,
             arrangement: {

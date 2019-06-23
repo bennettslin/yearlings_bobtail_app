@@ -1,12 +1,12 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    FURNITURES,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -118,10 +118,10 @@ export default [
         description: `San Fernando valley in the morning.`,
         cubes: FREEWAY_KEY,
         presences: {
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [VALLEY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [OVERPASS_SIGN_FRONT]: true,
                 [OVERPASS_SIGN_BACK]: true
             }
@@ -135,7 +135,7 @@ export default [
         unitIndex: 2,
         description: `Willy stands beside a shopping cart filled with recyclables. He holds a soda bottle up high as he pours its remaining content onto the ground.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [WILLY]: {
                     todo: true,
                     workedHours: 4.25,
@@ -143,14 +143,14 @@ export default [
                     instance: COLLECTING
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [VALLEY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [OVERPASS_SIGN_FRONT]: true,
                 [OVERPASS_SIGN_BACK]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [SHOPPING_CART_FULL]: true
             }
         },
@@ -164,7 +164,7 @@ export default [
         unitIndex: 5,
         description: `Outside next to the porch, Bennett's mother had been cutting Christopher's hair a moment ago. Christopher has just leapt out of his chair in panic. The cloth that had been draped around him has been tossed in the air. Looking exasperated, Bennett tries to catch him. Having just arrived, Willy is ducked behind the porch, a kind chuckle on his face.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [WILLY]: {
                     todo: true,
                     workedHours: 4.25,
@@ -190,7 +190,7 @@ export default [
                     instance: CAUTIOUS
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [PORCH_PLANTS_LEFT]: true,
                 [PORCH_PLANTS_RIGHT]: true
             }
@@ -205,7 +205,7 @@ export default [
         unitIndex: 7,
         description: `Inside the house, holding his X-ray specs, Bennett is kicking Christopher, who rolls on the ground, in tears and clenching his stomach. Tattered comics and cut-out letters are on the ground. Bennett's father is rushing in, angry and determined to stop the fight.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [FATHER]: {
                     todo: true,
                     workedHours: 4.25,
@@ -225,18 +225,18 @@ export default [
                     instance: ENRAGED
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [TINTIN_POSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BEETHOVEN_BUST]: true,
                 [CHRISTOPHER_LETTERS]: true
             },
-            [FURNITURES]: {
+            [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true,
                 [CAPTAIN_BED_BLANKET]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED]: true,
                 [BEDROOM_FENCE]: true
@@ -252,7 +252,7 @@ export default [
         unitIndex: 9,
         description: `Willy is in a fight with two gangbangers. One is angry about his drenched pants, while the other is smashing Willy's head with a soda bottle.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [HOWIE_WILLY]: {
                     todo: true,
                     workedHours: 4.25,
@@ -269,16 +269,16 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [NOHO_HOUSES_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [FIRE_HYDRANT]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [SHOPPING_CART_FULL]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [NOHO_HOUSE_LEFT]: true,
                 [NOHO_HOUSE_RIGHT]: true
             }
@@ -293,7 +293,7 @@ export default [
         unitIndex: 12,
         description: `Inside the house, Bennett is in bed, with his mother beside him giving comfort. Outside, the window shows a scene with police hovering over a dead body. Mother is getting up to close the window.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [MOTHER]: {
                     todo: true,
                     workedHours: 4.25,
@@ -307,16 +307,16 @@ export default [
                     instance: FEARFUL
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [TINTIN_POSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BEETHOVEN_BUST]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [BEDROOM_SIREN]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED]: true
             }
@@ -331,7 +331,7 @@ export default [
         unitIndex: 14,
         description: `Bennett is now dreaming. It's night, and he and Willy are holding Christopher's hand, one on each side. Christopher gazes up at Bennett with a knowing, comforting smile. Willy's and Christopher's shadows both reveal them to be trolls. Together, they are leading Bennett to a circle of trolls.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [CHRISTOPHER_BENNETT_WILLY]: {
                     todo: true,
                     workedHours: 4.25,
@@ -340,13 +340,13 @@ export default [
                     instance: REASSURING_ENCHANTED
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [TROLL_SHADOW_LEFT]: true,
                 [TROLL_SHADOW_RIGHT]: true,
                 [CAMPFIRE]: true,
                 [STALACTITES]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [FAMILY_HOUSE]: true,
                 [CAVE_SHADOWS]: true
             }

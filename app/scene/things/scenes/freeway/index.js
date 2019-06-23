@@ -1,7 +1,7 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES
+    BACKDROP,
+    CUTOUT,
+    FIXTURE
 } from 'constants/scene'
 import { VALLEY_BACKDROP } from '../../keys/backdrops'
 import {
@@ -11,7 +11,7 @@ import {
 import { SHOPPING_CART_FULL } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [VALLEY_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [OVERPASS_SIGN_BACK]: {
             yIndex: 1,
             arrangement: {
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [SHOPPING_CART_FULL]: {
             yIndex: 3,
             arrangement: {

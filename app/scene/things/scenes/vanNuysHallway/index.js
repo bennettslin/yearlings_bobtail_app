@@ -1,10 +1,10 @@
 import {
-    CARDBOARDS
+    CARDBOARD
 } from 'constants/scene'
 import { CORKBOARD } from '../../keys/cardboards'
 
 const ARRANGEMENTS_THINGS = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [CORKBOARD]: {
             yIndex: 4,
             arrangement: {

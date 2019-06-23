@@ -1,4 +1,4 @@
-import { ACTORS } from 'constants/scene'
+import { ACTOR } from 'constants/scene'
 
 import { LOGUE_KEY } from '../../scene/scenes/keys'
 
@@ -16,7 +16,7 @@ export default [
         unitIndex: 1,
         description: `Old Bennett is standing onstage, addressing the audience.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [OLD_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,

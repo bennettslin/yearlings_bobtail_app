@@ -1,6 +1,6 @@
 import {
-    CUTOUTS,
-    FIXTURES
+    CUTOUT,
+    FIXTURE
 } from 'constants/scene'
 import {
     SANDBAGS,
@@ -13,7 +13,7 @@ import {
 } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [SANDBAGS]: {
             yIndex: 4,
             arrangement: {
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [PUSH_BROOM_BACKSTAGE]: {
             yIndex: 2,
             arrangement: {

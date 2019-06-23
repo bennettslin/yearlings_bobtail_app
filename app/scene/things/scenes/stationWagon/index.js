@@ -1,8 +1,8 @@
 import {
-    BACKDROPS,
-    BUBBLES,
-    FIXTURES,
-    PANELS
+    BACKDROP,
+    BUBBLE,
+    FIXTURE,
+    PANEL
 } from 'constants/scene'
 import { STATION_WAGON_BACKDROP } from '../../keys/backdrops'
 import {
@@ -16,7 +16,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [STATION_WAGON_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [BUBBLES]: {
+    [BUBBLE]: {
         [TARPIT_THOUGHT]: {
             yIndex: 5,
             arrangement: {
@@ -46,7 +46,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [EVIAN_BOTTLES]: {
             yIndex: 3,
             arrangement: {
@@ -56,7 +56,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [SATURN_INTERIOR]: {
             yIndex: 1,
             arrangement: {

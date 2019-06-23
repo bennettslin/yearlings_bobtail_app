@@ -7,7 +7,7 @@ import PresenceHoc from '../PresenceHoc'
 import { getMapForPresenceType } from '../helper'
 import { getMapForActorKey } from '../Actor/helper'
 
-import { ACTORS } from 'constants/scene'
+import { ACTOR } from 'constants/scene'
 
 const mapStateToProps = ({
     sceneStore: { sceneCubesKey }
@@ -61,7 +61,7 @@ class LayerHoc extends PureComponent {
                         {...{
                             key: presenceKey,
                             cubesKey,
-                            presenceType: presenceType || ACTORS,
+                            presenceType: presenceType || ACTOR,
                             actorKey,
                             presenceKey,
                             existenceValue

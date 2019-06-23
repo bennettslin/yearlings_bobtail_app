@@ -13,46 +13,29 @@ import ALL_ARRANGEMENTS_ACTORS from 'scene/actors'
 import ALL_ARRANGEMENTS_THINGS from 'scene/things'
 
 import {
-    ACTORS,
-    BACKDROPS,
-    BUBBLES,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    FURNITURES,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 
-const PRESENCE_CLASS_NAME_MAP = {
-    [ACTORS]: 'Actor',
-    [BACKDROPS]: 'Backdrop',
-    [BUBBLES]: 'Bubble',
-    [CARDBOARDS]: 'Cardboard',
-    [CUTOUTS]: 'Cutout',
-    [FIXTURES]: 'Fixture',
-    [FLATS]: 'Flat',
-    [FURNITURES]: 'Furniture',
-    [PANELS]: 'Panel',
-    [PUPPETS]: 'Puppet'
-}
-
 const PRESENCE_TYPE_MAP = {
-    [ACTORS]: actorsMap,
-    [BACKDROPS]: backdropsMap,
-    [BUBBLES]: bubblesMap,
-    [CARDBOARDS]: cardboardsMap,
-    [CUTOUTS]: cutoutsMap,
-    [FIXTURES]: fixturesMap,
-    [FLATS]: flatsMap,
-    [FURNITURES]: furnituresMap,
-    [PANELS]: panelsMap,
-    [PUPPETS]: puppetsMap
-}
-
-export const getClassNameForPresenceType = (presenceType) => {
-    return PRESENCE_CLASS_NAME_MAP[presenceType]
+    [ACTOR]: actorsMap,
+    [BACKDROP]: backdropsMap,
+    [BUBBLE]: bubblesMap,
+    [CARDBOARD]: cardboardsMap,
+    [CUTOUT]: cutoutsMap,
+    [FIXTURE]: fixturesMap,
+    [FLAT]: flatsMap,
+    [FURNITURE]: furnituresMap,
+    [PANEL]: panelsMap,
+    [PUPPET]: puppetsMap
 }
 
 export const getMapForPresenceType = (presenceType) => {
@@ -65,7 +48,7 @@ export const getArrangementForPresenceType = ({
     actorKey
 
 }) => {
-    return presenceType === ACTORS ?
+    return presenceType === ACTOR ?
         ALL_ARRANGEMENTS_ACTORS[actorKey][presenceKey] :
         ALL_ARRANGEMENTS_THINGS[presenceType][presenceKey]
 }

@@ -1,9 +1,9 @@
 import {
-    BACKDROPS,
-    CUTOUTS,
-    FLATS,
-    PANELS,
-    PUPPETS
+    BACKDROP,
+    CUTOUT,
+    FLAT,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 import { WEDDING_BACKDROP } from '../../keys/backdrops'
 import { WEDDING_CROWD } from '../../keys/cutouts'
@@ -12,7 +12,7 @@ import { WEDDING_PLATFORM } from '../../keys/panels'
 import { PUPPET_KHARI_LIZ } from '../../keys/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROPS]: {
+    [BACKDROP]: {
         [WEDDING_BACKDROP]: {
             yIndex: 0,
             arrangement: {
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [WEDDING_CROWD]: {
             yIndex: 3,
             arrangement: {
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLATS]: {
+    [FLAT]: {
         [FOREBODING_TREES]: {
             yIndex: 2,
             arrangement: {
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [WEDDING_PLATFORM]: {
             yIndex: 5,
             arrangement: {
@@ -52,7 +52,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PUPPETS]: {
+    [PUPPET]: {
         [PUPPET_KHARI_LIZ]: {
             yIndex: 1,
             arrangement: {

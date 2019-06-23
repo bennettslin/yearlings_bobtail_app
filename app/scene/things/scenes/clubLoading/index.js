@@ -1,10 +1,10 @@
 import {
-    FIXTURES
+    FIXTURE
 } from 'constants/scene'
 import { DRUMS_STACKED_CLUB } from '../../keys/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [DRUMS_STACKED_CLUB]: {
             yIndex: 3,
             arrangement: {

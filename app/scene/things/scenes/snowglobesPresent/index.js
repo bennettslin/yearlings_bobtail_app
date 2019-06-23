@@ -1,6 +1,6 @@
 import {
-    FLATS,
-    PANELS
+    FLAT,
+    PANEL
 } from 'constants/scene'
 import { ROAD_PRESENT } from '../../keys/flats'
 import {
@@ -12,7 +12,7 @@ import {
 } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FLATS]: {
+    [FLAT]: {
         [ROAD_PRESENT]: {
             yIndex: 0,
             arrangement: {
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [SNOWGLOBE_LIZ_ALONE]: {
             yIndex: 4,
             arrangement: {

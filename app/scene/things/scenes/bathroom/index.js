@@ -1,8 +1,8 @@
 import {
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    PANELS
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    PANEL
 } from 'constants/scene'
 import { JOHNNY_HORTON_ALBUM } from '../../keys/cardboards'
 import {
@@ -13,7 +13,7 @@ import { RECORD_PLAYER_STOOL } from '../../keys/fixtures'
 import { BATHTUB } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [PANELS]: {
+    [PANEL]: {
         [BATHTUB]: {
             yIndex: 4,
             arrangement: {
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_BATHROOM_BATHING = {
-    [CUTOUTS]: {
+    [CUTOUT]: {
         [MIRRORED_SINK]: {
             yIndex: 1,
             arrangement: {
@@ -48,7 +48,7 @@ export const THINGS_BATHROOM_BATHING = {
 }
 
 export const THINGS_BATHROOM_SINGING = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [JOHNNY_HORTON_ALBUM]: {
             yIndex: 5,
             arrangement: {
@@ -58,7 +58,7 @@ export const THINGS_BATHROOM_SINGING = {
             }
         }
     },
-    [FIXTURES]: {
+    [FIXTURE]: {
         [RECORD_PLAYER_STOOL]: {
             yIndex: 5,
             arrangement: {

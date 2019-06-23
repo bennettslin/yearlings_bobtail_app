@@ -1,5 +1,5 @@
 import {
-    CARDBOARDS
+    CARDBOARD
 } from 'constants/scene'
 import {
     CINEMA_POSTER_LEFT,
@@ -7,7 +7,7 @@ import {
 } from '../../keys/cardboards'
 
 const ARRANGEMENTS_THINGS = {
-    [CARDBOARDS]: {
+    [CARDBOARD]: {
         [CINEMA_POSTER_LEFT]: {
             yIndex: 4,
             arrangement: {

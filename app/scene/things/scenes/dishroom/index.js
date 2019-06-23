@@ -1,6 +1,6 @@
 import {
-    FIXTURES,
-    PANELS
+    FIXTURE,
+    PANEL
 } from 'constants/scene'
 import {
     CONVEYOR_BELT,
@@ -12,7 +12,7 @@ import {
 import { DISHROOM_SINK } from '../../keys/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURES]: {
+    [FIXTURE]: {
         [CONVEYOR_BELT]: {
             yIndex: 1,
             arrangement: {
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [PANELS]: {
+    [PANEL]: {
         [DISHROOM_SINK]: {
             yIndex: 3,
             arrangement: {

@@ -1,10 +1,10 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -92,7 +92,7 @@ export default [
         unitIndex: 1,
         description: `Bennett is lying on a mat on the floor. In the distance, he sees himself creeping out of the house in pitch darkness. Papers are strewn where he walked.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -100,13 +100,13 @@ export default [
                     instance: MAT
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BUDDHA_SHRINE]: true,
                 [TAIWAN_FRIDGE_FRONT]: true,
                 [BENNETT_TAIWAN_STAIRS]: true,
                 [ODIN_TAIWAN_STAIRS]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [FRIDGE_DRAWINGS]: true
             }
         },
@@ -120,7 +120,7 @@ export default [
         unitIndex: 4,
         description: `From top of stairs, Bennett sees himself opening the gate and peering out.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -128,10 +128,10 @@ export default [
                     instance: STAIRS
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [TAIWAN_STAIRS_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BENNETT_TAIWAN_GATE]: true,
                 [ODIN_TAIWAN_GATE]: true
             }
@@ -146,7 +146,7 @@ export default [
         unitIndex: 6,
         description: `Bennett is stepping through the front gate. He sees himself in a rickshaw, driving away. The rickshaw leaves a trail.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -154,13 +154,13 @@ export default [
                     instance: GATE
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [TAIWAN_STREETS_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BENNETT_ODIN_RICKSHAW]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [TAIWAN_HOUSE_FAR]: true,
                 [TAIWAN_HOUSE_NEAR]: true
             }
@@ -175,7 +175,7 @@ export default [
         unitIndex: 9,
         description: ``,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -183,14 +183,14 @@ export default [
                     instance: RICKSHAW
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [SHORE_RICKSHAW_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BENNETT_SHORE]: true,
                 [ODIN_SHORE]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [RICKSHAW_TOWN]: true
             }
         },
@@ -204,7 +204,7 @@ export default [
         unitIndex: 11,
         description: `Bennett is standing on the shore. He sees himself in the water, on a buoy. Footprints lead into the water.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -212,14 +212,14 @@ export default [
                     instance: SHORE
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [SHORE_BUOY_BACKDROP]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BENNETT_ODIN_BUOY]: true,
                 [YELLOW_TAPED_GRILL]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [SHORE_CARNIVAL]: true
             }
         },
@@ -233,7 +233,7 @@ export default [
         unitIndex: 14,
         description: `Sea serpents are surrounding Bennett in the ocean.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -241,7 +241,7 @@ export default [
                     instance: BUOY
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENTS]: true
             }
@@ -256,7 +256,7 @@ export default [
         unitIndex: 18,
         description: `Sasha is a mermaid, rescuing Bennett. She points down to Bennett on the ocean floor.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [SASHA_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -265,13 +265,13 @@ export default [
                     instance: MERMAID
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [OCEAN_BOTTOM_FAR]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BENNETT_ODIN_OCEAN_FLOOR]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [OCEAN_BOTTOM_MIDDLE]: true,
                 [OCEAN_BOTTOM_NEAR]: true
             }
@@ -286,7 +286,7 @@ export default [
         unitIndex: 20,
         description: `Bennett sits on the shore gazing at the ocean. Further ahead, another Bennett is making his bed on the beach. Footprints lead up to him.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -294,14 +294,14 @@ export default [
                     instance: OCEAN_FLOOR
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [OCEAN_FLOOR_FAR]: true
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [BENNETT_MAT]: true,
                 [ODIN_MAT]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [OCEAN_CAVE_INTERIOR]: true,
                 [OCEAN_CAVE_EXTERIOR]: true
             }

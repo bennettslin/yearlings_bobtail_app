@@ -1,9 +1,9 @@
 import {
-    ACTORS,
-    BUBBLES,
-    FIXTURES,
-    PANELS,
-    PUPPETS
+    ACTOR,
+    BUBBLE,
+    FIXTURE,
+    PANEL,
+    PUPPET
 } from 'constants/scene'
 
 import {
@@ -62,7 +62,7 @@ export default [
         unitIndex: 1,
         description: `Sita is sitting on the couch in her living room, petting a cat.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -72,7 +72,7 @@ export default [
                     }
                 }
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             }
         },
@@ -86,7 +86,7 @@ export default [
         unitIndex: 2,
         description: `Sita is standing by the window, still depressed.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -96,7 +96,7 @@ export default [
                     }
                 }
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             }
         },
@@ -110,7 +110,7 @@ export default [
         unitIndex: 4,
         description: `Sita is imagining how she met Bennett in three thought bubbles. In the first, she is breaking up with her ex over a cafeteria dinner. In the second, in tears over the incident, she busses her tray, leaving her lancing device behind. In the third, Bennett is hitting on her in the cafeteria, while she looks uncertain.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -120,13 +120,13 @@ export default [
                     }
                 }
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [TCHOTCHKES]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [OPAL_COUCH]: true
             }
         },
@@ -140,7 +140,7 @@ export default [
         unitIndex: 7,
         description: `Sita is still thinking. In the last thought bubble, Bennett is walking away, rejected by Sita. Sita has gotten up and opened the door. Sita's friend is in the doorway, having arrived with Chinese takeout.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -156,7 +156,7 @@ export default [
                     instance: ARRIVED
                 }
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             }
         },
@@ -170,7 +170,7 @@ export default [
         unitIndex: 8,
         description: `Sita and her friend are eating the food. In his speech bubble, Bennett is flirting with a fan, while Sita looks on jealous. In her speech bubble, she is going home with Bennett, triumphant.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -186,11 +186,11 @@ export default [
                     instance: JUDGMENTAL
                 }
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [KHARI_ATTACK_SPEECH]: true,
                 [LIZ_DEFENCE_SPEECH]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             }
         },
@@ -204,7 +204,7 @@ export default [
         unitIndex: 10,
         description: `Sita's friend has left, looking back at her through the window. She is absorbed in her thoughts. In her thought bubble, she and Bennett have gotten back together, both in tears.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -220,10 +220,10 @@ export default [
                     instance: CONCERNED
                 }
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [LIZ_THOUGHT]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             }
         },
@@ -237,7 +237,7 @@ export default [
         unitIndex: 11,
         description: `Same scene. No thought bubble. The room is now completely dark.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         todo: true,
@@ -247,10 +247,10 @@ export default [
                     }
                 }
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [OPAL_GAZING]: true
             }
         },
@@ -264,7 +264,7 @@ export default [
         unitIndex: 12,
         description: `Same scene. Peacocks.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [LIZ]: {
                     sita: {
                         duplicate: true,
@@ -273,10 +273,10 @@ export default [
                     }
                 }
             },
-            [PANELS]: {
+            [PANEL]: {
                 [LIZ_COUCH]: true
             },
-            [PUPPETS]: {
+            [PUPPET]: {
                 [PEAHEN]: true,
                 [PEACOCK]: true
             }

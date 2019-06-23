@@ -1,5 +1,5 @@
 import {
-    FLATS
+    FLAT
 } from 'constants/scene'
 import {
     PUBLIC_FAR_LEFT,
@@ -9,7 +9,7 @@ import {
 } from '../../keys/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [FLATS]: {
+    [FLAT]: {
         [PUBLIC_FAR_LEFT]: {
             yIndex: 1,
             arrangement: {

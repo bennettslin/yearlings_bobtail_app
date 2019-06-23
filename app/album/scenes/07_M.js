@@ -1,12 +1,12 @@
 import {
-    ACTORS,
-    BACKDROPS,
-    BUBBLES,
-    CARDBOARDS,
-    CUTOUTS,
-    FIXTURES,
-    FLATS,
-    PANELS
+    ACTOR,
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    FIXTURE,
+    FLAT,
+    PANEL
 } from 'constants/scene'
 
 import {
@@ -124,7 +124,7 @@ export default [
         unitIndex: 1,
         description: `Bennett's room`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -132,14 +132,14 @@ export default [
                     instance: PONDERING
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [LEONARD_COHEN_POSTER]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_COUCH]: true,
                 [BENNETT_LEFT_ARMREST]: true,
                 [BENNETT_RIGHT_ARMREST]: true
@@ -155,7 +155,7 @@ export default [
         unitIndex: 2,
         description: `Bennett is in his room, trying to figure out a Rubik's Cube.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -163,15 +163,15 @@ export default [
                     instance: RUBIKS_CUBE
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [TELEVISION_ALBUM]: true,
                 [PROGRESS_CHART_EARLY]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_COUCH]: true,
                 [BENNETT_LEFT_ARMREST]: true,
                 [BENNETT_RIGHT_ARMREST]: true
@@ -187,7 +187,7 @@ export default [
         unitIndex: 4,
         description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a keyboard and writing stuff down on a notepad, another is reading a book.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -203,15 +203,15 @@ export default [
                     }
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [PROGRESS_CHART_LATE]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
                 [KEYBOARD]: true
             },
-            [PANELS]: {
+            [PANEL]: {
                 [BENNETT_COUCH]: true,
                 [BENNETT_LEFT_ARMREST]: true,
                 [BENNETT_RIGHT_ARMREST]: true
@@ -227,7 +227,7 @@ export default [
         unitIndex: 5,
         description: `It's after a show, and the Yearlings are breaking down their set. Jacob is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -261,13 +261,13 @@ export default [
                     }
                 }
             },
-            [CUTOUTS]: {
+            [CUTOUT]: {
                 [MONITOR_SPEAKER_LEFT]: true,
                 [MONITOR_SPEAKER_RIGHT]: true,
                 [WALL_SPEAKER_LEFT]: true,
                 [WALL_SPEAKER_RIGHT]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [CASH_BOX]: true,
                 [GUITAR]: true,
                 [DRUMKIT]: true
@@ -283,7 +283,7 @@ export default [
         unitIndex: 7,
         description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Jacob. Bennett is visibly agitated.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -304,10 +304,10 @@ export default [
                     instance: EATING
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [WEST_BERKELEY_BACKDROP]: true
             },
-            [FIXTURES]: {
+            [FIXTURE]: {
                 [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE_UPRIGHT]: true,
                 [DRUMS_STACKED_BASEMENT]: true,
@@ -326,7 +326,7 @@ export default [
         unitIndex: 9,
         description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -342,7 +342,7 @@ export default [
                     }
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
             }
@@ -357,7 +357,7 @@ export default [
         unitIndex: 11,
         description: `Bennett is looking at the woman holding a baby who just passed by.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -381,7 +381,7 @@ export default [
                     }
                 }
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [CINEMA_POSTER_LEFT]: true,
                 [CINEMA_POSTER_RIGHT]: true
             }
@@ -396,7 +396,7 @@ export default [
         unitIndex: 14,
         description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself recording all the instruments in a band. Finally, he imagines Mara finding his album in a record store.`,
         presences: {
-            [ACTORS]: {
+            [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
@@ -412,16 +412,16 @@ export default [
                     }
                 }
             },
-            [BACKDROPS]: {
+            [BACKDROP]: {
                 [OAKLAND_FRONT_BACKDROP]: true
             },
-            [BUBBLES]: {
+            [BUBBLE]: {
                 [CINEMA_THOUGHTS]: true
             },
-            [CARDBOARDS]: {
+            [CARDBOARD]: {
                 [CINEMA_POSTER_RIGHT_NORMAL]: true
             },
-            [FLATS]: {
+            [FLAT]: {
                 [COMMERCIAL_CENTRE]: true,
                 [COMMERCIAL_FAR_RIGHT]: true,
                 [COMMERCIAL_MIDDLE_RIGHT]: true,
