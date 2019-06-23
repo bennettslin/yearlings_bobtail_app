@@ -81,7 +81,6 @@ class PresenceSvgInjector extends Component {
 
         return (
             <ReactInlineSvg
-                cacheGetRequests
                 {...{
                     className: cx(
                         'PresenceSvgInjector',
