@@ -9,7 +9,7 @@ class FilmstripScene extends PureComponent {
     static propTypes = {
         // From parent.
         isOdd: PropTypes.bool.isRequired,
-        isInteractivated: PropTypes.bool.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
         isAfterSelected: PropTypes.bool.isRequired,
         sceneIndex: PropTypes.number.isRequired,
@@ -30,7 +30,7 @@ class FilmstripScene extends PureComponent {
     render() {
         const {
             isOdd,
-            isInteractivated,
+            isActivated,
             isSelected,
             isAfterSelected,
             sceneLeft,
@@ -54,7 +54,7 @@ class FilmstripScene extends PureComponent {
                 <FilmstripCell
                     {...{
                         isOdd,
-                        isInteractivated,
+                        isActivated,
                         isSelected,
                         isAfterSelected
                     }}

@@ -11,7 +11,7 @@
         opacity $animationDuration__default;
 }
 
-.VerseNav__interactivated {
+.VerseNav__activated {
     left: -$length__iconSmall * 0.9;
     opacity: 1;
     animation: fontSnapback 0.16s;

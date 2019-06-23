@@ -6,18 +6,18 @@
     &,
 
     .TW__sliderNotMoving.TW__verseActive
-    &.VerseColour__interactivated {
+    &.VerseColour__activated {
 
         // Override even verse shading.
         &, &.GcE {
-            background-color: $bgColour__interactivated;
+            background-color: $bgColour__activated;
         }
     }
 }
 
 @for $verseIndex from 0 through $verseMax {
 
-    // "Root non-interactivated verse index, child verse index."
+    // "Root non-activated verse index, child verse index."
     .RnV#{$verseIndex} .ChV#{$verseIndex} {
         // Styling for cursored verse.
 

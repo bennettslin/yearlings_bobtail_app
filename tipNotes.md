@@ -9,7 +9,7 @@
 5. Pchelka's Starry Journey
     * Carousel
 6. Ash Wednesday
-    * Interactivated verse, selected stanza.
+    * Activated verse, selected stanza.
 7. M
     * Access
 8. Good Night, Sita

@@ -8,16 +8,16 @@ import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 
 const mapStateToProps = ({
-    sessionStore: { interactivatedVerseIndex }
+    sessionStore: { activatedVerseIndex }
 }) => ({
-    interactivatedVerseIndex
+    activatedVerseIndex
 })
 
 class VerseHoc extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
 
         // From parent.
         verseIndex: PropTypes.number,
@@ -35,7 +35,7 @@ class VerseHoc extends PureComponent {
         const {
                 verseIndex,
                 VerseComponent,
-                interactivatedVerseIndex,
+                activatedVerseIndex,
                 handleVerseSelect,
                 inUnit,
                 isShownInVerseBar,
@@ -73,7 +73,7 @@ class VerseHoc extends PureComponent {
                 ) && 'ChL'
             ),
 
-            isInteractivated = verseIndex === interactivatedVerseIndex
+            isActivated = verseIndex === activatedVerseIndex
 
         return (
             <VerseComponent {...other}
@@ -88,14 +88,14 @@ class VerseHoc extends PureComponent {
                         inVerseBar,
                         inUnit,
                         verseIndex,
-                        isInteractivated
+                        isActivated
                     }}
                 />
                 {!inSlider && !inVerseBar && (
                     <VerseNav
                         {...{
                             verseIndex,
-                            isInteractivated,
+                            isActivated,
                             handleVerseSelect
                         }}
                     />

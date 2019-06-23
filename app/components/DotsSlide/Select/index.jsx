@@ -21,15 +21,15 @@ class DotsSlideSelect extends PureComponent {
         dotKey: PropTypes.string.isRequired,
         isAccessed: PropTypes.bool.isRequired,
         isSelected: PropTypes.bool.isRequired,
-        isInteractivated: PropTypes.bool.isRequired
+        isActivated: PropTypes.bool.isRequired
     }
 
     _toggleSelectedDot = () => {
         this.dispatchSelectDot(this.props.dotIndex)
     }
 
-    _toggleInteractivatedDot = () => {
-        this.dispatchInteractivatedDot(this.props.dotIndex)
+    _toggleActivatedDot = () => {
+        this.dispatchActivatedDot(this.props.dotIndex)
         return true
     }
 
@@ -42,7 +42,7 @@ class DotsSlideSelect extends PureComponent {
             dotKey,
             isAccessed,
             isSelected,
-            isInteractivated
+            isActivated
         } = this.props
 
         return (
@@ -64,7 +64,7 @@ class DotsSlideSelect extends PureComponent {
                                  * ideal, but it will do for now.
                                  */
                                 'isSelected': isSelected,
-                                'isInteractivated': isInteractivated
+                                'isActivated': isActivated
                             }),
                             buttonName: 'slideSelect',
                             accessKey: ENTER,
@@ -86,8 +86,8 @@ class DotsSlideSelect extends PureComponent {
                             isAccessed &&
                                 'SlideSelectDescription__accessed',
 
-                            isInteractivated &&
-                                'SlideSelectDescription__interactivated',
+                            isActivated &&
+                                'SlideSelectDescription__activated',
 
                             'abF',
                             'flexCentreContainer'
@@ -99,9 +99,9 @@ class DotsSlideSelect extends PureComponent {
                     <Anchor
                         {...{
                             isAccessed,
-                            isSelected: isInteractivated,
+                            isSelected: isActivated,
                             text: dotKey,
-                            handleAnchorClick: this._toggleInteractivatedDot
+                            handleAnchorClick: this._toggleActivatedDot
                         }}
                     />
                 </div>

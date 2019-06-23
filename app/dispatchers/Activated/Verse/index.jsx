@@ -1,4 +1,4 @@
-// Child that knows rules to select interactivated verse.
+// Child that knows rules to select activated verse.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -7,16 +7,16 @@ import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 
 import { getSceneIndexForVerseIndex } from 'album/api/verses'
-import { getInteractivatedVerseForDirection } from './helper'
+import { getActivatedVerseForDirection } from './helper'
 
-class InteractivatedVerseDispatcher extends PureComponent {
+class ActivatedVerseDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
@@ -26,12 +26,12 @@ class InteractivatedVerseDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            interactivateVerseIndex: this.interactivateVerseIndex,
-            interactivateVerseDirection: this.interactivateVerseDirection
+            activateVerseIndex: this.activateVerseIndex,
+            activateVerseDirection: this.activateVerseDirection
         })
     }
 
-    interactivateVerseDirection = (direction) => {
+    activateVerseDirection = (direction) => {
         if (this.props.isSelectedLogue) {
             return false
         }
@@ -39,41 +39,41 @@ class InteractivatedVerseDispatcher extends PureComponent {
         const {
                 selectedSongIndex,
                 selectedVerseIndex,
-                interactivatedVerseIndex: currentVerseIndex
+                activatedVerseIndex: currentVerseIndex
             } = this.props,
 
-            interactivatedVerseIndex = getInteractivatedVerseForDirection({
+            activatedVerseIndex = getActivatedVerseForDirection({
                 selectedSongIndex,
                 selectedVerseIndex,
                 currentVerseIndex,
                 direction
             })
 
-        this.interactivateVerseIndex(interactivatedVerseIndex)
-        this._queueScrollToInteractivatedVerse(interactivatedVerseIndex)
+        this.activateVerseIndex(activatedVerseIndex)
+        this._queueScrollToActivatedVerse(activatedVerseIndex)
 
         return true
     }
 
-    interactivateVerseIndex = (interactivatedVerseIndex) => {
+    activateVerseIndex = (activatedVerseIndex) => {
         const { selectedSongIndex } = this.props,
-            interactivatedSceneIndex = getSceneIndexForVerseIndex(
+            activatedSceneIndex = getSceneIndexForVerseIndex(
                 selectedSongIndex,
-                interactivatedVerseIndex
+                activatedVerseIndex
             )
 
         this.props.updateSessionStore({
-            interactivatedSceneIndex,
-            interactivatedVerseIndex
+            activatedSceneIndex,
+            activatedVerseIndex
         })
     }
 
-    _queueScrollToInteractivatedVerse = (interactivatedVerseIndex) => {
+    _queueScrollToActivatedVerse = (activatedVerseIndex) => {
         this.props.updateScrollLyricStore({
             queuedScrollLyricLog:
-                `Interactivate verse ${interactivatedVerseIndex}.`,
+                `Activate verse ${activatedVerseIndex}.`,
             queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: interactivatedVerseIndex
+            queuedScrollLyricIndex: activatedVerseIndex
         })
     }
 
@@ -88,12 +88,12 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedVerseIndex
     },
-    sessionStore: { interactivatedVerseIndex }
+    sessionStore: { activatedVerseIndex }
 }) => ({
     isSelectedLogue,
     selectedSongIndex,
     selectedVerseIndex,
-    interactivatedVerseIndex
+    activatedVerseIndex
 })
 
 export default connect(
@@ -102,4 +102,4 @@ export default connect(
         updateScrollLyricStore,
         updateSessionStore
     }
-)(InteractivatedVerseDispatcher)
+)(ActivatedVerseDispatcher)

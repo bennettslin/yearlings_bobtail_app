@@ -19,7 +19,7 @@ class LogicWrapper extends PureComponent {
 
         isPlaying: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
@@ -37,7 +37,7 @@ class LogicWrapper extends PureComponent {
                 lyricSongIndex,
                 lyricVerseIndex,
                 sliderVerseIndex,
-                interactivatedVerseIndex,
+                activatedVerseIndex,
                 isVerseBarAbove,
                 isVerseBarBelow,
                 children
@@ -78,11 +78,11 @@ class LogicWrapper extends PureComponent {
                             // "Root playing verse index."
                             `RpV${lyricVerseIndex}`,
 
-                        interactivatedVerseIndex < 0 &&
-                            // "Root non-interactivated verse index."
+                        activatedVerseIndex < 0 &&
+                            // "Root non-activated verse index."
                             `RnV${cursorVerseIndex}`,
 
-                        areVerseBarsHidden && interactivatedVerseIndex < 0 &&
+                        areVerseBarsHidden && activatedVerseIndex < 0 &&
                             // "Root cursored lyric verse."
                             `RlV${cursorVerseIndex}`,
 
@@ -103,7 +103,7 @@ class LogicWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    sessionStore: { interactivatedVerseIndex },
+    sessionStore: { activatedVerseIndex },
     audioStore: { isPlaying },
     dotsStore: { dotsBitNumber },
     verseBarsStore: {
@@ -119,7 +119,7 @@ const mapStateToProps = ({
         sliderVerseIndex
     }
 }) => ({
-    interactivatedVerseIndex,
+    activatedVerseIndex,
     dotsBitNumber,
     isPlaying,
     lyricSongIndex,

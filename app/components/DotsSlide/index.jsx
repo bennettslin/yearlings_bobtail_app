@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { resetInteractivatedDots } from 'flux/dotsSlide/action'
+import { resetActivatedDots } from 'flux/dotsSlide/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
@@ -43,13 +43,13 @@ class DotsSlide extends PureComponent {
         dotsBitNumber: PropTypes.number.isRequired,
         dotsSlideBitNumber: PropTypes.number.isRequired,
         isTouchSupported: PropTypes.bool.isRequired,
-        resetInteractivatedDots: PropTypes.func.isRequired
+        resetActivatedDots: PropTypes.func.isRequired
     }
 
     _handleContainerClick = (e) => {
         logEvent(DotsSlide.name, e)
         this.dispatchStopPropagation(e)
-        this.props.resetInteractivatedDots()
+        this.props.resetActivatedDots()
     }
 
     getSelectedDotKeys() {
@@ -57,7 +57,7 @@ class DotsSlide extends PureComponent {
         return getDotKeysFromBitNumber(dotsBitNumber)
     }
 
-    getInteractivatedDotKeys() {
+    getActivatedDotKeys() {
         const { dotsSlideBitNumber } = this.props
         return getDotKeysFromBitNumber(dotsSlideBitNumber)
     }
@@ -75,7 +75,7 @@ class DotsSlide extends PureComponent {
             } = this.props,
 
             selectedDotKeys = this.getSelectedDotKeys(),
-            interactivatedDotKeys = this.getInteractivatedDotKeys()
+            activatedDotKeys = this.getActivatedDotKeys()
 
         return (
             <CSSTransition
@@ -127,8 +127,8 @@ class DotsSlide extends PureComponent {
                                                 isAccessOn &&
                                                 accessedDotIndex === dotIndex,
                                             isSelected = selectedDotKeys[dotKey],
-                                            isInteractivated =
-                                                interactivatedDotKeys[dotKey]
+                                            isActivated =
+                                                activatedDotKeys[dotKey]
 
                                         return (
                                             <DotsSlideSelect
@@ -138,7 +138,7 @@ class DotsSlide extends PureComponent {
                                                     dotKey,
                                                     isAccessed,
                                                     isSelected,
-                                                    isInteractivated
+                                                    isActivated
                                                 }}
                                             />
                                         )
@@ -156,5 +156,5 @@ class DotsSlide extends PureComponent {
 
 export default connect(
     mapStateToProps,
-    { resetInteractivatedDots }
+    { resetActivatedDots }
 )(DotsSlide)

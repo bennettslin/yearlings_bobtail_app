@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {
-    resetInteractivated,
+    resetActivated,
     resetWiki
 } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
@@ -14,8 +14,8 @@ import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import EarColumnDispatcher from '../../../dispatchers/EarColumnDispatcher'
-import InteractivatedSceneDispatcher from '../../../dispatchers/Interactivated/Scene'
-import InteractivatedVerseDispatcher from '../../../dispatchers/Interactivated/Verse'
+import ActivatedSceneDispatcher from '../../../dispatchers/Activated/Scene'
+import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 import LyricDispatcher from '../../../handlers/Lyric/Dispatcher'
 import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import PlayDispatcher from '../../../dispatchers/PlayDispatcher'
@@ -68,7 +68,7 @@ class LetterManager extends PureComponent {
         selectedWikiIndex: PropTypes.number.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
-        resetInteractivated: PropTypes.func.isRequired,
+        resetActivated: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
 
         // From parent.
@@ -108,10 +108,10 @@ class LetterManager extends PureComponent {
                 annotationIndexWasAccessed = keyWasRegistered
                 break
             case PREVIOUS_VERSE_KEY:
-                keyWasRegistered = this.interactivateVerseDirection(-1)
+                keyWasRegistered = this.activateVerseDirection(-1)
                 break
             case NEXT_VERSE_KEY:
-                keyWasRegistered = this.interactivateVerseDirection(1)
+                keyWasRegistered = this.activateVerseDirection(1)
                 break
             case CAROUSEL_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchCarouselNav()
@@ -133,10 +133,10 @@ class LetterManager extends PureComponent {
                 keyWasRegistered = this.dispatchOverview()
                 break
             case PREVIOUS_SCENE_KEY:
-                keyWasRegistered = this.interactivateSceneDirection(-1)
+                keyWasRegistered = this.activateSceneDirection(-1)
                 break
             case NEXT_SCENE_KEY:
-                keyWasRegistered = this.interactivateSceneDirection(1)
+                keyWasRegistered = this.activateSceneDirection(1)
                 break
             case SCORE_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchScore()
@@ -197,7 +197,7 @@ class LetterManager extends PureComponent {
         // Turn access off.
         } else {
             this.props.updateAccessStore({ isAccessOn: false })
-            this.props.resetInteractivated()
+            this.props.resetActivated()
         }
     }
 
@@ -213,8 +213,8 @@ class LetterManager extends PureComponent {
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
                 <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
-                <InteractivatedSceneDispatcher {...{ getRefs: this._getRefs }} />
-                <InteractivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <ActivatedSceneDispatcher {...{ getRefs: this._getRefs }} />
+                <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <LyricDispatcher {...{ getRefs: this._getRefs }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />
                 <PlayDispatcher {...{ getRefs: this._getRefs }} />
@@ -259,7 +259,7 @@ export default connect(
     {
         updateSelectedStore,
         updateAccessStore,
-        resetInteractivated,
+        resetActivated,
         resetWiki
     }
 )(LetterManager)

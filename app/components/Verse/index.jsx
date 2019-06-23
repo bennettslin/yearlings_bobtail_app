@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import isNumber from 'lodash.isnumber'
 
-import InteractivatedVerseDispatcher from '../../dispatchers/Interactivated/Verse'
+import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import VerseLines from './Lines'
@@ -51,7 +51,7 @@ class Verse extends PureComponent {
         // Allow clicks on interactable verses.
         if (this.getIsInteractable()) {
             this.dispatchStopPropagation(e)
-            this.interactivateVerseIndex(this.props.verseIndex)
+            this.activateVerseIndex(this.props.verseIndex)
         }
     }
 
@@ -107,7 +107,7 @@ class Verse extends PureComponent {
                         handleInteractivatableClick: this._handleInteractivatableClick
                     }}
                 />
-                <InteractivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )

@@ -5,14 +5,14 @@ import cx from 'classnames'
 const propTypes = {
     // From parent.
     isOdd: PropTypes.bool.isRequired,
-    isInteractivated: PropTypes.bool.isRequired,
+    isActivated: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
     isAfterSelected: PropTypes.bool.isRequired
 }
 
 const FilmstripCell = ({
     isOdd,
-    isInteractivated,
+    isActivated,
     isSelected,
     isAfterSelected
 }) => (
@@ -23,8 +23,8 @@ const FilmstripCell = ({
                 isOdd ?
                     'FilmstripCell__even' :
                     'FilmstripCell__odd',
-                isInteractivated &&
-                    'FilmstripCell__interactivated',
+                isActivated &&
+                    'FilmstripCell__activated',
                 isSelected &&
                     'FilmstripCell__selected',
                 isAfterSelected &&

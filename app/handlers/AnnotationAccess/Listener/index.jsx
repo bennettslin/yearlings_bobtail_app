@@ -16,13 +16,13 @@ class AnnotationAccessListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired
+        activatedVerseIndex: PropTypes.number.isRequired
     }
 
     componentDidUpdate(prevProps) {
         this._accessDefaultAnnotation(prevProps)
         this._accessSelectedAnnotation(prevProps)
-        this._accessAnnotationForInteractivatedVerse(prevProps)
+        this._accessAnnotationForActivatedVerse(prevProps)
     }
 
     _accessDefaultAnnotation(prevProps) {
@@ -56,19 +56,19 @@ class AnnotationAccessListener extends PureComponent {
         }
     }
 
-    _accessAnnotationForInteractivatedVerse(prevProps) {
+    _accessAnnotationForActivatedVerse(prevProps) {
         const
-            { interactivatedVerseIndex } = this.props,
-            { interactivatedVerseIndex: prevVerseIndex } = prevProps
+            { activatedVerseIndex } = this.props,
+            { activatedVerseIndex: prevVerseIndex } = prevProps
 
         let newAccessedVerseIndex
 
-        // If interactivated verse changed...
-        if (interactivatedVerseIndex !== prevVerseIndex) {
+        // If activated verse changed...
+        if (activatedVerseIndex !== prevVerseIndex) {
 
-            // ... if verse is still interactivated, access its annotation...
-            if (interactivatedVerseIndex > -1) {
-                newAccessedVerseIndex = interactivatedVerseIndex
+            // ... if verse is still activated, access its annotation...
+            if (activatedVerseIndex > -1) {
+                newAccessedVerseIndex = activatedVerseIndex
 
                 this.dispatchAccessedAnnotation({
                     verseIndex: newAccessedVerseIndex
@@ -93,7 +93,7 @@ class AnnotationAccessListener extends PureComponent {
 }
 
 const mapStateToProps = ({
-    sessionStore: { interactivatedVerseIndex },
+    sessionStore: { activatedVerseIndex },
     selectedStore: {
         earColumnIndex,
         selectedSongIndex,
@@ -102,7 +102,7 @@ const mapStateToProps = ({
     }
 }) => ({
     earColumnIndex,
-    interactivatedVerseIndex,
+    activatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
     selectedAnnotationIndex

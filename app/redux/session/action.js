@@ -12,7 +12,7 @@ import {
 } from '../storeKeys'
 import {
     SESSION_DEFAULTS,
-    SESSION_INTERACTIVATED_DEFAULTS,
+    SESSION_ACTIVATED_DEFAULTS,
     SESSION_WIKI_DEFAULTS
 } from '../defaultStates'
 
@@ -30,10 +30,10 @@ export const updateSessionStore = (payload = SESSION_DEFAULTS) => {
     })
 }
 
-export const resetInteractivated = () => {
+export const resetActivated = () => {
     return ({
         type: SESSION_STORE,
-        payload: SESSION_INTERACTIVATED_DEFAULTS
+        payload: SESSION_ACTIVATED_DEFAULTS
     })
 }
 

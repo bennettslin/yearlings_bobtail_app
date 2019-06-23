@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateOptionStore } from 'flux/option/action'
 import {
-    resetInteractivated,
+    resetActivated,
     resetWiki
 } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
@@ -34,11 +34,11 @@ class CloseHandler extends PureComponent {
         isSongShownOverview: PropTypes.bool.isRequired,
         isSongShownTips: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
-        resetInteractivated: PropTypes.func.isRequired,
+        resetActivated: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
 
         // From parent.
@@ -57,7 +57,7 @@ class CloseHandler extends PureComponent {
         this._handleLyricExpand(prevProps)
         this._handleOverviewShown(prevProps)
         this._handleTipsShown(prevProps)
-        this._handleVerseInteractivate(prevProps)
+        this._handleVerseActivate(prevProps)
         this._handleScoreOpen(prevProps)
         this._handleWikiSelect(prevProps)
     }
@@ -126,7 +126,7 @@ class CloseHandler extends PureComponent {
                 // Continue to show selected annotation in overlay.
                 exemptAnnotation: true,
                 exemptLyric: true,
-                exemptInteractivatedVerse: true
+                exemptActivatedVerse: true
             })
         }
     }
@@ -183,15 +183,15 @@ class CloseHandler extends PureComponent {
         }
     }
 
-    _handleVerseInteractivate(prevProps) {
+    _handleVerseActivate(prevProps) {
         const
-            { interactivatedVerseIndex } = this.props,
-            { interactivatedVerseIndex: prevVerseIndex } = prevProps
+            { activatedVerseIndex } = this.props,
+            { activatedVerseIndex: prevVerseIndex } = prevProps
 
-        if (interactivatedVerseIndex > -1 && prevVerseIndex === -1) {
+        if (activatedVerseIndex > -1 && prevVerseIndex === -1) {
             this.closeOverlayPopups()
             this.closeMainSections({
-                exemptInteractivatedVerse: true,
+                exemptActivatedVerse: true,
                 exemptLyric: true
             })
         }
@@ -265,7 +265,7 @@ class CloseHandler extends PureComponent {
         exemptNav,
         exemptOverview,
         exemptTips,
-        exemptInteractivatedVerse
+        exemptActivatedVerse
     } = {}) {
         const {
             selectedOverviewOption,
@@ -306,8 +306,8 @@ class CloseHandler extends PureComponent {
             }
         }
 
-        if (!exemptInteractivatedVerse) {
-            this.props.resetInteractivated()
+        if (!exemptActivatedVerse) {
+            this.props.resetActivated()
         }
     }
 
@@ -333,7 +333,7 @@ const mapStateToProps = ({
     },
     sessionStore: {
         selectedWikiIndex,
-        interactivatedVerseIndex
+        activatedVerseIndex
     }
 }) => ({
     selectedAnnotationIndex,
@@ -347,7 +347,7 @@ const mapStateToProps = ({
     isSongShownOverview,
     isSongShownTips,
     selectedWikiIndex,
-    interactivatedVerseIndex
+    activatedVerseIndex
 })
 
 export default connect(
@@ -356,7 +356,7 @@ export default connect(
         updateOptionStore,
         updateSelectedStore,
         updateToggleStore,
-        resetInteractivated,
+        resetActivated,
         resetWiki
     }
 )(CloseHandler)

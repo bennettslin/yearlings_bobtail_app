@@ -7,7 +7,7 @@ import { updateAccessStore } from 'flux/access/action'
 import { updateLoadStore } from 'flux/load/action'
 import {
     updateSessionStore,
-    resetInteractivated,
+    resetActivated,
     resetWiki
 } from 'flux/session/action'
 import { resetVerseBars } from 'flux/verseBars/action'
@@ -22,7 +22,7 @@ class SongListener extends PureComponent {
         updateAccessStore: PropTypes.func.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        resetInteractivated: PropTypes.func.isRequired,
+        resetActivated: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired
     }
@@ -40,7 +40,7 @@ class SongListener extends PureComponent {
             const shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
             this.props.updateSessionStore({ shownNavBookIndex })
             this.props.updateLoadStore({ isScoreLoaded: false })
-            this.props.resetInteractivated()
+            this.props.resetActivated()
             this.props.resetWiki()
             this.props.resetVerseBars()
         }
@@ -63,7 +63,7 @@ export default connect(
         updateAccessStore,
         updateLoadStore,
         updateSessionStore,
-        resetInteractivated,
+        resetActivated,
         resetWiki,
         resetVerseBars
     }

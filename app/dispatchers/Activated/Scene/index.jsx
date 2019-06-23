@@ -1,4 +1,4 @@
-// Child that knows rules to select interactivated verse.
+// Child that knows rules to select activated verse.
 
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
@@ -7,16 +7,16 @@ import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
 
 import { getVerseIndexForSceneIndex } from 'album/api/scenes'
-import { getInteractivatedSceneForDirection } from './helper'
+import { getActivatedSceneForDirection } from './helper'
 
-class InteractivatedSceneDispatcher extends PureComponent {
+class ActivatedSceneDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedSceneIndex: PropTypes.number.isRequired,
-        interactivatedSceneIndex: PropTypes.number.isRequired,
+        activatedSceneIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
 
@@ -26,11 +26,11 @@ class InteractivatedSceneDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            interactivateSceneDirection: this.interactivateSceneDirection
+            activateSceneDirection: this.activateSceneDirection
         })
     }
 
-    interactivateSceneDirection = (direction) => {
+    activateSceneDirection = (direction) => {
         if (this.props.isSelectedLogue) {
             return false
         }
@@ -38,48 +38,48 @@ class InteractivatedSceneDispatcher extends PureComponent {
         const {
                 selectedSongIndex,
                 selectedSceneIndex,
-                interactivatedSceneIndex: currentSceneIndex
+                activatedSceneIndex: currentSceneIndex
             } = this.props,
 
-            interactivatedSceneIndex = getInteractivatedSceneForDirection({
+            activatedSceneIndex = getActivatedSceneForDirection({
                 selectedSongIndex,
                 selectedSceneIndex,
                 currentSceneIndex,
                 direction
             })
 
-        this._interactivateSceneIndex(interactivatedSceneIndex)
+        this._activateSceneIndex(activatedSceneIndex)
 
         return true
     }
 
-    _interactivateSceneIndex = (interactivatedSceneIndex) => {
+    _activateSceneIndex = (activatedSceneIndex) => {
         const { selectedSongIndex } = this.props,
-            interactivatedVerseIndex = getVerseIndexForSceneIndex(
+            activatedVerseIndex = getVerseIndexForSceneIndex(
                 selectedSongIndex,
-                interactivatedSceneIndex
+                activatedSceneIndex
             )
 
         this.props.updateSessionStore({
-            interactivatedSceneIndex,
-            interactivatedVerseIndex
+            activatedSceneIndex,
+            activatedVerseIndex
         })
 
-        this._queueScrollToInteractivatedVerse(
-            interactivatedSceneIndex,
-            interactivatedVerseIndex
+        this._queueScrollToActivatedVerse(
+            activatedSceneIndex,
+            activatedVerseIndex
         )
     }
 
-    _queueScrollToInteractivatedVerse = (
-        interactivatedSceneIndex,
-        interactivatedVerseIndex
+    _queueScrollToActivatedVerse = (
+        activatedSceneIndex,
+        activatedVerseIndex
     ) => {
         this.props.updateScrollLyricStore({
             queuedScrollLyricLog:
-                `Interactivate scene ${interactivatedSceneIndex}, verse ${interactivatedVerseIndex}.`,
+                `Activate scene ${activatedSceneIndex}, verse ${activatedVerseIndex}.`,
             queuedScrollLyricByVerse: true,
-            queuedScrollLyricIndex: interactivatedVerseIndex
+            queuedScrollLyricIndex: activatedVerseIndex
         })
     }
 
@@ -94,12 +94,12 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedSceneIndex
     },
-    sessionStore: { interactivatedSceneIndex }
+    sessionStore: { activatedSceneIndex }
 }) => ({
     isSelectedLogue,
     selectedSongIndex,
     selectedSceneIndex,
-    interactivatedSceneIndex
+    activatedSceneIndex
 })
 
 export default connect(
@@ -108,4 +108,4 @@ export default connect(
         updateScrollLyricStore,
         updateSessionStore
     }
-)(InteractivatedSceneDispatcher)
+)(ActivatedSceneDispatcher)

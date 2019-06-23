@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isNumber from 'lodash.isnumber'
 
-import { resetInteractivated } from 'flux/session/action'
+import { resetActivated } from 'flux/session/action'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
@@ -21,10 +21,10 @@ class LyricNavigation extends PureComponent {
     static propTypes = {
         // Through Redux.
         isAccessOn: PropTypes.bool.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        resetInteractivated: PropTypes.func.isRequired,
+        resetActivated: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -47,11 +47,11 @@ class LyricNavigation extends PureComponent {
             {
                 isAccessOn,
                 selectedVerseIndex,
-                interactivatedVerseIndex,
+                activatedVerseIndex,
                 accessedAnnotationIndex
             } = this.props,
 
-            isVerseInteractivated = interactivatedVerseIndex > -1
+            isVerseActivated = activatedVerseIndex > -1
 
         let direction
 
@@ -68,10 +68,10 @@ class LyricNavigation extends PureComponent {
          * Access is getting turned on, so just choose annotation based on
          * selected verse.
          */
-        if (!isAccessOn || isVerseInteractivated) {
+        if (!isAccessOn || isVerseActivated) {
             const verseIndex =
-                isVerseInteractivated ?
-                    interactivatedVerseIndex :
+                isVerseActivated ?
+                    activatedVerseIndex :
                     selectedVerseIndex
 
             this.dispatchAccessedAnnotation({
@@ -79,8 +79,8 @@ class LyricNavigation extends PureComponent {
                 direction
             })
 
-            if (isVerseInteractivated) {
-                this.props.resetInteractivated()
+            if (isVerseActivated) {
+                this.props.resetActivated()
             }
 
         /**
@@ -123,16 +123,16 @@ const mapStateToProps = ({
         isAccessOn,
         accessedAnnotationIndex
     },
-    sessionStore: { interactivatedVerseIndex },
+    sessionStore: { activatedVerseIndex },
     selectedStore: { selectedVerseIndex }
 }) => ({
     isAccessOn,
     accessedAnnotationIndex,
-    interactivatedVerseIndex,
+    activatedVerseIndex,
     selectedVerseIndex
 })
 
 export default connect(
     mapStateToProps,
-    { resetInteractivated }
+    { resetActivated }
 )(LyricNavigation)

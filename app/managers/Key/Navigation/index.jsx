@@ -18,7 +18,7 @@ class NavigationManager extends PureComponent {
         // Through Redux.
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
@@ -41,7 +41,7 @@ class NavigationManager extends PureComponent {
         const {
                 isHeightlessLyric,
                 isLyricExpanded,
-                interactivatedVerseIndex,
+                activatedVerseIndex,
                 isScoreShown,
                 selectedWikiIndex,
                 isSelectedLogue,
@@ -50,19 +50,19 @@ class NavigationManager extends PureComponent {
                 isNavShown
             } = this.props,
 
-            isVerseInteractivated = interactivatedVerseIndex > -1
+            isVerseActivated = activatedVerseIndex > -1
 
         let annotationIndexWasAccessed = false,
             keyWasRegistered = false
 
         if (!isSelectedLogue && !isScoreShown && !selectedWikiIndex) {
 
-            // We're selecting the interactivated verse.
-            if (isVerseInteractivated && keyName === ENTER) {
+            // We're selecting the activated verse.
+            if (isVerseActivated && keyName === ENTER) {
 
                 keyWasRegistered = this.dispatchVerse({
-                    selectedVerseIndex: interactivatedVerseIndex,
-                    scrollLog: `Key select interactivated verse ${interactivatedVerseIndex}.`
+                    selectedVerseIndex: activatedVerseIndex,
+                    scrollLog: `Key select activated verse ${activatedVerseIndex}.`
                 })
 
                 annotationIndexWasAccessed = true
@@ -82,7 +82,7 @@ class NavigationManager extends PureComponent {
             } else if (
                 isNavShown &&
                 !isLyricExpanded &&
-                !isVerseInteractivated
+                !isVerseActivated
             ) {
 
                 ({
@@ -135,13 +135,13 @@ const mapStateToProps = ({
         isSelectedLogue
     },
     sessionStore: {
-        interactivatedVerseIndex,
+        activatedVerseIndex,
         selectedWikiIndex
     }
 }) => ({
     isHeightlessLyric,
     isLyricExpanded,
-    interactivatedVerseIndex,
+    activatedVerseIndex,
     isScoreShown,
     selectedWikiIndex,
     isSelectedLogue,

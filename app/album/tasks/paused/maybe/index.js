@@ -239,7 +239,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Accessed annotation and interactivated verse should stay in sync when navigating and switching between the two. I think I'm fine with not doing this. Either will always just start from selected verse.`,
+        taskName: `Accessed annotation and activated verse should stay in sync when navigating and switching between the two. I think I'm fine with not doing this. Either will always just start from selected verse.`,
         workedHours: 0,
         neededHours: 3
     },

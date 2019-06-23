@@ -21,7 +21,7 @@
     * Just distinguish between beforeCursor, onCursor, and afterCursor. (/)
 
 * Allow slider verse to highlight upon hover? (/)
-    * Interactivated verse needs to change z-index based on access on. (/)
+    * Activated verse needs to change z-index based on access on. (/)
     * Times needs to change z-index based on slider touch. (/)
     * Touch bar needs to be changed somehow. (/)
     * Calculate slider rect based on ref, not e.target. (/)
@@ -55,7 +55,7 @@
 
 * Make them SVGs!
 * Make cursor edge a gradient?
-* Figure out colouring for interactivated, before cursor, after cursor, on cursor, selected vs. slider, odd vs. even.
+* Figure out colouring for activated, before cursor, after cursor, on cursor, selected vs. slider, odd vs. even.
 * Padding and margins for two-row menu.
 * Rendering performance
     * Once entire stanza is before or after cursor, it should take care of this knowledge. Its individual verses shouldn't have to care.

@@ -1,5 +1,5 @@
 /**
- * Button that navigates to interactivated verse.
+ * Button that navigates to activated verse.
  */
 
 import React, { PureComponent } from 'react'
@@ -17,7 +17,7 @@ class VerseNav extends PureComponent {
     static propTypes = {
         // From parent.
         verseIndex: PropTypes.number.isRequired,
-        isInteractivated: PropTypes.bool.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         handleVerseSelect: PropTypes.func.isRequired
     }
 
@@ -29,27 +29,27 @@ class VerseNav extends PureComponent {
 
         handleVerseSelect({
             selectedVerseIndex: verseIndex,
-            scrollLog: `Click select interactivated verse ${verseIndex}.`
+            scrollLog: `Click select activated verse ${verseIndex}.`
         })
     }
 
     render() {
         /**
-         * If interactivated, disable only if it's selected and song can't play
+         * If activated, disable only if it's selected and song can't play
          * through.
          */
-        const { isInteractivated } = this.props
+        const { isActivated } = this.props
 
         return (
             <CSSTransition
                 mountOnEnter
                 unmountOnExit
                 {...{
-                    in: isInteractivated,
+                    in: isActivated,
                     timeout: 200,
                     classNames: {
-                        enterActive: 'VerseNav__interactivated',
-                        enterDone: 'VerseNav__interactivated'
+                        enterActive: 'VerseNav__activated',
+                        enterDone: 'VerseNav__activated'
                     }
                 }}
             >
@@ -63,8 +63,8 @@ class VerseNav extends PureComponent {
                         {...{
                             buttonName: AUDIO_NEXT_BUTTON_KEY,
                             accessKey: ENTER,
-                            isAccessed: isInteractivated,
-                            isDisabled: !isInteractivated,
+                            isAccessed: isActivated,
+                            isDisabled: !isActivated,
                             buttonIdentifier: false,
                             handleButtonClick: this._handleButtonClick
                         }}

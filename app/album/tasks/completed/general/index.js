@@ -1273,12 +1273,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `selectedAccessIndex should reset accessedAnnotationIndex to closest selected verse, also interactivated verse.`,
+        taskName: `selectedAccessIndex should reset accessedAnnotationIndex to closest selected verse, also activated verse.`,
         workedHours: 2,
         neededHours: 2
     },
     {
-        taskName: `Ensure that navigation things are never together at same time, especially interactivated verse.`,
+        taskName: `Ensure that navigation things are never together at same time, especially activated verse.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1298,7 +1298,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Pressing Enter from interactivated verse that toggles on should select correct annotation.`,
+        taskName: `Pressing Enter from activated verse that toggles on should select correct annotation.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -1423,7 +1423,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Bug where selecting interactivated verse does not deselect verse bar.`,
+        taskName: `Bug where selecting activated verse does not deselect verse bar.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -2673,7 +2673,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Disable nav access when verse is interactivated`,
+        taskName: `Disable nav access when verse is activated`,
         workedHours: 1,
         neededHours: 1
     },
@@ -3329,7 +3329,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Determine verse bars after accessing interactivated verse.`,
+        taskName: `Determine verse bars after accessing activated verse.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -4153,7 +4153,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Allow selected verse to interactivate slider touch, given probable user expectation for such behaviour.`,
+        taskName: `Allow selected verse to activate slider touch, given probable user expectation for such behaviour.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -4233,7 +4233,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Be smarter about rendering too many annotation dispatchers. Instead, interactivate verse if verse is not selectable.`,
+        taskName: `Be smarter about rendering too many annotation dispatchers. Instead, activate verse if verse is not selectable.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -4323,11 +4323,11 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Dots slide refactor in preparation for interactivated text fix.`,
+        taskName: `Dots slide refactor in preparation for activated text fix.`,
         workedHours: 2,
         neededHours: 2
     },    {
-        taskName: `Interactivated dot text in dots slide doesn't work. Fixed by just passing a class name. Not ideal, but it's too much work, at least right now, to have each dot and description hooked into Redux.`,
+        taskName: `Activated dot text in dots slide doesn't work. Fixed by just passing a class name. Not ideal, but it's too much work, at least right now, to have each dot and description hooked into Redux.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -4422,7 +4422,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Weirdness in mobile where interactivated anchor in dots slide retains focus. Fix by adding isTouchSupported flag to store.`,
+        taskName: `Weirdness in mobile where activated anchor in dots slide retains focus. Fix by adding isTouchSupported flag to store.`,
         workedHours: 2,
         neededHours: 2
     },

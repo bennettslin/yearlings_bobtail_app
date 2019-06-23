@@ -1,4 +1,4 @@
-// Reducers for dots slide interactivated texts.
+// Reducers for dots slide activated texts.
 import { DOTS_SLIDE_STORE } from '../storeKeys'
 import { DOTS_SLIDE_DEFAULTS } from '../defaultStates'
 

@@ -13,14 +13,14 @@ const mapStateToProps = ({
         isLyricExpanded
     },
     lyricStore: { lyricAnnotationIndex },
-    sessionStore: { interactivatedVerseIndex }
+    sessionStore: { activatedVerseIndex }
 }) => ({
     isAccessOn,
     isNavShown,
     isDotsSlideShown,
     isLyricExpanded,
     lyricAnnotationIndex,
-    interactivatedVerseIndex
+    activatedVerseIndex
 })
 
 class AccessListener extends PureComponent {
@@ -32,7 +32,7 @@ class AccessListener extends PureComponent {
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired
     }
 
@@ -51,13 +51,13 @@ class AccessListener extends PureComponent {
                 isNavShown,
                 isLyricExpanded,
                 lyricAnnotationIndex,
-                interactivatedVerseIndex
+                activatedVerseIndex
             } = this.props,
 
             isAccessedIndexedAnchorShown = Boolean(
                 isAccessOn &&
                 !isDotsSlideShown &&
-                interactivatedVerseIndex < 0 &&
+                activatedVerseIndex < 0 &&
                 (
                     !isNavShown ||
                     isLyricExpanded ||

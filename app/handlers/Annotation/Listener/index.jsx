@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { resetAnnotationQueue } from 'flux/annotation/action'
 import AnnotationDispatcher from '../Dispatcher'
-import InteractivatedVerseDispatcher from '../../../dispatchers/Interactivated/Verse'
+import ActivatedVerseDispatcher from '../../../dispatchers/Activated/Verse'
 
 import { getShowAnnotationForColumn } from '../../../helpers/annotation'
 import { getVerseIndexForAnnotationIndex } from 'album/api/annotations'
@@ -21,7 +21,7 @@ class AnnotationListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        interactivatedVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         queuedAnnotationIndex: PropTypes.number.isRequired,
         queuedAnnotationFromCarousel: PropTypes.bool.isRequired,
         queuedAnnotationFromLyricVerse: PropTypes.bool.isRequired,
@@ -57,7 +57,7 @@ class AnnotationListener extends PureComponent {
              */
             if (queuedAnnotationFromLyricVerse && !canDispatchAnnotation) {
                 const { selectedSongIndex } = this.props
-                this.interactivateVerseIndex(
+                this.activateVerseIndex(
                     getVerseIndexForAnnotationIndex(
                         selectedSongIndex,
                         queuedAnnotationIndex
@@ -110,7 +110,7 @@ class AnnotationListener extends PureComponent {
         return (
             <___>
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
-                <InteractivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
+                <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
             </___>
         )
     }
@@ -119,7 +119,7 @@ class AnnotationListener extends PureComponent {
 const mapStateToProps = ({
     toggleStore: { isDotsSlideShown },
     transientStore: { isEarShown },
-    sessionStore: { interactivatedVerseIndex },
+    sessionStore: { activatedVerseIndex },
     selectedStore: {
         earColumnIndex,
         selectedSongIndex,
@@ -135,7 +135,7 @@ const mapStateToProps = ({
     isDotsSlideShown,
     isEarShown,
     earColumnIndex,
-    interactivatedVerseIndex,
+    activatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
     selectedAnnotationIndex,

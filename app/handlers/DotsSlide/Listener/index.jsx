@@ -7,7 +7,7 @@ import {
     updateAccessStore,
     resetAccessedDot
 } from 'flux/access/action'
-import { resetInteractivatedDots } from 'flux/dotsSlide/action'
+import { resetActivatedDots } from 'flux/dotsSlide/action'
 
 class DotsSlideListener extends PureComponent {
 
@@ -16,7 +16,7 @@ class DotsSlideListener extends PureComponent {
         isDotsSlideShown: PropTypes.bool.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
         resetAccessedDot: PropTypes.func.isRequired,
-        resetInteractivatedDots: PropTypes.func.isRequired
+        resetActivatedDots: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -37,7 +37,7 @@ class DotsSlideListener extends PureComponent {
             // Dots slide is just now hidden.
             !isDotsSlideShown && wasDotsSlideShown
         ) {
-            this.props.resetInteractivatedDots()
+            this.props.resetActivatedDots()
             this.props.resetAccessedDot()
         }
     }
@@ -58,6 +58,6 @@ export default connect(
     {
         updateAccessStore,
         resetAccessedDot,
-        resetInteractivatedDots
+        resetActivatedDots
     }
 )(DotsSlideListener)

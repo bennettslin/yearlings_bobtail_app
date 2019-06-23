@@ -27,7 +27,7 @@ class DotSelectDispatcher extends PureComponent {
     componentDidMount() {
         this.props.getRefs({
             dispatchSelectDot: this.dispatchSelectDot,
-            dispatchInteractivatedDot: this.dispatchInteractivatedDot
+            dispatchActivatedDot: this.dispatchActivatedDot
         })
     }
 
@@ -58,25 +58,25 @@ class DotSelectDispatcher extends PureComponent {
         return true
     }
 
-    dispatchInteractivatedDot = (interactivatedDotIndex) => {
+    dispatchActivatedDot = (activatedDotIndex) => {
 
         // TODO: Make a general helper that toggles the bit number for both.
         const
             { dotsSlideBitNumber: prevBitNumber } = this.props,
-            interactivatedDotKeys = getDotKeysFromBitNumber(prevBitNumber),
-            interactivatedDotKey = ALL_DOT_KEYS[interactivatedDotIndex],
-            isInteractivated = !interactivatedDotKeys[interactivatedDotKey],
+            activatedDotKeys = getDotKeysFromBitNumber(prevBitNumber),
+            activatedDotKey = ALL_DOT_KEYS[activatedDotIndex],
+            isActivated = !activatedDotKeys[activatedDotKey],
 
             dotsSlideBitNumber = setNewValueInBitNumber({
                 keysArray: ALL_DOT_KEYS,
                 bitNumber: prevBitNumber,
-                key: interactivatedDotKey,
-                value: isInteractivated
+                key: activatedDotKey,
+                value: isActivated
             })
 
         this.props.updateDotsSlideStore({
             dotsSlideBitNumber,
-            [interactivatedDotKey]: isInteractivated
+            [activatedDotKey]: isActivated
         })
     }
 

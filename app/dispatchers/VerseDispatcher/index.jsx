@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSelectedStore } from 'flux/selected/action'
-import { resetInteractivated } from 'flux/session/action'
+import { resetActivated } from 'flux/session/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
@@ -17,7 +17,7 @@ class VerseDispatcher extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        resetInteractivated: PropTypes.func.isRequired,
+        resetActivated: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
 
@@ -55,8 +55,8 @@ class VerseDispatcher extends PureComponent {
             )
         })
 
-        // Ensure that no verse is interactivated.
-        this.props.resetInteractivated()
+        // Ensure that no verse is activated.
+        this.props.resetActivated()
 
         // Selecting a verse necessarily resets the verse bars.
         this.props.resetVerseBars()
@@ -87,7 +87,7 @@ export default connect(
         updateAudioStore,
         updateScrollLyricStore,
         updateSelectedStore,
-        resetInteractivated,
+        resetActivated,
         resetVerseBars
     }
 )(VerseDispatcher)

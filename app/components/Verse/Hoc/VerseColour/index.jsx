@@ -6,7 +6,7 @@ import VerseTracker from './VerseTracker'
 
 const propTypes = {
     // From parent.
-        isInteractivated: PropTypes.bool,
+        isActivated: PropTypes.bool,
         verseIndex: PropTypes.number.isRequired,
         inUnit: PropTypes.bool,
         inVerseBar: PropTypes.bool,
@@ -14,7 +14,7 @@ const propTypes = {
     },
 
     VerseColour = ({
-        isInteractivated,
+        isActivated,
         verseIndex,
         inUnit,
         inVerseBar,
@@ -43,7 +43,7 @@ const propTypes = {
                     'VerseColour',
 
                     inVerseBar && 'VerseColour__inVerseBar',
-                    isInteractivated && 'VerseColour__interactivated',
+                    isActivated && 'VerseColour__activated',
 
                     // Grandchild verse colour even.
                     !isOdd && 'GcE',

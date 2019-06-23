@@ -30,7 +30,7 @@ export default [
      * Final UI.
      */
     {
-        taskName: `Establish stanza, dot, and selected, interactivated, accessed, disabled, and before, after, and on cursor colours.`,
+        taskName: `Establish stanza, dot, and selected, activated, accessed, disabled, and before, after, and on cursor colours.`,
         workedHours: 1,
         neededHours: 5
     },

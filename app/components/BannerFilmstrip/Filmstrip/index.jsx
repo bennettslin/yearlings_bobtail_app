@@ -23,11 +23,11 @@ const mapStateToProps = ({
         lyricSongIndex,
         lyricSceneIndex
     },
-    sessionStore: { interactivatedSceneIndex }
+    sessionStore: { activatedSceneIndex }
 }) => ({
     lyricSongIndex,
     lyricSceneIndex,
-    interactivatedSceneIndex
+    activatedSceneIndex
 })
 
 class Filmstrip extends PureComponent {
@@ -36,7 +36,7 @@ class Filmstrip extends PureComponent {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
         lyricSceneIndex: PropTypes.number.isRequired,
-        interactivatedSceneIndex: PropTypes.number.isRequired
+        activatedSceneIndex: PropTypes.number.isRequired
     }
 
     _getRefs = (payload) => {
@@ -55,7 +55,7 @@ class Filmstrip extends PureComponent {
         const {
                 lyricSongIndex,
                 lyricSceneIndex,
-                interactivatedSceneIndex
+                activatedSceneIndex
             } = this.props,
 
             totalTime = getSongTotalTime(lyricSongIndex),
@@ -78,8 +78,8 @@ class Filmstrip extends PureComponent {
                         } = sceneConfig,
 
                         isOdd = Boolean(sceneIndex % 2),
-                        isInteractivated =
-                            interactivatedSceneIndex === sceneIndex,
+                        isActivated =
+                            activatedSceneIndex === sceneIndex,
                         isSelected =
                             lyricSceneIndex === sceneIndex,
                         isAfterSelected = lyricSceneIndex < sceneIndex,
@@ -92,7 +92,7 @@ class Filmstrip extends PureComponent {
                             {...{
                                 key: sceneIndex,
                                 isOdd,
-                                isInteractivated,
+                                isActivated,
                                 isSelected,
                                 isAfterSelected,
                                 sceneIndex,
