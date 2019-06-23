@@ -5,12 +5,12 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from '../../keys'
+} from 'constants/scene/actors'
 import {
     MINGLING,
     WAITING
-} from '../../keys/instances/songs'
-import { SIDELONG_HESITANCE } from '../../keys/instances/bennett'
+} from 'constants/scene/actors/instances/songs'
+import { SIDELONG_HESITANCE } from 'constants/scene/actors/instances/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

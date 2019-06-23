@@ -6,7 +6,7 @@ import DryingTears from './Instances/DryingTears'
 import {
     HORSING,
     DRYING_TEARS
-} from 'scene/actors/keys/instances/bennettStephanie'
+} from 'constants/scene/actors/instances/bennettStephanie'
 
 export const propTypes = {
     [HORSING]: PropTypes.bool,

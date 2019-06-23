@@ -17,9 +17,9 @@ import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
     CARESS
-} from 'scene/actors/keys/instances/khari'
+} from 'constants/scene/actors/instances/khari'
 
-import { EPILOGUE } from 'scene/actors/keys/instances/songs'
+import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [DOUBLE_ALBERT]: PropTypes.bool,

@@ -1,5 +1,5 @@
-import { YOUNG_BENNETT } from '../../../keys'
-import { BATHING } from '../../../keys/instances/youngBennett'
+import { YOUNG_BENNETT } from 'constants/scene/actors'
+import { BATHING } from 'constants/scene/actors/instances/youngBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {

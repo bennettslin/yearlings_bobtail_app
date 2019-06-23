@@ -1,4 +1,4 @@
-import { LOGUE_KEY } from '../../scenes/keys'
+import { LOGUE_KEY } from 'constants/scene/scenes'
 
 import {
     STAGE_FLOOR_HSLA,

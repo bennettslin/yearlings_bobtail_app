@@ -1,9 +1,9 @@
 import {
     YOUNG_BENNETT,
     ANITA
-} from '../../../keys'
-import { CHEERING } from '../../../keys/instances/anita'
-import { SINGING } from '../../../keys/instances/youngBennett'
+} from 'constants/scene/actors'
+import { CHEERING } from 'constants/scene/actors/instances/anita'
+import { SINGING } from 'constants/scene/actors/instances/youngBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {

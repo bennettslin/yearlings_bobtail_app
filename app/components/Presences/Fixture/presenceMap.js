@@ -129,7 +129,7 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
     HOSPITAL_RECORD_PLAYER
-} from 'scene/things/keys/fixtures'
+} from 'constants/scene/things/fixtures'
 
 export const propTypes = {
     [PLAYGROUND_BALL]: PropTypes.bool,

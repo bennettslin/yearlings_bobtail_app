@@ -1,5 +1,5 @@
-import { BENNETT_LIZ } from '../../../keys'
-import { GINGERBREAD_PRISON } from '../../../keys/instances/bennettLiz'
+import { BENNETT_LIZ } from 'constants/scene/actors'
+import { GINGERBREAD_PRISON } from 'constants/scene/actors/instances/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

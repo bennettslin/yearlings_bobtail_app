@@ -4,16 +4,16 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-import { STATION_WAGON_BACKDROP } from '../../keys/backdrops'
+import { STATION_WAGON_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     TARPIT_THOUGHT,
     SIBLING_THOUGHT
-} from '../../keys/bubbles'
-import { EVIAN_BOTTLES } from '../../keys/fixtures'
+} from 'constants/scene/things/bubbles'
+import { EVIAN_BOTTLES } from 'constants/scene/things/fixtures'
 import {
     SATURN_INTERIOR,
     SATURN_EXTERIOR
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

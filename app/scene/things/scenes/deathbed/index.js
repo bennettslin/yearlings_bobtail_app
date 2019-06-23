@@ -3,14 +3,14 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-import { IV_DRIP } from '../../keys/cutouts'
-import { HOSPITAL_RECORD_PLAYER } from '../../keys/fixtures'
+import { IV_DRIP } from 'constants/scene/things/cutouts'
+import { HOSPITAL_RECORD_PLAYER } from 'constants/scene/things/fixtures'
 import {
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
     INVERSE_THOUGHT_PANEL,
     HOSPITAL_BED
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

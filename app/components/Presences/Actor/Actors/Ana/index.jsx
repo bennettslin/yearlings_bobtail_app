@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
 import LayerHoc from '../../../LayerHoc'
-import { ANA } from '../../../../../scene/actors/keys'
+import { ANA } from '../../../../../constants/scene/actors'
 
 const AnaLayer = memo(({ instanceKey }) => {
     return (

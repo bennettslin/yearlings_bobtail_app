@@ -2,11 +2,11 @@ import {
     ESTHER_MOTHER,
     FATHER,
     MIRIAM_BENNETT
-} from '../../../keys'
-import { ASLEEP } from '../../../keys/instances/songs'
-import { ASLEEP_FEARFUL } from '../../../keys/instances/miriamBennett'
-import { HURT_CONSOLING } from '../../../keys/instances/estherMother'
-import { ACCUSATORY } from '../../../keys/instances/father'
+} from 'constants/scene/actors'
+import { ASLEEP } from 'constants/scene/actors/instances/songs'
+import { ASLEEP_FEARFUL } from 'constants/scene/actors/instances/miriamBennett'
+import { HURT_CONSOLING } from 'constants/scene/actors/instances/estherMother'
+import { ACCUSATORY } from 'constants/scene/actors/instances/father'
 
 const ARRANGEMENTS_ACTORS = {
     [ESTHER_MOTHER]: {

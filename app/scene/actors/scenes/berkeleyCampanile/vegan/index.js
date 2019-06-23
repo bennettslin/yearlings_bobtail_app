@@ -1,9 +1,9 @@
 import {
     BENNETT,
     KHARI_LIZ
-} from '../../../keys'
-import { CAMPUS_ASHAMED } from '../../../keys/instances/bennett'
-import { PROTECTIVE_CONCERNED } from '../../../keys/instances/khariLiz'
+} from 'constants/scene/actors'
+import { CAMPUS_ASHAMED } from 'constants/scene/actors/instances/bennett'
+import { PROTECTIVE_CONCERNED } from 'constants/scene/actors/instances/khariLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

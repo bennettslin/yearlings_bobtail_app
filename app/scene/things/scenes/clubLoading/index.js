@@ -1,7 +1,7 @@
 import {
     FIXTURE
 } from 'constants/scene'
-import { DRUMS_STACKED_CLUB } from '../../keys/fixtures'
+import { DRUMS_STACKED_CLUB } from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

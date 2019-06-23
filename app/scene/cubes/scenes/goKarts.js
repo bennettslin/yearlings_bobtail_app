@@ -1,4 +1,4 @@
-import { GO_KARTS_KEY } from '../../scenes/keys'
+import { GO_KARTS_KEY } from 'constants/scene/scenes'
 
 import {
     STREET_HSLA,

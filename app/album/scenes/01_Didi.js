@@ -13,7 +13,7 @@ import {
     NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -28,56 +28,56 @@ import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
     SINGING
-} from '../../scene/actors/keys/instances/youngBennett'
+} from '../../constants/scene/actors/instances/youngBennett'
 
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from '../../scene/actors/keys/instances/anita'
+} from '../../constants/scene/actors/instances/anita'
 
 import {
     CURIOUS,
     SNICKERING
-} from '../../scene/actors/keys/instances/esther'
+} from '../../constants/scene/actors/instances/esther'
 
 import {
     NOHO_HOUSES_BACKDROP,
     NOHO_SCHOOL_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
-import { JOHNNY_HORTON_ALBUM } from '../../scene/things/keys/cardboards'
+import { JOHNNY_HORTON_ALBUM } from '../../constants/scene/things/cardboards'
 
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
     TOWEL_RACK
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     ESTHER_SPEECH_PANEL,
     BATHTUB
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

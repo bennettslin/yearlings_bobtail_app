@@ -2,10 +2,10 @@ import {
     ESTHER_MOTHER,
     FATHER,
     MIRIAM_BENNETT
-} from '../../../keys'
-import { SOBBING_SHIELDING } from '../../../keys/instances/estherMother'
-import { REELING } from '../../../keys/instances/father'
-import { FENDING_OFF } from '../../../keys/instances/miriamBennett'
+} from 'constants/scene/actors'
+import { SOBBING_SHIELDING } from 'constants/scene/actors/instances/estherMother'
+import { REELING } from 'constants/scene/actors/instances/father'
+import { FENDING_OFF } from 'constants/scene/actors/instances/miriamBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [ESTHER_MOTHER]: {

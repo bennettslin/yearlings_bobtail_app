@@ -4,7 +4,7 @@ import Eating from './Instances/Eating'
 
 import {
     EATING
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [EATING]: PropTypes.bool

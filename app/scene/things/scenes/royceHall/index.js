@@ -2,8 +2,8 @@ import {
     BACKDROP,
     FLAT
 } from 'constants/scene'
-import { UCLA_BACKDROP } from '../../keys/backdrops'
-import { ROYCE_HALL } from '../../keys/flats'
+import { UCLA_BACKDROP } from 'constants/scene/things/backdrops'
+import { ROYCE_HALL } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

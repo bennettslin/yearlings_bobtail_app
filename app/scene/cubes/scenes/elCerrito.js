@@ -1,7 +1,7 @@
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

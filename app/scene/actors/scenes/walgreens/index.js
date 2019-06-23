@@ -3,8 +3,8 @@ import {
     ANA,
     HOWIE,
     TOMER
-} from '../../keys'
-import { WALGREENS } from '../../keys/instances/songs'
+} from 'constants/scene/actors'
+import { WALGREENS } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

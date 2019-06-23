@@ -1,4 +1,4 @@
-import { CATHOLIC_CHURCH_KEY } from '../../scenes/keys'
+import { CATHOLIC_CHURCH_KEY } from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

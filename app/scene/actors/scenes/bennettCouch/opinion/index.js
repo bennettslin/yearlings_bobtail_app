@@ -1,9 +1,9 @@
 import {
     BENNETT,
     CATHERINE
-} from '../../../keys'
-import { SOLICITING_OPINION } from '../../../keys/instances/bennett'
-import { QUIPPING } from '../../../keys/instances/catherine'
+} from 'constants/scene/actors'
+import { SOLICITING_OPINION } from 'constants/scene/actors/instances/bennett'
+import { QUIPPING } from 'constants/scene/actors/instances/catherine'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

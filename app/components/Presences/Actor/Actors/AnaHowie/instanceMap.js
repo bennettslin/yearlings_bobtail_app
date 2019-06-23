@@ -4,7 +4,7 @@ import Cemetery from './Instances/Cemetery'
 
 import {
     CEMETERY
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [CEMETERY]: PropTypes.bool

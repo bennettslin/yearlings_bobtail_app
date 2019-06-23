@@ -12,7 +12,7 @@ import Epilogue from './Instances/Epilogue'
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'scene/actors/keys/instances/howie'
+} from 'constants/scene/actors/instances/howie'
 
 import {
     ABBEY_ROAD,
@@ -21,7 +21,7 @@ import {
     STATION_WAGON,
     ATTIC,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [USHER_WAITING]: PropTypes.bool,

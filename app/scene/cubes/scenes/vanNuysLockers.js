@@ -1,4 +1,4 @@
-import { VAN_NUYS_LOCKERS_KEY } from '../../scenes/keys'
+import { VAN_NUYS_LOCKERS_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

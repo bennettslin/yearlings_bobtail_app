@@ -18,7 +18,7 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     BENNETT_GATE_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -33,17 +33,17 @@ import {
     LIZ,
     NESTOR,
     BENNETT_LIZ_REFLECTION
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     JOGGER
-} from '../../scene/actors/keys/instances/nestor'
+} from '../../constants/scene/actors/instances/nestor'
 
 import {
     DISHROOM_LANCET,
@@ -51,7 +51,7 @@ import {
     DATE_ENDED,
     GATE_CODE,
     RUMPLED_LINENS
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     GINGERBREAD_PRISON,
@@ -62,23 +62,23 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../scene/actors/keys/instances/bennettLiz'
+} from '../../constants/scene/actors/instances/bennettLiz'
 
 import {
     WAITING_ROOM_THOUGHTS
-} from '../../scene/things/keys/bubbles'
+} from '../../constants/scene/things/bubbles'
 
 import {
     CLIPBOARD,
     PAINTING
-} from '../../scene/things/keys/cardboards'
+} from '../../constants/scene/things/cardboards'
 
 import {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     CODE_BOX,
     WAITING_ROOM_PLANT
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     CONVEYOR_BELT,
@@ -92,7 +92,7 @@ import {
     LIZ_PHONE_REFLECTION,
     BLOODY_TOWEL,
     BLOODY_TOWEL_REFLECTION
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     BENNETT_PILLOW,
@@ -101,7 +101,7 @@ import {
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
-} from '../../scene/things/keys/furniture'
+} from '../../constants/scene/things/furniture'
 
 import {
     DISHROOM_SINK,
@@ -113,7 +113,7 @@ import {
     WAITING_ARMCHAIR_LIZ,
     WAITING_LEFT_ARMREST_LIZ,
     WAITING_RIGHT_ARMREST_LIZ
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 /**
  * All of these scenes repeat twice.

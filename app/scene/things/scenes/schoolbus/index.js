@@ -3,16 +3,16 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-import { SCHOOLBUS_THOUGHT_BACKDROP } from '../../keys/backdrops'
+import { SCHOOLBUS_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

@@ -1,4 +1,4 @@
-import { SHORE_KEY } from '../../scenes/keys'
+import { SHORE_KEY } from 'constants/scene/scenes'
 
 import {
     SAND_HSLA,

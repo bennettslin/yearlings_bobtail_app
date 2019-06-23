@@ -11,13 +11,13 @@ import {
     STOOPING,
     COMFORTING,
     ARGUING
-} from 'scene/actors/keys/instances/mother'
+} from 'constants/scene/actors/instances/mother'
 
 import {
     PRESENT,
     FUTURE,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [STOOPING]: PropTypes.bool,

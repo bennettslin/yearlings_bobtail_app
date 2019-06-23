@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
 import LayerHoc from '../../../LayerHoc'
-import { BENNETT_STEPHANIE } from '../../../../../scene/actors/keys'
+import { BENNETT_STEPHANIE } from '../../../../../constants/scene/actors'
 
 const BennettStephanieLayer = memo(({ instanceKey }) => {
     return (

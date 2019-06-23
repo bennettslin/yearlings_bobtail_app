@@ -2,8 +2,8 @@ import {
     BUBBLE,
     CARDBOARD
 } from 'constants/scene'
-import { CINEMA_THOUGHTS } from '../../keys/bubbles'
-import { CINEMA_POSTER_RIGHT_NORMAL } from '../../keys/cardboards'
+import { CINEMA_THOUGHTS } from 'constants/scene/things/bubbles'
+import { CINEMA_POSTER_RIGHT_NORMAL } from 'constants/scene/things/cardboards'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

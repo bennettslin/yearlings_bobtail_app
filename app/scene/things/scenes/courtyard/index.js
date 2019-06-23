@@ -1,7 +1,7 @@
 import {
     CUTOUT
 } from 'constants/scene'
-import { RECYCLABLES } from '../../keys/cutouts'
+import { RECYCLABLES } from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

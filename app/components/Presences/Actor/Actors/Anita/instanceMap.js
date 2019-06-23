@@ -9,11 +9,11 @@ import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from 'scene/actors/keys/instances/anita'
+} from 'constants/scene/actors/instances/anita'
 
 import {
     YOUNG_CHILD
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [EXASPERATED]: PropTypes.bool,

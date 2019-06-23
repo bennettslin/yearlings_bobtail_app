@@ -1,5 +1,5 @@
-import { BENNETT } from '../../keys'
-import { CATHOLIC_PENSIVE } from '../../keys/instances/bennett'
+import { BENNETT } from 'constants/scene/actors'
+import { CATHOLIC_PENSIVE } from 'constants/scene/actors/instances/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

@@ -2,10 +2,10 @@ import {
     BENNETT,
     HOWIE,
     MIRIAM
-} from '../../../keys'
-import { WONDERING_BABY } from '../../../keys/instances/bennett'
-import { USHER_WAITING } from '../../../keys/instances/howie'
-import { INFANT_NURSING } from '../../../keys/instances/miriam'
+} from 'constants/scene/actors'
+import { WONDERING_BABY } from 'constants/scene/actors/instances/bennett'
+import { USHER_WAITING } from 'constants/scene/actors/instances/howie'
+import { INFANT_NURSING } from 'constants/scene/actors/instances/miriam'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

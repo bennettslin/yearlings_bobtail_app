@@ -6,7 +6,7 @@ import {
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {

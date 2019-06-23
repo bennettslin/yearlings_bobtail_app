@@ -6,7 +6,7 @@ import SobbingShielding from './Instances/SobbingShielding'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from 'scene/actors/keys/instances/estherMother'
+} from 'constants/scene/actors/instances/estherMother'
 
 export const propTypes = {
     [HURT_CONSOLING]: PropTypes.bool,

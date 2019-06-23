@@ -7,11 +7,11 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-import { DOGS_SKETCHBOOK } from '../../keys/bubbles'
+import { DOGS_SKETCHBOOK } from 'constants/scene/things/bubbles'
 import {
     TINTIN_POSTER,
     BLOOM_COUNTY_POSTER
-} from '../../keys/cardboards'
+} from 'constants/scene/things/cardboards'
 import {
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
@@ -19,25 +19,25 @@ import {
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 import {
     BEDROOM_SIREN,
     BEDROOM_BUS
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
-} from '../../keys/furniture'
+} from 'constants/scene/things/furniture'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 import {
     PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY
-} from '../../keys/puppets'
+} from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

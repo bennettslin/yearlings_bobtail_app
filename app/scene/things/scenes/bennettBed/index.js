@@ -6,12 +6,12 @@ import {
 import {
     NUDE_DRAWINGS,
     VASELINE
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 import {
     BENNETT_PILLOW,
     BENNETT_BLANKET
-} from '../../keys/furniture'
-import { BENNETT_BED } from '../../keys/panels'
+} from 'constants/scene/things/furniture'
+import { BENNETT_BED } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

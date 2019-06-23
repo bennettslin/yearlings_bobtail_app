@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
 import LayerHoc from '../../../LayerHoc'
-import { KHARI_LIZ_REFLECTION } from '../../../../../scene/actors/keys'
+import { KHARI_LIZ_REFLECTION } from '../../../../../constants/scene/actors'
 
 const KhariLizReflection = memo(({ instanceKey }) => {
     return (

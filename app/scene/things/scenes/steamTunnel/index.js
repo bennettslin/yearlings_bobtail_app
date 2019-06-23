@@ -2,8 +2,8 @@ import {
     FIXTURE,
     FLAT
 } from 'constants/scene'
-import { PUSH_BROOM_TUNNEL } from '../../keys/fixtures'
-import { STEAM_PIPES } from '../../keys/flats'
+import { PUSH_BROOM_TUNNEL } from 'constants/scene/things/fixtures'
+import { STEAM_PIPES } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

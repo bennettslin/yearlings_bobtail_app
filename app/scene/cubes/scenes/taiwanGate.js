@@ -1,4 +1,4 @@
-import { TAIWAN_GATE_KEY } from '../../scenes/keys'
+import { TAIWAN_GATE_KEY } from 'constants/scene/scenes'
 
 import {
     STREET_HSLA,

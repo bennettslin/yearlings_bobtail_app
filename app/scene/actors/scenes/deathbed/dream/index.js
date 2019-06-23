@@ -1,9 +1,9 @@
 import {
     BENNETT_LIZ,
     AMY
-} from '../../../keys'
-import { DOCTOR } from '../../../keys/instances/amy'
-import { FINAL_DREAM } from '../../../keys/instances/bennettLiz'
+} from 'constants/scene/actors'
+import { DOCTOR } from 'constants/scene/actors/instances/amy'
+import { FINAL_DREAM } from 'constants/scene/actors/instances/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

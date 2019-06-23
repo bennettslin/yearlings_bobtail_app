@@ -102,7 +102,7 @@ import {
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION
-} from 'scene/actors/keys'
+} from 'constants/scene/actors'
 
 const ACTOR_KEY_MAP = {
     [YOUNG_BENNETT]: youngBennettMap,

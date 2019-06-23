@@ -1,9 +1,9 @@
 import {
     BENNETT,
     STEPHANIE
-} from '../../../keys'
-import { COUCH_READING } from '../../../keys/instances/bennett'
-import { BENNETT_KEYBOARD } from '../../../keys/instances/stephanie'
+} from 'constants/scene/actors'
+import { COUCH_READING } from 'constants/scene/actors/instances/bennett'
+import { BENNETT_KEYBOARD } from 'constants/scene/actors/instances/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

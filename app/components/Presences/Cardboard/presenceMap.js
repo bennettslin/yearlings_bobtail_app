@@ -38,7 +38,7 @@ import {
     PAINTING,
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
-} from 'scene/things/keys/cardboards'
+} from 'constants/scene/things/cardboards'
 
 export const propTypes = {
     [JOHNNY_HORTON_ALBUM]: PropTypes.bool,

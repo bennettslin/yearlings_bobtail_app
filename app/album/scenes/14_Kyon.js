@@ -12,7 +12,7 @@ import {
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -22,13 +22,13 @@ import {
 import {
     LIZ,
     KHARI
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from '../../scene/actors/keys/instances/khari'
+} from '../../constants/scene/actors/instances/khari'
 
 import {
     PETTING_SEATED,
@@ -38,24 +38,24 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from '../../scene/actors/keys/instances/liz'
+} from '../../constants/scene/actors/instances/liz'
 
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
-} from '../../scene/things/keys/bubbles'
+} from '../../constants/scene/things/bubbles'
 
-import { TCHOTCHKES } from '../../scene/things/keys/fixtures'
+import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
 
-import { LIZ_COUCH } from '../../scene/things/keys/panels'
+import { LIZ_COUCH } from '../../constants/scene/things/panels'
 
 import {
     OPAL_COUCH,
     OPAL_GAZING,
     PEAHEN,
     PEACOCK
-} from '../../scene/things/keys/puppets'
+} from '../../constants/scene/things/puppets'
 
 export default [
     {

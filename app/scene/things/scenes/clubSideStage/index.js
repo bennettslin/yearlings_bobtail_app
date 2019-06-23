@@ -5,13 +5,13 @@ import {
 import {
     MONITOR_SIDE_STAGE,
     WALL_SPEAKER_SIDE_STAGE
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 import {
     STAGE_MIC_SIDE_STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

@@ -83,7 +83,7 @@ import {
     TENNIS_THOUGHT_PANEL,
     WEDDING_PLATFORM,
     INVERSE_THOUGHT_PANEL
-} from 'scene/things/keys/panels'
+} from 'constants/scene/things/panels'
 
 export const propTypes = {
     [ESTHER_SPEECH_PANEL]: PropTypes.bool,

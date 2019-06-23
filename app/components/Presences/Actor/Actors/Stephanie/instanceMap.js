@@ -14,14 +14,14 @@ import {
     FLAPPER,
     BENNETT_DEFIANT,
     BENNETT_RECORDING
-} from 'scene/actors/keys/instances/stephanie'
+} from 'constants/scene/actors/instances/stephanie'
 
 import {
     SQUEEZING,
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [BENNETT_KEYBOARD]: PropTypes.bool,

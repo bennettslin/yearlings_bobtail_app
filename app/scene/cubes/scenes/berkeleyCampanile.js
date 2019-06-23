@@ -1,4 +1,4 @@
-import { BERKELEY_CAMPANILE_KEY } from '../../scenes/keys'
+import { BERKELEY_CAMPANILE_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

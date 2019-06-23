@@ -13,7 +13,7 @@ import {
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -25,42 +25,42 @@ import {
     BENNETT,
     MIRIAM,
     MIRIAM_BENNETT
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from '../../scene/actors/keys/instances/miriam'
+} from '../../constants/scene/actors/instances/miriam'
 
 import {
     COWGIRL,
     BLOWJOB
-} from '../../scene/actors/keys/instances/miriamBennett'
+} from '../../constants/scene/actors/instances/miriamBennett'
 
 import {
     GOLDEN_GATE_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     EL_CERRITO_TREE,
     IV_DRIP
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     HOSPITAL_RECORD_PLAYER
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     REATTA_EXTERIOR,
@@ -68,11 +68,11 @@ import {
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
     HOSPITAL_BED
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 import {
     PUPPET_REATTA
-} from '../../scene/things/keys/puppets'
+} from '../../constants/scene/things/puppets'
 
 export default [
     {

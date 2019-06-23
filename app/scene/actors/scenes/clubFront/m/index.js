@@ -4,11 +4,11 @@ import {
     JACOB,
     ANA,
     TOMER
-} from '../../../keys'
-import { FLIRTING } from '../../../keys/instances/songs'
-import { SQUATTING } from '../../../keys/instances/ana'
-import { DISTRACTED } from '../../../keys/instances/bennett'
-import { SHANE_BUYING } from '../../../keys/instances/tomer'
+} from 'constants/scene/actors'
+import { FLIRTING } from 'constants/scene/actors/instances/songs'
+import { SQUATTING } from 'constants/scene/actors/instances/ana'
+import { DISTRACTED } from 'constants/scene/actors/instances/bennett'
+import { SHANE_BUYING } from 'constants/scene/actors/instances/tomer'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

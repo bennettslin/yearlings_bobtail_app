@@ -1,6 +1,6 @@
 import {
     CLUB_FRONT_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     CEILING_HSLA,

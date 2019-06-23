@@ -2,8 +2,8 @@ import {
     BACKDROP,
     FLAT
 } from 'constants/scene'
-import { PHARMACY_THOUGHT_BACKDROP } from '../../keys/backdrops'
-import { PHARMACY_AISLE } from '../../keys/flats'
+import { PHARMACY_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
+import { PHARMACY_AISLE } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

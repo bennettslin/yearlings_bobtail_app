@@ -4,18 +4,18 @@ import {
     FLAT,
     PUPPET
 } from 'constants/scene'
-import { TAIWAN_MOUNTAINS_BACKDROP } from '../../keys/backdrops'
+import { TAIWAN_MOUNTAINS_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCHBOOK,
     APART_SKETCHBOOK
-} from '../../keys/bubbles'
+} from 'constants/scene/things/bubbles'
 import {
     TAIWAN_CLOUDS,
     TAIWAN_FOG,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 import {
     PUPPET_BENNETT_BEGIN,
     PUPPET_FAMILY_BEGIN,
@@ -23,7 +23,7 @@ import {
     PUPPET_FAMILY_MIDDLE,
     PUPPET_BENNETT_END,
     PUPPET_FAMILY_END
-} from '../../keys/puppets'
+} from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

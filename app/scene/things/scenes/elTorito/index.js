@@ -2,7 +2,7 @@ import { CUTOUT } from 'constants/scene'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

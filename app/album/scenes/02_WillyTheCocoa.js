@@ -16,7 +16,7 @@ import {
     PORCH_KEY,
     NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -32,47 +32,47 @@ import {
     CHRISTOPHER_BENNETT_WILLY,
     HOWIE_WILLY,
     TOMER
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL
-} from '../../scene/actors/keys/instances/preteenBennett'
+} from '../../constants/scene/actors/instances/preteenBennett'
 
 import {
     COLLECTING,
     DUCKING
-} from '../../scene/actors/keys/instances/willy'
+} from '../../constants/scene/actors/instances/willy'
 
 import {
     STOOPING,
     COMFORTING
-} from '../../scene/actors/keys/instances/mother'
+} from '../../constants/scene/actors/instances/mother'
 
 import {
     ROARING
-} from '../../scene/actors/keys/instances/father'
+} from '../../constants/scene/actors/instances/father'
 
 import {
     TANTRUM,
     SOBBING
-} from '../../scene/actors/keys/instances/christopher'
+} from '../../constants/scene/actors/instances/christopher'
 
 import {
     REASSURING_ENCHANTED
-} from '../../scene/actors/keys/instances/christopherBennettWilly'
+} from '../../constants/scene/actors/instances/christopherBennettWilly'
 
 import {
     GANGBANGER
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     NOHO_HOUSES_BACKDROP,
     VALLEY_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
-import { TINTIN_POSTER } from '../../scene/things/keys/cardboards'
+import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
 
 import {
     OVERPASS_SIGN_FRONT,
@@ -84,14 +84,14 @@ import {
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
     STALACTITES
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     SHOPPING_CART_FULL,
 
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     NOHO_HOUSE_LEFT,
@@ -99,18 +99,18 @@ import {
     FAMILY_HOUSE,
     CAVE_SHADOWS,
     BEDROOM_SIREN
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
-} from '../../scene/things/keys/furniture'
+} from '../../constants/scene/things/furniture'
 
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

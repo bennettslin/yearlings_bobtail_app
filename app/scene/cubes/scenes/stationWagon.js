@@ -1,4 +1,4 @@
-import { STATION_WAGON_KEY } from '../../scenes/keys'
+import { STATION_WAGON_KEY } from 'constants/scene/scenes'
 
 import {
     STREET_HSLA,

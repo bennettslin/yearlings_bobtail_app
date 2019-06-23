@@ -4,7 +4,7 @@ import Epilogue from './Instances/Epilogue'
 
 import {
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [EPILOGUE]: PropTypes.bool

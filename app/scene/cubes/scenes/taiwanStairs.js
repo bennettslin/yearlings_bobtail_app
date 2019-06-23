@@ -1,4 +1,4 @@
-import { TAIWAN_STAIRS_KEY } from '../../scenes/keys'
+import { TAIWAN_STAIRS_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

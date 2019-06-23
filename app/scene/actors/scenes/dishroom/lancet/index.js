@@ -1,8 +1,8 @@
 import {
     BENNETT,
     LIZ
-} from '../../../keys'
-import { DISHROOM_LANCET } from '../../../keys/instances/songs'
+} from 'constants/scene/actors'
+import { DISHROOM_LANCET } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

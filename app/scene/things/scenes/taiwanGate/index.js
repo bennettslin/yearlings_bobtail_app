@@ -3,12 +3,12 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { TAIWAN_STREETS_BACKDROP } from '../../keys/backdrops'
-import { BENNETT_ODIN_RICKSHAW } from '../../keys/cutouts'
+import { TAIWAN_STREETS_BACKDROP } from 'constants/scene/things/backdrops'
+import { BENNETT_ODIN_RICKSHAW } from 'constants/scene/things/cutouts'
 import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

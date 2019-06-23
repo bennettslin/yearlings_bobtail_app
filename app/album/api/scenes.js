@@ -2,7 +2,7 @@ import albumScenes from 'album/scenes'
 
 import { getSong } from 'album/api/songs'
 
-import { DEFAULT_STAGE_KEY } from 'scene/scenes/keys'
+import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
 import {
     TIME_ANYTIME,
     SEASON_INDOOR

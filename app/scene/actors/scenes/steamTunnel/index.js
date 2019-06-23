@@ -3,8 +3,8 @@ import {
     ANA,
     HOWIE,
     TOMER
-} from '../../keys'
-import { STEAM_TUNNEL } from '../../keys/instances/songs'
+} from 'constants/scene/actors'
+import { STEAM_TUNNEL } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

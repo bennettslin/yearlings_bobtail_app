@@ -1,5 +1,5 @@
-import { BENNETT_LIZ } from '../../keys'
-import { CLIFF } from '../../keys/instances/bennettLiz'
+import { BENNETT_LIZ } from 'constants/scene/actors'
+import { CLIFF } from 'constants/scene/actors/instances/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

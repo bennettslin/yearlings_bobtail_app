@@ -4,13 +4,13 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-import { JOHNNY_HORTON_ALBUM } from '../../keys/cardboards'
+import { JOHNNY_HORTON_ALBUM } from 'constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,
     TOWEL_RACK
-} from '../../keys/cutouts'
-import { RECORD_PLAYER_STOOL } from '../../keys/fixtures'
-import { BATHTUB } from '../../keys/panels'
+} from 'constants/scene/things/cutouts'
+import { RECORD_PLAYER_STOOL } from 'constants/scene/things/fixtures'
+import { BATHTUB } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [PANEL]: {

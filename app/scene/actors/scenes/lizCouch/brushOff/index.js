@@ -1,5 +1,5 @@
-import { BENNETT_LIZ } from '../../../keys'
-import { BRUSH_OFF } from '../../../keys/instances/bennettLiz'
+import { BENNETT_LIZ } from 'constants/scene/actors'
+import { BRUSH_OFF } from 'constants/scene/actors/instances/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

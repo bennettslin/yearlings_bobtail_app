@@ -3,12 +3,12 @@ import {
     FLAT,
     PUPPET
 } from 'constants/scene'
-import { STAGE_MIC_FAR } from '../../keys/fixtures'
+import { STAGE_MIC_FAR } from 'constants/scene/things/fixtures'
 import {
     CROWD_FAR_BACK,
     CROWD_NEAR_BACK
-} from '../../keys/flats'
-import { GHOST_ODIN_CLUB } from '../../keys/puppets'
+} from 'constants/scene/things/flats'
+import { GHOST_ODIN_CLUB } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

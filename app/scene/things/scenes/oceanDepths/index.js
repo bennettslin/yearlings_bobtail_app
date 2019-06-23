@@ -3,12 +3,12 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { OCEAN_BOTTOM_FAR } from '../../keys/backdrops'
-import { BENNETT_ODIN_OCEAN_FLOOR } from '../../keys/cutouts'
+import { OCEAN_BOTTOM_FAR } from 'constants/scene/things/backdrops'
+import { BENNETT_ODIN_OCEAN_FLOOR } from 'constants/scene/things/cutouts'
 import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

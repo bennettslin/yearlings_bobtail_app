@@ -19,7 +19,7 @@ import {
     ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -33,7 +33,7 @@ import {
     ANA_HOWIE,
     HOWIE,
     TOMER
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     ABBEY_ROAD,
@@ -42,39 +42,39 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     STATION_WAGON_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     TARPIT_THOUGHT,
     SIBLING_THOUGHT
-} from '../../scene/things/keys/bubbles'
+} from '../../constants/scene/things/bubbles'
 
 import {
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     PUSH_BROOM_TUNNEL,
     GRAVESTONE,
     EVIAN_BOTTLES
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     ROYCE_HALL,
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     SATURN_EXTERIOR,
@@ -82,7 +82,7 @@ import {
     ATTIC_COUCH,
     ATTIC_LEFT_ARMREST,
     ATTIC_RIGHT_ARMREST
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

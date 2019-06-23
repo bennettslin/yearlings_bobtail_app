@@ -1,4 +1,4 @@
-import { SNOWGLOBES_PRESENT_KEY } from '../../scenes/keys'
+import { SNOWGLOBES_PRESENT_KEY } from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

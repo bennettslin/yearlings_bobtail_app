@@ -13,7 +13,7 @@ import {
     BASEMENT_COUCH_KEY,
     CLUB_FRONT_KEY,
     OAKLAND_VOLKSWAGEN_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -28,58 +28,58 @@ import {
     MIRIAM_TRISTAN,
     TRISTAN,
     NESTOR
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     CHUCKLING,
     SMIRKING
-} from '../../scene/actors/keys/instances/ana'
+} from '../../constants/scene/actors/instances/ana'
 
 import {
     DROPPING_MEATS
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     BRUSH_OFF,
     CELIBATE_FREEZING
-} from '../../scene/actors/keys/instances/bennettLiz'
+} from '../../constants/scene/actors/instances/bennettLiz'
 
-import { NOOGIE } from '../../scene/actors/keys/instances/miriamTristan'
-import { INJURED } from '../../scene/actors/keys/instances/nestor'
-import { PUNCHING } from '../../scene/actors/keys/instances/tristan'
+import { NOOGIE } from '../../constants/scene/actors/instances/miriamTristan'
+import { INJURED } from '../../constants/scene/actors/instances/nestor'
+import { PUNCHING } from '../../constants/scene/actors/instances/tristan'
 
 import {
     GREETING,
     LEAVING_CRUMBLED
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     OAKLAND_SIDE_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
-} from '../../scene/things/keys/cardboards'
+} from '../../constants/scene/things/cardboards'
 
 import {
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     GUITAR,
     DRUMKIT,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     VOLKSWAGEN,
@@ -87,7 +87,7 @@ import {
     BENNETT_LEFT_ARMREST,
     BENNETT_RIGHT_ARMREST,
     LIZ_COUCH
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

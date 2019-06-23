@@ -4,13 +4,13 @@ import {
     FIXTURE,
     FLAT
 } from 'constants/scene'
-import { VAN_NUYS_SCHOOL_BACKDROP } from '../../keys/backdrops'
+import { VAN_NUYS_SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     TRASH_CAN_LOCKERS,
     VAN_NUYS_PLANT_LOCKERS
-} from '../../keys/cutouts'
-import { THROWN_FRUIT } from '../../keys/fixtures'
-import { LOCKER_BANK } from '../../keys/flats'
+} from 'constants/scene/things/cutouts'
+import { THROWN_FRUIT } from 'constants/scene/things/fixtures'
+import { LOCKER_BANK } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

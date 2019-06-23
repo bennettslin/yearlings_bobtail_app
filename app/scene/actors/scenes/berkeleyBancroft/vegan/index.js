@@ -3,9 +3,9 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from '../../../keys'
-import { PROTESTER } from '../../../keys/instances/songs'
-import { DEMONSTRATION } from '../../../keys/instances/bennett'
+} from 'constants/scene/actors'
+import { PROTESTER } from 'constants/scene/actors/instances/songs'
+import { DEMONSTRATION } from 'constants/scene/actors/instances/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

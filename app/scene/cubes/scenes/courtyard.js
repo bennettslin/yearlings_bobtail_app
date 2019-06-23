@@ -1,4 +1,4 @@
-import { COURTYARD_KEY } from '../../scenes/keys'
+import { COURTYARD_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

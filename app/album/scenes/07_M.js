@@ -15,7 +15,7 @@ import {
     BASEMENT_KEY,
     CINEMA_KEY,
     CINEMA_STREET_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -32,11 +32,11 @@ import {
     TOMER,
     MIRIAM,
     STEPHANIE
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     SQUATTING
-} from '../../scene/actors/keys/instances/ana'
+} from '../../constants/scene/actors/instances/ana'
 
 import {
     PONDERING,
@@ -46,33 +46,33 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from '../../scene/actors/keys/instances/howie'
+} from '../../constants/scene/actors/instances/howie'
 
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
-} from '../../scene/actors/keys/instances/miriam'
+} from '../../constants/scene/actors/instances/miriam'
 
-import { BENNETT_KEYBOARD } from '../../scene/actors/keys/instances/stephanie'
+import { BENNETT_KEYBOARD } from '../../constants/scene/actors/instances/stephanie'
 
-import { SHANE_BUYING } from '../../scene/actors/keys/instances/tomer'
+import { SHANE_BUYING } from '../../constants/scene/actors/instances/tomer'
 
 import {
     FLIRTING,
     EATING
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     OAKLAND_FRONT_BACKDROP,
     WEST_BERKELEY_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
-import { CINEMA_THOUGHTS } from '../../scene/things/keys/bubbles'
+import { CINEMA_THOUGHTS } from '../../constants/scene/things/bubbles'
 
 import {
     TELEVISION_ALBUM,
@@ -82,14 +82,14 @@ import {
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT,
     CINEMA_POSTER_RIGHT_NORMAL
-} from '../../scene/things/keys/cardboards'
+} from '../../constants/scene/things/cardboards'
 
 import {
     MONITOR_SPEAKER_LEFT,
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     BENNETT_RECORD_PLAYER,
@@ -104,20 +104,20 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     BENNETT_COUCH,
     BENNETT_LEFT_ARMREST,
     BENNETT_RIGHT_ARMREST
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

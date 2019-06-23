@@ -7,11 +7,11 @@ import {
     TROLL_SHADOW_RIGHT,
     CAMPFIRE,
     STALACTITES
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 import {
     FAMILY_HOUSE,
     CAVE_SHADOWS
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

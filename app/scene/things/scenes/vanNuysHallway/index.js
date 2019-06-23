@@ -1,7 +1,7 @@
 import {
     CARDBOARD
 } from 'constants/scene'
-import { CORKBOARD } from '../../keys/cardboards'
+import { CORKBOARD } from 'constants/scene/things/cardboards'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

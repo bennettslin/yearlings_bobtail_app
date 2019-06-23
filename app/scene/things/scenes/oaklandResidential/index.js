@@ -3,12 +3,12 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { OAKLAND_FRONT_BACKDROP } from '../../keys/backdrops'
+import { OAKLAND_FRONT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     TWIN_STREETLAMP_FAR,
     TWIN_STREETLAMP_MIDDLE,
     TWIN_STREETLAMP_NEAR
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 import {
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
@@ -16,7 +16,7 @@ import {
     RESIDENTIAL_FAR_RIGHT,
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

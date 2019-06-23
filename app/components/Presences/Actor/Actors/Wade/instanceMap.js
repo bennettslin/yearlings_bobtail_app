@@ -9,13 +9,13 @@ import Epilogue from './Instances/Epilogue'
 import {
     CATHOLIC_GUY,
     WATCHING
-} from 'scene/actors/keys/instances/wade'
+} from 'constants/scene/actors/instances/wade'
 
 import {
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [CATHOLIC_GUY]: PropTypes.bool,

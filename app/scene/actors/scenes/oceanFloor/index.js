@@ -1,5 +1,5 @@
-import { PRETEEN_BENNETT } from '../../keys'
-import { OCEAN_FLOOR } from '../../keys/instances/preteenBennett'
+import { PRETEEN_BENNETT } from 'constants/scene/actors'
+import { OCEAN_FLOOR } from 'constants/scene/actors/instances/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

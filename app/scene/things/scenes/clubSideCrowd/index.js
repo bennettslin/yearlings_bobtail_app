@@ -6,12 +6,12 @@ import {
 import {
     MONITOR_SIDE_CROWD,
     WALL_SPEAKER_SIDE_CROWD
-} from '../../keys/cutouts'
-import { STAGE_MIC_SIDE_CROWD } from '../../keys/fixtures'
+} from 'constants/scene/things/cutouts'
+import { STAGE_MIC_SIDE_CROWD } from 'constants/scene/things/fixtures'
 import {
     CROWD_NEAR_SIDE,
     CROWD_FAR_SIDE
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

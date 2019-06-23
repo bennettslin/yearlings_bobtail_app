@@ -1,4 +1,4 @@
-import { OCEAN_DEPTHS_KEY } from '../../scenes/keys'
+import { OCEAN_DEPTHS_KEY } from 'constants/scene/scenes'
 
 import {
     OCEAN_HSLA,

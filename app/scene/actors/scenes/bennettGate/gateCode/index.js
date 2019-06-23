@@ -2,9 +2,9 @@ import {
     BENNETT,
     LIZ,
     NESTOR
-} from '../../../keys'
-import { GATE_CODE } from '../../../keys/instances/songs'
-import { JOGGER } from '../../../keys/instances/nestor'
+} from 'constants/scene/actors'
+import { GATE_CODE } from 'constants/scene/actors/instances/songs'
+import { JOGGER } from 'constants/scene/actors/instances/nestor'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

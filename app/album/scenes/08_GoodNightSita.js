@@ -14,7 +14,7 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     GO_KARTS_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -26,11 +26,11 @@ import {
     LIZ,
     KHARI,
     STEPHANIE
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
-import { DOUBLE_ALBERT } from '../../scene/actors/keys/instances/khari'
+import { DOUBLE_ALBERT } from '../../constants/scene/actors/instances/khari'
 
-import { FLAPPER } from '../../scene/actors/keys/instances/stephanie'
+import { FLAPPER } from '../../constants/scene/actors/instances/stephanie'
 
 import {
     DATE_ENDING,
@@ -38,37 +38,37 @@ import {
     BACKSTAGE,
     GO_KARTS,
     DATE_ENDED
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     GO_KART_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     GO_KART_THOUGHT
-} from '../../scene/things/keys/bubbles'
+} from '../../constants/scene/things/bubbles'
 
 import {
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     CAVEMAN_BONES,
     PUSH_BROOM_BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     MUSEUM_DISPLAY
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     GO_KART_EXTERIOR_LEFT,
     GO_KART_EXTERIOR_RIGHT
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

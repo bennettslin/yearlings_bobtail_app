@@ -1,5 +1,5 @@
-import { BENNETT } from '../../../keys'
-import { MOP_SOPPED } from '../../../keys/instances/bennett'
+import { BENNETT } from 'constants/scene/actors'
+import { MOP_SOPPED } from 'constants/scene/actors/instances/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

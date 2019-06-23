@@ -1,9 +1,9 @@
 import {
     BENNETT_STEPHANIE,
     AMY_NESTOR_TOMER
-} from '../../keys'
-import { OFFICER } from '../../keys/instances/amyNestorTomer'
-import { HORSING } from '../../keys/instances/bennettStephanie'
+} from 'constants/scene/actors'
+import { OFFICER } from 'constants/scene/actors/instances/amyNestorTomer'
+import { HORSING } from 'constants/scene/actors/instances/bennettStephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_STEPHANIE]: {

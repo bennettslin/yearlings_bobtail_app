@@ -3,12 +3,12 @@ import {
     CARDBOARD,
     CUTOUT
 } from 'constants/scene'
-import { ESCAPE_POD_SKETCHBOOK } from '../../keys/bubbles'
-import { VAN_NUYS_LOGO } from '../../keys/cardboards'
+import { ESCAPE_POD_SKETCHBOOK } from 'constants/scene/things/bubbles'
+import { VAN_NUYS_LOGO } from 'constants/scene/things/cardboards'
 import {
     TRASH_CAN_QUAD,
     VAN_NUYS_PLANT_QUAD
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

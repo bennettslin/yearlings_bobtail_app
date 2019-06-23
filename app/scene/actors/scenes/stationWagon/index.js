@@ -3,8 +3,8 @@ import {
     ANA,
     HOWIE,
     TOMER
-} from '../../keys'
-import { STATION_WAGON } from '../../keys/instances/songs'
+} from 'constants/scene/actors'
+import { STATION_WAGON } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

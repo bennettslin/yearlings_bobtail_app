@@ -4,7 +4,7 @@ import MischievousBanjo from './Instances/MischievousBanjo'
 
 import {
     MISCHIEVOUS_BANJO
-} from 'scene/actors/keys/instances/miriamStephanie'
+} from 'constants/scene/actors/instances/miriamStephanie'
 
 export const propTypes = {
     [MISCHIEVOUS_BANJO]: PropTypes.bool

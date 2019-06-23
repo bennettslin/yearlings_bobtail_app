@@ -2,12 +2,12 @@ import {
     BENNETT,
     KHARI_LIZ,
     KHARI_LIZ_REFLECTION
-} from '../../../keys'
-import { BROKEN_HEARTED } from '../../../keys/instances/bennett'
+} from 'constants/scene/actors'
+import { BROKEN_HEARTED } from 'constants/scene/actors/instances/bennett'
 import {
     CARESS,
     CARESS_REFLECTION
-} from '../../../keys/instances/khariLiz'
+} from 'constants/scene/actors/instances/khariLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

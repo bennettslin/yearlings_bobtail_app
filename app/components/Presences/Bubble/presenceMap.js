@@ -26,7 +26,7 @@ import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
-} from 'scene/things/keys/bubbles'
+} from 'constants/scene/things/bubbles'
 
 export const propTypes = {
     [TOGETHER_SKETCHBOOK]: PropTypes.bool,

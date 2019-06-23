@@ -4,7 +4,7 @@ import Prologue from './Instances/Prologue'
 
 import {
     PROLOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [PROLOGUE]: PropTypes.bool

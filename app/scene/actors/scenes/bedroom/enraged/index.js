@@ -2,10 +2,10 @@ import {
     PRETEEN_BENNETT,
     FATHER,
     CHRISTOPHER
-} from '../../../keys'
-import { SOBBING } from '../../../keys/instances/christopher'
-import { ROARING } from '../../../keys/instances/father'
-import { ENRAGED } from '../../../keys/instances/preteenBennett'
+} from 'constants/scene/actors'
+import { SOBBING } from 'constants/scene/actors/instances/christopher'
+import { ROARING } from 'constants/scene/actors/instances/father'
+import { ENRAGED } from 'constants/scene/actors/instances/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

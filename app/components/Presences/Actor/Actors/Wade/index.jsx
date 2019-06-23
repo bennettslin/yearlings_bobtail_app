@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
 import LayerHoc from '../../../LayerHoc'
-import { WADE } from '../../../../../scene/actors/keys'
+import { WADE } from '../../../../../constants/scene/actors'
 
 const WadeLayer = memo(({ instanceKey }) => {
     return (

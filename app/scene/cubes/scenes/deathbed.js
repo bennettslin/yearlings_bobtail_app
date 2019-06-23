@@ -2,7 +2,7 @@ import {
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY,
     CLIFF_DEATHBED_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

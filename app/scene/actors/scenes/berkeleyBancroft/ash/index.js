@@ -2,10 +2,10 @@ import {
     BENNETT,
     AMY,
     WADE
-} from '../../../keys'
-import { SMOKER } from '../../../keys/instances/amy'
-import { CATHOLIC_IDEA } from '../../../keys/instances/bennett'
-import { CATHOLIC_GUY } from '../../../keys/instances/wade'
+} from 'constants/scene/actors'
+import { SMOKER } from 'constants/scene/actors/instances/amy'
+import { CATHOLIC_IDEA } from 'constants/scene/actors/instances/bennett'
+import { CATHOLIC_GUY } from 'constants/scene/actors/instances/wade'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

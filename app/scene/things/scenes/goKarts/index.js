@@ -2,11 +2,11 @@ import {
     BACKDROP,
     PANEL
 } from 'constants/scene'
-import { GO_KART_BACKDROP } from '../../keys/backdrops'
+import { GO_KART_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     GO_KART_EXTERIOR_LEFT,
     GO_KART_EXTERIOR_RIGHT
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

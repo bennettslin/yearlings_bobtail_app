@@ -3,8 +3,8 @@ import {
     ANA,
     HOWIE,
     TOMER
-} from '../../keys'
-import { ABBEY_ROAD } from '../../keys/instances/songs'
+} from 'constants/scene/actors'
+import { ABBEY_ROAD } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

@@ -2,9 +2,9 @@ import {
     BENNETT,
     FATHER,
     SASHA_BENNETT
-} from '../../keys'
-import { PAST } from '../../keys/instances/songs'
-import { COMFORTING_HUMILIATED } from '../../keys/instances/sashaBennett'
+} from 'constants/scene/actors'
+import { PAST } from 'constants/scene/actors/instances/songs'
+import { COMFORTING_HUMILIATED } from 'constants/scene/actors/instances/sashaBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

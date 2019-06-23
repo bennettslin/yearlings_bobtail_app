@@ -40,7 +40,7 @@ import {
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION,
     PUPPET_KHARI_LIZ
-} from 'scene/things/keys/puppets'
+} from 'constants/scene/things/puppets'
 
 export const propTypes = {
     [PUPPET_BENNETT_BEGIN]: PropTypes.bool,

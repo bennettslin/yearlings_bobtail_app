@@ -1,4 +1,4 @@
-import { BENNETT_GATE_KEY } from '../../scenes/keys'
+import { BENNETT_GATE_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

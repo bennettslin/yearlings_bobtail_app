@@ -1,5 +1,5 @@
-import { LIZ } from '../../../keys'
-import { ASLEEP_COUCH } from '../../../keys/instances/liz'
+import { LIZ } from 'constants/scene/actors'
+import { ASLEEP_COUCH } from 'constants/scene/actors/instances/liz'
 
 const ARRANGEMENTS_ACTORS = {
     [LIZ]: {

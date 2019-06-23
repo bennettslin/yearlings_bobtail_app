@@ -1,6 +1,6 @@
 import {
     CLIFF_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

@@ -18,7 +18,7 @@ import {
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
-} from 'scene/things/keys/furniture'
+} from 'constants/scene/things/furniture'
 
 export const propTypes = {
     [CAPTAIN_BED_PILLOW]: PropTypes.bool,

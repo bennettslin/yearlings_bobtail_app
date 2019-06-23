@@ -2,14 +2,14 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-import { ROAD_PRESENT } from '../../keys/flats'
+import { ROAD_PRESENT } from 'constants/scene/things/flats'
 import {
     SNOWGLOBE_LIZ_ALONE,
     SNOWGLOBE_BENNETT_MIRIAM,
     BENNETT_COUCH_BUBBLE,
     BENNETT_LEFT_ARMREST_BUBBLE,
     BENNETT_RIGHT_ARMREST_BUBBLE
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {

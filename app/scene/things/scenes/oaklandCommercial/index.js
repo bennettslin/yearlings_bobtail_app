@@ -9,7 +9,7 @@ import {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {

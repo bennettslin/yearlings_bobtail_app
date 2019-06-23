@@ -1,4 +1,4 @@
-import { DEFAULT_STAGE_KEY } from '../scenes/keys'
+import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
 
 import CUBES_DEFAULT_STAGE from './scenes/defaultStage'
 import CUBES_LOGUE from './scenes/logue'

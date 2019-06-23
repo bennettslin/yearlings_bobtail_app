@@ -1,5 +1,5 @@
-import { LIZ } from '../../../keys'
-import { SIFTING_TCHOTCHKES } from '../../../keys/instances/liz'
+import { LIZ } from 'constants/scene/actors'
+import { SIFTING_TCHOTCHKES } from 'constants/scene/actors/instances/liz'
 
 const ARRANGEMENTS_ACTORS = {
     [LIZ]: {

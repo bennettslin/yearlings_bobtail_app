@@ -1,4 +1,4 @@
-import { ALLEY_KEY } from '../../scenes/keys'
+import { ALLEY_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

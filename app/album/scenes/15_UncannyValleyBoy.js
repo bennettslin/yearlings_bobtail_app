@@ -12,7 +12,7 @@ import {
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -35,40 +35,40 @@ import {
     MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
     STEPHANIE
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from '../../scene/actors/keys/instances/estherMother'
+} from '../../constants/scene/actors/instances/estherMother'
 
 import {
     ACCUSATORY,
     REELING
-} from '../../scene/actors/keys/instances/father'
+} from '../../constants/scene/actors/instances/father'
 
-import { JOKING_LAUGHING } from '../../scene/actors/keys/instances/khariLiz'
+import { JOKING_LAUGHING } from '../../constants/scene/actors/instances/khariLiz'
 
-import { PETTING_SEATED } from '../../scene/actors/keys/instances/liz'
+import { PETTING_SEATED } from '../../constants/scene/actors/instances/liz'
 
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF
-} from '../../scene/actors/keys/instances/miriamBennett'
+} from '../../constants/scene/actors/instances/miriamBennett'
 
-import { MISCHIEVOUS_BANJO } from '../../scene/actors/keys/instances/miriamStephanie'
-import { COMFORTING_HUMILIATED } from '../../scene/actors/keys/instances/sashaBennett'
+import { MISCHIEVOUS_BANJO } from '../../constants/scene/actors/instances/miriamStephanie'
+import { COMFORTING_HUMILIATED } from '../../constants/scene/actors/instances/sashaBennett'
 
-import { BENNETT_RECORDING } from '../../scene/actors/keys/instances/stephanie'
+import { BENNETT_RECORDING } from '../../constants/scene/actors/instances/stephanie'
 
 import {
     ASLEEP,
     PAST,
     PRESENT,
     FUTURE
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
-import { WEST_BERKELEY_BACKDROP } from '../../scene/things/keys/backdrops'
+import { WEST_BERKELEY_BACKDROP } from '../../constants/scene/things/backdrops'
 
 import {
     TETHERBALL_POLE,
@@ -76,13 +76,13 @@ import {
     RECORDING_CONSOLE,
     RECORDING_BEERS,
     CRACKED_PICTURE
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     SNOWGLOBE_TETHERBALL,
@@ -95,7 +95,7 @@ import {
     BENNETT_COUCH_BUBBLE,
     BENNETT_LEFT_ARMREST_BUBBLE,
     BENNETT_RIGHT_ARMREST_BUBBLE
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

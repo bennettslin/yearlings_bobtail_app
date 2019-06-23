@@ -7,12 +7,12 @@ import {
     RECORDING_MIC,
     RECORDING_CONSOLE,
     RECORDING_BEERS
-} from '../../keys/fixtures'
-import { ROAD_FUTURE } from '../../keys/flats'
+} from 'constants/scene/things/fixtures'
+import { ROAD_FUTURE } from 'constants/scene/things/flats'
 import {
     SNOWGLOBE_LIZ_KHARI,
     SNOWGLOBE_BENNETT_ALONE
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

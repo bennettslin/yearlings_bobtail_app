@@ -4,7 +4,7 @@ import Officer from './Instances/Officer'
 
 import {
     OFFICER
-} from 'scene/actors/keys/instances/amyNestorTomer'
+} from 'constants/scene/actors/instances/amyNestorTomer'
 
 export const propTypes = {
     [OFFICER]: PropTypes.bool

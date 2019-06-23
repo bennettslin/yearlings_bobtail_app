@@ -11,13 +11,13 @@ import {
     ROARING,
     ACCUSATORY,
     REELING
-} from 'scene/actors/keys/instances/father'
+} from 'constants/scene/actors/instances/father'
 
 import {
     PAST,
     FUTURE,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [ROARING]: PropTypes.bool,

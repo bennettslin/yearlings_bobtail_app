@@ -3,12 +3,12 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { SHORE_RICKSHAW_BACKDROP } from '../../keys/backdrops'
+import { SHORE_RICKSHAW_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BENNETT_SHORE,
     ODIN_SHORE
-} from '../../keys/cutouts'
-import { RICKSHAW_TOWN } from '../../keys/flats'
+} from 'constants/scene/things/cutouts'
+import { RICKSHAW_TOWN } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

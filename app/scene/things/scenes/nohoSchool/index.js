@@ -5,14 +5,14 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-import { NOHO_SCHOOL_BACKDROP } from '../../keys/backdrops'
-import { PLAYGROUND_SLIDE } from '../../keys/cutouts'
+import { NOHO_SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
+import { PLAYGROUND_SLIDE } from 'constants/scene/things/cutouts'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
-} from '../../keys/fixtures'
-import { NOHO_SCHOOLHOUSE } from '../../keys/flats'
-import { ESTHER_SPEECH_PANEL } from '../../keys/panels'
+} from 'constants/scene/things/fixtures'
+import { NOHO_SCHOOLHOUSE } from 'constants/scene/things/flats'
+import { ESTHER_SPEECH_PANEL } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

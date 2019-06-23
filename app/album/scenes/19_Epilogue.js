@@ -1,6 +1,6 @@
 import { ACTOR } from 'constants/scene'
 
-import { LOGUE_KEY } from '../../scene/scenes/keys'
+import { LOGUE_KEY } from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -30,9 +30,9 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
-import { EPILOGUE } from '../../scene/actors/keys/instances/songs'
+import { EPILOGUE } from '../../constants/scene/actors/instances/songs'
 
 export default [
     {

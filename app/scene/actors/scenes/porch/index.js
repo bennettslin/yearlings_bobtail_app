@@ -3,11 +3,11 @@ import {
     WILLY,
     MOTHER,
     CHRISTOPHER
-} from '../../keys'
-import { TANTRUM } from '../../keys/instances/christopher'
-import { STOOPING } from '../../keys/instances/mother'
-import { CAUTIOUS } from '../../keys/instances/preteenBennett'
-import { DUCKING } from '../../keys/instances/willy'
+} from 'constants/scene/actors'
+import { TANTRUM } from 'constants/scene/actors/instances/christopher'
+import { STOOPING } from 'constants/scene/actors/instances/mother'
+import { CAUTIOUS } from 'constants/scene/actors/instances/preteenBennett'
+import { DUCKING } from 'constants/scene/actors/instances/willy'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

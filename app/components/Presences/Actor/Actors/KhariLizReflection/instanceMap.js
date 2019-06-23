@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 import CaressReflection from './Instances/CaressReflection'
 
-import { CARESS_REFLECTION } from 'scene/actors/keys/instances/khariLiz'
+import { CARESS_REFLECTION } from 'constants/scene/actors/instances/khariLiz'
 
 export const propTypes = {
     [CARESS_REFLECTION]: PropTypes.bool

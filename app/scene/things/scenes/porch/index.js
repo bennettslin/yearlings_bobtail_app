@@ -4,7 +4,7 @@ import {
 import {
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

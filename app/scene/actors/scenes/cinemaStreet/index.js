@@ -1,9 +1,9 @@
 import {
     BENNETT,
     HOWIE
-} from '../../keys'
-import { MERRILY_DERANGED } from '../../keys/instances/bennett'
-import { USHER_LOOKING } from '../../keys/instances/howie'
+} from 'constants/scene/actors'
+import { MERRILY_DERANGED } from 'constants/scene/actors/instances/bennett'
+import { USHER_LOOKING } from 'constants/scene/actors/instances/howie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

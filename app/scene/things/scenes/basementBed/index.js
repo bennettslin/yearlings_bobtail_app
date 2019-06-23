@@ -1,5 +1,5 @@
 import { FIXTURE } from 'constants/scene'
-import { CRACKED_PICTURE } from '../../keys/fixtures'
+import { CRACKED_PICTURE } from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

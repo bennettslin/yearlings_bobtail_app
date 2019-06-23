@@ -4,7 +4,7 @@ import {
 import {
     CINEMA_POSTER_LEFT,
     CINEMA_POSTER_RIGHT
-} from '../../keys/cardboards'
+} from 'constants/scene/things/cardboards'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

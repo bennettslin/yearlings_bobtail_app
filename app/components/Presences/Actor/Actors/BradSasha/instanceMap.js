@@ -4,7 +4,7 @@ import CharmedSchoolbus from './Instances/CharmedSchoolbus'
 
 import {
     CHARMED_SCHOOLBUS
-} from 'scene/actors/keys/instances/bradSasha'
+} from 'constants/scene/actors/instances/bradSasha'
 
 export const propTypes = {
     [CHARMED_SCHOOLBUS]: PropTypes.bool

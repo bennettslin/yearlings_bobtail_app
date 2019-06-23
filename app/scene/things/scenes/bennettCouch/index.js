@@ -4,7 +4,7 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-import { BENNETT_COUCH_THOUGHT_BACKDROP } from '../../keys/backdrops'
+import { BENNETT_COUCH_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER,
@@ -12,17 +12,17 @@ import {
     TELEVISION_ALBUM,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE
-} from '../../keys/cardboards'
+} from 'constants/scene/things/cardboards'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     KEYBOARD
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 import {
     BENNETT_COUCH,
     BENNETT_LEFT_ARMREST,
     BENNETT_RIGHT_ARMREST
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

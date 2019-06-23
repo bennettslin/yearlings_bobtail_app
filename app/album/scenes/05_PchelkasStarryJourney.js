@@ -19,7 +19,7 @@ import {
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -35,27 +35,27 @@ import {
     ANDREW,
     TRISTAN,
     CHRISTOPHER_BENNETT
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     THROWING,
     NOODLING
-} from '../../scene/actors/keys/instances/andrew'
+} from '../../constants/scene/actors/instances/andrew'
 
 import {
     GESTURING,
     SNACKING
-} from '../../scene/actors/keys/instances/brad'
+} from '../../constants/scene/actors/instances/brad'
 
 import {
     STARING
-} from '../../scene/actors/keys/instances/christopher'
+} from '../../constants/scene/actors/instances/christopher'
 
 import {
     BLISSFUL_GUILTY
-} from '../../scene/actors/keys/instances/christopherBennett'
+} from '../../constants/scene/actors/instances/christopherBennett'
 
-import { ARGUING } from '../../scene/actors/keys/instances/mother'
+import { ARGUING } from '../../constants/scene/actors/instances/mother'
 
 import {
     FEIGNING_SICK,
@@ -63,35 +63,35 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH
-} from '../../scene/actors/keys/instances/preteenBennett'
+} from '../../constants/scene/actors/instances/preteenBennett'
 
-import { POPULAR_GIRL } from '../../scene/actors/keys/instances/sasha'
+import { POPULAR_GIRL } from '../../constants/scene/actors/instances/sasha'
 
-import { ASLEEP } from '../../scene/actors/keys/instances/songs'
+import { ASLEEP } from '../../constants/scene/actors/instances/songs'
 
-import { PRINCIPAL } from '../../scene/actors/keys/instances/tristan'
+import { PRINCIPAL } from '../../constants/scene/actors/instances/tristan'
 
 import {
     VAN_NUYS_SCHOOL_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     DOGS_SKETCHBOOK,
     ESCAPE_POD_SKETCHBOOK
-} from '../../scene/things/keys/bubbles'
+} from '../../constants/scene/things/bubbles'
 
 import {
     BLOOM_COUNTY_POSTER,
     VAN_NUYS_LOGO,
     CORKBOARD
-} from '../../scene/things/keys/cardboards'
+} from '../../constants/scene/things/cardboards'
 
 import {
     TRASH_CAN_LOCKERS,
     TRASH_CAN_QUAD,
     VAN_NUYS_PLANT_LOCKERS,
     VAN_NUYS_PLANT_QUAD
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     CAPTAIN_BED_LAMP,
@@ -99,29 +99,29 @@ import {
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
     THROWN_FRUIT
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     BEDROOM_BUS,
     LOCKER_BANK
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
-} from '../../scene/things/keys/furniture'
+} from '../../constants/scene/things/furniture'
 
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 import {
     PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY
-} from '../../scene/things/keys/puppets'
+} from '../../constants/scene/things/puppets'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the

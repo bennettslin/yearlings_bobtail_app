@@ -13,7 +13,7 @@ import Epilogue from './Instances/Epilogue'
 import {
     SHANE_BUYING,
     SHANE_SPILLING
-} from 'scene/actors/keys/instances/tomer'
+} from 'constants/scene/actors/instances/tomer'
 
 import {
     GANGBANGER,
@@ -23,7 +23,7 @@ import {
     CEMETERY,
     STATION_WAGON,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [GANGBANGER]: PropTypes.bool,

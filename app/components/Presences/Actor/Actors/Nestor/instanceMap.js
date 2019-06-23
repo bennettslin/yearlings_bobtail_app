@@ -8,12 +8,12 @@ import Epilogue from './Instances/Epilogue'
 import {
     JOGGER,
     INJURED
-} from 'scene/actors/keys/instances/nestor'
+} from 'constants/scene/actors/instances/nestor'
 
 import {
     GREETING,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [JOGGER]: PropTypes.bool,

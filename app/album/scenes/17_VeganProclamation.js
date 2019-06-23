@@ -15,7 +15,7 @@ import {
     ALLEY_KEY,
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -32,7 +32,7 @@ import {
     STEPHANIE,
     WADE,
     KHARI_LIZ_REFLECTION
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     CAMPUS_ASHAMED,
@@ -40,22 +40,22 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION
-} from '../../scene/actors/keys/instances/khariLiz'
+} from '../../constants/scene/actors/instances/khariLiz'
 
 import {
     GREETING,
     PROTESTER
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     UC_BERKELEY_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     SIGNPOST,
@@ -65,7 +65,7 @@ import {
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
     DUMPSTER
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     ASH_CAN,
@@ -73,30 +73,30 @@ import {
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     CAMPANILE,
     CROWD_NEAR_BACK,
     CROWD_FAR_BACK
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
-} from '../../scene/things/keys/furniture'
+} from '../../constants/scene/things/furniture'
 
 import {
     LIZ_BED,
     PHONE_CALL_PANEL
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION
-} from '../../scene/things/keys/puppets'
+} from '../../constants/scene/things/puppets'
 
 export default [
     {

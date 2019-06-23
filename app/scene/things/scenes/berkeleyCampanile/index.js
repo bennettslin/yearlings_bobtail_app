@@ -7,9 +7,9 @@ import {
     SIGNPOST,
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE_RIGHT
-} from '../../keys/cutouts'
-import { CAMPANILE } from '../../keys/flats'
-import { GHOST_ODIN_CAMPUS } from '../../keys/puppets'
+} from 'constants/scene/things/cutouts'
+import { CAMPANILE } from 'constants/scene/things/flats'
+import { GHOST_ODIN_CAMPUS } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

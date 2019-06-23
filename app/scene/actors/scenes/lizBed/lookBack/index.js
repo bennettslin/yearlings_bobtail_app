@@ -3,15 +3,15 @@ import {
     LIZ,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../../../keys'
+} from 'constants/scene/actors'
 import {
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from '../../../keys/instances/bennett'
+} from 'constants/scene/actors/instances/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from '../../../keys/instances/liz'
+} from 'constants/scene/actors/instances/liz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

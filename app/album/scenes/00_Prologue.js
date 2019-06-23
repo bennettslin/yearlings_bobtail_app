@@ -1,15 +1,15 @@
 import { ACTOR } from 'constants/scene'
 
-import { LOGUE_KEY } from '../../scene/scenes/keys'
+import { LOGUE_KEY } from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
     SEASON_INDOOR
 } from '../../scene/sky/keys'
 
-import { OLD_BENNETT } from '../../scene/actors/keys'
+import { OLD_BENNETT } from '../../constants/scene/actors'
 
-import { PROLOGUE } from '../../scene/actors/keys/instances/songs'
+import { PROLOGUE } from '../../constants/scene/actors/instances/songs'
 
 export default [
     {

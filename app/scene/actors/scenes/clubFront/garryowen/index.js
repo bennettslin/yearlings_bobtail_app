@@ -2,10 +2,10 @@ import {
     BENNETT,
     ANA,
     MIRIAM_TRISTAN
-} from '../../../keys'
-import { GREETING } from '../../../keys/instances/songs'
-import { SMIRKING } from '../../../keys/instances/ana'
-import { NOOGIE } from '../../../keys/instances/miriamTristan'
+} from 'constants/scene/actors'
+import { GREETING } from 'constants/scene/actors/instances/songs'
+import { SMIRKING } from 'constants/scene/actors/instances/ana'
+import { NOOGIE } from 'constants/scene/actors/instances/miriamTristan'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

@@ -4,7 +4,7 @@ import {
 import {
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENTS
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

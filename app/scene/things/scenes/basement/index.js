@@ -6,7 +6,7 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

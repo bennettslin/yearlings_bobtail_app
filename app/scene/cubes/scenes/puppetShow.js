@@ -1,4 +1,4 @@
-import { PUPPET_SHOW_KEY } from '../../scenes/keys'
+import { PUPPET_SHOW_KEY } from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

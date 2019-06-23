@@ -1,4 +1,4 @@
-import { BUOY_KEY } from '../../scenes/keys'
+import { BUOY_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

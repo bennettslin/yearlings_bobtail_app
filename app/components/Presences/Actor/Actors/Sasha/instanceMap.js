@@ -6,7 +6,7 @@ import PopularGirl from './Instances/PopularGirl'
 import {
     INDIGNANT,
     POPULAR_GIRL
-} from 'scene/actors/keys/instances/sasha'
+} from 'constants/scene/actors/instances/sasha'
 
 export const propTypes = {
     [INDIGNANT]: PropTypes.bool,

@@ -1,9 +1,9 @@
 import {
     BENNETT,
     MIRIAM
-} from '../../../keys'
-import { REMOVING_PANTS } from '../../../keys/instances/bennett'
-import { PERFUMING } from '../../../keys/instances/miriam'
+} from 'constants/scene/actors'
+import { REMOVING_PANTS } from 'constants/scene/actors/instances/bennett'
+import { PERFUMING } from 'constants/scene/actors/instances/miriam'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

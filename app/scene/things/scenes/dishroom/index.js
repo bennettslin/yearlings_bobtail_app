@@ -8,8 +8,8 @@ import {
     GLASS_CART,
     GLASS_RACK,
     DISH_PILE
-} from '../../keys/fixtures'
-import { DISHROOM_SINK } from '../../keys/panels'
+} from 'constants/scene/things/fixtures'
+import { DISHROOM_SINK } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

@@ -5,11 +5,11 @@ import Greeting from './Instances/Greeting'
 
 import {
     NOOGIE
-} from 'scene/actors/keys/instances/miriamTristan'
+} from 'constants/scene/actors/instances/miriamTristan'
 
 import {
     GREETING
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [NOOGIE]: PropTypes.bool,

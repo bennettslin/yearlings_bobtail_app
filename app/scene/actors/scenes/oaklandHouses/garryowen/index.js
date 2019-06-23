@@ -3,11 +3,11 @@ import {
     ANA,
     TRISTAN,
     NESTOR
-} from '../../../keys'
-import { CHUCKLING } from '../../../keys/instances/ana'
-import { DROPPING_MEATS } from '../../../keys/instances/bennett'
-import { INJURED } from '../../../keys/instances/nestor'
-import { PUNCHING } from '../../../keys/instances/tristan'
+} from 'constants/scene/actors'
+import { CHUCKLING } from 'constants/scene/actors/instances/ana'
+import { DROPPING_MEATS } from 'constants/scene/actors/instances/bennett'
+import { INJURED } from 'constants/scene/actors/instances/nestor'
+import { PUNCHING } from 'constants/scene/actors/instances/tristan'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

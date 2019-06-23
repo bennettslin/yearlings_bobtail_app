@@ -14,7 +14,7 @@ import {
     CATHOLIC_CHURCH_KEY,
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -27,11 +27,11 @@ import {
     CATHERINE,
     AMY,
     WADE
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     SMOKER
-} from '../../scene/actors/keys/instances/amy'
+} from '../../constants/scene/actors/instances/amy'
 
 import {
     BREAKUP_DEJECTED,
@@ -39,26 +39,26 @@ import {
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
     PIOUS
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from '../../scene/actors/keys/instances/catherine'
+} from '../../constants/scene/actors/instances/catherine'
 
-import { CATHOLIC_GUY } from '../../scene/actors/keys/instances/wade'
+import { CATHOLIC_GUY } from '../../constants/scene/actors/instances/wade'
 
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER
-} from '../../scene/things/keys/cardboards'
+} from '../../constants/scene/things/cardboards'
 
 import {
     RECYCLABLES,
@@ -67,25 +67,25 @@ import {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE_LEFT,
     UC_BERKELEY_TREE_RIGHT
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
     CAMPANILE
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     BENNETT_COUCH,
     BENNETT_LEFT_ARMREST,
     BENNETT_RIGHT_ARMREST
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 export default [
     {

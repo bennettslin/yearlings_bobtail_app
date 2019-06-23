@@ -2,10 +2,10 @@ import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from '../../keys'
-import { CONCERNED } from '../../keys/instances/anita'
-import { SNICKERING } from '../../keys/instances/esther'
-import { FLUSTERED } from '../../keys/instances/youngBennett'
+} from 'constants/scene/actors'
+import { CONCERNED } from 'constants/scene/actors/instances/anita'
+import { SNICKERING } from 'constants/scene/actors/instances/esther'
+import { FLUSTERED } from 'constants/scene/actors/instances/youngBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {

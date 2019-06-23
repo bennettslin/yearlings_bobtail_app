@@ -2,8 +2,8 @@ import {
     BUBBLE,
     CUTOUT
 } from 'constants/scene'
-import { GO_KART_THOUGHT } from '../../keys/bubbles'
-import { TRAFFIC_LIGHT } from '../../keys/cutouts'
+import { GO_KART_THOUGHT } from 'constants/scene/things/bubbles'
+import { TRAFFIC_LIGHT } from 'constants/scene/things/cutouts'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLE]: {

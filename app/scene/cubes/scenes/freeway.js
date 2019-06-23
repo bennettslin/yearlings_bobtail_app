@@ -1,4 +1,4 @@
-import { FREEWAY_KEY } from '../../scenes/keys'
+import { FREEWAY_KEY } from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

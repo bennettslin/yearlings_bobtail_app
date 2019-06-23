@@ -3,12 +3,12 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { WEST_BERKELEY_BACKDROP } from '../../keys/backdrops'
-import { BERKELEY_LAMPPOST } from '../../keys/cutouts'
+import { WEST_BERKELEY_BACKDROP } from 'constants/scene/things/backdrops'
+import { BERKELEY_LAMPPOST } from 'constants/scene/things/cutouts'
 import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

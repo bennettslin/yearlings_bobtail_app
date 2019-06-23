@@ -3,12 +3,12 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { SHORE_BUOY_BACKDROP } from '../../keys/backdrops'
+import { SHORE_BUOY_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BENNETT_ODIN_BUOY,
     YELLOW_TAPED_GRILL
-} from '../../keys/cutouts'
-import { SHORE_CARNIVAL } from '../../keys/flats'
+} from 'constants/scene/things/cutouts'
+import { SHORE_CARNIVAL } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

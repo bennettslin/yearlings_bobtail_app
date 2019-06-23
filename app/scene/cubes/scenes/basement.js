@@ -1,4 +1,4 @@
-import { BASEMENT_KEY } from '../../scenes/keys'
+import { BASEMENT_KEY } from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

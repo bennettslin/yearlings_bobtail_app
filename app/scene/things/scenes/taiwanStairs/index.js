@@ -2,11 +2,11 @@ import {
     BACKDROP,
     CUTOUT
 } from 'constants/scene'
-import { TAIWAN_STAIRS_BACKDROP } from '../../keys/backdrops'
+import { TAIWAN_STAIRS_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

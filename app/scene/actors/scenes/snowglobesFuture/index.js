@@ -4,10 +4,10 @@ import {
     FATHER,
     KHARI_LIZ,
     STEPHANIE
-} from '../../keys'
-import { FUTURE } from '../../keys/instances/songs'
-import { JOKING_LAUGHING } from '../../keys/instances/khariLiz'
-import { BENNETT_RECORDING } from '../../keys/instances/stephanie'
+} from 'constants/scene/actors'
+import { FUTURE } from 'constants/scene/actors/instances/songs'
+import { JOKING_LAUGHING } from 'constants/scene/actors/instances/khariLiz'
+import { BENNETT_RECORDING } from 'constants/scene/actors/instances/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

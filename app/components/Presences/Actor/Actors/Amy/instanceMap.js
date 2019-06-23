@@ -12,14 +12,14 @@ import {
     SMOKER,
     OFFICER,
     DOCTOR
-} from 'scene/actors/keys/instances/amy'
+} from 'constants/scene/actors/instances/amy'
 
 import {
     FLIRTING,
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [SMOKER]: PropTypes.bool,

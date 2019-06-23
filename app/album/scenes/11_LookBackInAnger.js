@@ -11,7 +11,7 @@ import {
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
     CLUB_LOADING
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -32,26 +32,26 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from '../../scene/actors/keys/instances/liz'
+} from '../../constants/scene/actors/instances/liz'
 
-import { SHANE_SPILLING } from '../../scene/actors/keys/instances/tomer'
+import { SHANE_SPILLING } from '../../constants/scene/actors/instances/tomer'
 
-import { WATCHING } from '../../scene/actors/keys/instances/wade'
+import { WATCHING } from '../../constants/scene/actors/instances/wade'
 
 import {
     SQUEEZING
-} from '../../scene/actors/keys/instances/amyStephanie'
+} from '../../constants/scene/actors/instances/amyStephanie'
 
 import {
     PERFORMING,
@@ -59,14 +59,14 @@ import {
     CARRYING,
     MINGLING,
     WAITING
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     MONITOR_SIDE_CROWD,
     MONITOR_SIDE_STAGE,
     WALL_SPEAKER_SIDE_CROWD,
     WALL_SPEAKER_SIDE_STAGE
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     STAGE_MIC_SIDE_CROWD,
@@ -79,14 +79,14 @@ import {
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     CROWD_FAR_SIDE,
     CROWD_NEAR_SIDE
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
-import { LIZ_BED } from '../../scene/things/keys/panels'
+import { LIZ_BED } from '../../constants/scene/things/panels'
 
 export default [
     {

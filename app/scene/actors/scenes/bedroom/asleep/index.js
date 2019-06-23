@@ -1,5 +1,5 @@
-import { PRETEEN_BENNETT } from '../../../keys'
-import { ASLEEP } from '../../../keys/instances/songs'
+import { PRETEEN_BENNETT } from 'constants/scene/actors'
+import { ASLEEP } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

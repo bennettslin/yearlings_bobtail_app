@@ -5,12 +5,12 @@ import {
 import {
     SANDBAGS,
     STAGE_LIGHTS
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 import {
     PUSH_BROOM_BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
 import LayerHoc from '../../../LayerHoc'
-import { ANITA } from '../../../../../scene/actors/keys'
+import { ANITA } from '../../../../../constants/scene/actors'
 
 const AnitaLayer = memo(({ instanceKey }) => {
     return (

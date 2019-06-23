@@ -3,12 +3,12 @@ import {
     CUTOUT,
     FIXTURE
 } from 'constants/scene'
-import { VALLEY_BACKDROP } from '../../keys/backdrops'
+import { VALLEY_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     OVERPASS_SIGN_BACK,
     OVERPASS_SIGN_FRONT
-} from '../../keys/cutouts'
-import { SHOPPING_CART_FULL } from '../../keys/fixtures'
+} from 'constants/scene/things/cutouts'
+import { SHOPPING_CART_FULL } from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

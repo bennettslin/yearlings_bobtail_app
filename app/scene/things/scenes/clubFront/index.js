@@ -7,12 +7,12 @@ import {
     MONITOR_SPEAKER_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 import {
     CASH_BOX,
     GUITAR,
     DRUMKIT
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

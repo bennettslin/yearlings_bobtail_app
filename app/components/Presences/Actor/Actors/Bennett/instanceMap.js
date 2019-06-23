@@ -80,7 +80,7 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from 'scene/actors/keys/instances/bennett'
+} from 'constants/scene/actors/instances/bennett'
 
 import {
     EATING,
@@ -105,7 +105,7 @@ import {
     PAST,
     FUTURE,
     EL_TORITO
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [BREAKUP_DEJECTED]: PropTypes.bool,

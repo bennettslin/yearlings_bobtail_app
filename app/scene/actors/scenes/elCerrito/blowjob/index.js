@@ -1,5 +1,5 @@
-import { MIRIAM_BENNETT } from '../../../keys'
-import { BLOWJOB } from '../../../keys/instances/miriamBennett'
+import { MIRIAM_BENNETT } from 'constants/scene/actors'
+import { BLOWJOB } from 'constants/scene/actors/instances/miriamBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [MIRIAM_BENNETT]: {

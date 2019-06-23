@@ -7,12 +7,12 @@ import {
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 import {
     ATTIC_COUCH,
     ATTIC_LEFT_ARMREST,
     ATTIC_RIGHT_ARMREST
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

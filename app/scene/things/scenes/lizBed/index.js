@@ -12,17 +12,17 @@ import {
     BENNETT_SHOE_REFLECTION,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
-} from '../../keys/fixtures'
+} from 'constants/scene/things/fixtures'
 import {
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
-} from '../../keys/furniture'
+} from 'constants/scene/things/furniture'
 import {
     PHONE_CALL_PANEL,
     LIZ_BED
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

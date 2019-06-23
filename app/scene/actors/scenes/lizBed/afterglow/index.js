@@ -1,11 +1,11 @@
 import {
     BENNETT_LIZ,
     BENNETT_LIZ_REFLECTION
-} from '../../../keys'
+} from 'constants/scene/actors'
 import {
     AFTERGLOW,
     AFTERGLOW_REFLECTION
-} from '../../../keys/instances/bennettLiz'
+} from 'constants/scene/actors/instances/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

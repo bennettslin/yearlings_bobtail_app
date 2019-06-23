@@ -2,11 +2,11 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { CLIFF_TREE } from '../../keys/cutouts'
+import { CLIFF_TREE } from 'constants/scene/things/cutouts'
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

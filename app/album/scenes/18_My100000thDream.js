@@ -14,7 +14,7 @@ import {
     WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -30,29 +30,29 @@ import {
     LIZ,
     MIRIAM,
     AMY
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
 import {
     DOCTOR
-} from '../../scene/actors/keys/instances/amy'
+} from '../../constants/scene/actors/instances/amy'
 
 import {
     EL_TORITO,
     GOPI
-} from '../../scene/actors/keys/instances/songs'
+} from '../../constants/scene/actors/instances/songs'
 
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from '../../scene/actors/keys/instances/bennettLiz'
+} from '../../constants/scene/actors/instances/bennettLiz'
 
 import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     DISPENSER_LEFT,
@@ -60,28 +60,28 @@ import {
     WEDDING_CROWD,
     IV_DRIP,
     CLIFF_TREE
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     HOSPITAL_RECORD_PLAYER
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR,
     FOREBODING_TREES
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     WEDDING_PLATFORM,
     INVERSE_THOUGHT_PANEL,
     HOSPITAL_BED
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 import {
     PUPPET_KHARI_LIZ
-} from '../../scene/things/keys/puppets'
+} from '../../constants/scene/things/puppets'
 
 export default [
     {

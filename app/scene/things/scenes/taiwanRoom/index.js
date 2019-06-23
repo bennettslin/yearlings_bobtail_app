@@ -7,8 +7,8 @@ import {
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS
-} from '../../keys/cutouts'
-import { FRIDGE_DRAWINGS } from '../../keys/fixtures'
+} from 'constants/scene/things/cutouts'
+import { FRIDGE_DRAWINGS } from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

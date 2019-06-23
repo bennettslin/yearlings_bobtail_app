@@ -35,9 +35,9 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH
-} from 'scene/actors/keys/instances/preteenBennett'
+} from 'constants/scene/actors/instances/preteenBennett'
 
-import { ASLEEP } from 'scene/actors/keys/instances/songs'
+import { ASLEEP } from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [CAUTIOUS]: PropTypes.bool,

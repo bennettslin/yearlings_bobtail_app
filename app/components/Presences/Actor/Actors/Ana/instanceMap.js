@@ -16,7 +16,7 @@ import {
     SQUATTING,
     CHUCKLING,
     SMIRKING
-} from 'scene/actors/keys/instances/ana'
+} from 'constants/scene/actors/instances/ana'
 
 import {
     EATING,
@@ -27,7 +27,7 @@ import {
     PERFORMING,
     WAITING,
     EPILOGUE
-} from 'scene/actors/keys/instances/songs'
+} from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [SQUATTING]: PropTypes.bool,

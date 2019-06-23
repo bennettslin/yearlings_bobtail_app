@@ -1,5 +1,5 @@
-import { SASHA_BENNETT } from '../../keys'
-import { MERMAID } from '../../keys/instances/sashaBennett'
+import { SASHA_BENNETT } from 'constants/scene/actors'
+import { MERMAID } from 'constants/scene/actors/instances/sashaBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [SASHA_BENNETT]: {

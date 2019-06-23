@@ -3,15 +3,15 @@ import {
     CUTOUT,
     PANEL
 } from 'constants/scene'
-import { OCEAN_FLOOR_FAR } from '../../keys/backdrops'
+import { OCEAN_FLOOR_FAR } from 'constants/scene/things/backdrops'
 import {
     BENNETT_MAT,
     ODIN_MAT
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

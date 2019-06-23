@@ -1,4 +1,4 @@
-import { OCEAN_FLOOR_KEY } from '../../scenes/keys'
+import { OCEAN_FLOOR_KEY } from 'constants/scene/scenes'
 
 import {
     SAND_HSLA

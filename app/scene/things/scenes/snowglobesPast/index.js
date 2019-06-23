@@ -2,8 +2,8 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-import { ROAD_PAST } from '../../keys/flats'
-import { SNOWGLOBE_TETHERBALL } from '../../keys/panels'
+import { ROAD_PAST } from 'constants/scene/things/flats'
+import { SNOWGLOBE_TETHERBALL } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {

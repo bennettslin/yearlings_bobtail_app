@@ -4,10 +4,10 @@ import {
     FIXTURE,
     PUPPET
 } from 'constants/scene'
-import { UC_BERKELEY_BACKDROP } from '../../keys/backdrops'
-import { UC_BERKELEY_TREE_LEFT } from '../../keys/cutouts'
-import { ASH_CAN } from '../../keys/fixtures'
-import { GHOST_ODIN_DEMONSTRATION } from '../../keys/puppets'
+import { UC_BERKELEY_BACKDROP } from 'constants/scene/things/backdrops'
+import { UC_BERKELEY_TREE_LEFT } from 'constants/scene/things/cutouts'
+import { ASH_CAN } from 'constants/scene/things/fixtures'
+import { GHOST_ODIN_DEMONSTRATION } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

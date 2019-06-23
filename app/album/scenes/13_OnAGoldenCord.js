@@ -11,7 +11,7 @@ import {
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -29,43 +29,43 @@ import {
     WILLY,
     AMY_NESTOR_TOMER,
     STEPHANIE
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
-import { OFFICER } from '../../scene/actors/keys/instances/amyNestorTomer'
+import { OFFICER } from '../../constants/scene/actors/instances/amyNestorTomer'
 
 import {
     CORD_SIDE,
     CORD_REAR
-} from '../../scene/actors/keys/instances/bennett'
+} from '../../constants/scene/actors/instances/bennett'
 
 import {
     AWKWARD_CONSOLATION
-} from '../../scene/actors/keys/instances/bennettLiz'
+} from '../../constants/scene/actors/instances/bennettLiz'
 
 import {
     HORSING,
     DRYING_TEARS
-} from '../../scene/actors/keys/instances/bennettStephanie'
+} from '../../constants/scene/actors/instances/bennettStephanie'
 
 import {
     BENNETT_DEFIANT
-} from '../../scene/actors/keys/instances/stephanie'
+} from '../../constants/scene/actors/instances/stephanie'
 
-import { CROSSING_GUARD } from '../../scene/actors/keys/instances/willy'
+import { CROSSING_GUARD } from '../../constants/scene/actors/instances/willy'
 
-import { YOUNG_CHILD } from '../../scene/actors/keys/instances/songs'
+import { YOUNG_CHILD } from '../../constants/scene/actors/instances/songs'
 
 import {
     OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     TWIN_STREETLAMP_FAR,
     TWIN_STREETLAMP_MIDDLE,
     TWIN_STREETLAMP_NEAR
-} from '../../scene/things/keys/cutouts'
+} from '../../constants/scene/things/cutouts'
 
 import {
     OAKLAND_HOUSE_LEFT,
@@ -87,7 +87,7 @@ import {
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 export default [
     {

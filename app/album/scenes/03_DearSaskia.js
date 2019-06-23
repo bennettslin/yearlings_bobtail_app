@@ -12,7 +12,7 @@ import {
     PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_COURT_KEY
-} from '../../scene/scenes/keys'
+} from '../../constants/scene/scenes'
 
 import {
     TIME_ANYTIME,
@@ -26,30 +26,30 @@ import {
     ANDREW,
     BRAD_BENNETT,
     BRAD_SASHA
-} from '../../scene/actors/keys'
+} from '../../constants/scene/actors'
 
-import { FEIGNING_FEAR } from '../../scene/actors/keys/instances/andrew'
-import { TYING_TETHER } from '../../scene/actors/keys/instances/bradBennett'
-import { CHARMED_SCHOOLBUS } from '../../scene/actors/keys/instances/bradSasha'
-import { PANICKED } from '../../scene/actors/keys/instances/preteenBennett'
-import { INDIGNANT } from '../../scene/actors/keys/instances/sasha'
+import { FEIGNING_FEAR } from '../../constants/scene/actors/instances/andrew'
+import { TYING_TETHER } from '../../constants/scene/actors/instances/bradBennett'
+import { CHARMED_SCHOOLBUS } from '../../constants/scene/actors/instances/bradSasha'
+import { PANICKED } from '../../constants/scene/actors/instances/preteenBennett'
+import { INDIGNANT } from '../../constants/scene/actors/instances/sasha'
 
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP
-} from '../../scene/things/keys/backdrops'
+} from '../../constants/scene/things/backdrops'
 
 import {
     TOGETHER_SKETCHBOOK,
     APART_SKETCHBOOK
-} from '../../scene/things/keys/bubbles'
+} from '../../constants/scene/things/bubbles'
 
 import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY
-} from '../../scene/things/keys/fixtures'
+} from '../../constants/scene/things/fixtures'
 
 import {
     TAIWAN_CLOUDS,
@@ -59,12 +59,12 @@ import {
     TAIWAN_MOUNTAIN_RIGHT,
     VAN_NUYS_SCHOOLHOUSE_LEFT,
     VAN_NUYS_SCHOOLHOUSE_RIGHT
-} from '../../scene/things/keys/flats'
+} from '../../constants/scene/things/flats'
 
 import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
-} from '../../scene/things/keys/panels'
+} from '../../constants/scene/things/panels'
 
 import {
     PUPPET_BENNETT_BEGIN,
@@ -73,7 +73,7 @@ import {
     PUPPET_FAMILY_MIDDLE,
     PUPPET_BENNETT_END,
     PUPPET_FAMILY_END
-} from '../../scene/things/keys/puppets'
+} from '../../constants/scene/things/puppets'
 
 export default [
     {

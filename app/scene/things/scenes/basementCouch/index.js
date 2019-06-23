@@ -2,7 +2,7 @@ import { CARDBOARD } from 'constants/scene'
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
-} from '../../keys/cardboards'
+} from 'constants/scene/things/cardboards'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

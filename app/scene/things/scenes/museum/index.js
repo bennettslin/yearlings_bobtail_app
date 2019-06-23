@@ -2,8 +2,8 @@ import {
     FIXTURE,
     FLAT
 } from 'constants/scene'
-import { CAVEMAN_BONES } from '../../keys/fixtures'
-import { MUSEUM_DISPLAY } from '../../keys/flats'
+import { CAVEMAN_BONES } from 'constants/scene/things/fixtures'
+import { MUSEUM_DISPLAY } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

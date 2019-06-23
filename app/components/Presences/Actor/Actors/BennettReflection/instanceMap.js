@@ -4,7 +4,7 @@ import ShoesReflection from './Instances/ShoesReflection'
 
 import {
     SHOES_REFLECTION
-} from 'scene/actors/keys/instances/bennett'
+} from 'constants/scene/actors/instances/bennett'
 
 export const propTypes = {
     [SHOES_REFLECTION]: PropTypes.bool

@@ -1,6 +1,6 @@
 import {
     RICKSHAW_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     SAND_HSLA,

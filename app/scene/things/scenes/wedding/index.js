@@ -5,11 +5,11 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-import { WEDDING_BACKDROP } from '../../keys/backdrops'
-import { WEDDING_CROWD } from '../../keys/cutouts'
-import { FOREBODING_TREES } from '../../keys/flats'
-import { WEDDING_PLATFORM } from '../../keys/panels'
-import { PUPPET_KHARI_LIZ } from '../../keys/puppets'
+import { WEDDING_BACKDROP } from 'constants/scene/things/backdrops'
+import { WEDDING_CROWD } from 'constants/scene/things/cutouts'
+import { FOREBODING_TREES } from 'constants/scene/things/flats'
+import { WEDDING_PLATFORM } from 'constants/scene/things/panels'
+import { PUPPET_KHARI_LIZ } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

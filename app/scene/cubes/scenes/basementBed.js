@@ -1,7 +1,7 @@
 import {
     BASEMENT_BED_KEY,
     BASEMENT_MAGIC_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

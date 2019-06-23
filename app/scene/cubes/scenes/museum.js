@@ -1,4 +1,4 @@
-import { MUSEUM_KEY } from '../../scenes/keys'
+import { MUSEUM_KEY } from 'constants/scene/scenes'
 
 import {
     CEILING_HSLA,

@@ -1,7 +1,7 @@
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     CEILING_HSLA,

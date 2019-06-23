@@ -3,9 +3,9 @@ import {
     FIXTURE,
     FLAT
 } from 'constants/scene'
-import { CEMETERY_BACKDROP } from '../../keys/backdrops'
-import { GRAVESTONE } from '../../keys/fixtures'
-import { CEMETERY_HILLS_NEAR } from '../../keys/flats'
+import { CEMETERY_BACKDROP } from 'constants/scene/things/backdrops'
+import { GRAVESTONE } from 'constants/scene/things/fixtures'
+import { CEMETERY_HILLS_NEAR } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

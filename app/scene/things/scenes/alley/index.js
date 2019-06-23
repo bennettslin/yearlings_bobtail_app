@@ -3,9 +3,9 @@ import {
     FIXTURE,
     PUPPET
 } from 'constants/scene'
-import { DUMPSTER } from '../../keys/cutouts'
-import { BURGER_WRAPPER } from '../../keys/fixtures'
-import { GHOST_ODIN_ALLEY } from '../../keys/puppets'
+import { DUMPSTER } from 'constants/scene/things/cutouts'
+import { BURGER_WRAPPER } from 'constants/scene/things/fixtures'
+import { GHOST_ODIN_ALLEY } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

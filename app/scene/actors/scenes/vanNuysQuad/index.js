@@ -3,11 +3,11 @@ import {
     SASHA,
     BRAD,
     ANDREW
-} from '../../keys'
-import { NOODLING } from '../../keys/instances/andrew'
-import { SNACKING } from '../../keys/instances/brad'
-import { WISTFUL } from '../../keys/instances/preteenBennett'
-import { POPULAR_GIRL } from '../../keys/instances/sasha'
+} from 'constants/scene/actors'
+import { NOODLING } from 'constants/scene/actors/instances/andrew'
+import { SNACKING } from 'constants/scene/actors/instances/brad'
+import { WISTFUL } from 'constants/scene/actors/instances/preteenBennett'
+import { POPULAR_GIRL } from 'constants/scene/actors/instances/sasha'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

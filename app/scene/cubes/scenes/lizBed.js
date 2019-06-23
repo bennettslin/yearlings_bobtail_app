@@ -2,7 +2,7 @@ import {
     LIZ_BED_KEY,
     LIZ_BED_OPEN_KEY,
     LIZ_BED_OPEN_PHONE_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

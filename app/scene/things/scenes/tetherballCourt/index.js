@@ -3,12 +3,12 @@ import {
     FIXTURE,
     FLAT
 } from 'constants/scene'
-import { VAN_NUYS_THOUGHT_BACKDROP } from '../../keys/backdrops'
-import { TETHERBALL_POLE } from '../../keys/fixtures'
+import { VAN_NUYS_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
+import { TETHERBALL_POLE } from 'constants/scene/things/fixtures'
 import {
     VAN_NUYS_SCHOOLHOUSE_LEFT,
     VAN_NUYS_SCHOOLHOUSE_RIGHT
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

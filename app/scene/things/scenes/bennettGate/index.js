@@ -4,7 +4,7 @@ import {
 import {
     APARTMENT_PLANT,
     CODE_BOX
-} from '../../keys/cutouts'
+} from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

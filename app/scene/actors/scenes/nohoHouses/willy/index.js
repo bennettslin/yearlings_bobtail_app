@@ -1,8 +1,8 @@
 import {
     HOWIE_WILLY,
     TOMER
-} from '../../../keys'
-import { GANGBANGER } from '../../../keys/instances/songs'
+} from 'constants/scene/actors'
+import { GANGBANGER } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [HOWIE_WILLY]: {

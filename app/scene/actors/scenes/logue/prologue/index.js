@@ -1,5 +1,5 @@
-import { OLD_BENNETT } from '../../../keys'
-import { PROLOGUE } from '../../../keys/instances/songs'
+import { OLD_BENNETT } from 'constants/scene/actors'
+import { PROLOGUE } from 'constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [OLD_BENNETT]: {

@@ -1,9 +1,9 @@
 import {
     PRETEEN_BENNETT,
     MOTHER
-} from '../../../keys'
-import { COMFORTING } from '../../../keys/instances/mother'
-import { FEARFUL } from '../../../keys/instances/preteenBennett'
+} from 'constants/scene/actors'
+import { COMFORTING } from 'constants/scene/actors/instances/mother'
+import { FEARFUL } from 'constants/scene/actors/instances/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

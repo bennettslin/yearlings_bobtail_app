@@ -3,12 +3,12 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-import { OAKLAND_SIDE_BACKDROP } from '../../keys/backdrops'
+import { OAKLAND_SIDE_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
-} from '../../keys/flats'
-import { VOLKSWAGEN } from '../../keys/panels'
+} from 'constants/scene/things/flats'
+import { VOLKSWAGEN } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

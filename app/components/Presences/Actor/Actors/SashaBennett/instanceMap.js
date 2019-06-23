@@ -7,9 +7,9 @@ import Epilogue from './Instances/Epilogue'
 import {
     MERMAID,
     COMFORTING_HUMILIATED
-} from 'scene/actors/keys/instances/sashaBennett'
+} from 'constants/scene/actors/instances/sashaBennett'
 
-import { EPILOGUE } from 'scene/actors/keys/instances/songs'
+import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
 export const propTypes = {
     [MERMAID]: PropTypes.bool,

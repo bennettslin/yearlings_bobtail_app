@@ -1,5 +1,5 @@
-import { BENNETT } from '../../../keys'
-import { CORD_SIDE } from '../../../keys/instances/bennett'
+import { BENNETT } from 'constants/scene/actors'
+import { CORD_SIDE } from 'constants/scene/actors/instances/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

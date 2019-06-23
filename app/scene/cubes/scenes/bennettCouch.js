@@ -1,7 +1,7 @@
 import {
     BENNETT_COUCH_KEY,
     BENNETT_COUCH_THOUGHT_KEY
-} from '../../scenes/keys'
+} from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,

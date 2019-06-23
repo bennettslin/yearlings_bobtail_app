@@ -4,7 +4,7 @@ import ReachingReflection from './Instances/ReachingReflection'
 
 import {
     REACHING_REFLECTION
-} from 'scene/actors/keys/instances/liz'
+} from 'constants/scene/actors/instances/liz'
 
 export const propTypes = {
     [REACHING_REFLECTION]: PropTypes.bool

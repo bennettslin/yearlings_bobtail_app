@@ -5,17 +5,17 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-import { GOLDEN_GATE_BACKDROP } from '../../keys/backdrops'
-import { EL_CERRITO_TREE } from '../../keys/cutouts'
+import { GOLDEN_GATE_BACKDROP } from 'constants/scene/things/backdrops'
+import { EL_CERRITO_TREE } from 'constants/scene/things/cutouts'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
-} from '../../keys/flats'
+} from 'constants/scene/things/flats'
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR
-} from '../../keys/panels'
-import { PUPPET_REATTA } from '../../keys/puppets'
+} from 'constants/scene/things/panels'
+import { PUPPET_REATTA } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

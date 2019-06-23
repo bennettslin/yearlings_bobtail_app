@@ -5,20 +5,20 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-import { LIZ_COUCH_THOUGHT_BACKDROP } from '../../keys/backdrops'
+import { LIZ_COUCH_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
-} from '../../keys/bubbles'
-import { TCHOTCHKES } from '../../keys/fixtures'
-import { LIZ_COUCH } from '../../keys/panels'
+} from 'constants/scene/things/bubbles'
+import { TCHOTCHKES } from 'constants/scene/things/fixtures'
+import { LIZ_COUCH } from 'constants/scene/things/panels'
 import {
     OPAL_COUCH,
     OPAL_GAZING,
     PEAHEN,
     PEACOCK
-} from '../../keys/puppets'
+} from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [PANEL]: {

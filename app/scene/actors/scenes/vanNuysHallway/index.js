@@ -3,11 +3,11 @@ import {
     MOTHER,
     CHRISTOPHER,
     TRISTAN
-} from '../../keys'
-import { STARING } from '../../keys/instances/christopher'
-import { ARGUING } from '../../keys/instances/mother'
-import { SHEEPISH } from '../../keys/instances/preteenBennett'
-import { PRINCIPAL } from '../../keys/instances/tristan'
+} from 'constants/scene/actors'
+import { STARING } from 'constants/scene/actors/instances/christopher'
+import { ARGUING } from 'constants/scene/actors/instances/mother'
+import { SHEEPISH } from 'constants/scene/actors/instances/preteenBennett'
+import { PRINCIPAL } from 'constants/scene/actors/instances/tristan'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

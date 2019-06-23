@@ -4,12 +4,12 @@ import {
     CUTOUT,
     PANEL
 } from 'constants/scene'
-import { WAITING_ROOM_THOUGHTS } from '../../keys/bubbles'
+import { WAITING_ROOM_THOUGHTS } from 'constants/scene/things/bubbles'
 import {
     CLIPBOARD,
     PAINTING
-} from '../../keys/cardboards'
-import { WAITING_ROOM_PLANT } from '../../keys/cutouts'
+} from 'constants/scene/things/cardboards'
+import { WAITING_ROOM_PLANT } from 'constants/scene/things/cutouts'
 import {
     WAITING_ARMCHAIR_BENNETT,
     WAITING_LEFT_ARMREST_BENNETT,
@@ -17,7 +17,7 @@ import {
     WAITING_ARMCHAIR_LIZ,
     WAITING_LEFT_ARMREST_LIZ,
     WAITING_RIGHT_ARMREST_LIZ
-} from '../../keys/panels'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

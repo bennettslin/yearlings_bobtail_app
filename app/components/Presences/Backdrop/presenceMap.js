@@ -56,7 +56,7 @@ import {
     GOLDEN_GATE_BACKDROP,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP
-} from 'scene/things/keys/backdrops'
+} from 'constants/scene/things/backdrops'
 
 export const propTypes = {
     [NOHO_HOUSES_BACKDROP]: PropTypes.bool,

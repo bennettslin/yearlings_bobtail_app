@@ -1,4 +1,4 @@
-import { BACKSTAGE_KEY } from '../../scenes/keys'
+import { BACKSTAGE_KEY } from 'constants/scene/scenes'
 
 import {
     GROUND_HSLA,
