@@ -187,11 +187,6 @@ exports.loadUrls = ({ include, isProduction }) => {
                 },
                 {
                     include,
-                    test: /\.(png|jpg|gif)$/,
-                    loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
-                },
-                {
-                    include,
                     test: /\.(svg)$/,
                     loader: 'url-loader',
                     options: {
@@ -207,7 +202,7 @@ exports.loadUrls = ({ include, isProduction }) => {
             rules: [
                 {
                     include,
-                    test: /\.(htm|txt|ttf|mp3|pdf|png|jpg|gif|)$/,
+                    test: /\.(htm|txt|ttf|mp3|pdf)$/,
                     loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
                 },
                 {

@@ -4,10 +4,10 @@
   "description": "Website for the Bobtail Yearlings album Yearling's Bobtail.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production && aws s3 sync build/ s3://yearlingsbobtail",
+    "build": "webpack --mode production --env.production && aws s3 sync build/ s3://yearlingsbobtail",
     "lint": "eslint --ext js,jsx app",
     "lint:fix": "eslint --ext js,jsx --fix app",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --mode development --env.development",
     "test": "jest"
   },
   "repository": {

@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Code splitting and API server timebox.`,
-        workedHours: 0,
+        workedHours: 8,
         neededHours: 20
     },
     {

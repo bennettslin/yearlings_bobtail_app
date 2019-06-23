@@ -18,90 +18,67 @@ const webpack = require('webpack'),
         scss: path.resolve(__dirname, 'app/scss'),
         template: path.resolve(__dirname, 'app/index.html')
     },
-    commonConfig = merge([
-        {
-            /**
-             * Entry accepts a path or an object of entries. We'll be using the
-             * latter form given it's convenient with more complex
-             * configurations.
-             */
-            entry: {
-                app: PATHS.app
-            },
-
-            output: {
-                path: PATHS.build,
-                filename: '[name]-[hash].js'
-            },
-
-            plugins: process.env.NODE_ENV !== 'production' ? [
-                new webpack.HotModuleReplacementPlugin(),
-
-                // https://www.codecademy.com/articles/react-setup-iv
-                new HtmlWebpackPlugin({
-                    template: PATHS.template,
-                    inject: 'body'
-                })
-            ] : [
-                new webpack.optimize.DedupePlugin(),
-                new webpack.optimize.OccurrenceOrderPlugin()
-            ],
-
-            resolve: {
-                // import from files without specifying extensions.
-                extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf'],
-                alias: {
-                    album: path.resolve(__dirname, './app/album'),
-                    assets: path.resolve(__dirname, './app/assets'),
-                    components: path.resolve(__dirname, './app/components'),
-                    constants: path.resolve(__dirname, './app/constants'),
-                    flux: path.resolve(__dirname, './app/redux'),
-                    handlers: path.resolve(__dirname, './app/handlers'),
-                    helpers: path.resolve(__dirname, './app/helpers'),
-                    modules: path.resolve(__dirname, './app/modules'),
-                    scene: path.resolve(__dirname, './app/scene'),
-                    utils: path.resolve(__dirname, './app/utils')
-                }
-            }
-        },
-        parts.loadJavaScript({
-            /**
-             * Parse only app files! Without this it will go through the
-             * entire project, which in addition to being slow, will most
-             * likely result in an error.
-             */
-            include: PATHS.app
-        })
-    ]),
-    productionConfig = merge([
-        // {
-        //     // Establish performance budget.
-        //     performance: {
-        //         hints: 'warning',
-        //         maxEntrypointSize: 100000,
-        //         maxAssetSize: 450000
-        //     }
-        // },
-        parts.loadUrls({
-            include: PATHS.app,
-            isProduction: true
-        }),
-        parts.clean(PATHS.build),
-        parts.minifyJavaScript({ useSourceMap: true }),
-        parts.minifyStyles({
-            options: {
-                discardComments: {
-                    removeAll: true
+    commonConfig = (isDevelopment) => {
+        return merge([
+            {
+                /**
+                 * Entry accepts a path or an object of entries. We'll be using the
+                 * latter form given it's convenient with more complex
+                 * configurations.
+                 */
+                entry: {
+                    app: PATHS.app
                 },
-                // Avoid potentially unsafe transformations.
-                safe: true
-            }
-        }),
-        parts.generateSourceMaps({ type: 'source-map' }),
-        parts.extractStyles({
-            include: PATHS.scss
-        })
-    ]),
+
+                output: {
+                    path: PATHS.build,
+                    filename: '[name]-[hash].js'
+                },
+
+                plugins: isDevelopment ? [
+                    new webpack.HotModuleReplacementPlugin(),
+
+                    // https://www.codecademy.com/articles/react-setup-iv
+                    new HtmlWebpackPlugin({
+                        template: PATHS.template,
+                        inject: 'body'
+                    })
+                ] : [
+                    new webpack.optimize.OccurrenceOrderPlugin(),
+
+                    new HtmlWebpackPlugin({
+                        template: PATHS.template,
+                        inject: 'body'
+                    })
+                ],
+
+                resolve: {
+                    // import from files without specifying extensions.
+                    extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf'],
+                    alias: {
+                        album: path.resolve(__dirname, './app/album'),
+                        assets: path.resolve(__dirname, './app/assets'),
+                        components: path.resolve(__dirname, './app/components'),
+                        constants: path.resolve(__dirname, './app/constants'),
+                        flux: path.resolve(__dirname, './app/redux'),
+                        handlers: path.resolve(__dirname, './app/handlers'),
+                        helpers: path.resolve(__dirname, './app/helpers'),
+                        modules: path.resolve(__dirname, './app/modules'),
+                        scene: path.resolve(__dirname, './app/scene'),
+                        utils: path.resolve(__dirname, './app/utils')
+                    }
+                }
+            },
+            parts.loadJavaScript({
+                /**
+                 * Parse only app files! Without this it will go through the
+                 * entire project, which in addition to being slow, will most
+                 * likely result in an error.
+                 */
+                include: PATHS.app
+            })
+        ])
+    },
     developmentConfig = merge([
         parts.loadUrls({
             include: PATHS.app
@@ -125,13 +102,44 @@ const webpack = require('webpack'),
         parts.loadStyles({
             include: PATHS.scss
         })
+    ]),
+    newProductionConfig = merge([
+        parts.loadUrls({
+            include: PATHS.app
+        }),
+        parts.loadStyles({
+            include: PATHS.scss
+        })
+    ]),
+
+    // eslint-disable-next-line no-unused-vars
+    productionConfig = merge([
+        parts.loadUrls({
+            include: PATHS.app,
+            isProduction: true
+        }),
+        parts.clean(PATHS.build),
+        parts.minifyJavaScript({ useSourceMap: true }),
+        parts.minifyStyles({
+            options: {
+                discardComments: {
+                    removeAll: true
+                },
+                // Avoid potentially unsafe transformations.
+                safe: true
+            }
+        }),
+        parts.generateSourceMaps({ type: 'source-map' }),
+        parts.extractStyles({
+            include: PATHS.scss
+        })
     ])
 
 module.exports = (env) => {
     return merge(
-        commonConfig,
-        env === 'production' ?
-            productionConfig :
-            developmentConfig
+        commonConfig(env.development),
+        env.development ?
+            developmentConfig :
+            newProductionConfig
     )
 }

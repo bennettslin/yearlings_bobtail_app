@@ -16,23 +16,25 @@ const propTypes = {
 const ApartmentPlant = ({
     className, x, y, scaleFactor
 
-}) => (
-    <PresenceSvgInjector
-        {...{
-            className: cx(
-                'ApartmentPlant',
-                className
-            ),
-            viewBoxWidth: 1010.23,
-            viewBoxHeight: 1840.06,
-            x,
-            y,
-            scaleFactor
-        }}
-    >
-        {apartmentPlant}
-    </PresenceSvgInjector>
-)
+}) => {
+    return (
+        <PresenceSvgInjector
+            {...{
+                className: cx(
+                    'ApartmentPlant',
+                    className
+                ),
+                viewBoxWidth: 1010.23,
+                viewBoxHeight: 1840.06,
+                x,
+                y,
+                scaleFactor
+            }}
+        >
+            {apartmentPlant}
+        </PresenceSvgInjector>
+    )
+}
 
 ApartmentPlant.propTypes = propTypes
 
