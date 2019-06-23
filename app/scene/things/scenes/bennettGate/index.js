@@ -10,11 +10,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUTS]: {
         [APARTMENT_PLANT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 3,
-                zHeight: 5
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.35
         },
         [CODE_BOX]: {
             yIndex: 2,

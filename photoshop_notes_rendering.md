@@ -73,14 +73,11 @@
     * Move it to scene folder.
 * Place in scene, and Transform > Scale to adjust. (Maybe just 50% for ease.)
     * Shortcut is Shift-Command-C.
-
-* TODO: Size adjustment to Illustrator.
-
 * Remove placed tif from scene.
 * Move layered tif to its completed folder.
 
-## Convert svg to React component.
+## TODO. Wait on this until I figure out how to lazy load assets.
 
-## TODO.
+## Convert svg to React component.
 
 * Log the other 50% done.

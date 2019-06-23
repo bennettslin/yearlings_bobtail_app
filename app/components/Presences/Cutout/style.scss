@@ -1,29 +1,69 @@
+@import "./Cutouts/FireHydrant/style";
+@import "./Cutouts/PlaygroundSlide/style";
+@import "./Cutouts/MirroredSink/style";
+@import "./Cutouts/TowelRack/style";
+@import "./Cutouts/OverpassSignFront/style";
+@import "./Cutouts/OverpassSignBack/style";
+@import "./Cutouts/PorchPlantsLeft/style";
+@import "./Cutouts/PorchPlantsRight/style";
+@import "./Cutouts/TrollShadowLeft/style";
+@import "./Cutouts/TrollShadowRight/style";
+@import "./Cutouts/Campfire/style";
+@import "./Cutouts/Stalactites/style";
+@import "./Cutouts/BuddhaShrine/style";
+@import "./Cutouts/TaiwanFridgeFront/style";
+@import "./Cutouts/BennettTaiwanStairs/style";
+@import "./Cutouts/OdinTaiwanStairs/style";
+@import "./Cutouts/BennettTaiwanGate/style";
+@import "./Cutouts/OdinTaiwanGate/style";
+@import "./Cutouts/BennettOdinRickshaw/style";
+@import "./Cutouts/BennettShore/style";
+@import "./Cutouts/OdinShore/style";
+@import "./Cutouts/BennettOdinBuoy/style";
+@import "./Cutouts/YellowTapedGrill/style";
+@import "./Cutouts/BennettOdinDepths/style";
+@import "./Cutouts/SeaSerpents/style";
+@import "./Cutouts/BennettOceanFloor/style";
+@import "./Cutouts/BennettMat/style";
+@import "./Cutouts/OdinMat/style";
+@import "./Cutouts/TrashCan/style";
+@import "./Cutouts/VanNuysPlant/style";
+@import "./Cutouts/Recyclables/style";
+@import "./Cutouts/DispenserLeft/style";
+@import "./Cutouts/DispenserRight/style";
+@import "./Cutouts/BerkeleyLamppost/style";
+@import "./Cutouts/SignPost/style";
+@import "./Cutouts/BancroftShrubs/style";
+@import "./Cutouts/UcBerkeleyTree/style";
+@import "./Cutouts/MonitorSpeakerLeft/style";
+@import "./Cutouts/MonitorSpeakerRight/style";
+@import "./Cutouts/WallSpeakerLeft/style";
+@import "./Cutouts/WallSpeakerRight/style";
+@import "./Cutouts/Sandbags/style";
+@import "./Cutouts/StageLights/style";
+@import "./Cutouts/TrafficLight/style";
+@import "./Cutouts/ApartmentPlant/style";
+@import "./Cutouts/CodeBox/style";
+@import "./Cutouts/WaitingRoomPlant/style";
+@import "./Cutouts/StorageBoxes/style";
+@import "./Cutouts/StorageChest/style";
+@import "./Cutouts/HowieFridge/style";
+@import "./Cutouts/Television/style";
+@import "./Cutouts/MonitorSpeakerSide/style";
+@import "./Cutouts/WallSpeakerSide/style";
+@import "./Cutouts/TwinStreetlamp/style";
+@import "./Cutouts/ElCerritoTree/style";
+@import "./Cutouts/Dumpster/style";
+@import "./Cutouts/WeddingCrowd/style";
+@import "./Cutouts/CliffTree/style";
+@import "./Cutouts/IvDrip/style";
+
 .Cutout__temporaryRect {
     fill: rgba(200, 250, 200, 0.25);
     vector-effect: non-scaling-stroke;
     stroke-width: 1px;
     stroke: #444;
 }
-
-// .Cutout {
-//     transition: top $animationDuration__default;
-//     top: -100%;
-
-//     .Scene__shown
-//     & {
-//         top: 0;
-//     }
-// }
-
-// .Cutout {
-//     transition: opacity $animationDuration__default;
-//     opacity: 0;
-
-//     .Scene__shown
-//     & {
-//         opacity: 1;
-//     }
-// }
 
 .Cutout__outline {
     fill: none;
@@ -37,4 +77,33 @@
 
 .Cutout__plantGreen__2 {
     fill: #393;
+}
+
+path {
+    .Cutout
+    & {
+        stroke: #444;
+        stroke-width: 0.75px;
+    }
+}
+
+.fine, .outline {
+    .Cutout
+    & {
+        fill: none;
+    }
+}
+
+.fine {
+    .Cutout
+    & {
+        stroke-width: 0.5px;
+    }
+}
+
+.outline {
+    .Cutout
+    & {
+        stroke-width: 1px;
+    }
 }

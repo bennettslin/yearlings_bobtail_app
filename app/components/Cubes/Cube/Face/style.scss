@@ -7,8 +7,6 @@
             d $animationDuration__scene;
     }
 
-    // This allows the stroke width to stay constant.
-    vector-effect: non-scaling-stroke;
     stroke: rgba(225, 225, 175, 0.05);
     stroke-width: 1px;
 

@@ -154,3 +154,8 @@ i, em {
      */
     font-size: $fontSize__italic;
 }
+
+path {
+    // This allows the stroke width to stay constant.
+    vector-effect: non-scaling-stroke;
+}
