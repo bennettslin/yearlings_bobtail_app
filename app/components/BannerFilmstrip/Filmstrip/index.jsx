@@ -6,6 +6,7 @@ import cx from 'classnames'
 import FilmstripScene from './Scene'
 import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
+import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 
 import { getSongSceneConfigs } from 'album/api/scenes'
 import { getSongTotalTime } from 'album/api/time'
@@ -44,6 +45,10 @@ class Filmstrip extends PureComponent {
 
     dispatchScene = (sceneIndex) => {
         this.dispatchSceneIndex(sceneIndex)
+    }
+
+    dispatchStopPropagation = (e) => {
+        this.dispatchStopPropagation(e)
     }
 
     render() {
@@ -93,7 +98,8 @@ class Filmstrip extends PureComponent {
                                 sceneIndex,
                                 sceneLeft,
                                 sceneWidth,
-                                dispatchScene: this.dispatchScene
+                                dispatchScene: this.dispatchScene,
+                                dispatchStopPropagation: this.dispatchStopPropagation
                             }}
                         />
                     )
@@ -105,6 +111,7 @@ class Filmstrip extends PureComponent {
                 />
 
                 <SceneDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
     }

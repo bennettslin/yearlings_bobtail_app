@@ -4631,5 +4631,10 @@ export default [
         taskName: `Make BannerFilmstrip able to select song time. Rename cursor to BannerFilmstrip, and scenes to Filmstrip.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Clicking on Filmstrip dismisses overlay. Ensure that clicking on Banner also does not dismiss overlay.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

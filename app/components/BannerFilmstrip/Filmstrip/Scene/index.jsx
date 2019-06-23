@@ -15,7 +15,8 @@ class FilmstripScene extends PureComponent {
         sceneIndex: PropTypes.number.isRequired,
         sceneLeft: PropTypes.number.isRequired,
         sceneWidth: PropTypes.number.isRequired,
-        dispatchScene: PropTypes.func.isRequired
+        dispatchScene: PropTypes.func.isRequired,
+        dispatchStopPropagation: PropTypes.func.isRequired
     }
 
     _handleSceneClick = (e) => {
@@ -23,6 +24,7 @@ class FilmstripScene extends PureComponent {
 
         const { sceneIndex } = this.props
         this.props.dispatchScene(sceneIndex)
+        this.props.dispatchStopPropagation(e)
     }
 
     render() {

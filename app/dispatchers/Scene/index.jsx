@@ -31,7 +31,7 @@ class SceneDispatcher extends PureComponent {
 
         this.dispatchVerse({
             selectedVerseIndex,
-            scrollLog: `Select ${selectedSceneIndex}, verse ${selectedVerseIndex}`
+            scrollLog: `Select scene ${selectedSceneIndex}, verse ${selectedVerseIndex}.`
         })
     }
 

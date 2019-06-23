@@ -4,7 +4,9 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import isNumber from 'lodash.isnumber'
 
+import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
+
 import PlayTimer from './Timer'
 import SongTitle from './Title'
 
@@ -71,6 +73,8 @@ class Banner extends PureComponent {
                 scrollLog: `Select banner verse ${selectedVerseIndex}.`
             })
         }
+
+        this.dispatchStopPropagation(e)
     }
 
     _getBannerElement = (node) => {
@@ -113,6 +117,7 @@ class Banner extends PureComponent {
                 />
                 <SongTitle />
                 <PlayTimer />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
                 <VerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
