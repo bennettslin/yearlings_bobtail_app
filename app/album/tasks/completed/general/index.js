@@ -4636,5 +4636,10 @@ export default [
         taskName: `Clicking on Filmstrip dismisses overlay. Ensure that clicking on Banner also does not dismiss overlay.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Timebox for svg to component conversion.`,
+        workedHours: 7,
+        neededHours: 7
     }
 ]

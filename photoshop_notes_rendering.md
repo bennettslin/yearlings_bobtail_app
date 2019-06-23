@@ -47,12 +47,12 @@
 * In Layers settings, Flatten artwork.
 * Temporarily colour each object. Aim for final colour, but don't sweat it.
 * Set stroke widths.
-    * Boundary path is 2pt.
+    * Boundary path is 2pt. (Maybe bypass?)
     * Other closed paths are 1pt.
     * Open paths are 0.5pt.
 * Send objects backward or forward as needed.
     * Shortcuts are Command-[ or ].
-* If not a single shape, create a boundary path.
+* If not a single shape, create a boundary path. (Maybe bypass?)
     * Duplicate layer.
     * Pathfinder > Unite.
     * No fill.
@@ -62,22 +62,31 @@
 * Move subfolder with png files to ~completed folder.
 * Move Illustrator file to actor or thing folder.
 
-* Log 50% done.
-
 ## Create svg.
 * Fit artboard to artwork.
     * Shortcut is Shift-Command-F.
 * Make sure it's deselected, and Export as SVG.
     * Shortcut is Shift-Command-E.
     * Internal CSS, Layer Names, no minify, yes responsive.
-    * Move it to scene folder.
+
+<!-- ## Place in scene. (bypass for now.)
+* Move it to scene folder.
 * Place in scene, and Transform > Scale to adjust. (Maybe just 50% for ease.)
     * Shortcut is Shift-Command-C.
 * Remove placed tif from scene.
-* Move layered tif to its completed folder.
-
-## TODO. Wait on this until I figure out how to lazy load assets.
+* Move layered tif to its completed folder. -->
 
 ## Convert svg to React component.
+* For each thing, move presence component to own folder with style file.
+* Replace jsx with generic presence template.
+    * Name component.
+* Put markup in jsx.
+* Put styles in stylesheet.
+    * Change class names for stroke paths.
+    * Change other class names.
+    * Clean up.
+* Change scene config.
+    * Correct x and y positions, if needed.
+    * Scale it.
 
-* Log the other 50% done.
+* Log done in illustrator task folder!

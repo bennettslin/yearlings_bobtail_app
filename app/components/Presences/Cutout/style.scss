@@ -79,6 +79,10 @@
     fill: #393;
 }
 
+.Cutout {
+    filter: drop-shadow( 0 0 1px rgba(0, 0, 0, .5));
+}
+
 path {
     .Cutout
     & {
@@ -101,9 +105,3 @@ path {
     }
 }
 
-.outline {
-    .Cutout
-    & {
-        stroke-width: 1px;
-    }
-}
