@@ -4153,7 +4153,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Allow selected verse to activate slider touch, given probable user expectation for such behaviour.`,
+        taskName: `Allow selected verse to interactivate slider touch, given probable user expectation for such behaviour.`,
         workedHours: 1,
         neededHours: 1
     },

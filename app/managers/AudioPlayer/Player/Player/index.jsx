@@ -68,7 +68,7 @@ class Player extends PureComponent {
          * the promise is returned, not here.
          */
         if (this.state.isPromisingToPlay) {
-            logPlayer(`Ignoring subsequent ask to pause ${songIndex}.`)
+            logPlayer(`Ignoring subsequent request to pause ${songIndex}.`)
             return
         }
 

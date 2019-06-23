@@ -16,312 +16,312 @@
 
 export default [
     {
-        task: 'logue',
+        taskName: 'logue',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'nohoHouses',
+        taskName: 'nohoHouses',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'nohoSchool',
+        taskName: 'nohoSchool',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'bathroom',
+        taskName: 'bathroom',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'freeway',
+        taskName: 'freeway',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'porch',
+        taskName: 'porch',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'changelingCave',
+        taskName: 'changelingCave',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'puppetShow',
+        taskName: 'puppetShow',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'schoolbus',
+        taskName: 'schoolbus',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'tetherballCourt',
+        taskName: 'tetherballCourt',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'taiwanRoom',
+        taskName: 'taiwanRoom',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'taiwanStairs',
+        taskName: 'taiwanStairs',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'taiwanGate',
+        taskName: 'taiwanGate',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'rickshaw',
+        taskName: 'rickshaw',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'shore',
+        taskName: 'shore',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'buoy',
+        taskName: 'buoy',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'oceanDepths',
+        taskName: 'oceanDepths',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'oceanFloor',
+        taskName: 'oceanFloor',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'bedroom',
+        taskName: 'bedroom',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'vanNuysLockers',
+        taskName: 'vanNuysLockers',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'vanNuysQuad',
+        taskName: 'vanNuysQuad',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'vanNuysHallway',
+        taskName: 'vanNuysHallway',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'catholicChurch',
+        taskName: 'catholicChurch',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'ucBerkeley',
+        taskName: 'ucBerkeley',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'cinema',
+        taskName: 'cinema',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'basement',
+        taskName: 'basement',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'museum',
+        taskName: 'museum',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'backstage',
+        taskName: 'backstage',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'goKarts',
+        taskName: 'goKarts',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'dishroom',
+        taskName: 'dishroom',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'waitingRoom',
+        taskName: 'waitingRoom',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'clubFront',
+        taskName: 'clubFront',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'bennettBed',
+        taskName: 'bennettBed',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'bennettCouch',
+        taskName: 'bennettCouch',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'courtyard',
+        taskName: 'courtyard',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'bennettGate',
+        taskName: 'bennettGate',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'lizBed',
+        taskName: 'lizBed',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'lizGate',
+        taskName: 'lizGate',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'clubSide',
+        taskName: 'clubSide',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'clubLoading',
+        taskName: 'clubLoading',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'lizCouch',
+        taskName: 'lizCouch',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'royceHall',
+        taskName: 'royceHall',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'walgreens',
+        taskName: 'walgreens',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'steamTunnel',
+        taskName: 'steamTunnel',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'cemetery',
+        taskName: 'cemetery',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'stationWagon',
+        taskName: 'stationWagon',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'attic',
+        taskName: 'attic',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'oaklandHouses',
+        taskName: 'oaklandHouses',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'oaklandResidential',
+        taskName: 'oaklandResidential',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'oaklandCommercial',
+        taskName: 'oaklandCommercial',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'oaklandPublic',
+        taskName: 'oaklandPublic',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'snowglobesPast',
+        taskName: 'snowglobesPast',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'snowglobesPresent',
+        taskName: 'snowglobesPresent',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'snowglobesFuture',
+        taskName: 'snowglobesFuture',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'elCerrito',
+        taskName: 'elCerrito',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'clubFar',
+        taskName: 'clubFar',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'alley',
+        taskName: 'alley',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'elTorito',
+        taskName: 'elTorito',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'pampas',
+        taskName: 'pampas',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'wedding',
+        taskName: 'wedding',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'cliff',
+        taskName: 'cliff',
         workedHours: 0,
         neededHours: 1
     },
     {
-        task: 'deathbed',
+        taskName: 'deathbed',
         workedHours: 0,
         neededHours: 1
     }

@@ -140,7 +140,7 @@ export default {
                                             anchor: `bunny criss-cross the tree.`,
                                             wiki: `Shoelace_knot`
                                         },
-                                        `But being left-handed, I was never clear on which hand held the bunny, and my shoelaces always came undone as a result.`
+                                        `But being left-handed, I was never clear on which hand should hold the bunny, and my shoelaces always came undone as a result.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
