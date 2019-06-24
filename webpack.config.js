@@ -88,7 +88,7 @@ const webpack = require('webpack'),
                 devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
             }
         },
-        // parts.loadBundleAnalyzer(),
+        parts.loadBundleAnalyzer(),
         parts.generateSourceMaps({ type: 'cheap-module-eval-source-map' }),
         parts.devServer({
             /**

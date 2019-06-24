@@ -4639,7 +4639,7 @@ export default [
     },
     {
         taskName: `Timebox for svg to component conversion.`,
-        workedHours: 7,
-        neededHours: 7
+        workedHours: 10,
+        neededHours: 10
     }
 ]
