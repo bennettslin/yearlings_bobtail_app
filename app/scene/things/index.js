@@ -1,29 +1,29 @@
 import keys from 'lodash.keys'
 
-import THINGS_NOHO_HOUSES from './scenes/nohoHouses'
-import THINGS_NOHO_SCHOOL from './scenes/nohoSchool'
+import THINGS_NOHO_HOUSES from '../scenes/nohoHouses/things'
+import THINGS_NOHO_SCHOOL from '../scenes/nohoSchool/things'
 import THINGS_BATHROOM, {
     THINGS_BATHROOM_BATHING,
     THINGS_BATHROOM_SINGING
-} from './scenes/bathroom'
-import THINGS_FREEWAY from './scenes/freeway'
-import THINGS_PORCH from './scenes/porch'
-import THINGS_CHANGELING_CAVE from './scenes/changelingCave'
+} from '../scenes/bathroom/things'
+import THINGS_FREEWAY from '../scenes/freeway/things'
+import THINGS_PORCH from '../scenes/porch/things'
+import THINGS_CHANGELING_CAVE from '../scenes/changelingCave/things'
 import THINGS_PUPPET_SHOW, {
     THINGS_PUPPET_SHOW_BEGIN,
     THINGS_PUPPET_SHOW_MIDDLE,
     THINGS_PUPPET_SHOW_END
-} from './scenes/puppetShow'
-import THINGS_SCHOOLBUS from './scenes/schoolbus'
-import THINGS_TETHERBALL_COURT from './scenes/tetherballCourt'
-import THINGS_TAIWAN_ROOM from './scenes/taiwanRoom'
-import THINGS_TAIWAN_STAIRS from './scenes/taiwanStairs'
-import THINGS_TAIWAN_GATE from './scenes/taiwanGate'
-import THINGS_RICKSHAW from './scenes/rickshaw'
-import THINGS_SHORE from './scenes/shore'
-import THINGS_BUOY from './scenes/buoy'
-import THINGS_OCEAN_DEPTHS from './scenes/oceanDepths'
-import THINGS_OCEAN_FLOOR from './scenes/oceanFloor'
+} from '../scenes/puppetShow/things'
+import THINGS_SCHOOLBUS from '../scenes/schoolbus/things'
+import THINGS_TETHERBALL_COURT from '../scenes/tetherballCourt/things'
+import THINGS_TAIWAN_ROOM from '../scenes/taiwanRoom/things'
+import THINGS_TAIWAN_STAIRS from '../scenes/taiwanStairs/things'
+import THINGS_TAIWAN_GATE from '../scenes/taiwanGate/things'
+import THINGS_RICKSHAW from '../scenes/rickshaw/things'
+import THINGS_SHORE from '../scenes/shore/things'
+import THINGS_BUOY from '../scenes/buoy/things'
+import THINGS_OCEAN_DEPTHS from '../scenes/oceanDepths/things'
+import THINGS_OCEAN_FLOOR from '../scenes/oceanFloor/things'
 import THINGS_BEDROOM, {
     THINGS_BEDROOM_ENRAGED,
     THINGS_BEDROOM_FEARFUL,
@@ -31,48 +31,48 @@ import THINGS_BEDROOM, {
     THINGS_BEDROOM_FEIGNING,
     THINGS_BEDROOM_ASLEEP,
     THINGS_BEDROOM_SHAKEN
-} from './scenes/bedroom'
-import THINGS_VAN_NUYS_LOCKERS from './scenes/vanNuysLockers'
-import THINGS_VAN_NUYS_QUAD from './scenes/vanNuysQuad'
-import THINGS_VAN_NUYS_HALLWAY from './scenes/vanNuysHallway'
-import THINGS_CATHOLIC_CHURCH from './scenes/catholicChurch'
+} from '../scenes/bedroom/things'
+import THINGS_VAN_NUYS_LOCKERS from '../scenes/vanNuysLockers/things'
+import THINGS_VAN_NUYS_QUAD from '../scenes/vanNuysQuad/things'
+import THINGS_VAN_NUYS_HALLWAY from '../scenes/vanNuysHallway/things'
+import THINGS_CATHOLIC_CHURCH from '../scenes/catholicChurch/things'
 import THINGS_BERKELEY_BANCROFT, {
     THINGS_BERKELEY_BANCROFT_VEGAN
-} from './scenes/berkeleyBancroft'
+} from '../scenes/berkeleyBancroft/things'
 import THINGS_BERKELEY_CAMPANILE, {
     THINGS_BERKELEY_CAMPANILE_VEGAN
-} from './scenes/berkeleyCampanile'
-import THINGS_CINEMA from './scenes/cinema'
-import THINGS_CINEMA_STREET from './scenes/cinemaStreet'
-import THINGS_BASEMENT from './scenes/basement'
-import THINGS_MUSEUM from './scenes/museum'
-import THINGS_BACKSTAGE from './scenes/backstage'
-import THINGS_GO_KARTS from './scenes/goKarts'
-import THINGS_DISHROOM from './scenes/dishroom'
+} from '../scenes/berkeleyCampanile/things'
+import THINGS_CINEMA from '../scenes/cinema/things'
+import THINGS_CINEMA_STREET from '../scenes/cinemaStreet/things'
+import THINGS_BASEMENT from '../scenes/basement/things'
+import THINGS_MUSEUM from '../scenes/museum/things'
+import THINGS_BACKSTAGE from '../scenes/backstage/things'
+import THINGS_GO_KARTS from '../scenes/goKarts/things'
+import THINGS_DISHROOM from '../scenes/dishroom/things'
 import THINGS_WAITING_ROOM, {
     THINGS_WAITING_ROOM_ASLEEP
-} from './scenes/waitingRoom'
+} from '../scenes/waitingRoom/things'
 import THINGS_CLUB_FRONT, {
     THINGS_CLUB_FRONT_M
-} from './scenes/clubFront'
-import THINGS_CLUB_SIDE_CROWD from './scenes/clubSideCrowd'
-import THINGS_CLUB_SIDE_STAGE from './scenes/clubSideStage'
-import THINGS_CLUB_FAR from './scenes/clubFar'
-import THINGS_CLUB_LOADING from './scenes/clubLoading'
-import THINGS_BENNETT_BED from './scenes/bennettBed'
+} from '../scenes/clubFront/things'
+import THINGS_CLUB_SIDE_CROWD from '../scenes/clubSideCrowd/things'
+import THINGS_CLUB_SIDE_STAGE from '../scenes/clubSideStage/things'
+import THINGS_CLUB_FAR from '../scenes/clubFar/things'
+import THINGS_CLUB_LOADING from '../scenes/clubLoading/things'
+import THINGS_BENNETT_BED from '../scenes/bennettBed/things'
 import THINGS_BENNETT_COUCH, {
     THINGS_BENNETT_COUCH_OPINION,
     THINGS_BENNETT_COUCH_PONDERING,
     THINGS_BENNETT_COUCH_RUBIKS,
     THINGS_BENNETT_COUCH_READING
-} from './scenes/bennettCouch'
-import THINGS_COURTYARD from './scenes/courtyard'
-import THINGS_BENNETT_GATE from './scenes/bennettGate'
+} from '../scenes/bennettCouch/things'
+import THINGS_COURTYARD from '../scenes/courtyard/things'
+import THINGS_BENNETT_GATE from '../scenes/bennettGate/things'
 import THINGS_LIZ_BED, {
     THINGS_LIZ_BED_AFTERGLOW,
     THINGS_LIZ_BED_LOOK_BACK,
     THINGS_LIZ_BED_VEGAN
-} from './scenes/lizBed'
+} from '../scenes/lizBed/things'
 import THINGS_LIZ_COUCH, {
     THINGS_LIZ_COUCH_GOLDEN,
     THINGS_LIZ_COUCH_TCHOTCHKES,
@@ -80,39 +80,39 @@ import THINGS_LIZ_COUCH, {
     THINGS_LIZ_COUCH_NOT_HUNGRY,
     THINGS_LIZ_COUCH_ASLEEP,
     THINGS_LIZ_COUCH_PEAFOWL
-} from './scenes/lizCouch'
+} from '../scenes/lizCouch/things'
 import {
     THINGS_LIZ_GATE_DATE_ENDED
-} from './scenes/lizGate'
-import THINGS_ROYCE_HALL from './scenes/royceHall'
-import THINGS_WALGREENS from './scenes/walgreens'
-import THINGS_STEAM_TUNNEL from './scenes/steamTunnel'
-import THINGS_CEMETERY from './scenes/cemetery'
-import THINGS_STATION_WAGON from './scenes/stationWagon'
-import THINGS_ATTIC from './scenes/attic'
+} from '../scenes/lizGate/things'
+import THINGS_ROYCE_HALL from '../scenes/royceHall/things'
+import THINGS_WALGREENS from '../scenes/walgreens/things'
+import THINGS_STEAM_TUNNEL from '../scenes/steamTunnel/things'
+import THINGS_CEMETERY from '../scenes/cemetery/things'
+import THINGS_STATION_WAGON from '../scenes/stationWagon/things'
+import THINGS_ATTIC from '../scenes/attic/things'
 import THINGS_OAKLAND_HOUSES, {
     THINGS_OAKLAND_HOUSES_GARRYOWEN
-} from './scenes/oaklandHouses'
-import THINGS_OAKLAND_RESIDENTIAL from './scenes/oaklandResidential'
-import THINGS_OAKLAND_COMMERCIAL from './scenes/oaklandCommercial'
-import THINGS_OAKLAND_PUBLIC from './scenes/oaklandPublic'
-import THINGS_BASEMENT_SOFA from './scenes/basementCouch'
-import THINGS_BASEMENT_BED from './scenes/basementBed'
-import THINGS_SNOWGLOBES_PAST from './scenes/snowglobesPast'
-import THINGS_SNOWGLOBES_PRESENT from './scenes/snowglobesPresent'
-import THINGS_SNOWGLOBES_FUTURE from './scenes/snowglobesFuture'
+} from '../scenes/oaklandHouses/things'
+import THINGS_OAKLAND_RESIDENTIAL from '../scenes/oaklandResidential/things'
+import THINGS_OAKLAND_COMMERCIAL from '../scenes/oaklandCommercial/things'
+import THINGS_OAKLAND_PUBLIC from '../scenes/oaklandPublic/things'
+import THINGS_BASEMENT_SOFA from '../scenes/basementCouch/things'
+import THINGS_BASEMENT_BED from '../scenes/basementBed/things'
+import THINGS_SNOWGLOBES_PAST from '../scenes/snowglobesPast/things'
+import THINGS_SNOWGLOBES_PRESENT from '../scenes/snowglobesPresent/things'
+import THINGS_SNOWGLOBES_FUTURE from '../scenes/snowglobesFuture/things'
 import THINGS_EL_CERRITO, {
     THINGS_EL_CERRITO_REATTA
-} from './scenes/elCerrito'
-import THINGS_ALLEY from './scenes/alley'
-import THINGS_EL_TORITO from './scenes/elTorito'
-import THINGS_PAMPAS from './scenes/pampas'
-import THINGS_WEDDING from './scenes/wedding'
-import THINGS_CLIFF from './scenes/cliff'
+} from '../scenes/elCerrito/things'
+import THINGS_ALLEY from '../scenes/alley/things'
+import THINGS_EL_TORITO from '../scenes/elTorito/things'
+import THINGS_PAMPAS from '../scenes/pampas/things'
+import THINGS_WEDDING from '../scenes/wedding/things'
+import THINGS_CLIFF from '../scenes/cliff/things'
 import THINGS_DEATHBED, {
     THINGS_DEATHBED_CREMATED,
     THINGS_DEATHBED_DREAM
-} from './scenes/deathbed'
+} from '../scenes/deathbed/things'
 
 const SCENE_ARRANGEMENTS = [
     THINGS_NOHO_HOUSES,
