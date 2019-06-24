@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const MonitorSpeakerRight = ({
+const MonitorRight = ({
 
     className,
 
@@ -19,7 +19,7 @@ const MonitorSpeakerRight = ({
     return (
         <Svg
             className={cx(
-                'MonitorSpeakerRight',
+                'MonitorRight',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const MonitorSpeakerRight = ({
                 {...other}
             >
                 {cx(
-                    'MonitorSpeakerRight'
+                    'MonitorRight'
                 )}
             </text>
         </Svg>
     )
 }
 
-MonitorSpeakerRight.propTypes = propTypes
+MonitorRight.propTypes = propTypes
 
-export default MonitorSpeakerRight
+export default MonitorRight

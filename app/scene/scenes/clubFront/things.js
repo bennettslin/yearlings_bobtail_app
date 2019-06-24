@@ -3,8 +3,8 @@ import {
     FIXTURE
 } from 'constants/scene'
 import {
-    MONITOR_SPEAKER_LEFT,
-    MONITOR_SPEAKER_RIGHT,
+    MONITOR_LEFT,
+    MONITOR_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT
 } from 'constants/scene/things/cutouts'
@@ -16,7 +16,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [MONITOR_SPEAKER_LEFT]: {
+        [MONITOR_LEFT]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 2.5,
@@ -24,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [MONITOR_SPEAKER_RIGHT]: {
+        [MONITOR_RIGHT]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8.5,

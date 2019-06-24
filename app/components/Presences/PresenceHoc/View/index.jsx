@@ -12,7 +12,7 @@ import {
 import { getMapForActorKey } from '../../Actor/helper'
 
 import { getPresenceXY, getPresenceXYWidthHeight } from './helper'
-import { capitalise } from 'helpers/format'
+import { capitaliseForClassName } from 'helpers/format'
 
 import { ACTOR } from 'constants/scene'
 
@@ -83,8 +83,8 @@ const PresenceHocView = ({
         presenceProps = {
             className: cx(
                 'Presence',
-                capitalise(presenceType),
-                capitalise(presenceKey),
+                capitaliseForClassName(presenceType),
+                capitaliseForClassName(presenceKey),
                 'abF'
             ),
             ...scaleFactor && {

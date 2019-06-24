@@ -35,8 +35,8 @@
 @import "./Cutouts/SignPost/style";
 @import "./Cutouts/BancroftShrubs/style";
 @import "./Cutouts/UcBerkeleyTree/style";
-@import "./Cutouts/MonitorSpeakerLeft/style";
-@import "./Cutouts/MonitorSpeakerRight/style";
+@import "./Cutouts/MonitorLeft/style";
+@import "./Cutouts/MonitorRight/style";
 @import "./Cutouts/WallSpeakerLeft/style";
 @import "./Cutouts/WallSpeakerRight/style";
 @import "./Cutouts/Sandbags/style";
@@ -49,7 +49,7 @@
 @import "./Cutouts/StorageChest/style";
 @import "./Cutouts/HowieFridge/style";
 @import "./Cutouts/Television/style";
-@import "./Cutouts/MonitorSpeakerSide/style";
+@import "./Cutouts/MonitorSide/style";
 @import "./Cutouts/WallSpeakerSide/style";
 @import "./Cutouts/TwinStreetlamp/style";
 @import "./Cutouts/ElCerritoTree/style";
@@ -69,14 +69,6 @@
     fill: none;
     stroke: #654321;
     stroke-width: 1px;
-}
-
-.Cutout__plantGreen__1 {
-    fill: #282;
-}
-
-.Cutout__plantGreen__2 {
-    fill: #393;
 }
 
 .Cutout {

@@ -4641,5 +4641,10 @@ export default [
         taskName: `Timebox for svg to component conversion.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Capitalise method does not account for multiple instances of same presence.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

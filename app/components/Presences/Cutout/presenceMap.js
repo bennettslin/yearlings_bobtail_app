@@ -37,8 +37,8 @@ import BerkeleyLamppost from './Cutouts/BerkeleyLamppost'
 import SignPost from './Cutouts/SignPost'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
-import MonitorSpeakerLeft from './Cutouts/MonitorSpeakerLeft'
-import MonitorSpeakerRight from './Cutouts/MonitorSpeakerRight'
+import MonitorLeft from './Cutouts/MonitorLeft'
+import MonitorRight from './Cutouts/MonitorRight'
 import WallSpeakerLeft from './Cutouts/WallSpeakerLeft'
 import WallSpeakerRight from './Cutouts/WallSpeakerRight'
 import Sandbags from './Cutouts/Sandbags'
@@ -51,7 +51,7 @@ import StorageBoxes from './Cutouts/StorageBoxes'
 import StorageChest from './Cutouts/StorageChest'
 import HowieFridge from './Cutouts/HowieFridge'
 import Television from './Cutouts/Television'
-import MonitorSpeakerSide from './Cutouts/MonitorSpeakerSide'
+import MonitorSide from './Cutouts/MonitorSide'
 import WallSpeakerSide from './Cutouts/WallSpeakerSide'
 import TwinStreetlamp from './Cutouts/TwinStreetlamp'
 import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
@@ -101,8 +101,8 @@ import {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE_LEFT,
     UC_BERKELEY_TREE_RIGHT,
-    MONITOR_SPEAKER_LEFT,
-    MONITOR_SPEAKER_RIGHT,
+    MONITOR_LEFT,
+    MONITOR_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
     SANDBAGS,
@@ -170,8 +170,8 @@ export const propTypes = {
     [BANCROFT_SHRUBS]: PropTypes.bool,
     [UC_BERKELEY_TREE_LEFT]: PropTypes.bool,
     [UC_BERKELEY_TREE_RIGHT]: PropTypes.bool,
-    [MONITOR_SPEAKER_LEFT]: PropTypes.bool,
-    [MONITOR_SPEAKER_RIGHT]: PropTypes.bool,
+    [MONITOR_LEFT]: PropTypes.bool,
+    [MONITOR_RIGHT]: PropTypes.bool,
     [WALL_SPEAKER_LEFT]: PropTypes.bool,
     [WALL_SPEAKER_RIGHT]: PropTypes.bool,
     [SANDBAGS]: PropTypes.bool,
@@ -239,8 +239,8 @@ export default {
     [BANCROFT_SHRUBS]: bancroftShrubs,
     [UC_BERKELEY_TREE_LEFT]: ucBerkeleyTree,
     [UC_BERKELEY_TREE_RIGHT]: ucBerkeleyTree,
-    [MONITOR_SPEAKER_LEFT]: MonitorSpeakerLeft,
-    [MONITOR_SPEAKER_RIGHT]: MonitorSpeakerRight,
+    [MONITOR_LEFT]: MonitorLeft,
+    [MONITOR_RIGHT]: MonitorRight,
     [WALL_SPEAKER_LEFT]: WallSpeakerLeft,
     [WALL_SPEAKER_RIGHT]: WallSpeakerRight,
     [SANDBAGS]: Sandbags,
@@ -253,8 +253,8 @@ export default {
     [STORAGE_CHEST]: StorageChest,
     [HOWIE_FRIDGE]: HowieFridge,
     [TELEVISION]: Television,
-    [MONITOR_SIDE_CROWD]: MonitorSpeakerSide,
-    [MONITOR_SIDE_STAGE]: MonitorSpeakerSide,
+    [MONITOR_SIDE_CROWD]: MonitorSide,
+    [MONITOR_SIDE_STAGE]: MonitorSide,
     [WALL_SPEAKER_SIDE_CROWD]: WallSpeakerSide,
     [WALL_SPEAKER_SIDE_STAGE]: WallSpeakerSide,
     [TWIN_STREETLAMP_FAR]: TwinStreetlamp,

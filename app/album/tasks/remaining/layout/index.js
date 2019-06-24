@@ -30,6 +30,11 @@ export default [
      * Final UI.
      */
     {
+        taskName: `Make carousel fade on left as well.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Establish stanza, dot, and selected, activated, accessed, disabled, and before, after, and on cursor colours.`,
         workedHours: 1,
         neededHours: 5

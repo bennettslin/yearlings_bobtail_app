@@ -63,8 +63,8 @@ import {
 } from '../../constants/scene/things/cardboards'
 
 import {
-    MONITOR_SPEAKER_LEFT,
-    MONITOR_SPEAKER_RIGHT,
+    MONITOR_LEFT,
+    MONITOR_RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT
 } from '../../constants/scene/things/cutouts'
@@ -219,8 +219,8 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [MONITOR_SPEAKER_LEFT]: true,
-                [MONITOR_SPEAKER_RIGHT]: true,
+                [MONITOR_LEFT]: true,
+                [MONITOR_RIGHT]: true,
                 [WALL_SPEAKER_LEFT]: true,
                 [WALL_SPEAKER_RIGHT]: true
             },

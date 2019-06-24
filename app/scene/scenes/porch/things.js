@@ -10,13 +10,13 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [PORCH_PLANTS_LEFT]: {
             yIndex: 1,
-            xPosition: 0.5,
-            scaleFactor: 0.33
+            xPosition: 1.5,
+            scaleFactor: 0.3
         },
         [PORCH_PLANTS_RIGHT]: {
             yIndex: 1,
             xPosition: 10.5,
-            scaleFactor: 0.33
+            scaleFactor: 0.3
         }
     }
 }
