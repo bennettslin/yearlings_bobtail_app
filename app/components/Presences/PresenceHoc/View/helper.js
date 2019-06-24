@@ -15,7 +15,7 @@ import {
 } from 'helpers/cube'
 import { getValueInAbridgedMatrix } from 'helpers/general'
 
-import { getCubesForKey } from 'scene/cubes'
+import { getCubesForKey } from 'album/scenes/arrangements/cubes'
 
 const _getNearestXIndex = (xPosition) => {
     let xIndex

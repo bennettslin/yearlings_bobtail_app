@@ -11,7 +11,7 @@ import {
 import { SHOWN } from 'constants/options'
 import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
 
-import { getCubesForKey } from 'scene/cubes'
+import { getCubesForKey } from 'album/scenes/arrangements/cubes'
 
 import {
     TIME_ANYTIME,
