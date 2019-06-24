@@ -190,7 +190,7 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, bored by conversation',
                     instance: STEAM_TUNNEL
                 },
