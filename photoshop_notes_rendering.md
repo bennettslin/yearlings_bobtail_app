@@ -22,7 +22,7 @@
 * For detailed presences, scale image for better resolution.
 * Make sure all lines connect!
 
-## Finalisation.
+## File organisation.
 * Quick export each isolated layer to PNG in subfolder.
     * Custom shortcut is Command-Option-Alt-N.
 * File names don't matter. They're temporary.
@@ -52,9 +52,11 @@
 * Send objects backward or forward as needed.
     * Shortcuts are Command-[ or ].
 
-## Finalisation.
+## File organisation.
 * Move subfolder with png files to ~completed folder.
 * Move Illustrator file to actor or thing folder.
+
+## Svg work
 
 ## Create svg.
 * Fit artboard to artwork.
@@ -65,15 +67,16 @@
 
 ## Convert svg to React component.
 * Place in assets folder.
-* Move styles to stylesheet.
-    * Change class names for stroke paths.
-    * Change other class names.
-    * Clean up.
-* Change scene config.
-    * Correct x and y positions, if needed.
-    * Scale it.
 * Change component routing.
     * Import svg instead of component.
     * Delete component.
+* Change scene config.
+    * Correct x and y positions, if needed.
+    * Scale it.
+* Move styles to stylesheet in Presence folder.
+    * Remove title.
+    * Change class names.
+    * Change for open paths.
+    * Indent using Prettier.
 
 * Log done in illustrator task folder!

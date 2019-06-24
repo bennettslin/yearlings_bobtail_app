@@ -31,11 +31,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [EL_CERRITO_TREE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 6,
-                zHeight: 6
-            }
+            xPosition: 2,
+            scaleFactor: 0.5
         }
     },
     [FLAT]: {

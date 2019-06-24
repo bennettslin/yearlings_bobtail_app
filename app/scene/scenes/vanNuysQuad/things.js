@@ -44,7 +44,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [VAN_NUYS_PLANT_QUAD]: {
             yIndex: 4,
-            xPosition: 3
+            xPosition: 3,
+            scaleFactor: 0.33
         }
     }
 }

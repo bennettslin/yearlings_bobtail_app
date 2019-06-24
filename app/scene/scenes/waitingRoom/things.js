@@ -43,11 +43,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [WAITING_ROOM_PLANT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 1,
-                zHeight: 4
-            }
+            xPosition: 7.5,
+            scaleFactor: 0.45
         }
     },
     [PANEL]: {

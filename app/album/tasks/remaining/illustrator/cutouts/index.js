@@ -30,16 +30,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'porchPlantsLeft',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'porchPlantsRight',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'campfire',
         workedHours: 0,
         neededHours: 1
@@ -145,27 +135,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'vanNuysPlant',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'recyclables',
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'berkeleyLamppost',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'bancroftShrubs',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'ucBerkeleyTree',
         workedHours: 0,
         neededHours: 1
     },
@@ -220,17 +195,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'apartmentPlant',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'codeBox',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'waitingRoomPlant',
         workedHours: 0,
         neededHours: 1
     },
@@ -260,11 +225,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'elCerritoTree',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'ivDrip',
         workedHours: 0,
         neededHours: 1
@@ -286,11 +246,6 @@ export default [
     },
     {
         taskName: 'weddingCrowd',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'cliffTree',
         workedHours: 0,
         neededHours: 1
     }

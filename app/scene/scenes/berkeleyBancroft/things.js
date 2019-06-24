@@ -23,11 +23,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [UC_BERKELEY_TREE_LEFT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 2,
-                zHeight: 4
-            }
+            xPosition: 1,
+            scaleFactor: 0.5
         }
     },
     [FIXTURE]: {

@@ -6,8 +6,8 @@ import MirroredSink from './Cutouts/MirroredSink'
 import TowelRack from './Cutouts/TowelRack'
 import OverpassSignFront from './Cutouts/OverpassSignFront'
 import OverpassSignBack from './Cutouts/OverpassSignBack'
-import PorchPlantsLeft from './Cutouts/PorchPlantsLeft'
-import PorchPlantsRight from './Cutouts/PorchPlantsRight'
+import porchPlantsLeft from 'assets/svgs/cutouts/porchPlantsLeft.svg'
+import porchPlantsRight from 'assets/svgs/cutouts/porchPlantsRight.svg'
 import TrollShadowLeft from './Cutouts/TrollShadowLeft'
 import TrollShadowRight from './Cutouts/TrollShadowRight'
 import Campfire from './Cutouts/Campfire'
@@ -29,14 +29,14 @@ import BennettOceanFloor from './Cutouts/BennettOceanFloor'
 import BennettMat from './Cutouts/BennettMat'
 import OdinMat from './Cutouts/OdinMat'
 import TrashCan from './Cutouts/TrashCan'
-import VanNuysPlant from './Cutouts/VanNuysPlant'
+import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
 import Recyclables from './Cutouts/Recyclables'
 import DispenserLeft from './Cutouts/DispenserLeft'
 import DispenserRight from './Cutouts/DispenserRight'
 import BerkeleyLamppost from './Cutouts/BerkeleyLamppost'
 import SignPost from './Cutouts/SignPost'
-import BancroftShrubs from './Cutouts/BancroftShrubs'
-import UcBerkeleyTree from './Cutouts/UcBerkeleyTree'
+import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
+import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
 import MonitorSpeakerLeft from './Cutouts/MonitorSpeakerLeft'
 import MonitorSpeakerRight from './Cutouts/MonitorSpeakerRight'
 import WallSpeakerLeft from './Cutouts/WallSpeakerLeft'
@@ -44,9 +44,9 @@ import WallSpeakerRight from './Cutouts/WallSpeakerRight'
 import Sandbags from './Cutouts/Sandbags'
 import StageLights from './Cutouts/StageLights'
 import TrafficLight from './Cutouts/TrafficLight'
-import apartmentPlant from 'assets/svgs/apartmentPlant.svg'
+import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
 import CodeBox from './Cutouts/CodeBox'
-import WaitingRoomPlant from './Cutouts/WaitingRoomPlant'
+import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
 import StorageBoxes from './Cutouts/StorageBoxes'
 import StorageChest from './Cutouts/StorageChest'
 import HowieFridge from './Cutouts/HowieFridge'
@@ -54,10 +54,10 @@ import Television from './Cutouts/Television'
 import MonitorSpeakerSide from './Cutouts/MonitorSpeakerSide'
 import WallSpeakerSide from './Cutouts/WallSpeakerSide'
 import TwinStreetlamp from './Cutouts/TwinStreetlamp'
-import ElCerritoTree from './Cutouts/ElCerritoTree'
+import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
 import Dumpster from './Cutouts/Dumpster'
 import WeddingCrowd from './Cutouts/WeddingCrowd'
-import CliffTree from './Cutouts/CliffTree'
+import cliffTree from 'assets/svgs/cutouts/cliffTree.svg'
 import IvDrip from './Cutouts/IvDrip'
 
 import {
@@ -205,8 +205,8 @@ export default {
     [TOWEL_RACK]: TowelRack,
     [OVERPASS_SIGN_FRONT]: OverpassSignFront,
     [OVERPASS_SIGN_BACK]: OverpassSignBack,
-    [PORCH_PLANTS_LEFT]: PorchPlantsLeft,
-    [PORCH_PLANTS_RIGHT]: PorchPlantsRight,
+    [PORCH_PLANTS_LEFT]: porchPlantsLeft,
+    [PORCH_PLANTS_RIGHT]: porchPlantsRight,
     [TROLL_SHADOW_LEFT]: TrollShadowLeft,
     [TROLL_SHADOW_RIGHT]: TrollShadowRight,
     [CAMPFIRE]: Campfire,
@@ -229,16 +229,16 @@ export default {
     [ODIN_MAT]: OdinMat,
     [TRASH_CAN_LOCKERS]: TrashCan,
     [TRASH_CAN_QUAD]: TrashCan,
-    [VAN_NUYS_PLANT_LOCKERS]: VanNuysPlant,
-    [VAN_NUYS_PLANT_QUAD]: VanNuysPlant,
+    [VAN_NUYS_PLANT_LOCKERS]: vanNuysPlant,
+    [VAN_NUYS_PLANT_QUAD]: vanNuysPlant,
     [RECYCLABLES]: Recyclables,
     [DISPENSER_LEFT]: DispenserLeft,
     [DISPENSER_RIGHT]: DispenserRight,
     [BERKELEY_LAMPPOST]: BerkeleyLamppost,
     [SIGNPOST]: SignPost,
-    [BANCROFT_SHRUBS]: BancroftShrubs,
-    [UC_BERKELEY_TREE_LEFT]: UcBerkeleyTree,
-    [UC_BERKELEY_TREE_RIGHT]: UcBerkeleyTree,
+    [BANCROFT_SHRUBS]: bancroftShrubs,
+    [UC_BERKELEY_TREE_LEFT]: ucBerkeleyTree,
+    [UC_BERKELEY_TREE_RIGHT]: ucBerkeleyTree,
     [MONITOR_SPEAKER_LEFT]: MonitorSpeakerLeft,
     [MONITOR_SPEAKER_RIGHT]: MonitorSpeakerRight,
     [WALL_SPEAKER_LEFT]: WallSpeakerLeft,
@@ -248,7 +248,7 @@ export default {
     [TRAFFIC_LIGHT]: TrafficLight,
     [APARTMENT_PLANT]: apartmentPlant,
     [CODE_BOX]: CodeBox,
-    [WAITING_ROOM_PLANT]: WaitingRoomPlant,
+    [WAITING_ROOM_PLANT]: waitingRoomPlant,
     [STORAGE_BOXES]: StorageBoxes,
     [STORAGE_CHEST]: StorageChest,
     [HOWIE_FRIDGE]: HowieFridge,
@@ -260,10 +260,10 @@ export default {
     [TWIN_STREETLAMP_FAR]: TwinStreetlamp,
     [TWIN_STREETLAMP_MIDDLE]: TwinStreetlamp,
     [TWIN_STREETLAMP_NEAR]: TwinStreetlamp,
-    [EL_CERRITO_TREE]: ElCerritoTree,
+    [EL_CERRITO_TREE]: elCerritoTree,
     [DUMPSTER]: Dumpster,
     [WEDDING_CROWD]: WeddingCrowd,
-    [CLIFF_TREE]: CliffTree,
+    [CLIFF_TREE]: cliffTree,
     [IV_DRIP]: IvDrip
 }
 

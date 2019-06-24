@@ -23,19 +23,13 @@ const ARRANGEMENTS_THINGS = {
         },
         [BANCROFT_SHRUBS]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 3,
-                zHeight: 3
-            }
+            xPosition: 2,
+            scaleFactor: 0.5
         },
         [UC_BERKELEY_TREE_RIGHT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 2,
-                zHeight: 4
-            }
+            xPosition: 9.5,
+            scaleFactor: 0.5
         }
     },
     [FLAT]: {
