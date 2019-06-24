@@ -9,8 +9,8 @@ import furnituresMap from './Furniture/presenceMap'
 import panelsMap from './Panel/presenceMap'
 import puppetsMap from './Puppet/presenceMap'
 
-import ALL_ARRANGEMENTS_ACTORS from 'scene/actors'
-import ALL_ARRANGEMENTS_THINGS from 'scene/things'
+import ALL_ARRANGEMENTS_ACTORS from 'album/scenes/arrangements'
+import ALL_ARRANGEMENTS_THINGS from 'album/scenes/arrangements/things'
 
 import {
     ACTOR,
