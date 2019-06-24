@@ -21,7 +21,7 @@ const
     Y_INDEX_BASE_DECREASE = 0.9,
     Y_INDEX_LUMINOSITY_DECREMENT = 0.05,
     Z_INDEX_LUMINOSITY_DECREMENT = 0.05,
-    BASE_ALPHA = 0.9
+    BASE_ALPHA = 1
 
 const _getLuminosityForTileFace = ({ l, level, zIndex }) => {
     // All ceiling tiles share the same reduced luminosity.
