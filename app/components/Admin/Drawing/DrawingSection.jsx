@@ -7,7 +7,7 @@ import DrawingActor from './DrawingActor'
 const DrawingSection = ({
 
     // From controller.
-    actors,
+    actor: actors,
     actorsTodoCount,
     actorsTotalCount
 
