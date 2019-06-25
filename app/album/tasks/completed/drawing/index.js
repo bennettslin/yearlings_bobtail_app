@@ -980,5 +980,10 @@ export default [
         taskName: 'lizThought',
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: 'Extra time for Clark face revisions.',
+        workedHours: 5,
+        neededHours: 5
     }
 ]
