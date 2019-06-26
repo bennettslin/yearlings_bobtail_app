@@ -43,5 +43,10 @@ export default [
         taskName: 'cliffTree',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'recyclables',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

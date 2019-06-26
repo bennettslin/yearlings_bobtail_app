@@ -46,9 +46,6 @@
     * Shortcut is Command-J.
 * In Layers settings, Flatten artwork.
 * Temporarily colour each object. Aim for final colour, but don't sweat it.
-* Set stroke widths.
-    * Default paths are 2pt.
-    * Open paths are 1pt.
 * Send objects backward or forward as needed.
     * Shortcuts are Command-[ or ].
 

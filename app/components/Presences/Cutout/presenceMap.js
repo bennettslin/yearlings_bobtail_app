@@ -30,7 +30,7 @@ import BennettMat from './Cutouts/BennettMat'
 import OdinMat from './Cutouts/OdinMat'
 import TrashCan from './Cutouts/TrashCan'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
-import Recyclables from './Cutouts/Recyclables'
+import recyclables from 'assets/svgs/cutouts/recyclables.svg'
 import DispenserLeft from './Cutouts/DispenserLeft'
 import DispenserRight from './Cutouts/DispenserRight'
 import BerkeleyLamppost from './Cutouts/BerkeleyLamppost'
@@ -231,7 +231,7 @@ export default {
     [TRASH_CAN_QUAD]: TrashCan,
     [VAN_NUYS_PLANT_LOCKERS]: vanNuysPlant,
     [VAN_NUYS_PLANT_QUAD]: vanNuysPlant,
-    [RECYCLABLES]: Recyclables,
+    [RECYCLABLES]: recyclables,
     [DISPENSER_LEFT]: DispenserLeft,
     [DISPENSER_RIGHT]: DispenserRight,
     [BERKELEY_LAMPPOST]: BerkeleyLamppost,

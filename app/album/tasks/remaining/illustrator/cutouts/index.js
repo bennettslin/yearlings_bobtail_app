@@ -135,11 +135,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'recyclables',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'berkeleyLamppost',
         workedHours: 0,
         neededHours: 1
