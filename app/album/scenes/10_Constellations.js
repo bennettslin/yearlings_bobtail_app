@@ -227,7 +227,7 @@ export default [
                 },
                 [ANA_HOWIE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4,
                     compound: 2,
                     description: 'side angle, shivering, feeling comforted',
                     instance: CEMETERY
@@ -274,7 +274,7 @@ export default [
                 },
                 [HOWIE]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'driving car, alert, wigging out',
                     instance: STATION_WAGON
                 },
