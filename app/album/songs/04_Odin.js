@@ -880,7 +880,7 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `Recording vocals in doublespeaker rhyme proved to be trickier than anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounds fine on its own, they can turn into a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
+                            `Recording vocals in doublespeaker rhyme proved to be trickier than I had anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounds fine on its own, they can turn into a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
                             {
                                 anchor: `ligature.`,
                                 wiki: `Ligature_(music)`
@@ -1109,7 +1109,7 @@ export default {
                         {
                             anchor: `pulled your floater away`,
                             card: {
-                                description: `An off-center floater on the surface of one's eyeball is impossible to stare at directly, and any attempt to do so will only end in frustrated tears. Pining after Sasha felt similarly futile, as her inner world would remain a fixed distance apart from me, despite all my frantic efforts.`,
+                                description: `Pining after Sasha was like trying to stare at an off-center floater on the surface of one's eyeball. Despite all my frantic efforts to bring myself closer, her inner world always remained a fixed distance apart from me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
