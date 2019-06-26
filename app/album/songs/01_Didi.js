@@ -394,7 +394,7 @@ export default {
                         {
                             anchor: `sheriff's badge and gun…`,
                             card: {
-                                description: `While the Taiwanese teenagers of my mother's generation prized all things American, their understanding of what America had to offer was largely shaped by a bootleg industry that recycled material from decades past. Years later, my sister and I would grow up listening to my mother's old country records and sharing her fondness for old Westerns.`,
+                                description: `While the Taiwanese teenagers of my mother's generation prized all things that America had to offer, their tastes were shaped by a bootleg industry that largely recycled American popular culture from decades past. Years later, my sister and I would grow up listening to my mother's old country records and sharing her fondness for old Westerns.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

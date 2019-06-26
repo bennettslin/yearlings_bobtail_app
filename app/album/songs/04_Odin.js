@@ -1049,18 +1049,7 @@ export default {
                         },
                         `through sea serpents,`
                     ],
-                    right: [
-                        {
-                            anchor: `Coin toss`,
-                            card: {
-                                description: `It was purely by chance that I suffered the misfortune of not being born Jewish.`,
-                                dotKeys: {
-                                    [OBSERVATION]: true
-                                }
-                            }
-                        },
-                        `to be hers from`
-                    ]
+                    right: `Coin toss to be hers from`
                 },
                 {
                     time: 107,
@@ -1075,7 +1064,7 @@ export default {
                                         anchor: `shiv`,
                                         wiki: `Shiv_(weapon)`
                                     },
-                                    `is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved, and the schoolyard often felt like a training ground for a lifetime of vigilance.`
+                                    `is a stabbing weapon improvised by prison inmates. To wander a prison yard is to be in constant danger of getting shivved, and the schoolyard felt like a training ground for a lifetime of such vigilance.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1095,12 +1084,12 @@ export default {
                                         anchor: `Shivaree`,
                                         wiki: `Charivari`
                                     },
-                                    `is a folk custom in which a crowd loudly serenades a newlywed couple outside their home, while sitting`,
+                                    `is a European folk custom in which a raucous crowd serenades a newlywed couple. Meanwhile, sitting`,
                                     {
                                         anchor: `shivah`,
                                         wiki: `Shiva_(Judaism)`
                                     },
-                                    `is a period of mourning in Judaism after a family member passes away. In other words, not being born Jewish has lost me any hope of a lifetime with Sasha in marriage until death.`
+                                    `refers to a period of mourning in Judaism after a family member passes away. In other words, my bad luck to not be born Jewish has cost me any hope of spending a lifetime with Sasha, from marriage until death.`
                                 ],
                                 dotKeys: {
                                     [OBSERVATION]: true
@@ -1120,7 +1109,7 @@ export default {
                         {
                             anchor: `pulled your floater away`,
                             card: {
-                                description: `An off-centre floater on the surface of one's eye is impossible to stare at directly, and any attempt to do so will only end in frustrated tears. Pining after Sasha felt similarly futile, as she would always remain a fixed distance apart from me, regardless of my frantic efforts.`,
+                                description: `An off-center floater on the surface of one's eyeball is impossible to stare at directly, and any attempt to do so will only end in frustrated tears. Pining after Sasha felt similarly futile, as her inner world would remain a fixed distance apart from me, despite all my frantic efforts.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -1136,7 +1125,7 @@ export default {
                         {
                             anchor: `silhouettes of torn rides`,
                             card: {
-                                description: `Watching the ocean waves rise and fall, I am reminded of roller coasters that shaped the skyline in my youth, which were erected and dismantled with a similar transience.`,
+                                description: `Watching the ocean waves rise and fall in my dream, I am reminded of roller coasters that shaped the skyline of my youth, which were erected and dismantled with a similar transience.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
