@@ -1109,7 +1109,7 @@ export default {
                         {
                             anchor: `pulled your floater away`,
                             card: {
-                                description: `Pining after Sasha was like trying to stare at an off-center floater on the surface of one's eyeball. Despite all my frantic efforts to bring myself closer, her inner world always remained a fixed distance apart from me.`,
+                                description: `Pining after Sasha was like trying to stare at an off-center floater on the surface of one's eyeball. Despite my frantic efforts to bring myself closer, her inner world always remained a fixed distance apart from me.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
