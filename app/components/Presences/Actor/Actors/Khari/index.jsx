@@ -1,12 +1,12 @@
 import React, { memo } from 'react'
 import { propTypes } from './instanceMap'
 
-import LayerHoc from '../../../LayerHoc'
+import Layer from '../../../Layer'
 import { KHARI } from '../../../../../constants/scene/actors'
 
 const KhariLayer = memo(({ instanceKey }) => {
     return (
-        <LayerHoc
+        <Layer
             {...{
                 actorKey: KHARI,
                 instanceKey

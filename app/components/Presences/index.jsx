@@ -3,16 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
+import Layer from './Layer'
 import ActorLayers from './Actor'
-import BackdropLayer from './Backdrop'
-import BubbleLayer from './Bubble'
-import CardboardLayer from './Cardboard'
-import CutoutLayer from './Cutout'
-import FixtureLayer from './Fixture'
-import FlatLayer from './Flat'
-import FurnitureLayer from './Furniture'
-import PanelLayer from './Panel'
-import PuppetLayer from './Puppet'
 
 import { getScene } from 'album/api/scenes'
 import { CUBE_Y_INDICES } from 'constants/cubeIndex'
@@ -93,15 +85,15 @@ class Presences extends PureComponent {
                         )
                     }}
                 >
-                    <BackdropLayer {...backdrops} />
-                    <BubbleLayer {...bubbles} />
-                    <CardboardLayer {...cardboards} />
-                    <CutoutLayer {...cutouts} />
-                    <FixtureLayer {...fixtures} />
-                    <FlatLayer {...flats} />
-                    <FurnitureLayer {...furnitures} />
-                    <PanelLayer {...panels} />
-                    <PuppetLayer {...puppets} />
+                    <Layer {...backdrops} {...{ presenceType: BACKDROP }} />
+                    <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
+                    <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
+                    <Layer {...cutouts} {...{ presenceType: CUTOUT }} />
+                    <Layer {...fixtures} {...{ presenceType: FIXTURE }} />
+                    <Layer {...flats} {...{ presenceType: FLAT }} />
+                    <Layer {...furnitures} {...{ presenceType: FURNITURE }} />
+                    <Layer {...panels} {...{ presenceType: PANEL }} />
+                    <Layer {...puppets} {...{ presenceType: PUPPET }} />
 
                     {/* Each individual actor has its own layer. */}
                     <ActorLayers {...actors} />

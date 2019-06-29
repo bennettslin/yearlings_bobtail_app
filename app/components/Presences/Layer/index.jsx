@@ -15,7 +15,7 @@ const mapStateToProps = ({
     sceneCubesKey
 })
 
-class LayerHoc extends PureComponent {
+class Layer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -73,4 +73,4 @@ class LayerHoc extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(LayerHoc)
+export default connect(mapStateToProps)(Layer)
