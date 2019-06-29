@@ -31,10 +31,8 @@ import BerkeleyLamppost from './Cutouts/BerkeleyLamppost'
 import SignPost from './Cutouts/SignPost'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
-import MonitorLeft from './Cutouts/MonitorLeft'
-import MonitorRight from './Cutouts/MonitorRight'
-import WallSpeakerLeft from './Cutouts/WallSpeakerLeft'
-import WallSpeakerRight from './Cutouts/WallSpeakerRight'
+import MonitorFront from './Cutouts/MonitorFront'
+import WallSpeakerFront from './Cutouts/WallSpeakerFront'
 import Sandbags from './Cutouts/Sandbags'
 import StageLights from './Cutouts/StageLights'
 import TrafficLight from './Cutouts/TrafficLight'
@@ -92,10 +90,10 @@ import {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE__LEFT,
     UC_BERKELEY_TREE__RIGHT,
-    MONITOR_LEFT,
-    MONITOR_RIGHT,
-    WALL_SPEAKER_LEFT,
-    WALL_SPEAKER_RIGHT,
+    MONITOR_FRONT__LEFT,
+    MONITOR_FRONT__RIGHT,
+    WALL_SPEAKER_FRONT__LEFT,
+    WALL_SPEAKER_FRONT__RIGHT,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
@@ -158,10 +156,10 @@ export default {
     [BANCROFT_SHRUBS]: bancroftShrubs,
     [UC_BERKELEY_TREE__LEFT]: ucBerkeleyTree,
     [UC_BERKELEY_TREE__RIGHT]: ucBerkeleyTree,
-    [MONITOR_LEFT]: MonitorLeft,
-    [MONITOR_RIGHT]: MonitorRight,
-    [WALL_SPEAKER_LEFT]: WallSpeakerLeft,
-    [WALL_SPEAKER_RIGHT]: WallSpeakerRight,
+    [MONITOR_FRONT__LEFT]: MonitorFront,
+    [MONITOR_FRONT__RIGHT]: MonitorFront,
+    [WALL_SPEAKER_FRONT__LEFT]: WallSpeakerFront,
+    [WALL_SPEAKER_FRONT__RIGHT]: WallSpeakerFront,
     [SANDBAGS]: Sandbags,
     [STAGE_LIGHTS]: StageLights,
     [TRAFFIC_LIGHT]: TrafficLight,

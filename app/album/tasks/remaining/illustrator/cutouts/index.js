@@ -145,22 +145,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'monitorSpeakerLeft',
+        taskName: 'monitor',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'monitorSpeakerRight',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'wallSpeakerLeft',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'wallSpeakerRight',
+        taskName: 'wallSpeaker',
         workedHours: 0,
         neededHours: 1
     },

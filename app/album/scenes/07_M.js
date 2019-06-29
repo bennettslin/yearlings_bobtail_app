@@ -85,10 +85,10 @@ import {
 } from '../../constants/scene/things/cardboards'
 
 import {
-    MONITOR_LEFT,
-    MONITOR_RIGHT,
-    WALL_SPEAKER_LEFT,
-    WALL_SPEAKER_RIGHT
+    MONITOR_FRONT__LEFT,
+    MONITOR_FRONT__RIGHT,
+    WALL_SPEAKER_FRONT__LEFT,
+    WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
 
 import {
@@ -262,10 +262,10 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [MONITOR_LEFT]: true,
-                [MONITOR_RIGHT]: true,
-                [WALL_SPEAKER_LEFT]: true,
-                [WALL_SPEAKER_RIGHT]: true
+                [MONITOR_FRONT__LEFT]: true,
+                [MONITOR_FRONT__RIGHT]: true,
+                [WALL_SPEAKER_FRONT__LEFT]: true,
+                [WALL_SPEAKER_FRONT__RIGHT]: true
             },
             [FIXTURE]: {
                 [CASH_BOX]: true,

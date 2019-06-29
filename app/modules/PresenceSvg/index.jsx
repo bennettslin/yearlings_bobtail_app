@@ -28,11 +28,11 @@ class PresenceSvg extends Component {
 
     processSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
-        setTimeout(this.tryGetViewBoxSize.bind(null, svgString), 0)
+        setTimeout(this.trySetViewBoxSize.bind(null, svgString), 0)
         return svgString
     }
 
-    tryGetViewBoxSize = (svgString) => {
+    trySetViewBoxSize = (svgString) => {
         try {
             const
                 {

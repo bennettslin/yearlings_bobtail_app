@@ -81,6 +81,7 @@ const PresenceView = ({
 
         PresenceComponent = presencesMap[presenceKey],
 
+        // TODO: Eventually have PresenceSvg parse className.
         presenceProps = {
             className: cx(
                 'Presence',

@@ -9,7 +9,7 @@ const propTypes = {
     className: PropTypes.string
 }
 
-const WallSpeakerRight = ({
+const WallSpeakerFront = ({
 
     className,
 
@@ -19,7 +19,7 @@ const WallSpeakerRight = ({
     return (
         <Svg
             className={cx(
-                'WallSpeakerRight',
+                'WallSpeakerFront',
                 className
             )}
         >
@@ -36,13 +36,13 @@ const WallSpeakerRight = ({
                 {...other}
             >
                 {cx(
-                    'WallSpeakerRight'
+                    'WallSpeakerFront'
                 )}
             </text>
         </Svg>
     )
 }
 
-WallSpeakerRight.propTypes = propTypes
+WallSpeakerFront.propTypes = propTypes
 
-export default WallSpeakerRight
+export default WallSpeakerFront

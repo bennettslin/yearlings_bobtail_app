@@ -62,8 +62,8 @@ import {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE__LEFT,
     UC_BERKELEY_TREE__RIGHT,
-    WALL_SPEAKER_LEFT,
-    WALL_SPEAKER_RIGHT,
+    WALL_SPEAKER_FRONT__LEFT,
+    WALL_SPEAKER_FRONT__RIGHT,
     DUMPSTER
 } from '../../constants/scene/things/cutouts'
 
@@ -163,8 +163,8 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [WALL_SPEAKER_LEFT]: true,
-                [WALL_SPEAKER_RIGHT]: true
+                [WALL_SPEAKER_FRONT__LEFT]: true,
+                [WALL_SPEAKER_FRONT__RIGHT]: true
             },
             [FIXTURE]: {
                 [STAGE_MIC_FAR]: true

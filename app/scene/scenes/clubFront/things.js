@@ -3,10 +3,10 @@ import {
     FIXTURE
 } from 'constants/scene'
 import {
-    MONITOR_LEFT,
-    MONITOR_RIGHT,
-    WALL_SPEAKER_LEFT,
-    WALL_SPEAKER_RIGHT
+    MONITOR_FRONT__LEFT,
+    MONITOR_FRONT__RIGHT,
+    WALL_SPEAKER_FRONT__LEFT,
+    WALL_SPEAKER_FRONT__RIGHT
 } from 'constants/scene/things/cutouts'
 import {
     CASH_BOX,
@@ -16,7 +16,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [MONITOR_LEFT]: {
+        [MONITOR_FRONT__LEFT]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 2.5,
@@ -24,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [MONITOR_RIGHT]: {
+        [MONITOR_FRONT__RIGHT]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8.5,
@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [WALL_SPEAKER_LEFT]: {
+        [WALL_SPEAKER_FRONT__LEFT]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 1.5,
@@ -41,7 +41,7 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WALL_SPEAKER_RIGHT]: {
+        [WALL_SPEAKER_FRONT__RIGHT]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 9.5,
