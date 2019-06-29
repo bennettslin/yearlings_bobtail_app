@@ -4646,5 +4646,10 @@ export default [
         taskName: `Capitalise method does not account for multiple instances of same presence.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Reorganise cutout styles.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

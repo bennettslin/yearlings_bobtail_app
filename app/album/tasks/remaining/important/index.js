@@ -5,7 +5,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Code splitting and API server timebox.`,
+        taskName: `Code splitting and API server timebox. Include separating album logic, admin, and svgs.`,
         workedHours: 8,
         neededHours: 20
     },

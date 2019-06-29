@@ -1,8 +1,3 @@
-$js__aspectRatio: 1.7;
-
-$diameter__sun: 5%;
-$diameter__moon: 5%;
-
 .Sky__filter {
     transition:
         background-color $animationDuration__slow;
@@ -17,80 +12,4 @@ $diameter__moon: 5%;
         opacity $animationDuration__slow,
         top $animationDuration__slow,
         left $animationDuration__slow;
-}
-
-.Season__indoor {
-    background-color: #444;
-}
-
-.Season__spring {
-    background-color: #ddf;
-}
-
-.Season__summer {
-    background-color: #eef;
-}
-
-.Season__autumn {
-    background-color: #cce;
-}
-
-.Season__winter {
-    background-color: #bbd;
-}
-
-.Season__past {
-    background-color: #db8;
-}
-
-.Season__present {
-    background-color: #bd8;
-}
-
-.Season__future {
-    background-color: #b8d;
-}
-
-.Season__love {
-    background-color: #d8b;
-}
-
-.Season__magic {
-    background-color: #8db;
-}
-
-.Season__ocean {
-    background-color: #7be;
-}
-
-.Season__thought {
-    background-color: #433;
-}
-
-.TimeOfDay__anytime {
-    background-color: none;
-}
-
-.TimeOfDay__dawn {
-    background-color: rgba(100, 100, 50, 0.05);
-}
-
-.TimeOfDay__morning {
-    background-color: rgba(100, 100, 50, 0.05);
-}
-
-.TimeOfDay__noon {
-    background-color: rgba(100, 100, 50, 0.05);
-}
-
-.TimeOfDay__afternoon {
-    background-color: rgba(100, 100, 50, 0.05);
-}
-
-.TimeOfDay__evening {
-    background-color: rgba(100, 100, 50, 0.05);
-}
-
-.TimeOfDay__night {
-    background-color: rgba(100, 100, 50, 0.05);
 }
