@@ -1,7 +1,7 @@
 export default [
     {
-        taskName: `Editing timebox.`,
-        workedHours: 10,
+        taskName: `Editing timebox. Include consideration for stage narrative.`,
+        workedHours: 11,
         neededHours: 200
     }
 ]

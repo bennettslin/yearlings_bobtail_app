@@ -19,14 +19,14 @@ import {
 export default {
     title: 'Dear Saskia',
     totalTime: 171,
-    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away in middle school, just as I began dealing with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
+    overview: `Sasha was a childhood friend, as well as my first crush. The strength she drew from her Jewish identity fascinated me, as I felt no cultural or religious pull of my own. But this clued me in on a cruel paradox. Namely, that nothing comes from longing to share in someone's faith and roots, which stay strong precisely by not being shared. Sasha moved away in middle school, just as I began to deal with bullies. That summer, I wrote her a letter on a family trip to Taiwan.`,
     lyricUnits: [
         {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
                     card: {
-                        description: `Sasha's given name was actually Saskia, but because this was difficult for other children to pronounce, she had gone by the nickname of Sasha her entire life.`,
+                        description: `Sasha's given name was actually Saskia. But because this was difficult for her earliest playmates to pronounce, she had gone by the nickname of Sasha her entire life.`,
                         dotKeys: {
                             [BACKSTORY]: true
                         }
@@ -40,12 +40,12 @@ export default {
                     anchor: IS_UNIT_DOT,
                     card: {
                         description: [
-                            `As a teenager, I tried to figure out how`,
+                            `In my teenage years, I tried to figure out how`,
                             {
                                 anchor: `The Beatles`,
                                 wiki: `The_Beatles`
                             },
-                            `weaved melodies and chords progressions so seamlessly. The music for this song began as a zealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what my letter to Sasha called for, and trotted it back out.`
+                            `weaved melodies into chord progressions so seamlessly. The music for this song began as a zealous attempt to match their form and style. In the end, it suffered from overthinking, and I put it away in disgust. Years later, I realised that its overwrought nature was exactly what this letter to Sasha called for, and trotted it back out.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true

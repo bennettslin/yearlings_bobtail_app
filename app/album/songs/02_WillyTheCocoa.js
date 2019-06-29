@@ -22,7 +22,7 @@ import {
 export default {
     title: 'Willy the Cocoa',
     totalTime: 207,
-    overview: `Willy the Cocoa was a mentally disabled man who wandered our streets collecting recyclables for a living. One day, some delinquents decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
+    overview: `Willy the Cocoa was a mentally disabled man who wandered the streets collecting recyclables for a living. One day, some delinquents decided to pick a fight and smashed his head open with a bottle, killing him instantly. My younger brother was diagnosed with severe autism at around this time, and in light of Willy's murder, I would lie awake in fear of what lay in my brother's future.`,
     lyricUnits: [
         {
             unitMap: {
@@ -974,7 +974,7 @@ export default {
                         {
                             anchor: `heavy fears,`,
                             card: {
-                                description: `Back to the night of Willy's murder. I wake up screaming in fear of my mortality. My mother rushes to my bedside to comfort me.`,
+                                description: `Back to the night of Willy's murder. After I wake up screaming in fear of my mortality, my mother rushes to my bedside to comfort me.`,
                                 dotKeys: {
                                     [NARRATIVE]: true
                                 }
@@ -988,23 +988,23 @@ export default {
                     lyric: [
                         `for a cub`,
                         {
-                            anchor: `not yet Webelos!`,
+                            anchor: `cub not yet Webelos!`,
                             cards: [
                                 {
                                     description: [
-                                        `My mother was a`,
+                                        `In the`,
                                         {
-                                            anchor: `Cub Scouts`,
+                                            anchor: `Cub Scouts,`,
                                             wiki: `Cub_Scouting_(Boy_Scouts_of_America)`
                                         },
-                                        `den mother. The oldest scouts in the pack, those in the fourth or fifth grade, belong to the Webelos rank, which stands for "We'll Be Loyal Scouts."`
+                                        `the eldest rank of Webelos is earned by boys in the fourth or fifth grade. It stands for "We'll Be Loyal Scouts."`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
                                     }
                                 },
                                 {
-                                    description: `My mother might also be saying that I am not yet "way below."`,
+                                    description: `My mother, who was the den mother of my Cub Scout pack, might also be assuring me that I am not yet "way below."`,
                                     dotKeys: {
                                         [PUN]: true
                                     }
@@ -1020,9 +1020,9 @@ export default {
                         {
                             anchor: `seventy years`,
                             card: {
-                                description: `In keeping with her Buddhist faith, my mother tells me not to worry, since I'm not going to die for a long while. She then assures me that when my time finally does come in another seventy years or so, I will have long made peace with death.`,
+                                description: `In keeping with her Buddhist faith, my mother told me not to worry, since I wasn't going to die for a long while. She then assured me that when my time finally did come, perhaps in another seventy years or so, I would have long made peace with death somehow.`,
                                 dotKeys: {
-                                    [NARRATIVE]: true
+                                    [BACKSTORY]: true
                                 }
                             }
                         },
@@ -1062,10 +1062,11 @@ export default {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
                                     {
-                                        anchor: `lazy eye,`,
+                                        anchor: `lazy eye.`,
                                         wiki: `Amblyopia`
                                     },
-                                    `which caused a lack of depth perception that led me to figure out perspective early on. Impressed by my early drawings, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. I thus had it in my head that I would someday create an epic masterpiece, which we assumed at the time would be a comic book.`
+                                    // TODO: Tintin comic book reference.
+                                    `Since I lacked depth perception and naturally understood the world in two dimensions, my early drawings reflected an advanced understanding of perspective. Impressed, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. So I always had it in my head that one day I would create an epic masterpiece, perhaps something like the Tintin comic books I adored at the time.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -1109,7 +1110,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`
                                     },
-                                    `became my catchall title for the great artistic work I would one day create.`
+                                    `became my catchall title for the great artistic work that I would one day create.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
