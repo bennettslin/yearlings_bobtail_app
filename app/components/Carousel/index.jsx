@@ -25,7 +25,7 @@ class Carousel extends PureComponent {
     }
 
     componentDidMount() {
-        logMount(Carousel.name)
+        logMount('Carousel')
     }
 
     _handleTransitionExited = () => {

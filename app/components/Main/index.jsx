@@ -53,7 +53,7 @@ class Main extends PureComponent {
     }
 
     componentDidMount() {
-        logMount(Main.name)
+        logMount('Main')
 
         sendEvent({
             category: 'test',

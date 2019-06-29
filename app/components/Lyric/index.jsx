@@ -36,7 +36,7 @@ class Lyric extends PureComponent {
     }
 
     componentDidMount() {
-        logMount(Lyric.name)
+        logMount('Lyric')
     }
 
     _handleVerseBarWheel = (e) => {

@@ -27,7 +27,7 @@ class Stage extends PureComponent {
     }
 
     componentDidMount() {
-        logMount(Stage.name)
+        logMount('Stage')
     }
 
     _handleTransitionEntered = () => {

@@ -124,7 +124,7 @@ class FocusContainer extends PureComponent {
     _handleTouchEnd = (e) => {
         const isSliderTouchEnding = this.dispatchTouchEnd()
         if (isSliderTouchEnding) {
-            logEvent(FocusContainer.name, e)
+            logEvent('FocusContainer', e)
             /**
              * Ignore body click event that gets triggered after touch end on
              * slider, to prevent it from closing out of overlay.
@@ -140,7 +140,7 @@ class FocusContainer extends PureComponent {
     }
 
     _handleBodyClick = (e) => {
-        logEvent(FocusContainer.name, e)
+        logEvent('FocusContainer', e)
 
         this.dispatchStopPropagation(e)
 
