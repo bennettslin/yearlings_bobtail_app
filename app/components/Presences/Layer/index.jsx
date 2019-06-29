@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import keys from 'lodash.keys'
 import { connect } from 'react-redux'
 
-import PresenceHoc from '../PresenceHoc'
+import Presence from '../Presence'
 import { getMapForPresenceType } from '../helper'
 import { getMapForActorKey } from '../Actor/helper'
 
@@ -57,7 +57,7 @@ class Layer extends PureComponent {
                             Boolean(presenceValue)
 
                 return (
-                    <PresenceHoc
+                    <Presence
                         {...{
                             key: presenceKey,
                             cubesKey,

@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-import PresenceHocTransition from './Transition'
+import PresenceTransition from './Transition'
 
-class PresenceHoc extends PureComponent {
+class Presence extends PureComponent {
 
     static propTypes = {
         // From parent.
@@ -68,7 +68,7 @@ class PresenceHoc extends PureComponent {
             } = this.state
 
         return (
-            <PresenceHocTransition
+            <PresenceTransition
                 {...{
                     cubesKey,
                     presenceType,
@@ -83,4 +83,4 @@ class PresenceHoc extends PureComponent {
     }
 }
 
-export default PresenceHoc
+export default Presence

@@ -24,7 +24,7 @@ const viewPropTypes = {
     presenceKey: PropTypes.string.isRequired
 }
 
-const PresenceHocView = ({
+const PresenceView = ({
     cubesKey,
     presenceType,
     actorKey,
@@ -107,6 +107,6 @@ const PresenceHocView = ({
     )
 }
 
-PresenceHocView.propTypes = viewPropTypes
+PresenceView.propTypes = viewPropTypes
 
-export default memo(PresenceHocView)
+export default memo(PresenceView)

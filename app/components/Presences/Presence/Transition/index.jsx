@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
-import PresenceHocView from '../View'
+import PresenceView from '../View'
 
 const transitionPropTypes = {
     // From parent.
@@ -13,7 +13,7 @@ const transitionPropTypes = {
     resetRenderedState: PropTypes.func.isRequired
 }
 
-const PresenceHocTransition = ({
+const PresenceTransition = ({
     dynamicPresenceValue,
     resetRenderedState,
     ...other
@@ -30,11 +30,11 @@ const PresenceHocTransition = ({
                 onExited: resetRenderedState
             }}
         >
-            <PresenceHocView {...other} />
+            <PresenceView {...other} />
         </CSSTransition>
     )
 }
 
-PresenceHocTransition.propTypes = transitionPropTypes
+PresenceTransition.propTypes = transitionPropTypes
 
-export default memo(PresenceHocTransition)
+export default memo(PresenceTransition)
