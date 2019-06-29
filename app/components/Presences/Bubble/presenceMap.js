@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import TogetherSketchbook from './Bubbles/TogetherSketchbook'
 import ApartSketchbook from './Bubbles/ApartSketchbook'
 import DogsSketchbook from './Bubbles/DogsSketchbook'
@@ -27,21 +25,6 @@ import {
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
 } from 'constants/scene/things/bubbles'
-
-export const propTypes = {
-    [TOGETHER_SKETCHBOOK]: PropTypes.bool,
-    [APART_SKETCHBOOK]: PropTypes.bool,
-    [DOGS_SKETCHBOOK]: PropTypes.bool,
-    [ESCAPE_POD_SKETCHBOOK]: PropTypes.bool,
-    [CINEMA_THOUGHTS]: PropTypes.bool,
-    [GO_KART_THOUGHT]: PropTypes.bool,
-    [WAITING_ROOM_THOUGHTS]: PropTypes.bool,
-    [TARPIT_THOUGHT]: PropTypes.bool,
-    [SIBLING_THOUGHT]: PropTypes.bool,
-    [KHARI_ATTACK_SPEECH]: PropTypes.bool,
-    [LIZ_DEFENCE_SPEECH]: PropTypes.bool,
-    [LIZ_THOUGHT]: PropTypes.bool
-}
 
 export default {
     [TOGETHER_SKETCHBOOK]: TogetherSketchbook,

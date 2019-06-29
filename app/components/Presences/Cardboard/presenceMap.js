@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import JohnnyHortonAlbum from './Cardboards/JohnnyHortonAlbum'
 import TintinPoster from './Cardboards/TintinPoster'
 import BloomCountyPoster from './Cardboards/BloomCountyPoster'
@@ -39,27 +37,6 @@ import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
 } from 'constants/scene/things/cardboards'
-
-export const propTypes = {
-    [JOHNNY_HORTON_ALBUM]: PropTypes.bool,
-    [TINTIN_POSTER]: PropTypes.bool,
-    [BLOOM_COUNTY_POSTER]: PropTypes.bool,
-    [VAN_NUYS_LOGO]: PropTypes.bool,
-    [CORKBOARD]: PropTypes.bool,
-    [POLICE_ALBUM]: PropTypes.bool,
-    [NIRVANA_POSTER]: PropTypes.bool,
-    [LEONARD_COHEN_POSTER]: PropTypes.bool,
-    [TELEVISION_ALBUM]: PropTypes.bool,
-    [PROGRESS_CHART_EARLY]: PropTypes.bool,
-    [PROGRESS_CHART_LATE]: PropTypes.bool,
-    [CINEMA_POSTER_LEFT]: PropTypes.bool,
-    [CINEMA_POSTER_RIGHT]: PropTypes.bool,
-    [CINEMA_POSTER_RIGHT_NORMAL]: PropTypes.bool,
-    [CLIPBOARD]: PropTypes.bool,
-    [PAINTING]: PropTypes.bool,
-    [NAS_ALBUM]: PropTypes.bool,
-    [ELLIOTT_SMITH_POSTER]: PropTypes.bool
-}
 
 export default {
     [JOHNNY_HORTON_ALBUM]: JohnnyHortonAlbum,

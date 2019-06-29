@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import NohoHouseLeft from './Flats/NohoHouseLeft'
 import NohoHouseRight from './Flats/NohoHouseRight'
 import NohoSchoolhouse from './Flats/NohoSchoolhouse'
@@ -123,70 +121,6 @@ import {
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR
 } from 'constants/scene/things/flats'
-
-export const propTypes = {
-    [NOHO_HOUSE_LEFT]: PropTypes.bool,
-    [NOHO_HOUSE_RIGHT]: PropTypes.bool,
-    [NOHO_SCHOOLHOUSE]: PropTypes.bool,
-    [BEDROOM_BUS]: PropTypes.bool,
-    [BEDROOM_SIREN]: PropTypes.bool,
-    [FAMILY_HOUSE]: PropTypes.bool,
-    [CAVE_SHADOWS]: PropTypes.bool,
-    [TAIWAN_CLOUDS]: PropTypes.bool,
-    [TAIWAN_FOG]: PropTypes.bool,
-    [TAIWAN_MOUNTAINS_BRIDGED]: PropTypes.bool,
-    [TAIWAN_MOUNTAIN_LEFT]: PropTypes.bool,
-    [TAIWAN_MOUNTAIN_RIGHT]: PropTypes.bool,
-    [TAIWAN_HOUSE_FAR]: PropTypes.bool,
-    [TAIWAN_HOUSE_NEAR]: PropTypes.bool,
-    [VAN_NUYS_SCHOOLHOUSE_LEFT]: PropTypes.bool,
-    [VAN_NUYS_SCHOOLHOUSE_RIGHT]: PropTypes.bool,
-    [RICKSHAW_TOWN]: PropTypes.bool,
-    [SHORE_CARNIVAL]: PropTypes.bool,
-    [OCEAN_BOTTOM_MIDDLE]: PropTypes.bool,
-    [OCEAN_BOTTOM_NEAR]: PropTypes.bool,
-    [LOCKER_BANK]: PropTypes.bool,
-    [ST_JOSEPHS_ANNEX]: PropTypes.bool,
-    [ST_JOSEPHS_CHURCH]: PropTypes.bool,
-    [CAMPANILE]: PropTypes.bool,
-    [MUSEUM_DISPLAY]: PropTypes.bool,
-    [ROYCE_HALL]: PropTypes.bool,
-    [PHARMACY_AISLE]: PropTypes.bool,
-    [STEAM_PIPES]: PropTypes.bool,
-    [CEMETERY_HILLS_NEAR]: PropTypes.bool,
-    [CROWD_NEAR_SIDE]: PropTypes.bool,
-    [CROWD_FAR_SIDE]: PropTypes.bool,
-    [OAKLAND_HOUSE_LEFT]: PropTypes.bool,
-    [OAKLAND_HOUSE_RIGHT]: PropTypes.bool,
-    [RESIDENTIAL_FAR_LEFT]: PropTypes.bool,
-    [RESIDENTIAL_FAR_RIGHT]: PropTypes.bool,
-    [RESIDENTIAL_MIDDLE_LEFT]: PropTypes.bool,
-    [RESIDENTIAL_MIDDLE_RIGHT]: PropTypes.bool,
-    [RESIDENTIAL_NEAR_LEFT]: PropTypes.bool,
-    [RESIDENTIAL_NEAR_RIGHT]: PropTypes.bool,
-    [COMMERCIAL_CENTRE]: PropTypes.bool,
-    [COMMERCIAL_FAR_LEFT]: PropTypes.bool,
-    [COMMERCIAL_FAR_RIGHT]: PropTypes.bool,
-    [COMMERCIAL_MIDDLE_LEFT]: PropTypes.bool,
-    [COMMERCIAL_MIDDLE_RIGHT]: PropTypes.bool,
-    [COMMERCIAL_NEAR_LEFT]: PropTypes.bool,
-    [COMMERCIAL_NEAR_RIGHT]: PropTypes.bool,
-    [PUBLIC_FAR_LEFT]: PropTypes.bool,
-    [PUBLIC_FAR_RIGHT]: PropTypes.bool,
-    [PUBLIC_NEAR_LEFT]: PropTypes.bool,
-    [PUBLIC_NEAR_RIGHT]: PropTypes.bool,
-    [ROAD_PAST]: PropTypes.bool,
-    [ROAD_PRESENT]: PropTypes.bool,
-    [ROAD_FUTURE]: PropTypes.bool,
-    [EL_CERRITO_FAR]: PropTypes.bool,
-    [EL_CERRITO_NEAR]: PropTypes.bool,
-    [CROWD_NEAR_BACK]: PropTypes.bool,
-    [CROWD_FAR_BACK]: PropTypes.bool,
-    [FOREBODING_TREES]: PropTypes.bool,
-    [CLIFF_GRAVES_FAR]: PropTypes.bool,
-    [CLIFF_GRAVES_NEAR]: PropTypes.bool,
-    [PAMPAS_FAR]: PropTypes.bool
-}
 
 export default {
     [NOHO_HOUSE_LEFT]: NohoHouseLeft,

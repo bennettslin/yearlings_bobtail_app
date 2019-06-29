@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { propTypes } from './presenceMap'
 
 import LayerHoc from '../LayerHoc'
 import { BUBBLE } from 'constants/scene'
@@ -12,7 +11,5 @@ const BubbleLayer = memo((props) => {
         />
     )
 })
-
-BubbleLayer.propTypes = propTypes
 
 export default BubbleLayer

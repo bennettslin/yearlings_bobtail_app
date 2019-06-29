@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { propTypes } from './presenceMap'
 
 import LayerHoc from '../LayerHoc'
 import { BACKDROP } from 'constants/scene'
@@ -12,7 +11,5 @@ const BackdropLayer = memo((props) => {
         />
     )
 })
-
-BackdropLayer.propTypes = propTypes
 
 export default BackdropLayer

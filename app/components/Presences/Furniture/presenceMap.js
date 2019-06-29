@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import CaptainBedPillow from './Furnitures/CaptainBedPillow'
 import CaptainBedBlanket from './Furnitures/CaptainBedBlanket'
 import BennettPillow from './Furnitures/BennettPillow'
@@ -19,17 +17,6 @@ import {
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
 } from 'constants/scene/things/furniture'
-
-export const propTypes = {
-    [CAPTAIN_BED_PILLOW]: PropTypes.bool,
-    [CAPTAIN_BED_BLANKET]: PropTypes.bool,
-    [BENNETT_PILLOW]: PropTypes.bool,
-    [BENNETT_BLANKET]: PropTypes.bool,
-    [LIZ_PILLOWS_PILE]: PropTypes.bool,
-    [LIZ_PILLOWS_PILE_REFLECTION]: PropTypes.bool,
-    [LIZ_BLANKET_PILE]: PropTypes.bool,
-    [LIZ_BLANKET_PILE_REFLECTION]: PropTypes.bool
-}
 
 export default {
     [CAPTAIN_BED_PILLOW]: CaptainBedPillow,

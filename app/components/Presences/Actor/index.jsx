@@ -1,5 +1,4 @@
 import React, { memo, Fragment as ___ } from 'react'
-import { propTypes } from './presenceMap'
 
 import YoungBennett from './Actors/YoungBennett'
 import PreteenBennett from './Actors/PreteenBennett'
@@ -159,7 +158,5 @@ const ActorLayer = memo(({
         </___>
     )
 })
-
-ActorLayer.propTypes = propTypes
 
 export default ActorLayer

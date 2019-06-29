@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { propTypes } from './presenceMap'
 
 import LayerHoc from '../LayerHoc'
 import { PANEL } from 'constants/scene'
@@ -12,7 +11,5 @@ const PanelLayer = memo((props) => {
         />
     )
 })
-
-PanelLayer.propTypes = propTypes
 
 export default PanelLayer

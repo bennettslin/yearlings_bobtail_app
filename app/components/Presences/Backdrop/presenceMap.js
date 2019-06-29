@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import NohoHousesBackdrop from './Backdrops/NohoHousesBackdrop'
 import NohoSchoolBackdrop from './Backdrops/NohoSchoolBackdrop'
 import ValleyBackdrop from './Backdrops/ValleyBackdrop'
@@ -57,36 +55,6 @@ import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP
 } from 'constants/scene/things/backdrops'
-
-export const propTypes = {
-    [NOHO_HOUSES_BACKDROP]: PropTypes.bool,
-    [NOHO_SCHOOL_BACKDROP]: PropTypes.bool,
-    [VALLEY_BACKDROP]: PropTypes.bool,
-    [TAIWAN_MOUNTAINS_BACKDROP]: PropTypes.bool,
-    [SCHOOLBUS_THOUGHT_BACKDROP]: PropTypes.bool,
-    [VAN_NUYS_THOUGHT_BACKDROP]: PropTypes.bool,
-    [TAIWAN_STAIRS_BACKDROP]: PropTypes.bool,
-    [TAIWAN_STREETS_BACKDROP]: PropTypes.bool,
-    [SHORE_RICKSHAW_BACKDROP]: PropTypes.bool,
-    [SHORE_BUOY_BACKDROP]: PropTypes.bool,
-    [OCEAN_BOTTOM_FAR]: PropTypes.bool,
-    [OCEAN_FLOOR_FAR]: PropTypes.bool,
-    [VAN_NUYS_SCHOOL_BACKDROP]: PropTypes.bool,
-    [BENNETT_COUCH_THOUGHT_BACKDROP]: PropTypes.bool,
-    [WEST_BERKELEY_BACKDROP]: PropTypes.bool,
-    [UC_BERKELEY_BACKDROP]: PropTypes.bool,
-    [GO_KART_BACKDROP]: PropTypes.bool,
-    [UCLA_BACKDROP]: PropTypes.bool,
-    [PHARMACY_THOUGHT_BACKDROP]: PropTypes.bool,
-    [CEMETERY_BACKDROP]: PropTypes.bool,
-    [STATION_WAGON_BACKDROP]: PropTypes.bool,
-    [OAKLAND_SIDE_BACKDROP]: PropTypes.bool,
-    [LIZ_COUCH_THOUGHT_BACKDROP]: PropTypes.bool,
-    [OAKLAND_FRONT_BACKDROP]: PropTypes.bool,
-    [GOLDEN_GATE_BACKDROP]: PropTypes.bool,
-    [PAMPAS_BACKDROP]: PropTypes.bool,
-    [WEDDING_BACKDROP]: PropTypes.bool
-}
 
 export default {
     [NOHO_HOUSES_BACKDROP]: NohoHousesBackdrop,

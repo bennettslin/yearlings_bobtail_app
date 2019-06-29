@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import EstherSpeechPanel from './Panels/EstherSpeechPanel'
 import Bathtub from './Panels/Bathtub'
 import BedroomDesk from './Panels/BedroomDesk'
@@ -90,58 +88,6 @@ import {
     WEDDING_PLATFORM,
     INVERSE_THOUGHT_PANEL
 } from 'constants/scene/things/panels'
-
-export const propTypes = {
-    [ESTHER_SPEECH_PANEL]: PropTypes.bool,
-    [BATHTUB]: PropTypes.bool,
-    [BEDROOM_DESK]: PropTypes.bool,
-    [CAPTAIN_BED]: PropTypes.bool,
-    [BEDROOM_FENCE]: PropTypes.bool,
-    [TROLL_SHADOW_LEFT]: PropTypes.bool,
-    [TROLL_SHADOW_RIGHT]: PropTypes.bool,
-    [STALACTITES]: PropTypes.bool,
-    [SCHOOLBUS_INTERIOR]: PropTypes.bool,
-    [SCHOOLBUS_EXTERIOR]: PropTypes.bool,
-    [OCEAN_CAVE_INTERIOR]: PropTypes.bool,
-    [OCEAN_CAVE_EXTERIOR]: PropTypes.bool,
-    [BENNETT_COUCH]: PropTypes.bool,
-    [BENNETT_LEFT_ARMREST]: PropTypes.bool,
-    [BENNETT_RIGHT_ARMREST]: PropTypes.bool,
-    [GO_KART_EXTERIOR_LEFT]: PropTypes.bool,
-    [GO_KART_EXTERIOR_RIGHT]: PropTypes.bool,
-    [DISHROOM_SINK]: PropTypes.bool,
-    [BENNETT_BED]: PropTypes.bool,
-    [WAITING_ARMCHAIR_BENNETT]: PropTypes.bool,
-    [WAITING_LEFT_ARMREST_BENNETT]: PropTypes.bool,
-    [WAITING_RIGHT_ARMREST_BENNETT]: PropTypes.bool,
-    [WAITING_ARMCHAIR_LIZ]: PropTypes.bool,
-    [WAITING_LEFT_ARMREST_LIZ]: PropTypes.bool,
-    [WAITING_RIGHT_ARMREST_LIZ]: PropTypes.bool,
-    [LIZ_BED]: PropTypes.bool,
-    [SATURN_INTERIOR]: PropTypes.bool,
-    [SATURN_EXTERIOR]: PropTypes.bool,
-    [ATTIC_COUCH]: PropTypes.bool,
-    [ATTIC_LEFT_ARMREST]: PropTypes.bool,
-    [ATTIC_RIGHT_ARMREST]: PropTypes.bool,
-    [VOLKSWAGEN]: PropTypes.bool,
-    [LIZ_COUCH]: PropTypes.bool,
-    [BENNETT_COUCH_BUBBLE]: PropTypes.bool,
-    [BENNETT_LEFT_ARMREST_BUBBLE]: PropTypes.bool,
-    [BENNETT_RIGHT_ARMREST_BUBBLE]: PropTypes.bool,
-    [SNOWGLOBE_TETHERBALL]: PropTypes.bool,
-    [SNOWGLOBE_LIZ_ALONE]: PropTypes.bool,
-    [SNOWGLOBE_BENNETT_MIRIAM]: PropTypes.bool,
-    [SNOWGLOBE_LIZ_KHARI]: PropTypes.bool,
-    [SNOWGLOBE_BENNETT_ALONE]: PropTypes.bool,
-    [REATTA_INTERIOR]: PropTypes.bool,
-    [REATTA_EXTERIOR]: PropTypes.bool,
-    [HOSPITAL_BED]: PropTypes.bool,
-    [PHONE_CALL_PANEL]: PropTypes.bool,
-    [DEATHBED_THOUGHT_PANEL]: PropTypes.bool,
-    [TENNIS_THOUGHT_PANEL]: PropTypes.bool,
-    [WEDDING_PLATFORM]: PropTypes.bool,
-    [INVERSE_THOUGHT_PANEL]: PropTypes.bool
-}
 
 export default {
     [ESTHER_SPEECH_PANEL]: EstherSpeechPanel,

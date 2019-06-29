@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import PuppetBennettBegin from './Puppets/PuppetBennettBegin'
 import PuppetFamilyBegin from './Puppets/PuppetFamilyBegin'
 import PuppetBennettMiddle from './Puppets/PuppetBennettMiddle'
@@ -41,28 +39,6 @@ import {
     GHOST_ODIN_DEMONSTRATION,
     PUPPET_KHARI_LIZ
 } from 'constants/scene/things/puppets'
-
-export const propTypes = {
-    [PUPPET_BENNETT_BEGIN]: PropTypes.bool,
-    [PUPPET_FAMILY_BEGIN]: PropTypes.bool,
-    [PUPPET_BENNETT_MIDDLE]: PropTypes.bool,
-    [PUPPET_FAMILY_MIDDLE]: PropTypes.bool,
-    [PUPPET_BENNETT_END]: PropTypes.bool,
-    [PUPPET_FAMILY_END]: PropTypes.bool,
-    [PCHELKA_MUSHKA_ROCKET]: PropTypes.bool,
-    [EARTH]: PropTypes.bool,
-    [SPACE_COLONY]: PropTypes.bool,
-    [OPAL_COUCH]: PropTypes.bool,
-    [OPAL_GAZING]: PropTypes.bool,
-    [PEAHEN]: PropTypes.bool,
-    [PEACOCK]: PropTypes.bool,
-    [PUPPET_REATTA]: PropTypes.bool,
-    [GHOST_ODIN_CAMPUS]: PropTypes.bool,
-    [GHOST_ODIN_CLUB]: PropTypes.bool,
-    [GHOST_ODIN_ALLEY]: PropTypes.bool,
-    [GHOST_ODIN_DEMONSTRATION]: PropTypes.bool,
-    [PUPPET_KHARI_LIZ]: PropTypes.bool
-}
 
 export default {
     [PUPPET_BENNETT_BEGIN]: PuppetBennettBegin,

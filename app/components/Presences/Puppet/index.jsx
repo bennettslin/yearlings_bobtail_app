@@ -1,5 +1,4 @@
 import React, { memo } from 'react'
-import { propTypes } from './presenceMap'
 
 import LayerHoc from '../LayerHoc'
 import { PUPPET } from 'constants/scene'
@@ -12,7 +11,5 @@ const PuppetLayer = memo((props) => {
         />
     )
 })
-
-PuppetLayer.propTypes = propTypes
 
 export default PuppetLayer

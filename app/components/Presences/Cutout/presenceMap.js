@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types'
-
 import FireHydrant from './Cutouts/FireHydrant'
 import PlaygroundSlide from './Cutouts/PlaygroundSlide'
 import MirroredSink from './Cutouts/MirroredSink'
@@ -122,72 +120,6 @@ import {
     CLIFF_TREE,
     IV_DRIP
 } from 'constants/scene/things/cutouts'
-
-export const propTypes = {
-    [FIRE_HYDRANT]: PropTypes.bool,
-    [PLAYGROUND_SLIDE]: PropTypes.bool,
-    [MIRRORED_SINK]: PropTypes.bool,
-    [TOWEL_RACK]: PropTypes.bool,
-    [OVERPASS_SIGN_FRONT]: PropTypes.bool,
-    [OVERPASS_SIGN_BACK]: PropTypes.bool,
-    [PORCH_PLANTS_LEFT]: PropTypes.bool,
-    [PORCH_PLANTS_RIGHT]: PropTypes.bool,
-    [CAMPFIRE]: PropTypes.bool,
-    [BUDDHA_SHRINE]: PropTypes.bool,
-    [TAIWAN_FRIDGE_FRONT]: PropTypes.bool,
-    [BENNETT_TAIWAN_STAIRS]: PropTypes.bool,
-    [ODIN_TAIWAN_STAIRS]: PropTypes.bool,
-    [BENNETT_TAIWAN_GATE]: PropTypes.bool,
-    [ODIN_TAIWAN_GATE]: PropTypes.bool,
-    [BENNETT_ODIN_RICKSHAW]: PropTypes.bool,
-    [BENNETT_SHORE]: PropTypes.bool,
-    [ODIN_SHORE]: PropTypes.bool,
-    [BENNETT_ODIN_BUOY]: PropTypes.bool,
-    [YELLOW_TAPED_GRILL]: PropTypes.bool,
-    [BENNETT_ODIN_DEPTHS]: PropTypes.bool,
-    [SEA_SERPENTS]: PropTypes.bool,
-    [BENNETT_ODIN_OCEAN_FLOOR]: PropTypes.bool,
-    [BENNETT_MAT]: PropTypes.bool,
-    [ODIN_MAT]: PropTypes.bool,
-    [TRASH_CAN_LOCKERS]: PropTypes.bool,
-    [TRASH_CAN_QUAD]: PropTypes.bool,
-    [VAN_NUYS_PLANT_LOCKERS]: PropTypes.bool,
-    [VAN_NUYS_PLANT_QUAD]: PropTypes.bool,
-    [RECYCLABLES]: PropTypes.bool,
-    [DISPENSER_LEFT]: PropTypes.bool,
-    [DISPENSER_RIGHT]: PropTypes.bool,
-    [BERKELEY_LAMPPOST]: PropTypes.bool,
-    [SIGNPOST]: PropTypes.bool,
-    [BANCROFT_SHRUBS]: PropTypes.bool,
-    [UC_BERKELEY_TREE_LEFT]: PropTypes.bool,
-    [UC_BERKELEY_TREE_RIGHT]: PropTypes.bool,
-    [MONITOR_LEFT]: PropTypes.bool,
-    [MONITOR_RIGHT]: PropTypes.bool,
-    [WALL_SPEAKER_LEFT]: PropTypes.bool,
-    [WALL_SPEAKER_RIGHT]: PropTypes.bool,
-    [SANDBAGS]: PropTypes.bool,
-    [STAGE_LIGHTS]: PropTypes.bool,
-    [TRAFFIC_LIGHT]: PropTypes.bool,
-    [APARTMENT_PLANT]: PropTypes.bool,
-    [CODE_BOX]: PropTypes.bool,
-    [WAITING_ROOM_PLANT]: PropTypes.bool,
-    [STORAGE_BOXES]: PropTypes.bool,
-    [STORAGE_CHEST]: PropTypes.bool,
-    [HOWIE_FRIDGE]: PropTypes.bool,
-    [TELEVISION]: PropTypes.bool,
-    [MONITOR_SIDE_CROWD]: PropTypes.bool,
-    [MONITOR_SIDE_STAGE]: PropTypes.bool,
-    [WALL_SPEAKER_SIDE_CROWD]: PropTypes.bool,
-    [WALL_SPEAKER_SIDE_STAGE]: PropTypes.bool,
-    [TWIN_STREETLAMP_FAR]: PropTypes.bool,
-    [TWIN_STREETLAMP_MIDDLE]: PropTypes.bool,
-    [TWIN_STREETLAMP_NEAR]: PropTypes.bool,
-    [EL_CERRITO_TREE]: PropTypes.bool,
-    [DUMPSTER]: PropTypes.bool,
-    [WEDDING_CROWD]: PropTypes.bool,
-    [CLIFF_TREE]: PropTypes.bool,
-    [IV_DRIP]: PropTypes.bool
-}
 
 export default {
     [FIRE_HYDRANT]: FireHydrant,
