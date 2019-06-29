@@ -4,11 +4,9 @@ import {
     PANEL
 } from 'constants/scene'
 import { CAMPFIRE } from 'constants/scene/things/cutouts'
+import { FAMILY_HOUSE } from 'constants/scene/things/flats'
 import {
-    FAMILY_HOUSE,
-    CAVE_SHADOWS
-} from 'constants/scene/things/flats'
-import {
+    CAVE_SHADOWS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     STALACTITES
@@ -33,7 +31,9 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 3,
                 zHeight: 2
             }
-        },
+        }
+    },
+    [PANEL]: {
         [CAVE_SHADOWS]: {
             yIndex: 1,
             arrangement: {
@@ -41,9 +41,7 @@ const ARRANGEMENTS_THINGS = {
                 xWidth: 9,
                 zHeight: 7
             }
-        }
-    },
-    [PANEL]: {
+        },
         [TROLL_SHADOW_LEFT]: {
             yIndex: 5,
             arrangement: {

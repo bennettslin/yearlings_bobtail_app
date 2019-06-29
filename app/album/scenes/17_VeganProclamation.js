@@ -75,11 +75,7 @@ import {
     LIZ_PHONE_BASE_REFLECTION
 } from '../../constants/scene/things/fixtures'
 
-import {
-    CAMPANILE,
-    CROWD_NEAR_BACK,
-    CROWD_FAR_BACK
-} from '../../constants/scene/things/flats'
+import { CAMPANILE } from '../../constants/scene/things/flats'
 
 import {
     LIZ_BLANKET_PILE,
@@ -87,6 +83,8 @@ import {
 } from '../../constants/scene/things/furniture'
 
 import {
+    CROWD_NEAR_BACK,
+    CROWD_FAR_BACK,
     LIZ_BED,
     PHONE_CALL_PANEL
 } from '../../constants/scene/things/panels'
@@ -171,7 +169,7 @@ export default [
             [FIXTURE]: {
                 [STAGE_MIC_FAR]: true
             },
-            [FLAT]: {
+            [PANEL]: {
                 [CROWD_FAR_BACK]: true,
                 [CROWD_NEAR_BACK]: true
             },

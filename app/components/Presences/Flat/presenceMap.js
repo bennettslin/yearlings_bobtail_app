@@ -4,7 +4,6 @@ import NohoSchoolhouse from './Flats/NohoSchoolhouse'
 import BedroomBus from './Flats/BedroomBus'
 import BedroomSiren from './Flats/BedroomSiren'
 import FamilyHouse from './Flats/FamilyHouse'
-import CaveShadows from './Flats/CaveShadows'
 import TaiwanClouds from './Flats/TaiwanClouds'
 import TaiwanFog from './Flats/TaiwanFog'
 import TaiwanMountainsBridged from './Flats/TaiwanMountainsBridged'
@@ -27,8 +26,6 @@ import RoyceHall from './Flats/RoyceHall'
 import PharmacyAisle from './Flats/PharmacyAisle'
 import SteamPipes from './Flats/SteamPipes'
 import CemeteryHillsNear from './Flats/CemeteryHillsNear'
-import CrowdNear from './Flats/CrowdNear'
-import CrowdFar from './Flats/CrowdFar'
 import OaklandHouseLeft from './Flats/OaklandHouseLeft'
 import OaklandHouseRight from './Flats/OaklandHouseRight'
 import ResidentialFarLeft from './Flats/ResidentialFarLeft'
@@ -65,7 +62,6 @@ import {
     BEDROOM_BUS,
     BEDROOM_SIREN,
     FAMILY_HOUSE,
-    CAVE_SHADOWS,
     TAIWAN_CLOUDS,
     TAIWAN_FOG,
     TAIWAN_MOUNTAINS_BRIDGED,
@@ -88,8 +84,6 @@ import {
     PHARMACY_AISLE,
     STEAM_PIPES,
     CEMETERY_HILLS_NEAR,
-    CROWD_NEAR_SIDE,
-    CROWD_FAR_SIDE,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     RESIDENTIAL_FAR_LEFT,
@@ -114,8 +108,6 @@ import {
     ROAD_FUTURE,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
-    CROWD_NEAR_BACK,
-    CROWD_FAR_BACK,
     FOREBODING_TREES,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
@@ -129,7 +121,6 @@ export default {
     [BEDROOM_BUS]: BedroomBus,
     [BEDROOM_SIREN]: BedroomSiren,
     [FAMILY_HOUSE]: FamilyHouse,
-    [CAVE_SHADOWS]: CaveShadows,
     [TAIWAN_CLOUDS]: TaiwanClouds,
     [TAIWAN_FOG]: TaiwanFog,
     [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
@@ -152,8 +143,6 @@ export default {
     [PHARMACY_AISLE]: PharmacyAisle,
     [STEAM_PIPES]: SteamPipes,
     [CEMETERY_HILLS_NEAR]: CemeteryHillsNear,
-    [CROWD_NEAR_SIDE]: CrowdNear,
-    [CROWD_FAR_SIDE]: CrowdFar,
     [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
     [RESIDENTIAL_FAR_LEFT]: ResidentialFarLeft,
@@ -178,8 +167,6 @@ export default {
     [ROAD_FUTURE]: RoadFuture,
     [EL_CERRITO_FAR]: ElCerritoFar,
     [EL_CERRITO_NEAR]: ElCerritoNear,
-    [CROWD_NEAR_BACK]: CrowdNear,
-    [CROWD_FAR_BACK]: CrowdFar,
     [FOREBODING_TREES]: ForebodingTrees,
     [CLIFF_GRAVES_FAR]: CliffGravesFar,
     [CLIFF_GRAVES_NEAR]: CliffGravesNear,

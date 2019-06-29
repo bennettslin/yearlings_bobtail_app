@@ -94,7 +94,6 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
-    CAVE_SHADOWS,
     BEDROOM_SIREN
 } from '../../constants/scene/things/flats'
 
@@ -107,6 +106,7 @@ import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE,
+    CAVE_SHADOWS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     STALACTITES
@@ -344,10 +344,10 @@ export default [
                 [CAMPFIRE]: true
             },
             [FLAT]: {
-                [FAMILY_HOUSE]: true,
-                [CAVE_SHADOWS]: true
+                [FAMILY_HOUSE]: true
             },
             [PANEL]: {
+                [CAVE_SHADOWS]: true,
                 [TROLL_SHADOW_LEFT]: true,
                 [TROLL_SHADOW_RIGHT]: true,
                 [STALACTITES]: true

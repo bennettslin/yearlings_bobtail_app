@@ -1,13 +1,13 @@
 import {
     FIXTURE,
-    FLAT,
+    PANEL,
     PUPPET
 } from 'constants/scene'
 import { STAGE_MIC_FAR } from 'constants/scene/things/fixtures'
 import {
     CROWD_FAR_BACK,
     CROWD_NEAR_BACK
-} from 'constants/scene/things/flats'
+} from 'constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLAT]: {
+    [PANEL]: {
         [CROWD_FAR_BACK]: {
             yIndex: 3,
             arrangement: {

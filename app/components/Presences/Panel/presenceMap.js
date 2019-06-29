@@ -3,6 +3,7 @@ import Bathtub from './Panels/Bathtub'
 import BedroomDesk from './Panels/BedroomDesk'
 import CaptainBed from './Panels/CaptainBed'
 import BedroomFence from './Panels/BedroomFence'
+import CaveShadows from './Panels/CaveShadows'
 import TrollShadowLeft from './Panels/TrollShadowLeft'
 import TrollShadowRight from './Panels/TrollShadowRight'
 import Stalactites from './Panels/Stalactites'
@@ -26,6 +27,8 @@ import AtticCouch from './Panels/AtticCouch'
 import AtticLeftArmrest from './Panels/AtticLeftArmrest'
 import AtticRightArmrest from './Panels/AtticRightArmrest'
 import Volkswagen from './Panels/Volkswagen'
+import CrowdNear from './Panels/CrowdNear'
+import CrowdFar from './Panels/CrowdFar'
 import LizCouch from './Panels/LizCouch'
 import Snowglobe from './Panels/Snowglobe'
 import ReattaInterior from './Panels/ReattaInterior'
@@ -43,6 +46,7 @@ import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE,
+    CAVE_SHADOWS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     STALACTITES,
@@ -70,6 +74,8 @@ import {
     ATTIC_LEFT_ARMREST,
     ATTIC_RIGHT_ARMREST,
     VOLKSWAGEN,
+    CROWD_NEAR_SIDE,
+    CROWD_FAR_SIDE,
     LIZ_COUCH,
     BENNETT_COUCH_BUBBLE,
     BENNETT_LEFT_ARMREST_BUBBLE,
@@ -82,6 +88,8 @@ import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     HOSPITAL_BED,
+    CROWD_NEAR_BACK,
+    CROWD_FAR_BACK,
     PHONE_CALL_PANEL,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
@@ -95,6 +103,7 @@ export default {
     [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED]: CaptainBed,
     [BEDROOM_FENCE]: BedroomFence,
+    [CAVE_SHADOWS]: CaveShadows,
     [TROLL_SHADOW_LEFT]: TrollShadowLeft,
     [TROLL_SHADOW_RIGHT]: TrollShadowRight,
     [STALACTITES]: Stalactites,
@@ -122,6 +131,8 @@ export default {
     [ATTIC_LEFT_ARMREST]: AtticLeftArmrest,
     [ATTIC_RIGHT_ARMREST]: AtticRightArmrest,
     [VOLKSWAGEN]: Volkswagen,
+    [CROWD_NEAR_SIDE]: CrowdNear,
+    [CROWD_FAR_SIDE]: CrowdFar,
     [LIZ_COUCH]: LizCouch,
     [BENNETT_COUCH_BUBBLE]: BennettCouch,
     [BENNETT_LEFT_ARMREST_BUBBLE]: BennettLeftArmrest,
@@ -134,6 +145,8 @@ export default {
     [REATTA_INTERIOR]: ReattaInterior,
     [REATTA_EXTERIOR]: ReattaExterior,
     [HOSPITAL_BED]: HospitalBed,
+    [CROWD_NEAR_BACK]: CrowdNear,
+    [CROWD_FAR_BACK]: CrowdFar,
     [PHONE_CALL_PANEL]: PhoneCallPanel,
     [DEATHBED_THOUGHT_PANEL]: DeathbedThoughtPanel,
     [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel,

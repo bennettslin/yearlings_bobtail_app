@@ -2,7 +2,6 @@ import {
     ACTOR,
     CUTOUT,
     FIXTURE,
-    FLAT,
     PANEL
 } from 'constants/scene'
 
@@ -83,10 +82,9 @@ import {
 
 import {
     CROWD_FAR_SIDE,
-    CROWD_NEAR_SIDE
-} from '../../constants/scene/things/flats'
-
-import { LIZ_BED } from '../../constants/scene/things/panels'
+    CROWD_NEAR_SIDE,
+    LIZ_BED
+} from '../../constants/scene/things/panels'
 
 export default [
     {
@@ -135,7 +133,7 @@ export default [
             [FIXTURE]: {
                 [STAGE_MIC_SIDE_CROWD]: true
             },
-            [FLAT]: {
+            [PANEL]: {
                 [CROWD_FAR_SIDE]: true,
                 [CROWD_NEAR_SIDE]: true
             }

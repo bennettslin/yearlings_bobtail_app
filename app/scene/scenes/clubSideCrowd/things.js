@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     FIXTURE,
-    FLAT
+    PANEL
 } from 'constants/scene'
 import {
     MONITOR_SIDE_CROWD,
@@ -11,7 +11,7 @@ import { STAGE_MIC_SIDE_CROWD } from 'constants/scene/things/fixtures'
 import {
     CROWD_NEAR_SIDE,
     CROWD_FAR_SIDE
-} from 'constants/scene/things/flats'
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLAT]: {
+    [PANEL]: {
         [CROWD_FAR_SIDE]: {
             yIndex: 1,
             arrangement: {
