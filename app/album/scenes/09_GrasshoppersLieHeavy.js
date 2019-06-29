@@ -107,12 +107,12 @@ import {
     DISHROOM_SINK,
     BENNETT_BED,
     LIZ_BED,
-    WAITING_ARMCHAIR_BENNETT,
-    WAITING_LEFT_ARMREST_BENNETT,
-    WAITING_RIGHT_ARMREST_BENNETT,
-    WAITING_ARMCHAIR_LIZ,
-    WAITING_LEFT_ARMREST_LIZ,
-    WAITING_RIGHT_ARMREST_LIZ
+    WAITING_ARMCHAIR__BENNETT,
+    WAITING_LEFT_ARMREST__BENNETT,
+    WAITING_RIGHT_ARMREST__BENNETT,
+    WAITING_ARMCHAIR__LIZ,
+    WAITING_LEFT_ARMREST__LIZ,
+    WAITING_RIGHT_ARMREST__LIZ
 } from '../../constants/scene/things/panels'
 
 /**
@@ -392,12 +392,12 @@ export default [
                 [WAITING_ROOM_PLANT]: true
             },
             [PANEL]: {
-                [WAITING_ARMCHAIR_BENNETT]: true,
-                [WAITING_LEFT_ARMREST_BENNETT]: true,
-                [WAITING_RIGHT_ARMREST_BENNETT]: true,
-                [WAITING_ARMCHAIR_LIZ]: true,
-                [WAITING_LEFT_ARMREST_LIZ]: true,
-                [WAITING_RIGHT_ARMREST_LIZ]: true
+                [WAITING_ARMCHAIR__BENNETT]: true,
+                [WAITING_LEFT_ARMREST__BENNETT]: true,
+                [WAITING_RIGHT_ARMREST__BENNETT]: true,
+                [WAITING_ARMCHAIR__LIZ]: true,
+                [WAITING_LEFT_ARMREST__LIZ]: true,
+                [WAITING_RIGHT_ARMREST__LIZ]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -427,12 +427,12 @@ export default [
                 [WAITING_ROOM_PLANT]: true
             },
             [PANEL]: {
-                [WAITING_ARMCHAIR_BENNETT]: true,
-                [WAITING_LEFT_ARMREST_BENNETT]: true,
-                [WAITING_RIGHT_ARMREST_BENNETT]: true,
-                [WAITING_ARMCHAIR_LIZ]: true,
-                [WAITING_LEFT_ARMREST_LIZ]: true,
-                [WAITING_RIGHT_ARMREST_LIZ]: true
+                [WAITING_ARMCHAIR__BENNETT]: true,
+                [WAITING_LEFT_ARMREST__BENNETT]: true,
+                [WAITING_RIGHT_ARMREST__BENNETT]: true,
+                [WAITING_ARMCHAIR__LIZ]: true,
+                [WAITING_LEFT_ARMREST__LIZ]: true,
+                [WAITING_RIGHT_ARMREST__LIZ]: true
             }
         },
         cubes: WAITING_ROOM_OPEN_KEY,

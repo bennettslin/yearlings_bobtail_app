@@ -2,7 +2,7 @@ import { FIXTURE } from 'constants/scene'
 import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
-    DRUMS_STACKED_BASEMENT,
+    DRUMS_STACKED__BASEMENT,
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 4
             }
         },
-        [DRUMS_STACKED_BASEMENT]: {
+        [DRUMS_STACKED__BASEMENT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 3.5,

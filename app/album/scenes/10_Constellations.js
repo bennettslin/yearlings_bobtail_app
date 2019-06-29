@@ -64,7 +64,7 @@ import {
 } from '../../constants/scene/things/cutouts'
 
 import {
-    PUSH_BROOM_TUNNEL,
+    PUSH_BROOM__TUNNEL,
     GRAVESTONE,
     EVIAN_BOTTLES
 } from '../../constants/scene/things/fixtures'
@@ -202,7 +202,7 @@ export default [
                 }
             },
             [FIXTURE]: {
-                [PUSH_BROOM_TUNNEL]: true
+                [PUSH_BROOM__TUNNEL]: true
             },
             [FLAT]: {
                 [STEAM_PIPES]: true

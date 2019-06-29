@@ -62,9 +62,9 @@ import {
 } from '../../constants/scene/things/backdrops'
 
 import {
-    TWIN_STREETLAMP_FAR,
-    TWIN_STREETLAMP_MIDDLE,
-    TWIN_STREETLAMP_NEAR
+    TWIN_STREETLAMP__FAR,
+    TWIN_STREETLAMP__MIDDLE,
+    TWIN_STREETLAMP__NEAR
 } from '../../constants/scene/things/cutouts'
 
 import {
@@ -163,9 +163,9 @@ export default [
                 [OAKLAND_FRONT_BACKDROP]: true
             },
             [CUTOUT]: {
-                [TWIN_STREETLAMP_FAR]: true,
-                [TWIN_STREETLAMP_MIDDLE]: true,
-                [TWIN_STREETLAMP_NEAR]: true
+                [TWIN_STREETLAMP__FAR]: true,
+                [TWIN_STREETLAMP__MIDDLE]: true,
+                [TWIN_STREETLAMP__NEAR]: true
             },
             [FLAT]: {
                 [RESIDENTIAL_FAR_LEFT]: true,

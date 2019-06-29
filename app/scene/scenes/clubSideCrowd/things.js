@@ -4,18 +4,18 @@ import {
     PANEL
 } from 'constants/scene'
 import {
-    MONITOR_SIDE_CROWD,
-    WALL_SPEAKER_SIDE_CROWD
+    MONITOR_SIDE__CROWD,
+    WALL_SPEAKER_SIDE__CROWD
 } from 'constants/scene/things/cutouts'
-import { STAGE_MIC_SIDE_CROWD } from 'constants/scene/things/fixtures'
+import { STAGE_MIC_SIDE__CROWD } from 'constants/scene/things/fixtures'
 import {
-    CROWD_NEAR_SIDE,
-    CROWD_FAR_SIDE
+    CROWD_NEAR__SIDE,
+    CROWD_FAR__SIDE
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [MONITOR_SIDE_CROWD]: {
+        [MONITOR_SIDE__CROWD]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 3,
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [WALL_SPEAKER_SIDE_CROWD]: {
+        [WALL_SPEAKER_SIDE__CROWD]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 4.5,
@@ -34,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [STAGE_MIC_SIDE_CROWD]: {
+        [STAGE_MIC_SIDE__CROWD]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 8.5,
@@ -44,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [CROWD_FAR_SIDE]: {
+        [CROWD_FAR__SIDE]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 7,
@@ -52,7 +52,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 4
             }
         },
-        [CROWD_NEAR_SIDE]: {
+        [CROWD_NEAR__SIDE]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 7,

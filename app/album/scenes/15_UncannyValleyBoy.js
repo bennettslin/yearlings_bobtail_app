@@ -85,16 +85,16 @@ import {
 } from '../../constants/scene/things/flats'
 
 import {
-    SNOWGLOBE_TETHERBALL,
-    SNOWGLOBE_LIZ_ALONE,
-    SNOWGLOBE_BENNETT_MIRIAM,
-    SNOWGLOBE_LIZ_KHARI,
-    SNOWGLOBE_BENNETT_ALONE,
+    SNOWGLOBE__TETHERBALL,
+    SNOWGLOBE__LIZ_ALONE,
+    SNOWGLOBE__BENNETT_MIRIAM,
+    SNOWGLOBE__LIZ_KHARI,
+    SNOWGLOBE__BENNETT_ALONE,
     BENNETT_BED,
     LIZ_COUCH,
-    BENNETT_COUCH_BUBBLE,
-    BENNETT_LEFT_ARMREST_BUBBLE,
-    BENNETT_RIGHT_ARMREST_BUBBLE
+    BENNETT_COUCH__BUBBLE,
+    BENNETT_LEFT_ARMREST__BUBBLE,
+    BENNETT_RIGHT_ARMREST__BUBBLE
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -196,7 +196,7 @@ export default [
                 [ROAD_PAST]: true
             },
             [PANEL]: {
-                [SNOWGLOBE_TETHERBALL]: true
+                [SNOWGLOBE__TETHERBALL]: true
             }
         },
         cubes: SNOWGLOBES_PAST_KEY,
@@ -242,11 +242,11 @@ export default [
                 [ROAD_PRESENT]: true
             },
             [PANEL]: {
-                [SNOWGLOBE_LIZ_ALONE]: true,
-                [SNOWGLOBE_BENNETT_MIRIAM]: true,
-                [BENNETT_COUCH_BUBBLE]: true,
-                [BENNETT_LEFT_ARMREST_BUBBLE]: true,
-                [BENNETT_RIGHT_ARMREST_BUBBLE]: true
+                [SNOWGLOBE__LIZ_ALONE]: true,
+                [SNOWGLOBE__BENNETT_MIRIAM]: true,
+                [BENNETT_COUCH__BUBBLE]: true,
+                [BENNETT_LEFT_ARMREST__BUBBLE]: true,
+                [BENNETT_RIGHT_ARMREST__BUBBLE]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
@@ -306,8 +306,8 @@ export default [
                 [LIZ_COUCH]: true
             },
             [PANEL]: {
-                [SNOWGLOBE_LIZ_KHARI]: true,
-                [SNOWGLOBE_BENNETT_ALONE]: true
+                [SNOWGLOBE__LIZ_KHARI]: true,
+                [SNOWGLOBE__BENNETT_ALONE]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,

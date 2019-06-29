@@ -4,8 +4,8 @@ import {
 } from 'constants/scene'
 import { GO_KART_BACKDROP } from 'constants/scene/things/backdrops'
 import {
-    GO_KART_EXTERIOR_LEFT,
-    GO_KART_EXTERIOR_RIGHT
+    GO_KART_EXTERIOR__LEFT,
+    GO_KART_EXTERIOR__RIGHT
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [GO_KART_EXTERIOR_LEFT]: {
+        [GO_KART_EXTERIOR__LEFT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 2.5,
@@ -28,7 +28,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 2
             }
         },
-        [GO_KART_EXTERIOR_RIGHT]: {
+        [GO_KART_EXTERIOR__RIGHT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 8.5,

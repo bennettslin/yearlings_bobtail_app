@@ -6,8 +6,8 @@ import {
 import { ESCAPE_POD_SKETCHBOOK } from 'constants/scene/things/bubbles'
 import { VAN_NUYS_LOGO } from 'constants/scene/things/cardboards'
 import {
-    TRASH_CAN_QUAD,
-    VAN_NUYS_PLANT_QUAD
+    TRASH_CAN__QUAD,
+    VAN_NUYS_PLANT__QUAD
 } from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
@@ -34,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [CUTOUT]: {
-        [TRASH_CAN_QUAD]: {
+        [TRASH_CAN__QUAD]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 0.5,
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 3
             }
         },
-        [VAN_NUYS_PLANT_QUAD]: {
+        [VAN_NUYS_PLANT__QUAD]: {
             yIndex: 4,
             xPosition: 3,
             scaleFactor: 0.33

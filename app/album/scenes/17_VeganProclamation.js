@@ -60,8 +60,8 @@ import {
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE_LEFT,
-    UC_BERKELEY_TREE_RIGHT,
+    UC_BERKELEY_TREE__LEFT,
+    UC_BERKELEY_TREE__RIGHT,
     WALL_SPEAKER_LEFT,
     WALL_SPEAKER_RIGHT,
     DUMPSTER
@@ -83,8 +83,8 @@ import {
 } from '../../constants/scene/things/furniture'
 
 import {
-    CROWD_NEAR_BACK,
-    CROWD_FAR_BACK,
+    CROWD_NEAR__BACK,
+    CROWD_FAR__BACK,
     LIZ_BED,
     PHONE_CALL_PANEL
 } from '../../constants/scene/things/panels'
@@ -122,7 +122,7 @@ export default [
             [CUTOUT]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
-                [UC_BERKELEY_TREE_RIGHT]: true
+                [UC_BERKELEY_TREE__RIGHT]: true
             },
             [FLAT]: {
                 [CAMPANILE]: true
@@ -170,8 +170,8 @@ export default [
                 [STAGE_MIC_FAR]: true
             },
             [PANEL]: {
-                [CROWD_FAR_BACK]: true,
-                [CROWD_NEAR_BACK]: true
+                [CROWD_FAR__BACK]: true,
+                [CROWD_NEAR__BACK]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_CLUB]: true
@@ -300,7 +300,7 @@ export default [
                 [UC_BERKELEY_BACKDROP]: true
             },
             [CUTOUT]: {
-                [UC_BERKELEY_TREE_LEFT]: true
+                [UC_BERKELEY_TREE__LEFT]: true
             },
             [FIXTURE]: {
                 [ASH_CAN]: true

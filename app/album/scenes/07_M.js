@@ -98,7 +98,7 @@ import {
     CASH_BOX,
     GUITAR,
     DRUMKIT,
-    DRUMS_STACKED_BASEMENT,
+    DRUMS_STACKED__BASEMENT,
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
     BASEMENT_BEER_CASE,
@@ -310,7 +310,7 @@ export default [
             [FIXTURE]: {
                 [BASS_CASE_UPRIGHT]: true,
                 [GUITAR_CASE_UPRIGHT]: true,
-                [DRUMS_STACKED_BASEMENT]: true,
+                [DRUMS_STACKED__BASEMENT]: true,
                 [BASEMENT_BEER_CASE]: true,
                 [BASEMENT_BEER_MARA]: true,
                 [BASEMENT_BEER_BENNETT]: true

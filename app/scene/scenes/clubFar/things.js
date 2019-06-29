@@ -5,8 +5,8 @@ import {
 } from 'constants/scene'
 import { STAGE_MIC_FAR } from 'constants/scene/things/fixtures'
 import {
-    CROWD_FAR_BACK,
-    CROWD_NEAR_BACK
+    CROWD_FAR__BACK,
+    CROWD_NEAR__BACK
 } from 'constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from 'constants/scene/things/puppets'
 
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [CROWD_FAR_BACK]: {
+        [CROWD_FAR__BACK]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5.5,
@@ -30,7 +30,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 4
             }
         },
-        [CROWD_NEAR_BACK]: {
+        [CROWD_NEAR__BACK]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 5.5,

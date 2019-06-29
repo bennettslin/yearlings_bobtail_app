@@ -10,8 +10,8 @@ import {
 } from 'constants/scene/things/fixtures'
 import { ROAD_FUTURE } from 'constants/scene/things/flats'
 import {
-    SNOWGLOBE_LIZ_KHARI,
-    SNOWGLOBE_BENNETT_ALONE
+    SNOWGLOBE__LIZ_KHARI,
+    SNOWGLOBE__BENNETT_ALONE
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -52,7 +52,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [SNOWGLOBE_LIZ_KHARI]: {
+        [SNOWGLOBE__LIZ_KHARI]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 3,
@@ -60,7 +60,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5
             }
         },
-        [SNOWGLOBE_BENNETT_ALONE]: {
+        [SNOWGLOBE__BENNETT_ALONE]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 8.5,

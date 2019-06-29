@@ -11,12 +11,12 @@ import {
 } from 'constants/scene/things/cardboards'
 import { WAITING_ROOM_PLANT } from 'constants/scene/things/cutouts'
 import {
-    WAITING_ARMCHAIR_BENNETT,
-    WAITING_LEFT_ARMREST_BENNETT,
-    WAITING_RIGHT_ARMREST_BENNETT,
-    WAITING_ARMCHAIR_LIZ,
-    WAITING_LEFT_ARMREST_LIZ,
-    WAITING_RIGHT_ARMREST_LIZ
+    WAITING_ARMCHAIR__BENNETT,
+    WAITING_LEFT_ARMREST__BENNETT,
+    WAITING_RIGHT_ARMREST__BENNETT,
+    WAITING_ARMCHAIR__LIZ,
+    WAITING_LEFT_ARMREST__LIZ,
+    WAITING_RIGHT_ARMREST__LIZ
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -48,7 +48,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [WAITING_ARMCHAIR_BENNETT]: {
+        [WAITING_ARMCHAIR__BENNETT]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 4,
@@ -57,7 +57,7 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WAITING_LEFT_ARMREST_BENNETT]: {
+        [WAITING_LEFT_ARMREST__BENNETT]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 4,
@@ -66,7 +66,7 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WAITING_RIGHT_ARMREST_BENNETT]: {
+        [WAITING_RIGHT_ARMREST__BENNETT]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 4,
@@ -75,7 +75,7 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WAITING_ARMCHAIR_LIZ]: {
+        [WAITING_ARMCHAIR__LIZ]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 4,
@@ -84,7 +84,7 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WAITING_LEFT_ARMREST_LIZ]: {
+        [WAITING_LEFT_ARMREST__LIZ]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 4,
@@ -93,7 +93,7 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WAITING_RIGHT_ARMREST_LIZ]: {
+        [WAITING_RIGHT_ARMREST__LIZ]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 4,

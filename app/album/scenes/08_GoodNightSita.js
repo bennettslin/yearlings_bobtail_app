@@ -56,7 +56,7 @@ import {
 
 import {
     CAVEMAN_BONES,
-    PUSH_BROOM_BACKSTAGE,
+    PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
 } from '../../constants/scene/things/fixtures'
@@ -66,8 +66,8 @@ import {
 } from '../../constants/scene/things/flats'
 
 import {
-    GO_KART_EXTERIOR_LEFT,
-    GO_KART_EXTERIOR_RIGHT
+    GO_KART_EXTERIOR__LEFT,
+    GO_KART_EXTERIOR__RIGHT
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -170,7 +170,7 @@ export default [
                 [STAGE_LIGHTS]: true
             },
             [FIXTURE]: {
-                [PUSH_BROOM_BACKSTAGE]: true,
+                [PUSH_BROOM__BACKSTAGE]: true,
                 [STEPLADDER]: true,
                 [MANNEQUIN]: true
             }
@@ -205,8 +205,8 @@ export default [
                 [GO_KART_BACKDROP]: true
             },
             [PANEL]: {
-                [GO_KART_EXTERIOR_LEFT]: true,
-                [GO_KART_EXTERIOR_RIGHT]: true
+                [GO_KART_EXTERIOR__LEFT]: true,
+                [GO_KART_EXTERIOR__RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,

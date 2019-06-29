@@ -7,7 +7,7 @@ import {
     STAGE_LIGHTS
 } from 'constants/scene/things/cutouts'
 import {
-    PUSH_BROOM_BACKSTAGE,
+    PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
 } from 'constants/scene/things/fixtures'
@@ -33,7 +33,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [PUSH_BROOM_BACKSTAGE]: {
+        [PUSH_BROOM__BACKSTAGE]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 6.5,

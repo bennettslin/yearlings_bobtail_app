@@ -3,11 +3,11 @@ import {
     FIXTURE
 } from 'constants/scene'
 import {
-    MONITOR_SIDE_STAGE,
-    WALL_SPEAKER_SIDE_STAGE
+    MONITOR_SIDE__STAGE,
+    WALL_SPEAKER_SIDE__STAGE
 } from 'constants/scene/things/cutouts'
 import {
-    STAGE_MIC_SIDE_STAGE,
+    STAGE_MIC_SIDE__STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN
@@ -15,7 +15,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [MONITOR_SIDE_STAGE]: {
+        [MONITOR_SIDE__STAGE]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 9,
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1
             }
         },
-        [WALL_SPEAKER_SIDE_STAGE]: {
+        [WALL_SPEAKER_SIDE__STAGE]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 10.5,
@@ -34,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [STAGE_MIC_SIDE_STAGE]: {
+        [STAGE_MIC_SIDE__STAGE]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 8.5,

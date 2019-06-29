@@ -5,9 +5,9 @@ import {
 } from 'constants/scene'
 import { OAKLAND_FRONT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
-    TWIN_STREETLAMP_FAR,
-    TWIN_STREETLAMP_MIDDLE,
-    TWIN_STREETLAMP_NEAR
+    TWIN_STREETLAMP__FAR,
+    TWIN_STREETLAMP__MIDDLE,
+    TWIN_STREETLAMP__NEAR
 } from 'constants/scene/things/cutouts'
 import {
     RESIDENTIAL_FAR_LEFT,
@@ -30,7 +30,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [CUTOUT]: {
-        [TWIN_STREETLAMP_FAR]: {
+        [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 5.5,
@@ -38,7 +38,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5
             }
         },
-        [TWIN_STREETLAMP_MIDDLE]: {
+        [TWIN_STREETLAMP__MIDDLE]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 5.5,
@@ -46,7 +46,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 6
             }
         },
-        [TWIN_STREETLAMP_NEAR]: {
+        [TWIN_STREETLAMP__NEAR]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5.5,

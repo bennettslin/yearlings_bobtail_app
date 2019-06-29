@@ -87,10 +87,10 @@ import {
 } from '../../constants/scene/things/cardboards'
 
 import {
-    TRASH_CAN_LOCKERS,
-    TRASH_CAN_QUAD,
-    VAN_NUYS_PLANT_LOCKERS,
-    VAN_NUYS_PLANT_QUAD
+    TRASH_CAN__LOCKERS,
+    TRASH_CAN__QUAD,
+    VAN_NUYS_PLANT__LOCKERS,
+    VAN_NUYS_PLANT__QUAD
 } from '../../constants/scene/things/cutouts'
 
 import {
@@ -304,8 +304,8 @@ export default [
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
             [CUTOUT]: {
-                [TRASH_CAN_LOCKERS]: true,
-                [VAN_NUYS_PLANT_LOCKERS]: true
+                [TRASH_CAN__LOCKERS]: true,
+                [VAN_NUYS_PLANT__LOCKERS]: true
             },
             [FIXTURE]: {
                 [THROWN_FRUIT]: true
@@ -362,8 +362,8 @@ export default [
                 [VAN_NUYS_LOGO]: true
             },
             [CUTOUT]: {
-                [TRASH_CAN_QUAD]: true,
-                [VAN_NUYS_PLANT_QUAD]: true
+                [TRASH_CAN__QUAD]: true,
+                [VAN_NUYS_PLANT__QUAD]: true
             }
         },
         cubes: VAN_NUYS_QUAD_KEY,

@@ -61,19 +61,19 @@ import {
 } from '../../constants/scene/actors/instances/songs'
 
 import {
-    MONITOR_SIDE_CROWD,
-    MONITOR_SIDE_STAGE,
-    WALL_SPEAKER_SIDE_CROWD,
-    WALL_SPEAKER_SIDE_STAGE
+    MONITOR_SIDE__CROWD,
+    MONITOR_SIDE__STAGE,
+    WALL_SPEAKER_SIDE__CROWD,
+    WALL_SPEAKER_SIDE__STAGE
 } from '../../constants/scene/things/cutouts'
 
 import {
-    STAGE_MIC_SIDE_CROWD,
-    STAGE_MIC_SIDE_STAGE,
+    STAGE_MIC_SIDE__CROWD,
+    STAGE_MIC_SIDE__STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
-    DRUMS_STACKED_CLUB,
+    DRUMS_STACKED__CLUB,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
@@ -81,8 +81,8 @@ import {
 } from '../../constants/scene/things/fixtures'
 
 import {
-    CROWD_FAR_SIDE,
-    CROWD_NEAR_SIDE,
+    CROWD_FAR__SIDE,
+    CROWD_NEAR__SIDE,
     LIZ_BED
 } from '../../constants/scene/things/panels'
 
@@ -127,15 +127,15 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [MONITOR_SIDE_CROWD]: true,
-                [WALL_SPEAKER_SIDE_CROWD]: true
+                [MONITOR_SIDE__CROWD]: true,
+                [WALL_SPEAKER_SIDE__CROWD]: true
             },
             [FIXTURE]: {
-                [STAGE_MIC_SIDE_CROWD]: true
+                [STAGE_MIC_SIDE__CROWD]: true
             },
             [PANEL]: {
-                [CROWD_FAR_SIDE]: true,
-                [CROWD_NEAR_SIDE]: true
+                [CROWD_FAR__SIDE]: true,
+                [CROWD_NEAR__SIDE]: true
             }
         },
         cubes: CLUB_SIDE_CROWD_KEY,
@@ -175,11 +175,11 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [MONITOR_SIDE_STAGE]: true,
-                [WALL_SPEAKER_SIDE_STAGE]: true
+                [MONITOR_SIDE__STAGE]: true,
+                [WALL_SPEAKER_SIDE__STAGE]: true
             },
             [FIXTURE]: {
-                [STAGE_MIC_SIDE_STAGE]: true,
+                [STAGE_MIC_SIDE__STAGE]: true,
                 [KICK_DRUM]: true,
                 [DRUM_THRONE]: true,
                 [GUITAR_CASE_OPEN]: true
@@ -234,7 +234,7 @@ export default [
                 }
             },
             [FIXTURE]: {
-                [DRUMS_STACKED_CLUB]: true
+                [DRUMS_STACKED__CLUB]: true
             }
         },
         cubes: CLUB_LOADING,

@@ -4,11 +4,11 @@ import {
 } from 'constants/scene'
 import { ROAD_PRESENT } from 'constants/scene/things/flats'
 import {
-    SNOWGLOBE_LIZ_ALONE,
-    SNOWGLOBE_BENNETT_MIRIAM,
-    BENNETT_COUCH_BUBBLE,
-    BENNETT_LEFT_ARMREST_BUBBLE,
-    BENNETT_RIGHT_ARMREST_BUBBLE
+    SNOWGLOBE__LIZ_ALONE,
+    SNOWGLOBE__BENNETT_MIRIAM,
+    BENNETT_COUCH__BUBBLE,
+    BENNETT_LEFT_ARMREST__BUBBLE,
+    BENNETT_RIGHT_ARMREST__BUBBLE
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [SNOWGLOBE_LIZ_ALONE]: {
+        [SNOWGLOBE__LIZ_ALONE]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 2.5,
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 4
             }
         },
-        [SNOWGLOBE_BENNETT_MIRIAM]: {
+        [SNOWGLOBE__BENNETT_MIRIAM]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [BENNETT_COUCH_BUBBLE]: {
+        [BENNETT_COUCH__BUBBLE]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -47,7 +47,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [BENNETT_LEFT_ARMREST_BUBBLE]: {
+        [BENNETT_LEFT_ARMREST__BUBBLE]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [BENNETT_RIGHT_ARMREST_BUBBLE]: {
+        [BENNETT_RIGHT_ARMREST__BUBBLE]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,

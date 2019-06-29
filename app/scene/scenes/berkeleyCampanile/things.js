@@ -6,7 +6,7 @@ import {
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE_RIGHT
+    UC_BERKELEY_TREE__RIGHT
 } from 'constants/scene/things/cutouts'
 import { CAMPANILE } from 'constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from 'constants/scene/things/puppets'
@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2,
             scaleFactor: 0.5
         },
-        [UC_BERKELEY_TREE_RIGHT]: {
+        [UC_BERKELEY_TREE__RIGHT]: {
             yIndex: 2,
             xPosition: 9.5,
             scaleFactor: 0.5

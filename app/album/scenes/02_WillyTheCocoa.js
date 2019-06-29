@@ -77,8 +77,8 @@ import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
 import {
     OVERPASS_SIGN_FRONT,
     OVERPASS_SIGN_BACK,
-    PORCH_PLANTS_LEFT,
-    PORCH_PLANTS_RIGHT,
+    PORCH_PLANT__LEFT,
+    PORCH_PLANT__RIGHT,
     FIRE_HYDRANT,
     CAMPFIRE
 } from '../../constants/scene/things/cutouts'
@@ -191,8 +191,8 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [PORCH_PLANTS_LEFT]: true,
-                [PORCH_PLANTS_RIGHT]: true
+                [PORCH_PLANT__LEFT]: true,
+                [PORCH_PLANT__RIGHT]: true
             }
         },
         cubes: PORCH_KEY,
