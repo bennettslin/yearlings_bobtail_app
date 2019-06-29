@@ -8,10 +8,7 @@ import OverpassSignFront from './Cutouts/OverpassSignFront'
 import OverpassSignBack from './Cutouts/OverpassSignBack'
 import porchPlantsLeft from 'assets/svgs/cutouts/porchPlantsLeft.svg'
 import porchPlantsRight from 'assets/svgs/cutouts/porchPlantsRight.svg'
-import TrollShadowLeft from './Cutouts/TrollShadowLeft'
-import TrollShadowRight from './Cutouts/TrollShadowRight'
 import Campfire from './Cutouts/Campfire'
-import Stalactites from './Cutouts/Stalactites'
 import BuddhaShrine from './Cutouts/BuddhaShrine'
 import TaiwanFridgeFront from './Cutouts/TaiwanFridgeFront'
 import BennettTaiwanStairs from './Cutouts/BennettTaiwanStairs'
@@ -69,10 +66,7 @@ import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
-    TROLL_SHADOW_LEFT,
-    TROLL_SHADOW_RIGHT,
     CAMPFIRE,
-    STALACTITES,
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE_FRONT,
     BENNETT_TAIWAN_STAIRS,
@@ -138,10 +132,7 @@ export const propTypes = {
     [OVERPASS_SIGN_BACK]: PropTypes.bool,
     [PORCH_PLANTS_LEFT]: PropTypes.bool,
     [PORCH_PLANTS_RIGHT]: PropTypes.bool,
-    [TROLL_SHADOW_LEFT]: PropTypes.bool,
-    [TROLL_SHADOW_RIGHT]: PropTypes.bool,
     [CAMPFIRE]: PropTypes.bool,
-    [STALACTITES]: PropTypes.bool,
     [BUDDHA_SHRINE]: PropTypes.bool,
     [TAIWAN_FRIDGE_FRONT]: PropTypes.bool,
     [BENNETT_TAIWAN_STAIRS]: PropTypes.bool,
@@ -207,10 +198,7 @@ export default {
     [OVERPASS_SIGN_BACK]: OverpassSignBack,
     [PORCH_PLANTS_LEFT]: porchPlantsLeft,
     [PORCH_PLANTS_RIGHT]: porchPlantsRight,
-    [TROLL_SHADOW_LEFT]: TrollShadowLeft,
-    [TROLL_SHADOW_RIGHT]: TrollShadowRight,
     [CAMPFIRE]: Campfire,
-    [STALACTITES]: Stalactites,
     [BUDDHA_SHRINE]: BuddhaShrine,
     [TAIWAN_FRIDGE_FRONT]: TaiwanFridgeFront,
     [BENNETT_TAIWAN_STAIRS]: BennettTaiwanStairs,

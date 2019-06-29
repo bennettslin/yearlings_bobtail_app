@@ -80,10 +80,7 @@ import {
     PORCH_PLANTS_LEFT,
     PORCH_PLANTS_RIGHT,
     FIRE_HYDRANT,
-    TROLL_SHADOW_LEFT,
-    TROLL_SHADOW_RIGHT,
-    CAMPFIRE,
-    STALACTITES
+    CAMPFIRE
 } from '../../constants/scene/things/cutouts'
 
 import {
@@ -109,7 +106,10 @@ import {
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
-    BEDROOM_FENCE
+    BEDROOM_FENCE,
+    TROLL_SHADOW_LEFT,
+    TROLL_SHADOW_RIGHT,
+    STALACTITES
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -341,14 +341,16 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [TROLL_SHADOW_LEFT]: true,
-                [TROLL_SHADOW_RIGHT]: true,
-                [CAMPFIRE]: true,
-                [STALACTITES]: true
+                [CAMPFIRE]: true
             },
             [FLAT]: {
                 [FAMILY_HOUSE]: true,
                 [CAVE_SHADOWS]: true
+            },
+            [PANEL]: {
+                [TROLL_SHADOW_LEFT]: true,
+                [TROLL_SHADOW_RIGHT]: true,
+                [STALACTITES]: true
             }
         },
         cubes: CHANGELING_CAVE_KEY,

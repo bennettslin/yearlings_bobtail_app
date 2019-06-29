@@ -5,6 +5,9 @@ import Bathtub from './Panels/Bathtub'
 import BedroomDesk from './Panels/BedroomDesk'
 import CaptainBed from './Panels/CaptainBed'
 import BedroomFence from './Panels/BedroomFence'
+import TrollShadowLeft from './Panels/TrollShadowLeft'
+import TrollShadowRight from './Panels/TrollShadowRight'
+import Stalactites from './Panels/Stalactites'
 import SchoolbusInterior from './Panels/SchoolbusInterior'
 import SchoolbusExterior from './Panels/SchoolbusExterior'
 import OceanCaveInterior from './Panels/OceanCaveInterior'
@@ -42,6 +45,9 @@ import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE,
+    TROLL_SHADOW_LEFT,
+    TROLL_SHADOW_RIGHT,
+    STALACTITES,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     OCEAN_CAVE_INTERIOR,
@@ -91,6 +97,9 @@ export const propTypes = {
     [BEDROOM_DESK]: PropTypes.bool,
     [CAPTAIN_BED]: PropTypes.bool,
     [BEDROOM_FENCE]: PropTypes.bool,
+    [TROLL_SHADOW_LEFT]: PropTypes.bool,
+    [TROLL_SHADOW_RIGHT]: PropTypes.bool,
+    [STALACTITES]: PropTypes.bool,
     [SCHOOLBUS_INTERIOR]: PropTypes.bool,
     [SCHOOLBUS_EXTERIOR]: PropTypes.bool,
     [OCEAN_CAVE_INTERIOR]: PropTypes.bool,
@@ -140,6 +149,9 @@ export default {
     [BEDROOM_DESK]: BedroomDesk,
     [CAPTAIN_BED]: CaptainBed,
     [BEDROOM_FENCE]: BedroomFence,
+    [TROLL_SHADOW_LEFT]: TrollShadowLeft,
+    [TROLL_SHADOW_RIGHT]: TrollShadowRight,
+    [STALACTITES]: Stalactites,
     [SCHOOLBUS_INTERIOR]: SchoolbusInterior,
     [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
     [OCEAN_CAVE_INTERIOR]: OceanCaveInterior,
