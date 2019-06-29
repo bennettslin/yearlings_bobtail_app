@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import PresenceSvgInjector from 'modules/PresenceSvgInjector'
+import PresenceSvg from 'modules/PresenceSvg'
 
 import {
     getMapForPresenceType,
@@ -44,6 +44,7 @@ const PresenceView = ({
             xPosition: xPosition1,
             zOffset: zOffset1,
             scaleFactor,
+            flipHorizontal,
 
             arrangement: {
                 // Allow older configurations to still nest.
@@ -87,19 +88,18 @@ const PresenceView = ({
                 capitaliseForClassName(presenceKey),
                 'abF'
             ),
-            ...scaleFactor && {
-                scaleFactor
-            },
+            scaleFactor,
+            flipHorizontal,
             ...presenceXY
         }
 
     // TODO: Get rid of this conditional once they are all asset svgs.
     return typeof PresenceComponent === 'string' ? (
-        <PresenceSvgInjector
+        <PresenceSvg
             {...presenceProps}
         >
             {PresenceComponent}
-        </PresenceSvgInjector>
+        </PresenceSvg>
     ) : (
         <PresenceComponent
             {...presenceProps}

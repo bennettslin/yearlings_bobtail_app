@@ -1,0 +1,8 @@
+.PresenceSvg {
+    position: absolute;
+    transform: translate(-50%, -100%);
+}
+
+.PresenceSvg__flipHorizontal {
+    transform: scaleX(-1) translate(50%, -100%);
+}

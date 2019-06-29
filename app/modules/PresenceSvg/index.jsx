@@ -6,7 +6,7 @@ import ReactInlineSvg from 'react-inlinesvg'
 
 import { getAdjustedSize, getViewBoxSize } from './helper'
 
-class PresenceSvgInjector extends Component {
+class PresenceSvg extends Component {
 
     static defaultProps = {
         scaleFactor: 1
@@ -17,6 +17,7 @@ class PresenceSvgInjector extends Component {
         x: PropTypes.number.isRequired,
         y: PropTypes.number.isRequired,
         scaleFactor: PropTypes.number,
+        flipHorizontal: PropTypes.bool,
         children: PropTypes.node
     }
 
@@ -64,6 +65,7 @@ class PresenceSvgInjector extends Component {
                 x,
                 y,
                 scaleFactor,
+                flipHorizontal,
                 children
             } = this.props,
             {
@@ -83,7 +85,8 @@ class PresenceSvgInjector extends Component {
             <ReactInlineSvg
                 {...{
                     className: cx(
-                        'PresenceSvgInjector',
+                        'PresenceSvg',
+                        flipHorizontal && 'PresenceSvg__flipHorizontal',
                         className
                     ),
                     processSVG: this.processSvg,
@@ -101,4 +104,4 @@ class PresenceSvgInjector extends Component {
     }
 }
 
-export default PresenceSvgInjector
+export default PresenceSvg
