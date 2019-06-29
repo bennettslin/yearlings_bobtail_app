@@ -38,7 +38,7 @@ class WikiPopup extends PureComponent {
                 isFullSize
                 {...{
                     isVisible: Boolean(selectedWikiIndex),
-                    popupName: WikiPopup.name,
+                    popupName: 'WikiPopup',
                     handleCloseClick: this.closeWiki
                 }}
             >

@@ -36,7 +36,7 @@ class AboutPopup extends PureComponent {
                 isCardSize
                 hasWidePadding
                 {...{
-                    popupName: AboutPopup.name,
+                    popupName: 'AboutPopup',
                     isVisible: this.props.isAboutShown,
                     handleCloseClick: this._closeAbout
                 }}

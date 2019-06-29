@@ -51,7 +51,7 @@ class TipsPopup extends PureComponent {
                 hasNarrowPadding
                 noAbsoluteFull
                 {...{
-                    popupName: TipsPopup.name,
+                    popupName: 'TipsPopup',
                     isVisible
                 }}
             >

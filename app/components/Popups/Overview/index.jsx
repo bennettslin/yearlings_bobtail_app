@@ -87,7 +87,7 @@ class OverviewPopup extends PureComponent {
                 hasNarrowPadding
                 noAbsoluteFull
                 {...{
-                    popupName: OverviewPopup.name,
+                    popupName: 'OverviewPopup',
                     isVisible,
                     noFlexCentre: inMain
                 }}

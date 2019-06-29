@@ -35,7 +35,7 @@ class ScorePopup extends PureComponent {
                 isFullSize
                 displaysInOverlay
                 {...{
-                    popupName: ScorePopup.name,
+                    popupName: 'ScorePopup',
                     isVisible: isScoreShown,
                     handleCloseClick: this.closeScore
                 }}
