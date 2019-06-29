@@ -83,17 +83,11 @@ path {
     }
 }
 
-.fine, .outline {
+.shadowStroke {
     .Cutout
     & {
         fill: none;
-    }
-}
-
-.fine {
-    .Cutout
-    & {
-        stroke-width: 0.5px;
+        stroke-width: 0.2%;
     }
 }
 

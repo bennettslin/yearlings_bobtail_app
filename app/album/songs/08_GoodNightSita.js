@@ -794,7 +794,7 @@ export default {
                         {
                             anchor: `endless flowchart`,
                             card: {
-                                description: `One fantasy of mine was to preemptively map out and memorise all the possible ways a dinner conversation might unfold. By picking the optimal thing to say for each turn, I could then nudge the course of the evening towards my desired outcome.`,
+                                description: `One strategy I considered was to prepare a mental flowchart of all the possible ways a date might unfold. I could then take one optimal action after another to nudge the events of that evening towards my desired outcome.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
@@ -810,10 +810,10 @@ export default {
                         {
                             anchor: `answer a no`,
                             card: {
-                                description: `Of course, if my date is just as determined to end the evening on a purely friendly note,
-
-                                . If my date's responses
-                                , and all of them lead back to starting over from the beginning, then I'll be doomed to spend the evening circling through an infinite loop of polite rejection.`,
+                                description: `Of course, if each date takes the least optimal action herself, to ensure the evening only ever ends on a friendly note,
+                                
+                                
+                                leaving me right where I started at the beginning of the flowchart. And I'll be doomed to spend my life cycling through an infinite loop of polite rejection.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
