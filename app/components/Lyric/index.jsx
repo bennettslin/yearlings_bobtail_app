@@ -79,7 +79,8 @@ class Lyric extends PureComponent {
                             className: cx(
                                 'Lyric',
                                 'gradientMask__lyricColumn__desktop',
-                                'abF'
+                                'abF',
+                                'ovH'
                             )
                         }}
                     >

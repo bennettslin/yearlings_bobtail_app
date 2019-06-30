@@ -91,8 +91,9 @@ const PresenceView = ({
                 capitaliseForClassName(presenceKey),
                 'abF'
             ),
-            scaleFactor,
-            flipHorizontal,
+            // TODO: These checks won't be necessary afterwards.
+            ...isFinite(scaleFactor) && { scaleFactor },
+            ...flipHorizontal && { flipHorizontal },
             ...presenceXY
         }
 

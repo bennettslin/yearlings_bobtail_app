@@ -65,7 +65,8 @@ class AnnotationCard extends PureComponent {
 
                     // "Child annotation card letter."
                     'CaC'
-                )
+                ),
+                'ovH'
             )}>
                 <div className={cx(
                     'AnnotationCard',

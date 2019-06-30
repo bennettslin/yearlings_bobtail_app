@@ -41,6 +41,7 @@ const propTypes = {
                     'GcV',
 
                     'VerseColour',
+                    'ovH',
 
                     inVerseBar && 'VerseColour__inVerseBar',
                     isActivated && 'VerseColour__activated',

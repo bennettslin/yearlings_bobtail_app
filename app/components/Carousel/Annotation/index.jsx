@@ -72,7 +72,8 @@ class CarouselAnnotation extends PureComponent {
                             dotKeys,
                             // "Child carousel annotation letter."
                             'CcA'
-                        )
+                        ),
+                        'ovH'
                     )
                 }}
             >

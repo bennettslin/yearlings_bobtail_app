@@ -99,7 +99,8 @@ class Banner extends PureComponent {
                             'Cursor__smallText',
                         'dropShadow',
                         'textShadow__banner',
-                        'abF'
+                        'abF',
+                        'ovH'
                     ),
                     onClick: this.handleBannerClick
                 }}

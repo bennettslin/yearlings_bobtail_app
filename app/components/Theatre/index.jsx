@@ -52,7 +52,8 @@ class Theatre extends PureComponent {
             >
                 <div className={cx(
                     'Theatre',
-                    'abF'
+                    'abF',
+                    'ovH'
                 )}>
                     <Stage />
                     <Curtains />

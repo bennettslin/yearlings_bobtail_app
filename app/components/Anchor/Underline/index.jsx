@@ -48,9 +48,9 @@ const propTypes = {
                         'Underline__bar__default',
 
                     isSelected &&
-                        'Underline__bar__selected'
+                        'Underline__bar__selected',
 
-                    // 'gradientMask__underline'
+                    'ovH'
                 )
             }}
         >

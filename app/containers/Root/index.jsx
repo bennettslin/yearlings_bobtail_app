@@ -55,7 +55,8 @@ class RootContainer extends PureComponent {
                 {...{
                     ref: this._setRootElement,
                     className: cx(
-                        'RootContainer'
+                        'RootContainer',
+                        'ovH'
                     )
                 }}
             >
