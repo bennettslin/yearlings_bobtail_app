@@ -1,10 +1,3 @@
-const
-    COLLECTING = 'collecting',
-    DUCKING = 'ducking',
-    CROSSING_GUARD = 'crossingGuard'
-
-export {
-    COLLECTING,
-    DUCKING,
-    CROSSING_GUARD
-}
+export const COLLECTING = 'collecting'
+export const DUCKING = 'ducking'
+export const CROSSING_GUARD = 'crossingGuard'

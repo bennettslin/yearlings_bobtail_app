@@ -1,6 +1,1 @@
-const
-    CHARMED_SCHOOLBUS = 'charmedSchoolbus'
-
-export {
-    CHARMED_SCHOOLBUS
-}
+export const CHARMED_SCHOOLBUS = 'charmedSchoolbus'

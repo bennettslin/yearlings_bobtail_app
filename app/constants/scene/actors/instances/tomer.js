@@ -1,8 +1,2 @@
-const
-    SHANE_BUYING = 'shaneBuying',
-    SHANE_SPILLING = 'shaneSpilling'
-
-export {
-    SHANE_BUYING,
-    SHANE_SPILLING
-}
+export const SHANE_BUYING = 'shaneBuying'
+export const SHANE_SPILLING = 'shaneSpilling'

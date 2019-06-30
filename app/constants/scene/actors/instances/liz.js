@@ -1,22 +1,9 @@
-const
-    ASLEEP_REACHING = 'asleepReaching',
-    REACHING_REFLECTION = 'reachingReflection',
-    PETTING_SEATED = 'pettingSeated',
-    PETTING_STANDING = 'pettingStanding',
-    SIFTING_TCHOTCHKES = 'siftingTchotchkes',
-    OPENING_DOOR = 'openingDoor',
-    DEFENDING = 'defending',
-    NOT_HUNGRY = 'notHungry',
-    ASLEEP_COUCH = 'asleepCouch'
-
-export {
-    ASLEEP_REACHING,
-    REACHING_REFLECTION,
-    PETTING_SEATED,
-    PETTING_STANDING,
-    SIFTING_TCHOTCHKES,
-    OPENING_DOOR,
-    DEFENDING,
-    NOT_HUNGRY,
-    ASLEEP_COUCH
-}
+export const ASLEEP_REACHING = 'asleepReaching'
+export const REACHING_REFLECTION = 'reachingReflection'
+export const PETTING_SEATED = 'pettingSeated'
+export const PETTING_STANDING = 'pettingStanding'
+export const SIFTING_TCHOTCHKES = 'siftingTchotchkes'
+export const OPENING_DOOR = 'openingDoor'
+export const DEFENDING = 'defending'
+export const NOT_HUNGRY = 'notHungry'
+export const ASLEEP_COUCH = 'asleepCouch'

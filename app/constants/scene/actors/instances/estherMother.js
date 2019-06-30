@@ -1,8 +1,2 @@
-const
-    HURT_CONSOLING = 'hurtConsoling',
-    SOBBING_SHIELDING = 'sobbingShielding'
-
-export {
-    HURT_CONSOLING,
-    SOBBING_SHIELDING
-}
+export const HURT_CONSOLING = 'hurtConsoling'
+export const SOBBING_SHIELDING = 'sobbingShielding'

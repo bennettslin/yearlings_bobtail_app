@@ -1,10 +1,3 @@
-const
-    SQUATTING = 'squatting',
-    CHUCKLING = 'chuckling',
-    SMIRKING = 'smirking'
-
-export {
-    SQUATTING,
-    CHUCKLING,
-    SMIRKING
-}
+export const SQUATTING = 'squatting'
+export const CHUCKLING = 'chuckling'
+export const SMIRKING = 'smirking'

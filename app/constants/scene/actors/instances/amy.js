@@ -1,8 +1,2 @@
-const
-    SMOKER = 'smoker',
-    DOCTOR = 'doctor'
-
-export {
-    SMOKER,
-    DOCTOR
-}
+export const SMOKER = 'smoker'
+export const DOCTOR = 'doctor'

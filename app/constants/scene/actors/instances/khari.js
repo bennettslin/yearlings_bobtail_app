@@ -1,12 +1,4 @@
-const
-    DOUBLE_ALBERT = 'doubleAlbert',
-    ARRIVED = 'arrived',
-    JUDGMENTAL = 'judgmental',
-    CONCERNED = 'concerned'
-
-export {
-    DOUBLE_ALBERT,
-    ARRIVED,
-    JUDGMENTAL,
-    CONCERNED
-}
+export const DOUBLE_ALBERT = 'doubleAlbert'
+export const ARRIVED = 'arrived'
+export const JUDGMENTAL = 'judgmental'
+export const CONCERNED = 'concerned'

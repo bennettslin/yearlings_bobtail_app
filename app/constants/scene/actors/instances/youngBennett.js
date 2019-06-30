@@ -1,12 +1,4 @@
-const
-    PANICKED = 'panicked',
-    FLUSTERED = 'flustered',
-    BATHING = 'bathing',
-    SINGING = 'singing'
-
-export {
-    PANICKED,
-    FLUSTERED,
-    BATHING,
-    SINGING
-}
+export const PANICKED = 'panicked'
+export const FLUSTERED = 'flustered'
+export const BATHING = 'bathing'
+export const SINGING = 'singing'

@@ -1,8 +1,2 @@
-const
-    PRINCIPAL = 'principal',
-    PUNCHING = 'punching'
-
-export {
-    PRINCIPAL,
-    PUNCHING
-}
+export const PRINCIPAL = 'principal'
+export const PUNCHING = 'punching'

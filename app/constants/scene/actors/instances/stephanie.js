@@ -1,12 +1,4 @@
-const
-    BENNETT_KEYBOARD = 'bennettKeyboard',
-    FLAPPER = 'flapper',
-    BENNETT_DEFIANT = 'bennettDefiant',
-    BENNETT_RECORDING = 'bennettRecording'
-
-export {
-    BENNETT_KEYBOARD,
-    FLAPPER,
-    BENNETT_DEFIANT,
-    BENNETT_RECORDING
-}
+export const BENNETT_KEYBOARD = 'bennettKeyboard'
+export const FLAPPER = 'flapper'
+export const BENNETT_DEFIANT = 'bennettDefiant'
+export const BENNETT_RECORDING = 'bennettRecording'

@@ -1,8 +1,2 @@
-const
-    CURIOUS = 'curious',
-    SNICKERING = 'snickering'
-
-export {
-    CURIOUS,
-    SNICKERING
-}
+export const CURIOUS = 'curious'
+export const SNICKERING = 'snickering'

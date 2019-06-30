@@ -1,8 +1,2 @@
-const
-    JOGGER = 'jogger',
-    INJURED = 'injured'
-
-export {
-    JOGGER,
-    INJURED
-}
+export const JOGGER = 'jogger'
+export const INJURED = 'injured'

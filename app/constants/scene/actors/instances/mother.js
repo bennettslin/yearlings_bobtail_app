@@ -1,10 +1,3 @@
-const
-    STOOPING = 'stooping',
-    COMFORTING = 'comforting',
-    ARGUING = 'arguing'
-
-export {
-    STOOPING,
-    COMFORTING,
-    ARGUING
-}
+export const STOOPING = 'stooping'
+export const COMFORTING = 'comforting'
+export const ARGUING = 'arguing'

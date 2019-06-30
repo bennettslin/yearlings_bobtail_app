@@ -1,8 +1,2 @@
-const
-    CATHOLIC_GUY = 'catholicGuy',
-    WATCHING = 'watching'
-
-export {
-    CATHOLIC_GUY,
-    WATCHING
-}
+export const CATHOLIC_GUY = 'catholicGuy'
+export const WATCHING = 'watching'

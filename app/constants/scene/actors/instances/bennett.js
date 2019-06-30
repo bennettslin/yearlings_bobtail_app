@@ -1,62 +1,29 @@
-const
-    BREAKUP_DEJECTED = 'breakupDejected',
-    SOLICITING_OPINION = 'solicitingOpinion',
-    CATHOLIC_PENSIVE = 'catholicPensive',
-    CATHOLIC_IDEA = 'catholicIdea',
-    PIOUS = 'pious',
-    PONDERING = 'pondering',
-    COUCH_READING = 'couchReading',
-    RUBIKS_CUBE = 'rubiksCube',
-    DISTRACTED = 'distracted',
-    HOPELESSLY_CRUSHED = 'hopelesslyCrushed',
-    WONDERING_BABY = 'wonderingBaby',
-    MERRILY_DERANGED = 'merrilyDeranged',
-    DISHROOM_READING = 'dishroomReading',
-    MOP_SOPPED = 'mopSopped',
-    WAITING_ROOM_ASLEEP = 'waitingRoomAsleep',
-    SIDELONG_HESITANCE = 'sidelongHesitance',
-    REMOVING_SHOES = 'removingShoes',
-    SHOES_REFLECTION = 'shoesReflection',
-    DROPPING_MEATS = 'droppingMeats',
-    CORD_SIDE = 'cordSide',
-    CORD_REAR = 'cordRear',
-    REMOVING_PANTS = 'removingPants',
-    INFIRM = 'infirm',
-    DISPOSING_CONDOM = 'disposingCondom',
-    CAMPUS_ASHAMED = 'campusAshamed',
-    SHOW_ANNOYED = 'showAnnoyed',
-    ALLEY = 'alley',
-    BROKEN_HEARTED = 'brokenHearted',
-    DEMONSTRATION = 'demonstration'
-
-export {
-    BREAKUP_DEJECTED,
-    SOLICITING_OPINION,
-    CATHOLIC_PENSIVE,
-    CATHOLIC_IDEA,
-    PIOUS,
-    PONDERING,
-    COUCH_READING,
-    RUBIKS_CUBE,
-    DISTRACTED,
-    HOPELESSLY_CRUSHED,
-    WONDERING_BABY,
-    MERRILY_DERANGED,
-    DISHROOM_READING,
-    MOP_SOPPED,
-    WAITING_ROOM_ASLEEP,
-    SIDELONG_HESITANCE,
-    REMOVING_SHOES,
-    SHOES_REFLECTION,
-    DROPPING_MEATS,
-    CORD_SIDE,
-    CORD_REAR,
-    REMOVING_PANTS,
-    INFIRM,
-    DISPOSING_CONDOM,
-    CAMPUS_ASHAMED,
-    SHOW_ANNOYED,
-    ALLEY,
-    BROKEN_HEARTED,
-    DEMONSTRATION
-}
+export const BREAKUP_DEJECTED = 'breakupDejected'
+export const SOLICITING_OPINION = 'solicitingOpinion'
+export const CATHOLIC_PENSIVE = 'catholicPensive'
+export const CATHOLIC_IDEA = 'catholicIdea'
+export const PIOUS = 'pious'
+export const PONDERING = 'pondering'
+export const COUCH_READING = 'couchReading'
+export const RUBIKS_CUBE = 'rubiksCube'
+export const DISTRACTED = 'distracted'
+export const HOPELESSLY_CRUSHED = 'hopelesslyCrushed'
+export const WONDERING_BABY = 'wonderingBaby'
+export const MERRILY_DERANGED = 'merrilyDeranged'
+export const DISHROOM_READING = 'dishroomReading'
+export const MOP_SOPPED = 'mopSopped'
+export const WAITING_ROOM_ASLEEP = 'waitingRoomAsleep'
+export const SIDELONG_HESITANCE = 'sidelongHesitance'
+export const REMOVING_SHOES = 'removingShoes'
+export const SHOES_REFLECTION = 'shoesReflection'
+export const DROPPING_MEATS = 'droppingMeats'
+export const CORD_SIDE = 'cordSide'
+export const CORD_REAR = 'cordRear'
+export const REMOVING_PANTS = 'removingPants'
+export const INFIRM = 'infirm'
+export const DISPOSING_CONDOM = 'disposingCondom'
+export const CAMPUS_ASHAMED = 'campusAshamed'
+export const SHOW_ANNOYED = 'showAnnoyed'
+export const ALLEY = 'alley'
+export const BROKEN_HEARTED = 'brokenHearted'
+export const DEMONSTRATION = 'demonstration'

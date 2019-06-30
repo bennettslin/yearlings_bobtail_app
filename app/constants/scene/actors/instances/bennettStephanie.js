@@ -1,8 +1,2 @@
-const
-    HORSING = 'horsing',
-    DRYING_TEARS = 'dryingTears'
-
-export {
-    HORSING,
-    DRYING_TEARS
-}
+export const HORSING = 'horsing'
+export const DRYING_TEARS = 'dryingTears'

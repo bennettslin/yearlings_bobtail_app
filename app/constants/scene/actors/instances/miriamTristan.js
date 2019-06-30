@@ -1,6 +1,1 @@
-const
-    NOOGIE = 'noogie'
-
-export {
-    NOOGIE
-}
+export const NOOGIE = 'noogie'

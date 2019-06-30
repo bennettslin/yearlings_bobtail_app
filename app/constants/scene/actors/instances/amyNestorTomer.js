@@ -1,6 +1,1 @@
-const
-    OFFICER = 'officer'
-
-export {
-    OFFICER
-}
+export const OFFICER = 'officer'

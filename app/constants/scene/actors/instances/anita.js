@@ -1,10 +1,3 @@
-const
-    EXASPERATED = 'exasperated',
-    CONCERNED = 'concerned',
-    CHEERING = 'cheering'
-
-export {
-    EXASPERATED,
-    CONCERNED,
-    CHEERING
-}
+export const EXASPERATED = 'exasperated'
+export const CONCERNED = 'concerned'
+export const CHEERING = 'cheering'

@@ -1,10 +1,3 @@
-const
-    ROARING = 'roaring',
-    ACCUSATORY = 'accusatory',
-    REELING = 'reeling'
-
-export {
-    ROARING,
-    ACCUSATORY,
-    REELING
-}
+export const ROARING = 'roaring'
+export const ACCUSATORY = 'accusatory'
+export const REELING = 'reeling'

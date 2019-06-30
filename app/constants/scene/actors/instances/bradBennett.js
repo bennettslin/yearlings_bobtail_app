@@ -1,6 +1,1 @@
-const
-    TYING_TETHER = 'tyingTether'
-
-export {
-    TYING_TETHER
-}
+export const TYING_TETHER = 'tyingTether'

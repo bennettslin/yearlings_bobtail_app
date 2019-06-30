@@ -1,6 +1,1 @@
-const
-    MISCHIEVOUS_BANJO = 'mischievousBanjo'
-
-export {
-    MISCHIEVOUS_BANJO
-}
+export const MISCHIEVOUS_BANJO = 'mischievousBanjo'

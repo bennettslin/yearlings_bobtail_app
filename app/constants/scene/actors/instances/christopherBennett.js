@@ -1,6 +1,1 @@
-const
-    BLISSFUL_GUILTY = 'blissfulGuilty'
-
-export {
-    BLISSFUL_GUILTY
-}
+export const BLISSFUL_GUILTY = 'blissfulGuilty'

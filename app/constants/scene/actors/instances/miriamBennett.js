@@ -1,12 +1,4 @@
-const
-    ASLEEP_FEARFUL = 'asleepFearful',
-    FENDING_OFF = 'fendingOff',
-    COWGIRL = 'cowgirl',
-    BLOWJOB = 'blowjob'
-
-export {
-    ASLEEP_FEARFUL,
-    FENDING_OFF,
-    COWGIRL,
-    BLOWJOB
-}
+export const ASLEEP_FEARFUL = 'asleepFearful'
+export const FENDING_OFF = 'fendingOff'
+export const COWGIRL = 'cowgirl'
+export const BLOWJOB = 'blowjob'

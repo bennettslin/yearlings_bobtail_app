@@ -1,8 +1,2 @@
-const
-    GESTURING = 'gesturing',
-    SNACKING = 'snacking'
-
-export {
-    GESTURING,
-    SNACKING
-}
+export const GESTURING = 'gesturing'
+export const SNACKING = 'snacking'

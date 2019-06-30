@@ -1,8 +1,2 @@
-const
-    USHER_WAITING = 'usher',
-    USHER_LOOKING = 'usher'
-
-export {
-    USHER_WAITING,
-    USHER_LOOKING
-}
+export const USHER_WAITING = 'usherWaiting'
+export const USHER_LOOKING = 'usherLooking'

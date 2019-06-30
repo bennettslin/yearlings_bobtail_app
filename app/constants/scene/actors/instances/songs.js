@@ -1,95 +1,58 @@
 // Use these song name constants for repeated instances in a song.
 
-const
-    PROLOGUE = 'prologue',
+export const PROLOGUE = 'prologue'
 
-    // Willy.
-    GANGBANGER = 'gangbanger',
-    GREETING = 'greeting',
+// Willy.
+export const GANGBANGER = 'gangbanger'
+export const GREETING = 'greeting'
 
-    // Ash Wednesday.
-    FLIRTING = 'flirting',
-    EATING = 'eating',
+// Ash Wednesday.
+export const FLIRTING = 'flirting'
+export const EATING = 'eating'
 
-    // Good Night.
-    DATE_ENDING = 'dateEnding',
-    MUSEUM = 'museum',
-    BACKSTAGE = 'backstage',
-    GO_KARTS = 'goKarts',
-    DATE_ENDED = 'dateEnded',
+// Good Night.
+export const DATE_ENDING = 'dateEnding'
+export const MUSEUM = 'museum'
+export const BACKSTAGE = 'backstage'
+export const GO_KARTS = 'goKarts'
+export const DATE_ENDED = 'dateEnded'
 
-    // Grasshoppers.
-    DISHROOM_LANCET = 'dishroomLancet',
-    GATE_CODE = 'gateCode',
-    RUMPLED_LINENS = 'rumpledLinens',
+// Grasshoppers.
+export const DISHROOM_LANCET = 'dishroomLancet'
+export const GATE_CODE = 'gateCode'
+export const RUMPLED_LINENS = 'rumpledLinens'
 
-    // Constellations.
-    ABBEY_ROAD = 'abbeyRoad',
-    WALGREENS = 'walgreens',
-    STEAM_TUNNEL = 'steamTunnel',
-    CEMETERY = 'cemetery',
-    STATION_WAGON = 'stationWagon',
-    ATTIC = 'attic',
+// Constellations.
+export const ABBEY_ROAD = 'abbeyRoad'
+export const WALGREENS = 'walgreens'
+export const STEAM_TUNNEL = 'steamTunnel'
+export const CEMETERY = 'cemetery'
+export const STATION_WAGON = 'stationWagon'
+export const ATTIC = 'attic'
 
-    // Look Back.
-    PERFORMING = 'performing',
-    CARRYING = 'carrying',
-    MINGLING = 'mingling',
-    WAITING = 'waiting',
+// Look Back.
+export const PERFORMING = 'performing'
+export const CARRYING = 'carrying'
+export const MINGLING = 'mingling'
+export const WAITING = 'waiting'
 
-    // Garryowen.
-    LEAVING_CRUMBLED = 'leavingCrumbled',
+// Garryowen.
+export const LEAVING_CRUMBLED = 'leavingCrumbled'
 
-    // Golden Cord.
-    YOUNG_CHILD = 'youngChild',
+// Golden Cord.
+export const YOUNG_CHILD = 'youngChild'
 
-    // Uncanny Valley.
-    ASLEEP = 'asleep',
-    PAST = 'past',
-    PRESENT = 'present',
-    FUTURE = 'future',
+// Uncanny Valley.
+export const ASLEEP = 'asleep'
+export const PAST = 'past'
+export const PRESENT = 'present'
+export const FUTURE = 'future'
 
-    // Vegan.
-    PROTESTER = 'protester',
+// Vegan.
+export const PROTESTER = 'protester'
 
-    // 100,000th Dream.
-    EL_TORITO = 'elTorito',
-    GOPI = 'gopi',
+// 100,000th Dream.
+export const EL_TORITO = 'elTorito'
+export const GOPI = 'gopi'
 
-    EPILOGUE = 'epilogue'
-
-export {
-    PROLOGUE,
-    GANGBANGER,
-    GREETING,
-    FLIRTING,
-    EATING,
-    DATE_ENDING,
-    MUSEUM,
-    BACKSTAGE,
-    GO_KARTS,
-    DATE_ENDED,
-    DISHROOM_LANCET,
-    GATE_CODE,
-    RUMPLED_LINENS,
-    ABBEY_ROAD,
-    WALGREENS,
-    STEAM_TUNNEL,
-    CEMETERY,
-    STATION_WAGON,
-    ATTIC,
-    PERFORMING,
-    CARRYING,
-    MINGLING,
-    WAITING,
-    LEAVING_CRUMBLED,
-    YOUNG_CHILD,
-    ASLEEP,
-    PAST,
-    PRESENT,
-    FUTURE,
-    PROTESTER,
-    EL_TORITO,
-    GOPI,
-    EPILOGUE
-}
+export const EPILOGUE = 'epilogue'

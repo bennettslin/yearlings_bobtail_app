@@ -1,36 +1,16 @@
-const
-    CAUTIOUS = 'cautious',
-    ENRAGED = 'enraged',
-    FEARFUL = 'fearful',
-    PANICKED = 'panicked',
-    MAT = 'mat',
-    STAIRS = 'stairs',
-    GATE = 'gate',
-    RICKSHAW = 'rickshaw',
-    SHORE = 'shore',
-    BUOY = 'buoy',
-    OCEAN_FLOOR = 'oceanFloor',
-    FEIGNING_SICK = 'feigningSick',
-    SHAKEN = 'shaken',
-    STOIC = 'stoic',
-    WISTFUL = 'wistful',
-    SHEEPISH = 'sheepish'
-
-export {
-    CAUTIOUS,
-    ENRAGED,
-    FEARFUL,
-    PANICKED,
-    MAT,
-    STAIRS,
-    GATE,
-    RICKSHAW,
-    SHORE,
-    BUOY,
-    OCEAN_FLOOR,
-    FEIGNING_SICK,
-    SHAKEN,
-    STOIC,
-    WISTFUL,
-    SHEEPISH
-}
+export const CAUTIOUS = 'cautious'
+export const ENRAGED = 'enraged'
+export const FEARFUL = 'fearful'
+export const PANICKED = 'panicked'
+export const MAT = 'mat'
+export const STAIRS = 'stairs'
+export const GATE = 'gate'
+export const RICKSHAW = 'rickshaw'
+export const SHORE = 'shore'
+export const BUOY = 'buoy'
+export const OCEAN_FLOOR = 'oceanFloor'
+export const FEIGNING_SICK = 'feigningSick'
+export const SHAKEN = 'shaken'
+export const STOIC = 'stoic'
+export const WISTFUL = 'wistful'
+export const SHEEPISH = 'sheepish'

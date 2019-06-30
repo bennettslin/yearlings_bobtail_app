@@ -1,40 +1,15 @@
-const
-    GINGERBREAD_PRISON = 'gingerbreadPrison',
-    CHEEK_UNVEILED = 'cheekUnveiled',
-
-    HARD_ON = 'hardOn',
-    HARD_ON_REFLECTION = 'hardOnReflection',
-    MISSIONARY = 'missionary',
-    MISSIONARY_REFLECTION = 'missionaryReflection',
-    AFTERGLOW = 'afterglow',
-    AFTERGLOW_REFLECTION = 'afterglowReflection',
-
-    BRUSH_OFF = 'brushOff',
-    CELIBATE_FREEZING = 'celibateFreezing',
-    AWKWARD_CONSOLATION = 'awkwardConsolation',
-
-    PAMPAS = 'pampas',
-    GETTING_DARK = 'gettingDark',
-    CLIFF = 'cliff',
-    FINAL_DREAM = 'finalDream'
-
-export {
-    GINGERBREAD_PRISON,
-    CHEEK_UNVEILED,
-
-    HARD_ON,
-    HARD_ON_REFLECTION,
-    MISSIONARY,
-    MISSIONARY_REFLECTION,
-    AFTERGLOW,
-    AFTERGLOW_REFLECTION,
-
-    BRUSH_OFF,
-    CELIBATE_FREEZING,
-    AWKWARD_CONSOLATION,
-
-    PAMPAS,
-    GETTING_DARK,
-    CLIFF,
-    FINAL_DREAM
-}
+export const GINGERBREAD_PRISON = 'gingerbreadPrison'
+export const CHEEK_UNVEILED = 'cheekUnveiled'
+export const HARD_ON = 'hardOn'
+export const HARD_ON_REFLECTION = 'hardOnReflection'
+export const MISSIONARY = 'missionary'
+export const MISSIONARY_REFLECTION = 'missionaryReflection'
+export const AFTERGLOW = 'afterglow'
+export const AFTERGLOW_REFLECTION = 'afterglowReflection'
+export const BRUSH_OFF = 'brushOff'
+export const CELIBATE_FREEZING = 'celibateFreezing'
+export const AWKWARD_CONSOLATION = 'awkwardConsolation'
+export const PAMPAS = 'pampas'
+export const GETTING_DARK = 'gettingDark'
+export const CLIFF = 'cliff'
+export const FINAL_DREAM = 'finalDream'

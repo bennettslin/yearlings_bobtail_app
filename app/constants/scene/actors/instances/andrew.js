@@ -1,10 +1,3 @@
-const
-    FEIGNING_FEAR = 'feigningFear',
-    THROWING = 'throwing',
-    NOODLING = 'noodling'
-
-export {
-    FEIGNING_FEAR,
-    THROWING,
-    NOODLING
-}
+export const FEIGNING_FEAR = 'feigningFear'
+export const THROWING = 'throwing'
+export const NOODLING = 'noodling'

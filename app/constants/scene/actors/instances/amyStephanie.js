@@ -1,6 +1,1 @@
-const
-    SQUEEZING = 'squeezing'
-
-export {
-    SQUEEZING
-}
+export const SQUEEZING = 'squeezing'

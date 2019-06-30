@@ -1,10 +1,3 @@
-const
-    WEEPING = 'weeping',
-    QUIPPING = 'quipping',
-    PUZZLED = 'puzzled'
-
-export {
-    WEEPING,
-    QUIPPING,
-    PUZZLED
-}
+export const WEEPING = 'weeping'
+export const QUIPPING = 'quipping'
+export const PUZZLED = 'puzzled'
