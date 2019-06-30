@@ -52,7 +52,7 @@ import {
 
 import {
     BUDDHA_SHRINE,
-    TAIWAN_FRIDGE_FRONT,
+    TAIWAN_FRIDGE,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
     BENNETT_TAIWAN_GATE,
@@ -102,7 +102,7 @@ export default [
             },
             [CUTOUT]: {
                 [BUDDHA_SHRINE]: true,
-                [TAIWAN_FRIDGE_FRONT]: true,
+                [TAIWAN_FRIDGE]: true,
                 [BENNETT_TAIWAN_STAIRS]: true,
                 [ODIN_TAIWAN_STAIRS]: true
             },

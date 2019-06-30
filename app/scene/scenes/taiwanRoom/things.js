@@ -4,7 +4,7 @@ import {
 } from 'constants/scene'
 import {
     BUDDHA_SHRINE,
-    TAIWAN_FRIDGE_FRONT,
+    TAIWAN_FRIDGE,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS
 } from 'constants/scene/things/cutouts'
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 2
             }
         },
-        [TAIWAN_FRIDGE_FRONT]: {
+        [TAIWAN_FRIDGE]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 9.5,

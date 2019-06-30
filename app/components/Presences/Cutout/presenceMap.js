@@ -7,7 +7,7 @@ import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack.svg'
 import porchPlant from 'assets/svgs/cutouts/porchPlant.svg'
 // import campfire from 'assets/svgs/cutouts/campfire.svg'
 // import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine.svg'
-// import taiwanFridgeFront from 'assets/svgs/cutouts/taiwanFridgeFront.svg'
+// import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge.svg'
 // import bennettTaiwanStairs from 'assets/svgs/cutouts/bennettTaiwanStairs.svg'
 // import odinTaiwanStairs from 'assets/svgs/cutouts/odinTaiwanStairs.svg'
 // import bennettTaiwanGate from 'assets/svgs/cutouts/bennettTaiwanGate.svg'
@@ -63,7 +63,7 @@ import {
     PORCH_PLANT__RIGHT,
     CAMPFIRE,
     BUDDHA_SHRINE,
-    TAIWAN_FRIDGE_FRONT,
+    TAIWAN_FRIDGE,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
     BENNETT_TAIWAN_GATE,
@@ -129,7 +129,7 @@ export default {
     [PORCH_PLANT__RIGHT]: porchPlant,
     [CAMPFIRE]: false,
     [BUDDHA_SHRINE]: false,
-    [TAIWAN_FRIDGE_FRONT]: false,
+    [TAIWAN_FRIDGE]: false,
     [BENNETT_TAIWAN_STAIRS]: false,
     [ODIN_TAIWAN_STAIRS]: false,
     [BENNETT_TAIWAN_GATE]: false,

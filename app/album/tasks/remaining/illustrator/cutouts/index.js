@@ -110,7 +110,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'taiwanFridgeFront',
+        taskName: 'taiwanFridge',
         workedHours: 0,
         neededHours: 1
     },
