@@ -15,11 +15,9 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [SIGNPOST]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 10.5,
-                xWidth: 1,
-                zHeight: 7
-            }
+            xPosition: 10.5,
+            scaleFactor: 0.35,
+            flipHorizontal: true
         },
         [BANCROFT_SHRUBS]: {
             yIndex: 4,

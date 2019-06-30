@@ -125,11 +125,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'signPost',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'wallSpeaker',
         workedHours: 0,
         neededHours: 1

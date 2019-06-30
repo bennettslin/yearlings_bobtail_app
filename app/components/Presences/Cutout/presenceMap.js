@@ -26,7 +26,7 @@ import TrashCan from './Cutouts/TrashCan'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
 import recyclables from 'assets/svgs/cutouts/recyclables.svg'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost.svg'
-import SignPost from './Cutouts/SignPost'
+import signpost from 'assets/svgs/cutouts/signpost.svg'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
 import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
@@ -150,7 +150,7 @@ export default {
     [VAN_NUYS_PLANT__QUAD]: vanNuysPlant,
     [RECYCLABLES]: recyclables,
     [BERKELEY_LAMPPOST]: berkeleyLamppost,
-    [SIGNPOST]: SignPost,
+    [SIGNPOST]: signpost,
     [BANCROFT_SHRUBS]: bancroftShrubs,
     [UC_BERKELEY_TREE__LEFT]: ucBerkeleyTree,
     [UC_BERKELEY_TREE__RIGHT]: ucBerkeleyTree,

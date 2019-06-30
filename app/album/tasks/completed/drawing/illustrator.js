@@ -88,5 +88,10 @@ export default [
         taskName: 'dispenserRight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'signpost',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
