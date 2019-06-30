@@ -5,6 +5,7 @@ import isFinite from 'lodash.isfinite'
 import isString from 'lodash.isstring'
 
 import PresenceSvg from 'modules/PresenceSvg'
+import Svg from 'modules/Svg'
 
 import {
     getMapForPresenceType,
@@ -81,33 +82,49 @@ const PresenceView = ({
             getMapForActorKey(actorKey) :
             getMapForPresenceType(presenceType),
 
-        PresenceComponent = presencesMap[presenceKey],
+        presenceComponent = presencesMap[presenceKey]
 
-        // TODO: Eventually have PresenceSvg parse className.
-        presenceProps = {
-            className: cx(
+    // TODO: Get rid of this conditional once they are all asset svgs.
+    return isString(presenceComponent) ? (
+        <PresenceSvg
+            {...{
+                className: cx(
+                    'Presence',
+                    capitaliseForClassName(presenceType),
+                    capitaliseForClassName(presenceKey),
+                    'abF'
+                ),
+                scaleFactor,
+                flipHorizontal,
+                ...presenceXY
+            }}
+        >
+            {presenceComponent}
+        </PresenceSvg>
+    ) : (
+        <Svg
+            className={cx(
                 'Presence',
                 capitaliseForClassName(presenceType),
                 capitaliseForClassName(presenceKey),
                 'abF'
-            ),
-            // TODO: These checks won't be necessary afterwards.
-            ...isFinite(scaleFactor) && { scaleFactor },
-            ...flipHorizontal && { flipHorizontal },
-            ...presenceXY
-        }
-
-    // TODO: Get rid of this conditional once they are all asset svgs.
-    return isString(PresenceComponent) ? (
-        <PresenceSvg
-            {...presenceProps}
+            )}
         >
-            {PresenceComponent}
-        </PresenceSvg>
-    ) : (
-        <PresenceComponent
-            {...presenceProps}
-        />
+            <rect
+                className={cx(
+                    `${capitaliseForClassName(presenceType)}__temporaryRect`
+                )}
+                {...presenceXY}
+            />
+            <text
+                className={cx(
+                    'Presence__temporaryText'
+                )}
+                {...presenceXY}
+            >
+                {capitaliseForClassName(presenceKey)}
+            </text>
+        </Svg>
     )
 }
 

@@ -1,28 +1,28 @@
-import FireHydrant from './Cutouts/FireHydrant'
-import PlaygroundSlide from './Cutouts/PlaygroundSlide'
-import MirroredSink from './Cutouts/MirroredSink'
-import TowelRack from './Cutouts/TowelRack'
+// import FireHydrant from 'assets/svgs/cutouts/FireHydrant.svg'
+// import PlaygroundSlide from 'assets/svgs/cutouts/PlaygroundSlide.svg'
+// import MirroredSink from 'assets/svgs/cutouts/MirroredSink.svg'
+// import TowelRack from 'assets/svgs/cutouts/TowelRack.svg'
 import overpassSignFront from 'assets/svgs/cutouts/overpassSignFront.svg'
 import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack.svg'
 import porchPlant from 'assets/svgs/cutouts/porchPlant.svg'
-import Campfire from './Cutouts/Campfire'
-import BuddhaShrine from './Cutouts/BuddhaShrine'
-import TaiwanFridgeFront from './Cutouts/TaiwanFridgeFront'
-import BennettTaiwanStairs from './Cutouts/BennettTaiwanStairs'
-import OdinTaiwanStairs from './Cutouts/OdinTaiwanStairs'
-import BennettTaiwanGate from './Cutouts/BennettTaiwanGate'
-import OdinTaiwanGate from './Cutouts/OdinTaiwanGate'
-import BennettOdinRickshaw from './Cutouts/BennettOdinRickshaw'
-import BennettShore from './Cutouts/BennettShore'
-import OdinShore from './Cutouts/OdinShore'
-import BennettOdinBuoy from './Cutouts/BennettOdinBuoy'
-import YellowTapedGrill from './Cutouts/YellowTapedGrill'
-import BennettOdinDepths from './Cutouts/BennettOdinDepths'
-import SeaSerpents from './Cutouts/SeaSerpents'
-import BennettOceanFloor from './Cutouts/BennettOceanFloor'
-import BennettMat from './Cutouts/BennettMat'
-import OdinMat from './Cutouts/OdinMat'
-import TrashCan from './Cutouts/TrashCan'
+// import Campfire from 'assets/svgs/cutouts/Campfire.svg'
+// import BuddhaShrine from 'assets/svgs/cutouts/BuddhaShrine.svg'
+// import TaiwanFridgeFront from 'assets/svgs/cutouts/TaiwanFridgeFront.svg'
+// import BennettTaiwanStairs from 'assets/svgs/cutouts/BennettTaiwanStairs.svg'
+// import OdinTaiwanStairs from 'assets/svgs/cutouts/OdinTaiwanStairs.svg'
+// import BennettTaiwanGate from 'assets/svgs/cutouts/BennettTaiwanGate.svg'
+// import OdinTaiwanGate from 'assets/svgs/cutouts/OdinTaiwanGate.svg'
+// import BennettOdinRickshaw from 'assets/svgs/cutouts/BennettOdinRickshaw.svg'
+// import BennettShore from 'assets/svgs/cutouts/BennettShore.svg'
+// import OdinShore from 'assets/svgs/cutouts/OdinShore.svg'
+// import BennettOdinBuoy from 'assets/svgs/cutouts/BennettOdinBuoy.svg'
+// import YellowTapedGrill from 'assets/svgs/cutouts/YellowTapedGrill.svg'
+// import BennettOdinDepths from 'assets/svgs/cutouts/BennettOdinDepths.svg'
+// import SeaSerpents from 'assets/svgs/cutouts/SeaSerpents.svg'
+// import BennettOceanFloor from 'assets/svgs/cutouts/BennettOceanFloor.svg'
+// import BennettMat from 'assets/svgs/cutouts/BennettMat.svg'
+// import OdinMat from 'assets/svgs/cutouts/OdinMat.svg'
+// import TrashCan from 'assets/svgs/cutouts/TrashCan.svg'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
 import recyclables from 'assets/svgs/cutouts/recyclables.svg'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost.svg'
@@ -30,27 +30,27 @@ import signpost from 'assets/svgs/cutouts/signpost.svg'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
 import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
-import WallSpeakerFront from './Cutouts/WallSpeakerFront'
-import Sandbags from './Cutouts/Sandbags'
-import StageLights from './Cutouts/StageLights'
-import TrafficLight from './Cutouts/TrafficLight'
+// import WallSpeakerFront from 'assets/svgs/cutouts/WallSpeakerFront.svg'
+// import Sandbags from 'assets/svgs/cutouts/Sandbags.svg'
+// import StageLights from 'assets/svgs/cutouts/StageLights.svg'
+// import TrafficLight from 'assets/svgs/cutouts/TrafficLight.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
-import CodeBox from './Cutouts/CodeBox'
+// import CodeBox from 'assets/svgs/cutouts/CodeBox.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
-import StorageBoxes from './Cutouts/StorageBoxes'
-import StorageChest from './Cutouts/StorageChest'
-import HowieFridge from './Cutouts/HowieFridge'
-import Television from './Cutouts/Television'
+// import StorageBoxes from 'assets/svgs/cutouts/StorageBoxes.svg'
+// import StorageChest from 'assets/svgs/cutouts/StorageChest.svg'
+// import HowieFridge from 'assets/svgs/cutouts/HowieFridge.svg'
+// import Television from 'assets/svgs/cutouts/Television.svg'
 import monitorSide from 'assets/svgs/cutouts/monitorSide.svg'
-import WallSpeakerSide from './Cutouts/WallSpeakerSide'
+// import WallSpeakerSide from 'assets/svgs/cutouts/WallSpeakerSide.svg'
 import twinStreetlamp from 'assets/svgs/cutouts/twinStreetlamp.svg'
 import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
-import Dumpster from './Cutouts/Dumpster'
+// import Dumpster from 'assets/svgs/cutouts/Dumpster.svg'
 import dispenserLeft from 'assets/svgs/cutouts/dispenserLeft.svg'
 import dispenserRight from 'assets/svgs/cutouts/dispenserRight.svg'
-import WeddingCrowd from './Cutouts/WeddingCrowd'
+// import WeddingCrowd from 'assets/svgs/cutouts/WeddingCrowd.svg'
 import cliffTree from 'assets/svgs/cutouts/cliffTree.svg'
-import IvDrip from './Cutouts/IvDrip'
+// import IvDrip from 'assets/svgs/cutouts/IvDrip.svg'
 
 import {
     FIRE_HYDRANT,
@@ -119,33 +119,33 @@ import {
 } from 'constants/scene/things/cutouts'
 
 export default {
-    [FIRE_HYDRANT]: FireHydrant,
-    [PLAYGROUND_SLIDE]: PlaygroundSlide,
-    [MIRRORED_SINK]: MirroredSink,
-    [TOWEL_RACK]: TowelRack,
+    [FIRE_HYDRANT]: false,
+    [PLAYGROUND_SLIDE]: false,
+    [MIRRORED_SINK]: false,
+    [TOWEL_RACK]: false,
     [OVERPASS_SIGN_FRONT]: overpassSignFront,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
     [PORCH_PLANT__LEFT]: porchPlant,
     [PORCH_PLANT__RIGHT]: porchPlant,
-    [CAMPFIRE]: Campfire,
-    [BUDDHA_SHRINE]: BuddhaShrine,
-    [TAIWAN_FRIDGE_FRONT]: TaiwanFridgeFront,
-    [BENNETT_TAIWAN_STAIRS]: BennettTaiwanStairs,
-    [ODIN_TAIWAN_STAIRS]: OdinTaiwanStairs,
-    [BENNETT_TAIWAN_GATE]: BennettTaiwanGate,
-    [ODIN_TAIWAN_GATE]: OdinTaiwanGate,
-    [BENNETT_ODIN_RICKSHAW]: BennettOdinRickshaw,
-    [BENNETT_SHORE]: BennettShore,
-    [ODIN_SHORE]: OdinShore,
-    [BENNETT_ODIN_BUOY]: BennettOdinBuoy,
-    [YELLOW_TAPED_GRILL]: YellowTapedGrill,
-    [BENNETT_ODIN_DEPTHS]: BennettOdinDepths,
-    [SEA_SERPENTS]: SeaSerpents,
-    [BENNETT_ODIN_OCEAN_FLOOR]: BennettOceanFloor,
-    [BENNETT_MAT]: BennettMat,
-    [ODIN_MAT]: OdinMat,
-    [TRASH_CAN__LOCKERS]: TrashCan,
-    [TRASH_CAN__QUAD]: TrashCan,
+    [CAMPFIRE]: false,
+    [BUDDHA_SHRINE]: false,
+    [TAIWAN_FRIDGE_FRONT]: false,
+    [BENNETT_TAIWAN_STAIRS]: false,
+    [ODIN_TAIWAN_STAIRS]: false,
+    [BENNETT_TAIWAN_GATE]: false,
+    [ODIN_TAIWAN_GATE]: false,
+    [BENNETT_ODIN_RICKSHAW]: false,
+    [BENNETT_SHORE]: false,
+    [ODIN_SHORE]: false,
+    [BENNETT_ODIN_BUOY]: false,
+    [YELLOW_TAPED_GRILL]: false,
+    [BENNETT_ODIN_DEPTHS]: false,
+    [SEA_SERPENTS]: false,
+    [BENNETT_ODIN_OCEAN_FLOOR]: false,
+    [BENNETT_MAT]: false,
+    [ODIN_MAT]: false,
+    [TRASH_CAN__LOCKERS]: false,
+    [TRASH_CAN__QUAD]: false,
     [VAN_NUYS_PLANT__LOCKERS]: vanNuysPlant,
     [VAN_NUYS_PLANT__QUAD]: vanNuysPlant,
     [RECYCLABLES]: recyclables,
@@ -156,31 +156,31 @@ export default {
     [UC_BERKELEY_TREE__RIGHT]: ucBerkeleyTree,
     [MONITOR_FRONT__LEFT]: monitorFront,
     [MONITOR_FRONT__RIGHT]: monitorFront,
-    [WALL_SPEAKER_FRONT__LEFT]: WallSpeakerFront,
-    [WALL_SPEAKER_FRONT__RIGHT]: WallSpeakerFront,
-    [SANDBAGS]: Sandbags,
-    [STAGE_LIGHTS]: StageLights,
-    [TRAFFIC_LIGHT]: TrafficLight,
+    [WALL_SPEAKER_FRONT__LEFT]: false,
+    [WALL_SPEAKER_FRONT__RIGHT]: false,
+    [SANDBAGS]: false,
+    [STAGE_LIGHTS]: false,
+    [TRAFFIC_LIGHT]: false,
     [APARTMENT_PLANT]: apartmentPlant,
-    [CODE_BOX]: CodeBox,
+    [CODE_BOX]: false,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
-    [STORAGE_BOXES]: StorageBoxes,
-    [STORAGE_CHEST]: StorageChest,
-    [HOWIE_FRIDGE]: HowieFridge,
-    [TELEVISION]: Television,
+    [STORAGE_BOXES]: false,
+    [STORAGE_CHEST]: false,
+    [HOWIE_FRIDGE]: false,
+    [TELEVISION]: false,
     [MONITOR_SIDE__CROWD]: monitorSide,
     [MONITOR_SIDE__STAGE]: monitorSide,
-    [WALL_SPEAKER_SIDE__CROWD]: WallSpeakerSide,
-    [WALL_SPEAKER_SIDE__STAGE]: WallSpeakerSide,
+    [WALL_SPEAKER_SIDE__CROWD]: false,
+    [WALL_SPEAKER_SIDE__STAGE]: false,
     [TWIN_STREETLAMP__FAR]: twinStreetlamp,
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
     [EL_CERRITO_TREE]: elCerritoTree,
-    [DUMPSTER]: Dumpster,
+    [DUMPSTER]: false,
     [DISPENSER_LEFT]: dispenserLeft,
     [DISPENSER_RIGHT]: dispenserRight,
-    [WEDDING_CROWD]: WeddingCrowd,
+    [WEDDING_CROWD]: false,
     [CLIFF_TREE]: cliffTree,
-    [IV_DRIP]: IvDrip
+    [IV_DRIP]: false
 }
 
