@@ -14,7 +14,8 @@
 
 ## File creation.
 * Create temporary subfolder in ~todo.
-* For each tif, create enough layers for no shape to touch another.
+* Move tif into subfolder.
+* In tif, create enough layers for no shape to touch another.
     * Shortcut is Shift-Command-N.
 * Create another layer for details that are open paths.
 
@@ -50,8 +51,8 @@
     * Shortcuts are Command-[ or ].
 
 ## File organisation.
-* Move subfolder with png files to ~completed folder.
 * Move Illustrator file to actor or thing folder.
+* Move subfolder with png files to ~completed folder.
 
 ## Svg work
 
@@ -61,9 +62,10 @@
 * Make sure it's deselected, and Export as SVG.
     * Shortcut is Shift-Command-E.
     * Internal CSS, Layer Names, no minify, yes responsive.
+* Undo fit arboard to artwork, and save.
 
 ## Convert svg to React component.
-* Place in assets folder.
+* Place in svg assets folder.
 * Change component routing.
     * Import svg instead of component.
     * Delete component.
