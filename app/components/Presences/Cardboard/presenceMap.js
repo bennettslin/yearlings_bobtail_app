@@ -1,21 +1,21 @@
-import JohnnyHortonAlbum from './Cardboards/JohnnyHortonAlbum'
-import TintinPoster from './Cardboards/TintinPoster'
-import BloomCountyPoster from './Cardboards/BloomCountyPoster'
-import VanNuysLogo from './Cardboards/VanNuysLogo'
-import Corkboard from './Cardboards/Corkboard'
-import PoliceAlbum from './Cardboards/PoliceAlbum'
-import NirvanaPoster from './Cardboards/NirvanaPoster'
-import LeonardCohenPoster from './Cardboards/LeonardCohenPoster'
-import TelevisionAlbum from './Cardboards/TelevisionAlbum'
-import ProgressChartEarly from './Cardboards/ProgressChartEarly'
-import ProgressChartLate from './Cardboards/ProgressChartLate'
-import CinemaPosterLeft from './Cardboards/CinemaPosterLeft'
-import CinemaPosterRight from './Cardboards/CinemaPosterRight'
-import CinemaPosterRightNormal from './Cardboards/CinemaPosterRightNormal'
-import Clipboard from './Cardboards/Clipboard'
-import Painting from './Cardboards/Painting'
-import NasAlbum from './Cardboards/NasAlbum'
-import ElliottSmithPoster from './Cardboards/ElliottSmithPoster'
+// import johnnyHortonAlbum from 'assets/svgs/cardboards/johnnyHortonAlbum'
+// import tintinPoster from 'assets/svgs/cardboards/tintinPoster'
+// import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster'
+// import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo'
+// import corkboard from 'assets/svgs/cardboards/corkboard'
+// import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
+// import nirvanaPoster from 'assets/svgs/cardboards/nirvanaPoster'
+// import leonardCohenPoster from 'assets/svgs/cardboards/leonardCohenPoster'
+// import televisionAlbum from 'assets/svgs/cardboards/televisionAlbum'
+// import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
+// import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
+// import cinemaPosterLeft from 'assets/svgs/cardboards/cinemaPosterLeft'
+// import cinemaPosterRight from 'assets/svgs/cardboards/cinemaPosterRight'
+// import cinemaPosterRightNormal from 'assets/svgs/cardboards/cinemaPosterRightNormal'
+// import clipboard from 'assets/svgs/cardboards/clipboard'
+// import painting from 'assets/svgs/cardboards/painting'
+// import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
+// import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
 
 import {
     JOHNNY_HORTON_ALBUM,
@@ -39,23 +39,23 @@ import {
 } from 'constants/scene/things/cardboards'
 
 export default {
-    [JOHNNY_HORTON_ALBUM]: JohnnyHortonAlbum,
-    [TINTIN_POSTER]: TintinPoster,
-    [BLOOM_COUNTY_POSTER]: BloomCountyPoster,
-    [VAN_NUYS_LOGO]: VanNuysLogo,
-    [CORKBOARD]: Corkboard,
-    [POLICE_ALBUM]: PoliceAlbum,
-    [NIRVANA_POSTER]: NirvanaPoster,
-    [LEONARD_COHEN_POSTER]: LeonardCohenPoster,
-    [TELEVISION_ALBUM]: TelevisionAlbum,
-    [PROGRESS_CHART_EARLY]: ProgressChartEarly,
-    [PROGRESS_CHART_LATE]: ProgressChartLate,
-    [CINEMA_POSTER_LEFT]: CinemaPosterLeft,
-    [CINEMA_POSTER_RIGHT]: CinemaPosterRight,
-    [CINEMA_POSTER_RIGHT_NORMAL]: CinemaPosterRightNormal,
-    [CLIPBOARD]: Clipboard,
-    [PAINTING]: Painting,
-    [NAS_ALBUM]: NasAlbum,
-    [ELLIOTT_SMITH_POSTER]: ElliottSmithPoster
+    [JOHNNY_HORTON_ALBUM]: false,
+    [TINTIN_POSTER]: false,
+    [BLOOM_COUNTY_POSTER]: false,
+    [VAN_NUYS_LOGO]: false,
+    [CORKBOARD]: false,
+    [POLICE_ALBUM]: false,
+    [NIRVANA_POSTER]: false,
+    [LEONARD_COHEN_POSTER]: false,
+    [TELEVISION_ALBUM]: false,
+    [PROGRESS_CHART_EARLY]: false,
+    [PROGRESS_CHART_LATE]: false,
+    [CINEMA_POSTER_LEFT]: false,
+    [CINEMA_POSTER_RIGHT]: false,
+    [CINEMA_POSTER_RIGHT_NORMAL]: false,
+    [CLIPBOARD]: false,
+    [PAINTING]: false,
+    [NAS_ALBUM]: false,
+    [ELLIOTT_SMITH_POSTER]: false
 }
 

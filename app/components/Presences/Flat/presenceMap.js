@@ -1,59 +1,59 @@
-import NohoHouseLeft from './Flats/NohoHouseLeft'
-import NohoHouseRight from './Flats/NohoHouseRight'
-import NohoSchoolhouse from './Flats/NohoSchoolhouse'
-import BedroomBus from './Flats/BedroomBus'
-import BedroomSiren from './Flats/BedroomSiren'
-import FamilyHouse from './Flats/FamilyHouse'
-import TaiwanClouds from './Flats/TaiwanClouds'
-import TaiwanFog from './Flats/TaiwanFog'
-import TaiwanMountainsBridged from './Flats/TaiwanMountainsBridged'
-import TaiwanMountainLeft from './Flats/TaiwanMountainLeft'
-import TaiwanMountainRight from './Flats/TaiwanMountainRight'
-import TaiwanHouseFar from './Flats/TaiwanHouseFar'
-import TaiwanHouseNear from './Flats/TaiwanHouseNear'
-import VanNuysSchoolhouseLeft from './Flats/VanNuysSchoolhouseLeft'
-import VanNuysSchoolhouseRight from './Flats/VanNuysSchoolhouseRight'
-import RickshawTown from './Flats/RickshawTown'
-import ShoreCarnival from './Flats/ShoreCarnival'
-import OceanBottomMiddle from './Flats/OceanBottomMiddle'
-import OceanBottomNear from './Flats/OceanBottomNear'
-import LockerBank from './Flats/LockerBank'
-import StJosephsAnnex from './Flats/StJosephsAnnex'
-import StJosephsChurch from './Flats/StJosephsChurch'
-import Campanile from './Flats/Campanile'
-import MuseumDisplay from './Flats/MuseumDisplay'
-import RoyceHall from './Flats/RoyceHall'
-import PharmacyAisle from './Flats/PharmacyAisle'
-import SteamPipes from './Flats/SteamPipes'
-import CemeteryHillsNear from './Flats/CemeteryHillsNear'
-import OaklandHouseLeft from './Flats/OaklandHouseLeft'
-import OaklandHouseRight from './Flats/OaklandHouseRight'
-import ResidentialFarLeft from './Flats/ResidentialFarLeft'
-import ResidentialMiddleLeft from './Flats/ResidentialMiddleLeft'
-import ResidentialNearLeft from './Flats/ResidentialNearLeft'
-import ResidentialFarRight from './Flats/ResidentialFarRight'
-import ResidentialMiddleRight from './Flats/ResidentialMiddleRight'
-import ResidentialNearRight from './Flats/ResidentialNearRight'
-import CommercialCentre from './Flats/CommercialCentre'
-import CommercialFarLeft from './Flats/CommercialFarLeft'
-import CommercialMiddleLeft from './Flats/CommercialMiddleLeft'
-import CommercialNearLeft from './Flats/CommercialNearLeft'
-import CommercialFarRight from './Flats/CommercialFarRight'
-import CommercialMiddleRight from './Flats/CommercialMiddleRight'
-import CommercialNearRight from './Flats/CommercialNearRight'
-import PublicFarLeft from './Flats/PublicFarLeft'
-import PublicNearLeft from './Flats/PublicNearLeft'
-import PublicFarRight from './Flats/PublicFarRight'
-import PublicNearRight from './Flats/PublicNearRight'
-import RoadPast from './Flats/RoadPast'
-import RoadPresent from './Flats/RoadPresent'
-import RoadFuture from './Flats/RoadFuture'
-import ElCerritoFar from './Flats/ElCerritoFar'
-import ElCerritoNear from './Flats/ElCerritoNear'
-import ForebodingTrees from './Flats/ForebodingTrees'
-import CliffGravesFar from './Flats/CliffGravesFar'
-import CliffGravesNear from './Flats/CliffGravesNear'
-import PampasFar from './Flats/PampasFar'
+// import nohoHouseLeft from 'assets/svgs/flats/nohoHouseLeft'
+// import nohoHouseRight from 'assets/svgs/flats/nohoHouseRight'
+// import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse'
+// import bedroomBus from 'assets/svgs/flats/bedroomBus'
+// import bedroomSiren from 'assets/svgs/flats/bedroomSiren'
+// import familyHouse from 'assets/svgs/flats/familyHouse'
+// import taiwanClouds from 'assets/svgs/flats/taiwanClouds'
+// import taiwanFog from 'assets/svgs/flats/taiwanFog'
+// import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
+// import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
+// import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
+// import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
+// import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
+// import vanNuysSchoolhouseLeft from 'assets/svgs/flats/vanNuysSchoolhouseLeft'
+// import vanNuysSchoolhouseRight from 'assets/svgs/flats/vanNuysSchoolhouseRight'
+// import rickshawTown from 'assets/svgs/flats/rickshawTown'
+// import shoreCarnival from 'assets/svgs/flats/shoreCarnival'
+// import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle'
+// import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear'
+// import lockerBank from 'assets/svgs/flats/lockerBank'
+// import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex'
+// import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch'
+// import campanile from 'assets/svgs/flats/campanile'
+// import museumDisplay from 'assets/svgs/flats/museumDisplay'
+// import royceHall from 'assets/svgs/flats/royceHall'
+// import pharmacyAisle from 'assets/svgs/flats/pharmacyAisle'
+// import steamPipes from 'assets/svgs/flats/steamPipes'
+// import cemeteryHillsNear from 'assets/svgs/flats/cemeteryHillsNear'
+// import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft'
+// import oaklandHouseRight from 'assets/svgs/flats/oaklandHouseRight'
+// import residentialFarLeft from 'assets/svgs/flats/residentialFarLeft'
+// import residentialMiddleLeft from 'assets/svgs/flats/residentialMiddleLeft'
+// import residentialNearLeft from 'assets/svgs/flats/residentialNearLeft'
+// import residentialFarRight from 'assets/svgs/flats/residentialFarRight'
+// import residentialMiddleRight from 'assets/svgs/flats/residentialMiddleRight'
+// import residentialNearRight from 'assets/svgs/flats/residentialNearRight'
+// import commercialCentre from 'assets/svgs/flats/commercialCentre'
+// import commercialFarLeft from 'assets/svgs/flats/commercialFarLeft'
+// import commercialMiddleLeft from 'assets/svgs/flats/commercialMiddleLeft'
+// import commercialNearLeft from 'assets/svgs/flats/commercialNearLeft'
+// import commercialFarRight from 'assets/svgs/flats/commercialFarRight'
+// import commercialMiddleRight from 'assets/svgs/flats/commercialMiddleRight'
+// import commercialNearRight from 'assets/svgs/flats/commercialNearRight'
+// import publicFarLeft from 'assets/svgs/flats/publicFarLeft'
+// import publicNearLeft from 'assets/svgs/flats/publicNearLeft'
+// import publicFarRight from 'assets/svgs/flats/publicFarRight'
+// import publicNearRight from 'assets/svgs/flats/publicNearRight'
+// import roadPast from 'assets/svgs/flats/roadPast'
+// import roadPresent from 'assets/svgs/flats/roadPresent'
+// import roadFuture from 'assets/svgs/flats/roadFuture'
+// import elCerritoFar from 'assets/svgs/flats/elCerritoFar'
+// import elCerritoNear from 'assets/svgs/flats/elCerritoNear'
+// import forebodingTrees from 'assets/svgs/flats/forebodingTrees'
+// import cliffGravesFar from 'assets/svgs/flats/cliffGravesFar'
+// import cliffGravesNear from 'assets/svgs/flats/cliffGravesNear'
+// import pampasFar from 'assets/svgs/flats/pampasFar'
 
 import {
     NOHO_HOUSE_LEFT,
@@ -115,60 +115,60 @@ import {
 } from 'constants/scene/things/flats'
 
 export default {
-    [NOHO_HOUSE_LEFT]: NohoHouseLeft,
-    [NOHO_HOUSE_RIGHT]: NohoHouseRight,
-    [NOHO_SCHOOLHOUSE]: NohoSchoolhouse,
-    [BEDROOM_BUS]: BedroomBus,
-    [BEDROOM_SIREN]: BedroomSiren,
-    [FAMILY_HOUSE]: FamilyHouse,
-    [TAIWAN_CLOUDS]: TaiwanClouds,
-    [TAIWAN_FOG]: TaiwanFog,
-    [TAIWAN_MOUNTAINS_BRIDGED]: TaiwanMountainsBridged,
-    [TAIWAN_MOUNTAIN_LEFT]: TaiwanMountainLeft,
-    [TAIWAN_MOUNTAIN_RIGHT]: TaiwanMountainRight,
-    [TAIWAN_HOUSE_FAR]: TaiwanHouseFar,
-    [TAIWAN_HOUSE_NEAR]: TaiwanHouseNear,
-    [VAN_NUYS_SCHOOLHOUSE_LEFT]: VanNuysSchoolhouseLeft,
-    [VAN_NUYS_SCHOOLHOUSE_RIGHT]: VanNuysSchoolhouseRight,
-    [RICKSHAW_TOWN]: RickshawTown,
-    [SHORE_CARNIVAL]: ShoreCarnival,
-    [OCEAN_BOTTOM_MIDDLE]: OceanBottomMiddle,
-    [OCEAN_BOTTOM_NEAR]: OceanBottomNear,
-    [LOCKER_BANK]: LockerBank,
-    [ST_JOSEPHS_ANNEX]: StJosephsAnnex,
-    [ST_JOSEPHS_CHURCH]: StJosephsChurch,
-    [CAMPANILE]: Campanile,
-    [MUSEUM_DISPLAY]: MuseumDisplay,
-    [ROYCE_HALL]: RoyceHall,
-    [PHARMACY_AISLE]: PharmacyAisle,
-    [STEAM_PIPES]: SteamPipes,
-    [CEMETERY_HILLS_NEAR]: CemeteryHillsNear,
-    [OAKLAND_HOUSE_LEFT]: OaklandHouseLeft,
-    [OAKLAND_HOUSE_RIGHT]: OaklandHouseRight,
-    [RESIDENTIAL_FAR_LEFT]: ResidentialFarLeft,
-    [RESIDENTIAL_FAR_RIGHT]: ResidentialFarRight,
-    [RESIDENTIAL_MIDDLE_LEFT]: ResidentialMiddleLeft,
-    [RESIDENTIAL_MIDDLE_RIGHT]: ResidentialMiddleRight,
-    [RESIDENTIAL_NEAR_LEFT]: ResidentialNearLeft,
-    [RESIDENTIAL_NEAR_RIGHT]: ResidentialNearRight,
-    [COMMERCIAL_CENTRE]: CommercialCentre,
-    [COMMERCIAL_FAR_LEFT]: CommercialFarLeft,
-    [COMMERCIAL_FAR_RIGHT]: CommercialFarRight,
-    [COMMERCIAL_MIDDLE_LEFT]: CommercialMiddleLeft,
-    [COMMERCIAL_MIDDLE_RIGHT]: CommercialMiddleRight,
-    [COMMERCIAL_NEAR_LEFT]: CommercialNearLeft,
-    [COMMERCIAL_NEAR_RIGHT]: CommercialNearRight,
-    [PUBLIC_FAR_LEFT]: PublicFarLeft,
-    [PUBLIC_FAR_RIGHT]: PublicFarRight,
-    [PUBLIC_NEAR_LEFT]: PublicNearLeft,
-    [PUBLIC_NEAR_RIGHT]: PublicNearRight,
-    [ROAD_PAST]: RoadPast,
-    [ROAD_PRESENT]: RoadPresent,
-    [ROAD_FUTURE]: RoadFuture,
-    [EL_CERRITO_FAR]: ElCerritoFar,
-    [EL_CERRITO_NEAR]: ElCerritoNear,
-    [FOREBODING_TREES]: ForebodingTrees,
-    [CLIFF_GRAVES_FAR]: CliffGravesFar,
-    [CLIFF_GRAVES_NEAR]: CliffGravesNear,
-    [PAMPAS_FAR]: PampasFar
+    [NOHO_HOUSE_LEFT]: false,
+    [NOHO_HOUSE_RIGHT]: false,
+    [NOHO_SCHOOLHOUSE]: false,
+    [BEDROOM_BUS]: false,
+    [BEDROOM_SIREN]: false,
+    [FAMILY_HOUSE]: false,
+    [TAIWAN_CLOUDS]: false,
+    [TAIWAN_FOG]: false,
+    [TAIWAN_MOUNTAINS_BRIDGED]: false,
+    [TAIWAN_MOUNTAIN_LEFT]: false,
+    [TAIWAN_MOUNTAIN_RIGHT]: false,
+    [TAIWAN_HOUSE_FAR]: false,
+    [TAIWAN_HOUSE_NEAR]: false,
+    [VAN_NUYS_SCHOOLHOUSE_LEFT]: false,
+    [VAN_NUYS_SCHOOLHOUSE_RIGHT]: false,
+    [RICKSHAW_TOWN]: false,
+    [SHORE_CARNIVAL]: false,
+    [OCEAN_BOTTOM_MIDDLE]: false,
+    [OCEAN_BOTTOM_NEAR]: false,
+    [LOCKER_BANK]: false,
+    [ST_JOSEPHS_ANNEX]: false,
+    [ST_JOSEPHS_CHURCH]: false,
+    [CAMPANILE]: false,
+    [MUSEUM_DISPLAY]: false,
+    [ROYCE_HALL]: false,
+    [PHARMACY_AISLE]: false,
+    [STEAM_PIPES]: false,
+    [CEMETERY_HILLS_NEAR]: false,
+    [OAKLAND_HOUSE_LEFT]: false,
+    [OAKLAND_HOUSE_RIGHT]: false,
+    [RESIDENTIAL_FAR_LEFT]: false,
+    [RESIDENTIAL_FAR_RIGHT]: false,
+    [RESIDENTIAL_MIDDLE_LEFT]: false,
+    [RESIDENTIAL_MIDDLE_RIGHT]: false,
+    [RESIDENTIAL_NEAR_LEFT]: false,
+    [RESIDENTIAL_NEAR_RIGHT]: false,
+    [COMMERCIAL_CENTRE]: false,
+    [COMMERCIAL_FAR_LEFT]: false,
+    [COMMERCIAL_FAR_RIGHT]: false,
+    [COMMERCIAL_MIDDLE_LEFT]: false,
+    [COMMERCIAL_MIDDLE_RIGHT]: false,
+    [COMMERCIAL_NEAR_LEFT]: false,
+    [COMMERCIAL_NEAR_RIGHT]: false,
+    [PUBLIC_FAR_LEFT]: false,
+    [PUBLIC_FAR_RIGHT]: false,
+    [PUBLIC_NEAR_LEFT]: false,
+    [PUBLIC_NEAR_RIGHT]: false,
+    [ROAD_PAST]: false,
+    [ROAD_PRESENT]: false,
+    [ROAD_FUTURE]: false,
+    [EL_CERRITO_FAR]: false,
+    [EL_CERRITO_NEAR]: false,
+    [FOREBODING_TREES]: false,
+    [CLIFF_GRAVES_FAR]: false,
+    [CLIFF_GRAVES_NEAR]: false,
+    [PAMPAS_FAR]: false
 }

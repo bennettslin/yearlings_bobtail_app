@@ -1,44 +1,44 @@
-import EstherSpeechPanel from './Panels/EstherSpeechPanel'
-import Bathtub from './Panels/Bathtub'
-import BedroomDesk from './Panels/BedroomDesk'
-import CaptainBed from './Panels/CaptainBed'
-import BedroomFence from './Panels/BedroomFence'
-import CaveShadows from './Panels/CaveShadows'
-import TrollShadowLeft from './Panels/TrollShadowLeft'
-import TrollShadowRight from './Panels/TrollShadowRight'
-import Stalactites from './Panels/Stalactites'
-import SchoolbusInterior from './Panels/SchoolbusInterior'
-import SchoolbusExterior from './Panels/SchoolbusExterior'
-import OceanCaveInterior from './Panels/OceanCaveInterior'
-import OceanCaveExterior from './Panels/OceanCaveExterior'
-import BennettCouch from './Panels/BennettCouch'
-import BennettLeftArmrest from './Panels/BennettLeftArmrest'
-import BennettRightArmrest from './Panels/BennettRightArmrest'
-import GoKartExterior from './Panels/GoKartExterior'
-import DishroomSink from './Panels/DishroomSink'
-import BennettBed from './Panels/BennettBed'
-import WaitingArmchair from './Panels/WaitingArmchair'
-import WaitingLeftArmrest from './Panels/WaitingLeftArmrest'
-import WaitingRightArmrest from './Panels/WaitingRightArmrest'
-import LizBed from './Panels/LizBed'
-import SaturnInterior from './Panels/SaturnInterior'
-import SaturnExterior from './Panels/SaturnExterior'
-import AtticCouch from './Panels/AtticCouch'
-import AtticLeftArmrest from './Panels/AtticLeftArmrest'
-import AtticRightArmrest from './Panels/AtticRightArmrest'
-import Volkswagen from './Panels/Volkswagen'
-import CrowdNear from './Panels/CrowdNear'
-import CrowdFar from './Panels/CrowdFar'
-import LizCouch from './Panels/LizCouch'
-import Snowglobe from './Panels/Snowglobe'
-import ReattaInterior from './Panels/ReattaInterior'
-import ReattaExterior from './Panels/ReattaExterior'
-import HospitalBed from './Panels/HospitalBed'
-import PhoneCallPanel from './Panels/PhoneCallPanel'
-import DeathbedThoughtPanel from './Panels/DeathbedThoughtPanel'
-import TennisThoughtPanel from './Panels/TennisThoughtPanel'
-import WeddingPlatform from './Panels/WeddingPlatform'
-import InverseThoughtPanel from './Panels/InverseThoughtPanel'
+// import estherSpeechPanel from 'assets/svgs/panels/estherSpeechPanel'
+// import bathtub from 'assets/svgs/panels/bathtub'
+// import bedroomDesk from 'assets/svgs/panels/bedroomDesk'
+// import captainBed from 'assets/svgs/panels/captainBed'
+// import bedroomFence from 'assets/svgs/panels/bedroomFence'
+// import caveShadows from 'assets/svgs/panels/caveShadows'
+// import trollShadowLeft from 'assets/svgs/panels/trollShadowLeft'
+// import trollShadowRight from 'assets/svgs/panels/trollShadowRight'
+// import stalactites from 'assets/svgs/panels/stalactites'
+// import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior'
+// import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
+// import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
+// import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
+// import bennettCouch from 'assets/svgs/panels/bennettCouch'
+// import bennettLeftArmrest from 'assets/svgs/panels/bennettLeftArmrest'
+// import bennettRightArmrest from 'assets/svgs/panels/bennettRightArmrest'
+// import goKartExterior from 'assets/svgs/panels/goKartExterior'
+// import dishroomSink from 'assets/svgs/panels/dishroomSink'
+// import bennettBed from 'assets/svgs/panels/bennettBed'
+// import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
+// import waitingLeftArmrest from 'assets/svgs/panels/waitingLeftArmrest'
+// import waitingRightArmrest from 'assets/svgs/panels/waitingRightArmrest'
+// import lizBed from 'assets/svgs/panels/lizBed'
+// import saturnInterior from 'assets/svgs/panels/saturnInterior'
+// import saturnExterior from 'assets/svgs/panels/saturnExterior'
+// import atticCouch from 'assets/svgs/panels/atticCouch'
+// import atticLeftArmrest from 'assets/svgs/panels/atticLeftArmrest'
+// import atticRightArmrest from 'assets/svgs/panels/atticRightArmrest'
+// import volkswagen from 'assets/svgs/panels/volkswagen'
+// import crowdNear from 'assets/svgs/panels/crowdNear'
+// import crowdFar from 'assets/svgs/panels/crowdFar'
+// import lizCouch from 'assets/svgs/panels/lizCouch'
+// import snowglobe from 'assets/svgs/panels/snowglobe'
+// import reattaInterior from 'assets/svgs/panels/reattaInterior'
+// import reattaExterior from 'assets/svgs/panels/reattaExterior'
+// import hospitalBed from 'assets/svgs/panels/hospitalBed'
+// import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
+// import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel'
+// import tennisThoughtPanel from 'assets/svgs/panels/tennisThoughtPanel'
+// import weddingPlatform from 'assets/svgs/panels/weddingPlatform'
+// import inverseThoughtPanel from 'assets/svgs/panels/inverseThoughtPanel'
 
 import {
     ESTHER_SPEECH_PANEL,
@@ -98,58 +98,58 @@ import {
 } from 'constants/scene/things/panels'
 
 export default {
-    [ESTHER_SPEECH_PANEL]: EstherSpeechPanel,
-    [BATHTUB]: Bathtub,
-    [BEDROOM_DESK]: BedroomDesk,
-    [CAPTAIN_BED]: CaptainBed,
-    [BEDROOM_FENCE]: BedroomFence,
-    [CAVE_SHADOWS]: CaveShadows,
-    [TROLL_SHADOW_LEFT]: TrollShadowLeft,
-    [TROLL_SHADOW_RIGHT]: TrollShadowRight,
-    [STALACTITES]: Stalactites,
-    [SCHOOLBUS_INTERIOR]: SchoolbusInterior,
-    [SCHOOLBUS_EXTERIOR]: SchoolbusExterior,
-    [OCEAN_CAVE_INTERIOR]: OceanCaveInterior,
-    [OCEAN_CAVE_EXTERIOR]: OceanCaveExterior,
-    [BENNETT_COUCH]: BennettCouch,
-    [BENNETT_LEFT_ARMREST]: BennettLeftArmrest,
-    [BENNETT_RIGHT_ARMREST]: BennettRightArmrest,
-    [GO_KART_EXTERIOR__LEFT]: GoKartExterior,
-    [GO_KART_EXTERIOR__RIGHT]: GoKartExterior,
-    [DISHROOM_SINK]: DishroomSink,
-    [BENNETT_BED]: BennettBed,
-    [WAITING_ARMCHAIR__BENNETT]: WaitingArmchair,
-    [WAITING_LEFT_ARMREST__BENNETT]: WaitingLeftArmrest,
-    [WAITING_RIGHT_ARMREST__BENNETT]: WaitingRightArmrest,
-    [WAITING_ARMCHAIR__LIZ]: WaitingArmchair,
-    [WAITING_LEFT_ARMREST__LIZ]: WaitingLeftArmrest,
-    [WAITING_RIGHT_ARMREST__LIZ]: WaitingRightArmrest,
-    [LIZ_BED]: LizBed,
-    [SATURN_INTERIOR]: SaturnInterior,
-    [SATURN_EXTERIOR]: SaturnExterior,
-    [ATTIC_COUCH]: AtticCouch,
-    [ATTIC_LEFT_ARMREST]: AtticLeftArmrest,
-    [ATTIC_RIGHT_ARMREST]: AtticRightArmrest,
-    [VOLKSWAGEN]: Volkswagen,
-    [CROWD_NEAR__SIDE]: CrowdNear,
-    [CROWD_FAR__SIDE]: CrowdFar,
-    [LIZ_COUCH]: LizCouch,
-    [BENNETT_COUCH__BUBBLE]: BennettCouch,
-    [BENNETT_LEFT_ARMREST__BUBBLE]: BennettLeftArmrest,
-    [BENNETT_RIGHT_ARMREST__BUBBLE]: BennettRightArmrest,
-    [SNOWGLOBE__TETHERBALL]: Snowglobe,
-    [SNOWGLOBE__LIZ_ALONE]: Snowglobe,
-    [SNOWGLOBE__BENNETT_MIRIAM]: Snowglobe,
-    [SNOWGLOBE__LIZ_KHARI]: Snowglobe,
-    [SNOWGLOBE__BENNETT_ALONE]: Snowglobe,
-    [REATTA_INTERIOR]: ReattaInterior,
-    [REATTA_EXTERIOR]: ReattaExterior,
-    [HOSPITAL_BED]: HospitalBed,
-    [CROWD_NEAR__BACK]: CrowdNear,
-    [CROWD_FAR__BACK]: CrowdFar,
-    [PHONE_CALL_PANEL]: PhoneCallPanel,
-    [DEATHBED_THOUGHT_PANEL]: DeathbedThoughtPanel,
-    [TENNIS_THOUGHT_PANEL]: TennisThoughtPanel,
-    [WEDDING_PLATFORM]: WeddingPlatform,
-    [INVERSE_THOUGHT_PANEL]: InverseThoughtPanel
+    [ESTHER_SPEECH_PANEL]: false,
+    [BATHTUB]: false,
+    [BEDROOM_DESK]: false,
+    [CAPTAIN_BED]: false,
+    [BEDROOM_FENCE]: false,
+    [CAVE_SHADOWS]: false,
+    [TROLL_SHADOW_LEFT]: false,
+    [TROLL_SHADOW_RIGHT]: false,
+    [STALACTITES]: false,
+    [SCHOOLBUS_INTERIOR]: false,
+    [SCHOOLBUS_EXTERIOR]: false,
+    [OCEAN_CAVE_INTERIOR]: false,
+    [OCEAN_CAVE_EXTERIOR]: false,
+    [BENNETT_COUCH]: false,
+    [BENNETT_LEFT_ARMREST]: false,
+    [BENNETT_RIGHT_ARMREST]: false,
+    [GO_KART_EXTERIOR__LEFT]: false,
+    [GO_KART_EXTERIOR__RIGHT]: false,
+    [DISHROOM_SINK]: false,
+    [BENNETT_BED]: false,
+    [WAITING_ARMCHAIR__BENNETT]: false,
+    [WAITING_LEFT_ARMREST__BENNETT]: false,
+    [WAITING_RIGHT_ARMREST__BENNETT]: false,
+    [WAITING_ARMCHAIR__LIZ]: false,
+    [WAITING_LEFT_ARMREST__LIZ]: false,
+    [WAITING_RIGHT_ARMREST__LIZ]: false,
+    [LIZ_BED]: false,
+    [SATURN_INTERIOR]: false,
+    [SATURN_EXTERIOR]: false,
+    [ATTIC_COUCH]: false,
+    [ATTIC_LEFT_ARMREST]: false,
+    [ATTIC_RIGHT_ARMREST]: false,
+    [VOLKSWAGEN]: false,
+    [CROWD_NEAR__SIDE]: false,
+    [CROWD_FAR__SIDE]: false,
+    [LIZ_COUCH]: false,
+    [BENNETT_COUCH__BUBBLE]: false,
+    [BENNETT_LEFT_ARMREST__BUBBLE]: false,
+    [BENNETT_RIGHT_ARMREST__BUBBLE]: false,
+    [SNOWGLOBE__TETHERBALL]: false,
+    [SNOWGLOBE__LIZ_ALONE]: false,
+    [SNOWGLOBE__BENNETT_MIRIAM]: false,
+    [SNOWGLOBE__LIZ_KHARI]: false,
+    [SNOWGLOBE__BENNETT_ALONE]: false,
+    [REATTA_INTERIOR]: false,
+    [REATTA_EXTERIOR]: false,
+    [HOSPITAL_BED]: false,
+    [CROWD_NEAR__BACK]: false,
+    [CROWD_FAR__BACK]: false,
+    [PHONE_CALL_PANEL]: false,
+    [DEATHBED_THOUGHT_PANEL]: false,
+    [TENNIS_THOUGHT_PANEL]: false,
+    [WEDDING_PLATFORM]: false,
+    [INVERSE_THOUGHT_PANEL]: false
 }

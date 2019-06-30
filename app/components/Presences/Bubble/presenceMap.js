@@ -1,15 +1,15 @@
-import TogetherSketchbook from './Bubbles/TogetherSketchbook'
-import ApartSketchbook from './Bubbles/ApartSketchbook'
-import DogsSketchbook from './Bubbles/DogsSketchbook'
-import EscapePodSketchbook from './Bubbles/EscapePodSketchbook'
-import CinemaThoughts from './Bubbles/CinemaThoughts'
-import GoKartThought from './Bubbles/GoKartThought'
-import WaitingRoomThoughts from './Bubbles/WaitingRoomThoughts'
-import TarpitThought from './Bubbles/TarpitThought'
-import SiblingThought from './Bubbles/SiblingThought'
-import KhariAttackSpeech from './Bubbles/KhariAttackSpeech'
-import LizDefenceSpeech from './Bubbles/LizDefenceSpeech'
-import LizThought from './Bubbles/LizThought'
+// import togetherSketchbook from 'assets/svgs/bubbles/togetherSketchbook'
+// import apartSketchbook from 'assets/svgs/bubbles/apartSketchbook'
+// import dogsSketchbook from 'assets/svgs/bubbles/dogsSketchbook'
+// import escapePodSketchbook from 'assets/svgs/bubbles/escapePodSketchbook'
+// import cinemaThoughts from 'assets/svgs/bubbles/cinemaThoughts'
+// import goKartThought from 'assets/svgs/bubbles/goKartThought'
+// import waitingRoomThoughts from 'assets/svgs/bubbles/waitingRoomThoughts'
+// import tarpitThought from 'assets/svgs/bubbles/tarpitThought'
+// import siblingThought from 'assets/svgs/bubbles/siblingThought'
+// import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
+// import lizDefenceSpeech from 'assets/svgs/bubbles/lizDefenceSpeech'
+// import lizThought from 'assets/svgs/bubbles/lizThought'
 
 import {
     TOGETHER_SKETCHBOOK,
@@ -27,16 +27,16 @@ import {
 } from 'constants/scene/things/bubbles'
 
 export default {
-    [TOGETHER_SKETCHBOOK]: TogetherSketchbook,
-    [APART_SKETCHBOOK]: ApartSketchbook,
-    [DOGS_SKETCHBOOK]: DogsSketchbook,
-    [ESCAPE_POD_SKETCHBOOK]: EscapePodSketchbook,
-    [CINEMA_THOUGHTS]: CinemaThoughts,
-    [GO_KART_THOUGHT]: GoKartThought,
-    [WAITING_ROOM_THOUGHTS]: WaitingRoomThoughts,
-    [TARPIT_THOUGHT]: TarpitThought,
-    [SIBLING_THOUGHT]: SiblingThought,
-    [KHARI_ATTACK_SPEECH]: KhariAttackSpeech,
-    [LIZ_DEFENCE_SPEECH]: LizDefenceSpeech,
-    [LIZ_THOUGHT]: LizThought
+    [TOGETHER_SKETCHBOOK]: false,
+    [APART_SKETCHBOOK]: false,
+    [DOGS_SKETCHBOOK]: false,
+    [ESCAPE_POD_SKETCHBOOK]: false,
+    [CINEMA_THOUGHTS]: false,
+    [GO_KART_THOUGHT]: false,
+    [WAITING_ROOM_THOUGHTS]: false,
+    [TARPIT_THOUGHT]: false,
+    [SIBLING_THOUGHT]: false,
+    [KHARI_ATTACK_SPEECH]: false,
+    [LIZ_DEFENCE_SPEECH]: false,
+    [LIZ_THOUGHT]: false
 }

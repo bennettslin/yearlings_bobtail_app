@@ -1,30 +1,30 @@
-import NohoHousesBackdrop from './Backdrops/NohoHousesBackdrop'
-import NohoSchoolBackdrop from './Backdrops/NohoSchoolBackdrop'
-import ValleyBackdrop from './Backdrops/ValleyBackdrop'
-import TaiwanMountainsBackdrop from './Backdrops/TaiwanMountainsBackdrop'
-import SchoolbusThoughtBackdrop from './Backdrops/SchoolbusThoughtBackdrop'
-import VanNuysThoughtBackdrop from './Backdrops/VanNuysThoughtBackdrop'
-import TaiwanStairsBackdrop from './Backdrops/TaiwanStairsBackdrop'
-import TaiwanStreetsBackdrop from './Backdrops/TaiwanStreetsBackdrop'
-import ShoreRickshawBackdrop from './Backdrops/ShoreRickshawBackdrop'
-import ShoreBuoyBackdrop from './Backdrops/ShoreBuoyBackdrop'
-import OceanBottomFar from './Backdrops/OceanBottomFar'
-import OceanFloorFar from './Backdrops/OceanFloorFar'
-import VanNuysSchoolBackdrop from './Backdrops/VanNuysSchoolBackdrop'
-import BennettCouchThoughtBackdrop from './Backdrops/BennettCouchThoughtBackdrop'
-import WestBerkeleyBackdrop from './Backdrops/WestBerkeleyBackdrop'
-import UcBerkeleyBackdrop from './Backdrops/UcBerkeleyBackdrop'
-import GoKartThoughtBackdrop from './Backdrops/GoKartThoughtBackdrop'
-import UclaBackdrop from './Backdrops/UclaBackdrop'
-import PharmacyThoughtBackdrop from './Backdrops/PharmacyThoughtBackdrop'
-import CemeteryBackdrop from './Backdrops/CemeteryBackdrop'
-import StationWagonBackdrop from './Backdrops/StationWagonBackdrop'
-import OaklandSideBackdrop from './Backdrops/OaklandSideBackdrop'
-import LizCouchThoughtBackdrop from './Backdrops/LizCouchThoughtBackdrop'
-import OaklandFrontBackdrop from './Backdrops/OaklandFrontBackdrop'
-import GoldenGateBackdrop from './Backdrops/GoldenGateBackdrop'
-import PampasBackdrop from './Backdrops/PampasBackdrop'
-import WeddingBackdrop from './Backdrops/WeddingBackdrop'
+// import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop.svg'
+// import nohoSchoolBackdrop from 'assets/svgs/backdrops/nohoSchoolBackdrop.svg'
+// import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop.svg'
+// import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop.svg'
+// import schoolbusThoughtBackdrop from 'assets/svgs/backdrops/schoolbusThoughtBackdrop.svg'
+// import vanNuysThoughtBackdrop from 'assets/svgs/backdrops/vanNuysThoughtBackdrop.svg'
+// import taiwanStairsBackdrop from 'assets/svgs/backdrops/taiwanStairsBackdrop.svg'
+// import taiwanStreetsBackdrop from 'assets/svgs/backdrops/taiwanStreetsBackdrop.svg'
+// import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop.svg'
+// import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop.svg'
+// import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar.svg'
+// import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar.svg'
+// import vanNuysSchoolBackdrop from 'assets/svgs/backdrops/vanNuysSchoolBackdrop.svg'
+// import bennettCouchThoughtBackdrop from 'assets/svgs/backdrops/bennettCouchThoughtBackdrop.svg'
+// import westBerkeleyBackdrop from 'assets/svgs/backdrops/westBerkeleyBackdrop.svg'
+// import ucBerkeleyBackdrop from 'assets/svgs/backdrops/ucBerkeleyBackdrop.svg'
+// import goKartThoughtBackdrop from 'assets/svgs/backdrops/goKartThoughtBackdrop.svg'
+// import uclaBackdrop from 'assets/svgs/backdrops/uclaBackdrop.svg'
+// import pharmacyThoughtBackdrop from 'assets/svgs/backdrops/pharmacyThoughtBackdrop.svg'
+// import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop.svg'
+// import stationWagonBackdrop from 'assets/svgs/backdrops/stationWagonBackdrop.svg'
+// import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop.svg'
+// import lizCouchThoughtBackdrop from 'assets/svgs/backdrops/lizCouchThoughtBackdrop.svg'
+// import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop.svg'
+// import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop.svg'
+// import pampasBackdrop from 'assets/svgs/backdrops/pampasBackdrop.svg'
+// import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop.svg'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -57,31 +57,31 @@ import {
 } from 'constants/scene/things/backdrops'
 
 export default {
-    [NOHO_HOUSES_BACKDROP]: NohoHousesBackdrop,
-    [NOHO_SCHOOL_BACKDROP]: NohoSchoolBackdrop,
-    [VALLEY_BACKDROP]: ValleyBackdrop,
-    [TAIWAN_MOUNTAINS_BACKDROP]: TaiwanMountainsBackdrop,
-    [SCHOOLBUS_THOUGHT_BACKDROP]: SchoolbusThoughtBackdrop,
-    [VAN_NUYS_THOUGHT_BACKDROP]: VanNuysThoughtBackdrop,
-    [TAIWAN_STAIRS_BACKDROP]: TaiwanStairsBackdrop,
-    [TAIWAN_STREETS_BACKDROP]: TaiwanStreetsBackdrop,
-    [SHORE_RICKSHAW_BACKDROP]: ShoreRickshawBackdrop,
-    [SHORE_BUOY_BACKDROP]: ShoreBuoyBackdrop,
-    [OCEAN_BOTTOM_FAR]: OceanBottomFar,
-    [OCEAN_FLOOR_FAR]: OceanFloorFar,
-    [VAN_NUYS_SCHOOL_BACKDROP]: VanNuysSchoolBackdrop,
-    [BENNETT_COUCH_THOUGHT_BACKDROP]: BennettCouchThoughtBackdrop,
-    [WEST_BERKELEY_BACKDROP]: WestBerkeleyBackdrop,
-    [UC_BERKELEY_BACKDROP]: UcBerkeleyBackdrop,
-    [GO_KART_BACKDROP]: GoKartThoughtBackdrop,
-    [UCLA_BACKDROP]: UclaBackdrop,
-    [PHARMACY_THOUGHT_BACKDROP]: PharmacyThoughtBackdrop,
-    [CEMETERY_BACKDROP]: CemeteryBackdrop,
-    [STATION_WAGON_BACKDROP]: StationWagonBackdrop,
-    [OAKLAND_SIDE_BACKDROP]: OaklandSideBackdrop,
-    [LIZ_COUCH_THOUGHT_BACKDROP]: LizCouchThoughtBackdrop,
-    [OAKLAND_FRONT_BACKDROP]: OaklandFrontBackdrop,
-    [GOLDEN_GATE_BACKDROP]: GoldenGateBackdrop,
-    [PAMPAS_BACKDROP]: PampasBackdrop,
-    [WEDDING_BACKDROP]: WeddingBackdrop
+    [NOHO_HOUSES_BACKDROP]: false,
+    [NOHO_SCHOOL_BACKDROP]: false,
+    [VALLEY_BACKDROP]: false,
+    [TAIWAN_MOUNTAINS_BACKDROP]: false,
+    [SCHOOLBUS_THOUGHT_BACKDROP]: false,
+    [VAN_NUYS_THOUGHT_BACKDROP]: false,
+    [TAIWAN_STAIRS_BACKDROP]: false,
+    [TAIWAN_STREETS_BACKDROP]: false,
+    [SHORE_RICKSHAW_BACKDROP]: false,
+    [SHORE_BUOY_BACKDROP]: false,
+    [OCEAN_BOTTOM_FAR]: false,
+    [OCEAN_FLOOR_FAR]: false,
+    [VAN_NUYS_SCHOOL_BACKDROP]: false,
+    [BENNETT_COUCH_THOUGHT_BACKDROP]: false,
+    [WEST_BERKELEY_BACKDROP]: false,
+    [UC_BERKELEY_BACKDROP]: false,
+    [GO_KART_BACKDROP]: false,
+    [UCLA_BACKDROP]: false,
+    [PHARMACY_THOUGHT_BACKDROP]: false,
+    [CEMETERY_BACKDROP]: false,
+    [STATION_WAGON_BACKDROP]: false,
+    [OAKLAND_SIDE_BACKDROP]: false,
+    [LIZ_COUCH_THOUGHT_BACKDROP]: false,
+    [OAKLAND_FRONT_BACKDROP]: false,
+    [GOLDEN_GATE_BACKDROP]: false,
+    [PAMPAS_BACKDROP]: false,
+    [WEDDING_BACKDROP]: false
 }
