@@ -1,6 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import isFinite from 'lodash.isfinite'
+import isString from 'lodash.isstring'
 
 import PresenceSvg from 'modules/PresenceSvg'
 
@@ -58,8 +60,8 @@ const PresenceView = ({
         } = arrangement,
 
         // TODO: Get rid of this logic when no longer nested.
-        xPosition = typeof xPosition1 === 'number' ? xPosition1 : xPosition2,
-        zOffset = typeof zOffset1 === 'number' ? zOffset1 : zOffset2,
+        xPosition = isFinite(xPosition1) ? xPosition1 : xPosition2,
+        zOffset = isFinite(zOffset1) ? zOffset1 : zOffset2,
 
         presenceXY = xWidth && zHeight ? getPresenceXYWidthHeight({
             cubesKey,
@@ -95,7 +97,7 @@ const PresenceView = ({
         }
 
     // TODO: Get rid of this conditional once they are all asset svgs.
-    return typeof PresenceComponent === 'string' ? (
+    return isString(PresenceComponent) ? (
         <PresenceSvg
             {...presenceProps}
         >

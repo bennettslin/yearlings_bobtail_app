@@ -2,6 +2,8 @@
 
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
+import isString from 'lodash.isstring'
+
 import TextLyricAnchor from './LyricAnchor'
 import Texts from '..'
 import TextSpan from './Span'
@@ -28,7 +30,7 @@ const propTypes = {
         } = props
 
         // It's a text span.
-        if (typeof textEntity === 'string') {
+        if (isString(textEntity)) {
             return (
                 <TextSpan {...other}
                     {...{ text: textEntity }}

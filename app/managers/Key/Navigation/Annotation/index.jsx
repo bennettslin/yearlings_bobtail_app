@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import isString from 'lodash.isstring'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
@@ -79,7 +80,7 @@ class AnnotationNavigation extends PureComponent {
                 if (accessedWikiWormholeIndex && wikiWormholeEntity) {
 
                     // It's a wiki anchor.
-                    if (typeof wikiWormholeEntity === 'string') {
+                    if (isString(wikiWormholeEntity)) {
                         this.dispatchWiki(accessedWikiWormholeIndex)
 
                     // It's a wormhole index.

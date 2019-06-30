@@ -31,6 +31,7 @@
     "debounce": "^1.0.2",
     "lodash.findindex": "^4.6.0",
     "lodash.isfinite": "^3.3.2",
+    "lodash.isstring": "^4.0.1",
     "lodash.keys": "^4.2.0",
     "lodash.pickby": "^4.6.0",
     "mobile-detect": "^1.4.3",

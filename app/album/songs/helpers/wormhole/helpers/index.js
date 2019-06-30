@@ -1,4 +1,5 @@
 import keys from 'lodash.keys'
+import isString from 'lodash.isstring'
 
 import {
     WIKI,
@@ -42,7 +43,7 @@ const _registerWikiLinksForCard = ({
         return keys(entity).reduce((keyFound, currentKey) => {
             const hasWiki = Boolean(entity[WIKI])
 
-            if (!entity[WIKI_INDEX] && typeof entity[WIKI] === 'string') {
+            if (!entity[WIKI_INDEX] && isString(entity[WIKI])) {
 
                 // Let annotation anchor know its annotation.
                 entity.wikiAnnotationIndex = annotation.annotationIndex

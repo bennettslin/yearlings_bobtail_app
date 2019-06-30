@@ -1,3 +1,6 @@
+import isFinite from 'lodash.isfinite'
+import isString from 'lodash.isstring'
+
 import { getAnnotation } from 'album/api/annotations'
 
 import {
@@ -19,18 +22,14 @@ const _getAccessibleWikiWormholesLength = ({
 
     if (wikiWormholes) {
         return wikiWormholes.reduce((sum, wikiWormhole) => {
-            const typeofWikiWormhole = typeof wikiWormhole
-
             return (
                 (
                     // It's a wiki anchor, and reference dot is selected.
-                    typeofWikiWormhole === 'string' &&
-                    dotKeys[REFERENCE]
+                    isString(wikiWormhole) && dotKeys[REFERENCE]
 
                 ) || (
                     // It's a wormhole index, and wormhole dot is selected.
-                    typeofWikiWormhole === 'number' &&
-                    dotKeys[WORMHOLE]
+                    isFinite(wikiWormhole) && dotKeys[WORMHOLE]
                 )
             ) ? sum + 1 : sum
         }, 0)

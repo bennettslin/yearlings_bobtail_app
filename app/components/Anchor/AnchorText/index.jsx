@@ -1,6 +1,7 @@
 import React, { memo, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import isString from 'lodash.isstring'
 
 import Underline from '../Underline'
 
@@ -24,8 +25,7 @@ const AnchorText = ({
     text
 
 }) => {
-    const
-        words = typeof text === 'string' ? [text] : text
+    const words = isString(text) ? [text] : text
 
     return (
         words.map((word, index) => {

@@ -1,4 +1,6 @@
 import isFinite from 'lodash.isfinite'
+import isString from 'lodash.isstring'
+
 import { getAnnotation } from 'album/api/annotations'
 
 import {
@@ -47,7 +49,7 @@ export const getWikiWormholeIndexForDirection = ({
              * or it's a wormhole index and wormhole dot is selected. Remember
              * that wiki wormholes are 1-based.
              */
-            const isWiki = typeof wikiWormholes[returnIndex - 1] === 'string'
+            const isWiki = isString(wikiWormholes[returnIndex - 1])
             if (
                 (isWiki && selectedDotKeys[REFERENCE]) ||
                 (!isWiki && selectedDotKeys[WORMHOLE])
