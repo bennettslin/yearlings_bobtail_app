@@ -12,15 +12,8 @@ export default [
         workedHours: 0,
         neededHours: 8
     },
-
     {
         taskName: `tip images`,
-        workedHours: 0,
-        neededHours: 8
-    },
-
-    {
-        taskName: `lyrics`,
         workedHours: 0,
         neededHours: 8
     },

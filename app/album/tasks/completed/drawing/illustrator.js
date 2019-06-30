@@ -48,5 +48,25 @@ export default [
         taskName: 'recyclables',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'overpassSignFront',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'overpassSignBack',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'monitorFront',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'monitorSide',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

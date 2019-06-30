@@ -141,6 +141,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: 'cinemaStreet',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: 'basement',
         workedHours: 0,
         neededHours: 1

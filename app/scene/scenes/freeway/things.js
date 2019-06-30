@@ -24,19 +24,15 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [OVERPASS_SIGN_BACK]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 4,
-                zHeight: 3
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.3,
+            zOffset: 1.3
         },
         [OVERPASS_SIGN_FRONT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 4,
-                zHeight: 3
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.3,
+            zOffset: 0.5
         }
     },
     [FIXTURE]: {

@@ -10,7 +10,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Three-dimensionality of cutouts.`,
+        taskName: `Three-dimensionality and painted look of cutouts.`,
         workedHours: 0,
         neededHours: 3
     }

@@ -18,19 +18,14 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [MONITOR_FRONT__LEFT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 1.5,
-                zHeight: 1
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.3
         },
         [MONITOR_FRONT__RIGHT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 1.5,
-                zHeight: 1
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.3,
+            flipHorizontal: true
         },
         [WALL_SPEAKER_FRONT__LEFT]: {
             yIndex: 1,

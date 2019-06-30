@@ -20,16 +20,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'overpassSignFront',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'overpassSignBack',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'campfire',
         workedHours: 0,
         neededHours: 1
@@ -145,17 +135,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'monitor',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'wallSpeaker',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'monitorSide',
         workedHours: 0,
         neededHours: 1
     },

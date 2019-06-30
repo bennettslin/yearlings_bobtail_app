@@ -2,8 +2,8 @@ import FireHydrant from './Cutouts/FireHydrant'
 import PlaygroundSlide from './Cutouts/PlaygroundSlide'
 import MirroredSink from './Cutouts/MirroredSink'
 import TowelRack from './Cutouts/TowelRack'
-import OverpassSignFront from './Cutouts/OverpassSignFront'
-import OverpassSignBack from './Cutouts/OverpassSignBack'
+import overpassSignFront from 'assets/svgs/cutouts/overpassSignFront.svg'
+import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack.svg'
 import porchPlant from 'assets/svgs/cutouts/porchPlant.svg'
 import Campfire from './Cutouts/Campfire'
 import BuddhaShrine from './Cutouts/BuddhaShrine'
@@ -31,7 +31,7 @@ import BerkeleyLamppost from './Cutouts/BerkeleyLamppost'
 import SignPost from './Cutouts/SignPost'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
-import MonitorFront from './Cutouts/MonitorFront'
+import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
 import WallSpeakerFront from './Cutouts/WallSpeakerFront'
 import Sandbags from './Cutouts/Sandbags'
 import StageLights from './Cutouts/StageLights'
@@ -43,7 +43,7 @@ import StorageBoxes from './Cutouts/StorageBoxes'
 import StorageChest from './Cutouts/StorageChest'
 import HowieFridge from './Cutouts/HowieFridge'
 import Television from './Cutouts/Television'
-import MonitorSide from './Cutouts/MonitorSide'
+import monitorSide from 'assets/svgs/cutouts/monitorSide.svg'
 import WallSpeakerSide from './Cutouts/WallSpeakerSide'
 import TwinStreetlamp from './Cutouts/TwinStreetlamp'
 import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
@@ -123,8 +123,8 @@ export default {
     [PLAYGROUND_SLIDE]: PlaygroundSlide,
     [MIRRORED_SINK]: MirroredSink,
     [TOWEL_RACK]: TowelRack,
-    [OVERPASS_SIGN_FRONT]: OverpassSignFront,
-    [OVERPASS_SIGN_BACK]: OverpassSignBack,
+    [OVERPASS_SIGN_FRONT]: overpassSignFront,
+    [OVERPASS_SIGN_BACK]: overpassSignBack,
     [PORCH_PLANT__LEFT]: porchPlant,
     [PORCH_PLANT__RIGHT]: porchPlant,
     [CAMPFIRE]: Campfire,
@@ -156,8 +156,8 @@ export default {
     [BANCROFT_SHRUBS]: bancroftShrubs,
     [UC_BERKELEY_TREE__LEFT]: ucBerkeleyTree,
     [UC_BERKELEY_TREE__RIGHT]: ucBerkeleyTree,
-    [MONITOR_FRONT__LEFT]: MonitorFront,
-    [MONITOR_FRONT__RIGHT]: MonitorFront,
+    [MONITOR_FRONT__LEFT]: monitorFront,
+    [MONITOR_FRONT__RIGHT]: monitorFront,
     [WALL_SPEAKER_FRONT__LEFT]: WallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: WallSpeakerFront,
     [SANDBAGS]: Sandbags,
@@ -170,8 +170,8 @@ export default {
     [STORAGE_CHEST]: StorageChest,
     [HOWIE_FRIDGE]: HowieFridge,
     [TELEVISION]: Television,
-    [MONITOR_SIDE__CROWD]: MonitorSide,
-    [MONITOR_SIDE__STAGE]: MonitorSide,
+    [MONITOR_SIDE__CROWD]: monitorSide,
+    [MONITOR_SIDE__STAGE]: monitorSide,
     [WALL_SPEAKER_SIDE__CROWD]: WallSpeakerSide,
     [WALL_SPEAKER_SIDE__STAGE]: WallSpeakerSide,
     [TWIN_STREETLAMP__FAR]: TwinStreetlamp,

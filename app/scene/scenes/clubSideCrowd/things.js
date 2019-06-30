@@ -17,11 +17,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [MONITOR_SIDE__CROWD]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 3,
+            scaleFactor: 0.3
         },
         [WALL_SPEAKER_SIDE__CROWD]: {
             yIndex: 1,
