@@ -7,20 +7,14 @@ import {
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [DISPENSER_LEFT]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 2,
-                zHeight: 3
-            }
+            yIndex: 5,
+            xPosition: 1,
+            scaleFactor: 0.3
         },
         [DISPENSER_RIGHT]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 2,
-                zHeight: 3
-            }
+            yIndex: 5,
+            xPosition: 10,
+            scaleFactor: 0.3
         }
     }
 }

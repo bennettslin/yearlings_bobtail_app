@@ -190,16 +190,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'dispenserLeft',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'dispenserRight',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'weddingCrowd',
         workedHours: 0,
         neededHours: 1

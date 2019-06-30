@@ -78,5 +78,15 @@ export default [
         taskName: 'twinStreetlamp',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'dispenserLeft',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'dispenserRight',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

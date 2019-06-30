@@ -25,8 +25,6 @@ import OdinMat from './Cutouts/OdinMat'
 import TrashCan from './Cutouts/TrashCan'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
 import recyclables from 'assets/svgs/cutouts/recyclables.svg'
-import DispenserLeft from './Cutouts/DispenserLeft'
-import DispenserRight from './Cutouts/DispenserRight'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost.svg'
 import SignPost from './Cutouts/SignPost'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
@@ -48,6 +46,8 @@ import WallSpeakerSide from './Cutouts/WallSpeakerSide'
 import twinStreetlamp from 'assets/svgs/cutouts/twinStreetlamp.svg'
 import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
 import Dumpster from './Cutouts/Dumpster'
+import dispenserLeft from 'assets/svgs/cutouts/dispenserLeft.svg'
+import dispenserRight from 'assets/svgs/cutouts/dispenserRight.svg'
 import WeddingCrowd from './Cutouts/WeddingCrowd'
 import cliffTree from 'assets/svgs/cutouts/cliffTree.svg'
 import IvDrip from './Cutouts/IvDrip'
@@ -83,8 +83,6 @@ import {
     VAN_NUYS_PLANT__LOCKERS,
     VAN_NUYS_PLANT__QUAD,
     RECYCLABLES,
-    DISPENSER_LEFT,
-    DISPENSER_RIGHT,
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
@@ -113,6 +111,8 @@ import {
     TWIN_STREETLAMP__NEAR,
     EL_CERRITO_TREE,
     DUMPSTER,
+    DISPENSER_LEFT,
+    DISPENSER_RIGHT,
     WEDDING_CROWD,
     CLIFF_TREE,
     IV_DRIP
@@ -149,8 +149,6 @@ export default {
     [VAN_NUYS_PLANT__LOCKERS]: vanNuysPlant,
     [VAN_NUYS_PLANT__QUAD]: vanNuysPlant,
     [RECYCLABLES]: recyclables,
-    [DISPENSER_LEFT]: DispenserLeft,
-    [DISPENSER_RIGHT]: DispenserRight,
     [BERKELEY_LAMPPOST]: berkeleyLamppost,
     [SIGNPOST]: SignPost,
     [BANCROFT_SHRUBS]: bancroftShrubs,
@@ -179,6 +177,8 @@ export default {
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
     [EL_CERRITO_TREE]: elCerritoTree,
     [DUMPSTER]: Dumpster,
+    [DISPENSER_LEFT]: dispenserLeft,
+    [DISPENSER_RIGHT]: dispenserRight,
     [WEDDING_CROWD]: WeddingCrowd,
     [CLIFF_TREE]: cliffTree,
     [IV_DRIP]: IvDrip
