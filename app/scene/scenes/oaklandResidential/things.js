@@ -32,27 +32,18 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.3
         },
         [TWIN_STREETLAMP__MIDDLE]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 6
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.3
         },
         [TWIN_STREETLAMP__NEAR]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 7
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.3
         }
     },
     [FLAT]: {

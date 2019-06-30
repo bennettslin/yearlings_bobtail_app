@@ -125,11 +125,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'berkeleyLamppost',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'signPost',
         workedHours: 0,
         neededHours: 1
@@ -181,11 +176,6 @@ export default [
     },
     {
         taskName: 'howieFridge',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'twinStreetlamp',
         workedHours: 0,
         neededHours: 1
     },

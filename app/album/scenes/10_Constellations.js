@@ -153,7 +153,7 @@ export default [
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, feigning superiority',
                     instance: WALGREENS
                 }

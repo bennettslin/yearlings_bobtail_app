@@ -24,11 +24,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BERKELEY_LAMPPOST]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 11,
-                xWidth: 1,
-                zHeight: 7
-            }
+            xPosition: 10.5,
+            scaleFactor: 0.3
         }
     },
     [FLAT]: {

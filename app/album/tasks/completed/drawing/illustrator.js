@@ -68,5 +68,15 @@ export default [
         taskName: 'monitorSide',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'berkeleyLamppost',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'twinStreetlamp',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

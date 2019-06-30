@@ -27,7 +27,7 @@ import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
 import recyclables from 'assets/svgs/cutouts/recyclables.svg'
 import DispenserLeft from './Cutouts/DispenserLeft'
 import DispenserRight from './Cutouts/DispenserRight'
-import BerkeleyLamppost from './Cutouts/BerkeleyLamppost'
+import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost.svg'
 import SignPost from './Cutouts/SignPost'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
@@ -45,7 +45,7 @@ import HowieFridge from './Cutouts/HowieFridge'
 import Television from './Cutouts/Television'
 import monitorSide from 'assets/svgs/cutouts/monitorSide.svg'
 import WallSpeakerSide from './Cutouts/WallSpeakerSide'
-import TwinStreetlamp from './Cutouts/TwinStreetlamp'
+import twinStreetlamp from 'assets/svgs/cutouts/twinStreetlamp.svg'
 import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
 import Dumpster from './Cutouts/Dumpster'
 import WeddingCrowd from './Cutouts/WeddingCrowd'
@@ -151,7 +151,7 @@ export default {
     [RECYCLABLES]: recyclables,
     [DISPENSER_LEFT]: DispenserLeft,
     [DISPENSER_RIGHT]: DispenserRight,
-    [BERKELEY_LAMPPOST]: BerkeleyLamppost,
+    [BERKELEY_LAMPPOST]: berkeleyLamppost,
     [SIGNPOST]: SignPost,
     [BANCROFT_SHRUBS]: bancroftShrubs,
     [UC_BERKELEY_TREE__LEFT]: ucBerkeleyTree,
@@ -174,9 +174,9 @@ export default {
     [MONITOR_SIDE__STAGE]: monitorSide,
     [WALL_SPEAKER_SIDE__CROWD]: WallSpeakerSide,
     [WALL_SPEAKER_SIDE__STAGE]: WallSpeakerSide,
-    [TWIN_STREETLAMP__FAR]: TwinStreetlamp,
-    [TWIN_STREETLAMP__MIDDLE]: TwinStreetlamp,
-    [TWIN_STREETLAMP__NEAR]: TwinStreetlamp,
+    [TWIN_STREETLAMP__FAR]: twinStreetlamp,
+    [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
+    [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
     [EL_CERRITO_TREE]: elCerritoTree,
     [DUMPSTER]: Dumpster,
     [WEDDING_CROWD]: WeddingCrowd,
