@@ -20,11 +20,8 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
     [CUTOUT]: {
         [TRAFFIC_LIGHT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 1,
-                zHeight: 7
-            }
+            xPosition: 9.5,
+            scaleFactor: 0.3
         }
     }
 }

@@ -98,5 +98,10 @@ export default [
         taskName: 'ivDrip',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'trafficLight',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

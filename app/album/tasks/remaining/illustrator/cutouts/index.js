@@ -145,11 +145,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'trafficLight',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'codeBox',
         workedHours: 0,
         neededHours: 1

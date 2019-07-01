@@ -33,7 +33,7 @@ import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
 // import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
 // import sandbags from 'assets/svgs/cutouts/sandbags.svg'
 // import stageLights from 'assets/svgs/cutouts/stageLights.svg'
-// import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
+import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
 // import codeBox from 'assets/svgs/cutouts/codeBox.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
@@ -160,7 +160,7 @@ export default {
     [WALL_SPEAKER_FRONT__RIGHT]: false,
     [SANDBAGS]: false,
     [STAGE_LIGHTS]: false,
-    [TRAFFIC_LIGHT]: false,
+    [TRAFFIC_LIGHT]: trafficLight,
     [APARTMENT_PLANT]: apartmentPlant,
     [CODE_BOX]: false,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
