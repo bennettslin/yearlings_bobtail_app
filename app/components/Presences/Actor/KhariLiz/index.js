@@ -1,6 +1,6 @@
-// import joking from 'assets/svgs/actors/jokingLaughing'
-// import protective from 'assets/svgs/actors/protectiveConcerned'
-// import caressing from 'assets/svgs/actors/caress'
+// import joking from 'assets/svgs/actors/khariLiz/jokingLaughing'
+// import protective from 'assets/svgs/actors/khariLiz/protectiveConcerned'
+// import caressing from 'assets/svgs/actors/khariLiz/caress'
 
 import {
     JOKING_LAUGHING,

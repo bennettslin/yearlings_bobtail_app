@@ -67,8 +67,7 @@
 ## Convert svg to React component.
 * Place in svg assets folder.
 * Change component routing.
-    * Import svg instead of component.
-    * Delete component.
+    * Import svg in Presences.
 * Change scene config.
     * Correct x and y positions, if needed.
     * Scale it.

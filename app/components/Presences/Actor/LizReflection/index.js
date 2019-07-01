@@ -1,4 +1,4 @@
-// import reachingReflection from 'assets/svgs/actors/reachingReflection'
+// import reachingReflection from 'assets/svgs/actors/lizReflection/reachingReflection'
 
 import { REACHING_REFLECTION } from 'constants/scene/actors/instances/liz'
 

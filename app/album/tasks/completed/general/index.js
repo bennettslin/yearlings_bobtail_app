@@ -4651,5 +4651,10 @@ export default [
         taskName: `Reorganise cutout styles.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Reorganise presence components.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

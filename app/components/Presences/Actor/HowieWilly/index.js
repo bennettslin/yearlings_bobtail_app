@@ -1,4 +1,4 @@
-// import gangbanger from 'assets/svgs/actors/gangbanger'
+// import gangbanger from 'assets/svgs/actors/howieWilly/gangbanger'
 
 import { GANGBANGER } from 'constants/scene/actors/instances/songs'
 

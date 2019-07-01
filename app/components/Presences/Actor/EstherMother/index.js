@@ -1,5 +1,5 @@
-// import hurtConsoling from 'assets/svgs/actors/hurtConsoling'
-// import sobbingShielding from 'assets/svgs/actors/sobbingShielding'
+// import hurtConsoling from 'assets/svgs/actors/estherMother/hurtConsoling'
+// import sobbingShielding from 'assets/svgs/actors/estherMother/sobbingShielding'
 
 import {
     HURT_CONSOLING,

@@ -1,7 +1,7 @@
-// import jogger from 'assets/svgs/actors/jogger'
-// import injured from 'assets/svgs/actors/injured'
-// import greeting from 'assets/svgs/actors/greeting'
-// import epilogue from 'assets/svgs/actors/epilogue'
+// import jogger from 'assets/svgs/actors/nestor/jogger'
+// import injured from 'assets/svgs/actors/nestor/injured'
+// import greeting from 'assets/svgs/actors/nestor/greeting'
+// import epilogue from 'assets/svgs/actors/nestor/epilogue'
 
 import {
     JOGGER,

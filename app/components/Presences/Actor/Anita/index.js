@@ -1,7 +1,7 @@
-// import exasperated from 'assets/svgs/actors/exasperated'
-// import concerned from 'assets/svgs/actors/concerned'
-// import cheering from 'assets/svgs/actors/cheering'
-// import youngChild from 'assets/svgs/actors/youngChild'
+// import exasperated from 'assets/svgs/actors/anita/exasperated'
+// import concerned from 'assets/svgs/actors/anita/concerned'
+// import cheering from 'assets/svgs/actors/anita/cheering'
+// import youngChild from 'assets/svgs/actors/anita/youngChild'
 
 import {
     EXASPERATED,

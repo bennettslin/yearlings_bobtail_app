@@ -1,8 +1,8 @@
-// import flirting from 'assets/svgs/actors/flirting'
-// import carrying from 'assets/svgs/actors/carrying'
-// import waiting from 'assets/svgs/actors/waiting'
-// import gopi from 'assets/svgs/actors/gopi'
-// import epilogue from 'assets/svgs/actors/epilogue'
+// import flirting from 'assets/svgs/actors/mara/flirting'
+// import carrying from 'assets/svgs/actors/mara/carrying'
+// import waiting from 'assets/svgs/actors/mara/waiting'
+// import gopi from 'assets/svgs/actors/mara/gopi'
+// import epilogue from 'assets/svgs/actors/mara/epilogue'
 
 import {
     FLIRTING,

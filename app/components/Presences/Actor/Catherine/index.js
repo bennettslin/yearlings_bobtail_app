@@ -1,8 +1,8 @@
-// import weeping from 'assets/svgs/actors/weeping'
-// import quipping from 'assets/svgs/actors/quipping'
-// import puzzled from 'assets/svgs/actors/puzzled'
-// import gopi from 'assets/svgs/actors/gopi'
-// import epilogue from 'assets/svgs/actors/epilogue'
+// import weeping from 'assets/svgs/actors/catherine/weeping'
+// import quipping from 'assets/svgs/actors/catherine/quipping'
+// import puzzled from 'assets/svgs/actors/catherine/puzzled'
+// import gopi from 'assets/svgs/actors/catherine/gopi'
+// import epilogue from 'assets/svgs/actors/catherine/epilogue'
 
 import {
     WEEPING,

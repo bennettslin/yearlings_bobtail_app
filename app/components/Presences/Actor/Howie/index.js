@@ -1,11 +1,11 @@
-// import usherWaiting from 'assets/svgs/actors/usherWaiting'
-// import usherLooking from 'assets/svgs/actors/usherLooking'
-// import abbeyRoad from 'assets/svgs/actors/abbeyRoad'
-// import walgreens from 'assets/svgs/actors/walgreens'
-// import steamTunnel from 'assets/svgs/actors/steamTunnel'
-// import stationWagon from 'assets/svgs/actors/stationWagon'
-// import attic from 'assets/svgs/actors/attic'
-// import epilogue from 'assets/svgs/actors/epilogue'
+// import usherWaiting from 'assets/svgs/actors/howie/usherWaiting'
+// import usherLooking from 'assets/svgs/actors/howie/usherLooking'
+// import abbeyRoad from 'assets/svgs/actors/howie/abbeyRoad'
+// import walgreens from 'assets/svgs/actors/howie/walgreens'
+// import steamTunnel from 'assets/svgs/actors/howie/steamTunnel'
+// import stationWagon from 'assets/svgs/actors/howie/stationWagon'
+// import attic from 'assets/svgs/actors/howie/attic'
+// import epilogue from 'assets/svgs/actors/howie/epilogue'
 
 import {
     USHER_WAITING,

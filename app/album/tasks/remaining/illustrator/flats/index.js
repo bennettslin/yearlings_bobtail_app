@@ -112,12 +112,12 @@ export default [
     {
         taskName: 'stJosephsChurch',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: 'campanile',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: 'museumDisplay',
@@ -127,7 +127,7 @@ export default [
     {
         taskName: 'royceHall',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: 'pharmacyAisle',

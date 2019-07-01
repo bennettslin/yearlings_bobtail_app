@@ -1,10 +1,10 @@
-// import infantCurious from 'assets/svgs/actors/infantCurious'
-// import infantNursing from 'assets/svgs/actors/infantNursing'
-// import perfuming from 'assets/svgs/actors/perfuming'
-// import tennis from 'assets/svgs/actors/tennis'
-// import reversing from 'assets/svgs/actors/reversing'
-// import gopi from 'assets/svgs/actors/gopi'
-// import epilogue from '../MiriamTristan/Instances/Greeting'
+// import infantCurious from 'assets/svgs/actors/miriam/infantCurious'
+// import infantNursing from 'assets/svgs/actors/miriam/infantNursing'
+// import perfuming from 'assets/svgs/actors/miriam/perfuming'
+// import tennis from 'assets/svgs/actors/miriam/tennis'
+// import reversing from 'assets/svgs/actors/miriam/reversing'
+// import gopi from 'assets/svgs/actors/miriam/gopi'
+// import epilogue from 'assets/svgs/actors/miriam/epilogue'
 
 import {
     INFANT_CURIOUS,

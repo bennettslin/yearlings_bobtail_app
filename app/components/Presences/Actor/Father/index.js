@@ -1,9 +1,9 @@
-// import roaring from 'assets/svgs/actors/roaring'
-// import accusatory from 'assets/svgs/actors/accusatory'
-// import past from 'assets/svgs/actors/past'
-// import future from 'assets/svgs/actors/future'
-// import reeling from 'assets/svgs/actors/reeling'
-// import epilogue from 'assets/svgs/actors/epilogue'
+// import roaring from 'assets/svgs/actors/father/roaring'
+// import accusatory from 'assets/svgs/actors/father/accusatory'
+// import past from 'assets/svgs/actors/father/past'
+// import future from 'assets/svgs/actors/father/future'
+// import reeling from 'assets/svgs/actors/father/reeling'
+// import epilogue from 'assets/svgs/actors/father/epilogue'
 
 import {
     ROARING,

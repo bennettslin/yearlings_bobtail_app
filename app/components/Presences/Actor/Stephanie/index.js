@@ -1,11 +1,11 @@
-// import bennettKeyboard from 'assets/svgs/actors/bennettKeyboard'
-// import flapper from 'assets/svgs/actors/flapper'
-// import squeezing from 'assets/svgs/actors/squeezing'
-// import mingling from 'assets/svgs/actors/mingling'
-// import bennettDefiant from 'assets/svgs/actors/bennettDefiant'
-// import bennettRecording from 'assets/svgs/actors/bennettRecording'
-// import protester from 'assets/svgs/actors/protester'
-// import epilogue from 'assets/svgs/actors/epilogue'
+// import bennettKeyboard from 'assets/svgs/actors/stephanie/bennettKeyboard'
+// import flapper from 'assets/svgs/actors/stephanie/flapper'
+// import squeezing from 'assets/svgs/actors/stephanie/squeezing'
+// import mingling from 'assets/svgs/actors/stephanie/mingling'
+// import bennettDefiant from 'assets/svgs/actors/stephanie/bennettDefiant'
+// import bennettRecording from 'assets/svgs/actors/stephanie/bennettRecording'
+// import protester from 'assets/svgs/actors/stephanie/protester'
+// import epilogue from 'assets/svgs/actors/stephanie/epilogue'
 
 import {
     BENNETT_KEYBOARD,

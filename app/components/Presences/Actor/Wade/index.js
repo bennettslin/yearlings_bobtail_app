@@ -1,8 +1,8 @@
-// import catholicGuy from 'assets/svgs/actors/catholicGuy'
-// import watching from 'assets/svgs/actors/watching'
-// import mingling from 'assets/svgs/actors/mingling'
-// import protester from 'assets/svgs/actors/protester'
-// import epilogue from 'assets/svgs/actors/epilogue'
+// import catholicGuy from 'assets/svgs/actors/wade/catholicGuy'
+// import watching from 'assets/svgs/actors/wade/watching'
+// import mingling from 'assets/svgs/actors/wade/mingling'
+// import protester from 'assets/svgs/actors/wade/protester'
+// import epilogue from 'assets/svgs/actors/wade/epilogue'
 
 import {
     CATHOLIC_GUY,

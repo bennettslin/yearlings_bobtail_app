@@ -1,4 +1,4 @@
-// import eating from 'assets/svgs/actors/eating'
+// import eating from 'assets/svgs/actors/jacobMara/eating'
 
 import { EATING } from 'constants/scene/actors/instances/songs'
 
