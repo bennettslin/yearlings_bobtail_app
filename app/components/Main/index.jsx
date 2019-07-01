@@ -88,7 +88,8 @@ class Main extends PureComponent {
                     className: cx(
                         'Main',
                         'width__mainColumn',
-                        'abF'
+                        'abF',
+                        'ovH'
                     ),
                     style: {
                         top: `${menuHeight}px`,
