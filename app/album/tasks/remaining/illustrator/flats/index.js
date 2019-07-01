@@ -30,11 +30,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'caveShadows',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'taiwanClouds',
         workedHours: 0,
         neededHours: 1
@@ -141,16 +136,6 @@ export default [
     },
     {
         taskName: 'cemeteryHillsNear',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'crowdNear',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'crowdFar',
         workedHours: 0,
         neededHours: 1
     },

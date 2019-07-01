@@ -5,37 +5,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'playgroundSlide',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'mirroredSink',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'towelRack',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'campfire',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'trollShadowLeft',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'trollShadowRight',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'stalactites',
         workedHours: 0,
         neededHours: 1
     },
@@ -136,11 +111,6 @@ export default [
     },
     {
         taskName: 'codeBox',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'television',
         workedHours: 0,
         neededHours: 1
     },

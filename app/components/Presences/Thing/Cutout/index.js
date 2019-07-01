@@ -1,7 +1,7 @@
 // import fireHydrant from 'assets/svgs/cutouts/fireHydrant.svg'
-// import playgroundSlide from 'assets/svgs/cutouts/playgroundSlide.svg'
+import playgroundSlide from 'assets/svgs/cutouts/playgroundSlide.svg'
 // import mirroredSink from 'assets/svgs/cutouts/mirroredSink.svg'
-// import towelRack from 'assets/svgs/cutouts/towelRack.svg'
+import towelRack from 'assets/svgs/cutouts/towelRack.svg'
 import overpassSignFront from 'assets/svgs/cutouts/overpassSignFront.svg'
 import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack.svg'
 import porchPlant from 'assets/svgs/cutouts/porchPlant.svg'
@@ -39,7 +39,7 @@ import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
 // import storageBoxes from 'assets/svgs/cutouts/storageBoxes.svg'
 // import storageChest from 'assets/svgs/cutouts/storageChest.svg'
 // import howieFridge from 'assets/svgs/cutouts/howieFridge.svg'
-// import television from 'assets/svgs/cutouts/television.svg'
+import television from 'assets/svgs/cutouts/television.svg'
 import monitorSide from 'assets/svgs/cutouts/monitorSide.svg'
 import wallSpeakerSide from 'assets/svgs/cutouts/wallSpeakerSide.svg'
 import twinStreetlamp from 'assets/svgs/cutouts/twinStreetlamp.svg'
@@ -118,9 +118,9 @@ import {
 
 export default {
     [FIRE_HYDRANT]: false,
-    [PLAYGROUND_SLIDE]: false,
+    [PLAYGROUND_SLIDE]: playgroundSlide,
     [MIRRORED_SINK]: false,
-    [TOWEL_RACK]: false,
+    [TOWEL_RACK]: towelRack,
     [OVERPASS_SIGN_FRONT]: overpassSignFront,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
     [PORCH_PLANT__LEFT]: porchPlant,
@@ -164,7 +164,7 @@ export default {
     [STORAGE_BOXES]: false,
     [STORAGE_CHEST]: false,
     [HOWIE_FRIDGE]: false,
-    [TELEVISION]: false,
+    [TELEVISION]: television,
     [MONITOR_SIDE__CROWD]: monitorSide,
     [MONITOR_SIDE__STAGE]: monitorSide,
     [WALL_SPEAKER_SIDE__CROWD]: wallSpeakerSide,

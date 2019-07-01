@@ -15,6 +15,8 @@
 ## File creation.
 * Create temporary subfolder in ~todo.
 * Move tif into subfolder.
+* If necessary, double the size.
+    * Shortcut is Option-Command-I. Just multiply width by 2.
 * In tif, create enough layers for no shape to touch another.
     * Shortcut is Shift-Command-N.
 * Create another layer for details that are open paths.

@@ -143,5 +143,35 @@ export default [
         taskName: 'lizCouch',
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: 'caveShadows',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'trollShadowLeft',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'trollShadowRight',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'stalactites',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'crowdNear',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'crowdFar',
+        workedHours: 0,
+        neededHours: 1
     }
 ]

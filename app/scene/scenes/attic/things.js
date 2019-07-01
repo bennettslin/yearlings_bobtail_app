@@ -42,11 +42,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [TELEVISION]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 1.5,
-                zHeight: 1
-            }
+            xPosition: 3.5,
+            scaleFactor: 0.3
         }
     },
     [PANEL]: {

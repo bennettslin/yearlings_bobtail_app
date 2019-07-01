@@ -28,11 +28,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [PLAYGROUND_SLIDE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 2,
-                zHeight: 3
-            }
+            xPosition: 4,
+            scaleFactor: 0.3
         }
     },
     [FIXTURE]: {

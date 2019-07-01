@@ -113,5 +113,20 @@ export default [
         taskName: 'wallSpeakerSide',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'playgroundSlide',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'towelRack',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'television',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

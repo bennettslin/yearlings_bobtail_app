@@ -37,12 +37,9 @@ export const THINGS_BATHROOM_BATHING = {
         },
         [TOWEL_RACK]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 2,
-                zHeight: 2,
-                zOffset: 3
-            }
+            xPosition: 3,
+            zOffset: 1.5,
+            scaleFactor: 0.32
         }
     }
 }
