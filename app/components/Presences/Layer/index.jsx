@@ -4,7 +4,7 @@ import keys from 'lodash.keys'
 import { connect } from 'react-redux'
 
 import Presence from '../Presence'
-import { getMapForPresenceType } from '../helper'
+import { getMapForPresenceType } from '../Thing/helper'
 import { getMapForActorKey } from '../Actor/helper'
 
 import { ACTOR } from 'constants/scene'

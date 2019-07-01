@@ -7,12 +7,9 @@ import isString from 'lodash.isstring'
 import PresenceSvg from 'modules/PresenceSvg'
 import Svg from 'modules/Svg'
 
-import {
-    getMapForPresenceType,
-    getArrangementForPresenceType
-} from '../../helper'
-
+import { getArrangementForPresenceType } from '../helper'
 import { getMapForActorKey } from '../../Actor/helper'
+import { getMapForPresenceType } from '../../Thing/helper'
 
 import { getPresenceXY, getPresenceXYWidthHeight } from './helper'
 import { capitaliseForClassName } from 'helpers/format'
