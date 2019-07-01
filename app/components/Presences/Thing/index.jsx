@@ -26,19 +26,21 @@ const ThingLayer = ({
     [PANEL]: panels,
     [PUPPET]: puppets
 
-}) => (
-    <___>
-        <Layer {...backdrops} {...{ presenceType: BACKDROP }} />
-        <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
-        <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
-        <Layer {...cutouts} {...{ presenceType: CUTOUT }} />
-        <Layer {...fixtures} {...{ presenceType: FIXTURE }} />
-        <Layer {...flats} {...{ presenceType: FLAT }} />
-        <Layer {...furnitures} {...{ presenceType: FURNITURE }} />
-        <Layer {...panels} {...{ presenceType: PANEL }} />
-        <Layer {...puppets} {...{ presenceType: PUPPET }} />
-    </___>
-)
+}) => {
+    return (
+        <___>
+            <Layer {...backdrops} {...{ presenceType: BACKDROP }} />
+            <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
+            <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
+            <Layer {...cutouts} {...{ presenceType: CUTOUT }} />
+            <Layer {...fixtures} {...{ presenceType: FIXTURE }} />
+            <Layer {...flats} {...{ presenceType: FLAT }} />
+            <Layer {...furnitures} {...{ presenceType: FURNITURE }} />
+            <Layer {...panels} {...{ presenceType: PANEL }} />
+            <Layer {...puppets} {...{ presenceType: PUPPET }} />
+        </___>
+    )
+}
 
 ThingLayer.propTypes = {
     [BACKDROP]: PropTypes.object,

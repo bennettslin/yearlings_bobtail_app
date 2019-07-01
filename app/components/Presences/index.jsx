@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import ActorLayers from './Actor'
+import ActorLayer from './Actor'
 import ThingLayer from './Thing'
 
 import { getScene } from 'album/api/scenes'
@@ -69,7 +69,7 @@ class Presences extends PureComponent {
                     <ThingLayer {...rest} />
 
                     {/* Each individual actor has its own layer. */}
-                    <ActorLayers {...actors} />
+                    <ActorLayer {...actors} />
                 </div>
             )
 
