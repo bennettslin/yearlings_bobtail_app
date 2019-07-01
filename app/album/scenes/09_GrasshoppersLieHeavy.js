@@ -69,6 +69,7 @@ import {
 } from '../../constants/scene/things/bubbles'
 
 import {
+    CODE_BOX,
     CLIPBOARD,
     PAINTING
 } from '../../constants/scene/things/cardboards'
@@ -76,7 +77,6 @@ import {
 import {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
-    CODE_BOX,
     WAITING_ROOM_PLANT
 } from '../../constants/scene/things/cutouts'
 
@@ -258,9 +258,11 @@ export default [
                     }
                 }
             },
-            [CUTOUT]: {
-                [APARTMENT_PLANT]: true,
+            [CARDBOARD]: {
                 [CODE_BOX]: true
+            },
+            [CUTOUT]: {
+                [APARTMENT_PLANT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -289,9 +291,11 @@ export default [
                     }
                 }
             },
-            [CUTOUT]: {
-                [APARTMENT_PLANT]: true,
+            [CARDBOARD]: {
                 [CODE_BOX]: true
+            },
+            [CUTOUT]: {
+                [APARTMENT_PLANT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,

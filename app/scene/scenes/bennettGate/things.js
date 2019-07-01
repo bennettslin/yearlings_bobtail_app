@@ -1,18 +1,12 @@
 import {
+    CARDBOARD,
     CUTOUT
 } from 'constants/scene'
-import {
-    APARTMENT_PLANT,
-    CODE_BOX
-} from 'constants/scene/things/cutouts'
+import { CODE_BOX } from 'constants/scene/things/cardboards'
+import { APARTMENT_PLANT } from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUT]: {
-        [APARTMENT_PLANT]: {
-            yIndex: 2,
-            xPosition: 2.5,
-            scaleFactor: 0.35
-        },
+    [CARDBOARD]: {
         [CODE_BOX]: {
             yIndex: 2,
             arrangement: {
@@ -21,6 +15,13 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 1,
                 zOffset: 3
             }
+        }
+    },
+    [CUTOUT]: {
+        [APARTMENT_PLANT]: {
+            yIndex: 2,
+            xPosition: 2.5,
+            scaleFactor: 0.35
         }
     }
 }

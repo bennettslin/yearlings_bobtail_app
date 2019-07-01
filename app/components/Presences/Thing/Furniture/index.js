@@ -1,11 +1,11 @@
-// import captainBedPillow from 'assets/svgs/furnitures/captainBedPillow'
-// import captainBedBlanket from 'assets/svgs/furnitures/captainBedBlanket'
-// import bennettPillow from 'assets/svgs/furnitures/bennettPillow'
-// import bennettBlanket from 'assets/svgs/furnitures/bennettBlanket'
-// import lizPillowsPile from 'assets/svgs/furnitures/lizPillowsPile'
-// import lizPillowsPileReflection from 'assets/svgs/furnitures/lizPillowsPileReflection'
-// import lizBlanketPile from 'assets/svgs/furnitures/lizBlanketPile'
-// import lizBlanketPileReflection from 'assets/svgs/furnitures/lizBlanketPileReflection'
+// import captainBedPillow from 'assets/svgs/furnitures/captainBedPillow.svg'
+// import captainBedBlanket from 'assets/svgs/furnitures/captainBedBlanket.svg'
+// import bennettPillow from 'assets/svgs/furnitures/bennettPillow.svg'
+// import bennettBlanket from 'assets/svgs/furnitures/bennettBlanket.svg'
+// import lizPillowsPile from 'assets/svgs/furnitures/lizPillowsPile.svg'
+// import lizPillowsPileReflection from 'assets/svgs/furnitures/lizPillowsPileReflection.svg'
+// import lizBlanketPile from 'assets/svgs/furnitures/lizBlanketPile.svg'
+// import lizBlanketPileReflection from 'assets/svgs/furnitures/lizBlanketPileReflection.svg'
 
 import {
     CAPTAIN_BED_PILLOW,

@@ -35,7 +35,6 @@ import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
 // import stageLights from 'assets/svgs/cutouts/stageLights.svg'
 import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
-// import codeBox from 'assets/svgs/cutouts/codeBox.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
 // import storageBoxes from 'assets/svgs/cutouts/storageBoxes.svg'
 // import storageChest from 'assets/svgs/cutouts/storageChest.svg'
@@ -96,7 +95,6 @@ import {
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
-    CODE_BOX,
     WAITING_ROOM_PLANT,
     STORAGE_BOXES,
     STORAGE_CHEST,
@@ -162,7 +160,6 @@ export default {
     [STAGE_LIGHTS]: false,
     [TRAFFIC_LIGHT]: trafficLight,
     [APARTMENT_PLANT]: apartmentPlant,
-    [CODE_BOX]: false,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
     [STORAGE_BOXES]: false,
     [STORAGE_CHEST]: false,
