@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types'
-
-import Panicked from './Instances/Panicked'
-import Flustered from './Instances/Flustered'
-import Bathing from './Instances/Bathing'
-import Singing from './Instances/Singing'
-import YoungChild from './Instances/YoungChild'
+// import panicked from 'assets/svgs/actors/youngBennett/panicked'
+// import flustered from 'assets/svgs/actors/youngBennett/flustered'
+// import bathing from 'assets/svgs/actors/youngBennett/bathing'
+// import singing from 'assets/svgs/actors/youngBennett/singing'
+// import youngChild from 'assets/svgs/actors/youngBennett/youngChild'
 
 import {
     PANICKED,
@@ -13,22 +11,12 @@ import {
     SINGING
 } from 'constants/scene/actors/instances/youngBennett'
 
-import {
-    YOUNG_CHILD
-} from 'constants/scene/actors/instances/songs'
-
-export const propTypes = {
-    [PANICKED]: PropTypes.bool,
-    [FLUSTERED]: PropTypes.bool,
-    [BATHING]: PropTypes.bool,
-    [SINGING]: PropTypes.bool,
-    [YOUNG_CHILD]: PropTypes.bool
-}
+import { YOUNG_CHILD } from 'constants/scene/actors/instances/songs'
 
 export default {
-    [PANICKED]: Panicked,
-    [FLUSTERED]: Flustered,
-    [BATHING]: Bathing,
-    [SINGING]: Singing,
-    [YOUNG_CHILD]: YoungChild
+    [PANICKED]: false,
+    [FLUSTERED]: false,
+    [BATHING]: false,
+    [SINGING]: false,
+    [YOUNG_CHILD]: false
 }

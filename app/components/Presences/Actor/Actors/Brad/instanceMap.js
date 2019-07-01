@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types'
-
-import Gesturing from './Instances/Gesturing'
-import Snacking from './Instances/Snacking'
-import Epilogue from './Instances/Epilogue'
+// import gesturing from 'assets/svgs/actors/gesturing'
+// import snacking from 'assets/svgs/actors/snacking'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     GESTURING,
@@ -11,14 +9,8 @@ import {
 
 import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [GESTURING]: PropTypes.bool,
-    [SNACKING]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [GESTURING]: Gesturing,
-    [SNACKING]: Snacking,
-    [EPILOGUE]: Epilogue
+    [GESTURING]: false,
+    [SNACKING]: false,
+    [EPILOGUE]: false
 }

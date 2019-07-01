@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types'
-
-import Curious from './Instances/Curious'
-import Snickering from './Instances/Snickering'
-import YoungChild from './Instances/YoungChild'
-import Epilogue from './Instances/Epilogue'
+// import curious from 'assets/svgs/actors/curious'
+// import snickering from 'assets/svgs/actors/snickering'
+// import youngChild from 'assets/svgs/actors/youngChild'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     CURIOUS,
@@ -15,16 +13,9 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [CURIOUS]: PropTypes.bool,
-    [SNICKERING]: PropTypes.bool,
-    [YOUNG_CHILD]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [CURIOUS]: Curious,
-    [SNICKERING]: Snickering,
-    [YOUNG_CHILD]: YoungChild,
-    [EPILOGUE]: Epilogue
+    [CURIOUS]: false,
+    [SNICKERING]: false,
+    [YOUNG_CHILD]: false,
+    [EPILOGUE]: false
 }

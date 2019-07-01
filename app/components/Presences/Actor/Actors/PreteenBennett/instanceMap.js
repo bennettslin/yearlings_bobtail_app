@@ -1,22 +1,20 @@
-import PropTypes from 'prop-types'
-
-import Cautious from './Instances/Cautious'
-import Enraged from './Instances/Enraged'
-import Fearful from './Instances/Fearful'
-import Panicked from './Instances/Panicked'
-import Mat from './Instances/Mat'
-import Stairs from './Instances/Stairs'
-import Gate from './Instances/Gate'
-import Rickshaw from './Instances/Rickshaw'
-import Shore from './Instances/Shore'
-import Buoy from './Instances/Buoy'
-import OceanFloor from './Instances/OceanFloor'
-import FeigningSick from './Instances/FeigningSick'
-import Asleep from './Instances/Asleep'
-import Shaken from './Instances/Shaken'
-import Stoic from './Instances/Stoic'
-import Wistful from './Instances/Wistful'
-import Sheepish from './Instances/Sheepish'
+// import cautious from 'assets/svgs/actors/cautious'
+// import enraged from 'assets/svgs/actors/enraged'
+// import fearful from 'assets/svgs/actors/fearful'
+// import panicked from 'assets/svgs/actors/panicked'
+// import mat from 'assets/svgs/actors/mat'
+// import stairs from 'assets/svgs/actors/stairs'
+// import gate from 'assets/svgs/actors/gate'
+// import rickshaw from 'assets/svgs/actors/rickshaw'
+// import shore from 'assets/svgs/actors/shore'
+// import buoy from 'assets/svgs/actors/buoy'
+// import oceanFloor from 'assets/svgs/actors/oceanFloor'
+// import feigningSick from 'assets/svgs/actors/feigningSick'
+// import asleep from 'assets/svgs/actors/asleep'
+// import shaken from 'assets/svgs/actors/shaken'
+// import stoic from 'assets/svgs/actors/stoic'
+// import wistful from 'assets/svgs/actors/wistful'
+// import sheepish from 'assets/svgs/actors/sheepish'
 
 import {
     CAUTIOUS,
@@ -39,42 +37,22 @@ import {
 
 import { ASLEEP } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [CAUTIOUS]: PropTypes.bool,
-    [ENRAGED]: PropTypes.bool,
-    [FEARFUL]: PropTypes.bool,
-    [PANICKED]: PropTypes.bool,
-    [MAT]: PropTypes.bool,
-    [STAIRS]: PropTypes.bool,
-    [GATE]: PropTypes.bool,
-    [RICKSHAW]: PropTypes.bool,
-    [SHORE]: PropTypes.bool,
-    [BUOY]: PropTypes.bool,
-    [OCEAN_FLOOR]: PropTypes.bool,
-    [FEIGNING_SICK]: PropTypes.bool,
-    [ASLEEP]: PropTypes.bool,
-    [SHAKEN]: PropTypes.bool,
-    [STOIC]: PropTypes.bool,
-    [WISTFUL]: PropTypes.bool,
-    [SHEEPISH]: PropTypes.bool
-}
-
 export default {
-    [CAUTIOUS]: Cautious,
-    [ENRAGED]: Enraged,
-    [FEARFUL]: Fearful,
-    [PANICKED]: Panicked,
-    [MAT]: Mat,
-    [STAIRS]: Stairs,
-    [GATE]: Gate,
-    [RICKSHAW]: Rickshaw,
-    [SHORE]: Shore,
-    [BUOY]: Buoy,
-    [OCEAN_FLOOR]: OceanFloor,
-    [FEIGNING_SICK]: FeigningSick,
-    [ASLEEP]: Asleep,
-    [SHAKEN]: Shaken,
-    [STOIC]: Stoic,
-    [WISTFUL]: Wistful,
-    [SHEEPISH]: Sheepish
+    [CAUTIOUS]: false,
+    [ENRAGED]: false,
+    [FEARFUL]: false,
+    [PANICKED]: false,
+    [MAT]: false,
+    [STAIRS]: false,
+    [GATE]: false,
+    [RICKSHAW]: false,
+    [SHORE]: false,
+    [BUOY]: false,
+    [OCEAN_FLOOR]: false,
+    [FEIGNING_SICK]: false,
+    [ASLEEP]: false,
+    [SHAKEN]: false,
+    [STOIC]: false,
+    [WISTFUL]: false,
+    [SHEEPISH]: false
 }

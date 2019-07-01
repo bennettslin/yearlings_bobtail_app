@@ -1,16 +1,14 @@
-import PropTypes from 'prop-types'
-
-import Squatting from './Instances/Squatting'
-import Eating from './Instances/Eating'
-import AbbeyRoad from './Instances/AbbeyRoad'
-import Walgreens from './Instances/Walgreens'
-import SteamTunnel from './Instances/SteamTunnel'
-import StationWagon from './Instances/StationWagon'
-import Performing from './Instances/Performing'
-import Waiting from './Instances/Waiting'
-import Chuckling from './Instances/Chuckling'
-import Smirking from './Instances/Smirking'
-import Epilogue from './Instances/Epilogue'
+// import squatting from 'assets/svgs/actors/squatting'
+// import eating from 'assets/svgs/actors/eating'
+// import abbeyRoad from 'assets/svgs/actors/abbeyRoad'
+// import walgreens from 'assets/svgs/actors/walgreens'
+// import steamTunnel from 'assets/svgs/actors/steamTunnel'
+// import stationWagon from 'assets/svgs/actors/stationWagon'
+// import performing from 'assets/svgs/actors/performing'
+// import waiting from 'assets/svgs/actors/waiting'
+// import chuckling from 'assets/svgs/actors/chuckling'
+// import smirking from 'assets/svgs/actors/smirking'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     SQUATTING,
@@ -29,30 +27,16 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [SQUATTING]: PropTypes.bool,
-    [EATING]: PropTypes.bool,
-    [ABBEY_ROAD]: PropTypes.bool,
-    [WALGREENS]: PropTypes.bool,
-    [STEAM_TUNNEL]: PropTypes.bool,
-    [STATION_WAGON]: PropTypes.bool,
-    [PERFORMING]: PropTypes.bool,
-    [WAITING]: PropTypes.bool,
-    [CHUCKLING]: PropTypes.bool,
-    [SMIRKING]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [SQUATTING]: Squatting,
-    [EATING]: Eating,
-    [ABBEY_ROAD]: AbbeyRoad,
-    [WALGREENS]: Walgreens,
-    [STEAM_TUNNEL]: SteamTunnel,
-    [STATION_WAGON]: StationWagon,
-    [PERFORMING]: Performing,
-    [WAITING]: Waiting,
-    [CHUCKLING]: Chuckling,
-    [SMIRKING]: Smirking,
-    [EPILOGUE]: Epilogue
+    [SQUATTING]: false,
+    [EATING]: false,
+    [ABBEY_ROAD]: false,
+    [WALGREENS]: false,
+    [STEAM_TUNNEL]: false,
+    [STATION_WAGON]: false,
+    [PERFORMING]: false,
+    [WAITING]: false,
+    [CHUCKLING]: false,
+    [SMIRKING]: false,
+    [EPILOGUE]: false
 }

@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import reassuringEnchanted from 'assets/svgs/actors/reassuringEnchanted'
 
-import ReassuringEnchanted from './Instances/ReassuringEnchanted'
-
-import {
-    REASSURING_ENCHANTED
-} from 'constants/scene/actors/instances/christopherBennettWilly'
-
-export const propTypes = {
-    [REASSURING_ENCHANTED]: PropTypes.bool
-}
+import { REASSURING_ENCHANTED } from 'constants/scene/actors/instances/christopherBennettWilly'
 
 export default {
-    [REASSURING_ENCHANTED]: ReassuringEnchanted
+    [REASSURING_ENCHANTED]: false
 }

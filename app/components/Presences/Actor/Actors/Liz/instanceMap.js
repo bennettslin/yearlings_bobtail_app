@@ -1,23 +1,21 @@
-import PropTypes from 'prop-types'
-
-import DateEnding from './Instances/DateEnding'
-import Museum from './Instances/Museum'
-import Backstage from './Instances/Backstage'
-import GoKarts from './Instances/GoKarts'
-import DateEnded from './Instances/DateEnded'
-import DishroomLancet from './Instances/DishroomLancet'
-import GateCode from './Instances/GateCode'
-import RumpledLinens from './Instances/RumpledLinens'
-import AsleepReaching from './Instances/AsleepReaching'
-import LeavingCrumbled from './Instances/LeavingCrumbled'
-import PettingStanding from './Instances/PettingStanding'
-import SiftingTchotchkes from './Instances/SiftingTchotchkes'
-import OpeningDoor from './Instances/OpeningDoor'
-import Defending from './Instances/Defending'
-import NotHungry from './Instances/NotHungry'
-import AsleepCouch from './Instances/AsleepCouch'
-import PettingSeated from './Instances/PettingSeated'
-import ElTorito from './Instances/ElTorito'
+// import dateEnding from 'assets/svgs/actors/dateEnding'
+// import museum from 'assets/svgs/actors/museum'
+// import backstage from 'assets/svgs/actors/backstage'
+// import goKarts from 'assets/svgs/actors/goKarts'
+// import dateEnded from 'assets/svgs/actors/dateEnded'
+// import dishroomLancet from 'assets/svgs/actors/dishroomLancet'
+// import gateCode from 'assets/svgs/actors/gateCode'
+// import rumpledLinens from 'assets/svgs/actors/rumpledLinens'
+// import asleepReaching from 'assets/svgs/actors/asleepReaching'
+// import leavingCrumbled from 'assets/svgs/actors/leavingCrumbled'
+// import pettingStanding from 'assets/svgs/actors/pettingStanding'
+// import siftingTchotchkes from 'assets/svgs/actors/siftingTchotchkes'
+// import openingDoor from 'assets/svgs/actors/openingDoor'
+// import defending from 'assets/svgs/actors/defending'
+// import notHungry from 'assets/svgs/actors/notHungry'
+// import asleepCouch from 'assets/svgs/actors/asleepCouch'
+// import pettingSeated from 'assets/svgs/actors/pettingSeated'
+// import elTorito from 'assets/svgs/actors/elTorito'
 
 import {
     ASLEEP_REACHING,
@@ -43,44 +41,23 @@ import {
     EL_TORITO
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [DATE_ENDING]: PropTypes.bool,
-    [MUSEUM]: PropTypes.bool,
-    [BACKSTAGE]: PropTypes.bool,
-    [GO_KARTS]: PropTypes.bool,
-    [DATE_ENDED]: PropTypes.bool,
-    [DISHROOM_LANCET]: PropTypes.bool,
-    [GATE_CODE]: PropTypes.bool,
-    [RUMPLED_LINENS]: PropTypes.bool,
-    [ASLEEP_REACHING]: PropTypes.bool,
-    [LEAVING_CRUMBLED]: PropTypes.bool,
-    [PETTING_SEATED]: PropTypes.bool,
-    [PETTING_STANDING]: PropTypes.bool,
-    [SIFTING_TCHOTCHKES]: PropTypes.bool,
-    [OPENING_DOOR]: PropTypes.bool,
-    [DEFENDING]: PropTypes.bool,
-    [NOT_HUNGRY]: PropTypes.bool,
-    [ASLEEP_COUCH]: PropTypes.bool,
-    [EL_TORITO]: PropTypes.bool
-}
-
 export default {
-    [DATE_ENDING]: DateEnding,
-    [MUSEUM]: Museum,
-    [BACKSTAGE]: Backstage,
-    [GO_KARTS]: GoKarts,
-    [DATE_ENDED]: DateEnded,
-    [DISHROOM_LANCET]: DishroomLancet,
-    [GATE_CODE]: GateCode,
-    [RUMPLED_LINENS]: RumpledLinens,
-    [ASLEEP_REACHING]: AsleepReaching,
-    [LEAVING_CRUMBLED]: LeavingCrumbled,
-    [PETTING_SEATED]: PettingSeated,
-    [PETTING_STANDING]: PettingStanding,
-    [SIFTING_TCHOTCHKES]: SiftingTchotchkes,
-    [OPENING_DOOR]: OpeningDoor,
-    [DEFENDING]: Defending,
-    [NOT_HUNGRY]: NotHungry,
-    [ASLEEP_COUCH]: AsleepCouch,
-    [EL_TORITO]: ElTorito
+    [DATE_ENDING]: false,
+    [MUSEUM]: false,
+    [BACKSTAGE]: false,
+    [GO_KARTS]: false,
+    [DATE_ENDED]: false,
+    [DISHROOM_LANCET]: false,
+    [GATE_CODE]: false,
+    [RUMPLED_LINENS]: false,
+    [ASLEEP_REACHING]: false,
+    [LEAVING_CRUMBLED]: false,
+    [PETTING_SEATED]: false,
+    [PETTING_STANDING]: false,
+    [SIFTING_TCHOTCHKES]: false,
+    [OPENING_DOOR]: false,
+    [DEFENDING]: false,
+    [NOT_HUNGRY]: false,
+    [ASLEEP_COUCH]: false,
+    [EL_TORITO]: false
 }

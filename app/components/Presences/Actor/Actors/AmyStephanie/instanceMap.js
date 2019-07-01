@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import squeezing from 'assets/svgs/actors/squeezing'
 
-import Squeezing from './Instances/Squeezing'
-
-import {
-    SQUEEZING
-} from 'constants/scene/actors/instances/amyStephanie'
-
-export const propTypes = {
-    [SQUEEZING]: PropTypes.bool
-}
+import { SQUEEZING } from 'constants/scene/actors/instances/amyStephanie'
 
 export default {
-    [SQUEEZING]: Squeezing
+    [SQUEEZING]: false
 }

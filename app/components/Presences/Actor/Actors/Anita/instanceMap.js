@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types'
-
-import Exasperated from './Instances/Exasperated'
-import Concerned from './Instances/Concerned'
-import Cheering from './Instances/Cheering'
-import YoungChild from './Instances/YoungChild'
+// import exasperated from 'assets/svgs/actors/exasperated'
+// import concerned from 'assets/svgs/actors/concerned'
+// import cheering from 'assets/svgs/actors/cheering'
+// import youngChild from 'assets/svgs/actors/youngChild'
 
 import {
     EXASPERATED,
@@ -11,20 +9,11 @@ import {
     CHEERING
 } from 'constants/scene/actors/instances/anita'
 
-import {
-    YOUNG_CHILD
-} from 'constants/scene/actors/instances/songs'
-
-export const propTypes = {
-    [EXASPERATED]: PropTypes.bool,
-    [CONCERNED]: PropTypes.bool,
-    [CHEERING]: PropTypes.bool,
-    [YOUNG_CHILD]: PropTypes.bool
-}
+import { YOUNG_CHILD } from 'constants/scene/actors/instances/songs'
 
 export default {
-    [EXASPERATED]: Exasperated,
-    [CONCERNED]: Concerned,
-    [CHEERING]: Cheering,
-    [YOUNG_CHILD]: YoungChild
+    [EXASPERATED]: false,
+    [CONCERNED]: false,
+    [CHEERING]: false,
+    [YOUNG_CHILD]: false
 }

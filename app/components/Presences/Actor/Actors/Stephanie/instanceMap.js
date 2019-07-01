@@ -1,13 +1,11 @@
-import PropTypes from 'prop-types'
-
-import BennettKeyboard from './Instances/BennettKeyboard'
-import Flapper from './Instances/Flapper'
-import Squeezing from './Instances/Squeezing'
-import Mingling from './Instances/Mingling'
-import BennettDefiant from './Instances/BennettDefiant'
-import BennettRecording from './Instances/BennettRecording'
-import Protester from './Instances/Protester'
-import Epilogue from './Instances/Epilogue'
+// import bennettKeyboard from 'assets/svgs/actors/bennettKeyboard'
+// import flapper from 'assets/svgs/actors/flapper'
+// import squeezing from 'assets/svgs/actors/squeezing'
+// import mingling from 'assets/svgs/actors/mingling'
+// import bennettDefiant from 'assets/svgs/actors/bennettDefiant'
+// import bennettRecording from 'assets/svgs/actors/bennettRecording'
+// import protester from 'assets/svgs/actors/protester'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     BENNETT_KEYBOARD,
@@ -23,24 +21,13 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [BENNETT_KEYBOARD]: PropTypes.bool,
-    [FLAPPER]: PropTypes.bool,
-    [SQUEEZING]: PropTypes.bool,
-    [MINGLING]: PropTypes.bool,
-    [BENNETT_DEFIANT]: PropTypes.bool,
-    [BENNETT_RECORDING]: PropTypes.bool,
-    [PROTESTER]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [BENNETT_KEYBOARD]: BennettKeyboard,
-    [FLAPPER]: Flapper,
-    [SQUEEZING]: Squeezing,
-    [MINGLING]: Mingling,
-    [BENNETT_DEFIANT]: BennettDefiant,
-    [BENNETT_RECORDING]: BennettRecording,
-    [PROTESTER]: Protester,
-    [EPILOGUE]: Epilogue
+    [BENNETT_KEYBOARD]: false,
+    [FLAPPER]: false,
+    [SQUEEZING]: false,
+    [MINGLING]: false,
+    [BENNETT_DEFIANT]: false,
+    [BENNETT_RECORDING]: false,
+    [PROTESTER]: false,
+    [EPILOGUE]: false
 }

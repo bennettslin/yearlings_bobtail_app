@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types'
-
-import Collecting from './Instances/Collecting'
-import Ducking from './Instances/Ducking'
-import CrossingGuard from './Instances/CrossingGuard'
-import Epilogue from './Instances/Epilogue'
+// import collecting from 'assets/svgs/actors/willy/collecting'
+// import ducking from 'assets/svgs/actors/willy/ducking'
+// import crossingGuard from 'assets/svgs/actors/willy/crossingGuard'
+// import epilogue from 'assets/svgs/actors/willy/epilogue'
 
 import {
     COLLECTING,
@@ -11,20 +9,11 @@ import {
     CROSSING_GUARD
 } from 'constants/scene/actors/instances/willy'
 
-import {
-    EPILOGUE
-} from 'constants/scene/actors/instances/songs'
-
-export const propTypes = {
-    [COLLECTING]: PropTypes.bool,
-    [DUCKING]: PropTypes.bool,
-    [CROSSING_GUARD]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
+import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
 export default {
-    [COLLECTING]: Collecting,
-    [DUCKING]: Ducking,
-    [CROSSING_GUARD]: CrossingGuard,
-    [EPILOGUE]: Epilogue
+    [COLLECTING]: false,
+    [DUCKING]: false,
+    [CROSSING_GUARD]: false,
+    [EPILOGUE]: false
 }

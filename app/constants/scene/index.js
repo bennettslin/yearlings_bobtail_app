@@ -32,6 +32,7 @@ export const FLAT = 'flat'
 export const FURNITURE = 'furniture'
 export const PANEL = 'panel'
 export const PUPPET = 'puppet'
+
 export const PRESENCE_TYPES = [
     ACTOR,
     BACKDROP,

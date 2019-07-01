@@ -1,11 +1,9 @@
-import PropTypes from 'prop-types'
-
-import Stooping from './Instances/Stooping'
-import Comforting from './Instances/Comforting'
-import Arguing from './Instances/Arguing'
-import Present from './Instances/Present'
-import Future from './Instances/Future'
-import Epilogue from './Instances/Epilogue'
+// import stooping from 'assets/svgs/actors/stooping'
+// import comforting from 'assets/svgs/actors/comforting'
+// import arguing from 'assets/svgs/actors/arguing'
+// import present from 'assets/svgs/actors/present'
+// import future from 'assets/svgs/actors/future'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     STOOPING,
@@ -19,20 +17,11 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [STOOPING]: PropTypes.bool,
-    [COMFORTING]: PropTypes.bool,
-    [ARGUING]: PropTypes.bool,
-    [PRESENT]: PropTypes.bool,
-    [FUTURE]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [STOOPING]: Stooping,
-    [COMFORTING]: Comforting,
-    [ARGUING]: Arguing,
-    [PRESENT]: Present,
-    [FUTURE]: Future,
-    [EPILOGUE]: Epilogue
+    [STOOPING]: false,
+    [COMFORTING]: false,
+    [ARGUING]: false,
+    [PRESENT]: false,
+    [FUTURE]: false,
+    [EPILOGUE]: false
 }

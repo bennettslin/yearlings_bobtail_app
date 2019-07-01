@@ -1,12 +1,10 @@
-import PropTypes from 'prop-types'
-
-import Smoker from './Instances/Smoker'
-import Flirting from './Instances/Flirting'
-import Mingling from './Instances/Mingling'
-import Officer from '../AmyNestorTomer/Instances/Officer'
-import Protester from './Instances/Protester'
-import Doctor from './Instances/Doctor'
-import Epilogue from './Instances/Epilogue'
+// import smoker from 'assets/svgs/actors/smoker'
+// import flirting from 'assets/svgs/actors/flirting'
+// import mingling from 'assets/svgs/actors/mingling'
+// import officer from '../AmyNestorTomer/Instances/Officer'
+// import protester from 'assets/svgs/actors/protester'
+// import doctor from 'assets/svgs/actors/doctor'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     SMOKER,
@@ -21,22 +19,12 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [SMOKER]: PropTypes.bool,
-    [FLIRTING]: PropTypes.bool,
-    [MINGLING]: PropTypes.bool,
-    [OFFICER]: PropTypes.bool,
-    [PROTESTER]: PropTypes.bool,
-    [DOCTOR]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [SMOKER]: Smoker,
-    [FLIRTING]: Flirting,
-    [MINGLING]: Mingling,
-    [OFFICER]: Officer,
-    [PROTESTER]: Protester,
-    [DOCTOR]: Doctor,
-    [EPILOGUE]: Epilogue
+    [SMOKER]: false,
+    [FLIRTING]: false,
+    [MINGLING]: false,
+    [OFFICER]: false,
+    [PROTESTER]: false,
+    [DOCTOR]: false,
+    [EPILOGUE]: false
 }

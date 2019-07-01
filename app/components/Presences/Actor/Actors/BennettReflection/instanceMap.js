@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import shoesReflection from 'assets/svgs/actors/shoesReflection'
 
-import ShoesReflection from './Instances/ShoesReflection'
-
-import {
-    SHOES_REFLECTION
-} from 'constants/scene/actors/instances/bennett'
-
-export const propTypes = {
-    [SHOES_REFLECTION]: PropTypes.bool
-}
+import { SHOES_REFLECTION } from 'constants/scene/actors/instances/bennett'
 
 export default {
-    [SHOES_REFLECTION]: ShoesReflection
+    [SHOES_REFLECTION]: false
 }

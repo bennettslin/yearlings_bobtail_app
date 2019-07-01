@@ -1,19 +1,12 @@
-import PropTypes from 'prop-types'
-
-import Horsing from './Instances/Horsing'
-import DryingTears from './Instances/DryingTears'
+// import horsing from 'assets/svgs/actors/horsing'
+// import dryingTears from 'assets/svgs/actors/dryingTears'
 
 import {
     HORSING,
     DRYING_TEARS
 } from 'constants/scene/actors/instances/bennettStephanie'
 
-export const propTypes = {
-    [HORSING]: PropTypes.bool,
-    [DRYING_TEARS]: PropTypes.bool
-}
-
 export default {
-    [HORSING]: Horsing,
-    [DRYING_TEARS]: DryingTears
+    [HORSING]: false,
+    [DRYING_TEARS]: false
 }

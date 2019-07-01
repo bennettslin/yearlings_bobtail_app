@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types'
-
-import Mermaid from './Instances/Mermaid'
-import ComfortingHumiliated from './Instances/ComfortingHumiliated'
-import Epilogue from './Instances/Epilogue'
+// import mermaid from 'assets/svgs/actors/mermaid'
+// import comfortingHumiliated from 'assets/svgs/actors/comfortingHumiliated'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     MERMAID,
@@ -11,14 +9,8 @@ import {
 
 import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [MERMAID]: PropTypes.bool,
-    [COMFORTING_HUMILIATED]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [MERMAID]: Mermaid,
-    [COMFORTING_HUMILIATED]: ComfortingHumiliated,
-    [EPILOGUE]: Epilogue
+    [MERMAID]: false,
+    [COMFORTING_HUMILIATED]: false,
+    [EPILOGUE]: false
 }

@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types'
-
-import Tantrum from './Instances/Tantrum'
-import Sobbing from './Instances/Sobbing'
-import Staring from './Instances/Staring'
+// import tantrum from 'assets/svgs/actors/tantrum'
+// import sobbing from 'assets/svgs/actors/sobbing'
+// import staring from 'assets/svgs/actors/staring'
 
 import {
     TANTRUM,
@@ -10,14 +8,8 @@ import {
     STARING
 } from 'constants/scene/actors/instances/christopher'
 
-export const propTypes = {
-    [TANTRUM]: PropTypes.bool,
-    [SOBBING]: PropTypes.bool,
-    [STARING]: PropTypes.bool
-}
-
 export default {
-    [TANTRUM]: Tantrum,
-    [SOBBING]: Sobbing,
-    [STARING]: Staring
+    [TANTRUM]: false,
+    [SOBBING]: false,
+    [STARING]: false
 }

@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types'
-
-import Flirting from './Instances/Flirting'
-import Carrying from './Instances/Carrying'
-import Waiting from './Instances/Waiting'
-import Gopi from './Instances/Gopi'
-import Epilogue from './Instances/Epilogue'
+// import flirting from 'assets/svgs/actors/flirting'
+// import carrying from 'assets/svgs/actors/carrying'
+// import waiting from 'assets/svgs/actors/waiting'
+// import gopi from 'assets/svgs/actors/gopi'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     FLIRTING,
@@ -14,18 +12,10 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [FLIRTING]: PropTypes.bool,
-    [CARRYING]: PropTypes.bool,
-    [WAITING]: PropTypes.bool,
-    [GOPI]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [FLIRTING]: Flirting,
-    [CARRYING]: Carrying,
-    [WAITING]: Waiting,
-    [GOPI]: Gopi,
-    [EPILOGUE]: Epilogue
+    [FLIRTING]: false,
+    [CARRYING]: false,
+    [WAITING]: false,
+    [GOPI]: false,
+    [EPILOGUE]: false
 }

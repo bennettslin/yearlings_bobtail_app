@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import charmedSchoolbus from 'assets/svgs/actors/charmedSchoolbus'
 
-import CharmedSchoolbus from './Instances/CharmedSchoolbus'
-
-import {
-    CHARMED_SCHOOLBUS
-} from 'constants/scene/actors/instances/bradSasha'
-
-export const propTypes = {
-    [CHARMED_SCHOOLBUS]: PropTypes.bool
-}
+import { CHARMED_SCHOOLBUS } from 'constants/scene/actors/instances/bradSasha'
 
 export default {
-    [CHARMED_SCHOOLBUS]: CharmedSchoolbus
+    [CHARMED_SCHOOLBUS]: false
 }

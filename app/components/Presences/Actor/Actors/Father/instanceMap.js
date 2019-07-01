@@ -1,11 +1,9 @@
-import PropTypes from 'prop-types'
-
-import Roaring from './Instances/Roaring'
-import Accusatory from './Instances/Accusatory'
-import Past from './Instances/Past'
-import Future from './Instances/Future'
-import Reeling from './Instances/Reeling'
-import Epilogue from './Instances/Epilogue'
+// import roaring from 'assets/svgs/actors/roaring'
+// import accusatory from 'assets/svgs/actors/accusatory'
+// import past from 'assets/svgs/actors/past'
+// import future from 'assets/svgs/actors/future'
+// import reeling from 'assets/svgs/actors/reeling'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     ROARING,
@@ -19,20 +17,11 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [ROARING]: PropTypes.bool,
-    [ACCUSATORY]: PropTypes.bool,
-    [PAST]: PropTypes.bool,
-    [FUTURE]: PropTypes.bool,
-    [REELING]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [ROARING]: Roaring,
-    [ACCUSATORY]: Accusatory,
-    [PAST]: Past,
-    [FUTURE]: Future,
-    [REELING]: Reeling,
-    [EPILOGUE]: Epilogue
+    [ROARING]: false,
+    [ACCUSATORY]: false,
+    [PAST]: false,
+    [FUTURE]: false,
+    [REELING]: false,
+    [EPILOGUE]: false
 }

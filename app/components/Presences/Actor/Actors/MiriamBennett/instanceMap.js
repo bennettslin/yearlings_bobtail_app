@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types'
-
-import Asleep from './Instances/Asleep'
-import AsleepFearful from './Instances/AsleepFearful'
-import FendingOff from './Instances/FendingOff'
-import Cowgirl from './Instances/Cowgirl'
-import Blowjob from './Instances/Blowjob'
+// import asleep from 'assets/svgs/actors/asleep'
+// import asleepFearful from 'assets/svgs/actors/asleepFearful'
+// import fendingOff from 'assets/svgs/actors/fendingOff'
+// import cowgirl from 'assets/svgs/actors/cowgirl'
+// import blowjob from 'assets/svgs/actors/blowjob'
 
 import {
     ASLEEP_FEARFUL,
@@ -15,18 +13,10 @@ import {
 
 import { ASLEEP } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [ASLEEP]: PropTypes.bool,
-    [ASLEEP_FEARFUL]: PropTypes.bool,
-    [FENDING_OFF]: PropTypes.bool,
-    [COWGIRL]: PropTypes.bool,
-    [BLOWJOB]: PropTypes.bool
-}
-
 export default {
-    [ASLEEP]: Asleep,
-    [ASLEEP_FEARFUL]: AsleepFearful,
-    [FENDING_OFF]: FendingOff,
-    [COWGIRL]: Cowgirl,
-    [BLOWJOB]: Blowjob
+    [ASLEEP]: false,
+    [ASLEEP_FEARFUL]: false,
+    [FENDING_OFF]: false,
+    [COWGIRL]: false,
+    [BLOWJOB]: false
 }

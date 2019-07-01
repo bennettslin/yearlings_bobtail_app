@@ -1,13 +1,7 @@
-import PropTypes from 'prop-types'
-
-import Gangbanger from './Instances/Gangbanger'
+// import gangbanger from 'assets/svgs/actors/gangbanger'
 
 import { GANGBANGER } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [GANGBANGER]: PropTypes.bool
-}
-
 export default {
-    [GANGBANGER]: Gangbanger
+    [GANGBANGER]: false
 }

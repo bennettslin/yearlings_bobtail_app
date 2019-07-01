@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import cemetery from 'assets/svgs/actors/cemetery'
 
-import Cemetery from './Instances/Cemetery'
-
-import {
-    CEMETERY
-} from 'constants/scene/actors/instances/songs'
-
-export const propTypes = {
-    [CEMETERY]: PropTypes.bool
-}
+import { CEMETERY } from 'constants/scene/actors/instances/songs'
 
 export default {
-    [CEMETERY]: Cemetery
+    [CEMETERY]: false
 }

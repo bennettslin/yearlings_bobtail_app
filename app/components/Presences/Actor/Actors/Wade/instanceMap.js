@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types'
-
-import CatholicGuy from './Instances/CatholicGuy'
-import Watching from './Instances/Watching'
-import Mingling from './Instances/Mingling'
-import Protester from './Instances/Protester'
-import Epilogue from './Instances/Epilogue'
+// import catholicGuy from 'assets/svgs/actors/catholicGuy'
+// import watching from 'assets/svgs/actors/watching'
+// import mingling from 'assets/svgs/actors/mingling'
+// import protester from 'assets/svgs/actors/protester'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     CATHOLIC_GUY,
@@ -17,18 +15,10 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [CATHOLIC_GUY]: PropTypes.bool,
-    [WATCHING]: PropTypes.bool,
-    [MINGLING]: PropTypes.bool,
-    [PROTESTER]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [CATHOLIC_GUY]: CatholicGuy,
-    [WATCHING]: Watching,
-    [MINGLING]: Mingling,
-    [PROTESTER]: Protester,
-    [EPILOGUE]: Epilogue
+    [CATHOLIC_GUY]: false,
+    [WATCHING]: false,
+    [MINGLING]: false,
+    [PROTESTER]: false,
+    [EPILOGUE]: false
 }

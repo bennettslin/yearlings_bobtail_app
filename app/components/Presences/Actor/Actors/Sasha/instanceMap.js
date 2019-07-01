@@ -1,19 +1,12 @@
-import PropTypes from 'prop-types'
-
-import Indignant from './Instances/Indignant'
-import PopularGirl from './Instances/PopularGirl'
+// import indignant from 'assets/svgs/actors/indignant'
+// import popularGirl from 'assets/svgs/actors/popularGirl'
 
 import {
     INDIGNANT,
     POPULAR_GIRL
 } from 'constants/scene/actors/instances/sasha'
 
-export const propTypes = {
-    [INDIGNANT]: PropTypes.bool,
-    [POPULAR_GIRL]: PropTypes.bool
-}
-
 export default {
-    [INDIGNANT]: Indignant,
-    [POPULAR_GIRL]: PopularGirl
+    [INDIGNANT]: false,
+    [POPULAR_GIRL]: false
 }

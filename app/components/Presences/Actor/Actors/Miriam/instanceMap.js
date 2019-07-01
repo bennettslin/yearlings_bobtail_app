@@ -1,12 +1,10 @@
-import PropTypes from 'prop-types'
-
-import InfantCurious from './Instances/InfantCurious'
-import InfantNursing from './Instances/InfantNursing'
-import Perfuming from './Instances/Perfuming'
-import Tennis from './Instances/Tennis'
-import Reversing from './Instances/Reversing'
-import Gopi from './Instances/Gopi'
-import Epilogue from '../MiriamTristan/Instances/Greeting'
+// import infantCurious from 'assets/svgs/actors/infantCurious'
+// import infantNursing from 'assets/svgs/actors/infantNursing'
+// import perfuming from 'assets/svgs/actors/perfuming'
+// import tennis from 'assets/svgs/actors/tennis'
+// import reversing from 'assets/svgs/actors/reversing'
+// import gopi from 'assets/svgs/actors/gopi'
+// import epilogue from '../MiriamTristan/Instances/Greeting'
 
 import {
     INFANT_CURIOUS,
@@ -21,22 +19,12 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [INFANT_CURIOUS]: PropTypes.bool,
-    [INFANT_NURSING]: PropTypes.bool,
-    [PERFUMING]: PropTypes.bool,
-    [TENNIS]: PropTypes.bool,
-    [REVERSING]: PropTypes.bool,
-    [GOPI]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [INFANT_CURIOUS]: InfantCurious,
-    [INFANT_NURSING]: InfantNursing,
-    [PERFUMING]: Perfuming,
-    [TENNIS]: Tennis,
-    [REVERSING]: Reversing,
-    [GOPI]: Gopi,
-    [EPILOGUE]: Epilogue
+    [INFANT_CURIOUS]: false,
+    [INFANT_NURSING]: false,
+    [PERFUMING]: false,
+    [TENNIS]: false,
+    [REVERSING]: false,
+    [GOPI]: false,
+    [EPILOGUE]: false
 }

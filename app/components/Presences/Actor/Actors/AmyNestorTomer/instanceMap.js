@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import officer from 'assets/svgs/actors/officer'
 
-import Officer from './Instances/Officer'
-
-import {
-    OFFICER
-} from 'constants/scene/actors/instances/amyNestorTomer'
-
-export const propTypes = {
-    [OFFICER]: PropTypes.bool
-}
+import { OFFICER } from 'constants/scene/actors/instances/amyNestorTomer'
 
 export default {
-    [OFFICER]: Officer
+    [OFFICER]: false
 }

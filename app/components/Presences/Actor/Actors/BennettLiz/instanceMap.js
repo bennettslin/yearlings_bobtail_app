@@ -1,17 +1,15 @@
-import PropTypes from 'prop-types'
-
-import GingerbreadPrison from './Instances/GingerbreadPrison'
-import CheekUnveiled from './Instances/CheekUnveiled'
-import HardOn from './Instances/HardOn'
-import Missionary from './Instances/Missionary'
-import Afterglow from './Instances/Afterglow'
-import BrushOff from './Instances/BrushOff'
-import CelibateFreezing from './Instances/CelibateFreezing'
-import AwkwardConsolation from './Instances/AwkwardConsolation'
-import Pampas from './Instances/Pampas'
-import GettingDark from './Instances/GettingDark'
-import Cliff from './Instances/Cliff'
-import FinalDream from './Instances/FinalDream'
+// import gingerbreadPrison from 'assets/svgs/actors/gingerbreadPrison'
+// import cheekUnveiled from 'assets/svgs/actors/cheekUnveiled'
+// import hardOn from 'assets/svgs/actors/hardOn'
+// import missionary from 'assets/svgs/actors/missionary'
+// import afterglow from 'assets/svgs/actors/afterglow'
+// import brushOff from 'assets/svgs/actors/brushOff'
+// import celibateFreezing from 'assets/svgs/actors/celibateFreezing'
+// import awkwardConsolation from 'assets/svgs/actors/awkwardConsolation'
+// import pampas from 'assets/svgs/actors/pampas'
+// import gettingDark from 'assets/svgs/actors/gettingDark'
+// import cliff from 'assets/svgs/actors/cliff'
+// import finalDream from 'assets/svgs/actors/finalDream'
 
 import {
     GINGERBREAD_PRISON,
@@ -28,32 +26,17 @@ import {
     FINAL_DREAM
 } from 'constants/scene/actors/instances/bennettLiz'
 
-export const propTypes = {
-    [GINGERBREAD_PRISON]: PropTypes.bool,
-    [CHEEK_UNVEILED]: PropTypes.bool,
-    [HARD_ON]: PropTypes.bool,
-    [MISSIONARY]: PropTypes.bool,
-    [AFTERGLOW]: PropTypes.bool,
-    [BRUSH_OFF]: PropTypes.bool,
-    [CELIBATE_FREEZING]: PropTypes.bool,
-    [AWKWARD_CONSOLATION]: PropTypes.bool,
-    [PAMPAS]: PropTypes.bool,
-    [GETTING_DARK]: PropTypes.bool,
-    [CLIFF]: PropTypes.bool,
-    [FINAL_DREAM]: PropTypes.bool
-}
-
 export default {
-    [GINGERBREAD_PRISON]: GingerbreadPrison,
-    [CHEEK_UNVEILED]: CheekUnveiled,
-    [HARD_ON]: HardOn,
-    [MISSIONARY]: Missionary,
-    [AFTERGLOW]: Afterglow,
-    [BRUSH_OFF]: BrushOff,
-    [CELIBATE_FREEZING]: CelibateFreezing,
-    [AWKWARD_CONSOLATION]: AwkwardConsolation,
-    [PAMPAS]: Pampas,
-    [GETTING_DARK]: GettingDark,
-    [CLIFF]: Cliff,
-    [FINAL_DREAM]: FinalDream
+    [GINGERBREAD_PRISON]: false,
+    [CHEEK_UNVEILED]: false,
+    [HARD_ON]: false,
+    [MISSIONARY]: false,
+    [AFTERGLOW]: false,
+    [BRUSH_OFF]: false,
+    [CELIBATE_FREEZING]: false,
+    [AWKWARD_CONSOLATION]: false,
+    [PAMPAS]: false,
+    [GETTING_DARK]: false,
+    [CLIFF]: false,
+    [FINAL_DREAM]: false
 }

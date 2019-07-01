@@ -1,14 +1,12 @@
-import PropTypes from 'prop-types'
-
-import Gangbanger from './Instances/Gangbanger'
-import ShaneBuying from './Instances/ShaneBuying'
-import AbbeyRoad from './Instances/AbbeyRoad'
-import Walgreens from './Instances/Walgreens'
-import SteamTunnel from './Instances/SteamTunnel'
-import Cemetery from './Instances/Cemetery'
-import StationWagon from './Instances/StationWagon'
-import ShaneSpilling from './Instances/ShaneSpilling'
-import Epilogue from './Instances/Epilogue'
+// import gangbanger from 'assets/svgs/actors/gangbanger'
+// import shaneBuying from 'assets/svgs/actors/shaneBuying'
+// import abbeyRoad from 'assets/svgs/actors/abbeyRoad'
+// import walgreens from 'assets/svgs/actors/walgreens'
+// import steamTunnel from 'assets/svgs/actors/steamTunnel'
+// import cemetery from 'assets/svgs/actors/cemetery'
+// import stationWagon from 'assets/svgs/actors/stationWagon'
+// import shaneSpilling from 'assets/svgs/actors/shaneSpilling'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     SHANE_BUYING,
@@ -25,26 +23,14 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [GANGBANGER]: PropTypes.bool,
-    [SHANE_BUYING]: PropTypes.bool,
-    [ABBEY_ROAD]: PropTypes.bool,
-    [WALGREENS]: PropTypes.bool,
-    [STEAM_TUNNEL]: PropTypes.bool,
-    [CEMETERY]: PropTypes.bool,
-    [STATION_WAGON]: PropTypes.bool,
-    [SHANE_SPILLING]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [GANGBANGER]: Gangbanger,
-    [SHANE_BUYING]: ShaneBuying,
-    [ABBEY_ROAD]: AbbeyRoad,
-    [WALGREENS]: Walgreens,
-    [STEAM_TUNNEL]: SteamTunnel,
-    [CEMETERY]: Cemetery,
-    [STATION_WAGON]: StationWagon,
-    [SHANE_SPILLING]: ShaneSpilling,
-    [EPILOGUE]: Epilogue
+    [GANGBANGER]: false,
+    [SHANE_BUYING]: false,
+    [ABBEY_ROAD]: false,
+    [WALGREENS]: false,
+    [STEAM_TUNNEL]: false,
+    [CEMETERY]: false,
+    [STATION_WAGON]: false,
+    [SHANE_SPILLING]: false,
+    [EPILOGUE]: false
 }

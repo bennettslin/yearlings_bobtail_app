@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import eating from 'assets/svgs/actors/eating'
 
-import Eating from './Instances/Eating'
-
-import {
-    EATING
-} from 'constants/scene/actors/instances/songs'
-
-export const propTypes = {
-    [EATING]: PropTypes.bool
-}
+import { EATING } from 'constants/scene/actors/instances/songs'
 
 export default {
-    [EATING]: Eating
+    [EATING]: false
 }

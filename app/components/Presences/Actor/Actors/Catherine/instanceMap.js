@@ -1,10 +1,8 @@
-import PropTypes from 'prop-types'
-
-import Weeping from './Instances/Weeping'
-import Quipping from './Instances/Quipping'
-import Puzzled from './Instances/Puzzled'
-import Gopi from './Instances/Gopi'
-import Epilogue from './Instances/Epilogue'
+// import weeping from 'assets/svgs/actors/weeping'
+// import quipping from 'assets/svgs/actors/quipping'
+// import puzzled from 'assets/svgs/actors/puzzled'
+// import gopi from 'assets/svgs/actors/gopi'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     WEEPING,
@@ -17,18 +15,10 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [WEEPING]: PropTypes.bool,
-    [QUIPPING]: PropTypes.bool,
-    [PUZZLED]: PropTypes.bool,
-    [GOPI]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [WEEPING]: Weeping,
-    [QUIPPING]: Quipping,
-    [PUZZLED]: Puzzled,
-    [GOPI]: Gopi,
-    [EPILOGUE]: Epilogue
+    [WEEPING]: false,
+    [QUIPPING]: false,
+    [PUZZLED]: false,
+    [GOPI]: false,
+    [EPILOGUE]: false
 }

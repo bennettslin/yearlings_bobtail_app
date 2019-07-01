@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types'
-
-import Principal from './Instances/Principal'
-import Punching from './Instances/Punching'
-import Epilogue from './Instances/Epilogue'
+// import principal from 'assets/svgs/actors/principal'
+// import punching from 'assets/svgs/actors/punching'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     PRINCIPAL,
@@ -11,14 +9,8 @@ import {
 
 import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [PRINCIPAL]: PropTypes.bool,
-    [PUNCHING]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [PRINCIPAL]: Principal,
-    [PUNCHING]: Punching,
-    [EPILOGUE]: Epilogue
+    [PRINCIPAL]: false,
+    [PUNCHING]: false,
+    [EPILOGUE]: false
 }

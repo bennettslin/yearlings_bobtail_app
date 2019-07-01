@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import prologue from 'assets/svgs/actors/prologue'
 
-import Prologue from './Instances/Prologue'
-
-import {
-    PROLOGUE
-} from 'constants/scene/actors/instances/songs'
-
-export const propTypes = {
-    [PROLOGUE]: PropTypes.bool
-}
+import { PROLOGUE } from 'constants/scene/actors/instances/songs'
 
 export default {
-    [PROLOGUE]: Prologue
+    [PROLOGUE]: false
 }

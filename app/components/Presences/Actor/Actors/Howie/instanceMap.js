@@ -1,13 +1,11 @@
-import PropTypes from 'prop-types'
-
-import UsherWaiting from './Instances/UsherWaiting'
-import UsherLooking from './Instances/UsherLooking'
-import AbbeyRoad from './Instances/AbbeyRoad'
-import Walgreens from './Instances/Walgreens'
-import SteamTunnel from './Instances/SteamTunnel'
-import StationWagon from './Instances/StationWagon'
-import Attic from './Instances/Attic'
-import Epilogue from './Instances/Epilogue'
+// import usherWaiting from 'assets/svgs/actors/usherWaiting'
+// import usherLooking from 'assets/svgs/actors/usherLooking'
+// import abbeyRoad from 'assets/svgs/actors/abbeyRoad'
+// import walgreens from 'assets/svgs/actors/walgreens'
+// import steamTunnel from 'assets/svgs/actors/steamTunnel'
+// import stationWagon from 'assets/svgs/actors/stationWagon'
+// import attic from 'assets/svgs/actors/attic'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     USHER_WAITING,
@@ -23,24 +21,13 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [USHER_WAITING]: PropTypes.bool,
-    [USHER_LOOKING]: PropTypes.bool,
-    [ABBEY_ROAD]: PropTypes.bool,
-    [WALGREENS]: PropTypes.bool,
-    [STEAM_TUNNEL]: PropTypes.bool,
-    [STATION_WAGON]: PropTypes.bool,
-    [ATTIC]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [USHER_WAITING]: UsherWaiting,
-    [USHER_LOOKING]: UsherLooking,
-    [ABBEY_ROAD]: AbbeyRoad,
-    [WALGREENS]: Walgreens,
-    [STEAM_TUNNEL]: SteamTunnel,
-    [STATION_WAGON]: StationWagon,
-    [ATTIC]: Attic,
-    [EPILOGUE]: Epilogue
+    [USHER_WAITING]: false,
+    [USHER_LOOKING]: false,
+    [ABBEY_ROAD]: false,
+    [WALGREENS]: false,
+    [STEAM_TUNNEL]: false,
+    [STATION_WAGON]: false,
+    [ATTIC]: false,
+    [EPILOGUE]: false
 }

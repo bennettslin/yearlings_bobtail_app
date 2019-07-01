@@ -1,8 +1,6 @@
-import PropTypes from 'prop-types'
-
-import Carrying from './Instances/Carrying'
-import Flirting from './Instances/Flirting'
-import Epilogue from './Instances/Epilogue'
+// import carrying from 'assets/svgs/actors/carrying'
+// import flirting from 'assets/svgs/actors/flirting'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     FLIRTING,
@@ -10,14 +8,8 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [CARRYING]: PropTypes.bool,
-    [FLIRTING]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [CARRYING]: Carrying,
-    [FLIRTING]: Flirting,
-    [EPILOGUE]: Epilogue
+    [CARRYING]: false,
+    [FLIRTING]: false,
+    [EPILOGUE]: false
 }

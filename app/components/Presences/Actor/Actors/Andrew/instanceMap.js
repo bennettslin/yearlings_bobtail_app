@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types'
-
-import FeigningFear from './Instances/FeigningFear'
-import Throwing from './Instances/Throwing'
-import Noodling from './Instances/Noodling'
-import Epilogue from './Instances/Epilogue'
+// import feigningFear from 'assets/svgs/actors/feigningFear'
+// import throwing from 'assets/svgs/actors/throwing'
+// import noodling from 'assets/svgs/actors/noodling'
+// import epilogue from 'assets/svgs/actors/epilogue'
 
 import {
     FEIGNING_FEAR,
@@ -13,16 +11,9 @@ import {
 
 import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
-export const propTypes = {
-    [FEIGNING_FEAR]: PropTypes.bool,
-    [THROWING]: PropTypes.bool,
-    [NOODLING]: PropTypes.bool,
-    [EPILOGUE]: PropTypes.bool
-}
-
 export default {
-    [FEIGNING_FEAR]: FeigningFear,
-    [THROWING]: Throwing,
-    [NOODLING]: Noodling,
-    [EPILOGUE]: Epilogue
+    [FEIGNING_FEAR]: false,
+    [THROWING]: false,
+    [NOODLING]: false,
+    [EPILOGUE]: false
 }

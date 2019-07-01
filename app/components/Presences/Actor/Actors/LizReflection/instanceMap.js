@@ -1,15 +1,7 @@
-import PropTypes from 'prop-types'
+// import reachingReflection from 'assets/svgs/actors/reachingReflection'
 
-import ReachingReflection from './Instances/ReachingReflection'
-
-import {
-    REACHING_REFLECTION
-} from 'constants/scene/actors/instances/liz'
-
-export const propTypes = {
-    [REACHING_REFLECTION]: PropTypes.bool
-}
+import { REACHING_REFLECTION } from 'constants/scene/actors/instances/liz'
 
 export default {
-    [REACHING_REFLECTION]: ReachingReflection
+    [REACHING_REFLECTION]: false
 }
