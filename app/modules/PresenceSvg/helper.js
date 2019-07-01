@@ -1,18 +1,23 @@
 import isFinite from 'lodash.isfinite'
 
+import { Y_INDEX_SCALE_FACTORS } from 'constants/cubeRender'
+
 // Illustrator artboards are 1623 by 1082.
 const
-    ARTBOARD_WIDTH = 1623,
-    ARTBOARD_HEIGHT = 1082
+    ARTBOARD_WIDTH = 1623 / 100,
+    ARTBOARD_HEIGHT = 1082 / 100
 
 export const getAdjustedSize = ({
     viewBoxWidth,
     viewBoxHeight,
+    yIndex,
     scaleFactor
+
 }) => {
     const
-        adjustedWidth = viewBoxWidth * scaleFactor / ARTBOARD_WIDTH * 100,
-        adjustedHeight = viewBoxHeight * scaleFactor / ARTBOARD_HEIGHT * 100
+        finalScaleFactor = scaleFactor * Y_INDEX_SCALE_FACTORS[yIndex],
+        adjustedWidth = viewBoxWidth * finalScaleFactor / ARTBOARD_WIDTH,
+        adjustedHeight = viewBoxHeight * finalScaleFactor / ARTBOARD_HEIGHT
 
     return {
         adjustedWidth,

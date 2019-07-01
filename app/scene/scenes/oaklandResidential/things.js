@@ -33,12 +33,12 @@ const ARRANGEMENTS_THINGS = {
         [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.2
         },
         [TWIN_STREETLAMP__MIDDLE]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.25
         },
         [TWIN_STREETLAMP__NEAR]: {
             yIndex: 3,

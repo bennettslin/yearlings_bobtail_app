@@ -1,8 +1,2 @@
-const
-    PARENT_ACCESS_PREFIX = 'PaL',
-    CHILD_ACCESS_PREFIX = 'CaL'
-
-module.exports = {
-    PARENT_ACCESS_PREFIX,
-    CHILD_ACCESS_PREFIX
-}
+export const PARENT_ACCESS_PREFIX = 'PaL'
+export const CHILD_ACCESS_PREFIX = 'CaL'

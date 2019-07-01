@@ -16,6 +16,7 @@ class PresenceSvg extends Component {
         className: PropTypes.string,
         x: PropTypes.number.isRequired,
         y: PropTypes.number.isRequired,
+        yIndex: PropTypes.number.isRequired,
         scaleFactor: PropTypes.number,
         flipHorizontal: PropTypes.bool,
         children: PropTypes.node
@@ -64,6 +65,7 @@ class PresenceSvg extends Component {
                 className,
                 x,
                 y,
+                yIndex,
                 scaleFactor,
                 flipHorizontal,
                 children
@@ -78,6 +80,7 @@ class PresenceSvg extends Component {
             } = getAdjustedSize({
                 viewBoxWidth,
                 viewBoxHeight,
+                yIndex,
                 scaleFactor
             })
 

@@ -10,26 +10,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'johnnyHortonAlbum',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'policeAlbum',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'televisionAlbum',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'nasAlbum',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'recordPlayerStool',
         workedHours: 0,
         neededHours: 1.5

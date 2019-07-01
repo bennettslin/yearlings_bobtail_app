@@ -61,6 +61,7 @@ const PresenceView = ({
         xPosition = isFinite(xPosition1) ? xPosition1 : xPosition2,
         zOffset = isFinite(zOffset1) ? zOffset1 : zOffset2,
 
+        // TODO: Move this to PresenceSvg?
         presenceXY = xWidth && zHeight ? getPresenceXYWidthHeight({
             cubesKey,
             yIndex,
@@ -93,6 +94,7 @@ const PresenceView = ({
                 ),
                 scaleFactor,
                 flipHorizontal,
+                yIndex,
                 ...presenceXY
             }}
         >

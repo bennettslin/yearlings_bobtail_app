@@ -1,5 +1,6 @@
 // Check out Peoria Symphony Orchestra.
 import { CUBE_Y_AXIS_LENGTH } from './cubeIndex'
+import { getArrayOfLength } from '../helpers/general'
 
 const _getPower = (base, exponent) => {
     if (exponent === 0) {
@@ -18,6 +19,17 @@ const _getExponentFactorialSum = (base, exponent) => {
     }
 
     return sum
+}
+
+const _getArrayOfIncreasingScaleFactors = (base, constant) => {
+    let scale = 1
+    return getArrayOfLength(constant).map(index => {
+        // Index of 0 has scale of 1.
+        if (index) {
+            scale *= base
+        }
+        return scale
+    })
 }
 
 const _getArrayOfIncreasingSums = (base, exponent, constant) => {
@@ -84,25 +96,25 @@ const _getTileYPercentages = (base, STAGE_Y_PERCENTAGE, exponent) => {
  * 2 becomes 3, resulting in seven values. This number can be fudged, since it
  * only determines relative foreshortening.
  */
-const base = 1.069913193933663,
+const BASE = 1.069913193933663,
 
     // Assume that floor height is this percent of stage height.
     STAGE_Y_PERCENTAGE = 12,
-    SLANTED_TILE_Y_UNITS_LENGTH = 14,
+    SLANTED_TILE_Y_UNITS_LENGTH = 14
 
-    TILE_Y_PERCENTAGES = _getTileYPercentages(
-        base, STAGE_Y_PERCENTAGE, CUBE_Y_AXIS_LENGTH
-    ).reverse(),
-    SLANTED_TILE_Y_PERCENTAGES = _getTileYPercentages(
-        base, STAGE_Y_PERCENTAGE, SLANTED_TILE_Y_UNITS_LENGTH
-    ).reverse()
+export const TILE_Y_PERCENTAGES = _getTileYPercentages(
+    BASE, STAGE_Y_PERCENTAGE, CUBE_Y_AXIS_LENGTH
+).reverse()
 
-module.exports = {
+export const SLANTED_TILE_Y_PERCENTAGES = _getTileYPercentages(
+    BASE, STAGE_Y_PERCENTAGE, SLANTED_TILE_Y_UNITS_LENGTH
+).reverse()
 
-    // This really can't be any other value.
-    VANISHING_POINT_Y_PERCENTAGE: 50,
+export const Y_INDEX_SCALE_FACTORS = _getArrayOfIncreasingScaleFactors(
+    1 / BASE, CUBE_Y_AXIS_LENGTH
+).reverse()
 
-    TILE_Y_PERCENTAGES,
-    SLANTED_TILE_Y_PERCENTAGES,
-    SLANTED_TILE_X_UNITS_LENGTH: 32
-}
+// This really can't be any other value.
+export const VANISHING_POINT_Y_PERCENTAGE = 50
+
+export const SLANTED_TILE_X_UNITS_LENGTH = 32

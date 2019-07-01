@@ -1,10 +1,5 @@
-const
-    CAROUSEL_SCROLL = 'Carousel__scrollChild',
-    LYRIC_ANNOTATION_SCROLL = 'LyricAnnotation__scrollChild',
-    VERSE_SCROLL = 'Verse__scrollChild'
 
-module.exports = {
-    CAROUSEL_SCROLL,
-    LYRIC_ANNOTATION_SCROLL,
-    VERSE_SCROLL
-}
+const SCROLL_CHILD = 'scrollChild'
+export const CAROUSEL_SCROLL = `Carousel__${SCROLL_CHILD}`
+export const LYRIC_ANNOTATION_SCROLL = `LyricAnnotation__${SCROLL_CHILD}`
+export const VERSE_SCROLL = `Verse__${SCROLL_CHILD}`

@@ -68,5 +68,25 @@ export default [
         taskName: 'elliottSmithPoster',
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: 'johnnyHortonAlbum',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'policeAlbum',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'televisionAlbum',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'nasAlbum',
+        workedHours: 0,
+        neededHours: 1
     }
 ]
