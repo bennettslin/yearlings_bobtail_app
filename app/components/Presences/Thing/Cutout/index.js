@@ -50,7 +50,7 @@ import dispenserLeft from 'assets/svgs/cutouts/dispenserLeft.svg'
 import dispenserRight from 'assets/svgs/cutouts/dispenserRight.svg'
 // import weddingCrowd from 'assets/svgs/cutouts/weddingCrowd.svg'
 import cliffTree from 'assets/svgs/cutouts/cliffTree.svg'
-// import ivDrip from 'assets/svgs/cutouts/ivDrip.svg'
+import ivDrip from 'assets/svgs/cutouts/ivDrip.svg'
 
 import {
     FIRE_HYDRANT,
@@ -181,6 +181,6 @@ export default {
     [DISPENSER_RIGHT]: dispenserRight,
     [WEDDING_CROWD]: false,
     [CLIFF_TREE]: cliffTree,
-    [IV_DRIP]: false
+    [IV_DRIP]: ivDrip
 }
 

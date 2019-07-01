@@ -16,11 +16,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [IV_DRIP]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 4
-            }
+            xPosition: 2,
+            scaleFactor: 0.35
         }
     },
     [FIXTURE]: {

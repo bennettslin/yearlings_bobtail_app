@@ -175,11 +175,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'ivDrip',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'dumpster',
         workedHours: 0,
         neededHours: 1
