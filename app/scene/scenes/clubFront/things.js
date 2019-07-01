@@ -28,22 +28,17 @@ const ARRANGEMENTS_THINGS = {
             flipHorizontal: true
         },
         [WALL_SPEAKER_FRONT__LEFT]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 1.5,
-                zHeight: 2,
-                zOffset: 4
-            }
+            yIndex: 5,
+            xPosition: 1.5,
+            zOffset: 5,
+            scaleFactor: 0.3
         },
         [WALL_SPEAKER_FRONT__RIGHT]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1.5,
-                zHeight: 2,
-                zOffset: 4
-            }
+            yIndex: 5,
+            xPosition: 9.5,
+            zOffset: 5,
+            scaleFactor: 0.3,
+            flipHorizontal: true
         }
     },
     [FIXTURE]: {

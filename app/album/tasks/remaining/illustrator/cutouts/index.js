@@ -125,16 +125,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'wallSpeaker',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'wallSpeakerSide',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'sandbags',
         workedHours: 0,
         neededHours: 1

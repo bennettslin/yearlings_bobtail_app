@@ -22,12 +22,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [WALL_SPEAKER_SIDE__STAGE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 10.5,
-                xWidth: 2,
-                zHeight: 2,
-                zOffset: 5
-            }
+            xPosition: 10.5,
+            zOffset: 5,
+            scaleFactor: 0.3
         }
     },
     [FIXTURE]: {

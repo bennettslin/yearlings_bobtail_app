@@ -30,7 +30,7 @@ import signpost from 'assets/svgs/cutouts/signpost.svg'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
 import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
-// import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
+import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
 // import sandbags from 'assets/svgs/cutouts/sandbags.svg'
 // import stageLights from 'assets/svgs/cutouts/stageLights.svg'
 import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
@@ -42,7 +42,7 @@ import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
 // import howieFridge from 'assets/svgs/cutouts/howieFridge.svg'
 // import television from 'assets/svgs/cutouts/television.svg'
 import monitorSide from 'assets/svgs/cutouts/monitorSide.svg'
-// import wallSpeakerSide from 'assets/svgs/cutouts/wallSpeakerSide.svg'
+import wallSpeakerSide from 'assets/svgs/cutouts/wallSpeakerSide.svg'
 import twinStreetlamp from 'assets/svgs/cutouts/twinStreetlamp.svg'
 import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
 // import dumpster from 'assets/svgs/cutouts/dumpster.svg'
@@ -156,8 +156,8 @@ export default {
     [UC_BERKELEY_TREE__RIGHT]: ucBerkeleyTree,
     [MONITOR_FRONT__LEFT]: monitorFront,
     [MONITOR_FRONT__RIGHT]: monitorFront,
-    [WALL_SPEAKER_FRONT__LEFT]: false,
-    [WALL_SPEAKER_FRONT__RIGHT]: false,
+    [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
+    [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
     [SANDBAGS]: false,
     [STAGE_LIGHTS]: false,
     [TRAFFIC_LIGHT]: trafficLight,
@@ -170,8 +170,8 @@ export default {
     [TELEVISION]: false,
     [MONITOR_SIDE__CROWD]: monitorSide,
     [MONITOR_SIDE__STAGE]: monitorSide,
-    [WALL_SPEAKER_SIDE__CROWD]: false,
-    [WALL_SPEAKER_SIDE__STAGE]: false,
+    [WALL_SPEAKER_SIDE__CROWD]: wallSpeakerSide,
+    [WALL_SPEAKER_SIDE__STAGE]: wallSpeakerSide,
     [TWIN_STREETLAMP__FAR]: twinStreetlamp,
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,

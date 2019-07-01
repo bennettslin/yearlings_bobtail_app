@@ -103,5 +103,15 @@ export default [
         taskName: 'trafficLight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'wallSpeakerFront',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'wallSpeakerSide',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
