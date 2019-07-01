@@ -1,55 +1,3 @@
-import YoungBennett from './Actors/YoungBennett'
-import PreteenBennett from './Actors/PreteenBennett'
-import Bennett from './Actors/Bennett'
-import BennettFather from './Actors/BennettFather'
-import BennettLiz from './Actors/BennettLiz'
-import BennettLizReflection from './Actors/BennettLizReflection'
-import BennettsChristopherLiz from './Actors/BennettsChristopherLiz'
-import BennettStephanie from './Actors/BennettStephanie'
-import OldBennett from './Actors/OldBennett'
-import Anita from './Actors/Anita'
-import AnitaBennett from './Actors/AnitaBennett'
-import Esther from './Actors/Esther'
-import EstherMother from './Actors/EstherMother'
-import Willy from './Actors/Willy'
-import Mother from './Actors/Mother'
-import Father from './Actors/Father'
-import Christopher from './Actors/Christopher'
-import ChristopherBennett from './Actors/ChristopherBennett'
-import ChristopherBennettWilly from './Actors/ChristopherBennettWilly'
-import Sasha from './Actors/Sasha'
-import SashaBennett from './Actors/SashaBennett'
-import Brad from './Actors/Brad'
-import BradBennett from './Actors/BradBennett'
-import BradSasha from './Actors/BradSasha'
-import Andrew from './Actors/Andrew'
-import Catherine from './Actors/Catherine'
-import Mara from './Actors/Mara'
-import Jacob from './Actors/Jacob'
-import JacobMara from './Actors/JacobMara'
-import Ana from './Actors/Ana'
-import AnaHowie from './Actors/AnaHowie'
-import Howie from './Actors/Howie'
-import HowieWilly from './Actors/HowieWilly'
-import Tomer from './Actors/Tomer'
-import Liz from './Actors/Liz'
-import Khari from './Actors/Khari'
-import KhariLiz from './Actors/KhariLiz'
-import Miriam from './Actors/Miriam'
-import MiriamBennett from './Actors/MiriamBennett'
-import MiriamStephanie from './Actors/MiriamStephanie'
-import MiriamTristan from './Actors/MiriamTristan'
-import Tristan from './Actors/Tristan'
-import Nestor from './Actors/Nestor'
-import Amy from './Actors/Amy'
-import AmyStephanie from './Actors/AmyStephanie'
-import AmyNestorTomer from './Actors/AmyNestorTomer'
-import Stephanie from './Actors/Stephanie'
-import Wade from './Actors/Wade'
-import BennettReflection from './Actors/BennettReflection'
-import LizReflection from './Actors/LizReflection'
-import KhariLizReflection from './Actors/KhariLizReflection'
-
 import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
@@ -105,55 +53,55 @@ import {
 } from 'constants/scene/actors'
 
 export default {
-    [YOUNG_BENNETT]: YoungBennett,
-    [PRETEEN_BENNETT]: PreteenBennett,
-    [BENNETT]: Bennett,
-    [BENNETT_FATHER]: BennettFather,
-    [BENNETT_LIZ]: BennettLiz,
-    [BENNETT_LIZ_REFLECTION]: BennettLizReflection,
-    [BENNETTS_CHRISTOPHER_LIZ]: BennettsChristopherLiz,
-    [BENNETT_STEPHANIE]: BennettStephanie,
-    [OLD_BENNETT]: OldBennett,
-    [ANITA]: Anita,
-    [ANITA_BENNETT]: AnitaBennett,
-    [ESTHER]: Esther,
-    [ESTHER_MOTHER]: EstherMother,
-    [WILLY]: Willy,
-    [MOTHER]: Mother,
-    [FATHER]: Father,
-    [CHRISTOPHER]: Christopher,
-    [CHRISTOPHER_BENNETT]: ChristopherBennett,
-    [CHRISTOPHER_BENNETT_WILLY]: ChristopherBennettWilly,
-    [SASHA]: Sasha,
-    [SASHA_BENNETT]: SashaBennett,
-    [BRAD]: Brad,
-    [BRAD_BENNETT]: BradBennett,
-    [BRAD_SASHA]: BradSasha,
-    [ANDREW]: Andrew,
-    [CATHERINE]: Catherine,
-    [MARA]: Mara,
-    [JACOB]: Jacob,
-    [JACOB_MARA]: JacobMara,
-    [ANA]: Ana,
-    [ANA_HOWIE]: AnaHowie,
-    [HOWIE]: Howie,
-    [HOWIE_WILLY]: HowieWilly,
-    [TOMER]: Tomer,
-    [LIZ]: Liz,
-    [KHARI]: Khari,
-    [KHARI_LIZ]: KhariLiz,
-    [MIRIAM]: Miriam,
-    [MIRIAM_BENNETT]: MiriamBennett,
-    [MIRIAM_STEPHANIE]: MiriamStephanie,
-    [MIRIAM_TRISTAN]: MiriamTristan,
-    [TRISTAN]: Tristan,
-    [NESTOR]: Nestor,
-    [AMY]: Amy,
-    [AMY_STEPHANIE]: AmyStephanie,
-    [AMY_NESTOR_TOMER]: AmyNestorTomer,
-    [STEPHANIE]: Stephanie,
-    [WADE]: Wade,
-    [BENNETT_REFLECTION]: BennettReflection,
-    [LIZ_REFLECTION]: LizReflection,
-    [KHARI_LIZ_REFLECTION]: KhariLizReflection
+    [YOUNG_BENNETT]: false,
+    [PRETEEN_BENNETT]: false,
+    [BENNETT]: false,
+    [BENNETT_FATHER]: false,
+    [BENNETT_LIZ]: false,
+    [BENNETT_LIZ_REFLECTION]: false,
+    [BENNETTS_CHRISTOPHER_LIZ]: false,
+    [BENNETT_STEPHANIE]: false,
+    [OLD_BENNETT]: false,
+    [ANITA]: false,
+    [ANITA_BENNETT]: false,
+    [ESTHER]: false,
+    [ESTHER_MOTHER]: false,
+    [WILLY]: false,
+    [MOTHER]: false,
+    [FATHER]: false,
+    [CHRISTOPHER]: false,
+    [CHRISTOPHER_BENNETT]: false,
+    [CHRISTOPHER_BENNETT_WILLY]: false,
+    [SASHA]: false,
+    [SASHA_BENNETT]: false,
+    [BRAD]: false,
+    [BRAD_BENNETT]: false,
+    [BRAD_SASHA]: false,
+    [ANDREW]: false,
+    [CATHERINE]: false,
+    [MARA]: false,
+    [JACOB]: false,
+    [JACOB_MARA]: false,
+    [ANA]: false,
+    [ANA_HOWIE]: false,
+    [HOWIE]: false,
+    [HOWIE_WILLY]: false,
+    [TOMER]: false,
+    [LIZ]: false,
+    [KHARI]: false,
+    [KHARI_LIZ]: false,
+    [MIRIAM]: false,
+    [MIRIAM_BENNETT]: false,
+    [MIRIAM_STEPHANIE]: false,
+    [MIRIAM_TRISTAN]: false,
+    [TRISTAN]: false,
+    [NESTOR]: false,
+    [AMY]: false,
+    [AMY_STEPHANIE]: false,
+    [AMY_NESTOR_TOMER]: false,
+    [STEPHANIE]: false,
+    [WADE]: false,
+    [BENNETT_REFLECTION]: false,
+    [LIZ_REFLECTION]: false,
+    [KHARI_LIZ_REFLECTION]: false
 }
