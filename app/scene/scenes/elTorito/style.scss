@@ -1,6 +1,6 @@
 .DispenserLeft {
     .dispenser { fill: #936; }
-    .dispenserShadow { stroke: #825; }
+    .dispenserLine { stroke: #825; }
     .panel { fill: #666; }
     .latch { fill: #800; }
     .metal { fill: #ccc; }
@@ -10,7 +10,7 @@
 
 .DispenserRight {
     .dispenser { fill: #396; }
-    .dispenserShadow { stroke: #285; }
+    .dispenserLine { stroke: #285; }
     .panel { fill: #666; }
     .handle { fill: #cc9; }
     .newspaper { fill: #eee; }
