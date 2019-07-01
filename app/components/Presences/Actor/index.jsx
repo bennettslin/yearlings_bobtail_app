@@ -1,162 +1,224 @@
 import React, { memo, Fragment as ___ } from 'react'
+import PropTypes from 'prop-types'
 
-import YoungBennett from './Actors/YoungBennett'
-import PreteenBennett from './Actors/PreteenBennett'
-import Bennett from './Actors/Bennett'
-import BennettLiz from './Actors/BennettLiz'
-import BennettLizReflection from './Actors/BennettLizReflection'
-import BennettsChristopherLiz from './Actors/BennettsChristopherLiz'
-import BennettStephanie from './Actors/BennettStephanie'
-import OldBennett from './Actors/OldBennett'
-import Anita from './Actors/Anita'
-import AnitaBennett from './Actors/AnitaBennett'
-import Esther from './Actors/Esther'
-import EstherMother from './Actors/EstherMother'
-import Willy from './Actors/Willy'
-import Mother from './Actors/Mother'
-import Father from './Actors/Father'
-import Christopher from './Actors/Christopher'
-import ChristopherBennett from './Actors/ChristopherBennett'
-import ChristopherBennettWilly from './Actors/ChristopherBennettWilly'
-import Sasha from './Actors/Sasha'
-import SashaBennett from './Actors/SashaBennett'
-import Brad from './Actors/Brad'
-import BradBennett from './Actors/BradBennett'
-import BradSasha from './Actors/BradSasha'
-import Andrew from './Actors/Andrew'
-import Catherine from './Actors/Catherine'
-import Mara from './Actors/Mara'
-import Jacob from './Actors/Jacob'
-import JacobMara from './Actors/JacobMara'
-import Ana from './Actors/Ana'
-import AnaHowie from './Actors/AnaHowie'
-import Howie from './Actors/Howie'
-import HowieWilly from './Actors/HowieWilly'
-import Tomer from './Actors/Tomer'
-import Liz from './Actors/Liz'
-import Khari from './Actors/Khari'
-import KhariLiz from './Actors/KhariLiz'
-import Miriam from './Actors/Miriam'
-import MiriamBennett from './Actors/MiriamBennett'
-import MiriamStephanie from './Actors/MiriamStephanie'
-import MiriamTristan from './Actors/MiriamTristan'
-import Tristan from './Actors/Tristan'
-import Nestor from './Actors/Nestor'
-import Amy from './Actors/Amy'
-import AmyStephanie from './Actors/AmyStephanie'
-import AmyNestorTomer from './Actors/AmyNestorTomer'
-import Stephanie from './Actors/Stephanie'
-import Wade from './Actors/Wade'
-import BennettReflection from './Actors/BennettReflection'
-import LizReflection from './Actors/LizReflection'
-import KhariLizReflection from './Actors/KhariLizReflection'
+import Layer from '../Layer'
 
-const ActorLayer = memo(({
-    youngBennett,
-    preteenBennett,
-    bennett,
-    bennettLiz,
-    bennettStephanie,
-    bennettsChristopherLiz,
-    oldBennett,
-    anita,
-    anitaBennett,
-    esther,
-    estherMother,
-    willy,
-    mother,
-    father,
-    christopher,
-    christopherBennett,
-    christopherBennettWilly,
-    sasha,
-    sashaBennett,
-    brad,
-    bradBennett,
-    bradSasha,
-    andrew,
-    catherine,
-    mara,
-    jacob,
-    jacobMara,
-    ana,
-    anaHowie,
-    howie,
-    howieWilly,
-    tomer,
-    liz,
-    khari,
-    khariLiz,
-    miriam,
-    miriamBennett,
-    miriamStephanie,
-    miriamTristan,
-    tristan,
-    nestor,
-    amy,
-    amyStephanie,
-    amyNestorTomer,
-    stephanie,
-    wade,
-    bennettReflection,
-    bennettLizReflection,
-    lizReflection,
-    khariLizReflection
+import {
+    YOUNG_BENNETT,
+    PRETEEN_BENNETT,
+    BENNETT,
+    BENNETT_FATHER,
+    BENNETT_LIZ,
+    BENNETT_LIZ_REFLECTION,
+    BENNETTS_CHRISTOPHER_LIZ,
+    BENNETT_STEPHANIE,
+    OLD_BENNETT,
+    ANITA,
+    ANITA_BENNETT,
+    ESTHER,
+    ESTHER_MOTHER,
+    WILLY,
+    MOTHER,
+    FATHER,
+    CHRISTOPHER,
+    CHRISTOPHER_BENNETT,
+    CHRISTOPHER_BENNETT_WILLY,
+    SASHA,
+    SASHA_BENNETT,
+    BRAD,
+    BRAD_BENNETT,
+    BRAD_SASHA,
+    ANDREW,
+    CATHERINE,
+    MARA,
+    JACOB,
+    JACOB_MARA,
+    ANA,
+    ANA_HOWIE,
+    HOWIE,
+    HOWIE_WILLY,
+    TOMER,
+    LIZ,
+    KHARI,
+    KHARI_LIZ,
+    MIRIAM,
+    MIRIAM_BENNETT,
+    MIRIAM_STEPHANIE,
+    MIRIAM_TRISTAN,
+    TRISTAN,
+    NESTOR,
+    AMY,
+    AMY_STEPHANIE,
+    AMY_NESTOR_TOMER,
+    STEPHANIE,
+    WADE,
+    BENNETT_REFLECTION,
+    LIZ_REFLECTION,
+    KHARI_LIZ_REFLECTION
+} from 'constants/scene/actors'
+
+const ActorLayer = ({
+    [YOUNG_BENNETT]: youngBennett,
+    [PRETEEN_BENNETT]: preteenBennett,
+    [BENNETT]: bennett,
+    [BENNETT_FATHER]: bennettFather,
+    [BENNETT_LIZ]: bennettLiz,
+    [BENNETT_LIZ_REFLECTION]: bennettLizReflection,
+    [BENNETTS_CHRISTOPHER_LIZ]: bennettsChristopherLiz,
+    [BENNETT_STEPHANIE]: bennettStephanie,
+    [OLD_BENNETT]: oldBennett,
+    [ANITA]: anita,
+    [ANITA_BENNETT]: anitaBennett,
+    [ESTHER]: esther,
+    [ESTHER_MOTHER]: estherMother,
+    [WILLY]: willy,
+    [MOTHER]: mother,
+    [FATHER]: father,
+    [CHRISTOPHER]: christopher,
+    [CHRISTOPHER_BENNETT]: christopherBennett,
+    [CHRISTOPHER_BENNETT_WILLY]: christopherBennettWilly,
+    [SASHA]: sasha,
+    [SASHA_BENNETT]: sashaBennett,
+    [BRAD]: brad,
+    [BRAD_BENNETT]: bradBennett,
+    [BRAD_SASHA]: bradSasha,
+    [ANDREW]: andrew,
+    [CATHERINE]: catherine,
+    [MARA]: mara,
+    [JACOB]: jacob,
+    [JACOB_MARA]: jacobMara,
+    [ANA]: ana,
+    [ANA_HOWIE]: anaHowie,
+    [HOWIE]: howie,
+    [HOWIE_WILLY]: howieWilly,
+    [TOMER]: tomer,
+    [LIZ]: liz,
+    [KHARI]: khari,
+    [KHARI_LIZ]: khariLiz,
+    [MIRIAM]: miriam,
+    [MIRIAM_BENNETT]: miriamBennett,
+    [MIRIAM_STEPHANIE]: miriamStephanie,
+    [MIRIAM_TRISTAN]: miriamTristan,
+    [TRISTAN]: tristan,
+    [NESTOR]: nestor,
+    [AMY]: amy,
+    [AMY_STEPHANIE]: amyStephanie,
+    [AMY_NESTOR_TOMER]: amyNestorTomer,
+    [STEPHANIE]: stephanie,
+    [WADE]: wade,
+    [BENNETT_REFLECTION]: bennettReflection,
+    [LIZ_REFLECTION]: lizReflection,
+    [KHARI_LIZ_REFLECTION]: khariLizReflection
 }) => {
     return (
         <___>
-            <YoungBennett {...{ instanceKey: youngBennett }} />
-            <PreteenBennett {...{ instanceKey: preteenBennett }} />
-            <Bennett {...{ instanceKey: bennett }} />
-            <BennettLiz {...{ instanceKey: bennettLiz }} />
-            <BennettLizReflection {...{ instanceKey: bennettLizReflection }} />
-            <BennettsChristopherLiz {...{ instanceKey: bennettsChristopherLiz }} />
-            <BennettStephanie {...{ instanceKey: bennettStephanie }} />
-            <OldBennett {...{ instanceKey: oldBennett }} />
-            <Anita {...{ instanceKey: anita }} />
-            <AnitaBennett {...{ instanceKey: anitaBennett }} />
-            <Esther {...{ instanceKey: esther }} />
-            <EstherMother {...{ instanceKey: estherMother }} />
-            <Willy {...{ instanceKey: willy }} />
-            <Mother {...{ instanceKey: mother }} />
-            <Father {...{ instanceKey: father }} />
-            <Christopher {...{ instanceKey: christopher }} />
-            <ChristopherBennett {...{ instanceKey: christopherBennett }} />
-            <ChristopherBennettWilly {...{ instanceKey: christopherBennettWilly }} />
-            <Sasha {...{ instanceKey: sasha }} />
-            <SashaBennett {...{ instanceKey: sashaBennett }} />
-            <Brad {...{ instanceKey: brad }} />
-            <BradBennett {...{ instanceKey: bradBennett }} />
-            <BradSasha {...{ instanceKey: bradSasha }} />
-            <Andrew {...{ instanceKey: andrew }} />
-            <Catherine {...{ instanceKey: catherine }} />
-            <Mara {...{ instanceKey: mara }} />
-            <Jacob {...{ instanceKey: jacob }} />
-            <JacobMara {...{ instanceKey: jacobMara }} />
-            <Ana {...{ instanceKey: ana }} />
-            <AnaHowie {...{ instanceKey: anaHowie }} />
-            <Howie {...{ instanceKey: howie }} />
-            <HowieWilly {...{ instanceKey: howieWilly }} />
-            <Tomer {...{ instanceKey: tomer }} />
-            <Liz {...{ instanceKey: liz }} />
-            <Khari {...{ instanceKey: khari }} />
-            <KhariLiz {...{ instanceKey: khariLiz }} />
-            <Miriam {...{ instanceKey: miriam }} />
-            <MiriamBennett {...{ instanceKey: miriamBennett }} />
-            <MiriamStephanie {...{ instanceKey: miriamStephanie }} />
-            <MiriamTristan {...{ instanceKey: miriamTristan }} />
-            <Tristan {...{ instanceKey: tristan }} />
-            <Nestor {...{ instanceKey: nestor }} />
-            <Amy {...{ instanceKey: amy }} />
-            <AmyStephanie {...{ instanceKey: amyStephanie }} />
-            <AmyNestorTomer {...{ instanceKey: amyNestorTomer }} />
-            <Stephanie {...{ instanceKey: stephanie }} />
-            <Wade {...{ instanceKey: wade }} />
-            <BennettReflection {...{ instanceKey: bennettReflection }} />
-            <LizReflection {...{ instanceKey: lizReflection }} />
-            <KhariLizReflection {...{ instanceKey: khariLizReflection }} />
+            <Layer {...{ actorKey: YOUNG_BENNETT, instanceKey: youngBennett }} />
+            <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />
+            <Layer {...{ actorKey: BENNETT, instanceKey: bennett }} />
+            <Layer {...{ actorKey: BENNETT_FATHER, instanceKey: bennettFather }} />
+            <Layer {...{ actorKey: BENNETT_LIZ, instanceKey: bennettLiz }} />
+            <Layer {...{ actorKey: BENNETT_LIZ_REFLECTION, instanceKey: bennettLizReflection }} />
+            <Layer {...{ actorKey: BENNETTS_CHRISTOPHER_LIZ, instanceKey: bennettsChristopherLiz }} />
+            <Layer {...{ actorKey: BENNETT_STEPHANIE, instanceKey: bennettStephanie }} />
+            <Layer {...{ actorKey: OLD_BENNETT, instanceKey: oldBennett }} />
+            <Layer {...{ actorKey: ANITA, instanceKey: anita }} />
+            <Layer {...{ actorKey: ANITA_BENNETT, instanceKey: anitaBennett }} />
+            <Layer {...{ actorKey: ESTHER, instanceKey: esther }} />
+            <Layer {...{ actorKey: ESTHER_MOTHER, instanceKey: estherMother }} />
+            <Layer {...{ actorKey: WILLY, instanceKey: willy }} />
+            <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
+            <Layer {...{ actorKey: FATHER, instanceKey: father }} />
+            <Layer {...{ actorKey: CHRISTOPHER, instanceKey: christopher }} />
+            <Layer {...{ actorKey: CHRISTOPHER_BENNETT, instanceKey: christopherBennett }} />
+            <Layer {...{ actorKey: CHRISTOPHER_BENNETT_WILLY, instanceKey: christopherBennettWilly }} />
+            <Layer {...{ actorKey: SASHA, instanceKey: sasha }} />
+            <Layer {...{ actorKey: SASHA_BENNETT, instanceKey: sashaBennett }} />
+            <Layer {...{ actorKey: BRAD, instanceKey: brad }} />
+            <Layer {...{ actorKey: BRAD_BENNETT, instanceKey: bradBennett }} />
+            <Layer {...{ actorKey: BRAD_SASHA, instanceKey: bradSasha }} />
+            <Layer {...{ actorKey: ANDREW, instanceKey: andrew }} />
+            <Layer {...{ actorKey: CATHERINE, instanceKey: catherine }} />
+            <Layer {...{ actorKey: MARA, instanceKey: mara }} />
+            <Layer {...{ actorKey: JACOB, instanceKey: jacob }} />
+            <Layer {...{ actorKey: JACOB_MARA, instanceKey: jacobMara }} />
+            <Layer {...{ actorKey: ANA, instanceKey: ana }} />
+            <Layer {...{ actorKey: ANA_HOWIE, instanceKey: anaHowie }} />
+            <Layer {...{ actorKey: HOWIE, instanceKey: howie }} />
+            <Layer {...{ actorKey: HOWIE_WILLY, instanceKey: howieWilly }} />
+            <Layer {...{ actorKey: TOMER, instanceKey: tomer }} />
+            <Layer {...{ actorKey: LIZ, instanceKey: liz }} />
+            <Layer {...{ actorKey: KHARI, instanceKey: khari }} />
+            <Layer {...{ actorKey: KHARI_LIZ, instanceKey: khariLiz }} />
+            <Layer {...{ actorKey: MIRIAM, instanceKey: miriam }} />
+            <Layer {...{ actorKey: MIRIAM_BENNETT, instanceKey: miriamBennett }} />
+            <Layer {...{ actorKey: MIRIAM_STEPHANIE, instanceKey: miriamStephanie }} />
+            <Layer {...{ actorKey: MIRIAM_TRISTAN, instanceKey: miriamTristan }} />
+            <Layer {...{ actorKey: TRISTAN, instanceKey: tristan }} />
+            <Layer {...{ actorKey: NESTOR, instanceKey: nestor }} />
+            <Layer {...{ actorKey: AMY, instanceKey: amy }} />
+            <Layer {...{ actorKey: AMY_STEPHANIE, instanceKey: amyStephanie }} />
+            <Layer {...{ actorKey: AMY_NESTOR_TOMER, instanceKey: amyNestorTomer }} />
+            <Layer {...{ actorKey: STEPHANIE, instanceKey: stephanie }} />
+            <Layer {...{ actorKey: WADE, instanceKey: wade }} />
+            <Layer {...{ actorKey: BENNETT_REFLECTION, instanceKey: bennettReflection }} />
+            <Layer {...{ actorKey: LIZ_REFLECTION, instanceKey: lizReflection }} />
+            <Layer {...{ actorKey: KHARI_LIZ_REFLECTION, instanceKey: khariLizReflection }} />
         </___>
     )
-})
+}
 
-export default ActorLayer
+ActorLayer.propTypes = {
+    [YOUNG_BENNETT]: PropTypes.string,
+    [PRETEEN_BENNETT]: PropTypes.string,
+    [BENNETT]: PropTypes.string,
+    [BENNETT_FATHER]: PropTypes.string,
+    [BENNETT_LIZ]: PropTypes.string,
+    [BENNETT_LIZ_REFLECTION]: PropTypes.string,
+    [BENNETTS_CHRISTOPHER_LIZ]: PropTypes.string,
+    [BENNETT_STEPHANIE]: PropTypes.string,
+    [OLD_BENNETT]: PropTypes.string,
+    [ANITA]: PropTypes.string,
+    [ANITA_BENNETT]: PropTypes.string,
+    [ESTHER]: PropTypes.string,
+    [ESTHER_MOTHER]: PropTypes.string,
+    [WILLY]: PropTypes.string,
+    [MOTHER]: PropTypes.string,
+    [FATHER]: PropTypes.string,
+    [CHRISTOPHER]: PropTypes.string,
+    [CHRISTOPHER_BENNETT]: PropTypes.string,
+    [CHRISTOPHER_BENNETT_WILLY]: PropTypes.string,
+    [SASHA]: PropTypes.string,
+    [SASHA_BENNETT]: PropTypes.string,
+    [BRAD]: PropTypes.string,
+    [BRAD_BENNETT]: PropTypes.string,
+    [BRAD_SASHA]: PropTypes.string,
+    [ANDREW]: PropTypes.string,
+    [CATHERINE]: PropTypes.string,
+    [MARA]: PropTypes.string,
+    [JACOB]: PropTypes.string,
+    [JACOB_MARA]: PropTypes.string,
+    [ANA]: PropTypes.string,
+    [ANA_HOWIE]: PropTypes.string,
+    [HOWIE]: PropTypes.string,
+    [HOWIE_WILLY]: PropTypes.string,
+    [TOMER]: PropTypes.string,
+    [LIZ]: PropTypes.string,
+    [KHARI]: PropTypes.string,
+    [KHARI_LIZ]: PropTypes.string,
+    [MIRIAM]: PropTypes.string,
+    [MIRIAM_BENNETT]: PropTypes.string,
+    [MIRIAM_STEPHANIE]: PropTypes.string,
+    [MIRIAM_TRISTAN]: PropTypes.string,
+    [TRISTAN]: PropTypes.string,
+    [NESTOR]: PropTypes.string,
+    [AMY]: PropTypes.string,
+    [AMY_STEPHANIE]: PropTypes.string,
+    [AMY_NESTOR_TOMER]: PropTypes.string,
+    [STEPHANIE]: PropTypes.string,
+    [WADE]: PropTypes.string,
+    [BENNETT_REFLECTION]: PropTypes.string,
+    [LIZ_REFLECTION]: PropTypes.string,
+    [KHARI_LIZ_REFLECTION]: PropTypes.string
+}
+
+export default memo(ActorLayer)
