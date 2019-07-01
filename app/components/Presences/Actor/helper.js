@@ -1,3 +1,5 @@
+import keys from 'lodash.keys'
+
 import youngBennettMap from './YoungBennett'
 import preteenBennettMap from './PreteenBennett'
 import bennettMap from './Bennett'
@@ -160,4 +162,8 @@ const ACTOR_KEY_MAP = {
 
 export const getMapForActorKey = (actorKey) => {
     return ACTOR_KEY_MAP[actorKey]
+}
+
+export const getInstanceKeysForActorKey = (actorKey) => {
+    return keys(getMapForActorKey(actorKey))
 }

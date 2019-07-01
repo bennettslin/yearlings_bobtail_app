@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import keys from 'lodash.keys'
 import { connect } from 'react-redux'
 
 import Presence from '../Presence'
-import { getMapForPresenceType } from '../Thing/helper'
-import { getMapForActorKey } from '../Actor/helper'
+import { getPresenceKeysForPresenceType } from '../Thing/helper'
+import { getInstanceKeysForActorKey } from '../Actor/helper'
 
 import { ACTOR } from 'constants/scene'
 
@@ -37,12 +36,12 @@ class Layer extends PureComponent {
 
             isActor = Boolean(actorKey),
 
-            presenceMap = isActor ?
-                getMapForActorKey(actorKey) :
-                getMapForPresenceType(presenceType)
+            presenceKeys = isActor ?
+                getInstanceKeysForActorKey(actorKey) :
+                getPresenceKeysForPresenceType(presenceType)
 
         return (
-            keys(presenceMap).map(presenceKey => {
+            presenceKeys.map(presenceKey => {
                 const {
                         [presenceKey]: presenceValue,
                         instanceKey

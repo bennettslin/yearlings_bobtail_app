@@ -1,3 +1,5 @@
+import keys from 'lodash.keys'
+
 import backdropsMap from './Backdrop'
 import bubblesMap from './Bubble'
 import cardboardsMap from './Cardboard'
@@ -34,4 +36,8 @@ const PRESENCE_TYPE_MAP = {
 
 export const getMapForPresenceType = (presenceType) => {
     return PRESENCE_TYPE_MAP[presenceType]
+}
+
+export const getPresenceKeysForPresenceType = (presenceType) => {
+    return keys(getMapForPresenceType(presenceType))
 }
