@@ -45,6 +45,7 @@ const PresenceView = ({
             zOffset: zOffset1,
             scaleFactor,
             flipHorizontal,
+            rotate,
 
             arrangement: {
                 // Allow older configurations to still nest.
@@ -94,6 +95,7 @@ const PresenceView = ({
                 ),
                 scaleFactor,
                 flipHorizontal,
+                rotate,
                 yIndex,
                 ...presenceXY
             }}

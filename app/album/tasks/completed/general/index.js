@@ -4656,5 +4656,10 @@ export default [
         taskName: `Reorganise presence components.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Begin allowing components to rotate.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

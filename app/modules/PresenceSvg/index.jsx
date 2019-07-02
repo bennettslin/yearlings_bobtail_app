@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import ReactInlineSvg from 'react-inlinesvg'
 
-import { getAdjustedSize, getViewBoxSize } from './helper'
+import {
+    getAdjustedSize,
+    getViewBoxSize,
+    getTransformStyle
+} from './helper'
 
-class PresenceSvg extends Component {
+class PresenceSvg extends PureComponent {
 
     static defaultProps = {
         scaleFactor: 1
@@ -19,6 +23,7 @@ class PresenceSvg extends Component {
         yIndex: PropTypes.number.isRequired,
         scaleFactor: PropTypes.number,
         flipHorizontal: PropTypes.bool,
+        rotate: PropTypes.number,
         children: PropTypes.node
     }
 
@@ -68,6 +73,7 @@ class PresenceSvg extends Component {
                 yIndex,
                 scaleFactor,
                 flipHorizontal,
+                rotate,
                 children
             } = this.props,
             {
@@ -82,6 +88,11 @@ class PresenceSvg extends Component {
                 viewBoxHeight,
                 yIndex,
                 scaleFactor
+            }),
+
+            transformStyle = getTransformStyle({
+                flipHorizontal,
+                rotate
             })
 
         return (
@@ -89,7 +100,6 @@ class PresenceSvg extends Component {
                 {...{
                     className: cx(
                         'PresenceSvg',
-                        flipHorizontal && 'PresenceSvg__flipHorizontal',
                         className
                     ),
                     processSVG: this.processSvg,
@@ -98,7 +108,10 @@ class PresenceSvg extends Component {
                         left: `${x.toFixed(2)}%`,
                         top: `${y.toFixed(2)}%`,
                         width: `${adjustedWidth.toFixed(2)}%`,
-                        height: `${adjustedHeight.toFixed(2)}%`
+                        height: `${adjustedHeight.toFixed(2)}%`,
+                        ...transformStyle && {
+                            transform: transformStyle
+                        }
                     },
                     wrapper: React.createFactory('div')
                 }}

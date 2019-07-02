@@ -22,9 +22,10 @@ const ARRANGEMENTS_THINGS = {
         },
         [WALL_SPEAKER_SIDE__CROWD]: {
             yIndex: 1,
-            xPosition: 4.5,
+            xPosition: 4,
             zOffset: 5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            rotate: 15
         }
     },
     [FIXTURE]: {

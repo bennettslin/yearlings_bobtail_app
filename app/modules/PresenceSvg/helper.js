@@ -41,3 +41,31 @@ export const getViewBoxSize = (svgString) => {
         }
     ) : null
 }
+
+const
+    SCALE_STYLE = 'scaleX(-1)',
+    TRANSLATE_STYLE = 'translate(50%, -100%)'
+
+export const getTransformStyle = ({
+    flipHorizontal,
+    rotate
+}) => {
+    const transformStyles = []
+
+    if (flipHorizontal) {
+        transformStyles.push(SCALE_STYLE)
+    }
+
+    if (rotate) {
+        // TODO: Use matrix instead?
+        transformStyles.push(`rotate(${rotate}deg)`)
+    }
+
+    if (transformStyles.length) {
+        transformStyles.push(TRANSLATE_STYLE)
+        return transformStyles.join(' ')
+
+    } else {
+        return null
+    }
+}
