@@ -196,7 +196,7 @@ export default [
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, play fighting',
                     instance: STEAM_TUNNEL
                 }
