@@ -10,11 +10,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'campfire',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'bennettTaiwanStairs',
         workedHours: 0,
         neededHours: 1
@@ -85,11 +80,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'taiwanFridge',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'yellowTapedGrill',
         workedHours: 0,
         neededHours: 1
@@ -100,32 +90,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'sandbags',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'stageLights',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'codeBox',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'storageBoxes',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'storageChest',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'howieFridge',
         workedHours: 0,
         neededHours: 1
     },

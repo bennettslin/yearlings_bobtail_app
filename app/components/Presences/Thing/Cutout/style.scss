@@ -23,11 +23,23 @@ path {
     }
 }
 
-.strokeLine {
+.fineLine, .strokeLine {
     .Cutout
     & {
         fill: none;
+    }
+}
+
+.strokeLine {
+    .Cutout
+    & {
         stroke-width: 0.2%;
     }
 }
 
+.fineLine {
+    .Cutout
+    & {
+        stroke-width: 0.05%;
+    }
+}

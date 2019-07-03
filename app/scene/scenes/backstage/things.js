@@ -15,21 +15,15 @@ import {
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [SANDBAGS]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+            yIndex: 1,
+            xPosition: 3,
+            scaleFactor: 0.3
         },
         [STAGE_LIGHTS]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 4,
-                zHeight: 3
-            }
+            yIndex: 1,
+            xPosition: 3,
+            scaleFactor: 0.25,
+            zOffset: 4
         }
     },
     [FIXTURE]: {

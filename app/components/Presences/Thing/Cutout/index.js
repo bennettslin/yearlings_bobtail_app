@@ -5,9 +5,9 @@ import towelRack from 'assets/svgs/cutouts/towelRack.svg'
 import overpassSignFront from 'assets/svgs/cutouts/overpassSignFront.svg'
 import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack.svg'
 import porchPlant from 'assets/svgs/cutouts/porchPlant.svg'
-// import campfire from 'assets/svgs/cutouts/campfire.svg'
+import campfire from 'assets/svgs/cutouts/campfire.svg'
 // import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine.svg'
-// import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge.svg'
+import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge.svg'
 // import bennettTaiwanStairs from 'assets/svgs/cutouts/bennettTaiwanStairs.svg'
 // import odinTaiwanStairs from 'assets/svgs/cutouts/odinTaiwanStairs.svg'
 // import bennettTaiwanGate from 'assets/svgs/cutouts/bennettTaiwanGate.svg'
@@ -31,14 +31,14 @@ import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
 import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
 import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
-// import sandbags from 'assets/svgs/cutouts/sandbags.svg'
-// import stageLights from 'assets/svgs/cutouts/stageLights.svg'
+import sandbags from 'assets/svgs/cutouts/sandbags.svg'
+import stageLights from 'assets/svgs/cutouts/stageLights.svg'
 import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
-// import storageBoxes from 'assets/svgs/cutouts/storageBoxes.svg'
-// import storageChest from 'assets/svgs/cutouts/storageChest.svg'
-// import howieFridge from 'assets/svgs/cutouts/howieFridge.svg'
+import storageBoxes from 'assets/svgs/cutouts/storageBoxes.svg'
+import storageChest from 'assets/svgs/cutouts/storageChest.svg'
+import howieFridge from 'assets/svgs/cutouts/howieFridge.svg'
 import television from 'assets/svgs/cutouts/television.svg'
 import monitorSide from 'assets/svgs/cutouts/monitorSide.svg'
 import wallSpeakerSide from 'assets/svgs/cutouts/wallSpeakerSide.svg'
@@ -125,9 +125,9 @@ export default {
     [OVERPASS_SIGN_BACK]: overpassSignBack,
     [PORCH_PLANT__LEFT]: porchPlant,
     [PORCH_PLANT__RIGHT]: porchPlant,
-    [CAMPFIRE]: false,
+    [CAMPFIRE]: campfire,
     [BUDDHA_SHRINE]: false,
-    [TAIWAN_FRIDGE]: false,
+    [TAIWAN_FRIDGE]: taiwanFridge,
     [BENNETT_TAIWAN_STAIRS]: false,
     [ODIN_TAIWAN_STAIRS]: false,
     [BENNETT_TAIWAN_GATE]: false,
@@ -156,14 +156,14 @@ export default {
     [MONITOR_FRONT__RIGHT]: monitorFront,
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
-    [SANDBAGS]: false,
-    [STAGE_LIGHTS]: false,
+    [SANDBAGS]: sandbags,
+    [STAGE_LIGHTS]: stageLights,
     [TRAFFIC_LIGHT]: trafficLight,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
-    [STORAGE_BOXES]: false,
-    [STORAGE_CHEST]: false,
-    [HOWIE_FRIDGE]: false,
+    [STORAGE_BOXES]: storageBoxes,
+    [STORAGE_CHEST]: storageChest,
+    [HOWIE_FRIDGE]: howieFridge,
     [TELEVISION]: television,
     [MONITOR_SIDE__CROWD]: monitorSide,
     [MONITOR_SIDE__STAGE]: monitorSide,

@@ -18,27 +18,19 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [STORAGE_BOXES]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 2,
-                zHeight: 3
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.2
         },
         [STORAGE_CHEST]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 1,
-                zHeight: 1.5
-            }
+            xPosition: 1.5,
+            scaleFactor: 0.2
         },
         [HOWIE_FRIDGE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2.5,
-                zHeight: 5
-            }
+            xPosition: 9,
+            scaleFactor: 0.35,
+            flipHorizontal: true
         },
         [TELEVISION]: {
             yIndex: 4,

@@ -16,11 +16,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [CAMPFIRE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 2,
-                zHeight: 1.5
-            }
+            xPosition: 4,
+            scaleFactor: 0.25
         }
     },
     [FLAT]: {

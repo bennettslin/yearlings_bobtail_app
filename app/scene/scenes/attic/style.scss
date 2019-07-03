@@ -1,3 +1,97 @@
+.HowieFridge {
+    .base {
+        fill: #666;
+    }
+
+    .door {
+        fill: #c6c;
+    }
+
+    .doorLine {
+        stroke: #b5b;
+    }
+
+    .brass {
+        fill: #ccc;
+    }
+
+    .handle {
+        fill: #963;
+    }
+}
+
+.StorageBoxes {
+    .boxInside {
+        fill: #630;
+    }
+
+    .boxTop {
+        fill: #c96;
+    }
+
+    .boxSide {
+        fill: #963;
+    }
+
+    .boxSideLine {
+        stroke: #852;
+    }
+
+    .boxFront {
+        fill: #fc9;
+    }
+
+    .boxFrontLine {
+        stroke: #eb8;
+    }
+}
+
+.StorageChest {
+    .chestSide {
+        fill: #369;
+    }
+
+    .chestFront {
+        fill: #69c;
+    }
+
+    .leatherSide {
+        fill: #663;
+    }
+
+    .leatherSideLine {
+        stroke: #552;
+    }
+
+    .leatherFront {
+        fill: #996;
+    }
+
+    .leatherFrontLine {
+        stroke: #885;
+    }
+
+    .handle {
+        fill: #630;
+    }
+
+    .brassSide {
+        fill: #aa4;
+    }
+
+    .brassFront {
+        fill: #cc6;
+    }
+
+    .brassLine {
+        stroke: #993;
+    }
+
+    .keyhole {
+        fill: #333;
+    }
+}
+
 .Television {
     .antenna {
         fill: #9cc;

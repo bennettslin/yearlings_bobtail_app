@@ -22,11 +22,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 2.5,
-                zHeight: 4
-            }
+            xPosition: 9,
+            scaleFactor: 0.3
         },
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,

@@ -128,5 +128,40 @@ export default [
         taskName: 'television',
         workedHours: 1,
         neededHours: 1
-    }
+    },
+    {
+        taskName: 'campfire',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'taiwanFridge',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'sandbags',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'stageLights',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'storageBoxes',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'storageChest',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'howieFridge',
+        workedHours: 1,
+        neededHours: 1
+    },
 ]
