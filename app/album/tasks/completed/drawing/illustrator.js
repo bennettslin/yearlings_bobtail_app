@@ -164,4 +164,19 @@ export default [
         workedHours: 1,
         neededHours: 1
     },
+    {
+        taskName: 'yellowTapedGrill',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'weddingCrowd',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'fireHydrant',
+        workedHours: 1,
+        neededHours: 1
+    }
 ]

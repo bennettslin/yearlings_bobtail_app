@@ -24,11 +24,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [FIRE_HYDRANT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 1,
-                zHeight: 2
-            }
+            xPosition: 1,
+            scaleFactor: 0.3
         }
     },
     [FLAT]: {

@@ -25,11 +25,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [WEDDING_CROWD]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 3,
-                zHeight: 1
-            }
+            xPosition: 4.5,
+            scaleFactor: 0.25
         }
     },
     [FLAT]: {

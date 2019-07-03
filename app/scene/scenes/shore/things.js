@@ -32,11 +32,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [YELLOW_TAPED_GRILL]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 2,
-                zHeight: 3
-            }
+            xPosition: 7,
+            scaleFactor: 0.3
         }
     },
     [FLAT]: {

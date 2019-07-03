@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'fireHydrant',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'mirroredSink',
         workedHours: 0,
         neededHours: 1
@@ -80,11 +75,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'yellowTapedGrill',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'trashCan',
         workedHours: 0,
         neededHours: 1
@@ -96,11 +86,6 @@ export default [
     },
     {
         taskName: 'dumpster',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'weddingCrowd',
         workedHours: 0,
         neededHours: 1
     }

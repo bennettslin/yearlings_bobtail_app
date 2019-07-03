@@ -1,4 +1,4 @@
-// import fireHydrant from 'assets/svgs/cutouts/fireHydrant.svg'
+import fireHydrant from 'assets/svgs/cutouts/fireHydrant.svg'
 import playgroundSlide from 'assets/svgs/cutouts/playgroundSlide.svg'
 // import mirroredSink from 'assets/svgs/cutouts/mirroredSink.svg'
 import towelRack from 'assets/svgs/cutouts/towelRack.svg'
@@ -16,7 +16,7 @@ import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge.svg'
 // import bennettShore from 'assets/svgs/cutouts/bennettShore.svg'
 // import odinShore from 'assets/svgs/cutouts/odinShore.svg'
 // import bennettOdinBuoy from 'assets/svgs/cutouts/bennettOdinBuoy.svg'
-// import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill.svg'
+import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill.svg'
 // import bennettOdinDepths from 'assets/svgs/cutouts/bennettOdinDepths.svg'
 // import seaSerpents from 'assets/svgs/cutouts/seaSerpents.svg'
 // import bennettOceanFloor from 'assets/svgs/cutouts/bennettOceanFloor.svg'
@@ -47,7 +47,7 @@ import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree.svg'
 // import dumpster from 'assets/svgs/cutouts/dumpster.svg'
 import dispenserLeft from 'assets/svgs/cutouts/dispenserLeft.svg'
 import dispenserRight from 'assets/svgs/cutouts/dispenserRight.svg'
-// import weddingCrowd from 'assets/svgs/cutouts/weddingCrowd.svg'
+import weddingCrowd from 'assets/svgs/cutouts/weddingCrowd.svg'
 import cliffTree from 'assets/svgs/cutouts/cliffTree.svg'
 import ivDrip from 'assets/svgs/cutouts/ivDrip.svg'
 
@@ -117,7 +117,7 @@ import {
 } from 'constants/scene/things/cutouts'
 
 export default {
-    [FIRE_HYDRANT]: false,
+    [FIRE_HYDRANT]: fireHydrant,
     [PLAYGROUND_SLIDE]: playgroundSlide,
     [MIRRORED_SINK]: false,
     [TOWEL_RACK]: towelRack,
@@ -136,7 +136,7 @@ export default {
     [BENNETT_SHORE]: false,
     [ODIN_SHORE]: false,
     [BENNETT_ODIN_BUOY]: false,
-    [YELLOW_TAPED_GRILL]: false,
+    [YELLOW_TAPED_GRILL]: yellowTapedGrill,
     [BENNETT_ODIN_DEPTHS]: false,
     [SEA_SERPENTS]: false,
     [BENNETT_ODIN_OCEAN_FLOOR]: false,
@@ -176,7 +176,7 @@ export default {
     [DUMPSTER]: false,
     [DISPENSER_LEFT]: dispenserLeft,
     [DISPENSER_RIGHT]: dispenserRight,
-    [WEDDING_CROWD]: false,
+    [WEDDING_CROWD]: weddingCrowd,
     [CLIFF_TREE]: cliffTree,
     [IV_DRIP]: ivDrip
 }
