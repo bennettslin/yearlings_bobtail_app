@@ -10,12 +10,9 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1,
-                zOffset: 3.5
-            }
+            xPosition: 2,
+            scaleFactor: 0.2,
+            zOffset: 4
         },
         [SEA_SERPENTS]: {
             yIndex: 0,

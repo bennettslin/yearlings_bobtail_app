@@ -22,19 +22,14 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 3
-            }
+            xPosition: 5,
+            scaleFactor: 0.2,
+            zOffset: 1
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 6,
+            scaleFactor: 0.2
         }
     }
 }

@@ -27,19 +27,13 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_MAT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 0.5,
-                zHeight: 0.5
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.2
         },
         [ODIN_MAT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 0.5,
-                zHeight: 0.5
-            }
+            xPosition: 5,
+            scaleFactor: 0.2
         }
     },
     [PANEL]: {

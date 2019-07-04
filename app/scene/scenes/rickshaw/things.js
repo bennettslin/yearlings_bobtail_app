@@ -24,19 +24,13 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_SHORE]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 0.5,
-                zHeight: 2
-            }
+            xPosition: 1.5,
+            scaleFactor: 0.2
         },
         [ODIN_SHORE]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 0.5,
-                zHeight: 0.5
-            }
+            xPosition: 2,
+            scaleFactor: 0.2
         }
     },
     [FLAT]: {

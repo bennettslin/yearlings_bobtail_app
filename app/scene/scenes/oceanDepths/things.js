@@ -24,11 +24,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 0.5,
-                zHeight: 0.5
-            }
+            xPosition: 8,
+            scaleFactor: 0.2
         }
     },
     [FLAT]: {

@@ -27,19 +27,13 @@ const ARRANGEMENTS_THINGS = {
         },
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 1,
-                zHeight: 4
-            }
+            xPosition: 7.75,
+            scaleFactor: 0.2
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 2,
-                zHeight: 1
-            }
+            xPosition: 1.5,
+            scaleFactor: 0.2
         }
     },
     [FIXTURE]: {
