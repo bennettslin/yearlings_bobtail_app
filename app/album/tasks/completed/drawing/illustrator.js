@@ -238,5 +238,10 @@ export default [
         taskName: 'odinMat',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'seaSerpent',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

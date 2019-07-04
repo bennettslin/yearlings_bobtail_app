@@ -12,19 +12,21 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
-            xPosition: 2,
+            xPosition: 2.5,
             scaleFactor: 0.2,
-            zOffset: 4,
+            zOffset: 2.5,
             style: BENNETT_ODIN
         },
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,
             xPosition: 1,
+            zOffset: 0.5,
             scaleFactor: 0.2
         },
         [SEA_SERPENT_RIGHT]: {
             yIndex: 0,
-            xPosition: 3,
+            xPosition: 4,
+            zOffset: 1,
             scaleFactor: 0.2
         }
     }
