@@ -6,6 +6,7 @@
 // import caveShadows from 'assets/svgs/panels/caveShadows.svg'
 // import trollShadowLeft from 'assets/svgs/panels/trollShadowLeft.svg'
 // import trollShadowRight from 'assets/svgs/panels/trollShadowRight.svg'
+// import trollShadowFar from 'assets/svgs/panels/trollShadowFar.svg'
 // import stalactites from 'assets/svgs/panels/stalactites.svg'
 // import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior.svg'
 // import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior.svg'
@@ -49,6 +50,7 @@ import {
     CAVE_SHADOWS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
+    TROLL_SHADOW_FAR,
     STALACTITES,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
@@ -106,6 +108,7 @@ export default {
     [CAVE_SHADOWS]: false,
     [TROLL_SHADOW_LEFT]: false,
     [TROLL_SHADOW_RIGHT]: false,
+    [TROLL_SHADOW_FAR]: false,
     [STALACTITES]: false,
     [SCHOOLBUS_INTERIOR]: false,
     [SCHOOLBUS_EXTERIOR]: false,

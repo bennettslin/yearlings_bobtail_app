@@ -109,6 +109,7 @@ import {
     CAVE_SHADOWS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
+    TROLL_SHADOW_FAR,
     STALACTITES
 } from '../../constants/scene/things/panels'
 
@@ -350,6 +351,7 @@ export default [
                 [CAVE_SHADOWS]: true,
                 [TROLL_SHADOW_LEFT]: true,
                 [TROLL_SHADOW_RIGHT]: true,
+                [TROLL_SHADOW_FAR]: true,
                 [STALACTITES]: true
             }
         },

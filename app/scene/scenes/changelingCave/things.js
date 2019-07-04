@@ -9,6 +9,7 @@ import {
     CAVE_SHADOWS,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
+    TROLL_SHADOW_FAR,
     STALACTITES
 } from 'constants/scene/things/panels'
 
@@ -48,6 +49,14 @@ const ARRANGEMENTS_THINGS = {
             }
         },
         [TROLL_SHADOW_RIGHT]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 4,
+                zHeight: 4
+            }
+        },
+        [TROLL_SHADOW_FAR]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 9,
