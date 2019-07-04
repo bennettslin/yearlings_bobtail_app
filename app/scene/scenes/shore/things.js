@@ -24,11 +24,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 0.5,
-                zHeight: 2
-            }
+            xPosition: 9,
+            scaleFactor: 0.2
         },
         [YELLOW_TAPED_GRILL]: {
             yIndex: 4,

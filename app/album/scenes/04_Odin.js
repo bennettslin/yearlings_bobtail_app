@@ -63,7 +63,8 @@ import {
     BENNETT_ODIN_BUOY,
     YELLOW_TAPED_GRILL,
     BENNETT_ODIN_DEPTHS,
-    SEA_SERPENTS,
+    SEA_SERPENT_LEFT,
+    SEA_SERPENT_RIGHT,
     BENNETT_ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT
@@ -243,7 +244,8 @@ export default [
             },
             [CUTOUT]: {
                 [BENNETT_ODIN_DEPTHS]: true,
-                [SEA_SERPENTS]: true
+                [SEA_SERPENT_LEFT]: true,
+                [SEA_SERPENT_RIGHT]: true
             }
         },
         cubes: BUOY_KEY,

@@ -14,11 +14,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BUDDHA_SHRINE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 2,
-                zHeight: 2
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.15
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,

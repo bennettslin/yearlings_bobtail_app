@@ -445,7 +445,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'seaSerpents',
+        taskName: 'seaSerpentLeft',
         workedHours: 1,
         neededHours: 1
     },

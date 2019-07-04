@@ -3,7 +3,8 @@ import {
 } from 'constants/scene'
 import {
     BENNETT_ODIN_DEPTHS,
-    SEA_SERPENTS
+    SEA_SERPENT_LEFT,
+    SEA_SERPENT_RIGHT
 } from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
@@ -14,14 +15,15 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             zOffset: 4
         },
-        [SEA_SERPENTS]: {
+        [SEA_SERPENT_LEFT]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 5,
-                zHeight: 4,
-                zOffset: 2
-            }
+            xPosition: 1,
+            scaleFactor: 0.2
+        },
+        [SEA_SERPENT_RIGHT]: {
+            yIndex: 0,
+            xPosition: 3,
+            scaleFactor: 0.2
         }
     }
 }

@@ -24,11 +24,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 2.5,
-                zHeight: 4
-            }
+            xPosition: 7,
+            scaleFactor: 0.2
         }
     },
     [FLAT]: {
