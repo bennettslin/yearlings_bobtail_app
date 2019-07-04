@@ -9,6 +9,7 @@ import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
 } from 'constants/scene/things/flats'
+import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -25,7 +26,8 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            style: BENNETT_ODIN
         }
     },
     [FLAT]: {

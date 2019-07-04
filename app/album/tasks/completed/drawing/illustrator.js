@@ -178,5 +178,65 @@ export default [
         taskName: 'fireHydrant',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'bennettTaiwanStairs',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'odinTaiwanStairs',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettTaiwanGate',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'odinTaiwanGate',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettOdinRickshaw',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettShore',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'odinShore',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettOdinBuoy',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettOdinDepths',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettOdinOceanFloor',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettMat',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'odinMat',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

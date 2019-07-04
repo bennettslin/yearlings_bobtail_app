@@ -9,6 +9,7 @@ import {
     YELLOW_TAPED_GRILL
 } from 'constants/scene/things/cutouts'
 import { SHORE_CARNIVAL } from 'constants/scene/things/flats'
+import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -25,7 +26,8 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            style: BENNETT_ODIN
         },
         [YELLOW_TAPED_GRILL]: {
             yIndex: 4,

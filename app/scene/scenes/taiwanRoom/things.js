@@ -9,6 +9,7 @@ import {
     ODIN_TAIWAN_STAIRS
 } from 'constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from 'constants/scene/things/fixtures'
+import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -25,12 +26,14 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 7.75,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            style: BENNETT_ODIN
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 1.5,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            style: BENNETT_ODIN
         }
     },
     [FIXTURE]: {

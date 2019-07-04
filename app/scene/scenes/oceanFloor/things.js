@@ -12,6 +12,7 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from 'constants/scene/things/panels'
+import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -28,12 +29,14 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_MAT]: {
             yIndex: 2,
             xPosition: 2.5,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            style: BENNETT_ODIN
         },
         [ODIN_MAT]: {
             yIndex: 2,
             xPosition: 5,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            style: BENNETT_ODIN
         }
     },
     [PANEL]: {

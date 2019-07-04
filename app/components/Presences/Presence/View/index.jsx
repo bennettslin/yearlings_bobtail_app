@@ -46,6 +46,7 @@ const PresenceView = ({
             scaleFactor,
             flipHorizontal,
             rotate,
+            style,
 
             arrangement: {
                 // Allow older configurations to still nest.
@@ -91,6 +92,7 @@ const PresenceView = ({
                     'Presence',
                     capitaliseForClassName(presenceType),
                     capitaliseForClassName(presenceKey),
+                    capitaliseForClassName(style),
                     'abF'
                 ),
                 scaleFactor,

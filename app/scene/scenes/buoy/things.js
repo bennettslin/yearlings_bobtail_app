@@ -6,6 +6,7 @@ import {
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT
 } from 'constants/scene/things/cutouts'
+import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -13,7 +14,8 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 0,
             xPosition: 2,
             scaleFactor: 0.2,
-            zOffset: 4
+            zOffset: 4,
+            style: BENNETT_ODIN
         },
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,
