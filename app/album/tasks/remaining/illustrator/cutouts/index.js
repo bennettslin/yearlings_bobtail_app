@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'buddhaShrine',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'trashCan',
         workedHours: 0,
         neededHours: 1

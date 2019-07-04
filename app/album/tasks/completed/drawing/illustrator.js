@@ -243,5 +243,10 @@ export default [
         taskName: 'seaSerpent',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'buddhaShrine',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
