@@ -2,12 +2,12 @@ export default [
     {
         taskName: 'estherSpeechPanel',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'bathtub',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'bedroomFence',
@@ -17,12 +17,12 @@ export default [
     {
         taskName: 'schoolbusInterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'schoolbusExterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'oceanCaveExterior',
@@ -32,32 +32,32 @@ export default [
     {
         taskName: 'oceanCaveInterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'goKartExterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'dishroomSink',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'saturnInterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'saturnExterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'volkswagen',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'snowglobe',
@@ -67,12 +67,12 @@ export default [
     {
         taskName: 'reattaInterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'reattaExterior',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
     {
         taskName: 'deathbedThoughtPanel',
@@ -82,7 +82,7 @@ export default [
     {
         taskName: 'tennisThoughtPanel',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'phoneCallPanel',
@@ -92,7 +92,7 @@ export default [
     {
         taskName: 'weddingPlatform',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'inverseThoughtBackdrop',
@@ -102,52 +102,52 @@ export default [
     {
         taskName: 'bedroomDesk',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'captainBed',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'bennettBed',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'lizBed',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'hospitalBed',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'bennettCouch',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'waitingArmchair',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'atticCouch',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'lizCouch',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'caveShadows',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'trollShadowLeft',
@@ -156,6 +156,11 @@ export default [
     },
     {
         taskName: 'trollShadowRight',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'trollShadowFar',
         workedHours: 0,
         neededHours: 1
     },

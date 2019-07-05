@@ -2,12 +2,12 @@ export default [
     {
         taskName: 'tintinPoster',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'bloomCountyPoster',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'vanNuysLogo',
@@ -22,12 +22,12 @@ export default [
     {
         taskName: 'nirvanaPoster',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'leonardCohenPoster',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'progressChartEarly',
@@ -72,7 +72,7 @@ export default [
     {
         taskName: 'elliottSmithPoster',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
         taskName: 'johnnyHortonAlbum',

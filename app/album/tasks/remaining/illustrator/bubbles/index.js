@@ -22,7 +22,7 @@ export default [
     {
         taskName: 'cinemaThoughts',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 3
     },
     {
         taskName: 'goKartThought',
@@ -32,7 +32,7 @@ export default [
     {
         taskName: 'waitingRoomThoughts',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 4.5
     },
     {
         taskName: 'tarpitThought',

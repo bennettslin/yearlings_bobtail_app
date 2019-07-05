@@ -12,7 +12,7 @@ export default [
     {
         taskName: 'valleyBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 2
     },
     {
         taskName: 'taiwanMountainsBackdrop',
@@ -42,22 +42,22 @@ export default [
     {
         taskName: 'shoreRickshawBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'shoreBuoyBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'oceanBottomFar',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'oceanFloorFar',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'vanNuysSchoolBackdrop',
@@ -67,12 +67,12 @@ export default [
     {
         taskName: 'bennettCouchThoughtBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'westBerkeleyBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'ucBerkeleyBackdrop',
@@ -87,12 +87,12 @@ export default [
     {
         taskName: 'uclaBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'pharmacyThoughtBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'cemeteryBackdrop',
@@ -107,17 +107,17 @@ export default [
     {
         taskName: 'oaklandSideBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'lizCouchThoughtBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'oaklandFrontBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'roadPast',
@@ -142,11 +142,11 @@ export default [
     {
         taskName: 'pampasBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'weddingBackdrop',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     }
 ]

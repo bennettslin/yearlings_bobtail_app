@@ -2,12 +2,12 @@ export default [
     {
         taskName: 'playgroundBall',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'safewayBag',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'recordPlayerStool',
@@ -17,12 +17,12 @@ export default [
     {
         taskName: 'shoppingCartFull',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: 'beethovenBust',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'christopherLetters',
@@ -47,7 +47,7 @@ export default [
     {
         taskName: 'fridgeDrawings',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'bennettLetters',
@@ -57,7 +57,7 @@ export default [
     {
         taskName: 'captainBedLamp',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'redEnvelopeMoney',
@@ -67,17 +67,17 @@ export default [
     {
         taskName: 'beyonderEnvelope',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'thrownFruit',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'bennettCouchLamp',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'bennettRecordPlayer',
@@ -87,7 +87,7 @@ export default [
     {
         taskName: 'ashCan',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'keyboard',
@@ -102,7 +102,7 @@ export default [
     {
         taskName: 'drumKit',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 4
     },
     {
         taskName: 'bassCaseUpright',
@@ -117,42 +117,42 @@ export default [
     {
         taskName: 'basementBeerCase',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'basementBeerMara',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'basementBeerBennett',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'drumsStacked',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: 'cavemanBones',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: 'pushBroom',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'stepladder',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'mannequin',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'glassCart',
@@ -167,12 +167,12 @@ export default [
     {
         taskName: 'glassRack',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'dishPile',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'conveyorBelt',
@@ -187,27 +187,27 @@ export default [
     {
         taskName: 'vaseline',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'bloodyTowel',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'bloodyTowelReflection',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'gravestone',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'evianBottles',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'stageMicSide',
@@ -237,32 +237,32 @@ export default [
     {
         taskName: 'drumThrone',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
     },
     {
         taskName: 'bennettShoe',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'bennettShoeReflection',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'tchotchkes',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'tetherballPole',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'recordingBeers',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'recordingMic',
@@ -277,7 +277,7 @@ export default [
     {
         taskName: 'crackedPicture',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'hospitalRecordPlayer',
@@ -287,26 +287,26 @@ export default [
     {
         taskName: 'burgerWrapper',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'lizPhone',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'lizPhoneReflection',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'lizPhoneBase',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'lizPhoneBaseReflection',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     }
 ]
