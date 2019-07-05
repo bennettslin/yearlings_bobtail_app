@@ -8,6 +8,8 @@
 // import trollShadowRight from 'assets/svgs/panels/trollShadowRight.svg'
 // import trollShadowFar from 'assets/svgs/panels/trollShadowFar.svg'
 // import stalactites from 'assets/svgs/panels/stalactites.svg'
+// import taiwanClouds from 'assets/svgs/panels/taiwanClouds.svg'
+// import taiwanFog from 'assets/svgs/panels/taiwanFog.svg'
 // import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior.svg'
 // import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior.svg'
 // import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior.svg'
@@ -52,6 +54,8 @@ import {
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
     STALACTITES,
+    TAIWAN_CLOUDS,
+    TAIWAN_FOG,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     OCEAN_CAVE_INTERIOR,
@@ -110,6 +114,8 @@ export default {
     [TROLL_SHADOW_RIGHT]: false,
     [TROLL_SHADOW_FAR]: false,
     [STALACTITES]: false,
+    [TAIWAN_CLOUDS]: false,
+    [TAIWAN_FOG]: false,
     [SCHOOLBUS_INTERIOR]: false,
     [SCHOOLBUS_EXTERIOR]: false,
     [OCEAN_CAVE_INTERIOR]: false,

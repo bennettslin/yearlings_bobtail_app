@@ -5,8 +5,6 @@
 // import bedroomBus from 'assets/svgs/flats/bedroomBus.svg'
 // import bedroomSiren from 'assets/svgs/flats/bedroomSiren.svg'
 // import familyHouse from 'assets/svgs/flats/familyHouse.svg'
-// import taiwanClouds from 'assets/svgs/flats/taiwanClouds.svg'
-// import taiwanFog from 'assets/svgs/flats/taiwanFog.svg'
 // import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged.svg'
 // import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft.svg'
 // import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight.svg'
@@ -61,8 +59,6 @@ import {
     BEDROOM_BUS,
     BEDROOM_SIREN,
     FAMILY_HOUSE,
-    TAIWAN_CLOUDS,
-    TAIWAN_FOG,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
@@ -118,8 +114,6 @@ export default {
     [BEDROOM_BUS]: false,
     [BEDROOM_SIREN]: false,
     [FAMILY_HOUSE]: false,
-    [TAIWAN_CLOUDS]: false,
-    [TAIWAN_FOG]: false,
     [TAIWAN_MOUNTAINS_BRIDGED]: false,
     [TAIWAN_MOUNTAIN_LEFT]: false,
     [TAIWAN_MOUNTAIN_RIGHT]: false,

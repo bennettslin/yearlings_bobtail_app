@@ -2,6 +2,7 @@ import {
     BACKDROP,
     BUBBLE,
     FLAT,
+    PANEL,
     PUPPET
 } from 'constants/scene'
 import { TAIWAN_MOUNTAINS_BACKDROP } from 'constants/scene/things/backdrops'
@@ -10,12 +11,14 @@ import {
     APART_SKETCHBOOK
 } from 'constants/scene/things/bubbles'
 import {
-    TAIWAN_CLOUDS,
-    TAIWAN_FOG,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT
 } from 'constants/scene/things/flats'
+import {
+    TAIWAN_CLOUDS,
+    TAIWAN_FOG
+} from 'constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
     PUPPET_FAMILY_BEGIN,
@@ -37,23 +40,6 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FLAT]: {
-        [TAIWAN_CLOUDS]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 3,
-                zOffset: 5
-            }
-        },
-        [TAIWAN_FOG]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
-        },
         [TAIWAN_MOUNTAINS_BRIDGED]: {
             yIndex: 3,
             arrangement: {
@@ -76,6 +62,25 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 9,
                 xWidth: 5,
                 zHeight: 3
+            }
+        }
+    },
+    [PANEL]: {
+        [TAIWAN_CLOUDS]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 3,
+                zOffset: 5
+            }
+        },
+        [TAIWAN_FOG]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 4
             }
         }
     }

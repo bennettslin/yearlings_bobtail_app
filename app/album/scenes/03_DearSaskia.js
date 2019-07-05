@@ -52,8 +52,6 @@ import {
 } from '../../constants/scene/things/fixtures'
 
 import {
-    TAIWAN_CLOUDS,
-    TAIWAN_FOG,
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
@@ -62,6 +60,8 @@ import {
 } from '../../constants/scene/things/flats'
 
 import {
+    TAIWAN_CLOUDS,
+    TAIWAN_FOG,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
 } from '../../constants/scene/things/panels'
@@ -84,11 +84,13 @@ export default [
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
             [FLAT]: {
-                [TAIWAN_CLOUDS]: true,
-                [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAIN_LEFT]: true,
                 [TAIWAN_MOUNTAIN_RIGHT]: true
+            },
+            [PANEL]: {
+                [TAIWAN_CLOUDS]: true,
+                [TAIWAN_FOG]: true
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_BEGIN]: true,
@@ -112,11 +114,13 @@ export default [
                 [TOGETHER_SKETCHBOOK]: true
             },
             [FLAT]: {
-                [TAIWAN_CLOUDS]: true,
-                [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAIN_LEFT]: true,
                 [TAIWAN_MOUNTAIN_RIGHT]: true
+            },
+            [PANEL]: {
+                [TAIWAN_CLOUDS]: true,
+                [TAIWAN_FOG]: true
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_MIDDLE]: true,
@@ -217,11 +221,13 @@ export default [
                 [APART_SKETCHBOOK]: true
             },
             [FLAT]: {
-                [TAIWAN_CLOUDS]: true,
-                [TAIWAN_FOG]: true,
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
                 [TAIWAN_MOUNTAIN_LEFT]: true,
                 [TAIWAN_MOUNTAIN_RIGHT]: true
+            },
+            [PANEL]: {
+                [TAIWAN_CLOUDS]: true,
+                [TAIWAN_FOG]: true
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_END]: true,
