@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Photoshop render revisions.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Disable ability to toggle admin in production.`,
         workedHours: 0,
         neededHours: 1
