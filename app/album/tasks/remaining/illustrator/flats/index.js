@@ -120,24 +120,9 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'museumDisplay',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'royceHall',
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: 'pharmacyAisle',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'steamPipes',
-        workedHours: 0,
-        neededHours: 1.5
     },
     {
         taskName: 'cemeteryHillsNear',
