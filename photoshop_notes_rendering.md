@@ -1,3 +1,39 @@
+# Redo straight or curved line.
+* bennettOdinBuoy
+* bennettOdinRickshaw
+* berkeleyLamppost
+* dispensers
+* howieFridge
+* ivDrip
+* monitors
+* overpassSigns
+* playgroundSlide
+* sandbags
+* signpost
+* stageLights
+* storageChest
+* taiwanFridge
+* television
+* towelRack
+* trafficLight
+* twinStreetlamp
+* waitingRoomPlant
+* yellowTapedGrill
+* dumpster
+* mirroredSink
+* corkboard
+* lockerBank
+* goKartExterior
+* volkswagen
+
+# Redo shape organisation.
+* apartmentPlant
+* recyclables
+* storageBoxes
+* wallSpeaker
+* trashCan
+* fireHydrant?
+
 # Order.
 * Cutouts
 * Flats
