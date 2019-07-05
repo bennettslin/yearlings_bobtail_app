@@ -50,22 +50,16 @@ import {
     COMFORTING
 } from '../../constants/scene/actors/instances/mother'
 
-import {
-    ROARING
-} from '../../constants/scene/actors/instances/father'
+import { ROARING } from '../../constants/scene/actors/instances/father'
 
 import {
     TANTRUM,
     SOBBING
 } from '../../constants/scene/actors/instances/christopher'
 
-import {
-    REASSURING_ENCHANTED
-} from '../../constants/scene/actors/instances/christopherBennettWilly'
+import { REASSURING_ENCHANTED } from '../../constants/scene/actors/instances/christopherBennettWilly'
 
-import {
-    GANGBANGER
-} from '../../constants/scene/actors/instances/songs'
+import { GANGBANGER } from '../../constants/scene/actors/instances/songs'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -75,7 +69,6 @@ import {
 import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
 
 import {
-    OVERPASS_SIGN_FRONT,
     OVERPASS_SIGN_BACK,
     PORCH_PLANT__LEFT,
     PORCH_PLANT__RIGHT,
@@ -84,13 +77,13 @@ import {
 } from '../../constants/scene/things/cutouts'
 
 import {
-    SHOPPING_CART_FULL,
-
+    SHOPPING_CART,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
 } from '../../constants/scene/things/fixtures'
 
 import {
+    VALLEY_FREEWAY,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
@@ -123,8 +116,10 @@ export default [
                 [VALLEY_BACKDROP]: true
             },
             [CUTOUT]: {
-                [OVERPASS_SIGN_FRONT]: true,
                 [OVERPASS_SIGN_BACK]: true
+            },
+            [FLAT]: {
+                [VALLEY_FREEWAY]: true
             }
         },
         sky: {
@@ -148,11 +143,13 @@ export default [
                 [VALLEY_BACKDROP]: true
             },
             [CUTOUT]: {
-                [OVERPASS_SIGN_FRONT]: true,
                 [OVERPASS_SIGN_BACK]: true
             },
             [FIXTURE]: {
-                [SHOPPING_CART_FULL]: true
+                [SHOPPING_CART]: true
+            },
+            [FLAT]: {
+                [VALLEY_FREEWAY]: true
             }
         },
         cubes: FREEWAY_KEY,
@@ -277,7 +274,7 @@ export default [
                 [FIRE_HYDRANT]: true
             },
             [FIXTURE]: {
-                [SHOPPING_CART_FULL]: true
+                [SHOPPING_CART]: true
             },
             [FLAT]: {
                 [NOHO_HOUSE_LEFT]: true,

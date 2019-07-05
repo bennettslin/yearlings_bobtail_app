@@ -1,14 +1,13 @@
 import {
     BACKDROP,
     CUTOUT,
-    FIXTURE
+    FIXTURE,
+    FLAT
 } from 'constants/scene'
 import { VALLEY_BACKDROP } from 'constants/scene/things/backdrops'
-import {
-    OVERPASS_SIGN_BACK,
-    OVERPASS_SIGN_FRONT
-} from 'constants/scene/things/cutouts'
-import { SHOPPING_CART_FULL } from 'constants/scene/things/fixtures'
+import { OVERPASS_SIGN_BACK } from 'constants/scene/things/cutouts'
+import { SHOPPING_CART } from 'constants/scene/things/fixtures'
+import { VALLEY_FREEWAY } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -23,25 +22,29 @@ const ARRANGEMENTS_THINGS = {
     },
     [CUTOUT]: {
         [OVERPASS_SIGN_BACK]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 2.5,
             scaleFactor: 0.3,
-            zOffset: 1.3
-        },
-        [OVERPASS_SIGN_FRONT]: {
-            yIndex: 5,
-            xPosition: 8.5,
-            scaleFactor: 0.3,
-            zOffset: 0.5
+            zOffset: 1.5
         }
     },
     [FIXTURE]: {
-        [SHOPPING_CART_FULL]: {
+        [SHOPPING_CART]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 8,
                 xWidth: 4,
                 zHeight: 3
+            }
+        }
+    },
+    [FLAT]: {
+        [VALLEY_FREEWAY]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 4
             }
         }
     }

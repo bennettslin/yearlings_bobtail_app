@@ -1,7 +1,7 @@
 export const PLAYGROUND_BALL = 'playgroundBall'
 export const SAFEWAY_BAG = 'safewayBag'
 export const RECORD_PLAYER_STOOL = 'recordPlayerStool'
-export const SHOPPING_CART_FULL = 'shoppingCartFull'
+export const SHOPPING_CART = 'shoppingCart'
 export const BEETHOVEN_BUST = 'beethovenBust'
 export const CHRISTOPHER_LETTERS = 'christopherLetters'
 export const BACKPACK_BENNETT = 'backpackBennett'

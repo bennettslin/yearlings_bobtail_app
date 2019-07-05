@@ -1,6 +1,7 @@
 // import nohoHouseLeft from 'assets/svgs/flats/nohoHouseLeft.svg'
 // import nohoHouseRight from 'assets/svgs/flats/nohoHouseRight.svg'
 // import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse.svg'
+// import valleyFreeway from 'assets/svgs/flats/valleyFreeway.svg'
 // import bedroomBus from 'assets/svgs/flats/bedroomBus.svg'
 // import bedroomSiren from 'assets/svgs/flats/bedroomSiren.svg'
 // import familyHouse from 'assets/svgs/flats/familyHouse.svg'
@@ -56,6 +57,7 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE,
+    VALLEY_FREEWAY,
     BEDROOM_BUS,
     BEDROOM_SIREN,
     FAMILY_HOUSE,
@@ -112,6 +114,7 @@ export default {
     [NOHO_HOUSE_LEFT]: false,
     [NOHO_HOUSE_RIGHT]: false,
     [NOHO_SCHOOLHOUSE]: false,
+    [VALLEY_FREEWAY]: false,
     [BEDROOM_BUS]: false,
     [BEDROOM_SIREN]: false,
     [FAMILY_HOUSE]: false,
