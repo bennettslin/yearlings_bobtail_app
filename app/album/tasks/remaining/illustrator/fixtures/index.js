@@ -155,31 +155,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'glassCart',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'trayCart',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'glassRack',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'dishPile',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'conveyorBelt',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'nudeDrawings',
         workedHours: 0,
         neededHours: 2

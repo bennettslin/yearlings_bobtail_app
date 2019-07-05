@@ -10,14 +10,29 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'dumpster',
+        taskName: 'museumDisplay',
         workedHours: 0,
         neededHours: 1.5
     },
     {
-        taskName: 'museumDisplay',
+        taskName: 'glassCart',
         workedHours: 0,
         neededHours: 1.5
+    },
+    {
+        taskName: 'trayCart',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'glassRack',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'dishPile',
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: 'pharmacyAisle',
@@ -26,6 +41,11 @@ export default [
     },
     {
         taskName: 'steamPipes',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'dumpster',
         workedHours: 0,
         neededHours: 1.5
     }
