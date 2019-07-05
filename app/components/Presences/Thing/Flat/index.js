@@ -13,7 +13,8 @@
 // import vanNuysSchoolhouseLeft from 'assets/svgs/flats/vanNuysSchoolhouseLeft.svg'
 // import vanNuysSchoolhouseRight from 'assets/svgs/flats/vanNuysSchoolhouseRight.svg'
 // import rickshawTown from 'assets/svgs/flats/rickshawTown.svg'
-// import shoreCarnival from 'assets/svgs/flats/shoreCarnival.svg'
+// import ferrisWheel from 'assets/svgs/flats/ferrisWheel.svg'
+// import rollerCoaster from 'assets/svgs/flats/rollerCoaster.svg'
 // import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle.svg'
 // import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear.svg'
 // import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex.svg'
@@ -63,7 +64,8 @@ import {
     VAN_NUYS_SCHOOLHOUSE_LEFT,
     VAN_NUYS_SCHOOLHOUSE_RIGHT,
     RICKSHAW_TOWN,
-    SHORE_CARNIVAL,
+    FERRIS_WHEEL,
+    ROLLER_COASTER,
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR,
     ST_JOSEPHS_ANNEX,
@@ -114,7 +116,8 @@ export default {
     [VAN_NUYS_SCHOOLHOUSE_LEFT]: false,
     [VAN_NUYS_SCHOOLHOUSE_RIGHT]: false,
     [RICKSHAW_TOWN]: false,
-    [SHORE_CARNIVAL]: false,
+    [FERRIS_WHEEL]: false,
+    [ROLLER_COASTER]: false,
     [OCEAN_BOTTOM_MIDDLE]: false,
     [OCEAN_BOTTOM_NEAR]: false,
     [ST_JOSEPHS_ANNEX]: false,

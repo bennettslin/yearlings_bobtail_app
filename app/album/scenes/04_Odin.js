@@ -82,7 +82,8 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
     RICKSHAW_TOWN,
-    SHORE_CARNIVAL,
+    FERRIS_WHEEL,
+    ROLLER_COASTER,
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
 } from '../../constants/scene/things/flats'
@@ -229,7 +230,8 @@ export default [
                 [YELLOW_TAPED_GRILL]: true
             },
             [FLAT]: {
-                [SHORE_CARNIVAL]: true
+                [FERRIS_WHEEL]: true,
+                [ROLLER_COASTER]: true
             }
         },
         cubes: SHORE_KEY,

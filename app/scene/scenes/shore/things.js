@@ -7,7 +7,10 @@ import {
 import { SHORE_BUOY_BACKDROP } from 'constants/scene/things/backdrops'
 import { BENNETT_ODIN_BUOY } from 'constants/scene/things/cardboards'
 import { YELLOW_TAPED_GRILL } from 'constants/scene/things/cutouts'
-import { SHORE_CARNIVAL } from 'constants/scene/things/flats'
+import {
+    FERRIS_WHEEL,
+    ROLLER_COASTER
+} from 'constants/scene/things/flats'
 import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -37,8 +40,16 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FLAT]: {
-        [SHORE_CARNIVAL]: {
+        [FERRIS_WHEEL]: {
             yIndex: 1,
+            arrangement: {
+                xPosition: 2,
+                xWidth: 5,
+                zHeight: 3
+            }
+        },
+        [ROLLER_COASTER]: {
+            yIndex: 2,
             arrangement: {
                 xPosition: 2,
                 xWidth: 5,

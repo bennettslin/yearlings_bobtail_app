@@ -11,7 +11,7 @@ const ARRANGEMENTS_ACTORS = {
         [ABBEY_ROAD]: {
             yIndex: 5,
             arrangement: {
-                xPosition: 5.5,
+                xPosition: 6,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -21,7 +21,7 @@ const ARRANGEMENTS_ACTORS = {
         [ABBEY_ROAD]: {
             yIndex: 5,
             arrangement: {
-                xPosition: 5.5,
+                xPosition: 4,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -31,7 +31,7 @@ const ARRANGEMENTS_ACTORS = {
         [ABBEY_ROAD]: {
             yIndex: 5,
             arrangement: {
-                xPosition: 5.5,
+                xPosition: 2,
                 xWidth: 1,
                 zHeight: 5
             }
@@ -41,7 +41,7 @@ const ARRANGEMENTS_ACTORS = {
         [ABBEY_ROAD]: {
             yIndex: 5,
             arrangement: {
-                xPosition: 5.5,
+                xPosition: 8,
                 xWidth: 1,
                 zHeight: 5
             }

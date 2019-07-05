@@ -5,6 +5,11 @@ export default [
         neededHours: 5
     },
     {
+        taskName: `Allow svgs to be superimposed.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Disable ability to toggle admin in production.`,
         workedHours: 0,
         neededHours: 1
