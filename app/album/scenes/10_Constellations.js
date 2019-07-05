@@ -57,6 +57,7 @@ import {
 } from '../../constants/scene/things/bubbles'
 
 import {
+    PHARMACY_AISLE,
     STEAM_PIPES,
     STORAGE_BOXES,
     STORAGE_CHEST,
@@ -72,7 +73,6 @@ import {
 
 import {
     ROYCE_HALL,
-    PHARMACY_AISLE,
     CEMETERY_HILLS_NEAR
 } from '../../constants/scene/things/flats'
 
@@ -161,7 +161,7 @@ export default [
             [BACKDROP]: {
                 [PHARMACY_THOUGHT_BACKDROP]: true
             },
-            [FLAT]: {
+            [CUTOUT]: {
                 [PHARMACY_AISLE]: true
             }
         },

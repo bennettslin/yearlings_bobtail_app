@@ -1,16 +1,15 @@
 import {
     BACKDROP,
     CUTOUT,
-    FIXTURE,
-    FLAT
+    FIXTURE
 } from 'constants/scene'
 import { VAN_NUYS_SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
 import {
+    LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     VAN_NUYS_PLANT__LOCKERS
 } from 'constants/scene/things/cutouts'
 import { THROWN_FRUIT } from 'constants/scene/things/fixtures'
-import { LOCKER_BANK } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -24,6 +23,14 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [CUTOUT]: {
+        [LOCKER_BANK]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 3.5,
+                xWidth: 4.5,
+                zHeight: 4.5
+            }
+        },
         [TRASH_CAN__LOCKERS]: {
             yIndex: 2,
             arrangement: {
@@ -45,16 +52,6 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 6.5,
                 xWidth: 1,
                 zHeight: 0.5
-            }
-        }
-    },
-    [FLAT]: {
-        [LOCKER_BANK]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 4.5,
-                zHeight: 4.5
             }
         }
     }

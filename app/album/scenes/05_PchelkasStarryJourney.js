@@ -87,6 +87,7 @@ import {
 } from '../../constants/scene/things/cardboards'
 
 import {
+    LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
     VAN_NUYS_PLANT__LOCKERS,
@@ -101,10 +102,7 @@ import {
     THROWN_FRUIT
 } from '../../constants/scene/things/fixtures'
 
-import {
-    BEDROOM_BUS,
-    LOCKER_BANK
-} from '../../constants/scene/things/flats'
+import { BEDROOM_BUS } from '../../constants/scene/things/flats'
 
 import {
     CAPTAIN_BED_PILLOW,
@@ -304,14 +302,12 @@ export default [
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
             [CUTOUT]: {
+                [LOCKER_BANK]: true,
                 [TRASH_CAN__LOCKERS]: true,
                 [VAN_NUYS_PLANT__LOCKERS]: true
             },
             [FIXTURE]: {
                 [THROWN_FRUIT]: true
-            },
-            [FLAT]: {
-                [LOCKER_BANK]: true
             }
         },
         cubes: VAN_NUYS_LOCKERS_KEY,

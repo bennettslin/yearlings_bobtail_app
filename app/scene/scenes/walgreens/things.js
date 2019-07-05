@@ -1,9 +1,9 @@
 import {
     BACKDROP,
-    FLAT
+    CUTOUT
 } from 'constants/scene'
 import { PHARMACY_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
-import { PHARMACY_AISLE } from 'constants/scene/things/flats'
+import { PHARMACY_AISLE } from 'constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -16,7 +16,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [FLAT]: {
+    [CUTOUT]: {
         [PHARMACY_AISLE]: {
             yIndex: 1,
             arrangement: {

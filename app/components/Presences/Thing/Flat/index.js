@@ -16,12 +16,10 @@
 // import shoreCarnival from 'assets/svgs/flats/shoreCarnival.svg'
 // import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle.svg'
 // import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear.svg'
-// import lockerBank from 'assets/svgs/flats/lockerBank.svg'
 // import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex.svg'
 // import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch.svg'
 // import campanile from 'assets/svgs/flats/campanile.svg'
 // import royceHall from 'assets/svgs/flats/royceHall.svg'
-// import pharmacyAisle from 'assets/svgs/flats/pharmacyAisle.svg'
 // import cemeteryHillsNear from 'assets/svgs/flats/cemeteryHillsNear.svg'
 // import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft.svg'
 // import oaklandHouseRight from 'assets/svgs/flats/oaklandHouseRight.svg'
@@ -68,12 +66,10 @@ import {
     SHORE_CARNIVAL,
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR,
-    LOCKER_BANK,
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
     ROYCE_HALL,
-    PHARMACY_AISLE,
     CEMETERY_HILLS_NEAR,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
@@ -121,12 +117,10 @@ export default {
     [SHORE_CARNIVAL]: false,
     [OCEAN_BOTTOM_MIDDLE]: false,
     [OCEAN_BOTTOM_NEAR]: false,
-    [LOCKER_BANK]: false,
     [ST_JOSEPHS_ANNEX]: false,
     [ST_JOSEPHS_CHURCH]: false,
     [CAMPANILE]: false,
     [ROYCE_HALL]: false,
-    [PHARMACY_AISLE]: false,
     [CEMETERY_HILLS_NEAR]: false,
     [OAKLAND_HOUSE_LEFT]: false,
     [OAKLAND_HOUSE_RIGHT]: false,

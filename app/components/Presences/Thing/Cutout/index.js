@@ -8,6 +8,7 @@ import campfire from 'assets/svgs/cutouts/campfire.svg'
 import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine.svg'
 import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge.svg'
 import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill.svg'
+// import lockerBank from 'assets/svgs/cutouts/lockerBank.svg'
 // import trashCan from 'assets/svgs/cutouts/trashCan.svg'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
 import recyclables from 'assets/svgs/cutouts/recyclables.svg'
@@ -23,6 +24,7 @@ import stageLights from 'assets/svgs/cutouts/stageLights.svg'
 import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
+// import pharmacyAisle from 'assets/svgs/flats/pharmacyAisle.svg'
 // import steamPipes from 'assets/svgs/cutouts/steamPipes.svg'
 import storageBoxes from 'assets/svgs/cutouts/storageBoxes.svg'
 import storageChest from 'assets/svgs/cutouts/storageChest.svg'
@@ -51,6 +53,7 @@ import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
     YELLOW_TAPED_GRILL,
+    LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
     VAN_NUYS_PLANT__LOCKERS,
@@ -71,6 +74,7 @@ import {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT,
+    PHARMACY_AISLE,
     STEAM_PIPES,
     STORAGE_BOXES,
     STORAGE_CHEST,
@@ -104,6 +108,7 @@ export default {
     [BUDDHA_SHRINE]: buddhaShrine,
     [TAIWAN_FRIDGE]: taiwanFridge,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
+    [LOCKER_BANK]: false,
     [TRASH_CAN__LOCKERS]: false,
     [TRASH_CAN__QUAD]: false,
     [VAN_NUYS_PLANT__LOCKERS]: vanNuysPlant,
@@ -124,6 +129,7 @@ export default {
     [TRAFFIC_LIGHT]: trafficLight,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
+    [PHARMACY_AISLE]: false,
     [STEAM_PIPES]: false,
     [STORAGE_BOXES]: storageBoxes,
     [STORAGE_CHEST]: storageChest,
