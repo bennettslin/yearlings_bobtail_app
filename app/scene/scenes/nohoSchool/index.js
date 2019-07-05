@@ -12,7 +12,7 @@ const ARRANGEMENTS_ACTORS = {
         [FLUSTERED]: {
             yIndex: 4,
             arrangement: {
-                xPosition: 8.5,
+                xPosition: 9.5,
                 xWidth: 1.5,
                 zHeight: 2.5,
                 zOffset: -2

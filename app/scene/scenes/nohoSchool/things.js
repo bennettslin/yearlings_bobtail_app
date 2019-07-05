@@ -27,8 +27,8 @@ const ARRANGEMENTS_THINGS = {
     },
     [CUTOUT]: {
         [PLAYGROUND_SLIDE]: {
-            yIndex: 1,
-            xPosition: 4,
+            yIndex: 2,
+            xPosition: 1,
             scaleFactor: 0.3
         }
     },
@@ -45,10 +45,9 @@ const ARRANGEMENTS_THINGS = {
         [SAFEWAY_BAG]: {
             yIndex: 4,
             arrangement: {
-                xPosition: 2,
+                xPosition: 10,
                 xWidth: 1,
-                zHeight: 1,
-                zOffset: 1
+                zHeight: 1
             }
         }
     },
@@ -56,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
         [NOHO_SCHOOLHOUSE]: {
             yIndex: 1,
             arrangement: {
-                xPosition: 2,
+                xPosition: 5,
                 xWidth: 5,
                 zHeight: 3
             }
@@ -66,7 +65,7 @@ const ARRANGEMENTS_THINGS = {
         [ESTHER_SPEECH_PANEL]: {
             yIndex: 2,
             arrangement: {
-                xPosition: 8,
+                xPosition: 9,
                 xWidth: 5,
                 zHeight: 5
             }
