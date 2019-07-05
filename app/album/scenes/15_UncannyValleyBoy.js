@@ -2,7 +2,6 @@ import {
     ACTOR,
     BACKDROP,
     FIXTURE,
-    FLAT,
     PANEL
 } from 'constants/scene'
 
@@ -68,7 +67,12 @@ import {
     FUTURE
 } from '../../constants/scene/actors/instances/songs'
 
-import { WEST_BERKELEY_BACKDROP } from '../../constants/scene/things/backdrops'
+import {
+    ROAD_PAST,
+    ROAD_PRESENT,
+    ROAD_FUTURE,
+    WEST_BERKELEY_BACKDROP
+} from '../../constants/scene/things/backdrops'
 
 import {
     TETHERBALL_POLE,
@@ -77,12 +81,6 @@ import {
     RECORDING_BEERS,
     CRACKED_PICTURE
 } from '../../constants/scene/things/fixtures'
-
-import {
-    ROAD_PAST,
-    ROAD_PRESENT,
-    ROAD_FUTURE
-} from '../../constants/scene/things/flats'
 
 import {
     SNOWGLOBE__TETHERBALL,
@@ -189,11 +187,11 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 }
             },
+            [BACKDROP]: {
+                [ROAD_PAST]: true
+            },
             [FIXTURE]: {
                 [TETHERBALL_POLE]: true
-            },
-            [FLAT]: {
-                [ROAD_PAST]: true
             },
             [PANEL]: {
                 [SNOWGLOBE__TETHERBALL]: true
@@ -238,7 +236,7 @@ export default [
                     instance: MISCHIEVOUS_BANJO
                 }
             },
-            [FLAT]: {
+            [BACKDROP]: {
                 [ROAD_PRESENT]: true
             },
             [PANEL]: {
@@ -294,13 +292,13 @@ export default [
                     instance: JOKING_LAUGHING
                 }
             },
+            [BACKDROP]: {
+                [ROAD_FUTURE]: true
+            },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,
                 [RECORDING_CONSOLE]: true,
                 [RECORDING_BEERS]: true
-            },
-            [FLAT]: {
-                [ROAD_FUTURE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true

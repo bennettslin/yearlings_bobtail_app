@@ -235,21 +235,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'roadPast',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'roadPresent',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'roadFuture',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'elCerritoFar',
         workedHours: 0,
         neededHours: 1

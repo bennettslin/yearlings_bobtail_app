@@ -1,20 +1,30 @@
 import {
+    BACKDROP,
     FIXTURE,
-    FLAT,
     PANEL
 } from 'constants/scene'
+import { ROAD_FUTURE } from 'constants/scene/things/backdrops'
 import {
     RECORDING_MIC,
     RECORDING_CONSOLE,
     RECORDING_BEERS
 } from 'constants/scene/things/fixtures'
-import { ROAD_FUTURE } from 'constants/scene/things/flats'
 import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
+    [BACKDROP]: {
+        [ROAD_FUTURE]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        }
+    },
     [FIXTURE]: {
         [RECORDING_MIC]: {
             yIndex: 1,
@@ -38,16 +48,6 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 7,
                 xWidth: 1,
                 zHeight: 1
-            }
-        }
-    },
-    [FLAT]: {
-        [ROAD_FUTURE]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
             }
         }
     },

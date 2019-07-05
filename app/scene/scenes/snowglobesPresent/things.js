@@ -1,8 +1,8 @@
 import {
-    FLAT,
+    BACKDROP,
     PANEL
 } from 'constants/scene'
-import { ROAD_PRESENT } from 'constants/scene/things/flats'
+import { ROAD_PRESENT } from 'constants/scene/things/backdrops'
 import {
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
@@ -12,7 +12,7 @@ import {
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FLAT]: {
+    [BACKDROP]: {
         [ROAD_PRESENT]: {
             yIndex: 0,
             arrangement: {

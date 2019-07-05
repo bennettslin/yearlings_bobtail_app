@@ -1,12 +1,12 @@
 import {
-    FLAT,
+    BACKDROP,
     PANEL
 } from 'constants/scene'
-import { ROAD_PAST } from 'constants/scene/things/flats'
+import { ROAD_PAST } from 'constants/scene/things/backdrops'
 import { SNOWGLOBE__TETHERBALL } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FLAT]: {
+    [BACKDROP]: {
         [ROAD_PAST]: {
             yIndex: 0,
             arrangement: {

@@ -22,6 +22,9 @@
 // import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop.svg'
 // import lizCouchThoughtBackdrop from 'assets/svgs/backdrops/lizCouchThoughtBackdrop.svg'
 // import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop.svg'
+// import roadPast from 'assets/svgs/backdrops/roadPast.svg'
+// import roadPresent from 'assets/svgs/backdrops/roadPresent.svg'
+// import roadFuture from 'assets/svgs/backdrops/roadFuture.svg'
 // import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop.svg'
 // import pampasBackdrop from 'assets/svgs/backdrops/pampasBackdrop.svg'
 // import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop.svg'
@@ -51,6 +54,9 @@ import {
     OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP,
+    ROAD_PAST,
+    ROAD_PRESENT,
+    ROAD_FUTURE,
     GOLDEN_GATE_BACKDROP,
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP
@@ -81,6 +87,9 @@ export default {
     [OAKLAND_SIDE_BACKDROP]: false,
     [LIZ_COUCH_THOUGHT_BACKDROP]: false,
     [OAKLAND_FRONT_BACKDROP]: false,
+    [ROAD_PAST]: false,
+    [ROAD_PRESENT]: false,
+    [ROAD_FUTURE]: false,
     [GOLDEN_GATE_BACKDROP]: false,
     [PAMPAS_BACKDROP]: false,
     [WEDDING_BACKDROP]: false

@@ -45,9 +45,6 @@
 // import publicNearLeft from 'assets/svgs/flats/publicNearLeft.svg'
 // import publicFarRight from 'assets/svgs/flats/publicFarRight.svg'
 // import publicNearRight from 'assets/svgs/flats/publicNearRight.svg'
-// import roadPast from 'assets/svgs/flats/roadPast.svg'
-// import roadPresent from 'assets/svgs/flats/roadPresent.svg'
-// import roadFuture from 'assets/svgs/flats/roadFuture.svg'
 // import elCerritoFar from 'assets/svgs/flats/elCerritoFar.svg'
 // import elCerritoNear from 'assets/svgs/flats/elCerritoNear.svg'
 // import forebodingTrees from 'assets/svgs/flats/forebodingTrees.svg'
@@ -103,9 +100,6 @@ import {
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT,
-    ROAD_PAST,
-    ROAD_PRESENT,
-    ROAD_FUTURE,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
     FOREBODING_TREES,
@@ -162,9 +156,6 @@ export default {
     [PUBLIC_FAR_RIGHT]: false,
     [PUBLIC_NEAR_LEFT]: false,
     [PUBLIC_NEAR_RIGHT]: false,
-    [ROAD_PAST]: false,
-    [ROAD_PRESENT]: false,
-    [ROAD_FUTURE]: false,
     [EL_CERRITO_FAR]: false,
     [EL_CERRITO_NEAR]: false,
     [FOREBODING_TREES]: false,
