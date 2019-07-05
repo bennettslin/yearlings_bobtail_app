@@ -7,21 +7,7 @@ import porchPlant from 'assets/svgs/cutouts/porchPlant.svg'
 import campfire from 'assets/svgs/cutouts/campfire.svg'
 import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine.svg'
 import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge.svg'
-import bennettTaiwanStairs from 'assets/svgs/cutouts/bennettTaiwanStairs.svg'
-import odinTaiwanStairs from 'assets/svgs/cutouts/odinTaiwanStairs.svg'
-import bennettTaiwanGate from 'assets/svgs/cutouts/bennettTaiwanGate.svg'
-import odinTaiwanGate from 'assets/svgs/cutouts/odinTaiwanGate.svg'
-import bennettOdinRickshaw from 'assets/svgs/cutouts/bennettOdinRickshaw.svg'
-import bennettShore from 'assets/svgs/cutouts/bennettShore.svg'
-import odinShore from 'assets/svgs/cutouts/odinShore.svg'
-import bennettOdinBuoy from 'assets/svgs/cutouts/bennettOdinBuoy.svg'
 import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill.svg'
-import bennettOdinDepths from 'assets/svgs/cutouts/bennettOdinDepths.svg'
-import seaSerpentLeft from 'assets/svgs/cutouts/seaSerpentLeft.svg'
-import seaSerpentRight from 'assets/svgs/cutouts/seaSerpentRight.svg'
-import bennettOdinOceanFloor from 'assets/svgs/cutouts/bennettOdinOceanFloor.svg'
-import bennettMat from 'assets/svgs/cutouts/bennettMat.svg'
-import odinMat from 'assets/svgs/cutouts/odinMat.svg'
 // import trashCan from 'assets/svgs/cutouts/trashCan.svg'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant.svg'
 import recyclables from 'assets/svgs/cutouts/recyclables.svg'
@@ -62,21 +48,7 @@ import {
     CAMPFIRE,
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
-    BENNETT_TAIWAN_STAIRS,
-    ODIN_TAIWAN_STAIRS,
-    BENNETT_TAIWAN_GATE,
-    ODIN_TAIWAN_GATE,
-    BENNETT_ODIN_RICKSHAW,
-    BENNETT_SHORE,
-    ODIN_SHORE,
-    BENNETT_ODIN_BUOY,
     YELLOW_TAPED_GRILL,
-    BENNETT_ODIN_DEPTHS,
-    SEA_SERPENT_LEFT,
-    SEA_SERPENT_RIGHT,
-    BENNETT_ODIN_OCEAN_FLOOR,
-    BENNETT_MAT,
-    ODIN_MAT,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
     VAN_NUYS_PLANT__LOCKERS,
@@ -127,21 +99,7 @@ export default {
     [CAMPFIRE]: campfire,
     [BUDDHA_SHRINE]: buddhaShrine,
     [TAIWAN_FRIDGE]: taiwanFridge,
-    [BENNETT_TAIWAN_STAIRS]: bennettTaiwanStairs,
-    [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
-    [BENNETT_TAIWAN_GATE]: bennettTaiwanGate,
-    [ODIN_TAIWAN_GATE]: odinTaiwanGate,
-    [BENNETT_ODIN_RICKSHAW]: bennettOdinRickshaw,
-    [BENNETT_SHORE]: bennettShore,
-    [ODIN_SHORE]: odinShore,
-    [BENNETT_ODIN_BUOY]: bennettOdinBuoy,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
-    [BENNETT_ODIN_DEPTHS]: bennettOdinDepths,
-    [SEA_SERPENT_LEFT]: seaSerpentLeft,
-    [SEA_SERPENT_RIGHT]: seaSerpentRight,
-    [BENNETT_ODIN_OCEAN_FLOOR]: bennettOdinOceanFloor,
-    [BENNETT_MAT]: bennettMat,
-    [ODIN_MAT]: odinMat,
     [TRASH_CAN__LOCKERS]: false,
     [TRASH_CAN__QUAD]: false,
     [VAN_NUYS_PLANT__LOCKERS]: vanNuysPlant,

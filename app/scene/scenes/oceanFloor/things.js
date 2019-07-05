@@ -1,13 +1,13 @@
 import {
     BACKDROP,
-    CUTOUT,
+    CARDBOARD,
     PANEL
 } from 'constants/scene'
 import { OCEAN_FLOOR_FAR } from 'constants/scene/things/backdrops'
 import {
     BENNETT_MAT,
     ODIN_MAT
-} from 'constants/scene/things/cutouts'
+} from 'constants/scene/things/cardboards'
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUT]: {
+    [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,
             xPosition: 2.5,

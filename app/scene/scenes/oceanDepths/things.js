@@ -1,10 +1,10 @@
 import {
     BACKDROP,
-    CUTOUT,
+    CARDBOARD,
     FLAT
 } from 'constants/scene'
 import { OCEAN_BOTTOM_FAR } from 'constants/scene/things/backdrops'
-import { BENNETT_ODIN_OCEAN_FLOOR } from 'constants/scene/things/cutouts'
+import { BENNETT_ODIN_OCEAN_FLOOR } from 'constants/scene/things/cardboards'
 import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUT]: {
+    [CARDBOARD]: {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,
             xPosition: 8,

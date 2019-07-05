@@ -1,12 +1,12 @@
 import {
     BACKDROP,
-    CUTOUT
+    CARDBOARD
 } from 'constants/scene'
 import { TAIWAN_STAIRS_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
-} from 'constants/scene/things/cutouts'
+} from 'constants/scene/things/cardboards'
 import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUT]: {
+    [CARDBOARD]: {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
             xPosition: 5,

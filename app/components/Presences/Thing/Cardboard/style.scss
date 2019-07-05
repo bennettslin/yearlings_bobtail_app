@@ -5,28 +5,41 @@
     stroke: #444;
 }
 
-// .Cardboard {
-//     transition: top $animationDuration__default;
-//     top: -100%;
-
-//     .Scene__shown
-//     & {
-//         top: 0;
-//     }
-// }
-
-// .Cardboard {
-//     transition: opacity $animationDuration__default;
-//     opacity: 0;
-
-//     .Scene__shown
-//     & {
-//         opacity: 1;
-//     }
-// }
-
-.Cardboard__outline {
+.Cutout__outline {
     fill: none;
     stroke: #654321;
     stroke-width: 1px;
+}
+
+.Cardboard {
+    filter: drop-shadow( 0 0 1px rgba(0, 0, 0, .5));
+}
+
+path {
+    .Cardboard
+    & {
+        stroke: #543;
+        stroke-width: 0.25px;
+    }
+}
+
+.fineLine, .strokeLine {
+    .Cardboard
+    & {
+        fill: none;
+    }
+}
+
+.strokeLine {
+    .Cardboard
+    & {
+        stroke-width: 0.2%;
+    }
+}
+
+.fineLine {
+    .Cardboard
+    & {
+        stroke-width: 0.05%;
+    }
 }

@@ -1,6 +1,7 @@
 import {
     ACTOR,
     BACKDROP,
+    CARDBOARD,
     CUTOUT,
     FIXTURE,
     FLAT,
@@ -51,8 +52,6 @@ import {
 } from '../../constants/scene/things/backdrops'
 
 import {
-    BUDDHA_SHRINE,
-    TAIWAN_FRIDGE,
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
     BENNETT_TAIWAN_GATE,
@@ -61,13 +60,18 @@ import {
     BENNETT_SHORE,
     ODIN_SHORE,
     BENNETT_ODIN_BUOY,
-    YELLOW_TAPED_GRILL,
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT,
     BENNETT_ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT
+} from '../../constants/scene/things/cardboards'
+
+import {
+    BUDDHA_SHRINE,
+    TAIWAN_FRIDGE,
+    YELLOW_TAPED_GRILL
 } from '../../constants/scene/things/cutouts'
 
 import {
@@ -101,11 +105,13 @@ export default [
                     instance: MAT
                 }
             },
-            [CUTOUT]: {
-                [BUDDHA_SHRINE]: true,
-                [TAIWAN_FRIDGE]: true,
+            [CARDBOARD]: {
                 [BENNETT_TAIWAN_STAIRS]: true,
                 [ODIN_TAIWAN_STAIRS]: true
+            },
+            [CUTOUT]: {
+                [BUDDHA_SHRINE]: true,
+                [TAIWAN_FRIDGE]: true
             },
             [FIXTURE]: {
                 [FRIDGE_DRAWINGS]: true
@@ -132,7 +138,7 @@ export default [
             [BACKDROP]: {
                 [TAIWAN_STAIRS_BACKDROP]: true
             },
-            [CUTOUT]: {
+            [CARDBOARD]: {
                 [BENNETT_TAIWAN_GATE]: true,
                 [ODIN_TAIWAN_GATE]: true
             }
@@ -158,7 +164,7 @@ export default [
             [BACKDROP]: {
                 [TAIWAN_STREETS_BACKDROP]: true
             },
-            [CUTOUT]: {
+            [CARDBOARD]: {
                 [BENNETT_ODIN_RICKSHAW]: true
             },
             [FLAT]: {
@@ -187,7 +193,7 @@ export default [
             [BACKDROP]: {
                 [SHORE_RICKSHAW_BACKDROP]: true
             },
-            [CUTOUT]: {
+            [CARDBOARD]: {
                 [BENNETT_SHORE]: true,
                 [ODIN_SHORE]: true
             },
@@ -216,8 +222,10 @@ export default [
             [BACKDROP]: {
                 [SHORE_BUOY_BACKDROP]: true
             },
+            [CARDBOARD]: {
+                [BENNETT_ODIN_BUOY]: true
+            },
             [CUTOUT]: {
-                [BENNETT_ODIN_BUOY]: true,
                 [YELLOW_TAPED_GRILL]: true
             },
             [FLAT]: {
@@ -242,7 +250,7 @@ export default [
                     instance: BUOY
                 }
             },
-            [CUTOUT]: {
+            [CARDBOARD]: {
                 [BENNETT_ODIN_DEPTHS]: true,
                 [SEA_SERPENT_LEFT]: true,
                 [SEA_SERPENT_RIGHT]: true
@@ -270,7 +278,7 @@ export default [
             [BACKDROP]: {
                 [OCEAN_BOTTOM_FAR]: true
             },
-            [CUTOUT]: {
+            [CARDBOARD]: {
                 [BENNETT_ODIN_OCEAN_FLOOR]: true
             },
             [FLAT]: {
@@ -299,7 +307,7 @@ export default [
             [BACKDROP]: {
                 [OCEAN_FLOOR_FAR]: true
             },
-            [CUTOUT]: {
+            [CARDBOARD]: {
                 [BENNETT_MAT]: true,
                 [ODIN_MAT]: true
             },

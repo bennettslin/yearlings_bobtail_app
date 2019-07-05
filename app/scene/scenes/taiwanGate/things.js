@@ -1,10 +1,10 @@
 import {
     BACKDROP,
-    CUTOUT,
+    CARDBOARD,
     FLAT
 } from 'constants/scene'
 import { TAIWAN_STREETS_BACKDROP } from 'constants/scene/things/backdrops'
-import { BENNETT_ODIN_RICKSHAW } from 'constants/scene/things/cutouts'
+import { BENNETT_ODIN_RICKSHAW } from 'constants/scene/things/cardboards'
 import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUT]: {
+    [CARDBOARD]: {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
             xPosition: 7,

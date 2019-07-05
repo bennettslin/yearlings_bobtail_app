@@ -1,13 +1,12 @@
 import {
     BACKDROP,
+    CARDBOARD,
     CUTOUT,
     FLAT
 } from 'constants/scene'
 import { SHORE_BUOY_BACKDROP } from 'constants/scene/things/backdrops'
-import {
-    BENNETT_ODIN_BUOY,
-    YELLOW_TAPED_GRILL
-} from 'constants/scene/things/cutouts'
+import { BENNETT_ODIN_BUOY } from 'constants/scene/things/cardboards'
+import { YELLOW_TAPED_GRILL } from 'constants/scene/things/cutouts'
 import { SHORE_CARNIVAL } from 'constants/scene/things/flats'
 import { BENNETT_ODIN } from '../../shared'
 
@@ -22,13 +21,15 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUT]: {
+    [CARDBOARD]: {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
             xPosition: 9,
             scaleFactor: 0.2,
             style: BENNETT_ODIN
-        },
+        }
+    },
+    [CUTOUT]: {
         [YELLOW_TAPED_GRILL]: {
             yIndex: 4,
             xPosition: 7,

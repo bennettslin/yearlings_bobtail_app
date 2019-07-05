@@ -1,15 +1,13 @@
-import {
-    CUTOUT
-} from 'constants/scene'
+import { CARDBOARD } from 'constants/scene'
 import {
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT
-} from 'constants/scene/things/cutouts'
+} from 'constants/scene/things/cardboards'
 import { BENNETT_ODIN } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
-    [CUTOUT]: {
+    [CARDBOARD]: {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
             xPosition: 2.5,

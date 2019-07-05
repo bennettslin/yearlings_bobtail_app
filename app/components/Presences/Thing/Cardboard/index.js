@@ -1,5 +1,19 @@
 // import johnnyHortonAlbum from 'assets/svgs/cardboards/johnnyHortonAlbum.svg'
 // import tintinPoster from 'assets/svgs/cardboards/tintinPoster.svg'
+import bennettTaiwanStairs from 'assets/svgs/cardboards/bennettTaiwanStairs.svg'
+import odinTaiwanStairs from 'assets/svgs/cardboards/odinTaiwanStairs.svg'
+import bennettTaiwanGate from 'assets/svgs/cardboards/bennettTaiwanGate.svg'
+import odinTaiwanGate from 'assets/svgs/cardboards/odinTaiwanGate.svg'
+import bennettOdinRickshaw from 'assets/svgs/cardboards/bennettOdinRickshaw.svg'
+import bennettShore from 'assets/svgs/cardboards/bennettShore.svg'
+import odinShore from 'assets/svgs/cardboards/odinShore.svg'
+import bennettOdinBuoy from 'assets/svgs/cardboards/bennettOdinBuoy.svg'
+import bennettOdinDepths from 'assets/svgs/cardboards/bennettOdinDepths.svg'
+import seaSerpentLeft from 'assets/svgs/cardboards/seaSerpentLeft.svg'
+import seaSerpentRight from 'assets/svgs/cardboards/seaSerpentRight.svg'
+import bennettOdinOceanFloor from 'assets/svgs/cardboards/bennettOdinOceanFloor.svg'
+import bennettMat from 'assets/svgs/cardboards/bennettMat.svg'
+import odinMat from 'assets/svgs/cardboards/odinMat.svg'
 // import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster.svg'
 // import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo.svg'
 // import corkboard from 'assets/svgs/cardboards/corkboard.svg'
@@ -21,6 +35,20 @@
 import {
     JOHNNY_HORTON_ALBUM,
     TINTIN_POSTER,
+    BENNETT_TAIWAN_STAIRS,
+    ODIN_TAIWAN_STAIRS,
+    BENNETT_TAIWAN_GATE,
+    ODIN_TAIWAN_GATE,
+    BENNETT_ODIN_RICKSHAW,
+    BENNETT_SHORE,
+    ODIN_SHORE,
+    BENNETT_ODIN_BUOY,
+    BENNETT_ODIN_DEPTHS,
+    SEA_SERPENT_LEFT,
+    SEA_SERPENT_RIGHT,
+    BENNETT_ODIN_OCEAN_FLOOR,
+    BENNETT_MAT,
+    ODIN_MAT,
     BLOOM_COUNTY_POSTER,
     VAN_NUYS_LOGO,
     CORKBOARD,
@@ -43,6 +71,20 @@ import {
 export default {
     [JOHNNY_HORTON_ALBUM]: false,
     [TINTIN_POSTER]: false,
+    [BENNETT_TAIWAN_STAIRS]: bennettTaiwanStairs,
+    [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
+    [BENNETT_TAIWAN_GATE]: bennettTaiwanGate,
+    [ODIN_TAIWAN_GATE]: odinTaiwanGate,
+    [BENNETT_ODIN_RICKSHAW]: bennettOdinRickshaw,
+    [BENNETT_SHORE]: bennettShore,
+    [ODIN_SHORE]: odinShore,
+    [BENNETT_ODIN_BUOY]: bennettOdinBuoy,
+    [BENNETT_ODIN_DEPTHS]: bennettOdinDepths,
+    [SEA_SERPENT_LEFT]: seaSerpentLeft,
+    [SEA_SERPENT_RIGHT]: seaSerpentRight,
+    [BENNETT_ODIN_OCEAN_FLOOR]: bennettOdinOceanFloor,
+    [BENNETT_MAT]: bennettMat,
+    [ODIN_MAT]: odinMat,
     [BLOOM_COUNTY_POSTER]: false,
     [VAN_NUYS_LOGO]: false,
     [CORKBOARD]: false,

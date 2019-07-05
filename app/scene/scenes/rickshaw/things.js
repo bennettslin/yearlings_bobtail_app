@@ -1,13 +1,13 @@
 import {
     BACKDROP,
-    CUTOUT,
+    CARDBOARD,
     FLAT
 } from 'constants/scene'
 import { SHORE_RICKSHAW_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BENNETT_SHORE,
     ODIN_SHORE
-} from 'constants/scene/things/cutouts'
+} from 'constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from 'constants/scene/things/flats'
 import { BENNETT_ODIN } from '../../shared'
 
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
             }
         }
     },
-    [CUTOUT]: {
+    [CARDBOARD]: {
         [BENNETT_SHORE]: {
             yIndex: 2,
             xPosition: 1.5,

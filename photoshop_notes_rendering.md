@@ -1,4 +1,5 @@
-
+* Move BennettOdin, sea serpents to cardboards.
+* Move lockerBank, museumDisplay, pharmacyAisle, and steamPipes to cutouts.
 
 # Redo straight or curved line.
 * bennettOdinBuoy
