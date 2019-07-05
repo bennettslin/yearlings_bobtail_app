@@ -18,6 +18,7 @@
 // import bennettLeftArmrest from 'assets/svgs/panels/bennettLeftArmrest.svg'
 // import bennettRightArmrest from 'assets/svgs/panels/bennettRightArmrest.svg'
 // import goKartExterior from 'assets/svgs/panels/goKartExterior.svg'
+// import conveyorBelt from 'assets/svgs/fixtures/conveyorBelt.svg'
 // import dishroomSink from 'assets/svgs/panels/dishroomSink.svg'
 // import bennettBed from 'assets/svgs/panels/bennettBed.svg'
 // import waitingArmchair from 'assets/svgs/panels/waitingArmchair.svg'
@@ -65,6 +66,7 @@ import {
     BENNETT_RIGHT_ARMREST,
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
+    CONVEYOR_BELT,
     DISHROOM_SINK,
     BENNETT_BED,
     WAITING_ARMCHAIR__BENNETT,
@@ -125,6 +127,7 @@ export default {
     [BENNETT_RIGHT_ARMREST]: false,
     [GO_KART_EXTERIOR__LEFT]: false,
     [GO_KART_EXTERIOR__RIGHT]: false,
+    [CONVEYOR_BELT]: false,
     [DISHROOM_SINK]: false,
     [BENNETT_BED]: false,
     [WAITING_ARMCHAIR__BENNETT]: false,

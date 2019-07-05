@@ -29,11 +29,6 @@
 // import pushBroom from 'assets/svgs/fixtures/pushBroom.svg'
 // import stepladder from 'assets/svgs/fixtures/stepladder.svg'
 // import mannequin from 'assets/svgs/fixtures/mannequin.svg'
-// import conveyorBelt from 'assets/svgs/fixtures/conveyorBelt.svg'
-// import glassCart from 'assets/svgs/fixtures/glassCart.svg'
-// import trayCart from 'assets/svgs/fixtures/trayCart.svg'
-// import glassRack from 'assets/svgs/fixtures/glassRack.svg'
-// import dishPile from 'assets/svgs/fixtures/dishPile.svg'
 // import nudeDrawings from 'assets/svgs/fixtures/nudeDrawings.svg'
 // import vaseline from 'assets/svgs/fixtures/vaseline.svg'
 // import lizPhone from 'assets/svgs/fixtures/lizPhone.svg'
@@ -94,11 +89,6 @@ import {
     PUSH_BROOM__TUNNEL,
     STEPLADDER,
     MANNEQUIN,
-    CONVEYOR_BELT,
-    GLASS_CART,
-    TRAY_CART,
-    GLASS_RACK,
-    DISH_PILE,
     NUDE_DRAWINGS,
     VASELINE,
     LIZ_PHONE,
@@ -164,11 +154,6 @@ export default {
     [PUSH_BROOM__TUNNEL]: false,
     [STEPLADDER]: false,
     [MANNEQUIN]: false,
-    [CONVEYOR_BELT]: false,
-    [GLASS_CART]: false,
-    [TRAY_CART]: false,
-    [GLASS_RACK]: false,
-    [DISH_PILE]: false,
     [NUDE_DRAWINGS]: false,
     [VASELINE]: false,
     [LIZ_PHONE]: false,

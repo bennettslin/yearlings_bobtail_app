@@ -75,17 +75,16 @@ import {
 } from '../../constants/scene/things/cardboards'
 
 import {
+    GLASS_CART,
+    TRAY_CART,
+    GLASS_RACK,
+    DISH_PILE,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT
 } from '../../constants/scene/things/cutouts'
 
 import {
-    CONVEYOR_BELT,
-    GLASS_CART,
-    TRAY_CART,
-    GLASS_RACK,
-    DISH_PILE,
     NUDE_DRAWINGS,
     VASELINE,
     LIZ_PHONE,
@@ -104,6 +103,7 @@ import {
 } from '../../constants/scene/things/furniture'
 
 import {
+    CONVEYOR_BELT,
     DISHROOM_SINK,
     BENNETT_BED,
     LIZ_BED,
@@ -131,14 +131,14 @@ export default [
                     instance: DISHROOM_READING
                 }
             },
-            [FIXTURE]: {
-                [CONVEYOR_BELT]: true,
+            [CUTOUT]: {
                 [GLASS_CART]: true,
                 [TRAY_CART]: true,
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
             [PANEL]: {
+                [CONVEYOR_BELT]: true,
                 [DISHROOM_SINK]: true
             }
         },
@@ -168,14 +168,14 @@ export default [
                     }
                 }
             },
-            [FIXTURE]: {
-                [CONVEYOR_BELT]: true,
+            [CUTOUT]: {
                 [GLASS_CART]: true,
                 [TRAY_CART]: true,
                 [GLASS_RACK]: true,
                 [DISH_PILE]: true
             },
             [PANEL]: {
+                [CONVEYOR_BELT]: true,
                 [DISHROOM_SINK]: true
             }
         },

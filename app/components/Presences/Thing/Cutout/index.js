@@ -22,6 +22,10 @@ import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
 import sandbags from 'assets/svgs/cutouts/sandbags.svg'
 import stageLights from 'assets/svgs/cutouts/stageLights.svg'
 import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
+// import glassCart from 'assets/svgs/cutouts/glassCart.svg'
+// import trayCart from 'assets/svgs/cutouts/trayCart.svg'
+// import glassRack from 'assets/svgs/cutouts/glassRack.svg'
+// import dishPile from 'assets/svgs/cutouts/dishPile.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
 // import pharmacyAisle from 'assets/svgs/flats/pharmacyAisle.svg'
@@ -72,6 +76,10 @@ import {
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
+    GLASS_CART,
+    TRAY_CART,
+    GLASS_RACK,
+    DISH_PILE,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT,
     PHARMACY_AISLE,
@@ -127,6 +135,10 @@ export default {
     [SANDBAGS]: sandbags,
     [STAGE_LIGHTS]: stageLights,
     [TRAFFIC_LIGHT]: trafficLight,
+    [GLASS_CART]: false,
+    [TRAY_CART]: false,
+    [GLASS_RACK]: false,
+    [DISH_PILE]: false,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
     [PHARMACY_AISLE]: false,

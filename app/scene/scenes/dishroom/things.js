@@ -1,27 +1,20 @@
 import {
-    FIXTURE,
+    CUTOUT,
     PANEL
 } from 'constants/scene'
 import {
-    CONVEYOR_BELT,
     TRAY_CART,
     GLASS_CART,
     GLASS_RACK,
     DISH_PILE
-} from 'constants/scene/things/fixtures'
-import { DISHROOM_SINK } from 'constants/scene/things/panels'
+} from 'constants/scene/things/cutouts'
+import {
+    CONVEYOR_BELT,
+    DISHROOM_SINK
+} from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [FIXTURE]: {
-        [CONVEYOR_BELT]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 5,
-                zHeight: 2,
-                zOffset: 2
-            }
-        },
+    [CUTOUT]: {
         [TRAY_CART]: {
             yIndex: 3,
             arrangement: {
@@ -56,6 +49,15 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
+        [CONVEYOR_BELT]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 5,
+                zHeight: 2,
+                zOffset: 2
+            }
+        },
         [DISHROOM_SINK]: {
             yIndex: 3,
             arrangement: {
