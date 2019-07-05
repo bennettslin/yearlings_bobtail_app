@@ -17,11 +17,13 @@ import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
 import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
 import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
+// import museumDisplay from 'assets/svgs/cutouts/museumDisplay.svg'
 import sandbags from 'assets/svgs/cutouts/sandbags.svg'
 import stageLights from 'assets/svgs/cutouts/stageLights.svg'
 import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
+// import steamPipes from 'assets/svgs/cutouts/steamPipes.svg'
 import storageBoxes from 'assets/svgs/cutouts/storageBoxes.svg'
 import storageChest from 'assets/svgs/cutouts/storageChest.svg'
 import howieFridge from 'assets/svgs/cutouts/howieFridge.svg'
@@ -63,11 +65,13 @@ import {
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
+    MUSEUM_DISPLAY,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT,
+    STEAM_PIPES,
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -114,11 +118,13 @@ export default {
     [MONITOR_FRONT__RIGHT]: monitorFront,
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
+    [MUSEUM_DISPLAY]: false,
     [SANDBAGS]: sandbags,
     [STAGE_LIGHTS]: stageLights,
     [TRAFFIC_LIGHT]: trafficLight,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
+    [STEAM_PIPES]: false,
     [STORAGE_BOXES]: storageBoxes,
     [STORAGE_CHEST]: storageChest,
     [HOWIE_FRIDGE]: howieFridge,

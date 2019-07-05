@@ -57,6 +57,7 @@ import {
 } from '../../constants/scene/things/bubbles'
 
 import {
+    STEAM_PIPES,
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -72,7 +73,6 @@ import {
 import {
     ROYCE_HALL,
     PHARMACY_AISLE,
-    STEAM_PIPES,
     CEMETERY_HILLS_NEAR
 } from '../../constants/scene/things/flats'
 
@@ -201,11 +201,11 @@ export default [
                     instance: STEAM_TUNNEL
                 }
             },
+            [CUTOUT]: {
+                [STEAM_PIPES]: true
+            },
             [FIXTURE]: {
                 [PUSH_BROOM__TUNNEL]: true
-            },
-            [FLAT]: {
-                [STEAM_PIPES]: true
             }
         },
         cubes: STEAM_TUNNEL_KEY,

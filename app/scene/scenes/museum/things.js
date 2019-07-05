@@ -1,11 +1,21 @@
 import {
-    FIXTURE,
-    FLAT
+    CUTOUT,
+    FIXTURE
 } from 'constants/scene'
+import { MUSEUM_DISPLAY } from 'constants/scene/things/cutouts'
 import { CAVEMAN_BONES } from 'constants/scene/things/fixtures'
-import { MUSEUM_DISPLAY } from 'constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
+    [CUTOUT]: {
+        [MUSEUM_DISPLAY]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 4.5,
+                xWidth: 6,
+                zHeight: 6
+            }
+        }
+    },
     [FIXTURE]: {
         [CAVEMAN_BONES]: {
             yIndex: 4,
@@ -13,16 +23,6 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 8.5,
                 xWidth: 1.5,
                 zHeight: 4
-            }
-        }
-    },
-    [FLAT]: {
-        [MUSEUM_DISPLAY]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 4.5,
-                xWidth: 6,
-                zHeight: 6
             }
         }
     }

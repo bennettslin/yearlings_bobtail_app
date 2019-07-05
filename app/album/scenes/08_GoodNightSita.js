@@ -4,7 +4,6 @@ import {
     BUBBLE,
     CUTOUT,
     FIXTURE,
-    FLAT,
     PANEL
 } from 'constants/scene'
 
@@ -49,6 +48,7 @@ import {
 } from '../../constants/scene/things/bubbles'
 
 import {
+    MUSEUM_DISPLAY,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT
@@ -60,10 +60,6 @@ import {
     STEPLADDER,
     MANNEQUIN
 } from '../../constants/scene/things/fixtures'
-
-import {
-    MUSEUM_DISPLAY
-} from '../../constants/scene/things/flats'
 
 import {
     GO_KART_EXTERIOR__LEFT,
@@ -118,11 +114,11 @@ export default [
                     }
                 }
             },
+            [CUTOUT]: {
+                [MUSEUM_DISPLAY]: true
+            },
             [FIXTURE]: {
                 [CAVEMAN_BONES]: true
-            },
-            [FLAT]: {
-                [MUSEUM_DISPLAY]: true
             }
         },
         cubes: MUSEUM_KEY,
