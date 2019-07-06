@@ -75,27 +75,34 @@ const AdminNavRowView = ({
     sumTask,
     onClick
 
-}) => (
-    <div className={`row primary-row${isSelected ? ' selected' : ''}`}>
-        <ProgressBar
-            {...{
-                sumTask,
-                maxTotalNeededHours
-            }}
-        />
-        <div className="text-cell-wrapper">
-            <a
-                className="text-cell text"
-                {...{ onClick }}
-            >
-                {songTitle}
-            </a>
-            <span className="text-cell figure">
-                {parseInt(sumTask.workedHours)}/{parseInt(sumTask.neededHours)}h
-            </span>
+}) => {
+    const {
+        workedHours,
+        neededHours
+    } = sumTask
+
+    return (
+        <div className={`row primary-row${isSelected ? ' selected' : ''}`}>
+            <ProgressBar
+                {...{
+                    sumTask,
+                    maxTotalNeededHours
+                }}
+            />
+            <div className="text-cell-wrapper">
+                <a
+                    className="text-cell text"
+                    {...{ onClick }}
+                >
+                    {songTitle}
+                </a>
+                <span className="text-cell figure">
+                    {parseInt(workedHours)}/{parseInt(neededHours)}h
+                </span>
+            </div>
         </div>
-    </div>
-)
+    )
+}
 
 AdminNavRowView.propTypes = {
     songTitle: PropTypes.string.isRequired,

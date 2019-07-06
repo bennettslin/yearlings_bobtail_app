@@ -26,19 +26,19 @@ const _addWikiDotKeyToCard = (card) => {
     }
 }
 
-const _getHasWikiAnchor = (descriptionEntity) => {
-    if (!descriptionEntity || typeof descriptionEntity !== 'object') {
+const _getHasWikiAnchor = (description) => {
+    if (!description || typeof description !== 'object') {
         return false
 
-    } else if (Array.isArray(descriptionEntity)) {
-        return descriptionEntity.find(childEntity => (
+    } else if (Array.isArray(description)) {
+        return description.find(childEntity => (
             _getHasWikiAnchor(childEntity)
         ))
 
     } else {
-        return keys(descriptionEntity).find(currentKey => {
-            const hasWiki = Boolean(descriptionEntity[WIKI])
-            return hasWiki || _getHasWikiAnchor(descriptionEntity[currentKey])
+        return keys(description).find(currentKey => {
+            const hasWiki = Boolean(description[WIKI])
+            return hasWiki || _getHasWikiAnchor(description[currentKey])
         })
     }
 }

@@ -82,7 +82,7 @@ const DrawingActor = ({
                                                 )
                                             }}
                                         >
-                                            {workedHours ? workedHours : 0}
+                                            {workedHours || 0}
                                         </div>
                                         <div
                                             {...{

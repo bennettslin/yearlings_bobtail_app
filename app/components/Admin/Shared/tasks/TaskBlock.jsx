@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import TaskRow from './task-row'
+import TaskRow from './TaskRow'
 import { hasRemainingHours } from './helper'
 
 const propTypes = {
@@ -10,14 +10,14 @@ const propTypes = {
     maxTotalNeededHours: PropTypes.number.isRequired
 }
 
-const TasksBlock = ({
+const TaskBlock = ({
     tasks,
     isSubtask,
     maxTotalNeededHours
 
 }) => (
 
-    <div className={isSubtask ? 'subtask-block' : 'task-block'}>
+    <div className={isSubtask ? 'SubtaskBlock' : 'TaskBlock'}>
         {tasks
             .filter(task => hasRemainingHours(task))
             .map((task, taskIndex) => (
@@ -31,7 +31,7 @@ const TasksBlock = ({
                         maxTotalNeededHours={maxTotalNeededHours}
                     />
                     {task.subtasks &&
-                        <TasksBlock
+                        <TaskBlock
                             tasks={task.subtasks}
                             isSubtask
                             maxTotalNeededHours={maxTotalNeededHours}
@@ -43,6 +43,6 @@ const TasksBlock = ({
     </div>
 )
 
-TasksBlock.propTypes = propTypes
+TaskBlock.propTypes = propTypes
 
-export default TasksBlock
+export default TaskBlock

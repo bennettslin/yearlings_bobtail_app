@@ -6,59 +6,63 @@ import { ACTOR } from 'constants/scene'
 
 export const initialiseDrawings = (drawings, songIndex) => {
 
-    const scenes = albumScenes[songIndex]
+    albumScenes[songIndex].forEach((scene, sceneIndex) => {
 
-    scenes.forEach((scene, sceneIndex) => {
+        // Initialise object for each presence type.
+        if (!drawings[ACTOR]) {
+            drawings[ACTOR] = {}
+        }
 
-        if (scene.presences) {
+        const actorPresences = scene.presences[ACTOR]
 
-            // Initialise object for each presence type.
-            if (!drawings[ACTOR]) {
-                drawings[ACTOR] = {}
+        for (const actor in actorPresences) {
+            // Initialise array for each actor.
+            if (!drawings[ACTOR][actor]) {
+                drawings[ACTOR][actor] = []
             }
 
-            const typePresences = scene.presences[ACTOR]
-
-            for (const name in typePresences) {
-
-                const presenceObject = {
-                    songIndex,
-                    sceneIndex
-                }
-
-                // Initialise array for each actor, cutout, fixture.
-                if (!drawings[ACTOR][name]) {
-                    drawings[ACTOR][name] = []
-                }
+            const characterObject = actorPresences[actor],
 
                 /**
                  * The nesting is different if the actor is playing
                  * an alternate character in this scene, rather than
                  * themselves.
                  */
-                const
-                    characterEntity = typePresences[name],
+                isAlternate = keys(characterObject).length === 1,
 
-                    isAlternate =
-                        keys(characterEntity).length === 1,
+                character =
+                    isAlternate ?
+                        keys(characterObject)[0] :
+                        actor,
 
-                    characterName =
-                        isAlternate ?
-                            keys(characterEntity)[0] :
-                            name,
+                instance =
+                    isAlternate ?
+                        characterObject[character] :
+                        characterObject,
 
-                    descriptionEntity =
-                        isAlternate ?
-                            characterEntity[characterName] :
-                            characterEntity
+                {
+                    todo,
+                    workedHours,
+                    neededHours,
+                    description,
+                    compound,
+                    duplicate
+                } = instance
 
-                presenceObject.character = characterName
-                presenceObject.descriptionEntity = descriptionEntity
+            // Don't count duplicate instances.
+            if (!duplicate) {
 
-                // Don't count duplicate instances.
-                if (!descriptionEntity.duplicate) {
-                    drawings[ACTOR][name].push(presenceObject)
-                }
+                drawings[ACTOR][actor].push({
+                    songIndex,
+                    sceneIndex,
+                    character,
+                    todo,
+                    workedHours,
+                    neededHours,
+                    description,
+                    compound,
+                    duplicate
+                })
             }
         }
 
@@ -86,43 +90,38 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             const {
                     songIndex,
                     sceneIndex,
-                    descriptionEntity,
-                    subtasks
+                    todo,
+                    workedHours,
+                    neededHours,
+                    description,
+                    compound,
+                    character
                 } = role,
 
-                roleObject = {
-                    songIndex,
-                    sceneIndex,
-                    workedHours: descriptionEntity.workedHours,
-                    subtasks
-                }
+                doneForNow = todo && workedHours >= 4.25
 
-            // This will eventually always be an object.
-            if (typeof descriptionEntity === 'object') {
-                roleObject.todo = descriptionEntity.todo
-                roleObject.description = descriptionEntity.description
-
-                /**
-                 * FIXME: Keep modifying this conditional so that it reflects
-                 * the latest task. Currently it's faces, assumed to take 45
-                 * minutes. Leave another hour for svg prep.
-                 */
-                if (roleObject.todo) {
-                    if (descriptionEntity.workedHours < 4.25) {
-                        rolesTodoCount++
-
-                    } else {
-                        roleObject.doneForNow = true
-                    }
-                }
+            /**
+             * FIXME: Keep modifying this conditional so that it reflects
+             * the latest task. Currently it's faces, assumed to take 45
+             * minutes. Leave another hour for svg prep.
+             */
+            if (!doneForNow) {
+                rolesTodoCount++
             }
 
             // Initialise array for each character.
-            if (!characters[role.character]) {
-                characters[role.character] = []
+            if (!characters[character]) {
+                characters[character] = []
             }
 
-            characters[role.character].push(roleObject)
+            characters[character].push({
+                songIndex,
+                sceneIndex,
+                todo,
+                workedHours,
+                description,
+                doneForNow
+            })
 
             if (!drawings.songTasks) {
                 drawings.songTasks = {}
@@ -143,29 +142,19 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 drawings.songTasks[songIndex].actorsNeededHours = 0
             }
 
-            if (roleObject.todo) {
-                const { subtasks } = roleObject,
-
-                    // For compound instances, measure twice. (Or however many.)
-                    compoundValue = descriptionEntity.compound || 1
-
-                if (subtasks && subtasks.length) {
-                    subtasks.forEach(subtask => {
-                        drawings.songTasks[songIndex].actorsWorkedHours += subtask.workedHours
-
-                        drawings.songTasks[songIndex].actorsNeededHours += subtask.neededHours
-                    })
-                }
+            if (todo) {
+                // Multiply for compound instances.
+                const compoundValue = compound || 1
 
                 drawings.songTasks[songIndex].actorsTodoCount++
 
                 drawings.songTasks[songIndex].actorsWorkedHours += (
-                    descriptionEntity.workedHours || 0
+                    workedHours || 0
                 ) * compoundValue
 
                 // Assume 6.5 hours per drawing.
                 drawings.songTasks[songIndex].actorsNeededHours += (
-                    descriptionEntity.neededHours || 6.5
+                    neededHours || 6.5
                 ) * compoundValue
 
             }

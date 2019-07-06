@@ -1,5 +1,5 @@
 import React from 'react'
-import TasksBlock from './tasks-block'
+import TaskBlock from './TaskBlock'
 import ProgressFooter from '../../ProgressFooter'
 import { getSumOfTasks } from '../../helper'
 import { getMaxTotalNeededHoursFromTasks } from './helper'
@@ -8,31 +8,25 @@ import { getMaxTotalNeededHoursFromTasks } from './helper'
  * CONTAINER *
  *************/
 
-const TasksSection = (props) => {
-
+const TaskSection = (props) => {
     const { tasks } = props,
-
         maxTotalNeededHours = getMaxTotalNeededHoursFromTasks(tasks),
         sumTask = getSumOfTasks(tasks)
 
     return (
-        <div className="tasks-section">
+        <div className="TaskSection">
             <h2>tasks</h2>
-            <TasksBlock
+            <TaskBlock
                 {...{
                     tasks,
                     maxTotalNeededHours
                 }}
             />
             <div className="row">
-                <ProgressFooter
-                    {...{
-                        sumTask
-                    }}
-                />
+                <ProgressFooter {...{ sumTask }} />
             </div>
         </div>
     )
 }
 
-export default TasksSection
+export default TaskSection
