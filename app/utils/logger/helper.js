@@ -35,11 +35,11 @@ const
     },
 
     ACCESS_STYLE = _getStyles({
-        color: '#b84',
+        color: '#b82',
         fontSize: '1.1em'
     }),
     ADMIN_STYLE = _getStyles({
-        color: '#6b6',
+        color: '#2b8',
         fontSize: '1.2em'
     }),
     ANALYTICS_STYLE = _getStyles({

@@ -1,14 +1,14 @@
 import keys from 'lodash.keys'
 
-import backdropsMap from './Backdrop'
-import bubblesMap from './Bubble'
-import cardboardsMap from './Cardboard'
-import cutoutsMap from './Cutout'
-import fixturesMap from './Fixture'
-import flatsMap from './Flat'
-import furnituresMap from './Furniture'
-import panelsMap from './Panel'
-import puppetsMap from './Puppet'
+import backdrops from './Backdrop'
+import bubbles from './Bubble'
+import cardboards from './Cardboard'
+import cutouts from './Cutout'
+import fixtures from './Fixture'
+import flats from './Flat'
+import furnitures from './Furniture'
+import panels from './Panel'
+import puppets from './Puppet'
 
 import {
     BACKDROP,
@@ -23,15 +23,15 @@ import {
 } from 'constants/scene'
 
 const PRESENCE_TYPE_MAP = {
-    [BACKDROP]: backdropsMap,
-    [BUBBLE]: bubblesMap,
-    [CARDBOARD]: cardboardsMap,
-    [CUTOUT]: cutoutsMap,
-    [FIXTURE]: fixturesMap,
-    [FLAT]: flatsMap,
-    [FURNITURE]: furnituresMap,
-    [PANEL]: panelsMap,
-    [PUPPET]: puppetsMap
+    [BACKDROP]: backdrops,
+    [BUBBLE]: bubbles,
+    [CARDBOARD]: cardboards,
+    [CUTOUT]: cutouts,
+    [FIXTURE]: fixtures,
+    [FLAT]: flats,
+    [FURNITURE]: furnitures,
+    [PANEL]: panels,
+    [PUPPET]: puppets
 }
 
 export const getMapForPresenceType = (presenceType) => {
@@ -41,3 +41,37 @@ export const getMapForPresenceType = (presenceType) => {
 export const getPresenceKeysForPresenceType = (presenceType) => {
     return keys(getMapForPresenceType(presenceType))
 }
+
+// Comment this out for production.
+const _adminLogSvgCount = () => {
+    const _getSvgCount = (things) => {
+        return keys(things).reduce((count, thing) => {
+            return count + (thing.includes('__') ? 0 : 1)
+        }, 0)
+    }
+
+    const
+        backdropsCount = _getSvgCount(backdrops),
+        bubblesCount = _getSvgCount(bubbles),
+        cardboardsCount = _getSvgCount(cardboards),
+        cutoutsCount = _getSvgCount(cutouts),
+        fixturesCount = _getSvgCount(fixtures),
+        flatsCount = _getSvgCount(flats),
+        furnituresCount = _getSvgCount(furnitures),
+        panelsCount = _getSvgCount(panels),
+        puppetsCount = _getSvgCount(puppets),
+        totalCount =
+            backdropsCount +
+            bubblesCount +
+            cardboardsCount +
+            cutoutsCount +
+            fixturesCount +
+            flatsCount +
+            furnituresCount +
+            panelsCount +
+            puppetsCount
+
+    logAdmin(`${backdropsCount} backdrops, ${bubblesCount} bubbles, ${cardboardsCount} cardboards, ${cutoutsCount} cutouts, ${fixturesCount} fixtures, ${flatsCount} flats, ${furnituresCount} furnitures, ${panelsCount} panels, ${puppetsCount} puppets, ${totalCount} total things.`)
+}
+
+_adminLogSvgCount()
