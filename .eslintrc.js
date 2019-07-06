@@ -24,6 +24,7 @@ module.exports = {
         "expect": true,
         "ga": true,
         "logAccess": true,
+        "logAdmin": true,
         "logAnalytics": true,
         "logEvent": true,
         "logFocus": true,

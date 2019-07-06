@@ -38,6 +38,10 @@ const
         color: '#b84',
         fontSize: '1.1em'
     }),
+    ADMIN_STYLE = _getStyles({
+        color: '#6b6',
+        fontSize: '1.2em'
+    }),
     ANALYTICS_STYLE = _getStyles({
         color: '#888',
         fontSize: '0.75em'
@@ -90,6 +94,12 @@ export const logAccess = (log) => {
     _logInfo({
         log,
         styles: ACCESS_STYLE
+    })
+}
+export const logAdmin = (log) => {
+    _logInfo({
+        log,
+        styles: ADMIN_STYLE
     })
 }
 export const logAnalytics = ({

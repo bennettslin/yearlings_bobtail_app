@@ -159,6 +159,5 @@ const getCubesForKey = (cubesKey) => {
 }
 
 export {
-    CUBES,
     getCubesForKey
 }

@@ -9,15 +9,28 @@ import furniture from './furniture'
 import panels from './panels'
 import puppets from './puppets'
 
+export const illustrator = {
+    app,
+    backdrops,
+    bubbles,
+    cardboards,
+    cutouts,
+    fixtures,
+    flats,
+    furniture,
+    panels,
+    puppets
+}
+
 export default [
     ...app,
-    ...backdrops, // 27
-    ...bubbles, // 12
-    ...cardboards, // 18
-    ...cutouts, // 66
-    ...fixtures, // 65
-    ...flats, // 61
-    ...furniture, // 8
-    ...panels, // 46
-    ...puppets // 19
-] // 322 total
+    ...backdrops,
+    ...bubbles,
+    ...cardboards,
+    ...cutouts,
+    ...fixtures,
+    ...flats,
+    ...furniture,
+    ...panels,
+    ...puppets
+]
