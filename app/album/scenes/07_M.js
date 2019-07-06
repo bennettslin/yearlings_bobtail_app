@@ -114,9 +114,9 @@ import {
 } from '../../constants/scene/things/flats'
 
 import {
-    BENNETT_COUCH,
-    BENNETT_LEFT_ARMREST,
-    BENNETT_RIGHT_ARMREST
+    WIDE_COUCH__BENNETT,
+    WIDE_LEFT_ARMREST__BENNETT,
+    WIDE_RIGHT_ARMREST__BENNETT
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -140,9 +140,9 @@ export default [
                 [BENNETT_COUCH_LAMP]: true
             },
             [PANEL]: {
-                [BENNETT_COUCH]: true,
-                [BENNETT_LEFT_ARMREST]: true,
-                [BENNETT_RIGHT_ARMREST]: true
+                [WIDE_COUCH__BENNETT]: true,
+                [WIDE_LEFT_ARMREST__BENNETT]: true,
+                [WIDE_RIGHT_ARMREST__BENNETT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -172,9 +172,9 @@ export default [
                 [BENNETT_COUCH_LAMP]: true
             },
             [PANEL]: {
-                [BENNETT_COUCH]: true,
-                [BENNETT_LEFT_ARMREST]: true,
-                [BENNETT_RIGHT_ARMREST]: true
+                [WIDE_COUCH__BENNETT]: true,
+                [WIDE_LEFT_ARMREST__BENNETT]: true,
+                [WIDE_RIGHT_ARMREST__BENNETT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -212,9 +212,9 @@ export default [
                 [KEYBOARD]: true
             },
             [PANEL]: {
-                [BENNETT_COUCH]: true,
-                [BENNETT_LEFT_ARMREST]: true,
-                [BENNETT_RIGHT_ARMREST]: true
+                [WIDE_COUCH__BENNETT]: true,
+                [WIDE_LEFT_ARMREST__BENNETT]: true,
+                [WIDE_RIGHT_ARMREST__BENNETT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,

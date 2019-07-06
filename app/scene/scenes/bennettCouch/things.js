@@ -19,9 +19,9 @@ import {
     KEYBOARD
 } from 'constants/scene/things/fixtures'
 import {
-    BENNETT_COUCH,
-    BENNETT_LEFT_ARMREST,
-    BENNETT_RIGHT_ARMREST
+    WIDE_COUCH__BENNETT,
+    WIDE_LEFT_ARMREST__BENNETT,
+    WIDE_RIGHT_ARMREST__BENNETT
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -44,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [BENNETT_COUCH]: {
+        [WIDE_COUCH__BENNETT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,
@@ -52,7 +52,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [BENNETT_LEFT_ARMREST]: {
+        [WIDE_LEFT_ARMREST__BENNETT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,
@@ -60,7 +60,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [BENNETT_RIGHT_ARMREST]: {
+        [WIDE_RIGHT_ARMREST__BENNETT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 5,

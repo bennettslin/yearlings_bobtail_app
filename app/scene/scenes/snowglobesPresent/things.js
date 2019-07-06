@@ -6,9 +6,9 @@ import { ROAD_PRESENT } from 'constants/scene/things/backdrops'
 import {
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
-    BENNETT_COUCH__BUBBLE,
-    BENNETT_LEFT_ARMREST__BUBBLE,
-    BENNETT_RIGHT_ARMREST__BUBBLE
+    WIDE_COUCH__MIRIAM,
+    WIDE_LEFT_ARMREST__MIRIAM,
+    WIDE_RIGHT_ARMREST__MIRIAM
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [BENNETT_COUCH__BUBBLE]: {
+        [WIDE_COUCH__MIRIAM]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -47,7 +47,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [BENNETT_LEFT_ARMREST__BUBBLE]: {
+        [WIDE_LEFT_ARMREST__MIRIAM]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -55,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [BENNETT_RIGHT_ARMREST__BUBBLE]: {
+        [WIDE_RIGHT_ARMREST__MIRIAM]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,

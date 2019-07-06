@@ -90,9 +90,9 @@ import {
     SNOWGLOBE__BENNETT_ALONE,
     BENNETT_BED,
     LIZ_COUCH,
-    BENNETT_COUCH__BUBBLE,
-    BENNETT_LEFT_ARMREST__BUBBLE,
-    BENNETT_RIGHT_ARMREST__BUBBLE
+    WIDE_COUCH__MIRIAM,
+    WIDE_LEFT_ARMREST__MIRIAM,
+    WIDE_RIGHT_ARMREST__MIRIAM
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -242,9 +242,9 @@ export default [
             [PANEL]: {
                 [SNOWGLOBE__LIZ_ALONE]: true,
                 [SNOWGLOBE__BENNETT_MIRIAM]: true,
-                [BENNETT_COUCH__BUBBLE]: true,
-                [BENNETT_LEFT_ARMREST__BUBBLE]: true,
-                [BENNETT_RIGHT_ARMREST__BUBBLE]: true
+                [WIDE_COUCH__MIRIAM]: true,
+                [WIDE_LEFT_ARMREST__MIRIAM]: true,
+                [WIDE_RIGHT_ARMREST__MIRIAM]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,

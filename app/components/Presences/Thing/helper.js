@@ -45,8 +45,22 @@ export const getPresenceKeysForPresenceType = (presenceType) => {
 // Comment this out for production.
 const _adminLogSvgCount = () => {
     const _getSvgCount = (things) => {
+        const duplicateKeys = {}
         return keys(things).reduce((count, thing) => {
-            return count + (thing.includes('__') ? 0 : 1)
+            let increment = 1
+            if (thing.includes('__')) {
+                const thingArray = thing.split('__')
+
+                // Only increment if this is the first instance of a duplicate.
+                if (!duplicateKeys[thingArray[0]]) {
+                    duplicateKeys[thingArray[0]] = true
+
+                // Don't increment if this is the next instance of a duplicate.
+                } else {
+                    increment = 0
+                }
+            }
+            return count + increment
         }, 0)
     }
 
