@@ -1,5 +1,4 @@
-* Move BennettOdin, sea serpents to cardboards.
-* Move lockerBank, museumDisplay, pharmacyAisle, and steamPipes to cutouts.
+* Try to get class names through Illustrator, use groups.
 
 # Redo straight or curved line.
 * bennettOdinBuoy

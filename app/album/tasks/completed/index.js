@@ -1,13 +1,9 @@
 import general from './general'
-import drawing from './drawing'
-import illustrator from './drawing/illustrator'
-import legacyIllustrator from './drawing/legacyIllustrator'
-import scene from './scene'
+import illustrator from './illustrator'
+import legacy from './legacy'
 
 export default [
     ...general,
-    ...drawing,
     ...illustrator,
-    ...legacyIllustrator,
-    ...scene
+    ...legacy
 ]

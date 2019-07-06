@@ -9,7 +9,7 @@ import furnitures from './furnitures'
 import panels from './panels'
 import puppets from './puppets'
 
-export const illustratorRemainingTasks = {
+export const illustrator = {
     app,
     backdrops,
     bubbles,

@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import keys from 'lodash.keys'
 
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
+import ProgressThing from '../ProgressThing'
 
 import { getSongsAndLoguesCount } from 'album/api/songs'
 import { getArrayOfLength } from 'helpers/general'
@@ -14,7 +14,6 @@ import {
     getSumOfTasks,
     getAllTasks,
     getAllTasksV2,
-    getIllustratorTasks,
     getMaxTotalNeededHoursFromSongs
 } from './helper'
 
@@ -39,8 +38,7 @@ const AdminNav = ({
         allTasks = getAllTasks(),
         allTasksV2 = getAllTasksV2(),
         sumAllTasks = allTasks ? getSumOfTasks(allTasks) : null,
-        sumAllTasksV2 = allTasksV2 ? getSumOfTasks(allTasksV2) : null,
-        illustratorTasks = getIllustratorTasks()
+        sumAllTasksV2 = allTasksV2 ? getSumOfTasks(allTasksV2) : null
 
     return (
         <div
@@ -66,19 +64,7 @@ const AdminNav = ({
                 })}
             </div>
             <div className="row">
-                {keys(illustratorTasks).map(thing => {
-                    const thingTasks = illustratorTasks[thing]
-
-                    return (
-                        <ProgressFooter
-                            {...{
-                                key: thing,
-                                thing,
-                                sumTask: getSumOfTasks(thingTasks)
-                            }}
-                        />
-                    )
-                })}
+                <ProgressThing />
                 <ProgressFooter {...{ sumTask: sumAllTasks }} />
                 <ProgressFooter
                     isV2
