@@ -96,10 +96,7 @@ class Main extends PureComponent {
                 }}
             >
                 {canCarouselMount && (
-                    <___>
-                        <Carousel />
-                        <Nav />
-                    </___>
+                    <Carousel />
                 )}
                 <div
                     {...{
@@ -114,6 +111,7 @@ class Main extends PureComponent {
                         )
                     }}
                 >
+                    <Nav />
                     <AnnotationPopup inMain />
                     <div
                         {...{
@@ -133,8 +131,8 @@ class Main extends PureComponent {
                                 'Main__flexContainer',
 
                                 /**
-                                 * In desktop, tips popup is centred. In mobile, it
-                                 * is on right, aligned either top or bottom.
+                                 * In desktop, tips popup is centred. In mobile,
+                                 * it is on right, aligned either top or bottom.
                                  */
                                 isDesktopWidth ?
                                     'flexCentreContainer' :
