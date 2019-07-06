@@ -4661,5 +4661,15 @@ export default [
         taskName: `Begin allowing components to rotate.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Work to have admin show individual Illustrator tasks.`,
+        workedHours: 5,
+        neededHours: 5
+    },
+    {
+        taskName: `Fix screen jumpiness of Main when zooming using overflow hidden.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

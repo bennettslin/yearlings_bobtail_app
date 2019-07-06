@@ -87,7 +87,6 @@ class Main extends PureComponent {
                 {...{
                     className: cx(
                         'Main',
-                        'width__mainColumn',
                         'abF'
                     ),
                     style: {
@@ -96,7 +95,6 @@ class Main extends PureComponent {
                     }
                 }}
             >
-                <AnnotationPopup inMain />
                 {canCarouselMount && (
                     <___>
                         <Carousel />
@@ -106,47 +104,62 @@ class Main extends PureComponent {
                 <div
                     {...{
                         className: cx(
-                            'Main__flexContainer',
-                            'Main__flexContainer__side',
-                            'abF'
-                        )
-                    }}
-                >
-                    <ShelfLeft />
-                    <OverviewPopup inMain />
-                </div>
-                <div
-                    {...{
-                        className: cx(
-                            'Main__flexContainer',
-
                             /**
-                             * In desktop, tips popup is centred. In mobile, it
-                             * is on right, aligned either top or bottom.
+                             * This column allows Main to take up the full
+                             * viewport width and then have overflow hidden,
+                             * which avoids screen jumpiness when zooming.
                              */
-                            isDesktopWidth ?
-                                'flexCentreContainer' :
-                                [
-                                    'Main__flexContainer__side',
-                                    'Main__flexContainer__right'
-                                ],
+                            'width__mainColumn',
                             'abF'
                         )
                     }}
                 >
-                    {!isDesktopWidth && (
-                        <ShelfRight />
+                    <AnnotationPopup inMain />
+                    <div
+                        {...{
+                            className: cx(
+                                'Main__flexContainer',
+                                'Main__flexContainer__side',
+                                'abF'
+                            )
+                        }}
+                    >
+                        <ShelfLeft />
+                        <OverviewPopup inMain />
+                    </div>
+                    <div
+                        {...{
+                            className: cx(
+                                'Main__flexContainer',
+
+                                /**
+                                 * In desktop, tips popup is centred. In mobile, it
+                                 * is on right, aligned either top or bottom.
+                                 */
+                                isDesktopWidth ?
+                                    'flexCentreContainer' :
+                                    [
+                                        'Main__flexContainer__side',
+                                        'Main__flexContainer__right'
+                                    ],
+                                'abF'
+                            )
+                        }}
+                    >
+                        {!isDesktopWidth && (
+                            <ShelfRight />
+                        )}
+                        <TipsPopup />
+                    </div>
+                    <LyricToggleExpand inMain />
+                    <DotsSlide />
+                    {canCarouselMount && (
+                        <___>
+                            <CarouselToggle />
+                            <CarouselSelect />
+                        </___>
                     )}
-                    <TipsPopup />
                 </div>
-                <LyricToggleExpand inMain />
-                <DotsSlide />
-                {canCarouselMount && (
-                    <___>
-                        <CarouselToggle />
-                        <CarouselSelect />
-                    </___>
-                )}
             </div>
         )
     }

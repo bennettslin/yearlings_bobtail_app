@@ -6,6 +6,10 @@
 
 $js__height__lyricCollapsed: 32%;
 
+.Main {
+    overflow: hidden;
+}
+
 .Main__flexContainer {
     padding-top: $js__margin__thick;
     display: flex;
