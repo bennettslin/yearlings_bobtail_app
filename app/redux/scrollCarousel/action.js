@@ -1,5 +1,8 @@
 // Actions for scrolling carousel values.
-import { getDefinedOnlyPayload } from '../actionHelper'
+import {
+    hasKey,
+    getDefinedOnlyPayload
+} from '../actionHelper'
 
 import { SCROLL_CAROUSEL_STORE } from '../storeKeys'
 import { SCROLL_CAROUSEL_DEFAULTS } from '../defaultStates'
@@ -7,7 +10,16 @@ import { SCROLL_CAROUSEL_DEFAULTS } from '../defaultStates'
 export const updateScrollCarouselStore = (
     payload = SCROLL_CAROUSEL_DEFAULTS
 
-) => ({
-    type: SCROLL_CAROUSEL_STORE,
-    payload: getDefinedOnlyPayload(payload)
-})
+) => {
+    const { queuedScrollCarouselIndex } = payload
+
+    if (hasKey(queuedScrollCarouselIndex)) {
+        // If given carousel index is 0, scroll instead to 1.
+        payload.queuedScrollCarouselIndex = queuedScrollCarouselIndex || 1
+    }
+
+    return {
+        type: SCROLL_CAROUSEL_STORE,
+        payload: getDefinedOnlyPayload(payload)
+    }
+}

@@ -12,7 +12,7 @@ const
 
     _getStyles = (styles = {}) => {
         const finalStyles = {
-                backgroundColor: '#f8ffff',
+                backgroundColor: '#f0ffff',
                 color: '#888',
                 padding: '6px 8px',
                 margin: '2px 0',

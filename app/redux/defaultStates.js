@@ -228,7 +228,7 @@ export const SCENE_DEFAULTS = {
 
 export const SCROLL_CAROUSEL_DEFAULTS = {
     queuedScrollCarouselLog: '',
-    queuedScrollCarouselIndex: 0,
+    queuedScrollCarouselIndex: 1,
     queuedScrollCarouselNoDuration: false
 }
 

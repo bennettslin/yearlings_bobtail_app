@@ -4671,5 +4671,10 @@ export default [
         taskName: `Fix screen jumpiness of Main when zooming using overflow hidden.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix carousel annotation not being found when no selected annotation.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
