@@ -9,7 +9,7 @@ import { populateRefs } from 'helpers/ref'
 import {
     getSongTasks,
     getSumOfTasks
-} from '../helper'
+} from './helper'
 
 /*************
  * CONTAINER *

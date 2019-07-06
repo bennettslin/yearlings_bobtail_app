@@ -1,7 +1,7 @@
 import React from 'react'
 import TaskBlock from './TaskBlock'
 import ProgressFooter from '../../ProgressFooter'
-import { getSumOfTasks } from '../../helper'
+import { getSumOfTasks } from '../../AdminNav/helper'
 import { getMaxTotalNeededHoursFromTasks } from './helper'
 
 /*************

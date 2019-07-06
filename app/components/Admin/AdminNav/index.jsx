@@ -5,12 +5,16 @@ import cx from 'classnames'
 
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
-import { getSumOfTasks } from '../helper'
 
 import { getSongsAndLoguesCount } from 'album/api/songs'
 import { getArrayOfLength } from 'helpers/general'
 
-import { getMaxTotalNeededHoursFromSongs } from './helper'
+import {
+    getSumOfTasks,
+    getAllTasks,
+    getAllTasksV2,
+    getMaxTotalNeededHoursFromSongs
+} from './helper'
 
 const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
 
@@ -18,21 +22,22 @@ const songIndicesArray = getArrayOfLength(getSongsAndLoguesCount())
  * CONTAINER *
  *************/
 
-const AdminNavSection = ({
-    selectedSongIndex,
-    allTasks,
-    allTasksV2
+const AdminNav = ({
+    selectedSongIndex
 }) => {
 
     const
         maxTotalNeededHours = getMaxTotalNeededHoursFromSongs(),
-        sumAllTasks = allTasks ? getSumOfTasks(allTasks) : null,
-        sumAllTasksV2 = allTasksV2 ? getSumOfTasks(allTasksV2) : null,
 
         navItemProps = {
             selectedSongIndex,
             maxTotalNeededHours
-        }
+        },
+
+        allTasks = getAllTasks(),
+        allTasksV2 = getAllTasksV2(),
+        sumAllTasks = allTasks ? getSumOfTasks(allTasks) : null,
+        sumAllTasksV2 = allTasksV2 ? getSumOfTasks(allTasksV2) : null
 
     return (
         <div
@@ -61,16 +66,14 @@ const AdminNavSection = ({
                 <ProgressFooter {...{ sumTask: sumAllTasks }} />
                 <ProgressFooter
                     isV2
-                    {...{
-                        sumTask: sumAllTasksV2
-                    }}
+                    {...{ sumTask: sumAllTasksV2 }}
                 />
             </div>
         </div>
     )
 }
 
-AdminNavSection.propTypes = {
+AdminNav.propTypes = {
     // Through Redux.
     selectedSongIndex: PropTypes.number.isRequired,
 
@@ -85,4 +88,4 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-export default connect(mapStateToProps)(AdminNavSection)
+export default connect(mapStateToProps)(AdminNav)

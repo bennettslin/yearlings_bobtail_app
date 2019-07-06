@@ -15,7 +15,6 @@ const DrawingActor = ({
 
 }) => (
     <div
-        key={actor}
         className="actor-block"
     >
         <div className="actor-header-row header-row">

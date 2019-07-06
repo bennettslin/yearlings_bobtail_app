@@ -13,8 +13,11 @@ const ProgressFooter = ({
     sumTask
 }) => {
 
-    const neededHours = sumTask.neededHours,
-        workedHours = sumTask.workedHours,
+    const
+        {
+            workedHours,
+            neededHours
+        } = sumTask,
         remainingHours = neededHours - workedHours,
         neededTime = getRemainingTimeStringFromHours(neededHours),
         workedTime = getRemainingTimeStringFromHours(workedHours),

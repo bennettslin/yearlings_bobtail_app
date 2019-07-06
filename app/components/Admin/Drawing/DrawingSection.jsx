@@ -4,10 +4,12 @@ import React from 'react'
 
 import DrawingActor from './DrawingActor'
 
+import { ACTOR } from 'constants/scene'
+
 const DrawingSection = ({
 
     // From controller.
-    actor: actors,
+    [ACTOR]: actors,
     actorsTodoCount,
     actorsTotalCount
 
