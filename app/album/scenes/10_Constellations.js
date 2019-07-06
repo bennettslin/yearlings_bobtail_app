@@ -110,7 +110,7 @@ export default [
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 }
@@ -234,7 +234,7 @@ export default [
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, squatting, pouring water on grave',
                     instance: CEMETERY
                 }
@@ -280,7 +280,7 @@ export default [
                 },
                 [TOMER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'back angle, sleeping in car',
                     instance: STATION_WAGON
                 }
