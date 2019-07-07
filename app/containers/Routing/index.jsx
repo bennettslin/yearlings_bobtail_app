@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { updateDotsStore } from 'flux/dots/action'
 import { updateLyricStore } from 'flux/lyric/action'
 import { updateSceneStore } from 'flux/scene/action'
 import { updateSelectedStore } from 'flux/selected/action'
@@ -25,6 +26,7 @@ class RoutingContainer extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
+        updateDotsStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired,
         updateSceneStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
@@ -91,6 +93,13 @@ class RoutingContainer extends PureComponent {
                 lyricAnnotationIndex: routingAnnotationIndex,
                 lyricSceneIndex: routingSceneIndex
             })
+
+            // If annotation is selected, preemptively select all eight dots.
+            if (routingAnnotationIndex) {
+                this.props.updateDotsStore({
+                    dotsBitNumber: 255
+                })
+            }
 
             this.dispatchCanSceneEnter({
                 songIndex: routingSongIndex,
@@ -186,6 +195,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
+        updateDotsStore,
         updateLyricStore,
         updateSceneStore,
         updateSelectedStore,

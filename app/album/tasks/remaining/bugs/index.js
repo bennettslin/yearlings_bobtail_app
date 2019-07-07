@@ -1,7 +1,7 @@
 export default [
     {
-        taskName: `If annotation in URL requires a selected dot, force select that dot. Use dot bit number.`,
+        taskName: `Something weird about presence positions when cubes are slanted. Fix this.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
     }
 ]

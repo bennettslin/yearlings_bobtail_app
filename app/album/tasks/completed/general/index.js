@@ -4676,5 +4676,10 @@ export default [
         taskName: `Fix carousel annotation not being found when no selected annotation.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `If annotation in URL requires a selected dot, force select that dot. Use dot bit number.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
