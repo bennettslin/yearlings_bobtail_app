@@ -1,3 +1,27 @@
 .CliffTree {
-    .trunk { fill: #300; }
+    .trunk {
+        fill: #300;
+    }
+}
+
+.CliffGravesFar {
+    .meadowRight {
+        fill: #009245;
+    }
+
+    .meadowLeft {
+        fill: #39b54a;
+    }
+
+    .graveSideFar {
+        fill: #666;
+    }
+
+    .graveSideNear {
+        fill: #333;
+    }
+
+    .graveLine {
+        stroke: #000;
+    }
 }

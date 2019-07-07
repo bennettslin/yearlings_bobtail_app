@@ -245,11 +245,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'cliffGravesFar',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'cliffGravesNear',
         workedHours: 0,
         neededHours: 1.5

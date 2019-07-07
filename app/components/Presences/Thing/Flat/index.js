@@ -44,7 +44,7 @@
 // import elCerritoFar from 'assets/svgs/flats/elCerritoFar.svg'
 // import elCerritoNear from 'assets/svgs/flats/elCerritoNear.svg'
 // import forebodingTrees from 'assets/svgs/flats/forebodingTrees.svg'
-// import cliffGravesFar from 'assets/svgs/flats/cliffGravesFar.svg'
+import cliffGravesFar from 'assets/svgs/flats/cliffGravesFar.svg'
 // import cliffGravesNear from 'assets/svgs/flats/cliffGravesNear.svg'
 // import pampasFar from 'assets/svgs/flats/pampasFar.svg'
 
@@ -147,7 +147,7 @@ export default {
     [EL_CERRITO_FAR]: false,
     [EL_CERRITO_NEAR]: false,
     [FOREBODING_TREES]: false,
-    [CLIFF_GRAVES_FAR]: false,
+    [CLIFF_GRAVES_FAR]: cliffGravesFar,
     [CLIFF_GRAVES_NEAR]: false,
     [PAMPAS_FAR]: false
 }
