@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Photoshop render revisions.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Allow svgs to be superimposed.`,
         workedHours: 0,
         neededHours: 5
