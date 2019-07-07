@@ -135,7 +135,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, accusatory',
                     instance: ACCUSATORY
                 },
@@ -175,7 +175,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, gesturing to scene below',
                     instance: PAST
                 },
