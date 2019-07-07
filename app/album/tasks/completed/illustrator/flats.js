@@ -1,7 +1,7 @@
 export default [
     {
         taskName: 'cliffGravesFar',
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
