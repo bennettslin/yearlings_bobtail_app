@@ -142,7 +142,7 @@ export default [
                 [ESTHER_MOTHER]: {
                     youngSita: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         compound: 2,
                         description: 'side angle, sobbing',
                         instance: HURT_CONSOLING

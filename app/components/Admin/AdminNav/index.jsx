@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -47,30 +47,35 @@ const AdminNav = ({
                 'Admin__column'
             )}
         >
+            <h2>progress</h2>
             <div className="row">
-                <div className="text-cell-wrapper">
-                    <h3 className="text-cell text">song</h3>
-                    <h3 className="text-cell figure">progress</h3>
-                </div>
-            </div>
-            <div className="admin-block">
-                {songIndicesArray.map(songIndex => {
-                    return (
-                        <AdminNavItem {...navItemProps}
-                            key={songIndex}
-                            index={songIndex}
-                        />
-                    )
-                })}
-            </div>
-            <div className="row">
-                <ProgressThing />
                 <ProgressFooter {...{ sumTask: sumAllTasks }} />
+                <ProgressThing />
                 <ProgressFooter
                     isV2
                     {...{ sumTask: sumAllTasksV2 }}
                 />
             </div>
+            {false && (
+                <___>
+                    <div className="row">
+                        <div className="text-cell-wrapper">
+                            <h3 className="text-cell text">song</h3>
+                            <h3 className="text-cell figure">progress</h3>
+                        </div>
+                    </div>
+                    <div className="admin-block">
+                        {songIndicesArray.map(songIndex => {
+                            return (
+                                <AdminNavItem {...navItemProps}
+                                    key={songIndex}
+                                    index={songIndex}
+                                />
+                            )
+                        })}
+                    </div>
+                </___>
+            )}
         </div>
     )
 }
