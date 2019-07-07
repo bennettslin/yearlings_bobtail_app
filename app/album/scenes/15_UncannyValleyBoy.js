@@ -210,7 +210,7 @@ export default [
             [ACTOR]: {
                 [BENNETT_FATHER]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'front, dismissive, not feeling bad',
                     instance: PRESENT
@@ -280,7 +280,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front angle, arms crossed, righteous',
                     instance: FUTURE
                 },
@@ -328,7 +328,7 @@ export default [
                 },
                 [FATHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, knocked over',
                     instance: REELING
                 },
