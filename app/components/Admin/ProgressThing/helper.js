@@ -1,5 +1,9 @@
-import { illustratorRemainingTasks } from 'album/tasks/remaining/illustrator'
+import allIllustratorRemainingTasks, { illustratorRemainingTasks } from 'album/tasks/remaining/illustrator'
 
-export const getIllustratorTasks = () => (
+export const getAllIllustratorRemainingTasks = () => (
+    allIllustratorRemainingTasks
+)
+
+export const getIllustratorRemainingTasks = () => (
     illustratorRemainingTasks
 )

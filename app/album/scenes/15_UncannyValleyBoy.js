@@ -217,7 +217,7 @@ export default [
                 },
                 [MOTHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, gesturing with empathy',
                     instance: PRESENT
                 },
@@ -335,7 +335,7 @@ export default [
                 [ESTHER_MOTHER]: {
                     youngSita: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         compound: 2,
                         description: 'side angle, sobbing uncontrollably',
                         instance: SOBBING_SHIELDING

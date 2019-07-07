@@ -6,14 +6,25 @@ import keys from 'lodash.keys'
 
 import { getSumOfTasks } from '../AdminNav/helper'
 import { getRemainingTimeStringFromHours } from '../ProgressFooter/helper'
-import { getIllustratorTasks } from './helper'
+import { getIllustratorRemainingTasks, getAllIllustratorRemainingTasks } from './helper'
 
 const ProgressThing = () => {
 
-    const illustratorTasks = getIllustratorTasks()
+    const illustratorTasks = getIllustratorRemainingTasks(),
+
+        allIllustratorRemainingTasks = getAllIllustratorRemainingTasks(),
+        sumAllIllustratorTasks = getSumOfTasks(allIllustratorRemainingTasks),
+        { neededHours: neededIllustratorHours } = sumAllIllustratorTasks,
+        neededIllustratorTime = getRemainingTimeStringFromHours(neededIllustratorHours)
 
     return (
-        <div>
+        <div
+            {...{
+                className: cx(
+                    'ProgressThing'
+                )
+            }}
+        >
             {keys(illustratorTasks).map(thing => {
                 const thingTasks = illustratorTasks[thing],
                     sumTask = getSumOfTasks(thingTasks),
@@ -25,7 +36,6 @@ const ProgressThing = () => {
                         {...{
                             key: thing,
                             className: cx(
-                                'ProgressThing',
                                 'text-cell-wrapper'
                             )
                         }}
@@ -38,6 +48,19 @@ const ProgressThing = () => {
                     </div>
                 )
             })}
+            <div
+                {...{
+                    className: cx(
+                        'text-cell-wrapper'
+                    )
+                }}
+            >
+                {neededIllustratorHours &&
+                    <div className="text-cell footer">
+                        {`total: ${neededIllustratorHours}h (${neededIllustratorTime})`}
+                    </div>
+                }
+            </div>
         </div>
     )
 }

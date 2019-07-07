@@ -1,7 +1,6 @@
 import albumTasks from 'album/tasks/songs'
 import tasks from 'album/tasks'
 import tasksV2 from 'album/tasks/v2'
-import { illustrator } from 'album/tasks/remaining/illustrator'
 import isFinite from 'lodash.isfinite'
 
 export const getSongTasks = (songIndex) => (
@@ -41,10 +40,6 @@ export const getAllTasks = () => (
 
 export const getAllTasksV2 = () => (
     tasksV2
-)
-
-export const getIllustratorTasks = () => (
-    illustrator
 )
 
 export const getMaxTotalNeededHoursFromSongs = () => {
