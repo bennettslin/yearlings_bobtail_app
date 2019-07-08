@@ -19,13 +19,16 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [CLIFF_GRAVES_FAR]: {
             yIndex: 1,
-            xPosition: 9.25,
-            scaleFactor: 0.4
+            xPosition: 12,
+            zOffset: 0.5,
+            scaleFactor: 0.45,
+            alignRight: true
         },
         [CLIFF_GRAVES_NEAR]: {
-            yIndex: 5,
-            xPosition: 9,
-            scaleFactor: 0.32
+            yIndex: 4,
+            xPosition: 11.5,
+            scaleFactor: 0.4,
+            alignRight: true
         }
     }
 }

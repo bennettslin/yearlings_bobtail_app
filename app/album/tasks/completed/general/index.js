@@ -4686,5 +4686,10 @@ export default [
         taskName: `Allow svgs to be left or right aligned.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Something weird about presence positions when cubes are slanted. Fixed by just always positioning as if cubes are default.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

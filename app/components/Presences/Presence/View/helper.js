@@ -6,13 +6,9 @@ import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES
 } from 'constants/cubeRender'
-import {
-    LS_STAGE_ASPECT_RATIO
-} from 'constants/stage'
+import { LS_STAGE_ASPECT_RATIO } from 'constants/stage'
 
-import {
-    getHorizontalPlaneFractions
-} from 'helpers/cube'
+import { getHorizontalPlaneFractions } from 'helpers/cube'
 import { getValueInAbridgedMatrix } from 'helpers/general'
 
 import { getCubesForKey } from 'album/scenes/arrangements/cubes'
@@ -37,7 +33,6 @@ const _getNearestXIndex = (xPosition) => {
 }
 
 const _getTileCentreForPresence = ({
-
     cubesKey,
     xPosition,
     yIndex,
@@ -45,13 +40,11 @@ const _getTileCentreForPresence = ({
 
 }) => {
 
-    const {
-            /**
-             * Presence needs to know the floor zIndex for positioning.
-             */
-            floor: { zIndices },
-            slantDirection = ''
-        } = getCubesForKey(cubesKey),
+    /**
+     * Presence needs to know the floor zIndex for positioning. However, slant
+     * direction doesn't matter because presence positions as if default.
+     */
+    const { floor: { zIndices } } = getCubesForKey(cubesKey),
 
         xIndex = _getNearestXIndex(xPosition),
 
@@ -64,8 +57,7 @@ const _getTileCentreForPresence = ({
             yIndex,
             zIndex,
             xOffset,
-            zOffset,
-            slantDirection
+            zOffset
         }),
 
         {
