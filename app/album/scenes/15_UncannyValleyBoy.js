@@ -274,7 +274,7 @@ export default [
                 },
                 [MOTHER]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front angle, wanting to console Bennett',
                     instance: FUTURE
                 },
