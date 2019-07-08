@@ -28,6 +28,10 @@
 * goKartExterior
 * volkswagen
 
+# Redo className organisation.
+* Cardboards
+* Cutouts
+
 # Redo shape organisation.
 * apartmentPlant
 * recyclables
@@ -35,6 +39,10 @@
 * wallSpeaker
 * trashCan
 * fireHydrant?
+
+# Rotate in svg.
+* bennettOdinOceanDepths
+* wallSpeakerSide
 
 # Order.
 * Cutouts
