@@ -24,11 +24,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [CLIFF_GRAVES_NEAR]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 1
-            }
+            xPosition: 9,
+            scaleFactor: 0.32
         }
     }
 }

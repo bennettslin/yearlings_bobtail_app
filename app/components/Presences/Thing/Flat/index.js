@@ -6,8 +6,8 @@
 // import bedroomSiren from 'assets/svgs/flats/bedroomSiren.svg'
 // import familyHouse from 'assets/svgs/flats/familyHouse.svg'
 // import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged.svg'
-// import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft.svg'
-// import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight.svg'
+import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft.svg'
+import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight.svg'
 // import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar.svg'
 // import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear.svg'
 // import vanNuysSchoolhouseLeft from 'assets/svgs/flats/vanNuysSchoolhouseLeft.svg'
@@ -45,7 +45,7 @@
 // import elCerritoNear from 'assets/svgs/flats/elCerritoNear.svg'
 // import forebodingTrees from 'assets/svgs/flats/forebodingTrees.svg'
 import cliffGravesFar from 'assets/svgs/flats/cliffGravesFar.svg'
-// import cliffGravesNear from 'assets/svgs/flats/cliffGravesNear.svg'
+import cliffGravesNear from 'assets/svgs/flats/cliffGravesNear.svg'
 // import pampasFar from 'assets/svgs/flats/pampasFar.svg'
 
 import {
@@ -109,8 +109,8 @@ export default {
     [BEDROOM_SIREN]: false,
     [FAMILY_HOUSE]: false,
     [TAIWAN_MOUNTAINS_BRIDGED]: false,
-    [TAIWAN_MOUNTAIN_LEFT]: false,
-    [TAIWAN_MOUNTAIN_RIGHT]: false,
+    [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,
+    [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
     [TAIWAN_HOUSE_FAR]: false,
     [TAIWAN_HOUSE_NEAR]: false,
     [VAN_NUYS_SCHOOLHOUSE_LEFT]: false,
@@ -148,6 +148,6 @@ export default {
     [EL_CERRITO_NEAR]: false,
     [FOREBODING_TREES]: false,
     [CLIFF_GRAVES_FAR]: cliffGravesFar,
-    [CLIFF_GRAVES_NEAR]: false,
+    [CLIFF_GRAVES_NEAR]: cliffGravesNear,
     [PAMPAS_FAR]: false
 }

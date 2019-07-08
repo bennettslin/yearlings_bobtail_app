@@ -50,16 +50,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'taiwanMountainLeft',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'taiwanMountainRight',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'vanNuysSchoolhouseLeft',
         workedHours: 0,
         neededHours: 1.5
@@ -241,11 +231,6 @@ export default [
     },
     {
         taskName: 'forebodingTrees',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'cliffGravesNear',
         workedHours: 0,
         neededHours: 1.5
     }

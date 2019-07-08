@@ -5,3 +5,11 @@
 .Presence__temporaryText {
     font-size: 0.15em;
 }
+
+path {
+    [class$=EdgeLine]
+    & {
+        fill: none;
+        stroke-width: 0.025%;
+    }
+}

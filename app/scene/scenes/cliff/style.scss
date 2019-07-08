@@ -13,15 +13,33 @@
         fill: #287c33;
     }
 
-    .graveFront {
+    .graveLeft {
         fill: #505050
     }
 
-    .graveSide {
-        fill: #333;
+    .graveRight {
+        fill: #444;
     }
 
-    .graveLine {
-        stroke: #000;
+    .graveEdgeLine {
+        stroke: #333;
+    }
+}
+
+.CliffGravesNear {
+    .meadow {
+        fill: #067037;
+    }
+
+    .graveLeft {
+        fill: #505050
+    }
+
+    .graveRight {
+        fill: #444;
+    }
+
+    .graveEdgeLine {
+        stroke: #333;
     }
 }

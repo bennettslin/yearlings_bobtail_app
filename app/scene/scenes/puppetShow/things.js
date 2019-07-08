@@ -50,19 +50,13 @@ const ARRANGEMENTS_THINGS = {
         },
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 2,
+            scaleFactor: 0.3
         },
         [TAIWAN_MOUNTAIN_RIGHT]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 9,
+            scaleFactor: 0.3
         }
     },
     [PANEL]: {
