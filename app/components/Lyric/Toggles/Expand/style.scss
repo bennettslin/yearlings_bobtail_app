@@ -6,7 +6,11 @@
     z-index: $zIndex__mainShelf;
 
     opacity: 1;
-    transition: opacity $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__default;
+    }
 
     /**
      * TODO: Ideally, this would be a single selector for when the toggle is

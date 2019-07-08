@@ -4,7 +4,11 @@
 
 .Theatre {
     opacity: 0;
-    transition: opacity $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__default;
+    }
 }
 
 .Theatre__visible {
@@ -25,5 +29,8 @@
 }
 
 .fillTransition__dimTheatre {
-    transition: fill $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition: fill $animationDuration__default;
+    }
 }

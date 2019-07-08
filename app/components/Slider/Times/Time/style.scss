@@ -4,8 +4,11 @@ $margin__sliderTime: 5px;
     bottom: 25%;
 
     transform: translateY(50%);
-    transition:
-        opacity $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__default;
+    }
 
     font-size: 0.8em;
 

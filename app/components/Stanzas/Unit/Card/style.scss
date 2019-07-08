@@ -42,7 +42,10 @@
     // Ensure that tab covers sheet.
     cursor: pointer;
 
-    transition: color $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition: color $animationDuration__default;
+    }
 
     &:hover {
         color: $colour__link__light;

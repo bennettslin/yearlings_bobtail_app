@@ -6,9 +6,12 @@
     opacity: 0;
     transform: translateY(-50%);
 
-    transition:
-        left $animationDuration__fast,
-        opacity $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition:
+            left $animationDuration__fast,
+            opacity $animationDuration__default;
+    }
 }
 
 .VerseNav__activated {

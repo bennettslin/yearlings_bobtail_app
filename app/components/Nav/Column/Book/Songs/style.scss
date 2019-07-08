@@ -1,6 +1,9 @@
 .NavRoad {
     opacity: 1;
-    transition: opacity $animationDuration__default;
+
+    .DW__higherProcessor {
+        transition: opacity $animationDuration__default;
+    }
 
     .NavColumn__hidden
     & {
@@ -16,6 +19,7 @@
 
     max-width: 1000px; // Arbitrary large number.
 
+    .DW__higherProcessor
     .NavColumn__left
     & {
         transition:
@@ -29,13 +33,17 @@
         left: 0;
     }
 
+    .DW__higherProcessor
     .NavColumn__right
     & {
         transition:
             max-width $animationDuration__default,
             opacity $animationDuration__default,
             right $animationDuration__default;
+    }
 
+    .NavColumn__right
+    & {
         flex-direction: row-reverse;
     }
 

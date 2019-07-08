@@ -3,8 +3,10 @@
     height: 100%;
     border-radius: 1px;
 
-    transition:
-        background-color $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition: background-color $animationDuration__default;
+    }
 
     .FilmstripScene:hover
     & {

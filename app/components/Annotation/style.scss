@@ -31,8 +31,10 @@
 .bgColour__annotation {
     background-color: #abd;
 
-    transition:
-        background-color $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition: background-color $animationDuration__default;
+    }
 }
 
 .bgColour__annotation__selected {

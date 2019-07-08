@@ -34,9 +34,12 @@ $width__underline__bleed: 0.125em;
 .Underline__bar {
     visibility: hidden;
 
-    transition:
-        visibility $animationDuration__fast,
-        background-color $animationDuration__fast;
+    .DW__higherProcessor
+    & {
+        transition:
+            visibility $animationDuration__fast,
+            background-color $animationDuration__fast;
+    }
 
     // "Root accessed letter Enter, child accessed letter Enter."
     .PaLEnter

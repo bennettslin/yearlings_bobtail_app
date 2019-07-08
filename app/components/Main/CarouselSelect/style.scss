@@ -11,10 +11,6 @@
     .DW__desktopWidth
     & {
         position: fixed;
-        transition:
-            bottom $animationDuration__default,
-            opacity $animationDuration__default;
-
         bottom:
             -$js__length__iconLarge
             - $js__margin__thin * 2
@@ -23,16 +19,27 @@
         margin-bottom: $margin__scrollBar;
     }
 
+    .DW__higherProcessor.DW__desktopWidth
+    & {
+        transition:
+            bottom $animationDuration__default,
+            opacity $animationDuration__default;
+    }
+
+
     .DW__miniOrTabletWidth
     & {
         position: absolute;
-        transition:
-            top $animationDuration__default,
-            opacity $animationDuration__default;
-
         top:
             -$js__length__iconLarge__tablet
             - $js__margin__thin * 2;
+    }
+
+    .DW__higherProcessor.DW__miniOrTabletWidth
+    & {
+        transition:
+            top $animationDuration__default,
+            opacity $animationDuration__default;
     }
 
     .PlW__song

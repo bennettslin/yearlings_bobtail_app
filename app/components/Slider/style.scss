@@ -9,7 +9,11 @@
     z-index: $zIndex__slider;
 
     opacity: 0;
-    transition: opacity $animationDuration__fast;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__fast;
+    }
 }
 
 .ShW__overlayHidden

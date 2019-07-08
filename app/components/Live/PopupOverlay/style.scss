@@ -4,7 +4,11 @@
     height: 100%;
     z-index: $zIndex__popupOverlay;
     background-color: transparent;
-    transition: background-color $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: background-color $animationDuration__default;
+    }
 }
 
 .PopupOverlay__shown {

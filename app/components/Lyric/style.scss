@@ -5,7 +5,11 @@
 
 .Lyric {
     opacity: 0;
-    transition: opacity $animationDuration__fast;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__fast;
+    }
 
     display: flex;
     flex-direction: column;

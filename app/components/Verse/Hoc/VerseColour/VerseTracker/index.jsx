@@ -8,11 +8,13 @@ import cx from 'classnames'
 import { getVerseDurationForVerseIndex } from './helper'
 
 const mapStateToProps = ({
+    appStore: { isHigherProcessor },
     lyricStore: {
         lyricSongIndex,
         lyricVerseIndex
     }
 }) => ({
+    isHigherProcessor,
     lyricSongIndex,
     lyricVerseIndex
 })
@@ -21,6 +23,7 @@ class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
+        isHigherProcessor: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
 
@@ -66,6 +69,7 @@ class VerseTracker extends Component {
 
     render() {
         const {
+                isHigherProcessor,
                 lyricSongIndex,
 
                 verseIndex,
@@ -106,8 +110,10 @@ class VerseTracker extends Component {
 
                         'abF'
                     ),
-                    style: {
-                        transition: `${transitionStyle} ${verseDuration}s linear`
+                    ...isHigherProcessor && {
+                        style: {
+                            transition: `${transitionStyle} ${verseDuration}s linear`
+                        }
                     }
                 }}
             />

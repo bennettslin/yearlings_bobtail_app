@@ -22,6 +22,9 @@
 
 .BannerTracker {
     background-color: $bgColour__audioPlay;
-    transition:
-        width $animationDuration__slow;
+
+    .DW__higherProcessor
+    & {
+        transition: width $animationDuration__slow;
+    }
 }

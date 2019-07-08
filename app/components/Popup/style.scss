@@ -3,7 +3,12 @@
 // Styles for showing popup or not.
 .Popup {
     flex-direction: column-reverse;
-    transition: opacity $animationDuration__fast;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__fast;
+    }
+
     opacity: 0;
 }
 
@@ -24,6 +29,10 @@
 }
 
 .Popup__visible {
-    transition: opacity $animationDuration__slow;
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__slow;
+    }
+
     opacity: 1;
 }

@@ -25,7 +25,10 @@
             + $js__margin__thin * 2;
     }
 
-    transition:
-        min-width $animationDuration__default,
-        opacity $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition:
+            min-width $animationDuration__default,
+            opacity $animationDuration__default;
+    }
 }

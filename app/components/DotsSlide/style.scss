@@ -14,9 +14,12 @@ $margin__dotsContainer__phone: 8px;
 
     z-index: $zIndex__mainShelf;
 
-    transition:
-        opacity $animationDuration__default,
-        left $animationDuration__slow;
+    .DW__higherProcessor
+    & {
+        transition:
+            opacity $animationDuration__default,
+            left $animationDuration__slow;
+    }
 
     box-shadow: $boxShadow__mainCard;
     background-color: $bgColour__afterSelected;

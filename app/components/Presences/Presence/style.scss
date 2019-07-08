@@ -1,7 +1,10 @@
 .Presence {
     opacity: 0;
-    transition:
-        opacity $animationDuration__fast;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__fast;
+    }
 }
 
 .Presence__visible {

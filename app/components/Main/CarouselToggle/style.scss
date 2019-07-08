@@ -8,10 +8,13 @@
     justify-content: center;
     z-index: $zIndex__carouselNavButton;
 
-    transition:
-        margin $animationDuration__fast,
-        bottom $animationDuration__fast,
-        box-shadow $animationDuration__fast;
+    .DW__higherProcessor
+    & {
+        transition:
+            margin $animationDuration__fast,
+            bottom $animationDuration__fast,
+            box-shadow $animationDuration__fast;
+    }
 
     .DW__desktopWidth
     .ShW__carouselExpanded

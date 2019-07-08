@@ -2,9 +2,12 @@
     opacity: 0;
     transform: scale(0.5);
 
-    transition:
-        transform $animationDuration__fast,
-        opacity $animationDuration__fast;
+    .DW__higherProcessor
+    & {
+        transition:
+            transform $animationDuration__fast,
+            opacity $animationDuration__fast;
+    }
 
     $js__margin__thick__double: $js__margin__thick * 2;
     max-width: calc(100% - #{$js__margin__thick__double});

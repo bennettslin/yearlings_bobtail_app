@@ -14,9 +14,12 @@
     display: flex;
     justify-content: center;
 
-    transition:
-        height $animationDuration__default,
-        opacity $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition:
+            height $animationDuration__default,
+            opacity $animationDuration__default;
+    }
 }
 
 .AnnotationHeaderAnimatable {

@@ -15,7 +15,11 @@
 
 .Curtains__left {
     left: 0;
-    transition: left $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: left $animationDuration__default;
+    }
 
     .Curtains__parted
     & {
@@ -25,7 +29,11 @@
 
 .Curtains__right {
     right: 0;
-    transition: right $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: right $animationDuration__default;
+    }
 
     .Curtains__parted
     & {

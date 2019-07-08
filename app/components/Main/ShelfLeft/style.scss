@@ -1,7 +1,10 @@
 .ShelfLeft {
-    transition:
-        opacity $animationDuration__default,
-        margin-left $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition:
+            opacity $animationDuration__default,
+            margin-left $animationDuration__default;
+    }
 
     padding-left: $js__margin__thin;
 
@@ -20,10 +23,14 @@
 
 .hidden__overviewStatus {
 
+    .DW__higherProcessor
     .ShelfLeft
     & {
         transition: margin-left $animationDuration__default;
+    }
 
+    .ShelfLeft
+    & {
         /**
          * When overview is shown in song or hidden in logue, the overview
          * toggle should be the only left shelf child shown. So hide the rest.

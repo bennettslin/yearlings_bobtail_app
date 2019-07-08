@@ -52,7 +52,11 @@ $length__dotsSlideSelect__tablet:
     font-size: .6em;
 
     opacity: 0;
-    transition: opacity $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__default;
+    }
 
     .DotsSlide__canHover
     .DotsSlideSelect:hover

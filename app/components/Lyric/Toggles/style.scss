@@ -51,9 +51,12 @@
 
 .LyricToggle {
     z-index: $zIndex__lyricChild__topMost;
-
     opacity: 0;
-    transition: opacity $animationDuration__default;
+
+    .DW__higherProcessor
+    & {
+        transition: opacity $animationDuration__default;
+    }
 }
 
 .LyricToggle__shown {

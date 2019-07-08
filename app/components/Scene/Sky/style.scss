@@ -1,6 +1,9 @@
 .Sky__filter {
-    transition:
-        background-color $animationDuration__slow;
+    .DW__higherProcessor
+    & {
+        transition:
+            background-color $animationDuration__slow;
+    }
 }
 
 .Sky__celestial {
@@ -8,8 +11,11 @@
     border-radius: 50%;
     opacity: 0;
 
-    transition:
-        opacity $animationDuration__slow,
-        top $animationDuration__slow,
-        left $animationDuration__slow;
+    .DW__higherProcessor
+    & {
+        transition:
+            opacity $animationDuration__slow,
+            top $animationDuration__slow,
+            left $animationDuration__slow;
+    }
 }

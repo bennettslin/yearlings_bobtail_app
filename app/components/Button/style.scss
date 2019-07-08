@@ -3,9 +3,12 @@
 .Button {
     position: relative;
 
-    transition:
-        background-color $animationDuration__default,
-        transform $animationDuration__instant;
+    .DW__higherProcessor
+    & {
+        transition:
+            background-color $animationDuration__default,
+            transform $animationDuration__instant;
+    }
 }
 
 .Button__popup {

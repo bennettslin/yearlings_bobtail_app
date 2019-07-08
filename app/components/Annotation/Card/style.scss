@@ -6,9 +6,12 @@
     max-height: 0;
     opacity: 0;
 
-    transition:
-        max-height $animationDuration__default,
-        opacity $animationDuration__default;
+    .DW__higherProcessor
+    & {
+        transition:
+            max-height $animationDuration__default,
+            opacity $animationDuration__default;
+    }
 }
 
 .AnnotationCard {

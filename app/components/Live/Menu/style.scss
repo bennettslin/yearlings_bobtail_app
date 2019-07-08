@@ -7,9 +7,12 @@ $js__height__menu: 72px;
 }
 
 .Menu__main {
-    transition:
-        margin $animationDuration__slow,
-        max-width $animationDuration__slow;
+    .DW__higherProcessor
+    & {
+        transition:
+            margin $animationDuration__slow,
+            max-width $animationDuration__slow;
+    }
 
     /**
      * Dynamic margins are calculated by JavaScript when menu mainTop is

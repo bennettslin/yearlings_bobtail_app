@@ -4,9 +4,12 @@
     opacity: 0;
 
     // Increase width first, then fade in.
-    transition:
-        width $animationDuration__default,
-        opacity $animationDuration__default $animationDuration__fast;
+    .DW__higherProcessor
+    & {
+        transition:
+            width $animationDuration__default,
+            opacity $animationDuration__default $animationDuration__fast;
+    }
 }
 
 .SequenceDot__annotationCard {
