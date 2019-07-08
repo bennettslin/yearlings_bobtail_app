@@ -21,6 +21,8 @@ class PresenceSvg extends PureComponent {
         x: PropTypes.number.isRequired,
         y: PropTypes.number.isRequired,
         yIndex: PropTypes.number.isRequired,
+        alignLeft: PropTypes.bool,
+        alignRight: PropTypes.bool,
         scaleFactor: PropTypes.number,
         flipHorizontal: PropTypes.bool,
         rotate: PropTypes.number,
@@ -72,6 +74,8 @@ class PresenceSvg extends PureComponent {
                 y,
                 yIndex,
                 scaleFactor,
+                alignLeft,
+                alignRight,
                 flipHorizontal,
                 rotate,
                 children
@@ -91,6 +95,8 @@ class PresenceSvg extends PureComponent {
             }),
 
             transformStyle = getTransformStyle({
+                alignLeft,
+                alignRight,
                 flipHorizontal,
                 rotate
             })

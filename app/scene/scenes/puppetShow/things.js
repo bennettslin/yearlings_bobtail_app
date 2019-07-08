@@ -50,13 +50,15 @@ const ARRANGEMENTS_THINGS = {
         },
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 4,
-            xPosition: 2,
-            scaleFactor: 0.3
+            xPosition: -0.5,
+            scaleFactor: 0.3,
+            alignLeft: true
         },
         [TAIWAN_MOUNTAIN_RIGHT]: {
             yIndex: 4,
-            xPosition: 9,
-            scaleFactor: 0.3
+            xPosition: 11.5,
+            scaleFactor: 0.3,
+            alignRight: true
         }
     },
     [PANEL]: {

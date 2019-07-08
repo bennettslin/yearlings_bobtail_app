@@ -44,6 +44,8 @@ const PresenceView = ({
             xPosition: xPosition1,
             zOffset: zOffset1,
             scaleFactor,
+            alignLeft,
+            alignRight,
             flipHorizontal,
             rotate,
             style,
@@ -96,6 +98,8 @@ const PresenceView = ({
                     'abF'
                 ),
                 scaleFactor,
+                alignLeft,
+                alignRight,
                 flipHorizontal,
                 rotate,
                 yIndex,

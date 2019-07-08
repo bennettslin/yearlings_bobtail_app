@@ -4681,5 +4681,10 @@ export default [
         taskName: `If annotation in URL requires a selected dot, force select that dot. Use dot bit number.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow svgs to be left or right aligned.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

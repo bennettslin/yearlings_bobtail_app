@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Allow svgs to be left or right aligned.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Allow svgs to be superimposed.`,
         workedHours: 0,
         neededHours: 3
