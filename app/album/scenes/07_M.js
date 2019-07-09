@@ -79,9 +79,12 @@ import {
     LEONARD_COHEN_POSTER,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
-    CINEMA_POSTER_LEFT,
-    CINEMA_POSTER_RIGHT,
-    CINEMA_POSTER_RIGHT_NORMAL
+    MARA_MEMENTO_POSTER,
+    MARQUEE_FRAME__MARA_MEMENTO,
+    MARA_GLADIATOR_POSTER,
+    MARQUEE_FRAME__MARA_GLADIATOR,
+    GLADIATOR_POSTER,
+    MARQUEE_FRAME__GLADIATOR
 } from '../../constants/scene/things/cardboards'
 
 import {
@@ -343,8 +346,10 @@ export default [
                 }
             },
             [CARDBOARD]: {
-                [CINEMA_POSTER_LEFT]: true,
-                [CINEMA_POSTER_RIGHT]: true
+                [MARA_MEMENTO_POSTER]: true,
+                [MARQUEE_FRAME__MARA_MEMENTO]: true,
+                [MARA_GLADIATOR_POSTER]: true,
+                [MARQUEE_FRAME__MARA_GLADIATOR]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -382,8 +387,10 @@ export default [
                 }
             },
             [CARDBOARD]: {
-                [CINEMA_POSTER_LEFT]: true,
-                [CINEMA_POSTER_RIGHT]: true
+                [MARA_MEMENTO_POSTER]: true,
+                [MARQUEE_FRAME__MARA_MEMENTO]: true,
+                [MARA_GLADIATOR_POSTER]: true,
+                [MARQUEE_FRAME__MARA_GLADIATOR]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -419,7 +426,8 @@ export default [
                 [CINEMA_THOUGHTS]: true
             },
             [CARDBOARD]: {
-                [CINEMA_POSTER_RIGHT_NORMAL]: true
+                [GLADIATOR_POSTER]: true,
+                [MARQUEE_FRAME__GLADIATOR]: true
             },
             [FLAT]: {
                 [COMMERCIAL_CENTRE]: true,

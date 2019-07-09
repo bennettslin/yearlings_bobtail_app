@@ -23,9 +23,10 @@ import odinMat from 'assets/svgs/cardboards/odinMat.svg'
 // import televisionAlbum from 'assets/svgs/cardboards/televisionAlbum.svg'
 // import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly.svg'
 // import progressChartLate from 'assets/svgs/cardboards/progressChartLate.svg'
-// import cinemaPosterLeft from 'assets/svgs/cardboards/cinemaPosterLeft.svg'
-// import cinemaPosterRight from 'assets/svgs/cardboards/cinemaPosterRight.svg'
-// import cinemaPosterRightNormal from 'assets/svgs/cardboards/cinemaPosterRightNormal.svg'
+// import maraMementoPoster from 'assets/svgs/cardboards/maraMementoPoster.svg'
+// import maraGladiatorPoster from 'assets/svgs/cardboards/maraGladiatorPoster.svg'
+// import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster.svg'
+// import marqueeFrame from 'assets/svgs/cardboards/marqueeFrame.svg'
 // import codeBox from 'assets/svgs/cardboards/codeBox.svg'
 // import clipboard from 'assets/svgs/cardboards/clipboard.svg'
 // import painting from 'assets/svgs/cardboards/painting.svg'
@@ -58,9 +59,12 @@ import {
     TELEVISION_ALBUM,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE,
-    CINEMA_POSTER_LEFT,
-    CINEMA_POSTER_RIGHT,
-    CINEMA_POSTER_RIGHT_NORMAL,
+    MARA_MEMENTO_POSTER,
+    MARQUEE_FRAME__MARA_MEMENTO,
+    MARA_GLADIATOR_POSTER,
+    MARQUEE_FRAME__MARA_GLADIATOR,
+    GLADIATOR_POSTER,
+    MARQUEE_FRAME__GLADIATOR,
     CODE_BOX,
     CLIPBOARD,
     PAINTING,
@@ -94,9 +98,12 @@ export default {
     [TELEVISION_ALBUM]: false,
     [PROGRESS_CHART_EARLY]: false,
     [PROGRESS_CHART_LATE]: false,
-    [CINEMA_POSTER_LEFT]: false,
-    [CINEMA_POSTER_RIGHT]: false,
-    [CINEMA_POSTER_RIGHT_NORMAL]: false,
+    [MARA_MEMENTO_POSTER]: false,
+    [MARQUEE_FRAME__MARA_MEMENTO]: false,
+    [MARA_GLADIATOR_POSTER]: false,
+    [MARQUEE_FRAME__MARA_GLADIATOR]: false,
+    [GLADIATOR_POSTER]: false,
+    [MARQUEE_FRAME__GLADIATOR]: false,
     [CODE_BOX]: false,
     [CLIPBOARD]: false,
     [PAINTING]: false,

@@ -40,17 +40,22 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'cinemaPosterLeft',
+        taskName: 'maraMementoPoster',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
-        taskName: 'cinemaPosterRight',
+        taskName: 'maraGladiatorPoster',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 1.5
     },
     {
-        taskName: 'cinemaPosterRightNormal',
+        taskName: 'gladiatorPoster',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'marqueeFrame',
         workedHours: 0,
         neededHours: 1
     },
