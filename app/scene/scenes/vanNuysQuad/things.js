@@ -3,7 +3,7 @@ import {
     CARDBOARD,
     CUTOUT
 } from 'constants/scene'
-import { ESCAPE_POD_SKETCHBOOK } from 'constants/scene/things/bubbles'
+import { ESCAPE_POD_SKETCH } from 'constants/scene/things/bubbles'
 import { VAN_NUYS_LOGO } from 'constants/scene/things/cardboards'
 import {
     TRASH_CAN__QUAD,
@@ -12,7 +12,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
-        [ESCAPE_POD_SKETCHBOOK]: {
+        [ESCAPE_POD_SKETCH]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 2.5,

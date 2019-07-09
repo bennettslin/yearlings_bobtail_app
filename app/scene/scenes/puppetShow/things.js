@@ -7,8 +7,8 @@ import {
 } from 'constants/scene'
 import { TAIWAN_MOUNTAINS_BACKDROP } from 'constants/scene/things/backdrops'
 import {
-    TOGETHER_SKETCHBOOK,
-    APART_SKETCHBOOK
+    TOGETHER_SKETCH,
+    APART_SKETCH
 } from 'constants/scene/things/bubbles'
 import {
     TAIWAN_MOUNTAINS_BRIDGED,
@@ -105,7 +105,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
 
 export const THINGS_PUPPET_SHOW_MIDDLE = {
     [BUBBLE]: {
-        [TOGETHER_SKETCHBOOK]: {
+        [TOGETHER_SKETCH]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8.5,
@@ -137,7 +137,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
 
 export const THINGS_PUPPET_SHOW_END = {
     [BUBBLE]: {
-        [APART_SKETCHBOOK]: {
+        [APART_SKETCH]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 2.5,

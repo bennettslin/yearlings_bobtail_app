@@ -1,7 +1,7 @@
-// import togetherSketchbook from 'assets/svgs/bubbles/togetherSketchbook.svg'
-// import apartSketchbook from 'assets/svgs/bubbles/apartSketchbook.svg'
-// import dogsSketchbook from 'assets/svgs/bubbles/dogsSketchbook.svg'
-// import escapePodSketchbook from 'assets/svgs/bubbles/escapePodSketchbook.svg'
+// import togetherSketch from 'assets/svgs/bubbles/togetherSketch.svg'
+// import apartSketch from 'assets/svgs/bubbles/apartSketch.svg'
+// import dogsSketch from 'assets/svgs/bubbles/dogsSketch.svg'
+// import escapePodSketch from 'assets/svgs/bubbles/escapePodSketch.svg'
 // import cinemaThoughts from 'assets/svgs/bubbles/cinemaThoughts.svg'
 // import goKartThought from 'assets/svgs/bubbles/goKartThought.svg'
 // import waitingRoomThoughts from 'assets/svgs/bubbles/waitingRoomThoughts.svg'
@@ -12,10 +12,10 @@
 // import lizThought from 'assets/svgs/bubbles/lizThought.svg'
 
 import {
-    TOGETHER_SKETCHBOOK,
-    APART_SKETCHBOOK,
-    DOGS_SKETCHBOOK,
-    ESCAPE_POD_SKETCHBOOK,
+    TOGETHER_SKETCH,
+    APART_SKETCH,
+    DOGS_SKETCH,
+    ESCAPE_POD_SKETCH,
     CINEMA_THOUGHTS,
     GO_KART_THOUGHT,
     WAITING_ROOM_THOUGHTS,
@@ -27,10 +27,10 @@ import {
 } from 'constants/scene/things/bubbles'
 
 export default {
-    [TOGETHER_SKETCHBOOK]: false,
-    [APART_SKETCHBOOK]: false,
-    [DOGS_SKETCHBOOK]: false,
-    [ESCAPE_POD_SKETCHBOOK]: false,
+    [TOGETHER_SKETCH]: false,
+    [APART_SKETCH]: false,
+    [DOGS_SKETCH]: false,
+    [ESCAPE_POD_SKETCH]: false,
     [CINEMA_THOUGHTS]: false,
     [GO_KART_THOUGHT]: false,
     [WAITING_ROOM_THOUGHTS]: false,

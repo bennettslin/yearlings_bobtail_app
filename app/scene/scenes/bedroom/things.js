@@ -7,7 +7,7 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-import { DOGS_SKETCHBOOK } from 'constants/scene/things/bubbles'
+import { DOGS_SKETCH } from 'constants/scene/things/bubbles'
 import {
     TINTIN_POSTER,
     BLOOM_COUNTY_POSTER
@@ -144,7 +144,7 @@ export const THINGS_BEDROOM_FEARFUL = {
 
 export const THINGS_BEDROOM_GUILTY = {
     [BUBBLE]: {
-        [DOGS_SKETCHBOOK]: {
+        [DOGS_SKETCH]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 6,
