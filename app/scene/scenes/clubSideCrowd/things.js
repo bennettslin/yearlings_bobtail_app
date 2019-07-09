@@ -8,10 +8,7 @@ import {
     WALL_SPEAKER_SIDE__CROWD
 } from 'constants/scene/things/cutouts'
 import { STAGE_MIC_SIDE__CROWD } from 'constants/scene/things/fixtures'
-import {
-    CROWD_NEAR__SIDE,
-    CROWD_FAR__SIDE
-} from 'constants/scene/things/panels'
+import { CROWD_SIDE } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -39,15 +36,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [CROWD_FAR__SIDE]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 7,
-                zHeight: 4
-            }
-        },
-        [CROWD_NEAR__SIDE]: {
+        [CROWD_SIDE]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 7,

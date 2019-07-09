@@ -31,8 +31,7 @@
 // import atticLeftArmrest from 'assets/svgs/panels/atticLeftArmrest.svg'
 // import atticRightArmrest from 'assets/svgs/panels/atticRightArmrest.svg'
 // import volkswagen from 'assets/svgs/panels/volkswagen.svg'
-// import crowdNear from 'assets/svgs/panels/crowdNear.svg'
-// import crowdFar from 'assets/svgs/panels/crowdFar.svg'
+// import crowdSide from 'assets/svgs/panels/crowdSide.svg'
 // import lizCouch from 'assets/svgs/panels/lizCouch.svg'
 // import snowglobe from 'assets/svgs/panels/snowglobe.svg'
 // import reattaInterior from 'assets/svgs/panels/reattaInterior.svg'
@@ -41,6 +40,7 @@
 // import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel.svg'
 // import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel.svg'
 // import tennisThoughtPanel from 'assets/svgs/panels/tennisThoughtPanel.svg'
+// import crowdBack from 'assets/svgs/panels/crowdBack.svg'
 // import weddingPlatform from 'assets/svgs/panels/weddingPlatform.svg'
 // import inverseThoughtPanel from 'assets/svgs/panels/inverseThoughtPanel.svg'
 
@@ -82,8 +82,7 @@ import {
     ATTIC_LEFT_ARMREST,
     ATTIC_RIGHT_ARMREST,
     VOLKSWAGEN,
-    CROWD_NEAR__SIDE,
-    CROWD_FAR__SIDE,
+    CROWD_SIDE,
     LIZ_COUCH,
     WIDE_COUCH__MIRIAM,
     WIDE_LEFT_ARMREST__MIRIAM,
@@ -96,11 +95,10 @@ import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     HOSPITAL_BED,
-    CROWD_NEAR__BACK,
-    CROWD_FAR__BACK,
     PHONE_CALL_PANEL,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
+    CROWD_BACK,
     WEDDING_PLATFORM,
     INVERSE_THOUGHT_PANEL
 } from 'constants/scene/things/panels'
@@ -143,8 +141,7 @@ export default {
     [ATTIC_LEFT_ARMREST]: false,
     [ATTIC_RIGHT_ARMREST]: false,
     [VOLKSWAGEN]: false,
-    [CROWD_NEAR__SIDE]: false,
-    [CROWD_FAR__SIDE]: false,
+    [CROWD_SIDE]: false,
     [LIZ_COUCH]: false,
     [WIDE_COUCH__MIRIAM]: false,
     [WIDE_LEFT_ARMREST__MIRIAM]: false,
@@ -157,11 +154,10 @@ export default {
     [REATTA_INTERIOR]: false,
     [REATTA_EXTERIOR]: false,
     [HOSPITAL_BED]: false,
-    [CROWD_NEAR__BACK]: false,
-    [CROWD_FAR__BACK]: false,
     [PHONE_CALL_PANEL]: false,
     [DEATHBED_THOUGHT_PANEL]: false,
     [TENNIS_THOUGHT_PANEL]: false,
+    [CROWD_BACK]: false,
     [WEDDING_PLATFORM]: false,
     [INVERSE_THOUGHT_PANEL]: false
 }

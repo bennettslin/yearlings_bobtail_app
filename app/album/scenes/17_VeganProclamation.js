@@ -83,8 +83,7 @@ import {
 } from '../../constants/scene/things/furniture'
 
 import {
-    CROWD_NEAR__BACK,
-    CROWD_FAR__BACK,
+    CROWD_BACK,
     LIZ_BED,
     PHONE_CALL_PANEL
 } from '../../constants/scene/things/panels'
@@ -170,8 +169,7 @@ export default [
                 [STAGE_MIC_FAR]: true
             },
             [PANEL]: {
-                [CROWD_FAR__BACK]: true,
-                [CROWD_NEAR__BACK]: true
+                [CROWD_BACK]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_CLUB]: true

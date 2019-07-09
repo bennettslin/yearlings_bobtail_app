@@ -81,8 +81,7 @@ import {
 } from '../../constants/scene/things/fixtures'
 
 import {
-    CROWD_FAR__SIDE,
-    CROWD_NEAR__SIDE,
+    CROWD_SIDE,
     LIZ_BED
 } from '../../constants/scene/things/panels'
 
@@ -134,8 +133,7 @@ export default [
                 [STAGE_MIC_SIDE__CROWD]: true
             },
             [PANEL]: {
-                [CROWD_FAR__SIDE]: true,
-                [CROWD_NEAR__SIDE]: true
+                [CROWD_SIDE]: true
             }
         },
         cubes: CLUB_SIDE_CROWD_KEY,
