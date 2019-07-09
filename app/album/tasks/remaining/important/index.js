@@ -1,7 +1,7 @@
 export default [
     {
-        taskName: `Allow svgs to be superimposed. Can probably just have two presences in same position, where one does not cast a shadow.`,
-        workedHours: 0,
+        taskName: `Allow svgs to be superimposed. Can probably just have two presences in same position, where one does not cast a shadow. Do for cinema posters and sketchbook.`,
+        workedHours: 1,
         neededHours: 3
     },
     {
