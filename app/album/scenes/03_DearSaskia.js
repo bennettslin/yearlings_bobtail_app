@@ -42,7 +42,9 @@ import {
 
 import {
     TOGETHER_SKETCH,
-    APART_SKETCH
+    SKETCHBOOK__TOGETHER,
+    APART_SKETCH,
+    SKETCHBOOK__APART
 } from '../../constants/scene/things/bubbles'
 
 import {
@@ -111,7 +113,8 @@ export default [
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
             [BUBBLE]: {
-                [TOGETHER_SKETCH]: true
+                [TOGETHER_SKETCH]: true,
+                [SKETCHBOOK__TOGETHER]: true
             },
             [FLAT]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,
@@ -218,7 +221,8 @@ export default [
                 [TAIWAN_MOUNTAINS_BACKDROP]: true
             },
             [BUBBLE]: {
-                [APART_SKETCH]: true
+                [APART_SKETCH]: true,
+                [SKETCHBOOK__APART]: true
             },
             [FLAT]: {
                 [TAIWAN_MOUNTAINS_BRIDGED]: true,

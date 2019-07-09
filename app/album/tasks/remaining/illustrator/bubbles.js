@@ -1,23 +1,28 @@
 export default [
     {
-        taskName: 'togetherSketchbook',
+        taskName: 'togetherSketch',
         workedHours: 0,
         neededHours: 1.5
     },
     {
-        taskName: 'apartSketchbook',
+        taskName: 'apartSketch',
         workedHours: 0,
         neededHours: 1.5
     },
     {
-        taskName: 'dogsSketchbook',
+        taskName: 'dogsSketch',
         workedHours: 0,
         neededHours: 1.5
     },
     {
-        taskName: 'escapePodSketchbook',
+        taskName: 'escapePodSketch',
         workedHours: 0,
         neededHours: 1.5
+    },
+    {
+        taskName: 'sketchbook',
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: 'cinemaThoughts',

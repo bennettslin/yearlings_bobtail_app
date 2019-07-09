@@ -77,7 +77,9 @@ import {
 
 import {
     DOGS_SKETCH,
-    ESCAPE_POD_SKETCH
+    SKETCHBOOK__DOGS,
+    ESCAPE_POD_SKETCH,
+    SKETCHBOOK__ESCAPE_POD
 } from '../../constants/scene/things/bubbles'
 
 import {
@@ -163,7 +165,8 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [DOGS_SKETCH]: true
+                [DOGS_SKETCH]: true,
+                [SKETCHBOOK__DOGS]: true
             },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
@@ -352,7 +355,8 @@ export default [
                 [VAN_NUYS_SCHOOL_BACKDROP]: true
             },
             [BUBBLE]: {
-                [ESCAPE_POD_SKETCH]: true
+                [ESCAPE_POD_SKETCH]: true,
+                [SKETCHBOOK__ESCAPE_POD]: true
             },
             [CARDBOARD]: {
                 [VAN_NUYS_LOGO]: true

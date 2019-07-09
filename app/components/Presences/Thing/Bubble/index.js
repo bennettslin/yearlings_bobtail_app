@@ -2,6 +2,7 @@
 // import apartSketch from 'assets/svgs/bubbles/apartSketch.svg'
 // import dogsSketch from 'assets/svgs/bubbles/dogsSketch.svg'
 // import escapePodSketch from 'assets/svgs/bubbles/escapePodSketch.svg'
+// import sketchbook from 'assets/svgs/bubbles/sketchbook.svg'
 // import cinemaThoughts from 'assets/svgs/bubbles/cinemaThoughts.svg'
 // import goKartThought from 'assets/svgs/bubbles/goKartThought.svg'
 // import waitingRoomThoughts from 'assets/svgs/bubbles/waitingRoomThoughts.svg'
@@ -13,9 +14,13 @@
 
 import {
     TOGETHER_SKETCH,
+    SKETCHBOOK__TOGETHER,
     APART_SKETCH,
+    SKETCHBOOK__APART,
     DOGS_SKETCH,
+    SKETCHBOOK__DOGS,
     ESCAPE_POD_SKETCH,
+    SKETCHBOOK__ESCAPE_POD,
     CINEMA_THOUGHTS,
     GO_KART_THOUGHT,
     WAITING_ROOM_THOUGHTS,
@@ -28,9 +33,13 @@ import {
 
 export default {
     [TOGETHER_SKETCH]: false,
+    [SKETCHBOOK__TOGETHER]: false,
     [APART_SKETCH]: false,
+    [SKETCHBOOK__APART]: false,
     [DOGS_SKETCH]: false,
+    [SKETCHBOOK__DOGS]: false,
     [ESCAPE_POD_SKETCH]: false,
+    [SKETCHBOOK__ESCAPE_POD]: false,
     [CINEMA_THOUGHTS]: false,
     [GO_KART_THOUGHT]: false,
     [WAITING_ROOM_THOUGHTS]: false,
