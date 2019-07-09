@@ -48,6 +48,7 @@ const PresenceView = ({
             alignRight,
             flipHorizontal,
             rotate,
+            noShadow,
             style,
 
             arrangement: {
@@ -95,6 +96,7 @@ const PresenceView = ({
                     capitaliseForClassName(presenceType),
                     capitaliseForClassName(presenceKey),
                     capitaliseForClassName(style),
+                    noShadow && 'Presence__noShadow',
                     'abF'
                 ),
                 scaleFactor,
@@ -119,7 +121,8 @@ const PresenceView = ({
         >
             <rect
                 className={cx(
-                    `${capitaliseForClassName(presenceType)}__temporaryRect`
+                    `${capitaliseForClassName(presenceType)}__temporaryRect`,
+                    'Presence__temporaryRect'
                 )}
                 {...presenceXY}
             />

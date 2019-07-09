@@ -1,15 +1,3 @@
 @import "./Presence/style";
 @import "./Actor/style";
 @import "./Thing/style";
-
-.Presence__temporaryText {
-    font-size: 0.15em;
-}
-
-path {
-    [class$=EdgeLine]
-    & {
-        fill: none;
-        stroke-width: 0.025%;
-    }
-}

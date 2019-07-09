@@ -10,3 +10,57 @@
 .Presence__visible {
     opacity: 1;
 }
+
+.Presence__temporaryText {
+    font-size: 0.15em;
+}
+
+.Presence__temporaryRect {
+    vector-effect: non-scaling-stroke;
+    stroke-width: 0.25%;
+    stroke: #444;
+}
+
+.Presence {
+    filter: drop-shadow( 0 0 1px rgba(0, 0, 0, .5));
+}
+
+.Presence__noShadow {
+    filter: none;
+}
+
+path {
+    .Presence
+    & {
+        stroke: #543;
+        stroke-width: 0.25px;
+    }
+}
+
+.strokeLine {
+    .Presence
+    & {
+        stroke-width: 0.2%;
+    }
+}
+
+.fineLine {
+    .Presence
+    & {
+        stroke-width: 0.05%;
+    }
+}
+
+path {
+    [class$=Line]
+    & {
+        fill: none;
+    }
+}
+
+path {
+    [class$=EdgeLine]
+    & {
+        stroke-width: 0.025%;
+    }
+}
