@@ -4691,5 +4691,10 @@ export default [
         taskName: `Something weird about presence positions when cubes are slanted. Fixed by just always positioning as if cubes are default.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow svgs to be superimposed. Can probably just have two presences in same position, where one does not cast a shadow. Do for cinema posters and sketchbook.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
