@@ -4696,5 +4696,10 @@ export default [
         taskName: `Allow svgs to be superimposed. Can probably just have two presences in same position, where one does not cast a shadow. Do for cinema posters and sketchbook.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Wacom Cintiq Pro 24 setup.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
