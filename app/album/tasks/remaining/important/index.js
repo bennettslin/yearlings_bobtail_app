@@ -23,5 +23,10 @@ export default [
         taskName: `Remove animations from mobile for performance. Transitions are done, just do animations.`,
         workedHours: 1,
         neededHours: 3
+    },
+    {
+        taskName: `Svg previewer.`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]
