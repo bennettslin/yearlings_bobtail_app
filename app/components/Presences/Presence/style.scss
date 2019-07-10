@@ -23,44 +23,28 @@
 
 .Presence {
     filter: drop-shadow( 0 0 1px rgba(0, 0, 0, .5));
+    stroke: #543;
+    stroke-width: 0.05%;
 }
 
 .Presence__noShadow {
     filter: none;
 }
 
-path {
+[class$=Line] {
+    fill: none;
+}
+
+[class$=EdgeLine] {
     .Presence
-    & {
-        stroke: #543;
-        stroke-width: 0.25px;
-    }
-}
-
-.strokeLine {
-    .Presence
-    & {
-        stroke-width: 0.2%;
-    }
-}
-
-.fineLine {
-    .Presence
-    & {
-        stroke-width: 0.05%;
-    }
-}
-
-path {
-    [class$=Line]
-    & {
-        fill: none;
-    }
-}
-
-path {
-    [class$=EdgeLine]
     & {
         stroke-width: 0.025%;
+    }
+}
+
+[class$=OverlapLine] {
+    .Presence
+    & {
+        stroke-width: 0.075%;
     }
 }
