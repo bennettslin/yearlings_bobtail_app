@@ -75,7 +75,7 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'shoreCarnival',
+        taskName: 'ferrisWheel and rollerCoaster',
         workedHours: 0,
         neededHours: 2
     },
