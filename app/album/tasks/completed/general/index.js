@@ -4701,5 +4701,10 @@ export default [
         taskName: `Wacom Cintiq Pro 24 setup.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Something wrong with cliffGravesNear svg.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
