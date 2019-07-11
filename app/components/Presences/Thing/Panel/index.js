@@ -4,10 +4,10 @@
 // import captainBed from 'assets/svgs/panels/captainBed.svg'
 // import bedroomFence from 'assets/svgs/panels/bedroomFence.svg'
 // import caveShadows from 'assets/svgs/panels/caveShadows.svg'
-// import trollShadowLeft from 'assets/svgs/panels/trollShadowLeft.svg'
-// import trollShadowRight from 'assets/svgs/panels/trollShadowRight.svg'
-// import trollShadowFar from 'assets/svgs/panels/trollShadowFar.svg'
-// import stalactites from 'assets/svgs/panels/stalactites.svg'
+import stalactites from 'assets/svgs/panels/stalactites.svg'
+import trollShadowLeft from 'assets/svgs/panels/trollShadowLeft.svg'
+import trollShadowRight from 'assets/svgs/panels/trollShadowRight.svg'
+import trollShadowFar from 'assets/svgs/panels/trollShadowFar.svg'
 // import taiwanClouds from 'assets/svgs/panels/taiwanClouds.svg'
 // import taiwanFog from 'assets/svgs/panels/taiwanFog.svg'
 // import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior.svg'
@@ -51,10 +51,10 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE,
     CAVE_SHADOWS,
+    STALACTITES,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
-    STALACTITES,
     TAIWAN_CLOUDS,
     TAIWAN_FOG,
     SCHOOLBUS_EXTERIOR,
@@ -110,10 +110,10 @@ export default {
     [CAPTAIN_BED]: false,
     [BEDROOM_FENCE]: false,
     [CAVE_SHADOWS]: false,
-    [TROLL_SHADOW_LEFT]: false,
-    [TROLL_SHADOW_RIGHT]: false,
-    [TROLL_SHADOW_FAR]: false,
-    [STALACTITES]: false,
+    [STALACTITES]: stalactites,
+    [TROLL_SHADOW_LEFT]: trollShadowLeft,
+    [TROLL_SHADOW_RIGHT]: trollShadowRight,
+    [TROLL_SHADOW_FAR]: trollShadowFar,
     [TAIWAN_CLOUDS]: false,
     [TAIWAN_FOG]: false,
     [SCHOOLBUS_INTERIOR]: false,
