@@ -18,5 +18,10 @@ export default [
         taskName: 'taiwanMountainRight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'forebodingTrees',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

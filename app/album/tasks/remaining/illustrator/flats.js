@@ -228,10 +228,5 @@ export default [
         taskName: 'pampasFar',
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: 'forebodingTrees',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

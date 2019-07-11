@@ -32,11 +32,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [FOREBODING_TREES]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 3,
-                zHeight: 2
-            }
+            xPosition: 9,
+            scaleFactor: 0.35
         }
     },
     [PANEL]: {
