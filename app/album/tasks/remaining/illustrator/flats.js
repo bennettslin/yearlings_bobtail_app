@@ -80,11 +80,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'oceanBottomMiddle',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'oceanBottomNear',
         workedHours: 0,
         neededHours: 1.5
@@ -113,11 +108,6 @@ export default [
         taskName: 'royceHall',
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: 'cemeteryHillsLeft',
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: 'oaklandHouseLeft',

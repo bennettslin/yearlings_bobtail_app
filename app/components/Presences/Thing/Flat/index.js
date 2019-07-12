@@ -15,13 +15,13 @@ import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight.svg'
 // import rickshawTown from 'assets/svgs/flats/rickshawTown.svg'
 // import ferrisWheel from 'assets/svgs/flats/ferrisWheel.svg'
 import rollerCoaster from 'assets/svgs/flats/rollerCoaster.svg'
-// import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle.svg'
+import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle.svg'
 // import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear.svg'
 // import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex.svg'
 // import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch.svg'
 // import campanile from 'assets/svgs/flats/campanile.svg'
 // import royceHall from 'assets/svgs/flats/royceHall.svg'
-// import cemeteryHillsLeft from 'assets/svgs/flats/cemeteryHillsLeft.svg'
+import cemeteryHillsLeft from 'assets/svgs/flats/cemeteryHillsLeft.svg'
 import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight.svg'
 // import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft.svg'
 // import oaklandHouseRight from 'assets/svgs/flats/oaklandHouseRight.svg'
@@ -120,13 +120,13 @@ export default {
     [RICKSHAW_TOWN]: false,
     [FERRIS_WHEEL]: false,
     [ROLLER_COASTER]: rollerCoaster,
-    [OCEAN_BOTTOM_MIDDLE]: false,
+    [OCEAN_BOTTOM_MIDDLE]: oceanBottomMiddle,
     [OCEAN_BOTTOM_NEAR]: false,
     [ST_JOSEPHS_ANNEX]: false,
     [ST_JOSEPHS_CHURCH]: false,
     [CAMPANILE]: false,
     [ROYCE_HALL]: false,
-    [CEMETERY_HILLS_LEFT]: false,
+    [CEMETERY_HILLS_LEFT]: cemeteryHillsLeft,
     [CEMETERY_HILLS_RIGHT]: cemeteryHillsRight,
     [OAKLAND_HOUSE_LEFT]: false,
     [OAKLAND_HOUSE_RIGHT]: false,

@@ -25,12 +25,22 @@ export default [
         neededHours: 1
     },
     {
+        taskName: 'cemeteryHillsLeft',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
         taskName: 'cemeteryHillsRight',
         workedHours: 1,
         neededHours: 1
     },
     {
         taskName: 'rollerCoaster',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'oceanBottomMiddle',
         workedHours: 1,
         neededHours: 1
     }

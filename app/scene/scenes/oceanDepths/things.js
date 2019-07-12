@@ -33,11 +33,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [OCEAN_BOTTOM_MIDDLE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 3
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.6
         },
         [OCEAN_BOTTOM_NEAR]: {
             yIndex: 2,

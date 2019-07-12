@@ -1,3 +1,41 @@
+.CemeteryHillsLeft {
+    .foliage {
+        fill: #063;
+    }
+
+    .trunk {
+        fill: #633;
+    }
+
+    .leaves {
+        fill: #033;
+    }
+
+    .palmFronds {
+        fill: #663;
+    }
+
+    .palmTrunk {
+        fill: #963;
+    }
+
+    .graveRight {
+        fill: #333;
+    }
+
+    .meadow {
+        fill: #360;
+    }
+
+    .graveLeft {
+        fill: #666;
+    }
+
+    .graveEdgeLine {
+        stroke: #333;
+    }
+}
+
 .CemeteryHillsRight {
     .foliage {
         fill: #063;
@@ -28,7 +66,7 @@
     }
 
     .postEdgeLine {
-        fill: none;
+        stroke: #488;
     }
 
     .fence {
