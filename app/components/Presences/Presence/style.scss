@@ -35,6 +35,13 @@
     fill: none;
 }
 
+[class$=CreaseLine] {
+    .Presence
+    & {
+        stroke-width: 0.05%;
+    }
+}
+
 [class$=EdgeLine] {
     .Presence
     & {
