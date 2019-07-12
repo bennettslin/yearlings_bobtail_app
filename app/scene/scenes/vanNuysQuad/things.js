@@ -37,12 +37,9 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [VAN_NUYS_LOGO]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 7.5,
-                xWidth: 3,
-                zHeight: 3,
-                zOffset: 2.5
-            }
+            xPosition: 7.5,
+            zOffset: 2.5,
+            scaleFactor: 0.35
         }
     },
     [CUTOUT]: {

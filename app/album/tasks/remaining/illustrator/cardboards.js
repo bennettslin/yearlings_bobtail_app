@@ -10,11 +10,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'vanNuysLogo',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'corkboard',
         workedHours: 0,
         neededHours: 1

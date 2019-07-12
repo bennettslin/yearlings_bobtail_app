@@ -68,5 +68,10 @@ export default [
         taskName: 'seaSerpentRight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'vanNuysLogo',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
