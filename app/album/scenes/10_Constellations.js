@@ -73,7 +73,8 @@ import {
 
 import {
     ROYCE_HALL,
-    CEMETERY_HILLS_NEAR
+    CEMETERY_HILLS_LEFT,
+    CEMETERY_HILLS_RIGHT
 } from '../../constants/scene/things/flats'
 
 import {
@@ -246,7 +247,8 @@ export default [
                 [GRAVESTONE]: true
             },
             [FLAT]: {
-                [CEMETERY_HILLS_NEAR]: true
+                [CEMETERY_HILLS_LEFT]: true,
+                [CEMETERY_HILLS_RIGHT]: true
             }
         },
         cubes: CEMETERY_KEY,

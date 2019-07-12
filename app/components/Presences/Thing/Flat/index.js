@@ -21,7 +21,8 @@ import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight.svg'
 // import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch.svg'
 // import campanile from 'assets/svgs/flats/campanile.svg'
 // import royceHall from 'assets/svgs/flats/royceHall.svg'
-// import cemeteryHillsNear from 'assets/svgs/flats/cemeteryHillsNear.svg'
+// import cemeteryHillsLeft from 'assets/svgs/flats/cemeteryHillsLeft.svg'
+import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight.svg'
 // import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft.svg'
 // import oaklandHouseRight from 'assets/svgs/flats/oaklandHouseRight.svg'
 // import residentialFarLeft from 'assets/svgs/flats/residentialFarLeft.svg'
@@ -72,7 +73,8 @@ import {
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
     ROYCE_HALL,
-    CEMETERY_HILLS_NEAR,
+    CEMETERY_HILLS_LEFT,
+    CEMETERY_HILLS_RIGHT,
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
     RESIDENTIAL_FAR_LEFT,
@@ -124,7 +126,8 @@ export default {
     [ST_JOSEPHS_CHURCH]: false,
     [CAMPANILE]: false,
     [ROYCE_HALL]: false,
-    [CEMETERY_HILLS_NEAR]: false,
+    [CEMETERY_HILLS_LEFT]: false,
+    [CEMETERY_HILLS_RIGHT]: cemeteryHillsRight,
     [OAKLAND_HOUSE_LEFT]: false,
     [OAKLAND_HOUSE_RIGHT]: false,
     [RESIDENTIAL_FAR_LEFT]: false,

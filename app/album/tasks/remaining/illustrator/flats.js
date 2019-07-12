@@ -115,9 +115,9 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'cemeteryHillsNear',
+        taskName: 'cemeteryHillsLeft',
         workedHours: 0,
-        neededHours: 1.5
+        neededHours: 1
     },
     {
         taskName: 'oaklandHouseLeft',
