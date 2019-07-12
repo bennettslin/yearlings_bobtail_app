@@ -28,5 +28,10 @@ export default [
         taskName: 'cemeteryHillsRight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'rollerCoaster',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
