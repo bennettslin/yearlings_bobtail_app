@@ -51,12 +51,9 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [CONVEYOR_BELT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 5,
-                zHeight: 2,
-                zOffset: 2
-            }
+            xPosition: 4,
+            scaleFactor: 0.37,
+            zOffset: 0.6
         },
         [DISHROOM_SINK]: {
             yIndex: 3,

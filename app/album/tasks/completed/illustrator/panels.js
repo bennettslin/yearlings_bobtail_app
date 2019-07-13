@@ -33,5 +33,10 @@ export default [
         taskName: 'dishroomSink',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'conveyorBelt',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
