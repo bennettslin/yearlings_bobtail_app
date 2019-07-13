@@ -30,11 +30,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'goKartExterior',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'conveyorBelt',
         workedHours: 0,
         neededHours: 2

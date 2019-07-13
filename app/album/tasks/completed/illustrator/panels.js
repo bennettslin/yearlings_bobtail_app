@@ -23,5 +23,10 @@ export default [
         taskName: 'bathtub',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'goKartExterior',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

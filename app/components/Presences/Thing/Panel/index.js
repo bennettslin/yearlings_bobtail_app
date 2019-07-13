@@ -17,7 +17,7 @@ import trollShadowFar from 'assets/svgs/panels/trollShadowFar.svg'
 // import bennettCouch from 'assets/svgs/panels/bennettCouch.svg'
 // import bennettLeftArmrest from 'assets/svgs/panels/bennettLeftArmrest.svg'
 // import bennettRightArmrest from 'assets/svgs/panels/bennettRightArmrest.svg'
-// import goKartExterior from 'assets/svgs/panels/goKartExterior.svg'
+import goKartExterior from 'assets/svgs/panels/goKartExterior.svg'
 // import conveyorBelt from 'assets/svgs/fixtures/conveyorBelt.svg'
 // import dishroomSink from 'assets/svgs/panels/dishroomSink.svg'
 // import bennettBed from 'assets/svgs/panels/bennettBed.svg'
@@ -123,8 +123,8 @@ export default {
     [WIDE_COUCH__BENNETT]: false,
     [WIDE_LEFT_ARMREST__BENNETT]: false,
     [WIDE_RIGHT_ARMREST__BENNETT]: false,
-    [GO_KART_EXTERIOR__LEFT]: false,
-    [GO_KART_EXTERIOR__RIGHT]: false,
+    [GO_KART_EXTERIOR__LEFT]: goKartExterior,
+    [GO_KART_EXTERIOR__RIGHT]: goKartExterior,
     [CONVEYOR_BELT]: false,
     [DISHROOM_SINK]: false,
     [BENNETT_BED]: false,

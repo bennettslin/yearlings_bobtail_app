@@ -22,19 +22,13 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [GO_KART_EXTERIOR__LEFT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 5,
-                zHeight: 2
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.32
         },
         [GO_KART_EXTERIOR__RIGHT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 5,
-                zHeight: 2
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.32
         }
     }
 }
