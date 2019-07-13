@@ -228,7 +228,7 @@ export default [
                 },
                 [ANA_HOWIE]: {
                     todo: true,
-                    workedHours: 4,
+                    workedHours: 4.25,
                     compound: 2,
                     description: 'side angle, shivering, feeling comforted',
                     instance: CEMETERY

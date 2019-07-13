@@ -16,7 +16,7 @@ import bennettMat from 'assets/svgs/cardboards/bennettMat.svg'
 import odinMat from 'assets/svgs/cardboards/odinMat.svg'
 // import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster.svg'
 import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo.svg'
-// import corkboard from 'assets/svgs/cardboards/corkboard.svg'
+import corkboard from 'assets/svgs/cardboards/corkboard.svg'
 // import policeAlbum from 'assets/svgs/cardboards/policeAlbum.svg'
 // import nirvanaPoster from 'assets/svgs/cardboards/nirvanaPoster.svg'
 // import leonardCohenPoster from 'assets/svgs/cardboards/leonardCohenPoster.svg'
@@ -91,7 +91,7 @@ export default {
     [ODIN_MAT]: odinMat,
     [BLOOM_COUNTY_POSTER]: false,
     [VAN_NUYS_LOGO]: vanNuysLogo,
-    [CORKBOARD]: false,
+    [CORKBOARD]: corkboard,
     [POLICE_ALBUM]: false,
     [NIRVANA_POSTER]: false,
     [LEONARD_COHEN_POSTER]: false,
