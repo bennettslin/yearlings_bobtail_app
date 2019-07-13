@@ -19,11 +19,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [SNOWGLOBE__TETHERBALL]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 6,
-                zHeight: 5.5
-            }
+            xPosition: 7,
+            scaleFactor: 0.4
         }
     }
 }

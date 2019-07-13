@@ -25,19 +25,13 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [SNOWGLOBE__LIZ_ALONE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4.5,
-                zHeight: 4
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.3
         },
         [SNOWGLOBE__BENNETT_MIRIAM]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 6,
-                zHeight: 5.5
-            }
+            xPosition: 8,
+            scaleFactor: 0.4
         },
         [WIDE_COUCH__MIRIAM]: {
             yIndex: 5,

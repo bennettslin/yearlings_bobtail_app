@@ -54,19 +54,13 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [SNOWGLOBE__LIZ_KHARI]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 5.5,
-                zHeight: 5
-            }
+            xPosition: 3,
+            scaleFactor: 0.4
         },
         [SNOWGLOBE__BENNETT_ALONE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4.5,
-                zHeight: 4
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.3
         }
     }
 }

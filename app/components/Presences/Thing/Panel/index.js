@@ -33,7 +33,7 @@ import dishroomSink from 'assets/svgs/panels/dishroomSink.svg'
 // import volkswagen from 'assets/svgs/panels/volkswagen.svg'
 // import crowdSide from 'assets/svgs/panels/crowdSide.svg'
 // import lizCouch from 'assets/svgs/panels/lizCouch.svg'
-// import snowglobe from 'assets/svgs/panels/snowglobe.svg'
+import snowglobe from 'assets/svgs/panels/snowglobe.svg'
 // import reattaInterior from 'assets/svgs/panels/reattaInterior.svg'
 // import reattaExterior from 'assets/svgs/panels/reattaExterior.svg'
 // import hospitalBed from 'assets/svgs/panels/hospitalBed.svg'
@@ -146,11 +146,11 @@ export default {
     [WIDE_COUCH__MIRIAM]: false,
     [WIDE_LEFT_ARMREST__MIRIAM]: false,
     [WIDE_RIGHT_ARMREST__MIRIAM]: false,
-    [SNOWGLOBE__TETHERBALL]: false,
-    [SNOWGLOBE__LIZ_ALONE]: false,
-    [SNOWGLOBE__BENNETT_MIRIAM]: false,
-    [SNOWGLOBE__LIZ_KHARI]: false,
-    [SNOWGLOBE__BENNETT_ALONE]: false,
+    [SNOWGLOBE__TETHERBALL]: snowglobe,
+    [SNOWGLOBE__LIZ_ALONE]: snowglobe,
+    [SNOWGLOBE__BENNETT_MIRIAM]: snowglobe,
+    [SNOWGLOBE__LIZ_KHARI]: snowglobe,
+    [SNOWGLOBE__BENNETT_ALONE]: snowglobe,
     [REATTA_INTERIOR]: false,
     [REATTA_EXTERIOR]: false,
     [HOSPITAL_BED]: false,

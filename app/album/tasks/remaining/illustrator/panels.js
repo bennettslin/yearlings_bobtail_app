@@ -45,11 +45,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'snowglobe',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'reattaInterior',
         workedHours: 0,
         neededHours: 1.5
