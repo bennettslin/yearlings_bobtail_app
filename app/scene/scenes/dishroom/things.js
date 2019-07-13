@@ -60,11 +60,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [DISHROOM_SINK]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 4,
+            scaleFactor: 0.45
         }
     }
 }

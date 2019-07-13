@@ -28,5 +28,10 @@ export default [
         taskName: 'goKartExterior',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'dishroomSink',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
