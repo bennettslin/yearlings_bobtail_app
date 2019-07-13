@@ -43,5 +43,10 @@ export default [
         taskName: 'snowglobe',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'bedroomFence',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

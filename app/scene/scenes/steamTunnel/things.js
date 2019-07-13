@@ -9,11 +9,9 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [STEAM_PIPES]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 8,
-                zHeight: 6
-            }
+            xPosition: 5.5,
+            zOffset: 1,
+            scaleFactor: 0.425
         }
     },
     [FIXTURE]: {

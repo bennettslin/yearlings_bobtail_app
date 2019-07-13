@@ -40,11 +40,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'steamPipes',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'dumpster',
         workedHours: 0,
         neededHours: 1.5

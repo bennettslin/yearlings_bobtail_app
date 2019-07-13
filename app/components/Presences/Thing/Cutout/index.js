@@ -29,7 +29,7 @@ import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant.svg'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant.svg'
 // import pharmacyAisle from 'assets/svgs/flats/pharmacyAisle.svg'
-// import steamPipes from 'assets/svgs/cutouts/steamPipes.svg'
+import steamPipes from 'assets/svgs/cutouts/steamPipes.svg'
 import storageBoxes from 'assets/svgs/cutouts/storageBoxes.svg'
 import storageChest from 'assets/svgs/cutouts/storageChest.svg'
 import howieFridge from 'assets/svgs/cutouts/howieFridge.svg'
@@ -142,7 +142,7 @@ export default {
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
     [PHARMACY_AISLE]: false,
-    [STEAM_PIPES]: false,
+    [STEAM_PIPES]: steamPipes,
     [STORAGE_BOXES]: storageBoxes,
     [STORAGE_CHEST]: storageChest,
     [HOWIE_FRIDGE]: howieFridge,

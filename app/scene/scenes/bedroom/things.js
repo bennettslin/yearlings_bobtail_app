@@ -110,11 +110,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [BEDROOM_FENCE]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 6,
-                zHeight: 8
-            }
+            xPosition: 2.5,
+            zOffset: 2,
+            scaleFactor: 0.5
         }
     }
 }

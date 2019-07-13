@@ -2,7 +2,7 @@
 import bathtub from 'assets/svgs/panels/bathtub.svg'
 // import bedroomDesk from 'assets/svgs/panels/bedroomDesk.svg'
 // import captainBed from 'assets/svgs/panels/captainBed.svg'
-// import bedroomFence from 'assets/svgs/panels/bedroomFence.svg'
+import bedroomFence from 'assets/svgs/panels/bedroomFence.svg'
 // import caveShadows from 'assets/svgs/panels/caveShadows.svg'
 import stalactites from 'assets/svgs/panels/stalactites.svg'
 import trollShadowLeft from 'assets/svgs/panels/trollShadowLeft.svg'
@@ -108,7 +108,7 @@ export default {
     [BATHTUB]: bathtub,
     [BEDROOM_DESK]: false,
     [CAPTAIN_BED]: false,
-    [BEDROOM_FENCE]: false,
+    [BEDROOM_FENCE]: bedroomFence,
     [CAVE_SHADOWS]: false,
     [STALACTITES]: stalactites,
     [TROLL_SHADOW_LEFT]: trollShadowLeft,

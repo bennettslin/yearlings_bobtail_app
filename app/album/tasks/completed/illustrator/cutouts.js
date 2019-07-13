@@ -183,5 +183,10 @@ export default [
         taskName: 'buddhaShrine',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'steamPipes',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
