@@ -18,7 +18,7 @@ import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs.svg'
 import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree.svg'
 import monitorFront from 'assets/svgs/cutouts/monitorFront.svg'
 import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront.svg'
-// import museumDisplay from 'assets/svgs/cutouts/museumDisplay.svg'
+import museumDisplay from 'assets/svgs/cutouts/museumDisplay.svg'
 import sandbags from 'assets/svgs/cutouts/sandbags.svg'
 import stageLights from 'assets/svgs/cutouts/stageLights.svg'
 import trafficLight from 'assets/svgs/cutouts/trafficLight.svg'
@@ -131,7 +131,7 @@ export default {
     [MONITOR_FRONT__RIGHT]: monitorFront,
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
-    [MUSEUM_DISPLAY]: false,
+    [MUSEUM_DISPLAY]: museumDisplay,
     [SANDBAGS]: sandbags,
     [STAGE_LIGHTS]: stageLights,
     [TRAFFIC_LIGHT]: trafficLight,

@@ -11,7 +11,7 @@ export default [
     },
     {
         taskName: 'museumDisplay',
-        workedHours: 0,
+        workedHours: 1.5,
         neededHours: 1.5
     },
     {

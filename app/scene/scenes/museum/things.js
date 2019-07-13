@@ -9,11 +9,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [MUSEUM_DISPLAY]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 4.5,
-                xWidth: 6,
-                zHeight: 6
-            }
+            xPosition: 4,
+            scaleFactor: 0.4
         }
     },
     [FIXTURE]: {
