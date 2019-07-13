@@ -5,11 +5,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'bathtub',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'bedroomFence',
         workedHours: 0,
         neededHours: 1

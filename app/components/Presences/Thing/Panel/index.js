@@ -1,5 +1,5 @@
 // import estherSpeechPanel from 'assets/svgs/panels/estherSpeechPanel.svg'
-// import bathtub from 'assets/svgs/panels/bathtub.svg'
+import bathtub from 'assets/svgs/panels/bathtub.svg'
 // import bedroomDesk from 'assets/svgs/panels/bedroomDesk.svg'
 // import captainBed from 'assets/svgs/panels/captainBed.svg'
 // import bedroomFence from 'assets/svgs/panels/bedroomFence.svg'
@@ -105,7 +105,7 @@ import {
 
 export default {
     [ESTHER_SPEECH_PANEL]: false,
-    [BATHTUB]: false,
+    [BATHTUB]: bathtub,
     [BEDROOM_DESK]: false,
     [CAPTAIN_BED]: false,
     [BEDROOM_FENCE]: false,

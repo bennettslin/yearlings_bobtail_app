@@ -18,5 +18,10 @@ export default [
         taskName: 'stalactites',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'bathtub',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

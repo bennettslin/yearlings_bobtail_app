@@ -16,11 +16,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [BATHTUB]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 4.5,
-                xWidth: 5,
-                zHeight: 1.5
-            }
+            xPosition: 4.5,
+            scaleFactor: 0.3
         }
     }
 }
