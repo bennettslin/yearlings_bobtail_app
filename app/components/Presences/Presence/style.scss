@@ -69,3 +69,10 @@
         stroke-width: 0.0625%;
     }
 }
+
+[class$=LightLine] {
+    .Presence
+    & {
+        stroke-width: 0.1%;
+    }
+}

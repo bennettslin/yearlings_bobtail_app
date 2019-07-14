@@ -13,7 +13,6 @@
 * signpost
 * stageLights
 * storageChest
-* taiwanFridge
 * television
 * towelRack
 * trafficLight
