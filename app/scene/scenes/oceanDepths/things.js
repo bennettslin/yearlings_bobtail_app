@@ -15,11 +15,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OCEAN_BOTTOM_FAR]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.7
         }
     },
     [CARDBOARD]: {
@@ -34,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
         [OCEAN_BOTTOM_MIDDLE]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.65
         },
         [OCEAN_BOTTOM_NEAR]: {
             yIndex: 2,

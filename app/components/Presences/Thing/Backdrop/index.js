@@ -8,7 +8,7 @@
 // import taiwanStreetsBackdrop from 'assets/svgs/backdrops/taiwanStreetsBackdrop.svg'
 // import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop.svg'
 // import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop.svg'
-// import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar.svg'
+import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar.svg'
 // import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar.svg'
 // import vanNuysSchoolBackdrop from 'assets/svgs/backdrops/vanNuysSchoolBackdrop.svg'
 // import bennettCouchThoughtBackdrop from 'assets/svgs/backdrops/bennettCouchThoughtBackdrop.svg'
@@ -73,7 +73,7 @@ export default {
     [TAIWAN_STREETS_BACKDROP]: false,
     [SHORE_RICKSHAW_BACKDROP]: false,
     [SHORE_BUOY_BACKDROP]: false,
-    [OCEAN_BOTTOM_FAR]: false,
+    [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: false,
     [VAN_NUYS_SCHOOL_BACKDROP]: false,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: false,

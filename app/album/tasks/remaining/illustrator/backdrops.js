@@ -50,11 +50,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'oceanBottomFar',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'oceanFloorFar',
         workedHours: 0,
         neededHours: 1
