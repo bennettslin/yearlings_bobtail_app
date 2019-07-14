@@ -16,7 +16,7 @@ import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight.svg'
 // import ferrisWheel from 'assets/svgs/flats/ferrisWheel.svg'
 import rollerCoaster from 'assets/svgs/flats/rollerCoaster.svg'
 import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle.svg'
-// import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear.svg'
+import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear.svg'
 // import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex.svg'
 // import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch.svg'
 // import campanile from 'assets/svgs/flats/campanile.svg'
@@ -121,7 +121,7 @@ export default {
     [FERRIS_WHEEL]: false,
     [ROLLER_COASTER]: rollerCoaster,
     [OCEAN_BOTTOM_MIDDLE]: oceanBottomMiddle,
-    [OCEAN_BOTTOM_NEAR]: false,
+    [OCEAN_BOTTOM_NEAR]: oceanBottomNear,
     [ST_JOSEPHS_ANNEX]: false,
     [ST_JOSEPHS_CHURCH]: false,
     [CAMPANILE]: false,

@@ -38,11 +38,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [OCEAN_BOTTOM_NEAR]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 2
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.6
         }
     }
 }
