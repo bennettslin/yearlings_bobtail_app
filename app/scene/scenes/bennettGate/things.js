@@ -9,12 +9,9 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [CODE_BOX]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 1,
-                zOffset: 3
-            }
+            xPosition: 5.5,
+            zOffset: 2.5,
+            scaleFactor: 0.275
         }
     },
     [CUTOUT]: {

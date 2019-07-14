@@ -27,7 +27,7 @@ import corkboard from 'assets/svgs/cardboards/corkboard.svg'
 // import maraGladiatorPoster from 'assets/svgs/cardboards/maraGladiatorPoster.svg'
 // import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster.svg'
 // import marqueeFrame from 'assets/svgs/cardboards/marqueeFrame.svg'
-// import codeBox from 'assets/svgs/cardboards/codeBox.svg'
+import codeBox from 'assets/svgs/cardboards/codeBox.svg'
 // import clipboard from 'assets/svgs/cardboards/clipboard.svg'
 // import painting from 'assets/svgs/cardboards/painting.svg'
 // import nasAlbum from 'assets/svgs/cardboards/nasAlbum.svg'
@@ -104,7 +104,7 @@ export default {
     [MARQUEE_FRAME__MARA_GLADIATOR]: false,
     [GLADIATOR_POSTER]: false,
     [MARQUEE_FRAME__GLADIATOR]: false,
-    [CODE_BOX]: false,
+    [CODE_BOX]: codeBox,
     [CLIPBOARD]: false,
     [PAINTING]: false,
     [NAS_ALBUM]: false,

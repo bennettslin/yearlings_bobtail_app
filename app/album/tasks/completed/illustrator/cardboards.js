@@ -78,5 +78,10 @@ export default [
         taskName: 'corkboard',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'codeBox',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

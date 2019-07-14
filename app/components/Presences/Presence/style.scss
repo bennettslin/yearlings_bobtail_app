@@ -56,6 +56,13 @@
     }
 }
 
+[class$=BorderLine] {
+    .Presence
+    & {
+        stroke-width: 0.075%;
+    }
+}
+
 [class$=OverlapLine] {
     .Presence
     & {

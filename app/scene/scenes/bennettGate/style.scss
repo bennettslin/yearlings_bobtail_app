@@ -1,6 +1,51 @@
 .ApartmentPlant {
-    .stalk { fill: #300; }
-    .pot { fill: #93c; }
-    .potLine { stroke: #82b; }
-    .leaves { fill: #063; }
+    .stalk {
+        fill: #300;
+    }
+
+    .pot {
+        fill: #93c;
+    }
+
+    .potLine {
+        stroke: #82b;
+    }
+
+    .leaves {
+        fill: #063;
+    }
+}
+
+.CodeBox {
+    .boxBack {
+        fill: #e6e6e6;
+    }
+
+    .slit {
+        fill: #534741;
+    }
+
+    .keypad {
+        fill: #998675;
+    }
+
+    .key {
+        fill: #c7b299;
+    }
+
+    .boxSide {
+        fill: #666;
+    }
+
+    .boxBottom {
+        fill: #999;
+    }
+
+    .boxTop {
+        fill: #333;
+    }
+
+    .boxFront {
+        fill: #ccc;
+    }
 }
