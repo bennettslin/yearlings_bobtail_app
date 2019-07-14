@@ -3,5 +3,10 @@ export default [
         taskName: 'oceanBottomFar',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'oceanFloorFar',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

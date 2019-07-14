@@ -21,11 +21,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OCEAN_FLOOR_FAR]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.7
         }
     },
     [CARDBOARD]: {

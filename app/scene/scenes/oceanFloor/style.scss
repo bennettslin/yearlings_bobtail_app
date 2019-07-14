@@ -12,6 +12,24 @@
     }
 }
 
+.OceanFloorFar {
+    .volcanoBack {
+        fill: #300;
+    }
+
+    .volcanoMiddle {
+        fill: #330;
+    }
+
+    .volcanoFront {
+        fill: #633;
+    }
+
+    .craterOverlapLine {
+        stroke: #42210b;
+    }
+}
+
 .OceanCaveExterior {
     .caveRight {
         fill: #963;
