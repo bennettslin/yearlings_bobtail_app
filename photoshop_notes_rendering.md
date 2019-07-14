@@ -5,7 +5,6 @@
 * bennettOdinRickshaw
 * berkeleyLamppost
 * dispensers
-* howieFridge
 * ivDrip
 * monitors
 * overpassSigns

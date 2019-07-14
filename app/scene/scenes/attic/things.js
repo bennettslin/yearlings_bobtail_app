@@ -29,8 +29,7 @@ const ARRANGEMENTS_THINGS = {
         [HOWIE_FRIDGE]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.35,
-            flipHorizontal: true
+            scaleFactor: 0.35
         },
         [TELEVISION]: {
             yIndex: 4,
