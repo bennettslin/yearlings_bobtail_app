@@ -22,7 +22,6 @@
 * waitingRoomPlant
 * yellowTapedGrill
 * dumpster
-* mirroredSink
 * lockerBank
 * volkswagen
 
