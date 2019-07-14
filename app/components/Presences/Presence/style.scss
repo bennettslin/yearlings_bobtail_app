@@ -42,6 +42,13 @@
     }
 }
 
+[class$=DisplayLine] {
+    .Presence
+    & {
+        stroke-width: 0.0625%;
+    }
+}
+
 [class$=EdgeLine] {
     .Presence
     & {

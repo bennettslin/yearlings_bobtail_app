@@ -23,9 +23,7 @@
 * yellowTapedGrill
 * dumpster
 * mirroredSink
-* corkboard
 * lockerBank
-* goKartExterior
 * volkswagen
 
 # Redo className organisation.

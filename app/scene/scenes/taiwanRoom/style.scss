@@ -1,51 +1,19 @@
 .BuddhaShrine {
-    .base {
-        fill: #9e005d;
-    }
-
-    .hair {
-        fill: #1a1a1a;
-    }
-
-    .skin {
-        fill: #c69c6d;
-    }
-
-    .skinLine {
-        stroke: #b58b5c;
-    }
-
-    .robe {
-        fill: #c1272d;
-    }
-
-    .robeLine {
-        stroke: #b0161c;
-    }
-
-    .flange {
-        fill: #ff0;
-    }
+    .base { fill: #9e005d; }
+    .hair { fill: #1a1a1a; }
+    .robe { fill: #c1272d; }
+    .robeOverlapLine { stroke: #b0161c; }
+    .skin { fill: #c69c6d; }
+    .skinCreaseLine { stroke: #b58b5c; }
+    .skinOverlapLine { stroke: #b58b5c; }
+    .flange { fill: #ff0; }
+    .faceDisplayLine { stroke: #543; }
 }
 
 .TaiwanFridge {
-    .base {
-        fill: #666;
-    }
-
-    .door {
-        fill: #6cc;
-    }
-
-    .brass {
-        fill: #999;
-    }
-
-    .handle {
-        fill: #cc6;
-    }
-
-    .handleLine {
-        stroke: #ee8;
-    }
+    .base { fill: #666; }
+    .door { fill: #6cc; }
+    .brass { fill: #999; }
+    .handle { fill: #cc6; }
+    .handleLine { stroke: #ee8; }
 }
