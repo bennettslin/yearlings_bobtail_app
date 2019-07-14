@@ -48,5 +48,15 @@ export default [
         taskName: 'bedroomFence',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'oceanCaveExterior',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'oceanCaveInterior',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

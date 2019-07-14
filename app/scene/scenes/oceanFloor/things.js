@@ -12,7 +12,10 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from 'constants/scene/things/panels'
-import { BENNETT_ODIN } from '../../shared'
+import {
+    BENNETT_ODIN_SHARED,
+    BUDDHA_SHRINE_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -28,33 +31,28 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,
-            xPosition: 2.5,
+            xPosition: 2.6,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         },
         [ODIN_MAT]: {
             yIndex: 2,
-            xPosition: 5,
+            xPosition: 0.8,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         }
     },
     [PANEL]: {
         [OCEAN_CAVE_INTERIOR]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 4.5,
-                xWidth: 12,
-                zHeight: 3
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.55,
+            style: BUDDHA_SHRINE_SHARED
         },
         [OCEAN_CAVE_EXTERIOR]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 3
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.55
         }
     }
 }

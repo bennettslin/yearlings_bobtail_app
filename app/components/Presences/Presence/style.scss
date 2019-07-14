@@ -42,13 +42,6 @@
     }
 }
 
-[class$=DisplayLine] {
-    .Presence
-    & {
-        stroke-width: 0.0625%;
-    }
-}
-
 [class$=EdgeLine] {
     .Presence
     & {
@@ -56,9 +49,23 @@
     }
 }
 
+[class$=FoldLine] {
+    .Presence
+    & {
+        stroke-width: 0.075%;
+    }
+}
+
 [class$=OverlapLine] {
     .Presence
     & {
         stroke-width: 0.075%;
+    }
+}
+
+[class$=DisplayLine] {
+    .Presence
+    & {
+        stroke-width: 0.0625%;
     }
 }

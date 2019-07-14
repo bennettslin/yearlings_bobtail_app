@@ -12,8 +12,8 @@ import trollShadowFar from 'assets/svgs/panels/trollShadowFar.svg'
 // import taiwanFog from 'assets/svgs/panels/taiwanFog.svg'
 // import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior.svg'
 // import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior.svg'
-// import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior.svg'
-// import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior.svg'
+import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior.svg'
+import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior.svg'
 // import bennettCouch from 'assets/svgs/panels/bennettCouch.svg'
 // import bennettLeftArmrest from 'assets/svgs/panels/bennettLeftArmrest.svg'
 // import bennettRightArmrest from 'assets/svgs/panels/bennettRightArmrest.svg'
@@ -118,8 +118,8 @@ export default {
     [TAIWAN_FOG]: false,
     [SCHOOLBUS_INTERIOR]: false,
     [SCHOOLBUS_EXTERIOR]: false,
-    [OCEAN_CAVE_INTERIOR]: false,
-    [OCEAN_CAVE_EXTERIOR]: false,
+    [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
+    [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
     [WIDE_COUCH__BENNETT]: false,
     [WIDE_LEFT_ARMREST__BENNETT]: false,
     [WIDE_RIGHT_ARMREST__BENNETT]: false,

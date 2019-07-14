@@ -9,7 +9,7 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
 } from 'constants/scene/things/flats'
-import { BENNETT_ODIN } from '../../shared'
+import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -27,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 7,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         }
     },
     [FLAT]: {

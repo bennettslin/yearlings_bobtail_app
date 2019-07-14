@@ -9,7 +9,7 @@ import {
     ODIN_SHORE
 } from 'constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from 'constants/scene/things/flats'
-import { BENNETT_ODIN } from '../../shared'
+import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -27,13 +27,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         },
         [ODIN_SHORE]: {
             yIndex: 2,
             xPosition: 2,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         }
     },
     [FLAT]: {

@@ -7,7 +7,7 @@ import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
 } from 'constants/scene/things/cardboards'
-import { BENNETT_ODIN } from '../../shared'
+import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -26,13 +26,13 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 5,
             scaleFactor: 0.2,
             zOffset: 1,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
             xPosition: 6,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         }
     }
 }

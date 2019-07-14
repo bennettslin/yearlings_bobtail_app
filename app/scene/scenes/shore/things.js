@@ -11,7 +11,7 @@ import {
     FERRIS_WHEEL,
     ROLLER_COASTER
 } from 'constants/scene/things/flats'
-import { BENNETT_ODIN } from '../../shared'
+import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 9,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         }
     },
     [CUTOUT]: {

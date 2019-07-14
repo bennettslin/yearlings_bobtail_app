@@ -11,3 +11,99 @@
         stroke: #b20238;
     }
 }
+
+.OceanCaveExterior {
+    .caveRight {
+        fill: #963;
+    }
+
+    .caveLeft {
+        fill: #966;
+    }
+
+    .caveRightFoldLine {
+        stroke: #603813;
+    }
+
+    .caveLeftFoldLine {
+        stroke: #534741;
+    }
+}
+
+.OceanCaveInterior {
+    .rockShadow {
+        fill: #666;
+    }
+
+    .rockCreaseLine {
+        stroke: #4d4d4d;
+    }
+
+    .seaweed {
+        fill: #393;
+    }
+
+    .kelpSide {
+        fill: #060;
+    }
+
+    .kelpFront {
+        fill: #363;
+    }
+
+    .tubeWormPlumeCentre {
+        fill: #966;
+    }
+
+    .tubeWormCentre {
+        fill: #699;
+    }
+
+    .tubeWormPlumeSide {
+        fill: #c63;
+    }
+
+    .tubeWormSide {
+        fill: #366;
+    }
+
+    .urchin {
+        fill: #639;
+    }
+
+    .coralBrain {
+        fill: #930;
+    }
+
+    .coralBrainCavity {
+        fill: #300;
+    }
+
+    .coralBrainFoldLine {
+        stroke: #42210b;
+    }
+
+    .frondBack {
+        fill: #069;
+    }
+
+    .frondFront {
+        fill: #399;
+    }
+
+    .coralTube {
+        fill: #669;
+    }
+
+    .coralTubeCavity {
+        fill: #336;
+    }
+
+    .rockBack {
+        fill: #963;
+    }
+
+    .rockFront {
+        fill: #663;
+    }
+}

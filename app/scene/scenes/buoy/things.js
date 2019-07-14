@@ -4,7 +4,7 @@ import {
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT
 } from 'constants/scene/things/cardboards'
-import { BENNETT_ODIN } from '../../shared'
+import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -13,7 +13,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2.5,
             scaleFactor: 0.2,
             zOffset: 2.5,
-            style: BENNETT_ODIN
+            style: BENNETT_ODIN_SHARED
         },
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,
