@@ -38,11 +38,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [CROWD_SIDE]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 7,
-                zHeight: 4
-            }
+            xPosition: 7,
+            scaleFactor: 0.325
         }
     }
 }

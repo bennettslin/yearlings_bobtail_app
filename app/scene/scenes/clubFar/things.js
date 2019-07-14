@@ -21,11 +21,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [CROWD_BACK]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 4
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.325
         }
     },
     [PUPPET]: {

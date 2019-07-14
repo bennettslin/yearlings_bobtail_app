@@ -68,5 +68,15 @@ export default [
         taskName: 'saturnExterior',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'crowdSide',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'crowdBack',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -1,12 +1,37 @@
 .MonitorSide {
-    .bottom { fill: #333; }
-    .top { fill: #666; }
-    .side { fill: #222; }
-    .panel { fill: #999; }
+    .bottom {
+        fill: #333;
+    }
+
+    .top {
+        fill: #666;
+    }
+
+    .side {
+        fill: #222;
+    }
+
+    .panel {
+        fill: #999;
+    }
 }
 
 .WallSpeakerSide {
-    .bottom { fill: #333; }
-    .side { fill: #666; }
-    .panel { fill: #999; }
+    .bottom {
+        fill: #333;
+    }
+
+    .side {
+        fill: #666;
+    }
+
+    .panel {
+        fill: #999;
+    }
+}
+
+.CrowdSide {
+    .shadow {
+        fill: #333;
+    }
 }

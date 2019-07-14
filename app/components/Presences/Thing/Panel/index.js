@@ -31,7 +31,7 @@ import saturnExterior from 'assets/svgs/panels/saturnExterior.svg'
 // import atticLeftArmrest from 'assets/svgs/panels/atticLeftArmrest.svg'
 // import atticRightArmrest from 'assets/svgs/panels/atticRightArmrest.svg'
 // import volkswagen from 'assets/svgs/panels/volkswagen.svg'
-// import crowdSide from 'assets/svgs/panels/crowdSide.svg'
+import crowdSide from 'assets/svgs/panels/crowdSide.svg'
 // import lizCouch from 'assets/svgs/panels/lizCouch.svg'
 import snowglobe from 'assets/svgs/panels/snowglobe.svg'
 // import reattaInterior from 'assets/svgs/panels/reattaInterior.svg'
@@ -40,7 +40,7 @@ import snowglobe from 'assets/svgs/panels/snowglobe.svg'
 // import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel.svg'
 // import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel.svg'
 // import tennisThoughtPanel from 'assets/svgs/panels/tennisThoughtPanel.svg'
-// import crowdBack from 'assets/svgs/panels/crowdBack.svg'
+import crowdBack from 'assets/svgs/panels/crowdBack.svg'
 // import weddingPlatform from 'assets/svgs/panels/weddingPlatform.svg'
 // import inverseThoughtPanel from 'assets/svgs/panels/inverseThoughtPanel.svg'
 
@@ -141,7 +141,7 @@ export default {
     [ATTIC_LEFT_ARMREST]: false,
     [ATTIC_RIGHT_ARMREST]: false,
     [VOLKSWAGEN]: false,
-    [CROWD_SIDE]: false,
+    [CROWD_SIDE]: crowdSide,
     [LIZ_COUCH]: false,
     [WIDE_COUCH__MIRIAM]: false,
     [WIDE_LEFT_ARMREST__MIRIAM]: false,
@@ -157,7 +157,7 @@ export default {
     [PHONE_CALL_PANEL]: false,
     [DEATHBED_THOUGHT_PANEL]: false,
     [TENNIS_THOUGHT_PANEL]: false,
-    [CROWD_BACK]: false,
+    [CROWD_BACK]: crowdBack,
     [WEDDING_PLATFORM]: false,
     [INVERSE_THOUGHT_PANEL]: false
 }

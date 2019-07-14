@@ -103,15 +103,5 @@ export default [
         taskName: 'caveShadows',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'crowdNear',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'crowdFar',
-        workedHours: 0,
-        neededHours: 1
     }
 ]
