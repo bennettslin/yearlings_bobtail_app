@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
         [OCEAN_BOTTOM_NEAR]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.5
         }
     }
 }

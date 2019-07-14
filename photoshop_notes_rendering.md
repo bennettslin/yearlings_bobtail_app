@@ -18,7 +18,6 @@
 * towelRack
 * trafficLight
 * twinStreetlamp
-* waitingRoomPlant
 * yellowTapedGrill
 * dumpster
 * lockerBank
