@@ -10,11 +10,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'museumDisplay',
-        workedHours: 1.5,
-        neededHours: 1.5
-    },
-    {
         taskName: 'glassCart',
         workedHours: 0,
         neededHours: 1.5

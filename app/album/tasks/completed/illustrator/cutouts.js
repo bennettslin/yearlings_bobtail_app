@@ -185,6 +185,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: 'museumDisplay',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
         taskName: 'steamPipes',
         workedHours: 1.5,
         neededHours: 1.5
