@@ -15,16 +15,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'saturnInterior',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'saturnExterior',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'volkswagen',
         workedHours: 0,
         neededHours: 1.5

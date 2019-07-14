@@ -25,8 +25,8 @@ import dishroomSink from 'assets/svgs/panels/dishroomSink.svg'
 // import waitingLeftArmrest from 'assets/svgs/panels/waitingLeftArmrest.svg'
 // import waitingRightArmrest from 'assets/svgs/panels/waitingRightArmrest.svg'
 // import lizBed from 'assets/svgs/panels/lizBed.svg'
-// import saturnInterior from 'assets/svgs/panels/saturnInterior.svg'
-// import saturnExterior from 'assets/svgs/panels/saturnExterior.svg'
+import saturnInterior from 'assets/svgs/panels/saturnInterior.svg'
+import saturnExterior from 'assets/svgs/panels/saturnExterior.svg'
 // import atticCouch from 'assets/svgs/panels/atticCouch.svg'
 // import atticLeftArmrest from 'assets/svgs/panels/atticLeftArmrest.svg'
 // import atticRightArmrest from 'assets/svgs/panels/atticRightArmrest.svg'
@@ -135,8 +135,8 @@ export default {
     [WAITING_LEFT_ARMREST__LIZ]: false,
     [WAITING_RIGHT_ARMREST__LIZ]: false,
     [LIZ_BED]: false,
-    [SATURN_INTERIOR]: false,
-    [SATURN_EXTERIOR]: false,
+    [SATURN_INTERIOR]: saturnInterior,
+    [SATURN_EXTERIOR]: saturnExterior,
     [ATTIC_COUCH]: false,
     [ATTIC_LEFT_ARMREST]: false,
     [ATTIC_RIGHT_ARMREST]: false,

@@ -59,19 +59,13 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [SATURN_INTERIOR]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 5
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.5
         },
         [SATURN_EXTERIOR]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 5
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.5
         }
     }
 }
