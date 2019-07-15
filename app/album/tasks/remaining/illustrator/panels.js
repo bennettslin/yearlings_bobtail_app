@@ -93,10 +93,5 @@ export default [
         taskName: 'lizCouch',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'caveShadows',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

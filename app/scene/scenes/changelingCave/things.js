@@ -17,7 +17,7 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [CAMPFIRE]: {
             yIndex: 4,
-            xPosition: 3,
+            xPosition: 2.5,
             scaleFactor: 0.25
         }
     },
@@ -34,21 +34,18 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [CAVE_SHADOWS]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 9,
-                zHeight: 7
-            }
+            xPosition: 6,
+            scaleFactor: 0.7
         },
         [STALACTITES]: {
             yIndex: 5,
-            xPosition: 2.5,
+            xPosition: 2,
             zOffset: 6,
             scaleFactor: 0.35
         },
         [TROLL_SHADOW_LEFT]: {
             yIndex: 5,
-            xPosition: -0.25,
+            xPosition: -0.5,
             scaleFactor: 0.35,
             alignLeft: true
         },
@@ -60,7 +57,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [TROLL_SHADOW_FAR]: {
             yIndex: 4,
-            xPosition: 11.5,
+            xPosition: 11.625,
+            zOffset: -0.25,
             scaleFactor: 0.35,
             alignRight: true
         }

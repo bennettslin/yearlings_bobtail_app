@@ -68,6 +68,32 @@
     }
 }
 
+.CaveShadows {
+    .wall {
+        fill: #996;
+    }
+
+    .caveFoldLine {
+        stroke: #603813;
+    }
+
+    .rockBack {
+        fill: #c96;
+    }
+
+    .rockMiddle {
+        fill: #963;
+    }
+
+    .rockFront {
+        fill: #630;
+    }
+
+    .shadow {
+        fill: #333;
+    }
+}
+
 .Stalactites {
     .shadow {
         fill: #222;

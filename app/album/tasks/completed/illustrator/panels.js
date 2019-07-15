@@ -83,5 +83,10 @@ export default [
         taskName: 'phoneCallPanel',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'caveShadows',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
