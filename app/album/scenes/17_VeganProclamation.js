@@ -241,15 +241,13 @@ export default [
                 [LIZ_PHONE_BASE]: true,
                 [LIZ_PHONE_BASE_REFLECTION]: true
             },
-            [PANEL]: {
-                [PHONE_CALL_PANEL]: true
-            },
             [FURNITURE]: {
                 [LIZ_BLANKET_PILE]: true,
                 [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANEL]: {
-                [LIZ_BED]: true
+                [LIZ_BED]: true,
+                [PHONE_CALL_PANEL]: true
             }
         },
         cubes: LIZ_BED_OPEN_PHONE_KEY,

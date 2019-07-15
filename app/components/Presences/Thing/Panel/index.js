@@ -37,7 +37,7 @@ import snowglobe from 'assets/svgs/panels/snowglobe.svg'
 // import reattaInterior from 'assets/svgs/panels/reattaInterior.svg'
 // import reattaExterior from 'assets/svgs/panels/reattaExterior.svg'
 // import hospitalBed from 'assets/svgs/panels/hospitalBed.svg'
-// import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel.svg'
+import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel.svg'
 // import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel.svg'
 // import tennisThoughtPanel from 'assets/svgs/panels/tennisThoughtPanel.svg'
 import crowdBack from 'assets/svgs/panels/crowdBack.svg'
@@ -154,7 +154,7 @@ export default {
     [REATTA_INTERIOR]: false,
     [REATTA_EXTERIOR]: false,
     [HOSPITAL_BED]: false,
-    [PHONE_CALL_PANEL]: false,
+    [PHONE_CALL_PANEL]: phoneCallPanel,
     [DEATHBED_THOUGHT_PANEL]: false,
     [TENNIS_THOUGHT_PANEL]: false,
     [CROWD_BACK]: crowdBack,

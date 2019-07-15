@@ -157,11 +157,8 @@ export const THINGS_LIZ_BED_VEGAN = {
     [PANEL]: {
         [PHONE_CALL_PANEL]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 3,
-                zHeight: 3
-            }
+            xPosition: 9.5,
+            scaleFactor: 0.325
         }
     }
 }

@@ -40,11 +40,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'phoneCallPanel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'weddingPlatform',
         workedHours: 0,
         neededHours: 1.5

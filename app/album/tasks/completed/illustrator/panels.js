@@ -78,5 +78,10 @@ export default [
         taskName: 'crowdBack',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'phoneCallPanel',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
