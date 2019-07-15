@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --env.production",
+    "delivery": "npm run build && aws s3 sync build/ s3://yearlingsbobtail--delivery",
     "release": "npm run build && aws s3 sync build/ s3://yearlingsbobtail",
     "start": "webpack-dev-server --mode development --env.development",
     "lint": "eslint --ext js,jsx app",
