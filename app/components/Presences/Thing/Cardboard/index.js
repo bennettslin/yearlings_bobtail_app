@@ -29,7 +29,7 @@ import corkboard from 'assets/svgs/cardboards/corkboard.svg'
 // import marqueeFrame from 'assets/svgs/cardboards/marqueeFrame.svg'
 import codeBox from 'assets/svgs/cardboards/codeBox.svg'
 // import clipboard from 'assets/svgs/cardboards/clipboard.svg'
-// import painting from 'assets/svgs/cardboards/painting.svg'
+import painting from 'assets/svgs/cardboards/painting.svg'
 // import nasAlbum from 'assets/svgs/cardboards/nasAlbum.svg'
 // import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster.svg'
 
@@ -106,7 +106,7 @@ export default {
     [MARQUEE_FRAME__GLADIATOR]: false,
     [CODE_BOX]: codeBox,
     [CLIPBOARD]: false,
-    [PAINTING]: false,
+    [PAINTING]: painting,
     [NAS_ALBUM]: false,
     [ELLIOTT_SMITH_POSTER]: false
 }

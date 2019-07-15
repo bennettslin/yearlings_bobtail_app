@@ -1,6 +1,87 @@
 .WaitingRoomPlant {
-    .frondBack { fill: #396; }
-    .frondMiddle { fill: #063; }
-    .frondFront { fill: #033; }
-    .vase { fill: #63c; }
+    .frondBack {
+        fill: #396;
+    }
+
+    .frondMiddle {
+        fill: #063;
+    }
+
+    .frondFront {
+        fill: #033;
+    }
+
+    .vase {
+        fill: #63c;
+    }
+}
+
+.Painting {
+    .wall {
+        fill: #99c;
+    }
+
+    .table {
+        fill: #663;
+    }
+
+    .appleRed {
+        fill: #933;
+    }
+
+    .pear {
+        fill: #996;
+    }
+
+    .orange {
+        fill: #c93;
+    }
+
+    .banana {
+        fill: #cc6;
+    }
+
+    .bananaDisplayLine {
+        stroke: #8c6239;
+    }
+
+    .peachCreaseLine {
+        stroke: #8c6239;
+    }
+
+    .bowlBase {
+        fill: #399;
+    }
+
+    .bowl {
+        fill: #6cc;
+    }
+
+    .grapes {
+        fill: #669;
+    }
+
+    .grapeOverlapLine {
+        stroke: #1b1464;
+    }
+
+    .peach {
+        fill: #c96;
+    }
+
+    .olive {
+        fill: #6c6;
+    }
+
+    .kiwi {
+        fill: #966;
+    }
+
+    .appleGreen {
+        fill: #693;
+    }
+
+    .frame {
+        fill: #630;
+    }
 }

@@ -83,5 +83,10 @@ export default [
         taskName: 'codeBox',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'painting',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

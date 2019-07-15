@@ -32,12 +32,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [PAINTING]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+            xPosition: 4,
+            scaleFactor: 0.5,
+            zOffset: 4
         }
     },
     [CUTOUT]: {
