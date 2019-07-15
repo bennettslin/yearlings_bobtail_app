@@ -3,7 +3,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-const SHOW_BUNDLE_ANALYZER = false
+const SHOW_BUNDLE_ANALYZER = true
 
 const getConfig = ({ development }) => {
     return {
@@ -21,7 +21,7 @@ const getConfig = ({ development }) => {
             }),
             ...development ? [
                 new webpack.HotModuleReplacementPlugin(),
-                ...SHOW_BUNDLE_ANALYZER && new BundleAnalyzerPlugin()
+                ...SHOW_BUNDLE_ANALYZER && [new BundleAnalyzerPlugin()]
             ] : [
                 new webpack.optimize.OccurrenceOrderPlugin()
             ]

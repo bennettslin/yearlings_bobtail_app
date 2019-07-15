@@ -5,7 +5,7 @@ import React, {
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import isFinite from 'lodash.isfinite'
+import isFinite from 'lodash/isfinite'
 
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'

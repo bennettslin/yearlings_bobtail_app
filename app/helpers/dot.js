@@ -1,6 +1,6 @@
 // Check if at least one present key is selected.
-import keys from 'lodash.keys'
-import pickBy from 'lodash.pickby'
+import keys from 'lodash/keys'
+import pickBy from 'lodash/pickby'
 
 import { getObjectFromBitNumber } from './bit'
 import { ALL_DOT_KEYS } from '../constants/dots'

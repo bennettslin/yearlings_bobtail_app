@@ -1,5 +1,5 @@
-import isFinite from 'lodash.isfinite'
-import isString from 'lodash.isstring'
+import isFinite from 'lodash/isfinite'
+import isString from 'lodash/isstring'
 
 import { getAnnotation } from 'album/api/annotations'
 

@@ -1,5 +1,5 @@
 // TODO: This could be a little neater.
-import isFinite from 'lodash.isfinite'
+import isFinite from 'lodash/isfinite'
 import { registerAnnotation } from './helpers'
 
 import {

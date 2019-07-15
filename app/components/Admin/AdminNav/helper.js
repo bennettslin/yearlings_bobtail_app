@@ -1,7 +1,7 @@
 import albumTasks from 'album/tasks/songs'
 import tasks from 'album/tasks'
 import tasksV2 from 'album/tasks/v2'
-import isFinite from 'lodash.isfinite'
+import isFinite from 'lodash/isfinite'
 
 export const getSongTasks = (songIndex) => (
     albumTasks[songIndex]

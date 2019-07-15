@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import isFinite from 'lodash.isfinite'
+import isFinite from 'lodash/isfinite'
 
 import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'

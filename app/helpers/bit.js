@@ -1,5 +1,5 @@
 // Methods to switch between a bit number and a true false object.
-import keys from 'lodash.keys'
+import keys from 'lodash/keys'
 
 import { getArrayOfLength } from './general'
 

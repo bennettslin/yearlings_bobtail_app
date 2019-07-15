@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isFinite from 'lodash.isfinite'
-import isString from 'lodash.isstring'
+import isFinite from 'lodash/isfinite'
+import isString from 'lodash/isstring'
 
 import PresenceSvg from 'modules/PresenceSvg'
 import Svg from 'modules/Svg'

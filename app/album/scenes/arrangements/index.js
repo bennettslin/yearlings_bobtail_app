@@ -1,4 +1,4 @@
-import keys from 'lodash.keys'
+import keys from 'lodash/keys'
 
 /**
  * Organising actor instances by scene just makes it easier to tweak the

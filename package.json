@@ -33,11 +33,7 @@
     "classnames": "^2.2.5",
     "date-fns": "^1.29.0",
     "debounce": "^1.0.2",
-    "lodash.findindex": "^4.6.0",
-    "lodash.isfinite": "^3.3.2",
-    "lodash.isstring": "^4.0.1",
-    "lodash.keys": "^4.2.0",
-    "lodash.pickby": "^4.6.0",
+    "lodash": "^4.17.11",
     "mobile-detect": "^1.4.3",
     "pino": "^4.17.5",
     "prop-types": "^15.6.1",
@@ -51,8 +47,7 @@
     "react-transition-group": "^2.4.0",
     "redux": "^4.0.0",
     "scroll-into-view": "^1.8.2",
-    "vivus": "^0.4.4",
-    "why-did-you-update": "^1.0.6"
+    "vivus": "^0.4.4"
   },
   "devDependencies": {
     "autoprefixer": "^9.4.5",

@@ -1,7 +1,7 @@
 import React, { memo, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isString from 'lodash.isstring'
+import isString from 'lodash/isstring'
 
 import Underline from '../Underline'
 

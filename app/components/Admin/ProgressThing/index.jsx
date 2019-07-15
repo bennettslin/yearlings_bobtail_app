@@ -2,7 +2,7 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from 'lodash.keys'
+import keys from 'lodash/keys'
 
 import { getSumOfTasks } from '../AdminNav/helper'
 import { getRemainingTimeStringFromHours } from '../ProgressFooter/helper'
