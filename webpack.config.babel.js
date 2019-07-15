@@ -62,16 +62,11 @@ const getConfig = ({ development }) => {
                     ]
                 },
                 {
-                    test: /\.(ttf|mp3|pdf)$/,
-                    loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
-                },
-                {
-                    test: /\.(svg)$/,
+                    test: /\.(mp3|pdf|svg|ttf)$/,
                     loader: 'url-loader',
                     options: {
-                        limit: 50000,
-                        name: 'assets/svgs/[name]-[hash].[ext]',
-                        publicPath: './'
+                        limit: 30000,
+                        name: './assets/[name]-[hash].[ext]'
                     }
                 }
             ]
@@ -85,7 +80,7 @@ const getConfig = ({ development }) => {
                 hot: true,
                 inline: true,
                 overlay: true,
-                stats: 'errors-only'
+                stats: true
             },
             devtool: 'cheap-module-eval-source-map'
         }
