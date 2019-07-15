@@ -85,11 +85,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'cemeteryBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'stationWagonBackdrop',
         workedHours: 0,
         neededHours: 1.5

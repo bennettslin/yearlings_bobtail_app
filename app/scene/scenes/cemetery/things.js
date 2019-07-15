@@ -14,11 +14,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [CEMETERY_BACKDROP]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.7
         }
     },
     [FIXTURE]: {
@@ -34,14 +31,14 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [CEMETERY_HILLS_LEFT]: {
             yIndex: 1,
-            xPosition: -0.5,
-            scaleFactor: 0.35,
+            xPosition: -1.25,
+            scaleFactor: 0.4,
             alignLeft: true
         },
         [CEMETERY_HILLS_RIGHT]: {
             yIndex: 2,
-            xPosition: 11.5,
-            scaleFactor: 0.35,
+            xPosition: 12,
+            scaleFactor: 0.4,
             alignRight: true
         }
     }

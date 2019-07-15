@@ -17,7 +17,7 @@ import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar.svg'
 // import goKartThoughtBackdrop from 'assets/svgs/backdrops/goKartThoughtBackdrop.svg'
 // import uclaBackdrop from 'assets/svgs/backdrops/uclaBackdrop.svg'
 // import pharmacyThoughtBackdrop from 'assets/svgs/backdrops/pharmacyThoughtBackdrop.svg'
-// import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop.svg'
+import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop.svg'
 // import stationWagonBackdrop from 'assets/svgs/backdrops/stationWagonBackdrop.svg'
 // import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop.svg'
 // import lizCouchThoughtBackdrop from 'assets/svgs/backdrops/lizCouchThoughtBackdrop.svg'
@@ -82,7 +82,7 @@ export default {
     [GO_KART_BACKDROP]: false,
     [UCLA_BACKDROP]: false,
     [PHARMACY_THOUGHT_BACKDROP]: false,
-    [CEMETERY_BACKDROP]: false,
+    [CEMETERY_BACKDROP]: cemeteryBackdrop,
     [STATION_WAGON_BACKDROP]: false,
     [OAKLAND_SIDE_BACKDROP]: false,
     [LIZ_COUCH_THOUGHT_BACKDROP]: false,

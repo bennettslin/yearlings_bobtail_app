@@ -8,5 +8,10 @@ export default [
         taskName: 'oceanFloorFar',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'cemeteryBackdrop',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
