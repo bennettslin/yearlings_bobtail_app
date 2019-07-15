@@ -14,7 +14,6 @@
 * stageLights
 * storageChest
 * television
-* towelRack
 * trafficLight
 * twinStreetlamp
 * yellowTapedGrill
