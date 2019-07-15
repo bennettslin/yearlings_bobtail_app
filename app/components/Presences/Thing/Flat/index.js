@@ -47,7 +47,7 @@ import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight.svg'
 import forebodingTrees from 'assets/svgs/flats/forebodingTrees.svg'
 import cliffGravesFar from 'assets/svgs/flats/cliffGravesFar.svg'
 import cliffGravesNear from 'assets/svgs/flats/cliffGravesNear.svg'
-// import pampasFar from 'assets/svgs/flats/pampasFar.svg'
+import pampasFar from 'assets/svgs/flats/pampasFar.svg'
 
 import {
     NOHO_HOUSE_LEFT,
@@ -152,5 +152,5 @@ export default {
     [FOREBODING_TREES]: forebodingTrees,
     [CLIFF_GRAVES_FAR]: cliffGravesFar,
     [CLIFF_GRAVES_NEAR]: cliffGravesNear,
-    [PAMPAS_FAR]: false
+    [PAMPAS_FAR]: pampasFar
 }

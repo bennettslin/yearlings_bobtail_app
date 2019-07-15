@@ -208,10 +208,5 @@ export default [
         taskName: 'elCerritoNear',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'pampasFar',
-        workedHours: 0,
-        neededHours: 1
     }
 ]
