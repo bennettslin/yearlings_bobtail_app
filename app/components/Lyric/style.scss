@@ -55,8 +55,6 @@
     .RW__carouselNavShowable
     .ShW__annotationShown.ShW__carouselExpanded
     & {
-        // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: $gradient__lyric__desktopCarousel;
         mask-image: $gradient__lyric__desktopCarousel;
 
         // When carousel annotation is selected, switch z-index with carousel.

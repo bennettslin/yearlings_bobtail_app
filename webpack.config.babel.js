@@ -60,6 +60,7 @@ const getConfig = ({ development }) => {
                     loaders: [
                         'style-loader',
                         'css-loader',
+                        'postcss-loader',
                         'sass-loader'
                     ]
                 },

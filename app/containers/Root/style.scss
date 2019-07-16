@@ -10,8 +10,6 @@
     font-family: PTSansNarrow, Arial;
     font-size: 1.1em;
 
-    // Not sure why autoprefixer isn't working in this case.
-    -moz-user-select: none;
     user-select: none;
 
     // background-color: #222;

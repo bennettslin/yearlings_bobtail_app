@@ -25,7 +25,7 @@ $height__carouselHidden: $height__chivalry;
         height: $height__chivalry;
         padding-bottom: $js__margin__thin;
     }
-    
+
     .DW__higherProcessor.DW__desktopWidth
     & {
         transition:
@@ -39,7 +39,7 @@ $height__carouselHidden: $height__chivalry;
         top: -$height__carouselHidden;
         height: 100%;
     }
-    
+
     .DW__higherProcessor.DW__mobileWidth
     & {
         transition:
@@ -86,8 +86,6 @@ $height__carouselHidden: $height__chivalry;
     .DW__monitorWidth
     .ShW__annotationHidden
     & {
-        // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: $gradient__carousel__monitor;
         mask-image: $gradient__carousel__monitor;
     }
 
@@ -105,8 +103,6 @@ $height__carouselHidden: $height__chivalry;
     .DW__laptopWidth
     .ShW__annotationHidden
     & {
-        // Not taken care of by autoprefixer, unfortunately.
-        -webkit-mask-image: $gradient__carousel__laptop;
         mask-image: $gradient__carousel__laptop;
     }
 

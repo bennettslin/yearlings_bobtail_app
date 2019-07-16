@@ -28,7 +28,5 @@
         rgba(0, 0, 0, 0.5)
     );
 
-    // Not taken care of by autoprefixer, unfortunately.
-    -webkit-mask-image: $gradient__dotSequence;
     mask-image: $gradient__dotSequence;
 }

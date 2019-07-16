@@ -30,7 +30,5 @@
         rgba(0, 0, 0, 1)
     );
 
-    // Not taken care of by autoprefixer, unfortunately.
-    -webkit-mask-image: $gradient__lyric__expandable;
     mask-image: $gradient__lyric__expandable;
 }
