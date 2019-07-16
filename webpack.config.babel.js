@@ -1,6 +1,7 @@
 import webpack from 'webpack'
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CleanWebpackPlugin from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 const SHOW_BUNDLE_ANALYZER = true
@@ -23,7 +24,8 @@ const getConfig = ({ development }) => {
                 new webpack.HotModuleReplacementPlugin(),
                 ...SHOW_BUNDLE_ANALYZER && [new BundleAnalyzerPlugin()]
             ] : [
-                new webpack.optimize.OccurrenceOrderPlugin()
+                new webpack.optimize.OccurrenceOrderPlugin(),
+                new CleanWebpackPlugin()
             ]
         ],
         resolve: {
