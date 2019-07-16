@@ -5,11 +5,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'schoolbusInterior',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'schoolbusExterior',
         workedHours: 0,
         neededHours: 1.5
