@@ -1,4 +1,4 @@
-import findIndex from 'lodash.findindex'
+import findIndex from 'lodash/findindex'
 
 import { getSongTotalTime } from 'album/api/time'
 import { getSongStanzaConfigs } from 'album/api/stanzas'

@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isFinite from 'lodash.isfinite'
+import isFinite from 'lodash/isfinite'
 
 import Button from '../../../../Button'
 

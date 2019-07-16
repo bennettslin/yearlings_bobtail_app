@@ -1,5 +1,3 @@
-/* global process */
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
@@ -21,13 +19,6 @@ import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
 import RoutingContainer from './containers/Routing'
-
-// Why did you update?
-const turnOnWDYULogging = false
-if (process.env.NODE_ENV !== 'production' && turnOnWDYULogging) {
-    const { whyDidYouUpdate } = require('why-did-you-update')
-    whyDidYouUpdate(React)
-}
 
 const store = createStore(
     rootReducer,

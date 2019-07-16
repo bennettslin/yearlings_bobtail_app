@@ -21,6 +21,7 @@ module.exports = {
         'plugin:react/recommended'
     ],
     "globals": {
+        "__dirname": true,
         "expect": true,
         "ga": true,
         "logAccess": true,

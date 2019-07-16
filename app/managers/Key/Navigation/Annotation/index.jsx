@@ -1,7 +1,7 @@
 import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isString from 'lodash.isstring'
+import isString from 'lodash/isstring'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'

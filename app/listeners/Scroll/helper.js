@@ -1,4 +1,4 @@
-import isFinite from 'lodash.isfinite'
+import isFinite from 'lodash/isfinite'
 import scrollIntoView from 'scroll-into-view'
 
 import {

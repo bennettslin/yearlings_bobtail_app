@@ -1,4 +1,4 @@
-import keys from 'lodash.keys'
+import keys from 'lodash/keys'
 
 import backdrops from './Backdrop'
 import bubbles from './Bubble'

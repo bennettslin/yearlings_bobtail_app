@@ -1,5 +1,5 @@
-import keys from 'lodash.keys'
-import isString from 'lodash.isstring'
+import keys from 'lodash/keys'
+import isString from 'lodash/isstring'
 
 import {
     WIKI,

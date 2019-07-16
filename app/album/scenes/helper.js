@@ -1,4 +1,4 @@
-import keys from 'lodash.keys'
+import keys from 'lodash/keys'
 
 import ALL_ARRANGEMENTS_ACTORS from './arrangements'
 import ALL_ARRANGEMENTS_THINGS from './arrangements/things'

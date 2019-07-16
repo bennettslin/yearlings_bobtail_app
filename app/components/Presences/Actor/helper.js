@@ -1,4 +1,4 @@
-import keys from 'lodash.keys'
+import keys from 'lodash/keys'
 
 import youngBennettMap from './YoungBennett'
 import preteenBennettMap from './PreteenBennett'
