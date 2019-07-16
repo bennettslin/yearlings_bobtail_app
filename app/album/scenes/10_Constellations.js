@@ -270,7 +270,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side, sleeping in car',
                     instance: STATION_WAGON
                 },
