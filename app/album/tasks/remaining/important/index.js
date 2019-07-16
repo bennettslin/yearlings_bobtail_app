@@ -1,20 +1,5 @@
 export default [
     {
-        taskName: `Disable ability to toggle admin in production.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Separate admin project.`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: `Separate album logic.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Make svg assets trigger Presence__visible.`,
         workedHours: 0,
         neededHours: 3
@@ -38,5 +23,10 @@ export default [
         taskName: `Svg previewer.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Strip out admin.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]
