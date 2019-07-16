@@ -53,13 +53,13 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 4,
             xPosition: -0.5,
-            scaleFactor: 0.3,
+            scaleFactor: 0.4,
             alignLeft: true
         },
         [TAIWAN_MOUNTAIN_RIGHT]: {
             yIndex: 4,
             xPosition: 11.5,
-            scaleFactor: 0.3,
+            scaleFactor: 0.4,
             alignRight: true
         }
     },

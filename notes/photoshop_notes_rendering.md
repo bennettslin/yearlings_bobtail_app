@@ -1,4 +1,8 @@
-* Try to get class names through Illustrator, use groups.
+* Mobile global annotation
+* Change some overlap lines to crease or fold line.
+* Slant direction order, allow for -1 yIndex?
+* Make ceiling cubes disappear
+* Allow for skew and perspective
 
 # Redo straight or curved line.
 * bennettOdinBuoy
