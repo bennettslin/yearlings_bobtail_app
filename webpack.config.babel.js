@@ -35,8 +35,8 @@ const getConfig = ({ development }) => {
             // import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf', '.svg'],
             alias: {
+                assets: path.resolve(__dirname, './assets'),
                 album: path.resolve(__dirname, './app/album'),
-                assets: path.resolve(__dirname, './app/assets'),
                 components: path.resolve(__dirname, './app/components'),
                 constants: path.resolve(__dirname, './app/constants'),
                 flux: path.resolve(__dirname, './app/redux'),
@@ -51,6 +51,7 @@ const getConfig = ({ development }) => {
             rules: [
                 {
                     test: /\.jsx?$/,
+                    include: path.resolve(__dirname, './app'),
                     enforce: 'pre',
                     loaders: [
                         'babel-loader',
@@ -60,6 +61,7 @@ const getConfig = ({ development }) => {
                 },
                 {
                     test: /\.scss$/,
+                    include: path.resolve(__dirname, './app'),
                     loaders: [
                         'style-loader',
                         'css-loader',
@@ -69,6 +71,7 @@ const getConfig = ({ development }) => {
                 },
                 {
                     test: /\.mp3$/,
+                    include: path.resolve(__dirname, './assets/mp3s'),
                     loader: 'file-loader',
                     options: {
                         name: './assets/mp3s/[name]-[hash].[ext]'
@@ -76,6 +79,7 @@ const getConfig = ({ development }) => {
                 },
                 {
                     test: /\.pdf$/,
+                    include: path.resolve(__dirname, './assets/scores'),
                     loader: 'file-loader',
                     options: {
                         name: './assets/scores/[name]-[hash].[ext]'
@@ -83,6 +87,7 @@ const getConfig = ({ development }) => {
                 },
                 {
                     test: /\.svg$/,
+                    include: path.resolve(__dirname, './assets/svgs'),
                     loader: 'file-loader',
                     options: {
                         name: './assets/svgs/[name]-[hash].[ext]'
@@ -90,6 +95,7 @@ const getConfig = ({ development }) => {
                 },
                 {
                     test: /\.ttf$/,
+                    include: path.resolve(__dirname, './assets/fonts'),
                     loader: 'file-loader',
                     options: {
                         name: './assets/fonts/[name]-[hash].[ext]'
