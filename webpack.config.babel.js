@@ -65,11 +65,31 @@ const getConfig = ({ development }) => {
                     ]
                 },
                 {
-                    test: /\.(mp3|pdf|svg|ttf)$/,
-                    loader: 'url-loader',
+                    test: /\.mp3$/,
+                    loader: 'file-loader',
                     options: {
-                        limit: 30000,
-                        name: './assets/[name]-[hash].[ext]'
+                        name: './assets/mp3s/[name]-[hash].[ext]'
+                    }
+                },
+                {
+                    test: /\.pdf$/,
+                    loader: 'file-loader',
+                    options: {
+                        name: './assets/scores/[name]-[hash].[ext]'
+                    }
+                },
+                {
+                    test: /\.svg$/,
+                    loader: 'file-loader',
+                    options: {
+                        name: './assets/svgs/[name]-[hash].[ext]'
+                    }
+                },
+                {
+                    test: /\.ttf$/,
+                    loader: 'file-loader',
+                    options: {
+                        name: './assets/fonts/[name]-[hash].[ext]'
                     }
                 }
             ]
