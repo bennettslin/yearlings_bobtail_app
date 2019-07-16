@@ -55,11 +55,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'johnnyHortonAlbum',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'policeAlbum',
         workedHours: 0,
         neededHours: 1
