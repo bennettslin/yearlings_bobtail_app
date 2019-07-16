@@ -5,9 +5,19 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Code splitting and API server timebox. Include separating album logic, admin, and svgs.`,
-        workedHours: 8,
-        neededHours: 20
+        taskName: `Separate admin project.`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: `Separate album logic.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Make svg assets trigger Presence__visible.`,
+        workedHours: 0,
+        neededHours: 3
     },
     {
         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,

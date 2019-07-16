@@ -22,9 +22,12 @@ const getConfig = ({ development }) => {
             }),
             ...development ? [
                 new webpack.HotModuleReplacementPlugin(),
+
                 ...SHOW_BUNDLE_ANALYZER && [new BundleAnalyzerPlugin()]
             ] : [
                 new webpack.optimize.OccurrenceOrderPlugin(),
+
+                // Remove the previous build.
                 new CleanWebpackPlugin()
             ]
         ],
@@ -99,7 +102,8 @@ const getConfig = ({ development }) => {
                 host: process.env.HOST,
                 port: 1113 || process.env.PORT,
                 disableHostCheck: true,
-                historyApiFallback: true, // Needed for proper routing.
+                // Needed for proper routing.
+                historyApiFallback: true,
                 hot: true,
                 inline: true,
                 overlay: true,

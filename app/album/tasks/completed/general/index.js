@@ -4711,5 +4711,10 @@ export default [
         taskName: `Get production build in webpack 4.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Separating svg assets.`,
+        workedHours: 12,
+        neededHours: 12
     }
 ]
