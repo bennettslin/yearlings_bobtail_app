@@ -60,7 +60,7 @@ class ListenContainer extends PureComponent {
     }
 
     componentDidMount() {
-        logMount(ListenContainer.name)
+        logMount('ListenContainer')
     }
 
     render() {

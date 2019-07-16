@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Make svg assets trigger Presence__visible.`,
+        taskName: `Make svg assets trigger Presence__visible, because sometimes asset load is too late. But seems not to repro anymore?`,
         workedHours: 0,
         neededHours: 3
     },
@@ -25,7 +25,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Strip out admin.`,
+        taskName: `Strip out admin before final release.`,
         workedHours: 0,
         neededHours: 1
     }

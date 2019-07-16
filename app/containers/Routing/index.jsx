@@ -39,7 +39,7 @@ class RoutingContainer extends PureComponent {
     }
 
     componentDidMount() {
-        logMount(RoutingContainer.name)
+        logMount('RoutingContainer')
         this._checkParams()
     }
 
