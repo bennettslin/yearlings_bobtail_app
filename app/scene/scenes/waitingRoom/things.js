@@ -23,12 +23,9 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [CLIPBOARD]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 2,
-                zOffset: 2
-            }
+            xPosition: 9.5,
+            zOffset: 2,
+            scaleFactor: 0.45
         },
         [PAINTING]: {
             yIndex: 2,

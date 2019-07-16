@@ -4706,5 +4706,10 @@ export default [
         taskName: `Something wrong with cliffGravesNear svg.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Get production build in webpack 4.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

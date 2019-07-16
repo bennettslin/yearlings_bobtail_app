@@ -54,19 +54,13 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [SCHOOLBUS_INTERIOR]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 6
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.5
         },
         [SCHOOLBUS_EXTERIOR]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 6
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.5
         }
     }
 }

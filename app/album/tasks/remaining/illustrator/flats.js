@@ -80,11 +80,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'lockerBank',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'stJosephsAnnex',
         workedHours: 0,
         neededHours: 1.5

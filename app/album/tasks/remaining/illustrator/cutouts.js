@@ -1,9 +1,26 @@
 export default [
+    // TODO.
     {
         taskName: 'mirroredSink',
         workedHours: 0,
         neededHours: 1.5
     },
+    {
+        taskName: 'dumpster',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'lockerBank',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'dishPile',
+        workedHours: 0,
+        neededHours: 1
+    },
+
     {
         taskName: 'trashCan',
         workedHours: 0,
@@ -25,17 +42,7 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'dishPile',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'pharmacyAisle',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'dumpster',
         workedHours: 0,
         neededHours: 1.5
     }

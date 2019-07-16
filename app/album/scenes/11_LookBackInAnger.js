@@ -99,7 +99,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'side angle, playing bass, looking cool',
                     instance: PERFORMING
                 },

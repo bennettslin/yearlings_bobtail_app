@@ -103,7 +103,7 @@ const getConfig = ({ development }) => {
                 hot: true,
                 inline: true,
                 overlay: true,
-                stats: true
+                stats: 'minimal'
             },
             devtool: 'cheap-module-eval-source-map'
         }

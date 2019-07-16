@@ -45,11 +45,8 @@ export const THINGS_BATHROOM_SINGING = {
     [CARDBOARD]: {
         [JOHNNY_HORTON_ALBUM]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 6.5,
+            scaleFactor: 0.15
         }
     },
     [FIXTURE]: {

@@ -88,5 +88,15 @@ export default [
         taskName: 'caveShadows',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'schoolbusInterior',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'schoolbusExterior',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
