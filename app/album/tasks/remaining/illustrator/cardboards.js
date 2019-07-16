@@ -50,11 +50,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'clipboard',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'elliottSmithPoster',
         workedHours: 0,
         neededHours: 1.5

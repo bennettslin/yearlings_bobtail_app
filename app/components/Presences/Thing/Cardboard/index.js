@@ -1,4 +1,4 @@
-// import johnnyHortonAlbum from 'assets/svgs/cardboards/johnnyHortonAlbum'
+import johnnyHortonAlbum from 'assets/svgs/cardboards/johnnyHortonAlbum'
 // import tintinPoster from 'assets/svgs/cardboards/tintinPoster'
 import bennettTaiwanStairs from 'assets/svgs/cardboards/bennettTaiwanStairs'
 import odinTaiwanStairs from 'assets/svgs/cardboards/odinTaiwanStairs'
@@ -28,7 +28,7 @@ import corkboard from 'assets/svgs/cardboards/corkboard'
 // import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster'
 // import marqueeFrame from 'assets/svgs/cardboards/marqueeFrame'
 import codeBox from 'assets/svgs/cardboards/codeBox'
-// import clipboard from 'assets/svgs/cardboards/clipboard'
+import clipboard from 'assets/svgs/cardboards/clipboard'
 import painting from 'assets/svgs/cardboards/painting'
 // import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
 // import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
@@ -73,7 +73,7 @@ import {
 } from 'constants/scene/things/cardboards'
 
 export default {
-    [JOHNNY_HORTON_ALBUM]: false,
+    [JOHNNY_HORTON_ALBUM]: johnnyHortonAlbum,
     [TINTIN_POSTER]: false,
     [BENNETT_TAIWAN_STAIRS]: bennettTaiwanStairs,
     [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
@@ -105,7 +105,7 @@ export default {
     [GLADIATOR_POSTER]: false,
     [MARQUEE_FRAME__GLADIATOR]: false,
     [CODE_BOX]: codeBox,
-    [CLIPBOARD]: false,
+    [CLIPBOARD]: clipboard,
     [PAINTING]: painting,
     [NAS_ALBUM]: false,
     [ELLIOTT_SMITH_POSTER]: false

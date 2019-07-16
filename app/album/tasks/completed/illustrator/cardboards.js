@@ -88,5 +88,10 @@ export default [
         taskName: 'painting',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'clipboard',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
