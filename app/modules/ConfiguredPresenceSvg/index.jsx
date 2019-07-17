@@ -6,9 +6,9 @@ import isString from 'lodash/isstring'
 import PresenceSvg from 'modules/PresenceSvg'
 import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
 
-import { getArrangementForPresenceType } from '../helper'
-import { getMapForActorKey } from '../../Actor/helper'
-import { getMapForPresenceType } from '../../Thing/helper'
+import { getArrangementForPresenceType } from 'components/Presences/Presence/helper'
+import { getMapForActorKey } from 'components/Presences/Actor/helper'
+import { getMapForPresenceType } from 'components/Presences/Thing/helper'
 
 import { getPresenceXY } from './helper'
 import { capitaliseForClassName } from 'helpers/format'
@@ -23,7 +23,7 @@ const propTypes = {
     presenceKey: PropTypes.string.isRequired
 }
 
-const PresenceView = ({
+const ConfiguredPresenceSvg = ({
     cubesKey,
     presenceType,
     actorKey,
@@ -101,6 +101,6 @@ const PresenceView = ({
     )
 }
 
-PresenceView.propTypes = propTypes
+ConfiguredPresenceSvg.propTypes = propTypes
 
-export default memo(PresenceView)
+export default memo(ConfiguredPresenceSvg)

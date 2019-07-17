@@ -1,7 +1,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-import PresenceTransition from './Transition'
+// import PresenceTransition from './Transition'
+import CSSTransition from 'react-transition-group/CSSTransition'
+import ConfiguredPresenceSvg from 'modules/ConfiguredPresenceSvg'
 
 import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
 
@@ -74,17 +76,26 @@ class Presence extends PureComponent {
             } = this.state
 
         return (
-            <PresenceTransition
+            <CSSTransition
+                unmountOnExit
+                mountOnEnter
                 {...{
-                    cubesKey,
-                    presenceType,
-                    actorKey,
-                    presenceKey,
-                    dynamicPresenceValue,
-                    persistedPresenceValue,
-                    resetRenderedState: this._resetRenderedState
+                    in: Boolean(dynamicPresenceValue),
+                    timeout: 200,
+                    classNames: { enterDone: 'Presence__visible' },
+                    onExited: this._resetRenderedState
                 }}
-            />
+            >
+                <ConfiguredPresenceSvg
+                    {...{
+                        cubesKey,
+                        presenceType,
+                        actorKey,
+                        presenceKey,
+                        persistedPresenceValue
+                    }}
+                />
+            </CSSTransition>
         )
     }
 }
