@@ -26,11 +26,8 @@ export const THINGS_BATHROOM_BATHING = {
     [CUTOUT]: {
         [MIRRORED_SINK]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 2,
-                zHeight: 3
-            }
+            xPosition: 8,
+            scaleFactor: 0.4
         },
         [TOWEL_RACK]: {
             yIndex: 1,
