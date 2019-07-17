@@ -23,13 +23,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 7.75,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         }
     },
     [CUTOUT]: {
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 5.5,
             scaleFactor: 0.15,
-            style: BUDDHA_SHRINE_SHARED
+            sharedStyle: BUDDHA_SHRINE_SHARED
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,

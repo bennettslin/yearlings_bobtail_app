@@ -13,7 +13,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2.5,
             scaleFactor: 0.2,
             zOffset: 2.5,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         },
         [SEA_SERPENT_LEFT]: {
             yIndex: 0,

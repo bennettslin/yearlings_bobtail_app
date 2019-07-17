@@ -128,15 +128,20 @@ class ConfiguredPresenceSvg extends PureComponent {
     render() {
         const {
                 presenceType,
-                presenceKey,
                 children
             } = this.props,
             {
                 noShadow,
-                style
+                sharedStyle
             } = this.getArrangement(),
-            { x: adjustedLeft, y: adjustedTop } = this.getXY(),
-            { adjustedWidth, adjustedHeight } = this.state,
+            {
+                x: adjustedLeft,
+                y: adjustedTop
+            } = this.getXY(),
+            {
+                adjustedWidth,
+                adjustedHeight
+            } = this.state,
             transformStyle = this.getTransformStyle()
 
         return (
@@ -145,8 +150,7 @@ class ConfiguredPresenceSvg extends PureComponent {
                     className: cx(
                         'Presence',
                         capitaliseForClassName(presenceType),
-                        capitaliseForClassName(presenceKey),
-                        capitaliseForClassName(style),
+                        capitaliseForClassName(sharedStyle),
                         noShadow && 'Presence__noShadow',
                         'abF'
                     ),

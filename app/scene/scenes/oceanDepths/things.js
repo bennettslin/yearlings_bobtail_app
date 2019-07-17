@@ -24,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 8,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         }
     },
     [FLAT]: {

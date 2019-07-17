@@ -45,7 +45,6 @@ const LegacyPresenceSvg  = ({
             className={cx(
                 'Presence',
                 capitaliseForClassName(presenceType),
-                capitaliseForClassName(presenceKey),
                 'abF'
             )}
         >

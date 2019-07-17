@@ -30,13 +30,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 2.6,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         },
         [ODIN_MAT]: {
             yIndex: 2,
             xPosition: 0.8,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         }
     },
     [PANEL]: {
@@ -44,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 5.5,
             scaleFactor: 0.55,
-            style: BUDDHA_SHRINE_SHARED
+            sharedStyle: BUDDHA_SHRINE_SHARED
         },
         [OCEAN_CAVE_EXTERIOR]: {
             yIndex: 3,

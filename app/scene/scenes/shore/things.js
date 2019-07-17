@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 9,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         }
     },
     [CUTOUT]: {

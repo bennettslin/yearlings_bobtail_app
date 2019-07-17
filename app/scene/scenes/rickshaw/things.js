@@ -27,13 +27,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         },
         [ODIN_SHORE]: {
             yIndex: 2,
             xPosition: 2,
             scaleFactor: 0.2,
-            style: BENNETT_ODIN_SHARED
+            sharedStyle: BENNETT_ODIN_SHARED
         }
     },
     [FLAT]: {
