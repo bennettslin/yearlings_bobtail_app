@@ -3,7 +3,7 @@ import ALL_ARRANGEMENTS_THINGS from 'album/scenes/arrangements/things'
 
 import { ACTOR } from 'constants/scene'
 
-export const getArrangementForPresenceType = ({
+export const getArrangementForPresence = ({
     presenceType,
     presenceKey,
     actorKey

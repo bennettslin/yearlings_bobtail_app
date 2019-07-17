@@ -4,8 +4,8 @@ import cx from 'classnames'
 
 import Svg from 'modules/Svg'
 
-import { getArrangementForPresenceType } from 'components/Presence/helper'
-import { getPresenceXYWidthHeight } from 'modules/ConfiguredPresenceSvg/helper'
+import { getArrangementForPresence } from 'components/Presence/helper'
+import { getPresenceXYWidthHeight } from './helper'
 import { capitaliseForClassName } from 'helpers/format'
 
 const LegacyPresenceSvg  = ({
@@ -15,7 +15,7 @@ const LegacyPresenceSvg  = ({
     presenceKey
 }) => {
     const
-        arrangement = getArrangementForPresenceType({
+        arrangement = getArrangementForPresence({
             presenceType,
             presenceKey,
             actorKey

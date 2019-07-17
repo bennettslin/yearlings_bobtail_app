@@ -1,13 +1,14 @@
-import React, { memo } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import PresenceSvg from 'modules/PresenceSvg'
 
-import { getArrangementForPresenceType } from 'components/Presence/helper'
-
-import { getPresenceXY } from './helper'
+import { getArrangementForPresence } from 'components/Presence/helper'
 import { capitaliseForClassName } from 'helpers/format'
+import { getXYForPresence } from './helper/position'
+import { getSizeForPresence, getViewBoxSize } from './helper/size'
+import { getTransformStyleForPresence } from './helper/transform'
 
 const propTypes = {
     // From parent.
@@ -18,64 +19,152 @@ const propTypes = {
     children: PropTypes.node.isRequired
 }
 
-const ConfiguredPresenceSvg = ({
-    cubesKey,
-    presenceType,
-    actorKey,
-    presenceKey,
-    children
+class ConfiguredPresenceSvg extends PureComponent {
 
-}) => {
-    const {
-            yIndex,
-            xPosition,
-            zOffset,
-            scaleFactor,
-            alignLeft,
-            alignRight,
-            flipHorizontal,
-            rotate,
-            noShadow,
-            style
-        } = getArrangementForPresenceType({
+    state = {
+        adjustedWidth: 0,
+        adjustedHeight: 0
+    }
+
+    getArrangement() {
+        const {
+            presenceType,
+            actorKey,
+            presenceKey
+        } = this.props
+
+        return getArrangementForPresence({
             presenceType,
             presenceKey,
             actorKey
-        }),
+        })
+    }
 
-        // TODO: Move this to PresenceSvg?
-        presenceXY = getPresenceXY({
+    getSize({
+        viewBoxWidth,
+        viewBoxHeight
+    }) {
+        const {
+            yIndex,
+            scaleFactor
+        } = this.getArrangement()
+
+        return getSizeForPresence({
+            viewBoxWidth,
+            viewBoxHeight,
+            yIndex,
+            scaleFactor
+        })
+    }
+
+    getXY() {
+        const
+            { cubesKey } = this.props,
+            {
+                yIndex,
+                xPosition,
+                zOffset
+            } = this.getArrangement()
+
+        return getXYForPresence({
             cubesKey,
             yIndex,
             xPosition,
             zOffset
         })
+    }
 
-    return (
-        <PresenceSvg
-            {...{
-                className: cx(
-                    'Presence',
-                    capitaliseForClassName(presenceType),
-                    capitaliseForClassName(presenceKey),
-                    capitaliseForClassName(style),
-                    noShadow && 'Presence__noShadow',
-                    'abF'
-                ),
-                scaleFactor,
-                alignLeft,
-                alignRight,
-                flipHorizontal,
-                rotate,
-                yIndex,
-                ...presenceXY
-            }}
-        >
-            {children}
-        </PresenceSvg>
-    )
+    getTransformStyle() {
+        const {
+            alignLeft,
+            alignRight,
+            flipHorizontal,
+            rotate
+        } = this.getArrangement()
+
+        return getTransformStyleForPresence({
+            alignLeft,
+            alignRight,
+            flipHorizontal,
+            rotate
+        })
+    }
+
+    handleProcessSvg = (svgString) => {
+        try {
+            const
+                {
+                    viewBoxWidth,
+                    viewBoxHeight
+                } = getViewBoxSize(svgString),
+                {
+                    viewBoxWidth: prevViewBoxWidth,
+                    viewBoxHeight: prevViewBoxHeight
+                } = this.state
+
+            if (
+                viewBoxWidth !== prevViewBoxWidth ||
+                viewBoxHeight !== prevViewBoxHeight
+            ) {
+                const
+                    {
+                        adjustedWidth,
+                        adjustedHeight
+                    } = this.getSize({
+                        viewBoxWidth,
+                        viewBoxHeight
+                    })
+
+                this.setState({
+                    adjustedWidth,
+                    adjustedHeight
+                })
+            }
+
+        } catch (error) {
+            logError('Error parsing viewBox!')
+        }
+    }
+
+    render() {
+        const {
+                presenceType,
+                presenceKey,
+                children
+            } = this.props,
+            {
+                noShadow,
+                style
+            } = this.getArrangement(),
+            { x: adjustedLeft, y: adjustedTop } = this.getXY(),
+            { adjustedWidth, adjustedHeight } = this.state,
+            transformStyle = this.getTransformStyle()
+
+        return (
+            <PresenceSvg
+                {...{
+                    className: cx(
+                        'Presence',
+                        capitaliseForClassName(presenceType),
+                        capitaliseForClassName(presenceKey),
+                        capitaliseForClassName(style),
+                        noShadow && 'Presence__noShadow',
+                        'abF'
+                    ),
+                    adjustedLeft,
+                    adjustedTop,
+                    adjustedWidth,
+                    adjustedHeight,
+                    transformStyle,
+                    handleProcessSvg: this.handleProcessSvg
+                }}
+            >
+                {children}
+            </PresenceSvg>
+        )
+    }
 }
 
 ConfiguredPresenceSvg.propTypes = propTypes
 
-export default memo(ConfiguredPresenceSvg)
+export default ConfiguredPresenceSvg
