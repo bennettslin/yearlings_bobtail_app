@@ -4,13 +4,20 @@ import cx from 'classnames'
 
 import ReactInlineSvg from 'react-inlinesvg'
 
+import { capitaliseForClassName } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
+import { getMapForActorKey } from 'components/Presences/LayersActor/helper'
+import { getMapForPresenceType } from 'components/Presences/LayersThing/helper'
 
-class PresenceSvg extends PureComponent {
+import { ACTOR } from 'constants/scene'
+
+class PreviewerSvg extends PureComponent {
 
     static propTypes = {
         className: PropTypes.string,
-        children: PropTypes.node
+        presenceType: PropTypes.string,
+        actorKey: PropTypes.string,
+        presenceKey: PropTypes.string
     }
 
     processSvg = (svgString) => {
@@ -29,9 +36,14 @@ class PresenceSvg extends PureComponent {
                 className,
                 presenceType,
                 actorKey,
-                presenceKey,
-                children
+                presenceKey
             } = this.props,
+
+            presencesMap = presenceType === ACTOR ?
+                getMapForActorKey(actorKey) :
+                getMapForPresenceType(presenceType),
+
+            presenceComponent = presencesMap[presenceKey],
 
             { sharedStyle } = getArrangementForPresence({
                 presenceType,
@@ -39,19 +51,22 @@ class PresenceSvg extends PureComponent {
                 actorKey
             })
 
-        return Boolean(children) && (
+        return Boolean(presenceComponent) && (
             <ReactInlineSvg
                 {...{
                     className: cx(
+                        'Presence',
+                        'Presence__visible',
+                        capitaliseForClassName(presenceType),
                         sharedStyle,
                         className
                     ),
                     processSVG: this.processSvg,
-                    src: children
+                    src: presenceComponent
                 }}
             />
         )
     }
 }
 
-export default PresenceSvg
+export default PreviewerSvg

@@ -1,15 +1,10 @@
-/**
- * Parent component that handles knowledge of UI state so that child components
- * deal with as little state change as possible.
- */
-
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import keys from 'lodash/keys'
 
-import Presence from 'components/Presence'
+import PreviewerSvg from './PreviewerSvg'
 
 import {
     getFromStorage,
@@ -186,11 +181,8 @@ class Previewer extends PureComponent {
                             )
                         }}
                     >
-                        <Presence
-                            existenceValue
-                            inPreviewer
+                        <PreviewerSvg
                             {...{
-                                actorKey: '',
                                 presenceType,
                                 presenceKey
                             }}

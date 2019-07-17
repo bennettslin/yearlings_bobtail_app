@@ -14,6 +14,7 @@ export const getBoolFromStorage = (key) => {
     }
 }
 
+// TODO: Only used by Previewer.
 export const getFromStorage = (key) => {
     return getWindowStorage()[key]
 }
