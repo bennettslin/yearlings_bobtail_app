@@ -20,7 +20,6 @@ const propTypes = {
 }
 
 class ConfiguredPresenceSvg extends PureComponent {
-
     state = {
         adjustedWidth: 0,
         adjustedHeight: 0
