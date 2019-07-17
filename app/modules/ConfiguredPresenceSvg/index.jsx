@@ -2,16 +2,16 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import PresenceSvg from 'modules/PresenceSvg'
+import ReactInlineSvg from 'react-inlinesvg'
 
 import { getArrangementForPresence } from 'components/Presence/helper'
-import { capitaliseForClassName } from 'helpers/format'
 import { getXYForPresence } from './helper/position'
 import { getSizeForPresence, getViewBoxSize } from './helper/size'
 import { getTransformStyleForPresence } from './helper/transform'
 
 const propTypes = {
     // From parent.
+    className: PropTypes.string,
     cubesKey: PropTypes.string.isRequired,
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
@@ -89,7 +89,13 @@ class ConfiguredPresenceSvg extends PureComponent {
         })
     }
 
-    handleProcessSvg = (svgString) => {
+    processSvg = (svgString) => {
+        // Set timeout to wait until next lifecycle before setting state.
+        setTimeout(this.setAdjustedSize.bind(null, svgString), 0)
+        return svgString
+    }
+
+    setAdjustedSize = (svgString) => {
         try {
             const
                 {
@@ -127,7 +133,7 @@ class ConfiguredPresenceSvg extends PureComponent {
 
     render() {
         const {
-                presenceType,
+                className,
                 children
             } = this.props,
             {
@@ -145,25 +151,29 @@ class ConfiguredPresenceSvg extends PureComponent {
             transformStyle = this.getTransformStyle()
 
         return (
-            <PresenceSvg
+            <ReactInlineSvg
                 {...{
                     className: cx(
-                        'Presence',
-                        capitaliseForClassName(presenceType),
-                        capitaliseForClassName(sharedStyle),
+                        'ConfiguredPresenceSvg',
                         noShadow && 'Presence__noShadow',
-                        'abF'
+                        sharedStyle,
+                        'abF',
+                        className
                     ),
-                    adjustedLeft,
-                    adjustedTop,
-                    adjustedWidth,
-                    adjustedHeight,
-                    transformStyle,
-                    handleProcessSvg: this.handleProcessSvg
+                    processSVG: this.processSvg,
+                    src: children,
+                    style: {
+                        left: `${adjustedLeft.toFixed(2)}%`,
+                        top: `${adjustedTop.toFixed(2)}%`,
+                        width: `${adjustedWidth.toFixed(2)}%`,
+                        height: `${adjustedHeight.toFixed(2)}%`,
+                        ...transformStyle && {
+                            transform: transformStyle
+                        }
+                    },
+                    wrapper: React.createFactory('div')
                 }}
-            >
-                {children}
-            </PresenceSvg>
+            />
         )
     }
 }

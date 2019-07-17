@@ -28,8 +28,7 @@ class PreviewerContainer extends PureComponent {
                 {...{
                     className: cx(
                         'PreviewerContainer',
-                        'abF',
-                        'ovH'
+                        'abF'
                     ),
                     style: {
                         backgroundColor: '#fff'
@@ -42,7 +41,7 @@ class PreviewerContainer extends PureComponent {
                     {...{
                         actorKey: '',
                         presenceType: 'cardboard',
-                        presenceKey: 'johnnyHortonAlbum'
+                        presenceKey: 'bennettShore'
                     }}
                 />
             </div>

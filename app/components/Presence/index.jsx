@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import isString from 'lodash/isstring'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import ConfiguredPresenceSvg from 'modules/ConfiguredPresenceSvg'
 import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
+import PresenceSvg from 'modules/PresenceSvg'
 
+import { capitaliseForClassName } from 'helpers/format'
 import { getMapForActorKey } from '../Presences/LayersActor/helper'
 import { getMapForPresenceType } from '../Presences/LayersThing/helper'
 
@@ -20,6 +23,7 @@ class Presence extends PureComponent {
 
     static propTypes = {
         // From parent.
+        inPreviewer: PropTypes.bool,
         cubesKey: PropTypes.string.isRequired,
         presenceType: PropTypes.string.isRequired,
         actorKey: PropTypes.string,
@@ -54,6 +58,18 @@ class Presence extends PureComponent {
         })
     }
 
+    getRenderedComponent(presenceComponent) {
+        const { inPreviewer } = this.props
+
+        if (inPreviewer) {
+            return PresenceSvg
+        }
+
+        return isString(presenceComponent) ?
+            ConfiguredPresenceSvg :
+            LegacyPresenceSvg
+    }
+
     render() {
         const {
                 cubesKey,
@@ -71,10 +87,7 @@ class Presence extends PureComponent {
             presenceComponent = presencesMap[presenceKey],
 
             // TODO: Get rid of this conditional once they are all asset svgs.
-            RenderedComponent =
-                isString(presenceComponent) ?
-                    ConfiguredPresenceSvg :
-                    LegacyPresenceSvg
+            RenderedComponent = this.getRenderedComponent(presenceComponent)
 
         return (
             <CSSTransition
@@ -88,6 +101,10 @@ class Presence extends PureComponent {
             >
                 <RenderedComponent
                     {...{
+                        className: cx(
+                            'Presence',
+                            capitaliseForClassName(presenceType)
+                        ),
                         cubesKey,
                         presenceType,
                         actorKey,
