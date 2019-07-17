@@ -1,10 +1,15 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import isString from 'lodash/isstring'
 
-// import PresenceTransition from './Transition'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import ConfiguredPresenceSvg from 'modules/ConfiguredPresenceSvg'
+import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
 
+import { getMapForActorKey } from '../Presences/LayersActor/helper'
+import { getMapForPresenceType } from '../Presences/LayersThing/helper'
+
+import { ACTOR } from 'constants/scene'
 import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
 
 class Presence extends PureComponent {
@@ -23,15 +28,12 @@ class Presence extends PureComponent {
     }
 
     state = {
-        // This one determines whether to transition in and out.
-        dynamicPresenceValue: null,
-
-        // This one prevents component from breaking while transitioning out.
-        persistedPresenceValue: null
+        // This determines whether to transition in and out.
+        isTransitionVisible: false
     }
 
     componentDidMount() {
-        this.setState(this._getRenderedState(this.props))
+        this._setIsTransitionVisible()
     }
 
     componentDidUpdate(prevProps) {
@@ -40,26 +42,15 @@ class Presence extends PureComponent {
             { existenceValue: prevValue } = prevProps
 
         if (existenceValue !== prevValue) {
-            this.setState(this._getRenderedState(this.props))
+            this._setIsTransitionVisible()
         }
     }
 
-    _getRenderedState(props) {
-        const { existenceValue } = props
+    _setIsTransitionVisible() {
+        const { existenceValue } = this.props
 
-        if (!existenceValue) {
-            return { dynamicPresenceValue: null }
-        }
-
-        return {
-            dynamicPresenceValue: existenceValue,
-            persistedPresenceValue: existenceValue
-        }
-    }
-
-    _resetRenderedState = () => {
         this.setState({
-            persistedPresenceValue: null
+            isTransitionVisible: Boolean(existenceValue)
         })
     }
 
@@ -70,31 +61,41 @@ class Presence extends PureComponent {
                 actorKey,
                 presenceKey
             } = this.props,
-            {
-                dynamicPresenceValue,
-                persistedPresenceValue
-            } = this.state
+
+            { isTransitionVisible } = this.state,
+
+            presencesMap = presenceType === ACTOR ?
+                getMapForActorKey(actorKey) :
+                getMapForPresenceType(presenceType),
+
+            presenceComponent = presencesMap[presenceKey],
+
+            // TODO: Get rid of this conditional once they are all asset svgs.
+            RenderedComponent =
+                isString(presenceComponent) ?
+                    ConfiguredPresenceSvg :
+                    LegacyPresenceSvg
 
         return (
             <CSSTransition
                 unmountOnExit
                 mountOnEnter
                 {...{
-                    in: Boolean(dynamicPresenceValue),
+                    in: isTransitionVisible,
                     timeout: 200,
-                    classNames: { enterDone: 'Presence__visible' },
-                    onExited: this._resetRenderedState
+                    classNames: { enterDone: 'Presence__visible' }
                 }}
             >
-                <ConfiguredPresenceSvg
+                <RenderedComponent
                     {...{
                         cubesKey,
                         presenceType,
                         actorKey,
-                        presenceKey,
-                        persistedPresenceValue
+                        presenceKey
                     }}
-                />
+                >
+                    {presenceComponent}
+                </RenderedComponent>
             </CSSTransition>
         )
     }

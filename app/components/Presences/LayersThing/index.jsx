@@ -15,7 +15,7 @@ import {
     PUPPET
 } from 'constants/scene'
 
-const ThingLayer = ({
+const LayersThing = ({
     [BACKDROP]: backdrops,
     [BUBBLE]: bubbles,
     [CARDBOARD]: cardboards,
@@ -42,7 +42,7 @@ const ThingLayer = ({
     )
 }
 
-ThingLayer.propTypes = {
+LayersThing.propTypes = {
     [BACKDROP]: PropTypes.object,
     [BUBBLE]: PropTypes.object,
     [CARDBOARD]: PropTypes.object,
@@ -54,4 +54,4 @@ ThingLayer.propTypes = {
     [PUPPET]: PropTypes.object
 }
 
-export default memo(ThingLayer)
+export default memo(LayersThing)

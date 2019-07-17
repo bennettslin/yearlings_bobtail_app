@@ -2,9 +2,9 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import Presence from '../Presence'
-import { getPresenceKeysForPresenceType } from '../Thing/helper'
-import { getInstanceKeysForActorKey } from '../Actor/helper'
+import Presence from '../../Presence'
+import { getPresenceKeysForPresenceType } from '../LayersThing/helper'
+import { getInstanceKeysForActorKey } from '../LayersActor/helper'
 
 import { ACTOR } from 'constants/scene'
 

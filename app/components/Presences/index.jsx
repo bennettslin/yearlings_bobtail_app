@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import ActorLayer from './Actor'
-import ThingLayer from './Thing'
+import LayersActor from './LayersActor'
+import LayersThing from './LayersThing'
 
 import { getScene } from 'album/api/scenes'
 import { CUBE_Y_INDICES } from 'constants/cubeIndex'
@@ -66,10 +66,10 @@ class Presences extends PureComponent {
                         )
                     }}
                 >
-                    <ThingLayer {...rest} />
+                    <LayersThing {...rest} />
 
                     {/* Each individual actor has its own layer. */}
-                    <ActorLayer {...actors} />
+                    <LayersActor {...actors} />
                 </div>
             )
 

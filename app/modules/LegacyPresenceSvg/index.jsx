@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import Svg from 'modules/Svg'
 
-import { getArrangementForPresenceType } from 'components/Presences/Presence/helper'
+import { getArrangementForPresenceType } from 'components/Presence/helper'
 import { getPresenceXYWidthHeight } from 'modules/ConfiguredPresenceSvg/helper'
 import { capitaliseForClassName } from 'helpers/format'
 

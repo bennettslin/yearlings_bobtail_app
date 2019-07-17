@@ -1,56 +1,31 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isString from 'lodash/isstring'
 
 import PresenceSvg from 'modules/PresenceSvg'
-import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
 
-import { getArrangementForPresenceType } from 'components/Presences/Presence/helper'
-import { getMapForActorKey } from 'components/Presences/Actor/helper'
-import { getMapForPresenceType } from 'components/Presences/Thing/helper'
+import { getArrangementForPresenceType } from 'components/Presence/helper'
 
 import { getPresenceXY } from './helper'
 import { capitaliseForClassName } from 'helpers/format'
-
-import { ACTOR } from 'constants/scene'
 
 const propTypes = {
     // From parent.
     cubesKey: PropTypes.string.isRequired,
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired
+    presenceKey: PropTypes.string.isRequired,
+    children: PropTypes.node.isRequired
 }
 
 const ConfiguredPresenceSvg = ({
     cubesKey,
     presenceType,
     actorKey,
-    presenceKey
+    presenceKey,
+    children
 
 }) => {
-    const
-        presencesMap = presenceType === ACTOR ?
-            getMapForActorKey(actorKey) :
-            getMapForPresenceType(presenceType),
-
-        presenceComponent = presencesMap[presenceKey]
-
-    // TODO: Get rid of this conditional once they are all asset svgs.
-    if (!isString(presenceComponent)) {
-        return (
-            <LegacyPresenceSvg
-                {...{
-                    cubesKey,
-                    presenceType,
-                    actorKey,
-                    presenceKey
-                }}
-            />
-        )
-    }
-
     const {
             yIndex,
             xPosition,
@@ -96,7 +71,7 @@ const ConfiguredPresenceSvg = ({
                 ...presenceXY
             }}
         >
-            {presenceComponent}
+            {children}
         </PresenceSvg>
     )
 }

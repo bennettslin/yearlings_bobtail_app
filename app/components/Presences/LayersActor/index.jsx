@@ -57,7 +57,7 @@ import {
     KHARI_LIZ_REFLECTION
 } from 'constants/scene/actors'
 
-const ActorLayer = ({
+const LayersActor = ({
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
@@ -166,7 +166,7 @@ const ActorLayer = ({
     </___>
 )
 
-ActorLayer.propTypes = {
+LayersActor.propTypes = {
     [YOUNG_BENNETT]: PropTypes.string,
     [PRETEEN_BENNETT]: PropTypes.string,
     [BENNETT]: PropTypes.string,
@@ -220,4 +220,4 @@ ActorLayer.propTypes = {
     [KHARI_LIZ_REFLECTION]: PropTypes.string
 }
 
-export default memo(ActorLayer)
+export default memo(LayersActor)

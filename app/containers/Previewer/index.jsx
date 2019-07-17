@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Presence from 'components/Presences/Presence'
+import Presence from 'components/Presence'
 
 class PreviewerContainer extends PureComponent {
 
