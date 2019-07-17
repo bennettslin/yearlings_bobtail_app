@@ -3,7 +3,13 @@ import PropTypes from 'prop-types'
 
 import PresenceTransition from './Transition'
 
+import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
+
 class Presence extends PureComponent {
+
+    static defaultProps = {
+        cubesKey: DEFAULT_STAGE_KEY
+    }
 
     static propTypes = {
         // From parent.

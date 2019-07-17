@@ -8,6 +8,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Presence from 'components/Presences/Presence'
+
 class PreviewerContainer extends PureComponent {
 
     static propTypes = {
@@ -26,11 +28,23 @@ class PreviewerContainer extends PureComponent {
                 {...{
                     className: cx(
                         'PreviewerContainer',
+                        'abF',
                         'ovH'
-                    )
+                    ),
+                    style: {
+                        backgroundColor: '#fff'
+                    }
                 }}
             >
-                Hi! This is the previewer.
+                <Presence
+                    existenceValue
+                    inPreviewer
+                    {...{
+                        actorKey: '',
+                        presenceType: 'cardboard',
+                        presenceKey: 'johnnyHortonAlbum'
+                    }}
+                />
             </div>
         )
     }

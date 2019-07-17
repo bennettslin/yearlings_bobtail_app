@@ -5,7 +5,7 @@ import isFinite from 'lodash/isfinite'
 import isString from 'lodash/isstring'
 
 import PresenceSvg from 'modules/PresenceSvg'
-import Svg from 'modules/Svg'
+import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
 
 import { getArrangementForPresenceType } from '../helper'
 import { getMapForActorKey } from '../../Actor/helper'
@@ -16,7 +16,7 @@ import { capitaliseForClassName } from 'helpers/format'
 
 import { ACTOR } from 'constants/scene'
 
-const viewPropTypes = {
+const propTypes = {
     // From parent.
     cubesKey: PropTypes.string.isRequired,
     presenceType: PropTypes.string.isRequired,
@@ -32,7 +32,27 @@ const PresenceView = ({
 
 }) => {
     const
-        arrangement = getArrangementForPresenceType({
+        presencesMap = presenceType === ACTOR ?
+            getMapForActorKey(actorKey) :
+            getMapForPresenceType(presenceType),
+
+        presenceComponent = presencesMap[presenceKey]
+
+    // TODO: Get rid of this conditional once they are all asset svgs.
+    if (!isString(presenceComponent)) {
+        return (
+            <LegacyPresenceSvg
+                {...{
+                    cubesKey,
+                    presenceType,
+                    actorKey,
+                    presenceKey
+                }}
+            />
+        )
+    }
+
+    const arrangement = getArrangementForPresenceType({
             presenceType,
             presenceKey,
             actorKey
@@ -79,16 +99,9 @@ const PresenceView = ({
             yIndex,
             xPosition,
             zOffset
-        }),
+        })
 
-        presencesMap = presenceType === ACTOR ?
-            getMapForActorKey(actorKey) :
-            getMapForPresenceType(presenceType),
-
-        presenceComponent = presencesMap[presenceKey]
-
-    // TODO: Get rid of this conditional once they are all asset svgs.
-    return isString(presenceComponent) ? (
+    return (
         <PresenceSvg
             {...{
                 className: cx(
@@ -110,34 +123,9 @@ const PresenceView = ({
         >
             {presenceComponent}
         </PresenceSvg>
-    ) : (
-        <Svg
-            className={cx(
-                'Presence',
-                capitaliseForClassName(presenceType),
-                capitaliseForClassName(presenceKey),
-                'abF'
-            )}
-        >
-            <rect
-                className={cx(
-                    `${capitaliseForClassName(presenceType)}__temporaryRect`,
-                    'Presence__temporaryRect'
-                )}
-                {...presenceXY}
-            />
-            <text
-                className={cx(
-                    'Presence__temporaryText'
-                )}
-                {...presenceXY}
-            >
-                {capitaliseForClassName(presenceKey)}
-            </text>
-        </Svg>
     )
 }
 
-PresenceView.propTypes = viewPropTypes
+PresenceView.propTypes = propTypes
 
 export default memo(PresenceView)
