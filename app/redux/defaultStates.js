@@ -3,7 +3,6 @@
 import {
     getIndexFromStorage,
     getDotsFromStorage,
-    getBoolFromStorage,
     getOptionFromStorage,
     getEmptyDotsStore
 } from './storageHelper'
@@ -26,6 +25,8 @@ import {
     getBookForSongIndex
 } from 'album/api/songs'
 import { getAnnotationColumnIndex } from 'album/api/annotations'
+
+import { getBoolFromStorage } from 'utils/window'
 
 import {
     IS_ACCESS_ON,

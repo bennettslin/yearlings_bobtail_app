@@ -19,7 +19,7 @@ import {
     DISABLED,
     AUDIO_OPTIONS
 } from 'constants/options'
-import { getWindowStorage } from 'utils/window'
+import { getWindowStorage, setInStorage } from 'utils/window'
 
 import {
     DOTS_BIT_NUMBER,
@@ -117,10 +117,6 @@ export const getIndexFromStorage = (key) => {
     return _validateIndexForKey(key)
 }
 
-export const setInStorage = (key, value) => {
-    getWindowStorage()[key] = value
-}
-
 // TODO: Put this in a better place. This isn't really a storage helper.
 export const getEmptyDotsStore = () => {
     // Get true-false object from bit number.
@@ -150,22 +146,6 @@ export const getDotsFromStorage = () => {
         dotsBitNumber,
         ...dotsObject
     }
-}
-
-export const getBoolFromStorage = (key) => {
-    const storedValue = getWindowStorage()[key]
-    switch (storedValue) {
-        case 'true':
-            return true
-        case 'false':
-            return false
-        default:
-            return undefined
-    }
-}
-
-export const setBoolInStorage = (key, value) => {
-    getWindowStorage()[key] = value ? 'true' : 'false'
 }
 
 export const getOptionFromStorage = (key) => {

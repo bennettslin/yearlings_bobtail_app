@@ -1,0 +1,50 @@
+$height__dashboard: 60px;
+
+.Previewer__dashboard {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: $height__dashboard;
+}
+
+* {
+    .Previewer__dashboard
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.Previewer__scroll {
+    padding: 10px;
+}
+
+.Previewer__scroll {
+    .Previewer__heightAspectRatio
+    & {
+        width: auto;
+        height: calc(100% - #{$height__dashboard});
+    }
+}
+
+.Presence {
+    .Previewer__heightAspectRatio
+    & {
+        width: auto;
+        height: 100%;
+    }
+}
+
+svg {
+    .Previewer__heightAspectRatio
+    & {
+        height: 100%;
+    }
+}
+
+.Previewer__scroll {
+    .Previewer__heightAspectRatio
+    & {
+        display: flex;
+        justify-content: center;
+    }
+}

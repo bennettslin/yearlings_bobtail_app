@@ -1,5 +1,5 @@
 // Actions for toggled views.
-import { setBoolInStorage } from '../storageHelper'
+import { setBoolInStorage } from 'utils/window'
 import {
     hasKey,
     getDefinedOnlyPayload

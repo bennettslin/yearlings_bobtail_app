@@ -14,8 +14,14 @@ class PresenceSvg extends PureComponent {
     }
 
     processSvg = (svgString) => {
-        console.log(`Processed ${svgString}.`)
+        // Set timeout to wait until next lifecycle before setting state.
+        setTimeout(this.handleProcessSvg, 0)
         return svgString
+    }
+
+    handleProcessSvg = () => {
+        const { presenceKey } = this.props
+        console.log(document.getElementsByClassName(presenceKey)[0])
     }
 
     render() {
@@ -33,7 +39,7 @@ class PresenceSvg extends PureComponent {
                 actorKey
             })
 
-        return (
+        return Boolean(children) && (
             <ReactInlineSvg
                 {...{
                     className: cx(

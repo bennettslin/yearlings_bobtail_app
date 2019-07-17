@@ -3,7 +3,7 @@ import {
     hasKey,
     getDefinedOnlyPayload
 } from '../actionHelper'
-import { setInStorage } from '../storageHelper'
+import { setInStorage } from 'utils/window'
 
 import {
     DOTS_STORE,

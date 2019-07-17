@@ -3,7 +3,7 @@ import {
     hasKey,
     getDefinedOnlyPayload
 } from '../actionHelper'
-import { setBoolInStorage } from '../storageHelper'
+import { setBoolInStorage } from 'utils/window'
 
 import {
     ADMIN_STORE,

@@ -1,5 +1,5 @@
 // Actions for session values.
-import { setInStorage } from '../storageHelper'
+import { setInStorage } from 'utils/window'
 
 import {
     hasKey,

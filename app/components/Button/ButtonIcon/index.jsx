@@ -73,7 +73,7 @@ const BUTTON_ICONS_MAP = {
         [SCORES_BUTTON_KEY]: ScoresIcon,
         [TIPS_BUTTON_KEY]: TipsIcon
     },
-    DEFAULT_COMPONENT = () => (null)
+    DEFAULT_COMPONENT = () => null
 
 const propTypes = {
     // From parent.
