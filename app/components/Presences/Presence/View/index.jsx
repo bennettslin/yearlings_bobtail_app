@@ -1,7 +1,6 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isFinite from 'lodash/isfinite'
 import isString from 'lodash/isstring'
 
 import PresenceSvg from 'modules/PresenceSvg'
@@ -11,7 +10,7 @@ import { getArrangementForPresenceType } from '../helper'
 import { getMapForActorKey } from '../../Actor/helper'
 import { getMapForPresenceType } from '../../Thing/helper'
 
-import { getPresenceXY, getPresenceXYWidthHeight } from './helper'
+import { getPresenceXY } from './helper'
 import { capitaliseForClassName } from 'helpers/format'
 
 import { ACTOR } from 'constants/scene'
@@ -52,49 +51,25 @@ const PresenceView = ({
         )
     }
 
-    const arrangement = getArrangementForPresenceType({
-            presenceType,
-            presenceKey,
-            actorKey
-        }),
-        {
+    const {
             yIndex,
-
-            // Begin process to not nest.
-            xPosition: xPosition1,
-            zOffset: zOffset1,
+            xPosition,
+            zOffset,
             scaleFactor,
             alignLeft,
             alignRight,
             flipHorizontal,
             rotate,
             noShadow,
-            style,
-
-            arrangement: {
-                // Allow older configurations to still nest.
-                xPosition: xPosition2,
-                zOffset: zOffset2,
-
-                // TODO: Get rid of xWidth and zHeight completely.
-                xWidth,
-                zHeight
-            } = {}
-        } = arrangement,
-
-        // TODO: Get rid of this logic when no longer nested.
-        xPosition = isFinite(xPosition1) ? xPosition1 : xPosition2,
-        zOffset = isFinite(zOffset1) ? zOffset1 : zOffset2,
+            style
+        } = getArrangementForPresenceType({
+            presenceType,
+            presenceKey,
+            actorKey
+        }),
 
         // TODO: Move this to PresenceSvg?
-        presenceXY = xWidth && zHeight ? getPresenceXYWidthHeight({
-            cubesKey,
-            yIndex,
-            xPosition,
-            zOffset,
-            xWidth,
-            zHeight
-        }) : getPresenceXY({
+        presenceXY = getPresenceXY({
             cubesKey,
             yIndex,
             xPosition,

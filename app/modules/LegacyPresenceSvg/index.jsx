@@ -23,26 +23,14 @@ const LegacyPresenceSvg  = ({
         {
             yIndex,
 
-            // Begin process to not nest.
-            xPosition: xPosition1,
-            zOffset: zOffset1,
-
             arrangement: {
-                // Allow older configurations to still nest.
-                xPosition: xPosition2,
-                zOffset: zOffset2,
-
-                // TODO: Get rid of xWidth and zHeight completely.
+                xPosition,
+                zOffset,
                 xWidth,
                 zHeight
             } = {}
         } = arrangement,
 
-        // TODO: Get rid of this logic when no longer nested.
-        xPosition = isFinite(xPosition1) ? xPosition1 : xPosition2,
-        zOffset = isFinite(zOffset1) ? zOffset1 : zOffset2,
-
-        // TODO: Move this to PresenceSvg?
         presenceXY = getPresenceXYWidthHeight({
             cubesKey,
             yIndex,
