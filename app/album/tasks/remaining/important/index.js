@@ -20,11 +20,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Svg previewer.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Strip out admin before final release.`,
         workedHours: 0,
         neededHours: 1

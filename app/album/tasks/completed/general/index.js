@@ -4716,5 +4716,10 @@ export default [
         taskName: `Separating svg assets.`,
         workedHours: 12,
         neededHours: 12
+    },
+    {
+        taskName: `Svg previewer.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
