@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import isString from 'lodash/isstring'
@@ -58,7 +58,7 @@ class Presence extends PureComponent {
         })
     }
 
-    getRenderedComponent(presenceComponent) {
+    getRenderComponent(presenceComponent) {
         const { inPreviewer } = this.props
 
         if (inPreviewer) {
@@ -72,6 +72,7 @@ class Presence extends PureComponent {
 
     render() {
         const {
+                inPreviewer,
                 cubesKey,
                 presenceType,
                 actorKey,
@@ -87,22 +88,13 @@ class Presence extends PureComponent {
             presenceComponent = presencesMap[presenceKey],
 
             // TODO: Get rid of this conditional once they are all asset svgs.
-            RenderedComponent = this.getRenderedComponent(presenceComponent)
-
-        return (
-            <CSSTransition
-                unmountOnExit
-                mountOnEnter
-                {...{
-                    in: isTransitionVisible,
-                    timeout: 200,
-                    classNames: { enterDone: 'Presence__visible' }
-                }}
-            >
-                <RenderedComponent
+            RenderComponent = this.getRenderComponent(presenceComponent),
+            renderedComponent = (
+                <RenderComponent
                     {...{
                         className: cx(
                             'Presence',
+                            inPreviewer && 'Presence__visible',
                             capitaliseForClassName(presenceType)
                         ),
                         cubesKey,
@@ -112,7 +104,24 @@ class Presence extends PureComponent {
                     }}
                 >
                     {presenceComponent}
-                </RenderedComponent>
+                </RenderComponent>
+            )
+
+        return inPreviewer ? (
+            <___>
+                {renderedComponent}
+            </___>
+        ) : (
+            <CSSTransition
+                unmountOnExit
+                mountOnEnter
+                {...{
+                    in: isTransitionVisible,
+                    timeout: 200,
+                    classNames: { enterDone: 'Presence__visible' }
+                }}
+            >
+                {renderedComponent}
             </CSSTransition>
         )
     }

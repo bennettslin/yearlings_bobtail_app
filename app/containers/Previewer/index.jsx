@@ -87,8 +87,11 @@ class Previewer extends PureComponent {
     }
 
     selectPresenceKey = ({ target: { value: presenceKey } }) => {
-        const { transitionalPresenceType } = this.state,
-            presenceType = transitionalPresenceType
+        const {
+                transitionalPresenceType,
+                presenceType: prevPresenceType
+            } = this.state,
+            presenceType = transitionalPresenceType || prevPresenceType
         this.setState({
             transitionalPresenceType: '',
             presenceType,
