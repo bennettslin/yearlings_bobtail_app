@@ -203,5 +203,10 @@ export default [
         taskName: 'lockerBank',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'dishPile',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

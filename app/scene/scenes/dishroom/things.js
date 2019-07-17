@@ -41,11 +41,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [DISH_PILE]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 4.5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 4.5,
+            scaleFactor: 0.4
         }
     },
     [PANEL]: {

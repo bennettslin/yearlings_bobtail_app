@@ -25,7 +25,7 @@ import trafficLight from 'assets/svgs/cutouts/trafficLight'
 // import glassCart from 'assets/svgs/cutouts/glassCart'
 // import trayCart from 'assets/svgs/cutouts/trayCart'
 // import glassRack from 'assets/svgs/cutouts/glassRack'
-// import dishPile from 'assets/svgs/cutouts/dishPile'
+import dishPile from 'assets/svgs/cutouts/dishPile'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant'
 // import pharmacyAisle from 'assets/svgs/flats/pharmacyAisle'
@@ -138,7 +138,7 @@ export default {
     [GLASS_CART]: false,
     [TRAY_CART]: false,
     [GLASS_RACK]: false,
-    [DISH_PILE]: false,
+    [DISH_PILE]: dishPile,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
     [PHARMACY_AISLE]: false,

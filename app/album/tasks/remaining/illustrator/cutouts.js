@@ -1,14 +1,8 @@
 export default [
-    // TODO.
     {
         taskName: 'mirroredSink',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'dishPile',
-        workedHours: 0,
-        neededHours: 1
     },
 
     {
