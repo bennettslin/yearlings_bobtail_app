@@ -25,11 +25,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [LOCKER_BANK]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 4.5,
-                zHeight: 4.5
-            }
+            xPosition: 3.5,
+            scaleFactor: 0.35
         },
         [TRASH_CAN__LOCKERS]: {
             yIndex: 2,

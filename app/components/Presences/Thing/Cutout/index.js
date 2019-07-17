@@ -8,7 +8,7 @@ import campfire from 'assets/svgs/cutouts/campfire'
 import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine'
 import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge'
 import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill'
-// import lockerBank from 'assets/svgs/cutouts/lockerBank'
+import lockerBank from 'assets/svgs/cutouts/lockerBank'
 // import trashCan from 'assets/svgs/cutouts/trashCan'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant'
 import recyclables from 'assets/svgs/cutouts/recyclables'
@@ -38,7 +38,7 @@ import monitorSide from 'assets/svgs/cutouts/monitorSide'
 import wallSpeakerSide from 'assets/svgs/cutouts/wallSpeakerSide'
 import twinStreetlamp from 'assets/svgs/cutouts/twinStreetlamp'
 import elCerritoTree from 'assets/svgs/cutouts/elCerritoTree'
-// import dumpster from 'assets/svgs/cutouts/dumpster'
+import dumpster from 'assets/svgs/cutouts/dumpster'
 import dispenserLeft from 'assets/svgs/cutouts/dispenserLeft'
 import dispenserRight from 'assets/svgs/cutouts/dispenserRight'
 import weddingCrowd from 'assets/svgs/cutouts/weddingCrowd'
@@ -116,7 +116,7 @@ export default {
     [BUDDHA_SHRINE]: buddhaShrine,
     [TAIWAN_FRIDGE]: taiwanFridge,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
-    [LOCKER_BANK]: false,
+    [LOCKER_BANK]: lockerBank,
     [TRASH_CAN__LOCKERS]: false,
     [TRASH_CAN__QUAD]: false,
     [VAN_NUYS_PLANT__LOCKERS]: vanNuysPlant,
@@ -155,7 +155,7 @@ export default {
     [TWIN_STREETLAMP__MIDDLE]: twinStreetlamp,
     [TWIN_STREETLAMP__NEAR]: twinStreetlamp,
     [EL_CERRITO_TREE]: elCerritoTree,
-    [DUMPSTER]: false,
+    [DUMPSTER]: dumpster,
     [DISPENSER_LEFT]: dispenserLeft,
     [DISPENSER_RIGHT]: dispenserRight,
     [WEDDING_CROWD]: weddingCrowd,

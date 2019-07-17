@@ -1,4 +1,43 @@
+.LockerBank {
+    .frame {
+        fill: #996;
+    }
+
+    .door {
+        fill: #6cc;
+    }
+
+    .slitOverlapLine {
+        stroke: #4aa;
+    }
+
+    .label {
+        fill: #cc3;
+    }
+
+    .lips {
+        fill: #f39;
+    }
+
+    .lipsBorderLine {
+        stroke: #9e005d;
+    }
+
+    .teeth {
+        fill: #fff;
+    }
+
+    .kiss {
+        fill: #93c;
+    }
+}
+
 .VanNuysPlant {
-    .leavesLeft { fill: #033; }
-    .leavesRight { fill: #063; }
+    .leavesLeft {
+        fill: #033;
+    }
+
+    .leavesRight {
+        fill: #063;
+    }
 }

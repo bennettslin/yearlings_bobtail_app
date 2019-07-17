@@ -11,11 +11,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [DUMPSTER]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 4.5,
-                zHeight: 3
-            }
+            xPosition: 9,
+            scaleFactor: 0.3
         }
     },
     [FIXTURE]: {
