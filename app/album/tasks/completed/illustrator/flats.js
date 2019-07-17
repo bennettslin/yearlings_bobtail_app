@@ -53,5 +53,10 @@ export default [
         taskName: 'pampasFar',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'ferrisWheel',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

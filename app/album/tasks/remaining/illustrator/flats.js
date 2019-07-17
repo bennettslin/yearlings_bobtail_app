@@ -75,11 +75,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'ferrisWheel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'stJosephsAnnex',
         workedHours: 0,
         neededHours: 1.5

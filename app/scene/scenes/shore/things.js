@@ -42,11 +42,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [FERRIS_WHEEL]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 2,
+            scaleFactor: 0.4
         },
         [ROLLER_COASTER]: {
             yIndex: 1,
