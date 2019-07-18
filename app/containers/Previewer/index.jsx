@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import keys from 'lodash/keys'
@@ -194,10 +193,4 @@ class Previewer extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    adminStore: { isAdminOn }
-}) => ({
-    isAdminOn
-})
-
-export default connect(mapStateToProps)(Previewer)
+export default Previewer
