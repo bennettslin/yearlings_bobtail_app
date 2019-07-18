@@ -18,7 +18,7 @@ import sendEvent from './utils/analytics'
 import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
-import PreviewerContainer from './containers/Previewer'
+import PreviewerContainer from 'admin/containers/Previewer'
 import RoutingContainer from './containers/Routing'
 
 const store = createStore(

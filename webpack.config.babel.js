@@ -6,7 +6,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
 const SHOW_BUNDLE_ANALYZER = true
 
-const getConfig = ({ development }) => {
+const getConfig = ({ development = false } = {}) => {
     return {
         entry: path.resolve(__dirname, 'app'),
         output: {
@@ -35,6 +35,10 @@ const getConfig = ({ development }) => {
             // import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf', '.svg'],
             alias: {
+                // In production, admin just reroutes to app.
+                admin: development ?
+                    path.resolve(__dirname, './admin') :
+                    path.resolve(__dirname, './app'),
                 assets: path.resolve(__dirname, './assets'),
                 album: path.resolve(__dirname, './app/album'),
                 components: path.resolve(__dirname, './app/components'),
@@ -51,7 +55,10 @@ const getConfig = ({ development }) => {
             rules: [
                 {
                     test: /\.jsx?$/,
-                    include: path.resolve(__dirname, './app'),
+                    include: [
+                        path.resolve(__dirname, './app'),
+                        ...development && [path.resolve(__dirname, './admin')]
+                    ],
                     enforce: 'pre',
                     loaders: [
                         'babel-loader',
@@ -61,7 +68,10 @@ const getConfig = ({ development }) => {
                 },
                 {
                     test: /\.scss$/,
-                    include: path.resolve(__dirname, './app'),
+                    include: [
+                        path.resolve(__dirname, './app'),
+                        ...development && [path.resolve(__dirname, './admin')]
+                    ],
                     loaders: [
                         'style-loader',
                         'css-loader',

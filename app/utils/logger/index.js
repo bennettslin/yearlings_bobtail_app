@@ -14,13 +14,13 @@ import {
     logger
 } from './helper'
 
-// TODO: Show in production for now.
-// if (process.env.NODE_ENV === 'production') {
-//     logger.trace = () => {}
-//     logger.debug = () => {}
-//     logger.info = () => {}
-//     logger.warn = () => {}
-// }
+// Only show error and fatal in production.
+if (process.env.NODE_ENV === 'production') {
+    logger.trace = () => {}
+    logger.debug = () => {}
+    logger.info = () => {}
+    logger.warn = () => {}
+}
 
 global.logAccess = logAccess
 global.logAdmin = logAdmin
