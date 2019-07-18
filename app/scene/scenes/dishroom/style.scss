@@ -111,3 +111,53 @@
         stroke: #0071bc;
     }
 }
+
+.trayPile {
+    .trayBasin {
+        fill: #7667b7;
+    }
+
+    .trayRim {
+        fill: #978cc4;
+    }
+
+    .trayRimBorderLine {
+        stroke: #1b1464;
+    }
+}
+
+.glassRack {
+    .glass {
+        fill: #8ac4c4;
+    }
+
+    .rack {
+        fill: #70ba70;
+    }
+
+    .rackBorderLine {
+        stroke: #006837;
+    }
+}
+
+.dishroomDolly {
+    .wheel {
+        fill: #46444f;
+    }
+
+    .hub {
+        fill: #a8a7af;
+    }
+
+    .caster {
+        fill: #aaa781;
+    }
+
+    .base {
+        fill: #606058;
+    }
+
+    .handle {
+        fill: #74737a;
+    }
+}

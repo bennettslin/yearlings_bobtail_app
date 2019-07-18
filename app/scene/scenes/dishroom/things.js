@@ -3,9 +3,9 @@ import {
     PANEL
 } from 'constants/scene'
 import {
-    TRAY_CART,
-    GLASS_CART,
-    GLASS_RACK,
+    TRAY_PILE,
+    DISHROOM_DOLLY__GLASS,
+    GLASS_RACK__SINK,
     DISH_PILE
 } from 'constants/scene/things/cutouts'
 import {
@@ -15,29 +15,20 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [TRAY_CART]: {
+        [TRAY_PILE]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 1.5,
-                zHeight: 2
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.4
         },
-        [GLASS_CART]: {
+        [DISHROOM_DOLLY__GLASS]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1.5,
-                zHeight: 2
-            }
+            xPosition: 6,
+            scaleFactor: 0.4
         },
-        [GLASS_RACK]: {
+        [GLASS_RACK__SINK]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 1.5,
-                zHeight: 0.5
-            }
+            xPosition: 3,
+            scaleFactor: 0.3
         },
         [DISH_PILE]: {
             yIndex: 2,
@@ -50,12 +41,12 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 4,
             scaleFactor: 0.37,
-            zOffset: 0.6
+            zOffset: 0.1
         },
         [DISHROOM_SINK]: {
             yIndex: 3,
             xPosition: 4,
-            scaleFactor: 0.45
+            scaleFactor: 0.47
         }
     }
 }

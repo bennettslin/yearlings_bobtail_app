@@ -14,23 +14,23 @@ $height__dashboard: 60px;
     }
 }
 
-.Previewer__scroll {
-    padding: 10px;
-}
-
-.Previewer__scroll {
-    .Previewer__heightAspectRatio
-    & {
-        width: auto;
-        height: calc(100% - #{$height__dashboard});
-    }
-}
-
 .Presence {
     .Previewer__heightAspectRatio
     & {
         width: auto;
         height: 100%;
+    }
+}
+
+.Previewer__scroll {
+    padding: 10px;
+
+    .Previewer__heightAspectRatio
+    & {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: calc(100% - #{$height__dashboard});
     }
 }
 
@@ -41,10 +41,9 @@ svg {
     }
 }
 
-.Previewer__scroll {
-    .Previewer__heightAspectRatio
+button, select {
+    .Previewer
     & {
-        display: flex;
-        justify-content: center;
+        font-size: 1.5em;
     }
 }

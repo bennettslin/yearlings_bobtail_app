@@ -3,20 +3,5 @@ export default [
         taskName: 'trashCan',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'glassCart',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'trayCart',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'glassRack',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

@@ -218,5 +218,20 @@ export default [
         taskName: 'pharmacyAisle',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'trayPile',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'glassRack',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'dishroomDolly',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
