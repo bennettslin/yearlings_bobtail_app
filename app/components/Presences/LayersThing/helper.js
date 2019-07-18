@@ -60,6 +60,9 @@ const _adminLogSvgCount = () => {
                     increment = 0
                 }
             }
+            if (things[thing]) {
+                console.log(thing)
+            }
             return count + increment
         }, 0)
     }

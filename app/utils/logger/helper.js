@@ -1,5 +1,4 @@
 import pino from 'pino'
-import { differenceInMilliseconds } from 'date-fns'
 
 export const logger = pino()
 
@@ -7,7 +6,7 @@ const
     startTime = Date.now(),
 
     _getTimeDifference = () => {
-        const difference = differenceInMilliseconds(Date.now(), startTime)
+        const difference = Date.now() - startTime
         return (difference * 0.001).toFixed(2)
     },
 

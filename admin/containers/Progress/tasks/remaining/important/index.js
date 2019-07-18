@@ -18,10 +18,5 @@ export default [
         taskName: `Remove animations from mobile for performance. Transitions are done, just do animations.`,
         workedHours: 1,
         neededHours: 3
-    },
-    {
-        taskName: `Remove date-fns in production. Also figure out what to do about logging before release.`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]
