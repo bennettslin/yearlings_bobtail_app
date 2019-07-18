@@ -4,8 +4,6 @@ import React from 'react'
 import cx from 'classnames'
 import keys from 'lodash/keys'
 
-import { getIsV2 } from 'album/api/admin'
-
 const DrawingActor = ({
 
     actor,
@@ -33,16 +31,14 @@ const DrawingActor = ({
                         <div className="character-info-row">
                             {characters[characterName].map(character => {
                                 const {
-                                        songIndex,
-                                        sceneIndex,
-                                        workedHours,
-                                        description,
-                                        doneForNow
-                                    } = character,
+                                    songIndex,
+                                    sceneIndex,
+                                    workedHours,
+                                    description,
+                                    doneForNow
+                                } = character
 
-                                    isV2 = getIsV2(songIndex)
-
-                                return !isV2 && (
+                                return (
                                     <div
                                         key={`${songIndex}${sceneIndex}`}
                                         {...{

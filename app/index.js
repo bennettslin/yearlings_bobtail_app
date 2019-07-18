@@ -18,8 +18,11 @@ import sendEvent from './utils/analytics'
 import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
+
+// These reroute to the routing container in production.
 import Previewer from 'admin/containers/Previewer'
 import Progress from 'admin/containers/Progress'
+
 import RoutingContainer from './containers/Routing'
 
 const store = createStore(

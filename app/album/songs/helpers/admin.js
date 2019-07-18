@@ -1,5 +1,3 @@
-import { getIsV2 } from '../../api/admin'
-
 export const addDotUnitsCount = (song) => {
     const { lyricUnits } = song
 
@@ -46,7 +44,7 @@ export const addGlobalAnnotationIndices = (album) => {
             songIndex
         } = song
 
-        if (annotations && !getIsV2(songIndex)) {
+        if (annotations) {
             annotations.forEach(annotation => {
                 const { annotationIndex } = annotation
 

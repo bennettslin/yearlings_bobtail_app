@@ -6,7 +6,11 @@ import AdminNav from './AdminNav'
 
 import './style.scss'
 
-class Admin extends PureComponent {
+class Progress extends PureComponent {
+
+    componentDidMount() {
+        logMount('Progress')
+    }
 
     render() {
         return (
@@ -26,4 +30,4 @@ class Admin extends PureComponent {
     }
 }
 
-export default Admin
+export default Progress
