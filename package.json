@@ -32,7 +32,6 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "debounce": "^1.0.2",
-    "lodash": "^4.17.11",
     "mobile-detect": "^1.4.3",
     "pino": "^4.17.5",
     "prop-types": "^15.6.1",

@@ -4731,5 +4731,10 @@ export default [
         taskName: `Remove admin from production.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Make global annotations its own page.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]
