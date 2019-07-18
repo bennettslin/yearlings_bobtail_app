@@ -1,3 +1,20 @@
+@font-face {
+    font-family: PTSansNarrow;
+    src: url('../../../assets/fonts/pt_sans/PTN57F.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: PTSansNarrow;
+    src: url('../../../assets/fonts/pt_sans/PTN77F.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: PTSansNarrow;
+    src: url('../../../assets/fonts/pt_sans/PTS56F.ttf') format('truetype');
+    font-style: italic;
+}
+
 @mixin mixin__progressBar($colour__progressBar, $colour__progressBar__filled) {
     .ProgressBar {
         background-color: $colour__progressBar;
@@ -35,6 +52,8 @@ $drawing-field-colour: #eed;
     left: 0;
     width: 100vw;
     height: 100vh;
+
+    font-family: PTSansNarrow, Arial;
 
     z-index: 100;
     background-color: #888;

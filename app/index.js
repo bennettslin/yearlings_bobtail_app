@@ -18,7 +18,8 @@ import sendEvent from './utils/analytics'
 import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
-import PreviewerContainer from 'admin/containers/Previewer'
+import Previewer from 'admin/containers/Previewer'
+import Progress from 'admin/containers/Progress'
 import RoutingContainer from './containers/Routing'
 
 const store = createStore(
@@ -42,15 +43,15 @@ ReactDOM.render(
                 <Route
                     exact
                     {...{
-                        path: '/Progress',
-                        component: PreviewerContainer
+                        path: '/Previewer',
+                        component: Previewer
                     }}
                 />
                 <Route
                     exact
                     {...{
-                        path: '/Previewer',
-                        component: PreviewerContainer
+                        path: '/Progress',
+                        component: Progress
                     }}
                 />
                 <Route

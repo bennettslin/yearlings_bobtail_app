@@ -4,7 +4,7 @@ import React from 'react'
 import cx from 'classnames'
 import keys from 'lodash/keys'
 
-import { getIsV2 } from '../../../album/api/admin'
+import { getIsV2 } from 'album/api/admin'
 
 const DrawingActor = ({
 
