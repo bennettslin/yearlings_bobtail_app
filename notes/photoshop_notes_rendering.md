@@ -3,6 +3,7 @@
 * Slant direction order, allow for -1 yIndex?
 * Make ceiling cubes disappear
 * Allow for skew and perspective
+* Dishroom scene, separate bubbles.
 
 # Redo straight or curved line.
 * bennettOdinBuoy
