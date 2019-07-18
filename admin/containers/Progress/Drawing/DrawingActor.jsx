@@ -34,7 +34,7 @@ const DrawingActor = ({
                                     songIndex,
                                     sceneIndex,
                                     workedHours,
-                                    description,
+                                    instance,
                                     doneForNow
                                 } = character
 
@@ -83,11 +83,11 @@ const DrawingActor = ({
                                             {...{
                                                 className: cx(
                                                     'role-info',
-                                                    'description-column'
+                                                    'instance-column'
                                                 )
                                             }}
                                         >
-                                            {description}
+                                            {instance}
                                         </div>
                                     </div>
                                 )

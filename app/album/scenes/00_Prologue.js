@@ -18,8 +18,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'standing, facing forward, welcoming',
                     instance: PROLOGUE
                 }

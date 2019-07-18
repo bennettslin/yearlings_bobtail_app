@@ -129,8 +129,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'looking at Leonard Cohen poster',
                     instance: PONDERING
                 }
@@ -160,8 +158,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting on couch, figuring out Rubiks Cube',
                     instance: RUBIKS_CUBE
                 }
@@ -192,15 +188,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting on couch, reading a book',
                     instance: COUCH_READING
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'sitting on floor, back turned, playing keyboard',
                         instance: BENNETT_KEYBOARD
                     }
@@ -232,33 +224,23 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'chatting with hipster, paying attention to Mara',
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'wiping sweat, chatting with Mara, laughing',
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'flirting with Jacob',
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'squatting, back turned, putting bass back in case',
                     instance: SQUATTING
                 },
                 [TOMER]: {
                     shane: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'chatting with Bennett, gushing about music',
                         instance: SHANE_BUYING
                     }
@@ -288,21 +270,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting, silently eating burger, uncomfortable',
                     instance: EATING
                 },
                 [JACOB_MARA]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'sitting, eating burger, holding Mara\'s hand',
                     instance: EATING
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting, eating fries, laughing',
                     instance: EATING
                 }
@@ -331,15 +306,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking, sulking with head down',
                     instance: HOPELESSLY_CRUSHED
                 },
                 [MIRIAM]: {
                     maskedWoman: {
-                        todo: true,
-                        workedHours: 3,
                         description: 'side, holding baby, looking back at Bennett',
                         instance: INFANT_CURIOUS
                     }
@@ -364,23 +335,17 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, looking back at baby',
                     instance: WONDERING_BABY
                 },
                 [MIRIAM]: {
                     maskedWoman: {
-                        todo: true,
-                        workedHours: 3,
                         description: 'side, walking away',
                         instance: INFANT_NURSING
                     }
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        todo: true,
-                        workedHours: 3,
                         description: 'checking watch',
                         instance: USHER_WAITING
                     }
@@ -405,15 +370,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, inspired by sudden thought',
                     instance: MERRILY_DERANGED
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'looking at Bennett',
                         instance: USHER_LOOKING
                     }

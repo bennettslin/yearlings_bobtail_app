@@ -90,15 +90,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking, pleasantly confused',
                     instance: EL_TORITO
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side angle, opening a door, pleasantly surprised',
                         instance: EL_TORITO
                     }
@@ -121,32 +117,23 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'sitting cross-legged, playing recorder, content',
                     instance: PAMPAS
                 },
                 [CATHERINE]: {
                     gopi: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'dancing',
                         instance: GOPI
                     }
                 },
                 [MARA]: {
                     gopi: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'dancing',
                         instance: GOPI
                     }
                 },
                 [MIRIAM]: {
                     gopi: {
-                        todo: true,
-                        workedHours: 3.25,
                         description: 'dancing',
                         instance: GOPI
                     }
@@ -171,9 +158,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'back angle, confusedly being rushed',
                     instance: GETTING_DARK
                 }
@@ -206,9 +190,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'front angle, reacting to threat',
                     instance: CLIFF
                 }
@@ -236,16 +217,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'calm, accepting of impending doom',
                     instance: FINAL_DREAM
                 },
                 [AMY]: {
                     doctor: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'pulling sheet over Bennett',
                         instance: DOCTOR
                     }

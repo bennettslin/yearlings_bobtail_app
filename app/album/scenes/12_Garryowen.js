@@ -96,9 +96,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'front, putting on jacket, cold, distant',
                     instance: BRUSH_OFF
                 }
@@ -119,26 +116,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, tripping as meats fall out of pockets',
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, eagerly aggressive, about to punch car',
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, holding paper bottle, laughing',
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
-                    todo: true,
-                    workedHours: 3.75,
                     description: 'front, clutching at fist, laughing through pain',
                     instance: INJURED
                 }
@@ -166,9 +155,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'on couch, ignoring Sita, drunk',
                     instance: CELIBATE_FREEZING
                 }
@@ -199,21 +185,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, sweaty, giddy',
                     instance: GREETING
                 },
                 [MIRIAM_TRISTAN]: {
-                    todo: true,
-                    workedHours: 3.5,
-                    compound: 2,
                     description: 'side, greeting Bennett',
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 3.75,
                     description: 'front, removing bass, rolling eyes',
                     instance: SMIRKING
                 }
@@ -241,15 +220,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'standing, cold, looking away',
                     instance: LEAVING_CRUMBLED
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'crumbled on floor, begging, sobbing',
                         instance: LEAVING_CRUMBLED
                     }

@@ -102,9 +102,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
-                    todo: true,
-                    workedHours: 3.5,
-                    compound: 2,
                     description: 'side, asleep',
                     instance: ASLEEP
                 }
@@ -128,22 +125,15 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
-                    compound: 2,
-                    duplicate: true,
                     description: 'side, asleep',
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, accusatory',
                     instance: ACCUSATORY
                 },
                 [ESTHER_MOTHER]: {
                     youngSita: {
-                        todo: true,
-                        workedHours: 4.25,
-                        compound: 2,
                         description: 'side angle, sobbing',
                         instance: HURT_CONSOLING
                     }
@@ -168,21 +158,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front angle, wincing',
                     instance: PAST
                 },
                 [FATHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, gesturing to scene below',
                     instance: PAST
                 },
                 [SASHA_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'sitting, hurt, lashing out in anger',
                     instance: COMFORTING_HUMILIATED
                 }
@@ -209,29 +192,20 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_FATHER]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'front, dismissive, not feeling bad',
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, gesturing with empathy',
                     instance: PRESENT
                 },
                 [LIZ]: {
                     sita: {
-                        duplicate: true,
                         description: 'side, seated, pensive',
                         instance: PETTING_SEATED
                     }
                 },
                 [MIRIAM_STEPHANIE]: {
-                    todo: true,
-                    workedHours: 3.5,
-                    compound: 2,
                     description: 'side, jumping on Bennett, grabbing his banjo',
                     instance: MISCHIEVOUS_BANJO
                 }
@@ -259,35 +233,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'concerned',
                     instance: FUTURE
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'back, squatting, recording, dejected',
                         instance: BENNETT_RECORDING
                     }
                 },
                 [MOTHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front angle, wanting to console Bennett',
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front angle, arms crossed, righteous',
                     instance: FUTURE
                 },
                 [KHARI_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'side angle, cheerful, making a point',
                     instance: JOKING_LAUGHING
                 }
@@ -320,23 +283,15 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
-                    todo: true,
-                    workedHours: 3.5,
-                    compound: 2,
                     description: 'side sitting, vindictive, magical gesture',
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, knocked over',
                     instance: REELING
                 },
                 [ESTHER_MOTHER]: {
                     youngSita: {
-                        todo: true,
-                        workedHours: 4.25,
-                        compound: 2,
                         description: 'side angle, sobbing uncontrollably',
                         instance: SOBBING_SHIELDING
                     }

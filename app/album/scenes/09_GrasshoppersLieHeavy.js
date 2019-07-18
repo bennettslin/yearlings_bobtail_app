@@ -127,8 +127,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'back, reading book, pulling tray from belt.',
                     instance: DISHROOM_READING
                 }
@@ -158,15 +156,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, handing lancet pen, exuberant',
                     instance: DISHROOM_LANCET
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, taken aback, politely friendly',
                         instance: DISHROOM_LANCET
                     }
@@ -197,13 +191,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    duplicate: true,
                     description: 'side, awkward, wanting to make a move',
                     instance: DATE_ENDING
                 },
                 [LIZ]: {
                     sita: {
-                        duplicate: true,
                         description: 'side, friendly, guarded',
                         instance: DATE_ENDING
                     }
@@ -223,13 +215,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    duplicate: true,
                     description: 'side, walking away dejected, slumped over',
                     instance: DATE_ENDED
                 },
                 [LIZ]: {
                     sita: {
-                        duplicate: true,
                         description: 'front, closing gate, looking concerned',
                         instance: DATE_ENDED
                     }
@@ -250,15 +240,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking, mopey',
                     instance: MOP_SOPPED
                 },
                 [NESTOR]: {
                     jogger: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, jogging, spry',
                         instance: JOGGER
                     }
@@ -283,15 +269,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'back, punching code, surprised',
                     instance: GATE_CODE
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, hesitantly greeting',
                         instance: GATE_CODE
                     }
@@ -316,9 +298,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'front, opening gate, silent, attentive',
                     instance: GINGERBREAD_PRISON
                 }
@@ -347,15 +326,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, turning on light, smiling',
                     instance: RUMPLED_LINENS
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, wincing, embarrassed smile',
                         instance: RUMPLED_LINENS
                     }
@@ -385,8 +360,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting, eyes closed, falling asleep',
                     instance: WAITING_ROOM_ASLEEP
                 }
@@ -422,9 +395,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'sitting, abruptly woken',
                     instance: CHEEK_UNVEILED
                 }
@@ -457,17 +427,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'side, standing beside bed, unsure',
                     instance: HARD_ON
                 },
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
-                        todo: true,
-                        workedHours: 4,
-                        compound: 2,
                         description: 'reflection',
                         instance: HARD_ON_REFLECTION
                     }
@@ -499,17 +463,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'side, about to stick it in',
                     instance: MISSIONARY
                 },
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
-                        todo: true,
-                        workedHours: 4,
-                        compound: 2,
                         description: 'reflection',
                         instance: MISSIONARY_REFLECTION
                     }
@@ -541,17 +499,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'lying down, warm, content, slightly worried',
                     instance: AFTERGLOW
                 },
                 [BENNETT_LIZ_REFLECTION]: {
                     reflection: {
-                        todo: true,
-                        workedHours: 4,
-                        compound: 2,
                         description: 'reflection',
                         instance: AFTERGLOW_REFLECTION
                     }

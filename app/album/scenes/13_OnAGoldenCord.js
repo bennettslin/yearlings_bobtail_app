@@ -96,8 +96,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, cradling bracelet, blank',
                     instance: CORD_SIDE
                 }
@@ -122,9 +120,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'side angle, disingenuously consoling',
                     instance: AWKWARD_CONSOLATION
                 }
@@ -145,15 +140,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'back, cradling bracelet, blank',
                     instance: CORD_REAR
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'back, shaking fist at sky',
                         instance: BENNETT_DEFIANT
                     }
@@ -188,16 +179,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_STEPHANIE]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'side angle, playful, waving',
                     instance: HORSING
                 },
                 [AMY_NESTOR_TOMER]: {
                     officer: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'back, facing back, waving',
                         instance: OFFICER
                     }
@@ -228,40 +214,29 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT_STEPHANIE]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'back, consoling',
                     instance: DRYING_TEARS
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'side, walking',
                         instance: YOUNG_CHILD
                     }
                 },
                 [ANITA]: {
                     youngGirl: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'side, walking',
                         instance: YOUNG_CHILD
                     }
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'side, turned, looking at Bennetts',
                         instance: YOUNG_CHILD
                     }
                 },
                 [WILLY]: {
                     crossingGuard: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'front, holding up stop sign',
                         instance: CROSSING_GUARD
                     }

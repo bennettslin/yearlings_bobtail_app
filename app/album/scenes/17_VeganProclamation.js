@@ -102,15 +102,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, slumped over, despondent',
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'side, protective, judgmental',
                     instance: PROTECTIVE_CONCERNED
                 }
@@ -142,21 +137,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'back, looking to side, annoyed',
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM_TRISTAN]: {
-                    todo: true,
-                    workedHours: 3.5,
-                    compound: 2,
                     description: 'side, flirting',
                     instance: GREETING
                 },
                 [NESTOR]: {
-                    todo: true,
-                    workedHours: 3.75,
                     description: 'side, eager',
                     instance: GREETING
                 }
@@ -187,8 +175,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'walking through alley',
                     instance: ALLEY
                 }
@@ -215,23 +201,15 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, on phone, hunched over, sobbing',
                     instance: BROKEN_HEARTED
                 },
                 [KHARI_LIZ]: {
-                    todo: true,
-                    workedHours: 4,
-                    compound: 2,
                     description: 'lying in bed, caressing Sita',
                     instance: CARESS
                 },
                 [KHARI_LIZ_REFLECTION]: {
                     reflection: {
-                        todo: true,
-                        workedHours: 4,
-                        compound: 2,
                         description: 'reflection',
                         instance: CARESS_REFLECTION
                     }
@@ -262,31 +240,23 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, desperately hopeful',
                     instance: DEMONSTRATION
                 },
                 [AMY]: {
                     demonstrator: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'back, passing out flyers',
                         instance: PROTESTER
                     }
                 },
                 [STEPHANIE]: {
                     demonstrator: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'standing, demonstrating',
                         instance: PROTESTER
                     }
                 },
                 [WADE]: {
                     demonstrator: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'standing, demonstrating',
                         instance: PROTESTER
                     }

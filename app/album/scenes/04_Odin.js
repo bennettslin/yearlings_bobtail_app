@@ -100,8 +100,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, lying on floor, propped up',
                     instance: MAT
                 }
@@ -130,8 +128,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, looking down stairs',
                     instance: STAIRS
                 }
@@ -156,8 +152,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, peeking out from gate',
                     instance: GATE
                 }
@@ -185,8 +179,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'getting off rickshaw bike',
                     instance: RICKSHAW
                 }
@@ -214,8 +206,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side back, looking out to ocean',
                     instance: SHORE
                 }
@@ -246,8 +236,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'peering down from buoy',
                     instance: BUOY
                 }
@@ -270,9 +258,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [SASHA_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'mermaid',
                     instance: MERMAID
                 }
@@ -300,8 +285,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, crouched in sand, looking back',
                     instance: OCEAN_FLOOR
                 }

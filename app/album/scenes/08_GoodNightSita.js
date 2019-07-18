@@ -73,15 +73,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, awkward, wanting to make a move',
                     instance: DATE_ENDING
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, friendly, guarded',
                         instance: DATE_ENDING
                     }
@@ -100,15 +96,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, leaning towards Sita',
                     instance: MUSEUM
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, hands behind back, guarded',
                         instance: MUSEUM
                     }
@@ -133,29 +125,21 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, jealous',
                     instance: BACKSTAGE
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, warm, guard down',
                         instance: BACKSTAGE
                     }
                 },
                 [KHARI]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, friendly',
                     instance: DOUBLE_ALBERT
                 },
                 [STEPHANIE]: {
                     actor: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'side, rushing',
                         instance: FLAPPER
                     }
@@ -183,15 +167,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, in go-kart, leaning forward',
                     instance: GO_KARTS
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, in go-kart, relaxed',
                         instance: GO_KARTS
                     }
@@ -217,15 +197,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking away dejected, slumped over',
                     instance: DATE_ENDED
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'front, closing gate, looking concerned',
                         instance: DATE_ENDED
                     }

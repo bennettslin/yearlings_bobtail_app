@@ -1,6 +1,6 @@
 import isFinite from 'lodash/isfinite'
 import keys from 'lodash/keys'
-import albumScenes from '../scenes'
+import albumScenes from './scenes'
 
 import { ACTOR } from 'constants/scene'
 
@@ -35,7 +35,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                         keys(characterObject)[0] :
                         actor,
 
-                instance =
+                instanceName =
                     isAlternate ?
                         characterObject[character] :
                         characterObject,
@@ -44,10 +44,10 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     todo,
                     workedHours,
                     neededHours,
-                    description,
+                    instance,
                     compound,
                     duplicate
-                } = instance
+                } = instanceName
 
             // Don't count duplicate instances.
             if (!duplicate) {
@@ -59,7 +59,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     todo,
                     workedHours,
                     neededHours,
-                    description,
+                    instance,
                     compound,
                     duplicate
                 })
@@ -93,7 +93,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                     todo,
                     workedHours,
                     neededHours,
-                    description,
+                    instance,
                     compound,
                     character
                 } = role,
@@ -119,7 +119,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 sceneIndex,
                 todo,
                 workedHours,
-                description,
+                instance,
                 doneForNow
             })
 

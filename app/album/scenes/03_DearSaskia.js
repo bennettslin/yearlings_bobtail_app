@@ -142,15 +142,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side seated, pretending to read, panicked',
                     instance: PANICKED
                 },
                 [BRAD_SASHA]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'side seated, laughing, braids trailing',
                     instance: CHARMED_SCHOOLBUS
                 }
@@ -180,21 +175,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [BRAD_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'tied up, greeting Sasha with nervous laughter',
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'indignant, yelling at bullies',
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'laughing, feigning fear of Sasha',
                     instance: FEIGNING_FEAR
                 }

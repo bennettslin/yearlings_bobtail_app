@@ -157,9 +157,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'w-sitting, blissful',
                     instance: BLISSFUL_GUILTY
                 }
@@ -192,8 +189,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, sitting up in bed, feigning sick',
                     instance: FEIGNING_SICK
                 }
@@ -224,8 +219,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'in bed, asleep, turned away',
                     instance: ASLEEP
                 }
@@ -253,8 +246,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, sitting, shaken, scared',
                     instance: SHAKEN
                 }
@@ -283,20 +274,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, stoic',
                     instance: STOIC
                 },
                 [BRAD]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front angle, gesturing at Andrew to leave',
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, throwing rocks, angry',
                     instance: THROWING
                 }
@@ -325,27 +310,19 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, wistful',
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'eating chips',
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'playing guitar like an amateur',
                     instance: NOODLING
                 },
                 [SASHA]: {
                     popularGirl: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'back',
                         instance: POPULAR_GIRL
                     }
@@ -378,27 +355,19 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, sitting, sheepish',
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, sitting, staring',
                     instance: STARING
                 },
                 [MOTHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, angry, accusatory',
                     instance: ARGUING
                 },
                 [TRISTAN]: {
                     principal: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'side, confused, defensive, apologetic',
                         instance: PRINCIPAL
                     }

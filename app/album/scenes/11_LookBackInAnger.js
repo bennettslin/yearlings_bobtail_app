@@ -92,35 +92,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, playing guitar, singing',
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, playing bass, looking cool',
                     instance: PERFORMING
                 },
                 [TOMER]: {
                     shane: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'side angle, holding beer, turning to make room',
                         instance: SHANE_SPILLING
                     }
                 },
                 [WADE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, drinking beer',
                     instance: WATCHING
                 },
                 [AMY_STEPHANIE]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'side, squeezing through, apologetic',
                     instance: SQUEEZING
                 }
@@ -148,26 +137,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, charmed',
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, same Mara pose',
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking, carrying drums, smiling at Mara',
                     instance: CARRYING
                 },
                 [MARA]: {
-                    todo: true,
-                    workedHours: 3.75,
                     description: 'side, walking, carrying cymbal, talking',
                     instance: CARRYING
                 }
@@ -195,38 +176,26 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, carrying gear, looking back, hesitant',
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, leaning against wall, waiting for Jacob',
                     instance: WAITING
                 },
                 [MARA]: {
-                    todo: true,
-                    workedHours: 3.75,
                     description: 'side angle, looking at watch',
                     instance: WAITING
                 },
                 [AMY]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, looking back, uncertain',
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, talking to Wade',
                     instance: MINGLING
                 },
                 [WADE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, talking to Stephanie',
                     instance: MINGLING
                 }
@@ -247,31 +216,23 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, sitting on edge of bed, discontented',
                     instance: REMOVING_SHOES
                 },
                 [BENNETT_REFLECTION]: {
                     reflection: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'reflection',
                         instance: SHOES_REFLECTION
                     }
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'lying, reaching forward to touch Bennett',
                         instance: ASLEEP_REACHING
                     }
                 },
                 [LIZ_REFLECTION]: {
                     reflection: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'reflection',
                         instance: REACHING_REFLECTION
                     }

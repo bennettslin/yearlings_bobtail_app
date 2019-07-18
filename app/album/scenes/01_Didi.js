@@ -107,20 +107,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, looking at Anita',
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, rushing, exasperated',
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, running, panicked',
                     instance: PANICKED
                 }
@@ -148,20 +142,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, playing ball, offended',
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, running, pointing back',
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting, flustered',
                     instance: FLUSTERED
                 }
@@ -195,8 +183,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, in bathtub, downcast',
                     instance: BATHING
                 }
@@ -221,14 +207,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'back, squatting, smiling',
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, facing front, singing, smiling',
                     instance: SINGING
                 }

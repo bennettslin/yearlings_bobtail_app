@@ -81,14 +81,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting in car, taking off pants',
                     instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
-                    todo: true,
-                    workedHours: 3.25,
                     description: 'sitting in car, putting on perfume',
                     instance: PERFUMING
                 }
@@ -120,9 +116,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
-                    todo: true,
-                    workedHours: 3.5,
-                    compound: 2,
                     description: 'back angle, eyes closed, trying to get off',
                     instance: COWGIRL
                 }
@@ -154,9 +147,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
-                    todo: true,
-                    workedHours: 3.5,
-                    compound: 2,
                     description: 'back angle, giving blowjob',
                     instance: BLOWJOB
                 }
@@ -188,8 +178,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front angle, dying, infirm',
                     instance: INFIRM
                 }
@@ -217,13 +205,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    duplicate: true,
                     description: 'front angle, dying, infirm',
                     instance: INFIRM
                 },
                 [MIRIAM]: {
-                    todo: true,
-                    workedHours: 3.25,
                     description: 'serving in tennis',
                     instance: TENNIS
                 }
@@ -252,14 +237,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'pensive, laying condom on ground',
                     instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {
-                    todo: true,
-                    workedHours: 3.25,
                     description: 'side, looking back, reversing car',
                     instance: REVERSING
                 }

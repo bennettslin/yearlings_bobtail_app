@@ -65,8 +65,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, seated, petting cat, sad',
                         instance: PETTING_SEATED
                     }
@@ -89,8 +87,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, standing, petting cat, exhausted',
                         instance: PETTING_STANDING
                     }
@@ -113,8 +109,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, seated, pensive',
                         instance: SIFTING_TCHOTCHKES
                     }
@@ -143,15 +137,11 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side angle, glumly welcoming',
                         instance: OPENING_DOOR
                     }
                 },
                 [KHARI]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, cheery in a low-key way',
                     instance: ARRIVED
                 }
@@ -173,15 +163,11 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, seated, defensive',
                         instance: DEFENDING
                     }
                 },
                 [KHARI]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, seated, eating, judgmental',
                     instance: JUDGMENTAL
                 }
@@ -207,15 +193,11 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, seated, exhausted',
                         instance: NOT_HUNGRY
                     }
                 },
                 [KHARI]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'back angle, concerned',
                     instance: CONCERNED
                 }
@@ -240,8 +222,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
-                        workedHours: 3.75,
                         description: 'side, seated, asleep',
                         instance: ASLEEP_COUCH
                     }
@@ -267,7 +247,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        duplicate: true,
                         description: 'side, seated, asleep',
                         instance: ASLEEP_COUCH
                     }

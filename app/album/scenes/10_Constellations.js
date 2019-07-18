@@ -92,26 +92,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking',
                     instance: ABBEY_ROAD
                 }
@@ -135,26 +127,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, holding body and gesturing its smallness',
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, reading bottle intently',
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, holding large bottle',
                     instance: WALGREENS
                 },
                 [TOMER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, feigning superiority',
                     instance: WALGREENS
                 }
@@ -178,26 +162,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, blathering',
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, play fighting',
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, bored by conversation',
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, play fighting',
                     instance: STEAM_TUNNEL
                 }
@@ -221,21 +197,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'front, looking upwards, inspired',
                     instance: CEMETERY
                 },
                 [ANA_HOWIE]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'side angle, shivering, feeling comforted',
                     instance: CEMETERY
                 },
                 [TOMER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, squatting, pouring water on grave',
                     instance: CEMETERY
                 }
@@ -263,26 +232,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, sleeping in car',
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, sleeping in car',
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'driving car, alert, wigging out',
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'back angle, sleeping in car',
                     instance: STATION_WAGON
                 }
@@ -314,14 +275,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'lying on couch, watching TV, alert',
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'downstairs, in agony',
                     instance: ATTIC
                 }

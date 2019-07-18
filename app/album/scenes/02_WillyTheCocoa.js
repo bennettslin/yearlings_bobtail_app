@@ -133,8 +133,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, holding up a bottle, squinting',
                     instance: COLLECTING
                 }
@@ -164,26 +162,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, ducking behind post, chuckling',
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'squatting, righting chair, exasperated, concerned',
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'off balance, having a tantrum',
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'stepping off porch, cautious, trying to calm Christopher',
                     instance: CAUTIOUS
                 }
@@ -205,20 +195,14 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, running, angry',
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'lying on side, in pain, clenching stomach',
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, aggressive stance, angry',
                     instance: ENRAGED
                 }
@@ -252,16 +236,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [HOWIE_WILLY]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'side angle, pointing at shoe, pushing Willy',
                     instance: GANGBANGER
                 },
                 [TOMER]: {
                     gangbanger: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'pulling bottle from cart, about to strike, threatening',
                         instance: GANGBANGER
                     }
@@ -293,14 +272,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'getting up to close curtain, trying to be reassuring',
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'lying in bed, worried, scared',
                     instance: FEARFUL
                 }
@@ -331,9 +306,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER_BENNETT_WILLY]: {
-                    todo: true,
-                    workedHours: 4.25,
-                    compound: 2,
                     description: 'side angle, looking up at Bennett, reassuring',
                     instance: REASSURING_ENCHANTED
                 }

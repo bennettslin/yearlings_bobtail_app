@@ -92,14 +92,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'standing forward, disappointed, defeated',
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'walking away, in a bad mood',
                     instance: WEEPING
                 }
@@ -120,14 +116,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting slouched, showing lyrics to Catherine',
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'sitting upright, droll smile',
                     instance: QUIPPING
                 }
@@ -161,8 +153,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'standing, back forward, hands in pocket',
                     instance: CATHOLIC_PENSIVE
                 }
@@ -190,23 +180,17 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side angle, noticing Catholic',
                     instance: CATHOLIC_IDEA
                 },
                 [WADE]: {
                     catholic: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'side angle, walking, looking pious',
                         instance: CATHOLIC_GUY
                     }
                 },
                 [AMY]: {
                     smoker: {
-                        todo: true,
-                        workedHours: 4.25,
                         description: 'walking up stairs, back forward, exhaling smoke',
                         instance: SMOKER
                     }
@@ -234,14 +218,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'side, walking, looking pious',
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    todo: true,
-                    workedHours: 4.25,
                     description: 'walking forward, confused and curious at Bennett',
                     instance: PUZZLED
                 }
