@@ -202,7 +202,7 @@ export default [
                 },
                 [ANA]: {
                     todo: true,
-                    workedHours: 3.75,
+                    workedHours: 4.25,
                     description: 'front, leaning against wall, waiting for Jacob',
                     instance: WAITING
                 },
