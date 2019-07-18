@@ -18,10 +18,5 @@ export default [
         taskName: 'glassRack',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'pharmacyAisle',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

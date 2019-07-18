@@ -19,11 +19,8 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [PHARMACY_AISLE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 8,
-                zHeight: 5
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.475
         }
     }
 }

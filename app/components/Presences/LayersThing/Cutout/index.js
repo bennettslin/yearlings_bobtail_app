@@ -28,7 +28,7 @@ import trafficLight from 'assets/svgs/cutouts/trafficLight'
 import dishPile from 'assets/svgs/cutouts/dishPile'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant'
-// import pharmacyAisle from 'assets/svgs/flats/pharmacyAisle'
+import pharmacyAisle from 'assets/svgs/cutouts/pharmacyAisle'
 import steamPipes from 'assets/svgs/cutouts/steamPipes'
 import storageBoxes from 'assets/svgs/cutouts/storageBoxes'
 import storageChest from 'assets/svgs/cutouts/storageChest'
@@ -141,7 +141,7 @@ export default {
     [DISH_PILE]: dishPile,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
-    [PHARMACY_AISLE]: false,
+    [PHARMACY_AISLE]: pharmacyAisle,
     [STEAM_PIPES]: steamPipes,
     [STORAGE_BOXES]: storageBoxes,
     [STORAGE_CHEST]: storageChest,

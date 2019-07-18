@@ -213,5 +213,10 @@ export default [
         taskName: 'dishPile',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'pharmacyAisle',
+        workedHours: 3,
+        neededHours: 3
     }
 ]
