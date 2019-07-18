@@ -4726,5 +4726,10 @@ export default [
         taskName: `Arrange dishroom cutouts.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Remove admin from production.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

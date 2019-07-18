@@ -20,8 +20,8 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Strip out admin before final release.`,
+        taskName: `Remove date-fns in production. Also figure out what to do about logging before release.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     }
 ]

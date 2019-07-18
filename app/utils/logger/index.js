@@ -15,12 +15,13 @@ import {
 } from './helper'
 
 // Only show error and fatal in production.
-if (process.env.NODE_ENV === 'production') {
-    logger.trace = () => {}
-    logger.debug = () => {}
-    logger.info = () => {}
-    logger.warn = () => {}
-}
+// TODO: Do this before release, but leave logging in production for now.
+// if (process.env.NODE_ENV === 'production') {
+//     logger.trace = () => {}
+//     logger.debug = () => {}
+//     logger.info = () => {}
+//     logger.warn = () => {}
+// }
 
 global.logAccess = logAccess
 global.logAdmin = logAdmin
