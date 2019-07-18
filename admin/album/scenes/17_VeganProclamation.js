@@ -8,21 +8,13 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     CLUB_FAR_KEY,
     LIZ_BED_OPEN_PHONE_KEY,
     ALLEY_KEY,
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_WINTER,
-    SEASON_LOVE
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     KHARI_LIZ,
@@ -32,31 +24,26 @@ import {
     STEPHANIE,
     WADE,
     KHARI_LIZ_REFLECTION
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     CAMPUS_ASHAMED,
     SHOW_ANNOYED,
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from '../../constants/scene/actors/instances/bennett'
-
+} from 'constants/scene/actors/instances/bennett'
 import {
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION
-} from '../../constants/scene/actors/instances/khariLiz'
-
+} from 'constants/scene/actors/instances/khariLiz'
 import {
     GREETING,
     PROTESTER
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     UC_BERKELEY_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
@@ -65,35 +52,30 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
     DUMPSTER
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     ASH_CAN,
     STAGE_MIC_FAR,
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
-} from '../../constants/scene/things/fixtures'
-
-import { CAMPANILE } from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/fixtures'
+import { CAMPANILE } from 'constants/scene/things/flats'
 import {
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
-} from '../../constants/scene/things/furniture'
-
+} from 'constants/scene/things/furniture'
 import {
     CROWD_BACK,
     LIZ_BED,
     PHONE_CALL_PANEL
-} from '../../constants/scene/things/panels'
-
+} from 'constants/scene/things/panels'
 import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION
-} from '../../constants/scene/things/puppets'
+} from 'constants/scene/things/puppets'
 
 export default [
     {
@@ -130,11 +112,7 @@ export default [
                 [GHOST_ODIN_CAMPUS]: true
             }
         },
-        cubes: BERKELEY_CAMPANILE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BERKELEY_CAMPANILE_KEY
     },
     {
         unitIndex: 4,
@@ -175,11 +153,7 @@ export default [
                 [GHOST_ODIN_CLUB]: true
             }
         },
-        cubes: CLUB_FAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: CLUB_FAR_KEY
     },
     {
         unitIndex: 7,
@@ -203,11 +177,7 @@ export default [
                 [GHOST_ODIN_ALLEY]: true
             }
         },
-        cubes: ALLEY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: ALLEY_KEY
     },
     {
         unitIndex: 10,
@@ -250,11 +220,7 @@ export default [
                 [PHONE_CALL_PANEL]: true
             }
         },
-        cubes: LIZ_BED_OPEN_PHONE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        cubes: LIZ_BED_OPEN_PHONE_KEY
     },
     {
         unitIndex: 12,
@@ -305,10 +271,6 @@ export default [
                 [GHOST_ODIN_DEMONSTRATION]: true
             }
         },
-        cubes: BERKELEY_BANCROFT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BERKELEY_BANCROFT_KEY
     }
 ]

@@ -4,21 +4,13 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-
 import {
     LIZ_COUCH_THOUGHT_KEY,
     OAKLAND_HOUSES_KEY,
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN,
-    SEASON_THOUGHT
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     YOUNG_BENNETT,
     BENNETT,
@@ -29,44 +21,30 @@ import {
     WILLY,
     AMY_NESTOR_TOMER,
     STEPHANIE
-} from '../../constants/scene/actors'
-
-import { OFFICER } from '../../constants/scene/actors/instances/amyNestorTomer'
-
+} from 'constants/scene/actors'
+import { OFFICER } from 'constants/scene/actors/instances/amyNestorTomer'
 import {
     CORD_SIDE,
     CORD_REAR
-} from '../../constants/scene/actors/instances/bennett'
-
-import {
-    AWKWARD_CONSOLATION
-} from '../../constants/scene/actors/instances/bennettLiz'
-
+} from 'constants/scene/actors/instances/bennett'
+import { AWKWARD_CONSOLATION } from 'constants/scene/actors/instances/bennettLiz'
 import {
     HORSING,
     DRYING_TEARS
-} from '../../constants/scene/actors/instances/bennettStephanie'
-
-import {
-    BENNETT_DEFIANT
-} from '../../constants/scene/actors/instances/stephanie'
-
-import { CROSSING_GUARD } from '../../constants/scene/actors/instances/willy'
-
-import { YOUNG_CHILD } from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/bennettStephanie'
+import { BENNETT_DEFIANT } from 'constants/scene/actors/instances/stephanie'
+import { CROSSING_GUARD } from 'constants/scene/actors/instances/willy'
+import { YOUNG_CHILD } from 'constants/scene/actors/instances/songs'
 import {
     OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
@@ -87,7 +65,7 @@ import {
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
-} from '../../constants/scene/things/flats'
+} from 'constants/scene/things/flats'
 
 export default [
     {
@@ -110,11 +88,7 @@ export default [
                 [OAKLAND_HOUSE_RIGHT]: true
             }
         },
-        cubes: OAKLAND_HOUSES_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: OAKLAND_HOUSES_KEY
     },
     {
         unitIndex: 3,
@@ -133,11 +107,7 @@ export default [
                 [LIZ_COUCH_THOUGHT_BACKDROP]: true
             }
         },
-        cubes: LIZ_COUCH_THOUGHT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        cubes: LIZ_COUCH_THOUGHT_KEY
     },
     {
         unitIndex: 4,
@@ -176,11 +146,7 @@ export default [
                 [RESIDENTIAL_NEAR_RIGHT]: true
             }
         },
-        cubes: OAKLAND_RESIDENTIAL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: OAKLAND_RESIDENTIAL_KEY
     },
     {
         unitIndex: 7,
@@ -216,11 +182,7 @@ export default [
                 [COMMERCIAL_NEAR_RIGHT]: true
             }
         },
-        cubes: OAKLAND_COMMERCIAL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: OAKLAND_COMMERCIAL_KEY
     },
     {
         unitIndex: 10,
@@ -274,10 +236,6 @@ export default [
                 [PUBLIC_NEAR_RIGHT]: true
             }
         },
-        cubes: OAKLAND_PUBLIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: OAKLAND_PUBLIC_KEY
     }
 ]

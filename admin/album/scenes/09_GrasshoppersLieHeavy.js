@@ -7,7 +7,6 @@ import {
     FURNITURE,
     PANEL
 } from 'constants/scene'
-
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,
@@ -18,41 +17,29 @@ import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     BENNETT_GATE_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN,
-    SEASON_WINTER,
-    SEASON_LOVE
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     BENNETT_LIZ,
     LIZ,
     NESTOR,
     BENNETT_LIZ_REFLECTION
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
-} from '../../constants/scene/actors/instances/bennett'
-
+} from 'constants/scene/actors/instances/bennett'
 import {
     JOGGER
-} from '../../constants/scene/actors/instances/nestor'
-
+} from 'constants/scene/actors/instances/nestor'
 import {
     DISHROOM_LANCET,
     DATE_ENDING,
     DATE_ENDED,
     GATE_CODE,
     RUMPLED_LINENS
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -62,18 +49,15 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../constants/scene/actors/instances/bennettLiz'
-
+} from 'constants/scene/actors/instances/bennettLiz'
 import {
     WAITING_ROOM_THOUGHTS
-} from '../../constants/scene/things/bubbles'
-
+} from 'constants/scene/things/bubbles'
 import {
     CODE_BOX,
     CLIPBOARD,
     PAINTING
-} from '../../constants/scene/things/cardboards'
-
+} from 'constants/scene/things/cardboards'
 import {
     DISH_PILE,
     TRAY_PILE,
@@ -84,8 +68,7 @@ import {
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     NUDE_DRAWINGS,
     VASELINE,
@@ -93,8 +76,7 @@ import {
     LIZ_PHONE_REFLECTION,
     BLOODY_TOWEL,
     BLOODY_TOWEL_REFLECTION
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     BENNETT_PILLOW,
     BENNETT_BLANKET,
@@ -102,8 +84,7 @@ import {
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
-} from '../../constants/scene/things/furniture'
-
+} from 'constants/scene/things/furniture'
 import {
     CONVEYOR_BELT,
     DISHROOM_SINK,
@@ -115,7 +96,7 @@ import {
     WAITING_ARMCHAIR__LIZ,
     WAITING_LEFT_ARMREST__LIZ,
     WAITING_RIGHT_ARMREST__LIZ
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 /**
  * All of these scenes repeat twice.
@@ -146,11 +127,7 @@ export default [
                 [DISHROOM_SINK]: true
             }
         },
-        cubes: DISHROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: DISHROOM_KEY
     },
     {
         unitIndex: 4,
@@ -185,11 +162,7 @@ export default [
                 [DISHROOM_SINK]: true
             }
         },
-        cubes: DISHROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: DISHROOM_KEY
     },
     {
         unitIndex: 6,
@@ -210,11 +183,7 @@ export default [
                 }
             }
         },
-        cubes: LIZ_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_GATE_KEY
     },
     {
         unitIndex: 7,
@@ -238,10 +207,6 @@ export default [
             [CUTOUT]: {
                 [TRAFFIC_LIGHT]: true
             }
-        },
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
         }
     },
     {
@@ -271,11 +236,7 @@ export default [
                 [APARTMENT_PLANT]: true
             }
         },
-        cubes: BENNETT_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BENNETT_GATE_KEY
     },
     {
         unitIndex: 10,
@@ -304,11 +265,7 @@ export default [
                 [APARTMENT_PLANT]: true
             }
         },
-        cubes: BENNETT_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BENNETT_GATE_KEY
     },
     {
         unitIndex: 11,
@@ -335,11 +292,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BENNETT_BED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BENNETT_BED_KEY
     },
     {
         unitIndex: 12,
@@ -373,11 +326,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BENNETT_BED_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BENNETT_BED_OPEN_KEY
     },
     {
         unitIndex: 13,
@@ -410,11 +359,7 @@ export default [
                 [WAITING_RIGHT_ARMREST__LIZ]: true
             }
         },
-        cubes: WAITING_ROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: WAITING_ROOM_KEY
     },
     {
         unitIndex: 15,
@@ -445,11 +390,7 @@ export default [
                 [WAITING_RIGHT_ARMREST__LIZ]: true
             }
         },
-        cubes: WAITING_ROOM_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: WAITING_ROOM_OPEN_KEY
     },
     {
         unitIndex: 16,
@@ -487,11 +428,7 @@ export default [
                 [LIZ_BED]: true
             }
         },
-        cubes: LIZ_BED_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        cubes: LIZ_BED_OPEN_KEY
     },
     {
         unitIndex: 17,
@@ -529,11 +466,7 @@ export default [
                 [LIZ_BED]: true
             }
         },
-        cubes: LIZ_BED_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        cubes: LIZ_BED_OPEN_KEY
     },
     {
         unitIndex: 19,
@@ -571,10 +504,6 @@ export default [
                 [LIZ_BED]: true
             }
         },
-        cubes: LIZ_BED_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        cubes: LIZ_BED_OPEN_KEY
     }
 ]

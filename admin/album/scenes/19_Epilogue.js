@@ -1,12 +1,5 @@
 import { ACTOR } from 'constants/scene'
-
-import { LOGUE_KEY } from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_INDOOR
-} from '../../scene/sky/keys'
-
+import { LOGUE_KEY } from 'constants/scene/scenes'
 import {
     BENNETTS_CHRISTOPHER_LIZ,
     ANITA_BENNETT,
@@ -30,9 +23,8 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from '../../constants/scene/actors'
-
-import { EPILOGUE } from '../../constants/scene/actors/instances/songs'
+} from 'constants/scene/actors'
+import { EPILOGUE } from 'constants/scene/actors/instances/songs'
 
 export default [
     {
@@ -199,10 +191,6 @@ export default [
                 }
             }
         },
-        cubes: LOGUE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_INDOOR
-        }
+        cubes: LOGUE_KEY
     }
 ]

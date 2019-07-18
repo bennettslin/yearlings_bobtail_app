@@ -7,21 +7,13 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     EL_TORITO_KEY,
     PAMPAS_KEY,
     WEDDING_KEY,
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_SPRING,
-    SEASON_THOUGHT
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     BENNETT_LIZ,
@@ -30,58 +22,49 @@ import {
     LIZ,
     MIRIAM,
     AMY
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     DOCTOR
-} from '../../constants/scene/actors/instances/amy'
-
+} from 'constants/scene/actors/instances/amy'
 import {
     EL_TORITO,
     GOPI
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from '../../constants/scene/actors/instances/bennettLiz'
-
+} from 'constants/scene/actors/instances/bennettLiz'
 import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
     WEDDING_CROWD,
     IV_DRIP,
     CLIFF_TREE
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     HOSPITAL_RECORD_PLAYER
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR,
     FOREBODING_TREES
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     WEDDING_PLATFORM,
     INVERSE_THOUGHT_PANEL,
     HOSPITAL_BED
-} from '../../constants/scene/things/panels'
-
+} from 'constants/scene/things/panels'
 import {
     PUPPET_KHARI_LIZ
-} from '../../constants/scene/things/puppets'
+} from 'constants/scene/things/puppets'
 
 export default [
     {
@@ -109,11 +92,7 @@ export default [
                 [DISPENSER_RIGHT]: true
             }
         },
-        cubes: EL_TORITO_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: EL_TORITO_KEY
     },
     {
         unitIndex: 3,
@@ -159,11 +138,7 @@ export default [
                 [PAMPAS_FAR]: true
             }
         },
-        cubes: PAMPAS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: PAMPAS_KEY
     },
     {
         unitIndex: 5,
@@ -194,11 +169,7 @@ export default [
                 [PUPPET_KHARI_LIZ]: true
             }
         },
-        cubes: WEDDING_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: WEDDING_KEY
     },
     {
         unitIndex: 7,
@@ -224,11 +195,7 @@ export default [
                 [CLIFF_GRAVES_NEAR]: true
             }
         },
-        cubes: CLIFF_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: CLIFF_KEY
     },
     {
         unitIndex: 9,
@@ -265,10 +232,6 @@ export default [
                 [INVERSE_THOUGHT_PANEL]: true
             }
         },
-        cubes: CLIFF_DEATHBED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        cubes: CLIFF_DEATHBED_KEY
     }
 ]

@@ -6,65 +6,50 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-
 import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
     GO_KARTS_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     LIZ,
     KHARI,
     STEPHANIE
-} from '../../constants/scene/actors'
-
-import { DOUBLE_ALBERT } from '../../constants/scene/actors/instances/khari'
-
-import { FLAPPER } from '../../constants/scene/actors/instances/stephanie'
-
+} from 'constants/scene/actors'
+import { DOUBLE_ALBERT } from 'constants/scene/actors/instances/khari'
+import { FLAPPER } from 'constants/scene/actors/instances/stephanie'
 import {
     DATE_ENDING,
     MUSEUM,
     BACKSTAGE,
     GO_KARTS,
     DATE_ENDED
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     GO_KART_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     GO_KART_THOUGHT
-} from '../../constants/scene/things/bubbles'
-
+} from 'constants/scene/things/bubbles'
 import {
     MUSEUM_DISPLAY,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     CAVEMAN_BONES,
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -88,11 +73,7 @@ export default [
                 }
             }
         },
-        cubes: LIZ_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_GATE_KEY
     },
     {
         unitIndex: 5,
@@ -121,11 +102,7 @@ export default [
                 [CAVEMAN_BONES]: true
             }
         },
-        cubes: MUSEUM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: MUSEUM_KEY
     },
     {
         unitIndex: 8,
@@ -171,11 +148,7 @@ export default [
                 [MANNEQUIN]: true
             }
         },
-        cubes: BACKSTAGE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: BACKSTAGE_KEY
     },
     {
         unitIndex: 11,
@@ -205,11 +178,7 @@ export default [
                 [GO_KART_EXTERIOR__RIGHT]: true
             }
         },
-        cubes: GO_KARTS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: GO_KARTS_KEY
     },
     {
         unitIndex: 14,
@@ -238,10 +207,6 @@ export default [
                 [TRAFFIC_LIGHT]: true
             }
         },
-        cubes: LIZ_GATE_STREET_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_GATE_STREET_KEY
     }
 ]

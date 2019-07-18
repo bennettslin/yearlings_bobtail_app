@@ -7,7 +7,6 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY,
@@ -17,19 +16,11 @@ import {
     BUOY_KEY,
     OCEAN_DEPTHS_KEY,
     OCEAN_FLOOR_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN,
-    SEASON_OCEAN
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     PRETEEN_BENNETT,
     SASHA_BENNETT
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     MAT,
     STAIRS,
@@ -38,10 +29,8 @@ import {
     SHORE,
     BUOY,
     OCEAN_FLOOR
-} from '../../constants/scene/actors/instances/preteenBennett'
-
-import { MERMAID } from '../../constants/scene/actors/instances/sashaBennett'
-
+} from 'constants/scene/actors/instances/preteenBennett'
+import { MERMAID } from 'constants/scene/actors/instances/sashaBennett'
 import {
     TAIWAN_STAIRS_BACKDROP,
     TAIWAN_STREETS_BACKDROP,
@@ -49,8 +38,7 @@ import {
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
@@ -66,18 +54,15 @@ import {
     BENNETT_ODIN_OCEAN_FLOOR,
     BENNETT_MAT,
     ODIN_MAT
-} from '../../constants/scene/things/cardboards'
-
+} from 'constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
     YELLOW_TAPED_GRILL
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     FRIDGE_DRAWINGS
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
@@ -86,12 +71,11 @@ import {
     ROLLER_COASTER,
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -118,11 +102,7 @@ export default [
                 [FRIDGE_DRAWINGS]: true
             }
         },
-        cubes: TAIWAN_ROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: TAIWAN_ROOM_KEY
     },
     {
         unitIndex: 4,
@@ -144,11 +124,7 @@ export default [
                 [ODIN_TAIWAN_GATE]: true
             }
         },
-        cubes: TAIWAN_STAIRS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: TAIWAN_STAIRS_KEY
     },
     {
         unitIndex: 6,
@@ -173,11 +149,7 @@ export default [
                 [TAIWAN_HOUSE_NEAR]: true
             }
         },
-        cubes: TAIWAN_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: TAIWAN_GATE_KEY
     },
     {
         unitIndex: 9,
@@ -202,11 +174,7 @@ export default [
                 [RICKSHAW_TOWN]: true
             }
         },
-        cubes: RICKSHAW_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: RICKSHAW_KEY
     },
     {
         unitIndex: 11,
@@ -234,11 +202,7 @@ export default [
                 [ROLLER_COASTER]: true
             }
         },
-        cubes: SHORE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: SHORE_KEY
     },
     {
         unitIndex: 14,
@@ -258,11 +222,7 @@ export default [
                 [SEA_SERPENT_RIGHT]: true
             }
         },
-        cubes: BUOY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_OCEAN
-        }
+        cubes: BUOY_KEY
     },
     {
         unitIndex: 18,
@@ -288,11 +248,7 @@ export default [
                 [OCEAN_BOTTOM_NEAR]: true
             }
         },
-        cubes: OCEAN_DEPTHS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_OCEAN
-        }
+        cubes: OCEAN_DEPTHS_KEY
     },
     {
         unitIndex: 20,
@@ -318,10 +274,6 @@ export default [
                 [OCEAN_CAVE_EXTERIOR]: true
             }
         },
-        cubes: OCEAN_FLOOR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_OCEAN
-        }
+        cubes: OCEAN_FLOOR_KEY
     }
 ]

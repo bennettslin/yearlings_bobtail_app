@@ -10,7 +10,6 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     BEDROOM_KEY,
     BEDROOM_OPEN_KEY,
@@ -19,13 +18,7 @@ import {
     VAN_NUYS_HALLWAY_KEY,
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_WINTER
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     PRETEEN_BENNETT,
     MOTHER,
@@ -35,93 +28,75 @@ import {
     ANDREW,
     TRISTAN,
     CHRISTOPHER_BENNETT
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     THROWING,
     NOODLING
-} from '../../constants/scene/actors/instances/andrew'
-
+} from 'constants/scene/actors/instances/andrew'
 import {
     GESTURING,
     SNACKING
-} from '../../constants/scene/actors/instances/brad'
-
+} from 'constants/scene/actors/instances/brad'
 import {
     STARING
-} from '../../constants/scene/actors/instances/christopher'
-
+} from 'constants/scene/actors/instances/christopher'
 import {
     BLISSFUL_GUILTY
-} from '../../constants/scene/actors/instances/christopherBennett'
-
-import { ARGUING } from '../../constants/scene/actors/instances/mother'
-
+} from 'constants/scene/actors/instances/christopherBennett'
+import { ARGUING } from 'constants/scene/actors/instances/mother'
 import {
     FEIGNING_SICK,
     SHAKEN,
     STOIC,
     WISTFUL,
     SHEEPISH
-} from '../../constants/scene/actors/instances/preteenBennett'
-
-import { POPULAR_GIRL } from '../../constants/scene/actors/instances/sasha'
-
-import { ASLEEP } from '../../constants/scene/actors/instances/songs'
-
-import { PRINCIPAL } from '../../constants/scene/actors/instances/tristan'
-
+} from 'constants/scene/actors/instances/preteenBennett'
+import { POPULAR_GIRL } from 'constants/scene/actors/instances/sasha'
+import { ASLEEP } from 'constants/scene/actors/instances/songs'
+import { PRINCIPAL } from 'constants/scene/actors/instances/tristan'
 import {
     VAN_NUYS_SCHOOL_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     DOGS_SKETCH,
     SKETCHBOOK__DOGS,
     ESCAPE_POD_SKETCH,
     SKETCHBOOK__ESCAPE_POD
-} from '../../constants/scene/things/bubbles'
-
+} from 'constants/scene/things/bubbles'
 import {
     BLOOM_COUNTY_POSTER,
     VAN_NUYS_LOGO,
     CORKBOARD
-} from '../../constants/scene/things/cardboards'
-
+} from 'constants/scene/things/cardboards'
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
     VAN_NUYS_PLANT__LOCKERS,
     VAN_NUYS_PLANT__QUAD
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
     THROWN_FRUIT
-} from '../../constants/scene/things/fixtures'
-
-import { BEDROOM_BUS } from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/fixtures'
+import { BEDROOM_BUS } from 'constants/scene/things/flats'
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
-} from '../../constants/scene/things/furniture'
-
+} from 'constants/scene/things/furniture'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE
-} from '../../constants/scene/things/panels'
-
+} from 'constants/scene/things/panels'
 import {
     PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY
-} from '../../constants/scene/things/puppets'
+} from 'constants/scene/things/puppets'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -145,11 +120,7 @@ export default [
                 [BEDROOM_FENCE]: true
             }
         },
-        cubes: BEDROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BEDROOM_KEY
     },
     {
         unitIndex: 2,
@@ -180,11 +151,7 @@ export default [
                 [BEDROOM_FENCE]: true
             }
         },
-        cubes: BEDROOM_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BEDROOM_OPEN_KEY
     },
     {
         unitIndex: 6,
@@ -212,11 +179,7 @@ export default [
                 [CAPTAIN_BED]: true
             }
         },
-        cubes: BEDROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BEDROOM_KEY
     },
     {
         unitIndex: 9,
@@ -241,11 +204,7 @@ export default [
                 [PCHELKA_MUSHKA_ROCKET]: true
             }
         },
-        cubes: BEDROOM_DOGS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BEDROOM_DOGS_KEY
     },
     {
         unitIndex: 10,
@@ -271,11 +230,7 @@ export default [
                 [SPACE_COLONY]: true
             }
         },
-        cubes: BEDROOM_SPACE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: BEDROOM_SPACE_KEY
     },
     {
         unitIndex: 13,
@@ -313,11 +268,7 @@ export default [
                 [THROWN_FRUIT]: true
             }
         },
-        cubes: VAN_NUYS_LOCKERS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: VAN_NUYS_LOCKERS_KEY
     },
     {
         unitIndex: 17,
@@ -366,11 +317,7 @@ export default [
                 [VAN_NUYS_PLANT__QUAD]: true
             }
         },
-        cubes: VAN_NUYS_QUAD_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: VAN_NUYS_QUAD_KEY
     },
     {
         unitIndex: 18,
@@ -408,10 +355,6 @@ export default [
                 [CORKBOARD]: true
             }
         },
-        cubes: VAN_NUYS_HALLWAY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        cubes: VAN_NUYS_HALLWAY_KEY
     }
 ]

@@ -7,72 +7,55 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN,
-    SEASON_THOUGHT
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     MIRIAM,
     MIRIAM_BENNETT
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM
-} from '../../constants/scene/actors/instances/bennett'
-
+} from 'constants/scene/actors/instances/bennett'
 import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from '../../constants/scene/actors/instances/miriam'
-
+} from 'constants/scene/actors/instances/miriam'
 import {
     COWGIRL,
     BLOWJOB
-} from '../../constants/scene/actors/instances/miriamBennett'
-
+} from 'constants/scene/actors/instances/miriamBennett'
 import {
     GOLDEN_GATE_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     EL_CERRITO_TREE,
     IV_DRIP
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     HOSPITAL_RECORD_PLAYER
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
     HOSPITAL_BED
-} from '../../constants/scene/things/panels'
-
+} from 'constants/scene/things/panels'
 import {
     PUPPET_REATTA
-} from '../../constants/scene/things/puppets'
+} from 'constants/scene/things/puppets'
 
 export default [
     {
@@ -108,11 +91,7 @@ export default [
                 [REATTA_INTERIOR]: true
             }
         },
-        cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: EL_CERRITO_CAR_KEY
     },
     {
         unitIndex: 3,
@@ -142,11 +121,7 @@ export default [
                 [REATTA_INTERIOR]: true
             }
         },
-        cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: EL_CERRITO_CAR_KEY
     },
     {
         unitIndex: 5,
@@ -176,11 +151,7 @@ export default [
                 [REATTA_INTERIOR]: true
             }
         },
-        cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: EL_CERRITO_CAR_KEY
     },
     {
         unitIndex: 7,
@@ -205,11 +176,7 @@ export default [
                 [DEATHBED_THOUGHT_PANEL]: true
             }
         },
-        cubes: EL_CERRITO_DEATHBED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        cubes: EL_CERRITO_DEATHBED_KEY
     },
     {
         unitIndex: 8,
@@ -240,11 +207,7 @@ export default [
                 [TENNIS_THOUGHT_PANEL]: true
             }
         },
-        cubes: EL_CERRITO_TENNIS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        cubes: EL_CERRITO_TENNIS_KEY
     },
     {
         unitIndex: 9,
@@ -279,11 +242,7 @@ export default [
                 [REATTA_INTERIOR]: true
             }
         },
-        cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: EL_CERRITO_CAR_KEY
     },
     {
         unitIndex: 11,
@@ -303,10 +262,6 @@ export default [
                 [PUPPET_REATTA]: true
             }
         },
-        cubes: EL_CERRITO_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: EL_CERRITO_KEY
     }
 ]

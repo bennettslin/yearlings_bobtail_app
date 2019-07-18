@@ -4,20 +4,12 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
     CLUB_LOADING
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_INDOOR,
-    SEASON_SUMMER
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     MARA,
@@ -31,42 +23,34 @@ import {
     WADE,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from '../../constants/scene/actors/instances/bennett'
-
+} from 'constants/scene/actors/instances/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from '../../constants/scene/actors/instances/liz'
-
-import { SHANE_SPILLING } from '../../constants/scene/actors/instances/tomer'
-
-import { WATCHING } from '../../constants/scene/actors/instances/wade'
-
+} from 'constants/scene/actors/instances/liz'
+import { SHANE_SPILLING } from 'constants/scene/actors/instances/tomer'
+import { WATCHING } from 'constants/scene/actors/instances/wade'
 import {
     SQUEEZING
-} from '../../constants/scene/actors/instances/amyStephanie'
-
+} from 'constants/scene/actors/instances/amyStephanie'
 import {
     PERFORMING,
     FLIRTING,
     CARRYING,
     MINGLING,
     WAITING
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE__CROWD,
     WALL_SPEAKER_SIDE__STAGE
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     STAGE_MIC_SIDE__CROWD,
     STAGE_MIC_SIDE__STAGE,
@@ -78,12 +62,11 @@ import {
     LIZ_PHONE_REFLECTION,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     CROWD_SIDE,
     LIZ_BED
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -136,11 +119,7 @@ export default [
                 [CROWD_SIDE]: true
             }
         },
-        cubes: CLUB_SIDE_CROWD_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_INDOOR
-        }
+        cubes: CLUB_SIDE_CROWD_KEY
     },
     {
         unitIndex: 5,
@@ -183,11 +162,7 @@ export default [
                 [GUITAR_CASE_OPEN]: true
             }
         },
-        cubes: CLUB_SIDE_STAGE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_INDOOR
-        }
+        cubes: CLUB_SIDE_STAGE_KEY
     },
     {
         unitIndex: 8,
@@ -235,11 +210,7 @@ export default [
                 [DRUMS_STACKED__CLUB]: true
             }
         },
-        cubes: CLUB_LOADING,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: CLUB_LOADING
     },
     {
         unitIndex: 12,
@@ -287,10 +258,6 @@ export default [
                 [LIZ_BED]: true
             }
         },
-        cubes: LIZ_BED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: LIZ_BED_KEY
     }
 ]

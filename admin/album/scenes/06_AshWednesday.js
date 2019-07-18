@@ -7,57 +7,42 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     BENNETT_COUCH_THOUGHT_KEY,
     COURTYARD_KEY,
     CATHOLIC_CHURCH_KEY,
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_SPRING,
-    SEASON_THOUGHT
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     CATHERINE,
     AMY,
     WADE
-} from '../../constants/scene/actors'
-
-import { SMOKER } from '../../constants/scene/actors/instances/amy'
-
+} from 'constants/scene/actors'
+import { SMOKER } from 'constants/scene/actors/instances/amy'
 import {
     BREAKUP_DEJECTED,
     SOLICITING_OPINION,
     CATHOLIC_PENSIVE,
     CATHOLIC_IDEA,
     PIOUS
-} from '../../constants/scene/actors/instances/bennett'
-
+} from 'constants/scene/actors/instances/bennett'
 import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from '../../constants/scene/actors/instances/catherine'
-
-import { CATHOLIC_GUY } from '../../constants/scene/actors/instances/wade'
-
+} from 'constants/scene/actors/instances/catherine'
+import { CATHOLIC_GUY } from 'constants/scene/actors/instances/wade'
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     WEST_BERKELEY_BACKDROP,
     UC_BERKELEY_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER
-} from '../../constants/scene/things/cardboards'
-
+} from 'constants/scene/things/cardboards'
 import {
     RECYCLABLES,
     BERKELEY_LAMPPOST,
@@ -65,25 +50,22 @@ import {
     BANCROFT_SHRUBS,
     UC_BERKELEY_TREE__LEFT,
     UC_BERKELEY_TREE__RIGHT
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
     CAMPANILE
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     WIDE_COUCH__BENNETT,
     WIDE_LEFT_ARMREST__BENNETT,
     WIDE_RIGHT_ARMREST__BENNETT
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -108,11 +90,7 @@ export default [
                 [RECYCLABLES]: true
             }
         },
-        cubes: COURTYARD_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: COURTYARD_KEY
     },
     {
         unitIndex: 3,
@@ -149,11 +127,7 @@ export default [
                 [WIDE_RIGHT_ARMREST__BENNETT]: true
             }
         },
-        cubes: BENNETT_COUCH_THOUGHT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        cubes: BENNETT_COUCH_THOUGHT_KEY
     },
     {
         unitIndex: 5,
@@ -178,11 +152,7 @@ export default [
                 [ST_JOSEPHS_CHURCH]: true
             }
         },
-        cubes: CATHOLIC_CHURCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: CATHOLIC_CHURCH_KEY
     },
     {
         unitIndex: 7,
@@ -222,11 +192,7 @@ export default [
                 [ASH_CAN]: true
             }
         },
-        cubes: BERKELEY_BANCROFT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: BERKELEY_BANCROFT_KEY
     },
     {
         unitIndex: 8,
@@ -258,10 +224,6 @@ export default [
                 [CAMPANILE]: true
             }
         },
-        cubes: BERKELEY_CAMPANILE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: BERKELEY_CAMPANILE_KEY
     }
 ]

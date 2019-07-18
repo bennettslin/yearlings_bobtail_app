@@ -1,6 +1,6 @@
 import isFinite from 'lodash/isfinite'
 import keys from 'lodash/keys'
-import albumScenes from 'album/scenes'
+import albumScenes from '../scenes'
 
 import { ACTOR } from 'constants/scene'
 

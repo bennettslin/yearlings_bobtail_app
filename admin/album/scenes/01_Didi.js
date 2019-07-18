@@ -7,77 +7,57 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    TIME_DAWN,
-    TIME_MORNING,
-    TIME_NOON,
-    TIME_AFTERNOON,
-    SEASON_SPRING
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
     SINGING
-} from '../../constants/scene/actors/instances/youngBennett'
-
+} from 'constants/scene/actors/instances/youngBennett'
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from '../../constants/scene/actors/instances/anita'
-
+} from 'constants/scene/actors/instances/anita'
 import {
     CURIOUS,
     SNICKERING
-} from '../../constants/scene/actors/instances/esther'
-
+} from 'constants/scene/actors/instances/esther'
 import {
     NOHO_HOUSES_BACKDROP,
     NOHO_SCHOOL_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
-import { JOHNNY_HORTON_ALBUM } from '../../constants/scene/things/cardboards'
-
+} from 'constants/scene/things/backdrops'
+import { JOHNNY_HORTON_ALBUM } from 'constants/scene/things/cardboards'
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
     TOWEL_RACK
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     ESTHER_SPEECH_PANEL,
     BATHTUB
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -95,11 +75,7 @@ export default [
                 [NOHO_HOUSE_RIGHT]: true
             }
         },
-        cubes: NOHO_HOUSES_KEY,
-        sky: {
-            time: TIME_DAWN,
-            season: SEASON_SPRING
-        }
+        cubes: NOHO_HOUSES_KEY
     },
     {
         unitIndex: 3,
@@ -136,11 +112,7 @@ export default [
                 [NOHO_HOUSE_RIGHT]: true
             }
         },
-        cubes: NOHO_HOUSES_KEY,
-        sky: {
-            time: TIME_MORNING,
-            season: SEASON_SPRING
-        }
+        cubes: NOHO_HOUSES_KEY
     },
     {
         unitIndex: 6,
@@ -183,11 +155,7 @@ export default [
                 [ESTHER_SPEECH_PANEL]: true
             }
         },
-        cubes: NOHO_SCHOOL_KEY,
-        sky: {
-            time: TIME_NOON,
-            season: SEASON_SPRING
-        }
+        cubes: NOHO_SCHOOL_KEY
     },
     {
         unitIndex: 8,
@@ -209,11 +177,7 @@ export default [
                 [BATHTUB]: true
             }
         },
-        cubes: BATHROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: BATHROOM_KEY
     },
     {
         unitIndex: 12,
@@ -246,10 +210,6 @@ export default [
                 [BATHTUB]: true
             }
         },
-        cubes: BATHROOM_OPEN_KEY,
-        sky: {
-            time: TIME_AFTERNOON,
-            season: SEASON_SPRING
-        }
+        cubes: BATHROOM_OPEN_KEY
     }
 ]

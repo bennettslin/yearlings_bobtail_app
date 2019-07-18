@@ -1,8 +1,7 @@
 /**
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
- */
-import {
+ */import {
     ACTOR,
     BACKDROP,
     BUBBLE,
@@ -11,7 +10,6 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,
@@ -19,22 +17,14 @@ import {
     ROYCE_HALL_KEY,
     CEMETERY_KEY,
     STATION_WAGON_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_SPRING,
-    SEASON_THOUGHT
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     ANA,
     ANA_HOWIE,
     HOWIE,
     TOMER
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     ABBEY_ROAD,
     WALGREENS,
@@ -42,20 +32,17 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     UCLA_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     STATION_WAGON_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     TARPIT_THOUGHT,
     SIBLING_THOUGHT
-} from '../../constants/scene/things/bubbles'
-
+} from 'constants/scene/things/bubbles'
 import {
     PHARMACY_AISLE,
     STEAM_PIPES,
@@ -63,27 +50,24 @@ import {
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     PUSH_BROOM__TUNNEL,
     GRAVESTONE,
     EVIAN_BOTTLES
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     ROYCE_HALL,
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
     ATTIC_COUCH,
     ATTIC_LEFT_ARMREST,
     ATTIC_RIGHT_ARMREST
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -123,11 +107,7 @@ export default [
                 [ROYCE_HALL]: true
             }
         },
-        cubes: ROYCE_HALL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: ROYCE_HALL_KEY
     },
     {
         unitIndex: 3,
@@ -166,11 +146,7 @@ export default [
                 [PHARMACY_AISLE]: true
             }
         },
-        cubes: WALGREENS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        cubes: WALGREENS_KEY
     },
     {
         unitIndex: 6,
@@ -209,11 +185,7 @@ export default [
                 [PUSH_BROOM__TUNNEL]: true
             }
         },
-        cubes: STEAM_TUNNEL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: STEAM_TUNNEL_KEY
     },
     {
         unitIndex: 9,
@@ -251,11 +223,7 @@ export default [
                 [CEMETERY_HILLS_RIGHT]: true
             }
         },
-        cubes: CEMETERY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: CEMETERY_KEY
     },
     {
         unitIndex: 11,
@@ -302,11 +270,7 @@ export default [
                 [SATURN_INTERIOR]: true
             }
         },
-        cubes: STATION_WAGON_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: STATION_WAGON_KEY
     },
     {
         unitIndex: 15,
@@ -338,10 +302,6 @@ export default [
                 [ATTIC_RIGHT_ARMREST]: true
             }
         },
-        cubes: ATTIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        cubes: ATTIC_KEY
     }
 ]

@@ -4,24 +4,13 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-
 import {
     BASEMENT_BED_KEY,
     BASEMENT_MAGIC_KEY,
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN,
-    SEASON_MAGIC,
-    SEASON_PAST,
-    SEASON_PRESENT,
-    SEASON_FUTURE
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     BENNETT_FATHER,
@@ -34,54 +23,43 @@ import {
     MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
     STEPHANIE
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from '../../constants/scene/actors/instances/estherMother'
-
+} from 'constants/scene/actors/instances/estherMother'
 import {
     ACCUSATORY,
     REELING
-} from '../../constants/scene/actors/instances/father'
-
-import { JOKING_LAUGHING } from '../../constants/scene/actors/instances/khariLiz'
-
-import { PETTING_SEATED } from '../../constants/scene/actors/instances/liz'
-
+} from 'constants/scene/actors/instances/father'
+import { JOKING_LAUGHING } from 'constants/scene/actors/instances/khariLiz'
+import { PETTING_SEATED } from 'constants/scene/actors/instances/liz'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF
-} from '../../constants/scene/actors/instances/miriamBennett'
-
-import { MISCHIEVOUS_BANJO } from '../../constants/scene/actors/instances/miriamStephanie'
-import { COMFORTING_HUMILIATED } from '../../constants/scene/actors/instances/sashaBennett'
-
-import { BENNETT_RECORDING } from '../../constants/scene/actors/instances/stephanie'
-
+} from 'constants/scene/actors/instances/miriamBennett'
+import { MISCHIEVOUS_BANJO } from 'constants/scene/actors/instances/miriamStephanie'
+import { COMFORTING_HUMILIATED } from 'constants/scene/actors/instances/sashaBennett'
+import { BENNETT_RECORDING } from 'constants/scene/actors/instances/stephanie'
 import {
     ASLEEP,
     PAST,
     PRESENT,
     FUTURE
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
     WEST_BERKELEY_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+} from 'constants/scene/things/backdrops'
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
     RECORDING_CONSOLE,
     RECORDING_BEERS,
     CRACKED_PICTURE
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,
@@ -93,7 +71,7 @@ import {
     WIDE_COUCH__MIRIAM,
     WIDE_LEFT_ARMREST__MIRIAM,
     WIDE_RIGHT_ARMREST__MIRIAM
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -116,11 +94,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BASEMENT_BED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: BASEMENT_BED_KEY
     },
     {
         unitIndex: 2,
@@ -156,11 +130,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BASEMENT_MAGIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_MAGIC
-        }
+        cubes: BASEMENT_MAGIC_KEY
     },
     {
         unitIndex: 4,
@@ -197,11 +167,7 @@ export default [
                 [SNOWGLOBE__TETHERBALL]: true
             }
         },
-        cubes: SNOWGLOBES_PAST_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_PAST
-        }
+        cubes: SNOWGLOBES_PAST_KEY
     },
     {
         unitIndex: 8,
@@ -247,11 +213,7 @@ export default [
                 [WIDE_RIGHT_ARMREST__MIRIAM]: true
             }
         },
-        cubes: SNOWGLOBES_PRESENT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_PRESENT
-        }
+        cubes: SNOWGLOBES_PRESENT_KEY
     },
     {
         unitIndex: 11,
@@ -308,11 +270,7 @@ export default [
                 [SNOWGLOBE__BENNETT_ALONE]: true
             }
         },
-        cubes: SNOWGLOBES_FUTURE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_FUTURE
-        }
+        cubes: SNOWGLOBES_FUTURE_KEY
     },
     {
         unitIndex: 14,
@@ -352,10 +310,6 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BASEMENT_MAGIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_MAGIC
-        }
+        cubes: BASEMENT_MAGIC_KEY
     }
 ]

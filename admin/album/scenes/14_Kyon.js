@@ -5,31 +5,22 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_OPEN_KEY,
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     LIZ,
     KHARI
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from '../../constants/scene/actors/instances/khari'
-
+} from 'constants/scene/actors/instances/khari'
 import {
     PETTING_SEATED,
     PETTING_STANDING,
@@ -38,24 +29,20 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from '../../constants/scene/actors/instances/liz'
-
+} from 'constants/scene/actors/instances/liz'
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
-} from '../../constants/scene/things/bubbles'
-
-import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
-
-import { LIZ_COUCH } from '../../constants/scene/things/panels'
-
+} from 'constants/scene/things/bubbles'
+import { TCHOTCHKES } from 'constants/scene/things/fixtures'
+import { LIZ_COUCH } from 'constants/scene/things/panels'
 import {
     OPAL_COUCH,
     OPAL_GAZING,
     PEAHEN,
     PEACOCK
-} from '../../constants/scene/things/puppets'
+} from 'constants/scene/things/puppets'
 
 export default [
     {
@@ -76,11 +63,7 @@ export default [
                 [LIZ_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_KEY
     },
     {
         unitIndex: 2,
@@ -100,11 +83,7 @@ export default [
                 [LIZ_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_KEY
     },
     {
         unitIndex: 4,
@@ -130,11 +109,7 @@ export default [
                 [OPAL_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_KEY
     },
     {
         unitIndex: 7,
@@ -160,11 +135,7 @@ export default [
                 [LIZ_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_OPEN_KEY
     },
     {
         unitIndex: 8,
@@ -194,11 +165,7 @@ export default [
                 [LIZ_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_SEAT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_SEAT_KEY
     },
     {
         unitIndex: 10,
@@ -227,11 +194,7 @@ export default [
                 [LIZ_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_GATE_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_GATE_OPEN_KEY
     },
     {
         unitIndex: 11,
@@ -254,11 +217,7 @@ export default [
                 [OPAL_GAZING]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_KEY
     },
     {
         unitIndex: 12,
@@ -281,10 +240,6 @@ export default [
                 [PEACOCK]: true
             }
         },
-        cubes: LIZ_COUCH_PEAFOWL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        cubes: LIZ_COUCH_PEAFOWL_KEY
     }
 ]

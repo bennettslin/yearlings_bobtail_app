@@ -8,20 +8,13 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     BENNETT_COUCH_KEY,
     CLUB_FRONT_KEY,
     BASEMENT_KEY,
     CINEMA_KEY,
     CINEMA_STREET_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_SUMMER
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     BENNETT,
     MARA,
@@ -32,12 +25,10 @@ import {
     TOMER,
     MIRIAM,
     STEPHANIE
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     SQUATTING
-} from '../../constants/scene/actors/instances/ana'
-
+} from 'constants/scene/actors/instances/ana'
 import {
     PONDERING,
     COUCH_READING,
@@ -46,34 +37,26 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED
-} from '../../constants/scene/actors/instances/bennett'
-
+} from 'constants/scene/actors/instances/bennett'
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from '../../constants/scene/actors/instances/howie'
-
+} from 'constants/scene/actors/instances/howie'
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
-} from '../../constants/scene/actors/instances/miriam'
-
-import { BENNETT_KEYBOARD } from '../../constants/scene/actors/instances/stephanie'
-
-import { SHANE_BUYING } from '../../constants/scene/actors/instances/tomer'
-
+} from 'constants/scene/actors/instances/miriam'
+import { BENNETT_KEYBOARD } from 'constants/scene/actors/instances/stephanie'
+import { SHANE_BUYING } from 'constants/scene/actors/instances/tomer'
 import {
     FLIRTING,
     EATING
-} from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/songs'
 import {
     OAKLAND_FRONT_BACKDROP,
     WEST_BERKELEY_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
-import { CINEMA_THOUGHTS } from '../../constants/scene/things/bubbles'
-
+} from 'constants/scene/things/backdrops'
+import { CINEMA_THOUGHTS } from 'constants/scene/things/bubbles'
 import {
     TELEVISION_ALBUM,
     LEONARD_COHEN_POSTER,
@@ -85,15 +68,13 @@ import {
     MARQUEE_FRAME__MARA_GLADIATOR,
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
-} from '../../constants/scene/things/cardboards'
-
+} from 'constants/scene/things/cardboards'
 import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
@@ -107,20 +88,18 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     WIDE_COUCH__BENNETT,
     WIDE_LEFT_ARMREST__BENNETT,
     WIDE_RIGHT_ARMREST__BENNETT
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -148,11 +127,7 @@ export default [
                 [WIDE_RIGHT_ARMREST__BENNETT]: true
             }
         },
-        cubes: BENNETT_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: BENNETT_COUCH_KEY
     },
     {
         unitIndex: 2,
@@ -180,11 +155,7 @@ export default [
                 [WIDE_RIGHT_ARMREST__BENNETT]: true
             }
         },
-        cubes: BENNETT_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: BENNETT_COUCH_KEY
     },
     {
         unitIndex: 4,
@@ -220,11 +191,7 @@ export default [
                 [WIDE_RIGHT_ARMREST__BENNETT]: true
             }
         },
-        cubes: BENNETT_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: BENNETT_COUCH_KEY
     },
     {
         unitIndex: 5,
@@ -276,11 +243,7 @@ export default [
                 [DRUMKIT]: true
             }
         },
-        cubes: CLUB_FRONT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: CLUB_FRONT_KEY
     },
     {
         unitIndex: 7,
@@ -319,11 +282,7 @@ export default [
                 [BASEMENT_BEER_BENNETT]: true
             }
         },
-        cubes: BASEMENT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: BASEMENT_KEY
     },
     {
         unitIndex: 9,
@@ -352,11 +311,7 @@ export default [
                 [MARQUEE_FRAME__MARA_GLADIATOR]: true
             }
         },
-        cubes: CINEMA_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: CINEMA_KEY
     },
     {
         unitIndex: 11,
@@ -393,11 +348,7 @@ export default [
                 [MARQUEE_FRAME__MARA_GLADIATOR]: true
             }
         },
-        cubes: CINEMA_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: CINEMA_KEY
     },
     {
         unitIndex: 14,
@@ -436,10 +387,6 @@ export default [
                 [COMMERCIAL_NEAR_RIGHT]: true
             }
         },
-        cubes: CINEMA_STREET_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: CINEMA_STREET_KEY
     }
 ]

@@ -8,7 +8,6 @@ import {
     FURNITURE,
     PANEL
 } from 'constants/scene'
-
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
@@ -16,13 +15,7 @@ import {
     PORCH_KEY,
     NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY
-} from '../../constants/scene/scenes'
-
-import {
-    TIME_ANYTIME,
-    SEASON_SUMMER
-} from '../../scene/sky/keys'
-
+} from 'constants/scene/scenes'
 import {
     PRETEEN_BENNETT,
     WILLY,
@@ -32,69 +25,55 @@ import {
     CHRISTOPHER_BENNETT_WILLY,
     HOWIE_WILLY,
     TOMER
-} from '../../constants/scene/actors'
-
+} from 'constants/scene/actors'
 import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL
-} from '../../constants/scene/actors/instances/preteenBennett'
-
+} from 'constants/scene/actors/instances/preteenBennett'
 import {
     COLLECTING,
     DUCKING
-} from '../../constants/scene/actors/instances/willy'
-
+} from 'constants/scene/actors/instances/willy'
 import {
     STOOPING,
     COMFORTING
-} from '../../constants/scene/actors/instances/mother'
-
-import { ROARING } from '../../constants/scene/actors/instances/father'
-
+} from 'constants/scene/actors/instances/mother'
+import { ROARING } from 'constants/scene/actors/instances/father'
 import {
     TANTRUM,
     SOBBING
-} from '../../constants/scene/actors/instances/christopher'
-
-import { REASSURING_ENCHANTED } from '../../constants/scene/actors/instances/christopherBennettWilly'
-
-import { GANGBANGER } from '../../constants/scene/actors/instances/songs'
-
+} from 'constants/scene/actors/instances/christopher'
+import { REASSURING_ENCHANTED } from 'constants/scene/actors/instances/christopherBennettWilly'
+import { GANGBANGER } from 'constants/scene/actors/instances/songs'
 import {
     NOHO_HOUSES_BACKDROP,
     VALLEY_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
-import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
-
+} from 'constants/scene/things/backdrops'
+import { TINTIN_POSTER } from 'constants/scene/things/cardboards'
 import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANT__LEFT,
     PORCH_PLANT__RIGHT,
     FIRE_HYDRANT,
     CAMPFIRE
-} from '../../constants/scene/things/cutouts'
-
+} from 'constants/scene/things/cutouts'
 import {
     SHOPPING_CART,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
-} from '../../constants/scene/things/fixtures'
-
+} from 'constants/scene/things/fixtures'
 import {
     VALLEY_FREEWAY,
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     FAMILY_HOUSE,
     BEDROOM_SIREN
-} from '../../constants/scene/things/flats'
-
+} from 'constants/scene/things/flats'
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
-} from '../../constants/scene/things/furniture'
-
+} from 'constants/scene/things/furniture'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
@@ -104,7 +83,7 @@ import {
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
     STALACTITES
-} from '../../constants/scene/things/panels'
+} from 'constants/scene/things/panels'
 
 export default [
     {
@@ -121,10 +100,6 @@ export default [
             [FLAT]: {
                 [VALLEY_FREEWAY]: true
             }
-        },
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
         }
     },
     {
@@ -152,11 +127,7 @@ export default [
                 [VALLEY_FREEWAY]: true
             }
         },
-        cubes: FREEWAY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: FREEWAY_KEY
     },
     {
         unitIndex: 5,
@@ -193,11 +164,7 @@ export default [
                 [PORCH_PLANT__RIGHT]: true
             }
         },
-        cubes: PORCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: PORCH_KEY
     },
     {
         unitIndex: 7,
@@ -240,11 +207,7 @@ export default [
                 [BEDROOM_FENCE]: true
             }
         },
-        cubes: BEDROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: BEDROOM_KEY
     },
     {
         unitIndex: 9,
@@ -281,11 +244,7 @@ export default [
                 [NOHO_HOUSE_RIGHT]: true
             }
         },
-        cubes: NOHO_HOUSES_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: NOHO_HOUSES_KEY
     },
     {
         unitIndex: 12,
@@ -319,11 +278,7 @@ export default [
                 [CAPTAIN_BED]: true
             }
         },
-        cubes: BEDROOM_STOOL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: BEDROOM_STOOL_KEY
     },
     {
         unitIndex: 14,
@@ -352,10 +307,6 @@ export default [
                 [STALACTITES]: true
             }
         },
-        cubes: CHANGELING_CAVE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        cubes: CHANGELING_CAVE_KEY
     }
 ]
