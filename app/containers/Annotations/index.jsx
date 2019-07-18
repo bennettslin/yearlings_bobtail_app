@@ -84,6 +84,8 @@ class TempGlobalAnnotations extends PureComponent {
     }
 
     componentDidMount() {
+        logMount('Annotations')
+
         const {
                 globalAnnotationIndices
             } = album,

@@ -4,12 +4,15 @@ import cx from 'classnames'
 import Shared from './Shared'
 import AdminNav from './AdminNav'
 
+import { logSvgCount } from './helper'
+
 import './style.scss'
 
 class Progress extends PureComponent {
 
     componentDidMount() {
         logMount('Progress')
+        logSvgCount()
     }
 
     render() {
