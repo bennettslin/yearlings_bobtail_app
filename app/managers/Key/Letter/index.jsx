@@ -9,7 +9,6 @@ import { updateSelectedStore } from 'flux/selected/action'
 import { updateAccessStore } from 'flux/access/action'
 
 import AboutDispatcher from '../../../dispatchers/About'
-import AdminDispatcher from '../../../dispatchers/AdminDispatcher'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'
 import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
@@ -35,7 +34,6 @@ import {
     NEXT_SONG_KEY,
     CAROUSEL_TOGGLE_KEY,
     DOTS_SLIDE_TOGGLE_KEY,
-    GLOBAL_ANNOTATIONS_TOGGLE_KEY,
     LYRIC_COLUMN_TOGGLE_KEY,
     LYRIC_SECTION_EXPAND_KEY,
     LYRIC_SCROLL_TOGGLE_KEY,
@@ -86,9 +84,6 @@ class LetterManager extends PureComponent {
             keyWasRegistered
 
         switch (keyName) {
-            case GLOBAL_ANNOTATIONS_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchGlobalAnnotations()
-                break
             case AUDIO_OPTIONS_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchAudioOption()
                 break
@@ -204,7 +199,6 @@ class LetterManager extends PureComponent {
     render() {
         return (
             <___>
-                <AdminDispatcher {...{ getRefs: this._getRefs }} />
                 <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />

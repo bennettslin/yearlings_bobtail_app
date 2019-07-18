@@ -1,12 +1,15 @@
 import React, { PureComponent } from 'react'
 
 import AnnotationCards from './AnnotationCards'
-import Button from '../../../Button'
+import Button from '../../../app/components/Button'
 
 import album from 'album'
 
 import { getAnnotation } from 'album/api/annotations'
 import { getGlobalAnnotation } from 'album/api/admin'
+
+import '../../style.scss'
+import './style.scss'
 
 const TempGlobalAnnotationsCounter = ({
     counter,

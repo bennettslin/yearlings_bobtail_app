@@ -7,7 +7,6 @@ import cx from 'classnames'
 import LyricToggleEar from './Ear'
 import LyricToggleExpand from './Expand'
 import LyricToggleScroll from './Scroll'
-import LyricToggleGlobalAnnotations from './GlobalAnnotations'
 
 const LyricToggles = ({ isBottomRight }) => (
     <div className={cx(
@@ -21,10 +20,7 @@ const LyricToggles = ({ isBottomRight }) => (
             ]
     )}>
         {isBottomRight ? (
-            <___>
-                <LyricToggleGlobalAnnotations />
-                <LyricToggleScroll />
-            </___>
+            <LyricToggleScroll />
         ) : (
             <___>
                 <LyricToggleEar />

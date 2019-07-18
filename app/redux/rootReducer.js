@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
-import AdminReducer from './admin/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AppReducer from './app/reducer'
 import AudioReducer from './audio/reducer'
@@ -26,7 +25,6 @@ import ViewportReducer from './viewport/reducer'
 
 import {
     ACCESS_STORE,
-    ADMIN_STORE,
     ANNOTATION_STORE,
     AUDIO_STORE,
     VIEWPORT_STORE,
@@ -59,7 +57,6 @@ const rootReducer = combineReducers({
     [RESPONSIVE_STORE]: ResponsiveReducer,
     [OPTION_STORE]: OptionReducer,
     [TRANSIENT_STORE]: TransientReducer,
-    [ADMIN_STORE]: AdminReducer,
     [APP_STORE]: AppReducer,
     [MOUNT_STORE]: MountReducer,
 

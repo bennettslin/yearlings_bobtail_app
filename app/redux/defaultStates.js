@@ -30,7 +30,6 @@ import { getBoolFromStorage } from 'utils/window'
 
 import {
     IS_ACCESS_ON,
-    IS_GLOBAL_ANNOTATIONS_ON,
     IS_CAROUSEL_SHOWN,
 
     SELECTED_ANNOTATION_INDEX,
@@ -110,11 +109,6 @@ export const ACCESS_DEFAULTS = {
     accessedKey: '',
     accessedAnnotationIndex: storedAnnotationIndex || 0,
     accessedWikiWormholeIndex: 0
-}
-
-export const ADMIN_DEFAULTS = {
-    isGlobalAnnotationsOn:
-        getBoolFromStorage(IS_GLOBAL_ANNOTATIONS_ON) || false
 }
 
 export const ANNOTATION_DEFAULTS = {

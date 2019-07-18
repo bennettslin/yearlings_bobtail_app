@@ -12,17 +12,13 @@ import Stanzas from '../../Stanzas'
 
 import { populateRefs } from 'helpers/ref'
 
-import TempGlobalAnnotations from './TempGlobalAnnotations'
-
 const mapStateToProps = ({
-    adminStore: { isGlobalAnnotationsOn },
     lyricStore: {
         canLyricCarouselUpdate,
         lyricSongIndex
     },
     appStore: { isTouchSupported }
 }) => ({
-    isGlobalAnnotationsOn,
     canLyricCarouselUpdate,
     lyricSongIndex,
     isTouchSupported
@@ -36,7 +32,6 @@ class LyricScroll extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isGlobalAnnotationsOn: PropTypes.bool.isRequired,
         canLyricCarouselUpdate: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         isTouchSupported: PropTypes.bool.isRequired,
@@ -102,7 +97,6 @@ class LyricScroll extends PureComponent {
 
     render() {
         const {
-            isGlobalAnnotationsOn,
             canLyricCarouselUpdate,
             isTouchSupported
         } = this.props
@@ -138,17 +132,13 @@ class LyricScroll extends PureComponent {
                             onTouchMove: this._handleDetermineAutoScroll
                         }}
                     >
-                        {isGlobalAnnotationsOn ? (
-                            <TempGlobalAnnotations />
-                        ) : (
-                            <Stanzas
-                                {...{
-                                    setLyricAnnotationElement:
-                                        this._setLyricAnnotationElement,
-                                    setVerseRef: this._setVerseElement
-                                }}
-                            />
-                        )}
+                        <Stanzas
+                            {...{
+                                setLyricAnnotationElement:
+                                    this._setLyricAnnotationElement,
+                                setVerseRef: this._setVerseElement
+                            }}
+                        />
                     </div>
                 </Transition>
                 <VerseBarHandler

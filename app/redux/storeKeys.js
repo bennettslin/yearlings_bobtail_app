@@ -1,5 +1,4 @@
 export const ACCESS_STORE = 'accessStore'
-export const ADMIN_STORE = 'adminStore'
 export const ANNOTATION_STORE = 'annotationStore'
 export const APP_STORE = 'appStore'
 export const AUDIO_STORE = 'audioStore'
@@ -27,7 +26,6 @@ export const STAGE_STORE = 'stageStore'
 export const THEATRE_STORE = 'theatreStore'
 
 export const IS_ACCESS_ON = 'isAccessOn'
-export const IS_GLOBAL_ANNOTATIONS_ON = 'isGlobalAnnotationsOn'
 export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
 export const DOTS_BIT_NUMBER = 'dotsBitNumber'
 

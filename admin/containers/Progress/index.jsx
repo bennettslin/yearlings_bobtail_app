@@ -4,6 +4,7 @@ import cx from 'classnames'
 import Shared from './Shared'
 import AdminNav from './AdminNav'
 
+import '../../style.scss'
 import './style.scss'
 
 class Progress extends PureComponent {
