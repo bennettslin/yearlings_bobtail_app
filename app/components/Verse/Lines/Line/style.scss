@@ -1,3 +1,5 @@
+$margin__gutter: 15px;
+
 .VerseLine__lyric,
 .VerseLine__left {
 
@@ -44,7 +46,7 @@
     // If both columns show, have a single gutter between them.
     .RW__bothEarColumnsShown
     &:not(:first-child) {
-        margin-left: $field-padding;
+        margin-left: $margin__gutter;
     }
 }
 

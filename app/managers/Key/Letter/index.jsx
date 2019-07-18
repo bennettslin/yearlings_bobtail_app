@@ -29,7 +29,6 @@ import { populateRefs } from '../../../helpers/ref'
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY,
-    ADMIN_TOGGLE_KEY,
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
@@ -87,9 +86,6 @@ class LetterManager extends PureComponent {
             keyWasRegistered
 
         switch (keyName) {
-            case ADMIN_TOGGLE_KEY:
-                keyWasRegistered = this.dispatchAdmin()
-                break
             case GLOBAL_ANNOTATIONS_TOGGLE_KEY:
                 keyWasRegistered = this.dispatchGlobalAnnotations()
                 break

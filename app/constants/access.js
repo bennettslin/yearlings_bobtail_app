@@ -3,7 +3,6 @@ export const OVERVIEW_TOGGLE_KEY = 'b'
 export const CAROUSEL_TOGGLE_KEY = 'c'
 export const DOTS_SLIDE_TOGGLE_KEY = 'd'
 export const LYRIC_COLUMN_TOGGLE_KEY = 'e'
-export const ADMIN_TOGGLE_KEY = 'g'
 export const GLOBAL_ANNOTATIONS_TOGGLE_KEY = 'h'
 export const PREVIOUS_SONG_KEY = 'r'
 export const NEXT_SONG_KEY = 'f'
@@ -43,7 +42,6 @@ export const STYLE_LOGIC_ACCESS_LETTERS = [
     ARROW_RIGHT,
     ARROW_UP,
     ARROW_DOWN,
-    ADMIN_TOGGLE_KEY,
     AUDIO_PLAY_KEY,
     AUDIO_OPTIONS_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,

@@ -27,7 +27,6 @@ export const STAGE_STORE = 'stageStore'
 export const THEATRE_STORE = 'theatreStore'
 
 export const IS_ACCESS_ON = 'isAccessOn'
-export const IS_ADMIN_ON = 'isAdminOn'
 export const IS_GLOBAL_ANNOTATIONS_ON = 'isGlobalAnnotationsOn'
 export const IS_CAROUSEL_SHOWN = 'isCarouselShown'
 export const DOTS_BIT_NUMBER = 'dotsBitNumber'

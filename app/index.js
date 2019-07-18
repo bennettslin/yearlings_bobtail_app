@@ -42,6 +42,13 @@ ReactDOM.render(
                 <Route
                     exact
                     {...{
+                        path: '/Progress',
+                        component: PreviewerContainer
+                    }}
+                />
+                <Route
+                    exact
+                    {...{
                         path: '/Previewer',
                         component: PreviewerContainer
                     }}

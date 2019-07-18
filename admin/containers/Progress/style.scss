@@ -1,3 +1,13 @@
+@mixin mixin__progressBar($colour__progressBar, $colour__progressBar__filled) {
+    .ProgressBar {
+        background-color: $colour__progressBar;
+
+        .ProgressBar__filled {
+            background-color: $colour__progressBar__filled;
+        }
+    }
+}
+
 @import "./AdminNav/style";
 @import "./progress";
 @import "./Shared/style";
@@ -68,5 +78,5 @@ $drawing-field-colour: #eed;
     padding: $field-padding;
     margin: $field-padding 0;
     background-color: $section-colour;
-    box-shadow: $boxShadow__admin;
+    box-shadow: 0 2px 2px 2px rgba(75, 75, 100, 0.4);
 }

@@ -4,7 +4,6 @@
  */
 
 import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -16,18 +15,13 @@ import TouchWrapper from '../../wrappers/TouchWrapper'
 import TransitionWrapper from '../../wrappers/TransitionWrapper'
 import LogicWrapper from '../../wrappers/LogicWrapper'
 import WindowResizeExitListener from '../../listeners/WindowResize/Exit'
-
 import Live from '../../components/Live'
-import Admin from '../../components/Admin'
 
 import { populateRefs } from 'helpers/ref'
 
 class RootContainer extends PureComponent {
 
     static propTypes = {
-        // Through Redux.
-        isAdminOn: PropTypes.bool.isRequired,
-
         // From parent.
         setLyricFocusElement: PropTypes.func.isRequired
     }
@@ -45,10 +39,7 @@ class RootContainer extends PureComponent {
     }
 
     render() {
-        const {
-            isAdminOn,
-            setLyricFocusElement
-        } = this.props
+        const { setLyricFocusElement } = this.props
 
         return (
             <div
@@ -71,9 +62,6 @@ class RootContainer extends PureComponent {
                                             <Live
                                                 {...{ setLyricFocusElement }}
                                             />
-                                            {isAdminOn && (
-                                                <Admin />
-                                            )}
                                         </LogicWrapper>
                                     </TransitionWrapper>
                                 </TouchWrapper>
@@ -86,10 +74,4 @@ class RootContainer extends PureComponent {
     }
 }
 
-const mapStateToProps = ({
-    adminStore: { isAdminOn }
-}) => ({
-    isAdminOn
-})
-
-export default connect(mapStateToProps)(RootContainer)
+export default RootContainer

@@ -9,7 +9,6 @@ class AdminDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isAdminOn: PropTypes.bool.isRequired,
         isGlobalAnnotationsOn: PropTypes.bool.isRequired,
         updateAdminStore: PropTypes.func.isRequired,
 
@@ -19,18 +18,8 @@ class AdminDispatcher extends PureComponent {
 
     componentDidMount() {
         this.props.getRefs({
-            dispatchAdmin: this.dispatchAdmin,
             dispatchGlobalAnnotations: this.dispatchGlobalAnnotations
         })
-    }
-
-    dispatchAdmin = (
-        // Just toggle unless parent specifies value.
-        isAdminOn = !this.props.isAdminOn
-    ) => {
-        // Turning on or off is always successful.
-        this.props.updateAdminStore({ isAdminOn })
-        return true
     }
 
     dispatchGlobalAnnotations = (
@@ -48,12 +37,8 @@ class AdminDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    adminStore: {
-        isAdminOn,
-        isGlobalAnnotationsOn
-    }
+    adminStore: { isGlobalAnnotationsOn }
 }) => ({
-    isAdminOn,
     isGlobalAnnotationsOn
 })
 

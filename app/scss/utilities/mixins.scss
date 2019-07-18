@@ -1,13 +1,3 @@
-@mixin mixin__progressBar($colour__progressBar, $colour__progressBar__filled) {
-    .ProgressBar {
-        background-color: $colour__progressBar;
-
-        .ProgressBar__filled {
-            background-color: $colour__progressBar__filled;
-        }
-    }
-}
-
 @mixin mixin__textShadow($bgColour, $important: false) {
     $offset: 1px;
     $offset__negative: -$offset;

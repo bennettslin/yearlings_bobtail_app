@@ -1,5 +1,5 @@
-$boxShadow__adminActor: $boxShadow__admin;
-$boxShadow__adminCharacter: inset 0 2px 5px $colour__boxShadow;
+$boxShadow__adminActor: 0 2px 2px 2px rgba(75, 75, 100, 0.4);
+$boxShadow__adminCharacter: inset 0 2px 5px rgba(75, 75, 100, 0.4);
 
 .actors-table {
 

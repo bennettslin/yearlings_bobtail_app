@@ -2,12 +2,9 @@ import React, { PureComponent } from 'react'
 import cx from 'classnames'
 
 import Shared from './Shared'
-
 import AdminNav from './AdminNav'
 
-/*************
- * CONTAINER *
- *************/
+import './style.scss'
 
 class Admin extends PureComponent {
 

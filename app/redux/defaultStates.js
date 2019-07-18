@@ -30,7 +30,6 @@ import { getBoolFromStorage } from 'utils/window'
 
 import {
     IS_ACCESS_ON,
-    IS_ADMIN_ON,
     IS_GLOBAL_ANNOTATIONS_ON,
     IS_CAROUSEL_SHOWN,
 
@@ -114,7 +113,6 @@ export const ACCESS_DEFAULTS = {
 }
 
 export const ADMIN_DEFAULTS = {
-    isAdminOn: getBoolFromStorage(IS_ADMIN_ON) || false,
     isGlobalAnnotationsOn:
         getBoolFromStorage(IS_GLOBAL_ANNOTATIONS_ON) || false
 }
