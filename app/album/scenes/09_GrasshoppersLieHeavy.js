@@ -76,8 +76,10 @@ import {
 
 import {
     DISHROOM_DOLLY__GLASS,
+    DISHROOM_DOLLY__TRAY,
     TRAY_PILE,
     GLASS_RACK__SINK,
+    GLASS_RACK__DOLLY,
     DISH_PILE,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
@@ -133,8 +135,10 @@ export default [
             },
             [CUTOUT]: {
                 [DISHROOM_DOLLY__GLASS]: true,
+                [DISHROOM_DOLLY__TRAY]: true,
                 [TRAY_PILE]: true,
                 [GLASS_RACK__SINK]: true,
+                [GLASS_RACK__DOLLY]: true,
                 [DISH_PILE]: true
             },
             [PANEL]: {
@@ -170,8 +174,10 @@ export default [
             },
             [CUTOUT]: {
                 [DISHROOM_DOLLY__GLASS]: true,
+                [DISHROOM_DOLLY__TRAY]: true,
                 [TRAY_PILE]: true,
                 [GLASS_RACK__SINK]: true,
+                [GLASS_RACK__DOLLY]: true,
                 [DISH_PILE]: true
             },
             [PANEL]: {

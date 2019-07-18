@@ -5,7 +5,9 @@ import {
 import {
     TRAY_PILE,
     DISHROOM_DOLLY__GLASS,
+    DISHROOM_DOLLY__TRAY,
     GLASS_RACK__SINK,
+    GLASS_RACK__DOLLY,
     DISH_PILE
 } from 'constants/scene/things/cutouts'
 import {
@@ -16,18 +18,29 @@ import {
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [TRAY_PILE]: {
-            yIndex: 3,
-            xPosition: 2.5,
+            yIndex: 4,
+            xPosition: 2,
             scaleFactor: 0.4
         },
         [DISHROOM_DOLLY__GLASS]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 6,
             scaleFactor: 0.4
+        },
+        [DISHROOM_DOLLY__TRAY]: {
+            yIndex: 4,
+            xPosition: 2,
+            scaleFactor: 0.4,
+            flipHorizontal: true
         },
         [GLASS_RACK__SINK]: {
             yIndex: 2,
             xPosition: 3,
+            scaleFactor: 0.3
+        },
+        [GLASS_RACK__DOLLY]: {
+            yIndex: 4,
+            xPosition: 6,
             scaleFactor: 0.3
         },
         [DISH_PILE]: {
