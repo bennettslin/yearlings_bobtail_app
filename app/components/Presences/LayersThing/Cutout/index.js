@@ -22,10 +22,10 @@ import museumDisplay from 'assets/svgs/cutouts/museumDisplay'
 import sandbags from 'assets/svgs/cutouts/sandbags'
 import stageLights from 'assets/svgs/cutouts/stageLights'
 import trafficLight from 'assets/svgs/cutouts/trafficLight'
-import dishroomDolly from 'assets/svgs/cutouts/dishroomDolly'
+import dishPile from 'assets/svgs/cutouts/dishPile'
 import trayPile from 'assets/svgs/cutouts/trayPile'
 import glassRack from 'assets/svgs/cutouts/glassRack'
-import dishPile from 'assets/svgs/cutouts/dishPile'
+import dishroomDolly from 'assets/svgs/cutouts/dishroomDolly'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant'
 import pharmacyAisle from 'assets/svgs/cutouts/pharmacyAisle'
@@ -76,12 +76,12 @@ import {
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
-    DISHROOM_DOLLY__GLASS,
-    DISHROOM_DOLLY__TRAY,
+    DISH_PILE,
     TRAY_PILE,
     GLASS_RACK__SINK,
     GLASS_RACK__DOLLY,
-    DISH_PILE,
+    DISHROOM_DOLLY__TRAY,
+    DISHROOM_DOLLY__GLASS,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT,
     PHARMACY_AISLE,
@@ -137,12 +137,12 @@ export default {
     [SANDBAGS]: sandbags,
     [STAGE_LIGHTS]: stageLights,
     [TRAFFIC_LIGHT]: trafficLight,
-    [DISHROOM_DOLLY__GLASS]: dishroomDolly,
-    [DISHROOM_DOLLY__TRAY]: dishroomDolly,
+    [DISH_PILE]: dishPile,
     [TRAY_PILE]: trayPile,
     [GLASS_RACK__SINK]: glassRack,
     [GLASS_RACK__DOLLY]: glassRack,
-    [DISH_PILE]: dishPile,
+    [DISHROOM_DOLLY__TRAY]: dishroomDolly,
+    [DISHROOM_DOLLY__GLASS]: dishroomDolly,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
     [PHARMACY_AISLE]: pharmacyAisle,

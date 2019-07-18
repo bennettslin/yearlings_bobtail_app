@@ -75,12 +75,12 @@ import {
 } from '../../constants/scene/things/cardboards'
 
 import {
-    DISHROOM_DOLLY__GLASS,
-    DISHROOM_DOLLY__TRAY,
+    DISH_PILE,
     TRAY_PILE,
     GLASS_RACK__SINK,
     GLASS_RACK__DOLLY,
-    DISH_PILE,
+    DISHROOM_DOLLY__TRAY,
+    DISHROOM_DOLLY__GLASS,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT
@@ -134,12 +134,12 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [DISHROOM_DOLLY__GLASS]: true,
-                [DISHROOM_DOLLY__TRAY]: true,
+                [DISH_PILE]: true,
                 [TRAY_PILE]: true,
                 [GLASS_RACK__SINK]: true,
                 [GLASS_RACK__DOLLY]: true,
-                [DISH_PILE]: true
+                [DISHROOM_DOLLY__TRAY]: true,
+                [DISHROOM_DOLLY__GLASS]: true
             },
             [PANEL]: {
                 [CONVEYOR_BELT]: true,
@@ -173,12 +173,12 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [DISHROOM_DOLLY__GLASS]: true,
-                [DISHROOM_DOLLY__TRAY]: true,
+                [DISH_PILE]: true,
                 [TRAY_PILE]: true,
                 [GLASS_RACK__SINK]: true,
                 [GLASS_RACK__DOLLY]: true,
-                [DISH_PILE]: true
+                [DISHROOM_DOLLY__TRAY]: true,
+                [DISHROOM_DOLLY__GLASS]: true
             },
             [PANEL]: {
                 [CONVEYOR_BELT]: true,

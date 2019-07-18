@@ -4,8 +4,8 @@ import {
 } from 'constants/scene'
 import {
     TRAY_PILE,
-    DISHROOM_DOLLY__GLASS,
     DISHROOM_DOLLY__TRAY,
+    DISHROOM_DOLLY__GLASS,
     GLASS_RACK__SINK,
     GLASS_RACK__DOLLY,
     DISH_PILE
@@ -17,35 +17,37 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [TRAY_PILE]: {
-            yIndex: 4,
-            xPosition: 2,
+        [DISH_PILE]: {
+            yIndex: 2,
+            xPosition: 4,
             scaleFactor: 0.4
         },
-        [DISHROOM_DOLLY__GLASS]: {
+        [TRAY_PILE]: {
             yIndex: 4,
-            xPosition: 6,
+            xPosition: 1.75,
+            zOffset: 0.55,
+            scaleFactor: 0.4
+        },
+        [GLASS_RACK__SINK]: {
+            yIndex: 2,
+            xPosition: 2.5,
+            scaleFactor: 0.4
+        },
+        [GLASS_RACK__DOLLY]: {
+            yIndex: 4,
+            xPosition: 6.25,
+            zOffset: 0.55,
             scaleFactor: 0.4
         },
         [DISHROOM_DOLLY__TRAY]: {
             yIndex: 4,
-            xPosition: 2,
+            xPosition: 1.75,
             scaleFactor: 0.4,
             flipHorizontal: true
         },
-        [GLASS_RACK__SINK]: {
-            yIndex: 2,
-            xPosition: 3,
-            scaleFactor: 0.3
-        },
-        [GLASS_RACK__DOLLY]: {
+        [DISHROOM_DOLLY__GLASS]: {
             yIndex: 4,
-            xPosition: 6,
-            scaleFactor: 0.3
-        },
-        [DISH_PILE]: {
-            yIndex: 2,
-            xPosition: 4.5,
+            xPosition: 6.25,
             scaleFactor: 0.4
         }
     },

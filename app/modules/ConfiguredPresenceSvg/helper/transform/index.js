@@ -22,6 +22,9 @@ export const getTransformStyleForPresence = ({
     flipHorizontal,
     rotate
 }) => {
+    /**
+     * Operation order is right to left. Translate should be last.
+     */
     const transformStyles = []
 
     if (flipHorizontal) {
@@ -29,7 +32,6 @@ export const getTransformStyleForPresence = ({
     }
 
     if (rotate) {
-        // TODO: Use matrix instead?
         transformStyles.push(`rotate(${rotate}deg)`)
     }
 
@@ -42,7 +44,7 @@ export const getTransformStyleForPresence = ({
         (alignLeft || alignRight)
     ) {
         const translateStyle = getTranslateStyle({ alignLeft, alignRight })
-        transformStyles.push(translateStyle)
+        transformStyles.unshift(translateStyle)
         return transformStyles.join(' ')
 
     } else {

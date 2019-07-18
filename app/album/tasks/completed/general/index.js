@@ -4721,5 +4721,10 @@ export default [
         taskName: `Svg previewer.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Arrange dishroom cutouts.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
