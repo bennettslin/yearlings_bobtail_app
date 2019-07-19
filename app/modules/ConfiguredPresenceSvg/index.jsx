@@ -7,7 +7,10 @@ import ReactInlineSvg from 'react-inlinesvg'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
 import { getSizeForPresence, getViewBoxSize } from './helper/size'
-import { getTransformStyleForPresence } from './helper/transform'
+import {
+    setSvgTransformForPresence,
+    getSvgContainerTransformForPresence
+} from './helper/transform'
 
 const propTypes = {
     // From parent.
@@ -74,31 +77,27 @@ class ConfiguredPresenceSvg extends PureComponent {
         })
     }
 
-    getTransformStyle() {
+    getSvgContainerTransform() {
         const {
             alignLeft,
-            alignRight,
-            flipHorizontal,
-            rotate
+            alignRight
         } = this.getArrangement()
 
-        return getTransformStyleForPresence({
+        return getSvgContainerTransformForPresence({
             alignLeft,
-            alignRight,
-            flipHorizontal,
-            rotate
+            alignRight
         })
     }
 
     processSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
         setTimeout(this.handleProcessedSvg.bind(null, svgString), 0)
-        return svgString
+        return this.setSvgTransform(svgString)
     }
 
     handleProcessedSvg = (svgString) => {
         this.setAdjustedSize(svgString)
-        this.props.showProcessedSvg()
+        this.props.showProcessedSvg(svgString)
     }
 
     setAdjustedSize(svgString) {
@@ -137,6 +136,23 @@ class ConfiguredPresenceSvg extends PureComponent {
         }
     }
 
+    setSvgTransform(svgString) {
+        const {
+            flipHorizontal,
+            rotate,
+            skewX,
+            skewY
+        } = this.getArrangement()
+
+        return setSvgTransformForPresence({
+            svgString,
+            flipHorizontal,
+            rotate,
+            skewX,
+            skewY
+        })
+    }
+
     render() {
         const {
                 className,
@@ -154,7 +170,7 @@ class ConfiguredPresenceSvg extends PureComponent {
                 adjustedWidth,
                 adjustedHeight
             } = this.state,
-            transformStyle = this.getTransformStyle()
+            containerTransform = this.getSvgContainerTransform()
 
         return (
             <ReactInlineSvg
@@ -173,8 +189,8 @@ class ConfiguredPresenceSvg extends PureComponent {
                         top: `${adjustedTop.toFixed(2)}%`,
                         width: `${adjustedWidth.toFixed(2)}%`,
                         height: `${adjustedHeight.toFixed(2)}%`,
-                        ...transformStyle && {
-                            transform: transformStyle
+                        ...containerTransform && {
+                            transform: containerTransform
                         }
                     }
                 }}
