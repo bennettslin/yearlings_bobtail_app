@@ -108,5 +108,15 @@ export default [
         taskName: 'nasAlbum',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'progressChartEarly',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'progressChartLate',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

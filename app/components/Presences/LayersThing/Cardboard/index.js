@@ -21,8 +21,8 @@ import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
 // import nirvanaPoster from 'assets/svgs/cardboards/nirvanaPoster'
 // import leonardCohenPoster from 'assets/svgs/cardboards/leonardCohenPoster'
 // import televisionAlbum from 'assets/svgs/cardboards/televisionAlbum'
-// import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
-// import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
+import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
+import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
 // import maraMementoPoster from 'assets/svgs/cardboards/maraMementoPoster'
 // import maraGladiatorPoster from 'assets/svgs/cardboards/maraGladiatorPoster'
 // import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster'
@@ -96,8 +96,8 @@ export default {
     [NIRVANA_POSTER]: false,
     [LEONARD_COHEN_POSTER]: false,
     [TELEVISION_ALBUM]: false,
-    [PROGRESS_CHART_EARLY]: false,
-    [PROGRESS_CHART_LATE]: false,
+    [PROGRESS_CHART_EARLY]: progressChartEarly,
+    [PROGRESS_CHART_LATE]: progressChartLate,
     [MARA_MEMENTO_POSTER]: false,
     [MARQUEE_FRAME__MARA_MEMENTO]: false,
     [MARA_GLADIATOR_POSTER]: false,

@@ -23,6 +23,7 @@ import {
     WIDE_LEFT_ARMREST__BENNETT,
     WIDE_RIGHT_ARMREST__BENNETT
 } from 'constants/scene/things/panels'
+import { PROGRESS_CHART_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -126,12 +127,10 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 3,
-                zOffset: 2
-            }
+            xPosition: 9,
+            zOffset: 1,
+            scaleFactor: 0.25,
+            sharedStyle: PROGRESS_CHART_SHARED
         }
     }
 }
@@ -140,12 +139,10 @@ export const THINGS_BENNETT_COUCH_READING = {
     [CARDBOARD]: {
         [PROGRESS_CHART_LATE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 3,
-                zOffset: 2
-            }
+            xPosition: 9,
+            zOffset: 1,
+            scaleFactor: 0.25,
+            sharedStyle: PROGRESS_CHART_SHARED
         }
     },
     [FIXTURE]: {
