@@ -4,15 +4,18 @@ import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 
-const SHOW_BUNDLE_ANALYZER = true
+const SHOW_BUNDLE_ANALYZER = false
 
-const getConfig = ({ development = false } = {}) => {
+const getConfig = ({
+    development: isDevelopment = false,
+    admin: showAdmin = false
+} = {}) => {
     return {
         entry: path.resolve(__dirname, 'app'),
         output: {
             path: path.resolve(__dirname, 'build'),
             filename: '[name]-[hash].js',
-            ...development && {
+            ...isDevelopment && {
                 devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
             }
         },
@@ -20,7 +23,7 @@ const getConfig = ({ development = false } = {}) => {
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'app/index.html')
             }),
-            ...development ? [
+            ...isDevelopment ? [
                 new webpack.HotModuleReplacementPlugin(),
 
                 ...SHOW_BUNDLE_ANALYZER && [new BundleAnalyzerPlugin()]
@@ -32,11 +35,11 @@ const getConfig = ({ development = false } = {}) => {
             ]
         ],
         resolve: {
-            // import from files without specifying extensions.
+            // Import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf', '.svg'],
             alias: {
                 // In production, admin just reroutes to app.
-                admin: development ?
+                admin: showAdmin ?
                     path.resolve(__dirname, './admin') :
                     path.resolve(__dirname, './app'),
                 assets: path.resolve(__dirname, './assets'),
@@ -59,7 +62,7 @@ const getConfig = ({ development = false } = {}) => {
                     test: /\.jsx?$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...development && [path.resolve(__dirname, './admin')]
+                        ...showAdmin && [path.resolve(__dirname, './admin')]
                     ],
                     enforce: 'pre',
                     loaders: [
@@ -72,7 +75,7 @@ const getConfig = ({ development = false } = {}) => {
                     test: /\.scss$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...development && [path.resolve(__dirname, './admin')]
+                        ...showAdmin && [path.resolve(__dirname, './admin')]
                     ],
                     loaders: [
                         'style-loader',
@@ -115,7 +118,7 @@ const getConfig = ({ development = false } = {}) => {
                 }
             ]
         },
-        ...development && {
+        ...isDevelopment && {
             devServer: {
                 host: process.env.HOST,
                 port: 1113 || process.env.PORT,
