@@ -51,15 +51,19 @@ class Presence extends PureComponent {
     _setIsTransitionVisible() {
         const { existenceValue } = this.props
 
-        this.setState({
-            isTransitionVisible: Boolean(existenceValue)
-        })
+        this.setState({ isTransitionVisible: Boolean(existenceValue) })
     }
 
-    getRenderComponent(presenceComponent) {
-        return isString(presenceComponent) ?
-            ConfiguredPresenceSvg :
-            LegacyPresenceSvg
+    getIsConfigured(presenceComponent) {
+        return isString(presenceComponent)
+    }
+
+    showProcessedSvg = () => {
+        // This handles the possibility that an svg might be loaded late.
+        const { existenceValue } = this.props
+        if (existenceValue) {
+            this.setState({ isTransitionVisible: true })
+        }
     }
 
     render() {
@@ -78,8 +82,13 @@ class Presence extends PureComponent {
 
             presenceComponent = presencesMap[presenceKey],
 
+            isConfigured = this.getIsConfigured(presenceComponent),
+
             // TODO: Get rid of this conditional once they are all asset svgs.
-            RenderComponent = this.getRenderComponent(presenceComponent),
+            RenderComponent = isConfigured ?
+                ConfiguredPresenceSvg :
+                LegacyPresenceSvg,
+
             renderedComponent = (
                 <RenderComponent
                     {...{
@@ -90,13 +99,17 @@ class Presence extends PureComponent {
                         cubesKey,
                         presenceType,
                         actorKey,
-                        presenceKey
+                        presenceKey,
+                        ...isConfigured && {
+                            showProcessedSvg: this.showProcessedSvg
+                        }
                     }}
                 >
                     {presenceComponent}
                 </RenderComponent>
             )
 
+        // TODO: Is CssTransition even necessary once all are configured?
         return (
             <CSSTransition
                 unmountOnExit

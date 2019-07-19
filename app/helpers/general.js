@@ -31,13 +31,24 @@ export const getArrayOfLength = (
     )
 )
 
+export const getValidYIndex = (yIndex) => {
+    /**
+     * Things have an extra -1 yIndex to allow them to be behind 0 yIndex
+     * cubes. For positioning and sizing, however, they will be calculated as
+     * if they are 0 yIndex.
+     */
+    return yIndex === -1 ? 0 : yIndex
+}
+
 export const getValueInAbridgedMatrix = (matrix, xIndex, yIndex) => {
     // Assume that matrix is an array of arrays.
 
     const
+        validYIndex = getValidYIndex(yIndex),
+
         // Use previous row array if no row array for this y-index.
-        rowArray = matrix.length > yIndex ?
-            matrix[yIndex] :
+        rowArray = matrix.length > validYIndex ?
+            matrix[validYIndex] :
             matrix[matrix.length - 1],
 
         // Use previous entry if no entry for this x-index.

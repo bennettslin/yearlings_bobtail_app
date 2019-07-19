@@ -10,6 +10,8 @@ import {
     SLANTED_TILE_X_UNITS_LENGTH
 } from 'constants/cubeRender'
 
+import { getValidYIndex } from 'helpers/general'
+
 /***************
  * COORDINATES *
  ***************/
@@ -310,21 +312,23 @@ export const getHorizontalPlaneFractions = ({
      * Scenes measure zOffset height at same scale as width. We'll adjust it
      * here to reflect zIndex height.
      */
-    const adjustedZOffset = zOffset * 2
+    const
+        validYIndex = getValidYIndex(yIndex),
+        adjustedZOffset = zOffset * 2
 
     if (slantDirection === 'left') {
         return _getHorizontalPlaneFractionsForSlantedLeft(
-            xIndex, yIndex, zIndex, xOffset, adjustedZOffset
+            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
         )
 
     } else if (slantDirection === 'right') {
         return _getHorizontalPlaneFractionsForSlantedRight(
-            xIndex, yIndex, zIndex, xOffset, adjustedZOffset
+            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
         )
 
     } else {
         return _getHorizontalPlaneFractionsForDefault(
-            xIndex, yIndex, zIndex, xOffset, adjustedZOffset
+            xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
         )
     }
 }

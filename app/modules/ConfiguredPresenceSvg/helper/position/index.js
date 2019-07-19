@@ -82,8 +82,7 @@ export const getXYForPresence = ({
     zOffset
 }) => {
 
-    const
-        {
+    const {
             xPercentage,
             yPercentage
 

@@ -36,7 +36,6 @@ const _addPresenceToSceneLayerByType = ({
     presenceName,
     layers
 }) => {
-    // console.error(presenceType, presenceName)
     const dynamicValue = presences[presenceType][presenceName]
 
     let arrangementObject,

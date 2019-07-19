@@ -291,7 +291,8 @@ export default [
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true
+                [CAPTAIN_BED]: true,
+                [BEDROOM_FENCE]: true
             }
         },
         cubes: BEDROOM_STOOL_KEY,

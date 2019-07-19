@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Make svg assets trigger Presence__visible, because sometimes asset load is too late. But seems not to repro anymore?`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
         workedHours: 0,
         neededHours: 5

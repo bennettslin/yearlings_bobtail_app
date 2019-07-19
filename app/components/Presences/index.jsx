@@ -7,7 +7,7 @@ import LayersActor from './LayersActor'
 import LayersThing from './LayersThing'
 
 import { getScene } from 'album/api/scenes'
-import { CUBE_Y_INDICES } from 'constants/cubeIndex'
+import { CUBE_Y_INDICES_WITH_NEG } from 'constants/cubeIndex'
 
 import { ACTOR } from 'constants/scene'
 
@@ -79,7 +79,7 @@ class Presences extends PureComponent {
     }
 }
 
-CUBE_Y_INDICES.forEach(yIndex => {
+CUBE_Y_INDICES_WITH_NEG.forEach(yIndex => {
     PresencesConfig[yIndex] = connect(getMapStateToProps(yIndex))(Presences)
 })
 

@@ -9,7 +9,7 @@ import Cubes from '../Cubes'
 import PresencesConfig from '../Presences'
 import PresenceZIndexStylesheet from './Stylesheet'
 
-import { CUBE_Y_INDICES } from 'constants/cubeIndex'
+import { CUBE_Y_INDICES_WITH_NEG } from 'constants/cubeIndex'
 
 const mapStateToProps = ({
     sceneStore: { canSceneUpdate }
@@ -51,13 +51,13 @@ class Scene extends PureComponent {
                     )}
                 >
                     <PresenceZIndexStylesheet />
-
-                    {CUBE_Y_INDICES.map(yIndex => {
+                    {CUBE_Y_INDICES_WITH_NEG.map(yIndex => {
                         const Presences = PresencesConfig[yIndex]
-
                         return (
                             <___ {...{ key: yIndex }}>
-                                <Cubes {...{ yIndex }} />
+                                {yIndex > -1 && (
+                                    <Cubes {...{ yIndex }} />
+                                )}
                                 <Presences />
                             </___>
                         )

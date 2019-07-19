@@ -16,6 +16,7 @@ const propTypes = {
     presenceType: PropTypes.string.isRequired,
     actorKey: PropTypes.string,
     presenceKey: PropTypes.string.isRequired,
+    showProcessedSvg: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired
 }
 
@@ -91,11 +92,16 @@ class ConfiguredPresenceSvg extends PureComponent {
 
     processSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
-        setTimeout(this.setAdjustedSize.bind(null, svgString), 0)
+        setTimeout(this.handleProcessedSvg.bind(null, svgString), 0)
         return svgString
     }
 
-    setAdjustedSize = (svgString) => {
+    handleProcessedSvg = (svgString) => {
+        this.setAdjustedSize(svgString)
+        this.props.showProcessedSvg()
+    }
+
+    setAdjustedSize(svgString) {
         try {
             const
                 {
@@ -170,8 +176,7 @@ class ConfiguredPresenceSvg extends PureComponent {
                         ...transformStyle && {
                             transform: transformStyle
                         }
-                    },
-                    wrapper: React.createFactory('div')
+                    }
                 }}
             />
         )

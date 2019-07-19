@@ -4736,5 +4736,10 @@ export default [
         taskName: `Make global annotations its own page.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Make svg assets trigger Presence__visible, because sometimes asset load is too late. Solution was to have reactInlineSvg callback set it.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

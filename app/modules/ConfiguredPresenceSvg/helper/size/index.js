@@ -1,6 +1,7 @@
 import isFinite from 'lodash/isfinite'
 
 import { Y_INDEX_SCALE_FACTORS } from 'constants/cubeRender'
+import { getValidYIndex } from 'helpers/general'
 
 // Illustrator artboards are 1623 by 1082.
 const
@@ -15,7 +16,8 @@ export const getSizeForPresence = ({
 
 }) => {
     const
-        finalScaleFactor = scaleFactor * Y_INDEX_SCALE_FACTORS[yIndex],
+        validYIndex = getValidYIndex(yIndex),
+        finalScaleFactor = scaleFactor * Y_INDEX_SCALE_FACTORS[validYIndex],
         adjustedWidth = viewBoxWidth * finalScaleFactor / ARTBOARD_WIDTH,
         adjustedHeight = viewBoxHeight * finalScaleFactor / ARTBOARD_HEIGHT
 
