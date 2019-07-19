@@ -1,5 +1,6 @@
 .DS_Store
 build
+build__delivery
 node_modules
 npm-debug.log
 bundle.js
