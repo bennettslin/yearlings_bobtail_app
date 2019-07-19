@@ -98,5 +98,25 @@ export default [
         taskName: 'johnnyHortonAlbum',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'policeAlbum',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'nasAlbum',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'progressChartEarly',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'progressChartLate',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

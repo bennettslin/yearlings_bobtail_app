@@ -9,7 +9,7 @@ import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine'
 import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge'
 import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill'
 import lockerBank from 'assets/svgs/cutouts/lockerBank'
-// import trashCan from 'assets/svgs/cutouts/trashCan'
+import trashCan from 'assets/svgs/cutouts/trashCan'
 import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant'
 import recyclables from 'assets/svgs/cutouts/recyclables'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost'
@@ -119,8 +119,8 @@ export default {
     [TAIWAN_FRIDGE]: taiwanFridge,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
     [LOCKER_BANK]: lockerBank,
-    [TRASH_CAN__LOCKERS]: false,
-    [TRASH_CAN__QUAD]: false,
+    [TRASH_CAN__LOCKERS]: trashCan,
+    [TRASH_CAN__QUAD]: trashCan,
     [VAN_NUYS_PLANT__LOCKERS]: vanNuysPlant,
     [VAN_NUYS_PLANT__QUAD]: vanNuysPlant,
     [RECYCLABLES]: recyclables,

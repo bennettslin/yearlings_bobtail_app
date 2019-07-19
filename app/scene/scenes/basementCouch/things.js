@@ -8,11 +8,8 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [NAS_ALBUM]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 4
-            }
+            xPosition: 9.5,
+            scaleFactor: 0.15
         },
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,

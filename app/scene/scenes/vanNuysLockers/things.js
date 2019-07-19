@@ -30,11 +30,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [TRASH_CAN__LOCKERS]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 10.5,
-                xWidth: 1.5,
-                zHeight: 3
-            }
+            xPosition: 10.5,
+            scaleFactor: 0.35
         },
         [VAN_NUYS_PLANT__LOCKERS]: {
             yIndex: 1,

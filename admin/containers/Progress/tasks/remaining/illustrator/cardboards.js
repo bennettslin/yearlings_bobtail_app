@@ -20,16 +20,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'progressChartEarly',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'progressChartLate',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'maraMementoPoster',
         workedHours: 0,
         neededHours: 1.5
@@ -55,17 +45,7 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'policeAlbum',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'televisionAlbum',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'nasAlbum',
         workedHours: 0,
         neededHours: 1
     }

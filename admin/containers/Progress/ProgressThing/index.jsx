@@ -8,6 +8,8 @@ import { getSumOfTasks } from '../AdminNav/helper'
 import { getRemainingTimeStringFromHours } from '../ProgressFooter/helper'
 import { getIllustratorRemainingTasks, getAllIllustratorRemainingTasks } from './helper'
 
+import './style.scss'
+
 const ProgressThing = () => {
 
     const illustratorTasks = getIllustratorRemainingTasks(),
@@ -30,7 +32,6 @@ const ProgressThing = () => {
                     sumTask = getSumOfTasks(thingTasks),
                     { neededHours } = sumTask,
                     neededTime = getRemainingTimeStringFromHours(neededHours)
-
                 return (
                     <div
                         {...{
@@ -40,11 +41,17 @@ const ProgressThing = () => {
                             )
                         }}
                     >
-                        {neededHours &&
-                            <div className="text-cell footer">
-                                {`${thing}: ${neededHours}h (${neededTime})`}
-                            </div>
-                        }
+                        <div
+                            {...{
+                                className: cx(
+                                    'text-cell',
+                                    'footer',
+                                    !neededHours && 'done'
+                                )
+                            }}
+                        >
+                            {`${thing}: ${neededHours}h (${neededTime})`}
+                        </div>
                     </div>
                 )
             })}

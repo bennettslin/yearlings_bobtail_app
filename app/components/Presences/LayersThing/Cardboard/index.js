@@ -17,12 +17,12 @@ import odinMat from 'assets/svgs/cardboards/odinMat'
 // import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster'
 import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo'
 import corkboard from 'assets/svgs/cardboards/corkboard'
-// import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
+import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
 // import nirvanaPoster from 'assets/svgs/cardboards/nirvanaPoster'
 // import leonardCohenPoster from 'assets/svgs/cardboards/leonardCohenPoster'
 // import televisionAlbum from 'assets/svgs/cardboards/televisionAlbum'
-// import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
-// import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
+import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
+import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
 // import maraMementoPoster from 'assets/svgs/cardboards/maraMementoPoster'
 // import maraGladiatorPoster from 'assets/svgs/cardboards/maraGladiatorPoster'
 // import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster'
@@ -30,7 +30,7 @@ import corkboard from 'assets/svgs/cardboards/corkboard'
 import codeBox from 'assets/svgs/cardboards/codeBox'
 import clipboard from 'assets/svgs/cardboards/clipboard'
 import painting from 'assets/svgs/cardboards/painting'
-// import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
+import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
 // import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
 
 import {
@@ -92,12 +92,12 @@ export default {
     [BLOOM_COUNTY_POSTER]: false,
     [VAN_NUYS_LOGO]: vanNuysLogo,
     [CORKBOARD]: corkboard,
-    [POLICE_ALBUM]: false,
+    [POLICE_ALBUM]: policeAlbum,
     [NIRVANA_POSTER]: false,
     [LEONARD_COHEN_POSTER]: false,
     [TELEVISION_ALBUM]: false,
-    [PROGRESS_CHART_EARLY]: false,
-    [PROGRESS_CHART_LATE]: false,
+    [PROGRESS_CHART_EARLY]: progressChartEarly,
+    [PROGRESS_CHART_LATE]: progressChartLate,
     [MARA_MEMENTO_POSTER]: false,
     [MARQUEE_FRAME__MARA_MEMENTO]: false,
     [MARA_GLADIATOR_POSTER]: false,
@@ -107,7 +107,7 @@ export default {
     [CODE_BOX]: codeBox,
     [CLIPBOARD]: clipboard,
     [PAINTING]: painting,
-    [NAS_ALBUM]: false,
+    [NAS_ALBUM]: nasAlbum,
     [ELLIOTT_SMITH_POSTER]: false
 }
 
