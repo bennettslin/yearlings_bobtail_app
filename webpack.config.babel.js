@@ -13,7 +13,9 @@ const getConfig = ({
     return {
         entry: path.resolve(__dirname, 'app'),
         output: {
-            path: path.resolve(__dirname, 'build'),
+            path: showAdmin ?
+                path.resolve(__dirname, 'build__delivery') :
+                path.resolve(__dirname, 'build'),
             filename: '[name]-[hash].js',
             ...isDevelopment && {
                 devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
