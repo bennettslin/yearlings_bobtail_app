@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-import Texts from '../../../../components/Texts'
+import Texts from '../../../../../app/components/Texts'
 
 import { ALL_DOT_KEYS } from 'constants/dots'
 
