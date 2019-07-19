@@ -58,10 +58,5 @@ export default [
         taskName: 'televisionAlbum',
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: 'nasAlbum',
-        workedHours: 0,
-        neededHours: 1
     }
 ]

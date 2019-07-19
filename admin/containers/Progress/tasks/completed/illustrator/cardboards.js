@@ -103,5 +103,10 @@ export default [
         taskName: 'policeAlbum',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'nasAlbum',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

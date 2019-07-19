@@ -30,7 +30,7 @@ import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
 import codeBox from 'assets/svgs/cardboards/codeBox'
 import clipboard from 'assets/svgs/cardboards/clipboard'
 import painting from 'assets/svgs/cardboards/painting'
-// import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
+import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
 // import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
 
 import {
@@ -107,7 +107,7 @@ export default {
     [CODE_BOX]: codeBox,
     [CLIPBOARD]: clipboard,
     [PAINTING]: painting,
-    [NAS_ALBUM]: false,
+    [NAS_ALBUM]: nasAlbum,
     [ELLIOTT_SMITH_POSTER]: false
 }
 
