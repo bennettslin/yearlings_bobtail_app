@@ -98,10 +98,6 @@ class TempGlobalAnnotations extends PureComponent {
             global.localStorage.globalAnnotationsCounter = 0
         }
 
-        global.localStorage.globalAnnotationIndexFirst = 68
-        global.localStorage.globalAnnotationIndexSecond = 147
-        global.localStorage.globalAnnotationIndexThird = 278
-
         if (!global.localStorage.globalAnnotationIndexFirst) {
             global.localStorage.globalAnnotationIndexFirst = 0
         }
