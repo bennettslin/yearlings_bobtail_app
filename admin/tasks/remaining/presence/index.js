@@ -16,10 +16,5 @@ export default [
         taskName: `Cube and presence transition order.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Allow for perspective on thing svgs. Wait until react-inlinesvg has officially upgraded to 1.0.0 for the preprocess. Then use it to add transform to svg, and perspective to container. https://stackoverflow.com/a/28397315`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]

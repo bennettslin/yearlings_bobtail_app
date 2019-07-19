@@ -32,7 +32,9 @@ const _getSvgTransformForPresence = ({
     flipHorizontal,
     rotate,
     skewX,
-    skewY
+    skewY,
+    rotateX,
+    rotateY
 }) => {
     /**
      * Operation order is right to left. Translate should be last.
@@ -55,6 +57,14 @@ const _getSvgTransformForPresence = ({
         transformStyles.push(`skewY(${skewY}deg)`)
     }
 
+    // These are 3d transforms.
+    if (rotateX) {
+        transformStyles.push(`rotateX(${rotateX}deg)`)
+    }
+    if (rotateY) {
+        transformStyles.push(`rotateY(${rotateY}deg)`)
+    }
+
     if (transformStyles.length) {
         return transformStyles.join(' ')
 
@@ -68,14 +78,18 @@ export const setSvgTransformForPresence = ({
     flipHorizontal,
     rotate,
     skewX,
-    skewY
+    skewY,
+    rotateX,
+    rotateY
 
 }) => {
     const transformStyle = _getSvgTransformForPresence({
         flipHorizontal,
         rotate,
         skewX,
-        skewY
+        skewY,
+        rotateX,
+        rotateY
     })
 
     if (!transformStyle) {

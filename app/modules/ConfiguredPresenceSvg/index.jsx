@@ -141,7 +141,9 @@ class ConfiguredPresenceSvg extends PureComponent {
             flipHorizontal,
             rotate,
             skewX,
-            skewY
+            skewY,
+            rotateX,
+            rotateY
         } = this.getArrangement()
 
         return setSvgTransformForPresence({
@@ -149,7 +151,9 @@ class ConfiguredPresenceSvg extends PureComponent {
             flipHorizontal,
             rotate,
             skewX,
-            skewY
+            skewY,
+            rotateX,
+            rotateY
         })
     }
 
@@ -160,6 +164,7 @@ class ConfiguredPresenceSvg extends PureComponent {
             } = this.props,
             {
                 noShadow,
+                perspective,
                 sharedStyle
             } = this.getArrangement(),
             {
@@ -189,6 +194,9 @@ class ConfiguredPresenceSvg extends PureComponent {
                         top: `${adjustedTop.toFixed(2)}%`,
                         width: `${adjustedWidth.toFixed(2)}%`,
                         height: `${adjustedHeight.toFixed(2)}%`,
+                        ...perspective && {
+                            perspective: `${perspective}em`
+                        },
                         ...containerTransform && {
                             transform: containerTransform
                         }

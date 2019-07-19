@@ -44,9 +44,9 @@ export const THINGS_BATHROOM_SINGING = {
             yIndex: 5,
             xPosition: 6.5,
             scaleFactor: 0.15,
-            perspective: 5,
-            skewX: 5,
-            skewY: 5
+            perspective: 50,
+            rotateY: 25,
+            skewX: 5
         }
     },
     [FIXTURE]: {

@@ -4741,5 +4741,10 @@ export default [
         taskName: `Make svg assets trigger Presence__visible, because sometimes asset load is too late. Solution was to have reactInlineSvg callback set it.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow for perspective on thing svgs.`,
+        workedHours: 7,
+        neededHours: 7
     }
 ]
