@@ -85,11 +85,8 @@ export const THINGS_BENNETT_COUCH_OPINION = {
     [CARDBOARD]: {
         [POLICE_ALBUM]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 2
-            }
+            xPosition: 9,
+            scaleFactor: 0.15
         },
         [NIRVANA_POSTER]: {
             yIndex: 1,

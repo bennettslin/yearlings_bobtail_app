@@ -98,5 +98,10 @@ export default [
         taskName: 'johnnyHortonAlbum',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'policeAlbum',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
