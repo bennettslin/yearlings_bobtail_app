@@ -45,11 +45,9 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [TRASH_CAN__QUAD]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 0.5,
-                xWidth: 1.5,
-                zHeight: 3
-            }
+            xPosition: 0.5,
+            scaleFactor: 0.35,
+            flipHorizontal: true
         },
         [VAN_NUYS_PLANT__QUAD]: {
             yIndex: 4,

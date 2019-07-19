@@ -233,5 +233,10 @@ export default [
         taskName: 'dishroomDolly',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'trashCan',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
