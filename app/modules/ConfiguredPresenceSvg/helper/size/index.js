@@ -29,12 +29,11 @@ export const getSizeForPresence = ({
 
 export const getViewBoxSize = (svgString) => {
     const
-        startViewBox = svgString.indexOf('viewBox="'),
-        endViewBox = svgString.indexOf('">', startViewBox + 1),
-        viewBoxDimensions =
-            svgString.slice(startViewBox, endViewBox).split(' '),
-        viewBoxWidth = parseFloat(viewBoxDimensions[2]),
-        viewBoxHeight = parseFloat(viewBoxDimensions[3])
+        startIndex = svgString.indexOf('viewBox="'),
+        endIndex = svgString.indexOf('">', startIndex + 1),
+        dimensions = svgString.slice(startIndex, endIndex).split(' '),
+        viewBoxWidth = parseFloat(dimensions[2]),
+        viewBoxHeight = parseFloat(dimensions[3])
 
     return isFinite(viewBoxWidth) && isFinite(viewBoxHeight) ? (
         {

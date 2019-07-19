@@ -43,7 +43,10 @@ export const THINGS_BATHROOM_SINGING = {
         [JOHNNY_HORTON_ALBUM]: {
             yIndex: 5,
             xPosition: 6.5,
-            scaleFactor: 0.15
+            scaleFactor: 0.15,
+            perspective: 5,
+            skewX: 5,
+            skewY: 5
         }
     },
     [FIXTURE]: {

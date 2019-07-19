@@ -31,7 +31,13 @@ class Presence extends PureComponent {
 
     state = {
         // This determines whether to transition in and out.
-        isTransitionVisible: false
+        isTransitionVisible: false,
+
+        /**
+         * This is a fallback, in case the transition class was added before
+         * the svg was loaded and therefore present.
+         */
+        isSvgLoaded: false
     }
 
     componentDidMount() {
@@ -45,6 +51,10 @@ class Presence extends PureComponent {
 
         if (existenceValue !== prevValue) {
             this._setIsTransitionVisible()
+        }
+
+        if (!existenceValue && prevValue) {
+            this.setState({ isSvgLoaded: false })
         }
     }
 
@@ -62,7 +72,7 @@ class Presence extends PureComponent {
         // This handles the possibility that an svg might be loaded late.
         const { existenceValue } = this.props
         if (existenceValue) {
-            this.setState({ isTransitionVisible: true })
+            this.setState({ isSvgLoaded: true })
         }
     }
 
@@ -74,7 +84,10 @@ class Presence extends PureComponent {
                 presenceKey
             } = this.props,
 
-            { isTransitionVisible } = this.state,
+            {
+                isTransitionVisible,
+                isSvgLoaded
+            } = this.state,
 
             presencesMap = presenceType === ACTOR ?
                 getMapForActorKey(actorKey) :
@@ -94,6 +107,7 @@ class Presence extends PureComponent {
                     {...{
                         className: cx(
                             'Presence',
+                            isSvgLoaded && 'Presence__loaded',
                             capitaliseForClassName(presenceType)
                         ),
                         cubesKey,

@@ -2,7 +2,7 @@ const
     SCALE_STYLE = 'scaleX(-1)',
     DEFAULT_TRANSLATE_X = 50
 
-const getTranslateStyle = ({ alignLeft, alignRight }) => {
+const _getTranslateStyle = ({ alignLeft, alignRight }) => {
     let translateX
 
     if (alignLeft) {
@@ -16,11 +16,23 @@ const getTranslateStyle = ({ alignLeft, alignRight }) => {
     return `translate(-${translateX}%, -100%)`
 }
 
-export const getTransformStyleForPresence = ({
+export const getSvgContainerTransformForPresence = ({
     alignLeft,
-    alignRight,
+    alignRight
+}) => {
+    if (alignLeft || alignRight) {
+        return _getTranslateStyle({ alignLeft, alignRight })
+
+    } else {
+        return null
+    }
+}
+
+const _getSvgTransformForPresence = ({
     flipHorizontal,
-    rotate
+    rotate,
+    skewX,
+    skewY
 }) => {
     /**
      * Operation order is right to left. Translate should be last.
@@ -35,19 +47,47 @@ export const getTransformStyleForPresence = ({
         transformStyles.push(`rotate(${rotate}deg)`)
     }
 
-    if (
-        /**
-         * Default translate is already set in CSS, so only add here if we are
-         * adding custom transforms or a custom alignment.
-         */
-        transformStyles.length ||
-        (alignLeft || alignRight)
-    ) {
-        const translateStyle = getTranslateStyle({ alignLeft, alignRight })
-        transformStyles.unshift(translateStyle)
+    if (skewX && skewY) {
+        transformStyles.push(`skew(${skewX}deg, ${skewY}deg)`)
+    } else if (skewX) {
+        transformStyles.push(`skewX(${skewX}deg)`)
+    } else if (skewY) {
+        transformStyles.push(`skewY(${skewY}deg)`)
+    }
+
+    if (transformStyles.length) {
         return transformStyles.join(' ')
 
     } else {
         return null
     }
+}
+
+export const setSvgTransformForPresence = ({
+    svgString,
+    flipHorizontal,
+    rotate,
+    skewX,
+    skewY
+
+}) => {
+    const transformStyle = _getSvgTransformForPresence({
+        flipHorizontal,
+        rotate,
+        skewX,
+        skewY
+    })
+
+    if (!transformStyle) {
+        return svgString
+    }
+
+    const startIndex = svgString.indexOf('xmlns'),
+        transformAttribute = `style="transform: ${transformStyle}" `
+
+    return [
+        svgString.slice(0, startIndex),
+        transformAttribute,
+        svgString.slice(startIndex)
+    ].join('')
 }
