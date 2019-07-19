@@ -19,8 +19,6 @@ import Scene_17 from './17_VeganProclamation'
 import Scene_18 from './18_My100000thDream'
 import Scene_19 from './19_Epilogue'
 
-import { addLayersToScenes } from './helper'
-
 const albumScenes = [
     Scene_00,
     Scene_01,
@@ -43,7 +41,5 @@ const albumScenes = [
     Scene_18,
     Scene_19
 ]
-
-addLayersToScenes(albumScenes)
 
 export default albumScenes
