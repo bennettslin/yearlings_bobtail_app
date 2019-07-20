@@ -19,7 +19,7 @@ import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo'
 import corkboard from 'assets/svgs/cardboards/corkboard'
 import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
 // import nirvanaPoster from 'assets/svgs/cardboards/nirvanaPoster'
-// import leonardCohenPoster from 'assets/svgs/cardboards/leonardCohenPoster'
+import leonardCohenPoster from 'assets/svgs/cardboards/leonardCohenPoster'
 // import televisionAlbum from 'assets/svgs/cardboards/televisionAlbum'
 import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
 import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
@@ -94,7 +94,7 @@ export default {
     [CORKBOARD]: corkboard,
     [POLICE_ALBUM]: policeAlbum,
     [NIRVANA_POSTER]: false,
-    [LEONARD_COHEN_POSTER]: false,
+    [LEONARD_COHEN_POSTER]: leonardCohenPoster,
     [TELEVISION_ALBUM]: false,
     [PROGRESS_CHART_EARLY]: progressChartEarly,
     [PROGRESS_CHART_LATE]: progressChartLate,
