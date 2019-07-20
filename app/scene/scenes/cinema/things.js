@@ -12,13 +12,10 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [MARA_MEMENTO_POSTER]: {
             yIndex: 4,
-            noShadow: true,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 2.5,
-                zHeight: 4,
-                zOffset: 2
-            }
+            xPosition: 1,
+            zOffset: 2,
+            scaleFactor: 0.25,
+            noShadow: true
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
             yIndex: 4,

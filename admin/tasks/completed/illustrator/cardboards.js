@@ -118,5 +118,10 @@ export default [
         taskName: 'progressChartLate',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'maraMementoPoster',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

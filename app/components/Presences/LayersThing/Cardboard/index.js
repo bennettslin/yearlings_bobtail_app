@@ -23,7 +23,7 @@ import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
 // import televisionAlbum from 'assets/svgs/cardboards/televisionAlbum'
 import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
 import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
-// import maraMementoPoster from 'assets/svgs/cardboards/maraMementoPoster'
+import maraMementoPoster from 'assets/svgs/cardboards/maraMementoPoster'
 // import maraGladiatorPoster from 'assets/svgs/cardboards/maraGladiatorPoster'
 // import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster'
 // import marqueeFrame from 'assets/svgs/cardboards/marqueeFrame'
@@ -98,7 +98,7 @@ export default {
     [TELEVISION_ALBUM]: false,
     [PROGRESS_CHART_EARLY]: progressChartEarly,
     [PROGRESS_CHART_LATE]: progressChartLate,
-    [MARA_MEMENTO_POSTER]: false,
+    [MARA_MEMENTO_POSTER]: maraMementoPoster,
     [MARQUEE_FRAME__MARA_MEMENTO]: false,
     [MARA_GLADIATOR_POSTER]: false,
     [MARQUEE_FRAME__MARA_GLADIATOR]: false,
