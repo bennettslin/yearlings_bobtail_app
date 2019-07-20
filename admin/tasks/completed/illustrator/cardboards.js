@@ -133,5 +133,10 @@ export default [
         taskName: 'maraGladiatorPoster',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'marqueeFrame',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

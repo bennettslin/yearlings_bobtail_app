@@ -32,12 +32,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [MARQUEE_FRAME__GLADIATOR]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 2.5,
-                zHeight: 4,
-                zOffset: 2
-            }
+            xPosition: 1,
+            zOffset: 1.7,
+            scaleFactor: 0.36
         }
     }
 }

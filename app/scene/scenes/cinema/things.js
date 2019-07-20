@@ -24,12 +24,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 2.5,
-                zHeight: 4,
-                zOffset: 2
-            }
+            xPosition: 1,
+            zOffset: 1.7,
+            scaleFactor: 0.36
         },
         [MARA_GLADIATOR_POSTER]: {
             yIndex: 4,
@@ -44,12 +41,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [MARQUEE_FRAME__MARA_GLADIATOR]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 2.5,
-                zHeight: 4,
-                zOffset: 2
-            }
+            xPosition: 10,
+            zOffset: 1.7,
+            scaleFactor: 0.36
         }
     }
 }
