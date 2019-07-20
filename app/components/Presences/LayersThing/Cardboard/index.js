@@ -14,7 +14,7 @@ import seaSerpentRight from 'assets/svgs/cardboards/seaSerpentRight'
 import bennettOdinOceanFloor from 'assets/svgs/cardboards/bennettOdinOceanFloor'
 import bennettMat from 'assets/svgs/cardboards/bennettMat'
 import odinMat from 'assets/svgs/cardboards/odinMat'
-// import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster'
+import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster'
 import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo'
 import corkboard from 'assets/svgs/cardboards/corkboard'
 import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
@@ -89,7 +89,7 @@ export default {
     [BENNETT_ODIN_OCEAN_FLOOR]: bennettOdinOceanFloor,
     [BENNETT_MAT]: bennettMat,
     [ODIN_MAT]: odinMat,
-    [BLOOM_COUNTY_POSTER]: false,
+    [BLOOM_COUNTY_POSTER]: bloomCountyPoster,
     [VAN_NUYS_LOGO]: vanNuysLogo,
     [CORKBOARD]: corkboard,
     [POLICE_ALBUM]: policeAlbum,

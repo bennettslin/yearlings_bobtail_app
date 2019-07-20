@@ -143,5 +143,10 @@ export default [
         taskName: 'tintinPoster',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'bloomCountyPoster',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

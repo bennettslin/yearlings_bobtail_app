@@ -51,13 +51,10 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.36
         },
         [BLOOM_COUNTY_POSTER]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 3,
-                zOffset: 2
-            }
+            yIndex: 3,
+            xPosition: 9,
+            zOffset: 0,
+            scaleFactor: 0.36
         }
     },
     [FIXTURE]: {
