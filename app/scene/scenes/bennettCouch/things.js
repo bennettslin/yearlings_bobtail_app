@@ -113,11 +113,8 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
     [CARDBOARD]: {
         [TELEVISION_ALBUM]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 2
-            }
+            xPosition: 9,
+            scaleFactor: 0.15
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,

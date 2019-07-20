@@ -163,5 +163,10 @@ export default [
         taskName: 'elliottSmithPoster',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'televisionAlbum',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
