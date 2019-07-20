@@ -18,7 +18,7 @@ import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster'
 import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo'
 import corkboard from 'assets/svgs/cardboards/corkboard'
 import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
-// import nirvanaPoster from 'assets/svgs/cardboards/nirvanaPoster'
+import nirvanaPoster from 'assets/svgs/cardboards/nirvanaPoster'
 import leonardCohenPoster from 'assets/svgs/cardboards/leonardCohenPoster'
 // import televisionAlbum from 'assets/svgs/cardboards/televisionAlbum'
 import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
@@ -93,7 +93,7 @@ export default {
     [VAN_NUYS_LOGO]: vanNuysLogo,
     [CORKBOARD]: corkboard,
     [POLICE_ALBUM]: policeAlbum,
-    [NIRVANA_POSTER]: false,
+    [NIRVANA_POSTER]: nirvanaPoster,
     [LEONARD_COHEN_POSTER]: leonardCohenPoster,
     [TELEVISION_ALBUM]: false,
     [PROGRESS_CHART_EARLY]: progressChartEarly,
