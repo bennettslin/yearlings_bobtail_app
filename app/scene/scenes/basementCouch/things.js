@@ -13,12 +13,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 3,
-                zOffset: 2
-            }
+            xPosition: 9,
+            zOffset: 2,
+            scaleFactor: 0.25
         }
     }
 }

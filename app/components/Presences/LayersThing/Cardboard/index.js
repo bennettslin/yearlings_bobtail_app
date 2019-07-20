@@ -31,7 +31,7 @@ import codeBox from 'assets/svgs/cardboards/codeBox'
 import clipboard from 'assets/svgs/cardboards/clipboard'
 import painting from 'assets/svgs/cardboards/painting'
 import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
-// import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
+import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
 
 import {
     JOHNNY_HORTON_ALBUM,
@@ -108,6 +108,6 @@ export default {
     [CLIPBOARD]: clipboard,
     [PAINTING]: painting,
     [NAS_ALBUM]: nasAlbum,
-    [ELLIOTT_SMITH_POSTER]: false
+    [ELLIOTT_SMITH_POSTER]: elliottSmithPoster
 }
 

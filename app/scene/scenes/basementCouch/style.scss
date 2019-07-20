@@ -1,3 +1,73 @@
+.elliottSmithPoster {
+    .frame {
+        fill: #daeaed;
+    }
+
+    .stripeRed {
+        fill: #60384c;
+    }
+
+    .stripeBlue {
+        fill: #505f75;
+    }
+
+    .pants {
+        fill: #514d5b;
+    }
+
+    .pantsDisplayLine {
+        stroke: #26254c;
+    }
+
+    .pantsOverlapLine {
+        stroke: #3b407a;
+    }
+
+    .skin {
+        fill: #d1baae;
+    }
+
+    .skinOverlapLine {
+        stroke: #736357;
+    }
+
+    .shirt {
+        fill: #af9880;
+    }
+
+    .shirtCreaseLine {
+        stroke: #7f6a5c;
+    }
+
+    .hair {
+        fill: #564f3e;
+    }
+
+    .hairOverlapLine {
+        stroke: #383838;
+    }
+
+    .hoodie {
+        fill: #4f566d;
+    }
+
+    .hoodieOverlapLine {
+        stroke: #373770;
+    }
+
+    .hoodieDisplayLine {
+        stroke: #363572;
+    }
+
+    .hoodieFoldLine {
+        stroke: #18435b;
+    }
+
+    .zipperDisplayLine {
+        stroke: #d3d3d3;
+    }
+}
+
 .nasAlbum {
     .frame {
         fill: #6a8589;
