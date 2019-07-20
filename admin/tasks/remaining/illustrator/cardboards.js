@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'tintinPoster',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'bloomCountyPoster',
         workedHours: 0,
         neededHours: 1.5

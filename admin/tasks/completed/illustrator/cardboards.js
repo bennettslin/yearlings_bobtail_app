@@ -138,5 +138,10 @@ export default [
         taskName: 'marqueeFrame',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'tintinPoster',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

@@ -1,5 +1,5 @@
 import johnnyHortonAlbum from 'assets/svgs/cardboards/johnnyHortonAlbum'
-// import tintinPoster from 'assets/svgs/cardboards/tintinPoster'
+import tintinPoster from 'assets/svgs/cardboards/tintinPoster'
 import bennettTaiwanStairs from 'assets/svgs/cardboards/bennettTaiwanStairs'
 import odinTaiwanStairs from 'assets/svgs/cardboards/odinTaiwanStairs'
 import bennettTaiwanGate from 'assets/svgs/cardboards/bennettTaiwanGate'
@@ -74,7 +74,7 @@ import {
 
 export default {
     [JOHNNY_HORTON_ALBUM]: johnnyHortonAlbum,
-    [TINTIN_POSTER]: false,
+    [TINTIN_POSTER]: tintinPoster,
     [BENNETT_TAIWAN_STAIRS]: bennettTaiwanStairs,
     [ODIN_TAIWAN_STAIRS]: odinTaiwanStairs,
     [BENNETT_TAIWAN_GATE]: bennettTaiwanGate,
