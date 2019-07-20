@@ -25,7 +25,7 @@ import progressChartEarly from 'assets/svgs/cardboards/progressChartEarly'
 import progressChartLate from 'assets/svgs/cardboards/progressChartLate'
 import maraMementoPoster from 'assets/svgs/cardboards/maraMementoPoster'
 // import maraGladiatorPoster from 'assets/svgs/cardboards/maraGladiatorPoster'
-// import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster'
+import gladiatorPoster from 'assets/svgs/cardboards/gladiatorPoster'
 // import marqueeFrame from 'assets/svgs/cardboards/marqueeFrame'
 import codeBox from 'assets/svgs/cardboards/codeBox'
 import clipboard from 'assets/svgs/cardboards/clipboard'
@@ -102,7 +102,7 @@ export default {
     [MARQUEE_FRAME__MARA_MEMENTO]: false,
     [MARA_GLADIATOR_POSTER]: false,
     [MARQUEE_FRAME__MARA_GLADIATOR]: false,
-    [GLADIATOR_POSTER]: false,
+    [GLADIATOR_POSTER]: gladiatorPoster,
     [MARQUEE_FRAME__GLADIATOR]: false,
     [CODE_BOX]: codeBox,
     [CLIPBOARD]: clipboard,

@@ -23,13 +23,10 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [GLADIATOR_POSTER]: {
             yIndex: 4,
+            xPosition: 1,
+            zOffset: 2,
             noShadow: true,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 2.5,
-                zHeight: 4,
-                zOffset: 2
-            }
+            scaleFactor: 0.25
         },
         [MARQUEE_FRAME__GLADIATOR]: {
             yIndex: 4,
