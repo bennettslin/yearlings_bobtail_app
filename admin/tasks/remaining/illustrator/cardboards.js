@@ -20,11 +20,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'maraGladiatorPoster',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'marqueeFrame',
         workedHours: 0,
         neededHours: 1

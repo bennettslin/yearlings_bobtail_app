@@ -7,6 +7,7 @@ import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
 } from 'constants/scene/things/cardboards'
+import { POSTER_GLADIATOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -26,7 +27,8 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 1,
             zOffset: 2,
             noShadow: true,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            sharedStyle: POSTER_GLADIATOR_SHARED
         },
         [MARQUEE_FRAME__GLADIATOR]: {
             yIndex: 4,

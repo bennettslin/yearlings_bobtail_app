@@ -7,6 +7,10 @@ import {
     MARA_GLADIATOR_POSTER,
     MARQUEE_FRAME__MARA_GLADIATOR
 } from 'constants/scene/things/cardboards'
+import {
+    POSTER_GLADIATOR_SHARED,
+    POSTER_MARA_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -14,8 +18,9 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 1,
             zOffset: 2,
+            noShadow: true,
             scaleFactor: 0.25,
-            noShadow: true
+            sharedStyle: POSTER_MARA_SHARED
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
             yIndex: 4,
@@ -28,13 +33,14 @@ const ARRANGEMENTS_THINGS = {
         },
         [MARA_GLADIATOR_POSTER]: {
             yIndex: 4,
+            xPosition: 10,
+            zOffset: 2,
             noShadow: true,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 2.5,
-                zHeight: 4,
-                zOffset: 2
-            }
+            scaleFactor: 0.25,
+            sharedStyle: [
+                POSTER_GLADIATOR_SHARED,
+                POSTER_MARA_SHARED
+            ]
         },
         [MARQUEE_FRAME__MARA_GLADIATOR]: {
             yIndex: 4,

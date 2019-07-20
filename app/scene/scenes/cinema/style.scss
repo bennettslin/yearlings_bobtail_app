@@ -1,45 +1,8 @@
 .maraMementoPoster {
-    .frame {
-        fill: #3f2d2d;
-    }
-
-    .skin {
-        fill: #ccc;
-    }
-
-    .shadow {
-        fill: #998675;
-    }
-
-    .hair {
-        fill: #b27940;
-    }
-
-    .shirt {
-        fill: #c6c18f;
-    }
-
-    .dress {
-        fill: #ce6a32;
-    }
-
-    .headband {
-        fill: #6aa597;
-    }
-
-    .collar {
-        fill: #b6b774;
-    }
-
-    .skinOverlapLine {
-        stroke: #736357;
-    }
-
-    .hairOverlapLine {
-        stroke: #42210b;
-    }
-
-    .photoFrame {
-        fill: #eae9dc;
-    }
+    .frame { fill: #3f2d2d; }
+    .shadow { fill: #998675; }
+    .shirt { fill: #c6c18f; }
+    .dress { fill: #ce6a32; }
+    .collar { fill: #b6b774; }
+    .photoFrame { fill: #eae9dc; }
 }

@@ -121,11 +121,16 @@ export default [
     },
     {
         taskName: 'maraMementoPoster',
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 1.5,
+        neededHours: 1.5
     },
     {
         taskName: 'gladiatorPoster',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'maraGladiatorPoster',
         workedHours: 1.5,
         neededHours: 1.5
     }
