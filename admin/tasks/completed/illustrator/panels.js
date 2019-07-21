@@ -101,12 +101,12 @@ export default [
     },
     {
         taskName: 'reattaExterior',
-        workedHours: 3,
-        neededHours: 3
+        workedHours: 2,
+        neededHours: 2
     },
     {
         taskName: 'reattaInterior',
-        workedHours: 0,
-        neededHours: 1.5
+        workedHours: 1,
+        neededHours: 1
     }
 ]
