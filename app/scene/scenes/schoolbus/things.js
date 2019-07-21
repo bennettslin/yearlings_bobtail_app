@@ -13,6 +13,7 @@ import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
 } from 'constants/scene/things/panels'
+import { INTERIOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -55,7 +56,8 @@ const ARRANGEMENTS_THINGS = {
         [SCHOOLBUS_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.5
+            scaleFactor: 0.5,
+            sharedStyle: INTERIOR_SHARED
         },
         [SCHOOLBUS_EXTERIOR]: {
             yIndex: 4,

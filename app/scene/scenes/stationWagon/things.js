@@ -14,6 +14,7 @@ import {
     SATURN_INTERIOR,
     SATURN_EXTERIOR
 } from 'constants/scene/things/panels'
+import { INTERIOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -60,7 +61,8 @@ const ARRANGEMENTS_THINGS = {
         [SATURN_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.5
+            scaleFactor: 0.5,
+            sharedStyle: INTERIOR_SHARED
         },
         [SATURN_EXTERIOR]: {
             yIndex: 4,

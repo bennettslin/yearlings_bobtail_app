@@ -1,5 +1,8 @@
+export const SHADOW_SHARED = 'shadowShared'
+export const INTERIOR_SHARED = 'interiorShared'
 export const BENNETT_ODIN_SHARED = 'bennettOdinShared'
 export const BUDDHA_SHRINE_SHARED = 'buddhaShrineShared'
 export const POSTER_GLADIATOR_SHARED = 'posterGladiatorShared'
 export const POSTER_MARA_SHARED = 'posterMaraShared'
 export const PROGRESS_CHART_SHARED = 'progressChartShared'
+export const WAITING_ARMCHAIR_SHARED = 'waitingArmchairShared'
