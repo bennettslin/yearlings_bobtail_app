@@ -15,7 +15,7 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'valleyFlat',
+        taskName: 'valleyFreeway',
         workedHours: 0,
         neededHours: 1.5
     },

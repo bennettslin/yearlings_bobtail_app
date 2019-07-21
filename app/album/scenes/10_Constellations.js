@@ -57,6 +57,8 @@ import {
 } from '../../constants/scene/things/bubbles'
 
 import {
+    UCLA_TREE__LEFT,
+    UCLA_TREE__RIGHT,
     PHARMACY_AISLE,
     STEAM_PIPES,
     STORAGE_BOXES,
@@ -110,6 +112,10 @@ export default [
             },
             [BACKDROP]: {
                 [UCLA_BACKDROP]: true
+            },
+            [CUTOUT]: {
+                [UCLA_TREE__LEFT]: true,
+                [UCLA_TREE__RIGHT]: true
             },
             [FLAT]: {
                 [ROYCE_HALL]: true

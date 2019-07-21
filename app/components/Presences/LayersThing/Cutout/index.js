@@ -28,6 +28,7 @@ import glassRack from 'assets/svgs/cutouts/glassRack'
 import dishroomDolly from 'assets/svgs/cutouts/dishroomDolly'
 import apartmentPlant from 'assets/svgs/cutouts/apartmentPlant'
 import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant'
+// import uclaTree from 'assets/svgs/cutouts/uclaTree'
 import pharmacyAisle from 'assets/svgs/cutouts/pharmacyAisle'
 import steamPipes from 'assets/svgs/cutouts/steamPipes'
 import storageBoxes from 'assets/svgs/cutouts/storageBoxes'
@@ -84,6 +85,8 @@ import {
     DISHROOM_DOLLY__GLASS,
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT,
+    UCLA_TREE__LEFT,
+    UCLA_TREE__RIGHT,
     PHARMACY_AISLE,
     STEAM_PIPES,
     STORAGE_BOXES,
@@ -145,6 +148,8 @@ export default {
     [DISHROOM_DOLLY__GLASS]: dishroomDolly,
     [APARTMENT_PLANT]: apartmentPlant,
     [WAITING_ROOM_PLANT]: waitingRoomPlant,
+    [UCLA_TREE__LEFT]: false,
+    [UCLA_TREE__RIGHT]: false,
     [PHARMACY_AISLE]: pharmacyAisle,
     [STEAM_PIPES]: steamPipes,
     [STORAGE_BOXES]: storageBoxes,
