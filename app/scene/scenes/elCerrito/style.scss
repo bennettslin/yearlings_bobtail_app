@@ -1,4 +1,103 @@
 .elCerritoTree {
-    .trunk { fill: #630; }
-    .leaves { fill: #393; }
+    .trunk {
+        fill: #630;
+    }
+
+    .leaves {
+        fill: #393;
+    }
+}
+
+.reattaExterior {
+    .chassis {
+        fill: #212123;
+    }
+
+    .tireEdge {
+        fill: #494954;
+    }
+
+    .tireFront {
+        fill: #353538;
+    }
+
+    .hubcap {
+        fill: #95959b;
+    }
+
+    .hubcapCentre {
+        fill: #bdbdd1;
+    }
+
+    .hubcapHole {
+        fill: #32323a;
+    }
+
+    .floodLight {
+        fill: #e5dd93;
+    }
+
+    .headLightSide {
+        fill: #c1c0b2;
+    }
+
+    .turnLight {
+        fill: #e0b46e;
+    }
+
+    .headLightFront {
+        fill: #d8d7c3;
+    }
+
+    .hoodFront {
+        fill: #a8766a;
+    }
+
+    .bodyInner {
+        fill: #684d4d;
+    }
+
+    .mirror {
+        fill: #7c6363;
+    }
+
+    .windshield {
+        fill: #e04646;
+    }
+
+    .bodySide {
+        fill: #9b4040;
+    }
+
+    .trimSide {
+        fill: #757574;
+    }
+
+    .trimEdge {
+        fill: #545151;
+    }
+
+    .bodyFront {
+        fill: #c14848;
+    }
+
+    .hood {
+        fill: #d34a4a;
+    }
+
+    .hoodBorderLine {
+        stroke: #6d141b;
+    }
+
+    .trimFront {
+        fill: #868783;
+    }
+
+    .ornament {
+        fill: #719dcc;
+    }
+
+    .grill {
+        fill: #67717f;
+    }
 }

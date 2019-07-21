@@ -15,11 +15,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'reattaExterior',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'deathbedThoughtPanel',
         workedHours: 0,
         neededHours: 1

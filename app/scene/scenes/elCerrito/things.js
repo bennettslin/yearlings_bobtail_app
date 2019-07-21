@@ -56,11 +56,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [REATTA_EXTERIOR]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 9,
-                zHeight: 4
-            }
+            xPosition: 4,
+            scaleFactor: 0.25
         },
         [REATTA_INTERIOR]: {
             yIndex: 2,

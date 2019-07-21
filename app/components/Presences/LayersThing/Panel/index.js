@@ -35,7 +35,7 @@ import crowdSide from 'assets/svgs/panels/crowdSide'
 // import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
 // import reattaInterior from 'assets/svgs/panels/reattaInterior'
-// import reattaExterior from 'assets/svgs/panels/reattaExterior'
+import reattaExterior from 'assets/svgs/panels/reattaExterior'
 // import hospitalBed from 'assets/svgs/panels/hospitalBed'
 import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
 // import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel'
@@ -152,7 +152,7 @@ export default {
     [SNOWGLOBE__LIZ_KHARI]: snowglobe,
     [SNOWGLOBE__BENNETT_ALONE]: snowglobe,
     [REATTA_INTERIOR]: false,
-    [REATTA_EXTERIOR]: false,
+    [REATTA_EXTERIOR]: reattaExterior,
     [HOSPITAL_BED]: false,
     [PHONE_CALL_PANEL]: phoneCallPanel,
     [DEATHBED_THOUGHT_PANEL]: false,

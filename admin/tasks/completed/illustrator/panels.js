@@ -98,5 +98,10 @@ export default [
         taskName: 'schoolbusExterior',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'reattaExterior',
+        workedHours: 3,
+        neededHours: 3
     }
 ]
