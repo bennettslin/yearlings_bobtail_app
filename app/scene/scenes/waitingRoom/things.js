@@ -18,6 +18,7 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from 'constants/scene/things/panels'
+import { WAITING_ARMCHAIR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -45,35 +46,41 @@ const ARRANGEMENTS_THINGS = {
         [WAITING_ARMCHAIR__BENNETT]: {
             yIndex: 3,
             xPosition: 2.5,
-            scaleFactor: 0.22
+            scaleFactor: 0.22,
+            sharedStyle: WAITING_ARMCHAIR_SHARED
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {
             yIndex: 5,
             xPosition: 1.25,
-            scaleFactor: 0.22
+            scaleFactor: 0.22,
+            sharedStyle: WAITING_ARMCHAIR_SHARED
         },
         [WAITING_ARMREST__BENNETT_RIGHT]: {
             yIndex: 5,
             xPosition: 3.75,
             scaleFactor: 0.22,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: WAITING_ARMCHAIR_SHARED
         },
         [WAITING_ARMCHAIR__LIZ]: {
             yIndex: 3,
             xPosition: 5.5,
             scaleFactor: 0.22,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: WAITING_ARMCHAIR_SHARED
         },
         [WAITING_ARMREST__LIZ_LEFT]: {
             yIndex: 5,
             xPosition: 4.25,
-            scaleFactor: 0.22
+            scaleFactor: 0.22,
+            sharedStyle: WAITING_ARMCHAIR_SHARED
         },
         [WAITING_ARMREST__LIZ_RIGHT]: {
             yIndex: 5,
             xPosition: 6.75,
             scaleFactor: 0.22,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: WAITING_ARMCHAIR_SHARED
         }
     }
 }
