@@ -75,11 +75,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'uclaBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'pharmacyThoughtBackdrop',
         workedHours: 0,
         neededHours: 1

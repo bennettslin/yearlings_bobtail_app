@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FLAT
 } from 'constants/scene'
-import { WEST_BERKELEY_BACKDROP } from 'constants/scene/things/backdrops'
+import { FOLIAGE_BACKDROP } from 'constants/scene/things/backdrops'
 import { BERKELEY_LAMPPOST } from 'constants/scene/things/cutouts'
 import {
     ST_JOSEPHS_ANNEX,
@@ -12,7 +12,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [WEST_BERKELEY_BACKDROP]: {
+        [FOLIAGE_BACKDROP]: {
             yIndex: 0,
             arrangement: {
                 xPosition: 5.5,

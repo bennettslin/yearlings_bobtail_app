@@ -71,7 +71,7 @@ import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
-    WEST_BERKELEY_BACKDROP
+    FOLIAGE_BACKDROP
 } from '../../constants/scene/things/backdrops'
 
 import {
@@ -107,7 +107,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [WEST_BERKELEY_BACKDROP]: true
+                [FOLIAGE_BACKDROP]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true
@@ -140,7 +140,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [WEST_BERKELEY_BACKDROP]: true
+                [FOLIAGE_BACKDROP]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true
@@ -298,7 +298,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [WEST_BERKELEY_BACKDROP]: true
+                [FOLIAGE_BACKDROP]: true
             },
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true

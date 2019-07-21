@@ -49,7 +49,7 @@ import { CATHOLIC_GUY } from '../../constants/scene/actors/instances/wade'
 
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
-    WEST_BERKELEY_BACKDROP,
+    FOLIAGE_BACKDROP,
     UC_BERKELEY_BACKDROP
 } from '../../constants/scene/things/backdrops'
 
@@ -158,7 +158,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [WEST_BERKELEY_BACKDROP]: true
+                [FOLIAGE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [BERKELEY_LAMPPOST]: true

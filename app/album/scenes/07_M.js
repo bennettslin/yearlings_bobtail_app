@@ -69,7 +69,7 @@ import {
 
 import {
     OAKLAND_FRONT_BACKDROP,
-    WEST_BERKELEY_BACKDROP
+    FOLIAGE_BACKDROP
 } from '../../constants/scene/things/backdrops'
 
 import { CINEMA_THOUGHTS } from '../../constants/scene/things/bubbles'
@@ -283,7 +283,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [WEST_BERKELEY_BACKDROP]: true
+                [FOLIAGE_BACKDROP]: true
             },
             [FIXTURE]: {
                 [BASS_CASE_UPRIGHT]: true,

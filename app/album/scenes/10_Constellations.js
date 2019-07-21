@@ -45,7 +45,7 @@ import {
 } from '../../constants/scene/actors/instances/songs'
 
 import {
-    UCLA_BACKDROP,
+    FOLIAGE_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     STATION_WAGON_BACKDROP
@@ -111,7 +111,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [UCLA_BACKDROP]: true
+                [FOLIAGE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [UCLA_TREE__LEFT]: true,
