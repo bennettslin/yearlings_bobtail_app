@@ -18,5 +18,10 @@ export default [
         taskName: 'foliageBackdrop',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'nohoHousesBackdrop',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

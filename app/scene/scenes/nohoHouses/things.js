@@ -14,11 +14,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [NOHO_HOUSES_BACKDROP]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.7
         }
     },
     [CUTOUT]: {

@@ -1,4 +1,4 @@
-// import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop'
+import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop'
 // import nohoSchoolBackdrop from 'assets/svgs/backdrops/nohoSchoolBackdrop'
 // import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
 // import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
@@ -61,7 +61,7 @@ import {
 } from 'constants/scene/things/backdrops'
 
 export default {
-    [NOHO_HOUSES_BACKDROP]: false,
+    [NOHO_HOUSES_BACKDROP]: nohoHousesBackdrop,
     [NOHO_SCHOOL_BACKDROP]: false,
     [VALLEY_BACKDROP]: false,
     [TAIWAN_MOUNTAINS_BACKDROP]: false,
