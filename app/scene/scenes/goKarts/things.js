@@ -20,12 +20,9 @@ const ARRANGEMENTS_THINGS = {
     },
     [FLAT]: {
         [GO_KART_TRACK]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            yIndex: 1,
+            xPosition: 5.5,
+            scaleFactor: 0.66
         }
     },
     [PANEL]: {

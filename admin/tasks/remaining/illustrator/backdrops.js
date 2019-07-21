@@ -60,11 +60,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'goKartBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'pharmacyThoughtBackdrop',
         workedHours: 0,
         neededHours: 1

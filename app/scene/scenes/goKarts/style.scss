@@ -1,63 +1,29 @@
 .goKartBackdrop {
-    .foliage {
-        fill: #5b8761;
-    }
+    .foliage { fill: #5b8761; }
+}
+
+.goKartTrack {
+    .checkerBlack { fill: #44413f; }
+    .checkerWhite { fill: #fff; }
+    .pole { fill: #87796e; }
+    .tireSide { fill: #3f3f3f; }
+    .tireTop { fill: #595959; }
+    .tireCentre { fill: #353434; }
 }
 
 .goKartExterior {
-    .cap {
-        fill: #996;
-    }
-
-    .tank {
-        fill: #c93;
-    }
-
-    .tankEdgeLine {
-        stroke: #a71;
-    }
-
-    .cooler {
-        fill: #36c;
-    }
-
-    .rod {
-        fill: #999;
-    }
-
-    .block {
-        fill: #963;
-    }
-
-    .engine {
-        fill: #6c6;
-    }
-
-    .ring {
-        fill: #cff;
-    }
-
-    .frame {
-        fill: #666;
-    }
-
-    .tire {
-        fill: #333;
-    }
-
-    .hubcap {
-        fill: #99c;
-    }
-
-    .windshield {
-        fill: #ccc;
-    }
-
-    .bumper {
-        fill: #966;
-    }
-
-    .chassis {
-        fill: #c33;
-    }
+    .cap { fill: #996; }
+    .tank { fill: #c93; }
+    .tankEdgeLine { stroke: #a71; }
+    .cooler { fill: #36c; }
+    .rod { fill: #999; }
+    .block { fill: #963; }
+    .engine { fill: #6c6; }
+    .ring { fill: #cff; }
+    .frame { fill: #666; }
+    .tire { fill: #333; }
+    .hubcap { fill: #99c; }
+    .windshield { fill: #ccc; }
+    .bumper { fill: #966; }
+    .chassis { fill: #c33; }
 }
