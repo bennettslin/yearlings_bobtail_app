@@ -14,11 +14,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [GO_KART_BACKDROP]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.7
         }
     },
     [FLAT]: {

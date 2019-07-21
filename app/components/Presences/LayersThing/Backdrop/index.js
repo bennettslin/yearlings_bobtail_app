@@ -14,7 +14,7 @@ import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
 // import bennettCouchThoughtBackdrop from 'assets/svgs/backdrops/bennettCouchThoughtBackdrop'
 import foliageBackdrop from 'assets/svgs/backdrops/foliageBackdrop'
 // import ucBerkeleyBackdrop from 'assets/svgs/backdrops/ucBerkeleyBackdrop'
-// import goKartThoughtBackdrop from 'assets/svgs/backdrops/goKartThoughtBackdrop'
+import goKartBackdrop from 'assets/svgs/backdrops/goKartBackdrop'
 // import pharmacyThoughtBackdrop from 'assets/svgs/backdrops/pharmacyThoughtBackdrop'
 import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
 // import stationWagonBackdrop from 'assets/svgs/backdrops/stationWagonBackdrop'
@@ -77,7 +77,7 @@ export default {
     [BENNETT_COUCH_THOUGHT_BACKDROP]: false,
     [FOLIAGE_BACKDROP]: foliageBackdrop,
     [UC_BERKELEY_BACKDROP]: false,
-    [GO_KART_BACKDROP]: false,
+    [GO_KART_BACKDROP]: goKartBackdrop,
     [PHARMACY_THOUGHT_BACKDROP]: false,
     [CEMETERY_BACKDROP]: cemeteryBackdrop,
     [STATION_WAGON_BACKDROP]: false,
