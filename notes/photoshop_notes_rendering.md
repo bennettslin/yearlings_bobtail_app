@@ -24,7 +24,7 @@
 * volkswagen
 
 # Redo className organisation.
-* Cardboards (Just buoy, rickshaw, and sea serpents left)
+* Cardboards (Just buoy and rickshaw left)
 * Cutouts
 
 # Redo shape organisation.

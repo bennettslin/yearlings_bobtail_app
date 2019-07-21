@@ -1,15 +1,16 @@
 .seaSerpentLeft {
-    .gills { fill: #8cc63f; }
+    .gill { fill: #8cc63f; }
     .scales { fill: #0071bc; }
-    .scalesLine { stroke: #0060ab; }
-    .eyes { fill: red; }
+    .scalesOverlapLine { stroke: #0060ab; }
+    .eye { fill: red; }
     .dorsalFin { fill: #009245; }
 }
 
 .seaSerpentRight {
-    .gills { fill: #8cc63f; }
+    .gill { fill: #8cc63f; }
+    .gillFoldLine { stroke: #484; }
     .scales { fill: #0071bc; }
-    .scalesLine { stroke: #0060ab; }
-    .eyes { fill: red; }
+    .scalesOverlapLine { stroke: #0060ab; }
+    .eye { fill: red; }
     .dorsalFin { fill: #009245; }
 }

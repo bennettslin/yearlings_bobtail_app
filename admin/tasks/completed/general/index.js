@@ -4746,5 +4746,10 @@ export default [
         taskName: `Allow for perspective on thing svgs.`,
         workedHours: 7,
         neededHours: 7
+    },
+    {
+        taskName: `Some cardboard and cutout reorganisation.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
