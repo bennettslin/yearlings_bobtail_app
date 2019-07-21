@@ -4,6 +4,7 @@ import {
     BUBBLE,
     CUTOUT,
     FIXTURE,
+    FLAT,
     PANEL
 } from 'constants/scene'
 
@@ -39,13 +40,8 @@ import {
     DATE_ENDED
 } from '../../constants/scene/actors/instances/songs'
 
-import {
-    GO_KART_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
-import {
-    GO_KART_THOUGHT
-} from '../../constants/scene/things/bubbles'
+import { GO_KART_BACKDROP } from '../../constants/scene/things/backdrops'
+import { GO_KART_THOUGHT } from '../../constants/scene/things/bubbles'
 
 import {
     MUSEUM_DISPLAY,
@@ -60,6 +56,8 @@ import {
     STEPLADDER,
     MANNEQUIN
 } from '../../constants/scene/things/fixtures'
+
+import { GO_KART_TRACK } from '../../constants/scene/things/flats'
 
 import {
     GO_KART_EXTERIOR__LEFT,
@@ -179,6 +177,9 @@ export default [
             },
             [BACKDROP]: {
                 [GO_KART_BACKDROP]: true
+            },
+            [FLAT]: {
+                [GO_KART_TRACK]: true
             },
             [PANEL]: {
                 [GO_KART_EXTERIOR__LEFT]: true,

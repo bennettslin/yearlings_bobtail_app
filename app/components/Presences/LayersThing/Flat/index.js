@@ -20,6 +20,7 @@ import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear'
 // import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex'
 // import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch'
 // import campanile from 'assets/svgs/flats/campanile'
+// import goKartTrack from 'assets/svgs/flats/goKartTrack'
 // import royceHall from 'assets/svgs/flats/royceHall'
 import cemeteryHillsLeft from 'assets/svgs/flats/cemeteryHillsLeft'
 import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight'
@@ -72,6 +73,7 @@ import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
+    GO_KART_TRACK,
     ROYCE_HALL,
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT,
@@ -125,6 +127,7 @@ export default {
     [ST_JOSEPHS_ANNEX]: false,
     [ST_JOSEPHS_CHURCH]: false,
     [CAMPANILE]: false,
+    [GO_KART_TRACK]: false,
     [ROYCE_HALL]: false,
     [CEMETERY_HILLS_LEFT]: cemeteryHillsLeft,
     [CEMETERY_HILLS_RIGHT]: cemeteryHillsRight,
