@@ -121,7 +121,7 @@ export default [
     },
     {
         taskName: 'volkswagen',
-        workedHours: 3,
-        neededHours: 3
+        workedHours: 3.5,
+        neededHours: 3.5
     }
 ]
