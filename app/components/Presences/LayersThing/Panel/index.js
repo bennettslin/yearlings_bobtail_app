@@ -20,7 +20,7 @@ import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
 import goKartExterior from 'assets/svgs/panels/goKartExterior'
 import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
 import dishroomSink from 'assets/svgs/panels/dishroomSink'
-// import bennettBed from 'assets/svgs/panels/bennettBed'
+import bennettBed from 'assets/svgs/panels/bennettBed'
 // import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
 // import waitingLeftArmrest from 'assets/svgs/panels/waitingLeftArmrest'
 // import waitingRightArmrest from 'assets/svgs/panels/waitingRightArmrest'
@@ -127,7 +127,7 @@ export default {
     [GO_KART_EXTERIOR__RIGHT]: goKartExterior,
     [CONVEYOR_BELT]: conveyorBelt,
     [DISHROOM_SINK]: dishroomSink,
-    [BENNETT_BED]: false,
+    [BENNETT_BED]: bennettBed,
     [WAITING_ARMCHAIR__BENNETT]: false,
     [WAITING_LEFT_ARMREST__BENNETT]: false,
     [WAITING_RIGHT_ARMREST__BENNETT]: false,

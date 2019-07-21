@@ -108,5 +108,10 @@ export default [
         taskName: 'reattaInterior',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'bennettBed',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

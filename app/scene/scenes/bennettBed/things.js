@@ -53,11 +53,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [BENNETT_BED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 7.5,
-                xWidth: 6,
-                zHeight: 2
-            }
+            xPosition: 7.5,
+            scaleFactor: 0.25
         }
     }
 }
