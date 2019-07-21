@@ -61,11 +61,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [REATTA_INTERIOR]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 9,
-                zHeight: 4
-            }
+            xPosition: 4,
+            scaleFactor: 0.25
         }
     }
 }

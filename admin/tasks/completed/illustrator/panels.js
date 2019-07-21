@@ -103,5 +103,10 @@ export default [
         taskName: 'reattaExterior',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'reattaInterior',
+        workedHours: 0,
+        neededHours: 1.5
     }
 ]

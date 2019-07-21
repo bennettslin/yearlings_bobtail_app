@@ -34,7 +34,7 @@ import saturnExterior from 'assets/svgs/panels/saturnExterior'
 import crowdSide from 'assets/svgs/panels/crowdSide'
 // import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
-// import reattaInterior from 'assets/svgs/panels/reattaInterior'
+import reattaInterior from 'assets/svgs/panels/reattaInterior'
 import reattaExterior from 'assets/svgs/panels/reattaExterior'
 // import hospitalBed from 'assets/svgs/panels/hospitalBed'
 import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
@@ -151,7 +151,7 @@ export default {
     [SNOWGLOBE__BENNETT_MIRIAM]: snowglobe,
     [SNOWGLOBE__LIZ_KHARI]: snowglobe,
     [SNOWGLOBE__BENNETT_ALONE]: snowglobe,
-    [REATTA_INTERIOR]: false,
+    [REATTA_INTERIOR]: reattaInterior,
     [REATTA_EXTERIOR]: reattaExterior,
     [HOSPITAL_BED]: false,
     [PHONE_CALL_PANEL]: phoneCallPanel,
