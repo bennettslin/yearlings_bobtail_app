@@ -4749,7 +4749,7 @@ export default [
     },
     {
         taskName: `Some cardboard and cutout reorganisation.`,
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 2,
+        neededHours: 2
     }
 ]

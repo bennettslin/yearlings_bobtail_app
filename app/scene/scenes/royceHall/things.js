@@ -23,20 +23,15 @@ const ARRANGEMENTS_THINGS = {
     },
     [CUTOUT]: {
         [UCLA_TREE__LEFT]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            yIndex: 1,
+            xPosition: 1,
+            scaleFactor: 0.45
         },
         [UCLA_TREE__RIGHT]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            yIndex: 1,
+            xPosition: 10,
+            scaleFactor: 0.45,
+            flipHorizontal: true
         }
     },
     [FLAT]: {

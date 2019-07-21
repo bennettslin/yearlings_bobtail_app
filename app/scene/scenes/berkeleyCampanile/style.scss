@@ -1,12 +1,31 @@
 .bancroftShrubs {
-    .bulb { fill: #030; }
-    .leavesBottom { fill: #033; }
-    .leavesRight { fill: #363; }
-    .leavesLeft { fill: #063; }
+    .bulb {
+        fill: #030;
+    }
+
+    .leavesBottom {
+        fill: #033;
+    }
+
+    .leavesRight {
+        fill: #363;
+    }
+
+    .leavesLeft {
+        fill: #063;
+    }
 }
 
 .signpost {
-    .pole { fill: #333; }
-    .bottom { fill: #ccc; }
-    .front { fill: #fff; }
+    .signBottom {
+        fill: #8c8e6f;
+    }
+
+    .signFront {
+        fill: #d2d3cd;
+    }
+
+    .pole {
+        fill: #69797a;
+    }
 }
