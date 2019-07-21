@@ -15,20 +15,18 @@ import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
 import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
 // import bennettCouch from 'assets/svgs/panels/bennettCouch'
-// import bennettLeftArmrest from 'assets/svgs/panels/bennettLeftArmrest'
-// import bennettRightArmrest from 'assets/svgs/panels/bennettRightArmrest'
+// import bennettArmrest from 'assets/svgs/panels/bennettArmrest'
 import goKartExterior from 'assets/svgs/panels/goKartExterior'
 import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
 import dishroomSink from 'assets/svgs/panels/dishroomSink'
 import bennettBed from 'assets/svgs/panels/bennettBed'
-// import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
+import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
 import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 // import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
 // import atticCouch from 'assets/svgs/panels/atticCouch'
-// import atticLeftArmrest from 'assets/svgs/panels/atticLeftArmrest'
-// import atticRightArmrest from 'assets/svgs/panels/atticRightArmrest'
+// import atticArmrest from 'assets/svgs/panels/atticArmrest'
 // import volkswagen from 'assets/svgs/panels/volkswagen'
 import crowdSide from 'assets/svgs/panels/crowdSide'
 // import lizCouch from 'assets/svgs/panels/lizCouch'
@@ -127,10 +125,10 @@ export default {
     [CONVEYOR_BELT]: conveyorBelt,
     [DISHROOM_SINK]: dishroomSink,
     [BENNETT_BED]: bennettBed,
-    [WAITING_ARMCHAIR__BENNETT]: false,
+    [WAITING_ARMCHAIR__BENNETT]: waitingArmchair,
     [WAITING_ARMREST__BENNETT_LEFT]: waitingArmrest,
     [WAITING_ARMREST__BENNETT_RIGHT]: waitingArmrest,
-    [WAITING_ARMCHAIR__LIZ]: false,
+    [WAITING_ARMCHAIR__LIZ]: waitingArmchair,
     [WAITING_ARMREST__LIZ_LEFT]: waitingArmrest,
     [WAITING_ARMREST__LIZ_RIGHT]: waitingArmrest,
     [LIZ_BED]: false,

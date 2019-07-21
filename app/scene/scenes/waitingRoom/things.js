@@ -43,13 +43,9 @@ const ARRANGEMENTS_THINGS = {
     },
     [PANEL]: {
         [WAITING_ARMCHAIR__BENNETT]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+            yIndex: 3,
+            xPosition: 2.5,
+            scaleFactor: 0.22
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {
             yIndex: 5,
@@ -63,13 +59,10 @@ const ARRANGEMENTS_THINGS = {
             flipHorizontal: true
         },
         [WAITING_ARMCHAIR__LIZ]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+            yIndex: 3,
+            xPosition: 5.5,
+            scaleFactor: 0.22,
+            flipHorizontal: true
         },
         [WAITING_ARMREST__LIZ_LEFT]: {
             yIndex: 5,

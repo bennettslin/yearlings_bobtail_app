@@ -55,11 +55,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'waitingArmchair',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'atticCouch',
         workedHours: 0,
         neededHours: 1.5
