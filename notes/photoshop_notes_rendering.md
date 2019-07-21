@@ -1,6 +1,5 @@
 * Change some overlap lines to crease or fold line.
 * Make ceiling cubes disappear
-* Allow for skew and perspective
 * Separate bubbles.
 
 # Redo straight or curved line.
@@ -25,11 +24,10 @@
 * volkswagen
 
 # Redo className organisation.
-* Cardboards
+* Cardboards (Just buoy, rickshaw, and sea serpents left)
 * Cutouts
 
 # Redo shape organisation.
-* apartmentPlant
 * recyclables
 * storageBoxes
 * wallSpeaker
