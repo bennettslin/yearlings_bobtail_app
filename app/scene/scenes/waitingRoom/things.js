@@ -12,11 +12,11 @@ import {
 import { WAITING_ROOM_PLANT } from 'constants/scene/things/cutouts'
 import {
     WAITING_ARMCHAIR__BENNETT,
-    WAITING_LEFT_ARMREST__BENNETT,
-    WAITING_RIGHT_ARMREST__BENNETT,
+    WAITING_ARMREST__BENNETT_LEFT,
+    WAITING_ARMREST__BENNETT_RIGHT,
     WAITING_ARMCHAIR__LIZ,
-    WAITING_LEFT_ARMREST__LIZ,
-    WAITING_RIGHT_ARMREST__LIZ
+    WAITING_ARMREST__LIZ_LEFT,
+    WAITING_ARMREST__LIZ_RIGHT
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -51,23 +51,16 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WAITING_LEFT_ARMREST__BENNETT]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+        [WAITING_ARMREST__BENNETT_LEFT]: {
+            yIndex: 5,
+            xPosition: 1.25,
+            scaleFactor: 0.22
         },
-        [WAITING_RIGHT_ARMREST__BENNETT]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+        [WAITING_ARMREST__BENNETT_RIGHT]: {
+            yIndex: 5,
+            xPosition: 3.75,
+            scaleFactor: 0.22,
+            flipHorizontal: true
         },
         [WAITING_ARMCHAIR__LIZ]: {
             yIndex: 2,
@@ -78,23 +71,16 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4
             }
         },
-        [WAITING_LEFT_ARMREST__LIZ]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+        [WAITING_ARMREST__LIZ_LEFT]: {
+            yIndex: 5,
+            xPosition: 4.25,
+            scaleFactor: 0.22
         },
-        [WAITING_RIGHT_ARMREST__LIZ]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 3,
-                zHeight: 2,
-                zOffset: 4
-            }
+        [WAITING_ARMREST__LIZ_RIGHT]: {
+            yIndex: 5,
+            xPosition: 6.75,
+            scaleFactor: 0.22,
+            flipHorizontal: true
         }
     }
 }

@@ -22,8 +22,7 @@ import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
 import dishroomSink from 'assets/svgs/panels/dishroomSink'
 import bennettBed from 'assets/svgs/panels/bennettBed'
 // import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
-// import waitingLeftArmrest from 'assets/svgs/panels/waitingLeftArmrest'
-// import waitingRightArmrest from 'assets/svgs/panels/waitingRightArmrest'
+import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 // import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
@@ -70,11 +69,11 @@ import {
     DISHROOM_SINK,
     BENNETT_BED,
     WAITING_ARMCHAIR__BENNETT,
-    WAITING_LEFT_ARMREST__BENNETT,
-    WAITING_RIGHT_ARMREST__BENNETT,
+    WAITING_ARMREST__BENNETT_LEFT,
+    WAITING_ARMREST__BENNETT_RIGHT,
     WAITING_ARMCHAIR__LIZ,
-    WAITING_LEFT_ARMREST__LIZ,
-    WAITING_RIGHT_ARMREST__LIZ,
+    WAITING_ARMREST__LIZ_LEFT,
+    WAITING_ARMREST__LIZ_RIGHT,
     LIZ_BED,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
@@ -129,11 +128,11 @@ export default {
     [DISHROOM_SINK]: dishroomSink,
     [BENNETT_BED]: bennettBed,
     [WAITING_ARMCHAIR__BENNETT]: false,
-    [WAITING_LEFT_ARMREST__BENNETT]: false,
-    [WAITING_RIGHT_ARMREST__BENNETT]: false,
+    [WAITING_ARMREST__BENNETT_LEFT]: waitingArmrest,
+    [WAITING_ARMREST__BENNETT_RIGHT]: waitingArmrest,
     [WAITING_ARMCHAIR__LIZ]: false,
-    [WAITING_LEFT_ARMREST__LIZ]: false,
-    [WAITING_RIGHT_ARMREST__LIZ]: false,
+    [WAITING_ARMREST__LIZ_LEFT]: waitingArmrest,
+    [WAITING_ARMREST__LIZ_RIGHT]: waitingArmrest,
     [LIZ_BED]: false,
     [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,

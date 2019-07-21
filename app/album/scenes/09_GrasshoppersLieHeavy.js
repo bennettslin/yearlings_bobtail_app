@@ -110,11 +110,11 @@ import {
     BENNETT_BED,
     LIZ_BED,
     WAITING_ARMCHAIR__BENNETT,
-    WAITING_LEFT_ARMREST__BENNETT,
-    WAITING_RIGHT_ARMREST__BENNETT,
+    WAITING_ARMREST__BENNETT_LEFT,
+    WAITING_ARMREST__BENNETT_RIGHT,
     WAITING_ARMCHAIR__LIZ,
-    WAITING_LEFT_ARMREST__LIZ,
-    WAITING_RIGHT_ARMREST__LIZ
+    WAITING_ARMREST__LIZ_LEFT,
+    WAITING_ARMREST__LIZ_RIGHT
 } from '../../constants/scene/things/panels'
 
 /**
@@ -376,11 +376,11 @@ export default [
             },
             [PANEL]: {
                 [WAITING_ARMCHAIR__BENNETT]: true,
-                [WAITING_LEFT_ARMREST__BENNETT]: true,
-                [WAITING_RIGHT_ARMREST__BENNETT]: true,
+                [WAITING_ARMREST__BENNETT_LEFT]: true,
+                [WAITING_ARMREST__BENNETT_RIGHT]: true,
                 [WAITING_ARMCHAIR__LIZ]: true,
-                [WAITING_LEFT_ARMREST__LIZ]: true,
-                [WAITING_RIGHT_ARMREST__LIZ]: true
+                [WAITING_ARMREST__LIZ_LEFT]: true,
+                [WAITING_ARMREST__LIZ_RIGHT]: true
             }
         },
         cubes: WAITING_ROOM_KEY,
@@ -408,11 +408,11 @@ export default [
             },
             [PANEL]: {
                 [WAITING_ARMCHAIR__BENNETT]: true,
-                [WAITING_LEFT_ARMREST__BENNETT]: true,
-                [WAITING_RIGHT_ARMREST__BENNETT]: true,
+                [WAITING_ARMREST__BENNETT_LEFT]: true,
+                [WAITING_ARMREST__BENNETT_RIGHT]: true,
                 [WAITING_ARMCHAIR__LIZ]: true,
-                [WAITING_LEFT_ARMREST__LIZ]: true,
-                [WAITING_RIGHT_ARMREST__LIZ]: true
+                [WAITING_ARMREST__LIZ_LEFT]: true,
+                [WAITING_ARMREST__LIZ_RIGHT]: true
             }
         },
         cubes: WAITING_ROOM_OPEN_KEY,
