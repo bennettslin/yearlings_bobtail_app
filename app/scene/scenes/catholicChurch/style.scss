@@ -1,6 +1,23 @@
 .berkeleyLamppost {
-    .pole { fill: #333; }
-    .brass { fill: #660; }
-    .light { fill: #ff9; }
-    .copper { fill: #396; }
+    .pole {
+        fill: #333;
+    }
+
+    .brass {
+        fill: #660;
+    }
+
+    .light {
+        fill: #ff9;
+    }
+
+    .copper {
+        fill: #396;
+    }
+}
+
+.foliageBackdrop {
+    .foliage {
+        fill: #445e40;
+    }
 }

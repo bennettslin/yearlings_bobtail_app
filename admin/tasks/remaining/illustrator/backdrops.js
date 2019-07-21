@@ -60,11 +60,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'westBerkeleyBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'ucBerkeleyBackdrop',
         workedHours: 0,
         neededHours: 1.5

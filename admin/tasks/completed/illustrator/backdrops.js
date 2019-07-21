@@ -13,5 +13,10 @@ export default [
         taskName: 'cemeteryBackdrop',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'foliageBackdrop',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

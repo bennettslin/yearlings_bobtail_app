@@ -12,7 +12,7 @@ import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
 // import vanNuysSchoolBackdrop from 'assets/svgs/backdrops/vanNuysSchoolBackdrop'
 // import bennettCouchThoughtBackdrop from 'assets/svgs/backdrops/bennettCouchThoughtBackdrop'
-// import westBerkeleyBackdrop from 'assets/svgs/backdrops/westBerkeleyBackdrop'
+import foliageBackdrop from 'assets/svgs/backdrops/foliageBackdrop'
 // import ucBerkeleyBackdrop from 'assets/svgs/backdrops/ucBerkeleyBackdrop'
 // import goKartThoughtBackdrop from 'assets/svgs/backdrops/goKartThoughtBackdrop'
 // import pharmacyThoughtBackdrop from 'assets/svgs/backdrops/pharmacyThoughtBackdrop'
@@ -75,7 +75,7 @@ export default {
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
     [VAN_NUYS_SCHOOL_BACKDROP]: false,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: false,
-    [FOLIAGE_BACKDROP]: false,
+    [FOLIAGE_BACKDROP]: foliageBackdrop,
     [UC_BERKELEY_BACKDROP]: false,
     [GO_KART_BACKDROP]: false,
     [PHARMACY_THOUGHT_BACKDROP]: false,
