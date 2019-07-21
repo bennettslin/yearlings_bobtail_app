@@ -5,11 +5,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'volkswagen',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'deathbedThoughtPanel',
         workedHours: 0,
         neededHours: 1

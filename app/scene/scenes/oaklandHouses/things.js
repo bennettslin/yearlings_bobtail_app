@@ -45,11 +45,8 @@ export const THINGS_OAKLAND_HOUSES_GARRYOWEN = {
     [PANEL]: {
         [VOLKSWAGEN]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 8,
-                zHeight: 4
-            }
+            xPosition: 6.5,
+            scaleFactor: 0.45
         }
     }
 }

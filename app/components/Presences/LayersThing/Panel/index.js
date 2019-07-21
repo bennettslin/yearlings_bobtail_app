@@ -27,7 +27,7 @@ import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
 // import atticCouch from 'assets/svgs/panels/atticCouch'
 // import atticArmrest from 'assets/svgs/panels/atticArmrest'
-// import volkswagen from 'assets/svgs/panels/volkswagen'
+import volkswagen from 'assets/svgs/panels/volkswagen'
 import crowdSide from 'assets/svgs/panels/crowdSide'
 // import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
@@ -137,7 +137,7 @@ export default {
     [ATTIC_COUCH]: false,
     [ATTIC_LEFT_ARMREST]: false,
     [ATTIC_RIGHT_ARMREST]: false,
-    [VOLKSWAGEN]: false,
+    [VOLKSWAGEN]: volkswagen,
     [CROWD_SIDE]: crowdSide,
     [LIZ_COUCH]: false,
     [WIDE_COUCH__MIRIAM]: false,
