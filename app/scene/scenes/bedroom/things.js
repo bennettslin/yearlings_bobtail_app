@@ -127,12 +127,10 @@ export const THINGS_BEDROOM_ENRAGED = {
 export const THINGS_BEDROOM_FEARFUL = {
     [FLAT]: {
         [BEDROOM_SIREN]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 6,
-                zHeight: 8
-            }
+            yIndex: -1,
+            xPosition: 2,
+            zOffset: 2.75,
+            scaleFactor: 0.425
         }
     }
 }

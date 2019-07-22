@@ -3,7 +3,7 @@
 // import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse'
 // import valleyFreeway from 'assets/svgs/flats/valleyFreeway'
 // import bedroomBus from 'assets/svgs/flats/bedroomBus'
-// import bedroomSiren from 'assets/svgs/flats/bedroomSiren'
+import bedroomSiren from 'assets/svgs/flats/bedroomSiren'
 // import familyHouse from 'assets/svgs/flats/familyHouse'
 // import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
 import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
@@ -110,7 +110,7 @@ export default {
     [NOHO_SCHOOLHOUSE]: false,
     [VALLEY_FREEWAY]: false,
     [BEDROOM_BUS]: false,
-    [BEDROOM_SIREN]: false,
+    [BEDROOM_SIREN]: bedroomSiren,
     [FAMILY_HOUSE]: false,
     [TAIWAN_MOUNTAINS_BRIDGED]: false,
     [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,

@@ -58,5 +58,10 @@ export default [
         taskName: 'ferrisWheel',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'bedroomSiren',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
