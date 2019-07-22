@@ -25,7 +25,7 @@ import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
 // import roadPresent from 'assets/svgs/backdrops/roadPresent'
 // import roadFuture from 'assets/svgs/backdrops/roadFuture'
 // import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
-// import pampasBackdrop from 'assets/svgs/backdrops/pampasBackdrop'
+import pampasBackdrop from 'assets/svgs/backdrops/pampasBackdrop'
 // import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 
 import {
@@ -88,6 +88,6 @@ export default {
     [ROAD_PRESENT]: false,
     [ROAD_FUTURE]: false,
     [GOLDEN_GATE_BACKDROP]: false,
-    [PAMPAS_BACKDROP]: false,
+    [PAMPAS_BACKDROP]: pampasBackdrop,
     [WEDDING_BACKDROP]: false
 }

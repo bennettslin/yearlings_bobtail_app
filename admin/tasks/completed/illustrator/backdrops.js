@@ -28,5 +28,10 @@ export default [
         taskName: 'goKartBackdrop',
         workedHours: 2.5,
         neededHours: 2.5
+    },
+    {
+        taskName: 'pampasBackdrop',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

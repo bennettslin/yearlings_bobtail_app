@@ -105,11 +105,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'pampasBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'weddingBackdrop',
         workedHours: 0,
         neededHours: 1
