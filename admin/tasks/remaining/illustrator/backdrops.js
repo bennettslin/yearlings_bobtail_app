@@ -103,10 +103,5 @@ export default [
         taskName: 'goldenGateBackdrop',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'weddingBackdrop',
-        workedHours: 0,
-        neededHours: 1
     }
 ]

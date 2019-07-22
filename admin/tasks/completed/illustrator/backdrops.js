@@ -33,5 +33,10 @@ export default [
         taskName: 'pampasBackdrop',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'weddingBackdrop',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

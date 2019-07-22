@@ -26,7 +26,7 @@ import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
 // import roadFuture from 'assets/svgs/backdrops/roadFuture'
 // import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
 import pampasBackdrop from 'assets/svgs/backdrops/pampasBackdrop'
-// import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
+import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -89,5 +89,5 @@ export default {
     [ROAD_FUTURE]: false,
     [GOLDEN_GATE_BACKDROP]: false,
     [PAMPAS_BACKDROP]: pampasBackdrop,
-    [WEDDING_BACKDROP]: false
+    [WEDDING_BACKDROP]: weddingBackdrop
 }
