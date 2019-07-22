@@ -17,21 +17,23 @@ class PreviewerSvg extends PureComponent {
         className: PropTypes.string,
         presenceType: PropTypes.string,
         actorKey: PropTypes.string,
-        presenceKey: PropTypes.string
+        presenceKey: PropTypes.string,
+        handleProcessSvg: PropTypes.func.isRequired
     }
 
     processSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
-        setTimeout(this.handleProcessSvg, 0)
+        setTimeout(this.handleProcessSvg.bind(null, svgString), 0)
         return svgString
     }
 
-    handleProcessSvg = () => {
+    handleProcessSvg = (svgString) => {
         const { presenceKey } = this.props,
             element = document.getElementsByClassName(presenceKey)[0]
 
         if (element) {
             console.log(element)
+            this.props.handleProcessSvg(svgString)
         }
     }
 

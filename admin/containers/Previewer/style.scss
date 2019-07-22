@@ -3,6 +3,7 @@ $height__dashboard: 60px;
 .Previewer__dashboard {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px;
     height: $height__dashboard;
 }
@@ -41,9 +42,10 @@ svg {
     }
 }
 
-button, select {
+button, select, .Previewer__kilobytes {
     .Previewer
     & {
+        font-family: PTSansNarrow, Arial;
         font-size: 1.5em;
     }
 }

@@ -55,7 +55,8 @@ class Previewer extends PureComponent {
             heightAspectRatio: getBoolFromStorage('heightAspectRatio'),
             transitionalPresenceType: '',
             presenceType: getFromStorage('presenceType'),
-            presenceKey: getFromStorage('presenceKey')
+            presenceKey: getFromStorage('presenceKey'),
+            kilobytes: 0
         }
     }
 
@@ -90,12 +91,19 @@ class Previewer extends PureComponent {
         setInStorage('presenceKey', presenceKey)
     }
 
+    handleProcessSvg = (svgString) => {
+        this.setState({
+            kilobytes: (svgString.length / 1024).toFixed(2)
+        })
+    }
+
     render() {
         const
             {
                 transitionalPresenceType,
                 presenceType,
-                presenceKey
+                presenceKey,
+                kilobytes
             } = this.state,
             { heightAspectRatio } = this.state,
             selectedPresenceType = transitionalPresenceType || presenceType,
@@ -166,6 +174,13 @@ class Previewer extends PureComponent {
                                 </option>
                             ))}
                     </select>
+                    <div
+                        {...{
+                            className: 'Previewer__kilobytes'
+                        }}
+                    >
+                        {kilobytes} kiB
+                    </div>
                 </div>
                 {Boolean(selectedPresenceType) && Boolean(presenceKey) && (
                     <div
@@ -178,7 +193,8 @@ class Previewer extends PureComponent {
                         <PreviewerSvg
                             {...{
                                 presenceType,
-                                presenceKey
+                                presenceKey,
+                                handleProcessSvg: this.handleProcessSvg
                             }}
                         />
                     </div>

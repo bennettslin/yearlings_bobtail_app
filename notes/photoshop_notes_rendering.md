@@ -22,14 +22,7 @@
 
 # Redo className organisation.
 * Cardboards (Just buoy and rickshaw left)
-* Cutouts
-
-# Redo shape organisation.
-* recyclables
-* storageBoxes
-* wallSpeaker
-* trashCan
-* fireHydrant?
+* Cutouts (Last done: bancroftShrubs)
 
 # Pre-Illustrator things
 * The following were made using the legacy Photoshop to Illustrator method, where I would render first in Photoshop, then Image Trace > Line Art into vector paths.
