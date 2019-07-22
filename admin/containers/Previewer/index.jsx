@@ -4,6 +4,7 @@ import keys from 'lodash/keys'
 
 import PreviewerSvg from './PreviewerSvg'
 
+import { getViewBoxSize } from 'modules/ConfiguredPresenceSvg/helper/size'
 import {
     getFromStorage,
     setInStorage,
@@ -92,8 +93,24 @@ class Previewer extends PureComponent {
     }
 
     handleProcessSvg = (svgString) => {
+        const {
+                viewBoxWidth,
+                viewBoxHeight
+            } = getViewBoxSize(svgString),
+            windowWidth = window.innerWidth,
+            windowHeight = window.innerHeight,
+
+            // Set height aspect ratio.
+            heightAspectRatio =
+                viewBoxWidth / viewBoxHeight <
+                windowWidth / windowHeight,
+
+            // Show kilobytes.
+            kilobytes = (svgString.length / 1024).toFixed(2)
+
         this.setState({
-            kilobytes: (svgString.length / 1024).toFixed(2)
+            heightAspectRatio,
+            kilobytes
         })
     }
 
