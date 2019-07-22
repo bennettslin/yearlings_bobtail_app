@@ -84,10 +84,12 @@ class Previewer extends PureComponent {
                 Boolean(PRESENCE_MAP[presenceType][unsafePresenceKey]) &&
                 unsafePresenceKey
 
-            this.setPresenceInStorage({ presenceType, presenceKey })
-            return {
-                presenceType,
-                ...presenceKey && { presenceKey }
+            if (presenceKey) {
+                this.setPresenceInStorage({ presenceType, presenceKey })
+                return {
+                    presenceType,
+                    presenceKey
+                }
             }
         }
 
