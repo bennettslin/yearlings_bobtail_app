@@ -52,7 +52,10 @@ class Previewer extends PureComponent {
     constructor(props) {
         super(props)
 
+        const queryStringPresence = this.setPresenceFromQueryStrings()
+
         this.state = {
+            ...queryStringPresence,
             heightAspectRatio: getBoolFromStorage('heightAspectRatio'),
             transitionalPresenceType: '',
             presenceType: getFromStorage('presenceType'),
@@ -65,12 +68,30 @@ class Previewer extends PureComponent {
         logMount('Previewer')
     }
 
-    toggleAspectRatio = () => {
-        const { heightAspectRatio: prevHeightAspectRatio } = this.state,
-            heightAspectRatio = !prevHeightAspectRatio
+    setPresenceFromQueryStrings() {
+        const urlParams = new URLSearchParams(window.location.search),
+            unsafePresenceType = urlParams.get('type'),
+            unsafePresenceKey = urlParams.get('key'),
 
-        this.setState({ heightAspectRatio })
-        setBoolInStorage('heightAspectRatio', heightAspectRatio)
+            // Make sure it's a valid presence type.
+            presenceType =
+                Boolean(PRESENCE_MAP[unsafePresenceType]) &&
+                unsafePresenceType
+
+        if (presenceType) {
+            // Make sure it's a valid presence key.
+            const presenceKey =
+                Boolean(PRESENCE_MAP[presenceType][unsafePresenceKey]) &&
+                unsafePresenceKey
+
+            this.setPresenceInStorage({ presenceType, presenceKey })
+            return {
+                presenceType,
+                ...presenceKey && { presenceKey }
+            }
+        }
+
+        return null
     }
 
     selectPresenceType = ({ target: { value: transitionalPresenceType } }) => {
@@ -88,8 +109,24 @@ class Previewer extends PureComponent {
             presenceType,
             presenceKey
         })
-        setInStorage('presenceType', presenceType)
-        setInStorage('presenceKey', presenceKey)
+        this.setPresenceInStorage({ presenceType, presenceKey })
+    }
+
+    setPresenceInStorage({ presenceType, presenceKey }) {
+        if (presenceType) {
+            setInStorage('presenceType', presenceType)
+        }
+        if (presenceKey) {
+            setInStorage('presenceKey', presenceKey)
+        }
+    }
+
+    toggleAspectRatio = () => {
+        const { heightAspectRatio: prevHeightAspectRatio } = this.state,
+            heightAspectRatio = !prevHeightAspectRatio
+
+        this.setState({ heightAspectRatio })
+        setBoolInStorage('heightAspectRatio', heightAspectRatio)
     }
 
     handleProcessSvg = (svgString) => {
