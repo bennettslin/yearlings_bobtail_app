@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'nohoSchoolBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'valleyBackdrop',
         workedHours: 0,
         neededHours: 1.5

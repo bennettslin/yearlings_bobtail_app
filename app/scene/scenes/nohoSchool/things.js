@@ -18,11 +18,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [NOHO_SCHOOL_BACKDROP]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.66
         }
     },
     [CUTOUT]: {
