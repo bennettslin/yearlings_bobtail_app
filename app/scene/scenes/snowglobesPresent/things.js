@@ -7,8 +7,8 @@ import {
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
     WIDE_COUCH__MIRIAM,
-    WIDE_LEFT_ARMREST__MIRIAM,
-    WIDE_RIGHT_ARMREST__MIRIAM
+    WIDE_ARMREST__MIRIAM_LEFT,
+    WIDE_ARMREST__MIRIAM_RIGHT
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -41,7 +41,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [WIDE_LEFT_ARMREST__MIRIAM]: {
+        [WIDE_ARMREST__MIRIAM_LEFT]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 5.5
             }
         },
-        [WIDE_RIGHT_ARMREST__MIRIAM]: {
+        [WIDE_ARMREST__MIRIAM_RIGHT]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,

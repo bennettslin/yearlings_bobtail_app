@@ -20,8 +20,8 @@ import {
 } from 'constants/scene/things/fixtures'
 import {
     WIDE_COUCH__BENNETT,
-    WIDE_LEFT_ARMREST__BENNETT,
-    WIDE_RIGHT_ARMREST__BENNETT
+    WIDE_ARMREST__BENNETT_LEFT,
+    WIDE_ARMREST__BENNETT_RIGHT
 } from 'constants/scene/things/panels'
 import { PROGRESS_CHART_SHARED } from '../../shared'
 
@@ -53,21 +53,16 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [WIDE_LEFT_ARMREST__BENNETT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 0.5
-            }
+        [WIDE_ARMREST__BENNETT_LEFT]: {
+            yIndex: 4,
+            xPosition: 1,
+            scaleFactor: 0.25
         },
-        [WIDE_RIGHT_ARMREST__BENNETT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 0.5
-            }
+        [WIDE_ARMREST__BENNETT_RIGHT]: {
+            yIndex: 4,
+            xPosition: 8,
+            scaleFactor: 0.25,
+            flipHorizontal: true
         }
     }
 }

@@ -14,8 +14,8 @@ import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior'
 import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
 import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
-// import bennettCouch from 'assets/svgs/panels/bennettCouch'
-// import bennettArmrest from 'assets/svgs/panels/bennettArmrest'
+// import wideCouch from 'assets/svgs/panels/wideCouch'
+import wideArmrest from 'assets/svgs/panels/wideArmrest'
 import goKartExterior from 'assets/svgs/panels/goKartExterior'
 import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
 import dishroomSink from 'assets/svgs/panels/dishroomSink'
@@ -59,8 +59,8 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
     WIDE_COUCH__BENNETT,
-    WIDE_LEFT_ARMREST__BENNETT,
-    WIDE_RIGHT_ARMREST__BENNETT,
+    WIDE_ARMREST__BENNETT_LEFT,
+    WIDE_ARMREST__BENNETT_RIGHT,
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
     CONVEYOR_BELT,
@@ -82,8 +82,8 @@ import {
     CROWD_SIDE,
     LIZ_COUCH,
     WIDE_COUCH__MIRIAM,
-    WIDE_LEFT_ARMREST__MIRIAM,
-    WIDE_RIGHT_ARMREST__MIRIAM,
+    WIDE_ARMREST__MIRIAM_LEFT,
+    WIDE_ARMREST__MIRIAM_RIGHT,
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
@@ -118,8 +118,8 @@ export default {
     [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
     [WIDE_COUCH__BENNETT]: false,
-    [WIDE_LEFT_ARMREST__BENNETT]: false,
-    [WIDE_RIGHT_ARMREST__BENNETT]: false,
+    [WIDE_ARMREST__BENNETT_LEFT]: wideArmrest,
+    [WIDE_ARMREST__BENNETT_RIGHT]: wideArmrest,
     [GO_KART_EXTERIOR__LEFT]: goKartExterior,
     [GO_KART_EXTERIOR__RIGHT]: goKartExterior,
     [CONVEYOR_BELT]: conveyorBelt,
@@ -141,8 +141,8 @@ export default {
     [CROWD_SIDE]: crowdSide,
     [LIZ_COUCH]: false,
     [WIDE_COUCH__MIRIAM]: false,
-    [WIDE_LEFT_ARMREST__MIRIAM]: false,
-    [WIDE_RIGHT_ARMREST__MIRIAM]: false,
+    [WIDE_ARMREST__MIRIAM_LEFT]: wideArmrest,
+    [WIDE_ARMREST__MIRIAM_RIGHT]: wideArmrest,
     [SNOWGLOBE__TETHERBALL]: snowglobe,
     [SNOWGLOBE__LIZ_ALONE]: snowglobe,
     [SNOWGLOBE__BENNETT_MIRIAM]: snowglobe,
