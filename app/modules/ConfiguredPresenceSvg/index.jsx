@@ -89,18 +89,19 @@ class ConfiguredPresenceSvg extends PureComponent {
         })
     }
 
-    processSvg = (svgString) => {
+    preProcessSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
-        setTimeout(this.handleProcessedSvg.bind(null, svgString), 0)
+        setTimeout(this.setAdjustedSize.bind(null, svgString), 0)
+
+        // Add transform attributes.
         return this.setSvgTransform(svgString)
     }
 
-    handleProcessedSvg = (svgString) => {
-        this.setAdjustedSize(svgString)
-        this.props.showProcessedSvg(svgString)
+    postProcessSvg = () => {
+        this.props.showProcessedSvg()
     }
 
-    setAdjustedSize(svgString) {
+    setAdjustedSize = (svgString) => {
         try {
             const
                 {
@@ -111,7 +112,6 @@ class ConfiguredPresenceSvg extends PureComponent {
                     viewBoxWidth: prevViewBoxWidth,
                     viewBoxHeight: prevViewBoxHeight
                 } = this.state
-
             if (
                 viewBoxWidth !== prevViewBoxWidth ||
                 viewBoxHeight !== prevViewBoxHeight
@@ -187,7 +187,8 @@ class ConfiguredPresenceSvg extends PureComponent {
                         'abF',
                         className
                     ),
-                    processSVG: this.processSvg,
+                    preProcessor: this.preProcessSvg,
+                    onLoad: this.postProcessSvg,
                     src: children,
                     style: {
                         left: `${adjustedLeft.toFixed(2)}%`,
