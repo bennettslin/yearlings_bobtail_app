@@ -41,9 +41,7 @@ import {
     WAITING_ROOM_ASLEEP
 } from '../../constants/scene/actors/instances/bennett'
 
-import {
-    JOGGER
-} from '../../constants/scene/actors/instances/nestor'
+import { JOGGER } from '../../constants/scene/actors/instances/nestor'
 
 import {
     DISHROOM_LANCET,
@@ -64,9 +62,7 @@ import {
     AFTERGLOW_REFLECTION
 } from '../../constants/scene/actors/instances/bennettLiz'
 
-import {
-    WAITING_ROOM_THOUGHTS
-} from '../../constants/scene/things/bubbles'
+import { WAITING_ROOM_THOUGHTS } from '../../constants/scene/things/bubbles'
 
 import {
     CODE_BOX,

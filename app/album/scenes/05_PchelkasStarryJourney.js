@@ -47,13 +47,9 @@ import {
     SNACKING
 } from '../../constants/scene/actors/instances/brad'
 
-import {
-    STARING
-} from '../../constants/scene/actors/instances/christopher'
+import { STARING } from '../../constants/scene/actors/instances/christopher'
 
-import {
-    BLISSFUL_GUILTY
-} from '../../constants/scene/actors/instances/christopherBennett'
+import { BLISSFUL_GUILTY } from '../../constants/scene/actors/instances/christopherBennett'
 
 import { ARGUING } from '../../constants/scene/actors/instances/mother'
 

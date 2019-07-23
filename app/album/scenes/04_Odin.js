@@ -74,9 +74,7 @@ import {
     YELLOW_TAPED_GRILL
 } from '../../constants/scene/things/cutouts'
 
-import {
-    FRIDGE_DRAWINGS
-} from '../../constants/scene/things/fixtures'
+import { FRIDGE_DRAWINGS } from '../../constants/scene/things/fixtures'
 
 import {
     TAIWAN_HOUSE_FAR,

@@ -32,9 +32,7 @@ import {
     AMY
 } from '../../constants/scene/actors'
 
-import {
-    DOCTOR
-} from '../../constants/scene/actors/instances/amy'
+import { DOCTOR } from '../../constants/scene/actors/instances/amy'
 
 import {
     EL_TORITO,
@@ -62,9 +60,7 @@ import {
     CLIFF_TREE
 } from '../../constants/scene/things/cutouts'
 
-import {
-    HOSPITAL_RECORD_PLAYER
-} from '../../constants/scene/things/fixtures'
+import { HOSPITAL_RECORD_PLAYER } from '../../constants/scene/things/fixtures'
 
 import {
     CLIFF_GRAVES_FAR,
@@ -79,9 +75,7 @@ import {
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
 
-import {
-    PUPPET_KHARI_LIZ
-} from '../../constants/scene/things/puppets'
+import { PUPPET_KHARI_LIZ } from '../../constants/scene/things/puppets'
 
 export default [
     {

@@ -48,9 +48,7 @@ import { SHANE_SPILLING } from '../../constants/scene/actors/instances/tomer'
 
 import { WATCHING } from '../../constants/scene/actors/instances/wade'
 
-import {
-    SQUEEZING
-} from '../../constants/scene/actors/instances/amyStephanie'
+import { SQUEEZING } from '../../constants/scene/actors/instances/amyStephanie'
 
 import {
     PERFORMING,

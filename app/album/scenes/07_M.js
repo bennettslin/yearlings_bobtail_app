@@ -34,9 +34,7 @@ import {
     STEPHANIE
 } from '../../constants/scene/actors'
 
-import {
-    SQUATTING
-} from '../../constants/scene/actors/instances/ana'
+import { SQUATTING } from '../../constants/scene/actors/instances/ana'
 
 import {
     PONDERING,

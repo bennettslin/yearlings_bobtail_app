@@ -70,9 +70,7 @@ import {
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
 
-import {
-    PUPPET_REATTA
-} from '../../constants/scene/things/puppets'
+import { PUPPET_REATTA } from '../../constants/scene/things/puppets'
 
 export default [
     {
