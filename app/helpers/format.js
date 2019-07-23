@@ -11,6 +11,15 @@ export const capitaliseForClassName = (word) => {
     return (word.charAt(0).toUpperCase() + word.slice(1)).split('__')[0]
 }
 
+export const convertPresenceKeyToTitle = (string) => {
+    // Convert to camel case.
+    return string.replace(/([A-Z])/g, ' $1')
+
+        // Replace double underscore with space.
+        .replace('__', ' ')
+        .toLowerCase()
+}
+
 export const getFormattedTime = (time) => {
     if (time === -1) {
         time = 0

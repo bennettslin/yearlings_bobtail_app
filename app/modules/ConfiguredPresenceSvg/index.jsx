@@ -4,6 +4,7 @@ import cx from 'classnames'
 
 import ReactInlineSvg from 'react-inlinesvg'
 
+import { convertPresenceKeyToTitle } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
 import { getSizeForPresence, getViewBoxSize } from './helper/size'
@@ -77,18 +78,6 @@ class ConfiguredPresenceSvg extends PureComponent {
         })
     }
 
-    getSvgContainerTransform() {
-        const {
-            alignLeft,
-            alignRight
-        } = this.getArrangement()
-
-        return getSvgContainerTransformForPresence({
-            alignLeft,
-            alignRight
-        })
-    }
-
     preProcessSvg = (svgString) => {
         // Set timeout to wait until next lifecycle before setting state.
         setTimeout(this.setAdjustedSize.bind(null, svgString), 0)
@@ -157,9 +146,22 @@ class ConfiguredPresenceSvg extends PureComponent {
         })
     }
 
+    getSvgContainerTransform() {
+        const {
+            alignLeft,
+            alignRight
+        } = this.getArrangement()
+
+        return getSvgContainerTransformForPresence({
+            alignLeft,
+            alignRight
+        })
+    }
+
     render() {
         const {
                 className,
+                presenceKey,
                 children
             } = this.props,
             {
@@ -178,18 +180,15 @@ class ConfiguredPresenceSvg extends PureComponent {
             containerTransform = this.getSvgContainerTransform()
 
         return (
-            <ReactInlineSvg
+            <div
                 {...{
                     className: cx(
                         'ConfiguredPresenceSvg',
                         noShadow && 'Presence__noShadow',
                         sharedStyle,
-                        'abF',
-                        className
+                        className,
+                        'abF'
                     ),
-                    preProcessor: this.preProcessSvg,
-                    onLoad: this.postProcessSvg,
-                    src: children,
                     style: {
                         left: `${adjustedLeft.toFixed(2)}%`,
                         top: `${adjustedTop.toFixed(2)}%`,
@@ -203,7 +202,16 @@ class ConfiguredPresenceSvg extends PureComponent {
                         }
                     }
                 }}
-            />
+            >
+                <ReactInlineSvg
+                    {...{
+                        title: convertPresenceKeyToTitle(presenceKey),
+                        preProcessor: this.preProcessSvg,
+                        onLoad: this.postProcessSvg,
+                        src: children
+                    }}
+                />
+            </div>
         )
     }
 }
