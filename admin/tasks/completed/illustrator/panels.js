@@ -128,5 +128,10 @@ export default [
         taskName: 'lizBed',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'wideCouch',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

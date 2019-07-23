@@ -35,27 +35,19 @@ const ARRANGEMENTS_THINGS = {
         },
         [WIDE_COUCH__MIRIAM]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 6,
-                zHeight: 5.5
-            }
+            xPosition: 7.5,
+            scaleFactor: 0.3
         },
         [WIDE_ARMREST__MIRIAM_LEFT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 6,
-                zHeight: 5.5
-            }
+            xPosition: 4,
+            scaleFactor: 0.3
         },
         [WIDE_ARMREST__MIRIAM_RIGHT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 6,
-                zHeight: 5.5
-            }
+            xPosition: 11,
+            scaleFactor: 0.3,
+            flipHorizontal: true
         }
     }
 }

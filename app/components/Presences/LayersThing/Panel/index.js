@@ -14,7 +14,7 @@ import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior'
 import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
 import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
-// import wideCouch from 'assets/svgs/panels/wideCouch'
+import wideCouch from 'assets/svgs/panels/wideCouch'
 import wideArmrest from 'assets/svgs/panels/wideArmrest'
 import goKartExterior from 'assets/svgs/panels/goKartExterior'
 import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
@@ -117,7 +117,7 @@ export default {
     [SCHOOLBUS_EXTERIOR]: schoolbusExterior,
     [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
-    [WIDE_COUCH__BENNETT]: false,
+    [WIDE_COUCH__BENNETT]: wideCouch,
     [WIDE_ARMREST__BENNETT_LEFT]: wideArmrest,
     [WIDE_ARMREST__BENNETT_RIGHT]: wideArmrest,
     [GO_KART_EXTERIOR__LEFT]: goKartExterior,
@@ -140,7 +140,7 @@ export default {
     [VOLKSWAGEN]: volkswagen,
     [CROWD_SIDE]: crowdSide,
     [LIZ_COUCH]: false,
-    [WIDE_COUCH__MIRIAM]: false,
+    [WIDE_COUCH__MIRIAM]: wideCouch,
     [WIDE_ARMREST__MIRIAM_LEFT]: wideArmrest,
     [WIDE_ARMREST__MIRIAM_RIGHT]: wideArmrest,
     [SNOWGLOBE__TETHERBALL]: snowglobe,

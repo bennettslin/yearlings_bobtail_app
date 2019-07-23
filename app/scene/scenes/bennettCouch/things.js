@@ -47,21 +47,18 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [WIDE_COUCH__BENNETT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 0.5
-            }
+            xPosition: 4.5,
+            scaleFactor: 0.3
         },
         [WIDE_ARMREST__BENNETT_LEFT]: {
             yIndex: 4,
             xPosition: 1,
-            scaleFactor: 0.25
+            scaleFactor: 0.3
         },
         [WIDE_ARMREST__BENNETT_RIGHT]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.25,
+            scaleFactor: 0.3,
             flipHorizontal: true
         }
     }
