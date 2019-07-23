@@ -1,6 +1,6 @@
 // import estherSpeechPanel from 'assets/svgs/panels/estherSpeechPanel'
 import bathtub from 'assets/svgs/panels/bathtub'
-// import bedroomDesk from 'assets/svgs/panels/bedroomDesk'
+import bedroomDesk from 'assets/svgs/panels/bedroomDesk'
 // import captainBed from 'assets/svgs/panels/captainBed'
 import bedroomFence from 'assets/svgs/panels/bedroomFence'
 import caveShadows from 'assets/svgs/panels/caveShadows'
@@ -14,15 +14,15 @@ import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior'
 import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
 import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
-// import bennettCouch from 'assets/svgs/panels/bennettCouch'
-// import bennettArmrest from 'assets/svgs/panels/bennettArmrest'
+import wideCouch from 'assets/svgs/panels/wideCouch'
+import wideArmrest from 'assets/svgs/panels/wideArmrest'
 import goKartExterior from 'assets/svgs/panels/goKartExterior'
 import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
 import dishroomSink from 'assets/svgs/panels/dishroomSink'
 import bennettBed from 'assets/svgs/panels/bennettBed'
 import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
 import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
-// import lizBed from 'assets/svgs/panels/lizBed'
+import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
 // import atticCouch from 'assets/svgs/panels/atticCouch'
@@ -59,8 +59,8 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
     WIDE_COUCH__BENNETT,
-    WIDE_LEFT_ARMREST__BENNETT,
-    WIDE_RIGHT_ARMREST__BENNETT,
+    WIDE_ARMREST__BENNETT_LEFT,
+    WIDE_ARMREST__BENNETT_RIGHT,
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
     CONVEYOR_BELT,
@@ -76,14 +76,14 @@ import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
     ATTIC_COUCH,
-    ATTIC_LEFT_ARMREST,
-    ATTIC_RIGHT_ARMREST,
+    ATTIC_ARMREST__LEFT,
+    ATTIC_ARMREST__RIGHT,
     VOLKSWAGEN,
     CROWD_SIDE,
     LIZ_COUCH,
     WIDE_COUCH__MIRIAM,
-    WIDE_LEFT_ARMREST__MIRIAM,
-    WIDE_RIGHT_ARMREST__MIRIAM,
+    WIDE_ARMREST__MIRIAM_LEFT,
+    WIDE_ARMREST__MIRIAM_RIGHT,
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
@@ -103,7 +103,7 @@ import {
 export default {
     [ESTHER_SPEECH_PANEL]: false,
     [BATHTUB]: bathtub,
-    [BEDROOM_DESK]: false,
+    [BEDROOM_DESK]: bedroomDesk,
     [CAPTAIN_BED]: false,
     [BEDROOM_FENCE]: bedroomFence,
     [CAVE_SHADOWS]: caveShadows,
@@ -117,9 +117,9 @@ export default {
     [SCHOOLBUS_EXTERIOR]: schoolbusExterior,
     [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
-    [WIDE_COUCH__BENNETT]: false,
-    [WIDE_LEFT_ARMREST__BENNETT]: false,
-    [WIDE_RIGHT_ARMREST__BENNETT]: false,
+    [WIDE_COUCH__BENNETT]: wideCouch,
+    [WIDE_ARMREST__BENNETT_LEFT]: wideArmrest,
+    [WIDE_ARMREST__BENNETT_RIGHT]: wideArmrest,
     [GO_KART_EXTERIOR__LEFT]: goKartExterior,
     [GO_KART_EXTERIOR__RIGHT]: goKartExterior,
     [CONVEYOR_BELT]: conveyorBelt,
@@ -131,18 +131,18 @@ export default {
     [WAITING_ARMCHAIR__LIZ]: waitingArmchair,
     [WAITING_ARMREST__LIZ_LEFT]: waitingArmrest,
     [WAITING_ARMREST__LIZ_RIGHT]: waitingArmrest,
-    [LIZ_BED]: false,
+    [LIZ_BED]: lizBed,
     [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,
     [ATTIC_COUCH]: false,
-    [ATTIC_LEFT_ARMREST]: false,
-    [ATTIC_RIGHT_ARMREST]: false,
+    [ATTIC_ARMREST__LEFT]: false,
+    [ATTIC_ARMREST__RIGHT]: false,
     [VOLKSWAGEN]: volkswagen,
     [CROWD_SIDE]: crowdSide,
     [LIZ_COUCH]: false,
-    [WIDE_COUCH__MIRIAM]: false,
-    [WIDE_LEFT_ARMREST__MIRIAM]: false,
-    [WIDE_RIGHT_ARMREST__MIRIAM]: false,
+    [WIDE_COUCH__MIRIAM]: wideCouch,
+    [WIDE_ARMREST__MIRIAM_LEFT]: wideArmrest,
+    [WIDE_ARMREST__MIRIAM_RIGHT]: wideArmrest,
     [SNOWGLOBE__TETHERBALL]: snowglobe,
     [SNOWGLOBE__LIZ_ALONE]: snowglobe,
     [SNOWGLOBE__BENNETT_MIRIAM]: snowglobe,

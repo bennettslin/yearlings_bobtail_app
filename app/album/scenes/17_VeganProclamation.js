@@ -53,9 +53,7 @@ import {
     PROTESTER
 } from '../../constants/scene/actors/instances/songs'
 
-import {
-    UC_BERKELEY_BACKDROP
-} from '../../constants/scene/things/backdrops'
+import { UC_BERKELEY_BACKDROP } from '../../constants/scene/things/backdrops'
 
 import {
     SIGNPOST,

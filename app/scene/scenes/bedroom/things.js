@@ -88,11 +88,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [BEDROOM_DESK]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 4,
-                zHeight: 1
-            }
+            xPosition: 3,
+            scaleFactor: 0.225
         },
         [CAPTAIN_BED]: {
             yIndex: 4,

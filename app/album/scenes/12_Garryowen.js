@@ -35,9 +35,7 @@ import {
     SMIRKING
 } from '../../constants/scene/actors/instances/ana'
 
-import {
-    DROPPING_MEATS
-} from '../../constants/scene/actors/instances/bennett'
+import { DROPPING_MEATS } from '../../constants/scene/actors/instances/bennett'
 
 import {
     BRUSH_OFF,
@@ -53,9 +51,7 @@ import {
     LEAVING_CRUMBLED
 } from '../../constants/scene/actors/instances/songs'
 
-import {
-    OAKLAND_SIDE_BACKDROP
-} from '../../constants/scene/things/backdrops'
+import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
 
 import {
     NAS_ALBUM,
@@ -84,8 +80,8 @@ import {
 import {
     VOLKSWAGEN,
     WIDE_COUCH__BENNETT,
-    WIDE_LEFT_ARMREST__BENNETT,
-    WIDE_RIGHT_ARMREST__BENNETT,
+    WIDE_ARMREST__BENNETT_LEFT,
+    WIDE_ARMREST__BENNETT_RIGHT,
     LIZ_COUCH
 } from '../../constants/scene/things/panels'
 
@@ -169,8 +165,8 @@ export default [
             },
             [PANEL]: {
                 [WIDE_COUCH__BENNETT]: true,
-                [WIDE_LEFT_ARMREST__BENNETT]: true,
-                [WIDE_RIGHT_ARMREST__BENNETT]: true
+                [WIDE_ARMREST__BENNETT_LEFT]: true,
+                [WIDE_ARMREST__BENNETT_RIGHT]: true
             }
         },
         cubes: BASEMENT_COUCH_KEY,

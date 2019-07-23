@@ -91,8 +91,8 @@ import {
     BENNETT_BED,
     LIZ_COUCH,
     WIDE_COUCH__MIRIAM,
-    WIDE_LEFT_ARMREST__MIRIAM,
-    WIDE_RIGHT_ARMREST__MIRIAM
+    WIDE_ARMREST__MIRIAM_LEFT,
+    WIDE_ARMREST__MIRIAM_RIGHT
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -217,8 +217,8 @@ export default [
                 [SNOWGLOBE__LIZ_ALONE]: true,
                 [SNOWGLOBE__BENNETT_MIRIAM]: true,
                 [WIDE_COUCH__MIRIAM]: true,
-                [WIDE_LEFT_ARMREST__MIRIAM]: true,
-                [WIDE_RIGHT_ARMREST__MIRIAM]: true
+                [WIDE_ARMREST__MIRIAM_LEFT]: true,
+                [WIDE_ARMREST__MIRIAM_RIGHT]: true
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,

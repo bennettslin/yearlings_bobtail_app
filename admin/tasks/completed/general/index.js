@@ -4751,5 +4751,15 @@ export default [
         taskName: `Some cardboard and cutout reorganisation.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Previewer toggles aspect ratio based on svg viewBox.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Previewer sets presence from URL.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

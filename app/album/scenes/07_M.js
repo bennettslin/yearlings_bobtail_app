@@ -34,9 +34,7 @@ import {
     STEPHANIE
 } from '../../constants/scene/actors'
 
-import {
-    SQUATTING
-} from '../../constants/scene/actors/instances/ana'
+import { SQUATTING } from '../../constants/scene/actors/instances/ana'
 
 import {
     PONDERING,
@@ -118,8 +116,8 @@ import {
 
 import {
     WIDE_COUCH__BENNETT,
-    WIDE_LEFT_ARMREST__BENNETT,
-    WIDE_RIGHT_ARMREST__BENNETT
+    WIDE_ARMREST__BENNETT_LEFT,
+    WIDE_ARMREST__BENNETT_RIGHT
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -142,8 +140,8 @@ export default [
             },
             [PANEL]: {
                 [WIDE_COUCH__BENNETT]: true,
-                [WIDE_LEFT_ARMREST__BENNETT]: true,
-                [WIDE_RIGHT_ARMREST__BENNETT]: true
+                [WIDE_ARMREST__BENNETT_LEFT]: true,
+                [WIDE_ARMREST__BENNETT_RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -172,8 +170,8 @@ export default [
             },
             [PANEL]: {
                 [WIDE_COUCH__BENNETT]: true,
-                [WIDE_LEFT_ARMREST__BENNETT]: true,
-                [WIDE_RIGHT_ARMREST__BENNETT]: true
+                [WIDE_ARMREST__BENNETT_LEFT]: true,
+                [WIDE_ARMREST__BENNETT_RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
@@ -208,8 +206,8 @@ export default [
             },
             [PANEL]: {
                 [WIDE_COUCH__BENNETT]: true,
-                [WIDE_LEFT_ARMREST__BENNETT]: true,
-                [WIDE_RIGHT_ARMREST__BENNETT]: true
+                [WIDE_ARMREST__BENNETT_LEFT]: true,
+                [WIDE_ARMREST__BENNETT_RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_KEY,
