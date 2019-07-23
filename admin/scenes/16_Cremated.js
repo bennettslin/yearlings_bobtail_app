@@ -96,7 +96,7 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    workedHours: 3.75,
                     instance: REVERSING
                 }
             }
