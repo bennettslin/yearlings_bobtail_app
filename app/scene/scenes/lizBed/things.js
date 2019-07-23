@@ -83,11 +83,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [LIZ_BED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 0.5
-            }
+            xPosition: 5,
+            scaleFactor: 0.25
         }
     }
 }

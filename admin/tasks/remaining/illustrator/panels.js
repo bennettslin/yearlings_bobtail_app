@@ -35,11 +35,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'lizBed',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'hospitalBed',
         workedHours: 0,
         neededHours: 1.5

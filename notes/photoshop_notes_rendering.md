@@ -141,7 +141,6 @@
     * goKartExterior
     * conveyorBelt
     * dishroomSink
-    * bennettBed
     * waitingArmchair
     * waitingArmrest
     * saturnInterior

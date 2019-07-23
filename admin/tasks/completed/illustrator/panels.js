@@ -111,8 +111,8 @@ export default [
     },
     {
         taskName: 'bennettBed',
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 1.5,
+        neededHours: 1.5
     },
     {
         taskName: 'waitingArmchair',
@@ -123,5 +123,10 @@ export default [
         taskName: 'volkswagen',
         workedHours: 3.5,
         neededHours: 3.5
+    },
+    {
+        taskName: 'lizBed',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

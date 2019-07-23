@@ -22,7 +22,7 @@ import dishroomSink from 'assets/svgs/panels/dishroomSink'
 import bennettBed from 'assets/svgs/panels/bennettBed'
 import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
 import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
-// import lizBed from 'assets/svgs/panels/lizBed'
+import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
 // import atticCouch from 'assets/svgs/panels/atticCouch'
@@ -131,7 +131,7 @@ export default {
     [WAITING_ARMCHAIR__LIZ]: waitingArmchair,
     [WAITING_ARMREST__LIZ_LEFT]: waitingArmrest,
     [WAITING_ARMREST__LIZ_RIGHT]: waitingArmrest,
-    [LIZ_BED]: false,
+    [LIZ_BED]: lizBed,
     [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,
     [ATTIC_COUCH]: false,
