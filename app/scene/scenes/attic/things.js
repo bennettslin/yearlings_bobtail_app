@@ -10,8 +10,8 @@ import {
 } from 'constants/scene/things/cutouts'
 import {
     ATTIC_COUCH,
-    ATTIC_LEFT_ARMREST,
-    ATTIC_RIGHT_ARMREST
+    ATTIC_ARMREST__LEFT,
+    ATTIC_ARMREST__RIGHT
 } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -46,7 +46,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [ATTIC_LEFT_ARMREST]: {
+        [ATTIC_ARMREST__LEFT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 3.5,
@@ -54,7 +54,7 @@ const ARRANGEMENTS_THINGS = {
                 zHeight: 0.5
             }
         },
-        [ATTIC_RIGHT_ARMREST]: {
+        [ATTIC_ARMREST__RIGHT]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 3.5,
