@@ -40,27 +40,19 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [ATTIC_COUCH]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 4,
-                zHeight: 0.5
-            }
+            xPosition: 3.5,
+            scaleFactor: 0.25
         },
         [ATTIC_ARMREST__LEFT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 4,
-                zHeight: 0.5
-            }
+            xPosition: 1,
+            scaleFactor: 0.25
         },
         [ATTIC_ARMREST__RIGHT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 4,
-                zHeight: 0.5
-            }
+            xPosition: 6,
+            scaleFactor: 0.25,
+            flipHorizontal: true
         }
     }
 }

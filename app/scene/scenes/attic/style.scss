@@ -129,3 +129,35 @@
         fill: #333;
     }
 }
+
+.atticArmrest {
+    .post {
+        fill: #726954;
+    }
+
+    .cushion {
+        fill: #7c6a89;
+    }
+
+    .foot {
+        fill: #726954;
+    }
+}
+
+.atticCouch {
+    .cushion {
+        fill: #846896;
+    }
+
+    .cushionBorderLine {
+        stroke: #302a35;
+    }
+
+    .buttonCreaseLine {
+        stroke: #4e4256;
+    }
+
+    .button {
+        fill: #6f5970;
+    }
+}

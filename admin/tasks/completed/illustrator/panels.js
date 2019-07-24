@@ -138,5 +138,10 @@ export default [
         taskName: 'bedroomDesk',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'atticCouch',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

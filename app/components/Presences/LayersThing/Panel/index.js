@@ -25,8 +25,8 @@ import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
-// import atticCouch from 'assets/svgs/panels/atticCouch'
-// import atticArmrest from 'assets/svgs/panels/atticArmrest'
+import atticCouch from 'assets/svgs/panels/atticCouch'
+import atticArmrest from 'assets/svgs/panels/atticArmrest'
 import volkswagen from 'assets/svgs/panels/volkswagen'
 import crowdSide from 'assets/svgs/panels/crowdSide'
 // import lizCouch from 'assets/svgs/panels/lizCouch'
@@ -134,9 +134,9 @@ export default {
     [LIZ_BED]: lizBed,
     [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,
-    [ATTIC_COUCH]: false,
-    [ATTIC_ARMREST__LEFT]: false,
-    [ATTIC_ARMREST__RIGHT]: false,
+    [ATTIC_COUCH]: atticCouch,
+    [ATTIC_ARMREST__LEFT]: atticArmrest,
+    [ATTIC_ARMREST__RIGHT]: atticArmrest,
     [VOLKSWAGEN]: volkswagen,
     [CROWD_SIDE]: crowdSide,
     [LIZ_COUCH]: false,
