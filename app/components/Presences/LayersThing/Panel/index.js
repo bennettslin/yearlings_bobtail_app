@@ -29,7 +29,7 @@ import atticCouch from 'assets/svgs/panels/atticCouch'
 import atticArmrest from 'assets/svgs/panels/atticArmrest'
 import volkswagen from 'assets/svgs/panels/volkswagen'
 import crowdSide from 'assets/svgs/panels/crowdSide'
-// import lizCouch from 'assets/svgs/panels/lizCouch'
+import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
 import reattaInterior from 'assets/svgs/panels/reattaInterior'
 import reattaExterior from 'assets/svgs/panels/reattaExterior'
@@ -139,7 +139,7 @@ export default {
     [ATTIC_ARMREST__RIGHT]: atticArmrest,
     [VOLKSWAGEN]: volkswagen,
     [CROWD_SIDE]: crowdSide,
-    [LIZ_COUCH]: false,
+    [LIZ_COUCH]: lizCouch,
     [WIDE_COUCH__MIRIAM]: wideCouch,
     [WIDE_ARMREST__MIRIAM_LEFT]: wideArmrest,
     [WIDE_ARMREST__MIRIAM_RIGHT]: wideArmrest,
