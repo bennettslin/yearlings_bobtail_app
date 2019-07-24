@@ -92,12 +92,9 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.225
         },
         [CAPTAIN_BED]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 3,
-                zHeight: 2.5
-            }
+            yIndex: 5,
+            xPosition: 7.2,
+            scaleFactor: 0.2
         },
         [BEDROOM_FENCE]: {
             yIndex: -1,

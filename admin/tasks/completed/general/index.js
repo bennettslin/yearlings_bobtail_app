@@ -4761,5 +4761,10 @@ export default [
         taskName: `Previewer sets presence from URL.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Begin work to update react-inlinesvg version.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
