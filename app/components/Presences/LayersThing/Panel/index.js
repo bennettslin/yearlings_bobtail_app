@@ -1,7 +1,7 @@
 // import estherSpeechPanel from 'assets/svgs/panels/estherSpeechPanel'
 import bathtub from 'assets/svgs/panels/bathtub'
 import bedroomDesk from 'assets/svgs/panels/bedroomDesk'
-// import captainBed from 'assets/svgs/panels/captainBed'
+import captainBed from 'assets/svgs/panels/captainBed'
 import bedroomFence from 'assets/svgs/panels/bedroomFence'
 import caveShadows from 'assets/svgs/panels/caveShadows'
 import stalactites from 'assets/svgs/panels/stalactites'
@@ -25,11 +25,11 @@ import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
-// import atticCouch from 'assets/svgs/panels/atticCouch'
-// import atticArmrest from 'assets/svgs/panels/atticArmrest'
+import atticCouch from 'assets/svgs/panels/atticCouch'
+import atticArmrest from 'assets/svgs/panels/atticArmrest'
 import volkswagen from 'assets/svgs/panels/volkswagen'
 import crowdSide from 'assets/svgs/panels/crowdSide'
-// import lizCouch from 'assets/svgs/panels/lizCouch'
+import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
 import reattaInterior from 'assets/svgs/panels/reattaInterior'
 import reattaExterior from 'assets/svgs/panels/reattaExterior'
@@ -104,7 +104,7 @@ export default {
     [ESTHER_SPEECH_PANEL]: false,
     [BATHTUB]: bathtub,
     [BEDROOM_DESK]: bedroomDesk,
-    [CAPTAIN_BED]: false,
+    [CAPTAIN_BED]: captainBed,
     [BEDROOM_FENCE]: bedroomFence,
     [CAVE_SHADOWS]: caveShadows,
     [STALACTITES]: stalactites,
@@ -134,12 +134,12 @@ export default {
     [LIZ_BED]: lizBed,
     [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,
-    [ATTIC_COUCH]: false,
-    [ATTIC_ARMREST__LEFT]: false,
-    [ATTIC_ARMREST__RIGHT]: false,
+    [ATTIC_COUCH]: atticCouch,
+    [ATTIC_ARMREST__LEFT]: atticArmrest,
+    [ATTIC_ARMREST__RIGHT]: atticArmrest,
     [VOLKSWAGEN]: volkswagen,
     [CROWD_SIDE]: crowdSide,
-    [LIZ_COUCH]: false,
+    [LIZ_COUCH]: lizCouch,
     [WIDE_COUCH__MIRIAM]: wideCouch,
     [WIDE_ARMREST__MIRIAM_LEFT]: wideArmrest,
     [WIDE_ARMREST__MIRIAM_RIGHT]: wideArmrest,

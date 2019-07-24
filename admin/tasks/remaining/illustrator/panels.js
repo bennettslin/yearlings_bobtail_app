@@ -5,6 +5,16 @@ export default [
         neededHours: 1.5
     },
     {
+        taskName: 'taiwanClouds',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'taiwanFog',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
         taskName: 'deathbedThoughtPanel',
         workedHours: 0,
         neededHours: 1
@@ -25,22 +35,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'captainBed',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'hospitalBed',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'atticCouch',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'lizCouch',
         workedHours: 0,
         neededHours: 1.5
     }

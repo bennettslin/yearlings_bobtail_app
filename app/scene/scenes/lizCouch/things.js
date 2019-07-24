@@ -24,11 +24,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [LIZ_COUCH]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 3,
-                zHeight: 3
-            }
+            xPosition: 2,
+            scaleFactor: 0.27
         }
     }
 }

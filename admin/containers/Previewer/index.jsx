@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
+import debounce from 'debounce'
 import keys from 'lodash/keys'
 
 import PreviewerSvg from './PreviewerSvg'
@@ -7,9 +8,7 @@ import PreviewerSvg from './PreviewerSvg'
 import { getViewBoxSize } from 'modules/ConfiguredPresenceSvg/helper/size'
 import {
     getFromStorage,
-    setInStorage,
-    getBoolFromStorage,
-    setBoolInStorage
+    setInStorage
 } from 'utils/window'
 
 import {
@@ -46,29 +45,36 @@ const PRESENCE_MAP = {
     [PUPPET]: ALL_PUPPETS
 }
 
+const
+    PADDING_DASHBOARD = 10,
+    HEIGHT_INPUT = 44
+
 import './style.scss'
 
 class Previewer extends PureComponent {
     constructor(props) {
         super(props)
 
-        const queryStringPresence = this.setPresenceFromQueryStrings()
+        this.storePresenceFromQueryStrings()
 
         this.state = {
-            ...queryStringPresence,
-            heightAspectRatio: getBoolFromStorage('heightAspectRatio'),
-            transitionalPresenceType: '',
             presenceType: getFromStorage('presenceType'),
             presenceKey: getFromStorage('presenceKey'),
-            kilobytes: 0
+            transitionalPresenceType: '',
+            viewBoxWidth: 0,
+            viewBoxHeight: 0,
+            kilobytes: 0,
+            heightAspectRatio: false
         }
     }
 
     componentDidMount() {
         logMount('Previewer')
+        window.onresize = debounce(this.sizePresence, 0)
     }
 
-    setPresenceFromQueryStrings() {
+    storePresenceFromQueryStrings() {
+        // If presence from query strings is valid, set in store.
         const urlParams = new URLSearchParams(window.location.search),
             unsafePresenceType = urlParams.get('type'),
             unsafePresenceKey = urlParams.get('key'),
@@ -86,14 +92,8 @@ class Previewer extends PureComponent {
 
             if (presenceKey) {
                 this.setPresenceInStorage({ presenceType, presenceKey })
-                return {
-                    presenceType,
-                    presenceKey
-                }
             }
         }
-
-        return null
     }
 
     selectPresenceType = ({ target: { value: transitionalPresenceType } }) => {
@@ -123,34 +123,44 @@ class Previewer extends PureComponent {
         }
     }
 
-    toggleAspectRatio = () => {
-        const { heightAspectRatio: prevHeightAspectRatio } = this.state,
-            heightAspectRatio = !prevHeightAspectRatio
-
-        this.setState({ heightAspectRatio })
-        setBoolInStorage('heightAspectRatio', heightAspectRatio)
-    }
-
     handleProcessSvg = (svgString) => {
         const {
                 viewBoxWidth,
                 viewBoxHeight
             } = getViewBoxSize(svgString),
-            windowWidth = window.innerWidth,
-            windowHeight = window.innerHeight,
-
-            // Set height aspect ratio.
-            heightAspectRatio =
-                viewBoxWidth / viewBoxHeight <
-                windowWidth / windowHeight,
 
             // Show kilobytes.
             kilobytes = (svgString.length / 1024).toFixed(2)
 
+        this.sizePresence({
+            viewBoxWidth,
+            viewBoxHeight
+        })
+
         this.setState({
-            heightAspectRatio,
+            viewBoxWidth,
+            viewBoxHeight,
             kilobytes
         })
+    }
+
+    sizePresence = ({
+        viewBoxWidth = this.state.viewBoxWidth,
+        viewBoxHeight = this.state.viewBoxHeight
+    }) => {
+        const windowWidth = window.innerWidth,
+            windowHeight =
+                window.innerHeight - PADDING_DASHBOARD * 2 -
+
+                // In mobile, account for height of two inputs.
+                HEIGHT_INPUT * (window.innerWidth < 1000 ? 2 : 1),
+
+            // Set height aspect ratio.
+            heightAspectRatio =
+                viewBoxWidth / viewBoxHeight <
+                windowWidth / windowHeight
+
+        this.setState({ heightAspectRatio })
     }
 
     render() {
@@ -183,15 +193,9 @@ class Previewer extends PureComponent {
                         )
                     }}
                 >
-                    <button
-                        {...{
-                            onClick: this.toggleAspectRatio
-                        }}
-                    >
-                        Toggle aspect ratio
-                    </button>
                     <select
                         {...{
+                            className: 'Previewer__dashboardChild',
                             value: selectedPresenceType,
                             onChange: this.selectPresenceType
                         }}
@@ -210,6 +214,7 @@ class Previewer extends PureComponent {
                     </select>
                     <select
                         {...{
+                            className: 'Previewer__dashboardChild',
                             value: presenceKey,
                             onChange: this.selectPresenceKey
                         }}
@@ -232,7 +237,11 @@ class Previewer extends PureComponent {
                     </select>
                     <div
                         {...{
-                            className: 'Previewer__kilobytes'
+                            className: cx(
+                                'Previewer__dashboardChild',
+                                'Previewer__kilobytes',
+                                'flexCentreContainer'
+                            )
                         }}
                     >
                         {kilobytes} kiB

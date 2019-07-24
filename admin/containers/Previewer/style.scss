@@ -1,17 +1,60 @@
-$height__dashboard: 60px;
+$padding__dashboard: 10px;
+$height__input: 44px;
+$height__dashboard: $height__input + $padding__dashboard * 2;
+$height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
 
 .Previewer__dashboard {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    height: $height__dashboard;
+
+    padding: $padding__dashboard;
+    height: $height__dashboard__mobile;
+    
+    @media (min-width: 1000px) {
+        height: $height__dashboard;
+    }
 }
 
-* {
-    .Previewer__dashboard
-    &:not(:last-child) {
-        margin-right: 50px;
+.Previewer__dashboardChild {
+    height: $height__input;
+    font-family: PTSansNarrow, Arial;
+    font-size: 1.2em;
+    width: 100%;
+    
+    @media (min-width: 1000px) {
+        font-size: 1.5em;
+        width: auto;
+
+        &:not(:last-child) {
+            margin-right: 50px;
+        }
+    }
+}
+
+.Previewer__kilobytes {
+    // Hide kilobytes in mobile.
+    display: none;
+
+    @media (min-width: 1000px) {
+        display: block;
+    }
+}
+
+.Previewer__scroll {
+    padding: 0 $padding__dashboard $padding__dashboard;
+
+    .Previewer__heightAspectRatio
+    & {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        height: calc(100% - #{$height__dashboard__mobile});
+
+        @media (min-width: 1000px) {
+            height: calc(100% - #{$height__dashboard});
+        }
     }
 }
 
@@ -23,29 +66,9 @@ $height__dashboard: 60px;
     }
 }
 
-.Previewer__scroll {
-    padding: 10px;
-
-    .Previewer__heightAspectRatio
-    & {
-        display: flex;
-        justify-content: center;
-        width: auto;
-        height: calc(100% - #{$height__dashboard});
-    }
-}
-
 svg {
     .Previewer__heightAspectRatio
     & {
         height: 100%;
-    }
-}
-
-button, select, .Previewer__kilobytes {
-    .Previewer
-    & {
-        font-family: PTSansNarrow, Arial;
-        font-size: 1.5em;
     }
 }
