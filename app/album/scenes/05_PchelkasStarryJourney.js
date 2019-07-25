@@ -198,7 +198,8 @@ export default [
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
-                [CAPTAIN_BED]: true
+                [CAPTAIN_BED]: true,
+                [BEDROOM_FENCE]: true
             }
         },
         cubes: BEDROOM_KEY,
@@ -221,8 +222,7 @@ export default [
                 [BLOOM_COUNTY_POSTER]: true
             },
             [PANEL]: {
-                [CAPTAIN_BED]: true,
-                [BEDROOM_FENCE]: true
+                [CAPTAIN_BED]: true
             },
             [PUPPET]: {
                 [PCHELKA_MUSHKA_ROCKET]: true
@@ -248,8 +248,7 @@ export default [
                 [BEYONDER_ENVELOPE]: true
             },
             [PANEL]: {
-                [BEDROOM_DESK]: true,
-                [BEDROOM_FENCE]: true
+                [BEDROOM_DESK]: true
             },
             [PUPPET]: {
                 [EARTH]: true,

@@ -63,5 +63,10 @@ export default [
         taskName: 'bedroomSiren',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'bedroomBus',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

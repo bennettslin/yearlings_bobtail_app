@@ -20,6 +20,58 @@
     }
 }
 
+.bedroomBus {
+    .smoke {
+        fill: #818c7d;
+    }
+
+    .body {
+        fill: #ddc86f;
+    }
+
+    .trim {
+        fill: #595958;
+    }
+
+    .turnLight {
+        fill: #f4a82f;
+    }
+
+    .window {
+        fill: #9cdbd3;
+    }
+
+    .roof {
+        fill: #efedcb;
+    }
+}
+
+.bedroomSiren {
+    .redLight {
+        fill: #f7b2b2;
+    }
+
+    .redBrighter {
+        fill: #e88080;
+    }
+
+    .redBrightest {
+        fill: #f24e4e;
+    }
+
+    .blueLight {
+        fill: #b2ddf9;
+    }
+
+    .blueBrighter {
+        fill: #7fc3ea;
+    }
+
+    .blueBrightest {
+        fill: #4da8f4;
+    }
+}
+
 .bedroomDesk {
     .deskSide {
         fill: #4f463c;
@@ -337,31 +389,5 @@
 
     .meadow {
         fill: #62a372;
-    }
-}
-
-.bedroomSiren {
-    .redLight {
-        fill: #f7b2b2;
-    }
-
-    .redBrighter {
-        fill: #e88080;
-    }
-
-    .redBrightest {
-        fill: #f24e4e;
-    }
-
-    .blueLight {
-        fill: #b2ddf9;
-    }
-
-    .blueBrighter {
-        fill: #7fc3ea;
-    }
-
-    .blueBrightest {
-        fill: #4da8f4;
     }
 }

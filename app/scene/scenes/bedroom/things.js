@@ -181,12 +181,10 @@ export const THINGS_BEDROOM_FEIGNING = {
     },
     [FLAT]: {
         [BEDROOM_BUS]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 6,
-                zHeight: 8
-            }
+            yIndex: -1,
+            xPosition: 2,
+            zOffset: 3.25,
+            scaleFactor: 0.5
         }
     }
 }
