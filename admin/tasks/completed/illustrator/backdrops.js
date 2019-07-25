@@ -30,7 +30,7 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'goKartBackdrop',
+        taskName: 'goKartBackdrop and goKartTrack',
         workedHours: 2.5,
         neededHours: 2.5
     },
@@ -41,6 +41,11 @@ export default [
     },
     {
         taskName: 'weddingBackdrop',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'valleyBackdrop',
         workedHours: 1,
         neededHours: 1
     }

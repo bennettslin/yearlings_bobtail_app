@@ -1,6 +1,43 @@
+.valleyBackdrop {
+    .mountain {
+        fill: #9c7ba3;
+    }
+
+    .foliageFar {
+        fill: #5a7750;
+    }
+
+    .palmTrunk {
+        fill: #777057;
+    }
+
+    .palmFrond {
+        fill: #648e5e;
+    }
+
+    .building {
+        fill: #566884;
+    }
+
+    .foliageNear {
+        fill: #648757;
+    }
+}
+
 .overpassSignBack {
-    .board { fill: #063; }
-    .lattice { fill: #666; }
-    .joint { fill: #333; }
-    .frame { fill: #999; }
+    .board {
+        fill: #063;
+    }
+
+    .lattice {
+        fill: #666;
+    }
+
+    .joint {
+        fill: #333;
+    }
+
+    .frame {
+        fill: #999;
+    }
 }

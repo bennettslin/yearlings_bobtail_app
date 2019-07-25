@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'valleyBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'taiwanMountainsBackdrop',
         workedHours: 0,
         neededHours: 1.5
