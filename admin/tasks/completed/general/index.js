@@ -4771,5 +4771,10 @@ export default [
         taskName: `Make Previewer responsive.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Add capability to trim bottom of Presence.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
