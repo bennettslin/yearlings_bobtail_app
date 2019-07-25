@@ -58,7 +58,7 @@ class PreviewerSvg extends PureComponent {
             })
 
         return Boolean(presenceComponent) && (
-            <ReactInlineSvg
+            <div
                 {...{
                     className: cx(
                         'Presence',
@@ -66,11 +66,16 @@ class PreviewerSvg extends PureComponent {
                         capitaliseForClassName(presenceType),
                         sharedStyle,
                         className
-                    ),
-                    processSVG: this.processSvg,
-                    src: presenceComponent
+                    )
                 }}
-            />
+            >
+                <ReactInlineSvg
+                    {...{
+                        preProcessor: this.processSvg,
+                        src: presenceComponent
+                    }}
+                />
+            </div>
         )
     }
 }
