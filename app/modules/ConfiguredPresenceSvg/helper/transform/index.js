@@ -16,7 +16,7 @@ const _getTranslateStyle = ({ alignLeft, alignRight }) => {
     return `translate(-${translateX}%, -100%)`
 }
 
-export const getSvgContainerTransformForPresence = ({
+export const getPresenceTransform = ({
     alignLeft,
     alignRight
 }) => {
@@ -73,7 +73,7 @@ const _getSvgTransformForPresence = ({
     }
 }
 
-export const setSvgTransformForPresence = ({
+export const setSvgTransform = ({
     svgString,
     flipHorizontal,
     rotate,

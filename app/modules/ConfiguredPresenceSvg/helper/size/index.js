@@ -12,14 +12,20 @@ export const getSizeForPresence = ({
     viewBoxWidth,
     viewBoxHeight,
     yIndex,
-    scaleFactor = 1
+    scaleFactor = 1,
+    trimBottom = 0
 
 }) => {
     const
         validYIndex = getValidYIndex(yIndex),
         finalScaleFactor = scaleFactor * Y_INDEX_SCALE_FACTORS[validYIndex],
         adjustedWidth = viewBoxWidth * finalScaleFactor / ARTBOARD_WIDTH,
-        adjustedHeight = viewBoxHeight * finalScaleFactor / ARTBOARD_HEIGHT
+        adjustedHeight =
+            viewBoxHeight *
+            finalScaleFactor / ARTBOARD_HEIGHT *
+
+            // Don't show this much of the presence.
+            (1 - trimBottom)
 
     return {
         adjustedWidth,

@@ -7,10 +7,13 @@ import ReactInlineSvg from 'react-inlinesvg'
 import { convertPresenceKeyToTitle } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
-import { getSizeForPresence, getViewBoxSize } from './helper/size'
 import {
-    setSvgTransformForPresence,
-    getSvgContainerTransformForPresence
+    getSizeForPresence,
+    getViewBoxSize
+} from './helper/size'
+import {
+    setSvgTransform,
+    getPresenceTransform
 } from './helper/transform'
 
 const propTypes = {
@@ -50,14 +53,16 @@ class ConfiguredPresenceSvg extends PureComponent {
     }) {
         const {
             yIndex,
-            scaleFactor
+            scaleFactor,
+            trimBottom
         } = this.getArrangement()
 
         return getSizeForPresence({
             viewBoxWidth,
             viewBoxHeight,
             yIndex,
-            scaleFactor
+            scaleFactor,
+            trimBottom
         })
     }
 
@@ -135,7 +140,7 @@ class ConfiguredPresenceSvg extends PureComponent {
             rotateY
         } = this.getArrangement()
 
-        return setSvgTransformForPresence({
+        return setSvgTransform({
             svgString,
             flipHorizontal,
             rotate,
@@ -146,13 +151,13 @@ class ConfiguredPresenceSvg extends PureComponent {
         })
     }
 
-    getSvgContainerTransform() {
+    getPresenceTransform() {
         const {
             alignLeft,
             alignRight
         } = this.getArrangement()
 
-        return getSvgContainerTransformForPresence({
+        return getPresenceTransform({
             alignLeft,
             alignRight
         })
@@ -177,7 +182,7 @@ class ConfiguredPresenceSvg extends PureComponent {
                 adjustedWidth,
                 adjustedHeight
             } = this.state,
-            containerTransform = this.getSvgContainerTransform()
+            containerTransform = this.getPresenceTransform()
 
         return (
             <div
