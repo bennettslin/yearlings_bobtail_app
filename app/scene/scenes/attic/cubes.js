@@ -5,7 +5,7 @@ import {
     FLOOR_HSLA,
     WALL_HSLA,
     PLATFORM_HSLA,
-    FURNITURE_HSLA,
+    // FURNITURE_HSLA,
     UPHOLSTERY_HSLA
 } from '../../cubes/keys/hsla'
 
@@ -22,7 +22,7 @@ const
     F = FLOOR_HSLA,
     W = WALL_HSLA,
     P = PLATFORM_HSLA,
-    R = FURNITURE_HSLA,
+    // R = FURNITURE_HSLA,
     U = UPHOLSTERY_HSLA,
 
     ATTIC_CUBES = {
@@ -40,7 +40,7 @@ const
                 [W, F, U, U, U, U, F, W, F, F, F, W],
                 [W, F, U, U, U, U, F, W, F, F, F, W],
                 [W, F, U, U, U, U, F, W, F, F, F, W],
-                [W, F, F, R, R, F, F, W, P, P, F, W],
+                [W, F, F, F, F, F, F, W, P, P, F, W],
                 [W, F, F, F, F, F, F, W, P, P, F, W]
             ],
             zIndices: [
@@ -48,7 +48,7 @@ const
                 [g, 7, c, c, c, c, 7, g, 1, 1, 1, g],
                 [g, 7, a, a, a, a, 7, g, 1, 1, 1, g],
                 [g, 7, a, a, a, a, 7, g, 1, 1, 1, g],
-                [g, 7, 7, 9, 9, 7, 7, g, 3, 2, 1, g],
+                [g, 7, 7, 7, 7, 7, 7, g, 3, 2, 1, g],
                 [g, 7, 7, 7, 7, 7, 7, g, 3, 2, 1, g]
             ]
         }
