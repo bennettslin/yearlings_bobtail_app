@@ -96,7 +96,7 @@ export const setSvgTransform = ({
         return svgString
     }
 
-    const startIndex = svgString.indexOf('xmlns'),
+    const startIndex = svgString.indexOf('viewBox'),
         transformAttribute = `style="transform: ${transformStyle}" `
 
     return [

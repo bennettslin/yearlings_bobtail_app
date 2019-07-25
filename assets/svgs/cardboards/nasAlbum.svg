@@ -1,5 +1,4 @@
-<svg class="nasAlbum" 
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1127 1127">
+<svg viewBox="0 0 1127 1127">
     <rect class="frame" x="1" y="1" width="1125" height="1125"/>
     <path class="street" d="M2,722.87v401.88H1124.75V718.43C947.61,717.89,191.14,718.53,2,722.87Z"/>
     <g class="buildingRearFront">

@@ -2,13 +2,24 @@
 
 import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
 
+const discardAfterDoubleUnderscore = (word) => {
+    // Remove anything after double underscore.
+    return word.split('__')[0]
+}
+
+export const convertPresenceKeyToClassName = (word = '') => {
+    return discardAfterDoubleUnderscore(word)
+}
+
 export const capitaliseForClassName = (word) => {
     if (!word) {
         return null
     }
 
     // Remove anything after underscore, and capitalise first letter.
-    return (word.charAt(0).toUpperCase() + word.slice(1)).split('__')[0]
+    return convertPresenceKeyToClassName(
+        word.charAt(0).toUpperCase() + word.slice(1)
+    )
 }
 
 export const convertPresenceKeyToTitle = (string) => {

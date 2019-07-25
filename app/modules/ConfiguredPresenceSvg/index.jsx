@@ -4,7 +4,10 @@ import cx from 'classnames'
 
 import ReactInlineSvg from 'react-inlinesvg'
 
-import { convertPresenceKeyToTitle } from 'helpers/format'
+import {
+    convertPresenceKeyToTitle,
+    convertPresenceKeyToClassName
+} from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
 import {
@@ -210,6 +213,8 @@ class ConfiguredPresenceSvg extends PureComponent {
             >
                 <ReactInlineSvg
                     {...{
+                        className: convertPresenceKeyToClassName(presenceKey),
+                        xmlns: 'http://www.w3.org/2000/svg',
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: this.preProcessSvg,
                         onLoad: this.postProcessSvg,
