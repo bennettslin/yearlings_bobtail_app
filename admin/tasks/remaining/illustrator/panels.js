@@ -33,10 +33,5 @@ export default [
         taskName: 'inverseThoughtBackdrop',
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: 'hospitalBed',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

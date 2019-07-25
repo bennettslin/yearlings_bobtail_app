@@ -1,15 +1,128 @@
 .ivDrip {
-    .pole { fill: #333; }
-    .boxSide { fill: #96c; }
-    .boxTop { fill: #639; }
-    .boxFront { fill: #c9f; }
-    .buttons { fill: #cc6; }
-    .buttonsLine { stroke: #bb5; }
-    .bar { fill: #699; }
-    .barLine { stroke: #588; }
-    .console { fill: #6c9; }
-    .bagEmpty { fill: #cff; }
-    .bagFull { fill: #3cc; }
-    .bagCap { fill: #fff; }
-    .capLine { stroke: #eee; }
+    .pole {
+        fill: #333;
+    }
+
+    .boxSide {
+        fill: #96c;
+    }
+
+    .boxTop {
+        fill: #639;
+    }
+
+    .boxFront {
+        fill: #c9f;
+    }
+
+    .buttons {
+        fill: #cc6;
+    }
+
+    .buttonsLine {
+        stroke: #bb5;
+    }
+
+    .bar {
+        fill: #699;
+    }
+
+    .barLine {
+        stroke: #588;
+    }
+
+    .console {
+        fill: #6c9;
+    }
+
+    .bagEmpty {
+        fill: #cff;
+    }
+
+    .bagFull {
+        fill: #3cc;
+    }
+
+    .bagCap {
+        fill: #fff;
+    }
+
+    .capLine {
+        stroke: #eee;
+    }
+}
+
+.hospitalBed {
+    .swivel {
+        fill: #94949b;
+    }
+
+    .wheelSide {
+        fill: #383838;
+    }
+
+    .wheelFront {
+        fill: #484849;
+    }
+
+    .swivelFoldLine {
+        fill: none;
+        stroke: #474946;
+    }
+
+    .headBoardEdge {
+        fill: #6b5641;
+    }
+
+    .headBoardSurface {
+        fill: #af8158;
+    }
+
+    .platformBelowTop {
+        fill: #708e8b;
+    }
+
+    .platformBelowSide {
+        fill: #4c6263;
+    }
+
+    .platformBelowFront {
+        fill: #8aaaa9;
+    }
+
+    .frameSide {
+        fill: #78668e;
+    }
+
+    .frameFront {
+        fill: #878ba0;
+    }
+
+    .platformAboveSide {
+        fill: #5a7477;
+    }
+
+    .platformAboveFront {
+        fill: #9bc4c3;
+    }
+
+    .platformAboveTop {
+        fill: #789e9a;
+    }
+
+    .mattressSide {
+        fill: #7f6671;
+    }
+
+    .mattressFront {
+        fill: #997785;
+    }
+
+    .footBoardEdge {
+        fill: #7f664b;
+    }
+
+    .footBoardSurface {
+        fill: #c69360;
+    }
 }

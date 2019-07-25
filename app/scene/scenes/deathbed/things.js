@@ -33,11 +33,8 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [HOSPITAL_BED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 0.5
-            }
+            xPosition: 3.5,
+            scaleFactor: 0.27
         }
     }
 }

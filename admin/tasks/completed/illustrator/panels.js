@@ -153,5 +153,10 @@ export default [
         taskName: 'captainBed',
         workedHours: 2.5,
         neededHours: 2.5
+    },
+    {
+        taskName: 'hospitalBed',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

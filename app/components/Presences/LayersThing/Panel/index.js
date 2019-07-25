@@ -33,7 +33,7 @@ import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
 import reattaInterior from 'assets/svgs/panels/reattaInterior'
 import reattaExterior from 'assets/svgs/panels/reattaExterior'
-// import hospitalBed from 'assets/svgs/panels/hospitalBed'
+import hospitalBed from 'assets/svgs/panels/hospitalBed'
 import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
 // import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel'
 // import tennisThoughtPanel from 'assets/svgs/panels/tennisThoughtPanel'
@@ -150,7 +150,7 @@ export default {
     [SNOWGLOBE__BENNETT_ALONE]: snowglobe,
     [REATTA_INTERIOR]: reattaInterior,
     [REATTA_EXTERIOR]: reattaExterior,
-    [HOSPITAL_BED]: false,
+    [HOSPITAL_BED]: hospitalBed,
     [PHONE_CALL_PANEL]: phoneCallPanel,
     [DEATHBED_THOUGHT_PANEL]: false,
     [TENNIS_THOUGHT_PANEL]: false,
