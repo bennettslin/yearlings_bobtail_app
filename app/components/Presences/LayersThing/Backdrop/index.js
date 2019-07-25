@@ -1,5 +1,5 @@
 import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop'
-import nohoSchoolBackdrop from 'assets/svgs/backdrops/nohoSchoolBackdrop'
+import schoolBackdrop from 'assets/svgs/backdrops/schoolBackdrop'
 // import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
 // import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
 // import schoolbusThoughtBackdrop from 'assets/svgs/backdrops/schoolbusThoughtBackdrop'
@@ -30,7 +30,7 @@ import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
-    NOHO_SCHOOL_BACKDROP,
+    SCHOOL_BACKDROP,
     VALLEY_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
@@ -41,7 +41,6 @@ import {
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
-    VAN_NUYS_SCHOOL_BACKDROP,
     BENNETT_COUCH_THOUGHT_BACKDROP,
     FOLIAGE_BACKDROP,
     UC_BERKELEY_BACKDROP,
@@ -62,7 +61,7 @@ import {
 
 export default {
     [NOHO_HOUSES_BACKDROP]: nohoHousesBackdrop,
-    [NOHO_SCHOOL_BACKDROP]: nohoSchoolBackdrop,
+    [SCHOOL_BACKDROP]: schoolBackdrop,
     [VALLEY_BACKDROP]: false,
     [TAIWAN_MOUNTAINS_BACKDROP]: false,
     [SCHOOLBUS_THOUGHT_BACKDROP]: false,
@@ -73,7 +72,6 @@ export default {
     [SHORE_BUOY_BACKDROP]: false,
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
-    [VAN_NUYS_SCHOOL_BACKDROP]: false,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: false,
     [FOLIAGE_BACKDROP]: foliageBackdrop,
     [UC_BERKELEY_BACKDROP]: false,

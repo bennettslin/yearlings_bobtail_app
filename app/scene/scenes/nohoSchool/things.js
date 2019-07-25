@@ -5,7 +5,7 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-import { NOHO_SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
+import { SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
 import { PLAYGROUND_SLIDE } from 'constants/scene/things/cutouts'
 import {
     PLAYGROUND_BALL,
@@ -16,7 +16,7 @@ import { ESTHER_SPEECH_PANEL } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [NOHO_SCHOOL_BACKDROP]: {
+        [SCHOOL_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.66

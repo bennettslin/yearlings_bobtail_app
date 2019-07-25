@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FIXTURE
 } from 'constants/scene'
-import { VAN_NUYS_SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
+import { SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
@@ -13,7 +13,7 @@ import { THROWN_FRUIT } from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [VAN_NUYS_SCHOOL_BACKDROP]: {
+        [SCHOOL_BACKDROP]: {
             yIndex: 0,
             arrangement: {
                 xPosition: 5.5,

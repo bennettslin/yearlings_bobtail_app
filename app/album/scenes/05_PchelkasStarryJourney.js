@@ -67,9 +67,7 @@ import { ASLEEP } from '../../constants/scene/actors/instances/songs'
 
 import { PRINCIPAL } from '../../constants/scene/actors/instances/tristan'
 
-import {
-    VAN_NUYS_SCHOOL_BACKDROP
-} from '../../constants/scene/things/backdrops'
+import { SCHOOL_BACKDROP } from '../../constants/scene/things/backdrops'
 
 import {
     DOGS_SKETCH,
@@ -283,7 +281,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VAN_NUYS_SCHOOL_BACKDROP]: true
+                [SCHOOL_BACKDROP]: true
             },
             [CUTOUT]: {
                 [LOCKER_BANK]: true,
@@ -325,7 +323,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VAN_NUYS_SCHOOL_BACKDROP]: true
+                [SCHOOL_BACKDROP]: true
             },
             [BUBBLE]: {
                 [ESCAPE_POD_SKETCH]: true,

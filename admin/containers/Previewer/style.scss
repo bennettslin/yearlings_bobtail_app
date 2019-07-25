@@ -11,7 +11,7 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
 
     padding: $padding__dashboard;
     height: $height__dashboard__mobile;
-    
+
     @media (min-width: 1000px) {
         height: $height__dashboard;
     }
@@ -22,7 +22,7 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
     font-family: PTSansNarrow, Arial;
     font-size: 1.2em;
     width: 100%;
-    
+
     @media (min-width: 1000px) {
         font-size: 1.5em;
         width: auto;

@@ -50,7 +50,7 @@ import {
 
 import {
     NOHO_HOUSES_BACKDROP,
-    NOHO_SCHOOL_BACKDROP
+    SCHOOL_BACKDROP
 } from '../../constants/scene/things/backdrops'
 
 import { JOHNNY_HORTON_ALBUM } from '../../constants/scene/things/cardboards'
@@ -155,7 +155,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_SCHOOL_BACKDROP]: true
+                [SCHOOL_BACKDROP]: true
             },
             [CUTOUT]: {
                 [PLAYGROUND_SLIDE]: true

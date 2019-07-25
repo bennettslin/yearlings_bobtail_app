@@ -40,11 +40,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'vanNuysSchoolBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'bennettCouchThoughtBackdrop',
         workedHours: 0,
         neededHours: 1
