@@ -68,5 +68,10 @@ export default [
         taskName: 'bedroomBus',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'elCerritoFar',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

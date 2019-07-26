@@ -39,11 +39,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [EL_CERRITO_FAR]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 2
-            }
+            xPosition: 10.1,
+            scaleFactor: 0.42
         },
         [EL_CERRITO_NEAR]: {
             yIndex: 5,
