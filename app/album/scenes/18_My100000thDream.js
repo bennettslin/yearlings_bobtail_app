@@ -66,7 +66,9 @@ import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR,
-    FOREBODING_TREES
+    FOREBODING_TREES__NEAR,
+    FOREBODING_TREES__MIDDLE,
+    FOREBODING_TREES__FAR
 } from '../../constants/scene/things/flats'
 
 import {
@@ -163,7 +165,9 @@ export default [
                 [WEDDING_BACKDROP]: true
             },
             [FLAT]: {
-                [FOREBODING_TREES]: true
+                [FOREBODING_TREES__NEAR]: true,
+                [FOREBODING_TREES__MIDDLE]: true,
+                [FOREBODING_TREES__FAR]: true
             },
             [PANEL]: {
                 [WEDDING_PLATFORM]: true

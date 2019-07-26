@@ -98,7 +98,9 @@ import {
     PUBLIC_NEAR_RIGHT,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
-    FOREBODING_TREES,
+    FOREBODING_TREES__NEAR,
+    FOREBODING_TREES__MIDDLE,
+    FOREBODING_TREES__FAR,
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR
@@ -152,7 +154,9 @@ export default {
     [PUBLIC_NEAR_RIGHT]: false,
     [EL_CERRITO_FAR]: elCerritoFar,
     [EL_CERRITO_NEAR]: elCerritoNear,
-    [FOREBODING_TREES]: forebodingTrees,
+    [FOREBODING_TREES__NEAR]: forebodingTrees,
+    [FOREBODING_TREES__MIDDLE]: forebodingTrees,
+    [FOREBODING_TREES__FAR]: forebodingTrees,
     [CLIFF_GRAVES_FAR]: cliffGravesFar,
     [CLIFF_GRAVES_NEAR]: cliffGravesNear,
     [PAMPAS_FAR]: pampasFar
