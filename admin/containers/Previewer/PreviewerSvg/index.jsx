@@ -33,7 +33,9 @@ class PreviewerSvg extends PureComponent {
 
     handleProcessSvg = (svgString) => {
         const { presenceKey } = this.props,
-            element = document.getElementsByClassName(presenceKey)[0]
+            element = document.getElementsByClassName(
+                convertPresenceKeyToClassName(presenceKey)
+            )[0]
 
         if (element) {
             console.log(element)
