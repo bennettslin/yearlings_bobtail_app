@@ -38,7 +38,7 @@ import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
 // import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel'
 // import tennisThoughtPanel from 'assets/svgs/panels/tennisThoughtPanel'
 import crowdBack from 'assets/svgs/panels/crowdBack'
-// import weddingPlatform from 'assets/svgs/panels/weddingPlatform'
+import weddingPlatform from 'assets/svgs/panels/weddingPlatform'
 // import inverseThoughtPanel from 'assets/svgs/panels/inverseThoughtPanel'
 
 import {
@@ -155,6 +155,6 @@ export default {
     [DEATHBED_THOUGHT_PANEL]: false,
     [TENNIS_THOUGHT_PANEL]: false,
     [CROWD_BACK]: crowdBack,
-    [WEDDING_PLATFORM]: false,
+    [WEDDING_PLATFORM]: weddingPlatform,
     [INVERSE_THOUGHT_PANEL]: false
 }

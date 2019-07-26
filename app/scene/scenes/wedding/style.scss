@@ -16,6 +16,28 @@
     }
 }
 
+.weddingPlatform {
+    .leaves {
+        fill: #5d935a;
+    }
+
+    .rose {
+        fill: #aa5e5e;
+    }
+
+    .curtain {
+        fill: #9b5ca0;
+    }
+
+    .curtainCreaseLine {
+        stroke: #913376;
+    }
+
+    .curtainFoldLine {
+        stroke: #5e224c;
+    }
+}
+
 .weddingCrowd {
     .tableTop {
         fill: #6cc;

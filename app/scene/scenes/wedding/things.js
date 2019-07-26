@@ -35,12 +35,9 @@ const ARRANGEMENTS_THINGS = {
     },
     [PANEL]: {
         [WEDDING_PLATFORM]: {
-            yIndex: 5,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 3.5,
-                zHeight: 3
-            }
+            yIndex: 3,
+            xPosition: 1.3,
+            scaleFactor: 0.5
         }
     },
     [PUPPET]: {

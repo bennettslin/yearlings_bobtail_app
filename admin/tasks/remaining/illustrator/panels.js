@@ -25,11 +25,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'weddingPlatform',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'inverseThoughtBackdrop',
         workedHours: 0,
         neededHours: 1
