@@ -1,7 +1,27 @@
+.oaklandFrontBackdrop {
+    .foliage {
+        fill: #5e7054;
+    }
+}
+
 .twinStreetlamp {
-    .pole { fill: #333; }
-    .light { fill: #ffc; }
-    .arch { fill: #663; }
-    .copper { fill: #396; }
-    .brass { fill: #cc3; }
+    .pole {
+        fill: #333;
+    }
+
+    .light {
+        fill: #ffc;
+    }
+
+    .arch {
+        fill: #663;
+    }
+
+    .copper {
+        fill: #396;
+    }
+
+    .brass {
+        fill: #cc3;
+    }
 }

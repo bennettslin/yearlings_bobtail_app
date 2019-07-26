@@ -20,7 +20,7 @@ import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
 // import stationWagonBackdrop from 'assets/svgs/backdrops/stationWagonBackdrop'
 // import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop'
 // import lizCouchThoughtBackdrop from 'assets/svgs/backdrops/lizCouchThoughtBackdrop'
-// import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop'
+import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop'
 // import roadPast from 'assets/svgs/backdrops/roadPast'
 // import roadPresent from 'assets/svgs/backdrops/roadPresent'
 // import roadFuture from 'assets/svgs/backdrops/roadFuture'
@@ -81,7 +81,7 @@ export default {
     [STATION_WAGON_BACKDROP]: false,
     [OAKLAND_SIDE_BACKDROP]: false,
     [LIZ_COUCH_THOUGHT_BACKDROP]: false,
-    [OAKLAND_FRONT_BACKDROP]: false,
+    [OAKLAND_FRONT_BACKDROP]: oaklandFrontBackdrop,
     [ROAD_PAST]: false,
     [ROAD_PRESENT]: false,
     [ROAD_FUTURE]: false,

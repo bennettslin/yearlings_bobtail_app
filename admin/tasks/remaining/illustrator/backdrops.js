@@ -65,11 +65,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'oaklandFrontBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'roadPast',
         workedHours: 0,
         neededHours: 1.5
