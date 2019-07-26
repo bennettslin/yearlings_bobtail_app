@@ -168,10 +168,5 @@ export default [
         taskName: 'publicNearRight',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'elCerritoNear',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

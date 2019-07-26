@@ -44,7 +44,7 @@ import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight'
 // import publicFarRight from 'assets/svgs/flats/publicFarRight'
 // import publicNearRight from 'assets/svgs/flats/publicNearRight'
 import elCerritoFar from 'assets/svgs/flats/elCerritoFar'
-// import elCerritoNear from 'assets/svgs/flats/elCerritoNear'
+import elCerritoNear from 'assets/svgs/flats/elCerritoNear'
 import forebodingTrees from 'assets/svgs/flats/forebodingTrees'
 import cliffGravesFar from 'assets/svgs/flats/cliffGravesFar'
 import cliffGravesNear from 'assets/svgs/flats/cliffGravesNear'
@@ -151,7 +151,7 @@ export default {
     [PUBLIC_NEAR_LEFT]: false,
     [PUBLIC_NEAR_RIGHT]: false,
     [EL_CERRITO_FAR]: elCerritoFar,
-    [EL_CERRITO_NEAR]: false,
+    [EL_CERRITO_NEAR]: elCerritoNear,
     [FOREBODING_TREES]: forebodingTrees,
     [CLIFF_GRAVES_FAR]: cliffGravesFar,
     [CLIFF_GRAVES_NEAR]: cliffGravesNear,

@@ -44,11 +44,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [EL_CERRITO_NEAR]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 1
-            }
+            xPosition: 8.75,
+            scaleFactor: 0.4
         }
     },
     [PANEL]: {
