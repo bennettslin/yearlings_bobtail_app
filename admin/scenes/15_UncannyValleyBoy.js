@@ -42,7 +42,7 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.5,
+                    workedHours: 3.75,
                     compound: 2,
                     instance: ASLEEP
                 }
@@ -53,7 +53,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
-                    compound: 2,
                     duplicate: true,
                     instance: ASLEEP_FEARFUL
                 },
@@ -163,7 +162,7 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.5,
+                    workedHours: 3.75,
                     compound: 2,
                     instance: FENDING_OFF
                 },

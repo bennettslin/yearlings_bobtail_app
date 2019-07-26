@@ -57,7 +57,6 @@
     * progressChartEarly
     * progressChartLate
     * maraMementoPoster
-    * marqueeFrame
     * maraGladiatorPoster
     * gladiatorPoster
     * codeBox

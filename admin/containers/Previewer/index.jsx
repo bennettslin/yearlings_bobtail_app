@@ -131,6 +131,7 @@ class Previewer extends PureComponent {
 
             // Show kilobytes.
             kilobytes = (svgString.length / 1024).toFixed(2)
+        console.error(kilobytes)
 
         this.sizePresence({
             viewBoxWidth,
