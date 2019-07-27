@@ -19,7 +19,8 @@ const ARRANGEMENTS_THINGS = {
         [SCHOOL_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.66
+            scaleFactor: 0.66,
+            trimBottom: 0.05
         }
     },
     [CUTOUT]: {
