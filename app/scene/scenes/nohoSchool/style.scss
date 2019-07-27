@@ -52,6 +52,48 @@
     }
 }
 
+.nohoSchoolhouse {
+    .wall {
+        fill: #76b0c4;
+    }
+
+    .ramp {
+        fill: #c6c7a7;
+    }
+
+    .doorTrim {
+        fill: #ab944d;
+    }
+
+    .door {
+        fill: #929c44;
+    }
+
+    .doorWindow {
+        fill: #76f5ec;
+    }
+
+    .awning {
+        fill: #e3eb94;
+    }
+
+    .windowTrim {
+        fill: #e9ffa1;
+    }
+
+    .window {
+        fill: #87edff;
+    }
+
+    .windowDisplayLine {
+        stroke: #4884b8;
+    }
+
+    .roof {
+        fill: #ba8e49;
+    }
+}
+
 .playgroundSlide {
     .rung {
         fill: #699;

@@ -88,5 +88,15 @@ export default [
         taskName: 'vanNuysSchoolhouseRight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'nohoSchoolhouse',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'stJosephsAnnex',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

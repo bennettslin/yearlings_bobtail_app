@@ -10,11 +10,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'nohoSchoolhouse',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'valleyFreeway',
         workedHours: 0,
         neededHours: 1.5
@@ -41,11 +36,6 @@ export default [
     },
     {
         taskName: 'rickshawTown',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'stJosephsAnnex',
         workedHours: 0,
         neededHours: 1.5
     },

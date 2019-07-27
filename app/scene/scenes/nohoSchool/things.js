@@ -51,11 +51,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [NOHO_SCHOOLHOUSE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 5,
+            scaleFactor: 0.65
         }
     },
     [PANEL]: {

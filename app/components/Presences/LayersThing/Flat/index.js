@@ -1,6 +1,6 @@
 // import nohoHouseLeft from 'assets/svgs/flats/nohoHouseLeft'
 // import nohoHouseRight from 'assets/svgs/flats/nohoHouseRight'
-// import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse'
+import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse'
 // import valleyFreeway from 'assets/svgs/flats/valleyFreeway'
 import bedroomBus from 'assets/svgs/flats/bedroomBus'
 import bedroomSiren from 'assets/svgs/flats/bedroomSiren'
@@ -17,7 +17,7 @@ import ferrisWheel from 'assets/svgs/flats/ferrisWheel'
 import rollerCoaster from 'assets/svgs/flats/rollerCoaster'
 import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle'
 import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear'
-// import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex'
+import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex'
 // import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch'
 // import campanile from 'assets/svgs/flats/campanile'
 import goKartTrack from 'assets/svgs/flats/goKartTrack'
@@ -109,7 +109,7 @@ import {
 export default {
     [NOHO_HOUSE_LEFT]: false,
     [NOHO_HOUSE_RIGHT]: false,
-    [NOHO_SCHOOLHOUSE]: false,
+    [NOHO_SCHOOLHOUSE]: nohoSchoolhouse,
     [VALLEY_FREEWAY]: false,
     [BEDROOM_BUS]: bedroomBus,
     [BEDROOM_SIREN]: bedroomSiren,
@@ -126,7 +126,7 @@ export default {
     [ROLLER_COASTER]: rollerCoaster,
     [OCEAN_BOTTOM_MIDDLE]: oceanBottomMiddle,
     [OCEAN_BOTTOM_NEAR]: oceanBottomNear,
-    [ST_JOSEPHS_ANNEX]: false,
+    [ST_JOSEPHS_ANNEX]: stJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: false,
     [CAMPANILE]: false,
     [GO_KART_TRACK]: goKartTrack,

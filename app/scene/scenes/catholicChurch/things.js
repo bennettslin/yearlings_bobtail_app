@@ -28,11 +28,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [ST_JOSEPHS_ANNEX]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4.5,
-                zHeight: 3
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.6
         },
         [ST_JOSEPHS_CHURCH]: {
             yIndex: 1,
