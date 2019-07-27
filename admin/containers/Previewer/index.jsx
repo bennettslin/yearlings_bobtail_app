@@ -12,38 +12,11 @@ import {
 } from 'utils/window'
 
 import {
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET,
-    PRESENCE_TYPES
-} from 'constants/scene'
-import ALL_BACKDROPS from 'components/Presences/LayersThing/Backdrop'
-import ALL_BUBBLES from 'components/Presences/LayersThing/Bubble'
-import ALL_CARDBOARDS from 'components/Presences/LayersThing/Cardboard'
-import ALL_CUTOUTS from 'components/Presences/LayersThing/Cutout'
-import ALL_FIXTURES from 'components/Presences/LayersThing/Fixture'
-import ALL_FLATS from 'components/Presences/LayersThing/Flat'
-import ALL_FURNITURE from 'components/Presences/LayersThing/Furniture'
-import ALL_PANELS from 'components/Presences/LayersThing/Panel'
-import ALL_PUPPETS from 'components/Presences/LayersThing/Puppet'
+    logSvgCount,
+    getSvgMapForPresenceType
+} from '../../utils/svg'
 
-const PRESENCE_MAP = {
-    [BACKDROP]: ALL_BACKDROPS,
-    [BUBBLE]: ALL_BUBBLES,
-    [CARDBOARD]: ALL_CARDBOARDS,
-    [CUTOUT]: ALL_CUTOUTS,
-    [FIXTURE]: ALL_FIXTURES,
-    [FLAT]: ALL_FLATS,
-    [FURNITURE]: ALL_FURNITURE,
-    [PANEL]: ALL_PANELS,
-    [PUPPET]: ALL_PUPPETS
-}
+import { PRESENCE_TYPES } from 'constants/scene'
 
 const
     PADDING_DASHBOARD = 10,
@@ -70,27 +43,24 @@ class Previewer extends PureComponent {
 
     componentDidMount() {
         logMount('Previewer')
+        logSvgCount()
         window.onresize = debounce(this.sizePresence, 0)
     }
 
     storePresenceFromQueryStrings() {
         // If presence from query strings is valid, set in store.
         const urlParams = new URLSearchParams(window.location.search),
-            unsafePresenceType = urlParams.get('type'),
-            unsafePresenceKey = urlParams.get('key'),
+            presenceType = urlParams.get('type') || '',
+            presenceKey = urlParams.get('key') || '',
 
-            // Make sure it's a valid presence type.
-            presenceType =
-                Boolean(PRESENCE_MAP[unsafePresenceType]) &&
-                unsafePresenceType
+            svgMapForPresenceType = getSvgMapForPresenceType(presenceType)
 
-        if (presenceType) {
-            // Make sure it's a valid presence key.
-            const presenceKey =
-                Boolean(PRESENCE_MAP[presenceType][unsafePresenceKey]) &&
-                unsafePresenceKey
+        // Make sure this map exists.
+        if (svgMapForPresenceType) {
+            const svgForPresenceKey = svgMapForPresenceType[presenceKey]
 
-            if (presenceKey) {
+            // Make sure this svg exists.
+            if (svgForPresenceKey) {
                 this.setPresenceInStorage({ presenceType, presenceKey })
             }
         }
@@ -174,7 +144,7 @@ class Previewer extends PureComponent {
             { heightAspectRatio } = this.state,
             selectedPresenceType = transitionalPresenceType || presenceType,
 
-            allPresenceKeys = PRESENCE_MAP[selectedPresenceType] || {}
+            svgMap = getSvgMapForPresenceType(selectedPresenceType) || {}
 
         return (
             <div
@@ -220,9 +190,9 @@ class Previewer extends PureComponent {
                         }}
                     >
                         <option {...{ value: '' }}>Pick a presence key</option>
-                        {keys(allPresenceKeys)
+                        {keys(svgMap)
                             .filter(presenceKey => (
-                                Boolean(allPresenceKeys[presenceKey])
+                                Boolean(svgMap[presenceKey])
                             ))
                             .map(presenceKey => (
                                 <option

@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Shared from './Shared'
 import AdminNav from './AdminNav'
 
-import { logSvgCount } from './helper'
+import { logSvgCount } from '../../utils/svg'
 
 import './style.scss'
 
