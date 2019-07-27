@@ -7,7 +7,7 @@ import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
 // import taiwanStairsBackdrop from 'assets/svgs/backdrops/taiwanStairsBackdrop'
 // import taiwanStreetsBackdrop from 'assets/svgs/backdrops/taiwanStreetsBackdrop'
 // import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
-// import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
+import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
 import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
 // import vanNuysSchoolBackdrop from 'assets/svgs/backdrops/vanNuysSchoolBackdrop'
@@ -69,7 +69,7 @@ export default {
     [TAIWAN_STAIRS_BACKDROP]: false,
     [TAIWAN_STREETS_BACKDROP]: false,
     [SHORE_RICKSHAW_BACKDROP]: false,
-    [SHORE_BUOY_BACKDROP]: false,
+    [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: false,

@@ -30,11 +30,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'shoreBuoyBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'bennettCouchThoughtBackdrop',
         workedHours: 0,
         neededHours: 1
