@@ -9,6 +9,9 @@ import { LIZ_COUCH_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
+    BUBBLE_SMALL__LIZ,
+    BUBBLE_MEDIUM__LIZ,
+    BUBBLE_LARGE__LIZ,
     LIZ_THOUGHT
 } from 'constants/scene/things/bubbles'
 import { TCHOTCHKES } from 'constants/scene/things/fixtures'
@@ -105,6 +108,33 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
 
 export const THINGS_LIZ_COUCH_ASLEEP = {
     [BUBBLE]: {
+        [BUBBLE_SMALL__LIZ]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
+        [BUBBLE_MEDIUM__LIZ]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
+        [BUBBLE_LARGE__LIZ]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
         [LIZ_THOUGHT]: {
             yIndex: 5,
             arrangement: {

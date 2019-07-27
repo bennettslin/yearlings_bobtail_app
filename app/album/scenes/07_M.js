@@ -71,6 +71,9 @@ import {
 } from '../../constants/scene/things/backdrops'
 
 import {
+    BUBBLE_SMALL__CINEMA,
+    BUBBLE_MEDIUM__CINEMA,
+    BUBBLE_LARGE__CINEMA,
     CINEMA_THOUGHT_RECORDING,
     CINEMA_THOUGHT_BUYING
 } from '../../constants/scene/things/bubbles'
@@ -385,6 +388,9 @@ export default [
                 [OAKLAND_FRONT_BACKDROP]: true
             },
             [BUBBLE]: {
+                [BUBBLE_SMALL__CINEMA]: true,
+                [BUBBLE_MEDIUM__CINEMA]: true,
+                [BUBBLE_LARGE__CINEMA]: true,
                 [CINEMA_THOUGHT_RECORDING]: true,
                 [CINEMA_THOUGHT_BUYING]: true
             },

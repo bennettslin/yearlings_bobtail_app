@@ -43,6 +43,9 @@ import {
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
+    BUBBLE_SMALL__LIZ,
+    BUBBLE_MEDIUM__LIZ,
+    BUBBLE_LARGE__LIZ,
     LIZ_THOUGHT
 } from '../../constants/scene/things/bubbles'
 
@@ -203,6 +206,9 @@ export default [
                 }
             },
             [BUBBLE]: {
+                [BUBBLE_SMALL__LIZ]: true,
+                [BUBBLE_MEDIUM__LIZ]: true,
+                [BUBBLE_LARGE__LIZ]: true,
                 [LIZ_THOUGHT]: true
             },
             [PANEL]: {

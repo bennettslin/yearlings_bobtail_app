@@ -63,6 +63,9 @@ import {
 } from '../../constants/scene/actors/instances/bennettLiz'
 
 import {
+    BUBBLE_SMALL__WAITING,
+    BUBBLE_MEDIUM__WAITING,
+    BUBBLE_LARGE__WAITING,
     WAITING_THOUGHT_WALKING,
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING
@@ -365,6 +368,9 @@ export default [
                 }
             },
             [BUBBLE]: {
+                [BUBBLE_SMALL__WAITING]: true,
+                [BUBBLE_MEDIUM__WAITING]: true,
+                [BUBBLE_LARGE__WAITING]: true,
                 [WAITING_THOUGHT_WALKING]: true,
                 [WAITING_THOUGHT_SINGING]: true,
                 [WAITING_THOUGHT_STUDYING]: true

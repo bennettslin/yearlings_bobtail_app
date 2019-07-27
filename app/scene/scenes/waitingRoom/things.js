@@ -5,6 +5,9 @@ import {
     PANEL
 } from 'constants/scene'
 import {
+    BUBBLE_SMALL__WAITING,
+    BUBBLE_MEDIUM__WAITING,
+    BUBBLE_LARGE__WAITING,
     WAITING_THOUGHT_WALKING,
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING
@@ -91,6 +94,33 @@ const ARRANGEMENTS_THINGS = {
 
 export const THINGS_WAITING_ROOM_ASLEEP = {
     [BUBBLE]: {
+        [BUBBLE_SMALL__WAITING]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
+        [BUBBLE_MEDIUM__WAITING]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
+        [BUBBLE_LARGE__WAITING]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
         [WAITING_THOUGHT_WALKING]: {
             yIndex: 5,
             arrangement: {
