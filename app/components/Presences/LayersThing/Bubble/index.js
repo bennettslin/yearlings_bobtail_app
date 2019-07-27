@@ -3,9 +3,12 @@
 // import dogsSketch from 'assets/svgs/bubbles/dogsSketch'
 // import escapePodSketch from 'assets/svgs/bubbles/escapePodSketch'
 import sketchbook from 'assets/svgs/bubbles/sketchbook'
-// import cinemaThoughts from 'assets/svgs/bubbles/cinemaThoughts'
+// import cinemaThoughtRecording from 'assets/svgs/bubbles/cinemaThoughtRecording'
+// import cinemaThoughtBuying from 'assets/svgs/bubbles/cinemaThoughtBuying'
 // import goKartThought from 'assets/svgs/bubbles/goKartThought'
-// import waitingRoomThoughts from 'assets/svgs/bubbles/waitingRoomThoughts'
+// import waitingThoughtWalking from 'assets/svgs/bubbles/waitingThoughtWalking'
+// import waitingThoughtSinging from 'assets/svgs/bubbles/waitingThoughtSinging'
+// import waitingThoughtStudying from 'assets/svgs/bubbles/waitingThoughtStudying'
 // import tarpitConstellation from 'assets/svgs/bubbles/tarpitConstellation'
 // import siblingConstellation from 'assets/svgs/bubbles/siblingConstellation'
 // import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
@@ -21,9 +24,12 @@ import {
     SKETCHBOOK__DOGS,
     ESCAPE_POD_SKETCH,
     SKETCHBOOK__ESCAPE_POD,
-    CINEMA_THOUGHTS,
+    CINEMA_THOUGHT_RECORDING,
+    CINEMA_THOUGHT_BUYING,
     GO_KART_THOUGHT,
-    WAITING_ROOM_THOUGHTS,
+    WAITING_THOUGHT_WALKING,
+    WAITING_THOUGHT_SINGING,
+    WAITING_THOUGHT_STUDYING,
     TARPIT_CONSTELLATION,
     SIBLING_CONSTELLATION,
     KHARI_ATTACK_SPEECH,
@@ -40,9 +46,12 @@ export default {
     [SKETCHBOOK__DOGS]: sketchbook,
     [ESCAPE_POD_SKETCH]: false,
     [SKETCHBOOK__ESCAPE_POD]: sketchbook,
-    [CINEMA_THOUGHTS]: false,
+    [CINEMA_THOUGHT_RECORDING]: false,
+    [CINEMA_THOUGHT_BUYING]: false,
     [GO_KART_THOUGHT]: false,
-    [WAITING_ROOM_THOUGHTS]: false,
+    [WAITING_THOUGHT_WALKING]: false,
+    [WAITING_THOUGHT_SINGING]: false,
+    [WAITING_THOUGHT_STUDYING]: false,
     [TARPIT_CONSTELLATION]: false,
     [SIBLING_CONSTELLATION]: false,
     [KHARI_ATTACK_SPEECH]: false,

@@ -20,9 +20,14 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'cinemaThoughts',
+        taskName: 'cinemaThoughtRecording',
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
+    },
+    {
+        taskName: 'cinemaThoughtBuying',
+        workedHours: 0,
+        neededHours: 1.5
     },
     {
         taskName: 'goKartThought',
@@ -30,9 +35,19 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'waitingRoomThoughts',
+        taskName: 'waitingThoughtWalking',
         workedHours: 0,
-        neededHours: 4.5
+        neededHours: 1.5
+    },
+    {
+        taskName: 'waitingThoughtSinging',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'waitingThoughtStudying',
+        workedHours: 0,
+        neededHours: 1.5
     },
     {
         taskName: 'tarpitConstellation',

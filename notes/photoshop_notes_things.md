@@ -9,9 +9,9 @@
 * oaklandSideBackdrop (layout)
 
 ## Bubbles
-* cinemaThoughts (layout)
+* cinemaThoughtRecording (layout)
 * goKartThought (layout)
-* waitingRoomThoughts (layout)
+* waitingThoughtWalking (layout)
 
 ## Cutouts
 * tintinPoster (perspective)

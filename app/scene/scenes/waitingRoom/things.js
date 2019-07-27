@@ -4,7 +4,11 @@ import {
     CUTOUT,
     PANEL
 } from 'constants/scene'
-import { WAITING_ROOM_THOUGHTS } from 'constants/scene/things/bubbles'
+import {
+    WAITING_THOUGHT_WALKING,
+    WAITING_THOUGHT_SINGING,
+    WAITING_THOUGHT_STUDYING
+} from 'constants/scene/things/bubbles'
 import {
     CLIPBOARD,
     PAINTING
@@ -87,7 +91,25 @@ const ARRANGEMENTS_THINGS = {
 
 export const THINGS_WAITING_ROOM_ASLEEP = {
     [BUBBLE]: {
-        [WAITING_ROOM_THOUGHTS]: {
+        [WAITING_THOUGHT_WALKING]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
+        [WAITING_THOUGHT_SINGING]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
+        [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8.5,

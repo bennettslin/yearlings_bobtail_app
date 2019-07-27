@@ -2,7 +2,10 @@ import {
     BUBBLE,
     CARDBOARD
 } from 'constants/scene'
-import { CINEMA_THOUGHTS } from 'constants/scene/things/bubbles'
+import {
+    CINEMA_THOUGHT_RECORDING,
+    CINEMA_THOUGHT_BUYING
+} from 'constants/scene/things/bubbles'
 import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
@@ -11,7 +14,16 @@ import { POSTER_GLADIATOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
-        [CINEMA_THOUGHTS]: {
+        [CINEMA_THOUGHT_RECORDING]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 8.5,
+                xWidth: 4,
+                zHeight: 3,
+                zOffset: 4
+            }
+        },
+        [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8.5,

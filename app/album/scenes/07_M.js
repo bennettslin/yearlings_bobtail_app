@@ -70,7 +70,10 @@ import {
     FOLIAGE_BACKDROP
 } from '../../constants/scene/things/backdrops'
 
-import { CINEMA_THOUGHTS } from '../../constants/scene/things/bubbles'
+import {
+    CINEMA_THOUGHT_RECORDING,
+    CINEMA_THOUGHT_BUYING
+} from '../../constants/scene/things/bubbles'
 
 import {
     TELEVISION_ALBUM,
@@ -382,7 +385,8 @@ export default [
                 [OAKLAND_FRONT_BACKDROP]: true
             },
             [BUBBLE]: {
-                [CINEMA_THOUGHTS]: true
+                [CINEMA_THOUGHT_RECORDING]: true,
+                [CINEMA_THOUGHT_BUYING]: true
             },
             [CARDBOARD]: {
                 [GLADIATOR_POSTER]: true,

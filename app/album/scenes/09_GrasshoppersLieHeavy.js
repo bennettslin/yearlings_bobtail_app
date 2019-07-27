@@ -62,7 +62,11 @@ import {
     AFTERGLOW_REFLECTION
 } from '../../constants/scene/actors/instances/bennettLiz'
 
-import { WAITING_ROOM_THOUGHTS } from '../../constants/scene/things/bubbles'
+import {
+    WAITING_THOUGHT_WALKING,
+    WAITING_THOUGHT_SINGING,
+    WAITING_THOUGHT_STUDYING
+} from '../../constants/scene/things/bubbles'
 
 import {
     CODE_BOX,
@@ -361,7 +365,9 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [WAITING_ROOM_THOUGHTS]: true
+                [WAITING_THOUGHT_WALKING]: true,
+                [WAITING_THOUGHT_SINGING]: true,
+                [WAITING_THOUGHT_STUDYING]: true
             },
             [CARDBOARD]: {
                 [CLIPBOARD]: true,
