@@ -9,6 +9,7 @@ import {
     VAN_NUYS_SCHOOLHOUSE_LEFT,
     VAN_NUYS_SCHOOLHOUSE_RIGHT
 } from 'constants/scene/things/flats'
+import { VAN_NUYS_SCHOOLHOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -34,19 +35,15 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [VAN_NUYS_SCHOOLHOUSE_LEFT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4,
-                zHeight: 3
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.5,
+            sharedStyle: VAN_NUYS_SCHOOLHOUSE_SHARED
         },
         [VAN_NUYS_SCHOOLHOUSE_RIGHT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 2
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.5,
+            sharedStyle: VAN_NUYS_SCHOOLHOUSE_SHARED
         }
     }
 }

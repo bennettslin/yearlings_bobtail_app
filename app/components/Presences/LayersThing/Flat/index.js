@@ -10,8 +10,8 @@ import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
 import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
 // import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
 // import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
-// import vanNuysSchoolhouseLeft from 'assets/svgs/flats/vanNuysSchoolhouseLeft'
-// import vanNuysSchoolhouseRight from 'assets/svgs/flats/vanNuysSchoolhouseRight'
+import vanNuysSchoolhouseLeft from 'assets/svgs/flats/vanNuysSchoolhouseLeft'
+import vanNuysSchoolhouseRight from 'assets/svgs/flats/vanNuysSchoolhouseRight'
 // import rickshawTown from 'assets/svgs/flats/rickshawTown'
 import ferrisWheel from 'assets/svgs/flats/ferrisWheel'
 import rollerCoaster from 'assets/svgs/flats/rollerCoaster'
@@ -119,8 +119,8 @@ export default {
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
     [TAIWAN_HOUSE_FAR]: false,
     [TAIWAN_HOUSE_NEAR]: false,
-    [VAN_NUYS_SCHOOLHOUSE_LEFT]: false,
-    [VAN_NUYS_SCHOOLHOUSE_RIGHT]: false,
+    [VAN_NUYS_SCHOOLHOUSE_LEFT]: vanNuysSchoolhouseLeft,
+    [VAN_NUYS_SCHOOLHOUSE_RIGHT]: vanNuysSchoolhouseRight,
     [RICKSHAW_TOWN]: false,
     [FERRIS_WHEEL]: ferrisWheel,
     [ROLLER_COASTER]: rollerCoaster,

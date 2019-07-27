@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     CUTOUT,
     FIXTURE
 } from 'constants/scene'
-import { SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
@@ -12,16 +10,6 @@ import {
 import { THROWN_FRUIT } from 'constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [SCHOOL_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
-        }
-    },
     [CUTOUT]: {
         [LOCKER_BANK]: {
             yIndex: 3,

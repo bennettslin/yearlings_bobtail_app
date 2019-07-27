@@ -30,16 +30,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'vanNuysSchoolhouseLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'vanNuysSchoolhouseRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'taiwanHouseFar',
         workedHours: 0,
         neededHours: 1.5
