@@ -4776,5 +4776,15 @@ export default [
         taskName: `Add capability to trim bottom of Presence.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Separate bubble presences.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Manage Illustrator shortcuts.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

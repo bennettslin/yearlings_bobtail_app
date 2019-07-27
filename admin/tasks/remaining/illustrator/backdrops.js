@@ -45,11 +45,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'oaklandSideBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'lizCouchThoughtBackdrop',
         workedHours: 0,
         neededHours: 1
