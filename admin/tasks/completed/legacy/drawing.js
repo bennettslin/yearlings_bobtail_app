@@ -957,12 +957,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'tarpitThought',
+        taskName: 'tarpitConstellation',
         workedHours: 4,
         neededHours: 4
     },
     {
-        taskName: 'siblingThought',
+        taskName: 'siblingConstellation',
         workedHours: 4,
         neededHours: 4
     },

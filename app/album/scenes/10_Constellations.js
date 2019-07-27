@@ -52,8 +52,8 @@ import {
 } from '../../constants/scene/things/backdrops'
 
 import {
-    TARPIT_THOUGHT,
-    SIBLING_THOUGHT
+    TARPIT_CONSTELLATION,
+    SIBLING_CONSTELLATION
 } from '../../constants/scene/things/bubbles'
 
 import {
@@ -258,8 +258,8 @@ export default [
                 [STATION_WAGON_BACKDROP]: true
             },
             [BUBBLE]: {
-                [TARPIT_THOUGHT]: true,
-                [SIBLING_THOUGHT]: true
+                [TARPIT_CONSTELLATION]: true,
+                [SIBLING_CONSTELLATION]: true
             },
             [FIXTURE]: {
                 [EVIAN_BOTTLES]: true

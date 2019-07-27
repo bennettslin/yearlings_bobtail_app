@@ -6,8 +6,8 @@ import sketchbook from 'assets/svgs/bubbles/sketchbook'
 // import cinemaThoughts from 'assets/svgs/bubbles/cinemaThoughts'
 // import goKartThought from 'assets/svgs/bubbles/goKartThought'
 // import waitingRoomThoughts from 'assets/svgs/bubbles/waitingRoomThoughts'
-// import tarpitThought from 'assets/svgs/bubbles/tarpitThought'
-// import siblingThought from 'assets/svgs/bubbles/siblingThought'
+// import tarpitConstellation from 'assets/svgs/bubbles/tarpitConstellation'
+// import siblingConstellation from 'assets/svgs/bubbles/siblingConstellation'
 // import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
 // import lizDefenceSpeech from 'assets/svgs/bubbles/lizDefenceSpeech'
 // import lizThought from 'assets/svgs/bubbles/lizThought'
@@ -24,8 +24,8 @@ import {
     CINEMA_THOUGHTS,
     GO_KART_THOUGHT,
     WAITING_ROOM_THOUGHTS,
-    TARPIT_THOUGHT,
-    SIBLING_THOUGHT,
+    TARPIT_CONSTELLATION,
+    SIBLING_CONSTELLATION,
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT
@@ -43,8 +43,8 @@ export default {
     [CINEMA_THOUGHTS]: false,
     [GO_KART_THOUGHT]: false,
     [WAITING_ROOM_THOUGHTS]: false,
-    [TARPIT_THOUGHT]: false,
-    [SIBLING_THOUGHT]: false,
+    [TARPIT_CONSTELLATION]: false,
+    [SIBLING_CONSTELLATION]: false,
     [KHARI_ATTACK_SPEECH]: false,
     [LIZ_DEFENCE_SPEECH]: false,
     [LIZ_THOUGHT]: false

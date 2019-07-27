@@ -6,8 +6,8 @@ import {
 } from 'constants/scene'
 import { STATION_WAGON_BACKDROP } from 'constants/scene/things/backdrops'
 import {
-    TARPIT_THOUGHT,
-    SIBLING_THOUGHT
+    TARPIT_CONSTELLATION,
+    SIBLING_CONSTELLATION
 } from 'constants/scene/things/bubbles'
 import { EVIAN_BOTTLES } from 'constants/scene/things/fixtures'
 import {
@@ -28,7 +28,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [BUBBLE]: {
-        [TARPIT_THOUGHT]: {
+        [TARPIT_CONSTELLATION]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 3,
@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
                 zOffset: 4.5
             }
         },
-        [SIBLING_THOUGHT]: {
+        [SIBLING_CONSTELLATION]: {
             yIndex: 5,
             arrangement: {
                 xPosition: 8,

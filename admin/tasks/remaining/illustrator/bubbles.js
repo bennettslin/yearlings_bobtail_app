@@ -35,12 +35,12 @@ export default [
         neededHours: 4.5
     },
     {
-        taskName: 'tarpitThought',
+        taskName: 'tarpitConstellation',
         workedHours: 0,
         neededHours: 1.5
     },
     {
-        taskName: 'siblingThought',
+        taskName: 'siblingConstellation',
         workedHours: 0,
         neededHours: 1.5
     },
