@@ -118,12 +118,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         },
         [SKETCHBOOK__TOGETHER]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.25
         }
     },
     [PUPPET]: {
@@ -159,12 +155,8 @@ export const THINGS_PUPPET_SHOW_END = {
         },
         [SKETCHBOOK__APART]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.25
         }
     },
     [PUPPET]: {
