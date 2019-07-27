@@ -6,7 +6,7 @@ import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
 // import vanNuysThoughtBackdrop from 'assets/svgs/backdrops/vanNuysThoughtBackdrop'
 // import taiwanStairsBackdrop from 'assets/svgs/backdrops/taiwanStairsBackdrop'
 // import taiwanStreetsBackdrop from 'assets/svgs/backdrops/taiwanStreetsBackdrop'
-// import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
+import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
 import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
 import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
@@ -24,7 +24,7 @@ import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop'
 // import roadPast from 'assets/svgs/backdrops/roadPast'
 // import roadPresent from 'assets/svgs/backdrops/roadPresent'
 // import roadFuture from 'assets/svgs/backdrops/roadFuture'
-// import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
+import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
 import pampasBackdrop from 'assets/svgs/backdrops/pampasBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 
@@ -68,7 +68,7 @@ export default {
     [VAN_NUYS_THOUGHT_BACKDROP]: false,
     [TAIWAN_STAIRS_BACKDROP]: false,
     [TAIWAN_STREETS_BACKDROP]: false,
-    [SHORE_RICKSHAW_BACKDROP]: false,
+    [SHORE_RICKSHAW_BACKDROP]: shoreRickshawBackdrop,
     [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
@@ -85,7 +85,7 @@ export default {
     [ROAD_PAST]: false,
     [ROAD_PRESENT]: false,
     [ROAD_FUTURE]: false,
-    [GOLDEN_GATE_BACKDROP]: false,
+    [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [PAMPAS_BACKDROP]: pampasBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop
 }

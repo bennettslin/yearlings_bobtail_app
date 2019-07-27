@@ -58,5 +58,15 @@ export default [
         taskName: 'shoreBuoyBackdrop',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'shoreRickshawBackdrop',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'goldenGateBackdrop',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

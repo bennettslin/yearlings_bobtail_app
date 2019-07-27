@@ -21,12 +21,10 @@ import { INTERIOR_SHARED } from '../../shared'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [GOLDEN_GATE_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 5
-            }
+            yIndex: -1,
+            xPosition: 5.5,
+            scaleFactor: 0.675,
+            trimBottom: 0.25
         }
     },
     [CUTOUT]: {
@@ -38,9 +36,10 @@ const ARRANGEMENTS_THINGS = {
     },
     [FLAT]: {
         [EL_CERRITO_FAR]: {
-            yIndex: 1,
+            yIndex: -1,
             xPosition: 10.1,
-            scaleFactor: 0.42
+            scaleFactor: 0.47,
+            trimBottom: 0.05
         },
         [EL_CERRITO_NEAR]: {
             yIndex: 5,
@@ -56,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [REATTA_INTERIOR]: {
             yIndex: 2,
-            xPosition: 4,
+            xPosition: 4.5,
             scaleFactor: 0.25,
             sharedStyle: INTERIOR_SHARED
         }

@@ -25,11 +25,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'shoreRickshawBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'bennettCouchThoughtBackdrop',
         workedHours: 0,
         neededHours: 1
@@ -71,11 +66,6 @@ export default [
     },
     {
         taskName: 'roadFuture',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'goldenGateBackdrop',
         workedHours: 0,
         neededHours: 1.5
     }
