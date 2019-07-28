@@ -4786,5 +4786,10 @@ export default [
         taskName: `Manage Illustrator shortcuts.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Show single presence for duplicate presences in Previewer.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
