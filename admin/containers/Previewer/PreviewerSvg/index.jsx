@@ -61,7 +61,7 @@ class PreviewerSvg extends PureComponent {
                 presenceType,
                 presenceKey,
                 actorKey
-            })
+            }) || {}
 
         return Boolean(presenceComponent) && (
             <div

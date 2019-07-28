@@ -6,6 +6,9 @@ import keys from 'lodash/keys'
 import PreviewerSvg from './PreviewerSvg'
 
 import { getViewBoxSize } from 'modules/ConfiguredPresenceSvg/helper/size'
+
+import { convertPresenceKeyToClassName } from 'helpers/format'
+
 import {
     getFromStorage,
     setInStorage
@@ -201,7 +204,7 @@ class Previewer extends PureComponent {
                                         value: presenceKey
                                     }}
                                 >
-                                    {presenceKey}
+                                    {convertPresenceKeyToClassName(presenceKey)}
                                 </option>
                             ))}
                     </select>

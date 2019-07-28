@@ -21,14 +21,21 @@ export const getSvgMapForPresenceType = (presenceType) => {
         return null
     }
 
-    const duplicateKeys = {}
+    const
+        duplicateKeys = {},
+        svgMap = {}
 
     keys(presenceMap).forEach(rawPresenceKey => {
         const presenceKey = rawPresenceKey.split('__')[0]
-        duplicateKeys[presenceKey] = presenceMap[rawPresenceKey]
+
+        // Only add one presence per duplicate.
+        if (!duplicateKeys[presenceKey]) {
+            svgMap[rawPresenceKey] = presenceMap[rawPresenceKey]
+            duplicateKeys[presenceKey] = true
+        }
     })
 
-    return duplicateKeys
+    return svgMap
 }
 
 const _getSvgCount = (presenceType) => {

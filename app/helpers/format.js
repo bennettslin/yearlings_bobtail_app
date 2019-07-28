@@ -12,14 +12,7 @@ export const convertPresenceKeyToClassName = (word = '') => {
 }
 
 export const capitaliseForClassName = (word) => {
-    if (!word) {
-        return null
-    }
-
-    // Remove anything after underscore, and capitalise first letter.
-    return convertPresenceKeyToClassName(
-        word.charAt(0).toUpperCase() + word.slice(1)
-    )
+    return word.charAt(0).toUpperCase() + word.slice(1)
 }
 
 export const convertPresenceKeyToTitle = (string) => {

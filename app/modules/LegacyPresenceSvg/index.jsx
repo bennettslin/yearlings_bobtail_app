@@ -61,7 +61,7 @@ const LegacyPresenceSvg  = ({
                 )}
                 {...presenceXY}
             >
-                {capitaliseForClassName(presenceKey)}
+                {presenceKey}
             </text>
         </Svg>
     )
