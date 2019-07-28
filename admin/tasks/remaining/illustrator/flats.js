@@ -40,11 +40,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'oaklandHouseRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'residentialFarLeft',
         workedHours: 0,
         neededHours: 1.5

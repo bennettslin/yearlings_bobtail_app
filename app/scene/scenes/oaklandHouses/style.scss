@@ -1,149 +1,65 @@
 .oaklandSideBackdrop {
-    .foliage {
-        fill: #128000;
-    }
+    .foliage { fill: #128000; }
 }
 
 .oaklandHouseLeft {
-    .trunk {
-        fill: #8b7d56;
-    }
+    .trunk { fill: #8b7d56; }
+    .leaves { fill: #488253; }
+    .wall { fill: #abab85; }
+    .bushRear { fill: #417849; }
+    .bushFront { fill: #4b8a54; }
+    .wallFront { fill: #c7c79b; }
+    .step { fill: #949473; }
+    .stepOverlapLine { stroke: #663; }
+    .windowTrim { fill: #a38d52; }
+    .window { fill: #a4e6eb; }
+    .windowDisplayLine { stroke: #006c73; }
+    .bayWindowSide { fill: #80c4d1; }
+    .bayWindowFront { fill: #9cf0ff; }
+    .bayWallSide { fill: #9a97b8; }
+    .bayWallFront { fill: #b3b0d6; }
+    .doorTrim { fill: #94804a; }
+    .door { fill: #d1b873; }
+    .roofSide { fill: #9c6044; }
+    .roofTop { fill: #bf7654; }
+}
 
-    .leaves {
-        fill: #488253;
-    }
-
-    .wall {
-        fill: #abab85;
-    }
-
-    .bushRear {
-        fill: #417849;
-    }
-
-    .bushFront {
-        fill: #4b8a54;
-    }
-
-    .wallFront {
-        fill: #c7c79b;
-    }
-
-    .step {
-        fill: #949473;
-    }
-
-    .stepOverlapLine {
-        stroke: #663;
-    }
-
-    .windowTrim {
-        fill: #a38d52;
-    }
-
-    .window {
-        fill: #a4e6eb;
-    }
-
-    .windowDisplayLine {
-        stroke: #006c73;
-    }
-
-    .bayWindowSide {
-        fill: #80c4d1;
-    }
-
-    .bayWindowFront {
-        fill: #9cf0ff;
-    }
-
-    .bayWallSide {
-        fill: #9a97b8;
-    }
-
-    .bayWallFront {
-        fill: #b3b0d6;
-    }
-
-    .doorTrim {
-        fill: #94804a;
-    }
-
-    .door {
-        fill: #d1b873;
-    }
-
-    .roofSide {
-        fill: #9c6044;
-    }
-
-    .roofTop {
-        fill: #bf7654;
-    }
+.oaklandHouseRight {
+    .trunk { fill: #8b7d56; }
+    .leaves { fill: #558c54; }
+    .wall { fill: #947db3; }
+    .roofTop { fill: #cf9a5d; }
+    .roofSide { fill: #bd8d55; }
+    .wallFront { fill: #a389c4; }
+    .trim { fill: #917b58; }
+    .door { fill: #ccad7c; }
+    .step { fill: #876c9e; }
+    .stepOverlapLine { stroke: #504863; }
+    .window { fill: #90c8d4; }
+    .windowDisplayLine { stroke: #366; }
+    .bayWindowFront { fill: #adf1ff; }
+    .bayWindowSide { fill: #9ddae7; }
+    .bayWallFront { fill: #967db3; }
+    .bayWallSide { fill: #8c76a8; }
+    .bushRear { fill: #609e5f; }
+    .bushFront { fill: #6bb06a; }
 }
 
 .volkswagen {
-    .chassis {
-        fill: #363f35;
-    }
-
-    .tire {
-        fill: #424241;
-    }
-
-    .tireInner {
-        fill: #3f3f3b;
-    }
-
-    .hubcap {
-        fill: #969695;
-    }
-
-    .hubcapCentre {
-        fill: #aaaaa7;
-    }
-
-    .handleRecess {
-        fill: #b4ba8c;
-    }
-
-    .window {
-        fill: #8cada2;
-    }
-
-    .windowTrim {
-        fill: #5a5c38;
-    }
-
-    .body {
-        fill: #dae56e;
-    }
-
-    .bodyBorderLine {
-        stroke: #736357;
-    }
-
-    .bodySide {
-        fill: #e2de6d;
-    }
-
-    .headLight {
-        fill: #f5f7cb;
-    }
-
-    .brakeLight {
-        fill: #f46e58;
-    }
-
-    .handle {
-        fill: #e0dc89;
-    }
-
-    .mirrorMount {
-        fill: #c9c771;
-    }
-
-    .mirror {
-        fill: #cec976;
-    }
+    .chassis { fill: #363f35; }
+    .tire { fill: #424241; }
+    .tireInner { fill: #3f3f3b; }
+    .hubcap { fill: #969695; }
+    .hubcapCentre { fill: #aaaaa7; }
+    .handleRecess { fill: #b4ba8c; }
+    .window { fill: #8cada2; }
+    .windowTrim { fill: #5a5c38; }
+    .body { fill: #dae56e; }
+    .bodyBorderLine { stroke: #736357; }
+    .bodySide { fill: #e2de6d; }
+    .headLight { fill: #f5f7cb; }
+    .brakeLight { fill: #f46e58; }
+    .handle { fill: #e0dc89; }
+    .mirrorMount { fill: #c9c771; }
+    .mirror { fill: #cec976; }
 }

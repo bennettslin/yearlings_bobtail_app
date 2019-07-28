@@ -21,16 +21,13 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [OAKLAND_HOUSE_LEFT]: {
             yIndex: 1,
-            xPosition: 2,
+            xPosition: 2.25,
             scaleFactor: 0.5
         },
         [OAKLAND_HOUSE_RIGHT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 9,
+            scaleFactor: 0.5
         }
     }
 }
