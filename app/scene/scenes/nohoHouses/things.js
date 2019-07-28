@@ -15,13 +15,14 @@ const ARRANGEMENTS_THINGS = {
         [NOHO_HOUSES_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.7
+            scaleFactor: 0.7,
+            trimBottom: 0.05
         }
     },
     [CUTOUT]: {
         [FIRE_HYDRANT]: {
             yIndex: 5,
-            xPosition: 1,
+            xPosition: 0.75,
             scaleFactor: 0.3
         }
     },
@@ -33,11 +34,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [NOHO_HOUSE_RIGHT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.6
         }
     }
 }

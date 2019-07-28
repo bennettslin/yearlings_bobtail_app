@@ -1,125 +1,58 @@
-.fireHydrant {
-    .cap {
-        fill: #cc3;
-    }
-
-    .capLine {
-        stroke: #bb2;
-    }
-
-    .valveInner {
-        fill: #639;
-    }
-
-    .valveOuter {
-        fill: #30c;
-    }
-
-    .valveLine {
-        stroke: #528;
-    }
-
-    .reservoir {
-        fill: #c33;
-    }
-
-    .contour {
-        fill: #c03;
-    }
-}
-
 .nohoHousesBackdrop {
-    .mountain {
-        fill: #826684;
-    }
-
-    .palmTrunk {
-        fill: #6d5533;
-    }
-
-    .palmFrond {
-        fill: #668960;
-    }
-
-    .roof {
-        fill: #9b5f5f;
-    }
-
-    .bush {
-        fill: #537a53;
-    }
-
-    .trunk {
-        fill: #6b5c4f;
-    }
-
-    .leavesBack {
-        fill: #4e914e;
-    }
-
-    .leavesFront {
-        fill: #549b54;
-    }
-
-    .fence {
-        fill: #af947e;
-    }
+    .mountain { fill: #826684; }
+    .palmTrunk { fill: #6d5533; }
+    .palmFrond { fill: #668960; }
+    .roof { fill: #9b5f5f; }
+    .bush { fill: #537a53; }
+    .trunk { fill: #6b5c4f; }
+    .leavesBack { fill: #4e914e; }
+    .leavesFront { fill: #549b54; }
+    .fence { fill: #af947e; }
 }
 
 .nohoHouseLeft {
-    .wall {
-        fill: #b3b8e3;
-    }
+    .wall { fill: #b3b8e3; }
+    .doorTrim { fill: #85785a; }
+    .door { fill: #b9a87e; }
+    .stepTop { fill: #a2c2bb; }
+    .stepBottom { fill: #9ab8b2; }
+    .plant { fill: #5bb96e; }
+    .windowTrim { fill: #b9a569; }
+    .window { fill: #88ccdb; }
+    .windowDisplayLine { stroke: #448f91; }
+    .roofSide { fill: #947850; }
+    .roofTop { fill: #ab8d60; }
+    .can { fill: #758b88; }
+    .handle { fill: #748a86; }
+    .lid { fill: #5c6e6b; }
+}
 
-    .doorTrim {
-        fill: #85785a;
-    }
+.nohoHouseRight {
+    .wall { fill: #91de74; }
+    .porch { fill: #c7a16b; }
+    .beam { fill: #c2c995; }
+    .stepBottom { fill: #91bce3; }
+    .stepMiddle { fill: #96c2eb; }
+    .stepTop { fill: #99c6f0; }
+    .doorTrim { fill: #a39062; }
+    .door { fill: #d1b97d; }
+    .windowTrim { fill: #a19a62; }
+    .window { fill: #97f4ff; }
+    .windowDisplayLine { stroke: #007a87; }
+    .roofSide { fill: #c9bb81; }
+    .roofTop { fill: #a69a6a; }
+    .awningSide { fill: #d6c789; }
+    .awningFront { fill: #a6ff85; }
+    .plant { fill: #458753; }
+    .tree { fill: #519e61; }
+}
 
-    .door {
-        fill: #b9a87e;
-    }
-
-    .stepTop {
-        fill: #a2c2bb;
-    }
-
-    .stepBottom {
-        fill: #9ab8b2;
-    }
-
-    .plant {
-        fill: #5bb96e;
-    }
-
-    .windowTrim {
-        fill: #b9a569;
-    }
-
-    .window {
-        fill: #88ccdb;
-    }
-
-    .windowDisplayLine {
-        stroke: #448f91;
-    }
-
-    .roofSide {
-        fill: #947850;
-    }
-
-    .roofTop {
-        fill: #ab8d60;
-    }
-
-    .can {
-        fill: #758b88;
-    }
-
-    .handle {
-        fill: #748a86;
-    }
-
-    .lid {
-        fill: #5c6e6b;
-    }
+.fireHydrant {
+    .cap { fill: #cc3; }
+    .capLine { stroke: #bb2; }
+    .valveInner { fill: #639; }
+    .valveOuter { fill: #30c; }
+    .valveLine { stroke: #528; }
+    .reservoir { fill: #c33; }
+    .contour { fill: #c03; }
 }

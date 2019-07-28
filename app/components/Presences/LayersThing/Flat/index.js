@@ -1,5 +1,5 @@
 import nohoHouseLeft from 'assets/svgs/flats/nohoHouseLeft'
-// import nohoHouseRight from 'assets/svgs/flats/nohoHouseRight'
+import nohoHouseRight from 'assets/svgs/flats/nohoHouseRight'
 import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse'
 // import valleyFreeway from 'assets/svgs/flats/valleyFreeway'
 import bedroomBus from 'assets/svgs/flats/bedroomBus'
@@ -108,7 +108,7 @@ import {
 
 export default {
     [NOHO_HOUSE_LEFT]: nohoHouseLeft,
-    [NOHO_HOUSE_RIGHT]: false,
+    [NOHO_HOUSE_RIGHT]: nohoHouseRight,
     [NOHO_SCHOOLHOUSE]: nohoSchoolhouse,
     [VALLEY_FREEWAY]: false,
     [BEDROOM_BUS]: bedroomBus,

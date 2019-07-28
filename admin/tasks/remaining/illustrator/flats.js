@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'nohoHouseRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'valleyFreeway',
         workedHours: 0,
         neededHours: 1.5

@@ -105,6 +105,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: 'nohoHouseRight',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
         taskName: 'familyHouse',
         workedHours: 1,
         neededHours: 1
