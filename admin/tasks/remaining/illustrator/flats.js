@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'valleyFreeway',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'taiwanMountainsBridged',
         workedHours: 0,
         neededHours: 1.5

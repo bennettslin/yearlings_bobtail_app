@@ -14,7 +14,8 @@ const ARRANGEMENTS_THINGS = {
         [VALLEY_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.7
+            scaleFactor: 0.65,
+            trimBottom: 0.05
         }
     },
     [CUTOUT]: {
@@ -38,11 +39,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [VALLEY_FREEWAY]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.625
         }
     }
 }

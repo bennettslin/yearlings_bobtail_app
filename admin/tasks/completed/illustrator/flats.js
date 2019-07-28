@@ -123,5 +123,10 @@ export default [
         taskName: 'oaklandHouseRight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'valleyFreeway',
+        workedHours: 2.5,
+        neededHours: 2.5
     }
 ]

@@ -24,6 +24,84 @@
     }
 }
 
+.valleyFreeway {
+    .overpass {
+        fill: #403f36;
+    }
+
+    .buildingSide {
+        fill: #705b80;  
+    }
+
+    .buildingFront {
+        fill: #866d99;
+    }
+
+    .foliage {
+        fill: #5b8c4e;
+    }
+
+    .palmTrunk {
+        fill: #777057;
+    }
+
+    .palmFrond {
+        fill: #648e5e;
+    }
+
+    .handleSide {
+        fill: #8f946d;
+    }
+
+    .handleFront {
+        fill: #b4ba89;
+    }
+
+    .wellsFargoSide {
+        fill: #7a7a76;
+    }
+
+    .wellsFargoFrontRight {
+        fill: #afb0aa;
+    }
+
+    .wellsFargoFrontCentre {
+        fill: #b7b8b2;
+    }
+
+    .wellsFargoFrontLeft {
+        fill: #bcbdb7;
+    }
+
+    .shoulder {
+        fill: #8c8b77;
+    }
+
+    .road {
+        fill: #5c5b4e;
+    }
+
+    .divider {
+        fill: #b5b5b5;
+    }
+
+    .pole {
+        fill: #524f4a;
+    }
+
+    .signBack {
+        fill: #5f735c;
+    }
+
+    .frame {
+        fill: #66635c;
+    }
+
+    .signFront {
+        fill: #098f00;
+    }
+}
+
 .overpassSignBack {
     .board {
         fill: #063;
