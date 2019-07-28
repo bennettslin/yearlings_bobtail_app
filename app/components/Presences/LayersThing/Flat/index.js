@@ -1,10 +1,10 @@
-// import nohoHouseLeft from 'assets/svgs/flats/nohoHouseLeft'
+import nohoHouseLeft from 'assets/svgs/flats/nohoHouseLeft'
 // import nohoHouseRight from 'assets/svgs/flats/nohoHouseRight'
 import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse'
 // import valleyFreeway from 'assets/svgs/flats/valleyFreeway'
 import bedroomBus from 'assets/svgs/flats/bedroomBus'
 import bedroomSiren from 'assets/svgs/flats/bedroomSiren'
-// import familyHouse from 'assets/svgs/flats/familyHouse'
+import familyHouse from 'assets/svgs/flats/familyHouse'
 // import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
 import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
 import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
@@ -107,13 +107,13 @@ import {
 } from 'constants/scene/things/flats'
 
 export default {
-    [NOHO_HOUSE_LEFT]: false,
+    [NOHO_HOUSE_LEFT]: nohoHouseLeft,
     [NOHO_HOUSE_RIGHT]: false,
     [NOHO_SCHOOLHOUSE]: nohoSchoolhouse,
     [VALLEY_FREEWAY]: false,
     [BEDROOM_BUS]: bedroomBus,
     [BEDROOM_SIREN]: bedroomSiren,
-    [FAMILY_HOUSE]: false,
+    [FAMILY_HOUSE]: familyHouse,
     [TAIWAN_MOUNTAINS_BRIDGED]: false,
     [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,

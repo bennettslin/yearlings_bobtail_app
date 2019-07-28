@@ -25,11 +25,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [FAMILY_HOUSE]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 3,
-                zHeight: 2
-            }
+            xPosition: 1.5,
+            scaleFactor: 0.6
         }
     },
     [PANEL]: {

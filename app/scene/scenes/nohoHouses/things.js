@@ -28,11 +28,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [NOHO_HOUSE_LEFT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.6
         },
         [NOHO_HOUSE_RIGHT]: {
             yIndex: 1,

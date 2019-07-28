@@ -1,3 +1,53 @@
+.familyHouse {
+    .wall {
+        fill: #f3ffa6;
+    }
+
+    .plant {
+        fill: #5c9c55;
+    }
+
+    .doorTrim {
+        fill: #8c8a65;
+    }
+
+    .door {
+        fill: #b9b685;
+    }
+
+    .stepTop {
+        fill: #8cb5ff;
+    }
+
+    .beam {
+        fill: #bfbf76;
+    }
+
+    .stepBottom {
+        fill: #779ad9;
+    }
+
+    .windowTrim {
+        fill: #917340;
+    }
+
+    .window {
+        fill: #94efff;
+    }
+
+    .windowDisplayLine {
+        stroke: #317a80;
+    }
+
+    .roofSide {
+        fill: #998951;
+    }
+
+    .roofTop {
+        fill: #ad9953;
+    }
+}
+
 .campfire {
     .flameOuter {
         fill: #f03;

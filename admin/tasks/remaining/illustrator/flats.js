@@ -1,21 +1,11 @@
 export default [
     {
-        taskName: 'nohoHouseLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'nohoHouseRight',
         workedHours: 0,
         neededHours: 1.5
     },
     {
         taskName: 'valleyFreeway',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'familyHouse',
         workedHours: 0,
         neededHours: 1.5
     },
