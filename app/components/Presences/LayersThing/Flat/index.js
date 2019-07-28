@@ -24,7 +24,7 @@ import goKartTrack from 'assets/svgs/flats/goKartTrack'
 // import royceHall from 'assets/svgs/flats/royceHall'
 import cemeteryHillsLeft from 'assets/svgs/flats/cemeteryHillsLeft'
 import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight'
-// import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft'
+import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft'
 // import oaklandHouseRight from 'assets/svgs/flats/oaklandHouseRight'
 // import residentialFarLeft from 'assets/svgs/flats/residentialFarLeft'
 // import residentialMiddleLeft from 'assets/svgs/flats/residentialMiddleLeft'
@@ -133,7 +133,7 @@ export default {
     [ROYCE_HALL]: false,
     [CEMETERY_HILLS_LEFT]: cemeteryHillsLeft,
     [CEMETERY_HILLS_RIGHT]: cemeteryHillsRight,
-    [OAKLAND_HOUSE_LEFT]: false,
+    [OAKLAND_HOUSE_LEFT]: oaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: false,
     [RESIDENTIAL_FAR_LEFT]: false,
     [RESIDENTIAL_FAR_RIGHT]: false,
