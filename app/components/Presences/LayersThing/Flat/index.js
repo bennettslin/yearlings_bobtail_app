@@ -26,12 +26,12 @@ import cemeteryHillsLeft from 'assets/svgs/flats/cemeteryHillsLeft'
 import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight'
 import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft'
 import oaklandHouseRight from 'assets/svgs/flats/oaklandHouseRight'
-// import residentialFarLeft from 'assets/svgs/flats/residentialFarLeft'
-// import residentialMiddleLeft from 'assets/svgs/flats/residentialMiddleLeft'
-// import residentialNearLeft from 'assets/svgs/flats/residentialNearLeft'
-// import residentialFarRight from 'assets/svgs/flats/residentialFarRight'
-// import residentialMiddleRight from 'assets/svgs/flats/residentialMiddleRight'
-// import residentialNearRight from 'assets/svgs/flats/residentialNearRight'
+import residentialFarLeft from 'assets/svgs/flats/residentialFarLeft'
+import residentialMiddleLeft from 'assets/svgs/flats/residentialMiddleLeft'
+import residentialNearLeft from 'assets/svgs/flats/residentialNearLeft'
+import residentialFarRight from 'assets/svgs/flats/residentialFarRight'
+import residentialMiddleRight from 'assets/svgs/flats/residentialMiddleRight'
+import residentialNearRight from 'assets/svgs/flats/residentialNearRight'
 // import commercialCentre from 'assets/svgs/flats/commercialCentre'
 // import commercialFarLeft from 'assets/svgs/flats/commercialFarLeft'
 // import commercialMiddleLeft from 'assets/svgs/flats/commercialMiddleLeft'
@@ -135,12 +135,12 @@ export default {
     [CEMETERY_HILLS_RIGHT]: cemeteryHillsRight,
     [OAKLAND_HOUSE_LEFT]: oaklandHouseLeft,
     [OAKLAND_HOUSE_RIGHT]: oaklandHouseRight,
-    [RESIDENTIAL_FAR_LEFT]: false,
-    [RESIDENTIAL_FAR_RIGHT]: false,
-    [RESIDENTIAL_MIDDLE_LEFT]: false,
-    [RESIDENTIAL_MIDDLE_RIGHT]: false,
-    [RESIDENTIAL_NEAR_LEFT]: false,
-    [RESIDENTIAL_NEAR_RIGHT]: false,
+    [RESIDENTIAL_FAR_LEFT]: residentialFarLeft,
+    [RESIDENTIAL_FAR_RIGHT]: residentialFarRight,
+    [RESIDENTIAL_MIDDLE_LEFT]: residentialMiddleLeft,
+    [RESIDENTIAL_MIDDLE_RIGHT]: residentialMiddleRight,
+    [RESIDENTIAL_NEAR_LEFT]: residentialNearLeft,
+    [RESIDENTIAL_NEAR_RIGHT]: residentialNearRight,
     [COMMERCIAL_CENTRE]: false,
     [COMMERCIAL_FAR_LEFT]: false,
     [COMMERCIAL_FAR_RIGHT]: false,

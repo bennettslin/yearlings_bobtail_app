@@ -9,6 +9,11 @@ import {
     OAKLAND_HOUSE_RIGHT
 } from 'constants/scene/things/flats'
 import { VOLKSWAGEN } from 'constants/scene/things/panels'
+import {
+    OAKLAND_HOUSE_SHARED,
+    OAKLAND_HOUSE_LEFT_SHARED,
+    OAKLAND_HOUSE_RIGHT_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -22,12 +27,20 @@ const ARRANGEMENTS_THINGS = {
         [OAKLAND_HOUSE_LEFT]: {
             yIndex: 1,
             xPosition: 2.25,
-            scaleFactor: 0.5
+            scaleFactor: 0.5,
+            sharedStyle: [
+                OAKLAND_HOUSE_SHARED,
+                OAKLAND_HOUSE_LEFT_SHARED
+            ]
         },
         [OAKLAND_HOUSE_RIGHT]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.5
+            scaleFactor: 0.5,
+            sharedStyle: [
+                OAKLAND_HOUSE_SHARED,
+                OAKLAND_HOUSE_RIGHT_SHARED
+            ]
         }
     }
 }

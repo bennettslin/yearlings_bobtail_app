@@ -35,36 +35,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'residentialFarLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'residentialMiddleLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'residentialNearLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'residentialFarRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'residentialMiddleRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'residentialNearRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'commercialCentre',
         workedHours: 0,
         neededHours: 1.5

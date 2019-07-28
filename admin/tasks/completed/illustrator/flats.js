@@ -128,5 +128,35 @@ export default [
         taskName: 'valleyFreeway',
         workedHours: 2.5,
         neededHours: 2.5
+    },
+    {
+        taskName: 'residentialFarLeft',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'residentialMiddleLeft',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'residentialNearLeft',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'residentialFarRight',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'residentialMiddleRight',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'residentialNearRight',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
