@@ -26,7 +26,7 @@ const ARRANGEMENTS_THINGS = {
         [FAMILY_HOUSE]: {
             yIndex: 0,
             xPosition: 1.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.4
         }
     },
     [PANEL]: {
