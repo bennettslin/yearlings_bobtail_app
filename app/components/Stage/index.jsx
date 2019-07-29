@@ -48,7 +48,8 @@ class Stage extends PureComponent {
                 >
                     <div className={cx(
                         'Stage',
-                        'abF'
+                        'abF',
+                        'ovH'
                     )}>
                         <Sky />
                         <Wood />
