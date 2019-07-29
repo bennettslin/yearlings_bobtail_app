@@ -32,13 +32,13 @@ import residentialNearLeft from 'assets/svgs/flats/residentialNearLeft'
 import residentialFarRight from 'assets/svgs/flats/residentialFarRight'
 import residentialMiddleRight from 'assets/svgs/flats/residentialMiddleRight'
 import residentialNearRight from 'assets/svgs/flats/residentialNearRight'
-// import commercialCentre from 'assets/svgs/flats/commercialCentre'
-// import commercialFarLeft from 'assets/svgs/flats/commercialFarLeft'
-// import commercialMiddleLeft from 'assets/svgs/flats/commercialMiddleLeft'
-// import commercialNearLeft from 'assets/svgs/flats/commercialNearLeft'
-// import commercialFarRight from 'assets/svgs/flats/commercialFarRight'
-// import commercialMiddleRight from 'assets/svgs/flats/commercialMiddleRight'
-// import commercialNearRight from 'assets/svgs/flats/commercialNearRight'
+import commercialCentre from 'assets/svgs/flats/commercialCentre'
+import commercialFarLeft from 'assets/svgs/flats/commercialFarLeft'
+import commercialMiddleLeft from 'assets/svgs/flats/commercialMiddleLeft'
+import commercialNearLeft from 'assets/svgs/flats/commercialNearLeft'
+import commercialFarRight from 'assets/svgs/flats/commercialFarRight'
+import commercialMiddleRight from 'assets/svgs/flats/commercialMiddleRight'
+import commercialNearRight from 'assets/svgs/flats/commercialNearRight'
 // import publicFarLeft from 'assets/svgs/flats/publicFarLeft'
 // import publicNearLeft from 'assets/svgs/flats/publicNearLeft'
 // import publicFarRight from 'assets/svgs/flats/publicFarRight'
@@ -141,13 +141,13 @@ export default {
     [RESIDENTIAL_MIDDLE_RIGHT]: residentialMiddleRight,
     [RESIDENTIAL_NEAR_LEFT]: residentialNearLeft,
     [RESIDENTIAL_NEAR_RIGHT]: residentialNearRight,
-    [COMMERCIAL_CENTRE]: false,
-    [COMMERCIAL_FAR_LEFT]: false,
-    [COMMERCIAL_FAR_RIGHT]: false,
-    [COMMERCIAL_MIDDLE_LEFT]: false,
-    [COMMERCIAL_MIDDLE_RIGHT]: false,
-    [COMMERCIAL_NEAR_LEFT]: false,
-    [COMMERCIAL_NEAR_RIGHT]: false,
+    [COMMERCIAL_CENTRE]: commercialCentre,
+    [COMMERCIAL_FAR_LEFT]: commercialFarLeft,
+    [COMMERCIAL_FAR_RIGHT]: commercialFarRight,
+    [COMMERCIAL_MIDDLE_LEFT]: commercialMiddleLeft,
+    [COMMERCIAL_MIDDLE_RIGHT]: commercialMiddleRight,
+    [COMMERCIAL_NEAR_LEFT]: commercialNearLeft,
+    [COMMERCIAL_NEAR_RIGHT]: commercialNearRight,
     [PUBLIC_FAR_LEFT]: false,
     [PUBLIC_FAR_RIGHT]: false,
     [PUBLIC_NEAR_LEFT]: false,

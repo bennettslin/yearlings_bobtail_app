@@ -35,41 +35,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'commercialCentre',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'commercialFarLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'commercialMiddleLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'commercialNearLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'commercialFarRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'commercialMiddleRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'commercialNearRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'publicFarLeft',
         workedHours: 0,
         neededHours: 1.5

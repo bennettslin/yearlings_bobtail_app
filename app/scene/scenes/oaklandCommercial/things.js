@@ -10,64 +10,50 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
 } from 'constants/scene/things/flats'
-
+import { OAKLAND_COMMERCIAL_SHARED } from '../../shared'
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [COMMERCIAL_CENTRE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 6,
-                zHeight: 3
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.4,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [COMMERCIAL_FAR_LEFT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 2,
-                zHeight: 4
-            }
+            xPosition: 1.75,
+            scaleFactor: 0.32,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [COMMERCIAL_FAR_RIGHT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 2,
-                zHeight: 4
-            }
+            xPosition: 9,
+            scaleFactor: 0.32,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [COMMERCIAL_MIDDLE_LEFT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 2,
-                zHeight: 5
-            }
+            xPosition: 1,
+            scaleFactor: 0.4,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [COMMERCIAL_MIDDLE_RIGHT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 2,
-                zHeight: 5
-            }
+            xPosition: 10,
+            scaleFactor: 0.4,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [COMMERCIAL_NEAR_LEFT]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 0.5,
-                xWidth: 2,
-                zHeight: 6
-            }
+            xPosition: 0,
+            scaleFactor: 0.5,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [COMMERCIAL_NEAR_RIGHT]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 10.5,
-                xWidth: 2,
-                zHeight: 6
-            }
+            xPosition: 11,
+            scaleFactor: 0.5,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         }
     }
 }
