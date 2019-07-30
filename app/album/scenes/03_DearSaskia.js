@@ -57,8 +57,8 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
-    VAN_NUYS_SCHOOLHOUSE_LEFT,
-    VAN_NUYS_SCHOOLHOUSE_RIGHT
+    CAMPUS_BUILDING_TALL,
+    CAMPUS_BUILDING_WIDE
 } from '../../constants/scene/things/flats'
 
 import {
@@ -191,8 +191,8 @@ export default [
                 [VAN_NUYS_THOUGHT_BACKDROP]: true
             },
             [FLAT]: {
-                [VAN_NUYS_SCHOOLHOUSE_LEFT]: true,
-                [VAN_NUYS_SCHOOLHOUSE_RIGHT]: true
+                [CAMPUS_BUILDING_TALL]: true,
+                [CAMPUS_BUILDING_WIDE]: true
             }
         },
         cubes: TETHERBALL_COURT_KEY,

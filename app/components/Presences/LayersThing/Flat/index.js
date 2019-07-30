@@ -10,8 +10,8 @@ import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
 import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
 // import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
 // import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
-import vanNuysSchoolhouseLeft from 'assets/svgs/flats/vanNuysSchoolhouseLeft'
-import vanNuysSchoolhouseRight from 'assets/svgs/flats/vanNuysSchoolhouseRight'
+import campusBuildingTall from 'assets/svgs/flats/campusBuildingTall'
+import campusBuildingWide from 'assets/svgs/flats/campusBuildingWide'
 // import rickshawTown from 'assets/svgs/flats/rickshawTown'
 import ferrisWheel from 'assets/svgs/flats/ferrisWheel'
 import rollerCoaster from 'assets/svgs/flats/rollerCoaster'
@@ -63,8 +63,8 @@ import {
     TAIWAN_MOUNTAIN_RIGHT,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
-    VAN_NUYS_SCHOOLHOUSE_LEFT,
-    VAN_NUYS_SCHOOLHOUSE_RIGHT,
+    CAMPUS_BUILDING_TALL,
+    CAMPUS_BUILDING_WIDE,
     RICKSHAW_TOWN,
     FERRIS_WHEEL,
     ROLLER_COASTER,
@@ -119,8 +119,8 @@ export default {
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
     [TAIWAN_HOUSE_FAR]: false,
     [TAIWAN_HOUSE_NEAR]: false,
-    [VAN_NUYS_SCHOOLHOUSE_LEFT]: vanNuysSchoolhouseLeft,
-    [VAN_NUYS_SCHOOLHOUSE_RIGHT]: vanNuysSchoolhouseRight,
+    [CAMPUS_BUILDING_TALL]: campusBuildingTall,
+    [CAMPUS_BUILDING_WIDE]: campusBuildingWide,
     [RICKSHAW_TOWN]: false,
     [FERRIS_WHEEL]: ferrisWheel,
     [ROLLER_COASTER]: rollerCoaster,

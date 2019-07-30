@@ -80,12 +80,12 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'vanNuysSchoolhouseLeft',
+        taskName: 'campusBuildingTall',
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: 'vanNuysSchoolhouseRight',
+        taskName: 'campusBuildingWide',
         workedHours: 1,
         neededHours: 1
     },

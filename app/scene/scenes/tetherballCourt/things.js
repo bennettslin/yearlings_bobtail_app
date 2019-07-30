@@ -6,8 +6,8 @@ import {
 import { VAN_NUYS_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import { TETHERBALL_POLE } from 'constants/scene/things/fixtures'
 import {
-    VAN_NUYS_SCHOOLHOUSE_LEFT,
-    VAN_NUYS_SCHOOLHOUSE_RIGHT
+    CAMPUS_BUILDING_TALL,
+    CAMPUS_BUILDING_WIDE
 } from 'constants/scene/things/flats'
 import { VAN_NUYS_SCHOOLHOUSE_SHARED } from '../../shared'
 
@@ -33,13 +33,13 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FLAT]: {
-        [VAN_NUYS_SCHOOLHOUSE_LEFT]: {
+        [CAMPUS_BUILDING_TALL]: {
             yIndex: 1,
             xPosition: 2.5,
             scaleFactor: 0.5,
             sharedStyle: VAN_NUYS_SCHOOLHOUSE_SHARED
         },
-        [VAN_NUYS_SCHOOLHOUSE_RIGHT]: {
+        [CAMPUS_BUILDING_WIDE]: {
             yIndex: 1,
             xPosition: 8.5,
             scaleFactor: 0.5,
