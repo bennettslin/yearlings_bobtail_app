@@ -58,8 +58,9 @@ import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE__LEFT,
-    UC_BERKELEY_TREE__RIGHT,
+    BERKELEY_TREE_SINGLE__LEFT,
+    BERKELEY_TREE_SINGLE__RIGHT,
+    BERKELEY_TREE_DOUBLE,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
     DUMPSTER
@@ -114,7 +115,8 @@ export default [
             [CUTOUT]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
-                [UC_BERKELEY_TREE__RIGHT]: true
+                [BERKELEY_TREE_SINGLE__RIGHT]: true,
+                [BERKELEY_TREE_DOUBLE]: true
             },
             [FLAT]: {
                 [CAMPANILE]: true
@@ -264,7 +266,7 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
-                [UC_BERKELEY_TREE__LEFT]: true
+                [BERKELEY_TREE_SINGLE__LEFT]: true
             },
             [FIXTURE]: {
                 [ASH_CAN]: true

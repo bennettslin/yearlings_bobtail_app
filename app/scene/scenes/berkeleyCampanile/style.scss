@@ -1,4 +1,8 @@
 .campanile {
+    .foliage {
+        fill: #445e40;
+    }
+
     .spireInner {
         fill: #5f8770;
     }
@@ -100,6 +104,24 @@
 
     .leavesLeft {
         fill: #063;
+    }
+}
+
+.berkeleyTreeDouble {
+    .trunkWide {
+        fill: #57492b;
+    }
+
+    .leavesWide {
+        fill: #4f8c62;
+    }
+
+    .trunkTall {
+        fill: #635331;
+    }
+
+    .leavesTall {
+        fill: #549669;
     }
 }
 

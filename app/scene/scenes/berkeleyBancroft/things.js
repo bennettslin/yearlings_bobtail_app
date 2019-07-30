@@ -3,13 +3,13 @@ import {
     FIXTURE,
     PUPPET
 } from 'constants/scene'
-import { UC_BERKELEY_TREE__LEFT } from 'constants/scene/things/cutouts'
+import { BERKELEY_TREE_SINGLE__LEFT } from 'constants/scene/things/cutouts'
 import { ASH_CAN } from 'constants/scene/things/fixtures'
 import { GHOST_ODIN_DEMONSTRATION } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [UC_BERKELEY_TREE__LEFT]: {
+        [BERKELEY_TREE_SINGLE__LEFT]: {
             yIndex: 2,
             xPosition: 1,
             scaleFactor: 0.5

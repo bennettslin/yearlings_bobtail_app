@@ -6,10 +6,16 @@ import {
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE__RIGHT
+    BERKELEY_TREE_SINGLE__RIGHT,
+    BERKELEY_TREE_DOUBLE
 } from 'constants/scene/things/cutouts'
-import { CAMPANILE } from 'constants/scene/things/flats'
+import {
+    CAMPANILE,
+    CAMPUS_BUILDING_TALL__BERKELEY,
+    CAMPUS_BUILDING_WIDE__BERKELEY
+} from 'constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from 'constants/scene/things/puppets'
+import { BERKELEY_BUILDING_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -24,17 +30,34 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2,
             scaleFactor: 0.5
         },
-        [UC_BERKELEY_TREE__RIGHT]: {
+        [BERKELEY_TREE_SINGLE__RIGHT]: {
+            yIndex: 1,
+            xPosition: 3.5,
+            scaleFactor: 0.5
+        },
+        [BERKELEY_TREE_DOUBLE]: {
             yIndex: 2,
-            xPosition: 9.5,
+            xPosition: 10,
             scaleFactor: 0.5
         }
     },
     [FLAT]: {
         [CAMPANILE]: {
             yIndex: 1,
-            xPosition: 6,
+            xPosition: 6.25,
             scaleFactor: 0.45
+        },
+        [CAMPUS_BUILDING_TALL__BERKELEY]: {
+            yIndex: 1,
+            xPosition: 9.5,
+            scaleFactor: 0.35,
+            sharedStyle: BERKELEY_BUILDING_SHARED
+        },
+        [CAMPUS_BUILDING_WIDE__BERKELEY]: {
+            yIndex: 3,
+            xPosition: 10,
+            scaleFactor: 0.4,
+            sharedStyle: BERKELEY_BUILDING_SHARED
         }
     }
 }

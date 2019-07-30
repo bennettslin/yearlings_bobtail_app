@@ -1,6 +1,4 @@
-* Change some overlap lines to crease or fold line.
 * Make ceiling cubes disappear
-* Separate bubbles.
 
 # Redo straight or curved line.
 * bennettOdinBuoy
@@ -82,7 +80,6 @@
     * berkeleyLamppost
     * signpost
     * bancroftShrubs
-    * ucBerkeleyTree
     * monitorFront
     * wallSpeakerFront
     * museumDisplay

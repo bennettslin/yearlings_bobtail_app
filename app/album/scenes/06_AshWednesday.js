@@ -63,8 +63,9 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE__LEFT,
-    UC_BERKELEY_TREE__RIGHT
+    BERKELEY_TREE_SINGLE__LEFT,
+    BERKELEY_TREE_SINGLE__RIGHT,
+    BERKELEY_TREE_DOUBLE
 } from '../../constants/scene/things/cutouts'
 
 import {
@@ -76,7 +77,9 @@ import {
 import {
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
-    CAMPANILE
+    CAMPANILE,
+    CAMPUS_BUILDING_TALL__BERKELEY,
+    CAMPUS_BUILDING_WIDE__BERKELEY
 } from '../../constants/scene/things/flats'
 
 import {
@@ -200,7 +203,7 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
-                [UC_BERKELEY_TREE__LEFT]: true
+                [BERKELEY_TREE_SINGLE__LEFT]: true
             },
             [FIXTURE]: {
                 [ASH_CAN]: true
@@ -232,10 +235,13 @@ export default [
             [CUTOUT]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
-                [UC_BERKELEY_TREE__RIGHT]: true
+                [BERKELEY_TREE_SINGLE__RIGHT]: true,
+                [BERKELEY_TREE_DOUBLE]: true
             },
             [FLAT]: {
-                [CAMPANILE]: true
+                [CAMPANILE]: true,
+                [CAMPUS_BUILDING_TALL__BERKELEY]: true,
+                [CAMPUS_BUILDING_WIDE__BERKELEY]: true
             }
         },
         cubes: BERKELEY_CAMPANILE_KEY,

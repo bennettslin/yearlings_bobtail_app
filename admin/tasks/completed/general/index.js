@@ -4791,5 +4791,10 @@ export default [
         taskName: `Show single presence for duplicate presences in Previewer.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Figure out Campanile scene presences.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

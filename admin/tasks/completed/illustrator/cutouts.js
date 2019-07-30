@@ -20,7 +20,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'ucBerkeleyTree',
+        taskName: 'berkeleyTreeSingle',
         workedHours: 1,
         neededHours: 1
     },

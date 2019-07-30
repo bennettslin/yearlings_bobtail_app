@@ -15,7 +15,8 @@ import recyclables from 'assets/svgs/cutouts/recyclables'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost'
 import signpost from 'assets/svgs/cutouts/signpost'
 import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs'
-import ucBerkeleyTree from 'assets/svgs/cutouts/ucBerkeleyTree'
+import berkeleyTreeSingle from 'assets/svgs/cutouts/berkeleyTreeSingle'
+import berkeleyTreeDouble from 'assets/svgs/cutouts/berkeleyTreeDouble'
 import monitorFront from 'assets/svgs/cutouts/monitorFront'
 import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront'
 import museumDisplay from 'assets/svgs/cutouts/museumDisplay'
@@ -67,8 +68,9 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    UC_BERKELEY_TREE__LEFT,
-    UC_BERKELEY_TREE__RIGHT,
+    BERKELEY_TREE_SINGLE__LEFT,
+    BERKELEY_TREE_SINGLE__RIGHT,
+    BERKELEY_TREE_DOUBLE,
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
@@ -130,8 +132,9 @@ export default {
     [BERKELEY_LAMPPOST]: berkeleyLamppost,
     [SIGNPOST]: signpost,
     [BANCROFT_SHRUBS]: bancroftShrubs,
-    [UC_BERKELEY_TREE__LEFT]: ucBerkeleyTree,
-    [UC_BERKELEY_TREE__RIGHT]: ucBerkeleyTree,
+    [BERKELEY_TREE_SINGLE__LEFT]: berkeleyTreeSingle,
+    [BERKELEY_TREE_SINGLE__RIGHT]: berkeleyTreeSingle,
+    [BERKELEY_TREE_DOUBLE]: berkeleyTreeDouble,
     [MONITOR_FRONT__LEFT]: monitorFront,
     [MONITOR_FRONT__RIGHT]: monitorFront,
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,

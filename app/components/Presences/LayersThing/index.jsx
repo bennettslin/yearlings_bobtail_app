@@ -30,13 +30,13 @@ const LayersThing = ({
     return (
         <___>
             <Layer {...backdrops} {...{ presenceType: BACKDROP }} />
-            <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
+            <Layer {...flats} {...{ presenceType: FLAT }} />
+            <Layer {...panels} {...{ presenceType: PANEL }} />
             <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
             <Layer {...cutouts} {...{ presenceType: CUTOUT }} />
-            <Layer {...fixtures} {...{ presenceType: FIXTURE }} />
-            <Layer {...flats} {...{ presenceType: FLAT }} />
+            <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
             <Layer {...furnitures} {...{ presenceType: FURNITURE }} />
-            <Layer {...panels} {...{ presenceType: PANEL }} />
+            <Layer {...fixtures} {...{ presenceType: FIXTURE }} />
             <Layer {...puppets} {...{ presenceType: PUPPET }} />
         </___>
     )
