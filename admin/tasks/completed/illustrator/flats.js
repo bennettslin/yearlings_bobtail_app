@@ -198,5 +198,20 @@ export default [
         taskName: 'campanile',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'publicFarLeft',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'publicNearLeft',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'publicFarRight',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

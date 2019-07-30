@@ -7,32 +7,27 @@ import {
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
 } from 'constants/scene/things/flats'
+import { OAKLAND_HOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [PUBLIC_FAR_LEFT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 3,
-                zHeight: 5
-            }
+            xPosition: 1.5,
+            scaleFactor: 0.4,
+            sharedStyle: OAKLAND_HOUSE_SHARED
         },
         [PUBLIC_FAR_RIGHT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 10.5,
-                xWidth: 2,
-                zHeight: 5
-            }
+            xPosition: 11.25,
+            scaleFactor: 0.4,
+            sharedStyle: OAKLAND_HOUSE_SHARED
         },
         [PUBLIC_NEAR_LEFT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 0.5,
-                xWidth: 2,
-                zHeight: 6
-            }
+            xPosition: 0,
+            scaleFactor: 0.5,
+            sharedStyle: OAKLAND_HOUSE_SHARED
         },
         [PUBLIC_NEAR_RIGHT]: {
             yIndex: 3,

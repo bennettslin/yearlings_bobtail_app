@@ -39,9 +39,9 @@ import commercialNearLeft from 'assets/svgs/flats/commercialNearLeft'
 import commercialFarRight from 'assets/svgs/flats/commercialFarRight'
 import commercialMiddleRight from 'assets/svgs/flats/commercialMiddleRight'
 import commercialNearRight from 'assets/svgs/flats/commercialNearRight'
-// import publicFarLeft from 'assets/svgs/flats/publicFarLeft'
-// import publicNearLeft from 'assets/svgs/flats/publicNearLeft'
-// import publicFarRight from 'assets/svgs/flats/publicFarRight'
+import publicFarLeft from 'assets/svgs/flats/publicFarLeft'
+import publicNearLeft from 'assets/svgs/flats/publicNearLeft'
+import publicFarRight from 'assets/svgs/flats/publicFarRight'
 // import publicNearRight from 'assets/svgs/flats/publicNearRight'
 import elCerritoFar from 'assets/svgs/flats/elCerritoFar'
 import elCerritoNear from 'assets/svgs/flats/elCerritoNear'
@@ -152,9 +152,9 @@ export default {
     [COMMERCIAL_MIDDLE_RIGHT]: commercialMiddleRight,
     [COMMERCIAL_NEAR_LEFT]: commercialNearLeft,
     [COMMERCIAL_NEAR_RIGHT]: commercialNearRight,
-    [PUBLIC_FAR_LEFT]: false,
-    [PUBLIC_FAR_RIGHT]: false,
-    [PUBLIC_NEAR_LEFT]: false,
+    [PUBLIC_FAR_LEFT]: publicFarLeft,
+    [PUBLIC_FAR_RIGHT]: publicFarRight,
+    [PUBLIC_NEAR_LEFT]: publicNearLeft,
     [PUBLIC_NEAR_RIGHT]: false,
     [EL_CERRITO_FAR]: elCerritoFar,
     [EL_CERRITO_NEAR]: elCerritoNear,

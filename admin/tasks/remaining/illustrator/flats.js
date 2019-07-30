@@ -30,21 +30,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'publicFarLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'publicNearLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'publicFarRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'publicNearRight',
         workedHours: 0,
         neededHours: 1.5
