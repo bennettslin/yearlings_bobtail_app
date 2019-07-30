@@ -4796,5 +4796,10 @@ export default [
         taskName: `Figure out Campanile scene presences.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Add presence back to URL query strings in Previewer.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
