@@ -1,25 +1,13 @@
 import {
-    BACKDROP,
     CUTOUT,
     FIXTURE,
     PUPPET
 } from 'constants/scene'
-import { UC_BERKELEY_BACKDROP } from 'constants/scene/things/backdrops'
 import { UC_BERKELEY_TREE__LEFT } from 'constants/scene/things/cutouts'
 import { ASH_CAN } from 'constants/scene/things/fixtures'
 import { GHOST_ODIN_DEMONSTRATION } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [UC_BERKELEY_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
-        }
-    },
     [CUTOUT]: {
         [UC_BERKELEY_TREE__LEFT]: {
             yIndex: 2,

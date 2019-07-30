@@ -13,7 +13,6 @@ import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
 // import vanNuysSchoolBackdrop from 'assets/svgs/backdrops/vanNuysSchoolBackdrop'
 // import bennettCouchThoughtBackdrop from 'assets/svgs/backdrops/bennettCouchThoughtBackdrop'
 import foliageBackdrop from 'assets/svgs/backdrops/foliageBackdrop'
-// import ucBerkeleyBackdrop from 'assets/svgs/backdrops/ucBerkeleyBackdrop'
 import goKartBackdrop from 'assets/svgs/backdrops/goKartBackdrop'
 // import pharmacyThoughtBackdrop from 'assets/svgs/backdrops/pharmacyThoughtBackdrop'
 import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
@@ -43,12 +42,11 @@ import {
     OCEAN_FLOOR_FAR,
     BENNETT_COUCH_THOUGHT_BACKDROP,
     FOLIAGE_BACKDROP,
-    UC_BERKELEY_BACKDROP,
+    OAKLAND_SIDE_BACKDROP,
     GO_KART_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     STATION_WAGON_BACKDROP,
-    OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP,
     ROAD_PAST,
@@ -74,7 +72,6 @@ export default {
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
     [BENNETT_COUCH_THOUGHT_BACKDROP]: false,
     [FOLIAGE_BACKDROP]: foliageBackdrop,
-    [UC_BERKELEY_BACKDROP]: false,
     [GO_KART_BACKDROP]: goKartBackdrop,
     [PHARMACY_THOUGHT_BACKDROP]: false,
     [CEMETERY_BACKDROP]: cemeteryBackdrop,

@@ -53,7 +53,7 @@ import {
     PROTESTER
 } from '../../constants/scene/actors/instances/songs'
 
-import { UC_BERKELEY_BACKDROP } from '../../constants/scene/things/backdrops'
+import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
 
 import {
     SIGNPOST,
@@ -109,7 +109,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [UC_BERKELEY_BACKDROP]: true
+                [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [BANCROFT_SHRUBS]: true,
@@ -261,7 +261,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [UC_BERKELEY_BACKDROP]: true
+                [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [UC_BERKELEY_TREE__LEFT]: true
