@@ -1,6 +1,7 @@
 export const SHADOW_SHARED = 'shadowShared'
 export const INTERIOR_SHARED = 'interiorShared'
 export const BENNETT_ODIN_SHARED = 'bennettOdinShared'
+export const BUBBLE_SHARED = 'bubbleShared'
 export const BUDDHA_SHRINE_SHARED = 'buddhaShrineShared'
 export const OAKLAND_HOUSE_SHARED = 'oaklandHouseShared'
 export const OAKLAND_HOUSE_LEFT_SHARED = 'oaklandHouseLeftShared'
