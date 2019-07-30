@@ -33,11 +33,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [CAMPANILE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 3,
-                zHeight: 7.5
-            }
+            xPosition: 6,
+            scaleFactor: 0.45
         }
     }
 }

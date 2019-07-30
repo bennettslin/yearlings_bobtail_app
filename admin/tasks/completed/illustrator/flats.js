@@ -193,5 +193,10 @@ export default [
         taskName: 'commercialNearRight',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'campanile',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

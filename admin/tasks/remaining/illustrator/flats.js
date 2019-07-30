@@ -25,11 +25,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'campanile',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'royceHall',
         workedHours: 0,
         neededHours: 3
