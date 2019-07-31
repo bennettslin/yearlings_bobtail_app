@@ -63,9 +63,9 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUBS,
-    BERKELEY_TREE_SINGLE__LEFT,
-    BERKELEY_TREE_SINGLE__RIGHT,
-    BERKELEY_TREE_DOUBLE
+    CAMPUS_TREE_SINGLE__BANCROFT,
+    CAMPUS_TREE_SINGLE__CAMPANILE,
+    CAMPUS_TREE_DOUBLE__CAMPANILE
 } from '../../constants/scene/things/cutouts'
 
 import {
@@ -203,7 +203,7 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
-                [BERKELEY_TREE_SINGLE__LEFT]: true
+                [CAMPUS_TREE_SINGLE__BANCROFT]: true
             },
             [FIXTURE]: {
                 [ASH_CAN]: true
@@ -235,8 +235,8 @@ export default [
             [CUTOUT]: {
                 [BANCROFT_SHRUBS]: true,
                 [SIGNPOST]: true,
-                [BERKELEY_TREE_SINGLE__RIGHT]: true,
-                [BERKELEY_TREE_DOUBLE]: true
+                [CAMPUS_TREE_SINGLE__CAMPANILE]: true,
+                [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
             },
             [FLAT]: {
                 [CAMPANILE]: true,

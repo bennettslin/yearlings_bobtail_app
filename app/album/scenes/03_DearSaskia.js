@@ -2,6 +2,7 @@ import {
     ACTOR,
     BACKDROP,
     BUBBLE,
+    CUTOUT,
     FIXTURE,
     FLAT,
     PANEL,
@@ -46,6 +47,12 @@ import {
     APART_SKETCH,
     SKETCHBOOK__APART
 } from '../../constants/scene/things/bubbles'
+
+import {
+    CAMPUS_TREE_SINGLE__TETHERBALL,
+    CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT,
+    CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT
+} from '../../constants/scene/things/cutouts'
 
 import {
     BACKPACK_BENNETT,
@@ -189,6 +196,11 @@ export default [
             },
             [BACKDROP]: {
                 [VAN_NUYS_THOUGHT_BACKDROP]: true
+            },
+            [CUTOUT]: {
+                [CAMPUS_TREE_SINGLE__TETHERBALL]: true,
+                [CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT]: true,
+                [CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT]: true
             },
             [FLAT]: {
                 [CAMPUS_BUILDING_TALL__TETHERBALL]: true,

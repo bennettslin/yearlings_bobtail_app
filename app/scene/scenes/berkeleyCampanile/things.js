@@ -6,8 +6,8 @@ import {
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
-    BERKELEY_TREE_SINGLE__RIGHT,
-    BERKELEY_TREE_DOUBLE
+    CAMPUS_TREE_SINGLE__CAMPANILE,
+    CAMPUS_TREE_DOUBLE__CAMPANILE
 } from 'constants/scene/things/cutouts'
 import {
     CAMPANILE,
@@ -30,12 +30,12 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2,
             scaleFactor: 0.5
         },
-        [BERKELEY_TREE_SINGLE__RIGHT]: {
+        [CAMPUS_TREE_SINGLE__CAMPANILE]: {
             yIndex: 1,
             xPosition: 3.5,
             scaleFactor: 0.5
         },
-        [BERKELEY_TREE_DOUBLE]: {
+        [CAMPUS_TREE_DOUBLE__CAMPANILE]: {
             yIndex: 2,
             xPosition: 10,
             scaleFactor: 0.5

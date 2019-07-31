@@ -4801,5 +4801,10 @@ export default [
         taskName: `Add presence back to URL query strings in Previewer.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Add campus trees to tetherball court scene.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
