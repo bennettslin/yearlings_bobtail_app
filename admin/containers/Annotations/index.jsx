@@ -86,33 +86,19 @@ class TempGlobalAnnotations extends PureComponent {
     componentDidMount() {
         logMount('Annotations')
 
-        const {
-                globalAnnotationIndices
-            } = album,
-
-            annotationIndexInterval = Math.floor(
-                globalAnnotationIndices.length / 3
-            )
-
         if (!global.localStorage.globalAnnotationsCounter) {
             global.localStorage.globalAnnotationsCounter = 0
         }
 
-        // Force my phone to have these indices.
-        // global.localStorage.globalAnnotationIndexFirst = 68
-        // global.localStorage.globalAnnotationIndexSecond = 147
-        // global.localStorage.globalAnnotationIndexThird = 278
-
+        // Force my phone to start with these indices.
         if (!global.localStorage.globalAnnotationIndexFirst) {
-            global.localStorage.globalAnnotationIndexFirst = 0
+            global.localStorage.globalAnnotationIndexFirst = 68
         }
         if (!global.localStorage.globalAnnotationIndexSecond) {
-            global.localStorage.globalAnnotationIndexSecond =
-                annotationIndexInterval
+            global.localStorage.globalAnnotationIndexSecond = 147
         }
         if (!global.localStorage.globalAnnotationIndexThird) {
-            global.localStorage.globalAnnotationIndexThird =
-                annotationIndexInterval * 2
+            global.localStorage.globalAnnotationIndexThird = 278
         }
 
         this.setState({
