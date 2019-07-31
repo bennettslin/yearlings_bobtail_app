@@ -9,12 +9,9 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLE]: {
         [GO_KART_THOUGHT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
+            xPosition: 6,
+            zOffset: 4,
+            scaleFactor: 0.4
         }
     },
     [CUTOUT]: {

@@ -30,11 +30,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'goKartThought',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'waitingThoughtWalking',
         workedHours: 0,
         neededHours: 1.5
