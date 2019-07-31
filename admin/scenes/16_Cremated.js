@@ -41,7 +41,7 @@ export default [
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
                     todo: true,
-                    workedHours: 3.5,
+                    workedHours: 3.75,
                     compound: 2,
                     instance: COWGIRL
                 }
