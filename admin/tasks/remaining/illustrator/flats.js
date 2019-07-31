@@ -28,10 +28,5 @@ export default [
         taskName: 'royceHall',
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: 'publicNearRight',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

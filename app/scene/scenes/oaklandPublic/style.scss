@@ -1,53 +1,28 @@
 .publicFarLeft {
-    .wallFront {
-        fill: #c69bc7;
-    }
-
-    .wallSide {
-        fill: #ac87ad;
-    }
+    .wallFront { fill: #c69bc7; }
+    .wallSide { fill: #ac87ad; }
 }
 
 .publicFarRight {
-    .wallFront {
-        fill: #c69bc7;
-    }
-
-    .wallSide {
-        fill: #ac87ad;
-    }
-
-    .doorBorderLine {
-        stroke: #888;
-    }
-
-    .awningFront {
-        fill: #8594bb;
-    }
-
-    .awningSide {
-        fill: #7480a3;
-    }
-
-    .clockSide {
-        fill: #aabf8e;
-    }
-
-    .clockFront {
-        fill: #bdd49f;
-    }
-
-    .handDisplayLine {
-        stroke: #888;
-    }
+    .wallFront { fill: #c69bc7; }
+    .wallSide { fill: #ac87ad; }
+    .doorBorderLine { stroke: #888; }
+    .awningFront { fill: #8594bb; }
+    .awningSide { fill: #7480a3; }
+    .clockSide { fill: #aabf8e; }
+    .clockFront { fill: #bdd49f; }
+    .handDisplayLine { stroke: #888; }
 }
 
 .publicNearLeft {
-    .wallFront {
-        fill: #c69bc7;
-    }
+    .wallFront { fill: #c69bc7; }
+    .wallSide { fill: #ac87ad; }
+}
 
-    .wallSide {
-        fill: #ac87ad;
-    }
+.publicNearRight {
+    .pole { fill: #706f65; }
+    .stripeWhite { fill: #e2dede; }
+    .stripeRed { fill: #c64646; }
+    .fieldBlue { fill: #4680c6; }
+    .finial { fill: #ad8c60; }
 }

@@ -42,7 +42,7 @@ import commercialNearRight from 'assets/svgs/flats/commercialNearRight'
 import publicFarLeft from 'assets/svgs/flats/publicFarLeft'
 import publicNearLeft from 'assets/svgs/flats/publicNearLeft'
 import publicFarRight from 'assets/svgs/flats/publicFarRight'
-// import publicNearRight from 'assets/svgs/flats/publicNearRight'
+import publicNearRight from 'assets/svgs/flats/publicNearRight'
 import elCerritoFar from 'assets/svgs/flats/elCerritoFar'
 import elCerritoNear from 'assets/svgs/flats/elCerritoNear'
 import forebodingTrees from 'assets/svgs/flats/forebodingTrees'
@@ -155,7 +155,7 @@ export default {
     [PUBLIC_FAR_LEFT]: publicFarLeft,
     [PUBLIC_FAR_RIGHT]: publicFarRight,
     [PUBLIC_NEAR_LEFT]: publicNearLeft,
-    [PUBLIC_NEAR_RIGHT]: false,
+    [PUBLIC_NEAR_RIGHT]: publicNearRight,
     [EL_CERRITO_FAR]: elCerritoFar,
     [EL_CERRITO_NEAR]: elCerritoNear,
     [FOREBODING_TREES__NEAR]: forebodingTrees,

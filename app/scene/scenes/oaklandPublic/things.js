@@ -31,11 +31,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [PUBLIC_NEAR_RIGHT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 11,
-                xWidth: 1,
-                zHeight: 6
-            }
+            xPosition: 11,
+            scaleFactor: 0.5
         }
     }
 }
