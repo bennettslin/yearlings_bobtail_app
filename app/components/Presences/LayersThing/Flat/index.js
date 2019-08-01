@@ -8,8 +8,8 @@ import familyHouse from 'assets/svgs/flats/familyHouse'
 // import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
 import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
 import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
-// import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
-// import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
+import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
+import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
 import campusBuildingTall from 'assets/svgs/flats/campusBuildingTall'
 import campusBuildingWide from 'assets/svgs/flats/campusBuildingWide'
 // import rickshawTown from 'assets/svgs/flats/rickshawTown'
@@ -119,8 +119,8 @@ export default {
     [TAIWAN_MOUNTAINS_BRIDGED]: false,
     [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
-    [TAIWAN_HOUSE_FAR]: false,
-    [TAIWAN_HOUSE_NEAR]: false,
+    [TAIWAN_HOUSE_FAR]: taiwanHouseFar,
+    [TAIWAN_HOUSE_NEAR]: taiwanHouseNear,
     [CAMPUS_BUILDING_TALL__TETHERBALL]: campusBuildingTall,
     [CAMPUS_BUILDING_WIDE__TETHERBALL]: campusBuildingWide,
     [RICKSHAW_TOWN]: false,

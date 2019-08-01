@@ -1,13 +1,169 @@
+.taiwanHouseFar {
+    .wallSide {
+        fill: #a39d77;
+    }
+
+    .wallFront {
+        fill: #bab388;
+    }
+
+    .stepFront {
+        fill: #686aa8;
+    }
+
+    .stepSide {
+        fill: #5a5b91;
+    }
+
+    .door {
+        fill: #4d412d;
+    }
+
+    .trimFront {
+        fill: #786646;
+    }
+
+    .trimSide {
+        fill: #695736;
+    }
+
+    .slit {
+        fill: #424242;
+    }
+
+    .roofBelow {
+        fill: #855944;
+    }
+
+    .awningFront {
+        fill: #73689c;
+    }
+
+    .awningSide {
+        fill: #625985;
+    }
+
+    .roofTop {
+        fill: #ab7357;
+    }
+
+    .roofSide {
+        fill: #96654c;
+    }
+
+    .roofFront {
+        fill: #a16c52;
+    }
+}
+
+.taiwanHouseNear {
+    .wallInner {
+        fill: #522c2c;
+    }
+
+    .trimInner {
+        fill: #6e6142;
+    }
+
+    .door {
+        fill: #614f32;
+    }
+
+    .doorBorderLine {
+        stroke: #332c21;
+    }
+
+    .wallFront {
+        fill: #703636;
+    }
+
+    .wallSide {
+        fill: #613232;
+    }
+
+    .stepFront {
+        fill: #415070;
+    }
+
+    .stepSide {
+        fill: #384561;
+    }
+
+    .stepOverlapLine {
+        stroke: #2e384f;
+    }
+
+    .trimFront {
+        fill: #a68f52;
+    }
+
+    .trimSide {
+        fill: #8f7b47;
+    }
+
+    .slit {
+        fill: #454545;
+    }
+
+    .roofFront {
+        fill: #6b6235;
+    }
+
+    .roofSide {
+        fill: #635b31;
+    }
+
+    .roofTrimAbove {
+        fill: #877b42;
+    }
+
+    .roofTrimBelow {
+        fill: #786e3e;
+    }
+}
+
 .bennettOdinRickshaw {
-    .pedalBarFront { fill: #b3b3b3; }
-    .pedalBottom { fill: #42210b; }
-    .pedalBarSide { fill: gray; }
-    .tires { fill: #333; }
-    .chassis { fill: #006837; }
-    .rear { fill: #009245; }
-    .lights { fill: #ff0; }
-    .tiresLine { stroke: gray; }
-    .rearLine { stroke: #009245; }
-    .pedalFront { fill: #754c24; }
-    .pedalSide { fill: #603813; }
+    .pedalBarFront {
+        fill: #b3b3b3;
+    }
+
+    .pedalBottom {
+        fill: #42210b;
+    }
+
+    .pedalBarSide {
+        fill: gray;
+    }
+
+    .tires {
+        fill: #333;
+    }
+
+    .chassis {
+        fill: #006837;
+    }
+
+    .rear {
+        fill: #009245;
+    }
+
+    .lights {
+        fill: #ff0;
+    }
+
+    .tiresLine {
+        stroke: gray;
+    }
+
+    .rearLine {
+        stroke: #009245;
+    }
+
+    .pedalFront {
+        fill: #754c24;
+    }
+
+    .pedalSide {
+        fill: #603813;
+    }
 }

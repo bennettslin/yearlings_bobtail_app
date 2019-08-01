@@ -5,16 +5,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'taiwanHouseFar',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'taiwanHouseNear',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'rickshawTown',
         workedHours: 0,
         neededHours: 1.5

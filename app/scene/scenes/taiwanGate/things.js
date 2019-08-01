@@ -33,19 +33,13 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [TAIWAN_HOUSE_FAR]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 3,
-                zHeight: 4
-            }
+            xPosition: 10.25,
+            scaleFactor: 0.4
         },
         [TAIWAN_HOUSE_NEAR]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 10.5,
-                xWidth: 2,
-                zHeight: 5
-            }
+            xPosition: 11.25,
+            scaleFactor: 0.5
         }
     }
 }
