@@ -27,6 +27,7 @@ export const BACKDROP = 'backdrop'
 export const BUBBLE = 'bubble'
 export const CARDBOARD = 'cardboard'
 export const CUTOUT = 'cutout'
+export const DOOR = 'door'
 export const FIXTURE = 'fixture'
 export const FLAT = 'flat'
 export const FURNITURE = 'furniture'
@@ -39,6 +40,7 @@ export const PRESENCE_TYPES = [
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,

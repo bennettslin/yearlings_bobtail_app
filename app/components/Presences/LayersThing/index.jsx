@@ -8,6 +8,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,
@@ -20,6 +21,7 @@ const LayersThing = ({
     [BUBBLE]: bubbles,
     [CARDBOARD]: cardboards,
     [CUTOUT]: cutouts,
+    [DOOR]: doors,
     [FIXTURE]: fixtures,
     [FLAT]: flats,
     [FURNITURE]: furnitures,
@@ -31,6 +33,7 @@ const LayersThing = ({
         <___>
             <Layer {...backdrops} {...{ presenceType: BACKDROP }} />
             <Layer {...flats} {...{ presenceType: FLAT }} />
+            <Layer {...doors} {...{ presenceType: DOOR }} />
             <Layer {...panels} {...{ presenceType: PANEL }} />
             <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
             <Layer {...cutouts} {...{ presenceType: CUTOUT }} />
@@ -47,6 +50,7 @@ LayersThing.propTypes = {
     [BUBBLE]: PropTypes.object,
     [CARDBOARD]: PropTypes.object,
     [CUTOUT]: PropTypes.object,
+    [DOOR]: PropTypes.object,
     [FIXTURE]: PropTypes.object,
     [FLAT]: PropTypes.object,
     [FURNITURE]: PropTypes.object,

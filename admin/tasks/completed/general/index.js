@@ -4806,5 +4806,10 @@ export default [
         taskName: `Add campus trees to tetherball court scene.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Change some bubbles to just show flats in front, add doors.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

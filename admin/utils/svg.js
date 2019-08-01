@@ -7,6 +7,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,
@@ -57,6 +58,7 @@ export const logSvgCount = () => {
         bubblesCount = _getSvgCount(BUBBLE),
         cardboardsCount = _getSvgCount(CARDBOARD),
         cutoutsCount = _getSvgCount(CUTOUT),
+        doorsCount = _getSvgCount(DOOR),
         fixturesCount = _getSvgCount(FIXTURE),
         flatsCount = _getSvgCount(FLAT),
         furnituresCount = _getSvgCount(FURNITURE),
@@ -83,5 +85,5 @@ export const logSvgCount = () => {
             panelsCount.neededCount +
             puppetsCount.neededCount
 
-    logAdmin(`${backdropsCount.workedCount}/${backdropsCount.neededCount} backdrops, ${bubblesCount.workedCount}/${bubblesCount.neededCount} bubbles, ${cardboardsCount.workedCount}/${cardboardsCount.neededCount} cardboards, ${cutoutsCount.workedCount}/${cutoutsCount.neededCount} cutouts, ${fixturesCount.workedCount}/${fixturesCount.neededCount} fixtures, ${flatsCount.workedCount}/${flatsCount.neededCount} flats, ${furnituresCount.workedCount}/${furnituresCount.neededCount} furnitures, ${panelsCount.workedCount}/${panelsCount.neededCount} panels, ${puppetsCount.workedCount}/${puppetsCount.neededCount} puppets, ${totalWorkedCount}/${totalNeededCount} total.`)
+    logAdmin(`${backdropsCount.workedCount}/${backdropsCount.neededCount} backdrops, ${bubblesCount.workedCount}/${bubblesCount.neededCount} bubbles, ${cardboardsCount.workedCount}/${cardboardsCount.neededCount} cardboards, ${cutoutsCount.workedCount}/${cutoutsCount.neededCount} cutouts, ${doorsCount.workedCount}/${doorsCount.neededCount} doors, ${fixturesCount.workedCount}/${fixturesCount.neededCount} fixtures, ${flatsCount.workedCount}/${flatsCount.neededCount} flats, ${furnituresCount.workedCount}/${furnituresCount.neededCount} furnitures, ${panelsCount.workedCount}/${panelsCount.neededCount} panels, ${puppetsCount.workedCount}/${puppetsCount.neededCount} puppets, ${totalWorkedCount}/${totalNeededCount} total.`)
 }

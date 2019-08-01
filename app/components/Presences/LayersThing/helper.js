@@ -4,6 +4,7 @@ import backdrops from './Backdrop'
 import bubbles from './Bubble'
 import cardboards from './Cardboard'
 import cutouts from './Cutout'
+import doors from './Door'
 import fixtures from './Fixture'
 import flats from './Flat'
 import furnitures from './Furniture'
@@ -15,6 +16,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,
@@ -27,6 +29,7 @@ const PRESENCE_TYPE_MAP = {
     [BUBBLE]: bubbles,
     [CARDBOARD]: cardboards,
     [CUTOUT]: cutouts,
+    [DOOR]: doors,
     [FIXTURE]: fixtures,
     [FLAT]: flats,
     [FURNITURE]: furnitures,

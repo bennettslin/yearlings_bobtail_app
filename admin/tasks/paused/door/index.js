@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: 'nurseDoor',
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: 'porchDoor',
         workedHours: 0,
         neededHours: 2
