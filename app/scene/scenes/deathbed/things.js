@@ -1,10 +1,12 @@
 import {
     CUTOUT,
     FIXTURE,
+    FLAT,
     PANEL
 } from 'constants/scene'
 import { IV_DRIP } from 'constants/scene/things/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from 'constants/scene/things/fixtures'
+import { TENNIS_COURT } from 'constants/scene/things/flats'
 import {
     DEATHBED_THOUGHT_PANEL,
     TENNIS_THOUGHT_PANEL,
@@ -40,6 +42,16 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_DEATHBED_CREMATED = {
+    [FLAT]: {
+        [TENNIS_COURT]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 5,
+                zHeight: 4
+            }
+        }
+    },
     [PANEL]: {
         [DEATHBED_THOUGHT_PANEL]: {
             yIndex: 0,

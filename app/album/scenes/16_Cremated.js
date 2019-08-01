@@ -59,7 +59,8 @@ import {
 
 import {
     EL_CERRITO_FAR,
-    EL_CERRITO_NEAR
+    EL_CERRITO_NEAR,
+    TENNIS_COURT
 } from '../../constants/scene/things/flats'
 
 import {
@@ -216,6 +217,9 @@ export default [
             },
             [FIXTURE]: {
                 [HOSPITAL_RECORD_PLAYER]: true
+            },
+            [FLAT]: {
+                [TENNIS_COURT]: true
             },
             [PANEL]: {
                 [HOSPITAL_BED]: true,

@@ -1,7 +1,7 @@
 # Various panel type bubbles
 
 * schoolbusThought
-    * TODO: Bring schoolbus and Saturn one cube closer, change to backdrop plus flats. Thought has flats only.
+    * TODO: Bring schoolbus and Saturn one cube closer, add driving house flats.
 * tetherballThought
 * bennettCouchThoughtBackdrop
     * TODO: Reduce.
@@ -12,7 +12,7 @@
     * TODO: Add door flat. estherSpeechDoor
 * deathbedThoughtPanel
 * tennisThoughtPanel
-    * TODO: Add tennis court flat. tennisCourt
+    * TODO: Add tennis court flat.
 * phoneCallPanel
 * inverseThoughtPanel
 
