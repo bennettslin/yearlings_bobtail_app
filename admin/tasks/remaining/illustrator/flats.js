@@ -18,5 +18,15 @@ export default [
         taskName: 'royceHall',
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: 'drivingHouseLeft',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'drivingHouseRight',
+        workedHours: 0,
+        neededHours: 1.5
     }
 ]

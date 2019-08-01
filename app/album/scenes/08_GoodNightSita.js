@@ -7,7 +7,6 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,
@@ -15,23 +14,18 @@ import {
     LIZ_GATE_STREET_KEY,
     GO_KARTS_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     LIZ,
     KHARI,
     STEPHANIE
 } from '../../constants/scene/actors'
-
 import { DOUBLE_ALBERT } from '../../constants/scene/actors/instances/khari'
-
 import { FLAPPER } from '../../constants/scene/actors/instances/stephanie'
-
 import {
     DATE_ENDING,
     MUSEUM,
@@ -39,26 +33,21 @@ import {
     GO_KARTS,
     DATE_ENDED
 } from '../../constants/scene/actors/instances/songs'
-
-import { GO_KART_BACKDROP } from '../../constants/scene/things/backdrops'
+import { DRIVING_BACKDROP } from '../../constants/scene/things/backdrops'
 import { GO_KART_THOUGHT } from '../../constants/scene/things/bubbles'
-
 import {
     MUSEUM_DISPLAY,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT
 } from '../../constants/scene/things/cutouts'
-
 import {
     CAVEMAN_BONES,
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
 } from '../../constants/scene/things/fixtures'
-
 import { GO_KART_TRACK } from '../../constants/scene/things/flats'
-
 import {
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT
@@ -176,7 +165,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [GO_KART_BACKDROP]: true
+                [DRIVING_BACKDROP]: true
             },
             [FLAT]: {
                 [GO_KART_TRACK]: true

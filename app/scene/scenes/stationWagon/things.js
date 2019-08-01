@@ -1,10 +1,8 @@
 import {
-    BACKDROP,
     BUBBLE,
     FIXTURE,
     PANEL
 } from 'constants/scene'
-import { STATION_WAGON_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     TARPIT_CONSTELLATION,
     SIBLING_CONSTELLATION
@@ -17,16 +15,6 @@ import {
 import { INTERIOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [STATION_WAGON_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
-        }
-    },
     [BUBBLE]: {
         [TARPIT_CONSTELLATION]: {
             yIndex: 5,

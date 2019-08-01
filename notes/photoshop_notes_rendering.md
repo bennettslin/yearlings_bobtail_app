@@ -9,10 +9,10 @@
 * pharmacyThoughtBackdrop
 
 * estherSpeechPanel
-    * TODO: Add door flat.
+    * TODO: Add door flat. estherSpeechDoor
 * deathbedThoughtPanel
 * tennisThoughtPanel
-    * TODO: Add tennis court flat.
+    * TODO: Add tennis court flat. tennisCourt
 * phoneCallPanel
 * inverseThoughtPanel
 

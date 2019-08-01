@@ -11,7 +11,6 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,
@@ -20,13 +19,11 @@ import {
     CEMETERY_KEY,
     STATION_WAGON_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     ANA,
@@ -34,7 +31,6 @@ import {
     HOWIE,
     TOMER
 } from '../../constants/scene/actors'
-
 import {
     ABBEY_ROAD,
     WALGREENS,
@@ -43,19 +39,16 @@ import {
     STATION_WAGON,
     ATTIC
 } from '../../constants/scene/actors/instances/songs'
-
 import {
     FOLIAGE_BACKDROP,
     PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
-    STATION_WAGON_BACKDROP
+    DRIVING_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
 import {
     TARPIT_CONSTELLATION,
     SIBLING_CONSTELLATION
 } from '../../constants/scene/things/bubbles'
-
 import {
     UCLA_TREE__LEFT,
     UCLA_TREE__RIGHT,
@@ -66,19 +59,18 @@ import {
     HOWIE_FRIDGE,
     TELEVISION
 } from '../../constants/scene/things/cutouts'
-
 import {
     PUSH_BROOM__TUNNEL,
     GRAVESTONE,
     EVIAN_BOTTLES
 } from '../../constants/scene/things/fixtures'
-
 import {
     ROYCE_HALL,
+    DRIVING_HOUSE_LEFT,
+    DRIVING_HOUSE_RIGHT,
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT
 } from '../../constants/scene/things/flats'
-
 import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
@@ -255,7 +247,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [STATION_WAGON_BACKDROP]: true
+                [DRIVING_BACKDROP]: true
             },
             [BUBBLE]: {
                 [TARPIT_CONSTELLATION]: true,
@@ -263,6 +255,10 @@ export default [
             },
             [FIXTURE]: {
                 [EVIAN_BOTTLES]: true
+            },
+            [FLAT]: {
+                [DRIVING_HOUSE_LEFT]: true,
+                [DRIVING_HOUSE_RIGHT]: true
             },
             [PANEL]: {
                 [SATURN_EXTERIOR]: true,

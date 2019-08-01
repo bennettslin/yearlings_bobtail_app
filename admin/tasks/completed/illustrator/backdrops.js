@@ -30,7 +30,7 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'goKartBackdrop and goKartTrack',
+        taskName: 'drivingBackdrop and goKartTrack',
         workedHours: 2.5,
         neededHours: 2.5
     },

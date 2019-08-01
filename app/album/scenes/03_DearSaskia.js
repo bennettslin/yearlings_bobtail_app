@@ -8,19 +8,16 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,
     TETHERBALL_COURT_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_PRESENT,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
-
 import {
     PRETEEN_BENNETT,
     SASHA,
@@ -28,53 +25,47 @@ import {
     BRAD_BENNETT,
     BRAD_SASHA
 } from '../../constants/scene/actors'
-
 import { FEIGNING_FEAR } from '../../constants/scene/actors/instances/andrew'
 import { TYING_TETHER } from '../../constants/scene/actors/instances/bradBennett'
 import { CHARMED_SCHOOLBUS } from '../../constants/scene/actors/instances/bradSasha'
 import { PANICKED } from '../../constants/scene/actors/instances/preteenBennett'
 import { INDIGNANT } from '../../constants/scene/actors/instances/sasha'
-
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
     VAN_NUYS_THOUGHT_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
 import {
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
     APART_SKETCH,
     SKETCHBOOK__APART
 } from '../../constants/scene/things/bubbles'
-
 import {
     CAMPUS_TREE_SINGLE__TETHERBALL,
     CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT,
     CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT
 } from '../../constants/scene/things/cutouts'
-
 import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
     BACKPACK_JEWISH_BOY
 } from '../../constants/scene/things/fixtures'
-
 import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
+    DRIVING_HOUSE_LEFT,
+    DRIVING_HOUSE_RIGHT,
     CAMPUS_BUILDING_TALL__TETHERBALL,
     CAMPUS_BUILDING_WIDE__TETHERBALL
 } from '../../constants/scene/things/flats'
-
 import {
     TAIWAN_CLOUDS,
     TAIWAN_FOG,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
 } from '../../constants/scene/things/panels'
-
 import {
     PUPPET_BENNETT_BEGIN,
     PUPPET_FAMILY_BEGIN,
@@ -164,6 +155,10 @@ export default [
                 [BACKPACK_BENNETT]: true,
                 [BACKPACK_SASHA]: true,
                 [BACKPACK_JEWISH_BOY]: true
+            },
+            [FLAT]: {
+                [DRIVING_HOUSE_LEFT]: true,
+                [DRIVING_HOUSE_RIGHT]: true
             },
             [PANEL]: {
                 [SCHOOLBUS_INTERIOR]: true,

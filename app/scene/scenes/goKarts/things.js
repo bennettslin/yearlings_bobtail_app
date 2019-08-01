@@ -3,7 +3,7 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-import { GO_KART_BACKDROP } from 'constants/scene/things/backdrops'
+import { DRIVING_BACKDROP } from 'constants/scene/things/backdrops'
 import { GO_KART_TRACK } from 'constants/scene/things/flats'
 import {
     GO_KART_EXTERIOR__LEFT,
@@ -12,7 +12,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [GO_KART_BACKDROP]: {
+        [DRIVING_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7
