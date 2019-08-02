@@ -18,7 +18,10 @@ import {
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR
 } from 'constants/scene/things/panels'
-import { INTERIOR_SHARED } from '../../shared'
+import {
+    INTERIOR_SHARED,
+    OAKLAND_COMMERCIAL_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -60,19 +63,15 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [DRIVING_HOUSE_LEFT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 4,
-                zHeight: 4
-            }
+            xPosition: 2.5,
+            scaleFactor: 0.6,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [DRIVING_HOUSE_RIGHT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 4,
-                zHeight: 4
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.6,
+            sharedStyle: OAKLAND_COMMERCIAL_SHARED
         }
     },
     [PANEL]: {

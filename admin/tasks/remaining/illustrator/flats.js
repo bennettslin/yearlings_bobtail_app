@@ -15,16 +15,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'drivingHouseLeft',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'drivingHouseRight',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'tennisCourt',
         workedHours: 0,
         neededHours: 1.5
