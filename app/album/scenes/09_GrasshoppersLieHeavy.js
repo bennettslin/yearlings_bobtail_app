@@ -7,7 +7,6 @@ import {
     FURNITURE,
     PANEL
 } from 'constants/scene'
-
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,
@@ -19,14 +18,12 @@ import {
     LIZ_GATE_STREET_KEY,
     BENNETT_GATE_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_WINTER,
     SEASON_LOVE
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     BENNETT_LIZ,
@@ -34,15 +31,12 @@ import {
     NESTOR,
     BENNETT_LIZ_REFLECTION
 } from '../../constants/scene/actors'
-
 import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
 } from '../../constants/scene/actors/instances/bennett'
-
 import { JOGGER } from '../../constants/scene/actors/instances/nestor'
-
 import {
     DISHROOM_LANCET,
     DATE_ENDING,
@@ -50,7 +44,6 @@ import {
     GATE_CODE,
     RUMPLED_LINENS
 } from '../../constants/scene/actors/instances/songs'
-
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -61,7 +54,6 @@ import {
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
 } from '../../constants/scene/actors/instances/bennettLiz'
-
 import {
     BUBBLE_SMALL__WAITING,
     BUBBLE_MEDIUM__WAITING,
@@ -70,13 +62,11 @@ import {
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING
 } from '../../constants/scene/things/bubbles'
-
 import {
     CODE_BOX,
     CLIPBOARD,
     PAINTING
 } from '../../constants/scene/things/cardboards'
-
 import {
     DISH_PILE,
     TRAY_PILE,
@@ -88,7 +78,6 @@ import {
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT
 } from '../../constants/scene/things/cutouts'
-
 import {
     NUDE_DRAWINGS,
     VASELINE,
@@ -97,7 +86,6 @@ import {
     BLOODY_TOWEL,
     BLOODY_TOWEL_REFLECTION
 } from '../../constants/scene/things/fixtures'
-
 import {
     BENNETT_PILLOW,
     BENNETT_BLANKET,
@@ -106,7 +94,6 @@ import {
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
 } from '../../constants/scene/things/furniture'
-
 import {
     CONVEYOR_BELT,
     DISHROOM_SINK,

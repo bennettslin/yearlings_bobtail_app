@@ -61,7 +61,16 @@ import {
     BUBBLE_SMALL__LIZ,
     BUBBLE_MEDIUM__LIZ,
     BUBBLE_LARGE__LIZ,
-    LIZ_THOUGHT
+    LIZ_THOUGHT,
+    BUBBLE_SMALL__DEATHBED,
+    BUBBLE_MEDIUM__DEATHBED,
+    BUBBLE_LARGE__DEATHBED,
+    BUBBLE_SMALL__TENNIS,
+    BUBBLE_MEDIUM__TENNIS,
+    BUBBLE_LARGE__TENNIS,
+    BUBBLE_SMALL__INVERSE,
+    BUBBLE_MEDIUM__INVERSE,
+    BUBBLE_LARGE__INVERSE
 } from 'constants/scene/things/bubbles'
 
 export default {
@@ -106,5 +115,14 @@ export default {
     [BUBBLE_SMALL__LIZ]: false,
     [BUBBLE_MEDIUM__LIZ]: false,
     [BUBBLE_LARGE__LIZ]: false,
-    [LIZ_THOUGHT]: false
+    [LIZ_THOUGHT]: false,
+    [BUBBLE_SMALL__DEATHBED]: false,
+    [BUBBLE_MEDIUM__DEATHBED]: false,
+    [BUBBLE_LARGE__DEATHBED]: false,
+    [BUBBLE_SMALL__TENNIS]: false,
+    [BUBBLE_MEDIUM__TENNIS]: false,
+    [BUBBLE_LARGE__TENNIS]: false,
+    [BUBBLE_SMALL__INVERSE]: false,
+    [BUBBLE_MEDIUM__INVERSE]: false,
+    [BUBBLE_LARGE__INVERSE]: false
 }

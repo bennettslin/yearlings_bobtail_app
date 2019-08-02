@@ -4811,5 +4811,10 @@ export default [
         taskName: `Change some bubbles to just show flats in front, add doors.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Add small bubble arrangements.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

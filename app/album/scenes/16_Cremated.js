@@ -1,68 +1,62 @@
 import {
     ACTOR,
     BACKDROP,
+    BUBBLE,
     CUTOUT,
     FIXTURE,
     FLAT,
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     MIRIAM,
     MIRIAM_BENNETT
 } from '../../constants/scene/actors'
-
 import {
     REMOVING_PANTS,
     INFIRM,
     DISPOSING_CONDOM
 } from '../../constants/scene/actors/instances/bennett'
-
 import {
     PERFUMING,
     TENNIS,
     REVERSING
 } from '../../constants/scene/actors/instances/miriam'
-
 import {
     COWGIRL,
     BLOWJOB
 } from '../../constants/scene/actors/instances/miriamBennett'
-
+import { GOLDEN_GATE_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
-    GOLDEN_GATE_BACKDROP
-} from '../../constants/scene/things/backdrops'
-
+    BUBBLE_SMALL__DEATHBED,
+    BUBBLE_MEDIUM__DEATHBED,
+    BUBBLE_LARGE__DEATHBED,
+    BUBBLE_SMALL__TENNIS,
+    BUBBLE_MEDIUM__TENNIS,
+    BUBBLE_LARGE__TENNIS
+} from 'constants/scene/things/bubbles'
 import {
     EL_CERRITO_TREE,
     IV_DRIP
 } from '../../constants/scene/things/cutouts'
-
-import {
-    HOSPITAL_RECORD_PLAYER
-} from '../../constants/scene/things/fixtures'
-
+import { HOSPITAL_RECORD_PLAYER } from '../../constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
     TENNIS_COURT
 } from '../../constants/scene/things/flats'
-
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
@@ -70,7 +64,6 @@ import {
     TENNIS_THOUGHT_PANEL,
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
-
 import { PUPPET_REATTA } from '../../constants/scene/things/puppets'
 
 export default [
@@ -181,6 +174,11 @@ export default [
                     instance: INFIRM
                 }
             },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__DEATHBED]: true,
+                [BUBBLE_MEDIUM__DEATHBED]: true,
+                [BUBBLE_LARGE__DEATHBED]: true
+            },
             [CUTOUT]: {
                 [IV_DRIP]: true
             },
@@ -211,6 +209,14 @@ export default [
                     description: 'serving in tennis',
                     instance: TENNIS
                 }
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__DEATHBED]: true,
+                [BUBBLE_MEDIUM__DEATHBED]: true,
+                [BUBBLE_LARGE__DEATHBED]: true,
+                [BUBBLE_SMALL__TENNIS]: true,
+                [BUBBLE_MEDIUM__TENNIS]: true,
+                [BUBBLE_LARGE__TENNIS]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true

@@ -10,7 +10,6 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     BEDROOM_KEY,
     BEDROOM_OPEN_KEY,
@@ -20,12 +19,10 @@ import {
     VAN_NUYS_LOCKERS_KEY,
     VAN_NUYS_QUAD_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_WINTER
 } from '../../scene/sky/keys'
-
 import {
     PRETEEN_BENNETT,
     MOTHER,
@@ -36,23 +33,17 @@ import {
     TRISTAN,
     CHRISTOPHER_BENNETT
 } from '../../constants/scene/actors'
-
 import {
     THROWING,
     NOODLING
 } from '../../constants/scene/actors/instances/andrew'
-
 import {
     GESTURING,
     SNACKING
 } from '../../constants/scene/actors/instances/brad'
-
 import { STARING } from '../../constants/scene/actors/instances/christopher'
-
 import { BLISSFUL_GUILTY } from '../../constants/scene/actors/instances/christopherBennett'
-
 import { ARGUING } from '../../constants/scene/actors/instances/mother'
-
 import {
     FEIGNING_SICK,
     SHAKEN,
@@ -60,28 +51,21 @@ import {
     WISTFUL,
     SHEEPISH
 } from '../../constants/scene/actors/instances/preteenBennett'
-
 import { POPULAR_GIRL } from '../../constants/scene/actors/instances/sasha'
-
 import { ASLEEP } from '../../constants/scene/actors/instances/songs'
-
 import { PRINCIPAL } from '../../constants/scene/actors/instances/tristan'
-
 import { SCHOOL_BACKDROP } from '../../constants/scene/things/backdrops'
-
 import {
     DOGS_SKETCH,
     SKETCHBOOK__DOGS,
     ESCAPE_POD_SKETCH,
     SKETCHBOOK__ESCAPE_POD
 } from '../../constants/scene/things/bubbles'
-
 import {
     BLOOM_COUNTY_POSTER,
     VAN_NUYS_LOGO,
     CORKBOARD
 } from '../../constants/scene/things/cardboards'
-
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
@@ -89,7 +73,6 @@ import {
     VAN_NUYS_PLANT__LOCKERS,
     VAN_NUYS_PLANT__QUAD
 } from '../../constants/scene/things/cutouts'
-
 import {
     CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
@@ -97,20 +80,16 @@ import {
     BEYONDER_ENVELOPE,
     THROWN_FRUIT
 } from '../../constants/scene/things/fixtures'
-
 import { BEDROOM_BUS } from '../../constants/scene/things/flats'
-
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
 } from '../../constants/scene/things/furniture'
-
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../constants/scene/things/panels'
-
 import {
     PCHELKA_MUSHKA_ROCKET,
     EARTH,

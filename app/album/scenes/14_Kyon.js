@@ -5,7 +5,6 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_OPEN_KEY,
@@ -13,23 +12,19 @@ import {
     LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
 } from '../../scene/sky/keys'
-
 import {
     LIZ,
     KHARI
 } from '../../constants/scene/actors'
-
 import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
 } from '../../constants/scene/actors/instances/khari'
-
 import {
     PETTING_SEATED,
     PETTING_STANDING,
@@ -39,7 +34,6 @@ import {
     NOT_HUNGRY,
     ASLEEP_COUCH
 } from '../../constants/scene/actors/instances/liz'
-
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
@@ -48,11 +42,8 @@ import {
     BUBBLE_LARGE__LIZ,
     LIZ_THOUGHT
 } from '../../constants/scene/things/bubbles'
-
 import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
-
 import { LIZ_COUCH } from '../../constants/scene/things/panels'
-
 import {
     OPAL_COUCH,
     OPAL_GAZING,

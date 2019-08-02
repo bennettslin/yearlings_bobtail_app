@@ -7,14 +7,12 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     TIME_DAWN,
@@ -23,57 +21,47 @@ import {
     TIME_AFTERNOON,
     SEASON_SPRING
 } from '../../scene/sky/keys'
-
 import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
 } from '../../constants/scene/actors'
-
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
     SINGING
 } from '../../constants/scene/actors/instances/youngBennett'
-
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING
 } from '../../constants/scene/actors/instances/anita'
-
 import {
     CURIOUS,
     SNICKERING
 } from '../../constants/scene/actors/instances/esther'
-
 import {
     NOHO_HOUSES_BACKDROP,
     SCHOOL_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
 import { JOHNNY_HORTON_ALBUM } from '../../constants/scene/things/cardboards'
-
 import {
     FIRE_HYDRANT,
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
     TOWEL_RACK
 } from '../../constants/scene/things/cutouts'
-
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL
 } from '../../constants/scene/things/fixtures'
-
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE
 } from '../../constants/scene/things/flats'
-
 import {
     ESTHER_SPEECH_PANEL,
     BATHTUB

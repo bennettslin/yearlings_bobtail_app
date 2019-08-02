@@ -8,7 +8,6 @@ import {
     FURNITURE,
     PANEL
 } from 'constants/scene'
-
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
@@ -17,12 +16,10 @@ import {
     NOHO_HOUSES_KEY,
     CHANGELING_CAVE_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
 } from '../../scene/sky/keys'
-
 import {
     PRETEEN_BENNETT,
     WILLY,
@@ -33,41 +30,31 @@ import {
     HOWIE_WILLY,
     TOMER
 } from '../../constants/scene/actors'
-
 import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL
 } from '../../constants/scene/actors/instances/preteenBennett'
-
 import {
     COLLECTING,
     DUCKING
 } from '../../constants/scene/actors/instances/willy'
-
 import {
     STOOPING,
     COMFORTING
 } from '../../constants/scene/actors/instances/mother'
-
 import { ROARING } from '../../constants/scene/actors/instances/father'
-
 import {
     TANTRUM,
     SOBBING
 } from '../../constants/scene/actors/instances/christopher'
-
 import { REASSURING_ENCHANTED } from '../../constants/scene/actors/instances/christopherBennettWilly'
-
 import { GANGBANGER } from '../../constants/scene/actors/instances/songs'
-
 import {
     NOHO_HOUSES_BACKDROP,
     VALLEY_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
 import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
-
 import {
     OVERPASS_SIGN_BACK,
     PORCH_PLANT__LEFT,
@@ -75,13 +62,11 @@ import {
     FIRE_HYDRANT,
     CAMPFIRE
 } from '../../constants/scene/things/cutouts'
-
 import {
     SHOPPING_CART,
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
 } from '../../constants/scene/things/fixtures'
-
 import {
     VALLEY_FREEWAY,
     NOHO_HOUSE_LEFT,
@@ -89,12 +74,10 @@ import {
     FAMILY_HOUSE,
     BEDROOM_SIREN
 } from '../../constants/scene/things/flats'
-
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
 } from '../../constants/scene/things/furniture'
-
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,

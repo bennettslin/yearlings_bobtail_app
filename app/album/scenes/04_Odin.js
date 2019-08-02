@@ -7,7 +7,6 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY,
@@ -18,18 +17,15 @@ import {
     OCEAN_DEPTHS_KEY,
     OCEAN_FLOOR_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_OCEAN
 } from '../../scene/sky/keys'
-
 import {
     PRETEEN_BENNETT,
     SASHA_BENNETT
 } from '../../constants/scene/actors'
-
 import {
     MAT,
     STAIRS,
@@ -39,9 +35,7 @@ import {
     BUOY,
     OCEAN_FLOOR
 } from '../../constants/scene/actors/instances/preteenBennett'
-
 import { MERMAID } from '../../constants/scene/actors/instances/sashaBennett'
-
 import {
     TAIWAN_STAIRS_BACKDROP,
     TAIWAN_STREETS_BACKDROP,
@@ -50,7 +44,6 @@ import {
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR
 } from '../../constants/scene/things/backdrops'
-
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS,
@@ -67,15 +60,12 @@ import {
     BENNETT_MAT,
     ODIN_MAT
 } from '../../constants/scene/things/cardboards'
-
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
     YELLOW_TAPED_GRILL
 } from '../../constants/scene/things/cutouts'
-
 import { FRIDGE_DRAWINGS } from '../../constants/scene/things/fixtures'
-
 import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
@@ -85,7 +75,6 @@ import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
 } from '../../constants/scene/things/flats'
-
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR

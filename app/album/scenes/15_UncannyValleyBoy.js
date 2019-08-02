@@ -4,7 +4,6 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-
 import {
     BASEMENT_BED_KEY,
     BASEMENT_MAGIC_KEY,
@@ -12,7 +11,6 @@ import {
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
@@ -21,7 +19,6 @@ import {
     SEASON_PRESENT,
     SEASON_FUTURE
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     BENNETT_FATHER,
@@ -35,45 +32,35 @@ import {
     MIRIAM_STEPHANIE,
     STEPHANIE
 } from '../../constants/scene/actors'
-
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
 } from '../../constants/scene/actors/instances/estherMother'
-
 import {
     ACCUSATORY,
     REELING
 } from '../../constants/scene/actors/instances/father'
-
 import { JOKING_LAUGHING } from '../../constants/scene/actors/instances/khariLiz'
-
 import { PETTING_SEATED } from '../../constants/scene/actors/instances/liz'
-
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF
 } from '../../constants/scene/actors/instances/miriamBennett'
-
 import { MISCHIEVOUS_BANJO } from '../../constants/scene/actors/instances/miriamStephanie'
 import { COMFORTING_HUMILIATED } from '../../constants/scene/actors/instances/sashaBennett'
-
 import { BENNETT_RECORDING } from '../../constants/scene/actors/instances/stephanie'
-
 import {
     ASLEEP,
     PAST,
     PRESENT,
     FUTURE
 } from '../../constants/scene/actors/instances/songs'
-
 import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
     FOLIAGE_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
@@ -81,7 +68,6 @@ import {
     RECORDING_BEERS,
     CRACKED_PICTURE
 } from '../../constants/scene/things/fixtures'
-
 import {
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,

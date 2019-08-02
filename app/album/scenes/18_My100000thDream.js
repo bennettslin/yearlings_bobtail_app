@@ -1,13 +1,13 @@
 import {
     ACTOR,
     BACKDROP,
+    BUBBLE,
     CUTOUT,
     FIXTURE,
     FLAT,
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     EL_TORITO_KEY,
     PAMPAS_KEY,
@@ -15,13 +15,11 @@ import {
     CLIFF_KEY,
     CLIFF_DEATHBED_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     BENNETT_LIZ,
@@ -31,27 +29,27 @@ import {
     MIRIAM,
     AMY
 } from '../../constants/scene/actors'
-
 import { DOCTOR } from '../../constants/scene/actors/instances/amy'
-
 import {
     EL_TORITO,
     GOPI
 } from '../../constants/scene/actors/instances/songs'
-
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
 } from '../../constants/scene/actors/instances/bennettLiz'
-
 import {
     PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
+import {
+    BUBBLE_SMALL__INVERSE,
+    BUBBLE_MEDIUM__INVERSE,
+    BUBBLE_LARGE__INVERSE
+} from 'constants/scene/things/bubbles'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT,
@@ -59,9 +57,7 @@ import {
     IV_DRIP,
     CLIFF_TREE
 } from '../../constants/scene/things/cutouts'
-
 import { HOSPITAL_RECORD_PLAYER } from '../../constants/scene/things/fixtures'
-
 import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
@@ -70,13 +66,11 @@ import {
     FOREBODING_TREES__MIDDLE,
     FOREBODING_TREES__FAR
 } from '../../constants/scene/things/flats'
-
 import {
     WEDDING_PLATFORM,
     INVERSE_THOUGHT_PANEL,
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
-
 import { PUPPET_KHARI_LIZ } from '../../constants/scene/things/puppets'
 
 export default [
@@ -224,6 +218,11 @@ export default [
                         instance: DOCTOR
                     }
                 }
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__INVERSE]: true,
+                [BUBBLE_MEDIUM__INVERSE]: true,
+                [BUBBLE_LARGE__INVERSE]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true

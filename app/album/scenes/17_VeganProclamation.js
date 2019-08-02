@@ -8,7 +8,6 @@ import {
     PANEL,
     PUPPET
 } from 'constants/scene'
-
 import {
     CLUB_FAR_KEY,
     LIZ_BED_OPEN_PHONE_KEY,
@@ -16,13 +15,11 @@ import {
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_WINTER,
     SEASON_LOVE
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     KHARI_LIZ,
@@ -33,7 +30,6 @@ import {
     WADE,
     KHARI_LIZ_REFLECTION
 } from '../../constants/scene/actors'
-
 import {
     CAMPUS_ASHAMED,
     SHOW_ANNOYED,
@@ -41,20 +37,16 @@ import {
     BROKEN_HEARTED,
     DEMONSTRATION
 } from '../../constants/scene/actors/instances/bennett'
-
 import {
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION
 } from '../../constants/scene/actors/instances/khariLiz'
-
 import {
     GREETING,
     PROTESTER
 } from '../../constants/scene/actors/instances/songs'
-
 import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
-
 import {
     SIGNPOST,
     BANCROFT_SHRUBS,
@@ -65,7 +57,6 @@ import {
     WALL_SPEAKER_FRONT__RIGHT,
     DUMPSTER
 } from '../../constants/scene/things/cutouts'
-
 import {
     ASH_CAN,
     STAGE_MIC_FAR,
@@ -73,20 +64,16 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
 } from '../../constants/scene/things/fixtures'
-
 import { CAMPANILE } from '../../constants/scene/things/flats'
-
 import {
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
 } from '../../constants/scene/things/furniture'
-
 import {
     CROWD_BACK,
     LIZ_BED,
     PHONE_CALL_PANEL
 } from '../../constants/scene/things/panels'
-
 import {
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,

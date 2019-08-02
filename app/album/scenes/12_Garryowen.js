@@ -7,19 +7,16 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     LIZ_COUCH_KEY,
     BASEMENT_COUCH_KEY,
     CLUB_FRONT_KEY,
     OAKLAND_VOLKSWAGEN_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     BENNETT_LIZ,
@@ -29,54 +26,43 @@ import {
     TRISTAN,
     NESTOR
 } from '../../constants/scene/actors'
-
 import {
     CHUCKLING,
     SMIRKING
 } from '../../constants/scene/actors/instances/ana'
-
 import { DROPPING_MEATS } from '../../constants/scene/actors/instances/bennett'
-
 import {
     BRUSH_OFF,
     CELIBATE_FREEZING
 } from '../../constants/scene/actors/instances/bennettLiz'
-
 import { NOOGIE } from '../../constants/scene/actors/instances/miriamTristan'
 import { INJURED } from '../../constants/scene/actors/instances/nestor'
 import { PUNCHING } from '../../constants/scene/actors/instances/tristan'
-
 import {
     GREETING,
     LEAVING_CRUMBLED
 } from '../../constants/scene/actors/instances/songs'
-
 import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
-
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
 } from '../../constants/scene/things/cardboards'
-
 import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
-
 import {
     GUITAR,
     DRUMKIT,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER
 } from '../../constants/scene/things/fixtures'
-
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
 } from '../../constants/scene/things/flats'
-
 import {
     VOLKSWAGEN,
     WIDE_COUCH__BENNETT,

@@ -4,20 +4,17 @@ import {
     FIXTURE,
     PANEL
 } from 'constants/scene'
-
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
     LIZ_BED_KEY,
     CLUB_LOADING
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_INDOOR,
     SEASON_SUMMER
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     MARA,
@@ -32,24 +29,18 @@ import {
     BENNETT_REFLECTION,
     LIZ_REFLECTION
 } from '../../constants/scene/actors'
-
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
 } from '../../constants/scene/actors/instances/bennett'
-
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
 } from '../../constants/scene/actors/instances/liz'
-
 import { SHANE_SPILLING } from '../../constants/scene/actors/instances/tomer'
-
 import { WATCHING } from '../../constants/scene/actors/instances/wade'
-
 import { SQUEEZING } from '../../constants/scene/actors/instances/amyStephanie'
-
 import {
     PERFORMING,
     FLIRTING,
@@ -57,14 +48,12 @@ import {
     MINGLING,
     WAITING
 } from '../../constants/scene/actors/instances/songs'
-
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE__CROWD,
     WALL_SPEAKER_SIDE__STAGE
 } from '../../constants/scene/things/cutouts'
-
 import {
     STAGE_MIC_SIDE__CROWD,
     STAGE_MIC_SIDE__STAGE,
@@ -77,7 +66,6 @@ import {
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION
 } from '../../constants/scene/things/fixtures'
-
 import {
     CROWD_SIDE,
     LIZ_BED
