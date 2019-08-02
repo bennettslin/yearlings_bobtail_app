@@ -23,7 +23,7 @@ import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex'
 // import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch'
 import campanile from 'assets/svgs/flats/campanile'
 import goKartTrack from 'assets/svgs/flats/goKartTrack'
-// import royceHall from 'assets/svgs/flats/royceHall'
+import royceHall from 'assets/svgs/flats/royceHall'
 import cemeteryHillsLeft from 'assets/svgs/flats/cemeteryHillsLeft'
 import cemeteryHillsRight from 'assets/svgs/flats/cemeteryHillsRight'
 import oaklandHouseLeft from 'assets/svgs/flats/oaklandHouseLeft'
@@ -142,7 +142,7 @@ export default {
     [CAMPUS_BUILDING_TALL__BERKELEY]: campusBuildingTall,
     [CAMPUS_BUILDING_WIDE__BERKELEY]: campusBuildingWide,
     [GO_KART_TRACK]: goKartTrack,
-    [ROYCE_HALL]: false,
+    [ROYCE_HALL]: royceHall,
     [CEMETERY_HILLS_LEFT]: cemeteryHillsLeft,
     [CEMETERY_HILLS_RIGHT]: cemeteryHillsRight,
     [OAKLAND_HOUSE_LEFT]: oaklandHouseLeft,

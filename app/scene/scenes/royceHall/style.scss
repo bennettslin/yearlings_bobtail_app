@@ -1,13 +1,32 @@
+.royceHall {
+    .roofDark { fill: #767865; }
+    .roofLight { fill: #878771; }
+    .brickDark { fill: #b26752; }
+    .brickLight { fill: #c7735c; }
+    .wallFront { fill: #acad91; }
+    .trimDark { fill: #979980; }
+    .trimLight { fill: #b8ba9c; }
+    .brickDarker { fill: #9c5a48; }
+    .brickDarkest { fill: #854d3d; }
+    .slit { fill: #47453e; }
+    .wallInner { fill: #717360; }
+    .doorFrame { fill: #626352; }
+    .door { fill: #595042; }
+    .doorBorderLine { stroke: #302b24; }
+    .windowOuter { fill: #7ba1ad; }
+    .windowOuterDisplayLine { stroke: #3d425e; }
+    .windowInner { fill: #6a8b96; }
+    .windowInnerDisplayLine { stroke: #282b3d; }
+    .stepInner { fill: #717994; }
+    .stepOuter { fill: #60677d; }
+    .trimOrnamentInner { fill: #8f917a; }
+    .trimOrnamentOuter { fill: #a9ab90; }
+    .brickOrnament { fill: #ba6c56; }
+    .stainedGlass { fill: #5c6896; }
+}
+
 .uclaTree {
-    .trunk {
-        fill: #564329;
-    }
-
-    .leavesBack {
-        fill: #4b873e;
-    }
-
-    .leavesFront {
-        fill: #599950;
-    }
+    .trunk { fill: #564329; }
+    .leavesBack { fill: #4b873e; }
+    .leavesFront { fill: #599950; }
 }

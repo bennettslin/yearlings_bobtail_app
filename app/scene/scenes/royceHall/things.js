@@ -13,23 +13,20 @@ const ARRANGEMENTS_THINGS = {
         [UCLA_TREE__LEFT]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.45
+            scaleFactor: 0.5,
+            flipHorizontal: true
         },
         [UCLA_TREE__RIGHT]: {
             yIndex: 1,
             xPosition: 10,
-            scaleFactor: 0.45,
-            flipHorizontal: true
+            scaleFactor: 0.5
         }
     },
     [FLAT]: {
         [ROYCE_HALL]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 3
-            }
+            yIndex: 2,
+            xPosition: 5.5,
+            scaleFactor: 0.5
         }
     }
 }
