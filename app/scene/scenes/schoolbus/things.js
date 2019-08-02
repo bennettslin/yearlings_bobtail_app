@@ -63,13 +63,13 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [DRIVING_HOUSE_LEFT]: {
             yIndex: 1,
-            xPosition: 2.5,
+            xPosition: 2,
             scaleFactor: 0.6,
             sharedStyle: OAKLAND_COMMERCIAL_SHARED
         },
         [DRIVING_HOUSE_RIGHT]: {
             yIndex: 1,
-            xPosition: 8.5,
+            xPosition: 9,
             scaleFactor: 0.6,
             sharedStyle: OAKLAND_COMMERCIAL_SHARED
         }

@@ -1,7 +1,7 @@
 # Various panel type bubbles
 
 * schoolbusThought
-    * TODO: Bring schoolbus and Saturn one cube closer, add driving house flats.
+    * TODO: Bring schoolbus and Saturn one cube closer, flats on curb.
 * tetherballThought
 * bennettCouchThoughtBackdrop
     * TODO: Reduce.
@@ -18,6 +18,7 @@
 
 # TODO
 * Doors and windows
+* Car seats
 
 # TODO
 * Make ceiling cubes disappear
