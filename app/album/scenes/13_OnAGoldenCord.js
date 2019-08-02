@@ -1,10 +1,10 @@
 import {
     ACTOR,
     BACKDROP,
+    BUBBLE,
     CUTOUT,
     FLAT
 } from 'constants/scene'
-
 import {
     LIZ_COUCH_THOUGHT_KEY,
     OAKLAND_HOUSES_KEY,
@@ -12,13 +12,11 @@ import {
     OAKLAND_COMMERCIAL_KEY,
     OAKLAND_PUBLIC_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_AUTUMN,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
-
 import {
     YOUNG_BENNETT,
     BENNETT,
@@ -30,43 +28,38 @@ import {
     AMY_NESTOR_TOMER,
     STEPHANIE
 } from '../../constants/scene/actors'
-
 import { OFFICER } from '../../constants/scene/actors/instances/amyNestorTomer'
-
 import {
     CORD_SIDE,
     CORD_REAR
 } from '../../constants/scene/actors/instances/bennett'
-
 import {
     AWKWARD_CONSOLATION
 } from '../../constants/scene/actors/instances/bennettLiz'
-
 import {
     HORSING,
     DRYING_TEARS
 } from '../../constants/scene/actors/instances/bennettStephanie'
-
 import {
     BENNETT_DEFIANT
 } from '../../constants/scene/actors/instances/stephanie'
-
 import { CROSSING_GUARD } from '../../constants/scene/actors/instances/willy'
-
 import { YOUNG_CHILD } from '../../constants/scene/actors/instances/songs'
-
 import {
     OAKLAND_SIDE_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
+import {
+    BUBBLE_SMALL__LIZ_COUCH,
+    BUBBLE_MEDIUM__LIZ_COUCH,
+    BUBBLE_LARGE__LIZ_COUCH
+} from 'constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR
 } from '../../constants/scene/things/cutouts'
-
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT,
@@ -126,6 +119,11 @@ export default [
             },
             [BACKDROP]: {
                 [LIZ_COUCH_THOUGHT_BACKDROP]: true
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__LIZ_COUCH]: true,
+                [BUBBLE_MEDIUM__LIZ_COUCH]: true,
+                [BUBBLE_LARGE__LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

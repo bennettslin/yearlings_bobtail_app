@@ -1,95 +1,43 @@
+.bubbleSmall {
+    .bubble { fill: #eee; }
+    .bubbleFoldLine { stroke: #466; }
+}
+
+.bubbleMedium {
+    .bubble { fill: #eee; }
+    .bubbleFoldLine { stroke: #466; }
+}
+
 .drivingHouseLeft {
-    .wallSide {
-        fill: #8f759b;
-    }
-
-    .wallFront {
-        fill: #ab8bba;
-    }
-
+    .wallSide { fill: #8f759b; }
+    .wallFront { fill: #ab8bba; }
     .leaves { fill: #376e37; }
     .trunk { fill: #8b7d56; }
 }
 
 .drivingHouseRight {
-    .wallSide {
-        fill: #8f759b;
-    }
-
-    .wallFront {
-        fill: #ab8bba;
-    }
-
+    .wallSide { fill: #8f759b; }
+    .wallFront { fill: #ab8bba; }
     .leaves { fill: #376e37; }
     .trunk { fill: #8b7d56; }
 }
 
 .schoolbusExterior {
-    .chassis {
-        fill: #330;
-    }
-
-    .body {
-        fill: #cc6;
-    }
-
-    .bodyOverlapLine {
-        stroke: #aa4;
-    }
-
-    .bodyCreaseLine {
-        stroke: #bb5;
-    }
-
-    .tire {
-        fill: #444;
-    }
-
-    .hubcap {
-        fill: #999;
-    }
-
-    .reflection {
-        fill: #ccc;
-    }
-
-    .trim {
-        fill: #555;
-    }
-
-    .door {
-        fill: #666;
-    }
-
-    .doorBorderLine {
-        stroke: #1a1a1a;
-    }
-
-    .window {
-        fill: #699;
-    }
-
-    .windshield {
-        fill: #9cc;
-    }
-
-    .roof {
-        fill: #fff;
-    }
-
-    .stopLight {
-        fill: #f33;
-    }
-
-    .visor {
-        fill: #666;
-    }
-
-    .visorOverlapLine {
-        stroke: #333;
-    }
-
-    .turnLight {
-        fill: #c93;
-    }
+    .chassis { fill: #330; }
+    .body { fill: #cc6; }
+    .bodyOverlapLine { stroke: #aa4; }
+    .bodyCreaseLine { stroke: #bb5; }
+    .tire { fill: #444; }
+    .hubcap { fill: #999; }
+    .reflection { fill: #ccc; }
+    .trim { fill: #555; }
+    .door { fill: #666; }
+    .doorBorderLine { stroke: #1a1a1a; }
+    .window { fill: #699; }
+    .windshield { fill: #9cc; }
+    .roof { fill: #fff; }
+    .stopLight { fill: #f33; }
+    .visor { fill: #666; }
+    .visorOverlapLine { stroke: #333; }
+    .turnLight { fill: #c93; }
 }

@@ -1,10 +1,16 @@
 import {
     BACKDROP,
+    BUBBLE,
     CARDBOARD,
     FIXTURE,
     PANEL
 } from 'constants/scene'
 import { BENNETT_COUCH_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
+import {
+    BUBBLE_SMALL__BENNETT_COUCH,
+    BUBBLE_MEDIUM__BENNETT_COUCH,
+    BUBBLE_LARGE__BENNETT_COUCH
+} from 'constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER,
@@ -67,6 +73,32 @@ const ARRANGEMENTS_THINGS = {
 export const THINGS_BENNETT_COUCH_OPINION = {
     [BACKDROP]: {
         [BENNETT_COUCH_THOUGHT_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 8
+            }
+        }
+    },
+    [BUBBLE]: {
+        [BUBBLE_SMALL__BENNETT_COUCH]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 8
+            }
+        },
+        [BUBBLE_MEDIUM__BENNETT_COUCH]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 8
+            }
+        },
+        [BUBBLE_LARGE__BENNETT_COUCH]: {
             yIndex: 0,
             arrangement: {
                 xPosition: 5.5,

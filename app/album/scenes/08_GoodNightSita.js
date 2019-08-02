@@ -34,7 +34,11 @@ import {
     DATE_ENDED
 } from '../../constants/scene/actors/instances/songs'
 import { DRIVING_BACKDROP } from '../../constants/scene/things/backdrops'
-import { GO_KART_THOUGHT } from '../../constants/scene/things/bubbles'
+import {
+    BUBBLE_SMALL__GO_KART,
+    BUBBLE_MEDIUM__GO_KART,
+    GO_KART_THOUGHT
+} from '../../constants/scene/things/bubbles'
 import {
     MUSEUM_DISPLAY,
     SANDBAGS,
@@ -198,7 +202,9 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [GO_KART_THOUGHT]: true
+                [GO_KART_THOUGHT]: true,
+                [BUBBLE_SMALL__GO_KART]: true,
+                [BUBBLE_MEDIUM__GO_KART]: true
             },
             [CUTOUT]: {
                 [TRAFFIC_LIGHT]: true

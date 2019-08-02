@@ -1,10 +1,16 @@
 import {
     BACKDROP,
+    BUBBLE,
     FIXTURE,
     FLAT,
     PANEL
 } from 'constants/scene'
 import { SCHOOLBUS_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
+import {
+    BUBBLE_SMALL__SCHOOLBUS,
+    BUBBLE_MEDIUM__SCHOOLBUS,
+    BUBBLE_LARGE__SCHOOLBUS
+} from 'constants/scene/things/bubbles'
 import {
     BACKPACK_BENNETT,
     BACKPACK_SASHA,
@@ -26,6 +32,32 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [SCHOOLBUS_THOUGHT_BACKDROP]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 7
+            }
+        }
+    },
+    [BUBBLE]: {
+        [BUBBLE_SMALL__SCHOOLBUS]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 7
+            }
+        },
+        [BUBBLE_MEDIUM__SCHOOLBUS]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 7
+            }
+        },
+        [BUBBLE_LARGE__SCHOOLBUS]: {
             yIndex: 0,
             arrangement: {
                 xPosition: 5.5,

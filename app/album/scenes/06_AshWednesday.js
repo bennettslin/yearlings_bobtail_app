@@ -1,13 +1,13 @@
 import {
     ACTOR,
     BACKDROP,
+    BUBBLE,
     CARDBOARD,
     CUTOUT,
     FIXTURE,
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     BENNETT_COUCH_THOUGHT_KEY,
     COURTYARD_KEY,
@@ -15,22 +15,18 @@ import {
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_SPRING,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     CATHERINE,
     AMY,
     WADE
 } from '../../constants/scene/actors'
-
 import { SMOKER } from '../../constants/scene/actors/instances/amy'
-
 import {
     BREAKUP_DEJECTED,
     SOLICITING_OPINION,
@@ -38,26 +34,26 @@ import {
     CATHOLIC_IDEA,
     PIOUS
 } from '../../constants/scene/actors/instances/bennett'
-
 import {
     WEEPING,
     QUIPPING,
     PUZZLED
 } from '../../constants/scene/actors/instances/catherine'
-
 import { CATHOLIC_GUY } from '../../constants/scene/actors/instances/wade'
-
 import {
     BENNETT_COUCH_THOUGHT_BACKDROP,
     FOLIAGE_BACKDROP,
     OAKLAND_SIDE_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
+import {
+    BUBBLE_SMALL__BENNETT_COUCH,
+    BUBBLE_MEDIUM__BENNETT_COUCH,
+    BUBBLE_LARGE__BENNETT_COUCH
+} from 'constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER
 } from '../../constants/scene/things/cardboards'
-
 import {
     RECYCLABLES,
     BERKELEY_LAMPPOST,
@@ -67,13 +63,11 @@ import {
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE
 } from '../../constants/scene/things/cutouts'
-
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     ASH_CAN
 } from '../../constants/scene/things/fixtures'
-
 import {
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
@@ -81,7 +75,6 @@ import {
     CAMPUS_BUILDING_TALL__BERKELEY,
     CAMPUS_BUILDING_WIDE__BERKELEY
 } from '../../constants/scene/things/flats'
-
 import {
     WIDE_COUCH__BENNETT,
     WIDE_ARMREST__BENNETT_LEFT,
@@ -129,6 +122,11 @@ export default [
             },
             [BACKDROP]: {
                 [BENNETT_COUCH_THOUGHT_BACKDROP]: true
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__BENNETT_COUCH]: true,
+                [BUBBLE_MEDIUM__BENNETT_COUCH]: true,
+                [BUBBLE_LARGE__BENNETT_COUCH]: true
             },
             [CARDBOARD]: {
                 [POLICE_ALBUM]: true,

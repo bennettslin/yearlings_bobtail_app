@@ -33,11 +33,17 @@ import { INDIGNANT } from '../../constants/scene/actors/instances/sasha'
 import {
     TAIWAN_MOUNTAINS_BACKDROP,
     SCHOOLBUS_THOUGHT_BACKDROP,
-    VAN_NUYS_THOUGHT_BACKDROP
+    TETHERBALL_THOUGHT_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
+    BUBBLE_SMALL__SCHOOLBUS,
+    BUBBLE_MEDIUM__SCHOOLBUS,
+    BUBBLE_LARGE__SCHOOLBUS,
+    BUBBLE_SMALL__TETHERBALL,
+    BUBBLE_MEDIUM__TETHERBALL,
+    BUBBLE_LARGE__TETHERBALL,
     APART_SKETCH,
     SKETCHBOOK__APART
 } from '../../constants/scene/things/bubbles'
@@ -151,6 +157,11 @@ export default [
             [BACKDROP]: {
                 [SCHOOLBUS_THOUGHT_BACKDROP]: true
             },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__SCHOOLBUS]: true,
+                [BUBBLE_MEDIUM__SCHOOLBUS]: true,
+                [BUBBLE_LARGE__SCHOOLBUS]: true
+            },
             [FIXTURE]: {
                 [BACKPACK_BENNETT]: true,
                 [BACKPACK_SASHA]: true,
@@ -190,7 +201,12 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VAN_NUYS_THOUGHT_BACKDROP]: true
+                [TETHERBALL_THOUGHT_BACKDROP]: true
+            },
+            [BUBBLE]: {
+                [BUBBLE_SMALL__TETHERBALL]: true,
+                [BUBBLE_MEDIUM__TETHERBALL]: true,
+                [BUBBLE_LARGE__TETHERBALL]: true
             },
             [CUTOUT]: {
                 [CAMPUS_TREE_SINGLE__TETHERBALL]: true,

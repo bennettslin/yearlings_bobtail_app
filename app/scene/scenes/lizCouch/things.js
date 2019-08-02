@@ -7,6 +7,9 @@ import {
 } from 'constants/scene'
 import { LIZ_COUCH_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
+    BUBBLE_SMALL__LIZ_COUCH,
+    BUBBLE_MEDIUM__LIZ_COUCH,
+    BUBBLE_LARGE__LIZ_COUCH,
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     BUBBLE_SMALL__LIZ,
@@ -41,6 +44,32 @@ export const THINGS_LIZ_COUCH_GOLDEN = {
                 xPosition: 5.5,
                 xWidth: 10,
                 zHeight: 4
+            }
+        }
+    },
+    [BUBBLE]: {
+        [BUBBLE_SMALL__LIZ_COUCH]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 8
+            }
+        },
+        [BUBBLE_MEDIUM__LIZ_COUCH]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 8
+            }
+        },
+        [BUBBLE_LARGE__LIZ_COUCH]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 10,
+                zHeight: 8
             }
         }
     }

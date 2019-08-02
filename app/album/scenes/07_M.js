@@ -8,7 +8,6 @@ import {
     FLAT,
     PANEL
 } from 'constants/scene'
-
 import {
     BENNETT_COUCH_KEY,
     CLUB_FRONT_KEY,
@@ -16,12 +15,10 @@ import {
     CINEMA_KEY,
     CINEMA_STREET_KEY
 } from '../../constants/scene/scenes'
-
 import {
     TIME_ANYTIME,
     SEASON_SUMMER
 } from '../../scene/sky/keys'
-
 import {
     BENNETT,
     MARA,
@@ -33,9 +30,7 @@ import {
     MIRIAM,
     STEPHANIE
 } from '../../constants/scene/actors'
-
 import { SQUATTING } from '../../constants/scene/actors/instances/ana'
-
 import {
     PONDERING,
     COUCH_READING,
@@ -45,31 +40,24 @@ import {
     WONDERING_BABY,
     MERRILY_DERANGED
 } from '../../constants/scene/actors/instances/bennett'
-
 import {
     USHER_WAITING,
     USHER_LOOKING
 } from '../../constants/scene/actors/instances/howie'
-
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
 } from '../../constants/scene/actors/instances/miriam'
-
 import { BENNETT_KEYBOARD } from '../../constants/scene/actors/instances/stephanie'
-
 import { SHANE_BUYING } from '../../constants/scene/actors/instances/tomer'
-
 import {
     FLIRTING,
     EATING
 } from '../../constants/scene/actors/instances/songs'
-
 import {
     OAKLAND_FRONT_BACKDROP,
     FOLIAGE_BACKDROP
 } from '../../constants/scene/things/backdrops'
-
 import {
     BUBBLE_SMALL__CINEMA,
     BUBBLE_MEDIUM__CINEMA,
@@ -77,7 +65,6 @@ import {
     CINEMA_THOUGHT_RECORDING,
     CINEMA_THOUGHT_BUYING
 } from '../../constants/scene/things/bubbles'
-
 import {
     TELEVISION_ALBUM,
     LEONARD_COHEN_POSTER,
@@ -90,14 +77,12 @@ import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
 } from '../../constants/scene/things/cardboards'
-
 import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
-
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
@@ -112,14 +97,12 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../constants/scene/things/fixtures'
-
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
 } from '../../constants/scene/things/flats'
-
 import {
     WIDE_COUCH__BENNETT,
     WIDE_ARMREST__BENNETT_LEFT,
