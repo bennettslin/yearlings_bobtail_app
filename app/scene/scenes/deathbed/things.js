@@ -27,11 +27,8 @@ const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
         [THOUGHT_MEDIUM]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 8,
-                zHeight: 6
-            }
+            xPosition: 4,
+            scaleFactor: 0.5
         }
     },
     [CUTOUT]: {
@@ -112,11 +109,8 @@ export const THINGS_DEATHBED_CREMATED = {
         },
         [THOUGHT_SMALL]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 4
-            }
+            xPosition: 9,
+            scaleFactor: 0.5
         }
     },
     [FLAT]: {

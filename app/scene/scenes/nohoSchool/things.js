@@ -26,11 +26,8 @@ const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
         [ESTHER_SPEECH]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 5
-            }
+            xPosition: 9,
+            scaleFactor: 0.5
         }
     },
     [CUTOUT]: {
@@ -62,7 +59,7 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [NOHO_SCHOOLHOUSE]: {
             yIndex: 1,
-            xPosition: 5,
+            xPosition: 3,
             scaleFactor: 0.65
         }
     }

@@ -1,4 +1,4 @@
-// import estherSpeech from 'assets/svgs/bubbles/estherSpeech'
+import estherSpeech from 'assets/svgs/bubbles/estherSpeech'
 // import togetherSketch from 'assets/svgs/bubbles/togetherSketch'
 // import apartSketch from 'assets/svgs/bubbles/apartSketch'
 // import dogsSketch from 'assets/svgs/bubbles/dogsSketch'
@@ -7,7 +7,7 @@ import sketchbook from 'assets/svgs/bubbles/sketchbook'
 import bubbleSmall from 'assets/svgs/bubbles/bubbleSmall'
 import bubbleMedium from 'assets/svgs/bubbles/bubbleMedium'
 // import bubbleLarge from 'assets/svgs/bubbles/bubbleLarge'
-// import thoughtLarge from 'assets/svgs/bubbles/thoughtLarge'
+import thoughtLarge from 'assets/svgs/bubbles/thoughtLarge'
 // import cinemaThoughtRecording from 'assets/svgs/bubbles/cinemaThoughtRecording'
 // import cinemaThoughtBuying from 'assets/svgs/bubbles/cinemaThoughtBuying'
 import goKartThought from 'assets/svgs/bubbles/goKartThought'
@@ -20,8 +20,8 @@ import pharmacyCel from 'assets/svgs/bubbles/pharmacyCel'
 // import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
 // import lizDefenceSpeech from 'assets/svgs/bubbles/lizDefenceSpeech'
 // import lizThought from 'assets/svgs/bubbles/lizThought'
-// import thoughtMedium from 'assets/svgs/bubbles/thoughtMedium'
-// import thoughtSmall from 'assets/svgs/bubbles/thoughtSmall'
+import thoughtMedium from 'assets/svgs/bubbles/thoughtMedium'
+import thoughtSmall from 'assets/svgs/bubbles/thoughtSmall'
 
 import {
     ESTHER_SPEECH,
@@ -83,13 +83,13 @@ import {
 } from 'constants/scene/things/bubbles'
 
 export default {
-    [ESTHER_SPEECH]: false,
+    [ESTHER_SPEECH]: estherSpeech,
     [TOGETHER_SKETCH]: false,
     [SKETCHBOOK__TOGETHER]: sketchbook,
     [BUBBLE_SMALL__SCHOOLBUS]: false,
     [BUBBLE_MEDIUM__SCHOOLBUS]: false,
     [BUBBLE_LARGE__SCHOOLBUS]: false,
-    [THOUGHT_LARGE]: false,
+    [THOUGHT_LARGE]: thoughtLarge,
     [BUBBLE_SMALL__TETHERBALL]: false,
     [BUBBLE_MEDIUM__TETHERBALL]: false,
     [BUBBLE_LARGE__TETHERBALL]: false,
@@ -131,11 +131,11 @@ export default {
     [BUBBLE_SMALL__DEATHBED]: false,
     [BUBBLE_MEDIUM__DEATHBED]: false,
     [BUBBLE_LARGE__DEATHBED]: false,
-    [THOUGHT_MEDIUM]: false,
+    [THOUGHT_MEDIUM]: thoughtMedium,
     [BUBBLE_SMALL__TENNIS]: false,
     [BUBBLE_MEDIUM__TENNIS]: false,
     [BUBBLE_LARGE__TENNIS]: false,
-    [THOUGHT_SMALL]: false,
+    [THOUGHT_SMALL]: thoughtSmall,
     [BUBBLE_SMALL__INVERSE]: false,
     [BUBBLE_MEDIUM__INVERSE]: false,
     [BUBBLE_LARGE__INVERSE]: false

@@ -56,11 +56,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [THOUGHT_LARGE]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.6
         }
     },
     [FIXTURE]: {
