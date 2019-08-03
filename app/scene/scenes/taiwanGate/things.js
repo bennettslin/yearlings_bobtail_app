@@ -10,7 +10,7 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
 } from 'constants/scene/things/flats'
-import { BENNETT_ODIN_SHARED } from '../../shared'
+import { BENNETT_ODIN_SHARED, TAIWAN_HOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -35,17 +35,20 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_HOUSES_CENTRE]: {
             yIndex: 1,
             xPosition: 7,
-            scaleFactor: 0.45
+            scaleFactor: 0.45,
+            sharedStyle: TAIWAN_HOUSE_SHARED
         },
         [TAIWAN_HOUSE_FAR]: {
             yIndex: 1,
             xPosition: 10.25,
-            scaleFactor: 0.45
+            scaleFactor: 0.45,
+            sharedStyle: TAIWAN_HOUSE_SHARED
         },
         [TAIWAN_HOUSE_NEAR]: {
             yIndex: 2,
             xPosition: 11.25,
-            scaleFactor: 0.5
+            scaleFactor: 0.5,
+            sharedStyle: TAIWAN_HOUSE_SHARED
         }
     }
 }

@@ -9,7 +9,10 @@ import {
     ODIN_SHORE
 } from 'constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from 'constants/scene/things/flats'
-import { BENNETT_ODIN_SHARED } from '../../shared'
+import {
+    BENNETT_ODIN_SHARED,
+    TAIWAN_HOUSE_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -37,7 +40,8 @@ const ARRANGEMENTS_THINGS = {
         [RICKSHAW_TOWN]: {
             yIndex: 1,
             xPosition: 9.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.6,
+            sharedStyle: TAIWAN_HOUSE_SHARED
         }
     }
 }

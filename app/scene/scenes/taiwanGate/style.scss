@@ -1,223 +1,58 @@
 .taiwanHousesCentre {
-    .wallSide {
-        fill: #a29d7b;
-    }
-
-    .roofSide {
-        fill: #8f6750;
-    }
-
-    .wallFront {
-        fill: #b9b28d;
-    }
-
-    .roofTop {
-        fill: #a3755c;
-    }
-
-    .roofFront {
-        fill: #9a6e56;
-    }
-
-    .stepFront {
-        fill: #686ca4;
-    }
-
-    .trimFront {
-        fill: #75664a;
-    }
-
-    .trimSide {
-        fill: #66573a;
-    }
-
-    .beamFront {
-        fill: #75664a;
-    }
-
-    .awning {
-        fill: #716a98;
-    }
-
-    .beamSide {
-        fill: #66573a;
-    }
-
-    .door {
-        fill: #4b412f;
-    }
-
-    .roofBelow {
-        fill: #7d5a46;
-    }
+    // .wallSide { fill: #a29d7b; }
+    // .roofSide { fill: #8f6750; }
+    // .wallFront { fill: #b9b28d; }
+    // .roofTop { fill: #a3755c; }
+    // .roofFront { fill: #9a6e56; }
+    // .stepFront { fill: #686ca4; }
+    // .trimFront { fill: #75664a; }
+    // .trimSide { fill: #66573a; }
+    // .beamFront { fill: #75664a; }
+    // .awning { fill: #716a98; }
+    // .beamSide { fill: #66573a; }
+    // .door { fill: #4b412f; }
+    // .roofBelow { fill: #7d5a46; }
 }
 
 .taiwanHouseFar {
-    .wallSide {
-        fill: #a39d77;
-    }
-
-    .wallFront {
-        fill: #bab388;
-    }
-
-    .stepFront {
-        fill: #686aa8;
-    }
-
-    .stepSide {
-        fill: #5a5b91;
-    }
-
-    .door {
-        fill: #4d412d;
-    }
-
-    .trimFront {
-        fill: #786646;
-    }
-
-    .trimSide {
-        fill: #695736;
-    }
-
-    .slit {
-        fill: #424242;
-    }
-
-    .roofBelow {
-        fill: #855944;
-    }
-
-    .awningFront {
-        fill: #73689c;
-    }
-
-    .awningSide {
-        fill: #625985;
-    }
-
-    .roofTop {
-        fill: #ab7357;
-    }
-
-    .roofSide {
-        fill: #96654c;
-    }
-
-    .roofFront {
-        fill: #a16c52;
-    }
+    // .wallSide { fill: #a39d77; }
+    // .wallFront { fill: #bab388; }
+    // .stepFront { fill: #686aa8; }
+    // .stepSide { fill: #5a5b91; }
+    // .door { fill: #4d412d; }
+    // .slit { fill: #424242; }
+    // .trimFront { fill: #786646; }
+    // .trimSide { fill: #695736; }
+    // .roofBelow { fill: #855944; }
+    // .awningFront { fill: #73689c; }
+    // .awningSide { fill: #625985; }
+    // .roofTop { fill: #ab7357; }
+    // .roofSide { fill: #96654c; }
+    // .roofFront { fill: #a16c52; }
 }
 
 .taiwanHouseNear {
-    .palaceWallInner {
-        fill: #522c2c;
-    }
+    // .palaceWallFront { fill: #703636; }
+    // .palaceWallSide { fill: #613232; }
+    // .trim { fill: #6e6142; }
 
-    .trim {
-        fill: #6e6142;
-    }
 
-    .door {
-        fill: #614f32;
-    }
-
-    .doorBorderLine {
-        stroke: #332c21;
-    }
-
-    .palaceWallFront {
-        fill: #703636;
-    }
-
-    .palaceWallSide {
-        fill: #613232;
-    }
-
-    .stepFront {
-        fill: #415070;
-    }
-
-    .stepSide {
-        fill: #384561;
-    }
-
-    .stepOverlapLine {
-        stroke: #2e384f;
-    }
-
-    .palaceTrimFront {
-        fill: #a68f52;
-    }
-
-    .palaceTrimSide {
-        fill: #8f7b47;
-    }
-
-    .slit {
-        fill: #454545;
-    }
-
-    .palaceRoofFront {
-        fill: #6b6235;
-    }
-
-    .palaceRoofSide {
-        fill: #635b31;
-    }
-
-    .palaceRoofTrimAbove {
-        fill: #877b42;
-    }
-
-    .palaceRoofTrimBelow {
-        fill: #786e3e;
-    }
+    // .palaceRoofFront { fill: #6b6235; }
+    // .palaceRoofSide { fill: #635b31; }
+    // .palaceRoofTrimAbove { fill: #877b42; }
+    // .palaceRoofTrimBelow { fill: #786e3e; }
 }
 
 .bennettOdinRickshaw {
-    .pedalBarFront {
-        fill: #b3b3b3;
-    }
-
-    .pedalBottom {
-        fill: #42210b;
-    }
-
-    .pedalBarSide {
-        fill: gray;
-    }
-
-    .tires {
-        fill: #333;
-    }
-
-    .chassis {
-        fill: #006837;
-    }
-
-    .rear {
-        fill: #009245;
-    }
-
-    .lights {
-        fill: #ff0;
-    }
-
-    .tiresLine {
-        stroke: gray;
-    }
-
-    .rearLine {
-        stroke: #009245;
-    }
-
-    .pedalFront {
-        fill: #754c24;
-    }
-
-    .pedalSide {
-        fill: #603813;
-    }
+    .pedalBarFront { fill: #b3b3b3; }
+    .pedalBottom { fill: #42210b; }
+    .pedalBarSide { fill: gray; }
+    .tires { fill: #333; }
+    .chassis { fill: #006837; }
+    .rear { fill: #009245; }
+    .lights { fill: #ff0; }
+    .tiresLine { stroke: gray; }
+    .rearLine { stroke: #009245; }
+    .pedalFront { fill: #754c24; }
+    .pedalSide { fill: #603813; }
 }
