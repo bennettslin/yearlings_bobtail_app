@@ -13,7 +13,6 @@ import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
 // import bennettCouchThoughtBackdrop from 'assets/svgs/backdrops/bennettCouchThoughtBackdrop'
 import foliageBackdrop from 'assets/svgs/backdrops/foliageBackdrop'
 import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
-// import pharmacyThoughtBackdrop from 'assets/svgs/backdrops/pharmacyThoughtBackdrop'
 import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
 // import stationWagonBackdrop from 'assets/svgs/backdrops/stationWagonBackdrop'
 import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop'
@@ -43,7 +42,6 @@ import {
     FOLIAGE_BACKDROP,
     OAKLAND_SIDE_BACKDROP,
     DRIVING_BACKDROP,
-    PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP,
@@ -70,7 +68,6 @@ export default {
     [BENNETT_COUCH_THOUGHT_BACKDROP]: false,
     [FOLIAGE_BACKDROP]: foliageBackdrop,
     [DRIVING_BACKDROP]: drivingBackdrop,
-    [PHARMACY_THOUGHT_BACKDROP]: false,
     [CEMETERY_BACKDROP]: cemeteryBackdrop,
     [OAKLAND_SIDE_BACKDROP]: oaklandSideBackdrop,
     [LIZ_COUCH_THOUGHT_BACKDROP]: false,

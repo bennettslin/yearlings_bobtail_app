@@ -6,7 +6,7 @@
 * bennettCouchThoughtBackdrop
     * TODO: Reduce.
 * lizCouchThoughtBackdrop
-* pharmacyThoughtBackdrop
+* pharmacyThought
 
 * estherSpeechPanel
     * TODO: Add door flat.

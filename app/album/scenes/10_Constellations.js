@@ -41,11 +41,11 @@ import {
 } from '../../constants/scene/actors/instances/songs'
 import {
     FOLIAGE_BACKDROP,
-    PHARMACY_THOUGHT_BACKDROP,
     CEMETERY_BACKDROP,
     DRIVING_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
+    PHARMACY_THOUGHT,
     TARPIT_CONSTELLATION,
     SIBLING_CONSTELLATION
 } from '../../constants/scene/things/bubbles'
@@ -141,8 +141,8 @@ export default [
                     instance: WALGREENS
                 }
             },
-            [BACKDROP]: {
-                [PHARMACY_THOUGHT_BACKDROP]: true
+            [BUBBLE]: {
+                [PHARMACY_THOUGHT]: true
             },
             [CUTOUT]: {
                 [PHARMACY_AISLE]: true
