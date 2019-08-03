@@ -63,6 +63,7 @@ import {
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
+    TAIWAN_TREE,
     YELLOW_TAPED_GRILL
 } from '../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../constants/scene/things/fixtures'
@@ -149,6 +150,9 @@ export default [
             },
             [CARDBOARD]: {
                 [BENNETT_ODIN_RICKSHAW]: true
+            },
+            [CUTOUT]: {
+                [TAIWAN_TREE]: true
             },
             [FLAT]: {
                 [TAIWAN_HOUSES_CENTRE]: true,

@@ -1,8 +1,10 @@
 import {
     CARDBOARD,
+    CUTOUT,
     FLAT
 } from 'constants/scene'
 import { BENNETT_ODIN_RICKSHAW } from 'constants/scene/things/cardboards'
+import { TAIWAN_TREE } from 'constants/scene/things/cutouts'
 import {
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
@@ -17,6 +19,16 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 7,
             scaleFactor: 0.2,
             sharedStyle: BENNETT_ODIN_SHARED
+        }
+    },
+    [CUTOUT]: {
+        [TAIWAN_TREE]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 7,
+                xWidth: 2,
+                zHeight: 3
+            }
         }
     },
     [FLAT]: {
