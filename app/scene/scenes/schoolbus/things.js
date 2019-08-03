@@ -24,6 +24,7 @@ import {
     SCHOOLBUS_INTERIOR
 } from 'constants/scene/things/panels'
 import {
+    BUBBLE_SHARED,
     INTERIOR_SHARED,
     OAKLAND_COMMERCIAL_SHARED
 } from '../../shared'
@@ -57,7 +58,8 @@ const ARRANGEMENTS_THINGS = {
         [THOUGHT_LARGE]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.6,
+            sharedStyle: BUBBLE_SHARED
         }
     },
     [FIXTURE]: {
