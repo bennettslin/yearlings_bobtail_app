@@ -13,11 +13,10 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [TAIWAN_STAIRS_BACKDROP]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 4
-            }
+            xPosition: 4.5,
+            zOffset: 2.5,
+            scaleFactor: 0.45,
+            flipHorizontal: true
         }
     },
     [CARDBOARD]: {

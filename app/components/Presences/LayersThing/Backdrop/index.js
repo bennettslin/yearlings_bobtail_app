@@ -4,8 +4,7 @@ import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
 // import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
 // import schoolbusThoughtBackdrop from 'assets/svgs/backdrops/schoolbusThoughtBackdrop'
 // import vanNuysThoughtBackdrop from 'assets/svgs/backdrops/vanNuysThoughtBackdrop'
-// import taiwanStairsBackdrop from 'assets/svgs/backdrops/taiwanStairsBackdrop'
-// import taiwanStreetsBackdrop from 'assets/svgs/backdrops/taiwanStreetsBackdrop'
+import taiwanStairsBackdrop from 'assets/svgs/backdrops/taiwanStairsBackdrop'
 import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
 import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
 import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
@@ -62,7 +61,7 @@ export default {
     [TAIWAN_MOUNTAINS_BACKDROP]: false,
     [SCHOOLBUS_THOUGHT_BACKDROP]: false,
     [TETHERBALL_THOUGHT_BACKDROP]: false,
-    [TAIWAN_STAIRS_BACKDROP]: false,
+    [TAIWAN_STAIRS_BACKDROP]: taiwanStairsBackdrop,
     [MOUNTAIN_BACKDROP]: mountainBackdrop,
     [SHORE_RICKSHAW_BACKDROP]: shoreRickshawBackdrop,
     [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,

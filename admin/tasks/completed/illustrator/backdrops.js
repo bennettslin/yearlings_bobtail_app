@@ -73,5 +73,10 @@ export default [
         taskName: 'oaklandSideBackdrop',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'taiwanStairsBackdrop',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

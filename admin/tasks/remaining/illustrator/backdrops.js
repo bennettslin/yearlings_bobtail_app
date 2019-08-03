@@ -15,11 +15,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'taiwanStairsBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'bennettCouchThoughtBackdrop',
         workedHours: 0,
         neededHours: 1
