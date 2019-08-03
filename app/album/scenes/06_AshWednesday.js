@@ -41,14 +41,14 @@ import {
 } from '../../constants/scene/actors/instances/catherine'
 import { CATHOLIC_GUY } from '../../constants/scene/actors/instances/wade'
 import {
-    BENNETT_COUCH_THOUGHT_BACKDROP,
     FOLIAGE_BACKDROP,
     OAKLAND_SIDE_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__BENNETT_COUCH,
     BUBBLE_MEDIUM__BENNETT_COUCH,
-    BUBBLE_LARGE__BENNETT_COUCH
+    BUBBLE_LARGE__BENNETT_COUCH,
+    THOUGHT_LARGE
 } from 'constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
@@ -120,13 +120,11 @@ export default [
                     instance: QUIPPING
                 }
             },
-            [BACKDROP]: {
-                [BENNETT_COUCH_THOUGHT_BACKDROP]: true
-            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__BENNETT_COUCH]: true,
                 [BUBBLE_MEDIUM__BENNETT_COUCH]: true,
-                [BUBBLE_LARGE__BENNETT_COUCH]: true
+                [BUBBLE_LARGE__BENNETT_COUCH]: true,
+                [THOUGHT_LARGE]: true
             },
             [CARDBOARD]: {
                 [POLICE_ALBUM]: true,

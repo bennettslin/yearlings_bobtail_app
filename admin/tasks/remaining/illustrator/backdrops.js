@@ -5,26 +5,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'schoolbusThoughtBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'vanNuysThoughtBackdrop',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'bennettCouchThoughtBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizCouchThoughtBackdrop',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'roadPast',
         workedHours: 0,
         neededHours: 1.5

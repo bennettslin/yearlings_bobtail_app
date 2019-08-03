@@ -7,7 +7,7 @@ import sketchbook from 'assets/svgs/bubbles/sketchbook'
 import bubbleSmall from 'assets/svgs/bubbles/bubbleSmall'
 import bubbleMedium from 'assets/svgs/bubbles/bubbleMedium'
 // import bubbleLarge from 'assets/svgs/bubbles/bubbleLarge'
-// import bubbleLarger from 'assets/svgs/bubbles/bubbleLarger'
+// import thoughtLarge from 'assets/svgs/bubbles/thoughtLarge'
 // import cinemaThoughtRecording from 'assets/svgs/bubbles/cinemaThoughtRecording'
 // import cinemaThoughtBuying from 'assets/svgs/bubbles/cinemaThoughtBuying'
 import goKartThought from 'assets/svgs/bubbles/goKartThought'
@@ -30,6 +30,7 @@ import {
     BUBBLE_SMALL__SCHOOLBUS,
     BUBBLE_MEDIUM__SCHOOLBUS,
     BUBBLE_LARGE__SCHOOLBUS,
+    THOUGHT_LARGE,
     BUBBLE_SMALL__TETHERBALL,
     BUBBLE_MEDIUM__TETHERBALL,
     BUBBLE_LARGE__TETHERBALL,
@@ -88,6 +89,7 @@ export default {
     [BUBBLE_SMALL__SCHOOLBUS]: false,
     [BUBBLE_MEDIUM__SCHOOLBUS]: false,
     [BUBBLE_LARGE__SCHOOLBUS]: false,
+    [THOUGHT_LARGE]: false,
     [BUBBLE_SMALL__TETHERBALL]: false,
     [BUBBLE_MEDIUM__TETHERBALL]: false,
     [BUBBLE_LARGE__TETHERBALL]: false,

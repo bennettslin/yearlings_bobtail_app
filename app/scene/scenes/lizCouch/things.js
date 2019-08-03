@@ -1,11 +1,9 @@
 import {
-    BACKDROP,
     BUBBLE,
     FIXTURE,
     PANEL,
     PUPPET
 } from 'constants/scene'
-import { LIZ_COUCH_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__LIZ_COUCH,
     BUBBLE_MEDIUM__LIZ_COUCH,
@@ -37,16 +35,6 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_LIZ_COUCH_GOLDEN = {
-    [BACKDROP]: {
-        [LIZ_COUCH_THOUGHT_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 4
-            }
-        }
-    },
     [BUBBLE]: {
         [BUBBLE_SMALL__LIZ_COUCH]: {
             yIndex: 0,

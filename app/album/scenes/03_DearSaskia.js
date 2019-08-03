@@ -30,17 +30,14 @@ import { TYING_TETHER } from '../../constants/scene/actors/instances/bradBennett
 import { CHARMED_SCHOOLBUS } from '../../constants/scene/actors/instances/bradSasha'
 import { PANICKED } from '../../constants/scene/actors/instances/preteenBennett'
 import { INDIGNANT } from '../../constants/scene/actors/instances/sasha'
-import {
-    TAIWAN_MOUNTAINS_BACKDROP,
-    SCHOOLBUS_THOUGHT_BACKDROP,
-    TETHERBALL_THOUGHT_BACKDROP
-} from '../../constants/scene/things/backdrops'
+import { TAIWAN_MOUNTAINS_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
     BUBBLE_SMALL__SCHOOLBUS,
     BUBBLE_MEDIUM__SCHOOLBUS,
     BUBBLE_LARGE__SCHOOLBUS,
+    THOUGHT_LARGE,
     BUBBLE_SMALL__TETHERBALL,
     BUBBLE_MEDIUM__TETHERBALL,
     BUBBLE_LARGE__TETHERBALL,
@@ -154,13 +151,11 @@ export default [
                     instance: CHARMED_SCHOOLBUS
                 }
             },
-            [BACKDROP]: {
-                [SCHOOLBUS_THOUGHT_BACKDROP]: true
-            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__SCHOOLBUS]: true,
                 [BUBBLE_MEDIUM__SCHOOLBUS]: true,
-                [BUBBLE_LARGE__SCHOOLBUS]: true
+                [BUBBLE_LARGE__SCHOOLBUS]: true,
+                [THOUGHT_LARGE]: true
             },
             [FIXTURE]: {
                 [BACKPACK_BENNETT]: true,
@@ -200,13 +195,11 @@ export default [
                     instance: FEIGNING_FEAR
                 }
             },
-            [BACKDROP]: {
-                [TETHERBALL_THOUGHT_BACKDROP]: true
-            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__TETHERBALL]: true,
                 [BUBBLE_MEDIUM__TETHERBALL]: true,
-                [BUBBLE_LARGE__TETHERBALL]: true
+                [BUBBLE_LARGE__TETHERBALL]: true,
+                [THOUGHT_LARGE]: true
             },
             [CUTOUT]: {
                 [CAMPUS_TREE_SINGLE__TETHERBALL]: true,

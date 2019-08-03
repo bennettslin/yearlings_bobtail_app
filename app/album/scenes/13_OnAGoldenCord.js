@@ -47,13 +47,13 @@ import { CROSSING_GUARD } from '../../constants/scene/actors/instances/willy'
 import { YOUNG_CHILD } from '../../constants/scene/actors/instances/songs'
 import {
     OAKLAND_SIDE_BACKDROP,
-    LIZ_COUCH_THOUGHT_BACKDROP,
     OAKLAND_FRONT_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__LIZ_COUCH,
     BUBBLE_MEDIUM__LIZ_COUCH,
-    BUBBLE_LARGE__LIZ_COUCH
+    BUBBLE_LARGE__LIZ_COUCH,
+    THOUGHT_LARGE
 } from 'constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
@@ -117,13 +117,11 @@ export default [
                     instance: AWKWARD_CONSOLATION
                 }
             },
-            [BACKDROP]: {
-                [LIZ_COUCH_THOUGHT_BACKDROP]: true
-            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__LIZ_COUCH]: true,
                 [BUBBLE_MEDIUM__LIZ_COUCH]: true,
-                [BUBBLE_LARGE__LIZ_COUCH]: true
+                [BUBBLE_LARGE__LIZ_COUCH]: true,
+                [THOUGHT_LARGE]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

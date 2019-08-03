@@ -1,11 +1,9 @@
 import {
-    BACKDROP,
     BUBBLE,
     CUTOUT,
     FIXTURE,
     FLAT
 } from 'constants/scene'
-import { TETHERBALL_THOUGHT_BACKDROP } from 'constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__TETHERBALL,
     BUBBLE_MEDIUM__TETHERBALL,
@@ -24,16 +22,6 @@ import {
 import { VAN_NUYS_SCHOOLHOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [TETHERBALL_THOUGHT_BACKDROP]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
-        }
-    },
     [BUBBLE]: {
         [BUBBLE_SMALL__TETHERBALL]: {
             yIndex: 0,
