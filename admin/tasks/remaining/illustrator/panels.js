@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: 'estherSpeechPanel',
+        taskName: 'estherSpeech',
         workedHours: 0,
         neededHours: 1.5
     },
@@ -13,20 +13,5 @@ export default [
         taskName: 'taiwanFog',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'deathbedThoughtPanel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'tennisThoughtPanel',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'inverseThoughtBackdrop',
-        workedHours: 0,
-        neededHours: 1
     }
 ]

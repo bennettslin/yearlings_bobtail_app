@@ -43,9 +43,11 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
+    THOUGHT_MEDIUM,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
-    BUBBLE_LARGE__TENNIS
+    BUBBLE_LARGE__TENNIS,
+    THOUGHT_SMALL
 } from 'constants/scene/things/bubbles'
 import {
     EL_CERRITO_TREE,
@@ -60,8 +62,6 @@ import {
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
-    DEATHBED_THOUGHT_PANEL,
-    TENNIS_THOUGHT_PANEL,
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../constants/scene/things/puppets'
@@ -177,7 +177,8 @@ export default [
             [BUBBLE]: {
                 [BUBBLE_SMALL__DEATHBED]: true,
                 [BUBBLE_MEDIUM__DEATHBED]: true,
-                [BUBBLE_LARGE__DEATHBED]: true
+                [BUBBLE_LARGE__DEATHBED]: true,
+                [THOUGHT_MEDIUM]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true
@@ -186,8 +187,7 @@ export default [
                 [HOSPITAL_RECORD_PLAYER]: true
             },
             [PANEL]: {
-                [HOSPITAL_BED]: true,
-                [DEATHBED_THOUGHT_PANEL]: true
+                [HOSPITAL_BED]: true
             }
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
@@ -214,9 +214,11 @@ export default [
                 [BUBBLE_SMALL__DEATHBED]: true,
                 [BUBBLE_MEDIUM__DEATHBED]: true,
                 [BUBBLE_LARGE__DEATHBED]: true,
+                [THOUGHT_MEDIUM]: true,
                 [BUBBLE_SMALL__TENNIS]: true,
                 [BUBBLE_MEDIUM__TENNIS]: true,
-                [BUBBLE_LARGE__TENNIS]: true
+                [BUBBLE_LARGE__TENNIS]: true,
+                [THOUGHT_SMALL]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true
@@ -228,9 +230,7 @@ export default [
                 [TENNIS_COURT]: true
             },
             [PANEL]: {
-                [HOSPITAL_BED]: true,
-                [DEATHBED_THOUGHT_PANEL]: true,
-                [TENNIS_THOUGHT_PANEL]: true
+                [HOSPITAL_BED]: true
             }
         },
         cubes: EL_CERRITO_TENNIS_KEY,

@@ -48,7 +48,8 @@ import {
 import {
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
-    BUBBLE_LARGE__INVERSE
+    BUBBLE_LARGE__INVERSE,
+    THOUGHT_MEDIUM
 } from 'constants/scene/things/bubbles'
 import {
     DISPENSER_LEFT,
@@ -68,7 +69,6 @@ import {
 } from '../../constants/scene/things/flats'
 import {
     WEDDING_PLATFORM,
-    INVERSE_THOUGHT_PANEL,
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../constants/scene/things/puppets'
@@ -222,7 +222,8 @@ export default [
             [BUBBLE]: {
                 [BUBBLE_SMALL__INVERSE]: true,
                 [BUBBLE_MEDIUM__INVERSE]: true,
-                [BUBBLE_LARGE__INVERSE]: true
+                [BUBBLE_LARGE__INVERSE]: true,
+                [THOUGHT_MEDIUM]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true
@@ -234,8 +235,7 @@ export default [
                 [CLIFF_GRAVES_FAR]: true
             },
             [PANEL]: {
-                [HOSPITAL_BED]: true,
-                [INVERSE_THOUGHT_PANEL]: true
+                [HOSPITAL_BED]: true
             }
         },
         cubes: CLIFF_DEATHBED_KEY,

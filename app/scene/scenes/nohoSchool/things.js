@@ -1,18 +1,18 @@
 import {
     BACKDROP,
+    BUBBLE,
     CUTOUT,
     FIXTURE,
-    FLAT,
-    PANEL
+    FLAT
 } from 'constants/scene'
 import { SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
+import { ESTHER_SPEECH } from 'constants/scene/things/bubbles'
 import { PLAYGROUND_SLIDE } from 'constants/scene/things/cutouts'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from 'constants/scene/things/fixtures'
 import { NOHO_SCHOOLHOUSE } from 'constants/scene/things/flats'
-import { ESTHER_SPEECH_PANEL } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -21,6 +21,16 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 5.5,
             scaleFactor: 0.66,
             trimBottom: 0.05
+        }
+    },
+    [BUBBLE]: {
+        [ESTHER_SPEECH]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 9,
+                xWidth: 5,
+                zHeight: 5
+            }
         }
     },
     [CUTOUT]: {
@@ -54,16 +64,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 5,
             scaleFactor: 0.65
-        }
-    },
-    [PANEL]: {
-        [ESTHER_SPEECH_PANEL]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 5
-            }
         }
     }
 }

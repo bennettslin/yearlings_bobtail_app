@@ -8,7 +8,7 @@
 * lizCouchThoughtBackdrop
 * pharmacyCel
 
-* estherSpeechPanel
+* estherSpeech
     * TODO: Add door flat.
 * deathbedThoughtPanel
 * tennisThoughtPanel

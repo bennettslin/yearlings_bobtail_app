@@ -1,6 +1,7 @@
 import {
     ACTOR,
     BACKDROP,
+    BUBBLE,
     CARDBOARD,
     CUTOUT,
     FIXTURE,
@@ -45,6 +46,7 @@ import {
     NOHO_HOUSES_BACKDROP,
     SCHOOL_BACKDROP
 } from '../../constants/scene/things/backdrops'
+import { ESTHER_SPEECH } from '../../constants/scene/things/bubbles'
 import { JOHNNY_HORTON_ALBUM } from '../../constants/scene/things/cardboards'
 import {
     FIRE_HYDRANT,
@@ -62,10 +64,7 @@ import {
     NOHO_HOUSE_RIGHT,
     NOHO_SCHOOLHOUSE
 } from '../../constants/scene/things/flats'
-import {
-    ESTHER_SPEECH_PANEL,
-    BATHTUB
-} from '../../constants/scene/things/panels'
+import { BATHTUB } from '../../constants/scene/things/panels'
 
 export default [
     {
@@ -145,6 +144,9 @@ export default [
             [BACKDROP]: {
                 [SCHOOL_BACKDROP]: true
             },
+            [BUBBLE]: {
+                [ESTHER_SPEECH]: true
+            },
             [CUTOUT]: {
                 [PLAYGROUND_SLIDE]: true
             },
@@ -154,9 +156,6 @@ export default [
             },
             [FLAT]: {
                 [NOHO_SCHOOLHOUSE]: true
-            },
-            [PANEL]: {
-                [ESTHER_SPEECH_PANEL]: true
             }
         },
         cubes: NOHO_SCHOOL_KEY,

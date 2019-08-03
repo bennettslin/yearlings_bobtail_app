@@ -1,3 +1,4 @@
+// import estherSpeech from 'assets/svgs/bubbles/estherSpeech'
 // import togetherSketch from 'assets/svgs/bubbles/togetherSketch'
 // import apartSketch from 'assets/svgs/bubbles/apartSketch'
 // import dogsSketch from 'assets/svgs/bubbles/dogsSketch'
@@ -19,8 +20,11 @@ import pharmacyCel from 'assets/svgs/bubbles/pharmacyCel'
 // import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
 // import lizDefenceSpeech from 'assets/svgs/bubbles/lizDefenceSpeech'
 // import lizThought from 'assets/svgs/bubbles/lizThought'
+// import thoughtMedium from 'assets/svgs/bubbles/thoughtMedium'
+// import thoughtSmall from 'assets/svgs/bubbles/thoughtSmall'
 
 import {
+    ESTHER_SPEECH,
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
     BUBBLE_SMALL__SCHOOLBUS,
@@ -67,15 +71,18 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
+    THOUGHT_MEDIUM,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
+    THOUGHT_SMALL,
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE
 } from 'constants/scene/things/bubbles'
 
 export default {
+    [ESTHER_SPEECH]: false,
     [TOGETHER_SKETCH]: false,
     [SKETCHBOOK__TOGETHER]: sketchbook,
     [BUBBLE_SMALL__SCHOOLBUS]: false,
@@ -122,9 +129,11 @@ export default {
     [BUBBLE_SMALL__DEATHBED]: false,
     [BUBBLE_MEDIUM__DEATHBED]: false,
     [BUBBLE_LARGE__DEATHBED]: false,
+    [THOUGHT_MEDIUM]: false,
     [BUBBLE_SMALL__TENNIS]: false,
     [BUBBLE_MEDIUM__TENNIS]: false,
     [BUBBLE_LARGE__TENNIS]: false,
+    [THOUGHT_SMALL]: false,
     [BUBBLE_SMALL__INVERSE]: false,
     [BUBBLE_MEDIUM__INVERSE]: false,
     [BUBBLE_LARGE__INVERSE]: false

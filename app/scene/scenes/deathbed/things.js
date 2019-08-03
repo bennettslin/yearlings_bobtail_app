@@ -9,9 +9,11 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
+    THOUGHT_MEDIUM,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
+    THOUGHT_SMALL,
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE
@@ -19,14 +21,19 @@ import {
 import { IV_DRIP } from 'constants/scene/things/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from 'constants/scene/things/fixtures'
 import { TENNIS_COURT } from 'constants/scene/things/flats'
-import {
-    DEATHBED_THOUGHT_PANEL,
-    TENNIS_THOUGHT_PANEL,
-    INVERSE_THOUGHT_PANEL,
-    HOSPITAL_BED
-} from 'constants/scene/things/panels'
+import { HOSPITAL_BED } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
+    [BUBBLE]: {
+        [THOUGHT_MEDIUM]: {
+            yIndex: 0,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 8,
+                zHeight: 6
+            }
+        }
+    },
     [CUTOUT]: {
         [IV_DRIP]: {
             yIndex: 1,
@@ -102,10 +109,8 @@ export const THINGS_DEATHBED_CREMATED = {
                 xWidth: 10,
                 zHeight: 8
             }
-        }
-    },
-    [FLAT]: {
-        [TENNIS_COURT]: {
+        },
+        [THOUGHT_SMALL]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 9,
@@ -114,16 +119,8 @@ export const THINGS_DEATHBED_CREMATED = {
             }
         }
     },
-    [PANEL]: {
-        [DEATHBED_THOUGHT_PANEL]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 8,
-                zHeight: 6
-            }
-        },
-        [TENNIS_THOUGHT_PANEL]: {
+    [FLAT]: {
+        [TENNIS_COURT]: {
             yIndex: 1,
             arrangement: {
                 xPosition: 9,
@@ -157,16 +154,6 @@ export const THINGS_DEATHBED_DREAM = {
             arrangement: {
                 xPosition: 5.5,
                 xWidth: 10,
-                zHeight: 8
-            }
-        }
-    },
-    [PANEL]: {
-        [INVERSE_THOUGHT_PANEL]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
                 zHeight: 8
             }
         }

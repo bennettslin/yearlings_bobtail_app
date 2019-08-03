@@ -53,7 +53,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `estherSpeechPanel and phonePanel`,
+        taskName: `estherSpeech and phonePanel`,
         workedHours: 2,
         neededHours: 2
     },

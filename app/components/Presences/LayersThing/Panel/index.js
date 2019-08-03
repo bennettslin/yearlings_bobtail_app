@@ -1,4 +1,3 @@
-// import estherSpeechPanel from 'assets/svgs/panels/estherSpeechPanel'
 import bathtub from 'assets/svgs/panels/bathtub'
 import bedroomDesk from 'assets/svgs/panels/bedroomDesk'
 import captainBed from 'assets/svgs/panels/captainBed'
@@ -35,14 +34,10 @@ import reattaInterior from 'assets/svgs/panels/reattaInterior'
 import reattaExterior from 'assets/svgs/panels/reattaExterior'
 import hospitalBed from 'assets/svgs/panels/hospitalBed'
 import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
-// import deathbedThoughtPanel from 'assets/svgs/panels/deathbedThoughtPanel'
-// import tennisThoughtPanel from 'assets/svgs/panels/tennisThoughtPanel'
 import crowdBack from 'assets/svgs/panels/crowdBack'
 import weddingPlatform from 'assets/svgs/panels/weddingPlatform'
-// import inverseThoughtPanel from 'assets/svgs/panels/inverseThoughtPanel'
 
 import {
-    ESTHER_SPEECH_PANEL,
     BATHTUB,
     BEDROOM_DESK,
     CAPTAIN_BED,
@@ -93,15 +88,11 @@ import {
     REATTA_INTERIOR,
     HOSPITAL_BED,
     PHONE_CALL_PANEL,
-    DEATHBED_THOUGHT_PANEL,
-    TENNIS_THOUGHT_PANEL,
     CROWD_BACK,
-    WEDDING_PLATFORM,
-    INVERSE_THOUGHT_PANEL
+    WEDDING_PLATFORM
 } from 'constants/scene/things/panels'
 
 export default {
-    [ESTHER_SPEECH_PANEL]: false,
     [BATHTUB]: bathtub,
     [BEDROOM_DESK]: bedroomDesk,
     [CAPTAIN_BED]: captainBed,
@@ -152,9 +143,6 @@ export default {
     [REATTA_EXTERIOR]: reattaExterior,
     [HOSPITAL_BED]: hospitalBed,
     [PHONE_CALL_PANEL]: phoneCallPanel,
-    [DEATHBED_THOUGHT_PANEL]: false,
-    [TENNIS_THOUGHT_PANEL]: false,
     [CROWD_BACK]: crowdBack,
-    [WEDDING_PLATFORM]: weddingPlatform,
-    [INVERSE_THOUGHT_PANEL]: false
+    [WEDDING_PLATFORM]: weddingPlatform
 }
