@@ -38,7 +38,7 @@ import {
 import { MERMAID } from '../../constants/scene/actors/instances/sashaBennett'
 import {
     TAIWAN_STAIRS_BACKDROP,
-    TAIWAN_STREETS_BACKDROP,
+    MOUNTAIN_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
@@ -144,7 +144,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [TAIWAN_STREETS_BACKDROP]: true
+                [MOUNTAIN_BACKDROP]: true
             },
             [CARDBOARD]: {
                 [BENNETT_ODIN_RICKSHAW]: true

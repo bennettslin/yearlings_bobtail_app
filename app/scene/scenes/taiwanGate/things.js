@@ -3,7 +3,7 @@ import {
     CARDBOARD,
     FLAT
 } from 'constants/scene'
-import { TAIWAN_STREETS_BACKDROP } from 'constants/scene/things/backdrops'
+import { MOUNTAIN_BACKDROP } from 'constants/scene/things/backdrops'
 import { BENNETT_ODIN_RICKSHAW } from 'constants/scene/things/cardboards'
 import {
     TAIWAN_HOUSE_FAR,
@@ -13,7 +13,7 @@ import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [TAIWAN_STREETS_BACKDROP]: {
+        [MOUNTAIN_BACKDROP]: {
             yIndex: 0,
             arrangement: {
                 xPosition: 7,

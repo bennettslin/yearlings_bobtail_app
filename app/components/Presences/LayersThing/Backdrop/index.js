@@ -24,7 +24,7 @@ import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop'
 // import roadPresent from 'assets/svgs/backdrops/roadPresent'
 // import roadFuture from 'assets/svgs/backdrops/roadFuture'
 import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
-import pampasBackdrop from 'assets/svgs/backdrops/pampasBackdrop'
+import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 
 import {
@@ -35,7 +35,7 @@ import {
     SCHOOLBUS_THOUGHT_BACKDROP,
     TETHERBALL_THOUGHT_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
-    TAIWAN_STREETS_BACKDROP,
+    MOUNTAIN_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
@@ -52,7 +52,6 @@ import {
     ROAD_PRESENT,
     ROAD_FUTURE,
     GOLDEN_GATE_BACKDROP,
-    PAMPAS_BACKDROP,
     WEDDING_BACKDROP
 } from 'constants/scene/things/backdrops'
 
@@ -64,7 +63,7 @@ export default {
     [SCHOOLBUS_THOUGHT_BACKDROP]: false,
     [TETHERBALL_THOUGHT_BACKDROP]: false,
     [TAIWAN_STAIRS_BACKDROP]: false,
-    [TAIWAN_STREETS_BACKDROP]: false,
+    [MOUNTAIN_BACKDROP]: mountainBackdrop,
     [SHORE_RICKSHAW_BACKDROP]: shoreRickshawBackdrop,
     [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
@@ -81,6 +80,5 @@ export default {
     [ROAD_PRESENT]: false,
     [ROAD_FUTURE]: false,
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
-    [PAMPAS_BACKDROP]: pampasBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop
 }

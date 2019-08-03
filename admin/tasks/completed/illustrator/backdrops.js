@@ -35,7 +35,7 @@ export default [
         neededHours: 2.5
     },
     {
-        taskName: 'pampasBackdrop',
+        taskName: 'mountainBackdrop',
         workedHours: 1,
         neededHours: 1
     },

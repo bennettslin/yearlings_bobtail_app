@@ -41,7 +41,7 @@ import {
     FINAL_DREAM
 } from '../../constants/scene/actors/instances/bennettLiz'
 import {
-    PAMPAS_BACKDROP,
+    MOUNTAIN_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
 } from '../../constants/scene/things/backdrops'
@@ -130,7 +130,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [PAMPAS_BACKDROP]: true
+                [MOUNTAIN_BACKDROP]: true
             },
             [FLAT]: {
                 [PAMPAS_FAR]: true
