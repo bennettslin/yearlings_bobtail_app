@@ -600,7 +600,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'pharmacyThought',
+        taskName: 'pharmacyCel',
         workedHours: 1,
         neededHours: 1
     },

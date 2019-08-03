@@ -45,7 +45,7 @@ import {
     DRIVING_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
-    PHARMACY_THOUGHT,
+    PHARMACY_CEL,
     TARPIT_CONSTELLATION,
     SIBLING_CONSTELLATION
 } from '../../constants/scene/things/bubbles'
@@ -142,7 +142,7 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [PHARMACY_THOUGHT]: true
+                [PHARMACY_CEL]: true
             },
             [CUTOUT]: {
                 [PHARMACY_AISLE]: true
