@@ -8,14 +8,14 @@ import familyHouse from 'assets/svgs/flats/familyHouse'
 // import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
 import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
 import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
-// import taiwanHousesCentre from 'assets/svgs/flats/taiwanHousesCentre'
+import taiwanHousesCentre from 'assets/svgs/flats/taiwanHousesCentre'
 import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
 import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
 import drivingHouseLeft from 'assets/svgs/flats/drivingHouseLeft'
 import drivingHouseRight from 'assets/svgs/flats/drivingHouseRight'
 import campusBuildingTall from 'assets/svgs/flats/campusBuildingTall'
 import campusBuildingWide from 'assets/svgs/flats/campusBuildingWide'
-// import rickshawTown from 'assets/svgs/flats/rickshawTown'
+import rickshawTown from 'assets/svgs/flats/rickshawTown'
 import ferrisWheel from 'assets/svgs/flats/ferrisWheel'
 import rollerCoaster from 'assets/svgs/flats/rollerCoaster'
 import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle'
@@ -127,14 +127,14 @@ export default {
     [TAIWAN_MOUNTAINS_BRIDGED]: false,
     [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
-    [TAIWAN_HOUSES_CENTRE]: false,
+    [TAIWAN_HOUSES_CENTRE]: taiwanHousesCentre,
     [TAIWAN_HOUSE_FAR]: taiwanHouseFar,
     [TAIWAN_HOUSE_NEAR]: taiwanHouseNear,
     [DRIVING_HOUSE_LEFT]: drivingHouseLeft,
     [DRIVING_HOUSE_RIGHT]: drivingHouseRight,
     [CAMPUS_BUILDING_TALL__TETHERBALL]: campusBuildingTall,
     [CAMPUS_BUILDING_WIDE__TETHERBALL]: campusBuildingWide,
-    [RICKSHAW_TOWN]: false,
+    [RICKSHAW_TOWN]: rickshawTown,
     [FERRIS_WHEEL]: ferrisWheel,
     [ROLLER_COASTER]: rollerCoaster,
     [OCEAN_BOTTOM_MIDDLE]: oceanBottomMiddle,

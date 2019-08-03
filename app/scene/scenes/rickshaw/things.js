@@ -36,11 +36,8 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [RICKSHAW_TOWN]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 3
-            }
+            xPosition: 9.5,
+            scaleFactor: 0.6
         }
     }
 }

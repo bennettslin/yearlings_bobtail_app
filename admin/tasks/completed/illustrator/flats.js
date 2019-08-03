@@ -243,5 +243,15 @@ export default [
         taskName: 'drivingHouseRight',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'taiwanHousesCentre',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'rickshawTown',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

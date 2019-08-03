@@ -1,3 +1,57 @@
+.taiwanHousesCentre {
+    .wallSide {
+        fill: #a29d7b;
+    }
+
+    .roofSide {
+        fill: #8f6750;
+    }
+
+    .wallFront {
+        fill: #b9b28d;
+    }
+
+    .roofTop {
+        fill: #a3755c;
+    }
+
+    .roofFront {
+        fill: #9a6e56;
+    }
+
+    .stepFront {
+        fill: #686ca4;
+    }
+
+    .trimFront {
+        fill: #75664a;
+    }
+
+    .trimSide {
+        fill: #66573a;
+    }
+
+    .beamFront {
+        fill: #75664a;
+    }
+
+    .awning {
+        fill: #716a98;
+    }
+
+    .beamSide {
+        fill: #66573a;
+    }
+
+    .door {
+        fill: #4b412f;
+    }
+
+    .roofBelow {
+        fill: #7d5a46;
+    }
+}
+
 .taiwanHouseFar {
     .wallSide {
         fill: #a39d77;
@@ -57,11 +111,11 @@
 }
 
 .taiwanHouseNear {
-    .wallInner {
+    .palaceWallInner {
         fill: #522c2c;
     }
 
-    .trimInner {
+    .trim {
         fill: #6e6142;
     }
 
@@ -73,11 +127,11 @@
         stroke: #332c21;
     }
 
-    .wallFront {
+    .palaceWallFront {
         fill: #703636;
     }
 
-    .wallSide {
+    .palaceWallSide {
         fill: #613232;
     }
 
@@ -93,11 +147,11 @@
         stroke: #2e384f;
     }
 
-    .trimFront {
+    .palaceTrimFront {
         fill: #a68f52;
     }
 
-    .trimSide {
+    .palaceTrimSide {
         fill: #8f7b47;
     }
 
@@ -105,19 +159,19 @@
         fill: #454545;
     }
 
-    .roofFront {
+    .palaceRoofFront {
         fill: #6b6235;
     }
 
-    .roofSide {
+    .palaceRoofSide {
         fill: #635b31;
     }
 
-    .roofTrimAbove {
+    .palaceRoofTrimAbove {
         fill: #877b42;
     }
 
-    .roofTrimBelow {
+    .palaceRoofTrimBelow {
         fill: #786e3e;
     }
 }
