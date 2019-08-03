@@ -327,7 +327,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'bancroftShrubs',
+        taskName: 'bancroftShrub',
         workedHours: 1,
         neededHours: 1
     },

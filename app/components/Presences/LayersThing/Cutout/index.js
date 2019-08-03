@@ -14,7 +14,7 @@ import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant'
 import recyclables from 'assets/svgs/cutouts/recyclables'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost'
 import signpost from 'assets/svgs/cutouts/signpost'
-import bancroftShrubs from 'assets/svgs/cutouts/bancroftShrubs'
+import bancroftShrub from 'assets/svgs/cutouts/bancroftShrub'
 import campusTreeSingle from 'assets/svgs/cutouts/campusTreeSingle'
 import campusTreeDouble from 'assets/svgs/cutouts/campusTreeDouble'
 import monitorFront from 'assets/svgs/cutouts/monitorFront'
@@ -67,7 +67,7 @@ import {
     RECYCLABLES,
     BERKELEY_LAMPPOST,
     SIGNPOST,
-    BANCROFT_SHRUBS,
+    BANCROFT_SHRUB,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_SINGLE__TETHERBALL,
@@ -134,7 +134,7 @@ export default {
     [RECYCLABLES]: recyclables,
     [BERKELEY_LAMPPOST]: berkeleyLamppost,
     [SIGNPOST]: signpost,
-    [BANCROFT_SHRUBS]: bancroftShrubs,
+    [BANCROFT_SHRUB]: bancroftShrub,
     [CAMPUS_TREE_SINGLE__BANCROFT]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__CAMPANILE]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__TETHERBALL]: campusTreeSingle,

@@ -67,6 +67,7 @@ import {
 } from '../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../constants/scene/things/fixtures'
 import {
+    TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
     RICKSHAW_TOWN,
@@ -150,6 +151,7 @@ export default [
                 [BENNETT_ODIN_RICKSHAW]: true
             },
             [FLAT]: {
+                [TAIWAN_HOUSES_CENTRE]: true,
                 [TAIWAN_HOUSE_FAR]: true,
                 [TAIWAN_HOUSE_NEAR]: true
             }

@@ -49,7 +49,7 @@ import {
 import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     SIGNPOST,
-    BANCROFT_SHRUBS,
+    BANCROFT_SHRUB,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE,
@@ -100,7 +100,7 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
-                [BANCROFT_SHRUBS]: true,
+                [BANCROFT_SHRUB]: true,
                 [SIGNPOST]: true,
                 [CAMPUS_TREE_SINGLE__CAMPANILE]: true,
                 [CAMPUS_TREE_DOUBLE__CAMPANILE]: true

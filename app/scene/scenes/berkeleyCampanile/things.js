@@ -5,7 +5,7 @@ import {
 } from 'constants/scene'
 import {
     SIGNPOST,
-    BANCROFT_SHRUBS,
+    BANCROFT_SHRUB,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE
 } from 'constants/scene/things/cutouts'
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.35,
             flipHorizontal: true
         },
-        [BANCROFT_SHRUBS]: {
+        [BANCROFT_SHRUB]: {
             yIndex: 4,
             xPosition: 2,
             scaleFactor: 0.5

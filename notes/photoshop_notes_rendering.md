@@ -43,7 +43,7 @@
 
 # Redo className organisation.
 * Cardboards (Just buoy and rickshaw left)
-* Cutouts (Last done: bancroftShrubs)
+* Cutouts (Last done: bancroftShrub)
 
 # Pre-Illustrator things
 * The following were made using the legacy Photoshop to Illustrator method, where I would render first in Photoshop, then Image Trace > Line Art into vector paths.
@@ -102,7 +102,7 @@
     * recyclables
     * berkeleyLamppost
     * signpost
-    * bancroftShrubs
+    * bancroftShrub
     * monitorFront
     * wallSpeakerFront
     * museumDisplay

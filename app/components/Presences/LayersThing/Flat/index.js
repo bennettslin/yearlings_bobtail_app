@@ -8,6 +8,7 @@ import familyHouse from 'assets/svgs/flats/familyHouse'
 // import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
 import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
 import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
+// import taiwanHousesCentre from 'assets/svgs/flats/taiwanHousesCentre'
 import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
 import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
 import drivingHouseLeft from 'assets/svgs/flats/drivingHouseLeft'
@@ -64,6 +65,7 @@ import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
+    TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR,
     DRIVING_HOUSE_LEFT,
@@ -125,6 +127,7 @@ export default {
     [TAIWAN_MOUNTAINS_BRIDGED]: false,
     [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
+    [TAIWAN_HOUSES_CENTRE]: false,
     [TAIWAN_HOUSE_FAR]: taiwanHouseFar,
     [TAIWAN_HOUSE_NEAR]: taiwanHouseNear,
     [DRIVING_HOUSE_LEFT]: drivingHouseLeft,
