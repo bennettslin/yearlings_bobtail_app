@@ -31,10 +31,10 @@ import {
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
     THOUGHT_LARGE__LEFT,
-    THOUGHT_LARGE__RIGHT,
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
+    THOUGHT_LARGE__RIGHT,
     APART_SKETCH,
     SKETCHBOOK__APART,
     DOGS_SKETCH,
@@ -67,14 +67,14 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
+    BUBBLE_SMALL__INVERSE,
+    BUBBLE_MEDIUM__INVERSE,
+    BUBBLE_LARGE__INVERSE,
     THOUGHT_MEDIUM,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
-    THOUGHT_SMALL,
-    BUBBLE_SMALL__INVERSE,
-    BUBBLE_MEDIUM__INVERSE,
-    BUBBLE_LARGE__INVERSE
+    THOUGHT_SMALL
 } from 'constants/scene/things/bubbles'
 
 export default {
@@ -118,15 +118,15 @@ export default {
     [BUBBLE_MEDIUM__LIZ]: false,
     [BUBBLE_LARGE__LIZ]: false,
     [LIZ_THOUGHT]: false,
-    [BUBBLE_SMALL__DEATHBED]: false,
-    [BUBBLE_MEDIUM__DEATHBED]: false,
-    [BUBBLE_LARGE__DEATHBED]: false,
+    [BUBBLE_SMALL__DEATHBED]: bubbleSmall,
+    [BUBBLE_MEDIUM__DEATHBED]: bubbleMedium,
+    [BUBBLE_LARGE__DEATHBED]: bubbleLarge,
+    [BUBBLE_SMALL__INVERSE]: bubbleSmall,
+    [BUBBLE_MEDIUM__INVERSE]: bubbleMedium,
+    [BUBBLE_LARGE__INVERSE]: bubbleLarge,
     [THOUGHT_MEDIUM]: thoughtMedium,
-    [BUBBLE_SMALL__TENNIS]: false,
-    [BUBBLE_MEDIUM__TENNIS]: false,
-    [BUBBLE_LARGE__TENNIS]: false,
-    [THOUGHT_SMALL]: thoughtSmall,
-    [BUBBLE_SMALL__INVERSE]: false,
-    [BUBBLE_MEDIUM__INVERSE]: false,
-    [BUBBLE_LARGE__INVERSE]: false
+    [BUBBLE_SMALL__TENNIS]: bubbleSmall,
+    [BUBBLE_MEDIUM__TENNIS]: bubbleMedium,
+    [BUBBLE_LARGE__TENNIS]: bubbleLarge,
+    [THOUGHT_SMALL]: thoughtSmall
 }

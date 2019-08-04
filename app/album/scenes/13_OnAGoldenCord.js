@@ -3,7 +3,8 @@ import {
     BACKDROP,
     BUBBLE,
     CUTOUT,
-    FLAT
+    FLAT,
+    PANEL
 } from 'constants/scene'
 import {
     LIZ_COUCH_THOUGHT_KEY,
@@ -81,6 +82,7 @@ import {
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
 } from '../../constants/scene/things/flats'
+import { LIZ_COUCH } from '../../constants/scene/things/panels'
 
 export default [
     {
@@ -122,6 +124,9 @@ export default [
                 [BUBBLE_MEDIUM__LEFT]: true,
                 [BUBBLE_LARGE__LEFT]: true,
                 [THOUGHT_LARGE__LEFT]: true
+            },
+            [PANEL]: {
+                [LIZ_COUCH]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

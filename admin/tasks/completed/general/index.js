@@ -4821,5 +4821,10 @@ export default [
         taskName: `Organise Taiwan house scenes and consolidate styles.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Position small bubbles.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
