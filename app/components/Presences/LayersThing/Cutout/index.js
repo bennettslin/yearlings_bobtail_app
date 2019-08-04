@@ -7,7 +7,7 @@ import porchPlant from 'assets/svgs/cutouts/porchPlant'
 import campfire from 'assets/svgs/cutouts/campfire'
 import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine'
 import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge'
-// import taiwanTree from 'assets/svgs/cutouts/taiwanTree'
+import taiwanTree from 'assets/svgs/cutouts/taiwanTree'
 import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill'
 import lockerBank from 'assets/svgs/cutouts/lockerBank'
 import trashCan from 'assets/svgs/cutouts/trashCan'
@@ -127,7 +127,7 @@ export default {
     [CAMPFIRE]: campfire,
     [BUDDHA_SHRINE]: buddhaShrine,
     [TAIWAN_FRIDGE]: taiwanFridge,
-    [TAIWAN_TREE]: false,
+    [TAIWAN_TREE]: taiwanTree,
     [YELLOW_TAPED_GRILL]: yellowTapedGrill,
     [LOCKER_BANK]: lockerBank,
     [TRASH_CAN__LOCKERS]: trashCan,

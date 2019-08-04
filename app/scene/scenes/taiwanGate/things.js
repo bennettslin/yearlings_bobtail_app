@@ -23,12 +23,9 @@ const ARRANGEMENTS_THINGS = {
     },
     [CUTOUT]: {
         [TAIWAN_TREE]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 2,
-                zHeight: 3
-            }
+            yIndex: 1,
+            xPosition: 4,
+            scaleFactor: 0.6
         }
     },
     [FLAT]: {

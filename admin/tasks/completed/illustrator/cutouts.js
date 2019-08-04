@@ -238,5 +238,10 @@ export default [
         taskName: 'trashCan',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'taiwanTree',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -22,7 +22,7 @@ const
         floor: {
             hslaColours: [
                 [T],
-                [W, W, W, V, A, V, T, T, T, V, V, V],
+                [T],
                 [W, W, W, V, A, V, T, T, T, T, V, V],
                 [V, V, V, V, A, V, T],
                 [A, V, V, V, A, V, T],
@@ -30,7 +30,7 @@ const
             ],
             zIndices: [
                 [0],
-                [g, g, g, 1, d, 1, 0, 0, 0, 1, 1, 1],
+                [0],
                 [g, g, g, 1, d, 1, 0, 0, 0, 0, 1, 1],
                 [1, 1, 1, 1, d, 1, 0],
                 [d, 1, 1, 1, d, 1, 0],

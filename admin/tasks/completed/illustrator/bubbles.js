@@ -13,5 +13,10 @@ export default [
         taskName: 'pharmacyCel',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'thought and speech bubbles.',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
