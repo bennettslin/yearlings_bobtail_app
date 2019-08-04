@@ -4826,5 +4826,10 @@ export default [
         taskName: `Position small bubbles.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make ais out of remaining tifs, and name all layers to just 'presence.'`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
