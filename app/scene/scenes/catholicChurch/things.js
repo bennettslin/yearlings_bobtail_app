@@ -15,29 +15,27 @@ const ARRANGEMENTS_THINGS = {
         [FOLIAGE_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.7
+            scaleFactor: 0.7,
+            trimBottom: 0.1
         }
     },
     [CUTOUT]: {
         [BERKELEY_LAMPPOST]: {
             yIndex: 4,
-            xPosition: 10.5,
+            xPosition: 1,
             scaleFactor: 0.3
         }
     },
     [FLAT]: {
         [ST_JOSEPHS_ANNEX]: {
             yIndex: 1,
-            xPosition: 2.5,
-            scaleFactor: 0.6
+            xPosition: 1.5,
+            scaleFactor: 0.39
         },
         [ST_JOSEPHS_CHURCH]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 6,
-                zHeight: 5
-            }
+            xPosition: 7.5,
+            scaleFactor: 0.57
         }
     }
 }

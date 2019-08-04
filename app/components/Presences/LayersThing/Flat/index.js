@@ -21,7 +21,7 @@ import rollerCoaster from 'assets/svgs/flats/rollerCoaster'
 import oceanBottomMiddle from 'assets/svgs/flats/oceanBottomMiddle'
 import oceanBottomNear from 'assets/svgs/flats/oceanBottomNear'
 import stJosephsAnnex from 'assets/svgs/flats/stJosephsAnnex'
-// import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch'
+import stJosephsChurch from 'assets/svgs/flats/stJosephsChurch'
 import campanile from 'assets/svgs/flats/campanile'
 import goKartTrack from 'assets/svgs/flats/goKartTrack'
 import royceHall from 'assets/svgs/flats/royceHall'
@@ -140,7 +140,7 @@ export default {
     [OCEAN_BOTTOM_MIDDLE]: oceanBottomMiddle,
     [OCEAN_BOTTOM_NEAR]: oceanBottomNear,
     [ST_JOSEPHS_ANNEX]: stJosephsAnnex,
-    [ST_JOSEPHS_CHURCH]: false,
+    [ST_JOSEPHS_CHURCH]: stJosephsChurch,
     [CAMPANILE]: campanile,
     [CAMPUS_BUILDING_TALL__BERKELEY]: campusBuildingTall,
     [CAMPUS_BUILDING_WIDE__BERKELEY]: campusBuildingWide,
