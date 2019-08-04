@@ -1,6 +1,7 @@
 import app from './app'
 import backdrops from './backdrops'
 import bubbles from './bubbles'
+import doors from './doors'
 import fixtures from './fixtures'
 import flats from './flats'
 import furnitures from './furnitures'
@@ -11,6 +12,7 @@ export const illustratorRemainingTasks = {
     app,
     backdrops,
     bubbles,
+    doors,
     fixtures,
     flats,
     furnitures,
@@ -22,6 +24,7 @@ export default [
     ...app,
     ...backdrops,
     ...bubbles,
+    ...doors,
     ...fixtures,
     ...flats,
     ...furnitures,

@@ -3,6 +3,7 @@ import backdrops from './backdrops'
 import bubbles from './bubbles'
 import cardboards from './cardboards'
 import cutouts from './cutouts'
+import doors from './doors'
 import fixtures from './fixtures'
 import flats from './flats'
 import furnitures from './furnitures'
@@ -15,6 +16,7 @@ export const illustrator = {
     bubbles,
     cardboards,
     cutouts,
+    doors,
     fixtures,
     flats,
     furnitures,
@@ -28,6 +30,7 @@ export default [
     ...bubbles,
     ...cardboards,
     ...cutouts,
+    ...doors,
     ...fixtures,
     ...flats,
     ...furnitures,

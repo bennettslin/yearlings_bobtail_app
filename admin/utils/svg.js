@@ -69,6 +69,7 @@ export const logSvgCount = () => {
             bubblesCount.workedCount +
             cardboardsCount.workedCount +
             cutoutsCount.workedCount +
+            doorsCount.workedCount +
             fixturesCount.workedCount +
             flatsCount.workedCount +
             furnituresCount.workedCount +
@@ -79,6 +80,7 @@ export const logSvgCount = () => {
             bubblesCount.neededCount +
             cardboardsCount.neededCount +
             cutoutsCount.neededCount +
+            doorsCount.neededCount +
             fixturesCount.neededCount +
             flatsCount.neededCount +
             furnituresCount.neededCount +
