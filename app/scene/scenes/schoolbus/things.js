@@ -21,7 +21,9 @@ import {
 } from 'constants/scene/things/flats'
 import {
     SCHOOLBUS_EXTERIOR,
-    SCHOOLBUS_INTERIOR
+    SCHOOLBUS_INTERIOR,
+    SCHOOLBUS_SEAT__LEFT,
+    SCHOOLBUS_SEAT__RIGHT
 } from 'constants/scene/things/panels'
 import {
     BUBBLE_SHARED,
@@ -110,6 +112,22 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 5.5,
             scaleFactor: 0.5
+        },
+        [SCHOOLBUS_SEAT__LEFT]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 7,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [SCHOOLBUS_SEAT__RIGHT]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 7,
+                xWidth: 1,
+                zHeight: 1
+            }
         }
     }
 }

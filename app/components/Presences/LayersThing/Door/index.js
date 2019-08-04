@@ -11,8 +11,7 @@ import principalDoor from 'assets/svgs/doors/principalDoor'
 // import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
 // import basementDoor from 'assets/svgs/doors/basementDoor'
 // import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
-// import cinemaDoorLeft from 'assets/svgs/doors/cinemaDoorLeft'
-// import cinemaDoorRight from 'assets/svgs/doors/cinemaDoorRight'
+// import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
 // import lizBlinds from 'assets/svgs/doors/lizBlinds'
 // import lizBlindsOpen from 'assets/svgs/doors/lizBlindsOpen'
 // import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
@@ -25,14 +24,13 @@ import principalDoor from 'assets/svgs/doors/principalDoor'
 // import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 // import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
 // import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
-// import clubDoor from 'assets/svgs/doors/clubDoor'
+// import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
 // import lizDoor from 'assets/svgs/doors/lizDoor'
 // import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
 // import lizGateInside from 'assets/svgs/doors/lizGateInside'
 // import lizGateInsideOpen from 'assets/svgs/doors/lizGateInsideOpen'
 // import loadingDockDoor from 'assets/svgs/doors/loadingDockDoor'
-// import elToritoDoorLeft from 'assets/svgs/doors/elToritoDoorLeft'
-// import elToritoDoorRight from 'assets/svgs/doors/elToritoDoorRight'
+// import elToritoDoors from 'assets/svgs/doors/elToritoDoors'
 
 import {
     NURSE_DOOR,
@@ -48,13 +46,13 @@ import {
     BANCROFT_DOOR,
     BASEMENT_DOOR,
     BASEMENT_DOOR_OPEN,
-    CINEMA_DOOR_LEFT,
-    CINEMA_DOOR_RIGHT,
+    CINEMA_DOORS,
     LIZ_BLINDS,
     LIZ_BLINDS_OPEN,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
     DISHROOM_DOOR,
+    DISHROOM_DOOR_OPEN,
     BENNETT_BLINDS_OPEN,
     BENNETT_GATE_FRONT,
     BENNETT_GATE_SIDE_OPEN,
@@ -62,14 +60,13 @@ import {
     BENNETT_DOOR_INSIDE_OPEN,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
-    CLUB_DOOR,
+    CLUB_DOOR_OPEN,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
     LIZ_GATE_INSIDE_OPEN,
     LOADING_DOCK_DOOR,
-    EL_TORITO_DOOR_LEFT,
-    EL_TORITO_DOOR_RIGHT
+    EL_TORITO_DOORS
 } from 'constants/scene/things/doors'
 
 export default {
@@ -86,13 +83,13 @@ export default {
     [BANCROFT_DOOR]: false,
     [BASEMENT_DOOR]: false,
     [BASEMENT_DOOR_OPEN]: false,
-    [CINEMA_DOOR_LEFT]: false,
-    [CINEMA_DOOR_RIGHT]: false,
+    [CINEMA_DOORS]: false,
     [LIZ_BLINDS]: false,
     [LIZ_BLINDS_OPEN]: false,
     [LIZ_GATE_OUTSIDE]: false,
     [LIZ_GATE_OUTSIDE_OPEN]: false,
     [DISHROOM_DOOR]: false,
+    [DISHROOM_DOOR_OPEN]: false,
     [BENNETT_BLINDS_OPEN]: false,
     [BENNETT_GATE_FRONT]: false,
     [BENNETT_GATE_SIDE_OPEN]: false,
@@ -100,12 +97,11 @@ export default {
     [BENNETT_DOOR_INSIDE_OPEN]: false,
     [WAITING_ROOM_DOOR]: false,
     [WAITING_ROOM_DOOR_OPEN]: false,
-    [CLUB_DOOR]: false,
+    [CLUB_DOOR_OPEN]: false,
     [LIZ_DOOR]: false,
     [LIZ_DOOR_OPEN]: false,
     [LIZ_GATE_INSIDE]: false,
     [LIZ_GATE_INSIDE_OPEN]: false,
     [LOADING_DOCK_DOOR]: false,
-    [EL_TORITO_DOOR_LEFT]: false,
-    [EL_TORITO_DOOR_RIGHT]: false
+    [EL_TORITO_DOORS]: false
 }

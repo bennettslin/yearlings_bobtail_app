@@ -13,7 +13,8 @@ import {
 } from 'constants/scene/things/flats'
 import {
     REATTA_EXTERIOR,
-    REATTA_INTERIOR
+    REATTA_INTERIOR,
+    REATTA_SEAT
 } from 'constants/scene/things/panels'
 import { PUPPET_REATTA } from 'constants/scene/things/puppets'
 import { INTERIOR_SHARED } from '../../shared'
@@ -58,6 +59,14 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 4.5,
             scaleFactor: 0.25,
             sharedStyle: INTERIOR_SHARED
+        },
+        [REATTA_SEAT]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 10,
+                xWidth: 1,
+                zHeight: 0.5
+            }
         }
     }
 }

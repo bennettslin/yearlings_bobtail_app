@@ -130,7 +130,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'clubDoor',
+        taskName: 'clubDoorOpen',
         workedHours: 0,
         neededHours: 2
     },
@@ -160,7 +160,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'elToritoDoorLeft',
+        taskName: 'elToritoDoors',
         workedHours: 0,
         neededHours: 2
     },

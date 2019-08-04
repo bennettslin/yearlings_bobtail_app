@@ -62,6 +62,7 @@ import {
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
+    REATTA_SEAT,
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../constants/scene/things/puppets'
@@ -93,7 +94,8 @@ export default [
             },
             [PANEL]: {
                 [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
+                [REATTA_INTERIOR]: true,
+                [REATTA_SEAT]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -124,7 +126,8 @@ export default [
             },
             [PANEL]: {
                 [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
+                [REATTA_INTERIOR]: true,
+                [REATTA_SEAT]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -155,7 +158,8 @@ export default [
             },
             [PANEL]: {
                 [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
+                [REATTA_INTERIOR]: true,
+                [REATTA_SEAT]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -265,7 +269,8 @@ export default [
             },
             [PANEL]: {
                 [REATTA_EXTERIOR]: true,
-                [REATTA_INTERIOR]: true
+                [REATTA_INTERIOR]: true,
+                [REATTA_SEAT]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,

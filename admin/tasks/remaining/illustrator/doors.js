@@ -65,14 +65,9 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'cinemaDoorLeft',
+        taskName: 'cinemaDoors',
         workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'cinemaDoorRight',
-        workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     },
     {
         taskName: 'lizBlinds',
@@ -135,7 +130,7 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'clubDoor',
+        taskName: 'clubDoorOpen',
         workedHours: 0,
         neededHours: 0.5
     },
@@ -165,13 +160,8 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'elToritoDoorLeft',
+        taskName: 'elToritoDoors',
         workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'elToritoDoorRight',
-        workedHours: 0,
-        neededHours: 0.5
+        neededHours: 1
     }
 ]

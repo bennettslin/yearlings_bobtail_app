@@ -10,7 +10,9 @@ import {
 import { EVIAN_BOTTLES } from 'constants/scene/things/fixtures'
 import {
     SATURN_INTERIOR,
-    SATURN_EXTERIOR
+    SATURN_EXTERIOR,
+    SATURN_SEAT__LEFT,
+    SATURN_SEAT__RIGHT
 } from 'constants/scene/things/panels'
 import { INTERIOR_SHARED } from '../../shared'
 
@@ -56,6 +58,22 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 5.5,
             scaleFactor: 0.5
+        },
+        [SATURN_SEAT__LEFT]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 1.5,
+                xWidth: 1,
+                zHeight: 1
+            }
+        },
+        [SATURN_SEAT__RIGHT]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 1.5,
+                xWidth: 1,
+                zHeight: 1
+            }
         }
     }
 }

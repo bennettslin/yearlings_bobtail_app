@@ -54,7 +54,9 @@ import {
 import { GO_KART_TRACK } from '../../constants/scene/things/flats'
 import {
     GO_KART_EXTERIOR__LEFT,
-    GO_KART_EXTERIOR__RIGHT
+    GO_KART_EXTERIOR__RIGHT,
+    GO_KART_SEAT__LEFT,
+    GO_KART_SEAT__RIGHT
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -176,7 +178,9 @@ export default [
             },
             [PANEL]: {
                 [GO_KART_EXTERIOR__LEFT]: true,
-                [GO_KART_EXTERIOR__RIGHT]: true
+                [GO_KART_EXTERIOR__RIGHT]: true,
+                [GO_KART_SEAT__LEFT]: true,
+                [GO_KART_SEAT__RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,

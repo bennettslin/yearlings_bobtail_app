@@ -11,11 +11,13 @@ import trollShadowFar from 'assets/svgs/panels/trollShadowFar'
 // import taiwanFog from 'assets/svgs/panels/taiwanFog'
 import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior'
 import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
+// import schoolbusSeat from 'assets/svgs/panels/schoolbusSeat'
 import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
 import wideCouch from 'assets/svgs/panels/wideCouch'
 import wideArmrest from 'assets/svgs/panels/wideArmrest'
 import goKartExterior from 'assets/svgs/panels/goKartExterior'
+// import goKartSeat from 'assets/svgs/panels/goKartSeat'
 import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
 import dishroomSink from 'assets/svgs/panels/dishroomSink'
 import bennettBed from 'assets/svgs/panels/bennettBed'
@@ -24,6 +26,7 @@ import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
+// import saturnSeat from 'assets/svgs/panels/saturnSeat'
 import atticCouch from 'assets/svgs/panels/atticCouch'
 import atticArmrest from 'assets/svgs/panels/atticArmrest'
 import volkswagen from 'assets/svgs/panels/volkswagen'
@@ -32,6 +35,7 @@ import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
 import reattaInterior from 'assets/svgs/panels/reattaInterior'
 import reattaExterior from 'assets/svgs/panels/reattaExterior'
+// import reattaSeat from 'assets/svgs/panels/reattaSeat'
 import hospitalBed from 'assets/svgs/panels/hospitalBed'
 import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
 import crowdBack from 'assets/svgs/panels/crowdBack'
@@ -51,6 +55,8 @@ import {
     TAIWAN_FOG,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
+    SCHOOLBUS_SEAT__LEFT,
+    SCHOOLBUS_SEAT__RIGHT,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
     WIDE_COUCH__BENNETT,
@@ -58,6 +64,8 @@ import {
     WIDE_ARMREST__BENNETT_RIGHT,
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
+    GO_KART_SEAT__LEFT,
+    GO_KART_SEAT__RIGHT,
     CONVEYOR_BELT,
     DISHROOM_SINK,
     BENNETT_BED,
@@ -70,6 +78,8 @@ import {
     LIZ_BED,
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
+    SATURN_SEAT__LEFT,
+    SATURN_SEAT__RIGHT,
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT,
@@ -86,6 +96,7 @@ import {
     SNOWGLOBE__BENNETT_ALONE,
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
+    REATTA_SEAT,
     HOSPITAL_BED,
     PHONE_CALL_PANEL,
     CROWD_BACK,
@@ -106,6 +117,8 @@ export default {
     [TAIWAN_FOG]: false,
     [SCHOOLBUS_INTERIOR]: schoolbusInterior,
     [SCHOOLBUS_EXTERIOR]: schoolbusExterior,
+    [SCHOOLBUS_SEAT__LEFT]: false,
+    [SCHOOLBUS_SEAT__RIGHT]: false,
     [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
     [WIDE_COUCH__BENNETT]: wideCouch,
@@ -113,6 +126,8 @@ export default {
     [WIDE_ARMREST__BENNETT_RIGHT]: wideArmrest,
     [GO_KART_EXTERIOR__LEFT]: goKartExterior,
     [GO_KART_EXTERIOR__RIGHT]: goKartExterior,
+    [GO_KART_SEAT__LEFT]: false,
+    [GO_KART_SEAT__RIGHT]: false,
     [CONVEYOR_BELT]: conveyorBelt,
     [DISHROOM_SINK]: dishroomSink,
     [BENNETT_BED]: bennettBed,
@@ -125,6 +140,8 @@ export default {
     [LIZ_BED]: lizBed,
     [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,
+    [SATURN_SEAT__LEFT]: false,
+    [SATURN_SEAT__RIGHT]: false,
     [ATTIC_COUCH]: atticCouch,
     [ATTIC_ARMREST__LEFT]: atticArmrest,
     [ATTIC_ARMREST__RIGHT]: atticArmrest,
@@ -141,6 +158,7 @@ export default {
     [SNOWGLOBE__BENNETT_ALONE]: snowglobe,
     [REATTA_INTERIOR]: reattaInterior,
     [REATTA_EXTERIOR]: reattaExterior,
+    [REATTA_SEAT]: false,
     [HOSPITAL_BED]: hospitalBed,
     [PHONE_CALL_PANEL]: phoneCallPanel,
     [CROWD_BACK]: crowdBack,

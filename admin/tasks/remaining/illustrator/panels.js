@@ -8,5 +8,25 @@ export default [
         taskName: 'taiwanFog',
         workedHours: 0,
         neededHours: 1.5
+    },
+    {
+        taskName: 'schoolbusSeat',
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'goKartSeat',
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'saturnSeat',
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'reattaSeat',
+        workedHours: 0,
+        neededHours: 0.5
     }
 ]

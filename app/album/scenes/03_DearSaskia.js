@@ -68,7 +68,9 @@ import {
     TAIWAN_CLOUDS,
     TAIWAN_FOG,
     SCHOOLBUS_EXTERIOR,
-    SCHOOLBUS_INTERIOR
+    SCHOOLBUS_INTERIOR,
+    SCHOOLBUS_SEAT__LEFT,
+    SCHOOLBUS_SEAT__RIGHT
 } from '../../constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
@@ -169,7 +171,9 @@ export default [
             },
             [PANEL]: {
                 [SCHOOLBUS_INTERIOR]: true,
-                [SCHOOLBUS_EXTERIOR]: true
+                [SCHOOLBUS_EXTERIOR]: true,
+                [SCHOOLBUS_SEAT__LEFT]: true,
+                [SCHOOLBUS_SEAT__RIGHT]: true
             }
         },
         cubes: SCHOOLBUS_KEY,
