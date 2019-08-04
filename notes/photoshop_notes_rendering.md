@@ -1,25 +1,3 @@
-# Various panel type bubbles
-
-* schoolbusThought
-    * TODO: Bring schoolbus and Saturn one cube closer, flats on curb.
-* tetherballThought
-* bennettCouchThoughtBackdrop
-    * TODO: Reduce.
-* lizCouchThoughtBackdrop
-* pharmacyCel
-
-* estherSpeech
-    * TODO: Add door flat.
-* deathbedThoughtPanel
-* tennisThoughtPanel
-    * TODO: Add tennis court flat.
-* phoneCallPanel
-* inverseThoughtPanel
-
-# TODO
-* Doors and windows
-* Car seats
-
 # TODO
 * Make ceiling cubes disappear
 
@@ -46,7 +24,7 @@
 * Cutouts (Last done: bancroftShrub)
 
 # Pre-Illustrator things
-* The following were made using the legacy Photoshop to Illustrator method, where I would render first in Photoshop, then Image Trace > Line Art into vector paths.
+* The following were made using the legacy Photoshop to Illustrator method, where I would render first in Photoshop, then image trace into vector paths.
 * Backdrops
     * oceanBottomFar
     * oceanFloorFar
