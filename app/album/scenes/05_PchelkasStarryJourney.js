@@ -4,6 +4,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,
@@ -73,6 +74,7 @@ import {
     VAN_NUYS_PLANT__LOCKERS,
     VAN_NUYS_PLANT__QUAD
 } from '../../constants/scene/things/cutouts'
+import { PRINCIPAL_DOOR } from '../../constants/scene/things/doors'
 import {
     CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
@@ -347,6 +349,9 @@ export default [
             },
             [CARDBOARD]: {
                 [CORKBOARD]: true
+            },
+            [DOOR]: {
+                [PRINCIPAL_DOOR]: true
             }
         },
         cubes: VAN_NUYS_HALLWAY_KEY,

@@ -1,0 +1,17 @@
+<svg viewBox="0 0 637.28 1135.27">
+    <path id="frame" class="frame" d="M636.28,1134.27H1V1H636.28Zm-588.24,0H589.23V50.4H48Z"/>
+    <path id="rail" class="rail" d="M489.28,577H148V151.6H489.28Zm100-526.59H48V1134.27H589.23Z"/>
+    <g id="edge">
+        <rect class="edge" x="127.89" y="675.99" width="151.01" height="378.07"/>
+        <rect class="edge" x="358.37" y="675.99" width="151.01" height="378.07"/>
+        <path class="edge" d="M148,152.58H489.28V577H148ZM127.89,599h381.5V130.59H127.89Z"/>
+    </g>
+    <g id="panel">
+        <rect class="panel" x="377.97" y="695.99" width="111.83" height="338.07"/>
+        <rect class="panel" x="147.48" y="695.99" width="111.83" height="338.07"/>
+    </g>
+    <rect id="escutcheon" class="escutcheon" x="529.72" y="560.55" width="37.87" height="113.62"/>
+    <circle id="knob" class="knob" cx="548.88" cy="636.82" r="27.02"/>
+    <circle id="lock" class="lock" cx="548.65" cy="587.34" r="13.21"/>
+    <rect id="window" class="window" x="148" y="151.6" width="341.28" height="425.39"/>
+</svg>

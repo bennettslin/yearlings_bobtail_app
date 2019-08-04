@@ -1,7 +1,9 @@
 import {
-    CARDBOARD
+    CARDBOARD,
+    DOOR
 } from 'constants/scene'
 import { CORKBOARD } from 'constants/scene/things/cardboards'
+import { PRINCIPAL_DOOR } from 'constants/scene/things/doors'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -10,6 +12,13 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 7.5,
             zOffset: 1.5,
             scaleFactor: 0.35
+        }
+    },
+    [DOOR]: {
+        [PRINCIPAL_DOOR]: {
+            yIndex: 4,
+            xPosition: 3,
+            scaleFactor: 0.8
         }
     }
 }
