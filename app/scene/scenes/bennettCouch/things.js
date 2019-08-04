@@ -1,14 +1,8 @@
 import {
-    BUBBLE,
     CARDBOARD,
     FIXTURE,
     PANEL
 } from 'constants/scene'
-import {
-    BUBBLE_SMALL__BENNETT_COUCH,
-    BUBBLE_MEDIUM__BENNETT_COUCH,
-    BUBBLE_LARGE__BENNETT_COUCH
-} from 'constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER,
@@ -69,32 +63,6 @@ const ARRANGEMENTS_THINGS = {
 }
 
 export const THINGS_BENNETT_COUCH_OPINION = {
-    [BUBBLE]: {
-        [BUBBLE_SMALL__BENNETT_COUCH]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 8
-            }
-        },
-        [BUBBLE_MEDIUM__BENNETT_COUCH]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 8
-            }
-        },
-        [BUBBLE_LARGE__BENNETT_COUCH]: {
-            yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 8
-            }
-        }
-    },
     [CARDBOARD]: {
         [POLICE_ALBUM]: {
             yIndex: 2,

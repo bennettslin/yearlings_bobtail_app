@@ -5,9 +5,10 @@ import {
     FLAT
 } from 'constants/scene'
 import {
-    BUBBLE_SMALL__TETHERBALL,
-    BUBBLE_MEDIUM__TETHERBALL,
-    BUBBLE_LARGE__TETHERBALL
+    BUBBLE_SMALL__RIGHT,
+    BUBBLE_MEDIUM__RIGHT,
+    BUBBLE_LARGE__RIGHT,
+    THOUGHT_LARGE__RIGHT
 } from 'constants/scene/things/bubbles'
 import {
     CAMPUS_TREE_SINGLE__TETHERBALL,
@@ -19,33 +20,37 @@ import {
     CAMPUS_BUILDING_TALL__TETHERBALL,
     CAMPUS_BUILDING_WIDE__TETHERBALL
 } from 'constants/scene/things/flats'
-import { VAN_NUYS_SCHOOLHOUSE_SHARED } from '../../shared'
+import { BUBBLE_SHARED, VAN_NUYS_SCHOOLHOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
-        [BUBBLE_SMALL__TETHERBALL]: {
+        [BUBBLE_SMALL__RIGHT]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
+            xPosition: 9,
+            zOffset: 8,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
-        [BUBBLE_MEDIUM__TETHERBALL]: {
+        [BUBBLE_MEDIUM__RIGHT]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
+            xPosition: 9.5,
+            zOffset: 7.75,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
-        [BUBBLE_LARGE__TETHERBALL]: {
+        [BUBBLE_LARGE__RIGHT]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
+            xPosition: 10,
+            zOffset: 7,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
+        },
+        [THOUGHT_LARGE__RIGHT]: {
+            yIndex: 0,
+            xPosition: 5.5,
+            scaleFactor: 0.6,
+            flipHorizontal: true,
+            sharedStyle: BUBBLE_SHARED
         }
     },
     [CUTOUT]: {

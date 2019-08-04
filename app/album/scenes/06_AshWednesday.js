@@ -45,10 +45,10 @@ import {
     OAKLAND_SIDE_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
-    BUBBLE_SMALL__BENNETT_COUCH,
-    BUBBLE_MEDIUM__BENNETT_COUCH,
-    BUBBLE_LARGE__BENNETT_COUCH,
-    THOUGHT_LARGE
+    BUBBLE_SMALL__RIGHT,
+    BUBBLE_MEDIUM__RIGHT,
+    BUBBLE_LARGE__RIGHT,
+    THOUGHT_LARGE__RIGHT
 } from 'constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
@@ -121,10 +121,10 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [BUBBLE_SMALL__BENNETT_COUCH]: true,
-                [BUBBLE_MEDIUM__BENNETT_COUCH]: true,
-                [BUBBLE_LARGE__BENNETT_COUCH]: true,
-                [THOUGHT_LARGE]: true
+                [BUBBLE_SMALL__RIGHT]: true,
+                [BUBBLE_MEDIUM__RIGHT]: true,
+                [BUBBLE_LARGE__RIGHT]: true,
+                [THOUGHT_LARGE__RIGHT]: true
             },
             [CARDBOARD]: {
                 [POLICE_ALBUM]: true,

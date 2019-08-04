@@ -5,10 +5,10 @@ import {
     PANEL
 } from 'constants/scene'
 import {
-    BUBBLE_SMALL__SCHOOLBUS,
-    BUBBLE_MEDIUM__SCHOOLBUS,
-    BUBBLE_LARGE__SCHOOLBUS,
-    THOUGHT_LARGE
+    BUBBLE_SMALL__LEFT,
+    BUBBLE_MEDIUM__LEFT,
+    BUBBLE_LARGE__LEFT,
+    THOUGHT_LARGE__LEFT
 } from 'constants/scene/things/bubbles'
 import {
     BACKPACK_BENNETT,
@@ -31,31 +31,28 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
-        [BUBBLE_SMALL__SCHOOLBUS]: {
+        [BUBBLE_SMALL__LEFT]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
+            xPosition: 2,
+            zOffset: 8,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
-        [BUBBLE_MEDIUM__SCHOOLBUS]: {
+        [BUBBLE_MEDIUM__LEFT]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
+            xPosition: 1.5,
+            zOffset: 7.75,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
-        [BUBBLE_LARGE__SCHOOLBUS]: {
+        [BUBBLE_LARGE__LEFT]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 10,
-                zHeight: 7
-            }
+            xPosition: 1,
+            zOffset: 7,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
-        [THOUGHT_LARGE]: {
+        [THOUGHT_LARGE__LEFT]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,

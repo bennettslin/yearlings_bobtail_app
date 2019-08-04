@@ -50,10 +50,10 @@ import {
     OAKLAND_FRONT_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
-    BUBBLE_SMALL__LIZ_COUCH,
-    BUBBLE_MEDIUM__LIZ_COUCH,
-    BUBBLE_LARGE__LIZ_COUCH,
-    THOUGHT_LARGE
+    BUBBLE_SMALL__LEFT,
+    BUBBLE_MEDIUM__LEFT,
+    BUBBLE_LARGE__LEFT,
+    THOUGHT_LARGE__LEFT
 } from 'constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
@@ -118,10 +118,10 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [BUBBLE_SMALL__LIZ_COUCH]: true,
-                [BUBBLE_MEDIUM__LIZ_COUCH]: true,
-                [BUBBLE_LARGE__LIZ_COUCH]: true,
-                [THOUGHT_LARGE]: true
+                [BUBBLE_SMALL__LEFT]: true,
+                [BUBBLE_MEDIUM__LEFT]: true,
+                [BUBBLE_LARGE__LEFT]: true,
+                [THOUGHT_LARGE__LEFT]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

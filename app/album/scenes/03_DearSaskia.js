@@ -34,13 +34,14 @@ import { TAIWAN_MOUNTAINS_BACKDROP } from '../../constants/scene/things/backdrop
 import {
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
-    BUBBLE_SMALL__SCHOOLBUS,
-    BUBBLE_MEDIUM__SCHOOLBUS,
-    BUBBLE_LARGE__SCHOOLBUS,
-    THOUGHT_LARGE,
-    BUBBLE_SMALL__TETHERBALL,
-    BUBBLE_MEDIUM__TETHERBALL,
-    BUBBLE_LARGE__TETHERBALL,
+    BUBBLE_SMALL__LEFT,
+    BUBBLE_MEDIUM__LEFT,
+    BUBBLE_LARGE__LEFT,
+    THOUGHT_LARGE__LEFT,
+    BUBBLE_SMALL__RIGHT,
+    BUBBLE_MEDIUM__RIGHT,
+    BUBBLE_LARGE__RIGHT,
+    THOUGHT_LARGE__RIGHT,
     APART_SKETCH,
     SKETCHBOOK__APART
 } from '../../constants/scene/things/bubbles'
@@ -152,10 +153,10 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [BUBBLE_SMALL__SCHOOLBUS]: true,
-                [BUBBLE_MEDIUM__SCHOOLBUS]: true,
-                [BUBBLE_LARGE__SCHOOLBUS]: true,
-                [THOUGHT_LARGE]: true
+                [BUBBLE_SMALL__LEFT]: true,
+                [BUBBLE_MEDIUM__LEFT]: true,
+                [BUBBLE_LARGE__LEFT]: true,
+                [THOUGHT_LARGE__LEFT]: true
             },
             [FIXTURE]: {
                 [BACKPACK_BENNETT]: true,
@@ -196,10 +197,10 @@ export default [
                 }
             },
             [BUBBLE]: {
-                [BUBBLE_SMALL__TETHERBALL]: true,
-                [BUBBLE_MEDIUM__TETHERBALL]: true,
-                [BUBBLE_LARGE__TETHERBALL]: true,
-                [THOUGHT_LARGE]: true
+                [BUBBLE_SMALL__RIGHT]: true,
+                [BUBBLE_MEDIUM__RIGHT]: true,
+                [BUBBLE_LARGE__RIGHT]: true,
+                [THOUGHT_LARGE__RIGHT]: true
             },
             [CUTOUT]: {
                 [CAMPUS_TREE_SINGLE__TETHERBALL]: true,
