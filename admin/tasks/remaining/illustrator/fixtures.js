@@ -35,16 +35,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'backpackSasha',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'backpackJewishBoy',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'fridgeDrawings',
         workedHours: 0,
         neededHours: 1.5
@@ -186,11 +176,6 @@ export default [
     },
     {
         taskName: 'stageMicSide',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'stageMicFar',
         workedHours: 0,
         neededHours: 2
     },

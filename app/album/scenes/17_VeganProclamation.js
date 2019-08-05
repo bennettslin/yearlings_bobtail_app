@@ -59,7 +59,6 @@ import {
 } from '../../constants/scene/things/cutouts'
 import {
     ASH_CAN,
-    STAGE_MIC_FAR,
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
@@ -139,9 +138,6 @@ export default [
             [CUTOUT]: {
                 [WALL_SPEAKER_FRONT__LEFT]: true,
                 [WALL_SPEAKER_FRONT__RIGHT]: true
-            },
-            [FIXTURE]: {
-                [STAGE_MIC_FAR]: true
             },
             [PANEL]: {
                 [CROWD_BACK]: true

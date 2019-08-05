@@ -10,11 +10,7 @@ import {
     BUBBLE_LARGE__LEFT,
     THOUGHT_LARGE__LEFT
 } from 'constants/scene/things/bubbles'
-import {
-    BACKPACK_BENNETT,
-    BACKPACK_SASHA,
-    BACKPACK_JEWISH_BOY
-} from 'constants/scene/things/fixtures'
+import { BACKPACK_BENNETT } from 'constants/scene/things/fixtures'
 import {
     DRIVING_HOUSE_LEFT,
     DRIVING_HOUSE_RIGHT
@@ -66,22 +62,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             arrangement: {
                 xPosition: 3.5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [BACKPACK_SASHA]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [BACKPACK_JEWISH_BOY]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 7,
                 xWidth: 1,
                 zHeight: 1
             }

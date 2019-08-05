@@ -5,8 +5,6 @@
 // import beethovenBust from 'assets/svgs/fixtures/beethovenBust'
 // import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
-// import backpackSasha from 'assets/svgs/fixtures/backpackSasha'
-// import backpackJewishBoy from 'assets/svgs/fixtures/backpackJewishBoy'
 // import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
 // import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
 // import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
@@ -50,7 +48,6 @@
 // import recordingMic from 'assets/svgs/fixtures/recordingMic'
 // import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
 // import crackedPicture from 'assets/svgs/fixtures/crackedPicture'
-// import stageMicFar from 'assets/svgs/fixtures/stageMicFar'
 // import burgerWrapper from 'assets/svgs/fixtures/burgerWrapper'
 // import lizPhoneBase from 'assets/svgs/fixtures/lizPhoneBase'
 // import lizPhoneBaseReflection from 'assets/svgs/fixtures/lizPhoneBaseReflection'
@@ -64,8 +61,6 @@ import {
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
     BACKPACK_BENNETT,
-    BACKPACK_SASHA,
-    BACKPACK_JEWISH_BOY,
     FRIDGE_DRAWINGS,
     BENNETT_LETTERS,
     CAPTAIN_BED_LAMP,
@@ -112,7 +107,6 @@ import {
     RECORDING_CONSOLE,
     RECORDING_BEERS,
     CRACKED_PICTURE,
-    STAGE_MIC_FAR,
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
@@ -127,8 +121,6 @@ export default {
     [BEETHOVEN_BUST]: false,
     [CHRISTOPHER_LETTERS]: false,
     [BACKPACK_BENNETT]: false,
-    [BACKPACK_SASHA]: false,
-    [BACKPACK_JEWISH_BOY]: false,
     [FRIDGE_DRAWINGS]: false,
     [CAPTAIN_BED_LAMP]: false,
     [RED_ENVELOPE_MONEY]: false,
@@ -175,7 +167,6 @@ export default {
     [RECORDING_CONSOLE]: false,
     [RECORDING_BEERS]: false,
     [CRACKED_PICTURE]: false,
-    [STAGE_MIC_FAR]: false,
     [BURGER_WRAPPER]: false,
     [LIZ_PHONE_BASE]: false,
     [LIZ_PHONE_BASE_REFLECTION]: false,

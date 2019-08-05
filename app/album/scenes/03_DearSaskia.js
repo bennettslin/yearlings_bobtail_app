@@ -50,11 +50,7 @@ import {
     CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT,
     CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT
 } from '../../constants/scene/things/cutouts'
-import {
-    BACKPACK_BENNETT,
-    BACKPACK_SASHA,
-    BACKPACK_JEWISH_BOY
-} from '../../constants/scene/things/fixtures'
+import { BACKPACK_BENNETT } from '../../constants/scene/things/fixtures'
 import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
@@ -161,9 +157,7 @@ export default [
                 [THOUGHT_LARGE__LEFT]: true
             },
             [FIXTURE]: {
-                [BACKPACK_BENNETT]: true,
-                [BACKPACK_SASHA]: true,
-                [BACKPACK_JEWISH_BOY]: true
+                [BACKPACK_BENNETT]: true
             },
             [FLAT]: {
                 [DRIVING_HOUSE_LEFT]: true,
