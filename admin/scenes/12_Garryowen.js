@@ -86,7 +86,7 @@ export default [
                 },
                 [MIRIAM_TRISTAN]: {
                     todo: true,
-                    workedHours: 3.5,
+                    workedHours: 3.75,
                     compound: 2,
                     instance: NOOGIE
                 },
