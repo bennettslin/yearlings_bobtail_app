@@ -1,9 +1,18 @@
 // import puppetBennettBegin from 'assets/svgs/puppets/puppetBennettBegin'
-// import puppetFamilyBegin from 'assets/svgs/puppets/puppetFamilyBegin'
+// import puppetAnitaBegin from 'assets/svgs/puppets/puppetAnitaBegin'
+// import puppetChristopherBegin from 'assets/svgs/puppets/puppetChristopherBegin'
+// import puppetFatherBegin from 'assets/svgs/puppets/puppetFatherBegin'
+// import puppetMotherBegin from 'assets/svgs/puppets/puppetMotherBegin'
 // import puppetBennettMiddle from 'assets/svgs/puppets/puppetBennettMiddle'
-// import puppetFamilyMiddle from 'assets/svgs/puppets/puppetFamilyMiddle'
+// import puppetAnitaMiddle from 'assets/svgs/puppets/puppetAnitaMiddle'
+// import puppetChristopherMiddle from 'assets/svgs/puppets/puppetChristopherMiddle'
+// import puppetFatherMiddle from 'assets/svgs/puppets/puppetFatherMiddle'
+// import puppetMotherMiddle from 'assets/svgs/puppets/puppetMotherMiddle'
 // import puppetBennettEnd from 'assets/svgs/puppets/puppetBennettEnd'
-// import puppetFamilyEnd from 'assets/svgs/puppets/puppetFamilyEnd'
+// import puppetAnitaEnd from 'assets/svgs/puppets/puppetAnitaEnd'
+// import puppetChristopherEnd from 'assets/svgs/puppets/puppetChristopherEnd'
+// import puppetFatherEnd from 'assets/svgs/puppets/puppetFatherEnd'
+// import puppetMotherEnd from 'assets/svgs/puppets/puppetMotherEnd'
 // import pchelkaMushkaRocket from 'assets/svgs/puppets/pchelkaMushkaRocket'
 // import earth from 'assets/svgs/puppets/earth'
 // import spaceColony from 'assets/svgs/puppets/spaceColony'
@@ -20,11 +29,20 @@
 
 import {
     PUPPET_BENNETT_BEGIN,
-    PUPPET_FAMILY_BEGIN,
+    PUPPET_ANITA_BEGIN,
+    PUPPET_CHRISTOPHER_BEGIN,
+    PUPPET_FATHER_BEGIN,
+    PUPPET_MOTHER_BEGIN,
     PUPPET_BENNETT_MIDDLE,
-    PUPPET_FAMILY_MIDDLE,
+    PUPPET_ANITA_MIDDLE,
+    PUPPET_CHRISTOPHER_MIDDLE,
+    PUPPET_FATHER_MIDDLE,
+    PUPPET_MOTHER_MIDDLE,
     PUPPET_BENNETT_END,
-    PUPPET_FAMILY_END,
+    PUPPET_ANITA_END,
+    PUPPET_CHRISTOPHER_END,
+    PUPPET_FATHER_END,
+    PUPPET_MOTHER_END,
     PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY,
@@ -42,11 +60,20 @@ import {
 
 export default {
     [PUPPET_BENNETT_BEGIN]: false,
-    [PUPPET_FAMILY_BEGIN]: false,
+    [PUPPET_ANITA_BEGIN]: false,
+    [PUPPET_CHRISTOPHER_BEGIN]: false,
+    [PUPPET_FATHER_BEGIN]: false,
+    [PUPPET_MOTHER_BEGIN]: false,
     [PUPPET_BENNETT_MIDDLE]: false,
-    [PUPPET_FAMILY_MIDDLE]: false,
+    [PUPPET_ANITA_MIDDLE]: false,
+    [PUPPET_CHRISTOPHER_MIDDLE]: false,
+    [PUPPET_FATHER_MIDDLE]: false,
+    [PUPPET_MOTHER_MIDDLE]: false,
     [PUPPET_BENNETT_END]: false,
-    [PUPPET_FAMILY_END]: false,
+    [PUPPET_ANITA_END]: false,
+    [PUPPET_CHRISTOPHER_END]: false,
+    [PUPPET_FATHER_END]: false,
+    [PUPPET_MOTHER_END]: false,
     [PCHELKA_MUSHKA_ROCKET]: false,
     [EARTH]: false,
     [SPACE_COLONY]: false,

@@ -70,11 +70,20 @@ import {
 } from '../../constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
-    PUPPET_FAMILY_BEGIN,
+    PUPPET_ANITA_BEGIN,
+    PUPPET_CHRISTOPHER_BEGIN,
+    PUPPET_FATHER_BEGIN,
+    PUPPET_MOTHER_BEGIN,
     PUPPET_BENNETT_MIDDLE,
-    PUPPET_FAMILY_MIDDLE,
+    PUPPET_ANITA_MIDDLE,
+    PUPPET_CHRISTOPHER_MIDDLE,
+    PUPPET_FATHER_MIDDLE,
+    PUPPET_MOTHER_MIDDLE,
     PUPPET_BENNETT_END,
-    PUPPET_FAMILY_END
+    PUPPET_ANITA_END,
+    PUPPET_CHRISTOPHER_END,
+    PUPPET_FATHER_END,
+    PUPPET_MOTHER_END
 } from '../../constants/scene/things/puppets'
 
 export default [
@@ -96,7 +105,10 @@ export default [
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_BEGIN]: true,
-                [PUPPET_FAMILY_BEGIN]: true
+                [PUPPET_ANITA_BEGIN]: true,
+                [PUPPET_CHRISTOPHER_BEGIN]: true,
+                [PUPPET_FATHER_BEGIN]: true,
+                [PUPPET_MOTHER_BEGIN]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,
@@ -127,7 +139,10 @@ export default [
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_MIDDLE]: true,
-                [PUPPET_FAMILY_MIDDLE]: true
+                [PUPPET_ANITA_MIDDLE]: true,
+                [PUPPET_CHRISTOPHER_MIDDLE]: true,
+                [PUPPET_FATHER_MIDDLE]: true,
+                [PUPPET_MOTHER_MIDDLE]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,
@@ -238,7 +253,10 @@ export default [
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_END]: true,
-                [PUPPET_FAMILY_END]: true
+                [PUPPET_ANITA_END]: true,
+                [PUPPET_CHRISTOPHER_END]: true,
+                [PUPPET_FATHER_END]: true,
+                [PUPPET_MOTHER_END]: true
             }
         },
         cubes: PUPPET_SHOW_KEY,

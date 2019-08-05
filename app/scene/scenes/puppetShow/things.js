@@ -23,11 +23,20 @@ import {
 } from 'constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
-    PUPPET_FAMILY_BEGIN,
+    PUPPET_ANITA_BEGIN,
+    PUPPET_CHRISTOPHER_BEGIN,
+    PUPPET_FATHER_BEGIN,
+    PUPPET_MOTHER_BEGIN,
     PUPPET_BENNETT_MIDDLE,
-    PUPPET_FAMILY_MIDDLE,
+    PUPPET_ANITA_MIDDLE,
+    PUPPET_CHRISTOPHER_MIDDLE,
+    PUPPET_FATHER_MIDDLE,
+    PUPPET_MOTHER_MIDDLE,
     PUPPET_BENNETT_END,
-    PUPPET_FAMILY_END
+    PUPPET_ANITA_END,
+    PUPPET_CHRISTOPHER_END,
+    PUPPET_FATHER_END,
+    PUPPET_MOTHER_END
 } from 'constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
@@ -94,7 +103,31 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
                 zHeight: 1
             }
         },
-        [PUPPET_FAMILY_BEGIN]: {
+        [PUPPET_ANITA_BEGIN]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 3,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_CHRISTOPHER_BEGIN]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 3,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_FATHER_BEGIN]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 3,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_MOTHER_BEGIN]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 3,
@@ -131,7 +164,31 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
                 zHeight: 1
             }
         },
-        [PUPPET_FAMILY_MIDDLE]: {
+        [PUPPET_ANITA_MIDDLE]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_CHRISTOPHER_MIDDLE]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_FATHER_MIDDLE]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 4,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_MOTHER_MIDDLE]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 4,
@@ -168,7 +225,31 @@ export const THINGS_PUPPET_SHOW_END = {
                 zHeight: 1
             }
         },
-        [PUPPET_FAMILY_END]: {
+        [PUPPET_ANITA_END]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 10,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_CHRISTOPHER_END]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 10,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_FATHER_END]: {
+            yIndex: 2,
+            arrangement: {
+                xPosition: 10,
+                xWidth: 0.5,
+                zHeight: 1
+            }
+        },
+        [PUPPET_MOTHER_END]: {
             yIndex: 2,
             arrangement: {
                 xPosition: 10,
