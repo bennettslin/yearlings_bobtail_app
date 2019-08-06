@@ -11,6 +11,7 @@ import principalDoor from 'assets/svgs/doors/principalDoor'
 // import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
 // import basementDoor from 'assets/svgs/doors/basementDoor'
 // import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
+// import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
 // import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
 // import lizBlinds from 'assets/svgs/doors/lizBlinds'
 // import lizBlindsOpen from 'assets/svgs/doors/lizBlindsOpen'
@@ -46,6 +47,7 @@ import {
     BANCROFT_DOOR,
     BASEMENT_DOOR,
     BASEMENT_DOOR_OPEN,
+    BASEMENT_DOOR_SIDE,
     CINEMA_DOORS,
     LIZ_BLINDS,
     LIZ_BLINDS_OPEN,
@@ -83,6 +85,7 @@ export default {
     [BANCROFT_DOOR]: false,
     [BASEMENT_DOOR]: false,
     [BASEMENT_DOOR_OPEN]: false,
+    [BASEMENT_DOOR_SIDE]: false,
     [CINEMA_DOORS]: false,
     [LIZ_BLINDS]: false,
     [LIZ_BLINDS_OPEN]: false,

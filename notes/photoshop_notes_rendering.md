@@ -148,7 +148,3 @@
     * reattaExterior
     * phoneCallPanel
     * crowdBack
-
-# Rotate in svg.
-* bennettOdinOceanDepths
-* wallSpeakerSide
