@@ -116,7 +116,7 @@ export default [
                 },
                 [MIRIAM_STEPHANIE]: {
                     todo: true,
-                    workedHours: 3.5,
+                    workedHours: 3.75,
                     compound: 2,
                     instance: MISCHIEVOUS_BANJO
                 }
