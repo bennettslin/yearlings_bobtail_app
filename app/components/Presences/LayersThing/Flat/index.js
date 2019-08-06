@@ -5,7 +5,7 @@ import valleyFreeway from 'assets/svgs/flats/valleyFreeway'
 import bedroomBus from 'assets/svgs/flats/bedroomBus'
 import bedroomSiren from 'assets/svgs/flats/bedroomSiren'
 import familyHouse from 'assets/svgs/flats/familyHouse'
-// import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
+import taiwanMountainsBridged from 'assets/svgs/flats/taiwanMountainsBridged'
 import taiwanMountainLeft from 'assets/svgs/flats/taiwanMountainLeft'
 import taiwanMountainRight from 'assets/svgs/flats/taiwanMountainRight'
 import taiwanHousesCentre from 'assets/svgs/flats/taiwanHousesCentre'
@@ -124,7 +124,7 @@ export default {
     [BEDROOM_BUS]: bedroomBus,
     [BEDROOM_SIREN]: bedroomSiren,
     [FAMILY_HOUSE]: familyHouse,
-    [TAIWAN_MOUNTAINS_BRIDGED]: false,
+    [TAIWAN_MOUNTAINS_BRIDGED]: taiwanMountainsBridged,
     [TAIWAN_MOUNTAIN_LEFT]: taiwanMountainLeft,
     [TAIWAN_MOUNTAIN_RIGHT]: taiwanMountainRight,
     [TAIWAN_HOUSES_CENTRE]: taiwanHousesCentre,

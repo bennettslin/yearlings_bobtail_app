@@ -1,14 +1,58 @@
-.sketchbook {
-    .paperSide {
-        fill: #b7b3a5;
+.taiwanMountainsBridged {
+    .mountainRear {
+        fill: #5e4452;
     }
 
-    .paperFront {
-        fill: #e8e4d9;
+    .road {
+        fill: #737565;
     }
 
-    .wire {
-        fill: #686364;
+    .pineRear {
+        fill: #4b824e;
+    }
+
+    .pineFront {
+        fill: #549157;
+    }
+
+    .bonsaiLeavesBack {
+        fill: #4e9475;
+    }
+
+    .bonsaiTrunk {
+        fill: #705b39;
+    }
+
+    .bonsaiLeavesFront {
+        fill: #55a17f;
+    }
+
+    .suspenders {
+        fill: rgba(200, 150, 150, 0.3);
+    }
+
+    .cable {
+        fill: #d4ad8c;
+    }
+
+    .planks {
+        fill: #7d634c;
+    }
+
+    .post {
+        fill: #857a4a;
+    }
+
+    .bushRear {
+        fill: #4a7343;
+    }
+
+    .mountainFront {
+        fill: #694b5b;
+    }
+
+    .bushFront {
+        fill: #54824c;
     }
 }
 
@@ -53,5 +97,19 @@
 
     .mountainFront {
         fill: #600;
+    }
+}
+
+.sketchbook {
+    .paperSide {
+        fill: #b7b3a5;
+    }
+
+    .paperFront {
+        fill: #e8e4d9;
+    }
+
+    .wire {
+        fill: #686364;
     }
 }

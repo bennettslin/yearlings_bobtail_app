@@ -38,6 +38,7 @@ import {
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END
 } from 'constants/scene/things/puppets'
+import { TAIWAN_HOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -53,11 +54,9 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [TAIWAN_MOUNTAINS_BRIDGED]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 6
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.55,
+            sharedStyle: TAIWAN_HOUSE_SHARED
         },
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 4,

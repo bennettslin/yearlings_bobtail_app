@@ -10,7 +10,10 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
 } from 'constants/scene/things/flats'
-import { BENNETT_ODIN_SHARED, TAIWAN_HOUSE_SHARED } from '../../shared'
+import {
+    BENNETT_ODIN_SHARED,
+    TAIWAN_HOUSE_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

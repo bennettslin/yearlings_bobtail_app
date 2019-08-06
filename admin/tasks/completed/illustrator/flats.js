@@ -258,5 +258,10 @@ export default [
         taskName: 'stJosephsChurch',
         workedHours: 3.5,
         neededHours: 3.5
+    },
+    {
+        taskName: 'taiwanMountainsBridged',
+        workedHours: 2.5,
+        neededHours: 2.5
     }
 ]
