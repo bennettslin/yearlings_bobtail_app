@@ -48,7 +48,7 @@ import publicFarRight from 'assets/svgs/flats/publicFarRight'
 import publicNearRight from 'assets/svgs/flats/publicNearRight'
 import elCerritoFar from 'assets/svgs/flats/elCerritoFar'
 import elCerritoNear from 'assets/svgs/flats/elCerritoNear'
-// import tennisCourt from 'assets/svgs/flats/tennisCourt'
+import tennisCourt from 'assets/svgs/flats/tennisCourt'
 import forebodingTrees from 'assets/svgs/flats/forebodingTrees'
 import cliffGravesFar from 'assets/svgs/flats/cliffGravesFar'
 import cliffGravesNear from 'assets/svgs/flats/cliffGravesNear'
@@ -169,7 +169,7 @@ export default {
     [PUBLIC_NEAR_RIGHT]: publicNearRight,
     [EL_CERRITO_FAR]: elCerritoFar,
     [EL_CERRITO_NEAR]: elCerritoNear,
-    [TENNIS_COURT]: false,
+    [TENNIS_COURT]: tennisCourt,
     [FOREBODING_TREES__NEAR]: forebodingTrees,
     [FOREBODING_TREES__MIDDLE]: forebodingTrees,
     [FOREBODING_TREES__FAR]: forebodingTrees,

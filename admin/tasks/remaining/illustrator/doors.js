@@ -30,11 +30,6 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'principalDoor',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'bennettBlinds',
         workedHours: 0,
         neededHours: 0.5

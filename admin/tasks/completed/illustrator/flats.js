@@ -263,5 +263,10 @@ export default [
         taskName: 'taiwanMountainsBridged',
         workedHours: 2.5,
         neededHours: 2.5
+    },
+    {
+        taskName: 'tennisCourt',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
