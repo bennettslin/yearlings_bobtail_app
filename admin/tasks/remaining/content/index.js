@@ -8,5 +8,10 @@ export default [
         taskName: `Wrap up unfinished annotations.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Thought bubbles with Liz original breakup.`,
+        workedHours: 0,
+        neededHours: 20
     }
 ]
