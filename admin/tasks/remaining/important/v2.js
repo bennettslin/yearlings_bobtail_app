@@ -9,6 +9,11 @@ export default [
         workedHours: 0,
         neededHours: 10
     },
+    {
+        taskName: `Change from Dreamhost to AWS for band website.`,
+        workedHours: 0,
+        neededHours: 10
+    },
 
     /**
      * Content.
