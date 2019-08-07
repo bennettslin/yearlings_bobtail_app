@@ -17,10 +17,7 @@ import {
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT
 } from 'constants/scene/things/flats'
-import {
-    TAIWAN_CLOUDS,
-    TAIWAN_FOG
-} from 'constants/scene/things/panels'
+import { TAIWAN_FOG } from 'constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
     PUPPET_ANITA_BEGIN,
@@ -69,15 +66,6 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [TAIWAN_CLOUDS]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 3,
-                zOffset: 5
-            }
-        },
         [TAIWAN_FOG]: {
             yIndex: 1,
             arrangement: {

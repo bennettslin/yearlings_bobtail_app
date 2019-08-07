@@ -7,7 +7,6 @@ import stalactites from 'assets/svgs/panels/stalactites'
 import trollShadowLeft from 'assets/svgs/panels/trollShadowLeft'
 import trollShadowRight from 'assets/svgs/panels/trollShadowRight'
 import trollShadowFar from 'assets/svgs/panels/trollShadowFar'
-// import taiwanClouds from 'assets/svgs/panels/taiwanClouds'
 // import taiwanFog from 'assets/svgs/panels/taiwanFog'
 import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior'
 import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
@@ -51,7 +50,6 @@ import {
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
-    TAIWAN_CLOUDS,
     TAIWAN_FOG,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
@@ -113,7 +111,6 @@ export default {
     [TROLL_SHADOW_LEFT]: trollShadowLeft,
     [TROLL_SHADOW_RIGHT]: trollShadowRight,
     [TROLL_SHADOW_FAR]: trollShadowFar,
-    [TAIWAN_CLOUDS]: false,
     [TAIWAN_FOG]: false,
     [SCHOOLBUS_INTERIOR]: schoolbusInterior,
     [SCHOOLBUS_EXTERIOR]: schoolbusExterior,
