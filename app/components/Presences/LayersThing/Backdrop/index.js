@@ -1,7 +1,7 @@
 import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop'
 import schoolBackdrop from 'assets/svgs/backdrops/schoolBackdrop'
 import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
-// import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
+import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
 import taiwanStairsBackdrop from 'assets/svgs/backdrops/taiwanStairsBackdrop'
 import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
 import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
@@ -46,7 +46,7 @@ export default {
     [NOHO_HOUSES_BACKDROP]: nohoHousesBackdrop,
     [SCHOOL_BACKDROP]: schoolBackdrop,
     [VALLEY_BACKDROP]: valleyBackdrop,
-    [TAIWAN_MOUNTAINS_BACKDROP]: false,
+    [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,
     [TAIWAN_STAIRS_BACKDROP]: taiwanStairsBackdrop,
     [MOUNTAIN_BACKDROP]: mountainBackdrop,
     [SHORE_RICKSHAW_BACKDROP]: shoreRickshawBackdrop,

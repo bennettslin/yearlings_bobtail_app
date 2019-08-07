@@ -44,11 +44,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [TAIWAN_MOUNTAINS_BACKDROP]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.6
         }
     },
     [FLAT]: {
