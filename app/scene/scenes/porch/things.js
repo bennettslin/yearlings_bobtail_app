@@ -1,10 +1,12 @@
 import {
-    CUTOUT
+    CUTOUT,
+    DOOR
 } from 'constants/scene'
 import {
     PORCH_PLANT__LEFT,
     PORCH_PLANT__RIGHT
 } from 'constants/scene/things/cutouts'
+import { PORCH_DOOR } from 'constants/scene/things/doors'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -17,6 +19,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 10.5,
             scaleFactor: 0.3
+        }
+    },
+    [DOOR]: {
+        [PORCH_DOOR]: {
+            yIndex: 1,
+            xPosition: 6,
+            scaleFactor: 0.7
         }
     }
 }

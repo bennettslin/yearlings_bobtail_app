@@ -1,5 +1,5 @@
 // import nurseDoor from 'assets/svgs/doors/nurseDoor'
-// import porchDoor from 'assets/svgs/doors/porchDoor'
+import porchDoor from 'assets/svgs/doors/porchDoor'
 // import bedroomBlinds from 'assets/svgs/doors/bedroomBlinds'
 // import bedroomBlindsOpen from 'assets/svgs/doors/bedroomBlindsOpen'
 // import ironGateLow from 'assets/svgs/doors/ironGateLow'
@@ -73,7 +73,7 @@ import {
 
 export default {
     [NURSE_DOOR]: false,
-    [PORCH_DOOR]: false,
+    [PORCH_DOOR]: porchDoor,
     [BEDROOM_BLINDS]: false,
     [BEDROOM_BLINDS_OPEN]: false,
     [IRON_GATE_LOW]: false,

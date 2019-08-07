@@ -18,7 +18,7 @@ const ARRANGEMENTS_THINGS = {
         [PRINCIPAL_DOOR]: {
             yIndex: 4,
             xPosition: 3,
-            scaleFactor: 0.8
+            scaleFactor: 0.7
         }
     }
 }

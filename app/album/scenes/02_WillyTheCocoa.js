@@ -3,6 +3,7 @@ import {
     BACKDROP,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,
@@ -62,6 +63,7 @@ import {
     FIRE_HYDRANT,
     CAMPFIRE
 } from '../../constants/scene/things/cutouts'
+import { PORCH_DOOR } from '../../constants/scene/things/doors'
 import {
     SHOPPING_CART,
     BEETHOVEN_BUST,
@@ -164,6 +166,9 @@ export default [
             [CUTOUT]: {
                 [PORCH_PLANT__LEFT]: true,
                 [PORCH_PLANT__RIGHT]: true
+            },
+            [DOOR]: {
+                [PORCH_DOOR]: true
             }
         },
         cubes: PORCH_KEY,
