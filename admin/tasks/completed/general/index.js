@@ -4831,5 +4831,10 @@ export default [
         taskName: `Make ais out of remaining tifs, and name all layers to just 'presence.'`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Put problem and inefficient ai files in separate folders, improve some cutouts.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
