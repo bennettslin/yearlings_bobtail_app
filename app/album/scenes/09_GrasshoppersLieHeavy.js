@@ -3,6 +3,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FURNITURE,
     PANEL
@@ -78,6 +79,10 @@ import {
     APARTMENT_PLANT,
     WAITING_ROOM_PLANT
 } from '../../constants/scene/things/cutouts'
+import {
+    BENNETT_DOOR_INSIDE,
+    BENNETT_DOOR_INSIDE_OPEN
+} from '../../constants/scene/things/doors'
 import {
     NUDE_DRAWINGS,
     VASELINE,
@@ -292,6 +297,9 @@ export default [
                     instance: GINGERBREAD_PRISON
                 }
             },
+            [DOOR]: {
+                [BENNETT_DOOR_INSIDE]: true
+            },
             [FIXTURE]: {
                 [NUDE_DRAWINGS]: true,
                 [VASELINE]: true
@@ -325,6 +333,9 @@ export default [
                         instance: RUMPLED_LINENS
                     }
                 }
+            },
+            [DOOR]: {
+                [BENNETT_DOOR_INSIDE_OPEN]: true
             },
             [FIXTURE]: {
                 [NUDE_DRAWINGS]: true,

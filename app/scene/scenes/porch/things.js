@@ -7,6 +7,7 @@ import {
     PORCH_PLANT__RIGHT
 } from 'constants/scene/things/cutouts'
 import { PORCH_DOOR } from 'constants/scene/things/doors'
+import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -25,7 +26,8 @@ const ARRANGEMENTS_THINGS = {
         [PORCH_DOOR]: {
             yIndex: 1,
             xPosition: 6,
-            scaleFactor: 0.7
+            scaleFactor: 0.7,
+            sharedStyle: DOOR_SHARED
         }
     }
 }

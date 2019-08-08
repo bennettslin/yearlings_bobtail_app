@@ -21,8 +21,8 @@ import principalDoor from 'assets/svgs/doors/principalDoor'
 // import bennettBlindsOpen from 'assets/svgs/doors/bennettBlindsOpen'
 // import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
 // import bennettGateSideOpen from 'assets/svgs/doors/bennettGateSideOpen'
-// import bennettDoorInside from 'assets/svgs/doors/bennettDoorInside'
-// import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
+import bennettDoorInside from 'assets/svgs/doors/bennettDoorInside'
+import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 // import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
 // import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
 // import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
@@ -96,8 +96,8 @@ export default {
     [BENNETT_BLINDS_OPEN]: false,
     [BENNETT_GATE_FRONT]: false,
     [BENNETT_GATE_SIDE_OPEN]: false,
-    [BENNETT_DOOR_INSIDE]: false,
-    [BENNETT_DOOR_INSIDE_OPEN]: false,
+    [BENNETT_DOOR_INSIDE]: bennettDoorInside,
+    [BENNETT_DOOR_INSIDE_OPEN]: bennettDoorInsideOpen,
     [WAITING_ROOM_DOOR]: false,
     [WAITING_ROOM_DOOR_OPEN]: false,
     [CLUB_DOOR_OPEN]: false,

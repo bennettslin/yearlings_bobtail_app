@@ -13,5 +13,15 @@ export default [
         taskName: 'loadingDockDoor',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'bennettDoorInside',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'bennettDoorInsideOpen',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

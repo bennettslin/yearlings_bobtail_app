@@ -105,16 +105,6 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'bennettDoorInside',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'bennettDoorInsideOpen',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'waitingRoomDoor',
         workedHours: 0,
         neededHours: 0.5

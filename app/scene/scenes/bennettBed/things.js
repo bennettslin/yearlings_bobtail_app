@@ -1,8 +1,13 @@
 import {
+    DOOR,
     FIXTURE,
     FURNITURE,
     PANEL
 } from 'constants/scene'
+import {
+    BENNETT_DOOR_INSIDE,
+    BENNETT_DOOR_INSIDE_OPEN
+} from 'constants/scene/things/doors'
 import {
     NUDE_DRAWINGS,
     VASELINE
@@ -12,8 +17,23 @@ import {
     BENNETT_BLANKET
 } from 'constants/scene/things/furniture'
 import { BENNETT_BED } from 'constants/scene/things/panels'
+import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
+    [DOOR]: {
+        [BENNETT_DOOR_INSIDE]: {
+            yIndex: 3,
+            xPosition: 3,
+            scaleFactor: 0.7,
+            sharedStyle: DOOR_SHARED
+        },
+        [BENNETT_DOOR_INSIDE_OPEN]: {
+            yIndex: 3,
+            xPosition: 3,
+            scaleFactor: 0.7,
+            sharedStyle: DOOR_SHARED
+        }
+    },
     [FIXTURE]: {
         [NUDE_DRAWINGS]: {
             yIndex: 3,
