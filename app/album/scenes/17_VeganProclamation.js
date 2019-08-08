@@ -2,6 +2,7 @@ import {
     ACTOR,
     BACKDROP,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,
@@ -57,6 +58,7 @@ import {
     WALL_SPEAKER_FRONT__RIGHT,
     DUMPSTER
 } from '../../constants/scene/things/cutouts'
+import { LOADING_DOCK_DOOR } from '../../constants/scene/things/doors'
 import {
     ASH_CAN,
     BURGER_WRAPPER,
@@ -164,6 +166,9 @@ export default [
             },
             [CUTOUT]: {
                 [DUMPSTER]: true
+            },
+            [DOOR]: {
+                [LOADING_DOCK_DOOR]: true
             },
             [FIXTURE]: {
                 [BURGER_WRAPPER]: true

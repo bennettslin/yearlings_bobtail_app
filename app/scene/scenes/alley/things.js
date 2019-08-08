@@ -1,9 +1,11 @@
 import {
     CUTOUT,
+    DOOR,
     FIXTURE,
     PUPPET
 } from 'constants/scene'
 import { DUMPSTER } from 'constants/scene/things/cutouts'
+import { LOADING_DOCK_DOOR } from 'constants/scene/things/doors'
 import { BURGER_WRAPPER } from 'constants/scene/things/fixtures'
 import { GHOST_ODIN_ALLEY } from 'constants/scene/things/puppets'
 
@@ -13,6 +15,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 9,
             scaleFactor: 0.3
+        }
+    },
+    [DOOR]: {
+        [LOADING_DOCK_DOOR]: {
+            yIndex: 2,
+            xPosition: 3,
+            scaleFactor: 0.7
         }
     },
     [FIXTURE]: {

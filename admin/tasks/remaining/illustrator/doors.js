@@ -150,11 +150,6 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'loadingDockDoor',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'elToritoDoors',
         workedHours: 0,
         neededHours: 1

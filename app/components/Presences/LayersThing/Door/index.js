@@ -30,7 +30,7 @@ import principalDoor from 'assets/svgs/doors/principalDoor'
 // import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
 // import lizGateInside from 'assets/svgs/doors/lizGateInside'
 // import lizGateInsideOpen from 'assets/svgs/doors/lizGateInsideOpen'
-// import loadingDockDoor from 'assets/svgs/doors/loadingDockDoor'
+import loadingDockDoor from 'assets/svgs/doors/loadingDockDoor'
 // import elToritoDoors from 'assets/svgs/doors/elToritoDoors'
 
 import {
@@ -105,6 +105,6 @@ export default {
     [LIZ_DOOR_OPEN]: false,
     [LIZ_GATE_INSIDE]: false,
     [LIZ_GATE_INSIDE_OPEN]: false,
-    [LOADING_DOCK_DOOR]: false,
+    [LOADING_DOCK_DOOR]: loadingDockDoor,
     [EL_TORITO_DOORS]: false
 }
