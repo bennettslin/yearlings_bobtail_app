@@ -132,20 +132,17 @@ export const THINGS_BEDROOM_FEARFUL = {
 export const THINGS_BEDROOM_GUILTY = {
     [BUBBLE]: {
         [DOGS_SKETCH]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 3,
-                zHeight: 4
-            }
+            yIndex: 5,
+            xPosition: 2.85,
+            zOffset: 2.15,
+            noShadow: true,
+            scaleFactor: 0.4
         },
         [SKETCHBOOK__DOGS]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 3,
-                zHeight: 4
-            }
+            yIndex: 5,
+            xPosition: 3,
+            zOffset: 1.5,
+            scaleFactor: 0.25
         }
     },
     [FIXTURE]: {

@@ -1,9 +1,9 @@
 import estherSpeech from 'assets/svgs/bubbles/estherSpeech'
+import sketchbook from 'assets/svgs/bubbles/sketchbook'
 // import togetherSketch from 'assets/svgs/bubbles/togetherSketch'
 // import apartSketch from 'assets/svgs/bubbles/apartSketch'
-// import dogsSketch from 'assets/svgs/bubbles/dogsSketch'
+import dogsSketch from 'assets/svgs/bubbles/dogsSketch'
 // import escapePodSketch from 'assets/svgs/bubbles/escapePodSketch'
-import sketchbook from 'assets/svgs/bubbles/sketchbook'
 import bubbleSmall from 'assets/svgs/bubbles/bubbleSmall'
 import bubbleMedium from 'assets/svgs/bubbles/bubbleMedium'
 import bubbleLarge from 'assets/svgs/bubbles/bubbleLarge'
@@ -25,8 +25,8 @@ import thoughtSmall from 'assets/svgs/bubbles/thoughtSmall'
 
 import {
     ESTHER_SPEECH,
-    TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
+    TOGETHER_SKETCH,
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
@@ -35,12 +35,12 @@ import {
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
     THOUGHT_LARGE__RIGHT,
-    APART_SKETCH,
     SKETCHBOOK__APART,
-    DOGS_SKETCH,
+    APART_SKETCH,
     SKETCHBOOK__DOGS,
-    ESCAPE_POD_SKETCH,
+    DOGS_SKETCH,
     SKETCHBOOK__ESCAPE_POD,
+    ESCAPE_POD_SKETCH,
     BUBBLE_SMALL__CINEMA,
     BUBBLE_MEDIUM__CINEMA,
     BUBBLE_LARGE__CINEMA,
@@ -79,8 +79,8 @@ import {
 
 export default {
     [ESTHER_SPEECH]: estherSpeech,
-    [TOGETHER_SKETCH]: false,
     [SKETCHBOOK__TOGETHER]: sketchbook,
+    [TOGETHER_SKETCH]: false,
     [BUBBLE_SMALL__LEFT]: bubbleSmall,
     [BUBBLE_MEDIUM__LEFT]: bubbleMedium,
     [BUBBLE_LARGE__LEFT]: bubbleLarge,
@@ -89,12 +89,12 @@ export default {
     [BUBBLE_MEDIUM__RIGHT]: bubbleMedium,
     [BUBBLE_LARGE__RIGHT]: bubbleLarge,
     [THOUGHT_LARGE__RIGHT]: thoughtLarge,
-    [APART_SKETCH]: false,
     [SKETCHBOOK__APART]: sketchbook,
-    [DOGS_SKETCH]: false,
+    [APART_SKETCH]: false,
     [SKETCHBOOK__DOGS]: sketchbook,
-    [ESCAPE_POD_SKETCH]: false,
+    [DOGS_SKETCH]: dogsSketch,
     [SKETCHBOOK__ESCAPE_POD]: sketchbook,
+    [ESCAPE_POD_SKETCH]: false,
     [BUBBLE_SMALL__CINEMA]: false,
     [BUBBLE_MEDIUM__CINEMA]: false,
     [BUBBLE_LARGE__CINEMA]: false,

@@ -18,5 +18,10 @@ export default [
         taskName: 'thought and speech bubbles.',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'dogsSketch',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
