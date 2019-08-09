@@ -7,7 +7,94 @@
         fill: #ccc;
     }
 
-    .logo, .magenta {
+    .logo,
+    .magenta {
         fill: #936;
+    }
+}
+
+.escapePodSketch {
+    .stationBottom {
+        fill: #707070;
+    }
+
+    .stationMiddle {
+        fill: #7a7a7a;
+    }
+
+    .trim {
+        fill: #adadad;
+    }
+
+    .bodyOverlapLine {
+        fill: none;
+    }
+
+    .panelFront {
+        fill: #b5b5b5;
+    }
+
+    .panelSide {
+        fill: #a3a3a3;
+    }
+
+    .bar {
+        fill: #b5b5b5;
+    }
+
+    .hatchFront {
+        fill: #9c9c9c;
+    }
+
+    .stationTop {
+        fill: #858585;
+    }
+
+    .stationInner {
+        fill: #5e5e5e;
+    }
+
+    .hatchHole {
+        fill: #525252;
+    }
+
+    .hatchSide {
+        fill: #8f8f8f;
+    }
+
+    .glass {
+        fill: #e6e6e6;
+    }
+
+    .flameOuter {
+        fill: #8c8c8c;
+    }
+
+    .flameInner {
+        fill: #999;
+    }
+
+    .body {
+        fill: #a8a8a8;
+    }
+
+    .head {
+        fill: #b0b0b0;
+    }
+
+    .nose {
+        fill: gray;
+    }
+
+    .eye {
+        fill: #969696;
+    }
+
+    .podInner {
+        fill: #616161;
+    }
+
+    .podOuter {
+        fill: #8a8a8a;
     }
 }

@@ -3,7 +3,7 @@ import sketchbook from 'assets/svgs/bubbles/sketchbook'
 // import togetherSketch from 'assets/svgs/bubbles/togetherSketch'
 // import apartSketch from 'assets/svgs/bubbles/apartSketch'
 import dogsSketch from 'assets/svgs/bubbles/dogsSketch'
-// import escapePodSketch from 'assets/svgs/bubbles/escapePodSketch'
+import escapePodSketch from 'assets/svgs/bubbles/escapePodSketch'
 import bubbleSmall from 'assets/svgs/bubbles/bubbleSmall'
 import bubbleMedium from 'assets/svgs/bubbles/bubbleMedium'
 import bubbleLarge from 'assets/svgs/bubbles/bubbleLarge'
@@ -94,7 +94,7 @@ export default {
     [SKETCHBOOK__DOGS]: sketchbook,
     [DOGS_SKETCH]: dogsSketch,
     [SKETCHBOOK__ESCAPE_POD]: sketchbook,
-    [ESCAPE_POD_SKETCH]: false,
+    [ESCAPE_POD_SKETCH]: escapePodSketch,
     [BUBBLE_SMALL__CINEMA]: false,
     [BUBBLE_MEDIUM__CINEMA]: false,
     [BUBBLE_LARGE__CINEMA]: false,

@@ -23,5 +23,10 @@ export default [
         taskName: 'dogsSketch',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'escapePodSketch',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

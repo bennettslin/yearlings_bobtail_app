@@ -17,21 +17,17 @@ const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
         [ESCAPE_POD_SKETCH]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 3
-            }
+            xPosition: 2.75,
+            zOffset: 3.5,
+            noShadow: true,
+            scaleFactor: 0.3
         },
         [SKETCHBOOK__ESCAPE_POD]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 3
-            }
+            xPosition: 2.75,
+            zOffset: 2.5,
+            rotate: 270,
+            scaleFactor: 0.25
         }
     },
     [CARDBOARD]: {
