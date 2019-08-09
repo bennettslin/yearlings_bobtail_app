@@ -1,5 +1,6 @@
 import {
     CUTOUT,
+    DOOR,
     PANEL
 } from 'constants/scene'
 import {
@@ -10,6 +11,7 @@ import {
     GLASS_RACK__DOLLY,
     DISH_PILE
 } from 'constants/scene/things/cutouts'
+import { DISHROOM_DOOR } from 'constants/scene/things/doors'
 import {
     CONVEYOR_BELT,
     DISHROOM_SINK
@@ -49,6 +51,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 6.25,
             scaleFactor: 0.4
+        }
+    },
+    [DOOR]: {
+        [DISHROOM_DOOR]: {
+            yIndex: 1,
+            xPosition: 9,
+            scaleFactor: 0.65
         }
     },
     [PANEL]: {

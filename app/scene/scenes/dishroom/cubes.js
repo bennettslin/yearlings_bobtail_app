@@ -30,25 +30,25 @@ const
                 [C]
             ],
             zIndices: [
-                [g, g, f, f, f, f, f, g, g, f, f, g],
+                [g, g, f, f, f, f, f, g, f, f, f, g],
                 [g]
             ]
         },
         floor: {
             hslaColours: [
-                [W, W, W, W, W, W, W, W, W, E, E, W],
-                [W, F, R, R, R, R, R, F, W, P, P, W],
-                [W, F, R, R, R, R, R, F, W, P, P, W],
-                [W, F, F, F, F, F, F, F, W, P, P, W],
-                [W, F, F, F, F, F, F, F, W, P, P, W],
+                [W, W, W, W, W, W, W, W, E, E, E, W],
+                [W, F, R, R, R, R, R, F, P, P, P, W],
+                [W, F, R, R, R, R, R, F, P, P, P, W],
+                [W, F, F, F, F, F, F, F, P, P, P, W],
+                [W, F, F, F, F, F, F, F, P, P, P, W],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
-                [g, g, b, b, b, b, b, g, g, f, f, g],
-                [g, 1, 7, 7, 7, 7, 7, 1, g, 5, 5, g],
-                [g, 1, 7, 7, 7, 7, 7, 1, g, 4, 4, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, g, 3, 3, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, g, 2, 2, g],
+                [g, g, b, b, b, b, b, g, f, f, f, g],
+                [g, 1, 7, 7, 7, 7, 7, 1, 5, 5, 5, g],
+                [g, 1, 7, 7, 7, 7, 7, 1, 4, 4, 4, g],
+                [g, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, g],
+                [g, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, g],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }

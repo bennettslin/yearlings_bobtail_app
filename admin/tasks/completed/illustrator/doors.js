@@ -28,5 +28,10 @@ export default [
         taskName: 'bennettDoorOutside',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'dishroomDoor',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

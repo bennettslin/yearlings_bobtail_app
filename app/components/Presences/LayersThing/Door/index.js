@@ -17,7 +17,7 @@ import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
 // import lizBlindsOpen from 'assets/svgs/doors/lizBlindsOpen'
 // import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
 // import lizGateOutsideOpen from 'assets/svgs/doors/lizGateOutsideOpen'
-// import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
+import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
 // import bennettBlindsOpen from 'assets/svgs/doors/bennettBlindsOpen'
 // import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
 // import bennettGateSideOpen from 'assets/svgs/doors/bennettGateSideOpen'
@@ -54,7 +54,6 @@ import {
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
     DISHROOM_DOOR,
-    DISHROOM_DOOR_OPEN,
     BENNETT_BLINDS_OPEN,
     BENNETT_GATE_FRONT,
     BENNETT_GATE_SIDE_OPEN,
@@ -91,8 +90,7 @@ export default {
     [LIZ_BLINDS_OPEN]: false,
     [LIZ_GATE_OUTSIDE]: false,
     [LIZ_GATE_OUTSIDE_OPEN]: false,
-    [DISHROOM_DOOR]: false,
-    [DISHROOM_DOOR_OPEN]: false,
+    [DISHROOM_DOOR]: dishroomDoor,
     [BENNETT_BLINDS_OPEN]: false,
     [BENNETT_GATE_FRONT]: false,
     [BENNETT_GATE_SIDE_OPEN]: false,

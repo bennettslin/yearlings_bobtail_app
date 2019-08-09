@@ -80,6 +80,7 @@ import {
     WAITING_ROOM_PLANT
 } from '../../constants/scene/things/cutouts'
 import {
+    DISHROOM_DOOR,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN
 } from '../../constants/scene/things/doors'
@@ -134,6 +135,9 @@ export default [
                 [DISHROOM_DOLLY__TRAY]: true,
                 [DISHROOM_DOLLY__GLASS]: true
             },
+            [DOOR]: {
+                [DISHROOM_DOOR]: true
+            },
             [PANEL]: {
                 [CONVEYOR_BELT]: true,
                 [DISHROOM_SINK]: true
@@ -168,6 +172,9 @@ export default [
                 [GLASS_RACK__DOLLY]: true,
                 [DISHROOM_DOLLY__TRAY]: true,
                 [DISHROOM_DOLLY__GLASS]: true
+            },
+            [DOOR]: {
+                [DISHROOM_DOOR]: true
             },
             [PANEL]: {
                 [CONVEYOR_BELT]: true,
