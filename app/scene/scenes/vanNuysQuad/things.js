@@ -27,7 +27,8 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2.75,
             zOffset: 2.5,
             rotate: 270,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            flipHorizontal: true
         }
     },
     [CARDBOARD]: {
