@@ -2,17 +2,20 @@ import {
     BACKDROP,
     BUBBLE,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT
 } from 'constants/scene'
 import { SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from 'constants/scene/things/bubbles'
 import { PLAYGROUND_SLIDE } from 'constants/scene/things/cutouts'
+import { NURSE_DOOR } from 'constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from 'constants/scene/things/fixtures'
 import { NOHO_SCHOOLHOUSE } from 'constants/scene/things/flats'
+import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -26,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
         [ESTHER_SPEECH]: {
             yIndex: 2,
-            xPosition: 9,
+            xPosition: 8.5,
             scaleFactor: 0.5
         }
     },
@@ -35,6 +38,14 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 1,
             scaleFactor: 0.3
+        }
+    },
+    [DOOR]: {
+        [NURSE_DOOR]: {
+            yIndex: 3,
+            xPosition: 8,
+            scaleFactor: 0.45,
+            sharedStyle: DOOR_SHARED
         }
     },
     [FIXTURE]: {
@@ -59,7 +70,7 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [NOHO_SCHOOLHOUSE]: {
             yIndex: 1,
-            xPosition: 3,
+            xPosition: 2.5,
             scaleFactor: 0.65
         }
     }

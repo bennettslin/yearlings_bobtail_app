@@ -1,6 +1,7 @@
 import {
     ACTOR,
     CUTOUT,
+    DOOR,
     FIXTURE,
     PANEL
 } from 'constants/scene'
@@ -54,6 +55,7 @@ import {
     WALL_SPEAKER_SIDE__CROWD,
     WALL_SPEAKER_SIDE__STAGE
 } from '../../constants/scene/things/cutouts'
+import { CLUB_DOOR_OPEN } from 'constants/scene/things/doors'
 import {
     STAGE_MIC_SIDE__CROWD,
     STAGE_MIC_SIDE__STAGE,
@@ -185,6 +187,9 @@ export default [
                     description: 'front, talking to Stephanie',
                     instance: MINGLING
                 }
+            },
+            [DOOR]: {
+                [CLUB_DOOR_OPEN]: true
             },
             [FIXTURE]: {
                 [DRUMS_STACKED__CLUB]: true

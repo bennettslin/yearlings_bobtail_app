@@ -1,4 +1,4 @@
-// import nurseDoor from 'assets/svgs/doors/nurseDoor'
+import nurseDoor from 'assets/svgs/doors/nurseDoor'
 import porchDoor from 'assets/svgs/doors/porchDoor'
 // import bedroomBlinds from 'assets/svgs/doors/bedroomBlinds'
 // import bedroomBlindsOpen from 'assets/svgs/doors/bedroomBlindsOpen'
@@ -25,7 +25,7 @@ import bennettDoorInside from 'assets/svgs/doors/bennettDoorInside'
 import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 // import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
 // import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
-// import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
+import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
 // import lizDoor from 'assets/svgs/doors/lizDoor'
 // import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
 // import lizGateInside from 'assets/svgs/doors/lizGateInside'
@@ -71,7 +71,7 @@ import {
 } from 'constants/scene/things/doors'
 
 export default {
-    [NURSE_DOOR]: false,
+    [NURSE_DOOR]: nurseDoor,
     [PORCH_DOOR]: porchDoor,
     [BEDROOM_BLINDS]: false,
     [BEDROOM_BLINDS_OPEN]: false,
@@ -98,7 +98,7 @@ export default {
     [BENNETT_DOOR_INSIDE_OPEN]: bennettDoorInsideOpen,
     [WAITING_ROOM_DOOR]: false,
     [WAITING_ROOM_DOOR_OPEN]: false,
-    [CLUB_DOOR_OPEN]: false,
+    [CLUB_DOOR_OPEN]: clubDoorOpen,
     [LIZ_DOOR]: false,
     [LIZ_DOOR_OPEN]: false,
     [LIZ_GATE_INSIDE]: false,

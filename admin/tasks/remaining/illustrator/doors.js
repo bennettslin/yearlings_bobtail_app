@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'nurseDoor',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'bedroomBlinds',
         workedHours: 0,
         neededHours: 0.5
@@ -101,11 +96,6 @@ export default [
     },
     {
         taskName: 'waitingRoomDoorOpen',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'clubDoorOpen',
         workedHours: 0,
         neededHours: 0.5
     },

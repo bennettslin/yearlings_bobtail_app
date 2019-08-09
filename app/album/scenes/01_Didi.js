@@ -4,6 +4,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     PANEL
@@ -54,6 +55,7 @@ import {
     MIRRORED_SINK,
     TOWEL_RACK
 } from '../../constants/scene/things/cutouts'
+import { NURSE_DOOR } from '../../constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG,
@@ -149,6 +151,9 @@ export default [
             },
             [CUTOUT]: {
                 [PLAYGROUND_SLIDE]: true
+            },
+            [DOOR]: {
+                [NURSE_DOOR]: true
             },
             [FIXTURE]: {
                 [PLAYGROUND_BALL]: true,

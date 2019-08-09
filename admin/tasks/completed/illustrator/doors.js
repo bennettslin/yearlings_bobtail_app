@@ -33,5 +33,15 @@ export default [
         taskName: 'dishroomDoor',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'clubDoorOpen',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'nurseDoor',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
