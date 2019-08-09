@@ -6,7 +6,7 @@ import porchDoor from 'assets/svgs/doors/porchDoor'
 // import ironGate from 'assets/svgs/doors/ironGate'
 import principalDoor from 'assets/svgs/doors/principalDoor'
 // import bennettBlinds from 'assets/svgs/doors/bennettBlinds'
-// import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
+import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
 // import bennettGateSide from 'assets/svgs/doors/bennettGateSide'
 // import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
 // import basementDoor from 'assets/svgs/doors/basementDoor'
@@ -80,7 +80,7 @@ export default {
     [IRON_GATE]: false,
     [PRINCIPAL_DOOR]: principalDoor,
     [BENNETT_BLINDS]: false,
-    [BENNETT_DOOR_OUTSIDE]: false,
+    [BENNETT_DOOR_OUTSIDE]: bennettDoorOutside,
     [BENNETT_GATE_SIDE]: false,
     [BANCROFT_DOOR]: false,
     [BASEMENT_DOOR]: false,

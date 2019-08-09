@@ -4,6 +4,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     PANEL
@@ -63,6 +64,7 @@ import {
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE
 } from '../../constants/scene/things/cutouts'
+import { BENNETT_DOOR_OUTSIDE } from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
@@ -98,6 +100,9 @@ export default [
             },
             [CUTOUT]: {
                 [RECYCLABLES]: true
+            },
+            [DOOR]: {
+                [BENNETT_DOOR_OUTSIDE]: true
             }
         },
         cubes: COURTYARD_KEY,

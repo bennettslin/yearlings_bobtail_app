@@ -30,11 +30,6 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'bennettDoorOutside',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'bennettGateSide',
         workedHours: 0,
         neededHours: 0.5
