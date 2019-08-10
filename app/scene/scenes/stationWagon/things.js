@@ -28,13 +28,10 @@ const ARRANGEMENTS_THINGS = {
             }
         },
         [SIBLING_CONSTELLATION]: {
-            yIndex: 5,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
+            yIndex: 1,
+            xPosition: 9,
+            zOffset: 4.5,
+            scaleFactor: 0.4
         }
     },
     [FIXTURE]: {

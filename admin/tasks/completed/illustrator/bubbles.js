@@ -28,5 +28,10 @@ export default [
         taskName: 'escapePodSketch',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'siblingConstellation',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
