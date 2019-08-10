@@ -38,5 +38,10 @@ export default [
         taskName: 'tarpitConstellation',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'waitingThoughtWalking',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

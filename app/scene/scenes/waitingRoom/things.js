@@ -123,12 +123,9 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
         },
         [WAITING_THOUGHT_WALKING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 3,
+            zOffset: 3,
+            scaleFactor: 0.45
         },
         [WAITING_THOUGHT_SINGING]: {
             yIndex: 5,
