@@ -1,6 +1,7 @@
 import {
     ACTOR,
     BACKDROP,
+    CARDBOARD,
     FIXTURE,
     PANEL
 } from 'constants/scene'
@@ -61,6 +62,12 @@ import {
     ROAD_FUTURE,
     FOLIAGE_BACKDROP
 } from '../../constants/scene/things/backdrops'
+import {
+    SNOWGLOBE_PAST,
+    SNOWGLOBE_PRESENT,
+    SNOWGLOBE_FUTURE_CORD,
+    SNOWGLOBE_FUTURE_REATTA
+} from '../../constants/scene/things/cardboards'
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
@@ -159,6 +166,9 @@ export default [
             [BACKDROP]: {
                 [ROAD_PAST]: true
             },
+            [CARDBOARD]: {
+                [SNOWGLOBE_PAST]: true
+            },
             [FIXTURE]: {
                 [TETHERBALL_POLE]: true
             },
@@ -198,6 +208,9 @@ export default [
             },
             [BACKDROP]: {
                 [ROAD_PRESENT]: true
+            },
+            [CARDBOARD]: {
+                [SNOWGLOBE_PRESENT]: true
             },
             [PANEL]: {
                 [SNOWGLOBE__LIZ_ALONE]: true,
@@ -243,6 +256,10 @@ export default [
             },
             [BACKDROP]: {
                 [ROAD_FUTURE]: true
+            },
+            [CARDBOARD]: {
+                [SNOWGLOBE_FUTURE_CORD]: true,
+                [SNOWGLOBE_FUTURE_REATTA]: true
             },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,

@@ -1,14 +1,26 @@
 import {
     BACKDROP,
+    CARDBOARD,
     PANEL
 } from 'constants/scene'
 import { ROAD_PAST } from 'constants/scene/things/backdrops'
+import { SNOWGLOBE_PAST } from 'constants/scene/things/cardboards'
 import { SNOWGLOBE__TETHERBALL } from 'constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_PAST]: {
             yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        }
+    },
+    [CARDBOARD]: {
+        [SNOWGLOBE_PAST]: {
+            yIndex: 1,
             arrangement: {
                 xPosition: 5.5,
                 xWidth: 12,

@@ -1,9 +1,14 @@
 import {
     BACKDROP,
+    CARDBOARD,
     FIXTURE,
     PANEL
 } from 'constants/scene'
 import { ROAD_FUTURE } from 'constants/scene/things/backdrops'
+import {
+    SNOWGLOBE_FUTURE_CORD,
+    SNOWGLOBE_FUTURE_REATTA
+} from 'constants/scene/things/cardboards'
 import {
     RECORDING_MIC,
     RECORDING_CONSOLE,
@@ -18,6 +23,24 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_FUTURE]: {
             yIndex: 0,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        }
+    },
+    [CARDBOARD]: {
+        [SNOWGLOBE_FUTURE_CORD]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        },
+        [SNOWGLOBE_FUTURE_REATTA]: {
+            yIndex: 1,
             arrangement: {
                 xPosition: 5.5,
                 xWidth: 12,

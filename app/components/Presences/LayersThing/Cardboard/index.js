@@ -32,6 +32,10 @@ import clipboard from 'assets/svgs/cardboards/clipboard'
 import painting from 'assets/svgs/cardboards/painting'
 import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
 import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
+// import snowglobePast from 'assets/svgs/cardboards/snowglobePast'
+// import snowglobePresent from 'assets/svgs/cardboards/snowglobePresent'
+// import snowglobeFutureCord from 'assets/svgs/cardboards/snowglobeFutureCord'
+// import snowglobeFutureReatta from 'assets/svgs/cardboards/snowglobeFutureReatta'
 
 import {
     JOHNNY_HORTON_ALBUM,
@@ -69,7 +73,11 @@ import {
     CLIPBOARD,
     PAINTING,
     NAS_ALBUM,
-    ELLIOTT_SMITH_POSTER
+    ELLIOTT_SMITH_POSTER,
+    SNOWGLOBE_PAST,
+    SNOWGLOBE_PRESENT,
+    SNOWGLOBE_FUTURE_CORD,
+    SNOWGLOBE_FUTURE_REATTA
 } from 'constants/scene/things/cardboards'
 
 export default {
@@ -108,6 +116,10 @@ export default {
     [CLIPBOARD]: clipboard,
     [PAINTING]: painting,
     [NAS_ALBUM]: nasAlbum,
-    [ELLIOTT_SMITH_POSTER]: elliottSmithPoster
+    [ELLIOTT_SMITH_POSTER]: elliottSmithPoster,
+    [SNOWGLOBE_PAST]: false,
+    [SNOWGLOBE_PRESENT]: false,
+    [SNOWGLOBE_FUTURE_CORD]: false,
+    [SNOWGLOBE_FUTURE_REATTA]: false
 }
 
