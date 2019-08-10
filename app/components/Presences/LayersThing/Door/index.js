@@ -26,7 +26,7 @@ import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 // import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
 // import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
 import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
-// import lizDoor from 'assets/svgs/doors/lizDoor'
+import lizDoor from 'assets/svgs/doors/lizDoor'
 // import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
 // import lizGateInside from 'assets/svgs/doors/lizGateInside'
 // import lizGateInsideOpen from 'assets/svgs/doors/lizGateInsideOpen'
@@ -99,7 +99,7 @@ export default {
     [WAITING_ROOM_DOOR]: false,
     [WAITING_ROOM_DOOR_OPEN]: false,
     [CLUB_DOOR_OPEN]: clubDoorOpen,
-    [LIZ_DOOR]: false,
+    [LIZ_DOOR]: lizDoor,
     [LIZ_DOOR_OPEN]: false,
     [LIZ_GATE_INSIDE]: false,
     [LIZ_GATE_INSIDE_OPEN]: false,

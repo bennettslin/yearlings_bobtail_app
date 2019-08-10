@@ -3,6 +3,7 @@ import {
     BACKDROP,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     PANEL
@@ -53,6 +54,7 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
+import { LIZ_DOOR } from '../../constants/scene/things/doors'
 import {
     GUITAR,
     DRUMKIT,
@@ -81,6 +83,9 @@ export default [
                     description: 'front, putting on jacket, cold, distant',
                     instance: BRUSH_OFF
                 }
+            },
+            [DOOR]: {
+                [LIZ_DOOR]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -211,6 +216,9 @@ export default [
                         instance: LEAVING_CRUMBLED
                     }
                 }
+            },
+            [DOOR]: {
+                [LIZ_DOOR]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true

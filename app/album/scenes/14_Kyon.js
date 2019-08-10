@@ -1,6 +1,7 @@
 import {
     ACTOR,
     BUBBLE,
+    DOOR,
     FIXTURE,
     PANEL,
     PUPPET
@@ -42,6 +43,7 @@ import {
     BUBBLE_LARGE__LIZ,
     LIZ_THOUGHT
 } from '../../constants/scene/things/bubbles'
+import { LIZ_DOOR } from '../../constants/scene/things/doors'
 import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
 import { LIZ_COUCH } from '../../constants/scene/things/panels'
 import {
@@ -63,6 +65,9 @@ export default [
                         instance: PETTING_SEATED
                     }
                 }
+            },
+            [DOOR]: {
+                [LIZ_DOOR]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -86,6 +91,9 @@ export default [
                     }
                 }
             },
+            [DOOR]: {
+                [LIZ_DOOR]: true
+            },
             [PANEL]: {
                 [LIZ_COUCH]: true
             }
@@ -107,6 +115,9 @@ export default [
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
+            },
+            [DOOR]: {
+                [LIZ_DOOR]: true
             },
             [FIXTURE]: {
                 [TCHOTCHKES]: true
@@ -140,6 +151,9 @@ export default [
                     instance: ARRIVED
                 }
             },
+            [DOOR]: {
+                [LIZ_DOOR]: true
+            },
             [PANEL]: {
                 [LIZ_COUCH]: true
             }
@@ -169,6 +183,9 @@ export default [
             [BUBBLE]: {
                 [KHARI_ATTACK_SPEECH]: true,
                 [LIZ_DEFENCE_SPEECH]: true
+            },
+            [DOOR]: {
+                [LIZ_DOOR]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -202,6 +219,9 @@ export default [
                 [BUBBLE_LARGE__LIZ]: true,
                 [LIZ_THOUGHT]: true
             },
+            [DOOR]: {
+                [LIZ_DOOR]: true
+            },
             [PANEL]: {
                 [LIZ_COUCH]: true
             }
@@ -223,6 +243,9 @@ export default [
                         instance: ASLEEP_COUCH
                     }
                 }
+            },
+            [DOOR]: {
+                [LIZ_DOOR]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -248,6 +271,9 @@ export default [
                         instance: ASLEEP_COUCH
                     }
                 }
+            },
+            [DOOR]: {
+                [LIZ_DOOR]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true

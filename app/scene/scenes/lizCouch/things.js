@@ -1,5 +1,6 @@
 import {
     BUBBLE,
+    DOOR,
     FIXTURE,
     PANEL,
     PUPPET
@@ -12,6 +13,10 @@ import {
     BUBBLE_LARGE__LIZ,
     LIZ_THOUGHT
 } from 'constants/scene/things/bubbles'
+import {
+    LIZ_DOOR,
+    LIZ_DOOR_OPEN
+} from 'constants/scene/things/doors'
 import { TCHOTCHKES } from 'constants/scene/things/fixtures'
 import { LIZ_COUCH } from 'constants/scene/things/panels'
 import {
@@ -20,8 +25,26 @@ import {
     PEAHEN,
     PEACOCK
 } from 'constants/scene/things/puppets'
+import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
+    [DOOR]: {
+        [LIZ_DOOR]: {
+            yIndex: 5,
+            xPosition: 10.125,
+            scaleFactor: 0.7,
+            sharedStyle: DOOR_SHARED
+        },
+        [LIZ_DOOR_OPEN]: {
+            yIndex: 5,
+            arrangement: {
+                xPosition: 6.5,
+                xWidth: 1,
+                zHeight: 1
+            },
+            sharedStyle: DOOR_SHARED
+        }
+    },
     [PANEL]: {
         [LIZ_COUCH]: {
             yIndex: 5,
