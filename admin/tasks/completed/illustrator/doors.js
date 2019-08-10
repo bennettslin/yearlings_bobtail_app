@@ -53,5 +53,10 @@ export default [
         taskName: 'lizDoor',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'lizDoorOpen',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

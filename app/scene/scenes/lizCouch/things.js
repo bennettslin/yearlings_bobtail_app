@@ -31,17 +31,14 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [LIZ_DOOR]: {
             yIndex: 5,
-            xPosition: 10.125,
+            xPosition: 10.16,
             scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         },
         [LIZ_DOOR_OPEN]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 1,
-                zHeight: 1
-            },
+            xPosition: 8.875,
+            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         }
     },

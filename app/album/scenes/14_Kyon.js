@@ -43,7 +43,10 @@ import {
     BUBBLE_LARGE__LIZ,
     LIZ_THOUGHT
 } from '../../constants/scene/things/bubbles'
-import { LIZ_DOOR } from '../../constants/scene/things/doors'
+import {
+    LIZ_DOOR,
+    LIZ_DOOR_OPEN
+} from '../../constants/scene/things/doors'
 import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
 import { LIZ_COUCH } from '../../constants/scene/things/panels'
 import {
@@ -152,7 +155,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [LIZ_DOOR]: true
+                [LIZ_DOOR_OPEN]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
