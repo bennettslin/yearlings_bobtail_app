@@ -20,12 +20,9 @@ const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
         [TARPIT_CONSTELLATION]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
+            xPosition: 3,
+            zOffset: 4.5,
+            scaleFactor: 0.4
         },
         [SIBLING_CONSTELLATION]: {
             yIndex: 1,

@@ -33,5 +33,10 @@ export default [
         taskName: 'siblingConstellation',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'tarpitConstellation',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

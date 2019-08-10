@@ -35,11 +35,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'tarpitConstellation',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'khariAttackSpeech',
         workedHours: 0,
         neededHours: 1.5
