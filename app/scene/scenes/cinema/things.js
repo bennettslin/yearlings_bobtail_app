@@ -1,5 +1,6 @@
 import {
-    CARDBOARD
+    CARDBOARD,
+    DOOR
 } from 'constants/scene'
 import {
     MARA_MEMENTO_POSTER,
@@ -7,7 +8,9 @@ import {
     MARA_GLADIATOR_POSTER,
     MARQUEE_FRAME__MARA_GLADIATOR
 } from 'constants/scene/things/cardboards'
+import { CINEMA_DOORS } from 'constants/scene/things/doors'
 import {
+    DOOR_SHARED,
     POSTER_GLADIATOR_SHARED,
     POSTER_MARA_SHARED
 } from '../../shared'
@@ -44,6 +47,14 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 10,
             zOffset: 1.7,
             scaleFactor: 0.36
+        }
+    },
+    [DOOR]: {
+        [CINEMA_DOORS]: {
+            yIndex: 2,
+            xPosition: 5.5,
+            scaleFactor: 0.675,
+            sharedStyle: DOOR_SHARED
         }
     }
 }

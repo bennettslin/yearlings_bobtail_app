@@ -1,14 +1,61 @@
+.cinemaDoors {
+    .frame {
+        fill: #b8b38c;
+    }
+
+    .doorFront {
+        fill: #6e6246;
+    }
+
+    .window {
+        fill: #7496a8;
+    }
+
+    .ball {
+        fill: #b39c4c;
+    }
+
+    .handle {
+        fill: #998541;
+    }
+}
+
 .marqueeFrame {
-    .frame { fill: #e25044; }
-    .bulbOuter { fill: #e0d846; }
-    .bulbInner { fill: #e5e4d8; }
+    .frame {
+        fill: #e25044;
+    }
+
+    .bulbOuter {
+        fill: #e0d846;
+    }
+
+    .bulbInner {
+        fill: #e5e4d8;
+    }
 }
 
 .maraMementoPoster {
-    .frame { fill: #3f2d2d; }
-    .shadow { fill: #998675; }
-    .shirt { fill: #c6c18f; }
-    .dress { fill: #ce6a32; }
-    .collar { fill: #b6b774; }
-    .photoFrame { fill: #eae9dc; }
+    .frame {
+        fill: #3f2d2d;
+    }
+
+    .shadow {
+        fill: #998675;
+    }
+
+    .shirt {
+        fill: #c6c18f;
+    }
+
+    .dress {
+        fill: #ce6a32;
+    }
+
+    .collar {
+        fill: #b6b774;
+    }
+
+    .photoFrame {
+        fill: #eae9dc;
+    }
 }

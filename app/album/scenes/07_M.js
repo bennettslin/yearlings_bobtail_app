@@ -4,6 +4,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     PANEL
@@ -83,6 +84,7 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
+import { CINEMA_DOORS } from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
@@ -308,6 +310,9 @@ export default [
                 [MARQUEE_FRAME__MARA_MEMENTO]: true,
                 [MARA_GLADIATOR_POSTER]: true,
                 [MARQUEE_FRAME__MARA_GLADIATOR]: true
+            },
+            [DOOR]: {
+                [CINEMA_DOORS]: true
             }
         },
         cubes: CINEMA_KEY,
@@ -343,6 +348,9 @@ export default [
                 [MARQUEE_FRAME__MARA_MEMENTO]: true,
                 [MARA_GLADIATOR_POSTER]: true,
                 [MARQUEE_FRAME__MARA_GLADIATOR]: true
+            },
+            [DOOR]: {
+                [CINEMA_DOORS]: true
             }
         },
         cubes: CINEMA_KEY,
