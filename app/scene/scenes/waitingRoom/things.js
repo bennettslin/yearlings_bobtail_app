@@ -25,7 +25,7 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from 'constants/scene/things/panels'
-import { WAITING_ARMCHAIR_SHARED } from '../../shared'
+import { THOUGHT_SPEECH_SHARED, WAITING_ARMCHAIR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -125,16 +125,15 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             yIndex: 5,
             xPosition: 3,
             zOffset: 3,
-            scaleFactor: 0.45
+            scaleFactor: 0.45,
+            sharedStyle: THOUGHT_SPEECH_SHARED
         },
         [WAITING_THOUGHT_SINGING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 8,
+            zOffset: 3,
+            scaleFactor: 0.45,
+            sharedStyle: THOUGHT_SPEECH_SHARED
         },
         [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,

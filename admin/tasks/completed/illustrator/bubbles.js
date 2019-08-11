@@ -43,5 +43,10 @@ export default [
         taskName: 'waitingThoughtWalking',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'waitingThoughtSinging',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

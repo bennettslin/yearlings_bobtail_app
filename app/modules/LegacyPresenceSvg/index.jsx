@@ -50,7 +50,7 @@ const LegacyPresenceSvg  = ({
         >
             <rect
                 className={cx(
-                    `${capitaliseForClassName(presenceType)}__temporaryRect`,
+                    `temporaryRect`,
                     'Presence__temporaryRect'
                 )}
                 {...presenceXY}
