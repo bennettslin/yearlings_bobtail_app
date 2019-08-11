@@ -17,36 +17,33 @@ const WallBalcony = ({
     width,
     height
 
-}) => {
-
-    return (
-        <div
+}) => (
+    <div
+        {...{
+            className: cx(
+                'WallBalcony',
+                'abF'
+            ),
+            style: {
+                top: `${top}px`,
+                left: `${left}px`,
+                width: `${width}px`,
+                height: `${height}px`
+            }
+        }}
+    >
+        <InlineSvg
             {...{
                 className: cx(
-                    'WallBalcony',
-                    'abF'
+                    'fillTransition__dimTheatre'
                 ),
-                style: {
-                    top: `${top}px`,
-                    left: `${left}px`,
-                    width: `${width}px`,
-                    height: `${height}px`
-                }
+                title: 'wall balcony'
             }}
         >
-            <InlineSvg
-                {...{
-                    className: cx(
-                        'fillTransition__dimTheatre'
-                    ),
-                    title: 'wall balcony'
-                }}
-            >
-                {wallBalcony}
-            </InlineSvg>
-        </div>
-    )
-}
+            {wallBalcony}
+        </InlineSvg>
+    </div>
+)
 
 WallBalcony.propTypes = propTypes
 

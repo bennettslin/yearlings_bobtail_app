@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from 'modules/Svg'
 import CeilingRafter from './Rafter'
 
 import { getRaftersRowCoordinates } from './helper'
@@ -51,15 +50,16 @@ class Ceiling extends PureComponent {
             })
 
         return (
-            <Svg
+            <div
                 {...{
                     className: cx(
                         'Ceiling',
                         'Theatre__field'
                     ),
-                    style: { height: `${ceilingHeight}px` },
-                    viewBoxWidth: windowWidth,
-                    viewBoxHeight: ceilingHeight
+                    style: {
+                        width: `${windowWidth}px`,
+                        height: `${ceilingHeight}px`
+                    }
                 }}
             >
                 {raftersRowCoordinates.map(({
@@ -78,7 +78,7 @@ class Ceiling extends PureComponent {
                         }}
                     />
                 ))}
-            </Svg>
+            </div>
         )
     }
 }
