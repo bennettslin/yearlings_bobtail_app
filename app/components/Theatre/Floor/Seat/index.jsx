@@ -17,6 +17,8 @@ const propTypes = {
     height: PropTypes.number.isRequired
 }
 
+const SEAT_THICKNESS = 2.5
+
 const FloorSeat = ({
     chairIndex,
     rowIndex,
@@ -89,26 +91,16 @@ const FloorSeat = ({
             <div
                 {...{
                     className: cx(
-                        'FloorSeat__base',
-                        'abF'
-                    ),
-                    style: {
-                        top: `${topFinal + height * 0.0075}px`,
-                        left: `${left + width * chairIndex * 0.0025}px`,
-                        ...sharedStyle
-                    }
-                }}
-            >
-                {sharedSvg}
-            </div>
-            <div
-                {...{
-                    className: cx(
                         'FloorSeat__shaded',
                         'abF'
                     ),
                     style: {
-                        top: `${topFinal + height * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075}px`,
+                        top: `${
+                            topFinal
+                            + height
+                            * SEAT_THICKNESS
+                            * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075
+                        }px`,
                         left: `${left + width * chairIndex * 0.01}px`,
                         ...sharedStyle
                     }
