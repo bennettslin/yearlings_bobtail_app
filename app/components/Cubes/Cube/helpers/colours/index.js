@@ -13,6 +13,8 @@ import {
     CUBE_Z_AXIS_LENGTH
 } from '../../../../../constants/cubeIndex'
 
+import { k } from 'scene/cubes/keys/zIndex'
+
 const
     CUBE_X_AXIS_CENTRE_INDEX = CUBE_X_AXIS_LENGTH / 2 - 0.5,
     CUBE_Z_AXIS_HALF_LENGTH = CUBE_Z_AXIS_LENGTH / 2,
@@ -69,7 +71,12 @@ export const getCubeColour = ({
     zIndex,
     face
 }) => {
-    const { h, s, l, a = BASE_ALPHA } = HSLA_MAP[hslaKey]
+    const
+        { h, s, l, a = BASE_ALPHA } = HSLA_MAP[hslaKey],
+
+        // Don't show colour if empty ceiling.
+        finalAlpha = zIndex === k ? 0 : a
+
     let luminosity
 
     switch (face) {
@@ -84,5 +91,5 @@ export const getCubeColour = ({
             break
     }
 
-    return `hsla(${h}, ${s}%, ${luminosity}%, ${a})`
+    return `hsla(${h}, ${s}%, ${luminosity}%, ${finalAlpha})`
 }
