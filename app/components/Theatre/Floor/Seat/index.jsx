@@ -39,7 +39,7 @@ const FloorSeat = ({
             /**
              * Seats nearer to the ends come up further exponentially.
              */
-            - Math.pow(1.415, Math.abs(chairIndex)),
+            - Math.pow(1.35, Math.abs(chairIndex)),
 
         chairIndexString = chairIndex < 0 ?
             // Prefix with "n" for negative.

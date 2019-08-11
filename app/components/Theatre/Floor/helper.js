@@ -44,7 +44,7 @@ export const getSeatingRowCoordinates = ({
             firstLength: firstRowSeatHeight,
 
             // Gets wider faster with larger value.
-            multiplyFactor: 1.6,
+            multiplyFactor: 1.5,
 
             // Beginning values are closer together with larger value.
             bunchFactor: 2.2,
