@@ -63,8 +63,11 @@ import {
     FOLIAGE_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
+    SNOWGLOBE_SMALL__PAST,
     SNOWGLOBE_PAST,
+    SNOWGLOBE_SMALL__PRESENT,
     SNOWGLOBE_PRESENT,
+    SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_FUTURE_CORD,
     SNOWGLOBE_FUTURE_REATTA
 } from '../../constants/scene/things/cardboards'
@@ -167,6 +170,7 @@ export default [
                 [ROAD_PAST]: true
             },
             [CARDBOARD]: {
+                [SNOWGLOBE_SMALL__PAST]: true,
                 [SNOWGLOBE_PAST]: true
             },
             [FIXTURE]: {
@@ -210,6 +214,7 @@ export default [
                 [ROAD_PRESENT]: true
             },
             [CARDBOARD]: {
+                [SNOWGLOBE_SMALL__PRESENT]: true,
                 [SNOWGLOBE_PRESENT]: true
             },
             [PANEL]: {
@@ -258,6 +263,7 @@ export default [
                 [ROAD_FUTURE]: true
             },
             [CARDBOARD]: {
+                [SNOWGLOBE_SMALL__FUTURE]: true,
                 [SNOWGLOBE_FUTURE_CORD]: true,
                 [SNOWGLOBE_FUTURE_REATTA]: true
             },

@@ -4,7 +4,10 @@ import {
     PANEL
 } from 'constants/scene'
 import { ROAD_PRESENT } from 'constants/scene/things/backdrops'
-import { SNOWGLOBE_PRESENT } from 'constants/scene/things/cardboards'
+import {
+    SNOWGLOBE_SMALL__PRESENT,
+    SNOWGLOBE_PRESENT
+} from 'constants/scene/things/cardboards'
 import {
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
@@ -25,6 +28,14 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [CARDBOARD]: {
+        [SNOWGLOBE_SMALL__PRESENT]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        },
         [SNOWGLOBE_PRESENT]: {
             yIndex: 1,
             arrangement: {

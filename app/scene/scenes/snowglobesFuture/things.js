@@ -6,6 +6,7 @@ import {
 } from 'constants/scene'
 import { ROAD_FUTURE } from 'constants/scene/things/backdrops'
 import {
+    SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_FUTURE_CORD,
     SNOWGLOBE_FUTURE_REATTA
 } from 'constants/scene/things/cardboards'
@@ -31,6 +32,14 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [CARDBOARD]: {
+        [SNOWGLOBE_SMALL__FUTURE]: {
+            yIndex: 1,
+            arrangement: {
+                xPosition: 5.5,
+                xWidth: 12,
+                zHeight: 8
+            }
+        },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 1,
             arrangement: {
