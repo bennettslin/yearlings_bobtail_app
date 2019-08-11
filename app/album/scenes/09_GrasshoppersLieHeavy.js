@@ -7,7 +7,7 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,

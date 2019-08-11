@@ -8,7 +8,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     BENNETT_COUCH_KEY,
     CLUB_FRONT_KEY,

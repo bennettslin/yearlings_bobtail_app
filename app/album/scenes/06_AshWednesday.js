@@ -8,7 +8,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     BENNETT_COUCH_THOUGHT_KEY,
     COURTYARD_KEY,
@@ -50,7 +50,7 @@ import {
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
     THOUGHT_LARGE__RIGHT
-} from 'constants/scene/things/bubbles'
+} from '../../constants/scene/things/bubbles'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER

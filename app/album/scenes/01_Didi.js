@@ -8,7 +8,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,

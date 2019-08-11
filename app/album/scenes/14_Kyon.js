@@ -5,7 +5,7 @@ import {
     FIXTURE,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_OPEN_KEY,

@@ -4,7 +4,7 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     BASEMENT_BED_KEY,
     BASEMENT_MAGIC_KEY,

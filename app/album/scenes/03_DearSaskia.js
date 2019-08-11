@@ -7,7 +7,7 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     PUPPET_SHOW_KEY,
     SCHOOLBUS_KEY,

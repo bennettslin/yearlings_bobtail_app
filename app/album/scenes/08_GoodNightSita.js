@@ -6,7 +6,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     MUSEUM_KEY,
     BACKSTAGE_KEY,

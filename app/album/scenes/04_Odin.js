@@ -6,7 +6,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY,

@@ -7,7 +7,7 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     EL_TORITO_KEY,
     PAMPAS_KEY,
@@ -50,7 +50,7 @@ import {
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE,
     THOUGHT_MEDIUM
-} from 'constants/scene/things/bubbles'
+} from '../../constants/scene/things/bubbles'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT,

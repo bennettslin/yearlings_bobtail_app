@@ -8,7 +8,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     CLUB_FAR_KEY,
     LIZ_BED_OPEN_PHONE_KEY,

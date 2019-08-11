@@ -10,7 +10,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,

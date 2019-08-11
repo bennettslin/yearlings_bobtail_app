@@ -7,7 +7,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     LIZ_COUCH_KEY,
     BASEMENT_COUCH_KEY,

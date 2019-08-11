@@ -3,7 +3,7 @@ import keys from 'lodash/keys'
 import ALL_ARRANGEMENTS_ACTORS from './arrangements'
 import ALL_ARRANGEMENTS_THINGS from './arrangements/things'
 
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../constants/scene'
 
 const _addPresenceToSceneLayer = ({
     arrangementObject,

@@ -7,7 +7,7 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY,
@@ -48,7 +48,7 @@ import {
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
     THOUGHT_SMALL
-} from 'constants/scene/things/bubbles'
+} from '../../constants/scene/things/bubbles'
 import {
     EL_CERRITO_TREE,
     IV_DRIP

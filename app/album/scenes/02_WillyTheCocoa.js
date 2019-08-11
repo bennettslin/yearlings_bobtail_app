@@ -8,7 +8,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,

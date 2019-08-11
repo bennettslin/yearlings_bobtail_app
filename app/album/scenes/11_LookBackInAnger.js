@@ -4,7 +4,7 @@ import {
     DOOR,
     FIXTURE,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,
@@ -55,7 +55,7 @@ import {
     WALL_SPEAKER_SIDE__CROWD,
     WALL_SPEAKER_SIDE__STAGE
 } from '../../constants/scene/things/cutouts'
-import { CLUB_DOOR_OPEN } from 'constants/scene/things/doors'
+import { CLUB_DOOR_OPEN } from '../../constants/scene/things/doors'
 import {
     STAGE_MIC_SIDE__CROWD,
     STAGE_MIC_SIDE__STAGE,

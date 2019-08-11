@@ -1,4 +1,4 @@
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../constants/scene'
 import { LOGUE_KEY } from '../../constants/scene/scenes'
 import {
     TIME_ANYTIME,

@@ -10,7 +10,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     BEDROOM_KEY,
     BEDROOM_OPEN_KEY,

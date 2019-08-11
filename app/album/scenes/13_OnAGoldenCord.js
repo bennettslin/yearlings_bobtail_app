@@ -5,7 +5,7 @@ import {
     CUTOUT,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../constants/scene'
 import {
     LIZ_COUCH_THOUGHT_KEY,
     OAKLAND_HOUSES_KEY,
@@ -55,7 +55,7 @@ import {
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
     THOUGHT_LARGE__LEFT
-} from 'constants/scene/things/bubbles'
+} from '../../constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
