@@ -1,4 +1,4 @@
-import { EL_TORITO_KEY } from 'constants/scene/scenes'
+import { EL_TORITO_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

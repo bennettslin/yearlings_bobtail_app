@@ -4,7 +4,7 @@ import {
     NARRATIVE,
     OBSERVATION,
     SONGWRITING
-} from 'constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -14,7 +14,7 @@ import {
     OUTRO,
     FORESHADOW_OF_WORMHOLE_PREFIX,
     IS_UNIT_DOT
-} from 'constants/lyrics'
+} from '../../constants/lyrics'
 
 export default {
     title: 'My 100,000th Dream',

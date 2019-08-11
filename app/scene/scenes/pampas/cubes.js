@@ -1,4 +1,4 @@
-import { PAMPAS_KEY } from 'constants/scene/scenes'
+import { PAMPAS_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

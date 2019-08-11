@@ -1,4 +1,4 @@
-import { OAKLAND_COMMERCIAL_KEY } from 'constants/scene/scenes'
+import { OAKLAND_COMMERCIAL_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

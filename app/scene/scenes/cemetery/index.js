@@ -2,8 +2,8 @@ import {
     BENNETT,
     ANA_HOWIE,
     TOMER
-} from 'constants/scene/actors'
-import { CEMETERY } from 'constants/scene/actors/instances/songs'
+} from '../../../constants/scene/actors'
+import { CEMETERY } from '../../../constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

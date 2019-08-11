@@ -5,7 +5,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from 'constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -13,7 +13,7 @@ import {
     INTRO,
     REFRAIN,
     IS_UNIT_DOT
-} from 'constants/lyrics'
+} from '../../constants/lyrics'
 
 export default {
     title: 'Cremated',

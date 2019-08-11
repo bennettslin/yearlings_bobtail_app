@@ -1,4 +1,4 @@
-import { OAKLAND_RESIDENTIAL_KEY } from 'constants/scene/scenes'
+import { OAKLAND_RESIDENTIAL_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

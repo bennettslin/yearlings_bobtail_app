@@ -1,7 +1,7 @@
 import {
     OAKLAND_HOUSES_KEY,
     OAKLAND_VOLKSWAGEN_KEY
-} from 'constants/scene/scenes'
+} from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

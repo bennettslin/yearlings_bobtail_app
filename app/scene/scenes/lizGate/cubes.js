@@ -1,7 +1,7 @@
 import {
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY
-} from 'constants/scene/scenes'
+} from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

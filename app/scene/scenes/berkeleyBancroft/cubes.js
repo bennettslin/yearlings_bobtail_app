@@ -1,4 +1,4 @@
-import { BERKELEY_BANCROFT_KEY } from 'constants/scene/scenes'
+import { BERKELEY_BANCROFT_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

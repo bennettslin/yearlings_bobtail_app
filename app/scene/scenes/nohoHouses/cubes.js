@@ -1,4 +1,4 @@
-import { NOHO_HOUSES_KEY } from 'constants/scene/scenes'
+import { NOHO_HOUSES_KEY } from '../../../constants/scene/scenes'
 
 import {
     LAWN_HSLA,

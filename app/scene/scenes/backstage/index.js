@@ -3,10 +3,10 @@ import {
     LIZ,
     KHARI,
     STEPHANIE
-} from 'constants/scene/actors'
-import { BACKSTAGE } from 'constants/scene/actors/instances/songs'
-import { DOUBLE_ALBERT } from 'constants/scene/actors/instances/khari'
-import { FLAPPER } from 'constants/scene/actors/instances/stephanie'
+} from '../../../constants/scene/actors'
+import { BACKSTAGE } from '../../../constants/scene/actors/instances/songs'
+import { DOUBLE_ALBERT } from '../../../constants/scene/actors/instances/khari'
+import { FLAPPER } from '../../../constants/scene/actors/instances/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

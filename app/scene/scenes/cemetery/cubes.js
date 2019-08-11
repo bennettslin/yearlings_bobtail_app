@@ -1,4 +1,4 @@
-import { CEMETERY_KEY } from 'constants/scene/scenes'
+import { CEMETERY_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

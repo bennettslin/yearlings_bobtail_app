@@ -1,7 +1,7 @@
 import {
     WAITING_ROOM_KEY,
     WAITING_ROOM_OPEN_KEY
-} from 'constants/scene/scenes'
+} from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

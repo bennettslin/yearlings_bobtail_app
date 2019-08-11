@@ -4,7 +4,7 @@ import {
     PUN,
     REFERENCE,
     SONGWRITING
-} from 'constants/dots'
+} from '../../constants/dots'
 
 import {
     VERSES,
@@ -15,7 +15,7 @@ import {
     REFRAIN,
     OUTRO,
     IS_UNIT_DOT
-} from 'constants/lyrics'
+} from '../../constants/lyrics'
 
 export default {
     title: 'Kyon? (क्यों?)',

@@ -1,4 +1,4 @@
-import { CHANGELING_CAVE_KEY } from 'constants/scene/scenes'
+import { CHANGELING_CAVE_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

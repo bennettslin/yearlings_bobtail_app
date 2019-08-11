@@ -2,9 +2,9 @@ import {
     BENNETT,
     MIRIAM_TRISTAN,
     NESTOR
-} from 'constants/scene/actors'
-import { SHOW_ANNOYED } from 'constants/scene/actors/instances/bennett'
-import { GREETING } from 'constants/scene/actors/instances/songs'
+} from '../../../constants/scene/actors'
+import { SHOW_ANNOYED } from '../../../constants/scene/actors/instances/bennett'
+import { GREETING } from '../../../constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

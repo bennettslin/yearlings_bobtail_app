@@ -1,4 +1,4 @@
-import { WALGREENS_KEY } from 'constants/scene/scenes'
+import { WALGREENS_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

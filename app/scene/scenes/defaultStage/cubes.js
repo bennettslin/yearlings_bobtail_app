@@ -1,4 +1,4 @@
-import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
+import { DEFAULT_STAGE_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA

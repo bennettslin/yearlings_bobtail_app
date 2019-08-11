@@ -1,4 +1,4 @@
-import { DISHROOM_KEY } from 'constants/scene/scenes'
+import { DISHROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_HSLA,

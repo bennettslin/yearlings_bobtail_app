@@ -1,9 +1,9 @@
 import {
     BENNETT,
     STEPHANIE
-} from 'constants/scene/actors'
-import { CORD_REAR } from 'constants/scene/actors/instances/bennett'
-import { BENNETT_DEFIANT } from 'constants/scene/actors/instances/stephanie'
+} from '../../../constants/scene/actors'
+import { CORD_REAR } from '../../../constants/scene/actors/instances/bennett'
+import { BENNETT_DEFIANT } from '../../../constants/scene/actors/instances/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

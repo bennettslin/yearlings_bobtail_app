@@ -1,4 +1,4 @@
-import { CINEMA_STREET_KEY } from 'constants/scene/scenes'
+import { CINEMA_STREET_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

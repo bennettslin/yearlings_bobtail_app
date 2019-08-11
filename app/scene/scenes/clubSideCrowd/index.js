@@ -4,11 +4,11 @@ import {
     TOMER,
     AMY_STEPHANIE,
     WADE
-} from 'constants/scene/actors'
-import { PERFORMING } from 'constants/scene/actors/instances/songs'
-import { SQUEEZING } from 'constants/scene/actors/instances/amyStephanie'
-import { SHANE_SPILLING } from 'constants/scene/actors/instances/tomer'
-import { WATCHING } from 'constants/scene/actors/instances/wade'
+} from '../../../constants/scene/actors'
+import { PERFORMING } from '../../../constants/scene/actors/instances/songs'
+import { SQUEEZING } from '../../../constants/scene/actors/instances/amyStephanie'
+import { SHANE_SPILLING } from '../../../constants/scene/actors/instances/tomer'
+import { WATCHING } from '../../../constants/scene/actors/instances/wade'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

@@ -1,4 +1,4 @@
-import { NOHO_SCHOOL_KEY } from 'constants/scene/scenes'
+import { NOHO_SCHOOL_KEY } from '../../../constants/scene/scenes'
 
 import {
     PAVEMENT_HSLA,

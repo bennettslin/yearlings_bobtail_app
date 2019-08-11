@@ -1,4 +1,4 @@
-import { OAKLAND_PUBLIC_KEY } from 'constants/scene/scenes'
+import { OAKLAND_PUBLIC_KEY } from '../../../constants/scene/scenes'
 
 import {
     STREET_HSLA,

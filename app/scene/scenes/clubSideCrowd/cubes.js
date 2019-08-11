@@ -1,4 +1,4 @@
-import { CLUB_SIDE_CROWD_KEY } from 'constants/scene/scenes'
+import { CLUB_SIDE_CROWD_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_HSLA,

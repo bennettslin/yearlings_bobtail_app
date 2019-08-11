@@ -4,7 +4,7 @@ import {
     BEDROOM_OPEN_KEY,
     BEDROOM_DOGS_KEY,
     BEDROOM_SPACE_KEY
-} from 'constants/scene/scenes'
+} from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

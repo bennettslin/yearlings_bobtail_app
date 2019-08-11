@@ -1,4 +1,4 @@
-import { TETHERBALL_COURT_KEY } from 'constants/scene/scenes'
+import { TETHERBALL_COURT_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

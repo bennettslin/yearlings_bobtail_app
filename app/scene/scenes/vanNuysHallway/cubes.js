@@ -1,4 +1,4 @@
-import { VAN_NUYS_HALLWAY_KEY } from 'constants/scene/scenes'
+import { VAN_NUYS_HALLWAY_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_HSLA,

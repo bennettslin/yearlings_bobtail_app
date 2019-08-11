@@ -1,7 +1,7 @@
 import {
     BENNETT_BED_KEY,
     BENNETT_BED_OPEN_KEY
-} from 'constants/scene/scenes'
+} from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

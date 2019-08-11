@@ -1,4 +1,4 @@
-import { ROYCE_HALL_KEY } from 'constants/scene/scenes'
+import { ROYCE_HALL_KEY } from '../../../constants/scene/scenes'
 
 import {
     PAVEMENT_HSLA

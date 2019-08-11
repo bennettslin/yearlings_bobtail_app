@@ -1,4 +1,4 @@
-import { CLUB_LOADING } from 'constants/scene/scenes'
+import { CLUB_LOADING } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

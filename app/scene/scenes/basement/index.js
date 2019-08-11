@@ -2,8 +2,8 @@ import {
     BENNETT,
     JACOB_MARA,
     ANA
-} from 'constants/scene/actors'
-import { EATING } from 'constants/scene/actors/instances/songs'
+} from '../../../constants/scene/actors'
+import { EATING } from '../../../constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

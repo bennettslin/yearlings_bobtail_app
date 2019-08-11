@@ -1,7 +1,7 @@
 import {
     BATHROOM_KEY,
     BATHROOM_OPEN_KEY
-} from 'constants/scene/scenes'
+} from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

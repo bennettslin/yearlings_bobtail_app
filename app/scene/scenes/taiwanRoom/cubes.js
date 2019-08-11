@@ -1,4 +1,4 @@
-import { TAIWAN_ROOM_KEY } from 'constants/scene/scenes'
+import { TAIWAN_ROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_HSLA,

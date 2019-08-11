@@ -3,11 +3,11 @@ import {
     AMY,
     MARA,
     JACOB
-} from 'constants/scene/actors'
+} from '../../../constants/scene/actors'
 import {
     FLIRTING,
     CARRYING
-} from 'constants/scene/actors/instances/songs'
+} from '../../../constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

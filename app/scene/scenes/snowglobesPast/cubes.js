@@ -1,4 +1,4 @@
-import { SNOWGLOBES_PAST_KEY } from 'constants/scene/scenes'
+import { SNOWGLOBES_PAST_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

@@ -1,4 +1,4 @@
-import { BASEMENT_COUCH_KEY } from 'constants/scene/scenes'
+import { BASEMENT_COUCH_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_HSLA,

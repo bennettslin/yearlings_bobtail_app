@@ -1,8 +1,8 @@
 import {
     BENNETT,
     HOWIE
-} from 'constants/scene/actors'
-import { ATTIC } from 'constants/scene/actors/instances/songs'
+} from '../../../constants/scene/actors'
+import { ATTIC } from '../../../constants/scene/actors/instances/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

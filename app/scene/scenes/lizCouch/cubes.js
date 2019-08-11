@@ -5,7 +5,7 @@ import {
     LIZ_COUCH_GATE_OPEN_KEY,
     LIZ_COUCH_PEAFOWL_KEY,
     LIZ_COUCH_THOUGHT_KEY
-} from 'constants/scene/scenes'
+} from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

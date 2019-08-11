@@ -1,4 +1,4 @@
-import { PORCH_KEY } from 'constants/scene/scenes'
+import { PORCH_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_HSLA,

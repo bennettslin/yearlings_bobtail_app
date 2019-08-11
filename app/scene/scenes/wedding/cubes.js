@@ -1,4 +1,4 @@
-import { WEDDING_KEY } from 'constants/scene/scenes'
+import { WEDDING_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_HSLA,

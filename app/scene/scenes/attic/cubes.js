@@ -1,4 +1,4 @@
-import { ATTIC_KEY } from 'constants/scene/scenes'
+import { ATTIC_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_HSLA,

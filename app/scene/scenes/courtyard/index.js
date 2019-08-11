@@ -1,9 +1,9 @@
 import {
     BENNETT,
     CATHERINE
-} from 'constants/scene/actors'
-import { BREAKUP_DEJECTED } from 'constants/scene/actors/instances/bennett'
-import { WEEPING } from 'constants/scene/actors/instances/catherine'
+} from '../../../constants/scene/actors'
+import { BREAKUP_DEJECTED } from '../../../constants/scene/actors/instances/bennett'
+import { WEEPING } from '../../../constants/scene/actors/instances/catherine'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

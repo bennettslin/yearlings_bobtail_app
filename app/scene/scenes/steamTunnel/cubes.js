@@ -1,4 +1,4 @@
-import { STEAM_TUNNEL_KEY } from 'constants/scene/scenes'
+import { STEAM_TUNNEL_KEY } from '../../../constants/scene/scenes'
 
 import {
     FLOOR_HSLA,
