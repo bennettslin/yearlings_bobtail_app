@@ -111,7 +111,7 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
     HOSPITAL_RECORD_PLAYER
-} from 'constants/scene/things/fixtures'
+} from '../../../../constants/scene/things/fixtures'
 
 export default {
     [PLAYGROUND_BALL]: false,

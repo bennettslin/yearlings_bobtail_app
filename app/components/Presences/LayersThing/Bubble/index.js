@@ -75,7 +75,7 @@ import {
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
     THOUGHT_SMALL
-} from 'constants/scene/things/bubbles'
+} from '../../../../constants/scene/things/bubbles'
 
 export default {
     [ESTHER_SPEECH]: estherSpeech,

@@ -21,11 +21,11 @@ import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
 // import bennettBlindsOpen from 'assets/svgs/doors/bennettBlindsOpen'
 // import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
 // import bennettGateSideOpen from 'assets/svgs/doors/bennettGateSideOpen'
-// import neighbourDoor from 'assets/svgs/doors/neighbourDoor'
+import neighbourDoor from 'assets/svgs/doors/neighbourDoor'
 import bennettDoorInside from 'assets/svgs/doors/bennettDoorInside'
 import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
-// import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
-// import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
+import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
+import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
 import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
 import lizDoor from 'assets/svgs/doors/lizDoor'
 import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
@@ -70,7 +70,7 @@ import {
     LIZ_GATE_INSIDE_OPEN,
     LOADING_DOCK_DOOR,
     EL_TORITO_DOORS
-} from 'constants/scene/things/doors'
+} from '../../../../constants/scene/things/doors'
 
 export default {
     [NURSE_DOOR]: nurseDoor,
@@ -96,11 +96,11 @@ export default {
     [BENNETT_BLINDS_OPEN]: false,
     [BENNETT_GATE_FRONT]: false,
     [BENNETT_GATE_SIDE_OPEN]: false,
-    [NEIGHBOUR_DOOR]: false,
+    [NEIGHBOUR_DOOR]: neighbourDoor,
     [BENNETT_DOOR_INSIDE]: bennettDoorInside,
     [BENNETT_DOOR_INSIDE_OPEN]: bennettDoorInsideOpen,
-    [WAITING_ROOM_DOOR]: false,
-    [WAITING_ROOM_DOOR_OPEN]: false,
+    [WAITING_ROOM_DOOR]: waitingRoomDoor,
+    [WAITING_ROOM_DOOR_OPEN]: waitingRoomDoorOpen,
     [CLUB_DOOR_OPEN]: clubDoorOpen,
     [LIZ_DOOR]: lizDoor,
     [LIZ_DOOR_OPEN]: lizDoorOpen,

@@ -83,7 +83,9 @@ import {
     DISHROOM_DOOR,
     NEIGHBOUR_DOOR,
     BENNETT_DOOR_INSIDE,
-    BENNETT_DOOR_INSIDE_OPEN
+    BENNETT_DOOR_INSIDE_OPEN,
+    WAITING_ROOM_DOOR,
+    WAITING_ROOM_DOOR_OPEN
 } from '../../constants/scene/things/doors'
 import {
     NUDE_DRAWINGS,
@@ -344,6 +346,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [NEIGHBOUR_DOOR]: true,
                 [BENNETT_DOOR_INSIDE_OPEN]: true
             },
             [FIXTURE]: {
@@ -389,6 +392,9 @@ export default [
             [CUTOUT]: {
                 [WAITING_ROOM_PLANT]: true
             },
+            [DOOR]: {
+                [WAITING_ROOM_DOOR]: true
+            },
             [PANEL]: {
                 [WAITING_ARMCHAIR__BENNETT]: true,
                 [WAITING_ARMREST__BENNETT_LEFT]: true,
@@ -420,6 +426,9 @@ export default [
             },
             [CUTOUT]: {
                 [WAITING_ROOM_PLANT]: true
+            },
+            [DOOR]: {
+                [WAITING_ROOM_DOOR_OPEN]: true
             },
             [PANEL]: {
                 [WAITING_ARMCHAIR__BENNETT]: true,

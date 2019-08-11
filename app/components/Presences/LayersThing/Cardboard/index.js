@@ -82,7 +82,7 @@ import {
     SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_FUTURE_CORD,
     SNOWGLOBE_FUTURE_REATTA
-} from 'constants/scene/things/cardboards'
+} from '../../../../constants/scene/things/cardboards'
 
 export default {
     [JOHNNY_HORTON_ALBUM]: johnnyHortonAlbum,

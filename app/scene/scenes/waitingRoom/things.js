@@ -2,6 +2,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     PANEL
 } from '../../../constants/scene'
 import {
@@ -18,6 +19,10 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { WAITING_ROOM_PLANT } from '../../../constants/scene/things/cutouts'
 import {
+    WAITING_ROOM_DOOR,
+    WAITING_ROOM_DOOR_OPEN
+} from '../../../constants/scene/things/doors'
+import {
     WAITING_ARMCHAIR__BENNETT,
     WAITING_ARMREST__BENNETT_LEFT,
     WAITING_ARMREST__BENNETT_RIGHT,
@@ -25,7 +30,11 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
-import { THOUGHT_SPEECH_SHARED, WAITING_ARMCHAIR_SHARED } from '../../shared'
+import {
+    DOOR_SHARED,
+    THOUGHT_SPEECH_SHARED,
+    WAITING_ARMCHAIR_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -47,6 +56,20 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 7.5,
             scaleFactor: 0.45
+        }
+    },
+    [DOOR]: {
+        [WAITING_ROOM_DOOR]: {
+            yIndex: 5,
+            xPosition: 10.16,
+            scaleFactor: 0.7,
+            sharedStyle: DOOR_SHARED
+        },
+        [WAITING_ROOM_DOOR_OPEN]: {
+            yIndex: 5,
+            xPosition: 8.875,
+            scaleFactor: 0.7,
+            sharedStyle: DOOR_SHARED
         }
     },
     [PANEL]: {

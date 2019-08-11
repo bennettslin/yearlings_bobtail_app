@@ -16,7 +16,7 @@ import {
     LIZ_PILLOWS_PILE_REFLECTION,
     LIZ_BLANKET_PILE,
     LIZ_BLANKET_PILE_REFLECTION
-} from 'constants/scene/things/furniture'
+} from '../../../../constants/scene/things/furniture'
 
 export default {
     [CAPTAIN_BED_PILLOW]: false,

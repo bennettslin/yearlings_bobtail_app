@@ -23,12 +23,10 @@ import { DOOR_SHARED } from '../../shared'
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [NEIGHBOUR_DOOR]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 0.5,
-                zHeight: 0.5
-            }
+            yIndex: 1,
+            xPosition: 2.5,
+            scaleFactor: 0.6,
+            sharedStyle: DOOR_SHARED
         },
         [BENNETT_DOOR_INSIDE]: {
             yIndex: 3,
