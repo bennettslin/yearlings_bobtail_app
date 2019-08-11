@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 import InlineSvg from 'modules/InlineSvg'
 import proscenium from 'assets/svgs/theatre/proscenium'
 
+import DramaMasks from './DramaMasks'
+
 const mapStateToProps = ({
     viewportStore: {
         prosceniumStore: {
@@ -53,6 +55,7 @@ const Proscenium = ({
         >
             {proscenium}
         </InlineSvg>
+        <DramaMasks />
     </div>
 )
 

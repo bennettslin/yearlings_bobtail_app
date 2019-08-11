@@ -1,21 +1,5 @@
+@import "./Balcony/style";
+
 .Wall {
     top: 0;
-}
-
-.wallBalcony {
-    .dark {
-        fill: #aaad9c;
-    }
-
-    .light {
-        fill: #afb3a1;
-    }
-
-    .lighter {
-        fill: #b4b8a5;
-    }
-
-    .lightest {
-        fill: #bbbfac;
-    }
 }

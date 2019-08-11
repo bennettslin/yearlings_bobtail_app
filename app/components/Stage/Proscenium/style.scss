@@ -1,3 +1,5 @@
+@import "./DramaMasks/style";
+
 .Proscenium {
     z-index: $zIndex__theatre;
 }
@@ -21,16 +23,5 @@
 
     .prosceniumFront {
         fill: #9c9477;
-    }
-}
-
-.dramaMasks {
-    .mask {
-        fill: #c9c2a5;
-    }
-
-    .overlapLine {
-        fill: none;
-        stroke: #444;
     }
 }
