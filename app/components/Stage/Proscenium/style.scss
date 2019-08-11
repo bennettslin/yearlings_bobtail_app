@@ -1,10 +1,39 @@
-.Proscenium {
+.proscenium {
     z-index: $zIndex__theatre;
+
+    .stageFront {
+        fill: #7a6957;
+    }
+
+    .stageTop {
+        fill: #9c866f;
+    }
+
+    .prosceniumSide {
+        fill: #857e65;
+    }
+
+    .prosceniumBottom {
+        fill: #736d57;
+    }
+
+    .prosceniumFront {
+        fill: #9c9477;
+    }
+}
+
+.dramaMasks {
+    .mask {
+        fill: #c9c2a5;
+    }
+
+    .overlapLine {
+        fill: none;
+        stroke: #444;
+    }
 }
 
 .Proscenium__rect {
-    // This allows the stroke width to stay constant.
-    vector-effect: non-scaling-stroke;
     stroke: rgba(150, 100, 150, 1);
     stroke-width: 1px;
     fill: transparent;

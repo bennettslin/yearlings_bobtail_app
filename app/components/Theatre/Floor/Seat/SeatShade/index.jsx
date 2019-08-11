@@ -2,16 +2,18 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from 'modules/InlineSvg'
-import ceilingRafter from 'assets/svgs/theatre/ceilingRafter'
+import floorSeat from 'assets/svgs/theatre/floorSeat'
 
 const propTypes = {
+    className: PropTypes.string.isRequired,
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired
 }
 
-const CeilingRafter = ({
+const SeatShade = ({
+    className,
     top,
     left,
     width,
@@ -21,7 +23,6 @@ const CeilingRafter = ({
     <div
         {...{
             className: cx(
-                'CeilingRafter',
                 'abF'
             ),
             style: {
@@ -35,17 +36,17 @@ const CeilingRafter = ({
         <InlineSvg
             {...{
                 className: cx(
-                    'ceilingRafter',
-                    'fillTransition__dimTheatre'
+                    'fillTransition__dimTheatre',
+                    className
                 ),
-                title: 'ceiling rafter'
+                title: 'floor seat'
             }}
         >
-            {ceilingRafter}
+            {floorSeat}
         </InlineSvg>
     </div>
 )
 
-CeilingRafter.propTypes = propTypes
+SeatShade.propTypes = propTypes
 
-export default memo(CeilingRafter)
+export default memo(SeatShade)

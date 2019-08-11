@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import InlineSvg from 'modules/InlineSvg'
-import floorSeat from 'assets/svgs/theatre/floorSeat'
+
+import SeatShade from './SeatShade'
 
 const propTypes = {
     /**
@@ -44,25 +44,7 @@ const FloorSeat = ({
         chairIndexString = chairIndex < 0 ?
             // Prefix with "n" for negative.
             `seat__n${chairIndex * -1}` :
-            `seat__${chairIndex}`,
-
-        sharedStyle = {
-            width: `${width}px`,
-            height: `${height}px`
-        },
-
-        sharedSvg = (
-            <InlineSvg
-                {...{
-                    className: cx(
-                        'fillTransition__dimTheatre'
-                    ),
-                    title: 'floor seat'
-                }}
-            >
-                {floorSeat}
-            </InlineSvg>
-        )
+            `seat__${chairIndex}`
 
     return (
         <div
@@ -73,41 +55,27 @@ const FloorSeat = ({
                 )
             }}
         >
-            <div
+            <SeatShade
                 {...{
-                    className: cx(
-                        'FloorSeat__lit',
-                        'abF'
-                    ),
-                    style: {
-                        top: `${topFinal}px`,
-                        left: `${left}px`,
-                        ...sharedStyle
-                    }
+                    className: 'floorSeat__lit',
+                    top: topFinal,
+                    left,
+                    width,
+                    height
                 }}
-            >
-                {sharedSvg}
-            </div>
-            <div
+            />
+            <SeatShade
                 {...{
-                    className: cx(
-                        'FloorSeat__shaded',
-                        'abF'
-                    ),
-                    style: {
-                        top: `${
-                            topFinal
-                            + height
-                            * SEAT_THICKNESS
-                            * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075
-                        }px`,
-                        left: `${left + width * chairIndex * 0.01}px`,
-                        ...sharedStyle
-                    }
+                    className: 'floorSeat__shaded',
+                    top: topFinal
+                        + height
+                        * SEAT_THICKNESS
+                        * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075,
+                    left: left + width * chairIndex * 0.01,
+                    width,
+                    height
                 }}
-            >
-                {sharedSvg}
-            </div>
+            />
         </div>
     )
 }

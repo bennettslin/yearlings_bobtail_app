@@ -35,6 +35,7 @@ const WallBalcony = ({
         <InlineSvg
             {...{
                 className: cx(
+                    'wallBalcony',
                     'fillTransition__dimTheatre'
                 ),
                 title: 'wall balcony'
