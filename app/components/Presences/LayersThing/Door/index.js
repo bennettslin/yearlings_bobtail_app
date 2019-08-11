@@ -5,7 +5,7 @@ import porchDoor from 'assets/svgs/doors/porchDoor'
 // import ironGateLow from 'assets/svgs/doors/ironGateLow'
 // import ironGate from 'assets/svgs/doors/ironGate'
 import principalDoor from 'assets/svgs/doors/principalDoor'
-// import bennettBlinds from 'assets/svgs/doors/bennettBlinds'
+// import blindsOutside from 'assets/svgs/doors/blindsOutside'
 import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
 // import bennettGateSide from 'assets/svgs/doors/bennettGateSide'
 // import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
@@ -13,8 +13,6 @@ import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
 // import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
 // import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
 import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
-// import lizBlinds from 'assets/svgs/doors/lizBlinds'
-// import lizBlindsOpen from 'assets/svgs/doors/lizBlindsOpen'
 // import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
 // import lizGateOutsideOpen from 'assets/svgs/doors/lizGateOutsideOpen'
 import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
@@ -27,6 +25,8 @@ import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
 import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
 import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
+// import blindsInside from 'assets/svgs/doors/blindsInside'
+// import blindsInsideOpen from 'assets/svgs/doors/blindsInsideOpen'
 import lizDoor from 'assets/svgs/doors/lizDoor'
 import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
 // import lizGateInside from 'assets/svgs/doors/lizGateInside'
@@ -42,7 +42,7 @@ import {
     IRON_GATE_LOW,
     IRON_GATE,
     PRINCIPAL_DOOR,
-    BENNETT_BLINDS,
+    BLINDS_OUTSIDE__BENNETT,
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE,
     BANCROFT_DOOR,
@@ -50,20 +50,23 @@ import {
     BASEMENT_DOOR_OPEN,
     BASEMENT_DOOR_SIDE,
     CINEMA_DOORS,
-    LIZ_BLINDS,
-    LIZ_BLINDS_OPEN,
+    BLINDS_OUTSIDE__LIZ_ENDING,
+    BLINDS_OUTSIDE__LIZ_ENDED,
     LIZ_GATE_OUTSIDE,
     LIZ_GATE_OUTSIDE_OPEN,
     DISHROOM_DOOR,
-    BENNETT_BLINDS_OPEN,
     BENNETT_GATE_FRONT,
     BENNETT_GATE_SIDE_OPEN,
     NEIGHBOUR_DOOR,
+    BLINDS_OUTSIDE__NEIGHBOUR,
+    BLINDS_INSIDE_OPEN__BENNETT,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
     CLUB_DOOR_OPEN,
+    BLINDS_INSIDE__LIZ,
+    BLINDS_INSIDE_OPEN__LIZ,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
@@ -80,7 +83,7 @@ export default {
     [IRON_GATE_LOW]: false,
     [IRON_GATE]: false,
     [PRINCIPAL_DOOR]: principalDoor,
-    [BENNETT_BLINDS]: false,
+    [BLINDS_OUTSIDE__BENNETT]: false,
     [BENNETT_DOOR_OUTSIDE]: bennettDoorOutside,
     [BENNETT_GATE_SIDE]: false,
     [BANCROFT_DOOR]: false,
@@ -88,20 +91,23 @@ export default {
     [BASEMENT_DOOR_OPEN]: false,
     [BASEMENT_DOOR_SIDE]: false,
     [CINEMA_DOORS]: cinemaDoors,
-    [LIZ_BLINDS]: false,
-    [LIZ_BLINDS_OPEN]: false,
+    [BLINDS_OUTSIDE__LIZ_ENDING]: false,
+    [BLINDS_OUTSIDE__LIZ_ENDED]: false,
     [LIZ_GATE_OUTSIDE]: false,
     [LIZ_GATE_OUTSIDE_OPEN]: false,
     [DISHROOM_DOOR]: dishroomDoor,
-    [BENNETT_BLINDS_OPEN]: false,
     [BENNETT_GATE_FRONT]: false,
     [BENNETT_GATE_SIDE_OPEN]: false,
     [NEIGHBOUR_DOOR]: neighbourDoor,
+    [BLINDS_OUTSIDE__NEIGHBOUR]: false,
+    [BLINDS_INSIDE_OPEN__BENNETT]: false,
     [BENNETT_DOOR_INSIDE]: bennettDoorInside,
     [BENNETT_DOOR_INSIDE_OPEN]: bennettDoorInsideOpen,
     [WAITING_ROOM_DOOR]: waitingRoomDoor,
     [WAITING_ROOM_DOOR_OPEN]: waitingRoomDoorOpen,
     [CLUB_DOOR_OPEN]: clubDoorOpen,
+    [BLINDS_INSIDE__LIZ]: false,
+    [BLINDS_INSIDE_OPEN__LIZ]: false,
     [LIZ_DOOR]: lizDoor,
     [LIZ_DOOR_OPEN]: lizDoorOpen,
     [LIZ_GATE_INSIDE]: false,

@@ -10,17 +10,27 @@ export default [
         neededHours: 0.5
     },
     {
+        taskName: 'blindsOutside',
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'blindsInside',
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'blindsInsideOpen',
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
         taskName: 'ironGateLow',
         workedHours: 0,
         neededHours: 0.5
     },
     {
         taskName: 'ironGate',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'bennettBlinds',
         workedHours: 0,
         neededHours: 0.5
     },
@@ -50,27 +60,12 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'lizBlinds',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'lizBlindsOpen',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'lizGateOutside',
         workedHours: 0,
         neededHours: 0.5
     },
     {
         taskName: 'lizGateOutsideOpen',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'bennettBlindsOpen',
         workedHours: 0,
         neededHours: 0.5
     },

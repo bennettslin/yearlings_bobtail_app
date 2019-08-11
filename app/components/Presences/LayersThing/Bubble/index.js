@@ -13,7 +13,7 @@ import thoughtLarge from 'assets/svgs/bubbles/thoughtLarge'
 import goKartThought from 'assets/svgs/bubbles/goKartThought'
 import waitingThoughtWalking from 'assets/svgs/bubbles/waitingThoughtWalking'
 import waitingThoughtSinging from 'assets/svgs/bubbles/waitingThoughtSinging'
-// import waitingThoughtStudying from 'assets/svgs/bubbles/waitingThoughtStudying'
+import waitingThoughtStudying from 'assets/svgs/bubbles/waitingThoughtStudying'
 import pharmacyCel from 'assets/svgs/bubbles/pharmacyCel'
 import tarpitConstellation from 'assets/svgs/bubbles/tarpitConstellation'
 import siblingConstellation from 'assets/svgs/bubbles/siblingConstellation'
@@ -108,7 +108,7 @@ export default {
     [BUBBLE_LARGE__WAITING]: false,
     [WAITING_THOUGHT_WALKING]: waitingThoughtWalking,
     [WAITING_THOUGHT_SINGING]: waitingThoughtSinging,
-    [WAITING_THOUGHT_STUDYING]: false,
+    [WAITING_THOUGHT_STUDYING]: waitingThoughtStudying,
     [PHARMACY_CEL]: pharmacyCel,
     [TARPIT_CONSTELLATION]: tarpitConstellation,
     [SIBLING_CONSTELLATION]: siblingConstellation,
