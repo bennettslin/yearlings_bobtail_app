@@ -3,6 +3,19 @@
 }
 
 .WallBalcony {
-    stroke: #322;
-    fill: rgba(70, 50, 50, 1);
+    .dark {
+        fill: #aaad9c;
+    }
+
+    .light {
+        fill: #afb3a1;
+    }
+
+    .lighter {
+        fill: #b4b8a5;
+    }
+
+    .lightest {
+        fill: #bbbfac;
+    }
 }

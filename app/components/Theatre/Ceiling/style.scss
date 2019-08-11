@@ -3,7 +3,15 @@
 }
 
 .CeilingRafter {
-    stroke: #88f;
-    // fill: rgba(75, 75, 100, 1);
-    fill: rgba(200, 200, 250, 1);
+    .rafterFront {
+        fill: #858376;
+    }
+
+    .rafterBottom {
+        fill: #9c998a;
+    }
+
+    .rafterSide {
+        fill: #6e6c61;
+    }
 }

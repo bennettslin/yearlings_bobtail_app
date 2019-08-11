@@ -4836,5 +4836,10 @@ export default [
         taskName: `Put problem and inefficient ai files in separate folders, improve some cutouts.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Allow ceiling, floor, and wall to render svg.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

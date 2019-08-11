@@ -16,6 +16,11 @@
 
 export default [
     {
+        taskName: 'theatre',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: 'logue',
         workedHours: 0,
         neededHours: 1

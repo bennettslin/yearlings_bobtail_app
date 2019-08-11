@@ -1,6 +1,6 @@
 import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 
-const RAFTER_HEIGHT_TO_WIDTH_RATIO = 0.02 // How tall is the rafter.
+const RAFTER_HEIGHT_TO_WIDTH_RATIO = 0.1 // How tall is the rafter.
 
 export const getRaftersRowCoordinates = ({
     prosceniumLeft,
@@ -17,8 +17,8 @@ export const getRaftersRowCoordinates = ({
         rawCoordinatesArray = getArrayOfCoordinatesForFactoredLengths({
             minLength: ceilingHeight,
             firstLength: firstRowRafterHeight,
-            multiplyFactor: 1.2, // Gets wider faster with larger value.
-            overlapRatio: 0.25 // Less bunched up when closer to 0.
+            multiplyFactor: 1.5, // Gets wider faster with larger value.
+            overlapRatio: 0.75 // Less bunched up when closer to 0.
         })
 
     return rawCoordinatesArray.map(rawCoordinates => {

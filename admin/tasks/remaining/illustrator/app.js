@@ -5,18 +5,8 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'theatre seats',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'theatre balconies',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'theatre rafters',
-        workedHours: 0,
+        taskName: 'theatre balconies, need gradient',
+        workedHours: 1,
         neededHours: 2
     },
     {
