@@ -1,8 +1,8 @@
-import { CUTOUT } from 'constants/scene'
+import { CUTOUT } from '../../../constants/scene'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT
-} from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

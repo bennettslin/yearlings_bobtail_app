@@ -1,9 +1,9 @@
 import {
     CUTOUT,
     DOOR
-} from 'constants/scene'
-import { RECYCLABLES } from 'constants/scene/things/cutouts'
-import { BENNETT_DOOR_OUTSIDE } from 'constants/scene/things/doors'
+} from '../../../constants/scene'
+import { RECYCLABLES } from '../../../constants/scene/things/cutouts'
+import { BENNETT_DOOR_OUTSIDE } from '../../../constants/scene/things/doors'
 import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

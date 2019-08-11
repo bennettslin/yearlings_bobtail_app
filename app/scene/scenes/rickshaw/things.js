@@ -2,13 +2,13 @@ import {
     BACKDROP,
     CARDBOARD,
     FLAT
-} from 'constants/scene'
-import { SHORE_RICKSHAW_BACKDROP } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { SHORE_RICKSHAW_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_SHORE,
     ODIN_SHORE
-} from 'constants/scene/things/cardboards'
-import { RICKSHAW_TOWN } from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/cardboards'
+import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
 import {
     BENNETT_ODIN_SHARED,
     TAIWAN_HOUSE_SHARED

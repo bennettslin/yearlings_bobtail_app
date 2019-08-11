@@ -1,12 +1,12 @@
 import {
     BACKDROP,
     CARDBOARD
-} from 'constants/scene'
-import { TAIWAN_STAIRS_BACKDROP } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { TAIWAN_STAIRS_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import {
     BENNETT_ODIN_SHARED,
     TAIWAN_HOUSE_SHARED

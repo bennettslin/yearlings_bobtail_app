@@ -4,19 +4,19 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from 'constants/scene'
-import { GOLDEN_GATE_BACKDROP } from 'constants/scene/things/backdrops'
-import { EL_CERRITO_TREE } from 'constants/scene/things/cutouts'
+} from '../../../constants/scene'
+import { GOLDEN_GATE_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { EL_CERRITO_TREE } from '../../../constants/scene/things/cutouts'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
     REATTA_SEAT
-} from 'constants/scene/things/panels'
-import { PUPPET_REATTA } from 'constants/scene/things/puppets'
+} from '../../../constants/scene/things/panels'
+import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 import { INTERIOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

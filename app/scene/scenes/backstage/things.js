@@ -1,16 +1,16 @@
 import {
     CUTOUT,
     FIXTURE
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     SANDBAGS,
     STAGE_LIGHTS
-} from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cutouts'
 import {
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

@@ -1,12 +1,12 @@
 import {
     FLAT
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     PUBLIC_FAR_LEFT,
     PUBLIC_NEAR_LEFT,
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import { OAKLAND_HOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

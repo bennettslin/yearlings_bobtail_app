@@ -2,13 +2,13 @@ import {
     BACKDROP,
     FIXTURE,
     FLAT
-} from 'constants/scene'
-import { CEMETERY_BACKDROP } from 'constants/scene/things/backdrops'
-import { GRAVESTONE } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene'
+import { CEMETERY_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { GRAVESTONE } from '../../../constants/scene/things/fixtures'
 import {
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

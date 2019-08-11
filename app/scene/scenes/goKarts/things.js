@@ -2,15 +2,15 @@ import {
     BACKDROP,
     FLAT,
     PANEL
-} from 'constants/scene'
-import { DRIVING_BACKDROP } from 'constants/scene/things/backdrops'
-import { GO_KART_TRACK } from 'constants/scene/things/flats'
+} from '../../../constants/scene'
+import { DRIVING_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { GO_KART_TRACK } from '../../../constants/scene/things/flats'
 import {
     GO_KART_EXTERIOR__LEFT,
     GO_KART_EXTERIOR__RIGHT,
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

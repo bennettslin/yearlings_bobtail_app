@@ -2,16 +2,16 @@ import {
     CUTOUT,
     FLAT,
     PANEL
-} from 'constants/scene'
-import { CAMPFIRE } from 'constants/scene/things/cutouts'
-import { FAMILY_HOUSE } from 'constants/scene/things/flats'
+} from '../../../constants/scene'
+import { CAMPFIRE } from '../../../constants/scene/things/cutouts'
+import { FAMILY_HOUSE } from '../../../constants/scene/things/flats'
 import {
     CAVE_SHADOWS,
     STALACTITES,
     TROLL_SHADOW_LEFT,
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 import { SHADOW_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

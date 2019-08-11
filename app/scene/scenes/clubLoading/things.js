@@ -1,9 +1,9 @@
 import {
     DOOR,
     FIXTURE
-} from 'constants/scene'
-import { CLUB_DOOR_OPEN } from 'constants/scene/things/doors'
-import { DRUMS_STACKED__CLUB } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene'
+import { CLUB_DOOR_OPEN } from '../../../constants/scene/things/doors'
+import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
 import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

@@ -2,13 +2,13 @@ import {
     BACKDROP,
     CARDBOARD,
     FLAT
-} from 'constants/scene'
-import { OCEAN_BOTTOM_FAR } from 'constants/scene/things/backdrops'
-import { BENNETT_ODIN_OCEAN_FLOOR } from 'constants/scene/things/cardboards'
+} from '../../../constants/scene'
+import { OCEAN_BOTTOM_FAR } from '../../../constants/scene/things/backdrops'
+import { BENNETT_ODIN_OCEAN_FLOOR } from '../../../constants/scene/things/cardboards'
 import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

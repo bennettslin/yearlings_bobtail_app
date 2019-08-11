@@ -1,17 +1,17 @@
 import {
     CUTOUT,
     FIXTURE
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE__STAGE
-} from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cutouts'
 import {
     STAGE_MIC_SIDE__STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

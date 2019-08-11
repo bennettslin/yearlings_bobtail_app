@@ -1,9 +1,9 @@
 import {
     CUTOUT,
     FIXTURE
-} from 'constants/scene'
-import { STEAM_PIPES } from 'constants/scene/things/cutouts'
-import { PUSH_BROOM__TUNNEL } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene'
+import { STEAM_PIPES } from '../../../constants/scene/things/cutouts'
+import { PUSH_BROOM__TUNNEL } from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

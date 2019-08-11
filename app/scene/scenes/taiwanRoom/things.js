@@ -2,16 +2,16 @@ import {
     CUTOUT,
     CARDBOARD,
     FIXTURE
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import {
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE
-} from 'constants/scene/things/cutouts'
-import { FRIDGE_DRAWINGS } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/cutouts'
+import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
 import {
     BENNETT_ODIN_SHARED,
     BUDDHA_SHRINE_SHARED

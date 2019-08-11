@@ -2,19 +2,19 @@ import {
     BACKDROP,
     CARDBOARD,
     PANEL
-} from 'constants/scene'
-import { ROAD_PRESENT } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { ROAD_PRESENT } from '../../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PRESENT,
     SNOWGLOBE_PRESENT
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import {
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
     WIDE_COUCH__MIRIAM,
     WIDE_ARMREST__MIRIAM_LEFT,
     WIDE_ARMREST__MIRIAM_RIGHT
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

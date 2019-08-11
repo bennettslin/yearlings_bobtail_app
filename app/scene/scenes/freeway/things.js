@@ -3,11 +3,11 @@ import {
     CUTOUT,
     FIXTURE,
     FLAT
-} from 'constants/scene'
-import { VALLEY_BACKDROP } from 'constants/scene/things/backdrops'
-import { OVERPASS_SIGN_BACK } from 'constants/scene/things/cutouts'
-import { SHOPPING_CART } from 'constants/scene/things/fixtures'
-import { VALLEY_FREEWAY } from 'constants/scene/things/flats'
+} from '../../../constants/scene'
+import { VALLEY_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { OVERPASS_SIGN_BACK } from '../../../constants/scene/things/cutouts'
+import { SHOPPING_CART } from '../../../constants/scene/things/fixtures'
+import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

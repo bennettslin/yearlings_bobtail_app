@@ -4,20 +4,20 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from 'constants/scene'
-import { TAIWAN_MOUNTAINS_BACKDROP } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { TAIWAN_MOUNTAINS_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
     APART_SKETCH,
     SKETCHBOOK__APART
-} from 'constants/scene/things/bubbles'
+} from '../../../constants/scene/things/bubbles'
 import {
     TAIWAN_MOUNTAINS_BRIDGED,
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT
-} from 'constants/scene/things/flats'
-import { TAIWAN_FOG } from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/flats'
+import { TAIWAN_FOG } from '../../../constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
     PUPPET_ANITA_BEGIN,
@@ -34,7 +34,7 @@ import {
     PUPPET_CHRISTOPHER_END,
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END
-} from 'constants/scene/things/puppets'
+} from '../../../constants/scene/things/puppets'
 import { TAIWAN_HOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

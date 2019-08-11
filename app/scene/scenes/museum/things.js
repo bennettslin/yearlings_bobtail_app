@@ -1,9 +1,9 @@
 import {
     CUTOUT,
     FIXTURE
-} from 'constants/scene'
-import { MUSEUM_DISPLAY } from 'constants/scene/things/cutouts'
-import { CAVEMAN_BONES } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene'
+import { MUSEUM_DISPLAY } from '../../../constants/scene/things/cutouts'
+import { CAVEMAN_BONES } from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

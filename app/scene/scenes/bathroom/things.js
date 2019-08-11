@@ -3,14 +3,14 @@ import {
     CUTOUT,
     FIXTURE,
     PANEL
-} from 'constants/scene'
-import { JOHNNY_HORTON_ALBUM } from 'constants/scene/things/cardboards'
+} from '../../../constants/scene'
+import { JOHNNY_HORTON_ALBUM } from '../../../constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,
     TOWEL_RACK
-} from 'constants/scene/things/cutouts'
-import { RECORD_PLAYER_STOOL } from 'constants/scene/things/fixtures'
-import { BATHTUB } from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/cutouts'
+import { RECORD_PLAYER_STOOL } from '../../../constants/scene/things/fixtures'
+import { BATHTUB } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [PANEL]: {

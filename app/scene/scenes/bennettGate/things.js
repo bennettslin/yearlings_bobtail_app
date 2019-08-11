@@ -1,9 +1,9 @@
 import {
     CARDBOARD,
     CUTOUT
-} from 'constants/scene'
-import { CODE_BOX } from 'constants/scene/things/cardboards'
-import { APARTMENT_PLANT } from 'constants/scene/things/cutouts'
+} from '../../../constants/scene'
+import { CODE_BOX } from '../../../constants/scene/things/cardboards'
+import { APARTMENT_PLANT } from '../../../constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

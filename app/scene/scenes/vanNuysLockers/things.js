@@ -1,13 +1,13 @@
 import {
     CUTOUT,
     FIXTURE
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     VAN_NUYS_PLANT__LOCKERS
-} from 'constants/scene/things/cutouts'
-import { THROWN_FRUIT } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/cutouts'
+import { THROWN_FRUIT } from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

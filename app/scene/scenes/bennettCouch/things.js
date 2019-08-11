@@ -2,7 +2,7 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER,
@@ -10,17 +10,17 @@ import {
     TELEVISION_ALBUM,
     PROGRESS_CHART_EARLY,
     PROGRESS_CHART_LATE
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
     KEYBOARD
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 import {
     WIDE_COUCH__BENNETT,
     WIDE_ARMREST__BENNETT_LEFT,
     WIDE_ARMREST__BENNETT_RIGHT
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 import { PROGRESS_CHART_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

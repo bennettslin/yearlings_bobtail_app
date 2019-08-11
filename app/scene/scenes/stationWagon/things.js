@@ -2,18 +2,18 @@ import {
     BUBBLE,
     FIXTURE,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     TARPIT_CONSTELLATION,
     SIBLING_CONSTELLATION
-} from 'constants/scene/things/bubbles'
-import { EVIAN_BOTTLES } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/bubbles'
+import { EVIAN_BOTTLES } from '../../../constants/scene/things/fixtures'
 import {
     SATURN_INTERIOR,
     SATURN_EXTERIOR,
     SATURN_SEAT__LEFT,
     SATURN_SEAT__RIGHT
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 import { INTERIOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

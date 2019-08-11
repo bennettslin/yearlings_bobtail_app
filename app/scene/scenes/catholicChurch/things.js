@@ -2,13 +2,13 @@ import {
     BACKDROP,
     CUTOUT,
     FLAT
-} from 'constants/scene'
-import { FOLIAGE_BACKDROP } from 'constants/scene/things/backdrops'
-import { BERKELEY_LAMPPOST } from 'constants/scene/things/cutouts'
+} from '../../../constants/scene'
+import { FOLIAGE_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { BERKELEY_LAMPPOST } from '../../../constants/scene/things/cutouts'
 import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

@@ -2,13 +2,13 @@ import {
     BACKDROP,
     CARDBOARD,
     PANEL
-} from 'constants/scene'
-import { ROAD_PAST } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { ROAD_PAST } from '../../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PAST,
     SNOWGLOBE_PAST
-} from 'constants/scene/things/cardboards'
-import { SNOWGLOBE__TETHERBALL } from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/cardboards'
+import { SNOWGLOBE__TETHERBALL } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

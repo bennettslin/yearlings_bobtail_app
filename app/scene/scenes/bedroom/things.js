@@ -6,15 +6,15 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     DOGS_SKETCH,
     SKETCHBOOK__DOGS
-} from 'constants/scene/things/bubbles'
+} from '../../../constants/scene/things/bubbles'
 import {
     TINTIN_POSTER,
     BLOOM_COUNTY_POSTER
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import {
     BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
@@ -22,25 +22,25 @@ import {
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 import {
     BEDROOM_SIREN,
     BEDROOM_BUS
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import {
     CAPTAIN_BED_PILLOW,
     CAPTAIN_BED_BLANKET
-} from 'constants/scene/things/furniture'
+} from '../../../constants/scene/things/furniture'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
     BEDROOM_FENCE
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 import {
     PCHELKA_MUSHKA_ROCKET,
     EARTH,
     SPACE_COLONY
-} from 'constants/scene/things/puppets'
+} from '../../../constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

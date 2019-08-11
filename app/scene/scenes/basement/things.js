@@ -1,4 +1,4 @@
-import { FIXTURE } from 'constants/scene'
+import { FIXTURE } from '../../../constants/scene'
 import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
@@ -6,7 +6,7 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

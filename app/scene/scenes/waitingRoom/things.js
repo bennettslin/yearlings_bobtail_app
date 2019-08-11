@@ -3,7 +3,7 @@ import {
     CARDBOARD,
     CUTOUT,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     BUBBLE_SMALL__WAITING,
     BUBBLE_MEDIUM__WAITING,
@@ -11,12 +11,12 @@ import {
     WAITING_THOUGHT_WALKING,
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING
-} from 'constants/scene/things/bubbles'
+} from '../../../constants/scene/things/bubbles'
 import {
     CLIPBOARD,
     PAINTING
-} from 'constants/scene/things/cardboards'
-import { WAITING_ROOM_PLANT } from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cardboards'
+import { WAITING_ROOM_PLANT } from '../../../constants/scene/things/cutouts'
 import {
     WAITING_ARMCHAIR__BENNETT,
     WAITING_ARMREST__BENNETT_LEFT,
@@ -24,7 +24,7 @@ import {
     WAITING_ARMCHAIR__LIZ,
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 import { THOUGHT_SPEECH_SHARED, WAITING_ARMCHAIR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

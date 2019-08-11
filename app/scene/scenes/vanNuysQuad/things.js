@@ -2,16 +2,16 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     ESCAPE_POD_SKETCH,
     SKETCHBOOK__ESCAPE_POD
-} from 'constants/scene/things/bubbles'
-import { VAN_NUYS_LOGO } from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/bubbles'
+import { VAN_NUYS_LOGO } from '../../../constants/scene/things/cardboards'
 import {
     TRASH_CAN__QUAD,
     VAN_NUYS_PLANT__QUAD
-} from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cutouts'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

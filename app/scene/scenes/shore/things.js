@@ -3,14 +3,14 @@ import {
     CARDBOARD,
     CUTOUT,
     FLAT
-} from 'constants/scene'
-import { SHORE_BUOY_BACKDROP } from 'constants/scene/things/backdrops'
-import { BENNETT_ODIN_BUOY } from 'constants/scene/things/cardboards'
-import { YELLOW_TAPED_GRILL } from 'constants/scene/things/cutouts'
+} from '../../../constants/scene'
+import { SHORE_BUOY_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { BENNETT_ODIN_BUOY } from '../../../constants/scene/things/cardboards'
+import { YELLOW_TAPED_GRILL } from '../../../constants/scene/things/cutouts'
 import {
     FERRIS_WHEEL,
     ROLLER_COASTER
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

@@ -2,16 +2,16 @@ import {
     BACKDROP,
     CARDBOARD,
     PANEL
-} from 'constants/scene'
-import { OCEAN_FLOOR_FAR } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { OCEAN_FLOOR_FAR } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_MAT,
     ODIN_MAT
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 import {
     BENNETT_ODIN_SHARED,
     BUDDHA_SHRINE_SHARED

@@ -4,7 +4,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
@@ -17,11 +17,11 @@ import {
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE
-} from 'constants/scene/things/bubbles'
-import { IV_DRIP } from 'constants/scene/things/cutouts'
-import { HOSPITAL_RECORD_PLAYER } from 'constants/scene/things/fixtures'
-import { TENNIS_COURT } from 'constants/scene/things/flats'
-import { HOSPITAL_BED } from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/bubbles'
+import { IV_DRIP } from '../../../constants/scene/things/cutouts'
+import { HOSPITAL_RECORD_PLAYER } from '../../../constants/scene/things/fixtures'
+import { TENNIS_COURT } from '../../../constants/scene/things/flats'
+import { HOSPITAL_BED } from '../../../constants/scene/things/panels'
 import { BUBBLE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

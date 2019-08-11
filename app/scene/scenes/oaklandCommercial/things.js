@@ -1,6 +1,6 @@
 import {
     FLAT
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
@@ -9,7 +9,7 @@ import {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import { OAKLAND_COMMERCIAL_SHARED } from '../../shared'
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {

@@ -2,7 +2,7 @@ import {
     CUTOUT,
     DOOR,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     TRAY_PILE,
     DISHROOM_DOLLY__TRAY,
@@ -10,12 +10,12 @@ import {
     GLASS_RACK__SINK,
     GLASS_RACK__DOLLY,
     DISH_PILE
-} from 'constants/scene/things/cutouts'
-import { DISHROOM_DOOR } from 'constants/scene/things/doors'
+} from '../../../constants/scene/things/cutouts'
+import { DISHROOM_DOOR } from '../../../constants/scene/things/doors'
 import {
     CONVEYOR_BELT,
     DISHROOM_SINK
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

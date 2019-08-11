@@ -1,18 +1,18 @@
 import {
     CUTOUT,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
     TELEVISION
-} from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cutouts'
 import {
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

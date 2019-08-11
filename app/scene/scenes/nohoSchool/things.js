@@ -5,16 +5,16 @@ import {
     DOOR,
     FIXTURE,
     FLAT
-} from 'constants/scene'
-import { SCHOOL_BACKDROP } from 'constants/scene/things/backdrops'
-import { ESTHER_SPEECH } from 'constants/scene/things/bubbles'
-import { PLAYGROUND_SLIDE } from 'constants/scene/things/cutouts'
-import { NURSE_DOOR } from 'constants/scene/things/doors'
+} from '../../../constants/scene'
+import { SCHOOL_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { ESTHER_SPEECH } from '../../../constants/scene/things/bubbles'
+import { PLAYGROUND_SLIDE } from '../../../constants/scene/things/cutouts'
+import { NURSE_DOOR } from '../../../constants/scene/things/doors'
 import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
-} from 'constants/scene/things/fixtures'
-import { NOHO_SCHOOLHOUSE } from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/fixtures'
+import { NOHO_SCHOOLHOUSE } from '../../../constants/scene/things/flats'
 import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

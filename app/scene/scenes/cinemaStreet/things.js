@@ -1,18 +1,18 @@
 import {
     BUBBLE,
     CARDBOARD
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     BUBBLE_SMALL__CINEMA,
     BUBBLE_MEDIUM__CINEMA,
     BUBBLE_LARGE__CINEMA,
     CINEMA_THOUGHT_RECORDING,
     CINEMA_THOUGHT_BUYING
-} from 'constants/scene/things/bubbles'
+} from '../../../constants/scene/things/bubbles'
 import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import { POSTER_GLADIATOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

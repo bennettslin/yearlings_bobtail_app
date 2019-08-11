@@ -3,22 +3,22 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL
-} from 'constants/scene'
-import { ROAD_FUTURE } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { ROAD_FUTURE } from '../../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_FUTURE_CORD,
     SNOWGLOBE_FUTURE_REATTA
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import {
     RECORDING_MIC,
     RECORDING_CONSOLE,
     RECORDING_BEERS
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE
-} from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

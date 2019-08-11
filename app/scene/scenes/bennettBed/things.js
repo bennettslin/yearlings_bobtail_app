@@ -3,20 +3,20 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN
-} from 'constants/scene/things/doors'
+} from '../../../constants/scene/things/doors'
 import {
     NUDE_DRAWINGS,
     VASELINE
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 import {
     BENNETT_PILLOW,
     BENNETT_BLANKET
-} from 'constants/scene/things/furniture'
-import { BENNETT_BED } from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/furniture'
+import { BENNETT_BED } from '../../../constants/scene/things/panels'
 import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

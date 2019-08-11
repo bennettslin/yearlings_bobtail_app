@@ -1,12 +1,12 @@
 import {
     CUTOUT,
     DOOR
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     PORCH_PLANT__LEFT,
     PORCH_PLANT__RIGHT
-} from 'constants/scene/things/cutouts'
-import { PORCH_DOOR } from 'constants/scene/things/doors'
+} from '../../../constants/scene/things/cutouts'
+import { PORCH_DOOR } from '../../../constants/scene/things/doors'
 import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

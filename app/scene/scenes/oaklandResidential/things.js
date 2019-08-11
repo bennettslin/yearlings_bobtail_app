@@ -2,13 +2,13 @@ import {
     BACKDROP,
     CUTOUT,
     FLAT
-} from 'constants/scene'
-import { OAKLAND_FRONT_BACKDROP } from 'constants/scene/things/backdrops'
+} from '../../../constants/scene'
+import { OAKLAND_FRONT_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
     TWIN_STREETLAMP__NEAR
-} from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cutouts'
 import {
     RESIDENTIAL_FAR_LEFT,
     RESIDENTIAL_MIDDLE_LEFT,
@@ -16,7 +16,7 @@ import {
     RESIDENTIAL_FAR_RIGHT,
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import {
     OAKLAND_HOUSE_SHARED,
     OAKLAND_HOUSE_LEFT_SHARED,

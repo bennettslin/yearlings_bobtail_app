@@ -1,9 +1,9 @@
 import {
     CARDBOARD,
     DOOR
-} from 'constants/scene'
-import { CORKBOARD } from 'constants/scene/things/cardboards'
-import { PRINCIPAL_DOOR } from 'constants/scene/things/doors'
+} from '../../../constants/scene'
+import { CORKBOARD } from '../../../constants/scene/things/cardboards'
+import { PRINCIPAL_DOOR } from '../../../constants/scene/things/doors'
 import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

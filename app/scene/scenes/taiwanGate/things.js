@@ -2,14 +2,14 @@ import {
     CARDBOARD,
     CUTOUT,
     FLAT
-} from 'constants/scene'
-import { BENNETT_ODIN_RICKSHAW } from 'constants/scene/things/cardboards'
-import { TAIWAN_TREE } from 'constants/scene/things/cutouts'
+} from '../../../constants/scene'
+import { BENNETT_ODIN_RICKSHAW } from '../../../constants/scene/things/cardboards'
+import { TAIWAN_TREE } from '../../../constants/scene/things/cutouts'
 import {
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import {
     BENNETT_ODIN_SHARED,
     TAIWAN_HOUSE_SHARED

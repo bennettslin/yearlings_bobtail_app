@@ -2,13 +2,13 @@ import {
     CUTOUT,
     FIXTURE,
     PANEL
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     MONITOR_SIDE__CROWD,
     WALL_SPEAKER_SIDE__CROWD
-} from 'constants/scene/things/cutouts'
-import { STAGE_MIC_SIDE__CROWD } from 'constants/scene/things/fixtures'
-import { CROWD_SIDE } from 'constants/scene/things/panels'
+} from '../../../constants/scene/things/cutouts'
+import { STAGE_MIC_SIDE__CROWD } from '../../../constants/scene/things/fixtures'
+import { CROWD_SIDE } from '../../../constants/scene/things/panels'
 import { SHADOW_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

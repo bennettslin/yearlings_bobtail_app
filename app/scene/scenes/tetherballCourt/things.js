@@ -3,23 +3,23 @@ import {
     CUTOUT,
     FIXTURE,
     FLAT
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,
     BUBBLE_LARGE__RIGHT,
     THOUGHT_LARGE__RIGHT
-} from 'constants/scene/things/bubbles'
+} from '../../../constants/scene/things/bubbles'
 import {
     CAMPUS_TREE_SINGLE__TETHERBALL,
     CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT,
     CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT
-} from 'constants/scene/things/cutouts'
-import { TETHERBALL_POLE } from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/cutouts'
+import { TETHERBALL_POLE } from '../../../constants/scene/things/fixtures'
 import {
     CAMPUS_BUILDING_TALL__TETHERBALL,
     CAMPUS_BUILDING_WIDE__TETHERBALL
-} from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 import { BUBBLE_SHARED, VAN_NUYS_SCHOOLHOUSE_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {

@@ -1,18 +1,18 @@
 import {
     CUTOUT,
     FIXTURE
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     MONITOR_FRONT__LEFT,
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
-} from 'constants/scene/things/cutouts'
+} from '../../../constants/scene/things/cutouts'
 import {
     CASH_BOX,
     GUITAR,
     DRUMKIT
-} from 'constants/scene/things/fixtures'
+} from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

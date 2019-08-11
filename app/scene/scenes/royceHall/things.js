@@ -1,12 +1,12 @@
 import {
     CUTOUT,
     FLAT
-} from 'constants/scene'
+} from '../../../constants/scene'
 import {
     UCLA_TREE__LEFT,
     UCLA_TREE__RIGHT
-} from 'constants/scene/things/cutouts'
-import { ROYCE_HALL } from 'constants/scene/things/flats'
+} from '../../../constants/scene/things/cutouts'
+import { ROYCE_HALL } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

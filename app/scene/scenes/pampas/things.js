@@ -1,9 +1,9 @@
 import {
     BACKDROP,
     FLAT
-} from 'constants/scene'
-import { MOUNTAIN_BACKDROP } from 'constants/scene/things/backdrops'
-import { PAMPAS_FAR } from 'constants/scene/things/flats'
+} from '../../../constants/scene'
+import { MOUNTAIN_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { PAMPAS_FAR } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

@@ -1,9 +1,9 @@
-import { CARDBOARD } from 'constants/scene'
+import { CARDBOARD } from '../../../constants/scene'
 import {
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT
-} from 'constants/scene/things/cardboards'
+} from '../../../constants/scene/things/cardboards'
 import { BENNETT_ODIN_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
