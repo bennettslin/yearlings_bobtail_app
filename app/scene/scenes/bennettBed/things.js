@@ -5,6 +5,7 @@ import {
     PANEL
 } from '../../../constants/scene'
 import {
+    NEIGHBOUR_DOOR,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN
 } from '../../../constants/scene/things/doors'
@@ -21,6 +22,14 @@ import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
+        [NEIGHBOUR_DOOR]: {
+            yIndex: 3,
+            arrangement: {
+                xPosition: 7,
+                xWidth: 0.5,
+                zHeight: 0.5
+            }
+        },
         [BENNETT_DOOR_INSIDE]: {
             yIndex: 3,
             xPosition: 3,

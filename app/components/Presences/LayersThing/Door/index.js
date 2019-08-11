@@ -21,6 +21,7 @@ import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
 // import bennettBlindsOpen from 'assets/svgs/doors/bennettBlindsOpen'
 // import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
 // import bennettGateSideOpen from 'assets/svgs/doors/bennettGateSideOpen'
+// import neighbourDoor from 'assets/svgs/doors/neighbourDoor'
 import bennettDoorInside from 'assets/svgs/doors/bennettDoorInside'
 import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 // import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
@@ -57,6 +58,7 @@ import {
     BENNETT_BLINDS_OPEN,
     BENNETT_GATE_FRONT,
     BENNETT_GATE_SIDE_OPEN,
+    NEIGHBOUR_DOOR,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     WAITING_ROOM_DOOR,
@@ -94,6 +96,7 @@ export default {
     [BENNETT_BLINDS_OPEN]: false,
     [BENNETT_GATE_FRONT]: false,
     [BENNETT_GATE_SIDE_OPEN]: false,
+    [NEIGHBOUR_DOOR]: false,
     [BENNETT_DOOR_INSIDE]: bennettDoorInside,
     [BENNETT_DOOR_INSIDE_OPEN]: bennettDoorInsideOpen,
     [WAITING_ROOM_DOOR]: false,

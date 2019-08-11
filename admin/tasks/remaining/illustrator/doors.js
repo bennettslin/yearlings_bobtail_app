@@ -85,6 +85,11 @@ export default [
         neededHours: 0.5
     },
     {
+        taskName: 'neighbourDoor',
+        workedHours: 0,
+        neededHours: 0.5
+    },
+    {
         taskName: 'waitingRoomDoor',
         workedHours: 0,
         neededHours: 0.5

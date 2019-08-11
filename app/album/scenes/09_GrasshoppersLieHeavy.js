@@ -81,6 +81,7 @@ import {
 } from '../../constants/scene/things/cutouts'
 import {
     DISHROOM_DOOR,
+    NEIGHBOUR_DOOR,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN
 } from '../../constants/scene/things/doors'
@@ -305,6 +306,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [NEIGHBOUR_DOOR]: true,
                 [BENNETT_DOOR_INSIDE]: true
             },
             [FIXTURE]: {
