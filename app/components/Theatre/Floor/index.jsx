@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from 'modules/Svg'
 import FloorSeat from './Seat'
 
 import { getSeatingRowCoordinates } from './helper'
@@ -50,19 +49,20 @@ class Floor extends PureComponent {
             })
 
         return (
-            <Svg
+            <div
                 {...{
                     className: cx(
                         'Floor',
                         'Theatre__field'
                     ),
-                    style: { height: `${floorHeight}px` },
-                    viewBoxWidth: windowWidth,
-                    viewBoxHeight: floorHeight
+                    style: {
+                        width: `${windowWidth}px`,
+                        height: `${floorHeight}px`
+                    }
                 }}
             >
                 {seatingRowCoordinates.map((seatsArray, rowIndex) => (
-                    <g
+                    <div
                         {...{
                             key: rowIndex,
                             className: `FloorSeats__${rowIndex}`
@@ -88,9 +88,9 @@ class Floor extends PureComponent {
                                 }}
                             />
                         ))}
-                    </g>
+                    </div>
                 ))}
-            </Svg>
+            </div>
         )
     }
 }

@@ -1,21 +1,16 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import InlineSvg from 'modules/InlineSvg'
+import floorSeat from 'assets/svgs/theatre/floorSeat'
 
 const propTypes = {
-
     /**
      * How close the seat is to the centre. Centre seat index is 0. Left seats
      * have negative indices, right seats have positive indices.
      */
     chairIndex: PropTypes.number.isRequired,
     rowIndex: PropTypes.number.isRequired,
-
-    /**
-     * TODO: Keeping these values, even though we are rendering ellipses
-     * instead of rects as placeholders for now. We may very well need them
-     * again.
-     */
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
@@ -23,7 +18,6 @@ const propTypes = {
 }
 
 const FloorSeat = ({
-
     chairIndex,
     rowIndex,
     top,
@@ -34,30 +28,42 @@ const FloorSeat = ({
 }) => {
 
     const
-        ellipseCx = left + width / 2,
-        ellipseCy = top + height / 2
-
+        topFinal = top
             /**
              * Push down a little further so that there is some wiggle room for
              * seats nearer to the ends to come up.
              */
             + height / 2.5
-
             /**
              * Seats nearer to the ends come up further exponentially.
              */
             - Math.pow(1.415, Math.abs(chairIndex)),
 
-        ellipseRx = width / 2,
-        ellipseRy = height / 2,
-
         chairIndexString = chairIndex < 0 ?
             // Prefix with "n" for negative.
             `seat__n${chairIndex * -1}` :
-            `seat__${chairIndex}`
+            `seat__${chairIndex}`,
+
+        sharedStyle = {
+            width: `${width}px`,
+            height: `${height}px`
+        },
+
+        sharedSvg = (
+            <InlineSvg
+                {...{
+                    className: cx(
+                        'fillTransition__dimTheatre'
+                    ),
+                    title: 'floor seat'
+                }}
+            >
+                {floorSeat}
+            </InlineSvg>
+        )
 
     return (
-        <g
+        <div
             {...{
                 className: cx(
                     'FloorSeat',
@@ -65,43 +71,52 @@ const FloorSeat = ({
                 )
             }}
         >
-            <ellipse
+            <div
                 {...{
                     className: cx(
                         'FloorSeat__lit',
-                        'fillTransition__dimTheatre'
+                        'abF'
                     ),
-                    cx: ellipseCx,
-                    cy: ellipseCy,
-                    rx: ellipseRx,
-                    ry: ellipseRy
+                    style: {
+                        top: `${topFinal}px`,
+                        left: `${left}px`,
+                        ...sharedStyle
+                    }
                 }}
-            />
-            <ellipse
+            >
+                {sharedSvg}
+            </div>
+            <div
                 {...{
                     className: cx(
                         'FloorSeat__base',
-                        'fillTransition__dimTheatre'
+                        'abF'
                     ),
-                    cx: ellipseCx + width * chairIndex * 0.0025,
-                    cy: ellipseCy + height * 0.0075,
-                    rx: ellipseRx,
-                    ry: ellipseRy
+                    style: {
+                        top: `${topFinal + height * 0.0075}px`,
+                        left: `${left + width * chairIndex * 0.0025}px`,
+                        ...sharedStyle
+                    }
                 }}
-            />
-            <ellipse
+            >
+                {sharedSvg}
+            </div>
+            <div
                 {...{
                     className: cx(
                         'FloorSeat__shaded',
-                        'fillTransition__dimTheatre'
+                        'abF'
                     ),
-                    cx: ellipseCx + width * chairIndex * 0.01,
-                    cy: ellipseCy + height * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075,
-                    rx: ellipseRx,
-                    ry: ellipseRy
+                    style: {
+                        top: `${topFinal + height * Math.pow(1.25, Math.abs(rowIndex)) * 0.0075}px`,
+                        left: `${left + width * chairIndex * 0.01}px`,
+                        ...sharedStyle
+                    }
                 }}
-            />
-        </g>
+            >
+                {sharedSvg}
+            </div>
+        </div>
     )
 }
 

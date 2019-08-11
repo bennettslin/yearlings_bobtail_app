@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from 'modules/Svg'
 import WallBalcony from './Balcony'
 
 import {
@@ -75,7 +74,7 @@ class Wall extends PureComponent {
             })
 
         return (
-            <Svg
+            <div
                 {...{
                     className: cx(
                         'Wall',
@@ -83,14 +82,13 @@ class Wall extends PureComponent {
                     ),
                     style: {
                         width: `${wallWidth}px`,
+                        height: `${windowHeight}`,
 
                         ...isRight && {
                             left: 'auto',
                             right: 0
                         }
-                    },
-                    viewBoxWidth: wallWidth,
-                    viewBoxHeight: windowHeight
+                    }
                 }}
             >
                 {balconyColumnCoordinates.map(({
@@ -109,7 +107,7 @@ class Wall extends PureComponent {
                         }}
                     />
                 ))}
-            </Svg>
+            </div>
         )
     }
 }

@@ -1,8 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-
-import ReactInlineSvg from 'react-inlinesvg'
+import InlineSvg from 'modules/InlineSvg'
 
 import {
     capitaliseForClassName,
@@ -75,15 +74,15 @@ class PreviewerSvg extends PureComponent {
                     )
                 }}
             >
-                <ReactInlineSvg
+                <InlineSvg
                     {...{
                         className: convertPresenceKeyToClassName(presenceKey),
-                        xmlns: 'http://www.w3.org/2000/svg',
                         title: convertPresenceKeyToTitle(presenceKey),
-                        preProcessor: this.processSvg,
-                        src: presenceComponent
+                        preProcessor: this.processSvg
                     }}
-                />
+                >
+                    {presenceComponent}
+                </InlineSvg>
             </div>
         )
     }

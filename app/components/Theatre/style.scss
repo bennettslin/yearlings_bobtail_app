@@ -31,6 +31,6 @@
 .fillTransition__dimTheatre {
     .DW__higherProcessor
     & {
-        transition: fill $animationDuration__default;
+        transition: fill $animationDuration__slow;
     }
 }
