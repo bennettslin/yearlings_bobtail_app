@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from '../../../modules/Svg'
+import InlineSvg from 'modules/InlineSvg'
+import proscenium from 'assets/svgs/theatre/proscenium'
 
 const mapStateToProps = ({
     viewportStore: {
@@ -27,7 +28,7 @@ const Proscenium = ({
     prosceniumWidth,
     prosceniumHeight
 }) => (
-    <Svg
+    <div
         {...{
             className: cx(
                 'Proscenium',
@@ -41,18 +42,18 @@ const Proscenium = ({
             }
         }}
     >
-        <rect
+        <InlineSvg
             {...{
                 className: cx(
-                    'Proscenium__rect'
+                    'proscenium',
+                    'fillTransition__dimTheatre'
                 ),
-                x: 0,
-                y: 0,
-                width: 100,
-                height: 100
+                title: 'proscenium'
             }}
-        />
-    </Svg>
+        >
+            {proscenium}
+        </InlineSvg>
+    </div>
 )
 
 Proscenium.propTypes = {

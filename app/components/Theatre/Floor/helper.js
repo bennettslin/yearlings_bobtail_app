@@ -1,6 +1,6 @@
 import { getArrayOfCoordinatesForFactoredLengths } from '../helper'
 
-const SEAT_HEIGHT_TO_WIDTH_RATIO = 1.55 // How tall is the seat.
+const SEAT_HEIGHT_TO_WIDTH_RATIO = 1.5 // How tall is the seat.
 
 const _zipTwoArrays = (leftArray, rightArray) => {
 
@@ -47,7 +47,7 @@ export const getSeatingRowCoordinates = ({
             multiplyFactor: 1.6,
 
             // Beginning values are closer together with larger value.
-            bunchFactor: 1.8,
+            bunchFactor: 2.2,
 
             // Values are closer together in general when closer to 1.
             overlapRatio: 0.99
