@@ -1,6 +1,5 @@
 .Presence {
     opacity: 0;
-    // overflow: hidden;
 
     .DW__higherProcessor
     & {
@@ -14,12 +13,6 @@
 
 .Presence__temporaryText {
     font-size: 0.15em;
-}
-
-.Presence__temporaryRect {
-    vector-effect: non-scaling-stroke;
-    stroke-width: 0.25%;
-    stroke: #444;
 }
 
 .Presence {

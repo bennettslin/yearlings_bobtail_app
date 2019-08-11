@@ -4841,5 +4841,10 @@ export default [
         taskName: `Allow ceiling, floor, and wall to render svg.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Add drama masks and general cleanup.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
