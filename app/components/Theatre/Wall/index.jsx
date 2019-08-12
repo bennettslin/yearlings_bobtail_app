@@ -103,7 +103,8 @@ class Wall extends PureComponent {
                             top,
                             left,
                             width,
-                            height
+                            height,
+                            isLeft: !isRight
                         }}
                     />
                 ))}

@@ -1,6 +1,15 @@
-<svg viewBox="0 0 249.5 1000">
-    <path class="dark" d="M124.5,996.48c36.77,2.24,79.46,3.52,125,3.52V0C204,0,161.27,2.57,124.5,7Z"/>
-    <path class="light" d="M87.5,993.72c11.49,1,23.86,2,37,2.76V7c-13.14,1.6-25.51,3.45-37,5.51Z"/>
-    <path class="lighter" d="M49.5,989.47c11.14,1.56,23.9,3,38,4.25V12.55c-14.1,2.53-26.86,5.38-38,8.5Z"/>
-    <path class="lightest" d="M0,975.31c3.09,5.33,21.22,10.23,50,14.23V20.91c-28.78,8-46.91,17.81-50,28.46Z"/>
+<svg viewBox="0 0 252 1002">
+    <defs>
+        <linearGradient id="fill__theatreLit" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#9c998a" />
+            <stop offset="25%" stop-color="#858376" />
+            <stop offset="100%" stop-color="#6e6c61" />
+        </linearGradient>
+        <linearGradient id="fill__theatreDark" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#9c998a" />
+            <stop offset="25%" stop-color="#858376" />
+            <stop offset="100%" stop-color="#6e6c61" />
+        </linearGradient>
+    </defs>
+    <path class="balcony" d="M1,53.63C1,24.56,112.93,1,251,1V1001C112.93,1001,1,989.22,1,974.68Z"/>
 </svg>

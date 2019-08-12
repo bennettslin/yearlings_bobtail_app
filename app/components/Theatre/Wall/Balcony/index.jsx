@@ -8,14 +8,16 @@ const propTypes = {
     top: PropTypes.number.isRequired,
     left: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired
+    height: PropTypes.number.isRequired,
+    isLeft: PropTypes.bool.isRequired
 }
 
 const WallBalcony = ({
     top,
     left,
     width,
-    height
+    height,
+    isLeft
 
 }) => (
     <div
@@ -36,6 +38,7 @@ const WallBalcony = ({
             {...{
                 className: cx(
                     'wallBalcony',
+                    isLeft && 'wallBalcony__left',
                     'fillTransition__dimTheatre'
                 ),
                 title: 'wall balcony'
