@@ -8,7 +8,7 @@ import bubbleSmall from 'assets/svgs/bubbles/bubbleSmall'
 import bubbleMedium from 'assets/svgs/bubbles/bubbleMedium'
 import bubbleLarge from 'assets/svgs/bubbles/bubbleLarge'
 import thoughtLarge from 'assets/svgs/bubbles/thoughtLarge'
-// import cinemaThoughtRecording from 'assets/svgs/bubbles/cinemaThoughtRecording'
+import cinemaThoughtRecording from 'assets/svgs/bubbles/cinemaThoughtRecording'
 // import cinemaThoughtBuying from 'assets/svgs/bubbles/cinemaThoughtBuying'
 import goKartThought from 'assets/svgs/bubbles/goKartThought'
 import waitingThoughtWalking from 'assets/svgs/bubbles/waitingThoughtWalking'
@@ -98,7 +98,7 @@ export default {
     [BUBBLE_SMALL__CINEMA]: false,
     [BUBBLE_MEDIUM__CINEMA]: false,
     [BUBBLE_LARGE__CINEMA]: false,
-    [CINEMA_THOUGHT_RECORDING]: false,
+    [CINEMA_THOUGHT_RECORDING]: cinemaThoughtRecording,
     [CINEMA_THOUGHT_BUYING]: false,
     [BUBBLE_SMALL__GO_KART]: bubbleSmall,
     [BUBBLE_MEDIUM__GO_KART]: bubbleMedium,

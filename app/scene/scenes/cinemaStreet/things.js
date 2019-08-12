@@ -13,7 +13,10 @@ import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
 } from '../../../constants/scene/things/cardboards'
-import { POSTER_GLADIATOR_SHARED } from '../../shared'
+import {
+    POSTER_GLADIATOR_SHARED,
+    THOUGHT_SPEECH_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -46,12 +49,10 @@ const ARRANGEMENTS_THINGS = {
         },
         [CINEMA_THOUGHT_RECORDING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 8.5,
+            zOffset: 4,
+            scaleFactor: 0.45,
+            sharedStyle: THOUGHT_SPEECH_SHARED
         },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,

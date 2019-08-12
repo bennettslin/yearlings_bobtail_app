@@ -10,11 +10,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'cinemaThoughtRecording',
-        workedHours: 0,
-        neededHours: 2.5
-    },
-    {
         taskName: 'cinemaThoughtBuying',
         workedHours: 0,
         neededHours: 2
