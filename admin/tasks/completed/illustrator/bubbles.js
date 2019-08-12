@@ -58,5 +58,10 @@ export default [
         taskName: 'cinemaThoughtRecording',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'cinemaThoughtBuying',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
