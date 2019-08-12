@@ -45,7 +45,7 @@ const ARRANGEMENTS_THINGS = {
         [CAMPANILE]: {
             yIndex: 1,
             xPosition: 6.25,
-            scaleFactor: 0.45
+            scaleFactor: 0.42
         },
         [CAMPUS_BUILDING_TALL__BERKELEY]: {
             yIndex: 1,

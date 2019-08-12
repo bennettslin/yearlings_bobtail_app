@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [ST_JOSEPHS_CHURCH]: {
             yIndex: 1,
             xPosition: 7.5,
-            scaleFactor: 0.57
+            scaleFactor: 0.55
         }
     }
 }
