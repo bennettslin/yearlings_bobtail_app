@@ -31,6 +31,7 @@ import {
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
 import {
+    BUBBLE_SHARED,
     DOOR_SHARED,
     THOUGHT_SPEECH_SHARED,
     WAITING_ARMCHAIR_SHARED
@@ -119,48 +120,42 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
     [BUBBLE]: {
         [BUBBLE_SMALL__WAITING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 1,
+            zOffset: 3.2,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [BUBBLE_MEDIUM__WAITING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 0.75,
+            zOffset: 3.5,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [BUBBLE_LARGE__WAITING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 1.1,
+            zOffset: 4,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [WAITING_THOUGHT_WALKING]: {
             yIndex: 5,
-            xPosition: 2.9,
+            xPosition: 3.6,
             zOffset: 3.3,
             scaleFactor: 0.45,
             sharedStyle: THOUGHT_SPEECH_SHARED
         },
         [WAITING_THOUGHT_SINGING]: {
             yIndex: 5,
-            xPosition: 7,
+            xPosition: 7.7,
             zOffset: 3.6,
             scaleFactor: 0.45,
             sharedStyle: THOUGHT_SPEECH_SHARED
         },
         [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,
-            xPosition: 8,
+            xPosition: 8.5,
             zOffset: 0.6,
             scaleFactor: 0.45,
             sharedStyle: THOUGHT_SPEECH_SHARED

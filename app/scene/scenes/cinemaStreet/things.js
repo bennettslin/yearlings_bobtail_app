@@ -14,6 +14,7 @@ import {
     MARQUEE_FRAME__GLADIATOR
 } from '../../../constants/scene/things/cardboards'
 import {
+    BUBBLE_SHARED,
     POSTER_GLADIATOR_SHARED,
     THOUGHT_SPEECH_SHARED
 } from '../../shared'
@@ -22,35 +23,29 @@ const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
         [BUBBLE_SMALL__CINEMA]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 4.5,
+            zOffset: 5.1,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [BUBBLE_MEDIUM__CINEMA]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 4.75,
+            zOffset: 5.3,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [BUBBLE_LARGE__CINEMA]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 5.5,
+            zOffset: 5.5,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [CINEMA_THOUGHT_RECORDING]: {
             yIndex: 5,
-            xPosition: 8.25,
-            zOffset: 4,
+            xPosition: 8.3,
+            zOffset: 4.1,
             scaleFactor: 0.45,
             sharedStyle: THOUGHT_SPEECH_SHARED
         },
