@@ -1,145 +1,40 @@
 .gladiatorPoster {
-    .skin {
-        fill: #ccc;
-    }
-
-    .skinOverlapLine {
-        stroke: gray;
-    }
-
-    .hair {
-        fill: #736357;
-    }
+    .skin { fill: #ccc; }
+    .skinOverlapLine { stroke: gray; }
+    .hair { fill: #736357; }
 }
 
 .cinemaThoughtRecording {
-    .wall {
-        fill: #88a6ae;
-    }
-
-    .floor {
-        fill: #506468;
-    }
-
-    .paper {
-        fill: #e6e6e6;
-    }
-
-    .melodicaBody {
-        fill: #b38776;
-    }
-
-    .melodicaKey {
-        fill: #cfcfc8;
-    }
-
-    .headphoneBand {
-        fill: #77826e;
-    }
-
-    .headphoneSpeaker {
-        fill: #5a704b;
-    }
-
-    .popScreen {
-        fill: rgba(100, 100, 150, 0.5);
-    }
-
-    .popScreenHolder {
-        fill: #5f5d73;
-    }
-
-    .fader {
-        fill: #a4bdb5;
-    }
-
-    .consoleScreen {
-        fill: #88a199;
-    }
-
-    .console {
-        fill: #7d948d;
-    }
-
-    .consolePanel {
-        fill: #7b918a;
-    }
+    .wall { fill: #88a6ae; }
+    .floor { fill: #506468; }
+    .paper { fill: #e6e6e6; }
+    .melodicaBody { fill: #b38776; }
+    .melodicaKey { fill: #cfcfc8; }
+    .headphoneBand { fill: #77826e; }
+    .headphoneSpeaker { fill: #5a704b; }
+    .popScreen { fill: rgba(100, 100, 150, 0.5); }
+    .popScreenHolder { fill: #5f5d73; }
+    .fader { fill: #a4bdb5; }
+    .consoleScreen { fill: #88a199; }
+    .console { fill: #7d948d; }
+    .consolePanel { fill: #7b918a; }
 }
 
 .cinemaThoughtBuying {
-    .floor {
-        fill: #889c74;
-    }
-
-    .wall {
-        fill: #b2cc99;
-    }
-
-    .posterLeft {
-        fill: #5f75a3;
-    }
-
-    .posterRight {
-        fill: #785fa3;
-    }
-
-    .albumRightTop {
-        fill: #bf8a77;
-    }
-
-    .albumLeftTop {
-        fill: #bdbf77;
-    }
-
-    .pileSide {
-        fill: #a4a686;
-    }
-
-    .pileTop {
-        fill: #b1b391;
-    }
-
-    .albumRightBottom {
-        fill: #81bf77;
-    }
-
-    .yearlingsAlbum {
-        fill: #77b0bf;
-    }
-
-    .standFront {
-        fill: #9e9c6b;
-    }
-
-    .standSide {
-        fill: #7a7953;
-    }
-
-    .binFront {
-        fill: #bab87e;
-    }
-
-    .binSide {
-        fill: #adab75;
-    }
-
-    .mask {
-        fill: #c9c2a5;
-    }
-
-    .maraSkirt {
-        fill: #ad875c;
-    }
-
-    .albumHeld {
-        fill: #bf7c9a;
-    }
-
-    .maraShoe {
-        fill: #614c34;
-    }
-
-    .maraHeadband {
-        fill: #9c7345;
-    }
+    .floor { fill: #889c74; }
+    .wall { fill: #b2cc99; }
+    .posterLeft { fill: #5f75a3; }
+    .posterRight { fill: #785fa3; }
+    .albumRightTop { fill: #bf8a77; }
+    .albumLeftTop { fill: #bdbf77; }
+    .pileSide { fill: #a4a686; }
+    .pileTop { fill: #b1b391; }
+    .albumRightBottom { fill: #81bf77; }
+    .yearlingsAlbum { fill: #77b0bf; }
+    .standFront { fill: #9e9c6b; }
+    .standSide { fill: #7a7953; }
+    .binFront { fill: #bab87e; }
+    .binSide { fill: #adab75; }
+    .mask { fill: #c9c2a5; }
+    .albumHeld { fill: #bf7c9a; }
 }

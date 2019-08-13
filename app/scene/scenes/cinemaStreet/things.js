@@ -15,9 +15,14 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import {
     BUBBLE_SHARED,
-    POSTER_GLADIATOR_SHARED,
-    THOUGHT_SPEECH_SHARED
+    POSTER_GLADIATOR_SHARED
 } from '../../shared'
+import {
+    DRAWING_BENNETT_SHARED,
+    DRAWING_INSTRUMENT_SHARED,
+    DRAWING_MARA_SHARED,
+    DRAWING_PEOPLE_SHARED
+} from '../../shared/drawing'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -47,14 +52,21 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 8.3,
             zOffset: 4.1,
             scaleFactor: 0.45,
-            sharedStyle: THOUGHT_SPEECH_SHARED
+            sharedStyle: [
+                DRAWING_BENNETT_SHARED,
+                DRAWING_INSTRUMENT_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,
             xPosition: 9.25,
             zOffset: 1,
             scaleFactor: 0.45,
-            sharedStyle: THOUGHT_SPEECH_SHARED
+            sharedStyle: [
+                DRAWING_MARA_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         }
     },
     [CARDBOARD]: {

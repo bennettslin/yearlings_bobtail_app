@@ -33,9 +33,14 @@ import {
 import {
     BUBBLE_SHARED,
     DOOR_SHARED,
-    THOUGHT_SPEECH_SHARED,
     WAITING_ARMCHAIR_SHARED
 } from '../../shared'
+import {
+    DRAWING_BENNETT_SHARED,
+    DRAWING_INSTRUMENT_SHARED,
+    DRAWING_LIZ_SHARED,
+    DRAWING_PEOPLE_SHARED
+} from '../../shared/drawing'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -144,21 +149,34 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             xPosition: 3.6,
             zOffset: 3.3,
             scaleFactor: 0.45,
-            sharedStyle: THOUGHT_SPEECH_SHARED
+            sharedStyle: [
+                DRAWING_BENNETT_SHARED,
+                DRAWING_LIZ_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         },
         [WAITING_THOUGHT_SINGING]: {
             yIndex: 5,
             xPosition: 7.7,
             zOffset: 3.6,
             scaleFactor: 0.45,
-            sharedStyle: THOUGHT_SPEECH_SHARED
+            sharedStyle: [
+                DRAWING_BENNETT_SHARED,
+                DRAWING_INSTRUMENT_SHARED,
+                DRAWING_LIZ_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         },
         [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,
             xPosition: 8.5,
             zOffset: 0.6,
             scaleFactor: 0.45,
-            sharedStyle: THOUGHT_SPEECH_SHARED
+            sharedStyle: [
+                DRAWING_BENNETT_SHARED,
+                DRAWING_LIZ_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         }
     }
 }

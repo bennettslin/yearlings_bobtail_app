@@ -25,10 +25,13 @@ import {
     PEAHEN,
     PEACOCK
 } from '../../../constants/scene/things/puppets'
+import { DOOR_SHARED } from '../../shared'
 import {
-    DOOR_SHARED,
-    THOUGHT_SPEECH_SHARED
-} from '../../shared'
+    DRAWING_BENNETT_SHARED,
+    DRAWING_INSTRUMENT_SHARED,
+    DRAWING_LIZ_SHARED,
+    DRAWING_PEOPLE_SHARED
+} from '../../shared/drawing'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -84,14 +87,23 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             xPosition: 7,
             zOffset: 3,
             scaleFactor: 0.45,
-            sharedStyle: THOUGHT_SPEECH_SHARED
+            sharedStyle: [
+                DRAWING_BENNETT_SHARED,
+                DRAWING_LIZ_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         },
         [LIZ_DEFENCE_SPEECH]: {
             yIndex: 5,
             xPosition: 5,
             zOffset: 0.5,
             scaleFactor: 0.45,
-            sharedStyle: THOUGHT_SPEECH_SHARED
+            sharedStyle: [
+                DRAWING_BENNETT_SHARED,
+                DRAWING_INSTRUMENT_SHARED,
+                DRAWING_LIZ_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         }
     }
 }
