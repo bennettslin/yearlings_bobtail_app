@@ -17,8 +17,8 @@ import waitingThoughtStudying from 'assets/svgs/bubbles/waitingThoughtStudying'
 import pharmacyCel from 'assets/svgs/bubbles/pharmacyCel'
 import tarpitConstellation from 'assets/svgs/bubbles/tarpitConstellation'
 import siblingConstellation from 'assets/svgs/bubbles/siblingConstellation'
-// import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
-// import lizDefenceSpeech from 'assets/svgs/bubbles/lizDefenceSpeech'
+import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
+import lizDefenceSpeech from 'assets/svgs/bubbles/lizDefenceSpeech'
 // import lizThought from 'assets/svgs/bubbles/lizThought'
 import thoughtMedium from 'assets/svgs/bubbles/thoughtMedium'
 import thoughtSmall from 'assets/svgs/bubbles/thoughtSmall'
@@ -112,8 +112,8 @@ export default {
     [PHARMACY_CEL]: pharmacyCel,
     [TARPIT_CONSTELLATION]: tarpitConstellation,
     [SIBLING_CONSTELLATION]: siblingConstellation,
-    [KHARI_ATTACK_SPEECH]: false,
-    [LIZ_DEFENCE_SPEECH]: false,
+    [KHARI_ATTACK_SPEECH]: khariAttackSpeech,
+    [LIZ_DEFENCE_SPEECH]: lizDefenceSpeech,
     [BUBBLE_SMALL__LIZ]: false,
     [BUBBLE_MEDIUM__LIZ]: false,
     [BUBBLE_LARGE__LIZ]: false,

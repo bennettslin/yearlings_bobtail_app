@@ -10,16 +10,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'khariAttackSpeech',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'lizDefenceSpeech',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'lizThought',
         workedHours: 0,
         neededHours: 2

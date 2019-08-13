@@ -25,7 +25,10 @@ import {
     PEAHEN,
     PEACOCK
 } from '../../../constants/scene/things/puppets'
-import { DOOR_SHARED } from '../../shared'
+import {
+    DOOR_SHARED,
+    THOUGHT_SPEECH_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -78,21 +81,17 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
     [BUBBLE]: {
         [KHARI_ATTACK_SPEECH]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 7,
+            zOffset: 3,
+            scaleFactor: 0.45,
+            sharedStyle: THOUGHT_SPEECH_SHARED
         },
         [LIZ_DEFENCE_SPEECH]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 5,
+            zOffset: 0.5,
+            scaleFactor: 0.45,
+            sharedStyle: THOUGHT_SPEECH_SHARED
         }
     }
 }
