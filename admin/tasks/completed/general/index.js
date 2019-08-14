@@ -4846,5 +4846,10 @@ export default [
         taskName: `Add drama masks and general cleanup.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Split out drawing people styles into shared styles.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -73,5 +73,10 @@ export default [
         taskName: 'lizDefenceSpeech',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'lizThought',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

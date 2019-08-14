@@ -153,12 +153,14 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
         },
         [LIZ_THOUGHT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 7,
+            zOffset: 1,
+            scaleFactor: 0.45,
+            sharedStyle: [
+                DRAWING_BENNETT_SHARED,
+                DRAWING_LIZ_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         }
     },
     [PUPPET]: {

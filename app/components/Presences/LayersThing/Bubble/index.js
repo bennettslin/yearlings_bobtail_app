@@ -19,7 +19,7 @@ import tarpitConstellation from 'assets/svgs/bubbles/tarpitConstellation'
 import siblingConstellation from 'assets/svgs/bubbles/siblingConstellation'
 import khariAttackSpeech from 'assets/svgs/bubbles/khariAttackSpeech'
 import lizDefenceSpeech from 'assets/svgs/bubbles/lizDefenceSpeech'
-// import lizThought from 'assets/svgs/bubbles/lizThought'
+import lizThought from 'assets/svgs/bubbles/lizThought'
 import thoughtMedium from 'assets/svgs/bubbles/thoughtMedium'
 import thoughtSmall from 'assets/svgs/bubbles/thoughtSmall'
 
@@ -117,7 +117,7 @@ export default {
     [BUBBLE_SMALL__LIZ]: false,
     [BUBBLE_MEDIUM__LIZ]: false,
     [BUBBLE_LARGE__LIZ]: false,
-    [LIZ_THOUGHT]: false,
+    [LIZ_THOUGHT]: lizThought,
     [BUBBLE_SMALL__DEATHBED]: bubbleSmall,
     [BUBBLE_MEDIUM__DEATHBED]: bubbleMedium,
     [BUBBLE_LARGE__DEATHBED]: bubbleLarge,
