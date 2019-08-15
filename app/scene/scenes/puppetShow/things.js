@@ -36,6 +36,7 @@ import {
     PUPPET_MOTHER_END
 } from '../../../constants/scene/things/puppets'
 import { TAIWAN_HOUSE_SHARED } from '../../shared'
+import { SKETCH_TAIWAN_SHARED } from '../../shared/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -126,17 +127,19 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
     [BUBBLE]: {
         [TOGETHER_SKETCH]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
+            xPosition: 8.5,
+            zOffset: 3.5,
+            noShadow: true,
+            scaleFactor: 0.3,
+            sharedStyle: SKETCH_TAIWAN_SHARED
         },
         [SKETCHBOOK__TOGETHER]: {
             yIndex: 5,
             xPosition: 8.5,
-            scaleFactor: 0.25
+            zOffset: 2.5,
+            rotate: 270,
+            scaleFactor: 0.25,
+            flipHorizontal: true
         }
     },
     [PUPPET]: {
@@ -187,17 +190,19 @@ export const THINGS_PUPPET_SHOW_END = {
     [BUBBLE]: {
         [APART_SKETCH]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4.5
-            }
+            xPosition: 2.5,
+            zOffset: 3.5,
+            noShadow: true,
+            scaleFactor: 0.3,
+            sharedStyle: SKETCH_TAIWAN_SHARED
         },
         [SKETCHBOOK__APART]: {
             yIndex: 5,
             xPosition: 2.5,
-            scaleFactor: 0.25
+            zOffset: 2.5,
+            rotate: 270,
+            scaleFactor: 0.25,
+            flipHorizontal: true
         }
     },
     [PUPPET]: {

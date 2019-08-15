@@ -1,7 +1,7 @@
 import estherSpeech from 'assets/svgs/bubbles/estherSpeech'
 import sketchbook from 'assets/svgs/bubbles/sketchbook'
-// import togetherSketch from 'assets/svgs/bubbles/togetherSketch'
-// import apartSketch from 'assets/svgs/bubbles/apartSketch'
+import togetherSketch from 'assets/svgs/bubbles/togetherSketch'
+import apartSketch from 'assets/svgs/bubbles/apartSketch'
 import dogsSketch from 'assets/svgs/bubbles/dogsSketch'
 import escapePodSketch from 'assets/svgs/bubbles/escapePodSketch'
 import bubbleSmall from 'assets/svgs/bubbles/bubbleSmall'
@@ -80,7 +80,7 @@ import {
 export default {
     [ESTHER_SPEECH]: estherSpeech,
     [SKETCHBOOK__TOGETHER]: sketchbook,
-    [TOGETHER_SKETCH]: false,
+    [TOGETHER_SKETCH]: togetherSketch,
     [BUBBLE_SMALL__LEFT]: bubbleSmall,
     [BUBBLE_MEDIUM__LEFT]: bubbleMedium,
     [BUBBLE_LARGE__LEFT]: bubbleLarge,
@@ -90,7 +90,7 @@ export default {
     [BUBBLE_LARGE__RIGHT]: bubbleLarge,
     [THOUGHT_LARGE__RIGHT]: thoughtLarge,
     [SKETCHBOOK__APART]: sketchbook,
-    [APART_SKETCH]: false,
+    [APART_SKETCH]: apartSketch,
     [SKETCHBOOK__DOGS]: sketchbook,
     [DOGS_SKETCH]: dogsSketch,
     [SKETCHBOOK__ESCAPE_POD]: sketchbook,

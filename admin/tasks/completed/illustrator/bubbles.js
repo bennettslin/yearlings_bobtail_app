@@ -78,5 +78,15 @@ export default [
         taskName: 'lizThought',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'togetherSketch',
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: 'apartSketch',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
