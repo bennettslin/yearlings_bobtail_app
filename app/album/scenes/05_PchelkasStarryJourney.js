@@ -8,8 +8,7 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL,
-    PUPPET
+    PANEL
 } from '../../constants/scene'
 import {
     BEDROOM_KEY,
@@ -64,6 +63,9 @@ import {
 } from '../../constants/scene/things/bubbles'
 import {
     BLOOM_COUNTY_POSTER,
+    PCHELKA_MUSHKA_ROCKET,
+    EARTH,
+    SPACE_COLONY,
     VAN_NUYS_LOGO,
     CORKBOARD
 } from '../../constants/scene/things/cardboards'
@@ -92,11 +94,6 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../constants/scene/things/panels'
-import {
-    PCHELKA_MUSHKA_ROCKET,
-    EARTH,
-    SPACE_COLONY
-} from '../../constants/scene/things/puppets'
 
 /**
  * NOTE: Ash Wednesday and Pchelka`s Starry Journey have been switched from the
@@ -200,13 +197,11 @@ export default [
                 }
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true
+                [BLOOM_COUNTY_POSTER]: true,
+                [PCHELKA_MUSHKA_ROCKET]: true
             },
             [PANEL]: {
                 [CAPTAIN_BED]: true
-            },
-            [PUPPET]: {
-                [PCHELKA_MUSHKA_ROCKET]: true
             }
         },
         cubes: BEDROOM_DOGS_KEY,
@@ -225,15 +220,15 @@ export default [
                     instance: SHAKEN
                 }
             },
+            [CARDBOARD]: {
+                [EARTH]: true,
+                [SPACE_COLONY]: true
+            },
             [FIXTURE]: {
                 [BEYONDER_ENVELOPE]: true
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true
-            },
-            [PUPPET]: {
-                [EARTH]: true,
-                [SPACE_COLONY]: true
             }
         },
         cubes: BEDROOM_SPACE_KEY,

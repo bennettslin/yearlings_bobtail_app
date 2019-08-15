@@ -4,8 +4,7 @@ import {
     FIXTURE,
     FLAT,
     FURNITURE,
-    PANEL,
-    PUPPET
+    PANEL
 } from '../../../constants/scene'
 import {
     DOGS_SKETCH,
@@ -13,7 +12,10 @@ import {
 } from '../../../constants/scene/things/bubbles'
 import {
     TINTIN_POSTER,
-    BLOOM_COUNTY_POSTER
+    BLOOM_COUNTY_POSTER,
+    PCHELKA_MUSHKA_ROCKET,
+    EARTH,
+    SPACE_COLONY
 } from '../../../constants/scene/things/cardboards'
 import {
     BEETHOVEN_BUST,
@@ -36,11 +38,6 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
-import {
-    PCHELKA_MUSHKA_ROCKET,
-    EARTH,
-    SPACE_COLONY
-} from '../../../constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -187,7 +184,7 @@ export const THINGS_BEDROOM_FEIGNING = {
 }
 
 export const THINGS_BEDROOM_ASLEEP = {
-    [PUPPET]: {
+    [CARDBOARD]: {
         [PCHELKA_MUSHKA_ROCKET]: {
             yIndex: 1,
             arrangement: {
@@ -210,7 +207,7 @@ export const THINGS_BEDROOM_SHAKEN = {
             }
         }
     },
-    [PUPPET]: {
+    [CARDBOARD]: {
         [EARTH]: {
             yIndex: 4,
             arrangement: {

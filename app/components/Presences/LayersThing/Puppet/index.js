@@ -13,9 +13,6 @@
 // import puppetChristopherEnd from 'assets/svgs/puppets/puppetChristopherEnd'
 // import puppetFatherEnd from 'assets/svgs/puppets/puppetFatherEnd'
 // import puppetMotherEnd from 'assets/svgs/puppets/puppetMotherEnd'
-// import pchelkaMushkaRocket from 'assets/svgs/puppets/pchelkaMushkaRocket'
-// import earth from 'assets/svgs/puppets/earth'
-// import spaceColony from 'assets/svgs/puppets/spaceColony'
 // import opalCouch from 'assets/svgs/puppets/opalCouch'
 // import opalGazing from 'assets/svgs/puppets/opalGazing'
 // import peahen from 'assets/svgs/puppets/peahen'
@@ -43,9 +40,6 @@ import {
     PUPPET_CHRISTOPHER_END,
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END,
-    PCHELKA_MUSHKA_ROCKET,
-    EARTH,
-    SPACE_COLONY,
     OPAL_COUCH,
     OPAL_GAZING,
     PEAHEN,
@@ -74,9 +68,6 @@ export default {
     [PUPPET_CHRISTOPHER_END]: false,
     [PUPPET_FATHER_END]: false,
     [PUPPET_MOTHER_END]: false,
-    [PCHELKA_MUSHKA_ROCKET]: false,
-    [EARTH]: false,
-    [SPACE_COLONY]: false,
     [OPAL_COUCH]: false,
     [OPAL_GAZING]: false,
     [PEAHEN]: false,
