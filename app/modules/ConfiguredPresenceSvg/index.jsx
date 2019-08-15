@@ -192,7 +192,6 @@ class ConfiguredPresenceSvg extends PureComponent {
                     className: cx(
                         'ConfiguredPresenceSvg',
                         noShadow && 'Presence__noShadow',
-                        sharedStyle,
                         className,
                         'abF'
                     ),
@@ -212,7 +211,10 @@ class ConfiguredPresenceSvg extends PureComponent {
             >
                 <InlineSvg
                     {...{
-                        className: convertPresenceKeyToClassName(presenceKey),
+                        className: cx(
+                            convertPresenceKeyToClassName(presenceKey),
+                            sharedStyle
+                        ),
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: this.preProcessSvg,
                         onLoad: this.postProcessSvg
