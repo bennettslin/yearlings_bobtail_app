@@ -27,11 +27,11 @@ import {
 } from '../../../constants/scene/things/puppets'
 import { DOOR_SHARED } from '../../shared'
 import {
-    DRAWING_BENNETT_SHARED,
-    DRAWING_INSTRUMENT_SHARED,
-    DRAWING_LIZ_SHARED,
-    DRAWING_PEOPLE_SHARED
-} from '../../shared/drawing'
+    PEOPLE_ALL_SHARED,
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_INSTRUMENT_SHARED,
+    PEOPLE_LIZ_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -88,9 +88,9 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             zOffset: 3,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_BENNETT_SHARED,
-                DRAWING_LIZ_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_LIZ_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         },
         [LIZ_DEFENCE_SPEECH]: {
@@ -99,10 +99,10 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             zOffset: 0.5,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_BENNETT_SHARED,
-                DRAWING_INSTRUMENT_SHARED,
-                DRAWING_LIZ_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_INSTRUMENT_SHARED,
+                PEOPLE_LIZ_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         }
     }
@@ -157,9 +157,9 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
             zOffset: 1,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_BENNETT_SHARED,
-                DRAWING_LIZ_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_LIZ_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         }
     },

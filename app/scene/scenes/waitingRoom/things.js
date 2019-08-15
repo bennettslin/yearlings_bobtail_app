@@ -36,11 +36,11 @@ import {
     WAITING_ARMCHAIR_SHARED
 } from '../../shared'
 import {
-    DRAWING_BENNETT_SHARED,
-    DRAWING_INSTRUMENT_SHARED,
-    DRAWING_LIZ_SHARED,
-    DRAWING_PEOPLE_SHARED
-} from '../../shared/drawing'
+    PEOPLE_ALL_SHARED,
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_INSTRUMENT_SHARED,
+    PEOPLE_LIZ_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -150,9 +150,9 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 3.3,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_BENNETT_SHARED,
-                DRAWING_LIZ_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_LIZ_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         },
         [WAITING_THOUGHT_SINGING]: {
@@ -161,10 +161,10 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 3.6,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_BENNETT_SHARED,
-                DRAWING_INSTRUMENT_SHARED,
-                DRAWING_LIZ_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_INSTRUMENT_SHARED,
+                PEOPLE_LIZ_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         },
         [WAITING_THOUGHT_STUDYING]: {
@@ -173,9 +173,9 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 0.6,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_BENNETT_SHARED,
-                DRAWING_LIZ_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_LIZ_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         }
     }

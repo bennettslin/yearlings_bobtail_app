@@ -1,0 +1,6 @@
+export const PEOPLE_ALL_SHARED = 'peopleAllShared'
+export const PEOPLE_BENNETT_SHARED = 'peopleBennettShared'
+export const PEOPLE_CHRISTOPHER_SHARED = 'peopleChristopherShared'
+export const PEOPLE_INSTRUMENT_SHARED = 'peopleInstrumentShared'
+export const PEOPLE_LIZ_SHARED = 'peopleLizShared'
+export const PEOPLE_MARA_SHARED = 'peopleMaraShared'

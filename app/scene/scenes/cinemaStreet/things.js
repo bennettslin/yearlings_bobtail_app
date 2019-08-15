@@ -18,11 +18,11 @@ import {
     POSTER_GLADIATOR_SHARED
 } from '../../shared'
 import {
-    DRAWING_BENNETT_SHARED,
-    DRAWING_INSTRUMENT_SHARED,
-    DRAWING_MARA_SHARED,
-    DRAWING_PEOPLE_SHARED
-} from '../../shared/drawing'
+    PEOPLE_ALL_SHARED,
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_INSTRUMENT_SHARED,
+    PEOPLE_MARA_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -53,9 +53,9 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4.1,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_BENNETT_SHARED,
-                DRAWING_INSTRUMENT_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_INSTRUMENT_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         },
         [CINEMA_THOUGHT_BUYING]: {
@@ -64,8 +64,8 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 1,
             scaleFactor: 0.45,
             sharedStyle: [
-                DRAWING_MARA_SHARED,
-                DRAWING_PEOPLE_SHARED
+                PEOPLE_MARA_SHARED,
+                PEOPLE_ALL_SHARED
             ]
         }
     },
