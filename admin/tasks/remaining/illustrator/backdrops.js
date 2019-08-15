@@ -8,10 +8,5 @@ export default [
         taskName: 'roadPresent',
         workedHours: 0,
         neededHours: 1.5
-    },
-    {
-        taskName: 'roadFuture',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

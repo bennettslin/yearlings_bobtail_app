@@ -83,5 +83,10 @@ export default [
         taskName: 'taiwanMountainsBackdrop',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'roadFuture',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

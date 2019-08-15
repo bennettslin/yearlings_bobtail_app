@@ -32,11 +32,11 @@ import clipboard from 'assets/svgs/cardboards/clipboard'
 import painting from 'assets/svgs/cardboards/painting'
 import nasAlbum from 'assets/svgs/cardboards/nasAlbum'
 import elliottSmithPoster from 'assets/svgs/cardboards/elliottSmithPoster'
-// import snowglobeSmall from 'assets/svgs/cardboards/snowglobeSmall'
+import snowglobeSmall from 'assets/svgs/cardboards/snowglobeSmall'
 // import snowglobePast from 'assets/svgs/cardboards/snowglobePast'
 // import snowglobePresent from 'assets/svgs/cardboards/snowglobePresent'
-// import snowglobeFutureCord from 'assets/svgs/cardboards/snowglobeFutureCord'
-// import snowglobeFutureReatta from 'assets/svgs/cardboards/snowglobeFutureReatta'
+import snowglobeFutureCord from 'assets/svgs/cardboards/snowglobeFutureCord'
+import snowglobeFutureReatta from 'assets/svgs/cardboards/snowglobeFutureReatta'
 
 import {
     JOHNNY_HORTON_ALBUM,
@@ -125,8 +125,8 @@ export default {
     [SNOWGLOBE_PAST]: false,
     [SNOWGLOBE_SMALL__PRESENT]: false,
     [SNOWGLOBE_PRESENT]: false,
-    [SNOWGLOBE_SMALL__FUTURE]: false,
-    [SNOWGLOBE_FUTURE_CORD]: false,
-    [SNOWGLOBE_FUTURE_REATTA]: false
+    [SNOWGLOBE_SMALL__FUTURE]: snowglobeSmall,
+    [SNOWGLOBE_FUTURE_CORD]: snowglobeFutureCord,
+    [SNOWGLOBE_FUTURE_REATTA]: snowglobeFutureReatta
 }
 

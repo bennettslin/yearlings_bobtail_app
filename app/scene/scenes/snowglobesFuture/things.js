@@ -19,42 +19,49 @@ import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
+import { SNOWGLOBE_SHARED } from '../../shared'
+import {
+    DRAWING_BENNETT_SHARED,
+    DRAWING_PEOPLE_SHARED
+} from '../../shared/drawing'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_FUTURE]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.6
         }
     },
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__FUTURE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 2,
+            zOffset: 5,
+            scaleFactor: 0.7,
+            sharedStyle: SNOWGLOBE_SHARED
         },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 5,
+            zOffset: 4,
+            scaleFactor: 0.7,
+            sharedStyle: [
+                SNOWGLOBE_SHARED,
+                DRAWING_BENNETT_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         },
         [SNOWGLOBE_FUTURE_REATTA]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 3,
+            zOffset: 4,
+            scaleFactor: 0.7,
+            sharedStyle: [
+                SNOWGLOBE_SHARED,
+                DRAWING_BENNETT_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         }
     },
     [FIXTURE]: {
