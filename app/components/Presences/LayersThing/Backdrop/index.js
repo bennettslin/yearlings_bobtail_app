@@ -12,8 +12,8 @@ import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
 import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
 import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop'
 import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop'
-// import roadPast from 'assets/svgs/backdrops/roadPast'
-// import roadPresent from 'assets/svgs/backdrops/roadPresent'
+import roadPast from 'assets/svgs/backdrops/roadPast'
+import roadPresent from 'assets/svgs/backdrops/roadPresent'
 import roadFuture from 'assets/svgs/backdrops/roadFuture'
 import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
 import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
@@ -58,8 +58,8 @@ export default {
     [CEMETERY_BACKDROP]: cemeteryBackdrop,
     [OAKLAND_SIDE_BACKDROP]: oaklandSideBackdrop,
     [OAKLAND_FRONT_BACKDROP]: oaklandFrontBackdrop,
-    [ROAD_PAST]: false,
-    [ROAD_PRESENT]: false,
+    [ROAD_PAST]: roadPast,
+    [ROAD_PRESENT]: roadPresent,
     [ROAD_FUTURE]: roadFuture,
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop

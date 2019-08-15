@@ -85,6 +85,16 @@ export default [
         neededHours: 1.5
     },
     {
+        taskName: 'roadPast',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'roadPresent',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
         taskName: 'roadFuture',
         workedHours: 1.5,
         neededHours: 1.5

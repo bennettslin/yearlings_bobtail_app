@@ -1,4 +1,5 @@
 export const DRAWING_BENNETT_SHARED = 'drawingBennettShared'
+export const DRAWING_CHRISTOPHER_SHARED = 'drawingChristopherShared'
 export const DRAWING_INSTRUMENT_SHARED = 'drawingInstrumentShared'
 export const DRAWING_LIZ_SHARED = 'drawingLizShared'
 export const DRAWING_MARA_SHARED = 'drawingMaraShared'

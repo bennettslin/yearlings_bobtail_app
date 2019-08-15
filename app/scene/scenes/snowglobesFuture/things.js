@@ -19,7 +19,10 @@ import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
-import { SNOWGLOBE_SHARED } from '../../shared'
+import {
+    ROAD_SHARED,
+    SNOWGLOBE_SHARED
+} from '../../shared'
 import {
     DRAWING_BENNETT_SHARED,
     DRAWING_PEOPLE_SHARED
@@ -30,7 +33,8 @@ const ARRANGEMENTS_THINGS = {
         [ROAD_FUTURE]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.6
+            scaleFactor: 0.6,
+            sharedStyle: ROAD_SHARED
         }
     },
     [CARDBOARD]: {

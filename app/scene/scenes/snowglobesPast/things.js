@@ -9,34 +9,44 @@ import {
     SNOWGLOBE_PAST
 } from '../../../constants/scene/things/cardboards'
 import { SNOWGLOBE__TETHERBALL } from '../../../constants/scene/things/panels'
+import {
+    ROAD_SHARED,
+    SNOWGLOBE_SHARED
+} from '../../shared'
+import {
+    DRAWING_BENNETT_SHARED,
+    DRAWING_CHRISTOPHER_SHARED,
+    DRAWING_PEOPLE_SHARED
+} from '../../shared/drawing'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_PAST]: {
             yIndex: 0,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.6,
+            sharedStyle: ROAD_SHARED
         }
     },
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__PAST]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 2,
+            zOffset: 5,
+            scaleFactor: 0.7,
+            sharedStyle: SNOWGLOBE_SHARED
         },
         [SNOWGLOBE_PAST]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 12,
-                zHeight: 8
-            }
+            xPosition: 5,
+            zOffset: 4,
+            scaleFactor: 0.7,
+            sharedStyle: [
+                SNOWGLOBE_SHARED,
+                DRAWING_BENNETT_SHARED,
+                DRAWING_CHRISTOPHER_SHARED,
+                DRAWING_PEOPLE_SHARED
+            ]
         }
     },
     [PANEL]: {
