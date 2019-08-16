@@ -35,6 +35,10 @@
         fill: #963;
     }
 
+    .axeHandle {
+        fill: #963;
+    }
+
     .axeBlade {
         fill: #999;
     }
@@ -45,10 +49,6 @@
 
     .pot {
         fill: #996;
-    }
-
-    .potOverlapLine {
-        stroke: #603813;
     }
 
     .vaseLeg {
@@ -63,19 +63,11 @@
         fill: #9c9;
     }
 
-    .vaseOverlapLine {
-        stroke: #006837;
-    }
-
     .pitcher {
         fill: #99c;
     }
 
     .pitcherBand {
         fill: #c9c;
-    }
-
-    .pitcherOverlapLine {
-        stroke: #662d91;
     }
 }

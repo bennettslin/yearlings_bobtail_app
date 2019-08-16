@@ -52,10 +52,6 @@
     .claw {
         fill: #699;
     }
-
-    .clawCreaseLine {
-        stroke: #29abe2;
-    }
 }
 
 .johnnyHortonAlbum {
@@ -71,20 +67,12 @@
         fill: #633;
     }
 
-    .skin {
-        fill: #c7b299;
-    }
-
     .shirt {
         fill: #ccc;
     }
 
     .tie {
         fill: #669;
-    }
-
-    .tieCreaseLine {
-        stroke: #336;
     }
 
     .collar {
@@ -97,18 +85,6 @@
 
     .lapel {
         fill: #c69;
-    }
-
-    .hair {
-        fill: #963;
-    }
-
-    .hairCreaseLine {
-        stroke: #42210b;
-    }
-
-    .skinOverlapLine {
-        stroke: #998675;
     }
 
     .frame {
@@ -165,6 +141,10 @@
         fill: #9c9;
     }
 
+    .stem {
+        fill: #999;
+    }
+
     .faucet {
         fill: #999;
     }
@@ -175,14 +155,6 @@
 
     .sink {
         fill: #663;
-    }
-
-    .debbieSkin {
-        fill: #c7b794;
-    }
-
-    .debbieSkinOverlapLine {
-        stroke: #8c6239;
     }
 
     .debbieShirt {
@@ -197,14 +169,6 @@
         fill: #666;
     }
 
-    .debbieHair {
-        fill: #fbb03b;
-    }
-
-    .debbieHatOverlapLine {
-        stroke: #1b1464;
-    }
-
     .nkotbShirtDark {
         fill: #369;
     }
@@ -215,21 +179,5 @@
 
     .nkotbShirtAverage {
         fill: #22b573;
-    }
-
-    .nkotbSkin {
-        fill: #c7b299;
-    }
-
-    .nkotbHairAverage {
-        fill: #534741;
-    }
-
-    .nkotbHairLight {
-        fill: #998675;
-    }
-
-    .nkotbHairDark {
-        fill: #754c24;
     }
 }

@@ -38,6 +38,7 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
+import { PEOPLE_ALL_SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -45,13 +46,15 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 9,
             zOffset: 0,
-            scaleFactor: 0.36
+            scaleFactor: 0.36,
+            sharedStyle: PEOPLE_ALL_SHARED
         },
         [BLOOM_COUNTY_POSTER]: {
             yIndex: 3,
             xPosition: 9,
             zOffset: 0,
-            scaleFactor: 0.36
+            scaleFactor: 0.36,
+            sharedStyle: PEOPLE_ALL_SHARED
         }
     },
     [FIXTURE]: {
