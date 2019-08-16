@@ -23,37 +23,3 @@
         stroke: #344f36;
     }
 }
-
-.snowglobe {
-    .snow {
-        fill: #9ff;
-    }
-
-    .reflectionOuter {
-        fill: rgba(255, 255, 255, 0.2);
-    }
-
-    .reflectionCentre {
-        fill: rgba(255, 255, 255, 0.4);
-    }
-
-    .reflectionInner {
-        fill: rgba(255, 255, 255, 0.6);
-    }
-
-    .globeInner {
-        fill: rgba(255, 255, 255, 0.5);
-    }
-
-    .globeOuter {
-        fill: rgba(255, 255, 255, 0.7);
-    }
-
-    .base {
-        fill: #96c;
-    }
-
-    .rim {
-        fill: #939;
-    }
-}

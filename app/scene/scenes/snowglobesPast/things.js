@@ -53,7 +53,8 @@ const ARRANGEMENTS_THINGS = {
         [SNOWGLOBE__TETHERBALL]: {
             yIndex: 4,
             xPosition: 7,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: SNOWGLOBE_SHARED
         }
     }
 }

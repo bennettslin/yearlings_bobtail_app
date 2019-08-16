@@ -98,12 +98,14 @@ const ARRANGEMENTS_THINGS = {
         [SNOWGLOBE__LIZ_KHARI]: {
             yIndex: 5,
             xPosition: 3,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: SNOWGLOBE_SHARED
         },
         [SNOWGLOBE__BENNETT_ALONE]: {
             yIndex: 4,
             xPosition: 8.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            sharedStyle: SNOWGLOBE_SHARED
         }
     }
 }
