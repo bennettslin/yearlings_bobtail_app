@@ -186,12 +186,10 @@ export const THINGS_BEDROOM_FEIGNING = {
 export const THINGS_BEDROOM_ASLEEP = {
     [CARDBOARD]: {
         [PCHELKA_MUSHKA_ROCKET]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 3
-            }
+            yIndex: 4,
+            xPosition: 2.5,
+            zOffset: 1.5,
+            scaleFactor: 0.3
         }
     }
 }

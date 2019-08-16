@@ -30,11 +30,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'pchelkaMushkaRocket',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'peacock',
         workedHours: 0,
         neededHours: 2
