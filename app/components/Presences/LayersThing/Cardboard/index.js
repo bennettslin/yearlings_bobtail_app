@@ -17,7 +17,7 @@ import odinMat from 'assets/svgs/cardboards/odinMat'
 import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster'
 // import pchelkaMushkaRocket from 'assets/svgs/cardboards/pchelkaMushkaRocket'
 import earth from 'assets/svgs/cardboards/earth'
-// import spaceColony from 'assets/svgs/cardboards/spaceColony'
+import spaceColony from 'assets/svgs/cardboards/spaceColony'
 import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo'
 import corkboard from 'assets/svgs/cardboards/corkboard'
 import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
@@ -110,7 +110,7 @@ export default {
     [BLOOM_COUNTY_POSTER]: bloomCountyPoster,
     [PCHELKA_MUSHKA_ROCKET]: false,
     [EARTH]: earth,
-    [SPACE_COLONY]: false,
+    [SPACE_COLONY]: spaceColony,
     [VAN_NUYS_LOGO]: vanNuysLogo,
     [CORKBOARD]: corkboard,
     [POLICE_ALBUM]: policeAlbum,

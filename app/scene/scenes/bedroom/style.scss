@@ -463,3 +463,57 @@
         fill: #d6d6d6;
     }
 }
+
+.spaceColony {
+    .body {
+        fill: #ded7c5;
+    }
+
+    .stationTop {
+        fill: #a39bd9;
+    }
+
+    .stationMiddle {
+        fill: #948cc4;
+    }
+
+    .stationBottom {
+        fill: #6d6891;
+    }
+
+    .stationInner {
+        fill: #7e78a8;
+    }
+
+    .stationFloor {
+        fill: #6d6891;
+    }
+
+    .trim {
+        fill: #b8a986;
+    }
+
+    .panelBottom {
+        fill: #8dacb3;
+    }
+
+    .panelSide {
+        fill: #7d989e;
+    }
+
+    .panelFront {
+        fill: #99bbc2;
+    }
+
+    .bar {
+        fill: #6d848a;
+    }
+
+    .glassInner {
+        fill: rgba(200, 200, 250, 0.2);
+    }
+
+    .glassOuter {
+        fill: rgba(200, 200, 250, 0.1);
+    }
+}

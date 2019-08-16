@@ -173,5 +173,10 @@ export default [
         taskName: 'earth',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'spaceColony',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
