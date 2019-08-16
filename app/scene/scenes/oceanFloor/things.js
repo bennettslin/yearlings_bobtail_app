@@ -12,10 +12,12 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from '../../../constants/scene/things/panels'
+import { BUDDHA_SHRINE_SHARED } from '../../shared'
 import {
-    BENNETT_ODIN_SHARED,
-    BUDDHA_SHRINE_SHARED
-} from '../../shared'
+    PEOPLE_ALL_SHARED,
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_ODIN_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -30,13 +32,16 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 2.6,
             scaleFactor: 0.2,
-            sharedStyle: BENNETT_ODIN_SHARED
+            sharedStyle: [
+                PEOPLE_ALL_SHARED,
+                PEOPLE_BENNETT_SHARED
+            ]
         },
         [ODIN_MAT]: {
             yIndex: 2,
             xPosition: 0.8,
             scaleFactor: 0.2,
-            sharedStyle: BENNETT_ODIN_SHARED
+            sharedStyle: PEOPLE_ODIN_SHARED
         }
     },
     [PANEL]: {

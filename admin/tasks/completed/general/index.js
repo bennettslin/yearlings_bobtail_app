@@ -4851,5 +4851,10 @@ export default [
         taskName: `Split out drawing people styles into shared styles.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `More shared styles.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

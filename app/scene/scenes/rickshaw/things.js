@@ -9,10 +9,12 @@ import {
     ODIN_SHORE
 } from '../../../constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
+import { TAIWAN_HOUSE_SHARED } from '../../shared'
 import {
-    BENNETT_ODIN_SHARED,
-    TAIWAN_HOUSE_SHARED
-} from '../../shared'
+    PEOPLE_ALL_SHARED,
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_ODIN_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -27,13 +29,16 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.2,
-            sharedStyle: BENNETT_ODIN_SHARED
+            sharedStyle: [
+                PEOPLE_ALL_SHARED,
+                PEOPLE_BENNETT_SHARED
+            ]
         },
         [ODIN_SHORE]: {
             yIndex: 2,
             xPosition: 2,
             scaleFactor: 0.2,
-            sharedStyle: BENNETT_ODIN_SHARED
+            sharedStyle: PEOPLE_ODIN_SHARED
         }
     },
     [FLAT]: {

@@ -12,10 +12,12 @@ import {
     TAIWAN_FRIDGE
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
+import { BUDDHA_SHRINE_SHARED } from '../../shared'
 import {
-    BENNETT_ODIN_SHARED,
-    BUDDHA_SHRINE_SHARED
-} from '../../shared'
+    PEOPLE_ALL_SHARED,
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_ODIN_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -23,13 +25,16 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 7.75,
             scaleFactor: 0.2,
-            sharedStyle: BENNETT_ODIN_SHARED
+            sharedStyle: [
+                PEOPLE_ALL_SHARED,
+                PEOPLE_BENNETT_SHARED
+            ]
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.2,
-            sharedStyle: BENNETT_ODIN_SHARED
+            sharedStyle: PEOPLE_ODIN_SHARED
         }
     },
     [CUTOUT]: {
