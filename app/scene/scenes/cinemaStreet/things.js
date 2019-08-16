@@ -76,7 +76,10 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 2,
             noShadow: true,
             scaleFactor: 0.25,
-            sharedStyle: POSTER_GLADIATOR_SHARED
+            sharedStyle: [
+                POSTER_GLADIATOR_SHARED,
+                PEOPLE_ALL_SHARED
+            ]
         },
         [MARQUEE_FRAME__GLADIATOR]: {
             yIndex: 4,

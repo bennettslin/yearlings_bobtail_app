@@ -11,9 +11,12 @@ import {
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
 import {
     DOOR_SHARED,
-    POSTER_GLADIATOR_SHARED,
-    POSTER_MARA_SHARED
+    POSTER_GLADIATOR_SHARED
 } from '../../shared'
+import {
+    PEOPLE_ALL_SHARED,
+    PEOPLE_MARA_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -23,7 +26,10 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 2,
             noShadow: true,
             scaleFactor: 0.25,
-            sharedStyle: POSTER_MARA_SHARED
+            sharedStyle: [
+                PEOPLE_ALL_SHARED,
+                PEOPLE_MARA_SHARED
+            ]
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
             yIndex: 4,
@@ -39,7 +45,8 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.25,
             sharedStyle: [
                 POSTER_GLADIATOR_SHARED,
-                POSTER_MARA_SHARED
+                PEOPLE_ALL_SHARED,
+                PEOPLE_MARA_SHARED
             ]
         },
         [MARQUEE_FRAME__MARA_GLADIATOR]: {
