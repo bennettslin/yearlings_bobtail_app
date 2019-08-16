@@ -168,5 +168,10 @@ export default [
         taskName: 'televisionAlbum',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'earth',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
