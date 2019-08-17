@@ -163,5 +163,10 @@ export default [
         taskName: 'weddingPlatform',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'saturnSeat',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

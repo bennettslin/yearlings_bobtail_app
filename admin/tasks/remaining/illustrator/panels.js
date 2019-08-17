@@ -15,11 +15,6 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'saturnSeat',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'reattaSeat',
         workedHours: 0,
         neededHours: 0.5

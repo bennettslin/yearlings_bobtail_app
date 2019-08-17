@@ -42,6 +42,18 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
+        [SATURN_SEAT__LEFT]: {
+            yIndex: 4,
+            xPosition: 3,
+            zOffset: 0.75,
+            scaleFactor: 0.5
+        },
+        [SATURN_SEAT__RIGHT]: {
+            yIndex: 4,
+            xPosition: 6,
+            zOffset: 0.75,
+            scaleFactor: 0.5
+        },
         [SATURN_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
@@ -52,22 +64,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 5.5,
             scaleFactor: 0.5
-        },
-        [SATURN_SEAT__LEFT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [SATURN_SEAT__RIGHT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 1,
-                zHeight: 1
-            }
         }
     }
 }

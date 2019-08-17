@@ -23,9 +23,9 @@ import bennettBed from 'assets/svgs/panels/bennettBed'
 import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
 import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 import lizBed from 'assets/svgs/panels/lizBed'
+import saturnSeat from 'assets/svgs/panels/saturnSeat'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
-// import saturnSeat from 'assets/svgs/panels/saturnSeat'
 import atticCouch from 'assets/svgs/panels/atticCouch'
 import atticArmrest from 'assets/svgs/panels/atticArmrest'
 import volkswagen from 'assets/svgs/panels/volkswagen'
@@ -74,10 +74,10 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT,
     LIZ_BED,
-    SATURN_EXTERIOR,
-    SATURN_INTERIOR,
     SATURN_SEAT__LEFT,
     SATURN_SEAT__RIGHT,
+    SATURN_EXTERIOR,
+    SATURN_INTERIOR,
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT,
@@ -135,10 +135,10 @@ export default {
     [WAITING_ARMREST__LIZ_LEFT]: waitingArmrest,
     [WAITING_ARMREST__LIZ_RIGHT]: waitingArmrest,
     [LIZ_BED]: lizBed,
+    [SATURN_SEAT__LEFT]: saturnSeat,
+    [SATURN_SEAT__RIGHT]: saturnSeat,
     [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,
-    [SATURN_SEAT__LEFT]: false,
-    [SATURN_SEAT__RIGHT]: false,
     [ATTIC_COUCH]: atticCouch,
     [ATTIC_ARMREST__LEFT]: atticArmrest,
     [ATTIC_ARMREST__RIGHT]: atticArmrest,
