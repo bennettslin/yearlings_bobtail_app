@@ -18,9 +18,9 @@
 // import peahen from 'assets/svgs/puppets/peahen'
 // import peacock from 'assets/svgs/puppets/peacock'
 // import puppetReatta from 'assets/svgs/puppets/puppetReatta'
-// import ghostOdinCampus from 'assets/svgs/puppets/ghostOdinCampus'
-// import ghostOdinClub from 'assets/svgs/puppets/ghostOdinClub'
-// import ghostOdinAlley from 'assets/svgs/puppets/ghostOdinAlley'
+import ghostOdinCampus from 'assets/svgs/puppets/ghostOdinCampus'
+import ghostOdinClub from 'assets/svgs/puppets/ghostOdinClub'
+import ghostOdinAlley from 'assets/svgs/puppets/ghostOdinAlley'
 import ghostOdinDemonstration from 'assets/svgs/puppets/ghostOdinDemonstration'
 // import puppetKhariLiz from 'assets/svgs/puppets/puppetKhariLiz'
 
@@ -73,9 +73,9 @@ export default {
     [PEAHEN]: false,
     [PEACOCK]: false,
     [PUPPET_REATTA]: false,
-    [GHOST_ODIN_CAMPUS]: false,
-    [GHOST_ODIN_CLUB]: false,
-    [GHOST_ODIN_ALLEY]: false,
+    [GHOST_ODIN_CAMPUS]: ghostOdinCampus,
+    [GHOST_ODIN_CLUB]: ghostOdinClub,
+    [GHOST_ODIN_ALLEY]: ghostOdinAlley,
     [GHOST_ODIN_DEMONSTRATION]: ghostOdinDemonstration,
     [PUPPET_KHARI_LIZ]: false
 }

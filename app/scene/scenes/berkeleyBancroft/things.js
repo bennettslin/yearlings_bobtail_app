@@ -5,9 +5,8 @@ import {
 } from '../../../constants/scene'
 import { CAMPUS_TREE_SINGLE__BANCROFT } from '../../../constants/scene/things/cutouts'
 import { ASH_CAN } from '../../../constants/scene/things/fixtures'
-import {
-    GHOST_ODIN_DEMONSTRATION
-} from '../../../constants/scene/things/puppets'
+import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
+import { PEOPLE_ODIN_GHOST_SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -34,7 +33,8 @@ export const THINGS_BERKELEY_BANCROFT_VEGAN = {
         [GHOST_ODIN_DEMONSTRATION]: {
             yIndex: 5,
             xPosition: 5,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            sharedStyle: PEOPLE_ODIN_GHOST_SHARED
         }
     }
 }

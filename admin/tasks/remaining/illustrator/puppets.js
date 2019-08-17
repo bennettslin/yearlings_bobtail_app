@@ -55,21 +55,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'ghostOdinCampus',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'ghostOdinClub',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'ghostOdinAlley',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'puppetKhariLiz',
         workedHours: 0,
         neededHours: 1.5
