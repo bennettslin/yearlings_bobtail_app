@@ -18,5 +18,15 @@ export default [
         taskName: 'ghostOdinAlley',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'opalCouch',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'opalGazing',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

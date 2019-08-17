@@ -13,8 +13,8 @@
 // import puppetChristopherEnd from 'assets/svgs/puppets/puppetChristopherEnd'
 // import puppetFatherEnd from 'assets/svgs/puppets/puppetFatherEnd'
 // import puppetMotherEnd from 'assets/svgs/puppets/puppetMotherEnd'
-// import opalCouch from 'assets/svgs/puppets/opalCouch'
-// import opalGazing from 'assets/svgs/puppets/opalGazing'
+import opalCouch from 'assets/svgs/puppets/opalCouch'
+import opalGazing from 'assets/svgs/puppets/opalGazing'
 // import peahen from 'assets/svgs/puppets/peahen'
 // import peacock from 'assets/svgs/puppets/peacock'
 // import puppetReatta from 'assets/svgs/puppets/puppetReatta'
@@ -68,8 +68,8 @@ export default {
     [PUPPET_CHRISTOPHER_END]: false,
     [PUPPET_FATHER_END]: false,
     [PUPPET_MOTHER_END]: false,
-    [OPAL_COUCH]: false,
-    [OPAL_GAZING]: false,
+    [OPAL_COUCH]: opalCouch,
+    [OPAL_GAZING]: opalGazing,
     [PEAHEN]: false,
     [PEACOCK]: false,
     [PUPPET_REATTA]: false,

@@ -30,7 +30,8 @@ import {
     PEOPLE_ALL_SHARED,
     PEOPLE_BENNETT_SHARED,
     PEOPLE_INSTRUMENT_SHARED,
-    PEOPLE_LIZ_SHARED
+    PEOPLE_LIZ_SHARED,
+    PEOPLE_OPAL_SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -71,11 +72,9 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [PUPPET]: {
         [OPAL_COUCH]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 1,
-                zHeight: 0.5
-            }
+            xPosition: 1,
+            scaleFactor: 0.2,
+            sharedStyle: PEOPLE_OPAL_SHARED
         }
     }
 }
@@ -166,11 +165,9 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
     [PUPPET]: {
         [OPAL_GAZING]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 0.5
-            }
+            xPosition: 6,
+            scaleFactor: 0.2,
+            sharedStyle: PEOPLE_OPAL_SHARED
         }
     }
 }

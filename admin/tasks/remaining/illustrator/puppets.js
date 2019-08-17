@@ -45,16 +45,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'opalCouch',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'opalGazing',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'puppetKhariLiz',
         workedHours: 0,
         neededHours: 1.5
