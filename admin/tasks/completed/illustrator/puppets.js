@@ -28,5 +28,15 @@ export default [
         taskName: 'opalGazing',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'peacock',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'peahen',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

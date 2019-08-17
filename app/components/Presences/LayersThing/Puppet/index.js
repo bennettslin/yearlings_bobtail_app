@@ -15,8 +15,8 @@
 // import puppetMotherEnd from 'assets/svgs/puppets/puppetMotherEnd'
 import opalCouch from 'assets/svgs/puppets/opalCouch'
 import opalGazing from 'assets/svgs/puppets/opalGazing'
-// import peahen from 'assets/svgs/puppets/peahen'
-// import peacock from 'assets/svgs/puppets/peacock'
+import peacock from 'assets/svgs/puppets/peacock'
+import peahen from 'assets/svgs/puppets/peahen'
 // import puppetReatta from 'assets/svgs/puppets/puppetReatta'
 import ghostOdinCampus from 'assets/svgs/puppets/ghostOdinCampus'
 import ghostOdinClub from 'assets/svgs/puppets/ghostOdinClub'
@@ -42,8 +42,8 @@ import {
     PUPPET_MOTHER_END,
     OPAL_COUCH,
     OPAL_GAZING,
-    PEAHEN,
     PEACOCK,
+    PEAHEN,
     PUPPET_REATTA,
     GHOST_ODIN_CAMPUS,
     GHOST_ODIN_CLUB,
@@ -70,8 +70,8 @@ export default {
     [PUPPET_MOTHER_END]: false,
     [OPAL_COUCH]: opalCouch,
     [OPAL_GAZING]: opalGazing,
-    [PEAHEN]: false,
-    [PEACOCK]: false,
+    [PEACOCK]: peacock,
+    [PEAHEN]: peahen,
     [PUPPET_REATTA]: false,
     [GHOST_ODIN_CAMPUS]: ghostOdinCampus,
     [GHOST_ODIN_CLUB]: ghostOdinClub,

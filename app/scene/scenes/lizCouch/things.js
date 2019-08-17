@@ -22,10 +22,13 @@ import { LIZ_COUCH } from '../../../constants/scene/things/panels'
 import {
     OPAL_COUCH,
     OPAL_GAZING,
-    PEAHEN,
-    PEACOCK
+    PEACOCK,
+    PEAHEN
 } from '../../../constants/scene/things/puppets'
-import { DOOR_SHARED } from '../../shared'
+import {
+    DOOR_SHARED,
+    PEAFOWL_SHARED
+} from '../../shared'
 import {
     PEOPLE_ALL_SHARED,
     PEOPLE_BENNETT_SHARED,
@@ -174,21 +177,17 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
 
 export const THINGS_LIZ_COUCH_PEAFOWL = {
     [PUPPET]: {
-        [PEAHEN]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 2
-            }
-        },
         [PEACOCK]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 1,
-                zHeight: 2
-            }
+            yIndex: 5,
+            xPosition: 7.5,
+            scaleFactor: 0.25,
+            sharedStyle: PEAFOWL_SHARED
+        },
+        [PEAHEN]: {
+            yIndex: 5,
+            xPosition: 5,
+            scaleFactor: 0.25,
+            sharedStyle: PEAFOWL_SHARED
         }
     }
 }

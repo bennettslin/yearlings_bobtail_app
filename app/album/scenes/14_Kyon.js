@@ -52,8 +52,8 @@ import { LIZ_COUCH } from '../../constants/scene/things/panels'
 import {
     OPAL_COUCH,
     OPAL_GAZING,
-    PEAHEN,
-    PEACOCK
+    PEACOCK,
+    PEAHEN
 } from '../../constants/scene/things/puppets'
 
 export default [
@@ -282,8 +282,8 @@ export default [
                 [LIZ_COUCH]: true
             },
             [PUPPET]: {
-                [PEAHEN]: true,
-                [PEACOCK]: true
+                [PEACOCK]: true,
+                [PEAHEN]: true
             }
         },
         cubes: LIZ_COUCH_PEAFOWL_KEY,
