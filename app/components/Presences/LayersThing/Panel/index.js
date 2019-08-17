@@ -9,8 +9,8 @@ import trollShadowRight from 'assets/svgs/panels/trollShadowRight'
 import trollShadowFar from 'assets/svgs/panels/trollShadowFar'
 // import taiwanFog from 'assets/svgs/panels/taiwanFog'
 import schoolbusInterior from 'assets/svgs/panels/schoolbusInterior'
+import schoolbusSeat from 'assets/svgs/panels/schoolbusSeat'
 import schoolbusExterior from 'assets/svgs/panels/schoolbusExterior'
-// import schoolbusSeat from 'assets/svgs/panels/schoolbusSeat'
 import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
 import wideCouch from 'assets/svgs/panels/wideCouch'
@@ -23,8 +23,8 @@ import bennettBed from 'assets/svgs/panels/bennettBed'
 import waitingArmchair from 'assets/svgs/panels/waitingArmchair'
 import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 import lizBed from 'assets/svgs/panels/lizBed'
-import saturnSeat from 'assets/svgs/panels/saturnSeat'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
+import saturnSeat from 'assets/svgs/panels/saturnSeat'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
 import atticCouch from 'assets/svgs/panels/atticCouch'
 import atticArmrest from 'assets/svgs/panels/atticArmrest'
@@ -51,10 +51,10 @@ import {
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR,
     TAIWAN_FOG,
-    SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     SCHOOLBUS_SEAT__LEFT,
     SCHOOLBUS_SEAT__RIGHT,
+    SCHOOLBUS_EXTERIOR,
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR,
     WIDE_COUCH__BENNETT,
@@ -74,10 +74,10 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT,
     LIZ_BED,
+    SATURN_INTERIOR,
     SATURN_SEAT__LEFT,
     SATURN_SEAT__RIGHT,
     SATURN_EXTERIOR,
-    SATURN_INTERIOR,
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT,
@@ -113,9 +113,9 @@ export default {
     [TROLL_SHADOW_FAR]: trollShadowFar,
     [TAIWAN_FOG]: false,
     [SCHOOLBUS_INTERIOR]: schoolbusInterior,
+    [SCHOOLBUS_SEAT__LEFT]: schoolbusSeat,
+    [SCHOOLBUS_SEAT__RIGHT]: schoolbusSeat,
     [SCHOOLBUS_EXTERIOR]: schoolbusExterior,
-    [SCHOOLBUS_SEAT__LEFT]: false,
-    [SCHOOLBUS_SEAT__RIGHT]: false,
     [OCEAN_CAVE_INTERIOR]: oceanCaveInterior,
     [OCEAN_CAVE_EXTERIOR]: oceanCaveExterior,
     [WIDE_COUCH__BENNETT]: wideCouch,
@@ -135,9 +135,9 @@ export default {
     [WAITING_ARMREST__LIZ_LEFT]: waitingArmrest,
     [WAITING_ARMREST__LIZ_RIGHT]: waitingArmrest,
     [LIZ_BED]: lizBed,
+    [SATURN_INTERIOR]: saturnInterior,
     [SATURN_SEAT__LEFT]: saturnSeat,
     [SATURN_SEAT__RIGHT]: saturnSeat,
-    [SATURN_INTERIOR]: saturnInterior,
     [SATURN_EXTERIOR]: saturnExterior,
     [ATTIC_COUCH]: atticCouch,
     [ATTIC_ARMREST__LEFT]: atticArmrest,

@@ -168,5 +168,10 @@ export default [
         taskName: 'saturnSeat',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'schoolbusSeat',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

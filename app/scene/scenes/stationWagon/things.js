@@ -42,6 +42,12 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
+        [SATURN_INTERIOR]: {
+            yIndex: 1,
+            xPosition: 5.5,
+            scaleFactor: 0.5,
+            sharedStyle: INTERIOR_SHARED
+        },
         [SATURN_SEAT__LEFT]: {
             yIndex: 4,
             xPosition: 3,
@@ -53,12 +59,6 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 6,
             zOffset: 0.75,
             scaleFactor: 0.5
-        },
-        [SATURN_INTERIOR]: {
-            yIndex: 1,
-            xPosition: 5.5,
-            scaleFactor: 0.5,
-            sharedStyle: INTERIOR_SHARED
         },
         [SATURN_EXTERIOR]: {
             yIndex: 4,

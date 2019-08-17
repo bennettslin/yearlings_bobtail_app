@@ -16,10 +16,10 @@ import {
     DRIVING_HOUSE_RIGHT
 } from '../../../constants/scene/things/flats'
 import {
-    SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     SCHOOLBUS_SEAT__LEFT,
-    SCHOOLBUS_SEAT__RIGHT
+    SCHOOLBUS_SEAT__RIGHT,
+    SCHOOLBUS_EXTERIOR
 } from '../../../constants/scene/things/panels'
 import {
     BUBBLE_SHARED,
@@ -88,26 +88,22 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.5,
             sharedStyle: INTERIOR_SHARED
         },
+        [SCHOOLBUS_SEAT__LEFT]: {
+            yIndex: 4,
+            xPosition: 2,
+            zOffset: 2,
+            scaleFactor: 0.5
+        },
+        [SCHOOLBUS_SEAT__RIGHT]: {
+            yIndex: 4,
+            xPosition: 5,
+            zOffset: 2,
+            scaleFactor: 0.5
+        },
         [SCHOOLBUS_EXTERIOR]: {
             yIndex: 4,
             xPosition: 5.5,
             scaleFactor: 0.5
-        },
-        [SCHOOLBUS_SEAT__LEFT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 1,
-                zHeight: 1
-            }
-        },
-        [SCHOOLBUS_SEAT__RIGHT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 1,
-                zHeight: 1
-            }
         }
     }
 }
