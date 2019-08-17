@@ -21,7 +21,7 @@
 // import ghostOdinCampus from 'assets/svgs/puppets/ghostOdinCampus'
 // import ghostOdinClub from 'assets/svgs/puppets/ghostOdinClub'
 // import ghostOdinAlley from 'assets/svgs/puppets/ghostOdinAlley'
-// import ghostOdinDemonstration from 'assets/svgs/puppets/ghostOdinDemonstration'
+import ghostOdinDemonstration from 'assets/svgs/puppets/ghostOdinDemonstration'
 // import puppetKhariLiz from 'assets/svgs/puppets/puppetKhariLiz'
 
 import {
@@ -76,6 +76,6 @@ export default {
     [GHOST_ODIN_CAMPUS]: false,
     [GHOST_ODIN_CLUB]: false,
     [GHOST_ODIN_ALLEY]: false,
-    [GHOST_ODIN_DEMONSTRATION]: false,
+    [GHOST_ODIN_DEMONSTRATION]: ghostOdinDemonstration,
     [PUPPET_KHARI_LIZ]: false
 }

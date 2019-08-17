@@ -70,11 +70,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'ghostOdinDemonstration',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'puppetKhariLiz',
         workedHours: 0,
         neededHours: 1.5
