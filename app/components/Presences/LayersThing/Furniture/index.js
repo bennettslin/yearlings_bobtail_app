@@ -1,9 +1,9 @@
-// import captainBedPillow from 'assets/svgs/furnitures/captainBedPillow'
+import captainBedPillow from 'assets/svgs/furnitures/captainBedPillow'
 // import captainBedBlanket from 'assets/svgs/furnitures/captainBedBlanket'
-// import bennettPillow from 'assets/svgs/furnitures/bennettPillow'
+import bennettPillow from 'assets/svgs/furnitures/bennettPillow'
 // import bennettBlanket from 'assets/svgs/furnitures/bennettBlanket'
-// import lizPillowsPile from 'assets/svgs/furnitures/lizPillowsPile'
-// import lizPillowsPileReflection from 'assets/svgs/furnitures/lizPillowsPileReflection'
+import lizPillowsPile from 'assets/svgs/furnitures/lizPillowsPile'
+import lizPillowsPileReflection from 'assets/svgs/furnitures/lizPillowsPileReflection'
 // import lizBlanketPile from 'assets/svgs/furnitures/lizBlanketPile'
 // import lizBlanketPileReflection from 'assets/svgs/furnitures/lizBlanketPileReflection'
 
@@ -19,12 +19,12 @@ import {
 } from '../../../../constants/scene/things/furniture'
 
 export default {
-    [CAPTAIN_BED_PILLOW]: false,
+    [CAPTAIN_BED_PILLOW]: captainBedPillow,
     [CAPTAIN_BED_BLANKET]: false,
-    [BENNETT_PILLOW]: false,
+    [BENNETT_PILLOW]: bennettPillow,
     [BENNETT_BLANKET]: false,
-    [LIZ_PILLOWS_PILE]: false,
-    [LIZ_PILLOWS_PILE_REFLECTION]: false,
+    [LIZ_PILLOWS_PILE]: lizPillowsPile,
+    [LIZ_PILLOWS_PILE_REFLECTION]: lizPillowsPileReflection,
     [LIZ_BLANKET_PILE]: false,
     [LIZ_BLANKET_PILE_REFLECTION]: false
 }

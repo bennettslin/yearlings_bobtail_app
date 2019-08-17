@@ -46,21 +46,15 @@ const ARRANGEMENTS_THINGS = {
     },
     [FURNITURE]: {
         [LIZ_PILLOWS_PILE]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 0.5
-            }
+            yIndex: 5,
+            xPosition: 9,
+            scaleFactor: 0.25
         },
         [LIZ_PILLOWS_PILE_REFLECTION]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 1,
-                zOffset: 5.5
-            }
+            xPosition: 9,
+            zOffset: 5.5,
+            scaleFactor: 0.25
         },
         [LIZ_BLANKET_PILE]: {
             yIndex: 4,

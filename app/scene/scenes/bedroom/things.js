@@ -69,12 +69,9 @@ const ARRANGEMENTS_THINGS = {
     },
     [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 4,
-                zHeight: 1
-            }
+            yIndex: 2,
+            xPosition: 7,
+            scaleFactor: 0.25
         },
         [CAPTAIN_BED_BLANKET]: {
             yIndex: 4,

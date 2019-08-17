@@ -62,11 +62,8 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [BENNETT_PILLOW]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 0.5
-            }
+            xPosition: 9,
+            scaleFactor: 0.25
         },
         [BENNETT_BLANKET]: {
             yIndex: 4,
