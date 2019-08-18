@@ -18,7 +18,10 @@ import {
     REATTA_SEAT_DOWN
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
-import { INTERIOR_SHARED } from '../../shared'
+import {
+    INTERIOR_SHARED,
+    REATTA_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -71,7 +74,8 @@ const ARRANGEMENTS_THINGS = {
         [REATTA_EXTERIOR]: {
             yIndex: 5,
             xPosition: 4.1,
-            scaleFactor: 0.35
+            scaleFactor: 0.35,
+            sharedStyle: REATTA_SHARED
         }
     }
 }

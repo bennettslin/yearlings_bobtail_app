@@ -20,6 +20,7 @@ import {
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
 import {
+    REATTA_SHARED,
     ROAD_SHARED,
     SNOWGLOBE_SHARED
 } from '../../shared'
@@ -62,6 +63,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4,
             scaleFactor: 0.7,
             sharedStyle: [
+                REATTA_SHARED,
                 SNOWGLOBE_SHARED,
                 PEOPLE_BENNETT_SHARED,
                 PEOPLE_ALL_SHARED
