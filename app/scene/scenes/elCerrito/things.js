@@ -14,7 +14,8 @@ import {
 import {
     REATTA_EXTERIOR,
     REATTA_INTERIOR,
-    REATTA_SEAT
+    REATTA_SEAT,
+    REATTA_SEAT_DOWN
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 import { INTERIOR_SHARED } from '../../shared'
@@ -49,24 +50,28 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
-        [REATTA_EXTERIOR]: {
-            yIndex: 5,
-            xPosition: 4,
-            scaleFactor: 0.25
-        },
         [REATTA_INTERIOR]: {
-            yIndex: 2,
-            xPosition: 4.5,
-            scaleFactor: 0.25,
+            yIndex: 1,
+            xPosition: 4.1,
+            scaleFactor: 0.35,
             sharedStyle: INTERIOR_SHARED
         },
         [REATTA_SEAT]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 1,
-                zHeight: 0.5
-            }
+            yIndex: 5,
+            xPosition: 2,
+            zOffset: 0.85,
+            scaleFactor: 0.4
+        },
+        [REATTA_SEAT_DOWN]: {
+            yIndex: 5,
+            xPosition: 1.66,
+            zOffset: 0.85,
+            scaleFactor: 0.4
+        },
+        [REATTA_EXTERIOR]: {
+            yIndex: 5,
+            xPosition: 4.1,
+            scaleFactor: 0.35
         }
     }
 }

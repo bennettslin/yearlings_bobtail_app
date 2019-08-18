@@ -92,13 +92,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 2,
             zOffset: 2,
-            scaleFactor: 0.5
+            scaleFactor: 0.4
         },
         [SCHOOLBUS_SEAT__RIGHT]: {
             yIndex: 4,
             xPosition: 5,
             zOffset: 2,
-            scaleFactor: 0.5
+            scaleFactor: 0.4
         },
         [SCHOOLBUS_EXTERIOR]: {
             yIndex: 4,

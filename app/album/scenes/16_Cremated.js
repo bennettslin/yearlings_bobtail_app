@@ -60,9 +60,10 @@ import {
     TENNIS_COURT
 } from '../../constants/scene/things/flats'
 import {
-    REATTA_EXTERIOR,
     REATTA_INTERIOR,
     REATTA_SEAT,
+    REATTA_SEAT_DOWN,
+    REATTA_EXTERIOR,
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../constants/scene/things/puppets'
@@ -93,9 +94,9 @@ export default [
                 [EL_CERRITO_NEAR]: true
             },
             [PANEL]: {
-                [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT]: true
+                [REATTA_SEAT]: true,
+                [REATTA_EXTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -125,9 +126,9 @@ export default [
                 [EL_CERRITO_NEAR]: true
             },
             [PANEL]: {
-                [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT]: true
+                [REATTA_SEAT_DOWN]: true,
+                [REATTA_EXTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -157,9 +158,9 @@ export default [
                 [EL_CERRITO_NEAR]: true
             },
             [PANEL]: {
-                [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT]: true
+                [REATTA_SEAT_DOWN]: true,
+                [REATTA_EXTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -268,9 +269,9 @@ export default [
                 [EL_CERRITO_NEAR]: true
             },
             [PANEL]: {
-                [REATTA_EXTERIOR]: true,
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT]: true
+                [REATTA_SEAT]: true,
+                [REATTA_EXTERIOR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,

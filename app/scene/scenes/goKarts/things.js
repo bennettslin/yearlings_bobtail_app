@@ -30,15 +30,15 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [GO_KART_SEAT__LEFT]: {
             yIndex: 3,
-            xPosition: 2.25,
+            xPosition: 2,
             zOffset: 0.75,
-            scaleFactor: 0.5
+            scaleFactor: 0.4
         },
         [GO_KART_SEAT__RIGHT]: {
             yIndex: 3,
-            xPosition: 8.25,
+            xPosition: 8,
             zOffset: 0.75,
-            scaleFactor: 0.5
+            scaleFactor: 0.4
         },
         [GO_KART_EXTERIOR__LEFT]: {
             yIndex: 3,

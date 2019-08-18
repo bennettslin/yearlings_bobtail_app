@@ -178,5 +178,10 @@ export default [
         taskName: 'goKartSeat',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'reattaSeat',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

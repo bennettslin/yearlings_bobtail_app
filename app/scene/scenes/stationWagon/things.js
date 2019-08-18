@@ -52,13 +52,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 3,
             zOffset: 0.75,
-            scaleFactor: 0.5
+            scaleFactor: 0.4
         },
         [SATURN_SEAT__RIGHT]: {
             yIndex: 4,
             xPosition: 6,
             zOffset: 0.75,
-            scaleFactor: 0.5
+            scaleFactor: 0.4
         },
         [SATURN_EXTERIOR]: {
             yIndex: 4,
