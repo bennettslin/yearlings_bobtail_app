@@ -13,5 +13,10 @@ export default [
         taskName: 'theatre balconies',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'Yearlings logo on kick drum',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

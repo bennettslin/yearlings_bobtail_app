@@ -18,10 +18,5 @@ export default [
         taskName: 'Bobtail Yearlings logo.',
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: 'Yearlings logo on kick drum',
-        workedHours: 0,
-        neededHours: 1
     }
 ]
