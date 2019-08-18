@@ -1,18 +1,18 @@
-// import puppetBennettBegin from 'assets/svgs/puppets/puppetBennettBegin'
-// import puppetAnitaBegin from 'assets/svgs/puppets/puppetAnitaBegin'
-// import puppetChristopherBegin from 'assets/svgs/puppets/puppetChristopherBegin'
-// import puppetFatherBegin from 'assets/svgs/puppets/puppetFatherBegin'
-// import puppetMotherBegin from 'assets/svgs/puppets/puppetMotherBegin'
-// import puppetBennettMiddle from 'assets/svgs/puppets/puppetBennettMiddle'
-// import puppetAnitaMiddle from 'assets/svgs/puppets/puppetAnitaMiddle'
-// import puppetChristopherMiddle from 'assets/svgs/puppets/puppetChristopherMiddle'
-// import puppetFatherMiddle from 'assets/svgs/puppets/puppetFatherMiddle'
-// import puppetMotherMiddle from 'assets/svgs/puppets/puppetMotherMiddle'
-// import puppetBennettEnd from 'assets/svgs/puppets/puppetBennettEnd'
-// import puppetAnitaEnd from 'assets/svgs/puppets/puppetAnitaEnd'
-// import puppetChristopherEnd from 'assets/svgs/puppets/puppetChristopherEnd'
-// import puppetFatherEnd from 'assets/svgs/puppets/puppetFatherEnd'
-// import puppetMotherEnd from 'assets/svgs/puppets/puppetMotherEnd'
+import puppetBennettBegin from 'assets/svgs/puppets/puppetBennettBegin'
+import puppetAnitaBegin from 'assets/svgs/puppets/puppetAnitaBegin'
+import puppetChristopherBegin from 'assets/svgs/puppets/puppetChristopherBegin'
+import puppetFatherBegin from 'assets/svgs/puppets/puppetFatherBegin'
+import puppetMotherBegin from 'assets/svgs/puppets/puppetMotherBegin'
+import puppetBennettMiddle from 'assets/svgs/puppets/puppetBennettMiddle'
+import puppetAnitaMiddle from 'assets/svgs/puppets/puppetAnitaMiddle'
+import puppetChristopherMiddle from 'assets/svgs/puppets/puppetChristopherMiddle'
+import puppetFatherMiddle from 'assets/svgs/puppets/puppetFatherMiddle'
+import puppetMotherMiddle from 'assets/svgs/puppets/puppetMotherMiddle'
+import puppetBennettEnd from 'assets/svgs/puppets/puppetBennettEnd'
+import puppetAnitaEnd from 'assets/svgs/puppets/puppetAnitaEnd'
+import puppetChristopherEnd from 'assets/svgs/puppets/puppetChristopherEnd'
+import puppetFatherEnd from 'assets/svgs/puppets/puppetFatherEnd'
+import puppetMotherEnd from 'assets/svgs/puppets/puppetMotherEnd'
 import opalCouch from 'assets/svgs/puppets/opalCouch'
 import opalGazing from 'assets/svgs/puppets/opalGazing'
 import peacock from 'assets/svgs/puppets/peacock'
@@ -53,21 +53,21 @@ import {
 } from '../../../../constants/scene/things/puppets'
 
 export default {
-    [PUPPET_BENNETT_BEGIN]: false,
-    [PUPPET_ANITA_BEGIN]: false,
-    [PUPPET_CHRISTOPHER_BEGIN]: false,
-    [PUPPET_FATHER_BEGIN]: false,
-    [PUPPET_MOTHER_BEGIN]: false,
-    [PUPPET_BENNETT_MIDDLE]: false,
-    [PUPPET_ANITA_MIDDLE]: false,
-    [PUPPET_CHRISTOPHER_MIDDLE]: false,
-    [PUPPET_FATHER_MIDDLE]: false,
-    [PUPPET_MOTHER_MIDDLE]: false,
-    [PUPPET_BENNETT_END]: false,
-    [PUPPET_ANITA_END]: false,
-    [PUPPET_CHRISTOPHER_END]: false,
-    [PUPPET_FATHER_END]: false,
-    [PUPPET_MOTHER_END]: false,
+    [PUPPET_BENNETT_BEGIN]: puppetBennettBegin,
+    [PUPPET_ANITA_BEGIN]: puppetAnitaBegin,
+    [PUPPET_CHRISTOPHER_BEGIN]: puppetChristopherBegin,
+    [PUPPET_FATHER_BEGIN]: puppetFatherBegin,
+    [PUPPET_MOTHER_BEGIN]: puppetMotherBegin,
+    [PUPPET_BENNETT_MIDDLE]: puppetBennettMiddle,
+    [PUPPET_ANITA_MIDDLE]: puppetAnitaMiddle,
+    [PUPPET_CHRISTOPHER_MIDDLE]: puppetChristopherMiddle,
+    [PUPPET_FATHER_MIDDLE]: puppetFatherMiddle,
+    [PUPPET_MOTHER_MIDDLE]: puppetMotherMiddle,
+    [PUPPET_BENNETT_END]: puppetBennettEnd,
+    [PUPPET_ANITA_END]: puppetAnitaEnd,
+    [PUPPET_CHRISTOPHER_END]: puppetChristopherEnd,
+    [PUPPET_FATHER_END]: puppetFatherEnd,
+    [PUPPET_MOTHER_END]: puppetMotherEnd,
     [OPAL_COUCH]: opalCouch,
     [OPAL_GAZING]: opalGazing,
     [PEACOCK]: peacock,

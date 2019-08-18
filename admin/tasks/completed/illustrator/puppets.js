@@ -38,5 +38,35 @@ export default [
         taskName: 'peahen',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'puppetBennettBegin',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'puppetFamilyBegin',
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetBennettMiddle',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'puppetFamilyMiddle',
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: 'puppetBennettEnd',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'puppetFamilyEnd',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
