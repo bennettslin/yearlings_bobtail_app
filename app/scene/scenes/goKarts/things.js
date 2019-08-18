@@ -6,10 +6,10 @@ import {
 import { DRIVING_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { GO_KART_TRACK } from '../../../constants/scene/things/flats'
 import {
-    GO_KART_EXTERIOR__LEFT,
-    GO_KART_EXTERIOR__RIGHT,
     GO_KART_SEAT__LEFT,
-    GO_KART_SEAT__RIGHT
+    GO_KART_SEAT__RIGHT,
+    GO_KART_EXTERIOR__LEFT,
+    GO_KART_EXTERIOR__RIGHT
 } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
@@ -28,6 +28,18 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
+        [GO_KART_SEAT__LEFT]: {
+            yIndex: 3,
+            xPosition: 2.25,
+            zOffset: 0.75,
+            scaleFactor: 0.5
+        },
+        [GO_KART_SEAT__RIGHT]: {
+            yIndex: 3,
+            xPosition: 8.25,
+            zOffset: 0.75,
+            scaleFactor: 0.5
+        },
         [GO_KART_EXTERIOR__LEFT]: {
             yIndex: 3,
             xPosition: 2.5,
@@ -37,22 +49,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 8.5,
             scaleFactor: 0.32
-        },
-        [GO_KART_SEAT__LEFT]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 4
-            }
-        },
-        [GO_KART_SEAT__RIGHT]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 5,
-                zHeight: 4
-            }
         }
     }
 }

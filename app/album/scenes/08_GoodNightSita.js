@@ -53,10 +53,10 @@ import {
 } from '../../constants/scene/things/fixtures'
 import { GO_KART_TRACK } from '../../constants/scene/things/flats'
 import {
-    GO_KART_EXTERIOR__LEFT,
-    GO_KART_EXTERIOR__RIGHT,
     GO_KART_SEAT__LEFT,
-    GO_KART_SEAT__RIGHT
+    GO_KART_SEAT__RIGHT,
+    GO_KART_EXTERIOR__LEFT,
+    GO_KART_EXTERIOR__RIGHT
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -177,10 +177,10 @@ export default [
                 [GO_KART_TRACK]: true
             },
             [PANEL]: {
-                [GO_KART_EXTERIOR__LEFT]: true,
-                [GO_KART_EXTERIOR__RIGHT]: true,
                 [GO_KART_SEAT__LEFT]: true,
-                [GO_KART_SEAT__RIGHT]: true
+                [GO_KART_SEAT__RIGHT]: true,
+                [GO_KART_EXTERIOR__LEFT]: true,
+                [GO_KART_EXTERIOR__RIGHT]: true
             }
         },
         cubes: GO_KARTS_KEY,

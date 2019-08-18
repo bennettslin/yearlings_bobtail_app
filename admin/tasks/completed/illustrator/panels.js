@@ -173,5 +173,10 @@ export default [
         taskName: 'schoolbusSeat',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'goKartSeat',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

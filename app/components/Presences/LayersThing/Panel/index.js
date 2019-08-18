@@ -15,8 +15,8 @@ import oceanCaveInterior from 'assets/svgs/panels/oceanCaveInterior'
 import oceanCaveExterior from 'assets/svgs/panels/oceanCaveExterior'
 import wideCouch from 'assets/svgs/panels/wideCouch'
 import wideArmrest from 'assets/svgs/panels/wideArmrest'
+import goKartSeat from 'assets/svgs/panels/goKartSeat'
 import goKartExterior from 'assets/svgs/panels/goKartExterior'
-// import goKartSeat from 'assets/svgs/panels/goKartSeat'
 import conveyorBelt from 'assets/svgs/panels/conveyorBelt'
 import dishroomSink from 'assets/svgs/panels/dishroomSink'
 import bennettBed from 'assets/svgs/panels/bennettBed'
@@ -60,10 +60,10 @@ import {
     WIDE_COUCH__BENNETT,
     WIDE_ARMREST__BENNETT_LEFT,
     WIDE_ARMREST__BENNETT_RIGHT,
-    GO_KART_EXTERIOR__LEFT,
-    GO_KART_EXTERIOR__RIGHT,
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
+    GO_KART_EXTERIOR__LEFT,
+    GO_KART_EXTERIOR__RIGHT,
     CONVEYOR_BELT,
     DISHROOM_SINK,
     BENNETT_BED,
@@ -121,10 +121,10 @@ export default {
     [WIDE_COUCH__BENNETT]: wideCouch,
     [WIDE_ARMREST__BENNETT_LEFT]: wideArmrest,
     [WIDE_ARMREST__BENNETT_RIGHT]: wideArmrest,
+    [GO_KART_SEAT__LEFT]: goKartSeat,
+    [GO_KART_SEAT__RIGHT]: goKartSeat,
     [GO_KART_EXTERIOR__LEFT]: goKartExterior,
     [GO_KART_EXTERIOR__RIGHT]: goKartExterior,
-    [GO_KART_SEAT__LEFT]: false,
-    [GO_KART_SEAT__RIGHT]: false,
     [CONVEYOR_BELT]: conveyorBelt,
     [DISHROOM_SINK]: dishroomSink,
     [BENNETT_BED]: bennettBed,

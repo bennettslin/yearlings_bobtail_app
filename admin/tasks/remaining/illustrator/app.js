@@ -15,7 +15,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'Bobtail album',
+        taskName: 'Bobtail Yearlings logo.',
         workedHours: 0,
         neededHours: 1
     },
