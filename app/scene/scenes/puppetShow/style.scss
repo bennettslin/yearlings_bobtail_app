@@ -1,221 +1,77 @@
 .taiwanMountainsBackdrop {
-    .mountainFarthest {
-        fill: #4b6185;
-    }
+    .mountainFarthest { fill: #4b6185; }
+    .mountainFar { fill: #51688f; }
+    .mountainNear { fill: #5a739e; }
+    .mountainNearer { fill: #6682b3; }
+    .mountainNearest { fill: #6d8bbf; }
+}
 
-    .mountainFar {
-        fill: #51688f;
-    }
-
-    .mountainNear {
-        fill: #5a739e;
-    }
-
-    .mountainNearer {
-        fill: #6682b3;
-    }
-
-    .mountainNearest {
-        fill: #6d8bbf;
-    }
+.taiwanFog {
+    .cloudRear { fill: #b2c7d9; }
+    .cloudFront { fill: #bfd0de; }
 }
 
 .taiwanMountainsBridged {
-    .mountainRear {
-        fill: #5e4452;
-    }
-
-    .road {
-        fill: #737565;
-    }
-
-    .pineRear {
-        fill: #4b824e;
-    }
-
-    .pineFront {
-        fill: #549157;
-    }
-
-    .bonsaiLeavesBack {
-        fill: #4e9475;
-    }
-
-    .bonsaiTrunk {
-        fill: #705b39;
-    }
-
-    .bonsaiLeavesFront {
-        fill: #55a17f;
-    }
-
-    .suspenders {
-        fill: rgba(200, 150, 150, 0.3);
-    }
-
-    .cable {
-        fill: #d4ad8c;
-    }
-
-    .planks {
-        fill: #7d634c;
-    }
-
-    .post {
-        fill: #857a4a;
-    }
-
-    .bushRear {
-        fill: #4a7343;
-    }
-
-    .mountainFront {
-        fill: #694b5b;
-    }
-
-    .bushFront {
-        fill: #54824c;
-    }
+    .mountainRear { fill: #5e4452; }
+    .road { fill: #737565; }
+    .pineRear { fill: #4b824e; }
+    .pineFront { fill: #549157; }
+    .bonsaiLeavesBack { fill: #4e9475; }
+    .bonsaiTrunk { fill: #705b39; }
+    .bonsaiLeavesFront { fill: #55a17f; }
+    .suspenders { fill: rgba(200, 150, 150, 0.3); }
+    .cable { fill: #d4ad8c; }
+    .planks { fill: #7d634c; }
+    .post { fill: #857a4a; }
+    .bushRear { fill: #4a7343; }
+    .mountainFront { fill: #694b5b; }
+    .bushFront { fill: #54824c; }
 }
 
 .taiwanMountainLeft {
-    .mountain {
-        fill: #300;
-    }
-
-    .pineSide {
-        fill: #030;
-    }
-
-    .pineCentre {
-        fill: #360;
-    }
+    .mountain { fill: #300; }
+    .pineSide { fill: #030; }
+    .pineCentre { fill: #360; }
 }
 
 .taiwanMountainRight {
-    .mountainBack {
-        fill: #300;
-    }
-
-    .pineSide {
-        fill: #030;
-    }
-
-    .pineCentre {
-        fill: #360;
-    }
-
-    .bonsaiLeavesBack {
-        fill: #063;
-    }
-
-    .bonsaiTrunk {
-        fill: #633;
-    }
-
-    .bonsaiLeavesFront {
-        fill: #396;
-    }
-
-    .mountainFront {
-        fill: #600;
-    }
+    .mountainBack { fill: #300; }
+    .pineSide { fill: #030; }
+    .pineCentre { fill: #360; }
+    .bonsaiLeavesBack { fill: #063; }
+    .bonsaiTrunk { fill: #633; }
+    .bonsaiLeavesFront { fill: #396; }
+    .mountainFront { fill: #600; }
 }
 
 .sketchbook {
-    .paperSide {
-        fill: #b7b3a5;
-    }
-
-    .paperFront {
-        fill: #e8e4d9;
-    }
-
-    .wire {
-        fill: #686364;
-    }
+    .paperSide { fill: #b7b3a5; }
+    .paperFront { fill: #e8e4d9; }
+    .wire { fill: #686364; }
 }
 
 .togetherSketch {
-    .mountain {
-        fill: #5c5c5c;
-    }
-
-    .snow {
-        fill: #fbfbfb;
-    }
-
-    .cloud {
-        fill: #ececec;
-    }
-
-    .post {
-        fill: #878787;
-    }
-
-    .plank {
-        fill: #a2a2a2;
-    }
-
-    .suspenders {
-        fill: #d4d4d4;
-    }
-
-    .rope {
-        fill: #969696;
-    }
+    .mountain { fill: #5c5c5c; }
+    .snow { fill: #fbfbfb; }
+    .cloud { fill: #ececec; }
+    .post { fill: #878787; }
+    .plank { fill: #a2a2a2; }
+    .suspenders { fill: #d4d4d4; }
+    .rope { fill: #969696; }
 }
 
 .apartSketch {
-    .land {
-        fill: #878787;
-    }
-
-    .boyShirt {
-        fill: #9c9c9c;
-    }
-
-    .boyPants {
-        fill: #878787;
-    }
-
-    .hairBrown {
-        fill: #a3a3a3;
-    }
-
-    .hairBlonde {
-        fill: #c2c2c2;
-    }
-
-    .boyYarmulke {
-        fill: #d4d4d4;
-    }
-
-    .ocean {
-        fill: #b8b8b8;
-    }
-
-    .hatTop {
-        fill: #adadad;
-    }
-
-    .hatBottom {
-        fill: #858585;
-    }
-
-    .puppetShoe {
-        fill: #666;
-    }
-
-    .skinSoutheastAsian {
-        fill: #cfcfcf;
-    }
-
-    .puppetShirt {
-        fill: #949494;
-    }
-
-    .puppetPants {
-        fill: #878787;
-    }
+    .land { fill: #878787; }
+    .boyShirt { fill: #9c9c9c; }
+    .boyPants { fill: #878787; }
+    .hairBrown { fill: #a3a3a3; }
+    .hairBlonde { fill: #c2c2c2; }
+    .boyYarmulke { fill: #d4d4d4; }
+    .ocean { fill: #b8b8b8; }
+    .hatTop { fill: #adadad; }
+    .hatBottom { fill: #858585; }
+    .puppetShoe { fill: #666; }
+    .skinSoutheastAsian { fill: #cfcfcf; }
+    .puppetShirt { fill: #949494; }
+    .puppetPants { fill: #878787; }
 }

@@ -183,5 +183,10 @@ export default [
         taskName: 'reattaSeat',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'taiwanFog',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
