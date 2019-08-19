@@ -1,10 +1,11 @@
 import {
     CUTOUT,
-    FIXTURE,
     PUPPET
 } from '../../../constants/scene'
-import { CAMPUS_TREE_SINGLE__BANCROFT } from '../../../constants/scene/things/cutouts'
-import { ASH_CAN } from '../../../constants/scene/things/fixtures'
+import {
+    CAMPUS_TREE_SINGLE__BANCROFT,
+    ASH_CAN
+} from '../../../constants/scene/things/cutouts'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
 import { PEOPLE_ODIN_GHOST_SHARED } from '../../shared/people'
 
@@ -14,16 +15,11 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 1,
             scaleFactor: 0.5
-        }
-    },
-    [FIXTURE]: {
+        },
         [ASH_CAN]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 3
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.3
         }
     }
 }

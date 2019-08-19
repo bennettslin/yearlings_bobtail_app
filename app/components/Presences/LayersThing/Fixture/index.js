@@ -13,7 +13,6 @@
 // import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
 // import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
 // import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
-// import ashCan from 'assets/svgs/fixtures/ashCan'
 // import keyboard from 'assets/svgs/fixtures/keyboard'
 // import cashBox from 'assets/svgs/fixtures/cashBox'
 // import guitar from 'assets/svgs/fixtures/guitar'
@@ -33,7 +32,6 @@
 // import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
 // import bloodyTowel from 'assets/svgs/fixtures/bloodyTowel'
 // import bloodyTowelReflection from 'assets/svgs/fixtures/bloodyTowelReflection'
-// import gravestone from 'assets/svgs/fixtures/gravestone'
 // import evianBottles from 'assets/svgs/fixtures/evianBottles'
 // import stageMicSide from 'assets/svgs/fixtures/stageMicSide'
 // import kickDrum from 'assets/svgs/fixtures/kickDrum'
@@ -69,7 +67,6 @@ import {
     THROWN_FRUIT,
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
-    ASH_CAN,
     KEYBOARD,
     CASH_BOX,
     GUITAR,
@@ -90,7 +87,6 @@ import {
     LIZ_PHONE_REFLECTION,
     BLOODY_TOWEL,
     BLOODY_TOWEL_REFLECTION,
-    GRAVESTONE,
     EVIAN_BOTTLES,
     STAGE_MIC_SIDE__CROWD,
     STAGE_MIC_SIDE__STAGE,
@@ -129,7 +125,6 @@ export default {
     [THROWN_FRUIT]: false,
     [BENNETT_RECORD_PLAYER]: false,
     [BENNETT_COUCH_LAMP]: false,
-    [ASH_CAN]: false,
     [KEYBOARD]: false,
     [CASH_BOX]: false,
     [GUITAR]: false,
@@ -152,7 +147,6 @@ export default {
     [LIZ_PHONE_REFLECTION]: false,
     [BLOODY_TOWEL]: false,
     [BLOODY_TOWEL_REFLECTION]: false,
-    [GRAVESTONE]: false,
     [EVIAN_BOTTLES]: false,
     [KICK_DRUM]: false,
     [DRUM_THRONE]: false,

@@ -54,6 +54,7 @@ import {
     UCLA_TREE__RIGHT,
     PHARMACY_AISLE,
     STEAM_PIPES,
+    GRAVESTONE,
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -61,7 +62,6 @@ import {
 } from '../../constants/scene/things/cutouts'
 import {
     PUSH_BROOM__TUNNEL,
-    GRAVESTONE,
     EVIAN_BOTTLES
 } from '../../constants/scene/things/fixtures'
 import {
@@ -212,7 +212,7 @@ export default [
             [BACKDROP]: {
                 [CEMETERY_BACKDROP]: true
             },
-            [FIXTURE]: {
+            [CUTOUT]: {
                 [GRAVESTONE]: true
             },
             [FLAT]: {

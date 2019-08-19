@@ -1,10 +1,10 @@
 import {
     BACKDROP,
-    FIXTURE,
+    CUTOUT,
     FLAT
 } from '../../../constants/scene'
 import { CEMETERY_BACKDROP } from '../../../constants/scene/things/backdrops'
-import { GRAVESTONE } from '../../../constants/scene/things/fixtures'
+import { GRAVESTONE } from '../../../constants/scene/things/cutouts'
 import {
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT
@@ -19,14 +19,11 @@ const ARRANGEMENTS_THINGS = {
             trimBottom: 0.1
         }
     },
-    [FIXTURE]: {
+    [CUTOUT]: {
         [GRAVESTONE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 3,
-                zHeight: 2
-            }
+            xPosition: 5.5,
+            scaleFactor: 0.35
         }
     },
     [FLAT]: {

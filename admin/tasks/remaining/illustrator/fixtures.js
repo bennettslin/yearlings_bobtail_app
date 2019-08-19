@@ -75,11 +75,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'ashCan',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'keyboard',
         workedHours: 0,
         neededHours: 2
@@ -161,11 +156,6 @@ export default [
     },
     {
         taskName: 'bloodyTowelReflection',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'gravestone',
         workedHours: 0,
         neededHours: 1
     },

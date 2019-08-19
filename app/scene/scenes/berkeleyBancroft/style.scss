@@ -1,9 +1,13 @@
 .campusTreeSingle {
-    .trunk {
-        fill: #786c4c;
-    }
+    .trunk { fill: #786c4c; }
+    .leaves { fill: #427d4b; }
+}
 
-    .leaves {
-        fill: #427d4b;
-    }
+.ashCan {
+    .canSide { fill: #9c9c8f; }
+    .sand { fill: #d4d4bf; }
+    .canTop { fill: #abab9d; }
+    .cigaretteBody { fill: #d1d3d4; }
+    .cigaretteFilter { fill: #806e4a; }
+    .cigaretteTip { fill: #b39a64; }
 }

@@ -51,6 +51,7 @@ import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     SIGNPOST,
     BANCROFT_SHRUB,
+    ASH_CAN,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE,
@@ -60,7 +61,6 @@ import {
 } from '../../constants/scene/things/cutouts'
 import { LOADING_DOCK_DOOR } from '../../constants/scene/things/doors'
 import {
-    ASH_CAN,
     BURGER_WRAPPER,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
@@ -254,10 +254,8 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
+                [ASH_CAN]: true,
                 [CAMPUS_TREE_SINGLE__BANCROFT]: true
-            },
-            [FIXTURE]: {
-                [ASH_CAN]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_DEMONSTRATION]: true

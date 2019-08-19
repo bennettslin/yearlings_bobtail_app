@@ -60,6 +60,7 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUB,
+    ASH_CAN,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE
@@ -67,8 +68,7 @@ import {
 import { BENNETT_DOOR_OUTSIDE } from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
-    BENNETT_COUCH_LAMP,
-    ASH_CAN
+    BENNETT_COUCH_LAMP
 } from '../../constants/scene/things/fixtures'
 import {
     ST_JOSEPHS_CHURCH,
@@ -204,10 +204,8 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
+                [ASH_CAN]: true,
                 [CAMPUS_TREE_SINGLE__BANCROFT]: true
-            },
-            [FIXTURE]: {
-                [ASH_CAN]: true
             }
         },
         cubes: BERKELEY_BANCROFT_KEY,

@@ -16,6 +16,7 @@ import recyclables from 'assets/svgs/cutouts/recyclables'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost'
 import signpost from 'assets/svgs/cutouts/signpost'
 import bancroftShrub from 'assets/svgs/cutouts/bancroftShrub'
+import ashCan from 'assets/svgs/cutouts/ashCan'
 import campusTreeSingle from 'assets/svgs/cutouts/campusTreeSingle'
 import campusTreeDouble from 'assets/svgs/cutouts/campusTreeDouble'
 import monitorFront from 'assets/svgs/cutouts/monitorFront'
@@ -33,6 +34,7 @@ import waitingRoomPlant from 'assets/svgs/cutouts/waitingRoomPlant'
 import uclaTree from 'assets/svgs/cutouts/uclaTree'
 import pharmacyAisle from 'assets/svgs/cutouts/pharmacyAisle'
 import steamPipes from 'assets/svgs/cutouts/steamPipes'
+import gravestone from 'assets/svgs/cutouts/gravestone'
 import storageBoxes from 'assets/svgs/cutouts/storageBoxes'
 import storageChest from 'assets/svgs/cutouts/storageChest'
 import howieFridge from 'assets/svgs/cutouts/howieFridge'
@@ -70,6 +72,7 @@ import {
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUB,
+    ASH_CAN,
     CAMPUS_TREE_SINGLE__BANCROFT,
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_SINGLE__TETHERBALL,
@@ -96,6 +99,7 @@ import {
     UCLA_TREE__RIGHT,
     PHARMACY_AISLE,
     STEAM_PIPES,
+    GRAVESTONE,
     STORAGE_BOXES,
     STORAGE_CHEST,
     HOWIE_FRIDGE,
@@ -138,6 +142,7 @@ export default {
     [BERKELEY_LAMPPOST]: berkeleyLamppost,
     [SIGNPOST]: signpost,
     [BANCROFT_SHRUB]: bancroftShrub,
+    [ASH_CAN]: ashCan,
     [CAMPUS_TREE_SINGLE__BANCROFT]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__CAMPANILE]: campusTreeSingle,
     [CAMPUS_TREE_SINGLE__TETHERBALL]: campusTreeSingle,
@@ -164,6 +169,7 @@ export default {
     [UCLA_TREE__RIGHT]: uclaTree,
     [PHARMACY_AISLE]: pharmacyAisle,
     [STEAM_PIPES]: steamPipes,
+    [GRAVESTONE]: gravestone,
     [STORAGE_BOXES]: storageBoxes,
     [STORAGE_CHEST]: storageChest,
     [HOWIE_FRIDGE]: howieFridge,
