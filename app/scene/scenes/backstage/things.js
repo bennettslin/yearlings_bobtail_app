@@ -29,27 +29,18 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [PUSH_BROOM__BACKSTAGE]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 1,
-                zHeight: 3
-            }
+            xPosition: 6,
+            scaleFactor: 0.25
         },
         [STEPLADDER]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 1,
-                zHeight: 3
-            }
+            xPosition: 7.75,
+            scaleFactor: 0.4
         },
         [MANNEQUIN]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 4
-            }
+            xPosition: 9.5,
+            scaleFactor: 0.35
         }
     }
 }

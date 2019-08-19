@@ -12,7 +12,7 @@
 // import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
 // import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
 // import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
-// import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
+import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
 // import keyboard from 'assets/svgs/fixtures/keyboard'
 // import cashBox from 'assets/svgs/fixtures/cashBox'
 // import guitar from 'assets/svgs/fixtures/guitar'
@@ -23,9 +23,9 @@
 // import basementBeerMara from 'assets/svgs/fixtures/basementBeerMara'
 // import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
 // import cavemanBones from 'assets/svgs/fixtures/cavemanBones'
-// import pushBroom from 'assets/svgs/fixtures/pushBroom'
-// import stepladder from 'assets/svgs/fixtures/stepladder'
-// import mannequin from 'assets/svgs/fixtures/mannequin'
+import pushBroom from 'assets/svgs/fixtures/pushBroom'
+import stepladder from 'assets/svgs/fixtures/stepladder'
+import mannequin from 'assets/svgs/fixtures/mannequin'
 // import nudeDrawings from 'assets/svgs/fixtures/nudeDrawings'
 // import vaseline from 'assets/svgs/fixtures/vaseline'
 // import lizPhone from 'assets/svgs/fixtures/lizPhone'
@@ -124,7 +124,7 @@ export default {
     [BENNETT_LETTERS]: false,
     [THROWN_FRUIT]: false,
     [BENNETT_RECORD_PLAYER]: false,
-    [BENNETT_COUCH_LAMP]: false,
+    [BENNETT_COUCH_LAMP]: bennettCouchLamp,
     [KEYBOARD]: false,
     [CASH_BOX]: false,
     [GUITAR]: false,
@@ -137,10 +137,10 @@ export default {
     [BASEMENT_BEER_MARA]: false,
     [BASEMENT_BEER_BENNETT]: false,
     [CAVEMAN_BONES]: false,
-    [PUSH_BROOM__BACKSTAGE]: false,
-    [PUSH_BROOM__TUNNEL]: false,
-    [STEPLADDER]: false,
-    [MANNEQUIN]: false,
+    [PUSH_BROOM__BACKSTAGE]: pushBroom,
+    [PUSH_BROOM__TUNNEL]: pushBroom,
+    [STEPLADDER]: stepladder,
+    [MANNEQUIN]: mannequin,
     [NUDE_DRAWINGS]: false,
     [VASELINE]: false,
     [LIZ_PHONE]: false,

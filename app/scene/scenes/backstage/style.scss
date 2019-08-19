@@ -105,3 +105,57 @@
         fill: #cc9;
     }
 }
+
+.stepladder {
+    .rail {
+        fill: #8f8267;
+    }
+
+    .rung {
+        fill: #ab9b7b;
+    }
+}
+
+.mannequin {
+    .pole {
+        fill: #8f9ea8;
+    }
+
+    .woodSide {
+        fill: #a8936a;
+    }
+
+    .woodBottom {
+        fill: #96835f;
+    }
+
+    .woodTopSide {
+        fill: #b39c70;
+    }
+
+    .woodTop {
+        fill: #bfa778;
+    }
+
+    .body {
+        fill: #c3c4ba;
+    }
+}
+
+.pushBroom {
+    .pole {
+        fill: #bfb390;
+    }
+
+    .bristle {
+        fill: #8a8a7a;
+    }
+
+    .rubber {
+        fill: #8d7791;
+    }
+
+    .base {
+        fill: #7a705c;
+    }
+}

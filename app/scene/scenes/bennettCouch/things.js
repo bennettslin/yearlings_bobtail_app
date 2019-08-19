@@ -36,11 +36,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 1,
-                zHeight: 2
-            }
+            xPosition: 1,
+            scaleFactor: 0.3
         }
     },
     [PANEL]: {

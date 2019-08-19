@@ -65,11 +65,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'bennettCouchLamp',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'bennettRecordPlayer',
         workedHours: 0,
         neededHours: 2
@@ -123,21 +118,6 @@ export default [
         taskName: 'cavemanBones',
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: 'pushBroom',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'stepladder',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'mannequin',
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: 'nudeDrawings',

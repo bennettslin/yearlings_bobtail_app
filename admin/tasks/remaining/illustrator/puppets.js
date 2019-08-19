@@ -2,6 +2,6 @@ export default [
     {
         taskName: 'puppetReatta',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     }
 ]
