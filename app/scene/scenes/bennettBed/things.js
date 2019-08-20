@@ -13,10 +13,7 @@ import {
     NUDE_DRAWINGS,
     VASELINE
 } from '../../../constants/scene/things/fixtures'
-import {
-    BENNETT_PILLOW,
-    BENNETT_BLANKET
-} from '../../../constants/scene/things/furniture'
+import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 import { DOOR_SHARED } from '../../shared'
 
@@ -64,14 +61,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 9,
             scaleFactor: 0.25
-        },
-        [BENNETT_BLANKET]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 0.5
-            }
         }
     },
     [PANEL]: {

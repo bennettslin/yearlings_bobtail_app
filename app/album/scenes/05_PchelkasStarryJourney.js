@@ -85,10 +85,7 @@ import {
     THROWN_FRUIT
 } from '../../constants/scene/things/fixtures'
 import { BEDROOM_BUS } from '../../constants/scene/things/flats'
-import {
-    CAPTAIN_BED_PILLOW,
-    CAPTAIN_BED_BLANKET
-} from '../../constants/scene/things/furniture'
+import { CAPTAIN_BED_PILLOW } from '../../constants/scene/things/furniture'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
@@ -108,8 +105,7 @@ export default [
                 [BLOOM_COUNTY_POSTER]: true
             },
             [FURNITURE]: {
-                [CAPTAIN_BED_PILLOW]: true,
-                [CAPTAIN_BED_BLANKET]: true
+                [CAPTAIN_BED_PILLOW]: true
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,

@@ -97,11 +97,8 @@ import {
 } from '../../constants/scene/things/fixtures'
 import {
     BENNETT_PILLOW,
-    BENNETT_BLANKET,
     LIZ_PILLOWS_PILE,
-    LIZ_PILLOWS_PILE_REFLECTION,
-    LIZ_BLANKET_PILE,
-    LIZ_BLANKET_PILE_REFLECTION
+    LIZ_PILLOWS_PILE_REFLECTION
 } from '../../constants/scene/things/furniture'
 import {
     CONVEYOR_BELT,
@@ -316,8 +313,7 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW]: true,
-                [BENNETT_BLANKET]: true
+                [BENNETT_PILLOW]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true
@@ -354,8 +350,7 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW]: true,
-                [BENNETT_BLANKET]: true
+                [BENNETT_PILLOW]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true
@@ -467,9 +462,7 @@ export default [
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS_PILE]: true,
-                [LIZ_PILLOWS_PILE_REFLECTION]: true,
-                [LIZ_BLANKET_PILE]: true,
-                [LIZ_BLANKET_PILE_REFLECTION]: true
+                [LIZ_PILLOWS_PILE_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true
@@ -503,9 +496,7 @@ export default [
             },
             [FURNITURE]: {
                 [LIZ_PILLOWS_PILE]: true,
-                [LIZ_PILLOWS_PILE_REFLECTION]: true,
-                [LIZ_BLANKET_PILE]: true,
-                [LIZ_BLANKET_PILE_REFLECTION]: true
+                [LIZ_PILLOWS_PILE_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true
@@ -538,10 +529,6 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true,
                 [BLOODY_TOWEL]: true,
                 [BLOODY_TOWEL_REFLECTION]: true
-            },
-            [FURNITURE]: {
-                [LIZ_BLANKET_PILE]: true,
-                [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true

@@ -4,7 +4,6 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-
     {
         taskName: `Bennett's blanket when fearful in Willy.`,
         workedHours: 0,

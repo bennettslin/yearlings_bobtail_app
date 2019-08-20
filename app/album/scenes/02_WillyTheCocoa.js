@@ -76,10 +76,7 @@ import {
     FAMILY_HOUSE,
     BEDROOM_SIREN
 } from '../../constants/scene/things/flats'
-import {
-    CAPTAIN_BED_PILLOW,
-    CAPTAIN_BED_BLANKET
-} from '../../constants/scene/things/furniture'
+import { CAPTAIN_BED_PILLOW } from '../../constants/scene/things/furniture'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
@@ -203,8 +200,7 @@ export default [
                 [CHRISTOPHER_LETTERS]: true
             },
             [FURNITURE]: {
-                [CAPTAIN_BED_PILLOW]: true,
-                [CAPTAIN_BED_BLANKET]: true
+                [CAPTAIN_BED_PILLOW]: true
             },
             [PANEL]: {
                 [BEDROOM_DESK]: true,

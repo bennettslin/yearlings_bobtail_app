@@ -5,7 +5,6 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
-    FURNITURE,
     PANEL,
     PUPPET
 } from '../../constants/scene'
@@ -66,10 +65,6 @@ import {
     LIZ_PHONE_BASE_REFLECTION
 } from '../../constants/scene/things/fixtures'
 import { CAMPANILE } from '../../constants/scene/things/flats'
-import {
-    LIZ_BLANKET_PILE,
-    LIZ_BLANKET_PILE_REFLECTION
-} from '../../constants/scene/things/furniture'
 import {
     CROWD_BACK,
     LIZ_BED,
@@ -206,10 +201,6 @@ export default [
             [FIXTURE]: {
                 [LIZ_PHONE_BASE]: true,
                 [LIZ_PHONE_BASE_REFLECTION]: true
-            },
-            [FURNITURE]: {
-                [LIZ_BLANKET_PILE]: true,
-                [LIZ_BLANKET_PILE_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true,

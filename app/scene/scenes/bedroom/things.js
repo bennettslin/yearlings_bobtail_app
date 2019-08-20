@@ -29,10 +29,7 @@ import {
     BEDROOM_SIREN,
     BEDROOM_BUS
 } from '../../../constants/scene/things/flats'
-import {
-    CAPTAIN_BED_PILLOW,
-    CAPTAIN_BED_BLANKET
-} from '../../../constants/scene/things/furniture'
+import { CAPTAIN_BED_PILLOW } from '../../../constants/scene/things/furniture'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,
@@ -72,14 +69,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 7,
             scaleFactor: 0.25
-        },
-        [CAPTAIN_BED_BLANKET]: {
-            yIndex: 4,
-            xPosition: 8,
-            arrangement: {
-                xWidth: 4,
-                zHeight: 1
-            }
         }
     },
     [PANEL]: {

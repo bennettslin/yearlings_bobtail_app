@@ -15,9 +15,7 @@ import {
 } from '../../../constants/scene/things/fixtures'
 import {
     LIZ_PILLOWS_PILE,
-    LIZ_PILLOWS_PILE_REFLECTION,
-    LIZ_BLANKET_PILE,
-    LIZ_BLANKET_PILE_REFLECTION
+    LIZ_PILLOWS_PILE_REFLECTION
 } from '../../../constants/scene/things/furniture'
 import {
     PHONE_CALL_PANEL,
@@ -55,23 +53,6 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 9,
             zOffset: 5.5,
             scaleFactor: 0.25
-        },
-        [LIZ_BLANKET_PILE]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 0.5
-            }
-        },
-        [LIZ_BLANKET_PILE_REFLECTION]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 5,
-                zHeight: 1,
-                zOffset: 5.5
-            }
         }
     },
     [PANEL]: {
