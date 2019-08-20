@@ -6,7 +6,7 @@ import playgroundBall from 'assets/svgs/fixtures/playgroundBall'
 // import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
 // import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
-// import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
+import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
 // import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
 // import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
 // import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
@@ -118,7 +118,7 @@ export default {
     [CHRISTOPHER_LETTERS]: false,
     [BACKPACK_BENNETT]: false,
     [FRIDGE_DRAWINGS]: false,
-    [CAPTAIN_BED_LAMP]: false,
+    [CAPTAIN_BED_LAMP]: captainBedLamp,
     [RED_ENVELOPE_MONEY]: false,
     [BEYONDER_ENVELOPE]: false,
     [BENNETT_LETTERS]: false,

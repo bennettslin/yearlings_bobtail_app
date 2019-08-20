@@ -75,8 +75,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [CAPTAIN_BED_BLANKET]: {
             yIndex: 4,
+            xPosition: 8,
             arrangement: {
-                xPosition: 8,
                 xWidth: 4,
                 zHeight: 1
             }
@@ -144,12 +144,9 @@ export const THINGS_BEDROOM_GUILTY = {
     },
     [FIXTURE]: {
         [CAPTAIN_BED_LAMP]: {
-            yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            yIndex: 4,
+            xPosition: 9,
+            scaleFactor: 0.25
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,

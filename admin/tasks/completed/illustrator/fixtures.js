@@ -33,5 +33,10 @@ export default [
         taskName: 'playgroundBall',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'captainBedLamp',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

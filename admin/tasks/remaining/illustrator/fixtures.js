@@ -40,11 +40,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'captainBedLamp',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'redEnvelopeMoney',
         workedHours: 0,
         neededHours: 2
