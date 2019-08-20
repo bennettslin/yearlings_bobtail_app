@@ -18,5 +18,10 @@ export default [
         taskName: 'pushBroom',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'evianBottles',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

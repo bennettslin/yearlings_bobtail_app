@@ -14,7 +14,10 @@ import {
     SATURN_SEAT__LEFT,
     SATURN_SEAT__RIGHT
 } from '../../../constants/scene/things/panels'
-import { INTERIOR_SHARED } from '../../shared'
+import {
+    EVIAN_BOTTLE_SHARED,
+    INTERIOR_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -34,11 +37,9 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [EVIAN_BOTTLES]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 1.5,
+            scaleFactor: 0.3,
+            sharedStyle: EVIAN_BOTTLE_SHARED
         }
     },
     [PANEL]: {

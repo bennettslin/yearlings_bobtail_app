@@ -140,11 +140,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'evianBottles',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'stageMicSide',
         workedHours: 0,
         neededHours: 2

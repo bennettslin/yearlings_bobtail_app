@@ -32,7 +32,7 @@ import mannequin from 'assets/svgs/fixtures/mannequin'
 // import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
 // import bloodyTowel from 'assets/svgs/fixtures/bloodyTowel'
 // import bloodyTowelReflection from 'assets/svgs/fixtures/bloodyTowelReflection'
-// import evianBottles from 'assets/svgs/fixtures/evianBottles'
+import evianBottles from 'assets/svgs/fixtures/evianBottles'
 // import stageMicSide from 'assets/svgs/fixtures/stageMicSide'
 // import kickDrum from 'assets/svgs/fixtures/kickDrum'
 // import drumThrone from 'assets/svgs/fixtures/drumThrone'
@@ -147,7 +147,7 @@ export default {
     [LIZ_PHONE_REFLECTION]: false,
     [BLOODY_TOWEL]: false,
     [BLOODY_TOWEL_REFLECTION]: false,
-    [EVIAN_BOTTLES]: false,
+    [EVIAN_BOTTLES]: evianBottles,
     [KICK_DRUM]: false,
     [DRUM_THRONE]: false,
     [GUITAR_CASE_OPEN]: false,
