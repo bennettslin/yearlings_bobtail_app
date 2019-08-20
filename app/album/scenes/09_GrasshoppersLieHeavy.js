@@ -91,9 +91,7 @@ import {
     NUDE_DRAWINGS,
     VASELINE,
     LIZ_PHONE,
-    LIZ_PHONE_REFLECTION,
-    BLOODY_TOWEL,
-    BLOODY_TOWEL_REFLECTION
+    LIZ_PHONE_REFLECTION
 } from '../../constants/scene/things/fixtures'
 import {
     BENNETT_PILLOW,
@@ -526,9 +524,7 @@ export default [
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
-                [LIZ_PHONE_REFLECTION]: true,
-                [BLOODY_TOWEL]: true,
-                [BLOODY_TOWEL_REFLECTION]: true
+                [LIZ_PHONE_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true

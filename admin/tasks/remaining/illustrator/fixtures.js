@@ -128,16 +128,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'bloodyTowel',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'bloodyTowelReflection',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'bennettShoe',
         workedHours: 0,
         neededHours: 1

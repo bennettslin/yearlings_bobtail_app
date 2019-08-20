@@ -69,7 +69,6 @@ import THINGS_BENNETT_COUCH, {
 import THINGS_COURTYARD from 'scene/scenes/courtyard/things'
 import THINGS_BENNETT_GATE from 'scene/scenes/bennettGate/things'
 import THINGS_LIZ_BED, {
-    THINGS_LIZ_BED_AFTERGLOW,
     THINGS_LIZ_BED_LOOK_BACK,
     THINGS_LIZ_BED_VEGAN
 } from 'scene/scenes/lizBed/things'
@@ -176,7 +175,6 @@ const SCENE_ARRANGEMENTS = [
     THINGS_COURTYARD,
     THINGS_BENNETT_GATE,
     THINGS_LIZ_BED,
-    THINGS_LIZ_BED_AFTERGLOW,
     THINGS_LIZ_BED_LOOK_BACK,
     THINGS_LIZ_BED_VEGAN,
     THINGS_LIZ_COUCH,
