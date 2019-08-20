@@ -215,12 +215,5 @@ export default [
         taskName: 'drumKit',
         workedHours: 0,
         neededHours: 4
-    },
-
-    // People.
-    {
-        taskName: 'beethovenBust',
-        workedHours: 0,
-        neededHours: 1.5
     }
 ]

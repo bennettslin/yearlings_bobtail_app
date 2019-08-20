@@ -2,7 +2,6 @@ import playgroundBall from 'assets/svgs/fixtures/playgroundBall'
 // import safewayBag from 'assets/svgs/fixtures/safewayBag'
 // import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
 // import shoppingCart from 'assets/svgs/fixtures/shoppingCart'
-// import beethovenBust from 'assets/svgs/fixtures/beethovenBust'
 // import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
 // import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
@@ -53,7 +52,6 @@ import {
     SAFEWAY_BAG,
     RECORD_PLAYER_STOOL,
     SHOPPING_CART,
-    BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
     BACKPACK_BENNETT,
     FRIDGE_DRAWINGS,
@@ -108,7 +106,6 @@ export default {
     [SAFEWAY_BAG]: false,
     [RECORD_PLAYER_STOOL]: false,
     [SHOPPING_CART]: false,
-    [BEETHOVEN_BUST]: false,
     [CHRISTOPHER_LETTERS]: false,
     [BACKPACK_BENNETT]: false,
     [FRIDGE_DRAWINGS]: false,

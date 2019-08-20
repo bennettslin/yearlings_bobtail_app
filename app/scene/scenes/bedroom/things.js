@@ -18,7 +18,6 @@ import {
     SPACE_COLONY
 } from '../../../constants/scene/things/cardboards'
 import {
-    BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS,
     CAPTAIN_BED_LAMP,
     BENNETT_LETTERS,
@@ -52,16 +51,6 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 0,
             scaleFactor: 0.36,
             sharedStyle: PEOPLE_ALL_SHARED
-        }
-    },
-    [FIXTURE]: {
-        [BEETHOVEN_BUST]: {
-            yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
         }
     },
     [FURNITURE]: {

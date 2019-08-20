@@ -66,7 +66,6 @@ import {
 import { PORCH_DOOR } from '../../constants/scene/things/doors'
 import {
     SHOPPING_CART,
-    BEETHOVEN_BUST,
     CHRISTOPHER_LETTERS
 } from '../../constants/scene/things/fixtures'
 import {
@@ -196,7 +195,6 @@ export default [
                 [TINTIN_POSTER]: true
             },
             [FIXTURE]: {
-                [BEETHOVEN_BUST]: true,
                 [CHRISTOPHER_LETTERS]: true
             },
             [FURNITURE]: {
@@ -266,9 +264,6 @@ export default [
             },
             [CARDBOARD]: {
                 [TINTIN_POSTER]: true
-            },
-            [FIXTURE]: {
-                [BEETHOVEN_BUST]: true
             },
             [FLAT]: {
                 [BEDROOM_SIREN]: true
