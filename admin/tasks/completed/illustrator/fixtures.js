@@ -23,5 +23,10 @@ export default [
         taskName: 'evianBottles',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'tetherballPole',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -180,11 +180,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'tetherballPole',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'recordingBeers',
         workedHours: 0,
         neededHours: 1

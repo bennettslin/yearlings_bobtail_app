@@ -41,7 +41,7 @@ import evianBottles from 'assets/svgs/fixtures/evianBottles'
 // import bennettShoe from 'assets/svgs/fixtures/bennettShoe'
 // import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
 // import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
-// import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
+import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
 // import recordingConsole from 'assets/svgs/fixtures/recordingConsole'
 // import recordingMic from 'assets/svgs/fixtures/recordingMic'
 // import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
@@ -156,7 +156,7 @@ export default {
     [BENNETT_SHOE]: false,
     [BENNETT_SHOE_REFLECTION]: false,
     [TCHOTCHKES]: false,
-    [TETHERBALL_POLE]: false,
+    [TETHERBALL_POLE]: tetherballPole,
     [RECORDING_MIC]: false,
     [RECORDING_CONSOLE]: false,
     [RECORDING_BEERS]: false,
