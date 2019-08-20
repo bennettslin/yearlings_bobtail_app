@@ -28,5 +28,10 @@ export default [
         taskName: 'tetherballPole',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'playgroundBall',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

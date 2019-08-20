@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'playgroundBall',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'safewayBag',
         workedHours: 0,
         neededHours: 1
@@ -12,7 +7,7 @@ export default [
     {
         taskName: 'recordPlayerStool',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 2.5
     },
     {
         taskName: 'shoppingCartFull',

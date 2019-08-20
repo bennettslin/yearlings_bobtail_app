@@ -1,4 +1,4 @@
-// import playgroundBall from 'assets/svgs/fixtures/playgroundBall'
+import playgroundBall from 'assets/svgs/fixtures/playgroundBall'
 // import safewayBag from 'assets/svgs/fixtures/safewayBag'
 // import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
 // import shoppingCart from 'assets/svgs/fixtures/shoppingCart'
@@ -110,7 +110,7 @@ import {
 } from '../../../../constants/scene/things/fixtures'
 
 export default {
-    [PLAYGROUND_BALL]: false,
+    [PLAYGROUND_BALL]: playgroundBall,
     [SAFEWAY_BAG]: false,
     [RECORD_PLAYER_STOOL]: false,
     [SHOPPING_CART]: false,

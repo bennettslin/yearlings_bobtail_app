@@ -51,12 +51,9 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [PLAYGROUND_BALL]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1,
-                zOffset: 1
-            }
+            xPosition: 2,
+            zOffset: 1,
+            scaleFactor: 0.3
         },
         [SAFEWAY_BAG]: {
             yIndex: 4,
