@@ -12,7 +12,6 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import {
     RECORDING_MIC,
-    RECORDING_CONSOLE,
     RECORDING_BEERS
 } from '../../../constants/scene/things/fixtures'
 import {
@@ -77,14 +76,6 @@ const ARRANGEMENTS_THINGS = {
                 xPosition: 10,
                 xWidth: 0.5,
                 zHeight: 2
-            }
-        },
-        [RECORDING_CONSOLE]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 2,
-                zHeight: 0.5
             }
         },
         [RECORDING_BEERS]: {

@@ -74,7 +74,6 @@ import {
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
-    RECORDING_CONSOLE,
     RECORDING_BEERS,
     CRACKED_PICTURE
 } from '../../constants/scene/things/fixtures'
@@ -269,7 +268,6 @@ export default [
             },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,
-                [RECORDING_CONSOLE]: true,
                 [RECORDING_BEERS]: true
             },
             [PANEL]: {

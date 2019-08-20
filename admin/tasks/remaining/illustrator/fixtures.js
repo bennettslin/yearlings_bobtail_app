@@ -172,11 +172,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'recordingConsole',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'keyboard',
         workedHours: 0,
         neededHours: 2
