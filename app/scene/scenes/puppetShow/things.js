@@ -17,7 +17,10 @@ import {
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT
 } from '../../../constants/scene/things/flats'
-import { TAIWAN_FOG } from '../../../constants/scene/things/panels'
+import {
+    TAIWAN_HAZE__CLOUD,
+    TAIWAN_HAZE__FOG
+} from '../../../constants/scene/things/panels'
 import {
     PUPPET_BENNETT_BEGIN,
     PUPPET_ANITA_BEGIN,
@@ -62,24 +65,31 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: TAIWAN_HOUSE_SHARED
         },
         [TAIWAN_MOUNTAIN_LEFT]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: -0.5,
             scaleFactor: 0.4,
             alignLeft: true
         },
         [TAIWAN_MOUNTAIN_RIGHT]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 11.5,
             scaleFactor: 0.4,
             alignRight: true
         }
     },
     [PANEL]: {
-        [TAIWAN_FOG]: {
-            yIndex: 1,
+        [TAIWAN_HAZE__CLOUD]: {
+            yIndex: 2,
             xPosition: 5.5,
             scaleFactor: 0.5,
             trimBottom: 0.3
+        },
+        [TAIWAN_HAZE__FOG]: {
+            yIndex: 4,
+            xPosition: 5.5,
+            scaleFactor: 0.5,
+            trimBottom: 0.6,
+            flipHorizontal: true
         }
     }
 }

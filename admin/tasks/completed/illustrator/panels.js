@@ -185,7 +185,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'taiwanFog',
+        taskName: 'taiwanHaze',
         workedHours: 1.5,
         neededHours: 1.5
     }

@@ -61,7 +61,8 @@ import {
     CAMPUS_BUILDING_WIDE__TETHERBALL
 } from '../../constants/scene/things/flats'
 import {
-    TAIWAN_FOG,
+    TAIWAN_HAZE__CLOUD,
+    TAIWAN_HAZE__FOG,
     SCHOOLBUS_EXTERIOR,
     SCHOOLBUS_INTERIOR,
     SCHOOLBUS_SEAT__LEFT,
@@ -99,7 +100,8 @@ export default [
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PANEL]: {
-                [TAIWAN_FOG]: true
+                [TAIWAN_HAZE__CLOUD]: true,
+                [TAIWAN_HAZE__FOG]: true
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_BEGIN]: true,
@@ -132,7 +134,8 @@ export default [
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PANEL]: {
-                [TAIWAN_FOG]: true
+                [TAIWAN_HAZE__CLOUD]: true,
+                [TAIWAN_HAZE__FOG]: true
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_MIDDLE]: true,
@@ -245,7 +248,8 @@ export default [
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PANEL]: {
-                [TAIWAN_FOG]: true
+                [TAIWAN_HAZE__CLOUD]: true,
+                [TAIWAN_HAZE__FOG]: true
             },
             [PUPPET]: {
                 [PUPPET_BENNETT_END]: true,
