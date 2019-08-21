@@ -2,6 +2,7 @@ import fireHydrant from 'assets/svgs/cutouts/fireHydrant'
 import playgroundSlide from 'assets/svgs/cutouts/playgroundSlide'
 import mirroredSink from 'assets/svgs/cutouts/mirroredSink'
 import towelRack from 'assets/svgs/cutouts/towelRack'
+// import shoppingCart from 'assets/svgs/fixtures/shoppingCart'
 import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack'
 import porchPlant from 'assets/svgs/cutouts/porchPlant'
 import campfire from 'assets/svgs/cutouts/campfire'
@@ -55,6 +56,7 @@ import {
     PLAYGROUND_SLIDE,
     MIRRORED_SINK,
     TOWEL_RACK,
+    SHOPPING_CART,
     OVERPASS_SIGN_BACK,
     PORCH_PLANT__LEFT,
     PORCH_PLANT__RIGHT,
@@ -125,6 +127,7 @@ export default {
     [PLAYGROUND_SLIDE]: playgroundSlide,
     [MIRRORED_SINK]: mirroredSink,
     [TOWEL_RACK]: towelRack,
+    [SHOPPING_CART]: false,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
     [PORCH_PLANT__LEFT]: porchPlant,
     [PORCH_PLANT__RIGHT]: porchPlant,

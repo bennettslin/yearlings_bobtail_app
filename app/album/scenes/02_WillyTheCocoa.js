@@ -57,6 +57,7 @@ import {
 } from '../../constants/scene/things/backdrops'
 import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
 import {
+    SHOPPING_CART,
     OVERPASS_SIGN_BACK,
     PORCH_PLANT__LEFT,
     PORCH_PLANT__RIGHT,
@@ -64,10 +65,7 @@ import {
     CAMPFIRE
 } from '../../constants/scene/things/cutouts'
 import { PORCH_DOOR } from '../../constants/scene/things/doors'
-import {
-    SHOPPING_CART,
-    CHRISTOPHER_LETTERS
-} from '../../constants/scene/things/fixtures'
+import { CHRISTOPHER_LETTERS } from '../../constants/scene/things/fixtures'
 import {
     VALLEY_FREEWAY,
     NOHO_HOUSE_LEFT,
@@ -122,10 +120,8 @@ export default [
                 [VALLEY_BACKDROP]: true
             },
             [CUTOUT]: {
+                [SHOPPING_CART]: true,
                 [OVERPASS_SIGN_BACK]: true
-            },
-            [FIXTURE]: {
-                [SHOPPING_CART]: true
             },
             [FLAT]: {
                 [VALLEY_FREEWAY]: true
@@ -232,10 +228,8 @@ export default [
                 [NOHO_HOUSES_BACKDROP]: true
             },
             [CUTOUT]: {
+                [SHOPPING_CART]: true,
                 [FIRE_HYDRANT]: true
-            },
-            [FIXTURE]: {
-                [SHOPPING_CART]: true
             },
             [FLAT]: {
                 [NOHO_HOUSE_LEFT]: true,

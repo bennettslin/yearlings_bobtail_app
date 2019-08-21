@@ -72,7 +72,7 @@ export default [
 
     // Big.
     {
-        taskName: 'shoppingCartFull',
+        taskName: 'shoppingCart',
         workedHours: 0,
         neededHours: 3
     },
