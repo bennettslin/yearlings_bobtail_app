@@ -18,14 +18,14 @@ const ARRANGEMENTS_THINGS = {
         [ESCAPE_POD_SKETCH]: {
             yIndex: 5,
             xPosition: 2.75,
-            zOffset: 3.5,
+            zOffset: 3,
             noShadow: true,
             scaleFactor: 0.3
         },
         [SKETCHBOOK__ESCAPE_POD]: {
             yIndex: 5,
             xPosition: 2.75,
-            zOffset: 2.5,
+            zOffset: 2,
             rotate: 270,
             scaleFactor: 0.25,
             flipHorizontal: true
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
         [VAN_NUYS_PLANT__QUAD]: {
             yIndex: 4,
             xPosition: 3,
-            scaleFactor: 0.33
+            scaleFactor: 0.25
         }
     }
 }

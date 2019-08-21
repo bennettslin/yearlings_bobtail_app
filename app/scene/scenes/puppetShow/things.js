@@ -153,19 +153,18 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
     [BUBBLE]: {
         [TOGETHER_SKETCH]: {
             yIndex: 5,
-            xPosition: 8.5,
-            zOffset: 3.5,
+            xPosition: 8.25,
+            zOffset: 3.375,
             noShadow: true,
-            scaleFactor: 0.3,
+            scaleFactor: 0.35,
             sharedStyle: SKETCH_TAIWAN_SHARED
         },
         [SKETCHBOOK__TOGETHER]: {
             yIndex: 5,
-            xPosition: 8.5,
+            xPosition: 8.25,
             zOffset: 2.5,
             rotate: 270,
-            scaleFactor: 0.25,
-            flipHorizontal: true
+            scaleFactor: 0.25
         }
     },
     [PUPPET]: {
@@ -226,15 +225,15 @@ export const THINGS_PUPPET_SHOW_END = {
     [BUBBLE]: {
         [APART_SKETCH]: {
             yIndex: 5,
-            xPosition: 2.5,
+            xPosition: 2.75,
             zOffset: 3.5,
             noShadow: true,
-            scaleFactor: 0.3,
+            scaleFactor: 0.4,
             sharedStyle: SKETCH_TAIWAN_SHARED
         },
         [SKETCHBOOK__APART]: {
             yIndex: 5,
-            xPosition: 2.5,
+            xPosition: 2.75,
             zOffset: 2.5,
             rotate: 270,
             scaleFactor: 0.25,
