@@ -73,5 +73,10 @@ export default [
         taskName: 'puppetKhariLiz',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'puppetReatta',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

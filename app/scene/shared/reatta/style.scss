@@ -9,11 +9,12 @@
     .headLightSide { fill: #c1c0b2; }
     .turnLight { fill: #e0b46e; }
     .headLightFront { fill: #d8d7c3; }
+    .headLightLit { fill: #fffcb0; }
     .hoodFront { fill: #a8766a; }
     .bodyInner { fill: #684d4d; }
     .mirror { fill: #7c6363; }
     .windshieldFrame { fill: #e04646; }
-    .windshield { fill: #b0e7ff; }
+    .windshield { fill: rgba(200, 240, 250, 0.5); }
     .bodySide { fill: #9b4040; }
     .trimSide { fill: #757574; }
     .trimEdge { fill: #545151; }
@@ -24,4 +25,6 @@
     .grill { fill: #67717f; }
     .trimDisplayLine { stroke: #594c44; }
     .cushion { fill: #caccbe; }
+    .interior { fill: #8c8b7e; }
+    .steeringWheelDisplayLine { stroke: #3b3927; }
 }

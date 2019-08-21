@@ -25,7 +25,8 @@ import {
 } from '../../shared'
 import {
     PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_MIRIAM_SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -65,6 +66,7 @@ const ARRANGEMENTS_THINGS = {
                 REATTA_SHARED,
                 SNOWGLOBE_SHARED,
                 PEOPLE_BENNETT_SHARED,
+                PEOPLE_MIRIAM_SHARED,
                 PEOPLE_ALL_SHARED
             ]
         }

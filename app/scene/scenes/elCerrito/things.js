@@ -22,6 +22,11 @@ import {
     INTERIOR_SHARED,
     REATTA_SHARED
 } from '../../shared'
+import {
+    PEOPLE_ALL_SHARED,
+    PEOPLE_BENNETT_SHARED,
+    PEOPLE_MIRIAM_SHARED
+} from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -84,11 +89,15 @@ export const THINGS_EL_CERRITO_REATTA = {
     [PUPPET]: {
         [PUPPET_REATTA]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 1,
-                zHeight: 0.5
-            }
+            xPosition: 9.5,
+            zOffset: -0.025,
+            scaleFactor: 0.6,
+            sharedStyle: [
+                REATTA_SHARED,
+                PEOPLE_ALL_SHARED,
+                PEOPLE_BENNETT_SHARED,
+                PEOPLE_MIRIAM_SHARED
+            ]
         }
     }
 }
