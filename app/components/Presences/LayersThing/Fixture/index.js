@@ -20,7 +20,6 @@ import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
 // import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
 // import basementBeerMara from 'assets/svgs/fixtures/basementBeerMara'
 // import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
-// import cavemanBones from 'assets/svgs/fixtures/cavemanBones'
 import pushBroom from 'assets/svgs/fixtures/pushBroom'
 import stepladder from 'assets/svgs/fixtures/stepladder'
 import mannequin from 'assets/svgs/fixtures/mannequin'
@@ -69,7 +68,6 @@ import {
     BASEMENT_BEER_CASE,
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT,
-    CAVEMAN_BONES,
     PUSH_BROOM__BACKSTAGE,
     PUSH_BROOM__TUNNEL,
     STEPLADDER,
@@ -124,7 +122,6 @@ export default {
     [BASEMENT_BEER_CASE]: false,
     [BASEMENT_BEER_MARA]: false,
     [BASEMENT_BEER_BENNETT]: false,
-    [CAVEMAN_BONES]: false,
     [PUSH_BROOM__BACKSTAGE]: pushBroom,
     [PUSH_BROOM__TUNNEL]: pushBroom,
     [STEPLADDER]: stepladder,

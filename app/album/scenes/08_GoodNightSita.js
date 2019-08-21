@@ -41,12 +41,12 @@ import {
 } from '../../constants/scene/things/bubbles'
 import {
     MUSEUM_DISPLAY,
+    CAVEMAN_BONES,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT
 } from '../../constants/scene/things/cutouts'
 import {
-    CAVEMAN_BONES,
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
@@ -100,9 +100,7 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [MUSEUM_DISPLAY]: true
-            },
-            [FIXTURE]: {
+                [MUSEUM_DISPLAY]: true,
                 [CAVEMAN_BONES]: true
             }
         },

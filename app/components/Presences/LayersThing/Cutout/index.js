@@ -23,6 +23,7 @@ import campusTreeDouble from 'assets/svgs/cutouts/campusTreeDouble'
 import monitorFront from 'assets/svgs/cutouts/monitorFront'
 import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront'
 import museumDisplay from 'assets/svgs/cutouts/museumDisplay'
+// import cavemanBones from 'assets/svgs/fixtures/cavemanBones'
 import sandbags from 'assets/svgs/cutouts/sandbags'
 import stageLights from 'assets/svgs/cutouts/stageLights'
 import trafficLight from 'assets/svgs/cutouts/trafficLight'
@@ -86,6 +87,7 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
     MUSEUM_DISPLAY,
+    CAVEMAN_BONES,
     SANDBAGS,
     STAGE_LIGHTS,
     TRAFFIC_LIGHT,
@@ -157,6 +159,7 @@ export default {
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
     [MUSEUM_DISPLAY]: museumDisplay,
+    [CAVEMAN_BONES]: false,
     [SANDBAGS]: sandbags,
     [STAGE_LIGHTS]: stageLights,
     [TRAFFIC_LIGHT]: trafficLight,
