@@ -35,11 +35,11 @@ const LayersThing = ({
             <Layer {...flats} {...{ presenceType: FLAT }} />
             <Layer {...doors} {...{ presenceType: DOOR }} />
             <Layer {...panels} {...{ presenceType: PANEL }} />
-            <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
             <Layer {...cutouts} {...{ presenceType: CUTOUT }} />
-            <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
             <Layer {...furnitures} {...{ presenceType: FURNITURE }} />
             <Layer {...fixtures} {...{ presenceType: FIXTURE }} />
+            <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
+            <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
             <Layer {...puppets} {...{ presenceType: PUPPET }} />
         </___>
     )

@@ -38,5 +38,15 @@ export default [
         taskName: 'captainBedLamp',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'recordPlayerStool',
+        workedHours: 2.5,
+        neededHours: 2.5
+    },
+    {
+        taskName: 'hospitalRecordPlayer',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

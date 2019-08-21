@@ -1,6 +1,6 @@
 import playgroundBall from 'assets/svgs/fixtures/playgroundBall'
 // import safewayBag from 'assets/svgs/fixtures/safewayBag'
-// import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
+import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
 // import shoppingCart from 'assets/svgs/fixtures/shoppingCart'
 // import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
@@ -45,7 +45,7 @@ import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
 // import burgerWrapper from 'assets/svgs/fixtures/burgerWrapper'
 // import lizPhoneBase from 'assets/svgs/fixtures/lizPhoneBase'
 // import lizPhoneBaseReflection from 'assets/svgs/fixtures/lizPhoneBaseReflection'
-// import hospitalRecordPlayer from 'assets/svgs/fixtures/hospitalRecordPlayer'
+import hospitalRecordPlayer from 'assets/svgs/fixtures/hospitalRecordPlayer'
 
 import {
     PLAYGROUND_BALL,
@@ -104,7 +104,7 @@ import {
 export default {
     [PLAYGROUND_BALL]: playgroundBall,
     [SAFEWAY_BAG]: false,
-    [RECORD_PLAYER_STOOL]: false,
+    [RECORD_PLAYER_STOOL]: recordPlayerStool,
     [SHOPPING_CART]: false,
     [CHRISTOPHER_LETTERS]: false,
     [BACKPACK_BENNETT]: false,
@@ -152,5 +152,5 @@ export default {
     [BURGER_WRAPPER]: false,
     [LIZ_PHONE_BASE]: false,
     [LIZ_PHONE_BASE_REFLECTION]: false,
-    [HOSPITAL_RECORD_PLAYER]: false
+    [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer
 }

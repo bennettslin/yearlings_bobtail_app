@@ -149,16 +149,6 @@ export default [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: 'recordPlayerStool',
-        workedHours: 0,
-        neededHours: 2.5
-    },
-    {
-        taskName: 'hospitalRecordPlayer',
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // Instruments.
     {

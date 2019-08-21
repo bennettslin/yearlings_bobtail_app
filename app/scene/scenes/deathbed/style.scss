@@ -1,157 +1,63 @@
 .tennisCourt {
-    .treeFront {
-        fill: #5c995d;
-    }
-
-    .treeRear {
-        fill: #67ab68;
-    }
-
-    .foliage {
-        fill: #59945a;
-    }
-
-    .court {
-        fill: #537ac7;
-    }
-
-    .stripeDisplayLine {
-        stroke: #fff;
-    }
-
-    .pole {
-        fill: #747577;
-    }
-
-    .mesh {
-        fill: #b1bd94;
-    }
-
-    .net {
-        fill: #4a4f3e;
-    }
+    .treeFront { fill: #5c995d; }
+    .treeRear { fill: #67ab68; }
+    .foliage { fill: #59945a; }
+    .court { fill: #537ac7; }
+    .stripeDisplayLine { stroke: #fff; }
+    .pole { fill: #747577; }
+    .mesh { fill: #b1bd94; }
+    .net { fill: #4a4f3e; }
 }
 
 .ivDrip {
-    .pole {
-        fill: #333;
-    }
-
-    .boxSide {
-        fill: #96c;
-    }
-
-    .boxTop {
-        fill: #639;
-    }
-
-    .boxFront {
-        fill: #c9f;
-    }
-
-    .buttons {
-        fill: #cc6;
-    }
-
-    .buttonsLine {
-        stroke: #bb5;
-    }
-
-    .bar {
-        fill: #699;
-    }
-
-    .barLine {
-        stroke: #588;
-    }
-
-    .console {
-        fill: #6c9;
-    }
-
-    .bagEmpty {
-        fill: #cff;
-    }
-
-    .bagFull {
-        fill: #3cc;
-    }
-
-    .bagCap {
-        fill: #fff;
-    }
-
-    .capLine {
-        stroke: #eee;
-    }
+    .pole { fill: #333; }
+    .boxSide { fill: #96c; }
+    .boxTop { fill: #639; }
+    .boxFront { fill: #c9f; }
+    .buttons { fill: #cc6; }
+    .buttonsLine { stroke: #bb5; }
+    .bar { fill: #699; }
+    .barLine { stroke: #588; }
+    .console { fill: #6c9; }
+    .bagEmpty { fill: #cff; }
+    .bagFull { fill: #3cc; }
+    .bagCap { fill: #fff; }
+    .capLine { stroke: #eee; }
 }
 
 .hospitalBed {
-    .swivel {
-        fill: #94949b;
-    }
+    .swivel { fill: #94949b; }
+    .wheelSide { fill: #383838; }
+    .wheelFront { fill: #484849; }
+    .headBoardEdge { fill: #6b5641; }
+    .headBoardSurface { fill: #af8158; }
+    .platformBelowTop { fill: #708e8b; }
+    .platformBelowSide { fill: #4c6263; }
+    .platformBelowFront { fill: #8aaaa9; }
+    .frameSide { fill: #78668e; }
+    .frameFront { fill: #878ba0; }
+    .platformAboveSide { fill: #5a7477; }
+    .platformAboveFront { fill: #9bc4c3; }
+    .platformAboveTop { fill: #789e9a; }
+    .mattressSide { fill: #7f6671; }
+    .mattressFront { fill: #997785; }
+    .footBoardEdge { fill: #7f664b; }
+    .footBoardSurface { fill: #c69360; }
+}
 
-    .wheelSide {
-        fill: #383838;
-    }
-
-    .wheelFront {
-        fill: #484849;
-    }
-
-    .headBoardEdge {
-        fill: #6b5641;
-    }
-
-    .headBoardSurface {
-        fill: #af8158;
-    }
-
-    .platformBelowTop {
-        fill: #708e8b;
-    }
-
-    .platformBelowSide {
-        fill: #4c6263;
-    }
-
-    .platformBelowFront {
-        fill: #8aaaa9;
-    }
-
-    .frameSide {
-        fill: #78668e;
-    }
-
-    .frameFront {
-        fill: #878ba0;
-    }
-
-    .platformAboveSide {
-        fill: #5a7477;
-    }
-
-    .platformAboveFront {
-        fill: #9bc4c3;
-    }
-
-    .platformAboveTop {
-        fill: #789e9a;
-    }
-
-    .mattressSide {
-        fill: #7f6671;
-    }
-
-    .mattressFront {
-        fill: #997785;
-    }
-
-    .footBoardEdge {
-        fill: #7f664b;
-    }
-
-    .footBoardSurface {
-        fill: #c69360;
-    }
+.hospitalRecordPlayer {
+    .baseSide { fill: #73654e; }
+    .baseFront { fill: #87775c; }
+    .trimSide { fill: #bdb17f; }
+    .trimFront { fill: #aba073; }
+    .trimTop { fill: #c7ba86; }
+    .silverDark { fill: #7f9997; }
+    .hornOuter { fill: #b5a357; }
+    .hornInner { fill: #bdac66; }
+    .silverMedium { fill: #8ba8a7; }
+    .record { fill: #4a5450; }
+    .label { fill: #acb37b; }
+    .stylusSide { fill: #a9b364; }
+    .stylusFront { fill: #949c57; }
+    .silverLight { fill: #96b5b4; }
 }
