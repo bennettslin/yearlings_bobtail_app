@@ -26,6 +26,7 @@ import {
     PEAHEN
 } from '../../../constants/scene/things/puppets'
 import {
+    BUBBLE_SHARED,
     DOOR_SHARED,
     PEAFOWL_SHARED
 } from '../../shared'
@@ -128,35 +129,29 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
     [BUBBLE]: {
         [BUBBLE_SMALL__LIZ]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 3.4,
+            zOffset: 2.4,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [BUBBLE_MEDIUM__LIZ]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 3.75,
+            zOffset: 2.5,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [BUBBLE_LARGE__LIZ]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
+            xPosition: 4.5,
+            zOffset: 2.5,
+            scaleFactor: 0.4,
+            sharedStyle: BUBBLE_SHARED
         },
         [LIZ_THOUGHT]: {
             yIndex: 5,
             xPosition: 7,
-            zOffset: 1,
+            zOffset: 0.5,
             scaleFactor: 0.45,
             sharedStyle: [
                 PEOPLE_BENNETT_SHARED,
