@@ -1,121 +1,64 @@
 .valleyBackdrop {
-    .mountain {
-        fill: #9c7ba3;
-    }
-
-    .foliageFar {
-        fill: #5a7750;
-    }
-
-    .palmTrunk {
-        fill: #777057;
-    }
-
-    .palmFrond {
-        fill: #648e5e;
-    }
-
-    .building {
-        fill: #566884;
-    }
-
-    .foliageNear {
-        fill: #648757;
-    }
+    .mountain {fill: #9c7ba3; }
+    .foliageFar {fill: #5a7750; }
+    .palmTrunk {fill: #777057; }
+    .palmFrond {fill: #648e5e; }
+    .building {fill: #566884; }
+    .foliageNear {fill: #648757; }
 }
 
 .valleyFreeway {
-    .overpass {
-        fill: #403f36;
-    }
-
-    .buildingSide {
-        fill: #705b80;  
-    }
-
-    .buildingFront {
-        fill: #866d99;
-    }
-
-    .foliage {
-        fill: #5b8c4e;
-    }
-
-    .palmTrunk {
-        fill: #777057;
-    }
-
-    .palmFrond {
-        fill: #648e5e;
-    }
-
-    .handleSide {
-        fill: #8f946d;
-    }
-
-    .handleFront {
-        fill: #b4ba89;
-    }
-
-    .wellsFargoSide {
-        fill: #7a7a76;
-    }
-
-    .wellsFargoFrontRight {
-        fill: #afb0aa;
-    }
-
-    .wellsFargoFrontCentre {
-        fill: #b7b8b2;
-    }
-
-    .wellsFargoFrontLeft {
-        fill: #bcbdb7;
-    }
-
-    .shoulder {
-        fill: #8c8b77;
-    }
-
-    .road {
-        fill: #5c5b4e;
-    }
-
-    .divider {
-        fill: #b5b5b5;
-    }
-
-    .pole {
-        fill: #524f4a;
-    }
-
-    .signBack {
-        fill: #5f735c;
-    }
-
-    .frame {
-        fill: #66635c;
-    }
-
-    .signFront {
-        fill: #098f00;
-    }
+    .overpass {fill: #403f36; }
+    .buildingSide {fill: #705b80; }
+    .buildingFront {fill: #866d99; }
+    .foliage {fill: #5b8c4e; }
+    .palmTrunk {fill: #777057; }
+    .palmFrond {fill: #648e5e; }
+    .handleSide {fill: #8f946d; }
+    .handleFront {fill: #b4ba89; }
+    .wellsFargoSide {fill: #7a7a76; }
+    .wellsFargoFrontRight {fill: #afb0aa; }
+    .wellsFargoFrontCentre {fill: #b7b8b2; }
+    .wellsFargoFrontLeft {fill: #bcbdb7; }
+    .shoulder {fill: #8c8b77; }
+    .road {fill: #5c5b4e; }
+    .divider {fill: #b5b5b5; }
+    .pole {fill: #524f4a; }
+    .signBack {fill: #5f735c; }
+    .frame {fill: #66635c; }
+    .signFront {fill: #098f00; }
 }
 
 .overpassSignBack {
-    .board {
-        fill: #063;
-    }
+    .board {fill: #063; }
+    .lattice {fill: #666; }
+    .joint {fill: #333; }
+    .frame {fill: #999; }
+}
 
-    .lattice {
-        fill: #666;
-    }
-
-    .joint {
-        fill: #333;
-    }
-
-    .frame {
-        fill: #999;
-    }
+.shoppingCart {
+    .wheelRear {fill: #3a404d; }
+    .hubRear {fill: #606a80; }
+    .swivelRear {fill: #8694b3; }
+    .cartRear {fill: rgba(225, 225, 250, 0.75); }
+    .mountRear {fill: #798f75; }
+    .barRear {fill: #818491; }
+    .bagRear {fill: #595650; }
+    .bagFront {fill: #5c5953; }
+    .bagLiningOuter {fill: #63615a; }
+    .bottleCapCreaseLine {fill: none; }
+    .bagLiningInner {fill: #54514c; }
+    .bottleMiddleSide {fill: #4b3f57; }
+    .bottleMiddleBottom {fill: #5a4c69; }
+    .bottleRear {fill: #3f574f; }
+    .labelRear {fill: #5e6b8f; }
+    .bottleFront {fill: #63484c; }
+    .labelFront {fill: #708767; }
+    .bottleCap {fill: #7d6f4f; }
+    .wheelFront {fill: #434a59; }
+    .hubFront {fill: #6d7991; }
+    .swivelFront {fill: #8e9dbd; }
+    .cart {fill: #8c909e; }
+    .mountFront {fill: #869e82; }
+    .barFront {fill: #999ead; }
 }

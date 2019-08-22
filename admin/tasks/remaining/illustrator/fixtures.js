@@ -72,11 +72,6 @@ export default [
 
     // Big.
     {
-        taskName: 'shoppingCart',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'cavemanBones',
         workedHours: 0,
         neededHours: 3

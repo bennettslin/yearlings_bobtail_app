@@ -253,5 +253,10 @@ export default [
         taskName: 'ashCan',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'shoppingCart',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

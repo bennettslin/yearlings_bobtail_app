@@ -2,7 +2,7 @@ import fireHydrant from 'assets/svgs/cutouts/fireHydrant'
 import playgroundSlide from 'assets/svgs/cutouts/playgroundSlide'
 import mirroredSink from 'assets/svgs/cutouts/mirroredSink'
 import towelRack from 'assets/svgs/cutouts/towelRack'
-// import shoppingCart from 'assets/svgs/fixtures/shoppingCart'
+import shoppingCart from 'assets/svgs/cutouts/shoppingCart'
 import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack'
 import porchPlant from 'assets/svgs/cutouts/porchPlant'
 import campfire from 'assets/svgs/cutouts/campfire'
@@ -23,7 +23,7 @@ import campusTreeDouble from 'assets/svgs/cutouts/campusTreeDouble'
 import monitorFront from 'assets/svgs/cutouts/monitorFront'
 import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront'
 import museumDisplay from 'assets/svgs/cutouts/museumDisplay'
-// import cavemanBones from 'assets/svgs/fixtures/cavemanBones'
+// import cavemanBones from 'assets/svgs/cutouts/cavemanBones'
 import sandbags from 'assets/svgs/cutouts/sandbags'
 import stageLights from 'assets/svgs/cutouts/stageLights'
 import trafficLight from 'assets/svgs/cutouts/trafficLight'
@@ -129,7 +129,7 @@ export default {
     [PLAYGROUND_SLIDE]: playgroundSlide,
     [MIRRORED_SINK]: mirroredSink,
     [TOWEL_RACK]: towelRack,
-    [SHOPPING_CART]: false,
+    [SHOPPING_CART]: shoppingCart,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
     [PORCH_PLANT__LEFT]: porchPlant,
     [PORCH_PLANT__RIGHT]: porchPlant,

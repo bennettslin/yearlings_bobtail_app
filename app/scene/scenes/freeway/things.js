@@ -21,12 +21,9 @@ const ARRANGEMENTS_THINGS = {
     },
     [CUTOUT]: {
         [SHOPPING_CART]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 4,
-                zHeight: 3
-            }
+            yIndex: 5,
+            xPosition: 8,
+            scaleFactor: 0.25
         },
         [OVERPASS_SIGN_BACK]: {
             yIndex: 2,
