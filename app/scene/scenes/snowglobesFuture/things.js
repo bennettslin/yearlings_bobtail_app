@@ -82,11 +82,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [RECORDING_BEERS]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 7,
+            scaleFactor: 0.25
         }
     },
     [PANEL]: {

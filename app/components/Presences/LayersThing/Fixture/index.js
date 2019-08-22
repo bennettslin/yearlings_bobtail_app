@@ -38,7 +38,7 @@ import evianBottles from 'assets/svgs/fixtures/evianBottles'
 // import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
 import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
 // import recordingMic from 'assets/svgs/fixtures/recordingMic'
-// import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
+import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
 // import crackedPicture from 'assets/svgs/fixtures/crackedPicture'
 // import burgerWrapper from 'assets/svgs/fixtures/burgerWrapper'
 // import lizPhoneBase from 'assets/svgs/fixtures/lizPhoneBase'
@@ -141,7 +141,7 @@ export default {
     [TCHOTCHKES]: false,
     [TETHERBALL_POLE]: tetherballPole,
     [RECORDING_MIC]: false,
-    [RECORDING_BEERS]: false,
+    [RECORDING_BEERS]: recordingBeers,
     [CRACKED_PICTURE]: false,
     [BURGER_WRAPPER]: false,
     [LIZ_PHONE_BASE]: false,

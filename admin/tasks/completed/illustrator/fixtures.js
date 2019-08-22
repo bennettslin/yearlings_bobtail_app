@@ -48,5 +48,10 @@ export default [
         taskName: 'hospitalRecordPlayer',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'recordingBeers',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
