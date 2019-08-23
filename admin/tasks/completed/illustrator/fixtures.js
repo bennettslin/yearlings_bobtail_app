@@ -58,5 +58,15 @@ export default [
         taskName: 'recordingBeers',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'basementBeerMara',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'basementBeerBennett',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -18,8 +18,8 @@ import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
 // import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
 // import guitarCaseUpright from 'assets/svgs/fixtures/guitarCaseUpright'
 // import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
-// import basementBeerMara from 'assets/svgs/fixtures/basementBeerMara'
-// import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
+import basementBeerMara from 'assets/svgs/fixtures/basementBeerMara'
+import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
 import pushBroom from 'assets/svgs/fixtures/pushBroom'
 import stepladder from 'assets/svgs/fixtures/stepladder'
 import mannequin from 'assets/svgs/fixtures/mannequin'
@@ -120,8 +120,8 @@ export default {
     [BASS_CASE_UPRIGHT]: false,
     [GUITAR_CASE_UPRIGHT]: false,
     [BASEMENT_BEER_CASE]: false,
-    [BASEMENT_BEER_MARA]: false,
-    [BASEMENT_BEER_BENNETT]: false,
+    [BASEMENT_BEER_MARA]: basementBeerMara,
+    [BASEMENT_BEER_BENNETT]: basementBeerBennett,
     [PUSH_BROOM__BACKSTAGE]: pushBroom,
     [PUSH_BROOM__TUNNEL]: pushBroom,
     [STEPLADDER]: stepladder,

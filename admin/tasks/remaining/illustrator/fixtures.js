@@ -83,16 +83,6 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: 'basementBeerMara',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'basementBeerBennett',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Crumpled edges.
     {
