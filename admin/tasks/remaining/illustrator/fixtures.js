@@ -134,11 +134,6 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: 'bennettRecordPlayer',
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // Instruments.
     {

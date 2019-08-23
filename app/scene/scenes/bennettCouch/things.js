@@ -28,11 +28,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 2,
-                zHeight: 2
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.25
         },
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,

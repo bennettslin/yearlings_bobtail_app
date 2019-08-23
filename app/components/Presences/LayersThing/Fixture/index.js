@@ -9,7 +9,7 @@ import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
 // import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
 // import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
 // import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
-// import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
+import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
 import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
 // import keyboard from 'assets/svgs/fixtures/keyboard'
 // import cashBox from 'assets/svgs/fixtures/cashBox'
@@ -109,7 +109,7 @@ export default {
     [BEYONDER_ENVELOPE]: false,
     [BENNETT_LETTERS]: false,
     [THROWN_FRUIT]: false,
-    [BENNETT_RECORD_PLAYER]: false,
+    [BENNETT_RECORD_PLAYER]: bennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: bennettCouchLamp,
     [KEYBOARD]: false,
     [CASH_BOX]: false,

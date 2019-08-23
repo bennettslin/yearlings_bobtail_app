@@ -50,6 +50,11 @@ export default [
         neededHours: 1.5
     },
     {
+        taskName: 'bennettRecordPlayer',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
         taskName: 'recordingBeers',
         workedHours: 1.5,
         neededHours: 1.5
