@@ -1,5 +1,5 @@
 import playgroundBall from 'assets/svgs/fixtures/playgroundBall'
-// import safewayBag from 'assets/svgs/fixtures/safewayBag'
+import safewayBag from 'assets/svgs/fixtures/safewayBag'
 import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
 // import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
@@ -99,7 +99,7 @@ import {
 
 export default {
     [PLAYGROUND_BALL]: playgroundBall,
-    [SAFEWAY_BAG]: false,
+    [SAFEWAY_BAG]: safewayBag,
     [RECORD_PLAYER_STOOL]: recordPlayerStool,
     [CHRISTOPHER_LETTERS]: false,
     [BACKPACK_BENNETT]: false,

@@ -57,11 +57,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [SAFEWAY_BAG]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 10,
+            scaleFactor: 0.25
         }
     },
     [FLAT]: {

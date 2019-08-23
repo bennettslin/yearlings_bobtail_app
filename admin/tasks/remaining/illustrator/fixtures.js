@@ -33,11 +33,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'safewayBag',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'redEnvelopeMoney',
         workedHours: 0,
         neededHours: 2
@@ -69,19 +64,17 @@ export default [
         workedHours: 0,
         neededHours: 2
     },
+    {
+        taskName: 'basementBeerCase',
+        workedHours: 0,
+        neededHours: 1
+    },
 
     // Big.
     {
         taskName: 'cavemanBones',
         workedHours: 0,
         neededHours: 3
-    },
-
-    // Beers.
-    {
-        taskName: 'basementBeerCase',
-        workedHours: 0,
-        neededHours: 1
     },
 
     // Crumpled edges.
