@@ -73,5 +73,10 @@ export default [
         taskName: 'safewayBag',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'thrownFruit',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
