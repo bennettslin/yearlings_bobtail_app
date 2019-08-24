@@ -4856,5 +4856,10 @@ export default [
         taskName: `More shared styles.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Convert actor tifs to pngs.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

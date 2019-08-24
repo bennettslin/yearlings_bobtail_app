@@ -108,7 +108,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'bassCaseUpright',
+        taskName: 'bass',
         workedHours: 0,
         neededHours: 2
     },
@@ -118,12 +118,12 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'guitarCaseUpright',
+        taskName: 'bass cases',
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: 'guitarCaseOpen',
+        taskName: 'guitar cases',
         workedHours: 0,
         neededHours: 2
     },

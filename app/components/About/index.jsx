@@ -36,7 +36,7 @@ const About = ({
                 Album written, arranged, and performed by Bennett Lin.
             </p>
             <p>
-                Website annotated, illustrated, and developed by Bennett Lin.
+                Website annotated, illustrated, and coded by Bennett Lin.
             </p>
             {/* TODO: Eventually delete this, of course. */}
             {/* <p>
