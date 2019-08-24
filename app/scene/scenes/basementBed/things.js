@@ -5,7 +5,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [CRACKED_PICTURE]: {
             yIndex: 3,
-            xPosition: 9.5,
+            xPosition: 0.5,
+            zOffset: 4,
             scaleFactor: 0.25
         }
     }
