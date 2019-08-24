@@ -38,11 +38,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'beyonderEnvelope',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'cashBox',
         workedHours: 0,
         neededHours: 2

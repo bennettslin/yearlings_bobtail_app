@@ -93,5 +93,15 @@ export default [
         taskName: 'vaseline',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'haircutScissors',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'beyonderEnvelope',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

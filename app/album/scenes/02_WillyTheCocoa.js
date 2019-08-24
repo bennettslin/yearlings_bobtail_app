@@ -65,7 +65,10 @@ import {
     CAMPFIRE
 } from '../../constants/scene/things/cutouts'
 import { PORCH_DOOR } from '../../constants/scene/things/doors'
-import { CHRISTOPHER_LETTERS } from '../../constants/scene/things/fixtures'
+import {
+    CHRISTOPHER_LETTERS,
+    HAIRCUT_SCISSORS
+} from '../../constants/scene/things/fixtures'
 import {
     VALLEY_FREEWAY,
     NOHO_HOUSE_LEFT,
@@ -161,6 +164,9 @@ export default [
             },
             [DOOR]: {
                 [PORCH_DOOR]: true
+            },
+            [FIXTURE]: {
+                [HAIRCUT_SCISSORS]: true
             }
         },
         cubes: PORCH_KEY,

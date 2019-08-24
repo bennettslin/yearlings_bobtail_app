@@ -1,6 +1,7 @@
 export const PLAYGROUND_BALL = 'playgroundBall'
 export const SAFEWAY_BAG = 'safewayBag'
 export const RECORD_PLAYER_STOOL = 'recordPlayerStool'
+export const HAIRCUT_SCISSORS = 'haircutScissors'
 export const CHRISTOPHER_LETTERS = 'christopherLetters'
 export const BACKPACK_BENNETT = 'backpackBennett'
 export const FRIDGE_DRAWINGS = 'fridgeDrawings'

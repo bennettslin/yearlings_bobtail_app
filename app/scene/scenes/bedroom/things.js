@@ -172,12 +172,10 @@ export const THINGS_BEDROOM_ASLEEP = {
 export const THINGS_BEDROOM_SHAKEN = {
     [FIXTURE]: {
         [BEYONDER_ENVELOPE]: {
-            yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            yIndex: 3,
+            xPosition: 2,
+            zOffset: 0.1,
+            scaleFactor: 0.25
         }
     },
     [CARDBOARD]: {
