@@ -103,11 +103,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'keyboard',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'bass',
         workedHours: 0,
         neededHours: 2

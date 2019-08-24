@@ -103,5 +103,10 @@ export default [
         taskName: 'beyonderEnvelope',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'keyboard',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

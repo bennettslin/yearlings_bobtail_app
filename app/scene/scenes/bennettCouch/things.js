@@ -116,12 +116,9 @@ export const THINGS_BENNETT_COUCH_READING = {
     },
     [FIXTURE]: {
         [KEYBOARD]: {
-            yIndex: 2,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 0.5,
-                zHeight: 1
-            }
+            yIndex: 4,
+            xPosition: 8,
+            scaleFactor: 0.25
         }
     }
 }

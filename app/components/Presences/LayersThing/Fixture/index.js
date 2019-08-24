@@ -12,7 +12,7 @@ import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
 import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
 import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
 import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
-// import keyboard from 'assets/svgs/fixtures/keyboard'
+import keyboard from 'assets/svgs/fixtures/keyboard'
 // import cashBox from 'assets/svgs/fixtures/cashBox'
 // import guitar from 'assets/svgs/fixtures/guitar'
 // import drumKit from 'assets/svgs/fixtures/drumKit'
@@ -114,7 +114,7 @@ export default {
     [THROWN_FRUIT]: thrownFruit,
     [BENNETT_RECORD_PLAYER]: bennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: bennettCouchLamp,
-    [KEYBOARD]: false,
+    [KEYBOARD]: keyboard,
     [CASH_BOX]: false,
     [GUITAR]: false,
     [STAGE_MIC_SIDE__CROWD]: false,
