@@ -44,6 +44,7 @@ import {
     LIZ_THOUGHT
 } from '../../constants/scene/things/bubbles'
 import {
+    BLINDS_INSIDE_OPEN__LIZ,
     LIZ_DOOR,
     LIZ_DOOR_OPEN
 } from '../../constants/scene/things/doors'
@@ -70,6 +71,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {
@@ -95,6 +97,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {
@@ -120,6 +123,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [FIXTURE]: {
@@ -155,6 +159,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR_OPEN]: true
             },
             [PANEL]: {
@@ -188,6 +193,7 @@ export default [
                 [LIZ_DEFENCE_SPEECH]: true
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {
@@ -223,6 +229,7 @@ export default [
                 [LIZ_THOUGHT]: true
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {
@@ -248,6 +255,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {
@@ -276,6 +284,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE_OPEN__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {

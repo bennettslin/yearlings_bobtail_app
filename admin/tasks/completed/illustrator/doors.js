@@ -73,5 +73,20 @@ export default [
         taskName: 'waitingRoomDoorOpen',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'blindsOutside',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'blindsInside',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'blindsInsideOpen',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

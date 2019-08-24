@@ -10,21 +10,6 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'blindsOutside',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'blindsInside',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'blindsInsideOpen',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'ironGateLow',
         workedHours: 0,
         neededHours: 0.5

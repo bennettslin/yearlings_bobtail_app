@@ -3,6 +3,7 @@ import {
     BACKDROP,
     BUBBLE,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     PANEL
@@ -47,6 +48,10 @@ import {
     TRAFFIC_LIGHT
 } from '../../constants/scene/things/cutouts'
 import {
+    BLINDS_OUTSIDE__LIZ_ENDING,
+    BLINDS_OUTSIDE__LIZ_ENDED
+} from '../../constants/scene/things/doors'
+import {
     PUSH_BROOM__BACKSTAGE,
     STEPLADDER,
     MANNEQUIN
@@ -75,6 +80,9 @@ export default [
                         instance: DATE_ENDING
                     }
                 }
+            },
+            [DOOR]: {
+                [BLINDS_OUTSIDE__LIZ_ENDING]: true
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -210,6 +218,9 @@ export default [
             },
             [CUTOUT]: {
                 [TRAFFIC_LIGHT]: true
+            },
+            [DOOR]: {
+                [BLINDS_OUTSIDE__LIZ_ENDED]: true
             }
         },
         cubes: LIZ_GATE_STREET_KEY,

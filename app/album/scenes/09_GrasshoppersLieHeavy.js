@@ -82,6 +82,8 @@ import {
 import {
     DISHROOM_DOOR,
     NEIGHBOUR_DOOR,
+    BLINDS_OUTSIDE__NEIGHBOUR,
+    BLINDS_INSIDE_OPEN__BENNETT,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     WAITING_ROOM_DOOR,
@@ -304,6 +306,8 @@ export default [
             },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,
+                [BLINDS_OUTSIDE__NEIGHBOUR]: true,
+                [BLINDS_INSIDE_OPEN__BENNETT]: true,
                 [BENNETT_DOOR_INSIDE]: true
             },
             [FIXTURE]: {
@@ -341,6 +345,8 @@ export default [
             },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,
+                [BLINDS_OUTSIDE__NEIGHBOUR]: true,
+                [BLINDS_INSIDE_OPEN__BENNETT]: true,
                 [BENNETT_DOOR_INSIDE_OPEN]: true
             },
             [FIXTURE]: {

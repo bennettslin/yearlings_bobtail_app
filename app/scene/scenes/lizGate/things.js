@@ -1,6 +1,7 @@
 import {
     BUBBLE,
-    CUTOUT
+    CUTOUT,
+    DOOR
 } from '../../../constants/scene'
 import {
     BUBBLE_SMALL__GO_KART,
@@ -8,7 +9,14 @@ import {
     GO_KART_THOUGHT
 } from '../../../constants/scene/things/bubbles'
 import { TRAFFIC_LIGHT } from '../../../constants/scene/things/cutouts'
-import { BUBBLE_SHARED } from '../../shared'
+import {
+    BLINDS_OUTSIDE__LIZ_ENDING,
+    BLINDS_OUTSIDE__LIZ_ENDED
+} from '../../../constants/scene/things/doors'
+import {
+    BUBBLE_SHARED,
+    WINDOW_SHARED
+} from '../../shared'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLE]: {
@@ -38,6 +46,22 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 5,
             xPosition: 9.5,
             scaleFactor: 0.3
+        }
+    },
+    [DOOR]: {
+        [BLINDS_OUTSIDE__LIZ_ENDING]: {
+            yIndex: 2,
+            xPosition: 6,
+            scaleFactor: 0.575,
+            zOffset: 2.5,
+            sharedStyle: WINDOW_SHARED
+        },
+        [BLINDS_OUTSIDE__LIZ_ENDED]: {
+            yIndex: 2,
+            xPosition: 3,
+            scaleFactor: 0.575,
+            zOffset: 2.5,
+            sharedStyle: WINDOW_SHARED
         }
     }
 }

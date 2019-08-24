@@ -65,7 +65,10 @@ import {
     CAMPUS_TREE_SINGLE__CAMPANILE,
     CAMPUS_TREE_DOUBLE__CAMPANILE
 } from '../../constants/scene/things/cutouts'
-import { BENNETT_DOOR_OUTSIDE } from '../../constants/scene/things/doors'
+import {
+    BLINDS_OUTSIDE__BENNETT,
+    BENNETT_DOOR_OUTSIDE
+} from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP
@@ -102,6 +105,7 @@ export default [
                 [RECYCLABLES]: true
             },
             [DOOR]: {
+                [BLINDS_OUTSIDE__BENNETT]: true,
                 [BENNETT_DOOR_OUTSIDE]: true
             }
         },

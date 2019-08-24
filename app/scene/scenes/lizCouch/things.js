@@ -14,6 +14,8 @@ import {
     LIZ_THOUGHT
 } from '../../../constants/scene/things/bubbles'
 import {
+    BLINDS_INSIDE__LIZ,
+    BLINDS_INSIDE_OPEN__LIZ,
     LIZ_DOOR,
     LIZ_DOOR_OPEN
 } from '../../../constants/scene/things/doors'
@@ -28,7 +30,8 @@ import {
 import {
     BUBBLE_SHARED,
     DOOR_SHARED,
-    PEAFOWL_SHARED
+    PEAFOWL_SHARED,
+    WINDOW_SHARED
 } from '../../shared'
 import {
     PEOPLE_ALL_SHARED,
@@ -40,6 +43,20 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
+        [BLINDS_INSIDE__LIZ]: {
+            yIndex: 2,
+            xPosition: 6,
+            scaleFactor: 0.575,
+            zOffset: 2.5,
+            sharedStyle: WINDOW_SHARED
+        },
+        [BLINDS_INSIDE_OPEN__LIZ]: {
+            yIndex: 2,
+            xPosition: 6,
+            scaleFactor: 0.575,
+            zOffset: 2.5,
+            sharedStyle: WINDOW_SHARED
+        },
         [LIZ_DOOR]: {
             yIndex: 5,
             xPosition: 10.16,

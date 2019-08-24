@@ -54,7 +54,10 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
-import { LIZ_DOOR } from '../../constants/scene/things/doors'
+import {
+    BLINDS_INSIDE__LIZ,
+    LIZ_DOOR
+} from '../../constants/scene/things/doors'
 import {
     GUITAR,
     DRUMKIT,
@@ -85,6 +88,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {
@@ -218,6 +222,7 @@ export default [
                 }
             },
             [DOOR]: {
+                [BLINDS_INSIDE__LIZ]: true,
                 [LIZ_DOOR]: true
             },
             [PANEL]: {

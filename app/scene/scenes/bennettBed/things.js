@@ -5,7 +5,9 @@ import {
     PANEL
 } from '../../../constants/scene'
 import {
+    BLINDS_OUTSIDE__NEIGHBOUR,
     NEIGHBOUR_DOOR,
+    BLINDS_INSIDE_OPEN__BENNETT,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN
 } from '../../../constants/scene/things/doors'
@@ -15,15 +17,32 @@ import {
 } from '../../../constants/scene/things/fixtures'
 import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
-import { DOOR_SHARED } from '../../shared'
+import {
+    DOOR_SHARED,
+    WINDOW_SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
+        [BLINDS_OUTSIDE__NEIGHBOUR]: {
+            yIndex: 1,
+            xPosition: 6.5,
+            zOffset: 2,
+            scaleFactor: 0.5,
+            sharedStyle: WINDOW_SHARED
+        },
         [NEIGHBOUR_DOOR]: {
             yIndex: 1,
             xPosition: 2.5,
-            scaleFactor: 0.6,
+            scaleFactor: 0.63,
             sharedStyle: DOOR_SHARED
+        },
+        [BLINDS_INSIDE_OPEN__BENNETT]: {
+            yIndex: 3,
+            xPosition: 7.5,
+            zOffset: 1,
+            scaleFactor: 0.575,
+            sharedStyle: WINDOW_SHARED
         },
         [BENNETT_DOOR_INSIDE]: {
             yIndex: 3,
