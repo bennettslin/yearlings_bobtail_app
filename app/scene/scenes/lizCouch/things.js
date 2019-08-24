@@ -66,11 +66,8 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [FIXTURE]: {
         [TCHOTCHKES]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 6.5,
+            scaleFactor: 0.25
         }
     },
     [PUPPET]: {
@@ -113,20 +110,6 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
 
 export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
     [BUBBLE]: {
-        [LIZ_THOUGHT]: {
-            yIndex: 5,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 4,
-                zHeight: 3,
-                zOffset: 4
-            }
-        }
-    }
-}
-
-export const THINGS_LIZ_COUCH_ASLEEP = {
-    [BUBBLE]: {
         [BUBBLE_SMALL__LIZ]: {
             yIndex: 5,
             xPosition: 3.4,
@@ -159,7 +142,10 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
                 PEOPLE_ALL_SHARED
             ]
         }
-    },
+    }
+}
+
+export const THINGS_LIZ_COUCH_ASLEEP = {
     [PUPPET]: {
         [OPAL_GAZING]: {
             yIndex: 1,

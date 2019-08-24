@@ -35,7 +35,7 @@ import evianBottles from 'assets/svgs/fixtures/evianBottles'
 // import drumsStacked from 'assets/svgs/fixtures/drumsStacked'
 // import bennettShoe from 'assets/svgs/fixtures/bennettShoe'
 // import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
-// import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
+import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
 import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
 // import recordingMic from 'assets/svgs/fixtures/recordingMic'
 import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
@@ -138,7 +138,7 @@ export default {
     [DRUMS_STACKED__CLUB]: false,
     [BENNETT_SHOE]: false,
     [BENNETT_SHOE_REFLECTION]: false,
-    [TCHOTCHKES]: false,
+    [TCHOTCHKES]: tchotchkes,
     [TETHERBALL_POLE]: tetherballPole,
     [RECORDING_MIC]: false,
     [RECORDING_BEERS]: recordingBeers,

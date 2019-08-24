@@ -47,11 +47,6 @@ export default [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: 'tchotchkes',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Drawings.
     {

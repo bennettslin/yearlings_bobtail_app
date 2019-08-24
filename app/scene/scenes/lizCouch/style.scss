@@ -1,259 +1,92 @@
 .lizCouch {
-    .shadow {
-        fill: #332c3a;
-    }
-
-    .foot {
-        fill: #51483a;
-    }
-
-    .pillowSurface {
-        fill: #645b6b;
-    }
-
-    .pillowEdge {
-        fill: #584f60;
-    }
-
-    .skirt {
-        fill: #52495b;
-    }
-
-    .weltDisplayLine {
-        stroke: #3b343f;
-    }
-
-    .cushion {
-        fill: #776882;
-    }
+    .shadow { fill: #332c3a; }
+    .foot { fill: #51483a; }
+    .pillowSurface { fill: #645b6b; }
+    .pillowEdge { fill: #584f60; }
+    .skirt { fill: #52495b; }
+    .weltDisplayLine { stroke: #3b343f; }
+    .cushion { fill: #776882; }
 }
 
 .khariAttackSpeech {
-    .ground {
-        fill: #8c763c;
-    }
-
-    .wall {
-        fill: #b5974b;
-    }
-
-    .cutout {
-        fill: #b8b8a7;
-    }
-
-    .supportFront {
-        fill: #bebfa1;
-    }
-
-    .supportSide {
-        fill: #9b9c84;
-    }
-
-    .mount {
-        fill: #80868f;
-    }
-
-    .shutter {
-        fill: #52565c;
-    }
-
-    .stageLightSide {
-        fill: #696e75;
-    }
-
-    .stageLightTop {
-        fill: #727880;
-    }
-
-    .stephanieShoe {
-        fill: #827967;
-    }
-
-    .stephanieDress {
-        fill: #c971c2;
-    }
-
-    .khariPants {
-        fill: #7bb87b;
-    }
-
-    .khariShoe {
-        fill: #595344;
-    }
-
-    .khariVest {
-        fill: #a9ba68;
-    }
+    .ground { fill: #8c763c; }
+    .wall { fill: #b5974b; }
+    .cutout { fill: #b8b8a7; }
+    .supportFront { fill: #bebfa1; }
+    .supportSide { fill: #9b9c84; }
+    .mount { fill: #80868f; }
+    .shutter { fill: #52565c; }
+    .stageLightSide { fill: #696e75; }
+    .stageLightTop { fill: #727880; }
+    .stephanieShoe { fill: #827967; }
+    .stephanieDress { fill: #c971c2; }
+    .khariPants { fill: #7bb87b; }
+    .khariShoe { fill: #595344; }
+    .khariVest { fill: #a9ba68; }
 }
 
 .lizDefenceSpeech {
-    .ground {
-        fill: #4a5b69;
-    }
-
-    .wall {
-        fill: #7d97b0;
-    }
-
-    .monitorSide {
-        fill: #3c3f4a;
-    }
-
-    .monitorFront {
-        fill: #575b6b;
-    }
-
-    .coneOuter {
-        fill: #e8e8e8;
-    }
-
-    .coneInner {
-        fill: #484c59;
-    }
-
-    .amyBoot {
-        fill: #86618f;
-    }
-
-    .amySkirt {
-        fill: #518bad;
-    }
-
-    .amyShirt {
-        fill: #f8ffba;
-    }
+    .ground { fill: #4a5b69; }
+    .wall { fill: #7d97b0; }
+    .monitorSide { fill: #3c3f4a; }
+    .monitorFront { fill: #575b6b; }
+    .coneOuter { fill: #e8e8e8; }
+    .coneInner { fill: #484c59; }
+    .amyBoot { fill: #86618f; }
+    .amySkirt { fill: #518bad; }
+    .amyShirt { fill: #f8ffba; }
 }
 
 .lizThought {
-    .ground {
-        fill: #a19b78;
-    }
+    .ground { fill: #a19b78; }
+    .sky { fill: #a4c9eb; }
+    .foliage { fill: #64a66e; }
+    .cloud { fill: #59646e; }
+    .windshield { fill: #6f8cbf; }
+    .headrest { fill: #6b6e51; }
+    .tireSide { fill: #3c3f4a; }
+    .tireFront { fill: #575b6b; }
+    .reattaRear { fill: #b55a50; }
+    .reattaTrimRear { fill: #6f738a; }
+    .reattaLightRear { fill: #ffa263; }
+    .reattaSide { fill: #a6493e; }
+    .reattaTrimSide { fill: #606478; }
+    .reattaLightSide { fill: #bd7849; }
+    .hubcap { fill: #71798a; }
+    .exhaust { fill: #6f7d8a; }
+    .tear { fill: #518bad; }
+}
 
-    .sky {
-        fill: #a4c9eb;
-    }
-
-    .foliage {
-        fill: #64a66e;
-    }
-
-    .cloud {
-        fill: #59646e;
-    }
-
-    .windshield {
-        fill: #6f8cbf;
-    }
-
-    .headrest {
-        fill: #6b6e51;
-    }
-
-    .tireSide {
-        fill: #3c3f4a;
-    }
-
-    .tireFront {
-        fill: #575b6b;
-    }
-
-    .reattaRear {
-        fill: #b55a50;
-    }
-
-    .reattaTrimRear {
-        fill: #6f738a;
-    }
-
-    .reattaLightRear {
-        fill: #ffa263;
-    }
-
-    .reattaSide {
-        fill: #a6493e;
-    }
-
-    .reattaTrimSide {
-        fill: #606478;
-    }
-
-    .reattaLightSide {
-        fill: #bd7849;
-    }
-
-    .hubcap {
-        fill: #71798a;
-    }
-
-    .exhaust {
-        fill: #6f7d8a;
-    }
-
-    .tear {
-        fill: #518bad;
-    }
+.tchotchkes {
+    .boxDarkest { fill: #9c758a; }
+    .boxDarker { fill: #a87e95; }
+    .boxDark { fill: #b3869e; }
+    .boxLight { fill: #bf8fa9; }
+    .boxLighter { fill: #cc99b4; }
+    .boxLightest { fill: #d9a3c0; }
+    .photoRight { fill: #759c7b; }
+    .photoBelow { fill: #75989c; }
+    .photoMiddle { fill: #92759c; }
+    .photoTop { fill: #75819c; }
 }
 
 .peacock {
-    .body {
-        fill: #3981c4;
-    }
-
-    .train {
-        fill: #61a17f;
-    }
-
-    .trainTop {
-        fill: #82c282;
-    }
-
-    .eyespotOuter {
-        fill: #74c99f;
-    }
-
-    .eyespotInner {
-        fill: #5499f0;
-    }
-
-    .neckBottom {
-        fill: #3993c4;
-    }
-
-    .neckTop {
-        fill: #399fc4;
-    }
-
-    .mouth {
-        fill: #5c4f45;
-    }
-
-    .head {
-        fill: #39afc4;
-    }
+    .body { fill: #3981c4; }
+    .train { fill: #61a17f; }
+    .trainTop { fill: #82c282; }
+    .eyespotOuter { fill: #74c99f; }
+    .eyespotInner { fill: #5499f0; }
+    .neckBottom { fill: #3993c4; }
+    .neckTop { fill: #399fc4; }
+    .mouth { fill: #5c4f45; }
+    .head { fill: #39afc4; }
 }
 
 .peahen {
-    .body {
-        fill: #9eb0a6;
-    }
-
-    .train {
-        fill: #6d7370;
-    }
-
-    .wing {
-        fill: #828784;
-    }
-
-    .neckBottom {
-        fill: #94b0a0;
-    }
-
-    .neckTop {
-        fill: #84b097;
-    }
-
-    .head {
-        fill: #8db09c;
-    }
+    .body { fill: #9eb0a6; }
+    .train { fill: #6d7370; }
+    .wing { fill: #828784; }
+    .neckBottom { fill: #94b0a0; }
+    .neckTop { fill: #84b097; }
+    .head { fill: #8db09c; }
 }
