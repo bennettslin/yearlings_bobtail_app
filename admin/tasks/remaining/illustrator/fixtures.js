@@ -101,13 +101,6 @@ export default [
         neededHours: 1
     },
 
-    // Straight edges.
-    {
-        taskName: 'crackedPicture',
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Instruments.
     {
         taskName: 'stageMicSide',
