@@ -88,5 +88,10 @@ export default [
         taskName: 'crackedPicture',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'vaseline',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

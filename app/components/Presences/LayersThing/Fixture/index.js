@@ -24,7 +24,7 @@ import pushBroom from 'assets/svgs/fixtures/pushBroom'
 import stepladder from 'assets/svgs/fixtures/stepladder'
 import mannequin from 'assets/svgs/fixtures/mannequin'
 // import nudeDrawings from 'assets/svgs/fixtures/nudeDrawings'
-// import vaseline from 'assets/svgs/fixtures/vaseline'
+import vaseline from 'assets/svgs/fixtures/vaseline'
 // import lizPhone from 'assets/svgs/fixtures/lizPhone'
 // import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
 import evianBottles from 'assets/svgs/fixtures/evianBottles'
@@ -127,7 +127,7 @@ export default {
     [STEPLADDER]: stepladder,
     [MANNEQUIN]: mannequin,
     [NUDE_DRAWINGS]: false,
-    [VASELINE]: false,
+    [VASELINE]: vaseline,
     [LIZ_PHONE]: false,
     [LIZ_PHONE_REFLECTION]: false,
     [EVIAN_BOTTLES]: evianBottles,

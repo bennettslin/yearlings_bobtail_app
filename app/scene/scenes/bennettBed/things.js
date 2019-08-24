@@ -49,17 +49,14 @@ const ARRANGEMENTS_THINGS = {
         },
         [VASELINE]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 0.5,
-                zHeight: 0.5
-            }
+            xPosition: 8,
+            scaleFactor: 0.25
         }
     },
     [FURNITURE]: {
         [BENNETT_PILLOW]: {
             yIndex: 4,
-            xPosition: 9,
+            xPosition: 9.5,
             scaleFactor: 0.25
         }
     },

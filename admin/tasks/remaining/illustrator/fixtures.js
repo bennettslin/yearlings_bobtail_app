@@ -74,11 +74,6 @@ export default [
 
     // Crumpled edges.
     {
-        taskName: 'vaseline',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'burgerWrapper',
         workedHours: 0,
         neededHours: 1
