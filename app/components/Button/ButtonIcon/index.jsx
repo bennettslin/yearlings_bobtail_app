@@ -3,11 +3,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Svg from 'modules/Svg'
+import InlineSvg from 'modules/InlineSvg'
 
 import About from './Icons/About'
 import AudioNext from './Icons/AudioNext'
 import AudioOptions from './Icons/AudioOptions'
-import AudioPlay from './Icons/AudioPlay'
+import AudioPlay from './Icons/audioPlay'
 import AudioPrevious from './Icons/AudioPrevious'
 import CarouselNav from './Icons/CarouselNav'
 import CarouselSelect from './Icons/CarouselSelect'
@@ -49,28 +50,27 @@ import {
 } from 'constants/buttons'
 
 const BUTTON_ICONS_MAP = {
-        [ABOUT_BUTTON_KEY]: About,
-        [AUDIO_NEXT_BUTTON_KEY]: AudioNext,
-        [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptions,
-        [AUDIO_PLAY_BUTTON_KEY]: AudioPlay,
-        [AUDIO_PREVIOUS_BUTTON_KEY]: AudioPrevious,
-        [CAROUSEL_NAV_BUTTON_KEY]: CarouselNav,
-        [CAROUSEL_SELECT_BUTTON_KEY]: CarouselSelect,
-        [DOTS_SLIDE_BUTTON_KEY]: DotsSlide,
-        [LYRIC_EAR_BUTTON_KEY]: LyricEar,
-        [LYRIC_EXPAND_BUTTON_KEY]: LyricExpand,
-        [LYRIC_SCROLL_BUTTON_KEY]: LyricScroll,
-        [NAV_BOOK_BUTTON_KEY]: NavBook,
-        [NAV_SONG_BUTTON_KEY]: NavSong,
-        [OVERVIEW_BUTTON_KEY]: Overview,
-        [POPUP_CLOSE_BUTTON_KEY]: PopupClose,
-        [POPUP_NEXT_BUTTON_KEY]: PopupNext,
-        [POPUP_PREVIOUS_BUTTON_KEY]: PopupPrevious,
-        [WORMHOLE_BUTTON_KEY]: Wormhole,
-        [SCORES_BUTTON_KEY]: Scores,
-        [TIPS_BUTTON_KEY]: Tips
-    },
-    DEFAULT_COMPONENT = () => null
+    [ABOUT_BUTTON_KEY]: About,
+    [AUDIO_NEXT_BUTTON_KEY]: AudioNext,
+    [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptions,
+    [AUDIO_PLAY_BUTTON_KEY]: AudioPlay,
+    [AUDIO_PREVIOUS_BUTTON_KEY]: AudioPrevious,
+    [CAROUSEL_NAV_BUTTON_KEY]: CarouselNav,
+    [CAROUSEL_SELECT_BUTTON_KEY]: CarouselSelect,
+    [DOTS_SLIDE_BUTTON_KEY]: DotsSlide,
+    [LYRIC_EAR_BUTTON_KEY]: LyricEar,
+    [LYRIC_EXPAND_BUTTON_KEY]: LyricExpand,
+    [LYRIC_SCROLL_BUTTON_KEY]: LyricScroll,
+    [NAV_BOOK_BUTTON_KEY]: NavBook,
+    [NAV_SONG_BUTTON_KEY]: NavSong,
+    [OVERVIEW_BUTTON_KEY]: Overview,
+    [POPUP_CLOSE_BUTTON_KEY]: PopupClose,
+    [POPUP_NEXT_BUTTON_KEY]: PopupNext,
+    [POPUP_PREVIOUS_BUTTON_KEY]: PopupPrevious,
+    [WORMHOLE_BUTTON_KEY]: Wormhole,
+    [SCORES_BUTTON_KEY]: Scores,
+    [TIPS_BUTTON_KEY]: Tips
+}
 
 const propTypes = {
     // From parent.
@@ -79,16 +79,36 @@ const propTypes = {
     buttonIdentifier: PropTypes.any
 }
 
+// TODO: Get rid of this conditional once they're all new svgs.
+const isNewSvg = (buttonName) => {
+    return buttonName === AUDIO_PLAY_BUTTON_KEY
+}
+
 const ButtonIcon = ({
     showAsDisabled,
     buttonName,
     buttonIdentifier
 
 }) => {
+    const IconComponent = BUTTON_ICONS_MAP[buttonName]
 
-    const IconComponent = BUTTON_ICONS_MAP[buttonName] || DEFAULT_COMPONENT
-
-    return (
+    return isNewSvg(buttonName) ? (
+        <InlineSvg
+            {...{
+                className: cx(
+                    'ButtonIcon',
+                    'dropShadow',
+                    'abF'
+                ),
+                svgClassName: cx(
+                    `ButtonIcon__${buttonName}`,
+                    showAsDisabled && 'ButtonIcon__disabled'
+                )
+            }}
+        >
+            {IconComponent({ buttonIdentifier })}
+        </InlineSvg>
+    ) : (
         <div
             className={cx(
                 'ButtonIcon',
@@ -103,11 +123,11 @@ const ButtonIcon = ({
                 )}
             >
                 <IconComponent
-                    className={cx(
-                        `ButtonIcon__${buttonName}`,
-                        showAsDisabled && 'ButtonIcon__disabled'
-                    )}
                     {...{
+                        className: cx(
+                            `ButtonIcon__${buttonName}`,
+                            showAsDisabled && 'ButtonIcon__disabled'
+                        ),
                         // Icon component only knows this identifier.
                         buttonIdentifier
                     }}

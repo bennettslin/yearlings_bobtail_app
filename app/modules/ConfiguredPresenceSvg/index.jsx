@@ -187,7 +187,7 @@ class ConfiguredPresenceSvg extends PureComponent {
             containerTransform = this.getPresenceTransform()
 
         return (
-            <div
+            <InlineSvg
                 {...{
                     className: cx(
                         'ConfiguredPresenceSvg',
@@ -206,23 +206,18 @@ class ConfiguredPresenceSvg extends PureComponent {
                         ...containerTransform && {
                             transform: containerTransform
                         }
-                    }
+                    },
+                    svgClassName: cx(
+                        convertPresenceKeyToClassName(presenceKey),
+                        sharedStyle
+                    ),
+                    title: convertPresenceKeyToTitle(presenceKey),
+                    preProcessor: this.preProcessSvg,
+                    onLoad: this.postProcessSvg
                 }}
             >
-                <InlineSvg
-                    {...{
-                        className: cx(
-                            convertPresenceKeyToClassName(presenceKey),
-                            sharedStyle
-                        ),
-                        title: convertPresenceKeyToTitle(presenceKey),
-                        preProcessor: this.preProcessSvg,
-                        onLoad: this.postProcessSvg
-                    }}
-                >
-                    {children}
-                </InlineSvg>
-            </div>
+                {children}
+            </InlineSvg>
         )
     }
 }

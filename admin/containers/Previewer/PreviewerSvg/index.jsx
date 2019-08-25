@@ -63,7 +63,7 @@ class PreviewerSvg extends PureComponent {
             }) || {}
 
         return Boolean(presenceComponent) && (
-            <div
+            <InlineSvg
                 {...{
                     className: cx(
                         'Presence',
@@ -71,19 +71,14 @@ class PreviewerSvg extends PureComponent {
                         capitaliseForClassName(presenceType),
                         sharedStyle,
                         className
-                    )
+                    ),
+                    svgClassName: convertPresenceKeyToClassName(presenceKey),
+                    title: convertPresenceKeyToTitle(presenceKey),
+                    preProcessor: this.processSvg
                 }}
             >
-                <InlineSvg
-                    {...{
-                        className: convertPresenceKeyToClassName(presenceKey),
-                        title: convertPresenceKeyToTitle(presenceKey),
-                        preProcessor: this.processSvg
-                    }}
-                >
-                    {presenceComponent}
-                </InlineSvg>
-            </div>
+                {presenceComponent}
+            </InlineSvg>
         )
     }
 }

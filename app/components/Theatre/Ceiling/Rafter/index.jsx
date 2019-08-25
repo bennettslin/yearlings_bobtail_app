@@ -18,7 +18,7 @@ const CeilingRafter = ({
     height
 
 }) => (
-    <div
+    <InlineSvg
         {...{
             className: cx(
                 'CeilingRafter',
@@ -29,21 +29,16 @@ const CeilingRafter = ({
                 left: `${left}px`,
                 width: `${width}px`,
                 height: `${height}px`
-            }
+            },
+            svgClassName: cx(
+                'ceilingRafter',
+                'fillTransition__dimTheatre'
+            ),
+            title: 'ceiling rafter'
         }}
     >
-        <InlineSvg
-            {...{
-                className: cx(
-                    'ceilingRafter',
-                    'fillTransition__dimTheatre'
-                ),
-                title: 'ceiling rafter'
-            }}
-        >
-            {ceilingRafter}
-        </InlineSvg>
-    </div>
+        {ceilingRafter}
+    </InlineSvg>
 )
 
 CeilingRafter.propTypes = propTypes

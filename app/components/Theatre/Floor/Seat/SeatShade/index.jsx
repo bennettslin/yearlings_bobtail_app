@@ -20,7 +20,7 @@ const SeatShade = ({
     height
 
 }) => (
-    <div
+    <InlineSvg
         {...{
             className: cx(
                 'abF'
@@ -30,21 +30,16 @@ const SeatShade = ({
                 left: `${left}px`,
                 width: `${width}px`,
                 height: `${height}px`
-            }
+            },
+            svgClassName: cx(
+                'fillTransition__dimTheatre',
+                className
+            ),
+            title: 'floor seat'
         }}
     >
-        <InlineSvg
-            {...{
-                className: cx(
-                    'fillTransition__dimTheatre',
-                    className
-                ),
-                title: 'floor seat'
-            }}
-        >
-            {floorSeat}
-        </InlineSvg>
-    </div>
+        {floorSeat}
+    </InlineSvg>
 )
 
 SeatShade.propTypes = propTypes

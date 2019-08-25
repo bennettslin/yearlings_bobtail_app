@@ -1,60 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-// import cx from 'classnames'
-// import audioPlay from 'assets/svgs/app/audioPlay'
+/* eslint-disable */
+// import React, { Fragment as ___ } from 'react'
+// import PropTypes from 'prop-types'
+import audioPlay from 'assets/svgs/app/audioPlay'
 
-const
-    IS_PLAYING_ICON = ({
-        className
-    }) => (
-        <circle
-            {...{
-                className,
-                cx: 50,
-                cy: 50,
-                r: 50
-            }}
-        />
-    ),
-    IS_PAUSED_ICON = ({
-        className
-    }) => (
-        <path
-            {...{
-                className,
-                x: 0,
-                y: 0,
-                d: 'M 0,0 L 100,0 L 100,100 0,100 Z'
-            }}
-        />
-    ),
-    AUDIO_PLAY_MAP = {
-        [true]: IS_PLAYING_ICON,
-        [false]: IS_PAUSED_ICON
-    }
-
-const propTypes = {
-    buttonIdentifier: PropTypes.bool.isRequired,
-    className: PropTypes.string
+const AUDIO_PLAY_MAP = {
+    [true]: audioPlay,
+    [false]: audioPlay
 }
 
-const AudioPlayIcon = ({
+// const propTypes = {
+//     buttonIdentifier: PropTypes.bool.isRequired,
+//     className: PropTypes.string
+// }
 
-    buttonIdentifier: isPlaying,
-    className
+// const AudioPlayIcon = ({
+//     buttonIdentifier: isPlaying
 
-}) => {
-    const IconComponent = AUDIO_PLAY_MAP[isPlaying]
+// }) => {
+//     return (
+//         <___>
+//             {}
+//         </___>
+//     )
+// }
 
-    return (
-        <IconComponent
-            {...{
-                className
-            }}
-        />
-    )
+// AudioPlayIcon.propTypes = propTypes
+
+export default function({ buttonIdentifier: isPlaying }) {
+    return AUDIO_PLAY_MAP[isPlaying]
 }
-
-AudioPlayIcon.propTypes = propTypes
-
-export default AudioPlayIcon

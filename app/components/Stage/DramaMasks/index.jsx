@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import InlineSvg from 'modules/InlineSvg'
-import proscenium from 'assets/svgs/theatre/proscenium'
+import dramaMasks from 'assets/svgs/theatre/dramaMasks'
 
 const mapStateToProps = ({
     viewportStore: {
@@ -22,7 +22,7 @@ const mapStateToProps = ({
     prosceniumHeight
 })
 
-const Proscenium = ({
+const DramaMasks = ({
     prosceniumTop,
     prosceniumLeft,
     prosceniumWidth,
@@ -31,27 +31,27 @@ const Proscenium = ({
     <InlineSvg
         {...{
             className: cx(
-                'Proscenium',
+                'DramaMasks',
                 'abF'
             ),
             style: {
-                top: `${prosceniumTop}px`,
-                left: `${prosceniumLeft}px`,
-                width: `${prosceniumWidth}px`,
-                height: `${prosceniumHeight}px`
+                top: `${prosceniumTop + prosceniumHeight * 0.0025}px`,
+                left: `${prosceniumLeft + prosceniumWidth * 0.5}px`,
+                width: `${prosceniumWidth * 0.125}px`,
+                height: `${prosceniumHeight * 0.1}px`
             },
             svgClassName: cx(
-                'proscenium',
+                'dramaMasks',
                 'fillTransition__dimTheatre'
             ),
-            title: 'proscenium'
+            title: 'drama masks'
         }}
     >
-        {proscenium}
+        {dramaMasks}
     </InlineSvg>
 )
 
-Proscenium.propTypes = {
+DramaMasks.propTypes = {
     // Through Redux.
     prosceniumTop: PropTypes.number.isRequired,
     prosceniumLeft: PropTypes.number.isRequired,
@@ -59,4 +59,4 @@ Proscenium.propTypes = {
     prosceniumHeight: PropTypes.number.isRequired
 }
 
-export default connect(mapStateToProps)(Proscenium)
+export default connect(mapStateToProps)(DramaMasks)

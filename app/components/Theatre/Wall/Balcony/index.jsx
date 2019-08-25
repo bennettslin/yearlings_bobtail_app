@@ -20,7 +20,7 @@ const WallBalcony = ({
     isLeft
 
 }) => (
-    <div
+    <InlineSvg
         {...{
             className: cx(
                 'WallBalcony',
@@ -31,22 +31,17 @@ const WallBalcony = ({
                 left: `${left}px`,
                 width: `${width}px`,
                 height: `${height}px`
-            }
+            },
+            svgClassName: cx(
+                'wallBalcony',
+                isLeft && 'wallBalcony__left',
+                'fillTransition__dimTheatre'
+            ),
+            title: 'wall balcony'
         }}
     >
-        <InlineSvg
-            {...{
-                className: cx(
-                    'wallBalcony',
-                    isLeft && 'wallBalcony__left',
-                    'fillTransition__dimTheatre'
-                ),
-                title: 'wall balcony'
-            }}
-        >
-            {wallBalcony}
-        </InlineSvg>
-    </div>
+        {wallBalcony}
+    </InlineSvg>
 )
 
 WallBalcony.propTypes = propTypes

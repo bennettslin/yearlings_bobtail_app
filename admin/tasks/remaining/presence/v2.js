@@ -19,10 +19,5 @@ export default [
         taskName: `Three-dimensionality and painted look of cutouts.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Inline svg renders container div, rather than the parent.`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]

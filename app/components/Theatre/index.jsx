@@ -9,6 +9,7 @@ import { updateViewportStore } from 'flux/viewport/action'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'
 import Curtains from '../Stage/Curtains'
+import DramaMasks from '../Stage/DramaMasks'
 import Proscenium from '../Stage/Proscenium'
 
 import Wall from './Wall'
@@ -58,6 +59,7 @@ class Theatre extends PureComponent {
                     <Stage />
                     <Curtains />
                     <Proscenium />
+                    <DramaMasks />
                     <Wall />
                     <Wall isRight />
                     <Ceiling />
