@@ -1,15 +1,15 @@
 import keys from 'lodash/keys'
 
-import backdrops from './Backdrop'
-import bubbles from './Bubble'
-import cardboards from './Cardboard'
-import cutouts from './Cutout'
-import doors from './Door'
-import fixtures from './Fixture'
-import flats from './Flat'
-import furnitures from './Furniture'
-import panels from './Panel'
-import puppets from './Puppet'
+import backdrops from './backdrops'
+import bubbles from './bubbles'
+import cardboards from './cardboards'
+import cutouts from './cutouts'
+import doors from './doors'
+import fixtures from './fixtures'
+import flats from './flats'
+import furnitures from './furnitures'
+import panels from './panels'
+import puppets from './puppets'
 
 import {
     BACKDROP,

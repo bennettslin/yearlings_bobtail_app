@@ -5,9 +5,8 @@ import PropTypes from 'prop-types'
 import {
     SHOWN,
     HIDDEN,
-    DISABLED,
-    OVERVIEW_BUBBLE
-} from '../../../../../constants/options'
+    DISABLED
+} from 'constants/options'
 
 const
     SHOWN_ICON = ({
@@ -25,12 +24,13 @@ const
     HIDDEN_ICON = ({
         className
     }) => (
-        <path
+        <rect
             {...{
                 className,
                 x: 0,
                 y: 0,
-                d: 'M 75,0 L 100,75 L 25,100 L0,25 Z'
+                width: 100,
+                height: 100
             }}
         />
     ),
@@ -46,38 +46,23 @@ const
             }}
         />
     ),
-    OVERVIEW_BUBBLE_ICON = ({
-        className
-    }) => (
-        <rect
-            {...{
-                className,
-                x: 0,
-                y: 0,
-                width: 100,
-                height: 100
-            }}
-        />
-    ),
-    OVERVIEW_MAP = {
+    TIPS_MAP = {
         [SHOWN]: SHOWN_ICON,
         [HIDDEN]: HIDDEN_ICON,
-        [DISABLED]: DISABLED_ICON,
-        [OVERVIEW_BUBBLE]: OVERVIEW_BUBBLE_ICON
+        [DISABLED]: DISABLED_ICON
     }
 
 const propTypes = {
     buttonIdentifier: PropTypes.string.isRequired
 }
 
-const OverviewIcon = ({
+const TipsIcon = ({
 
-    buttonIdentifier: overviewOptionKey,
+    buttonIdentifier: tipsOptionKey,
     className
 
 }) => {
-    const
-        IconComponent = OVERVIEW_MAP[overviewOptionKey]
+    const IconComponent = TIPS_MAP[tipsOptionKey]
 
     return (
         <IconComponent
@@ -88,6 +73,6 @@ const OverviewIcon = ({
     )
 }
 
-OverviewIcon.propTypes = propTypes
+TipsIcon.propTypes = propTypes
 
-export default OverviewIcon
+export default TipsIcon

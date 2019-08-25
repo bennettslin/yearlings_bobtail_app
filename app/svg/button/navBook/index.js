@@ -5,22 +5,10 @@ import PropTypes from 'prop-types'
 import {
     LEFT,
     RIGHT
-} from '../../../../../constants/lyrics'
+} from 'constants/lyrics'
 
 const
-    LEFT_EAR_ICON = ({
-        className
-    }) => (
-        <circle
-            {...{
-                className,
-                cx: 50,
-                cy: 50,
-                r: 50
-            }}
-        />
-    ),
-    RIGHT_RIGHT_ICON = ({
+    LEFT_BOOK_ICON = ({
         className
     }) => (
         <rect
@@ -33,23 +21,38 @@ const
             }}
         />
     ),
-    LYRIC_EAR_MAP = {
-        [LEFT]: LEFT_EAR_ICON,
-        [RIGHT]: RIGHT_RIGHT_ICON
+    RIGHT_BOOK_ICON = ({
+        className
+    }) => (
+        <rect
+            {...{
+                className,
+                x: 0,
+                y: 0,
+                width: 100,
+                height: 100
+            }}
+        />
+    ),
+    NAV_BOOK_MAP = {
+        [LEFT]: LEFT_BOOK_ICON,
+        [RIGHT]: RIGHT_BOOK_ICON
     }
 
 const propTypes = {
-    buttonIdentifier: PropTypes.string.isRequired,
+    buttonIdentifier: PropTypes.number.isRequired,
     className: PropTypes.string
 }
 
-const LyricEarIcon = ({
+const NavBookIcon = ({
 
-    buttonIdentifier: sideDirection,
+    buttonIdentifier: bookIndex,
     className
 
 }) => {
-    const IconComponent = LYRIC_EAR_MAP[sideDirection]
+    const
+        bookDirection = bookIndex ? RIGHT : LEFT,
+        IconComponent = NAV_BOOK_MAP[bookDirection]
 
     return (
         <IconComponent
@@ -60,6 +63,6 @@ const LyricEarIcon = ({
     )
 }
 
-LyricEarIcon.propTypes = propTypes
+NavBookIcon.propTypes = propTypes
 
-export default LyricEarIcon
+export default NavBookIcon

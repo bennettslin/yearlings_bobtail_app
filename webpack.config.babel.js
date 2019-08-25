@@ -55,6 +55,7 @@ const getConfig = ({
                 lodash: path.resolve(__dirname, './app/utils/lodash'),
                 modules: path.resolve(__dirname, './app/modules'),
                 scene: path.resolve(__dirname, './app/scene'),
+                svg: path.resolve(__dirname, './app/svg'),
                 utils: path.resolve(__dirname, './app/utils')
             }
         },
