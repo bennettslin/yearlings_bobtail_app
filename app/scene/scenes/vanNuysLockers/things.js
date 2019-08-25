@@ -30,8 +30,7 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [THROWN_FRUIT]: {
             yIndex: 4,
-            xPosition: 6.5,
-            scaleFactor: 0.25
+            xPosition: 6.5
         }
     }
 }

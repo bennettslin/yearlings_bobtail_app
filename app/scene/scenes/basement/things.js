@@ -46,13 +46,11 @@ const ARRANGEMENTS_THINGS = {
         [BASEMENT_BEER_MARA]: {
             yIndex: 3,
             xPosition: 2.5,
-            scaleFactor: 0.25,
             sharedStyle: BUDWEISER_SHARED
         },
         [BASEMENT_BEER_BENNETT]: {
-            yIndex: 3,
-            xPosition: 8.5,
-            scaleFactor: 0.25,
+            yIndex: 5,
+            xPosition: 8,
             sharedStyle: BUDWEISER_SHARED
         }
     }

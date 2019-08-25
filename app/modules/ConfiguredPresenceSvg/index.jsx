@@ -53,13 +53,16 @@ class ConfiguredPresenceSvg extends PureComponent {
         viewBoxWidth,
         viewBoxHeight
     }) {
-        const {
-            yIndex,
-            scaleFactor,
-            trimBottom
-        } = this.getArrangement()
+        const
+            { presenceType } = this.props,
+            {
+                yIndex,
+                scaleFactor,
+                trimBottom
+            } = this.getArrangement()
 
         return getSizeForPresence({
+            presenceType,
             viewBoxWidth,
             viewBoxHeight,
             yIndex,

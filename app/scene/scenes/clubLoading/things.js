@@ -11,7 +11,6 @@ const ARRANGEMENTS_THINGS = {
         [CLUB_DOOR_OPEN]: {
             yIndex: 3,
             xPosition: 5,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         }
     },

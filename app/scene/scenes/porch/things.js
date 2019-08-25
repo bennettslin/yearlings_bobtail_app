@@ -28,15 +28,13 @@ const ARRANGEMENTS_THINGS = {
         [PORCH_DOOR]: {
             yIndex: 1,
             xPosition: 6,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         }
     },
     [FIXTURE]: {
         [HAIRCUT_SCISSORS]: {
             yIndex: 3,
-            xPosition: 4,
-            scaleFactor: 0.25
+            xPosition: 4
         }
     }
 }

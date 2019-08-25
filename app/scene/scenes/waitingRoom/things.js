@@ -68,7 +68,6 @@ const ARRANGEMENTS_THINGS = {
         [WAITING_ROOM_DOOR]: {
             yIndex: 5,
             xPosition: 10.16,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         },
         [WAITING_ROOM_DOOR_OPEN]: {

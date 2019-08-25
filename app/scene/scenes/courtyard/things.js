@@ -31,7 +31,6 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_DOOR_OUTSIDE]: {
             yIndex: 2,
             xPosition: 8,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         }
     }

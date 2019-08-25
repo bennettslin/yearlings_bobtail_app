@@ -13,7 +13,6 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 0.5,
             zOffset: 4,
-            scaleFactor: 0.25,
             sharedStyle: [
                 PROMISE_PHOTO_SHARED,
                 PEOPLE_ALL_SHARED,

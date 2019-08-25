@@ -19,7 +19,6 @@ const ARRANGEMENTS_THINGS = {
         [PRINCIPAL_DOOR]: {
             yIndex: 4,
             xPosition: 3,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         }
     }

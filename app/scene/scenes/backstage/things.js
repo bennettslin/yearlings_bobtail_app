@@ -29,8 +29,7 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [PUSH_BROOM__BACKSTAGE]: {
             yIndex: 2,
-            xPosition: 6,
-            scaleFactor: 0.25
+            xPosition: 6
         },
         [STEPLADDER]: {
             yIndex: 2,

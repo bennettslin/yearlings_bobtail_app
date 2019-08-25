@@ -55,8 +55,7 @@ export const THINGS_BATHROOM_SINGING = {
     [FIXTURE]: {
         [RECORD_PLAYER_STOOL]: {
             yIndex: 5,
-            xPosition: 7,
-            scaleFactor: 0.25
+            xPosition: 7
         }
     }
 }

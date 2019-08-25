@@ -52,13 +52,11 @@ const ARRANGEMENTS_THINGS = {
         [PLAYGROUND_BALL]: {
             yIndex: 4,
             xPosition: 2,
-            zOffset: 1,
-            scaleFactor: 0.3
+            zOffset: 1
         },
         [SAFEWAY_BAG]: {
             yIndex: 4,
-            xPosition: 10,
-            scaleFactor: 0.25
+            xPosition: 10
         }
     },
     [FLAT]: {

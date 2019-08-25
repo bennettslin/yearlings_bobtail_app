@@ -64,8 +64,7 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [HOSPITAL_RECORD_PLAYER]: {
             yIndex: 1,
-            xPosition: 6,
-            scaleFactor: 0.25
+            xPosition: 6
         }
     },
     [PANEL]: {

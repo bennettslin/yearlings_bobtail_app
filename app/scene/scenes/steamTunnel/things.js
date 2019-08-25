@@ -17,8 +17,7 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [PUSH_BROOM__TUNNEL]: {
             yIndex: 2,
-            xPosition: 4,
-            scaleFactor: 0.25
+            xPosition: 4
         }
     }
 }

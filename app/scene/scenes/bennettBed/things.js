@@ -47,13 +47,11 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_DOOR_INSIDE]: {
             yIndex: 3,
             xPosition: 3,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         },
         [BENNETT_DOOR_INSIDE_OPEN]: {
             yIndex: 3,
             xPosition: 3,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         }
     },
@@ -68,15 +66,13 @@ const ARRANGEMENTS_THINGS = {
         },
         [VASELINE]: {
             yIndex: 3,
-            xPosition: 8,
-            scaleFactor: 0.25
+            xPosition: 8
         }
     },
     [FURNITURE]: {
         [BENNETT_PILLOW]: {
             yIndex: 4,
-            xPosition: 9.5,
-            scaleFactor: 0.25
+            xPosition: 9.5
         }
     },
     [PANEL]: {

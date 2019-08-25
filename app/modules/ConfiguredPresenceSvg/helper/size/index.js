@@ -2,23 +2,58 @@ import isFinite from 'lodash/isfinite'
 
 import { Y_INDEX_SCALE_FACTORS } from 'constants/cubeRender'
 import { getValidYIndex } from 'helpers/general'
+import {
+    DOOR,
+    FIXTURE,
+    FURNITURE
+} from '../../../../constants/scene'
 
 // Illustrator artboards are 1623 by 1082.
 const
     ARTBOARD_WIDTH = 1623 / 100,
-    ARTBOARD_HEIGHT = 1082 / 100
+    ARTBOARD_HEIGHT = 1082 / 100,
+    DOOR_DEFAULT_SCALE_FACTOR = 0.7,
+    FIXTURE_DEFAULT_SCALE_FACTOR = 0.3,
+    FURNITURE_DEFAULT_SCALE_FACTOR = 0.25
+
+const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
+
+    // Override default if custom scale factor is given.
+    if (isFinite(scaleFactor)) {
+        return scaleFactor
+    }
+
+    if (presenceType === DOOR) {
+        return DOOR_DEFAULT_SCALE_FACTOR
+    }
+
+    if (presenceType === FIXTURE) {
+        return FIXTURE_DEFAULT_SCALE_FACTOR
+    }
+
+    if (presenceType === FURNITURE) {
+        return FURNITURE_DEFAULT_SCALE_FACTOR
+    }
+
+    return 1
+}
 
 export const getSizeForPresence = ({
+    presenceType,
     viewBoxWidth,
     viewBoxHeight,
     yIndex,
-    scaleFactor = 1,
+    scaleFactor,
     trimBottom = 0
 
 }) => {
     const
         validYIndex = getValidYIndex(yIndex),
-        finalScaleFactor = scaleFactor * Y_INDEX_SCALE_FACTORS[validYIndex],
+        presenceScaleFactor = getPresenceScaleFactor({
+            presenceType,
+            scaleFactor
+        }),
+        finalScaleFactor = presenceScaleFactor * Y_INDEX_SCALE_FACTORS[validYIndex],
         adjustedWidth = viewBoxWidth * finalScaleFactor / ARTBOARD_WIDTH,
         adjustedHeight =
             viewBoxHeight *

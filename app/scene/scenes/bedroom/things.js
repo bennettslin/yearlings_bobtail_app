@@ -56,8 +56,7 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 2,
-            xPosition: 7,
-            scaleFactor: 0.25
+            xPosition: 7
         }
     },
     [PANEL]: {
@@ -123,8 +122,7 @@ export const THINGS_BEDROOM_GUILTY = {
     [FIXTURE]: {
         [CAPTAIN_BED_LAMP]: {
             yIndex: 4,
-            xPosition: 9,
-            scaleFactor: 0.25
+            xPosition: 9
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
@@ -174,8 +172,7 @@ export const THINGS_BEDROOM_SHAKEN = {
         [BEYONDER_ENVELOPE]: {
             yIndex: 3,
             xPosition: 2,
-            zOffset: 0.1,
-            scaleFactor: 0.25
+            zOffset: 0.1
         }
     },
     [CARDBOARD]: {

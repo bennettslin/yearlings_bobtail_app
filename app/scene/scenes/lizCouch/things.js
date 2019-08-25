@@ -60,13 +60,11 @@ const ARRANGEMENTS_THINGS = {
         [LIZ_DOOR]: {
             yIndex: 5,
             xPosition: 10.16,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         },
         [LIZ_DOOR_OPEN]: {
             yIndex: 5,
             xPosition: 8.875,
-            scaleFactor: 0.7,
             sharedStyle: DOOR_SHARED
         }
     },
@@ -83,8 +81,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [FIXTURE]: {
         [TCHOTCHKES]: {
             yIndex: 5,
-            xPosition: 6.5,
-            scaleFactor: 0.25
+            xPosition: 6.5
         }
     },
     [PUPPET]: {

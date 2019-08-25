@@ -28,8 +28,7 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
-            xPosition: 8.5,
-            scaleFactor: 0.25
+            xPosition: 8.5
         },
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,
@@ -117,8 +116,7 @@ export const THINGS_BENNETT_COUCH_READING = {
     [FIXTURE]: {
         [KEYBOARD]: {
             yIndex: 4,
-            xPosition: 8,
-            scaleFactor: 0.25
+            xPosition: 8
         }
     }
 }

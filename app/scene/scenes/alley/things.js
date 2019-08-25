@@ -21,8 +21,7 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [LOADING_DOCK_DOOR]: {
             yIndex: 2,
-            xPosition: 3,
-            scaleFactor: 0.7
+            xPosition: 3
         }
     },
     [FIXTURE]: {

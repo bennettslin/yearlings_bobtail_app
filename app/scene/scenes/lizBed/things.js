@@ -43,14 +43,12 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [LIZ_PILLOWS_PILE]: {
             yIndex: 5,
-            xPosition: 9,
-            scaleFactor: 0.25
+            xPosition: 9
         },
         [LIZ_PILLOWS_PILE_REFLECTION]: {
             yIndex: 2,
             xPosition: 9,
-            zOffset: 5.5,
-            scaleFactor: 0.25
+            zOffset: 5.5
         }
     },
     [PANEL]: {
