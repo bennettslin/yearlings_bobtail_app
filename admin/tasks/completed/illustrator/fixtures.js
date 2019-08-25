@@ -86,8 +86,8 @@ export default [
     },
     {
         taskName: 'crackedPicture',
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 2,
+        neededHours: 2
     },
     {
         taskName: 'vaseline',
