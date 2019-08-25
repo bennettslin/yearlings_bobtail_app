@@ -7,7 +7,7 @@ import {
     MONITOR_SIDE__CROWD,
     WALL_SPEAKER_SIDE__CROWD
 } from '../../../constants/scene/things/cutouts'
-import { STAGE_MIC_SIDE__CROWD } from '../../../constants/scene/things/fixtures'
+import { STAGE_MIC__CROWD } from '../../../constants/scene/things/fixtures'
 import { CROWD_SIDE } from '../../../constants/scene/things/panels'
 import { SHADOW_SHARED } from '../../shared'
 
@@ -27,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [STAGE_MIC_SIDE__CROWD]: {
+        [STAGE_MIC__CROWD]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 8.5,

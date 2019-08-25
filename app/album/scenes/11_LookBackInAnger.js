@@ -57,8 +57,8 @@ import {
 } from '../../constants/scene/things/cutouts'
 import { CLUB_DOOR_OPEN } from '../../constants/scene/things/doors'
 import {
-    STAGE_MIC_SIDE__CROWD,
-    STAGE_MIC_SIDE__STAGE,
+    STAGE_MIC__CROWD,
+    STAGE_MIC__STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
@@ -107,7 +107,7 @@ export default [
                 [WALL_SPEAKER_SIDE__CROWD]: true
             },
             [FIXTURE]: {
-                [STAGE_MIC_SIDE__CROWD]: true
+                [STAGE_MIC__CROWD]: true
             },
             [PANEL]: {
                 [CROWD_SIDE]: true
@@ -146,7 +146,7 @@ export default [
                 [WALL_SPEAKER_SIDE__STAGE]: true
             },
             [FIXTURE]: {
-                [STAGE_MIC_SIDE__STAGE]: true,
+                [STAGE_MIC__STAGE]: true,
                 [KICK_DRUM]: true,
                 [DRUM_THRONE]: true,
                 [GUITAR_CASE_OPEN]: true

@@ -93,7 +93,7 @@ export default [
 
     // Instruments.
     {
-        taskName: 'stageMicSide',
+        taskName: 'stageMic',
         workedHours: 0,
         neededHours: 2
     },

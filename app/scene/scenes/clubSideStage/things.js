@@ -7,7 +7,7 @@ import {
     WALL_SPEAKER_SIDE__STAGE
 } from '../../../constants/scene/things/cutouts'
 import {
-    STAGE_MIC_SIDE__STAGE,
+    STAGE_MIC__STAGE,
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN
@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [STAGE_MIC_SIDE__STAGE]: {
+        [STAGE_MIC__STAGE]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 8.5,
