@@ -1,23 +1,4 @@
-@import "./Icons/About/style";
-@import "./Icons/AudioNext/style";
-@import "./Icons/AudioOptions/style";
-@import "./Icons/AudioPlay/style";
-@import "./Icons/AudioPrevious/style";
-@import "./Icons/CarouselNav/style";
-@import "./Icons/CarouselSelect/style";
-@import "./Icons/DotsSlide/style";
-@import "./Icons/LyricEar/style";
-@import "./Icons/LyricExpand/style";
-@import "./Icons/LyricScroll/style";
-@import "./Icons/NavBook/style";
-@import "./Icons/NavSong/style";
-@import "./Icons/Overview/style";
-@import "./Icons/PopupClose/style";
-@import "./Icons/PopupPrevious/style";
-@import "./Icons/PopupNext/style";
-@import "./Icons/Scores/style";
-@import "./Icons/Tips/style";
-@import "./Icons/Wormhole/style";
+@import "./icon/style";
 
 .ButtonIcon__disabled {
     fill: $bgColour__audioDisabled;

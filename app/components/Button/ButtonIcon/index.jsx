@@ -5,26 +5,27 @@ import cx from 'classnames'
 import Svg from 'modules/Svg'
 import InlineSvg from 'modules/InlineSvg'
 
-import About from './Icons/About'
-import AudioNext from './Icons/AudioNext'
-import AudioOptions from './Icons/AudioOptions'
-import AudioPlay from './Icons/audioPlay'
-import AudioPrevious from './Icons/AudioPrevious'
-import CarouselNav from './Icons/CarouselNav'
-import CarouselSelect from './Icons/CarouselSelect'
-import DotsSlide from './Icons/DotsSlide'
-import LyricEar from './Icons/LyricEar'
-import LyricExpand from './Icons/LyricExpand'
-import LyricScroll from './Icons/LyricScroll'
-import NavBook from './Icons/NavBook'
-import NavSong from './Icons/NavSong'
-import Overview from './Icons/Overview'
-import PopupClose from './Icons/PopupClose'
-import PopupPrevious from './Icons/PopupPrevious'
-import PopupNext from './Icons/PopupNext'
-import Wormhole from './Icons/Wormhole'
-import Scores from './Icons/Scores'
-import Tips from './Icons/Tips'
+// TODO: Move this to icon/index.js
+import about from './icon/about'
+import audioNext from './icon/audioNext'
+import audioOptions from './icon/audioOptions'
+import audioPlay from './icon/audioPlay'
+import audioPrevious from './icon/audioPrevious'
+import carouselNav from './icon/carouselNav'
+import carouselSelect from './icon/carouselSelect'
+import dotsSlide from './icon/dotsSlide'
+import lyricEar from './icon/lyricEar'
+import lyricExpand from './icon/lyricExpand'
+import lyricScroll from './icon/lyricScroll'
+import navBook from './icon/navBook'
+import navSong from './icon/navSong'
+import overview from './icon/overview'
+import popupClose from './icon/popupClose'
+import popupPrevious from './icon/popupPrevious'
+import popupNext from './icon/popupNext'
+import wormhole from './icon/wormhole'
+import scores from './icon/scores'
+import tips from './icon/tips'
 
 import {
     ABOUT_BUTTON_KEY,
@@ -50,26 +51,26 @@ import {
 } from 'constants/buttons'
 
 const BUTTON_ICONS_MAP = {
-    [ABOUT_BUTTON_KEY]: About,
-    [AUDIO_NEXT_BUTTON_KEY]: AudioNext,
-    [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptions,
-    [AUDIO_PLAY_BUTTON_KEY]: AudioPlay,
-    [AUDIO_PREVIOUS_BUTTON_KEY]: AudioPrevious,
-    [CAROUSEL_NAV_BUTTON_KEY]: CarouselNav,
-    [CAROUSEL_SELECT_BUTTON_KEY]: CarouselSelect,
-    [DOTS_SLIDE_BUTTON_KEY]: DotsSlide,
-    [LYRIC_EAR_BUTTON_KEY]: LyricEar,
-    [LYRIC_EXPAND_BUTTON_KEY]: LyricExpand,
-    [LYRIC_SCROLL_BUTTON_KEY]: LyricScroll,
-    [NAV_BOOK_BUTTON_KEY]: NavBook,
-    [NAV_SONG_BUTTON_KEY]: NavSong,
-    [OVERVIEW_BUTTON_KEY]: Overview,
-    [POPUP_CLOSE_BUTTON_KEY]: PopupClose,
-    [POPUP_NEXT_BUTTON_KEY]: PopupNext,
-    [POPUP_PREVIOUS_BUTTON_KEY]: PopupPrevious,
-    [WORMHOLE_BUTTON_KEY]: Wormhole,
-    [SCORES_BUTTON_KEY]: Scores,
-    [TIPS_BUTTON_KEY]: Tips
+    [ABOUT_BUTTON_KEY]: about,
+    [AUDIO_NEXT_BUTTON_KEY]: audioNext,
+    [AUDIO_OPTIONS_BUTTON_KEY]: audioOptions,
+    [AUDIO_PLAY_BUTTON_KEY]: audioPlay,
+    [AUDIO_PREVIOUS_BUTTON_KEY]: audioPrevious,
+    [CAROUSEL_NAV_BUTTON_KEY]: carouselNav,
+    [CAROUSEL_SELECT_BUTTON_KEY]: carouselSelect,
+    [DOTS_SLIDE_BUTTON_KEY]: dotsSlide,
+    [LYRIC_EAR_BUTTON_KEY]: lyricEar,
+    [LYRIC_EXPAND_BUTTON_KEY]: lyricExpand,
+    [LYRIC_SCROLL_BUTTON_KEY]: lyricScroll,
+    [NAV_BOOK_BUTTON_KEY]: navBook,
+    [NAV_SONG_BUTTON_KEY]: navSong,
+    [OVERVIEW_BUTTON_KEY]: overview,
+    [POPUP_CLOSE_BUTTON_KEY]: popupClose,
+    [POPUP_NEXT_BUTTON_KEY]: popupNext,
+    [POPUP_PREVIOUS_BUTTON_KEY]: popupPrevious,
+    [WORMHOLE_BUTTON_KEY]: wormhole,
+    [SCORES_BUTTON_KEY]: scores,
+    [TIPS_BUTTON_KEY]: tips
 }
 
 const propTypes = {
@@ -90,6 +91,7 @@ const ButtonIcon = ({
     buttonIdentifier
 
 }) => {
+    // TODO: Rename as icon getter function, not component.
     const IconComponent = BUTTON_ICONS_MAP[buttonName]
 
     return isNewSvg(buttonName) ? (
