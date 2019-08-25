@@ -11,8 +11,8 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import {
     CAMPANILE,
-    CAMPUS_BUILDING_TALL__BERKELEY,
-    CAMPUS_BUILDING_WIDE__BERKELEY
+    BERKELEY_BUILDING_TALL,
+    BERKELEY_BUILDING_WIDE
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
 import { BERKELEY_BUILDING_SHARED } from '../../shared'
@@ -48,13 +48,13 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 6.25,
             scaleFactor: 0.42
         },
-        [CAMPUS_BUILDING_TALL__BERKELEY]: {
+        [BERKELEY_BUILDING_TALL]: {
             yIndex: 1,
             xPosition: 9.5,
             scaleFactor: 0.35,
             sharedStyle: BERKELEY_BUILDING_SHARED
         },
-        [CAMPUS_BUILDING_WIDE__BERKELEY]: {
+        [BERKELEY_BUILDING_WIDE]: {
             yIndex: 3,
             xPosition: 10,
             scaleFactor: 0.4,

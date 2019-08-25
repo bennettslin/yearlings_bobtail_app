@@ -64,7 +64,11 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
 } from '../../constants/scene/things/fixtures'
-import { CAMPANILE } from '../../constants/scene/things/flats'
+import {
+    CAMPANILE,
+    BERKELEY_BUILDING_TALL,
+    BERKELEY_BUILDING_WIDE
+} from '../../constants/scene/things/flats'
 import {
     CROWD_BACK,
     LIZ_BED,
@@ -102,7 +106,9 @@ export default [
                 [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
             },
             [FLAT]: {
-                [CAMPANILE]: true
+                [CAMPANILE]: true,
+                [BERKELEY_BUILDING_TALL]: true,
+                [BERKELEY_BUILDING_WIDE]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_CAMPUS]: true

@@ -77,8 +77,8 @@ import {
     ST_JOSEPHS_CHURCH,
     ST_JOSEPHS_ANNEX,
     CAMPANILE,
-    CAMPUS_BUILDING_TALL__BERKELEY,
-    CAMPUS_BUILDING_WIDE__BERKELEY
+    BERKELEY_BUILDING_TALL,
+    BERKELEY_BUILDING_WIDE
 } from '../../constants/scene/things/flats'
 import {
     WIDE_COUCH__BENNETT,
@@ -243,8 +243,8 @@ export default [
             },
             [FLAT]: {
                 [CAMPANILE]: true,
-                [CAMPUS_BUILDING_TALL__BERKELEY]: true,
-                [CAMPUS_BUILDING_WIDE__BERKELEY]: true
+                [BERKELEY_BUILDING_TALL]: true,
+                [BERKELEY_BUILDING_WIDE]: true
             }
         },
         cubes: BERKELEY_CAMPANILE_KEY,

@@ -3,8 +3,7 @@ import {
     BUBBLE,
     CUTOUT,
     DOOR,
-    FIXTURE,
-    FLAT
+    FIXTURE
 } from '../../../constants/scene'
 import { SCHOOL_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../constants/scene/things/bubbles'
@@ -14,7 +13,6 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
-import { NOHO_SCHOOLHOUSE } from '../../../constants/scene/things/flats'
 import { DOOR_SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -57,13 +55,6 @@ const ARRANGEMENTS_THINGS = {
         [SAFEWAY_BAG]: {
             yIndex: 4,
             xPosition: 10
-        }
-    },
-    [FLAT]: {
-        [NOHO_SCHOOLHOUSE]: {
-            yIndex: 1,
-            xPosition: 2.5,
-            scaleFactor: 0.65
         }
     }
 }

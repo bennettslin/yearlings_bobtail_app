@@ -63,8 +63,7 @@ import {
 } from '../../constants/scene/things/fixtures'
 import {
     NOHO_HOUSE_LEFT,
-    NOHO_HOUSE_RIGHT,
-    NOHO_SCHOOLHOUSE
+    NOHO_HOUSE_RIGHT
 } from '../../constants/scene/things/flats'
 import { BATHTUB } from '../../constants/scene/things/panels'
 
@@ -158,9 +157,6 @@ export default [
             [FIXTURE]: {
                 [PLAYGROUND_BALL]: true,
                 [SAFEWAY_BAG]: true
-            },
-            [FLAT]: {
-                [NOHO_SCHOOLHOUSE]: true
             }
         },
         cubes: NOHO_SCHOOL_KEY,

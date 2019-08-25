@@ -90,7 +90,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'nohoSchoolhouse',
+        taskName: 'schoolBungalow',
         workedHours: 1,
         neededHours: 1
     },

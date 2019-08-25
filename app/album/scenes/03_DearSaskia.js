@@ -57,8 +57,8 @@ import {
     TAIWAN_MOUNTAIN_RIGHT,
     DRIVING_HOUSE_LEFT,
     DRIVING_HOUSE_RIGHT,
-    CAMPUS_BUILDING_TALL__TETHERBALL,
-    CAMPUS_BUILDING_WIDE__TETHERBALL
+    SCHOOL_BUNGALOW__LEFT,
+    SCHOOL_BUNGALOW__RIGHT
 } from '../../constants/scene/things/flats'
 import {
     TAIWAN_HAZE__CLOUD,
@@ -221,8 +221,8 @@ export default [
                 [CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT]: true
             },
             [FLAT]: {
-                [CAMPUS_BUILDING_TALL__TETHERBALL]: true,
-                [CAMPUS_BUILDING_WIDE__TETHERBALL]: true
+                [SCHOOL_BUNGALOW__LEFT]: true,
+                [SCHOOL_BUNGALOW__RIGHT]: true
             }
         },
         cubes: TETHERBALL_COURT_KEY,

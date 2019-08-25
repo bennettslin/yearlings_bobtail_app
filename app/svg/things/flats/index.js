@@ -1,6 +1,6 @@
 import nohoHouseLeft from 'assets/svgs/flats/nohoHouseLeft'
 import nohoHouseRight from 'assets/svgs/flats/nohoHouseRight'
-import nohoSchoolhouse from 'assets/svgs/flats/nohoSchoolhouse'
+import schoolBungalow from 'assets/svgs/flats/schoolBungalow'
 import valleyFreeway from 'assets/svgs/flats/valleyFreeway'
 import bedroomBus from 'assets/svgs/flats/bedroomBus'
 import bedroomSiren from 'assets/svgs/flats/bedroomSiren'
@@ -57,7 +57,8 @@ import pampasFar from 'assets/svgs/flats/pampasFar'
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    NOHO_SCHOOLHOUSE,
+    SCHOOL_BUNGALOW__LEFT,
+    SCHOOL_BUNGALOW__RIGHT,
     VALLEY_FREEWAY,
     BEDROOM_BUS,
     BEDROOM_SIREN,
@@ -70,8 +71,6 @@ import {
     TAIWAN_HOUSE_NEAR,
     DRIVING_HOUSE_LEFT,
     DRIVING_HOUSE_RIGHT,
-    CAMPUS_BUILDING_TALL__TETHERBALL,
-    CAMPUS_BUILDING_WIDE__TETHERBALL,
     RICKSHAW_TOWN,
     FERRIS_WHEEL,
     ROLLER_COASTER,
@@ -80,8 +79,8 @@ import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
-    CAMPUS_BUILDING_TALL__BERKELEY,
-    CAMPUS_BUILDING_WIDE__BERKELEY,
+    BERKELEY_BUILDING_TALL,
+    BERKELEY_BUILDING_WIDE,
     GO_KART_TRACK,
     ROYCE_HALL,
     CEMETERY_HILLS_LEFT,
@@ -119,7 +118,8 @@ import {
 export default {
     [NOHO_HOUSE_LEFT]: nohoHouseLeft,
     [NOHO_HOUSE_RIGHT]: nohoHouseRight,
-    [NOHO_SCHOOLHOUSE]: nohoSchoolhouse,
+    [SCHOOL_BUNGALOW__LEFT]: schoolBungalow,
+    [SCHOOL_BUNGALOW__RIGHT]: schoolBungalow,
     [VALLEY_FREEWAY]: valleyFreeway,
     [BEDROOM_BUS]: bedroomBus,
     [BEDROOM_SIREN]: bedroomSiren,
@@ -132,8 +132,6 @@ export default {
     [TAIWAN_HOUSE_NEAR]: taiwanHouseNear,
     [DRIVING_HOUSE_LEFT]: drivingHouseLeft,
     [DRIVING_HOUSE_RIGHT]: drivingHouseRight,
-    [CAMPUS_BUILDING_TALL__TETHERBALL]: campusBuildingTall,
-    [CAMPUS_BUILDING_WIDE__TETHERBALL]: campusBuildingWide,
     [RICKSHAW_TOWN]: rickshawTown,
     [FERRIS_WHEEL]: ferrisWheel,
     [ROLLER_COASTER]: rollerCoaster,
@@ -142,8 +140,8 @@ export default {
     [ST_JOSEPHS_ANNEX]: stJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: stJosephsChurch,
     [CAMPANILE]: campanile,
-    [CAMPUS_BUILDING_TALL__BERKELEY]: campusBuildingTall,
-    [CAMPUS_BUILDING_WIDE__BERKELEY]: campusBuildingWide,
+    [BERKELEY_BUILDING_TALL]: campusBuildingTall,
+    [BERKELEY_BUILDING_WIDE]: campusBuildingWide,
     [GO_KART_TRACK]: goKartTrack,
     [ROYCE_HALL]: royceHall,
     [CEMETERY_HILLS_LEFT]: cemeteryHillsLeft,

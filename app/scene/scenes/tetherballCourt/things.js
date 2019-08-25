@@ -17,13 +17,12 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { TETHERBALL_POLE } from '../../../constants/scene/things/fixtures'
 import {
-    CAMPUS_BUILDING_TALL__TETHERBALL,
-    CAMPUS_BUILDING_WIDE__TETHERBALL
+    SCHOOL_BUNGALOW__LEFT,
+    SCHOOL_BUNGALOW__RIGHT
 } from '../../../constants/scene/things/flats'
 import {
     BUBBLE_SHARED,
-    TETHERBALL_POLE_SHARED,
-    VAN_NUYS_SCHOOLHOUSE_SHARED
+    TETHERBALL_POLE_SHARED
 } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -83,17 +82,16 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FLAT]: {
-        [CAMPUS_BUILDING_TALL__TETHERBALL]: {
+        [SCHOOL_BUNGALOW__LEFT]: {
             yIndex: 2,
             xPosition: 3.25,
-            scaleFactor: 0.5,
-            sharedStyle: VAN_NUYS_SCHOOLHOUSE_SHARED
+            scaleFactor: 0.5
         },
-        [CAMPUS_BUILDING_WIDE__TETHERBALL]: {
+        [SCHOOL_BUNGALOW__RIGHT]: {
             yIndex: 2,
             xPosition: 7.75,
             scaleFactor: 0.5,
-            sharedStyle: VAN_NUYS_SCHOOLHOUSE_SHARED
+            flipHorizontal: true
         }
     }
 }
