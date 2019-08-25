@@ -14,8 +14,8 @@ import {
     BLINDS_OUTSIDE__LIZ_ENDED
 } from '../../../constants/scene/things/doors'
 import {
-    BUBBLE_SHARED,
-    WINDOW_SHARED
+    BUBBLE__SHARED,
+    WINDOW__SHARED
 } from '../../shared'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
@@ -25,14 +25,14 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             xPosition: 7.5,
             zOffset: 4,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_MEDIUM__GO_KART]: {
             yIndex: 5,
             xPosition: 7,
             zOffset: 3.75,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [GO_KART_THOUGHT]: {
             yIndex: 5,
@@ -54,14 +54,14 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             xPosition: 6,
             scaleFactor: 0.575,
             zOffset: 2.5,
-            sharedStyle: WINDOW_SHARED
+            sharedStyle: WINDOW__SHARED
         },
         [BLINDS_OUTSIDE__LIZ_ENDED]: {
             yIndex: 2,
             xPosition: 3,
             scaleFactor: 0.575,
             zOffset: 2.5,
-            sharedStyle: WINDOW_SHARED
+            sharedStyle: WINDOW__SHARED
         }
     }
 }

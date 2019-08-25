@@ -14,7 +14,7 @@ import {
 } from '../../../constants/scene/things/flats'
 import { WEDDING_PLATFORM } from '../../../constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../constants/scene/things/puppets'
-import { PEOPLE_ALL_SHARED } from '../../shared/people'
+import { PEOPLE_ALL__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -61,7 +61,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 2,
             scaleFactor: 0.25,
-            sharedStyle: PEOPLE_ALL_SHARED
+            sharedStyle: PEOPLE_ALL__SHARED
         }
     }
 }

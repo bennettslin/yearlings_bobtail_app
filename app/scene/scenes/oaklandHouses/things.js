@@ -10,9 +10,9 @@ import {
 } from '../../../constants/scene/things/flats'
 import { VOLKSWAGEN } from '../../../constants/scene/things/panels'
 import {
-    OAKLAND_HOUSE_SHARED,
-    OAKLAND_HOUSE_LEFT_SHARED,
-    OAKLAND_HOUSE_RIGHT_SHARED
+    OAKLAND_HOUSE__SHARED,
+    OAKLAND_HOUSE_LEFT__SHARED,
+    OAKLAND_HOUSE_RIGHT__SHARED
 } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -30,8 +30,8 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2.25,
             scaleFactor: 0.5,
             sharedStyle: [
-                OAKLAND_HOUSE_SHARED,
-                OAKLAND_HOUSE_LEFT_SHARED
+                OAKLAND_HOUSE__SHARED,
+                OAKLAND_HOUSE_LEFT__SHARED
             ]
         },
         [OAKLAND_HOUSE_RIGHT]: {
@@ -39,8 +39,8 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 9,
             scaleFactor: 0.5,
             sharedStyle: [
-                OAKLAND_HOUSE_SHARED,
-                OAKLAND_HOUSE_RIGHT_SHARED
+                OAKLAND_HOUSE__SHARED,
+                OAKLAND_HOUSE_RIGHT__SHARED
             ]
         }
     }

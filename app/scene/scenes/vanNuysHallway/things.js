@@ -4,7 +4,7 @@ import {
 } from '../../../constants/scene'
 import { CORKBOARD } from '../../../constants/scene/things/cardboards'
 import { PRINCIPAL_DOOR } from '../../../constants/scene/things/doors'
-import { DOOR_SHARED } from '../../shared'
+import { DOOR__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
         [PRINCIPAL_DOOR]: {
             yIndex: 4,
             xPosition: 3,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         }
     }
 }

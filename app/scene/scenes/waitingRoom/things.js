@@ -31,15 +31,15 @@ import {
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
 import {
-    BUBBLE_SHARED,
-    DOOR_SHARED,
-    WAITING_ARMCHAIR_SHARED
+    BUBBLE__SHARED,
+    DOOR__SHARED,
+    WAITING_ARMCHAIR__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_INSTRUMENT_SHARED,
-    PEOPLE_LIZ_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_INSTRUMENT__SHARED,
+    PEOPLE_LIZ__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -68,13 +68,13 @@ const ARRANGEMENTS_THINGS = {
         [WAITING_ROOM_DOOR]: {
             yIndex: 5,
             xPosition: 10.16,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         },
         [WAITING_ROOM_DOOR_OPEN]: {
             yIndex: 5,
             xPosition: 8.875,
             scaleFactor: 0.7,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         }
     },
     [PANEL]: {
@@ -82,40 +82,40 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 2.5,
             scaleFactor: 0.22,
-            sharedStyle: WAITING_ARMCHAIR_SHARED
+            sharedStyle: WAITING_ARMCHAIR__SHARED
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {
             yIndex: 5,
             xPosition: 1.25,
             scaleFactor: 0.22,
-            sharedStyle: WAITING_ARMCHAIR_SHARED
+            sharedStyle: WAITING_ARMCHAIR__SHARED
         },
         [WAITING_ARMREST__BENNETT_RIGHT]: {
             yIndex: 5,
             xPosition: 3.75,
             scaleFactor: 0.22,
             flipHorizontal: true,
-            sharedStyle: WAITING_ARMCHAIR_SHARED
+            sharedStyle: WAITING_ARMCHAIR__SHARED
         },
         [WAITING_ARMCHAIR__LIZ]: {
             yIndex: 3,
             xPosition: 5.5,
             scaleFactor: 0.22,
             flipHorizontal: true,
-            sharedStyle: WAITING_ARMCHAIR_SHARED
+            sharedStyle: WAITING_ARMCHAIR__SHARED
         },
         [WAITING_ARMREST__LIZ_LEFT]: {
             yIndex: 5,
             xPosition: 4.25,
             scaleFactor: 0.22,
-            sharedStyle: WAITING_ARMCHAIR_SHARED
+            sharedStyle: WAITING_ARMCHAIR__SHARED
         },
         [WAITING_ARMREST__LIZ_RIGHT]: {
             yIndex: 5,
             xPosition: 6.75,
             scaleFactor: 0.22,
             flipHorizontal: true,
-            sharedStyle: WAITING_ARMCHAIR_SHARED
+            sharedStyle: WAITING_ARMCHAIR__SHARED
         }
     }
 }
@@ -127,21 +127,21 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             xPosition: 1,
             zOffset: 3.2,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_MEDIUM__WAITING]: {
             yIndex: 5,
             xPosition: 0.75,
             zOffset: 3.5,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_LARGE__WAITING]: {
             yIndex: 5,
             xPosition: 1.1,
             zOffset: 4,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [WAITING_THOUGHT_WALKING]: {
             yIndex: 5,
@@ -149,9 +149,9 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 3.3,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_LIZ_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_LIZ__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         },
         [WAITING_THOUGHT_SINGING]: {
@@ -160,10 +160,10 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 3.6,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_INSTRUMENT_SHARED,
-                PEOPLE_LIZ_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_INSTRUMENT__SHARED,
+                PEOPLE_LIZ__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         },
         [WAITING_THOUGHT_STUDYING]: {
@@ -172,9 +172,9 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 0.6,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_LIZ_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_LIZ__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         }
     }

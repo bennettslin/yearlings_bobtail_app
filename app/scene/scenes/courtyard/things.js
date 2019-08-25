@@ -8,8 +8,8 @@ import {
     BENNETT_DOOR_OUTSIDE
 } from '../../../constants/scene/things/doors'
 import {
-    DOOR_SHARED,
-    WINDOW_SHARED
+    DOOR__SHARED,
+    WINDOW__SHARED
 } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -26,12 +26,12 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 3.5,
             zOffset: 2.5,
             scaleFactor: 0.575,
-            sharedStyle: WINDOW_SHARED
+            sharedStyle: WINDOW__SHARED
         },
         [BENNETT_DOOR_OUTSIDE]: {
             yIndex: 2,
             xPosition: 8,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         }
     }
 }

@@ -15,8 +15,8 @@ import {
     BERKELEY_BUILDING_WIDE
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
-import { BERKELEY_BUILDING_SHARED } from '../../shared'
-import { PEOPLE_ODIN_GHOST_SHARED } from '../../shared/people'
+import { BERKELEY_BUILDING__SHARED } from '../../shared'
+import { PEOPLE_ODIN_GHOST__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -52,13 +52,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 9.5,
             scaleFactor: 0.35,
-            sharedStyle: BERKELEY_BUILDING_SHARED
+            sharedStyle: BERKELEY_BUILDING__SHARED
         },
         [BERKELEY_BUILDING_WIDE]: {
             yIndex: 3,
             xPosition: 10,
             scaleFactor: 0.4,
-            sharedStyle: BERKELEY_BUILDING_SHARED
+            sharedStyle: BERKELEY_BUILDING__SHARED
         }
     }
 }
@@ -69,7 +69,7 @@ export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
             yIndex: 5,
             xPosition: 5,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_GHOST_SHARED
+            sharedStyle: PEOPLE_ODIN_GHOST__SHARED
         }
     }
 }

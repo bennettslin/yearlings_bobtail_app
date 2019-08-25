@@ -35,10 +35,10 @@ import {
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
 import {
-    DOLLAR_SHARED,
-    PAPER_SHARED
+    DOLLAR__SHARED,
+    PAPER__SHARED
 } from '../../shared'
-import { PEOPLE_ALL_SHARED } from '../../shared/people'
+import { PEOPLE_ALL__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -47,14 +47,14 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 9,
             zOffset: 0,
             scaleFactor: 0.36,
-            sharedStyle: PEOPLE_ALL_SHARED
+            sharedStyle: PEOPLE_ALL__SHARED
         },
         [BLOOM_COUNTY_POSTER]: {
             yIndex: 3,
             xPosition: 9,
             zOffset: 0,
             scaleFactor: 0.36,
-            sharedStyle: PEOPLE_ALL_SHARED
+            sharedStyle: PEOPLE_ALL__SHARED
         }
     },
     [FURNITURE]: {
@@ -145,8 +145,8 @@ export const THINGS_BEDROOM_FEIGNING = {
             yIndex: 3,
             xPosition: 9,
             sharedStyle: [
-                DOLLAR_SHARED,
-                PAPER_SHARED
+                DOLLAR__SHARED,
+                PAPER__SHARED
             ]
         }
     },

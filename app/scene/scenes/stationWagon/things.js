@@ -15,8 +15,8 @@ import {
     SATURN_SEAT__RIGHT
 } from '../../../constants/scene/things/panels'
 import {
-    EVIAN_SHARED,
-    INTERIOR_SHARED
+    EVIAN__SHARED,
+    INTERIOR__SHARED
 } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -39,7 +39,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 1.5,
             scaleFactor: 0.3,
-            sharedStyle: EVIAN_SHARED
+            sharedStyle: EVIAN__SHARED
         }
     },
     [PANEL]: {
@@ -47,7 +47,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 5.5,
             scaleFactor: 0.5,
-            sharedStyle: INTERIOR_SHARED
+            sharedStyle: INTERIOR__SHARED
         },
         [SATURN_SEAT__LEFT]: {
             yIndex: 4,

@@ -10,11 +10,11 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
 } from '../../../constants/scene/things/flats'
-import { TAIWAN_HOUSE_SHARED } from '../../shared'
+import { TAIWAN_HOUSE__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_ODIN_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -24,9 +24,9 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 7,
             scaleFactor: 0.2,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_ODIN_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_ODIN__SHARED
             ]
         }
     },
@@ -42,19 +42,19 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 7,
             scaleFactor: 0.45,
-            sharedStyle: TAIWAN_HOUSE_SHARED
+            sharedStyle: TAIWAN_HOUSE__SHARED
         },
         [TAIWAN_HOUSE_FAR]: {
             yIndex: 1,
             xPosition: 10.25,
             scaleFactor: 0.45,
-            sharedStyle: TAIWAN_HOUSE_SHARED
+            sharedStyle: TAIWAN_HOUSE__SHARED
         },
         [TAIWAN_HOUSE_NEAR]: {
             yIndex: 2,
             xPosition: 11.25,
             scaleFactor: 0.5,
-            sharedStyle: TAIWAN_HOUSE_SHARED
+            sharedStyle: TAIWAN_HOUSE__SHARED
         }
     }
 }

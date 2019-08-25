@@ -22,9 +22,9 @@ import {
     SCHOOLBUS_EXTERIOR
 } from '../../../constants/scene/things/panels'
 import {
-    BUBBLE_SHARED,
-    INTERIOR_SHARED,
-    OAKLAND_COMMERCIAL_SHARED
+    BUBBLE__SHARED,
+    INTERIOR__SHARED,
+    OAKLAND_COMMERCIAL__SHARED
 } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -34,27 +34,27 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2,
             zOffset: 8,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_MEDIUM__LEFT]: {
             yIndex: 0,
             xPosition: 1.5,
             zOffset: 7.75,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_LARGE__LEFT]: {
             yIndex: 0,
             xPosition: 1,
             zOffset: 7,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [THOUGHT_LARGE__LEFT]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         }
     },
     [FIXTURE]: {
@@ -72,13 +72,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 2,
             scaleFactor: 0.6,
-            sharedStyle: OAKLAND_COMMERCIAL_SHARED
+            sharedStyle: OAKLAND_COMMERCIAL__SHARED
         },
         [DRIVING_HOUSE_RIGHT]: {
             yIndex: 1,
             xPosition: 9,
             scaleFactor: 0.6,
-            sharedStyle: OAKLAND_COMMERCIAL_SHARED
+            sharedStyle: OAKLAND_COMMERCIAL__SHARED
         }
     },
     [PANEL]: {
@@ -86,7 +86,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 5.5,
             scaleFactor: 0.5,
-            sharedStyle: INTERIOR_SHARED
+            sharedStyle: INTERIOR__SHARED
         },
         [SCHOOLBUS_SEAT__LEFT]: {
             yIndex: 4,

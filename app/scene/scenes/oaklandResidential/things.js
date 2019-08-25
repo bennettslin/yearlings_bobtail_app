@@ -18,9 +18,9 @@ import {
     RESIDENTIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
 import {
-    OAKLAND_HOUSE_SHARED,
-    OAKLAND_HOUSE_LEFT_SHARED,
-    OAKLAND_HOUSE_RIGHT_SHARED
+    OAKLAND_HOUSE__SHARED,
+    OAKLAND_HOUSE_LEFT__SHARED,
+    OAKLAND_HOUSE_RIGHT__SHARED
 } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -54,43 +54,43 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 2.75,
             scaleFactor: 0.36,
-            sharedStyle: OAKLAND_HOUSE_SHARED
+            sharedStyle: OAKLAND_HOUSE__SHARED
         },
         [RESIDENTIAL_FAR_RIGHT]: {
             yIndex: 1,
             xPosition: 8,
             scaleFactor: 0.36,
-            sharedStyle: OAKLAND_HOUSE_SHARED
+            sharedStyle: OAKLAND_HOUSE__SHARED
         },
         [RESIDENTIAL_MIDDLE_LEFT]: {
             yIndex: 2,
             xPosition: 1.75,
             scaleFactor: 0.42,
             sharedStyle: [
-                OAKLAND_HOUSE_SHARED,
-                OAKLAND_HOUSE_RIGHT_SHARED
+                OAKLAND_HOUSE__SHARED,
+                OAKLAND_HOUSE_RIGHT__SHARED
             ]
         },
         [RESIDENTIAL_MIDDLE_RIGHT]: {
             yIndex: 2,
             xPosition: 9.25,
             scaleFactor: 0.42,
-            sharedStyle: OAKLAND_HOUSE_SHARED
+            sharedStyle: OAKLAND_HOUSE__SHARED
         },
         [RESIDENTIAL_NEAR_LEFT]: {
             yIndex: 3,
             xPosition: 0.75,
             scaleFactor: 0.5,
             sharedStyle: [
-                OAKLAND_HOUSE_SHARED,
-                OAKLAND_HOUSE_LEFT_SHARED
+                OAKLAND_HOUSE__SHARED,
+                OAKLAND_HOUSE_LEFT__SHARED
             ]
         },
         [RESIDENTIAL_NEAR_RIGHT]: {
             yIndex: 3,
             xPosition: 10.25,
             scaleFactor: 0.5,
-            sharedStyle: OAKLAND_HOUSE_SHARED
+            sharedStyle: OAKLAND_HOUSE__SHARED
         }
     }
 }

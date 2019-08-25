@@ -16,13 +16,13 @@ import {
     WIDE_ARMREST__MIRIAM_RIGHT
 } from '../../../constants/scene/things/panels'
 import {
-    ROAD_SHARED,
-    SNOWGLOBE_SHARED
+    ROAD__SHARED,
+    SNOWGLOBE__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_LIZ_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_LIZ__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -31,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
-            sharedStyle: ROAD_SHARED
+            sharedStyle: ROAD__SHARED
         }
     },
     [CARDBOARD]: {
@@ -40,7 +40,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2,
             zOffset: 5,
             scaleFactor: 0.7,
-            sharedStyle: SNOWGLOBE_SHARED
+            sharedStyle: SNOWGLOBE__SHARED
         },
         [SNOWGLOBE_PRESENT]: {
             yIndex: 1,
@@ -48,10 +48,10 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4,
             scaleFactor: 0.7,
             sharedStyle: [
-                SNOWGLOBE_SHARED,
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_LIZ_SHARED,
-                PEOPLE_ALL_SHARED
+                SNOWGLOBE__SHARED,
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_LIZ__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         }
     },
@@ -60,13 +60,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 2.5,
             scaleFactor: 0.3,
-            sharedStyle: SNOWGLOBE_SHARED
+            sharedStyle: SNOWGLOBE__SHARED
         },
         [SNOWGLOBE__BENNETT_MIRIAM]: {
             yIndex: 5,
             xPosition: 8,
             scaleFactor: 0.4,
-            sharedStyle: SNOWGLOBE_SHARED
+            sharedStyle: SNOWGLOBE__SHARED
         },
         [WIDE_COUCH__MIRIAM]: {
             yIndex: 5,

@@ -12,11 +12,11 @@ import {
     TAIWAN_FRIDGE
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
-import { BUDDHA_SHRINE_SHARED } from '../../shared'
+import { BUDDHA_SHRINE__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_ODIN_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -26,15 +26,15 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 7.75,
             scaleFactor: 0.2,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED
             ]
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_SHARED
+            sharedStyle: PEOPLE_ODIN__SHARED
         }
     },
     [CUTOUT]: {
@@ -42,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 5.5,
             scaleFactor: 0.15,
-            sharedStyle: BUDDHA_SHRINE_SHARED
+            sharedStyle: BUDDHA_SHRINE__SHARED
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,

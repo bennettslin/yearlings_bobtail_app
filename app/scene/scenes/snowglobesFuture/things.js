@@ -19,14 +19,14 @@ import {
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
 import {
-    REATTA_SHARED,
-    ROAD_SHARED,
-    SNOWGLOBE_SHARED
+    REATTA__SHARED,
+    ROAD__SHARED,
+    SNOWGLOBE__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_MIRIAM_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_MIRIAM__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -35,7 +35,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
-            sharedStyle: ROAD_SHARED
+            sharedStyle: ROAD__SHARED
         }
     },
     [CARDBOARD]: {
@@ -44,7 +44,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2,
             zOffset: 5,
             scaleFactor: 0.7,
-            sharedStyle: SNOWGLOBE_SHARED
+            sharedStyle: SNOWGLOBE__SHARED
         },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 1,
@@ -52,9 +52,9 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4,
             scaleFactor: 0.7,
             sharedStyle: [
-                SNOWGLOBE_SHARED,
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_ALL_SHARED
+                SNOWGLOBE__SHARED,
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         },
         [SNOWGLOBE_FUTURE_REATTA]: {
@@ -63,11 +63,11 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4,
             scaleFactor: 0.7,
             sharedStyle: [
-                REATTA_SHARED,
-                SNOWGLOBE_SHARED,
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_MIRIAM_SHARED,
-                PEOPLE_ALL_SHARED
+                REATTA__SHARED,
+                SNOWGLOBE__SHARED,
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_MIRIAM__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         }
     },
@@ -90,13 +90,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 3,
             scaleFactor: 0.4,
-            sharedStyle: SNOWGLOBE_SHARED
+            sharedStyle: SNOWGLOBE__SHARED
         },
         [SNOWGLOBE__BENNETT_ALONE]: {
             yIndex: 4,
             xPosition: 8.5,
             scaleFactor: 0.3,
-            sharedStyle: SNOWGLOBE_SHARED
+            sharedStyle: SNOWGLOBE__SHARED
         }
     }
 }

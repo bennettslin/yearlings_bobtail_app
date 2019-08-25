@@ -12,9 +12,9 @@ import {
     ROLLER_COASTER
 } from '../../../constants/scene/things/flats'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_ODIN_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -31,9 +31,9 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 9,
             scaleFactor: 0.2,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_ODIN_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_ODIN__SHARED
             ]
         }
     },

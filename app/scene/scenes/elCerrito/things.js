@@ -19,13 +19,13 @@ import {
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 import {
-    INTERIOR_SHARED,
-    REATTA_SHARED
+    INTERIOR__SHARED,
+    REATTA__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_MIRIAM_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_MIRIAM__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -62,7 +62,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 4.1,
             scaleFactor: 0.35,
-            sharedStyle: INTERIOR_SHARED
+            sharedStyle: INTERIOR__SHARED
         },
         [REATTA_SEAT]: {
             yIndex: 5,
@@ -80,7 +80,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 4.1,
             scaleFactor: 0.35,
-            sharedStyle: REATTA_SHARED
+            sharedStyle: REATTA__SHARED
         }
     }
 }
@@ -93,10 +93,10 @@ export const THINGS_EL_CERRITO_REATTA = {
             zOffset: -0.025,
             scaleFactor: 0.6,
             sharedStyle: [
-                REATTA_SHARED,
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_MIRIAM_SHARED
+                REATTA__SHARED,
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_MIRIAM__SHARED
             ]
         }
     }

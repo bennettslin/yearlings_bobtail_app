@@ -21,8 +21,8 @@ import {
     WIDE_ARMREST__BENNETT_LEFT,
     WIDE_ARMREST__BENNETT_RIGHT
 } from '../../../constants/scene/things/panels'
-import { PROGRESS_CHART_SHARED } from '../../shared'
-import { PEOPLE_ALL_SHARED } from '../../shared/people'
+import { PROGRESS_CHART__SHARED } from '../../shared'
+import { PEOPLE_ALL__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -68,7 +68,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             xPosition: 9,
             zOffset: 2,
             scaleFactor: 0.25,
-            sharedStyle: PEOPLE_ALL_SHARED
+            sharedStyle: PEOPLE_ALL__SHARED
         }
     }
 }
@@ -80,7 +80,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
             xPosition: 9,
             zOffset: 2,
             scaleFactor: 0.25,
-            sharedStyle: PEOPLE_ALL_SHARED
+            sharedStyle: PEOPLE_ALL__SHARED
         }
     }
 }
@@ -91,14 +91,14 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
             yIndex: 2,
             xPosition: 9,
             scaleFactor: 0.15,
-            sharedStyle: PEOPLE_ALL_SHARED
+            sharedStyle: PEOPLE_ALL__SHARED
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             xPosition: 9,
             zOffset: 1,
             scaleFactor: 0.25,
-            sharedStyle: PROGRESS_CHART_SHARED
+            sharedStyle: PROGRESS_CHART__SHARED
         }
     }
 }
@@ -110,7 +110,7 @@ export const THINGS_BENNETT_COUCH_READING = {
             xPosition: 9,
             zOffset: 1,
             scaleFactor: 0.25,
-            sharedStyle: PROGRESS_CHART_SHARED
+            sharedStyle: PROGRESS_CHART__SHARED
         }
     },
     [FIXTURE]: {

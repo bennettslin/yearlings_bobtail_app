@@ -38,16 +38,16 @@ import {
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END
 } from '../../../constants/scene/things/puppets'
-import { TAIWAN_HOUSE_SHARED } from '../../shared'
+import { TAIWAN_HOUSE__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_ANITA_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_CHRISTOPHER_SHARED,
-    PEOPLE_FATHER_SHARED,
-    PEOPLE_MOTHER_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_ANITA__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_CHRISTOPHER__SHARED,
+    PEOPLE_FATHER__SHARED,
+    PEOPLE_MOTHER__SHARED
 } from '../../shared/people'
-import { SKETCH_TAIWAN_SHARED } from '../../shared/sketch'
+import { SKETCH_TAIWAN__SHARED } from '../../shared/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -62,7 +62,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 5.5,
             scaleFactor: 0.575,
-            sharedStyle: TAIWAN_HOUSE_SHARED
+            sharedStyle: TAIWAN_HOUSE__SHARED
         },
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 5,
@@ -102,8 +102,8 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED
             ]
         },
         [PUPPET_ANITA_BEGIN]: {
@@ -112,8 +112,8 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_ANITA_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_ANITA__SHARED
             ]
         },
         [PUPPET_CHRISTOPHER_BEGIN]: {
@@ -122,8 +122,8 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_CHRISTOPHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_CHRISTOPHER__SHARED
             ]
         },
         [PUPPET_FATHER_BEGIN]: {
@@ -132,8 +132,8 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_FATHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_FATHER__SHARED
             ]
         },
         [PUPPET_MOTHER_BEGIN]: {
@@ -142,8 +142,8 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_MOTHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_MOTHER__SHARED
             ]
         }
     }
@@ -157,7 +157,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             zOffset: 3.375,
             noShadow: true,
             scaleFactor: 0.35,
-            sharedStyle: SKETCH_TAIWAN_SHARED
+            sharedStyle: SKETCH_TAIWAN__SHARED
         },
         [SKETCHBOOK__TOGETHER]: {
             yIndex: 5,
@@ -174,8 +174,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED
             ]
         },
         [PUPPET_ANITA_MIDDLE]: {
@@ -184,8 +184,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_ANITA_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_ANITA__SHARED
             ]
         },
         [PUPPET_CHRISTOPHER_MIDDLE]: {
@@ -194,8 +194,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_CHRISTOPHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_CHRISTOPHER__SHARED
             ]
         },
         [PUPPET_FATHER_MIDDLE]: {
@@ -204,8 +204,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_FATHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_FATHER__SHARED
             ]
         },
         [PUPPET_MOTHER_MIDDLE]: {
@@ -214,8 +214,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_MOTHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_MOTHER__SHARED
             ]
         }
     }
@@ -229,7 +229,7 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 3.5,
             noShadow: true,
             scaleFactor: 0.4,
-            sharedStyle: SKETCH_TAIWAN_SHARED
+            sharedStyle: SKETCH_TAIWAN__SHARED
         },
         [SKETCHBOOK__APART]: {
             yIndex: 5,
@@ -247,8 +247,8 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED
             ]
         },
         [PUPPET_ANITA_END]: {
@@ -257,8 +257,8 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_ANITA_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_ANITA__SHARED
             ]
         },
         [PUPPET_CHRISTOPHER_END]: {
@@ -267,8 +267,8 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_CHRISTOPHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_CHRISTOPHER__SHARED
             ]
         },
         [PUPPET_FATHER_END]: {
@@ -277,8 +277,8 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_FATHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_FATHER__SHARED
             ]
         },
         [PUPPET_MOTHER_END]: {
@@ -287,8 +287,8 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 3,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_MOTHER_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_MOTHER__SHARED
             ]
         }
     }

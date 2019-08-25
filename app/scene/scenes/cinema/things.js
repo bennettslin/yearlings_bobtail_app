@@ -10,12 +10,12 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
 import {
-    DOOR_SHARED,
-    POSTER_GLADIATOR_SHARED
+    DOOR__SHARED,
+    POSTER_GLADIATOR__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_MARA_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_MARA__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -27,8 +27,8 @@ const ARRANGEMENTS_THINGS = {
             noShadow: true,
             scaleFactor: 0.25,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_MARA_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_MARA__SHARED
             ]
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
@@ -44,9 +44,9 @@ const ARRANGEMENTS_THINGS = {
             noShadow: true,
             scaleFactor: 0.25,
             sharedStyle: [
-                POSTER_GLADIATOR_SHARED,
-                PEOPLE_ALL_SHARED,
-                PEOPLE_MARA_SHARED
+                POSTER_GLADIATOR__SHARED,
+                PEOPLE_ALL__SHARED,
+                PEOPLE_MARA__SHARED
             ]
         },
         [MARQUEE_FRAME__MARA_GLADIATOR]: {
@@ -61,7 +61,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 5.5,
             scaleFactor: 0.675,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         }
     }
 }

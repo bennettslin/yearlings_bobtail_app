@@ -9,11 +9,11 @@ import {
     ODIN_SHORE
 } from '../../../constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
-import { TAIWAN_HOUSE_SHARED } from '../../shared'
+import { TAIWAN_HOUSE__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_ODIN_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -30,15 +30,15 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 1.5,
             scaleFactor: 0.2,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED
             ]
         },
         [ODIN_SHORE]: {
             yIndex: 2,
             xPosition: 2,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_SHARED
+            sharedStyle: PEOPLE_ODIN__SHARED
         }
     },
     [FLAT]: {
@@ -46,7 +46,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 9.5,
             scaleFactor: 0.6,
-            sharedStyle: TAIWAN_HOUSE_SHARED
+            sharedStyle: TAIWAN_HOUSE__SHARED
         }
     }
 }

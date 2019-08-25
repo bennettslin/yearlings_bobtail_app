@@ -9,7 +9,7 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { STAGE_MIC__CROWD } from '../../../constants/scene/things/fixtures'
 import { CROWD_SIDE } from '../../../constants/scene/things/panels'
-import { SHADOW_SHARED } from '../../shared'
+import { SHADOW__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -41,7 +41,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 7,
             scaleFactor: 0.325,
-            sharedStyle: SHADOW_SHARED
+            sharedStyle: SHADOW__SHARED
         }
     }
 }

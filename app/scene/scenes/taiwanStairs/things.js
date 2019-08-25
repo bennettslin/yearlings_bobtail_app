@@ -7,11 +7,11 @@ import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
 } from '../../../constants/scene/things/cardboards'
-import { TAIWAN_HOUSE_SHARED } from '../../shared'
+import { TAIWAN_HOUSE__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_ODIN_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -22,7 +22,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 2.5,
             scaleFactor: 0.45,
             flipHorizontal: true,
-            sharedStyle: TAIWAN_HOUSE_SHARED
+            sharedStyle: TAIWAN_HOUSE__SHARED
         }
     },
     [CARDBOARD]: {
@@ -32,15 +32,15 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             zOffset: 1,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED
             ]
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
             xPosition: 6,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_SHARED
+            sharedStyle: PEOPLE_ODIN__SHARED
         }
     }
 }

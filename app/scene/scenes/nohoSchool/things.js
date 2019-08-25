@@ -13,7 +13,7 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
-import { DOOR_SHARED } from '../../shared'
+import { DOOR__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 8,
             scaleFactor: 0.45,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         }
     },
     [FIXTURE]: {

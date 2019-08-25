@@ -14,14 +14,14 @@ import {
     MARQUEE_FRAME__GLADIATOR
 } from '../../../constants/scene/things/cardboards'
 import {
-    BUBBLE_SHARED,
-    POSTER_GLADIATOR_SHARED
+    BUBBLE__SHARED,
+    POSTER_GLADIATOR__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_INSTRUMENT_SHARED,
-    PEOPLE_MARA_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_INSTRUMENT__SHARED,
+    PEOPLE_MARA__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -31,21 +31,21 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 4.5,
             zOffset: 5.1,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_MEDIUM__CINEMA]: {
             yIndex: 5,
             xPosition: 4.75,
             zOffset: 5.3,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_LARGE__CINEMA]: {
             yIndex: 5,
             xPosition: 5.5,
             zOffset: 5.5,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [CINEMA_THOUGHT_RECORDING]: {
             yIndex: 5,
@@ -53,9 +53,9 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4.1,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_INSTRUMENT_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_INSTRUMENT__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         },
         [CINEMA_THOUGHT_BUYING]: {
@@ -64,8 +64,8 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 1,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_MARA_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_MARA__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         }
     },
@@ -77,8 +77,8 @@ const ARRANGEMENTS_THINGS = {
             noShadow: true,
             scaleFactor: 0.25,
             sharedStyle: [
-                POSTER_GLADIATOR_SHARED,
-                PEOPLE_ALL_SHARED
+                POSTER_GLADIATOR__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         },
         [MARQUEE_FRAME__GLADIATOR]: {

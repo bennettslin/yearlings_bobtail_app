@@ -7,7 +7,7 @@ import {
     ASH_CAN
 } from '../../../constants/scene/things/cutouts'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
-import { PEOPLE_ODIN_GHOST_SHARED } from '../../shared/people'
+import { PEOPLE_ODIN_GHOST__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -30,7 +30,7 @@ export const THINGS_BERKELEY_BANCROFT_VEGAN = {
             yIndex: 5,
             xPosition: 5,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_GHOST_SHARED
+            sharedStyle: PEOPLE_ODIN_GHOST__SHARED
         }
     }
 }

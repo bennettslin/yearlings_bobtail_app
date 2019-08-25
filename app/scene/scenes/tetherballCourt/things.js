@@ -21,8 +21,8 @@ import {
     SCHOOL_BUNGALOW__RIGHT
 } from '../../../constants/scene/things/flats'
 import {
-    BUBBLE_SHARED,
-    TETHERBALL_POLE_SHARED
+    BUBBLE__SHARED,
+    TETHERBALL_POLE__SHARED
 } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
@@ -32,28 +32,28 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 9,
             zOffset: 8,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_MEDIUM__RIGHT]: {
             yIndex: 0,
             xPosition: 9.5,
             zOffset: 7.75,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_LARGE__RIGHT]: {
             yIndex: 0,
             xPosition: 10,
             zOffset: 7,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [THOUGHT_LARGE__RIGHT]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
             flipHorizontal: true,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         }
     },
     [CUTOUT]: {
@@ -78,7 +78,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 7,
             scaleFactor: 0.225,
-            sharedStyle: TETHERBALL_POLE_SHARED
+            sharedStyle: TETHERBALL_POLE__SHARED
         }
     },
     [FLAT]: {

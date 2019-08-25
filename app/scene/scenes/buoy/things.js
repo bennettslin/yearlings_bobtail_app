@@ -5,9 +5,9 @@ import {
     SEA_SERPENT_RIGHT
 } from '../../../constants/scene/things/cardboards'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_ODIN_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -18,9 +18,9 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             zOffset: 2.5,
             sharedStyle: [
-                PEOPLE_ALL_SHARED,
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_ODIN_SHARED
+                PEOPLE_ALL__SHARED,
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_ODIN__SHARED
             ]
         },
         [SEA_SERPENT_LEFT]: {

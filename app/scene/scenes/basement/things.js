@@ -7,7 +7,7 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
-import { BUDWEISER_SHARED } from '../../shared'
+import { BUDWEISER__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -46,12 +46,12 @@ const ARRANGEMENTS_THINGS = {
         [BASEMENT_BEER_MARA]: {
             yIndex: 3,
             xPosition: 2.5,
-            sharedStyle: BUDWEISER_SHARED
+            sharedStyle: BUDWEISER__SHARED
         },
         [BASEMENT_BEER_BENNETT]: {
             yIndex: 5,
             xPosition: 8,
-            sharedStyle: BUDWEISER_SHARED
+            sharedStyle: BUDWEISER__SHARED
         }
     }
 }

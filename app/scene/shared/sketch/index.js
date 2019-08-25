@@ -1,2 +1,2 @@
-export const SKETCH_DOGS_SHARED = 'sketchDogsShared'
-export const SKETCH_TAIWAN_SHARED = 'sketchTaiwanShared'
+export const SKETCH_DOGS__SHARED = 'sketchDogs__shared'
+export const SKETCH_TAIWAN__SHARED = 'sketchTaiwan__shared'

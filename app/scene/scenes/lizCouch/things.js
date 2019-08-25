@@ -28,17 +28,17 @@ import {
     PEAHEN
 } from '../../../constants/scene/things/puppets'
 import {
-    BUBBLE_SHARED,
-    DOOR_SHARED,
-    PEAFOWL_SHARED,
-    WINDOW_SHARED
+    BUBBLE__SHARED,
+    DOOR__SHARED,
+    PEAFOWL__SHARED,
+    WINDOW__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL_SHARED,
-    PEOPLE_BENNETT_SHARED,
-    PEOPLE_INSTRUMENT_SHARED,
-    PEOPLE_LIZ_SHARED,
-    PEOPLE_OPAL_SHARED
+    PEOPLE_ALL__SHARED,
+    PEOPLE_BENNETT__SHARED,
+    PEOPLE_INSTRUMENT__SHARED,
+    PEOPLE_LIZ__SHARED,
+    PEOPLE_OPAL__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -48,24 +48,24 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 6,
             scaleFactor: 0.575,
             zOffset: 2.5,
-            sharedStyle: WINDOW_SHARED
+            sharedStyle: WINDOW__SHARED
         },
         [BLINDS_INSIDE_OPEN__LIZ]: {
             yIndex: 2,
             xPosition: 6,
             scaleFactor: 0.575,
             zOffset: 2.5,
-            sharedStyle: WINDOW_SHARED
+            sharedStyle: WINDOW__SHARED
         },
         [LIZ_DOOR]: {
             yIndex: 5,
             xPosition: 10.16,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         },
         [LIZ_DOOR_OPEN]: {
             yIndex: 5,
             xPosition: 8.875,
-            sharedStyle: DOOR_SHARED
+            sharedStyle: DOOR__SHARED
         }
     },
     [PANEL]: {
@@ -89,7 +89,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
             yIndex: 4,
             xPosition: 1,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_OPAL_SHARED
+            sharedStyle: PEOPLE_OPAL__SHARED
         }
     }
 }
@@ -102,9 +102,9 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             zOffset: 3,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_LIZ_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_LIZ__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         },
         [LIZ_DEFENCE_SPEECH]: {
@@ -113,10 +113,10 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             zOffset: 0.5,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_INSTRUMENT_SHARED,
-                PEOPLE_LIZ_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_INSTRUMENT__SHARED,
+                PEOPLE_LIZ__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         }
     }
@@ -129,21 +129,21 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             xPosition: 3.4,
             zOffset: 2.4,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_MEDIUM__LIZ]: {
             yIndex: 5,
             xPosition: 3.75,
             zOffset: 2.5,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [BUBBLE_LARGE__LIZ]: {
             yIndex: 5,
             xPosition: 4.5,
             zOffset: 2.5,
             scaleFactor: 0.4,
-            sharedStyle: BUBBLE_SHARED
+            sharedStyle: BUBBLE__SHARED
         },
         [LIZ_THOUGHT]: {
             yIndex: 5,
@@ -151,9 +151,9 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             zOffset: 0.5,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT_SHARED,
-                PEOPLE_LIZ_SHARED,
-                PEOPLE_ALL_SHARED
+                PEOPLE_BENNETT__SHARED,
+                PEOPLE_LIZ__SHARED,
+                PEOPLE_ALL__SHARED
             ]
         }
     }
@@ -165,7 +165,7 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
             yIndex: 1,
             xPosition: 6,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_OPAL_SHARED
+            sharedStyle: PEOPLE_OPAL__SHARED
         }
     }
 }
@@ -176,13 +176,13 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
             yIndex: 5,
             xPosition: 7.5,
             scaleFactor: 0.25,
-            sharedStyle: PEAFOWL_SHARED
+            sharedStyle: PEAFOWL__SHARED
         },
         [PEAHEN]: {
             yIndex: 5,
             xPosition: 5,
             scaleFactor: 0.25,
-            sharedStyle: PEAFOWL_SHARED
+            sharedStyle: PEAFOWL__SHARED
         }
     }
 }
