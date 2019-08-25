@@ -66,6 +66,7 @@ import {
 } from '../../constants/scene/things/cutouts'
 import { PORCH_DOOR } from '../../constants/scene/things/doors'
 import {
+    LETTER_SCRAPS__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
     HAIRCUT_SCISSORS
 } from '../../constants/scene/things/fixtures'
@@ -197,6 +198,7 @@ export default [
                 [TINTIN_POSTER]: true
             },
             [FIXTURE]: {
+                [LETTER_SCRAPS__CHRISTOPHER]: true,
                 [CHRISTOPHER_LETTERS]: true
             },
             [FURNITURE]: {

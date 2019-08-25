@@ -18,8 +18,10 @@ import {
     SPACE_COLONY
 } from '../../../constants/scene/things/cardboards'
 import {
+    LETTER_SCRAPS__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
     CAPTAIN_BED_LAMP,
+    LETTER_SCRAPS__BENNETT,
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE
@@ -36,6 +38,7 @@ import {
 } from '../../../constants/scene/things/panels'
 import {
     DOLLAR__SHARED,
+    LETTER__SHARED,
     PAPER__SHARED
 } from '../../shared'
 import { PEOPLE_ALL__SHARED } from '../../shared/people'
@@ -85,6 +88,14 @@ const ARRANGEMENTS_THINGS = {
 
 export const THINGS_BEDROOM_ENRAGED = {
     [FIXTURE]: {
+        [LETTER_SCRAPS__CHRISTOPHER]: {
+            yIndex: 5,
+            xPosition: 4,
+            sharedStyle: [
+                LETTER__SHARED,
+                PAPER__SHARED
+            ]
+        },
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
             arrangement: {
@@ -127,6 +138,14 @@ export const THINGS_BEDROOM_GUILTY = {
         [CAPTAIN_BED_LAMP]: {
             yIndex: 4,
             xPosition: 9
+        },
+        [LETTER_SCRAPS__BENNETT]: {
+            yIndex: 5,
+            xPosition: 8,
+            sharedStyle: [
+                LETTER__SHARED,
+                PAPER__SHARED
+            ]
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,

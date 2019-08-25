@@ -9,7 +9,10 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { PORCH_DOOR } from '../../../constants/scene/things/doors'
 import { HAIRCUT_SCISSORS } from '../../../constants/scene/things/fixtures'
-import { DOOR__SHARED } from '../../shared'
+import {
+    DOOR__SHARED,
+    SCISSORS__SHARED
+} from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -34,7 +37,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [HAIRCUT_SCISSORS]: {
             yIndex: 3,
-            xPosition: 4
+            xPosition: 5,
+            sharedStyle: SCISSORS__SHARED
         }
     }
 }

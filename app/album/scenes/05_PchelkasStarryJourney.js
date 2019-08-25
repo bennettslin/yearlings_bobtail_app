@@ -79,6 +79,7 @@ import {
 import { PRINCIPAL_DOOR } from '../../constants/scene/things/doors'
 import {
     CAPTAIN_BED_LAMP,
+    LETTER_SCRAPS__BENNETT,
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
@@ -138,6 +139,7 @@ export default [
             },
             [FIXTURE]: {
                 [CAPTAIN_BED_LAMP]: true,
+                [LETTER_SCRAPS__BENNETT]: true,
                 [BENNETT_LETTERS]: true
             },
             [PANEL]: {
