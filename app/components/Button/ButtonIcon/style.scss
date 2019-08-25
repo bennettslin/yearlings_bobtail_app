@@ -1,111 +1,23 @@
-.ButtonIcon__about {
-    fill: #d88;
-}
-
-.ButtonIcon__audioNext {
-    fill: $bgColour__audioSelect;
-}
-
-.ButtonIcon__audioPrevious {
-    fill: $bgColour__audioSelect;
-}
-
-.ButtonIcon__audioPlay {
-    d: path("M 50,0 L 100,50 L 50,100 L0,50 Z");
-
-    .PlW__isPlaying
-    & {
-        fill: $bgColour__audioPause;
-    }
-
-    .PlW__isPaused
-    & {
-        fill: $bgColour__audioPlay;
-    }
-}
-
-.ButtonIcon__audioOptions {
-    fill: $bgColour__audioNeutral;
-}
-
-.ButtonIcon__carouselNav {
-    fill: #aed;
-}
-
-.ButtonIcon__carouselSelect {
-    fill: #db8;
-}
-
-.ButtonIcon__dotsSlide {
-    fill: #d9d;
-}
-
-.ButtonIcon__lyricEar {
-    fill: #8db;
-}
-
-.ButtonIcon__lyricExpand {
-    fill: #bd8;
-}
-
-.ButtonIcon__lyricScroll {
-    fill: #d8b;
-}
-
-.ButtonIcon__navBook {
-    fill: #dd8;
-
-    .Button__indexSelected
-    & {
-        fill: orange;
-    }
-}
-
-.ButtonIcon__navSong {
-    &.NavSongIcon__field {
-        fill: #884;
-    }
-    &.NavSongIcon__char {
-        fill: #dd8;
-    }
-
-    .Button__indexSelected
-    &.NavSongIcon__field {
-        fill: #862;
-    }
-    .Button__indexSelected
-    &.NavSongIcon__char {
-        fill: orange;
-    }
-}
-
-.ButtonIcon__overview {
-    fill: #dbb;
-}
-
-.ButtonIcon__popupClose {
-    fill: #dac;
-}
-
-.ButtonIcon__popupNext {
-    fill: #cda;
-}
-
-.ButtonIcon__popupPrevious {
-    fill: #adc;
-}
-
-.ButtonIcon__wormhole {
-    fill: #bbd;
-}
-
-.ButtonIcon__scores {
-    fill: #9bd;
-}
-
-.ButtonIcon__tips {
-    fill: #dbb;
-}
+@import "./Icons/About/style";
+@import "./Icons/AudioNext/style";
+@import "./Icons/AudioOptions/style";
+@import "./Icons/AudioPlay/style";
+@import "./Icons/AudioPrevious/style";
+@import "./Icons/CarouselNav/style";
+@import "./Icons/CarouselSelect/style";
+@import "./Icons/DotsSlide/style";
+@import "./Icons/LyricEar/style";
+@import "./Icons/LyricExpand/style";
+@import "./Icons/LyricScroll/style";
+@import "./Icons/NavBook/style";
+@import "./Icons/NavSong/style";
+@import "./Icons/Overview/style";
+@import "./Icons/PopupClose/style";
+@import "./Icons/PopupPrevious/style";
+@import "./Icons/PopupNext/style";
+@import "./Icons/Scores/style";
+@import "./Icons/Tips/style";
+@import "./Icons/Wormhole/style";
 
 .ButtonIcon__disabled {
     fill: $bgColour__audioDisabled;

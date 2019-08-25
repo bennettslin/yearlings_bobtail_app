@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
+// import audioPlay from 'assets/svgs/app/audioPlay'
 
 const
     IS_PLAYING_ICON = ({

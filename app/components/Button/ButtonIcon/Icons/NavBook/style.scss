@@ -1,0 +1,8 @@
+.ButtonIcon__navBook {
+    fill: #dd8;
+
+    .Button__indexSelected
+    & {
+        fill: orange;
+    }
+}

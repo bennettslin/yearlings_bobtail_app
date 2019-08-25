@@ -4,26 +4,26 @@ import cx from 'classnames'
 
 import Svg from 'modules/Svg'
 
-import AboutIcon from './Icons/AboutIcon'
-import AudioNextIcon from './Icons/AudioNextIcon'
-import AudioOptionsIcon from './Icons/AudioOptionsIcon'
-import AudioPlayIcon from './Icons/AudioPlayIcon'
-import AudioPreviousIcon from './Icons/AudioPreviousIcon'
-import CarouselNavIcon from './Icons/CarouselNavIcon'
-import CarouselSelectIcon from './Icons/CarouselSelectIcon'
-import DotsSlideIcon from './Icons/DotsSlideIcon'
-import LyricEarIcon from './Icons/LyricEarIcon'
-import LyricExpandIcon from './Icons/LyricExpandIcon'
-import LyricScrollIcon from './Icons/LyricScrollIcon'
-import NavBookIcon from './Icons/NavBookIcon'
-import NavSongIcon from './Icons/NavSongIcon'
-import OverviewIcon from './Icons/OverviewIcon'
-import PopupCloseIcon from './Icons/PopupCloseIcon'
-import PopupPreviousIcon from './Icons/PopupPreviousIcon'
-import PopupNextIcon from './Icons/PopupNextIcon'
-import WormholeIcon from './Icons/WormholeIcon'
-import ScoresIcon from './Icons/ScoresIcon'
-import TipsIcon from './Icons/TipsIcon'
+import About from './Icons/About'
+import AudioNext from './Icons/AudioNext'
+import AudioOptions from './Icons/AudioOptions'
+import AudioPlay from './Icons/AudioPlay'
+import AudioPrevious from './Icons/AudioPrevious'
+import CarouselNav from './Icons/CarouselNav'
+import CarouselSelect from './Icons/CarouselSelect'
+import DotsSlide from './Icons/DotsSlide'
+import LyricEar from './Icons/LyricEar'
+import LyricExpand from './Icons/LyricExpand'
+import LyricScroll from './Icons/LyricScroll'
+import NavBook from './Icons/NavBook'
+import NavSong from './Icons/NavSong'
+import Overview from './Icons/Overview'
+import PopupClose from './Icons/PopupClose'
+import PopupPrevious from './Icons/PopupPrevious'
+import PopupNext from './Icons/PopupNext'
+import Wormhole from './Icons/Wormhole'
+import Scores from './Icons/Scores'
+import Tips from './Icons/Tips'
 
 import {
     ABOUT_BUTTON_KEY,
@@ -49,26 +49,26 @@ import {
 } from 'constants/buttons'
 
 const BUTTON_ICONS_MAP = {
-        [ABOUT_BUTTON_KEY]: AboutIcon,
-        [AUDIO_NEXT_BUTTON_KEY]: AudioNextIcon,
-        [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptionsIcon,
-        [AUDIO_PLAY_BUTTON_KEY]: AudioPlayIcon,
-        [AUDIO_PREVIOUS_BUTTON_KEY]: AudioPreviousIcon,
-        [CAROUSEL_NAV_BUTTON_KEY]: CarouselNavIcon,
-        [CAROUSEL_SELECT_BUTTON_KEY]: CarouselSelectIcon,
-        [DOTS_SLIDE_BUTTON_KEY]: DotsSlideIcon,
-        [LYRIC_EAR_BUTTON_KEY]: LyricEarIcon,
-        [LYRIC_EXPAND_BUTTON_KEY]: LyricExpandIcon,
-        [LYRIC_SCROLL_BUTTON_KEY]: LyricScrollIcon,
-        [NAV_BOOK_BUTTON_KEY]: NavBookIcon,
-        [NAV_SONG_BUTTON_KEY]: NavSongIcon,
-        [OVERVIEW_BUTTON_KEY]: OverviewIcon,
-        [POPUP_CLOSE_BUTTON_KEY]: PopupCloseIcon,
-        [POPUP_NEXT_BUTTON_KEY]: PopupNextIcon,
-        [POPUP_PREVIOUS_BUTTON_KEY]: PopupPreviousIcon,
-        [WORMHOLE_BUTTON_KEY]: WormholeIcon,
-        [SCORES_BUTTON_KEY]: ScoresIcon,
-        [TIPS_BUTTON_KEY]: TipsIcon
+        [ABOUT_BUTTON_KEY]: About,
+        [AUDIO_NEXT_BUTTON_KEY]: AudioNext,
+        [AUDIO_OPTIONS_BUTTON_KEY]: AudioOptions,
+        [AUDIO_PLAY_BUTTON_KEY]: AudioPlay,
+        [AUDIO_PREVIOUS_BUTTON_KEY]: AudioPrevious,
+        [CAROUSEL_NAV_BUTTON_KEY]: CarouselNav,
+        [CAROUSEL_SELECT_BUTTON_KEY]: CarouselSelect,
+        [DOTS_SLIDE_BUTTON_KEY]: DotsSlide,
+        [LYRIC_EAR_BUTTON_KEY]: LyricEar,
+        [LYRIC_EXPAND_BUTTON_KEY]: LyricExpand,
+        [LYRIC_SCROLL_BUTTON_KEY]: LyricScroll,
+        [NAV_BOOK_BUTTON_KEY]: NavBook,
+        [NAV_SONG_BUTTON_KEY]: NavSong,
+        [OVERVIEW_BUTTON_KEY]: Overview,
+        [POPUP_CLOSE_BUTTON_KEY]: PopupClose,
+        [POPUP_NEXT_BUTTON_KEY]: PopupNext,
+        [POPUP_PREVIOUS_BUTTON_KEY]: PopupPrevious,
+        [WORMHOLE_BUTTON_KEY]: Wormhole,
+        [SCORES_BUTTON_KEY]: Scores,
+        [TIPS_BUTTON_KEY]: Tips
     },
     DEFAULT_COMPONENT = () => null
 
@@ -80,7 +80,6 @@ const propTypes = {
 }
 
 const ButtonIcon = ({
-
     showAsDisabled,
     buttonName,
     buttonIdentifier
