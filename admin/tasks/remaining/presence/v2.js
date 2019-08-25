@@ -13,11 +13,5 @@ export default [
         taskName: `Three-dimensionality and painted look of cutouts.`,
         workedHours: 0,
         neededHours: 3
-    },
-
-    {
-        taskName: `Three-dimensionality and painted look of cutouts.`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]
