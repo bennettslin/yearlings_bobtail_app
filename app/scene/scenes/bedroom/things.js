@@ -34,6 +34,10 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
+import {
+    DOLLAR_SHARED,
+    PAPER_SHARED
+} from '../../shared'
 import { PEOPLE_ALL_SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -138,12 +142,12 @@ export const THINGS_BEDROOM_GUILTY = {
 export const THINGS_BEDROOM_FEIGNING = {
     [FIXTURE]: {
         [RED_ENVELOPE_MONEY]: {
-            yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            yIndex: 3,
+            xPosition: 9,
+            sharedStyle: [
+                DOLLAR_SHARED,
+                PAPER_SHARED
+            ]
         }
     },
     [FLAT]: {

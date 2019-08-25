@@ -6,7 +6,7 @@ import haircutScissors from 'assets/svgs/fixtures/haircutScissors'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
 // import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
 import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
-// import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
+import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
 import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
 // import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
 import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
@@ -108,7 +108,7 @@ export default {
     [BACKPACK_BENNETT]: false,
     [FRIDGE_DRAWINGS]: false,
     [CAPTAIN_BED_LAMP]: captainBedLamp,
-    [RED_ENVELOPE_MONEY]: false,
+    [RED_ENVELOPE_MONEY]: redEnvelopeMoney,
     [BEYONDER_ENVELOPE]: beyonderEnvelope,
     [BENNETT_LETTERS]: false,
     [THROWN_FRUIT]: thrownFruit,

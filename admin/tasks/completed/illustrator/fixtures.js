@@ -108,5 +108,10 @@ export default [
         taskName: 'keyboard',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'redEnvelopeMoney',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
