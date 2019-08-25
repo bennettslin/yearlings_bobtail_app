@@ -4866,5 +4866,10 @@ export default [
         taskName: `Allow buttons to render asset svgs.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Convert actor pngs to ais.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
