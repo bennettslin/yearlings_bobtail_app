@@ -50,7 +50,7 @@ import {
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION,
     PUPPET_KHARI_LIZ
-} from '../../../../constants/scene/things/puppets'
+} from '../../../constants/scene/things/puppets'
 
 export default {
     [PUPPET_BENNETT_BEGIN]: puppetBennettBegin,

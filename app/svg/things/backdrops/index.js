@@ -40,7 +40,7 @@ import {
     ROAD_FUTURE,
     GOLDEN_GATE_BACKDROP,
     WEDDING_BACKDROP
-} from '../../../../constants/scene/things/backdrops'
+} from '../../../constants/scene/things/backdrops'
 
 export default {
     [NOHO_HOUSES_BACKDROP]: nohoHousesBackdrop,

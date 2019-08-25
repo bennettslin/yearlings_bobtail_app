@@ -114,7 +114,7 @@ import {
     CLIFF_GRAVES_FAR,
     CLIFF_GRAVES_NEAR,
     PAMPAS_FAR
-} from '../../../../constants/scene/things/flats'
+} from '../../../constants/scene/things/flats'
 
 export default {
     [NOHO_HOUSE_LEFT]: nohoHouseLeft,

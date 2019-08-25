@@ -5,7 +5,7 @@ import cx from 'classnames'
 import Svg from 'modules/Svg'
 import InlineSvg from 'modules/InlineSvg'
 
-import BUTTON_ICONS_MAP from '../../../svg/button'
+import BUTTON_ICONS_MAP from '../../../svg/buttons'
 
 import {
     // ABOUT_BUTTON_KEY,
@@ -48,7 +48,6 @@ const ButtonIcon = ({
     buttonIdentifier
 
 }) => {
-    // TODO: Rename as button getter function, not component.
     const IconComponent = BUTTON_ICONS_MAP[buttonName]
 
     return isNewSvg(buttonName) ? (

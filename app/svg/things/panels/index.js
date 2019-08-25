@@ -102,7 +102,7 @@ import {
     PHONE_CALL_PANEL,
     CROWD_BACK,
     WEDDING_PLATFORM
-} from '../../../../constants/scene/things/panels'
+} from '../../../constants/scene/things/panels'
 
 export default {
     [BATHTUB]: bathtub,

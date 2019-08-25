@@ -73,7 +73,7 @@ import {
     LIZ_GATE_INSIDE_OPEN,
     LOADING_DOCK_DOOR,
     EL_TORITO_DOORS
-} from '../../../../constants/scene/things/doors'
+} from '../../../constants/scene/things/doors'
 
 export default {
     [NURSE_DOOR]: nurseDoor,

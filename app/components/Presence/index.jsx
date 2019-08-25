@@ -9,7 +9,7 @@ import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
 
 import { capitaliseForClassName } from 'helpers/format'
 import { getMapForActorKey } from '../Presences/LayersActor/helper'
-import { getMapForPresenceType } from '../Presences/LayersThing/helper'
+import { getMapForPresenceType } from '../../svg/things'
 
 import { ACTOR } from 'constants/scene'
 import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'

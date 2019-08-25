@@ -1,6 +1,6 @@
 import keys from 'lodash/keys'
 
-import { getMapForPresenceType } from 'components/Presences/LayersThing/helper'
+import { getMapForPresenceType } from 'svg/things'
 
 import {
     BACKDROP,
