@@ -176,7 +176,8 @@ export const THINGS_BEDROOM_SHAKEN = {
         [BEYONDER_ENVELOPE]: {
             yIndex: 3,
             xPosition: 2,
-            zOffset: 0.1
+            zOffset: 0.1,
+            sharedStyle: PAPER__SHARED
         }
     },
     [CARDBOARD]: {

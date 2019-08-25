@@ -113,5 +113,10 @@ export default [
         taskName: 'redEnvelopeMoney',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'cashBox',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

@@ -32,11 +32,6 @@ export default [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: 'cashBox',
-        workedHours: 0,
-        neededHours: 2
-    },
 
     // Drawings.
     {

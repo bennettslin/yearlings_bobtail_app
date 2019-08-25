@@ -13,6 +13,7 @@ import {
     GUITAR,
     DRUMKIT
 } from '../../../constants/scene/things/fixtures'
+import { DOLLAR__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -64,12 +65,10 @@ const ARRANGEMENTS_THINGS = {
 export const THINGS_CLUB_FRONT_M = {
     [FIXTURE]: {
         [CASH_BOX]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 1,
-                zHeight: 3
-            }
+            yIndex: 4,
+            xPosition: 3,
+            zOffset: -0.1,
+            sharedStyle: DOLLAR__SHARED
         }
     }
 }

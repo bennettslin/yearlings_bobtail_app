@@ -13,7 +13,7 @@ import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
 import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
 import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
 import keyboard from 'assets/svgs/fixtures/keyboard'
-// import cashBox from 'assets/svgs/fixtures/cashBox'
+import cashBox from 'assets/svgs/fixtures/cashBox'
 // import guitar from 'assets/svgs/fixtures/guitar'
 // import drumKit from 'assets/svgs/fixtures/drumKit'
 // import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
@@ -115,7 +115,7 @@ export default {
     [BENNETT_RECORD_PLAYER]: bennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: bennettCouchLamp,
     [KEYBOARD]: keyboard,
-    [CASH_BOX]: false,
+    [CASH_BOX]: cashBox,
     [GUITAR]: false,
     [STAGE_MIC__CROWD]: false,
     [STAGE_MIC__STAGE]: false,
