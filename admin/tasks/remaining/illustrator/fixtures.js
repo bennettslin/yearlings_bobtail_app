@@ -21,18 +21,6 @@ export default [
         neededHours: 1
     },
 
-    // Paper.
-    {
-        taskName: 'bennettLetters',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'christopherLetters',
-        workedHours: 0,
-        neededHours: 2
-    },
-
     // Drawings.
     {
         taskName: 'fridgeDrawings',

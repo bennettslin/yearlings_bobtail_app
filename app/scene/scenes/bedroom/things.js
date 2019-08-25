@@ -39,7 +39,8 @@ import {
 import {
     DOLLAR__SHARED,
     LETTER__SHARED,
-    PAPER__SHARED
+    PAPER__SHARED,
+    SCISSORS__SHARED
 } from '../../shared'
 import { PEOPLE_ALL__SHARED } from '../../shared/people'
 
@@ -98,11 +99,11 @@ export const THINGS_BEDROOM_ENRAGED = {
         },
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 5,
+            sharedStyle: [
+                LETTER__SHARED,
+                SCISSORS__SHARED
+            ]
         }
     }
 }
@@ -149,11 +150,8 @@ export const THINGS_BEDROOM_GUILTY = {
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 8,
+            sharedStyle: LETTER__SHARED
         }
     }
 }

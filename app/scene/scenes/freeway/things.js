@@ -23,7 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [SHOPPING_CART]: {
             yIndex: 5,
             xPosition: 8,
-            scaleFactor: 0.25
+            scaleFactor: 0.2
         },
         [OVERPASS_SIGN_BACK]: {
             yIndex: 2,

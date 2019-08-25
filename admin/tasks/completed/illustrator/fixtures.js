@@ -118,5 +118,15 @@ export default [
         taskName: 'cashBox',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'bennettLetters',
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: 'christopherLetters',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

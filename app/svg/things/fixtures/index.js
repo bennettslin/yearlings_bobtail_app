@@ -3,13 +3,13 @@ import safewayBag from 'assets/svgs/fixtures/safewayBag'
 import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
 import haircutScissors from 'assets/svgs/fixtures/haircutScissors'
 import letterScraps from 'assets/svgs/fixtures/letterScraps'
-// import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
+import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
 // import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
 import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
 import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
 import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
-// import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
+import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
 import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
 import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
 import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
@@ -108,14 +108,14 @@ export default {
     [RECORD_PLAYER_STOOL]: recordPlayerStool,
     [HAIRCUT_SCISSORS]: haircutScissors,
     [LETTER_SCRAPS__CHRISTOPHER]: letterScraps,
-    [CHRISTOPHER_LETTERS]: false,
+    [CHRISTOPHER_LETTERS]: christopherLetters,
     [BACKPACK_BENNETT]: false,
     [FRIDGE_DRAWINGS]: false,
     [CAPTAIN_BED_LAMP]: captainBedLamp,
     [RED_ENVELOPE_MONEY]: redEnvelopeMoney,
     [BEYONDER_ENVELOPE]: beyonderEnvelope,
     [LETTER_SCRAPS__BENNETT]: letterScraps,
-    [BENNETT_LETTERS]: false,
+    [BENNETT_LETTERS]: bennettLetters,
     [THROWN_FRUIT]: thrownFruit,
     [BENNETT_RECORD_PLAYER]: bennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: bennettCouchLamp,
