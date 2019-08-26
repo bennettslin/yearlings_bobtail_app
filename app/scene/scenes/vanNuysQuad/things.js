@@ -12,6 +12,7 @@ import {
     TRASH_CAN__QUAD,
     VAN_NUYS_PLANT__QUAD
 } from '../../../constants/scene/things/cutouts'
+import { SKETCHBOOK__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -28,7 +29,8 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 2,
             rotate: 270,
             scaleFactor: 0.25,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: SKETCHBOOK__SHARED
         }
     },
     [CARDBOARD]: {

@@ -38,7 +38,10 @@ import {
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END
 } from '../../../constants/scene/things/puppets'
-import { TAIWAN_HOUSE__SHARED } from '../../shared'
+import {
+    SKETCHBOOK__SHARED,
+    TAIWAN_HOUSE__SHARED
+} from '../../shared'
 import {
     ALL_PEOPLE__SHARED,
     ANITA__SHARED,
@@ -164,7 +167,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             xPosition: 8.25,
             zOffset: 2.5,
             rotate: 270,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            sharedStyle: SKETCHBOOK__SHARED
         }
     },
     [PUPPET]: {
@@ -237,7 +241,8 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 2.5,
             rotate: 270,
             scaleFactor: 0.25,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: SKETCHBOOK__SHARED
         }
     },
     [PUPPET]: {

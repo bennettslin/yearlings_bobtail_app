@@ -40,7 +40,8 @@ import {
     DOLLAR__SHARED,
     LETTER__SHARED,
     PAPER__SHARED,
-    SCISSORS__SHARED
+    SCISSORS__SHARED,
+    SKETCHBOOK__SHARED
 } from '../../shared'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
@@ -142,7 +143,8 @@ export const THINGS_BEDROOM_GUILTY = {
             yIndex: 5,
             xPosition: 3,
             zOffset: 1.5,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            sharedStyle: SKETCHBOOK__SHARED
         }
     },
     [FIXTURE]: {
