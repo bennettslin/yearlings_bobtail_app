@@ -30,7 +30,7 @@ import vaseline from 'assets/svgs/fixtures/vaseline'
 // import lizPhone from 'assets/svgs/fixtures/lizPhone'
 // import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
 import evianBottles from 'assets/svgs/fixtures/evianBottles'
-// import stageMic from 'assets/svgs/fixtures/stageMic'
+import stageMic from 'assets/svgs/fixtures/stageMic'
 // import kickDrum from 'assets/svgs/fixtures/kickDrum'
 // import drumThrone from 'assets/svgs/fixtures/drumThrone'
 // import guitarCaseOpen from 'assets/svgs/fixtures/guitarCaseOpen'
@@ -122,8 +122,8 @@ export default {
     [KEYBOARD]: keyboard,
     [CASH_BOX]: cashBox,
     [GUITAR]: false,
-    [STAGE_MIC__CROWD]: false,
-    [STAGE_MIC__STAGE]: false,
+    [STAGE_MIC__CROWD]: stageMic,
+    [STAGE_MIC__STAGE]: stageMic,
     [DRUMKIT]: false,
     [BASS_CASE_UPRIGHT]: false,
     [GUITAR_CASE_UPRIGHT]: false,

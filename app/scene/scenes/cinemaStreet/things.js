@@ -18,6 +18,9 @@ import {
     POSTER_GLADIATOR__SHARED
 } from '../../shared'
 import {
+    MICROPHONE__SHARED
+} from '../../shared/instruments'
+import {
     PEOPLE_ALL__SHARED,
     PEOPLE_BENNETT__SHARED,
     PEOPLE_INSTRUMENT__SHARED,
@@ -53,6 +56,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4.1,
             scaleFactor: 0.45,
             sharedStyle: [
+                MICROPHONE__SHARED,
                 PEOPLE_BENNETT__SHARED,
                 PEOPLE_INSTRUMENT__SHARED,
                 PEOPLE_ALL__SHARED

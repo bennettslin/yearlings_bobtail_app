@@ -10,6 +10,7 @@ import {
 import { STAGE_MIC__CROWD } from '../../../constants/scene/things/fixtures'
 import { CROWD_SIDE } from '../../../constants/scene/things/panels'
 import { SHADOW__SHARED } from '../../shared'
+import { MICROPHONE__SHARED } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -29,11 +30,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [STAGE_MIC__CROWD]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 0.5,
-                zHeight: 4
-            }
+            xPosition: 3,
+            sharedStyle: MICROPHONE__SHARED
         }
     },
     [PANEL]: {

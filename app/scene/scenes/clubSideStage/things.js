@@ -12,6 +12,7 @@ import {
     DRUM_THRONE,
     GUITAR_CASE_OPEN
 } from '../../../constants/scene/things/fixtures'
+import { MICROPHONE__SHARED } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -31,11 +32,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [STAGE_MIC__STAGE]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 0.5,
-                zHeight: 4
-            }
+            xPosition: 8,
+            sharedStyle: MICROPHONE__SHARED
         },
         [KICK_DRUM]: {
             yIndex: 1,

@@ -128,5 +128,10 @@ export default [
         taskName: 'christopherLetters',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'stageMic',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
