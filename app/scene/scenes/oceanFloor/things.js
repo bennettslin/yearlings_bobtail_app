@@ -13,10 +13,10 @@ import {
     OCEAN_CAVE_EXTERIOR
 } from '../../../constants/scene/things/panels'
 import { BUDDHA_SHRINE__SHARED } from '../../shared'
+import { ODIN__SHARED } from '../../shared/animals'
 import {
     ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    ODIN__SHARED
+    BENNETT__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {

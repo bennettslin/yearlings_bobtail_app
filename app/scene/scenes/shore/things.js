@@ -11,10 +11,10 @@ import {
     FERRIS_WHEEL,
     ROLLER_COASTER
 } from '../../../constants/scene/things/flats'
+import { ODIN__SHARED } from '../../shared/animals'
 import {
     ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    ODIN__SHARED
+    BENNETT__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {

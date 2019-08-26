@@ -10,10 +10,10 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
 import { TAIWAN_HOUSE__SHARED } from '../../shared'
+import { ODIN__SHARED } from '../../shared/animals'
 import {
     ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    ODIN__SHARED
+    BENNETT__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {

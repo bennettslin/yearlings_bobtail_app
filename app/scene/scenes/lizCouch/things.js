@@ -30,9 +30,12 @@ import {
 import {
     BUBBLE__SHARED,
     DOOR__SHARED,
-    PEAFOWL__SHARED,
     WINDOW__SHARED
 } from '../../shared'
+import {
+    OPAL__SHARED,
+    PEAFOWL__SHARED
+} from '../../shared/animals'
 import {
     BANJO__SHARED,
     GUITAR__SHARED,
@@ -41,8 +44,7 @@ import {
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,
-    LIZ__SHARED,
-    OPAL__SHARED
+    LIZ__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {

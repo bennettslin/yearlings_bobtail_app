@@ -9,10 +9,10 @@ import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
 } from '../../../constants/scene/things/flats'
+import { ODIN__SHARED } from '../../shared/animals'
 import {
     ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    ODIN__SHARED
+    BENNETT__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {

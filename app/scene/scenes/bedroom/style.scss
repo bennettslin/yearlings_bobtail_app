@@ -1,531 +1,167 @@
 .bedroomFence {
-    .fenceTop {
-        fill: #cc6;
-    }
-
-    .fenceFront {
-        fill: #c96;
-    }
-
-    .bushLeft {
-        fill: #396;
-    }
-
-    .bushRight {
-        fill: #393;
-    }
+    .fenceTop { fill: #cc6; }
+    .fenceFront { fill: #c96; }
+    .bushLeft { fill: #396; }
+    .bushRight { fill: #393; }
 }
 
 .bedroomBus {
-    .smoke {
-        fill: #818c7d;
-    }
-
-    .body {
-        fill: #ddc86f;
-    }
-
-    .trim {
-        fill: #595958;
-    }
-
-    .turnLight {
-        fill: #f4a82f;
-    }
-
-    .window {
-        fill: #9cdbd3;
-    }
-
-    .roof {
-        fill: #efedcb;
-    }
+    .smoke { fill: #818c7d; }
+    .body { fill: #ddc86f; }
+    .trim { fill: #595958; }
+    .turnLight { fill: #f4a82f; }
+    .window { fill: #9cdbd3; }
+    .roof { fill: #efedcb; }
 }
 
 .bedroomSiren {
-    .redLight {
-        fill: #f7b2b2;
-    }
-
-    .redBrighter {
-        fill: #e88080;
-    }
-
-    .redBrightest {
-        fill: #f24e4e;
-    }
-
-    .blueLight {
-        fill: #b2ddf9;
-    }
-
-    .blueBrighter {
-        fill: #7fc3ea;
-    }
-
-    .blueBrightest {
-        fill: #4da8f4;
-    }
+    .redLight { fill: #f7b2b2; }
+    .redBrighter { fill: #e88080; }
+    .redBrightest { fill: #f24e4e; }
+    .blueLight { fill: #b2ddf9; }
+    .blueBrighter { fill: #7fc3ea; }
+    .blueBrightest { fill: #4da8f4; }
 }
 
 .bedroomDesk {
-    .deskSide {
-        fill: #4f463c;
-    }
-
-    .drawer {
-        fill: #c9b891;
-    }
-
-    .deskFront {
-        fill: #a08d6b;
-    }
-
-    .mount {
-        fill: #979b75;
-    }
-
-    .handle {
-        fill: #bfc6a3;
-    }
+    .deskSide { fill: #4f463c; }
+    .drawer { fill: #c9b891; }
+    .deskFront { fill: #a08d6b; }
+    .mount { fill: #979b75; }
+    .handle { fill: #bfc6a3; }
 }
 
 .captainBed {
-    .panelFront {
-        fill: #847f76;
-    }
-
-    .panelSide {
-        fill: #665a72;
-    }
-
-    .panelTop {
-        fill: #568960;
-    }
-
-    .frameTop {
-        fill: #a5a084;
-    }
-
-    .frameFront {
-        fill: #917f60;
-    }
-
-    .frameSide {
-        fill: #6d6a51;
-    }
-
-    .drawerSide {
-        fill: #a48abc;
-    }
-
-    .drawerTop {
-        fill: #95aa77;
-    }
-
-    .drawerFront {
-        fill: #b59e3c;
-    }
-
-    .mount {
-        fill: #56663c;
-    }
-
-    .handle {
-        fill: #95aa77;
-    }
-
-    .ball {
-        fill: #847f76;
-    }
+    .panelFront { fill: #847f76; }
+    .panelSide { fill: #665a72; }
+    .panelTop { fill: #568960; }
+    .frameTop { fill: #a5a084; }
+    .frameFront { fill: #917f60; }
+    .frameSide { fill: #6d6a51; }
+    .drawerSide { fill: #a48abc; }
+    .drawerTop { fill: #95aa77; }
+    .drawerFront { fill: #b59e3c; }
+    .mount { fill: #56663c; }
+    .handle { fill: #95aa77; }
+    .ball { fill: #847f76; }
 }
 
 .tintinPoster {
-    .frame {
-        fill: #ccc897;
-    }
-
-    .fur {
-        fill: #cfe8e3;
-    }
-
-    .nose {
-        fill: #514a42;
-    }
-
-    .mouth {
-        fill: #423a32;
-    }
-
-    .sock {
-        fill: #ede7e2;
-    }
-
-    .shoe {
-        fill: #5e4f3f;
-    }
-
-    .coatInner {
-        fill: #49423a;
-    }
-
-    .pants {
-        fill: #684e5f;
-    }
-
-    .pantsDisplayLine {
-        stroke: #453e4c;
-    }
-
-    .soleBottom {
-        fill: #302b25;
-    }
-
-    .soleFront {
-        fill: #302b25;
-    }
-
-    .soleSide {
-        fill: #443e38;
-    }
-
-    .shirt {
-        fill: #8bbcbc;
-    }
-
-    .collar {
-        fill: #ede7e2;
-    }
-
-    .coat {
-        fill: #847667;
-    }
-
-    .lapel {
-        fill: #7f7366;
-    }
-
-    .sleeve {
-        fill: #7eaaa8;
-    }
+    .frame { fill: #ccc897; }
+    .fur { fill: #cfe8e3; }
+    .nose { fill: #514a42; }
+    .mouth { fill: #423a32; }
+    .sock { fill: #ede7e2; }
+    .shoe { fill: #5e4f3f; }
+    .coatInner { fill: #49423a; }
+    .pants { fill: #684e5f; }
+    .pantsDisplayLine { stroke: #453e4c; }
+    .soleBottom { fill: #302b25; }
+    .soleFront { fill: #302b25; }
+    .soleSide { fill: #443e38; }
+    .shirt { fill: #8bbcbc; }
+    .collar { fill: #ede7e2; }
+    .coat { fill: #847667; }
+    .lapel { fill: #7f7366; }
+    .sleeve { fill: #7eaaa8; }
 }
 
 .bloomCountyPoster {
-    .frame {
-        fill: #a0d4e0;
-    }
-
-    .mountain {
-        fill: #4c4534;
-    }
-
-    .billFur {
-        fill: #b58a3c;
-    }
-
-    .billNose {
-        fill: #d88dd8;
-    }
-
-    .billTongue {
-        fill: #e2a6df;
-    }
-
-    .oliverPants {
-        fill: #537b91;
-    }
-
-    .oliverShoe {
-        fill: #2e3038;
-    }
-
-    .oliverShirt {
-        fill: #bad4e2;
-    }
-
-    .binkleyPants {
-        fill: #726daf;
-    }
-
-    .binkleyShoe {
-        fill: #221d26;
-    }
-
-    .binkleyShirt {
-        fill: #ccc7e0;
-    }
-
-    .miloPants {
-        fill: #938269;
-    }
-
-    .miloShoe {
-        fill: #3a3d33;
-    }
-
-    .miloShirt {
-        fill: #648761;
-    }
-
-    .opusFeather {
-        fill: #1e1c17;
-    }
-
-    .opusCollar {
-        fill: #f4f2ed;
-    }
-
-    .opusBowtie {
-        fill: #f7563c;
-    }
-
-    .meadow {
-        fill: #62a372;
-    }
+    .frame { fill: #a0d4e0; }
+    .mountain { fill: #4c4534; }
+    .billFur { fill: #b58a3c; }
+    .billNose { fill: #d88dd8; }
+    .billTongue { fill: #e2a6df; }
+    .oliverPants { fill: #537b91; }
+    .oliverShoe { fill: #2e3038; }
+    .oliverShirt { fill: #bad4e2; }
+    .binkleyPants { fill: #726daf; }
+    .binkleyShoe { fill: #221d26; }
+    .binkleyShirt { fill: #ccc7e0; }
+    .miloPants { fill: #938269; }
+    .miloShoe { fill: #3a3d33; }
+    .miloShirt { fill: #648761; }
+    .opusFeather { fill: #1e1c17; }
+    .opusCollar { fill: #f4f2ed; }
+    .opusBowtie { fill: #f7563c; }
+    .meadow { fill: #62a372; }
 }
 
 .dogsSketch {
-    .launchFront {
-        fill: #949494;
-    }
-
-    .launchSide {
-        fill: #8c8c8c;
-    }
-
-    .booster {
-        fill: #7d7d7d;
-    }
-
-    .checkerWhite {
-        fill: #d9d9d9;
-    }
-
-    .checkerRed {
-        fill: #a1a1a1;
-    }
-
-    .fin {
-        fill: #999;
-    }
-
-    .hindLeg {
-        fill: #a6a6a6;
-    }
-
-    .body {
-        fill: #ababab;
-    }
-
-    .tongue {
-        fill: #858585;
-    }
-
-    .bone {
-        fill: #d9d9d9;
-    }
-
-    .rocket {
-        fill: #7d7d7d;
-    }
-
-    .head {
-        fill: #b0b0b0;
-    }
-
-    .nose {
-        fill: #5c5c5c;
-    }
-
-    .eye {
-        fill: #737373;
-    }
+    .launchFront { fill: #949494; }
+    .launchSide { fill: #8c8c8c; }
+    .booster { fill: #7d7d7d; }
+    .checkerWhite { fill: #d9d9d9; }
+    .checkerRed { fill: #a1a1a1; }
+    .fin { fill: #999; }
+    .hindLeg { fill: #a6a6a6; }
+    .body { fill: #ababab; }
+    .tongue { fill: #858585; }
+    .bone { fill: #d9d9d9; }
+    .rocket { fill: #7d7d7d; }
+    .head { fill: #b0b0b0; }
+    .nose { fill: #5c5c5c; }
+    .eye { fill: #737373; }
 }
 
 .earth {
-    .ocean {
-        fill: #46a0bd;
-    }
-
-    .land {
-        fill: #8a7f6e;
-    }
-
-    .cloud {
-        fill: #d6d6d6;
-    }
+    .ocean { fill: #46a0bd; }
+    .land { fill: #8a7f6e; }
+    .cloud { fill: #d6d6d6; }
 }
 
 .spaceColony {
-    .body {
-        fill: #ded7c5;
-    }
-
-    .stationTop {
-        fill: #a39bd9;
-    }
-
-    .stationMiddle {
-        fill: #948cc4;
-    }
-
-    .stationBottom {
-        fill: #6d6891;
-    }
-
-    .stationInner {
-        fill: #7e78a8;
-    }
-
-    .stationFloor {
-        fill: #6d6891;
-    }
-
-    .trim {
-        fill: #b8a986;
-    }
-
-    .panelBottom {
-        fill: #8dacb3;
-    }
-
-    .panelSide {
-        fill: #7d989e;
-    }
-
-    .panelFront {
-        fill: #99bbc2;
-    }
-
-    .bar {
-        fill: #6d848a;
-    }
-
-    .glassInner {
-        fill: rgba(200, 200, 250, 0.2);
-    }
-
-    .glassOuter {
-        fill: rgba(200, 200, 250, 0.1);
-    }
+    .body { fill: #ded7c5; }
+    .stationTop { fill: #a39bd9; }
+    .stationMiddle { fill: #948cc4; }
+    .stationBottom { fill: #6d6891; }
+    .stationInner { fill: #7e78a8; }
+    .stationFloor { fill: #6d6891; }
+    .trim { fill: #b8a986; }
+    .panelBottom { fill: #8dacb3; }
+    .panelSide { fill: #7d989e; }
+    .panelFront { fill: #99bbc2; }
+    .bar { fill: #6d848a; }
+    .glassInner { fill: rgba(200, 200, 250, 0.2); }
+    .glassOuter { fill: rgba(200, 200, 250, 0.1); }
 }
 
 .pchelkaMushkaRocket {
-    .booster {
-        fill: #ad6145;
-    }
-
-    .fin {
-        fill: #c77c60;
-    }
-
-    .rocket {
-        fill: #b56648;
-    }
-
-    .checkerWhite {
-        fill: #f5eae6;
-    }
-
-    .checkerRed {
-        fill: #cc7a5a;
-    }
-
-    .suitHindLeg {
-        fill: #adad95;
-    }
-
-    .suitBody {
-        fill: #9087c4;
-    }
-
-    .suitFrontLeg {
-        fill: #bdbda3;
-    }
-
-    .suitInner {
-        fill: #7e78a8;
-    }
-
-    .glassOuter {
-        fill: #c6d5d9;
-    }
-
-    .head {
-        fill: #ded7c5;
-    }
-
-    .nose {
-        fill: #706e5f;
-    }
-
-    .mouth {
-        fill: #696759;
-    }
-
-    .tongue {
-        fill: #c782ad;
-    }
-
-    .glassInner {
-        fill: rgba(200, 200, 250, 0.2);
-    }
-
-    .glassOuter {
-        fill: rgba(200, 200, 250, 0.1);
-    }
+    .booster { fill: #ad6145; }
+    .fin { fill: #c77c60; }
+    .rocket { fill: #b56648; }
+    .checkerWhite { fill: #f5eae6; }
+    .checkerRed { fill: #cc7a5a; }
+    .suitHindLeg { fill: #adad95; }
+    .suitBody { fill: #9087c4; }
+    .suitFrontLeg { fill: #bdbda3; }
+    .suitInner { fill: #7e78a8; }
+    .glassOuter { fill: #c6d5d9; }
+    .head { fill: #ded7c5; }
+    .nose { fill: #706e5f; }
+    .mouth { fill: #696759; }
+    .tongue { fill: #c782ad; }
+    .glassInner { fill: rgba(200, 200, 250, 0.2); }
+    .glassOuter { fill: rgba(200, 200, 250, 0.1); }
 }
 
 .captainBedPillow {
-    .pillow {
-        fill: #96c2b8;
-    }
+    .pillow { fill: #96c2b8; }
 }
 
 .captainBedLamp {
-    .baseSide {
-        fill: #81a371;
-    }
-
-    .baseTop {
-        fill: #93ba81;
-    }
-
-    .mount {
-        fill: #9c9c9c;
-    }
-
-    .neck {
-        fill: #bfc2b8;
-    }
-
-    .dial {
-        fill: #7c9c6c;
-    }
-
-    .lampshadeInner {
-        fill: #b5d9a3;
-    }
-
-    .bulb {
-        fill: #eaedd5;
-    }
-
-    .lampshadeOuter {
-        fill: #89ad78;
-    }
+    .baseSide { fill: #81a371; }
+    .baseTop { fill: #93ba81; }
+    .mount { fill: #9c9c9c; }
+    .neck { fill: #bfc2b8; }
+    .dial { fill: #7c9c6c; }
+    .lampshadeInner { fill: #b5d9a3; }
+    .bulb { fill: #eaedd5; }
+    .lampshadeOuter { fill: #89ad78; }
 }
 
 .redEnvelopeMoney {
-    .redEnvelopeFlap {
-        fill: #bfadad;
-    }
-
-    .redEnvelope {
-        fill: #8f4242;
-    }
-
-    .redEnvelopeLabel {
-        fill: #dbb16e;
-    }
+    .redEnvelopeFlap { fill: #bfadad; }
+    .redEnvelope { fill: #8f4242; }
+    .redEnvelopeLabel { fill: #dbb16e; }
 }

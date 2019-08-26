@@ -7,7 +7,7 @@ import {
     ASH_CAN
 } from '../../../constants/scene/things/cutouts'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
-import { ODIN_GHOST__SHARED } from '../../shared/people'
+import { ODIN_GHOST__SHARED } from '../../shared/animals'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

@@ -4,10 +4,10 @@ import {
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT
 } from '../../../constants/scene/things/cardboards'
+import { ODIN__SHARED } from '../../shared/animals'
 import {
     ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    ODIN__SHARED
+    BENNETT__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {

@@ -16,7 +16,7 @@ import {
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
 import { BERKELEY_BUILDING__SHARED } from '../../shared'
-import { ODIN_GHOST__SHARED } from '../../shared/people'
+import { ODIN_GHOST__SHARED } from '../../shared/animals'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
