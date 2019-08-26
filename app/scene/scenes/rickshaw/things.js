@@ -11,9 +11,9 @@ import {
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
 import { TAIWAN_HOUSE__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_ODIN__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -30,15 +30,15 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 1.5,
             scaleFactor: 0.2,
             sharedStyle: [
-                PEOPLE_ALL__SHARED,
-                PEOPLE_BENNETT__SHARED
+                ALL_PEOPLE__SHARED,
+                BENNETT__SHARED
             ]
         },
         [ODIN_SHORE]: {
             yIndex: 2,
             xPosition: 2,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN__SHARED
+            sharedStyle: ODIN__SHARED
         }
     },
     [FLAT]: {

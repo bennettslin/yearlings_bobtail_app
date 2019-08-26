@@ -20,9 +20,9 @@ import {
     SNOWGLOBE__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_LIZ__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    LIZ__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -49,9 +49,9 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.7,
             sharedStyle: [
                 SNOWGLOBE__SHARED,
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_LIZ__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                LIZ__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         }
     },

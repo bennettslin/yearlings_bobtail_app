@@ -16,7 +16,7 @@ import {
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
 import { BERKELEY_BUILDING__SHARED } from '../../shared'
-import { PEOPLE_ODIN_GHOST__SHARED } from '../../shared/people'
+import { ODIN_GHOST__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -69,7 +69,7 @@ export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
             yIndex: 5,
             xPosition: 5,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_GHOST__SHARED
+            sharedStyle: ODIN_GHOST__SHARED
         }
     }
 }

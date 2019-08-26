@@ -10,9 +10,9 @@ import {
     OCEAN_BOTTOM_NEAR
 } from '../../../constants/scene/things/flats'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_ODIN__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -29,9 +29,9 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 8,
             scaleFactor: 0.2,
             sharedStyle: [
-                PEOPLE_ALL__SHARED,
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_ODIN__SHARED
+                ALL_PEOPLE__SHARED,
+                BENNETT__SHARED,
+                ODIN__SHARED
             ]
         }
     },

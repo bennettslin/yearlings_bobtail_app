@@ -23,9 +23,9 @@ import {
     REATTA__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_MIRIAM__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    MIRIAM__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -94,9 +94,9 @@ export const THINGS_EL_CERRITO_REATTA = {
             scaleFactor: 0.6,
             sharedStyle: [
                 REATTA__SHARED,
-                PEOPLE_ALL__SHARED,
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_MIRIAM__SHARED
+                ALL_PEOPLE__SHARED,
+                BENNETT__SHARED,
+                MIRIAM__SHARED
             ]
         }
     }

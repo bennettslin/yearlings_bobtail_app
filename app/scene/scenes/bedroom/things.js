@@ -42,7 +42,7 @@ import {
     PAPER__SHARED,
     SCISSORS__SHARED
 } from '../../shared'
-import { PEOPLE_ALL__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -51,14 +51,14 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 9,
             zOffset: 0,
             scaleFactor: 0.36,
-            sharedStyle: PEOPLE_ALL__SHARED
+            sharedStyle: ALL_PEOPLE__SHARED
         },
         [BLOOM_COUNTY_POSTER]: {
             yIndex: 3,
             xPosition: 9,
             zOffset: 0,
             scaleFactor: 0.36,
-            sharedStyle: PEOPLE_ALL__SHARED
+            sharedStyle: ALL_PEOPLE__SHARED
         }
     },
     [FURNITURE]: {

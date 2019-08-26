@@ -34,11 +34,15 @@ import {
     WINDOW__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_INSTRUMENT__SHARED,
-    PEOPLE_LIZ__SHARED,
-    PEOPLE_OPAL__SHARED
+    BANJO__SHARED,
+    GUITAR__SHARED,
+    MICROPHONE__SHARED
+} from '../../shared/instruments'
+import {
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    LIZ__SHARED,
+    OPAL__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -89,7 +93,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
             yIndex: 4,
             xPosition: 1,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_OPAL__SHARED
+            sharedStyle: OPAL__SHARED
         }
     }
 }
@@ -102,9 +106,9 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             zOffset: 3,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_LIZ__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                LIZ__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         },
         [LIZ_DEFENCE_SPEECH]: {
@@ -113,10 +117,12 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             zOffset: 0.5,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_INSTRUMENT__SHARED,
-                PEOPLE_LIZ__SHARED,
-                PEOPLE_ALL__SHARED
+                BANJO__SHARED,
+                GUITAR__SHARED,
+                MICROPHONE__SHARED,
+                BENNETT__SHARED,
+                LIZ__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         }
     }
@@ -151,9 +157,9 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             zOffset: 0.5,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_LIZ__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                LIZ__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         }
     }
@@ -165,7 +171,7 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
             yIndex: 1,
             xPosition: 6,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_OPAL__SHARED
+            sharedStyle: OPAL__SHARED
         }
     }
 }

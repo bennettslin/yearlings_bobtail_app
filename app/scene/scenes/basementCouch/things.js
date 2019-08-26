@@ -3,7 +3,7 @@ import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
 } from '../../../constants/scene/things/cardboards'
-import { PEOPLE_ALL__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -11,14 +11,14 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 9.5,
             scaleFactor: 0.15,
-            sharedStyle: PEOPLE_ALL__SHARED
+            sharedStyle: ALL_PEOPLE__SHARED
         },
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,
             xPosition: 9,
             zOffset: 2,
             scaleFactor: 0.25,
-            sharedStyle: PEOPLE_ALL__SHARED
+            sharedStyle: ALL_PEOPLE__SHARED
         }
     }
 }

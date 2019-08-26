@@ -9,9 +9,9 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { TAIWAN_HOUSE__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_ODIN__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    ODIN__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -32,15 +32,15 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             zOffset: 1,
             sharedStyle: [
-                PEOPLE_ALL__SHARED,
-                PEOPLE_BENNETT__SHARED
+                ALL_PEOPLE__SHARED,
+                BENNETT__SHARED
             ]
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
             xPosition: 6,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN__SHARED
+            sharedStyle: ODIN__SHARED
         }
     }
 }

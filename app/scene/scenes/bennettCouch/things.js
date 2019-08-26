@@ -22,7 +22,7 @@ import {
     WIDE_ARMREST__BENNETT_RIGHT
 } from '../../../constants/scene/things/panels'
 import { PROGRESS_CHART__SHARED } from '../../shared'
-import { PEOPLE_ALL__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -68,7 +68,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             xPosition: 9,
             zOffset: 2,
             scaleFactor: 0.25,
-            sharedStyle: PEOPLE_ALL__SHARED
+            sharedStyle: ALL_PEOPLE__SHARED
         }
     }
 }
@@ -80,7 +80,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
             xPosition: 9,
             zOffset: 2,
             scaleFactor: 0.25,
-            sharedStyle: PEOPLE_ALL__SHARED
+            sharedStyle: ALL_PEOPLE__SHARED
         }
     }
 }
@@ -91,7 +91,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
             yIndex: 2,
             xPosition: 9,
             scaleFactor: 0.15,
-            sharedStyle: PEOPLE_ALL__SHARED
+            sharedStyle: ALL_PEOPLE__SHARED
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,

@@ -8,7 +8,7 @@ import { DUMPSTER } from '../../../constants/scene/things/cutouts'
 import { LOADING_DOCK_DOOR } from '../../../constants/scene/things/doors'
 import { BURGER_WRAPPER } from '../../../constants/scene/things/fixtures'
 import { GHOST_ODIN_ALLEY } from '../../../constants/scene/things/puppets'
-import { PEOPLE_ODIN_GHOST__SHARED } from '../../shared/people'
+import { ODIN_GHOST__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -40,7 +40,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 5,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_GHOST__SHARED
+            sharedStyle: ODIN_GHOST__SHARED
         }
     }
 }

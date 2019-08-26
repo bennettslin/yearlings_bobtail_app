@@ -18,13 +18,13 @@ import {
     POSTER_GLADIATOR__SHARED
 } from '../../shared'
 import {
+    GUITAR__SHARED,
     MICROPHONE__SHARED
 } from '../../shared/instruments'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_INSTRUMENT__SHARED,
-    PEOPLE_MARA__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    MARA__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -56,10 +56,10 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4.1,
             scaleFactor: 0.45,
             sharedStyle: [
+                GUITAR__SHARED,
                 MICROPHONE__SHARED,
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_INSTRUMENT__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         },
         [CINEMA_THOUGHT_BUYING]: {
@@ -68,8 +68,8 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 1,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_MARA__SHARED,
-                PEOPLE_ALL__SHARED
+                MARA__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         }
     },
@@ -82,7 +82,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.25,
             sharedStyle: [
                 POSTER_GLADIATOR__SHARED,
-                PEOPLE_ALL__SHARED
+                ALL_PEOPLE__SHARED
             ]
         },
         [MARQUEE_FRAME__GLADIATOR]: {

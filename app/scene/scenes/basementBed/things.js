@@ -2,9 +2,9 @@ import { FIXTURE } from '../../../constants/scene'
 import { CRACKED_PICTURE } from '../../../constants/scene/things/fixtures'
 import { PROMISE_PHOTO__SHARED } from '../../shared'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_LIZ__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    LIZ__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -15,9 +15,9 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4,
             sharedStyle: [
                 PROMISE_PHOTO__SHARED,
-                PEOPLE_ALL__SHARED,
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_LIZ__SHARED
+                ALL_PEOPLE__SHARED,
+                BENNETT__SHARED,
+                LIZ__SHARED
             ]
         }
     }

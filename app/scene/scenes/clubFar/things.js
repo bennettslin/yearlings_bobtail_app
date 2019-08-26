@@ -5,7 +5,7 @@ import {
 import { CROWD_BACK } from '../../../constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from '../../../constants/scene/things/puppets'
 import { SHADOW__SHARED } from '../../shared'
-import { PEOPLE_ODIN_GHOST__SHARED } from '../../shared/people'
+import { ODIN_GHOST__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [PANEL]: {
@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 5,
             scaleFactor: 0.2,
-            sharedStyle: PEOPLE_ODIN_GHOST__SHARED
+            sharedStyle: ODIN_GHOST__SHARED
         }
     }
 }

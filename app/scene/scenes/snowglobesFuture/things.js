@@ -24,9 +24,9 @@ import {
     SNOWGLOBE__SHARED
 } from '../../shared'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_MIRIAM__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    MIRIAM__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -53,8 +53,8 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.7,
             sharedStyle: [
                 SNOWGLOBE__SHARED,
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         },
         [SNOWGLOBE_FUTURE_REATTA]: {
@@ -65,9 +65,9 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: [
                 REATTA__SHARED,
                 SNOWGLOBE__SHARED,
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_MIRIAM__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                MIRIAM__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         }
     },

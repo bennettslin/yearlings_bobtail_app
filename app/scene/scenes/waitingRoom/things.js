@@ -35,11 +35,11 @@ import {
     DOOR__SHARED,
     WAITING_ARMCHAIR__SHARED
 } from '../../shared'
+import { BANJO__SHARED } from '../../shared/instruments'
 import {
-    PEOPLE_ALL__SHARED,
-    PEOPLE_BENNETT__SHARED,
-    PEOPLE_INSTRUMENT__SHARED,
-    PEOPLE_LIZ__SHARED
+    ALL_PEOPLE__SHARED,
+    BENNETT__SHARED,
+    LIZ__SHARED
 } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -149,9 +149,9 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 3.3,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_LIZ__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                LIZ__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         },
         [WAITING_THOUGHT_SINGING]: {
@@ -160,10 +160,10 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 3.6,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_INSTRUMENT__SHARED,
-                PEOPLE_LIZ__SHARED,
-                PEOPLE_ALL__SHARED
+                BANJO__SHARED,
+                BENNETT__SHARED,
+                LIZ__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         },
         [WAITING_THOUGHT_STUDYING]: {
@@ -172,9 +172,9 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             zOffset: 0.6,
             scaleFactor: 0.45,
             sharedStyle: [
-                PEOPLE_BENNETT__SHARED,
-                PEOPLE_LIZ__SHARED,
-                PEOPLE_ALL__SHARED
+                BENNETT__SHARED,
+                LIZ__SHARED,
+                ALL_PEOPLE__SHARED
             ]
         }
     }
