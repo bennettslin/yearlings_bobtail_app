@@ -47,17 +47,27 @@ import { ALL_PEOPLE__SHARED } from '../../shared/people'
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [TINTIN_POSTER]: {
-            yIndex: 3,
-            xPosition: 9,
-            zOffset: 0,
-            scaleFactor: 0.36,
+            yIndex: 5,
+            xPosition: 10,
+            zOffset: 3.5,
+            scaleFactor: 0.225,
+            perspective: 70,
+            rotate: -15,
+            rotateY: 300,
+            skewX: -15,
+            skewY: 10,
             sharedStyle: ALL_PEOPLE__SHARED
         },
         [BLOOM_COUNTY_POSTER]: {
-            yIndex: 3,
-            xPosition: 9,
-            zOffset: 0,
-            scaleFactor: 0.36,
+            yIndex: 5,
+            xPosition: 10,
+            zOffset: 3.5,
+            scaleFactor: 0.225,
+            perspective: 70,
+            rotate: -15,
+            rotateY: 300,
+            skewX: -15,
+            skewY: 10,
             sharedStyle: ALL_PEOPLE__SHARED
         }
     },
