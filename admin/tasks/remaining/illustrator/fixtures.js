@@ -38,13 +38,6 @@ export default [
         neededHours: 1
     },
 
-    // Big.
-    {
-        taskName: 'cavemanBones',
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Crumpled edges.
     {
         taskName: 'burgerWrapper',

@@ -258,5 +258,10 @@ export default [
         taskName: 'shoppingCart',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'cavemanBones',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

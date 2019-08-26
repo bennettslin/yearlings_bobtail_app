@@ -13,11 +13,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [CAVEMAN_BONES]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 1.5,
-                zHeight: 4
-            }
+            xPosition: 8.5,
+            scaleFactor: 0.25
         }
     }
 }
