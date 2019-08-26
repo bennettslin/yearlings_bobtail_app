@@ -78,7 +78,8 @@ import {
     ST_JOSEPHS_ANNEX,
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
-    BERKELEY_BUILDING_WIDE
+    BERKELEY_BUILDING_WIDE__BANCROFT,
+    BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../constants/scene/things/flats'
 import {
     WIDE_COUCH__BENNETT,
@@ -210,6 +211,9 @@ export default [
             [CUTOUT]: {
                 [ASH_CAN]: true,
                 [CAMPUS_TREE_SINGLE__BANCROFT]: true
+            },
+            [FLAT]: {
+                [BERKELEY_BUILDING_WIDE__BANCROFT]: true
             }
         },
         cubes: BERKELEY_BANCROFT_KEY,
@@ -244,7 +248,7 @@ export default [
             [FLAT]: {
                 [CAMPANILE]: true,
                 [BERKELEY_BUILDING_TALL]: true,
-                [BERKELEY_BUILDING_WIDE]: true
+                [BERKELEY_BUILDING_WIDE__CAMPANILE]: true
             }
         },
         cubes: BERKELEY_CAMPANILE_KEY,

@@ -12,7 +12,7 @@ import {
 import {
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
-    BERKELEY_BUILDING_WIDE
+    BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
 import { BERKELEY_BUILDING__SHARED } from '../../shared'
@@ -32,12 +32,12 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.5
         },
         [CAMPUS_TREE_SINGLE__CAMPANILE]: {
-            yIndex: 1,
-            xPosition: 3.5,
+            yIndex: 2,
+            xPosition: 9.5,
             scaleFactor: 0.5
         },
         [CAMPUS_TREE_DOUBLE__CAMPANILE]: {
-            yIndex: 2,
+            yIndex: 4,
             xPosition: 10,
             scaleFactor: 0.5
         }
@@ -45,16 +45,16 @@ const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [CAMPANILE]: {
             yIndex: 1,
-            xPosition: 6.25,
+            xPosition: 5.5,
             scaleFactor: 0.42
         },
         [BERKELEY_BUILDING_TALL]: {
             yIndex: 1,
-            xPosition: 9.5,
+            xPosition: 9,
             scaleFactor: 0.35,
             sharedStyle: BERKELEY_BUILDING__SHARED
         },
-        [BERKELEY_BUILDING_WIDE]: {
+        [BERKELEY_BUILDING_WIDE__CAMPANILE]: {
             yIndex: 3,
             xPosition: 10,
             scaleFactor: 0.4,

@@ -1,12 +1,15 @@
 import {
     CUTOUT,
+    FLAT,
     PUPPET
 } from '../../../constants/scene'
 import {
     CAMPUS_TREE_SINGLE__BANCROFT,
     ASH_CAN
 } from '../../../constants/scene/things/cutouts'
+import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
+import { BERKELEY_BUILDING__SHARED } from '../../shared'
 import { ODIN_GHOST__SHARED } from '../../shared/animals'
 
 const ARRANGEMENTS_THINGS = {
@@ -20,6 +23,14 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 5.5,
             scaleFactor: 0.3
+        }
+    },
+    [FLAT]: {
+        [BERKELEY_BUILDING_WIDE__BANCROFT]: {
+            yIndex: 1,
+            xPosition: 1.5,
+            scaleFactor: 0.4,
+            sharedStyle: BERKELEY_BUILDING__SHARED
         }
     }
 }

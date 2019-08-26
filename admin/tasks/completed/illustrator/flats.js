@@ -80,12 +80,12 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'campusBuildingTall',
+        taskName: 'berkeleyBuildingTall',
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: 'campusBuildingWide',
+        taskName: 'berkeleyBuildingWide',
         workedHours: 1,
         neededHours: 1
     },

@@ -67,7 +67,8 @@ import {
 import {
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
-    BERKELEY_BUILDING_WIDE
+    BERKELEY_BUILDING_WIDE__BANCROFT,
+    BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../constants/scene/things/flats'
 import {
     CROWD_BACK,
@@ -100,21 +101,17 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
-                [BANCROFT_SHRUB]: true,
-                [SIGNPOST]: true,
-                [CAMPUS_TREE_SINGLE__CAMPANILE]: true,
-                [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
+                [ASH_CAN]: true,
+                [CAMPUS_TREE_SINGLE__BANCROFT]: true
             },
             [FLAT]: {
-                [CAMPANILE]: true,
-                [BERKELEY_BUILDING_TALL]: true,
-                [BERKELEY_BUILDING_WIDE]: true
+                [BERKELEY_BUILDING_WIDE__BANCROFT]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_CAMPUS]: true
             }
         },
-        cubes: BERKELEY_CAMPANILE_KEY,
+        cubes: BERKELEY_BANCROFT_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -251,14 +248,21 @@ export default [
                 [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
-                [ASH_CAN]: true,
-                [CAMPUS_TREE_SINGLE__BANCROFT]: true
+                [BANCROFT_SHRUB]: true,
+                [SIGNPOST]: true,
+                [CAMPUS_TREE_SINGLE__CAMPANILE]: true,
+                [CAMPUS_TREE_DOUBLE__CAMPANILE]: true
+            },
+            [FLAT]: {
+                [CAMPANILE]: true,
+                [BERKELEY_BUILDING_TALL]: true,
+                [BERKELEY_BUILDING_WIDE__CAMPANILE]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_DEMONSTRATION]: true
             }
         },
-        cubes: BERKELEY_BANCROFT_KEY,
+        cubes: BERKELEY_CAMPANILE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER

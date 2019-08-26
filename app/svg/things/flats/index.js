@@ -13,8 +13,8 @@ import taiwanHouseFar from 'assets/svgs/flats/taiwanHouseFar'
 import taiwanHouseNear from 'assets/svgs/flats/taiwanHouseNear'
 import drivingHouseLeft from 'assets/svgs/flats/drivingHouseLeft'
 import drivingHouseRight from 'assets/svgs/flats/drivingHouseRight'
-import campusBuildingTall from 'assets/svgs/flats/campusBuildingTall'
-import campusBuildingWide from 'assets/svgs/flats/campusBuildingWide'
+import berkeleyBuildingTall from 'assets/svgs/flats/berkeleyBuildingTall'
+import berkeleyBuildingWide from 'assets/svgs/flats/berkeleyBuildingWide'
 import rickshawTown from 'assets/svgs/flats/rickshawTown'
 import ferrisWheel from 'assets/svgs/flats/ferrisWheel'
 import rollerCoaster from 'assets/svgs/flats/rollerCoaster'
@@ -80,7 +80,8 @@ import {
     ST_JOSEPHS_CHURCH,
     CAMPANILE,
     BERKELEY_BUILDING_TALL,
-    BERKELEY_BUILDING_WIDE,
+    BERKELEY_BUILDING_WIDE__BANCROFT,
+    BERKELEY_BUILDING_WIDE__CAMPANILE,
     GO_KART_TRACK,
     ROYCE_HALL,
     CEMETERY_HILLS_LEFT,
@@ -140,8 +141,9 @@ export default {
     [ST_JOSEPHS_ANNEX]: stJosephsAnnex,
     [ST_JOSEPHS_CHURCH]: stJosephsChurch,
     [CAMPANILE]: campanile,
-    [BERKELEY_BUILDING_TALL]: campusBuildingTall,
-    [BERKELEY_BUILDING_WIDE]: campusBuildingWide,
+    [BERKELEY_BUILDING_TALL]: berkeleyBuildingTall,
+    [BERKELEY_BUILDING_WIDE__BANCROFT]: berkeleyBuildingWide,
+    [BERKELEY_BUILDING_WIDE__CAMPANILE]: berkeleyBuildingWide,
     [GO_KART_TRACK]: goKartTrack,
     [ROYCE_HALL]: royceHall,
     [CEMETERY_HILLS_LEFT]: cemeteryHillsLeft,
