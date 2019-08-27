@@ -133,5 +133,10 @@ export default [
         taskName: 'stageMic',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'bass cases',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

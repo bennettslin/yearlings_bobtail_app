@@ -79,11 +79,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'bass cases',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'guitar cases',
         workedHours: 0,
         neededHours: 2

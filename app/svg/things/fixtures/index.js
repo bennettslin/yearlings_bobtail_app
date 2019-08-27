@@ -17,7 +17,7 @@ import keyboard from 'assets/svgs/fixtures/keyboard'
 import cashBox from 'assets/svgs/fixtures/cashBox'
 // import guitar from 'assets/svgs/fixtures/guitar'
 // import drumKit from 'assets/svgs/fixtures/drumKit'
-// import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
+import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
 // import guitarCaseUpright from 'assets/svgs/fixtures/guitarCaseUpright'
 // import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
 import basementBeerMara from 'assets/svgs/fixtures/basementBeerMara'
@@ -125,7 +125,7 @@ export default {
     [STAGE_MIC__CROWD]: stageMic,
     [STAGE_MIC__STAGE]: stageMic,
     [DRUMKIT]: false,
-    [BASS_CASE_UPRIGHT]: false,
+    [BASS_CASE_UPRIGHT]: bassCaseUpright,
     [GUITAR_CASE_UPRIGHT]: false,
     [BASEMENT_BEER_CASE]: false,
     [BASEMENT_BEER_MARA]: basementBeerMara,
