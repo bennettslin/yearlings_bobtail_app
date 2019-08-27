@@ -38,7 +38,7 @@ import {
 } from '../../shared/animals'
 import {
     BANJO__SHARED,
-    GUITAR__SHARED,
+    ACOUSTIC_GUITAR__SHARED,
     MICROPHONE__SHARED
 } from '../../shared/instruments'
 import {
@@ -120,7 +120,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             scaleFactor: 0.45,
             sharedStyle: [
                 BANJO__SHARED,
-                GUITAR__SHARED,
+                ACOUSTIC_GUITAR__SHARED,
                 MICROPHONE__SHARED,
                 BENNETT__SHARED,
                 LIZ__SHARED,

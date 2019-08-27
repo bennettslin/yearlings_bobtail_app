@@ -18,7 +18,7 @@ import {
     POSTER_GLADIATOR__SHARED
 } from '../../shared'
 import {
-    GUITAR__SHARED,
+    ACOUSTIC_GUITAR__SHARED,
     MICROPHONE__SHARED
 } from '../../shared/instruments'
 import {
@@ -56,7 +56,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 4.1,
             scaleFactor: 0.45,
             sharedStyle: [
-                GUITAR__SHARED,
+                ACOUSTIC_GUITAR__SHARED,
                 MICROPHONE__SHARED,
                 BENNETT__SHARED,
                 ALL_PEOPLE__SHARED

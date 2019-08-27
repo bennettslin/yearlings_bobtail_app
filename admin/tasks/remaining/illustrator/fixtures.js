@@ -69,14 +69,44 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'bass',
+        taskName: 'basses',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'Andrew guitar',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'electric guitars',
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: 'violin',
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: 'guitar',
+        taskName: 'acoustic guitar',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1.5
+    },
+    {
+        taskName: 'dobro',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'banjo',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'mandolin',
+        workedHours: 0,
+        neededHours: 1.5
     },
     {
         taskName: 'guitar cases',
