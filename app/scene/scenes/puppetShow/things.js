@@ -83,9 +83,10 @@ const ARRANGEMENTS_THINGS = {
     },
     [PANEL]: {
         [TAIWAN_BRIDGE]: {
-            yIndex: 2,
+            yIndex: 4,
             xPosition: 5.5,
-            arrangement: {}
+            zOffset: 3.2,
+            scaleFactor: 0.42
         },
         [TAIWAN_HAZE__CLOUD]: {
             yIndex: 2,
