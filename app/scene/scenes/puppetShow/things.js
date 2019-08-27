@@ -18,6 +18,7 @@ import {
     TAIWAN_MOUNTAIN_RIGHT
 } from '../../../constants/scene/things/flats'
 import {
+    TAIWAN_BRIDGE,
     TAIWAN_HAZE__CLOUD,
     TAIWAN_HAZE__FOG
 } from '../../../constants/scene/things/panels'
@@ -81,6 +82,11 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [PANEL]: {
+        [TAIWAN_BRIDGE]: {
+            yIndex: 2,
+            xPosition: 5.5,
+            arrangement: {}
+        },
         [TAIWAN_HAZE__CLOUD]: {
             yIndex: 2,
             xPosition: 5.5,

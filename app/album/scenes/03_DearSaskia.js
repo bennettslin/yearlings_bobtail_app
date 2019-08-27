@@ -61,6 +61,7 @@ import {
     SCHOOL_BUNGALOW__RIGHT
 } from '../../constants/scene/things/flats'
 import {
+    TAIWAN_BRIDGE,
     TAIWAN_HAZE__CLOUD,
     TAIWAN_HAZE__FOG,
     SCHOOLBUS_EXTERIOR,
@@ -100,6 +101,7 @@ export default [
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PANEL]: {
+                [TAIWAN_BRIDGE]: true,
                 [TAIWAN_HAZE__CLOUD]: true,
                 [TAIWAN_HAZE__FOG]: true
             },
@@ -134,6 +136,7 @@ export default [
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PANEL]: {
+                [TAIWAN_BRIDGE]: true,
                 [TAIWAN_HAZE__CLOUD]: true,
                 [TAIWAN_HAZE__FOG]: true
             },
@@ -248,6 +251,7 @@ export default [
                 [TAIWAN_MOUNTAIN_RIGHT]: true
             },
             [PANEL]: {
+                [TAIWAN_BRIDGE]: true,
                 [TAIWAN_HAZE__CLOUD]: true,
                 [TAIWAN_HAZE__FOG]: true
             },
