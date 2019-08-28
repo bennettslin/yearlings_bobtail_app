@@ -23,7 +23,7 @@ const _roundPercentage = (rawPercentage) => {
 const _getXPercentage = (
     xCornerIndex,
     yCornerIndex,
-    slantDirection,
+    slantDirection
 
 ) => {
 

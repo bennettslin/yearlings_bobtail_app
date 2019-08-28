@@ -92,7 +92,7 @@ class LogicWrapper extends PureComponent {
                             'RsD'
                         ),
 
-                        !dotsBitNumber && 'LW__noSelectedDots',
+                        !dotsBitNumber && 'LW__noSelectedDots'
                     )
                 }}
             >

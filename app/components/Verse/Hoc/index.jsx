@@ -21,7 +21,7 @@ class VerseHoc extends PureComponent {
 
         // From parent.
         verseIndex: PropTypes.number,
-        VerseComponent: PropTypes.func.isRequired,
+        VerseComponent: PropTypes.object.isRequired,
 
         inSlider: PropTypes.bool,
         inUnit: PropTypes.bool,

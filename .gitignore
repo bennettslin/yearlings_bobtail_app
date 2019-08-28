@@ -6,3 +6,4 @@ npm-debug.log
 bundle.js
 .env
 .eslintcache
+.vscode

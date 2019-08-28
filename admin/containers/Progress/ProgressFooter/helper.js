@@ -24,7 +24,7 @@ export const getNextCheckInDateFromHours = (hours = 0, raw) => {
         today = new Date(),
         finishDate = addDays(today, totalDays)
 
-    return raw ? finishDate : format(finishDate, 'MMM D, YYYY')
+    return raw ? finishDate : format(finishDate, 'MMM d, yyyy')
 }
 
 export const getRemainingTimeStringFromHours = (hours = 0) => {

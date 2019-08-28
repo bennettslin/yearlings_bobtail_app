@@ -19,7 +19,7 @@ const propTypes = {
 
         // From parent.
         stanzaIndex: PropTypes.number.isRequired,
-        StanzaComponent: PropTypes.func.isRequired
+        StanzaComponent: PropTypes.object.isRequired
     },
 
     StanzaHoc = ({
