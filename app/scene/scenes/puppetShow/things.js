@@ -85,8 +85,8 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_BRIDGE]: {
             yIndex: 4,
             xPosition: 5.5,
-            zOffset: 3.2,
-            scaleFactor: 0.42
+            zOffset: 3.3,
+            scaleFactor: 0.48
         },
         [TAIWAN_HAZE__CLOUD]: {
             yIndex: 2,
