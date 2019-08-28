@@ -7,7 +7,10 @@ import {
     TRASH_CAN__LOCKERS,
     VAN_NUYS_PLANT__LOCKERS
 } from '../../../constants/scene/things/cutouts'
-import { THROWN_FRUIT } from '../../../constants/scene/things/fixtures'
+import {
+    THROWN_FRUIT,
+    BALLED_FOIL__LOCKERS
+} from '../../../constants/scene/things/fixtures'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -31,6 +34,10 @@ const ARRANGEMENTS_THINGS = {
         [THROWN_FRUIT]: {
             yIndex: 4,
             xPosition: 6.5
+        },
+        [BALLED_FOIL__LOCKERS]: {
+            yIndex: 4,
+            xPosition: 7
         }
     }
 }

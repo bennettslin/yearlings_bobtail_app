@@ -6,7 +6,7 @@ import {
 } from '../../../constants/scene'
 import { DUMPSTER } from '../../../constants/scene/things/cutouts'
 import { LOADING_DOCK_DOOR } from '../../../constants/scene/things/doors'
-import { BURGER_WRAPPER } from '../../../constants/scene/things/fixtures'
+import { BALLED_FOIL__ALLEY } from '../../../constants/scene/things/fixtures'
 import { GHOST_ODIN_ALLEY } from '../../../constants/scene/things/puppets'
 import { ODIN_GHOST__SHARED } from '../../shared/animals'
 
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [BURGER_WRAPPER]: {
+        [BALLED_FOIL__ALLEY]: {
             yIndex: 4,
             arrangement: {
                 xPosition: 6,

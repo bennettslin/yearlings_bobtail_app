@@ -60,7 +60,7 @@ import {
 } from '../../constants/scene/things/cutouts'
 import { LOADING_DOCK_DOOR } from '../../constants/scene/things/doors'
 import {
-    BURGER_WRAPPER,
+    BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION
 } from '../../constants/scene/things/fixtures'
@@ -169,7 +169,7 @@ export default [
                 [LOADING_DOCK_DOOR]: true
             },
             [FIXTURE]: {
-                [BURGER_WRAPPER]: true
+                [BALLED_FOIL__ALLEY]: true
             },
             [PUPPET]: {
                 [GHOST_ODIN_ALLEY]: true

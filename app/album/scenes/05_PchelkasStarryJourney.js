@@ -83,7 +83,8 @@ import {
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
-    THROWN_FRUIT
+    THROWN_FRUIT,
+    BALLED_FOIL__LOCKERS
 } from '../../constants/scene/things/fixtures'
 import { BEDROOM_BUS } from '../../constants/scene/things/flats'
 import { CAPTAIN_BED_PILLOW } from '../../constants/scene/things/furniture'
@@ -262,7 +263,8 @@ export default [
                 [VAN_NUYS_PLANT__LOCKERS]: true
             },
             [FIXTURE]: {
-                [THROWN_FRUIT]: true
+                [THROWN_FRUIT]: true,
+                [BALLED_FOIL__LOCKERS]: true
             }
         },
         cubes: VAN_NUYS_LOCKERS_KEY,

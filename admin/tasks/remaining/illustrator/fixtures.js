@@ -40,7 +40,7 @@ export default [
 
     // Crumpled edges.
     {
-        taskName: 'burgerWrapper',
+        taskName: 'balledFoil',
         workedHours: 0,
         neededHours: 1
     },
