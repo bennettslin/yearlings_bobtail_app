@@ -148,5 +148,10 @@ export default [
         taskName: 'recordingMic',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'balledFoil',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

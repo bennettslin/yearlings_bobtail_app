@@ -11,7 +11,7 @@ import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
 import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
 import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
 import thrownFruit from 'assets/svgs/fixtures/thrownFruit'
-// import balledFoil from 'assets/svgs/fixtures/balledFoil'
+import balledFoil from 'assets/svgs/fixtures/balledFoil'
 import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
 import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
 import keyboard from 'assets/svgs/fixtures/keyboard'
@@ -118,7 +118,7 @@ export default {
     [LETTER_SCRAPS__BENNETT]: letterScraps,
     [BENNETT_LETTERS]: bennettLetters,
     [THROWN_FRUIT]: thrownFruit,
-    [BALLED_FOIL__LOCKERS]: thrownFruit,
+    [BALLED_FOIL__LOCKERS]: balledFoil,
     [BENNETT_RECORD_PLAYER]: bennettRecordPlayer,
     [BENNETT_COUCH_LAMP]: bennettCouchLamp,
     [KEYBOARD]: keyboard,
@@ -153,7 +153,7 @@ export default {
     [RECORDING_MIC]: recordingMic,
     [RECORDING_BEERS]: recordingBeers,
     [CRACKED_PICTURE]: crackedPicture,
-    [BALLED_FOIL__ALLEY]: false,
+    [BALLED_FOIL__ALLEY]: balledFoil,
     [LIZ_PHONE_BASE]: false,
     [LIZ_PHONE_BASE_REFLECTION]: false,
     [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer

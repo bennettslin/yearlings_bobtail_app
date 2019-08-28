@@ -27,18 +27,14 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [BALLED_FOIL__ALLEY]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 0.5,
-                zHeight: 0.5,
-                zOffset: 1.5
-            }
+            xPosition: 5.5,
+            zOffset: 2.5
         }
     },
     [PUPPET]: {
         [GHOST_ODIN_ALLEY]: {
             yIndex: 5,
-            xPosition: 5,
+            xPosition: 8,
             scaleFactor: 0.2,
             sharedStyle: ODIN_GHOST__SHARED
         }

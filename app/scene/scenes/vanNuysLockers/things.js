@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [BALLED_FOIL__LOCKERS]: {
             yIndex: 4,
-            xPosition: 7
+            xPosition: 7.5
         }
     }
 }

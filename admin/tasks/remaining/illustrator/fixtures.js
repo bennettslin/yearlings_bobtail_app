@@ -38,13 +38,6 @@ export default [
         neededHours: 1
     },
 
-    // Crumpled edges.
-    {
-        taskName: 'balledFoil',
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Cloth.
     {
         taskName: 'backpackBennett',
