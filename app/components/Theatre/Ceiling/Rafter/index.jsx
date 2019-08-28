@@ -21,8 +21,7 @@ const CeilingRafter = ({
     <InlineSvg
         {...{
             className: cx(
-                'CeilingRafter',
-                'abF'
+                'CeilingRafter'
             ),
             style: {
                 top: `${top}px`,

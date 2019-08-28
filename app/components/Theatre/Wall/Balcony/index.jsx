@@ -23,8 +23,7 @@ const WallBalcony = ({
     <InlineSvg
         {...{
             className: cx(
-                'WallBalcony',
-                'abF'
+                'WallBalcony'
             ),
             style: {
                 top: `${top}px`,

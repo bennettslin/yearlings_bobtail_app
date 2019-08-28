@@ -3,28 +3,21 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 
-import Svg from 'modules/Svg'
+import InlineSvg from 'modules/InlineSvg'
+import audioPlay from 'assets/svgs/app/audioPlay'
 
 const AccessField = () => {
 
     return (
-        <Svg
-            className={cx(
-                'abF'
-            )}
-        >
-            <rect
-                className={cx(
+        <InlineSvg
+            {...{
+                svgClassName: cx(
                     'AccessField'
-                )}
-                {...{
-                    x: 0,
-                    y: 0,
-                    width: 100,
-                    height: 100
-                }}
-            />
-        </Svg>
+                )
+            }}
+        >
+            {audioPlay}
+        </InlineSvg>
     )
 }
 

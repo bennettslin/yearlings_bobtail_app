@@ -55,8 +55,7 @@ const ButtonIcon = ({
             {...{
                 className: cx(
                     'ButtonIcon',
-                    'dropShadow',
-                    'abF'
+                    'dropShadow'
                 ),
                 svgClassName: cx(
                     `ButtonIcon__${buttonName}`,

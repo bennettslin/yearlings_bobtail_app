@@ -64,6 +64,7 @@ class PreviewerSvg extends PureComponent {
 
         return Boolean(presenceComponent) && (
             <InlineSvg
+                inPreviewer
                 {...{
                     className: cx(
                         'Presence',

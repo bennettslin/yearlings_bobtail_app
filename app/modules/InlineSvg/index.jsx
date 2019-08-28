@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import ReactInlineSvg from 'react-inlinesvg'
 
 const propTypes = {
     // From parent.
+    inPreviewer: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
     svgClassName: PropTypes.string,
@@ -11,6 +13,7 @@ const propTypes = {
 }
 
 const InlineSvg = ({
+    inPreviewer,
     className,
     style,
     svgClassName,
@@ -19,7 +22,12 @@ const InlineSvg = ({
 }) => (
     <div
         {...{
-            className,
+            className: cx(
+                className,
+
+                // When not in previewer, make position absolute.
+                !inPreviewer && 'abF'
+            ),
             style
         }}
     >

@@ -195,8 +195,7 @@ class ConfiguredPresenceSvg extends PureComponent {
                     className: cx(
                         'ConfiguredPresenceSvg',
                         noShadow && 'Presence__noShadow',
-                        className,
-                        'abF'
+                        className
                     ),
                     style: {
                         left: `${adjustedLeft.toFixed(2)}%`,

@@ -22,9 +22,6 @@ const SeatShade = ({
 }) => (
     <InlineSvg
         {...{
-            className: cx(
-                'abF'
-            ),
             style: {
                 top: `${top}px`,
                 left: `${left}px`,

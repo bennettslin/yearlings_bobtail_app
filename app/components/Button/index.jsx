@@ -122,15 +122,18 @@ class Button extends Component {
                     'abF'
                 )}>
 
-                    <ButtonIcon
-                        {...{
-                            buttonName,
-                            buttonIdentifier,
-                            showAsDisabled: isDisabled
-                        }}
-                    />
-
-                    {children}
+                    {/* Dots slide select buttons pass own children. */}
+                    {children ? (
+                        children
+                    ) : (
+                        <ButtonIcon
+                            {...{
+                                buttonName,
+                                buttonIdentifier,
+                                showAsDisabled: isDisabled
+                            }}
+                        />
+                    )}
 
                     {accessKey && (
                         <AccessLetter

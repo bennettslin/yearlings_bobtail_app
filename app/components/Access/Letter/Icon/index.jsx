@@ -4,8 +4,6 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from 'modules/Svg'
-
 import {
     ENTER,
     ARROW_LEFT,
@@ -59,24 +57,13 @@ const propTypes = {
      * centre the icon.
      */
         return (
-            <Svg
+            <div
                 className={cx(
                     'AccessIcon'
                 )}
             >
-                <text
-                    className={cx(
-                        'AccessIcon__character'
-                    )}
-                    {...{
-                        x: 25,
-                        y: 75,
-                        fontSize: 75
-                    }}
-                >
-                    {shownKey}
-                </text>
-            </Svg>
+                {shownKey}
+            </div>
         )
     }
 

@@ -31,8 +31,7 @@ const DramaMasks = ({
     <InlineSvg
         {...{
             className: cx(
-                'DramaMasks',
-                'abF'
+                'DramaMasks'
             ),
             style: {
                 top: `${prosceniumTop + prosceniumHeight * 0.0025}px`,
