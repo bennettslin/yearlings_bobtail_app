@@ -39,7 +39,7 @@ import stageMic from 'assets/svgs/fixtures/stageMic'
 // import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
 import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
 import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
-// import recordingMic from 'assets/svgs/fixtures/recordingMic'
+import recordingMic from 'assets/svgs/fixtures/recordingMic'
 import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
 import crackedPicture from 'assets/svgs/fixtures/crackedPicture'
 // import burgerWrapper from 'assets/svgs/fixtures/burgerWrapper'
@@ -148,7 +148,7 @@ export default {
     [BENNETT_SHOE_REFLECTION]: false,
     [TCHOTCHKES]: tchotchkes,
     [TETHERBALL_POLE]: tetherballPole,
-    [RECORDING_MIC]: false,
+    [RECORDING_MIC]: recordingMic,
     [RECORDING_BEERS]: recordingBeers,
     [CRACKED_PICTURE]: crackedPicture,
     [BURGER_WRAPPER]: false,

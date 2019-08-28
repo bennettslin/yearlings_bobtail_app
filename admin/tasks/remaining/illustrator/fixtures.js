@@ -64,11 +64,6 @@ export default [
 
     // Instruments.
     {
-        taskName: 'recordingMic',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'basses',
         workedHours: 0,
         neededHours: 3

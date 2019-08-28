@@ -24,6 +24,9 @@ import {
     SNOWGLOBE__SHARED
 } from '../../shared'
 import {
+    MICROPHONE__SHARED
+} from '../../shared/instruments'
+import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,
     MIRIAM__SHARED
@@ -74,11 +77,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [RECORDING_MIC]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 0.5,
-                zHeight: 2
-            }
+            xPosition: 10,
+            sharedStyle: MICROPHONE__SHARED
         },
         [RECORDING_BEERS]: {
             yIndex: 3,
