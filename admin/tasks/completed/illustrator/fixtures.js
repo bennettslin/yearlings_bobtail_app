@@ -153,5 +153,10 @@ export default [
         taskName: 'balledFoil',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'lizPhones',
+        workedHours: 4,
+        neededHours: 4
     }
 ]

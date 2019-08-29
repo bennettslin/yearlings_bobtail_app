@@ -28,8 +28,8 @@ import stepladder from 'assets/svgs/fixtures/stepladder'
 import mannequin from 'assets/svgs/fixtures/mannequin'
 // import nudeDrawings from 'assets/svgs/fixtures/nudeDrawings'
 import vaseline from 'assets/svgs/fixtures/vaseline'
-// import lizPhone from 'assets/svgs/fixtures/lizPhone'
-// import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
+import lizPhone from 'assets/svgs/fixtures/lizPhone'
+import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
 import evianBottles from 'assets/svgs/fixtures/evianBottles'
 import stageMic from 'assets/svgs/fixtures/stageMic'
 // import kickDrum from 'assets/svgs/fixtures/kickDrum'
@@ -43,8 +43,8 @@ import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
 import recordingMic from 'assets/svgs/fixtures/recordingMic'
 import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
 import crackedPicture from 'assets/svgs/fixtures/crackedPicture'
-// import lizPhoneBase from 'assets/svgs/fixtures/lizPhoneBase'
-// import lizPhoneBaseReflection from 'assets/svgs/fixtures/lizPhoneBaseReflection'
+import lizPhoneBase from 'assets/svgs/fixtures/lizPhoneBase'
+import lizPhoneBaseReflection from 'assets/svgs/fixtures/lizPhoneBaseReflection'
 import hospitalRecordPlayer from 'assets/svgs/fixtures/hospitalRecordPlayer'
 
 import {
@@ -138,8 +138,8 @@ export default {
     [MANNEQUIN]: mannequin,
     [NUDE_DRAWINGS]: false,
     [VASELINE]: vaseline,
-    [LIZ_PHONE]: false,
-    [LIZ_PHONE_REFLECTION]: false,
+    [LIZ_PHONE]: lizPhone,
+    [LIZ_PHONE_REFLECTION]: lizPhoneReflection,
     [EVIAN_BOTTLES]: evianBottles,
     [KICK_DRUM]: false,
     [DRUM_THRONE]: false,
@@ -154,7 +154,7 @@ export default {
     [RECORDING_BEERS]: recordingBeers,
     [CRACKED_PICTURE]: crackedPicture,
     [BALLED_FOIL__ALLEY]: balledFoil,
-    [LIZ_PHONE_BASE]: false,
-    [LIZ_PHONE_BASE_REFLECTION]: false,
+    [LIZ_PHONE_BASE]: lizPhoneBase,
+    [LIZ_PHONE_BASE_REFLECTION]: lizPhoneBaseReflection,
     [HOSPITAL_RECORD_PLAYER]: hospitalRecordPlayer
 }

@@ -1,26 +1,4 @@
 export default [
-    // Easy.
-    {
-        taskName: 'lizPhone',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizPhoneReflection',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizPhoneBase',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'lizPhoneBaseReflection',
-        workedHours: 0,
-        neededHours: 1
-    },
-
     // Drawings.
     {
         taskName: 'fridgeDrawings',

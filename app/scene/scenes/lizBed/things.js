@@ -19,25 +19,20 @@ import {
     PHONE_CALL_PANEL,
     LIZ_BED
 } from '../../../constants/scene/things/panels'
+import { LIZ_PHONE__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [LIZ_PHONE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 2,
+            sharedStyle: LIZ_PHONE__SHARED
         },
         [LIZ_PHONE_REFLECTION]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1,
-                zOffset: 6.5
-            }
+            xPosition: 2,
+            zOffset: 6.5,
+            sharedStyle: LIZ_PHONE__SHARED
         }
     },
     [FURNITURE]: {
@@ -85,20 +80,14 @@ export const THINGS_LIZ_BED_VEGAN = {
     [FIXTURE]: {
         [LIZ_PHONE_BASE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 2,
+            sharedStyle: LIZ_PHONE__SHARED
         },
         [LIZ_PHONE_BASE_REFLECTION]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1,
-                zOffset: 6.5
-            }
+            xPosition: 2,
+            zOffset: 6.5,
+            sharedStyle: LIZ_PHONE__SHARED
         }
     },
     [PANEL]: {
