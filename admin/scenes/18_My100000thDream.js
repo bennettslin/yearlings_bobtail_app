@@ -60,7 +60,7 @@ export default [
                 [MARA]: {
                     gopi: {
                         todo: true,
-                        workedHours: 3.75,
+                        workedHours: 4.25,
                         instance: GOPI
                     }
                 },
