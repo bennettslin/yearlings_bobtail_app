@@ -108,52 +108,52 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
     [PUPPET]: {
         [PUPPET_BENNETT_BEGIN]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
+            xPosition: 1.4,
+            zOffset: 3.48,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 BENNETT__SHARED
             ]
         },
-        [PUPPET_ANITA_BEGIN]: {
-            yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
-            scaleFactor: 0.25,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                ANITA__SHARED
-            ]
-        },
         [PUPPET_CHRISTOPHER_BEGIN]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
+            xPosition: 1.68,
+            zOffset: 3.455,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 CHRISTOPHER__SHARED
             ]
         },
-        [PUPPET_FATHER_BEGIN]: {
-            yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
-            scaleFactor: 0.25,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                FATHER__SHARED
-            ]
-        },
         [PUPPET_MOTHER_BEGIN]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
+            xPosition: 1.925,
+            zOffset: 3.43,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 MOTHER__SHARED
+            ]
+        },
+        [PUPPET_ANITA_BEGIN]: {
+            yIndex: 3,
+            xPosition: 2.175,
+            zOffset: 3.4275,
+            scaleFactor: 0.25,
+            sharedStyle: [
+                ALL_PEOPLE__SHARED,
+                ANITA__SHARED
+            ]
+        },
+        [PUPPET_FATHER_BEGIN]: {
+            yIndex: 3,
+            xPosition: 2.55,
+            zOffset: 3.425,
+            scaleFactor: 0.25,
+            sharedStyle: [
+                ALL_PEOPLE__SHARED,
+                FATHER__SHARED
             ]
         }
     }
@@ -182,27 +182,27 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         [PUPPET_BENNETT_MIDDLE]: {
             yIndex: 3,
             xPosition: 3,
-            zOffset: 3,
+            zOffset: 3.435,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 BENNETT__SHARED
             ]
         },
-        [PUPPET_ANITA_MIDDLE]: {
+        [PUPPET_MOTHER_MIDDLE]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
+            xPosition: 3.8,
+            zOffset: 3.345,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                ANITA__SHARED
+                MOTHER__SHARED
             ]
         },
         [PUPPET_CHRISTOPHER_MIDDLE]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
+            xPosition: 4.1,
+            zOffset: 3.335,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
@@ -211,22 +211,22 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         },
         [PUPPET_FATHER_MIDDLE]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
+            xPosition: 4.5,
+            zOffset: 3.315,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 FATHER__SHARED
             ]
         },
-        [PUPPET_MOTHER_MIDDLE]: {
+        [PUPPET_ANITA_MIDDLE]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 3,
+            xPosition: 5,
+            zOffset: 3.295,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                MOTHER__SHARED
+                ANITA__SHARED
             ]
         }
     }
@@ -255,18 +255,28 @@ export const THINGS_PUPPET_SHOW_END = {
     [PUPPET]: {
         [PUPPET_BENNETT_END]: {
             yIndex: 3,
-            xPosition: 9,
-            zOffset: 3,
+            xPosition: 6,
+            zOffset: 3.3,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 BENNETT__SHARED
             ]
         },
+        [PUPPET_FATHER_END]: {
+            yIndex: 3,
+            xPosition: 8,
+            zOffset: 3.425,
+            scaleFactor: 0.25,
+            sharedStyle: [
+                ALL_PEOPLE__SHARED,
+                FATHER__SHARED
+            ]
+        },
         [PUPPET_ANITA_END]: {
             yIndex: 3,
-            xPosition: 9,
-            zOffset: 3,
+            xPosition: 8.48,
+            zOffset: 3.425,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
@@ -275,28 +285,18 @@ export const THINGS_PUPPET_SHOW_END = {
         },
         [PUPPET_CHRISTOPHER_END]: {
             yIndex: 3,
-            xPosition: 9,
-            zOffset: 3,
+            xPosition: 8.67,
+            zOffset: 3.4225,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 CHRISTOPHER__SHARED
             ]
         },
-        [PUPPET_FATHER_END]: {
-            yIndex: 3,
-            xPosition: 9,
-            zOffset: 3,
-            scaleFactor: 0.25,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                FATHER__SHARED
-            ]
-        },
         [PUPPET_MOTHER_END]: {
             yIndex: 3,
-            xPosition: 9,
-            zOffset: 3,
+            xPosition: 8.9,
+            zOffset: 3.42,
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
