@@ -8,10 +8,5 @@ export default [
         taskName: 'curtains',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: 'Bobtail Yearlings logo.',
-        workedHours: 0,
-        neededHours: 3
     }
 ]

@@ -23,5 +23,10 @@ export default [
         taskName: 'proscenium',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'Bobtail Yearlings logo for about button.',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

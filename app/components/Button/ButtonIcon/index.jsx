@@ -8,7 +8,7 @@ import InlineSvg from 'modules/InlineSvg'
 import BUTTON_ICONS_MAP from '../../../svg/buttons'
 
 import {
-    // ABOUT_BUTTON_KEY,
+    ABOUT_BUTTON_KEY,
     // AUDIO_NEXT_BUTTON_KEY,
     // AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY
@@ -39,7 +39,10 @@ const propTypes = {
 
 // TODO: Get rid of this conditional once they're all new svgs.
 const isNewSvg = (buttonName) => {
-    return buttonName === AUDIO_PLAY_BUTTON_KEY
+    return (
+        buttonName === ABOUT_BUTTON_KEY ||
+        buttonName === AUDIO_PLAY_BUTTON_KEY
+    )
 }
 
 const ButtonIcon = ({

@@ -158,5 +158,15 @@ export default [
         taskName: 'lizPhones',
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: 'acoustic guitar',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'dobro',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

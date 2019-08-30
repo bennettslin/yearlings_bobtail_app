@@ -55,16 +55,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'acoustic guitar',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'dobro',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'banjo',
         workedHours: 0,
         neededHours: 1.5
