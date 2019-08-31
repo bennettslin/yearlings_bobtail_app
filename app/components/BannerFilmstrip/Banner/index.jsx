@@ -40,6 +40,11 @@ class Banner extends PureComponent {
         selectedTime: PropTypes.number.isRequired
     }
 
+    constructor(props) {
+        super(props)
+        this.bannerElement = React.createRef()
+    }
+
     getCursorWidth() {
         const {
                 lyricSongIndex,
@@ -53,7 +58,7 @@ class Banner extends PureComponent {
 
     handleBannerClick = (e) => {
         const clientX = getClientX(e),
-            { left, width } = this.bannerElement.getBoundingClientRect()
+            { left, width } = this.bannerElement.current.getBoundingClientRect()
 
         if (isFinite(clientX)) {
             const { selectedSongIndex } = this.props,
@@ -77,10 +82,6 @@ class Banner extends PureComponent {
         this.dispatchStopPropagation(e)
     }
 
-    _getBannerElement = (node) => {
-        this.bannerElement = node
-    }
-
     _getRefs = (payload) => {
         populateRefs(this, payload)
     }
@@ -92,7 +93,7 @@ class Banner extends PureComponent {
         return (
             <div
                 {...{
-                    ref: this._getBannerElement,
+                    ref: this.bannerElement,
                     className: cx(
                         'Banner',
                         isSmallBannerText &&

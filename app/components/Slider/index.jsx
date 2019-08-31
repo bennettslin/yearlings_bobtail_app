@@ -30,13 +30,14 @@ class Slider extends PureComponent {
         canLyricCarouselEnter: PropTypes.bool.isRequired
     }
 
-    _handleTouchDown = (e) => {
-        logEvent('Slider', e)
-        this.dispatchTouchBegin(e, this.sliderElement)
+    constructor(props) {
+        super(props)
+        this.sliderElement = React.createRef()
     }
 
-    _getSliderElement = (node) => {
-        this.sliderElement = node
+    _handleTouchDown = (e) => {
+        logEvent('Slider', e)
+        this.dispatchTouchBegin(e, this.sliderElement.current)
     }
 
     _getRefs = (payload) => {
@@ -49,7 +50,7 @@ class Slider extends PureComponent {
         return (
             <div
                 {...{
-                    ref: this._getSliderElement,
+                    ref: this.sliderElement,
                     className: cx(
                         'Slider',
                         canLyricCarouselEnter && 'Slider__visible'
