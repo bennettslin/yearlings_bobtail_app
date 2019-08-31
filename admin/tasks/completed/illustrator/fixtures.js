@@ -168,5 +168,10 @@ export default [
         taskName: 'dobro',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'banjo',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

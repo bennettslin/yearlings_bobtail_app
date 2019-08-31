@@ -55,11 +55,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'banjo',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'mandolin',
         workedHours: 0,
         neededHours: 1.5
