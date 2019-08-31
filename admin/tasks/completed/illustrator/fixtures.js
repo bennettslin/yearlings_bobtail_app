@@ -173,5 +173,10 @@ export default [
         taskName: 'banjo',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'basses',
+        workedHours: 4,
+        neededHours: 4
     }
 ]
