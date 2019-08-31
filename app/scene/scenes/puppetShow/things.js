@@ -113,7 +113,8 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED
+                BENNETT__SHARED,
+                SKETCHBOOK__SHARED
             ]
         },
         [PUPPET_CHRISTOPHER_BEGIN]: {
@@ -186,7 +187,8 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED
+                BENNETT__SHARED,
+                SKETCHBOOK__SHARED
             ]
         },
         [PUPPET_MOTHER_MIDDLE]: {
@@ -260,7 +262,8 @@ export const THINGS_PUPPET_SHOW_END = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED
+                BENNETT__SHARED,
+                SKETCHBOOK__SHARED
             ]
         },
         [PUPPET_FATHER_END]: {
