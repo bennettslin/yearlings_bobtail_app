@@ -37,16 +37,18 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__PRESENT]: {
             yIndex: 1,
-            xPosition: 2,
-            zOffset: 5,
-            scaleFactor: 0.7,
+            xPosition: 10.4,
+            zOffset: 7.85,
+            scaleFactor: 0.15,
+            rotate: -10,
             sharedStyle: SNOWGLOBE__SHARED
         },
         [SNOWGLOBE_PRESENT]: {
             yIndex: 1,
-            xPosition: 5,
-            zOffset: 4,
+            xPosition: 8.15,
+            zOffset: 6.25,
             scaleFactor: 0.7,
+            rotate: 15,
             sharedStyle: [
                 SNOWGLOBE__SHARED,
                 BENNETT__SHARED,

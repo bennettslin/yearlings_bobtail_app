@@ -44,16 +44,18 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__FUTURE]: {
             yIndex: 1,
-            xPosition: 2,
-            zOffset: 5,
-            scaleFactor: 0.7,
+            xPosition: 1.15,
+            zOffset: 7.7,
+            scaleFactor: 0.15,
+            rotate: -5,
             sharedStyle: SNOWGLOBE__SHARED
         },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 1,
-            xPosition: 5,
-            zOffset: 4,
-            scaleFactor: 0.7,
+            xPosition: 3,
+            zOffset: 7.7,
+            scaleFactor: 0.5,
+            rotate: 10,
             sharedStyle: [
                 SNOWGLOBE__SHARED,
                 BENNETT__SHARED,
@@ -62,9 +64,10 @@ const ARRANGEMENTS_THINGS = {
         },
         [SNOWGLOBE_FUTURE_REATTA]: {
             yIndex: 1,
-            xPosition: 3,
-            zOffset: 4,
+            xPosition: 2,
+            zOffset: 6.5,
             scaleFactor: 0.7,
+            rotate: -10,
             sharedStyle: [
                 REATTA__SHARED,
                 SNOWGLOBE__SHARED,
