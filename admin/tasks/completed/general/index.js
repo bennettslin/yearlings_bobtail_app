@@ -4876,5 +4876,10 @@ export default [
         taskName: `Modify Taiwan mountains bridged.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Modify some instrument shared styles.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
