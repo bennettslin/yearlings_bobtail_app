@@ -10,7 +10,7 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import {
     CASH_BOX,
-    GUITAR,
+    ELECTRIC_GUITAR,
     DRUMKIT
 } from '../../../constants/scene/things/fixtures'
 import { DOLLAR__SHARED } from '../../shared'
@@ -43,7 +43,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [GUITAR]: {
+        [ELECTRIC_GUITAR]: {
             yIndex: 3,
             arrangement: {
                 xPosition: 1,

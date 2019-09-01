@@ -59,7 +59,7 @@ import {
     LIZ_DOOR
 } from '../../constants/scene/things/doors'
 import {
-    GUITAR,
+    ELECTRIC_GUITAR,
     DRUMKIT,
     BENNETT_COUCH_LAMP,
     BENNETT_RECORD_PLAYER
@@ -195,7 +195,7 @@ export default [
                 [WALL_SPEAKER_FRONT__RIGHT]: true
             },
             [FIXTURE]: {
-                [GUITAR]: true,
+                [ELECTRIC_GUITAR]: true,
                 [DRUMKIT]: true
             }
         },

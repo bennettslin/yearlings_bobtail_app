@@ -90,7 +90,7 @@ import {
     BENNETT_COUCH_LAMP,
     KEYBOARD,
     CASH_BOX,
-    GUITAR,
+    ELECTRIC_GUITAR,
     DRUMKIT,
     DRUMS_STACKED__BASEMENT,
     BASS_CASE_UPRIGHT,
@@ -243,7 +243,7 @@ export default [
             },
             [FIXTURE]: {
                 [CASH_BOX]: true,
-                [GUITAR]: true,
+                [ELECTRIC_GUITAR]: true,
                 [DRUMKIT]: true
             }
         },
