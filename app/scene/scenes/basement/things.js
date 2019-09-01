@@ -8,7 +8,10 @@ import {
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
 import { BUDWEISER__SHARED } from '../../shared'
-import { BASS_CASE__SHARED } from '../../shared/instruments'
+import {
+    BASS_CASE__SHARED,
+    GUITAR_CASE__SHARED
+} from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -19,11 +22,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [GUITAR_CASE_UPRIGHT]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 4
-            }
+            xPosition: 9.5,
+            sharedStyle: GUITAR_CASE__SHARED
         },
         [DRUMS_STACKED__BASEMENT]: {
             yIndex: 3,

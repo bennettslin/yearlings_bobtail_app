@@ -12,7 +12,10 @@ import {
     DRUM_THRONE,
     GUITAR_CASE_OPEN
 } from '../../../constants/scene/things/fixtures'
-import { MICROPHONE__SHARED } from '../../shared/instruments'
+import {
+    MICROPHONE__SHARED,
+    GUITAR_CASE__SHARED
+} from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -52,12 +55,9 @@ const ARRANGEMENTS_THINGS = {
             }
         },
         [GUITAR_CASE_OPEN]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 3,
-                zHeight: 1
-            }
+            yIndex: 4,
+            xPosition: 4.5,
+            sharedStyle: GUITAR_CASE__SHARED
         }
     }
 }

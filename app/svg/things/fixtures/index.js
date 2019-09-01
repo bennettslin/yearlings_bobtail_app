@@ -19,7 +19,7 @@ import cashBox from 'assets/svgs/fixtures/cashBox'
 // import guitar from 'assets/svgs/fixtures/guitar'
 // import drumKit from 'assets/svgs/fixtures/drumKit'
 import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
-// import guitarCaseUpright from 'assets/svgs/fixtures/guitarCaseUpright'
+import guitarCaseUpright from 'assets/svgs/fixtures/guitarCaseUpright'
 import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
 import basementBeerMara from 'assets/svgs/fixtures/basementBeerMara'
 import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
@@ -34,7 +34,7 @@ import evianBottles from 'assets/svgs/fixtures/evianBottles'
 import stageMic from 'assets/svgs/fixtures/stageMic'
 // import kickDrum from 'assets/svgs/fixtures/kickDrum'
 // import drumThrone from 'assets/svgs/fixtures/drumThrone'
-// import guitarCaseOpen from 'assets/svgs/fixtures/guitarCaseOpen'
+import guitarCaseOpen from 'assets/svgs/fixtures/guitarCaseOpen'
 // import drumsStacked from 'assets/svgs/fixtures/drumsStacked'
 // import bennettShoe from 'assets/svgs/fixtures/bennettShoe'
 // import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
@@ -128,7 +128,7 @@ export default {
     [STAGE_MIC__STAGE]: stageMic,
     [DRUMKIT]: false,
     [BASS_CASE_UPRIGHT]: bassCaseUpright,
-    [GUITAR_CASE_UPRIGHT]: false,
+    [GUITAR_CASE_UPRIGHT]: guitarCaseUpright,
     [BASEMENT_BEER_CASE]: basementBeerCase,
     [BASEMENT_BEER_MARA]: basementBeerMara,
     [BASEMENT_BEER_BENNETT]: basementBeerBennett,
@@ -143,7 +143,7 @@ export default {
     [EVIAN_BOTTLES]: evianBottles,
     [KICK_DRUM]: false,
     [DRUM_THRONE]: false,
-    [GUITAR_CASE_OPEN]: false,
+    [GUITAR_CASE_OPEN]: guitarCaseOpen,
     [DRUMS_STACKED__BASEMENT]: false,
     [DRUMS_STACKED__CLUB]: false,
     [BENNETT_SHOE]: false,

@@ -188,5 +188,10 @@ export default [
         taskName: 'basementBeerCase',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'guitar cases',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

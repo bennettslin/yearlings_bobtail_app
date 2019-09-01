@@ -45,11 +45,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'guitar cases',
-        workedHours: 3,
-        neededHours: 3
-    },
-    {
         taskName: 'drumThrone',
         workedHours: 0,
         neededHours: 1.5
