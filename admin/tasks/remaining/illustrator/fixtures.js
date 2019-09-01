@@ -5,11 +5,6 @@ export default [
         workedHours: 0,
         neededHours: 1.5
     },
-    {
-        taskName: 'basementBeerCase',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Cloth.
     {

@@ -34,12 +34,9 @@ const ARRANGEMENTS_THINGS = {
             }
         },
         [BASEMENT_BEER_CASE]: {
-            yIndex: 3,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 4
-            }
+            yIndex: 5,
+            xPosition: 6.5,
+            sharedStyle: BUDWEISER__SHARED
         },
         [BASEMENT_BEER_MARA]: {
             yIndex: 3,

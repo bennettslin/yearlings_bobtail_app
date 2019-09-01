@@ -20,7 +20,7 @@ import cashBox from 'assets/svgs/fixtures/cashBox'
 // import drumKit from 'assets/svgs/fixtures/drumKit'
 import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
 // import guitarCaseUpright from 'assets/svgs/fixtures/guitarCaseUpright'
-// import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
+import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
 import basementBeerMara from 'assets/svgs/fixtures/basementBeerMara'
 import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
 import pushBroom from 'assets/svgs/fixtures/pushBroom'
@@ -129,7 +129,7 @@ export default {
     [DRUMKIT]: false,
     [BASS_CASE_UPRIGHT]: bassCaseUpright,
     [GUITAR_CASE_UPRIGHT]: false,
-    [BASEMENT_BEER_CASE]: false,
+    [BASEMENT_BEER_CASE]: basementBeerCase,
     [BASEMENT_BEER_MARA]: basementBeerMara,
     [BASEMENT_BEER_BENNETT]: basementBeerBennett,
     [PUSH_BROOM__BACKSTAGE]: pushBroom,

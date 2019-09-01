@@ -183,5 +183,10 @@ export default [
         taskName: 'nudeDrawings and sketchbook fixtures',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'basementBeerCase',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
