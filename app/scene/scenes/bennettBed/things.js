@@ -19,6 +19,7 @@ import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 import {
     DOOR__SHARED,
+    SKETCHBOOK__SHARED,
     WINDOW__SHARED
 } from '../../shared'
 
@@ -58,11 +59,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [NUDE_DRAWINGS]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 0.5,
-                zHeight: 0.5
-            }
+            xPosition: 7,
+            sharedStyle: SKETCHBOOK__SHARED
         },
         [VASELINE]: {
             yIndex: 3,

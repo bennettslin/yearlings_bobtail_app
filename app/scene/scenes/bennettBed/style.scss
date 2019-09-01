@@ -1,65 +1,29 @@
 .bennettBed {
-    .postSide {
-        fill: #493b2e;
-    }
-
-    .frame {
-        fill: #87705b;
-    }
-
-    .postFront {
-        fill: #665340;
-    }
+    .postSide { fill: #493b2e; }
+    .frame { fill: #87705b; }
+    .postFront { fill: #665340; }
 }
 
 .bennettPillow {
-    .pillow {
-        fill: #9dc296;
-    }
+    .pillow { fill: #9dc296; }
 }
 
 .vaseline {
-    .rollTop {
-        fill: #d9cbd8;
-    }
+    .rollTop { fill: #d9cbd8; }
+    .rollCentre { fill: #a1927f; }
+    .sheetDark { fill: #e3cce1; }
+    .sheetMedium { fill: #e6cde4; }
+    .sheetLight { fill: #e8d1e6; }
+    .vaselineDark { fill: #d6c797; }
+    .vaselineMedium { fill: #e0d19e; }
+    .vaselineLight { fill: #e6d9b8; }
+    .vaselineLabel { fill: #67bde0; }
+    .capRear { fill: #5777b3; }
+    .capFront { fill: #5270a8; }
+}
 
-    .rollCentre {
-        fill: #a1927f;
-    }
-
-    .sheetDark {
-        fill: #e3cce1;
-    }
-
-    .sheetMedium {
-        fill: #e6cde4;
-    }
-
-    .sheetLight {
-        fill: #e8d1e6;
-    }
-
-    .vaselineDark {
-        fill: #d6c797;
-    }
-
-    .vaselineMedium {
-        fill: #e0d19e;
-    }
-
-    .vaselineLight {
-        fill: #e6d9b8;
-    }
-
-    .vaselineLabel {
-        fill: #67bde0;
-    }
-
-    .capRear {
-        fill: #5777b3;
-    }
-
-    .capFront {
-        fill: #5270a8;
-    }
+.nudeDrawings {
+    .skinIndian { fill: #bfbfbf; }
+    .lingerie { fill: #8c8c8c; }
+    .hairBlack { fill: #363636; }
 }

@@ -6,11 +6,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'nudeDrawings',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'basementBeerCase',
         workedHours: 0,
         neededHours: 1
@@ -56,8 +51,8 @@ export default [
     },
     {
         taskName: 'guitar cases',
-        workedHours: 0,
-        neededHours: 2
+        workedHours: 3,
+        neededHours: 3
     },
     {
         taskName: 'drumThrone',
