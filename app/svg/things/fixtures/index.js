@@ -16,8 +16,8 @@ import bennettRecordPlayer from 'assets/svgs/fixtures/bennettRecordPlayer'
 import bennettCouchLamp from 'assets/svgs/fixtures/bennettCouchLamp'
 import keyboard from 'assets/svgs/fixtures/keyboard'
 import cashBox from 'assets/svgs/fixtures/cashBox'
-// import guitar from 'assets/svgs/fixtures/guitar'
-// import drumKit from 'assets/svgs/fixtures/drumKit'
+// import electricGuitar from 'assets/svgs/fixtures/electricGuitar'
+import drumKit from 'assets/svgs/fixtures/drumKit'
 import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
 import guitarCaseUpright from 'assets/svgs/fixtures/guitarCaseUpright'
 import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
@@ -32,10 +32,10 @@ import lizPhone from 'assets/svgs/fixtures/lizPhone'
 import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
 import evianBottles from 'assets/svgs/fixtures/evianBottles'
 import stageMic from 'assets/svgs/fixtures/stageMic'
-// import kickDrum from 'assets/svgs/fixtures/kickDrum'
-// import drumThrone from 'assets/svgs/fixtures/drumThrone'
+import kickDrum from 'assets/svgs/fixtures/kickDrum'
+import drumThrone from 'assets/svgs/fixtures/drumThrone'
 import guitarCaseOpen from 'assets/svgs/fixtures/guitarCaseOpen'
-// import drumsStacked from 'assets/svgs/fixtures/drumsStacked'
+import drumsStacked from 'assets/svgs/fixtures/drumsStacked'
 // import bennettShoe from 'assets/svgs/fixtures/bennettShoe'
 // import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
 import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
@@ -126,7 +126,7 @@ export default {
     [ELECTRIC_GUITAR]: false,
     [STAGE_MIC__CROWD]: stageMic,
     [STAGE_MIC__STAGE]: stageMic,
-    [DRUMKIT]: false,
+    [DRUMKIT]: drumKit,
     [BASS_CASE_UPRIGHT]: bassCaseUpright,
     [GUITAR_CASE_UPRIGHT]: guitarCaseUpright,
     [BASEMENT_BEER_CASE]: basementBeerCase,
@@ -141,11 +141,11 @@ export default {
     [LIZ_PHONE]: lizPhone,
     [LIZ_PHONE_REFLECTION]: lizPhoneReflection,
     [EVIAN_BOTTLES]: evianBottles,
-    [KICK_DRUM]: false,
-    [DRUM_THRONE]: false,
+    [KICK_DRUM]: kickDrum,
+    [DRUM_THRONE]: drumThrone,
     [GUITAR_CASE_OPEN]: guitarCaseOpen,
-    [DRUMS_STACKED__BASEMENT]: false,
-    [DRUMS_STACKED__CLUB]: false,
+    [DRUMS_STACKED__BASEMENT]: drumsStacked,
+    [DRUMS_STACKED__CLUB]: drumsStacked,
     [BENNETT_SHOE]: false,
     [BENNETT_SHOE_REFLECTION]: false,
     [TCHOTCHKES]: tchotchkes,

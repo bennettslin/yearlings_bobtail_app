@@ -180,7 +180,7 @@ export default [
         neededHours: 4
     },
     {
-        taskName: 'lingerieDrawing and sketchbook fixtures',
+        taskName: 'lingerieDrawing and sketchbook actor fixtures.',
         workedHours: 3,
         neededHours: 3
     },
@@ -193,5 +193,10 @@ export default [
         taskName: 'guitar cases',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'drumKit, drumsStacked, kickDrum, drumThrone, and drum actor fixtures.',
+        workedHours: 16,
+        neededHours: 16
     }
 ]

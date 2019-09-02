@@ -14,6 +14,7 @@ import {
     DRUMKIT
 } from '../../../constants/scene/things/fixtures'
 import { DOLLAR__SHARED } from '../../shared'
+import { DRUMS__SHARED } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -53,11 +54,9 @@ const ARRANGEMENTS_THINGS = {
         },
         [DRUMKIT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 4,
-                zHeight: 3
-            }
+            xPosition: 5.5,
+            zOffset: -0.25,
+            sharedStyle: DRUMS__SHARED
         }
     }
 }

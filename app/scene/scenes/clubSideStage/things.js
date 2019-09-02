@@ -13,8 +13,9 @@ import {
     GUITAR_CASE_OPEN
 } from '../../../constants/scene/things/fixtures'
 import {
-    MICROPHONE__SHARED,
-    GUITAR_CASE__SHARED
+    DRUMS__SHARED,
+    GUITAR_CASE__SHARED,
+    MICROPHONE__SHARED
 } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
@@ -39,24 +40,20 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: MICROPHONE__SHARED
         },
         [KICK_DRUM]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 1.5,
-                zHeight: 1.5
-            }
+            yIndex: 5,
+            xPosition: 5,
+            zOffset: -0.1,
+            sharedStyle: DRUMS__SHARED
         },
         [DRUM_THRONE]: {
-            yIndex: 1,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 1.5,
-                zHeight: 1.5
-            }
+            yIndex: 5,
+            xPosition: 8,
+            zOffset: -0.1,
+            sharedStyle: DRUMS__SHARED
         },
         [GUITAR_CASE_OPEN]: {
             yIndex: 4,
-            xPosition: 4.5,
+            xPosition: 2.5,
             sharedStyle: GUITAR_CASE__SHARED
         }
     }

@@ -59,11 +59,6 @@ export default [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: 'drumKit',
-        workedHours: 0,
-        neededHours: 4
-    },
 
     {
         taskName: 'Hi-hat stand',
@@ -201,7 +196,7 @@ export default [
     {
         taskName: 'Book or magazine * 7 (Bennett * 2, Jewish boy, Catherine * 2, preteen Bennett * 2)',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3.5
     },
     {
         taskName: 'Tray and lancet pen * 2',
