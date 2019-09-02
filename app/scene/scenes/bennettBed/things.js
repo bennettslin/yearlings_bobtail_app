@@ -12,7 +12,7 @@ import {
     BENNETT_DOOR_INSIDE_OPEN
 } from '../../../constants/scene/things/doors'
 import {
-    NUDE_DRAWINGS,
+    LINGERIE_DRAWING,
     VASELINE
 } from '../../../constants/scene/things/fixtures'
 import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
@@ -57,7 +57,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
-        [NUDE_DRAWINGS]: {
+        [LINGERIE_DRAWING]: {
             yIndex: 3,
             xPosition: 7,
             sharedStyle: SKETCHBOOK__SHARED

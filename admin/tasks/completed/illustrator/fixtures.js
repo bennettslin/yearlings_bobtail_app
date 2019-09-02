@@ -180,7 +180,7 @@ export default [
         neededHours: 4
     },
     {
-        taskName: 'nudeDrawings and sketchbook fixtures',
+        taskName: 'lingerieDrawing and sketchbook fixtures',
         workedHours: 3,
         neededHours: 3
     },

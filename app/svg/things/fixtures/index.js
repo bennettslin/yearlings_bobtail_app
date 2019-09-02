@@ -26,7 +26,7 @@ import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
 import pushBroom from 'assets/svgs/fixtures/pushBroom'
 import stepladder from 'assets/svgs/fixtures/stepladder'
 import mannequin from 'assets/svgs/fixtures/mannequin'
-import nudeDrawings from 'assets/svgs/fixtures/nudeDrawings'
+import lingerieDrawing from 'assets/svgs/fixtures/lingerieDrawing'
 import vaseline from 'assets/svgs/fixtures/vaseline'
 import lizPhone from 'assets/svgs/fixtures/lizPhone'
 import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
@@ -78,7 +78,7 @@ import {
     PUSH_BROOM__TUNNEL,
     STEPLADDER,
     MANNEQUIN,
-    NUDE_DRAWINGS,
+    LINGERIE_DRAWING,
     VASELINE,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
@@ -136,7 +136,7 @@ export default {
     [PUSH_BROOM__TUNNEL]: pushBroom,
     [STEPLADDER]: stepladder,
     [MANNEQUIN]: mannequin,
-    [NUDE_DRAWINGS]: nudeDrawings,
+    [LINGERIE_DRAWING]: lingerieDrawing,
     [VASELINE]: vaseline,
     [LIZ_PHONE]: lizPhone,
     [LIZ_PHONE_REFLECTION]: lizPhoneReflection,

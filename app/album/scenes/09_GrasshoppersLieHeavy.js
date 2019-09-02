@@ -90,7 +90,7 @@ import {
     WAITING_ROOM_DOOR_OPEN
 } from '../../constants/scene/things/doors'
 import {
-    NUDE_DRAWINGS,
+    LINGERIE_DRAWING,
     VASELINE,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
@@ -311,7 +311,7 @@ export default [
                 [BENNETT_DOOR_INSIDE]: true
             },
             [FIXTURE]: {
-                [NUDE_DRAWINGS]: true,
+                [LINGERIE_DRAWING]: true,
                 [VASELINE]: true
             },
             [FURNITURE]: {
@@ -350,7 +350,7 @@ export default [
                 [BENNETT_DOOR_INSIDE_OPEN]: true
             },
             [FIXTURE]: {
-                [NUDE_DRAWINGS]: true,
+                [LINGERIE_DRAWING]: true,
                 [VASELINE]: true
             },
             [FURNITURE]: {
