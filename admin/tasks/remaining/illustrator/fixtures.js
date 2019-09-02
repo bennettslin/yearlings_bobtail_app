@@ -44,27 +44,6 @@ export default [
         workedHours: 0,
         neededHours: 1.5
     },
-    {
-        taskName: 'drumThrone',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'kickDrum',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: 'drumsStacked',
-        workedHours: 0,
-        neededHours: 3
-    },
-
-    {
-        taskName: 'Hi-hat stand',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Actor props.
 
@@ -129,7 +108,7 @@ export default [
     {
         taskName: 'Backpacks * 11 (Anita * 2, Catherine, Esther * 2, Liz * 2, Wade, young Bennett * 3)',
         workedHours: 0,
-        neededHours: 5
+        neededHours: 6
     },
     {
         taskName: 'Bennett messenger bag * 6',
