@@ -208,5 +208,10 @@ export default [
         taskName: 'Andrew fruit.',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Andrew guitar',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

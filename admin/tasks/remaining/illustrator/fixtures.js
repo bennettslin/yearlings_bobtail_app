@@ -25,11 +25,6 @@ export default [
 
     // Instruments.
     {
-        taskName: 'Andrew guitar',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'violin',
         workedHours: 0,
         neededHours: 2.5
