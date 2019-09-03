@@ -1,51 +1,17 @@
 .principalDoor {
-    .window {
-        fill: rgba(255, 255, 255, 0.1);
-    }
+    .window { fill: rgba(255, 255, 255, 0.1); }
 }
 
 .corkboard {
-    .cork {
-        fill: #ccc;
-    }
-
-    .frame {
-        fill: #963;
-    }
-
-    .paperBottomRightBelow {
-        fill: #c99;
-    }
-
-    .paperBottomRightAbove {
-        fill: #9c9;
-    }
-
-    .paperBottomCentre {
-        fill: #fc9;
-    }
-
-    .paperBottomLeft {
-        fill: #c9c;
-    }
-
-    .paperTopRight {
-        fill: #9cf;
-    }
-
-    .paperTopCentreBelow {
-        fill: #9cc;
-    }
-
-    .paperTopCentreAbove {
-        fill: #ff9;
-    }
-
-    .paperTopLeft {
-        fill: #9f9;
-    }
-
-    .thumbtack {
-        fill: #999;
-    }
+    .cork { fill: #ccc; }
+    .frame { fill: #963; }
+    .paperBottomRightBelow { fill: #c99; }
+    .paperBottomRightAbove { fill: #9c9; }
+    .paperBottomCentre { fill: #fc9; }
+    .paperBottomLeft { fill: #c9c; }
+    .paperTopRight { fill: #9cf; }
+    .paperTopCentreBelow { fill: #9cc; }
+    .paperTopCentreAbove { fill: #ff9; }
+    .paperTopLeft { fill: #9f9; }
+    .thumbtack { fill: #999; }
 }

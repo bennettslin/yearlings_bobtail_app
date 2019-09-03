@@ -1,161 +1,52 @@
 .sandbags {
-    .ropeBack {
-        fill: #963;
-    }
-
-    .ropeBackLine {
-        stroke: #852;
-    }
-
-    .spindle {
-        fill: #993;
-    }
-
-    .post {
-        fill: #630;
-    }
-
-    .postLine {
-        stroke: #520;
-    }
-
-    .ropeFront {
-        fill: #c96;
-    }
-
-    .ropeFrontLine {
-        stroke: #b85;
-    }
-
-    .sandbagFront {
-        fill: #cc9;
-    }
-
-    .sandbagBack {
-        fill: #996;
-    }
-
-    .sandbagLine {
-        stroke: #885;
-    }
-
-    .string {
-        fill: #ffc;
-    }
-
-    .stringLine {
-        stroke: #eeb;
-    }
+    .ropeBack { fill: #963; }
+    .ropeBackLine { stroke: #852; }
+    .spindle { fill: #993; }
+    .post { fill: #630; }
+    .postLine { stroke: #520; }
+    .ropeFront { fill: #c96; }
+    .ropeFrontLine { stroke: #b85; }
+    .sandbagFront { fill: #cc9; }
+    .sandbagBack { fill: #996; }
+    .sandbagLine { stroke: #885; }
+    .string { fill: #ffc; }
+    .stringLine { stroke: #eeb; }
 }
 
 .stageLights {
-    .shutterBottom {
-        fill: #036;
-    }
-
-    .shutterSurface {
-        fill: #369;
-    }
-
-    .hangerBack {
-        fill: #666;
-    }
-
-    .cableBack {
-        fill: #903;
-    }
-
-    .housing {
-        fill: #63c;
-    }
-
-    .mountBottom {
-        fill: #630;
-    }
-
-    .mountSide {
-        fill: #963;
-    }
-
-    .mountTop {
-        fill: #fc9;
-    }
-
-    .mountFront {
-        fill: #c96;
-    }
-
-    .bar {
-        fill: #996;
-    }
-
-    .shutterEdge {
-        fill: #336;
-    }
-
-    .cableFront {
-        fill: #c03;
-    }
-
-    .hangerFront {
-        fill: #999;
-    }
-
-    .hangerScrew {
-        fill: #cc9;
-    }
+    .shutterBottom { fill: #036; }
+    .shutterSurface { fill: #369; }
+    .hangerBack { fill: #666; }
+    .cableBack { fill: #903; }
+    .housing { fill: #63c; }
+    .mountBottom { fill: #630; }
+    .mountSide { fill: #963; }
+    .mountTop { fill: #fc9; }
+    .mountFront { fill: #c96; }
+    .bar { fill: #996; }
+    .shutterEdge { fill: #336; }
+    .cableFront { fill: #c03; }
+    .hangerFront { fill: #999; }
+    .hangerScrew { fill: #cc9; }
 }
 
 .stepladder {
-    .rail {
-        fill: #8f8267;
-    }
-
-    .rung {
-        fill: #ab9b7b;
-    }
+    .rail { fill: #8f8267; }
+    .rung { fill: #ab9b7b; }
 }
 
 .mannequin {
-    .pole {
-        fill: #8f9ea8;
-    }
-
-    .woodSide {
-        fill: #a8936a;
-    }
-
-    .woodBottom {
-        fill: #96835f;
-    }
-
-    .woodTopSide {
-        fill: #b39c70;
-    }
-
-    .woodTop {
-        fill: #bfa778;
-    }
-
-    .body {
-        fill: #c3c4ba;
-    }
+    .pole { fill: #8f9ea8; }
+    .woodSide { fill: #a8936a; }
+    .woodBottom { fill: #96835f; }
+    .woodTopSide { fill: #b39c70; }
+    .woodTop { fill: #bfa778; }
+    .body { fill: #c3c4ba; }
 }
 
 .pushBroom {
-    .pole {
-        fill: #bfb390;
-    }
-
-    .bristle {
-        fill: #8a8a7a;
-    }
-
-    .rubber {
-        fill: #8d7791;
-    }
-
-    .base {
-        fill: #7a705c;
-    }
+    .pole { fill: #bfb390; }
+    .bristle { fill: #8a8a7a; }
+    .rubber { fill: #8d7791; }
+    .base { fill: #7a705c; }
 }

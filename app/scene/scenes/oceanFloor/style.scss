@@ -1,102 +1,35 @@
 .bennettMat {
-    .pillow {
-        fill: #d4145a;
-    }
-
-    .welt {
-        fill: #d9e021;
-    }
+    .pillow { fill: #d4145a; }
+    .welt { fill: #d9e021; }
 }
 
 .oceanFloorFar {
-    .volcanoBack {
-        fill: #300;
-    }
-
-    .volcanoMiddle {
-        fill: #330;
-    }
-
-    .volcanoFront {
-        fill: #633;
-    }
+    .volcanoBack { fill: #300; }
+    .volcanoMiddle { fill: #330; }
+    .volcanoFront { fill: #633; }
 }
 
 .oceanCaveExterior {
-    .caveRight {
-        fill: #963;
-    }
-
-    .caveLeft {
-        fill: #966;
-    }
+    .caveRight { fill: #963; }
+    .caveLeft { fill: #966; }
 }
 
 .oceanCaveInterior {
-    .rockShadow {
-        fill: #666;
-    }
-    .seaweed {
-        fill: #393;
-    }
-
-    .kelpSide {
-        fill: #060;
-    }
-
-    .kelpFront {
-        fill: #363;
-    }
-
-    .tubeWormPlumeCentre {
-        fill: #966;
-    }
-
-    .tubeWormCentre {
-        fill: #699;
-    }
-
-    .tubeWormPlumeSide {
-        fill: #c63;
-    }
-
-    .tubeWormSide {
-        fill: #366;
-    }
-
-    .urchin {
-        fill: #639;
-    }
-
-    .coralBrain {
-        fill: #930;
-    }
-
-    .coralBrainCavity {
-        fill: #300;
-    }
-
-    .frondBack {
-        fill: #069;
-    }
-
-    .frondFront {
-        fill: #399;
-    }
-
-    .coralTube {
-        fill: #669;
-    }
-
-    .coralTubeCavity {
-        fill: #336;
-    }
-
-    .rockBack {
-        fill: #963;
-    }
-
-    .rockFront {
-        fill: #663;
-    }
+    .rockShadow { fill: #666; }
+    .seaweed { fill: #393; }
+    .kelpSide { fill: #060; }
+    .kelpFront { fill: #363; }
+    .tubeWormPlumeCentre { fill: #966; }
+    .tubeWormCentre { fill: #699; }
+    .tubeWormPlumeSide { fill: #c63; }
+    .tubeWormSide { fill: #366; }
+    .urchin { fill: #639; }
+    .coralBrain { fill: #930; }
+    .coralBrainCavity { fill: #300; }
+    .frondBack { fill: #069; }
+    .frondFront { fill: #399; }
+    .coralTube { fill: #669; }
+    .coralTubeCavity { fill: #336; }
+    .rockBack { fill: #963; }
+    .rockFront { fill: #663; }
 }

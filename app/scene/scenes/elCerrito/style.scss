@@ -1,163 +1,55 @@
 .goldenGateBackdrop {
-    .ocean {
-        fill: #4b92e0;
-    }
-
-    .mountainFar {
-        fill: #644872;
-    }
-
-    .pier {
-        fill: #5a5b5e;
-    }
-
-    .suspenders {
-        fill: rgba(250, 200, 200, 0.5);
-    }
-
-    .tower {
-        fill: #a06c55;
-    }
-
-    .cable {
-        fill: #aa6b50;
-    }
-
-    .deck {
-        fill: #aa6b50;
-    }
-
-    .connector {
-        fill: #a3624b;
-    }
-
-    .mountainNear {
-        fill: #7d6684;
-    }
-
-    .city {
-        fill: #484e66;
-    }
-
-    .island {
-        fill: #8e6c96;
-    }
+    .ocean { fill: #4b92e0; }
+    .mountainFar { fill: #644872; }
+    .pier { fill: #5a5b5e; }
+    .suspenders { fill: rgba(250, 200, 200, 0.5); }
+    .tower { fill: #a06c55; }
+    .cable { fill: #aa6b50; }
+    .deck { fill: #aa6b50; }
+    .connector { fill: #a3624b; }
+    .mountainNear { fill: #7d6684; }
+    .city { fill: #484e66; }
+    .island { fill: #8e6c96; }
 }
 
 .elCerritoTree {
-    .trunk {
-        fill: #630;
-    }
-
-    .leaves {
-        fill: #393;
-    }
+    .trunk { fill: #630; }
+    .leaves { fill: #393; }
 }
 
 .elCerritoFar {
-    .foliageFar {
-        fill: #6e8263;
-    }
-
-    .antennaWhite {
-        fill: #eaeaea;
-    }
-
-    .antennaRed {
-        fill: #c6674a;
-    }
-
-    .buildingLeft {
-        fill: #b5af8f;
-    }
-
-    .roof {
-        fill: #e9eae8;
-    }
-
-    .buildingRight {
-        fill: #89ccbf;
-    }
-
-    .foliageMiddle {
-        fill: #809374;
-    }
-
-    .buildingNear {
-        fill: #7d95a0;
-    }
-
-    .foliageNear {
-        fill: #8bad77;
-    }
+    .foliageFar { fill: #6e8263; }
+    .antennaWhite { fill: #eaeaea; }
+    .antennaRed { fill: #c6674a; }
+    .buildingLeft { fill: #b5af8f; }
+    .roof { fill: #e9eae8; }
+    .buildingRight { fill: #89ccbf; }
+    .foliageMiddle { fill: #809374; }
+    .buildingNear { fill: #7d95a0; }
+    .foliageNear { fill: #8bad77; }
 }
 
 .elCerritoNear {
-    .foliage {
-        fill: #496d4f;
-    }
-
-    .bushBack {
-        fill: #608773;
-    }
-
-    .houseLeftSide {
-        fill: #828e99;
-    }
-
-    .houseLeftFront {
-        fill: #71787c;
-    }
-
-    .houseCentre {
-        fill: #aaaa8c;
-    }
-
-    .houseRightFront {
-        fill: #7e737f;
-    }
-
-    .houseRightSide {
-        fill: #988599;
-    }
-
-    .roofFront {
-        fill: #917066;
-    }
-
-    .roofTop {
-        fill: #b28777;
-    }
-
-    .bushFront {
-        fill: #79a890;
-    }
-
-    .door {
-        fill: #9b9180;
-    }
-
-    .window {
-        fill: #769993;
-    }
+    .foliage { fill: #496d4f; }
+    .bushBack { fill: #608773; }
+    .houseLeftSide { fill: #828e99; }
+    .houseLeftFront { fill: #71787c; }
+    .houseCentre { fill: #aaaa8c; }
+    .houseRightFront { fill: #7e737f; }
+    .houseRightSide { fill: #988599; }
+    .roofFront { fill: #917066; }
+    .roofTop { fill: #b28777; }
+    .bushFront { fill: #79a890; }
+    .door { fill: #9b9180; }
+    .window { fill: #769993; }
 }
 
 .reattaSeat {
-    .bar {
-        fill: #a9a0b3;
-    }
-
-    .cushion {
-        fill: #caccbe;
-    }
+    .bar { fill: #a9a0b3; }
+    .cushion { fill: #caccbe; }
 }
 
 .reattaSeatDown {
-    .bar {
-        fill: #a9a0b3;
-    }
-
-    .cushion {
-        fill: #caccbe;
-    }
+    .bar { fill: #a9a0b3; }
+    .cushion { fill: #caccbe; }
 }

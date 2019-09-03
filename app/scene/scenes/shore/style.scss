@@ -1,190 +1,60 @@
 .shoreBuoyBackdrop {
-    .shore {
-        fill: #b7b3a1;
-    }
-
-    .mountain {
-        fill: #936492;
-    }
-
-    .ocean {
-        fill: #71d8ce;
-    }
+    .shore { fill: #b7b3a1; }
+    .mountain { fill: #936492; }
+    .ocean { fill: #71d8ce; }
 }
 
 .bennettOdinBuoy {
-    .poleBack {
-        fill: #009245;
-    }
-
-    .poleFront {
-        fill: #39b54a;
-    }
-
-    .buoyInner {
-        fill: #fcee21;
-    }
-
-    .buoyOuter {
-        fill: #9e005d;
-    }
-
-    .water {
-        fill: #0071bc;
-    }
+    .poleBack { fill: #009245; }
+    .poleFront { fill: #39b54a; }
+    .buoyInner { fill: #fcee21; }
+    .buoyOuter { fill: #9e005d; }
+    .water { fill: #0071bc; }
 
 }
 
 .yellowTapedGrill {
-    .tapeBottom {
-        fill: #cc3;
-    }
-
-    .pole {
-        fill: #666;
-    }
-
-    .tapeTop {
-        fill: #990;
-    }
-
-    .grillEdge {
-        fill: #cc9;
-    }
-
-    .grillOuterSide {
-        fill: #996;
-    }
-
-    .grillInnerSide {
-        fill: #663;
-    }
-
-    .grillBack {
-        fill: #330;
-    }
-
-    .coal {
-        fill: #333;
-    }
-
-    .handle {
-        fill: #999;
-    }
-
-    .handleLine {
-        stroke: #666;
-    }
-
-    .rack {
-        fill: #ccc;
-    }
-
-    .rackLine {
-        stroke: #bbb;
-    }
+    .tapeBottom { fill: #cc3; }
+    .pole { fill: #666; }
+    .tapeTop { fill: #990; }
+    .grillEdge { fill: #cc9; }
+    .grillOuterSide { fill: #996; }
+    .grillInnerSide { fill: #663; }
+    .grillBack { fill: #330; }
+    .coal { fill: #333; }
+    .handle { fill: #999; }
+    .handleLine { stroke: #666; }
+    .rack { fill: #ccc; }
+    .rackLine { stroke: #bbb; }
 }
 
 .rollerCoaster {
-    .platformBack {
-        fill: rgba(150, 100, 50, 0.5);
-    }
-
-    .trackBack {
-        fill: #666;
-    }
-
-    .platformFront {
-        fill: rgba(200, 150, 100, 0.5);
-    }
-
-    .trackFront {
-        fill: #999;
-    }
-
-    .flag {
-        fill: #f6c;
-    }
+    .platformBack { fill: rgba(150, 100, 50, 0.5); }
+    .trackBack { fill: #666; }
+    .platformFront { fill: rgba(200, 150, 100, 0.5); }
+    .trackFront { fill: #999; }
+    .flag { fill: #f6c; }
 }
 
 .ferrisWheel {
-    .tower {
-        fill: #666;
-    }
-
-    .towerLeftTopBottom {
-        fill: #963;
-    }
-
-    .towerLeftFront {
-        fill: #c96;
-    }
-
-    .tentTopLight {
-        fill: #ccc;
-    }
-
-    .spokes {
-        fill: rgba(150, 100, 50, 0.5);
-    }
-
-    .car {
-        fill: #393;
-    }
-
-    .wheel {
-        fill: #696;
-    }
-
-    .support {
-        fill: #0071bc;
-    }
-
-    .base {
-        fill: #29abe2;
-    }
-
-    .hub {
-        fill: #00a99d;
-    }
-
-    .tentRightWall {
-        fill: #939;
-    }
-
-    .tentWallLight {
-        fill: #996;
-    }
-
-    .tentLeftWall {
-        fill: #36c;
-    }
-
-    .towerRightTop {
-        fill: #39c;
-    }
-
-    .tentRightTop {
-        fill: #c66;
-    }
-
-    .tentLeftTop {
-        fill: #96c;
-    }
-
-    .towerRightFront {
-        fill: #069;
-    }
-
-    .tentRightFront {
-        fill: #933;
-    }
-
-    .tentLeftFront {
-        fill: #93c;
-    }
-
-    .tentFrontLight {
-        fill: #999;
-    }
+    .tower { fill: #666; }
+    .towerLeftTopBottom { fill: #963; }
+    .towerLeftFront { fill: #c96; }
+    .tentTopLight { fill: #ccc; }
+    .spokes { fill: rgba(150, 100, 50, 0.5); }
+    .car { fill: #393; }
+    .wheel { fill: #696; }
+    .support { fill: #0071bc; }
+    .base { fill: #29abe2; }
+    .hub { fill: #00a99d; }
+    .tentRightWall { fill: #939; }
+    .tentWallLight { fill: #996; }
+    .tentLeftWall { fill: #36c; }
+    .towerRightTop { fill: #39c; }
+    .tentRightTop { fill: #c66; }
+    .tentLeftTop { fill: #96c; }
+    .towerRightFront { fill: #069; }
+    .tentRightFront { fill: #933; }
+    .tentLeftFront { fill: #93c; }
+    .tentFrontLight { fill: #999; }
 }

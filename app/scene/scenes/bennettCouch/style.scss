@@ -1,347 +1,111 @@
 .bennettCouchLamp {
-    .baseSide {
-        fill: #82817b;
-    }
-
-    .baseTop {
-        fill: #a6a59d;
-    }
-
-    .neck {
-        fill: #919089;
-    }
-
-    .lampshade {
-        fill: #cccfbe;
-    }
+    .baseSide { fill: #82817b; }
+    .baseTop { fill: #a6a59d; }
+    .neck { fill: #919089; }
+    .lampshade { fill: #cccfbe; }
 }
 
 .policeAlbum {
-    .frame {
-        fill: #231717;
-    }
-
-    .display {
-        fill: #c94343;
-    }
+    .frame { fill: #231717; }
+    .display { fill: #c94343; }
 }
 
 .progressChartLate {
-    .sheetBottomLeft {
-        fill: #bbf;
-    }
-
-    .sheetBottomRight {
-        fill: #fbf;
-    }
+    .sheetBottomLeft { fill: #bbf; }
+    .sheetBottomRight { fill: #fbf; }
 }
 
 .leonardCohenPoster {
-    .frame {
-        fill: #38494c;
-    }
-
-    .pants {
-        fill: #3e3344;
-    }
-
-    .hat {
-        fill: #889399;
-    }
-
-    .band {
-        fill: #9b7b99;
-    }
-
-    .shirt {
-        fill: #9bc6c9;
-    }
-
-    .collar {
-        fill: #8ab3ba;
-    }
-
-    .suitInner {
-        fill: #4e5f68;
-    }
-
-    .cuff {
-        fill: #76969b;
-    }
-
-    .suit {
-        fill: #687e8c;
-    }
-
-    .lapel {
-        fill: #374344;
-    }
-
-    .endPin {
-        fill: #bcc9c9;
-    }
-
-    .guitarTrim {
-        fill: #ccc5d3;
-    }
-
-    .guitarBody {
-        fill: #474149;
-    }
-
-    .fretboard {
-        fill: #afbc99;
-    }
-
-    .bridge {
-        fill: #726f5b;
-    }
+    .frame { fill: #38494c; }
+    .pants { fill: #3e3344; }
+    .hat { fill: #889399; }
+    .band { fill: #9b7b99; }
+    .shirt { fill: #9bc6c9; }
+    .collar { fill: #8ab3ba; }
+    .suitInner { fill: #4e5f68; }
+    .cuff { fill: #76969b; }
+    .suit { fill: #687e8c; }
+    .lapel { fill: #374344; }
+    .endPin { fill: #bcc9c9; }
+    .guitarTrim { fill: #ccc5d3; }
+    .guitarBody { fill: #474149; }
+    .fretboard { fill: #afbc99; }
+    .bridge { fill: #726f5b; }
 }
 
 .nirvanaPoster {
-    .frame {
-        fill: #607e87;
-    }
-
-    .pants {
-        fill: #3b3e44;
-    }
-
-    .shirt {
-        fill: #82a8a1;
-    }
-
-    .suitInner {
-        fill: #7c6b87;
-    }
-
-    .strap {
-        fill: #6d5563;
-    }
-
-    .suit {
-        fill: #a58bbc;
-    }
-
-    .button {
-        fill: #bdc695;
-    }
-
-    .lapel {
-        fill: #7e6d89;
-    }
-
-    .endPin {
-        fill: #98a8a7;
-    }
-
-    .guitar {
-        fill: #71abbf;
-    }
-
-    .bridgeBottom {
-        fill: #748988;
-    }
-
-    .bridgeTop {
-        fill: #9db2b1;
-    }
-
-    .pickguard {
-        fill: #b9eae9;
-    }
-
-    .knob {
-        fill: #98b7b5;
-    }
-
-    .pickup {
-        fill: #dae5e5;
-    }
-
-    .fretboard {
-        fill: #a89a78;
-    }
-
-    .head {
-        fill: #ddd0b6;
-    }
-
-    .nut {
-        fill: #c0c1b2;
-    }
+    .frame { fill: #607e87; }
+    .pants { fill: #3b3e44; }
+    .shirt { fill: #82a8a1; }
+    .suitInner { fill: #7c6b87; }
+    .strap { fill: #6d5563; }
+    .suit { fill: #a58bbc; }
+    .button { fill: #bdc695; }
+    .lapel { fill: #7e6d89; }
+    .endPin { fill: #98a8a7; }
+    .guitar { fill: #71abbf; }
+    .bridgeBottom { fill: #748988; }
+    .bridgeTop { fill: #9db2b1; }
+    .pickguard { fill: #b9eae9; }
+    .knob { fill: #98b7b5; }
+    .pickup { fill: #dae5e5; }
+    .fretboard { fill: #a89a78; }
+    .head { fill: #ddd0b6; }
+    .nut { fill: #c0c1b2; }
 }
 
 .televisionAlbum {
-    .background {
-        fill: #4586ad;
-    }
-
-    .tomShirt {
-        fill: #423939;
-    }
-
-    .billyPants {
-        fill: #423939;
-    }
-
-    .billyShirt {
-        fill: #698e6a;
-    }
-
-    .fredPants {
-        fill: #3f3434;
-    }
-
-    .fredShirt {
-        fill: #6d5e5e;
-    }
-
-    .fredSuit {
-        fill: #444040;
-    }
-
-    .richardPants {
-        fill: #422222;
-    }
-
-    .richardShirt {
-        fill: #914646;
-    }
-
-    .tomPants {
-        fill: #2d2020;
-    }
-
-    .tomVest {
-        fill: #8e8282;
-    }
-
-    .frame {
-        fill: #231717;
-    }
+    .background { fill: #4586ad; }
+    .tomShirt { fill: #423939; }
+    .billyPants { fill: #423939; }
+    .billyShirt { fill: #698e6a; }
+    .fredPants { fill: #3f3434; }
+    .fredShirt { fill: #6d5e5e; }
+    .fredSuit { fill: #444040; }
+    .richardPants { fill: #422222; }
+    .richardShirt { fill: #914646; }
+    .tomPants { fill: #2d2020; }
+    .tomVest { fill: #8e8282; }
+    .frame { fill: #231717; }
 }
 
 .wideCouch {
-    .cushion {
-        fill: #665a72;
-    }
+    .cushion { fill: #665a72; }
 }
 
 .wideArmrest {
-    .cushion {
-        fill: #71607c;
-    }
+    .cushion { fill: #71607c; }
 }
 
 .bennettRecordPlayer {
-    .baseBottom {
-        fill: #a67451;
-    }
-
-    .baseFront {
-        fill: #966949;
-    }
-
-    .baseTop {
-        fill: #b57f58;
-    }
-
-    .coverFront {
-        fill: rgba(175, 150, 125, 0.5);
-    }
-
-    .coverSide {
-        fill: rgba(150, 125, 100, 0.5);
-    }
-
-    .coverRear {
-        fill: rgba(125, 100, 75, 0.5);
-    }
-
-    .silverFront {
-        fill: #839e9d;
-    }
-
-    .silverTop {
-        fill: #94b3b1;
-    }
-
-    .plasticSide {
-        fill: #5d6b65;
-    }
-
-    .plasticFront {
-        fill: #525e59;
-    }
-
-    .plasticTop {
-        fill: #687871;
-    }
-
-    .record {
-        fill: #4a5450;
-    }
-
-    .label {
-        fill: #acb37b;
-    }
-
-    .bar {
-        fill: #8f9c9b;
-    }
+    .baseBottom { fill: #a67451; }
+    .baseFront { fill: #966949; }
+    .baseTop { fill: #b57f58; }
+    .coverFront { fill: rgba(175, 150, 125, 0.5); }
+    .coverSide { fill: rgba(150, 125, 100, 0.5); }
+    .coverRear { fill: rgba(125, 100, 75, 0.5); }
+    .silverFront { fill: #839e9d; }
+    .silverTop { fill: #94b3b1; }
+    .plasticSide { fill: #5d6b65; }
+    .plasticFront { fill: #525e59; }
+    .plasticTop { fill: #687871; }
+    .record { fill: #4a5450; }
+    .label { fill: #acb37b; }
+    .bar { fill: #8f9c9b; }
 }
 
 .keyboard {
-    .bodyBottom {
-        fill: #7f8485;
-    }
-
-    .bodySide {
-        fill: #8b9091;
-    }
-
-    .bodyFront {
-        fill: #979d9e;
-    }
-
-    .bodyTop {
-        fill: #a5acad;
-    }
-
-    .keyBlack {
-        fill: #594c41;
-    }
-
-    .keyWhiteBottom {
-        fill: #d9d7cd;
-    }
-
-    .keyWhiteTop {
-        fill: #f2f0e6;
-    }
-
-    .wheelDisplayLine {
-        fill: none;
-    }
-
-    .panel {
-        fill: #b1b9ba;
-    }
-
-    .dialSide {
-        fill: #6f827d;
-    }
-
-    .dialTop {
-        fill: #c7ded7;
-    }
-
-    .label {
-        fill: #ccc395;
-    }
-
-    .wheel {
-        fill: #7a8f89;
-    }
+    .bodyBottom { fill: #7f8485; }
+    .bodySide { fill: #8b9091; }
+    .bodyFront { fill: #979d9e; }
+    .bodyTop { fill: #a5acad; }
+    .keyBlack { fill: #594c41; }
+    .keyWhiteBottom { fill: #d9d7cd; }
+    .keyWhiteTop { fill: #f2f0e6; }
+    .wheelDisplayLine { fill: none; }
+    .panel { fill: #b1b9ba; }
+    .dialSide { fill: #6f827d; }
+    .dialTop { fill: #c7ded7; }
+    .label { fill: #ccc395; }
+    .wheel { fill: #7a8f89; }
 }

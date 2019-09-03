@@ -1,45 +1,18 @@
 .cliffTree {
-    .trunk {
-        fill: #300;
-    }
+    .trunk { fill: #300; }
 }
 
 .cliffGravesFar {
-    .meadowRight {
-        fill: #067037;
-    }
-
-    .meadowLeft {
-        fill: #287c33;
-    }
-
-    .graveLeft {
-        fill: #505050
-    }
-
-    .graveRight {
-        fill: #444;
-    }
-
-    .graveEdgeLine {
-        stroke: #222;
-    }
+    .meadowRight { fill: #067037; }
+    .meadowLeft { fill: #287c33; }
+    .graveLeft { fill: #505050 }
+    .graveRight { fill: #444; }
+    .graveEdgeLine { stroke: #222; }
 }
 
 .cliffGravesNear {
-    .meadow {
-        fill: #067037;
-    }
-
-    .graveLeft {
-        fill: #505050;
-    }
-
-    .graveRight {
-        fill: #444;
-    }
-
-    .graveEdgeLine {
-        stroke: #222;
-    }
+    .meadow { fill: #067037; }
+    .graveLeft { fill: #505050; }
+    .graveRight { fill: #444; }
+    .graveEdgeLine { stroke: #222; }
 }

@@ -1,65 +1,23 @@
 .monitorFront {
-    .top {
-        fill: #666;
-    }
-
-    .bottom {
-        fill: #333;
-    }
-
-    .panel {
-        fill: #999;
-    }
+    .top { fill: #666; }
+    .bottom { fill: #333; }
+    .panel { fill: #999; }
 }
 
 .wallSpeakerFront {
-    .side {
-        fill: #300;
-    }
-
-    .top {
-        fill: #333;
-    }
-
-    .front {
-        fill: #666;
-    }
-
-    .panel {
-        fill: #96c;
-    }
-
-    .panelLine {
-        stroke: #85b;
-    }
-
-    .surround {
-        fill: #336;
-    }
-
-    .cone {
-        fill: #66c;
-    }
-
-    .dome {
-        fill: #339;
-    }
+    .side { fill: #300; }
+    .top { fill: #333; }
+    .front { fill: #666; }
+    .panel { fill: #96c; }
+    .panelLine { stroke: #85b; }
+    .surround { fill: #336; }
+    .cone { fill: #66c; }
+    .dome { fill: #339; }
 }
 
 .cashBox {
-    .boxDark {
-        fill: #a38aa6;
-    }
-
-    .boxMedium {
-        fill: #bfa2c2;
-    }
-
-    .boxLight {
-        fill: #cbaccf;
-    }
-
-    .boxInset {
-        fill: #c0a3c4;
-    }
+    .boxDark { fill: #a38aa6; }
+    .boxMedium { fill: #bfa2c2; }
+    .boxLight { fill: #cbaccf; }
+    .boxInset { fill: #c0a3c4; }
 }

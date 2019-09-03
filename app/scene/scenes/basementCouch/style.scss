@@ -1,75 +1,23 @@
 .elliottSmithPoster {
-    .frame {
-        fill: #daeaed;
-    }
-
-    .stripeRed {
-        fill: #60384c;
-    }
-
-    .stripeBlue {
-        fill: #505f75;
-    }
-
-    .pants {
-        fill: #514d5b;
-    }
-
-    .pantsDisplayLine {
-        stroke: #26254c;
-    }
-
-    .shirt {
-        fill: #af9880;
-    }
-
-    .hoodie {
-        fill: #4f566d;
-    }
-
-    .hoodieDisplayLine {
-        stroke: #363572;
-    }
-
-    .zipperDisplayLine {
-        stroke: #d3d3d3;
-    }
+    .frame { fill: #daeaed; }
+    .stripeRed { fill: #60384c; }
+    .stripeBlue { fill: #505f75; }
+    .pants { fill: #514d5b; }
+    .pantsDisplayLine { stroke: #26254c; }
+    .shirt { fill: #af9880; }
+    .hoodie { fill: #4f566d; }
+    .hoodieDisplayLine { stroke: #363572; }
+    .zipperDisplayLine { stroke: #d3d3d3; }
 }
 
 .nasAlbum {
-    .frame {
-        fill: #6a8589;
-    }
-
-    .street {
-        fill: #5c6168;
-    }
-
-    .buildingNearFront {
-        fill: #914141;
-    }
-
-    .buildingNearSide {
-        fill: #773030;
-    }
-
-    .buildingMiddleFront {
-        fill: #914141;
-    }
-
-    .buildingMiddleSide {
-        fill: #773030;
-    }
-
-    .buildingRearFront {
-        fill: #914141;
-    }
-
-    .buildingRearSide {
-        fill: #773030;
-    }
-
-    .shirt {
-        fill: #d16a30;
-    }
+    .frame { fill: #6a8589; }
+    .street { fill: #5c6168; }
+    .buildingNearFront { fill: #914141; }
+    .buildingNearSide { fill: #773030; }
+    .buildingMiddleFront { fill: #914141; }
+    .buildingMiddleSide { fill: #773030; }
+    .buildingRearFront { fill: #914141; }
+    .buildingRearSide { fill: #773030; }
+    .shirt { fill: #d16a30; }
 }
