@@ -30,11 +30,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'electric guitars',
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: 'violin',
         workedHours: 0,
         neededHours: 2.5
@@ -47,6 +42,23 @@ export default [
 
     // Actor props.
 
+    // Instruments.
+    {
+        taskName: 'Guitar cable',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'Tenor recorder',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'Drumsticks * 2 (Jacob, Nestor)',
+        workedHours: 0,
+        neededHours: 1
+    },
+
     // Food and containers.
     {
         taskName: 'Remaining beers * 8 (Amy, Bennett, Mara, Stephanie, Shane, Wade * 2, Willy)',
@@ -55,11 +67,6 @@ export default [
     },
     {
         taskName: 'Evian bottles.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'Andrew fruit.',
         workedHours: 0,
         neededHours: 1
     },
@@ -219,23 +226,6 @@ export default [
     },
     {
         taskName: 'Miriam perfume.',
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    // Instruments.
-    {
-        taskName: 'Guitar cable',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'Tenor recorder',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'Drumsticks * 2 (Jacob, Nestor)',
         workedHours: 0,
         neededHours: 1
     },

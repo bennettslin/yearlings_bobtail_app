@@ -14,7 +14,7 @@ import {
     DRUMKIT
 } from '../../../constants/scene/things/fixtures'
 import { DOLLAR__SHARED } from '../../shared'
-import { DRUMS__SHARED } from '../../shared/instruments'
+import { DRUMS__SHARED, ELECTRIC_GUITAR__SHARED } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -46,11 +46,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [ELECTRIC_GUITAR]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 1,
-                zHeight: 3
-            }
+            xPosition: 1,
+            sharedStyle: ELECTRIC_GUITAR__SHARED
         },
         [DRUMKIT]: {
             yIndex: 1,

@@ -198,5 +198,15 @@ export default [
         taskName: 'drumKit, drumsStacked, kickDrum, drumThrone, and drum actor fixtures.',
         workedHours: 16,
         neededHours: 16
+    },
+    {
+        taskName: 'electric guitars',
+        workedHours: 4,
+        neededHours: 4
+    },
+    {
+        taskName: 'Andrew fruit.',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
