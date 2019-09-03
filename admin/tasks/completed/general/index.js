@@ -4881,5 +4881,10 @@ export default [
         taskName: `Modify some instrument shared styles.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Some optimising of inefficient svgs.',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
