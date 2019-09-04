@@ -205,11 +205,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Taiwan pillow',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'Bennett condom.',
         workedHours: 0,
         neededHours: 1
@@ -251,12 +246,12 @@ export default [
     {
         taskName: 'Buoy',
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: 'Rickshaw',
         workedHours: 0,
-        neededHours: 3
+        neededHours: 4
     },
     {
         taskName: 'Tomer garbage bag',

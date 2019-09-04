@@ -218,5 +218,10 @@ export default [
         taskName: 'young Bennett violin',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'Taiwan pillow',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

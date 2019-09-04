@@ -12,12 +12,12 @@ import {
     TAIWAN_FRIDGE
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
-import { BUDDHA_SHRINE__SHARED } from '../../shared'
 import { ODIN__SHARED } from '../../shared/animals'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED
 } from '../../shared/people'
+import { BUDDHA_SHRINE__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
