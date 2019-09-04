@@ -209,16 +209,6 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: 'Bennett light switch.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'Miriam perfume.',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Print.
     {

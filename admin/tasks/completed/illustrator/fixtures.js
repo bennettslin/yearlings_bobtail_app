@@ -223,5 +223,15 @@ export default [
         taskName: 'Taiwan pillow',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Bennett light switch.',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'Miriam perfume.',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
