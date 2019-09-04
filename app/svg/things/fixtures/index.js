@@ -5,7 +5,7 @@ import haircutScissors from 'assets/svgs/fixtures/haircutScissors'
 import letterScraps from 'assets/svgs/fixtures/letterScraps'
 import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 // import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
-// import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
+import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
 import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
 import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
 import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
@@ -111,7 +111,7 @@ export default {
     [LETTER_SCRAPS__CHRISTOPHER]: letterScraps,
     [CHRISTOPHER_LETTERS]: christopherLetters,
     [BACKPACK_BENNETT]: false,
-    [FRIDGE_DRAWINGS]: false,
+    [FRIDGE_DRAWINGS]: fridgeDrawings,
     [CAPTAIN_BED_LAMP]: captainBedLamp,
     [RED_ENVELOPE_MONEY]: redEnvelopeMoney,
     [BEYONDER_ENVELOPE]: beyonderEnvelope,

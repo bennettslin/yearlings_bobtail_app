@@ -1,11 +1,4 @@
 export default [
-    // Drawings.
-    {
-        taskName: 'fridgeDrawings',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-
     // Cloth.
     {
         taskName: 'backpackBennett',
@@ -23,6 +16,8 @@ export default [
         neededHours: 1
     },
 
+    // Actor props.
+
     // Instruments.
     {
         taskName: 'young Bennett violin',
@@ -34,10 +29,6 @@ export default [
         workedHours: 0,
         neededHours: 1.5
     },
-
-    // Actor props.
-
-    // Instruments.
     {
         taskName: 'Guitar cable',
         workedHours: 0,

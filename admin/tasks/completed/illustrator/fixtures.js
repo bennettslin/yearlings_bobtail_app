@@ -233,5 +233,10 @@ export default [
         taskName: 'Miriam perfume.',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'fridgeDrawings',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

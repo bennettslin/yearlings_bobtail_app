@@ -13,9 +13,11 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
 import { ODIN__SHARED } from '../../shared/animals'
+import { ACOUSTIC_GUITAR__SHARED } from '../../shared/instruments'
 import {
     ALL_PEOPLE__SHARED,
-    BENNETT__SHARED
+    BENNETT__SHARED,
+    SASHA__SHARED
 } from '../../shared/people'
 import { BUDDHA_SHRINE__SHARED } from '../../shared/taiwan'
 
@@ -46,19 +48,21 @@ const ARRANGEMENTS_THINGS = {
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
-            xPosition: 9,
-            scaleFactor: 0.3
+            xPosition: 9.5,
+            scaleFactor: 0.4
         }
     },
     [FIXTURE]: {
         [FRIDGE_DRAWINGS]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1,
-                zHeight: 0.5,
-                zOffset: 1
-            }
+            xPosition: 9,
+            zOffset: 1.25,
+            scaleFactor: 0.35,
+            sharedStyle: [
+                ALL_PEOPLE__SHARED,
+                ACOUSTIC_GUITAR__SHARED,
+                SASHA__SHARED
+            ]
         }
     }
 }
