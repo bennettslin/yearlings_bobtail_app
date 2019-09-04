@@ -12,6 +12,7 @@ import {
     TAIWAN_FRIDGE
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
+import { SKETCHBOOK__SHARED } from '../../shared'
 import { ODIN__SHARED } from '../../shared/animals'
 import { ACOUSTIC_GUITAR__SHARED } from '../../shared/instruments'
 import {
@@ -59,6 +60,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 1.25,
             scaleFactor: 0.35,
             sharedStyle: [
+                SKETCHBOOK__SHARED,
                 ALL_PEOPLE__SHARED,
                 ACOUSTIC_GUITAR__SHARED,
                 SASHA__SHARED
