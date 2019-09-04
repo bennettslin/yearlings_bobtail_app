@@ -25,9 +25,9 @@ export default [
 
     // Instruments.
     {
-        taskName: 'violin',
-        workedHours: 0,
-        neededHours: 2.5
+        taskName: 'young Bennett violin',
+        workedHours: 1.5,
+        neededHours: 1.5
     },
     {
         taskName: 'mandolin',
