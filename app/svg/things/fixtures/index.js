@@ -18,6 +18,7 @@ import keyboard from 'assets/svgs/fixtures/keyboard'
 import cashBox from 'assets/svgs/fixtures/cashBox'
 import electricGuitar from 'assets/svgs/fixtures/electricGuitar'
 import drumKit from 'assets/svgs/fixtures/drumKit'
+import drumsStacked from 'assets/svgs/fixtures/drumsStacked'
 import bassCaseUpright from 'assets/svgs/fixtures/bassCaseUpright'
 import guitarCaseUpright from 'assets/svgs/fixtures/guitarCaseUpright'
 import basementBeerCase from 'assets/svgs/fixtures/basementBeerCase'
@@ -35,7 +36,6 @@ import stageMic from 'assets/svgs/fixtures/stageMic'
 import kickDrum from 'assets/svgs/fixtures/kickDrum'
 import drumThrone from 'assets/svgs/fixtures/drumThrone'
 import guitarCaseOpen from 'assets/svgs/fixtures/guitarCaseOpen'
-import drumsStacked from 'assets/svgs/fixtures/drumsStacked'
 // import bennettShoe from 'assets/svgs/fixtures/bennettShoe'
 // import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
 import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
@@ -69,6 +69,7 @@ import {
     CASH_BOX,
     ELECTRIC_GUITAR,
     DRUMKIT,
+    DRUMS_STACKED__BASEMENT,
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
     BASEMENT_BEER_CASE,
@@ -88,7 +89,6 @@ import {
     KICK_DRUM,
     DRUM_THRONE,
     GUITAR_CASE_OPEN,
-    DRUMS_STACKED__BASEMENT,
     DRUMS_STACKED__CLUB,
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
@@ -127,6 +127,7 @@ export default {
     [STAGE_MIC__CROWD]: stageMic,
     [STAGE_MIC__STAGE]: stageMic,
     [DRUMKIT]: drumKit,
+    [DRUMS_STACKED__BASEMENT]: drumsStacked,
     [BASS_CASE_UPRIGHT]: bassCaseUpright,
     [GUITAR_CASE_UPRIGHT]: guitarCaseUpright,
     [BASEMENT_BEER_CASE]: basementBeerCase,
@@ -144,7 +145,6 @@ export default {
     [KICK_DRUM]: kickDrum,
     [DRUM_THRONE]: drumThrone,
     [GUITAR_CASE_OPEN]: guitarCaseOpen,
-    [DRUMS_STACKED__BASEMENT]: drumsStacked,
     [DRUMS_STACKED__CLUB]: drumsStacked,
     [BENNETT_SHOE]: false,
     [BENNETT_SHOE_REFLECTION]: false,

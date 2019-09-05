@@ -5,7 +5,10 @@ import {
 import { CLUB_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
 import { DOOR__SHARED } from '../../shared'
-import { DRUMS__SHARED } from '../../shared/instruments'
+import {
+    DRUMS__SHARED,
+    DRUM_STAND__SHARED
+} from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -20,7 +23,10 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 2.5,
             zOffset: -0.1,
-            sharedStyle: DRUMS__SHARED
+            sharedStyle: [
+                DRUMS__SHARED,
+                DRUM_STAND__SHARED
+            ]
         }
     }
 }

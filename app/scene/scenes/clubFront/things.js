@@ -17,6 +17,7 @@ import { DOLLAR__SHARED } from '../../shared'
 import {
     CYMBAL__SHARED,
     DRUMS__SHARED,
+    DRUM_STAND__SHARED,
     ELECTRIC_GUITAR__SHARED
 } from '../../shared/instruments'
 
@@ -59,7 +60,8 @@ const ARRANGEMENTS_THINGS = {
             zOffset: -0.25,
             sharedStyle: [
                 CYMBAL__SHARED,
-                DRUMS__SHARED
+                DRUMS__SHARED,
+                DRUM_STAND__SHARED
             ]
         }
     }

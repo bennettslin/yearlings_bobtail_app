@@ -14,6 +14,7 @@ import {
 } from '../../../constants/scene/things/fixtures'
 import {
     DRUMS__SHARED,
+    DRUM_STAND__SHARED,
     GUITAR_CASE__SHARED,
     MICROPHONE__SHARED
 } from '../../shared/instruments'
@@ -43,13 +44,19 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 5,
             zOffset: -0.1,
-            sharedStyle: DRUMS__SHARED
+            sharedStyle: [
+                DRUMS__SHARED,
+                DRUM_STAND__SHARED
+            ]
         },
         [DRUM_THRONE]: {
             yIndex: 5,
             xPosition: 8,
             zOffset: -0.1,
-            sharedStyle: DRUMS__SHARED
+            sharedStyle: [
+                DRUMS__SHARED,
+                DRUM_STAND__SHARED
+            ]
         },
         [GUITAR_CASE_OPEN]: {
             yIndex: 4,

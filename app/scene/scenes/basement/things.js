@@ -11,6 +11,7 @@ import { BUDWEISER__SHARED } from '../../shared'
 import {
     BASS_CASE__SHARED,
     DRUMS__SHARED,
+    DRUM_STAND__SHARED,
     GUITAR_CASE__SHARED
 } from '../../shared/instruments'
 
@@ -30,7 +31,10 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 1.5,
             zOffset: -0.1,
-            sharedStyle: DRUMS__SHARED
+            sharedStyle: [
+                DRUMS__SHARED,
+                DRUM_STAND__SHARED
+            ]
         },
         [BASEMENT_BEER_CASE]: {
             yIndex: 5,
