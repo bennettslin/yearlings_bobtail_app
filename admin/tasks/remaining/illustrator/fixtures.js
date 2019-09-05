@@ -29,11 +29,6 @@ export default [
         workedHours: 0,
         neededHours: 1.5
     },
-    {
-        taskName: 'Drumsticks * 2 (Jacob, Nestor)',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Food and containers.
     {

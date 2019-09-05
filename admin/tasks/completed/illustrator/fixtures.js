@@ -248,5 +248,10 @@ export default [
         taskName: 'mandolin',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'Drumsticks * 2 (Jacob, Nestor)',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
