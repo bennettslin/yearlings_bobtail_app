@@ -29,11 +29,6 @@ export default [
         workedHours: 0,
         neededHours: 1.5
     },
-    {
-        taskName: 'Finger cymbals',
-        workedHours: 0,
-        neededHours: 0.5
-    },
 
     // Food and containers.
     {

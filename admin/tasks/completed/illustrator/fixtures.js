@@ -258,5 +258,10 @@ export default [
         taskName: 'Stop sign',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Finger cymbals',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
