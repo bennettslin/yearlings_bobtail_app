@@ -12,6 +12,7 @@ import {
     BASS_CASE__SHARED,
     DRUMS__SHARED,
     DRUM_STAND__SHARED,
+    DRUM_THRONE__SHARED,
     GUITAR_CASE__SHARED
 } from '../../shared/instruments'
 
@@ -33,7 +34,8 @@ const ARRANGEMENTS_THINGS = {
             zOffset: -0.1,
             sharedStyle: [
                 DRUMS__SHARED,
-                DRUM_STAND__SHARED
+                DRUM_STAND__SHARED,
+                DRUM_THRONE__SHARED
             ]
         },
         [BASEMENT_BEER_CASE]: {
