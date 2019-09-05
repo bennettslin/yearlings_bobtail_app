@@ -202,11 +202,6 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: 'Stop sign',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Large.
     {

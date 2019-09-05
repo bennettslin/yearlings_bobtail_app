@@ -253,5 +253,10 @@ export default [
         taskName: 'Drumsticks * 2 (Jacob, Nestor)',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Stop sign',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
