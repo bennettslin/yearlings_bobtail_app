@@ -263,5 +263,10 @@ export default [
         taskName: 'Finger cymbals',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Tenor recorder',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

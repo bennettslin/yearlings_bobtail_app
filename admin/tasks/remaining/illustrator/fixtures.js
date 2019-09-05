@@ -24,11 +24,6 @@ export default [
         workedHours: 0,
         neededHours: 1.5
     },
-    {
-        taskName: 'Tenor recorder',
-        workedHours: 0,
-        neededHours: 1.5
-    },
 
     // Food and containers.
     {
