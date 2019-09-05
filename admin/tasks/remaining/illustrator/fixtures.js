@@ -20,11 +20,6 @@ export default [
 
     // Instruments.
     {
-        taskName: 'mandolin',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'Guitar cable',
         workedHours: 0,
         neededHours: 1.5
