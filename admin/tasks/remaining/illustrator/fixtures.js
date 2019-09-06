@@ -178,7 +178,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Bennett condom.',
+        taskName: 'Bennett condoms.',
         workedHours: 0,
         neededHours: 1
     },
@@ -191,11 +191,6 @@ export default [
     },
     {
         taskName: 'Liz tchotchkes',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'Horseshoe album',
         workedHours: 0,
         neededHours: 1
     }

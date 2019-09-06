@@ -283,5 +283,10 @@ export default [
         taskName: 'Ana beer in bag.',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Horseshoe album',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
