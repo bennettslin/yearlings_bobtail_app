@@ -288,5 +288,10 @@ export default [
         taskName: 'Horseshoe album',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Tomer bottle',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
