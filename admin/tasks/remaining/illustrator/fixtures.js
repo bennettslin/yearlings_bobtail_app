@@ -178,11 +178,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Tennis racket',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'X-ray specs',
         workedHours: 0,
         neededHours: 1
