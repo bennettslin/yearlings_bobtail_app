@@ -54,11 +54,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Ana beer in bag.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'Tomer bottle',
         workedHours: 0,
         neededHours: 1

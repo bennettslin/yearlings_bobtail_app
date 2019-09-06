@@ -276,7 +276,12 @@ export default [
     },
     {
         taskName: 'Tennis racket',
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'Ana beer in bag.',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
