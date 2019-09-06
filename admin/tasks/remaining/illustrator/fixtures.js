@@ -18,6 +18,23 @@ export default [
 
     // Actor props.
 
+    // Large.
+    {
+        taskName: 'Buoy',
+        workedHours: 0,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'Rickshaw',
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
+        taskName: 'Tomer garbage bag',
+        workedHours: 0,
+        neededHours: 2.5
+    },
+
     // Instruments.
     {
         taskName: 'Guitar cable',
@@ -43,11 +60,6 @@ export default [
     },
     {
         taskName: 'Tomer bottle',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'Brad chips',
         workedHours: 0,
         neededHours: 1
     },
@@ -196,22 +208,5 @@ export default [
         taskName: 'Horseshoe album',
         workedHours: 0,
         neededHours: 1
-    },
-
-    // Large.
-    {
-        taskName: 'Buoy',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
-        taskName: 'Rickshaw',
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
-        taskName: 'Tomer garbage bag',
-        workedHours: 0,
-        neededHours: 2.5
     }
 ]

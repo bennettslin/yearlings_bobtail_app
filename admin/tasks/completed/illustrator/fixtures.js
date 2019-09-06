@@ -268,5 +268,10 @@ export default [
         taskName: 'Tenor recorder',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'Brad chips',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
