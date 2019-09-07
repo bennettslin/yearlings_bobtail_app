@@ -16,6 +16,7 @@ import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED
 } from '../../shared/people'
+import { TAIWAN_RICKSHAW__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -26,7 +27,8 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 BENNETT__SHARED,
-                ODIN__SHARED
+                ODIN__SHARED,
+                TAIWAN_RICKSHAW__SHARED
             ]
         }
     },

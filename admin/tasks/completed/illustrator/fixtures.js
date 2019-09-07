@@ -298,5 +298,10 @@ export default [
         taskName: 'Steam tunnel weapons.',
         workedHours: 2.5,
         neededHours: 2.5
+    },
+    {
+        taskName: 'Rickshaw',
+        workedHours: 5,
+        neededHours: 5
     }
 ]
