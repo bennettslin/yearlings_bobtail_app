@@ -138,11 +138,6 @@ export default [
 
     // Props.
     {
-        taskName: 'Steam tunnel weapons.',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'Bennett phone.',
         workedHours: 0,
         neededHours: 1.5

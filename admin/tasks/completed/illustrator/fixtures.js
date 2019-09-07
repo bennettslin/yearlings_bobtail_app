@@ -293,5 +293,10 @@ export default [
         taskName: 'Tomer bottle',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Steam tunnel weapons.',
+        workedHours: 2.5,
+        neededHours: 2.5
     }
 ]
