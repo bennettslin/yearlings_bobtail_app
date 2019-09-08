@@ -16,6 +16,7 @@ import {
     CONVEYOR_BELT,
     DISHROOM_SINK
 } from '../../../constants/scene/things/panels'
+import { DOOR__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -57,7 +58,8 @@ const ARRANGEMENTS_THINGS = {
         [DISHROOM_DOOR]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.65
+            scaleFactor: 0.65,
+            sharedStyle: DOOR__SHARED
         }
     },
     [PANEL]: {
