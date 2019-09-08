@@ -124,5 +124,3 @@
 
 # Complete necks and hair (Miriam).
 # Draw blankets.
-
-# Combine all actors and things for each scene into a single Illustrator file.

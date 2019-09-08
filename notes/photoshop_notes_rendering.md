@@ -1,6 +1,3 @@
-# TODO
-* Make ceiling cubes disappear
-
 # Redo straight or curved line.
 * bennettOdinBuoy
 * bennettOdinRickshaw
@@ -20,5 +17,4 @@
 * dumpster
 
 # Redo className organisation.
-* Cardboards (Just buoy and rickshaw left)
 * Cutouts (Last done: bancroftShrub)

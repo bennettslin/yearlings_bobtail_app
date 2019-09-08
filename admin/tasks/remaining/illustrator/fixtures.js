@@ -44,14 +44,14 @@ export default [
         neededHours: 3
     },
     {
-        taskName: 'Evian bottles.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'Basement food.',
         workedHours: 0,
         neededHours: 2.5
+    },
+    {
+        taskName: 'Evian bottles.',
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: 'Dropped meats',
