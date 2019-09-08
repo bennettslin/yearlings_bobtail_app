@@ -76,7 +76,11 @@ import {
     VAN_NUYS_PLANT__LOCKERS,
     VAN_NUYS_PLANT__QUAD
 } from '../../constants/scene/things/cutouts'
-import { PRINCIPAL_DOOR } from '../../constants/scene/things/doors'
+import {
+    BEDROOM_BLINDS,
+    BEDROOM_BLINDS_OPEN,
+    PRINCIPAL_DOOR
+} from '../../constants/scene/things/doors'
 import {
     CAPTAIN_BED_LAMP,
     LETTER_SCRAPS__BENNETT,
@@ -109,6 +113,9 @@ export default [
             [FURNITURE]: {
                 [CAPTAIN_BED_PILLOW]: true
             },
+            [DOOR]: {
+                [BEDROOM_BLINDS]: true
+            },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED]: true,
@@ -138,6 +145,9 @@ export default [
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
+            [DOOR]: {
+                [BEDROOM_BLINDS]: true
+            },
             [FIXTURE]: {
                 [CAPTAIN_BED_LAMP]: true,
                 [LETTER_SCRAPS__BENNETT]: true,
@@ -166,6 +176,9 @@ export default [
             },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
+            },
+            [DOOR]: {
+                [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURE]: {
                 [RED_ENVELOPE_MONEY]: true
@@ -222,6 +235,9 @@ export default [
             [CARDBOARD]: {
                 [EARTH]: true,
                 [SPACE_COLONY]: true
+            },
+            [DOOR]: {
+                [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURE]: {
                 [BEYONDER_ENVELOPE]: true

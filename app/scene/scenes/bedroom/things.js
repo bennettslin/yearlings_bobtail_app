@@ -1,6 +1,7 @@
 import {
     BUBBLE,
     CARDBOARD,
+    DOOR,
     FIXTURE,
     FLAT,
     FURNITURE,
@@ -17,6 +18,10 @@ import {
     EARTH,
     SPACE_COLONY
 } from '../../../constants/scene/things/cardboards'
+import {
+    BEDROOM_BLINDS,
+    BEDROOM_BLINDS_OPEN
+} from '../../../constants/scene/things/doors'
 import {
     LETTER_SCRAPS__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
@@ -41,7 +46,8 @@ import {
     LETTER__SHARED,
     PAPER__SHARED,
     SCISSORS__SHARED,
-    SKETCHBOOK__SHARED
+    SKETCHBOOK__SHARED,
+    WINDOW__SHARED
 } from '../../shared'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
@@ -72,6 +78,22 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: ALL_PEOPLE__SHARED
         }
     },
+    [DOOR]: {
+        [BEDROOM_BLINDS]: {
+            yIndex: 3,
+            xPosition: 2.8,
+            zOffset: 0.125,
+            scaleFactor: 0.65,
+            sharedStyle: WINDOW__SHARED
+        },
+        [BEDROOM_BLINDS_OPEN]: {
+            yIndex: 3,
+            xPosition: 2.8,
+            zOffset: 0.125,
+            scaleFactor: 0.65,
+            sharedStyle: WINDOW__SHARED
+        }
+    },
     [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 2,
@@ -86,7 +108,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [CAPTAIN_BED]: {
             yIndex: 5,
-            xPosition: 7.2,
+            xPosition: 7.5,
             scaleFactor: 0.2
         },
         [BEDROOM_FENCE]: {

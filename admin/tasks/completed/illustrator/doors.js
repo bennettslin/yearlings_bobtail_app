@@ -88,5 +88,15 @@ export default [
         taskName: 'blindsInsideOpen',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'bedroomBlinds',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'bedroomBlindsOpen',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

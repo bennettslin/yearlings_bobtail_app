@@ -64,7 +64,10 @@ import {
     FIRE_HYDRANT,
     CAMPFIRE
 } from '../../constants/scene/things/cutouts'
-import { PORCH_DOOR } from '../../constants/scene/things/doors'
+import {
+    PORCH_DOOR,
+    BEDROOM_BLINDS_OPEN
+} from '../../constants/scene/things/doors'
 import {
     LETTER_SCRAPS__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
@@ -197,6 +200,9 @@ export default [
             [CARDBOARD]: {
                 [TINTIN_POSTER]: true
             },
+            [DOOR]: {
+                [BEDROOM_BLINDS_OPEN]: true
+            },
             [FIXTURE]: {
                 [LETTER_SCRAPS__CHRISTOPHER]: true,
                 [CHRISTOPHER_LETTERS]: true
@@ -266,6 +272,9 @@ export default [
             },
             [CARDBOARD]: {
                 [TINTIN_POSTER]: true
+            },
+            [DOOR]: {
+                [BEDROOM_BLINDS_OPEN]: true
             },
             [FLAT]: {
                 [BEDROOM_SIREN]: true

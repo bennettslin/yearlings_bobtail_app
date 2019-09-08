@@ -1,15 +1,5 @@
 export default [
     {
-        taskName: 'bedroomBlinds',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'bedroomBlindsOpen',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'ironGateLow',
         workedHours: 0,
         neededHours: 0.5
