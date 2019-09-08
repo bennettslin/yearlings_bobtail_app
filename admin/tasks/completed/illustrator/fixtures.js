@@ -308,5 +308,10 @@ export default [
         taskName: 'Buoy',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'Robitussin.',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

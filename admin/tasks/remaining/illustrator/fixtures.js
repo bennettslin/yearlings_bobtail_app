@@ -24,6 +24,11 @@ export default [
         workedHours: 0,
         neededHours: 2.5
     },
+    {
+        taskName: 'Police horse.',
+        workedHours: 0,
+        neededHours: 3
+    },
 
     // Instruments.
     {
@@ -47,11 +52,6 @@ export default [
         taskName: 'Basement food.',
         workedHours: 0,
         neededHours: 2.5
-    },
-    {
-        taskName: 'Robitussin.',
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: 'Dropped meats',
@@ -104,11 +104,6 @@ export default [
         taskName: 'Baby',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: 'Police horse.',
-        workedHours: 0,
-        neededHours: 3
     },
     {
         taskName: 'Khari hat.',

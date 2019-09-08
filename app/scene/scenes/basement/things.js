@@ -7,7 +7,7 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
-import { BUDWEISER__SHARED } from '../../shared'
+import { BUDWEISER__SHARED } from '../../shared/food'
 import {
     BASS_CASE__SHARED,
     DRUMS__SHARED,
