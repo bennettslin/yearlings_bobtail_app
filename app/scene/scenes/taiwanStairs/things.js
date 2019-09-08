@@ -7,7 +7,7 @@ import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
 } from '../../../constants/scene/things/cardboards'
-import { TAIWAN_HOUSE__SHARED } from '../../shared'
+import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
 import { ODIN__SHARED } from '../../shared/animals'
 import {
     ALL_PEOPLE__SHARED,

@@ -10,7 +10,7 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_COMMERCIAL__SHARED } from '../../shared'
+import { OAKLAND_COMMERCIAL__SHARED } from '../../shared/buildings'
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {
         [COMMERCIAL_CENTRE]: {

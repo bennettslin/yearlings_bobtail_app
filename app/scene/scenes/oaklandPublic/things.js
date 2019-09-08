@@ -7,7 +7,7 @@ import {
     PUBLIC_FAR_RIGHT,
     PUBLIC_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_HOUSE__SHARED } from '../../shared'
+import { OAKLAND_HOUSE__SHARED } from '../../shared/buildings'
 
 const ARRANGEMENTS_THINGS = {
     [FLAT]: {

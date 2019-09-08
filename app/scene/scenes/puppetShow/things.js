@@ -39,10 +39,8 @@ import {
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END
 } from '../../../constants/scene/things/puppets'
-import {
-    SKETCHBOOK__SHARED,
-    TAIWAN_HOUSE__SHARED
-} from '../../shared'
+import { SKETCHBOOK__SHARED } from '../../shared'
+import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
 import {
     ALL_PEOPLE__SHARED,
     ANITA__SHARED,

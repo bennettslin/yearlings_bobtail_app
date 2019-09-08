@@ -13,7 +13,7 @@ import {
     OAKLAND_HOUSE__SHARED,
     OAKLAND_HOUSE_LEFT__SHARED,
     OAKLAND_HOUSE_RIGHT__SHARED
-} from '../../shared'
+} from '../../shared/buildings'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

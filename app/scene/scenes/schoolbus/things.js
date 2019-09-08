@@ -23,9 +23,9 @@ import {
 } from '../../../constants/scene/things/panels'
 import {
     BUBBLE__SHARED,
-    INTERIOR__SHARED,
-    OAKLAND_COMMERCIAL__SHARED
+    INTERIOR__SHARED
 } from '../../shared'
+import { OAKLAND_COMMERCIAL__SHARED } from '../../shared/buildings'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

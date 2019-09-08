@@ -9,8 +9,8 @@ import {
     ODIN_SHORE
 } from '../../../constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
-import { TAIWAN_HOUSE__SHARED } from '../../shared'
 import { ODIN__SHARED } from '../../shared/animals'
+import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED
