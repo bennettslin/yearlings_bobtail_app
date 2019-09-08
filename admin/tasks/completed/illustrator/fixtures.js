@@ -323,5 +323,10 @@ export default [
         taskName: 'Dropped meats',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Demonstration cupcakes.',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

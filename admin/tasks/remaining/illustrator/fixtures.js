@@ -53,11 +53,6 @@ export default [
         workedHours: 0,
         neededHours: 1
     },
-    {
-        taskName: 'Demonstration cupcakes.',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Wearables.
     {
