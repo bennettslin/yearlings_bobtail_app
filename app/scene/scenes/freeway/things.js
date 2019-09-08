@@ -9,6 +9,7 @@ import {
     OVERPASS_SIGN_BACK
 } from '../../../constants/scene/things/cutouts'
 import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
+import { GARBAGE_BAG__SHARED } from '../../shared/food'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -23,7 +24,8 @@ const ARRANGEMENTS_THINGS = {
         [SHOPPING_CART]: {
             yIndex: 5,
             xPosition: 8,
-            scaleFactor: 0.2
+            scaleFactor: 0.2,
+            sharedStyle: GARBAGE_BAG__SHARED
         },
         [OVERPASS_SIGN_BACK]: {
             yIndex: 2,

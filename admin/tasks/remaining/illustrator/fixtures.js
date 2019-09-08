@@ -20,11 +20,6 @@ export default [
 
     // Large.
     {
-        taskName: 'Tomer garbage bag',
-        workedHours: 0,
-        neededHours: 2.5
-    },
-    {
         taskName: 'Police horse.',
         workedHours: 0,
         neededHours: 3
