@@ -59,11 +59,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Chinese food * 4',
-        workedHours: 0,
-        neededHours: 2.5
-    },
-    {
         taskName: 'Demonstration cupcakes.',
         workedHours: 0,
         neededHours: 1

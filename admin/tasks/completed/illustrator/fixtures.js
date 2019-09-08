@@ -313,5 +313,10 @@ export default [
         taskName: 'Robitussin.',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Chinese food * 4',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
