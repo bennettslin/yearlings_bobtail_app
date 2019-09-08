@@ -16,6 +16,7 @@ import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED
 } from '../../shared/people'
+import { TAIWAN_BUOY__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -33,7 +34,8 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 BENNETT__SHARED,
-                ODIN__SHARED
+                ODIN__SHARED,
+                TAIWAN_BUOY__SHARED
             ]
         }
     },

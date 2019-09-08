@@ -303,5 +303,10 @@ export default [
         taskName: 'Rickshaw',
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: 'Buoy',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
