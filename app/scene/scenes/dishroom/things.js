@@ -18,6 +18,7 @@ import {
 } from '../../../constants/scene/things/panels'
 import { DOOR__SHARED } from '../../shared'
 import {
+    CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED
 } from '../../shared/dishroom'
@@ -40,13 +41,15 @@ const ARRANGEMENTS_THINGS = {
         [GLASS_RACK__SINK]: {
             yIndex: 2,
             xPosition: 2.5,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: CUP__SHARED
         },
         [GLASS_RACK__DOLLY]: {
             yIndex: 4,
             xPosition: 6.25,
             zOffset: 0.55,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: CUP__SHARED
         },
         [DISHROOM_DOLLY__TRAY]: {
             yIndex: 4,
@@ -73,7 +76,12 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 4,
             scaleFactor: 0.37,
-            zOffset: 0.1
+            zOffset: 0.1,
+            sharedStyle: [
+                CUP__SHARED,
+                DISH__SHARED,
+                TRAY__SHARED
+            ]
         },
         [DISHROOM_SINK]: {
             yIndex: 3,
