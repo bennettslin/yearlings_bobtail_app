@@ -338,5 +338,10 @@ export default [
         taskName: 'Police horse.',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'Guitar cable',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]

@@ -18,13 +18,6 @@ export default [
 
     // Actor props.
 
-    // Instruments.
-    {
-        taskName: 'Guitar cable',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-
     // Food and containers.
     {
         taskName: 'Remaining beers * 8 (Amy, Bennett, Mara, Stephanie, Shane, Wade * 2, Willy)',
