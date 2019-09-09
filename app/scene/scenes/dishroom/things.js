@@ -17,19 +17,25 @@ import {
     DISHROOM_SINK
 } from '../../../constants/scene/things/panels'
 import { DOOR__SHARED } from '../../shared'
+import {
+    DISH__SHARED,
+    TRAY__SHARED
+} from '../../shared/dishroom'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [DISH_PILE]: {
             yIndex: 2,
             xPosition: 4,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: DISH__SHARED
         },
         [TRAY_PILE]: {
             yIndex: 4,
             xPosition: 1.75,
             zOffset: 0.55,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: TRAY__SHARED
         },
         [GLASS_RACK__SINK]: {
             yIndex: 2,

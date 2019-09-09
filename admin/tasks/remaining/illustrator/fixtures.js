@@ -42,9 +42,9 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'Book or magazine * 7 (Bennett * 2, Jewish boy, Catherine * 2, preteen Bennett * 2)',
+        taskName: 'Book or magazine * 8 (Bennett * 3, Jewish boy, Catherine * 2, preteen Bennett * 2)',
         workedHours: 0,
-        neededHours: 3.5
+        neededHours: 4
     },
     {
         taskName: 'Tray and lancet pen * 2',
