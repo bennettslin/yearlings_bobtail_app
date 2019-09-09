@@ -32,7 +32,7 @@ export default [
     {
         taskName: 'Evian bottles.',
         workedHours: 0,
-        neededHours: 1
+        neededHours: 2
     },
 
     // Props.
@@ -55,11 +55,6 @@ export default [
         taskName: 'Steering wheel * 4',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: 'Rubik cube',
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: 'Bennett condoms.',

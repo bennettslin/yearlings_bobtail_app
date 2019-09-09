@@ -348,5 +348,10 @@ export default [
         taskName: 'X-ray specs',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Rubik cube',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
