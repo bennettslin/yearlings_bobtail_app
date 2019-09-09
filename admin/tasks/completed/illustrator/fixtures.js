@@ -333,5 +333,10 @@ export default [
         taskName: 'Tomer garbage bag',
         workedHours: 2.5,
         neededHours: 2.5
+    },
+    {
+        taskName: 'Police horse.',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

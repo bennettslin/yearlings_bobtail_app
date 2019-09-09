@@ -18,13 +18,6 @@ export default [
 
     // Actor props.
 
-    // Large.
-    {
-        taskName: 'Police horse.',
-        workedHours: 0,
-        neededHours: 3
-    },
-
     // Instruments.
     {
         taskName: 'Guitar cable',
