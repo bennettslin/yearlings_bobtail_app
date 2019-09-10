@@ -6,7 +6,8 @@ import InlineSvg from 'modules/InlineSvg'
 import {
     capitaliseForClassName,
     convertPresenceKeyToTitle,
-    convertPresenceKeyToClassName
+    convertPresenceKeyToClassName,
+    getSharedClassNames
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getMapForActorKey } from 'components/Presences/LayersActor/helper'
@@ -70,7 +71,7 @@ class PreviewerSvg extends PureComponent {
                         'Presence',
                         'Presence__visible',
                         capitaliseForClassName(presenceType),
-                        sharedStyle,
+                        getSharedClassNames(sharedStyle),
                         className
                     ),
                     svgClassName: convertPresenceKeyToClassName(presenceKey),

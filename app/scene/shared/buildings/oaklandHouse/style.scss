@@ -1,4 +1,4 @@
-.oaklandHouse__shared {
+.oaklandHouse#{$suffix} {
     .leaves { fill: #376e37; }
     .trunk { fill: #8b7d56; }
     .trimFront { fill: #ad8757; }
@@ -18,14 +18,14 @@
     .roofTop { fill: #b06d6d; }
 }
 
-.oaklandHouseLeft__shared {
+.oaklandHouseLeft#{$suffix} {
     .wallFront { fill: #c69bc7; }
     .wallSide { fill: #ac87ad; }
     .bayWallFront { fill: #b799ab; }
     .bayWallSide { fill: #a68a94; }
 }
 
-.oaklandHouseRight__shared {
+.oaklandHouseRight#{$suffix} {
     .wallFront { fill: #c69bc7; }
     .wallSide { fill: #ac87ad; }
     .bayWallFront { fill: #b799ab; }

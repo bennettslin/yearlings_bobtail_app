@@ -1,4 +1,4 @@
-.door__shared {
+.door#{$suffix} {
     .frame { fill: #b8b38c; }
     .doorSide { fill: #595039; }
     .doorFront { fill: #6e6246; }

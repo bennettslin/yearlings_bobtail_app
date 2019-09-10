@@ -5,7 +5,8 @@ import InlineSvg from 'modules/InlineSvg'
 
 import {
     convertPresenceKeyToTitle,
-    convertPresenceKeyToClassName
+    convertPresenceKeyToClassName,
+    getSharedClassNames
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
@@ -211,7 +212,7 @@ class ConfiguredPresenceSvg extends PureComponent {
                     },
                     svgClassName: cx(
                         convertPresenceKeyToClassName(presenceKey),
-                        sharedStyle
+                        getSharedClassNames(sharedStyle)
                     ),
                     title: convertPresenceKeyToTitle(presenceKey),
                     preProcessor: this.preProcessSvg,

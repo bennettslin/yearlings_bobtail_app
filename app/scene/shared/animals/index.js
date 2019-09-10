@@ -1,4 +1,4 @@
-export const ODIN__SHARED = 'odin__shared'
-export const ODIN_GHOST__SHARED = 'odinGhost__shared'
-export const OPAL__SHARED = 'opal__shared'
-export const PEAFOWL__SHARED = 'peafowl__shared'
+export const ODIN__SHARED = 'odin'
+export const ODIN_GHOST__SHARED = 'odinGhost'
+export const OPAL__SHARED = 'opal'
+export const PEAFOWL__SHARED = 'peafowl'

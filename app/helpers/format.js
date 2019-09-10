@@ -1,6 +1,27 @@
 // Helpers for parsing text objects.
+import isString from 'lodash/isstring'
 
 import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
+
+const appendSharedSuffix = (style) => (
+    `${style}__shared`
+)
+
+export const getSharedClassNames = (sharedStyle) => {
+    if (isString(sharedStyle)) {
+        return appendSharedSuffix(sharedStyle)
+
+    } else if (Array.isArray(sharedStyle)) {
+        return (
+            sharedStyle.map(style => (
+                appendSharedSuffix(style)
+            ))
+        )
+
+    } else {
+        return null
+    }
+}
 
 const discardAfterDoubleUnderscore = (word) => {
     // Remove anything after double underscore.

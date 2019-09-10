@@ -1,4 +1,4 @@
-export const BOOK__SHARED = 'book__shared'
-export const LETTER__SHARED = 'letter__shared'
-export const MAGAZINE__SHARED = 'magazine__shared'
-export const SKETCHBOOK__SHARED = 'sketchbook__shared'
+export const BOOK__SHARED = 'book'
+export const LETTER__SHARED = 'letter'
+export const MAGAZINE__SHARED = 'magazine'
+export const SKETCHBOOK__SHARED = 'sketchbook'

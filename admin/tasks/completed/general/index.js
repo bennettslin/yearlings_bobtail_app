@@ -4886,5 +4886,10 @@ export default [
         taskName: 'Some optimising of inefficient svgs.',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'Helper for shared styles.',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
