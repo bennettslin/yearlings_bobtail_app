@@ -1,4 +1,7 @@
-.book#{$suffix} {
+.book#{$suffix} { 
+    .bookPageLight { fill: #e8e7e3; }
+    .bookPageMedium { fill: #d9d8d4; }
+    .bookPageDark { fill: #a6a49c; }
     .paperStackLight { fill: #b7b3a5; }
     .paperStackDark { fill: #a8a498; }
 }

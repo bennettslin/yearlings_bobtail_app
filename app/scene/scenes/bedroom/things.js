@@ -128,10 +128,7 @@ export const THINGS_BEDROOM_ENRAGED = {
         [LETTER_SCRAPS__CHRISTOPHER]: {
             yIndex: 5,
             xPosition: 4,
-            sharedStyle: [
-                BOOK__SHARED,
-                MAGAZINE__SHARED
-            ]
+            sharedStyle: MAGAZINE__SHARED
         },
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
@@ -183,10 +180,7 @@ export const THINGS_BEDROOM_GUILTY = {
         [LETTER_SCRAPS__BENNETT]: {
             yIndex: 5,
             xPosition: 8,
-            sharedStyle: [
-                BOOK__SHARED,
-                MAGAZINE__SHARED
-            ]
+            sharedStyle: MAGAZINE__SHARED
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
