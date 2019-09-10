@@ -42,11 +42,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'Book or magazine * 8 (Bennett * 3, Jewish boy, Catherine * 2, preteen Bennett * 2)',
-        workedHours: 0.5,
-        neededHours: 4
-    },
-    {
         taskName: 'Steering wheel * 4',
         workedHours: 0,
         neededHours: 2
