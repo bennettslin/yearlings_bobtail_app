@@ -12,9 +12,9 @@ import {
     TAIWAN_FRIDGE
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
-import { SKETCHBOOK__SHARED } from '../../shared'
 import { ODIN__SHARED } from '../../shared/animals'
 import { ACOUSTIC_GUITAR__SHARED } from '../../shared/instruments'
+import { SKETCHBOOK__SHARED } from '../../shared/paper'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,

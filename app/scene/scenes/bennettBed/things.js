@@ -19,9 +19,12 @@ import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 import {
     DOOR__SHARED,
-    SKETCHBOOK__SHARED,
     WINDOW__SHARED
 } from '../../shared'
+import {
+    BOOK__SHARED,
+    SKETCHBOOK__SHARED
+} from '../../shared/paper'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -60,7 +63,10 @@ const ARRANGEMENTS_THINGS = {
         [LINGERIE_DRAWING]: {
             yIndex: 3,
             xPosition: 7,
-            sharedStyle: SKETCHBOOK__SHARED
+            sharedStyle: [
+                BOOK__SHARED,
+                SKETCHBOOK__SHARED
+            ]
         },
         [VASELINE]: {
             yIndex: 3,

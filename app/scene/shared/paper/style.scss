@@ -1,4 +1,4 @@
-.paper__shared {
-    .paperMedium { fill: #c9c7ad; }
-    .paperLight { fill: #f0eece; }
-}
+@import "./book/style";
+@import "./letter/style";
+@import "./magazine/style";
+@import "./sketchbook/style";

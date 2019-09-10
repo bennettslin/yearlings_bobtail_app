@@ -43,12 +43,15 @@ import {
 } from '../../../constants/scene/things/panels'
 import {
     DOLLAR__SHARED,
-    LETTER__SHARED,
-    PAPER__SHARED,
     SCISSORS__SHARED,
-    SKETCHBOOK__SHARED,
     WINDOW__SHARED
 } from '../../shared'
+import {
+    BOOK__SHARED,
+    LETTER__SHARED,
+    MAGAZINE__SHARED,
+    SKETCHBOOK__SHARED
+} from '../../shared/paper'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -126,15 +129,15 @@ export const THINGS_BEDROOM_ENRAGED = {
             yIndex: 5,
             xPosition: 4,
             sharedStyle: [
-                LETTER__SHARED,
-                PAPER__SHARED
+                BOOK__SHARED,
+                MAGAZINE__SHARED
             ]
         },
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
             xPosition: 5,
             sharedStyle: [
-                LETTER__SHARED,
+                MAGAZINE__SHARED,
                 SCISSORS__SHARED
             ]
         }
@@ -166,7 +169,10 @@ export const THINGS_BEDROOM_GUILTY = {
             xPosition: 3,
             zOffset: 1.5,
             scaleFactor: 0.25,
-            sharedStyle: SKETCHBOOK__SHARED
+            sharedStyle: [
+                BOOK__SHARED,
+                SKETCHBOOK__SHARED
+            ]
         }
     },
     [FIXTURE]: {
@@ -178,14 +184,14 @@ export const THINGS_BEDROOM_GUILTY = {
             yIndex: 5,
             xPosition: 8,
             sharedStyle: [
-                LETTER__SHARED,
-                PAPER__SHARED
+                BOOK__SHARED,
+                MAGAZINE__SHARED
             ]
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
             xPosition: 8,
-            sharedStyle: LETTER__SHARED
+            sharedStyle: MAGAZINE__SHARED
         }
     }
 }
@@ -197,7 +203,7 @@ export const THINGS_BEDROOM_FEIGNING = {
             xPosition: 9,
             sharedStyle: [
                 DOLLAR__SHARED,
-                PAPER__SHARED
+                LETTER__SHARED
             ]
         }
     },
@@ -228,7 +234,7 @@ export const THINGS_BEDROOM_SHAKEN = {
             yIndex: 3,
             xPosition: 2,
             zOffset: 0.1,
-            sharedStyle: PAPER__SHARED
+            sharedStyle: LETTER__SHARED
         }
     },
     [CARDBOARD]: {
