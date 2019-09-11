@@ -363,5 +363,10 @@ export default [
         taskName: 'Book or magazine * 8 (Bennett * 3, Jewish boy, Catherine * 2, preteen Bennett * 2)',
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: 'Liz tchotchkes',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
