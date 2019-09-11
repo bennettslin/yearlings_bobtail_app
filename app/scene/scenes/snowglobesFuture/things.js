@@ -23,9 +23,8 @@ import {
     ROAD__SHARED,
     SNOWGLOBE__SHARED
 } from '../../shared'
-import {
-    MICROPHONE__SHARED
-} from '../../shared/instruments'
+import { HEINEKEN__SHARED } from '../../shared/food'
+import { MICROPHONE__SHARED } from '../../shared/instruments'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,
@@ -85,7 +84,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [RECORDING_BEERS]: {
             yIndex: 3,
-            xPosition: 7
+            xPosition: 7,
+            sharedStyle: HEINEKEN__SHARED
         }
     },
     [PANEL]: {
