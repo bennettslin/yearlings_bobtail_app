@@ -20,11 +20,6 @@ export default [
 
     // Food and containers.
     {
-        taskName: 'Remaining beers * 8 (Amy, Bennett, Mara, Stephanie, Shane, Wade * 2, Willy)',
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'Basement food.',
         workedHours: 0,
         neededHours: 2.5

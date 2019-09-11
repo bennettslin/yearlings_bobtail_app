@@ -368,5 +368,10 @@ export default [
         taskName: 'Liz tchotchkes',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Remaining beers * 8 (Amy, Bennett, Mara, Stephanie, Shane, Wade * 2, Willy)',
+        workedHours: 3,
+        neededHours: 3
     }
 ]
