@@ -31,11 +31,6 @@ export default [
         workedHours: 0,
         neededHours: 1.5
     },
-    {
-        taskName: 'Bennett condoms.',
-        workedHours: 0,
-        neededHours: 1
-    },
 
     // Print.
     {
