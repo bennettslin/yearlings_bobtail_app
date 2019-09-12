@@ -373,5 +373,10 @@ export default [
         taskName: 'Remaining beers * 8 (Amy, Bennett, Mara, Stephanie, Shane, Wade * 2, Willy)',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'Basement food.',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

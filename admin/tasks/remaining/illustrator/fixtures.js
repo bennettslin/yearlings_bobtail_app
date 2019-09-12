@@ -20,11 +20,6 @@ export default [
 
     // Food and containers.
     {
-        taskName: 'Basement food.',
-        workedHours: 0,
-        neededHours: 2.5
-    },
-    {
         taskName: 'Evian bottles.',
         workedHours: 0,
         neededHours: 2
