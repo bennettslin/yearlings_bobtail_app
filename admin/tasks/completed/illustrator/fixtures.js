@@ -378,5 +378,10 @@ export default [
         taskName: 'Basement food.',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'Steering wheel * 4',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

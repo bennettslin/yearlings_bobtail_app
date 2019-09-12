@@ -19,14 +19,14 @@ import {
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 import {
-    INTERIOR__SHARED,
-    REATTA__SHARED
-} from '../../shared'
-import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,
     MIRIAM__SHARED
 } from '../../shared/people'
+import {
+    INTERIOR__SHARED,
+    REATTA__SHARED
+} from '../../shared/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

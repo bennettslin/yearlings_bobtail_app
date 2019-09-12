@@ -19,7 +19,6 @@ import {
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
 import {
-    REATTA__SHARED,
     ROAD__SHARED,
     SNOWGLOBE__SHARED
 } from '../../shared'
@@ -30,6 +29,7 @@ import {
     BENNETT__SHARED,
     MIRIAM__SHARED
 } from '../../shared/people'
+import { REATTA__SHARED } from '../../shared/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

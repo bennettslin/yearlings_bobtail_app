@@ -32,11 +32,6 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'Steering wheel * 4',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'Bennett condoms.',
         workedHours: 0,
         neededHours: 1
