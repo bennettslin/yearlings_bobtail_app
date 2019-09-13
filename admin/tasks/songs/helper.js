@@ -2,6 +2,9 @@ import drawings from '../../containers/Progress/drawings'
 
 export const addDrawingTasksToSongTasks = (songTasksArray) => {
 
+    let workedHours = 0,
+        neededHours = 0
+
     songTasksArray.forEach((songTasks, songIndex) => {
         const
             songDrawingTasks = drawings.songTasks[songIndex],
@@ -20,7 +23,13 @@ export const addDrawingTasksToSongTasks = (songTasksArray) => {
             songTasks.push(drawingActorsTask)
         }
 
+        workedHours += actorsWorkedHours
+        neededHours += actorsNeededHours
+
         delete songDrawingTasks.actorsWorkedHours
         delete songDrawingTasks.actorsNeededHours
     })
+
+    console.log('workedHours', workedHours)
+    console.log('neededHours', neededHours)
 }

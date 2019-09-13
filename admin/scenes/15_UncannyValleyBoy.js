@@ -41,9 +41,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM_BENNETT]: {
-                    todo: true,
-                    // Show instance, don't count hours.
-                    workedHours: 6.5,
                     compound: 2,
                     instance: ASLEEP
                 }
