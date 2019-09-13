@@ -18,13 +18,6 @@ export default [
 
     // Actor props.
 
-    // Print.
-    {
-        taskName: 'Vegan signs.',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-
     // Wearables.
     {
         taskName: 'Walkman and headphones',

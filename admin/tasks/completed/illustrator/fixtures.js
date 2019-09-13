@@ -398,5 +398,10 @@ export default [
         taskName: 'Evian bottles.',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'Vegan signs.',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
