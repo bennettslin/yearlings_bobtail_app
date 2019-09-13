@@ -1,10 +1,9 @@
 import { ACTOR } from 'constants/scene'
 import {
     BENNETT,
-    BENNETT_LIZ,
     ANA,
     LIZ,
-    MIRIAM_TRISTAN,
+    MIRIAM,
     TRISTAN,
     NESTOR
 } from 'constants/scene/actors'
@@ -29,11 +28,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: BRUSH_OFF
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: BRUSH_OFF
+                    }
                 }
             }
         }
@@ -67,11 +72,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: CELIBATE_FREEZING
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: CELIBATE_FREEZING
+                    }
                 }
             }
         }
@@ -84,10 +95,14 @@ export default [
                     workedHours: 4.25,
                     instance: GREETING
                 },
-                [MIRIAM_TRISTAN]: {
+                [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
-                    compound: 2,
+                    workedHours: 3.25,
+                    instance: NOOGIE
+                },
+                [TRISTAN]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: NOOGIE
                 },
                 [ANA]: {

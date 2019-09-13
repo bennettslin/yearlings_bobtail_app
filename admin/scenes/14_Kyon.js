@@ -124,17 +124,5 @@ export default [
                 }
             }
         }
-    },
-    {
-        presences: {
-            [ACTOR]: {
-                [LIZ]: {
-                    sita: {
-                        duplicate: true,
-                        instance: ASLEEP_COUCH
-                    }
-                }
-            }
-        }
     }
 ]

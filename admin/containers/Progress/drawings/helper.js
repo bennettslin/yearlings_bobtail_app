@@ -44,26 +44,18 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     todo,
                     workedHours,
                     neededHours,
-                    instance,
-                    compound,
-                    duplicate
+                    instance
                 } = instanceName
 
-            // Don't count duplicate instances.
-            if (!duplicate) {
-
-                drawings[ACTOR][actor].push({
-                    songIndex,
-                    sceneIndex,
-                    character,
-                    todo,
-                    workedHours,
-                    neededHours,
-                    instance,
-                    compound,
-                    duplicate
-                })
-            }
+            drawings[ACTOR][actor].push({
+                songIndex,
+                sceneIndex,
+                character,
+                todo,
+                workedHours,
+                neededHours,
+                instance
+            })
         }
 
         // No longer needed.
@@ -94,7 +86,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                     workedHours,
                     neededHours,
                     instance,
-                    compound,
                     character
                 } = role,
 
@@ -143,19 +134,16 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             }
 
             if (todo) {
-                // Multiply for compound instances.
-                const compoundValue = compound || 1
-
                 drawings.songTasks[songIndex].actorsTodoCount++
 
                 drawings.songTasks[songIndex].actorsWorkedHours += (
                     workedHours || 0
-                ) * compoundValue
+                )
 
                 // Assume 6.25 hours per drawing.
                 drawings.songTasks[songIndex].actorsNeededHours += (
                     neededHours || 6.25
-                ) * compoundValue
+                )
 
             }
             drawings.songTasks[songIndex].actorsTotalCount++

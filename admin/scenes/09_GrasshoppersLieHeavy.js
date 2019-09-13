@@ -1,10 +1,8 @@
 import { ACTOR } from 'constants/scene'
 import {
     BENNETT,
-    BENNETT_LIZ,
     LIZ,
-    NESTOR,
-    BENNETT_LIZ_REFLECTION
+    NESTOR
 } from 'constants/scene/actors'
 import {
     DISHROOM_READING,
@@ -16,8 +14,6 @@ import {
 } from 'constants/scene/actors/instances/nestor'
 import {
     DISHROOM_LANCET,
-    DATE_ENDING,
-    DATE_ENDED,
     GATE_CODE,
     RUMPLED_LINENS
 } from 'constants/scene/actors/instances/songs'
@@ -66,38 +62,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    duplicate: true,
-                    instance: DATE_ENDING
-                },
-                [LIZ]: {
-                    sita: {
-                        duplicate: true,
-                        instance: DATE_ENDING
-                    }
-                }
-            }
-        }
-    },
-    {
-        presences: {
-            [ACTOR]: {
-                [BENNETT]: {
-                    duplicate: true,
-                    instance: DATE_ENDED
-                },
-                [LIZ]: {
-                    sita: {
-                        duplicate: true,
-                        instance: DATE_ENDED
-                    }
-                }
-            }
-        }
-    },
-    {
-        presences: {
-            [ACTOR]: {
-                [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
                     instance: MOP_SOPPED
@@ -133,11 +97,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: GINGERBREAD_PRISON
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: GINGERBREAD_PRISON
+                    }
                 }
             }
         }
@@ -174,11 +144,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: CHEEK_UNVEILED
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: CHEEK_UNVEILED
+                    }
                 }
             }
         }
@@ -186,17 +162,35 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: HARD_ON
                 },
-                [BENNETT_LIZ_REFLECTION]: {
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: HARD_ON
+                    }
+                }
+            }
+        }
+    },
+    {
+        presences: {
+            [ACTOR]: {
+                [BENNETT]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4,
-                        compound: 2,
+                        workedHours: 4.25,
+                        instance: HARD_ON_REFLECTION
+                    }
+                },
+                [LIZ]: {
+                    reflection: {
+                        todo: true,
+                        workedHours: 3.75,
                         instance: HARD_ON_REFLECTION
                     }
                 }
@@ -206,17 +200,35 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: MISSIONARY
                 },
-                [BENNETT_LIZ_REFLECTION]: {
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: MISSIONARY
+                    }
+                }
+            }
+        }
+    },
+    {
+        presences: {
+            [ACTOR]: {
+                [BENNETT]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4,
-                        compound: 2,
+                        workedHours: 4.25,
+                        instance: MISSIONARY_REFLECTION
+                    }
+                },
+                [LIZ]: {
+                    reflection: {
+                        todo: true,
+                        workedHours: 3.75,
                         instance: MISSIONARY_REFLECTION
                     }
                 }
@@ -226,17 +238,35 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: AFTERGLOW
                 },
-                [BENNETT_LIZ_REFLECTION]: {
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: AFTERGLOW
+                    }
+                }
+            }
+        }
+    },
+    {
+        presences: {
+            [ACTOR]: {
+                [BENNETT]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4,
-                        compound: 2,
+                        workedHours: 4.25,
+                        instance: AFTERGLOW_REFLECTION
+                    }
+                },
+                [LIZ]: {
+                    reflection: {
+                        todo: true,
+                        workedHours: 3.75,
                         instance: AFTERGLOW_REFLECTION
                     }
                 }

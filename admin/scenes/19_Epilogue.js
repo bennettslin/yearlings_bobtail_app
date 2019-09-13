@@ -1,12 +1,17 @@
 import { ACTOR } from 'constants/scene'
 import {
-    BENNETTS_CHRISTOPHER_LIZ,
-    ANITA_BENNETT,
+    OLD_BENNETT,
+    BENNETT,
+    LIZ,
+    CHRISTOPHER,
+    ANITA,
+    YOUNG_BENNETT,
     ESTHER,
     WILLY,
     MOTHER,
     FATHER,
-    SASHA_BENNETT,
+    SASHA,
+    PRETEEN_BENNETT,
     BRAD,
     ANDREW,
     CATHERINE,
@@ -29,18 +34,40 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETTS_CHRISTOPHER_LIZ]: {
+                [OLD_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 4,
-                    realHeight: `5'4", 3'5", 4'9"`,
+                    realHeight: `5'4"`,
                     instance: EPILOGUE
                 },
-                [ANITA_BENNETT]: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
-                    realHeight: `3'9", 3'6"`,
+                    realHeight: `5'4"`,
+                    instance: EPILOGUE
+                },
+                [LIZ]: {
+                    todo: true,
+                    workedHours: 3.75,
+                    realHeight: `4'9"`,
+                    instance: EPILOGUE
+                },
+                [CHRISTOPHER]: {
+                    todo: true,
+                    workedHours: 4.25,
+                    realHeight: `3'5"`,
+                    instance: EPILOGUE
+                },
+                [ANITA]: {
+                    todo: true,
+                    workedHours: 4.25,
+                    realHeight: `3'9"`,
+                    instance: EPILOGUE
+                },
+                [YOUNG_BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
+                    realHeight: `3'6"`,
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
@@ -79,10 +106,15 @@ export default [
                     realHeight: `5'6"`,
                     instance: EPILOGUE
                 },
-                [SASHA_BENNETT]: {
+                [SASHA]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    realHeight: `4'1"`,
+                    instance: EPILOGUE
+                },
+                [PRETEEN_BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
                     realHeight: `4'1"`,
                     instance: EPILOGUE
                 },

@@ -1,7 +1,6 @@
 import { ACTOR } from 'constants/scene'
 import {
     BENNETT,
-    BENNETT_LIZ,
     CATHERINE,
     MARA,
     LIZ,
@@ -44,11 +43,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: PAMPAS
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: PAMPAS
+                    }
                 },
                 [CATHERINE]: {
                     gopi: {
@@ -77,11 +82,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: GETTING_DARK
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: GETTING_DARK
+                    }
                 }
             }
         }
@@ -89,11 +100,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: CLIFF
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: CLIFF
+                    }
                 }
             }
         }
@@ -101,11 +118,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: FINAL_DREAM
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: FINAL_DREAM
+                    }
                 },
                 [AMY]: {
                     doctor: {

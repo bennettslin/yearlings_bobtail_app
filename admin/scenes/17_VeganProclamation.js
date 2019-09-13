@@ -1,13 +1,14 @@
 import { ACTOR } from 'constants/scene'
 import {
     BENNETT,
-    KHARI_LIZ,
-    MIRIAM_TRISTAN,
+    KHARI,
+    LIZ,
+    MIRIAM,
+    TRISTAN,
     NESTOR,
     AMY,
     STEPHANIE,
-    WADE,
-    KHARI_LIZ_REFLECTION
+    WADE
 } from 'constants/scene/actors'
 import {
     CAMPUS_ASHAMED,
@@ -35,11 +36,17 @@ export default [
                     workedHours: 4.25,
                     instance: CAMPUS_ASHAMED
                 },
-                [KHARI_LIZ]: {
+                [KHARI]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: PROTECTIVE_CONCERNED
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: PROTECTIVE_CONCERNED
+                    }
                 }
             }
         }
@@ -52,10 +59,14 @@ export default [
                     workedHours: 4.25,
                     instance: SHOW_ANNOYED
                 },
-                [MIRIAM_TRISTAN]: {
+                [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
-                    compound: 2,
+                    workedHours: 3.25,
+                    instance: GREETING
+                },
+                [TRISTAN]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: GREETING
                 },
                 [NESTOR]: {
@@ -85,17 +96,35 @@ export default [
                     workedHours: 4.25,
                     instance: BROKEN_HEARTED
                 },
-                [KHARI_LIZ]: {
+                [KHARI]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: CARESS
                 },
-                [KHARI_LIZ_REFLECTION]: {
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: CARESS
+                    }
+                }
+            }
+        }
+    },
+    {
+        presences: {
+            [ACTOR]: {
+                [KHARI]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4,
-                        compound: 2,
+                        workedHours: 4.25,
+                        instance: CARESS_REFLECTION
+                    }
+                },
+                [LIZ]: {
+                    reflection: {
+                        todo: true,
+                        workedHours: 3.75,
                         instance: CARESS_REFLECTION
                     }
                 }

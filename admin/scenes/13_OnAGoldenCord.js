@@ -2,12 +2,11 @@ import { ACTOR } from 'constants/scene'
 import {
     YOUNG_BENNETT,
     BENNETT,
-    BENNETT_LIZ,
-    BENNETT_STEPHANIE,
+    LIZ,
     ANITA,
     ESTHER,
     WILLY,
-    AMY_NESTOR_TOMER,
+    AMY,
     STEPHANIE
 } from 'constants/scene/actors'
 import { OFFICER } from 'constants/scene/actors/instances/amyNestorTomer'
@@ -39,11 +38,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_LIZ]: {
+                [BENNETT]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: AWKWARD_CONSOLATION
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: AWKWARD_CONSOLATION
+                    }
                 }
             }
         }
@@ -69,13 +74,19 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_STEPHANIE]: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
                     instance: HORSING
                 },
-                [AMY_NESTOR_TOMER]: {
+                [STEPHANIE]: {
+                    [BENNETT]: {
+                        todo: true,
+                        workedHours: 4.25,
+                        instance: HORSING
+                    }
+                },
+                [AMY]: {
                     officer: {
                         todo: true,
                         workedHours: 4.25,
@@ -88,11 +99,17 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_STEPHANIE]: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
                     instance: DRYING_TEARS
+                },
+                [STEPHANIE]: {
+                    [BENNETT]: {
+                        todo: true,
+                        workedHours: 4.25,
+                        instance: DRYING_TEARS
+                    }
                 },
                 [ESTHER]: {
                     youngGirl: {

@@ -2,7 +2,6 @@ import { ACTOR } from 'constants/scene'
 import {
     BENNETT,
     ANA,
-    ANA_HOWIE,
     HOWIE,
     TOMER
 } from 'constants/scene/actors'
@@ -102,10 +101,14 @@ export default [
                     workedHours: 4.25,
                     instance: CEMETERY
                 },
-                [ANA_HOWIE]: {
+                [ANA]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: CEMETERY
+                },
+                [HOWIE]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: CEMETERY
                 },
                 [TOMER]: {

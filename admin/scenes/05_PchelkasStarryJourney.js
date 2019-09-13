@@ -6,8 +6,7 @@ import {
     SASHA,
     BRAD,
     ANDREW,
-    TRISTAN,
-    CHRISTOPHER_BENNETT
+    TRISTAN
 } from 'constants/scene/actors'
 import {
     THROWING,
@@ -39,10 +38,14 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [CHRISTOPHER_BENNETT]: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: BLISSFUL_GUILTY
+                },
+                [CHRISTOPHER]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: BLISSFUL_GUILTY
                 }
             }

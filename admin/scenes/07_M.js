@@ -3,7 +3,6 @@ import {
     BENNETT,
     MARA,
     JACOB,
-    JACOB_MARA,
     ANA,
     HOWIE,
     TOMER,
@@ -119,10 +118,14 @@ export default [
                     workedHours: 4.25,
                     instance: EATING
                 },
-                [JACOB_MARA]: {
+                [JACOB]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: EATING
+                },
+                [MARA]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: EATING
                 },
                 [ANA]: {

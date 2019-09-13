@@ -3,8 +3,7 @@ import {
     PRETEEN_BENNETT,
     SASHA,
     ANDREW,
-    BRAD_BENNETT,
-    BRAD_SASHA
+    BRAD
 } from 'constants/scene/actors'
 import { FEIGNING_FEAR } from 'constants/scene/actors/instances/andrew'
 import { TYING_TETHER } from 'constants/scene/actors/instances/bradBennett'
@@ -21,10 +20,16 @@ export default [
                     workedHours: 4.25,
                     instance: PANICKED
                 },
-                [BRAD_SASHA]: {
+                [BRAD]: {
+                    jewishBoy: {
+                        todo: true,
+                        workedHours: 4.25,
+                        instance: CHARMED_SCHOOLBUS
+                    }
+                },
+                [SASHA]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
                     instance: CHARMED_SCHOOLBUS
                 }
             }
@@ -33,10 +38,14 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BRAD_BENNETT]: {
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: TYING_TETHER
+                },
+                [BRAD]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {

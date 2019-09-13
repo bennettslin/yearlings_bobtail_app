@@ -1,15 +1,14 @@
 import { ACTOR } from 'constants/scene'
 import {
     BENNETT,
-    BENNETT_FATHER,
-    ESTHER_MOTHER,
+    ESTHER,
     MOTHER,
     FATHER,
-    SASHA_BENNETT,
+    SASHA,
+    PRETEEN_BENNETT,
+    KHARI,
     LIZ,
-    KHARI_LIZ,
-    MIRIAM_BENNETT,
-    MIRIAM_STEPHANIE,
+    MIRIAM,
     STEPHANIE
 } from 'constants/scene/actors'
 import {
@@ -21,7 +20,6 @@ import {
     REELING
 } from 'constants/scene/actors/instances/father'
 import { JOKING_LAUGHING } from 'constants/scene/actors/instances/khariLiz'
-import { PETTING_SEATED } from 'constants/scene/actors/instances/liz'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF
@@ -30,7 +28,6 @@ import { MISCHIEVOUS_BANJO } from 'constants/scene/actors/instances/miriamStepha
 import { COMFORTING_HUMILIATED } from 'constants/scene/actors/instances/sashaBennett'
 import { BENNETT_RECORDING } from 'constants/scene/actors/instances/stephanie'
 import {
-    ASLEEP,
     PAST,
     PRESENT,
     FUTURE
@@ -40,20 +37,14 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [MIRIAM_BENNETT]: {
-                    compound: 2,
-                    instance: ASLEEP
-                }
-            }
-        }
-    },
-    {
-        presences: {
-            [ACTOR]: {
-                [MIRIAM_BENNETT]: {
+                [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
-                    compound: 2,
+                    workedHours: 3.25,
+                    instance: ASLEEP_FEARFUL
+                },
+                [BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
@@ -61,13 +52,17 @@ export default [
                     workedHours: 4.25,
                     instance: ACCUSATORY
                 },
-                [ESTHER_MOTHER]: {
+                [ESTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 4.25,
-                        compound: 2,
                         instance: HURT_CONSOLING
                     }
+                },
+                [MOTHER]: {
+                    todo: true,
+                    workedHours: 4.25,
+                    instance: HURT_CONSOLING
                 }
             }
         }
@@ -85,10 +80,14 @@ export default [
                     workedHours: 4.25,
                     instance: PAST
                 },
-                [SASHA_BENNETT]: {
+                [SASHA]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: COMFORTING_HUMILIATED
+                },
+                [PRETEEN_BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: COMFORTING_HUMILIATED
                 }
             }
@@ -97,10 +96,14 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT_FATHER]: {
+                [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: PRESENT
+                },
+                [FATHER]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: PRESENT
                 },
                 [MOTHER]: {
@@ -108,17 +111,17 @@ export default [
                     workedHours: 4.25,
                     instance: PRESENT
                 },
-                [LIZ]: {
-                    sita: {
-                        duplicate: true,
-                        instance: PETTING_SEATED
-                    }
-                },
-                [MIRIAM_STEPHANIE]: {
+                [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
-                    compound: 2,
+                    workedHours: 3.25,
                     instance: MISCHIEVOUS_BANJO
+                },
+                [STEPHANIE]: {
+                    [BENNETT]: {
+                        todo: true,
+                        workedHours: 4.25,
+                        instance: MISCHIEVOUS_BANJO
+                    }
                 }
             }
         }
@@ -148,11 +151,17 @@ export default [
                     workedHours: 4.25,
                     instance: FUTURE
                 },
-                [KHARI_LIZ]: {
+                [KHARI]: {
                     todo: true,
-                    workedHours: 4,
-                    compound: 2,
+                    workedHours: 4.25,
                     instance: JOKING_LAUGHING
+                },
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: JOKING_LAUGHING
+                    }
                 }
             }
         }
@@ -160,10 +169,14 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [MIRIAM_BENNETT]: {
+                [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
-                    compound: 2,
+                    workedHours: 3.25,
+                    instance: FENDING_OFF
+                },
+                [BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
@@ -171,13 +184,17 @@ export default [
                     workedHours: 4.25,
                     instance: REELING
                 },
-                [ESTHER_MOTHER]: {
+                [ESTHER]: {
                     youngSita: {
                         todo: true,
                         workedHours: 4.25,
-                        compound: 2,
                         instance: SOBBING_SHIELDING
                     }
+                },
+                [MOTHER]: {
+                    todo: true,
+                    workedHours: 4.25,
+                    instance: SOBBING_SHIELDING
                 }
             }
         }

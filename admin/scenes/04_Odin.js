@@ -1,7 +1,7 @@
 import { ACTOR } from 'constants/scene'
 import {
     PRETEEN_BENNETT,
-    SASHA_BENNETT
+    SASHA
 } from 'constants/scene/actors'
 import {
     MAT,
@@ -84,10 +84,16 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [SASHA_BENNETT]: {
+                [SASHA]: {
+                    mermaid: {
+                        todo: true,
+                        workedHours: 4.25,
+                        instance: MERMAID
+                    }
+                },
+                [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
                     instance: MERMAID
                 }
             }

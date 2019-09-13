@@ -1,8 +1,7 @@
 import { ACTOR } from 'constants/scene'
 import {
     BENNETT,
-    MIRIAM,
-    MIRIAM_BENNETT
+    MIRIAM
 } from 'constants/scene/actors'
 import {
     REMOVING_PANTS,
@@ -39,10 +38,14 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [MIRIAM_BENNETT]: {
+                [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
-                    compound: 2,
+                    workedHours: 3.25,
+                    instance: COWGIRL
+                },
+                [BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: COWGIRL
                 }
             }
@@ -51,10 +54,14 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [MIRIAM_BENNETT]: {
+                [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
-                    compound: 2,
+                    workedHours: 3.25,
+                    instance: BLOWJOB
+                },
+                [BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: BLOWJOB
                 }
             }
@@ -74,10 +81,6 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [BENNETT]: {
-                    duplicate: true,
-                    instance: INFIRM
-                },
                 [MIRIAM]: {
                     todo: true,
                     workedHours: 3.75,

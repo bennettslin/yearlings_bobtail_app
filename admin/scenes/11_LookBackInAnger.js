@@ -7,11 +7,8 @@ import {
     TOMER,
     LIZ,
     AMY,
-    AMY_STEPHANIE,
     STEPHANIE,
-    WADE,
-    BENNETT_REFLECTION,
-    LIZ_REFLECTION
+    WADE
 } from 'constants/scene/actors'
 import {
     SIDELONG_HESITANCE,
@@ -61,10 +58,14 @@ export default [
                     workedHours: 4.25,
                     instance: WATCHING
                 },
-                [AMY_STEPHANIE]: {
+                [AMY]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: SQUEEZING
+                },
+                [STEPHANIE]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: SQUEEZING
                 }
             }
@@ -140,7 +141,20 @@ export default [
                     workedHours: 4.25,
                     instance: REMOVING_SHOES
                 },
-                [BENNETT_REFLECTION]: {
+                [LIZ]: {
+                    sita: {
+                        todo: true,
+                        workedHours: 3.75,
+                        instance: ASLEEP_REACHING
+                    }
+                }
+            }
+        }
+    },
+    {
+        presences: {
+            [ACTOR]: {
+                [BENNETT]: {
                     reflection: {
                         todo: true,
                         workedHours: 4.25,
@@ -148,13 +162,6 @@ export default [
                     }
                 },
                 [LIZ]: {
-                    sita: {
-                        todo: true,
-                        workedHours: 3.75,
-                        instance: ASLEEP_REACHING
-                    }
-                },
-                [LIZ_REFLECTION]: {
                     reflection: {
                         todo: true,
                         workedHours: 3.75,

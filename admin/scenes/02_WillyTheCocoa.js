@@ -5,8 +5,7 @@ import {
     MOTHER,
     FATHER,
     CHRISTOPHER,
-    CHRISTOPHER_BENNETT_WILLY,
-    HOWIE_WILLY,
+    HOWIE,
     TOMER
 } from 'constants/scene/actors'
 import {
@@ -92,10 +91,16 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [HOWIE_WILLY]: {
+                [HOWIE]: {
+                    gangbanger: {
+                        todo: true,
+                        workedHours: 4.25,
+                        instance: GANGBANGER
+                    }
+                },
+                [WILLY]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
                     instance: GANGBANGER
                 },
                 [TOMER]: {
@@ -127,10 +132,19 @@ export default [
     {
         presences: {
             [ACTOR]: {
-                [CHRISTOPHER_BENNETT_WILLY]: {
+                [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 4.25,
-                    compound: 2,
+                    instance: REASSURING_ENCHANTED
+                },
+                [PRETEEN_BENNETT]: {
+                    todo: true,
+                    workedHours: 4.25,
+                    instance: REASSURING_ENCHANTED
+                },
+                [WILLY]: {
+                    todo: true,
+                    workedHours: 4.25,
                     instance: REASSURING_ENCHANTED
                 }
             }
