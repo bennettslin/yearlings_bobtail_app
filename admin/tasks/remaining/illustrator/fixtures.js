@@ -25,13 +25,6 @@ export default [
         neededHours: 2
     },
 
-    // Props.
-    {
-        taskName: 'Bennett phone.',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-
     // Print.
     {
         taskName: 'Vegan signs.',
