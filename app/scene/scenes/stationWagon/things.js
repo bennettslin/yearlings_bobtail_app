@@ -36,7 +36,6 @@ const ARRANGEMENTS_THINGS = {
         [EVIAN_BOTTLES]: {
             yIndex: 3,
             xPosition: 1.5,
-            scaleFactor: 0.3,
             sharedStyle: EVIAN__SHARED
         }
     },

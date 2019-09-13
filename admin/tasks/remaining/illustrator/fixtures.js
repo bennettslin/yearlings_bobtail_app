@@ -18,13 +18,6 @@ export default [
 
     // Actor props.
 
-    // Food and containers.
-    {
-        taskName: 'Evian bottles.',
-        workedHours: 0,
-        neededHours: 2
-    },
-
     // Print.
     {
         taskName: 'Vegan signs.',

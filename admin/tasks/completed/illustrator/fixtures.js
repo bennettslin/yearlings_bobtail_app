@@ -393,5 +393,10 @@ export default [
         taskName: 'Bennett phone.',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'Evian bottles.',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
