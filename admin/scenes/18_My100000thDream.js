@@ -28,6 +28,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: EL_TORITO
                 },
                 [LIZ]: {
@@ -46,6 +53,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: PAMPAS
                 },
                 [LIZ]: {
@@ -59,6 +73,13 @@ export default [
                     gopi: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: GOPI
                     }
                 },
@@ -66,6 +87,13 @@ export default [
                     gopi: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: GOPI
                     }
                 },
@@ -85,6 +113,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: GETTING_DARK
                 },
                 [LIZ]: {
@@ -103,6 +138,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CLIFF
                 },
                 [LIZ]: {
@@ -121,6 +163,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: FINAL_DREAM
                 },
                 [LIZ]: {
@@ -134,6 +183,13 @@ export default [
                     doctor: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: DOCTOR
                     }
                 }

@@ -22,6 +22,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: DATE_ENDING
                 },
                 [LIZ]: {
@@ -40,6 +47,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: MUSEUM
                 },
                 [LIZ]: {
@@ -58,6 +72,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: BACKSTAGE
                 },
                 [LIZ]: {
@@ -70,12 +91,26 @@ export default [
                 [KHARI]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: DOUBLE_ALBERT
                 },
                 [STEPHANIE]: {
                     actor: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: FLAPPER
                     }
                 }
@@ -88,6 +123,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: GO_KARTS
                 },
                 [LIZ]: {
@@ -106,6 +148,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: DATE_ENDED
                 },
                 [LIZ]: {

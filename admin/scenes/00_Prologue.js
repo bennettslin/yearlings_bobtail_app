@@ -9,6 +9,13 @@ export default [
                 [OLD_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: PROLOGUE
                 }
             }

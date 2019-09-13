@@ -31,6 +31,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: BRUSH_OFF
                 },
                 [LIZ]: {
@@ -49,16 +56,37 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: PUNCHING
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
@@ -75,6 +103,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CELIBATE_FREEZING
                 },
                 [LIZ]: {
@@ -93,6 +128,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: GREETING
                 },
                 [MIRIAM]: {
@@ -103,11 +145,25 @@ export default [
                 [TRISTAN]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: NOOGIE
                 },
                 [ANA]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: SMIRKING
                 }
             }
@@ -119,6 +175,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: LEAVING_CRUMBLED
                 },
                 [LIZ]: {

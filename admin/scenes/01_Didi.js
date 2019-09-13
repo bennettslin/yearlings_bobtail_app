@@ -27,16 +27,37 @@ export default [
                 [ESTHER]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CURIOUS
                 },
                 [ANITA]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: PANICKED
                 }
             }
@@ -48,16 +69,37 @@ export default [
                 [ANITA]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CONCERNED
                 },
                 [ESTHER]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: FLUSTERED
                 }
             }
@@ -69,6 +111,13 @@ export default [
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: BATHING
                 }
             }
@@ -80,11 +129,25 @@ export default [
                 [ANITA]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: SINGING
                 }
             }

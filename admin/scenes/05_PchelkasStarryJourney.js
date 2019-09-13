@@ -41,11 +41,25 @@ export default [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: BLISSFUL_GUILTY
                 }
             }
@@ -57,6 +71,13 @@ export default [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: FEIGNING_SICK
                 }
             }
@@ -68,6 +89,13 @@ export default [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: ASLEEP
                 }
             }
@@ -79,6 +107,13 @@ export default [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: SHAKEN
                 }
             }
@@ -90,16 +125,37 @@ export default [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: STOIC
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: GESTURING
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: THROWING
                 }
             }
@@ -111,22 +167,50 @@ export default [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: WISTFUL
                 },
                 [BRAD]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: SNACKING
                 },
                 [ANDREW]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: NOODLING
                 },
                 [SASHA]: {
                     popularGirl: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: POPULAR_GIRL
                     }
                 }
@@ -139,22 +223,50 @@ export default [
                 [PRETEEN_BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: STARING
                 },
                 [MOTHER]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: ARGUING
                 },
                 [TRISTAN]: {
                     principal: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: PRINCIPAL
                     }
                 }

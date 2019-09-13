@@ -27,11 +27,25 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: WEEPING
                 }
             }
@@ -43,11 +57,25 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: QUIPPING
                 }
             }
@@ -59,6 +87,13 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CATHOLIC_PENSIVE
                 }
             }
@@ -70,12 +105,26 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CATHOLIC_IDEA
                 },
                 [WADE]: {
                     catholic: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: CATHOLIC_GUY
                     }
                 },
@@ -83,6 +132,13 @@ export default [
                     smoker: {
                         todo: true,
                         workedHours: 4.25,
+                        feet: false,
+                        legs: false,
+                        trunk: false,
+                        hands: false,
+                        head: false,
+                        face: false,
+                        composite: false,
                         instance: SMOKER
                     }
                 }
@@ -95,11 +151,25 @@ export default [
                 [BENNETT]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: PIOUS
                 },
                 [CATHERINE]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: PUZZLED
                 }
             }

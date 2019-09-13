@@ -43,7 +43,13 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 {
                     todo,
                     workedHours,
-                    neededHours,
+                    feet,
+                    legs,
+                    trunk,
+                    hands,
+                    head,
+                    face,
+                    composite,
                     instance
                 } = instanceName
 
@@ -53,7 +59,13 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 character,
                 todo,
                 workedHours,
-                neededHours,
+                feet,
+                legs,
+                trunk,
+                hands,
+                head,
+                face,
+                composite,
                 instance
             })
         }
@@ -80,16 +92,48 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
         roles.forEach(role => {
 
             const {
-                    songIndex,
-                    sceneIndex,
-                    todo,
-                    workedHours,
-                    neededHours,
-                    instance,
-                    character
-                } = role,
+                songIndex,
+                sceneIndex,
+                todo,
+                workedHours: givenWorkedHours,
+                feet,
+                legs,
+                trunk,
+                hands,
+                head,
+                face,
+                composite,
+                instance,
+                character
+            } = role
 
-                doneForNow = todo && workedHours >= 4.25
+            let workedHours = givenWorkedHours
+
+            if (!isFinite(givenWorkedHours)) {
+                if (feet) {
+                    workedHours += 0.25
+                }
+                if (legs) {
+                    workedHours += 0.25
+                }
+                if (trunk) {
+                    workedHours += 0.25
+                }
+                if (hands) {
+                    workedHours += 0.25
+                }
+                if (head) {
+                    workedHours += 0.25
+                }
+                if (face) {
+                    workedHours += 0.5
+                }
+                if (composite) {
+                    workedHours += 0.25
+                }
+            }
+
+            const doneForNow = todo && workedHours >= 4.25
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects
@@ -142,7 +186,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
 
                 // Assume 6.25 hours per drawing.
                 drawings.songTasks[songIndex].actorsNeededHours += (
-                    neededHours || 6.25
+                    6.25
                 )
 
             }

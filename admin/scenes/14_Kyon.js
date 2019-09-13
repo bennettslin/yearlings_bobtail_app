@@ -71,6 +71,13 @@ export default [
                 [KHARI]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: ARRIVED
                 }
             }
@@ -89,6 +96,13 @@ export default [
                 [KHARI]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: JUDGMENTAL
                 }
             }
@@ -107,6 +121,13 @@ export default [
                 [KHARI]: {
                     todo: true,
                     workedHours: 4.25,
+                    feet: false,
+                    legs: false,
+                    trunk: false,
+                    hands: false,
+                    head: false,
+                    face: false,
+                    composite: false,
                     instance: CONCERNED
                 }
             }
