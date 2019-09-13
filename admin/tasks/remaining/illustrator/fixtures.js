@@ -20,6 +20,16 @@ export default [
 
     // Wearables.
     {
+        taskName: 'Golden bracelet.',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'Cigarettes.',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: 'Walkman and headphones',
         workedHours: 0,
         neededHours: 1.5
@@ -61,11 +71,6 @@ export default [
     },
     {
         taskName: 'Flapper hat.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'Golden bracelet.',
         workedHours: 0,
         neededHours: 1
     }
