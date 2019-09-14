@@ -28,11 +28,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Baby',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'Backpacks * 11 (Anita * 2, Catherine, Esther * 2, Liz * 2, Wade, young Bennett * 3)',
         workedHours: 0,
         neededHours: 6

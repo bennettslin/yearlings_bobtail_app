@@ -423,5 +423,10 @@ export default [
         taskName: 'Mara watch.',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Baby',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
