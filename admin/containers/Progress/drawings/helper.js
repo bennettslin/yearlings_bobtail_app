@@ -110,6 +110,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             let workedHours = givenWorkedHours
 
             if (!isFinite(givenWorkedHours)) {
+                workedHours = 4.25
+
                 if (feet) {
                     workedHours += 0.25
                 }
