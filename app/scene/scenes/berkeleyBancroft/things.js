@@ -11,6 +11,7 @@ import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../constants/scene/thing
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
 import { ODIN_GHOST__SHARED } from '../../shared/animals'
 import { BERKELEY_BUILDING__SHARED } from '../../shared/buildings'
+import { CIGARETTE__SHARED } from '../../shared/food'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -22,7 +23,8 @@ const ARRANGEMENTS_THINGS = {
         [ASH_CAN]: {
             yIndex: 4,
             xPosition: 5.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            sharedStyle: CIGARETTE__SHARED
         }
     },
     [FLAT]: {

@@ -18,16 +18,6 @@ export default [
 
     // Actor props.
     {
-        taskName: 'Cigarettes.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'Baby',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'Khari hat.',
         workedHours: 0,
         neededHours: 1
@@ -36,6 +26,11 @@ export default [
         taskName: 'Flapper hat.',
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: 'Baby',
+        workedHours: 0,
+        neededHours: 2
     },
     {
         taskName: 'Backpacks * 11 (Anita * 2, Catherine, Esther * 2, Liz * 2, Wade, young Bennett * 3)',

@@ -1,5 +1,6 @@
 export const BASEMENT_TAKEOUT__SHARED = 'basementTakeout'
 export const BUDWEISER__SHARED = 'budweiser'
+export const CIGARETTE__SHARED = 'cigarette'
 export const CHINESE_TAKEOUT__SHARED = 'chineseTakeout'
 export const EVIAN__SHARED = 'evian'
 export const GARBAGE_BAG__SHARED = 'garbageBag'

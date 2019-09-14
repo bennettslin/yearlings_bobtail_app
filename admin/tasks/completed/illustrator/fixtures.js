@@ -413,5 +413,10 @@ export default [
         taskName: 'Walkman and headphones',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'Cigarettes.',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
