@@ -23,11 +23,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Walkman and headphones',
-        workedHours: 0,
-        neededHours: 1.5
-    },
-    {
         taskName: 'Baby',
         workedHours: 0,
         neededHours: 2
