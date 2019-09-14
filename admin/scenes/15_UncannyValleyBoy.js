@@ -39,7 +39,14 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
@@ -179,7 +186,14 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: MISCHIEVOUS_BANJO
                 },
                 [STEPHANIE]: {
@@ -261,7 +275,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: JOKING_LAUGHING
                     }
                 }
@@ -273,7 +294,14 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {

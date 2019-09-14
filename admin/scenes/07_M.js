@@ -231,7 +231,15 @@ export default [
                 [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
-                        workedHours: 3,
+                        faceRevision: true,
+                        hair: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: INFANT_CURIOUS
                     }
                 }
@@ -255,14 +263,29 @@ export default [
                 [MIRIAM]: {
                     maskedWoman: {
                         todo: true,
-                        workedHours: 3,
+                        faceRevision: true,
+                        hair: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: INFANT_NURSING
                     }
                 },
                 [HOWIE]: {
                     maskedUsher: {
                         todo: true,
-                        workedHours: 3,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: USHER_WAITING
                     }
                 }

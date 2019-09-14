@@ -42,7 +42,8 @@ export const initialiseDrawings = (drawings, songIndex) => {
 
                 {
                     todo,
-                    workedHours,
+                    faceRevision,
+                    hair,
                     feet,
                     legs,
                     trunk,
@@ -58,7 +59,8 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 sceneIndex,
                 character,
                 todo,
-                workedHours,
+                faceRevision,
+                hair,
                 feet,
                 legs,
                 trunk,
@@ -95,7 +97,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 songIndex,
                 sceneIndex,
                 todo,
-                workedHours: givenWorkedHours,
+                faceRevision,
+                hair,
                 feet,
                 legs,
                 trunk,
@@ -107,32 +110,38 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 character
             } = role
 
-            let workedHours = givenWorkedHours
+            /**
+             * The baseline figure that reflects work that has already been
+             * done, including body, clothes, and head drawings.
+             */
+            let workedHours = 3.25
 
-            if (!isFinite(givenWorkedHours)) {
-                workedHours = 4.25
-
-                if (!feet) {
-                    workedHours += 0.25
-                }
-                if (!legs) {
-                    workedHours += 0.25
-                }
-                if (!trunk) {
-                    workedHours += 0.25
-                }
-                if (!hands) {
-                    workedHours += 0.25
-                }
-                if (!head) {
-                    workedHours += 0.25
-                }
-                if (!face) {
-                    workedHours += 0.5
-                }
-                if (!composite) {
-                    workedHours += 0.25
-                }
+            if (!faceRevision) {
+                workedHours += 0.5
+            }
+            if (!hair) {
+                workedHours += 0.5
+            }
+            if (!feet) {
+                workedHours += 0.25
+            }
+            if (!legs) {
+                workedHours += 0.25
+            }
+            if (!trunk) {
+                workedHours += 0.25
+            }
+            if (!hands) {
+                workedHours += 0.25
+            }
+            if (!head) {
+                workedHours += 0.25
+            }
+            if (!face) {
+                workedHours += 0.5
+            }
+            if (!composite) {
+                workedHours += 0.25
             }
 
             const doneForNow = todo && workedHours >= 4.25

@@ -39,7 +39,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: EL_TORITO
                     }
                 }
@@ -63,7 +70,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: PAMPAS
                     }
                 },
@@ -96,7 +110,14 @@ export default [
                 [MIRIAM]: {
                     gopi: {
                         todo: true,
-                        workedHours: 3.75,
+                        hair: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: GOPI
                     }
                 }
@@ -120,7 +141,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: GETTING_DARK
                     }
                 }
@@ -144,7 +172,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: CLIFF
                     }
                 }
@@ -168,7 +203,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: FINAL_DREAM
                     }
                 },

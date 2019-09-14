@@ -42,7 +42,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: BRUSH_OFF
                     }
                 }
@@ -87,7 +94,14 @@ export default [
                 },
                 [NESTOR]: {
                     todo: true,
-                    workedHours: 3.75,
+                    faceRevision: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: INJURED
                 }
             }
@@ -110,7 +124,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: CELIBATE_FREEZING
                     }
                 }
@@ -133,7 +154,14 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
@@ -178,7 +206,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: LEAVING_CRUMBLED
                     }
                 }

@@ -58,7 +58,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: AWKWARD_CONSOLATION
                     }
                 }

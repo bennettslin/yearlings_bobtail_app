@@ -25,7 +25,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: PETTING_SEATED
                     }
                 }
@@ -38,7 +45,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: PETTING_STANDING
                     }
                 }
@@ -51,7 +65,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
@@ -64,7 +85,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: OPENING_DOOR
                     }
                 },
@@ -88,7 +116,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: DEFENDING
                     }
                 },
@@ -112,7 +147,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: NOT_HUNGRY
                     }
                 },
@@ -136,7 +178,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: ASLEEP_COUCH
                     }
                 }

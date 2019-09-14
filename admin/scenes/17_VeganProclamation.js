@@ -56,7 +56,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: PROTECTIVE_CONCERNED
                     }
                 }
@@ -79,7 +86,14 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: GREETING
                 },
                 [TRISTAN]: {
@@ -95,7 +109,14 @@ export default [
                 },
                 [NESTOR]: {
                     todo: true,
-                    workedHours: 3.75,
+                    faceRevision: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: GREETING
                 }
             }
@@ -146,7 +167,14 @@ export default [
                 [LIZ]: {
                     sita: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: CARESS
                     }
                 }
@@ -172,7 +200,14 @@ export default [
                 [LIZ]: {
                     reflection: {
                         todo: true,
-                        workedHours: 3.75,
+                        faceRevision: true,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: CARESS_REFLECTION
                     }
                 }

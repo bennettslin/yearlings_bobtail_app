@@ -60,7 +60,14 @@ export default [
                 },
                 [LIZ]: {
                     todo: true,
-                    workedHours: 3.75,
+                    faceRevision: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     realHeight: `4'9"`,
                     instance: EPILOGUE
                 },
@@ -318,7 +325,14 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     realHeight: `5'1"`,
                     instance: EPILOGUE
                 },
@@ -336,7 +350,14 @@ export default [
                 },
                 [NESTOR]: {
                     todo: true,
-                    workedHours: 3.75,
+                    faceRevision: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     realHeight: `5'7"`,
                     instance: EPILOGUE
                 }

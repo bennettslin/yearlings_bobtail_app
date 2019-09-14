@@ -4891,5 +4891,10 @@ export default [
         taskName: 'Helper for shared styles.',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow progress dashboard to log individual drawing tasks per actor.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

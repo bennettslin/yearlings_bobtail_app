@@ -35,7 +35,14 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: PERFUMING
                 }
             }
@@ -46,7 +53,14 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: COWGIRL
                 },
                 [BENNETT]: {
@@ -68,7 +82,14 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.25,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
@@ -107,7 +128,14 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: TENNIS
                 }
             }
@@ -129,7 +157,14 @@ export default [
                 },
                 [MIRIAM]: {
                     todo: true,
-                    workedHours: 3.75,
+                    hair: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: REVERSING
                 }
             }
