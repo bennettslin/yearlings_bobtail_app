@@ -18,11 +18,6 @@ export default [
 
     // Actor props.
     {
-        taskName: 'Golden bracelet.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'Cigarettes.',
         workedHours: 0,
         neededHours: 1
