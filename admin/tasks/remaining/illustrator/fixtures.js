@@ -41,10 +41,5 @@ export default [
         taskName: 'Liz purse * 3',
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: 'Catherine purse',
-        workedHours: 0,
-        neededHours: 1
     }
 ]
