@@ -29,14 +29,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: CORD_SIDE
                 }
             }
@@ -47,14 +46,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: AWKWARD_CONSOLATION
                 },
                 [LIZ]: {
@@ -72,27 +70,25 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: CORD_REAR
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: BENNETT_DEFIANT
                     }
                 }
@@ -104,41 +100,38 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: HORSING
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: HORSING
                     }
                 },
                 [AMY]: {
                     officer: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: OFFICER
                     }
                 }
@@ -150,83 +143,77 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DRYING_TEARS
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: DRYING_TEARS
                     }
                 },
                 [ESTHER]: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: YOUNG_CHILD
                     }
                 },
                 [ANITA]: {
                     youngGirl: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: YOUNG_CHILD
                     }
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: YOUNG_CHILD
                     }
                 },
                 [WILLY]: {
                     crossingGuard: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: CROSSING_GUARD
                     }
                 }

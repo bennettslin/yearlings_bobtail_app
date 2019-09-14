@@ -24,14 +24,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
@@ -52,14 +51,13 @@ export default [
                 },
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: COWGIRL
                 }
             }
@@ -75,14 +73,13 @@ export default [
                 },
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: BLOWJOB
                 }
             }
@@ -93,14 +90,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: INFIRM
                 }
             }
@@ -122,14 +118,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {

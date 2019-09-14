@@ -33,26 +33,24 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: PROTECTIVE_CONCERNED
                 },
                 [LIZ]: {
@@ -70,14 +68,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
@@ -87,14 +84,13 @@ export default [
                 },
                 [TRISTAN]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: GREETING
                 },
                 [NESTOR]: {
@@ -110,14 +106,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: ALLEY
                 }
             }
@@ -128,26 +123,24 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: CARESS
                 },
                 [LIZ]: {
@@ -166,14 +159,13 @@ export default [
                 [KHARI]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: CARESS_REFLECTION
                     }
                 },
@@ -192,55 +184,51 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DEMONSTRATION
                 },
                 [AMY]: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: PROTESTER
                     }
                 },
                 [STEPHANIE]: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: PROTESTER
                     }
                 },
                 [WADE]: {
                     demonstrator: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: PROTESTER
                     }
                 }

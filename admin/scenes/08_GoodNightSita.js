@@ -21,14 +21,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DATE_ENDING
                 },
                 [LIZ]: {
@@ -46,14 +45,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: MUSEUM
                 },
                 [LIZ]: {
@@ -71,14 +69,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: BACKSTAGE
                 },
                 [LIZ]: {
@@ -90,27 +87,25 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DOUBLE_ALBERT
                 },
                 [STEPHANIE]: {
                     actor: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: FLAPPER
                     }
                 }
@@ -122,14 +117,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: GO_KARTS
                 },
                 [LIZ]: {
@@ -147,14 +141,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DATE_ENDED
                 },
                 [LIZ]: {

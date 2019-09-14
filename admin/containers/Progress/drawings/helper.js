@@ -112,25 +112,25 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!isFinite(givenWorkedHours)) {
                 workedHours = 4.25
 
-                if (feet) {
+                if (!feet) {
                     workedHours += 0.25
                 }
-                if (legs) {
+                if (!legs) {
                     workedHours += 0.25
                 }
-                if (trunk) {
+                if (!trunk) {
                     workedHours += 0.25
                 }
-                if (hands) {
+                if (!hands) {
                     workedHours += 0.25
                 }
-                if (head) {
+                if (!head) {
                     workedHours += 0.25
                 }
-                if (face) {
+                if (!face) {
                     workedHours += 0.5
                 }
-                if (composite) {
+                if (!composite) {
                     workedHours += 0.25
                 }
             }

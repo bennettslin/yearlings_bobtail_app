@@ -34,14 +34,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DISHROOM_READING
                 }
             }
@@ -52,14 +51,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: DISHROOM_LANCET
                 },
                 [LIZ]: {
@@ -77,14 +75,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: MOP_SOPPED
                 },
                 [NESTOR]: {
@@ -102,14 +99,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: GATE_CODE
                 },
                 [LIZ]: {
@@ -127,14 +123,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: GINGERBREAD_PRISON
                 },
                 [LIZ]: {
@@ -152,14 +147,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: RUMPLED_LINENS
                 },
                 [LIZ]: {
@@ -177,14 +171,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: WAITING_ROOM_ASLEEP
                 }
             }
@@ -195,14 +188,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: CHEEK_UNVEILED
                 },
                 [LIZ]: {
@@ -220,14 +212,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: HARD_ON
                 },
                 [LIZ]: {
@@ -246,14 +237,13 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: HARD_ON_REFLECTION
                     }
                 },
@@ -272,14 +262,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: MISSIONARY
                 },
                 [LIZ]: {
@@ -298,14 +287,13 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: MISSIONARY_REFLECTION
                     }
                 },
@@ -324,14 +312,13 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     todo: true,
-                    workedHours: 4.25,
-                    feet: false,
-                    legs: false,
-                    trunk: false,
-                    hands: false,
-                    head: false,
-                    face: false,
-                    composite: false,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
                     instance: AFTERGLOW
                 },
                 [LIZ]: {
@@ -350,14 +337,13 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         todo: true,
-                        workedHours: 4.25,
-                        feet: false,
-                        legs: false,
-                        trunk: false,
-                        hands: false,
-                        head: false,
-                        face: false,
-                        composite: false,
+                        feet: true,
+                        legs: true,
+                        trunk: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
                         instance: AFTERGLOW_REFLECTION
                     }
                 },
