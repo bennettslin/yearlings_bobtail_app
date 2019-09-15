@@ -31,10 +31,5 @@ export default [
         taskName: 'Backpacks * 11 (Anita * 2, Catherine, Esther * 2, Liz * 2, Wade, young Bennett * 3)',
         workedHours: 0,
         neededHours: 6
-    },
-    {
-        taskName: 'Bennett messenger bag * 6',
-        workedHours: 0,
-        neededHours: 3
     }
 ]
