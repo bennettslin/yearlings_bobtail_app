@@ -3,11 +3,6 @@ export default [
      * Do once the presence svgs are mostly done.
      */
     {
-        taskName: `Finalise loading page.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Include saturation in logic to determine final face hsla.`,
         workedHours: 0,
         neededHours: 2

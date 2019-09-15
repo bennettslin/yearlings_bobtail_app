@@ -4896,5 +4896,10 @@ export default [
         taskName: `Allow progress dashboard to log individual drawing tasks per actor.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Finalise loading page.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
