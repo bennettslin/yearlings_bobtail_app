@@ -438,5 +438,10 @@ export default [
         taskName: 'Catherine purse',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'Liz purse * 3',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
