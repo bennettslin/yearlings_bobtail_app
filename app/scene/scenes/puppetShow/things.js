@@ -53,6 +53,7 @@ import {
     MOTHER__SHARED
 } from '../../shared/people'
 import { SKETCH_TAIWAN__SHARED } from '../../shared/sketch'
+import { TAIWAN_MOUNTAIN__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -73,13 +74,15 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: -0.5,
             scaleFactor: 0.4,
-            alignLeft: true
+            alignLeft: true,
+            sharedStyle: TAIWAN_MOUNTAIN__SHARED
         },
         [TAIWAN_MOUNTAIN_RIGHT]: {
             yIndex: 5,
             xPosition: 11.5,
             scaleFactor: 0.4,
-            alignRight: true
+            alignRight: true,
+            sharedStyle: TAIWAN_MOUNTAIN__SHARED
         }
     },
     [PANEL]: {
