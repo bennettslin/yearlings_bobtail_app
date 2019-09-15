@@ -1,11 +1,6 @@
 export default [
     // Cloth.
     {
-        taskName: 'backpackBennett',
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'bennettShoe',
         workedHours: 0,
         neededHours: 1
@@ -28,8 +23,13 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Backpacks * 11 (Anita * 2, Catherine, Esther * 2, Liz * 2, Wade, young Bennett * 3)',
+        taskName: 'backpackBennett',
         workedHours: 0,
-        neededHours: 6
+        neededHours: 2
+    },
+    {
+        taskName: 'Backpacks * 6 (Anita * 2, Esther * 2, young Bennett * 2)',
+        workedHours: 0,
+        neededHours: 4
     }
 ]
