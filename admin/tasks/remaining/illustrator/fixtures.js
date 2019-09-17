@@ -18,18 +18,13 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'Flapper hat.',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'backpackBennett',
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: 'Backpacks * 6 (Anita * 2, Esther * 2, young Bennett * 2)',
+        taskName: 'Backpack (young Bennett)',
         workedHours: 0,
-        neededHours: 4
+        neededHours: 1
     }
 ]

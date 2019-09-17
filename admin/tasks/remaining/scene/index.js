@@ -37,6 +37,7 @@ export default [
     },
     {
         taskName: 'bathroom',
+        todo: 'expand wall',
         workedHours: 0,
         neededHours: 1
     },
@@ -47,6 +48,12 @@ export default [
     },
     {
         taskName: 'porch',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'bedroom',
+        todo: 'fix bed wonkiness',
         workedHours: 0,
         neededHours: 1
     },
@@ -72,6 +79,7 @@ export default [
     },
     {
         taskName: 'taiwanRoom',
+        todo: 'expand door',
         workedHours: 0,
         neededHours: 1
     },
@@ -107,11 +115,6 @@ export default [
     },
     {
         taskName: 'oceanFloor',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'bedroom',
         workedHours: 0,
         neededHours: 1
     },
