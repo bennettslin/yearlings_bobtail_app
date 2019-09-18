@@ -35,7 +35,6 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -52,7 +51,6 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -154,7 +152,6 @@ export default [
                 },
                 [WILLY]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -234,7 +231,6 @@ export default [
                 },
                 [WILLY]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

@@ -214,7 +214,6 @@ export default [
                 [WILLY]: {
                     crossingGuard: {
                         todo: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
