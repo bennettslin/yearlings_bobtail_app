@@ -4,7 +4,7 @@ import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
 import haircutScissors from 'assets/svgs/fixtures/haircutScissors'
 import letterScraps from 'assets/svgs/fixtures/letterScraps'
 import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
-// import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
+import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
 import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
 import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
 import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
@@ -110,7 +110,7 @@ export default {
     [HAIRCUT_SCISSORS]: haircutScissors,
     [LETTER_SCRAPS__CHRISTOPHER]: letterScraps,
     [CHRISTOPHER_LETTERS]: christopherLetters,
-    [BACKPACK_BENNETT]: false,
+    [BACKPACK_BENNETT]: backpackBennett,
     [FRIDGE_DRAWINGS]: fridgeDrawings,
     [CAPTAIN_BED_LAMP]: captainBedLamp,
     [RED_ENVELOPE_MONEY]: redEnvelopeMoney,

@@ -58,11 +58,7 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [BACKPACK_BENNETT]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 3.5
         }
     },
     [FLAT]: {
