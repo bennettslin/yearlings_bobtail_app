@@ -144,7 +144,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += 0.25
             }
 
-            const doneForNow = todo && workedHours >= 4.25
+            // const doneForNow = todo && workedHours >= 4.25
+            const doneForNow = !feet
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects
