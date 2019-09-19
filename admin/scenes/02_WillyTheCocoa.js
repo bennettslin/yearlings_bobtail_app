@@ -140,7 +140,6 @@ export default [
                 [HOWIE]: {
                     gangbanger: {
                         todo: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,

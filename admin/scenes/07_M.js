@@ -279,7 +279,6 @@ export default [
                     maskedUsher: {
                         todo: true,
                         faceRevision: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -309,7 +308,6 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         todo: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
