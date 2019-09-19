@@ -61,7 +61,6 @@ export default [
                 [TOMER]: {
                     shane: {
                         todo: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,

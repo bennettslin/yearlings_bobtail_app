@@ -123,7 +123,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += 0.5
             }
             if (!feet) {
-                workedHours += 0.1
+                workedHours += 0.2
             }
             if (!legs) {
                 workedHours += 0.25
