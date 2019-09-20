@@ -72,7 +72,6 @@ export default [
                 },
                 [TRISTAN]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -165,7 +164,6 @@ export default [
                 },
                 [TRISTAN]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
