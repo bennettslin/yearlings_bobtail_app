@@ -100,7 +100,6 @@ export default [
             [ACTOR]: {
                 [FATHER]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

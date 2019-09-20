@@ -7,7 +7,9 @@ import {
     ESTHER,
     WILLY,
     AMY,
-    STEPHANIE
+    STEPHANIE,
+    NESTOR,
+    TOMER
 } from 'constants/scene/actors'
 import { OFFICER } from 'constants/scene/actors/instances/amyNestorTomer'
 import {
@@ -141,6 +143,27 @@ export default [
                         composite: true,
                         instance: OFFICER
                     }
+                },
+                [NESTOR]: {
+                    todo: true,
+                    feet: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
+                    instance: OFFICER
+                },
+                [TOMER]: {
+                    todo: true,
+                    legs: true,
+                    trunk: true,
+                    hands: true,
+                    head: true,
+                    face: true,
+                    composite: true,
+                    instance: OFFICER
                 }
             }
         }
