@@ -95,7 +95,6 @@ export default [
                 [NESTOR]: {
                     todo: true,
                     faceRevision: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
