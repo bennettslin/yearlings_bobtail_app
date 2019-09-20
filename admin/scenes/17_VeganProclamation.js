@@ -44,7 +44,6 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -155,7 +154,6 @@ export default [
                 },
                 [KHARI]: {
                     todo: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -187,7 +185,6 @@ export default [
                 [KHARI]: {
                     reflection: {
                         todo: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
