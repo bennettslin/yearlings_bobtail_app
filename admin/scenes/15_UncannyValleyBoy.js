@@ -96,7 +96,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -142,7 +141,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -201,7 +199,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -282,7 +279,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
