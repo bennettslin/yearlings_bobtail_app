@@ -49,7 +49,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
