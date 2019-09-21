@@ -41,7 +41,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                         characterObject,
 
                 {
-                    todo,
                     faceRevision,
                     hair,
                     feet,
@@ -58,7 +57,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 songIndex,
                 sceneIndex,
                 character,
-                todo,
                 faceRevision,
                 hair,
                 feet,
@@ -76,6 +74,32 @@ export const initialiseDrawings = (drawings, songIndex) => {
         delete scene.presences
     })
 }
+
+const
+    // The time spent thus far per drawing.
+    BASELINE_TIME = 3.25,
+    FACE_REVISION_TIME = 0.5,
+    HAIR_TIME = 0.5,
+    FEET_TIME = 0.2,
+    LEGS_TIME = 0.3,
+    TRUNK_TIME = 0.4,
+    HANDS_TIME = 0.1,
+    HEAD_TIME = 0.25,
+    FACE_TIME = 0.5,
+    COMPOSITE_TIME = 0.25,
+
+    // This works out to 6.25 hours per drawing.
+    TOTAL_TIME =
+        BASELINE_TIME +
+        FACE_REVISION_TIME +
+        HAIR_TIME +
+        FEET_TIME +
+        LEGS_TIME +
+        TRUNK_TIME +
+        HANDS_TIME +
+        HEAD_TIME +
+        FACE_TIME +
+        COMPOSITE_TIME
 
 export const addActorTasksToSongDrawingTasks = (drawings) => {
 
@@ -96,7 +120,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             const {
                 songIndex,
                 sceneIndex,
-                todo,
                 faceRevision,
                 hair,
                 feet,
@@ -114,37 +137,37 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * The baseline figure that reflects work that has already been
              * done, including body, clothes, and head drawings.
              */
-            let workedHours = 3.25
+            let workedHours = BASELINE_TIME
 
             if (!faceRevision) {
-                workedHours += 0.5
+                workedHours += FACE_REVISION_TIME
             }
             if (!hair) {
-                workedHours += 0.5
+                workedHours += HAIR_TIME
             }
             if (!feet) {
-                workedHours += 0.2
+                workedHours += FEET_TIME
             }
             if (!legs) {
-                workedHours += 0.25
+                workedHours += LEGS_TIME
             }
             if (!trunk) {
-                workedHours += 0.25
+                workedHours += TRUNK_TIME
             }
             if (!hands) {
-                workedHours += 0.25
+                workedHours += HANDS_TIME
             }
             if (!head) {
-                workedHours += 0.25
+                workedHours += HEAD_TIME
             }
             if (!face) {
-                workedHours += 0.5
+                workedHours += FACE_TIME
             }
             if (!composite) {
-                workedHours += 0.25
+                workedHours += COMPOSITE_TIME
             }
 
-            // const doneForNow = todo && workedHours >= 4.25
+            // const doneForNow = workedHours >= 4.25
             const doneForNow = !feet
 
             /**
@@ -164,7 +187,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             characters[character].push({
                 songIndex,
                 sceneIndex,
-                todo,
                 workedHours,
                 instance,
                 doneForNow
@@ -189,19 +211,13 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 drawings.songTasks[songIndex].actorsNeededHours = 0
             }
 
-            if (todo) {
-                drawings.songTasks[songIndex].actorsTodoCount++
+            drawings.songTasks[songIndex].actorsTodoCount++
 
-                drawings.songTasks[songIndex].actorsWorkedHours += (
-                    workedHours || 0
-                )
+            drawings.songTasks[songIndex].actorsWorkedHours += (
+                workedHours || 0
+            )
 
-                // Assume 6.25 hours per drawing.
-                drawings.songTasks[songIndex].actorsNeededHours += (
-                    6.25
-                )
-
-            }
+            drawings.songTasks[songIndex].actorsNeededHours += TOTAL_TIME
             drawings.songTasks[songIndex].actorsTotalCount++
         })
 

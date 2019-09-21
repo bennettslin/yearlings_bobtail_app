@@ -147,21 +147,11 @@ export default [
                 [NESTOR]: {
                     todo: true,
                     legs: true,
-                    trunk: true,
-                    hands: true,
-                    head: true,
-                    face: true,
-                    composite: true,
                     instance: OFFICER
                 },
                 [TOMER]: {
                     todo: true,
                     legs: true,
-                    trunk: true,
-                    hands: true,
-                    head: true,
-                    face: true,
-                    composite: true,
                     instance: OFFICER
                 }
             }
