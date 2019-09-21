@@ -26,7 +26,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -38,7 +37,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -57,7 +55,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -69,7 +66,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -83,7 +79,6 @@ export default [
                 },
                 [CATHERINE]: {
                     gopi: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -96,7 +91,6 @@ export default [
                 },
                 [MARA]: {
                     gopi: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -109,7 +103,6 @@ export default [
                 },
                 [MIRIAM]: {
                     gopi: {
-                        todo: true,
                         hair: true,
                         feet: true,
                         legs: true,
@@ -128,7 +121,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -140,7 +132,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -159,7 +150,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -171,7 +161,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -190,7 +179,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -202,7 +190,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -216,7 +203,6 @@ export default [
                 },
                 [AMY]: {
                     doctor: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,

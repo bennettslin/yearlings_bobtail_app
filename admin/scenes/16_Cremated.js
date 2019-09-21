@@ -23,7 +23,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -34,7 +33,6 @@ export default [
                     instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -52,7 +50,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -64,7 +61,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -81,7 +77,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -93,7 +88,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -110,7 +104,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -127,7 +120,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -145,7 +137,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -156,7 +147,6 @@ export default [
                     instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,

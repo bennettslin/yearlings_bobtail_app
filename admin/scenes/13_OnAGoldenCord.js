@@ -30,7 +30,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -47,7 +46,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -59,7 +57,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -78,7 +75,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -90,7 +86,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -108,7 +103,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -120,7 +114,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -133,7 +126,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -145,12 +137,10 @@ export default [
                     }
                 },
                 [NESTOR]: {
-                    todo: true,
                     legs: true,
                     instance: OFFICER
                 },
                 [TOMER]: {
-                    todo: true,
                     legs: true,
                     instance: OFFICER
                 }
@@ -161,7 +151,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -173,7 +162,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -186,7 +174,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -199,7 +186,6 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -212,7 +198,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -225,7 +210,6 @@ export default [
                 },
                 [WILLY]: {
                     crossingGuard: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,

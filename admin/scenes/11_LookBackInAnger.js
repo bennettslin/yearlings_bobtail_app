@@ -37,7 +37,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -48,7 +47,6 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -60,7 +58,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -71,7 +68,6 @@ export default [
                     }
                 },
                 [WADE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -81,7 +77,6 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -92,7 +87,6 @@ export default [
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -109,7 +103,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -120,7 +113,6 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -131,7 +123,6 @@ export default [
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -141,7 +132,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -158,7 +148,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -169,7 +158,6 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -180,7 +168,6 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -191,7 +178,6 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -202,7 +188,6 @@ export default [
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -213,7 +198,6 @@ export default [
                     instance: MINGLING
                 },
                 [WADE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -229,7 +213,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -241,7 +224,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -261,7 +243,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -274,7 +255,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,

@@ -25,7 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -36,7 +35,6 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -53,7 +51,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -64,7 +61,6 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -81,7 +77,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -98,7 +93,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -110,7 +104,6 @@ export default [
                 },
                 [WADE]: {
                     catholic: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -122,7 +115,6 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -140,7 +132,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -151,7 +142,6 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,

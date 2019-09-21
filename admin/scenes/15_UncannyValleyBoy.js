@@ -38,7 +38,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -50,7 +49,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -61,7 +59,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -73,7 +70,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -85,7 +81,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -102,7 +97,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -113,7 +107,6 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -124,7 +117,6 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -135,7 +127,6 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -152,7 +143,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -163,7 +153,6 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -174,7 +163,6 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -185,7 +173,6 @@ export default [
                     instance: PRESENT
                 },
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -198,7 +185,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -216,7 +202,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -228,7 +213,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -240,7 +224,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -251,7 +234,6 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -262,7 +244,6 @@ export default [
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -273,7 +254,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -292,7 +272,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -304,7 +283,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -315,7 +293,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -327,7 +304,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -339,7 +315,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,

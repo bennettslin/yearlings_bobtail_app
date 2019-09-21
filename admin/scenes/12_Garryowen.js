@@ -29,7 +29,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -41,7 +40,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -60,7 +58,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -71,7 +68,6 @@ export default [
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -81,7 +77,6 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -92,7 +87,6 @@ export default [
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
-                    todo: true,
                     faceRevision: true,
                     legs: true,
                     trunk: true,
@@ -109,7 +103,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -121,7 +114,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -140,7 +132,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -151,7 +142,6 @@ export default [
                     instance: GREETING
                 },
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -163,7 +153,6 @@ export default [
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -173,7 +162,6 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -190,7 +178,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -202,7 +189,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,

@@ -34,7 +34,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -50,7 +49,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -60,7 +58,6 @@ export default [
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -71,7 +68,6 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -82,7 +78,6 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -99,7 +94,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -109,7 +103,6 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -120,7 +113,6 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -138,7 +130,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -149,7 +140,6 @@ export default [
                     }
                 },
                 [WILLY]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -160,7 +150,6 @@ export default [
                 },
                 [TOMER]: {
                     gangbanger: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -177,7 +166,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -188,7 +176,6 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -205,7 +192,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -216,7 +202,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -227,7 +212,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,

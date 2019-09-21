@@ -16,7 +16,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -28,7 +27,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -40,7 +38,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -57,7 +54,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -68,7 +64,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -79,7 +74,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -90,7 +84,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,

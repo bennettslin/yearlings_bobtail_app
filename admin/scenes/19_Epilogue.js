@@ -35,7 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -47,7 +46,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -59,7 +57,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [LIZ]: {
-                    todo: true,
                     faceRevision: true,
                     feet: true,
                     legs: true,
@@ -72,7 +69,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -84,7 +80,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -96,7 +91,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -108,7 +102,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -120,7 +113,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -131,7 +123,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -143,7 +134,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -154,7 +144,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -165,7 +154,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TOMER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -176,7 +164,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -188,7 +175,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -200,7 +186,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -212,7 +197,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -223,7 +207,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -234,7 +217,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -246,7 +228,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WADE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -257,7 +238,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -269,7 +249,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -281,7 +260,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -292,7 +270,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -304,7 +281,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -316,7 +292,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MIRIAM]: {
-                    todo: true,
                     hair: true,
                     feet: true,
                     legs: true,
@@ -329,7 +304,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -340,7 +314,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [NESTOR]: {
-                    todo: true,
                     faceRevision: true,
                     legs: true,
                     trunk: true,

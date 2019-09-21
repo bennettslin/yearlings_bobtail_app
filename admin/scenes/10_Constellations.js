@@ -19,7 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -30,7 +29,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -41,7 +39,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -51,7 +48,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -67,7 +63,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -78,7 +73,6 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -89,7 +83,6 @@ export default [
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -99,7 +92,6 @@ export default [
                     instance: WALGREENS
                 },
                 [TOMER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -115,7 +107,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -126,7 +117,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -137,7 +127,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -147,7 +136,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -163,7 +151,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -174,7 +161,6 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -185,7 +171,6 @@ export default [
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -195,7 +180,6 @@ export default [
                     instance: CEMETERY
                 },
                 [TOMER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -211,7 +195,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -222,7 +205,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -233,7 +215,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -243,7 +224,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -259,7 +239,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -270,7 +249,6 @@ export default [
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,

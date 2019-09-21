@@ -24,7 +24,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -44,7 +43,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -64,7 +62,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -84,7 +81,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -97,7 +93,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -114,7 +109,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -127,7 +121,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -144,7 +137,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,
@@ -157,7 +149,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -174,7 +165,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        todo: true,
                         faceRevision: true,
                         feet: true,
                         legs: true,

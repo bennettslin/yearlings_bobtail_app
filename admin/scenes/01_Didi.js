@@ -25,7 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -36,7 +35,6 @@ export default [
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -47,7 +45,6 @@ export default [
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -64,7 +61,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -75,7 +71,6 @@ export default [
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -86,7 +81,6 @@ export default [
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -103,7 +97,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -120,7 +113,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -131,7 +123,6 @@ export default [
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,

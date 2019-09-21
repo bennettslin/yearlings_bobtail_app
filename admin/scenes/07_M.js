@@ -41,7 +41,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -58,7 +57,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -75,7 +73,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -87,7 +84,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -105,7 +101,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -116,7 +111,6 @@ export default [
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -126,7 +120,6 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -137,7 +130,6 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -149,7 +141,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -166,7 +157,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -177,7 +167,6 @@ export default [
                     instance: EATING
                 },
                 [JACOB]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -187,7 +176,6 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -198,7 +186,6 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -215,7 +202,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -227,7 +213,6 @@ export default [
                 },
                 [MIRIAM]: {
                     maskedWoman: {
-                        todo: true,
                         faceRevision: true,
                         hair: true,
                         feet: true,
@@ -247,7 +232,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -259,7 +243,6 @@ export default [
                 },
                 [MIRIAM]: {
                     maskedWoman: {
-                        todo: true,
                         faceRevision: true,
                         hair: true,
                         feet: true,
@@ -274,7 +257,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        todo: true,
                         faceRevision: true,
                         legs: true,
                         trunk: true,
@@ -292,7 +274,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -304,7 +285,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,

@@ -39,7 +39,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -50,7 +49,6 @@ export default [
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -67,7 +65,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -84,7 +81,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -101,7 +97,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -118,7 +113,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -129,7 +123,6 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -140,7 +133,6 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -156,7 +148,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -167,7 +158,6 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -178,7 +168,6 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    todo: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -189,7 +178,6 @@ export default [
                 },
                 [SASHA]: {
                     popularGirl: {
-                        todo: true,
                         feet: true,
                         legs: true,
                         trunk: true,
@@ -207,7 +195,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -218,7 +205,6 @@ export default [
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -229,7 +215,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    todo: true,
                     feet: true,
                     legs: true,
                     trunk: true,
@@ -241,7 +226,6 @@ export default [
                 },
                 [TRISTAN]: {
                     principal: {
-                        todo: true,
                         legs: true,
                         trunk: true,
                         hands: true,
