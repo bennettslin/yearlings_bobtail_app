@@ -27,7 +27,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -64,7 +63,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

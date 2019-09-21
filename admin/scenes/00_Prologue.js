@@ -7,7 +7,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
