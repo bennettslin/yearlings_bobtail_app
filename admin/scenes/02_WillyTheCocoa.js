@@ -68,7 +68,6 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -103,7 +102,6 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -192,7 +190,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
