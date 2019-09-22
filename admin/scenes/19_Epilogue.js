@@ -172,7 +172,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
