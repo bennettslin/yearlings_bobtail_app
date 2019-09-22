@@ -171,7 +171,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -183,7 +182,6 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -195,7 +193,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
