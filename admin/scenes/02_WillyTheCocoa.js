@@ -174,7 +174,6 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
