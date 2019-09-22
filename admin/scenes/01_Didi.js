@@ -97,7 +97,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -123,7 +122,6 @@ export default [
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
