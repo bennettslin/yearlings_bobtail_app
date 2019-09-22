@@ -81,7 +81,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
