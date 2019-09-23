@@ -473,5 +473,15 @@ export default [
         taskName: 'Backpack (young Bennett)',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'bennettShoe',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettShoeReflection',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

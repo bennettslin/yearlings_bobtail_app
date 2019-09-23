@@ -36,8 +36,8 @@ import stageMic from 'assets/svgs/fixtures/stageMic'
 import kickDrum from 'assets/svgs/fixtures/kickDrum'
 import drumThrone from 'assets/svgs/fixtures/drumThrone'
 import guitarCaseOpen from 'assets/svgs/fixtures/guitarCaseOpen'
-// import bennettShoe from 'assets/svgs/fixtures/bennettShoe'
-// import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
+import bennettShoe from 'assets/svgs/fixtures/bennettShoe'
+import bennettShoeReflection from 'assets/svgs/fixtures/bennettShoeReflection'
 import tchotchkes from 'assets/svgs/fixtures/tchotchkes'
 import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
 import recordingMic from 'assets/svgs/fixtures/recordingMic'
@@ -146,8 +146,8 @@ export default {
     [DRUM_THRONE]: drumThrone,
     [GUITAR_CASE_OPEN]: guitarCaseOpen,
     [DRUMS_STACKED__CLUB]: drumsStacked,
-    [BENNETT_SHOE]: false,
-    [BENNETT_SHOE_REFLECTION]: false,
+    [BENNETT_SHOE]: bennettShoe,
+    [BENNETT_SHOE_REFLECTION]: bennettShoeReflection,
     [TCHOTCHKES]: tchotchkes,
     [TETHERBALL_POLE]: tetherballPole,
     [RECORDING_MIC]: recordingMic,

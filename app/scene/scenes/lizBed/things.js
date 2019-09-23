@@ -20,6 +20,7 @@ import {
     LIZ_BED
 } from '../../../constants/scene/things/panels'
 import { LIZ_PHONE__SHARED } from '../../shared'
+import { BENNETT__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -59,19 +60,15 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
     [FIXTURE]: {
         [BENNETT_SHOE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1
-            }
+            xPosition: 9,
+            sharedStyle: BENNETT__SHARED
         },
         [BENNETT_SHOE_REFLECTION]: {
-            yIndex: 4,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 1
-            }
+            yIndex: 2,
+            xPosition: 9,
+            zOffset: 5.5,
+            rotate: 345,
+            sharedStyle: BENNETT__SHARED
         }
     }
 }
