@@ -25,7 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
