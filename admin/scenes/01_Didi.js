@@ -69,7 +69,6 @@ export default [
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

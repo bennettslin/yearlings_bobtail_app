@@ -98,7 +98,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
