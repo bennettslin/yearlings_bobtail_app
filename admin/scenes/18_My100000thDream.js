@@ -174,7 +174,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -198,7 +197,6 @@ export default [
                 },
                 [AMY]: {
                     doctor: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
