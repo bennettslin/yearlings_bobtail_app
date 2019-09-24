@@ -77,7 +77,6 @@ export default [
                 },
                 [CATHERINE]: {
                     gopi: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
