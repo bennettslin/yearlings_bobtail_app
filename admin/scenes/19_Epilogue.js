@@ -230,7 +230,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
