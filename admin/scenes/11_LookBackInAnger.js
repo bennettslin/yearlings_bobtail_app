@@ -85,7 +85,6 @@ export default [
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -182,7 +181,6 @@ export default [
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

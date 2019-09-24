@@ -240,7 +240,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
