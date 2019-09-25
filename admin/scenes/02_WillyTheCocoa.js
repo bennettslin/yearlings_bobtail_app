@@ -58,7 +58,6 @@ export default [
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -162,7 +161,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

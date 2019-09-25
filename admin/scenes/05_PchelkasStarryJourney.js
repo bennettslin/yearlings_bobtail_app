@@ -204,7 +204,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

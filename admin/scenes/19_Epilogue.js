@@ -118,7 +118,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
