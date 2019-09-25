@@ -36,7 +36,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -70,7 +69,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
