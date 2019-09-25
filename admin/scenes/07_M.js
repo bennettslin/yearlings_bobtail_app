@@ -206,7 +206,6 @@ export default [
                     maskedWoman: {
                         faceRevision: true,
                         hair: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -235,7 +234,6 @@ export default [
                     maskedWoman: {
                         faceRevision: true,
                         hair: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
