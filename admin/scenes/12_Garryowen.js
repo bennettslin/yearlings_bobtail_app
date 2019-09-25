@@ -75,7 +75,6 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -158,7 +157,6 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

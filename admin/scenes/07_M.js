@@ -125,7 +125,6 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -180,7 +179,6 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

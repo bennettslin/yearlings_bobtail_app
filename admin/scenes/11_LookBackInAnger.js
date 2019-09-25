@@ -46,7 +46,6 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -152,7 +151,6 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

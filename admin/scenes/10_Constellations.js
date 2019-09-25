@@ -28,7 +28,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -71,7 +70,6 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -114,7 +112,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -157,7 +154,6 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -200,7 +196,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
