@@ -206,7 +206,6 @@ export default [
                 },
                 [AMY]: {
                     demonstrator: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
@@ -218,7 +217,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     demonstrator: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
