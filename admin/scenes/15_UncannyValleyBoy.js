@@ -39,7 +39,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hair: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -249,7 +248,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hair: true,
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
