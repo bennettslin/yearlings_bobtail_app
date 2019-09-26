@@ -88,7 +88,6 @@ export default [
                 },
                 [MARA]: {
                     gopi: {
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
