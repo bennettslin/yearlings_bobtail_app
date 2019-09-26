@@ -58,8 +58,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -69,8 +67,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        feet: true,
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
@@ -80,8 +76,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -105,8 +99,6 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -148,8 +140,6 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -158,8 +148,6 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -216,8 +204,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -226,8 +212,6 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -284,8 +268,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -295,8 +277,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        feet: true,
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
@@ -306,8 +286,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    feet: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

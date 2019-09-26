@@ -4,6 +4,32 @@ import albumScenes from '../../../scenes'
 
 import { ACTOR } from 'constants/scene'
 
+const
+    // The time spent thus far per drawing.
+    BASELINE_TIME = 3.25,
+    FACE_REVISION_TIME = 0.5,
+    HAIR_TIME = 0.5,
+    FEET_TIME = 0.2,
+    LEGS_TIME = 0.25,
+    TRUNK_TIME = 0.45,
+    HANDS_TIME = 0.1,
+    HEAD_TIME = 0.25,
+    FACE_TIME = 0.5,
+    COMPOSITE_TIME = 0.25,
+
+    // This works out to 6.25 hours per drawing.
+    TOTAL_TIME =
+        BASELINE_TIME +
+        FACE_REVISION_TIME +
+        HAIR_TIME +
+        FEET_TIME +
+        LEGS_TIME +
+        TRUNK_TIME +
+        HANDS_TIME +
+        HEAD_TIME +
+        FACE_TIME +
+        COMPOSITE_TIME
+
 export const initialiseDrawings = (drawings, songIndex) => {
 
     albumScenes[songIndex].forEach((scene, sceneIndex) => {
@@ -74,32 +100,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
         delete scene.presences
     })
 }
-
-const
-    // The time spent thus far per drawing.
-    BASELINE_TIME = 3.25,
-    FACE_REVISION_TIME = 0.5,
-    HAIR_TIME = 0.5,
-    FEET_TIME = 0.2,
-    LEGS_TIME = 0.3,
-    TRUNK_TIME = 0.4,
-    HANDS_TIME = 0.1,
-    HEAD_TIME = 0.25,
-    FACE_TIME = 0.5,
-    COMPOSITE_TIME = 0.25,
-
-    // This works out to 6.25 hours per drawing.
-    TOTAL_TIME =
-        BASELINE_TIME +
-        FACE_REVISION_TIME +
-        HAIR_TIME +
-        FEET_TIME +
-        LEGS_TIME +
-        TRUNK_TIME +
-        HANDS_TIME +
-        HEAD_TIME +
-        FACE_TIME +
-        COMPOSITE_TIME
 
 export const addActorTasksToSongDrawingTasks = (drawings) => {
 
