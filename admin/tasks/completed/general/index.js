@@ -4901,5 +4901,10 @@ export default [
         taskName: `Finalise loading page.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Scan faces.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
