@@ -100,7 +100,6 @@ export default [
                 [MIRIAM]: {
                     gopi: {
                         hair: true,
-                        feet: true,
                         legs: true,
                         trunk: true,
                         hands: true,
