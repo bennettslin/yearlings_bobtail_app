@@ -35,11 +35,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'recyclables',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'sandbags',
         workedHours: 0,
         neededHours: 1
@@ -56,11 +51,6 @@ export default [
     },
     {
         taskName: 'television',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'trafficLight',
         workedHours: 0,
         neededHours: 1
     },

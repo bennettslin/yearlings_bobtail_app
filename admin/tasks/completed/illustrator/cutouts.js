@@ -263,5 +263,15 @@ export default [
         taskName: 'cavemanBones',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: 'fix recyclables',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'fix trafficLight',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
