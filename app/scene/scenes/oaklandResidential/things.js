@@ -17,6 +17,7 @@ import {
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
+import { LAMPPOST__SHARED } from '../../shared'
 import {
     OAKLAND_HOUSE__SHARED,
     OAKLAND_HOUSE_LEFT__SHARED,
@@ -35,18 +36,22 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,
-            xPosition: 5.5,
-            scaleFactor: 0.2
+            xPosition: 5.45,
+            scaleFactor: 0.2,
+            sharedStyle: LAMPPOST__SHARED
         },
         [TWIN_STREETLAMP__MIDDLE]: {
             yIndex: 2,
-            xPosition: 5.5,
-            scaleFactor: 0.25
+            xPosition: 5.55,
+            scaleFactor: 0.25,
+            sharedStyle: LAMPPOST__SHARED,
+            flipHorizontal: true
         },
         [TWIN_STREETLAMP__NEAR]: {
             yIndex: 3,
-            xPosition: 5.5,
-            scaleFactor: 0.3
+            xPosition: 5.4,
+            scaleFactor: 0.3,
+            sharedStyle: LAMPPOST__SHARED
         }
     },
     [FLAT]: {
