@@ -283,5 +283,10 @@ export default [
         taskName: 'fix ivDrip',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'fix berkeleyLamppost',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

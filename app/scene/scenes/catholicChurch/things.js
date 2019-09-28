@@ -9,6 +9,7 @@ import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
 } from '../../../constants/scene/things/flats'
+import { LAMPPOST__SHARED } from '../../shared'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -23,7 +24,8 @@ const ARRANGEMENTS_THINGS = {
         [BERKELEY_LAMPPOST]: {
             yIndex: 4,
             xPosition: 1,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            sharedStyle: LAMPPOST__SHARED
         }
     },
     [FLAT]: {
