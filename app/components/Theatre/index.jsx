@@ -16,6 +16,8 @@ import Wall from './Wall'
 import Ceiling from './Ceiling'
 import Floor from './Floor'
 
+import { removeLoadingIndicator } from 'utils/window'
+
 const mapStateToProps = ({
     viewportStore: { canTheatreEnter }
 }) => ({
@@ -32,6 +34,7 @@ class Theatre extends PureComponent {
 
     componentDidMount() {
         logMount('Theatre')
+        removeLoadingIndicator()
     }
 
     _handleTransitionEntered = () => {

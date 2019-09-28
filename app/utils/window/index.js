@@ -26,3 +26,10 @@ export const setBoolInStorage = (key, value) => {
 export const setInStorage = (key, value) => {
     getWindowStorage()[key] = value
 }
+
+export const removeLoadingIndicator = () => {
+    const loadingIndicator = document.getElementById('DramaMasks__load')
+    if (loadingIndicator) {
+        loadingIndicator.parentNode.removeChild(loadingIndicator)
+    }
+}

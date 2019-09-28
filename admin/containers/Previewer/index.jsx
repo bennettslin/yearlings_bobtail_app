@@ -11,7 +11,8 @@ import { convertPresenceKeyToClassName } from 'helpers/format'
 
 import {
     getFromStorage,
-    setInStorage
+    setInStorage,
+    removeLoadingIndicator
 } from 'utils/window'
 
 import {
@@ -55,6 +56,7 @@ class Previewer extends PureComponent {
         logMount('Previewer')
         logSvgCount()
         window.onresize = debounce(this.sizePresence, 0)
+        removeLoadingIndicator()
     }
 
     getPresenceFromStorage() {

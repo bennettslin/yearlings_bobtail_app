@@ -5,6 +5,7 @@ import Shared from './Shared'
 import AdminNav from './AdminNav'
 
 import { logSvgCount } from '../../utils/svg'
+import { removeLoadingIndicator } from 'utils/window'
 
 import './style.scss'
 
@@ -13,6 +14,7 @@ class Progress extends PureComponent {
     componentDidMount() {
         logMount('Progress')
         logSvgCount()
+        removeLoadingIndicator()
     }
 
     render() {
