@@ -273,5 +273,10 @@ export default [
         taskName: 'fix trafficLight',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'fix signpost',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
