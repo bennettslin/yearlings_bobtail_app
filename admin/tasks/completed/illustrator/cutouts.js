@@ -278,5 +278,10 @@ export default [
         taskName: 'fix signpost',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'fix ivDrip',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -10,19 +10,16 @@
 }
 
 .ivDrip {
-    .pole { fill: #333; }
-    .boxSide { fill: #96c; }
-    .boxTop { fill: #639; }
-    .boxFront { fill: #c9f; }
-    .buttons { fill: #cc6; }
-    .buttonsLine { stroke: #bb5; }
-    .bar { fill: #699; }
-    .barLine { stroke: #588; }
-    .console { fill: #6c9; }
-    .bagEmpty { fill: #cff; }
-    .bagFull { fill: #3cc; }
+    .pole { fill: #999; }
+    .boxLight { fill: #c4a3e6; }
+    .boxMedium { fill: #ad91cc; }
+    .boxDark { fill: #997fb3; }
+    .console { fill: #8fccad; }
+    .button { fill: #e0e0a8; }
+    .bar { fill: #88b0b0; }
     .bagCap { fill: #fff; }
-    .capLine { stroke: #eee; }
+    .bagFull { fill: #9ae6e6; }
+    .bagEmpty { fill: #d7f2f2; }
 }
 
 .hospitalBed {
