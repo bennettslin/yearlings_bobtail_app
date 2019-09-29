@@ -293,5 +293,10 @@ export default [
         taskName: 'fix twinStreetlamp',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'fix trashCan',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

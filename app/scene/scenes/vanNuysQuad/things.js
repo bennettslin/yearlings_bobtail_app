@@ -13,6 +13,11 @@ import {
     VAN_NUYS_PLANT__QUAD
 } from '../../../constants/scene/things/cutouts'
 import {
+    BANANA__SHARED,
+    GARBAGE_BAG__SHARED,
+    PAPER_BAG__SHARED
+} from '../../shared/food'
+import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
 } from '../../shared/paper'
@@ -52,7 +57,12 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 0.5,
             scaleFactor: 0.35,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: [
+                BANANA__SHARED,
+                GARBAGE_BAG__SHARED,
+                PAPER_BAG__SHARED
+            ]
         },
         [VAN_NUYS_PLANT__QUAD]: {
             yIndex: 4,

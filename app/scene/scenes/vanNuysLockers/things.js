@@ -11,6 +11,11 @@ import {
     THROWN_FRUIT,
     BALLED_FOIL__LOCKERS
 } from '../../../constants/scene/things/fixtures'
+import {
+    BANANA__SHARED,
+    GARBAGE_BAG__SHARED,
+    PAPER_BAG__SHARED
+} from '../../shared/food'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -22,7 +27,12 @@ const ARRANGEMENTS_THINGS = {
         [TRASH_CAN__LOCKERS]: {
             yIndex: 2,
             xPosition: 10.5,
-            scaleFactor: 0.35
+            scaleFactor: 0.35,
+            sharedStyle: [
+                BANANA__SHARED,
+                GARBAGE_BAG__SHARED,
+                PAPER_BAG__SHARED
+            ]
         },
         [VAN_NUYS_PLANT__LOCKERS]: {
             yIndex: 1,
@@ -33,7 +43,8 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [THROWN_FRUIT]: {
             yIndex: 4,
-            xPosition: 6.5
+            xPosition: 6.5,
+            sharedStyle: BANANA__SHARED
         },
         [BALLED_FOIL__LOCKERS]: {
             yIndex: 4,

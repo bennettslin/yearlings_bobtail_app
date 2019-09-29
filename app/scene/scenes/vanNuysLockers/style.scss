@@ -4,27 +4,21 @@
     .label { fill: #aba287; }
     .lips { fill: #9c4c61; }
     .teeth { fill: #fff; }
-    .kiss { fill: #9d64ba; } 
+    .kiss { fill: #9d64ba; }
 }
 
 .trashCan {
-    .can { fill: #474645; }
-    .ridge { fill: #2d2d2d; }
-    .mount { fill: #898989; }
-    .handle { fill: #a3a3a3; }
-    .linerOuter { fill: #537296; }
-    .linerInner { fill: #47586d; }
-    .boxLeft { fill: #dd7676; }
-    .boxBack { fill: #73d87d; }
-    .peelInner { fill: #828278; }
-    .peelOuter { fill: #d8d393; }
-    .boxFront { fill: #b987d6; }
-    .bagFront { fill: #755637; }
-    .bagTop { fill: #aa7d4b; }
-    .bagSide { fill: #936944; }
-    .boxRightTop { fill: #4d82b2; }
-    .boxRightSide { fill: #6d9de2; }
-    .boxRightFront { fill: #9eb3dd; }
+    .can { fill: #999; }
+    .ridge { fill: #8c8c8c; }
+    .mount { fill: #a6a6a6; }
+    .handle { fill: #b3b3b3; }
+    .handleOverlapLine { fill: none; }
+    .boxLeft { fill: #bf7878; }
+    .boxRear { fill: #84d88c; }
+    .boxFront { fill: #bb8dd6; }
+    .boxRightMedium { fill: #6d9de2; }
+    .boxRightDark { fill: #608ac7; }
+    .boxRightLight { fill: #72a5ed; }
 }
 
 .vanNuysPlant {
@@ -33,13 +27,6 @@
 }
 
 .thrownFruit {
-    .bananaOuterRear { fill: #a6a859; }
-    .bananaOuterMiddle { fill: #b3b560; }
-    .bananaInnerMiddle { fill: #abb3a1; }
-    .bananaInnerRear { fill: #a1a897; }
-    .bananaOuterFront { fill: #bdbf65; }
-    .bananaInnerFront { fill: #b5bdaa; }
-    .bananaEnd { fill: #58592f; }
     .foilEdgeLine { fill: none; }
     .puddingCupTop { fill: #f0e6da; }
     .puddingCupInner { fill: #b3aba3; }

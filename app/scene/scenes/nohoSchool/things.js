@@ -14,6 +14,7 @@ import {
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
 import { DOOR__SHARED } from '../../shared'
+import { PAPER_BAG__SHARED } from '../../shared/food'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -54,7 +55,8 @@ const ARRANGEMENTS_THINGS = {
         },
         [SAFEWAY_BAG]: {
             yIndex: 4,
-            xPosition: 10
+            xPosition: 10,
+            sharedStyle: PAPER_BAG__SHARED
         }
     }
 }
