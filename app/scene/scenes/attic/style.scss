@@ -1,9 +1,8 @@
 .howieFridge {
-    .base { fill: #666; }
-    .door { fill: #c6c; }
-    .doorLine { stroke: #b5b; }
-    .brass { fill: #ccc; }
-    .handle { fill: #963; }
+    .base { fill: #a683a6; }
+    .door { fill: #de8ede; }
+    .handle { fill: #ad8761; }
+    .brass { fill: #d6d654; }
 }
 
 .storageBoxes {
@@ -30,15 +29,15 @@
 }
 
 .television {
-    .antenna { fill: #9cc; }
-    .antennaBase { fill: #669; }
-    .antennaRing { fill: #399; }
-    .side { fill: #963; }
-    .back { fill: #c63; }
-    .panel { fill: #666; }
-    .tubeSide { fill: #066; }
-    .tubeBack { fill: #033; }
-    .slat { fill: #333; }
+    .side { fill: #c9af7f; }
+    .back { fill: #b8a074; }
+    .panel { fill: #96835f; }
+    .slat { fill: #7a6b4e; }
+    .tubeLight { fill: #5a696e; }
+    .tubeDark { fill: #505d61; }
+    .antennaBase { fill: #5c706e; }
+    .antennaRing { fill: #6c8582; }
+    .antennae { fill: #94b5b1; }
 }
 
 .atticArmrest {

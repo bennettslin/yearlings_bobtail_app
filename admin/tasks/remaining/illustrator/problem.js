@@ -30,11 +30,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'television',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'wallSpeakerFront',
         workedHours: 0,
         neededHours: 1

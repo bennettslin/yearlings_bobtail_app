@@ -303,5 +303,10 @@ export default [
         taskName: 'fix fireHydrant',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'fix television',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
