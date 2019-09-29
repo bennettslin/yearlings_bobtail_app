@@ -308,5 +308,10 @@ export default [
         taskName: 'fix television',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'fix weddingCrowd',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

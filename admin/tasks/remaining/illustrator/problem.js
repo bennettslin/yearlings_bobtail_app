@@ -40,11 +40,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'weddingCrowd',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'yellowTapedGrill',
         workedHours: 0,
         neededHours: 1
