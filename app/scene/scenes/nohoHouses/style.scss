@@ -46,11 +46,12 @@
 }
 
 .fireHydrant {
-    .cap { fill: #cc3; }
-    .capLine { stroke: #bb2; }
-    .valveInner { fill: #639; }
-    .valveOuter { fill: #30c; }
-    .valveLine { stroke: #528; }
-    .reservoir { fill: #c33; }
-    .contour { fill: #c03; }
+    .valveOuter { fill: #bf4d4d; }
+    .valveInner { fill: #b34848; }
+    .valveOuterDark { fill: #b84a4a; }
+    .hydrant { fill: #d95757; }
+    .ridge { fill: #cc4e4e; }
+    .valveOuterLight { fill: #c44f4f; }
+    .cap { fill: #993e3e; }
+    .capLight { fill: #9e4040; }
 }
