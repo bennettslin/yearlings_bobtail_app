@@ -1,16 +1,12 @@
 .sandbags {
-    .ropeBack { fill: #963; }
-    .ropeBackLine { stroke: #852; }
-    .spindle { fill: #993; }
-    .post { fill: #630; }
-    .postLine { stroke: #520; }
-    .ropeFront { fill: #c96; }
-    .ropeFrontLine { stroke: #b85; }
-    .sandbagFront { fill: #cc9; }
-    .sandbagBack { fill: #996; }
-    .sandbagLine { stroke: #885; }
-    .string { fill: #ffc; }
-    .stringLine { stroke: #eeb; }
+    .ropeDark { fill: #b5986c; }
+    .post { fill: #997959; }
+    .ropeLight { fill: #d1af7d; }
+    .stringBorderLine { fill: none; }
+    .spindle { fill: #bfbf9c; }
+    .sandbag { fill: #cccc9d; }
+    .sandbagInner { fill: #996; }
+    .string { fill: #f0f0d1; }
 }
 
 .stageLights {

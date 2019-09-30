@@ -315,8 +315,13 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'dispensers',
+        taskName: 'fix dispensers',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'fix sandbags',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
