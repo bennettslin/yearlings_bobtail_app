@@ -17,7 +17,8 @@ import {
     DRUM_STAND__SHARED,
     DRUM_THRONE__SHARED,
     GUITAR_CASE__SHARED,
-    MICROPHONE__SHARED
+    MICROPHONE__SHARED,
+    MONITOR__SHARED
 } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
@@ -25,7 +26,8 @@ const ARRANGEMENTS_THINGS = {
         [MONITOR_SIDE__STAGE]: {
             yIndex: 4,
             xPosition: 9,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            sharedStyle: MONITOR__SHARED
         },
         [WALL_SPEAKER_SIDE__STAGE]: {
             yIndex: 1,

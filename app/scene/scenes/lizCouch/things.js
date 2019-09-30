@@ -39,7 +39,8 @@ import {
 import {
     BANJO__SHARED,
     ACOUSTIC_GUITAR__SHARED,
-    MICROPHONE__SHARED
+    MICROPHONE__SHARED,
+    MONITOR__SHARED
 } from '../../shared/instruments'
 import {
     ALL_PEOPLE__SHARED,
@@ -122,6 +123,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
                 BANJO__SHARED,
                 ACOUSTIC_GUITAR__SHARED,
                 MICROPHONE__SHARED,
+                MONITOR__SHARED,
                 BENNETT__SHARED,
                 LIZ__SHARED,
                 ALL_PEOPLE__SHARED

@@ -1,11 +1,16 @@
 export default [
     {
-        taskName: 'progress charts',
+        taskName: 'wallSpeakerFront',
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: 'monitors',
+        taskName: 'wallSpeakerSide',
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: 'progress charts',
         workedHours: 0,
         neededHours: 1
     },
@@ -16,16 +21,6 @@ export default [
     },
     {
         taskName: 'storageBoxes',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'wallSpeakerFront',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'wallSpeakerSide',
         workedHours: 0,
         neededHours: 1
     },

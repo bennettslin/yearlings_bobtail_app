@@ -18,7 +18,8 @@ import {
     CYMBAL__SHARED,
     DRUMS__SHARED,
     DRUM_STAND__SHARED,
-    ELECTRIC_GUITAR__SHARED
+    ELECTRIC_GUITAR__SHARED,
+    MONITOR__SHARED
 } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
@@ -26,13 +27,15 @@ const ARRANGEMENTS_THINGS = {
         [MONITOR_FRONT__LEFT]: {
             yIndex: 5,
             xPosition: 2.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            sharedStyle: MONITOR__SHARED
         },
         [MONITOR_FRONT__RIGHT]: {
             yIndex: 5,
             xPosition: 8.5,
             scaleFactor: 0.3,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: MONITOR__SHARED
         },
         [WALL_SPEAKER_FRONT__LEFT]: {
             yIndex: 5,

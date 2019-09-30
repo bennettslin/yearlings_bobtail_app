@@ -323,5 +323,10 @@ export default [
         taskName: 'fix sandbags',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'monitors',
+        workedHours: 2,
+        neededHours: 2
     }
 ]
