@@ -1,15 +1,5 @@
 export default [
     {
-        taskName: 'wallSpeakerFront',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: 'wallSpeakerSide',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'progress charts',
         workedHours: 0,
         neededHours: 1

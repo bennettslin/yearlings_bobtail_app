@@ -41,14 +41,16 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 1.5,
             zOffset: 5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            sharedStyle: MONITOR__SHARED
         },
         [WALL_SPEAKER_FRONT__RIGHT]: {
             yIndex: 5,
             xPosition: 9.5,
             zOffset: 5,
             scaleFactor: 0.3,
-            flipHorizontal: true
+            flipHorizontal: true,
+            sharedStyle: MONITOR__SHARED
         }
     },
     [FIXTURE]: {

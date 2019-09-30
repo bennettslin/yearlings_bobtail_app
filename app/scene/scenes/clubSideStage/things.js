@@ -34,7 +34,8 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 10,
             zOffset: 5,
             scaleFactor: 0.3,
-            rotate: 15
+            rotate: 15,
+            sharedStyle: MONITOR__SHARED
         }
     },
     [FIXTURE]: {

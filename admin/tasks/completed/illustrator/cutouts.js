@@ -325,8 +325,13 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'monitors',
-        workedHours: 2,
-        neededHours: 2
+        taskName: 'fix monitors',
+        workedHours: 1.5,
+        neededHours: 1.5
+    },
+    {
+        taskName: 'fix wall speakers',
+        workedHours: 1.5,
+        neededHours: 1.5
     }
 ]
