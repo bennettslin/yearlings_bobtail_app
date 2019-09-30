@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'dispensers',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'monitors',
         workedHours: 0,
         neededHours: 1

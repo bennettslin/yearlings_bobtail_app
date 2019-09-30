@@ -313,5 +313,10 @@ export default [
         taskName: 'fix weddingCrowd',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'dispensers',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

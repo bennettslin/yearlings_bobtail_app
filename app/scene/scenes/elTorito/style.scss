@@ -1,21 +1,14 @@
 .dispenserLeft {
-    .dispenser { fill: #936; }
-    .dispenserLine { stroke: #825; }
-    .panel { fill: #666; }
-    .latch { fill: #800; }
-    .metal { fill: #ccc; }
-    .newspaper { fill: #eee; }
-    .print { fill: #999; }
+    .dispenserLight { fill: #e69081; }
+    .dispenserDark { fill: #d48577; }
+    .panel { fill: #cca9a3; }
 }
 
 .dispenserRight {
-    .dispenser { fill: #396; }
-    .dispenserLine { stroke: #285; }
-    .panel { fill: #666; }
-    .handle { fill: #cc9; }
-    .newspaper { fill: #eee; }
-    .print { fill: #999; }
-    .suit { fill: #66c; }
-    .shirt { fill: #fcc; }
-    .face { fill: #966; }
+    .dispenserDark { fill: #62a684; }
+    .panel { fill: #5a7869; }
+    .dispenserLight { fill: #6eba94; }
+    .dispenserDoor { fill: #a1c9b6; }
+    .suit { fill: #6374a8; }
+    .shirt { fill: #cfb674; }
 }
