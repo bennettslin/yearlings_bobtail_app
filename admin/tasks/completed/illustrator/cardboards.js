@@ -183,5 +183,10 @@ export default [
         taskName: 'pchelkaMushkaRocket',
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: 'progress charts',
+        workedHours: 2,
+        neededHours: 2
     }
 ]

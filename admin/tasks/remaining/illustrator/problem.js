@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: 'progress charts',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'storageBoxes',
         workedHours: 0,
         neededHours: 1
