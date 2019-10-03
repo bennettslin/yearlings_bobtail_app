@@ -5,18 +5,17 @@
 }
 
 .yellowTapedGrill {
-    .tapeBottom { fill: #cc3; }
-    .pole { fill: #666; }
-    .tapeTop { fill: #990; }
-    .grillEdge { fill: #cc9; }
-    .grillOuterSide { fill: #996; }
-    .grillInnerSide { fill: #663; }
-    .grillBack { fill: #330; }
-    .coal { fill: #333; }
-    .handle { fill: #999; }
-    .handleLine { stroke: #666; }
-    .rack { fill: #ccc; }
-    .rackLine { stroke: #bbb; }
+    .pole { fill: gray; }
+    .tapeDark { fill: #99994e; }
+    .tapeLight { fill: #abab55; }
+    .grillInnerLight { fill: #7e826b; }
+    .grillInnerDark { fill: #717560; }
+    .grillLight { fill: #7d9996; }
+    .grillMedium { fill: #6f8784; }
+    .grillDark { fill: #607573; }
+    .coal { fill: #5c5c54; }
+    .rack { fill: #999989; }
+    .handle { fill: #899399; }
 }
 
 .rollerCoaster {

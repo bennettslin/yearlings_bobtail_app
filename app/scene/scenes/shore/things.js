@@ -41,8 +41,8 @@ const ARRANGEMENTS_THINGS = {
     },
     [CUTOUT]: {
         [YELLOW_TAPED_GRILL]: {
-            yIndex: 4,
-            xPosition: 7,
+            yIndex: 5,
+            xPosition: 9.5,
             scaleFactor: 0.3
         }
     },

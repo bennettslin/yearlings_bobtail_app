@@ -338,5 +338,10 @@ export default [
         taskName: 'fix overpassSign',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'fix yellowTapedGrill',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

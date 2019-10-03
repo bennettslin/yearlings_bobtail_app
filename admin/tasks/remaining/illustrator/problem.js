@@ -5,11 +5,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'yellowTapedGrill',
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'conveyorBelt',
         workedHours: 0,
         neededHours: 2
