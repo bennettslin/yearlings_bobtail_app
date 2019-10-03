@@ -343,5 +343,10 @@ export default [
         taskName: 'fix yellowTapedGrill',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'fix storageBoxes',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

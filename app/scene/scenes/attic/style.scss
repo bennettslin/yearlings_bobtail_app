@@ -6,12 +6,10 @@
 }
 
 .storageBoxes {
-    .boxInside { fill: #630; }
-    .boxTop { fill: #c96; }
-    .boxSide { fill: #963; }
-    .boxSideLine { stroke: #852; }
-    .boxFront { fill: #fc9; }
-    .boxFrontLine { stroke: #eb8; }
+    .boxDark { fill: #8c735a; }
+    .boxMedium { fill: #a88a6c; }
+    .boxLight { fill: #c29f7e; }
+    .boxInner { fill: #75604b; }
 }
 
 .storageChest {
