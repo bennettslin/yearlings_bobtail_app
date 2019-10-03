@@ -333,5 +333,10 @@ export default [
         taskName: 'fix wall speakers',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'fix overpassSign',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
