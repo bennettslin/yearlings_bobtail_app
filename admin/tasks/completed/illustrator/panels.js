@@ -188,5 +188,10 @@ export default [
         taskName: 'taiwanHaze',
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'fix conveyorBelt',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

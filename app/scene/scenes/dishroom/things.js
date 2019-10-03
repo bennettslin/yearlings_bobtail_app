@@ -74,7 +74,7 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [CONVEYOR_BELT]: {
             yIndex: 1,
-            xPosition: 4,
+            xPosition: 4.1,
             scaleFactor: 0.37,
             zOffset: 0.1,
             sharedStyle: [

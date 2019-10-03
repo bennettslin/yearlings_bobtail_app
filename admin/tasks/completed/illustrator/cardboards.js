@@ -185,7 +185,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'progress charts',
+        taskName: 'fix progress charts',
         workedHours: 2,
         neededHours: 2
     }
