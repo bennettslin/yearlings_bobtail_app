@@ -32,9 +32,9 @@ import {
 } from '../../../constants/scene/things/panels'
 import {
     BUBBLE__SHARED,
-    DOOR__SHARED,
-    WAITING_ARMCHAIR__SHARED
+    DOOR__SHARED
 } from '../../shared'
+import { WAITING_ARMCHAIR__SHARED } from '../../shared/furniture'
 import { BANJO__SHARED } from '../../shared/instruments'
 import {
     ALL_PEOPLE__SHARED,

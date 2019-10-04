@@ -20,6 +20,10 @@ import {
     LIZ_BED
 } from '../../../constants/scene/things/panels'
 import { LIZ_PHONE__SHARED } from '../../shared'
+import {
+    PILLOW_BOYFRIEND__SHARED,
+    PILLOW_LIZ__SHARED
+} from '../../shared/furniture'
 import { BENNETT__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -39,12 +43,20 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [LIZ_PILLOWS_PILE]: {
             yIndex: 5,
-            xPosition: 9
+            xPosition: 9,
+            sharedStyle: [
+                PILLOW_BOYFRIEND__SHARED,
+                PILLOW_LIZ__SHARED
+            ]
         },
         [LIZ_PILLOWS_PILE_REFLECTION]: {
             yIndex: 2,
             xPosition: 9,
-            zOffset: 5.5
+            zOffset: 5.5,
+            sharedStyle: [
+                PILLOW_BOYFRIEND__SHARED,
+                PILLOW_LIZ__SHARED
+            ]
         }
     },
     [PANEL]: {

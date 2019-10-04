@@ -21,6 +21,7 @@ import {
     DOOR__SHARED,
     WINDOW__SHARED
 } from '../../shared'
+import { PILLOW_BENNETT__SHARED } from '../../shared/furniture'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
@@ -76,7 +77,8 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [BENNETT_PILLOW]: {
             yIndex: 4,
-            xPosition: 9.5
+            xPosition: 9.5,
+            sharedStyle: PILLOW_BENNETT__SHARED
         }
     },
     [PANEL]: {

@@ -46,6 +46,7 @@ import {
     SCISSORS__SHARED,
     WINDOW__SHARED
 } from '../../shared'
+import { PILLOW_PRETEEN_BENNETT__SHARED } from '../../shared/furniture'
 import {
     BOOK__SHARED,
     LETTER__SHARED,
@@ -100,7 +101,8 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 2,
-            xPosition: 7
+            xPosition: 7,
+            sharedStyle: PILLOW_PRETEEN_BENNETT__SHARED
         }
     },
     [PANEL]: {

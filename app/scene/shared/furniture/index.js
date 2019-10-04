@@ -1,0 +1,5 @@
+export const WAITING_ARMCHAIR__SHARED = 'waitingArmchair'
+export const PILLOW_BENNETT__SHARED = 'pillowBennett'
+export const PILLOW_BOYFRIEND__SHARED = 'pillowBoyfriend'
+export const PILLOW_LIZ__SHARED = 'pillowLiz'
+export const PILLOW_PRETEEN_BENNETT__SHARED = 'pillowPreteenBennett'
