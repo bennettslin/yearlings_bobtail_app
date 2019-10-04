@@ -9,10 +9,8 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { PORCH_DOOR } from '../../../constants/scene/things/doors'
 import { HAIRCUT_SCISSORS } from '../../../constants/scene/things/fixtures'
-import {
-    DOOR__SHARED,
-    SCISSORS__SHARED
-} from '../../shared'
+import { SCISSORS__SHARED } from '../../shared'
+import { DOOR__SHARED } from '../../shared/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

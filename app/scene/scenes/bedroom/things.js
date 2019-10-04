@@ -43,10 +43,10 @@ import {
 } from '../../../constants/scene/things/panels'
 import {
     DOLLAR__SHARED,
-    SCISSORS__SHARED,
-    WINDOW__SHARED
+    SCISSORS__SHARED
 } from '../../shared'
 import { PILLOW_PRETEEN_BENNETT__SHARED } from '../../shared/furniture'
+import { WINDOW__SHARED } from '../../shared/home'
 import {
     BOOK__SHARED,
     LETTER__SHARED,

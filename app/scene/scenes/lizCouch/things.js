@@ -27,15 +27,15 @@ import {
     PEACOCK,
     PEAHEN
 } from '../../../constants/scene/things/puppets'
-import {
-    BUBBLE__SHARED,
-    DOOR__SHARED,
-    WINDOW__SHARED
-} from '../../shared'
+import { BUBBLE__SHARED } from '../../shared'
 import {
     OPAL__SHARED,
     PEAFOWL__SHARED
 } from '../../shared/animals'
+import {
+    DOOR__SHARED,
+    WINDOW__SHARED
+} from '../../shared/home'
 import {
     BANJO__SHARED,
     ACOUSTIC_GUITAR__SHARED,

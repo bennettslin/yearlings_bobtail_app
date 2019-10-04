@@ -30,11 +30,9 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
-import {
-    BUBBLE__SHARED,
-    DOOR__SHARED
-} from '../../shared'
+import { BUBBLE__SHARED } from '../../shared'
 import { WAITING_ARMCHAIR__SHARED } from '../../shared/furniture'
+import { DOOR__SHARED } from '../../shared/home'
 import { BANJO__SHARED } from '../../shared/instruments'
 import {
     ALL_PEOPLE__SHARED,

@@ -16,12 +16,12 @@ import {
     CONVEYOR_BELT,
     DISHROOM_SINK
 } from '../../../constants/scene/things/panels'
-import { DOOR__SHARED } from '../../shared'
 import {
     CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED
 } from '../../shared/dishroom'
+import { DOOR__SHARED } from '../../shared/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

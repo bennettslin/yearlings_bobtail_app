@@ -10,7 +10,7 @@ import {
 import {
     DOOR__SHARED,
     WINDOW__SHARED
-} from '../../shared'
+} from '../../shared/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

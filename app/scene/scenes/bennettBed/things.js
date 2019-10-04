@@ -17,11 +17,11 @@ import {
 } from '../../../constants/scene/things/fixtures'
 import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
+import { PILLOW_BENNETT__SHARED } from '../../shared/furniture'
 import {
     DOOR__SHARED,
     WINDOW__SHARED
-} from '../../shared'
-import { PILLOW_BENNETT__SHARED } from '../../shared/furniture'
+} from '../../shared/home'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED

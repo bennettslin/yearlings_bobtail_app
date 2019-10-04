@@ -9,10 +9,8 @@ import {
     MARQUEE_FRAME__MARA_GLADIATOR
 } from '../../../constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
-import {
-    DOOR__SHARED,
-    POSTER_GLADIATOR__SHARED
-} from '../../shared'
+import { POSTER_GLADIATOR__SHARED } from '../../shared'
+import { DOOR__SHARED } from '../../shared/home'
 import {
     ALL_PEOPLE__SHARED,
     MARA__SHARED

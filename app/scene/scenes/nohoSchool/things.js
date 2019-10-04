@@ -13,8 +13,8 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
-import { DOOR__SHARED } from '../../shared'
 import { PAPER_BAG__SHARED } from '../../shared/food'
+import { DOOR__SHARED } from '../../shared/home'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

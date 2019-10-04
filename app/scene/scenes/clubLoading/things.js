@@ -4,7 +4,7 @@ import {
 } from '../../../constants/scene'
 import { CLUB_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
-import { DOOR__SHARED } from '../../shared'
+import { DOOR__SHARED } from '../../shared/home'
 import {
     DRUMS__SHARED,
     DRUM_STAND__SHARED
