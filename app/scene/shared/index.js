@@ -1,6 +1,4 @@
 export const BUBBLE__SHARED = 'bubble'
-export const LIZ_PHONE__SHARED = 'lizPhone'
-export const SCISSORS__SHARED = 'scissors'
 export const SHADOW__SHARED = 'shadow'
 export const SNOWGLOBE__SHARED = 'snowglobe'
 export const TETHERBALL_POLE__SHARED = 'tetherballPole'

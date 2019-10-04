@@ -19,7 +19,7 @@ import {
     PHONE_CALL_PANEL,
     LIZ_BED
 } from '../../../constants/scene/things/panels'
-import { LIZ_PHONE__SHARED } from '../../shared'
+import { LIZ_PHONE__SHARED } from '../../shared/household'
 import {
     PILLOW_BOYFRIEND__SHARED,
     PILLOW_LIZ__SHARED

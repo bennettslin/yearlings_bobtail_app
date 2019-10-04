@@ -41,9 +41,9 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
-import { SCISSORS__SHARED } from '../../shared'
 import { PILLOW_PRETEEN_BENNETT__SHARED } from '../../shared/furniture'
 import { WINDOW__SHARED } from '../../shared/home'
+import { SCISSORS__SHARED } from '../../shared/household'
 import {
     BOOK__SHARED,
     LETTER__SHARED,
