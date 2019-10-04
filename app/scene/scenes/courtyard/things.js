@@ -5,9 +5,11 @@ import {
 import { RECYCLABLES } from '../../../constants/scene/things/cutouts'
 import {
     BLINDS_OUTSIDE__BENNETT,
-    BENNETT_DOOR_OUTSIDE
+    BENNETT_DOOR_OUTSIDE,
+    BENNETT_GATE_SIDE
 } from '../../../constants/scene/things/doors'
 import {
+    BENNETT_GATE__SHARED,
     DOOR__SHARED,
     WINDOW__SHARED
 } from '../../shared/home'
@@ -32,6 +34,11 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 8,
             sharedStyle: DOOR__SHARED
+        },
+        [BENNETT_GATE_SIDE]: {
+            yIndex: 5,
+            xPosition: 1,
+            sharedStyle: BENNETT_GATE__SHARED
         }
     }
 }

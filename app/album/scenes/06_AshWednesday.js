@@ -67,7 +67,8 @@ import {
 } from '../../constants/scene/things/cutouts'
 import {
     BLINDS_OUTSIDE__BENNETT,
-    BENNETT_DOOR_OUTSIDE
+    BENNETT_DOOR_OUTSIDE,
+    BENNETT_GATE_SIDE
 } from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
@@ -107,7 +108,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_OUTSIDE__BENNETT]: true,
-                [BENNETT_DOOR_OUTSIDE]: true
+                [BENNETT_DOOR_OUTSIDE]: true,
+                [BENNETT_GATE_SIDE]: true
             }
         },
         cubes: COURTYARD_KEY,

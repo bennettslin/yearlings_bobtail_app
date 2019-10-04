@@ -87,7 +87,9 @@ import {
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     WAITING_ROOM_DOOR,
-    WAITING_ROOM_DOOR_OPEN
+    WAITING_ROOM_DOOR_OPEN,
+    BENNETT_GATE_FRONT,
+    BENNETT_GATE_SIDE_OPEN
 } from '../../constants/scene/things/doors'
 import {
     LINGERIE_DRAWING,
@@ -257,6 +259,9 @@ export default [
             },
             [CUTOUT]: {
                 [APARTMENT_PLANT]: true
+            },
+            [DOOR]: {
+                [BENNETT_GATE_FRONT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -286,6 +291,9 @@ export default [
             },
             [CUTOUT]: {
                 [APARTMENT_PLANT]: true
+            },
+            [DOOR]: {
+                [BENNETT_GATE_FRONT]: true
             }
         },
         cubes: BENNETT_GATE_KEY,
@@ -308,7 +316,8 @@ export default [
                 [NEIGHBOUR_DOOR]: true,
                 [BLINDS_OUTSIDE__NEIGHBOUR]: true,
                 [BLINDS_INSIDE_OPEN__BENNETT]: true,
-                [BENNETT_DOOR_INSIDE]: true
+                [BENNETT_DOOR_INSIDE]: true,
+                [BENNETT_GATE_SIDE_OPEN]: true
             },
             [FIXTURE]: {
                 [LINGERIE_DRAWING]: true,

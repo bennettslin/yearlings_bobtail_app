@@ -98,5 +98,20 @@ export default [
         taskName: 'bedroomBlindsOpen',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'bennettGateFront',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettGateSide',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'bennettGateSideOpen',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

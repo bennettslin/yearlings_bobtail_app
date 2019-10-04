@@ -9,7 +9,8 @@ import {
     NEIGHBOUR_DOOR,
     BLINDS_INSIDE_OPEN__BENNETT,
     BENNETT_DOOR_INSIDE,
-    BENNETT_DOOR_INSIDE_OPEN
+    BENNETT_DOOR_INSIDE_OPEN,
+    BENNETT_GATE_SIDE_OPEN
 } from '../../../constants/scene/things/doors'
 import {
     LINGERIE_DRAWING,
@@ -19,6 +20,7 @@ import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 import { PILLOW_BENNETT__SHARED } from '../../shared/furniture'
 import {
+    BENNETT_GATE__SHARED,
     DOOR__SHARED,
     WINDOW__SHARED
 } from '../../shared/home'
@@ -58,6 +60,11 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 3,
             sharedStyle: DOOR__SHARED
+        },
+        [BENNETT_GATE_SIDE_OPEN]: {
+            yIndex: 1,
+            xPosition: 9,
+            sharedStyle: BENNETT_GATE__SHARED
         }
     },
     [FIXTURE]: {

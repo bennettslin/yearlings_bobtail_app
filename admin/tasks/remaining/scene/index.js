@@ -239,7 +239,7 @@ export default [
     },
     {
         taskName: 'bennettBed',
-        notes: `Make door correct height, add mattress to bed panel, expand room, darken neighbour door and window.`,
+        notes: `Make door correct height, add mattress to bed panel, expand room, darken neighbour door and window, colours for lit room.`,
         workedHours: 0,
         neededHours: 1
     },

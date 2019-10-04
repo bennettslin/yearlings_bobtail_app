@@ -7,7 +7,7 @@ import bedroomBlindsOpen from 'assets/svgs/doors/bedroomBlindsOpen'
 import principalDoor from 'assets/svgs/doors/principalDoor'
 import blindsOutside from 'assets/svgs/doors/blindsOutside'
 import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
-// import bennettGateSide from 'assets/svgs/doors/bennettGateSide'
+import bennettGateSide from 'assets/svgs/doors/bennettGateSide'
 // import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
 // import basementDoor from 'assets/svgs/doors/basementDoor'
 // import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
@@ -16,9 +16,9 @@ import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
 // import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
 // import lizGateOutsideOpen from 'assets/svgs/doors/lizGateOutsideOpen'
 import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
-// import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
-// import bennettGateSideOpen from 'assets/svgs/doors/bennettGateSideOpen'
+import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
 import neighbourDoor from 'assets/svgs/doors/neighbourDoor'
+import bennettGateSideOpen from 'assets/svgs/doors/bennettGateSideOpen'
 import bennettDoorInside from 'assets/svgs/doors/bennettDoorInside'
 import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
@@ -84,7 +84,7 @@ export default {
     [PRINCIPAL_DOOR]: principalDoor,
     [BLINDS_OUTSIDE__BENNETT]: blindsOutside,
     [BENNETT_DOOR_OUTSIDE]: bennettDoorOutside,
-    [BENNETT_GATE_SIDE]: false,
+    [BENNETT_GATE_SIDE]: bennettGateSide,
     [BANCROFT_DOOR]: false,
     [BASEMENT_DOOR]: false,
     [BASEMENT_DOOR_OPEN]: false,
@@ -95,10 +95,10 @@ export default {
     [LIZ_GATE_OUTSIDE]: false,
     [LIZ_GATE_OUTSIDE_OPEN]: false,
     [DISHROOM_DOOR]: dishroomDoor,
-    [BENNETT_GATE_FRONT]: false,
-    [BENNETT_GATE_SIDE_OPEN]: false,
+    [BENNETT_GATE_FRONT]: bennettGateFront,
     [BLINDS_OUTSIDE__NEIGHBOUR]: blindsOutside,
     [NEIGHBOUR_DOOR]: neighbourDoor,
+    [BENNETT_GATE_SIDE_OPEN]: bennettGateSideOpen,
     [BLINDS_INSIDE_OPEN__BENNETT]: blindsInsideOpen,
     [BENNETT_DOOR_INSIDE]: bennettDoorInside,
     [BENNETT_DOOR_INSIDE_OPEN]: bennettDoorInsideOpen,
