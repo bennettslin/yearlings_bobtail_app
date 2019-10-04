@@ -9,11 +9,11 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { STAGE_MIC__CROWD } from '../../../constants/scene/things/fixtures'
 import { CROWD_SIDE } from '../../../constants/scene/things/panels'
-import { SHADOW__SHARED } from '../../shared'
 import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
 } from '../../shared/instruments'
+import { SHADOW__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

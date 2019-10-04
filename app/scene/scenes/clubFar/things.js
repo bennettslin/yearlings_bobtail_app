@@ -4,8 +4,8 @@ import {
 } from '../../../constants/scene'
 import { CROWD_BACK } from '../../../constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from '../../../constants/scene/things/puppets'
-import { SHADOW__SHARED } from '../../shared'
 import { ODIN_GHOST__SHARED } from '../../shared/animals'
+import { SHADOW__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [PANEL]: {

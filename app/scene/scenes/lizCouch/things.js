@@ -27,7 +27,6 @@ import {
     PEACOCK,
     PEAHEN
 } from '../../../constants/scene/things/puppets'
-import { BUBBLE__SHARED } from '../../shared'
 import {
     OPAL__SHARED,
     PEAFOWL__SHARED
@@ -47,6 +46,7 @@ import {
     BENNETT__SHARED,
     LIZ__SHARED
 } from '../../shared/people'
+import { BUBBLE__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {

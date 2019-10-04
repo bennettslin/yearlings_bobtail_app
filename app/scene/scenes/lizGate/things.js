@@ -13,8 +13,8 @@ import {
     BLINDS_OUTSIDE__LIZ_ENDING,
     BLINDS_OUTSIDE__LIZ_ENDED
 } from '../../../constants/scene/things/doors'
-import { BUBBLE__SHARED } from '../../shared'
 import { WINDOW__SHARED } from '../../shared/home'
+import { BUBBLE__SHARED } from '../../shared/props'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLE]: {

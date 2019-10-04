@@ -14,7 +14,7 @@ import {
 } from '../../../constants/scene/things/flats'
 import { WEDDING_PLATFORM } from '../../../constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../constants/scene/things/puppets'
-import { WEDDING__SHARED } from '../../shared'
+import { WEDDING__SHARED } from '../../shared/buildings'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {

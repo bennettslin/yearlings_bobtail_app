@@ -17,12 +17,12 @@ import {
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
-import { LAMPPOST__SHARED } from '../../shared'
 import {
     OAKLAND_HOUSE__SHARED,
     OAKLAND_HOUSE_LEFT__SHARED,
     OAKLAND_HOUSE_RIGHT__SHARED
 } from '../../shared/buildings'
+import { LAMPPOST__SHARED } from '../../shared/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

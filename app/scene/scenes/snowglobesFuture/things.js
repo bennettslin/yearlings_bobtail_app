@@ -18,10 +18,6 @@ import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
-import {
-    ROAD__SHARED,
-    SNOWGLOBE__SHARED
-} from '../../shared'
 import { HEINEKEN__SHARED } from '../../shared/food'
 import { MICROPHONE__SHARED } from '../../shared/instruments'
 import {
@@ -29,6 +25,10 @@ import {
     BENNETT__SHARED,
     MIRIAM__SHARED
 } from '../../shared/people'
+import {
+    ROAD__SHARED,
+    SNOWGLOBE__SHARED
+} from '../../shared/props'
 import { REATTA__SHARED } from '../../shared/vehicles'
 
 const ARRANGEMENTS_THINGS = {

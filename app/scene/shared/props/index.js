@@ -1,5 +1,4 @@
 export const BUBBLE__SHARED = 'bubble'
+export const ROAD__SHARED = 'road'
 export const SHADOW__SHARED = 'shadow'
 export const SNOWGLOBE__SHARED = 'snowglobe'
-export const TETHERBALL_POLE__SHARED = 'tetherballPole'
-export const WEDDING__SHARED = 'wedding'

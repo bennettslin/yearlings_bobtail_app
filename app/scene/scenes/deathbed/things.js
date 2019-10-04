@@ -22,7 +22,7 @@ import { IV_DRIP } from '../../../constants/scene/things/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from '../../../constants/scene/things/fixtures'
 import { TENNIS_COURT } from '../../../constants/scene/things/flats'
 import { HOSPITAL_BED } from '../../../constants/scene/things/panels'
-import { BUBBLE__SHARED } from '../../shared'
+import { BUBBLE__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

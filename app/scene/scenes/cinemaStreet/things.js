@@ -13,7 +13,6 @@ import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
 } from '../../../constants/scene/things/cardboards'
-import { BUBBLE__SHARED } from '../../shared'
 import {
     ACOUSTIC_GUITAR__SHARED,
     MICROPHONE__SHARED
@@ -24,6 +23,7 @@ import {
     MARA__SHARED
 } from '../../shared/people'
 import { POSTER_GLADIATOR__SHARED } from '../../shared/print'
+import { BUBBLE__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

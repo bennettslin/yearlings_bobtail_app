@@ -18,7 +18,7 @@ import {
 import {
     ROAD__SHARED,
     SNOWGLOBE__SHARED
-} from '../../shared'
+} from '../../shared/props'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,

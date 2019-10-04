@@ -30,7 +30,6 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
-import { BUBBLE__SHARED } from '../../shared'
 import { WAITING_ARMCHAIR__SHARED } from '../../shared/furniture'
 import { DOOR__SHARED } from '../../shared/home'
 import { BANJO__SHARED } from '../../shared/instruments'
@@ -39,6 +38,7 @@ import {
     BENNETT__SHARED,
     LIZ__SHARED
 } from '../../shared/people'
+import { BUBBLE__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

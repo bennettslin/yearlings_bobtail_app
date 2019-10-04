@@ -20,10 +20,8 @@ import {
     SCHOOL_BUNGALOW__LEFT,
     SCHOOL_BUNGALOW__RIGHT
 } from '../../../constants/scene/things/flats'
-import {
-    BUBBLE__SHARED,
-    TETHERBALL_POLE__SHARED
-} from '../../shared'
+import { TETHERBALL_POLE__SHARED } from '../../shared/outdoor'
+import { BUBBLE__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
