@@ -3,6 +3,7 @@ import {
     BACKDROP,
     BUBBLE,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     PANEL,
@@ -58,6 +59,7 @@ import {
     IV_DRIP,
     CLIFF_TREE
 } from '../../constants/scene/things/cutouts'
+import { EL_TORITO_DOORS } from '../../constants/scene/things/doors'
 import { HOSPITAL_RECORD_PLAYER } from '../../constants/scene/things/fixtures'
 import {
     CLIFF_GRAVES_FAR,
@@ -131,6 +133,9 @@ export default [
             },
             [BACKDROP]: {
                 [MOUNTAIN_BACKDROP]: true
+            },
+            [DOOR]: {
+                [EL_TORITO_DOORS]: true
             },
             [FLAT]: {
                 [PAMPAS_FAR]: true

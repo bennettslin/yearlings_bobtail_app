@@ -113,5 +113,10 @@ export default [
         taskName: 'bennettGateSideOpen',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'elToritoDoors',
+        workedHours: 1,
+        neededHours: 1
     }
 ]
