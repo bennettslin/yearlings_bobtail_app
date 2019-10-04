@@ -95,7 +95,7 @@ export default [
     },
     {
         taskName: 'taiwanStairs',
-        notes: `Night colours, make Bennett cutout shorter.`,
+        notes: `Night colours.`,
         workedHours: 0,
         neededHours: 1
     },

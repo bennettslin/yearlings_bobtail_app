@@ -30,7 +30,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 5,
             scaleFactor: 0.2,
-            zOffset: 1,
+            zOffset: 0.875,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
                 BENNETT__SHARED
