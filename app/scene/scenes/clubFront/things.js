@@ -13,7 +13,6 @@ import {
     ELECTRIC_GUITAR,
     DRUMKIT
 } from '../../../constants/scene/things/fixtures'
-import { DOLLAR__SHARED } from '../../shared'
 import {
     CYMBAL__SHARED,
     DRUMS__SHARED,
@@ -21,6 +20,7 @@ import {
     ELECTRIC_GUITAR__SHARED,
     MONITOR__SHARED
 } from '../../shared/instruments'
+import { DOLLAR__SHARED } from '../../shared/print'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

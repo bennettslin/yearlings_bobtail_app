@@ -1,11 +1,11 @@
 import { FIXTURE } from '../../../constants/scene'
 import { CRACKED_PICTURE } from '../../../constants/scene/things/fixtures'
-import { PROMISE_PHOTO__SHARED } from '../../shared'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,
     LIZ__SHARED
 } from '../../shared/people'
+import { PROMISE_PHOTO__SHARED } from '../../shared/print'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
