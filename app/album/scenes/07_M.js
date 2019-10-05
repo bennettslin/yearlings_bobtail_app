@@ -84,7 +84,10 @@ import {
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
-import { CINEMA_DOORS } from '../../constants/scene/things/doors'
+import {
+    BASEMENT_DOOR_OPEN,
+    CINEMA_DOORS
+} from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
     BENNETT_COUCH_LAMP,
@@ -273,6 +276,9 @@ export default [
             },
             [BACKDROP]: {
                 [FOLIAGE_BACKDROP]: true
+            },
+            [DOOR]: {
+                [BASEMENT_DOOR_OPEN]: true
             },
             [FIXTURE]: {
                 [BASS_CASE_UPRIGHT]: true,

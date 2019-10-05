@@ -95,6 +95,9 @@ export default [
             [CUTOUT]: {
                 [DISPENSER_LEFT]: true,
                 [DISPENSER_RIGHT]: true
+            },
+            [DOOR]: {
+                [EL_TORITO_DOORS]: true
             }
         },
         cubes: EL_TORITO_KEY,
@@ -133,9 +136,6 @@ export default [
             },
             [BACKDROP]: {
                 [MOUNTAIN_BACKDROP]: true
-            },
-            [DOOR]: {
-                [EL_TORITO_DOORS]: true
             },
             [FLAT]: {
                 [PAMPAS_FAR]: true

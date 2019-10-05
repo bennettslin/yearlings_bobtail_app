@@ -1,4 +1,8 @@
-import { FIXTURE } from '../../../constants/scene'
+import {
+    DOOR,
+    FIXTURE
+} from '../../../constants/scene'
+import { BASEMENT_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import {
     BASS_CASE_UPRIGHT,
     GUITAR_CASE_UPRIGHT,
@@ -8,6 +12,7 @@ import {
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
 import { BUDWEISER__SHARED } from '../../shared/food'
+import { DOOR__SHARED } from '../../shared/home'
 import {
     BASS_CASE__SHARED,
     DRUMS__SHARED,
@@ -17,6 +22,13 @@ import {
 } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
+    [DOOR]: {
+        [BASEMENT_DOOR_OPEN]: {
+            yIndex: 2,
+            xPosition: 3,
+            sharedStyle: DOOR__SHARED
+        }
+    },
     [FIXTURE]: {
         [BASS_CASE_UPRIGHT]: {
             yIndex: 3,

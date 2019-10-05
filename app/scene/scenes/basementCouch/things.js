@@ -1,8 +1,13 @@
-import { CARDBOARD } from '../../../constants/scene'
+import {
+    CARDBOARD,
+    DOOR
+} from '../../../constants/scene'
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
 } from '../../../constants/scene/things/cardboards'
+import { BASEMENT_DOOR_SIDE } from '../../../constants/scene/things/doors'
+import { DOOR__SHARED } from '../../shared/home'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -19,6 +24,13 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 2,
             scaleFactor: 0.25,
             sharedStyle: ALL_PEOPLE__SHARED
+        }
+    },
+    [DOOR]: {
+        [BASEMENT_DOOR_SIDE]: {
+            yIndex: 3,
+            xPosition: 10,
+            sharedStyle: DOOR__SHARED
         }
     }
 }

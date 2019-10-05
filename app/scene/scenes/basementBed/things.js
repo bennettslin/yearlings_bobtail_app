@@ -1,5 +1,10 @@
-import { FIXTURE } from '../../../constants/scene'
+import {
+    DOOR,
+    FIXTURE
+} from '../../../constants/scene'
+import { BASEMENT_DOOR } from '../../../constants/scene/things/doors'
 import { CRACKED_PICTURE } from '../../../constants/scene/things/fixtures'
+import { DOOR__SHARED } from '../../shared/home'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED,
@@ -8,6 +13,13 @@ import {
 import { PROMISE_PHOTO__SHARED } from '../../shared/print'
 
 const ARRANGEMENTS_THINGS = {
+    [DOOR]: {
+        [BASEMENT_DOOR]: {
+            yIndex: 2,
+            xPosition: 3,
+            sharedStyle: DOOR__SHARED
+        }
+    },
     [FIXTURE]: {
         [CRACKED_PICTURE]: {
             yIndex: 3,

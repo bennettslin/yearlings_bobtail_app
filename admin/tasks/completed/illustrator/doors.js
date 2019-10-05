@@ -118,5 +118,20 @@ export default [
         taskName: 'elToritoDoors',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'basementDoor',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'basementDoorOpen',
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: 'basementDoorSide',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

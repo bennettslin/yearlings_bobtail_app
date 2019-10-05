@@ -56,7 +56,8 @@ import {
 } from '../../constants/scene/things/cutouts'
 import {
     BLINDS_INSIDE__LIZ,
-    LIZ_DOOR
+    LIZ_DOOR,
+    BASEMENT_DOOR_SIDE
 } from '../../constants/scene/things/doors'
 import {
     ELECTRIC_GUITAR,
@@ -153,6 +154,9 @@ export default [
             [CARDBOARD]: {
                 [NAS_ALBUM]: true,
                 [ELLIOTT_SMITH_POSTER]: true
+            },
+            [DOOR]: {
+                [BASEMENT_DOOR_SIDE]: true
             },
             [FIXTURE]: {
                 [BENNETT_COUCH_LAMP]: true,

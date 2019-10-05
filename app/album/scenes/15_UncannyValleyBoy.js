@@ -3,7 +3,8 @@ import {
     BACKDROP,
     CARDBOARD,
     FIXTURE,
-    PANEL
+    PANEL,
+    DOOR
 } from '../../constants/scene'
 import {
     BASEMENT_BED_KEY,
@@ -71,6 +72,7 @@ import {
     SNOWGLOBE_FUTURE_CORD,
     SNOWGLOBE_FUTURE_REATTA
 } from '../../constants/scene/things/cardboards'
+import { BASEMENT_DOOR } from '../../constants/scene/things/doors'
 import {
     TETHERBALL_POLE,
     RECORDING_MIC,
@@ -103,6 +105,9 @@ export default [
             },
             [BACKDROP]: {
                 [FOLIAGE_BACKDROP]: true
+            },
+            [DOOR]: {
+                [BASEMENT_DOOR]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true
@@ -265,6 +270,9 @@ export default [
                 [SNOWGLOBE_SMALL__FUTURE]: true,
                 [SNOWGLOBE_FUTURE_CORD]: true,
                 [SNOWGLOBE_FUTURE_REATTA]: true
+            },
+            [DOOR]: {
+                [BASEMENT_DOOR]: true
             },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,

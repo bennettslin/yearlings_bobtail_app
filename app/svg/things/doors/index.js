@@ -9,9 +9,9 @@ import blindsOutside from 'assets/svgs/doors/blindsOutside'
 import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
 import bennettGateSide from 'assets/svgs/doors/bennettGateSide'
 // import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
-// import basementDoor from 'assets/svgs/doors/basementDoor'
-// import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
-// import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
+import basementDoor from 'assets/svgs/doors/basementDoor'
+import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
+import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
 import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
 // import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
 // import lizGateOutsideOpen from 'assets/svgs/doors/lizGateOutsideOpen'
@@ -86,9 +86,9 @@ export default {
     [BENNETT_DOOR_OUTSIDE]: bennettDoorOutside,
     [BENNETT_GATE_SIDE]: bennettGateSide,
     [BANCROFT_DOOR]: false,
-    [BASEMENT_DOOR]: false,
-    [BASEMENT_DOOR_OPEN]: false,
-    [BASEMENT_DOOR_SIDE]: false,
+    [BASEMENT_DOOR]: basementDoor,
+    [BASEMENT_DOOR_OPEN]: basementDoorOpen,
+    [BASEMENT_DOOR_SIDE]: basementDoorSide,
     [CINEMA_DOORS]: cinemaDoors,
     [BLINDS_OUTSIDE__LIZ_ENDING]: blindsOutside,
     [BLINDS_OUTSIDE__LIZ_ENDED]: blindsOutside,

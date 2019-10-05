@@ -15,21 +15,6 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'basementDoor',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'basementDoorOpen',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
-        taskName: 'basementDoorSide',
-        workedHours: 0,
-        neededHours: 0.5
-    },
-    {
         taskName: 'lizGateOutside',
         workedHours: 0,
         neededHours: 0.5
