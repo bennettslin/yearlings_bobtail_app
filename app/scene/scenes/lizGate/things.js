@@ -11,9 +11,14 @@ import {
 import { TRAFFIC_LIGHT } from '../../../constants/scene/things/cutouts'
 import {
     BLINDS_OUTSIDE__LIZ_ENDING,
-    BLINDS_OUTSIDE__LIZ_ENDED
+    BLINDS_OUTSIDE__LIZ_ENDED,
+    LIZ_GATE_OUTSIDE__ENDING,
+    LIZ_GATE_OUTSIDE__ENDED
 } from '../../../constants/scene/things/doors'
-import { WINDOW__SHARED } from '../../shared/home'
+import {
+    LIZ_GATE__SHARED,
+    WINDOW__SHARED
+} from '../../shared/home'
 import { BUBBLE__SHARED } from '../../shared/props'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
@@ -60,6 +65,16 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             scaleFactor: 0.575,
             zOffset: 2.5,
             sharedStyle: WINDOW__SHARED
+        },
+        [LIZ_GATE_OUTSIDE__ENDING]: {
+            yIndex: 4,
+            xPosition: 6,
+            sharedStyle: LIZ_GATE__SHARED
+        },
+        [LIZ_GATE_OUTSIDE__ENDED]: {
+            yIndex: 4,
+            xPosition: 3,
+            sharedStyle: LIZ_GATE__SHARED
         }
     }
 }

@@ -17,7 +17,8 @@ import {
     BLINDS_INSIDE__LIZ,
     BLINDS_INSIDE_OPEN__LIZ,
     LIZ_DOOR,
-    LIZ_DOOR_OPEN
+    LIZ_DOOR_OPEN,
+    LIZ_GATE_INSIDE
 } from '../../../constants/scene/things/doors'
 import { TCHOTCHKES } from '../../../constants/scene/things/fixtures'
 import { LIZ_COUCH } from '../../../constants/scene/things/panels'
@@ -33,7 +34,8 @@ import {
 } from '../../shared/animals'
 import {
     DOOR__SHARED,
-    WINDOW__SHARED
+    WINDOW__SHARED,
+    LIZ_GATE__SHARED
 } from '../../shared/home'
 import {
     BANJO__SHARED,
@@ -73,6 +75,11 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 8.875,
             sharedStyle: DOOR__SHARED
+        },
+        [LIZ_GATE_INSIDE]: {
+            yIndex: 1,
+            xPosition: 6,
+            sharedStyle: LIZ_GATE__SHARED
         }
     },
     [PANEL]: {

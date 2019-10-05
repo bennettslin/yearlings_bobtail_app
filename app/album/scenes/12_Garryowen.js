@@ -57,7 +57,8 @@ import {
 import {
     BLINDS_INSIDE__LIZ,
     LIZ_DOOR,
-    BASEMENT_DOOR_SIDE
+    BASEMENT_DOOR_SIDE,
+    LIZ_GATE_INSIDE
 } from '../../constants/scene/things/doors'
 import {
     ELECTRIC_GUITAR,
@@ -90,7 +91,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -227,7 +229,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true

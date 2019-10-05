@@ -46,7 +46,8 @@ import {
 import {
     BLINDS_INSIDE_OPEN__LIZ,
     LIZ_DOOR,
-    LIZ_DOOR_OPEN
+    LIZ_DOOR_OPEN,
+    LIZ_GATE_INSIDE
 } from '../../constants/scene/things/doors'
 import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
 import { LIZ_COUCH } from '../../constants/scene/things/panels'
@@ -72,7 +73,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -98,7 +100,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -124,7 +127,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [FIXTURE]: {
                 [TCHOTCHKES]: true
@@ -160,7 +164,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR_OPEN]: true
+                [LIZ_DOOR_OPEN]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -194,7 +199,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -230,7 +236,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -256,7 +263,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -285,7 +293,8 @@ export default [
             },
             [DOOR]: {
                 [BLINDS_INSIDE_OPEN__LIZ]: true,
-                [LIZ_DOOR]: true
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true

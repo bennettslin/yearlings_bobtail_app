@@ -49,7 +49,9 @@ import {
 } from '../../constants/scene/things/cutouts'
 import {
     BLINDS_OUTSIDE__LIZ_ENDING,
-    BLINDS_OUTSIDE__LIZ_ENDED
+    BLINDS_OUTSIDE__LIZ_ENDED,
+    LIZ_GATE_OUTSIDE__ENDING,
+    LIZ_GATE_OUTSIDE__ENDED
 } from '../../constants/scene/things/doors'
 import {
     PUSH_BROOM__BACKSTAGE,
@@ -82,7 +84,8 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_OUTSIDE__LIZ_ENDING]: true
+                [BLINDS_OUTSIDE__LIZ_ENDING]: true,
+                [LIZ_GATE_OUTSIDE__ENDING]: true
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -220,7 +223,8 @@ export default [
                 [TRAFFIC_LIGHT]: true
             },
             [DOOR]: {
-                [BLINDS_OUTSIDE__LIZ_ENDED]: true
+                [BLINDS_OUTSIDE__LIZ_ENDED]: true,
+                [LIZ_GATE_OUTSIDE__ENDED]: true
             }
         },
         cubes: LIZ_GATE_STREET_KEY,

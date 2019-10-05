@@ -133,5 +133,15 @@ export default [
         taskName: 'basementDoorSide',
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: 'lizGateOutside',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'lizGateInside',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

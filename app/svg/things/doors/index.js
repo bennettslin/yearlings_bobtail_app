@@ -13,8 +13,7 @@ import basementDoor from 'assets/svgs/doors/basementDoor'
 import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
 import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
 import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
-// import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
-// import lizGateOutsideOpen from 'assets/svgs/doors/lizGateOutsideOpen'
+import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
 import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
 import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
 import neighbourDoor from 'assets/svgs/doors/neighbourDoor'
@@ -28,8 +27,7 @@ import blindsInside from 'assets/svgs/doors/blindsInside'
 import blindsInsideOpen from 'assets/svgs/doors/blindsInsideOpen'
 import lizDoor from 'assets/svgs/doors/lizDoor'
 import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
-// import lizGateInside from 'assets/svgs/doors/lizGateInside'
-// import lizGateInsideOpen from 'assets/svgs/doors/lizGateInsideOpen'
+import lizGateInside from 'assets/svgs/doors/lizGateInside'
 import loadingDockDoor from 'assets/svgs/doors/loadingDockDoor'
 import elToritoDoors from 'assets/svgs/doors/elToritoDoors'
 
@@ -51,8 +49,8 @@ import {
     CINEMA_DOORS,
     BLINDS_OUTSIDE__LIZ_ENDING,
     BLINDS_OUTSIDE__LIZ_ENDED,
-    LIZ_GATE_OUTSIDE,
-    LIZ_GATE_OUTSIDE_OPEN,
+    LIZ_GATE_OUTSIDE__ENDING,
+    LIZ_GATE_OUTSIDE__ENDED,
     DISHROOM_DOOR,
     BENNETT_GATE_FRONT,
     BENNETT_GATE_SIDE_OPEN,
@@ -92,8 +90,8 @@ export default {
     [CINEMA_DOORS]: cinemaDoors,
     [BLINDS_OUTSIDE__LIZ_ENDING]: blindsOutside,
     [BLINDS_OUTSIDE__LIZ_ENDED]: blindsOutside,
-    [LIZ_GATE_OUTSIDE]: false,
-    [LIZ_GATE_OUTSIDE_OPEN]: false,
+    [LIZ_GATE_OUTSIDE__ENDING]: lizGateOutside,
+    [LIZ_GATE_OUTSIDE__ENDED]: lizGateOutside,
     [DISHROOM_DOOR]: dishroomDoor,
     [BENNETT_GATE_FRONT]: bennettGateFront,
     [BLINDS_OUTSIDE__NEIGHBOUR]: blindsOutside,
@@ -109,7 +107,7 @@ export default {
     [BLINDS_INSIDE_OPEN__LIZ]: blindsInsideOpen,
     [LIZ_DOOR]: lizDoor,
     [LIZ_DOOR_OPEN]: lizDoorOpen,
-    [LIZ_GATE_INSIDE]: false,
+    [LIZ_GATE_INSIDE]: lizGateInside,
     [LIZ_GATE_INSIDE_OPEN]: false,
     [LOADING_DOCK_DOOR]: loadingDockDoor,
     [EL_TORITO_DOORS]: elToritoDoors
