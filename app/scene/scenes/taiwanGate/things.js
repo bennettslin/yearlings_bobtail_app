@@ -1,10 +1,12 @@
 import {
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FLAT
 } from '../../../constants/scene'
 import { BENNETT_ODIN_RICKSHAW } from '../../../constants/scene/things/cardboards'
 import { TAIWAN_TREE } from '../../../constants/scene/things/cutouts'
+import { IRON_GATE } from '../../../constants/scene/things/doors'
 import {
     TAIWAN_HOUSES_CENTRE,
     TAIWAN_HOUSE_FAR,
@@ -12,6 +14,7 @@ import {
 } from '../../../constants/scene/things/flats'
 import { ODIN__SHARED } from '../../shared/animals'
 import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
+import { TAIWAN_GATE__SHARED } from '../../shared/home'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED
@@ -37,6 +40,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 4,
             scaleFactor: 0.6
+        }
+    },
+    [DOOR]: {
+        [IRON_GATE]: {
+            yIndex: 5,
+            xPosition: 2,
+            sharedStyle: TAIWAN_GATE__SHARED
         }
     },
     [FLAT]: {

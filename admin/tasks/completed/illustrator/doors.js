@@ -143,5 +143,15 @@ export default [
         taskName: 'lizGateInside',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'ironGateLow',
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: 'ironGate',
+        workedHours: 1,
+        neededHours: 1
     }
 ]

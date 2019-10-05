@@ -3,6 +3,7 @@ import {
     BACKDROP,
     CARDBOARD,
     CUTOUT,
+    DOOR,
     FIXTURE,
     FLAT,
     PANEL
@@ -66,6 +67,10 @@ import {
     TAIWAN_TREE,
     YELLOW_TAPED_GRILL
 } from '../../constants/scene/things/cutouts'
+import {
+    IRON_GATE,
+    IRON_GATE_LOW
+} from '../../constants/scene/things/doors'
 import { FRIDGE_DRAWINGS } from '../../constants/scene/things/fixtures'
 import {
     TAIWAN_HOUSES_CENTRE,
@@ -127,6 +132,9 @@ export default [
             [CARDBOARD]: {
                 [BENNETT_TAIWAN_GATE]: true,
                 [ODIN_TAIWAN_GATE]: true
+            },
+            [DOOR]: {
+                [IRON_GATE_LOW]: true
             }
         },
         cubes: TAIWAN_STAIRS_KEY,
@@ -153,6 +161,9 @@ export default [
             },
             [CUTOUT]: {
                 [TAIWAN_TREE]: true
+            },
+            [DOOR]: {
+                [IRON_GATE]: true
             },
             [FLAT]: {
                 [TAIWAN_HOUSES_CENTRE]: true,

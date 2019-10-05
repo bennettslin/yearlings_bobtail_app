@@ -1,14 +1,17 @@
 import {
     BACKDROP,
-    CARDBOARD
+    CARDBOARD,
+    DOOR
 } from '../../../constants/scene'
 import { TAIWAN_STAIRS_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
 } from '../../../constants/scene/things/cardboards'
+import { IRON_GATE_LOW } from '../../../constants/scene/things/doors'
 import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
 import { ODIN__SHARED } from '../../shared/animals'
+import { TAIWAN_GATE__SHARED } from '../../shared/home'
 import {
     ALL_PEOPLE__SHARED,
     BENNETT__SHARED
@@ -41,6 +44,14 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 6,
             scaleFactor: 0.2,
             sharedStyle: ODIN__SHARED
+        }
+    },
+    [DOOR]: {
+        [IRON_GATE_LOW]: {
+            yIndex: 2,
+            xPosition: 4,
+            trimBottom: 0.5,
+            sharedStyle: TAIWAN_GATE__SHARED
         }
     }
 }

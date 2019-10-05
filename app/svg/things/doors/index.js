@@ -2,8 +2,8 @@ import nurseDoor from 'assets/svgs/doors/nurseDoor'
 import porchDoor from 'assets/svgs/doors/porchDoor'
 import bedroomBlinds from 'assets/svgs/doors/bedroomBlinds'
 import bedroomBlindsOpen from 'assets/svgs/doors/bedroomBlindsOpen'
-// import ironGateLow from 'assets/svgs/doors/ironGateLow'
-// import ironGate from 'assets/svgs/doors/ironGate'
+import ironGateLow from 'assets/svgs/doors/ironGateLow'
+import ironGate from 'assets/svgs/doors/ironGate'
 import principalDoor from 'assets/svgs/doors/principalDoor'
 import blindsOutside from 'assets/svgs/doors/blindsOutside'
 import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
@@ -77,8 +77,8 @@ export default {
     [PORCH_DOOR]: porchDoor,
     [BEDROOM_BLINDS]: bedroomBlinds,
     [BEDROOM_BLINDS_OPEN]: bedroomBlindsOpen,
-    [IRON_GATE_LOW]: false,
-    [IRON_GATE]: false,
+    [IRON_GATE_LOW]: ironGateLow,
+    [IRON_GATE]: ironGate,
     [PRINCIPAL_DOOR]: principalDoor,
     [BLINDS_OUTSIDE__BENNETT]: blindsOutside,
     [BENNETT_DOOR_OUTSIDE]: bennettDoorOutside,
