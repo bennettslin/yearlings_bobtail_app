@@ -4906,5 +4906,10 @@ export default [
         taskName: `Scan faces.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Make face ai files.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
