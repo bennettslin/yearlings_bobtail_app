@@ -58,7 +58,10 @@ import {
     WALL_SPEAKER_FRONT__RIGHT,
     DUMPSTER
 } from '../../constants/scene/things/cutouts'
-import { LOADING_DOCK_DOOR } from '../../constants/scene/things/doors'
+import {
+    BANCROFT_DOOR,
+    LOADING_DOCK_DOOR
+} from '../../constants/scene/things/doors'
 import {
     BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
@@ -103,6 +106,9 @@ export default [
             [CUTOUT]: {
                 [ASH_CAN]: true,
                 [CAMPUS_TREE_SINGLE__BANCROFT]: true
+            },
+            [DOOR]: {
+                [BANCROFT_DOOR]: true
             },
             [FLAT]: {
                 [BERKELEY_BUILDING_WIDE__BANCROFT]: true

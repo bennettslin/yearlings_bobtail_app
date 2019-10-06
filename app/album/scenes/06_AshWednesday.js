@@ -68,7 +68,8 @@ import {
 import {
     BLINDS_OUTSIDE__BENNETT,
     BENNETT_DOOR_OUTSIDE,
-    BENNETT_GATE_SIDE
+    BENNETT_GATE_SIDE,
+    BANCROFT_DOOR
 } from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
@@ -213,6 +214,9 @@ export default [
             [CUTOUT]: {
                 [ASH_CAN]: true,
                 [CAMPUS_TREE_SINGLE__BANCROFT]: true
+            },
+            [DOOR]: {
+                [BANCROFT_DOOR]: true
             },
             [FLAT]: {
                 [BERKELEY_BUILDING_WIDE__BANCROFT]: true

@@ -153,5 +153,10 @@ export default [
         taskName: 'ironGate',
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: 'bancroftDoor',
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]

@@ -1,5 +1,6 @@
 import {
     CUTOUT,
+    DOOR,
     FLAT,
     PUPPET
 } from '../../../constants/scene'
@@ -7,11 +8,13 @@ import {
     CAMPUS_TREE_SINGLE__BANCROFT,
     ASH_CAN
 } from '../../../constants/scene/things/cutouts'
+import { BANCROFT_DOOR } from '../../../constants/scene/things/doors'
 import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
 import { ODIN_GHOST__SHARED } from '../../shared/animals'
 import { BERKELEY_BUILDING__SHARED } from '../../shared/buildings'
 import { CIGARETTE__SHARED } from '../../shared/food'
+import { DOOR__SHARED } from '../../shared/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -25,6 +28,13 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 5.5,
             scaleFactor: 0.3,
             sharedStyle: CIGARETTE__SHARED
+        }
+    },
+    [DOOR]: {
+        [BANCROFT_DOOR]: {
+            yIndex: 3,
+            xPosition: 9,
+            sharedStyle: DOOR__SHARED
         }
     },
     [FLAT]: {

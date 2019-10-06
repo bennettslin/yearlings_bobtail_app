@@ -8,7 +8,7 @@ import principalDoor from 'assets/svgs/doors/principalDoor'
 import blindsOutside from 'assets/svgs/doors/blindsOutside'
 import bennettDoorOutside from 'assets/svgs/doors/bennettDoorOutside'
 import bennettGateSide from 'assets/svgs/doors/bennettGateSide'
-// import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
+import bancroftDoor from 'assets/svgs/doors/bancroftDoor'
 import basementDoor from 'assets/svgs/doors/basementDoor'
 import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
 import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
@@ -67,7 +67,6 @@ import {
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
-    LIZ_GATE_INSIDE_OPEN,
     LOADING_DOCK_DOOR,
     EL_TORITO_DOORS
 } from '../../../constants/scene/things/doors'
@@ -83,7 +82,7 @@ export default {
     [BLINDS_OUTSIDE__BENNETT]: blindsOutside,
     [BENNETT_DOOR_OUTSIDE]: bennettDoorOutside,
     [BENNETT_GATE_SIDE]: bennettGateSide,
-    [BANCROFT_DOOR]: false,
+    [BANCROFT_DOOR]: bancroftDoor,
     [BASEMENT_DOOR]: basementDoor,
     [BASEMENT_DOOR_OPEN]: basementDoorOpen,
     [BASEMENT_DOOR_SIDE]: basementDoorSide,
@@ -108,7 +107,6 @@ export default {
     [LIZ_DOOR]: lizDoor,
     [LIZ_DOOR_OPEN]: lizDoorOpen,
     [LIZ_GATE_INSIDE]: lizGateInside,
-    [LIZ_GATE_INSIDE_OPEN]: false,
     [LOADING_DOCK_DOOR]: loadingDockDoor,
     [EL_TORITO_DOORS]: elToritoDoors
 }
