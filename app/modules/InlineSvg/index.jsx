@@ -5,7 +5,7 @@ import ReactInlineSvg from 'react-inlinesvg'
 
 const propTypes = {
     // From parent.
-    inPreviewer: PropTypes.bool,
+    notAbsoluteFullContainer: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
     svgClassName: PropTypes.string,
@@ -13,7 +13,7 @@ const propTypes = {
 }
 
 const InlineSvg = ({
-    inPreviewer,
+    notAbsoluteFullContainer,
     className,
     style,
     svgClassName,
@@ -26,7 +26,7 @@ const InlineSvg = ({
                 className,
 
                 // When not in previewer, make position absolute.
-                !inPreviewer && 'abF'
+                !notAbsoluteFullContainer && 'abF'
             ),
             style
         }}

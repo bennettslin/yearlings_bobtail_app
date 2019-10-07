@@ -8,7 +8,10 @@ import { updateLyricStore } from 'flux/lyric/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AspectRatio from '../AspectRatio'
-import Svg from '../../../modules/Svg'
+
+import InlineSvg from 'modules/InlineSvg'
+import curtainSide from 'assets/svgs/theatre/curtainSide'
+import curtainTop from 'assets/svgs/theatre/curtainTop'
 
 const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter }
@@ -61,20 +64,53 @@ class Curtains extends PureComponent {
                             )
                         }}
                     >
-                        <Svg className={cx(
-                            'Curtains__left',
-                            'Curtains__side',
-                            'Curtains__child'
-                        )} />
-                        <Svg className={cx(
-                            'Curtains__right',
-                            'Curtains__side',
-                            'Curtains__child'
-                        )} />
-                        <Svg className={cx(
-                            'Curtains__top',
-                            'Curtains__child'
-                        )} />
+                        <InlineSvg
+                            {...{
+                                className: cx(
+                                    'Curtains__left',
+                                    'Curtains__side',
+                                    'Curtains__child'
+                                ),
+                                svgClassName: cx(
+                                    'curtainSide',
+                                    'fillTransition__dimTheatre'
+                                ),
+                                title: 'curtain side left'
+                            }}
+                        >
+                            {curtainSide}
+                        </InlineSvg>
+                        <InlineSvg
+                            {...{
+                                className: cx(
+                                    'Curtains__right',
+                                    'Curtains__side',
+                                    'Curtains__child'
+                                ),
+                                svgClassName: cx(
+                                    'curtainSide',
+                                    'fillTransition__dimTheatre'
+                                ),
+                                title: 'curtain side right'
+                            }}
+                        >
+                            {curtainSide}
+                        </InlineSvg>
+                        <InlineSvg
+                            {...{
+                                className: cx(
+                                    'Curtains__top',
+                                    'Curtains__child'
+                                ),
+                                svgClassName: cx(
+                                    'curtainTop',
+                                    'fillTransition__dimTheatre'
+                                ),
+                                title: 'curtain top'
+                            }}
+                        >
+                            {curtainTop}
+                        </InlineSvg>
                     </div>
                 </CSSTransition>
             </AspectRatio>
