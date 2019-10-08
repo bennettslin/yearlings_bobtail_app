@@ -2,20 +2,17 @@
     z-index: $zIndex__curtains;
 }
 
-.Curtains__child {
-    position: absolute;
-    top: 0;
-    // background-color: rgba(125, 50, 50, 0.9);
+.Curtains__top {
+    height: 7.5%;
 }
 
 .Curtains__side {
     width: 50%;
-    height: 100%
 }
 
 .Curtains__left {
     // Allow curtains to overlap a bit when closed.
-    left: 1%;
+    left: 0.1%;
 
     .DW__higherProcessor
     & {
@@ -30,7 +27,7 @@
 
 .Curtains__right {
     left: auto;
-    right: 1%;
+    right: 0.1%;
 
     .DW__higherProcessor
     & {
@@ -43,13 +40,23 @@
     }
 }
 
-.Curtains__top {
-    left: 0;
-    width: 100%;
-    height: 7.5%;
+// This is the path in the svg.
+.curtainRear  {
+    fill: url(#fill__curtainRear);
 }
+.curtainSide  {
+    fill: url(#fill__curtainSideDark);
 
-.curtainTop,
-.curtainSide {
-    fill: #bd4a4a;
+    .PlW__logue
+    & {
+        fill: url(#fill__curtainSideLit);
+    }
+}
+.curtainTop  {
+    fill: url(#fill__curtainTopDark);
+
+    .PlW__logue
+    & {
+        fill: url(#fill__curtainTopLit);
+    }
 }

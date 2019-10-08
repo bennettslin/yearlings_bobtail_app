@@ -46,7 +46,6 @@ class Curtains extends PureComponent {
         return (
             <AspectRatio>
                 <CSSTransition
-                    mountOnEnter
                     {...{
                         in: canLyricCarouselEnter,
                         timeout: 250,
@@ -68,8 +67,7 @@ class Curtains extends PureComponent {
                             {...{
                                 className: cx(
                                     'Curtains__left',
-                                    'Curtains__side',
-                                    'Curtains__child'
+                                    'Curtains__side'
                                 ),
                                 svgClassName: cx(
                                     'curtainSide',
@@ -84,8 +82,7 @@ class Curtains extends PureComponent {
                             {...{
                                 className: cx(
                                     'Curtains__right',
-                                    'Curtains__side',
-                                    'Curtains__child'
+                                    'Curtains__side'
                                 ),
                                 svgClassName: cx(
                                     'curtainSide',
@@ -99,8 +96,7 @@ class Curtains extends PureComponent {
                         <InlineSvg
                             {...{
                                 className: cx(
-                                    'Curtains__top',
-                                    'Curtains__child'
+                                    'Curtains__top'
                                 ),
                                 svgClassName: cx(
                                     'curtainTop',
