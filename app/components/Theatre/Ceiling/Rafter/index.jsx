@@ -32,8 +32,7 @@ const CeilingRafter = ({
             svgClassName: cx(
                 'ceilingRafter',
                 'fillTransition__dimTheatre'
-            ),
-            title: 'ceiling rafter'
+            )
         }}
     >
         {ceilingRafter}

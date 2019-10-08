@@ -72,8 +72,7 @@ class Curtains extends PureComponent {
                                 svgClassName: cx(
                                     'curtainSide',
                                     'fillTransition__dimTheatre'
-                                ),
-                                title: 'curtain side left'
+                                )
                             }}
                         >
                             {curtainSide}
@@ -87,8 +86,7 @@ class Curtains extends PureComponent {
                                 svgClassName: cx(
                                     'curtainSide',
                                     'fillTransition__dimTheatre'
-                                ),
-                                title: 'curtain side right'
+                                )
                             }}
                         >
                             {curtainSide}
@@ -101,8 +99,7 @@ class Curtains extends PureComponent {
                                 svgClassName: cx(
                                     'curtainTop',
                                     'fillTransition__dimTheatre'
-                                ),
-                                title: 'curtain top'
+                                )
                             }}
                         >
                             {curtainTop}

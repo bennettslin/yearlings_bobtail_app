@@ -4,7 +4,7 @@ import cx from 'classnames'
 import InlineSvg from 'modules/InlineSvg'
 
 import {
-    convertPresenceKeyToTitle,
+    // convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from 'helpers/format'
@@ -214,7 +214,7 @@ class ConfiguredPresenceSvg extends PureComponent {
                         convertPresenceKeyToClassName(presenceKey),
                         getSharedClassNames(sharedStyle)
                     ),
-                    title: convertPresenceKeyToTitle(presenceKey),
+                    // title: convertPresenceKeyToTitle(presenceKey),
                     preProcessor: this.preProcessSvg,
                     onLoad: this.postProcessSvg
                 }}

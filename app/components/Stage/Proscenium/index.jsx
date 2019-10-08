@@ -42,8 +42,7 @@ const Proscenium = ({
             svgClassName: cx(
                 'proscenium',
                 'fillTransition__dimTheatre'
-            ),
-            title: 'proscenium'
+            )
         }}
     >
         {proscenium}

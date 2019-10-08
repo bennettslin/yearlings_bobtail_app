@@ -35,8 +35,7 @@ const WallBalcony = ({
                 'wallBalcony',
                 isLeft && 'wallBalcony__left',
                 'fillTransition__dimTheatre'
-            ),
-            title: 'wall balcony'
+            )
         }}
     >
         {wallBalcony}

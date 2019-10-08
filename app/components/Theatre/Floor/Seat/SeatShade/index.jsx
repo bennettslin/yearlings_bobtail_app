@@ -31,8 +31,7 @@ const SeatShade = ({
             svgClassName: cx(
                 'fillTransition__dimTheatre',
                 className
-            ),
-            title: 'floor seat'
+            )
         }}
     >
         {floorSeat}

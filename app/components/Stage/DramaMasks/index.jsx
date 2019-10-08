@@ -42,8 +42,7 @@ const DramaMasks = ({
             svgClassName: cx(
                 'dramaMasks',
                 'fillTransition__dimTheatre'
-            ),
-            title: 'drama masks'
+            )
         }}
     >
         {dramaMasks}
