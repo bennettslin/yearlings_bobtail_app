@@ -31,7 +31,7 @@ export default [
     },
     {
         taskName: 'curtains',
-        workedHours: 3,
-        neededHours: 3
+        workedHours: 4,
+        neededHours: 4
     }
 ]
