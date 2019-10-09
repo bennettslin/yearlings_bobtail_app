@@ -1,27 +1,27 @@
 <svg viewBox="0 0 2701.48 137.57">
     <defs>
-        <linearGradient id="fill__curtainLit" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="fill__curtainTopLit" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="rgb(166,50,50)" />
             <stop offset="50%" stop-color="rgb(191,58,34)" />
             <stop offset="100%" stop-color="rgb(166,50,50)" />
         </linearGradient>
-        <linearGradient id="fill__curtainDark" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="fill__curtainTopDark" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="rgb(166,50,50)" />
             <stop offset="50%" stop-color="rgb(191,58,34)" />
             <stop offset="100%" stop-color="rgb(166,50,50)" />
         </linearGradient>
-        <linearGradient id="fill__curtainBandLit" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="fill__curtainTopBandLit" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="rgb(163,136,64)" />
             <stop offset="50%" stop-color="rgb(189,158,74)" />
             <stop offset="100%" stop-color="rgb(163,136,64)" />
         </linearGradient>
-        <linearGradient id="fill__curtainBandDark" x1="0%" y1="0%" x2="100%" y2="0%">
+        <linearGradient id="fill__curtainTopBandDark" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="rgb(163,136,64)" />
             <stop offset="50%" stop-color="rgb(189,158,74)" />
             <stop offset="100%" stop-color="rgb(163,136,64)" />
         </linearGradient>
     </defs>
-    <g class="curtain">
+    <g class="curtainTop">
         <path d="M343.45,1V136.07c28.64-10.07,126.57-10.75,152.91,0V1Z"/>
         <path d="M495.35,1V136.07c28.89-10.33,134.24-10.5,159.86,0V1Z"/>
         <path d="M654.21,1V136.07c27-10.33,141-10.58,167.8,0V1Z"/>
@@ -39,7 +39,7 @@
         <path d="M158.79,1V136.07c29.45-10.16,159.39-10.67,186.67,0V1Z"/>
         <path d="M1,1V136.07c28.66-10.29,134-10.29,158.8,0V1Z"/>
     </g>
-    <g class="curtainBand">
+    <g class="curtainTopBand">
         <path d="M343.45,111.07v25c28.64-10.07,126.57-10.75,152.91,0v-25C470,100.32,372.09,101,343.45,111.07Z"/>
         <path d="M495.35,111.07v25c28.89-10.33,134.24-10.5,159.86,0v-25C629.59,100.57,524.24,100.74,495.35,111.07Z"/>
         <path d="M654.21,111.07v25c27-10.33,141-10.58,167.8,0v-25C795.2,100.49,681.26,100.74,654.21,111.07Z"/>

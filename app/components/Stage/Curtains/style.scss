@@ -41,20 +41,36 @@
 }
 
 // This is the path in the svg.
-.curtain  {
-    fill: url(#fill__curtainDark);
+.curtainSide  {
+    fill: url(#fill__curtainSideDark);
 
     .PlW__logue
     & {
-        fill: url(#fill__curtainLit);
+        fill: url(#fill__curtainSideLit);
     }
 }
-.curtainBand  {
-    fill: url(#fill__curtainBandDark);
+.curtainSideBand  {
+    fill: url(#fill__curtainSideBandDark);
 
     .PlW__logue
     & {
-        fill: url(#fill__curtainBandLit);
+        fill: url(#fill__curtainSideBandLit);
+    }
+}
+.curtainTop  {
+    fill: url(#fill__curtainTopDark);
+
+    .PlW__logue
+    & {
+        fill: url(#fill__curtainTopLit);
+    }
+}
+.curtainTopBand  {
+    fill: url(#fill__curtainTopBandDark);
+
+    .PlW__logue
+    & {
+        fill: url(#fill__curtainTopBandLit);
     }
 }
 .curtainRear  {
