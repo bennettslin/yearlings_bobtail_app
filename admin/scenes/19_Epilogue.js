@@ -257,7 +257,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

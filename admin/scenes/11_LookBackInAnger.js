@@ -126,7 +126,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -160,7 +159,6 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,

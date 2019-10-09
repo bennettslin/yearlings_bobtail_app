@@ -115,7 +115,6 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
@@ -169,7 +168,6 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    feet: true,
                     legs: true,
                     trunk: true,
                     hands: true,
