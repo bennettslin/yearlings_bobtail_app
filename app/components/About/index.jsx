@@ -38,6 +38,9 @@ const About = ({
             <p>
                 Website annotated, illustrated, and coded by Bennett Lin.
             </p>
+            <p>
+                If you have an offer or opportunity that might make my life more interesting, email me at TODO. Please understand, I can only respond to proposals that match my interests and my schedule.
+            </p>
             {/* TODO: Eventually delete this, of course. */}
             {/* <p>
                 isHigherProcessor: {isHigherProcessor ? 'true' : 'false'}
