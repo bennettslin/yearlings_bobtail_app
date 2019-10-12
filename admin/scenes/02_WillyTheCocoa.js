@@ -123,7 +123,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
