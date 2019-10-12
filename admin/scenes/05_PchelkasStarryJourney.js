@@ -125,7 +125,6 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -157,7 +156,6 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

@@ -76,7 +76,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
