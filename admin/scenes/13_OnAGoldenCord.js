@@ -132,7 +132,6 @@ export default [
                     instance: OFFICER
                 },
                 [TOMER]: {
-                    legs: true,
                     instance: OFFICER
                 }
             }
