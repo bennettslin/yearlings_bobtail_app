@@ -129,7 +129,6 @@ export default [
                     }
                 },
                 [NESTOR]: {
-                    legs: true,
                     instance: OFFICER
                 },
                 [TOMER]: {

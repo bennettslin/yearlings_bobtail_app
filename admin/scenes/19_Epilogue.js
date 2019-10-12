@@ -295,7 +295,6 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
