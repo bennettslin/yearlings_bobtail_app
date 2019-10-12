@@ -106,7 +106,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
