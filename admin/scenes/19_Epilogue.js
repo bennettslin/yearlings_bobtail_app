@@ -176,7 +176,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
