@@ -220,7 +220,6 @@ export default [
                 },
                 [WADE]: {
                     demonstrator: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,

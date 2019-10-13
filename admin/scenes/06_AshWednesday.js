@@ -98,7 +98,6 @@ export default [
                 },
                 [WADE]: {
                     catholic: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
