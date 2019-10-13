@@ -209,7 +209,6 @@ export default [
                 },
                 [TRISTAN]: {
                     principal: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,

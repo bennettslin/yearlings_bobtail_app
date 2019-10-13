@@ -65,7 +65,6 @@ export default [
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -143,7 +142,6 @@ export default [
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

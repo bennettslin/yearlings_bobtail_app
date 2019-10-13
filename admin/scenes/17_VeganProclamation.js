@@ -87,7 +87,6 @@ export default [
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
