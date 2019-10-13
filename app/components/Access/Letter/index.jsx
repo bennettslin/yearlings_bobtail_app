@@ -22,7 +22,6 @@ const propTypes = {
     isAccessOn: PropTypes.bool.isRequired,
 
     // From parent.
-    inTextAnchor: PropTypes.bool,
     inButtonOrDotAnchor: PropTypes.bool,
     showIfAccessOn: PropTypes.bool,
     animateStandaloneOnKeyDown: PropTypes.bool,
@@ -31,7 +30,6 @@ const propTypes = {
 
 const AccessLetter = ({
     isAccessOn,
-    inTextAnchor,
     inButtonOrDotAnchor,
     showIfAccessOn,
     animateStandaloneOnKeyDown,
@@ -59,13 +57,8 @@ const AccessLetter = ({
                     animateStandaloneOnKeyDown &&
                         `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
-                    inTextAnchor &&
-                        'AccessLetter__inTextAnchor',
                     inButtonOrDotAnchor &&
                         'AccessLetter__inButtonOrDotAnchor',
-
-                    (inTextAnchor || inButtonOrDotAnchor) &&
-                        'AccessLetter__inInteractable',
 
                     'flexCentreContainer'
                 )}

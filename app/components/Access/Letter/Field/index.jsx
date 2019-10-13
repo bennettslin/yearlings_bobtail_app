@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 import cx from 'classnames'
 
 import InlineSvg from 'modules/InlineSvg'
-import audioPlay from 'assets/svgs/app/audioPlay'
+import accessKey from 'assets/svgs/app/accessKey'
 
 const AccessField = () => {
 
@@ -16,7 +16,7 @@ const AccessField = () => {
                 )
             }}
         >
-            {audioPlay}
+            {accessKey}
         </InlineSvg>
     )
 }
