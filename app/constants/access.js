@@ -29,12 +29,12 @@ export const ESCAPE = 'Escape'
 export const SPACE = 'Space'
 export const TAB = 'Tab'
 
-export const NAVIGATION_LEFT_KEY = '\u21e6'
-export const NAVIGATION_UP_KEY = '\u21e7'
-export const NAVIGATION_RIGHT_KEY = '\u21e8'
-export const NAVIGATION_DOWN_KEY = '\u21e9'
+export const NAVIGATION_LEFT_KEY = '\u2190'
+export const NAVIGATION_UP_KEY = '\u2191'
+export const NAVIGATION_RIGHT_KEY = '\u2192'
+export const NAVIGATION_DOWN_KEY = '\u2193'
 export const NAVIGATION_ENTER_KEY = '\u21b5'
-export const NAVIGATION_ESCAPE_KEY = 'x'
+export const NAVIGATION_ESCAPE_KEY = '\u238b'
 
 export const STYLE_LOGIC_ACCESS_LETTERS = [
     ARROW_LEFT,

@@ -3,6 +3,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import ReactTooltip from 'react-tooltip'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
@@ -113,9 +114,18 @@ class Button extends Component {
                         },
                         className
                     ),
+                    'data-tip': buttonName,
+                    'data-for': buttonName,
                     onClick: this._handleClick
                 }}
             >
+                <ReactTooltip
+                    {...{
+                        id: buttonName,
+                        effect: 'solid',
+                        delayShow: 750
+                    }}
+                />
                 <div className={cx(
                     'ButtonAnimatable',
                     isPopupButton && 'ButtonAnimatable__popup',

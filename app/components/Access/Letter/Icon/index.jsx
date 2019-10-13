@@ -6,6 +6,7 @@ import cx from 'classnames'
 
 import {
     ENTER,
+    ESCAPE,
     ARROW_LEFT,
     ARROW_RIGHT,
     ARROW_UP,
@@ -15,7 +16,8 @@ import {
     NAVIGATION_LEFT_KEY,
     NAVIGATION_UP_KEY,
     NAVIGATION_RIGHT_KEY,
-    NAVIGATION_DOWN_KEY
+    NAVIGATION_DOWN_KEY,
+    NAVIGATION_ESCAPE_KEY
 } from '../../../../constants/access'
 
 const propTypes = {
@@ -37,6 +39,9 @@ const propTypes = {
         switch (accessKey) {
             case ENTER:
                 shownKey = NAVIGATION_ENTER_KEY
+                break
+            case ESCAPE:
+                shownKey = NAVIGATION_ESCAPE_KEY
                 break
             case ARROW_LEFT:
                 shownKey = NAVIGATION_LEFT_KEY
