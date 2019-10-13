@@ -41,7 +41,6 @@ export default [
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

@@ -280,7 +280,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
