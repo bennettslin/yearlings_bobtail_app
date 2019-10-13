@@ -23,8 +23,13 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Hook up buttons.`,
-        workedHours: 2,
-        neededHours: 5
+        taskName: `Audio option for don't repeat.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Favicon.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

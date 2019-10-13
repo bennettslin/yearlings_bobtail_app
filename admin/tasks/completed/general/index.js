@@ -4911,5 +4911,10 @@ export default [
         taskName: `Make face ai files.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Hover over buttons gives tooltip.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

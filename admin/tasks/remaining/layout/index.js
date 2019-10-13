@@ -40,9 +40,9 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Hover over buttons gives tooltip.`,
+        taskName: `Single tooltip manager so tooltips are always on top. Manages tooltip text as well, including for nav songs. Also, don't show for slide dots.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
@@ -63,5 +63,10 @@ export default [
         taskName: `Finalise banner UI. Consider logues and transitions between songs.`,
         workedHours: 5,
         neededHours: 7
+    },
+    {
+        taskName: `Hook up buttons.`,
+        workedHours: 2,
+        neededHours: 5
     }
 ]
