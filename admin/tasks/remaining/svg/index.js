@@ -21,5 +21,10 @@ export default [
         taskName: `Nav books. Connect nav buttons to logues with path.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Hook up buttons.`,
+        workedHours: 2,
+        neededHours: 5
     }
 ]

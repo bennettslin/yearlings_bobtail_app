@@ -4,17 +4,30 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Button from '../../../Button'
 
 import { ENTER } from 'constants/access'
-import { AUDIO_NEXT_BUTTON_KEY } from 'constants/buttons'
+import {
+    AUDIO_FAST_FORWARD_BUTTON_KEY,
+    AUDIO_REWIND_BUTTON_KEY
+} from 'constants/buttons'
+
+const mapStateToProps = ({
+    selectedStore: { selectedVerseIndex }
+}) => ({
+    selectedVerseIndex
+})
 
 class VerseNav extends PureComponent {
 
     static propTypes = {
+        // Through Redux.
+        selectedVerseIndex: PropTypes.number.isRequired,
+
         // From parent.
         verseIndex: PropTypes.number.isRequired,
         isActivated: PropTypes.bool.isRequired,
@@ -38,7 +51,11 @@ class VerseNav extends PureComponent {
          * If activated, disable only if it's selected and song can't play
          * through.
          */
-        const { isActivated } = this.props
+        const {
+            isActivated,
+            verseIndex,
+            selectedVerseIndex
+        } = this.props
 
         return (
             <CSSTransition
@@ -61,7 +78,10 @@ class VerseNav extends PureComponent {
                     <Button
                         isSmallSize
                         {...{
-                            buttonName: AUDIO_NEXT_BUTTON_KEY,
+                            buttonName:
+                                verseIndex < selectedVerseIndex ?
+                                    AUDIO_REWIND_BUTTON_KEY :
+                                    AUDIO_FAST_FORWARD_BUTTON_KEY,
                             accessKey: ENTER,
                             isAccessed: isActivated,
                             isDisabled: !isActivated,
@@ -75,4 +95,4 @@ class VerseNav extends PureComponent {
     }
 }
 
-export default VerseNav
+export default connect(mapStateToProps)(VerseNav)

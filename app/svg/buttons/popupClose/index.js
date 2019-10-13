@@ -1,24 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import popupClose from 'assets/svgs/app/popupClose'
 
-const PopupCloseIcon = ({
-    className
-}) => (
-    <circle
-        {...{
-            className,
-            cx: 50,
-            cy: 50,
-            r: 50
-        }}
-    />
-)
+const getIcon = () => popupClose
 
-const propTypes = {
-    className: PropTypes.string
-}
-
-PopupCloseIcon.propTypes = propTypes
-
-export default PopupCloseIcon
+export default getIcon

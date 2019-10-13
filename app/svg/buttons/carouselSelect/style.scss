@@ -1,3 +1,6 @@
-.ButtonIcon__carouselSelect {
-    fill: #db8;
+.arrow {
+    .ButtonIcon__carouselSelect
+    & {
+        fill: #ffb980;
+    }
 }

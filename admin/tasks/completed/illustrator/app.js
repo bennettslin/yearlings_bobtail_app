@@ -33,5 +33,10 @@ export default [
         taskName: 'curtains',
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: 'buttons',
+        workedHours: 3,
+        neededHours: 3
     }
 ]

@@ -1,3 +1,6 @@
-.ButtonIcon__audioOptions {
-    fill: $bgColour__audioNeutral;
+.repeat {
+    .ButtonIcon__audioOptions
+    & {
+        fill: #80d2ff;
+    }
 }

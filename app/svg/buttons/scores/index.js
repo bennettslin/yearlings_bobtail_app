@@ -1,24 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import scores from 'assets/svgs/app/scores'
 
-const ScoresIcon = ({
-    className
-}) => (
-    <circle
-        {...{
-            className,
-            cx: 50,
-            cy: 50,
-            r: 50
-        }}
-    />
-)
+const getIcon = () => scores
 
-const propTypes = {
-    className: PropTypes.string
-}
-
-ScoresIcon.propTypes = propTypes
-
-export default ScoresIcon
+export default getIcon

@@ -1,24 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import arrow from 'assets/svgs/app/arrow'
 
-const PopupNextIcon = ({
-    className
-}) => (
-    <circle
-        {...{
-            className,
-            cx: 50,
-            cy: 50,
-            r: 50
-        }}
-    />
-)
+const getIcon = () => arrow
 
-const propTypes = {
-    className: PropTypes.string
-}
-
-PopupNextIcon.propTypes = propTypes
-
-export default PopupNextIcon
+export default getIcon
