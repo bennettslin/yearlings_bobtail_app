@@ -135,7 +135,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
