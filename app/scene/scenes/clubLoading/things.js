@@ -7,7 +7,8 @@ import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
 import { DOOR__SHARED } from '../../shared/home'
 import {
     DRUMS__SHARED,
-    DRUM_STAND__SHARED
+    DRUM_STAND__SHARED,
+    DRUM_THRONE__SHARED
 } from '../../shared/instruments'
 
 const ARRANGEMENTS_THINGS = {
@@ -25,7 +26,8 @@ const ARRANGEMENTS_THINGS = {
             zOffset: -0.1,
             sharedStyle: [
                 DRUMS__SHARED,
-                DRUM_STAND__SHARED
+                DRUM_STAND__SHARED,
+                DRUM_THRONE__SHARED
             ]
         }
     }

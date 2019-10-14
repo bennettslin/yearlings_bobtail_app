@@ -115,7 +115,6 @@ export default [
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

@@ -237,7 +237,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
