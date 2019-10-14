@@ -57,6 +57,7 @@ class LetterManager extends PureComponent {
         isAccessOn: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
+        isNavShown: PropTypes.bool.isRequired,
         isScoreShown: PropTypes.bool.isRequired,
         isAboutShown: PropTypes.bool.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
@@ -181,9 +182,13 @@ class LetterManager extends PureComponent {
         } else if (this.props.selectedAnnotationIndex) {
             this.props.updateSelectedStore({ selectedAnnotationIndex: 0 })
 
-        // Collapse lyric
+        // Collapse lyric.
         } else if (this.props.isLyricExpanded) {
             this.dispatchLyricExpand(false)
+
+        // Hide nav.
+        } else if (this.props.isNavShown) {
+            this.dispatchHideNav()
 
         // Turn access off.
         } else {
@@ -223,6 +228,7 @@ const mapStateToProps = ({
     toggleStore: {
         isDotsSlideShown,
         isLyricExpanded,
+        isNavShown,
         isScoreShown,
         isAboutShown
     },
@@ -236,6 +242,7 @@ const mapStateToProps = ({
     isAccessOn,
     isDotsSlideShown,
     isLyricExpanded,
+    isNavShown,
     isScoreShown,
     isAboutShown,
     selectedAnnotationIndex,

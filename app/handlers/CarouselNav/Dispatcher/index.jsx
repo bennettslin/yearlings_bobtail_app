@@ -24,7 +24,14 @@ class CarouselNavDispatcher extends PureComponent {
     }
 
     componentDidMount() {
-        this.props.getRefs({ dispatchCarouselNav: this.dispatchCarouselNav })
+        this.props.getRefs({
+            dispatchCarouselNav: this.dispatchCarouselNav,
+            dispatchHideNav: this.dispatchHideNav
+        })
+    }
+
+    dispatchHideNav = () => {
+        this.props.updateToggleStore({ isNavShown: false })
     }
 
     dispatchCarouselNav = (

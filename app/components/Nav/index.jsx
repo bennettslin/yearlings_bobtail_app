@@ -41,7 +41,13 @@ class Nav extends PureComponent {
                 {/* Placeholder, has no other purpose. */}
                 <div className="CarouselNavToggle__placeholder" />
 
-                <div>
+                <div
+                    {...{
+                        className: cx(
+                            'NavColumnContainer'
+                        )
+                    }}
+                >
                     <NavColumn {...{ bookIndex: 0 }} />
                     <NavColumn {...{ bookIndex: 1 }} />
                 </div>
