@@ -11,6 +11,7 @@ import LyricAccess from './Access'
 import LyricScroll from './Scroll'
 import LyricToggles from './Toggles'
 import VerseBar from './VerseBar'
+import CarouselAccess from '../Carousel/Access'
 
 import { populateRefs } from 'helpers/ref'
 
@@ -106,6 +107,7 @@ class Lyric extends PureComponent {
                         <LyricToggles />
                         <LyricToggles isBottomRight />
                         <LyricAccess />
+                        <CarouselAccess inLyric />
                     </div>
                 </CSSTransition>
             </___>

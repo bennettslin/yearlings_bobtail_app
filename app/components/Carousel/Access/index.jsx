@@ -28,18 +28,21 @@ const mapStateToProps = ({
 class CarouselAccess extends PureComponent {
 
     static propTypes = {
-
-        // From Redux.
+        // Through Redux.
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isNavShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
-        dotsBitNumber: PropTypes.number.isRequired
+        dotsBitNumber: PropTypes.number.isRequired,
+
+        // From parent.
+        inLyric: PropTypes.bool
     }
 
     render() {
 
         const {
+                inLyric,
                 isLyricExpanded,
                 lyricAnnotationIndex,
                 isNavShown,
@@ -67,7 +70,7 @@ class CarouselAccess extends PureComponent {
         return (
             <AccessLetters
                 {...{
-                    accessIconsName: 'carousel',
+                    accessIconsName: inLyric ? 'lyricAnnotation' : 'carousel',
                     showIfAccessOn,
                     accessKeys: [
                         ARROW_LEFT,
