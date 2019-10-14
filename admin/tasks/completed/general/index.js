@@ -4916,5 +4916,10 @@ export default [
         taskName: `Hover over buttons gives tooltip.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Strategically show left and right access letters in lyric.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

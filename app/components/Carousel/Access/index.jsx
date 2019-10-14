@@ -12,6 +12,7 @@ import {
 const mapStateToProps = ({
     lyricStore: { lyricAnnotationIndex },
     toggleStore: {
+        isCarouselShown,
         isNavShown,
         isDotsSlideShown,
         isLyricExpanded
@@ -20,6 +21,7 @@ const mapStateToProps = ({
 }) => ({
     isLyricExpanded,
     lyricAnnotationIndex,
+    isCarouselShown,
     isNavShown,
     isDotsSlideShown,
     dotsBitNumber
@@ -30,6 +32,7 @@ class CarouselAccess extends PureComponent {
     static propTypes = {
         // Through Redux.
         lyricAnnotationIndex: PropTypes.number.isRequired,
+        isCarouselShown: PropTypes.bool.isRequired,
         isNavShown: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         isLyricExpanded: PropTypes.bool.isRequired,
@@ -42,6 +45,7 @@ class CarouselAccess extends PureComponent {
     render() {
 
         const {
+                isCarouselShown,
                 inLyric,
                 isLyricExpanded,
                 lyricAnnotationIndex,
@@ -55,7 +59,11 @@ class CarouselAccess extends PureComponent {
                  * Must have at least one selected dot, and no selected
                  * annotation.
                  */
-                dotsBitNumber && !lyricAnnotationIndex && (
+                dotsBitNumber &&
+                !lyricAnnotationIndex &&
+
+                // Only show in either carousel or lyric, not both.
+                Boolean(inLyric) !== isCarouselShown && (
                     (
                         // Must not show nav or have dots section open...
                         !isNavShown &&
