@@ -62,8 +62,8 @@ class CarouselAccess extends PureComponent {
                 dotsBitNumber &&
                 !lyricAnnotationIndex &&
 
-                // Only show in either carousel or lyric, not both.
-                Boolean(inLyric) !== isCarouselShown && (
+                // Don't show in carousel if carousel is not shown.
+                (inLyric || isCarouselShown) && (
                     (
                         // Must not show nav or have dots section open...
                         !isNavShown &&
@@ -79,6 +79,7 @@ class CarouselAccess extends PureComponent {
             <AccessLetters
                 {...{
                     accessIconsName: inLyric ? 'lyricAnnotation' : 'carousel',
+                    ...inLyric && { className: 'top__lyricChild' },
                     showIfAccessOn,
                     accessKeys: [
                         ARROW_LEFT,

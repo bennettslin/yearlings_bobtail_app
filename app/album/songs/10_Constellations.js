@@ -37,7 +37,7 @@ export default {
                                 isItalic: true,
                                 lyric: {
                                     anchor: `The Basketball Diaries,`,
-                                    wiki: `The_Basketball_Diaries`
+                                    wiki: `The_Basketball_Diaries_(book)`
                                 }
                             },
                             `and was soon hooked. The best part about it is the`,

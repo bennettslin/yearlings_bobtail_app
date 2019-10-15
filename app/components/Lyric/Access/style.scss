@@ -1,9 +1,10 @@
 .AccessLetters__lyric {
-    top: $js__margin__thin;
     left: $margin__scrollBar;
 }
 
 .AccessLetters__lyricAnnotation {
-    bottom: $js__margin__thin;
-    left: $margin__scrollBar;
+    left:
+        $margin__scrollBar
+        + $length__iconAccess * 2
+        + $js__margin__thin;
 }
