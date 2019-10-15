@@ -4921,5 +4921,10 @@ export default [
         taskName: `Strategically show left and right access letters in lyric.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Position horizontal access letters in lyric, allow for transforms in buttons.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

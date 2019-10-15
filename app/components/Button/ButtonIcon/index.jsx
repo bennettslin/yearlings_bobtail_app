@@ -9,14 +9,15 @@ import BUTTON_ICONS_MAP from '../../../svg/buttons'
 
 import {
     ABOUT_BUTTON_KEY,
-    AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY,
-    AUDIO_FAST_FORWARD_BUTTON_KEY,
+    AUDIO_NEXT_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY,
+    AUDIO_FAST_FORWARD_BUTTON_KEY,
     // CAROUSEL_NAV_BUTTON_KEY,
-    CAROUSEL_SELECT_BUTTON_KEY,
+    CAROUSEL_PREVIOUS_BUTTON_KEY,
+    CAROUSEL_NEXT_BUTTON_KEY,
     // DOTS_SLIDE_BUTTON_KEY,
     LYRIC_EAR_BUTTON_KEY,
     // LYRIC_EXPAND_BUTTON_KEY,
@@ -25,8 +26,8 @@ import {
     // NAV_SONG_BUTTON_KEY,
     // OVERVIEW_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
-    POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
+    POPUP_NEXT_BUTTON_KEY,
     // WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY
     // TIPS_BUTTON_KEY
@@ -43,17 +44,18 @@ const propTypes = {
 const isNewSvg = (buttonName) => {
     return (
         buttonName === ABOUT_BUTTON_KEY ||
-        buttonName === AUDIO_NEXT_BUTTON_KEY ||
         buttonName === AUDIO_OPTIONS_BUTTON_KEY ||
         buttonName === AUDIO_PLAY_BUTTON_KEY ||
         buttonName === AUDIO_PREVIOUS_BUTTON_KEY ||
+        buttonName === AUDIO_NEXT_BUTTON_KEY ||
         buttonName === AUDIO_REWIND_BUTTON_KEY ||
         buttonName === AUDIO_FAST_FORWARD_BUTTON_KEY ||
-        buttonName === CAROUSEL_SELECT_BUTTON_KEY ||
+        buttonName === CAROUSEL_PREVIOUS_BUTTON_KEY ||
+        buttonName === CAROUSEL_NEXT_BUTTON_KEY ||
         buttonName === LYRIC_EAR_BUTTON_KEY ||
         buttonName === POPUP_CLOSE_BUTTON_KEY ||
-        buttonName === POPUP_NEXT_BUTTON_KEY ||
         buttonName === POPUP_PREVIOUS_BUTTON_KEY ||
+        buttonName === POPUP_NEXT_BUTTON_KEY ||
         buttonName === SCORES_BUTTON_KEY
     )
 }

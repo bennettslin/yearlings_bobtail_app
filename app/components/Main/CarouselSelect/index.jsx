@@ -12,11 +12,9 @@ import {
 } from 'constants/access'
 
 import {
-    LEFT,
-    RIGHT
-} from 'constants/lyrics'
-
-import { CAROUSEL_SELECT_BUTTON_KEY } from 'constants/buttons'
+    CAROUSEL_PREVIOUS_BUTTON_KEY,
+    CAROUSEL_NEXT_BUTTON_KEY
+} from 'constants/buttons'
 
 class CarouselSelect extends PureComponent {
 
@@ -38,8 +36,7 @@ class CarouselSelect extends PureComponent {
                 <Button
                     isLargeSize
                     {...{
-                        buttonName: CAROUSEL_SELECT_BUTTON_KEY,
-                        buttonIdentifier: LEFT,
+                        buttonName: CAROUSEL_PREVIOUS_BUTTON_KEY,
                         accessKey: ARROW_LEFT,
                         handleButtonClick: this._handleAnnotationPrevious
                     }}
@@ -47,8 +44,7 @@ class CarouselSelect extends PureComponent {
                 <Button
                     isLargeSize
                     {...{
-                        buttonName: CAROUSEL_SELECT_BUTTON_KEY,
-                        buttonIdentifier: RIGHT,
+                        buttonName: CAROUSEL_NEXT_BUTTON_KEY,
                         accessKey: ARROW_RIGHT,
                         handleButtonClick: this._handleAnnotationNext
                     }}

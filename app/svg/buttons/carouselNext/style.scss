@@ -1,0 +1,10 @@
+.ButtonIcon__carouselNext {
+    transform: scaleX(-1);
+}
+
+.arrow {
+    .ButtonIcon__carouselNext
+    & {
+        fill: #ffb980;
+    }
+}
