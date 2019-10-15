@@ -44,7 +44,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
