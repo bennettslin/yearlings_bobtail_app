@@ -129,7 +129,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
