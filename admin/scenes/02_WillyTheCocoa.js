@@ -74,7 +74,6 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -106,7 +105,6 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
