@@ -48,7 +48,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -164,7 +163,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
@@ -180,7 +178,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -190,7 +187,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
@@ -252,7 +248,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
