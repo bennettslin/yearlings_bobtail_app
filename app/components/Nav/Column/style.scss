@@ -11,7 +11,8 @@
         bottom: -$js__height__nav;
     }
 
-    .DW__higherProcessor.DW__desktopWidth {
+    .DW__higherProcessor.DW__desktopWidth
+    & {
         transition:
             bottom $animationDuration__default,
             opacity $animationDuration__default;
@@ -22,7 +23,8 @@
         top: -$js__height__nav;
     }
 
-    .DW__higherProcessor.DW__miniOrTabletWidth {
+    .DW__higherProcessor.DW__miniOrTabletWidth
+    & {
         transition:
             top $animationDuration__default,
             opacity $animationDuration__default;
