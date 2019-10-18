@@ -162,7 +162,6 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -186,7 +185,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

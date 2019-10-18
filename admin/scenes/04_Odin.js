@@ -75,7 +75,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -90,7 +89,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
