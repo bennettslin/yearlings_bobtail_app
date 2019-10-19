@@ -64,7 +64,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CHRISTOPHER]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
