@@ -104,7 +104,6 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,

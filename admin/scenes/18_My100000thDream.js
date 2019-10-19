@@ -185,7 +185,6 @@ export default [
                 },
                 [AMY]: {
                     doctor: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,

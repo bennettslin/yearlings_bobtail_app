@@ -113,7 +113,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
