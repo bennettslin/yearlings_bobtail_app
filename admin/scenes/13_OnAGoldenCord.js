@@ -176,7 +176,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
