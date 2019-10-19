@@ -129,7 +129,6 @@ export default [
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -157,7 +156,6 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
