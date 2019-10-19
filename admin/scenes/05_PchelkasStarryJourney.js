@@ -159,7 +159,6 @@ export default [
                 },
                 [SASHA]: {
                     popularGirl: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,

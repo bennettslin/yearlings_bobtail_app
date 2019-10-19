@@ -101,7 +101,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     actor: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,

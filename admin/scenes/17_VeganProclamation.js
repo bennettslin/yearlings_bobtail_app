@@ -190,8 +190,7 @@ export default [
                     instance: DEMONSTRATION
                 },
                 [AMY]: {
-                    demonstrator: {
-                        legs: true,
+                    protester: {
                         trunk: true,
                         hands: true,
                         head: true,
@@ -201,8 +200,7 @@ export default [
                     }
                 },
                 [STEPHANIE]: {
-                    demonstrator: {
-                        legs: true,
+                    protester: {
                         trunk: true,
                         hands: true,
                         head: true,
@@ -212,7 +210,7 @@ export default [
                     }
                 },
                 [WADE]: {
-                    demonstrator: {
+                    protester: {
                         trunk: true,
                         hands: true,
                         head: true,
