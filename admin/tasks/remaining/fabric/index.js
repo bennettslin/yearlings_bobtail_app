@@ -44,7 +44,6 @@ export default [
         workedHours: 0,
         neededHours: 2
     },
-
     {
         taskName: `Dying Bennett's hospital blanket in Cremated.`,
         workedHours: 0,

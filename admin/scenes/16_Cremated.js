@@ -57,7 +57,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -82,7 +81,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
