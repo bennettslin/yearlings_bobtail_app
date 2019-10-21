@@ -65,8 +65,8 @@ const AnchorText = ({
                             isSelected &&
                                 'TextAnchor__linkText__selected',
 
-                            'textShadow__text',
-                            'abF'
+                            'textShadow__text'
+                            // 'abF'
                         )}>
                             {word}
                         </span>
