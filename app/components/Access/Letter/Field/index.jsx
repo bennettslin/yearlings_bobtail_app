@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 import cx from 'classnames'
 
 import InlineSvg from 'modules/InlineSvg'
-import accessKey from 'assets/svgs/app/accessKey'
+import accessKey from 'assets/svgs/app/main/accessKey'
 
 const AccessField = () => {
 

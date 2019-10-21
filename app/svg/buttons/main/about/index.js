@@ -1,4 +1,4 @@
-import about from 'assets/svgs/app/about'
+import about from 'assets/svgs/app/main/about'
 
 const getIcon = () => about
 
