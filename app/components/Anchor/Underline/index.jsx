@@ -37,24 +37,17 @@ const propTypes = {
                     isWikiAnchor && !isWikiLastChild &&
                         'Underline__isWiki__notLastChild',
 
-                    /**
-                     * This used to be a child component. In hindsight, that
-                     * wasn't necessary.
-                     */
-                    'Underline__bar',
-
                     isAccessed && !isSelected ?
-                        'Underline__bar__accessed' :
-                        'Underline__bar__default',
+                        'Underline__accessed' :
+                        'Underline__default',
 
                     isSelected &&
-                        'Underline__bar__selected',
+                        'Underline__selected',
 
                     'ovH'
                 )
             }}
-        >
-        </div>
+        />
     )
 
 Underline.propTypes = propTypes

@@ -6,6 +6,30 @@ $width__underline__bleed: 0.125em;
     right: 0;
     bottom: 0;
     height: 35%;
+
+    visibility: hidden;
+
+    .DW__higherProcessor
+    & {
+        transition:
+            height $animationDuration__fast,
+            visibility $animationDuration__fast,
+            background-color $animationDuration__fast;
+    }
+
+    // "Root accessed letter Enter, child accessed letter Enter."
+    .PaLEnter
+    .CaLEnter
+    &.Underline__accessed {
+        background-color: $colour__accessedLinkActive !important;
+    }
+
+    // Specific selector to override.
+    .TW__sliderMoving
+    .Anchor
+    & {
+        visibility: hidden;
+    }
 }
 
 .Underline__isNotWiki {
@@ -29,29 +53,4 @@ $width__underline__bleed: 0.125em;
 }
 .Underline__isWiki__notLastChild {
     right: -$width__underline__bleed;
-}
-
-.Underline__bar {
-    visibility: hidden;
-
-    .DW__higherProcessor
-    & {
-        transition:
-            visibility $animationDuration__fast,
-            background-color $animationDuration__fast;
-    }
-
-    // "Root accessed letter Enter, child accessed letter Enter."
-    .PaLEnter
-    .CaLEnter
-    &.Underline__bar__accessed {
-        background-color: $colour__accessedLinkActive !important;
-    }
-
-    // Specific selector to override.
-    .TW__sliderMoving
-    .Anchor
-    & {
-        visibility: hidden;
-    }
 }

@@ -159,7 +159,7 @@
 
 @mixin mixin__underlineColours($light: false, $important: false) {
 
-    .Underline__bar__default {
+    .Underline__default {
         @if $light {
             @if $important {
                 background-color: $bgColour__underline__light !important;
@@ -175,7 +175,7 @@
         }
     }
 
-    .Underline__bar__accessed {
+    .Underline__accessed {
         @if $light {
             @if $important {
                 background-color: $bgColour__accessedUnderline__light !important;
@@ -191,7 +191,7 @@
         }
     }
 
-    .Underline__bar__selected {
+    .Underline__selected {
         @if $light {
             @if $important {
                 background-color: $bgColour__selectedUnderline__light !important;
@@ -210,7 +210,7 @@
     .Anchor__selectable {
 
         &:hover {
-            .Underline__bar {
+            .Underline {
                 @if $light {
                     @if $important {
                         background-color: $bgColour__underlineHover__light !important;
@@ -225,7 +225,7 @@
                     }
                 }
             }
-            .Underline__bar__accessed {
+            .Underline__accessed {
                 @if $light {
                     @if $important {
                         background-color: $bgColour__accessedUnderlineHover__light !important;
@@ -243,7 +243,7 @@
         }
 
         &:active {
-            .Underline__bar {
+            .Underline {
                 @if $light {
                     @if $important {
                         background-color: $bgColour__underlineActive__light !important;
@@ -258,7 +258,7 @@
                     }
                 }
             }
-            .Underline__bar__accessed {
+            .Underline__accessed {
                 @if $important {
                     background-color: $bgColour__accessedUnderlineActive !important;
                 } @else {
