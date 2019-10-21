@@ -1,4 +1,5 @@
-import lyricEar from 'assets/svgs/app/lyricEar'
+import lyricEarLeft from 'assets/svgs/app/lyricEarLeft'
+import lyricEarRight from 'assets/svgs/app/lyricEarRight'
 
 import {
     LEFT,
@@ -6,8 +7,8 @@ import {
 } from 'constants/lyrics'
 
 const LYRIC_EAR_MAP = {
-    [LEFT]: lyricEar,
-    [RIGHT]: lyricEar
+    [LEFT]: lyricEarLeft,
+    [RIGHT]: lyricEarRight
 }
 
 const getIcon = ({ buttonIdentifier: direction }) => {
