@@ -1,7 +1,5 @@
-.arrow {
-    .ButtonIcon__carouselNext
-    & {
-        fill: #ffb980;
-        transform: scaleX(-1);
-    }
+.ButtonIcon__carouselNext {
+    transform: scaleX(-1);
+
+    .arrow { fill: #ffb980 };
 }
