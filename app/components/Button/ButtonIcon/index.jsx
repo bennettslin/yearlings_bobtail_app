@@ -15,7 +15,7 @@ import {
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY,
     AUDIO_FAST_FORWARD_BUTTON_KEY,
-    // CAROUSEL_NAV_BUTTON_KEY,
+    CAROUSEL_NAV_BUTTON_KEY,
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY,
     // DOTS_SLIDE_BUTTON_KEY,
@@ -50,6 +50,7 @@ const isNewSvg = (buttonName) => {
         buttonName === AUDIO_NEXT_BUTTON_KEY ||
         buttonName === AUDIO_REWIND_BUTTON_KEY ||
         buttonName === AUDIO_FAST_FORWARD_BUTTON_KEY ||
+        buttonName === CAROUSEL_NAV_BUTTON_KEY ||
         buttonName === CAROUSEL_PREVIOUS_BUTTON_KEY ||
         buttonName === CAROUSEL_NEXT_BUTTON_KEY ||
         buttonName === LYRIC_EAR_BUTTON_KEY ||

@@ -28,6 +28,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: `Neither carousel nor nav.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Favicon.`,
         workedHours: 0,
         neededHours: 1

@@ -1,0 +1,17 @@
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 247.01 317.75">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>navBook</title>
+  <path id="cover" class="cls-1" d="M28.61,1c-6.95,0-10.74,1.76-12,4.39C16.66-.09,1.05-.23,1,5.25v285.8c0,5.69,15.61,5.69,15.61,0,2.47,3.32,5.46,5,12.73,5H246V1Z"/>
+  <line id="coverOverlapLine" class="cls-1" x1="228.5" y1="244.86" x2="246.01" y2="244.86"/>
+  <path id="paperStackLight" class="cls-1" d="M228.5,244.86v33.39H34.27c-13.52,0-13.52-33.39,0-33.39Z"/>
+  <polygon id="bookmark" class="cls-1" points="90.4 265.72 37.11 265.72 37.11 315.75 63.75 295.75 90.4 315.75 90.4 265.72"/>
+</svg>

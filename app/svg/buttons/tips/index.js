@@ -14,9 +14,8 @@ const TIPS_MAP = {
     [DISABLED]: tipsDisabled
 }
 
-const getIcon = ({ buttonIdentifier: tipsOptionKey }) => {
-    return TIPS_MAP[tipsOptionKey]
+const getIcon = ({ buttonIdentifier }) => {
+    return TIPS_MAP[buttonIdentifier]
 }
 
 export default getIcon
-
