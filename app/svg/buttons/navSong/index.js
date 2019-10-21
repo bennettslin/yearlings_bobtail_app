@@ -1,59 +1,65 @@
-import React, { Fragment as ___ } from 'react'
-import PropTypes from 'prop-types'
-import cx from 'classnames'
+import navSong from 'assets/svgs/app/navSong'
 
-const propTypes = {
-    buttonIdentifier: PropTypes.number.isRequired,
-    className: PropTypes.string
-}
+const getIcon = () => navSong
 
-const NavSongIcon = ({
+export default getIcon
 
-    buttonIdentifier: songIndex,
-    className
+// import React, { Fragment as ___ } from 'react'
+// import PropTypes from 'prop-types'
+// import cx from 'classnames'
 
-}) => {
-    let characterIndex = songIndex
+// const propTypes = {
+//     buttonIdentifier: PropTypes.number.isRequired,
+//     className: PropTypes.string
+// }
 
-    // Hard-coding because I don't know if this code will be kept, and I'm lazy.
-    if (songIndex === 0) {
-        characterIndex = 'p'
+// const NavSongIcon = ({
 
-    } else if (songIndex === 19) {
-        characterIndex = 'e'
-    }
+//     buttonIdentifier: songIndex,
+//     className
 
-    return (
-        <___>
-            <rect
-                {...{
-                    className: cx(
-                        'NavSongIcon__field',
-                        className
-                    ),
-                    x: 0,
-                    y: 0,
-                    width: 100,
-                    height: 100
-                }}
-            />
-            <text
-                className={cx(
-                    'NavSongIcon__char',
-                    className
-                )}
-                {...{
-                    x: 25,
-                    y: 75,
-                    fontSize: 64
-                }}
-            >
-                {characterIndex}
-            </text>
-        </___>
-    )
-}
+// }) => {
+//     let characterIndex = songIndex
 
-NavSongIcon.propTypes = propTypes
+//     // Hard-coding because I don't know if this code will be kept, and I'm lazy.
+//     if (songIndex === 0) {
+//         characterIndex = 'p'
 
-export default NavSongIcon
+//     } else if (songIndex === 19) {
+//         characterIndex = 'e'
+//     }
+
+//     return (
+//         <___>
+//             <rect
+//                 {...{
+//                     className: cx(
+//                         'NavSongIcon__field',
+//                         className
+//                     ),
+//                     x: 0,
+//                     y: 0,
+//                     width: 100,
+//                     height: 100
+//                 }}
+//             />
+//             <text
+//                 className={cx(
+//                     'NavSongIcon__char',
+//                     className
+//                 )}
+//                 {...{
+//                     x: 25,
+//                     y: 75,
+//                     fontSize: 64
+//                 }}
+//             >
+//                 {characterIndex}
+//             </text>
+//         </___>
+//     )
+// }
+
+// NavSongIcon.propTypes = propTypes
+
+// export default NavSongIcon
