@@ -1,4 +1,4 @@
-import audioOptions from 'assets/svgs/app/audioOptions'
+import audioOptions from 'assets/svgs/app/audio/audioOptions'
 
 const getIcon = () => audioOptions
 

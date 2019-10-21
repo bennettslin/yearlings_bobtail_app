@@ -1,6 +1,14 @@
-import navSong from 'assets/svgs/app/navSong'
+import navLogue from 'assets/svgs/app/nav/navLogue'
+import navSong from 'assets/svgs/app/nav/navSong'
 
-const getIcon = () => navSong
+const NAV_SONG_MAP = {
+    [true]: lyricCollapse,
+    [false]: lyricExpand
+}
+
+const getIcon = ({ buttonIdentifier: isLyricExpanded }) => {
+    return NAV_SONG_MAP[isLyricExpanded]
+}
 
 export default getIcon
 

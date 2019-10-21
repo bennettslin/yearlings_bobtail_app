@@ -1,4 +1,4 @@
-import audioRewind from 'assets/svgs/app/audioRewind'
+import audioRewind from 'assets/svgs/app/audio/audioRewind'
 
 const getIcon = () => audioRewind
 

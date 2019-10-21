@@ -8,7 +8,7 @@ export default [
         neededHours: 9
     },
     {
-        taskName: `dot icons, shapes, and dots slide button.`,
+        taskName: `dot icons, shapes, and dots slide button, including wormhole.`,
         workedHours: 0,
         neededHours: 8
     },
@@ -23,12 +23,22 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Audio option for don't repeat.`,
+        taskName: `Svg for don't repeat audio option.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Neither carousel nor nav.`,
+        taskName: `Svg for neither carousel nor nav button.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Logic for nav logue icons.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Nav song and prologue and epilogue numbers and characters.`,
         workedHours: 0,
         neededHours: 1
     },

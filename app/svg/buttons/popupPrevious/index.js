@@ -1,4 +1,4 @@
-import arrow from 'assets/svgs/app/arrow'
+import arrow from 'assets/svgs/app/direction/arrow'
 
 const getIcon = () => arrow
 

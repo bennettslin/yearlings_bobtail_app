@@ -1,4 +1,4 @@
-import navBook from 'assets/svgs/app/navBook'
+import navBook from 'assets/svgs/app/nav/navBook'
 
 const getIcon = () => navBook
 

@@ -1,4 +1,4 @@
-import audioPrevious from 'assets/svgs/app/audioPrevious'
+import audioPrevious from 'assets/svgs/app/audio/audioPrevious'
 
 const getIcon = () => audioPrevious
 
