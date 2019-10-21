@@ -2,7 +2,7 @@
     .AnnotationTitle
     & {
         position: relative;
-        top: $js__margin__thin;
+        top: $js__margin__thin * 0.5;
         margin-left: $js__margin__thick * 0.5;
         margin-bottom: $js__margin__thin * 0.5;
     }
@@ -11,6 +11,13 @@
     .AnnotationTitle
     & {
         display: none;
+    }
+}
+
+.AccessLetters__isDot {
+    .AnnotationTitle
+    & {
+        top: $js__margin__thick;
     }
 }
 

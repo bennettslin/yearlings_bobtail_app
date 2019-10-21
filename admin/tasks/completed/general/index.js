@@ -4926,5 +4926,15 @@ export default [
         taskName: `Position horizontal access letters in lyric, allow for transforms in buttons.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Hook up buttons.`,
+        workedHours: 5,
+        neededHours: 5
+    },
+    {
+        taskName: `Align annotation title access letters.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

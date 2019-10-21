@@ -20,11 +20,6 @@ export default [
         workedHours: 0,
         neededHours: 3
     },
-    {
-        taskName: `Align annotation title access letters.`,
-        workedHours: 0,
-        neededHours: 1
-    },
 
     /**
      * Final UI.
@@ -65,8 +60,8 @@ export default [
         neededHours: 7
     },
     {
-        taskName: `Hook up buttons.`,
-        workedHours: 2,
-        neededHours: 5
+        taskName: `Make about button bigger on desktop.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

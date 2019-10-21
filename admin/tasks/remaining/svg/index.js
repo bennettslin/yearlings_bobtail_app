@@ -33,7 +33,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Logic for nav logue icons.`,
+        taskName: `Logic for nav logue and nav book icons to be left or right.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -51,5 +51,10 @@ export default [
         taskName: `Line stroke widths for all presence types.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Choose button colours.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

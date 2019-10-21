@@ -121,6 +121,7 @@ class AnnotationTitle extends PureComponent {
                     />
                 )}
                 <AnnotationAccess {...{
+                    isDot,
                     showUpDown
                 }} />
             </div>
