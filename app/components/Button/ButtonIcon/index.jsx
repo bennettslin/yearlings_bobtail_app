@@ -29,8 +29,8 @@ import {
     POPUP_PREVIOUS_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     // WORMHOLE_BUTTON_KEY,
-    SCORES_BUTTON_KEY
-    // TIPS_BUTTON_KEY
+    SCORES_BUTTON_KEY,
+    TIPS_BUTTON_KEY
 } from 'constants/buttons'
 
 const propTypes = {
@@ -58,7 +58,8 @@ const isNewSvg = (buttonName) => {
         buttonName === POPUP_CLOSE_BUTTON_KEY ||
         buttonName === POPUP_PREVIOUS_BUTTON_KEY ||
         buttonName === POPUP_NEXT_BUTTON_KEY ||
-        buttonName === SCORES_BUTTON_KEY
+        buttonName === SCORES_BUTTON_KEY ||
+        buttonName === TIPS_BUTTON_KEY
     )
 }
 
