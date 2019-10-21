@@ -21,7 +21,7 @@ import {
     // DOTS_SLIDE_BUTTON_KEY,
     LYRIC_EAR_BUTTON_KEY,
     LYRIC_EXPAND_BUTTON_KEY,
-    // LYRIC_SCROLL_BUTTON_KEY,
+    LYRIC_SCROLL_BUTTON_KEY,
     // NAV_BOOK_BUTTON_KEY,
     // NAV_SONG_BUTTON_KEY,
     // OVERVIEW_BUTTON_KEY,
@@ -54,6 +54,7 @@ const isNewSvg = (buttonName) => {
         buttonName === CAROUSEL_NEXT_BUTTON_KEY ||
         buttonName === LYRIC_EAR_BUTTON_KEY ||
         buttonName === LYRIC_EXPAND_BUTTON_KEY ||
+        buttonName === LYRIC_SCROLL_BUTTON_KEY ||
         buttonName === POPUP_CLOSE_BUTTON_KEY ||
         buttonName === POPUP_PREVIOUS_BUTTON_KEY ||
         buttonName === POPUP_NEXT_BUTTON_KEY ||

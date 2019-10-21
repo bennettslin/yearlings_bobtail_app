@@ -1,24 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import lyricScroll from 'assets/svgs/app/lyricScroll'
 
-const LyricScrollIcon = ({
-    className
-}) => (
-    <circle
-        {...{
-            className,
-            cx: 50,
-            cy: 50,
-            r: 50
-        }}
-    />
-)
+const getIcon = () => lyricScroll
 
-const propTypes = {
-    className: PropTypes.string
-}
-
-LyricScrollIcon.propTypes = propTypes
-
-export default LyricScrollIcon
+export default getIcon
