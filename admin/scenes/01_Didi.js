@@ -34,7 +34,6 @@ export default [
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -57,7 +56,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -103,7 +101,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

@@ -73,7 +73,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -240,7 +239,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
