@@ -45,7 +45,6 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

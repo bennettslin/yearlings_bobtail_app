@@ -142,7 +142,6 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
