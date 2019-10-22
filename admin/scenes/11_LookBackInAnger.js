@@ -142,7 +142,6 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

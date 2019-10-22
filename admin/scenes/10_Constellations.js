@@ -66,7 +66,6 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -105,7 +104,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

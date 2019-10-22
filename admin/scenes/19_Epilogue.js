@@ -248,7 +248,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
