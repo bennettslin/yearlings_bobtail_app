@@ -27,7 +27,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -180,7 +179,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
