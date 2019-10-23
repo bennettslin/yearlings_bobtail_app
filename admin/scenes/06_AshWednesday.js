@@ -33,7 +33,6 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -56,7 +55,6 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -127,7 +125,6 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
