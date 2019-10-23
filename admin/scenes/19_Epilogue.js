@@ -146,7 +146,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,

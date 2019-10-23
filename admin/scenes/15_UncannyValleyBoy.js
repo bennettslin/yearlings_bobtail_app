@@ -104,7 +104,6 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
