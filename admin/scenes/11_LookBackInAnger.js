@@ -71,7 +71,6 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -102,7 +101,6 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
@@ -157,7 +155,6 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
