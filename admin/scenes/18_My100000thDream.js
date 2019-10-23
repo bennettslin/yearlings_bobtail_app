@@ -73,7 +73,6 @@ export default [
                 },
                 [CATHERINE]: {
                     gopi: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
@@ -84,7 +83,6 @@ export default [
                 },
                 [MARA]: {
                     gopi: {
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
@@ -96,7 +94,6 @@ export default [
                 [MIRIAM]: {
                     gopi: {
                         hair: true,
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
