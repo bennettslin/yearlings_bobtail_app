@@ -14,6 +14,8 @@ import { populateRefs } from 'helpers/ref'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
+import { getWordsForWikiAnchor } from './helpers'
+
 const mapStateToProps = ({
     appStore: { isHigherProcessor },
     lyricStore: {
@@ -161,8 +163,8 @@ class TextLyricAnchor extends PureComponent {
 
         // Only split wiki anchor text in higher processor.
         const words =
-            isWikiTextAnchor
-            && isHigherProcessor ? text.split(' ') : [text]
+            isWikiTextAnchor && isHigherProcessor ?
+                getWordsForWikiAnchor(text) : [text]
 
         return (
             <___>
