@@ -54,7 +54,7 @@ const _getRoutingIndices = (routingParamString = '') => {
             rawAnnotationIndex
 
         // Verse can only be second param.
-        if (routingIndices[1].indexOf('v') > -1) {
+        if (routingIndices[1].includes('v')) {
             rawVerseIndex = _getIndexForPrefix(routingIndices[1], 'v')
 
             // If verse is present, annotation can only be third param.
@@ -63,7 +63,7 @@ const _getRoutingIndices = (routingParamString = '') => {
             }
 
         // If verse is absent, annotation can only be second param.
-        } else if (routingIndices[1].indexOf('a') > -1) {
+        } else if (routingIndices[1].includes('a')) {
             rawAnnotationIndex = _getIndexForPrefix(routingIndices[1], 'a')
         }
 

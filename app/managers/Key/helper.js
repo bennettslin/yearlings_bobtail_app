@@ -38,7 +38,7 @@ export const getKeyName = (e) => {
 }
 
 const _getIsNavKey = (keyName) => {
-    return keyName.indexOf('Arrow') > -1
+    return keyName.includes('Arrow')
 }
 
 export const getIsNavKeyOrEnter = (keyName) => {
