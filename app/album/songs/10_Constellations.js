@@ -42,7 +42,7 @@ export default {
                             },
                             `and was soon hooked. The best part about it is the`,
                             {
-                                anchor: `closed\u2011eye hallucinations,`,
+                                anchor: `closed-eye hallucinations,`,
                                 wiki: `Closed-eye_hallucination`
                             },
                             `which are vivid images that seem to be projected onto the backdrop of your eyelids. If they ever get too intense, you simply open your eyes, and they instantly vanish. At the time, I called them "constellations."`

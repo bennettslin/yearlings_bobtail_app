@@ -5,7 +5,7 @@
  * a left cube overlaps a right one, and vice versa.
  */
 
-// The theatre front elements then sits above the scene cubes.
+// The theatre front elements then sit above the scene cubes.
 $zIndex__curtains: 72;
 $zIndex__theatre: $zIndex__curtains + 1;
 

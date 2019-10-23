@@ -4936,5 +4936,10 @@ export default [
         taskName: `Align annotation title access letters.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Underline broken in Chrome? But actually fine in CodePen? https://codepen.io/bennettslin/pen/GRRNLvL`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

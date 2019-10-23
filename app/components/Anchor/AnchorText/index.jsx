@@ -33,20 +33,6 @@ const AnchorText = ({
                 <___ {...{ key: index }}>
                     {Boolean(index) && ' '}
                     <span className="AnchorText">
-                        {isHigherProcessor && (
-                            <Underline
-                                {...{
-                                    isAccessed,
-                                    isSelected
-                                }}
-                                {...isWikiTextAnchor && {
-                                    isWikiAnchor: true,
-                                    isWikiFirstChild: index === 0,
-                                    isWikiLastChild: index === words.length - 1
-                                }}
-                            />
-                        )}
-
                         {/* Shown when no dot in dot sequence is selected. */}
                         <span className={cx(
                             'TextAnchor__plainText'
@@ -70,6 +56,21 @@ const AnchorText = ({
                         )}>
                             {word}
                         </span>
+
+                        {/* See styling comment for why this is last child. */}
+                        {isHigherProcessor && (
+                            <Underline
+                                {...{
+                                    isAccessed,
+                                    isSelected
+                                }}
+                                {...isWikiTextAnchor && {
+                                    isWikiAnchor: true,
+                                    isWikiFirstChild: index === 0,
+                                    isWikiLastChild: index === words.length - 1
+                                }}
+                            />
+                        )}
                     </span>
                 </___>
             )

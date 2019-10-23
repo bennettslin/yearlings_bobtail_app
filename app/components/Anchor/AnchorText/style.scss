@@ -10,6 +10,13 @@
 }
 
 .TextAnchor__linkText {
+    /**
+     * To fix a bug in Chrome where an anchor split onto a new line was unable
+     * to determine the dimensions of a span on the second line, the Underline
+     * was made the last child instead of the first child in the DOM. This
+     * z-index ensures that the text is still visibly the top child.
+     */
+    z-index: 1;
     position: relative;
     display: none;
 

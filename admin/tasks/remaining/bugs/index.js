@@ -1,7 +1,7 @@
 export default [
     {
-        taskName: `Underline broken in Chrome? But actually fine in CodePen? https://codepen.io/bennettslin/pen/GRRNLvL`,
-        workedHours: 1,
-        neededHours: 3
+        taskName: `Split annotation achors along hyphen, e.g. "closed-eye hallucinations." Line 165 in LyricAnchor. Make it a helper.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

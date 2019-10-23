@@ -86,7 +86,7 @@ export default {
                                 anchor: `Shepard tone`,
                                 wiki: `Shepard_tone`
                             },
-                            `is an auditory illusion in which a single tone continuously descends in pitch yet remains fixed within the same register. It seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two in this song. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Both were made by splicing together pure tones produced on an analogue synthesiser.`
+                            `is an auditory illusion in which a tone moves steadily up or down in pitch yet remains fixed within the same register. A steady descent seemed an apt metaphor for my utterly deflated state after the breakup with Miriam, so I included two Shepard tones this song. One is a bass tone that moves downward in discrete half steps, while the other is a treble tone that does so in a perpetual glissando. Both were made by splicing together pure tones produced on an analogue synthesiser.`
                         ],
                         dotKeys: {
                             [OBSERVATION]: true,
