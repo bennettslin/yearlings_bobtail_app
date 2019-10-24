@@ -75,7 +75,6 @@ export default [
                 },
                 [MIRIAM]: {
                     hair: true,
-                    legs: true,
                     trunk: true,
                     hands: true,
                     head: true,
