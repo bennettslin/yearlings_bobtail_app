@@ -14,7 +14,7 @@ import { populateRefs } from 'helpers/ref'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
-import { getWordsForWikiAnchor } from './helpers'
+import { getWordsForWikiAnchor } from './helper'
 
 const mapStateToProps = ({
     appStore: { isHigherProcessor },

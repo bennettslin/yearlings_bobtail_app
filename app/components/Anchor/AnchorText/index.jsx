@@ -5,6 +5,8 @@ import isString from 'lodash/isstring'
 
 import Underline from '../Underline'
 
+import { getSpaceIfNeeded } from './helper'
+
 const propTypes = {
     // From parent.
     isHigherProcessor: PropTypes.bool.isRequired,
@@ -31,7 +33,6 @@ const AnchorText = ({
         words.map((word, index) => {
             return (
                 <___ {...{ key: index }}>
-                    {Boolean(index) && ' '}
                     <span className="AnchorText">
                         {/* Shown when no dot in dot sequence is selected. */}
                         <span className={cx(
@@ -52,7 +53,6 @@ const AnchorText = ({
                                 'TextAnchor__linkText__selected',
 
                             'textShadow__text'
-                            // 'abF'
                         )}>
                             {word}
                         </span>
@@ -72,6 +72,11 @@ const AnchorText = ({
                             />
                         )}
                     </span>
+                    {Boolean(isWikiTextAnchor) && getSpaceIfNeeded({
+                        words,
+                        word,
+                        index
+                    })}
                 </___>
             )
         })
