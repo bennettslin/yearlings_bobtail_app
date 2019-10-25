@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react'
 
 import AnnotationCards from './AnnotationCards'
-import Button from '../../../app/components/Button'
 
 import { getAnnotation } from 'album/api/annotations'
 import { getGlobalAnnotation } from 'album/api/admin'
+
+import { removeLoadingIndicator } from 'utils/window'
 
 import './style.scss'
 
@@ -19,11 +20,10 @@ const TempGlobalAnnotationsCounter = ({
                 <span>
                     {`Annotations edited today: ${counter}`}
                 </span>
-                <Button
-                    isSmallSize
+                <button
                     {...{
-                        buttonName: 'reset',
-                        handleButtonClick
+                        className: 'reset',
+                        onClick: handleButtonClick
                     }}
                 />
             </div>
@@ -59,11 +59,10 @@ const TempGlobalAnnotation = ({
                 <span>
                     {globalAnnotationIndex}. {title}
                 </span>
-                <Button
-                    isSmallSize
+                <button
                     {...{
-                        buttonName: 'increment',
-                        handleButtonClick
+                        className: 'increment',
+                        onClick: handleButtonClick
                     }}
                 />
             </div>
@@ -105,6 +104,8 @@ class TempGlobalAnnotations extends PureComponent {
             third: parseInt(global.localStorage.globalAnnotationIndexThird),
             counter: parseInt(global.localStorage.globalAnnotationsCounter)
         })
+
+        removeLoadingIndicator()
     }
 
     incrementFirst = () => {
