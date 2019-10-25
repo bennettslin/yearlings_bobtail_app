@@ -8,16 +8,12 @@ import { updateAnnotationStore } from 'flux/annotation/action'
 
 import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
 import Anchor from '../../../Anchor'
-import Texts from '../../'
 
 import { populateRefs } from 'helpers/ref'
 
 import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
 
-import { getWordsForWikiAnchor } from './helper'
-
 const mapStateToProps = ({
-    appStore: { isHigherProcessor },
     lyricStore: {
         lyricSongIndex,
         lyricAnnotationIndex
@@ -28,7 +24,6 @@ const mapStateToProps = ({
         accessedWikiWormholeIndex
     }
 }) => ({
-    isHigherProcessor,
     lyricAnnotationIndex,
 
     // This is just to know when to update.
@@ -43,7 +38,6 @@ class TextLyricAnchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isHigherProcessor: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
@@ -67,6 +61,13 @@ class TextLyricAnchor extends PureComponent {
             PropTypes.object
 
         ]).isRequired,
+
+        isVerseLyric: PropTypes.bool,
+        isItalic: PropTypes.bool,
+        isEmphasis: PropTypes.bool,
+        beginsVerse: PropTypes.bool,
+        endsVerse: PropTypes.bool,
+
         dotKeys: PropTypes.object,
         setLyricAnnotationElement: PropTypes.func
     }
@@ -126,7 +127,6 @@ class TextLyricAnchor extends PureComponent {
                 dispatch,
                 /* eslint-enable no-unused-vars */
 
-                isHigherProcessor,
                 annotationIndex,
                 lyricAnnotationIndex,
                 isAccessedIndexedAnchorShown,
@@ -138,7 +138,11 @@ class TextLyricAnchor extends PureComponent {
                 text,
                 dotKeys,
 
-                ...other
+                isVerseLyric,
+                isItalic,
+                isEmphasis,
+                beginsVerse,
+                endsVerse
             } = this.props,
 
             isSelected = annotationIndex === lyricAnnotationIndex,
@@ -161,11 +165,6 @@ class TextLyricAnchor extends PureComponent {
             }
         }
 
-        // Only split wiki anchor text in higher processor.
-        const words =
-            isWikiTextAnchor && isHigherProcessor ?
-                getWordsForWikiAnchor(text) : [text]
-
         return (
             <___>
                 {/* This space will not show if it starts the verse line. */}
@@ -183,16 +182,14 @@ class TextLyricAnchor extends PureComponent {
                         isAccessed,
                         isSelected,
                         isWikiTextAnchor,
-                        text: words.map((word, index) => (
-                            <Texts {...other}
-                                hasRecursed
-                                {...{
-                                    key: index,
-                                    text: word,
-                                    isWikiTextAnchor
-                                }}
-                            />
-                        )),
+                        text,
+                        textConfig: {
+                            isVerseLyric,
+                            isItalic,
+                            isEmphasis,
+                            beginsVerse,
+                            endsVerse
+                        },
                         sequenceDotKeys: dotKeys,
                         handleAnchorClick: this._handleAnchorClick
                     }}

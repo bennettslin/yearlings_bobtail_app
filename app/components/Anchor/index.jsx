@@ -33,6 +33,7 @@ class Anchor extends PureComponent {
         sequenceDotKeys: PropTypes.object,
         stanzaDotKeys: PropTypes.object,
         text: PropTypes.any,
+        textConfig: PropTypes.any,
         setLyricAnnotationElement: PropTypes.func,
         handleAnchorClick: PropTypes.func.isRequired
     }
@@ -66,6 +67,7 @@ class Anchor extends PureComponent {
                 stanzaDotKeys,
                 isWikiTextAnchor,
                 text,
+                textConfig,
                 setLyricAnnotationElement
             } = this.props,
 
@@ -147,7 +149,8 @@ class Anchor extends PureComponent {
                             isAccessed,
                             isSelected,
                             isWikiTextAnchor,
-                            text
+                            text,
+                            textConfig
                         }}
                     />
                 )}

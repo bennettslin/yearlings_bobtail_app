@@ -1,11 +1,11 @@
 import React, { memo, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isString from 'lodash/isstring'
 
+import Texts from '../../Texts'
 import Underline from '../Underline'
 
-import { getSpaceIfNeeded } from './helper'
+import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'
 
 const propTypes = {
     // From parent.
@@ -16,7 +16,14 @@ const propTypes = {
     text: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.array
-    ]).isRequired
+    ]).isRequired,
+    textConfig: PropTypes.shape({
+        isVerseLyric: PropTypes.bool,
+        isItalic: PropTypes.bool,
+        isEmphasis: PropTypes.bool,
+        beginsVerse: PropTypes.bool,
+        endsVerse: PropTypes.bool
+    })
 }
 
 const AnchorText = ({
@@ -24,13 +31,27 @@ const AnchorText = ({
     isAccessed,
     isSelected,
     isWikiTextAnchor,
-    text
+    text,
+    textConfig
 
 }) => {
-    const words = isString(text) ? [text] : text
+    // Only split wiki anchor text, and only in higher processor.
+    const words = isWikiTextAnchor && isHigherProcessor ?
+        getWordsForWikiAnchor(text) : [text]
+
+    const wordsMap = words.map((word, index) => (
+        <Texts {...textConfig}
+            hasRecursed
+            {...{
+                key: index,
+                text: word,
+                isWikiTextAnchor
+            }}
+        />
+    ))
 
     return (
-        words.map((word, index) => {
+        wordsMap.map((word, index) => {
             return (
                 <___ {...{ key: index }}>
                     <span className="AnchorText">
