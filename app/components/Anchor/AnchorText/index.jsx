@@ -39,19 +39,20 @@ const AnchorText = ({
     const words = isWikiTextAnchor && isHigherProcessor ?
         getWordsForWikiAnchor(text) : [text]
 
-    const wordsMap = words.map((word, index) => (
-        <Texts {...textConfig}
-            hasRecursed
-            {...{
-                key: index,
-                text: word,
-                isWikiTextAnchor
-            }}
-        />
-    ))
-
     return (
-        wordsMap.map((word, index) => {
+        words.map((word, index) => {
+
+            const wordComponent = (
+                <Texts {...textConfig}
+                    hasRecursed
+                    {...{
+                        key: index,
+                        text: word,
+                        isWikiTextAnchor
+                    }}
+                />
+            )
+
             return (
                 <___ {...{ key: index }}>
                     <span className="AnchorText">
@@ -59,7 +60,7 @@ const AnchorText = ({
                         <span className={cx(
                             'TextAnchor__plainText'
                         )}>
-                            {word}
+                            {wordComponent}
                         </span>
 
                         {/* Shown once some dot in dot sequence is selected. */}
@@ -75,7 +76,7 @@ const AnchorText = ({
 
                             'textShadow__text'
                         )}>
-                            {word}
+                            {wordComponent}
                         </span>
 
                         {/* See styling comment for why this is last child. */}
