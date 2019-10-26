@@ -16,6 +16,12 @@ import { getPropsAreShallowEqual } from 'helpers/general'
 import { ENTER } from 'constants/access'
 import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 
+import {
+    getShowTooltip,
+    getTooltipPlacement,
+    getTooltipText
+} from './helper'
+
 class Button extends Component {
 
     static defaultProps = {
@@ -90,7 +96,9 @@ class Button extends Component {
 
                 // If it's Enter, show if it's the one accessed index.
                 isAccessed
-            )
+            ),
+
+            showTooltip = getShowTooltip(buttonName)
 
         return (
             <div
@@ -114,18 +122,23 @@ class Button extends Component {
                         },
                         className
                     ),
-                    'data-tip': buttonName,
                     'data-for': buttonName,
+                    ...showTooltip && {
+                        'data-tip': getTooltipText({ buttonName, buttonIdentifier })
+                    },
                     onClick: this._handleClick
                 }}
             >
-                <ReactTooltip
-                    {...{
-                        id: buttonName,
-                        effect: 'solid',
-                        delayShow: 750
-                    }}
-                />
+                {showTooltip && (
+                    <ReactTooltip
+                        {...{
+                            id: buttonName,
+                            effect: 'solid',
+                            delayShow: 750,
+                            place: getTooltipPlacement(buttonName)
+                        }}
+                    />
+                )}
                 <div className={cx(
                     'ButtonAnimatable',
                     isPopupButton && 'ButtonAnimatable__popup',

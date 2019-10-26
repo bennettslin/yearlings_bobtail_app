@@ -63,23 +63,19 @@ class PopupViewButton extends Component {
             displaysInOverlay
         } = this.props
 
-        let buttonIdentifier,
-            buttonName,
+        let buttonName,
             accessKey
 
         if (isCloseButton) {
             buttonName = POPUP_CLOSE_BUTTON_KEY
-            buttonIdentifier = '\u274C'
             accessKey = ESCAPE
 
         } else if (isPreviousButton) {
             buttonName = POPUP_PREVIOUS_BUTTON_KEY
-            buttonIdentifier = '\u276e'
             accessKey = ARROW_LEFT
 
         } else if (isNextButton) {
             buttonName = POPUP_NEXT_BUTTON_KEY
-            buttonIdentifier = '\u276f'
             accessKey = ARROW_RIGHT
         }
 
@@ -118,7 +114,6 @@ class PopupViewButton extends Component {
                             'Button__popup'
                         ),
                         buttonName,
-                        buttonIdentifier,
                         accessKey,
                         handleButtonClick: this._handleClick
                     }}
