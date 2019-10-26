@@ -14,12 +14,13 @@ import {
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY,
     DOTS_SLIDE_BUTTON_KEY,
+    DOTS_SLIDE_SELECT_BUTTON_KEY,
     LYRIC_EAR_BUTTON_KEY,
     LYRIC_EXPAND_BUTTON_KEY,
     LYRIC_SCROLL_BUTTON_KEY,
     NAV_BOOK_BUTTON_KEY,
     NAV_SONG_BUTTON_KEY,
-    OVERVIEW_BUTTON_KEY,
+    // OVERVIEW_BUTTON_KEY,
     POPUP_CLOSE_BUTTON_KEY,
     POPUP_NEXT_BUTTON_KEY,
     POPUP_PREVIOUS_BUTTON_KEY,
@@ -47,7 +48,7 @@ const
     BOTTOM = 'bottom',
 
     TOOLTIP_TEXT_MAP = {
-        [ABOUT_BUTTON_KEY]: 'about us',
+        [ABOUT_BUTTON_KEY]: 'about Bobtail Yearlings',
         get audioOptions() {
             return {
                 0: 'continuous play',
@@ -67,13 +68,13 @@ const
         get carouselNav() {
             return {
                 [IS_CAROUSEL_SHOWN]: 'annotation carousel',
-                [IS_NAV_SHOWN]: 'song navigation',
+                [IS_NAV_SHOWN]: 'album navigation',
                 [IS_NEITHER_SHOWN]: 'show annotation carousel'
             }
         },
         [CAROUSEL_PREVIOUS_BUTTON_KEY]: 'previous annotation',
         [CAROUSEL_NEXT_BUTTON_KEY]: 'next annotation',
-        [DOTS_SLIDE_BUTTON_KEY]: 'dot categories',
+        [DOTS_SLIDE_BUTTON_KEY]: 'annotation toggles',
         get lyricEar() {
             return {
                 [LEFT]: 'left speaker',
@@ -88,6 +89,13 @@ const
             }
         },
         [LYRIC_SCROLL_BUTTON_KEY]: 'auto scroll lyrics',
+        get overview() {
+            return {
+                [SHOWN]: 'song overview shown',
+                [HIDDEN]: 'song overview hidden',
+                [DISABLED]: 'song overviews disabled'
+            }
+        },
         [POPUP_CLOSE_BUTTON_KEY]: 'close popup',
         [POPUP_NEXT_BUTTON_KEY]: 'next annotation',
         [POPUP_PREVIOUS_BUTTON_KEY]: 'previous annotation',
@@ -103,8 +111,7 @@ const
 
 export const getShowTooltip = buttonName => {
     switch (buttonName) {
-        // Don't show in overview because there's just no good position for it.
-        case OVERVIEW_BUTTON_KEY:
+        case DOTS_SLIDE_SELECT_BUTTON_KEY:
         case WORMHOLE_BUTTON_KEY:
             return false
     }
@@ -143,12 +150,7 @@ export const getTooltipText = ({ buttonName, buttonIdentifier }) => {
         return `Book ${buttonIdentifier === 0 ? 'I' : 'II'}`
     }
 
-    if (buttonIdentifier) {
-        console.log('button', buttonName, buttonIdentifier)
-    }
     if (buttonIdentifier || isFinite(buttonIdentifier)) {
-        console.log('identified button', TOOLTIP_TEXT_MAP[buttonName])
-        console.log('identified button', TOOLTIP_TEXT_MAP[buttonName][buttonIdentifier])
         return TOOLTIP_TEXT_MAP[buttonName][buttonIdentifier]
     }
     return TOOLTIP_TEXT_MAP[buttonName]

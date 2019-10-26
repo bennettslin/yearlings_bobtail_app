@@ -122,8 +122,8 @@ class Button extends Component {
                         },
                         className
                     ),
-                    'data-for': buttonName,
                     ...showTooltip && {
+                        'data-for': buttonName,
                         'data-tip': getTooltipText({ buttonName, buttonIdentifier })
                     },
                     onClick: this._handleClick

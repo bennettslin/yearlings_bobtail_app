@@ -110,8 +110,8 @@ class Menu extends PureComponent {
                             )
                         }}
                     >
-                        <AboutToggle />
                         <BannerFilmstrip />
+                        <AboutToggle />
                         {!isTwoRowMenu && (
                             <Audio />
                         )}

@@ -14,6 +14,12 @@
     margin-left: -$js__length__icon - $js__margin__thin;
 
     z-index: $zIndex__theatre;
+
+    .ShW__overviewShown
+    & {
+        // Show overview tooltip above overview when it's shown.
+        z-index: $zIndex__popupButton;
+    }
 }
 
 .ShelfLeft__shown {

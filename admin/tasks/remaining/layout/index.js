@@ -35,11 +35,6 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Single tooltip manager so tooltips are always on top. Manages tooltip text as well, including for nav songs. Also, don't show for slide dots.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2

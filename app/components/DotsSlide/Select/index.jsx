@@ -11,6 +11,7 @@ import Anchor from '../../Anchor'
 import { populateRefs } from 'helpers/ref'
 
 import { ENTER } from 'constants/access'
+import { DOTS_SLIDE_SELECT_BUTTON_KEY } from 'constants/buttons'
 import { DOT_DESCRIPTIONS } from 'constants/dots'
 
 class DotsSlideSelect extends PureComponent {
@@ -66,7 +67,7 @@ class DotsSlideSelect extends PureComponent {
                                 'isSelected': isSelected,
                                 'isActivated': isActivated
                             }),
-                            buttonName: 'slideSelect',
+                            buttonName: DOTS_SLIDE_SELECT_BUTTON_KEY,
                             accessKey: ENTER,
                             isAccessed: isAccessed,
                             handleButtonClick: this._toggleSelectedDot
