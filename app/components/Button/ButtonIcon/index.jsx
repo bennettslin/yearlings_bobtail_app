@@ -83,6 +83,11 @@ const ButtonIcon = ({
                 ),
                 svgClassName: cx(
                     `ButtonIcon__${buttonName}`,
+
+                    // Allow epilogue button to be horizontally reversed.
+                    buttonName === NAV_SONG_BUTTON_KEY &&
+                        `ButtonIcon__${buttonName}__${buttonIdentifier}`,
+
                     showAsDisabled && 'ButtonIcon__disabled'
                 )
             }}

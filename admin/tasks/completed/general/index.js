@@ -4966,5 +4966,10 @@ export default [
         taskName: `Remove Enter from Anchors. (Work done a while back.) Also only show underline for hover, access, or selected`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Logic for epilogue button to be horizontally reversed.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

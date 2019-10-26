@@ -33,7 +33,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Logic for nav logue and nav book icons to be left or right.`,
+        taskName: `Roman numeral I on book in road past.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -51,10 +51,5 @@ export default [
         taskName: `Choose button colours.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Roman numeral I on book in road past.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]

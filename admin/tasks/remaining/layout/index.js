@@ -38,10 +38,5 @@ export default [
         taskName: `Finalise banner UI. Consider logues and transitions between songs.`,
         workedHours: 5,
         neededHours: 7
-    },
-    {
-        taskName: `Make about button bigger on desktop.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]
