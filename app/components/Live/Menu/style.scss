@@ -48,17 +48,23 @@ $js__height__menu: 72px;
     justify-content: space-between;
 
     // Margin between menu children.
-    & > :not(:last-child) {
-        margin-right: $js__margin__thick * 2;
-    }
+    // & > :not(:last-child) {
+    //     margin-right: $js__margin__thick * 2;
+    // }
 
     /**
      * This allows the about tooltip to show above the banner and filmstrip,
      * despite being lower in stacking order.
      */
-    .AboutToggle { order: 1 };
-    .BannerFilmstrip { order: 2 };
-    .Audio { order: 3 };
+    .AboutToggle {
+        order: 1;
+        margin-right: $js__margin__thick * 2;
+    }
+    .BannerFilmstrip { order: 2; }
+    .Audio {
+        order: 3;
+        margin-left: $js__margin__thick * 2;
+    }
 }
 
 .Menu__mainBottom {

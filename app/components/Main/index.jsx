@@ -111,7 +111,9 @@ class Main extends PureComponent {
                         )
                     }}
                 >
-                    <Nav />
+                    {canCarouselMount && (
+                        <Nav />
+                    )}
                     <AnnotationPopup inMain />
                     <div
                         {...{

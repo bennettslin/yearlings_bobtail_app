@@ -9,17 +9,22 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import AccessField from './Field'
 import AccessIcon from './Icon'
 
+import { getIsDesktopWidth, getIsTabletWidth } from 'helpers/responsive'
+
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
 const mapStateToProps = ({
-    accessStore: { isAccessOn }
+    accessStore: { isAccessOn },
+    viewportStore: { deviceWidthIndex }
 }) => ({
-    isAccessOn
+    isAccessOn,
+    deviceWidthIndex
 })
 
 const propTypes = {
     // Through Redux.
     isAccessOn: PropTypes.bool.isRequired,
+    deviceWidthIndex: PropTypes.number.isRequired,
 
     // From parent.
     inButtonOrDotAnchor: PropTypes.bool,
@@ -30,12 +35,21 @@ const propTypes = {
 
 const AccessLetter = ({
     isAccessOn,
+    deviceWidthIndex,
     inButtonOrDotAnchor,
     showIfAccessOn,
     animateStandaloneOnKeyDown,
     accessKey
 
 }) => {
+    // Only show access letter in tablet width or wider.
+    if (
+        !getIsDesktopWidth(deviceWidthIndex) &&
+        !getIsTabletWidth(deviceWidthIndex)
+    ) {
+        return null
+    }
+
     return (
         <CSSTransition
             appear
