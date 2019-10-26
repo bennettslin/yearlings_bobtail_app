@@ -47,7 +47,8 @@ class RootContainer extends PureComponent {
                     ref: this._setRootElement,
                     className: cx(
                         'RootContainer',
-                        'ovH'
+                        'ovH',
+                        'PtSansNarrow'
                     )
                 }}
             >

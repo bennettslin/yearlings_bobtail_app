@@ -4956,5 +4956,10 @@ export default [
         taskName: `Lettering strategy for accessibility icons and nav buttons.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Finalise fonts.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

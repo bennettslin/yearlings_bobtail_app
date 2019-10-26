@@ -10,7 +10,7 @@ $margin__sliderTime: 5px;
         transition: opacity $animationDuration__default;
     }
 
-    font-size: 0.8em;
+    font-size: 1.1em;
 
     opacity: 0;
 
@@ -22,7 +22,7 @@ $margin__sliderTime: 5px;
 
 .SliderTime__spent {
     left: 0;
-    padding-left: $margin__sliderTime;
+    padding-left: $margin__sliderTime * 1.5;
 }
 
 .SliderTime__remain {

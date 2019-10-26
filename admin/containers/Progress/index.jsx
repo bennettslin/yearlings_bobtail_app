@@ -21,7 +21,8 @@ class Progress extends PureComponent {
         return (
             <div
                 className={cx(
-                    'Admin'
+                    'Admin',
+                    'PtSansNarrow'
                 )}
             >
                 <div className="Admin__column">

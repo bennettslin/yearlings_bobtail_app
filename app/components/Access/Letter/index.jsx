@@ -60,7 +60,8 @@ const AccessLetter = ({
                     inButtonOrDotAnchor &&
                         'AccessLetter__inButtonOrDotAnchor',
 
-                    'flexCentreContainer'
+                    'flexCentreContainer',
+                    'Neuton'
                 )}
             >
                 <AccessField />

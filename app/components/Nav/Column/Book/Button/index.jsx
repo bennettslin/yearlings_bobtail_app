@@ -122,6 +122,7 @@ class NavButton extends PureComponent {
                         {...{
                             className: cx(
                                 'NavButton__character',
+                                'Rancho',
                                 'abF',
                                 'flexCentreContainer'
                             )

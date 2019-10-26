@@ -17,6 +17,16 @@
     font-style: italic;
 }
 
+@font-face {
+    font-family: Neuton;
+    src: url('../../assets/fonts/Neuton/Neuton-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Rancho;
+    src: url('../../assets/fonts/Rancho/Rancho-Regular.ttf') format('truetype');
+}
+
 /**************
  * CONTAINERS *
  **************/
@@ -39,6 +49,18 @@
 
 .ovH {
     overflow: hidden;
+}
+
+.Neuton {
+    font-family: Neuton, Georgia;
+}
+
+.PtSansNarrow {
+    font-family: PtSansNarrow, Arial;
+}
+
+.Rancho {
+    font-family: Rancho, Garamond;
 }
 
 .flexCentreContainer {

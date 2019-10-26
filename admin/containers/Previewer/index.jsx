@@ -184,7 +184,8 @@ class Previewer extends PureComponent {
                     className: cx(
                         'Previewer',
                         heightAspectRatio && 'Previewer__heightAspectRatio',
-                        'abF'
+                        'abF',
+                        'PtSansNarrow'
                     )
                 }}
             >

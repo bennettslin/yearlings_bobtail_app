@@ -53,7 +53,8 @@ class Slider extends PureComponent {
                     ref: this.sliderElement,
                     className: cx(
                         'Slider',
-                        canLyricCarouselEnter && 'Slider__visible'
+                        canLyricCarouselEnter && 'Slider__visible',
+                        'Rancho'
                     ),
                     onMouseDown: this._handleTouchDown,
                     onTouchStart: this._handleTouchDown

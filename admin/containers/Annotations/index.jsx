@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import cx from 'classnames'
 
 import AnnotationCards from './AnnotationCards'
 
@@ -165,7 +166,14 @@ class TempGlobalAnnotations extends PureComponent {
         } = this.state
 
         return first !== null && (
-            <div className="TempGlobalAnnotations">
+            <div
+                {...{
+                    className: cx(
+                        'TempGlobalAnnotations',
+                        'PtSansNarrow'
+                    )
+                }}
+            >
                 <TempGlobalAnnotationsCounter
                     {...{
                         counter,

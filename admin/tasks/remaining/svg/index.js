@@ -38,11 +38,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Nav song and prologue and epilogue numbers and characters.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Favicon.`,
         workedHours: 0,
         neededHours: 1
