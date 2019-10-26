@@ -42,7 +42,7 @@
         }
 
         @include mixin__textShadow(
-            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.5),
             $important: $important
         );
     }

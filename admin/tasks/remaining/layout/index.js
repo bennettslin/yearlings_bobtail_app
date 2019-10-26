@@ -15,11 +15,6 @@ export default [
         workedHours: 0,
         neededHours: 2
     },
-    {
-        taskName: `Rather than having Enter or Escape access icon, just make access selectable things more obvious. Remove Enter from Anchors, Wormholes, DotsSlideSelects, NavButtons, VerseNavs. Escape from Popup.`,
-        workedHours: 0,
-        neededHours: 3
-    },
 
     /**
      * Final UI.

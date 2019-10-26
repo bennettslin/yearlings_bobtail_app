@@ -1,5 +1,5 @@
 const isUndefined = (value) => {
-    return value === undefined
+    return typeof value === 'undefined'
 }
 
 export default isUndefined
