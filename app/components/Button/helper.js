@@ -118,6 +118,10 @@ export const getShowTooltip = buttonName => {
     return true
 }
 
+export const getShowButtonIcon = buttonName => {
+    return buttonName !== DOTS_SLIDE_SELECT_BUTTON_KEY
+}
+
 export const getTooltipPlacement = buttonName => {
     switch (buttonName) {
         case ABOUT_BUTTON_KEY:

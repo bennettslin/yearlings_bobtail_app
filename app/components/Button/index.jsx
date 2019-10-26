@@ -17,6 +17,7 @@ import { ENTER } from 'constants/access'
 import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 
 import {
+    getShowButtonIcon,
     getShowTooltip,
     getTooltipPlacement,
     getTooltipText
@@ -144,11 +145,9 @@ class Button extends Component {
                     isPopupButton && 'ButtonAnimatable__popup',
                     'abF'
                 )}>
+                    {children}
 
-                    {/* Dots slide select buttons pass own children. */}
-                    {children ? (
-                        children
-                    ) : (
+                    {getShowButtonIcon(buttonName) && (
                         <ButtonIcon
                             {...{
                                 buttonName,
