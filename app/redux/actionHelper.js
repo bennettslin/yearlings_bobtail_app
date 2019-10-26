@@ -1,13 +1,15 @@
+import isUndefined from 'lodash/isundefined'
+
 // Don't pass a key with no value.
 export const hasKey = (value) => {
-    return typeof value !== 'undefined'
+    return !isUndefined(value)
 }
 
 export const getDefinedOnlyPayload = (payload) => {
     const definedOnlyPayload = {}
 
     for (const key in payload) {
-        if (typeof payload[key] !== 'undefined') {
+        if (!isUndefined(payload[key])) {
             definedOnlyPayload[key] = payload[key]
         }
     }

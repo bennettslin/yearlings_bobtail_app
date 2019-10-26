@@ -1,4 +1,4 @@
-import isFinite from 'lodash/isfinite'
+import isUndefined from 'lodash/isundefined'
 
 import { getSongTitle } from '../../album/api/songs'
 
@@ -154,7 +154,7 @@ export const getTooltipText = ({ buttonName, buttonIdentifier }) => {
         return `Book ${buttonIdentifier === 0 ? 'I' : 'II'}`
     }
 
-    if (buttonIdentifier || isFinite(buttonIdentifier)) {
+    if (!isUndefined(buttonIdentifier)) {
         return TOOLTIP_TEXT_MAP[buttonName][buttonIdentifier]
     }
     return TOOLTIP_TEXT_MAP[buttonName]

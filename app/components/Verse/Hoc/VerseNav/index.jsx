@@ -85,7 +85,6 @@ class VerseNav extends PureComponent {
                             accessKey: ENTER,
                             isAccessed: isActivated,
                             isDisabled: !isActivated,
-                            buttonIdentifier: false,
                             handleButtonClick: this._handleButtonClick
                         }}
                     />
