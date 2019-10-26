@@ -145,8 +145,6 @@ class Button extends Component {
                     isPopupButton && 'ButtonAnimatable__popup',
                     'abF'
                 )}>
-                    {children}
-
                     {getShowButtonIcon(buttonName) && (
                         <ButtonIcon
                             {...{
@@ -156,6 +154,8 @@ class Button extends Component {
                             }}
                         />
                     )}
+
+                    {children}
 
                     {accessKey && (
                         <AccessLetter

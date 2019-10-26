@@ -56,5 +56,10 @@ export default [
         taskName: `Choose button colours.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Roman numeral I on book in road past.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

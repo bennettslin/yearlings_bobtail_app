@@ -35,11 +35,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Lettering strategy for accessibility icons and nav buttons. Remember to draw Roman numeral I on book in globes backdrop.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Finalise verse colour UI, including VerseTracker gradient.`,
         workedHours: 0,
         neededHours: 2

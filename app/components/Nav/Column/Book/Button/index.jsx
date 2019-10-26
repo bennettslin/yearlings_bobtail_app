@@ -13,6 +13,8 @@ import {
     NAV_SONG_BUTTON_KEY
 } from 'constants/buttons'
 
+import { getIndexCharacter } from './helper'
+
 const mapStateToProps = ({
     transientStore: { isCarouselNavShowable },
     selectedStore: { selectedAnnotationIndex }
@@ -115,7 +117,19 @@ class NavButton extends PureComponent {
                             isNavigable,
                         handleButtonClick: this._handleButtonClick
                     }}
-                />
+                >
+                    <div
+                        {...{
+                            className: cx(
+                                'NavButton__character',
+                                'abF',
+                                'flexCentreContainer'
+                            )
+                        }}
+                    >
+                        {getIndexCharacter({ bookIndex, songIndex })}
+                    </div>
+                </Button>
             </div>
         )
     }

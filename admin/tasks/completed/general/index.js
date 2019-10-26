@@ -4951,5 +4951,10 @@ export default [
         taskName: `Position tooltips and choose tooltip text.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Lettering strategy for accessibility icons and nav buttons.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
