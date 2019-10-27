@@ -64,7 +64,8 @@ const propTypes = {
         return (
             <div
                 className={cx(
-                    'AccessIcon'
+                    'AccessIcon',
+                    `AccessIcon__${accessKey}`
                 )}
             >
                 {shownKey}
