@@ -116,7 +116,6 @@ class Audio extends PureComponent {
                     {...{
                         buttonName: AUDIO_PREVIOUS_BUTTON_KEY,
                         className: 'AudioButton',
-                        buttonIdentifier: isPrologue,
                         accessKey: PREVIOUS_SONG_KEY,
                         isDisabled: isPrologue,
                         handleButtonClick: this._handlePreviousClick
@@ -141,7 +140,6 @@ class Audio extends PureComponent {
                     {...{
                         buttonName: AUDIO_NEXT_BUTTON_KEY,
                         className: 'AudioButton',
-                        buttonIdentifier: isEpilogue,
                         accessKey: NEXT_SONG_KEY,
                         isDisabled: isEpilogue,
                         handleButtonClick: this._handleNextClick

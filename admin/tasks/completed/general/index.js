@@ -4976,5 +4976,10 @@ export default [
         taskName: `Nav roads. Looked into connecting nav songs to logues, but too complicated.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Fix rewind and fast forward tooltips being cut off.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

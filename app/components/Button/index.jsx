@@ -133,9 +133,11 @@ class Button extends Component {
                 {showTooltip && (
                     <ReactTooltip
                         {...{
+                            className: 'ReactTooltip',
                             id: buttonName,
                             effect: 'solid',
                             delayShow: 750,
+                            type: 'light',
                             place: getTooltipPlacement(buttonName)
                         }}
                     />

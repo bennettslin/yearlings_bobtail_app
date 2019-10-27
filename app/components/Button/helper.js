@@ -64,7 +64,8 @@ const
         [AUDIO_PREVIOUS_BUTTON_KEY]: 'previous track',
         [AUDIO_NEXT_BUTTON_KEY]: 'next track',
         [AUDIO_REWIND_BUTTON_KEY]: 'rewind',
-        [AUDIO_FAST_FORWARD_BUTTON_KEY]: 'fast forward',
+        // This needs a non-breaking space, for some reason.
+        [AUDIO_FAST_FORWARD_BUTTON_KEY]: 'fast\u00a0forward',
         get carouselNav() {
             return {
                 [IS_CAROUSEL_SHOWN]: 'annotation carousel',
@@ -134,9 +135,10 @@ export const getTooltipPlacement = buttonName => {
             return BOTTOM
         case LYRIC_EAR_BUTTON_KEY:
         case LYRIC_SCROLL_BUTTON_KEY:
+            return LEFT
         case AUDIO_REWIND_BUTTON_KEY:
         case AUDIO_FAST_FORWARD_BUTTON_KEY:
-            return LEFT
+            return RIGHT
         default:
             return TOP
     }

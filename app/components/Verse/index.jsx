@@ -176,8 +176,8 @@ const verseViewPropTypes = {
                     onClick: handleInteractivatableClick
                 }}
             >
-                {children}
                 <VerseLines {...other} />
+                {children}
             </div>
         )
     })
