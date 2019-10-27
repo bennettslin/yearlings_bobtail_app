@@ -4991,5 +4991,10 @@ export default [
         taskName: `Strategy for styling buttons that can be disabled and shown, scores and audio nav. (Any others are disabled only to prevent interaction, and are not seen then.)`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Finalise banner UI. Consider logues and transitions between songs.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

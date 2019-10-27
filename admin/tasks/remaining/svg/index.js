@@ -13,11 +13,6 @@ export default [
         neededHours: 8
     },
     {
-        taskName: `tip images`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Svg for don't repeat audio option.`,
         workedHours: 0,
         neededHours: 1
@@ -36,10 +31,5 @@ export default [
         taskName: `Favicon.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Choose button colours.`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]
