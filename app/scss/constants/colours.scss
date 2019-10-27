@@ -3,7 +3,7 @@
  ********/
 
 // Plain text colours.
-$colour__text__dark: #555555;
+$colour__text__dark: #555;
 $colour__text__light: #fff;
 
 // Selected anchor colours.
@@ -97,8 +97,6 @@ $bgColour__dot__songwriting: #aef;
 $bgColour__dot__wormhole: #bcf;
 $bgColour__dot__afterword: #fbe;
 
-$bgColour__dot__accessed: #dfd;
-$bgColour__dot__selected: #ffd;
 $bgColour__dot__deselected: #ddd;
 
 // Annotation and Wormhole colours.
@@ -143,15 +141,3 @@ $bgColour__stanzaType__instrumental__light:
     hsl(270, 25, 40);
 $bgColour__stanzaType__none__light:
     hsl(0, 0, 45);
-
-// Unused.
-// $bgColour__stanzaType__title:
-//     hsl(0, 0, 40);
-// $bgColour__stanzaType__rhyme:
-//     hsl(240, 40, 40);
-// $bgColour__stanzaType__backing:
-//     hsl(330, 40, 40);
-// $bgColour__stanzaType__response:
-//     hsl(150, 40, 40);
-// $bgColor__remainingHue:
-//     hsl(0, 40, 40);
