@@ -11,5 +11,10 @@ export default [
         taskName: `Cube and presence transition order.`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `Line stroke widths for all presence types.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

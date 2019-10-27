@@ -2,10 +2,12 @@
 
 .Button {
     position: relative;
+    opacity: 0.25;
 
     .DW__higherProcessor
     & {
         transition:
+            opacity $animationDuration__default,
             background-color $animationDuration__default,
             transform $animationDuration__instant;
     }
@@ -52,6 +54,7 @@
 
 .Button__enabled {
     cursor: pointer;
+    opacity: 1;
 }
 
 .ButtonAnimatable {

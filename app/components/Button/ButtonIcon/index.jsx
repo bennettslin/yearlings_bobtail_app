@@ -35,7 +35,6 @@ import {
 
 const propTypes = {
     // From parent.
-    showAsDisabled: PropTypes.bool,
     buttonName: PropTypes.string.isRequired,
     buttonIdentifier: PropTypes.any
 }
@@ -67,7 +66,6 @@ const isNewSvg = (buttonName) => {
 }
 
 const ButtonIcon = ({
-    showAsDisabled,
     buttonName,
     buttonIdentifier
 
@@ -86,9 +84,7 @@ const ButtonIcon = ({
 
                     // Allow epilogue button to be horizontally reversed.
                     buttonName === NAV_SONG_BUTTON_KEY &&
-                        `ButtonIcon__${buttonName}__${buttonIdentifier}`,
-
-                    showAsDisabled && 'ButtonIcon__disabled'
+                        `ButtonIcon__${buttonName}__${buttonIdentifier}`
                 )
             }}
         >
@@ -111,8 +107,7 @@ const ButtonIcon = ({
                 <IconComponent
                     {...{
                         className: cx(
-                            `ButtonIcon__${buttonName}`,
-                            showAsDisabled && 'ButtonIcon__disabled'
+                            `ButtonIcon__${buttonName}`
                         ),
                         // Icon component only knows this identifier.
                         buttonIdentifier

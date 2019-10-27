@@ -151,8 +151,7 @@ class Button extends Component {
                         <ButtonIcon
                             {...{
                                 buttonName,
-                                buttonIdentifier,
-                                showAsDisabled: isDisabled
+                                buttonIdentifier
                             }}
                         />
                     )}

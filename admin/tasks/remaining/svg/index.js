@@ -38,11 +38,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Line stroke widths for all presence types.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Choose button colours.`,
         workedHours: 0,
         neededHours: 3
