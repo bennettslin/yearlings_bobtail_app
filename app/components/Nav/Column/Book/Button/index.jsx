@@ -124,7 +124,8 @@ class NavButton extends PureComponent {
                                 'NavButton__character',
                                 'Rancho',
                                 'abF',
-                                'flexCentreContainer'
+                                'flexCentreContainer',
+                                'textShadow__banner'
                             )
                         }}
                     >

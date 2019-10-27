@@ -20,7 +20,7 @@ export default [
     },
     {
         taskName: `Choose button colours.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 3
     }
 ]

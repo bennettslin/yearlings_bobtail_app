@@ -68,14 +68,14 @@ const
         [AUDIO_FAST_FORWARD_BUTTON_KEY]: 'fast\u00a0forward',
         get carouselNav() {
             return {
-                [IS_CAROUSEL_SHOWN]: 'annotation carousel',
-                [IS_NAV_SHOWN]: 'album navigation',
-                [IS_NEITHER_SHOWN]: 'show annotation carousel'
+                [IS_CAROUSEL_SHOWN]: 'show album navigation',
+                [IS_NAV_SHOWN]: 'show annotation carousel',
+                [IS_NEITHER_SHOWN]: 'show carousel and navigation'
             }
         },
         [CAROUSEL_PREVIOUS_BUTTON_KEY]: 'previous annotation',
         [CAROUSEL_NEXT_BUTTON_KEY]: 'next annotation',
-        [DOTS_SLIDE_BUTTON_KEY]: 'annotation toggles',
+        [DOTS_SLIDE_BUTTON_KEY]: 'annotation categories',
         get lyricEar() {
             return {
                 [LEFT]: 'left speaker',

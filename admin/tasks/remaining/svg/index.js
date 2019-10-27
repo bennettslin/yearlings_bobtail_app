@@ -23,11 +23,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Roman numeral I on book in road past.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Favicon.`,
         workedHours: 0,
         neededHours: 1
