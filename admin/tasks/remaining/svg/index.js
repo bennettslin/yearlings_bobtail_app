@@ -18,11 +18,6 @@ export default [
         neededHours: 8
     },
     {
-        taskName: `Nav books. Connect nav buttons to logues with path.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Svg for don't repeat audio option.`,
         workedHours: 0,
         neededHours: 1

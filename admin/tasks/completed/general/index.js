@@ -4971,5 +4971,10 @@ export default [
         taskName: `Logic for epilogue button to be horizontally reversed.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Nav roads. Looked into connecting nav songs to logues, but too complicated.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

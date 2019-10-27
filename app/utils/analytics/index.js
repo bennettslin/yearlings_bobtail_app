@@ -1,10 +1,9 @@
-import isUndefined from 'lodash/isundefined'
-
 let isGaTrackerCreated = false
 
 const canGaSendEvent = () => {
 
-    if (isUndefined(ga)) {
+    // Not sure why isUndefined util doesn't work?
+    if (typeof ga === 'undefined') {
         return false
     }
 

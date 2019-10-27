@@ -1,4 +1,7 @@
 .NavRoad {
+    top: 85%;
+    height: 15%;
+
     opacity: 1;
 
     .DW__higherProcessor {
@@ -10,7 +13,7 @@
         opacity: 0;
     }
 
-    top: 85%;
-    height: 15%;
-    background-color: red;
+    background-color: #baa77f;
+
+    border-radius: $borderRadius__narrow;
 }
