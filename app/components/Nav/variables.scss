@@ -216,45 +216,10 @@ $tablet-single-book-offset-constant: -$width__gap__singleMedium * ($count__icons
 
 $tablet-single-book-offset: calc(#{$width__gap__singleMedium} * #{$screenWidth__full} + #{$tablet-single-book-offset-constant});
 
-/*************************************
- * MINI WIDTH: single, single shrink *
- *************************************/
-
-$mini-unit-constant:
-    $js__length__icon * $count__icons__single +
-    $js__length__iconLarge__mini +
-    $js__padding__navColumnChild * 8;
-
-$mini-small: calc((#{$screenWidth__full} - #{$mini-unit-constant}) / #{$js__count__gaps__single});
-$mini-large: calc((#{$screenWidth__full} - #{$mini-unit-constant}) * #{$width__gap__singleLarge});
-
-$mini-book-offset-constant: -$width__gap__singleMedium * ($count__icons__single * $js__length__icon + $js__length__iconLarge__mini + 10 * $js__padding__navColumnChild) + $js__length__icon + 2 * $js__padding__navColumnChild;
-
-$mini-book-offset: calc(#{$width__gap__singleMedium} * #{$screenWidth__full} + #{$mini-book-offset-constant});
-
-/**
- * Breakpoint to start shrinking icon is when unit width is 1px.
- */
-
-$mini-shrink-icon-constant:
-    $js__padding__navColumnChild * 8 +
-    $js__length__iconLarge__mini +
-    $js__count__gaps__single * 1px;
-
-$mini-shrink-icon: calc((#{$screenWidth__full} - #{$mini-shrink-icon-constant}) / #{$count__icons__single});
-
-$mini-shrink-book-offset-constant: $multiplier__gap__medium * 1px + $js__padding__navColumnChild * 2 - (8 * $js__padding__navColumnChild + $js__length__iconLarge__mini + $js__count__gaps__single) / $count__icons__single;
-
-$mini-shrink-book-offset: calc(#{$screenWidth__full} / #{$count__icons__single} + #{$mini-shrink-book-offset-constant});
-
 $width__navToggle:
     $js__length__iconLarge +
     $js__padding__navColumnChild * 2;
 
 $width__navToggle__tablet:
     $js__length__iconLarge__tablet +
-    $js__padding__navColumnChild * 2;
-
-$width__navToggle__mini:
-    $js__length__iconLarge__mini +
     $js__padding__navColumnChild * 2;

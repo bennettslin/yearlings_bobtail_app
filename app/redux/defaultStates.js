@@ -30,7 +30,7 @@ import { getBoolFromStorage } from 'utils/window'
 
 import {
     IS_ACCESS_ON,
-    IS_CAROUSEL_SHOWN,
+    // IS_CAROUSEL_SHOWN,
 
     SELECTED_ANNOTATION_INDEX,
     SELECTED_SONG_INDEX,
@@ -282,8 +282,10 @@ export const SLIDER_DEFAULTS = {
 
 export const TOGGLE_DEFAULTS = {
     isAutoScroll: true,
-    isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
-    isNavShown: false,
+    // isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
+    // isNavShown: false,
+    isCarouselShown: false,
+    isNavShown: true,
     isDotsSlideShown: false,
     isLyricExpanded: false,
     isScoreShown: false,

@@ -1,0 +1,16 @@
+.NavRoad {
+    opacity: 1;
+
+    .DW__higherProcessor {
+        transition: opacity $animationDuration__default;
+    }
+
+    .NavColumn__hidden
+    & {
+        opacity: 0;
+    }
+}
+
+.NavRoad__rect {
+    fill: red;
+}
