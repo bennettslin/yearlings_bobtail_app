@@ -1,8 +1,12 @@
-.ButtonIcon__navBook {
-    fill: #dd8;
+// .ButtonIcon__navBook {
+//     fill: #dd8;
+//     .Button__indexSelected & { fill: orange; }
+// }
 
-    .Button__indexSelected
-    & {
-        fill: orange;
-    }
+.ButtonIcon__navBook,
+.ButtonIcon__navSong {
+    .bookCover { fill: #507851; }
+    .bookPageLight { fill: #e8e7e3; }
+    .paperStackLight { fill: #b7b3a5; }
+    .bookmark { fill: #b3487f; }
 }

@@ -9,6 +9,7 @@ import {
     SNOWGLOBE_PAST
 } from '../../../constants/scene/things/cardboards'
 import { SNOWGLOBE__TETHERBALL } from '../../../constants/scene/things/panels'
+import { BOOK__SHARED } from '../../shared/paper'
 import {
     ROAD__SHARED,
     SNOWGLOBE__SHARED
@@ -25,7 +26,10 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
-            sharedStyle: ROAD__SHARED
+            sharedStyle: [
+                BOOK__SHARED,
+                ROAD__SHARED
+            ]
         }
     },
     [CARDBOARD]: {
