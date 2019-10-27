@@ -61,7 +61,7 @@ class AnnotationNavigation extends PureComponent {
                 // If not accessed on, do nothing and just turn access on.
                 if (this.props.isAccessOn) {
                     const direction = keyName === ARROW_UP ? -1 : 1
-                    this.dispatchAccessedWikiWormhole(direction)
+                    this.dispatchAccessedWikiWormhole({ direction })
                 }
                 break
             }

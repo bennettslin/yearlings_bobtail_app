@@ -31,10 +31,12 @@ class WikiWormholeDispatcher extends PureComponent {
         })
     }
 
-    dispatchAccessedWikiWormhole = (direction) => {
+    dispatchAccessedWikiWormhole = ({
+        selectedAnnotationIndex = this.props.selectedAnnotationIndex,
+        direction
+    } = {}) => {
         const {
                 selectedSongIndex,
-                selectedAnnotationIndex,
                 dotsBitNumber,
                 accessedWikiWormholeIndex: prevWikiWormholeIndex
             } = this.props,

@@ -4981,5 +4981,10 @@ export default [
         taskName: `Fix rewind and fast forward tooltips being cut off.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Fix wiki wormhole not being correctly dispatched.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
