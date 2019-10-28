@@ -88,6 +88,22 @@ const getConfig = ({
                     ]
                 },
                 {
+                    test: /\.(png|ico)$/,
+                    include: path.resolve(__dirname, './assets/favicon'),
+                    loader: 'file-loader',
+                    options: {
+                        name: './assets/favicon/[name].[ext]'
+                    }
+                },
+                {
+                    test: /\.ttf$/,
+                    include: path.resolve(__dirname, './assets/fonts'),
+                    loader: 'file-loader',
+                    options: {
+                        name: './assets/fonts/[name]-[hash].[ext]'
+                    }
+                },
+                {
                     test: /\.mp3$/,
                     include: path.resolve(__dirname, './assets/mp3s'),
                     loader: 'file-loader',
@@ -109,14 +125,6 @@ const getConfig = ({
                     loader: 'file-loader',
                     options: {
                         name: './assets/svgs/[name]-[hash].[ext]'
-                    }
-                },
-                {
-                    test: /\.ttf$/,
-                    include: path.resolve(__dirname, './assets/fonts'),
-                    loader: 'file-loader',
-                    options: {
-                        name: './assets/fonts/[name]-[hash].[ext]'
                     }
                 }
             ]

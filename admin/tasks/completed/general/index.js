@@ -4996,5 +4996,10 @@ export default [
         taskName: `Finalise banner UI. Consider logues and transitions between songs.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Add favicon.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -16,10 +16,5 @@ export default [
         taskName: `Svg for don't repeat audio option.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Favicon.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]
