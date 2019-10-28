@@ -2,12 +2,3 @@
 //     fill: #dd8;
 //     .Button__indexSelected & { fill: orange; }
 // }
-
-// TODO: Can this just use the shared book styling?
-.ButtonIcon__navBook,
-.ButtonIcon__navSong {
-    .bookCover { fill: #507851; }
-    .bookPageLight { fill: #e8e7e3; }
-    .paperStackLight { fill: #b7b3a5; }
-    .bookmark { fill: #b3487f; }
-}

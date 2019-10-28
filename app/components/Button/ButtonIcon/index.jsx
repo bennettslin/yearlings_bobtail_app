@@ -7,6 +7,8 @@ import InlineSvg from 'modules/InlineSvg'
 
 import BUTTON_ICONS_MAP from '../../../svg/buttons'
 
+import { getButtonIconClassNames } from './helper'
+
 import {
     ABOUT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
@@ -84,7 +86,12 @@ const ButtonIcon = ({
 
                     // Allow epilogue button to be horizontally reversed.
                     buttonName === NAV_SONG_BUTTON_KEY &&
-                        `ButtonIcon__${buttonName}__${buttonIdentifier}`
+                        `ButtonIcon__${buttonName}__${buttonIdentifier}`,
+
+                    getButtonIconClassNames({
+                        buttonName,
+                        buttonIdentifier
+                    })
                 )
             }}
         >
