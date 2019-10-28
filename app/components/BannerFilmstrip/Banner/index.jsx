@@ -99,7 +99,7 @@ class Banner extends PureComponent {
                         isSmallBannerText &&
                             'Cursor__smallText',
                         'dropShadow',
-                        'textShadow__banner',
+                        'textShadow__light',
                         'abF',
                         'ovH',
                         'Rancho'

@@ -18,7 +18,7 @@ const sliderTimePropTypes = {
             isSpent ?
                 'SliderTime__spent' :
                 'SliderTime__remain',
-            'textShadow__banner'
+            'textShadow__light'
         )}>
             {time}
         </div>
