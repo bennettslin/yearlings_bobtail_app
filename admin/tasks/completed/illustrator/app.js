@@ -48,5 +48,10 @@ export default [
         taskName: `Roman numeral I on book in road past.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Svg for don't repeat audio option.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -11,10 +11,5 @@ export default [
         taskName: `dot icons, shapes, and dots slide button, including wormhole.`,
         workedHours: 0,
         neededHours: 8
-    },
-    {
-        taskName: `Svg for don't repeat audio option.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]
