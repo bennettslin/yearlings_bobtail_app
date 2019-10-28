@@ -1,3 +1,9 @@
 .ButtonIcon__carouselNav {
     fill: #aed;
 }
+
+.ButtonIcon__carouselNav {
+    .cardBack { fill: $bgColour__annotation__dark; }
+    .cardFront { fill: $bgColour__annotation; }
+    .annotation { fill: $bgColour__annotationCard; }
+}

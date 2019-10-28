@@ -1,3 +1,10 @@
 .ButtonIcon__tips {
-    fill: #dbb;
+    .mountDark { fill: #64aecc; }
+    .mountLight { fill: #70c4e6; }
+    .groove { fill: #325766; }
+    .switch { fill: #5798b3; }
+    .contact { fill: #6a757d; }
+    .screw { fill: #93a3ad; }
+    .bulbOff { fill: rgba(225, 225, 255, 0.7); }
+    .bulbOn { fill: #ffc; }
 }

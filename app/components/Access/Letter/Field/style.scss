@@ -1,18 +1,6 @@
 .AccessField {
     filter: $dropShadow__accessLetter;
-}
-
-.key {
-    .AccessField
-    & {
-        fill: #ffffe6;
-    }
-}
-
-.keyEdgeLine {
-    .AccessField
-    & {
-        stroke: rgba(100, 100, 100, 0.7);
-        stroke-width: 0.5px;
-    }
+    .keyFront { fill: #ffffe6; }
+    .keyBottom { fill: #ccccb7; }
+    .keySide { fill: #e3e3cc; }
 }

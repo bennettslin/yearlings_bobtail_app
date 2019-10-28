@@ -1,6 +1,6 @@
 import carouselShown from 'assets/svgs/app/carouselNav/carouselShown'
 import navShown from 'assets/svgs/app/carouselNav/navShown'
-import tipsDisabled from 'assets/svgs/app/tips/tipsDisabled'
+import neitherShown from 'assets/svgs/app/carouselNav/neitherShown'
 
 import {
     IS_CAROUSEL_SHOWN,
@@ -11,7 +11,7 @@ import {
 const CAROUSEL_NAV_MAP = {
     [IS_CAROUSEL_SHOWN]: carouselShown,
     [IS_NAV_SHOWN]: navShown,
-    [IS_NEITHER_SHOWN]: tipsDisabled
+    [IS_NEITHER_SHOWN]: neitherShown
 }
 
 const getIcon = ({ buttonIdentifier }) => {

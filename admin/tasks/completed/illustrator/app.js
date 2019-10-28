@@ -38,5 +38,15 @@ export default [
         taskName: 'buttons',
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Svg for neither carousel nor nav button.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Roman numeral I on book in road past.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

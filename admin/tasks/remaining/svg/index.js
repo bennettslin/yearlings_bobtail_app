@@ -18,11 +18,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Svg for neither carousel nor nav button.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Favicon.`,
         workedHours: 0,
         neededHours: 1
