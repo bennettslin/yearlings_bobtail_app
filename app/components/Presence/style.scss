@@ -7,7 +7,8 @@
     }
 }
 
-.Presence__visible, .Presence__loaded {
+.Presence__visible,
+.Presence__loaded {
     opacity: 1;
 }
 
@@ -15,67 +16,44 @@
     font-size: 0.15em;
 }
 
-.Presence {
-    filter: drop-shadow( 0 0 1px rgba(0, 0, 0, .5));
-    stroke: #543;
-    stroke-width: 0.05%;
-}
-
 .Presence__noShadow {
     filter: none;
 }
 
+.Presence {
+    filter: drop-shadow( 0 0 1.5px rgba(0, 0, 0, 0.5));
+    stroke: rgba(50, 50, 50, 0.5);
+}
+
 [class$=Line] {
     fill: none;
-    stroke: rgba(100, 100, 100, 0.5);
 }
 
 [class$=CreaseLine] {
     stroke-width: 0.25px;
-    .Presence
-    & {
-    }
 }
 
 [class$=EdgeLine] {
     stroke-width: 0.5px;
-    .Presence
-    & {
-    }
 }
 
 [class$=FoldLine] {
     stroke-width: 0.75px;
-    .Presence
-    & {
-    }
 }
 
 [class$=BorderLine] {
     stroke-width: 1px;
-    .Presence
-    & {
-    }
 }
 
 [class$=OverlapLine] {
     stroke-width: 1px;
-    .Presence
-    & {
-    }
 }
 
 [class$=DisplayLine] {
     stroke-width: 1.5px;
-    .Presence
-    & {
-    }
 }
 
 [class$=LightLine] {
     stroke: rgba(255, 255, 255, 0.7);
-    .Presence
-    & {
-        stroke-width: 2px;
-    }
+    stroke-width: 2px;
 }
