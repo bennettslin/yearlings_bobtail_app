@@ -1,3 +1,5 @@
+@import "./Image/style";
+
 .Tips {
     display: flex;
 }
@@ -7,10 +9,6 @@
     float: left;
     margin-right: 10px;
 }
-
-// .Tips__textContainer {
-//     overflow: auto;
-// }
 
 .Tips__imageContainer {
     min-width: 200px;

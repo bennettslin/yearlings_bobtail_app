@@ -43,11 +43,6 @@ export default [
     },
 
     {
-        taskName: `Use spread instead of assign, uninstall assign. https://stackoverflow.com/questions/32925460/object-spread-vs-object-assign`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Animate tiles.`,
         workedHours: 0,
         neededHours: 3
@@ -73,12 +68,6 @@ export default [
 
     {
         taskName: `Know when not to show up or down access icons in lyric column, based on whether it's scrolled to the very top or bottom?`,
-        workedHours: 0,
-        neededHours: 1
-    },
-
-    {
-        taskName: `Enter access icon in annotation anchors can be positioned weird.`,
         workedHours: 0,
         neededHours: 1
     },
