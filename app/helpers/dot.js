@@ -3,7 +3,7 @@ import keys from 'lodash/keys'
 import pickBy from 'lodash/pickby'
 
 import { getObjectFromBitNumber } from './bit'
-import { ALL_DOT_KEYS } from '../constants/dots'
+import { ORDERED_DOT_KEYS } from '../constants/dots'
 
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
@@ -22,7 +22,7 @@ export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
 export const getDotKeysFromBitNumber = (bitNumber) => {
     return getObjectFromBitNumber({
-        keysArray: ALL_DOT_KEYS,
+        keysArray: ORDERED_DOT_KEYS,
         bitNumber
     })
 }

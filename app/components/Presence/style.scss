@@ -22,11 +22,11 @@
 
 .Presence {
     filter: drop-shadow( 0 0 1.5px rgba(0, 0, 0, 0.5));
-    stroke: rgba(50, 50, 50, 0.5);
 }
 
 [class$=Line] {
     fill: none;
+    stroke: rgba(50, 50, 50, 0.5);
 }
 
 [class$=CreaseLine] {

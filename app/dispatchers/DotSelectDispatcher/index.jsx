@@ -8,7 +8,7 @@ import { updateDotsSlideStore } from 'flux/dotsSlide/action'
 import { setNewValueInBitNumber } from 'helpers/bit'
 import { getDotKeysFromBitNumber } from 'helpers/dot'
 
-import { ALL_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from 'constants/dots'
 
 class DotSelectDispatcher extends PureComponent {
 
@@ -37,11 +37,11 @@ class DotSelectDispatcher extends PureComponent {
         const
             { dotsBitNumber: prevBitNumber } = this.props,
             selectedDotKeys = getDotKeysFromBitNumber(prevBitNumber),
-            selectedDotKey = ALL_DOT_KEYS[selectedDotIndex],
+            selectedDotKey = ORDERED_DOT_KEYS[selectedDotIndex],
             isSelected = !selectedDotKeys[selectedDotKey],
 
             dotsBitNumber = setNewValueInBitNumber({
-                keysArray: ALL_DOT_KEYS,
+                keysArray: ORDERED_DOT_KEYS,
                 bitNumber: prevBitNumber,
                 key: selectedDotKey,
                 value: isSelected
@@ -64,11 +64,11 @@ class DotSelectDispatcher extends PureComponent {
         const
             { dotsSlideBitNumber: prevBitNumber } = this.props,
             activatedDotKeys = getDotKeysFromBitNumber(prevBitNumber),
-            activatedDotKey = ALL_DOT_KEYS[activatedDotIndex],
+            activatedDotKey = ORDERED_DOT_KEYS[activatedDotIndex],
             isActivated = !activatedDotKeys[activatedDotKey],
 
             dotsSlideBitNumber = setNewValueInBitNumber({
-                keysArray: ALL_DOT_KEYS,
+                keysArray: ORDERED_DOT_KEYS,
                 bitNumber: prevBitNumber,
                 key: activatedDotKey,
                 value: isActivated

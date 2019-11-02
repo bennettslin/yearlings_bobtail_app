@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import Texts from '../../../../../app/components/Texts'
 
-import { ALL_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from 'constants/dots'
 
 class AnnotationCard extends PureComponent {
 
@@ -24,7 +24,7 @@ class AnnotationCard extends PureComponent {
         return (
             <div className="TempGlobalAnnotationCard">
                 <div className="TempGlobalAnnotationCard__dotKeys">
-                    {ALL_DOT_KEYS.filter(dotKey => (
+                    {ORDERED_DOT_KEYS.filter(dotKey => (
                         dotKeys[dotKey]
                     )).join(', ')}
                 </div>

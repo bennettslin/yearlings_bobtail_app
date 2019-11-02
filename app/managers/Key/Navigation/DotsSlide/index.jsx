@@ -14,7 +14,7 @@ import {
     ARROW_DOWN,
     ENTER
 } from 'constants/access'
-import { ALL_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from 'constants/dots'
 
 class DotsSlideNavigation extends PureComponent {
 
@@ -38,7 +38,7 @@ class DotsSlideNavigation extends PureComponent {
         const { isAccessOn } = this.props
 
         if (isAccessOn) {
-            const dotKeysCount = ALL_DOT_KEYS.length
+            const dotKeysCount = ORDERED_DOT_KEYS.length
             let { accessedDotIndex } = this.props
 
             switch (keyName) {

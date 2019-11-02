@@ -5,7 +5,7 @@ import cx from 'classnames'
 import Dot from '../../Dot'
 import Underline from '../Underline'
 
-import { ALL_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from 'constants/dots'
 
 const propTypes = {
     // From parent.
@@ -32,7 +32,7 @@ const AnchorDot = ({
                 }}
             />
         )}
-        {ALL_DOT_KEYS.map(dotKey => stanzaDotKeys[dotKey] && (
+        {ORDERED_DOT_KEYS.map(dotKey => stanzaDotKeys[dotKey] && (
             <Dot
                 {...{
                     key: dotKey,

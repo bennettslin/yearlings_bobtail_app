@@ -10,7 +10,7 @@ import {
 } from 'helpers/bit'
 
 import {
-    ALL_DOT_KEYS,
+    ORDERED_DOT_KEYS,
     INITIAL_DOTS_BIT_NUMBER
 } from 'constants/dots'
 import {
@@ -100,7 +100,7 @@ const _getValidatedDotsBitNumber = () => {
     const
         parsedBitNumber = parseInt(getWindowStorage()[DOTS_BIT_NUMBER]),
         valueIsNumber = isFinite(parsedBitNumber),
-        maxBitNumber = getTwoToThePowerOfN(ALL_DOT_KEYS.length),
+        maxBitNumber = getTwoToThePowerOfN(ORDERED_DOT_KEYS.length),
         isValid = valueIsNumber && parsedBitNumber < maxBitNumber
 
     if (isValid) {
@@ -122,7 +122,7 @@ export const getEmptyDotsStore = () => {
     // Get true-false object from bit number.
     const dotsSlideBitNumber = 0,
         dotsObject = getObjectFromBitNumber({
-            keysArray: ALL_DOT_KEYS,
+            keysArray: ORDERED_DOT_KEYS,
             bitNumber: dotsSlideBitNumber
         })
 
@@ -138,7 +138,7 @@ export const getDotsFromStorage = () => {
         // Get true-false object from bit number.
         dotsBitNumber = validatedValue,
         dotsObject = getObjectFromBitNumber({
-            keysArray: ALL_DOT_KEYS,
+            keysArray: ORDERED_DOT_KEYS,
             bitNumber: dotsBitNumber
         })
 

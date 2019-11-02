@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { ALL_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from 'constants/dots'
 
 import SequenceDot from './SequenceDot'
 
@@ -30,7 +30,7 @@ const dotBlockPropTypes = {
             !inAnnotationCard && 'gradientMask__dotSequence',
             inTextAnchor && 'DotSequence__inTextAnchor'
         )}>
-            {ALL_DOT_KEYS.map(dotKey => {
+            {ORDERED_DOT_KEYS.map(dotKey => {
 
                 // Go through all dot keys in array to ensure correct order.
                 return dotKeys[dotKey] && (
