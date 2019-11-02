@@ -6,13 +6,11 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 3.25,
+    BASELINE_TIME = 3.7,
     FACE_REVISION_TIME = 0.5,
     HAIR_TIME = 0.5,
-    FEET_TIME = 0.2,
-    LEGS_TIME = 0.25,
-    TRUNK_TIME = 0.45,
-    HANDS_TIME = 0.1,
+    TRUNK_TIME = 0.4,
+    HANDS_TIME = 0.15,
     HEAD_TIME = 0.25,
     FACE_TIME = 0.5,
     COMPOSITE_TIME = 0.25,
@@ -22,8 +20,6 @@ const
         BASELINE_TIME +
         FACE_REVISION_TIME +
         HAIR_TIME +
-        FEET_TIME +
-        LEGS_TIME +
         TRUNK_TIME +
         HANDS_TIME +
         HEAD_TIME +
@@ -69,8 +65,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 {
                     faceRevision,
                     hair,
-                    feet,
-                    legs,
                     trunk,
                     hands,
                     head,
@@ -85,8 +79,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 character,
                 faceRevision,
                 hair,
-                feet,
-                legs,
                 trunk,
                 hands,
                 head,
@@ -122,8 +114,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 sceneIndex,
                 faceRevision,
                 hair,
-                feet,
-                legs,
                 trunk,
                 hands,
                 head,
@@ -145,12 +135,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!hair) {
                 workedHours += HAIR_TIME
             }
-            if (!feet) {
-                workedHours += FEET_TIME
-            }
-            if (!legs) {
-                workedHours += LEGS_TIME
-            }
             if (!trunk) {
                 workedHours += TRUNK_TIME
             }
@@ -168,7 +152,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             }
 
             // const doneForNow = workedHours >= 4.25
-            const doneForNow = !legs
+            const doneForNow = !trunk
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects

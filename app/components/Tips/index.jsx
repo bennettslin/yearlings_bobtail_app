@@ -7,6 +7,7 @@ import cx from 'classnames'
 
 import TipsToggle from './Toggle'
 import Texts from '../Texts'
+import TipImage from './Image'
 
 import { getSongTip } from './helper'
 
@@ -25,7 +26,6 @@ class Tips extends PureComponent {
 
     render() {
         const { lyricSongIndex } = this.props,
-
             tipText = getSongTip(lyricSongIndex)
 
         return (
@@ -46,7 +46,7 @@ class Tips extends PureComponent {
                 </div>
 
                 <div className="Tips__imageContainer">
-                    {/* TODO: Put a dynamic svg in here. */}
+                    <TipImage {...{ songIndex: lyricSongIndex }} />
                 </div>
             </div>
         )

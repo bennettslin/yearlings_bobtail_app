@@ -163,7 +163,8 @@ const propTypes = {
                         <div
                             {...{
                                 className: cx(
-                                    'UnitCard__tabText'
+                                    'UnitCard__tabText',
+                                    'Neuton'
                                 )
                             }}
                         >
