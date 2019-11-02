@@ -1,24 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-// import cx from 'classnames'
+import audioPlay from 'assets/svgs/app/audio/audioPlay'
 
-const WormholeIcon = ({
-    className
-}) => (
-    <circle
-        {...{
-            className,
-            cx: 50,
-            cy: 50,
-            r: 50
-        }}
-    />
-)
+const getIcon = () => audioPlay
 
-const propTypes = {
-    className: PropTypes.string
-}
-
-WormholeIcon.propTypes = propTypes
-
-export default WormholeIcon
+export default getIcon

@@ -25,18 +25,20 @@ const dotPropTypes = {
 
         ...other
     }) => (
-        <Dot {...other}
-            className={cx(
-                'SequenceDot',
-
-                // "Child dot sequence letter."
-                `ChQ${dotKey[0]}`,
-
-                inTextAnchor && 'SequenceDot__textAnchor',
-                inAnnotationCard && 'SequenceDot__annotationCard'
-            )}
+        <Dot
+            isSequenceDot
             {...{
-                dotKey
+                className: cx(
+                    'SequenceDot',
+
+                    // "Child dot sequence letter."
+                    `ChQ${dotKey[0]}`,
+
+                    inTextAnchor && 'SequenceDot__textAnchor',
+                    inAnnotationCard && 'SequenceDot__annotationCard'
+                ),
+                dotKey,
+                ...other
             }}
         />
     )

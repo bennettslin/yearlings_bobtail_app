@@ -12,10 +12,11 @@ const propTypes = {
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isDeselected: PropTypes.bool,
+    isSequenceDot: PropTypes.bool,
     dotKey: PropTypes.string.isRequired
 }
 
-const DotField = ({
+const Dot = ({
     className,
 
     isAccessed,
@@ -25,6 +26,8 @@ const DotField = ({
 
     // Applies to slide dots.
     isDeselected,
+
+    isSequenceDot,
 
     dotKey
 
@@ -36,18 +39,19 @@ const DotField = ({
             notAbsoluteFullContainer
             {...{
                 className: cx(
-                    className,
+                    'Dot',
+                    `Dot__${dotKey}`,
 
-                    'DotField',
-
-                    `DotField__${dotKey}`,
+                    !isSequenceDot && 'dropShadow',
 
                     // Only used by DotsSlideSelect.
-                    isDeselected && `DotField__deselected`,
+                    isDeselected && `Dot__deselected`,
 
                     // TODO: These currently don't do anything.
-                    isAccessed && `DotField__accessed`,
-                    isSelected && `DotField__selected`
+                    isAccessed && `Dot__accessed`,
+                    isSelected && `Dot__selected`,
+
+                    className
                 )
             }}
         >
@@ -56,6 +60,6 @@ const DotField = ({
     )
 }
 
-DotField.propTypes = propTypes
+Dot.propTypes = propTypes
 
-export default memo(DotField)
+export default memo(Dot)
