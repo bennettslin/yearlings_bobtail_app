@@ -5,12 +5,8 @@ import albumScenes from '../../../scenes'
 import { ACTOR } from 'constants/scene'
 
 const
-    FEET_TIME = 0.2,
-    LEGS_TIME = 0.25,
     // The time spent thus far per drawing.
-    BASELINE_TIME = 3.25
-        + FEET_TIME
-        + LEGS_TIME,
+    BASELINE_TIME = 3.7,
     FACE_REVISION_TIME = 0.5,
     HAIR_TIME = 0.5,
     TRUNK_TIME = 0.4,
