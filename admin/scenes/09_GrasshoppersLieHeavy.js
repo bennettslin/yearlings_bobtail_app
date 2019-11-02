@@ -248,7 +248,6 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        legs: true,
                         trunk: true,
                         hands: true,
                         head: true,
