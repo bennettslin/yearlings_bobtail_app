@@ -1,31 +1,61 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import DotField from './Field'
+import InlineSvg from 'modules/InlineSvg'
+
+import { getDotIcon } from '../../svg/dots'
 
 const propTypes = {
-        // From parent.
-        className: PropTypes.string
-    },
+    // From parent.
+    className: PropTypes.string,
+    isAccessed: PropTypes.bool,
+    isSelected: PropTypes.bool,
+    isDeselected: PropTypes.bool,
+    dotKey: PropTypes.string.isRequired
+}
 
-    Dot = ({
-        className,
-        ...other
-    }) => {
-        console.error('className', className)
-        return (
-            <div
-                className={cx(
-                    'Dot',
-                    className
-                )}
-            >
-                <DotField {...other} />
-            </div>
-        )
-    }
+const DotField = ({
+    className,
 
-Dot.propTypes = propTypes
+    isAccessed,
 
-export default Dot
+    // Applies to selectable dots.
+    isSelected,
+
+    // Applies to slide dots.
+    isDeselected,
+
+    dotKey
+
+}) => {
+    const dotIconSvg = getDotIcon(dotKey)
+
+    return (
+        <InlineSvg
+            notAbsoluteFullContainer
+            {...{
+                className: cx(
+                    className,
+
+                    'DotField',
+
+                    `DotField__${dotKey}`,
+
+                    // Only used by DotsSlideSelect.
+                    isDeselected && `DotField__deselected`,
+
+                    // TODO: These currently don't do anything.
+                    isAccessed && `DotField__accessed`,
+                    isSelected && `DotField__selected`
+                )
+            }}
+        >
+            {dotIconSvg}
+        </InlineSvg>
+    )
+}
+
+DotField.propTypes = propTypes
+
+export default memo(DotField)

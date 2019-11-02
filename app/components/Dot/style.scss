@@ -1,5 +1,9 @@
-@import "./Field/style";
+.DotField {
+    // TODO: Better way to override the verse line styling?
+    text-indent: 0;
 
-.Dot {
-    position: relative;
+    .TW__sliderMoving
+    & {
+        fill: $bgColour__dot__deselected;
+    }
 }
