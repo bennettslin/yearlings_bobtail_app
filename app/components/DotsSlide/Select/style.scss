@@ -68,11 +68,3 @@ $length__dotsSlideSelect__tablet:
         opacity: 1;
     }
 }
-
-// TODO: Deselected styling will strategically gray out fills.
-.DotField__dotsSlide__deselected {
-    fill: $bgColour__dot__deselected;
-}
-.DotIcon__dotsSlide__deselected {
-    fill: $bgColour__dot__deselected;
-}

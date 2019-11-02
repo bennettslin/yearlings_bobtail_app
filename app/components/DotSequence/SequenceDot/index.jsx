@@ -26,7 +26,6 @@ const dotPropTypes = {
         ...other
     }) => (
         <Dot {...other}
-            showFieldOnly
             className={cx(
                 'SequenceDot',
 

@@ -2,38 +2,27 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Svg from 'modules/Svg'
-
 import DotField from './Field'
-import DotIcon from './Icon'
 
 const propTypes = {
         // From parent.
-        showFieldOnly: PropTypes.bool,
         className: PropTypes.string
     },
 
     Dot = ({
-
-        showFieldOnly,
         className,
-
         ...other
     }) => {
-
+        console.error('className', className)
         return (
-            <Svg
+            <div
                 className={cx(
                     'Dot',
                     className
                 )}
             >
                 <DotField {...other} />
-
-                {!showFieldOnly && (
-                    <DotIcon {...other} />
-                )}
-            </Svg>
+            </div>
         )
     }
 

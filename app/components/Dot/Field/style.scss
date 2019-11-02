@@ -1,34 +1,9 @@
-// TODO: All of these are placeholder styles.
-
 .DotField {
+    // TODO: Better way to override the verse line styling?
+    text-indent: 0;
 
     .TW__sliderMoving
     & {
         fill: $bgColour__dot__deselected;
     }
-}
-
-.DotField__wormhole {
-    fill: $bgColour__dot__wormhole;
-}
-.DotField__observation {
-    fill: $bgColour__dot__observation;
-}
-.DotField__backstory {
-    fill: $bgColour__dot__backstory;
-}
-.DotField__reference {
-    fill: $bgColour__dot__reference;
-}
-.DotField__pun {
-    fill: $bgColour__dot__pun;
-}
-.DotField__narrative {
-    fill: $bgColour__dot__narrative;
-}
-.DotField__songwriting {
-    fill: $bgColour__dot__songwriting;
-}
-.DotField__afterword {
-    fill: $bgColour__dot__afterword;
 }
