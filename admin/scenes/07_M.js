@@ -42,6 +42,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -56,6 +57,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -70,6 +72,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -79,6 +82,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -94,6 +98,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -102,6 +107,7 @@ export default [
                 },
                 [JACOB]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -110,6 +116,7 @@ export default [
                 },
                 [MARA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -118,6 +125,7 @@ export default [
                 },
                 [ANA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -127,6 +135,7 @@ export default [
                 [TOMER]: {
                     shane: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -142,6 +151,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -150,6 +160,7 @@ export default [
                 },
                 [JACOB]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -158,6 +169,7 @@ export default [
                 },
                 [MARA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -166,6 +178,7 @@ export default [
                 },
                 [ANA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -180,6 +193,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -191,6 +205,7 @@ export default [
                         faceRevision: true,
                         hair: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -206,6 +221,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -217,6 +233,7 @@ export default [
                         faceRevision: true,
                         hair: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -228,6 +245,7 @@ export default [
                     maskedUsher: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -243,6 +261,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -252,6 +271,7 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,

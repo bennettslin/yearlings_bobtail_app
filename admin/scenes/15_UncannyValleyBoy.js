@@ -40,6 +40,7 @@ export default [
                 [MIRIAM]: {
                     hair: true,
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -48,6 +49,7 @@ export default [
                 },
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -56,6 +58,7 @@ export default [
                 },
                 [FATHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -65,6 +68,7 @@ export default [
                 [ESTHER]: {
                     youngSita: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -74,6 +78,7 @@ export default [
                 },
                 [MOTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -88,6 +93,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -96,6 +102,7 @@ export default [
                 },
                 [FATHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -104,6 +111,7 @@ export default [
                 },
                 [SASHA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -112,6 +120,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -126,6 +135,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -134,6 +144,7 @@ export default [
                 },
                 [FATHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -142,6 +153,7 @@ export default [
                 },
                 [MOTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -151,6 +163,7 @@ export default [
                 [MIRIAM]: {
                     hair: true,
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -160,6 +173,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -175,6 +189,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -184,6 +199,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -193,6 +209,7 @@ export default [
                 },
                 [MOTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -201,6 +218,7 @@ export default [
                 },
                 [FATHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -209,6 +227,7 @@ export default [
                 },
                 [KHARI]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -219,6 +238,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -235,6 +255,7 @@ export default [
                 [MIRIAM]: {
                     hair: true,
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -243,6 +264,7 @@ export default [
                 },
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -251,6 +273,7 @@ export default [
                 },
                 [FATHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -260,6 +283,7 @@ export default [
                 [ESTHER]: {
                     youngSita: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -269,6 +293,7 @@ export default [
                 },
                 [MOTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

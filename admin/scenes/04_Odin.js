@@ -20,6 +20,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -34,6 +35,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -48,6 +50,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -62,6 +65,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -76,6 +80,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -90,6 +95,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -105,6 +111,7 @@ export default [
                 [SASHA]: {
                     mermaid: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -114,6 +121,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -128,6 +136,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

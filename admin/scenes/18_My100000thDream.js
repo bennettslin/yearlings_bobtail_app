@@ -27,6 +27,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -37,6 +38,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -52,6 +54,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -62,6 +65,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -72,6 +76,7 @@ export default [
                 [CATHERINE]: {
                     gopi: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -82,6 +87,7 @@ export default [
                 [MARA]: {
                     gopi: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -93,6 +99,7 @@ export default [
                     gopi: {
                         hair: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -108,6 +115,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -118,6 +126,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -133,6 +142,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -143,6 +153,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -158,6 +169,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -168,6 +180,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -178,6 +191,7 @@ export default [
                 [AMY]: {
                     doctor: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,

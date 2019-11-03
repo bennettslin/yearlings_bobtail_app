@@ -33,6 +33,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -41,6 +42,7 @@ export default [
                 },
                 [KHARI]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -51,6 +53,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -66,6 +69,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -75,6 +79,7 @@ export default [
                 [MIRIAM]: {
                     hair: true,
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -83,6 +88,7 @@ export default [
                 },
                 [TRISTAN]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -92,6 +98,7 @@ export default [
                 [NESTOR]: {
                     faceRevision: true,
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -106,6 +113,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -120,6 +128,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -128,6 +137,7 @@ export default [
                 },
                 [KHARI]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -138,6 +148,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -154,6 +165,7 @@ export default [
                 [KHARI]: {
                     reflection: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -165,6 +177,7 @@ export default [
                     reflection: {
                         faceRevision: true,
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -180,6 +193,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -189,6 +203,7 @@ export default [
                 [AMY]: {
                     protester: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -199,6 +214,7 @@ export default [
                 [STEPHANIE]: {
                     protester: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -209,6 +225,7 @@ export default [
                 [WADE]: {
                     protester: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,

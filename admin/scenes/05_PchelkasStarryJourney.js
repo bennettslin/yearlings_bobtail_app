@@ -40,6 +40,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -48,6 +49,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -62,6 +64,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -76,6 +79,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -90,6 +94,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -104,6 +109,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -112,6 +118,7 @@ export default [
                 },
                 [BRAD]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -120,6 +127,7 @@ export default [
                 },
                 [ANDREW]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -134,6 +142,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -142,6 +151,7 @@ export default [
                 },
                 [BRAD]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -150,6 +160,7 @@ export default [
                 },
                 [ANDREW]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -159,6 +170,7 @@ export default [
                 [SASHA]: {
                     popularGirl: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -174,6 +186,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -182,6 +195,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -190,6 +204,7 @@ export default [
                 },
                 [MOTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -199,6 +214,7 @@ export default [
                 [TRISTAN]: {
                     principal: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,

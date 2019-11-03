@@ -17,6 +17,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -26,6 +27,7 @@ export default [
                 [BRAD]: {
                     jewishBoy: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -35,6 +37,7 @@ export default [
                 },
                 [SASHA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -49,6 +52,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -57,6 +61,7 @@ export default [
                 },
                 [BRAD]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -65,6 +70,7 @@ export default [
                 },
                 [SASHA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -73,6 +79,7 @@ export default [
                 },
                 [ANDREW]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

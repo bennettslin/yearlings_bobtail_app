@@ -26,6 +26,7 @@ export default [
             [ACTOR]: {
                 [ESTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -34,6 +35,7 @@ export default [
                 },
                 [ANITA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -42,6 +44,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -56,6 +59,7 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -64,6 +68,7 @@ export default [
                 },
                 [ESTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -72,6 +77,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -86,6 +92,7 @@ export default [
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -100,6 +107,7 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -108,6 +116,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

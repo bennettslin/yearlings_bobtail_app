@@ -55,6 +55,7 @@ export default [
                 },
                 [MOTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -63,6 +64,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -71,6 +73,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -85,6 +88,7 @@ export default [
             [ACTOR]: {
                 [FATHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -93,6 +97,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -101,6 +106,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -116,6 +122,7 @@ export default [
                 [HOWIE]: {
                     gangbanger: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -133,6 +140,7 @@ export default [
                 [TOMER]: {
                     gangbanger: {
                         trunkShape: true,
+                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -148,6 +156,7 @@ export default [
             [ACTOR]: {
                 [MOTHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -156,6 +165,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -170,6 +180,7 @@ export default [
             [ACTOR]: {
                 [CHRISTOPHER]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -178,6 +189,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
