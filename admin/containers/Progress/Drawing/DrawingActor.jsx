@@ -77,7 +77,7 @@ const DrawingActor = ({
                                                 )
                                             }}
                                         >
-                                            {workedHours || 0}
+                                            {workedHours.toFixed(1) || 0}
                                         </div>
                                         <div
                                             {...{

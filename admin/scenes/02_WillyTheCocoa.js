@@ -34,7 +34,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    trunk: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -48,7 +47,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    trunk: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -126,7 +124,6 @@ export default [
                     }
                 },
                 [WILLY]: {
-                    trunk: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -188,7 +185,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    trunk: true,
                     hands: true,
                     head: true,
                     face: true,

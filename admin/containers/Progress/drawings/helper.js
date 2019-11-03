@@ -151,7 +151,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += COMPOSITE_TIME
             }
 
-            // const doneForNow = workedHours >= 4.25
             const doneForNow = !trunk
 
             /**
