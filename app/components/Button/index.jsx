@@ -133,7 +133,10 @@ class Button extends Component {
                 {showTooltip && (
                     <ReactTooltip
                         {...{
-                            className: 'ReactTooltip',
+                            className: cx(
+                                'ReactTooltip',
+                                'dropShadow'
+                            ),
                             id: buttonName,
                             effect: 'solid',
                             delayShow: 750,

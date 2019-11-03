@@ -66,7 +66,12 @@ export default [
     },
     {
         taskName: `Border on favicon`,
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 0.5,
+        neededHours: 0.5
+    },
+    {
+        taskName: `Drop shadow on tooltips`,
+        workedHours: 0.5,
+        neededHours: 0.5
     }
 ]
