@@ -16,7 +16,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -25,7 +25,7 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -34,7 +34,7 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -48,7 +48,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -56,7 +56,7 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -64,7 +64,7 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -72,7 +72,7 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,

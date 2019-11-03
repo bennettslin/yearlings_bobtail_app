@@ -41,7 +41,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -55,7 +55,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -69,7 +69,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -78,7 +78,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -93,7 +93,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -101,7 +101,7 @@ export default [
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -109,7 +109,7 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -117,7 +117,7 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -126,7 +126,7 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -141,7 +141,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -149,7 +149,7 @@ export default [
                     instance: EATING
                 },
                 [JACOB]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -157,7 +157,7 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -165,7 +165,7 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -179,7 +179,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -190,7 +190,7 @@ export default [
                     maskedWoman: {
                         faceRevision: true,
                         hair: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -205,7 +205,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -216,7 +216,7 @@ export default [
                     maskedWoman: {
                         faceRevision: true,
                         hair: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -227,7 +227,7 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -242,7 +242,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -251,7 +251,7 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,

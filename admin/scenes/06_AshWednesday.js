@@ -25,7 +25,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -33,7 +33,7 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -47,7 +47,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -55,7 +55,7 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -69,7 +69,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -83,7 +83,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -92,7 +92,7 @@ export default [
                 },
                 [WADE]: {
                     catholic: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -102,7 +102,7 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -117,7 +117,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -125,7 +125,7 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,

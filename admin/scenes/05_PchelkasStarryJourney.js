@@ -39,7 +39,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -47,7 +47,7 @@ export default [
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -61,7 +61,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -75,7 +75,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -89,7 +89,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -103,7 +103,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -111,7 +111,7 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -119,7 +119,7 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -133,7 +133,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -141,7 +141,7 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -149,7 +149,7 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -158,7 +158,7 @@ export default [
                 },
                 [SASHA]: {
                     popularGirl: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -173,7 +173,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -181,7 +181,7 @@ export default [
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -189,7 +189,7 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -198,7 +198,7 @@ export default [
                 },
                 [TRISTAN]: {
                     principal: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,

@@ -29,7 +29,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -39,7 +39,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -54,7 +54,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -62,7 +62,7 @@ export default [
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -70,7 +70,7 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -79,7 +79,7 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -93,7 +93,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -103,7 +103,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -118,7 +118,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -127,7 +127,7 @@ export default [
                 },
                 [MIRIAM]: {
                     hair: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -135,7 +135,7 @@ export default [
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -143,7 +143,7 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -157,7 +157,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -167,7 +167,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,

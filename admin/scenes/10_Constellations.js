@@ -19,7 +19,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -27,7 +27,7 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -35,7 +35,7 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -43,7 +43,7 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -57,7 +57,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -65,7 +65,7 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -73,7 +73,7 @@ export default [
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -81,7 +81,7 @@ export default [
                     instance: WALGREENS
                 },
                 [TOMER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -95,7 +95,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -103,7 +103,7 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -111,7 +111,7 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -119,7 +119,7 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -133,7 +133,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -141,7 +141,7 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -149,7 +149,7 @@ export default [
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -157,7 +157,7 @@ export default [
                     instance: CEMETERY
                 },
                 [TOMER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -171,7 +171,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -179,7 +179,7 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -187,7 +187,7 @@ export default [
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -195,7 +195,7 @@ export default [
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -209,7 +209,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -217,7 +217,7 @@ export default [
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,

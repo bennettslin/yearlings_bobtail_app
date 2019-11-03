@@ -7,7 +7,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
+                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

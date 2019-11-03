@@ -9,7 +9,8 @@ const
     BASELINE_TIME = 3.7,
     FACE_REVISION_TIME = 0.5,
     HAIR_TIME = 0.5,
-    TRUNK_TIME = 0.4,
+    TRUNK_SHAPE_TIME = 0.2,
+    TRUNK_LINE_TIME = 0.2,
     HANDS_TIME = 0.15,
     HEAD_TIME = 0.25,
     FACE_TIME = 0.5,
@@ -20,7 +21,8 @@ const
         BASELINE_TIME +
         FACE_REVISION_TIME +
         HAIR_TIME +
-        TRUNK_TIME +
+        TRUNK_SHAPE_TIME +
+        TRUNK_LINE_TIME +
         HANDS_TIME +
         HEAD_TIME +
         FACE_TIME +
@@ -65,7 +67,8 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 {
                     faceRevision,
                     hair,
-                    trunk,
+                    trunkShape,
+                    trunkLine,
                     hands,
                     head,
                     face,
@@ -79,7 +82,8 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 character,
                 faceRevision,
                 hair,
-                trunk,
+                trunkShape,
+                trunkLine,
                 hands,
                 head,
                 face,
@@ -114,7 +118,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 sceneIndex,
                 faceRevision,
                 hair,
-                trunk,
+                trunkShape,
+                trunkLine,
                 hands,
                 head,
                 face,
@@ -135,8 +140,11 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!hair) {
                 workedHours += HAIR_TIME
             }
-            if (!trunk) {
-                workedHours += TRUNK_TIME
+            if (!trunkShape) {
+                workedHours += TRUNK_SHAPE_TIME
+            }
+            if (!trunkLine) {
+                workedHours += TRUNK_LINE_TIME
             }
             if (!hands) {
                 workedHours += HANDS_TIME
@@ -151,7 +159,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += COMPOSITE_TIME
             }
 
-            const doneForNow = !trunk
+            const doneForNow = !trunkShape
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects

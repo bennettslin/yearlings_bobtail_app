@@ -32,7 +32,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -40,7 +40,7 @@ export default [
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -50,7 +50,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -65,7 +65,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -74,7 +74,7 @@ export default [
                 },
                 [MIRIAM]: {
                     hair: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -82,7 +82,7 @@ export default [
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -91,7 +91,7 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -105,7 +105,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -119,7 +119,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -127,7 +127,7 @@ export default [
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -137,7 +137,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -153,7 +153,7 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -164,7 +164,7 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -179,7 +179,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -188,7 +188,7 @@ export default [
                 },
                 [AMY]: {
                     protester: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -198,7 +198,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     protester: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -208,7 +208,7 @@ export default [
                 },
                 [WADE]: {
                     protester: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,

@@ -37,7 +37,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -45,7 +45,7 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -54,7 +54,7 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -63,7 +63,7 @@ export default [
                     }
                 },
                 [WADE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -71,7 +71,7 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -79,7 +79,7 @@ export default [
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -93,7 +93,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -101,7 +101,7 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -109,7 +109,7 @@ export default [
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -117,7 +117,7 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -131,7 +131,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -139,7 +139,7 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -147,7 +147,7 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -155,7 +155,7 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -163,7 +163,7 @@ export default [
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -171,7 +171,7 @@ export default [
                     instance: MINGLING
                 },
                 [WADE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -185,7 +185,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -195,7 +195,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -211,7 +211,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -222,7 +222,7 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,

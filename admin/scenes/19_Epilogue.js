@@ -35,7 +35,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -44,7 +44,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -54,7 +54,7 @@ export default [
                 },
                 [LIZ]: {
                     faceRevision: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -63,7 +63,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [CHRISTOPHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -72,7 +72,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -81,7 +81,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -90,7 +90,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -107,7 +107,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -116,7 +116,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -125,7 +125,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -134,7 +134,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [TOMER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -143,7 +143,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -152,7 +152,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -161,7 +161,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -170,7 +170,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -179,7 +179,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -188,7 +188,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -197,7 +197,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [WADE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -206,7 +206,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -215,7 +215,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -224,7 +224,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -233,7 +233,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -242,7 +242,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -252,7 +252,7 @@ export default [
                 },
                 [MIRIAM]: {
                     hair: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -261,7 +261,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -271,7 +271,7 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,

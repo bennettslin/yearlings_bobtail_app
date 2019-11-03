@@ -54,7 +54,7 @@ export default [
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -62,7 +62,7 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -70,7 +70,7 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -84,7 +84,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -92,7 +92,7 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -100,7 +100,7 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -115,7 +115,7 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -132,7 +132,7 @@ export default [
                 },
                 [TOMER]: {
                     gangbanger: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -147,7 +147,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -155,7 +155,7 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -169,7 +169,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -177,7 +177,7 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,

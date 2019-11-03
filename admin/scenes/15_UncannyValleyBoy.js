@@ -39,7 +39,7 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hair: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -47,7 +47,7 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -55,7 +55,7 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -64,7 +64,7 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -73,7 +73,7 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -87,7 +87,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -95,7 +95,7 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -103,7 +103,7 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -111,7 +111,7 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -125,7 +125,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -133,7 +133,7 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -141,7 +141,7 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -150,7 +150,7 @@ export default [
                 },
                 [MIRIAM]: {
                     hair: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -159,7 +159,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -174,7 +174,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -183,7 +183,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -192,7 +192,7 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -200,7 +200,7 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -208,7 +208,7 @@ export default [
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -218,7 +218,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -234,7 +234,7 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hair: true,
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -242,7 +242,7 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -250,7 +250,7 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -259,7 +259,7 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        trunk: true,
+                        trunkShape: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -268,7 +268,7 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    trunk: true,
+                    trunkShape: true,
                     hands: true,
                     head: true,
                     face: true,
