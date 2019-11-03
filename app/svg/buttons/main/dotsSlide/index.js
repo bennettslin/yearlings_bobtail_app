@@ -1,5 +1,5 @@
-import audioPlay from 'assets/svgs/app/audio/audioPlay'
+import dotsSlide from 'assets/svgs/app/main/dotsSlide'
 
-const getIcon = () => audioPlay
+const getIcon = () => dotsSlide
 
 export default getIcon

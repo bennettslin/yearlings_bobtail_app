@@ -1,3 +1,5 @@
 .ButtonIcon__dotsSlide {
-    fill: #d9d;
+    .narrative { fill: $bgColour__dot__narrative; }
+    .backstory { fill: $bgColour__dot__backstory; }
+    .observation { fill: $bgColour__dot__observation; }
 }

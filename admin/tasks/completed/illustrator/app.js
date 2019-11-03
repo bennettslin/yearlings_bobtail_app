@@ -53,5 +53,20 @@ export default [
         taskName: `Svg for don't repeat audio option.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `dot icons, shapes, and dots slide button, including wormhole.`,
+        workedHours: 8,
+        neededHours: 8
+    },
+    {
+        taskName: `Redo lyric expand and collapse`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Border on favicon`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

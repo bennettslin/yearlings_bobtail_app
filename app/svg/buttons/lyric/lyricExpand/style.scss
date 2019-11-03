@@ -1,4 +1,7 @@
 .ButtonIcon__lyricExpand {
-    .paper { fill: #e8e4d9; };
     .arrow { fill: #ffb980 };
+    .line { fill: $bgColour__beforeSelected };
+    .stanzaVerse { fill: $bgColour__stanzaType__verse };
+    .stanzaPrechorus { fill: $bgColour__stanzaType__prechorus };
+    .stanzaChorus { fill: $bgColour__stanzaType__chorus };
 }

@@ -42,7 +42,9 @@ const Dot = ({
                     'Dot',
                     `Dot__${dotKey}`,
 
-                    !isSequenceDot && 'dropShadow',
+                    isSequenceDot ?
+                        'strokeShadow' :
+                        'dropShadow',
 
                     // Only used by DotsSlideSelect.
                     isDeselected && `Dot__deselected`,
