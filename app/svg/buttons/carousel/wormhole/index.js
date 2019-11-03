@@ -1,5 +1,5 @@
-import audioPlay from 'assets/svgs/app/audio/audioPlay'
+import wormhole from 'assets/svgs/app/dots/wormhole'
 
-const getIcon = () => audioPlay
+const getIcon = () => wormhole
 
 export default getIcon

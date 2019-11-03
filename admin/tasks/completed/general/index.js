@@ -5001,5 +5001,10 @@ export default [
         taskName: `Add favicon.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Choose button colours.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

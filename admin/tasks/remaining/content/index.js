@@ -10,6 +10,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: `Tip text.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
         taskName: `Wrap up unfinished annotations.`,
         workedHours: 0,
         neededHours: 2
