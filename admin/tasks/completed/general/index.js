@@ -5006,5 +5006,10 @@ export default [
         taskName: `Choose button colours.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `About section content.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

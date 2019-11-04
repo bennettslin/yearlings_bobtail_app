@@ -1,64 +1,72 @@
 // Section to show credits and anchor for band website.
 
-import React, { memo } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component, Fragment as ___ } from 'react'
 import cx from 'classnames'
-import { connect } from 'react-redux'
 
-const mapStateToProps = ({
-    appStore: {
-        isHigherProcessor,
-        isTouchSupported
-    },
-    viewportStore: { windowHeight }
-}) => ({
-    isHigherProcessor,
-    isTouchSupported,
-    windowHeight
-})
+import Anchor from '../Anchor'
 
-// eslint-disable-next-line no-empty-pattern
-const About = ({
-    // isHigherProcessor,
-    // isTouchSupported,
-    // windowHeight
+import {
+    BOBTAIL_YEARLINGS_EMAIL,
+    BOBTAIL_YEARLINGS_WEBSITE
+} from '../../constants/website'
 
-}) => {
+class About extends Component {
 
-    // const actualWindowHeight = window.innerHeight
+    handleAnchorClick = () => {
+        window.location.href = BOBTAIL_YEARLINGS_WEBSITE
+    }
 
-    return (
-        <div className={cx(
-            'About',
-            'fontSize__verse'
-        )}>
-            <p>
-                Album written, arranged, and performed by Bennett Lin.
-            </p>
-            <p>
-                Website annotated, illustrated, and coded by Bennett Lin.
-            </p>
-            <p>
-                If you have an offer or opportunity that might make my life more interesting, email me at TODO. Please understand, I can only respond to proposals that match my interests and my schedule.
-            </p>
-            {/* TODO: Eventually delete this, of course. */}
-            {/* <p>
-                isHigherProcessor: {isHigherProcessor ? 'true' : 'false'}
-            </p> */}
-            {/* <p>
-                isTouchSupported: {isTouchSupported ? 'true' : 'false'}
-            </p> */}
-            {/* <p>
-                {`windowHeight (stored, actual): ${windowHeight}, ${actualWindowHeight}`}
-            </p> */}
-        </div>
-    )
+    render() {
+        return (
+            <div
+                {...{
+                    className: cx(
+                        'About',
+                        'fontSize__verse'
+                    )
+                }}
+            >
+                <p>
+                    {'Album written, composed, and performed by Bennett Lin.'}
+                    <br />
+                    {'Website annotated, illustrated, and coded by Bennett Lin.'}
+                </p>
+                <p>
+                    {'If you have an offer or opportunity that I might be interested in, email me at '}
+                    <span
+                        {...{
+                            className: cx(
+                                'email',
+                                'Rancho'
+                            )
+                        }}
+                    >
+                        {BOBTAIL_YEARLINGS_EMAIL.split('').map(character => {
+                            return (
+                                <___>
+                                    <span {...{ className: 'displayNoneContainer' }}>
+                                        remove
+                                    </span>
+                                    <span>{character}</span>
+                                </___>
+                            )
+                        })}
+                    </span>
+                    {'. Please note, I\'ll only respond if it matches my interests and my schedule.'}
+                </p>
+                <p>
+                    {'Visit the '}
+                    <Anchor
+                        {...{
+                            text: 'Bobtail Yearlings website',
+                            handleAnchorClick: this.handleAnchorClick
+                        }}
+                    />
+                    {'.'}
+                </p>
+            </div>
+        )
+    }
 }
 
-About.propTypes = {
-    isHigherProcessor: PropTypes.bool.isRequired,
-    isTouchSupported: PropTypes.bool.isRequired,
-    windowHeight: PropTypes.number.isRequired
-}
-
-export default connect(mapStateToProps)(memo(About))
+export default About
