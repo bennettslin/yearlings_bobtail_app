@@ -159,7 +159,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += COMPOSITE_TIME
             }
 
-            const doneForNow = !trunkShape
+            const doneForNow = !trunkShape && !trunkLine,
+                halfDoneForNow = !trunkShape
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects
@@ -180,7 +181,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 sceneIndex,
                 workedHours,
                 instance,
-                doneForNow
+                doneForNow,
+                halfDoneForNow
             })
 
             if (!drawings.songTasks) {

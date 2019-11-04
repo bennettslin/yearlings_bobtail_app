@@ -18,7 +18,7 @@ $boxShadow__adminCharacter: inset 0 2px 5px rgba(75, 75, 100, 0.4);
     }
 
     .character-block {
-        background-color: #ffe;
+        background-color: #fffff0;
         padding: 2px 5px;
 
         box-shadow: $boxShadow__adminCharacter;
@@ -43,12 +43,14 @@ $boxShadow__adminCharacter: inset 0 2px 5px rgba(75, 75, 100, 0.4);
     }
 
     .role-row {
-        &.todo {
-            color: #d44;
+        color: #d66;
+
+        &.halfDone {
+            color: #cd2;
         }
 
         &.done {
-            color: #4d4;
+            color: #2d7;
         }
     }
 

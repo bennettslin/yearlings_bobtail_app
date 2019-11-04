@@ -97,8 +97,6 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -224,8 +222,6 @@ export default [
                 },
                 [WADE]: {
                     protester: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,

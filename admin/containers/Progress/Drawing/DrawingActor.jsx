@@ -35,7 +35,8 @@ const DrawingActor = ({
                                     sceneIndex,
                                     workedHours,
                                     instance,
-                                    doneForNow
+                                    doneForNow,
+                                    halfDoneForNow
                                 } = character
 
                                 return (
@@ -45,7 +46,8 @@ const DrawingActor = ({
                                             className: cx(
                                                 'role-row',
                                                 'flex-row',
-                                                doneForNow ? 'done' : 'todo'
+                                                doneForNow && 'done',
+                                                halfDoneForNow && 'halfDone'
                                             )
                                         }}
                                     >
