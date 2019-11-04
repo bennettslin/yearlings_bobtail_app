@@ -78,7 +78,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

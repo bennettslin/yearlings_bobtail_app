@@ -30,6 +30,6 @@ export const addDrawingTasksToSongTasks = (songTasksArray) => {
         delete songDrawingTasks.actorsNeededHours
     })
 
-    console.log('Worked actor hours:', workedHours)
-    console.log('Needed actor hours:', neededHours)
+    console.log('Worked actor hours:', workedHours.toFixed(2))
+    console.log('Needed actor hours:', neededHours.toFixed(2))
 }

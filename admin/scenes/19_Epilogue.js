@@ -184,7 +184,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
