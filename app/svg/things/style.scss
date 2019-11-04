@@ -7,3 +7,45 @@
 @import "./furnitures/style";
 @import "./panels/style";
 @import "./puppets/style";
+
+.Presence {
+    filter: drop-shadow( 0 0 1.5px rgba(0, 0, 0, 0.5));
+}
+
+.Presence,
+[class$=Line] {
+    stroke: rgba(50, 50, 50, 0.5);
+}
+
+[class$=Line] {
+    fill: none;
+}
+
+[class$=CreaseLine] {
+    stroke-width: 0.25px;
+}
+
+[class$=EdgeLine] {
+    stroke-width: 0.5px;
+}
+
+[class$=FoldLine] {
+    stroke-width: 0.75px;
+}
+
+[class$=BorderLine] {
+    stroke-width: 1px;
+}
+
+[class$=OverlapLine] {
+    stroke-width: 1px;
+}
+
+[class$=DisplayLine] {
+    stroke-width: 1.5px;
+}
+
+[class$=LightLine] {
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 2px;
+}
