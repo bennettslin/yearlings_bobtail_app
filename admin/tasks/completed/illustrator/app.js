@@ -73,5 +73,10 @@ export default [
         taskName: `Drop shadow on tooltips`,
         workedHours: 0.5,
         neededHours: 0.5
+    },
+    {
+        taskName: `Bennett avatars`,
+        workedHours: 10,
+        neededHours: 10
     }
 ]

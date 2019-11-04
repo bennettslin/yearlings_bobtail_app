@@ -1,6 +1,6 @@
-import tipsShown from 'assets/svgs/app/tips/tipsShown'
-import tipsHidden from 'assets/svgs/app/tips/tipsHidden'
-import tipsDisabled from 'assets/svgs/app/tips/tipsDisabled'
+import overviewShown from 'assets/svgs/app/overview/overviewShown'
+import overviewHidden from 'assets/svgs/app/overview/overviewHidden'
+import overviewDisabled from 'assets/svgs/app/overview/overviewDisabled'
 
 import {
     SHOWN,
@@ -8,14 +8,14 @@ import {
     DISABLED
 } from 'constants/options'
 
-const TIPS_MAP = {
-    [SHOWN]: tipsShown,
-    [HIDDEN]: tipsHidden,
-    [DISABLED]: tipsDisabled
+const OVERVIEW_MAP = {
+    [SHOWN]: overviewShown,
+    [HIDDEN]: overviewHidden,
+    [DISABLED]: overviewDisabled
 }
 
 const getIcon = ({ buttonIdentifier }) => {
-    return TIPS_MAP[buttonIdentifier]
+    return OVERVIEW_MAP[buttonIdentifier]
 }
 
 export default getIcon

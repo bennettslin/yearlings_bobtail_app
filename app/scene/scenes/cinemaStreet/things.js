@@ -15,6 +15,7 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import {
     ACOUSTIC_GUITAR__SHARED,
+    HEADPHONE__SHARED,
     MICROPHONE__SHARED
 } from '../../shared/instruments'
 import {
@@ -55,6 +56,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.45,
             sharedStyle: [
                 ACOUSTIC_GUITAR__SHARED,
+                HEADPHONE__SHARED,
                 MICROPHONE__SHARED,
                 BENNETT__SHARED,
                 ALL_PEOPLE__SHARED
