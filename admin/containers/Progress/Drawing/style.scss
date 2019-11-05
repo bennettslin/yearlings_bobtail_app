@@ -44,14 +44,12 @@ $boxShadow__adminCharacter: inset 0 2px 5px rgba(75, 75, 100, 0.4);
 
     .role-row {
         color: #d66;
-
-        &.halfDone {
-            color: #cd2;
-        }
-
-        &.done {
-            color: #2d7;
-        }
+    }
+    .halfDone {
+        color: #cd2;
+    }
+    .done {
+        color: #2d7;
     }
 
     .role-info {

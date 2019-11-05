@@ -11,6 +11,7 @@ const DrawingSection = ({
     // From controller.
     [ACTOR]: actors,
     actorsTodoCount,
+    actorsHalfTodoCount,
     actorsTotalCount
 
 }) => (
@@ -18,7 +19,7 @@ const DrawingSection = ({
         <h2>drawings</h2>
         <div className="actors-table">
             <div className="actors-count-row count-row">
-                actors: {actorsTotalCount - actorsTodoCount} / {actorsTotalCount}
+                actors:<span {...{ className: 'halfDone' }}> {actorsTotalCount - actorsHalfTodoCount}</span> / <span {...{ className: 'done' }}> {actorsTotalCount - actorsTodoCount}</span> / {actorsTotalCount}
             </div>
             {actors.map(actorObject => (
                 <DrawingActor {...actorObject}

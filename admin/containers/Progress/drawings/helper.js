@@ -102,14 +102,16 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
     // Turn actors object into array for easier frontend parsing.
     const actors = []
     let actorsTotalCount = 0,
-        actorsTodoCount = 0
+        actorsTodoCount = 0,
+        actorsHalfTodoCount = 0
 
     keys(drawings[ACTOR]).forEach(actor => {
         const roles = drawings[ACTOR][actor],
             rolesTotalCount = roles.length,
             characters = {}
 
-        let rolesTodoCount = 0
+        let rolesTodoCount = 0,
+            halfRolesTodoCount = 0
 
         roles.forEach(role => {
 
@@ -170,6 +172,9 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!doneForNow) {
                 rolesTodoCount++
             }
+            if (!halfDoneForNow) {
+                halfRolesTodoCount++
+            }
 
             // Initialise array for each character.
             if (!characters[character]) {
@@ -215,6 +220,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
         })
 
         actorsTodoCount += rolesTodoCount
+        actorsHalfTodoCount += halfRolesTodoCount
         actorsTotalCount += rolesTotalCount
 
         actors.push({
@@ -227,5 +233,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
 
     drawings[ACTOR] = actors
     drawings.actorsTodoCount = actorsTodoCount
+    drawings.actorsHalfTodoCount = actorsHalfTodoCount
     drawings.actorsTotalCount = actorsTotalCount
 }
