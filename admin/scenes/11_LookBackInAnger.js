@@ -66,7 +66,6 @@ export default [
                     }
                 },
                 [WADE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -185,7 +184,6 @@ export default [
                     instance: MINGLING
                 },
                 [WADE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

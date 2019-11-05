@@ -213,7 +213,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WADE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
