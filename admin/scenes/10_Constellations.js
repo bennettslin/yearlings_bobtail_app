@@ -46,7 +46,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -88,7 +87,6 @@ export default [
                     instance: WALGREENS
                 },
                 [TOMER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -130,7 +128,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -172,7 +169,6 @@ export default [
                     instance: CEMETERY
                 },
                 [TOMER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -214,7 +210,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
