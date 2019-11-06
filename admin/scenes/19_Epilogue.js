@@ -172,7 +172,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -288,7 +287,6 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

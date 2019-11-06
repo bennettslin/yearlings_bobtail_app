@@ -26,7 +26,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        trunkShape: true,
                         trunkLine: true,
                         hands: true,
                         head: true,
@@ -60,7 +59,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
