@@ -191,7 +191,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
