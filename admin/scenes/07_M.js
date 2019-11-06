@@ -134,7 +134,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,

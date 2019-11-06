@@ -144,7 +144,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TOMER]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

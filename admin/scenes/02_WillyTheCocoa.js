@@ -139,7 +139,6 @@ export default [
                 },
                 [TOMER]: {
                     gangbanger: {
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
