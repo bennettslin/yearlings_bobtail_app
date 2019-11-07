@@ -113,7 +113,6 @@ export default [
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

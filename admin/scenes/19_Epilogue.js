@@ -134,7 +134,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -235,7 +234,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

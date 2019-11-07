@@ -106,7 +106,6 @@ export default [
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -157,7 +156,6 @@ export default [
                     instance: EATING
                 },
                 [JACOB]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
