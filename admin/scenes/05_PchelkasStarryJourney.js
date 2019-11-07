@@ -117,7 +117,6 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -148,7 +147,6 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
