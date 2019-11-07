@@ -242,7 +242,6 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         faceRevision: true,
-                        trunkShape: true,
                         trunkLine: true,
                         hands: true,
                         head: true,
@@ -268,7 +267,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        trunkShape: true,
                         trunkLine: true,
                         hands: true,
                         head: true,
