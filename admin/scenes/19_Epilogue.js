@@ -124,7 +124,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

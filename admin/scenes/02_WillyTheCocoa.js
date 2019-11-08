@@ -87,7 +87,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
