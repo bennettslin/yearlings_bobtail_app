@@ -82,7 +82,6 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
