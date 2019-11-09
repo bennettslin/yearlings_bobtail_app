@@ -120,7 +120,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
