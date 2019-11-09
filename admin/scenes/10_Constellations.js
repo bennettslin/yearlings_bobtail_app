@@ -37,7 +37,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -76,7 +75,6 @@ export default [
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -115,7 +113,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -154,7 +151,6 @@ export default [
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -193,7 +189,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -223,7 +218,6 @@ export default [
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
