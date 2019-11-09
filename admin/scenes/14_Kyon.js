@@ -89,7 +89,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -116,7 +115,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -143,7 +141,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

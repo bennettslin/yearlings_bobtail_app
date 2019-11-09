@@ -269,7 +269,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

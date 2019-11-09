@@ -95,8 +95,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

@@ -218,7 +218,6 @@ export default [
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
