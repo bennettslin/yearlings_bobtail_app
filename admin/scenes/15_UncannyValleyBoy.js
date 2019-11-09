@@ -57,7 +57,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -100,7 +99,6 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -141,7 +139,6 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -214,7 +211,6 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -268,7 +264,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
