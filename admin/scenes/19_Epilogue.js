@@ -232,7 +232,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
