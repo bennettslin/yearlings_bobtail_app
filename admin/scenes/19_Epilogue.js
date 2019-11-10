@@ -35,8 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -45,7 +43,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
