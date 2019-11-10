@@ -23,7 +23,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -57,7 +56,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -81,7 +79,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
