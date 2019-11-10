@@ -227,6 +227,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             actor,
             characters,
             rolesTodoCount,
+            halfRolesTodoCount,
             rolesTotalCount
         })
     })

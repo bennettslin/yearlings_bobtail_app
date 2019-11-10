@@ -9,6 +9,7 @@ const DrawingActor = ({
     actor,
     characters,
     rolesTodoCount,
+    halfRolesTodoCount,
     rolesTotalCount
 
 }) => (
@@ -100,7 +101,7 @@ const DrawingActor = ({
             })}
         </div>
         <div className="roles-count-row count-row">
-            roles: {rolesTotalCount - rolesTodoCount} / {rolesTotalCount}
+            roles:<span {...{ className: 'halfDone' }}> {rolesTotalCount - halfRolesTodoCount}</span> / <span {...{ className: 'done' }}> {rolesTotalCount - rolesTodoCount}</span> / {rolesTotalCount}
         </div>
     </div>
 )
