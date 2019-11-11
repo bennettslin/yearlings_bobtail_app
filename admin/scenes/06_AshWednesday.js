@@ -69,7 +69,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -84,7 +83,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -117,7 +115,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

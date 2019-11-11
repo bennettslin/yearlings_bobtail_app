@@ -103,7 +103,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        trunkShape: true,
                         trunkLine: true,
                         hands: true,
                         head: true,
@@ -143,7 +142,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        trunkShape: true,
                         trunkLine: true,
                         hands: true,
                         head: true,
