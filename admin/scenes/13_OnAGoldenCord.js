@@ -154,8 +154,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -165,8 +163,6 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -176,8 +172,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
