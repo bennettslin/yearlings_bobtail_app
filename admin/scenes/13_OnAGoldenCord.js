@@ -114,8 +114,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
