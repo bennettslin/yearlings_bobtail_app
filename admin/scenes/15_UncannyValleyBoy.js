@@ -48,7 +48,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -89,7 +88,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -128,7 +126,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -179,7 +176,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -249,7 +245,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
