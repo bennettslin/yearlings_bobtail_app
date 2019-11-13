@@ -161,8 +161,6 @@ export default [
                 },
                 [SASHA]: {
                     popularGirl: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
