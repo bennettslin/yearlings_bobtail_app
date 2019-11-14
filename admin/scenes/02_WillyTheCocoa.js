@@ -72,7 +72,6 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -102,7 +101,6 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -178,7 +176,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

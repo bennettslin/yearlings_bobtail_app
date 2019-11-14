@@ -16,7 +16,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
