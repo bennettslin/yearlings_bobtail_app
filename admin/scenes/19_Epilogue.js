@@ -82,7 +82,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,

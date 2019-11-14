@@ -43,7 +43,6 @@ export default [
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
@@ -76,7 +75,6 @@ export default [
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
