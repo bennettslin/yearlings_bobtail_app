@@ -46,7 +46,6 @@ export default [
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
