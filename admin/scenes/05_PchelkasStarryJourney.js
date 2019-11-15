@@ -179,7 +179,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    trunkShape: true,
                     trunkLine: true,
                     hands: true,
                     head: true,
