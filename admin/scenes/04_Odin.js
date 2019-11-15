@@ -108,7 +108,6 @@ export default [
                     }
                 },
                 [PRETEEN_BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

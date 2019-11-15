@@ -111,7 +111,6 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
