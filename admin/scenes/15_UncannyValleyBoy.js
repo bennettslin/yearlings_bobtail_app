@@ -63,8 +63,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -73,8 +71,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -136,8 +132,6 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -190,8 +184,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -256,8 +248,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -266,8 +256,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
