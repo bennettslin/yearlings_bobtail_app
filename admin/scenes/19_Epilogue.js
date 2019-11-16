@@ -206,8 +206,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

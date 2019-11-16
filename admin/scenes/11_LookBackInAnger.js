@@ -78,8 +78,6 @@ export default [
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -165,8 +163,6 @@ export default [
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
