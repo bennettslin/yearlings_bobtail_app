@@ -59,7 +59,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

@@ -102,7 +102,6 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
