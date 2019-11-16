@@ -178,8 +178,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
