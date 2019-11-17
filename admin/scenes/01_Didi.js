@@ -56,8 +56,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -102,8 +100,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

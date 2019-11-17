@@ -70,8 +70,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
