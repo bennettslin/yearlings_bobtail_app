@@ -69,8 +69,6 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -98,8 +96,6 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -150,8 +146,6 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

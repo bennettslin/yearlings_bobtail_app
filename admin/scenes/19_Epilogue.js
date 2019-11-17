@@ -190,8 +190,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
