@@ -109,8 +109,6 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -156,8 +154,6 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

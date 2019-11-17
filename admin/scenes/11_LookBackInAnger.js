@@ -114,8 +114,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -145,8 +143,6 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
