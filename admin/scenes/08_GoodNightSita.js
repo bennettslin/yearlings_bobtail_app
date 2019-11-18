@@ -97,8 +97,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     actor: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
