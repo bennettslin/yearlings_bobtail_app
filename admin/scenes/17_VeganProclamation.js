@@ -113,8 +113,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -122,8 +120,6 @@ export default [
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -150,8 +146,6 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -197,8 +191,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     protester: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,

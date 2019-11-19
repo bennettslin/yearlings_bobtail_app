@@ -100,8 +100,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hair: true,
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
