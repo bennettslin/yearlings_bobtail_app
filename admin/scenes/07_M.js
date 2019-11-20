@@ -110,8 +110,6 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -155,8 +153,6 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

@@ -222,8 +222,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

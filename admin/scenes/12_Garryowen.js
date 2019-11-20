@@ -138,8 +138,6 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
