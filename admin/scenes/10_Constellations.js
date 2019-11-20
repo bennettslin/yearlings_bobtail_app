@@ -26,8 +26,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -62,8 +60,6 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -98,8 +94,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -134,8 +128,6 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -170,8 +162,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,

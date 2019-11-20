@@ -68,8 +68,6 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
