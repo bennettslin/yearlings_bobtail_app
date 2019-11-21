@@ -199,8 +199,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
