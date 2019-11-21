@@ -51,15 +51,15 @@ export default [
                     instance: EPILOGUE
                 },
                 [LIZ]: {
-                    faceRevision: true,
-                    trunkShape: true,
-                    trunkLine: true,
-                    hands: true,
-                    head: true,
-                    face: true,
-                    composite: true,
-                    realHeight: `4'9"`,
-                    instance: EPILOGUE
+                    sita: {
+                        faceRevision: true,
+                        hands: true,
+                        head: true,
+                        face: true,
+                        composite: true,
+                        realHeight: `4'9"`,
+                        instance: EPILOGUE
+                    }
                 },
                 [CHRISTOPHER]: {
                     hands: true,
