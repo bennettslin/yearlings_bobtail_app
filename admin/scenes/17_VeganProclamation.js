@@ -178,8 +178,6 @@ export default [
                 },
                 [AMY]: {
                     protester: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
