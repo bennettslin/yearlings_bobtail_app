@@ -99,8 +99,6 @@ export default [
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
