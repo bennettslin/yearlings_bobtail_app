@@ -6,11 +6,9 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 3.7,
+    BASELINE_TIME = 4.1,
     FACE_REVISION_TIME = 0.5,
     HAIR_TIME = 0.5,
-    TRUNK_SHAPE_TIME = 0.25,
-    TRUNK_LINE_TIME = 0.15,
     HANDS_TIME = 0.15,
     HEAD_TIME = 0.25,
     FACE_TIME = 0.5,
@@ -21,8 +19,6 @@ const
         BASELINE_TIME +
         FACE_REVISION_TIME +
         HAIR_TIME +
-        TRUNK_SHAPE_TIME +
-        TRUNK_LINE_TIME +
         HANDS_TIME +
         HEAD_TIME +
         FACE_TIME +
@@ -67,8 +63,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 {
                     faceRevision,
                     hair,
-                    trunkShape,
-                    trunkLine,
                     hands,
                     head,
                     face,
@@ -82,8 +76,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 character,
                 faceRevision,
                 hair,
-                trunkShape,
-                trunkLine,
                 hands,
                 head,
                 face,
@@ -120,8 +112,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 sceneIndex,
                 faceRevision,
                 hair,
-                trunkShape,
-                trunkLine,
                 hands,
                 head,
                 face,
@@ -142,12 +132,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!hair) {
                 workedHours += HAIR_TIME
             }
-            if (!trunkShape) {
-                workedHours += TRUNK_SHAPE_TIME
-            }
-            if (!trunkLine) {
-                workedHours += TRUNK_LINE_TIME
-            }
             if (!hands) {
                 workedHours += HANDS_TIME
             }
@@ -161,8 +145,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += COMPOSITE_TIME
             }
 
-            const doneForNow = !trunkShape && !trunkLine,
-                halfDoneForNow = !trunkShape
+            const doneForNow = !head,
+                halfDoneForNow = !head
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects
