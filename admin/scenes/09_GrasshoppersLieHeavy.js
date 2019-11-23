@@ -197,8 +197,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -208,8 +206,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -225,8 +221,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -237,8 +231,6 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -253,8 +245,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -264,8 +254,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -281,8 +269,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -293,8 +279,6 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -309,8 +293,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    trunkShape: true,
-                    trunkLine: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -320,8 +302,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -337,8 +317,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -349,8 +327,6 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        trunkShape: true,
-                        trunkLine: true,
                         hands: true,
                         head: true,
                         face: true,
