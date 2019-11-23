@@ -10,7 +10,7 @@ import {
     getSharedClassNames
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
-import { getMapForActorKey } from 'components/Presences/LayersActor/helper'
+import { getMapForActorKey } from 'svg/actors'
 import { getMapForPresenceType } from 'svg/things'
 
 import { ACTOR } from 'constants/scene'

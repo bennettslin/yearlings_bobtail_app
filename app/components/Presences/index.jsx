@@ -68,7 +68,7 @@ class Presences extends PureComponent {
                 >
                     <LayersThing {...rest} />
 
-                    {/* Each individual actor has its own layer. */}
+                    {/* Each individual actor has their own layer. */}
                     <LayersActor {...actors} />
                 </div>
             )

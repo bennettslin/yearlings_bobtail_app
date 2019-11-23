@@ -8,7 +8,7 @@ import ConfiguredPresenceSvg from 'modules/ConfiguredPresenceSvg'
 import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
 
 import { capitaliseForClassName } from 'helpers/format'
-import { getMapForActorKey } from '../Presences/LayersActor/helper'
+import { getMapForActorKey } from '../../svg/actors'
 import { getMapForPresenceType } from '../../svg/things'
 
 import { ACTOR } from 'constants/scene'

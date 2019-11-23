@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import Presence from '../../Presence'
+import { getInstanceKeysForActorKey } from '../../../svg/actors'
 import { getPresenceKeysForPresenceType } from '../../../svg/things'
-import { getInstanceKeysForActorKey } from '../LayersActor/helper'
 
 import { ACTOR } from 'constants/scene'
 
