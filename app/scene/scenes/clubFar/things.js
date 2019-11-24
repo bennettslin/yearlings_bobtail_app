@@ -1,7 +1,7 @@
 import {
     PANEL,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { CROWD_BACK } from '../../../constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from '../../../constants/scene/things/puppets'
 import { ODIN_GHOST__SHARED } from '../../shared/animals'

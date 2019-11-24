@@ -3,7 +3,7 @@ import {
     CARDBOARD,
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { SHORE_BUOY_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { BENNETT_ODIN_BUOY } from '../../../constants/scene/things/cardboards'
 import { YELLOW_TAPED_GRILL } from '../../../constants/scene/things/cutouts'

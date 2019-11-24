@@ -1,11 +1,11 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BUBBLE,
     DOOR,
     FIXTURE,
     PANEL,
     PUPPET
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_OPEN_KEY,

@@ -4,7 +4,7 @@ import {
     CUTOUT,
     DOOR,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BUBBLE_SMALL__WAITING,
     BUBBLE_MEDIUM__WAITING,

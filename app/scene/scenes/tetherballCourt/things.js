@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FIXTURE,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BUBBLE_SMALL__RIGHT,
     BUBBLE_MEDIUM__RIGHT,

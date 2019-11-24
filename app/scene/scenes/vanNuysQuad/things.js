@@ -2,7 +2,7 @@ import {
     BUBBLE,
     CARDBOARD,
     CUTOUT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     ESCAPE_POD_SKETCH,
     SKETCHBOOK__ESCAPE_POD

@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FIXTURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { JOHNNY_HORTON_ALBUM } from '../../../constants/scene/things/cardboards'
 import {
     MIRRORED_SINK,

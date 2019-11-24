@@ -2,7 +2,7 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,

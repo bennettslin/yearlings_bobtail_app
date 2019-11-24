@@ -1,7 +1,7 @@
 import {
     CARDBOARD,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     MARA_MEMENTO_POSTER,
     MARQUEE_FRAME__MARA_MEMENTO,

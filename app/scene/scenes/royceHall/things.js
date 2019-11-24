@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     UCLA_TREE__LEFT,
     UCLA_TREE__RIGHT

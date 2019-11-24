@@ -2,7 +2,7 @@ import {
     CUTOUT,
     FLAT,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     SIGNPOST,
     BANCROFT_SHRUB,

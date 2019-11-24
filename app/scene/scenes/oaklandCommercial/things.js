@@ -1,6 +1,6 @@
 import {
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,

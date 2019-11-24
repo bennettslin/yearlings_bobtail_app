@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { FOLIAGE_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { BERKELEY_LAMPPOST } from '../../../constants/scene/things/cutouts'
 import {

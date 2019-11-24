@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { CEMETERY_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { GRAVESTONE } from '../../../constants/scene/things/cutouts'
 import {

@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CARDBOARD,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { ROAD_PRESENT } from '../../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PRESENT,

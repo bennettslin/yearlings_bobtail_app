@@ -1,11 +1,11 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BACKDROP,
     BUBBLE,
     CUTOUT,
     FLAT,
     PANEL
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     LIZ_COUCH_THOUGHT_KEY,
     OAKLAND_HOUSES_KEY,

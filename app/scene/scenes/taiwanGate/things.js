@@ -3,7 +3,7 @@ import {
     CUTOUT,
     DOOR,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { BENNETT_ODIN_RICKSHAW } from '../../../constants/scene/things/cardboards'
 import { TAIWAN_TREE } from '../../../constants/scene/things/cutouts'
 import { IRON_GATE } from '../../../constants/scene/things/doors'

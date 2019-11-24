@@ -2,7 +2,7 @@ import {
     CUTOUT,
     FLAT,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { CAMPFIRE } from '../../../constants/scene/things/cutouts'
 import { FAMILY_HOUSE } from '../../../constants/scene/things/flats'
 import {

@@ -1,7 +1,7 @@
 import {
     BUBBLE,
     CUTOUT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { PHARMACY_CEL } from '../../../constants/scene/things/bubbles'
 import { PHARMACY_AISLE } from '../../../constants/scene/things/cutouts'
 

@@ -22,7 +22,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from 'constants/scene/things'
 
 const PRESENCE_TYPE_MAP = {
     [BACKDROP]: backdrops,

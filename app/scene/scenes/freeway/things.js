@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { VALLEY_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     SHOPPING_CART,

@@ -6,7 +6,7 @@ import {
 import {
     LEFT,
     RIGHT
-} from 'constants/scene'
+} from 'constants/scene/cubes'
 
 import { getHorizontalPlaneFractions } from 'helpers/cube'
 

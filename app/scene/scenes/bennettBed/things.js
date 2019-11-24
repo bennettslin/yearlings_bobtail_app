@@ -3,7 +3,7 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BLINDS_OUTSIDE__NEIGHBOUR,
     NEIGHBOUR_DOOR,

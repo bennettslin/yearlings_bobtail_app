@@ -1,5 +1,5 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BACKDROP,
     CARDBOARD,
     CUTOUT,
@@ -7,7 +7,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     TAIWAN_ROOM_KEY,
     TAIWAN_STAIRS_KEY,

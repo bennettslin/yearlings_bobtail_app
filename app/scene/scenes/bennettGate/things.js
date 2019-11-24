@@ -2,7 +2,7 @@ import {
     CARDBOARD,
     CUTOUT,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { CODE_BOX } from '../../../constants/scene/things/cardboards'
 import { APARTMENT_PLANT } from '../../../constants/scene/things/cutouts'
 import { BENNETT_GATE_FRONT } from '../../../constants/scene/things/doors'

@@ -1,7 +1,7 @@
 import {
     BACKDROP,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { MOUNTAIN_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { PAMPAS_FAR } from '../../../constants/scene/things/flats'
 

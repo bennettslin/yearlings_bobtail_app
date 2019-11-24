@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CARDBOARD,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { OCEAN_FLOOR_FAR } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_MAT,

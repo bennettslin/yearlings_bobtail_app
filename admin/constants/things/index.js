@@ -9,7 +9,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from 'constants/scene/things'
 
 export const THING_TYPES = [
     BACKDROP,

@@ -1,7 +1,7 @@
 import {
     BUBBLE,
     CARDBOARD
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BUBBLE_SMALL__CINEMA,
     BUBBLE_MEDIUM__CINEMA,

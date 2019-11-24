@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     STORAGE_BOXES,
     STORAGE_CHEST,

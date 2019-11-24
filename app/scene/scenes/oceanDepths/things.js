@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CARDBOARD,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { OCEAN_BOTTOM_FAR } from '../../../constants/scene/things/backdrops'
 import { BENNETT_ODIN_OCEAN_FLOOR } from '../../../constants/scene/things/cardboards'
 import {

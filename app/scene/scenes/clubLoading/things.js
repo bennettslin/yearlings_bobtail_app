@@ -1,7 +1,7 @@
 import {
     DOOR,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { CLUB_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
 import { DOOR__SHARED } from '../../shared/home'

@@ -13,7 +13,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene'
+} from 'constants/scene/things'
 
 export const getSvgMapForThingType = (presenceType) => {
     const presenceMap = getMapForPresenceType(presenceType)

@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CARDBOARD,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { SHORE_RICKSHAW_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_SHORE,

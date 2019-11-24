@@ -1,4 +1,4 @@
-import { CUTOUT } from '../../../constants/scene'
+import { CUTOUT } from '../../../constants/scene/things'
 import {
     CAVEMAN_BONES,
     MUSEUM_DISPLAY

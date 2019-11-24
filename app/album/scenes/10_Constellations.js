@@ -2,15 +2,15 @@
  * TODO: References, decide on where to put quotations marks. Balance between
  * not being clear and being too obvious.
  */
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BACKDROP,
     BUBBLE,
     CUTOUT,
     FIXTURE,
     FLAT,
     PANEL
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     WALGREENS_KEY,
     STEAM_TUNNEL_KEY,

@@ -4,7 +4,7 @@ import {
     FIXTURE,
     PANEL,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,

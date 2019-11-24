@@ -4,7 +4,7 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { TAIWAN_MOUNTAINS_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCH,

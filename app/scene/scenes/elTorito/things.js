@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     DISPENSER_LEFT,
     DISPENSER_RIGHT

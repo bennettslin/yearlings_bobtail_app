@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CARDBOARD,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { TAIWAN_STAIRS_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_GATE,

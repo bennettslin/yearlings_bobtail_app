@@ -4,7 +4,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,

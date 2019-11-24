@@ -1,5 +1,5 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BUBBLE,
     CARDBOARD,
     CUTOUT,
@@ -7,7 +7,7 @@ import {
     FIXTURE,
     FURNITURE,
     PANEL
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,

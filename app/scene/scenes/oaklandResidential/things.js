@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { OAKLAND_FRONT_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     TWIN_STREETLAMP__FAR,

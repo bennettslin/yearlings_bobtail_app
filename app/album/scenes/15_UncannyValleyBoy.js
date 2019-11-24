@@ -1,11 +1,11 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BACKDROP,
     CARDBOARD,
     FIXTURE,
     PANEL,
     DOOR
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     BASEMENT_BED_KEY,
     BASEMENT_MAGIC_KEY,

@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     SANDBAGS,
     STAGE_LIGHTS

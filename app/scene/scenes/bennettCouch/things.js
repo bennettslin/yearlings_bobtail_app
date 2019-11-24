@@ -2,7 +2,7 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     POLICE_ALBUM,
     NIRVANA_POSTER,

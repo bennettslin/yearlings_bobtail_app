@@ -2,7 +2,7 @@ import {
     BACKDROP,
     FLAT,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { OAKLAND_SIDE_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     OAKLAND_HOUSE_LEFT,

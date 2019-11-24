@@ -3,7 +3,7 @@ import {
     DOOR,
     FLAT,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     CAMPUS_TREE_SINGLE__BANCROFT,
     ASH_CAN

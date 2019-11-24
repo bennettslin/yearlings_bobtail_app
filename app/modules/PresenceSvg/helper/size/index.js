@@ -2,12 +2,12 @@ import isFinite from 'lodash/isfinite'
 
 import { Y_INDEX_SCALE_FACTORS } from 'constants/cubeRender'
 import { getValidYIndex } from 'helpers/general'
+import { ACTOR } from '../../../../constants/scene'
 import {
-    ACTOR,
     DOOR,
     FIXTURE,
     FURNITURE
-} from '../../../../constants/scene'
+} from '../../../../constants/scene/things'
 
 // Illustrator artboards are 1623 by 1082.
 const

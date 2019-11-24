@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { STEAM_PIPES } from '../../../constants/scene/things/cutouts'
 import { PUSH_BROOM__TUNNEL } from '../../../constants/scene/things/fixtures'
 

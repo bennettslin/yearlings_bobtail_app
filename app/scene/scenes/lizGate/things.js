@@ -2,7 +2,7 @@ import {
     BUBBLE,
     CUTOUT,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,

@@ -2,7 +2,7 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     PORCH_PLANT__LEFT,
     PORCH_PLANT__RIGHT

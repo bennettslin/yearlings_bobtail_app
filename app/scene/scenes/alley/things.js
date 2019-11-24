@@ -3,7 +3,7 @@ import {
     DOOR,
     FIXTURE,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { DUMPSTER } from '../../../constants/scene/things/cutouts'
 import { LOADING_DOCK_DOOR } from '../../../constants/scene/things/doors'
 import { BALLED_FOIL__ALLEY } from '../../../constants/scene/things/fixtures'

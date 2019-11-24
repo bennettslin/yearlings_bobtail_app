@@ -2,7 +2,7 @@ import {
     CUTOUT,
     CARDBOARD,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BENNETT_TAIWAN_STAIRS,
     ODIN_TAIWAN_STAIRS

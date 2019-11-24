@@ -1,7 +1,7 @@
 import {
     CARDBOARD,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER

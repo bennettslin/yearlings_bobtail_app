@@ -1,6 +1,6 @@
 import {
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     PUBLIC_FAR_LEFT,
     PUBLIC_NEAR_LEFT,

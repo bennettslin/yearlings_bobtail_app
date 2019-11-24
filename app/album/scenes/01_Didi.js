@@ -1,5 +1,5 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BACKDROP,
     BUBBLE,
     CARDBOARD,
@@ -8,7 +8,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     NOHO_HOUSES_KEY,
     NOHO_SCHOOL_KEY,

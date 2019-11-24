@@ -2,7 +2,7 @@ import {
     BACKDROP,
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { NOHO_HOUSES_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { FIRE_HYDRANT } from '../../../constants/scene/things/cutouts'
 import {

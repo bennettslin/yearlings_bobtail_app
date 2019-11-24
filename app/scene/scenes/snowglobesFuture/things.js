@@ -3,7 +3,7 @@ import {
     CARDBOARD,
     FIXTURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { ROAD_FUTURE } from '../../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__FUTURE,

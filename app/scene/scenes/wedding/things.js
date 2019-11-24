@@ -4,7 +4,7 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { WEDDING_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { WEDDING_CROWD } from '../../../constants/scene/things/cutouts'
 import {

@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     MONITOR_SIDE__STAGE,
     WALL_SPEAKER_SIDE__STAGE

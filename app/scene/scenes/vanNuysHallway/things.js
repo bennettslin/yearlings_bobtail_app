@@ -1,7 +1,7 @@
 import {
     CARDBOARD,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { CORKBOARD } from '../../../constants/scene/things/cardboards'
 import { PRINCIPAL_DOOR } from '../../../constants/scene/things/doors'
 import { DOOR__SHARED } from '../../shared/home'

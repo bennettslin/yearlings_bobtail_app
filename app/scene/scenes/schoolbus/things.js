@@ -3,7 +3,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,

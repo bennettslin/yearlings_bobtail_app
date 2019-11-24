@@ -1,7 +1,7 @@
 import {
     DOOR,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { BASEMENT_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import {
     BASS_CASE_UPRIGHT,

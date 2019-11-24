@@ -2,7 +2,7 @@ import {
     CUTOUT,
     FIXTURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     MONITOR_SIDE__CROWD,
     WALL_SPEAKER_SIDE__CROWD

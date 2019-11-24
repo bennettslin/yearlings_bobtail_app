@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     FLAT
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { CLIFF_TREE } from '../../../constants/scene/things/cutouts'
 import {
     CLIFF_GRAVES_FAR,

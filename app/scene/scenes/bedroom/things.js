@@ -6,7 +6,7 @@ import {
     FLAT,
     FURNITURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     DOGS_SKETCH,
     SKETCHBOOK__DOGS

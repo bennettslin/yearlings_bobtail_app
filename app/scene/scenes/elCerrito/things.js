@@ -4,7 +4,7 @@ import {
     FLAT,
     PANEL,
     PUPPET
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { GOLDEN_GATE_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { EL_CERRITO_TREE } from '../../../constants/scene/things/cutouts'
 import {

@@ -1,4 +1,4 @@
-import { CARDBOARD } from '../../../constants/scene'
+import { CARDBOARD } from '../../../constants/scene/things'
 import {
     BENNETT_ODIN_DEPTHS,
     SEA_SERPENT_LEFT,

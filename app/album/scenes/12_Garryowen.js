@@ -1,5 +1,5 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     BACKDROP,
     CARDBOARD,
     CUTOUT,
@@ -7,7 +7,7 @@ import {
     FIXTURE,
     FLAT,
     PANEL
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     LIZ_COUCH_KEY,
     BASEMENT_COUCH_KEY,

@@ -4,7 +4,7 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { SCHOOL_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../constants/scene/things/bubbles'
 import { PLAYGROUND_SLIDE } from '../../../constants/scene/things/cutouts'

@@ -1,7 +1,7 @@
 import {
     CUTOUT,
     DOOR
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { RECYCLABLES } from '../../../constants/scene/things/cutouts'
 import {
     BLINDS_OUTSIDE__BENNETT,

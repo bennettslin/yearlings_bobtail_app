@@ -1,7 +1,7 @@
 import {
     DOOR,
     FIXTURE
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { BASEMENT_DOOR } from '../../../constants/scene/things/doors'
 import { CRACKED_PICTURE } from '../../../constants/scene/things/fixtures'
 import { DOOR__SHARED } from '../../shared/home'

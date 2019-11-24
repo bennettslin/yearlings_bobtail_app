@@ -2,7 +2,7 @@ import {
     BUBBLE,
     FIXTURE,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     TARPIT_CONSTELLATION,
     SIBLING_CONSTELLATION

@@ -1,10 +1,10 @@
+import { ACTOR } from '../../constants/scene'
 import {
-    ACTOR,
     CUTOUT,
     DOOR,
     FIXTURE,
     PANEL
-} from '../../constants/scene'
+} from '../../constants/scene/things'
 import {
     CLUB_SIDE_CROWD_KEY,
     CLUB_SIDE_STAGE_KEY,

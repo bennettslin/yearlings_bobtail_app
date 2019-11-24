@@ -2,7 +2,7 @@ import {
     BACKDROP,
     FLAT,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import { DRIVING_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { GO_KART_TRACK } from '../../../constants/scene/things/flats'
 import {

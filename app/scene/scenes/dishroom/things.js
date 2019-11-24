@@ -2,7 +2,7 @@ import {
     CUTOUT,
     DOOR,
     PANEL
-} from '../../../constants/scene'
+} from '../../../constants/scene/things'
 import {
     TRAY_PILE,
     DISHROOM_DOLLY__TRAY,
