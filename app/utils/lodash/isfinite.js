@@ -1,5 +1,5 @@
-const findIndex = (value) => {
+const isFinite = (value) => {
     return Number.isFinite(value)
 }
 
-export default findIndex
+export default isFinite

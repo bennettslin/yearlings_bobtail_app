@@ -51,6 +51,7 @@ const getConfig = ({
                 flux: path.resolve(__dirname, './app/redux'),
                 handlers: path.resolve(__dirname, './app/handlers'),
                 helpers: path.resolve(__dirname, './app/helpers'),
+                managers: path.resolve(__dirname, './app/managers'),
                 // Replace the lodash package with vanilla code.
                 lodash: path.resolve(__dirname, './app/utils/lodash'),
                 modules: path.resolve(__dirname, './app/modules'),

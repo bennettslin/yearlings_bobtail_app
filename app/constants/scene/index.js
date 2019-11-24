@@ -34,16 +34,3 @@ export const FURNITURE = 'furniture'
 export const PANEL = 'panel'
 export const PUPPET = 'puppet'
 
-export const PRESENCE_TYPES = [
-    ACTOR,
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-]

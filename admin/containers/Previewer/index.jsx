@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import debounce from 'debounce'
+import findIndex from 'lodash/findindex'
 import keys from 'lodash/keys'
 
 import PreviewerSvg from './PreviewerSvg'
@@ -8,6 +9,7 @@ import PreviewerSvg from './PreviewerSvg'
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
 import { convertPresenceKeyToClassName } from 'helpers/format'
+import { getKeyName } from 'managers/Key/helper'
 
 import {
     getFromStorage,
@@ -20,7 +22,38 @@ import {
     getSvgMapForPresenceType
 } from '../../utils/svg'
 
-import { PRESENCE_TYPES } from 'constants/scene'
+import {
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    DOOR,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
+} from 'constants/scene'
+
+const PRESENCE_TYPES = [
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    DOOR,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
+]
+
+import {
+    ARROW_UP,
+    ARROW_DOWN,
+    ARROW_LEFT,
+    ARROW_RIGHT
+} from 'constants/access'
 
 const
     PADDING_DASHBOARD = 10,
@@ -57,6 +90,11 @@ class Previewer extends PureComponent {
         logSvgCount()
         window.onresize = debounce(this.sizePresence, 0)
         removeLoadingIndicator()
+        this._focusElementForAccess()
+    }
+
+    _focusElementForAccess = () => {
+        this.previewerElement.focus()
     }
 
     getPresenceFromStorage() {
@@ -165,28 +203,105 @@ class Previewer extends PureComponent {
         this.setState({ heightAspectRatio })
     }
 
+    handleKeyDownPress = (e) => {
+        const keyName = getKeyName(e)
+
+        if (keyName === ARROW_UP || keyName === ARROW_DOWN) {
+            this.accessPresenceType(keyName)
+        }
+
+        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
+            this.accessPresenceKey(keyName)
+        }
+    }
+
+    accessPresenceType(keyName) {
+        const selectedIndex = findIndex(
+            PRESENCE_TYPES,
+            presenceType => presenceType === this.getSelectedPresenceType()
+        )
+
+        let direction = 0
+
+        if (keyName === ARROW_UP) {
+            direction = PRESENCE_TYPES.length - 1
+        }
+
+        if (keyName === ARROW_DOWN) {
+            direction = 1
+        }
+
+        const presenceType = PRESENCE_TYPES[
+            (selectedIndex + direction) % PRESENCE_TYPES.length
+        ]
+
+        this.selectPresenceType({ target: { value: presenceType } })
+    }
+
+    accessPresenceKey(keyName) {
+        const
+            svgArray = keys(this.getSvgMap()),
+            selectedIndex = findIndex(
+                svgArray,
+                presenceKey => presenceKey === this.state.presenceKey
+            )
+
+        let direction = 0
+
+        if (keyName === ARROW_LEFT) {
+            direction = svgArray.length - 1
+        }
+
+        if (keyName === ARROW_RIGHT) {
+            direction = 1
+        }
+
+        const presenceKey = svgArray[
+            (selectedIndex + direction) % svgArray.length
+        ]
+
+        this.selectPresenceKey({ target: { value: presenceKey } })
+    }
+
+    getSelectedPresenceType() {
+        const {
+            transitionalPresenceType,
+            presenceType
+        } = this.state
+        return transitionalPresenceType || presenceType
+    }
+
+    getSvgMap() {
+        const selectedPresenceType = this.getSelectedPresenceType()
+        return getSvgMapForPresenceType(selectedPresenceType) || {}
+    }
+
+    setPreviewerElement = node => this.previewerElement = node
+
     render() {
         const
             {
-                transitionalPresenceType,
                 presenceType,
                 presenceKey,
                 kilobytes
             } = this.state,
             { heightAspectRatio } = this.state,
-            selectedPresenceType = transitionalPresenceType || presenceType,
+            selectedPresenceType = this.getSelectedPresenceType(),
 
-            svgMap = getSvgMapForPresenceType(selectedPresenceType) || {}
+            svgMap = this.getSvgMap()
 
         return (
             <div
                 {...{
+                    ref: this.setPreviewerElement,
                     className: cx(
                         'Previewer',
                         heightAspectRatio && 'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
-                    )
+                    ),
+                    tabIndex: -1,
+                    onKeyDown: this.handleKeyDownPress
                 }}
             >
                 <div
