@@ -5,11 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [MAT]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 4,
-                zHeight: 2
-            }
+            xPosition: 5.5
         }
     }
 }

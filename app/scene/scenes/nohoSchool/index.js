@@ -11,32 +11,19 @@ const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {
         [FLUSTERED]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 9.5,
-                xWidth: 1.5,
-                zHeight: 2.5,
-                zOffset: -2
-            }
+            xPosition: 9.5
         }
     },
     [ANITA]: {
         [CONCERNED]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 3.75
-            }
+            xPosition: 2
         }
     },
     [ESTHER]: {
         [SNICKERING]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 3.83
-            }
+            xPosition: 5.5
         }
     }
 }

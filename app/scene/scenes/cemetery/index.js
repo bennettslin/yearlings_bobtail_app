@@ -9,31 +9,19 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [CEMETERY]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [ANA_HOWIE]: {
         [CEMETERY]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [TOMER]: {
         [CEMETERY]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

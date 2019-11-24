@@ -13,41 +13,25 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [SHEEPISH]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 8
         }
     },
     [CHRISTOPHER]: {
         [STARING]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 6
         }
     },
     [MOTHER]: {
         [ARGUING]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 2.5
         }
     },
     [TRISTAN]: {
         [PRINCIPAL]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 3.5
         }
     }
 }

@@ -5,11 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [OCEAN_FLOOR]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

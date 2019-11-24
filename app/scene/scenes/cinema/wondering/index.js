@@ -11,31 +11,19 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [WONDERING_BABY]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [HOWIE]: {
         [USHER_WAITING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 10
         }
     },
     [MIRIAM]: {
         [INFANT_NURSING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

@@ -10,41 +10,25 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [STEAM_TUNNEL]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [ANA]: {
         [STEAM_TUNNEL]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [HOWIE]: {
         [STEAM_TUNNEL]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [TOMER]: {
         [STEAM_TUNNEL]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

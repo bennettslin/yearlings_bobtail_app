@@ -28,221 +28,133 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETTS_CHRISTOPHER_LIZ]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [ANITA_BENNETT]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [ESTHER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [WILLY]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [MOTHER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [FATHER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [SASHA_BENNETT]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [BRAD]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [ANDREW]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [CATHERINE]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [MARA]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [JACOB]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [ANA]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [HOWIE]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [TOMER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [KHARI]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [MIRIAM]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [TRISTAN]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [NESTOR]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [AMY]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [STEPHANIE]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [WADE]: {
         [EPILOGUE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [CAMPUS_ASHAMED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [KHARI_LIZ]: {
         [PROTECTIVE_CONCERNED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

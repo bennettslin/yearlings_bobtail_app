@@ -11,31 +11,19 @@ const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {
         [PANICKED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 3.5
-            }
+            xPosition: 9
         }
     },
     [ANITA]: {
         [EXASPERATED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 3.75
-            }
+            xPosition: 5
         }
     },
     [ESTHER]: {
         [CURIOUS]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 1,
-                zHeight: 3.83
-            }
+            xPosition: 3.5
         }
     }
 }

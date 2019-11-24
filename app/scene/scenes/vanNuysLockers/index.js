@@ -11,31 +11,19 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [STOIC]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 7.5,
-                xWidth: 2,
-                zHeight: 3
-            }
+            xPosition: 7.5
         }
     },
     [BRAD]: {
         [GESTURING]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 1
         }
     },
     [ANDREW]: {
         [THROWING]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 3
         }
     }
 }

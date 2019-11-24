@@ -8,21 +8,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [GO_KARTS]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 3,
-                zHeight: 3
-            }
+            xPosition: 2
         }
     },
     [LIZ]: {
         [GO_KARTS]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 3,
-                zHeight: 3
-            }
+            xPosition: 8
         }
     }
 }

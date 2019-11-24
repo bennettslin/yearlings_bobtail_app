@@ -5,11 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {
         [GETTING_DARK]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 6
         }
     }
 }

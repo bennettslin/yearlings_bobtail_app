@@ -11,31 +11,19 @@ const ARRANGEMENTS_ACTORS = {
     [ESTHER_MOTHER]: {
         [SOBBING_SHIELDING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [FATHER]: {
         [REELING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [MIRIAM_BENNETT]: {
         [FENDING_OFF]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

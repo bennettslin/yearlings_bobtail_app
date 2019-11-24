@@ -5,11 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [OLD_BENNETT]: {
         [PROLOGUE]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

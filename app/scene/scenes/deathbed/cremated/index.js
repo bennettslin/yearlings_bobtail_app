@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [INFIRM]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 2.5,
-                xWidth: 3,
-                zHeight: 3
-            }
+            xPosition: 2.5
         }
     },
     [MIRIAM]: {
         [TENNIS]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 10,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 10
         }
     }
 }

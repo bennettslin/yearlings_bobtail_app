@@ -5,11 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [RICKSHAW]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 3,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

@@ -8,21 +8,13 @@ const ARRANGEMENTS_ACTORS = {
     [HOWIE_WILLY]: {
         [GANGBANGER]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 4.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 4.5
         }
     },
     [TOMER]: {
         [GANGBANGER]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 6.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 6.5
         }
     }
 }

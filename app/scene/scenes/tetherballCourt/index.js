@@ -11,31 +11,19 @@ const ARRANGEMENTS_ACTORS = {
     [BRAD_BENNETT]: {
         [TYING_TETHER]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 8
         }
     },
     [SASHA]: {
         [INDIGNANT]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 3
         }
     },
     [ANDREW]: {
         [FEIGNING_FEAR]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5
         }
     }
 }

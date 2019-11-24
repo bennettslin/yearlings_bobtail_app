@@ -13,41 +13,25 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [WISTFUL]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 3.5,
-                xWidth: 2,
-                zHeight: 3
-            }
+            xPosition: 3.5
         }
     },
     [SASHA]: {
         [POPULAR_GIRL]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 7.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 7.5
         }
     },
     [BRAD]: {
         [SNACKING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 9
         }
     },
     [ANDREW]: {
         [NOODLING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 6
         }
     }
 }

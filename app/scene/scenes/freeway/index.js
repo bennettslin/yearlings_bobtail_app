@@ -7,11 +7,7 @@ const ARRANGEMENTS_ACTORS = {
     [WILLY]: {
         [COLLECTING]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 4.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 4.5
         }
     }
 }

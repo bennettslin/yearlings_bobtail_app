@@ -10,33 +10,19 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT_FATHER]: {
         [PRESENT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 5,
-                zOffset: 2
-            }
+            xPosition: 5
         }
     },
     [MOTHER]: {
         [PRESENT]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 1,
-                zHeight: 5,
-                zOffset: 1.5
-            }
+            xPosition: 3
         }
     },
     [MIRIAM_STEPHANIE]: {
         [MISCHIEVOUS_BANJO]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

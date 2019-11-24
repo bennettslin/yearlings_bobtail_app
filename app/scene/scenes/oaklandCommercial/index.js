@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT_STEPHANIE]: {
         [HORSING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5
         }
     },
     [AMY_NESTOR_TOMER]: {
         [OFFICER]: {
             yIndex: 4,
-            arrangement: {
-                xPosition: 7.5,
-                xWidth: 2,
-                zHeight: 6
-            }
+            xPosition: 7.5
         }
     }
 }

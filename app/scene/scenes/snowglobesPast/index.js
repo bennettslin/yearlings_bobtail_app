@@ -10,33 +10,19 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [PAST]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 1.5,
-                xWidth: 1,
-                zHeight: 5,
-                zOffset: 2
-            }
+            xPosition: 1.5
         }
     },
     [FATHER]: {
         [PAST]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 1,
-                zHeight: 5,
-                zOffset: 2
-            }
+            xPosition: 3
         }
     },
     [SASHA_BENNETT]: {
         [COMFORTING_HUMILIATED]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 1,
-                zHeight: 4
-            }
+            xPosition: 8
         }
     }
 }

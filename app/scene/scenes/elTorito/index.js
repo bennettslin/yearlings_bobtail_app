@@ -8,21 +8,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [EL_TORITO]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [LIZ]: {
         [EL_TORITO]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

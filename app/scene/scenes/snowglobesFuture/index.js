@@ -13,54 +13,31 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [FUTURE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 5,
-                zOffset: 2
-            }
+            xPosition: 6
         }
     },
     [MOTHER]: {
         [FUTURE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 1,
-                zHeight: 5,
-                zOffset: 2
-            }
+            xPosition: 8
         }
     },
     [FATHER]: {
         [FUTURE]: {
             yIndex: 1,
-            arrangement: {
-                xPosition: 5,
-                xWidth: 1,
-                zHeight: 5,
-                zOffset: 2
-            }
+            xPosition: 5
         }
     },
     [KHARI_LIZ]: {
         [JOKING_LAUGHING]: {
             yIndex: 2,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 2,
-                zHeight: 3.5
-            }
+            xPosition: 3
         }
     },
     [STEPHANIE]: {
         [BENNETT_RECORDING]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 8.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 8.5
         }
     }
 }

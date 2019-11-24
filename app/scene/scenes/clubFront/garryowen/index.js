@@ -11,31 +11,19 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [GREETING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [ANA]: {
         [SMIRKING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [MIRIAM_TRISTAN]: {
         [NOOGIE]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 7
         }
     }
 }

@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [DISPOSING_CONDOM]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [MIRIAM]: {
         [REVERSING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

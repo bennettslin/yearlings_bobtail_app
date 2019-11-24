@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [MERRILY_DERANGED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [HOWIE]: {
         [USHER_LOOKING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 1,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 1
         }
     }
 }

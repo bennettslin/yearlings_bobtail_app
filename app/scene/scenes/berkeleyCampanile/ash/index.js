@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [PIOUS]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [CATHERINE]: {
         [PUZZLED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

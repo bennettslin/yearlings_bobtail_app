@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {
         [FINAL_DREAM]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 11,
-                xWidth: 1,
-                zHeight: 3
-            }
+            xPosition: 11
         }
     },
     [AMY]: {
         [DOCTOR]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 3,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 3
         }
     }
 }

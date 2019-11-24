@@ -13,41 +13,25 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [DROPPING_MEATS]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 2
         }
     },
     [ANA]: {
         [CHUCKLING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 4
         }
     },
     [TRISTAN]: {
         [PUNCHING]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 7,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 7
         }
     },
     [NESTOR]: {
         [INJURED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 9,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 9
         }
     }
 }

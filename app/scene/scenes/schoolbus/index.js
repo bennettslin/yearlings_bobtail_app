@@ -9,21 +9,13 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [PANICKED]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     },
     [BRAD_SASHA]: {
         [CHARMED_SCHOOLBUS]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }

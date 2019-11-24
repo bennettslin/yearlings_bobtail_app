@@ -5,11 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {
         [BATHING]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1.5,
-                zHeight: 2.5
-            }
+            xPosition: 5.5
         }
     }
 }

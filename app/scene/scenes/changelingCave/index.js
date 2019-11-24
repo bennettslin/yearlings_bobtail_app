@@ -5,11 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [CHRISTOPHER_BENNETT_WILLY]: {
         [REASSURING_ENCHANTED]: {
             yIndex: 3,
-            arrangement: {
-                xPosition: 5.5,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 5.5
         }
     }
 }
