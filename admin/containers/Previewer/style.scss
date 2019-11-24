@@ -1,45 +1,9 @@
-$padding__dashboard: 10px;
 $height__input: 44px;
+$padding__dashboard: 10px;
 $height__dashboard: $height__input + $padding__dashboard * 2;
 $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
 
-.Previewer__dashboard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    padding: $padding__dashboard;
-    height: $height__dashboard__mobile;
-
-    @media (min-width: 1000px) {
-        height: $height__dashboard;
-    }
-}
-
-.Previewer__dashboardChild {
-    height: $height__input;
-    font-size: 1.2em;
-    width: 100%;
-
-    @media (min-width: 1000px) {
-        font-size: 1.5em;
-        width: auto;
-
-        &:not(:last-child) {
-            margin-right: 50px;
-        }
-    }
-}
-
-.Previewer__kilobytes {
-    // Hide kilobytes in mobile.
-    display: none;
-
-    @media (min-width: 1000px) {
-        display: block;
-    }
-}
+@import "./Dashboard/style";
 
 .Previewer__scroll {
     padding: 0 $padding__dashboard $padding__dashboard;

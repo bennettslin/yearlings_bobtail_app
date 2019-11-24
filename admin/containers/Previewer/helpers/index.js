@@ -5,6 +5,32 @@ import {
 
 import { getSvgMapForPresenceType } from '../../../utils/svg'
 
+import {
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    DOOR,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
+} from 'constants/scene'
+
+export const PRESENCE_TYPES = [
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    DOOR,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
+]
+
 export const getPresenceFromStorage = () => {
     const
         presenceType = getFromStorage('presenceType'),

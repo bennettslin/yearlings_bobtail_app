@@ -4,11 +4,10 @@ import debounce from 'debounce'
 import findIndex from 'lodash/findindex'
 import keys from 'lodash/keys'
 
-import PreviewerSvg from './PreviewerSvg'
+import PreviewerSvg from './Svg'
 
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
-import { convertPresenceKeyToClassName } from 'helpers/format'
 import { getKeyName } from 'managers/Key/helper'
 
 import { removeLoadingIndicator } from 'utils/window'
@@ -22,34 +21,9 @@ import {
     getPresenceFromStorage,
     getPresenceFromQueryStrings,
     setPresenceInStorage,
-    setPresenceInQueryStrings
+    setPresenceInQueryStrings,
+    PRESENCE_TYPES
 } from './helpers'
-
-import {
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-} from 'constants/scene'
-
-const PRESENCE_TYPES = [
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-]
 
 import {
     ARROW_UP,
@@ -63,6 +37,7 @@ const
     HEIGHT_INPUT = 44
 
 import './style.scss'
+import PreviewerDashboard from './Dashboard'
 
 class Previewer extends PureComponent {
     constructor(props) {
@@ -260,67 +235,14 @@ class Previewer extends PureComponent {
                     onKeyDown: this.handleKeyDownPress
                 }}
             >
-                <div
+                <PreviewerDashboard
                     {...{
-                        className: cx(
-                            'Previewer__dashboard'
-                        )
+                        selectedPresenceType,
+                        presenceKey,
+                        kilobytes,
+                        svgMap
                     }}
-                >
-                    <select
-                        {...{
-                            className: 'Previewer__dashboardChild',
-                            value: selectedPresenceType,
-                            onChange: this.selectPresenceType
-                        }}
-                    >
-                        <option {...{ value: '' }}>Pick a presence type</option>
-                        {PRESENCE_TYPES.map(selectedPresenceType => (
-                            <option
-                                {...{
-                                    key: selectedPresenceType,
-                                    value: selectedPresenceType
-                                }}
-                            >
-                                {selectedPresenceType}
-                            </option>
-                        ))}
-                    </select>
-                    <select
-                        {...{
-                            className: 'Previewer__dashboardChild',
-                            value: presenceKey,
-                            onChange: this.selectPresenceKey
-                        }}
-                    >
-                        <option {...{ value: '' }}>Pick a presence key</option>
-                        {keys(svgMap)
-                            .filter(presenceKey => (
-                                Boolean(svgMap[presenceKey])
-                            ))
-                            .map(presenceKey => (
-                                <option
-                                    {...{
-                                        key: presenceKey,
-                                        value: presenceKey
-                                    }}
-                                >
-                                    {convertPresenceKeyToClassName(presenceKey)}
-                                </option>
-                            ))}
-                    </select>
-                    <div
-                        {...{
-                            className: cx(
-                                'Previewer__dashboardChild',
-                                'Previewer__kilobytes',
-                                'flexCentreContainer'
-                            )
-                        }}
-                    >
-                        {kilobytes} kiB
-                    </div>
-                </div>
+                />
                 {Boolean(selectedPresenceType) && Boolean(presenceKey) && (
                     <div
                         {...{
