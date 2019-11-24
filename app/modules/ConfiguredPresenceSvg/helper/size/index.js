@@ -3,6 +3,7 @@ import isFinite from 'lodash/isfinite'
 import { Y_INDEX_SCALE_FACTORS } from 'constants/cubeRender'
 import { getValidYIndex } from 'helpers/general'
 import {
+    ACTOR,
     DOOR,
     FIXTURE,
     FURNITURE
@@ -12,15 +13,21 @@ import {
 const
     ARTBOARD_WIDTH = 1623 / 100,
     ARTBOARD_HEIGHT = 1082 / 100,
+    ACTOR_DEFAULT_SCALE_FACTOR = 0.3,
     DOOR_DEFAULT_SCALE_FACTOR = 0.7,
     FIXTURE_DEFAULT_SCALE_FACTOR = 0.3,
     FURNITURE_DEFAULT_SCALE_FACTOR = 0.25
 
 const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
 
+    console.error('oresenceType', presenceType)
     // Override default if custom scale factor is given.
     if (isFinite(scaleFactor)) {
         return scaleFactor
+    }
+
+    if (presenceType === ACTOR) {
+        return ACTOR_DEFAULT_SCALE_FACTOR
     }
 
     if (presenceType === DOOR) {

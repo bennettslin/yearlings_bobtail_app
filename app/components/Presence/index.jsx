@@ -1,11 +1,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isString from 'lodash/isstring'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import ConfiguredPresenceSvg from 'modules/ConfiguredPresenceSvg'
-import LegacyPresenceSvg from 'modules/LegacyPresenceSvg'
 
 import { capitaliseForClassName } from 'helpers/format'
 import { getMapForActorKey } from '../../svg/actors'
@@ -64,10 +62,6 @@ class Presence extends PureComponent {
         this.setState({ isTransitionVisible: Boolean(existenceValue) })
     }
 
-    getIsConfigured(presenceComponent) {
-        return isString(presenceComponent)
-    }
-
     showProcessedSvg = () => {
         // This handles the possibility that an svg might be loaded late.
         const { existenceValue } = this.props
@@ -93,36 +87,7 @@ class Presence extends PureComponent {
                 getMapForActorKey(actorKey) :
                 getMapForPresenceType(presenceType),
 
-            presenceComponent = presencesMap[presenceKey],
-
-            isConfigured = this.getIsConfigured(presenceComponent),
-
-            // TODO: Get rid of this conditional once they are all asset svgs.
-            RenderComponent = isConfigured ?
-                ConfiguredPresenceSvg :
-                LegacyPresenceSvg,
-
-            renderedComponent = (
-                <RenderComponent
-                    {...{
-                        className: cx(
-                            'Presence',
-                            isSvgLoaded && 'Presence__loaded',
-                            capitaliseForClassName(presenceType),
-                            presenceKey
-                        ),
-                        cubesKey,
-                        presenceType,
-                        actorKey,
-                        presenceKey,
-                        ...isConfigured && {
-                            showProcessedSvg: this.showProcessedSvg
-                        }
-                    }}
-                >
-                    {presenceComponent}
-                </RenderComponent>
-            )
+            presenceComponent = presencesMap[presenceKey]
 
         // TODO: Is CssTransition even necessary once all are configured?
         return (
@@ -135,7 +100,23 @@ class Presence extends PureComponent {
                     classNames: { enterDone: 'Presence__visible' }
                 }}
             >
-                {renderedComponent}
+                <ConfiguredPresenceSvg
+                    {...{
+                        className: cx(
+                            'Presence',
+                            isSvgLoaded && 'Presence__loaded',
+                            capitaliseForClassName(presenceType),
+                            presenceKey
+                        ),
+                        cubesKey,
+                        presenceType,
+                        actorKey,
+                        presenceKey,
+                        showProcessedSvg: this.showProcessedSvg
+                    }}
+                >
+                    {presenceComponent}
+                </ConfiguredPresenceSvg>
             </CSSTransition>
         )
     }

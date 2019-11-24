@@ -10,41 +10,25 @@ const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {
         [ABBEY_ROAD]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 6,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 6
         }
     },
     [ANA]: {
         [ABBEY_ROAD]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 4,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 4
         }
     },
     [HOWIE]: {
         [ABBEY_ROAD]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 2,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 2
         }
     },
     [TOMER]: {
         [ABBEY_ROAD]: {
             yIndex: 5,
-            arrangement: {
-                xPosition: 8,
-                xWidth: 1,
-                zHeight: 5
-            }
+            xPosition: 8
         }
     }
 }
