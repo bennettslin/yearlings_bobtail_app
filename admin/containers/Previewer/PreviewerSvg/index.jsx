@@ -38,7 +38,6 @@ class PreviewerSvg extends PureComponent {
             )[0]
 
         if (element) {
-            console.log(element)
             this.props.handleProcessSvg(svgString)
         }
     }

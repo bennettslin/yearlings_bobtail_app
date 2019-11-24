@@ -18,11 +18,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Render actor presences.`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: `Allow actor presences to show side by side in Previewer.`,
         workedHours: 0,
         neededHours: 4
