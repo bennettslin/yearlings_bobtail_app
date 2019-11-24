@@ -101,7 +101,7 @@ import {
     BENNETT_PILLOW,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION
-} from '../../constants/scene/things/furniture'
+} from '../../constants/scene/things/furnitures'
 import {
     CONVEYOR_BELT,
     DISHROOM_SINK,

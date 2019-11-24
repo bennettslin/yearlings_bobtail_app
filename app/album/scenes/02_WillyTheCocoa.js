@@ -80,7 +80,7 @@ import {
     FAMILY_HOUSE,
     BEDROOM_SIREN
 } from '../../constants/scene/things/flats'
-import { CAPTAIN_BED_PILLOW } from '../../constants/scene/things/furniture'
+import { CAPTAIN_BED_PILLOW } from '../../constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,

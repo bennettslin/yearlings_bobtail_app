@@ -91,7 +91,7 @@ import {
     BALLED_FOIL__LOCKERS
 } from '../../constants/scene/things/fixtures'
 import { BEDROOM_BUS } from '../../constants/scene/things/flats'
-import { CAPTAIN_BED_PILLOW } from '../../constants/scene/things/furniture'
+import { CAPTAIN_BED_PILLOW } from '../../constants/scene/things/furnitures'
 import {
     BEDROOM_DESK,
     CAPTAIN_BED,

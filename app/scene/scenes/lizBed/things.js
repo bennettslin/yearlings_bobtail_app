@@ -14,7 +14,7 @@ import {
 import {
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION
-} from '../../../constants/scene/things/furniture'
+} from '../../../constants/scene/things/furnitures'
 import {
     PHONE_CALL_PANEL,
     LIZ_BED

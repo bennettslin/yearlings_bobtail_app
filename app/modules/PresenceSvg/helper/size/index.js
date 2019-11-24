@@ -19,8 +19,6 @@ const
     FURNITURE_DEFAULT_SCALE_FACTOR = 0.25
 
 const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
-
-    console.error('oresenceType', presenceType)
     // Override default if custom scale factor is given.
     if (isFinite(scaleFactor)) {
         return scaleFactor

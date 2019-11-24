@@ -1,0 +1,5 @@
+export const INFANT_CURIOUS = 'infantCurious'
+export const INFANT_NURSING = 'infantNursing'
+export const PERFUMING = 'perfuming'
+export const TENNIS = 'tennis'
+export const REVERSING = 'reversing'

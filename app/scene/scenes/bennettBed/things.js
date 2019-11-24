@@ -16,7 +16,7 @@ import {
     LINGERIE_DRAWING,
     VASELINE
 } from '../../../constants/scene/things/fixtures'
-import { BENNETT_PILLOW } from '../../../constants/scene/things/furniture'
+import { BENNETT_PILLOW } from '../../../constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 import { PILLOW_BENNETT__SHARED } from '../../shared/furniture'
 import {
