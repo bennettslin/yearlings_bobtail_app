@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
-import ConfiguredPresenceSvg from 'modules/ConfiguredPresenceSvg'
+import PresenceSvg from 'modules/PresenceSvg'
 
 import { capitaliseForClassName } from 'helpers/format'
 import { getMapForActorKey } from '../../svg/actors'
@@ -100,7 +100,7 @@ class Presence extends PureComponent {
                     classNames: { enterDone: 'Presence__visible' }
                 }}
             >
-                <ConfiguredPresenceSvg
+                <PresenceSvg
                     {...{
                         className: cx(
                             'Presence',
@@ -116,7 +116,7 @@ class Presence extends PureComponent {
                     }}
                 >
                     {presenceComponent}
-                </ConfiguredPresenceSvg>
+                </PresenceSvg>
             </CSSTransition>
         )
     }

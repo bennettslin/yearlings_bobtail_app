@@ -30,7 +30,7 @@ const propTypes = {
     children: PropTypes.node.isRequired
 }
 
-class ConfiguredPresenceSvg extends PureComponent {
+class PresenceSvg extends PureComponent {
     state = {
         adjustedWidth: 0,
         adjustedHeight: 0
@@ -194,7 +194,7 @@ class ConfiguredPresenceSvg extends PureComponent {
             <InlineSvg
                 {...{
                     className: cx(
-                        'ConfiguredPresenceSvg',
+                        'PresenceSvg',
                         noShadow && 'Presence__noShadow',
                         className
                     ),
@@ -225,6 +225,6 @@ class ConfiguredPresenceSvg extends PureComponent {
     }
 }
 
-ConfiguredPresenceSvg.propTypes = propTypes
+PresenceSvg.propTypes = propTypes
 
-export default ConfiguredPresenceSvg
+export default PresenceSvg
