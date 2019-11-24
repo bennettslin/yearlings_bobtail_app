@@ -1,3 +1,5 @@
+import keys from 'lodash/keys'
+
 import {
     getFromStorage,
     setInStorage
@@ -57,7 +59,12 @@ export const getPresenceFromQueryStrings = () => {
         }
     }
 
-    return null
+    return {
+        presenceType: PRESENCE_TYPES[0],
+        presenceKey: keys(
+            getSvgMapForPresenceType(PRESENCE_TYPES[0])
+        )[0]
+    }
 }
 
 export const setPresenceInStorage = ({ presenceType, presenceKey }) => {

@@ -21,10 +21,5 @@ export default [
         taskName: `Allow actor presences to show side by side in Previewer.`,
         workedHours: 0,
         neededHours: 4
-    },
-    {
-        taskName: `Keyboard navigation of Previewer.`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]

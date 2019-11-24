@@ -6,22 +6,33 @@ import keys from 'lodash/keys'
 import { convertPresenceKeyToClassName } from 'helpers/format'
 import { PRESENCE_TYPES } from '../helpers'
 
+import { getSvgMapForPresenceType } from '../../../utils/svg'
+
 class PreviewerDashboard extends PureComponent {
 
     static propTypes = {
-        selectedPresenceType: PropTypes.string,
+        presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         kilobytes: PropTypes.number,
-        svgMap: PropTypes.object
+        selectPresenceType: PropTypes.func.isRequired,
+        selectPresenceKey: PropTypes.func.isRequired
+    }
+
+    selectPresenceType = ({ target: { value: presenceType } }) => {
+        this.props.selectPresenceType(presenceType)
+    }
+
+    selectPresenceKey = ({ target: { value: presenceKey } }) => {
+        this.props.selectPresenceKey(presenceKey)
     }
 
     render() {
         const {
-            selectedPresenceType,
-            presenceKey,
-            kilobytes,
-            svgMap
-        } = this.props
+                presenceType,
+                presenceKey,
+                kilobytes
+            } = this.props,
+            svgMap = getSvgMapForPresenceType(presenceType)
 
         return (
             <div
@@ -34,19 +45,18 @@ class PreviewerDashboard extends PureComponent {
                 <select
                     {...{
                         className: 'PreviewerDashboard__child',
-                        value: selectedPresenceType,
+                        value: presenceType,
                         onChange: this.selectPresenceType
                     }}
                 >
-                    <option {...{ value: '' }}>Pick a presence type</option>
-                    {PRESENCE_TYPES.map(selectedPresenceType => (
+                    {PRESENCE_TYPES.map(presenceType => (
                         <option
                             {...{
-                                key: selectedPresenceType,
-                                value: selectedPresenceType
+                                key: presenceType,
+                                value: presenceType
                             }}
                         >
-                            {selectedPresenceType}
+                            {presenceType}
                         </option>
                     ))}
                 </select>
@@ -57,7 +67,6 @@ class PreviewerDashboard extends PureComponent {
                         onChange: this.selectPresenceKey
                     }}
                 >
-                    <option {...{ value: '' }}>Pick a presence key</option>
                     {keys(svgMap)
                         .filter(presenceKey => (
                             Boolean(svgMap[presenceKey])
@@ -82,7 +91,7 @@ class PreviewerDashboard extends PureComponent {
                         )
                     }}
                 >
-                    {kilobytes} kiB
+                    {kilobytes.toFixed(2)} kiB
                 </div>
             </div>
         )

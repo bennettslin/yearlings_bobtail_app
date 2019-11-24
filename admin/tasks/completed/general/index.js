@@ -5021,5 +5021,10 @@ export default [
         taskName: `Email forwarding.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Keyboard navigation of Previewer.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

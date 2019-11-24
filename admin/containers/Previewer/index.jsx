@@ -55,7 +55,6 @@ class Previewer extends PureComponent {
 
         this.state = {
             ...presenceFromStorage,
-            transitionalPresenceType: '',
             viewBoxWidth: 0,
             viewBoxHeight: 0,
             kilobytes: 0,
@@ -75,23 +74,22 @@ class Previewer extends PureComponent {
         this.previewerElement.focus()
     }
 
-    selectPresenceType = ({ target: { value: transitionalPresenceType } }) => {
-        this.setState({ transitionalPresenceType })
-    }
-
-    selectPresenceKey = ({ target: { value: presenceKey } }) => {
-        const {
-                transitionalPresenceType,
-                presenceType: prevPresenceType
-            } = this.state,
-            presenceType = transitionalPresenceType || prevPresenceType
+    selectPresenceType = (presenceType) => {
+        const presenceKey = keys(getSvgMapForPresenceType(presenceType))[0]
         this.setState({
-            transitionalPresenceType: '',
             presenceType,
             presenceKey
         })
         setPresenceInStorage({ presenceType, presenceKey })
         setPresenceInQueryStrings({ presenceType, presenceKey })
+    }
+
+    selectPresenceKey = (presenceKey) => {
+        this.setState({
+            presenceKey
+        })
+        setPresenceInStorage({ presenceKey })
+        setPresenceInQueryStrings({ presenceKey })
     }
 
     handleProcessSvg = (svgString) => {
@@ -101,7 +99,7 @@ class Previewer extends PureComponent {
             } = getViewBoxSize(svgString),
 
             // Show kilobytes.
-            kilobytes = (svgString.length / 1024).toFixed(2)
+            kilobytes = (svgString.length / 1024)
 
         this.sizePresence({
             viewBoxWidth,
@@ -149,7 +147,7 @@ class Previewer extends PureComponent {
     accessPresenceType(keyName) {
         const selectedIndex = findIndex(
             PRESENCE_TYPES,
-            presenceType => presenceType === this.getSelectedPresenceType()
+            presenceType => presenceType === this.state.presenceType
         )
 
         let direction = 0
@@ -166,12 +164,12 @@ class Previewer extends PureComponent {
             (selectedIndex + direction) % PRESENCE_TYPES.length
         ]
 
-        this.selectPresenceType({ target: { value: presenceType } })
+        this.selectPresenceType(presenceType)
     }
 
     accessPresenceKey(keyName) {
         const
-            svgArray = keys(this.getSvgMap()),
+            svgArray = keys(getSvgMapForPresenceType(this.state.presenceType)),
             selectedIndex = findIndex(
                 svgArray,
                 presenceKey => presenceKey === this.state.presenceKey
@@ -191,20 +189,7 @@ class Previewer extends PureComponent {
             (selectedIndex + direction) % svgArray.length
         ]
 
-        this.selectPresenceKey({ target: { value: presenceKey } })
-    }
-
-    getSelectedPresenceType() {
-        const {
-            transitionalPresenceType,
-            presenceType
-        } = this.state
-        return transitionalPresenceType || presenceType
-    }
-
-    getSvgMap() {
-        const selectedPresenceType = this.getSelectedPresenceType()
-        return getSvgMapForPresenceType(selectedPresenceType) || {}
+        this.selectPresenceKey(presenceKey)
     }
 
     setPreviewerElement = node => this.previewerElement = node
@@ -216,10 +201,7 @@ class Previewer extends PureComponent {
                 presenceKey,
                 kilobytes
             } = this.state,
-            { heightAspectRatio } = this.state,
-            selectedPresenceType = this.getSelectedPresenceType(),
-
-            svgMap = this.getSvgMap()
+            { heightAspectRatio } = this.state
 
         return (
             <div
@@ -237,13 +219,14 @@ class Previewer extends PureComponent {
             >
                 <PreviewerDashboard
                     {...{
-                        selectedPresenceType,
+                        presenceType,
                         presenceKey,
                         kilobytes,
-                        svgMap
+                        selectPresenceType: this.selectPresenceType,
+                        selectPresenceKey: this.selectPresenceKey
                     }}
                 />
-                {Boolean(selectedPresenceType) && Boolean(presenceKey) && (
+                {Boolean(presenceType) && Boolean(presenceKey) && (
                     <div
                         {...{
                             className: cx(
