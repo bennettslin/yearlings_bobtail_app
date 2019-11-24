@@ -17,7 +17,7 @@ import {
     FACES,
     CEILING,
     FLOOR
-} from 'constants/scene'
+} from 'constants/scene/cubes'
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES

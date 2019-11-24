@@ -20,6 +20,7 @@ import rootReducer from './redux/rootReducer'
 import './scss/app.scss'
 
 // These reroute to the routing container in production.
+import Actors from 'admin/containers/Actors'
 import Annotations from 'admin/containers/Annotations'
 import Previewer from 'admin/containers/Previewer'
 import Progress from 'admin/containers/Progress'
@@ -50,6 +51,13 @@ ReactDOM.render(
                     {...{
                         path: '/',
                         component: RoutingContainer
+                    }}
+                />
+                <Route
+                    exact
+                    {...{
+                        path: '/Actors',
+                        component: Actors
                     }}
                 />
                 <Route

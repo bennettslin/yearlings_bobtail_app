@@ -1,4 +1,5 @@
 Interdependence is the great equaliser
+Artists who cash in on the fact that the office commands respect, without helping to contribute to it
 
 Csikszentmihalyi
 Ballad of Bennett

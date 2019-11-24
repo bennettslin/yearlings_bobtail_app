@@ -2,7 +2,7 @@ import {
     FRONT,
     SIDE,
     TILE
-} from 'constants/scene'
+} from 'constants/scene/cubes'
 
 const _getPolygonPoint = ({
     x, y

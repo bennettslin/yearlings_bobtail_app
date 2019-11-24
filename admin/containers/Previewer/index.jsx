@@ -13,17 +13,18 @@ import { getKeyName } from 'managers/Key/helper'
 import { removeLoadingIndicator } from 'utils/window'
 
 import {
-    logSvgCount,
-    getSvgMapForPresenceType
-} from '../../utils/svg'
-
-import {
     getPresenceFromStorage,
     getPresenceFromQueryStrings,
     setPresenceInStorage,
-    setPresenceInQueryStrings,
-    PRESENCE_TYPES
-} from './helpers'
+    setPresenceInQueryStrings
+} from '../../utils/storage'
+
+import {
+    logSvgCount,
+    getSvgMapForThingType
+} from '../../utils/svg'
+
+import { THING_TYPES } from '../../constants/things'
 
 import {
     ARROW_UP,
@@ -67,15 +68,15 @@ class Previewer extends PureComponent {
         logSvgCount()
         window.onresize = debounce(this.sizePresence, 0)
         removeLoadingIndicator()
-        this._focusElementForAccess()
+        this.focusPreviewerElement()
     }
 
-    _focusElementForAccess = () => {
+    focusPreviewerElement = () => {
         this.previewerElement.focus()
     }
 
     selectPresenceType = (presenceType) => {
-        const presenceKey = keys(getSvgMapForPresenceType(presenceType))[0]
+        const presenceKey = keys(getSvgMapForThingType(presenceType))[0]
         this.setState({
             presenceType,
             presenceKey
@@ -146,22 +147,22 @@ class Previewer extends PureComponent {
 
     accessPresenceType(keyName) {
         const selectedIndex = findIndex(
-            PRESENCE_TYPES,
+            THING_TYPES,
             presenceType => presenceType === this.state.presenceType
         )
 
         let direction = 0
 
         if (keyName === ARROW_UP) {
-            direction = PRESENCE_TYPES.length - 1
+            direction = THING_TYPES.length - 1
         }
 
         if (keyName === ARROW_DOWN) {
             direction = 1
         }
 
-        const presenceType = PRESENCE_TYPES[
-            (selectedIndex + direction) % PRESENCE_TYPES.length
+        const presenceType = THING_TYPES[
+            (selectedIndex + direction) % THING_TYPES.length
         ]
 
         this.selectPresenceType(presenceType)
@@ -169,7 +170,7 @@ class Previewer extends PureComponent {
 
     accessPresenceKey(keyName) {
         const
-            svgArray = keys(getSvgMapForPresenceType(this.state.presenceType)),
+            svgArray = keys(getSvgMapForThingType(this.state.presenceType)),
             selectedIndex = findIndex(
                 svgArray,
                 presenceKey => presenceKey === this.state.presenceKey

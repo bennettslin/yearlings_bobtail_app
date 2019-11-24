@@ -6,7 +6,7 @@ import {
     TILE,
     SIDE,
     FRONT
-} from '../../../../../constants/scene'
+} from '../../../../../constants/scene/cubes'
 
 import {
     CUBE_X_AXIS_LENGTH,

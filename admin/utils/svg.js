@@ -15,7 +15,7 @@ import {
     PUPPET
 } from 'constants/scene'
 
-export const getSvgMapForPresenceType = (presenceType) => {
+export const getSvgMapForThingType = (presenceType) => {
     const presenceMap = getMapForPresenceType(presenceType)
 
     if (!presenceMap) {
@@ -40,7 +40,7 @@ export const getSvgMapForPresenceType = (presenceType) => {
 }
 
 const _getSvgCount = (presenceType) => {
-    const svgBooleanMap = getSvgMapForPresenceType(presenceType)
+    const svgBooleanMap = getSvgMapForThingType(presenceType)
     return keys(svgBooleanMap).reduce((count, thing) => {
         const
             workedIncrement = svgBooleanMap[thing] ? 1 : 0,

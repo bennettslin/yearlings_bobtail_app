@@ -5,33 +5,8 @@ import {
     setInStorage
 } from 'utils/window'
 
-import { getSvgMapForPresenceType } from '../../../utils/svg'
-
-import {
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-} from 'constants/scene'
-
-export const PRESENCE_TYPES = [
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-]
+import { THING_TYPES } from '../constants/things'
+import { getSvgMapForThingType } from './svg'
 
 export const getPresenceFromStorage = () => {
     const
@@ -47,7 +22,7 @@ export const getPresenceFromQueryStrings = () => {
         presenceType = urlParams.get('type') || '',
         presenceKey = urlParams.get('key') || '',
 
-        svgMapForPresenceType = getSvgMapForPresenceType(presenceType)
+        svgMapForPresenceType = getSvgMapForThingType(presenceType)
 
     // Make sure this map exists.
     if (svgMapForPresenceType) {
@@ -60,9 +35,9 @@ export const getPresenceFromQueryStrings = () => {
     }
 
     return {
-        presenceType: PRESENCE_TYPES[0],
+        presenceType: THING_TYPES[0],
         presenceKey: keys(
-            getSvgMapForPresenceType(PRESENCE_TYPES[0])
+            getSvgMapForThingType(THING_TYPES[0])
         )[0]
     }
 }
