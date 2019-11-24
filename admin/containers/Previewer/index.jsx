@@ -11,16 +11,19 @@ import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 import { convertPresenceKeyToClassName } from 'helpers/format'
 import { getKeyName } from 'managers/Key/helper'
 
-import {
-    getFromStorage,
-    setInStorage,
-    removeLoadingIndicator
-} from 'utils/window'
+import { removeLoadingIndicator } from 'utils/window'
 
 import {
     logSvgCount,
     getSvgMapForPresenceType
 } from '../../utils/svg'
+
+import {
+    getPresenceFromStorage,
+    getPresenceFromQueryStrings,
+    setPresenceInStorage,
+    setPresenceInQueryStrings
+} from './helpers'
 
 import {
     BACKDROP,
@@ -66,14 +69,14 @@ class Previewer extends PureComponent {
         super(props)
 
         // If presence is from query strings, set in storage.
-        const presenceFromQueryStrings = this.getPresenceFromQueryStrings()
+        const presenceFromQueryStrings = getPresenceFromQueryStrings()
         if (presenceFromQueryStrings) {
-            this.setPresenceInStorage(presenceFromQueryStrings)
+            setPresenceInStorage(presenceFromQueryStrings)
         }
 
         // Either way, set presence from storage in query strings.
-        const presenceFromStorage = this.getPresenceFromStorage()
-        this.setPresenceInQueryStrings(presenceFromStorage)
+        const presenceFromStorage = getPresenceFromStorage()
+        setPresenceInQueryStrings(presenceFromStorage)
 
         this.state = {
             ...presenceFromStorage,
@@ -97,35 +100,6 @@ class Previewer extends PureComponent {
         this.previewerElement.focus()
     }
 
-    getPresenceFromStorage() {
-        const
-            presenceType = getFromStorage('presenceType'),
-            presenceKey = getFromStorage('presenceKey')
-
-        return { presenceType, presenceKey }
-    }
-
-    getPresenceFromQueryStrings() {
-        // If presence from query strings is valid, set in store.
-        const urlParams = new URLSearchParams(window.location.search),
-            presenceType = urlParams.get('type') || '',
-            presenceKey = urlParams.get('key') || '',
-
-            svgMapForPresenceType = getSvgMapForPresenceType(presenceType)
-
-        // Make sure this map exists.
-        if (svgMapForPresenceType) {
-            const svgForPresenceKey = svgMapForPresenceType[presenceKey]
-
-            // Make sure this svg exists.
-            if (svgForPresenceKey) {
-                return { presenceType, presenceKey }
-            }
-        }
-
-        return null
-    }
-
     selectPresenceType = ({ target: { value: transitionalPresenceType } }) => {
         this.setState({ transitionalPresenceType })
     }
@@ -141,26 +115,8 @@ class Previewer extends PureComponent {
             presenceType,
             presenceKey
         })
-        this.setPresenceInStorage({ presenceType, presenceKey })
-        this.setPresenceInQueryStrings({ presenceType, presenceKey })
-    }
-
-    setPresenceInStorage({ presenceType, presenceKey }) {
-        if (presenceType) {
-            setInStorage('presenceType', presenceType)
-        }
-        if (presenceKey) {
-            setInStorage('presenceKey', presenceKey)
-        }
-    }
-
-    setPresenceInQueryStrings({ presenceType, presenceKey }) {
-        const urlParams = new URLSearchParams(window.location.search)
-
-        urlParams.set('type', presenceType)
-        urlParams.set('key', presenceKey)
-
-        window.history.replaceState({}, '', `${window.location.pathname}?${urlParams}`)
+        setPresenceInStorage({ presenceType, presenceKey })
+        setPresenceInQueryStrings({ presenceType, presenceKey })
     }
 
     handleProcessSvg = (svgString) => {
