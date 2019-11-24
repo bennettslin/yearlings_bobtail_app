@@ -1,25 +1,3 @@
-import {
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-} from 'constants/scene/things'
-
-export const THING_TYPES = [
-    BACKDROP,
-    BUBBLE,
-    CARDBOARD,
-    CUTOUT,
-    DOOR,
-    FIXTURE,
-    FLAT,
-    FURNITURE,
-    PANEL,
-    PUPPET
-]
+import values from 'lodash/values'
+import * as THING_TYPES_OBJECT from 'constants/scene/things'
+export const THING_TYPES = values(THING_TYPES_OBJECT)
