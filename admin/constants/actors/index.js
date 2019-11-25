@@ -1,27 +1,59 @@
-export const YOUNG_BENNETT = 'youngBennett'
-export const PRETEEN_BENNETT = 'preteenBennett'
-export const BENNETT = 'bennett'
-export const OLD_BENNETT = 'oldBennett'
-export const ANITA = 'anita'
-export const ESTHER = 'esther'
-export const WILLY = 'willy'
-export const MOTHER = 'mother'
-export const FATHER = 'father'
-export const CHRISTOPHER = 'christopher'
-export const SASHA = 'sasha'
-export const BRAD = 'brad'
-export const ANDREW = 'andrew'
-export const CATHERINE = 'catherine'
-export const MARA = 'mara'
-export const JACOB = 'jacob'
-export const ANA = 'ana'
-export const HOWIE = 'howie'
-export const TOMER = 'tomer'
-export const LIZ = 'liz'
-export const KHARI = 'khari'
-export const MIRIAM = 'miriam'
-export const TRISTAN = 'tristan'
-export const NESTOR = 'nestor'
-export const AMY = 'amy'
-export const STEPHANIE = 'stephanie'
-export const WADE = 'wade'
+import {
+    YOUNG_BENNETT,
+    PRETEEN_BENNETT,
+    BENNETT,
+    OLD_BENNETT,
+    ANITA,
+    ESTHER,
+    WILLY,
+    MOTHER,
+    FATHER,
+    CHRISTOPHER,
+    SASHA,
+    BRAD,
+    ANDREW,
+    CATHERINE,
+    MARA,
+    JACOB,
+    ANA,
+    HOWIE,
+    TOMER,
+    LIZ,
+    KHARI,
+    MIRIAM,
+    TRISTAN,
+    NESTOR,
+    AMY,
+    STEPHANIE,
+    WADE
+} from 'constants/scene/actors'
+
+export default [
+    YOUNG_BENNETT,
+    PRETEEN_BENNETT,
+    BENNETT,
+    OLD_BENNETT,
+    ANITA,
+    ESTHER,
+    WILLY,
+    MOTHER,
+    FATHER,
+    CHRISTOPHER,
+    SASHA,
+    BRAD,
+    ANDREW,
+    CATHERINE,
+    MARA,
+    JACOB,
+    ANA,
+    HOWIE,
+    TOMER,
+    LIZ,
+    KHARI,
+    MIRIAM,
+    TRISTAN,
+    NESTOR,
+    AMY,
+    STEPHANIE,
+    WADE
+]

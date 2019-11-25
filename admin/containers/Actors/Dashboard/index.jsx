@@ -4,7 +4,7 @@ import cx from 'classnames'
 import keys from 'lodash/keys'
 
 import { convertPresenceKeyToClassName } from 'helpers/format'
-import THING_TYPES from '../../../constants/things'
+import ACTOR_TYPES from '../../../constants/actors'
 
 import { getSvgMapForThingType } from '../../../utils/svg'
 
@@ -14,16 +14,15 @@ class ActorsDashboard extends PureComponent {
         presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         kilobytes: PropTypes.number,
-        selectPresenceType: PropTypes.func.isRequired,
-        selectPresenceKey: PropTypes.func.isRequired
+        selectPresence: PropTypes.func.isRequired
     }
 
-    selectPresenceType = ({ target: { value: presenceType } }) => {
-        this.props.selectPresenceType(presenceType)
+    selectPresenceType = ({ target: { value: type } }) => {
+        this.props.selectPresence({ type })
     }
 
-    selectPresenceKey = ({ target: { value: presenceKey } }) => {
-        this.props.selectPresenceKey(presenceKey)
+    selectPresenceKey = ({ target: { value: key } }) => {
+        this.props.selectPresence({ key })
     }
 
     render() {
@@ -44,12 +43,12 @@ class ActorsDashboard extends PureComponent {
             >
                 <select
                     {...{
-                        className: 'ThingsDashboard__child',
+                        className: 'ActorsDashboard__child',
                         value: presenceType,
                         onChange: this.selectPresenceType
                     }}
                 >
-                    {THING_TYPES.map(presenceType => (
+                    {ACTOR_TYPES.map(presenceType => (
                         <option
                             {...{
                                 key: presenceType,
@@ -62,7 +61,7 @@ class ActorsDashboard extends PureComponent {
                 </select>
                 <select
                     {...{
-                        className: 'ThingsDashboard__child',
+                        className: 'ActorsDashboard__child',
                         value: presenceKey,
                         onChange: this.selectPresenceKey
                     }}
@@ -85,8 +84,8 @@ class ActorsDashboard extends PureComponent {
                 <div
                     {...{
                         className: cx(
-                            'ThingsDashboard__child',
-                            'Things__kilobytes',
+                            'ActorsDashboard__child',
+                            'Actors__kilobytes',
                             'flexCentreContainer'
                         )
                     }}

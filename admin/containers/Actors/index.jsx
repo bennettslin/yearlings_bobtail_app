@@ -1,162 +1,149 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
+import keys from 'lodash/keys'
+
+import PreviewerSvg from '../PreviewerSvg'
+
+import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
+
+import { getKeyName } from 'managers/Key/helper'
 
 import { removeLoadingIndicator } from 'utils/window'
 
+import { accessPresence } from '../../utils/access'
+
+import {
+    getPresenceFromStorage,
+    getPresenceFromQueryStrings,
+    setPresenceInStorage,
+    setPresenceInQueryStrings
+} from '../../utils/storage'
+
+import {
+    getSvgMapForThingType
+} from '../../utils/svg'
+
 import './style.scss'
-// import ActorsDashboard from './Dashboard'
+import ActorsDashboard from './Dashboard'
 
 class Actors extends PureComponent {
+    constructor(props) {
+        super(props)
+
+        // Set presence from storage in query strings.
+        const presenceFromStorage = getPresenceFromStorage()
+        setPresenceInQueryStrings(presenceFromStorage)
+
+        // Set presence from query strings in storage. Default is first index.
+        setPresenceInStorage(getPresenceFromQueryStrings())
+
+        this.state = {
+            ...presenceFromStorage,
+            viewBoxWidth: 0,
+            viewBoxHeight: 0,
+            kilobytes: 0
+        }
+    }
+
     componentDidMount() {
         logMount('Actors')
         removeLoadingIndicator()
-        this.focusActorsElement()
+        this.focusPreviewerElement()
     }
 
-    focusActorsElement = () => {
-        this.actorsElement.focus()
+    focusPreviewerElement = () => {
+        this.previewerElement.focus()
     }
 
-    // selectPresenceType = (presenceType) => {
-    //     const presenceKey = keys(getSvgMapForThingType(presenceType))[0]
-    //     this.setState({
-    //         presenceType,
-    //         presenceKey
-    //     })
-    //     setPresenceInStorage({ presenceType, presenceKey })
-    //     setPresenceInQueryStrings({ presenceType, presenceKey })
-    // }
+    selectPresence = ({ type, key }) => {
+        let presenceType = type,
+            presenceKey = key
+        if (type) {
+            presenceKey = keys(getSvgMapForThingType(type))[0]
+        } else if (key) {
+            presenceType = this.state.presenceType
+        }
 
-    // selectPresenceKey = (presenceKey) => {
-    //     this.setState({
-    //         presenceKey
-    //     })
-    //     setPresenceInStorage({ presenceKey })
-    //     setPresenceInQueryStrings({ presenceKey })
-    // }
+        this.setState({
+            presenceType,
+            presenceKey
+        })
+        setPresenceInStorage({ presenceType, presenceKey })
+        setPresenceInQueryStrings({ presenceType, presenceKey })
+    }
 
-    // handleProcessSvg = (svgString) => {
-    //     const {
-    //             viewBoxWidth,
-    //             viewBoxHeight
-    //         } = getViewBoxSize(svgString),
+    handleProcessSvg = (svgString) => {
+        const {
+            viewBoxWidth,
+            viewBoxHeight
+        } = getViewBoxSize(svgString)
 
-    //         // Show kilobytes.
-    //         kilobytes = (svgString.length / 1024)
+        this.setState({
+            viewBoxWidth,
+            viewBoxHeight,
+            kilobytes: svgString.length / 1024
+        })
+    }
 
-    //     this.sizePresence({
-    //         viewBoxWidth,
-    //         viewBoxHeight
-    //     })
+    handleKeyDownPress = (e) => {
+        const { presenceType, presenceKey } = this.state
 
-    //     this.setState({
-    //         viewBoxWidth,
-    //         viewBoxHeight,
-    //         kilobytes
-    //     })
-    // }
+        accessPresence({
+            keyName: getKeyName(e),
+            presenceType,
+            presenceKey,
+            selectPresence: this.selectPresence
+        })
+    }
 
-    // sizePresence = ({
-    //     viewBoxWidth = this.state.viewBoxWidth,
-    //     viewBoxHeight = this.state.viewBoxHeight
-    // }) => {
-    //     const windowWidth = window.innerWidth,
-    //         windowHeight =
-    //             window.innerHeight - PADDING_DASHBOARD * 2 -
-
-    //             // In mobile, account for height of two inputs.
-    //             HEIGHT_INPUT * (window.innerWidth < 1000 ? 2 : 1),
-
-    //         // Set height aspect ratio.
-    //         heightAspectRatio =
-    //             viewBoxWidth / viewBoxHeight <
-    //             windowWidth / windowHeight
-
-    //     this.setState({ heightAspectRatio })
-    // }
-
-    // handleKeyDownPress = (e) => {
-    //     const keyName = getKeyName(e)
-
-    //     if (keyName === ARROW_UP || keyName === ARROW_DOWN) {
-    //         this.accessPresenceType(keyName)
-    //     }
-
-    //     if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-    //         this.accessPresenceKey(keyName)
-    //     }
-    // }
-
-    // accessPresenceType(keyName) {
-    //     const selectedIndex = findIndex(
-    //         THING_TYPES,
-    //         presenceType => presenceType === this.state.presenceType
-    //     )
-
-    //     let direction = 0
-
-    //     if (keyName === ARROW_UP) {
-    //         direction = THING_TYPES.length - 1
-    //     }
-
-    //     if (keyName === ARROW_DOWN) {
-    //         direction = 1
-    //     }
-
-    //     const presenceType = THING_TYPES[
-    //         (selectedIndex + direction) % THING_TYPES.length
-    //     ]
-
-    //     this.selectPresenceType(presenceType)
-    // }
-
-    // accessPresenceKey(keyName) {
-    //     const
-    //         svgArray = keys(getSvgMapForThingType(this.state.presenceType)),
-    //         selectedIndex = findIndex(
-    //             svgArray,
-    //             presenceKey => presenceKey === this.state.presenceKey
-    //         )
-
-    //     let direction = 0
-
-    //     if (keyName === ARROW_LEFT) {
-    //         direction = svgArray.length - 1
-    //     }
-
-    //     if (keyName === ARROW_RIGHT) {
-    //         direction = 1
-    //     }
-
-    //     const presenceKey = svgArray[
-    //         (selectedIndex + direction) % svgArray.length
-    //     ]
-
-    //     this.selectPresenceKey(presenceKey)
-    // }
-
-    setActorsElement = node => this.actorsElement = node
+    setPreviewerElement = node => this.previewerElement = node
 
     render() {
+        const
+            {
+                presenceType,
+                presenceKey,
+                kilobytes
+            } = this.state
+
         return (
             <div
                 {...{
-                    ref: this.setActorsElement,
+                    ref: this.setPreviewerElement,
                     className: cx(
                         'Actors',
-                        'abF'
+                        'abF',
+                        'PtSansNarrow'
                     ),
-                    tabIndex: -1
+                    tabIndex: -1,
+                    onKeyDown: this.handleKeyDownPress
                 }}
             >
-                {/* <ActorsDashboard
+                <ActorsDashboard
                     {...{
-                        // actor,
-                        // instance,
-                        selectPresenceType: this.selectPresenceType,
-                        selectPresenceKey: this.selectPresenceKey
+                        presenceType,
+                        presenceKey,
+                        kilobytes,
+                        selectPresence: this.selectPresence
                     }}
-                /> */}
+                />
+                {Boolean(presenceType) && Boolean(presenceKey) && (
+                    <div
+                        {...{
+                            className: cx(
+                                'Previewer__scroll'
+                            )
+                        }}
+                    >
+                        <PreviewerSvg
+                            {...{
+                                presenceType,
+                                presenceKey,
+                                handleProcessSvg: this.handleProcessSvg
+                            }}
+                        />
+                    </div>
+                )}
             </div>
         )
     }
