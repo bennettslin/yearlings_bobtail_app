@@ -5,24 +5,36 @@ import {
     setInStorage
 } from 'utils/window'
 
+import ACTOR_TYPES from '../constants/actors'
 import THING_TYPES from '../constants/things'
-import { getSvgMapForThingType } from './svg'
+import {
+    getSvgMapForActorType,
+    getSvgMapForThingType
+} from './svg'
 
-export const getPresenceFromStorage = () => {
+const getPresencePrefix = (isActor) => {
+    return isActor ? 'actor' : 'thing'
+}
+
+export const getPresenceFromStorage = (isActor) => {
     const
-        presenceType = getFromStorage('presenceType'),
-        presenceKey = getFromStorage('presenceKey')
+        prefix = getPresencePrefix(isActor),
+        presenceType = getFromStorage(`${prefix}Type`),
+        presenceKey = getFromStorage(`${prefix}Key`)
 
     return { presenceType, presenceKey }
 }
 
-export const getPresenceFromQueryStrings = () => {
+export const getPresenceFromQueryStrings = (isActor) => {
     // If presence from query strings is valid, set in store.
-    const urlParams = new URLSearchParams(window.location.search),
+    const
+        urlParams = new URLSearchParams(window.location.search),
         presenceType = urlParams.get('type') || '',
         presenceKey = urlParams.get('key') || '',
+        typesList = isActor ? ACTOR_TYPES : THING_TYPES,
+        mapGetter = isActor ? getSvgMapForActorType : getSvgMapForThingType,
 
-        svgMapForPresenceType = getSvgMapForThingType(presenceType)
+        svgMapForPresenceType = mapGetter(presenceType)
 
     // Make sure this map exists.
     if (svgMapForPresenceType) {
@@ -35,19 +47,25 @@ export const getPresenceFromQueryStrings = () => {
     }
 
     return {
-        presenceType: THING_TYPES[0],
+        presenceType: typesList[0],
         presenceKey: keys(
-            getSvgMapForThingType(THING_TYPES[0])
+            mapGetter(typesList[0])
         )[0]
     }
 }
 
-export const setPresenceInStorage = ({ presenceType, presenceKey }) => {
+export const setPresenceInStorage = ({
+    isActor,
+    presenceType,
+    presenceKey
+}) => {
+    const prefix = getPresencePrefix(isActor)
+
     if (presenceType) {
-        setInStorage('presenceType', presenceType)
+        setInStorage(`${prefix}Type`, presenceType)
     }
     if (presenceKey) {
-        setInStorage('presenceKey', presenceKey)
+        setInStorage(`${prefix}Key`, presenceKey)
     }
 }
 

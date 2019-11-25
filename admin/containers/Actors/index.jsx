@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import keys from 'lodash/keys'
 
-import PreviewerSvg from '../PreviewerSvg'
+// import PreviewerSvg from '../PreviewerSvg'
 
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
@@ -19,9 +19,7 @@ import {
     setPresenceInQueryStrings
 } from '../../utils/storage'
 
-import {
-    getSvgMapForThingType
-} from '../../utils/svg'
+import { getSvgMapForActorType } from '../../utils/svg'
 
 import './style.scss'
 import ActorsDashboard from './Dashboard'
@@ -31,11 +29,14 @@ class Actors extends PureComponent {
         super(props)
 
         // Set presence from storage in query strings.
-        const presenceFromStorage = getPresenceFromStorage()
+        const presenceFromStorage = getPresenceFromStorage(true)
         setPresenceInQueryStrings(presenceFromStorage)
 
         // Set presence from query strings in storage. Default is first index.
-        setPresenceInStorage(getPresenceFromQueryStrings())
+        setPresenceInStorage({
+            isActor: true,
+            ...getPresenceFromQueryStrings(true)
+        })
 
         this.state = {
             ...presenceFromStorage,
@@ -59,7 +60,7 @@ class Actors extends PureComponent {
         let presenceType = type,
             presenceKey = key
         if (type) {
-            presenceKey = keys(getSvgMapForThingType(type))[0]
+            presenceKey = keys(getSvgMapForActorType(type))[0]
         } else if (key) {
             presenceType = this.state.presenceType
         }
@@ -89,6 +90,7 @@ class Actors extends PureComponent {
         const { presenceType, presenceKey } = this.state
 
         accessPresence({
+            isActor: true,
             keyName: getKeyName(e),
             presenceType,
             presenceKey,
@@ -127,14 +129,8 @@ class Actors extends PureComponent {
                         selectPresence: this.selectPresence
                     }}
                 />
-                {Boolean(presenceType) && Boolean(presenceKey) && (
-                    <div
-                        {...{
-                            className: cx(
-                                'Previewer__scroll'
-                            )
-                        }}
-                    >
+                {/* {Boolean(presenceType) && Boolean(presenceKey) && (
+                    <div {...{ className: 'Previewer__scroll' }}>
                         <PreviewerSvg
                             {...{
                                 presenceType,
@@ -143,7 +139,7 @@ class Actors extends PureComponent {
                             }}
                         />
                     </div>
-                )}
+                )} */}
             </div>
         )
     }

@@ -1,8 +1,12 @@
 import findIndex from 'lodash/findindex'
 import keys from 'lodash/keys'
 
-import { getSvgMapForThingType } from './svg'
+import {
+    getSvgMapForActorType,
+    getSvgMapForThingType
+} from './svg'
 
+import ACTOR_TYPES from '../constants/actors'
 import THING_TYPES from '../constants/things'
 
 import {
@@ -13,40 +17,45 @@ import {
 } from 'constants/access'
 
 const accessPresenceType = ({
+    isActor,
     keyName,
     presenceType,
     selectPresence
 }) => {
+    const typesList = isActor ? ACTOR_TYPES : THING_TYPES
+
     const selectedIndex = findIndex(
-        THING_TYPES,
+        typesList,
         type => type === presenceType
     )
 
     let direction = 0
 
     if (keyName === ARROW_UP) {
-        direction = THING_TYPES.length - 1
+        direction = typesList.length - 1
     }
 
     if (keyName === ARROW_DOWN) {
         direction = 1
     }
 
-    const type = THING_TYPES[
-        (selectedIndex + direction) % THING_TYPES.length
+    const type = typesList[
+        (selectedIndex + direction) % typesList.length
     ]
 
     selectPresence({ type })
 }
 
 const accessPresenceKey = ({
+    isActor,
     keyName,
     presenceType,
     presenceKey,
     selectPresence
 }) => {
     const
-        svgArray = keys(getSvgMapForThingType(presenceType)),
+        mapGetter = isActor ? getSvgMapForActorType : getSvgMapForThingType,
+        svgArray = keys(mapGetter(presenceType)),
         selectedIndex = findIndex(
             svgArray,
             key => key === presenceKey
@@ -70,6 +79,7 @@ const accessPresenceKey = ({
 }
 
 export const accessPresence = ({
+    isActor,
     keyName,
     presenceType,
     presenceKey,
@@ -87,6 +97,7 @@ export const accessPresence = ({
 
     if (accessFunction) {
         accessFunction({
+            isActor,
             keyName,
             selectPresence,
             presenceType,

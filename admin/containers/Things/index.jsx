@@ -20,10 +20,8 @@ import {
     setPresenceInQueryStrings
 } from '../../utils/storage'
 
-import {
-    logSvgCount,
-    getSvgMapForThingType
-} from '../../utils/svg'
+import { logSvgCount } from '../../utils/log'
+import { getSvgMapForThingType } from '../../utils/svg'
 
 import { getHeightAspectRatio } from './helper'
 
@@ -154,13 +152,7 @@ class Things extends PureComponent {
                     }}
                 />
                 {Boolean(presenceType) && Boolean(presenceKey) && (
-                    <div
-                        {...{
-                            className: cx(
-                                'Previewer__scroll'
-                            )
-                        }}
-                    >
+                    <div {...{ className: 'Previewer__scroll' }}>
                         <PreviewerSvg
                             {...{
                                 presenceType,

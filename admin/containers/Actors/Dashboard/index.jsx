@@ -6,7 +6,7 @@ import keys from 'lodash/keys'
 import { convertPresenceKeyToClassName } from 'helpers/format'
 import ACTOR_TYPES from '../../../constants/actors'
 
-import { getSvgMapForThingType } from '../../../utils/svg'
+import { getSvgMapForActorType } from '../../../utils/svg'
 
 class ActorsDashboard extends PureComponent {
 
@@ -31,7 +31,7 @@ class ActorsDashboard extends PureComponent {
                 presenceKey,
                 kilobytes
             } = this.props,
-            svgMap = getSvgMapForThingType(presenceType)
+            svgMap = getSvgMapForActorType(presenceType)
 
         return (
             <div
