@@ -41,16 +41,16 @@ class About extends Component {
                             )
                         }}
                     >
-                        {BOBTAIL_YEARLINGS_EMAIL.split('').map(character => {
-                            return (
-                                <___>
-                                    <span {...{ className: 'displayNoneContainer' }}>
-                                        remove
-                                    </span>
-                                    <span>{character}</span>
-                                </___>
-                            )
-                        })}
+                        {BOBTAIL_YEARLINGS_EMAIL.split('').map((character, index) => (
+                            <___
+                                {...{ key: index }}
+                            >
+                                <span {...{ className: 'displayNoneContainer' }}>
+                                    remove
+                                </span>
+                                <span>{character}</span>
+                            </___>
+                        ))}
                     </span>
                     {'. Please note, I\'ll only respond if it matches my interests and my schedule.'}
                 </p>
