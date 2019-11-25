@@ -3,9 +3,9 @@ import {
     FATHER,
     MIRIAM_BENNETT
 } from 'constants/scene/actors'
-import { SOBBING_SHIELDING } from 'constants/scene/actors/instances/estherMother'
-import { REELING } from 'constants/scene/actors/instances/father'
-import { FENDING_OFF } from 'constants/scene/actors/instances/miriamBennett'
+import { SOBBING_SHIELDING } from 'constants/scene/actors/estherMother'
+import { REELING } from 'constants/scene/actors/father'
+import { FENDING_OFF } from 'constants/scene/actors/miriamBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [ESTHER_MOTHER]: {

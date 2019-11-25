@@ -5,11 +5,11 @@ import {
     ANDREW,
     BRAD
 } from 'constants/scene/actors'
-import { FEIGNING_FEAR } from 'constants/scene/actors/instances/andrew'
-import { TYING_TETHER } from 'constants/scene/actors/instances/bradBennett'
-import { CHARMED_SCHOOLBUS } from 'constants/scene/actors/instances/bradSasha'
-import { PANICKED } from 'constants/scene/actors/instances/preteenBennett'
-import { INDIGNANT } from 'constants/scene/actors/instances/sasha'
+import { FEIGNING_FEAR } from 'constants/scene/actors/andrew'
+import { TYING_TETHER } from 'constants/scene/actors/bradBennett'
+import { CHARMED_SCHOOLBUS } from 'constants/scene/actors/bradSasha'
+import { PANICKED } from 'constants/scene/actors/preteenBennett'
+import { INDIGNANT } from 'constants/scene/actors/sasha'
 
 export default [
     {

@@ -5,9 +5,9 @@ import epilogue from 'assets/svgs/actors/brad/epilogue'
 import {
     GESTURING,
     SNACKING
-} from 'constants/scene/actors/instances/brad'
+} from 'constants/scene/actors/brad'
 
-import { EPILOGUE } from 'constants/scene/actors/instances/songs'
+import { EPILOGUE } from 'constants/scene/actors/songs'
 
 export default {
     [GESTURING]: gesturing,

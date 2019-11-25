@@ -4,9 +4,9 @@ import {
     KHARI,
     STEPHANIE
 } from '../../../constants/scene/actors'
-import { BACKSTAGE } from '../../../constants/scene/actors/instances/songs'
-import { DOUBLE_ALBERT } from '../../../constants/scene/actors/instances/khari'
-import { FLAPPER } from '../../../constants/scene/actors/instances/stephanie'
+import { BACKSTAGE } from '../../../constants/scene/actors/songs'
+import { DOUBLE_ALBERT } from '../../../constants/scene/actors/khari'
+import { FLAPPER } from '../../../constants/scene/actors/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

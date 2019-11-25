@@ -2,8 +2,8 @@ import {
     BENNETT,
     MIRIAM
 } from 'constants/scene/actors'
-import { DISPOSING_CONDOM } from 'constants/scene/actors/instances/bennett'
-import { REVERSING } from 'constants/scene/actors/instances/miriam'
+import { DISPOSING_CONDOM } from 'constants/scene/actors/bennett'
+import { REVERSING } from 'constants/scene/actors/miriam'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

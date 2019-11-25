@@ -5,9 +5,9 @@ import {
     KHARI_LIZ,
     STEPHANIE
 } from '../../../constants/scene/actors'
-import { FUTURE } from '../../../constants/scene/actors/instances/songs'
-import { JOKING_LAUGHING } from '../../../constants/scene/actors/instances/khariLiz'
-import { BENNETT_RECORDING } from '../../../constants/scene/actors/instances/stephanie'
+import { FUTURE } from '../../../constants/scene/actors/songs'
+import { JOKING_LAUGHING } from '../../../constants/scene/actors/khariLiz'
+import { BENNETT_RECORDING } from '../../../constants/scene/actors/stephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

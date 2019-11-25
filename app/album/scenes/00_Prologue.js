@@ -5,7 +5,7 @@ import {
     SEASON_INDOOR
 } from '../../scene/sky/keys'
 import { OLD_BENNETT } from '../../constants/scene/actors'
-import { PROLOGUE } from '../../constants/scene/actors/instances/songs'
+import { PROLOGUE } from '../../constants/scene/actors/songs'
 
 export default [
     {

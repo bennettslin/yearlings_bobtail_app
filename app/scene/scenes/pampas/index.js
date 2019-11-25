@@ -4,8 +4,8 @@ import {
     MARA,
     MIRIAM
 } from '../../../constants/scene/actors'
-import { PAMPAS } from '../../../constants/scene/actors/instances/bennettLiz'
-import { GOPI } from '../../../constants/scene/actors/instances/songs'
+import { PAMPAS } from '../../../constants/scene/actors/bennettLiz'
+import { GOPI } from '../../../constants/scene/actors/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

@@ -78,7 +78,7 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from 'constants/scene/actors/instances/bennett'
+} from 'constants/scene/actors/bennett'
 
 import {
     EATING,
@@ -103,7 +103,7 @@ import {
     PAST,
     FUTURE,
     EL_TORITO
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [BREAKUP_DEJECTED]: breakupDejected,

@@ -2,8 +2,8 @@ import {
     PRETEEN_BENNETT,
     BRAD_SASHA
 } from '../../../constants/scene/actors'
-import { CHARMED_SCHOOLBUS } from '../../../constants/scene/actors/instances/bradSasha'
-import { PANICKED } from '../../../constants/scene/actors/instances/preteenBennett'
+import { CHARMED_SCHOOLBUS } from '../../../constants/scene/actors/bradSasha'
+import { PANICKED } from '../../../constants/scene/actors/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

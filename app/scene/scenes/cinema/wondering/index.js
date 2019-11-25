@@ -3,9 +3,9 @@ import {
     HOWIE,
     MIRIAM
 } from 'constants/scene/actors'
-import { WONDERING_BABY } from 'constants/scene/actors/instances/bennett'
-import { USHER_WAITING } from 'constants/scene/actors/instances/howie'
-import { INFANT_NURSING } from 'constants/scene/actors/instances/miriam'
+import { WONDERING_BABY } from 'constants/scene/actors/bennett'
+import { USHER_WAITING } from 'constants/scene/actors/howie'
+import { INFANT_NURSING } from 'constants/scene/actors/miriam'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

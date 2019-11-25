@@ -5,10 +5,10 @@ import {
     AMY_STEPHANIE,
     WADE
 } from '../../../constants/scene/actors'
-import { PERFORMING } from '../../../constants/scene/actors/instances/songs'
-import { SQUEEZING } from '../../../constants/scene/actors/instances/amyStephanie'
-import { SHANE_SPILLING } from '../../../constants/scene/actors/instances/tomer'
-import { WATCHING } from '../../../constants/scene/actors/instances/wade'
+import { PERFORMING } from '../../../constants/scene/actors/songs'
+import { SQUEEZING } from '../../../constants/scene/actors/amyStephanie'
+import { SHANE_SPILLING } from '../../../constants/scene/actors/tomer'
+import { WATCHING } from '../../../constants/scene/actors/wade'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

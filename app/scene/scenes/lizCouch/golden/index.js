@@ -1,5 +1,5 @@
 import { BENNETT_LIZ } from 'constants/scene/actors'
-import { AWKWARD_CONSOLATION } from 'constants/scene/actors/instances/bennettLiz'
+import { AWKWARD_CONSOLATION } from 'constants/scene/actors/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

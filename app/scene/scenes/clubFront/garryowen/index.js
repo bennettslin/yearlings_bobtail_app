@@ -3,9 +3,9 @@ import {
     ANA,
     MIRIAM_TRISTAN
 } from 'constants/scene/actors'
-import { GREETING } from 'constants/scene/actors/instances/songs'
-import { SMIRKING } from 'constants/scene/actors/instances/ana'
-import { NOOGIE } from 'constants/scene/actors/instances/miriamTristan'
+import { GREETING } from 'constants/scene/actors/songs'
+import { SMIRKING } from 'constants/scene/actors/ana'
+import { NOOGIE } from 'constants/scene/actors/miriamTristan'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

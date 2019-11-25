@@ -25,11 +25,11 @@ import {
     BRAD_BENNETT,
     BRAD_SASHA
 } from '../../constants/scene/actors'
-import { FEIGNING_FEAR } from '../../constants/scene/actors/instances/andrew'
-import { TYING_TETHER } from '../../constants/scene/actors/instances/bradBennett'
-import { CHARMED_SCHOOLBUS } from '../../constants/scene/actors/instances/bradSasha'
-import { PANICKED } from '../../constants/scene/actors/instances/preteenBennett'
-import { INDIGNANT } from '../../constants/scene/actors/instances/sasha'
+import { FEIGNING_FEAR } from '../../constants/scene/actors/andrew'
+import { TYING_TETHER } from '../../constants/scene/actors/bradBennett'
+import { CHARMED_SCHOOLBUS } from '../../constants/scene/actors/bradSasha'
+import { PANICKED } from '../../constants/scene/actors/preteenBennett'
+import { INDIGNANT } from '../../constants/scene/actors/sasha'
 import { TAIWAN_MOUNTAINS_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCH,

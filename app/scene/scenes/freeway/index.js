@@ -1,7 +1,7 @@
 import {
     WILLY
 } from '../../../constants/scene/actors'
-import { COLLECTING } from '../../../constants/scene/actors/instances/willy'
+import { COLLECTING } from '../../../constants/scene/actors/willy'
 
 const ARRANGEMENTS_ACTORS = {
     [WILLY]: {

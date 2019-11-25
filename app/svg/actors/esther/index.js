@@ -6,12 +6,12 @@ import epilogue from 'assets/svgs/actors/esther/epilogue'
 import {
     CURIOUS,
     SNICKERING
-} from 'constants/scene/actors/instances/esther'
+} from 'constants/scene/actors/esther'
 
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [CURIOUS]: curious,

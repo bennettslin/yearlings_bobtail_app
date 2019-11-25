@@ -11,13 +11,13 @@ import {
     FLAPPER,
     BENNETT_DEFIANT,
     BENNETT_RECORDING
-} from 'constants/scene/actors/instances/stephanie'
+} from 'constants/scene/actors/stephanie'
 
 import {
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [BENNETT_KEYBOARD]: bennettKeyboard,

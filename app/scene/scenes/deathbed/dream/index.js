@@ -2,8 +2,8 @@ import {
     BENNETT_LIZ,
     AMY
 } from 'constants/scene/actors'
-import { DOCTOR } from 'constants/scene/actors/instances/amy'
-import { FINAL_DREAM } from 'constants/scene/actors/instances/bennettLiz'
+import { DOCTOR } from 'constants/scene/actors/amy'
+import { FINAL_DREAM } from 'constants/scene/actors/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

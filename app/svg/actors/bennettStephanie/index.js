@@ -4,7 +4,7 @@ import dryingTears from 'assets/svgs/actors/bennettStephanie/dryingTears'
 import {
     HORSING,
     DRYING_TEARS
-} from 'constants/scene/actors/instances/bennettStephanie'
+} from 'constants/scene/actors/bennettStephanie'
 
 export default {
     [HORSING]: horsing,

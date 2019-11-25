@@ -7,9 +7,9 @@ import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from 'constants/scene/actors/instances/anita'
+} from 'constants/scene/actors/anita'
 
-import { YOUNG_CHILD } from 'constants/scene/actors/instances/songs'
+import { YOUNG_CHILD } from 'constants/scene/actors/songs'
 
 export default {
     [EXASPERATED]: exasperated,

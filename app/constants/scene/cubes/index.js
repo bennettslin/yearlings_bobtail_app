@@ -1,4 +1,5 @@
 import { LEFT, RIGHT } from '../../lyrics'
+
 export const SLANT_DIRECTIONS = [
     '',
     LEFT,

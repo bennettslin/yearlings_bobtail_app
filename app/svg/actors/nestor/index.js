@@ -6,12 +6,12 @@ import epilogue from 'assets/svgs/actors/nestor/epilogue'
 import {
     JOGGER,
     INJURED
-} from 'constants/scene/actors/instances/nestor'
+} from 'constants/scene/actors/nestor'
 
 import {
     GREETING,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [JOGGER]: jogger,

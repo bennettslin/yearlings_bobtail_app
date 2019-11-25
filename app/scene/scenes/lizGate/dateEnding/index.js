@@ -2,7 +2,7 @@ import {
     BENNETT,
     LIZ
 } from 'constants/scene/actors'
-import { DATE_ENDING } from 'constants/scene/actors/instances/songs'
+import { DATE_ENDING } from 'constants/scene/actors/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

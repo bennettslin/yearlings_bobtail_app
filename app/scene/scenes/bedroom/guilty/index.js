@@ -1,5 +1,5 @@
 import { CHRISTOPHER_BENNETT } from 'constants/scene/actors'
-import { BLISSFUL_GUILTY } from 'constants/scene/actors/instances/christopherBennett'
+import { BLISSFUL_GUILTY } from 'constants/scene/actors/christopherBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [CHRISTOPHER_BENNETT]: {

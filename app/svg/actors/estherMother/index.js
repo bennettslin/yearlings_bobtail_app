@@ -4,7 +4,7 @@ import sobbingShielding from 'assets/svgs/actors/estherMother/sobbingShielding'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from 'constants/scene/actors/instances/estherMother'
+} from 'constants/scene/actors/estherMother'
 
 export default {
     [HURT_CONSOLING]: hurtConsoling,

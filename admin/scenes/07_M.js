@@ -11,7 +11,7 @@ import {
 } from 'constants/scene/actors'
 import {
     SQUATTING
-} from 'constants/scene/actors/instances/ana'
+} from 'constants/scene/actors/ana'
 import {
     PONDERING,
     COUCH_READING,
@@ -20,21 +20,21 @@ import {
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
     MERRILY_DERANGED
-} from 'constants/scene/actors/instances/bennett'
+} from 'constants/scene/actors/bennett'
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'constants/scene/actors/instances/howie'
+} from 'constants/scene/actors/howie'
 import {
     INFANT_CURIOUS,
     INFANT_NURSING
-} from 'constants/scene/actors/instances/miriam'
-import { BENNETT_KEYBOARD } from 'constants/scene/actors/instances/stephanie'
-import { SHANE_BUYING } from 'constants/scene/actors/instances/tomer'
+} from 'constants/scene/actors/miriam'
+import { BENNETT_KEYBOARD } from 'constants/scene/actors/stephanie'
+import { SHANE_BUYING } from 'constants/scene/actors/tomer'
 import {
     FLIRTING,
     EATING
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default [
     {

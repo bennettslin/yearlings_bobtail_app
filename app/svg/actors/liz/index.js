@@ -26,7 +26,7 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from 'constants/scene/actors/instances/liz'
+} from 'constants/scene/actors/liz'
 
 import {
     DATE_ENDING,
@@ -39,7 +39,7 @@ import {
     RUMPLED_LINENS,
     LEAVING_CRUMBLED,
     EL_TORITO
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [DATE_ENDING]: dateEnding,

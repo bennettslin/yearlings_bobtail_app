@@ -3,9 +3,9 @@ import {
     SASHA,
     ANDREW
 } from '../../../constants/scene/actors'
-import { FEIGNING_FEAR } from '../../../constants/scene/actors/instances/andrew'
-import { TYING_TETHER } from '../../../constants/scene/actors/instances/bradBennett'
-import { INDIGNANT } from '../../../constants/scene/actors/instances/sasha'
+import { FEIGNING_FEAR } from '../../../constants/scene/actors/andrew'
+import { TYING_TETHER } from '../../../constants/scene/actors/bradBennett'
+import { INDIGNANT } from '../../../constants/scene/actors/sasha'
 
 const ARRANGEMENTS_ACTORS = {
     [BRAD_BENNETT]: {

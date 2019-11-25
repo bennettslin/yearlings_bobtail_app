@@ -4,10 +4,10 @@ import {
     TRISTAN,
     NESTOR
 } from 'constants/scene/actors'
-import { CHUCKLING } from 'constants/scene/actors/instances/ana'
-import { DROPPING_MEATS } from 'constants/scene/actors/instances/bennett'
-import { INJURED } from 'constants/scene/actors/instances/nestor'
-import { PUNCHING } from 'constants/scene/actors/instances/tristan'
+import { CHUCKLING } from 'constants/scene/actors/ana'
+import { DROPPING_MEATS } from 'constants/scene/actors/bennett'
+import { INJURED } from 'constants/scene/actors/nestor'
+import { PUNCHING } from 'constants/scene/actors/tristan'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

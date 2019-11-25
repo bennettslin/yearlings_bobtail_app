@@ -2,8 +2,8 @@ import {
     BENNETT,
     MIRIAM
 } from 'constants/scene/actors'
-import { HOPELESSLY_CRUSHED } from 'constants/scene/actors/instances/bennett'
-import { INFANT_CURIOUS } from 'constants/scene/actors/instances/miriam'
+import { HOPELESSLY_CRUSHED } from 'constants/scene/actors/bennett'
+import { INFANT_CURIOUS } from 'constants/scene/actors/miriam'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

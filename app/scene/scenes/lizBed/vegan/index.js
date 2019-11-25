@@ -3,11 +3,11 @@ import {
     KHARI_LIZ,
     KHARI_LIZ_REFLECTION
 } from 'constants/scene/actors'
-import { BROKEN_HEARTED } from 'constants/scene/actors/instances/bennett'
+import { BROKEN_HEARTED } from 'constants/scene/actors/bennett'
 import {
     CARESS,
     CARESS_REFLECTION
-} from 'constants/scene/actors/instances/khariLiz'
+} from 'constants/scene/actors/khariLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

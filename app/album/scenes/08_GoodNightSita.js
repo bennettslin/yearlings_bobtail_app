@@ -25,15 +25,15 @@ import {
     KHARI,
     STEPHANIE
 } from '../../constants/scene/actors'
-import { DOUBLE_ALBERT } from '../../constants/scene/actors/instances/khari'
-import { FLAPPER } from '../../constants/scene/actors/instances/stephanie'
+import { DOUBLE_ALBERT } from '../../constants/scene/actors/khari'
+import { FLAPPER } from '../../constants/scene/actors/stephanie'
 import {
     DATE_ENDING,
     MUSEUM,
     BACKSTAGE,
     GO_KARTS,
     DATE_ENDED
-} from '../../constants/scene/actors/instances/songs'
+} from '../../constants/scene/actors/songs'
 import { DRIVING_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GO_KART,

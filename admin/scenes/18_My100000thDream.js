@@ -9,17 +9,17 @@ import {
 } from 'constants/scene/actors'
 import {
     DOCTOR
-} from 'constants/scene/actors/instances/amy'
+} from 'constants/scene/actors/amy'
 import {
     EL_TORITO,
     GOPI
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 import {
     PAMPAS,
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from 'constants/scene/actors/instances/bennettLiz'
+} from 'constants/scene/actors/bennettLiz'
 
 export default [
     {

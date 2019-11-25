@@ -1,5 +1,5 @@
 import { BENNETT_LIZ } from 'constants/scene/actors'
-import { BRUSH_OFF } from 'constants/scene/actors/instances/bennettLiz'
+import { BRUSH_OFF } from 'constants/scene/actors/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

@@ -1,5 +1,5 @@
 import { YOUNG_BENNETT } from 'constants/scene/actors'
-import { BATHING } from 'constants/scene/actors/instances/youngBennett'
+import { BATHING } from 'constants/scene/actors/youngBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {

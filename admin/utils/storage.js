@@ -5,7 +5,7 @@ import {
     setInStorage
 } from 'utils/window'
 
-import { THING_TYPES } from '../constants/things'
+import THING_TYPES from '../constants/things'
 import { getSvgMapForThingType } from './svg'
 
 export const getPresenceFromStorage = () => {

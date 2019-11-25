@@ -1,5 +1,5 @@
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALLEY } from '../../../constants/scene/actors/instances/bennett'
+import { ALLEY } from '../../../constants/scene/actors/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

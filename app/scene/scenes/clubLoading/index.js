@@ -9,8 +9,8 @@ import {
 import {
     MINGLING,
     WAITING
-} from '../../../constants/scene/actors/instances/songs'
-import { SIDELONG_HESITANCE } from '../../../constants/scene/actors/instances/bennett'
+} from '../../../constants/scene/actors/songs'
+import { SIDELONG_HESITANCE } from '../../../constants/scene/actors/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

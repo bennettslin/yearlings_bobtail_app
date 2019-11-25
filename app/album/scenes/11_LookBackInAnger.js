@@ -34,21 +34,21 @@ import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from '../../constants/scene/actors/instances/bennett'
+} from '../../constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from '../../constants/scene/actors/instances/liz'
-import { SHANE_SPILLING } from '../../constants/scene/actors/instances/tomer'
-import { WATCHING } from '../../constants/scene/actors/instances/wade'
-import { SQUEEZING } from '../../constants/scene/actors/instances/amyStephanie'
+} from '../../constants/scene/actors/liz'
+import { SHANE_SPILLING } from '../../constants/scene/actors/tomer'
+import { WATCHING } from '../../constants/scene/actors/wade'
+import { SQUEEZING } from '../../constants/scene/actors/amyStephanie'
 import {
     PERFORMING,
     FLIRTING,
     CARRYING,
     MINGLING,
     WAITING
-} from '../../constants/scene/actors/instances/songs'
+} from '../../constants/scene/actors/songs'
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,

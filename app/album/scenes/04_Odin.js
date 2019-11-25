@@ -35,8 +35,8 @@ import {
     SHORE,
     BUOY,
     OCEAN_FLOOR
-} from '../../constants/scene/actors/instances/preteenBennett'
-import { MERMAID } from '../../constants/scene/actors/instances/sashaBennett'
+} from '../../constants/scene/actors/preteenBennett'
+import { MERMAID } from '../../constants/scene/actors/sashaBennett'
 import {
     TAIWAN_STAIRS_BACKDROP,
     MOUNTAIN_BACKDROP,

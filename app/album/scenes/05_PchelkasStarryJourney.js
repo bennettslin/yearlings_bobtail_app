@@ -36,24 +36,24 @@ import {
 import {
     THROWING,
     NOODLING
-} from '../../constants/scene/actors/instances/andrew'
+} from '../../constants/scene/actors/andrew'
 import {
     GESTURING,
     SNACKING
-} from '../../constants/scene/actors/instances/brad'
-import { STARING } from '../../constants/scene/actors/instances/christopher'
-import { BLISSFUL_GUILTY } from '../../constants/scene/actors/instances/christopherBennett'
-import { ARGUING } from '../../constants/scene/actors/instances/mother'
+} from '../../constants/scene/actors/brad'
+import { STARING } from '../../constants/scene/actors/christopher'
+import { BLISSFUL_GUILTY } from '../../constants/scene/actors/christopherBennett'
+import { ARGUING } from '../../constants/scene/actors/mother'
 import {
     FEIGNING_SICK,
     SHAKEN,
     STOIC,
     WISTFUL,
     SHEEPISH
-} from '../../constants/scene/actors/instances/preteenBennett'
-import { POPULAR_GIRL } from '../../constants/scene/actors/instances/sasha'
-import { ASLEEP } from '../../constants/scene/actors/instances/songs'
-import { PRINCIPAL } from '../../constants/scene/actors/instances/tristan'
+} from '../../constants/scene/actors/preteenBennett'
+import { POPULAR_GIRL } from '../../constants/scene/actors/sasha'
+import { ASLEEP } from '../../constants/scene/actors/songs'
+import { PRINCIPAL } from '../../constants/scene/actors/tristan'
 import { SCHOOL_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     DOGS_SKETCH,

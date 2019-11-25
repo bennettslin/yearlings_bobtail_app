@@ -24,7 +24,7 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from 'constants/scene/actors/instances/bennettLiz'
+} from 'constants/scene/actors/bennettLiz'
 
 export default {
     [GINGERBREAD_PRISON]: gingerbreadPrison,

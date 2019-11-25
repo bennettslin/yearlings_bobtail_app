@@ -5,7 +5,7 @@ import {
 import {
     HARD_ON,
     HARD_ON_REFLECTION
-} from 'constants/scene/actors/instances/bennettLiz'
+} from 'constants/scene/actors/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

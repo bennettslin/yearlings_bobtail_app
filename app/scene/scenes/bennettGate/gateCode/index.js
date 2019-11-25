@@ -3,8 +3,8 @@ import {
     LIZ,
     NESTOR
 } from 'constants/scene/actors'
-import { GATE_CODE } from 'constants/scene/actors/instances/songs'
-import { JOGGER } from 'constants/scene/actors/instances/nestor'
+import { GATE_CODE } from 'constants/scene/actors/songs'
+import { JOGGER } from 'constants/scene/actors/nestor'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

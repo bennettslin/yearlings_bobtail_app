@@ -4,8 +4,8 @@ import {
     STEPHANIE,
     WADE
 } from 'constants/scene/actors'
-import { PROTESTER } from 'constants/scene/actors/instances/songs'
-import { DEMONSTRATION } from 'constants/scene/actors/instances/bennett'
+import { PROTESTER } from 'constants/scene/actors/songs'
+import { DEMONSTRATION } from 'constants/scene/actors/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

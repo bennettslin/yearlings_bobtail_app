@@ -2,8 +2,8 @@ import {
     BENNETT,
     HOWIE
 } from '../../../constants/scene/actors'
-import { MERRILY_DERANGED } from '../../../constants/scene/actors/instances/bennett'
-import { USHER_LOOKING } from '../../../constants/scene/actors/instances/howie'
+import { MERRILY_DERANGED } from '../../../constants/scene/actors/bennett'
+import { USHER_LOOKING } from '../../../constants/scene/actors/howie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

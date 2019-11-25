@@ -9,9 +9,9 @@ import {
     FENDING_OFF,
     COWGIRL,
     BLOWJOB
-} from 'constants/scene/actors/instances/miriamBennett'
+} from 'constants/scene/actors/miriamBennett'
 
-import { ASLEEP } from 'constants/scene/actors/instances/songs'
+import { ASLEEP } from 'constants/scene/actors/songs'
 
 export default {
     [ASLEEP]: asleep,

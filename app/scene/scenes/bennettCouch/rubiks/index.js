@@ -1,5 +1,5 @@
 import { BENNETT } from 'constants/scene/actors'
-import { RUBIKS_CUBE } from 'constants/scene/actors/instances/bennett'
+import { RUBIKS_CUBE } from 'constants/scene/actors/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

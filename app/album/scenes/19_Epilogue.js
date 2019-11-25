@@ -32,7 +32,7 @@ import {
     WADE
 } from '../../constants/scene/actors'
 
-import { EPILOGUE } from '../../constants/scene/actors/instances/songs'
+import { EPILOGUE } from '../../constants/scene/actors/songs'
 
 export default [
     {

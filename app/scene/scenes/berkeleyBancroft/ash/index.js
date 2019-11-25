@@ -3,9 +3,9 @@ import {
     AMY,
     WADE
 } from 'constants/scene/actors'
-import { SMOKER } from 'constants/scene/actors/instances/amy'
-import { CATHOLIC_IDEA } from 'constants/scene/actors/instances/bennett'
-import { CATHOLIC_GUY } from 'constants/scene/actors/instances/wade'
+import { SMOKER } from 'constants/scene/actors/amy'
+import { CATHOLIC_IDEA } from 'constants/scene/actors/bennett'
+import { CATHOLIC_GUY } from 'constants/scene/actors/wade'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

@@ -8,12 +8,12 @@ import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from 'constants/scene/actors/instances/catherine'
+} from 'constants/scene/actors/catherine'
 
 import {
     GOPI,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [WEEPING]: weeping,

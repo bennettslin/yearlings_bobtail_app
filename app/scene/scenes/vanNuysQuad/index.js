@@ -4,10 +4,10 @@ import {
     BRAD,
     ANDREW
 } from '../../../constants/scene/actors'
-import { NOODLING } from '../../../constants/scene/actors/instances/andrew'
-import { SNACKING } from '../../../constants/scene/actors/instances/brad'
-import { WISTFUL } from '../../../constants/scene/actors/instances/preteenBennett'
-import { POPULAR_GIRL } from '../../../constants/scene/actors/instances/sasha'
+import { NOODLING } from '../../../constants/scene/actors/andrew'
+import { SNACKING } from '../../../constants/scene/actors/brad'
+import { WISTFUL } from '../../../constants/scene/actors/preteenBennett'
+import { POPULAR_GIRL } from '../../../constants/scene/actors/sasha'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

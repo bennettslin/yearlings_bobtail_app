@@ -4,10 +4,10 @@ import {
     CHRISTOPHER,
     TRISTAN
 } from '../../../constants/scene/actors'
-import { STARING } from '../../../constants/scene/actors/instances/christopher'
-import { ARGUING } from '../../../constants/scene/actors/instances/mother'
-import { SHEEPISH } from '../../../constants/scene/actors/instances/preteenBennett'
-import { PRINCIPAL } from '../../../constants/scene/actors/instances/tristan'
+import { STARING } from '../../../constants/scene/actors/christopher'
+import { ARGUING } from '../../../constants/scene/actors/mother'
+import { SHEEPISH } from '../../../constants/scene/actors/preteenBennett'
+import { PRINCIPAL } from '../../../constants/scene/actors/tristan'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

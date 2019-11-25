@@ -22,7 +22,7 @@ import {
     STEPHANIE,
     WADE
 } from 'constants/scene/actors'
-import { EPILOGUE } from 'constants/scene/actors/instances/songs'
+import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETTS_CHRISTOPHER_LIZ]: {

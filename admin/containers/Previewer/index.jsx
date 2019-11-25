@@ -24,7 +24,7 @@ import {
     getSvgMapForThingType
 } from '../../utils/svg'
 
-import { THING_TYPES } from '../../constants/things'
+import THING_TYPES from '../../constants/things'
 
 import {
     ARROW_UP,

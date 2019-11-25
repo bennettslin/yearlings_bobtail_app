@@ -4,7 +4,7 @@ import popularGirl from 'assets/svgs/actors/sasha/popularGirl'
 import {
     INDIGNANT,
     POPULAR_GIRL
-} from 'constants/scene/actors/instances/sasha'
+} from 'constants/scene/actors/sasha'
 
 export default {
     [INDIGNANT]: indignant,

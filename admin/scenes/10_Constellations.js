@@ -12,7 +12,7 @@ import {
     CEMETERY,
     STATION_WAGON,
     ATTIC
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default [
     {

@@ -2,8 +2,8 @@ import {
     LIZ,
     KHARI
 } from 'constants/scene/actors'
-import { ARRIVED } from 'constants/scene/actors/instances/khari'
-import { OPENING_DOOR } from 'constants/scene/actors/instances/liz'
+import { ARRIVED } from 'constants/scene/actors/khari'
+import { OPENING_DOOR } from 'constants/scene/actors/liz'
 
 const ARRANGEMENTS_ACTORS = {
     [LIZ]: {

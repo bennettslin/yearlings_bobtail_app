@@ -3,8 +3,8 @@ import {
     MOTHER,
     MIRIAM_STEPHANIE
 } from '../../../constants/scene/actors'
-import { PRESENT } from '../../../constants/scene/actors/instances/songs'
-import { MISCHIEVOUS_BANJO } from '../../../constants/scene/actors/instances/miriamStephanie'
+import { PRESENT } from '../../../constants/scene/actors/songs'
+import { MISCHIEVOUS_BANJO } from '../../../constants/scene/actors/miriamStephanie'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_FATHER]: {

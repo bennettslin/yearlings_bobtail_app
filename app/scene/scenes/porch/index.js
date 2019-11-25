@@ -4,10 +4,10 @@ import {
     MOTHER,
     CHRISTOPHER
 } from '../../../constants/scene/actors'
-import { TANTRUM } from '../../../constants/scene/actors/instances/christopher'
-import { STOOPING } from '../../../constants/scene/actors/instances/mother'
-import { CAUTIOUS } from '../../../constants/scene/actors/instances/preteenBennett'
-import { DUCKING } from '../../../constants/scene/actors/instances/willy'
+import { TANTRUM } from '../../../constants/scene/actors/christopher'
+import { STOOPING } from '../../../constants/scene/actors/mother'
+import { CAUTIOUS } from '../../../constants/scene/actors/preteenBennett'
+import { DUCKING } from '../../../constants/scene/actors/willy'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

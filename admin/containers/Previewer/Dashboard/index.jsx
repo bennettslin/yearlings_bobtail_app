@@ -4,7 +4,7 @@ import cx from 'classnames'
 import keys from 'lodash/keys'
 
 import { convertPresenceKeyToClassName } from 'helpers/format'
-import { THING_TYPES } from '../../../constants/things'
+import THING_TYPES from '../../../constants/things'
 
 import { getSvgMapForThingType } from '../../../utils/svg'
 

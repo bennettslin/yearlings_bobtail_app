@@ -4,7 +4,7 @@ import {
     HOWIE,
     TOMER
 } from '../../../constants/scene/actors'
-import { ABBEY_ROAD } from '../../../constants/scene/actors/instances/songs'
+import { ABBEY_ROAD } from '../../../constants/scene/actors/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

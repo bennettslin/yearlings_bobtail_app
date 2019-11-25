@@ -5,7 +5,7 @@ import {
 import {
     AFTERGLOW,
     AFTERGLOW_REFLECTION
-} from 'constants/scene/actors/instances/bennettLiz'
+} from 'constants/scene/actors/bennettLiz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT_LIZ]: {

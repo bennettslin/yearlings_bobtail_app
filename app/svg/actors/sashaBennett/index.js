@@ -5,9 +5,9 @@ import epilogue from 'assets/svgs/actors/sashaBennett/epilogue'
 import {
     MERMAID,
     COMFORTING_HUMILIATED
-} from 'constants/scene/actors/instances/sashaBennett'
+} from 'constants/scene/actors/sashaBennett'
 
-import { EPILOGUE } from 'constants/scene/actors/instances/songs'
+import { EPILOGUE } from 'constants/scene/actors/songs'
 
 export default {
     [MERMAID]: mermaid,

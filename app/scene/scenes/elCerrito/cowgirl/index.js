@@ -1,5 +1,5 @@
 import { MIRIAM_BENNETT } from 'constants/scene/actors'
-import { COWGIRL } from 'constants/scene/actors/instances/miriamBennett'
+import { COWGIRL } from 'constants/scene/actors/miriamBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [MIRIAM_BENNETT]: {

@@ -29,23 +29,23 @@ import {
     AMY_NESTOR_TOMER,
     STEPHANIE
 } from '../../constants/scene/actors'
-import { OFFICER } from '../../constants/scene/actors/instances/amyNestorTomer'
+import { OFFICER } from '../../constants/scene/actors/amyNestorTomer'
 import {
     CORD_SIDE,
     CORD_REAR
-} from '../../constants/scene/actors/instances/bennett'
+} from '../../constants/scene/actors/bennett'
 import {
     AWKWARD_CONSOLATION
-} from '../../constants/scene/actors/instances/bennettLiz'
+} from '../../constants/scene/actors/bennettLiz'
 import {
     HORSING,
     DRYING_TEARS
-} from '../../constants/scene/actors/instances/bennettStephanie'
+} from '../../constants/scene/actors/bennettStephanie'
 import {
     BENNETT_DEFIANT
-} from '../../constants/scene/actors/instances/stephanie'
-import { CROSSING_GUARD } from '../../constants/scene/actors/instances/willy'
-import { YOUNG_CHILD } from '../../constants/scene/actors/instances/songs'
+} from '../../constants/scene/actors/stephanie'
+import { CROSSING_GUARD } from '../../constants/scene/actors/willy'
+import { YOUNG_CHILD } from '../../constants/scene/actors/songs'
 import {
     OAKLAND_SIDE_BACKDROP,
     OAKLAND_FRONT_BACKDROP

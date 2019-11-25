@@ -7,11 +7,11 @@ import {
 import {
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from 'constants/scene/actors/instances/bennett'
+} from 'constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from 'constants/scene/actors/instances/liz'
+} from 'constants/scene/actors/liz'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

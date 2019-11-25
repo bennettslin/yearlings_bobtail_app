@@ -2,7 +2,7 @@ import {
     HOWIE_WILLY,
     TOMER
 } from 'constants/scene/actors'
-import { GANGBANGER } from 'constants/scene/actors/instances/songs'
+import { GANGBANGER } from 'constants/scene/actors/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [HOWIE_WILLY]: {

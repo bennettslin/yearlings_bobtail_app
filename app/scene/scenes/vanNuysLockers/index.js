@@ -3,9 +3,9 @@ import {
     BRAD,
     ANDREW
 } from '../../../constants/scene/actors'
-import { THROWING } from '../../../constants/scene/actors/instances/andrew'
-import { GESTURING } from '../../../constants/scene/actors/instances/brad'
-import { STOIC } from '../../../constants/scene/actors/instances/preteenBennett'
+import { THROWING } from '../../../constants/scene/actors/andrew'
+import { GESTURING } from '../../../constants/scene/actors/brad'
+import { STOIC } from '../../../constants/scene/actors/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

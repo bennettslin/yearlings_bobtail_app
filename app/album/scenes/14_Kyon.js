@@ -25,7 +25,7 @@ import {
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from '../../constants/scene/actors/instances/khari'
+} from '../../constants/scene/actors/khari'
 import {
     PETTING_SEATED,
     PETTING_STANDING,
@@ -34,7 +34,7 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from '../../constants/scene/actors/instances/liz'
+} from '../../constants/scene/actors/liz'
 import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,

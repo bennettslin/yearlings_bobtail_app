@@ -1,5 +1,5 @@
 import { BENNETT } from 'constants/scene/actors'
-import { WAITING_ROOM_ASLEEP } from 'constants/scene/actors/instances/bennett'
+import { WAITING_ROOM_ASLEEP } from 'constants/scene/actors/bennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

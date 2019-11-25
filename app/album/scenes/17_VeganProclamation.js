@@ -36,16 +36,16 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from '../../constants/scene/actors/instances/bennett'
+} from '../../constants/scene/actors/bennett'
 import {
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION
-} from '../../constants/scene/actors/instances/khariLiz'
+} from '../../constants/scene/actors/khariLiz'
 import {
     GREETING,
     PROTESTER
-} from '../../constants/scene/actors/instances/songs'
+} from '../../constants/scene/actors/songs'
 import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     SIGNPOST,

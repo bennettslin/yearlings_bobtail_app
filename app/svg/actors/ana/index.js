@@ -14,7 +14,7 @@ import {
     SQUATTING,
     CHUCKLING,
     SMIRKING
-} from 'constants/scene/actors/instances/ana'
+} from 'constants/scene/actors/ana'
 
 import {
     EATING,
@@ -25,7 +25,7 @@ import {
     PERFORMING,
     WAITING,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [SQUATTING]: squatting,

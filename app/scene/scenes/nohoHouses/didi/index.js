@@ -3,9 +3,9 @@ import {
     ANITA,
     ESTHER
 } from 'constants/scene/actors'
-import { EXASPERATED } from 'constants/scene/actors/instances/anita'
-import { CURIOUS } from 'constants/scene/actors/instances/esther'
-import { PANICKED } from 'constants/scene/actors/instances/youngBennett'
+import { EXASPERATED } from 'constants/scene/actors/anita'
+import { CURIOUS } from 'constants/scene/actors/esther'
+import { PANICKED } from 'constants/scene/actors/youngBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {

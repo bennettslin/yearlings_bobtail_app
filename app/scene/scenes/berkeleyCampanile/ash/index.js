@@ -2,8 +2,8 @@ import {
     BENNETT,
     CATHERINE
 } from 'constants/scene/actors'
-import { PIOUS } from 'constants/scene/actors/instances/bennett'
-import { PUZZLED } from 'constants/scene/actors/instances/catherine'
+import { PIOUS } from 'constants/scene/actors/bennett'
+import { PUZZLED } from 'constants/scene/actors/catherine'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

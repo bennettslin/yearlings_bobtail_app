@@ -3,10 +3,10 @@ import {
     FATHER,
     MIRIAM_BENNETT
 } from 'constants/scene/actors'
-import { ASLEEP } from 'constants/scene/actors/instances/songs'
-import { ASLEEP_FEARFUL } from 'constants/scene/actors/instances/miriamBennett'
-import { HURT_CONSOLING } from 'constants/scene/actors/instances/estherMother'
-import { ACCUSATORY } from 'constants/scene/actors/instances/father'
+import { ASLEEP } from 'constants/scene/actors/songs'
+import { ASLEEP_FEARFUL } from 'constants/scene/actors/miriamBennett'
+import { HURT_CONSOLING } from 'constants/scene/actors/estherMother'
+import { ACCUSATORY } from 'constants/scene/actors/father'
 
 const ARRANGEMENTS_ACTORS = {
     [ESTHER_MOTHER]: {

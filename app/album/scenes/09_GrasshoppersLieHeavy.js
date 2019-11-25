@@ -36,15 +36,15 @@ import {
     DISHROOM_READING,
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
-} from '../../constants/scene/actors/instances/bennett'
-import { JOGGER } from '../../constants/scene/actors/instances/nestor'
+} from '../../constants/scene/actors/bennett'
+import { JOGGER } from '../../constants/scene/actors/nestor'
 import {
     DISHROOM_LANCET,
     DATE_ENDING,
     DATE_ENDED,
     GATE_CODE,
     RUMPLED_LINENS
-} from '../../constants/scene/actors/instances/songs'
+} from '../../constants/scene/actors/songs'
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -54,7 +54,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from '../../constants/scene/actors/instances/bennettLiz'
+} from '../../constants/scene/actors/bennettLiz'
 import {
     BUBBLE_SMALL__WAITING,
     BUBBLE_MEDIUM__WAITING,

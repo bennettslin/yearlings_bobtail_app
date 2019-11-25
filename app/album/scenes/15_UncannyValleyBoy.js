@@ -37,26 +37,26 @@ import {
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from '../../constants/scene/actors/instances/estherMother'
+} from '../../constants/scene/actors/estherMother'
 import {
     ACCUSATORY,
     REELING
-} from '../../constants/scene/actors/instances/father'
-import { JOKING_LAUGHING } from '../../constants/scene/actors/instances/khariLiz'
-import { PETTING_SEATED } from '../../constants/scene/actors/instances/liz'
+} from '../../constants/scene/actors/father'
+import { JOKING_LAUGHING } from '../../constants/scene/actors/khariLiz'
+import { PETTING_SEATED } from '../../constants/scene/actors/liz'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF
-} from '../../constants/scene/actors/instances/miriamBennett'
-import { MISCHIEVOUS_BANJO } from '../../constants/scene/actors/instances/miriamStephanie'
-import { COMFORTING_HUMILIATED } from '../../constants/scene/actors/instances/sashaBennett'
-import { BENNETT_RECORDING } from '../../constants/scene/actors/instances/stephanie'
+} from '../../constants/scene/actors/miriamBennett'
+import { MISCHIEVOUS_BANJO } from '../../constants/scene/actors/miriamStephanie'
+import { COMFORTING_HUMILIATED } from '../../constants/scene/actors/sashaBennett'
+import { BENNETT_RECORDING } from '../../constants/scene/actors/stephanie'
 import {
     ASLEEP,
     PAST,
     PRESENT,
     FUTURE
-} from '../../constants/scene/actors/instances/songs'
+} from '../../constants/scene/actors/songs'
 import {
     ROAD_PAST,
     ROAD_PRESENT,

@@ -12,12 +12,12 @@ import {
     PERFUMING,
     TENNIS,
     REVERSING
-} from 'constants/scene/actors/instances/miriam'
+} from 'constants/scene/actors/miriam'
 
 import {
     GOPI,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [INFANT_CURIOUS]: infantCurious,

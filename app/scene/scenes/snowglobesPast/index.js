@@ -3,8 +3,8 @@ import {
     FATHER,
     SASHA_BENNETT
 } from '../../../constants/scene/actors'
-import { PAST } from '../../../constants/scene/actors/instances/songs'
-import { COMFORTING_HUMILIATED } from '../../../constants/scene/actors/instances/sashaBennett'
+import { PAST } from '../../../constants/scene/actors/songs'
+import { COMFORTING_HUMILIATED } from '../../../constants/scene/actors/sashaBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

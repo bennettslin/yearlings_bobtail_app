@@ -1,5 +1,5 @@
 import { LIZ } from 'constants/scene/actors'
-import { SIFTING_TCHOTCHKES } from 'constants/scene/actors/instances/liz'
+import { SIFTING_TCHOTCHKES } from 'constants/scene/actors/liz'
 
 const ARRANGEMENTS_ACTORS = {
     [LIZ]: {

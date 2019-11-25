@@ -3,9 +3,9 @@ import {
     FATHER,
     CHRISTOPHER
 } from 'constants/scene/actors'
-import { SOBBING } from 'constants/scene/actors/instances/christopher'
-import { ROARING } from 'constants/scene/actors/instances/father'
-import { ENRAGED } from 'constants/scene/actors/instances/preteenBennett'
+import { SOBBING } from 'constants/scene/actors/christopher'
+import { ROARING } from 'constants/scene/actors/father'
+import { ENRAGED } from 'constants/scene/actors/preteenBennett'
 
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {

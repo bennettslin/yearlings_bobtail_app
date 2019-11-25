@@ -10,7 +10,7 @@ import {
     WAITING,
     GOPI,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [FLIRTING]: flirting,

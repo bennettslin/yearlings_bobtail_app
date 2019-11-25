@@ -12,22 +12,22 @@ import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL
-} from 'constants/scene/actors/instances/preteenBennett'
+} from 'constants/scene/actors/preteenBennett'
 import {
     COLLECTING,
     DUCKING
-} from 'constants/scene/actors/instances/willy'
+} from 'constants/scene/actors/willy'
 import {
     STOOPING,
     COMFORTING
-} from 'constants/scene/actors/instances/mother'
-import { ROARING } from 'constants/scene/actors/instances/father'
+} from 'constants/scene/actors/mother'
+import { ROARING } from 'constants/scene/actors/father'
 import {
     TANTRUM,
     SOBBING
-} from 'constants/scene/actors/instances/christopher'
-import { REASSURING_ENCHANTED } from 'constants/scene/actors/instances/christopherBennettWilly'
-import { GANGBANGER } from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/christopher'
+import { REASSURING_ENCHANTED } from 'constants/scene/actors/christopherBennettWilly'
+import { GANGBANGER } from 'constants/scene/actors/songs'
 
 export default [
     {

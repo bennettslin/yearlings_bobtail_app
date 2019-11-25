@@ -6,7 +6,7 @@ import {
     FLIRTING,
     CARRYING,
     EPILOGUE
-} from 'constants/scene/actors/instances/songs'
+} from 'constants/scene/actors/songs'
 
 export default {
     [CARRYING]: carrying,

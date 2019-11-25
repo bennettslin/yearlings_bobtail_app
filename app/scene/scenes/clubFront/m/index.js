@@ -5,10 +5,10 @@ import {
     ANA,
     TOMER
 } from 'constants/scene/actors'
-import { FLIRTING } from 'constants/scene/actors/instances/songs'
-import { SQUATTING } from 'constants/scene/actors/instances/ana'
-import { DISTRACTED } from 'constants/scene/actors/instances/bennett'
-import { SHANE_BUYING } from 'constants/scene/actors/instances/tomer'
+import { FLIRTING } from 'constants/scene/actors/songs'
+import { SQUATTING } from 'constants/scene/actors/ana'
+import { DISTRACTED } from 'constants/scene/actors/bennett'
+import { SHANE_BUYING } from 'constants/scene/actors/tomer'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

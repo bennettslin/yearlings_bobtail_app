@@ -4,7 +4,7 @@ import {
     HOWIE,
     TOMER
 } from '../../../constants/scene/actors'
-import { STATION_WAGON } from '../../../constants/scene/actors/instances/songs'
+import { STATION_WAGON } from '../../../constants/scene/actors/songs'
 
 const ARRANGEMENTS_ACTORS = {
     [BENNETT]: {

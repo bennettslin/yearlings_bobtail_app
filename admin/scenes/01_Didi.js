@@ -9,16 +9,16 @@ import {
     FLUSTERED,
     BATHING,
     SINGING
-} from 'constants/scene/actors/instances/youngBennett'
+} from 'constants/scene/actors/youngBennett'
 import {
     EXASPERATED,
     CONCERNED,
     CHEERING
-} from 'constants/scene/actors/instances/anita'
+} from 'constants/scene/actors/anita'
 import {
     CURIOUS,
     SNICKERING
-} from 'constants/scene/actors/instances/esther'
+} from 'constants/scene/actors/esther'
 
 export default [
     {
