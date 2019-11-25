@@ -22,8 +22,6 @@ import {
 
 import { getSvgMapForWholeActor } from '../../utils/svg'
 
-import { ACTOR } from 'constants/scene'
-
 class Actors extends PureComponent {
     constructor(props) {
         super(props)
@@ -137,9 +135,9 @@ class Actors extends PureComponent {
                 />
                 <div {...{ className: 'Previewer__scroll' }}>
                     <PreviewerSvg
+                        isActor
                         {...{
-                            presenceType: ACTOR,
-                            actorKey: presenceType,
+                            presenceType,
                             presenceKey,
                             handleProcessSvg: this.handleProcessSvg
                         }}

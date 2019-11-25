@@ -19,8 +19,7 @@ import { ACTOR } from 'constants/scene'
 class PreviewerSvg extends PureComponent {
 
     static propTypes = {
-        className: PropTypes.string,
-        actorKey: PropTypes.string,
+        isActor: PropTypes.bool,
         presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         handleProcessSvg: PropTypes.func.isRequired
@@ -45,25 +44,24 @@ class PreviewerSvg extends PureComponent {
 
     render() {
         const {
-                className,
+                isActor,
                 presenceType,
-                actorKey,
                 presenceKey
             } = this.props,
 
-            presencesMap = presenceType === ACTOR ?
-                getSvgMapForWholeActor(actorKey) :
+            svgMap = isActor ?
+                getSvgMapForWholeActor(presenceType) :
                 getSvgMapForThing(presenceType),
 
-            presenceComponent = presencesMap[presenceKey],
+            svgContent = svgMap[presenceKey],
 
             { sharedStyle } = getArrangementForPresence({
-                presenceType,
-                presenceKey,
-                actorKey
+                presenceType: isActor ? ACTOR : presenceType,
+                ...isActor && { actorKey: presenceType },
+                presenceKey
             }) || {}
 
-        return Boolean(presenceComponent) && (
+        return Boolean(svgContent) && (
             <InlineSvg
                 notAbsoluteFullContainer
                 {...{
@@ -71,15 +69,14 @@ class PreviewerSvg extends PureComponent {
                         'Presence',
                         'Presence__visible',
                         capitaliseForClassName(presenceType),
-                        getSharedClassNames(sharedStyle),
-                        className
+                        getSharedClassNames(sharedStyle)
                     ),
                     svgClassName: convertPresenceKeyToClassName(presenceKey),
                     title: convertPresenceKeyToTitle(presenceKey),
                     preProcessor: this.processSvg
                 }}
             >
-                {presenceComponent}
+                {svgContent}
             </InlineSvg>
         )
     }
