@@ -8,21 +8,22 @@ import THING_TYPES from '../../../constants/things'
 
 import { getSvgMapForThingType } from '../../../utils/svg'
 
-class ThingsDashboard extends PureComponent {
+class ActorsDashboard extends PureComponent {
 
     static propTypes = {
         presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         kilobytes: PropTypes.number,
-        selectPresence: PropTypes.func.isRequired
+        selectPresenceType: PropTypes.func.isRequired,
+        selectPresenceKey: PropTypes.func.isRequired
     }
 
-    selectPresenceType = ({ target: { value: type } }) => {
-        this.props.selectPresence({ type })
+    selectPresenceType = ({ target: { value: presenceType } }) => {
+        this.props.selectPresenceType(presenceType)
     }
 
-    selectPresenceKey = ({ target: { value: key } }) => {
-        this.props.selectPresence({ key })
+    selectPresenceKey = ({ target: { value: presenceKey } }) => {
+        this.props.selectPresenceKey(presenceKey)
     }
 
     render() {
@@ -37,7 +38,7 @@ class ThingsDashboard extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'ThingsDashboard'
+                        'ActorsDashboard'
                     )
                 }}
             >
@@ -97,4 +98,4 @@ class ThingsDashboard extends PureComponent {
     }
 }
 
-export default ThingsDashboard
+export default ActorsDashboard

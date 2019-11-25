@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import debounce from 'debounce'
-import findIndex from 'lodash/findindex'
 import keys from 'lodash/keys'
 
 import PreviewerSvg from '../PreviewerSvg'
@@ -11,6 +10,8 @@ import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 import { getKeyName } from 'managers/Key/helper'
 
 import { removeLoadingIndicator } from 'utils/window'
+
+import { accessPresence } from '../../utils/access'
 
 import {
     getPresenceFromStorage,
@@ -24,18 +25,7 @@ import {
     getSvgMapForThingType
 } from '../../utils/svg'
 
-import THING_TYPES from '../../constants/things'
-
-import {
-    ARROW_UP,
-    ARROW_DOWN,
-    ARROW_LEFT,
-    ARROW_RIGHT
-} from 'constants/access'
-
-const
-    PADDING_DASHBOARD = 10,
-    HEIGHT_INPUT = 44
+import { getHeightAspectRatio } from './helper'
 
 import './style.scss'
 import ThingsDashboard from './Dashboard'
@@ -44,15 +34,12 @@ class Things extends PureComponent {
     constructor(props) {
         super(props)
 
-        // If presence is from query strings, set in storage.
-        const presenceFromQueryStrings = getPresenceFromQueryStrings()
-        if (presenceFromQueryStrings) {
-            setPresenceInStorage(presenceFromQueryStrings)
-        }
-
-        // Either way, set presence from storage in query strings.
+        // Set presence from storage in query strings.
         const presenceFromStorage = getPresenceFromStorage()
         setPresenceInQueryStrings(presenceFromStorage)
+
+        // Set presence from query strings in storage. Default is first index.
+        setPresenceInStorage(getPresenceFromQueryStrings())
 
         this.state = {
             ...presenceFromStorage,
@@ -66,7 +53,7 @@ class Things extends PureComponent {
     componentDidMount() {
         logMount('Things')
         logSvgCount()
-        window.onresize = debounce(this.sizePresence, 0)
+        window.onresize = debounce(this.setHeightAspectRatio, 0)
         removeLoadingIndicator()
         this.focusPreviewerElement()
     }
@@ -75,8 +62,15 @@ class Things extends PureComponent {
         this.previewerElement.focus()
     }
 
-    selectPresenceType = (presenceType) => {
-        const presenceKey = keys(getSvgMapForThingType(presenceType))[0]
+    selectPresence = ({ type, key }) => {
+        let presenceType = type,
+            presenceKey = key
+        if (type) {
+            presenceKey = keys(getSvgMapForThingType(type))[0]
+        } else if (key) {
+            presenceType = this.state.presenceType
+        }
+
         this.setState({
             presenceType,
             presenceKey
@@ -85,24 +79,25 @@ class Things extends PureComponent {
         setPresenceInQueryStrings({ presenceType, presenceKey })
     }
 
-    selectPresenceKey = (presenceKey) => {
+    setHeightAspectRatio = ({
+        viewBoxWidth = this.state.viewBoxWidth,
+        viewBoxHeight = this.state.viewBoxHeight
+    }) => {
         this.setState({
-            presenceKey
+            heightAspectRatio: getHeightAspectRatio({
+                viewBoxWidth,
+                viewBoxHeight
+            })
         })
-        setPresenceInStorage({ presenceKey })
-        setPresenceInQueryStrings({ presenceKey })
     }
 
     handleProcessSvg = (svgString) => {
         const {
-                viewBoxWidth,
-                viewBoxHeight
-            } = getViewBoxSize(svgString),
+            viewBoxWidth,
+            viewBoxHeight
+        } = getViewBoxSize(svgString)
 
-            // Show kilobytes.
-            kilobytes = (svgString.length / 1024)
-
-        this.sizePresence({
+        this.setHeightAspectRatio({
             viewBoxWidth,
             viewBoxHeight
         })
@@ -110,87 +105,19 @@ class Things extends PureComponent {
         this.setState({
             viewBoxWidth,
             viewBoxHeight,
-            kilobytes
+            kilobytes: svgString.length / 1024
         })
     }
 
-    sizePresence = ({
-        viewBoxWidth = this.state.viewBoxWidth,
-        viewBoxHeight = this.state.viewBoxHeight
-    }) => {
-        const windowWidth = window.innerWidth,
-            windowHeight =
-                window.innerHeight - PADDING_DASHBOARD * 2 -
-
-                // In mobile, account for height of two inputs.
-                HEIGHT_INPUT * (window.innerWidth < 1000 ? 2 : 1),
-
-            // Set height aspect ratio.
-            heightAspectRatio =
-                viewBoxWidth / viewBoxHeight <
-                windowWidth / windowHeight
-
-        this.setState({ heightAspectRatio })
-    }
-
     handleKeyDownPress = (e) => {
-        const keyName = getKeyName(e)
+        const { presenceType, presenceKey } = this.state
 
-        if (keyName === ARROW_UP || keyName === ARROW_DOWN) {
-            this.accessPresenceType(keyName)
-        }
-
-        if (keyName === ARROW_LEFT || keyName === ARROW_RIGHT) {
-            this.accessPresenceKey(keyName)
-        }
-    }
-
-    accessPresenceType(keyName) {
-        const selectedIndex = findIndex(
-            THING_TYPES,
-            presenceType => presenceType === this.state.presenceType
-        )
-
-        let direction = 0
-
-        if (keyName === ARROW_UP) {
-            direction = THING_TYPES.length - 1
-        }
-
-        if (keyName === ARROW_DOWN) {
-            direction = 1
-        }
-
-        const presenceType = THING_TYPES[
-            (selectedIndex + direction) % THING_TYPES.length
-        ]
-
-        this.selectPresenceType(presenceType)
-    }
-
-    accessPresenceKey(keyName) {
-        const
-            svgArray = keys(getSvgMapForThingType(this.state.presenceType)),
-            selectedIndex = findIndex(
-                svgArray,
-                presenceKey => presenceKey === this.state.presenceKey
-            )
-
-        let direction = 0
-
-        if (keyName === ARROW_LEFT) {
-            direction = svgArray.length - 1
-        }
-
-        if (keyName === ARROW_RIGHT) {
-            direction = 1
-        }
-
-        const presenceKey = svgArray[
-            (selectedIndex + direction) % svgArray.length
-        ]
-
-        this.selectPresenceKey(presenceKey)
+        accessPresence({
+            keyName: getKeyName(e),
+            presenceType,
+            presenceKey,
+            selectPresence: this.selectPresence
+        })
     }
 
     setPreviewerElement = node => this.previewerElement = node
@@ -223,8 +150,7 @@ class Things extends PureComponent {
                         presenceType,
                         presenceKey,
                         kilobytes,
-                        selectPresenceType: this.selectPresenceType,
-                        selectPresenceKey: this.selectPresenceKey
+                        selectPresence: this.selectPresence
                     }}
                 />
                 {Boolean(presenceType) && Boolean(presenceKey) && (
