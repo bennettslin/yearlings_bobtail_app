@@ -19,7 +19,7 @@ export default [
     },
     {
         taskName: `Actors previewer. Allow them to show side by side`,
-        workedHours: 8,
+        workedHours: 10,
         neededHours: 12
     }
 ]

@@ -11,7 +11,7 @@ import {
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 
-import { getSvgMapForWholeActor } from '../../utils/svg'
+import { getSvgMapForWholeActor } from '../../../utils/svg'
 import { getSvgMapForThing } from 'svg/things'
 
 import { ACTOR } from 'constants/scene'
@@ -20,8 +20,8 @@ class PreviewerSvg extends PureComponent {
 
     static propTypes = {
         className: PropTypes.string,
-        presenceType: PropTypes.string,
         actorKey: PropTypes.string,
+        presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         handleProcessSvg: PropTypes.func.isRequired
     }

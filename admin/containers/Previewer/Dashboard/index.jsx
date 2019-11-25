@@ -4,13 +4,21 @@ import cx from 'classnames'
 import keys from 'lodash/keys'
 
 import { convertPresenceKeyToClassName } from 'helpers/format'
+
+import {
+    getSvgMapForWholeActor,
+    getSvgMapForUnduplicatedThing
+} from '../../../utils/svg'
+
+import WHOLE_ACTORS_LIST from '../../../constants/actors'
 import THINGS_LIST from '../../../constants/things'
 
-import { getSvgMapForUnduplicatedThing } from '../../../utils/svg'
+import './style.scss'
 
-class ThingsDashboard extends PureComponent {
+class PreviewerDashboard extends PureComponent {
 
     static propTypes = {
+        isActor: PropTypes.bool,
         presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         kilobytes: PropTypes.number,
@@ -27,28 +35,35 @@ class ThingsDashboard extends PureComponent {
 
     render() {
         const {
+                isActor,
                 presenceType,
                 presenceKey,
                 kilobytes
             } = this.props,
-            svgMap = getSvgMapForUnduplicatedThing(presenceType)
+            mapGetter = isActor ?
+                getSvgMapForWholeActor :
+                getSvgMapForUnduplicatedThing,
+            svgMap = mapGetter(presenceType),
+            typesList = isActor ?
+                WHOLE_ACTORS_LIST :
+                THINGS_LIST
 
         return (
             <div
                 {...{
                     className: cx(
-                        'ThingsDashboard'
+                        'PreviewerDashboard'
                     )
                 }}
             >
                 <select
                     {...{
-                        className: 'ThingsDashboard__child',
+                        className: 'PreviewerDashboard__child',
                         value: presenceType,
                         onChange: this.selectPresenceType
                     }}
                 >
-                    {THINGS_LIST.map(presenceType => (
+                    {typesList.map(presenceType => (
                         <option
                             {...{
                                 key: presenceType,
@@ -61,7 +76,7 @@ class ThingsDashboard extends PureComponent {
                 </select>
                 <select
                     {...{
-                        className: 'ThingsDashboard__child',
+                        className: 'PreviewerDashboard__child',
                         value: presenceKey,
                         onChange: this.selectPresenceKey
                     }}
@@ -81,8 +96,8 @@ class ThingsDashboard extends PureComponent {
                 <div
                     {...{
                         className: cx(
-                            'ThingsDashboard__child',
-                            'Things__kilobytes',
+                            'PreviewerDashboard__child',
+                            'PreviewerDashboard__kilobytes',
                             'flexCentreContainer'
                         )
                     }}
@@ -94,4 +109,4 @@ class ThingsDashboard extends PureComponent {
     }
 }
 
-export default ThingsDashboard
+export default PreviewerDashboard

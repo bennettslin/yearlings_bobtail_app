@@ -3,7 +3,8 @@ import cx from 'classnames'
 import debounce from 'debounce'
 import keys from 'lodash/keys'
 
-import PreviewerSvg from '../PreviewerSvg'
+import PreviewerDashboard from '../Previewer/Dashboard'
+import PreviewerSvg from '../Previewer/Svg'
 
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
@@ -24,9 +25,6 @@ import { logSvgCount } from '../../utils/log'
 import { getSvgMapForUnduplicatedThing } from '../../utils/svg'
 
 import { getHeightAspectRatio } from './helper'
-
-import './style.scss'
-import ThingsDashboard from './Dashboard'
 
 class Things extends PureComponent {
     constructor(props) {
@@ -143,7 +141,7 @@ class Things extends PureComponent {
                     onKeyDown: this.handleKeyDownPress
                 }}
             >
-                <ThingsDashboard
+                <PreviewerDashboard
                     {...{
                         presenceType,
                         presenceKey,

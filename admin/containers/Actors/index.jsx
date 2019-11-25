@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import keys from 'lodash/keys'
 
-import PreviewerSvg from '../PreviewerSvg'
-import ActorsDashboard from './Dashboard'
+import PreviewerSvg from '../Previewer/Svg'
+import PreviewerDashboard from '../Previewer/Dashboard'
 
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
@@ -23,8 +23,6 @@ import {
 import { getSvgMapForWholeActor } from '../../utils/svg'
 
 import { ACTOR } from 'constants/scene'
-
-import './style.scss'
 
 class Actors extends PureComponent {
     constructor(props) {
@@ -120,6 +118,7 @@ class Actors extends PureComponent {
                     ref: this.setPreviewerElement,
                     className: cx(
                         'Actors',
+                        'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
                     ),
@@ -127,7 +126,8 @@ class Actors extends PureComponent {
                     onKeyDown: this.handleKeyDownPress
                 }}
             >
-                <ActorsDashboard
+                <PreviewerDashboard
+                    isActor
                     {...{
                         presenceType,
                         presenceKey,
