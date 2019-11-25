@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import findIndex from 'lodash/findindex'
+
 import InlineSvg from 'modules/InlineSvg'
 
 import {
@@ -13,6 +15,8 @@ import { getArrangementForPresence } from 'components/Presence/helper'
 
 import { getSvgMapForWholeActor } from '../../../utils/svg'
 import { getSvgMapForThing } from 'svg/things'
+
+import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
 
 import { ACTOR } from 'constants/scene'
 
@@ -53,13 +57,25 @@ class PreviewerSvg extends PureComponent {
                 getSvgMapForWholeActor(presenceType) :
                 getSvgMapForThing(presenceType),
 
-            svgContent = svgMap[presenceKey],
+            svgContent = svgMap[presenceKey]
 
-            { sharedStyle } = getArrangementForPresence({
-                presenceType: isActor ? ACTOR : presenceType,
-                ...isActor && { actorKey: presenceType },
-                presenceKey
-            }) || {}
+        let actorKey
+
+        if (isActor) {
+            // Find the actor key for compound instances.
+            actorKey = WHOLE_ACTOR_INSTANCES[presenceType][
+                findIndex(
+                    WHOLE_ACTOR_INSTANCES[presenceType],
+                    object => object.instance === presenceKey
+                )
+            ].actor
+        }
+
+        const { sharedStyle } = getArrangementForPresence({
+            presenceType: isActor ? ACTOR : presenceType,
+            ...isActor && { actorKey },
+            presenceKey
+        }) || {}
 
         return Boolean(svgContent) && (
             <InlineSvg

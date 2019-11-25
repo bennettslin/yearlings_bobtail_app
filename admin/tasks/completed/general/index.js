@@ -5026,5 +5026,10 @@ export default [
         taskName: `Keyboard navigation of Previewer.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Actors previewer. Allow them to show side by side`,
+        workedHours: 13,
+        neededHours: 13
     }
 ]

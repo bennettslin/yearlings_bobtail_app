@@ -4,13 +4,18 @@ $height__dashboard: $height__input + $padding__dashboard * 2;
 $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
 
 .PreviewerDashboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $height__dashboard__mobile;
+
+    padding: $padding__dashboard;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    padding: $padding__dashboard;
-    height: $height__dashboard__mobile;
 
     @media (min-width: 1000px) {
         height: $height__dashboard;
@@ -42,7 +47,13 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
 }
 
 .Previewer__scroll {
+    position: absolute;
     padding: 0 $padding__dashboard $padding__dashboard;
+    top: $height__dashboard__mobile;
+
+    @media (min-width: 1000px) {
+        top: $height__dashboard;
+    }
 
     .Previewer__heightAspectRatio
     & {
@@ -54,6 +65,11 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
         @media (min-width: 1000px) {
             height: calc(100% - #{$height__dashboard});
         }
+    }
+
+    .Previewer__actors
+    & {
+        justify-content: left;
     }
 }
 

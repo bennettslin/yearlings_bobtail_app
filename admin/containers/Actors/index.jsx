@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import keys from 'lodash/keys'
+import scrollIntoView from 'scroll-into-view'
 
 import PreviewerSvg from '../Previewer/Svg'
 import PreviewerDashboard from '../Previewer/Dashboard'
@@ -8,6 +9,8 @@ import PreviewerDashboard from '../Previewer/Dashboard'
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
 import { getKeyName } from 'managers/Key/helper'
+
+import { capitaliseForClassName } from 'helpers/format'
 
 import { removeLoadingIndicator } from 'utils/window'
 
@@ -73,6 +76,11 @@ class Actors extends PureComponent {
             presenceKey
         })
         setPresenceInQueryStrings({ presenceType, presenceKey })
+
+        this.scrollPresenceIntoView({
+            presenceType,
+            presenceKey
+        })
     }
 
     handleProcessSvg = (svgString) => {
@@ -100,6 +108,17 @@ class Actors extends PureComponent {
         })
     }
 
+    scrollPresenceIntoView({
+        presenceType,
+        presenceKey
+    }) {
+        const element = document.querySelector(
+            `.${capitaliseForClassName(presenceType)} .${presenceKey}`
+        )
+
+        scrollIntoView(element, { time: 250 })
+    }
+
     setPreviewerElement = node => this.previewerElement = node
 
     render() {
@@ -108,7 +127,9 @@ class Actors extends PureComponent {
                 presenceType,
                 presenceKey,
                 kilobytes
-            } = this.state
+            } = this.state,
+
+            svgMap = getSvgMapForWholeActor(presenceType)
 
         return (
             <div
@@ -116,6 +137,7 @@ class Actors extends PureComponent {
                     ref: this.setPreviewerElement,
                     className: cx(
                         'Actors',
+                        'Previewer__actors',
                         'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
@@ -134,14 +156,18 @@ class Actors extends PureComponent {
                     }}
                 />
                 <div {...{ className: 'Previewer__scroll' }}>
-                    <PreviewerSvg
-                        isActor
-                        {...{
-                            presenceType,
-                            presenceKey,
-                            handleProcessSvg: this.handleProcessSvg
-                        }}
-                    />
+                    {/* Render all instances for this actor. */}
+                    {keys(svgMap).map(instanceKey => (
+                        <PreviewerSvg
+                            isActor
+                            {...{
+                                key: instanceKey,
+                                presenceType,
+                                presenceKey: instanceKey,
+                                handleProcessSvg: this.handleProcessSvg
+                            }}
+                        />
+                    ))}
                 </div>
             </div>
         )
