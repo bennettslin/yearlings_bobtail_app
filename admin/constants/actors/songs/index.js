@@ -1,7 +1,3 @@
-// Use these song name constants for repeated instances in a song.
-
-export const PROLOGUE = 'prologue'
-
 // Willy.
 export const GANGBANGER = 'gangbanger'
 export const GREETING = 'greeting'
