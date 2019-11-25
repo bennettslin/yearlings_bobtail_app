@@ -9,6 +9,12 @@ import {
 } from 'constants/scene/actors/amy'
 import { OFFICER } from 'constants/scene/actors/amyNestorTomer'
 import { SQUEEZING } from 'constants/scene/actors/amyStephanie'
+import {
+    FLIRTING,
+    MINGLING,
+    EPILOGUE,
+    PROTESTER
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -20,8 +26,24 @@ const INSTANCES = [
         instance: SQUEEZING
     },
     {
+        actor: AMY,
+        instance: FLIRTING
+    },
+    {
+        actor: AMY,
+        instance: MINGLING
+    },
+    {
+        actor: AMY,
+        instance: EPILOGUE
+    },
+    {
         actor: AMY_NESTOR_TOMER,
         instance: OFFICER
+    },
+    {
+        actor: AMY,
+        instance: PROTESTER
     },
     {
         actor: AMY,

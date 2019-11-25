@@ -2,7 +2,9 @@ import {
     BENNETT,
     BENNETT_LIZ,
     BENNETT_STEPHANIE,
-    MIRIAM_BENNETT
+    MIRIAM_BENNETT,
+    BENNETT_FATHER,
+    BENNETTS_CHRISTOPHER_LIZ
 } from 'constants/scene/actors'
 import {
     BREAKUP_DEJECTED,
@@ -11,8 +13,8 @@ import {
     CATHOLIC_IDEA,
     PIOUS,
     PONDERING,
-    COUCH_READING,
     RUBIKS_CUBE,
+    COUCH_READING,
     DISTRACTED,
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,
@@ -62,6 +64,32 @@ import {
     COWGIRL,
     BLOWJOB
 } from 'constants/scene/actors/miriamBennett'
+import {
+    EATING,
+    DATE_ENDING,
+    MUSEUM,
+    BACKSTAGE,
+    GO_KARTS,
+    DATE_ENDED,
+    DISHROOM_LANCET,
+    GATE_CODE,
+    RUMPLED_LINENS,
+    ABBEY_ROAD,
+    WALGREENS,
+    STEAM_TUNNEL,
+    CEMETERY,
+    STATION_WAGON,
+    ATTIC,
+    PERFORMING,
+    FLIRTING,
+    GREETING,
+    LEAVING_CRUMBLED,
+    PAST,
+    PRESENT,
+    FUTURE,
+    EL_TORITO,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -90,15 +118,19 @@ const INSTANCES = [
     },
     {
         actor: BENNETT,
-        instance: COUCH_READING
-    },
-    {
-        actor: BENNETT,
         instance: RUBIKS_CUBE
     },
     {
         actor: BENNETT,
+        instance: COUCH_READING
+    },
+    {
+        actor: BENNETT,
         instance: DISTRACTED
+    },
+    {
+        actor: BENNETT,
+        instance: EATING
     },
     {
         actor: BENNETT,
@@ -114,15 +146,47 @@ const INSTANCES = [
     },
     {
         actor: BENNETT,
+        instance: DATE_ENDING
+    },
+    {
+        actor: BENNETT,
+        instance: MUSEUM
+    },
+    {
+        actor: BENNETT,
+        instance: BACKSTAGE
+    },
+    {
+        actor: BENNETT,
+        instance: GO_KARTS
+    },
+    {
+        actor: BENNETT,
+        instance: DATE_ENDED
+    },
+    {
+        actor: BENNETT,
         instance: DISHROOM_READING
+    },
+    {
+        actor: BENNETT,
+        instance: DISHROOM_LANCET
     },
     {
         actor: BENNETT,
         instance: MOP_SOPPED
     },
     {
+        actor: BENNETT,
+        instance: GATE_CODE
+    },
+    {
         actor: BENNETT_LIZ,
         instance: GINGERBREAD_PRISON
+    },
+    {
+        actor: BENNETT,
+        instance: RUMPLED_LINENS
     },
     {
         actor: BENNETT,
@@ -158,6 +222,38 @@ const INSTANCES = [
     },
     {
         actor: BENNETT,
+        instance: ABBEY_ROAD
+    },
+    {
+        actor: BENNETT,
+        instance: WALGREENS
+    },
+    {
+        actor: BENNETT,
+        instance: STEAM_TUNNEL
+    },
+    {
+        actor: BENNETT,
+        instance: CEMETERY
+    },
+    {
+        actor: BENNETT,
+        instance: STATION_WAGON
+    },
+    {
+        actor: BENNETT,
+        instance: ATTIC
+    },
+    {
+        actor: BENNETT,
+        instance: PERFORMING
+    },
+    {
+        actor: BENNETT,
+        instance: FLIRTING
+    },
+    {
+        actor: BENNETT,
         instance: SIDELONG_HESITANCE
     },
     {
@@ -182,6 +278,14 @@ const INSTANCES = [
     },
     {
         actor: BENNETT,
+        instance: GREETING
+    },
+    {
+        actor: BENNETT,
+        instance: LEAVING_CRUMBLED
+    },
+    {
+        actor: BENNETT,
         instance: CORD_SIDE
     },
     {
@@ -203,6 +307,18 @@ const INSTANCES = [
     {
         actor: MIRIAM_BENNETT,
         instance: ASLEEP_FEARFUL
+    },
+    {
+        actor: BENNETT,
+        instance: PAST
+    },
+    {
+        actor: BENNETT_FATHER,
+        instance: PRESENT
+    },
+    {
+        actor: BENNETT,
+        instance: FUTURE
     },
     {
         actor: MIRIAM_BENNETT,
@@ -249,6 +365,10 @@ const INSTANCES = [
         instance: DEMONSTRATION
     },
     {
+        actor: BENNETT,
+        instance: EL_TORITO
+    },
+    {
         actor: BENNETT_LIZ,
         instance: PAMPAS
     },
@@ -263,6 +383,10 @@ const INSTANCES = [
     {
         actor: BENNETT_LIZ,
         instance: FINAL_DREAM
+    },
+    {
+        actor: BENNETTS_CHRISTOPHER_LIZ,
+        instance: EPILOGUE
     }
 ]
 

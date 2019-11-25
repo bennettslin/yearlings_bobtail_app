@@ -9,6 +9,7 @@ import {
 } from 'constants/scene/actors/brad'
 import { TYING_TETHER } from 'constants/scene/actors/bradBennett'
 import { CHARMED_SCHOOLBUS } from 'constants/scene/actors/bradSasha'
+import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -26,6 +27,10 @@ const INSTANCES = [
     {
         actor: BRAD,
         instance: SNACKING
+    },
+    {
+        actor: BRAD,
+        instance: EPILOGUE
     }
 ]
 

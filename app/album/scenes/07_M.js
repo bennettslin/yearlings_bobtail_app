@@ -34,8 +34,8 @@ import {
 import { SQUATTING } from '../../constants/scene/actors/ana'
 import {
     PONDERING,
-    COUCH_READING,
     RUBIKS_CUBE,
+    COUCH_READING,
     DISTRACTED,
     HOPELESSLY_CRUSHED,
     WONDERING_BABY,

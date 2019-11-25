@@ -5,6 +5,11 @@ import {
     CATHOLIC_GUY,
     WATCHING
 } from 'constants/scene/actors/wade'
+import {
+    MINGLING,
+    EPILOGUE,
+    PROTESTER
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -14,6 +19,18 @@ const INSTANCES = [
     {
         actor: WADE,
         instance: WATCHING
+    },
+    {
+        actor: WADE,
+        instance: MINGLING
+    },
+    {
+        actor: WADE,
+        instance: EPILOGUE
+    },
+    {
+        actor: WADE,
+        instance: PROTESTER
     }
 ]
 

@@ -1,7 +1,8 @@
 import {
     LIZ,
     BENNETT_LIZ,
-    KHARI_LIZ
+    KHARI_LIZ,
+    BENNETTS_CHRISTOPHER_LIZ
 } from 'constants/scene/actors'
 import {
     ASLEEP_REACHING,
@@ -37,11 +38,56 @@ import {
     CARESS,
     CARESS_REFLECTION
 } from 'constants/scene/actors/khariLiz'
+import {
+    DATE_ENDING,
+    MUSEUM,
+    BACKSTAGE,
+    GO_KARTS,
+    DATE_ENDED,
+    DISHROOM_LANCET,
+    GATE_CODE,
+    RUMPLED_LINENS,
+    LEAVING_CRUMBLED,
+    EL_TORITO,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
+        actor: LIZ,
+        instance: DATE_ENDING
+    },
+    {
+        actor: LIZ,
+        instance: MUSEUM
+    },
+    {
+        actor: LIZ,
+        instance: BACKSTAGE
+    },
+    {
+        actor: LIZ,
+        instance: GO_KARTS
+    },
+    {
+        actor: LIZ,
+        instance: DATE_ENDED
+    },
+    {
+        actor: LIZ,
+        instance: DISHROOM_LANCET
+    },
+    {
+        actor: LIZ,
+        instance: GATE_CODE
+    },
+    {
         actor: BENNETT_LIZ,
         instance: GINGERBREAD_PRISON
+    },
+    {
+        actor: LIZ,
+        instance: RUMPLED_LINENS
     },
     {
         actor: BENNETT_LIZ,
@@ -86,6 +132,10 @@ const INSTANCES = [
     {
         actor: BENNETT_LIZ,
         instance: CELIBATE_FREEZING
+    },
+    {
+        actor: LIZ,
+        instance: LEAVING_CRUMBLED
     },
     {
         actor: BENNETT_LIZ,
@@ -136,6 +186,10 @@ const INSTANCES = [
         instance: CARESS_REFLECTION
     },
     {
+        actor: LIZ,
+        instance: EL_TORITO
+    },
+    {
         actor: BENNETT_LIZ,
         instance: PAMPAS
     },
@@ -150,6 +204,10 @@ const INSTANCES = [
     {
         actor: BENNETT_LIZ,
         instance: FINAL_DREAM
+    },
+    {
+        actor: BENNETTS_CHRISTOPHER_LIZ,
+        instance: EPILOGUE
     }
 ]
 

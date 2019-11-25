@@ -7,6 +7,10 @@ import {
     PUNCHING
 } from 'constants/scene/actors/tristan'
 import { NOOGIE } from 'constants/scene/actors/miriamTristan'
+import {
+    GREETING,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -20,6 +24,14 @@ const INSTANCES = [
     {
         actor: MIRIAM_TRISTAN,
         instance: NOOGIE
+    },
+    {
+        actor: MIRIAM_TRISTAN,
+        instance: GREETING
+    },
+    {
+        actor: TRISTAN,
+        instance: EPILOGUE
     }
 ]
 

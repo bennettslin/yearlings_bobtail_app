@@ -1,7 +1,3 @@
-// Willy.
-export const GANGBANGER = 'gangbanger'
-export const GREETING = 'greeting'
-
 // Ash Wednesday.
 export const FLIRTING = 'flirting'
 export const EATING = 'eating'
@@ -12,13 +8,9 @@ export const MUSEUM = 'museum'
 export const BACKSTAGE = 'backstage'
 export const GO_KARTS = 'goKarts'
 export const DATE_ENDED = 'dateEnded'
-
-// Grasshoppers.
 export const DISHROOM_LANCET = 'dishroomLancet'
 export const GATE_CODE = 'gateCode'
 export const RUMPLED_LINENS = 'rumpledLinens'
-
-// Constellations.
 export const ABBEY_ROAD = 'abbeyRoad'
 export const WALGREENS = 'walgreens'
 export const STEAM_TUNNEL = 'steamTunnel'

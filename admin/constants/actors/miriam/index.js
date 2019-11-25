@@ -19,6 +19,11 @@ import {
 } from 'constants/scene/actors/miriamBennett'
 import { MISCHIEVOUS_BANJO } from 'constants/scene/actors/miriamStephanie'
 import { NOOGIE } from 'constants/scene/actors/miriamTristan'
+import {
+    GREETING,
+    EPILOGUE,
+    GOPI
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -64,6 +69,18 @@ const INSTANCES = [
     {
         actor: MIRIAM,
         instance: REVERSING
+    },
+    {
+        actor: MIRIAM_TRISTAN,
+        instance: GREETING
+    },
+    {
+        actor: MIRIAM,
+        instance: EPILOGUE
+    },
+    {
+        actor: MIRIAM,
+        instance: GOPI
     }
 ]
 

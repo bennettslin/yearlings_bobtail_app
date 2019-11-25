@@ -1,5 +1,6 @@
 import {
-    YOUNG_BENNETT
+    YOUNG_BENNETT,
+    ANITA_BENNETT
 } from 'constants/scene/actors'
 import {
     PANICKED,
@@ -7,6 +8,10 @@ import {
     BATHING,
     SINGING
 } from 'constants/scene/actors/youngBennett'
+import {
+    YOUNG_CHILD,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -24,6 +29,14 @@ const INSTANCES = [
     {
         actor: YOUNG_BENNETT,
         instance: SINGING
+    },
+    {
+        actor: ANITA_BENNETT,
+        instance: EPILOGUE
+    },
+    {
+        actor: YOUNG_BENNETT,
+        instance: YOUNG_CHILD
     }
 ]
 

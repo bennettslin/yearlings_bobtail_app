@@ -10,6 +10,10 @@ import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
 } from 'constants/scene/actors/estherMother'
+import {
+    YOUNG_CHILD,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -19,6 +23,14 @@ const INSTANCES = [
     {
         actor: ESTHER,
         instance: SNICKERING
+    },
+    {
+        actor: ESTHER,
+        instance: EPILOGUE
+    },
+    {
+        actor: ESTHER,
+        instance: YOUNG_CHILD
     },
     {
         actor: ESTHER_MOTHER,

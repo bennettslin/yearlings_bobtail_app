@@ -6,6 +6,12 @@ import {
     ACCUSATORY,
     REELING
 } from 'constants/scene/actors/father'
+import {
+    PAST,
+    PRESENT,
+    FUTURE,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -18,7 +24,23 @@ const INSTANCES = [
     },
     {
         actor: FATHER,
+        instance: PAST
+    },
+    {
+        actor: FATHER,
+        instance: PRESENT
+    },
+    {
+        actor: FATHER,
+        instance: FUTURE
+    },
+    {
+        actor: FATHER,
         instance: REELING
+    },
+    {
+        actor: FATHER,
+        instance: EPILOGUE
     }
 ]
 

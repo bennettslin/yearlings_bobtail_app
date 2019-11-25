@@ -14,6 +14,7 @@ import {
     CARESS,
     CARESS_REFLECTION
 } from 'constants/scene/actors/khariLiz'
+import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -47,6 +48,10 @@ const INSTANCES = [
     {
         actor: KHARI_LIZ,
         instance: CARESS_REFLECTION
+    },
+    {
+        actor: KHARI,
+        instance: EPILOGUE
     }
 ]
 

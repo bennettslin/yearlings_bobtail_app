@@ -30,6 +30,10 @@ import {
     MERMAID,
     COMFORTING_HUMILIATED
 } from 'constants/scene/actors/sashaBennett'
+import {
+    ASLEEP,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -98,6 +102,10 @@ const INSTANCES = [
     },
     {
         actor: PRETEEN_BENNETT,
+        instance: ASLEEP
+    },
+    {
+        actor: PRETEEN_BENNETT,
         instance: SHAKEN
     },
     {
@@ -115,6 +123,10 @@ const INSTANCES = [
     {
         actor: SASHA_BENNETT,
         instance: COMFORTING_HUMILIATED
+    },
+    {
+        actor: SASHA_BENNETT,
+        instance: EPILOGUE
     }
 ]
 

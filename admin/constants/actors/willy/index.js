@@ -1,6 +1,7 @@
 import {
     WILLY,
-    CHRISTOPHER_BENNETT_WILLY
+    CHRISTOPHER_BENNETT_WILLY,
+    HOWIE_WILLY
 } from 'constants/scene/actors'
 import {
     COLLECTING,
@@ -8,6 +9,10 @@ import {
     CROSSING_GUARD
 } from 'constants/scene/actors/willy'
 import { REASSURING_ENCHANTED } from 'constants/scene/actors/christopherBennettWilly'
+import {
+    GANGBANGER,
+    EPILOGUE
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -19,8 +24,16 @@ const INSTANCES = [
         instance: DUCKING
     },
     {
+        actor: HOWIE_WILLY,
+        instance: GANGBANGER
+    },
+    {
         actor: CHRISTOPHER_BENNETT_WILLY,
         instance: REASSURING_ENCHANTED
+    },
+    {
+        actor: WILLY,
+        instance: EPILOGUE
     },
     {
         actor: WILLY,

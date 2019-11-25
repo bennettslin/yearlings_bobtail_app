@@ -16,19 +16,16 @@ import {
     DRYING_TEARS
 } from 'constants/scene/actors/bennettStephanie'
 import { MISCHIEVOUS_BANJO } from 'constants/scene/actors/miriamStephanie'
+import {
+    MINGLING,
+    EPILOGUE,
+    PROTESTER
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
         actor: STEPHANIE,
         instance: BENNETT_KEYBOARD
-    },
-    {
-        actor: STEPHANIE,
-        instance: FLAPPER
-    },
-    {
-        actor: AMY_STEPHANIE,
-        instance: SQUEEZING
     },
     {
         actor: STEPHANIE,
@@ -49,6 +46,26 @@ const INSTANCES = [
     {
         actor: STEPHANIE,
         instance: BENNETT_RECORDING
+    },
+    {
+        actor: STEPHANIE,
+        instance: FLAPPER
+    },
+    {
+        actor: AMY_STEPHANIE,
+        instance: SQUEEZING
+    },
+    {
+        actor: STEPHANIE,
+        instance: MINGLING
+    },
+    {
+        actor: STEPHANIE,
+        instance: EPILOGUE
+    },
+    {
+        actor: STEPHANIE,
+        instance: PROTESTER
     }
 ]
 

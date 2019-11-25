@@ -6,6 +6,10 @@ import {
     QUIPPING,
     PUZZLED
 } from 'constants/scene/actors/catherine'
+import {
+    EPILOGUE,
+    GOPI
+} from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
@@ -19,6 +23,14 @@ const INSTANCES = [
     {
         actor: CATHERINE,
         instance: PUZZLED
+    },
+    {
+        actor: CATHERINE,
+        instance: EPILOGUE
+    },
+    {
+        actor: CATHERINE,
+        instance: GOPI
     }
 ]
 
