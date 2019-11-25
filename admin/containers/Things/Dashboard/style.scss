@@ -1,4 +1,4 @@
-.PreviewerDashboard {
+.ThingsDashboard {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,7 +12,7 @@
     }
 }
 
-.PreviewerDashboard__child {
+.ThingsDashboard__child {
     height: $height__input;
     font-size: 1.2em;
     width: 100%;
@@ -27,7 +27,7 @@
     }
 }
 
-.Previewer__kilobytes {
+.Things__kilobytes {
     // Hide kilobytes in mobile.
     display: none;
 

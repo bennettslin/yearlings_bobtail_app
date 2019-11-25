@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import InlineSvg from '../../../../app/modules/InlineSvg'
+import InlineSvg from 'modules/InlineSvg'
 
 import {
     capitaliseForClassName,
@@ -9,7 +9,7 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from 'helpers/format'
-import { getArrangementForPresence } from '../../../../app/components/Presence/helper'
+import { getArrangementForPresence } from 'components/Presence/helper'
 import { getMapForActorKey } from 'svg/actors'
 import { getMapForPresenceType } from 'svg/things'
 

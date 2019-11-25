@@ -4,7 +4,7 @@ import debounce from 'debounce'
 import findIndex from 'lodash/findindex'
 import keys from 'lodash/keys'
 
-import PreviewerSvg from './Svg'
+import PreviewerSvg from '../PreviewerSvg'
 
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
@@ -38,9 +38,9 @@ const
     HEIGHT_INPUT = 44
 
 import './style.scss'
-import PreviewerDashboard from './Dashboard'
+import ThingsDashboard from './Dashboard'
 
-class Previewer extends PureComponent {
+class Things extends PureComponent {
     constructor(props) {
         super(props)
 
@@ -64,7 +64,7 @@ class Previewer extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('Previewer')
+        logMount('Things')
         logSvgCount()
         window.onresize = debounce(this.sizePresence, 0)
         removeLoadingIndicator()
@@ -209,7 +209,7 @@ class Previewer extends PureComponent {
                 {...{
                     ref: this.setPreviewerElement,
                     className: cx(
-                        'Previewer',
+                        'Things',
                         heightAspectRatio && 'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
@@ -218,7 +218,7 @@ class Previewer extends PureComponent {
                     onKeyDown: this.handleKeyDownPress
                 }}
             >
-                <PreviewerDashboard
+                <ThingsDashboard
                     {...{
                         presenceType,
                         presenceKey,
@@ -249,4 +249,4 @@ class Previewer extends PureComponent {
     }
 }
 
-export default Previewer
+export default Things

@@ -22,7 +22,7 @@ import './scss/app.scss'
 // These reroute to the routing container in production.
 import Actors from 'admin/containers/Actors'
 import Annotations from 'admin/containers/Annotations'
-import Previewer from 'admin/containers/Previewer'
+import Things from 'admin/containers/Things'
 import Progress from 'admin/containers/Progress'
 
 import RoutingContainer from './containers/Routing'
@@ -70,8 +70,8 @@ ReactDOM.render(
                 <Route
                     exact
                     {...{
-                        path: '/Previewer',
-                        component: Previewer
+                        path: '/Things',
+                        component: Things
                     }}
                 />
                 <Route

@@ -8,7 +8,7 @@ import THING_TYPES from '../../../constants/things'
 
 import { getSvgMapForThingType } from '../../../utils/svg'
 
-class PreviewerDashboard extends PureComponent {
+class ThingsDashboard extends PureComponent {
 
     static propTypes = {
         presenceType: PropTypes.string,
@@ -38,13 +38,13 @@ class PreviewerDashboard extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'PreviewerDashboard'
+                        'ThingsDashboard'
                     )
                 }}
             >
                 <select
                     {...{
-                        className: 'PreviewerDashboard__child',
+                        className: 'ThingsDashboard__child',
                         value: presenceType,
                         onChange: this.selectPresenceType
                     }}
@@ -62,7 +62,7 @@ class PreviewerDashboard extends PureComponent {
                 </select>
                 <select
                     {...{
-                        className: 'PreviewerDashboard__child',
+                        className: 'ThingsDashboard__child',
                         value: presenceKey,
                         onChange: this.selectPresenceKey
                     }}
@@ -85,8 +85,8 @@ class PreviewerDashboard extends PureComponent {
                 <div
                     {...{
                         className: cx(
-                            'PreviewerDashboard__child',
-                            'Previewer__kilobytes',
+                            'ThingsDashboard__child',
+                            'Things__kilobytes',
                             'flexCentreContainer'
                         )
                     }}
@@ -98,4 +98,4 @@ class PreviewerDashboard extends PureComponent {
     }
 }
 
-export default PreviewerDashboard
+export default ThingsDashboard
