@@ -8,7 +8,7 @@ import {
 import ACTOR_TYPES from '../constants/actors'
 import THING_TYPES from '../constants/things'
 import {
-    getSvgMapForActorType,
+    getSvgMapForActor,
     getSvgMapForThingType
 } from './svg'
 
@@ -32,7 +32,7 @@ export const getPresenceFromQueryStrings = (isActor) => {
         presenceType = urlParams.get('type') || '',
         presenceKey = urlParams.get('key') || '',
         typesList = isActor ? ACTOR_TYPES : THING_TYPES,
-        mapGetter = isActor ? getSvgMapForActorType : getSvgMapForThingType,
+        mapGetter = isActor ? getSvgMapForActor : getSvgMapForThingType,
 
         svgMapForPresenceType = mapGetter(presenceType)
 

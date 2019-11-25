@@ -160,10 +160,10 @@ const ACTOR_KEY_MAP = {
     [KHARI_LIZ_REFLECTION]: khariLizReflection
 }
 
-export const getMapForActorKey = (actorKey) => {
+export const getMapForActor = (actorKey) => {
     return ACTOR_KEY_MAP[actorKey]
 }
 
-export const getInstanceKeysForActorKey = (actorKey) => {
-    return keys(getMapForActorKey(actorKey))
+export const getInstanceKeysForActor = (actorKey) => {
+    return keys(getMapForActor(actorKey))
 }

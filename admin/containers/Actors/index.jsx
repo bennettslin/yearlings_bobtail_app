@@ -2,7 +2,8 @@ import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import keys from 'lodash/keys'
 
-// import PreviewerSvg from '../PreviewerSvg'
+import PreviewerSvg from '../PreviewerSvg'
+import ActorsDashboard from './Dashboard'
 
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
@@ -19,10 +20,11 @@ import {
     setPresenceInQueryStrings
 } from '../../utils/storage'
 
-import { getSvgMapForActorType } from '../../utils/svg'
+import { getSvgMapForActor } from '../../utils/svg'
+
+import { ACTOR } from 'constants/scene'
 
 import './style.scss'
-import ActorsDashboard from './Dashboard'
 
 class Actors extends PureComponent {
     constructor(props) {
@@ -60,7 +62,7 @@ class Actors extends PureComponent {
         let presenceType = type,
             presenceKey = key
         if (type) {
-            presenceKey = keys(getSvgMapForActorType(type))[0]
+            presenceKey = keys(getSvgMapForActor(type))[0]
         } else if (key) {
             presenceType = this.state.presenceType
         }
@@ -69,7 +71,11 @@ class Actors extends PureComponent {
             presenceType,
             presenceKey
         })
-        setPresenceInStorage({ presenceType, presenceKey })
+        setPresenceInStorage({
+            isActor: true,
+            presenceType,
+            presenceKey
+        })
         setPresenceInQueryStrings({ presenceType, presenceKey })
     }
 
@@ -129,17 +135,16 @@ class Actors extends PureComponent {
                         selectPresence: this.selectPresence
                     }}
                 />
-                {/* {Boolean(presenceType) && Boolean(presenceKey) && (
-                    <div {...{ className: 'Previewer__scroll' }}>
-                        <PreviewerSvg
-                            {...{
-                                presenceType,
-                                presenceKey,
-                                handleProcessSvg: this.handleProcessSvg
-                            }}
-                        />
-                    </div>
-                )} */}
+                <div {...{ className: 'Previewer__scroll' }}>
+                    <PreviewerSvg
+                        {...{
+                            presenceType: ACTOR,
+                            actorKey: presenceType,
+                            presenceKey,
+                            handleProcessSvg: this.handleProcessSvg
+                        }}
+                    />
+                </div>
             </div>
         )
     }

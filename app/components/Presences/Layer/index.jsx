@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import Presence from '../../Presence'
-import { getInstanceKeysForActorKey } from '../../../svg/actors'
+import { getInstanceKeysForActor } from '../../../svg/actors'
 import { getPresenceKeysForPresenceType } from '../../../svg/things'
 
 import { ACTOR } from 'constants/scene'
@@ -37,7 +37,7 @@ class Layer extends PureComponent {
             isActor = Boolean(actorKey),
 
             presenceKeys = isActor ?
-                getInstanceKeysForActorKey(actorKey) :
+                getInstanceKeysForActor(actorKey) :
                 getPresenceKeysForPresenceType(presenceType)
 
         return (

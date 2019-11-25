@@ -151,17 +151,15 @@ class Things extends PureComponent {
                         selectPresence: this.selectPresence
                     }}
                 />
-                {Boolean(presenceType) && Boolean(presenceKey) && (
-                    <div {...{ className: 'Previewer__scroll' }}>
-                        <PreviewerSvg
-                            {...{
-                                presenceType,
-                                presenceKey,
-                                handleProcessSvg: this.handleProcessSvg
-                            }}
-                        />
-                    </div>
-                )}
+                <div {...{ className: 'Previewer__scroll' }}>
+                    <PreviewerSvg
+                        {...{
+                            presenceType,
+                            presenceKey,
+                            handleProcessSvg: this.handleProcessSvg
+                        }}
+                    />
+                </div>
             </div>
         )
     }

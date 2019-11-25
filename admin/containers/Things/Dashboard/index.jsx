@@ -67,9 +67,6 @@ class ThingsDashboard extends PureComponent {
                     }}
                 >
                     {keys(svgMap)
-                        .filter(presenceKey => (
-                            Boolean(svgMap[presenceKey])
-                        ))
                         .map(presenceKey => (
                             <option
                                 {...{
