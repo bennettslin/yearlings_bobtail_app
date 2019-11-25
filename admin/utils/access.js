@@ -2,12 +2,12 @@ import findIndex from 'lodash/findindex'
 import keys from 'lodash/keys'
 
 import {
-    getSvgMapForActor,
-    getSvgMapForThingType
+    getSvgMapForWholeActor,
+    getSvgMapForUnduplicatedThing
 } from './svg'
 
-import ACTOR_TYPES from '../constants/actors'
-import THING_TYPES from '../constants/things'
+import WHOLE_ACTORS_LIST from '../constants/actors'
+import THINGS_LIST from '../constants/things'
 
 import {
     ARROW_UP,
@@ -22,7 +22,7 @@ const accessPresenceType = ({
     presenceType,
     selectPresence
 }) => {
-    const typesList = isActor ? ACTOR_TYPES : THING_TYPES
+    const typesList = isActor ? WHOLE_ACTORS_LIST : THINGS_LIST
 
     const selectedIndex = findIndex(
         typesList,
@@ -54,7 +54,7 @@ const accessPresenceKey = ({
     selectPresence
 }) => {
     const
-        mapGetter = isActor ? getSvgMapForActor : getSvgMapForThingType,
+        mapGetter = isActor ? getSvgMapForWholeActor : getSvgMapForUnduplicatedThing,
         svgArray = keys(mapGetter(presenceType)),
         selectedIndex = findIndex(
             svgArray,

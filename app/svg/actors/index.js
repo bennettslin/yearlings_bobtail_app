@@ -1,5 +1,3 @@
-import keys from 'lodash/keys'
-
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
 import bennett from './bennett'
@@ -106,7 +104,7 @@ import {
     KHARI_LIZ_REFLECTION
 } from '../../constants/scene/actors'
 
-const ACTOR_KEY_MAP = {
+const ACTOR_SVG_MAPS = {
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
@@ -160,10 +158,6 @@ const ACTOR_KEY_MAP = {
     [KHARI_LIZ_REFLECTION]: khariLizReflection
 }
 
-export const getMapForActor = (actorKey) => {
-    return ACTOR_KEY_MAP[actorKey]
-}
-
-export const getInstanceKeysForActor = (actorKey) => {
-    return keys(getMapForActor(actorKey))
+export const getSvgMapForActor = (actorKey) => {
+    return ACTOR_SVG_MAPS[actorKey]
 }

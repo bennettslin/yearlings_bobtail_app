@@ -4,9 +4,9 @@ import cx from 'classnames'
 import keys from 'lodash/keys'
 
 import { convertPresenceKeyToClassName } from 'helpers/format'
-import ACTOR_TYPES from '../../../constants/actors'
+import WHOLE_ACTORS_LIST from '../../../constants/actors'
 
-import { getSvgMapForActor } from '../../../utils/svg'
+import { getSvgMapForWholeActor } from '../../../utils/svg'
 
 class ActorsDashboard extends PureComponent {
 
@@ -31,7 +31,7 @@ class ActorsDashboard extends PureComponent {
                 presenceKey,
                 kilobytes
             } = this.props,
-            svgMap = getSvgMapForActor(presenceType)
+            svgMap = getSvgMapForWholeActor(presenceType)
 
         return (
             <div
@@ -48,7 +48,7 @@ class ActorsDashboard extends PureComponent {
                         onChange: this.selectPresenceType
                     }}
                 >
-                    {ACTOR_TYPES.map(presenceType => (
+                    {WHOLE_ACTORS_LIST.map(presenceType => (
                         <option
                             {...{
                                 key: presenceType,

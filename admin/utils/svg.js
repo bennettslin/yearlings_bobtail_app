@@ -1,24 +1,28 @@
 import keys from 'lodash/keys'
 
-import { getMapForActor } from 'svg/actors'
-import { getMapForPresenceType } from 'svg/things'
+import { getSvgMapForActor } from 'svg/actors'
+import { getSvgMapForThing } from 'svg/things'
 
-import { WHOLE_ACTOR_INSTANCES_MAP } from '../constants/actors'
+import { WHOLE_ACTOR_INSTANCES } from '../constants/actors'
 
-export const getSvgMapForActor = (wholeActor) => {
-    const actorInstances = WHOLE_ACTOR_INSTANCES_MAP[wholeActor],
+export const getSvgMapForWholeActor = (wholeActor) => {
+    // Get all svgs for this actor, including compound instances.
+
+    const actorInstances = WHOLE_ACTOR_INSTANCES[wholeActor],
         svgMap = {}
 
     actorInstances.forEach(({ actor, instance }) => {
-        const actorMap = getMapForActor(actor)
+        const actorMap = getSvgMapForActor(actor)
         svgMap[instance] = actorMap[instance]
     })
 
     return svgMap
 }
 
-export const getSvgMapForThingType = (presenceType) => {
-    const presenceMap = getMapForPresenceType(presenceType)
+export const getSvgMapForUnduplicatedThing = (presenceType) => {
+    // Ensure that there are no duplicates.
+
+    const presenceMap = getSvgMapForThing(presenceType)
 
     if (!presenceMap) {
         return null

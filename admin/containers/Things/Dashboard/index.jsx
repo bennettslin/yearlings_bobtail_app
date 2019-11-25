@@ -4,9 +4,9 @@ import cx from 'classnames'
 import keys from 'lodash/keys'
 
 import { convertPresenceKeyToClassName } from 'helpers/format'
-import THING_TYPES from '../../../constants/things'
+import THINGS_LIST from '../../../constants/things'
 
-import { getSvgMapForThingType } from '../../../utils/svg'
+import { getSvgMapForUnduplicatedThing } from '../../../utils/svg'
 
 class ThingsDashboard extends PureComponent {
 
@@ -31,7 +31,7 @@ class ThingsDashboard extends PureComponent {
                 presenceKey,
                 kilobytes
             } = this.props,
-            svgMap = getSvgMapForThingType(presenceType)
+            svgMap = getSvgMapForUnduplicatedThing(presenceType)
 
         return (
             <div
@@ -48,7 +48,7 @@ class ThingsDashboard extends PureComponent {
                         onChange: this.selectPresenceType
                     }}
                 >
-                    {THING_TYPES.map(presenceType => (
+                    {THINGS_LIST.map(presenceType => (
                         <option
                             {...{
                                 key: presenceType,

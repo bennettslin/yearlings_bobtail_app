@@ -1,5 +1,3 @@
-import keys from 'lodash/keys'
-
 import backdrops from './backdrops'
 import bubbles from './bubbles'
 import cardboards from './cardboards'
@@ -24,7 +22,7 @@ import {
     PUPPET
 } from 'constants/scene/things'
 
-const PRESENCE_TYPE_MAP = {
+const THING_SVG_MAPS = {
     [BACKDROP]: backdrops,
     [BUBBLE]: bubbles,
     [CARDBOARD]: cardboards,
@@ -37,10 +35,6 @@ const PRESENCE_TYPE_MAP = {
     [PUPPET]: puppets
 }
 
-export const getMapForPresenceType = (presenceType) => {
-    return PRESENCE_TYPE_MAP[presenceType]
-}
-
-export const getPresenceKeysForPresenceType = (presenceType) => {
-    return keys(getMapForPresenceType(presenceType))
+export const getSvgMapForThing = (presenceType) => {
+    return THING_SVG_MAPS[presenceType]
 }

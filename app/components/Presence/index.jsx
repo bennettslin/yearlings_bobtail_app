@@ -6,8 +6,8 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from 'modules/PresenceSvg'
 
 import { capitaliseForClassName } from 'helpers/format'
-import { getMapForActor } from '../../svg/actors'
-import { getMapForPresenceType } from '../../svg/things'
+import { getSvgMapForActor } from '../../svg/actors'
+import { getSvgMapForThing } from '../../svg/things'
 
 import { ACTOR } from 'constants/scene'
 import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
@@ -84,8 +84,8 @@ class Presence extends PureComponent {
             } = this.state,
 
             presencesMap = presenceType === ACTOR ?
-                getMapForActor(actorKey) :
-                getMapForPresenceType(presenceType),
+                getSvgMapForActor(actorKey) :
+                getSvgMapForThing(presenceType),
 
             presenceComponent = presencesMap[presenceKey]
 

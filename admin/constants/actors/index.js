@@ -86,7 +86,7 @@ export default [
     WADE
 ]
 
-export const WHOLE_ACTOR_INSTANCES_MAP = {
+export const WHOLE_ACTOR_INSTANCES = {
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,

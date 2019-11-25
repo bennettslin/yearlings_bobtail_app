@@ -10,9 +10,9 @@ import {
     getSharedClassNames
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
-import { getSvgMapForActor } from '../../utils/svg'
-// import { getMapForActor } from 'svg/actors'
-import { getMapForPresenceType } from 'svg/things'
+
+import { getSvgMapForWholeActor } from '../../utils/svg'
+import { getSvgMapForThing } from 'svg/things'
 
 import { ACTOR } from 'constants/scene'
 
@@ -52,8 +52,8 @@ class PreviewerSvg extends PureComponent {
             } = this.props,
 
             presencesMap = presenceType === ACTOR ?
-                getSvgMapForActor(actorKey) :
-                getMapForPresenceType(presenceType),
+                getSvgMapForWholeActor(actorKey) :
+                getSvgMapForThing(presenceType),
 
             presenceComponent = presencesMap[presenceKey],
 

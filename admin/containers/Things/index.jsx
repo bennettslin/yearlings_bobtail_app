@@ -21,7 +21,7 @@ import {
 } from '../../utils/storage'
 
 import { logSvgCount } from '../../utils/log'
-import { getSvgMapForThingType } from '../../utils/svg'
+import { getSvgMapForUnduplicatedThing } from '../../utils/svg'
 
 import { getHeightAspectRatio } from './helper'
 
@@ -64,7 +64,7 @@ class Things extends PureComponent {
         let presenceType = type,
             presenceKey = key
         if (type) {
-            presenceKey = keys(getSvgMapForThingType(type))[0]
+            presenceKey = keys(getSvgMapForUnduplicatedThing(type))[0]
         } else if (key) {
             presenceType = this.state.presenceType
         }

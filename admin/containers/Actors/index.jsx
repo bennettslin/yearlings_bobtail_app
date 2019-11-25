@@ -20,7 +20,7 @@ import {
     setPresenceInQueryStrings
 } from '../../utils/storage'
 
-import { getSvgMapForActor } from '../../utils/svg'
+import { getSvgMapForWholeActor } from '../../utils/svg'
 
 import { ACTOR } from 'constants/scene'
 
@@ -62,7 +62,7 @@ class Actors extends PureComponent {
         let presenceType = type,
             presenceKey = key
         if (type) {
-            presenceKey = keys(getSvgMapForActor(type))[0]
+            presenceKey = keys(getSvgMapForWholeActor(type))[0]
         } else if (key) {
             presenceType = this.state.presenceType
         }

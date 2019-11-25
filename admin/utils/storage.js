@@ -5,11 +5,11 @@ import {
     setInStorage
 } from 'utils/window'
 
-import ACTOR_TYPES from '../constants/actors'
-import THING_TYPES from '../constants/things'
+import WHOLE_ACTORS_LIST from '../constants/actors'
+import THINGS_LIST from '../constants/things'
 import {
-    getSvgMapForActor,
-    getSvgMapForThingType
+    getSvgMapForWholeActor,
+    getSvgMapForUnduplicatedThing
 } from './svg'
 
 const getPresencePrefix = (isActor) => {
@@ -31,8 +31,8 @@ export const getPresenceFromQueryStrings = (isActor) => {
         urlParams = new URLSearchParams(window.location.search),
         presenceType = urlParams.get('type') || '',
         presenceKey = urlParams.get('key') || '',
-        typesList = isActor ? ACTOR_TYPES : THING_TYPES,
-        mapGetter = isActor ? getSvgMapForActor : getSvgMapForThingType,
+        typesList = isActor ? WHOLE_ACTORS_LIST : THINGS_LIST,
+        mapGetter = isActor ? getSvgMapForWholeActor : getSvgMapForUnduplicatedThing,
 
         svgMapForPresenceType = mapGetter(presenceType)
 
