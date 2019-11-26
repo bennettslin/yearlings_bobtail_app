@@ -42,6 +42,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -55,6 +56,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -68,6 +70,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -76,6 +79,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -90,6 +94,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -97,6 +102,7 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -104,6 +110,7 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -111,6 +118,7 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -119,6 +127,7 @@ export default [
                 [TOMER]: {
                     shane: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -133,6 +142,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -140,6 +150,7 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -147,6 +158,7 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -154,6 +166,7 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -167,6 +180,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -177,6 +191,7 @@ export default [
                         faceRevision: true,
                         hairIllustration: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -191,6 +206,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -201,6 +217,7 @@ export default [
                         faceRevision: true,
                         hairIllustration: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -211,6 +228,7 @@ export default [
                     maskedUsher: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -225,6 +243,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -233,6 +252,7 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,

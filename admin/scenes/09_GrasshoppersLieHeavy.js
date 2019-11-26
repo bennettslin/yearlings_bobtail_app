@@ -34,6 +34,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -47,6 +48,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -56,6 +58,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -70,6 +73,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -79,6 +83,7 @@ export default [
                     jogger: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -93,6 +98,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -102,6 +108,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -116,6 +123,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -125,6 +133,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -139,6 +148,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -148,6 +158,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -162,6 +173,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -175,6 +187,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -184,6 +197,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -198,6 +212,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -207,6 +222,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -222,6 +238,7 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -232,6 +249,7 @@ export default [
                     reflection: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -246,6 +264,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -255,6 +274,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -270,6 +290,7 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -280,6 +301,7 @@ export default [
                     reflection: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -294,6 +316,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -303,6 +326,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -318,6 +342,7 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -328,6 +353,7 @@ export default [
                     reflection: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,

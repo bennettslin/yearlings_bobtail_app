@@ -36,6 +36,7 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -44,6 +45,7 @@ export default [
                 },
                 [BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -54,6 +56,7 @@ export default [
                     sita: {
                         faceRevision: true,
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -63,6 +66,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -71,6 +75,7 @@ export default [
                 },
                 [ANITA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -79,6 +84,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -87,6 +93,7 @@ export default [
                 },
                 [ESTHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -95,6 +102,7 @@ export default [
                 },
                 [WILLY]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -103,6 +111,7 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -111,6 +120,7 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -119,6 +129,7 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -127,6 +138,7 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -135,6 +147,7 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -143,6 +156,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -151,6 +165,7 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -159,6 +174,7 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -167,6 +183,7 @@ export default [
                 },
                 [TRISTAN]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -175,6 +192,7 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -183,6 +201,7 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -191,6 +210,7 @@ export default [
                 },
                 [AMY]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -199,6 +219,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -207,6 +228,7 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -215,6 +237,7 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -223,6 +246,7 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -232,6 +256,7 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -240,6 +265,7 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -249,6 +275,7 @@ export default [
                 [NESTOR]: {
                     faceRevision: true,
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,

@@ -20,6 +20,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -33,6 +34,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -46,6 +48,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -59,6 +62,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -72,6 +76,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -85,6 +90,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -99,6 +105,7 @@ export default [
                 [SASHA]: {
                     mermaid: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -107,6 +114,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -120,6 +128,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,

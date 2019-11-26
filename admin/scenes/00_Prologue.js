@@ -8,6 +8,7 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,

@@ -26,6 +26,7 @@ export default [
             [ACTOR]: {
                 [ESTHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -33,6 +34,7 @@ export default [
                 },
                 [ANITA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -40,6 +42,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -53,6 +56,7 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -60,6 +64,7 @@ export default [
                 },
                 [ESTHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -67,6 +72,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -80,6 +86,7 @@ export default [
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -93,6 +100,7 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -100,6 +108,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,

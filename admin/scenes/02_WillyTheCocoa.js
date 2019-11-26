@@ -35,6 +35,7 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -48,6 +49,7 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -55,6 +57,7 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -62,6 +65,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -69,6 +73,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -82,6 +87,7 @@ export default [
             [ACTOR]: {
                 [FATHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -89,6 +95,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -96,6 +103,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -110,6 +118,7 @@ export default [
                 [HOWIE]: {
                     gangbanger: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -118,6 +127,7 @@ export default [
                 },
                 [WILLY]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -126,6 +136,7 @@ export default [
                 [TOMER]: {
                     gangbanger: {
                         hands: true,
+                        hair: true,
                         head: true,
                         face: true,
                         composite: true,
@@ -140,6 +151,7 @@ export default [
             [ACTOR]: {
                 [MOTHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -147,6 +159,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -160,6 +173,7 @@ export default [
             [ACTOR]: {
                 [CHRISTOPHER]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -167,6 +181,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
@@ -174,6 +189,7 @@ export default [
                 },
                 [WILLY]: {
                     hands: true,
+                    hair: true,
                     head: true,
                     face: true,
                     composite: true,
