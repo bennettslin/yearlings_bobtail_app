@@ -5009,8 +5009,8 @@ export default [
     },
     {
         taskName: `About section content.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 3,
+        neededHours: 3
     },
     {
         taskName: `Render actor presences.`,

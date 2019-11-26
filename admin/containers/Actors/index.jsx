@@ -116,7 +116,7 @@ class Actors extends PureComponent {
             `.${capitaliseForClassName(presenceType)} .${presenceKey}`
         )
 
-        scrollIntoView(element, { time: 250 })
+        scrollIntoView(element, { time: 100 })
     }
 
     setPreviewerElement = node => this.previewerElement = node

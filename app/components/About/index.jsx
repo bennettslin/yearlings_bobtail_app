@@ -54,12 +54,17 @@ class About extends Component {
                     </div>
                 </div>
                 <div {...{ className: 'About__child' }}>
-                    {'Album written, composed, and performed by Bennett Lin.'}
-                    <br />
-                    {'Website annotated, illustrated, and coded by Bennett Lin.'}
+                    {'Visit the '}
+                    <Anchor
+                        {...{
+                            text: 'Bobtail Yearlings website',
+                            handleAnchorClick: this.handleAnchorClick
+                        }}
+                    />
+                    {'.'}
                 </div>
                 <div {...{ className: 'About__child' }}>
-                    {'If you have an offer or opportunity that I might be interested in, email me at '}
+                    {'Do you have an offer or opportunity that I might be interested in? Please email me at '}
                     <span
                         {...{
                             className: cx(
@@ -80,17 +85,19 @@ class About extends Component {
                             </___>
                         ))}
                     </span>
-                    {'. Please note, I\'ll only respond if it matches my interests and my schedule.'}
+                    {`. I'll respond if it matches my interests and my schedule. Thanks for the thought!`}
                 </div>
-                <div {...{ className: 'About__child' }}>
-                    {'Visit the '}
-                    <Anchor
-                        {...{
-                            text: 'Bobtail Yearlings website',
-                            handleAnchorClick: this.handleAnchorClick
-                        }}
-                    />
-                    {'.'}
+                <div
+                    {...{
+                        className: cx(
+                            'About__child',
+                            'About__finePrint'
+                        )
+                    }}
+                >
+                    {'Album written, composed, and performed by Bennett Lin.'}
+                    <br />
+                    {'Website annotated, illustrated, and coded by Bennett Lin.'}
                 </div>
             </div>
         )
