@@ -15,7 +15,8 @@ const propTypes = {
     isWikiTextAnchor: PropTypes.bool,
     text: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.array
+        PropTypes.array,
+        PropTypes.object
     ]).isRequired,
     textConfig: PropTypes.shape({
         isVerseLyric: PropTypes.bool,

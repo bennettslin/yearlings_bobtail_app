@@ -105,8 +105,7 @@ class Presence extends PureComponent {
                         className: cx(
                             'Presence',
                             isSvgLoaded && 'Presence__loaded',
-                            capitaliseForClassName(presenceType),
-                            presenceKey
+                            capitaliseForClassName(presenceType)
                         ),
                         cubesKey,
                         presenceType,

@@ -108,20 +108,29 @@ const STYLED_ACTOR_MAP = {
     [KHARI_LIZ_REFLECTION]: [KHARI, LIZ]
 }
 
+const addStyleToShared = (sharedStyle, addedStyle) => {
+    if (!sharedStyle) {
+        return addedStyle
+    }
+
+    if (isString(sharedStyle)) {
+        return [sharedStyle, addedStyle]
+    }
+
+    sharedStyle.push(addedStyle)
+    return sharedStyle
+}
+
 export const getActorStyle = (actor, sharedStyle) => {
     const styledActors = STYLED_ACTOR_MAP[actor]
 
     // This is the whole actor.
     if (isString(styledActors)) {
-        return [styledActors, sharedStyle].flat()
+        return addStyleToShared(sharedStyle, STYLED_ACTOR_MAP[styledActors])
     }
 
-    const finalArray = [sharedStyle]
-
     // This is a compound actor or reflection.
-    styledActors.forEach(styledActor => {
-        finalArray.push(STYLED_ACTOR_MAP[styledActor])
-    })
-
-    return finalArray.flat()
+    return styledActors.reduce((finalStyle, styledActor) => {
+        return addStyleToShared(finalStyle, styledActor)
+    }, sharedStyle)
 }
