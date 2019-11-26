@@ -10,6 +10,7 @@ import {
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
+import { getActorStyle } from './helper/sharedStyle'
 import {
     getSizeForPresence,
     getViewBoxSize
@@ -169,6 +170,17 @@ class PresenceSvg extends PureComponent {
         })
     }
 
+    getSharedStyle() {
+        const { actorKey } = this.props,
+            { sharedStyle } = this.getArrangement()
+
+        if (actorKey) {
+            return getActorStyle(actorKey, sharedStyle)
+        } else {
+            return sharedStyle
+        }
+    }
+
     render() {
         const {
                 className,
@@ -177,8 +189,7 @@ class PresenceSvg extends PureComponent {
             } = this.props,
             {
                 noShadow,
-                perspective,
-                sharedStyle
+                perspective
             } = this.getArrangement(),
             {
                 x: adjustedLeft,
@@ -188,7 +199,8 @@ class PresenceSvg extends PureComponent {
                 adjustedWidth,
                 adjustedHeight
             } = this.state,
-            containerTransform = this.getPresenceTransform()
+            containerTransform = this.getPresenceTransform(),
+            sharedStyle = this.getSharedStyle()
 
         return (
             <InlineSvg
