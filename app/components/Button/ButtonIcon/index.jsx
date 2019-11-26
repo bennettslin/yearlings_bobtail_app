@@ -23,7 +23,7 @@ const ButtonIcon = ({
 }) => {
     const buttonIconSvg = BUTTON_ICONS_MAP[buttonName]({ buttonIdentifier })
 
-    return (
+    return Boolean(buttonIconSvg) && (
         <InlineSvg
             {...{
                 className: cx(
