@@ -5,10 +5,8 @@ import {
     SEA_SERPENT_RIGHT
 } from '../../../constants/scene/things/cardboards'
 import { ODIN__SHARED } from '../../shared/animals'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED
-} from '../../shared/people'
+import { BENNETT } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -19,7 +17,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 2.5,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 ODIN__SHARED
             ]
         },

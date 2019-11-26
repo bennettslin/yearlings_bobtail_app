@@ -20,11 +20,8 @@ import {
 } from '../../../constants/scene/things/panels'
 import { HEINEKEN__SHARED } from '../../shared/food'
 import { MICROPHONE__SHARED } from '../../shared/instruments'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    MIRIAM__SHARED
-} from '../../shared/people'
+import { BENNETT, MIRIAM } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import {
     ROAD__SHARED,
     SNOWGLOBE__SHARED
@@ -57,7 +54,7 @@ const ARRANGEMENTS_THINGS = {
             rotate: 10,
             sharedStyle: [
                 SNOWGLOBE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 ALL_PEOPLE__SHARED
             ]
         },
@@ -70,8 +67,8 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: [
                 REATTA__SHARED,
                 SNOWGLOBE__SHARED,
-                BENNETT__SHARED,
-                MIRIAM__SHARED,
+                BENNETT,
+                MIRIAM,
                 ALL_PEOPLE__SHARED
             ]
         }

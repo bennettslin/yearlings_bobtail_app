@@ -12,10 +12,8 @@ import { IRON_GATE_LOW } from '../../../constants/scene/things/doors'
 import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
 import { ODIN__SHARED } from '../../shared/animals'
 import { TAIWAN_GATE__SHARED } from '../../shared/home'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED
-} from '../../shared/people'
+import { BENNETT } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -36,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 0.875,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED
+                BENNETT
             ]
         },
         [ODIN_TAIWAN_GATE]: {

@@ -18,11 +18,8 @@ import {
     REATTA_SEAT_DOWN
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    MIRIAM__SHARED
-} from '../../shared/people'
+import { BENNETT, MIRIAM } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import {
     INTERIOR__SHARED,
     REATTA__SHARED
@@ -95,8 +92,8 @@ export const THINGS_EL_CERRITO_REATTA = {
             sharedStyle: [
                 REATTA__SHARED,
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
-                MIRIAM__SHARED
+                BENNETT,
+                MIRIAM
             ]
         }
     }

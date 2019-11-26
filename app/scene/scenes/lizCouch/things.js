@@ -43,11 +43,8 @@ import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
 } from '../../shared/instruments'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    LIZ__SHARED
-} from '../../shared/people'
+import { BENNETT, LIZ } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { BUBBLE__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
@@ -116,8 +113,8 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             zOffset: 3,
             scaleFactor: 0.45,
             sharedStyle: [
-                BENNETT__SHARED,
-                LIZ__SHARED,
+                BENNETT,
+                LIZ,
                 ALL_PEOPLE__SHARED
             ]
         },
@@ -131,8 +128,8 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
                 ACOUSTIC_GUITAR__SHARED,
                 MICROPHONE__SHARED,
                 MONITOR__SHARED,
-                BENNETT__SHARED,
-                LIZ__SHARED,
+                BENNETT,
+                LIZ,
                 ALL_PEOPLE__SHARED
             ]
         }
@@ -168,8 +165,8 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             zOffset: 0.5,
             scaleFactor: 0.45,
             sharedStyle: [
-                BENNETT__SHARED,
-                LIZ__SHARED,
+                BENNETT,
+                LIZ,
                 ALL_PEOPLE__SHARED
             ]
         }

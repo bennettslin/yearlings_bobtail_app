@@ -16,9 +16,10 @@ import { getArrangementForPresence } from 'components/Presence/helper'
 import { getSvgMapForWholeActor } from '../../../utils/svg'
 import { getSvgMapForThing } from 'svg/things'
 
-import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
+import { getGlobalActorStyle } from 'modules/PresenceSvg/helper/sharedStyle'
 
 import { ACTOR } from 'constants/scene'
+import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
 
 class PreviewerSvg extends PureComponent {
 
@@ -43,6 +44,25 @@ class PreviewerSvg extends PureComponent {
 
         if (element) {
             this.props.handleProcessSvg(svgString)
+        }
+    }
+
+    getSharedStyle(actorKey) {
+        const {
+                presenceType,
+                presenceKey
+            } = this.props,
+
+            { sharedStyle } = getArrangementForPresence({
+                presenceType: actorKey ? ACTOR : presenceType,
+                presenceKey,
+                actorKey
+            })
+
+        if (actorKey) {
+            return getGlobalActorStyle(actorKey, sharedStyle)
+        } else {
+            return sharedStyle
         }
     }
 
@@ -71,11 +91,7 @@ class PreviewerSvg extends PureComponent {
             ].actor
         }
 
-        const { sharedStyle } = getArrangementForPresence({
-            presenceType: isActor ? ACTOR : presenceType,
-            ...isActor && { actorKey },
-            presenceKey
-        }) || {}
+        const sharedStyle = this.getSharedStyle(actorKey)
 
         return Boolean(svgContent) && (
             <InlineSvg

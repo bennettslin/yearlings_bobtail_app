@@ -36,7 +36,7 @@ const INSTANCES = [
         instance: COMFORTING_HUMILIATED
     },
     {
-        actor: SASHA,
+        actor: SASHA_BENNETT,
         instance: EPILOGUE
     }
 ]

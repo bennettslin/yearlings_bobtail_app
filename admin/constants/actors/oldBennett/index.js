@@ -1,5 +1,6 @@
 import {
-    OLD_BENNETT
+    OLD_BENNETT,
+    BENNETTS_CHRISTOPHER_LIZ
 } from 'constants/scene/actors'
 import {
     PROLOGUE,
@@ -12,7 +13,7 @@ const INSTANCES = [
         instance: PROLOGUE
     },
     {
-        actor: OLD_BENNETT,
+        actor: BENNETTS_CHRISTOPHER_LIZ,
         instance: EPILOGUE
     }
 ]

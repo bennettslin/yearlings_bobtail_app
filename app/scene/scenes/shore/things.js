@@ -12,10 +12,8 @@ import {
     ROLLER_COASTER
 } from '../../../constants/scene/things/flats'
 import { ODIN__SHARED } from '../../shared/animals'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED
-} from '../../shared/people'
+import { BENNETT } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { TAIWAN_BUOY__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
@@ -33,7 +31,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 ODIN__SHARED,
                 TAIWAN_BUOY__SHARED
             ]

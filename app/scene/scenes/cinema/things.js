@@ -10,10 +10,8 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
 import { DOOR__SHARED } from '../../shared/home'
-import {
-    ALL_PEOPLE__SHARED,
-    MARA__SHARED
-} from '../../shared/people'
+import { MARA } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { POSTER_GLADIATOR__SHARED } from '../../shared/print'
 
 const ARRANGEMENTS_THINGS = {
@@ -26,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                MARA__SHARED
+                MARA
             ]
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
@@ -44,7 +42,7 @@ const ARRANGEMENTS_THINGS = {
             sharedStyle: [
                 POSTER_GLADIATOR__SHARED,
                 ALL_PEOPLE__SHARED,
-                MARA__SHARED
+                MARA
             ]
         },
         [MARQUEE_FRAME__MARA_GLADIATOR]: {

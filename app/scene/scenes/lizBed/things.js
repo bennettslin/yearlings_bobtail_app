@@ -24,7 +24,7 @@ import {
     PILLOW_BOYFRIEND__SHARED,
     PILLOW_LIZ__SHARED
 } from '../../shared/furniture'
-import { BENNETT__SHARED } from '../../shared/people'
+import { BENNETT } from '../../../constants/scene/actors'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -73,14 +73,14 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
         [BENNETT_SHOE]: {
             yIndex: 4,
             xPosition: 9,
-            sharedStyle: BENNETT__SHARED
+            sharedStyle: BENNETT
         },
         [BENNETT_SHOE_REFLECTION]: {
             yIndex: 2,
             xPosition: 9,
             zOffset: 5.5,
             rotate: 345,
-            sharedStyle: BENNETT__SHARED
+            sharedStyle: BENNETT
         }
     }
 }

@@ -1,5 +1,6 @@
 import {
-    FATHER
+    FATHER,
+    BENNETT_FATHER
 } from 'constants/scene/actors'
 import {
     ROARING,
@@ -27,7 +28,7 @@ const INSTANCES = [
         instance: PAST
     },
     {
-        actor: FATHER,
+        actor: BENNETT_FATHER,
         instance: PRESENT
     },
     {

@@ -10,7 +10,7 @@ import {
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
-import { getActorStyle } from './helper/sharedStyle'
+import { getGlobalActorStyle } from './helper/sharedStyle'
 import {
     getSizeForPresence,
     getViewBoxSize
@@ -175,7 +175,7 @@ class PresenceSvg extends PureComponent {
             { sharedStyle } = this.getArrangement()
 
         if (actorKey) {
-            return getActorStyle(actorKey, sharedStyle)
+            return getGlobalActorStyle(actorKey, sharedStyle)
         } else {
             return sharedStyle
         }

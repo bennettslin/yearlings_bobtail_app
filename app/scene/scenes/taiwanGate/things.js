@@ -15,10 +15,8 @@ import {
 import { ODIN__SHARED } from '../../shared/animals'
 import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
 import { TAIWAN_GATE__SHARED } from '../../shared/home'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED
-} from '../../shared/people'
+import { BENNETT } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { TAIWAN_RICKSHAW__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
@@ -29,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 ODIN__SHARED,
                 TAIWAN_RICKSHAW__SHARED
             ]

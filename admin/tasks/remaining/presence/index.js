@@ -16,10 +16,5 @@ export default [
         taskName: `Line stroke widths for all presence types.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Figure out shared styling for actors.`,
-        workedHours: 0,
-        neededHours: 4
     }
 ]

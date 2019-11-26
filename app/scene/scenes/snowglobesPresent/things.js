@@ -19,11 +19,8 @@ import {
     ROAD__SHARED,
     SNOWGLOBE__SHARED
 } from '../../shared/props'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    LIZ__SHARED
-} from '../../shared/people'
+import { BENNETT, LIZ } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -51,8 +48,8 @@ const ARRANGEMENTS_THINGS = {
             rotate: 15,
             sharedStyle: [
                 SNOWGLOBE__SHARED,
-                BENNETT__SHARED,
-                LIZ__SHARED,
+                BENNETT,
+                LIZ,
                 ALL_PEOPLE__SHARED
             ]
         }

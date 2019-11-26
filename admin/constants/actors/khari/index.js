@@ -1,6 +1,7 @@
 import {
     KHARI,
-    KHARI_LIZ
+    KHARI_LIZ,
+    KHARI_LIZ_REFLECTION
 } from 'constants/scene/actors'
 import {
     DOUBLE_ALBERT,
@@ -46,7 +47,7 @@ const INSTANCES = [
         instance: CARESS
     },
     {
-        actor: KHARI_LIZ,
+        actor: KHARI_LIZ_REFLECTION,
         instance: CARESS_REFLECTION
     },
     {

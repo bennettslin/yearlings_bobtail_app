@@ -15,11 +15,8 @@ import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
 import { ODIN__SHARED } from '../../shared/animals'
 import { ACOUSTIC_GUITAR__SHARED } from '../../shared/instruments'
 import { SKETCHBOOK__SHARED } from '../../shared/paper'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    SASHA__SHARED
-} from '../../shared/people'
+import { BENNETT, SASHA } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { BUDDHA_SHRINE__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
@@ -30,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED
+                BENNETT
             ]
         },
         [ODIN_TAIWAN_STAIRS]: {
@@ -63,7 +60,7 @@ const ARRANGEMENTS_THINGS = {
                 SKETCHBOOK__SHARED,
                 ALL_PEOPLE__SHARED,
                 ACOUSTIC_GUITAR__SHARED,
-                SASHA__SHARED
+                SASHA
             ]
         }
     }

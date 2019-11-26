@@ -5031,5 +5031,10 @@ export default [
         taskName: `Actors previewer. Allow them to show side by side`,
         workedHours: 13,
         neededHours: 13
+    },
+    {
+        taskName: `Figure out shared styling for actors.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

@@ -12,10 +12,8 @@ import { getSharedClassNames } from '../../../helpers/format'
 
 import { HEADPHONE__SHARED } from '../../../scene/shared/instruments'
 import { BOOK__SHARED } from '../../../scene/shared/paper'
-import {
-    ALL_PEOPLE__SHARED,
-    OLD_BENNETT__SHARED
-} from '../../../scene/shared/people'
+import { OLD_BENNETT } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../../scene/shared/people'
 import { SNOWGLOBE__SHARED } from '../../../scene/shared/props'
 
 export const getButtonIconClassNames = ({ buttonName, buttonIdentifier }) => {
@@ -46,7 +44,7 @@ export const getButtonIconClassNames = ({ buttonName, buttonIdentifier }) => {
         className = [
             HEADPHONE__SHARED,
             ALL_PEOPLE__SHARED,
-            OLD_BENNETT__SHARED
+            OLD_BENNETT
         ]
     }
 

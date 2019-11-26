@@ -10,10 +10,8 @@ import {
     OCEAN_BOTTOM_NEAR
 } from '../../../constants/scene/things/flats'
 import { ODIN__SHARED } from '../../shared/animals'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED
-} from '../../shared/people'
+import { BENNETT } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -30,7 +28,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 ODIN__SHARED
             ]
         }

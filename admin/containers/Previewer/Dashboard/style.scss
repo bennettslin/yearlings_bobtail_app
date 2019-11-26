@@ -50,6 +50,7 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
     position: absolute;
     padding: 0 $padding__dashboard $padding__dashboard;
     top: $height__dashboard__mobile;
+    width: 100%;
 
     @media (min-width: 1000px) {
         top: $height__dashboard;
@@ -59,7 +60,6 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
     & {
         display: flex;
         justify-content: center;
-        width: auto;
         height: calc(100% - #{$height__dashboard__mobile});
 
         @media (min-width: 1000px) {
@@ -69,6 +69,7 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
 
     .Previewer__actors
     & {
+        width: auto;
         justify-content: left;
     }
 }

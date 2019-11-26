@@ -4,7 +4,9 @@ import {
     BENNETT_STEPHANIE,
     MIRIAM_BENNETT,
     BENNETT_FATHER,
-    BENNETTS_CHRISTOPHER_LIZ
+    BENNETTS_CHRISTOPHER_LIZ,
+    BENNETT_LIZ_REFLECTION,
+    BENNETT_REFLECTION
 } from 'constants/scene/actors'
 import {
     BREAKUP_DEJECTED,
@@ -201,7 +203,7 @@ const INSTANCES = [
         instance: HARD_ON
     },
     {
-        actor: BENNETT_LIZ,
+        actor: BENNETT_LIZ_REFLECTION,
         instance: HARD_ON_REFLECTION
     },
     {
@@ -209,7 +211,7 @@ const INSTANCES = [
         instance: MISSIONARY
     },
     {
-        actor: BENNETT_LIZ,
+        actor: BENNETT_LIZ_REFLECTION,
         instance: MISSIONARY_REFLECTION
     },
     {
@@ -217,7 +219,7 @@ const INSTANCES = [
         instance: AFTERGLOW
     },
     {
-        actor: BENNETT_LIZ,
+        actor: BENNETT_LIZ_REFLECTION,
         instance: AFTERGLOW_REFLECTION
     },
     {
@@ -261,7 +263,7 @@ const INSTANCES = [
         instance: REMOVING_SHOES
     },
     {
-        actor: BENNETT,
+        actor: BENNETT_REFLECTION,
         instance: SHOES_REFLECTION
     },
     {

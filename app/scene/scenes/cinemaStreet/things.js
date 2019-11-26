@@ -18,11 +18,8 @@ import {
     HEADPHONE__SHARED,
     MICROPHONE__SHARED
 } from '../../shared/instruments'
-import {
-    ALL_PEOPLE__SHARED,
-    BENNETT__SHARED,
-    MARA__SHARED
-} from '../../shared/people'
+import { BENNETT, MARA } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { POSTER_GLADIATOR__SHARED } from '../../shared/print'
 import { BUBBLE__SHARED } from '../../shared/props'
 
@@ -58,7 +55,7 @@ const ARRANGEMENTS_THINGS = {
                 ACOUSTIC_GUITAR__SHARED,
                 HEADPHONE__SHARED,
                 MICROPHONE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 ALL_PEOPLE__SHARED
             ]
         },
@@ -68,7 +65,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 1,
             scaleFactor: 0.45,
             sharedStyle: [
-                MARA__SHARED,
+                MARA,
                 ALL_PEOPLE__SHARED
             ]
         }

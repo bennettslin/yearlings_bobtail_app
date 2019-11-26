@@ -2,7 +2,10 @@ import {
     LIZ,
     BENNETT_LIZ,
     KHARI_LIZ,
-    BENNETTS_CHRISTOPHER_LIZ
+    BENNETTS_CHRISTOPHER_LIZ,
+    BENNETT_LIZ_REFLECTION,
+    LIZ_REFLECTION,
+    KHARI_LIZ_REFLECTION
 } from 'constants/scene/actors'
 import {
     ASLEEP_REACHING,
@@ -98,7 +101,7 @@ const INSTANCES = [
         instance: HARD_ON
     },
     {
-        actor: BENNETT_LIZ,
+        actor: BENNETT_LIZ_REFLECTION,
         instance: HARD_ON_REFLECTION
     },
     {
@@ -106,7 +109,7 @@ const INSTANCES = [
         instance: MISSIONARY
     },
     {
-        actor: BENNETT_LIZ,
+        actor: BENNETT_LIZ_REFLECTION,
         instance: MISSIONARY_REFLECTION
     },
     {
@@ -114,7 +117,7 @@ const INSTANCES = [
         instance: AFTERGLOW
     },
     {
-        actor: BENNETT_LIZ,
+        actor: BENNETT_LIZ_REFLECTION,
         instance: AFTERGLOW_REFLECTION
     },
     {
@@ -122,7 +125,7 @@ const INSTANCES = [
         instance: ASLEEP_REACHING
     },
     {
-        actor: LIZ,
+        actor: LIZ_REFLECTION,
         instance: REACHING_REFLECTION
     },
     {
@@ -182,7 +185,7 @@ const INSTANCES = [
         instance: CARESS
     },
     {
-        actor: KHARI_LIZ,
+        actor: KHARI_LIZ_REFLECTION,
         instance: CARESS_REFLECTION
     },
     {

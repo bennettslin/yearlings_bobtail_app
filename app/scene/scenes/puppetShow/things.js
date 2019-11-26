@@ -45,13 +45,13 @@ import {
     SKETCHBOOK__SHARED
 } from '../../shared/paper'
 import {
-    ALL_PEOPLE__SHARED,
-    ANITA__SHARED,
-    BENNETT__SHARED,
-    CHRISTOPHER__SHARED,
-    FATHER__SHARED,
-    MOTHER__SHARED
-} from '../../shared/people'
+    ANITA,
+    BENNETT,
+    CHRISTOPHER,
+    FATHER,
+    MOTHER
+} from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { SKETCH_TAIWAN__SHARED } from '../../shared/sketch'
 import { TAIWAN_MOUNTAIN__SHARED } from '../../shared/taiwan'
 
@@ -117,7 +117,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 SKETCHBOOK__SHARED
             ]
         },
@@ -128,7 +128,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                CHRISTOPHER__SHARED
+                CHRISTOPHER
             ]
         },
         [PUPPET_MOTHER_BEGIN]: {
@@ -138,7 +138,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                MOTHER__SHARED
+                MOTHER
             ]
         },
         [PUPPET_ANITA_BEGIN]: {
@@ -148,7 +148,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                ANITA__SHARED
+                ANITA
             ]
         },
         [PUPPET_FATHER_BEGIN]: {
@@ -158,7 +158,7 @@ export const THINGS_PUPPET_SHOW_BEGIN = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                FATHER__SHARED
+                FATHER
             ]
         }
     }
@@ -194,7 +194,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 SKETCHBOOK__SHARED
             ]
         },
@@ -205,7 +205,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                MOTHER__SHARED
+                MOTHER
             ]
         },
         [PUPPET_CHRISTOPHER_MIDDLE]: {
@@ -215,7 +215,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                CHRISTOPHER__SHARED
+                CHRISTOPHER
             ]
         },
         [PUPPET_FATHER_MIDDLE]: {
@@ -225,7 +225,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                FATHER__SHARED
+                FATHER
             ]
         },
         [PUPPET_ANITA_MIDDLE]: {
@@ -235,7 +235,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                ANITA__SHARED
+                ANITA
             ]
         }
     }
@@ -272,7 +272,7 @@ export const THINGS_PUPPET_SHOW_END = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                BENNETT__SHARED,
+                BENNETT,
                 SKETCHBOOK__SHARED
             ]
         },
@@ -283,7 +283,7 @@ export const THINGS_PUPPET_SHOW_END = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                FATHER__SHARED
+                FATHER
             ]
         },
         [PUPPET_ANITA_END]: {
@@ -293,7 +293,7 @@ export const THINGS_PUPPET_SHOW_END = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                ANITA__SHARED
+                ANITA
             ]
         },
         [PUPPET_CHRISTOPHER_END]: {
@@ -303,7 +303,7 @@ export const THINGS_PUPPET_SHOW_END = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                CHRISTOPHER__SHARED
+                CHRISTOPHER
             ]
         },
         [PUPPET_MOTHER_END]: {
@@ -313,7 +313,7 @@ export const THINGS_PUPPET_SHOW_END = {
             scaleFactor: 0.25,
             sharedStyle: [
                 ALL_PEOPLE__SHARED,
-                MOTHER__SHARED
+                MOTHER
             ]
         }
     }
