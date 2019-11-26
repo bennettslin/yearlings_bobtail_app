@@ -1,6 +1,30 @@
 @import "./Toggle/style";
 
-.email {
+.About__child {
+    line-height: 1.5em;
+
+    &:not(:first-child) {
+        margin-top: 1em;
+    }
+}
+
+.About__stylisedText {
     color: $bgColour__audioPause;
+}
+
+.About__albumTitle {
+    font-size: 3em;
+    line-height: 1.5em;
+}
+
+.About__byLine {
+    font-size: 1.25em;
+}
+
+.About__bandName {
+    font-size: 1.5em;
+}
+
+.About__email {
     font-size: 1.25em;
 }

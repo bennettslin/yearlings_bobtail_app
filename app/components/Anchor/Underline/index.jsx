@@ -5,7 +5,7 @@ import cx from 'classnames'
 const propTypes = {
     // From parent.
         isAccessed: PropTypes.bool,
-        isSelected: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool,
         isDotAnchor: PropTypes.bool,
         isWikiAnchor: PropTypes.bool,
         isWikiFirstChild: PropTypes.bool,

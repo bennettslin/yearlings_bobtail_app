@@ -26,17 +26,45 @@ class About extends Component {
                     )
                 }}
             >
-                <p>
+                <div {...{ className: 'About__child' }}>
+                    <i
+                        {...{
+                            className: cx(
+                                'About__albumTitle',
+                                'About__stylisedText',
+                                'Rancho'
+                            )
+                        }}
+                    >
+                        {`Yearling's Bobtail`}
+                    </i>
+                    <div {...{ className: 'About__byLine' }}>
+                        {'by '}
+                        <span
+                            {...{
+                                className: cx(
+                                    'About__bandName',
+                                    'About__stylisedText',
+                                    'Rancho'
+                                )
+                            }}
+                        >
+                            {`The Bobtail Yearlings`}
+                        </span>
+                    </div>
+                </div>
+                <div {...{ className: 'About__child' }}>
                     {'Album written, composed, and performed by Bennett Lin.'}
                     <br />
                     {'Website annotated, illustrated, and coded by Bennett Lin.'}
-                </p>
-                <p>
+                </div>
+                <div {...{ className: 'About__child' }}>
                     {'If you have an offer or opportunity that I might be interested in, email me at '}
                     <span
                         {...{
                             className: cx(
-                                'email',
+                                'About__email',
+                                'About__stylisedText',
                                 'Rancho'
                             )
                         }}
@@ -53,8 +81,8 @@ class About extends Component {
                         ))}
                     </span>
                     {'. Please note, I\'ll only respond if it matches my interests and my schedule.'}
-                </p>
-                <p>
+                </div>
+                <div {...{ className: 'About__child' }}>
                     {'Visit the '}
                     <Anchor
                         {...{
@@ -63,7 +91,7 @@ class About extends Component {
                         }}
                     />
                     {'.'}
-                </p>
+                </div>
             </div>
         )
     }

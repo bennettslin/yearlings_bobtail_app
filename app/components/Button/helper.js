@@ -48,7 +48,7 @@ const
     BOTTOM = 'bottom',
 
     TOOLTIP_TEXT_MAP = {
-        [ABOUT_BUTTON_KEY]: 'contact and credits',
+        [ABOUT_BUTTON_KEY]: 'about this album',
         get audioOptions() {
             return {
                 0: 'continuous play',
