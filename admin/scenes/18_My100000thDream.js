@@ -85,7 +85,7 @@ export default [
                 },
                 [MIRIAM]: {
                     gopi: {
-                        hair: true,
+                        hairIllustration: true,
                         hands: true,
                         head: true,
                         face: true,

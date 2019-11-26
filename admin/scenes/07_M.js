@@ -175,7 +175,7 @@ export default [
                 [MIRIAM]: {
                     maskedWoman: {
                         faceRevision: true,
-                        hair: true,
+                        hairIllustration: true,
                         hands: true,
                         head: true,
                         face: true,
@@ -199,7 +199,7 @@ export default [
                 [MIRIAM]: {
                     maskedWoman: {
                         faceRevision: true,
-                        hair: true,
+                        hairIllustration: true,
                         hands: true,
                         head: true,
                         face: true,

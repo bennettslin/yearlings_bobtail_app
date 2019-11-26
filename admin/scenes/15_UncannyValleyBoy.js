@@ -38,7 +38,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -137,7 +137,7 @@ export default [
                     instance: PRESENT
                 },
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -213,7 +213,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,

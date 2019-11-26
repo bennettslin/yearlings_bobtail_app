@@ -30,7 +30,7 @@ export default [
                     instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -44,7 +44,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -65,7 +65,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -99,7 +99,7 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,
@@ -120,7 +120,7 @@ export default [
                     instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,

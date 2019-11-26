@@ -230,7 +230,7 @@ export default [
                     instance: EPILOGUE
                 },
                 [MIRIAM]: {
-                    hair: true,
+                    hairIllustration: true,
                     hands: true,
                     head: true,
                     face: true,

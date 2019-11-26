@@ -8,9 +8,10 @@ const
     // The time spent thus far per drawing.
     BASELINE_TIME = 4.1,
     FACE_REVISION_TIME = 0.5,
-    HAIR_TIME = 0.5,
+    HAIR_ILLUSTRATION_TIME = 0.5,
     HANDS_TIME = 0.15,
-    HEAD_TIME = 0.25,
+    HAIR_TIME = 0.15,
+    HEAD_TIME = 0.1,
     FACE_TIME = 0.5,
     COMPOSITE_TIME = 0.25,
 
@@ -18,8 +19,9 @@ const
     TOTAL_TIME =
         BASELINE_TIME +
         FACE_REVISION_TIME +
-        HAIR_TIME +
+        HAIR_ILLUSTRATION_TIME +
         HANDS_TIME +
+        HAIR_TIME +
         HEAD_TIME +
         FACE_TIME +
         COMPOSITE_TIME
@@ -62,9 +64,10 @@ export const initialiseDrawings = (drawings, songIndex) => {
 
                 {
                     faceRevision,
-                    hair,
+                    hairIllustration,
                     hands,
                     head,
+                    hair,
                     face,
                     composite,
                     instance
@@ -75,9 +78,10 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 sceneIndex,
                 character,
                 faceRevision,
-                hair,
+                hairIllustration,
                 hands,
                 head,
+                hair,
                 face,
                 composite,
                 instance
@@ -111,9 +115,10 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 songIndex,
                 sceneIndex,
                 faceRevision,
-                hair,
+                hairIllustration,
                 hands,
                 head,
+                hair,
                 face,
                 composite,
                 instance,
@@ -129,14 +134,17 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!faceRevision) {
                 workedHours += FACE_REVISION_TIME
             }
-            if (!hair) {
-                workedHours += HAIR_TIME
+            if (!hairIllustration) {
+                workedHours += HAIR_ILLUSTRATION_TIME
             }
             if (!hands) {
                 workedHours += HANDS_TIME
             }
             if (!head) {
                 workedHours += HEAD_TIME
+            }
+            if (!hair) {
+                workedHours += HAIR_TIME
             }
             if (!face) {
                 workedHours += FACE_TIME
@@ -145,8 +153,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += COMPOSITE_TIME
             }
 
-            const doneForNow = !head,
-                halfDoneForNow = !head
+            const doneForNow = !head && !hair,
+                halfDoneForNow = !hair
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects
