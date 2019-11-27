@@ -25,8 +25,6 @@ import { ACTOR } from 'constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 
-import './style.scss'
-
 class PreviewerSvg extends PureComponent {
     static defaultProps = {
         handleProcessSvg: () => {}

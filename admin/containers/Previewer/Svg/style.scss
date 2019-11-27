@@ -1,4 +1,23 @@
-$height__input: 44px;
+.Previewer__scrollChild {
+    display: flex;
+    flex-direction: column;
+
+    .Previewer__mainScrollHorizontal
+    & {
+        width: auto;
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+
+    .Previewer__mainScrollVertical
+    & {
+        width: 100%;
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}
 
 .Presence {
     .Previewer__mainFullHeight
@@ -21,26 +40,5 @@ svg {
     .Previewer__mainScrollVertical
     & {
         width: 100%;
-    }
-}
-
-.Previewer__scrollChild {
-    display: flex;
-    flex-direction: column;
-
-    .Previewer__mainScrollHorizontal
-    & {
-        width: auto;
-        &:not(:first-child) {
-            margin-left: 10px;
-        }
-    }
-
-    .Previewer__mainScrollVertical
-    & {
-        width: 100%;
-        &:not(:first-child) {
-            margin-top: 10px;
-        }
     }
 }

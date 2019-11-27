@@ -1,0 +1,41 @@
+$height__input: 44px;
+$padding__dashboard: 10px;
+$height__dashboard: $height__input + $padding__dashboard * 2;
+$height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
+
+@import "./Dashboard/style";
+@import "./Kilobytes/style";
+@import "./Svg/style";
+
+.Previewer__main {
+    position: absolute;
+    padding: 0 $padding__dashboard $padding__dashboard;
+    top: $height__dashboard__mobile;
+    width: 100%;
+
+    @media (min-width: 1000px) {
+        top: $height__dashboard;
+    }
+}
+
+.Previewer__mainFullHeight {
+    display: flex;
+    justify-content: center;
+    height: calc(100% - #{$height__dashboard__mobile});
+
+    @media (min-width: 1000px) {
+        height: calc(100% - #{$height__dashboard});
+    }
+}
+
+.Previewer__mainScrollHorizontal {
+    width: auto;
+    justify-content: flex-start;
+}
+
+.Previewer__mainScrollVertical {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}

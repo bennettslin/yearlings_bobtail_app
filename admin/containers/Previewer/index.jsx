@@ -1,0 +1,192 @@
+import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
+import keys from 'lodash/keys'
+import scrollIntoView from 'scroll-into-view'
+
+import PreviewerSvg from './Svg'
+import PreviewerDashboard from './Dashboard'
+
+import { getKeyName } from 'managers/Key/helper'
+
+import { capitaliseForClassName } from 'helpers/format'
+
+import { removeLoadingIndicator } from 'utils/window'
+
+import { accessPresence } from '../../utils/access'
+
+import {
+    getPresenceFromStorage,
+    getPresenceFromQueryStrings,
+    setPresenceInStorage,
+    setPresenceInQueryStrings
+} from '../../utils/storage'
+
+import {
+    getPreviewerSvgMapForActor,
+    getPreviewerSvgMapForThing
+} from '../../utils/svg'
+
+import { BACKDROP } from 'constants/scene/things'
+
+import './style.scss'
+
+class Previewer extends PureComponent {
+    static propTypes = {
+        isActor: PropTypes.bool
+    }
+
+    constructor(props) {
+        super(props)
+
+        // Set presence from storage in query strings.
+        const { isActor } = this.props,
+            presenceFromStorage = getPresenceFromStorage(isActor)
+
+        setPresenceInQueryStrings(presenceFromStorage)
+
+        // Set presence from query strings in storage. Default is first index.
+        setPresenceInStorage({
+            isActor,
+            ...getPresenceFromQueryStrings(isActor)
+        })
+
+        this.state = presenceFromStorage
+    }
+
+    componentDidMount() {
+        logMount('Previewer')
+        removeLoadingIndicator()
+        this.focusPreviewerElement()
+    }
+
+    getPreviewerMapGetter() {
+        const { isActor } = this.props
+
+        return isActor ?
+            getPreviewerSvgMapForActor :
+            getPreviewerSvgMapForThing
+    }
+
+    focusPreviewerElement = () => {
+        this.previewerElement.focus()
+    }
+
+    selectPresence = ({ type, key }) => {
+        const { isActor } = this.props
+        let presenceType = type,
+            presenceKey = key
+
+        if (type) {
+            presenceKey = keys(this.getPreviewerMapGetter()(type))[0]
+        } else if (key) {
+            presenceType = this.state.presenceType
+        }
+
+        this.setState({
+            presenceType,
+            presenceKey
+        })
+        setPresenceInStorage({
+            isActor,
+            presenceType,
+            presenceKey
+        })
+
+        setPresenceInQueryStrings({ presenceType, presenceKey })
+        this.scrollPresenceIntoView({ presenceType, presenceKey })
+    }
+
+    handleKeyDownPress = (e) => {
+        const
+            { isActor } = this.props,
+            { presenceType, presenceKey } = this.state
+
+        accessPresence({
+            isActor,
+            keyName: getKeyName(e),
+            presenceType,
+            presenceKey,
+            selectPresence: this.selectPresence
+        })
+    }
+
+    scrollPresenceIntoView({
+        presenceType,
+        presenceKey
+    }) {
+        const element = document.querySelector(
+            `.${capitaliseForClassName(presenceType)} .${presenceKey}`
+        )
+
+        scrollIntoView(element, { time: 100 })
+    }
+
+    getScrollVertical() {
+        const { presenceType } = this.state
+        return presenceType === BACKDROP
+    }
+
+    setPreviewerElement = node => this.previewerElement = node
+
+    render() {
+        const
+            { isActor } = this.props,
+            {
+                presenceType,
+                presenceKey
+            } = this.state,
+
+            svgMap = this.getPreviewerMapGetter()(presenceType)
+
+        return (
+            <div
+                {...{
+                    ref: this.setPreviewerElement,
+                    className: cx(
+                        'Previewer',
+                        'abF',
+                        'PtSansNarrow'
+                    ),
+                    tabIndex: -1,
+                    onKeyDown: this.handleKeyDownPress
+                }}
+            >
+                <PreviewerDashboard
+                    {...{
+                        isActor,
+                        presenceType,
+                        presenceKey,
+                        selectPresence: this.selectPresence
+                    }}
+                />
+                <div
+                    {...{
+                        className: cx(
+                            'Previewer__main',
+                            'Previewer__mainFullHeight',
+                            this.getScrollVertical() ?
+                                'Previewer__mainScrollVertical' :
+                                'Previewer__mainScrollHorizontal'
+                        )
+                    }}
+                >
+                    {/* Render all instances. */}
+                    {keys(svgMap).map(presenceKey => (
+                        <PreviewerSvg
+                            showKilobytes
+                            {...{
+                                key: presenceKey,
+                                isActor,
+                                presenceType,
+                                presenceKey
+                            }}
+                        />
+                    ))}
+                </div>
+            </div>
+        )
+    }
+}
+
+export default Previewer

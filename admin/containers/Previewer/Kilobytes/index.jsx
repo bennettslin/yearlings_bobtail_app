@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import './style.scss'
-
 const PreviewerKilobytes = ({
     kilobytes,
     hideInMobile,

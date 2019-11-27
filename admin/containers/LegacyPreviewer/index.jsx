@@ -26,7 +26,7 @@ import { getPreviewerSvgMapForThing } from '../../utils/svg'
 
 import { getHeightAspectRatio } from './helper'
 
-class LegacyThings extends PureComponent {
+class LegacyPreviewer extends PureComponent {
     constructor(props) {
         super(props)
 
@@ -47,7 +47,7 @@ class LegacyThings extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('LegacyThings')
+        logMount('LegacyPreviewer')
         logSvgCount()
         window.onresize = debounce(this.setHeightAspectRatio, 0)
         removeLoadingIndicator()
@@ -132,7 +132,7 @@ class LegacyThings extends PureComponent {
                 {...{
                     ref: this.setPreviewerElement,
                     className: cx(
-                        'LegacyThings',
+                        'LegacyPreviewer',
                         'abF',
                         'PtSansNarrow'
                     ),
@@ -170,4 +170,4 @@ class LegacyThings extends PureComponent {
     }
 }
 
-export default LegacyThings
+export default LegacyPreviewer

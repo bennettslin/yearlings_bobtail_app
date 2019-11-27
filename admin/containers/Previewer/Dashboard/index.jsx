@@ -15,8 +15,6 @@ import {
 import WHOLE_ACTORS_LIST from '../../../constants/actors'
 import THINGS_LIST from '../../../constants/things'
 
-import './style.scss'
-
 class PreviewerDashboard extends PureComponent {
 
     static propTypes = {
