@@ -5036,5 +5036,10 @@ export default [
         taskName: `Figure out shared styling for actors.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Add layer to all faces.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

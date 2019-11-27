@@ -10,8 +10,8 @@ const
     FACE_REVISION_TIME = 0.5,
     HAIR_ILLUSTRATION_TIME = 0.5,
     HANDS_TIME = 0.15,
-    HAIR_TIME = 0.15,
-    HEAD_TIME = 0.1,
+    HAIR_TIME = 0.125,
+    HEAD_TIME = 0.125,
     FACE_TIME = 0.5,
     COMPOSITE_TIME = 0.25,
 
