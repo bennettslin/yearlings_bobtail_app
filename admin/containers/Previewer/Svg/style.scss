@@ -24,10 +24,13 @@
     & {
         width: auto;
         height: 100%;
+    }
+}
 
-        &.Presence__kilobytes {
-            height: calc(100% - #{$height__input});
-        }
+.Presence__kilobytes {
+    .Previewer__mainFullHeight
+    & {
+        height: calc(100% - #{$height__input});
     }
 }
 
