@@ -34,10 +34,7 @@ class Things extends PureComponent {
         // Set presence from query strings in storage. Default is first index.
         setPresenceInStorage(getPresenceFromQueryStrings())
 
-        this.state = {
-            ...presenceFromStorage,
-            kilobytes: 0
-        }
+        this.state = presenceFromStorage
     }
 
     componentDidMount() {
@@ -72,12 +69,6 @@ class Things extends PureComponent {
         })
     }
 
-    handleProcessSvg = (svgString) => {
-        this.setState({
-            kilobytes: svgString.length / 1024
-        })
-    }
-
     handleKeyDownPress = (e) => {
         const { presenceType, presenceKey } = this.state
 
@@ -106,8 +97,7 @@ class Things extends PureComponent {
         const
             {
                 presenceType,
-                presenceKey,
-                kilobytes
+                presenceKey
             } = this.state,
 
             svgMap = getPreviewerSvgMapForThing(presenceType)
@@ -131,7 +121,6 @@ class Things extends PureComponent {
                     {...{
                         presenceType,
                         presenceKey,
-                        kilobytes,
                         selectPresence: this.selectPresence
                     }}
                 />
@@ -139,11 +128,11 @@ class Things extends PureComponent {
                     {/* Render all presences for this thing. */}
                     {keys(svgMap).map(presenceKey => (
                         <PreviewerSvg
+                            showKilobytes
                             {...{
                                 key: presenceKey,
                                 presenceType,
-                                presenceKey,
-                                handleProcessSvg: this.handleProcessSvg
+                                presenceKey
                             }}
                         />
                     ))}

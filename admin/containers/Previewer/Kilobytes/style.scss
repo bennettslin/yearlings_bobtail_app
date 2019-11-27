@@ -1,0 +1,15 @@
+$height__input: 44px;
+
+.PreviewerKilobytes {
+    height: $height__input;
+    font-size: 1.5em;
+}
+
+.PreviewerKilobytes__hideInMobile {
+    // Hide kilobytes in mobile.
+    display: none;
+
+    @media (min-width: 1000px) {
+        display: flex;
+    }
+}

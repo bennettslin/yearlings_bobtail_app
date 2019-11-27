@@ -87,7 +87,7 @@ class LegacyThings extends PureComponent {
         })
     }
 
-    handleProcessSvg = (svgString) => {
+    handleProcessSvg = ({ svgString, kilobytes }) => {
         const {
             viewBoxWidth,
             viewBoxHeight
@@ -101,7 +101,7 @@ class LegacyThings extends PureComponent {
         this.setState({
             viewBoxWidth,
             viewBoxHeight,
-            kilobytes: svgString.length / 1024
+            kilobytes
         })
     }
 
@@ -142,6 +142,7 @@ class LegacyThings extends PureComponent {
                 }}
             >
                 <PreviewerDashboard
+                    hideKilobytesInMobile
                     {...{
                         presenceType,
                         presenceKey,

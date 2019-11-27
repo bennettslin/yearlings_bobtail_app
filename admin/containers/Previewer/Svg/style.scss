@@ -1,8 +1,14 @@
+$height__input: 44px;
+
 .Presence {
     .Previewer__heightAspectRatio
     & {
         width: auto;
         height: 100%;
+
+        &.Presence__kilobytes {
+            height: calc(100% - #{$height__input});
+        }
     }
 }
 
@@ -13,17 +19,14 @@ svg {
     }
 }
 
-.Presence {
+.Previewer__scrollChild {
+    display: flex;
+    flex-direction: column;
+
+    width: auto;
+
     .Previewer__scroll
     &:not(:first-child) {
         margin-left: 10px;
     }
-}
-
-.Things {
-    background-color: white;
-}
-
-.Previewer__scroll {
-    background-color: white;
 }

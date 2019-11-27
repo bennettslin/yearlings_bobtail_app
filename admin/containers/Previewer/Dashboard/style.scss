@@ -37,15 +37,6 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
     }
 }
 
-.PreviewerDashboard__kilobytes {
-    // Hide kilobytes in mobile.
-    display: none;
-
-    @media (min-width: 1000px) {
-        display: block;
-    }
-}
-
 .Previewer__scroll {
     position: absolute;
     padding: 0 $padding__dashboard $padding__dashboard;

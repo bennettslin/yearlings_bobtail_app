@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import keys from 'lodash/keys'
 
+import PreviewerKilobytes from '../Kilobytes'
+
 import { convertPresenceKeyToClassName } from 'helpers/format'
 
 import {
@@ -22,6 +24,7 @@ class PreviewerDashboard extends PureComponent {
         presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         kilobytes: PropTypes.number,
+        hideKilobytesInMobile: PropTypes.bool,
         selectPresence: PropTypes.func.isRequired
     }
 
@@ -38,7 +41,8 @@ class PreviewerDashboard extends PureComponent {
                 isActor,
                 presenceType,
                 presenceKey,
-                kilobytes
+                kilobytes,
+                hideKilobytesInMobile
             } = this.props,
             mapGetter = isActor ?
                 getPreviewerSvgMapForActor :
@@ -93,17 +97,16 @@ class PreviewerDashboard extends PureComponent {
                             </option>
                         ))}
                 </select>
-                <div
+                <PreviewerKilobytes
                     {...{
                         className: cx(
                             'PreviewerDashboard__child',
-                            'PreviewerDashboard__kilobytes',
                             'flexCentreContainer'
-                        )
+                        ),
+                        kilobytes,
+                        hideInMobile: hideKilobytesInMobile
                     }}
-                >
-                    {kilobytes.toFixed(2)} kiB
-                </div>
+                />
             </div>
         )
     }

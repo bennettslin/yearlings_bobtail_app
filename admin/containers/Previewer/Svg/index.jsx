@@ -4,6 +4,8 @@ import cx from 'classnames'
 import findIndex from 'lodash/findindex'
 import InlineSvg from 'modules/InlineSvg'
 
+import PreviewerKilobytes from '../Kilobytes'
+
 import {
     capitaliseForClassName,
     convertPresenceKeyToTitle,
@@ -26,12 +28,24 @@ import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 import './style.scss'
 
 class PreviewerSvg extends PureComponent {
+    static defaultProps = {
+        handleProcessSvg: () => {}
+    }
 
     static propTypes = {
         isActor: PropTypes.bool,
+        showKilobytes: PropTypes.bool,
         presenceType: PropTypes.string,
         presenceKey: PropTypes.string,
         handleProcessSvg: PropTypes.func.isRequired
+    }
+
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            kilobytes: 0
+        }
     }
 
     processSvg = (svgString) => {
@@ -42,12 +56,19 @@ class PreviewerSvg extends PureComponent {
 
     handleProcessSvg = (svgString) => {
         const { presenceKey } = this.props,
+
             element = document.getElementsByClassName(
                 convertPresenceKeyToClassName(presenceKey)
             )[0]
 
         if (element) {
-            this.props.handleProcessSvg(svgString)
+            const kilobytes = svgString.length / 1024
+
+            this.setState({
+                kilobytes
+            })
+
+            this.props.handleProcessSvg({ svgString, kilobytes })
         }
     }
 
@@ -88,35 +109,55 @@ class PreviewerSvg extends PureComponent {
     render() {
         const {
                 isActor,
+                showKilobytes,
                 presenceType,
                 presenceKey
             } = this.props,
+            { kilobytes } = this.state,
 
             svgMap = isActor ?
                 getPreviewerSvgMapForActor(presenceType) :
                 getPreviewerSvgMapForThing(presenceType),
 
-            svgContent = svgMap[presenceKey],
-            sharedStyle = this.getSharedStyle()
+            svgContent = svgMap[presenceKey]
 
-        return Boolean(svgContent) && (
-            <InlineSvg
-                notAbsoluteFullContainer
+        if (!svgContent) {
+            return null
+        }
+
+        const sharedStyle = this.getSharedStyle(),
+            svgChild = (
+                <InlineSvg
+                    notAbsoluteFullContainer
+                    {...{
+                        className: cx(
+                            'Presence',
+                            'Presence__visible',
+                            showKilobytes && 'Presence__kilobytes',
+                            capitaliseForClassName(presenceType),
+                            getSharedClassNames(sharedStyle)
+                        ),
+                        svgClassName: convertPresenceKeyToClassName(presenceKey),
+                        title: convertPresenceKeyToTitle(presenceKey),
+                        preProcessor: this.processSvg
+                    }}
+                >
+                    {svgContent}
+                </InlineSvg>
+            )
+
+        return showKilobytes ? (
+            <div
                 {...{
                     className: cx(
-                        'Presence',
-                        'Presence__visible',
-                        capitaliseForClassName(presenceType),
-                        getSharedClassNames(sharedStyle)
-                    ),
-                    svgClassName: convertPresenceKeyToClassName(presenceKey),
-                    title: convertPresenceKeyToTitle(presenceKey),
-                    preProcessor: this.processSvg
+                        'Previewer__scrollChild'
+                    )
                 }}
             >
-                {svgContent}
-            </InlineSvg>
-        )
+                {svgChild}
+                <PreviewerKilobytes {...{ kilobytes }} />
+            </div>
+        ) : svgChild
     }
 }
 

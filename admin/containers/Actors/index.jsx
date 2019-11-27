@@ -37,10 +37,7 @@ class Actors extends PureComponent {
             ...getPresenceFromQueryStrings(true)
         })
 
-        this.state = {
-            ...presenceFromStorage,
-            kilobytes: 0
-        }
+        this.state = presenceFromStorage
     }
 
     componentDidMount() {
@@ -79,12 +76,6 @@ class Actors extends PureComponent {
         })
     }
 
-    handleProcessSvg = (svgString) => {
-        this.setState({
-            kilobytes: svgString.length / 1024
-        })
-    }
-
     handleKeyDownPress = (e) => {
         const { presenceType, presenceKey } = this.state
 
@@ -114,8 +105,7 @@ class Actors extends PureComponent {
         const
             {
                 presenceType,
-                presenceKey,
-                kilobytes
+                presenceKey
             } = this.state,
 
             svgMap = getPreviewerSvgMapForActor(presenceType)
@@ -140,20 +130,19 @@ class Actors extends PureComponent {
                     {...{
                         presenceType,
                         presenceKey,
-                        kilobytes,
                         selectPresence: this.selectPresence
                     }}
                 />
                 <div {...{ className: 'Previewer__scroll' }}>
                     {/* Render all instances for this actor. */}
-                    {keys(svgMap).map(instanceKey => (
+                    {keys(svgMap).map(presenceKey => (
                         <PreviewerSvg
                             isActor
+                            showKilobytes
                             {...{
-                                key: instanceKey,
+                                key: presenceKey,
                                 presenceType,
-                                presenceKey: instanceKey,
-                                handleProcessSvg: this.handleProcessSvg
+                                presenceKey
                             }}
                         />
                     ))}
