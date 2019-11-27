@@ -133,7 +133,6 @@ class LegacyThings extends PureComponent {
                     ref: this.setPreviewerElement,
                     className: cx(
                         'LegacyThings',
-                        heightAspectRatio && 'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
                     ),
@@ -150,7 +149,14 @@ class LegacyThings extends PureComponent {
                         selectPresence: this.selectPresence
                     }}
                 />
-                <div {...{ className: 'Previewer__scroll' }}>
+                <div
+                    {...{
+                        className: cx(
+                            'Previewer__main',
+                            heightAspectRatio && 'Previewer__mainFullHeight'
+                        )
+                    }}
+                >
                     <PreviewerSvg
                         {...{
                             presenceType,

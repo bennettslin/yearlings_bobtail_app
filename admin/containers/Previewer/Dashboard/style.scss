@@ -9,6 +9,7 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
     left: 0;
     width: 100%;
     height: $height__dashboard__mobile;
+    z-index: 1;
 
     padding: $padding__dashboard;
 
@@ -37,7 +38,7 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
     }
 }
 
-.Previewer__scroll {
+.Previewer__main {
     position: absolute;
     padding: 0 $padding__dashboard $padding__dashboard;
     top: $height__dashboard__mobile;
@@ -46,21 +47,26 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
     @media (min-width: 1000px) {
         top: $height__dashboard;
     }
+}
 
-    .Previewer__heightAspectRatio
-    & {
-        display: flex;
-        justify-content: center;
-        height: calc(100% - #{$height__dashboard__mobile});
+.Previewer__mainFullHeight {
+    display: flex;
+    justify-content: center;
+    height: calc(100% - #{$height__dashboard__mobile});
 
-        @media (min-width: 1000px) {
-            height: calc(100% - #{$height__dashboard});
-        }
+    @media (min-width: 1000px) {
+        height: calc(100% - #{$height__dashboard});
     }
+}
 
-    .Previewer
-    & {
-        width: auto;
-        justify-content: left;
-    }
+.Previewer__mainScrollHorizontal {
+    width: auto;
+    justify-content: flex-start;
+}
+
+.Previewer__mainScrollVertical {
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }

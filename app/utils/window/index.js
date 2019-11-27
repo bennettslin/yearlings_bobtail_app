@@ -14,11 +14,6 @@ export const getBoolFromStorage = (key) => {
     }
 }
 
-// TODO: Only used by Previewer.
-export const getFromStorage = (key) => {
-    return getWindowStorage()[key]
-}
-
 export const setBoolInStorage = (key, value) => {
     getWindowStorage()[key] = value ? 'true' : 'false'
 }

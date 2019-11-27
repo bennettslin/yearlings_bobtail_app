@@ -1,7 +1,7 @@
 import keys from 'lodash/keys'
 
 import {
-    getFromStorage,
+    getWindowStorage,
     setInStorage
 } from 'utils/window'
 
@@ -14,6 +14,10 @@ import {
 
 const getPresencePrefix = (isActor) => {
     return isActor ? 'actor' : 'thing'
+}
+
+const getFromStorage = (key) => {
+    return getWindowStorage()[key]
 }
 
 export const getPresenceFromStorage = (isActor) => {

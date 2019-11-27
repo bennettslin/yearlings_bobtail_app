@@ -117,7 +117,6 @@ class Actors extends PureComponent {
                     className: cx(
                         'Actors',
                         'Previewer',
-                        'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
                     ),
@@ -133,7 +132,15 @@ class Actors extends PureComponent {
                         selectPresence: this.selectPresence
                     }}
                 />
-                <div {...{ className: 'Previewer__scroll' }}>
+                <div
+                    {...{
+                        className: cx(
+                            'Previewer__main',
+                            'Previewer__mainFullHeight',
+                            'Previewer__mainScrollHorizontal'
+                        )
+                    }}
+                >
                     {/* Render all instances for this actor. */}
                     {keys(svgMap).map(presenceKey => (
                         <PreviewerSvg

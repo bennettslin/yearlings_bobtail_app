@@ -23,6 +23,8 @@ import {
 
 import { getPreviewerSvgMapForThing } from '../../utils/svg'
 
+import { BACKDROP } from 'constants/scene/things'
+
 class Things extends PureComponent {
     constructor(props) {
         super(props)
@@ -91,6 +93,11 @@ class Things extends PureComponent {
         scrollIntoView(element, { time: 100 })
     }
 
+    getScrollVertical() {
+        const { presenceType } = this.state
+        return presenceType === BACKDROP
+    }
+
     setPreviewerElement = node => this.previewerElement = node
 
     render() {
@@ -109,7 +116,6 @@ class Things extends PureComponent {
                     className: cx(
                         'Things',
                         'Previewer',
-                        'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
                     ),
@@ -124,7 +130,17 @@ class Things extends PureComponent {
                         selectPresence: this.selectPresence
                     }}
                 />
-                <div {...{ className: 'Previewer__scroll' }}>
+                <div
+                    {...{
+                        className: cx(
+                            'Previewer__main',
+                            'Previewer__mainFullHeight',
+                            this.getScrollVertical() ?
+                                'Previewer__mainScrollVertical' :
+                                'Previewer__mainScrollHorizontal'
+                        )
+                    }}
+                >
                     {/* Render all presences for this thing. */}
                     {keys(svgMap).map(presenceKey => (
                         <PreviewerSvg

@@ -1,7 +1,7 @@
 $height__input: 44px;
 
 .Presence {
-    .Previewer__heightAspectRatio
+    .Previewer__mainFullHeight
     & {
         width: auto;
         height: 100%;
@@ -13,9 +13,14 @@ $height__input: 44px;
 }
 
 svg {
-    .Previewer__heightAspectRatio
+    .Previewer__mainFullHeight
     & {
         height: 100%;
+    }
+
+    .Previewer__mainScrollVertical
+    & {
+        width: 100%;
     }
 }
 
@@ -23,10 +28,19 @@ svg {
     display: flex;
     flex-direction: column;
 
-    width: auto;
+    .Previewer__mainScrollHorizontal
+    & {
+        width: auto;
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
 
-    .Previewer__scroll
-    &:not(:first-child) {
-        margin-left: 10px;
+    .Previewer__mainScrollVertical
+    & {
+        width: 100%;
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
     }
 }
