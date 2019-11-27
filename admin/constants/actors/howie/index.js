@@ -20,43 +20,43 @@ import {
 
 const INSTANCES = [
     {
-        actor: HOWIE_WILLY,
+        type: HOWIE_WILLY,
         instance: GANGBANGER
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: USHER_WAITING
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: USHER_LOOKING
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: ABBEY_ROAD
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: WALGREENS
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: STEAM_TUNNEL
     },
     {
-        actor: ANA_HOWIE,
+        type: ANA_HOWIE,
         instance: CEMETERY
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: STATION_WAGON
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: ATTIC
     },
     {
-        actor: HOWIE,
+        type: HOWIE,
         instance: EPILOGUE
     }
 ]

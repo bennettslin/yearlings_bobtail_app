@@ -19,43 +19,43 @@ import {
 
 const INSTANCES = [
     {
-        actor: TOMER,
+        type: TOMER,
         instance: GANGBANGER
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: SHANE_BUYING
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: SHANE_SPILLING
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: ABBEY_ROAD
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: WALGREENS
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: STEAM_TUNNEL
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: CEMETERY
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: STATION_WAGON
     },
     {
-        actor: TOMER,
+        type: TOMER,
         instance: EPILOGUE
     },
     {
-        actor: AMY_NESTOR_TOMER,
+        type: AMY_NESTOR_TOMER,
         instance: OFFICER
     }
 ]

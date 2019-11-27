@@ -1,6 +1,6 @@
 import keys from 'lodash/keys'
 
-import { getSvgMapForUnduplicatedThing } from './svg'
+import { getPreviewerSvgMapForThing } from './svg'
 
 import {
     BACKDROP,
@@ -16,7 +16,7 @@ import {
 } from 'constants/scene/things'
 
 const _getSvgCount = (presenceType) => {
-    const svgBooleanMap = getSvgMapForUnduplicatedThing(presenceType)
+    const svgBooleanMap = getPreviewerSvgMapForThing(presenceType)
     return keys(svgBooleanMap).reduce((count, thing) => {
         const
             workedIncrement = svgBooleanMap[thing] ? 1 : 0,

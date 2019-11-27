@@ -19,35 +19,35 @@ import {
 
 const INSTANCES = [
     {
-        actor: MOTHER,
+        type: MOTHER,
         instance: STOOPING
     },
     {
-        actor: MOTHER,
+        type: MOTHER,
         instance: COMFORTING
     },
     {
-        actor: MOTHER,
+        type: MOTHER,
         instance: ARGUING
     },
     {
-        actor: ESTHER_MOTHER,
+        type: ESTHER_MOTHER,
         instance: HURT_CONSOLING
     },
     {
-        actor: MOTHER,
+        type: MOTHER,
         instance: PRESENT
     },
     {
-        actor: MOTHER,
+        type: MOTHER,
         instance: FUTURE
     },
     {
-        actor: ESTHER_MOTHER,
+        type: ESTHER_MOTHER,
         instance: SOBBING_SHIELDING
     },
     {
-        actor: MOTHER,
+        type: MOTHER,
         instance: EPILOGUE
     }
 ]

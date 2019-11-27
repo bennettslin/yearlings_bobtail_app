@@ -8,19 +8,19 @@ import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
-        actor: ANDREW,
+        type: ANDREW,
         instance: FEIGNING_FEAR
     },
     {
-        actor: ANDREW,
+        type: ANDREW,
         instance: THROWING
     },
     {
-        actor: ANDREW,
+        type: ANDREW,
         instance: NOODLING
     },
     {
-        actor: ANDREW,
+        type: ANDREW,
         instance: EPILOGUE
     }
 ]

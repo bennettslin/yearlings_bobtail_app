@@ -8,8 +8,8 @@ import {
 import WHOLE_ACTORS_LIST from '../constants/actors'
 import THINGS_LIST from '../constants/things'
 import {
-    getSvgMapForWholeActor,
-    getSvgMapForUnduplicatedThing
+    getPreviewerSvgMapForActor,
+    getPreviewerSvgMapForThing
 } from './svg'
 
 const getPresencePrefix = (isActor) => {
@@ -32,7 +32,7 @@ export const getPresenceFromQueryStrings = (isActor) => {
         presenceType = urlParams.get('type') || '',
         presenceKey = urlParams.get('key') || '',
         typesList = isActor ? WHOLE_ACTORS_LIST : THINGS_LIST,
-        mapGetter = isActor ? getSvgMapForWholeActor : getSvgMapForUnduplicatedThing,
+        mapGetter = isActor ? getPreviewerSvgMapForActor : getPreviewerSvgMapForThing,
 
         svgMapForPresenceType = mapGetter(presenceType)
 

@@ -9,11 +9,11 @@ import {
 
 const INSTANCES = [
     {
-        actor: OLD_BENNETT,
+        type: OLD_BENNETT,
         instance: PROLOGUE
     },
     {
-        actor: BENNETTS_CHRISTOPHER_LIZ,
+        type: BENNETTS_CHRISTOPHER_LIZ,
         instance: EPILOGUE
     }
 ]

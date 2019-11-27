@@ -57,159 +57,159 @@ import {
 
 const INSTANCES = [
     {
-        actor: LIZ,
+        type: LIZ,
         instance: DATE_ENDING
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: MUSEUM
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: BACKSTAGE
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: GO_KARTS
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: DATE_ENDED
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: DISHROOM_LANCET
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: GATE_CODE
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: GINGERBREAD_PRISON
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: RUMPLED_LINENS
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: CHEEK_UNVEILED
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: HARD_ON
     },
     {
-        actor: BENNETT_LIZ_REFLECTION,
+        type: BENNETT_LIZ_REFLECTION,
         instance: HARD_ON_REFLECTION
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: MISSIONARY
     },
     {
-        actor: BENNETT_LIZ_REFLECTION,
+        type: BENNETT_LIZ_REFLECTION,
         instance: MISSIONARY_REFLECTION
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: AFTERGLOW
     },
     {
-        actor: BENNETT_LIZ_REFLECTION,
+        type: BENNETT_LIZ_REFLECTION,
         instance: AFTERGLOW_REFLECTION
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: ASLEEP_REACHING
     },
     {
-        actor: LIZ_REFLECTION,
+        type: LIZ_REFLECTION,
         instance: REACHING_REFLECTION
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: BRUSH_OFF
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: CELIBATE_FREEZING
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: LEAVING_CRUMBLED
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: AWKWARD_CONSOLATION
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: PETTING_SEATED
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: PETTING_STANDING
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: SIFTING_TCHOTCHKES
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: OPENING_DOOR
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: DEFENDING
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: NOT_HUNGRY
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: ASLEEP_COUCH
     },
     {
-        actor: KHARI_LIZ,
+        type: KHARI_LIZ,
         instance: JOKING_LAUGHING
     },
     {
-        actor: KHARI_LIZ,
+        type: KHARI_LIZ,
         instance: PROTECTIVE_CONCERNED
     },
     {
-        actor: KHARI_LIZ,
+        type: KHARI_LIZ,
         instance: CARESS
     },
     {
-        actor: KHARI_LIZ_REFLECTION,
+        type: KHARI_LIZ_REFLECTION,
         instance: CARESS_REFLECTION
     },
     {
-        actor: LIZ,
+        type: LIZ,
         instance: EL_TORITO
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: PAMPAS
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: GETTING_DARK
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: CLIFF
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: FINAL_DREAM
     },
     {
-        actor: BENNETTS_CHRISTOPHER_LIZ,
+        type: BENNETTS_CHRISTOPHER_LIZ,
         instance: EPILOGUE
     }
 ]

@@ -17,27 +17,27 @@ import {
 
 const INSTANCES = [
     {
-        actor: ESTHER,
+        type: ESTHER,
         instance: CURIOUS
     },
     {
-        actor: ESTHER,
+        type: ESTHER,
         instance: SNICKERING
     },
     {
-        actor: ESTHER,
+        type: ESTHER,
         instance: EPILOGUE
     },
     {
-        actor: ESTHER,
+        type: ESTHER,
         instance: YOUNG_CHILD
     },
     {
-        actor: ESTHER_MOTHER,
+        type: ESTHER_MOTHER,
         instance: HURT_CONSOLING
     },
     {
-        actor: ESTHER_MOTHER,
+        type: ESTHER_MOTHER,
         instance: SOBBING_SHIELDING
     }
 ]

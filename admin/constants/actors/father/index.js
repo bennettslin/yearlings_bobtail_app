@@ -16,31 +16,31 @@ import {
 
 const INSTANCES = [
     {
-        actor: FATHER,
+        type: FATHER,
         instance: ROARING
     },
     {
-        actor: FATHER,
+        type: FATHER,
         instance: ACCUSATORY
     },
     {
-        actor: FATHER,
+        type: FATHER,
         instance: PAST
     },
     {
-        actor: BENNETT_FATHER,
+        type: BENNETT_FATHER,
         instance: PRESENT
     },
     {
-        actor: FATHER,
+        type: FATHER,
         instance: FUTURE
     },
     {
-        actor: FATHER,
+        type: FATHER,
         instance: REELING
     },
     {
-        actor: FATHER,
+        type: FATHER,
         instance: EPILOGUE
     }
 ]

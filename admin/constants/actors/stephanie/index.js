@@ -24,47 +24,47 @@ import {
 
 const INSTANCES = [
     {
-        actor: STEPHANIE,
+        type: STEPHANIE,
         instance: BENNETT_KEYBOARD
     },
     {
-        actor: STEPHANIE,
+        type: STEPHANIE,
         instance: BENNETT_DEFIANT
     },
     {
-        actor: BENNETT_STEPHANIE,
+        type: BENNETT_STEPHANIE,
         instance: HORSING
     },
     {
-        actor: BENNETT_STEPHANIE,
+        type: BENNETT_STEPHANIE,
         instance: DRYING_TEARS
     },
     {
-        actor: MIRIAM_STEPHANIE,
+        type: MIRIAM_STEPHANIE,
         instance: MISCHIEVOUS_BANJO
     },
     {
-        actor: STEPHANIE,
+        type: STEPHANIE,
         instance: BENNETT_RECORDING
     },
     {
-        actor: STEPHANIE,
+        type: STEPHANIE,
         instance: FLAPPER
     },
     {
-        actor: AMY_STEPHANIE,
+        type: AMY_STEPHANIE,
         instance: SQUEEZING
     },
     {
-        actor: STEPHANIE,
+        type: STEPHANIE,
         instance: MINGLING
     },
     {
-        actor: STEPHANIE,
+        type: STEPHANIE,
         instance: EPILOGUE
     },
     {
-        actor: STEPHANIE,
+        type: STEPHANIE,
         instance: PROTESTER
     }
 ]

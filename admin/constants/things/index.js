@@ -1,4 +1,36 @@
-import values from 'lodash/values'
-import * as ALL_THINGS from 'constants/scene/things'
+import poster from './poster'
 
-export default values(ALL_THINGS)
+import {
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    DOOR,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
+} from 'constants/scene/things'
+
+const POSTER = 'poster'
+
+export default [
+    // Custom lists.
+    POSTER,
+
+    BACKDROP,
+    BUBBLE,
+    CARDBOARD,
+    CUTOUT,
+    DOOR,
+    FIXTURE,
+    FLAT,
+    FURNITURE,
+    PANEL,
+    PUPPET
+]
+
+export const CUSTOM_THING_INSTANCES = {
+    [POSTER]: poster
+}

@@ -27,59 +27,59 @@ import {
 
 const INSTANCES = [
     {
-        actor: MIRIAM,
+        type: MIRIAM,
         instance: INFANT_CURIOUS
     },
     {
-        actor: MIRIAM,
+        type: MIRIAM,
         instance: INFANT_NURSING
     },
     {
-        actor: MIRIAM_TRISTAN,
+        type: MIRIAM_TRISTAN,
         instance: NOOGIE
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: ASLEEP_FEARFUL
     },
     {
-        actor: MIRIAM_STEPHANIE,
+        type: MIRIAM_STEPHANIE,
         instance: MISCHIEVOUS_BANJO
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: FENDING_OFF
     },
     {
-        actor: MIRIAM,
+        type: MIRIAM,
         instance: PERFUMING
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: COWGIRL
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: BLOWJOB
     },
     {
-        actor: MIRIAM,
+        type: MIRIAM,
         instance: TENNIS
     },
     {
-        actor: MIRIAM,
+        type: MIRIAM,
         instance: REVERSING
     },
     {
-        actor: MIRIAM_TRISTAN,
+        type: MIRIAM_TRISTAN,
         instance: GREETING
     },
     {
-        actor: MIRIAM,
+        type: MIRIAM,
         instance: EPILOGUE
     },
     {
-        actor: MIRIAM,
+        type: MIRIAM,
         instance: GOPI
     }
 ]

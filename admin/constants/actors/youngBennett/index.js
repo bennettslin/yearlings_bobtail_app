@@ -15,27 +15,27 @@ import {
 
 const INSTANCES = [
     {
-        actor: YOUNG_BENNETT,
+        type: YOUNG_BENNETT,
         instance: PANICKED
     },
     {
-        actor: YOUNG_BENNETT,
+        type: YOUNG_BENNETT,
         instance: FLUSTERED
     },
     {
-        actor: YOUNG_BENNETT,
+        type: YOUNG_BENNETT,
         instance: BATHING
     },
     {
-        actor: YOUNG_BENNETT,
+        type: YOUNG_BENNETT,
         instance: SINGING
     },
     {
-        actor: ANITA_BENNETT,
+        type: ANITA_BENNETT,
         instance: EPILOGUE
     },
     {
-        actor: YOUNG_BENNETT,
+        type: YOUNG_BENNETT,
         instance: YOUNG_CHILD
     }
 ]

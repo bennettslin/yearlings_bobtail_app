@@ -14,23 +14,23 @@ import {
 
 const INSTANCES = [
     {
-        actor: TRISTAN,
+        type: TRISTAN,
         instance: PRINCIPAL
     },
     {
-        actor: TRISTAN,
+        type: TRISTAN,
         instance: PUNCHING
     },
     {
-        actor: MIRIAM_TRISTAN,
+        type: MIRIAM_TRISTAN,
         instance: NOOGIE
     },
     {
-        actor: MIRIAM_TRISTAN,
+        type: MIRIAM_TRISTAN,
         instance: GREETING
     },
     {
-        actor: TRISTAN,
+        type: TRISTAN,
         instance: EPILOGUE
     }
 ]

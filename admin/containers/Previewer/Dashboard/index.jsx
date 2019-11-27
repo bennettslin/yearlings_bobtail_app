@@ -6,8 +6,8 @@ import keys from 'lodash/keys'
 import { convertPresenceKeyToClassName } from 'helpers/format'
 
 import {
-    getSvgMapForWholeActor,
-    getSvgMapForUnduplicatedThing
+    getPreviewerSvgMapForActor,
+    getPreviewerSvgMapForThing
 } from '../../../utils/svg'
 
 import WHOLE_ACTORS_LIST from '../../../constants/actors'
@@ -41,8 +41,8 @@ class PreviewerDashboard extends PureComponent {
                 kilobytes
             } = this.props,
             mapGetter = isActor ?
-                getSvgMapForWholeActor :
-                getSvgMapForUnduplicatedThing,
+                getPreviewerSvgMapForActor :
+                getPreviewerSvgMapForThing,
             svgMap = mapGetter(presenceType),
             typesList = isActor ?
                 WHOLE_ACTORS_LIST :

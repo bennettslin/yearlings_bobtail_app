@@ -19,39 +19,39 @@ import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
-        actor: KHARI,
+        type: KHARI,
         instance: DOUBLE_ALBERT
     },
     {
-        actor: KHARI,
+        type: KHARI,
         instance: ARRIVED
     },
     {
-        actor: KHARI,
+        type: KHARI,
         instance: JUDGMENTAL
     },
     {
-        actor: KHARI,
+        type: KHARI,
         instance: CONCERNED
     },
     {
-        actor: KHARI_LIZ,
+        type: KHARI_LIZ,
         instance: JOKING_LAUGHING
     },
     {
-        actor: KHARI_LIZ,
+        type: KHARI_LIZ,
         instance: PROTECTIVE_CONCERNED
     },
     {
-        actor: KHARI_LIZ,
+        type: KHARI_LIZ,
         instance: CARESS
     },
     {
-        actor: KHARI_LIZ_REFLECTION,
+        type: KHARI_LIZ_REFLECTION,
         instance: CARESS_REFLECTION
     },
     {
-        actor: KHARI,
+        type: KHARI,
         instance: EPILOGUE
     }
 ]

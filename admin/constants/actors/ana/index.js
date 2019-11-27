@@ -21,51 +21,51 @@ import {
 
 const INSTANCES = [
     {
-        actor: ANA,
+        type: ANA,
         instance: SQUATTING
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: EATING
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: ABBEY_ROAD
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: WALGREENS
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: STEAM_TUNNEL
     },
     {
-        actor: ANA_HOWIE,
+        type: ANA_HOWIE,
         instance: CEMETERY
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: STATION_WAGON
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: PERFORMING
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: WAITING
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: CHUCKLING
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: SMIRKING
     },
     {
-        actor: ANA,
+        type: ANA,
         instance: EPILOGUE
     }
 ]

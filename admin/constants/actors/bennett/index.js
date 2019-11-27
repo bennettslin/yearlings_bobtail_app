@@ -95,299 +95,299 @@ import {
 
 const INSTANCES = [
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: BREAKUP_DEJECTED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: SOLICITING_OPINION
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: CATHOLIC_PENSIVE
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: CATHOLIC_IDEA
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: PIOUS
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: PONDERING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: RUBIKS_CUBE
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: COUCH_READING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DISTRACTED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: EATING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: HOPELESSLY_CRUSHED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: WONDERING_BABY
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: MERRILY_DERANGED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DATE_ENDING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: MUSEUM
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: BACKSTAGE
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: GO_KARTS
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DATE_ENDED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DISHROOM_READING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DISHROOM_LANCET
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: MOP_SOPPED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: GATE_CODE
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: GINGERBREAD_PRISON
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: RUMPLED_LINENS
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: WAITING_ROOM_ASLEEP
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: CHEEK_UNVEILED
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: HARD_ON
     },
     {
-        actor: BENNETT_LIZ_REFLECTION,
+        type: BENNETT_LIZ_REFLECTION,
         instance: HARD_ON_REFLECTION
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: MISSIONARY
     },
     {
-        actor: BENNETT_LIZ_REFLECTION,
+        type: BENNETT_LIZ_REFLECTION,
         instance: MISSIONARY_REFLECTION
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: AFTERGLOW
     },
     {
-        actor: BENNETT_LIZ_REFLECTION,
+        type: BENNETT_LIZ_REFLECTION,
         instance: AFTERGLOW_REFLECTION
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: ABBEY_ROAD
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: WALGREENS
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: STEAM_TUNNEL
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: CEMETERY
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: STATION_WAGON
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: ATTIC
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: PERFORMING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: FLIRTING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: SIDELONG_HESITANCE
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: REMOVING_SHOES
     },
     {
-        actor: BENNETT_REFLECTION,
+        type: BENNETT_REFLECTION,
         instance: SHOES_REFLECTION
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: BRUSH_OFF
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DROPPING_MEATS
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: CELIBATE_FREEZING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: GREETING
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: LEAVING_CRUMBLED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: CORD_SIDE
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: AWKWARD_CONSOLATION
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: CORD_REAR
     },
     {
-        actor: BENNETT_STEPHANIE,
+        type: BENNETT_STEPHANIE,
         instance: HORSING
     },
     {
-        actor: BENNETT_STEPHANIE,
+        type: BENNETT_STEPHANIE,
         instance: DRYING_TEARS
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: ASLEEP_FEARFUL
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: PAST
     },
     {
-        actor: BENNETT_FATHER,
+        type: BENNETT_FATHER,
         instance: PRESENT
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: FUTURE
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: FENDING_OFF
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: REMOVING_PANTS
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: COWGIRL
     },
     {
-        actor: MIRIAM_BENNETT,
+        type: MIRIAM_BENNETT,
         instance: BLOWJOB
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: INFIRM
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DISPOSING_CONDOM
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: CAMPUS_ASHAMED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: SHOW_ANNOYED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: ALLEY
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: BROKEN_HEARTED
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: DEMONSTRATION
     },
     {
-        actor: BENNETT,
+        type: BENNETT,
         instance: EL_TORITO
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: PAMPAS
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: GETTING_DARK
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: CLIFF
     },
     {
-        actor: BENNETT_LIZ,
+        type: BENNETT_LIZ,
         instance: FINAL_DREAM
     },
     {
-        actor: BENNETTS_CHRISTOPHER_LIZ,
+        type: BENNETTS_CHRISTOPHER_LIZ,
         instance: EPILOGUE
     }
 ]

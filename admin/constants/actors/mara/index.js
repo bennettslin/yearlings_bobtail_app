@@ -13,27 +13,27 @@ import {
 
 const INSTANCES = [
     {
-        actor: MARA,
+        type: MARA,
         instance: FLIRTING
     },
     {
-        actor: JACOB_MARA,
+        type: JACOB_MARA,
         instance: EATING
     },
     {
-        actor: MARA,
+        type: MARA,
         instance: CARRYING
     },
     {
-        actor: MARA,
+        type: MARA,
         instance: WAITING
     },
     {
-        actor: MARA,
+        type: MARA,
         instance: EPILOGUE
     },
     {
-        actor: MARA,
+        type: MARA,
         instance: GOPI
     }
 ]

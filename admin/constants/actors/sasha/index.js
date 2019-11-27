@@ -16,27 +16,27 @@ import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
-        actor: BRAD_SASHA,
+        type: BRAD_SASHA,
         instance: CHARMED_SCHOOLBUS
     },
     {
-        actor: SASHA,
+        type: SASHA,
         instance: INDIGNANT
     },
     {
-        actor: SASHA_BENNETT,
+        type: SASHA_BENNETT,
         instance: MERMAID
     },
     {
-        actor: SASHA,
+        type: SASHA,
         instance: POPULAR_GIRL
     },
     {
-        actor: SASHA_BENNETT,
+        type: SASHA_BENNETT,
         instance: COMFORTING_HUMILIATED
     },
     {
-        actor: SASHA_BENNETT,
+        type: SASHA_BENNETT,
         instance: EPILOGUE
     }
 ]

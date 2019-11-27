@@ -11,19 +11,19 @@ import {
 
 const INSTANCES = [
     {
-        actor: JACOB,
+        type: JACOB,
         instance: FLIRTING
     },
     {
-        actor: JACOB_MARA,
+        type: JACOB_MARA,
         instance: EATING
     },
     {
-        actor: JACOB,
+        type: JACOB,
         instance: CARRYING
     },
     {
-        actor: JACOB,
+        type: JACOB,
         instance: EPILOGUE
     }
 ]

@@ -23,6 +23,7 @@ import './scss/app.scss'
 import Actors from 'admin/containers/Actors'
 import Annotations from 'admin/containers/Annotations'
 import Things from 'admin/containers/Things'
+import Things2 from 'admin/containers/Things2'
 import Progress from 'admin/containers/Progress'
 
 import RoutingContainer from './containers/Routing'
@@ -72,6 +73,13 @@ ReactDOM.render(
                     {...{
                         path: '/Things',
                         component: Things
+                    }}
+                />
+                <Route
+                    exact
+                    {...{
+                        path: '/Things2',
+                        component: Things2
                     }}
                 />
                 <Route

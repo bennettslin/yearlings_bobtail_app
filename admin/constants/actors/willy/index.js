@@ -16,27 +16,27 @@ import {
 
 const INSTANCES = [
     {
-        actor: WILLY,
+        type: WILLY,
         instance: COLLECTING
     },
     {
-        actor: WILLY,
+        type: WILLY,
         instance: DUCKING
     },
     {
-        actor: HOWIE_WILLY,
+        type: HOWIE_WILLY,
         instance: GANGBANGER
     },
     {
-        actor: CHRISTOPHER_BENNETT_WILLY,
+        type: CHRISTOPHER_BENNETT_WILLY,
         instance: REASSURING_ENCHANTED
     },
     {
-        actor: WILLY,
+        type: WILLY,
         instance: EPILOGUE
     },
     {
-        actor: WILLY,
+        type: WILLY,
         instance: CROSSING_GUARD
     }
 ]

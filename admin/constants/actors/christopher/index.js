@@ -15,27 +15,27 @@ import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
-        actor: CHRISTOPHER,
+        type: CHRISTOPHER,
         instance: TANTRUM
     },
     {
-        actor: CHRISTOPHER,
+        type: CHRISTOPHER,
         instance: SOBBING
     },
     {
-        actor: CHRISTOPHER_BENNETT_WILLY,
+        type: CHRISTOPHER_BENNETT_WILLY,
         instance: REASSURING_ENCHANTED
     },
     {
-        actor: CHRISTOPHER_BENNETT,
+        type: CHRISTOPHER_BENNETT,
         instance: BLISSFUL_GUILTY
     },
     {
-        actor: CHRISTOPHER,
+        type: CHRISTOPHER,
         instance: STARING
     },
     {
-        actor: BENNETTS_CHRISTOPHER_LIZ,
+        type: BENNETTS_CHRISTOPHER_LIZ,
         instance: EPILOGUE
     }
 ]

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import findIndex from 'lodash/findindex'
-
+/* eslint-disable */
 import InlineSvg from 'modules/InlineSvg'
 
 import {
@@ -13,13 +13,16 @@ import {
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
 
-import { getSvgMapForWholeActor } from '../../../utils/svg'
-import { getSvgMapForThing } from 'svg/things'
+import {
+    getPreviewerSvgMapForActor,
+    getPreviewerSvgMapForThing
+} from '../../../utils/svg'
 
 import { getGlobalActorStyle } from 'modules/PresenceSvg/helper/sharedStyle'
 
 import { ACTOR } from 'constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
+import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 
 class PreviewerSvg extends PureComponent {
 
@@ -47,20 +50,34 @@ class PreviewerSvg extends PureComponent {
         }
     }
 
-    getSharedStyle(actorKey) {
+    getSharedStyle() {
+        let customType
+
         const {
-                presenceType,
-                presenceKey
-            } = this.props,
+            isActor,
+            presenceType,
+            presenceKey
+        } = this.props,
+            instanceList =
+                isActor ? WHOLE_ACTOR_INSTANCES : CUSTOM_THING_INSTANCES
 
-            { sharedStyle } = getArrangementForPresence({
-                presenceType: actorKey ? ACTOR : presenceType,
-                presenceKey,
-                actorKey
-            })
+        if (isActor || instanceList[presenceType]) {
+            customType = instanceList[presenceType][
+                findIndex(
+                    instanceList[presenceType],
+                    object => object.instance === presenceKey
+                )
+            ].type
+        }
 
-        if (actorKey) {
-            return getGlobalActorStyle(actorKey, sharedStyle)
+        const { sharedStyle } = getArrangementForPresence({
+            presenceType: isActor ? ACTOR : (customType || presenceType),
+            presenceKey,
+            ...isActor && { actorKey: customType }
+        })
+
+        if (isActor) {
+            return getGlobalActorStyle(customType, sharedStyle)
         } else {
             return sharedStyle
         }
@@ -74,24 +91,11 @@ class PreviewerSvg extends PureComponent {
             } = this.props,
 
             svgMap = isActor ?
-                getSvgMapForWholeActor(presenceType) :
-                getSvgMapForThing(presenceType),
+                getPreviewerSvgMapForActor(presenceType) :
+                getPreviewerSvgMapForThing(presenceType),
 
-            svgContent = svgMap[presenceKey]
-
-        let actorKey
-
-        if (isActor) {
-            // Find the actor key for compound instances.
-            actorKey = WHOLE_ACTOR_INSTANCES[presenceType][
-                findIndex(
-                    WHOLE_ACTOR_INSTANCES[presenceType],
-                    object => object.instance === presenceKey
-                )
-            ].actor
-        }
-
-        const sharedStyle = this.getSharedStyle(actorKey)
+            svgContent = svgMap[presenceKey],
+            sharedStyle = this.getSharedStyle()
 
         return Boolean(svgContent) && (
             <InlineSvg

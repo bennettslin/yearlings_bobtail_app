@@ -21,21 +21,19 @@ import {
     setPresenceInQueryStrings
 } from '../../utils/storage'
 
-import { getPreviewerSvgMapForActor } from '../../utils/svg'
+/* eslint-disable */
+import { getPreviewerSvgMapForThing } from '../../utils/svg'
 
-class Actors extends PureComponent {
+class Things2 extends PureComponent {
     constructor(props) {
         super(props)
 
         // Set presence from storage in query strings.
-        const presenceFromStorage = getPresenceFromStorage(true)
+        const presenceFromStorage = getPresenceFromStorage()
         setPresenceInQueryStrings(presenceFromStorage)
 
         // Set presence from query strings in storage. Default is first index.
-        setPresenceInStorage({
-            isActor: true,
-            ...getPresenceFromQueryStrings(true)
-        })
+        setPresenceInStorage(getPresenceFromQueryStrings())
 
         this.state = {
             ...presenceFromStorage,
@@ -44,7 +42,7 @@ class Actors extends PureComponent {
     }
 
     componentDidMount() {
-        logMount('Actors')
+        logMount('Things2')
         removeLoadingIndicator()
         this.focusPreviewerElement()
     }
@@ -57,7 +55,7 @@ class Actors extends PureComponent {
         let presenceType = type,
             presenceKey = key
         if (type) {
-            presenceKey = keys(getPreviewerSvgMapForActor(type))[0]
+            presenceKey = keys(getPreviewerSvgMapForThing(type))[0]
         } else if (key) {
             presenceType = this.state.presenceType
         }
@@ -66,11 +64,7 @@ class Actors extends PureComponent {
             presenceType,
             presenceKey
         })
-        setPresenceInStorage({
-            isActor: true,
-            presenceType,
-            presenceKey
-        })
+        setPresenceInStorage({ presenceType, presenceKey })
         setPresenceInQueryStrings({ presenceType, presenceKey })
 
         this.scrollPresenceIntoView({
@@ -89,7 +83,6 @@ class Actors extends PureComponent {
         const { presenceType, presenceKey } = this.state
 
         accessPresence({
-            isActor: true,
             keyName: getKeyName(e),
             presenceType,
             presenceKey,
@@ -118,14 +111,16 @@ class Actors extends PureComponent {
                 kilobytes
             } = this.state,
 
-            svgMap = getPreviewerSvgMapForActor(presenceType)
+            svgMap = getPreviewerSvgMapForThing(presenceType)
+
+        console.error('svgMap', svgMap)
 
         return (
             <div
                 {...{
                     ref: this.setPreviewerElement,
                     className: cx(
-                        'Actors',
+                        'Things2',
                         'Previewer__actors',
                         'Previewer__heightAspectRatio',
                         'abF',
@@ -136,7 +131,6 @@ class Actors extends PureComponent {
                 }}
             >
                 <PreviewerDashboard
-                    isActor
                     {...{
                         presenceType,
                         presenceKey,
@@ -145,14 +139,13 @@ class Actors extends PureComponent {
                     }}
                 />
                 <div {...{ className: 'Previewer__scroll' }}>
-                    {/* Render all instances for this actor. */}
-                    {keys(svgMap).map(instanceKey => (
+                    {/* Render all presences for this thing. */}
+                    {keys(svgMap).map(presenceKey => (
                         <PreviewerSvg
-                            isActor
                             {...{
-                                key: instanceKey,
+                                key: presenceKey,
                                 presenceType,
-                                presenceKey: instanceKey,
+                                presenceKey,
                                 handleProcessSvg: this.handleProcessSvg
                             }}
                         />
@@ -163,4 +156,4 @@ class Actors extends PureComponent {
     }
 }
 
-export default Actors
+export default Things2

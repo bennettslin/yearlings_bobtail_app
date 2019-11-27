@@ -2,8 +2,8 @@ import findIndex from 'lodash/findindex'
 import keys from 'lodash/keys'
 
 import {
-    getSvgMapForWholeActor,
-    getSvgMapForUnduplicatedThing
+    getPreviewerSvgMapForActor,
+    getPreviewerSvgMapForThing
 } from './svg'
 
 import WHOLE_ACTORS_LIST from '../constants/actors'
@@ -54,7 +54,7 @@ const accessPresenceKey = ({
     selectPresence
 }) => {
     const
-        mapGetter = isActor ? getSvgMapForWholeActor : getSvgMapForUnduplicatedThing,
+        mapGetter = isActor ? getPreviewerSvgMapForActor : getPreviewerSvgMapForThing,
         svgArray = keys(mapGetter(presenceType)),
         selectedIndex = findIndex(
             svgArray,

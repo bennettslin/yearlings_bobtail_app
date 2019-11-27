@@ -18,35 +18,35 @@ import {
 
 const INSTANCES = [
     {
-        actor: AMY,
+        type: AMY,
         instance: SMOKER
     },
     {
-        actor: AMY_STEPHANIE,
+        type: AMY_STEPHANIE,
         instance: SQUEEZING
     },
     {
-        actor: AMY,
+        type: AMY,
         instance: FLIRTING
     },
     {
-        actor: AMY,
+        type: AMY,
         instance: MINGLING
     },
     {
-        actor: AMY,
+        type: AMY,
         instance: EPILOGUE
     },
     {
-        actor: AMY_NESTOR_TOMER,
+        type: AMY_NESTOR_TOMER,
         instance: OFFICER
     },
     {
-        actor: AMY,
+        type: AMY,
         instance: PROTESTER
     },
     {
-        actor: AMY,
+        type: AMY,
         instance: DOCTOR
     }
 ]
