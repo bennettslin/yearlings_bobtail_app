@@ -22,8 +22,8 @@ import './scss/app.scss'
 // These reroute to the routing container in production.
 import Actors from 'admin/containers/Actors'
 import Annotations from 'admin/containers/Annotations'
+import LegacyThings from 'admin/containers/LegacyThings'
 import Things from 'admin/containers/Things'
-import Things2 from 'admin/containers/Things2'
 import Progress from 'admin/containers/Progress'
 
 import RoutingContainer from './containers/Routing'
@@ -71,15 +71,15 @@ ReactDOM.render(
                 <Route
                     exact
                     {...{
-                        path: '/Things',
-                        component: Things
+                        path: '/LegacyThings',
+                        component: LegacyThings
                     }}
                 />
                 <Route
                     exact
                     {...{
-                        path: '/Things2',
-                        component: Things2
+                        path: '/Things',
+                        component: Things
                     }}
                 />
                 <Route

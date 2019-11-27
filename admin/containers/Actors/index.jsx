@@ -126,7 +126,7 @@ class Actors extends PureComponent {
                     ref: this.setPreviewerElement,
                     className: cx(
                         'Actors',
-                        'Previewer__actors',
+                        'Previewer',
                         'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'

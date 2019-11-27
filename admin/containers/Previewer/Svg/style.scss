@@ -1,0 +1,29 @@
+.Presence {
+    .Previewer__heightAspectRatio
+    & {
+        width: auto;
+        height: 100%;
+    }
+}
+
+svg {
+    .Previewer__heightAspectRatio
+    & {
+        height: 100%;
+    }
+}
+
+.Presence {
+    .Previewer__scroll
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.Things {
+    background-color: white;
+}
+
+.Previewer__scroll {
+    background-color: white;
+}

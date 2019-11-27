@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
+import debounce from 'debounce'
 import keys from 'lodash/keys'
-import scrollIntoView from 'scroll-into-view'
 
-import PreviewerSvg from '../Previewer/Svg'
 import PreviewerDashboard from '../Previewer/Dashboard'
+import PreviewerSvg from '../Previewer/Svg'
+
+import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
 import { getKeyName } from 'managers/Key/helper'
-
-import { capitaliseForClassName } from 'helpers/format'
 
 import { removeLoadingIndicator } from 'utils/window'
 
@@ -21,10 +21,12 @@ import {
     setPresenceInQueryStrings
 } from '../../utils/storage'
 
-/* eslint-disable */
+import { logSvgCount } from '../../utils/log'
 import { getPreviewerSvgMapForThing } from '../../utils/svg'
 
-class Things2 extends PureComponent {
+import { getHeightAspectRatio } from './helper'
+
+class LegacyThings extends PureComponent {
     constructor(props) {
         super(props)
 
@@ -37,12 +39,17 @@ class Things2 extends PureComponent {
 
         this.state = {
             ...presenceFromStorage,
-            kilobytes: 0
+            viewBoxWidth: 0,
+            viewBoxHeight: 0,
+            kilobytes: 0,
+            heightAspectRatio: false
         }
     }
 
     componentDidMount() {
-        logMount('Things2')
+        logMount('LegacyThings')
+        logSvgCount()
+        window.onresize = debounce(this.setHeightAspectRatio, 0)
         removeLoadingIndicator()
         this.focusPreviewerElement()
     }
@@ -66,15 +73,34 @@ class Things2 extends PureComponent {
         })
         setPresenceInStorage({ presenceType, presenceKey })
         setPresenceInQueryStrings({ presenceType, presenceKey })
+    }
 
-        this.scrollPresenceIntoView({
-            presenceType,
-            presenceKey
+    setHeightAspectRatio = ({
+        viewBoxWidth = this.state.viewBoxWidth,
+        viewBoxHeight = this.state.viewBoxHeight
+    }) => {
+        this.setState({
+            heightAspectRatio: getHeightAspectRatio({
+                viewBoxWidth,
+                viewBoxHeight
+            })
         })
     }
 
     handleProcessSvg = (svgString) => {
+        const {
+            viewBoxWidth,
+            viewBoxHeight
+        } = getViewBoxSize(svgString)
+
+        this.setHeightAspectRatio({
+            viewBoxWidth,
+            viewBoxHeight
+        })
+
         this.setState({
+            viewBoxWidth,
+            viewBoxHeight,
             kilobytes: svgString.length / 1024
         })
     }
@@ -90,17 +116,6 @@ class Things2 extends PureComponent {
         })
     }
 
-    scrollPresenceIntoView({
-        presenceType,
-        presenceKey
-    }) {
-        const element = document.querySelector(
-            `.${capitaliseForClassName(presenceType)} .${presenceKey}`
-        )
-
-        scrollIntoView(element, { time: 100 })
-    }
-
     setPreviewerElement = node => this.previewerElement = node
 
     render() {
@@ -110,19 +125,15 @@ class Things2 extends PureComponent {
                 presenceKey,
                 kilobytes
             } = this.state,
-
-            svgMap = getPreviewerSvgMapForThing(presenceType)
-
-        console.error('svgMap', svgMap)
+            { heightAspectRatio } = this.state
 
         return (
             <div
                 {...{
                     ref: this.setPreviewerElement,
                     className: cx(
-                        'Things2',
-                        'Previewer__actors',
-                        'Previewer__heightAspectRatio',
+                        'LegacyThings',
+                        heightAspectRatio && 'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
                     ),
@@ -139,21 +150,17 @@ class Things2 extends PureComponent {
                     }}
                 />
                 <div {...{ className: 'Previewer__scroll' }}>
-                    {/* Render all presences for this thing. */}
-                    {keys(svgMap).map(presenceKey => (
-                        <PreviewerSvg
-                            {...{
-                                key: presenceKey,
-                                presenceType,
-                                presenceKey,
-                                handleProcessSvg: this.handleProcessSvg
-                            }}
-                        />
-                    ))}
+                    <PreviewerSvg
+                        {...{
+                            presenceType,
+                            presenceKey,
+                            handleProcessSvg: this.handleProcessSvg
+                        }}
+                    />
                 </div>
             </div>
         )
     }
 }
 
-export default Things2
+export default LegacyThings

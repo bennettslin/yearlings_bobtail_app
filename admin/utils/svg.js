@@ -7,6 +7,7 @@ import { WHOLE_ACTOR_INSTANCES } from '../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../constants/things'
 
 const getSvgMapForMultipleTypes = ({ isActor, presenceType }) => {
+    // Actors and custom lists may include difference presence types.
     const
         instanceList =
             isActor ? WHOLE_ACTOR_INSTANCES : CUSTOM_THING_INSTANCES,
@@ -34,7 +35,6 @@ export const getPreviewerSvgMapForActor = (presenceType) => {
 export const getPreviewerSvgMapForThing = (presenceType) => {
     if (CUSTOM_THING_INSTANCES[presenceType]) {
         // Get all svgs for custom thing.
-
         return getSvgMapForMultipleTypes({ presenceType })
     }
 

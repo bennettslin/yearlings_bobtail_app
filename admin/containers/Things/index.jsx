@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
-import debounce from 'debounce'
 import keys from 'lodash/keys'
+import scrollIntoView from 'scroll-into-view'
 
-import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'
-
-import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
+import PreviewerDashboard from '../Previewer/Dashboard'
 
 import { getKeyName } from 'managers/Key/helper'
+
+import { capitaliseForClassName } from 'helpers/format'
 
 import { removeLoadingIndicator } from 'utils/window'
 
@@ -21,10 +21,7 @@ import {
     setPresenceInQueryStrings
 } from '../../utils/storage'
 
-import { logSvgCount } from '../../utils/log'
 import { getPreviewerSvgMapForThing } from '../../utils/svg'
-
-import { getHeightAspectRatio } from './helper'
 
 class Things extends PureComponent {
     constructor(props) {
@@ -39,17 +36,12 @@ class Things extends PureComponent {
 
         this.state = {
             ...presenceFromStorage,
-            viewBoxWidth: 0,
-            viewBoxHeight: 0,
-            kilobytes: 0,
-            heightAspectRatio: false
+            kilobytes: 0
         }
     }
 
     componentDidMount() {
         logMount('Things')
-        logSvgCount()
-        window.onresize = debounce(this.setHeightAspectRatio, 0)
         removeLoadingIndicator()
         this.focusPreviewerElement()
     }
@@ -73,34 +65,15 @@ class Things extends PureComponent {
         })
         setPresenceInStorage({ presenceType, presenceKey })
         setPresenceInQueryStrings({ presenceType, presenceKey })
-    }
 
-    setHeightAspectRatio = ({
-        viewBoxWidth = this.state.viewBoxWidth,
-        viewBoxHeight = this.state.viewBoxHeight
-    }) => {
-        this.setState({
-            heightAspectRatio: getHeightAspectRatio({
-                viewBoxWidth,
-                viewBoxHeight
-            })
+        this.scrollPresenceIntoView({
+            presenceType,
+            presenceKey
         })
     }
 
     handleProcessSvg = (svgString) => {
-        const {
-            viewBoxWidth,
-            viewBoxHeight
-        } = getViewBoxSize(svgString)
-
-        this.setHeightAspectRatio({
-            viewBoxWidth,
-            viewBoxHeight
-        })
-
         this.setState({
-            viewBoxWidth,
-            viewBoxHeight,
             kilobytes: svgString.length / 1024
         })
     }
@@ -116,6 +89,17 @@ class Things extends PureComponent {
         })
     }
 
+    scrollPresenceIntoView({
+        presenceType,
+        presenceKey
+    }) {
+        const element = document.querySelector(
+            `.${capitaliseForClassName(presenceType)} .${presenceKey}`
+        )
+
+        scrollIntoView(element, { time: 100 })
+    }
+
     setPreviewerElement = node => this.previewerElement = node
 
     render() {
@@ -125,7 +109,8 @@ class Things extends PureComponent {
                 presenceKey,
                 kilobytes
             } = this.state,
-            { heightAspectRatio } = this.state
+
+            svgMap = getPreviewerSvgMapForThing(presenceType)
 
         return (
             <div
@@ -133,7 +118,8 @@ class Things extends PureComponent {
                     ref: this.setPreviewerElement,
                     className: cx(
                         'Things',
-                        heightAspectRatio && 'Previewer__heightAspectRatio',
+                        'Previewer',
+                        'Previewer__heightAspectRatio',
                         'abF',
                         'PtSansNarrow'
                     ),
@@ -150,13 +136,17 @@ class Things extends PureComponent {
                     }}
                 />
                 <div {...{ className: 'Previewer__scroll' }}>
-                    <PreviewerSvg
-                        {...{
-                            presenceType,
-                            presenceKey,
-                            handleProcessSvg: this.handleProcessSvg
-                        }}
-                    />
+                    {/* Render all presences for this thing. */}
+                    {keys(svgMap).map(presenceKey => (
+                        <PreviewerSvg
+                            {...{
+                                key: presenceKey,
+                                presenceType,
+                                presenceKey,
+                                handleProcessSvg: this.handleProcessSvg
+                            }}
+                        />
+                    ))}
                 </div>
             </div>
         )

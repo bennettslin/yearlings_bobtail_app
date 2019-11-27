@@ -5041,5 +5041,10 @@ export default [
         taskName: `Add layer to all faces.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow custom lists for previewers.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

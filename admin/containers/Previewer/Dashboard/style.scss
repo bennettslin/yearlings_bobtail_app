@@ -67,24 +67,9 @@ $height__dashboard__mobile: $height__input * 2 + $padding__dashboard * 2;
         }
     }
 
-    .Previewer__actors
+    .Previewer
     & {
         width: auto;
         justify-content: left;
-    }
-}
-
-.Presence {
-    .Previewer__heightAspectRatio
-    & {
-        width: auto;
-        height: 100%;
-    }
-}
-
-svg {
-    .Previewer__heightAspectRatio
-    & {
-        height: 100%;
     }
 }

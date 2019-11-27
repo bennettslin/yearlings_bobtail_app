@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import findIndex from 'lodash/findindex'
-/* eslint-disable */
 import InlineSvg from 'modules/InlineSvg'
 
 import {
@@ -23,6 +22,8 @@ import { getGlobalActorStyle } from 'modules/PresenceSvg/helper/sharedStyle'
 import { ACTOR } from 'constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
+
+import './style.scss'
 
 class PreviewerSvg extends PureComponent {
 
@@ -54,13 +55,14 @@ class PreviewerSvg extends PureComponent {
         let customType
 
         const {
-            isActor,
-            presenceType,
-            presenceKey
-        } = this.props,
+                isActor,
+                presenceType,
+                presenceKey
+            } = this.props,
             instanceList =
                 isActor ? WHOLE_ACTOR_INSTANCES : CUSTOM_THING_INSTANCES
 
+        // Actors and custom lists may include difference presence types.
         if (isActor || instanceList[presenceType]) {
             customType = instanceList[presenceType][
                 findIndex(
