@@ -10,8 +10,11 @@ export const LAWN_COLOUR = 'lawn'
 export const GATE_COLOUR = 'gate'
 export const CEILING_COLOUR = 'ceiling'
 export const FLOOR_COLOUR = 'floor'
+export const BATHROOM_FLOOR_COLOUR = 'bathroomFloor'
+export const BATHROOM_FLOOR_DARK_COLOUR = 'bathroomFloorDark'
 export const STAGE_FLOOR_COLOUR = 'stageFloor'
 export const WALL_COLOUR = 'wall'
+export const BATHROOM_WALL_COLOUR = 'bathroomWall'
 export const DOOR_COLOUR = 'door'
 export const PLATFORM_COLOUR = 'platform'
 export const STAGE_PLATFORM_COLOUR = 'stagePlatform'
@@ -47,8 +50,12 @@ const HSLA_MAP = {
     /* F. */
     [FLOOR_COLOUR]: { h: 330, s: 25, l: 50 },
     [STAGE_FLOOR_COLOUR]: { h: 29, s: 65, l: 20 },
+    [BATHROOM_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
+    /* Z */
+    [BATHROOM_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     /* W. */
     [WALL_COLOUR]: { h: 300, s: 50, l: 75 },
+    [BATHROOM_WALL_COLOUR]: { h: 250, s: 50, l: 75 },
     /* E. */
     [DOOR_COLOUR]: { h: 330, s: 70, l: 75 },
     /* P. */

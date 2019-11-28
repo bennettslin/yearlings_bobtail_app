@@ -6,8 +6,9 @@ import {
 import {
     GROUND_COLOUR as G,
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    BATHROOM_FLOOR_COLOUR as F,
+    BATHROOM_FLOOR_DARK_COLOUR as Z,
+    BATHROOM_WALL_COLOUR as W,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
@@ -26,17 +27,18 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [W],
-                [W, W, F, F, F, F, F, F, F, F, W, W],
-                [W, W, F, R, R, R, R, F, F, F, W, W],
-                [W, W, F, R, R, R, R, F, F, F, W, W],
-                [W, W, F, F, F, F, F, F, F, F, W, W]
+                [W, F, Z, F, Z, F, Z, F, Z, F, Z, W],
+                [W, Z, F, R, R, R, R, Z, F, Z, F, W],
+                [W, F, Z, R, R, R, R, F, Z, F, Z, W],
+                [W, Z, F, Z, F, Z, F, Z, F, Z, F, W],
+                [W, F, Z, F, Z, F, Z, F, Z, F, Z, W]
             ],
             zIndices: [
                 [f, f, f, f, f, f, f, f, f, f, f],
-                [f, f, 1, 1, 1, 1, 1, 1, 1, 1, f],
-                [f, f, 1, 2, 2, 2, 2, 1, 1, 1, f],
-                [f, f, 1, 2, 2, 2, 2, 1, 1, 1, f],
-                [f, f, 1, 1, 1, 1, 1, 1, 1, 1, f]
+                [f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, f],
+                [f, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, f],
+                [f, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, f],
+                [f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, f]
             ]
         }
     },
@@ -44,17 +46,18 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [G, G, F, F, F, F, F, F, F, F, G, G],
-                [G, G, F, R, R, R, R, F, F, F, G, G],
-                [G, G, F, R, R, R, R, F, F, F, G, G],
-                [G, G, F, F, F, F, F, F, F, F, G, G]
+                [G, F, Z, F, Z, F, Z, F, Z, F, Z, G],
+                [G, Z, F, R, R, R, R, Z, F, Z, F, G],
+                [G, F, Z, R, R, R, R, F, Z, F, Z, G],
+                [G, Z, F, Z, F, Z, F, Z, F, Z, F, G],
+                [G, F, Z, F, Z, F, Z, F, Z, F, Z, G]
             ],
             zIndices: [
                 [0],
-                [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 0, 1, 2, 2, 2, 2, 1, 1, 1, 0],
-                [0, 0, 1, 2, 2, 2, 2, 1, 1, 1, 0],
-                [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 0],
+                [0, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
     }

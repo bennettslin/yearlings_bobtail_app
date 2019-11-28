@@ -169,7 +169,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         [TOGETHER_SKETCH]: {
             yIndex: 5,
             xPosition: 8.25,
-            zOffset: 3.375,
+            zOffset: 2.375,
             noShadow: true,
             scaleFactor: 0.35,
             sharedStyle: SKETCH_TAIWAN__SHARED
@@ -177,7 +177,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
         [SKETCHBOOK__TOGETHER]: {
             yIndex: 5,
             xPosition: 8.25,
-            zOffset: 2.5,
+            zOffset: 1.5,
             rotate: 270,
             scaleFactor: 0.25,
             sharedStyle: [
@@ -246,7 +246,7 @@ export const THINGS_PUPPET_SHOW_END = {
         [APART_SKETCH]: {
             yIndex: 5,
             xPosition: 2.75,
-            zOffset: 3.5,
+            zOffset: 2.5,
             noShadow: true,
             scaleFactor: 0.4,
             sharedStyle: SKETCH_TAIWAN__SHARED
@@ -254,7 +254,7 @@ export const THINGS_PUPPET_SHOW_END = {
         [SKETCHBOOK__APART]: {
             yIndex: 5,
             xPosition: 2.75,
-            zOffset: 2.5,
+            zOffset: 1.5,
             rotate: 270,
             scaleFactor: 0.25,
             flipHorizontal: true,
