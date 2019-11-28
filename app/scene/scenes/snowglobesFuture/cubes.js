@@ -7,7 +7,7 @@ import {
     FLOOR_COLOUR,
     PLATFORM_COLOUR,
     UPHOLSTERY_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 /**
  * Couch should match in lizCouch.

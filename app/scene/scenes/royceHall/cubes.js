@@ -2,7 +2,7 @@ import { ROYCE_HALL_KEY } from '../../../constants/scene/scenes'
 
 import {
     PAVEMENT_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 const
     V = PAVEMENT_COLOUR,

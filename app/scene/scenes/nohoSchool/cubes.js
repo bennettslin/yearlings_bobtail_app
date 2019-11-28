@@ -4,7 +4,7 @@ import {
     PAVEMENT_COLOUR,
     FLOOR_COLOUR,
     SEAT_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 const
     V = PAVEMENT_COLOUR,

@@ -11,13 +11,13 @@ import {
     CEILING_COLOUR,
     WALL_COLOUR,
     DOOR_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     d,
     f,
     k
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 /**
  * Blinds and gate should match in lizCouch.

@@ -1,6 +1,6 @@
 import { PUPPET_SHOW_KEY } from '../../../constants/scene/scenes'
 
-import { GROUND_COLOUR } from '../../cubes/keys/hsla'
+import { GROUND_COLOUR } from '../../cubes/colours'
 
 const
     G = GROUND_COLOUR,

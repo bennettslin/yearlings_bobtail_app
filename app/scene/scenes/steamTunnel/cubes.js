@@ -4,12 +4,12 @@ import {
     FLOOR_COLOUR,
     CEILING_COLOUR,
     WALL_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     b,
     d
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     F = FLOOR_COLOUR,

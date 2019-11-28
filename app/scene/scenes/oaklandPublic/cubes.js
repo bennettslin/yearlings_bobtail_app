@@ -4,7 +4,7 @@ import {
     STREET_COLOUR,
     CROSSWALK_COLOUR,
     PAVEMENT_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 const
     T = STREET_COLOUR,

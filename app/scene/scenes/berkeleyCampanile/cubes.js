@@ -7,12 +7,12 @@ import {
     GATE_COLOUR,
     WALL_COLOUR,
     PLATFORM_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     g,
     k
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     D = DEFAULT_COLOUR,

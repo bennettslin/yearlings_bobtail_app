@@ -10,12 +10,12 @@ import {
     WALL_COLOUR,
     DOOR_COLOUR,
     UPHOLSTERY_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     d,
     g
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     G = GROUND_COLOUR,

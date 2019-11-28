@@ -6,7 +6,7 @@ import {
     GATE_COLOUR,
     CEILING_COLOUR,
     DOOR_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     d,
@@ -14,7 +14,7 @@ import {
     f,
     g,
     k
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 /**
  * Gate should match in courtyard.

@@ -4,11 +4,11 @@ import {
     GROUND_COLOUR,
     HILL_COLOUR,
     HILL_DARKER_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     LEFT
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     G = GROUND_COLOUR,

@@ -7,14 +7,14 @@ import {
     CEILING_COLOUR,
     WALL_COLOUR,
     DOOR_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     d,
     e,
     f,
     k
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 /**
  * Blinds and door should match in bennettBed.

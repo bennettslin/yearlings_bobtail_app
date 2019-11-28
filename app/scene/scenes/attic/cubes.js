@@ -7,7 +7,7 @@ import {
     PLATFORM_COLOUR,
     // FURNITURE_COLOUR,
     UPHOLSTERY_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     a,
@@ -15,7 +15,7 @@ import {
     e,
     f,
     g
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     C = CEILING_COLOUR,

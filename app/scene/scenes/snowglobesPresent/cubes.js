@@ -4,7 +4,7 @@ import {
     GROUND_COLOUR,
     PLATFORM_COLOUR,
     UPHOLSTERY_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 const
     G = GROUND_COLOUR,

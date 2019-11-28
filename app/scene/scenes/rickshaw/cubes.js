@@ -5,11 +5,11 @@ import {
 import {
     SAND_COLOUR,
     STREET_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     LEFT
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     N = SAND_COLOUR,

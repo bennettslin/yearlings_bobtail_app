@@ -5,12 +5,12 @@ import {
     PAVEMENT_COLOUR,
     GATE_COLOUR,
     WALL_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     d,
     g
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     T = STREET_COLOUR,

@@ -18,13 +18,13 @@ import {
     DOOR_COLOUR,
     UPHOLSTERY_COLOUR,
     SEAT_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     d,
     g,
     k
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 /**
  * Blinds and gate should match in lizGate.

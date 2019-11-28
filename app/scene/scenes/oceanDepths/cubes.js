@@ -3,7 +3,7 @@ import { OCEAN_DEPTHS_KEY } from '../../../constants/scene/scenes'
 import {
     // OCEAN_COLOUR,
     SAND_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     // a,
@@ -15,7 +15,7 @@ import {
     // g,
     // k,
     RIGHT
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     // Default.

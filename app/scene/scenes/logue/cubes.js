@@ -3,7 +3,7 @@ import { LOGUE_KEY } from '../../../constants/scene/scenes'
 import {
     STAGE_FLOOR_COLOUR,
     STAGE_PLATFORM_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 const
     G = STAGE_FLOOR_COLOUR,

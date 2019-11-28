@@ -3,7 +3,7 @@ import { CHANGELING_CAVE_KEY } from '../../../constants/scene/scenes'
 import {
     GROUND_COLOUR,
     PAVEMENT_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 const
     G = GROUND_COLOUR,

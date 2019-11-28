@@ -3,7 +3,7 @@ import { BUOY_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR,
     OCEAN_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     // a,
@@ -15,7 +15,7 @@ import {
     // g,
     // k,
     RIGHT
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     // Default.

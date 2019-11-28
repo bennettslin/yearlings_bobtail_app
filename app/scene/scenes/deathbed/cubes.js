@@ -12,12 +12,12 @@ import {
     PLATFORM_COLOUR,
     UPHOLSTERY_COLOUR,
     FURNITURE_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     // g,
     RIGHT
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     G = GROUND_COLOUR,

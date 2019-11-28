@@ -3,11 +3,11 @@ import { SHORE_KEY } from '../../../constants/scene/scenes'
 import {
     SAND_COLOUR,
     OCEAN_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     RIGHT
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     N = SAND_COLOUR,

@@ -2,11 +2,11 @@ import { OCEAN_FLOOR_KEY } from '../../../constants/scene/scenes'
 
 import {
     SAND_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     RIGHT
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 const
     S = SAND_COLOUR,

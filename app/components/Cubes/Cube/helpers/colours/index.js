@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import HSLA_MAP from '../../../../../scene/cubes/hsla'
+import HSLA_MAP from '../../../../../scene/cubes'
 
 import {
     CEILING,
@@ -13,7 +13,7 @@ import {
     CUBE_Z_AXIS_LENGTH
 } from '../../../../../constants/cubeIndex'
 
-import { k } from 'scene/cubes/keys/zIndex'
+import { k } from 'scene/cubes/zIndices'
 
 const
     CUBE_X_AXIS_CENTRE_INDEX = CUBE_X_AXIS_LENGTH / 2 - 0.5,

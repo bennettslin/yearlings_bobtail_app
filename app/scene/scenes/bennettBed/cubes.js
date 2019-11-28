@@ -11,13 +11,13 @@ import {
     WALL_COLOUR,
     DOOR_COLOUR,
     UPHOLSTERY_COLOUR
-} from '../../cubes/keys/hsla'
+} from '../../cubes/colours'
 
 import {
     d,
     g,
     k
-} from '../../cubes/keys/zIndex'
+} from '../../cubes/zIndices'
 
 /**
  * Blinds and door should match in courtyard.
