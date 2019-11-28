@@ -1,5 +1,3 @@
-/* eslint-disable object-curly-newline */
-
 export const DEFAULT_COLOUR = 'default'
 export const HILL_COLOUR = 'hill'
 export const HILL_DARKER_COLOUR = 'hillDarker'
@@ -22,47 +20,49 @@ export const UPHOLSTERY_COLOUR = 'upholstery'
 export const SEAT_COLOUR = 'seat'
 export const OCEAN_COLOUR = 'ocean'
 
+/* eslint-disable object-curly-newline */
 const HSLA_MAP = {
-    // D.
+    /* D. */
     [DEFAULT_COLOUR]: { h: 0, s: 0, l: 100 },
-    // H.
+    /* H. */
     [HILL_COLOUR]: { h: 120, s: 50, l: 50 },
-    // I.
+    /* I. */
     [HILL_DARKER_COLOUR]: { h: 120, s: 50, l: 40 },
-    // G.
+    /* G. */
     [GROUND_COLOUR]: { h: 0, s: 0, l: 25 },
-    // N.
+    /* N. */
     [SAND_COLOUR]: { h: 60, s: 25, l: 90 },
-    // T.
+    /* T. */
     [STREET_COLOUR]: { h: 0, s: 0, l: 50 },
-    // X.
+    /* X. */
     [CROSSWALK_COLOUR]: { h: 0, s: 0, l: 100 },
-    // V.
+    /* V. */
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 75 },
-    // L.
+    /* L. */
     [LAWN_COLOUR]: { h: 120, s: 80, l: 75 },
-    // A.
+    /* A. */
     [GATE_COLOUR]: { h: 250, s: 50, l: 75 },
-    // C.
+    /* C. */
     [CEILING_COLOUR]: { h: 60, s: 50, l: 75 },
-    // F.
+    /* F. */
     [FLOOR_COLOUR]: { h: 330, s: 25, l: 50 },
     [STAGE_FLOOR_COLOUR]: { h: 29, s: 65, l: 20 },
-    // W.
+    /* W. */
     [WALL_COLOUR]: { h: 300, s: 50, l: 75 },
-    // E.
+    /* E. */
     [DOOR_COLOUR]: { h: 330, s: 70, l: 75 },
-    // P.
+    /* P. */
     [PLATFORM_COLOUR]: { h: 30, s: 50, l: 25 },
     [STAGE_PLATFORM_COLOUR]: { h: 3, s: 13, l: 34 },
-    // R.
+    /* R. */
     [FURNITURE_COLOUR]: { h: 330, s: 50, l: 75 },
-    // U.
+    /* U. */
     [UPHOLSTERY_COLOUR]: { h: 90, s: 50, l: 75 },
-    // S.
+    /* S. */
     [SEAT_COLOUR]: { h: 30, s: 50, l: 75 },
-    // O.
+    /* O. */
     [OCEAN_COLOUR]: { h: 210, s: 90, l: 60 }
 }
+/* eslint-enable object-curly-newline */
 
 export default HSLA_MAP
