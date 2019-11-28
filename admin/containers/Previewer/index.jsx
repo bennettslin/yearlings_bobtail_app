@@ -9,7 +9,10 @@ import PreviewerDashboard from './Dashboard'
 
 import { getKeyName } from 'managers/Key/helper'
 
-import { capitaliseForClassName } from 'helpers/format'
+import {
+    capitaliseForClassName,
+    convertPresenceKeyToClassName
+} from 'helpers/format'
 
 import { removeLoadingIndicator } from 'utils/window'
 
@@ -40,7 +43,7 @@ class Previewer extends PureComponent {
         super(props)
 
         // Set presence from storage in query strings.
-        const { isActor } = this.props,
+        const { isActor } = props,
             presenceFromStorage = getPresenceFromStorage(isActor)
 
         setPresenceInQueryStrings(presenceFromStorage)
@@ -116,7 +119,7 @@ class Previewer extends PureComponent {
         presenceKey
     }) {
         const element = document.querySelector(
-            `.${capitaliseForClassName(presenceType)} .${presenceKey}`
+            `.${capitaliseForClassName(presenceType)} .${convertPresenceKeyToClassName(presenceKey)}`
         )
 
         scrollIntoView(element, { time: 100 })
@@ -138,6 +141,10 @@ class Previewer extends PureComponent {
             } = this.state,
 
             svgMap = this.getPreviewerMapGetter()(presenceType)
+
+        if (!presenceType) {
+            return null
+        }
 
         return (
             <div
@@ -176,7 +183,7 @@ class Previewer extends PureComponent {
                         <PreviewerSvg
                             showKilobytes
                             {...{
-                                key: presenceKey,
+                                key: `${presenceType}_${presenceKey}`,
                                 isActor,
                                 presenceType,
                                 presenceKey

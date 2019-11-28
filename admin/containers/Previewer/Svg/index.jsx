@@ -19,6 +19,10 @@ import {
     getPreviewerSvgMapForThing
 } from '../../../utils/svg'
 
+import {
+    getViewBoxSize,
+    getSizeForPresence
+} from 'modules/PresenceSvg/helper/size'
 import { getGlobalActorStyle } from 'modules/PresenceSvg/helper/sharedStyle'
 
 import { ACTOR } from 'constants/scene'
@@ -42,6 +46,8 @@ class PreviewerSvg extends PureComponent {
         super(props)
 
         this.state = {
+            adjustedWidth: 0,
+            adjustedHeight: 0,
             kilobytes: 0
         }
     }
@@ -62,15 +68,32 @@ class PreviewerSvg extends PureComponent {
         if (element) {
             const kilobytes = svgString.length / 1024
 
+            const {
+                    viewBoxWidth,
+                    viewBoxHeight
+                } = getViewBoxSize(svgString),
+                {
+                    scaleFactor,
+                    trimBottom
+                } = this.getArrangement()
+
             this.setState({
-                kilobytes
+                kilobytes,
+                ...getSizeForPresence({
+                    presenceType: ACTOR,
+                    viewBoxWidth,
+                    viewBoxHeight,
+                    yIndex: 5,
+                    scaleFactor,
+                    trimBottom
+                })
             })
 
             this.props.handleProcessSvg({ svgString, kilobytes })
         }
     }
 
-    getSharedStyle() {
+    getCustomType() {
         let customType
 
         const {
@@ -91,14 +114,33 @@ class PreviewerSvg extends PureComponent {
             ].type
         }
 
-        const { sharedStyle } = getArrangementForPresence({
+        return customType
+    }
+
+    getArrangement() {
+        const customType = this.getCustomType(),
+            {
+                isActor,
+                presenceType,
+                presenceKey
+            } = this.props
+
+        return getArrangementForPresence({
             presenceType: isActor ? ACTOR : (customType || presenceType),
             presenceKey,
             ...isActor && { actorKey: customType }
         })
+    }
+
+    getSharedStyle() {
+        const
+            { isActor } = this.props,
+            { sharedStyle } = this.getArrangement()
 
         if (isActor) {
+            const customType = this.getCustomType()
             return getGlobalActorStyle(customType, sharedStyle)
+
         } else {
             return sharedStyle
         }
@@ -111,7 +153,11 @@ class PreviewerSvg extends PureComponent {
                 presenceType,
                 presenceKey
             } = this.props,
-            { kilobytes } = this.state,
+            {
+                adjustedWidth,
+                adjustedHeight,
+                kilobytes
+            } = this.state,
 
             svgMap = isActor ?
                 getPreviewerSvgMapForActor(presenceType) :
@@ -135,6 +181,12 @@ class PreviewerSvg extends PureComponent {
                             capitaliseForClassName(presenceType),
                             getSharedClassNames(sharedStyle)
                         ),
+                        ...isActor && {
+                            style: {
+                                width: `${adjustedWidth.toFixed(2)}%`,
+                                height: `${adjustedHeight.toFixed(2)}%`
+                            }
+                        },
                         svgClassName: convertPresenceKeyToClassName(presenceKey),
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: this.processSvg
