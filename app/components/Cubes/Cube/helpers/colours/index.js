@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import HSLA_MAP from '../../../../../scene/cubes'
+import HSLA_MAP from '../../../../../scene/cubes/colours'
 
 import {
     CEILING,
