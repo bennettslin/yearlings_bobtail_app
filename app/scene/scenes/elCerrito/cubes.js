@@ -4,24 +4,24 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    HILL_HSLA,
-    HILL_DARKER_HSLA,
-    STREET_HSLA,
-    PLATFORM_HSLA,
-    SEAT_HSLA
+    GROUND_COLOUR,
+    HILL_COLOUR,
+    HILL_DARKER_COLOUR,
+    STREET_COLOUR,
+    PLATFORM_COLOUR,
+    SEAT_COLOUR
 } from '../../cubes/keys/hsla'
 import {
     RIGHT
 } from '../../cubes/keys/zIndex'
 
 const
-    G = GROUND_HSLA,
-    H = HILL_HSLA,
-    I = HILL_DARKER_HSLA,
-    T = STREET_HSLA,
-    P = PLATFORM_HSLA,
-    S = SEAT_HSLA,
+    G = GROUND_COLOUR,
+    H = HILL_COLOUR,
+    I = HILL_DARKER_COLOUR,
+    T = STREET_COLOUR,
+    P = PLATFORM_COLOUR,
+    S = SEAT_COLOUR,
 
     EL_CERRITO_CUBES = {
         slantDirection: RIGHT,

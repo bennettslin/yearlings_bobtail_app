@@ -1,13 +1,13 @@
 import { LOGUE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    STAGE_FLOOR_HSLA,
-    STAGE_PLATFORM_HSLA
+    STAGE_FLOOR_COLOUR,
+    STAGE_PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    G = STAGE_FLOOR_HSLA,
-    P = STAGE_PLATFORM_HSLA,
+    G = STAGE_FLOOR_COLOUR,
+    P = STAGE_PLATFORM_COLOUR,
 
     LOGUE = {
         floor: {

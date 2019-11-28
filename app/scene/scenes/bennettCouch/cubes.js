@@ -4,12 +4,12 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    FURNITURE_HSLA,
-    UPHOLSTERY_HSLA
+    GROUND_COLOUR,
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    FURNITURE_COLOUR,
+    UPHOLSTERY_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -17,12 +17,12 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    G = GROUND_HSLA,
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    R = FURNITURE_HSLA,
-    U = UPHOLSTERY_HSLA,
+    G = GROUND_COLOUR,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    R = FURNITURE_COLOUR,
+    U = UPHOLSTERY_COLOUR,
 
     BENNETT_COUCH_CUBES = {
         ceiling: {

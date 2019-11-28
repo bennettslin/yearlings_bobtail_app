@@ -1,15 +1,15 @@
 import { OAKLAND_COMMERCIAL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    STREET_HSLA,
-    PAVEMENT_HSLA
+    DEFAULT_COLOUR,
+    STREET_COLOUR,
+    PAVEMENT_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    D = DEFAULT_HSLA,
-    T = STREET_HSLA,
-    V = PAVEMENT_HSLA,
+    D = DEFAULT_COLOUR,
+    T = STREET_COLOUR,
+    V = PAVEMENT_COLOUR,
 
     OAKLAND_COMMERCIAL_CUBES = {
         floor: {

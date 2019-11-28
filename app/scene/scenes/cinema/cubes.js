@@ -1,13 +1,13 @@
 import { CINEMA_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    STREET_HSLA,
-    PAVEMENT_HSLA,
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    DOOR_HSLA
+    DEFAULT_COLOUR,
+    STREET_COLOUR,
+    PAVEMENT_COLOUR,
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    DOOR_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -17,13 +17,13 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
-    T = STREET_HSLA,
-    V = PAVEMENT_HSLA,
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    E = DOOR_HSLA,
+    D = DEFAULT_COLOUR,
+    T = STREET_COLOUR,
+    V = PAVEMENT_COLOUR,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    E = DOOR_COLOUR,
 
     CINEMA_CUBES = {
         ceiling: {

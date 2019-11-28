@@ -1,12 +1,12 @@
 import { PORCH_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    LAWN_HSLA,
-    CEILING_HSLA,
-    PLATFORM_HSLA,
-    WALL_HSLA,
-    DOOR_HSLA
+    DEFAULT_COLOUR,
+    LAWN_COLOUR,
+    CEILING_COLOUR,
+    PLATFORM_COLOUR,
+    WALL_COLOUR,
+    DOOR_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -16,12 +16,12 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
-    L = LAWN_HSLA,
-    C = CEILING_HSLA,
-    W = WALL_HSLA,
-    E = DOOR_HSLA,
-    P = PLATFORM_HSLA,
+    D = DEFAULT_COLOUR,
+    L = LAWN_COLOUR,
+    C = CEILING_COLOUR,
+    W = WALL_COLOUR,
+    E = DOOR_COLOUR,
+    P = PLATFORM_COLOUR,
 
     PORCH_CUBES = {
         ceiling: {

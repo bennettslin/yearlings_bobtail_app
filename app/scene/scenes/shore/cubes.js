@@ -1,8 +1,8 @@
 import { SHORE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    SAND_HSLA,
-    OCEAN_HSLA
+    SAND_COLOUR,
+    OCEAN_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -10,8 +10,8 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    N = SAND_HSLA,
-    O = OCEAN_HSLA,
+    N = SAND_COLOUR,
+    O = OCEAN_COLOUR,
 
     SHORE_CUBES = {
         slantDirection: RIGHT,

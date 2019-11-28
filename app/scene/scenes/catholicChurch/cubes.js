@@ -1,15 +1,15 @@
 import { CATHOLIC_CHURCH_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    STREET_HSLA,
-    PAVEMENT_HSLA
+    GROUND_COLOUR,
+    STREET_COLOUR,
+    PAVEMENT_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    G = GROUND_HSLA,
-    T = STREET_HSLA,
-    V = PAVEMENT_HSLA,
+    G = GROUND_COLOUR,
+    T = STREET_COLOUR,
+    V = PAVEMENT_COLOUR,
 
     CATHOLIC_CHURCH_CUBES = {
         floor: {

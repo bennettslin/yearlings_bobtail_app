@@ -1,8 +1,8 @@
 import { BUOY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    OCEAN_HSLA
+    DEFAULT_COLOUR,
+    OCEAN_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -19,8 +19,8 @@ import {
 
 const
     // Default.
-    D = DEFAULT_HSLA,
-    O = OCEAN_HSLA,
+    D = DEFAULT_COLOUR,
+    O = OCEAN_COLOUR,
 
     BUOY_CUBES = {
         slantDirection: RIGHT,

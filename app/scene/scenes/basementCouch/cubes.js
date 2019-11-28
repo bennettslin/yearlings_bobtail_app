@@ -1,13 +1,13 @@
 import { BASEMENT_COUCH_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    DOOR_HSLA,
-    PLATFORM_HSLA,
-    FURNITURE_HSLA,
-    UPHOLSTERY_HSLA
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    DOOR_COLOUR,
+    PLATFORM_COLOUR,
+    FURNITURE_COLOUR,
+    UPHOLSTERY_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -16,13 +16,13 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    E = DOOR_HSLA,
-    P = PLATFORM_HSLA,
-    R = FURNITURE_HSLA,
-    U = UPHOLSTERY_HSLA,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    E = DOOR_COLOUR,
+    P = PLATFORM_COLOUR,
+    R = FURNITURE_COLOUR,
+    U = UPHOLSTERY_COLOUR,
 
     BASEMENT_SOFA_CUBES = {
         ceiling: {

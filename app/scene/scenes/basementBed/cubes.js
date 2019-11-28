@@ -4,14 +4,14 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    GROUND_HSLA,
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    DOOR_HSLA,
-    PLATFORM_HSLA,
-    UPHOLSTERY_HSLA
+    DEFAULT_COLOUR,
+    GROUND_COLOUR,
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    DOOR_COLOUR,
+    PLATFORM_COLOUR,
+    UPHOLSTERY_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -21,14 +21,14 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
-    G = GROUND_HSLA,
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    E = DOOR_HSLA,
-    P = PLATFORM_HSLA,
-    U = UPHOLSTERY_HSLA,
+    D = DEFAULT_COLOUR,
+    G = GROUND_COLOUR,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    E = DOOR_COLOUR,
+    P = PLATFORM_COLOUR,
+    U = UPHOLSTERY_COLOUR,
 
     ceiling = {
         hslaColours: [

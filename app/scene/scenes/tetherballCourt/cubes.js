@@ -1,13 +1,13 @@
 import { TETHERBALL_COURT_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    PAVEMENT_HSLA
+    GROUND_COLOUR,
+    PAVEMENT_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    G = GROUND_HSLA,
-    V = PAVEMENT_HSLA,
+    G = GROUND_COLOUR,
+    V = PAVEMENT_COLOUR,
 
     TETHERBALL_COURT_CUBES = {
         floor: {

@@ -3,8 +3,8 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    SAND_HSLA,
-    STREET_HSLA
+    SAND_COLOUR,
+    STREET_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -12,8 +12,8 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    N = SAND_HSLA,
-    T = STREET_HSLA,
+    N = SAND_COLOUR,
+    T = STREET_COLOUR,
 
     RICKSHAW_CUBES = {
         slantDirection: LEFT,

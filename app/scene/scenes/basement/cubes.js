@@ -1,13 +1,13 @@
 import { BASEMENT_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    GROUND_HSLA,
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    PLATFORM_HSLA,
-    SEAT_HSLA
+    DEFAULT_COLOUR,
+    GROUND_COLOUR,
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    PLATFORM_COLOUR,
+    SEAT_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -17,13 +17,13 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
-    G = GROUND_HSLA,
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    P = PLATFORM_HSLA,
-    S = SEAT_HSLA,
+    D = DEFAULT_COLOUR,
+    G = GROUND_COLOUR,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    P = PLATFORM_COLOUR,
+    S = SEAT_COLOUR,
 
     ceiling = {
         hslaColours: [

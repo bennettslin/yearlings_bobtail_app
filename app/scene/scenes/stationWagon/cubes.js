@@ -1,17 +1,17 @@
 import { STATION_WAGON_KEY } from '../../../constants/scene/scenes'
 
 import {
-    STREET_HSLA,
-    CROSSWALK_HSLA,
-    PLATFORM_HSLA,
-    SEAT_HSLA
+    STREET_COLOUR,
+    CROSSWALK_COLOUR,
+    PLATFORM_COLOUR,
+    SEAT_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    T = STREET_HSLA,
-    X = CROSSWALK_HSLA,
-    P = PLATFORM_HSLA,
-    S = SEAT_HSLA,
+    T = STREET_COLOUR,
+    X = CROSSWALK_COLOUR,
+    P = PLATFORM_COLOUR,
+    S = SEAT_COLOUR,
 
     STATION_WAGON_CUBES = {
         floor: {

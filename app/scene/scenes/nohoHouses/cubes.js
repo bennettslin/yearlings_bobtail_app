@@ -1,13 +1,13 @@
 import { NOHO_HOUSES_KEY } from '../../../constants/scene/scenes'
 
 import {
-    LAWN_HSLA,
-    PAVEMENT_HSLA
+    LAWN_COLOUR,
+    PAVEMENT_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    V = PAVEMENT_HSLA,
-    L = LAWN_HSLA,
+    V = PAVEMENT_COLOUR,
+    L = LAWN_COLOUR,
 
     NOHO_HOUSES = {
         floor: {

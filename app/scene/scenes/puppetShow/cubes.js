@@ -1,9 +1,9 @@
 import { PUPPET_SHOW_KEY } from '../../../constants/scene/scenes'
 
-import { GROUND_HSLA } from '../../cubes/keys/hsla'
+import { GROUND_COLOUR } from '../../cubes/keys/hsla'
 
 const
-    G = GROUND_HSLA,
+    G = GROUND_COLOUR,
 
     PUPPET_SHOW_CUBES = {
         floor: {

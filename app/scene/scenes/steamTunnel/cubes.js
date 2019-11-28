@@ -1,9 +1,9 @@
 import { STEAM_TUNNEL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    FLOOR_HSLA,
-    CEILING_HSLA,
-    WALL_HSLA
+    FLOOR_COLOUR,
+    CEILING_COLOUR,
+    WALL_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -12,9 +12,9 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    F = FLOOR_HSLA,
-    C = CEILING_HSLA,
-    W = WALL_HSLA,
+    F = FLOOR_COLOUR,
+    C = CEILING_COLOUR,
+    W = WALL_COLOUR,
 
     STEAM_TUNNEL_CUBES = {
         ceiling: {

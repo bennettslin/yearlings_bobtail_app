@@ -3,10 +3,10 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    FLOOR_HSLA,
-    PLATFORM_HSLA,
-    UPHOLSTERY_HSLA
+    GROUND_COLOUR,
+    FLOOR_COLOUR,
+    PLATFORM_COLOUR,
+    UPHOLSTERY_COLOUR
 } from '../../cubes/keys/hsla'
 
 /**
@@ -14,11 +14,11 @@ import {
  */
 
 const
-    G = GROUND_HSLA,
-    F = FLOOR_HSLA,
-    P = PLATFORM_HSLA,
-    Q = PLATFORM_HSLA, // Second globe.
-    U = UPHOLSTERY_HSLA,
+    G = GROUND_COLOUR,
+    F = FLOOR_COLOUR,
+    P = PLATFORM_COLOUR,
+    Q = PLATFORM_COLOUR, // Second globe.
+    U = UPHOLSTERY_COLOUR,
 
     SNOWGLOBES_FUTURE_CUBES = {
         floor: {

@@ -1,11 +1,11 @@
 import { ALLEY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    PAVEMENT_HSLA,
-    WALL_HSLA,
-    DOOR_HSLA,
-    PLATFORM_HSLA
+    DEFAULT_COLOUR,
+    PAVEMENT_COLOUR,
+    WALL_COLOUR,
+    DOOR_COLOUR,
+    PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -15,11 +15,11 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
-    V = PAVEMENT_HSLA,
-    W = WALL_HSLA,
-    E = DOOR_HSLA,
-    P = PLATFORM_HSLA,
+    D = DEFAULT_COLOUR,
+    V = PAVEMENT_COLOUR,
+    W = WALL_COLOUR,
+    E = DOOR_COLOUR,
+    P = PLATFORM_COLOUR,
 
     ALLEY_CUBES = {
         ceiling: {

@@ -3,10 +3,10 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    PLATFORM_HSLA
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -14,10 +14,10 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    P = PLATFORM_HSLA,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    P = PLATFORM_COLOUR,
 
     CLUB_FAR_CUBES = {
         ceiling: {

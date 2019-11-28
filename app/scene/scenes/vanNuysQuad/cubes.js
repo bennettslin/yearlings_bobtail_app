@@ -1,12 +1,12 @@
 import { VAN_NUYS_QUAD_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    GROUND_HSLA,
-    PAVEMENT_HSLA,
-    CEILING_HSLA,
-    WALL_HSLA,
-    PLATFORM_HSLA
+    DEFAULT_COLOUR,
+    GROUND_COLOUR,
+    PAVEMENT_COLOUR,
+    CEILING_COLOUR,
+    WALL_COLOUR,
+    PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -15,12 +15,12 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
-    G = GROUND_HSLA,
-    V = PAVEMENT_HSLA,
-    C = CEILING_HSLA,
-    W = WALL_HSLA,
-    P = PLATFORM_HSLA,
+    D = DEFAULT_COLOUR,
+    G = GROUND_COLOUR,
+    V = PAVEMENT_COLOUR,
+    C = CEILING_COLOUR,
+    W = WALL_COLOUR,
+    P = PLATFORM_COLOUR,
 
     VAN_NUYS_QUAD_CUBES = {
         ceiling: {

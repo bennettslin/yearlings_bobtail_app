@@ -1,15 +1,15 @@
 import { FREEWAY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    PAVEMENT_HSLA,
-    PLATFORM_HSLA
+    GROUND_COLOUR,
+    PAVEMENT_COLOUR,
+    PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    G = GROUND_HSLA,
-    V = PAVEMENT_HSLA,
-    P = PLATFORM_HSLA,
+    G = GROUND_COLOUR,
+    V = PAVEMENT_COLOUR,
+    P = PLATFORM_COLOUR,
 
     FREEWAY_CUBES = {
         floor: {

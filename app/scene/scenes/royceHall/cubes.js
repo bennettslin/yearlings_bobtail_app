@@ -1,11 +1,11 @@
 import { ROYCE_HALL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    PAVEMENT_HSLA
+    PAVEMENT_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    V = PAVEMENT_HSLA,
+    V = PAVEMENT_COLOUR,
 
     ROYCE_HALL_CUBES = {
         floor: {

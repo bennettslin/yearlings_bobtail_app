@@ -1,13 +1,13 @@
 import { WALGREENS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    FLOOR_HSLA
+    GROUND_COLOUR,
+    FLOOR_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    G = GROUND_HSLA,
-    F = FLOOR_HSLA,
+    G = GROUND_COLOUR,
+    F = FLOOR_COLOUR,
 
     WALGREENS_CUBES = {
         floor: {

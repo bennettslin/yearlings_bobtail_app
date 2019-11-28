@@ -1,7 +1,7 @@
 import { DEFAULT_STAGE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA
+    DEFAULT_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -9,7 +9,7 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
+    D = DEFAULT_COLOUR,
 
     DEFAULT_STAGE = {
         ceiling: {

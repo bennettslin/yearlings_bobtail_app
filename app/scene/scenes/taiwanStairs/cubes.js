@@ -1,14 +1,14 @@
 import { TAIWAN_STAIRS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    PAVEMENT_HSLA,
-    GATE_HSLA,
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    DOOR_HSLA,
-    PLATFORM_HSLA
+    DEFAULT_COLOUR,
+    PAVEMENT_COLOUR,
+    GATE_COLOUR,
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    DOOR_COLOUR,
+    PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -18,14 +18,14 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    D = DEFAULT_HSLA,
-    V = PAVEMENT_HSLA,
-    A = GATE_HSLA,
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    E = DOOR_HSLA,
-    P = PLATFORM_HSLA,
+    D = DEFAULT_COLOUR,
+    V = PAVEMENT_COLOUR,
+    A = GATE_COLOUR,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    E = DOOR_COLOUR,
+    P = PLATFORM_COLOUR,
 
     TAIWAN_STAIRS_CUBES = {
         ceiling: {

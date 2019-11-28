@@ -1,10 +1,10 @@
 import { WEDDING_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    HILL_HSLA,
-    HILL_DARKER_HSLA,
-    PLATFORM_HSLA
+    GROUND_COLOUR,
+    HILL_COLOUR,
+    HILL_DARKER_COLOUR,
+    PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -12,10 +12,10 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    G = GROUND_HSLA,
-    H = HILL_HSLA,
-    I = HILL_DARKER_HSLA,
-    P = PLATFORM_HSLA,
+    G = GROUND_COLOUR,
+    H = HILL_COLOUR,
+    I = HILL_DARKER_COLOUR,
+    P = PLATFORM_COLOUR,
 
     WEDDING_CUBES = {
         slantDirection: RIGHT,

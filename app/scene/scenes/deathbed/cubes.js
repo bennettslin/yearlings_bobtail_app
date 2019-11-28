@@ -5,13 +5,13 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    HILL_HSLA,
-    HILL_DARKER_HSLA,
-    FLOOR_HSLA,
-    PLATFORM_HSLA,
-    UPHOLSTERY_HSLA,
-    FURNITURE_HSLA
+    GROUND_COLOUR,
+    HILL_COLOUR,
+    HILL_DARKER_COLOUR,
+    FLOOR_COLOUR,
+    PLATFORM_COLOUR,
+    UPHOLSTERY_COLOUR,
+    FURNITURE_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -20,13 +20,13 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    G = GROUND_HSLA,
-    H = HILL_HSLA,
-    I = HILL_DARKER_HSLA,
-    F = FLOOR_HSLA,
-    P = PLATFORM_HSLA,
-    U = UPHOLSTERY_HSLA,
-    R = FURNITURE_HSLA,
+    G = GROUND_COLOUR,
+    H = HILL_COLOUR,
+    I = HILL_DARKER_COLOUR,
+    F = FLOOR_COLOUR,
+    P = PLATFORM_COLOUR,
+    U = UPHOLSTERY_COLOUR,
+    R = FURNITURE_COLOUR,
 
     EL_CERRITO_DEATHBED_CUBES = {
         slantDirection: RIGHT,

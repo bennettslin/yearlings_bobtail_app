@@ -1,12 +1,12 @@
 import { ATTIC_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_HSLA,
-    FLOOR_HSLA,
-    WALL_HSLA,
-    PLATFORM_HSLA,
-    // FURNITURE_HSLA,
-    UPHOLSTERY_HSLA
+    CEILING_COLOUR,
+    FLOOR_COLOUR,
+    WALL_COLOUR,
+    PLATFORM_COLOUR,
+    // FURNITURE_COLOUR,
+    UPHOLSTERY_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -18,12 +18,12 @@ import {
 } from '../../cubes/keys/zIndex'
 
 const
-    C = CEILING_HSLA,
-    F = FLOOR_HSLA,
-    W = WALL_HSLA,
-    P = PLATFORM_HSLA,
-    // R = FURNITURE_HSLA,
-    U = UPHOLSTERY_HSLA,
+    C = CEILING_COLOUR,
+    F = FLOOR_COLOUR,
+    W = WALL_COLOUR,
+    P = PLATFORM_COLOUR,
+    // R = FURNITURE_COLOUR,
+    U = UPHOLSTERY_COLOUR,
 
     ATTIC_CUBES = {
         ceiling: {

@@ -4,13 +4,13 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_HSLA,
-    STREET_HSLA,
-    PAVEMENT_HSLA,
-    GATE_HSLA,
-    CEILING_HSLA,
-    WALL_HSLA,
-    DOOR_HSLA
+    DEFAULT_COLOUR,
+    STREET_COLOUR,
+    PAVEMENT_COLOUR,
+    GATE_COLOUR,
+    CEILING_COLOUR,
+    WALL_COLOUR,
+    DOOR_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -24,13 +24,13 @@ import {
  */
 
 const
-    D = DEFAULT_HSLA,
-    T = STREET_HSLA,
-    V = PAVEMENT_HSLA,
-    A = GATE_HSLA,
-    C = CEILING_HSLA,
-    W = WALL_HSLA,
-    E = DOOR_HSLA,
+    D = DEFAULT_COLOUR,
+    T = STREET_COLOUR,
+    V = PAVEMENT_COLOUR,
+    A = GATE_COLOUR,
+    C = CEILING_COLOUR,
+    W = WALL_COLOUR,
+    E = DOOR_COLOUR,
 
     LIZ_GATE_CUBES = {
         ceiling: {

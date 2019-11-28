@@ -1,15 +1,15 @@
 import { SNOWGLOBES_PAST_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_HSLA,
-    FLOOR_HSLA,
-    PLATFORM_HSLA
+    GROUND_COLOUR,
+    FLOOR_COLOUR,
+    PLATFORM_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    G = GROUND_HSLA,
-    F = FLOOR_HSLA,
-    P = PLATFORM_HSLA,
+    G = GROUND_COLOUR,
+    F = FLOOR_COLOUR,
+    P = PLATFORM_COLOUR,
 
     SNOWGLOBES_PAST_CUBES = {
         floor: {

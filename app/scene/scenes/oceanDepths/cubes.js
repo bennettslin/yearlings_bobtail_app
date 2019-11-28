@@ -1,8 +1,8 @@
 import { OCEAN_DEPTHS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    // OCEAN_HSLA,
-    SAND_HSLA
+    // OCEAN_COLOUR,
+    SAND_COLOUR
 } from '../../cubes/keys/hsla'
 
 import {
@@ -19,8 +19,8 @@ import {
 
 const
     // Default.
-    // O = OCEAN_HSLA,
-    S = SAND_HSLA,
+    // O = OCEAN_COLOUR,
+    S = SAND_COLOUR,
 
     OCEAN_DEPTHS_CUBES = {
         slantDirection: RIGHT,

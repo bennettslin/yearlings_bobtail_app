@@ -1,15 +1,15 @@
 import { NOHO_SCHOOL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    PAVEMENT_HSLA,
-    FLOOR_HSLA,
-    SEAT_HSLA
+    PAVEMENT_COLOUR,
+    FLOOR_COLOUR,
+    SEAT_COLOUR
 } from '../../cubes/keys/hsla'
 
 const
-    V = PAVEMENT_HSLA,
-    F = FLOOR_HSLA,
-    S = SEAT_HSLA,
+    V = PAVEMENT_COLOUR,
+    F = FLOOR_COLOUR,
+    S = SEAT_COLOUR,
 
     NOHO_SCHOOL = {
         floor: {
