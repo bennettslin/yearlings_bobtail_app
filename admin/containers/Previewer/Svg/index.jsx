@@ -200,8 +200,8 @@ class PreviewerSvg extends PureComponent {
                     )
                 }}
             >
-                {svgChild}
                 <PreviewerKilobytes {...{ kilobytes }} />
+                {svgChild}
             </div>
         ) : svgChild
     }

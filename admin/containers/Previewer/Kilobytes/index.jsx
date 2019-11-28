@@ -18,7 +18,7 @@ const PreviewerKilobytes = ({
             )
         }}
     >
-        {kilobytes.toFixed(2)} kiB
+        {kilobytes.toFixed(2)} kB
     </div>
 )
 

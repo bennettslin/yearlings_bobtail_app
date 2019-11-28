@@ -1,6 +1,9 @@
 .Presence {
     opacity: 0;
-    overflow: hidden;
+
+    &.Backdrop {
+        overflow: hidden;
+    }
 
     .DW__higherProcessor
     & {
