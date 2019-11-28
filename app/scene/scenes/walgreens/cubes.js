@@ -1,15 +1,12 @@
 import { WALGREENS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    FLOOR_COLOUR
+    GROUND_COLOUR as G,
+    FLOOR_COLOUR as F
 } from '../../cubes/colours'
 
-const
-    G = GROUND_COLOUR,
-    F = FLOOR_COLOUR,
-
-    WALGREENS_CUBES = {
+const CUBES = {
+    [WALGREENS_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -28,10 +25,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [WALGREENS_KEY]: WALGREENS_CUBES
     }
+}
 
 export default CUBES

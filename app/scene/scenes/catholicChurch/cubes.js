@@ -1,17 +1,13 @@
 import { CATHOLIC_CHURCH_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    STREET_COLOUR,
-    PAVEMENT_COLOUR
+    GROUND_COLOUR as G,
+    STREET_COLOUR as T,
+    PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const
-    G = GROUND_COLOUR,
-    T = STREET_COLOUR,
-    V = PAVEMENT_COLOUR,
-
-    CATHOLIC_CHURCH_CUBES = {
+const CUBES = {
+    [CATHOLIC_CHURCH_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -28,10 +24,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [CATHOLIC_CHURCH_KEY]: CATHOLIC_CHURCH_CUBES
     }
+}
 
 export default CUBES

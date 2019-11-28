@@ -4,47 +4,22 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    GROUND_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    PLATFORM_COLOUR,
-    UPHOLSTERY_COLOUR
+    GROUND_COLOUR as G,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    PLATFORM_COLOUR as P,
+    UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
 
-import {
-    a,
-    c,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { a, c } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    G = GROUND_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    P = PLATFORM_COLOUR,
-    U = UPHOLSTERY_COLOUR,
+import { DEFAULT_CEILING } from '../basement/cubes'
 
-    ceiling = {
-        hslaColours: [
-            [D],
-            [C, C, W, W, C],
-            [C]
-        ],
-        zIndices: [
-            [k],
-            [c, c, a, a, c],
-            [c]
-        ]
-    },
-
-    BASEMENT_BED_CUBES = {
-        ceiling,
+const CUBES = {
+    [BASEMENT_BED_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [G],
@@ -64,7 +39,7 @@ const
             ]
         }
     },
-    BASEMENT_MAGIC_CUBES = {
+    [BASEMENT_MAGIC_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -83,11 +58,7 @@ const
                 [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
             ]
         }
-    },
-
-    CUBES = {
-        [BASEMENT_BED_KEY]: BASEMENT_BED_CUBES,
-        [BASEMENT_MAGIC_KEY]: BASEMENT_MAGIC_CUBES
     }
+}
 
 export default CUBES

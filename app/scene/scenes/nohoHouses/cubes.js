@@ -1,15 +1,12 @@
 import { NOHO_HOUSES_KEY } from '../../../constants/scene/scenes'
 
 import {
-    LAWN_COLOUR,
-    PAVEMENT_COLOUR
+    LAWN_COLOUR as L,
+    PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const
-    V = PAVEMENT_COLOUR,
-    L = LAWN_COLOUR,
-
-    NOHO_HOUSES = {
+const CUBES = {
+    [NOHO_HOUSES_KEY]: {
         floor: {
             hslaColours: [
                 [L],
@@ -23,10 +20,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [NOHO_HOUSES_KEY]: NOHO_HOUSES
     }
+}
 
 export default CUBES

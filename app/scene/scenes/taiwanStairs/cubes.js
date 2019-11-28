@@ -1,33 +1,21 @@
 import { TAIWAN_STAIRS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    PAVEMENT_COLOUR,
-    GATE_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    PLATFORM_COLOUR
+    DEFAULT_COLOUR as D,
+    PAVEMENT_COLOUR as V,
+    GATE_COLOUR as A,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-import {
-    e,
-    g,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { e, g, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    V = PAVEMENT_COLOUR,
-    A = GATE_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    P = PLATFORM_COLOUR,
-
-    TAIWAN_STAIRS_CUBES = {
+const CUBES = {
+    [TAIWAN_STAIRS_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
@@ -61,10 +49,7 @@ const
                 [g, g, 0, 0, 1, 2, 3, 4, 5, 5, g]
             ]
         }
-    },
-
-    CUBES = {
-        [TAIWAN_STAIRS_KEY]: TAIWAN_STAIRS_CUBES
     }
+}
 
 export default CUBES

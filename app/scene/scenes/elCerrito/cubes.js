@@ -4,40 +4,32 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    HILL_COLOUR,
-    HILL_DARKER_COLOUR,
-    STREET_COLOUR,
-    PLATFORM_COLOUR,
-    SEAT_COLOUR
+    GROUND_COLOUR as G,
+    HILL_COLOUR as H,
+    HILL_DARKER_COLOUR as I,
+    STREET_COLOUR as T,
+    PLATFORM_COLOUR as P,
+    SEAT_COLOUR as S
 } from '../../cubes/colours'
-import {
-    RIGHT
-} from '../../cubes/zIndices'
 
-const
-    G = GROUND_COLOUR,
-    H = HILL_COLOUR,
-    I = HILL_DARKER_COLOUR,
-    T = STREET_COLOUR,
-    P = PLATFORM_COLOUR,
-    S = SEAT_COLOUR,
+import { RIGHT } from '../../cubes/zIndices'
 
-    EL_CERRITO_CUBES = {
+/**
+ * ...........-..
+ * .........----.
+ * .......------.
+ * .....--**=====
+ * ...--*****----
+ * .--*******---.
+ * -*@#@@@***-...
+ * .*@#@@@**.....
+ * .******.......
+ * ..***.........
+ * ..*...........
+ */
+const CUBES = {
+    [EL_CERRITO_KEY]: {
         slantDirection: RIGHT,
-        /**
-         * ...........-..
-         * .........----.
-         * .......------.
-         * .....--**=====
-         * ...--*****----
-         * .--*******---.
-         * -*@#@@@***-...
-         * .*@#@@@**.....
-         * .******.......
-         * ..***.........
-         * ..*...........
-         */
         floor: {
             hslaColours: [
                 [G],
@@ -57,7 +49,7 @@ const
             ]
         }
     },
-    EL_CERRITO_CAR_CUBES = {
+    [EL_CERRITO_CAR_KEY]: {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
@@ -77,11 +69,7 @@ const
                 [3, 3, 3, 3, 3, 3, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [EL_CERRITO_KEY]: EL_CERRITO_CUBES,
-        [EL_CERRITO_CAR_KEY]: EL_CERRITO_CAR_CUBES
     }
+}
 
 export default CUBES

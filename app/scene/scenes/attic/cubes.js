@@ -1,31 +1,18 @@
 import { ATTIC_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    PLATFORM_COLOUR,
-    // FURNITURE_COLOUR,
-    UPHOLSTERY_COLOUR
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    PLATFORM_COLOUR as P,
+    UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
 
-import {
-    a,
-    c,
-    e,
-    f,
-    g
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { a, c, e, f, g } from '../../cubes/zIndices'
 
-const
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    P = PLATFORM_COLOUR,
-    // R = FURNITURE_COLOUR,
-    U = UPHOLSTERY_COLOUR,
-
-    ATTIC_CUBES = {
+const CUBES = {
+    [ATTIC_KEY]: {
         ceiling: {
             hslaColours: [
                 [W, C, C, C, C, C, C, W, C, C, C, W]
@@ -52,10 +39,7 @@ const
                 [g, 7, 7, 7, 7, 7, 7, g, 3, 2, 1, g]
             ]
         }
-    },
-
-    CUBES = {
-        [ATTIC_KEY]: ATTIC_CUBES
     }
+}
 
 export default CUBES

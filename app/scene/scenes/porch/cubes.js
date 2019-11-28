@@ -1,29 +1,19 @@
 import { PORCH_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    LAWN_COLOUR,
-    CEILING_COLOUR,
-    PLATFORM_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR
+    DEFAULT_COLOUR as D,
+    LAWN_COLOUR as L,
+    CEILING_COLOUR as C,
+    PLATFORM_COLOUR as P,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E
 } from '../../cubes/colours'
 
-import {
-    e,
-    f,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { e, f, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    L = LAWN_COLOUR,
-    C = CEILING_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    P = PLATFORM_COLOUR,
-
-    PORCH_CUBES = {
+const CUBES = {
+    [PORCH_KEY]: {
         ceiling: {
             hslaColours: [
                 [C, C, C, C, C, W, W, W, C],
@@ -54,10 +44,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [PORCH_KEY]: PORCH_CUBES
     }
+}
 
 export default CUBES

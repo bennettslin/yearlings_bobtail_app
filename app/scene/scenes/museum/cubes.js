@@ -1,24 +1,16 @@
 import { MUSEUM_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    FURNITURE_COLOUR
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
-import {
-    d,
-    g
-} from '../../cubes/zIndices'
+import { d, g } from '../../cubes/zIndices'
 
-const
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    R = FURNITURE_COLOUR,
-
-    MUSEUM_CUBES = {
+const CUBES = {
+    [MUSEUM_KEY]: {
         ceiling: {
             hslaColours: [
                 [C],
@@ -55,10 +47,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
-    },
-
-    CUBES = {
-        [MUSEUM_KEY]: MUSEUM_CUBES
     }
+}
 
 export default CUBES

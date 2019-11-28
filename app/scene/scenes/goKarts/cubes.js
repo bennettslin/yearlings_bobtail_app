@@ -1,19 +1,14 @@
 import { GO_KARTS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    STREET_COLOUR,
-    CROSSWALK_COLOUR,
-    LAWN_COLOUR,
-    SEAT_COLOUR
+    STREET_COLOUR as T,
+    CROSSWALK_COLOUR as X,
+    LAWN_COLOUR as L,
+    SEAT_COLOUR as S
 } from '../../cubes/colours'
 
-const
-    T = STREET_COLOUR,
-    X = CROSSWALK_COLOUR,
-    L = LAWN_COLOUR,
-    S = SEAT_COLOUR,
-
-    GO_KARTS_CUBES = {
+const CUBES = {
+    [GO_KARTS_KEY]: {
         floor: {
             hslaColours: [
                 [T],
@@ -30,10 +25,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [GO_KARTS_KEY]: GO_KARTS_CUBES
     }
+}
 
 export default CUBES

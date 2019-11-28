@@ -5,31 +5,33 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    GROUND_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    FURNITURE_COLOUR,
-    UPHOLSTERY_COLOUR,
-    SEAT_COLOUR
+    DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    FURNITURE_COLOUR as R,
+    UPHOLSTERY_COLOUR as U,
+    SEAT_COLOUR as S
 } from '../../cubes/colours'
 
-import {
-    e,
-    g,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { e, g, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    G = GROUND_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    R = FURNITURE_COLOUR,
-    U = UPHOLSTERY_COLOUR,
-    S = SEAT_COLOUR,
+const DEFAULT_CEILING = {
+    hslaColours: [
+        [D, F, F, F, F, F, F, F, F, F, F, D],
+        [D, D, R, U, U, U, U, U, D],
+        [D]
+    ],
+    zIndices: [
+        [k, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, k],
+        [k, k, e, 4, 4, 4, 4, 4, k],
+        [k]
+    ]
+}
 
-    LIZ_BED_CUBES = {
+const CUBES = {
+    [LIZ_BED_KEY]: {
         ceiling: {
             hslaColours: [
                 [W],
@@ -61,19 +63,8 @@ const
             ]
         }
     },
-    LIZ_BED_OPEN_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D, F, F, F, F, F, F, F, F, F, F, D],
-                [D, D, R, U, U, U, U, U, D],
-                [D]
-            ],
-            zIndices: [
-                [k, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, k],
-                [k, k, e, 4, 4, 4, 4, 4, k],
-                [k]
-            ]
-        },
+    [LIZ_BED_OPEN_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [G],
@@ -93,19 +84,8 @@ const
             ]
         }
     },
-    LIZ_BED_OPEN_PHONE_CUBES = {
-        ceiling: {
-            hslaColours: [
-                [D, F, F, F, F, F, F, F, F, F, F, D],
-                [D, D, R, U, U, U, U, U, D],
-                [D]
-            ],
-            zIndices: [
-                [k, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, k],
-                [k, k, e, 4, 4, 4, 4, 4, k],
-                [k]
-            ]
-        },
+    [LIZ_BED_OPEN_PHONE_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [G],
@@ -124,12 +104,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [LIZ_BED_KEY]: LIZ_BED_CUBES,
-        [LIZ_BED_OPEN_KEY]: LIZ_BED_OPEN_CUBES,
-        [LIZ_BED_OPEN_PHONE_KEY]: LIZ_BED_OPEN_PHONE_CUBES
     }
+}
 
 export default CUBES

@@ -1,35 +1,23 @@
 import { COURTYARD_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    PAVEMENT_COLOUR,
-    GATE_COLOUR,
-    CEILING_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR
+    DEFAULT_COLOUR as D,
+    PAVEMENT_COLOUR as V,
+    GATE_COLOUR as A,
+    CEILING_COLOUR as C,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E
 } from '../../cubes/colours'
 
-import {
-    d,
-    e,
-    f,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { d, e, f, k } from '../../cubes/zIndices'
 
 /**
  * Blinds and door should match in bennettBed.
  * Gate should match in bennettGate.
  */
-
-const
-    D = DEFAULT_COLOUR,
-    V = PAVEMENT_COLOUR,
-    A = GATE_COLOUR,
-    C = CEILING_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-
-    COURTYARD_CUBES = {
+const CUBES = {
+    [COURTYARD_KEY]: {
         ceiling: {
             hslaColours: [
                 [C],
@@ -66,10 +54,7 @@ const
                 [f, 1]
             ]
         }
-    },
-
-    CUBES = {
-        [COURTYARD_KEY]: COURTYARD_CUBES
     }
+}
 
 export default CUBES

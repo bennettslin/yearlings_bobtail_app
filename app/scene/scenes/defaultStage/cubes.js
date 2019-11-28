@@ -1,17 +1,11 @@
 import { DEFAULT_STAGE_KEY } from '../../../constants/scene/scenes'
 
-import {
-    DEFAULT_COLOUR
-} from '../../cubes/colours'
+import { DEFAULT_COLOUR as D } from '../../cubes/colours'
 
-import {
-    k
-} from '../../cubes/zIndices'
+import { k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-
-    DEFAULT_STAGE = {
+const CUBES = {
+    [DEFAULT_STAGE_KEY]: {
         ceiling: {
             hslaColours: [
                 [D]
@@ -28,10 +22,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [DEFAULT_STAGE_KEY]: DEFAULT_STAGE
     }
+}
 
 export default CUBES

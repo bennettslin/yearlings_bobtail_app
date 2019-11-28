@@ -1,21 +1,15 @@
 import { CEMETERY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    HILL_COLOUR,
-    HILL_DARKER_COLOUR
+    GROUND_COLOUR as G,
+    HILL_COLOUR as H,
+    HILL_DARKER_COLOUR as I
 } from '../../cubes/colours'
 
-import {
-    LEFT
-} from '../../cubes/zIndices'
+import { LEFT } from '../../cubes/zIndices'
 
-const
-    G = GROUND_COLOUR,
-    H = HILL_COLOUR,
-    I = HILL_DARKER_COLOUR,
-
-    CEMETERY_CUBES = {
+const CUBES = {
+    [CEMETERY_KEY]: {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
@@ -31,10 +25,7 @@ const
                 [3]
             ]
         }
-    },
-
-    CUBES = {
-        [CEMETERY_KEY]: CEMETERY_CUBES
     }
+}
 
 export default CUBES

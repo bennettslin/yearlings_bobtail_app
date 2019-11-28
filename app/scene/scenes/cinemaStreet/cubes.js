@@ -1,26 +1,17 @@
 import { CINEMA_STREET_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    STREET_COLOUR,
-    PAVEMENT_COLOUR,
-    CEILING_COLOUR,
-    WALL_COLOUR
+    DEFAULT_COLOUR as D,
+    STREET_COLOUR as T,
+    PAVEMENT_COLOUR as V,
+    CEILING_COLOUR as C,
+    WALL_COLOUR as W
 } from '../../cubes/colours'
 
-import {
-    f,
-    k
-} from '../../cubes/zIndices'
+import { f, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    T = STREET_COLOUR,
-    V = PAVEMENT_COLOUR,
-    C = CEILING_COLOUR,
-    W = WALL_COLOUR,
-
-    CINEMA_STREET_CUBES = {
+const CUBES = {
+    [CINEMA_STREET_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
@@ -49,10 +40,7 @@ const
                 [1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [CINEMA_STREET_KEY]: CINEMA_STREET_CUBES
     }
+}
 
 export default CUBES

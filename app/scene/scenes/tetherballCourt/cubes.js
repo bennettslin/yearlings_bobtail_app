@@ -1,15 +1,12 @@
 import { TETHERBALL_COURT_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    PAVEMENT_COLOUR
+    GROUND_COLOUR as G,
+    PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const
-    G = GROUND_COLOUR,
-    V = PAVEMENT_COLOUR,
-
-    TETHERBALL_COURT_CUBES = {
+const CUBES = {
+    [TETHERBALL_COURT_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -28,10 +25,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [TETHERBALL_COURT_KEY]: TETHERBALL_COURT_CUBES
     }
+}
 
 export default CUBES

@@ -1,15 +1,12 @@
 import { CHANGELING_CAVE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    PAVEMENT_COLOUR
+    GROUND_COLOUR as G,
+    PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const
-    G = GROUND_COLOUR,
-    V = PAVEMENT_COLOUR,
-
-    CHANGELING_CAVE_CUBES = {
+const CUBES = {
+    [CHANGELING_CAVE_KEY]: {
         floor: {
             hslaColours: [
                 [V],
@@ -20,10 +17,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [CHANGELING_CAVE_KEY]: CHANGELING_CAVE_CUBES
     }
+}
 
 export default CUBES

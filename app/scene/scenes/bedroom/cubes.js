@@ -7,68 +7,55 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    GROUND_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    FURNITURE_COLOUR,
-    UPHOLSTERY_COLOUR,
-    SEAT_COLOUR
+    DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    FURNITURE_COLOUR as R,
+    UPHOLSTERY_COLOUR as U,
+    SEAT_COLOUR as S
 } from '../../cubes/colours'
 
-import {
-    d,
-    g,
-    k,
-    LEFT
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { d, g, k, LEFT } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    G = GROUND_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    R = FURNITURE_COLOUR,
-    U = UPHOLSTERY_COLOUR,
-    S = SEAT_COLOUR,
+/**
+ * --.-----------
+ * --...---------
+ * -......-------
+ * -########-----
+ * ...xxx..###---
+ * -.......xxx#.-
+ * ---.x...xxx#..
+ * -----...xxx#..
+ * -------.xxx#.-
+ * ---------..#.-
+ * -----------#--
+ */
+const DEFAULT_CEILING = {
+    hslaColours: [
+        [D, D, D, D, D, C, D, C, C, C, D],
+        [D, D, D, W, W, C, C, C, C, C, D],
+        [D, D, W, W, C, C, C, C, C, C, C, D],
+        [C, W, C, C, C, C, C, C, C, C, C, D],
+        [C, C, C, C, C, C, C, C, C, C, C, D],
+        [C]
+    ],
+    zIndices: [
+        [k, k, k, k, k, g, k, g, g, g, k],
+        [k, k, k, d, d, g, g, g, g, g, k],
+        [k, k, d, d, g, g, g, g, g, g, g, k],
+        [g, d, g, g, g, g, g, g, g, g, g, k],
+        [g, g, g, g, g, g, g, g, g, g, g, k],
+        [g]
+    ]
+}
 
-    DEFAULT_CEILING = {
-        hslaColours: [
-            [D, D, D, D, D, C, D, C, C, C, D],
-            [D, D, D, W, W, C, C, C, C, C, D],
-            [D, D, W, W, C, C, C, C, C, C, C, D],
-            [C, W, C, C, C, C, C, C, C, C, C, D],
-            [C, C, C, C, C, C, C, C, C, C, C, D],
-            [C]
-        ],
-        zIndices: [
-            [k, k, k, k, k, g, k, g, g, g, k],
-            [k, k, k, d, d, g, g, g, g, g, k],
-            [k, k, d, d, g, g, g, g, g, g, g, k],
-            [g, d, g, g, g, g, g, g, g, g, g, k],
-            [g, g, g, g, g, g, g, g, g, g, g, k],
-            [g]
-        ]
-    },
-
-    BEDROOM_CUBES = {
+const CUBES = {
+    [BEDROOM_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
-        /**
-         * --.-----------
-         * --...---------
-         * -......-------
-         * -########-----
-         * ...xxx..###---
-         * -.......xxx#.-
-         * ---.x...xxx#..
-         * -----...xxx#..
-         * -------.xxx#.-
-         * ---------..#.-
-         * -----------#--
-         */
         floor: {
             hslaColours: [
                 [G, G, G, G, G, W, G, W, W, W, G],
@@ -88,7 +75,7 @@ const
             ]
         }
     },
-    BEDROOM_STOOL_CUBES = {
+    [BEDROOM_STOOL_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
         floor: {
@@ -110,7 +97,7 @@ const
             ]
         }
     },
-    BEDROOM_OPEN_CUBES = {
+    [BEDROOM_OPEN_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
         floor: {
@@ -132,7 +119,7 @@ const
             ]
         }
     },
-    BEDROOM_DOGS_CUBES = {
+    [BEDROOM_DOGS_KEY]: {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
@@ -153,7 +140,7 @@ const
             ]
         }
     },
-    BEDROOM_SPACE_CUBES = {
+    [BEDROOM_SPACE_KEY]: {
         slantDirection: LEFT,
         ceiling: {
             hslaColours: [
@@ -189,14 +176,7 @@ const
                 [g, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [BEDROOM_KEY]: BEDROOM_CUBES,
-        [BEDROOM_STOOL_KEY]: BEDROOM_STOOL_CUBES,
-        [BEDROOM_OPEN_KEY]: BEDROOM_OPEN_CUBES,
-        [BEDROOM_DOGS_KEY]: BEDROOM_DOGS_CUBES,
-        [BEDROOM_SPACE_KEY]: BEDROOM_SPACE_CUBES
     }
+}
 
 export default CUBES

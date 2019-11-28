@@ -1,26 +1,19 @@
-import {
-    SNOWGLOBES_FUTURE_KEY
-} from '../../../constants/scene/scenes'
+import { SNOWGLOBES_FUTURE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    FLOOR_COLOUR,
-    PLATFORM_COLOUR,
-    UPHOLSTERY_COLOUR
+    GROUND_COLOUR as G,
+    FLOOR_COLOUR as F,
+    PLATFORM_COLOUR as P,
+    UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
 
 /**
  * Couch should match in lizCouch.
  */
+const Q = P // Second globe.
 
-const
-    G = GROUND_COLOUR,
-    F = FLOOR_COLOUR,
-    P = PLATFORM_COLOUR,
-    Q = PLATFORM_COLOUR, // Second globe.
-    U = UPHOLSTERY_COLOUR,
-
-    SNOWGLOBES_FUTURE_CUBES = {
+const CUBES = {
+    [SNOWGLOBES_FUTURE_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -39,10 +32,7 @@ const
                 [0, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [SNOWGLOBES_FUTURE_KEY]: SNOWGLOBES_FUTURE_CUBES
     }
+}
 
 export default CUBES

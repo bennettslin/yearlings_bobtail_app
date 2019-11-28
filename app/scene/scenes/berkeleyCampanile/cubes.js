@@ -1,28 +1,18 @@
 import { BERKELEY_CAMPANILE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    GROUND_COLOUR,
-    PAVEMENT_COLOUR,
-    GATE_COLOUR,
-    WALL_COLOUR,
-    PLATFORM_COLOUR
+    DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
+    PAVEMENT_COLOUR as V,
+    GATE_COLOUR as A,
+    WALL_COLOUR as W,
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-import {
-    g,
-    k
-} from '../../cubes/zIndices'
+import { g, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    G = GROUND_COLOUR,
-    V = PAVEMENT_COLOUR,
-    A = GATE_COLOUR,
-    W = WALL_COLOUR,
-    P = PLATFORM_COLOUR,
-
-    CAMPANILE_CUBES = {
+const CUBES = {
+    [BERKELEY_CAMPANILE_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
@@ -55,10 +45,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [BERKELEY_CAMPANILE_KEY]: CAMPANILE_CUBES
     }
+}
 
 export default CUBES

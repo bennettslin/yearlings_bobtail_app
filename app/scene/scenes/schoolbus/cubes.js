@@ -1,21 +1,14 @@
 import { SCHOOLBUS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    STREET_COLOUR,
-    CROSSWALK_COLOUR,
-    PLATFORM_COLOUR,
-    SEAT_COLOUR
+    STREET_COLOUR as T,
+    CROSSWALK_COLOUR as X,
+    PLATFORM_COLOUR as P,
+    SEAT_COLOUR as S
 } from '../../cubes/colours'
 
-const
-    T = STREET_COLOUR,
-    X = CROSSWALK_COLOUR,
-    P = PLATFORM_COLOUR,
-    S = SEAT_COLOUR,
-
-    SCHOOLBUS_CUBES = {
-        /** https://www.the-blueprints.com/blueprints/buses/international-buses/56427/view/international_school_bus_%281992%29/
-         */
+const CUBES = {
+    [SCHOOLBUS_KEY]: {
         floor: {
             hslaColours: [
                 [T],
@@ -33,10 +26,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [SCHOOLBUS_KEY]: SCHOOLBUS_CUBES
     }
+}
 
 export default CUBES

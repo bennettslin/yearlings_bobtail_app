@@ -4,47 +4,38 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    UPHOLSTERY_COLOUR
+    GROUND_COLOUR as G,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
 
-import {
-    d,
-    g
-} from '../../cubes/zIndices'
+import { d, g } from '../../cubes/zIndices'
 
-const
-    G = GROUND_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    U = UPHOLSTERY_COLOUR,
+const DEFAULT_CEILING = {
+    hslaColours: [
+        [C],
+        [C],
+        [C],
+        [C, C, C, C, C, C, C, C, C, C, C, W],
+        [C, C, C, C, C, C, C, C, C, C, C, W],
+        [C]
+    ],
+    zIndices: [
+        [g],
+        [g],
+        [g],
+        [g, g, g, g, g, g, g, g, g, g, g, d],
+        [g, g, g, g, g, g, g, g, g, g, g, d],
+        [g]
+    ]
+}
 
-    ceiling = {
-        hslaColours: [
-            [C],
-            [C],
-            [C],
-            [C, C, C, C, C, C, C, C, C, C, C, W],
-            [C, C, C, C, C, C, C, C, C, C, C, W],
-            [C]
-        ],
-        zIndices: [
-            [g],
-            [g],
-            [g],
-            [g, g, g, g, g, g, g, g, g, g, g, d],
-            [g, g, g, g, g, g, g, g, g, g, g, d],
-            [g]
-        ]
-    },
-    WAITING_ROOM_CUBES = {
-        ceiling,
+const CUBES = {
+    [WAITING_ROOM_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [G],
@@ -64,8 +55,8 @@ const
             ]
         }
     },
-    WAITING_ROOM_OPEN_CUBES = {
-        ceiling,
+    [WAITING_ROOM_OPEN_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [G],
@@ -84,11 +75,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
-    },
-
-    CUBES = {
-        [WAITING_ROOM_KEY]: WAITING_ROOM_CUBES,
-        [WAITING_ROOM_OPEN_KEY]: WAITING_ROOM_OPEN_CUBES
     }
+}
 
 export default CUBES

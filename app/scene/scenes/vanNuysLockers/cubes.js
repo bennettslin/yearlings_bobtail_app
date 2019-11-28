@@ -1,28 +1,18 @@
 import { VAN_NUYS_LOCKERS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    GROUND_COLOUR,
-    PAVEMENT_COLOUR,
-    CEILING_COLOUR,
-    WALL_COLOUR,
-    PLATFORM_COLOUR
+    DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
+    PAVEMENT_COLOUR as V,
+    CEILING_COLOUR as C,
+    WALL_COLOUR as W,
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-import {
-    f,
-    k
-} from '../../cubes/zIndices'
+import { f, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    G = GROUND_COLOUR,
-    V = PAVEMENT_COLOUR,
-    C = CEILING_COLOUR,
-    W = WALL_COLOUR,
-    P = PLATFORM_COLOUR,
-
-    VAN_NUYS_LOCKERS_CUBES = {
+const CUBES = {
+    [VAN_NUYS_LOCKERS_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
@@ -59,10 +49,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [VAN_NUYS_LOCKERS_KEY]: VAN_NUYS_LOCKERS_CUBES
     }
+}
 
 export default CUBES

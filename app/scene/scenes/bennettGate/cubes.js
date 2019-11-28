@@ -1,33 +1,21 @@
 import { BENNETT_GATE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    PAVEMENT_COLOUR,
-    GATE_COLOUR,
-    CEILING_COLOUR,
-    DOOR_COLOUR
+    DEFAULT_COLOUR as D,
+    PAVEMENT_COLOUR as V,
+    GATE_COLOUR as A,
+    CEILING_COLOUR as C,
+    DOOR_COLOUR as E
 } from '../../cubes/colours'
 
-import {
-    d,
-    e,
-    f,
-    g,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { d, e, f, g, k } from '../../cubes/zIndices'
 
 /**
  * Gate should match in courtyard.
  */
-
-const
-    D = DEFAULT_COLOUR,
-    V = PAVEMENT_COLOUR,
-    A = GATE_COLOUR,
-    C = CEILING_COLOUR,
-    E = DOOR_COLOUR,
-
-    BENNETT_GATE_CUBES = {
+const CUBES = {
+    [BENNETT_GATE_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
@@ -58,10 +46,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [BENNETT_GATE_KEY]: BENNETT_GATE_CUBES
     }
+}
 
 export default CUBES

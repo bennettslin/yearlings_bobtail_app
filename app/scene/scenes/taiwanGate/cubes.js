@@ -1,24 +1,16 @@
 import { TAIWAN_GATE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    STREET_COLOUR,
-    PAVEMENT_COLOUR,
-    GATE_COLOUR,
-    WALL_COLOUR
+    STREET_COLOUR as T,
+    PAVEMENT_COLOUR as V,
+    GATE_COLOUR as A,
+    WALL_COLOUR as W
 } from '../../cubes/colours'
 
-import {
-    d,
-    g
-} from '../../cubes/zIndices'
+import { d, g } from '../../cubes/zIndices'
 
-const
-    T = STREET_COLOUR,
-    V = PAVEMENT_COLOUR,
-    A = GATE_COLOUR,
-    W = WALL_COLOUR,
-
-    TAIWAN_GATE_CUBES = {
+const CUBES = {
+    [TAIWAN_GATE_KEY]: {
         floor: {
             hslaColours: [
                 [T],
@@ -37,10 +29,7 @@ const
                 [1, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [TAIWAN_GATE_KEY]: TAIWAN_GATE_CUBES
     }
+}
 
 export default CUBES

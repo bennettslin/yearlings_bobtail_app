@@ -1,21 +1,14 @@
-import {
-    RICKSHAW_KEY
-} from '../../../constants/scene/scenes'
+import { RICKSHAW_KEY } from '../../../constants/scene/scenes'
 
 import {
-    SAND_COLOUR,
-    STREET_COLOUR
+    SAND_COLOUR as N,
+    STREET_COLOUR as T
 } from '../../cubes/colours'
 
-import {
-    LEFT
-} from '../../cubes/zIndices'
+import { LEFT } from '../../cubes/zIndices'
 
-const
-    N = SAND_COLOUR,
-    T = STREET_COLOUR,
-
-    RICKSHAW_CUBES = {
+const CUBES = {
+    [RICKSHAW_KEY]: {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
@@ -30,10 +23,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [RICKSHAW_KEY]: RICKSHAW_CUBES
     }
+}
 
 export default CUBES

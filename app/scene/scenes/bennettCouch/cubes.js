@@ -4,27 +4,18 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    FURNITURE_COLOUR,
-    UPHOLSTERY_COLOUR
+    GROUND_COLOUR as G,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    FURNITURE_COLOUR as R,
+    UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
 
-import {
-    g
-} from '../../cubes/zIndices'
+import { g } from '../../cubes/zIndices'
 
-const
-    G = GROUND_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    R = FURNITURE_COLOUR,
-    U = UPHOLSTERY_COLOUR,
-
-    BENNETT_COUCH_CUBES = {
+const CUBES = {
+    [BENNETT_COUCH_KEY]: {
         ceiling: {
             hslaColours: [
                 [C]
@@ -50,7 +41,7 @@ const
             ]
         }
     },
-    BENNETT_COUCH_THOUGHT_CUBES = {
+    [BENNETT_COUCH_THOUGHT_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -69,11 +60,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [BENNETT_COUCH_KEY]: BENNETT_COUCH_CUBES,
-        [BENNETT_COUCH_THOUGHT_KEY]: BENNETT_COUCH_THOUGHT_CUBES
     }
+}
 
 export default CUBES

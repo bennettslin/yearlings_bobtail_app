@@ -8,61 +8,47 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    GROUND_COLOUR,
-    PAVEMENT_COLOUR,
-    GATE_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    UPHOLSTERY_COLOUR,
-    SEAT_COLOUR
+    DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
+    PAVEMENT_COLOUR as V,
+    GATE_COLOUR as A,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    UPHOLSTERY_COLOUR as U,
+    SEAT_COLOUR as S
 } from '../../cubes/colours'
 
-import {
-    d,
-    g,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { d, g, k } from '../../cubes/zIndices'
 
 /**
  * Blinds and gate should match in lizGate.
  * Couch should match in snowglobesFuture.
  */
+const DEFAULT_CEILING = {
+    hslaColours: [
+        [D],
+        [C, C, C, C, W, W, W, W, W, C],
+        [C],
+        [C, C, C, C, C, C, C, C, C, C, C, W],
+        [C, C, C, C, C, C, C, C, C, C, C, W],
+        [C]
+    ],
+    zIndices: [
+        [k],
+        [g, g, g, g, d, d, d, d, d, g],
+        [g],
+        [g, g, g, g, g, g, g, g, g, g, g, d],
+        [g, g, g, g, g, g, g, g, g, g, g, d],
+        [g]
+    ]
+}
 
-const
-    D = DEFAULT_COLOUR,
-    G = GROUND_COLOUR,
-    V = PAVEMENT_COLOUR,
-    A = GATE_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    U = UPHOLSTERY_COLOUR,
-    S = SEAT_COLOUR,
-
-    ceiling = {
-        hslaColours: [
-            [D],
-            [C, C, C, C, W, W, W, W, W, C],
-            [C],
-            [C, C, C, C, C, C, C, C, C, C, C, W],
-            [C, C, C, C, C, C, C, C, C, C, C, W],
-            [C]
-        ],
-        zIndices: [
-            [k],
-            [g, g, g, g, d, d, d, d, d, g],
-            [g],
-            [g, g, g, g, g, g, g, g, g, g, g, d],
-            [g, g, g, g, g, g, g, g, g, g, g, d],
-            [g]
-        ]
-    },
-    LIZ_COUCH_CUBES = {
-        ceiling,
+const CUBES = {
+    [LIZ_COUCH_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [A, A, A, A, A, E, E, E, A],
@@ -82,8 +68,8 @@ const
             ]
         }
     },
-    LIZ_COUCH_OPEN_CUBES = {
-        ceiling,
+    [LIZ_COUCH_OPEN_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [A, A, A, A, A, E, E, E, A],
@@ -103,8 +89,8 @@ const
             ]
         }
     },
-    LIZ_COUCH_SEAT_CUBES = {
-        ceiling,
+    [LIZ_COUCH_SEAT_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [A, A, A, A, A, E, E, E, A],
@@ -124,8 +110,8 @@ const
             ]
         }
     },
-    LIZ_COUCH_GATE_OPEN_CUBES = {
-        ceiling,
+    [LIZ_COUCH_GATE_OPEN_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
@@ -145,8 +131,8 @@ const
             ]
         }
     },
-    LIZ_COUCH_PEAFOWL_CUBES = {
-        ceiling,
+    [LIZ_COUCH_PEAFOWL_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [A, A, A, A, A, E, E, E, A],
@@ -166,7 +152,7 @@ const
             ]
         }
     },
-    LIZ_COUCH_THOUGHT_CUBES = {
+    [LIZ_COUCH_THOUGHT_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -185,15 +171,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [LIZ_COUCH_KEY]: LIZ_COUCH_CUBES,
-        [LIZ_COUCH_OPEN_KEY]: LIZ_COUCH_OPEN_CUBES,
-        [LIZ_COUCH_SEAT_KEY]: LIZ_COUCH_SEAT_CUBES,
-        [LIZ_COUCH_GATE_OPEN_KEY]: LIZ_COUCH_GATE_OPEN_CUBES,
-        [LIZ_COUCH_PEAFOWL_KEY]: LIZ_COUCH_PEAFOWL_CUBES,
-        [LIZ_COUCH_THOUGHT_KEY]: LIZ_COUCH_THOUGHT_CUBES
     }
+}
 
 export default CUBES

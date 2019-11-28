@@ -1,25 +1,16 @@
-import {
-    CLUB_FRONT_KEY
-} from '../../../constants/scene/scenes'
+import { CLUB_FRONT_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    PLATFORM_COLOUR
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-import {
-    g
-} from '../../cubes/zIndices'
+import { g } from '../../cubes/zIndices'
 
-const
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    P = PLATFORM_COLOUR,
-
-    CLUB_FRONT_CUBES = {
+const CUBES = {
+    [CLUB_FRONT_KEY]: {
         ceiling: {
             hslaColours: [
                 [C]
@@ -46,10 +37,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
-    },
-
-    CUBES = {
-        [CLUB_FRONT_KEY]: CLUB_FRONT_CUBES
     }
+}
 
 export default CUBES

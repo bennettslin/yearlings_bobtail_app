@@ -1,27 +1,18 @@
 import { CLUB_LOADING } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    PAVEMENT_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR
+    DEFAULT_COLOUR as D,
+    PAVEMENT_COLOUR as V,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W
 } from '../../cubes/colours'
 
-import {
-    d,
-    f,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { d, f, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    V = PAVEMENT_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-
-    CLUB_LOADING_CUBES = {
+const CUBES = {
+    [CLUB_LOADING]: {
         ceiling: {
             hslaColours: [
                 [C],
@@ -52,10 +43,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [CLUB_LOADING]: CLUB_LOADING_CUBES
     }
+}
 
 export default CUBES

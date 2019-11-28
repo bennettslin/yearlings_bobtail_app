@@ -1,19 +1,17 @@
 import { SNOWGLOBES_PRESENT_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    PLATFORM_COLOUR,
-    UPHOLSTERY_COLOUR
+    GROUND_COLOUR as G,
+    PLATFORM_COLOUR as P,
+    UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
 
 const
-    G = GROUND_COLOUR,
-    P = PLATFORM_COLOUR,
-    Q = PLATFORM_COLOUR, // Second globe.
-    U = UPHOLSTERY_COLOUR,
-    Z = UPHOLSTERY_COLOUR, // Second globe.
+    Q = P, // Second globe.
+    Z = U // Second globe.
 
-    SNOWGLOBES_PRESENT_CUBES = {
+const CUBES = {
+    [SNOWGLOBES_PRESENT_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -32,10 +30,7 @@ const
                 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [SNOWGLOBES_PRESENT_KEY]: SNOWGLOBES_PRESENT_CUBES
     }
+}
 
 export default CUBES

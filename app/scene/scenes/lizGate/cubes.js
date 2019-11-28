@@ -4,35 +4,23 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    STREET_COLOUR,
-    PAVEMENT_COLOUR,
-    GATE_COLOUR,
-    CEILING_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR
+    DEFAULT_COLOUR as D,
+    STREET_COLOUR as T,
+    PAVEMENT_COLOUR as V,
+    GATE_COLOUR as A,
+    CEILING_COLOUR as C,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E
 } from '../../cubes/colours'
 
-import {
-    d,
-    f,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { d, f, k } from '../../cubes/zIndices'
 
 /**
  * Blinds and gate should match in lizCouch.
  */
-
-const
-    D = DEFAULT_COLOUR,
-    T = STREET_COLOUR,
-    V = PAVEMENT_COLOUR,
-    A = GATE_COLOUR,
-    C = CEILING_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-
-    LIZ_GATE_CUBES = {
+const CUBES = {
+    [LIZ_GATE_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
@@ -64,7 +52,7 @@ const
             ]
         }
     },
-    LIZ_GATE_STREET_CUBES = {
+    [LIZ_GATE_STREET_KEY]: {
         ceiling: {
             hslaColours: [
                 [D],
@@ -95,11 +83,7 @@ const
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [LIZ_GATE_KEY]: LIZ_GATE_CUBES,
-        [LIZ_GATE_STREET_KEY]: LIZ_GATE_STREET_CUBES
     }
+}
 
 export default CUBES

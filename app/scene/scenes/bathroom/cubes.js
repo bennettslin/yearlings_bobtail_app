@@ -4,25 +4,17 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    FURNITURE_COLOUR
+    GROUND_COLOUR as G,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
-import {
-    f
-} from '../../cubes/zIndices'
+import { f } from '../../cubes/zIndices'
 
-const
-    G = GROUND_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    R = FURNITURE_COLOUR,
-
-    BATHROOM = {
+const CUBES = {
+    [BATHROOM_KEY]: {
         ceiling: {
             hslaColours: [
                 [C]
@@ -48,8 +40,7 @@ const
             ]
         }
     },
-
-    BATHROOM_OPEN = {
+    [BATHROOM_OPEN_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -66,11 +57,7 @@ const
                 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [BATHROOM_KEY]: BATHROOM,
-        [BATHROOM_OPEN_KEY]: BATHROOM_OPEN
     }
+}
 
 export default CUBES

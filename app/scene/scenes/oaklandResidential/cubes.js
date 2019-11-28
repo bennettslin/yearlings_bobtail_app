@@ -1,17 +1,13 @@
 import { OAKLAND_RESIDENTIAL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    STREET_COLOUR,
-    PAVEMENT_COLOUR
+    GROUND_COLOUR as G,
+    STREET_COLOUR as T,
+    PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
-const
-    G = GROUND_COLOUR,
-    T = STREET_COLOUR,
-    V = PAVEMENT_COLOUR,
-
-    OAKLAND_RESIDENTIAL_CUBES = {
+const CUBES = {
+    [OAKLAND_RESIDENTIAL_KEY]: {
         floor: {
             hslaColours: [
                 [G],
@@ -28,10 +24,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [OAKLAND_RESIDENTIAL_KEY]: OAKLAND_RESIDENTIAL_CUBES
     }
+}
 
 export default CUBES

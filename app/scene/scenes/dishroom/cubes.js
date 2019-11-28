@@ -1,29 +1,19 @@
 import { DISHROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    PLATFORM_COLOUR,
-    FURNITURE_COLOUR
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    PLATFORM_COLOUR as P,
+    FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
-import {
-    b,
-    f,
-    g
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { b, f, g } from '../../cubes/zIndices'
 
-const
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    P = PLATFORM_COLOUR,
-    R = FURNITURE_COLOUR,
-
-    DISHROOM_CUBES = {
+const CUBES = {
+    [DISHROOM_KEY]: {
         ceiling: {
             hslaColours: [
                 [C, C, W, W, W, W, W, W, W, W, W, C],
@@ -52,10 +42,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
-    },
-
-    CUBES = {
-        [DISHROOM_KEY]: DISHROOM_CUBES
     }
+}
 
 export default CUBES

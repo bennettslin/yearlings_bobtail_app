@@ -1,27 +1,18 @@
 import { ALLEY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    PAVEMENT_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    PLATFORM_COLOUR
+    DEFAULT_COLOUR as D,
+    PAVEMENT_COLOUR as V,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-import {
-    e,
-    g,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { e, g, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    V = PAVEMENT_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    P = PLATFORM_COLOUR,
-
-    ALLEY_CUBES = {
+const CUBES = {
+    [ALLEY_KEY]: {
         ceiling: {
             hslaColours: [
                 [W],
@@ -48,10 +39,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [ALLEY_KEY]: ALLEY_CUBES
     }
+}
 
 export default CUBES

@@ -1,19 +1,14 @@
 import { SHORE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    SAND_COLOUR,
-    OCEAN_COLOUR
+    SAND_COLOUR as N,
+    OCEAN_COLOUR as O
 } from '../../cubes/colours'
 
-import {
-    RIGHT
-} from '../../cubes/zIndices'
+import { RIGHT } from '../../cubes/zIndices'
 
-const
-    N = SAND_COLOUR,
-    O = OCEAN_COLOUR,
-
-    SHORE_CUBES = {
+const CUBES = {
+    [SHORE_KEY]: {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
@@ -28,10 +23,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [SHORE_KEY]: SHORE_CUBES
     }
+}
 
 export default CUBES

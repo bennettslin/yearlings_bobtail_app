@@ -4,52 +4,40 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    PAVEMENT_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    UPHOLSTERY_COLOUR
+    DEFAULT_COLOUR as D,
+    PAVEMENT_COLOUR as V,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
 
-import {
-    d,
-    g,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { d, g, k } from '../../cubes/zIndices'
 
 /**
  * Blinds and door should match in courtyard.
  * Bed should match in basement.
  */
+const DEFAULT_CEILING = {
+    hslaColours: [
+        [C],
+        [D],
+        [C, C, W, W, W, C, W, W, W, W, C],
+        [C]
+    ],
+    zIndices: [
+        [g],
+        [k],
+        [g, g, d, d, d, g, d, d, d, d, g],
+        [g]
+    ]
+}
 
-const
-    D = DEFAULT_COLOUR,
-    V = PAVEMENT_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    U = UPHOLSTERY_COLOUR,
-
-    ceiling = {
-        hslaColours: [
-            [C],
-            [D],
-            [C, C, W, W, W, C, W, W, W, W, C],
-            [C]
-        ],
-        zIndices: [
-            [g],
-            [k],
-            [g, g, d, d, d, g, d, d, d, d, g],
-            [g]
-        ]
-    },
-
-    BENNETT_BED_CUBES = {
-        ceiling,
+const CUBES = {
+    [BENNETT_BED_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [W],
@@ -69,9 +57,8 @@ const
             ]
         }
     },
-
-    BENNETT_BED_OPEN_CUBES = {
-        ceiling,
+    [BENNETT_BED_OPEN_KEY]: {
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [W],
@@ -90,11 +77,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
-    },
-
-    CUBES = {
-        [BENNETT_BED_KEY]: BENNETT_BED_CUBES,
-        [BENNETT_BED_OPEN_KEY]: BENNETT_BED_OPEN_CUBES
     }
+}
 
 export default CUBES

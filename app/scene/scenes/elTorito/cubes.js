@@ -1,32 +1,20 @@
 import { EL_TORITO_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR,
-    PAVEMENT_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    PLATFORM_COLOUR
+    DEFAULT_COLOUR as D,
+    PAVEMENT_COLOUR as V,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-import {
-    e,
-    f,
-    g,
-    k
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { e, f, g, k } from '../../cubes/zIndices'
 
-const
-    D = DEFAULT_COLOUR,
-    V = PAVEMENT_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    P = PLATFORM_COLOUR,
-
-    EL_TORITO_CUBES = {
+const CUBES = {
+    [EL_TORITO_KEY]: {
         ceiling: {
             hslaColours: [
                 [C],
@@ -63,10 +51,7 @@ const
                 [1]
             ]
         }
-    },
-
-    CUBES = {
-        [EL_TORITO_KEY]: EL_TORITO_CUBES
     }
+}
 
 export default CUBES

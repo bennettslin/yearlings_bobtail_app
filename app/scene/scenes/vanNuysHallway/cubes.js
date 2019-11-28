@@ -1,26 +1,17 @@
 import { VAN_NUYS_HALLWAY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    DOOR_COLOUR,
-    SEAT_COLOUR
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    DOOR_COLOUR as E,
+    SEAT_COLOUR as S
 } from '../../cubes/colours'
 
-import {
-    d,
-    g
-} from '../../cubes/zIndices'
+import { d, g } from '../../cubes/zIndices'
 
-const
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    E = DOOR_COLOUR,
-    S = SEAT_COLOUR,
-
-    VAN_NUYS_HALLWAY_CUBES = {
+const CUBES = {
+    [VAN_NUYS_HALLWAY_KEY]: {
         ceiling: {
             hslaColours: [
                 [C],
@@ -55,10 +46,7 @@ const
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }
-    },
-
-    CUBES = {
-        [VAN_NUYS_HALLWAY_KEY]: VAN_NUYS_HALLWAY_CUBES
     }
+}
 
 export default CUBES

@@ -1,27 +1,18 @@
 import { TAIWAN_ROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR,
-    PLATFORM_COLOUR,
-    FURNITURE_COLOUR
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W,
+    PLATFORM_COLOUR as P,
+    FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
-import {
-    e,
-    f,
-    g
-} from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { e, f, g } from '../../cubes/zIndices'
 
-const
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-    P = PLATFORM_COLOUR,
-    R = FURNITURE_COLOUR,
-
-    TAIWAN_ROOM_CUBES = {
+const CUBES = {
+    [TAIWAN_ROOM_KEY]: {
         ceiling: {
             hslaColours: [
                 [W],
@@ -57,10 +48,7 @@ const
                 [g, 1, 1, g, 5, 5, 5, 5, 5, 5, 5, g]
             ]
         }
-    },
-
-    CUBES = {
-        [TAIWAN_ROOM_KEY]: TAIWAN_ROOM_CUBES
     }
+}
 
 export default CUBES

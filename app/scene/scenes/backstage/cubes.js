@@ -1,23 +1,16 @@
 import { BACKSTAGE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    CEILING_COLOUR,
-    FLOOR_COLOUR,
-    WALL_COLOUR
+    GROUND_COLOUR as G,
+    CEILING_COLOUR as C,
+    FLOOR_COLOUR as F,
+    WALL_COLOUR as W
 } from '../../cubes/colours'
 
-import {
-    g
-} from '../../cubes/zIndices'
+import { g } from '../../cubes/zIndices'
 
-const
-    G  = GROUND_COLOUR,
-    C = CEILING_COLOUR,
-    F = FLOOR_COLOUR,
-    W = WALL_COLOUR,
-
-    BACKSTAGE_CUBES = {
+const CUBES = {
+    [BACKSTAGE_KEY]: {
         ceiling: {
             hslaColours: [
                 [C]
@@ -36,10 +29,7 @@ const
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [BACKSTAGE_KEY]: BACKSTAGE_CUBES
     }
+}
 
 export default CUBES

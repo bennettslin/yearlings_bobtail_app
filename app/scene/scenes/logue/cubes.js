@@ -1,22 +1,19 @@
 import { LOGUE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    STAGE_FLOOR_COLOUR,
-    STAGE_PLATFORM_COLOUR
+    STAGE_FLOOR_COLOUR as F,
+    STAGE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-const
-    G = STAGE_FLOOR_COLOUR,
-    P = STAGE_PLATFORM_COLOUR,
-
-    LOGUE = {
+const CUBES = {
+    [LOGUE_KEY]: {
         floor: {
             hslaColours: [
-                [G],
-                [G],
-                [G, P, P, P, P, P, P, P, P, P, P, G],
-                [G, P, P, P, P, P, P, P, P, P, P, G],
-                [G]
+                [F],
+                [F],
+                [F, P, P, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, P, P, F],
+                [F]
             ],
             zIndices: [
                 [0],
@@ -26,10 +23,7 @@ const
                 [0]
             ]
         }
-    },
-
-    CUBES = {
-        [LOGUE_KEY]: LOGUE
     }
+}
 
 export default CUBES

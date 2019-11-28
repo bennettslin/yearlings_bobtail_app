@@ -1,23 +1,15 @@
-import {
-    CLIFF_KEY
-} from '../../../constants/scene/scenes'
+import { CLIFF_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR,
-    HILL_COLOUR,
-    HILL_DARKER_COLOUR
+    GROUND_COLOUR as G,
+    HILL_COLOUR as H,
+    HILL_DARKER_COLOUR as I
 } from '../../cubes/colours'
 
-import {
-    RIGHT
-} from '../../cubes/zIndices'
+import { RIGHT } from '../../cubes/zIndices'
 
-const
-    G = GROUND_COLOUR,
-    H = HILL_COLOUR,
-    I = HILL_DARKER_COLOUR,
-
-    CLIFF_CUBES = {
+const CUBES = {
+    [CLIFF_KEY]: {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
@@ -37,10 +29,7 @@ const
                 [3, 3, 3, 3, 3, 3, 0]
             ]
         }
-    },
-
-    CUBES = {
-        [CLIFF_KEY]: CLIFF_CUBES
     }
+}
 
 export default CUBES
