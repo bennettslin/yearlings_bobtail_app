@@ -46,7 +46,6 @@ class PreviewerSvg extends PureComponent {
         super(props)
 
         this.state = {
-            adjustedWidth: 0,
             adjustedHeight: 0,
             kilobytes: 0
         }
@@ -75,11 +74,8 @@ class PreviewerSvg extends PureComponent {
                 {
                     scaleFactor,
                     trimBottom
-                } = this.getArrangement()
-
-            this.setState({
-                kilobytes,
-                ...getSizeForPresence({
+                } = this.getArrangement(),
+                { adjustedHeight } = getSizeForPresence({
                     presenceType: ACTOR,
                     viewBoxWidth,
                     viewBoxHeight,
@@ -87,6 +83,10 @@ class PreviewerSvg extends PureComponent {
                     scaleFactor,
                     trimBottom
                 })
+
+            this.setState({
+                adjustedHeight,
+                kilobytes
             })
 
             this.props.handleProcessSvg({ svgString, kilobytes })
@@ -154,7 +154,6 @@ class PreviewerSvg extends PureComponent {
                 presenceKey
             } = this.props,
             {
-                adjustedWidth,
                 adjustedHeight,
                 kilobytes
             } = this.state,
@@ -183,7 +182,6 @@ class PreviewerSvg extends PureComponent {
                         ),
                         ...isActor && {
                             style: {
-                                width: `${adjustedWidth.toFixed(2)}%`,
                                 height: `${adjustedHeight.toFixed(2)}%`
                             }
                         },

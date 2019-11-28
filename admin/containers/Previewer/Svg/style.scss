@@ -1,21 +1,15 @@
 .Previewer__scrollChild {
     display: flex;
     flex-direction: column;
+    width: 100%;
 
     .Previewer__mainScrollHorizontal
-    & {
-        width: auto;
-        &:not(:first-child) {
-            margin-left: 10px;
-        }
+    &:not(:first-child) {
+        margin-left: 10px;
     }
-
     .Previewer__mainScrollVertical
-    & {
-        width: 100%;
-        &:not(:first-child) {
-            margin-top: 10px;
-        }
+    &:not(:first-child) {
+        margin-top: 10px;
     }
 }
 
