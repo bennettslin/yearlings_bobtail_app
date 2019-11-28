@@ -8,8 +8,6 @@ import PreviewerSvg from '../Previewer/Svg'
 
 import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
 
-import { getKeyName } from 'managers/Key/helper'
-
 import { removeLoadingIndicator } from 'utils/window'
 
 import { accessPresence } from '../../utils/access'
@@ -109,7 +107,7 @@ class LegacyPreviewer extends PureComponent {
         const { presenceType, presenceKey } = this.state
 
         accessPresence({
-            keyName: getKeyName(e),
+            e,
             presenceType,
             presenceKey,
             selectPresence: this.selectPresence

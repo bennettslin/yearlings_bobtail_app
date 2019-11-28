@@ -16,6 +16,8 @@ import {
     ARROW_RIGHT
 } from 'constants/access'
 
+import { getKeyName } from 'managers/Key/helper'
+
 const accessPresenceType = ({
     isActor,
     keyName,
@@ -79,12 +81,14 @@ const accessPresenceKey = ({
 }
 
 export const accessPresence = ({
+    e,
     isActor,
-    keyName,
     presenceType,
     presenceKey,
     selectPresence
 }) => {
+    const keyName = getKeyName(e)
+
     let accessFunction
 
     if (keyName === ARROW_UP || keyName === ARROW_DOWN) {
@@ -96,6 +100,7 @@ export const accessPresence = ({
     }
 
     if (accessFunction) {
+        e.preventDefault()
         accessFunction({
             isActor,
             keyName,

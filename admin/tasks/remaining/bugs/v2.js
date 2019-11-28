@@ -13,5 +13,15 @@ export default [
         taskName: `Query strings don't override storage in admin previewer.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Trim bottom doesn't work in previewer, makes backdrops smaller instead.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Scrolling upon mount sometimes doesn't happen because svg renders late.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

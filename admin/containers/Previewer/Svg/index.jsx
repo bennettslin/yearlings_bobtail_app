@@ -180,10 +180,8 @@ class PreviewerSvg extends PureComponent {
                             capitaliseForClassName(presenceType),
                             getSharedClassNames(sharedStyle)
                         ),
-                        ...isActor && {
-                            style: {
-                                height: `${adjustedHeight.toFixed(2)}%`
-                            }
+                        style: {
+                            height: `${adjustedHeight.toFixed(2)}%`
                         },
                         svgClassName: convertPresenceKeyToClassName(presenceKey),
                         title: convertPresenceKeyToTitle(presenceKey),

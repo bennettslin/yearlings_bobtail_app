@@ -5046,5 +5046,10 @@ export default [
         taskName: `Allow custom lists for previewers.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Sizing in actors previewer.`,
+        workedHours: 9,
+        neededHours: 9
     }
 ]

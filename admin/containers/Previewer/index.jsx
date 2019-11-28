@@ -7,8 +7,6 @@ import scrollIntoView from 'scroll-into-view'
 import PreviewerSvg from './Svg'
 import PreviewerDashboard from './Dashboard'
 
-import { getKeyName } from 'managers/Key/helper'
-
 import {
     capitaliseForClassName,
     convertPresenceKeyToClassName
@@ -61,6 +59,25 @@ class Previewer extends PureComponent {
         logMount('Previewer')
         removeLoadingIndicator()
         this.focusPreviewerElement()
+
+        // TODO: Scrolling doesn't always work because svg hasn't rendered yet.
+        setTimeout(this.scrollPresenceIntoView, 250)
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        const
+            {
+                presenceType: prevType,
+                presenceKey: prevKey
+            } = prevState,
+            {
+                presenceType,
+                presenceKey
+            } = this.state
+
+        if (prevType !== presenceType || prevKey !== presenceKey) {
+            this.scrollPresenceIntoView()
+        }
     }
 
     getPreviewerMapGetter() {
@@ -97,7 +114,6 @@ class Previewer extends PureComponent {
         })
 
         setPresenceInQueryStrings({ presenceType, presenceKey })
-        this.scrollPresenceIntoView({ presenceType, presenceKey })
     }
 
     handleKeyDownPress = (e) => {
@@ -106,18 +122,18 @@ class Previewer extends PureComponent {
             { presenceType, presenceKey } = this.state
 
         accessPresence({
+            e,
             isActor,
-            keyName: getKeyName(e),
             presenceType,
             presenceKey,
             selectPresence: this.selectPresence
         })
     }
 
-    scrollPresenceIntoView({
-        presenceType,
-        presenceKey
-    }) {
+    scrollPresenceIntoView = ({
+        presenceType = this.state.presenceType,
+        presenceKey = this.state.presenceKey
+    } = {}) => {
         const element = document.querySelector(
             `.${capitaliseForClassName(presenceType)} .${convertPresenceKeyToClassName(presenceKey)}`
         )
