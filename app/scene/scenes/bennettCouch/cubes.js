@@ -10,7 +10,7 @@ import {
     BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
     FURNITURE_COLOUR as R,
-    UPHOLSTERY_COLOUR as U
+    BENNETT_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
 import { g } from '../../cubes/zIndices'

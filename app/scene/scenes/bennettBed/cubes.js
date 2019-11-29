@@ -7,7 +7,7 @@ import {
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
-    UPHOLSTERY_COLOUR as U
+    BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline

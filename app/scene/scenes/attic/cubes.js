@@ -5,7 +5,7 @@ import {
     DARK_FLOOR_COLOUR as F,
     ATTIC_WALL_COLOUR as W,
     PLATFORM_COLOUR as P,
-    UPHOLSTERY_COLOUR as U
+    ATTIC_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline

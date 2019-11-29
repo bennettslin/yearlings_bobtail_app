@@ -13,7 +13,7 @@ import {
     LIZ_FLOOR_COLOUR as F,
     LIZ_FLOOR_DARK_COLOUR as L,
     LIZ_WALL_COLOUR as W,
-    UPHOLSTERY_COLOUR as U,
+    LIZ_COUCH_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
 

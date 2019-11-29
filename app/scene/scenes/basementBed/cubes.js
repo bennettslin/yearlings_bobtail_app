@@ -8,7 +8,7 @@ import {
     DIRT_FLOOR_COLOUR as F,
     BASEMENT_WALL_COLOUR as W,
     PLATFORM_COLOUR as P,
-    UPHOLSTERY_COLOUR as U
+    BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline

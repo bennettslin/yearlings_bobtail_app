@@ -6,7 +6,7 @@ import {
     BASEMENT_WALL_COLOUR as W,
     PLATFORM_COLOUR as P,
     FURNITURE_COLOUR as R,
-    UPHOLSTERY_COLOUR as U
+    BENNETT_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
 import { c, d } from '../../cubes/zIndices'

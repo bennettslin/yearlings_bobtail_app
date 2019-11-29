@@ -3,14 +3,12 @@ import { SNOWGLOBES_FUTURE_KEY } from '../../../constants/scene/scenes'
 import {
     GROUND_COLOUR as G,
     PLATFORM_COLOUR as P,
-    UPHOLSTERY_COLOUR as U
+    LIZ_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
 /**
  * Couch should match in lizCouch.
  */
-const Q = P // Second globe.
-
 const CUBES = {
     [SNOWGLOBES_FUTURE_KEY]: {
         floor: {
@@ -19,7 +17,7 @@ const CUBES = {
                 [G, G, G, G, G, G, G, P, P, P, P, G],
                 [G, U, U, U, P, P, G, P, P, P, P, G],
                 [G, U, U, U, P, P, G, P, P, P, P, G],
-                [G, U, U, U, P, P, G, Q, Q, Q, Q, G],
+                [G, U, U, U, P, P, G, P, P, P, P, G],
                 [G, P, P, P, P, P, G]
             ],
             zIndices: [

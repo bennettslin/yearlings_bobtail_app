@@ -5,7 +5,7 @@ import {
     CEILING_COLOUR as C,
     WOOD_FLOOR_COLOUR as F,
     WAITING_ROOM_WALL_COLOUR as W,
-    UPHOLSTERY_COLOUR as U
+    WAITING_ARMCHAIR_COLOUR as U
 } from '../../cubes/colours'
 
 import { d, g } from '../../cubes/zIndices'

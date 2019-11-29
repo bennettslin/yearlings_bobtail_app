@@ -3,12 +3,9 @@ import { SNOWGLOBES_PRESENT_KEY } from '../../../constants/scene/scenes'
 import {
     GROUND_COLOUR as G,
     PLATFORM_COLOUR as P,
-    UPHOLSTERY_COLOUR as U
+    LIZ_COUCH_COLOUR as U,
+    MIRIAM_COUCH_COLOUR as Z
 } from '../../cubes/colours'
-
-const
-    Q = P, // Second globe.
-    Z = U // Second globe.
 
 const CUBES = {
     [SNOWGLOBES_PRESENT_KEY]: {
@@ -19,7 +16,7 @@ const CUBES = {
                 [G, U, U, U, P, G, Z, Z, Z, Z, Z, G],
                 [G, U, U, U, P, G, Z, Z, Z, Z, Z, G],
                 [G, P, P, P, P, G, Z, Z, Z, Z, Z, G],
-                [G, G, G, G, G, G, Q, Q, Q, Q, Q, G]
+                [G, G, G, G, G, G, P, P, P, P, P, G]
             ],
             zIndices: [
                 [0],

@@ -50,7 +50,15 @@ export const CINEMA_EXTERIOR_COLOUR = 'cinemaExterior'
 export const PLATFORM_COLOUR = 'platform'
 export const STAGE_PLATFORM_COLOUR = 'stagePlatform'
 export const FURNITURE_COLOUR = 'furniture'
-export const UPHOLSTERY_COLOUR = 'upholstery'
+export const ATTIC_COUCH_COLOUR = 'atticCouch'
+export const BENNETT_COUCH_COLOUR = 'bennettCouch'
+export const LIZ_COUCH_COLOUR = 'lizCouch'
+export const MIRIAM_COUCH_COLOUR = 'miriamCouch'
+export const WAITING_ARMCHAIR_COLOUR = 'waitingArmchair'
+export const BENNETT_BED_COLOUR = 'bennettBed'
+export const CAPTAIN_BED_COLOUR = 'captainBed'
+export const HOSPITAL_BED_COLOUR = 'hospitalBed'
+export const LIZ_BED_COLOUR = 'lizBed'
 export const SEAT_COLOUR = 'seat'
 export const OCEAN_COLOUR = 'ocean'
 
@@ -126,7 +134,15 @@ const HSLA_MAP = {
     /* R. */
     [FURNITURE_COLOUR]: { h: 25, s: 44, l: 46 },
     /* U. */
-    [UPHOLSTERY_COLOUR]: { h: 90, s: 50, l: 75 },
+    [ATTIC_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
+    [BENNETT_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
+    [LIZ_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
+    [MIRIAM_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
+    [WAITING_ARMCHAIR_COLOUR]: { h: 90, s: 50, l: 75 },
+    [BENNETT_BED_COLOUR]: { h: 90, s: 50, l: 75 },
+    [CAPTAIN_BED_COLOUR]: { h: 90, s: 50, l: 75 },
+    [HOSPITAL_BED_COLOUR]: { h: 90, s: 50, l: 75 },
+    [LIZ_BED_COLOUR]: { h: 90, s: 50, l: 75 },
     /* S. */
     [SEAT_COLOUR]: { h: 30, s: 50, l: 75 }
 }

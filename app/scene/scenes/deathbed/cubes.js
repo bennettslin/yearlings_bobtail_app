@@ -10,7 +10,7 @@ import {
     GRASS_DARKER_COLOUR as I,
     LINOLEUM_FLOOR_COLOUR as F,
     PLATFORM_COLOUR as P,
-    UPHOLSTERY_COLOUR as U,
+    HOSPITAL_BED_COLOUR as U,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
