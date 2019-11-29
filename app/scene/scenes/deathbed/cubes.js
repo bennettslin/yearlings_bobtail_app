@@ -9,7 +9,6 @@ import {
     GRASS_COLOUR as H,
     GRASS_DARKER_COLOUR as I,
     LINOLEUM_FLOOR_COLOUR as F,
-    PLATFORM_COLOUR as P,
     HOSPITAL_BED_COLOUR as U,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
@@ -57,9 +56,9 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [F, U, F, F, F, F, R, G],
-                [F, U, U, U, F, F, F, F, G, P],
-                [F, F, U, U, U, U, F, F, G, P],
-                [F, F, F, U, U, F, F, G, G, P, G],
+                [F, U, U, U, F, F, F, F, G, I],
+                [F, F, U, U, U, U, F, F, G, I],
+                [F, F, F, U, U, F, F, G, G, I, G],
                 [F, F, F, F, F, F, G]
             ],
             zIndices: [

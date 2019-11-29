@@ -8,7 +8,7 @@ import {
 } from '../../constants/scene/things'
 import {
     BASEMENT_BED_KEY,
-    BASEMENT_MAGIC_KEY,
+
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
     SNOWGLOBES_FUTURE_KEY
@@ -146,7 +146,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BASEMENT_MAGIC_KEY,
+        cubes: BASEMENT_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_MAGIC
@@ -322,7 +322,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BASEMENT_MAGIC_KEY,
+        cubes: BASEMENT_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_MAGIC

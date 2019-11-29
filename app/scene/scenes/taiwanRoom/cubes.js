@@ -4,7 +4,6 @@ import {
     CEILING_COLOUR as C,
     DARK_FLOOR_COLOUR as F,
     TAIWANESE_WALL_COLOUR as W,
-    PLATFORM_COLOUR as P,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
@@ -34,10 +33,10 @@ const CUBES = {
             hslaColours: [
                 [W],
                 [W, F, F, W, F, F, F, F, F, F, F, W],
-                [W, P, P, W, F, F, F, F, F, F, F, W],
-                [W, P, P, W, W, W, W, W, F, F, W, W],
-                [W, P, P, W, F, R, R, F, F, F, F, W],
-                [W, P, P, W, F, F, F, F, F, F, F, W]
+                [W, F, F, W, F, F, F, F, F, F, F, W],
+                [W, F, F, W, W, W, W, W, F, F, W, W],
+                [W, F, F, W, F, R, R, F, F, F, F, W],
+                [W, F, F, W, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [g],

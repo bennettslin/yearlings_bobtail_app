@@ -44,7 +44,6 @@ export const CINEMA_STREET_KEY = 'cinemaStreet'
 export const BASEMENT_KEY = 'basement'
 export const BASEMENT_COUCH_KEY = 'basementCouch'
 export const BASEMENT_BED_KEY = 'basementBed'
-export const BASEMENT_MAGIC_KEY = 'basementMagic'
 
 export const MUSEUM_KEY = 'museum'
 export const BACKSTAGE_KEY = 'backstage'
@@ -67,7 +66,7 @@ export const BENNETT_GATE_KEY = 'bennettGate'
 
 export const LIZ_BED_KEY = 'lizBed'
 export const LIZ_BED_OPEN_KEY = 'lizBedOpen'
-export const LIZ_BED_OPEN_PHONE_KEY = 'lizBedOpenPhone'
+export const LIZ_BED_PHONE_KEY = 'lizBedOpenPhone'
 
 export const LIZ_COUCH_KEY = 'lizCouch'
 export const LIZ_COUCH_SEAT_KEY = 'lizCouchSeat'

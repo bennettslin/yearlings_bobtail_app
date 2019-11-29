@@ -4,7 +4,7 @@ import {
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as X,
     GRASS_COLOUR as H,
-    SEAT_COLOUR as S
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
 const CUBES = {
@@ -13,7 +13,7 @@ const CUBES = {
             hslaColours: [
                 [T],
                 [T],
-                [T, S, S, S, S, T, T, S, S, S, S, T],
+                [T, P, P, P, P, T, T, P, P, P, P, T],
                 [T],
                 [X],
                 [H]

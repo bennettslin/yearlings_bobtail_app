@@ -3,10 +3,10 @@ import { VAN_NUYS_QUAD_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR as D,
     GROUND_COLOUR as G,
-    PAVEMENT_COLOUR as V,
+    GRASS_COLOUR as H,
     ROOF_COLOUR as C,
     VAN_NUYS_EXTERIOR_COLOUR as W,
-    PLATFORM_COLOUR as P
+    CONCRETE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
 import { f, k } from '../../cubes/zIndices'
@@ -32,10 +32,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [V, V, P, P, P, P, P, P, P, P, P, P],
-                [V, V, P, P, P, W, W, W, W, W, W, P],
-                [V, V, P, P, P, P, P, P, P, P, P, P],
-                [V]
+                [H, H, P, P, P, P, P, P, P, P, P, P],
+                [H, H, P, P, P, W, W, W, W, W, W, P],
+                [H, H, P, P, P, P, P, P, P, P, P, P],
+                [H]
             ],
             zIndices: [
                 [0],

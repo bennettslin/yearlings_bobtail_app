@@ -1,7 +1,7 @@
 import {
     LIZ_BED_KEY,
     LIZ_BED_OPEN_KEY,
-    LIZ_BED_OPEN_PHONE_KEY
+    LIZ_BED_PHONE_KEY
 } from '../../../constants/scene/scenes'
 
 import {
@@ -85,7 +85,7 @@ const CUBES = {
             ]
         }
     },
-    [LIZ_BED_OPEN_PHONE_KEY]: {
+    [LIZ_BED_PHONE_KEY]: {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [

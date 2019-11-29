@@ -4,7 +4,7 @@ import {
     DEFAULT_COLOUR as D,
     GRASS_COLOUR as H,
     ROOF_COLOUR as C,
-    PLATFORM_COLOUR as P,
+    PAVEMENT_COLOUR as V,
     FAMILY_EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 
@@ -27,11 +27,11 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [W, W, W, W, W, P, P, P, W],
-                [H, H, H, P, P, P, P, P, P, P, H],
-                [H, H, H, P, P, P, P, P, P, P, H],
-                [H, H, H, P, P, P, P, P, P, P, H],
-                [H, H, H, W, P, P, P, P, P, W, H],
+                [W, W, W, W, W, V, V, V, W],
+                [H, H, H, V, V, V, V, V, V, V, H],
+                [H, H, H, V, V, V, V, V, V, V, H],
+                [H, H, H, V, V, V, V, V, V, V, H],
+                [H, H, H, W, V, V, V, V, V, W, H],
                 [H]
             ],
             zIndices: [

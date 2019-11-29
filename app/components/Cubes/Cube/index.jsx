@@ -113,11 +113,11 @@ class Cube extends PureComponent {
                         {...{
                             key: face,
                             slantDirection,
-                            level: CEILING,
+                            level: FLOOR,
                             yIndex,
                             xIndex,
-                            hslaKey: ceilingHslaKey,
-                            zIndex: ceilingZIndex,
+                            hslaKey: floorHslaKey,
+                            zIndex: floorZIndex,
                             face
                         }}
                     />
@@ -127,11 +127,11 @@ class Cube extends PureComponent {
                         {...{
                             key: face,
                             slantDirection,
-                            level: FLOOR,
+                            level: CEILING,
                             yIndex,
                             xIndex,
-                            hslaKey: floorHslaKey,
-                            zIndex: floorZIndex,
+                            hslaKey: ceilingHslaKey,
+                            zIndex: ceilingZIndex,
                             face
                         }}
                     />

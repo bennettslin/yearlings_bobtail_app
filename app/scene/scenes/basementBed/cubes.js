@@ -1,17 +1,14 @@
-import {
-    BASEMENT_BED_KEY,
-    BASEMENT_MAGIC_KEY
-} from '../../../constants/scene/scenes'
+import { BASEMENT_BED_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_COLOUR as G,
     PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
-    BASEMENT_WALL_COLOUR as W,
+    // BASEMENT_WALL_COLOUR as W,
     BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
 
-import { c } from '../../cubes/zIndices'
+// import { c } from '../../cubes/zIndices'
 
 import { DEFAULT_CEILING } from '../basement/cubes'
 
@@ -20,36 +17,16 @@ const CUBES = {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [V],
-                [W, W, V, V, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, F, F, F, F, U, U, U, U, U, U, W],
-                [W, F, F, F, F, U, U, U, U, U, U, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
-            ],
-            zIndices: [
-                [2],
-                [c, c, 2, 2, c],
-                [c, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, c],
-                [c, 0, 1, 1, 0, 3, 3, 3, 3, 3, 3, c],
-                [c, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, c],
-                [c, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, c]
-            ]
-        }
-    },
-    [BASEMENT_MAGIC_KEY]: {
-        floor: {
-            hslaColours: [
                 [G],
-                [G, F, V, V, F, F, F, F, F, F, F, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G],
-                [G, F, F, F, F, U, U, U, U, U, U, G],
-                [G, F, F, F, F, U, U, U, U, U, U, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G]
+                [V],
+                [V, F, V, V, F, F, F, F, F, F, F, V],
+                [V, F, V, V, F, U, U, U, U, U, U, V],
+                [V, F, F, F, F, U, U, U, U, U, U, V],
+                [V, F, F, F, F, F, F, F, F, F, F, V]
             ],
             zIndices: [
+                [0],
                 [2],
-                [2, 0, 2, 2, 0],
                 [2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2],
                 [2, 0, 1, 1, 0, 3, 3, 3, 3, 3, 3, 2],
                 [2, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 2],

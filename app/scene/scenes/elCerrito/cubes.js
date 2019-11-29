@@ -8,8 +8,7 @@ import {
     GRASS_COLOUR as H,
     GRASS_DARKER_COLOUR as I,
     STREET_COLOUR as T,
-    PLATFORM_COLOUR as P,
-    SEAT_COLOUR as S
+    PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
 import { RIGHT } from '../../cubes/zIndices'
@@ -55,8 +54,8 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [H, P, I, H, H, I, I, T, G],
-                [I, P, S, P, I, H, H, I, T, T, G],
-                [H, I, S, P, P, P, I, H, G, G, T],
+                [I, P, P, P, I, H, H, I, T, T, G],
+                [H, I, P, P, P, P, I, H, G, G, T],
                 [H, H, I, P, P, H, I, G, G, G, G, T],
                 [I, I, H, H, I, I, G]
             ],

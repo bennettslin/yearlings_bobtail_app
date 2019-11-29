@@ -10,7 +10,7 @@ import {
 } from '../../constants/scene/things'
 import {
     CLUB_FAR_KEY,
-    LIZ_BED_OPEN_PHONE_KEY,
+    LIZ_BED_PHONE_KEY,
     ALLEY_KEY,
     BERKELEY_BANCROFT_KEY,
     BERKELEY_CAMPANILE_KEY
@@ -216,7 +216,7 @@ export default [
                 [PHONE_CALL_PANEL]: true
             }
         },
-        cubes: LIZ_BED_OPEN_PHONE_KEY,
+        cubes: LIZ_BED_PHONE_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_LOVE

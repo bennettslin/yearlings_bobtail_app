@@ -2,8 +2,8 @@ import { BASEMENT_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
     PAVEMENT_COLOUR as V,
-    CEILING_COLOUR as C,
     DIRT_FLOOR_COLOUR as F,
     BASEMENT_WALL_COLOUR as W,
     SEAT_COLOUR as S
@@ -15,13 +15,13 @@ import { a, c, k } from '../../cubes/zIndices'
 export const DEFAULT_CEILING = {
     hslaColours: [
         [D],
-        [C, C, W, W, C],
-        [C]
+        [W, W, W, W, W],
+        [W]
     ],
     zIndices: [
         [k],
-        [c, c, a, a, c],
-        [c]
+        [2, 2, a, a, 2],
+        [2, c, c, c, c, c, c, c, c, c, c, 2]
     ]
 }
 
@@ -30,20 +30,20 @@ const CUBES = {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
+                [G],
                 [V],
-                [W, W, V, V, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, F, F, F, F, F, F, F, S, F, F, W],
-                [W, F, F, F, F, S, F, F, F, F, F, W],
-                [W, F, F, F, S, F, F, F, F, S, F, W]
+                [V, F, V, V, F, F, F, F, F, F, F, V],
+                [V, F, V, V, F, F, F, F, S, F, F, V],
+                [V, F, F, F, F, S, F, F, F, F, F, V],
+                [V, F, F, F, S, F, F, F, F, S, F, V]
             ],
             zIndices: [
+                [0],
                 [2],
-                [c, c, 2, 2, c],
-                [c, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, c],
-                [c, 0, 1, 1, 0, 0, 0, 0, 2, 0, 0, c],
-                [c, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, c],
-                [c, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, c]
+                [2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2],
+                [2, 0, 1, 1, 0, 0, 0, 0, 2, 0, 0, 2],
+                [2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 2],
+                [2, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 2]
             ]
         }
     }
