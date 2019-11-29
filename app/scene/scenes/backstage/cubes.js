@@ -1,7 +1,6 @@
 import { BACKSTAGE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR as G,
     CEILING_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
     BACKSTAGE_WALL_COLOUR as W
@@ -13,20 +12,22 @@ const CUBES = {
     [BACKSTAGE_KEY]: {
         ceiling: {
             hslaColours: [
-                [C]
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [g]
+                [1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [G, F, F, F, F, F, F, F, F, F, F, G]
+                [F],
+                [F]
             ],
             zIndices: [
-                [g],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+                [1],
+                [1]
             ]
         }
     }

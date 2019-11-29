@@ -13,38 +13,34 @@ const CUBES = {
     [MUSEUM_KEY]: {
         ceiling: {
             hslaColours: [
-                [C],
-                [C],
-                [W, C],
-                [W, C],
-                [W, C],
-                [C]
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [g],
-                [g],
-                [d, g],
-                [d, g],
-                [d, g],
-                [g]
+                [1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1],
+                [d, g, g, g, g, g, g, g, g, g, g, 1],
+                [d, g, g, g, g, g, g, g, g, g, g, 1],
+                [d, g, g, g, g, g, g, g, g, g, g, 1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
                 [W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [F, F, F, F, F, F, F, F, F, F, F, W],
-                [F, F, F, F, F, F, F, F, R, R, F, W],
-                [F, F, F, F, F, F, F, F, R, R, F, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [F],
+                [F],
+                [F, F, F, F, F, F, F, F, R, R, F],
+                [F, F, F, F, F, F, F, F, R, R, F],
+                [F]
             ],
             zIndices: [
                 [g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
-                [1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 1, g],
-                [1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 1, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [1],
+                [1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 1],
+                [1]
             ]
         }
     }
