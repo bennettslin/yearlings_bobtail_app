@@ -48,9 +48,9 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [G, R, U, U, U, U, U, U, R, R, F, G],
-                [W, R, U, U, U, U, U, U, L, F, L, W],
-                [W, L, U, U, U, U, U, U, F, L, F, W],
-                [W, F, L, F, L, F, L, F, L, F, L, W],
+                [G, R, U, U, U, U, U, U, L, F, L, G],
+                [G, L, U, U, U, U, U, U, F, L, F, G],
+                [G, F, L, F, L, F, L, F, L, F, L, G],
                 [G]
             ],
             zIndices: [

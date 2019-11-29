@@ -5051,5 +5051,10 @@ export default [
         taskName: `Sizing in actors previewer.`,
         workedHours: 9,
         neededHours: 9
+    },
+    {
+        taskName: `Logged work on cube colours.`,
+        workedHours: 10,
+        neededHours: 10
     }
 ]

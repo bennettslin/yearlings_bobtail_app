@@ -3,6 +3,7 @@ import { DISHROOM_KEY } from '../../../constants/scene/scenes'
 import {
     CEILING_COLOUR as C,
     LINOLEUM_FLOOR_COLOUR as F,
+    LINOLEUM_FLOOR_DARK_COLOUR as L,
     DISHROOM_WALL_COLOUR as W,
     PLATFORM_COLOUR as P,
     FURNITURE_COLOUR as R
@@ -27,10 +28,10 @@ const CUBES = {
             hslaColours: [
                 [W, W, W, W, W, W, W, W, P, P, P, W],
                 [W, F, R, R, R, R, R, F, P, P, P, W],
-                [W, F, R, R, R, R, R, F, P, P, P, W],
-                [W, F, F, F, F, F, F, F, P, P, P, W],
-                [W, F, F, F, F, F, F, F, P, P, P, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, L, R, R, R, R, R, L, P, P, P, W],
+                [W, F, L, F, L, F, L, F, P, P, P, W],
+                [W, L, F, L, F, L, F, L, P, P, P, W],
+                [W, F, L, F, L, F, L, F, L, F, L, W]
             ],
             zIndices: [
                 [g, g, b, b, b, b, b, g, 5, 5, 5, g],

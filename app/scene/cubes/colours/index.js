@@ -65,7 +65,7 @@ export const OCEAN_COLOUR = 'ocean'
 /* eslint-disable object-curly-newline */
 const HSLA_MAP = {
     /* D. */
-    [DEFAULT_COLOUR]: { h: 0, s: 0, l: 20 },
+    [DEFAULT_COLOUR]: { h: 0, s: 0, l: 0, a: 0 },
     /* H. */
     [GRASS_COLOUR]: { h: 91, s: 46, l: 42 },
     /* I. */
@@ -85,7 +85,7 @@ const HSLA_MAP = {
     [BANCROFT_GATE_COLOUR]: { h: 120, s: 50, l: 75 },
     [LIZ_GATE_COLOUR]: { h: 150, s: 50, l: 75 },
     /* C. */
-    [CEILING_COLOUR]: { h: 60, s: 50, l: 75 },
+    [CEILING_COLOUR]: { h: 22, s: 6, l: 85 },
     [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },
     /* F. */
     [SCHOOL_FLOOR_COLOUR]: { h: 210, s: 35, l: 61 },
@@ -100,7 +100,7 @@ const HSLA_MAP = {
     [LIZ_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
     [DIRT_FLOOR_COLOUR]: { h: 24, s: 25, l: 39 },
     /* L */
-    [LINOLEUM_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
+    [LINOLEUM_FLOOR_DARK_COLOUR]: { h: 85, s: 14, l: 57 },
     [BEDROOM_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     [BENNETT_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     [LIZ_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
