@@ -4,7 +4,7 @@ import {
     DEFAULT_COLOUR as D,
     GROUND_COLOUR as G,
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
+    DIRT_FLOOR_COLOUR as F,
     BASEMENT_WALL_COLOUR as W,
     PLATFORM_COLOUR as P,
     SEAT_COLOUR as S

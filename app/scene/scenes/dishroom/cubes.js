@@ -2,7 +2,7 @@ import { DISHROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
+    LINOLEUM_FLOOR_COLOUR as F,
     DISHROOM_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     PLATFORM_COLOUR as P,

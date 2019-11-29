@@ -2,7 +2,7 @@ import { WALGREENS_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_COLOUR as G,
-    FLOOR_COLOUR as F
+    WOOD_FLOOR_COLOUR as F
 } from '../../cubes/colours'
 
 const CUBES = {

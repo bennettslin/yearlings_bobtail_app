@@ -2,7 +2,7 @@ import { CLUB_SIDE_CROWD_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
+    OLD_FLOOR_COLOUR as F,
     CLUB_WALL_COLOUR as W,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'

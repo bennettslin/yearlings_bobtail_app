@@ -3,7 +3,7 @@ import { GO_KARTS_KEY } from '../../../constants/scene/scenes'
 import {
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as X,
-    GRASS_COLOUR as L,
+    GRASS_COLOUR as H,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
 
@@ -16,7 +16,7 @@ const CUBES = {
                 [T, S, S, S, S, T, T, S, S, S, S, T],
                 [T],
                 [X],
-                [L]
+                [H]
             ],
             zIndices: [
                 [0],

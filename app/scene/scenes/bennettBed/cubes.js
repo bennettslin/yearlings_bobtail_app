@@ -7,7 +7,8 @@ import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
+    BENNETT_FLOOR_COLOUR as F,
+    BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     UPHOLSTERY_COLOUR as U
@@ -43,9 +44,9 @@ const CUBES = {
                 [W],
                 [V, V, V, V, V, V, V, V, V, V, V, W],
                 [W, W, E, E, E, W],
-                [W, F, F, F, F, U, U, U, U, U, U, W],
-                [W, F, F, F, F, U, U, U, U, U, U, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, F, L, F, L, U, U, U, U, U, U, W],
+                [W, L, F, L, F, U, U, U, U, U, U, W],
+                [W, F, L, F, L, F, L, F, L, F, L, W]
             ],
             zIndices: [
                 [g],
@@ -63,10 +64,10 @@ const CUBES = {
             hslaColours: [
                 [W],
                 [V, V, V, V, V, V, V, V, V, V, V, W],
-                [W, W, F, F, F, W],
-                [W, F, F, F, F, U, U, U, U, U, U, W],
-                [W, F, F, F, F, U, U, U, U, U, U, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, W, F, L, F, W],
+                [W, F, L, F, L, U, U, U, U, U, U, W],
+                [W, L, F, L, F, U, U, U, U, U, U, W],
+                [W, F, L, F, L, F, L, F, L, F, L, W]
             ],
             zIndices: [
                 [g],

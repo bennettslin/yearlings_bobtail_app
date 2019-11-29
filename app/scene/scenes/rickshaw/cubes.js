@@ -1,7 +1,7 @@
 import { RICKSHAW_KEY } from '../../../constants/scene/scenes'
 
 import {
-    SAND_COLOUR as N,
+    SAND_COLOUR as X,
     STREET_COLOUR as T
 } from '../../cubes/colours'
 
@@ -12,12 +12,12 @@ const CUBES = {
         slantDirection: LEFT,
         floor: {
             hslaColours: [
-                [N, N, N, N, N, N, N, N, N, T],
-                [N, N, N, N, N, N, N, T],
-                [N, N, N, N, N, N, T],
-                [N, N, N, N, T],
-                [N, N, T],
-                [N, T]
+                [X, X, X, X, X, X, X, X, X, T],
+                [X, X, X, X, X, X, X, T],
+                [X, X, X, X, X, X, T],
+                [X, X, X, X, T],
+                [X, X, T],
+                [X, T]
             ],
             zIndices: [
                 [0]

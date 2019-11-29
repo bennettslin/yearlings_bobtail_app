@@ -2,7 +2,7 @@ import { BUOY_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_COLOUR as D,
-    OCEAN_COLOUR as O
+    OCEAN_COLOUR as V
 } from '../../cubes/colours'
 
 import { RIGHT } from '../../cubes/zIndices'
@@ -13,10 +13,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [D],
-                [O],
-                [O],
-                [O],
-                [O],
+                [V],
+                [V],
+                [V],
+                [V],
                 [D]
             ],
             zIndices: [

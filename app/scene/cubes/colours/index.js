@@ -1,6 +1,6 @@
 export const DEFAULT_COLOUR = 'default'
-export const GRASS_COLOUR = 'hill'
-export const GRASS_DARKER_COLOUR = 'hillDarker'
+export const GRASS_COLOUR = 'grass'
+export const GRASS_DARKER_COLOUR = 'grassDarker'
 export const GROUND_COLOUR = 'ground'
 export const SAND_COLOUR = 'sand'
 export const STREET_COLOUR = 'street'
@@ -11,11 +11,16 @@ export const BANCROFT_GATE_COLOUR = 'bancroftGate'
 export const LIZ_GATE_COLOUR = 'lizGate'
 export const CEILING_COLOUR = 'ceiling'
 export const ROOF_COLOUR = 'roof'
-export const FLOOR_COLOUR = 'floor'
+export const SCHOOL_FLOOR_COLOUR = 'schoolFloor'
 export const LINOLEUM_FLOOR_COLOUR = 'linoleumFloor'
+export const WOOD_FLOOR_COLOUR = 'woodFloor'
+export const OLD_FLOOR_COLOUR = 'oldFloor'
+export const FANCY_FLOOR_COLOUR = 'fancyFloor'
 export const BEDROOM_FLOOR_COLOUR = 'bedroomFloor'
+export const DARK_FLOOR_COLOUR = 'darkFloor'
 export const BENNETT_FLOOR_COLOUR = 'bennettFloor'
 export const LIZ_FLOOR_COLOUR = 'lizFloor'
+export const DIRT_FLOOR_COLOUR = 'dirtFloor'
 export const LINOLEUM_FLOOR_DARK_COLOUR = 'linoleumFloorDark'
 export const BEDROOM_FLOOR_DARK_COLOUR = 'bedroomFloorDark'
 export const BENNETT_FLOOR_DARK_COLOUR = 'bennettFloorDark'
@@ -60,14 +65,14 @@ const HSLA_MAP = {
     [GRASS_DARKER_COLOUR]: { h: 93, s: 74, l: 27 },
     /* G. */
     [GROUND_COLOUR]: { h: 0, s: 0, l: 25 },
-    /* N. */
-    [SAND_COLOUR]: { h: 35, s: 51, l: 74 },
     /* T. */
     [STREET_COLOUR]: { h: 120, s: 1, l: 30 },
-    /* X. */
-    [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* V. */
+    [OCEAN_COLOUR]: { h: 204, s: 61, l: 43 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 51 },
+    /* X. */
+    [SAND_COLOUR]: { h: 35, s: 51, l: 74 },
+    [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 250, s: 50, l: 75 },
     [BANCROFT_GATE_COLOUR]: { h: 120, s: 50, l: 75 },
@@ -76,12 +81,17 @@ const HSLA_MAP = {
     [CEILING_COLOUR]: { h: 60, s: 50, l: 75 },
     [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },
     /* F. */
-    [FLOOR_COLOUR]: { h: 330, s: 25, l: 50 },
+    [SCHOOL_FLOOR_COLOUR]: { h: 210, s: 35, l: 61 },
     [STAGE_FLOOR_COLOUR]: { h: 29, s: 65, l: 20 },
-    [LINOLEUM_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
+    [LINOLEUM_FLOOR_COLOUR]: { h: 85, s: 14, l: 67 },
+    [WOOD_FLOOR_COLOUR]: { h: 32, s: 35, l: 64 },
+    [OLD_FLOOR_COLOUR]: { h: 35, s: 13, l: 46 },
+    [FANCY_FLOOR_COLOUR]: { h: 1, s: 43, l: 36 },
     [BEDROOM_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
+    [DARK_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
     [BENNETT_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
     [LIZ_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
+    [DIRT_FLOOR_COLOUR]: { h: 24, s: 25, l: 39 },
     /* L */
     [LINOLEUM_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     [BEDROOM_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
@@ -110,20 +120,17 @@ const HSLA_MAP = {
     [LIZ_EXTERIOR_COLOUR]: { h: 180, s: 50, l: 75 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 150, s: 50, l: 75 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 0, s: 50, l: 75 },
-
     /* E. */
     [DOOR_COLOUR]: { h: 330, s: 70, l: 75 },
     /* P. */
     [PLATFORM_COLOUR]: { h: 30, s: 50, l: 25 },
     [STAGE_PLATFORM_COLOUR]: { h: 3, s: 13, l: 34 },
     /* R. */
-    [FURNITURE_COLOUR]: { h: 330, s: 50, l: 75 },
+    [FURNITURE_COLOUR]: { h: 25, s: 44, l: 46 },
     /* U. */
     [UPHOLSTERY_COLOUR]: { h: 90, s: 50, l: 75 },
     /* S. */
-    [SEAT_COLOUR]: { h: 30, s: 50, l: 75 },
-    /* O. */
-    [OCEAN_COLOUR]: { h: 204, s: 61, l: 43 }
+    [SEAT_COLOUR]: { h: 30, s: 50, l: 75 }
 }
 /* eslint-enable object-curly-newline */
 

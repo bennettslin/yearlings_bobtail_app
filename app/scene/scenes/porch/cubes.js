@@ -2,7 +2,7 @@ import { PORCH_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_COLOUR as D,
-    GRASS_COLOUR as L,
+    GRASS_COLOUR as H,
     ROOF_COLOUR as C,
     PLATFORM_COLOUR as P,
     FAMILY_EXTERIOR_COLOUR as W,
@@ -29,11 +29,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [W, W, W, W, W, E, E, E, W],
-                [L, L, L, P, P, P, P, P, P, P, L],
-                [L, L, L, P, P, P, P, P, P, P, L],
-                [L, L, L, P, P, P, P, P, P, P, L],
-                [L, L, L, W, P, P, P, P, P, W, L],
-                [L]
+                [H, H, H, P, P, P, P, P, P, P, H],
+                [H, H, H, P, P, P, P, P, P, P, H],
+                [H, H, H, P, P, P, P, P, P, P, H],
+                [H, H, H, W, P, P, P, P, P, W, H],
+                [H]
             ],
             zIndices: [
                 [f, f, f, f, f, e, e, e, f, f],

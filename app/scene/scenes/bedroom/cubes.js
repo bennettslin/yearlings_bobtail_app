@@ -10,7 +10,8 @@ import {
     DEFAULT_COLOUR as D,
     GROUND_COLOUR as G,
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
+    BEDROOM_FLOOR_COLOUR as F,
+    BEDROOM_FLOOR_DARK_COLOUR as L,
     BEDROOM_WALL_COLOUR as W,
     FURNITURE_COLOUR as R,
     UPHOLSTERY_COLOUR as U,
@@ -33,6 +34,7 @@ import { d, g, k, LEFT } from '../../cubes/zIndices'
  * ---------..#.-
  * -----------#--
  */
+// TODO: Dark floor patterns.
 const DEFAULT_CEILING = {
     hslaColours: [
         [D, D, D, D, D, C, D, C, C, C, D],
@@ -63,7 +65,7 @@ const CUBES = {
                 [G, G, W, W, R, F, F, U, U, U, W, G],
                 [W, W, R, R, F, F, F, U, U, U, W, G],
                 [F, F, F, F, F, F, F, U, F, F, W, G],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, F, L, L, F, F, L, L, F, F, L, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -85,7 +87,7 @@ const CUBES = {
                 [G, G, W, W, R, F, F, U, U, U, W, G],
                 [W, W, R, R, F, S, F, U, U, U, W, G],
                 [F, F, F, F, F, F, F, U, F, F, W, G],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, F, L, L, F, F, L, L, F, F, L, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -107,7 +109,7 @@ const CUBES = {
                 [G, G, W, W, R, F, F, F, F, F, W, G],
                 [W, W, R, R, F, F, F, F, F, F, W, G],
                 [F, F, F, F, F, F, F, F, F, F, W, G],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, F, L, L, F, F, L, L, F, F, L, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0, g, g, g, 0],
@@ -128,7 +130,7 @@ const CUBES = {
                 [G, G, G, G, G, G, F, U, U, U, W, G],
                 [G, G, G, G, G, G, F, U, U, U, W, G],
                 [G, G, G, G, G, G, F, U, F, F, W, G],
-                [G, G, G, G, G, G, F, F, F, F, F, W]
+                [G, G, G, G, G, G, L, L, F, F, L, W]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, 0, 0, g, g, g, 0],
@@ -165,7 +167,7 @@ const CUBES = {
                 [G, G, W, W, R, F, G],
                 [W, W, R, R, F, F, G],
                 [F, F, F, F, S, F, G],
-                [W, F, F, F, F, F, G]
+                [W, F, L, L, F, F, G]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, g, 0],

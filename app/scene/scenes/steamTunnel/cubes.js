@@ -1,7 +1,7 @@
 import { STEAM_TUNNEL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    FLOOR_COLOUR as F,
+    DIRT_FLOOR_COLOUR as F,
     CEILING_COLOUR as C,
     STEAM_TUNNEL_WALL_COLOUR as W
 } from '../../cubes/colours'

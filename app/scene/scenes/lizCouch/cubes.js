@@ -13,7 +13,8 @@ import {
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
+    LIZ_FLOOR_COLOUR as F,
+    LIZ_FLOOR_DARK_COLOUR as L,
     LIZ_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     UPHOLSTERY_COLOUR as U,
@@ -54,9 +55,9 @@ const CUBES = {
                 [A, A, A, A, A, E, E, E, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, L, L, L, L, L, L, L, E],
                 [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, L, L, L, L, L, L, L, L, L, L, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 6, 6, 6, 7],
@@ -75,9 +76,9 @@ const CUBES = {
                 [A, A, A, A, A, E, E, E, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, L],
                 [W, U, U, U, F],
-                [W, U, U, U, F],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, L, L, L, L, L, L, L, L, L, L, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 6, 6, 6, 7],
@@ -96,9 +97,9 @@ const CUBES = {
                 [A, A, A, A, A, E, E, E, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, F, F, F, F, F, S, F, E],
-                [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, U, U, U, L, L, L, L, L, S, L, E],
+                [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, L, L, L, L, L, L, L, L, L, L, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 6, 6, 6, 7],
@@ -117,9 +118,9 @@ const CUBES = {
                 [A, A, A, A, A, V, V, V, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, L, L, L, L, L, L, L, E],
                 [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, L, L, L, L, L, L, L, L, L, L, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
@@ -138,9 +139,9 @@ const CUBES = {
                 [A, A, A, A, A, E, E, E, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
+                [W, U, U, U, L, L, L, L, L, L, L, E],
                 [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [W, L, L, L, L, L, L, L, L, L, L, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 6, 6, 6, 7],
@@ -157,9 +158,9 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [G, U, U, U, F, F, F, F, F, F, F, G],
+                [G, U, U, U, L, L, L, L, L, L, L, G],
                 [G, U, U, U, F, F, F, F, F, F, F, G],
-                [G, U, U, U, F, F, F, F, F, F, F, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, L, L, L, L, L, L, L, L, L, L, G],
                 [G]
             ],
             zIndices: [

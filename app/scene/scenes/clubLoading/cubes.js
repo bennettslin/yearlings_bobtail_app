@@ -4,7 +4,7 @@ import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
-    FLOOR_COLOUR as F,
+    OLD_FLOOR_COLOUR as F,
     EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 

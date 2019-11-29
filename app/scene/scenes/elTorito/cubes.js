@@ -4,7 +4,7 @@ import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
-    FLOOR_COLOUR as F,
+    FANCY_FLOOR_COLOUR as F,
     EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E,
     PLATFORM_COLOUR as P

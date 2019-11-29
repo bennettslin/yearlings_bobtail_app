@@ -2,7 +2,6 @@ import { SNOWGLOBES_FUTURE_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_COLOUR as G,
-    FLOOR_COLOUR as F,
     PLATFORM_COLOUR as P,
     UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'
@@ -17,9 +16,9 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [G, G, G, G, G, G, G, F, F, F, F, G],
-                [G, U, U, U, P, P, G, F, F, F, F, G],
-                [G, U, U, U, P, P, G, F, F, F, F, G],
+                [G, G, G, G, G, G, G, P, P, P, P, G],
+                [G, U, U, U, P, P, G, P, P, P, P, G],
+                [G, U, U, U, P, P, G, P, P, P, P, G],
                 [G, U, U, U, P, P, G, Q, Q, Q, Q, G],
                 [G, P, P, P, P, P, G]
             ],

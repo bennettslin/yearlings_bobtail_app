@@ -2,7 +2,7 @@ import { NOHO_SCHOOL_KEY } from '../../../constants/scene/scenes'
 
 import {
     PAVEMENT_COLOUR as V,
-    FLOOR_COLOUR as F,
+    SCHOOL_FLOOR_COLOUR as F,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
 

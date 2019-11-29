@@ -2,7 +2,7 @@ import { ATTIC_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_COLOUR as C,
-    FLOOR_COLOUR as F,
+    DARK_FLOOR_COLOUR as F,
     ATTIC_WALL_COLOUR as W,
     PLATFORM_COLOUR as P,
     UPHOLSTERY_COLOUR as U

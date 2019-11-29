@@ -5,7 +5,7 @@ import {
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
-    FLOOR_COLOUR as F,
+    FANCY_FLOOR_COLOUR as F,
     CINEMA_EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E
 } from '../../cubes/colours'
