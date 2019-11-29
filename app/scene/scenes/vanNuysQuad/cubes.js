@@ -17,14 +17,14 @@ const CUBES = {
             hslaColours: [
                 [D, D, C],
                 [D, D, C],
-                [D, D, C],
+                [D, D, C, C, C, W, W, W, W, W, W, C],
                 [D, D, C],
                 [D]
             ],
             zIndices: [
                 [k, k, f],
                 [k, k, f],
-                [k, k, f],
+                [k, k, f, f, f, 2, 2, 2, 2, 2, 2, f],
                 [k, k, f],
                 [k]
             ]
@@ -33,14 +33,14 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [H, H, P, P, P, P, P, P, P, P, P, P],
-                [H, H, P, P, P, W, W, W, W, W, W, P],
+                [H, H, P, P, P, P, P, P, P, P, P, P],
                 [H, H, P, P, P, P, P, P, P, P, P, P],
                 [H]
             ],
             zIndices: [
                 [0],
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
-                [1, 1, 2, 2, 2, f, f, f, f, f, f, 2],
+                [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
                 [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
                 [1]
             ]

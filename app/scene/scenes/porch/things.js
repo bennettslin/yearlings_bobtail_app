@@ -15,19 +15,19 @@ import { SCISSORS__SHARED } from '../../shared/household'
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [PORCH_PLANT__LEFT]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.3
         },
         [PORCH_PLANT__RIGHT]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 10.5,
             scaleFactor: 0.3
         }
     },
     [DOOR]: {
         [PORCH_DOOR]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 6,
             sharedStyle: DOOR__SHARED
         }

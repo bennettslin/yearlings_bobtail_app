@@ -65,12 +65,12 @@ export const OCEAN_COLOUR = 'ocean'
 const HSLA_MAP = {
     /* D. */
     [DEFAULT_COLOUR]: { h: 0, s: 0, l: 0, a: 0 },
+    /* G. */
+    [GROUND_COLOUR]: { h: 0, s: 0, l: 25 },
     /* H. */
     [GRASS_COLOUR]: { h: 91, s: 46, l: 42 },
     /* I. */
     [GRASS_DARKER_COLOUR]: { h: 93, s: 46, l: 27 },
-    /* G. */
-    [GROUND_COLOUR]: { h: 0, s: 0, l: 25 },
     /* T. */
     [STREET_COLOUR]: { h: 120, s: 1, l: 30 },
     /* V. */
@@ -79,10 +79,6 @@ const HSLA_MAP = {
     /* X. */
     [SAND_COLOUR]: { h: 35, s: 51, l: 74 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
-    /* A. */
-    [TAIWAN_GATE_COLOUR]: { h: 250, s: 50, l: 75 },
-    [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
-    [LIZ_GATE_COLOUR]: { h: 150, s: 50, l: 75 },
     /* C. */
     [CEILING_COLOUR]: { h: 22, s: 10, l: 80 },
     [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },
@@ -117,7 +113,6 @@ const HSLA_MAP = {
     [MUSEUM_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
     [STEAM_TUNNEL_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
     [WAITING_ROOM_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
-
     [EXTERIOR_COLOUR]: { h: 31, s: 16, l: 75 },
     [FAMILY_EXTERIOR_COLOUR]: { h: 220, s: 50, l: 75 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 90, s: 50, l: 75 },
@@ -125,7 +120,10 @@ const HSLA_MAP = {
     [LIZ_EXTERIOR_COLOUR]: { h: 180, s: 50, l: 75 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 0, s: 50, l: 75 },
-
+    /* A. */
+    [TAIWAN_GATE_COLOUR]: { h: 250, s: 50, l: 75 },
+    [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
+    [LIZ_GATE_COLOUR]: { h: 150, s: 50, l: 75 },
     /* P. */
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
     [CONCRETE_PLATFORM_COLOUR]: { h: 0, s: 0, l: 65 },

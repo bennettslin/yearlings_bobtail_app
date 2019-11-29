@@ -4,6 +4,7 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
+    DEFAULT_COLOUR as D,
     GROUND_COLOUR as G,
     CEILING_COLOUR as C,
     LINOLEUM_FLOOR_COLOUR as F,
@@ -12,54 +13,44 @@ import {
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
-import { f } from '../../cubes/zIndices'
+import { f, k } from '../../cubes/zIndices'
+
+const DEFAULT_FLOOR = {
+    hslaColours: [
+        [G],
+        [L, F, L, F, L, F, L, F, L, F, L, F],
+        [F, L, F, L, F, L, F, L, F, L, F, L],
+        [L, F, L, R, R, R, R, F, L, F, L, F],
+        [F, L, F, L, F, L, F, L, F, L, F, L],
+        [L, F, L, F, L, F, L, F, L, F, L, F]
+    ],
+    zIndices: [
+        [0],
+        [1],
+        [1],
+        [1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1],
+        [1]
+    ]
+}
 
 const CUBES = {
     [BATHROOM_KEY]: {
         ceiling: {
             hslaColours: [
-                [C]
+                [D],
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [f]
+                [k],
+                [1],
+                [1, f, f, f, f, f, f, f, f, f, f, 1]
             ]
         },
-        floor: {
-            hslaColours: [
-                [W],
-                [W, F, L, F, L, F, L, F, L, F, L, W],
-                [W, L, F, R, R, R, R, L, F, L, F, W],
-                [W, F, L, R, R, R, R, F, L, F, L, W],
-                [W, L, F, L, F, L, F, L, F, L, F, W],
-                [W, F, L, F, L, F, L, F, L, F, L, W]
-            ],
-            zIndices: [
-                [f, f, f, f, f, f, f, f, f, f, f],
-                [f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, f],
-                [f, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, f],
-                [f, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, f],
-                [f, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, f]
-            ]
-        }
+        floor: DEFAULT_FLOOR
     },
     [BATHROOM_OPEN_KEY]: {
-        floor: {
-            hslaColours: [
-                [G],
-                [G, F, L, F, L, F, L, F, L, F, L, G],
-                [G, L, F, R, R, R, R, L, F, L, F, G],
-                [G, F, L, R, R, R, R, F, L, F, L, G],
-                [G, L, F, L, F, L, F, L, F, L, F, G],
-                [G, F, L, F, L, F, L, F, L, F, L, G]
-            ],
-            zIndices: [
-                [0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 0],
-                [0, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
+        floor: DEFAULT_FLOOR
     }
 }
 

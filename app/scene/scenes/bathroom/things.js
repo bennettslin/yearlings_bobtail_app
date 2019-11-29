@@ -26,13 +26,13 @@ const ARRANGEMENTS_THINGS = {
 export const THINGS_BATHROOM_BATHING = {
     [CUTOUT]: {
         [MIRRORED_SINK]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 8,
             scaleFactor: 0.4,
             sharedStyle: ALL_PEOPLE__SHARED
         },
         [TOWEL_RACK]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 3,
             zOffset: 1.5,
             scaleFactor: 0.32

@@ -162,6 +162,9 @@ export default [
                     instance: CAUTIOUS
                 }
             },
+            [BACKDROP]: {
+                [NOHO_HOUSES_BACKDROP]: true
+            },
             [CUTOUT]: {
                 [PORCH_PLANT__LEFT]: true,
                 [PORCH_PLANT__RIGHT]: true

@@ -13,36 +13,36 @@ const CUBES = {
     [VAN_NUYS_HALLWAY_KEY]: {
         ceiling: {
             hslaColours: [
-                [C],
-                [C],
-                [C],
-                [C, C, W, W, W, C],
-                [C]
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W],
+                [W, C, C, C, C, C, C, C, C, C, C, W],
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [g],
-                [g],
-                [g],
-                [g, g, d, d, d, g],
-                [g]
+                [1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1],
+                [1, 1, d, d, d, 1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, W, F, F, F, W, W, W, W, W, W, W],
-                [W, F, F, F, F, F, S, S, S, S, F, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [F],
+                [F],
+                [F],
+                [F],
+                [F, F, F, F, F, F, S, S, S, S, F],
+                [F]
             ],
             zIndices: [
-                [g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, g, 1, 1, 1, g, g, g, g, g, g, g],
-                [g, 1, 1, 1, 1, 1, 4, 4, 4, 4, 1, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [1],
+                [1],
+                [1],
+                [1],
+                [1, 1, 1, 1, 1, 1, 4, 4, 4, 4, 1],
+                [1]
             ]
         }
     }

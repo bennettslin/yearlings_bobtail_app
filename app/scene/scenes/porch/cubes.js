@@ -2,6 +2,7 @@ import { PORCH_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
     GRASS_COLOUR as H,
     ROOF_COLOUR as C,
     PAVEMENT_COLOUR as V,
@@ -15,31 +16,37 @@ const CUBES = {
     [PORCH_KEY]: {
         ceiling: {
             hslaColours: [
-                [C, C, C, C, C, W, W, W, C],
+                [D],
+                [W],
                 [C],
+                [D, D, C, C, C, C, C, C, C, C, C, D],
+                [D, D, C, W, C, C, C, C, C, W, C, D],
                 [D, D, C, C, C, C, C, C, C, C, C, D]
             ],
             zIndices: [
-                [f, f, f, f, f, e, e, e, f],
+                [k],
+                [1, 1, 1, 3, 3, e, e, e, 3, 3, 1],
                 [f],
+                [k, k, f, f, f, f, f, f, f, f, f, k],
+                [k, k, f, 1, f, f, f, f, f, 1, f, k],
                 [k, k, f, f, f, f, f, f, f, f, f, k]
             ]
         },
         floor: {
             hslaColours: [
-                [W, W, W, W, W, V, V, V, W],
+                [G],
                 [H, H, H, V, V, V, V, V, V, V, H],
                 [H, H, H, V, V, V, V, V, V, V, H],
                 [H, H, H, V, V, V, V, V, V, V, H],
-                [H, H, H, W, V, V, V, V, V, W, H],
+                [H, H, H, H, V, V, V, V, V, H, H],
                 [H]
             ],
             zIndices: [
-                [f, f, f, f, f, 3, 3, 3, f],
+                [0],
                 [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 1],
                 [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 1],
                 [1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 1, 1, f, 2, 2, 2, 2, 2, f, 1],
+                [1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1],
                 [1]
             ]
         }

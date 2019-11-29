@@ -175,6 +175,9 @@ export default [
                     instance: BATHING
                 }
             },
+            [BACKDROP]: {
+                [NOHO_HOUSES_BACKDROP]: true
+            },
             [CUTOUT]: {
                 [MIRRORED_SINK]: true,
                 [TOWEL_RACK]: true
