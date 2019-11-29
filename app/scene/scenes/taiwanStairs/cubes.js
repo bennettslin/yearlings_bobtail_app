@@ -3,10 +3,10 @@ import { TAIWAN_STAIRS_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    GATE_COLOUR as A,
+    TAIWAN_GATE_COLOUR as A,
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    TAIWANESE_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'

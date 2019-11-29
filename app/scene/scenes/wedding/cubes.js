@@ -2,8 +2,8 @@ import { WEDDING_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_COLOUR as G,
-    HILL_COLOUR as H,
-    HILL_DARKER_COLOUR as I,
+    GRASS_COLOUR as H,
+    GRASS_DARKER_COLOUR as I,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 

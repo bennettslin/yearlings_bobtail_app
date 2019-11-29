@@ -2,10 +2,10 @@ import { PORCH_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_COLOUR as D,
-    LAWN_COLOUR as L,
-    CEILING_COLOUR as C,
+    GRASS_COLOUR as L,
+    ROOF_COLOUR as C,
     PLATFORM_COLOUR as P,
-    WALL_COLOUR as W,
+    FAMILY_EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E
 } from '../../cubes/colours'
 

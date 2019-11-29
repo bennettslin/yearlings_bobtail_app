@@ -3,9 +3,9 @@ import { CLUB_LOADING } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    CEILING_COLOUR as C,
+    ROOF_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W
+    EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline

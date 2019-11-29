@@ -7,7 +7,7 @@ import {
     GROUND_COLOUR as G,
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    WAITING_ROOM_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'

@@ -3,7 +3,7 @@ import { MUSEUM_KEY } from '../../../constants/scene/scenes'
 import {
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    MUSEUM_WALL_COLOUR as W,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 

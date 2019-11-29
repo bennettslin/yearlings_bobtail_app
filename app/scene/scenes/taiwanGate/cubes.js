@@ -3,8 +3,8 @@ import { TAIWAN_GATE_KEY } from '../../../constants/scene/scenes'
 import {
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
-    GATE_COLOUR as A,
-    WALL_COLOUR as W
+    TAIWAN_GATE_COLOUR as A,
+    EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 
 import { d, g } from '../../cubes/zIndices'

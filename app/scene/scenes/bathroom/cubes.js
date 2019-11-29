@@ -6,8 +6,8 @@ import {
 import {
     GROUND_COLOUR as G,
     CEILING_COLOUR as C,
-    BATHROOM_FLOOR_COLOUR as F,
-    BATHROOM_FLOOR_DARK_COLOUR as Z,
+    LINOLEUM_FLOOR_COLOUR as F,
+    LINOLEUM_FLOOR_DARK_COLOUR as L,
     BATHROOM_WALL_COLOUR as W,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
@@ -27,11 +27,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [W],
-                [W, F, Z, F, Z, F, Z, F, Z, F, Z, W],
-                [W, Z, F, R, R, R, R, Z, F, Z, F, W],
-                [W, F, Z, R, R, R, R, F, Z, F, Z, W],
-                [W, Z, F, Z, F, Z, F, Z, F, Z, F, W],
-                [W, F, Z, F, Z, F, Z, F, Z, F, Z, W]
+                [W, F, L, F, L, F, L, F, L, F, L, W],
+                [W, L, F, R, R, R, R, L, F, L, F, W],
+                [W, F, L, R, R, R, R, F, L, F, L, W],
+                [W, L, F, L, F, L, F, L, F, L, F, W],
+                [W, F, L, F, L, F, L, F, L, F, L, W]
             ],
             zIndices: [
                 [f, f, f, f, f, f, f, f, f, f, f],
@@ -46,11 +46,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [G, F, Z, F, Z, F, Z, F, Z, F, Z, G],
-                [G, Z, F, R, R, R, R, Z, F, Z, F, G],
-                [G, F, Z, R, R, R, R, F, Z, F, Z, G],
-                [G, Z, F, Z, F, Z, F, Z, F, Z, F, G],
-                [G, F, Z, F, Z, F, Z, F, Z, F, Z, G]
+                [G, F, L, F, L, F, L, F, L, F, L, G],
+                [G, L, F, R, R, R, R, L, F, L, F, G],
+                [G, F, L, R, R, R, R, F, L, F, L, G],
+                [G, L, F, L, F, L, F, L, F, L, F, G],
+                [G, F, L, F, L, F, L, F, L, F, L, G]
             ],
             zIndices: [
                 [0],

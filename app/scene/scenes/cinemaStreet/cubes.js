@@ -4,8 +4,8 @@ import {
     DEFAULT_COLOUR as D,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
-    CEILING_COLOUR as C,
-    WALL_COLOUR as W
+    ROOF_COLOUR as C,
+    CINEMA_EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 
 import { f, k } from '../../cubes/zIndices'

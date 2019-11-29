@@ -3,7 +3,7 @@ import { STEAM_TUNNEL_KEY } from '../../../constants/scene/scenes'
 import {
     FLOOR_COLOUR as F,
     CEILING_COLOUR as C,
-    WALL_COLOUR as W
+    STEAM_TUNNEL_WALL_COLOUR as W
 } from '../../cubes/colours'
 
 import { b, d } from '../../cubes/zIndices'

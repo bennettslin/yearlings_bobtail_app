@@ -8,7 +8,7 @@ import {
     PAVEMENT_COLOUR as V,
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    BENNETT_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     UPHOLSTERY_COLOUR as U
 } from '../../cubes/colours'

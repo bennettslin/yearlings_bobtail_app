@@ -3,7 +3,7 @@ import { ALLEY_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    WALL_COLOUR as W,
+    EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'

@@ -2,8 +2,8 @@ import { PAMPAS_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_COLOUR as G,
-    HILL_COLOUR as H,
-    HILL_DARKER_COLOUR as I
+    GRASS_COLOUR as H,
+    GRASS_DARKER_COLOUR as I
 } from '../../cubes/colours'
 
 import { RIGHT } from '../../cubes/zIndices'

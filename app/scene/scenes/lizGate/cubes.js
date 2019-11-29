@@ -7,9 +7,9 @@ import {
     DEFAULT_COLOUR as D,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
-    GATE_COLOUR as A,
-    CEILING_COLOUR as C,
-    WALL_COLOUR as W,
+    LIZ_GATE_COLOUR as A,
+    ROOF_COLOUR as C,
+    LIZ_EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E
 } from '../../cubes/colours'
 

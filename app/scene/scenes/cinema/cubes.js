@@ -4,9 +4,9 @@ import {
     DEFAULT_COLOUR as D,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
-    CEILING_COLOUR as C,
+    ROOF_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    CINEMA_EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E
 } from '../../cubes/colours'
 

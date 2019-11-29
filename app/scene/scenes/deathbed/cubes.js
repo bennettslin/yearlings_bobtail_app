@@ -6,8 +6,8 @@ import {
 
 import {
     GROUND_COLOUR as G,
-    HILL_COLOUR as H,
-    HILL_DARKER_COLOUR as I,
+    GRASS_COLOUR as H,
+    GRASS_DARKER_COLOUR as I,
     FLOOR_COLOUR as F,
     PLATFORM_COLOUR as P,
     UPHOLSTERY_COLOUR as U,

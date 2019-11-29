@@ -1,7 +1,7 @@
 import { NOHO_HOUSES_KEY } from '../../../constants/scene/scenes'
 
 import {
-    LAWN_COLOUR as L,
+    GRASS_COLOUR as L,
     PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 

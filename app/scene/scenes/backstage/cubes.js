@@ -4,7 +4,7 @@ import {
     GROUND_COLOUR as G,
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W
+    BACKSTAGE_WALL_COLOUR as W
 } from '../../cubes/colours'
 
 import { g } from '../../cubes/zIndices'

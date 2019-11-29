@@ -4,8 +4,8 @@ import {
     DEFAULT_COLOUR as D,
     GROUND_COLOUR as G,
     PAVEMENT_COLOUR as V,
-    GATE_COLOUR as A,
-    WALL_COLOUR as W,
+    BANCROFT_GATE_COLOUR as A,
+    BANCROFT_EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'

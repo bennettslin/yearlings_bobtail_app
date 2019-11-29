@@ -11,10 +11,10 @@ import {
     DEFAULT_COLOUR as D,
     GROUND_COLOUR as G,
     PAVEMENT_COLOUR as V,
-    GATE_COLOUR as A,
+    LIZ_GATE_COLOUR as A,
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    LIZ_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     UPHOLSTERY_COLOUR as U,
     SEAT_COLOUR as S

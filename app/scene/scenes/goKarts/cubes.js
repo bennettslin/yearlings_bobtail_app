@@ -3,7 +3,7 @@ import { GO_KARTS_KEY } from '../../../constants/scene/scenes'
 import {
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as X,
-    LAWN_COLOUR as L,
+    GRASS_COLOUR as L,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
 

@@ -3,9 +3,8 @@ import { COURTYARD_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    GATE_COLOUR as A,
-    CEILING_COLOUR as C,
-    WALL_COLOUR as W,
+    ROOF_COLOUR as C,
+    BENNETT_EXTERIOR_COLOUR as W,
     DOOR_COLOUR as E
 } from '../../cubes/colours'
 
@@ -23,8 +22,8 @@ const CUBES = {
                 [C],
                 [C, C, W, W, W, W, C, W, W, W, C],
                 [C, C, C],
-                [A, C, D],
-                [A, C, D],
+                [W, C, D],
+                [W, C, D],
                 [C, C, D]
             ],
             zIndices: [
@@ -40,10 +39,10 @@ const CUBES = {
             hslaColours: [
                 [W],
                 [W, W, W, W, W, W, W, E, E, E, W],
-                [A, V],
+                [W, V],
                 [E, V],
                 [E, V],
-                [A, V]
+                [W, V]
             ],
             zIndices: [
                 [f],

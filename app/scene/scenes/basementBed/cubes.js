@@ -6,7 +6,7 @@ import {
 import {
     GROUND_COLOUR as G,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    BASEMENT_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     PLATFORM_COLOUR as P,
     UPHOLSTERY_COLOUR as U

@@ -3,7 +3,7 @@ import { CLUB_FRONT_KEY } from '../../../constants/scene/scenes'
 import {
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    CLUB_WALL_COLOUR as W,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 

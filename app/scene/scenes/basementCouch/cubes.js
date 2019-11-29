@@ -3,7 +3,7 @@ import { BASEMENT_COUCH_KEY } from '../../../constants/scene/scenes'
 import {
     CEILING_COLOUR as C,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    BASEMENT_WALL_COLOUR as W,
     DOOR_COLOUR as E,
     PLATFORM_COLOUR as P,
     FURNITURE_COLOUR as R,

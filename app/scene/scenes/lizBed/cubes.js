@@ -8,7 +8,7 @@ import {
     DEFAULT_COLOUR as D,
     GROUND_COLOUR as G,
     FLOOR_COLOUR as F,
-    WALL_COLOUR as W,
+    LIZ_WALL_COLOUR as W,
     FURNITURE_COLOUR as R,
     UPHOLSTERY_COLOUR as U,
     SEAT_COLOUR as S
