@@ -5,7 +5,7 @@ import {
     GROUND_COLOUR as G,
     GRASS_COLOUR as H,
     ROOF_COLOUR as C,
-    VAN_NUYS_EXTERIOR_COLOUR as W,
+    VAN_NUYS_EXTERIOR_COLOUR as X,
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
@@ -17,7 +17,7 @@ const CUBES = {
             hslaColours: [
                 [D],
                 [D],
-                [C, W, W, W, W, W, W, C, C, C, D],
+                [C, X, X, X, X, X, X, C, C, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
                 [C, C, C, C, C, C, C, C, C, C, D],
                 [D]

@@ -5,7 +5,7 @@ import {
     GROUND_COLOUR as G,
     PAVEMENT_COLOUR as V,
     BANCROFT_GATE_COLOUR as A,
-    BANCROFT_EXTERIOR_COLOUR as W,
+    BANCROFT_EXTERIOR_COLOUR as X,
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
@@ -17,8 +17,8 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [D, D, D, D, D, W],
-                [D, D, D, D, D, W],
+                [D, D, D, D, D, X],
+                [D, D, D, D, D, X],
                 [D]
             ],
             zIndices: [

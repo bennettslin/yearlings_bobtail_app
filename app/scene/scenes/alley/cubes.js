@@ -3,7 +3,7 @@ import { ALLEY_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    EXTERIOR_COLOUR as W,
+    EXTERIOR_COLOUR as X,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
@@ -14,8 +14,8 @@ const CUBES = {
     [ALLEY_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W],
+                [X],
+                [X],
                 [D]
             ],
             zIndices: [
@@ -26,8 +26,8 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, P, P, P, P, P, W],
+                [X],
+                [X, P, P, P, P, P, X],
                 [P, P, P, P, P, P, P, V],
                 [V]
             ],

@@ -1,6 +1,6 @@
 import { OCEAN_FLOOR_KEY } from '../../../constants/scene/scenes'
 
-import { SAND_COLOUR as X } from '../../cubes/colours'
+import { SAND_COLOUR as K } from '../../cubes/colours'
 
 import { RIGHT } from '../../cubes/zIndices'
 
@@ -9,7 +9,7 @@ const CUBES = {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
-                [X]
+                [K]
             ],
             zIndices: [
                 [0]

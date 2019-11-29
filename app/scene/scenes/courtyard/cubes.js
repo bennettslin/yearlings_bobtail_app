@@ -6,7 +6,7 @@ import {
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_FLOOR_DARK_COLOUR as L,
-    BENNETT_EXTERIOR_COLOUR as W
+    BENNETT_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
@@ -20,12 +20,12 @@ const CUBES = {
     [COURTYARD_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W],
-                [W, C],
-                [W, C, D],
-                [W, C, D],
-                [W, C, D]
+                [X],
+                [X],
+                [X, C],
+                [X, C, D],
+                [X, C, D],
+                [X, C, D]
             ],
             zIndices: [
                 [1],
@@ -39,7 +39,7 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [V],
-                [V, F, W, W, W, W, F, F, L, F, F],
+                [V, F, X, X, X, X, F, F, L, F, F],
                 [V],
                 [V],
                 [V],

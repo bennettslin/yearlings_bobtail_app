@@ -6,7 +6,7 @@ import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     FANCY_FLOOR_COLOUR as F,
-    CINEMA_EXTERIOR_COLOUR as W
+    CINEMA_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
@@ -17,9 +17,9 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [C, C, W, W, W, W, W, W, W, W, C],
-                [C, C, W, C, C, C, C, C, C, W, C],
-                [W, W, W, C, C, C, C, C, C, W],
+                [C, C, X, X, X, X, X, X, X, X, C],
+                [C, C, X, C, C, C, C, C, C, X, C],
+                [X, X, X, C, C, C, C, C, C, X],
                 [C]
 
             ],

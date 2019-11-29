@@ -76,7 +76,7 @@ const HSLA_MAP = {
     /* V. */
     [OCEAN_COLOUR]: { h: 204, s: 61, l: 43 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 51 },
-    /* X. */
+    /* K. */
     [SAND_COLOUR]: { h: 35, s: 51, l: 74 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* C. */
@@ -113,6 +113,7 @@ const HSLA_MAP = {
     [MUSEUM_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
     [STEAM_TUNNEL_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
     [WAITING_ROOM_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
+    /* X. */
     [EXTERIOR_COLOUR]: { h: 31, s: 16, l: 75 },
     [FAMILY_EXTERIOR_COLOUR]: { h: 220, s: 50, l: 75 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 90, s: 50, l: 75 },

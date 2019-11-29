@@ -7,7 +7,7 @@ import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     FANCY_FLOOR_COLOUR as F,
-    CINEMA_EXTERIOR_COLOUR as W
+    CINEMA_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 import { f, k } from '../../cubes/zIndices'
@@ -17,9 +17,9 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [C, C, W, C, D],
-                [C, C, W, C, D],
-                [W, W, W, C, D],
+                [C, C, X, C, D],
+                [C, C, X, C, D],
+                [X, X, X, C, D],
                 [C, C, C, C, D]
             ],
             zIndices: [

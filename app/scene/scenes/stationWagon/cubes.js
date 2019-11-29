@@ -2,7 +2,7 @@ import { STATION_WAGON_KEY } from '../../../constants/scene/scenes'
 
 import {
     STREET_COLOUR as T,
-    CROSSWALK_COLOUR as X,
+    CROSSWALK_COLOUR as K,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
@@ -15,7 +15,7 @@ const CUBES = {
                 [T, P, P, P, P, P, P, P, P, P, P, T],
                 [T, P, P, P, P, P, P, P, P, P, P, T],
                 [T],
-                [X]
+                [K]
             ],
             zIndices: [
                 [0],

@@ -4,7 +4,7 @@ import {
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
-    EXTERIOR_COLOUR as W
+    EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 import { d, g } from '../../cubes/zIndices'
@@ -15,7 +15,7 @@ const CUBES = {
             hslaColours: [
                 [T],
                 [T],
-                [W, W, W, V, A, V, T, T, T, T, V, V],
+                [X, X, X, V, A, V, T, T, T, T, V, V],
                 [V, V, V, V, A, V, T],
                 [A, V, V, V, A, V, T],
                 [V, V, V, V, V, V, T]

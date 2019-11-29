@@ -6,7 +6,7 @@ import {
     GRASS_COLOUR as H,
     ROOF_COLOUR as C,
     PAVEMENT_COLOUR as V,
-    FAMILY_EXTERIOR_COLOUR as W
+    FAMILY_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
@@ -17,10 +17,10 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [W],
+                [X],
                 [C],
                 [D, D, C, C, C, C, C, C, C, C, C, D],
-                [D, D, C, W, C, C, C, C, C, W, C, D],
+                [D, D, C, X, C, C, C, C, C, X, C, D],
                 [D, D, C, C, C, C, C, C, C, C, C, D]
             ],
             zIndices: [

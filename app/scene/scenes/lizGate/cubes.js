@@ -9,7 +9,7 @@ import {
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
     ROOF_COLOUR as C,
-    LIZ_EXTERIOR_COLOUR as W
+    LIZ_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
@@ -23,7 +23,7 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [C, C, C, C, W, W, W, W, W, C, C, C],
+                [C, C, C, C, X, X, X, X, X, C, C, C],
                 [C],
                 [D]
             ],
@@ -36,8 +36,8 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [W, W, W, W, W, W, W, W, W, W, W, A],
-                [W, W, W, W, W, W, W, W, W, W, W, A],
+                [X, X, X, X, X, X, X, X, X, X, X, A],
+                [X, X, X, X, X, X, X, X, X, X, X, A],
                 [V, V, V, V, V, V, V, V, V, V, V, A],
                 [A, A, A, A, A, V, V, V, A],
                 [V]
@@ -55,7 +55,7 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [C, W, W, W, W, W, C, C, C, D],
+                [C, X, X, X, X, X, C, C, C, D],
                 [C, C, C, C, C, C, C, C, C, D],
                 [D]
             ],
@@ -68,8 +68,8 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [W, W, W, W, W, W, W, W, A, V, V, T],
-                [W, W, W, W, W, W, W, W, A, V, V, T],
+                [X, X, X, X, X, X, X, X, A, V, V, T],
+                [X, X, X, X, X, X, X, X, A, V, V, T],
                 [V, V, V, V, V, V, V, V, A, V, V, T],
                 [A, A, V, V, V, A, A, A, A, V, V, T],
                 [V, V, V, V, V, V, V, V, V, V, V, T]

@@ -3,7 +3,7 @@ import { BENNETT_GATE_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    BENNETT_EXTERIOR_COLOUR as W,
+    BENNETT_EXTERIOR_COLOUR as X,
     ROOF_COLOUR as C
 } from '../../cubes/colours'
 
@@ -18,7 +18,7 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [C, C, C, C, C, C, C, W, W, W, C, C],
+                [C, C, C, C, C, C, C, X, X, X, C, C],
                 [C],
                 [D, D, D, D, D, C],
                 [D, D, D, D, D, C],
@@ -36,7 +36,7 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [V],
-                [W, W, W, W, W, W, W, V, V, V, W, W],
+                [X, X, X, X, X, X, X, V, V, V, X, X],
                 [V]
             ],
             zIndices: [

@@ -1,7 +1,7 @@
 import { SHORE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    SAND_COLOUR as X,
+    SAND_COLOUR as K,
     OCEAN_COLOUR as V
 } from '../../cubes/colours'
 
@@ -12,12 +12,12 @@ const CUBES = {
         slantDirection: RIGHT,
         floor: {
             hslaColours: [
-                [X, X, X, X, X, V],
-                [X, X, X, X, X, X, V],
-                [X, X, X, X, X, X, X, X, V],
-                [X, X, X, X, X, X, X, X, X, X, V],
-                [X, X, X, X, X, X, X, X, X, X, X, V],
-                [X]
+                [K, K, K, K, K, V],
+                [K, K, K, K, K, K, V],
+                [K, K, K, K, K, K, K, K, V],
+                [K, K, K, K, K, K, K, K, K, K, V],
+                [K, K, K, K, K, K, K, K, K, K, K, V],
+                [K]
             ],
             zIndices: [
                 [0]
