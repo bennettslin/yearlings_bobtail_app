@@ -20,38 +20,38 @@ const CUBES = {
     [COURTYARD_KEY]: {
         ceiling: {
             hslaColours: [
-                [C],
-                [C, C, W, W, W, W, C, W, W, W, C],
-                [C, C, C],
+                [W],
+                [W],
+                [W, C],
                 [W, C, D],
                 [W, C, D],
-                [C, C, D]
+                [W, C, D]
             ],
             zIndices: [
-                [f],
-                [f, f, d, d, d, d, f, d, d, d, f],
-                [f, f, f],
+                [1],
+                [1, 1, d, d, d, d, 1, d, d, d, 1],
+                [1, f, f],
                 [d, f, k],
                 [d, f, k],
-                [f, f, k]
+                [1, f, k]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, W, W, W, W, W, W, F, L, F, W],
-                [W, V],
-                [V, V],
-                [V, V],
-                [W, V]
+                [V],
+                [V, F, W, W, W, W, F, F, L, F, F],
+                [V],
+                [V],
+                [V],
+                [V]
             ],
             zIndices: [
-                [f],
-                [f, f, 6, 6, 6, 6, f, 1, 1, 1, f],
-                [f, 1],
-                [1, 1],
-                [1, 1],
-                [f, 1]
+                [1],
+                [1, 1, 6, 6, 6, 6, 1],
+                [1],
+                [1],
+                [1],
+                [1]
             ]
         }
     }

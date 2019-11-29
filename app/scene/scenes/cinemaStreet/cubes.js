@@ -2,9 +2,11 @@ import { CINEMA_STREET_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_COLOUR as D,
+    GROUND_COLOUR as G,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
+    FANCY_FLOOR_COLOUR as F,
     CINEMA_EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 
@@ -15,27 +17,33 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [C, C, C, C, C, D]
+                [C, C, W, C, D],
+                [C, C, W, C, D],
+                [W, W, W, C, D],
+                [C, C, C, C, D]
             ],
             zIndices: [
                 [k],
-                [f, f, f, f, f, k]
+                [f, f, 1, f, k],
+                [f, f, 1, f, k],
+                [1, 1, 1, f, k],
+                [f, f, f, f, k]
             ]
         },
         floor: {
             hslaColours: [
-                [T],
-                [W, W, W, V],
-                [W, W, W, V, T, T, T, T, V],
-                [W, W, W, V, T, T, T, T, T, V],
+                [G],
+                [F, F, F, V],
+                [F, F, F, V, T, T, T, T, V],
+                [F, F, F, V, T, T, T, T, T, V],
                 [V, V, V, V, T, T, T, T, T, T, V],
                 [V, V, V, V, T]
             ],
             zIndices: [
                 [0],
-                [f, f, f, 1],
-                [f, f, f, 1, 0, 0, 0, 0, 1],
-                [f, f, f, 1, 0, 0, 0, 0, 0, 1],
+                [1, 1, 1, 1],
+                [1, 1, 1, 1, 0, 0, 0, 0, 1],
+                [1, 1, 1, 1, 0, 0, 0, 0, 0, 1],
                 [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 1, 1, 0]
             ]

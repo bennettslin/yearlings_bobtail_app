@@ -15,24 +15,6 @@ import {
 
 import { f, k } from '../../cubes/zIndices'
 
-const DEFAULT_FLOOR = {
-    hslaColours: [
-        [G],
-        [L, F, L, F, L, F, L, F, L, F, L, F],
-        [F, L, F, L, F, L, F, L, F, L, F, L],
-        [L, F, L, R, R, R, R, F, L, F, L, F],
-        [F, L, F, L, F, L, F, L, F, L, F, L],
-        [L, F, L, F, L, F, L, F, L, F, L, F]
-    ],
-    zIndices: [
-        [0],
-        [1],
-        [1],
-        [1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1],
-        [1]
-    ]
-}
-
 const CUBES = {
     [BATHROOM_KEY]: {
         ceiling: {
@@ -47,10 +29,43 @@ const CUBES = {
                 [1, f, f, f, f, f, f, f, f, f, f, 1]
             ]
         },
-        floor: DEFAULT_FLOOR
+        floor: {
+            hslaColours: [
+                [G],
+                [L, F, L, F, L, F, L, F, L, F, L, F],
+                [F, L, F, L, F, L, F, L, F, L, F, L],
+                [L, F, L, R, R, R, R, F, L, F, L, F],
+                [F, L, F, L, F, L, F, L, F, L, F, L],
+                [L, F, L, F, L, F, L, F, L, F, L, F]
+            ],
+            zIndices: [
+                [0],
+                [1],
+                [1],
+                [1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1],
+                [1]
+            ]
+        }
     },
     [BATHROOM_OPEN_KEY]: {
-        floor: DEFAULT_FLOOR
+        floor: {
+            hslaColours: [
+                [G],
+                [G],
+                [G, L, F, L, F, L, F, L, F, L, F, G],
+                [G, F, L, R, R, R, R, F, L, F, L, G],
+                [G, L, F, L, F, L, F, L, F, L, F, G],
+                [G, F, L, F, L, F, L, F, L, F, L, G]
+            ],
+            zIndices: [
+                [0],
+                [0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+            ]
+        }
     }
 }
 

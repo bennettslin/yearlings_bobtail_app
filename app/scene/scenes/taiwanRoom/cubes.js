@@ -21,30 +21,30 @@ const CUBES = {
                 [W, C, C, W, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [g],
-                [g],
-                [g],
-                [e, g, g, g, g, g, g, g, f, f, g, g],
-                [e, g],
-                [g]
+                [0],
+                [0, g, g, g, g, g, g, g, g, g, g, 5],
+                [0, g, g, g, g, g, g, g, g, g, g, 5],
+                [e, g, g, 5, 5, 5, 5, 5, f, f, 5, 5],
+                [e, g, g, 5, g, g, g, g, g, g, g, 5],
+                [0, g, g, 5, g, g, g, g, g, g, g, 5]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, F, F, W, F, F, F, F, F, F, F, W],
-                [W, F, F, W, F, F, F, F, F, F, F, W],
-                [W, F, F, W, W, W, W, W, F, F, W, W],
-                [W, F, F, W, F, R, R, F, F, F, F, W],
-                [W, F, F, W, F, F, F, F, F, F, F, W]
+                [F],
+                [F],
+                [F],
+                [W, F],
+                [W, F, F, F, F, R, R, F],
+                [F]
             ],
             zIndices: [
                 [g],
-                [g, 5, 5, g, 5, 5, 5, 5, 5, 5, 5, g],
-                [g, 4, 4, g, 5, 5, 5, 5, 5, 5, 5, g],
-                [5, 3, 3, g, g, g, g, g, 5, 5, g, g],
-                [5, 2, 2, g, 5, 8, 8, 5, 5, 5, 5, g],
-                [g, 1, 1, g, 5, 5, 5, 5, 5, 5, 5, g]
+                [g, 5],
+                [g, 4, 4, 5],
+                [5, 3, 3, 5],
+                [5, 2, 2, 5, 5, 8, 8, 5],
+                [g, 1, 1, 5]
             ]
         }
     }

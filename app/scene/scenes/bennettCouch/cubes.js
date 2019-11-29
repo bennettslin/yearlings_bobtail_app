@@ -19,27 +19,29 @@ const CUBES = {
     [BENNETT_COUCH_KEY]: {
         ceiling: {
             hslaColours: [
-                [C]
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [g]
+                [1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, R, U, U, U, U, U, U, R, R, F, W],
-                [W, R, U, U, U, U, U, U, L, F, L, W],
-                [W, L, U, U, U, U, U, U, F, L, F, W],
-                [W, F, L, F, L, F, L, F, L, F, L, W],
-                [W, L, F, L, F, L, F, L, F, L, F, W]
+                [F],
+                [F, R, U, U, U, U, U, U, R, R, F, F],
+                [F, R, U, U, U, U, U, U, L, F, L, F],
+                [F, L, U, U, U, U, U, U, F, L, F, F],
+                [F, F, L, F, L, F, L, F, L, F, L, F],
+                [F, L, F, L, F, L, F, L, F, L, F, F]
             ],
             zIndices: [
-                [g],
-                [g, 5, 7, 7, 7, 7, 7, 7, 4, 4, 1, g],
-                [g, 5, 4, 4, 4, 4, 4, 4, 1, 1, 1, g],
-                [g, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [1],
+                [1, 5, 7, 7, 7, 7, 7, 7, 4, 4, 1, 1],
+                [1, 5, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1],
+                [1, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1],
+                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
             ]
         }
     },
