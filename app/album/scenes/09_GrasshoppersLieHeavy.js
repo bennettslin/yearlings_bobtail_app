@@ -11,9 +11,7 @@ import {
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,
-    BENNETT_BED_OPEN_KEY,
     WAITING_ROOM_KEY,
-    WAITING_ROOM_OPEN_KEY,
     LIZ_BED_OPEN_KEY,
     LIZ_GATE_KEY,
     LIZ_GATE_STREET_KEY,
@@ -369,7 +367,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BENNETT_BED_OPEN_KEY,
+        cubes: BENNETT_BED_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER
@@ -447,7 +445,7 @@ export default [
                 [WAITING_ARMREST__LIZ_RIGHT]: true
             }
         },
-        cubes: WAITING_ROOM_OPEN_KEY,
+        cubes: WAITING_ROOM_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER

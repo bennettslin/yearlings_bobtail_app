@@ -4,12 +4,11 @@ import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
     BENNETT_EXTERIOR_COLOUR as W,
-    ROOF_COLOUR as C,
-    DOOR_COLOUR as E
+    ROOF_COLOUR as C
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { d, e, f, g, k } from '../../cubes/zIndices'
+import { d, f, g, k } from '../../cubes/zIndices'
 
 /**
  * Gate should match in courtyard.
@@ -27,7 +26,7 @@ const CUBES = {
             ],
             zIndices: [
                 [k],
-                [g, g, g, g, g, g, g, e, e, e, g, g],
+                [g, g, g, g, g, g, g, d, d, d, g, g],
                 [f],
                 [k, k, k, k, k, f],
                 [k, k, k, k, k, f],
@@ -37,12 +36,12 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [V],
-                [W, W, W, W, W, W, W, E, E, E, W, W],
+                [W, W, W, W, W, W, W, V, V, V, W, W],
                 [V]
             ],
             zIndices: [
                 [1],
-                [g, g, g, g, g, g, g, d, d, d, g, g],
+                [g, g, g, g, g, g, g, 1, 1, 1, g, g],
                 [1]
             ]
         }

@@ -1,9 +1,6 @@
 import {
     LIZ_COUCH_KEY,
-    LIZ_COUCH_OPEN_KEY,
     LIZ_COUCH_SEAT_KEY,
-    LIZ_COUCH_GATE_OPEN_KEY,
-    LIZ_COUCH_PEAFOWL_KEY,
     LIZ_COUCH_THOUGHT_KEY
 } from '../../../constants/scene/scenes'
 
@@ -16,7 +13,6 @@ import {
     LIZ_FLOOR_COLOUR as F,
     LIZ_FLOOR_DARK_COLOUR as L,
     LIZ_WALL_COLOUR as W,
-    DOOR_COLOUR as E,
     UPHOLSTERY_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
@@ -52,28 +48,7 @@ const CUBES = {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [A, A, A, A, A, E, E, E, A],
-                [W, W, W, W, W, W, W, W, W, W],
-                [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, L, L, L, L, L, L, L, E],
-                [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, L, L, L, L, L, L, L, L, L, L, W]
-            ],
-            zIndices: [
-                [7, 7, 7, 7, 7, 6, 6, 6, 7],
-                [g, g, g, g, 6, 6, 6, 6, 6, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, d],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, d],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
-            ]
-        }
-    },
-    [LIZ_COUCH_OPEN_KEY]: {
-        ceiling: DEFAULT_CEILING,
-        floor: {
-            hslaColours: [
-                [A, A, A, A, A, E, E, E, A],
+                [A, A, A, A, A, V, V, V, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
                 [W, U, U, U, L],
@@ -81,7 +56,7 @@ const CUBES = {
                 [W, L, L, L, L, L, L, L, L, L, L, W]
             ],
             zIndices: [
-                [7, 7, 7, 7, 7, 6, 6, 6, 7],
+                [7, 7, 7, 7, 7, 1, 1, 1, 7],
                 [g, g, g, g, 6, 6, 6, 6, 6, g],
                 [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, g],
                 [g, 7, 4, 4, 1],
@@ -94,61 +69,19 @@ const CUBES = {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [A, A, A, A, A, E, E, E, A],
-                [W, W, W, W, W, W, W, W, W, W],
-                [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, L, L, L, L, L, S, L, E],
-                [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, L, L, L, L, L, L, L, L, L, L, W]
-            ],
-            zIndices: [
-                [7, 7, 7, 7, 7, 6, 6, 6, 7],
-                [g, g, g, g, 6, 6, 6, 6, 6, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 3, 1, d],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, d],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
-            ]
-        }
-    },
-    [LIZ_COUCH_GATE_OPEN_KEY]: {
-        ceiling: DEFAULT_CEILING,
-        floor: {
-            hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
                 [W, W, W, W, W, W, W, W, W, W],
                 [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, L, L, L, L, L, L, L, E],
-                [W, U, U, U, F, F, F, F, F, F, F, E],
+                [W, U, U, U, L, L, L, L, L, S, L],
+                [W, U, U, U, F],
                 [W, L, L, L, L, L, L, L, L, L, L, W]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
                 [g, g, g, g, 6, 6, 6, 6, 6, g],
                 [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, d],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, d],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
-            ]
-        }
-    },
-    [LIZ_COUCH_PEAFOWL_KEY]: {
-        ceiling: DEFAULT_CEILING,
-        floor: {
-            hslaColours: [
-                [A, A, A, A, A, E, E, E, A],
-                [W, W, W, W, W, W, W, W, W, W],
-                [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, L, L, L, L, L, L, L, E],
-                [W, U, U, U, F, F, F, F, F, F, F, E],
-                [W, L, L, L, L, L, L, L, L, L, L, W]
-            ],
-            zIndices: [
-                [7, 7, 7, 7, 7, 6, 6, 6, 7],
-                [g, g, g, g, 6, 6, 6, 6, 6, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, d],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, d],
+                [g, 7, 4, 4, 1, 1, 1, 1, 1, 3, 1],
+                [g, 7, 4, 4, 1],
                 [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
             ]
         }

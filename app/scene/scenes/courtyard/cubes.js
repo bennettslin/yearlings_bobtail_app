@@ -4,12 +4,13 @@ import {
     DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
-    BENNETT_EXTERIOR_COLOUR as W,
-    DOOR_COLOUR as E
+    BENNETT_FLOOR_COLOUR as F,
+    BENNETT_FLOOR_DARK_COLOUR as L,
+    BENNETT_EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { d, e, f, k } from '../../cubes/zIndices'
+import { d, f, k } from '../../cubes/zIndices'
 
 /**
  * Blinds and door should match in bennettBed.
@@ -30,26 +31,26 @@ const CUBES = {
                 [f],
                 [f, f, d, d, d, d, f, d, d, d, f],
                 [f, f, f],
-                [e, f, k],
-                [e, f, k],
+                [d, f, k],
+                [d, f, k],
                 [f, f, k]
             ]
         },
         floor: {
             hslaColours: [
                 [W],
-                [W, W, W, W, W, W, W, E, E, E, W],
+                [W, W, W, W, W, W, W, F, L, F, W],
                 [W, V],
-                [E, V],
-                [E, V],
+                [V, V],
+                [V, V],
                 [W, V]
             ],
             zIndices: [
                 [f],
-                [f, f, 6, 6, 6, 6, f, d, d, d, f],
+                [f, f, 6, 6, 6, 6, f, 1, 1, 1, f],
                 [f, 1],
-                [d, 1],
-                [d, 1],
+                [1, 1],
+                [1, 1],
                 [f, 1]
             ]
         }

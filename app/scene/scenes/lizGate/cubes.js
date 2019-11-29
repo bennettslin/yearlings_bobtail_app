@@ -9,8 +9,7 @@ import {
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
     ROOF_COLOUR as C,
-    LIZ_EXTERIOR_COLOUR as W,
-    DOOR_COLOUR as E
+    LIZ_EXTERIOR_COLOUR as W
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
@@ -72,14 +71,14 @@ const CUBES = {
                 [W, W, W, W, W, W, W, W, A, V, V, T],
                 [W, W, W, W, W, W, W, W, A, V, V, T],
                 [V, V, V, V, V, V, V, V, A, V, V, T],
-                [A, A, E, E, E, A, A, A, A, V, V, T],
+                [A, A, V, V, V, A, A, A, A, V, V, T],
                 [V, V, V, V, V, V, V, V, V, V, V, T]
             ],
             zIndices: [
                 [f, f, f, f, f, f, f, f, 7, 1, 1, 0],
                 [f, 6, 6, 6, 6, 6, f, f, 7, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
-                [7, 7, 6, 6, 6, 7, 7, 7, 7, 1, 1, 0],
+                [7, 7, 1, 1, 1, 7, 7, 7, 7, 1, 1, 0],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }

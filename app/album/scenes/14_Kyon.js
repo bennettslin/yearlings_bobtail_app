@@ -8,10 +8,7 @@ import {
 } from '../../constants/scene/things'
 import {
     LIZ_COUCH_KEY,
-    LIZ_COUCH_OPEN_KEY,
-    LIZ_COUCH_SEAT_KEY,
-    LIZ_COUCH_GATE_OPEN_KEY,
-    LIZ_COUCH_PEAFOWL_KEY
+    LIZ_COUCH_SEAT_KEY
 } from '../../constants/scene/scenes'
 import {
     TIME_ANYTIME,
@@ -171,7 +168,7 @@ export default [
                 [LIZ_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_OPEN_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -243,7 +240,7 @@ export default [
                 [LIZ_COUCH]: true
             }
         },
-        cubes: LIZ_COUCH_GATE_OPEN_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -304,7 +301,7 @@ export default [
                 [PEAHEN]: true
             }
         },
-        cubes: LIZ_COUCH_PEAFOWL_KEY,
+        cubes: LIZ_COUCH_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

@@ -6,7 +6,6 @@ import {
     ROOF_COLOUR as C,
     FANCY_FLOOR_COLOUR as F,
     EXTERIOR_COLOUR as W,
-    DOOR_COLOUR as E,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
@@ -37,7 +36,7 @@ const CUBES = {
             hslaColours: [
                 [W],
                 [F],
-                [W, W, W, E, E, E, F, F, F, W],
+                [W, W, W, P, P, P, P, P, P, W],
                 [V, V, V, P, P, P, P, P, P, V],
                 [V, W, V, V, V, V, V, V, V, V, W, V],
                 [V]
@@ -45,7 +44,7 @@ const CUBES = {
             zIndices: [
                 [g],
                 [2],
-                [f, f, f, e, e, e, 2, 2, 2, f],
+                [f, f, f, 2, 2, 2, 2, 2, 2, f],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1, f, 1, 1, 1, 1, 1, 1, 1, 1, f, 1],
                 [1]

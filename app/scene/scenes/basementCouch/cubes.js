@@ -4,7 +4,6 @@ import {
     CEILING_COLOUR as C,
     DIRT_FLOOR_COLOUR as F,
     BASEMENT_WALL_COLOUR as W,
-    DOOR_COLOUR as E,
     PLATFORM_COLOUR as P,
     FURNITURE_COLOUR as R,
     UPHOLSTERY_COLOUR as U
@@ -34,15 +33,15 @@ const CUBES = {
             hslaColours: [
                 [W],
                 [W, R, U, U, U, U, U, U, R, R, F, W],
-                [W, R, U, U, U, U, U, U, F, P, P, E],
-                [W, F, U, U, U, U, U, U, F, P, P, E],
+                [W, R, U, U, U, U, U, U, F, P, P, P],
+                [W, F, U, U, U, U, U, U, F, P, P, P],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [
                 [d],
                 [d, 4, 6, 6, 6, 6, 6, 6, 3, 3, 0, d],
-                [d, 4, 3, 3, 3, 3, 3, 3, 0, 1, 2, c],
-                [d, 0, 3, 3, 3, 3, 3, 3, 0, 1, 2, c],
+                [d, 4, 3, 3, 3, 3, 3, 3, 0, 1, 2, 2],
+                [d, 0, 3, 3, 3, 3, 3, 3, 0, 1, 2, 2],
                 [d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, d]
             ]
         }

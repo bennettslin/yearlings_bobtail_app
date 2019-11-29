@@ -47,7 +47,6 @@ export const BENNETT_EXTERIOR_COLOUR = 'bennettExterior'
 export const LIZ_EXTERIOR_COLOUR = 'lizExterior'
 export const BANCROFT_EXTERIOR_COLOUR = 'bancroftExterior'
 export const CINEMA_EXTERIOR_COLOUR = 'cinemaExterior'
-export const DOOR_COLOUR = 'door'
 export const PLATFORM_COLOUR = 'platform'
 export const STAGE_PLATFORM_COLOUR = 'stagePlatform'
 export const FURNITURE_COLOUR = 'furniture'
@@ -120,8 +119,7 @@ const HSLA_MAP = {
     [LIZ_EXTERIOR_COLOUR]: { h: 180, s: 50, l: 75 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 150, s: 50, l: 75 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 0, s: 50, l: 75 },
-    /* E. */
-    [DOOR_COLOUR]: { h: 330, s: 70, l: 75 },
+
     /* P. */
     [PLATFORM_COLOUR]: { h: 30, s: 50, l: 25 },
     [STAGE_PLATFORM_COLOUR]: { h: 3, s: 13, l: 34 },
