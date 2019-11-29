@@ -85,7 +85,7 @@ const HSLA_MAP = {
     [BANCROFT_GATE_COLOUR]: { h: 120, s: 50, l: 75 },
     [LIZ_GATE_COLOUR]: { h: 150, s: 50, l: 75 },
     /* C. */
-    [CEILING_COLOUR]: { h: 22, s: 6, l: 85 },
+    [CEILING_COLOUR]: { h: 22, s: 10, l: 80 },
     [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },
     /* F. */
     [SCHOOL_FLOOR_COLOUR]: { h: 210, s: 35, l: 61 },
@@ -129,7 +129,7 @@ const HSLA_MAP = {
     [CINEMA_EXTERIOR_COLOUR]: { h: 0, s: 50, l: 75 },
 
     /* P. */
-    [PLATFORM_COLOUR]: { h: 30, s: 50, l: 25 },
+    [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
     [STAGE_PLATFORM_COLOUR]: { h: 3, s: 13, l: 34 },
     /* R. */
     [FURNITURE_COLOUR]: { h: 25, s: 44, l: 46 },

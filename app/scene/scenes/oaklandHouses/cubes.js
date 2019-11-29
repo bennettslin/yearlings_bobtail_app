@@ -5,8 +5,8 @@ import {
 
 import {
     GROUND_COLOUR as G,
-    PAVEMENT_COLOUR as V,
-    STREET_COLOUR as T
+    STREET_COLOUR as T,
+    PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
 const CUBES = {

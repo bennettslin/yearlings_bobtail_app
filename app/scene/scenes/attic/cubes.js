@@ -4,7 +4,6 @@ import {
     CEILING_COLOUR as C,
     DARK_FLOOR_COLOUR as F,
     ATTIC_WALL_COLOUR as W,
-    PLATFORM_COLOUR as P,
     ATTIC_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
@@ -27,8 +26,8 @@ const CUBES = {
                 [W, F, U, U, U, U, F, W, F, F, F, W],
                 [W, F, U, U, U, U, F, W, F, F, F, W],
                 [W, F, U, U, U, U, F, W, F, F, F, W],
-                [W, F, F, F, F, F, F, W, P, P, F, W],
-                [W, F, F, F, F, F, F, W, P, P, F, W]
+                [W, F, F, F, F, F, F, W, F, F, F, W],
+                [W, F, F, F, F, F, F, W, F, F, F, W]
             ],
             zIndices: [
                 [g],

@@ -2,11 +2,10 @@ import { BASEMENT_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_COLOUR as D,
-    GROUND_COLOUR as G,
+    PAVEMENT_COLOUR as V,
     CEILING_COLOUR as C,
     DIRT_FLOOR_COLOUR as F,
     BASEMENT_WALL_COLOUR as W,
-    PLATFORM_COLOUR as P,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
 
@@ -31,11 +30,11 @@ const CUBES = {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [G],
-                [W, W, G, G, W],
-                [W, F, P, P, F, F, F, F, F, F, F, W],
-                [W, F, P, P, F, F, F, F, S, F, F, W],
-                [W, F, P, P, F, S, F, F, F, F, F, W],
+                [V],
+                [W, W, V, V, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
+                [W, F, F, F, F, F, F, F, S, F, F, W],
+                [W, F, F, F, F, S, F, F, F, F, F, W],
                 [W, F, F, F, S, F, F, F, F, S, F, W]
             ],
             zIndices: [

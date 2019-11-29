@@ -2,9 +2,9 @@ import { BASEMENT_COUCH_KEY } from '../../../constants/scene/scenes'
 
 import {
     CEILING_COLOUR as C,
+    PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
     BASEMENT_WALL_COLOUR as W,
-    PLATFORM_COLOUR as P,
     FURNITURE_COLOUR as R,
     BENNETT_COUCH_COLOUR as U
 } from '../../cubes/colours'
@@ -33,8 +33,8 @@ const CUBES = {
             hslaColours: [
                 [W],
                 [W, R, U, U, U, U, U, U, R, R, F, W],
-                [W, R, U, U, U, U, U, U, F, P, P, P],
-                [W, F, U, U, U, U, U, U, F, P, P, P],
+                [W, R, U, U, U, U, U, U, F, F, F, V],
+                [W, F, U, U, U, U, U, U, F, F, F, V],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
             zIndices: [

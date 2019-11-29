@@ -5,13 +5,12 @@ import {
 
 import {
     GROUND_COLOUR as G,
+    PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
     BASEMENT_WALL_COLOUR as W,
-    PLATFORM_COLOUR as P,
     BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { c } from '../../cubes/zIndices'
 
 import { DEFAULT_CEILING } from '../basement/cubes'
@@ -21,10 +20,10 @@ const CUBES = {
         ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
-                [G],
-                [W, W, G, G, W],
-                [W, F, P, P, F, F, F, F, F, F, F, W],
-                [W, F, P, P, F, U, U, U, U, U, U, W],
+                [V],
+                [W, W, V, V, W],
+                [W, F, F, F, F, F, F, F, F, F, F, W],
+                [W, F, F, F, F, U, U, U, U, U, U, W],
                 [W, F, F, F, F, U, U, U, U, U, U, W],
                 [W, F, F, F, F, F, F, F, F, F, F, W]
             ],
@@ -42,9 +41,9 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [G, F, P, P, F, F, F, F, F, F, F, G],
-                [G, F, P, P, F, F, F, F, F, F, F, G],
-                [G, F, P, P, F, U, U, U, U, U, U, G],
+                [G, F, V, V, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, U, U, U, U, U, U, G],
                 [G, F, F, F, F, U, U, U, U, U, U, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G]
             ],
