@@ -8,7 +8,8 @@ import {
 } from '../../constants/scene/things'
 import {
     LIZ_COUCH_KEY,
-    LIZ_COUCH_SEAT_KEY
+    LIZ_COUCH_SEAT_KEY,
+    LIZ_COUCH_DARK_KEY
 } from '../../constants/scene/scenes'
 import {
     TIME_ANYTIME,
@@ -270,7 +271,7 @@ export default [
                 [OPAL_GAZING]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_DARK_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN
@@ -301,7 +302,7 @@ export default [
                 [PEAHEN]: true
             }
         },
-        cubes: LIZ_COUCH_KEY,
+        cubes: LIZ_COUCH_DARK_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_AUTUMN

@@ -11,6 +11,7 @@ import {
 import {
     DISHROOM_KEY,
     BENNETT_BED_KEY,
+    BENNETT_BED_DARK_KEY,
     WAITING_ROOM_KEY,
     LIZ_BED_OPEN_KEY,
     LIZ_GATE_KEY,
@@ -328,7 +329,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BENNETT_BED_KEY,
+        cubes: BENNETT_BED_DARK_KEY,
         sky: {
             time: TIME_ANYTIME,
             season: SEASON_WINTER

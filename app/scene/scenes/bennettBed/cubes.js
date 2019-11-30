@@ -1,4 +1,7 @@
-import { BENNETT_BED_KEY } from '../../../constants/scene/scenes'
+import {
+    BENNETT_BED_KEY,
+    BENNETT_BED_DARK_KEY
+} from '../../../constants/scene/scenes'
 
 import {
     PAVEMENT_COLOUR as V,
@@ -19,6 +22,40 @@ import { d, f, g } from '../../cubes/zIndices'
  */
 const CUBES = {
     [BENNETT_BED_KEY]: {
+        ceiling: {
+            hslaColours: [
+                [X],
+                [C],
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W]
+            ],
+            zIndices: [
+                [1],
+                [f],
+                [1, 1, d, d, d, 1, d, d, d, d, 1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1]
+            ]
+        },
+        floor: {
+            hslaColours: [
+                [V],
+                [V],
+                [F, F, F, F, F, F, W, W, W, W, F],
+                [L, F, L, F, L, U, U, U, U, U, U, F],
+                [F, L, F, L, F, U, U, U, U, U, U, L],
+                [L, F, L, F, L, F, L, F, L, F, L, F]
+            ],
+            zIndices: [
+                [1],
+                [1],
+                [1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 1],
+                [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
+                [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
+                [1]
+            ]
+        }
+    },
+    [BENNETT_BED_DARK_KEY]: {
         ceiling: {
             hslaColours: [
                 [X],
