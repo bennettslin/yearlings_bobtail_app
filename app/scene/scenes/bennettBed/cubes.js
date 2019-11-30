@@ -1,17 +1,17 @@
 import { BENNETT_BED_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
     CEILING_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
+    BENNETT_EXTERIOR_COLOUR as X,
     BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { d, g, k } from '../../cubes/zIndices'
+import { d, f, g } from '../../cubes/zIndices'
 
 /**
  * Blinds and door should match in courtyard.
@@ -21,34 +21,34 @@ const CUBES = {
     [BENNETT_BED_KEY]: {
         ceiling: {
             hslaColours: [
+                [X],
                 [C],
-                [D],
-                [C, C, W, W, W, C, W, W, W, W, C],
-                [C]
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [g],
-                [k],
-                [g, g, d, d, d, g, d, d, d, d, g],
-                [g]
+                [1],
+                [f],
+                [1, 1, d, d, d, 1, d, d, d, d, 1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [V, V, V, V, V, V, V, V, V, V, V, W],
-                [W, W, F, L, F, W],
-                [W, F, L, F, L, U, U, U, U, U, U, W],
-                [W, L, F, L, F, U, U, U, U, U, U, W],
-                [W, F, L, F, L, F, L, F, L, F, L, W]
+                [V],
+                [V],
+                [F, F, F, F, F, F, W, W, W, W, F],
+                [L, F, L, F, L, U, U, U, U, U, U, F],
+                [F, L, F, L, F, U, U, U, U, U, U, L],
+                [L, F, L, F, L, F, L, F, L, F, L, F]
             ],
             zIndices: [
-                [g],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, g, 1, 1, 1, g, 6, 6, 6, 6, g],
-                [g, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, g],
-                [g, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [1],
+                [1],
+                [1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 1],
+                [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
+                [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
+                [1]
             ]
         }
     }

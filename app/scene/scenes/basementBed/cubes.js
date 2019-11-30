@@ -4,11 +4,8 @@ import {
     GROUND_COLOUR as G,
     PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
-    // BASEMENT_WALL_COLOUR as W,
     BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
-
-// import { c } from '../../cubes/zIndices'
 
 import { DEFAULT_CEILING } from '../basement/cubes'
 

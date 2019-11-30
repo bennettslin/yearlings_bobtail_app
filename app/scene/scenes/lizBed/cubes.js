@@ -35,32 +35,32 @@ const CUBES = {
     [LIZ_BED_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
+                [W, F, L, F, L, F, L, F, L, F, L, W],
                 [W, W, R, U, U, U, U, U, W],
                 [W]
             ],
             zIndices: [
-                [g],
-                [g, g, e, 4, 4, 4, 4, 4, g],
-                [g]
+                [1],
+                [1, g, e, 4, 4, 4, 4, 4, g, g, g, 1],
+                [1, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
-                [W, F, L, F, L, F, L, F, L, F, L, W],
-                [W, F, L, U, U, U, U, U, L, F, L, W],
-                [W, F, L, U, U, U, U, U, L, F, L, W],
-                [W, F, L, U, U, U, U, U, L, F, L, W],
-                [W, F, R, U, U, U, U, U, L, F, L, W],
-                [W, F, L, F, L, F, L, F, L, F, L, W]
+                [L, F, L, F, L, F, L, F, L, F, L, F],
+                [L, F, L, U, U, U, U, U, L, F, L, F],
+                [L, F, L, U, U, U, U, U, L, F, L, F],
+                [L, F, L, U, U, U, U, U, L, F, L, F],
+                [L, F, R, U, U, U, U, U, L, F, L, F],
+                [L, F, L, F, L, F, L, F, L, F, L, F]
             ],
             zIndices: [
-                [g],
-                [g, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, g],
-                [g, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, g],
-                [g, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, g],
-                [g, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, g],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [1],
+                [1, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 1],
+                [1, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 1],
+                [1, 1, 1, 4, 4, 4, 4, 4, 1, 1, 1, 1],
+                [1, 1, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1],
+                [1]
             ]
         }
     },

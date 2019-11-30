@@ -13,36 +13,33 @@ const CUBES = {
     [CLUB_SIDE_STAGE_KEY]: {
         ceiling: {
             hslaColours: [
-                [C],
-                [C],
-                [W, C],
-                [W, C],
-                [C]
+                [W],
+                [W, C]
             ],
             zIndices: [
-                [g],
-                [g],
+                [1],
+                [1, g],
                 [e, g],
                 [e, g],
-                [g]
+                [1, g]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, P, P, P, P, P, P, P, P, P, F],
+                [F],
                 [F, P, P, P, P, P, P, P, P, P, F],
                 [F, P, P, P, P, P, P, P, P, P, F],
-                [W, P, P, P, P, P, P, P, P, P, F],
-                [W, F]
+                [F, P, P, P, P, P, P, P, P, P, F],
+                [F, P, P, P, P, P, P, P, P, P, F],
+                [F]
             ],
             zIndices: [
-                [g],
-                [g, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1],
+                [1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
                 [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 1],
                 [1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [g, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [g, 1]
+                [1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
+                [1]
             ]
         }
     }

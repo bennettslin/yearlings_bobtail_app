@@ -13,38 +13,34 @@ const CUBES = {
     [CLUB_SIDE_CROWD_KEY]: {
         ceiling: {
             hslaColours: [
-                [C],
-                [C],
-                [C],
-                [C, C, C, C, C, C, C, C, C, C, C, W],
-                [C, C, C, C, C, C, C, C, C, C, C, W],
-                [C]
+                [W],
+                [C, C, C, C, C, C, C, C, C, C, C, W]
             ],
             zIndices: [
-                [g],
-                [g],
-                [g],
+                [1],
+                [g, g, g, g, g, g, g, g, g, g, g, 1],
+                [g, g, g, g, g, g, g, g, g, g, g, 1],
                 [g, g, g, g, g, g, g, g, g, g, g, d],
                 [g, g, g, g, g, g, g, g, g, g, g, d],
-                [g]
+                [g, g, g, g, g, g, g, g, g, g, g, 1]
             ]
         },
         floor: {
             hslaColours: [
                 [W],
-                [P, P, P, P, F, F, F, F, F, F, F, W],
-                [P, P, P, P, F, F, F, F, F, F, F, W],
                 [P, P, P, P, F],
                 [P, P, P, P, F],
-                [F, F, F, F, F, F, F, F, F, F, F, W]
+                [P, P, P, P, F],
+                [P, P, P, P, F],
+                [F]
             ],
             zIndices: [
-                [g],
-                [3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
-                [3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 1, g],
+                [1],
                 [3, 3, 3, 3, 1],
                 [3, 3, 3, 3, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [3, 3, 3, 3, 1],
+                [3, 3, 3, 3, 1],
+                [1]
             ]
         }
     }

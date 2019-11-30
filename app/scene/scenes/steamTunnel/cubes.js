@@ -2,8 +2,7 @@ import { STEAM_TUNNEL_KEY } from '../../../constants/scene/scenes'
 
 import {
     DIRT_FLOOR_COLOUR as F,
-    CEILING_COLOUR as C,
-    STEAM_TUNNEL_WALL_COLOUR as W
+    UNDERGROUND_WALL_COLOUR as W
 } from '../../cubes/colours'
 
 import { b, d } from '../../cubes/zIndices'
@@ -12,38 +11,23 @@ const CUBES = {
     [STEAM_TUNNEL_KEY]: {
         ceiling: {
             hslaColours: [
-                [C],
-                [C],
-                [C],
-                [W, C, C, C, C, C, C, C, C, C, C, W],
-                [W, C, C, C, C, C, C, C, C, C, C, W],
-                [C]
+                [W]
             ],
             zIndices: [
-                [d],
-                [d],
-                [d],
+                [0],
+                [0, d, d, d, d, d, d, d, d, d, d, 0],
+                [0, d, d, d, d, d, d, d, d, d, d, 0],
                 [b, d, d, d, d, d, d, d, d, d, d, b],
                 [b, d, d, d, d, d, d, d, d, d, d, b],
-                [d]
+                [0, d, d, d, d, d, d, d, d, d, d, 0]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [F, F, F, F, F, F, F, F, F, F, F, F],
-                [F, F, F, F, F, F, F, F, F, F, F, F],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [F]
             ],
             zIndices: [
-                [d],
-                [d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, d],
-                [d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, d],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-                [d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, d]
+                [0]
             ]
         }
     }

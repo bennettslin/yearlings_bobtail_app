@@ -6,6 +6,7 @@ import {
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_FLOOR_DARK_COLOUR as L,
+    BENNETT_WALL_COLOUR as W,
     BENNETT_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
@@ -20,7 +21,7 @@ const CUBES = {
     [COURTYARD_KEY]: {
         ceiling: {
             hslaColours: [
-                [X],
+                [X, W],
                 [X],
                 [X, C],
                 [X, C, D],
@@ -38,7 +39,7 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [V],
+                [V, F],
                 [V, F, X, X, X, X, F, F, L, F, F],
                 [V],
                 [V],

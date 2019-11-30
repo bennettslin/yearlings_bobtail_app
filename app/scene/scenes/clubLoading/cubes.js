@@ -5,6 +5,7 @@ import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
+    CLUB_WALL_COLOUR as W,
     EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
@@ -15,31 +16,28 @@ const CUBES = {
     [CLUB_LOADING]: {
         ceiling: {
             hslaColours: [
+                [C, W],
                 [C],
-                [C],
-                [C, C, C, C, X, X, X, C],
+                [C, X],
                 [C],
                 [D]
             ],
             zIndices: [
+                [f, 1],
                 [f],
-                [f],
-                [f, f, f, f, d, d, d, f],
+                [f, 1, 1, 1, d, d, d, 1],
                 [f],
                 [k]
             ]
         },
         floor: {
             hslaColours: [
-                [V, X],
-                [V, X, F],
-                [V, X, X, X, F, F, F, X],
+                [V, F],
+                [V, F],
+                [V, F],
                 [V]
             ],
             zIndices: [
-                [1, f],
-                [1, f, 1],
-                [1, f, f, f, 1, 1, 1, f],
                 [1]
             ]
         }
