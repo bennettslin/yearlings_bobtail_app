@@ -5056,5 +5056,10 @@ export default [
         taskName: `Logged work on cube colours.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Work on scene cubes, including ceiling superimposed over floor.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
