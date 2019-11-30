@@ -20,8 +20,8 @@ const CUBES = {
                 [0, g, g, g, g, g, g, g, g, g, g, 5],
                 [0, g, g, g, g, g, g, g, g, g, g, 5],
                 [e, g, g, 5, 5, 5, 5, 5, f, f, 5, 5],
-                [e, g, g, 5, g, g, g, g, g, g, g, 5],
-                [0, g, g, 5, g, g, g, g, g, g, g, 5]
+                [e, g, g, g, g, g, g, g, g, g, g, 5],
+                [0, g, g, g, g, g, g, g, g, g, g, 5]
             ]
         },
         floor: {

@@ -99,7 +99,7 @@ const HSLA_MAP = {
     [BEDROOM_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
     [DARK_WALL_COLOUR]: { h: 225, s: 25, l: 50 },
     [SCHOOL_WALL_COLOUR]: { h: 120, s: 50, l: 75 },
-    [BENNETT_WALL_COLOUR]: { h: 270, s: 50, l: 75 },
+    [BENNETT_WALL_COLOUR]: { h: 9, s: 64, l: 57 },
     [LIZ_WALL_COLOUR]: { h: 210, s: 50, l: 75 },
     [UNDERGROUND_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
     [CLUB_WALL_COLOUR]: { h: 215, s: 50, l: 75 },
