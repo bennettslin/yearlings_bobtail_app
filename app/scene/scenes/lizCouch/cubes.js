@@ -27,19 +27,16 @@ import { d, g, k } from '../../cubes/zIndices'
 const DEFAULT_CEILING = {
     hslaColours: [
         [D],
-        [C, C, C, C, W, W, W, W, W, C],
-        [C],
-        [C, C, C, C, C, C, C, C, C, C, C, W],
-        [C, C, C, C, C, C, C, C, C, C, C, W],
-        [C]
+        [W],
+        [W, C, C, C, C, C, C, C, C, C, C, W]
     ],
     zIndices: [
         [k],
-        [g, g, g, g, d, d, d, d, d, g],
-        [g],
-        [g, g, g, g, g, g, g, g, g, g, g, d],
-        [g, g, g, g, g, g, g, g, g, g, g, d],
-        [g]
+        [1, 1, 1, 1, d, d, d, d, d, 1],
+        [1, g, g, g, g, g, g, g, g, g, g, 1],
+        [1, g, g, g, g, g, g, g, g, g, g, d],
+        [1, g, g, g, g, g, g, g, g, g, g, d],
+        [1, g, g, g, g, g, g, g, g, g, g, 1]
     ]
 }
 
@@ -49,19 +46,19 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
-                [W, W, W, W, W, W, W, W, W, W],
-                [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, L],
-                [W, U, U, U, F],
-                [W, L, L, L, L, L, L, L, L, L, L, W]
+                [F, F, F, F, W, W, W, W, W, F],
+                [F, U, U, U, F],
+                [F, U, U, U, F],
+                [F, U, U, U, F],
+                [F]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
-                [g, g, g, g, 6, 6, 6, 6, 6, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 4, 4, 1],
-                [g, 7, 4, 4, 1],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
+                [1, 7, 4, 4, 1],
+                [1, 7, 4, 4, 1],
+                [1, 7, 4, 4, 1],
+                [1]
             ]
         }
     },
@@ -70,19 +67,19 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
-                [W, W, W, W, W, W, W, W, W, W],
-                [W, U, U, U, F, F, F, F, F, F, F, W],
-                [W, U, U, U, L, L, L, L, L, S, L],
-                [W, U, U, U, F],
-                [W, L, L, L, L, L, L, L, L, L, L, W]
+                [F, F, F, F, W, W, W, W, W, F],
+                [F, U, U, U, F],
+                [F, U, U, U, F, F, F, F, F, S, F],
+                [F, U, U, U, F],
+                [F]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
-                [g, g, g, g, 6, 6, 6, 6, 6, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, g],
-                [g, 7, 4, 4, 1, 1, 1, 1, 1, 3, 1],
-                [g, 7, 4, 4, 1],
-                [g, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, g]
+                [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
+                [1, 7, 4, 4, 1],
+                [1, 7, 4, 4, 1, 1, 1, 1, 1, 3, 1],
+                [1, 7, 4, 4, 1],
+                [1]
             ]
         }
     },

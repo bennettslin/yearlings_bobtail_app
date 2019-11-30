@@ -9,7 +9,7 @@ import {
     CEILING_COLOUR as C,
     LINOLEUM_FLOOR_COLOUR as F,
     LINOLEUM_FLOOR_DARK_COLOUR as L,
-    BATHROOM_WALL_COLOUR as W,
+    SOFT_WALL_COLOUR as W,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 

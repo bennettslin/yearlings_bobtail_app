@@ -26,19 +26,16 @@ export const LINOLEUM_FLOOR_DARK_COLOUR = 'linoleumFloorDark'
 export const BEDROOM_FLOOR_DARK_COLOUR = 'bedroomFloorDark'
 export const BENNETT_FLOOR_DARK_COLOUR = 'bennettFloorDark'
 export const LIZ_FLOOR_DARK_COLOUR = 'lizFloorDark'
-export const BATHROOM_WALL_COLOUR = 'bathroomWall'
+export const SOFT_WALL_COLOUR = 'softWall'
 export const BEDROOM_WALL_COLOUR = 'bedroomWall'
-export const DARK_WALL_COLOUR = 'taiwaneseWall'
-export const VAN_NUYS_WALL_COLOUR = 'vanNuysWall'
+export const DARK_WALL_COLOUR = 'darkWall'
+export const SCHOOL_WALL_COLOUR = 'schoolWall'
 export const BENNETT_WALL_COLOUR = 'bennettWall'
 export const LIZ_WALL_COLOUR = 'lizWall'
-export const BASEMENT_WALL_COLOUR = 'basementWall'
+export const UNDERGROUND_WALL_COLOUR = 'basementWall'
 export const CLUB_WALL_COLOUR = 'clubWall'
-export const BACKSTAGE_WALL_COLOUR = 'backstageWall'
-export const DISHROOM_WALL_COLOUR = 'dishroomWall'
-export const MUSEUM_WALL_COLOUR = 'museumWall'
-export const UNDERGROUND_WALL_COLOUR = 'steamTunnelWall'
-export const WAITING_ROOM_WALL_COLOUR = 'waitingRoomWall'
+export const INDUSTRIAL_WALL_COLOUR = 'industrialWall'
+export const FANCY_WALL_COLOUR = 'fancyWall'
 export const EXTERIOR_COLOUR = 'taiwaneseExterior'
 export const FAMILY_EXTERIOR_COLOUR = 'familyExterior'
 export const VAN_NUYS_EXTERIOR_COLOUR = 'vanNuysExterior'
@@ -98,19 +95,16 @@ const HSLA_MAP = {
     [BENNETT_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     [LIZ_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     /* W. */
-    [BATHROOM_WALL_COLOUR]: { h: 250, s: 50, l: 75 },
+    [SOFT_WALL_COLOUR]: { h: 250, s: 50, l: 75 },
     [BEDROOM_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
     [DARK_WALL_COLOUR]: { h: 225, s: 25, l: 50 },
-    [VAN_NUYS_WALL_COLOUR]: { h: 120, s: 50, l: 75 },
+    [SCHOOL_WALL_COLOUR]: { h: 120, s: 50, l: 75 },
     [BENNETT_WALL_COLOUR]: { h: 270, s: 50, l: 75 },
     [LIZ_WALL_COLOUR]: { h: 210, s: 50, l: 75 },
-    [BASEMENT_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
-    [CLUB_WALL_COLOUR]: { h: 215, s: 50, l: 75 },
-    [BACKSTAGE_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
-    [DISHROOM_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
-    [MUSEUM_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
     [UNDERGROUND_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
-    [WAITING_ROOM_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
+    [CLUB_WALL_COLOUR]: { h: 215, s: 50, l: 75 },
+    [INDUSTRIAL_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
+    [FANCY_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
     /* X. */
     [EXTERIOR_COLOUR]: { h: 31, s: 16, l: 75 },
     [FAMILY_EXTERIOR_COLOUR]: { h: 220, s: 50, l: 75 },

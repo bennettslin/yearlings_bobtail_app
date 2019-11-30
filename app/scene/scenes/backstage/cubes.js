@@ -3,7 +3,7 @@ import { BACKSTAGE_KEY } from '../../../constants/scene/scenes'
 import {
     CEILING_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
-    BACKSTAGE_WALL_COLOUR as W
+    INDUSTRIAL_WALL_COLOUR as W
 } from '../../cubes/colours'
 
 import { g } from '../../cubes/zIndices'

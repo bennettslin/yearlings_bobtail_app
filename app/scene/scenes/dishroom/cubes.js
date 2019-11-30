@@ -4,7 +4,7 @@ import {
     CEILING_COLOUR as C,
     LINOLEUM_FLOOR_COLOUR as F,
     LINOLEUM_FLOOR_DARK_COLOUR as L,
-    DISHROOM_WALL_COLOUR as W,
+    SCHOOL_WALL_COLOUR as W,
     CONCRETE_PLATFORM_COLOUR as P,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'

@@ -1,51 +1,46 @@
 import { EL_TORITO_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     FANCY_FLOOR_COLOUR as F,
+    FANCY_WALL_COLOUR as W,
     EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
-import { e, f, g, k } from '../../cubes/zIndices'
+import { e, f } from '../../cubes/zIndices'
 
 const CUBES = {
     [EL_TORITO_KEY]: {
         ceiling: {
             hslaColours: [
+                [W],
+                [W, C, C, C, C, C, C, C, C, C, C, W],
+                [X],
                 [C],
-                [C],
-                [C, C, C, X, X, X, X, X, X, C],
-                [C],
-                [C],
-                [D]
+                [C, X, C, C, C, C, C, C, C, C, X, C],
+                [C]
             ],
             zIndices: [
-                [g],
-                [g],
-                [f, f, f, e, e, e, e, e, e, f],
+                [2],
+                [2, f, f, f, f, f, f, f, f, f, f, 2],
+                [1, 1, 1, e, e, e, e, e, e, 1, 1, 1],
                 [f],
-                [f],
-                [k]
+                [f, 1, f, f, f, f, f, f, f, f, 1, f],
+                [f]
             ]
         },
         floor: {
             hslaColours: [
-                [X],
                 [F],
-                [X, X, X, V, V, V, V, V, V, X],
-                [V],
-                [V, X, V, V, V, V, V, V, V, V, X, V],
+                [F],
                 [V]
             ],
             zIndices: [
-                [g],
                 [2],
-                [f, f, f, 2, 2, 2, 2, 2, 2, f],
+                [2],
                 [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
-                [1, f, 1, 1, 1, 1, 1, 1, 1, 1, f, 1],
+                [1, 1, 1, 2, 2, 2, 2, 2, 2, 1],
                 [1]
             ]
         }

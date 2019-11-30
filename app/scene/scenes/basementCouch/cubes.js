@@ -1,10 +1,9 @@
 import { BASEMENT_COUCH_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR as C,
     PAVEMENT_COLOUR as V,
     DIRT_FLOOR_COLOUR as F,
-    BASEMENT_WALL_COLOUR as W,
+    UNDERGROUND_WALL_COLOUR as W,
     FURNITURE_COLOUR as R,
     BENNETT_COUCH_COLOUR as U
 } from '../../cubes/colours'
@@ -15,34 +14,30 @@ const CUBES = {
     [BASEMENT_COUCH_KEY]: {
         ceiling: {
             hslaColours: [
-                [C],
-                [C],
-                [C, C, C, C, C, C, C, C, C, C, C, W],
-                [C, C, C, C, C, C, C, C, C, C, C, W],
-                [C]
+                [W]
             ],
             zIndices: [
-                [d],
-                [d],
-                [d, d, d, d, d, d, d, d, d, d, d, c],
-                [d, d, d, d, d, d, d, d, d, d, d, c],
-                [d]
+                [2],
+                [2, d, d, d, d, d, d, d, d, d, d, 2],
+                [2, d, d, d, d, d, d, d, d, d, d, c],
+                [2, d, d, d, d, d, d, d, d, d, d, c],
+                [2, d, d, d, d, d, d, d, d, d, d, 2]
             ]
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, R, U, U, U, U, U, U, R, R, F, W],
-                [W, R, U, U, U, U, U, U, F, F, F, V],
-                [W, F, U, U, U, U, U, U, F, F, F, V],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [V],
+                [V, R, U, U, U, U, U, U, R, R, F, V],
+                [V, R, U, U, U, U, U, U, F, V, V, V],
+                [V, F, U, U, U, U, U, U, F, V, V, V],
+                [V, F, F, F, F, F, F, F, F, F, F, V]
             ],
             zIndices: [
-                [d],
-                [d, 4, 6, 6, 6, 6, 6, 6, 3, 3, 0, d],
-                [d, 4, 3, 3, 3, 3, 3, 3, 0, 1, 2, 2],
-                [d, 0, 3, 3, 3, 3, 3, 3, 0, 1, 2, 2],
-                [d, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, d]
+                [2],
+                [2, 4, 6, 6, 6, 6, 6, 6, 3, 3, 0, 2],
+                [2, 4, 3, 3, 3, 3, 3, 3, 0, 1, 2, 2],
+                [2, 0, 3, 3, 3, 3, 3, 3, 0, 1, 2, 2],
+                [2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
             ]
         }
     }

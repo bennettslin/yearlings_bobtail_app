@@ -3,7 +3,7 @@ import { VAN_NUYS_HALLWAY_KEY } from '../../../constants/scene/scenes'
 import {
     CEILING_COLOUR as C,
     SCHOOL_FLOOR_COLOUR as F,
-    VAN_NUYS_WALL_COLOUR as W,
+    SCHOOL_WALL_COLOUR as W,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
 
