@@ -85,19 +85,19 @@ const HSLA_MAP = {
     [OLD_FLOOR_COLOUR]: { h: 35, s: 13, l: 46 },
     [FANCY_FLOOR_COLOUR]: { h: 1, s: 43, l: 36 },
     [BEDROOM_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
-    [DARK_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
     [BENNETT_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
     [LIZ_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
     [DIRT_FLOOR_COLOUR]: { h: 24, s: 25, l: 39 },
-    /* L */
+    /* L. */
     [LINOLEUM_FLOOR_DARK_COLOUR]: { h: 85, s: 14, l: 57 },
     [BEDROOM_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     [BENNETT_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
     [LIZ_FLOOR_DARK_COLOUR]: { h: 215, s: 25, l: 50 },
+    /* Y. */
+    [DARK_FLOOR_COLOUR]: { h: 225, s: 25, l: 50 },
     /* W. */
     [SOFT_WALL_COLOUR]: { h: 250, s: 50, l: 75 },
     [BEDROOM_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
-    [DARK_WALL_COLOUR]: { h: 225, s: 25, l: 50 },
     [SCHOOL_WALL_COLOUR]: { h: 120, s: 50, l: 75 },
     [BENNETT_WALL_COLOUR]: { h: 9, s: 64, l: 57 },
     [LIZ_WALL_COLOUR]: { h: 210, s: 50, l: 75 },
@@ -113,6 +113,8 @@ const HSLA_MAP = {
     [LIZ_EXTERIOR_COLOUR]: { h: 180, s: 50, l: 75 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 0, s: 50, l: 75 },
+    /* Z. */
+    [DARK_WALL_COLOUR]: { h: 225, s: 25, l: 50 },
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 250, s: 50, l: 75 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },

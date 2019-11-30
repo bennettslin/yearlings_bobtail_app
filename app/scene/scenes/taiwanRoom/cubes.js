@@ -1,8 +1,8 @@
 import { TAIWAN_ROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DARK_FLOOR_COLOUR as F,
-    DARK_WALL_COLOUR as W,
+    DARK_FLOOR_COLOUR as Y,
+    DARK_WALL_COLOUR as Z,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
@@ -13,7 +13,7 @@ const CUBES = {
     [TAIWAN_ROOM_KEY]: {
         ceiling: {
             hslaColours: [
-                [W]
+                [Z]
             ],
             zIndices: [
                 [0],
@@ -26,12 +26,12 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [F],
-                [F],
-                [F],
-                [W, F],
-                [W, F, F, F, F, R, R, F],
-                [F]
+                [Y],
+                [Y],
+                [Y],
+                [Z, Y],
+                [Z, Y, Y, Y, Y, R, R, Y],
+                [Y]
             ],
             zIndices: [
                 [g],

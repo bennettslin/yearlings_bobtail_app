@@ -72,7 +72,7 @@ export const LIZ_BED_PHONE_KEY = 'lizBedOpenPhone'
 
 export const LIZ_COUCH_KEY = 'lizCouch'
 export const LIZ_COUCH_SEAT_KEY = 'lizCouchSeat'
-export const LIZ_COUCH_DARK_KEY = 'lizCouch'
+export const LIZ_COUCH_DARK_KEY = 'lizCouchDark'
 export const LIZ_COUCH_THOUGHT_KEY = 'lizCouchThought'
 export const LIZ_GATE_KEY = 'lizGate'
 export const LIZ_GATE_STREET_KEY = 'lizGateStreet'

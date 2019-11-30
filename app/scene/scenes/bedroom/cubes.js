@@ -12,7 +12,9 @@ import {
     CEILING_COLOUR as C,
     BEDROOM_FLOOR_COLOUR as F,
     BEDROOM_FLOOR_DARK_COLOUR as L,
+    DARK_FLOOR_COLOUR as Y,
     BEDROOM_WALL_COLOUR as W,
+    DARK_WALL_COLOUR as Z,
     FURNITURE_COLOUR as R,
     CAPTAIN_BED_COLOUR as U,
     SEAT_COLOUR as S
@@ -54,28 +56,30 @@ const DEFAULT_CEILING = {
     ]
 }
 
+const DEFAULT_FLOOR = {
+    hslaColours: [
+        [G, G, G, G, G, F, G, F, F, F, G],
+        [G, G, G, W, W, F, G, U, U, F, G],
+        [G, G, W, W, R, F, F, U, U, U, F, G],
+        [F, W, R, R, F, F, F, U, U, U, F, G],
+        [F, F, F, F, F, F, F, U, F, F, F, G],
+        [F, F, L, L, F, F, L, L, F, F, L, F]
+    ],
+    zIndices: [
+        [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
+        [0, 0, 0, 6, 6, 1, 0, 7, 7, 1, 0],
+        [0, 0, 6, 6, 5, 1, 1, 7, 7, 7, 1, 0],
+        [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1, 0],
+        [1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 0],
+        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    ]
+}
+
 const CUBES = {
     [BEDROOM_KEY]: {
         slantDirection: LEFT,
         ceiling: DEFAULT_CEILING,
-        floor: {
-            hslaColours: [
-                [G, G, G, G, G, F, G, F, F, F, G],
-                [G, G, G, W, W, F, G, U, U, F, G],
-                [G, G, W, W, R, F, F, U, U, U, F, G],
-                [F, W, R, R, F, F, F, U, U, U, F, G],
-                [F, F, F, F, F, F, F, U, F, F, F, G],
-                [F, F, L, L, F, F, L, L, F, F, L, F]
-            ],
-            zIndices: [
-                [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
-                [0, 0, 0, 6, 6, 1, 0, 7, 7, 1, 0],
-                [0, 0, 6, 6, 5, 1, 1, 7, 7, 7, 1, 0],
-                [1, 6, 5, 5, 1, 1, 1, 7, 7, 7, 1, 0],
-                [1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-            ]
-        }
+        floor: DEFAULT_FLOOR
     },
     [BEDROOM_STOOL_KEY]: {
         slantDirection: LEFT,
@@ -125,12 +129,12 @@ const CUBES = {
         slantDirection: LEFT,
         ceiling: {
             hslaColours: [
-                [D, D, D, D, D, W, D, W, W, W, D],
-                [D, D, D, D, D, C, W, C, C, W, D],
-                [D, D, D, D, D, D, C, C, C, C, W, D],
-                [D, D, D, D, D, C, C, C, C, C, W, D],
-                [D, D, D, D, D, C, C, C, C, C, W, D],
-                [D, D, D, D, D, D, C, C, C, C, C, W]
+                [D, D, D, D, D, Z, D, Z, Z, Z, D],
+                [D, D, D, D, D, Z, Z, Z, Z, Z, D],
+                [D, D, D, D, D, D, Z, Z, Z, Z, Z, D],
+                [D, D, D, D, D, Z, Z, Z, Z, Z, Z, D],
+                [D, D, D, D, D, Z, Z, Z, Z, Z, Z, D],
+                [D, D, D, D, D, D, Z, Z, Z, Z, Z, Z]
             ],
             zIndices: [
                 [k, k, k, k, k, 1, k, 1, 1, 1, k],
@@ -143,19 +147,19 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [G, G, G, G, G, F, G, F, F, F, G],
-                [G, G, G, G, G, F, F, F, F, F, G],
-                [G, G, G, G, G, G, F, F, F, F, F, G],
-                [G, G, G, G, G, F, F, F, F, F, F, G],
-                [G, G, G, G, G, F, F, F, F, F, F, G],
-                [G, G, G, G, G, G, L, L, F, F, L, F]
+                [G, G, G, G, G, Y, G, Y, Y, Y, G],
+                [G, G, G, G, G, Y, Y, Y, Y, Y, G],
+                [G, G, G, G, G, G, Y, Y, Y, Y, Y, G],
+                [G, G, G, G, G, Y, Y, Y, Y, Y, Y, G],
+                [G, G, G, G, G, Y, Y, Y, Y, Y, Y, G],
+                [G, G, G, G, G, G, Y, Y, Y, Y, Y, Y]
             ],
             zIndices: [
                 [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0],
-                [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0],
+                [0, 0, 0, 0, 0, 1, 1, 7, 7, 1, 0],
+                [0, 0, 0, 0, 0, 0, 1, 7, 7, 7, 1, 0],
+                [0, 0, 0, 0, 0, 1, 1, 7, 7, 7, 1, 0],
+                [0, 0, 0, 0, 0, 1, 1, 7, 1, 1, 1, 0],
                 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1]
             ]
         }

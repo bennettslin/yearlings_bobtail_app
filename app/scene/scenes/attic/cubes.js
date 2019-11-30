@@ -1,8 +1,8 @@
 import { ATTIC_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DARK_FLOOR_COLOUR as F,
-    DARK_WALL_COLOUR as W,
+    DARK_FLOOR_COLOUR as Y,
+    DARK_WALL_COLOUR as Z,
     ATTIC_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
@@ -13,7 +13,7 @@ const CUBES = {
     [ATTIC_KEY]: {
         ceiling: {
             hslaColours: [
-                [W]
+                [Z]
             ],
             zIndices: [
                 [0],
@@ -22,12 +22,12 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [W],
-                [W, F, U, U, U, U, F, F, F, F, F, W],
-                [W, F, U, U, U, U, F, F, F, F, F, W],
-                [W, F, U, U, U, U, F, F, F, F, F, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W],
-                [W, F, F, F, F, F, F, F, F, F, F, W]
+                [Z],
+                [Z, Y, U, U, U, U, Y, Y, Y, Y, Y, Z],
+                [Z, Y, U, U, U, U, Y, Y, Y, Y, Y, Z],
+                [Z, Y, U, U, U, U, Y, Y, Y, Y, Y, Z],
+                [Z, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Z],
+                [Z, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Z]
             ],
             zIndices: [
                 [0],

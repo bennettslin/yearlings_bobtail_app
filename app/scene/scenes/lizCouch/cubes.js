@@ -13,7 +13,9 @@ import {
     CEILING_COLOUR as C,
     LIZ_FLOOR_COLOUR as F,
     LIZ_FLOOR_DARK_COLOUR as L,
+    DARK_FLOOR_COLOUR as Y,
     LIZ_WALL_COLOUR as W,
+    DARK_WALL_COLOUR as Z,
     LIZ_COUCH_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
@@ -41,27 +43,29 @@ const DEFAULT_CEILING = {
     ]
 }
 
+const DEFAULT_FLOOR = {
+    hslaColours: [
+        [A, A, A, A, A, V, V, V, A],
+        [F, F, F, F, W, W, W, W, W, F],
+        [F, U, U, U, F],
+        [F, U, U, U, F],
+        [F, U, U, U, F],
+        [F]
+    ],
+    zIndices: [
+        [7, 7, 7, 7, 7, 1, 1, 1, 7],
+        [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
+        [1, 7, 4, 4, 1],
+        [1, 7, 4, 4, 1],
+        [1, 7, 4, 4, 1],
+        [1]
+    ]
+}
+
 const CUBES = {
     [LIZ_COUCH_KEY]: {
         ceiling: DEFAULT_CEILING,
-        floor: {
-            hslaColours: [
-                [A, A, A, A, A, V, V, V, A],
-                [F, F, F, F, W, W, W, W, W, F],
-                [F, U, U, U, F],
-                [F, U, U, U, F],
-                [F, U, U, U, F],
-                [F]
-            ],
-            zIndices: [
-                [7, 7, 7, 7, 7, 1, 1, 1, 7],
-                [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
-                [1, 7, 4, 4, 1],
-                [1, 7, 4, 4, 1],
-                [1, 7, 4, 4, 1],
-                [1]
-            ]
-        }
+        floor: DEFAULT_FLOOR
     },
     [LIZ_COUCH_SEAT_KEY]: {
         ceiling: DEFAULT_CEILING,
@@ -85,24 +89,20 @@ const CUBES = {
         }
     },
     [LIZ_COUCH_DARK_KEY]: {
-        ceiling: DEFAULT_CEILING,
+        ceiling: {
+            hslaColours: [
+                [D],
+                [Z]
+            ],
+            zIndices: DEFAULT_CEILING.zIndices
+        },
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
-                [F, F, F, F, W, W, W, W, W, F],
-                [F, U, U, U, F],
-                [F, U, U, U, F],
-                [F, U, U, U, F],
-                [F]
+                [Y, Y, Y, Y, Z, Z, Z, Z, Z, Y],
+                [Y]
             ],
-            zIndices: [
-                [7, 7, 7, 7, 7, 1, 1, 1, 7],
-                [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
-                [1, 7, 4, 4, 1],
-                [1, 7, 4, 4, 1],
-                [1, 7, 4, 4, 1],
-                [1]
-            ]
+            zIndices: DEFAULT_FLOOR.zIndices
         }
     },
     [LIZ_COUCH_THOUGHT_KEY]: {
