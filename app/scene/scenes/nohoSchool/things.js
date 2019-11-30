@@ -27,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
     },
     [BUBBLE]: {
         [ESTHER_SPEECH]: {
-            yIndex: 2,
+            yIndex: 1,
             xPosition: 8.5,
             scaleFactor: 0.5
         }
@@ -41,7 +41,7 @@ const ARRANGEMENTS_THINGS = {
     },
     [DOOR]: {
         [NURSE_DOOR]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 8,
             scaleFactor: 0.45,
             sharedStyle: DOOR__SHARED
@@ -54,7 +54,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 1
         },
         [SAFEWAY_BAG]: {
-            yIndex: 4,
+            yIndex: 3,
             xPosition: 10,
             sharedStyle: PAPER_BAG__SHARED
         }

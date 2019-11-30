@@ -57,6 +57,8 @@ import {
 } from '../../constants/scene/things/cardboards'
 import {
     RECYCLABLES,
+    BUSH_SINGLE__COURTYARD,
+    BUSH_DOUBLE__COURTYARD,
     BERKELEY_LAMPPOST,
     SIGNPOST,
     BANCROFT_SHRUB,
@@ -105,7 +107,9 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [RECYCLABLES]: true
+                [RECYCLABLES]: true,
+                [BUSH_SINGLE__COURTYARD]: true,
+                [BUSH_DOUBLE__COURTYARD]: true
             },
             [DOOR]: {
                 [BLINDS_OUTSIDE__BENNETT]: true,

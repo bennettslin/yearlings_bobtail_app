@@ -4,8 +4,8 @@ import {
     FIXTURE
 } from '../../../constants/scene/things'
 import {
-    PORCH_PLANT__LEFT,
-    PORCH_PLANT__RIGHT
+    BUSH_SINGLE__PORCH_LEFT,
+    BUSH_SINGLE__PORCH_RIGHT
 } from '../../../constants/scene/things/cutouts'
 import { PORCH_DOOR } from '../../../constants/scene/things/doors'
 import { HAIRCUT_SCISSORS } from '../../../constants/scene/things/fixtures'
@@ -14,12 +14,12 @@ import { SCISSORS__SHARED } from '../../shared/household'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
-        [PORCH_PLANT__LEFT]: {
+        [BUSH_SINGLE__PORCH_LEFT]: {
             yIndex: 2,
             xPosition: 1.5,
             scaleFactor: 0.3
         },
-        [PORCH_PLANT__RIGHT]: {
+        [BUSH_SINGLE__PORCH_RIGHT]: {
             yIndex: 2,
             xPosition: 10.5,
             scaleFactor: 0.3

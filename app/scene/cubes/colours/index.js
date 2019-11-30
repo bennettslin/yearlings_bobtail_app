@@ -79,7 +79,7 @@ const HSLA_MAP = {
     [CEILING_COLOUR]: { h: 22, s: 10, l: 80 },
     [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },
     /* F. */
-    [SCHOOL_FLOOR_COLOUR]: { h: 210, s: 35, l: 61 },
+    [SCHOOL_FLOOR_COLOUR]: { h: 27, s: 18, l: 65 },
     [LINOLEUM_FLOOR_COLOUR]: { h: 85, s: 14, l: 67 },
     [WOOD_FLOOR_COLOUR]: { h: 32, s: 35, l: 64 },
     [OLD_FLOOR_COLOUR]: { h: 35, s: 13, l: 46 },
@@ -98,8 +98,8 @@ const HSLA_MAP = {
     /* W. */
     [SOFT_WALL_COLOUR]: { h: 250, s: 50, l: 75 },
     [BEDROOM_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
-    [SCHOOL_WALL_COLOUR]: { h: 120, s: 50, l: 75 },
-    [BENNETT_WALL_COLOUR]: { h: 9, s: 64, l: 57 },
+    [SCHOOL_WALL_COLOUR]: { h: 211, s: 41, l: 74 },
+    [BENNETT_WALL_COLOUR]: { h: 9, s: 41, l: 57 },
     [LIZ_WALL_COLOUR]: { h: 210, s: 50, l: 75 },
     [UNDERGROUND_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
     [CLUB_WALL_COLOUR]: { h: 215, s: 50, l: 75 },
@@ -116,7 +116,7 @@ const HSLA_MAP = {
     /* Z. */
     [DARK_WALL_COLOUR]: { h: 225, s: 25, l: 50 },
     /* A. */
-    [TAIWAN_GATE_COLOUR]: { h: 250, s: 50, l: 75 },
+    [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
     [LIZ_GATE_COLOUR]: { h: 150, s: 50, l: 75 },
     /* P. */

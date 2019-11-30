@@ -4,7 +4,7 @@ import mirroredSink from 'assets/svgs/cutouts/mirroredSink'
 import towelRack from 'assets/svgs/cutouts/towelRack'
 import shoppingCart from 'assets/svgs/cutouts/shoppingCart'
 import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack'
-import porchPlant from 'assets/svgs/cutouts/porchPlant'
+import bushSingle from 'assets/svgs/cutouts/bushSingle'
 import campfire from 'assets/svgs/cutouts/campfire'
 import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine'
 import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge'
@@ -12,7 +12,7 @@ import taiwanTree from 'assets/svgs/cutouts/taiwanTree'
 import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill'
 import lockerBank from 'assets/svgs/cutouts/lockerBank'
 import trashCan from 'assets/svgs/cutouts/trashCan'
-import vanNuysPlant from 'assets/svgs/cutouts/vanNuysPlant'
+import bushDouble from 'assets/svgs/cutouts/bushDouble'
 import recyclables from 'assets/svgs/cutouts/recyclables'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost'
 import signpost from 'assets/svgs/cutouts/signpost'
@@ -59,8 +59,9 @@ import {
     TOWEL_RACK,
     SHOPPING_CART,
     OVERPASS_SIGN_BACK,
-    PORCH_PLANT__LEFT,
-    PORCH_PLANT__RIGHT,
+    BUSH_SINGLE__PORCH_LEFT,
+    BUSH_SINGLE__PORCH_RIGHT,
+    BUSH_SINGLE__COURTYARD,
     CAMPFIRE,
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
@@ -69,8 +70,9 @@ import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
-    VAN_NUYS_PLANT__LOCKERS,
-    VAN_NUYS_PLANT__QUAD,
+    BUSH_DOUBLE__LOCKERS,
+    BUSH_DOUBLE__QUAD,
+    BUSH_DOUBLE__COURTYARD,
     RECYCLABLES,
     BERKELEY_LAMPPOST,
     SIGNPOST,
@@ -131,8 +133,9 @@ export default {
     [TOWEL_RACK]: towelRack,
     [SHOPPING_CART]: shoppingCart,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
-    [PORCH_PLANT__LEFT]: porchPlant,
-    [PORCH_PLANT__RIGHT]: porchPlant,
+    [BUSH_SINGLE__PORCH_LEFT]: bushSingle,
+    [BUSH_SINGLE__PORCH_RIGHT]: bushSingle,
+    [BUSH_SINGLE__COURTYARD]: bushSingle,
     [CAMPFIRE]: campfire,
     [BUDDHA_SHRINE]: buddhaShrine,
     [TAIWAN_FRIDGE]: taiwanFridge,
@@ -141,8 +144,9 @@ export default {
     [LOCKER_BANK]: lockerBank,
     [TRASH_CAN__LOCKERS]: trashCan,
     [TRASH_CAN__QUAD]: trashCan,
-    [VAN_NUYS_PLANT__LOCKERS]: vanNuysPlant,
-    [VAN_NUYS_PLANT__QUAD]: vanNuysPlant,
+    [BUSH_DOUBLE__LOCKERS]: bushDouble,
+    [BUSH_DOUBLE__QUAD]: bushDouble,
+    [BUSH_DOUBLE__COURTYARD]: bushDouble,
     [RECYCLABLES]: recyclables,
     [BERKELEY_LAMPPOST]: berkeleyLamppost,
     [SIGNPOST]: signpost,

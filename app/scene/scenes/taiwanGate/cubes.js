@@ -7,7 +7,7 @@ import {
     EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
-import { d, g } from '../../cubes/zIndices'
+import { b, g } from '../../cubes/zIndices'
 
 const CUBES = {
     [TAIWAN_GATE_KEY]: {
@@ -23,9 +23,9 @@ const CUBES = {
             zIndices: [
                 [0],
                 [0],
-                [g, g, g, 1, d, 1, 0, 0, 0, 0, 1, 1],
-                [1, 1, 1, 1, d, 1, 0],
-                [d, 1, 1, 1, d, 1, 0],
+                [g, g, g, 1, b, 1, 0, 0, 0, 0, 1, 1],
+                [1, 1, 1, 1, b, 1, 0],
+                [b, 1, 1, 1, b, 1, 0],
                 [1, 1, 1, 1, 1, 1, 0]
             ]
         }

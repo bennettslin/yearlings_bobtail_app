@@ -20,7 +20,7 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_STAIRS_BACKDROP]: {
             yIndex: 0,
             xPosition: 4.5,
-            zOffset: 2.5,
+            zOffset: 3,
             scaleFactor: 0.45,
             flipHorizontal: true,
             sharedStyle: TAIWAN_HOUSE__SHARED
@@ -48,7 +48,7 @@ const ARRANGEMENTS_THINGS = {
         [IRON_GATE_LOW]: {
             yIndex: 2,
             xPosition: 4,
-            trimBottom: 0.5,
+            zOffset: -2.5,
             sharedStyle: TAIWAN_GATE__SHARED
         }
     }

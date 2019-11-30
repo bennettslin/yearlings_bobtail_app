@@ -1,16 +1,16 @@
 export default [
     {
-        taskName: 'porchPlantLeft',
+        taskName: 'bushSingleLeft',
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: 'porchPlantRight',
+        taskName: 'bushSingleRight',
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: 'vanNuysPlant',
+        taskName: 'bushDouble',
         workedHours: 1,
         neededHours: 1
     },

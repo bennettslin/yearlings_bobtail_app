@@ -7,7 +7,7 @@ import {
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { e, f, g } from '../../cubes/zIndices'
+import { e, g } from '../../cubes/zIndices'
 
 const CUBES = {
     [TAIWAN_ROOM_KEY]: {
@@ -19,7 +19,7 @@ const CUBES = {
                 [0],
                 [0, g, g, g, g, g, g, g, g, g, g, 5],
                 [0, g, g, g, g, g, g, g, g, g, g, 5],
-                [e, g, g, 5, 5, 5, 5, 5, f, f, 5, 5],
+                [e, g, g, 5, 5, 5, 5, 5, e, e, 5, 5],
                 [e, g, g, g, g, g, g, g, g, g, g, 5],
                 [0, g, g, g, g, g, g, g, g, g, g, 5]
             ]

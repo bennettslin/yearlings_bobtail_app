@@ -10,7 +10,7 @@ import {
 import { VAN_NUYS_LOGO } from '../../../constants/scene/things/cardboards'
 import {
     TRASH_CAN__QUAD,
-    VAN_NUYS_PLANT__QUAD
+    BUSH_DOUBLE__QUAD
 } from '../../../constants/scene/things/cutouts'
 import {
     BANANA__SHARED,
@@ -64,7 +64,7 @@ const ARRANGEMENTS_THINGS = {
                 PAPER_BAG__SHARED
             ]
         },
-        [VAN_NUYS_PLANT__QUAD]: {
+        [BUSH_DOUBLE__QUAD]: {
             yIndex: 4,
             xPosition: 3,
             scaleFactor: 0.25

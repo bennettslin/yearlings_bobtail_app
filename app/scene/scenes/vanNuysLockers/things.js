@@ -5,7 +5,7 @@ import {
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
-    VAN_NUYS_PLANT__LOCKERS
+    BUSH_DOUBLE__LOCKERS
 } from '../../../constants/scene/things/cutouts'
 import {
     THROWN_FRUIT,
@@ -34,7 +34,7 @@ const ARRANGEMENTS_THINGS = {
                 PAPER_BAG__SHARED
             ]
         },
-        [VAN_NUYS_PLANT__LOCKERS]: {
+        [BUSH_DOUBLE__LOCKERS]: {
             yIndex: 1,
             xPosition: 8,
             scaleFactor: 0.33
