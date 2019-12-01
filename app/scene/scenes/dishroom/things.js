@@ -67,7 +67,7 @@ const ARRANGEMENTS_THINGS = {
         [DISHROOM_DOOR]: {
             yIndex: 2,
             xPosition: 9,
-            scaleFactor: 0.65,
+            scaleFactor: 0.6,
             sharedStyle: DOOR__SHARED
         }
     },

@@ -28,8 +28,10 @@ const ARRANGEMENTS_THINGS = {
     },
     [DOOR]: {
         [BASEMENT_DOOR_SIDE]: {
-            yIndex: 3,
-            xPosition: 10,
+            yIndex: 4,
+            xPosition: 10.16,
+            zOffset: 1,
+            scaleFactor: 0.6,
             sharedStyle: DOOR__SHARED
         }
     }

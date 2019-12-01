@@ -8,7 +8,7 @@ import {
     BENNETT_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
-import { c, e } from '../../cubes/zIndices'
+import { a, e } from '../../cubes/zIndices'
 
 const CUBES = {
     [BASEMENT_COUCH_KEY]: {
@@ -19,8 +19,8 @@ const CUBES = {
             zIndices: [
                 [2],
                 [2, e, e, e, e, e, e, e, e, e, e, 2],
-                [2, e, e, e, e, e, e, e, e, e, e, c],
-                [2, e, e, e, e, e, e, e, e, e, e, c],
+                [2, e, e, e, e, e, e, e, e, e, e, a],
+                [2, e, e, e, e, e, e, e, e, e, e, a],
                 [2, e, e, e, e, e, e, e, e, e, e, 2]
             ]
         },

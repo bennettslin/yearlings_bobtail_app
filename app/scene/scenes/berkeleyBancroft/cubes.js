@@ -9,7 +9,6 @@ import {
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { f, k } from '../../cubes/zIndices'
 
 const CUBES = {

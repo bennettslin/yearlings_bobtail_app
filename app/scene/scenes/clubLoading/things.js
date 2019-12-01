@@ -15,7 +15,8 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [CLUB_DOOR_OPEN]: {
             yIndex: 3,
-            xPosition: 5,
+            xPosition: 5.25,
+            zOffset: -0.07,
             sharedStyle: DOOR__SHARED
         }
     },

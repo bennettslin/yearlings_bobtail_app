@@ -13,7 +13,8 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [BASEMENT_DOOR]: {
             yIndex: 2,
-            xPosition: 3,
+            xPosition: 2.5,
+            scaleFactor: 0.6,
             sharedStyle: DOOR__SHARED
         }
     },

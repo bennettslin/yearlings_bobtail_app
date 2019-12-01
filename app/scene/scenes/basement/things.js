@@ -25,24 +25,26 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [BASEMENT_DOOR_OPEN]: {
             yIndex: 2,
-            xPosition: 3,
+            xPosition: 2.275,
+            scaleFactor: 0.6,
+            zOffset: -0.05,
             sharedStyle: DOOR__SHARED
         }
     },
     [FIXTURE]: {
         [BASS_CASE_UPRIGHT]: {
-            yIndex: 3,
-            xPosition: 6.5,
+            yIndex: 2,
+            xPosition: 7.5,
             sharedStyle: BASS_CASE__SHARED
         },
         [GUITAR_CASE_UPRIGHT]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 9.5,
             sharedStyle: GUITAR_CASE__SHARED
         },
         [DRUMS_STACKED__BASEMENT]: {
-            yIndex: 4,
-            xPosition: 1.5,
+            yIndex: 2,
+            xPosition: 5,
             zOffset: -0.1,
             sharedStyle: [
                 DRUMS__SHARED,
@@ -52,12 +54,12 @@ const ARRANGEMENTS_THINGS = {
         },
         [BASEMENT_BEER_CASE]: {
             yIndex: 5,
-            xPosition: 6.5,
+            xPosition: 1.5,
             sharedStyle: BUDWEISER__SHARED
         },
         [BASEMENT_BEER_MARA]: {
-            yIndex: 3,
-            xPosition: 2.5,
+            yIndex: 5,
+            xPosition: 5,
             sharedStyle: BUDWEISER__SHARED
         },
         [BASEMENT_BEER_BENNETT]: {

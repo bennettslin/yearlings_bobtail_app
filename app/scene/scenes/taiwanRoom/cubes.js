@@ -6,7 +6,6 @@ import {
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
-// eslint-disable-next-line object-curly-newline
 import { e, g } from '../../cubes/zIndices'
 
 const CUBES = {
