@@ -1,7 +1,7 @@
 import { SNOWGLOBES_PAST_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR as G,
+    GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'

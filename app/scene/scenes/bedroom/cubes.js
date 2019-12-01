@@ -7,8 +7,8 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
-    GROUND_COLOUR as G,
+    DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     CEILING_COLOUR as C,
     BEDROOM_FLOOR_COLOUR as F,
     BEDROOM_FLOOR_DARK_COLOUR as L,

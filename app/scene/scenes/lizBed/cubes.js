@@ -6,8 +6,8 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
-    GROUND_COLOUR as G,
+    DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     LIZ_FLOOR_COLOUR as F,
     LIZ_FLOOR_DARK_COLOUR as L,
     DARK_FLOOR_COLOUR as Y,

@@ -1,7 +1,7 @@
 import { DISHROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
+    DEFAULT_CLEAR_COLOUR as D,
     CEILING_COLOUR as C,
     LINOLEUM_FLOOR_COLOUR as F,
     LINOLEUM_FLOOR_DARK_COLOUR as L,

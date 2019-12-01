@@ -1,7 +1,7 @@
 import { CLUB_LOADING } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
+    DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     OLD_FLOOR_COLOUR as F,

@@ -1,7 +1,7 @@
 import { NOHO_SCHOOL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR as G,
+    GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     SCHOOL_FLOOR_COLOUR as F,
     SEAT_COLOUR as S

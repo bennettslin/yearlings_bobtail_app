@@ -5,7 +5,7 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR as G,
+    GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     GRASS_DARKER_COLOUR as I,
     LINOLEUM_FLOOR_COLOUR as F,

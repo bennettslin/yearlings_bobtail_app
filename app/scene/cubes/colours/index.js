@@ -1,11 +1,10 @@
-export const DEFAULT_COLOUR = 'default'
+export const DEFAULT_CLEAR_COLOUR = 'clear'
+export const GROUND_CLEAR_COLOUR = 'ground'
 export const GRASS_COLOUR = 'grass'
 export const GRASS_DARKER_COLOUR = 'grassDarker'
-export const GROUND_COLOUR = 'ground'
 export const SAND_COLOUR = 'sand'
 export const STREET_COLOUR = 'street'
 export const CROSSWALK_COLOUR = 'crosswalk'
-export const CONCRETE_PLATFORM_COLOUR = 'concrete'
 export const PAVEMENT_COLOUR = 'pavement'
 export const TAIWAN_GATE_COLOUR = 'taiwanGate'
 export const BANCROFT_GATE_COLOUR = 'bancroftGate'
@@ -44,6 +43,7 @@ export const LIZ_EXTERIOR_COLOUR = 'lizExterior'
 export const BANCROFT_EXTERIOR_COLOUR = 'bancroftExterior'
 export const CINEMA_EXTERIOR_COLOUR = 'cinemaExterior'
 export const PLATFORM_COLOUR = 'platform'
+export const CONCRETE_PLATFORM_COLOUR = 'concrete'
 export const FURNITURE_COLOUR = 'furniture'
 export const ATTIC_COUCH_COLOUR = 'atticCouch'
 export const BENNETT_COUCH_COLOUR = 'bennettCouch'
@@ -60,9 +60,9 @@ export const OCEAN_COLOUR = 'ocean'
 /* eslint-disable object-curly-newline */
 const HSLA_MAP = {
     /* D. */
-    [DEFAULT_COLOUR]: { h: 0, s: 0, l: 100, a: 0.2 },
+    [DEFAULT_CLEAR_COLOUR]: { h: 0, s: 0, l: 100, a: 0.1 },
     /* G. */
-    [GROUND_COLOUR]: { h: 0, s: 0, l: 25 },
+    [GROUND_CLEAR_COLOUR]: { h: 0, s: 0, l: 0, a: 0.2 },
     /* H. */
     [GRASS_COLOUR]: { h: 91, s: 46, l: 42 },
     /* I. */

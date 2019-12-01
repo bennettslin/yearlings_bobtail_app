@@ -1,7 +1,7 @@
 import { CATHOLIC_CHURCH_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR as G,
+    GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V
 } from '../../cubes/colours'

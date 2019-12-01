@@ -1,7 +1,7 @@
 import { LOGUE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR as G,
+    GROUND_CLEAR_COLOUR as G,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 

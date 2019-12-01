@@ -1,7 +1,7 @@
 import { BUOY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
+    DEFAULT_CLEAR_COLOUR as D,
     OCEAN_COLOUR as V
 } from '../../cubes/colours'
 

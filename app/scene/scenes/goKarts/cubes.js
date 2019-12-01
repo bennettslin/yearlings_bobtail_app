@@ -1,10 +1,10 @@
 import { GO_KARTS_KEY } from '../../../constants/scene/scenes'
 
 import {
+    DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
-    GRASS_COLOUR as H,
-    PLATFORM_COLOUR as P
+    GRASS_COLOUR as H
 } from '../../cubes/colours'
 
 const CUBES = {
@@ -13,7 +13,7 @@ const CUBES = {
             hslaColours: [
                 [T],
                 [T],
-                [T, P, P, P, P, T, T, P, P, P, P, T],
+                [T, D, D, D, D, T, T, D, D, D, D, T],
                 [T],
                 [K],
                 [H]

@@ -1,8 +1,8 @@
 import { WAITING_ROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
-    GROUND_COLOUR as G,
+    DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     CEILING_COLOUR as C,
     WOOD_FLOOR_COLOUR as F,
     SOFT_WALL_COLOUR as W,

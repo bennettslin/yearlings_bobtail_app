@@ -4,11 +4,11 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_COLOUR as G,
+    DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     GRASS_DARKER_COLOUR as I,
-    STREET_COLOUR as T,
-    PLATFORM_COLOUR as P
+    STREET_COLOUR as T
 } from '../../cubes/colours'
 
 import { RIGHT } from '../../cubes/zIndices'
@@ -53,10 +53,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [H, P, I, H, H, I, I, T, G],
-                [I, P, P, P, I, H, H, I, T, T, G],
-                [H, I, P, P, P, P, I, H, G, G, T],
-                [H, H, I, P, P, H, I, G, G, G, G, T],
+                [H, D, I, H, H, I, I, T, G],
+                [I, D, D, D, I, H, H, I, T, T, G],
+                [H, I, D, D, D, D, I, H, G, G, T],
+                [H, H, I, D, D, H, I, G, G, G, G, T],
                 [I, I, H, H, I, I, G]
             ],
             zIndices: [

@@ -1,7 +1,7 @@
 import { OAKLAND_COMMERCIAL_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
+    DEFAULT_CLEAR_COLOUR as D,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V
 } from '../../cubes/colours'

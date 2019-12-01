@@ -1,8 +1,8 @@
 import { CINEMA_STREET_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
-    GROUND_COLOUR as G,
+    DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,

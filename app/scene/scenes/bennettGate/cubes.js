@@ -1,7 +1,7 @@
 import { BENNETT_GATE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
+    DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     BENNETT_WALL_COLOUR as W,
     BENNETT_EXTERIOR_COLOUR as X,

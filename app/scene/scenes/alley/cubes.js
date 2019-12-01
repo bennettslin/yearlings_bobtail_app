@@ -1,7 +1,7 @@
 import { ALLEY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
+    DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     INDUSTRIAL_WALL_COLOUR as W,
     EXTERIOR_COLOUR as X,

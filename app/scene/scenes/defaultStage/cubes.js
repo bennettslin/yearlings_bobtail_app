@@ -1,6 +1,6 @@
 import { DEFAULT_STAGE_KEY } from '../../../constants/scene/scenes'
 
-import { DEFAULT_COLOUR as D } from '../../cubes/colours'
+import { DEFAULT_CLEAR_COLOUR as D } from '../../cubes/colours'
 
 import { k } from '../../cubes/zIndices'
 

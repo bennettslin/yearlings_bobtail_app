@@ -1,7 +1,7 @@
 import { TAIWAN_STAIRS_KEY } from '../../../constants/scene/scenes'
 
 import {
-    DEFAULT_COLOUR as D,
+    DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
     DARK_FLOOR_COLOUR as Y,
