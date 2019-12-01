@@ -185,7 +185,7 @@ export default [
     },
     {
         taskName: 'basement',
-        notes: `Lower backdrop, raise ceiling, more steps.`,
+        notes: `Lower backdrop.`,
         workedHours: 0,
         neededHours: 1
     },

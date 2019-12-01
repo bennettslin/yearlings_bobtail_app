@@ -69,7 +69,7 @@ const ARRANGEMENTS_THINGS = {
     },
     [FIXTURE]: {
         [LINGERIE_DRAWING]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 7,
             sharedStyle: [
                 BOOK__SHARED,
@@ -77,7 +77,7 @@ const ARRANGEMENTS_THINGS = {
             ]
         },
         [VASELINE]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 8
         }
     },
