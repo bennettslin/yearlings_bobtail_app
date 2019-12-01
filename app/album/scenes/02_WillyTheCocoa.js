@@ -59,8 +59,8 @@ import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
 import {
     SHOPPING_CART,
     OVERPASS_SIGN_BACK,
-    BUSH_SINGLE__PORCH_LEFT,
-    BUSH_SINGLE__PORCH_RIGHT,
+    CACTUS_DOUBLE__PORCH,
+    CACTUS_SINGLE__PORCH,
     FIRE_HYDRANT,
     CAMPFIRE
 } from '../../constants/scene/things/cutouts'
@@ -166,8 +166,8 @@ export default [
                 [NOHO_HOUSES_BACKDROP]: true
             },
             [CUTOUT]: {
-                [BUSH_SINGLE__PORCH_LEFT]: true,
-                [BUSH_SINGLE__PORCH_RIGHT]: true
+                [CACTUS_DOUBLE__PORCH]: true,
+                [CACTUS_SINGLE__PORCH]: true
             },
             [DOOR]: {
                 [PORCH_DOOR]: true

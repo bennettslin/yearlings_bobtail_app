@@ -8,7 +8,12 @@ import {
     BUBBLE_MEDIUM__GO_KART,
     GO_KART_THOUGHT
 } from '../../../constants/scene/things/bubbles'
-import { TRAFFIC_LIGHT } from '../../../constants/scene/things/cutouts'
+import {
+    CACTUS_SINGLE__LIZ_ENDING,
+    CACTUS_SINGLE__LIZ_ENDED,
+    CACTUS_DOUBLE__LIZ_GATE,
+    TRAFFIC_LIGHT
+} from '../../../constants/scene/things/cutouts'
 import {
     LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_BLINDS_OUTSIDE__ENDED,
@@ -45,6 +50,21 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         }
     },
     [CUTOUT]: {
+        [CACTUS_SINGLE__LIZ_ENDING]: {
+            yIndex: 4,
+            xPosition: 9.5,
+            scaleFactor: 0.3
+        },
+        [CACTUS_DOUBLE__LIZ_GATE]: {
+            yIndex: 4,
+            xPosition: 1.5,
+            scaleFactor: 0.3
+        },
+        [CACTUS_SINGLE__LIZ_ENDED]: {
+            yIndex: 4,
+            xPosition: 6.5,
+            scaleFactor: 0.3
+        },
         [TRAFFIC_LIGHT]: {
             yIndex: 5,
             xPosition: 9.5,

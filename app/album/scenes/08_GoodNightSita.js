@@ -41,6 +41,9 @@ import {
     GO_KART_THOUGHT
 } from '../../constants/scene/things/bubbles'
 import {
+    CACTUS_SINGLE__LIZ_ENDING,
+    CACTUS_SINGLE__LIZ_ENDED,
+    CACTUS_DOUBLE__LIZ_GATE,
     MUSEUM_DISPLAY,
     CAVEMAN_BONES,
     SANDBAGS,
@@ -82,6 +85,10 @@ export default [
                         instance: DATE_ENDING
                     }
                 }
+            },
+            [CUTOUT]: {
+                [CACTUS_SINGLE__LIZ_ENDING]: true,
+                [CACTUS_DOUBLE__LIZ_GATE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDING]: true,
@@ -220,6 +227,7 @@ export default [
                 [BUBBLE_MEDIUM__GO_KART]: true
             },
             [CUTOUT]: {
+                [CACTUS_SINGLE__LIZ_ENDED]: true,
                 [TRAFFIC_LIGHT]: true
             },
             [DOOR]: {

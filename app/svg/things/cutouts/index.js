@@ -4,7 +4,6 @@ import mirroredSink from 'assets/svgs/cutouts/mirroredSink'
 import towelRack from 'assets/svgs/cutouts/towelRack'
 import shoppingCart from 'assets/svgs/cutouts/shoppingCart'
 import overpassSignBack from 'assets/svgs/cutouts/overpassSignBack'
-import bushSingle from 'assets/svgs/cutouts/bushSingle'
 import campfire from 'assets/svgs/cutouts/campfire'
 import buddhaShrine from 'assets/svgs/cutouts/buddhaShrine'
 import taiwanFridge from 'assets/svgs/cutouts/taiwanFridge'
@@ -12,6 +11,9 @@ import taiwanTree from 'assets/svgs/cutouts/taiwanTree'
 import yellowTapedGrill from 'assets/svgs/cutouts/yellowTapedGrill'
 import lockerBank from 'assets/svgs/cutouts/lockerBank'
 import trashCan from 'assets/svgs/cutouts/trashCan'
+import cactusSingle from 'assets/svgs/cutouts/cactusSingle'
+import cactusDouble from 'assets/svgs/cutouts/cactusDouble'
+import bushSingle from 'assets/svgs/cutouts/bushSingle'
 import bushDouble from 'assets/svgs/cutouts/bushDouble'
 import recyclables from 'assets/svgs/cutouts/recyclables'
 import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost'
@@ -59,10 +61,6 @@ import {
     TOWEL_RACK,
     SHOPPING_CART,
     OVERPASS_SIGN_BACK,
-    BUSH_SINGLE__PORCH_LEFT,
-    BUSH_SINGLE__PORCH_RIGHT,
-    BUSH_SINGLE__COURTYARD,
-    BUSH_SINGLE__BENNETT_GATE,
     CAMPFIRE,
     BUDDHA_SHRINE,
     TAIWAN_FRIDGE,
@@ -71,10 +69,19 @@ import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
+    CACTUS_SINGLE__PORCH,
+    CACTUS_DOUBLE__PORCH,
+    BUSH_SINGLE__LOCKERS,
+    BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__LOCKERS,
     BUSH_DOUBLE__QUAD,
+    BUSH_SINGLE__COURTYARD,
+    BUSH_SINGLE__BENNETT_GATE,
     BUSH_DOUBLE__COURTYARD,
     BUSH_DOUBLE__BENNETT_GATE,
+    CACTUS_SINGLE__LIZ_ENDING,
+    CACTUS_SINGLE__LIZ_ENDED,
+    CACTUS_DOUBLE__LIZ_GATE,
     RECYCLABLES,
     BERKELEY_LAMPPOST,
     SIGNPOST,
@@ -135,10 +142,6 @@ export default {
     [TOWEL_RACK]: towelRack,
     [SHOPPING_CART]: shoppingCart,
     [OVERPASS_SIGN_BACK]: overpassSignBack,
-    [BUSH_SINGLE__PORCH_LEFT]: bushSingle,
-    [BUSH_SINGLE__PORCH_RIGHT]: bushSingle,
-    [BUSH_SINGLE__COURTYARD]: bushSingle,
-    [BUSH_SINGLE__BENNETT_GATE]: bushSingle,
     [CAMPFIRE]: campfire,
     [BUDDHA_SHRINE]: buddhaShrine,
     [TAIWAN_FRIDGE]: taiwanFridge,
@@ -147,10 +150,19 @@ export default {
     [LOCKER_BANK]: lockerBank,
     [TRASH_CAN__LOCKERS]: trashCan,
     [TRASH_CAN__QUAD]: trashCan,
+    [CACTUS_SINGLE__PORCH]: cactusSingle,
+    [CACTUS_DOUBLE__PORCH]: cactusDouble,
+    [BUSH_SINGLE__LOCKERS]: bushSingle,
+    [BUSH_SINGLE__QUAD]: bushSingle,
     [BUSH_DOUBLE__LOCKERS]: bushDouble,
     [BUSH_DOUBLE__QUAD]: bushDouble,
+    [BUSH_SINGLE__COURTYARD]: bushSingle,
+    [BUSH_SINGLE__BENNETT_GATE]: bushSingle,
     [BUSH_DOUBLE__COURTYARD]: bushDouble,
     [BUSH_DOUBLE__BENNETT_GATE]: bushDouble,
+    [CACTUS_SINGLE__LIZ_ENDING]: cactusSingle,
+    [CACTUS_SINGLE__LIZ_ENDED]: cactusSingle,
+    [CACTUS_DOUBLE__LIZ_GATE]: cactusDouble,
     [RECYCLABLES]: recyclables,
     [BERKELEY_LAMPPOST]: berkeleyLamppost,
     [SIGNPOST]: signpost,

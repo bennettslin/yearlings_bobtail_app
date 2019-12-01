@@ -76,6 +76,9 @@ import {
     GLASS_RACK__DOLLY,
     DISHROOM_DOLLY__TRAY,
     DISHROOM_DOLLY__GLASS,
+    CACTUS_SINGLE__LIZ_ENDING,
+    CACTUS_SINGLE__LIZ_ENDED,
+    CACTUS_DOUBLE__LIZ_GATE,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     BUSH_SINGLE__BENNETT_GATE,
@@ -212,6 +215,10 @@ export default [
                     }
                 }
             },
+            [CUTOUT]: {
+                [CACTUS_SINGLE__LIZ_ENDING]: true,
+                [CACTUS_DOUBLE__LIZ_GATE]: true
+            },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDING]: true,
                 [LIZ_GATE_OUTSIDE__ENDING]: true
@@ -241,6 +248,7 @@ export default [
                 }
             },
             [CUTOUT]: {
+                [CACTUS_SINGLE__LIZ_ENDED]: true,
                 [TRAFFIC_LIGHT]: true
             },
             [DOOR]: {

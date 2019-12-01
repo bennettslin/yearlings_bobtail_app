@@ -73,6 +73,8 @@ import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
     TRASH_CAN__QUAD,
+    BUSH_SINGLE__LOCKERS,
+    BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__LOCKERS,
     BUSH_DOUBLE__QUAD
 } from '../../constants/scene/things/cutouts'
@@ -276,6 +278,7 @@ export default [
             [CUTOUT]: {
                 [LOCKER_BANK]: true,
                 [TRASH_CAN__LOCKERS]: true,
+                [BUSH_SINGLE__LOCKERS]: true,
                 [BUSH_DOUBLE__LOCKERS]: true
             },
             [FIXTURE]: {
@@ -325,6 +328,7 @@ export default [
             },
             [CUTOUT]: {
                 [TRASH_CAN__QUAD]: true,
+                [BUSH_SINGLE__QUAD]: true,
                 [BUSH_DOUBLE__QUAD]: true
             }
         },

@@ -63,9 +63,9 @@ const HSLA_MAP = {
     /* G. */
     [GROUND_CLEAR_COLOUR]: { h: 0, s: 0, l: 0, a: 0.2 },
     /* H. */
-    [GRASS_COLOUR]: { h: 91, s: 46, l: 42 },
+    [GRASS_COLOUR]: { h: 91, s: 36, l: 42 },
     /* I. */
-    [GRASS_DARKER_COLOUR]: { h: 93, s: 46, l: 27 },
+    [GRASS_DARKER_COLOUR]: { h: 93, s: 36, l: 27 },
     /* T. */
     [STREET_COLOUR]: { h: 0, s: 0, l: 39 },
     /* V. */
@@ -107,7 +107,7 @@ const HSLA_MAP = {
     /* X. */
     [EXTERIOR_COLOUR]: { h: 31, s: 16, l: 75 },
     [FAMILY_EXTERIOR_COLOUR]: { h: 220, s: 50, l: 75 },
-    [VAN_NUYS_EXTERIOR_COLOUR]: { h: 90, s: 50, l: 75 },
+    [VAN_NUYS_EXTERIOR_COLOUR]: { h: 28, s: 24, l: 63 },
     [BENNETT_EXTERIOR_COLOUR]: { h: 240, s: 50, l: 75 },
     [LIZ_EXTERIOR_COLOUR]: { h: 180, s: 16, l: 75 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },

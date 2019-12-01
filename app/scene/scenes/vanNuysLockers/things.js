@@ -5,6 +5,7 @@ import {
 import {
     LOCKER_BANK,
     TRASH_CAN__LOCKERS,
+    BUSH_SINGLE__LOCKERS,
     BUSH_DOUBLE__LOCKERS
 } from '../../../constants/scene/things/cutouts'
 import {
@@ -33,6 +34,11 @@ const ARRANGEMENTS_THINGS = {
                 GARBAGE_BAG__SHARED,
                 PAPER_BAG__SHARED
             ]
+        },
+        [BUSH_SINGLE__LOCKERS]: {
+            yIndex: 1,
+            xPosition: 0.5,
+            scaleFactor: 0.33
         },
         [BUSH_DOUBLE__LOCKERS]: {
             yIndex: 1,
