@@ -52,7 +52,6 @@ export const MIRIAM_COUCH_COLOUR = 'miriamCouch'
 export const WAITING_ARMCHAIR_COLOUR = 'waitingArmchair'
 export const BENNETT_BED_COLOUR = 'bennettBed'
 export const CAPTAIN_BED_COLOUR = 'captainBed'
-export const HOSPITAL_BED_COLOUR = 'hospitalBed'
 export const LIZ_BED_COLOUR = 'lizBed'
 export const SEAT_COLOUR = 'seat'
 export const OCEAN_COLOUR = 'ocean'
@@ -132,7 +131,6 @@ const HSLA_MAP = {
     [WAITING_ARMCHAIR_COLOUR]: { h: 90, s: 50, l: 75 },
     [BENNETT_BED_COLOUR]: { h: 4, s: 35, l: 60 },
     [CAPTAIN_BED_COLOUR]: { h: 90, s: 50, l: 75 },
-    [HOSPITAL_BED_COLOUR]: { h: 90, s: 50, l: 75 },
     [LIZ_BED_COLOUR]: { h: 90, s: 50, l: 75 },
     /* S. */
     [SEAT_COLOUR]: { h: 25, s: 27, l: 47 }

@@ -23,11 +23,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Make bed and couch bottoms opaque.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Raise car seats.`,
         workedHours: 0,
         neededHours: 1

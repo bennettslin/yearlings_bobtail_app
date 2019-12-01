@@ -28,6 +28,7 @@ import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
 } from '../../shared/paper'
+import { SHADOW__SHARED } from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -92,7 +93,8 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_BED]: {
             yIndex: 5,
             xPosition: 7.5,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            sharedStyle: SHADOW__SHARED
         }
     }
 }

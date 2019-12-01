@@ -1,6 +1,9 @@
 import { DEFAULT_STAGE_KEY } from '../../../constants/scene/scenes'
 
-import { DEFAULT_CLEAR_COLOUR as D } from '../../cubes/colours'
+import {
+    DEFAULT_CLEAR_COLOUR as D,
+    GROUND_CLEAR_COLOUR as G
+} from '../../cubes/colours'
 
 import { k } from '../../cubes/zIndices'
 
@@ -16,7 +19,7 @@ const CUBES = {
         },
         floor: {
             hslaColours: [
-                [D]
+                [G]
             ],
             zIndices: [
                 [0]

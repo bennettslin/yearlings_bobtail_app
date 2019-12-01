@@ -45,7 +45,10 @@ import {
 } from '../../shared/instruments'
 import { BENNETT, LIZ } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { BUBBLE__SHARED } from '../../shared/props'
+import {
+    BUBBLE__SHARED,
+    SHADOW__SHARED
+} from '../../shared/props'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -82,7 +85,8 @@ const ARRANGEMENTS_THINGS = {
         [LIZ_COUCH]: {
             yIndex: 5,
             xPosition: 2,
-            scaleFactor: 0.27
+            scaleFactor: 0.27,
+            sharedStyle: SHADOW__SHARED
         }
     }
 }

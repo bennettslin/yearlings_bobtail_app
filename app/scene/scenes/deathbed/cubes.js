@@ -5,11 +5,11 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
+    DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
     GRASS_DARKER_COLOUR as I,
     LINOLEUM_FLOOR_COLOUR as F,
-    HOSPITAL_BED_COLOUR as U,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 
@@ -34,10 +34,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [F, U, F, F, F, F, R, G],
-                [F, U, U, U, F, F, F, F, G],
-                [F, F, U, U, U, U, F, F, G],
-                [F, F, F, U, U, F, F, G, G],
+                [F, D, F, F, F, F, R, G],
+                [F, D, D, D, F, F, F, F, G],
+                [F, F, D, D, D, D, F, F, G],
+                [F, F, F, D, D, F, F, G, G],
                 [F, F, F, F, F, F, G]
             ],
             zIndices: [
@@ -55,10 +55,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [F, U, F, F, F, F, R, G],
-                [F, U, U, U, F, F, F, F, G, I],
-                [F, F, U, U, U, U, F, F, G, I],
-                [F, F, F, U, U, F, F, G, G, I, G],
+                [F, D, F, F, F, F, R, G],
+                [F, D, D, D, F, F, F, F, G, I],
+                [F, F, D, D, D, D, F, F, G, I],
+                [F, F, F, D, D, F, F, G, G, I, G],
                 [F, F, F, F, F, F, G]
             ],
             zIndices: [
@@ -76,10 +76,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [F, U, F, F, F, F, R, G],
-                [F, U, U, U, F, F, F, F, G, H, H, I],
-                [F, F, U, U, U, U, F, F, G, I, I, H],
-                [F, F, F, U, U, F, F, G, G, H, G],
+                [F, D, F, F, F, F, R, G],
+                [F, D, D, D, F, F, F, F, G, H, H, I],
+                [F, F, D, D, D, D, F, F, G, I, I, H],
+                [F, F, F, D, D, F, F, G, G, H, G],
                 [F, F, F, F, F, F, G]
             ],
             zIndices: [

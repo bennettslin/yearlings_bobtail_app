@@ -24,6 +24,7 @@ import {
     PILLOW_BOYFRIEND__SHARED,
     PILLOW_LIZ__SHARED
 } from '../../shared/furniture'
+import { SHADOW__SHARED } from '../../shared/props'
 import { BENNETT } from '../../../constants/scene/actors'
 
 const ARRANGEMENTS_THINGS = {
@@ -63,7 +64,8 @@ const ARRANGEMENTS_THINGS = {
         [LIZ_BED]: {
             yIndex: 5,
             xPosition: 5,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            sharedStyle: SHADOW__SHARED
         }
     }
 }
