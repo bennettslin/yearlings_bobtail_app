@@ -68,10 +68,10 @@ const HSLA_MAP = {
     /* I. */
     [GRASS_DARKER_COLOUR]: { h: 93, s: 46, l: 27 },
     /* T. */
-    [STREET_COLOUR]: { h: 120, s: 1, l: 30 },
+    [STREET_COLOUR]: { h: 0, s: 0, l: 39 },
     /* V. */
     [OCEAN_COLOUR]: { h: 204, s: 61, l: 43 },
-    [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 51 },
+    [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 61 },
     /* K. */
     [SAND_COLOUR]: { h: 35, s: 51, l: 74 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },

@@ -78,10 +78,16 @@ import {
     DISHROOM_DOLLY__GLASS,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
+    BUSH_SINGLE__BENNETT_GATE,
+    BUSH_DOUBLE__BENNETT_GATE,
     WAITING_ROOM_PLANT
 } from '../../constants/scene/things/cutouts'
 import {
     DISHROOM_DOOR,
+    LIZ_BLINDS_OUTSIDE__ENDING,
+    LIZ_BLINDS_OUTSIDE__ENDED,
+    LIZ_GATE_OUTSIDE__ENDING,
+    LIZ_GATE_OUTSIDE__ENDED,
     NEIGHBOUR_DOOR,
     BLINDS_OUTSIDE__NEIGHBOUR,
     BLINDS_INSIDE_OPEN,
@@ -205,6 +211,10 @@ export default [
                         instance: DATE_ENDING
                     }
                 }
+            },
+            [DOOR]: {
+                [LIZ_BLINDS_OUTSIDE__ENDING]: true,
+                [LIZ_GATE_OUTSIDE__ENDING]: true
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -232,6 +242,10 @@ export default [
             },
             [CUTOUT]: {
                 [TRAFFIC_LIGHT]: true
+            },
+            [DOOR]: {
+                [LIZ_BLINDS_OUTSIDE__ENDED]: true,
+                [LIZ_GATE_OUTSIDE__ENDED]: true
             }
         },
         sky: {
@@ -259,7 +273,9 @@ export default [
                 [CODE_BOX]: true
             },
             [CUTOUT]: {
-                [APARTMENT_PLANT]: true
+                [APARTMENT_PLANT]: true,
+                [BUSH_SINGLE__BENNETT_GATE]: true,
+                [BUSH_DOUBLE__BENNETT_GATE]: true
             },
             [DOOR]: {
                 [BENNETT_GATE_FRONT]: true
@@ -291,7 +307,9 @@ export default [
                 [CODE_BOX]: true
             },
             [CUTOUT]: {
-                [APARTMENT_PLANT]: true
+                [APARTMENT_PLANT]: true,
+                [BUSH_SINGLE__BENNETT_GATE]: true,
+                [BUSH_DOUBLE__BENNETT_GATE]: true
             },
             [DOOR]: {
                 [BENNETT_GATE_FRONT]: true

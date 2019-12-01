@@ -47,7 +47,7 @@ const DEFAULT_FLOOR = {
     hslaColours: [
         [A, A, A, A, A, V, V, V, A],
         [F, F, F, F, W, W, W, W, W, F],
-        [F, U, U, U, F],
+        [F],
         [F, U, U, U, F],
         [F, U, U, U, F],
         [F]
@@ -55,7 +55,7 @@ const DEFAULT_FLOOR = {
     zIndices: [
         [7, 7, 7, 7, 7, 1, 1, 1, 7],
         [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
-        [1, 7, 4, 4, 1],
+        [1],
         [1, 7, 4, 4, 1],
         [1, 7, 4, 4, 1],
         [1]
@@ -73,7 +73,7 @@ const CUBES = {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
                 [F, F, F, F, W, W, W, W, W, F],
-                [F, U, U, U, F],
+                [F],
                 [F, U, U, U, F, F, F, F, F, S, F],
                 [F, U, U, U, F],
                 [F]
@@ -81,7 +81,7 @@ const CUBES = {
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
                 [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
-                [1, 7, 4, 4, 1],
+                [1],
                 [1, 7, 4, 4, 1, 1, 1, 1, 1, 3, 1],
                 [1, 7, 4, 4, 1],
                 [1]
@@ -109,7 +109,7 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [G, U, U, U, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
                 [G, U, U, U, L, L, L, L, L, L, L, G],
                 [G, U, U, U, F, F, F, F, F, F, F, G],
                 [G, L, L, L, L, L, L, L, L, L, L, G],
@@ -117,7 +117,7 @@ const CUBES = {
             ],
             zIndices: [
                 [0],
-                [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],

@@ -271,9 +271,6 @@ export default [
                 [SNOWGLOBE_FUTURE_CORD]: true,
                 [SNOWGLOBE_FUTURE_REATTA]: true
             },
-            [DOOR]: {
-                [BASEMENT_DOOR]: true
-            },
             [FIXTURE]: {
                 [RECORDING_MIC]: true,
                 [RECORDING_BEERS]: true

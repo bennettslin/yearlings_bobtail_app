@@ -4,7 +4,11 @@ import {
     DOOR
 } from '../../../constants/scene/things'
 import { CODE_BOX } from '../../../constants/scene/things/cardboards'
-import { APARTMENT_PLANT } from '../../../constants/scene/things/cutouts'
+import {
+    APARTMENT_PLANT,
+    BUSH_SINGLE__BENNETT_GATE,
+    BUSH_DOUBLE__BENNETT_GATE
+} from '../../../constants/scene/things/cutouts'
 import { BENNETT_GATE_FRONT } from '../../../constants/scene/things/doors'
 import { BENNETT_GATE__SHARED } from '../../shared/home'
 
@@ -20,8 +24,18 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [APARTMENT_PLANT]: {
             yIndex: 2,
-            xPosition: 2.5,
+            xPosition: 1,
             scaleFactor: 0.35
+        },
+        [BUSH_SINGLE__BENNETT_GATE]: {
+            yIndex: 2,
+            xPosition: 10.5,
+            scaleFactor: 0.3
+        },
+        [BUSH_DOUBLE__BENNETT_GATE]: {
+            yIndex: 2,
+            xPosition: 3.25,
+            scaleFactor: 0.25
         }
     },
     [DOOR]: {

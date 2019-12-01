@@ -53,7 +53,7 @@ export default [
     },
     {
         taskName: 'porch',
-        notes: `Include NoHo backdrop, plant colour.`,
+        notes: `Plant colour.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -89,7 +89,7 @@ export default [
     },
     {
         taskName: 'taiwanRoom',
-        notes: `Expand doorway, make Buddha gold colour.`,
+        notes: `Make Buddha gold colour.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -137,7 +137,7 @@ export default [
     },
     {
         taskName: 'vanNuysLockers',
-        notes: `Make ground lawn.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -155,7 +155,7 @@ export default [
     },
     {
         taskName: 'courtyard',
-        notes: `Door size, no gap for gate, backdrop.`,
+        notes: `Backdrop.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -197,7 +197,7 @@ export default [
     },
     {
         taskName: 'cinemaStreet',
-        notes: `Lower backdrop, allow flat to go behind building.`,
+        notes: `Lower backdrop.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -233,13 +233,13 @@ export default [
     },
     {
         taskName: 'bennettGate',
-        notes: `Make gate wider, make roof the same thickness.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'bennettBed',
-        notes: `Make door correct height, add mattress to bed panel, expand room, darken neighbour door and window, colours for lit room.`,
+        notes: `Add mattress to bed panel, darken neighbour door and window, colours for lit room.`,
         workedHours: 0,
         neededHours: 1
     },
