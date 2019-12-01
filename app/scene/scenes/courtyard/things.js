@@ -51,7 +51,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [BENNETT_GATE_SIDE]: {
             yIndex: 5,
-            xPosition: 1,
+            xPosition: 0.85,
             sharedStyle: BENNETT_GATE__SHARED
         }
     }

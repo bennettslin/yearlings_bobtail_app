@@ -27,9 +27,15 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [DISH_PILE]: {
             yIndex: 2,
-            xPosition: 4,
+            xPosition: 2,
             scaleFactor: 0.4,
             sharedStyle: DISH__SHARED
+        },
+        [GLASS_RACK__SINK]: {
+            yIndex: 2,
+            xPosition: 5.5,
+            scaleFactor: 0.4,
+            sharedStyle: CUP__SHARED
         },
         [TRAY_PILE]: {
             yIndex: 4,
@@ -37,12 +43,6 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 0.55,
             scaleFactor: 0.4,
             sharedStyle: TRAY__SHARED
-        },
-        [GLASS_RACK__SINK]: {
-            yIndex: 2,
-            xPosition: 2.5,
-            scaleFactor: 0.4,
-            sharedStyle: CUP__SHARED
         },
         [GLASS_RACK__DOLLY]: {
             yIndex: 4,
@@ -65,7 +65,7 @@ const ARRANGEMENTS_THINGS = {
     },
     [DOOR]: {
         [DISHROOM_DOOR]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 9,
             scaleFactor: 0.65,
             sharedStyle: DOOR__SHARED
@@ -73,10 +73,10 @@ const ARRANGEMENTS_THINGS = {
     },
     [PANEL]: {
         [CONVEYOR_BELT]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 4.1,
-            scaleFactor: 0.37,
-            zOffset: 0.1,
+            scaleFactor: 0.36,
+            zOffset: 0.275,
             sharedStyle: [
                 CUP__SHARED,
                 DISH__SHARED,

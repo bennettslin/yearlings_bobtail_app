@@ -1,3 +1,4 @@
+/* eslint-disable no-duplicate-imports */
 import nurseDoor from 'assets/svgs/doors/nurseDoor'
 import porchDoor from 'assets/svgs/doors/porchDoor'
 import bedroomBlinds from 'assets/svgs/doors/bedroomBlinds'

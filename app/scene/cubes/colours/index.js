@@ -60,7 +60,7 @@ export const OCEAN_COLOUR = 'ocean'
 /* eslint-disable object-curly-newline */
 const HSLA_MAP = {
     /* D. */
-    [DEFAULT_COLOUR]: { h: 0, s: 0, l: 0, a: 0 },
+    [DEFAULT_COLOUR]: { h: 0, s: 0, l: 100, a: 0.2 },
     /* G. */
     [GROUND_COLOUR]: { h: 0, s: 0, l: 25 },
     /* H. */

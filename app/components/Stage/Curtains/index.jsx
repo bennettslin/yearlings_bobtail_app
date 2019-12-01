@@ -59,7 +59,8 @@ class Curtains extends PureComponent {
                             className: cx(
                                 'Curtains',
                                 'abF',
-                                'ovH'
+                                'ovH',
+                                'displayNoneContainer'
                             )
                         }}
                     >

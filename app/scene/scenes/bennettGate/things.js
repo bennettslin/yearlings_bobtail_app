@@ -12,7 +12,7 @@ const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [CODE_BOX]: {
             yIndex: 2,
-            xPosition: 5.5,
+            xPosition: 5,
             zOffset: 2.5,
             scaleFactor: 0.275
         }

@@ -10,7 +10,7 @@ import {
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { a, c, k } from '../../cubes/zIndices'
+import { a, e, k } from '../../cubes/zIndices'
 
 export const DEFAULT_CEILING = {
     hslaColours: [
@@ -21,7 +21,7 @@ export const DEFAULT_CEILING = {
     zIndices: [
         [k],
         [2, 2, a, a, 2],
-        [2, c, c, c, c, c, c, c, c, c, c, 2]
+        [2, e, e, e, e, e, e, e, e, e, e, 2]
     ]
 }
 

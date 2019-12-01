@@ -32,7 +32,8 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [EL_TORITO_DOORS]: {
             yIndex: 2,
-            xPosition: 5.5,
+            xPosition: 5.675,
+            zOffset: -0.35,
             sharedStyle: DOOR__SHARED
         }
     }
