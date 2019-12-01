@@ -40,8 +40,7 @@ const ARRANGEMENTS_THINGS = {
         [BLINDS_OUTSIDE__BENNETT]: {
             yIndex: 2,
             xPosition: 3.5,
-            zOffset: 2.5,
-            scaleFactor: 0.575,
+            zOffset: 2.25,
             sharedStyle: WINDOW__SHARED
         },
         [BENNETT_DOOR_OUTSIDE]: {

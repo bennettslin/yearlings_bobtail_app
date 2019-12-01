@@ -100,7 +100,7 @@ const HSLA_MAP = {
     [BEDROOM_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
     [SCHOOL_WALL_COLOUR]: { h: 211, s: 41, l: 74 },
     [BENNETT_WALL_COLOUR]: { h: 16, s: 28, l: 67 },
-    [LIZ_WALL_COLOUR]: { h: 210, s: 50, l: 75 },
+    [LIZ_WALL_COLOUR]: { h: 210, s: 28, l: 67 },
     [UNDERGROUND_WALL_COLOUR]: { h: 150, s: 50, l: 75 },
     [CLUB_WALL_COLOUR]: { h: 215, s: 50, l: 75 },
     [INDUSTRIAL_WALL_COLOUR]: { h: 0, s: 50, l: 75 },
@@ -110,7 +110,7 @@ const HSLA_MAP = {
     [FAMILY_EXTERIOR_COLOUR]: { h: 220, s: 50, l: 75 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 90, s: 50, l: 75 },
     [BENNETT_EXTERIOR_COLOUR]: { h: 240, s: 50, l: 75 },
-    [LIZ_EXTERIOR_COLOUR]: { h: 180, s: 50, l: 75 },
+    [LIZ_EXTERIOR_COLOUR]: { h: 180, s: 16, l: 75 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 0, s: 50, l: 75 },
     /* Z. */
@@ -118,7 +118,7 @@ const HSLA_MAP = {
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
-    [LIZ_GATE_COLOUR]: { h: 150, s: 50, l: 75 },
+    [LIZ_GATE_COLOUR]: { h: 190, s: 17, l: 46 },
     /* P. */
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
     [CONCRETE_PLATFORM_COLOUR]: { h: 0, s: 0, l: 65 },

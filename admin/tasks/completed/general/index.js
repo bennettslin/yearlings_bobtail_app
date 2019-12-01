@@ -5061,5 +5061,10 @@ export default [
         taskName: `Work on scene cubes, including ceiling superimposed over floor.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Door and window rework for scenes.`,
+        workedHours: 10,
+        neededHours: 10
     }
 ]

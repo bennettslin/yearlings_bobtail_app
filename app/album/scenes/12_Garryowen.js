@@ -55,7 +55,7 @@ import {
     WALL_SPEAKER_FRONT__RIGHT
 } from '../../constants/scene/things/cutouts'
 import {
-    BLINDS_INSIDE__LIZ,
+    LIZ_BLINDS_INSIDE,
     LIZ_DOOR,
     BASEMENT_DOOR_SIDE,
     LIZ_GATE_INSIDE
@@ -90,7 +90,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE__LIZ]: true,
+                [LIZ_BLINDS_INSIDE]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -228,7 +228,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE__LIZ]: true,
+                [LIZ_BLINDS_INSIDE]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },

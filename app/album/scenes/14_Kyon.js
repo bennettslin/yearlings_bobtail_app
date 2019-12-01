@@ -42,7 +42,7 @@ import {
     LIZ_THOUGHT
 } from '../../constants/scene/things/bubbles'
 import {
-    BLINDS_INSIDE_OPEN__LIZ,
+    LIZ_BLINDS_INSIDE_OPEN,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE
@@ -70,7 +70,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -97,7 +97,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -124,7 +124,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -161,7 +161,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -196,7 +196,7 @@ export default [
                 [LIZ_DEFENCE_SPEECH]: true
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -233,7 +233,7 @@ export default [
                 [LIZ_THOUGHT]: true
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -260,7 +260,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },
@@ -290,7 +290,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_INSIDE_OPEN__LIZ]: true,
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
                 [LIZ_GATE_INSIDE]: true
             },

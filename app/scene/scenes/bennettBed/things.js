@@ -7,7 +7,7 @@ import {
 import {
     BLINDS_OUTSIDE__NEIGHBOUR,
     NEIGHBOUR_DOOR,
-    BLINDS_INSIDE_OPEN__BENNETT,
+    BLINDS_INSIDE_OPEN,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     BENNETT_GATE_SIDE_OPEN
@@ -34,8 +34,8 @@ const ARRANGEMENTS_THINGS = {
         [BLINDS_OUTSIDE__NEIGHBOUR]: {
             yIndex: 1,
             xPosition: 5.5,
-            zOffset: 2,
-            scaleFactor: 0.5,
+            zOffset: 1.875,
+            scaleFactor: 0.6,
             sharedStyle: WINDOW__SHARED
         },
         [NEIGHBOUR_DOOR]: {
@@ -44,11 +44,10 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.6,
             sharedStyle: DOOR__SHARED
         },
-        [BLINDS_INSIDE_OPEN__BENNETT]: {
+        [BLINDS_INSIDE_OPEN]: {
             yIndex: 3,
             xPosition: 7.5,
-            zOffset: 2.5,
-            scaleFactor: 0.575,
+            zOffset: 2.25,
             sharedStyle: WINDOW__SHARED
         },
         [BENNETT_DOOR_INSIDE]: {

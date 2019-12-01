@@ -14,6 +14,7 @@ import basementDoor from 'assets/svgs/doors/basementDoor'
 import basementDoorOpen from 'assets/svgs/doors/basementDoorOpen'
 import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
 import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
+import lizBlindsOutside from 'assets/svgs/doors/lizBlindsOutside'
 import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
 import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
 import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
@@ -24,8 +25,9 @@ import bennettDoorInsideOpen from 'assets/svgs/doors/bennettDoorInsideOpen'
 import waitingRoomDoor from 'assets/svgs/doors/waitingRoomDoor'
 import waitingRoomDoorOpen from 'assets/svgs/doors/waitingRoomDoorOpen'
 import clubDoorOpen from 'assets/svgs/doors/clubDoorOpen'
-import blindsInside from 'assets/svgs/doors/blindsInside'
 import blindsInsideOpen from 'assets/svgs/doors/blindsInsideOpen'
+import lizBlindsInside from 'assets/svgs/doors/lizBlindsInside'
+import lizBlindsInsideOpen from 'assets/svgs/doors/lizBlindsInsideOpen'
 import lizDoor from 'assets/svgs/doors/lizDoor'
 import lizDoorOpen from 'assets/svgs/doors/lizDoorOpen'
 import lizGateInside from 'assets/svgs/doors/lizGateInside'
@@ -48,8 +50,8 @@ import {
     BASEMENT_DOOR_OPEN,
     BASEMENT_DOOR_SIDE,
     CINEMA_DOORS,
-    BLINDS_OUTSIDE__LIZ_ENDING,
-    BLINDS_OUTSIDE__LIZ_ENDED,
+    LIZ_BLINDS_OUTSIDE__ENDING,
+    LIZ_BLINDS_OUTSIDE__ENDED,
     LIZ_GATE_OUTSIDE__ENDING,
     LIZ_GATE_OUTSIDE__ENDED,
     DISHROOM_DOOR,
@@ -57,14 +59,14 @@ import {
     BENNETT_GATE_SIDE_OPEN,
     BLINDS_OUTSIDE__NEIGHBOUR,
     NEIGHBOUR_DOOR,
-    BLINDS_INSIDE_OPEN__BENNETT,
+    BLINDS_INSIDE_OPEN,
     BENNETT_DOOR_INSIDE,
     BENNETT_DOOR_INSIDE_OPEN,
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN,
     CLUB_DOOR_OPEN,
-    BLINDS_INSIDE__LIZ,
-    BLINDS_INSIDE_OPEN__LIZ,
+    LIZ_BLINDS_INSIDE,
+    LIZ_BLINDS_INSIDE_OPEN,
     LIZ_DOOR,
     LIZ_DOOR_OPEN,
     LIZ_GATE_INSIDE,
@@ -88,8 +90,8 @@ export default {
     [BASEMENT_DOOR_OPEN]: basementDoorOpen,
     [BASEMENT_DOOR_SIDE]: basementDoorSide,
     [CINEMA_DOORS]: cinemaDoors,
-    [BLINDS_OUTSIDE__LIZ_ENDING]: blindsOutside,
-    [BLINDS_OUTSIDE__LIZ_ENDED]: blindsOutside,
+    [LIZ_BLINDS_OUTSIDE__ENDING]: lizBlindsOutside,
+    [LIZ_BLINDS_OUTSIDE__ENDED]: lizBlindsOutside,
     [LIZ_GATE_OUTSIDE__ENDING]: lizGateOutside,
     [LIZ_GATE_OUTSIDE__ENDED]: lizGateOutside,
     [DISHROOM_DOOR]: dishroomDoor,
@@ -97,14 +99,14 @@ export default {
     [BLINDS_OUTSIDE__NEIGHBOUR]: blindsOutside,
     [NEIGHBOUR_DOOR]: neighbourDoor,
     [BENNETT_GATE_SIDE_OPEN]: bennettGateSideOpen,
-    [BLINDS_INSIDE_OPEN__BENNETT]: blindsInsideOpen,
+    [BLINDS_INSIDE_OPEN]: blindsInsideOpen,
     [BENNETT_DOOR_INSIDE]: bennettDoorInside,
     [BENNETT_DOOR_INSIDE_OPEN]: bennettDoorInsideOpen,
     [WAITING_ROOM_DOOR]: waitingRoomDoor,
     [WAITING_ROOM_DOOR_OPEN]: waitingRoomDoorOpen,
     [CLUB_DOOR_OPEN]: clubDoorOpen,
-    [BLINDS_INSIDE__LIZ]: blindsInside,
-    [BLINDS_INSIDE_OPEN__LIZ]: blindsInsideOpen,
+    [LIZ_BLINDS_INSIDE]: lizBlindsInside,
+    [LIZ_BLINDS_INSIDE_OPEN]: lizBlindsInsideOpen,
     [LIZ_DOOR]: lizDoor,
     [LIZ_DOOR_OPEN]: lizDoorOpen,
     [LIZ_GATE_INSIDE]: lizGateInside,

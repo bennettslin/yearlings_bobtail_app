@@ -10,8 +10,8 @@ import {
 } from '../../../constants/scene/things/bubbles'
 import { TRAFFIC_LIGHT } from '../../../constants/scene/things/cutouts'
 import {
-    BLINDS_OUTSIDE__LIZ_ENDING,
-    BLINDS_OUTSIDE__LIZ_ENDED,
+    LIZ_BLINDS_OUTSIDE__ENDING,
+    LIZ_BLINDS_OUTSIDE__ENDED,
     LIZ_GATE_OUTSIDE__ENDING,
     LIZ_GATE_OUTSIDE__ENDED
 } from '../../../constants/scene/things/doors'
@@ -52,18 +52,16 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         }
     },
     [DOOR]: {
-        [BLINDS_OUTSIDE__LIZ_ENDING]: {
+        [LIZ_BLINDS_OUTSIDE__ENDING]: {
             yIndex: 2,
             xPosition: 6,
-            scaleFactor: 0.575,
-            zOffset: 2.5,
+            zOffset: 2.25,
             sharedStyle: WINDOW__SHARED
         },
-        [BLINDS_OUTSIDE__LIZ_ENDED]: {
+        [LIZ_BLINDS_OUTSIDE__ENDED]: {
             yIndex: 2,
             xPosition: 3,
-            scaleFactor: 0.575,
-            zOffset: 2.5,
+            zOffset: 2.25,
             sharedStyle: WINDOW__SHARED
         },
         [LIZ_GATE_OUTSIDE__ENDING]: {

@@ -48,8 +48,8 @@ import {
     TRAFFIC_LIGHT
 } from '../../constants/scene/things/cutouts'
 import {
-    BLINDS_OUTSIDE__LIZ_ENDING,
-    BLINDS_OUTSIDE__LIZ_ENDED,
+    LIZ_BLINDS_OUTSIDE__ENDING,
+    LIZ_BLINDS_OUTSIDE__ENDED,
     LIZ_GATE_OUTSIDE__ENDING,
     LIZ_GATE_OUTSIDE__ENDED
 } from '../../constants/scene/things/doors'
@@ -84,7 +84,7 @@ export default [
                 }
             },
             [DOOR]: {
-                [BLINDS_OUTSIDE__LIZ_ENDING]: true,
+                [LIZ_BLINDS_OUTSIDE__ENDING]: true,
                 [LIZ_GATE_OUTSIDE__ENDING]: true
             }
         },
@@ -223,7 +223,7 @@ export default [
                 [TRAFFIC_LIGHT]: true
             },
             [DOOR]: {
-                [BLINDS_OUTSIDE__LIZ_ENDED]: true,
+                [LIZ_BLINDS_OUTSIDE__ENDED]: true,
                 [LIZ_GATE_OUTSIDE__ENDED]: true
             }
         },
