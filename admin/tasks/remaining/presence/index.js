@@ -16,5 +16,25 @@ export default [
         taskName: `Line stroke widths for all presence types.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Unique door, window, and furniture colours. Also colour furniture cubes.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Make bed and couch bottoms opaque.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Raise car seats.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Cremated freeway sign.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

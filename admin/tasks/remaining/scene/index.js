@@ -16,6 +16,16 @@
 
 export default [
     {
+        taskName: `Choose floor colours and floor patterns.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Assign sky times and seasons, choose colours.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: 'theatre',
         notes: `logue versus song theatre colours, gradient for sky backdrop`,
         workedHours: 0,

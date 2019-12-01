@@ -27,7 +27,7 @@ export const BENNETT_FLOOR_DARK_COLOUR = 'bennettFloorDark'
 export const LIZ_FLOOR_DARK_COLOUR = 'lizFloorDark'
 export const SOFT_WALL_COLOUR = 'softWall'
 export const BEDROOM_WALL_COLOUR = 'bedroomWall'
-export const DARK_WALL_COLOUR = 'darkWall'
+export const DARK_WALL_COLOUR = DARK_FLOOR_COLOUR
 export const SCHOOL_WALL_COLOUR = 'schoolWall'
 export const BENNETT_WALL_COLOUR = 'bennettWall'
 export const LIZ_WALL_COLOUR = 'lizWall'
@@ -35,7 +35,7 @@ export const UNDERGROUND_WALL_COLOUR = 'basementWall'
 export const CLUB_WALL_COLOUR = 'clubWall'
 export const INDUSTRIAL_WALL_COLOUR = 'industrialWall'
 export const FANCY_WALL_COLOUR = 'fancyWall'
-export const EXTERIOR_COLOUR = 'taiwaneseExterior'
+export const EXTERIOR_COLOUR = 'exterior'
 export const FAMILY_EXTERIOR_COLOUR = 'familyExterior'
 export const VAN_NUYS_EXTERIOR_COLOUR = 'vanNuysExterior'
 export const BENNETT_EXTERIOR_COLOUR = 'bennettExterior'
@@ -114,7 +114,7 @@ const HSLA_MAP = {
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 0, s: 50, l: 75 },
     /* Z. */
-    [DARK_WALL_COLOUR]: { h: 225, s: 25, l: 45 },
+    // DARK_WALL_COLOUR: Same as dark floor.
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
