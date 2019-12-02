@@ -5066,5 +5066,10 @@ export default [
         taskName: `Door and window rework for scenes.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Backdrop separation and new plants.`,
+        workedHours: 6,
+        neededHours: 6
     }
 ]

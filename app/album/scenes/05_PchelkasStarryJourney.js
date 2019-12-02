@@ -56,7 +56,8 @@ import { ASLEEP } from '../../constants/scene/actors/songs'
 import { PRINCIPAL } from '../../constants/scene/actors/tristan'
 import {
     SCHOOL_BACKDROP,
-    BRICK_WALL_BACKDROP
+    BRICK_WALL_BACKDROP,
+    VALLEY_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     DOGS_SKETCH,
@@ -321,7 +322,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [SCHOOL_BACKDROP]: true,
+                [VALLEY_BACKDROP]: true,
                 [BRICK_WALL_BACKDROP]: true
             },
             [BUBBLE]: {

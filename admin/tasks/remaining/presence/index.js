@@ -23,7 +23,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Raise car seats.`,
+        taskName: `Raise car seats. Wait till actor presences are rendered.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -31,5 +31,30 @@ export default [
         taskName: `Fix Liz and Taiwan gates.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Shared mountain and foliage styles. Make saturation dependent on yIndex.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Fix captain bed angle.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Draw distant buildings for Oakland backdrops.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Separate cemetery backdrop for Royce Hall, draw distant buildings.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Have separate configs to allow different trimBottoms for valleyBackdrop and cemetery Backdrop.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]
