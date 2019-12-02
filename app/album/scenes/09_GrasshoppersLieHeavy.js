@@ -1,5 +1,6 @@
 import { ACTOR } from '../../constants/scene'
 import {
+    BACKDROP,
     BUBBLE,
     CARDBOARD,
     CUTOUT,
@@ -46,6 +47,11 @@ import {
     GATE_CODE,
     RUMPLED_LINENS
 } from '../../constants/scene/actors/songs'
+import {
+    OAKLAND_SIDE_BACKDROP,
+    FENCE_BACKDROP,
+    BRICK_WALL_BACKDROP
+} from '../../constants/scene/things/backdrops'
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -216,6 +222,10 @@ export default [
                     }
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
+            },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,
                 [CACTUS_SINGLE__LIZ_ENDING]: true,
@@ -279,6 +289,10 @@ export default [
                     }
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE_BACKDROP]: true,
+                [BRICK_WALL_BACKDROP]: true
+            },
             [CARDBOARD]: {
                 [CODE_BOX]: true
             },
@@ -312,6 +326,10 @@ export default [
                         instance: GATE_CODE
                     }
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE_BACKDROP]: true,
+                [BRICK_WALL_BACKDROP]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true

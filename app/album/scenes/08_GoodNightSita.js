@@ -34,7 +34,11 @@ import {
     GO_KARTS,
     DATE_ENDED
 } from '../../constants/scene/actors/songs'
-import { DRIVING_BACKDROP } from '../../constants/scene/things/backdrops'
+import {
+    OAKLAND_SIDE_BACKDROP,
+    FENCE_BACKDROP,
+    DRIVING_BACKDROP
+} from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
@@ -86,6 +90,10 @@ export default [
                         instance: DATE_ENDING
                     }
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,

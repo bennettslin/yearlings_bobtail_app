@@ -42,8 +42,8 @@ import {
 } from '../../constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../constants/scene/actors/wade'
 import {
-    FOLIAGE_BACKDROP,
-    OAKLAND_SIDE_BACKDROP
+    OAKLAND_SIDE_BACKDROP,
+    BRICK_WALL_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__RIGHT,
@@ -105,6 +105,10 @@ export default [
                     description: 'walking away, in a bad mood',
                     instance: WEEPING
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE_BACKDROP]: true,
+                [BRICK_WALL_BACKDROP]: true
             },
             [CUTOUT]: {
                 [RECYCLABLES]: true,
@@ -174,7 +178,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [FOLIAGE_BACKDROP]: true
+                [OAKLAND_SIDE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [BERKELEY_LAMPPOST]: true
