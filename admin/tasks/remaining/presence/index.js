@@ -26,5 +26,10 @@ export default [
         taskName: `Raise car seats.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Fix Liz and Taiwan gates.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

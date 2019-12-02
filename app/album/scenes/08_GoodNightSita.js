@@ -44,6 +44,7 @@ import {
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
+    CYPRESS_TREE,
     MUSEUM_DISPLAY,
     CAVEMAN_BONES,
     SANDBAGS,
@@ -87,6 +88,7 @@ export default [
                 }
             },
             [CUTOUT]: {
+                [CYPRESS_TREE]: true,
                 [CACTUS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_DOUBLE__LIZ_GATE]: true
             },

@@ -76,6 +76,7 @@ import {
     GLASS_RACK__DOLLY,
     DISHROOM_DOLLY__TRAY,
     DISHROOM_DOLLY__GLASS,
+    CYPRESS_TREE,
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
@@ -216,6 +217,7 @@ export default [
                 }
             },
             [CUTOUT]: {
+                [CYPRESS_TREE]: true,
                 [CACTUS_SINGLE__LIZ_ENDING]: true,
                 [CACTUS_DOUBLE__LIZ_GATE]: true
             },

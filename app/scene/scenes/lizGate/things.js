@@ -9,6 +9,7 @@ import {
     GO_KART_THOUGHT
 } from '../../../constants/scene/things/bubbles'
 import {
+    CYPRESS_TREE,
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
@@ -50,6 +51,11 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         }
     },
     [CUTOUT]: {
+        [CYPRESS_TREE]: {
+            yIndex: 2,
+            xPosition: 1.5,
+            scaleFactor: 0.6
+        },
         [CACTUS_SINGLE__LIZ_ENDING]: {
             yIndex: 4,
             xPosition: 9.5,
@@ -58,7 +64,8 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [CACTUS_DOUBLE__LIZ_GATE]: {
             yIndex: 4,
             xPosition: 1.5,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            flipHorizontal: true
         },
         [CACTUS_SINGLE__LIZ_ENDED]: {
             yIndex: 4,

@@ -24,6 +24,7 @@ import campusTreeSingle from 'assets/svgs/cutouts/campusTreeSingle'
 import campusTreeDouble from 'assets/svgs/cutouts/campusTreeDouble'
 import monitorFront from 'assets/svgs/cutouts/monitorFront'
 import wallSpeakerFront from 'assets/svgs/cutouts/wallSpeakerFront'
+import cypressTree from 'assets/svgs/cutouts/cypressTree'
 import museumDisplay from 'assets/svgs/cutouts/museumDisplay'
 import cavemanBones from 'assets/svgs/cutouts/cavemanBones'
 import sandbags from 'assets/svgs/cutouts/sandbags'
@@ -97,6 +98,7 @@ import {
     MONITOR_FRONT__RIGHT,
     WALL_SPEAKER_FRONT__LEFT,
     WALL_SPEAKER_FRONT__RIGHT,
+    CYPRESS_TREE,
     MUSEUM_DISPLAY,
     CAVEMAN_BONES,
     SANDBAGS,
@@ -178,6 +180,7 @@ export default {
     [MONITOR_FRONT__RIGHT]: monitorFront,
     [WALL_SPEAKER_FRONT__LEFT]: wallSpeakerFront,
     [WALL_SPEAKER_FRONT__RIGHT]: wallSpeakerFront,
+    [CYPRESS_TREE]: cypressTree,
     [MUSEUM_DISPLAY]: museumDisplay,
     [CAVEMAN_BONES]: cavemanBones,
     [SANDBAGS]: sandbags,

@@ -117,7 +117,7 @@ const HSLA_MAP = {
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },
     [BANCROFT_GATE_COLOUR]: { h: 102, s: 4, l: 59 },
-    [LIZ_GATE_COLOUR]: { h: 190, s: 17, l: 46 },
+    [LIZ_GATE_COLOUR]: { h: 46, s: 12, l: 63 },
     /* P. */
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
     [CONCRETE_PLATFORM_COLOUR]: { h: 0, s: 0, l: 65 },
