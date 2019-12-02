@@ -53,6 +53,7 @@ import { REASSURING_ENCHANTED } from '../../constants/scene/actors/christopherBe
 import { GANGBANGER } from '../../constants/scene/actors/songs'
 import {
     NOHO_HOUSES_BACKDROP,
+    FENCE_BACKDROP,
     VALLEY_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
@@ -163,7 +164,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true
+                [NOHO_HOUSES_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [CACTUS_DOUBLE__PORCH]: true,
@@ -242,7 +244,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true
+                [NOHO_HOUSES_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [SHOPPING_CART]: true,

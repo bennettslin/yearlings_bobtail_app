@@ -45,6 +45,7 @@ import {
 } from '../../constants/scene/actors/esther'
 import {
     NOHO_HOUSES_BACKDROP,
+    FENCE_BACKDROP,
     SCHOOL_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../constants/scene/things/bubbles'
@@ -73,7 +74,8 @@ export default [
         description: `North Hollywood houses.`,
         presences: {
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true
+                [NOHO_HOUSES_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [FIRE_HYDRANT]: true
@@ -108,7 +110,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true
+                [NOHO_HOUSES_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [FIRE_HYDRANT]: true
@@ -176,7 +179,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true
+                [NOHO_HOUSES_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
                 [MIRRORED_SINK]: true,
@@ -207,7 +211,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true
+                [NOHO_HOUSES_BACKDROP]: true,
+                [FENCE_BACKDROP]: true
             },
             [CARDBOARD]: {
                 [JOHNNY_HORTON_ALBUM]: true

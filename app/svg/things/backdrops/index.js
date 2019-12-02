@@ -1,4 +1,5 @@
 import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop'
+import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
 import schoolBackdrop from 'assets/svgs/backdrops/schoolBackdrop'
 import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
 import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
@@ -21,6 +22,7 @@ import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
+    FENCE_BACKDROP,
     SCHOOL_BACKDROP,
     VALLEY_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
@@ -44,6 +46,7 @@ import {
 
 export default {
     [NOHO_HOUSES_BACKDROP]: nohoHousesBackdrop,
+    [FENCE_BACKDROP]: fenceBackdrop,
     [SCHOOL_BACKDROP]: schoolBackdrop,
     [VALLEY_BACKDROP]: valleyBackdrop,
     [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,

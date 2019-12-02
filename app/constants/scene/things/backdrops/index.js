@@ -1,5 +1,7 @@
 export const NOHO_HOUSES_BACKDROP = 'nohoHousesBackdrop'
+export const FENCE_BACKDROP = 'fenceBackdrop'
 export const SCHOOL_BACKDROP = 'schoolBackdrop'
+export const BRICK_WALL_BACKDROP = 'brickWallBackdrop'
 export const VALLEY_BACKDROP = 'valleyBackdrop'
 export const TAIWAN_MOUNTAINS_BACKDROP = 'taiwanMountainsBackdrop'
 export const TAIWAN_STAIRS_BACKDROP = 'taiwanStairsBackdrop'

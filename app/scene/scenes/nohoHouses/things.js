@@ -3,7 +3,10 @@ import {
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { NOHO_HOUSES_BACKDROP } from '../../../constants/scene/things/backdrops'
+import {
+    NOHO_HOUSES_BACKDROP,
+    FENCE_BACKDROP
+} from '../../../constants/scene/things/backdrops'
 import { FIRE_HYDRANT } from '../../../constants/scene/things/cutouts'
 import {
     NOHO_HOUSE_LEFT,
@@ -13,6 +16,12 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [NOHO_HOUSES_BACKDROP]: {
+            yIndex: 0,
+            xPosition: 5.5,
+            scaleFactor: 0.7,
+            trimBottom: 0.05
+        },
+        [FENCE_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,
