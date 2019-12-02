@@ -53,7 +53,10 @@ import {
     EL_CERRITO_TREE,
     IV_DRIP
 } from '../../constants/scene/things/cutouts'
-import { HOSPITAL_RECORD_PLAYER } from '../../constants/scene/things/fixtures'
+import {
+    HOSPITAL_RECORD_PLAYER,
+    FREEWAY_SIGN
+} from '../../constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
@@ -89,6 +92,9 @@ export default [
             [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
+            [FIXTURE]: {
+                [FREEWAY_SIGN]: true
+            },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
@@ -121,6 +127,9 @@ export default [
             [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
+            [FIXTURE]: {
+                [FREEWAY_SIGN]: true
+            },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
@@ -152,6 +161,9 @@ export default [
             },
             [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
+            },
+            [FIXTURE]: {
+                [FREEWAY_SIGN]: true
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
@@ -264,6 +276,9 @@ export default [
             [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
             },
+            [FIXTURE]: {
+                [FREEWAY_SIGN]: true
+            },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,
                 [EL_CERRITO_NEAR]: true
@@ -289,6 +304,9 @@ export default [
             },
             [CUTOUT]: {
                 [EL_CERRITO_TREE]: true
+            },
+            [FIXTURE]: {
+                [FREEWAY_SIGN]: true
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,

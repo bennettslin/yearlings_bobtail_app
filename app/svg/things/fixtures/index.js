@@ -43,6 +43,7 @@ import tetherballPole from 'assets/svgs/fixtures/tetherballPole'
 import recordingMic from 'assets/svgs/fixtures/recordingMic'
 import recordingBeers from 'assets/svgs/fixtures/recordingBeers'
 import crackedPicture from 'assets/svgs/fixtures/crackedPicture'
+import freewaySign from 'assets/svgs/fixtures/freewaySign'
 import lizPhoneBase from 'assets/svgs/fixtures/lizPhoneBase'
 import lizPhoneBaseReflection from 'assets/svgs/fixtures/lizPhoneBaseReflection'
 import hospitalRecordPlayer from 'assets/svgs/fixtures/hospitalRecordPlayer'
@@ -97,6 +98,7 @@ import {
     RECORDING_MIC,
     RECORDING_BEERS,
     CRACKED_PICTURE,
+    FREEWAY_SIGN,
     BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
@@ -153,6 +155,7 @@ export default {
     [RECORDING_MIC]: recordingMic,
     [RECORDING_BEERS]: recordingBeers,
     [CRACKED_PICTURE]: crackedPicture,
+    [FREEWAY_SIGN]: freewaySign,
     [BALLED_FOIL__ALLEY]: balledFoil,
     [LIZ_PHONE_BASE]: lizPhoneBase,
     [LIZ_PHONE_BASE_REFLECTION]: lizPhoneBaseReflection,

@@ -26,10 +26,5 @@ export default [
         taskName: `Raise car seats.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Cremated freeway sign.`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]

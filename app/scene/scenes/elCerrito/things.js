@@ -1,12 +1,14 @@
 import {
     BACKDROP,
     CUTOUT,
+    FIXTURE,
     FLAT,
     PANEL,
     PUPPET
 } from '../../../constants/scene/things'
 import { GOLDEN_GATE_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { EL_CERRITO_TREE } from '../../../constants/scene/things/cutouts'
+import { FREEWAY_SIGN } from '../../../constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
@@ -19,6 +21,7 @@ import {
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 import { BENNETT, MIRIAM } from '../../../constants/scene/actors'
+import { FREEWAY_SIGN__SHARED } from '../../shared/outdoor'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import {
     INTERIOR__SHARED,
@@ -39,6 +42,15 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 2,
             scaleFactor: 0.5
+        }
+    },
+    [FIXTURE]: {
+        [FREEWAY_SIGN]: {
+            yIndex: 2,
+            xPosition: 8.5,
+            zOffset: -0.1,
+            scaleFactor: 0.7,
+            sharedStyle: FREEWAY_SIGN__SHARED
         }
     },
     [FLAT]: {
