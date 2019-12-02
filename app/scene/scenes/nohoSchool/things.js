@@ -5,7 +5,10 @@ import {
     DOOR,
     FIXTURE
 } from '../../../constants/scene/things'
-import { SCHOOL_BACKDROP } from '../../../constants/scene/things/backdrops'
+import {
+    SCHOOL_BACKDROP,
+    BRICK_WALL_BACKDROP
+} from '../../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../constants/scene/things/bubbles'
 import { PLAYGROUND_SLIDE } from '../../../constants/scene/things/cutouts'
 import { NURSE_DOOR } from '../../../constants/scene/things/doors'
@@ -19,6 +22,12 @@ import { DOOR__SHARED } from '../../shared/home'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [SCHOOL_BACKDROP]: {
+            yIndex: 0,
+            xPosition: 5.5,
+            scaleFactor: 0.66,
+            trimBottom: 0.05
+        },
+        [BRICK_WALL_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.66,

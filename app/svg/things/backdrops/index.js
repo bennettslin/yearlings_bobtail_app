@@ -1,5 +1,4 @@
 import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop'
-import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
 import schoolBackdrop from 'assets/svgs/backdrops/schoolBackdrop'
 import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
 import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
@@ -19,10 +18,11 @@ import roadFuture from 'assets/svgs/backdrops/roadFuture'
 import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
 import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
+import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
+import brickWallBackdrop from 'assets/svgs/backdrops/brickWallBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
-    FENCE_BACKDROP,
     SCHOOL_BACKDROP,
     VALLEY_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
@@ -41,12 +41,13 @@ import {
     ROAD_PRESENT,
     ROAD_FUTURE,
     GOLDEN_GATE_BACKDROP,
-    WEDDING_BACKDROP
+    WEDDING_BACKDROP,
+    FENCE_BACKDROP,
+    BRICK_WALL_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
 export default {
     [NOHO_HOUSES_BACKDROP]: nohoHousesBackdrop,
-    [FENCE_BACKDROP]: fenceBackdrop,
     [SCHOOL_BACKDROP]: schoolBackdrop,
     [VALLEY_BACKDROP]: valleyBackdrop,
     [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,
@@ -65,5 +66,7 @@ export default {
     [ROAD_PRESENT]: roadPresent,
     [ROAD_FUTURE]: roadFuture,
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
-    [WEDDING_BACKDROP]: weddingBackdrop
+    [WEDDING_BACKDROP]: weddingBackdrop,
+    [FENCE_BACKDROP]: fenceBackdrop,
+    [BRICK_WALL_BACKDROP]: brickWallBackdrop
 }
