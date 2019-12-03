@@ -16,7 +16,8 @@ import {
     GO_KARTS_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
+    TIME_EVENING,
+    TIME_AFTERNOON,
     SEASON_AUTUMN
 } from '../../scene/sky/keys'
 import {
@@ -106,7 +107,7 @@ export default [
             }
         },
         cubes: LIZ_GATE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 5,
@@ -130,7 +131,7 @@ export default [
             }
         },
         cubes: MUSEUM_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 8,
@@ -169,7 +170,7 @@ export default [
             }
         },
         cubes: BACKSTAGE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 11,
@@ -201,7 +202,7 @@ export default [
             }
         },
         cubes: GO_KARTS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 14,
@@ -234,6 +235,6 @@ export default [
             }
         },
         cubes: LIZ_GATE_STREET_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
     }
 ]

@@ -21,7 +21,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Assign sky times and seasons, choose colours.`,
+        taskName: `Assign sky times and seasons, choose colours. Time should default to time anytime.`,
         workedHours: 0,
         neededHours: 3
     },

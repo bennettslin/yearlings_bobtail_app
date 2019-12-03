@@ -14,7 +14,7 @@ import { getCubesForKey } from 'album/scenes/arrangements/cubes'
 
 import {
     TIME_ANYTIME,
-    SEASON_INDOOR
+    SEASON_STAGE
 } from 'scene/sky/keys'
 
 import { getScene } from 'album/api/scenes'
@@ -194,7 +194,7 @@ const initialSceneIndex = -1,
         cubes: sceneCubesKey,
         sky: {
             time: sceneTime = TIME_ANYTIME,
-            season: sceneSeason = SEASON_INDOOR
+            season: sceneSeason = SEASON_STAGE
         },
         layers: scenePresenceLayers
     } = getScene(

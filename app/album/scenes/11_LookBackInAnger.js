@@ -12,8 +12,7 @@ import {
     CLUB_LOADING
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
-    SEASON_INDOOR,
+    TIME_NIGHT,
     SEASON_SUMMER
 } from '../../scene/sky/keys'
 import {
@@ -114,7 +113,7 @@ export default [
             }
         },
         cubes: CLUB_SIDE_CROWD_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_INDOOR }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     },
     {
         unitIndex: 5,
@@ -150,7 +149,7 @@ export default [
             }
         },
         cubes: CLUB_SIDE_STAGE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_INDOOR }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     },
     {
         unitIndex: 8,
@@ -190,7 +189,7 @@ export default [
             }
         },
         cubes: CLUB_LOADING,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     },
     {
         unitIndex: 12,
@@ -231,6 +230,6 @@ export default [
             }
         },
         cubes: LIZ_BED_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     }
 ]

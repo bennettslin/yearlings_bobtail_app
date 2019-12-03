@@ -17,7 +17,10 @@ import {
     CLIFF_DEATHBED_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
+    TIME_MORNING,
+    TIME_NOON,
+    TIME_AFTERNOON,
+    TIME_EVENING,
     SEASON_SPRING,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
@@ -101,7 +104,7 @@ export default [
             }
         },
         cubes: EL_TORITO_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_MORNING, season: SEASON_SPRING }
     },
     {
         unitIndex: 3,
@@ -139,7 +142,7 @@ export default [
             }
         },
         cubes: PAMPAS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_NOON, season: SEASON_SPRING }
     },
     {
         unitIndex: 5,
@@ -170,7 +173,7 @@ export default [
             }
         },
         cubes: WEDDING_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING }
     },
     {
         unitIndex: 7,
@@ -194,7 +197,7 @@ export default [
             }
         },
         cubes: CLIFF_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_EVENING, season: SEASON_SPRING }
     },
     {
         unitIndex: 9,
@@ -232,6 +235,6 @@ export default [
             }
         },
         cubes: CLIFF_DEATHBED_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
+        sky: { season: SEASON_THOUGHT }
     }
 ]

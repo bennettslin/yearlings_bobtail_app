@@ -2,10 +2,7 @@ import { ACTOR } from '../../constants/scene'
 
 import { LOGUE_KEY } from '../../constants/scene/scenes'
 
-import {
-    TIME_ANYTIME,
-    SEASON_INDOOR
-} from '../../scene/sky/keys'
+import { SEASON_STAGE } from '../../scene/sky/keys'
 
 import {
     BENNETTS_CHRISTOPHER_LIZ,
@@ -131,6 +128,6 @@ export default [
             }
         },
         cubes: LOGUE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_INDOOR }
+        sky: { season: SEASON_STAGE }
     }
 ]

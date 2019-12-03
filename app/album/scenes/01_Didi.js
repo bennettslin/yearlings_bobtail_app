@@ -16,7 +16,6 @@ import {
     BATHROOM_OPEN_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
     TIME_DAWN,
     TIME_MORNING,
     TIME_NOON,
@@ -216,6 +215,6 @@ export default [
             }
         },
         cubes: BATHROOM_OPEN_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_PAST }
+        sky: { season: SEASON_PAST }
     }
 ]

@@ -9,7 +9,7 @@ import { getScene } from 'album/api/scenes'
 
 import {
     TIME_ANYTIME,
-    SEASON_INDOOR
+    SEASON_STAGE
 } from 'scene/sky/keys'
 
 class SceneChangeUpdateDispatcher extends PureComponent {
@@ -34,7 +34,7 @@ class SceneChangeUpdateDispatcher extends PureComponent {
     dispatchCanSceneUpdate = () => {
         logTransition('Scene can update.')
 
-        this._dispatchCanScene({
+        this._dispatchCanSceneEnterOrUpdate({
             isUpdate: true,
             sceneIndex: -1
         })
@@ -47,13 +47,13 @@ class SceneChangeUpdateDispatcher extends PureComponent {
     } = {}) => {
         logTransition('Scene can enter.')
 
-        this._dispatchCanScene({
+        this._dispatchCanSceneEnterOrUpdate({
             songIndex,
             sceneIndex
         })
     }
 
-    _dispatchCanScene({
+    _dispatchCanSceneEnterOrUpdate({
         isUpdate,
         songIndex = this.props.selectedSongIndex,
         sceneIndex = this.props.selectedSceneIndex
@@ -63,7 +63,7 @@ class SceneChangeUpdateDispatcher extends PureComponent {
             layers: scenePresenceLayers,
             sky: {
                 time: sceneTime = TIME_ANYTIME,
-                season: sceneSeason = SEASON_INDOOR
+                season: sceneSeason = SEASON_STAGE
             }
 
         } = getScene(
