@@ -101,10 +101,7 @@ export default [
             }
         },
         cubes: EL_TORITO_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 3,
@@ -142,10 +139,7 @@ export default [
             }
         },
         cubes: PAMPAS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 5,
@@ -176,10 +170,7 @@ export default [
             }
         },
         cubes: WEDDING_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 7,
@@ -203,10 +194,7 @@ export default [
             }
         },
         cubes: CLIFF_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 9,
@@ -244,9 +232,6 @@ export default [
             }
         },
         cubes: CLIFF_DEATHBED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     }
 ]

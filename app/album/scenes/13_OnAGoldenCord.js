@@ -104,10 +104,7 @@ export default [
             }
         },
         cubes: OAKLAND_HOUSES_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 3,
@@ -130,10 +127,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     },
     {
         unitIndex: 4,
@@ -169,10 +163,7 @@ export default [
             }
         },
         cubes: OAKLAND_RESIDENTIAL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 7,
@@ -204,10 +195,7 @@ export default [
             }
         },
         cubes: OAKLAND_COMMERCIAL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 10,
@@ -251,9 +239,6 @@ export default [
             }
         },
         cubes: OAKLAND_PUBLIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     }
 ]

@@ -116,10 +116,7 @@ export default [
             }
         },
         cubes: ROYCE_HALL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 3,
@@ -151,10 +148,7 @@ export default [
             }
         },
         cubes: WALGREENS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     },
     {
         unitIndex: 6,
@@ -186,10 +180,7 @@ export default [
             }
         },
         cubes: STEAM_TUNNEL_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 9,
@@ -221,10 +212,7 @@ export default [
             }
         },
         cubes: CEMETERY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 11,
@@ -270,10 +258,7 @@ export default [
             }
         },
         cubes: STATION_WAGON_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 15,
@@ -302,9 +287,6 @@ export default [
             }
         },
         cubes: ATTIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     }
 ]

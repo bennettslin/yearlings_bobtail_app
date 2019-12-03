@@ -106,10 +106,7 @@ export default [
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 3,
@@ -141,10 +138,7 @@ export default [
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 5,
@@ -176,10 +170,7 @@ export default [
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 7,
@@ -208,10 +199,7 @@ export default [
             }
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     },
     {
         unitIndex: 8,
@@ -251,10 +239,7 @@ export default [
             }
         },
         cubes: EL_CERRITO_TENNIS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     },
     {
         unitIndex: 9,
@@ -290,10 +275,7 @@ export default [
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 11,
@@ -317,9 +299,6 @@ export default [
             }
         },
         cubes: EL_CERRITO_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     }
 ]

@@ -11,10 +11,7 @@ import {
 const DEFAULT_SCENE = {
     cubes: DEFAULT_STAGE_KEY,
     layers: {},
-    sky: {
-        time: TIME_ANYTIME,
-        season: SEASON_INDOOR
-    }
+    sky: { time: TIME_ANYTIME, season: SEASON_INDOOR }
 }
 
 export const getSongSceneConfigs = (songIndex) => {

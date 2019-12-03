@@ -79,10 +79,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 2,
@@ -106,10 +103,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 4,
@@ -139,10 +133,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 7,
@@ -170,10 +161,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 8,
@@ -205,10 +193,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 10,
@@ -242,10 +227,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 11,
@@ -272,10 +254,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_DARK_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 12,
@@ -303,9 +282,6 @@ export default [
             }
         },
         cubes: LIZ_COUCH_DARK_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     }
 ]

@@ -114,10 +114,7 @@ export default [
             }
         },
         cubes: CLUB_SIDE_CROWD_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_INDOOR
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_INDOOR }
     },
     {
         unitIndex: 5,
@@ -153,10 +150,7 @@ export default [
             }
         },
         cubes: CLUB_SIDE_STAGE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_INDOOR
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_INDOOR }
     },
     {
         unitIndex: 8,
@@ -196,10 +190,7 @@ export default [
             }
         },
         cubes: CLUB_LOADING,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 12,
@@ -240,9 +231,6 @@ export default [
             }
         },
         cubes: LIZ_BED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     }
 ]

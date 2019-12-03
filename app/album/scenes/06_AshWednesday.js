@@ -122,10 +122,7 @@ export default [
             }
         },
         cubes: COURTYARD_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 3,
@@ -162,10 +159,7 @@ export default [
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     },
     {
         unitIndex: 5,
@@ -189,10 +183,7 @@ export default [
             }
         },
         cubes: CATHOLIC_CHURCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 7,
@@ -231,10 +222,7 @@ export default [
             }
         },
         cubes: BERKELEY_BANCROFT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     },
     {
         unitIndex: 8,
@@ -266,9 +254,6 @@ export default [
             }
         },
         cubes: BERKELEY_CAMPANILE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
     }
 ]

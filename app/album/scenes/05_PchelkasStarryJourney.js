@@ -129,10 +129,7 @@ export default [
             }
         },
         cubes: BEDROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 2,
@@ -165,10 +162,7 @@ export default [
             }
         },
         cubes: BEDROOM_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 6,
@@ -199,10 +193,7 @@ export default [
             }
         },
         cubes: BEDROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 9,
@@ -223,10 +214,7 @@ export default [
             }
         },
         cubes: BEDROOM_DOGS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 10,
@@ -253,10 +241,7 @@ export default [
             }
         },
         cubes: BEDROOM_SPACE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 13,
@@ -292,10 +277,7 @@ export default [
             }
         },
         cubes: VAN_NUYS_LOCKERS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 17,
@@ -339,10 +321,7 @@ export default [
             }
         },
         cubes: VAN_NUYS_QUAD_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 18,
@@ -376,9 +355,6 @@ export default [
             }
         },
         cubes: VAN_NUYS_HALLWAY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     }
 ]

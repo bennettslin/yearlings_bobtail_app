@@ -114,10 +114,7 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_PRESENT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
     },
     {
         unitIndex: 4,
@@ -149,10 +146,7 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_PRESENT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
     },
     {
         unitIndex: 6,
@@ -189,10 +183,7 @@ export default [
             }
         },
         cubes: SCHOOLBUS_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     },
     {
         unitIndex: 9,
@@ -229,10 +220,7 @@ export default [
             }
         },
         cubes: TETHERBALL_COURT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_THOUGHT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
     },
     {
         unitIndex: 12,
@@ -264,9 +252,6 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_PRESENT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
     }
 ]

@@ -114,10 +114,7 @@ export default [
             }
         },
         cubes: BASEMENT_BED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 2,
@@ -147,10 +144,7 @@ export default [
             }
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_MAGIC
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_MAGIC }
     },
     {
         unitIndex: 4,
@@ -185,10 +179,7 @@ export default [
             }
         },
         cubes: SNOWGLOBES_PAST_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_PAST
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_PAST }
     },
     {
         unitIndex: 8,
@@ -230,10 +221,7 @@ export default [
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_PRESENT
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
     },
     {
         unitIndex: 11,
@@ -284,10 +272,7 @@ export default [
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_FUTURE
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_FUTURE }
     },
     {
         unitIndex: 14,
@@ -320,9 +305,6 @@ export default [
             }
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_MAGIC
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_MAGIC }
     }
 ]

@@ -139,10 +139,7 @@ export default [
             }
         },
         cubes: BENNETT_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 2,
@@ -169,10 +166,7 @@ export default [
             }
         },
         cubes: BENNETT_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 4,
@@ -205,10 +199,7 @@ export default [
             }
         },
         cubes: BENNETT_COUCH_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 5,
@@ -251,10 +242,7 @@ export default [
             }
         },
         cubes: CLUB_FRONT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 7,
@@ -290,10 +278,7 @@ export default [
             }
         },
         cubes: BASEMENT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 9,
@@ -322,10 +307,7 @@ export default [
             }
         },
         cubes: CINEMA_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 11,
@@ -360,10 +342,7 @@ export default [
             }
         },
         cubes: CINEMA_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     },
     {
         unitIndex: 14,
@@ -403,9 +382,6 @@ export default [
             }
         },
         cubes: CINEMA_STREET_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SUMMER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
     }
 ]

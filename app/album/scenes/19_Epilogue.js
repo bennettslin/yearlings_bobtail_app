@@ -131,9 +131,6 @@ export default [
             }
         },
         cubes: LOGUE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_INDOOR
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_INDOOR }
     }
 ]

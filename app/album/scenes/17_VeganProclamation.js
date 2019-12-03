@@ -118,10 +118,7 @@ export default [
             }
         },
         cubes: BERKELEY_BANCROFT_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 4,
@@ -153,10 +150,7 @@ export default [
             }
         },
         cubes: CLUB_FAR_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 7,
@@ -182,10 +176,7 @@ export default [
             }
         },
         cubes: ALLEY_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 10,
@@ -217,10 +208,7 @@ export default [
             }
         },
         cubes: LIZ_BED_PHONE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_LOVE }
     },
     {
         unitIndex: 12,
@@ -269,9 +257,6 @@ export default [
             }
         },
         cubes: BERKELEY_CAMPANILE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     }
 ]

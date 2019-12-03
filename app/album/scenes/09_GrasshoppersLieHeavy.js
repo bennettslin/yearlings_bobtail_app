@@ -165,10 +165,7 @@ export default [
             }
         },
         cubes: DISHROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 4,
@@ -203,10 +200,7 @@ export default [
             }
         },
         cubes: DISHROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 6,
@@ -239,10 +233,7 @@ export default [
             }
         },
         cubes: LIZ_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 7,
@@ -270,10 +261,7 @@ export default [
                 [LIZ_GATE_OUTSIDE__ENDED]: true
             }
         },
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_AUTUMN
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 8,
@@ -308,10 +296,7 @@ export default [
             }
         },
         cubes: BENNETT_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 10,
@@ -346,10 +331,7 @@ export default [
             }
         },
         cubes: BENNETT_GATE_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 11,
@@ -381,10 +363,7 @@ export default [
             }
         },
         cubes: BENNETT_BED_DARK_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 12,
@@ -421,10 +400,7 @@ export default [
             }
         },
         cubes: BENNETT_BED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 13,
@@ -464,10 +440,7 @@ export default [
             }
         },
         cubes: WAITING_ROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 15,
@@ -499,10 +472,7 @@ export default [
             }
         },
         cubes: WAITING_ROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_WINTER
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
     },
     {
         unitIndex: 16,
@@ -533,10 +503,7 @@ export default [
             }
         },
         cubes: LIZ_BED_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_LOVE }
     },
     {
         unitIndex: 17,
@@ -567,10 +534,7 @@ export default [
             }
         },
         cubes: LIZ_BED_OPEN_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_LOVE }
     },
     {
         unitIndex: 19,
@@ -597,9 +561,6 @@ export default [
             }
         },
         cubes: LIZ_BED_DARK_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_LOVE
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_LOVE }
     }
 ]

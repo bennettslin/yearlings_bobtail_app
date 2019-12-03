@@ -21,7 +21,8 @@ import {
     TIME_MORNING,
     TIME_NOON,
     TIME_AFTERNOON,
-    SEASON_SPRING
+    SEASON_SPRING,
+    SEASON_PAST
 } from '../../scene/sky/keys'
 import {
     YOUNG_BENNETT,
@@ -87,10 +88,7 @@ export default [
             }
         },
         cubes: NOHO_HOUSES_KEY,
-        sky: {
-            time: TIME_DAWN,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_DAWN, season: SEASON_SPRING }
     },
     {
         unitIndex: 3,
@@ -123,10 +121,7 @@ export default [
             }
         },
         cubes: NOHO_HOUSES_KEY,
-        sky: {
-            time: TIME_MORNING,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_MORNING, season: SEASON_SPRING }
     },
     {
         unitIndex: 6,
@@ -165,10 +160,7 @@ export default [
             }
         },
         cubes: NOHO_SCHOOL_KEY,
-        sky: {
-            time: TIME_NOON,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_NOON, season: SEASON_SPRING }
     },
     {
         unitIndex: 8,
@@ -193,10 +185,7 @@ export default [
             }
         },
         cubes: BATHROOM_KEY,
-        sky: {
-            time: TIME_ANYTIME,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING }
     },
     {
         unitIndex: 12,
@@ -227,9 +216,6 @@ export default [
             }
         },
         cubes: BATHROOM_OPEN_KEY,
-        sky: {
-            time: TIME_AFTERNOON,
-            season: SEASON_SPRING
-        }
+        sky: { time: TIME_ANYTIME, season: SEASON_PAST }
     }
 ]
