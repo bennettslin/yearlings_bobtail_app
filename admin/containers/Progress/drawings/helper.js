@@ -153,8 +153,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += COMPOSITE_TIME
             }
 
-            const doneForNow = !head && !hair,
-                halfDoneForNow = !hair
+            const doneForNow = !hands,
+                halfDoneForNow = !hands
 
             /**
              * FIXME: Keep modifying this conditional so that it reflects

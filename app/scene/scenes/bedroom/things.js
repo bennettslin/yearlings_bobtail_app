@@ -112,6 +112,7 @@ const ARRANGEMENTS_THINGS = {
         [CAPTAIN_BED]: {
             yIndex: 5,
             xPosition: 7.5,
+            zOffset: -0.25,
             scaleFactor: 0.2
         },
         [BEDROOM_FENCE]: {
