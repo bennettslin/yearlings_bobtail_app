@@ -109,6 +109,8 @@ import {
     BENNETT_GATE_SIDE_OPEN
 } from '../../constants/scene/things/doors'
 import {
+    LIGHT_SWITCH__OFF,
+    LIGHT_SWITCH__ON,
     LINGERIE_DRAWING,
     VASELINE,
     LIZ_PHONE,
@@ -367,6 +369,7 @@ export default [
                 [BENNETT_GATE_SIDE_OPEN]: true
             },
             [FIXTURE]: {
+                [LIGHT_SWITCH__OFF]: true,
                 [LINGERIE_DRAWING]: true,
                 [VASELINE]: true
             },
@@ -406,6 +409,7 @@ export default [
                 [BENNETT_DOOR_INSIDE_OPEN]: true
             },
             [FIXTURE]: {
+                [LIGHT_SWITCH__ON]: true,
                 [LINGERIE_DRAWING]: true,
                 [VASELINE]: true
             },

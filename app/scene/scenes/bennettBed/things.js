@@ -13,6 +13,8 @@ import {
     BENNETT_GATE_SIDE_OPEN
 } from '../../../constants/scene/things/doors'
 import {
+    LIGHT_SWITCH__OFF,
+    LIGHT_SWITCH__ON,
     LINGERIE_DRAWING,
     VASELINE
 } from '../../../constants/scene/things/fixtures'
@@ -34,7 +36,7 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [BLINDS_OUTSIDE__NEIGHBOUR]: {
             yIndex: 1,
-            xPosition: 5.5,
+            xPosition: 5,
             zOffset: 1.875,
             scaleFactor: 0.6,
             sharedStyle: WINDOW__SHARED
@@ -69,6 +71,17 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [FIXTURE]: {
+        [LIGHT_SWITCH__OFF]: {
+            yIndex: 3,
+            xPosition: 5,
+            zOffset: 3.5,
+            rotate: 180
+        },
+        [LIGHT_SWITCH__ON]: {
+            yIndex: 3,
+            xPosition: 5,
+            zOffset: 3.5
+        },
         [LINGERIE_DRAWING]: {
             yIndex: 4,
             xPosition: 7,

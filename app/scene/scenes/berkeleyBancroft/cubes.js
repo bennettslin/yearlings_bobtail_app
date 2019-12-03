@@ -3,27 +3,31 @@ import { BERKELEY_BANCROFT_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
+    CEILING_COLOUR as C,
     PAVEMENT_COLOUR as V,
     BANCROFT_GATE_COLOUR as A,
     BANCROFT_EXTERIOR_COLOUR as X,
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
-import { f, k } from '../../cubes/zIndices'
+// eslint-disable-next-line object-curly-newline
+import { f, g, k } from '../../cubes/zIndices'
 
 const CUBES = {
     [BERKELEY_BANCROFT_KEY]: {
         ceiling: {
             hslaColours: [
-                [D],
-                [D, D, D, D, D, X],
-                [D, D, D, D, D, X],
+                [D, D, D, D, C],
+                [D, D, D, D, C, X],
+                [D, D, D, D, C, X],
+                [D, D, D, D, C],
                 [D]
             ],
             zIndices: [
-                [k],
-                [k, k, k, k, k, 3],
-                [k, k, k, k, k, 3, 3, 3, f, f, f, 3],
+                [k, k, k, k, g],
+                [k, k, k, k, g, 3],
+                [k, k, k, k, g, 3, 3, 3, f, f, f, 3],
+                [k, k, k, k, g],
                 [k]
             ]
         },

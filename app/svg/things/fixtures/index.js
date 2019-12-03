@@ -27,6 +27,7 @@ import basementBeerBennett from 'assets/svgs/fixtures/basementBeerBennett'
 import pushBroom from 'assets/svgs/fixtures/pushBroom'
 import stepladder from 'assets/svgs/fixtures/stepladder'
 import mannequin from 'assets/svgs/fixtures/mannequin'
+import lightSwitch from 'assets/svgs/fixtures/lightSwitch'
 import lingerieDrawing from 'assets/svgs/fixtures/lingerieDrawing'
 import vaseline from 'assets/svgs/fixtures/vaseline'
 import lizPhone from 'assets/svgs/fixtures/lizPhone'
@@ -80,6 +81,8 @@ import {
     PUSH_BROOM__TUNNEL,
     STEPLADDER,
     MANNEQUIN,
+    LIGHT_SWITCH__OFF,
+    LIGHT_SWITCH__ON,
     LINGERIE_DRAWING,
     VASELINE,
     LIZ_PHONE,
@@ -139,6 +142,8 @@ export default {
     [PUSH_BROOM__TUNNEL]: pushBroom,
     [STEPLADDER]: stepladder,
     [MANNEQUIN]: mannequin,
+    [LIGHT_SWITCH__OFF]: lightSwitch,
+    [LIGHT_SWITCH__ON]: lightSwitch,
     [LINGERIE_DRAWING]: lingerieDrawing,
     [VASELINE]: vaseline,
     [LIZ_PHONE]: lizPhone,

@@ -31,8 +31,8 @@ const Proscenium = ({
     <InlineSvg
         {...{
             className: cx(
-                'Proscenium',
-                'displayNoneContainer'
+                'Proscenium'
+                // 'displayNoneContainer'
             ),
             style: {
                 top: `${prosceniumTop}px`,

@@ -64,7 +64,7 @@ class About extends Component {
                     {'.'}
                 </div>
                 <div {...{ className: 'About__child' }}>
-                    {'Do you have an offer or opportunity that I might be interested in? Please email me at '}
+                    {'If you have an offer or opportunity that I might be interested in, please email me at '}
                     <span
                         {...{
                             className: cx(
@@ -85,7 +85,7 @@ class About extends Component {
                             </___>
                         ))}
                     </span>
-                    {`. I'll respond if it matches my interests and my schedule. Thanks for the thought!`}
+                    {`. I'll respond if it matches my interests and my schedule. Thanks!`}
                 </div>
                 <div
                     {...{
