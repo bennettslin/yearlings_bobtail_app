@@ -79,7 +79,6 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    hands: true,
                     hair: true,
                     head: true,
                     face: true,

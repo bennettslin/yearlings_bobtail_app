@@ -82,7 +82,6 @@ export default [
                 [NESTOR]: {
                     jogger: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
                         face: true,
