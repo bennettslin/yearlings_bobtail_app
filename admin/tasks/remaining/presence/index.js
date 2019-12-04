@@ -45,7 +45,7 @@ export default [
     {
         taskName: `Draw distant buildings for Oakland backdrops.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `Have separate configs to allow different trimBottoms for valleyBackdrop and cemetery Backdrop.`,

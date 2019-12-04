@@ -5076,5 +5076,10 @@ export default [
         taskName: `Separate cemetery backdrop for Royce Hall, draw distant buildings.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Separate configs for Oakland front and side backdrops for Liz gate.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

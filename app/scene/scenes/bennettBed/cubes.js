@@ -37,16 +37,16 @@ const DEFAULT_FLOOR = {
     hslaColours: [
         [V],
         [V],
-        [F, L, F, L, F, L, W, W, W, W, F, L],
-        [L, F, L, F, L, F, L, F, L, F, L, F],
-        [F, L, F, L, F, U, U, U, U, U, U, L],
-        [L, F, L, F, L, F, L, F, L, F, L, F]
+        [L, F, L, F, L, F, W, W, W, W, L, F],
+        [F, L, F, L, F, L, F, L, F, L, F, L],
+        [L, F, L, F, L, U, U, U, U, U, U, F],
+        [F, L, F, L, F, L, F, L, F, L, F, L]
     ],
     zIndices: [
         [1],
         [1],
         [1, 1, 1, 1, 1, 1, 6, 6, 6, 6, 1],
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        [1],
         [1, 1, 1, 1, 1, 4, 4, 4, 4, 4, 4, 1],
         [1]
     ]
