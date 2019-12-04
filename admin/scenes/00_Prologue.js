@@ -7,9 +7,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PROLOGUE

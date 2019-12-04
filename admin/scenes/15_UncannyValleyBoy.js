@@ -39,43 +39,43 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: ACCUSATORY
                 },
                 [ESTHER]: {
                     youngSita: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: HURT_CONSOLING
                     }
                 },
                 [MOTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: HURT_CONSOLING
@@ -87,33 +87,33 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PAST
                 },
                 [FATHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PAST
                 },
                 [SASHA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
@@ -125,43 +125,43 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PRESENT
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: MISCHIEVOUS_BANJO
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: MISCHIEVOUS_BANJO
@@ -174,43 +174,43 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FUTURE
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: BENNETT_RECORDING
                     }
                 },
                 [MOTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: JOKING_LAUGHING
@@ -218,9 +218,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: JOKING_LAUGHING
@@ -234,43 +234,43 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: REELING
                 },
                 [ESTHER]: {
                     youngSita: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: SOBBING_SHIELDING
                     }
                 },
                 [MOTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SOBBING_SHIELDING

@@ -34,9 +34,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: COLLECTING
@@ -48,33 +48,33 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CAUTIOUS
@@ -86,25 +86,25 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: ENRAGED
@@ -117,18 +117,18 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: GANGBANGER
                     }
                 },
                 [WILLY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: GANGBANGER
@@ -148,17 +148,17 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FEARFUL
@@ -170,25 +170,25 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED

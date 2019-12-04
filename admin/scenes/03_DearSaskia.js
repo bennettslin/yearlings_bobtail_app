@@ -16,27 +16,27 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PANICKED
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: CHARMED_SCHOOLBUS
                     }
                 },
                 [SASHA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CHARMED_SCHOOLBUS
@@ -48,33 +48,33 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FEIGNING_FEAR

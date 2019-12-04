@@ -32,17 +32,17 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PROTECTIVE_CONCERNED
@@ -50,9 +50,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: PROTECTIVE_CONCERNED
@@ -65,26 +65,26 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: GREETING
@@ -104,9 +104,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: ALLEY
@@ -118,17 +118,17 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CARESS
@@ -136,9 +136,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: CARESS
@@ -152,9 +152,9 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: CARESS_REFLECTION
@@ -163,9 +163,9 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: CARESS_REFLECTION
@@ -178,18 +178,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: DEMONSTRATION
                 },
                 [AMY]: {
                     protester: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: PROTESTER
@@ -197,9 +197,9 @@ export default [
                 },
                 [STEPHANIE]: {
                     protester: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: PROTESTER

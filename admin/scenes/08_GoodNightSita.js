@@ -20,9 +20,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: DATE_ENDING
@@ -30,9 +30,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: DATE_ENDING
@@ -45,9 +45,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: MUSEUM
@@ -55,9 +55,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: MUSEUM
@@ -70,9 +70,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: BACKSTAGE
@@ -80,27 +80,27 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: BACKSTAGE
                     }
                 },
                 [KHARI]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: DOUBLE_ALBERT
                 },
                 [STEPHANIE]: {
                     actor: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: FLAPPER
@@ -113,9 +113,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: GO_KARTS
@@ -123,9 +123,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: GO_KARTS
@@ -138,9 +138,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: DATE_ENDED
@@ -148,9 +148,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: DATE_ENDED

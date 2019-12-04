@@ -30,9 +30,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CORD_SIDE
@@ -44,9 +44,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: AWKWARD_CONSOLATION
@@ -54,9 +54,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: AWKWARD_CONSOLATION
@@ -69,18 +69,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CORD_REAR
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: BENNETT_DEFIANT
@@ -93,18 +93,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: HORSING
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: HORSING
@@ -112,9 +112,9 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: OFFICER
@@ -133,18 +133,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: DRYING_TEARS
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: DRYING_TEARS
@@ -152,9 +152,9 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: YOUNG_CHILD
@@ -162,9 +162,9 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: YOUNG_CHILD
@@ -172,9 +172,9 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: YOUNG_CHILD
@@ -182,9 +182,9 @@ export default [
                 },
                 [WILLY]: {
                     crossingGuard: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: CROSSING_GUARD

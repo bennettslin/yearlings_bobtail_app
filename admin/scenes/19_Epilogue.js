@@ -35,18 +35,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
@@ -55,9 +55,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         realHeight: `4'9"`,
@@ -65,72 +65,72 @@ export default [
                     }
                 },
                 [CHRISTOPHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `3'5"`,
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `3'9"`,
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `3'6"`,
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `3'10"`,
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'3"`,
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `6'0"`,
@@ -144,54 +144,54 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `4'6"`,
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `4'7"`,
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `4'11"`,
@@ -205,45 +205,45 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'6"`,
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'11"`,
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'8"`,
@@ -251,18 +251,18 @@ export default [
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'1"`,
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     realHeight: `5'9"`,

@@ -25,25 +25,25 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PANICKED
@@ -55,25 +55,25 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FLUSTERED
@@ -85,9 +85,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: BATHING
@@ -99,17 +99,17 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SINGING

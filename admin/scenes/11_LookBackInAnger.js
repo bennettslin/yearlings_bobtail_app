@@ -37,17 +37,17 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: PERFORMING
@@ -67,17 +67,17 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SQUEEZING
@@ -89,33 +89,33 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CARRYING
                 },
                 [MARA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: CARRYING
@@ -127,41 +127,41 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: WAITING
                 },
                 [MARA]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: WAITING
                 },
                 [AMY]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: MINGLING
@@ -179,9 +179,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     hair: true,
                     head: true,
+                    hands: true,
                     face: true,
                     composite: true,
                     instance: REMOVING_SHOES
@@ -189,9 +189,9 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: ASLEEP_REACHING
@@ -205,9 +205,9 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: SHOES_REFLECTION
@@ -216,9 +216,9 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        hands: true,
                         hair: true,
                         head: true,
+                        hands: true,
                         face: true,
                         composite: true,
                         instance: REACHING_REFLECTION
