@@ -19,7 +19,7 @@ import { DOOR__SHARED } from '../../shared/home'
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [CAMPUS_TREE_SINGLE__BANCROFT]: {
-            yIndex: 2,
+            yIndex: 1,
             xPosition: 1,
             scaleFactor: 0.5
         },
@@ -39,8 +39,8 @@ const ARRANGEMENTS_THINGS = {
     },
     [FLAT]: {
         [BERKELEY_BUILDING_WIDE__BANCROFT]: {
-            yIndex: 1,
-            xPosition: 1.5,
+            yIndex: 2,
+            xPosition: 2.5,
             scaleFactor: 0.4,
             sharedStyle: BERKELEY_BUILDING__SHARED
         }

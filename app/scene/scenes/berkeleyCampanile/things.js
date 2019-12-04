@@ -32,12 +32,12 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.5
         },
         [CAMPUS_TREE_SINGLE__CAMPANILE]: {
-            yIndex: 2,
-            xPosition: 9.5,
+            yIndex: 1,
+            xPosition: 8.5,
             scaleFactor: 0.5
         },
         [CAMPUS_TREE_DOUBLE__CAMPANILE]: {
-            yIndex: 4,
+            yIndex: 2,
             xPosition: 10,
             scaleFactor: 0.5
         }
@@ -49,7 +49,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.42
         },
         [BERKELEY_BUILDING_TALL]: {
-            yIndex: 1,
+            yIndex: 2,
             xPosition: 9,
             scaleFactor: 0.35,
             sharedStyle: BERKELEY_BUILDING__SHARED

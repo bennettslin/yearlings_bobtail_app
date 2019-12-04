@@ -24,7 +24,7 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [BRICK_WALL__COURTYARD]: {
             yIndex: 0,
-            xPosition: 11.5,
+            xPosition: 17.5,
             scaleFactor: 0.66,
             trimBottom: 0.05
         }
