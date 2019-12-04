@@ -67,7 +67,11 @@ import {
     STEPLADDER,
     MANNEQUIN
 } from '../../constants/scene/things/fixtures'
-import { GO_KART_TRACK } from '../../constants/scene/things/flats'
+import {
+    GO_KART_TRACK,
+    PUBLIC_FAR__LIZ_GATE,
+    PUBLIC_NEAR__LIZ_GATE
+} from '../../constants/scene/things/flats'
 import {
     GO_KART_SEAT__LEFT,
     GO_KART_SEAT__RIGHT,
@@ -232,6 +236,10 @@ export default [
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDED]: true,
                 [LIZ_GATE_OUTSIDE__ENDED]: true
+            },
+            [FLAT]: {
+                [PUBLIC_FAR__LIZ_GATE]: true,
+                [PUBLIC_NEAR__LIZ_GATE]: true
             }
         },
         cubes: LIZ_GATE_STREET_KEY,

@@ -42,8 +42,8 @@ import commercialNearLeft from 'assets/svgs/flats/commercialNearLeft'
 import commercialFarRight from 'assets/svgs/flats/commercialFarRight'
 import commercialMiddleRight from 'assets/svgs/flats/commercialMiddleRight'
 import commercialNearRight from 'assets/svgs/flats/commercialNearRight'
-import publicFarLeft from 'assets/svgs/flats/publicFarLeft'
-import publicNearLeft from 'assets/svgs/flats/publicNearLeft'
+import publicFar from 'assets/svgs/flats/publicFar'
+import publicNear from 'assets/svgs/flats/publicNear'
 import oaklandSchool from 'assets/svgs/flats/oaklandSchool'
 import oaklandFlag from 'assets/svgs/flats/oaklandFlag'
 import elCerritoFar from 'assets/svgs/flats/elCerritoFar'
@@ -101,8 +101,10 @@ import {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
-    PUBLIC_FAR_LEFT,
-    PUBLIC_NEAR_LEFT,
+    PUBLIC_FAR__LIZ_GATE,
+    PUBLIC_NEAR__LIZ_GATE,
+    PUBLIC_FAR__GOLDEN_CORD,
+    PUBLIC_NEAR__GOLDEN_CORD,
     OAKLAND_SCHOOL,
     OAKLAND_FLAG,
     EL_CERRITO_FAR,
@@ -163,9 +165,11 @@ export default {
     [COMMERCIAL_MIDDLE_RIGHT]: commercialMiddleRight,
     [COMMERCIAL_NEAR_LEFT]: commercialNearLeft,
     [COMMERCIAL_NEAR_RIGHT]: commercialNearRight,
-    [PUBLIC_FAR_LEFT]: publicFarLeft,
+    [PUBLIC_FAR__LIZ_GATE]: publicFar,
+    [PUBLIC_NEAR__LIZ_GATE]: publicNear,
+    [PUBLIC_FAR__GOLDEN_CORD]: publicFar,
+    [PUBLIC_NEAR__GOLDEN_CORD]: publicNear,
     [OAKLAND_SCHOOL]: oaklandSchool,
-    [PUBLIC_NEAR_LEFT]: publicNearLeft,
     [OAKLAND_FLAG]: oaklandFlag,
     [EL_CERRITO_FAR]: elCerritoFar,
     [EL_CERRITO_NEAR]: elCerritoNear,

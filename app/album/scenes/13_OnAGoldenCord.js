@@ -77,8 +77,8 @@ import {
     COMMERCIAL_FAR_RIGHT,
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT,
-    PUBLIC_FAR_LEFT,
-    PUBLIC_NEAR_LEFT,
+    PUBLIC_FAR__GOLDEN_CORD,
+    PUBLIC_NEAR__GOLDEN_CORD,
     OAKLAND_SCHOOL,
     OAKLAND_FLAG
 } from '../../constants/scene/things/flats'
@@ -232,9 +232,9 @@ export default [
                 }
             },
             [FLAT]: {
-                [PUBLIC_FAR_LEFT]: true,
+                [PUBLIC_FAR__GOLDEN_CORD]: true,
                 [OAKLAND_SCHOOL]: true,
-                [PUBLIC_NEAR_LEFT]: true,
+                [PUBLIC_NEAR__GOLDEN_CORD]: true,
                 [OAKLAND_FLAG]: true
             }
         },

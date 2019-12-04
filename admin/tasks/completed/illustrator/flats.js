@@ -200,12 +200,12 @@ export default [
         neededHours: 1.5
     },
     {
-        taskName: 'publicFarLeft',
+        taskName: 'publicFar',
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: 'publicNearLeft',
+        taskName: 'publicNear',
         workedHours: 1,
         neededHours: 1
     },

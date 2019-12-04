@@ -1,7 +1,8 @@
 import {
     BUBBLE,
     CUTOUT,
-    DOOR
+    DOOR,
+    FLAT
 } from '../../../constants/scene/things'
 import {
     BUBBLE_SMALL__GO_KART,
@@ -21,6 +22,11 @@ import {
     LIZ_GATE_OUTSIDE__ENDING,
     LIZ_GATE_OUTSIDE__ENDED
 } from '../../../constants/scene/things/doors'
+import {
+    PUBLIC_FAR__LIZ_GATE,
+    PUBLIC_NEAR__LIZ_GATE
+} from '../../../constants/scene/things/flats'
+import { OAKLAND_HOUSE__SHARED } from '../../shared/buildings'
 import {
     LIZ_GATE__SHARED,
     WINDOW__SHARED
@@ -100,6 +106,22 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 4,
             xPosition: 3,
             sharedStyle: LIZ_GATE__SHARED
+        }
+    },
+    [FLAT]: {
+        [PUBLIC_FAR__LIZ_GATE]: {
+            yIndex: 1,
+            xPosition: 9.5,
+            scaleFactor: 0.4,
+            flipHorizontal: true,
+            sharedStyle: OAKLAND_HOUSE__SHARED
+        },
+        [PUBLIC_NEAR__LIZ_GATE]: {
+            yIndex: 3,
+            xPosition: 11,
+            scaleFactor: 0.5,
+            flipHorizontal: true,
+            sharedStyle: OAKLAND_HOUSE__SHARED
         }
     }
 }
