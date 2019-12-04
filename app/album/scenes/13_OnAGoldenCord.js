@@ -79,8 +79,8 @@ import {
     COMMERCIAL_NEAR_RIGHT,
     PUBLIC_FAR_LEFT,
     PUBLIC_NEAR_LEFT,
-    PUBLIC_FAR_RIGHT,
-    PUBLIC_NEAR_RIGHT
+    OAKLAND_SCHOOL,
+    OAKLAND_FLAG
 } from '../../constants/scene/things/flats'
 import { LIZ_COUCH } from '../../constants/scene/things/panels'
 
@@ -233,9 +233,9 @@ export default [
             },
             [FLAT]: {
                 [PUBLIC_FAR_LEFT]: true,
-                [PUBLIC_FAR_RIGHT]: true,
+                [OAKLAND_SCHOOL]: true,
                 [PUBLIC_NEAR_LEFT]: true,
-                [PUBLIC_NEAR_RIGHT]: true
+                [OAKLAND_FLAG]: true
             }
         },
         cubes: OAKLAND_PUBLIC_KEY,

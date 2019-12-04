@@ -36,7 +36,6 @@ import {
     FOLIAGE_BACKDROP,
     OAKLAND_SIDE_BACKDROP,
     DRIVING_BACKDROP,
-    CITY_BACKDROP,
     LOS_ANGELES_BACKDROP,
     OAKLAND_FRONT_BACKDROP,
     ROAD_PAST,
@@ -45,7 +44,8 @@ import {
     GOLDEN_GATE_BACKDROP,
     WEDDING_BACKDROP,
     FENCE_BACKDROP,
-    BRICK_WALL_BACKDROP
+    BRICK_WALL_BACKDROP,
+    CITY_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
 export default {

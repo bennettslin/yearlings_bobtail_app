@@ -210,12 +210,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'publicFarRight',
+        taskName: 'oaklandSchool',
         workedHours: 1,
         neededHours: 1
     },
     {
-        taskName: 'publicNearRight',
+        taskName: 'oaklandFlag',
         workedHours: 1.5,
         neededHours: 1.5
     },

@@ -44,8 +44,8 @@ import commercialMiddleRight from 'assets/svgs/flats/commercialMiddleRight'
 import commercialNearRight from 'assets/svgs/flats/commercialNearRight'
 import publicFarLeft from 'assets/svgs/flats/publicFarLeft'
 import publicNearLeft from 'assets/svgs/flats/publicNearLeft'
-import publicFarRight from 'assets/svgs/flats/publicFarRight'
-import publicNearRight from 'assets/svgs/flats/publicNearRight'
+import oaklandSchool from 'assets/svgs/flats/oaklandSchool'
+import oaklandFlag from 'assets/svgs/flats/oaklandFlag'
 import elCerritoFar from 'assets/svgs/flats/elCerritoFar'
 import elCerritoNear from 'assets/svgs/flats/elCerritoNear'
 import tennisCourt from 'assets/svgs/flats/tennisCourt'
@@ -103,8 +103,8 @@ import {
     COMMERCIAL_NEAR_RIGHT,
     PUBLIC_FAR_LEFT,
     PUBLIC_NEAR_LEFT,
-    PUBLIC_FAR_RIGHT,
-    PUBLIC_NEAR_RIGHT,
+    OAKLAND_SCHOOL,
+    OAKLAND_FLAG,
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR,
     TENNIS_COURT,
@@ -164,9 +164,9 @@ export default {
     [COMMERCIAL_NEAR_LEFT]: commercialNearLeft,
     [COMMERCIAL_NEAR_RIGHT]: commercialNearRight,
     [PUBLIC_FAR_LEFT]: publicFarLeft,
-    [PUBLIC_FAR_RIGHT]: publicFarRight,
+    [OAKLAND_SCHOOL]: oaklandSchool,
     [PUBLIC_NEAR_LEFT]: publicNearLeft,
-    [PUBLIC_NEAR_RIGHT]: publicNearRight,
+    [OAKLAND_FLAG]: oaklandFlag,
     [EL_CERRITO_FAR]: elCerritoFar,
     [EL_CERRITO_NEAR]: elCerritoNear,
     [TENNIS_COURT]: tennisCourt,

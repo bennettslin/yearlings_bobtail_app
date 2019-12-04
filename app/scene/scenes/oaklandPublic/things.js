@@ -4,8 +4,8 @@ import {
 import {
     PUBLIC_FAR_LEFT,
     PUBLIC_NEAR_LEFT,
-    PUBLIC_FAR_RIGHT,
-    PUBLIC_NEAR_RIGHT
+    OAKLAND_SCHOOL,
+    OAKLAND_FLAG
 } from '../../../constants/scene/things/flats'
 import { OAKLAND_HOUSE__SHARED } from '../../shared/buildings'
 
@@ -17,7 +17,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.4,
             sharedStyle: OAKLAND_HOUSE__SHARED
         },
-        [PUBLIC_FAR_RIGHT]: {
+        [OAKLAND_SCHOOL]: {
             yIndex: 1,
             xPosition: 11.25,
             scaleFactor: 0.4,
@@ -29,7 +29,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.5,
             sharedStyle: OAKLAND_HOUSE__SHARED
         },
-        [PUBLIC_NEAR_RIGHT]: {
+        [OAKLAND_FLAG]: {
             yIndex: 3,
             xPosition: 11,
             scaleFactor: 0.5
