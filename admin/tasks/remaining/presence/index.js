@@ -43,12 +43,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Draw distant buildings for Oakland backdrops.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Have separate configs to allow different trimBottoms for valleyBackdrop and cemetery Backdrop.`,
+        taskName: `Draw buildings for Oakland front and side backdrops, change city backdrop to campus backdrop by moving distant layers to Los Angeles backdrop.`,
         workedHours: 0,
         neededHours: 1
     }

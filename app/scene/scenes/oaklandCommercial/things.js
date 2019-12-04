@@ -1,6 +1,8 @@
 import {
+    BACKDROP,
     FLAT
 } from '../../../constants/scene/things'
+import { OAKLAND_FRONT__MIDWAY } from '../../../constants/scene/things/backdrops'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
@@ -12,6 +14,15 @@ import {
 } from '../../../constants/scene/things/flats'
 import { OAKLAND_COMMERCIAL__SHARED } from '../../shared/buildings'
 const ARRANGEMENTS_THINGS = {
+    [BACKDROP]: {
+        [OAKLAND_FRONT__MIDWAY]: {
+            yIndex: 0,
+            xPosition: 5.5,
+            scaleFactor: 0.7,
+            trimBottom: 0.15,
+            flipHorizontal: true
+        }
+    },
     [FLAT]: {
         [COMMERCIAL_CENTRE]: {
             yIndex: 1,

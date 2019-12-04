@@ -38,7 +38,7 @@ import {
 import {
     OAKLAND_SIDE,
     DRIVING_BACKDROP,
-    OAKLAND_FRINT__LIZ_GATE
+    OAKLAND_FRONT__LIZ_GATE
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GO_KART,
@@ -224,7 +224,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_FRINT__LIZ_GATE]: true
+                [OAKLAND_FRONT__LIZ_GATE]: true
             },
             [BUBBLE]: {
                 [GO_KART_THOUGHT]: true,

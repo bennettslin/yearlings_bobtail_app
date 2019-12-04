@@ -1,6 +1,6 @@
 import nohoHousesBackdrop from 'assets/svgs/backdrops/nohoHousesBackdrop'
 import schoolBackdrop from 'assets/svgs/backdrops/schoolBackdrop'
-import valleyBackdrop from 'assets/svgs/backdrops/valleyBackdrop'
+import valley from 'assets/svgs/backdrops/valley'
 import taiwanMountainsBackdrop from 'assets/svgs/backdrops/taiwanMountainsBackdrop'
 import taiwanStairsBackdrop from 'assets/svgs/backdrops/taiwanStairsBackdrop'
 import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
@@ -25,7 +25,8 @@ import cityBackdrop from 'assets/svgs/backdrops/cityBackdrop'
 import {
     NOHO_HOUSES_BACKDROP,
     SCHOOL_BACKDROP,
-    VALLEY_BACKDROP,
+    VALLEY__FREEWAY,
+    VALLEY__QUAD,
     TAIWAN_MOUNTAINS_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
     MOUNTAIN_BACKDROP,
@@ -37,8 +38,10 @@ import {
     OAKLAND_SIDE,
     DRIVING_BACKDROP,
     LOS_ANGELES_BACKDROP,
-    OAKLAND_FRONT__CENTERED,
-    OAKLAND_FRINT__LIZ_GATE,
+    OAKLAND_FRONT__HIGH,
+    OAKLAND_FRONT__MIDWAY,
+    OAKLAND_FRONT__LOW,
+    OAKLAND_FRONT__LIZ_GATE,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
@@ -52,7 +55,8 @@ import {
 export default {
     [NOHO_HOUSES_BACKDROP]: nohoHousesBackdrop,
     [SCHOOL_BACKDROP]: schoolBackdrop,
-    [VALLEY_BACKDROP]: valleyBackdrop,
+    [VALLEY__FREEWAY]: valley,
+    [VALLEY__QUAD]: valley,
     [TAIWAN_MOUNTAINS_BACKDROP]: taiwanMountainsBackdrop,
     [TAIWAN_STAIRS_BACKDROP]: taiwanStairsBackdrop,
     [MOUNTAIN_BACKDROP]: mountainBackdrop,
@@ -64,8 +68,10 @@ export default {
     [DRIVING_BACKDROP]: drivingBackdrop,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
     [OAKLAND_SIDE]: oaklandSide,
-    [OAKLAND_FRONT__CENTERED]: oaklandFront,
-    [OAKLAND_FRINT__LIZ_GATE]: oaklandFront,
+    [OAKLAND_FRONT__HIGH]: oaklandFront,
+    [OAKLAND_FRONT__MIDWAY]: oaklandFront,
+    [OAKLAND_FRONT__LOW]: oaklandFront,
+    [OAKLAND_FRONT__LIZ_GATE]: oaklandFront,
     [ROAD_PAST]: roadPast,
     [ROAD_PRESENT]: roadPresent,
     [ROAD_FUTURE]: roadFuture,

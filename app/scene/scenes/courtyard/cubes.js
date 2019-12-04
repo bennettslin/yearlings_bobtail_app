@@ -40,7 +40,7 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [V, F],
-                [V, F, X, X, X, X, F, F, L, F, F],
+                [V, L, X, X, X, X, F, L, F, L, F, L],
                 [V],
                 [V],
                 [V],

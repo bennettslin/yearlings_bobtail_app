@@ -5081,5 +5081,10 @@ export default [
         taskName: `Separate configs for Oakland front and side backdrops for Liz gate.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Have separate configs to allow different trimBottoms for valley and Oakland front backdrops.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

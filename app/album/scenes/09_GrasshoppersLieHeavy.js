@@ -51,7 +51,7 @@ import {
 import {
     OAKLAND_SIDE,
     BRICK_WALL_BACKDROP,
-    OAKLAND_FRINT__LIZ_GATE
+    OAKLAND_FRONT__LIZ_GATE
 } from '../../constants/scene/things/backdrops'
 import {
     GINGERBREAD_PRISON,
@@ -257,7 +257,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_FRINT__LIZ_GATE]: true
+                [OAKLAND_FRONT__LIZ_GATE]: true
             },
             [CUTOUT]: {
                 [CACTUS_SINGLE__LIZ_ENDED]: true,

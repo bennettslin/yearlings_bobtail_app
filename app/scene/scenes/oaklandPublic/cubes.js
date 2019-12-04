@@ -1,6 +1,7 @@
 import { OAKLAND_PUBLIC_KEY } from '../../../constants/scene/scenes'
 
 import {
+    GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
     CROSSWALK_COLOUR as K,
     PAVEMENT_COLOUR as V
@@ -10,6 +11,7 @@ const CUBES = {
     [OAKLAND_PUBLIC_KEY]: {
         floor: {
             hslaColours: [
+                [G],
                 [V, V, V, K, T, K, T, K, T, K, V],
                 [V, V, V, K, T, K, T, K, T, K, V],
                 [V, V, T, K, T, K, T, K, T, K, T, V],
@@ -17,6 +19,7 @@ const CUBES = {
                 [T]
             ],
             zIndices: [
+                [0],
                 [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1],
                 [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],

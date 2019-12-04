@@ -1,8 +1,10 @@
 import {
+    BACKDROP,
     BUBBLE,
     CARDBOARD,
     CUTOUT
 } from '../../../constants/scene/things'
+import { VALLEY__QUAD } from '../../../constants/scene/things/backdrops'
 import {
     ESCAPE_POD_SKETCH,
     SKETCHBOOK__ESCAPE_POD
@@ -24,18 +26,26 @@ import {
 } from '../../shared/paper'
 
 const ARRANGEMENTS_THINGS = {
+    [BACKDROP]: {
+        [VALLEY__QUAD]: {
+            yIndex: 0,
+            xPosition: 5.5,
+            scaleFactor: 0.65,
+            trimBottom: 0.2
+        }
+    },
     [BUBBLE]: {
         [ESCAPE_POD_SKETCH]: {
             yIndex: 5,
             xPosition: 2.75,
-            zOffset: 3,
+            zOffset: 3.5,
             noShadow: true,
             scaleFactor: 0.3
         },
         [SKETCHBOOK__ESCAPE_POD]: {
             yIndex: 5,
             xPosition: 2.75,
-            zOffset: 2,
+            zOffset: 2.5,
             rotate: 270,
             scaleFactor: 0.25,
             flipHorizontal: true,

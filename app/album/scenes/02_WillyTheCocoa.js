@@ -54,7 +54,7 @@ import { GANGBANGER } from '../../constants/scene/actors/songs'
 import {
     NOHO_HOUSES_BACKDROP,
     FENCE_BACKDROP,
-    VALLEY_BACKDROP
+    VALLEY__FREEWAY
 } from '../../constants/scene/things/backdrops'
 import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
 import {
@@ -100,7 +100,7 @@ export default [
         cubes: FREEWAY_KEY,
         presences: {
             [BACKDROP]: {
-                [VALLEY_BACKDROP]: true
+                [VALLEY__FREEWAY]: true
             },
             [CUTOUT]: {
                 [OVERPASS_SIGN_BACK]: true
@@ -122,7 +122,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_BACKDROP]: true
+                [VALLEY__FREEWAY]: true
             },
             [CUTOUT]: {
                 [SHOPPING_CART]: true,

@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { VALLEY_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { VALLEY__FREEWAY } from '../../../constants/scene/things/backdrops'
 import {
     SHOPPING_CART,
     OVERPASS_SIGN_BACK
@@ -14,7 +14,7 @@ import { FREEWAY_SIGN__SHARED } from '../../shared/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [VALLEY_BACKDROP]: {
+        [VALLEY__FREEWAY]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.65,

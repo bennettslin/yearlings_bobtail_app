@@ -1,6 +1,8 @@
 import {
+    BACKDROP,
     FLAT
 } from '../../../constants/scene/things'
+import { OAKLAND_FRONT__LOW } from '../../../constants/scene/things/backdrops'
 import {
     PUBLIC_FAR__GOLDEN_CORD,
     PUBLIC_NEAR__GOLDEN_CORD,
@@ -10,6 +12,14 @@ import {
 import { OAKLAND_HOUSE__SHARED } from '../../shared/buildings'
 
 const ARRANGEMENTS_THINGS = {
+    [BACKDROP]: {
+        [OAKLAND_FRONT__LOW]: {
+            yIndex: 0,
+            xPosition: 5.5,
+            scaleFactor: 0.7,
+            trimBottom: 0.5
+        }
+    },
     [FLAT]: {
         [PUBLIC_FAR__GOLDEN_CORD]: {
             yIndex: 1,

@@ -57,7 +57,7 @@ import { PRINCIPAL } from '../../constants/scene/actors/tristan'
 import {
     SCHOOL_BACKDROP,
     BRICK_WALL_BACKDROP,
-    VALLEY_BACKDROP
+    VALLEY__QUAD
 } from '../../constants/scene/things/backdrops'
 import {
     DOGS_SKETCH,
@@ -304,7 +304,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY_BACKDROP]: true,
+                [VALLEY__QUAD]: true,
                 [BRICK_WALL_BACKDROP]: true
             },
             [BUBBLE]: {
