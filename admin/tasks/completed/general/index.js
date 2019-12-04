@@ -5086,5 +5086,10 @@ export default [
         taskName: `Have separate configs to allow different trimBottoms for valley and Oakland front backdrops.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Courtyard backdrop configs and Bancroft building rearrangement.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

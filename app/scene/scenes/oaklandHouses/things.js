@@ -3,7 +3,7 @@ import {
     FLAT,
     PANEL
 } from '../../../constants/scene/things'
-import { OAKLAND_SIDE } from '../../../constants/scene/things/backdrops'
+import { OAKLAND_SIDE__CENTRED } from '../../../constants/scene/things/backdrops'
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
@@ -17,7 +17,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [OAKLAND_SIDE]: {
+        [OAKLAND_SIDE__CENTRED]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,

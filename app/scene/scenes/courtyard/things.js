@@ -3,7 +3,10 @@ import {
     CUTOUT,
     DOOR
 } from '../../../constants/scene/things'
-import { BRICK_WALL__COURTYARD } from '../../../constants/scene/things/backdrops'
+import {
+    BRICK_WALL__COURTYARD,
+    OAKLAND_SIDE__COURTYARD
+} from '../../../constants/scene/things/backdrops'
 import {
     RECYCLABLES,
     BUSH_SINGLE__COURTYARD,
@@ -27,6 +30,12 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 17.5,
             scaleFactor: 0.66,
             trimBottom: 0.05
+        },
+        [OAKLAND_SIDE__COURTYARD]: {
+            yIndex: 0,
+            xPosition: 17.5,
+            scaleFactor: 0.7,
+            trimBottom: 0.2
         }
     },
     [CUTOUT]: {
