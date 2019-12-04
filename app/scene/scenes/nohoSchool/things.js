@@ -7,7 +7,7 @@ import {
 } from '../../../constants/scene/things'
 import {
     SCHOOL_BACKDROP,
-    BRICK_WALL_BACKDROP
+    BRICK_WALL__CENTRED
 } from '../../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../constants/scene/things/bubbles'
 import { PLAYGROUND_SLIDE } from '../../../constants/scene/things/cutouts'
@@ -27,7 +27,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.66,
             trimBottom: 0.05
         },
-        [BRICK_WALL_BACKDROP]: {
+        [BRICK_WALL__CENTRED]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.66,

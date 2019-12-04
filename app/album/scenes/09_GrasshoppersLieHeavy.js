@@ -50,7 +50,7 @@ import {
 } from '../../constants/scene/actors/songs'
 import {
     OAKLAND_SIDE,
-    BRICK_WALL_BACKDROP,
+    BRICK_WALL__CENTRED,
     OAKLAND_FRONT__LIZ_GATE
 } from '../../constants/scene/things/backdrops'
 import {
@@ -292,7 +292,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL_BACKDROP]: true
+                [BRICK_WALL__CENTRED]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true
@@ -327,7 +327,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL_BACKDROP]: true
+                [BRICK_WALL__CENTRED]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true

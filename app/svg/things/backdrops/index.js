@@ -19,7 +19,7 @@ import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
 import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
-import brickWallBackdrop from 'assets/svgs/backdrops/brickWallBackdrop'
+import brickWall from 'assets/svgs/backdrops/brickWall'
 import cityBackdrop from 'assets/svgs/backdrops/cityBackdrop'
 
 import {
@@ -48,7 +48,8 @@ import {
     GOLDEN_GATE_BACKDROP,
     WEDDING_BACKDROP,
     FENCE_BACKDROP,
-    BRICK_WALL_BACKDROP,
+    BRICK_WALL__CENTRED,
+    BRICK_WALL__COURTYARD,
     CITY_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
@@ -78,6 +79,7 @@ export default {
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop,
     [FENCE_BACKDROP]: fenceBackdrop,
-    [BRICK_WALL_BACKDROP]: brickWallBackdrop,
+    [BRICK_WALL__CENTRED]: brickWall,
+    [BRICK_WALL__COURTYARD]: brickWall,
     [CITY_BACKDROP]: cityBackdrop
 }

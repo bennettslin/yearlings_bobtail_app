@@ -45,7 +45,7 @@ import {
 import { CATHOLIC_GUY } from '../../constants/scene/actors/wade'
 import {
     OAKLAND_SIDE,
-    BRICK_WALL_BACKDROP
+    BRICK_WALL__COURTYARD
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__RIGHT,
@@ -110,7 +110,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL_BACKDROP]: true
+                [BRICK_WALL__COURTYARD]: true
             },
             [CUTOUT]: {
                 [RECYCLABLES]: true,
