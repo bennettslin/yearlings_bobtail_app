@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { CEMETERY_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { LOS_ANGELES_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { GRAVESTONE } from '../../../constants/scene/things/cutouts'
 import {
     CEMETERY_HILLS_LEFT,
@@ -12,11 +12,10 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [CEMETERY_BACKDROP]: {
+        [LOS_ANGELES_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.1
+            scaleFactor: 0.7
         }
     },
     [CUTOUT]: {

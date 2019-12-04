@@ -5071,5 +5071,10 @@ export default [
         taskName: `Backdrop separation and new plants.`,
         workedHours: 6,
         neededHours: 6
+    },
+    {
+        taskName: `Separate cemetery backdrop for Royce Hall, draw distant buildings.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -45,11 +45,6 @@ export default [
     {
         taskName: `Draw distant buildings for Oakland backdrops.`,
         workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Separate cemetery backdrop for Royce Hall, draw distant buildings.`,
-        workedHours: 0,
         neededHours: 2
     },
     {

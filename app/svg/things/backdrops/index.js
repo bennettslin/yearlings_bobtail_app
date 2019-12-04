@@ -9,7 +9,7 @@ import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
 import foliageBackdrop from 'assets/svgs/backdrops/foliageBackdrop'
 import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
-import cemeteryBackdrop from 'assets/svgs/backdrops/cemeteryBackdrop'
+import losAngelesBackdrop from 'assets/svgs/backdrops/losAngelesBackdrop'
 import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop'
 import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop'
 import roadPast from 'assets/svgs/backdrops/roadPast'
@@ -20,6 +20,7 @@ import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
 import brickWallBackdrop from 'assets/svgs/backdrops/brickWallBackdrop'
+import cityBackdrop from 'assets/svgs/backdrops/cityBackdrop'
 
 import {
     NOHO_HOUSES_BACKDROP,
@@ -35,7 +36,8 @@ import {
     FOLIAGE_BACKDROP,
     OAKLAND_SIDE_BACKDROP,
     DRIVING_BACKDROP,
-    CEMETERY_BACKDROP,
+    CITY_BACKDROP,
+    LOS_ANGELES_BACKDROP,
     OAKLAND_FRONT_BACKDROP,
     ROAD_PAST,
     ROAD_PRESENT,
@@ -59,7 +61,7 @@ export default {
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
     [FOLIAGE_BACKDROP]: foliageBackdrop,
     [DRIVING_BACKDROP]: drivingBackdrop,
-    [CEMETERY_BACKDROP]: cemeteryBackdrop,
+    [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
     [OAKLAND_SIDE_BACKDROP]: oaklandSideBackdrop,
     [OAKLAND_FRONT_BACKDROP]: oaklandFrontBackdrop,
     [ROAD_PAST]: roadPast,
@@ -68,5 +70,6 @@ export default {
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop,
     [FENCE_BACKDROP]: fenceBackdrop,
-    [BRICK_WALL_BACKDROP]: brickWallBackdrop
+    [BRICK_WALL_BACKDROP]: brickWallBackdrop,
+    [CITY_BACKDROP]: cityBackdrop
 }

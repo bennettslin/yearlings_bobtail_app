@@ -40,8 +40,8 @@ import {
     ATTIC
 } from '../../constants/scene/actors/songs'
 import {
-    FOLIAGE_BACKDROP,
-    CEMETERY_BACKDROP,
+    LOS_ANGELES_BACKDROP,
+    CITY_BACKDROP,
     DRIVING_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
@@ -105,7 +105,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [FOLIAGE_BACKDROP]: true
+                [CITY_BACKDROP]: true
             },
             [CUTOUT]: {
                 [UCLA_TREE__LEFT]: true,
@@ -201,7 +201,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [CEMETERY_BACKDROP]: true
+                [LOS_ANGELES_BACKDROP]: true,
+                [CITY_BACKDROP]: true
             },
             [CUTOUT]: {
                 [GRAVESTONE]: true
