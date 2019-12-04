@@ -138,8 +138,6 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
-                    hair: true,
-                    head: true,
                     face: true,
                     composite: true,
                     realHeight: `5'6"`,
@@ -201,8 +199,6 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
-                    hair: true,
-                    head: true,
                     face: true,
                     composite: true,
                     realHeight: `5'10"`,

@@ -55,8 +55,6 @@ export default [
                 [TOMER]: {
                     shane: {
                         hands: true,
-                        hair: true,
-                        head: true,
                         face: true,
                         composite: true,
                         instance: SHANE_SPILLING
@@ -64,8 +62,6 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
-                    hair: true,
-                    head: true,
                     face: true,
                     composite: true,
                     instance: WATCHING
@@ -172,8 +168,6 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
-                    hair: true,
-                    head: true,
                     face: true,
                     composite: true,
                     instance: MINGLING

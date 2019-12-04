@@ -153,14 +153,13 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 workedHours += COMPOSITE_TIME
             }
 
-            const doneForNow = !hands,
-                halfDoneForNow = !hands
-
             /**
-             * FIXME: Keep modifying this conditional so that it reflects
-             * the latest task. Currently it's faces, assumed to take 45
-             * minutes. Leave another hour for svg prep.
+             * TODO: Keep modifying this conditional so that it reflects the
+             * latest task.
              */
+            const doneForNow = !head && !hair,
+                halfDoneForNow = !hair
+
             if (!doneForNow) {
                 rolesTodoCount++
             }

@@ -127,8 +127,6 @@ export default [
                 [TOMER]: {
                     shane: {
                         hands: true,
-                        hair: true,
-                        head: true,
                         face: true,
                         composite: true,
                         instance: SHANE_BUYING
