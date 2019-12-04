@@ -20,7 +20,10 @@ import {
     STATION_WAGON_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
+    TIME_NIGHT,
+    TIME_TWILIGHT,
+    TIME_DAWN,
+    TIME_MORNING,
     SEASON_SPRING,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
@@ -116,7 +119,7 @@ export default [
             }
         },
         cubes: ROYCE_HALL_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_NIGHT, season: SEASON_SPRING }
     },
     {
         unitIndex: 3,
@@ -148,7 +151,7 @@ export default [
             }
         },
         cubes: WALGREENS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
+        sky: { season: SEASON_THOUGHT }
     },
     {
         unitIndex: 6,
@@ -180,7 +183,7 @@ export default [
             }
         },
         cubes: STEAM_TUNNEL_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_NIGHT, season: SEASON_SPRING }
     },
     {
         unitIndex: 9,
@@ -213,7 +216,7 @@ export default [
             }
         },
         cubes: CEMETERY_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_TWILIGHT, season: SEASON_SPRING }
     },
     {
         unitIndex: 11,
@@ -259,7 +262,7 @@ export default [
             }
         },
         cubes: STATION_WAGON_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_DAWN, season: SEASON_SPRING }
     },
     {
         unitIndex: 15,
@@ -288,6 +291,6 @@ export default [
             }
         },
         cubes: ATTIC_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SPRING }
+        sky: { time: TIME_MORNING, season: SEASON_SPRING }
     }
 ]

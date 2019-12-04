@@ -14,7 +14,6 @@ import {
     TETHERBALL_COURT_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
     SEASON_PRESENT,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
@@ -114,7 +113,7 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
+        sky: { season: SEASON_PRESENT }
     },
     {
         unitIndex: 4,
@@ -146,7 +145,7 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
+        sky: { season: SEASON_PRESENT }
     },
     {
         unitIndex: 6,
@@ -183,7 +182,7 @@ export default [
             }
         },
         cubes: SCHOOLBUS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
+        sky: { season: SEASON_THOUGHT }
     },
     {
         unitIndex: 9,
@@ -220,7 +219,7 @@ export default [
             }
         },
         cubes: TETHERBALL_COURT_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_THOUGHT }
+        sky: { season: SEASON_THOUGHT }
     },
     {
         unitIndex: 12,
@@ -252,6 +251,6 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
+        sky: { season: SEASON_PRESENT }
     }
 ]

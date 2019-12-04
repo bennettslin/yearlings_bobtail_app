@@ -18,8 +18,14 @@ import {
     CHANGELING_CAVE_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
-    SEASON_SUMMER
+    TIME_TWILIGHT,
+    TIME_DAWN,
+    TIME_MORNING,
+    TIME_NOON,
+    TIME_EVENING,
+    TIME_NIGHT,
+    SEASON_SUMMER,
+    SEASON_MAGIC
 } from '../../scene/sky/keys'
 import {
     PRETEEN_BENNETT,
@@ -109,7 +115,7 @@ export default [
                 [VALLEY_FREEWAY]: true
             }
         },
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_TWILIGHT, season: SEASON_SUMMER }
     },
     {
         unitIndex: 2,
@@ -133,7 +139,7 @@ export default [
             }
         },
         cubes: FREEWAY_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_DAWN, season: SEASON_SUMMER }
     },
     {
         unitIndex: 5,
@@ -173,7 +179,7 @@ export default [
             }
         },
         cubes: PORCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_MORNING, season: SEASON_SUMMER }
     },
     {
         unitIndex: 7,
@@ -213,7 +219,7 @@ export default [
             }
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_EVENING, season: SEASON_SUMMER }
     },
     {
         unitIndex: 9,
@@ -245,7 +251,7 @@ export default [
             }
         },
         cubes: NOHO_HOUSES_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_NOON, season: SEASON_SUMMER }
     },
     {
         unitIndex: 12,
@@ -277,7 +283,7 @@ export default [
             }
         },
         cubes: BEDROOM_STOOL_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     },
     {
         unitIndex: 14,
@@ -304,6 +310,6 @@ export default [
             }
         },
         cubes: CHANGELING_CAVE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_SUMMER }
+        sky: { season: SEASON_MAGIC }
     }
 ]
