@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { OAKLAND_FRONT_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { OAKLAND_FRONT__CENTERED } from '../../../constants/scene/things/backdrops'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
@@ -26,7 +26,7 @@ import { LAMPPOST__SHARED } from '../../shared/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [OAKLAND_FRONT_BACKDROP]: {
+        [OAKLAND_FRONT__CENTERED]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,

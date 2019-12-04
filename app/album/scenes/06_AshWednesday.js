@@ -44,7 +44,7 @@ import {
 } from '../../constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../constants/scene/actors/wade'
 import {
-    OAKLAND_SIDE_BACKDROP,
+    OAKLAND_SIDE,
     BRICK_WALL_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
@@ -109,7 +109,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true,
+                [OAKLAND_SIDE]: true,
                 [BRICK_WALL_BACKDROP]: true
             },
             [CUTOUT]: {
@@ -174,7 +174,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [BERKELEY_LAMPPOST]: true
@@ -210,7 +210,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [ASH_CAN]: true,
@@ -241,7 +241,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [BANCROFT_SHRUB]: true,

@@ -15,7 +15,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'foliageBackdrop',
+        taskName: 'yardBackdrop',
         workedHours: 1,
         neededHours: 1
     },

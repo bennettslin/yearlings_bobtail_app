@@ -46,7 +46,7 @@ import {
     GREETING,
     PROTESTER
 } from '../../constants/scene/actors/songs'
-import { OAKLAND_SIDE_BACKDROP } from '../../constants/scene/things/backdrops'
+import { OAKLAND_SIDE } from '../../constants/scene/things/backdrops'
 import {
     SIGNPOST,
     BANCROFT_SHRUB,
@@ -101,7 +101,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [ASH_CAN]: true,
@@ -239,7 +239,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [BANCROFT_SHRUB]: true,

@@ -6,6 +6,7 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE,
+    FLAT,
     FURNITURE,
     PANEL
 } from '../../constants/scene/things'
@@ -48,9 +49,9 @@ import {
     RUMPLED_LINENS
 } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE_BACKDROP,
-    FENCE_BACKDROP,
-    BRICK_WALL_BACKDROP
+    OAKLAND_SIDE,
+    BRICK_WALL_BACKDROP,
+    OAKLAND_FRINT__LIZ_GATE
 } from '../../constants/scene/things/backdrops'
 import {
     GINGERBREAD_PRISON,
@@ -116,6 +117,10 @@ import {
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION
 } from '../../constants/scene/things/fixtures'
+import {
+    PUBLIC_FAR__LIZ_GATE,
+    PUBLIC_NEAR__LIZ_GATE
+} from '../../constants/scene/things/flats'
 import {
     BENNETT_PILLOW,
     LIZ_PILLOWS_PILE,
@@ -219,8 +224,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,
@@ -252,6 +256,9 @@ export default [
                     }
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_FRINT__LIZ_GATE]: true
+            },
             [CUTOUT]: {
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
                 [TRAFFIC_LIGHT]: true
@@ -259,6 +266,10 @@ export default [
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDED]: true,
                 [LIZ_GATE_OUTSIDE__ENDED]: true
+            },
+            [FLAT]: {
+                [PUBLIC_FAR__LIZ_GATE]: true,
+                [PUBLIC_NEAR__LIZ_GATE]: true
             }
         },
         sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
@@ -280,7 +291,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true,
+                [OAKLAND_SIDE]: true,
                 [BRICK_WALL_BACKDROP]: true
             },
             [CARDBOARD]: {
@@ -315,7 +326,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true,
+                [OAKLAND_SIDE]: true,
                 [BRICK_WALL_BACKDROP]: true
             },
             [CARDBOARD]: {

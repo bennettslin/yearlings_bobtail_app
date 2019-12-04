@@ -56,8 +56,8 @@ import {
     EATING
 } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_FRONT_BACKDROP,
-    FOLIAGE_BACKDROP
+    OAKLAND_FRONT__CENTERED,
+    YARD_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__CINEMA,
@@ -263,7 +263,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [FOLIAGE_BACKDROP]: true
+                [YARD_BACKDROP]: true
             },
             [DOOR]: {
                 [BASEMENT_DOOR_OPEN]: true
@@ -361,7 +361,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT_BACKDROP]: true
+                [OAKLAND_FRONT__CENTERED]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__CINEMA]: true,

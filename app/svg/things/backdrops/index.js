@@ -7,11 +7,11 @@ import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
 import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
 import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
-import foliageBackdrop from 'assets/svgs/backdrops/foliageBackdrop'
+import yardBackdrop from 'assets/svgs/backdrops/yardBackdrop'
 import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
 import losAngelesBackdrop from 'assets/svgs/backdrops/losAngelesBackdrop'
-import oaklandSideBackdrop from 'assets/svgs/backdrops/oaklandSideBackdrop'
-import oaklandFrontBackdrop from 'assets/svgs/backdrops/oaklandFrontBackdrop'
+import oaklandSide from 'assets/svgs/backdrops/oaklandSide'
+import oaklandFront from 'assets/svgs/backdrops/oaklandFront'
 import roadPast from 'assets/svgs/backdrops/roadPast'
 import roadPresent from 'assets/svgs/backdrops/roadPresent'
 import roadFuture from 'assets/svgs/backdrops/roadFuture'
@@ -33,11 +33,12 @@ import {
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
-    FOLIAGE_BACKDROP,
-    OAKLAND_SIDE_BACKDROP,
+    YARD_BACKDROP,
+    OAKLAND_SIDE,
     DRIVING_BACKDROP,
     LOS_ANGELES_BACKDROP,
-    OAKLAND_FRONT_BACKDROP,
+    OAKLAND_FRONT__CENTERED,
+    OAKLAND_FRINT__LIZ_GATE,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
@@ -59,11 +60,12 @@ export default {
     [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
-    [FOLIAGE_BACKDROP]: foliageBackdrop,
+    [YARD_BACKDROP]: yardBackdrop,
     [DRIVING_BACKDROP]: drivingBackdrop,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
-    [OAKLAND_SIDE_BACKDROP]: oaklandSideBackdrop,
-    [OAKLAND_FRONT_BACKDROP]: oaklandFrontBackdrop,
+    [OAKLAND_SIDE]: oaklandSide,
+    [OAKLAND_FRONT__CENTERED]: oaklandFront,
+    [OAKLAND_FRINT__LIZ_GATE]: oaklandFront,
     [ROAD_PAST]: roadPast,
     [ROAD_PRESENT]: roadPresent,
     [ROAD_FUTURE]: roadFuture,

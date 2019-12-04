@@ -61,7 +61,7 @@ import {
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
-    FOLIAGE_BACKDROP
+    YARD_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PAST,
@@ -104,7 +104,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [FOLIAGE_BACKDROP]: true
+                [YARD_BACKDROP]: true
             },
             [DOOR]: {
                 [BASEMENT_DOOR]: true
@@ -137,7 +137,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [FOLIAGE_BACKDROP]: true
+                [YARD_BACKDROP]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true
@@ -295,7 +295,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [FOLIAGE_BACKDROP]: true
+                [YARD_BACKDROP]: true
             },
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true

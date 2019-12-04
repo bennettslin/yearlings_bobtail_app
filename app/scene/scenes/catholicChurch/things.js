@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { FOLIAGE_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { YARD_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { BERKELEY_LAMPPOST } from '../../../constants/scene/things/cutouts'
 import {
     ST_JOSEPHS_ANNEX,
@@ -13,7 +13,7 @@ import { LAMPPOST__SHARED } from '../../shared/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [FOLIAGE_BACKDROP]: {
+        [YARD_BACKDROP]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,

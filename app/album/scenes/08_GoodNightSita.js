@@ -36,9 +36,9 @@ import {
     DATE_ENDED
 } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE_BACKDROP,
-    FENCE_BACKDROP,
-    DRIVING_BACKDROP
+    OAKLAND_SIDE,
+    DRIVING_BACKDROP,
+    OAKLAND_FRINT__LIZ_GATE
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GO_KART,
@@ -97,8 +97,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,
@@ -223,6 +222,9 @@ export default [
                         instance: DATE_ENDED
                     }
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_FRINT__LIZ_GATE]: true
             },
             [BUBBLE]: {
                 [GO_KART_THOUGHT]: true,
