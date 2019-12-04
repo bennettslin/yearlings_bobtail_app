@@ -14,12 +14,13 @@ import {
     SNOWGLOBES_FUTURE_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
+    TIME_NIGHT,
     SEASON_AUTUMN,
-    SEASON_MAGIC,
+    SEASON_OMINOUS,
     SEASON_PAST,
     SEASON_PRESENT,
-    SEASON_FUTURE
+    SEASON_FUTURE,
+    SEASON_MAGIC
 } from '../../scene/sky/keys'
 import {
     BENNETT,
@@ -114,7 +115,7 @@ export default [
             }
         },
         cubes: BASEMENT_BED_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 2,
@@ -144,7 +145,7 @@ export default [
             }
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_MAGIC }
+        sky: { season: SEASON_OMINOUS }
     },
     {
         unitIndex: 4,
@@ -179,7 +180,7 @@ export default [
             }
         },
         cubes: SNOWGLOBES_PAST_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_PAST }
+        sky: { season: SEASON_PAST }
     },
     {
         unitIndex: 8,
@@ -221,7 +222,7 @@ export default [
             }
         },
         cubes: SNOWGLOBES_PRESENT_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_PRESENT }
+        sky: { season: SEASON_PRESENT }
     },
     {
         unitIndex: 11,
@@ -272,7 +273,7 @@ export default [
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_FUTURE }
+        sky: { season: SEASON_FUTURE }
     },
     {
         unitIndex: 14,
@@ -305,6 +306,6 @@ export default [
             }
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_MAGIC }
+        sky: { season: SEASON_MAGIC }
     }
 ]

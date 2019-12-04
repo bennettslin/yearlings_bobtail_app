@@ -15,7 +15,7 @@ import {
     OAKLAND_VOLKSWAGEN_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
+    TIME_NIGHT,
     SEASON_AUTUMN
 } from '../../scene/sky/keys'
 import {
@@ -99,7 +99,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 4,
@@ -135,7 +135,7 @@ export default [
             }
         },
         cubes: OAKLAND_VOLKSWAGEN_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 7,
@@ -165,7 +165,7 @@ export default [
             }
         },
         cubes: BASEMENT_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 10,
@@ -197,7 +197,7 @@ export default [
             }
         },
         cubes: CLUB_FRONT_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 14,
@@ -225,6 +225,6 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     }
 ]
