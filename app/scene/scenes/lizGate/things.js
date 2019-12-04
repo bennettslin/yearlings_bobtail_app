@@ -58,12 +58,12 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         },
         [CACTUS_SINGLE__LIZ_ENDING]: {
             yIndex: 4,
-            xPosition: 9.5,
+            xPosition: 10.5,
             scaleFactor: 0.3
         },
         [CACTUS_DOUBLE__LIZ_GATE]: {
             yIndex: 4,
-            xPosition: 1.5,
+            xPosition: 2.5,
             scaleFactor: 0.3,
             flipHorizontal: true
         },
@@ -74,14 +74,14 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         },
         [TRAFFIC_LIGHT]: {
             yIndex: 5,
-            xPosition: 9.5,
+            xPosition: 7.5,
             scaleFactor: 0.3
         }
     },
     [DOOR]: {
         [LIZ_BLINDS_OUTSIDE__ENDING]: {
             yIndex: 2,
-            xPosition: 6,
+            xPosition: 7,
             zOffset: 2.25,
             sharedStyle: WINDOW__SHARED
         },
@@ -93,7 +93,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         },
         [LIZ_GATE_OUTSIDE__ENDING]: {
             yIndex: 4,
-            xPosition: 6,
+            xPosition: 7,
             sharedStyle: LIZ_GATE__SHARED
         },
         [LIZ_GATE_OUTSIDE__ENDED]: {
