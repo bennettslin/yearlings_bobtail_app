@@ -58,7 +58,6 @@ import { TAIWAN_MOUNTAIN__SHARED } from '../../shared/taiwan'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [TAIWAN_MOUNTAINS_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6
         }

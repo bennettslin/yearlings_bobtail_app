@@ -47,7 +47,7 @@ import {
     NOHO_HOUSES_BACKDROP,
     FENCE_BACKDROP,
     SCHOOL_BACKDROP,
-    BRICK_WALL__CENTRED
+    BRICK_WALL
 } from '../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../constants/scene/things/bubbles'
 import { JOHNNY_HORTON_ALBUM } from '../../constants/scene/things/cardboards'
@@ -142,7 +142,7 @@ export default [
             },
             [BACKDROP]: {
                 [SCHOOL_BACKDROP]: true,
-                [BRICK_WALL__CENTRED]: true
+                [BRICK_WALL]: true
             },
             [BUBBLE]: {
                 [ESTHER_SPEECH]: true

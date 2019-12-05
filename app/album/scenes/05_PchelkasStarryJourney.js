@@ -56,7 +56,7 @@ import { ASLEEP } from '../../constants/scene/actors/songs'
 import { PRINCIPAL } from '../../constants/scene/actors/tristan'
 import {
     SCHOOL_BACKDROP,
-    BRICK_WALL__CENTRED,
+    BRICK_WALL,
     VALLEY__QUAD
 } from '../../constants/scene/things/backdrops'
 import {
@@ -263,7 +263,7 @@ export default [
             },
             [BACKDROP]: {
                 [SCHOOL_BACKDROP]: true,
-                [BRICK_WALL__CENTRED]: true
+                [BRICK_WALL]: true
             },
             [CUTOUT]: {
                 [LOCKER_BANK]: true,
@@ -305,7 +305,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY__QUAD]: true,
-                [BRICK_WALL__CENTRED]: true
+                [BRICK_WALL]: true
             },
             [BUBBLE]: {
                 [ESCAPE_POD_SKETCH]: true,

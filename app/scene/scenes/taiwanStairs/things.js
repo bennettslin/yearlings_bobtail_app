@@ -18,7 +18,6 @@ import { ALL_PEOPLE__SHARED } from '../../shared/people'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [TAIWAN_STAIRS_BACKDROP]: {
-            yIndex: 0,
             xPosition: 4.5,
             zOffset: 3,
             scaleFactor: 0.45,

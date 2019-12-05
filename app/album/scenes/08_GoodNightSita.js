@@ -36,7 +36,7 @@ import {
     DATE_ENDED
 } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE__CENTRED,
+    OAKLAND_SIDE,
     DRIVING_BACKDROP,
     OAKLAND_FRONT__LIZ_GATE
 } from '../../constants/scene/things/backdrops'
@@ -97,7 +97,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__CENTRED]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,

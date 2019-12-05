@@ -31,7 +31,6 @@ import { REATTA__SHARED } from '../../shared/vehicles'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_FUTURE]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
             sharedStyle: ROAD__SHARED

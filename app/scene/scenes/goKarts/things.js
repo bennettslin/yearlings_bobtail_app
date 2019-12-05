@@ -15,7 +15,6 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [DRIVING_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7
         }

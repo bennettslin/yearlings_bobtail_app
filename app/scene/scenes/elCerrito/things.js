@@ -31,7 +31,6 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [GOLDEN_GATE_BACKDROP]: {
-            yIndex: -1,
             xPosition: 5.5,
             scaleFactor: 0.675,
             trimBottom: 0.25
@@ -55,7 +54,6 @@ const ARRANGEMENTS_THINGS = {
     },
     [FLAT]: {
         [EL_CERRITO_FAR]: {
-            yIndex: -1,
             xPosition: 10.1,
             scaleFactor: 0.47,
             trimBottom: 0.05

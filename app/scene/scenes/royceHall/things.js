@@ -13,7 +13,6 @@ import { ROYCE_HALL } from '../../../constants/scene/things/flats'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [CITY_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7
         }

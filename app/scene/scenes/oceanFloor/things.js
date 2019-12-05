@@ -23,7 +23,6 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OCEAN_FLOOR_FAR]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7
         }

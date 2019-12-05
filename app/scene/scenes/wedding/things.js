@@ -20,7 +20,6 @@ import { ALL_PEOPLE__SHARED } from '../../shared/people'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [WEDDING_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.66
         }

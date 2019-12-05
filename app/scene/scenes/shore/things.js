@@ -19,7 +19,6 @@ import { TAIWAN_BUOY__SHARED } from '../../shared/taiwan'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [SHORE_BUOY_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7
         }

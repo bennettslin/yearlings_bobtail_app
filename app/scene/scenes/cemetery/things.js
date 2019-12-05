@@ -13,7 +13,6 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [LOS_ANGELES_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7
         }

@@ -38,7 +38,6 @@ import { BUBBLE__SHARED } from '../../shared/props'
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BACKDROP]: {
         [OAKLAND_FRONT__LIZ_GATE]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,
             trimBottom: 0.3

@@ -1,5 +1,6 @@
 import ALL_ARRANGEMENTS_ACTORS from 'album/scenes/arrangements'
 import ALL_ARRANGEMENTS_THINGS from 'album/scenes/arrangements/things'
+import isFinite from 'lodash/isfinite'
 
 import { ACTOR } from 'constants/scene'
 
@@ -9,7 +10,14 @@ export const getArrangementForPresence = ({
     actorKey
 
 }) => {
-    return presenceType === ACTOR ?
+    const arrangement = presenceType === ACTOR ?
         ALL_ARRANGEMENTS_ACTORS[actorKey][presenceKey] :
         ALL_ARRANGEMENTS_THINGS[presenceType][presenceKey]
+
+    // If no yIndex is given, default to -1.
+    if (!isFinite(arrangement.yIndex)) {
+        arrangement.yIndex = -1
+    }
+
+    return arrangement
 }

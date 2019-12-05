@@ -16,13 +16,11 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [NOHO_HOUSES_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,
             trimBottom: 0.05
         },
         [FENCE_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,
             trimBottom: 0.05

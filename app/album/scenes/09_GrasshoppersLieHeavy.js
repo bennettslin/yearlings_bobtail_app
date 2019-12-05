@@ -49,8 +49,8 @@ import {
     RUMPLED_LINENS
 } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE__CENTRED,
-    BRICK_WALL__CENTRED,
+    OAKLAND_SIDE,
+    BRICK_WALL,
     OAKLAND_FRONT__LIZ_GATE
 } from '../../constants/scene/things/backdrops'
 import {
@@ -224,7 +224,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__CENTRED]: true
+                [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
                 [CYPRESS_TREE]: true,
@@ -291,8 +291,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__CENTRED]: true,
-                [BRICK_WALL__CENTRED]: true
+                [OAKLAND_SIDE]: true,
+                [BRICK_WALL]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true
@@ -326,8 +326,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__CENTRED]: true,
-                [BRICK_WALL__CENTRED]: true
+                [OAKLAND_SIDE]: true,
+                [BRICK_WALL]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true

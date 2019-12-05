@@ -16,11 +16,6 @@
 
 export default [
     {
-        taskName: `Make all backdrops yIndex of -1, and z height always 0.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Choose floor colours and floor patterns.`,
         workedHours: 0,
         neededHours: 2

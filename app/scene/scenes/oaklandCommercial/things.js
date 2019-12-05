@@ -16,7 +16,6 @@ import { OAKLAND_COMMERCIAL__SHARED } from '../../shared/buildings'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OAKLAND_FRONT__MIDWAY]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,
             trimBottom: 0.15,

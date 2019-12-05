@@ -116,7 +116,6 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.2
         },
         [BEDROOM_FENCE]: {
-            yIndex: -1,
             xPosition: 2.5,
             zOffset: 2,
             scaleFactor: 0.5
@@ -145,7 +144,6 @@ export const THINGS_BEDROOM_ENRAGED = {
 export const THINGS_BEDROOM_FEARFUL = {
     [FLAT]: {
         [BEDROOM_SIREN]: {
-            yIndex: -1,
             xPosition: 2,
             zOffset: 2.75,
             scaleFactor: 0.425
@@ -204,7 +202,6 @@ export const THINGS_BEDROOM_FEIGNING = {
     },
     [FLAT]: {
         [BEDROOM_BUS]: {
-            yIndex: -1,
             xPosition: 2,
             zOffset: 3.25,
             scaleFactor: 0.5

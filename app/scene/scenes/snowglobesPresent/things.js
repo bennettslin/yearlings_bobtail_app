@@ -25,7 +25,6 @@ import { ALL_PEOPLE__SHARED } from '../../shared/people'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_PRESENT]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
             sharedStyle: ROAD__SHARED

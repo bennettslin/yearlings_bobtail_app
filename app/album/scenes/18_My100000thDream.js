@@ -45,6 +45,8 @@ import {
     FINAL_DREAM
 } from '../../constants/scene/actors/bennettLiz'
 import {
+    OAKLAND_SIDE,
+    BRICK_WALL,
     MOUNTAIN_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
@@ -94,6 +96,10 @@ export default [
                         instance: EL_TORITO
                     }
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true,
+                [BRICK_WALL]: true
             },
             [CUTOUT]: {
                 [DISPENSER_LEFT]: true,

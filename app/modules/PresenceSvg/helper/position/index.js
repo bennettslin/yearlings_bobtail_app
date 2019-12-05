@@ -24,8 +24,7 @@ const _getNearestXIndex = (xPosition) => {
     return xIndex
 }
 
-// TODO: Don't export once legacy is gone.
-export const _getTileCentreForPresence = ({
+const _getTileCentreForPresence = ({
     cubesKey,
     xPosition,
     yIndex,
@@ -42,7 +41,10 @@ export const _getTileCentreForPresence = ({
 
         xOffset = xPosition - xIndex,
 
-        zIndex = getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
+        // If yIndex is -1, zIndex is automatically 0.
+        zIndex = yIndex === -1 ?
+            0 :
+            getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
 
         tilePercentages = getHorizontalPlaneFractions({
             xIndex,

@@ -50,7 +50,7 @@ import {
 import { CROSSING_GUARD } from '../../constants/scene/actors/willy'
 import { YOUNG_CHILD } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE__CENTRED,
+    OAKLAND_SIDE,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__MIDWAY,
     OAKLAND_FRONT__LOW
@@ -101,7 +101,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE__CENTRED]: true
+                [OAKLAND_SIDE]: true
             },
             [FLAT]: {
                 [OAKLAND_HOUSE_LEFT]: true,

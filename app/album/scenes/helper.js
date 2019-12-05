@@ -14,7 +14,7 @@ const _addPresenceToSceneLayer = ({
 
 }) => {
     const
-        { yIndex } = arrangementObject,
+        { yIndex = -1 } = arrangementObject,
         layerKey = `layer${yIndex}`
 
     // Initialise this layer if necessary.

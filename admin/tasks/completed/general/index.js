@@ -5091,5 +5091,10 @@ export default [
         taskName: `Courtyard backdrop configs and Bancroft building rearrangement.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make yIndex default to -1, and z index always 0 if so.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

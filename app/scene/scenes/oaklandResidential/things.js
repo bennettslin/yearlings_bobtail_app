@@ -27,7 +27,6 @@ import { LAMPPOST__SHARED } from '../../shared/outdoor'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OAKLAND_FRONT__HIGH]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,
             trimBottom: 0.05

@@ -15,7 +15,6 @@ import { FREEWAY_SIGN__SHARED } from '../../shared/outdoor'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [VALLEY__FREEWAY]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.65,
             trimBottom: 0.05

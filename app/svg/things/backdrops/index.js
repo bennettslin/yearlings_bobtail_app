@@ -35,8 +35,7 @@ import {
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
     YARD_BACKDROP,
-    OAKLAND_SIDE__CENTRED,
-    OAKLAND_SIDE__COURTYARD,
+    OAKLAND_SIDE,
     DRIVING_BACKDROP,
     LOS_ANGELES_BACKDROP,
     OAKLAND_FRONT__HIGH,
@@ -49,8 +48,7 @@ import {
     GOLDEN_GATE_BACKDROP,
     WEDDING_BACKDROP,
     FENCE_BACKDROP,
-    BRICK_WALL__CENTRED,
-    BRICK_WALL__COURTYARD,
+    BRICK_WALL,
     CITY_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
@@ -69,8 +67,7 @@ export default {
     [YARD_BACKDROP]: yardBackdrop,
     [DRIVING_BACKDROP]: drivingBackdrop,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
-    [OAKLAND_SIDE__CENTRED]: oaklandSide,
-    [OAKLAND_SIDE__COURTYARD]: oaklandSide,
+    [OAKLAND_SIDE]: oaklandSide,
     [OAKLAND_FRONT__HIGH]: oaklandFront,
     [OAKLAND_FRONT__MIDWAY]: oaklandFront,
     [OAKLAND_FRONT__LOW]: oaklandFront,
@@ -81,7 +78,6 @@ export default {
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop,
     [FENCE_BACKDROP]: fenceBackdrop,
-    [BRICK_WALL__CENTRED]: brickWall,
-    [BRICK_WALL__COURTYARD]: brickWall,
+    [BRICK_WALL]: brickWall,
     [CITY_BACKDROP]: cityBackdrop
 }

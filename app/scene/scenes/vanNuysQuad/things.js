@@ -28,7 +28,6 @@ import {
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [VALLEY__QUAD]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.65,
             trimBottom: 0.2

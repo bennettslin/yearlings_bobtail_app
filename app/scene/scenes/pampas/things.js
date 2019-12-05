@@ -8,7 +8,6 @@ import { PAMPAS_FAR } from '../../../constants/scene/things/flats'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [MOUNTAIN_BACKDROP]: {
-            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.66
         }
