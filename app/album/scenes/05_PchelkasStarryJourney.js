@@ -21,7 +21,9 @@ import {
 } from '../../constants/scene/scenes'
 import {
     TIME_ANYTIME,
-    SEASON_WINTER
+    SEASON_WINTER,
+    TIME_EVENING,
+    TIME_MORNING
 } from '../../scene/sky/keys'
 import {
     PRETEEN_BENNETT,
@@ -129,7 +131,7 @@ export default [
             }
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { time: TIME_EVENING, season: SEASON_WINTER }
     },
     {
         unitIndex: 2,
@@ -162,7 +164,7 @@ export default [
             }
         },
         cubes: BEDROOM_OPEN_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { time: TIME_EVENING, season: SEASON_WINTER }
     },
     {
         unitIndex: 6,
@@ -193,7 +195,7 @@ export default [
             }
         },
         cubes: BEDROOM_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { time: TIME_MORNING, season: SEASON_WINTER }
     },
     {
         unitIndex: 9,

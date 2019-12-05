@@ -16,11 +16,10 @@ import {
 import {
     TIME_NIGHT,
     SEASON_AUTUMN,
-    SEASON_OMINOUS,
+    SEASON_NIGHT_MAGIC,
     SEASON_PAST,
     SEASON_PRESENT,
-    SEASON_FUTURE,
-    SEASON_MAGIC
+    SEASON_FUTURE
 } from '../../scene/sky/keys'
 import {
     BENNETT,
@@ -145,7 +144,7 @@ export default [
             }
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { season: SEASON_OMINOUS }
+        sky: { season: SEASON_NIGHT_MAGIC }
     },
     {
         unitIndex: 4,
@@ -306,6 +305,6 @@ export default [
             }
         },
         cubes: BASEMENT_BED_MAGIC_KEY,
-        sky: { season: SEASON_MAGIC }
+        sky: { season: SEASON_NIGHT_MAGIC }
     }
 ]

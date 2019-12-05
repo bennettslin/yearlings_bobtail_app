@@ -19,7 +19,6 @@ export const SEASON_FUTURE = 'future'
 
 export const SEASON_STAGE = 'stage'
 export const SEASON_LOVE = 'love'
-export const SEASON_MAGIC = 'magic'
-export const SEASON_OMINOUS = 'ominous'
+export const SEASON_NIGHT_MAGIC = 'nightMagic'
 export const SEASON_OCEAN = 'ocean'
 export const SEASON_THOUGHT = 'thought'

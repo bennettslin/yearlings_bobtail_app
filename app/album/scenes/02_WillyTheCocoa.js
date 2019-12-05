@@ -25,7 +25,7 @@ import {
     TIME_EVENING,
     TIME_NIGHT,
     SEASON_SUMMER,
-    SEASON_MAGIC
+    SEASON_NIGHT_MAGIC
 } from '../../scene/sky/keys'
 import {
     PRETEEN_BENNETT,
@@ -310,6 +310,6 @@ export default [
             }
         },
         cubes: CHANGELING_CAVE_KEY,
-        sky: { season: SEASON_MAGIC }
+        sky: { season: SEASON_NIGHT_MAGIC }
     }
 ]

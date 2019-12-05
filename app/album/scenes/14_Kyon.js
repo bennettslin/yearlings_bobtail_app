@@ -12,8 +12,14 @@ import {
     LIZ_COUCH_DARK_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
-    SEASON_AUTUMN
+    TIME_DAWN,
+    TIME_MORNING,
+    TIME_NOON,
+    TIME_AFTERNOON,
+    TIME_EVENING,
+    TIME_NIGHT,
+    SEASON_AUTUMN,
+    SEASON_NIGHT_MAGIC
 } from '../../scene/sky/keys'
 import {
     LIZ,
@@ -79,7 +85,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_DAWN, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 2,
@@ -103,7 +109,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_MORNING, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 4,
@@ -133,7 +139,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 7,
@@ -161,7 +167,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 8,
@@ -193,7 +199,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 10,
@@ -227,7 +233,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 11,
@@ -254,7 +260,7 @@ export default [
             }
         },
         cubes: LIZ_COUCH_DARK_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 12,
@@ -282,6 +288,6 @@ export default [
             }
         },
         cubes: LIZ_COUCH_DARK_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { season: SEASON_NIGHT_MAGIC }
     }
 ]
