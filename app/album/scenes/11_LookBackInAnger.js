@@ -1,5 +1,6 @@
 import { ACTOR } from '../../constants/scene'
 import {
+    BACKDROP,
     CUTOUT,
     DOOR,
     FIXTURE,
@@ -48,6 +49,10 @@ import {
     MINGLING,
     WAITING
 } from '../../constants/scene/actors/songs'
+import {
+    OAKLAND_SIDE,
+    BRICK_WALL
+} from '../../constants/scene/things/backdrops'
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
@@ -180,6 +185,10 @@ export default [
                     description: 'front, talking to Stephanie',
                     instance: MINGLING
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true,
+                [BRICK_WALL]: true
             },
             [DOOR]: {
                 [CLUB_DOOR_OPEN]: true

@@ -26,11 +26,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Brick wall and Oakland side backdrops for club loading and El Torito.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'theatre',
         notes: `logue versus song theatre colours, gradient for sky backdrop`,
         workedHours: 0,
