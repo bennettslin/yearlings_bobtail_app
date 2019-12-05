@@ -117,8 +117,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        hair: true,
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,

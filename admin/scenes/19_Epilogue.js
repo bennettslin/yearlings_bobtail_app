@@ -128,8 +128,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

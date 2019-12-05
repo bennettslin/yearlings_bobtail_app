@@ -35,8 +35,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -71,8 +69,6 @@ export default [
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -107,8 +103,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -143,8 +137,6 @@ export default [
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -179,8 +171,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -207,8 +197,6 @@ export default [
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

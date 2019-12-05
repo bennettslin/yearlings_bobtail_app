@@ -225,8 +225,6 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         faceRevision: true,
-                        hair: true,
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
@@ -249,8 +247,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        hair: true,
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
