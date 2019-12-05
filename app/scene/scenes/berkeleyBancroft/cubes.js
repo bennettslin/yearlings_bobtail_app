@@ -3,7 +3,7 @@ import { BERKELEY_BANCROFT_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    CEILING_COLOUR as C,
+    ROOF_COLOUR as C,
     PAVEMENT_COLOUR as V,
     BANCROFT_GATE_COLOUR as A,
     BANCROFT_EXTERIOR_COLOUR as X,

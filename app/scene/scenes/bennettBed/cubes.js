@@ -5,7 +5,7 @@ import {
 
 import {
     PAVEMENT_COLOUR as V,
-    CEILING_COLOUR as C,
+    ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_FLOOR_DARK_COLOUR as L,
     DARK_FLOOR_COLOUR as Y,
@@ -22,8 +22,7 @@ const DEFAULT_CEILING = {
     hslaColours: [
         [X],
         [C],
-        [W],
-        [W, C, C, C, C, C, C, C, C, C, C, W]
+        [W]
     ],
     zIndices: [
         [1],
@@ -37,7 +36,7 @@ const DEFAULT_FLOOR = {
     hslaColours: [
         [V],
         [V],
-        [L, F, L, F, L, F, W, W, W, W, L, F],
+        [V, V, L, F, L, V, W, W, W, W, V],
         [F, L, F, L, F, L, F, L, F, L, F, L],
         [L, F, L, F, L, U, U, U, U, U, U, F],
         [F, L, F, L, F, L, F, L, F, L, F, L]
@@ -74,7 +73,7 @@ const CUBES = {
             hslaColours: [
                 [V],
                 [V],
-                [Y, Y, Y, Y, Y, Y, Z, Z, Z, Z, Y],
+                [V, V, Y, Y, Y, Y, Z, Z, Z, Z, V],
                 [Y]
             ],
             zIndices: DEFAULT_FLOOR.zIndices

@@ -1,7 +1,6 @@
 import { MUSEUM_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR as C,
     WOOD_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
     FURNITURE_COLOUR as R
@@ -13,8 +12,7 @@ const CUBES = {
     [MUSEUM_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W]
+                [W]
             ],
             zIndices: [
                 [1],

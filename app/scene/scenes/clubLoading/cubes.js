@@ -6,7 +6,7 @@ import {
     ROOF_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
     CLUB_WALL_COLOUR as W,
-    EXTERIOR_COLOUR as X
+    GENERIC_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline

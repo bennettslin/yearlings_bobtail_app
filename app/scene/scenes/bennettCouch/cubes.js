@@ -5,7 +5,6 @@ import {
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    CEILING_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
@@ -19,8 +18,7 @@ const CUBES = {
     [BENNETT_COUCH_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W]
+                [W]
             ],
             zIndices: [
                 [1],

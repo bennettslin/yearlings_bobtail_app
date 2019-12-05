@@ -3,9 +3,9 @@ import { EL_TORITO_KEY } from '../../../constants/scene/scenes'
 import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
-    FANCY_FLOOR_COLOUR as F,
+    VELVET_FLOOR_COLOUR as F,
     FANCY_WALL_COLOUR as W,
-    EXTERIOR_COLOUR as X
+    GENERIC_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 import { e, f } from '../../cubes/zIndices'

@@ -16,9 +16,9 @@
 
 export default [
     {
-        taskName: `Choose floor colours and floor patterns.`,
+        taskName: `Logic to randomize sand and grass, and tile patterns.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 3
     },
     {
         taskName: `Assign sky times and seasons, choose colours, including gradients.`,
@@ -27,13 +27,13 @@ export default [
     },
     {
         taskName: 'theatre',
-        notes: `logue versus song theatre colours, gradient for sky backdrop`,
+        notes: `logue versus song theatre colours.`,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'logue',
-        notes: `cube colours`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -51,7 +51,7 @@ export default [
     },
     {
         taskName: 'bathroom',
-        notes: `expand wall, rechoose towel and sink colours, make magic scene sepia.`,
+        notes: `rechoose towel and sink colours.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -81,7 +81,7 @@ export default [
     },
     {
         taskName: 'puppetShow',
-        notes: `Mountain colours, lower sketchbook.`,
+        notes: `Mountain colours.`,
         workedHours: 0,
         neededHours: 1
     },

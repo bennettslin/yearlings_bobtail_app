@@ -10,9 +10,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
-    CEILING_COLOUR as C,
     LIZ_FLOOR_COLOUR as F,
-    LIZ_FLOOR_DARK_COLOUR as L,
     DARK_FLOOR_COLOUR as Y,
     LIZ_WALL_COLOUR as W,
     DARK_WALL_COLOUR as Z,
@@ -30,8 +28,7 @@ import { d, g, k } from '../../cubes/zIndices'
 const DEFAULT_CEILING = {
     hslaColours: [
         [D],
-        [W],
-        [W, C, C, C, C, C, C, C, C, C, C, W]
+        [W]
     ],
     zIndices: [
         [k],
@@ -110,9 +107,9 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
-                [G, U, U, U, L, L, L, L, L, L, L, G],
                 [G, U, U, U, F, F, F, F, F, F, F, G],
-                [G, L, L, L, L, L, L, L, L, L, L, G],
+                [G, U, U, U, F, F, F, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G],
                 [G]
             ],
             zIndices: [

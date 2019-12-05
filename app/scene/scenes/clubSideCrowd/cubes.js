@@ -1,7 +1,6 @@
 import { CLUB_SIDE_CROWD_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
     CLUB_WALL_COLOUR as W,
     PLATFORM_COLOUR as P
@@ -13,8 +12,7 @@ const CUBES = {
     [CLUB_SIDE_CROWD_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [C, C, C, C, C, C, C, C, C, C, C, W]
+                [W]
             ],
             zIndices: [
                 [1],

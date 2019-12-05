@@ -6,7 +6,6 @@ import {
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    CEILING_COLOUR as C,
     LINOLEUM_FLOOR_COLOUR as F,
     LINOLEUM_FLOOR_DARK_COLOUR as L,
     SOFT_WALL_COLOUR as W,
@@ -20,8 +19,7 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W]
+                [W]
             ],
             zIndices: [
                 [k],

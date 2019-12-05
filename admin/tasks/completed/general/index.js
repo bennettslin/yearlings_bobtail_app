@@ -5096,5 +5096,10 @@ export default [
         taskName: `Make yIndex default to -1, and z index always 0 if so.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Choose cube colours.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

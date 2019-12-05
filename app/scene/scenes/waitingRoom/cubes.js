@@ -3,7 +3,6 @@ import { WAITING_ROOM_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
-    CEILING_COLOUR as C,
     WOOD_FLOOR_COLOUR as F,
     SOFT_WALL_COLOUR as W,
     WAITING_ARMCHAIR_COLOUR as U
@@ -17,8 +16,7 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W]
+                [W]
             ],
             zIndices: [
                 [k],

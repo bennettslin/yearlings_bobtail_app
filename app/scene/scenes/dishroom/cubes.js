@@ -2,10 +2,10 @@ import { DISHROOM_KEY } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
-    CEILING_COLOUR as C,
     LINOLEUM_FLOOR_COLOUR as F,
     LINOLEUM_FLOOR_DARK_COLOUR as L,
-    SCHOOL_WALL_COLOUR as W,
+    INDUSTRIAL_WALL_COLOUR as W,
+    SCHOOL_WALL_COLOUR as Z,
     CONCRETE_PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
@@ -16,9 +16,8 @@ const CUBES = {
     [DISHROOM_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W]
+                [Z],
+                [W]
             ],
             zIndices: [
                 [0],

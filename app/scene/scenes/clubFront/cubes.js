@@ -1,7 +1,6 @@
 import { CLUB_FRONT_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR as C,
     OLD_FLOOR_COLOUR as F,
     CLUB_WALL_COLOUR as W,
     PLATFORM_COLOUR as P
@@ -13,8 +12,7 @@ const CUBES = {
     [CLUB_FRONT_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W]
+                [W]
             ],
             zIndices: [
                 [1],
@@ -28,7 +26,7 @@ const CUBES = {
                 [F, P, P, P, P, P, P, P, P, P, P, F],
                 [F, P, P, P, P, P, P, P, P, P, P, F],
                 [F, P, P, P, P, P, P, P, P, P, P, F],
-                [F, F, F, F, F, F, F, F, F, F, F, F]
+                [F]
             ],
             zIndices: [
                 [1],
@@ -36,7 +34,7 @@ const CUBES = {
                 [1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
                 [1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
                 [1, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+                [1]
             ]
         }
     }

@@ -4,7 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     INDUSTRIAL_WALL_COLOUR as W,
-    EXTERIOR_COLOUR as X,
+    GENERIC_EXTERIOR_COLOUR as X,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 

@@ -1,7 +1,6 @@
 import { VAN_NUYS_HALLWAY_KEY } from '../../../constants/scene/scenes'
 
 import {
-    CEILING_COLOUR as C,
     SCHOOL_FLOOR_COLOUR as F,
     SCHOOL_WALL_COLOUR as W,
     SEAT_COLOUR as S
@@ -13,11 +12,7 @@ const CUBES = {
     [VAN_NUYS_HALLWAY_KEY]: {
         ceiling: {
             hslaColours: [
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W],
-                [W, C, C, C, C, C, C, C, C, C, C, W],
-                [W],
-                [W, C, C, C, C, C, C, C, C, C, C, W]
+                [W]
             ],
             zIndices: [
                 [1],
