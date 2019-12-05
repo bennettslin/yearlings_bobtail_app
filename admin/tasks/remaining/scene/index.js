@@ -16,14 +16,24 @@
 
 export default [
     {
+        taskName: `Make all backdrops yIndex of -1, and z height always 0.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Choose floor colours and floor patterns.`,
         workedHours: 0,
         neededHours: 2
     },
     {
-        taskName: `Assign sky times and seasons, choose colours.`,
+        taskName: `Assign sky times and seasons, choose colours, including gradients.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Brick wall and Oakland side backdrops for club loading and El Torito.`,
+        workedHours: 0,
+        neededHours: 1
     },
     {
         taskName: 'theatre',
