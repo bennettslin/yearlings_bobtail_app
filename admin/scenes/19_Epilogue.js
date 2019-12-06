@@ -258,8 +258,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

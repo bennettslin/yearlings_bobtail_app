@@ -40,8 +40,6 @@ export default [
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -126,8 +124,6 @@ export default [
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -152,8 +148,6 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        hair: true,
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,

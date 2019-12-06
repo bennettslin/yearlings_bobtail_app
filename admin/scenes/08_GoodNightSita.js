@@ -89,8 +89,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
