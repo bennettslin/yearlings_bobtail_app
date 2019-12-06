@@ -219,8 +219,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
