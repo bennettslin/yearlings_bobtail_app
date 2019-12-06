@@ -1,4 +1,4 @@
-export const TIME_ANYTIME = 'anytime'
+export const TIME_STAGE = 'stage'
 
 export const TIME_TWILIGHT = 'dawn'
 export const TIME_DAWN = 'dawn'
@@ -17,7 +17,7 @@ export const SEASON_PAST = 'past'
 export const SEASON_PRESENT = 'present'
 export const SEASON_FUTURE = 'future'
 
-export const SEASON_STAGE = 'stage'
+export const SEASON_STAGE = TIME_STAGE
 export const SEASON_LOVE = 'love'
 export const SEASON_NIGHT_MAGIC = 'nightMagic'
 export const SEASON_OCEAN = 'ocean'

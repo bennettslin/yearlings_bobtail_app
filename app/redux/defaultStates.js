@@ -13,7 +13,7 @@ import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
 import { getCubesForKey } from 'album/scenes/arrangements/cubes'
 
 import {
-    TIME_ANYTIME,
+    TIME_STAGE,
     SEASON_STAGE
 } from 'scene/sky/keys'
 
@@ -193,7 +193,7 @@ const initialSceneIndex = -1,
     {
         cubes: sceneCubesKey,
         sky: {
-            time: sceneTime = TIME_ANYTIME,
+            time: sceneTime = TIME_STAGE,
             season: sceneSeason = SEASON_STAGE
         },
         layers: scenePresenceLayers

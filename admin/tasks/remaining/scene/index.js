@@ -21,9 +21,9 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Assign sky times and seasons, choose colours, including gradients.`,
+        taskName: `Choose time and season colours, logic for gradients.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 2
     },
     {
         taskName: 'theatre',
