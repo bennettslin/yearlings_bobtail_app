@@ -80,8 +80,6 @@ export default [
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

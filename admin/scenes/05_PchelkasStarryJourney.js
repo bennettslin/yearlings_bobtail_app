@@ -198,8 +198,6 @@ export default [
                 },
                 [TRISTAN]: {
                     principal: {
-                        hair: true,
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
