@@ -20,7 +20,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -30,7 +29,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -45,7 +43,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -55,7 +52,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -70,7 +66,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -80,7 +75,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -96,7 +90,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     actor: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -111,7 +104,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -121,7 +113,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -136,7 +127,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -146,7 +136,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,

@@ -37,7 +37,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -45,7 +44,6 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -67,7 +65,6 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -75,7 +72,6 @@ export default [
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -89,7 +85,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -97,7 +92,6 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -111,7 +105,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -125,7 +118,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -133,7 +125,6 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -141,7 +132,6 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -149,7 +139,6 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -157,7 +146,6 @@ export default [
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -177,7 +165,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -187,7 +174,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -203,7 +189,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -214,7 +199,6 @@ export default [
                 [LIZ]: {
                     reflection: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,

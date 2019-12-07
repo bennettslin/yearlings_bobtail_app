@@ -30,7 +30,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -44,7 +43,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -54,7 +52,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -69,7 +66,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -78,7 +74,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -93,7 +88,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -102,7 +96,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -112,7 +105,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -133,7 +125,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -142,7 +133,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -152,7 +142,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -162,7 +151,6 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -172,7 +160,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,

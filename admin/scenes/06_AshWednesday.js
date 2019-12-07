@@ -25,7 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -33,7 +32,6 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -47,7 +45,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -55,7 +52,6 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -69,7 +65,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -83,7 +78,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -100,7 +94,6 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -115,7 +108,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -123,7 +115,6 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

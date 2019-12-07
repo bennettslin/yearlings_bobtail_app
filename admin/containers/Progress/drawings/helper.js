@@ -10,8 +10,7 @@ const
     FACE_REVISION_TIME = 0.5,
     HAIR_ILLUSTRATION_TIME = 0.5,
     HANDS_TIME = 0.15,
-    HAIR_TIME = 0.125,
-    HEAD_TIME = 0.125,
+    HEAD_TIME = 0.25,
     FACE_TIME = 0.5,
     COMPOSITE_TIME = 0.25,
 
@@ -21,7 +20,6 @@ const
         FACE_REVISION_TIME +
         HAIR_ILLUSTRATION_TIME +
         HANDS_TIME +
-        HAIR_TIME +
         HEAD_TIME +
         FACE_TIME +
         COMPOSITE_TIME
@@ -67,7 +65,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     hairIllustration,
                     hands,
                     head,
-                    hair,
                     face,
                     composite,
                     instance
@@ -81,7 +78,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 hairIllustration,
                 hands,
                 head,
-                hair,
                 face,
                 composite,
                 instance
@@ -118,7 +114,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 hairIllustration,
                 hands,
                 head,
-                hair,
                 face,
                 composite,
                 instance,
@@ -143,9 +138,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!head) {
                 workedHours += HEAD_TIME
             }
-            if (!hair) {
-                workedHours += HAIR_TIME
-            }
             if (!face) {
                 workedHours += FACE_TIME
             }
@@ -157,8 +149,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !head && !hair,
-                halfDoneForNow = !hair
+            const doneForNow = !head,
+                halfDoneForNow = !head
 
             if (!doneForNow) {
                 rolesTodoCount++

@@ -52,7 +52,6 @@ export default [
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -60,7 +59,6 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -68,7 +66,6 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -88,7 +85,6 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -96,7 +92,6 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -138,7 +133,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -146,7 +140,6 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -160,7 +153,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -168,7 +160,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

@@ -41,7 +41,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -55,7 +54,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -69,7 +67,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -78,7 +75,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -93,7 +89,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -107,7 +102,6 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -115,7 +109,6 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -137,7 +130,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -151,7 +143,6 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -159,7 +150,6 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -173,7 +163,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -184,7 +173,6 @@ export default [
                     maskedWoman: {
                         faceRevision: true,
                         hairIllustration: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -199,7 +187,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -210,7 +197,6 @@ export default [
                     maskedWoman: {
                         faceRevision: true,
                         hairIllustration: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -234,7 +220,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

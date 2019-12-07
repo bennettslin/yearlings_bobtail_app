@@ -25,7 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -33,7 +32,6 @@ export default [
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -41,7 +39,6 @@ export default [
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -55,7 +52,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -63,7 +59,6 @@ export default [
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -71,7 +66,6 @@ export default [
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -85,7 +79,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -99,7 +92,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -107,7 +99,6 @@ export default [
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

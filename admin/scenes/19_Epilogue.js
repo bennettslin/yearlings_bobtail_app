@@ -35,7 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -44,7 +43,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -55,7 +53,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -65,7 +62,6 @@ export default [
                     }
                 },
                 [CHRISTOPHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -74,7 +70,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -83,7 +78,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -92,7 +86,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -108,7 +101,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -138,7 +130,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -147,7 +138,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -156,7 +146,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -165,7 +154,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -181,7 +169,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -197,7 +184,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -206,7 +192,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -222,7 +207,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -231,7 +215,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -241,7 +224,6 @@ export default [
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -258,7 +240,6 @@ export default [
                 },
                 [NESTOR]: {
                     faceRevision: true,
-                    hair: true,
                     head: true,
                     face: true,
                     composite: true,

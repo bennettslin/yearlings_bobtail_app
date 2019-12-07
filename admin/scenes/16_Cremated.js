@@ -23,7 +23,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -32,7 +31,6 @@ export default [
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -47,7 +45,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -55,7 +52,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -70,7 +66,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -78,7 +73,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -92,7 +86,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -107,7 +100,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -121,7 +113,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -130,7 +121,6 @@ export default [
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

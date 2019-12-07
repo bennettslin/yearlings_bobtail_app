@@ -39,7 +39,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -47,7 +46,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -62,7 +60,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -71,7 +68,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -85,7 +81,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -99,7 +94,6 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -107,7 +101,6 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -121,7 +114,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -135,7 +127,6 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -144,7 +135,6 @@ export default [
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -153,7 +143,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -168,7 +157,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -177,7 +165,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -186,7 +173,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -208,7 +194,6 @@ export default [
                 [LIZ]: {
                     sita: {
                         faceRevision: true,
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -224,7 +209,6 @@ export default [
             [ACTOR]: {
                 [MIRIAM]: {
                     hairIllustration: true,
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -232,7 +216,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -247,7 +230,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -256,7 +238,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

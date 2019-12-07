@@ -19,7 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -27,7 +26,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -53,7 +51,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -61,7 +58,6 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -87,7 +83,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -95,7 +90,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -121,7 +115,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -129,7 +122,6 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -155,7 +147,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -163,7 +154,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -189,7 +179,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

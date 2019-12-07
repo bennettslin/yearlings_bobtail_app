@@ -19,7 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -33,7 +32,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -47,7 +45,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -61,7 +58,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -75,7 +71,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -89,7 +84,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -104,7 +98,6 @@ export default [
             [ACTOR]: {
                 [SASHA]: {
                     mermaid: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -113,7 +106,6 @@ export default [
                     }
                 },
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -127,7 +119,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

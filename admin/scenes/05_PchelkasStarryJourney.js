@@ -39,7 +39,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -47,7 +46,6 @@ export default [
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -61,7 +59,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -75,7 +72,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -89,7 +85,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -103,7 +98,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -111,7 +105,6 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -119,7 +112,6 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -133,7 +125,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -141,7 +132,6 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -149,7 +139,6 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -158,7 +147,6 @@ export default [
                 },
                 [SASHA]: {
                     popularGirl: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -173,7 +161,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -181,7 +168,6 @@ export default [
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -189,7 +175,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,

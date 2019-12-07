@@ -16,7 +16,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -25,7 +24,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        hair: true,
                         head: true,
                         hands: true,
                         face: true,
@@ -34,7 +32,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -48,7 +45,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -56,7 +52,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -64,7 +59,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
@@ -72,7 +66,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    hair: true,
                     head: true,
                     hands: true,
                     face: true,
