@@ -4,14 +4,17 @@ import { getSong } from 'album/api/songs'
 
 import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
 import {
-    TIME_ANYTIME,
+    TIME_STAGE,
     SEASON_STAGE
 } from 'scene/sky/keys'
 
 const DEFAULT_SCENE = {
     cubes: DEFAULT_STAGE_KEY,
     layers: {},
-    sky: { time: TIME_ANYTIME, season: SEASON_STAGE }
+    sky: {
+        time: TIME_STAGE,
+        season: SEASON_STAGE
+    }
 }
 
 export const getSongSceneConfigs = (songIndex) => {

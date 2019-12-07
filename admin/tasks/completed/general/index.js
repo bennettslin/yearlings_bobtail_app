@@ -5101,5 +5101,10 @@ export default [
         taskName: `Choose cube colours.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Assign time and seasons to scenes.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

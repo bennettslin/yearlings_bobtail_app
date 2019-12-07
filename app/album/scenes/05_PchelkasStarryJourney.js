@@ -20,10 +20,13 @@ import {
     VAN_NUYS_QUAD_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
-    SEASON_WINTER,
+    TIME_MORNING,
+    TIME_NOON,
+    TIME_AFTERNOON,
     TIME_EVENING,
-    TIME_MORNING
+    SEASON_WINTER,
+    SEASON_NIGHT_MAGIC,
+    SEASON_FUTURE
 } from '../../scene/sky/keys'
 import {
     PRETEEN_BENNETT,
@@ -216,7 +219,7 @@ export default [
             }
         },
         cubes: BEDROOM_DOGS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { season: SEASON_NIGHT_MAGIC }
     },
     {
         unitIndex: 10,
@@ -243,7 +246,7 @@ export default [
             }
         },
         cubes: BEDROOM_SPACE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { season: SEASON_FUTURE }
     },
     {
         unitIndex: 13,
@@ -279,7 +282,7 @@ export default [
             }
         },
         cubes: VAN_NUYS_LOCKERS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { time: TIME_NOON, season: SEASON_WINTER }
     },
     {
         unitIndex: 17,
@@ -323,7 +326,7 @@ export default [
             }
         },
         cubes: VAN_NUYS_QUAD_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { time: TIME_NOON, season: SEASON_WINTER }
     },
     {
         unitIndex: 18,
@@ -357,6 +360,6 @@ export default [
             }
         },
         cubes: VAN_NUYS_HALLWAY_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_WINTER }
+        sky: { time: TIME_AFTERNOON, season: SEASON_WINTER }
     }
 ]

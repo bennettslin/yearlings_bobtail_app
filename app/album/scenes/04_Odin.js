@@ -19,7 +19,8 @@ import {
     OCEAN_FLOOR_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_ANYTIME,
+    TIME_NIGHT,
+    TIME_TWILIGHT,
     SEASON_AUTUMN,
     SEASON_OCEAN
 } from '../../scene/sky/keys'
@@ -111,7 +112,7 @@ export default [
             }
         },
         cubes: TAIWAN_ROOM_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 4,
@@ -135,7 +136,7 @@ export default [
             }
         },
         cubes: TAIWAN_STAIRS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 6,
@@ -166,7 +167,7 @@ export default [
             }
         },
         cubes: TAIWAN_GATE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 9,
@@ -190,7 +191,7 @@ export default [
             }
         },
         cubes: RICKSHAW_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_TWILIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 11,
@@ -217,7 +218,7 @@ export default [
             }
         },
         cubes: SHORE_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_AUTUMN }
+        sky: { time: TIME_TWILIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 14,
@@ -236,7 +237,7 @@ export default [
             }
         },
         cubes: BUOY_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_OCEAN }
+        sky: { season: SEASON_OCEAN }
     },
     {
         unitIndex: 18,
@@ -260,7 +261,7 @@ export default [
             }
         },
         cubes: OCEAN_DEPTHS_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_OCEAN }
+        sky: { season: SEASON_OCEAN }
     },
     {
         unitIndex: 20,
@@ -285,6 +286,6 @@ export default [
             }
         },
         cubes: OCEAN_FLOOR_KEY,
-        sky: { time: TIME_ANYTIME, season: SEASON_OCEAN }
+        sky: { season: SEASON_OCEAN }
     }
 ]

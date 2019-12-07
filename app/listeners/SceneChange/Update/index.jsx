@@ -8,7 +8,7 @@ import { updateSceneStore } from 'flux/scene/action'
 import { getScene } from 'album/api/scenes'
 
 import {
-    TIME_ANYTIME,
+    TIME_STAGE,
     SEASON_STAGE
 } from 'scene/sky/keys'
 
@@ -62,7 +62,7 @@ class SceneChangeUpdateDispatcher extends PureComponent {
             cubes: sceneCubesKey,
             layers: scenePresenceLayers,
             sky: {
-                time: sceneTime = TIME_ANYTIME,
+                time: sceneTime = TIME_STAGE,
                 season: sceneSeason = SEASON_STAGE
             }
 
