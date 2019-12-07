@@ -101,8 +101,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -119,8 +117,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

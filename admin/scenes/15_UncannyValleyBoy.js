@@ -55,8 +55,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -95,8 +93,6 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -133,8 +129,6 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -200,8 +194,6 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -248,8 +240,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

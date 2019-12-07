@@ -34,8 +34,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -48,8 +46,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -86,8 +82,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -124,8 +118,6 @@ export default [
                     }
                 },
                 [WILLY]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -184,8 +176,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    hair: true,
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
