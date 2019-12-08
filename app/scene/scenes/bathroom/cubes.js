@@ -8,8 +8,7 @@ import {
     GROUND_CLEAR_COLOUR as G,
     LINOLEUM_FLOOR_COLOUR as F,
     LINOLEUM_FLOOR_DARK_COLOUR as L,
-    SOFT_WALL_COLOUR as W,
-    FURNITURE_COLOUR as R
+    SOFT_WALL_COLOUR as W
 } from '../../cubes/colours'
 
 import { f, k } from '../../cubes/zIndices'
@@ -32,7 +31,7 @@ const CUBES = {
                 [G],
                 [L, F, L, F, L, F, L, F, L, F, L, F],
                 [F, L, F, L, F, L, F, L, F, L, F, L],
-                [L, F, L, R, R, R, R, F, L, F, L, F],
+                [L, F, L, D, D, D, D, F, L, F, L, F],
                 [F, L, F, L, F, L, F, L, F, L, F, L],
                 [L, F, L, F, L, F, L, F, L, F, L, F]
             ],
@@ -51,7 +50,7 @@ const CUBES = {
                 [G],
                 [G],
                 [G, L, F, L, F, L, F, L, F, L, F, G],
-                [G, F, L, R, R, R, R, F, L, F, L, G],
+                [G, F, L, D, D, D, D, F, L, F, L, G],
                 [G, L, F, L, F, L, F, L, F, L, F, G],
                 [G, F, L, F, L, F, L, F, L, F, L, G]
             ],

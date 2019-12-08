@@ -5106,5 +5106,10 @@ export default [
         taskName: `Assign time and seasons to scenes.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Initial actor svgs just to help with scene placement.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
