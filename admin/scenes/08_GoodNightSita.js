@@ -87,7 +87,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     actor: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,

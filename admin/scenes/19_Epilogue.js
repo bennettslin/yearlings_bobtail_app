@@ -189,7 +189,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

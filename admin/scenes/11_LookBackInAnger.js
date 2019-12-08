@@ -71,7 +71,6 @@ export default [
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -143,7 +142,6 @@ export default [
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

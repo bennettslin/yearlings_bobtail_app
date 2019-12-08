@@ -71,7 +71,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
@@ -92,7 +91,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
@@ -128,7 +126,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
