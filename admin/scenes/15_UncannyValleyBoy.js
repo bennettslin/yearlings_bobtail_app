@@ -46,7 +46,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -81,7 +80,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -114,7 +112,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -157,7 +154,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -216,7 +212,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

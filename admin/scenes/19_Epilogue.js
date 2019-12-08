@@ -43,7 +43,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

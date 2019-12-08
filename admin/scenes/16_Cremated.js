@@ -23,7 +23,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -52,7 +51,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -73,7 +71,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -86,7 +83,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -113,7 +109,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

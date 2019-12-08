@@ -26,7 +26,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -49,7 +48,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -100,7 +98,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -123,7 +120,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -146,7 +142,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
