@@ -99,7 +99,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

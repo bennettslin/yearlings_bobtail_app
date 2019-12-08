@@ -175,7 +175,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

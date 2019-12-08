@@ -67,7 +67,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -124,7 +123,6 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -169,7 +167,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -233,7 +230,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
