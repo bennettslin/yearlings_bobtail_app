@@ -17,3 +17,43 @@ $suffix: __shared;
 @import "./taiwan/style";
 @import "./vehicles/style";
 @import "./wardrobe/style";
+
+.Presence,
+[class$=Line] {
+    fill: none;
+    stroke-width: 1px;
+    stroke: rgba(50, 50, 50, 0.5);
+}
+
+[class$=CreaseLine] {
+    stroke-width: 0.5px;
+}
+
+[class$=EdgeLine] {
+    stroke-width: 0.66px;
+}
+
+[class$=FoldLine] {
+    stroke-width: 0.75px;
+}
+
+// [class$=BorderLine] {
+//     stroke-width: 1px;    
+// }
+
+// [class$=OverlapLine] {
+//     stroke-width: 1px;
+// }
+
+[class$=DisplayLine] {
+    stroke-width: 1.25px;
+}
+
+[class$=LightLine] {
+    stroke: rgba(255, 255, 255, 0.7);
+    stroke-width: 2px;
+}
+
+[class$=Blob] {
+    stroke: none;
+}
