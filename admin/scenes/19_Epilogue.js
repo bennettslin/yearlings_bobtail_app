@@ -166,7 +166,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

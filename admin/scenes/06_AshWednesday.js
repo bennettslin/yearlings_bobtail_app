@@ -31,7 +31,6 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -50,7 +49,6 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -110,7 +108,6 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

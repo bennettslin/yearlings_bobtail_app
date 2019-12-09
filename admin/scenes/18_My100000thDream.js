@@ -65,7 +65,6 @@ export default [
                 },
                 [CATHERINE]: {
                     gopi: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
