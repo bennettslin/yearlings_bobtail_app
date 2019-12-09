@@ -105,7 +105,6 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -131,7 +130,6 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

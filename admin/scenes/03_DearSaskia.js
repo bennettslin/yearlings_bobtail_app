@@ -51,7 +51,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

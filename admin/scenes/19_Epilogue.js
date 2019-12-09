@@ -143,7 +143,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
