@@ -112,7 +112,6 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -139,7 +138,6 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
