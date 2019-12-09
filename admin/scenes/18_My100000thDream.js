@@ -73,7 +73,6 @@ export default [
                 },
                 [MARA]: {
                     gopi: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,

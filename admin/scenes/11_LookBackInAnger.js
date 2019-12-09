@@ -101,7 +101,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -126,7 +125,6 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

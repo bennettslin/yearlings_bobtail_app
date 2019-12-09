@@ -97,7 +97,6 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -136,7 +135,6 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
