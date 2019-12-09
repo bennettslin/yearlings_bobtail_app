@@ -24,7 +24,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
