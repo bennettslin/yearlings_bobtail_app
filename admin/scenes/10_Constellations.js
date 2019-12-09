@@ -25,7 +25,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -56,7 +55,6 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -87,7 +85,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -118,7 +115,6 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -149,7 +145,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

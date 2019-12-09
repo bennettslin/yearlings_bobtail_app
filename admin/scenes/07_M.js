@@ -104,7 +104,6 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -144,7 +143,6 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

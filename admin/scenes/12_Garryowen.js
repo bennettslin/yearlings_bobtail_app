@@ -63,7 +63,6 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -125,7 +124,6 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

@@ -43,7 +43,6 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -121,7 +120,6 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
