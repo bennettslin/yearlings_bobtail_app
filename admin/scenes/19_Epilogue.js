@@ -177,7 +177,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

@@ -88,7 +88,6 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
