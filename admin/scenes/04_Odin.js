@@ -19,7 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -32,7 +31,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -45,7 +43,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -58,7 +55,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -71,7 +67,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -84,7 +79,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -106,7 +100,6 @@ export default [
                     }
                 },
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -119,7 +112,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

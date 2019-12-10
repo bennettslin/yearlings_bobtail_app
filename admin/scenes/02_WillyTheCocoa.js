@@ -65,7 +65,6 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -91,7 +90,6 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -138,7 +136,6 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -158,7 +155,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

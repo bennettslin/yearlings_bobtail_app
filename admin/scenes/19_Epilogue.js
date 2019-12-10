@@ -135,7 +135,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
