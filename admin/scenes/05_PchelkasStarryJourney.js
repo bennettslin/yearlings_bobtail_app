@@ -45,7 +45,6 @@ export default [
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -156,7 +155,6 @@ export default [
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
