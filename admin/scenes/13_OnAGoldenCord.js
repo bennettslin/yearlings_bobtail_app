@@ -99,7 +99,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
