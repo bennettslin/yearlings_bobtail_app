@@ -39,7 +39,6 @@ export default [
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -66,7 +65,6 @@ export default [
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -79,7 +77,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -99,7 +96,6 @@ export default [
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

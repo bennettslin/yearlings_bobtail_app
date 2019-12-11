@@ -92,7 +92,6 @@ export default [
             [ACTOR]: {
                 [SASHA]: {
                     mermaid: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,

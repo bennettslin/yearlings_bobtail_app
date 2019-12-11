@@ -76,7 +76,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -127,7 +126,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

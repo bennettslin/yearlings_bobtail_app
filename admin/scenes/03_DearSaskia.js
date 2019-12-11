@@ -30,7 +30,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
@@ -55,7 +54,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
