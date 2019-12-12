@@ -67,7 +67,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,
