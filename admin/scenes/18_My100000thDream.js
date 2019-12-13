@@ -27,6 +27,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: EL_TORITO
@@ -36,6 +37,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: EL_TORITO
@@ -49,6 +51,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: PAMPAS
@@ -58,6 +61,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: PAMPAS
@@ -66,6 +70,7 @@ export default [
                 [CATHERINE]: {
                     gopi: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: GOPI
@@ -74,6 +79,7 @@ export default [
                 [MARA]: {
                     gopi: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: GOPI
@@ -84,6 +90,7 @@ export default [
                         hairIllustration: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: GOPI
@@ -97,6 +104,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: GETTING_DARK
@@ -106,6 +114,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: GETTING_DARK
@@ -119,6 +128,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CLIFF
@@ -128,6 +138,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CLIFF
@@ -141,6 +152,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: FINAL_DREAM
@@ -150,6 +162,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: FINAL_DREAM
@@ -158,6 +171,7 @@ export default [
                 [AMY]: {
                     doctor: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: DOCTOR

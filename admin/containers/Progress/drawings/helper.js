@@ -11,7 +11,8 @@ const
     HAIR_ILLUSTRATION_TIME = 0.5,
     HANDS_TIME = 0.15,
     HEAD_TIME = 0.25,
-    FACE_TIME = 0.5,
+    EYEBROW_TIME = 0.05,
+    FACE_TIME = 0.45,
     COMPOSITE_TIME = 0.25,
 
     // This works out to 6.25 hours per drawing.
@@ -21,6 +22,7 @@ const
         HAIR_ILLUSTRATION_TIME +
         HANDS_TIME +
         HEAD_TIME +
+        EYEBROW_TIME +
         FACE_TIME +
         COMPOSITE_TIME
 
@@ -65,6 +67,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     hairIllustration,
                     hands,
                     head,
+                    eyebrow,
                     face,
                     composite,
                     instance
@@ -78,6 +81,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 hairIllustration,
                 hands,
                 head,
+                eyebrow,
                 face,
                 composite,
                 instance
@@ -114,6 +118,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 hairIllustration,
                 hands,
                 head,
+                eyebrow,
                 face,
                 composite,
                 instance,
@@ -138,6 +143,9 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!head) {
                 workedHours += HEAD_TIME
             }
+            if (!eyebrow) {
+                workedHours += EYEBROW_TIME
+            }
             if (!face) {
                 workedHours += FACE_TIME
             }
@@ -149,8 +157,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !head,
-                halfDoneForNow = !head
+            const doneForNow = !eyebrow,
+                halfDoneForNow = !eyebrow
 
             if (!doneForNow) {
                 rolesTodoCount++

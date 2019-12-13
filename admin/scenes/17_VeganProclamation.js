@@ -33,12 +33,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: PROTECTIVE_CONCERNED
@@ -48,6 +50,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: PROTECTIVE_CONCERNED
@@ -61,6 +64,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: SHOW_ANNOYED
@@ -69,12 +73,14 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: GREETING
                 },
                 [TRISTAN]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: GREETING
@@ -82,6 +88,7 @@ export default [
                 [NESTOR]: {
                     faceRevision: true,
                     head: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: GREETING
@@ -94,6 +101,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: ALLEY
@@ -106,12 +114,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CARESS
@@ -121,6 +131,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CARESS
@@ -135,6 +146,7 @@ export default [
                 [KHARI]: {
                     reflection: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CARESS_REFLECTION
@@ -145,6 +157,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CARESS_REFLECTION
@@ -158,6 +171,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: DEMONSTRATION
@@ -165,6 +179,7 @@ export default [
                 [AMY]: {
                     protester: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: PROTESTER
@@ -173,6 +188,7 @@ export default [
                 [STEPHANIE]: {
                     protester: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: PROTESTER

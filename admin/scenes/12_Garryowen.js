@@ -30,6 +30,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: BRUSH_OFF
@@ -39,6 +40,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: BRUSH_OFF
@@ -52,18 +54,21 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: PUNCHING
                 },
                 [ANA]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CHUCKLING
@@ -71,6 +76,7 @@ export default [
                 [NESTOR]: {
                     faceRevision: true,
                     head: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: INJURED
@@ -83,6 +89,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CELIBATE_FREEZING
@@ -92,6 +99,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CELIBATE_FREEZING
@@ -105,6 +113,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: GREETING
@@ -113,18 +122,21 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: NOOGIE
                 },
                 [ANA]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: SMIRKING
@@ -137,6 +149,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: LEAVING_CRUMBLED
@@ -146,6 +159,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: LEAVING_CRUMBLED

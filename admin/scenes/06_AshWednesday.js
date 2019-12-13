@@ -26,12 +26,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: WEEPING
@@ -44,12 +46,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: QUIPPING
@@ -62,6 +66,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CATHOLIC_PENSIVE
@@ -74,6 +79,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CATHOLIC_IDEA
@@ -89,6 +95,7 @@ export default [
                 [AMY]: {
                     smoker: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: SMOKER
@@ -102,12 +109,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: PIOUS
                 },
                 [CATHERINE]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: PUZZLED

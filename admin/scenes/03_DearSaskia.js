@@ -17,6 +17,7 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: PANICKED
@@ -24,6 +25,7 @@ export default [
                 [BRAD]: {
                     jewishBoy: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CHARMED_SCHOOLBUS
@@ -31,6 +33,7 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CHARMED_SCHOOLBUS
@@ -43,24 +46,28 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: FEIGNING_FEAR

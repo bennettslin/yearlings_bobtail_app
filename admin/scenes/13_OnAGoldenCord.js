@@ -31,6 +31,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CORD_SIDE
@@ -43,6 +44,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: AWKWARD_CONSOLATION
@@ -52,6 +54,7 @@ export default [
                         faceRevision: true,
                         head: true,
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: AWKWARD_CONSOLATION
@@ -65,6 +68,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CORD_REAR
@@ -72,6 +76,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: BENNETT_DEFIANT
@@ -85,6 +90,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: HORSING
@@ -92,6 +98,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: HORSING
@@ -100,6 +107,7 @@ export default [
                 [AMY]: {
                     officer: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: OFFICER
@@ -119,6 +127,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: DRYING_TEARS
@@ -126,6 +135,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: DRYING_TEARS
@@ -134,6 +144,7 @@ export default [
                 [ESTHER]: {
                     youngGirl: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: YOUNG_CHILD
@@ -142,6 +153,7 @@ export default [
                 [ANITA]: {
                     youngGirl: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: YOUNG_CHILD
@@ -150,6 +162,7 @@ export default [
                 [YOUNG_BENNETT]: {
                     youngBoy: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: YOUNG_CHILD
@@ -158,6 +171,7 @@ export default [
                 [WILLY]: {
                     crossingGuard: {
                         hands: true,
+                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CROSSING_GUARD
