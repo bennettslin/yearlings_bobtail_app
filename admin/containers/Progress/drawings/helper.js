@@ -9,10 +9,10 @@ const
     BASELINE_TIME = 4.1,
     FACE_REVISION_TIME = 0.5,
     HAIR_ILLUSTRATION_TIME = 0.5,
-    HANDS_TIME = 0.15,
+    HANDS_TIME = 0.25,
     HEAD_TIME = 0.25,
     EYEBROW_TIME = 0.05,
-    FACE_TIME = 0.45,
+    FACE_TIME = 0.35,
     COMPOSITE_TIME = 0.25,
 
     // This works out to 6.25 hours per drawing.
