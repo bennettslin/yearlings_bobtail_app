@@ -81,7 +81,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    head: true,
                     hands: true,
                     face: true,
                     composite: true,

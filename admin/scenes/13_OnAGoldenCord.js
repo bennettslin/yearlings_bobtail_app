@@ -133,7 +133,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,

@@ -59,7 +59,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
@@ -218,7 +217,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        head: true,
                         hands: true,
                         face: true,
                         composite: true,
