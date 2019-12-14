@@ -69,7 +69,6 @@ export default [
                 },
                 [ANITA]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `3'9"`,
