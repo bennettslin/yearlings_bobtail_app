@@ -137,7 +137,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `4'1"`,
@@ -145,7 +144,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `4'6"`,
