@@ -182,7 +182,6 @@ export default [
                 },
                 [AMY]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `5'6"`,

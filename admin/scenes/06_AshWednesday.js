@@ -89,7 +89,6 @@ export default [
                 [AMY]: {
                     smoker: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: SMOKER

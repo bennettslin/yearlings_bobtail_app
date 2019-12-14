@@ -163,7 +163,6 @@ export default [
                 [AMY]: {
                     doctor: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: DOCTOR
