@@ -87,7 +87,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: DOUBLE_ALBERT
