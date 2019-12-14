@@ -11,8 +11,8 @@ const
     HAIR_ILLUSTRATION_TIME = 0.5,
     HANDS_TIME = 0.25,
     HEAD_TIME = 0.25,
-    EYEBROW_TIME = 0.05,
-    FACE_TIME = 0.35,
+    EYEBROW_TIME = 0.04,
+    FACE_TIME = 0.36,
     COMPOSITE_TIME = 0.25,
 
     // This works out to 6.25 hours per drawing.
