@@ -31,7 +31,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CHARMED_SCHOOLBUS
@@ -56,7 +55,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: INDIGNANT
