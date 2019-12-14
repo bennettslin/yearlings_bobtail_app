@@ -179,7 +179,6 @@ export default [
                 [STEPHANIE]: {
                     protester: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: PROTESTER

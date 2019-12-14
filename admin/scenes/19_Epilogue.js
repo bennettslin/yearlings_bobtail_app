@@ -191,7 +191,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,

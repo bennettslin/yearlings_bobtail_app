@@ -91,7 +91,6 @@ export default [
                 [STEPHANIE]: {
                     actor: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: FLAPPER
