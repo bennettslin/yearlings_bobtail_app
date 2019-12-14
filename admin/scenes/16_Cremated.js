@@ -32,7 +32,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: PERFUMING
@@ -47,7 +46,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: COWGIRL
@@ -68,7 +66,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: BLOWJOB
@@ -101,7 +98,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: TENNIS
@@ -122,7 +118,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: REVERSING
