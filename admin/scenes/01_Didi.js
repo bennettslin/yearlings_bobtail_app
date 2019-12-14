@@ -26,7 +26,6 @@ export default [
             [ACTOR]: {
                 [ESTHER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CURIOUS
@@ -57,7 +56,6 @@ export default [
                 },
                 [ESTHER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: SNICKERING

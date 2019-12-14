@@ -83,7 +83,6 @@ export default [
                 },
                 [ESTHER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `3'10"`,
