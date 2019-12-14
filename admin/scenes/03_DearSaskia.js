@@ -63,7 +63,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: FEIGNING_FEAR
