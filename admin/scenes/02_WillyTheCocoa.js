@@ -80,7 +80,6 @@ export default [
             [ACTOR]: {
                 [FATHER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: ROARING
