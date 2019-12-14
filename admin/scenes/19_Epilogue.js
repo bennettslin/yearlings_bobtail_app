@@ -203,7 +203,6 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `5'11"`,
