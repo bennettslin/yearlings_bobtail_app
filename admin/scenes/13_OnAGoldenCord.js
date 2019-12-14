@@ -157,7 +157,6 @@ export default [
                 [YOUNG_BENNETT]: {
                     youngBoy: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: YOUNG_CHILD
