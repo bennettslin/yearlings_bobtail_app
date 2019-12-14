@@ -171,7 +171,6 @@ export default [
                 [WILLY]: {
                     crossingGuard: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: CROSSING_GUARD
