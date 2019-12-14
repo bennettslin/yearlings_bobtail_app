@@ -20,24 +20,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: ABBEY_ROAD
@@ -50,24 +54,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: WALGREENS
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: WALGREENS
                 },
                 [HOWIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: WALGREENS
                 },
                 [TOMER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: WALGREENS
@@ -80,24 +88,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STEAM_TUNNEL
@@ -110,24 +122,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: CEMETERY
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: CEMETERY
                 },
                 [HOWIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: CEMETERY
                 },
                 [TOMER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: CEMETERY
@@ -140,24 +156,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STATION_WAGON
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: STATION_WAGON
@@ -170,12 +190,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: ATTIC
                 },
                 [HOWIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: ATTIC

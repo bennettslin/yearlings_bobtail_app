@@ -42,6 +42,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: PONDERING
@@ -54,6 +55,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: RUBIKS_CUBE
@@ -66,6 +68,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: COUCH_READING
@@ -73,6 +76,7 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
+                        nose: true,
                         face: true,
                         composite: true,
                         instance: BENNETT_KEYBOARD
@@ -86,24 +90,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: DISTRACTED
                 },
                 [JACOB]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: FLIRTING
                 },
                 [MARA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: FLIRTING
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: SQUATTING
@@ -111,6 +119,7 @@ export default [
                 [TOMER]: {
                     shane: {
                         hands: true,
+                        nose: true,
                         face: true,
                         composite: true,
                         instance: SHANE_BUYING
@@ -124,24 +133,28 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: EATING
                 },
                 [JACOB]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: EATING
                 },
                 [MARA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: EATING
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: EATING
@@ -154,6 +167,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: HOPELESSLY_CRUSHED
@@ -164,6 +178,7 @@ export default [
                         hairIllustration: true,
                         head: true,
                         hands: true,
+                        nose: true,
                         face: true,
                         composite: true,
                         instance: INFANT_CURIOUS
@@ -177,6 +192,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: WONDERING_BABY
@@ -187,6 +203,7 @@ export default [
                         hairIllustration: true,
                         head: true,
                         hands: true,
+                        nose: true,
                         face: true,
                         composite: true,
                         instance: INFANT_NURSING
@@ -196,6 +213,7 @@ export default [
                     maskedUsher: {
                         faceRevision: true,
                         hands: true,
+                        nose: true,
                         face: true,
                         composite: true,
                         instance: USHER_WAITING
@@ -209,6 +227,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     instance: MERRILY_DERANGED
@@ -216,6 +235,7 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         hands: true,
+                        nose: true,
                         face: true,
                         composite: true,
                         instance: USHER_LOOKING

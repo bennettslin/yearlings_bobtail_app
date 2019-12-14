@@ -36,6 +36,7 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
@@ -43,6 +44,7 @@ export default [
                 },
                 [BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
@@ -54,6 +56,7 @@ export default [
                         head: true,
                         hands: true,
                         eyebrow: true,
+                        nose: true,
                         face: true,
                         composite: true,
                         realHeight: `4'9"`,
@@ -62,6 +65,7 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `3'5"`,
@@ -69,6 +73,7 @@ export default [
                 },
                 [ANITA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `3'9"`,
@@ -76,6 +81,7 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `3'6"`,
@@ -83,6 +89,7 @@ export default [
                 },
                 [ESTHER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `3'10"`,
@@ -90,6 +97,7 @@ export default [
                 },
                 [WILLY]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'3"`,
@@ -97,6 +105,7 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'0"`,
@@ -104,6 +113,7 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
@@ -111,6 +121,7 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `6'0"`,
@@ -118,6 +129,7 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'6"`,
@@ -125,6 +137,7 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'1"`,
@@ -132,6 +145,7 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'1"`,
@@ -139,6 +153,7 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'6"`,
@@ -146,6 +161,7 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'7"`,
@@ -153,6 +169,7 @@ export default [
                 },
                 [TRISTAN]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'8"`,
@@ -160,6 +177,7 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'11"`,
@@ -167,6 +185,7 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'10"`,
@@ -174,6 +193,7 @@ export default [
                 },
                 [AMY]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'6"`,
@@ -181,6 +201,7 @@ export default [
                 },
                 [STEPHANIE]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
@@ -188,6 +209,7 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'11"`,
@@ -195,6 +217,7 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'0"`,
@@ -202,6 +225,7 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'8"`,
@@ -211,6 +235,7 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'1"`,
@@ -218,6 +243,7 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'9"`,
@@ -227,6 +253,7 @@ export default [
                     faceRevision: true,
                     head: true,
                     eyebrow: true,
+                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'7"`,
