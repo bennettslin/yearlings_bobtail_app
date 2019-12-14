@@ -65,7 +65,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CHUCKLING
@@ -129,7 +128,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: SMIRKING
