@@ -119,7 +119,6 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `6'0"`,
