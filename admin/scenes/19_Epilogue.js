@@ -204,7 +204,6 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     realHeight: `5'0"`,
