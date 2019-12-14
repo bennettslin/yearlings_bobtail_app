@@ -123,7 +123,6 @@ export default [
                 [TOMER]: {
                     gangbanger: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: GANGBANGER

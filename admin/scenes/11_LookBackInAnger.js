@@ -53,7 +53,6 @@ export default [
                 [TOMER]: {
                     shane: {
                         hands: true,
-                        eyebrow: true,
                         face: true,
                         composite: true,
                         instance: SHANE_SPILLING

@@ -41,7 +41,6 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: ABBEY_ROAD
@@ -75,7 +74,6 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: WALGREENS
@@ -109,7 +107,6 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: STEAM_TUNNEL
@@ -143,7 +140,6 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: CEMETERY
@@ -177,7 +173,6 @@ export default [
                 },
                 [TOMER]: {
                     hands: true,
-                    eyebrow: true,
                     face: true,
                     composite: true,
                     instance: STATION_WAGON

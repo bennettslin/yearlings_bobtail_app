@@ -114,10 +114,14 @@ export default [
                     }
                 },
                 [NESTOR]: {
-                    instance: OFFICER
+                    officer: {
+                        instance: OFFICER
+                    }
                 },
                 [TOMER]: {
-                    instance: OFFICER
+                    officer: {
+                        instance: OFFICER
+                    }
                 }
             }
         }
