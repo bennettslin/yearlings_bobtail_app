@@ -30,7 +30,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: BRUSH_OFF
@@ -55,7 +54,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: DROPPING_MEATS
@@ -90,7 +88,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: CELIBATE_FREEZING
@@ -115,7 +112,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: GREETING
@@ -150,7 +146,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: LEAVING_CRUMBLED

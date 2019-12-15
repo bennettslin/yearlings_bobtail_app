@@ -38,7 +38,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: PERFORMING
@@ -86,7 +85,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: FLIRTING
@@ -119,7 +117,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: SIDELONG_HESITANCE
@@ -166,7 +163,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: REMOVING_SHOES
@@ -192,7 +188,6 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         hands: true,
-                        nose: true,
                         face: true,
                         composite: true,
                         instance: SHOES_REFLECTION
