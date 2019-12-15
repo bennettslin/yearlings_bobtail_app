@@ -131,7 +131,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'1"`,
