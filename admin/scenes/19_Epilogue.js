@@ -170,7 +170,6 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'11"`,
