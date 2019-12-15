@@ -193,7 +193,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: JOKING_LAUGHING
