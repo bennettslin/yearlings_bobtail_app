@@ -146,7 +146,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'6"`,
