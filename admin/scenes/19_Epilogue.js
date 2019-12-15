@@ -113,7 +113,6 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'4"`,
