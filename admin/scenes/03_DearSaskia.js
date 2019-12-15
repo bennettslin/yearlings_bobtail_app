@@ -17,7 +17,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: PANICKED
@@ -46,7 +45,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: TYING_TETHER

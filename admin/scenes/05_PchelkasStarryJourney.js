@@ -40,7 +40,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: BLISSFUL_GUILTY
@@ -60,7 +59,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: FEIGNING_SICK
@@ -73,7 +71,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: ASLEEP
@@ -86,7 +83,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: SHAKEN
@@ -99,7 +95,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: STOIC
@@ -126,7 +121,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: WISTFUL
@@ -162,7 +156,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: SHEEPISH

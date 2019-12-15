@@ -139,7 +139,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `4'1"`,

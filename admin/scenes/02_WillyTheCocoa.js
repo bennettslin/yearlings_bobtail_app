@@ -68,7 +68,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: CAUTIOUS
@@ -94,7 +93,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: ENRAGED
@@ -142,7 +140,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: FEARFUL
@@ -162,7 +159,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
