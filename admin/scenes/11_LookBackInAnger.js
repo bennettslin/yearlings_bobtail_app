@@ -65,7 +65,6 @@ export default [
                 },
                 [AMY]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: SQUEEZING
@@ -90,7 +89,6 @@ export default [
                 },
                 [AMY]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: FLIRTING
@@ -136,7 +134,6 @@ export default [
                 },
                 [AMY]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: MINGLING

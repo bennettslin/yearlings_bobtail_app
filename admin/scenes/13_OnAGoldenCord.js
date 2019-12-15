@@ -102,7 +102,6 @@ export default [
                 [AMY]: {
                     officer: {
                         hands: true,
-                        nose: true,
                         face: true,
                         composite: true,
                         instance: OFFICER
