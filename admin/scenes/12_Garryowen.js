@@ -66,7 +66,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: CHUCKLING
@@ -133,7 +132,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: SMIRKING

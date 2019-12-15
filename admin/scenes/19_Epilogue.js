@@ -213,7 +213,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'8"`,

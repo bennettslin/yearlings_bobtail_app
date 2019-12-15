@@ -105,7 +105,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: SQUATTING
@@ -145,7 +144,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: EATING
