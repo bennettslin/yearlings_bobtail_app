@@ -81,7 +81,6 @@ export default [
                 },
                 [TRISTAN]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: GREETING
