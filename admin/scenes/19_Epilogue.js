@@ -79,7 +79,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `3'6"`,
