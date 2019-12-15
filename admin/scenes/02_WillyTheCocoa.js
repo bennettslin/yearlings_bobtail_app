@@ -55,7 +55,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: STOOPING
@@ -137,7 +136,6 @@ export default [
             [ACTOR]: {
                 [MOTHER]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: COMFORTING

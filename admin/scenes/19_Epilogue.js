@@ -103,7 +103,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'0"`,
