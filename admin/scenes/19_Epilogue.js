@@ -221,7 +221,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'1"`,
