@@ -33,7 +33,6 @@ export default [
                 },
                 [ANITA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: EXASPERATED
@@ -52,7 +51,6 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: CONCERNED
@@ -90,7 +88,6 @@ export default [
             [ACTOR]: {
                 [ANITA]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     instance: CHEERING
