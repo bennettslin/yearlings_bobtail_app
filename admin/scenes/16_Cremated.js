@@ -25,7 +25,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: REMOVING_PANTS
                 },
@@ -34,7 +34,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: PERFUMING
                 }
@@ -49,14 +49,14 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: COWGIRL
                 },
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: COWGIRL
                 }
@@ -71,14 +71,14 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: BLOWJOB
                 }
@@ -91,7 +91,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: INFIRM
                 }
@@ -106,7 +106,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: TENNIS
                 }
@@ -119,7 +119,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: DISPOSING_CONDOM
                 },
@@ -128,7 +128,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: REVERSING
                 }

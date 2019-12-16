@@ -27,14 +27,14 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: WEEPING
                 }
@@ -47,14 +47,14 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: QUIPPING
                 }
@@ -67,7 +67,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: CATHOLIC_PENSIVE
                 }
@@ -80,14 +80,14 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: CATHOLIC_IDEA
                 },
                 [WADE]: {
                     catholic: {
                         hands: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: CATHOLIC_GUY
                     }
@@ -96,7 +96,7 @@ export default [
                     smoker: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: SMOKER
                     }
@@ -110,14 +110,14 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: PIOUS
                 },
                 [CATHERINE]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: PUZZLED
                 }

@@ -35,7 +35,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: DISHROOM_READING
                 }
@@ -48,7 +48,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: DISHROOM_LANCET
                 },
@@ -60,7 +60,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: DISHROOM_LANCET
                     }
@@ -74,7 +74,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: MOP_SOPPED
                 },
@@ -85,7 +85,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: JOGGER
                     }
@@ -99,7 +99,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: GATE_CODE
                 },
@@ -111,7 +111,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GATE_CODE
                     }
@@ -125,7 +125,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: GINGERBREAD_PRISON
                 },
@@ -137,7 +137,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GINGERBREAD_PRISON
                     }
@@ -151,7 +151,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: RUMPLED_LINENS
                 },
@@ -163,7 +163,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: RUMPLED_LINENS
                     }
@@ -177,7 +177,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: WAITING_ROOM_ASLEEP
                 }
@@ -190,7 +190,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: CHEEK_UNVEILED
                 },
@@ -202,7 +202,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: CHEEK_UNVEILED
                     }
@@ -216,7 +216,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: HARD_ON
                 },
@@ -228,7 +228,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: HARD_ON
                     }
@@ -243,7 +243,7 @@ export default [
                     reflection: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: HARD_ON_REFLECTION
                     }
@@ -256,7 +256,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: HARD_ON_REFLECTION
                     }
@@ -270,7 +270,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: MISSIONARY
                 },
@@ -282,7 +282,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: MISSIONARY
                     }
@@ -297,7 +297,7 @@ export default [
                     reflection: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: MISSIONARY_REFLECTION
                     }
@@ -310,7 +310,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: MISSIONARY_REFLECTION
                     }
@@ -324,7 +324,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: AFTERGLOW
                 },
@@ -336,7 +336,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: AFTERGLOW
                     }
@@ -351,7 +351,7 @@ export default [
                     reflection: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: AFTERGLOW_REFLECTION
                     }
@@ -364,7 +364,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: AFTERGLOW_REFLECTION
                     }

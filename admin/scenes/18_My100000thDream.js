@@ -28,7 +28,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: EL_TORITO
                 },
@@ -40,7 +40,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: EL_TORITO
                     }
@@ -54,7 +54,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: PAMPAS
                 },
@@ -66,7 +66,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: PAMPAS
                     }
@@ -75,7 +75,7 @@ export default [
                     gopi: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GOPI
                     }
@@ -84,7 +84,7 @@ export default [
                     gopi: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GOPI
                     }
@@ -95,7 +95,7 @@ export default [
                         head: true,
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GOPI
                     }
@@ -109,7 +109,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: GETTING_DARK
                 },
@@ -121,7 +121,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GETTING_DARK
                     }
@@ -135,7 +135,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: CLIFF
                 },
@@ -147,7 +147,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: CLIFF
                     }
@@ -161,7 +161,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: FINAL_DREAM
                 },
@@ -173,7 +173,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: FINAL_DREAM
                     }
@@ -182,7 +182,7 @@ export default [
                     doctor: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: DOCTOR
                     }

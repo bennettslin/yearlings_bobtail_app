@@ -14,7 +14,7 @@ const
     EYEBROW_TIME = 0.04,
     NOSE_TIME = 0.06,
     MOUTH_TIME = 0.1,
-    FACE_TIME = 0.2,
+    EYES_TIME = 0.2,
     COMPOSITE_TIME = 0.25,
 
     // This works out to 6.25 hours per drawing.
@@ -27,7 +27,7 @@ const
         EYEBROW_TIME +
         NOSE_TIME +
         MOUTH_TIME +
-        FACE_TIME +
+        EYES_TIME +
         COMPOSITE_TIME
 
 export const initialiseDrawings = (drawings, songIndex) => {
@@ -74,7 +74,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     eyebrow,
                     nose,
                     mouth,
-                    face,
+                    eyes,
                     composite,
                     instance
                 } = instanceName
@@ -90,7 +90,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 eyebrow,
                 nose,
                 mouth,
-                face,
+                eyes,
                 composite,
                 instance
             })
@@ -129,7 +129,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 eyebrow,
                 nose,
                 mouth,
-                face,
+                eyes,
                 composite,
                 instance,
                 character
@@ -162,8 +162,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!mouth) {
                 workedHours += MOUTH_TIME
             }
-            if (!face) {
-                workedHours += FACE_TIME
+            if (!eyes) {
+                workedHours += EYES_TIME
             }
             if (!composite) {
                 workedHours += COMPOSITE_TIME

@@ -36,7 +36,7 @@ export default [
                 [WILLY]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: COLLECTING
                 }
@@ -49,28 +49,28 @@ export default [
                 [WILLY]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: DUCKING
                 },
                 [MOTHER]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: CAUTIOUS
                 }
@@ -83,21 +83,21 @@ export default [
                 [FATHER]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: ENRAGED
                 }
@@ -111,7 +111,7 @@ export default [
                     gangbanger: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GANGBANGER
                     }
@@ -119,7 +119,7 @@ export default [
                 [WILLY]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: GANGBANGER
                 },
@@ -127,7 +127,7 @@ export default [
                     gangbanger: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: GANGBANGER
                     }
@@ -141,14 +141,14 @@ export default [
                 [MOTHER]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: FEARFUL
                 }
@@ -161,21 +161,21 @@ export default [
                 [CHRISTOPHER]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 }

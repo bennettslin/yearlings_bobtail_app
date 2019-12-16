@@ -39,14 +39,14 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: PERFORMING
                 },
                 [ANA]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: PERFORMING
                 },
@@ -54,28 +54,28 @@ export default [
                     shane: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: SHANE_SPILLING
                     }
                 },
                 [WADE]: {
                     hands: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: WATCHING
                 },
                 [AMY]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: SQUEEZING
                 }
@@ -88,28 +88,28 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: FLIRTING
                 },
                 [AMY]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: FLIRTING
                 },
                 [JACOB]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: CARRYING
                 },
                 [MARA]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: CARRYING
                 }
@@ -122,41 +122,41 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: WAITING
                 },
                 [MARA]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: WAITING
                 },
                 [AMY]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: MINGLING
                 },
                 [WADE]: {
                     hands: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: MINGLING
                 }
@@ -169,7 +169,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     mouth: true,
-                    face: true,
+                    eyes: true,
                     composite: true,
                     instance: REMOVING_SHOES
                 },
@@ -181,7 +181,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: ASLEEP_REACHING
                     }
@@ -196,7 +196,7 @@ export default [
                     reflection: {
                         hands: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: SHOES_REFLECTION
                     }
@@ -209,7 +209,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
-                        face: true,
+                        eyes: true,
                         composite: true,
                         instance: REACHING_REFLECTION
                     }
