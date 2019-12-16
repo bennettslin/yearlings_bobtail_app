@@ -91,7 +91,6 @@ export default [
                 },
                 [WILLY]: {
                     hands: true,
-                    nose: true,
                     face: true,
                     composite: true,
                     realHeight: `5'3"`,
