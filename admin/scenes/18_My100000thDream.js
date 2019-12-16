@@ -27,6 +27,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: EL_TORITO
@@ -38,6 +39,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: EL_TORITO
@@ -51,6 +53,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: PAMPAS
@@ -62,6 +65,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: PAMPAS
@@ -70,6 +74,7 @@ export default [
                 [CATHERINE]: {
                     gopi: {
                         hands: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: GOPI
@@ -78,6 +83,7 @@ export default [
                 [MARA]: {
                     gopi: {
                         hands: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: GOPI
@@ -88,6 +94,7 @@ export default [
                         hairIllustration: true,
                         head: true,
                         hands: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: GOPI
@@ -101,6 +108,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: GETTING_DARK
@@ -112,6 +120,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: GETTING_DARK
@@ -125,6 +134,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: CLIFF
@@ -136,6 +146,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: CLIFF
@@ -149,6 +160,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: FINAL_DREAM
@@ -160,6 +172,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: FINAL_DREAM
@@ -168,6 +181,7 @@ export default [
                 [AMY]: {
                     doctor: {
                         hands: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: DOCTOR

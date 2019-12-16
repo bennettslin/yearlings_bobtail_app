@@ -21,6 +21,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: DATE_ENDING
@@ -32,6 +33,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: DATE_ENDING
@@ -45,6 +47,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: MUSEUM
@@ -56,6 +59,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: MUSEUM
@@ -69,6 +73,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: BACKSTAGE
@@ -80,6 +85,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: BACKSTAGE
@@ -87,6 +93,7 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: DOUBLE_ALBERT
@@ -94,6 +101,7 @@ export default [
                 [STEPHANIE]: {
                     actor: {
                         hands: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: FLAPPER
@@ -107,6 +115,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: GO_KARTS
@@ -118,6 +127,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: GO_KARTS
@@ -131,6 +141,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: DATE_ENDED
@@ -142,6 +153,7 @@ export default [
                         hands: true,
                         eyebrow: true,
                         nose: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: DATE_ENDED

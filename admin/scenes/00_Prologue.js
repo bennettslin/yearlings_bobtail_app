@@ -8,6 +8,7 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: PROLOGUE

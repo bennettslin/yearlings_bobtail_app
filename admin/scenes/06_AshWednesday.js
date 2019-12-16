@@ -26,12 +26,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: WEEPING
@@ -44,12 +46,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: QUIPPING
@@ -62,6 +66,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: CATHOLIC_PENSIVE
@@ -74,6 +79,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: CATHOLIC_IDEA
@@ -81,6 +87,7 @@ export default [
                 [WADE]: {
                     catholic: {
                         hands: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: CATHOLIC_GUY
@@ -89,6 +96,7 @@ export default [
                 [AMY]: {
                     smoker: {
                         hands: true,
+                        mouth: true,
                         face: true,
                         composite: true,
                         instance: SMOKER
@@ -102,12 +110,14 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: PIOUS
                 },
                 [CATHERINE]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: PUZZLED

@@ -24,6 +24,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: REMOVING_PANTS
@@ -32,6 +33,7 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: PERFUMING
@@ -46,12 +48,14 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: COWGIRL
                 },
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: COWGIRL
@@ -66,12 +70,14 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: BLOWJOB
@@ -84,6 +90,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: INFIRM
@@ -98,6 +105,7 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: TENNIS
@@ -110,6 +118,7 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: DISPOSING_CONDOM
@@ -118,6 +127,7 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
+                    mouth: true,
                     face: true,
                     composite: true,
                     instance: REVERSING
