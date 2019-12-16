@@ -186,7 +186,6 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
-                    mouth: true,
                     face: true,
                     composite: true,
                     realHeight: `5'10"`,

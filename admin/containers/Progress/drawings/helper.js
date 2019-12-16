@@ -7,7 +7,7 @@ import { ACTOR } from 'constants/scene'
 const
     // The time spent thus far per drawing.
     BASELINE_TIME = 4.1,
-    FACE_REVISION_TIME = 0.5,
+    FACE_REVISION_TIME = 0.75,
     HAIR_ILLUSTRATION_TIME = 0.5,
     HANDS_TIME = 0.25,
     HEAD_TIME = 0.25,

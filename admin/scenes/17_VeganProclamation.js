@@ -205,7 +205,6 @@ export default [
                 [WADE]: {
                     protester: {
                         hands: true,
-                        mouth: true,
                         face: true,
                         composite: true,
                         instance: PROTESTER
