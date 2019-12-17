@@ -55,7 +55,6 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: ACCUSATORY
@@ -91,7 +90,6 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: PAST
@@ -125,7 +123,6 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: PRESENT
@@ -186,7 +183,6 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: FUTURE
@@ -234,7 +230,6 @@ export default [
                 },
                 [FATHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: REELING
