@@ -34,7 +34,6 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: ABBEY_ROAD
@@ -67,7 +66,6 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: WALGREENS
@@ -100,7 +98,6 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: STEAM_TUNNEL
@@ -133,7 +130,6 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: CEMETERY
@@ -166,7 +162,6 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: STATION_WAGON
@@ -192,7 +187,6 @@ export default [
                 },
                 [HOWIE]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: ATTIC
