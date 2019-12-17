@@ -40,7 +40,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: PROTECTIVE_CONCERNED
@@ -124,7 +123,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: CARESS
@@ -151,7 +149,6 @@ export default [
                 [KHARI]: {
                     reflection: {
                         hands: true,
-                        mouth: true,
                         eyes: true,
                         composite: true,
                         instance: CARESS_REFLECTION

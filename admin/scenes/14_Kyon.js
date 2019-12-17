@@ -94,7 +94,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: ARRIVED
@@ -120,7 +119,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: JUDGMENTAL
@@ -146,7 +144,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: CONCERNED

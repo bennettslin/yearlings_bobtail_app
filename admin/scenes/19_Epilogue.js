@@ -239,7 +239,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     realHeight: `5'9"`,
