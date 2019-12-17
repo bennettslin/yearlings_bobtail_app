@@ -63,7 +63,6 @@ export default [
                 },
                 [TRISTAN]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: PUNCHING
@@ -135,7 +134,6 @@ export default [
                 },
                 [TRISTAN]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: NOOGIE
