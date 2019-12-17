@@ -100,7 +100,6 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: CARRYING
