@@ -35,7 +35,6 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: COLLECTING
@@ -48,7 +47,6 @@ export default [
             [ACTOR]: {
                 [WILLY]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: DUCKING
@@ -114,7 +112,6 @@ export default [
                 },
                 [WILLY]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: GANGBANGER
@@ -167,7 +164,6 @@ export default [
                 },
                 [WILLY]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
