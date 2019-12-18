@@ -21,7 +21,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: DATE_ENDING
@@ -47,7 +46,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: MUSEUM
@@ -73,7 +71,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: BACKSTAGE
@@ -114,7 +111,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: GO_KARTS
@@ -140,7 +136,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: DATE_ENDED

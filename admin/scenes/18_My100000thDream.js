@@ -27,7 +27,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: EL_TORITO
@@ -53,7 +52,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: PAMPAS
@@ -108,7 +106,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: GETTING_DARK
@@ -134,7 +131,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: CLIFF
@@ -160,7 +156,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: FINAL_DREAM

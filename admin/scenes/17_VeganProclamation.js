@@ -33,7 +33,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: CAMPUS_ASHAMED
@@ -65,7 +64,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: SHOW_ANNOYED
@@ -103,7 +101,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: ALLEY
@@ -116,7 +113,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: BROKEN_HEARTED
@@ -175,7 +171,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: DEMONSTRATION
