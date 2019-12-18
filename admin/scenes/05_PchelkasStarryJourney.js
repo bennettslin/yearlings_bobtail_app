@@ -113,7 +113,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: THROWING
@@ -140,7 +139,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: NOODLING

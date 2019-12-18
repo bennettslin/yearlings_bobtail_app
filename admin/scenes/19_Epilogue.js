@@ -157,7 +157,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     realHeight: `4'7"`,
