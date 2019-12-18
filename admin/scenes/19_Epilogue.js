@@ -64,7 +64,6 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     realHeight: `3'5"`,

@@ -46,7 +46,6 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: BLISSFUL_GUILTY
@@ -158,7 +157,6 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: STARING
