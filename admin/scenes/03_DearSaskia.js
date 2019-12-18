@@ -25,7 +25,6 @@ export default [
                 [BRAD]: {
                     jewishBoy: {
                         hands: true,
-                        mouth: true,
                         eyes: true,
                         composite: true,
                         instance: CHARMED_SCHOOLBUS
@@ -53,7 +52,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: TYING_TETHER
