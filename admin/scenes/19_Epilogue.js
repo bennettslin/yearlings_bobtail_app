@@ -80,7 +80,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     realHeight: `3'6"`,
