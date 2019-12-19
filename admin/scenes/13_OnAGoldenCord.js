@@ -55,6 +55,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: AWKWARD_CONSOLATION
@@ -76,6 +77,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: BENNETT_DEFIANT
@@ -97,6 +99,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: HORSING
@@ -106,6 +109,7 @@ export default [
                     officer: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: OFFICER
@@ -137,6 +141,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: DRYING_TEARS
@@ -146,6 +151,7 @@ export default [
                     youngGirl: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: YOUNG_CHILD
@@ -155,6 +161,7 @@ export default [
                     youngGirl: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: YOUNG_CHILD

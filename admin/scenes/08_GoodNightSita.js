@@ -33,6 +33,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: DATE_ENDING
@@ -58,6 +59,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: MUSEUM
@@ -83,6 +85,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: BACKSTAGE
@@ -98,6 +101,7 @@ export default [
                     actor: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: FLAPPER
@@ -123,6 +127,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: GO_KARTS
@@ -148,6 +153,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: DATE_ENDED

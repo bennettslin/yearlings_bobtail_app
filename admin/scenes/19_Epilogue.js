@@ -56,6 +56,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         realHeight: `4'9"`,
@@ -72,6 +73,7 @@ export default [
                 [ANITA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `3'9"`,
@@ -87,6 +89,7 @@ export default [
                 [ESTHER]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `3'10"`,
@@ -130,6 +133,7 @@ export default [
                 [SASHA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `4'1"`,
@@ -166,6 +170,7 @@ export default [
                 [CATHERINE]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `4'11"`,
@@ -181,6 +186,7 @@ export default [
                 [AMY]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `5'6"`,
@@ -189,6 +195,7 @@ export default [
                 [STEPHANIE]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `5'4"`,
@@ -204,6 +211,7 @@ export default [
                 [MARA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `5'0"`,
@@ -212,6 +220,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `5'8"`,
@@ -222,6 +231,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `5'1"`,
@@ -240,6 +250,7 @@ export default [
                     eyebrow: true,
                     nose: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `5'7"`,

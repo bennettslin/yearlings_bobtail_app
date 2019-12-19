@@ -33,6 +33,7 @@ export default [
                 [CATHERINE]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: WEEPING
@@ -52,6 +53,7 @@ export default [
                 [CATHERINE]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: QUIPPING
@@ -92,6 +94,7 @@ export default [
                     smoker: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: SMOKER
@@ -112,6 +115,7 @@ export default [
                 [CATHERINE]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: PUZZLED

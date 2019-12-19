@@ -39,6 +39,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: EL_TORITO
@@ -64,6 +65,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: PAMPAS
@@ -73,6 +75,7 @@ export default [
                     gopi: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: GOPI
@@ -82,6 +85,7 @@ export default [
                     gopi: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: GOPI
@@ -93,6 +97,7 @@ export default [
                         head: true,
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: GOPI
@@ -118,6 +123,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: GETTING_DARK
@@ -143,6 +149,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: CLIFF
@@ -168,6 +175,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: FINAL_DREAM
@@ -177,6 +185,7 @@ export default [
                     doctor: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: DOCTOR

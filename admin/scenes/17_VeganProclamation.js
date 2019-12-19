@@ -51,6 +51,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: PROTECTIVE_CONCERNED
@@ -73,6 +74,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: GREETING
@@ -89,6 +91,7 @@ export default [
                     eyebrow: true,
                     nose: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: GREETING
@@ -131,6 +134,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: CARESS
@@ -158,6 +162,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: CARESS_REFLECTION
@@ -179,6 +184,7 @@ export default [
                     protester: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: PROTESTER
@@ -188,6 +194,7 @@ export default [
                     protester: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: PROTESTER

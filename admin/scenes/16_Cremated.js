@@ -33,6 +33,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: PERFUMING
@@ -48,6 +49,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: COWGIRL
@@ -69,6 +71,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: BLOWJOB
@@ -102,6 +105,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: TENNIS
@@ -123,6 +127,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: REVERSING

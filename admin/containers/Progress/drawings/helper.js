@@ -13,7 +13,8 @@ const
     HEAD_TIME = 0.25,
     EYEBROW_TIME = 0.04,
     NOSE_TIME = 0.06,
-    MOUTH_TIME = 0.1,
+    MOUTH_TIME = 0.05,
+    LIPS_TIME = 0.05,
     EYES_TIME = 0.2,
     COMPOSITE_TIME = 0.25,
 
@@ -27,6 +28,7 @@ const
         EYEBROW_TIME +
         NOSE_TIME +
         MOUTH_TIME +
+        LIPS_TIME +
         EYES_TIME +
         COMPOSITE_TIME
 
@@ -74,6 +76,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     eyebrow,
                     nose,
                     mouth,
+                    lips,
                     eyes,
                     composite,
                     instance
@@ -90,6 +93,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 eyebrow,
                 nose,
                 mouth,
+                lips,
                 eyes,
                 composite,
                 instance
@@ -129,6 +133,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 eyebrow,
                 nose,
                 mouth,
+                lips,
                 eyes,
                 composite,
                 instance,
@@ -162,6 +167,9 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!mouth) {
                 workedHours += MOUTH_TIME
             }
+            if (!lips) {
+                workedHours += LIPS_TIME
+            }
             if (!eyes) {
                 workedHours += EYES_TIME
             }
@@ -173,7 +181,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !mouth,
+            const doneForNow = !mouth + !lips,
                 halfDoneForNow = !mouth
 
             if (!doneForNow) {

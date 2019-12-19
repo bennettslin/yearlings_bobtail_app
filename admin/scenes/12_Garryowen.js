@@ -42,6 +42,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: BRUSH_OFF
@@ -68,6 +69,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CHUCKLING
@@ -78,6 +80,7 @@ export default [
                     eyebrow: true,
                     nose: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: INJURED
@@ -102,6 +105,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: CELIBATE_FREEZING
@@ -124,6 +128,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: NOOGIE
@@ -137,6 +142,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: SMIRKING
@@ -161,6 +167,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: LEAVING_CRUMBLED

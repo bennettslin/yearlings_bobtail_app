@@ -42,6 +42,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
@@ -62,6 +63,7 @@ export default [
                     youngSita: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: HURT_CONSOLING
@@ -94,6 +96,7 @@ export default [
                 [SASHA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
@@ -133,6 +136,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: MISCHIEVOUS_BANJO
@@ -141,6 +145,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: MISCHIEVOUS_BANJO
@@ -162,6 +167,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: BENNETT_RECORDING
@@ -193,6 +199,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: JOKING_LAUGHING
@@ -209,6 +216,7 @@ export default [
                     head: true,
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: FENDING_OFF
@@ -229,6 +237,7 @@ export default [
                     youngSita: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: SOBBING_SHIELDING

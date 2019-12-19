@@ -138,6 +138,7 @@ export default [
                     popularGirl: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: POPULAR_GIRL

@@ -27,6 +27,7 @@ export default [
                 [ESTHER]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CURIOUS
@@ -34,6 +35,7 @@ export default [
                 [ANITA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: EXASPERATED
@@ -53,6 +55,7 @@ export default [
                 [ANITA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CONCERNED
@@ -60,6 +63,7 @@ export default [
                 [ESTHER]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: SNICKERING
@@ -91,6 +95,7 @@ export default [
                 [ANITA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CHEERING

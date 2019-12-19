@@ -45,6 +45,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: PERFORMING
@@ -66,6 +67,7 @@ export default [
                 [AMY]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: SQUEEZING
@@ -73,6 +75,7 @@ export default [
                 [STEPHANIE]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: SQUEEZING
@@ -92,6 +95,7 @@ export default [
                 [AMY]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: FLIRTING
@@ -105,6 +109,7 @@ export default [
                 [MARA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CARRYING
@@ -124,6 +129,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: WAITING
@@ -131,6 +137,7 @@ export default [
                 [MARA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: WAITING
@@ -138,6 +145,7 @@ export default [
                 [AMY]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: MINGLING
@@ -145,6 +153,7 @@ export default [
                 [STEPHANIE]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: MINGLING
@@ -175,6 +184,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: ASLEEP_REACHING
@@ -202,6 +212,7 @@ export default [
                         eyebrow: true,
                         nose: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: REACHING_REFLECTION

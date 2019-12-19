@@ -74,6 +74,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: BENNETT_KEYBOARD
@@ -100,6 +101,7 @@ export default [
                 [MARA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: FLIRTING
@@ -107,6 +109,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: SQUATTING
@@ -140,6 +143,7 @@ export default [
                 [MARA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: EATING
@@ -147,6 +151,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: EATING
@@ -170,6 +175,7 @@ export default [
                         head: true,
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: INFANT_CURIOUS
@@ -194,6 +200,7 @@ export default [
                         head: true,
                         hands: true,
                         mouth: true,
+                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: INFANT_NURSING

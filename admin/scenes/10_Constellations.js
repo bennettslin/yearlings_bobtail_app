@@ -27,6 +27,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: ABBEY_ROAD
@@ -58,6 +59,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: WALGREENS
@@ -89,6 +91,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: STEAM_TUNNEL
@@ -120,6 +123,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CEMETERY
@@ -151,6 +155,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: STATION_WAGON

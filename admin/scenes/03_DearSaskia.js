@@ -32,6 +32,7 @@ export default [
                 [SASHA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CHARMED_SCHOOLBUS
@@ -57,6 +58,7 @@ export default [
                 [SASHA]: {
                     hands: true,
                     mouth: true,
+                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: INDIGNANT
