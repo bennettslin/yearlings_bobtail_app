@@ -193,7 +193,6 @@ export default [
                 [STEPHANIE]: {
                     protester: {
                         hands: true,
-                        mouth: true,
                         lips: true,
                         eyes: true,
                         composite: true,

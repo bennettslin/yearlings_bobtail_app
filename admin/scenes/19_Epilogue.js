@@ -194,7 +194,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     hands: true,
-                    mouth: true,
                     lips: true,
                     eyes: true,
                     composite: true,
