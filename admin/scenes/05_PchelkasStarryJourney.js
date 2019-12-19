@@ -163,7 +163,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: ARGUING

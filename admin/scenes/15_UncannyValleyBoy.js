@@ -69,7 +69,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: HURT_CONSOLING
@@ -125,7 +124,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: PRESENT
@@ -171,7 +169,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: FUTURE
@@ -239,7 +236,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    mouth: true,
                     eyes: true,
                     composite: true,
                     instance: SOBBING_SHIELDING
