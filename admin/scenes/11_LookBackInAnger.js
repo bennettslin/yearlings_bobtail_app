@@ -44,8 +44,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    mouth: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: PERFORMING
@@ -126,8 +124,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    mouth: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: WAITING
