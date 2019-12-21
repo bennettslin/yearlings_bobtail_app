@@ -74,7 +74,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     hands: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: SQUEEZING
@@ -151,7 +150,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     hands: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: MINGLING
