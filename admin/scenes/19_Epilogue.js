@@ -169,8 +169,6 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
-                    mouth: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `4'11"`,
