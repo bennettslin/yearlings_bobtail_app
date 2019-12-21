@@ -182,8 +182,6 @@ export default [
                 [AMY]: {
                     doctor: {
                         hands: true,
-                        mouth: true,
-                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: DOCTOR

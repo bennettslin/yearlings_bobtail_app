@@ -183,8 +183,6 @@ export default [
                 [AMY]: {
                     protester: {
                         hands: true,
-                        mouth: true,
-                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: PROTESTER
