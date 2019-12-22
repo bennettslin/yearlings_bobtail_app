@@ -164,8 +164,6 @@ export default [
                         hairIllustration: true,
                         head: true,
                         hands: true,
-                        mouth: true,
-                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: INFANT_CURIOUS
@@ -189,8 +187,6 @@ export default [
                         hairIllustration: true,
                         head: true,
                         hands: true,
-                        mouth: true,
-                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: INFANT_NURSING
