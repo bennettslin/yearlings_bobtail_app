@@ -60,8 +60,6 @@ export default [
                 [ESTHER]: {
                     youngSita: {
                         hands: true,
-                        mouth: true,
-                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: HURT_CONSOLING
@@ -224,8 +222,6 @@ export default [
                 [ESTHER]: {
                     youngSita: {
                         hands: true,
-                        mouth: true,
-                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: SOBBING_SHIELDING

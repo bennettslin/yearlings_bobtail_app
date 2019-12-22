@@ -26,8 +26,6 @@ export default [
             [ACTOR]: {
                 [ESTHER]: {
                     hands: true,
-                    mouth: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: CURIOUS
@@ -58,8 +56,6 @@ export default [
                 },
                 [ESTHER]: {
                     hands: true,
-                    mouth: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: SNICKERING

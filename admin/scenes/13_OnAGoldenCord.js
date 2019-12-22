@@ -142,8 +142,6 @@ export default [
                 [ESTHER]: {
                     youngGirl: {
                         hands: true,
-                        mouth: true,
-                        lips: true,
                         eyes: true,
                         composite: true,
                         instance: YOUNG_CHILD
