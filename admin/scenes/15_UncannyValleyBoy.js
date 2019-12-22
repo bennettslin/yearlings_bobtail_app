@@ -93,8 +93,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    mouth: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
