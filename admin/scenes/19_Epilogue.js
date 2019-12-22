@@ -72,8 +72,6 @@ export default [
                 },
                 [ANITA]: {
                     hands: true,
-                    mouth: true,
-                    lips: true,
                     eyes: true,
                     composite: true,
                     realHeight: `3'9"`,
