@@ -87,7 +87,6 @@ export default [
                 [WADE]: {
                     catholic: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: CATHOLIC_GUY

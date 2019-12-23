@@ -213,7 +213,6 @@ export default [
                 [WADE]: {
                     protester: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: PROTESTER
