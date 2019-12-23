@@ -5111,5 +5111,10 @@ export default [
         taskName: `Initial actor svgs just to help with scene placement.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Ghost skin on faces.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
