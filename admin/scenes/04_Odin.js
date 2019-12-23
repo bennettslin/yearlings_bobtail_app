@@ -21,6 +21,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: MAT
                 }
@@ -33,6 +34,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: STAIRS
                 }
@@ -45,6 +47,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: GATE
                 }
@@ -57,6 +60,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: RICKSHAW
                 }
@@ -69,6 +73,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SHORE
                 }
@@ -81,6 +86,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: BUOY
                 }
@@ -94,6 +100,7 @@ export default [
                     mermaid: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: MERMAID
                     }
@@ -101,6 +108,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: MERMAID
                 }
@@ -113,6 +121,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: OCEAN_FLOOR
                 }

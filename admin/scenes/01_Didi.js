@@ -27,18 +27,21 @@ export default [
                 [ESTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CURIOUS
                 },
                 [ANITA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PANICKED
                 }
@@ -51,18 +54,21 @@ export default [
                 [ANITA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CONCERNED
                 },
                 [ESTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FLUSTERED
                 }
@@ -75,6 +81,7 @@ export default [
                 [YOUNG_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: BATHING
                 }
@@ -87,12 +94,14 @@ export default [
                 [ANITA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SINGING
                 }

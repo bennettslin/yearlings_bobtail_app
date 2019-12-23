@@ -34,12 +34,14 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PROTECTIVE_CONCERNED
                 },
@@ -53,6 +55,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: PROTECTIVE_CONCERNED
                     }
@@ -66,6 +69,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SHOW_ANNOYED
                 },
@@ -74,12 +78,14 @@ export default [
                     head: true,
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: GREETING
                 },
                 [TRISTAN]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: GREETING
                 },
@@ -91,6 +97,7 @@ export default [
                     mouth: true,
                     lips: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: GREETING
                 }
@@ -103,6 +110,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: ALLEY
                 }
@@ -115,12 +123,14 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CARESS
                 },
@@ -134,6 +144,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: CARESS
                     }
@@ -148,6 +159,7 @@ export default [
                     reflection: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: CARESS_REFLECTION
                     }
@@ -162,6 +174,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: CARESS_REFLECTION
                     }
@@ -175,6 +188,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: DEMONSTRATION
                 },
@@ -182,6 +196,7 @@ export default [
                     protester: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: PROTESTER
                     }
@@ -190,6 +205,7 @@ export default [
                     protester: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: PROTESTER
                     }
@@ -198,6 +214,7 @@ export default [
                     protester: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: PROTESTER
                     }

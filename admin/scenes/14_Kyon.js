@@ -32,6 +32,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: PETTING_SEATED
                     }
@@ -52,6 +53,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: PETTING_STANDING
                     }
@@ -72,6 +74,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: SIFTING_TCHOTCHKES
                     }
@@ -92,6 +95,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: OPENING_DOOR
                     }
@@ -99,6 +103,7 @@ export default [
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: ARRIVED
                 }
@@ -118,6 +123,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: DEFENDING
                     }
@@ -125,6 +131,7 @@ export default [
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: JUDGMENTAL
                 }
@@ -144,6 +151,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: NOT_HUNGRY
                     }
@@ -151,6 +159,7 @@ export default [
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CONCERNED
                 }
@@ -170,6 +179,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: ASLEEP_COUCH
                     }

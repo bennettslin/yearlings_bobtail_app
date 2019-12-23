@@ -37,6 +37,7 @@ export default [
                 [OLD_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
@@ -44,6 +45,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
@@ -58,6 +60,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         realHeight: `4'9"`,
                         instance: EPILOGUE
@@ -66,6 +69,7 @@ export default [
                 [CHRISTOPHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `3'5"`,
                     instance: EPILOGUE
@@ -73,6 +77,7 @@ export default [
                 [ANITA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `3'9"`,
                     instance: EPILOGUE
@@ -80,6 +85,7 @@ export default [
                 [YOUNG_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `3'6"`,
                     instance: EPILOGUE
@@ -87,6 +93,7 @@ export default [
                 [ESTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `3'10"`,
                     instance: EPILOGUE
@@ -94,6 +101,7 @@ export default [
                 [WILLY]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'3"`,
                     instance: EPILOGUE
@@ -101,6 +109,7 @@ export default [
                 [MOTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
@@ -108,6 +117,7 @@ export default [
                 [FATHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
@@ -115,6 +125,7 @@ export default [
                 [HOWIE]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `6'0"`,
                     instance: EPILOGUE
@@ -122,6 +133,7 @@ export default [
                 [TOMER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'6"`,
                     instance: EPILOGUE
@@ -129,6 +141,7 @@ export default [
                 [SASHA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE
@@ -136,6 +149,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE
@@ -143,6 +157,7 @@ export default [
                 [BRAD]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `4'6"`,
                     instance: EPILOGUE
@@ -150,6 +165,7 @@ export default [
                 [ANDREW]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `4'7"`,
                     instance: EPILOGUE
@@ -157,6 +173,7 @@ export default [
                 [TRISTAN]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE
@@ -164,6 +181,7 @@ export default [
                 [CATHERINE]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `4'11"`,
                     instance: EPILOGUE
@@ -171,6 +189,7 @@ export default [
                 [WADE]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'10"`,
                     instance: EPILOGUE
@@ -178,6 +197,7 @@ export default [
                 [AMY]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'6"`,
                     instance: EPILOGUE
@@ -185,6 +205,7 @@ export default [
                 [STEPHANIE]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
@@ -192,6 +213,7 @@ export default [
                 [JACOB]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'11"`,
                     instance: EPILOGUE
@@ -199,6 +221,7 @@ export default [
                 [MARA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
@@ -206,6 +229,7 @@ export default [
                 [ANA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE
@@ -215,6 +239,7 @@ export default [
                     head: true,
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'1"`,
                     instance: EPILOGUE
@@ -222,6 +247,7 @@ export default [
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'9"`,
                     instance: EPILOGUE
@@ -234,6 +260,7 @@ export default [
                     mouth: true,
                     lips: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     realHeight: `5'7"`,
                     instance: EPILOGUE

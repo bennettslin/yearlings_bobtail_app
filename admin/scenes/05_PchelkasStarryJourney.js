@@ -41,12 +41,14 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: BLISSFUL_GUILTY
                 }
@@ -59,6 +61,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FEIGNING_SICK
                 }
@@ -71,6 +74,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: ASLEEP
                 }
@@ -83,6 +87,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SHAKEN
                 }
@@ -95,18 +100,21 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: STOIC
                 },
                 [BRAD]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: GESTURING
                 },
                 [ANDREW]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: THROWING
                 }
@@ -119,18 +127,21 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: WISTFUL
                 },
                 [BRAD]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SNACKING
                 },
                 [ANDREW]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: NOODLING
                 },
@@ -138,6 +149,7 @@ export default [
                     popularGirl: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: POPULAR_GIRL
                     }
@@ -151,18 +163,21 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: STARING
                 },
                 [MOTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: ARGUING
                 },
@@ -170,6 +185,7 @@ export default [
                     principal: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: PRINCIPAL
                     }

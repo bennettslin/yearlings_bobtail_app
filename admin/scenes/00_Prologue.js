@@ -9,6 +9,7 @@ export default [
                 [OLD_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PROLOGUE
                 }

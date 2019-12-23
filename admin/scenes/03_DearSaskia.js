@@ -18,6 +18,7 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PANICKED
                 },
@@ -25,6 +26,7 @@ export default [
                     jewishBoy: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: CHARMED_SCHOOLBUS
                     }
@@ -32,6 +34,7 @@ export default [
                 [SASHA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CHARMED_SCHOOLBUS
                 }
@@ -44,24 +47,28 @@ export default [
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FEIGNING_FEAR
                 }

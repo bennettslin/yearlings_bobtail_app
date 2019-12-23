@@ -15,7 +15,8 @@ const
     NOSE_TIME = 0.06,
     MOUTH_TIME = 0.05,
     LIPS_TIME = 0.05,
-    EYES_TIME = 0.2,
+    EYES_TIME = 0.1,
+    PUPILS_TIME = 0.1,
     COMPOSITE_TIME = 0.25,
 
     // This works out to 6.25 hours per drawing.
@@ -30,6 +31,7 @@ const
         MOUTH_TIME +
         LIPS_TIME +
         EYES_TIME +
+        PUPILS_TIME +
         COMPOSITE_TIME
 
 export const initialiseDrawings = (drawings, songIndex) => {
@@ -78,6 +80,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     mouth,
                     lips,
                     eyes,
+                    pupils,
                     composite,
                     instance
                 } = instanceName
@@ -95,6 +98,7 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 mouth,
                 lips,
                 eyes,
+                pupils,
                 composite,
                 instance
             })
@@ -135,6 +139,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 mouth,
                 lips,
                 eyes,
+                pupils,
                 composite,
                 instance,
                 character
@@ -173,6 +178,9 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!eyes) {
                 workedHours += EYES_TIME
             }
+            if (!pupils) {
+                workedHours += PUPILS_TIME
+            }
             if (!composite) {
                 workedHours += COMPOSITE_TIME
             }
@@ -181,8 +189,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !mouth && !lips,
-                halfDoneForNow = !mouth
+            const doneForNow = !pupils && !eyes,
+                halfDoneForNow = !pupils
 
             if (!doneForNow) {
                 rolesTodoCount++

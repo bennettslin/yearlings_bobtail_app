@@ -22,6 +22,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: DATE_ENDING
                 },
@@ -35,6 +36,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: DATE_ENDING
                     }
@@ -48,6 +50,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: MUSEUM
                 },
@@ -61,6 +64,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: MUSEUM
                     }
@@ -74,6 +78,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: BACKSTAGE
                 },
@@ -87,6 +92,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: BACKSTAGE
                     }
@@ -94,6 +100,7 @@ export default [
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: DOUBLE_ALBERT
                 },
@@ -101,6 +108,7 @@ export default [
                     actor: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: FLAPPER
                     }
@@ -114,6 +122,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: GO_KARTS
                 },
@@ -127,6 +136,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: GO_KARTS
                     }
@@ -140,6 +150,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: DATE_ENDED
                 },
@@ -153,6 +164,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: DATE_ENDED
                     }

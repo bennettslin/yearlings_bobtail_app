@@ -32,6 +32,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CORD_SIDE
                 }
@@ -44,6 +45,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: AWKWARD_CONSOLATION
                 },
@@ -57,6 +59,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: AWKWARD_CONSOLATION
                     }
@@ -70,6 +73,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: CORD_REAR
                 },
@@ -77,6 +81,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: BENNETT_DEFIANT
                     }
@@ -90,6 +95,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: HORSING
                 },
@@ -97,6 +103,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: HORSING
                     }
@@ -105,6 +112,7 @@ export default [
                     officer: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: OFFICER
                     }
@@ -128,6 +136,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: DRYING_TEARS
                 },
@@ -135,6 +144,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: DRYING_TEARS
                     }
@@ -143,6 +153,7 @@ export default [
                     youngGirl: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: YOUNG_CHILD
                     }
@@ -151,6 +162,7 @@ export default [
                     youngGirl: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: YOUNG_CHILD
                     }
@@ -159,6 +171,7 @@ export default [
                     youngBoy: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: YOUNG_CHILD
                     }
@@ -167,6 +180,7 @@ export default [
                     crossingGuard: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: CROSSING_GUARD
                     }

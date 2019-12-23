@@ -42,18 +42,21 @@ export default [
                     head: true,
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: ACCUSATORY
                 },
@@ -61,6 +64,7 @@ export default [
                     youngSita: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: HURT_CONSOLING
                     }
@@ -68,6 +72,7 @@ export default [
                 [MOTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: HURT_CONSOLING
                 }
@@ -80,24 +85,28 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PAST
                 },
                 [FATHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PAST
                 },
                 [SASHA]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
                 }
@@ -110,18 +119,21 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PRESENT
                 },
                 [FATHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PRESENT
                 },
                 [MOTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: PRESENT
                 },
@@ -130,6 +142,7 @@ export default [
                     head: true,
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: MISCHIEVOUS_BANJO
                 },
@@ -137,6 +150,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: MISCHIEVOUS_BANJO
                     }
@@ -150,6 +164,7 @@ export default [
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FUTURE
                 },
@@ -157,6 +172,7 @@ export default [
                     [BENNETT]: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: BENNETT_RECORDING
                     }
@@ -164,18 +180,21 @@ export default [
                 [MOTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FUTURE
                 },
                 [FATHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FUTURE
                 },
                 [KHARI]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: JOKING_LAUGHING
                 },
@@ -189,6 +208,7 @@ export default [
                         mouth: true,
                         lips: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: JOKING_LAUGHING
                     }
@@ -204,18 +224,21 @@ export default [
                     head: true,
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: REELING
                 },
@@ -223,6 +246,7 @@ export default [
                     youngSita: {
                         hands: true,
                         eyes: true,
+                        pupils: true,
                         composite: true,
                         instance: SOBBING_SHIELDING
                     }
@@ -230,6 +254,7 @@ export default [
                 [MOTHER]: {
                     hands: true,
                     eyes: true,
+                    pupils: true,
                     composite: true,
                     instance: SOBBING_SHIELDING
                 }
