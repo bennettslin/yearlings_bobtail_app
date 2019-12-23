@@ -190,7 +190,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * latest task.
              */
             const doneForNow = !pupils && !eyes,
-                halfDoneForNow = !pupils
+                halfDoneForNow = !eyes
 
             if (!doneForNow) {
                 rolesTodoCount++
