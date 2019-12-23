@@ -212,7 +212,6 @@ export default [
                     maskedUsher: {
                         faceRevision: true,
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: USHER_WAITING
@@ -234,7 +233,6 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: USHER_LOOKING

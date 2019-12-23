@@ -110,7 +110,6 @@ export default [
                 [HOWIE]: {
                     gangbanger: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: GANGBANGER
