@@ -31,7 +31,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: CORD_SIDE
@@ -44,7 +43,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: AWKWARD_CONSOLATION
@@ -72,7 +70,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: CORD_REAR
@@ -94,7 +91,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: HORSING
@@ -135,7 +131,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: DRYING_TEARS

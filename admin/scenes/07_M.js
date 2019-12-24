@@ -42,7 +42,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: PONDERING
@@ -55,7 +54,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: RUBIKS_CUBE
@@ -68,7 +66,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: COUCH_READING
@@ -90,7 +87,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: DISTRACTED
@@ -131,7 +127,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: EATING
@@ -164,7 +159,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: HOPELESSLY_CRUSHED
@@ -189,7 +183,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: WONDERING_BABY
@@ -223,7 +216,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: MERRILY_DERANGED

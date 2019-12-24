@@ -36,7 +36,6 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     realHeight: `5'4"`,
@@ -44,7 +43,6 @@ export default [
                 },
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     realHeight: `5'4"`,

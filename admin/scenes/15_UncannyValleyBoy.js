@@ -48,7 +48,6 @@ export default [
                 },
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
@@ -83,7 +82,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: PAST
@@ -116,7 +114,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: PRESENT
@@ -160,7 +157,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: FUTURE
@@ -225,7 +221,6 @@ export default [
                 },
                 [BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: FENDING_OFF
