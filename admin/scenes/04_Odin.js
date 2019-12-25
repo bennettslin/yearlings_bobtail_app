@@ -20,7 +20,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: MAT
@@ -33,7 +32,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: STAIRS
@@ -46,7 +44,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: GATE
@@ -59,7 +56,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: RICKSHAW
@@ -72,7 +68,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: SHORE
@@ -85,7 +80,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: BUOY
@@ -107,7 +101,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: MERMAID
@@ -120,7 +113,6 @@ export default [
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: OCEAN_FLOOR
