@@ -25,7 +25,6 @@ export default [
                 [BRAD]: {
                     jewishBoy: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: CHARMED_SCHOOLBUS
@@ -53,7 +52,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: TYING_TETHER
@@ -67,7 +65,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: FEIGNING_FEAR

@@ -149,7 +149,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     realHeight: `4'6"`,
@@ -157,7 +156,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     realHeight: `4'7"`,

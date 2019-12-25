@@ -106,14 +106,12 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: GESTURING
                 },
                 [ANDREW]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: THROWING
@@ -133,14 +131,12 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: SNACKING
                 },
                 [ANDREW]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: NOODLING
