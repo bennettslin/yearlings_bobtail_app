@@ -98,7 +98,6 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: FLIRTING
@@ -137,7 +136,6 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: EATING
