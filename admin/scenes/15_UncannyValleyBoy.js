@@ -141,7 +141,6 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: MISCHIEVOUS_BANJO
@@ -162,7 +161,6 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: BENNETT_RECORDING

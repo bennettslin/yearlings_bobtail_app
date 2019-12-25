@@ -77,7 +77,6 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: BENNETT_DEFIANT
@@ -98,7 +97,6 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: HORSING
@@ -138,7 +136,6 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: DRYING_TEARS

@@ -73,7 +73,6 @@ export default [
                 [STEPHANIE]: {
                     [BENNETT]: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: BENNETT_KEYBOARD
