@@ -138,7 +138,6 @@ export default [
                 [SASHA]: {
                     popularGirl: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: POPULAR_GIRL
