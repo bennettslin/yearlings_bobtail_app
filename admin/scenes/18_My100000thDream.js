@@ -76,7 +76,6 @@ export default [
                 [CATHERINE]: {
                     gopi: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: GOPI

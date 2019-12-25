@@ -32,7 +32,6 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: WEEPING
@@ -51,7 +50,6 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: QUIPPING
@@ -111,7 +109,6 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: PUZZLED
