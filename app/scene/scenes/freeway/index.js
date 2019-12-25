@@ -6,7 +6,7 @@ import { COLLECTING } from '../../../constants/scene/actors/willy'
 const ARRANGEMENTS_ACTORS = {
     [WILLY]: {
         [COLLECTING]: {
-            yIndex: 3,
+            yIndex: 5,
             xPosition: 4.5
         }
     }

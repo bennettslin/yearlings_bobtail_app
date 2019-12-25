@@ -13,19 +13,21 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [CAUTIOUS]: {
             yIndex: 4,
-            xPosition: 7
+            xPosition: 7.5,
+            zOffset: -0.3
         }
     },
     [WILLY]: {
         [DUCKING]: {
-            yIndex: 4,
-            xPosition: 0.5
+            yIndex: 5,
+            xPosition: 1.75
         }
     },
     [MOTHER]: {
         [STOOPING]: {
-            yIndex: 2,
-            xPosition: 4
+            yIndex: 3,
+            xPosition: 6,
+            zOffset: -0.05
         }
     },
     [CHRISTOPHER]: {

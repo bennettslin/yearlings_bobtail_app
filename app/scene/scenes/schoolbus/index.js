@@ -8,13 +8,13 @@ import { PANICKED } from '../../../constants/scene/actors/preteenBennett'
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [PANICKED]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 2.5
         }
     },
     [BRAD_SASHA]: {
         [CHARMED_SCHOOLBUS]: {
-            yIndex: 5,
+            yIndex: 3,
             xPosition: 5.5
         }
     }

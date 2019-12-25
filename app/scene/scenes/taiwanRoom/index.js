@@ -5,7 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [MAT]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 5
         }
     }
 }

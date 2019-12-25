@@ -5,7 +5,7 @@ const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [STAIRS]: {
             yIndex: 5,
-            xPosition: 8
+            xPosition: 7.5
         }
     }
 }

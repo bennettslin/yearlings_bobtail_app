@@ -9,7 +9,8 @@ const ARRANGEMENTS_ACTORS = {
     [YOUNG_BENNETT]: {
         [SINGING]: {
             yIndex: 3,
-            xPosition: 6
+            xPosition: 6,
+            zOffset: 0.25
         }
     },
     [ANITA]: {

@@ -58,6 +58,7 @@ const ARRANGEMENTS_THINGS = {
         [PLAYGROUND_BALL]: {
             yIndex: 4,
             xPosition: 2,
+            scaleFactor: 0.25,
             zOffset: 1
         },
         [SAFEWAY_BAG]: {

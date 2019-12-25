@@ -10,19 +10,19 @@ import { INDIGNANT } from '../../../constants/scene/actors/sasha'
 const ARRANGEMENTS_ACTORS = {
     [BRAD_BENNETT]: {
         [TYING_TETHER]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 8
         }
     },
     [SASHA]: {
         [INDIGNANT]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 3
         }
     },
     [ANDREW]: {
         [FEIGNING_FEAR]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 5
         }
     }

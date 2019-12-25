@@ -4,7 +4,7 @@ import { SHORE } from '../../../constants/scene/actors/preteenBennett'
 const ARRANGEMENTS_ACTORS = {
     [PRETEEN_BENNETT]: {
         [SHORE]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 5
         }
     }

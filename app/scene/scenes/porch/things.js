@@ -34,9 +34,10 @@ const ARRANGEMENTS_THINGS = {
     },
     [FIXTURE]: {
         [HAIRCUT_SCISSORS]: {
-            yIndex: 3,
+            yIndex: 4,
             xPosition: 5,
-            sharedStyle: SCISSORS__SHARED
+            sharedStyle: SCISSORS__SHARED,
+            zOffset: -0.15
         }
     }
 }
