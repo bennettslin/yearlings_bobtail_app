@@ -94,7 +94,6 @@ export default [
                         hairIllustration: true,
                         head: true,
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: GOPI
