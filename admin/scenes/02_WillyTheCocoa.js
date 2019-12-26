@@ -59,7 +59,6 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: TANTRUM
@@ -84,7 +83,6 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: SOBBING
@@ -149,7 +147,6 @@ export default [
             [ACTOR]: {
                 [CHRISTOPHER]: {
                     hands: true,
-                    eyes: true,
                     pupils: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
