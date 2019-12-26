@@ -1,8 +1,8 @@
 .allPeople#{$suffix} {
-    .skinBlack { fill: #857652; }
-    .skinEastAsian { fill: #d1b899; }
-    .skinIndian { fill: #856439; }
-    .skinWhite { fill: #c9b2a3; }
+    .skinBlack { fill: hsl(28, 29%, 45%); }
+    .skinEastAsian { fill: hsl(32, 45%, 67%); }
+    .skinIndian { fill: hsl(22, 32%, 50%); }
+    .skinWhite { fill: hsl(29, 55%, 80%); }
     .hairBlonde { fill: #aeb382; }
     .hairSandy { fill: #897f64; }
     .hairRed { fill: #8c4b39; }
