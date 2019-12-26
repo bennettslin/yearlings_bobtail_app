@@ -14,6 +14,16 @@ export default [
         workedHours: 0,
         neededHours: 10
     },
+    {
+        taskName: `Check all emails.`,
+        workedHours: 0,
+        neededHours: 10
+    },
+    {
+        taskName: `Test pass on Internet Explorer.`,
+        workedHours: 0,
+        neededHours: 5
+    },
 
     /**
      * Content.
