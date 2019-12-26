@@ -105,7 +105,6 @@ export default [
                 [AMY]: {
                     officer: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: OFFICER
@@ -160,7 +159,6 @@ export default [
                 [YOUNG_BENNETT]: {
                     youngBoy: {
                         hands: true,
-                        eyes: true,
                         pupils: true,
                         composite: true,
                         instance: YOUNG_CHILD
