@@ -53,7 +53,6 @@ export default [
                 },
                 [MOTHER]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: STOOPING
                 },
@@ -128,7 +127,6 @@ export default [
             [ACTOR]: {
                 [MOTHER]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: COMFORTING
                 },
