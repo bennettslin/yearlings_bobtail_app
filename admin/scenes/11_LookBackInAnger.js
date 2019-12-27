@@ -50,7 +50,6 @@ export default [
                 [TOMER]: {
                     shane: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: SHANE_SPILLING
                     }
