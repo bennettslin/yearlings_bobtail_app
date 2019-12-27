@@ -106,7 +106,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: THROWING
                 }
@@ -130,7 +129,6 @@ export default [
                 },
                 [ANDREW]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: NOODLING
                 },
