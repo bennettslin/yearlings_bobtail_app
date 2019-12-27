@@ -77,7 +77,6 @@ export default [
             [ACTOR]: {
                 [FATHER]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: ROARING
                 },
