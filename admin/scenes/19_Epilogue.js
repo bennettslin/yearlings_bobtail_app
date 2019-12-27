@@ -163,7 +163,6 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `5'10"`,
                     instance: EPILOGUE

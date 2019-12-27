@@ -55,7 +55,6 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: WATCHING
                 },
@@ -130,7 +129,6 @@ export default [
                 },
                 [WADE]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: MINGLING
                 }
