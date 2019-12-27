@@ -91,7 +91,6 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: CARRYING
                 }
@@ -113,7 +112,6 @@ export default [
                 },
                 [MARA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: WAITING
                 },

@@ -81,7 +81,6 @@ export default [
                 [MARA]: {
                     gopi: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: GOPI
                     }
