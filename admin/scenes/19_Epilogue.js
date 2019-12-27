@@ -36,14 +36,12 @@ export default [
             [ACTOR]: {
                 [OLD_BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE

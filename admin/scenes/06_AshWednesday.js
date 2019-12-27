@@ -26,7 +26,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: BREAKUP_DEJECTED
                 },
@@ -44,7 +43,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: SOLICITING_OPINION
                 },
@@ -62,7 +60,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: CATHOLIC_PENSIVE
                 }
@@ -74,7 +71,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: CATHOLIC_IDEA
                 },
@@ -102,7 +98,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: PIOUS
                 },

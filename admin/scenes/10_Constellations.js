@@ -20,7 +20,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: ABBEY_ROAD
                 },
@@ -50,7 +49,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: WALGREENS
                 },
@@ -80,7 +78,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: STEAM_TUNNEL
                 },
@@ -110,7 +107,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: CEMETERY
                 },
@@ -140,7 +136,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: STATION_WAGON
                 },
@@ -170,7 +165,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: ATTIC
                 },

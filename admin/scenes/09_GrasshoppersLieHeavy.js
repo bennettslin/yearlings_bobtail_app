@@ -34,7 +34,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: DISHROOM_READING
                 }
@@ -46,7 +45,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: DISHROOM_LANCET
                 },
@@ -73,7 +71,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: MOP_SOPPED
                 },
@@ -99,7 +96,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: GATE_CODE
                 },
@@ -126,7 +122,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: GINGERBREAD_PRISON
                 },
@@ -153,7 +148,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: RUMPLED_LINENS
                 },
@@ -180,7 +174,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: WAITING_ROOM_ASLEEP
                 }
@@ -192,7 +185,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: CHEEK_UNVEILED
                 },
@@ -219,7 +211,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: HARD_ON
                 },
@@ -247,7 +238,6 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: HARD_ON_REFLECTION
                     }
@@ -275,7 +265,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: MISSIONARY
                 },
@@ -303,7 +292,6 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: MISSIONARY_REFLECTION
                     }
@@ -331,7 +319,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: AFTERGLOW
                 },
@@ -359,7 +346,6 @@ export default [
                 [BENNETT]: {
                     reflection: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: AFTERGLOW_REFLECTION
                     }

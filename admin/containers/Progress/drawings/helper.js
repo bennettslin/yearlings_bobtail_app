@@ -16,8 +16,8 @@ const
     MOUTH_TIME = 0.05,
     LIPS_TIME = 0.05,
     EYES_TIME = 0.1,
-    PUPILS_TIME = 0.1,
-    COMPOSITE_TIME = 0.25,
+    PUPILS_TIME = 0.05,
+    COMPOSITE_TIME = 0.3,
 
     // This works out to 6.25 hours per drawing.
     TOTAL_TIME =

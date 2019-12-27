@@ -24,7 +24,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: REMOVING_PANTS
                 },
@@ -52,7 +51,6 @@ export default [
                 },
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: COWGIRL
                 }
@@ -72,7 +70,6 @@ export default [
                 },
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: BLOWJOB
                 }
@@ -84,7 +81,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: INFIRM
                 }
@@ -110,7 +106,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: DISPOSING_CONDOM
                 },
