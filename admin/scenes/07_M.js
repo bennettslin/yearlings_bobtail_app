@@ -87,7 +87,6 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: FLIRTING
                 },
@@ -122,7 +121,6 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: EATING
                 },

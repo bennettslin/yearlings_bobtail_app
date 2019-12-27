@@ -89,7 +89,6 @@ export default [
                 },
                 [JACOB]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: CARRYING
                 },
