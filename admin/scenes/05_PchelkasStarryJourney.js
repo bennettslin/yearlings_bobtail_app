@@ -95,7 +95,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: GESTURING
                 },
@@ -117,7 +116,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: SNACKING
                 },

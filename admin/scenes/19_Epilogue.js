@@ -135,7 +135,6 @@ export default [
                 },
                 [BRAD]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `4'6"`,
                     instance: EPILOGUE
