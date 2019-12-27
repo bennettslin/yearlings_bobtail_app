@@ -91,7 +91,6 @@ export default [
                 },
                 [PRETEEN_BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
                 }
