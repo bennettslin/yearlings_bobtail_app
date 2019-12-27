@@ -197,7 +197,6 @@ export default [
                 },
                 [ANA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE
