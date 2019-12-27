@@ -158,7 +158,6 @@ export default [
                 },
                 [CATHERINE]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `4'11"`,
                     instance: EPILOGUE
