@@ -168,7 +168,6 @@ export default [
                 [TRISTAN]: {
                     principal: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: PRINCIPAL
                     }
