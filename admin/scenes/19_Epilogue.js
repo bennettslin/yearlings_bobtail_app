@@ -200,7 +200,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `5'1"`,
                     instance: EPILOGUE

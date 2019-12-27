@@ -41,7 +41,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
                 },
@@ -121,7 +120,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: MISCHIEVOUS_BANJO
                 },
@@ -190,7 +188,6 @@ export default [
                     hairIllustration: true,
                     head: true,
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: FENDING_OFF
                 },
