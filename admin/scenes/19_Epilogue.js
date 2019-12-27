@@ -170,7 +170,6 @@ export default [
                 },
                 [AMY]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `5'6"`,
                     instance: EPILOGUE

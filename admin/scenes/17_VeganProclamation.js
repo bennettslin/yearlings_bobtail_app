@@ -177,7 +177,6 @@ export default [
                 [AMY]: {
                     protester: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: PROTESTER
                     }

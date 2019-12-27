@@ -99,7 +99,6 @@ export default [
                 [AMY]: {
                     officer: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: OFFICER
                     }
