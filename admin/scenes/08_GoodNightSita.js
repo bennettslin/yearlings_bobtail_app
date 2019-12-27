@@ -93,7 +93,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: DOUBLE_ALBERT
                 },

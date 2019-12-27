@@ -217,7 +217,6 @@ export default [
                 },
                 [KHARI]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `5'9"`,
                     instance: EPILOGUE
