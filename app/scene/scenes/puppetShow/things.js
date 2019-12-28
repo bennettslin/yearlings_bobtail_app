@@ -52,7 +52,7 @@ import {
     MOTHER
 } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { SKETCH_TAIWAN__SHARED } from '../../shared/sketch'
+import { SKETCH_PEOPLE__SHARED } from '../../shared/sketch'
 import { TAIWAN_MOUNTAIN__SHARED } from '../../shared/taiwan'
 
 const ARRANGEMENTS_THINGS = {
@@ -171,7 +171,7 @@ export const THINGS_PUPPET_SHOW_MIDDLE = {
             zOffset: 2.375,
             noShadow: true,
             scaleFactor: 0.35,
-            sharedStyle: SKETCH_TAIWAN__SHARED
+            sharedStyle: SKETCH_PEOPLE__SHARED
         },
         [SKETCHBOOK__TOGETHER]: {
             yIndex: 5,
@@ -248,7 +248,7 @@ export const THINGS_PUPPET_SHOW_END = {
             zOffset: 2.5,
             noShadow: true,
             scaleFactor: 0.4,
-            sharedStyle: SKETCH_TAIWAN__SHARED
+            sharedStyle: SKETCH_PEOPLE__SHARED
         },
         [SKETCHBOOK__APART]: {
             yIndex: 5,

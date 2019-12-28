@@ -15,6 +15,7 @@ import {
     SATURN_SEAT__RIGHT
 } from '../../../constants/scene/things/panels'
 import { EVIAN__SHARED } from '../../shared/food'
+import { SKETCH_PEOPLE__SHARED } from '../../shared/sketch'
 import { INTERIOR__SHARED } from '../../shared/vehicles'
 
 const ARRANGEMENTS_THINGS = {
@@ -29,7 +30,8 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 9,
             zOffset: 4.5,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: SKETCH_PEOPLE__SHARED
         }
     },
     [FIXTURE]: {
