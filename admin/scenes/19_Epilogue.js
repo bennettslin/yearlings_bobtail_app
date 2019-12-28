@@ -70,7 +70,6 @@ export default [
                 },
                 [ANITA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `3'9"`,
                     instance: EPILOGUE

@@ -142,7 +142,6 @@ export default [
                 [ANITA]: {
                     youngGirl: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: YOUNG_CHILD
                     }
