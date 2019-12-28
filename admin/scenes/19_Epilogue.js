@@ -64,7 +64,6 @@ export default [
                 },
                 [CHRISTOPHER]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `3'5"`,
                     instance: EPILOGUE
