@@ -52,6 +52,7 @@ import {
 } from '../../shared/paper'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import { DOLLAR__SHARED } from '../../shared/print'
+import { SKETCH_DOGS__SHARED } from '../../shared/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -158,7 +159,8 @@ export const THINGS_BEDROOM_GUILTY = {
             xPosition: 2.85,
             zOffset: 2.15,
             noShadow: true,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: SKETCH_DOGS__SHARED
         },
         [SKETCHBOOK__DOGS]: {
             yIndex: 5,

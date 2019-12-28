@@ -24,6 +24,7 @@ import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
 } from '../../shared/paper'
+import { SKETCH_DOGS__SHARED } from '../../shared/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -39,7 +40,8 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2.75,
             zOffset: 3.5,
             noShadow: true,
-            scaleFactor: 0.3
+            scaleFactor: 0.3,
+            sharedStyle: SKETCH_DOGS__SHARED
         },
         [SKETCHBOOK__ESCAPE_POD]: {
             yIndex: 5,
