@@ -5121,5 +5121,10 @@ export default [
         taskName: `More specific skin colours.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Do shared colours of all faces.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]
