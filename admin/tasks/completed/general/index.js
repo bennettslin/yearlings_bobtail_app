@@ -5116,5 +5116,10 @@ export default [
         taskName: `Ghost skin on faces.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `More specific skin colours.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

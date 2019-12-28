@@ -43,7 +43,11 @@ import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
 } from '../../shared/instruments'
-import { BENNETT, LIZ } from '../../../constants/scene/actors'
+import {
+    AMY,
+    BENNETT,
+    LIZ
+} from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import {
     BUBBLE__SHARED,
@@ -131,6 +135,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
                 ACOUSTIC_GUITAR__SHARED,
                 MICROPHONE__SHARED,
                 MONITOR__SHARED,
+                AMY,
                 BENNETT,
                 LIZ,
                 ALL_PEOPLE__SHARED
