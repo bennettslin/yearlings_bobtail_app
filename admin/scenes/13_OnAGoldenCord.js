@@ -134,7 +134,6 @@ export default [
                 [ESTHER]: {
                     youngGirl: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: YOUNG_CHILD
                     }
