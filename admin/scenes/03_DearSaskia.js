@@ -29,7 +29,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: CHARMED_SCHOOLBUS
                 }
@@ -51,7 +50,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: INDIGNANT
                 },

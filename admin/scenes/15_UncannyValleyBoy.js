@@ -85,7 +85,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
                 },

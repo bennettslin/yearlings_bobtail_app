@@ -122,7 +122,6 @@ export default [
                 },
                 [SASHA]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE

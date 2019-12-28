@@ -87,7 +87,6 @@ export default [
                 [SASHA]: {
                     mermaid: {
                         hands: true,
-                        pupils: true,
                         composite: true,
                         instance: MERMAID
                     }
