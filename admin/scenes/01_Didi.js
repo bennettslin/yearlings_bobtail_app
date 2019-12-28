@@ -38,7 +38,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: PANICKED
                 }
@@ -62,7 +61,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: FLUSTERED
                 }
@@ -74,7 +72,6 @@ export default [
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: BATHING
                 }
@@ -92,7 +89,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     hands: true,
-                    pupils: true,
                     composite: true,
                     instance: SINGING
                 }
