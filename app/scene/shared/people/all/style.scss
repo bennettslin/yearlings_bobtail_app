@@ -1,16 +1,20 @@
 .allPeople#{$suffix} {
-    .skinBlack { fill: hsl(28, 29%, 45%); }
+    .eyeBlob { fill: #444; }
+    .mouthBlob { fill: #444; }
+    .skinWhite { fill: hsl(29, 55%, 80%); }
+    .skinAnimal { fill: hsl(29, 55%, 80%); }
+    .skinNordic { fill: hsl(21, 48%, 83%); }
+    .skinGallic { fill: hsl(19, 46%, 75%); }
+    .skinAshkenazi { fill: hsl(22, 46%, 72%); }
     .skinEastAsian { fill: hsl(32, 45%, 67%); }
     .skinIndian { fill: hsl(22, 32%, 50%); }
-    .skinWhite { fill: hsl(29, 55%, 80%); }
-    .hairBlonde { fill: #aeb382; }
-    .hairSandy { fill: #897f64; }
-    .hairRed { fill: #8c4b39; }
-    .hairRedDark { fill: #7d4333; }
-    .hairMediumBrown { fill: #5b4d3e; }
-    .hairDarkBrown { fill: #4c4539; }
-    .hairBlack { fill: #343636; }
-    .hairBlackDark { fill: #2a2b2b; }
-    .mouthBlob { fill: #453d36; }
-    .eyeBlob { fill: #343636; }
+    .skinBlack { fill: hsl(28, 29%, 45%); }
+    .hairBlonde { fill: hsl(41, 48%, 72%); }
+    .hairSandy { fill: hsl(32, 37%, 61%); }
+    .hairRed { fill: hsl(21, 56%, 40%); }
+    .hairLightBrown { fill: hsl(19, 18%, 55%); }
+    .hairMediumBrown { fill: hsl(23, 32%, 39%); }
+    .hairDarkBrown { fill: hsl(19, 23%, 32%); }
+    .hairBlack { fill: hsl(26, 7%, 25%); }
+    .hairBlackDark { fill: hsl(26, 7%, 22%); }
 }
