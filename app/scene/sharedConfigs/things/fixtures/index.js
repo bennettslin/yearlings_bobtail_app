@@ -55,7 +55,9 @@ import {
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
     HOSPITAL_RECORD_PLAYER
-} from '../../../constants/scene/things/fixtures'
+} from '../../../../constants/scene/things/fixtures'
+
+import { BUDWEISER__SHARED } from '../../../sharedStyles/food'
 
 export default {
     [PLAYGROUND_BALL]: true,
@@ -84,9 +86,9 @@ export default {
     [DRUMS_STACKED__BASEMENT]: true,
     [BASS_CASE_UPRIGHT]: true,
     [GUITAR_CASE_UPRIGHT]: true,
-    [BASEMENT_BEER_CASE]: true,
-    [BASEMENT_BEER_MARA]: true,
-    [BASEMENT_BEER_BENNETT]: true,
+    [BASEMENT_BEER_CASE]: BUDWEISER__SHARED,
+    [BASEMENT_BEER_MARA]: BUDWEISER__SHARED,
+    [BASEMENT_BEER_BENNETT]: BUDWEISER__SHARED,
     [PUSH_BROOM__BACKSTAGE]: true,
     [PUSH_BROOM__TUNNEL]: true,
     [STEPLADDER]: true,

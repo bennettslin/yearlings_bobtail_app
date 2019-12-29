@@ -4,7 +4,6 @@ import {
 } from '../../../constants/scene/things'
 import { CROWD_BACK } from '../../../constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from '../../../constants/scene/things/puppets'
-import { ODIN_GHOST__SHARED } from '../../sharedStyles/animals'
 import { SHADOW__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
@@ -20,8 +19,7 @@ const ARRANGEMENTS_THINGS = {
         [GHOST_ODIN_CLUB]: {
             yIndex: 5,
             xPosition: 5,
-            scaleFactor: 0.2,
-            sharedStyle: ODIN_GHOST__SHARED
+            scaleFactor: 0.2
         }
     }
 }

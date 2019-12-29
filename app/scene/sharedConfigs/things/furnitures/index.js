@@ -3,7 +3,7 @@ import {
     BENNETT_PILLOW,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION
-} from '../../../constants/scene/things/furnitures'
+} from '../../../../constants/scene/things/furnitures'
 
 export default {
     [CAPTAIN_BED_PILLOW]: true,

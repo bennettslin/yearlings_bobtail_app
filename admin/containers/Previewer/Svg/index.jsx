@@ -13,6 +13,7 @@ import {
     getSharedClassNames
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
+import { getSharedStyleForThing } from 'scene/sharedConfigs/things'
 
 import {
     getPreviewerSvgMapForActor,
@@ -134,7 +135,11 @@ class PreviewerSvg extends PureComponent {
 
     getSharedStyle() {
         const
-            { isActor } = this.props,
+            {
+                isActor,
+                presenceType,
+                presenceKey
+            } = this.props,
             { sharedStyle } = this.getArrangement()
 
         if (isActor) {
@@ -142,7 +147,10 @@ class PreviewerSvg extends PureComponent {
             return getGlobalActorStyle(customType, sharedStyle)
 
         } else {
-            return sharedStyle
+            return getSharedStyleForThing({
+                presenceType,
+                presenceKey
+            })
         }
     }
 

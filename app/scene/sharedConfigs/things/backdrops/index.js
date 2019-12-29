@@ -26,9 +26,9 @@ import {
     FENCE_BACKDROP,
     BRICK_WALL,
     CITY_BACKDROP
-} from '../../../constants/scene/things/backdrops'
+} from '../../../../constants/scene/things/backdrops'
 
-import { PALM_TREE__SHARED } from '../sharedStyles/plants'
+import { PALM_TREE__SHARED } from '../../../sharedStyles/plants'
 
 export default {
     [NOHO_HOUSES_BACKDROP]: PALM_TREE__SHARED,

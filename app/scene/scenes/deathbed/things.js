@@ -22,7 +22,6 @@ import { IV_DRIP } from '../../../constants/scene/things/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from '../../../constants/scene/things/fixtures'
 import { TENNIS_COURT } from '../../../constants/scene/things/flats'
 import { HOSPITAL_BED } from '../../../constants/scene/things/panels'
-import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -30,28 +29,24 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 0,
             xPosition: 2,
             zOffset: 7,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__DEATHBED]: {
             yIndex: 0,
             xPosition: 1.5,
             zOffset: 6.75,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_LARGE__DEATHBED]: {
             yIndex: 0,
             xPosition: 1,
             zOffset: 6,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [THOUGHT_MEDIUM]: {
             yIndex: 0,
             xPosition: 3.25,
-            scaleFactor: 0.55,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.55
         }
     },
     [CUTOUT]: {
@@ -82,28 +77,24 @@ export const THINGS_DEATHBED_CREMATED = {
             yIndex: 0,
             xPosition: 6,
             zOffset: 3.25,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__TENNIS]: {
             yIndex: 0,
             xPosition: 6.5,
             zOffset: 3,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_LARGE__TENNIS]: {
             yIndex: 0,
             xPosition: 7.25,
             zOffset: 2.5,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [THOUGHT_SMALL]: {
             yIndex: 0,
             xPosition: 9.5,
-            scaleFactor: 0.5,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.5
         }
     },
     [FLAT]: {
@@ -121,22 +112,19 @@ export const THINGS_DEATHBED_DREAM = {
             yIndex: 0,
             xPosition: 7.75,
             zOffset: 5.5,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__INVERSE]: {
             yIndex: 0,
             xPosition: 7.25,
             zOffset: 5.5,
-            scaleFactor: 0.45,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.45
         },
         [BUBBLE_LARGE__INVERSE]: {
             yIndex: 0,
             xPosition: 6.5,
             zOffset: 5,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         }
     }
 }

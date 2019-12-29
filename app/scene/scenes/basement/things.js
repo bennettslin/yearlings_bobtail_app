@@ -11,7 +11,6 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
-import { BUDWEISER__SHARED } from '../../sharedStyles/food'
 import { DOOR__SHARED } from '../../sharedStyles/home'
 import {
     BASS_CASE__SHARED,
@@ -54,18 +53,15 @@ const ARRANGEMENTS_THINGS = {
         },
         [BASEMENT_BEER_CASE]: {
             yIndex: 5,
-            xPosition: 1.5,
-            sharedStyle: BUDWEISER__SHARED
+            xPosition: 1.5
         },
         [BASEMENT_BEER_MARA]: {
             yIndex: 5,
-            xPosition: 5,
-            sharedStyle: BUDWEISER__SHARED
+            xPosition: 5
         },
         [BASEMENT_BEER_BENNETT]: {
             yIndex: 5,
-            xPosition: 8,
-            sharedStyle: BUDWEISER__SHARED
+            xPosition: 8
         }
     }
 }

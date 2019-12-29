@@ -8,7 +8,6 @@ import { DUMPSTER } from '../../../constants/scene/things/cutouts'
 import { LOADING_DOCK_DOOR } from '../../../constants/scene/things/doors'
 import { BALLED_FOIL__ALLEY } from '../../../constants/scene/things/fixtures'
 import { GHOST_ODIN_ALLEY } from '../../../constants/scene/things/puppets'
-import { ODIN_GHOST__SHARED } from '../../sharedStyles/animals'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -35,8 +34,7 @@ const ARRANGEMENTS_THINGS = {
         [GHOST_ODIN_ALLEY]: {
             yIndex: 5,
             xPosition: 8,
-            scaleFactor: 0.2,
-            sharedStyle: ODIN_GHOST__SHARED
+            scaleFactor: 0.2
         }
     }
 }

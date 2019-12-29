@@ -50,7 +50,6 @@ import {
 } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import {
-    BUBBLE__SHARED,
     SHADOW__SHARED
 } from '../../sharedStyles/props'
 
@@ -150,22 +149,19 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             yIndex: 5,
             xPosition: 3.4,
             zOffset: 2.4,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__LIZ]: {
             yIndex: 5,
             xPosition: 3.75,
             zOffset: 2.5,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_LARGE__LIZ]: {
             yIndex: 5,
             xPosition: 4.5,
             zOffset: 2.5,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [LIZ_THOUGHT]: {
             yIndex: 5,

@@ -15,7 +15,6 @@ import {
     BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
-import { ODIN_GHOST__SHARED } from '../../sharedStyles/animals'
 import { BERKELEY_BUILDING__SHARED } from '../../sharedStyles/buildings'
 
 const ARRANGEMENTS_THINGS = {
@@ -68,8 +67,7 @@ export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
         [GHOST_ODIN_CAMPUS]: {
             yIndex: 5,
             xPosition: 5,
-            scaleFactor: 0.2,
-            sharedStyle: ODIN_GHOST__SHARED
+            scaleFactor: 0.2
         }
     }
 }

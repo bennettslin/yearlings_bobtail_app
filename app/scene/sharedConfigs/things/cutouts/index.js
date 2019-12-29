@@ -78,7 +78,7 @@ import {
     WEDDING_CROWD,
     CLIFF_TREE,
     IV_DRIP
-} from '../../../constants/scene/things/cutouts'
+} from '../../../../constants/scene/things/cutouts'
 
 export default {
     [FIRE_HYDRANT]: true,

@@ -60,7 +60,9 @@ import {
     PHONE_CALL_PANEL,
     CROWD_BACK,
     WEDDING_PLATFORM
-} from '../../../constants/scene/things/panels'
+} from '../../../../constants/scene/things/panels'
+
+import { WAITING_ARMCHAIR__SHARED } from '../../../sharedStyles/furniture'
 
 export default {
     [BATHTUB]: true,
@@ -91,12 +93,12 @@ export default {
     [CONVEYOR_BELT]: true,
     [DISHROOM_SINK]: true,
     [BENNETT_BED]: true,
-    [WAITING_ARMCHAIR__BENNETT]: true,
-    [WAITING_ARMREST__BENNETT_LEFT]: true,
-    [WAITING_ARMREST__BENNETT_RIGHT]: true,
-    [WAITING_ARMCHAIR__LIZ]: true,
-    [WAITING_ARMREST__LIZ_LEFT]: true,
-    [WAITING_ARMREST__LIZ_RIGHT]: true,
+    [WAITING_ARMCHAIR__BENNETT]: WAITING_ARMCHAIR__SHARED,
+    [WAITING_ARMREST__BENNETT_LEFT]: WAITING_ARMCHAIR__SHARED,
+    [WAITING_ARMREST__BENNETT_RIGHT]: WAITING_ARMCHAIR__SHARED,
+    [WAITING_ARMCHAIR__LIZ]: WAITING_ARMCHAIR__SHARED,
+    [WAITING_ARMREST__LIZ_LEFT]: WAITING_ARMCHAIR__SHARED,
+    [WAITING_ARMREST__LIZ_RIGHT]: WAITING_ARMCHAIR__SHARED,
     [LIZ_BED]: true,
     [SATURN_INTERIOR]: true,
     [SATURN_SEAT__LEFT]: true,

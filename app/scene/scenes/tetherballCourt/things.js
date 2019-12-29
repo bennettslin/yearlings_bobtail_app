@@ -21,7 +21,6 @@ import {
     SCHOOL_BUNGALOW__RIGHT
 } from '../../../constants/scene/things/flats'
 import { TETHERBALL_POLE__SHARED } from '../../sharedStyles/outdoor'
-import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -29,29 +28,25 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 0,
             xPosition: 9,
             zOffset: 8,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__RIGHT]: {
             yIndex: 0,
             xPosition: 9.5,
             zOffset: 7.75,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_LARGE__RIGHT]: {
             yIndex: 0,
             xPosition: 10,
             zOffset: 7,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [THOUGHT_LARGE__RIGHT]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6,
-            flipHorizontal: true,
-            sharedStyle: BUBBLE__SHARED
+            flipHorizontal: true
         }
     },
     [CUTOUT]: {

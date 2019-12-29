@@ -21,7 +21,6 @@ import {
 import { BENNETT, MARA } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import { POSTER_GLADIATOR__SHARED } from '../../sharedStyles/print'
-import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -29,22 +28,19 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 4.5,
             zOffset: 5.1,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__CINEMA]: {
             yIndex: 5,
             xPosition: 4.75,
             zOffset: 5.3,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_LARGE__CINEMA]: {
             yIndex: 5,
             xPosition: 5.5,
             zOffset: 5.5,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [CINEMA_THOUGHT_RECORDING]: {
             yIndex: 5,

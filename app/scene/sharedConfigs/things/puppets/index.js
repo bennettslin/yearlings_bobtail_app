@@ -24,7 +24,9 @@ import {
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_DEMONSTRATION,
     PUPPET_KHARI_LIZ
-} from '../../../constants/scene/things/puppets'
+} from '../../../../constants/scene/things/puppets'
+
+import { ODIN_GHOST__SHARED } from '../../../sharedStyles/animals'
 
 export default {
     [PUPPET_BENNETT_BEGIN]: true,
@@ -47,9 +49,9 @@ export default {
     [PEACOCK]: true,
     [PEAHEN]: true,
     [PUPPET_REATTA]: true,
-    [GHOST_ODIN_CAMPUS]: true,
-    [GHOST_ODIN_CLUB]: true,
-    [GHOST_ODIN_ALLEY]: true,
-    [GHOST_ODIN_DEMONSTRATION]: true,
+    [GHOST_ODIN_CAMPUS]: ODIN_GHOST__SHARED,
+    [GHOST_ODIN_CLUB]: ODIN_GHOST__SHARED,
+    [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,
+    [GHOST_ODIN_DEMONSTRATION]: ODIN_GHOST__SHARED,
     [PUPPET_KHARI_LIZ]: true
 }

@@ -30,12 +30,10 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
-import { WAITING_ARMCHAIR__SHARED } from '../../sharedStyles/furniture'
 import { DOOR__SHARED } from '../../sharedStyles/home'
 import { BANJO__SHARED } from '../../sharedStyles/instruments'
 import { BENNETT, LIZ } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -75,41 +73,35 @@ const ARRANGEMENTS_THINGS = {
         [WAITING_ARMCHAIR__BENNETT]: {
             yIndex: 3,
             xPosition: 2.5,
-            scaleFactor: 0.22,
-            sharedStyle: WAITING_ARMCHAIR__SHARED
+            scaleFactor: 0.22
         },
         [WAITING_ARMREST__BENNETT_LEFT]: {
             yIndex: 5,
             xPosition: 1.25,
-            scaleFactor: 0.22,
-            sharedStyle: WAITING_ARMCHAIR__SHARED
+            scaleFactor: 0.22
         },
         [WAITING_ARMREST__BENNETT_RIGHT]: {
             yIndex: 5,
             xPosition: 3.75,
             scaleFactor: 0.22,
-            flipHorizontal: true,
-            sharedStyle: WAITING_ARMCHAIR__SHARED
+            flipHorizontal: true
         },
         [WAITING_ARMCHAIR__LIZ]: {
             yIndex: 3,
             xPosition: 5.5,
             scaleFactor: 0.22,
-            flipHorizontal: true,
-            sharedStyle: WAITING_ARMCHAIR__SHARED
+            flipHorizontal: true
         },
         [WAITING_ARMREST__LIZ_LEFT]: {
             yIndex: 5,
             xPosition: 4.25,
-            scaleFactor: 0.22,
-            sharedStyle: WAITING_ARMCHAIR__SHARED
+            scaleFactor: 0.22
         },
         [WAITING_ARMREST__LIZ_RIGHT]: {
             yIndex: 5,
             xPosition: 6.75,
             scaleFactor: 0.22,
-            flipHorizontal: true,
-            sharedStyle: WAITING_ARMCHAIR__SHARED
+            flipHorizontal: true
         }
     }
 }
@@ -120,22 +112,19 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             yIndex: 5,
             xPosition: 1,
             zOffset: 3.2,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__WAITING]: {
             yIndex: 5,
             xPosition: 0.75,
             zOffset: 3.5,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_LARGE__WAITING]: {
             yIndex: 5,
             xPosition: 1.1,
             zOffset: 4,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [WAITING_THOUGHT_WALKING]: {
             yIndex: 5,

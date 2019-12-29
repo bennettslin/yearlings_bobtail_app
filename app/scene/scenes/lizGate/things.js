@@ -33,7 +33,6 @@ import {
     LIZ_GATE__SHARED,
     WINDOW__SHARED
 } from '../../sharedStyles/home'
-import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BACKDROP]: {
@@ -48,15 +47,13 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 5,
             xPosition: 7.5,
             zOffset: 4,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__GO_KART]: {
             yIndex: 5,
             xPosition: 7,
             zOffset: 3.75,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [GO_KART_THOUGHT]: {
             yIndex: 5,

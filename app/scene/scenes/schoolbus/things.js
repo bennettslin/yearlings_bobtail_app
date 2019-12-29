@@ -22,7 +22,6 @@ import {
     SCHOOLBUS_EXTERIOR
 } from '../../../constants/scene/things/panels'
 import { OAKLAND_COMMERCIAL__SHARED } from '../../sharedStyles/buildings'
-import { BUBBLE__SHARED } from '../../sharedStyles/props'
 import { INTERIOR__SHARED } from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
@@ -31,28 +30,24 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 0,
             xPosition: 2,
             zOffset: 8,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_MEDIUM__LEFT]: {
             yIndex: 0,
             xPosition: 1.5,
             zOffset: 7.75,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [BUBBLE_LARGE__LEFT]: {
             yIndex: 0,
             xPosition: 1,
             zOffset: 7,
-            scaleFactor: 0.4,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.4
         },
         [THOUGHT_LARGE__LEFT]: {
             yIndex: 0,
             xPosition: 5.5,
-            scaleFactor: 0.6,
-            sharedStyle: BUBBLE__SHARED
+            scaleFactor: 0.6
         }
     },
     [FIXTURE]: {
