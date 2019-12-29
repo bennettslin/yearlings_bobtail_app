@@ -1,4 +1,5 @@
 .allPeople#{$suffix} {
+    .ashedCross { fill: hsla(9, 5%, 48%, 0.75); }
     .eyeBlob { fill: hsl(0, 0%, 27%); }
     .mouthBlob { fill: hsl(0, 0%, 27%); }
     .sclera { fill: hsl(216, 16%, 94%); }
@@ -27,6 +28,7 @@
     .hairLightBrown { fill: hsl(19, 18%, 55%); }
     .hairMediumBrown { fill: hsl(23, 32%, 39%); }
     .hairDarkBrown { fill: hsl(19, 23%, 32%); }
+    .stubbleBlack { fill: hsl(33, 16%, 44%); }
     .hairBlack { fill: hsl(26, 7%, 25%); }
     .hairBlackDark { fill: hsl(26, 7%, 22%); }
     .hairLightGray { fill: hsl(60, 1%, 61%); }

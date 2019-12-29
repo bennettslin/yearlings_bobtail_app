@@ -25,3 +25,10 @@
 @import "./tristan/style";
 @import "./wade/style";
 @import "./willy/style";
+
+[class^=eyebrow],
+[class^=stubble],
+[class$=Blob]
+ {
+    stroke: none;
+}
