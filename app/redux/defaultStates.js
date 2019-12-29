@@ -10,7 +10,7 @@ import {
 import { SHOWN } from 'constants/options'
 import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
 
-import { getCubesForKey } from 'album/scenes/arrangements/cubes'
+import { getCubesForKey } from 'scene/arrangements/cubes'
 
 import {
     TIME_STAGE,

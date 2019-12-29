@@ -3,7 +3,7 @@ import { CUBE_X_AXIS_LENGTH } from 'constants/cubeIndex'
 import { getHorizontalPlaneFractions } from 'helpers/cube'
 import { getValueInAbridgedMatrix } from 'helpers/general'
 
-import { getCubesForKey } from 'album/scenes/arrangements/cubes'
+import { getCubesForKey } from 'scene/arrangements/cubes'
 
 const _getNearestXIndex = (xPosition) => {
     let xIndex

@@ -1,7 +1,7 @@
 import keys from 'lodash/keys'
 
-import ALL_ARRANGEMENTS_ACTORS from './arrangements'
-import ALL_ARRANGEMENTS_THINGS from './arrangements/things'
+import ALL_ARRANGEMENTS_ACTORS from '../../scene/arrangements/actors'
+import ALL_ARRANGEMENTS_THINGS from '../../scene/arrangements/things'
 
 import { ACTOR } from '../../constants/scene'
 
