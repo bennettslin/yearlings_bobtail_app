@@ -21,15 +21,15 @@ import {
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 import { BENNETT, MIRIAM } from '../../../constants/scene/actors'
-import { FREEWAY_SIGN__SHARED } from '../../shared/outdoor'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { FREEWAY_SIGN__SHARED } from '../../sharedStyles/outdoor'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import {
     FOLIAGE__SHARED
-} from '../../shared/plants'
+} from '../../sharedStyles/plants'
 import {
     INTERIOR__SHARED,
     REATTA__SHARED
-} from '../../shared/vehicles'
+} from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

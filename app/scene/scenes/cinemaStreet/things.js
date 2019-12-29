@@ -17,11 +17,11 @@ import {
     ACOUSTIC_GUITAR__SHARED,
     HEADPHONE__SHARED,
     MICROPHONE__SHARED
-} from '../../shared/instruments'
+} from '../../sharedStyles/instruments'
 import { BENNETT, MARA } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { POSTER_GLADIATOR__SHARED } from '../../shared/print'
-import { BUBBLE__SHARED } from '../../shared/props'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { POSTER_GLADIATOR__SHARED } from '../../sharedStyles/print'
+import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

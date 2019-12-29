@@ -41,18 +41,18 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
-import { PILLOW_PRETEEN_BENNETT__SHARED } from '../../shared/furniture'
-import { WINDOW__SHARED } from '../../shared/home'
-import { SCISSORS__SHARED } from '../../shared/household'
+import { PILLOW_PRETEEN_BENNETT__SHARED } from '../../sharedStyles/furniture'
+import { WINDOW__SHARED } from '../../sharedStyles/home'
+import { SCISSORS__SHARED } from '../../sharedStyles/household'
 import {
     BOOK__SHARED,
     LETTER__SHARED,
     MAGAZINE__SHARED,
     SKETCHBOOK__SHARED
-} from '../../shared/paper'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { DOLLAR__SHARED } from '../../shared/print'
-import { SKETCH_DOGS__SHARED } from '../../shared/sketch'
+} from '../../sharedStyles/paper'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { DOLLAR__SHARED } from '../../sharedStyles/print'
+import { SKETCH_DOGS__SHARED } from '../../sharedStyles/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

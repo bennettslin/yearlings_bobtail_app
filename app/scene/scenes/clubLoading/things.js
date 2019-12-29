@@ -4,12 +4,12 @@ import {
 } from '../../../constants/scene/things'
 import { CLUB_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
-import { DOOR__SHARED } from '../../shared/home'
+import { DOOR__SHARED } from '../../sharedStyles/home'
 import {
     DRUMS__SHARED,
     DRUM_STAND__SHARED,
     DRUM_THRONE__SHARED
-} from '../../shared/instruments'
+} from '../../sharedStyles/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {

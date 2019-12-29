@@ -21,8 +21,8 @@ import {
     OAKLAND_HOUSE__SHARED,
     OAKLAND_HOUSE_LEFT__SHARED,
     OAKLAND_HOUSE_RIGHT__SHARED
-} from '../../shared/buildings'
-import { LAMPPOST__SHARED } from '../../shared/outdoor'
+} from '../../sharedStyles/buildings'
+import { LAMPPOST__SHARED } from '../../sharedStyles/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

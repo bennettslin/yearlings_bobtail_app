@@ -21,9 +21,9 @@ import {
     SCHOOLBUS_SEAT__RIGHT,
     SCHOOLBUS_EXTERIOR
 } from '../../../constants/scene/things/panels'
-import { OAKLAND_COMMERCIAL__SHARED } from '../../shared/buildings'
-import { BUBBLE__SHARED } from '../../shared/props'
-import { INTERIOR__SHARED } from '../../shared/vehicles'
+import { OAKLAND_COMMERCIAL__SHARED } from '../../sharedStyles/buildings'
+import { BUBBLE__SHARED } from '../../sharedStyles/props'
+import { INTERIOR__SHARED } from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

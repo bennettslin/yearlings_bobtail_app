@@ -16,7 +16,7 @@ import {
     BENNETT_GATE__SHARED,
     DOOR__SHARED,
     WINDOW__SHARED
-} from '../../shared/home'
+} from '../../sharedStyles/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

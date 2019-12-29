@@ -12,8 +12,8 @@ import { CROWD_SIDE } from '../../../constants/scene/things/panels'
 import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
-} from '../../shared/instruments'
-import { SHADOW__SHARED } from '../../shared/props'
+} from '../../sharedStyles/instruments'
+import { SHADOW__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

@@ -9,7 +9,7 @@ import {
     OAKLAND_SCHOOL,
     OAKLAND_FLAG
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_HOUSE__SHARED } from '../../shared/buildings'
+import { OAKLAND_HOUSE__SHARED } from '../../sharedStyles/buildings'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

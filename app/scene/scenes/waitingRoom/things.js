@@ -30,12 +30,12 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
-import { WAITING_ARMCHAIR__SHARED } from '../../shared/furniture'
-import { DOOR__SHARED } from '../../shared/home'
-import { BANJO__SHARED } from '../../shared/instruments'
+import { WAITING_ARMCHAIR__SHARED } from '../../sharedStyles/furniture'
+import { DOOR__SHARED } from '../../sharedStyles/home'
+import { BANJO__SHARED } from '../../sharedStyles/instruments'
 import { BENNETT, LIZ } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { BUBBLE__SHARED } from '../../shared/props'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

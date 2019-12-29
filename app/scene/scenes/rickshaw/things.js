@@ -9,10 +9,10 @@ import {
     ODIN_SHORE
 } from '../../../constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../shared/animals'
-import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
+import { TAIWAN_HOUSE__SHARED } from '../../sharedStyles/buildings'
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

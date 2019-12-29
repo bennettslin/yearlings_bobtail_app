@@ -10,11 +10,11 @@ import {
 
 import { getSharedClassNames } from '../../../helpers/format'
 
-import { HEADPHONE__SHARED } from '../../../scene/shared/instruments'
-import { BOOK__SHARED } from '../../../scene/shared/paper'
+import { HEADPHONE__SHARED } from '../../../scene/sharedStyles/instruments'
+import { BOOK__SHARED } from '../../../scene/sharedStyles/paper'
 import { OLD_BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../../scene/shared/people'
-import { SNOWGLOBE__SHARED } from '../../../scene/shared/props'
+import { ALL_PEOPLE__SHARED } from '../../../scene/sharedStyles/people'
+import { SNOWGLOBE__SHARED } from '../../../scene/sharedStyles/props'
 
 export const getButtonIconClassNames = ({ buttonName, buttonIdentifier }) => {
     let className

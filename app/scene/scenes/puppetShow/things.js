@@ -39,11 +39,11 @@ import {
     PUPPET_FATHER_END,
     PUPPET_MOTHER_END
 } from '../../../constants/scene/things/puppets'
-import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
+import { TAIWAN_HOUSE__SHARED } from '../../sharedStyles/buildings'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
-} from '../../shared/paper'
+} from '../../sharedStyles/paper'
 import {
     ANITA,
     BENNETT,
@@ -51,9 +51,9 @@ import {
     FATHER,
     MOTHER
 } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { SKETCH_PEOPLE__SHARED } from '../../shared/sketch'
-import { TAIWAN_MOUNTAIN__SHARED } from '../../shared/taiwan'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { SKETCH_PEOPLE__SHARED } from '../../sharedStyles/sketch'
+import { TAIWAN_MOUNTAIN__SHARED } from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

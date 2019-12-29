@@ -14,9 +14,9 @@ import {
     SATURN_SEAT__LEFT,
     SATURN_SEAT__RIGHT
 } from '../../../constants/scene/things/panels'
-import { EVIAN__SHARED } from '../../shared/food'
-import { SKETCH_PEOPLE__SHARED } from '../../shared/sketch'
-import { INTERIOR__SHARED } from '../../shared/vehicles'
+import { EVIAN__SHARED } from '../../sharedStyles/food'
+import { SKETCH_PEOPLE__SHARED } from '../../sharedStyles/sketch'
+import { INTERIOR__SHARED } from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {

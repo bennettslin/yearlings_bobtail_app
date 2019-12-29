@@ -11,15 +11,15 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
-import { BUDWEISER__SHARED } from '../../shared/food'
-import { DOOR__SHARED } from '../../shared/home'
+import { BUDWEISER__SHARED } from '../../sharedStyles/food'
+import { DOOR__SHARED } from '../../sharedStyles/home'
 import {
     BASS_CASE__SHARED,
     DRUMS__SHARED,
     DRUM_STAND__SHARED,
     DRUM_THRONE__SHARED,
     GUITAR_CASE__SHARED
-} from '../../shared/instruments'
+} from '../../sharedStyles/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {

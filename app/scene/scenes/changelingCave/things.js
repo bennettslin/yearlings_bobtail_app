@@ -12,7 +12,7 @@ import {
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR
 } from '../../../constants/scene/things/panels'
-import { SHADOW__SHARED } from '../../shared/props'
+import { SHADOW__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

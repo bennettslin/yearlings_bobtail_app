@@ -19,8 +19,8 @@ import {
     DRUM_STAND__SHARED,
     ELECTRIC_GUITAR__SHARED,
     MONITOR__SHARED
-} from '../../shared/instruments'
-import { DOLLAR__SHARED } from '../../shared/print'
+} from '../../sharedStyles/instruments'
+import { DOLLAR__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

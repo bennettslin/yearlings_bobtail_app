@@ -12,7 +12,7 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
 } from '../../../constants/scene/things/flats'
-import { PALM_TREE__SHARED } from '../../shared/plants'
+import { PALM_TREE__SHARED } from '../../sharedStyles/plants'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [NOHO_HOUSES_BACKDROP]: {

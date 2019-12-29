@@ -9,9 +9,9 @@ import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
 } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../shared/animals'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

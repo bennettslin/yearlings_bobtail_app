@@ -9,12 +9,12 @@ import {
     OVERPASS_SIGN_BACK
 } from '../../../constants/scene/things/cutouts'
 import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
-import { GARBAGE_BAG__SHARED } from '../../shared/food'
-import { FREEWAY_SIGN__SHARED } from '../../shared/outdoor'
+import { GARBAGE_BAG__SHARED } from '../../sharedStyles/food'
+import { FREEWAY_SIGN__SHARED } from '../../sharedStyles/outdoor'
 import {
     FOLIAGE__SHARED,
     PALM_TREE__SHARED
-} from '../../shared/plants'
+} from '../../sharedStyles/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

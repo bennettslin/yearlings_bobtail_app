@@ -9,11 +9,11 @@ import {
     ODIN_TAIWAN_GATE
 } from '../../../constants/scene/things/cardboards'
 import { IRON_GATE_LOW } from '../../../constants/scene/things/doors'
-import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
-import { ODIN__SHARED } from '../../shared/animals'
-import { TAIWAN_GATE__SHARED } from '../../shared/home'
+import { TAIWAN_HOUSE__SHARED } from '../../sharedStyles/buildings'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
+import { TAIWAN_GATE__SHARED } from '../../sharedStyles/home'
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

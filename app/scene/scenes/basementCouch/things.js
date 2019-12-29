@@ -7,8 +7,8 @@ import {
     ELLIOTT_SMITH_POSTER
 } from '../../../constants/scene/things/cardboards'
 import { BASEMENT_DOOR_SIDE } from '../../../constants/scene/things/doors'
-import { DOOR__SHARED } from '../../shared/home'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { DOOR__SHARED } from '../../sharedStyles/home'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

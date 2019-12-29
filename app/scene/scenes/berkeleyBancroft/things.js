@@ -11,10 +11,10 @@ import {
 import { BANCROFT_DOOR } from '../../../constants/scene/things/doors'
 import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
-import { ODIN_GHOST__SHARED } from '../../shared/animals'
-import { BERKELEY_BUILDING__SHARED } from '../../shared/buildings'
-import { CIGARETTE__SHARED } from '../../shared/food'
-import { DOOR__SHARED } from '../../shared/home'
+import { ODIN_GHOST__SHARED } from '../../sharedStyles/animals'
+import { BERKELEY_BUILDING__SHARED } from '../../sharedStyles/buildings'
+import { CIGARETTE__SHARED } from '../../sharedStyles/food'
+import { DOOR__SHARED } from '../../sharedStyles/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

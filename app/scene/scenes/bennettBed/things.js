@@ -20,17 +20,17 @@ import {
 } from '../../../constants/scene/things/fixtures'
 import { BENNETT_PILLOW } from '../../../constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
-import { PILLOW_BENNETT__SHARED } from '../../shared/furniture'
+import { PILLOW_BENNETT__SHARED } from '../../sharedStyles/furniture'
 import {
     BENNETT_GATE__SHARED,
     DOOR__SHARED,
     WINDOW__SHARED
-} from '../../shared/home'
+} from '../../sharedStyles/home'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
-} from '../../shared/paper'
-import { SHADOW__SHARED } from '../../shared/props'
+} from '../../sharedStyles/paper'
+import { SHADOW__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {

@@ -4,9 +4,9 @@ import {
     SEA_SERPENT_LEFT,
     SEA_SERPENT_RIGHT
 } from '../../../constants/scene/things/cardboards'
-import { ODIN__SHARED } from '../../shared/animals'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

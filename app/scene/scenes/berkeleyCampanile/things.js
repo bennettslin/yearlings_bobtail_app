@@ -15,8 +15,8 @@ import {
     BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
-import { ODIN_GHOST__SHARED } from '../../shared/animals'
-import { BERKELEY_BUILDING__SHARED } from '../../shared/buildings'
+import { ODIN_GHOST__SHARED } from '../../sharedStyles/animals'
+import { BERKELEY_BUILDING__SHARED } from '../../sharedStyles/buildings'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

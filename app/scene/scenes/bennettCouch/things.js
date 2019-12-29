@@ -21,8 +21,8 @@ import {
     WIDE_ARMREST__BENNETT_LEFT,
     WIDE_ARMREST__BENNETT_RIGHT
 } from '../../../constants/scene/things/panels'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { PROGRESS_CHART__SHARED } from '../../shared/print'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { PROGRESS_CHART__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {

@@ -9,10 +9,10 @@ import {
     MARQUEE_FRAME__MARA_GLADIATOR
 } from '../../../constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
-import { DOOR__SHARED } from '../../shared/home'
+import { DOOR__SHARED } from '../../sharedStyles/home'
 import { MARA } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { POSTER_GLADIATOR__SHARED } from '../../shared/print'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { POSTER_GLADIATOR__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

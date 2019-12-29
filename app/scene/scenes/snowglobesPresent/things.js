@@ -18,9 +18,9 @@ import {
 import {
     ROAD__SHARED,
     SNOWGLOBE__SHARED
-} from '../../shared/props'
+} from '../../sharedStyles/props'
 import { BENNETT, LIZ } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

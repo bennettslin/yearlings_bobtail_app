@@ -9,7 +9,7 @@ import {
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT
 } from '../../../constants/scene/things/flats'
-import { PALM_TREE__SHARED } from '../../shared/plants'
+import { PALM_TREE__SHARED } from '../../sharedStyles/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

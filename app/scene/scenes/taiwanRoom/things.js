@@ -12,12 +12,12 @@ import {
     TAIWAN_FRIDGE
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
-import { ODIN__SHARED } from '../../shared/animals'
-import { ACOUSTIC_GUITAR__SHARED } from '../../shared/instruments'
-import { SKETCHBOOK__SHARED } from '../../shared/paper'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
+import { ACOUSTIC_GUITAR__SHARED } from '../../sharedStyles/instruments'
+import { SKETCHBOOK__SHARED } from '../../sharedStyles/paper'
 import { BENNETT, SASHA } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { BUDDHA_SHRINE__SHARED } from '../../shared/taiwan'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { BUDDHA_SHRINE__SHARED } from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

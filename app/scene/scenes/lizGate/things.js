@@ -28,12 +28,12 @@ import {
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_HOUSE__SHARED } from '../../shared/buildings'
+import { OAKLAND_HOUSE__SHARED } from '../../sharedStyles/buildings'
 import {
     LIZ_GATE__SHARED,
     WINDOW__SHARED
-} from '../../shared/home'
-import { BUBBLE__SHARED } from '../../shared/props'
+} from '../../sharedStyles/home'
+import { BUBBLE__SHARED } from '../../sharedStyles/props'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BACKDROP]: {

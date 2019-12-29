@@ -7,9 +7,9 @@ import {
     DISPENSER_RIGHT
 } from '../../../constants/scene/things/cutouts'
 import { EL_TORITO_DOORS } from '../../../constants/scene/things/doors'
-import { DOOR__SHARED } from '../../shared/home'
-import { NEWSPAPER__SHARED } from '../../shared/paper'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { DOOR__SHARED } from '../../sharedStyles/home'
+import { NEWSPAPER__SHARED } from '../../sharedStyles/paper'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

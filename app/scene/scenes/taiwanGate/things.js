@@ -12,12 +12,12 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
 } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../shared/animals'
-import { TAIWAN_HOUSE__SHARED } from '../../shared/buildings'
-import { TAIWAN_GATE__SHARED } from '../../shared/home'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
+import { TAIWAN_HOUSE__SHARED } from '../../sharedStyles/buildings'
+import { TAIWAN_GATE__SHARED } from '../../sharedStyles/home'
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { TAIWAN_RICKSHAW__SHARED } from '../../shared/taiwan'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { TAIWAN_RICKSHAW__SHARED } from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {

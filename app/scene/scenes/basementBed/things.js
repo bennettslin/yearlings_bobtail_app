@@ -4,10 +4,10 @@ import {
 } from '../../../constants/scene/things'
 import { BASEMENT_DOOR } from '../../../constants/scene/things/doors'
 import { CRACKED_PICTURE } from '../../../constants/scene/things/fixtures'
-import { DOOR__SHARED } from '../../shared/home'
+import { DOOR__SHARED } from '../../sharedStyles/home'
 import { BENNETT, LIZ } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { PROMISE_PHOTO__SHARED } from '../../shared/print'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { PROMISE_PHOTO__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {

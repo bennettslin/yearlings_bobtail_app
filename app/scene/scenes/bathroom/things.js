@@ -11,7 +11,7 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { RECORD_PLAYER_STOOL } from '../../../constants/scene/things/fixtures'
 import { BATHTUB } from '../../../constants/scene/things/panels'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [PANEL]: {

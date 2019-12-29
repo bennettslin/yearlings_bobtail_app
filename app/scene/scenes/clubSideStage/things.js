@@ -19,7 +19,7 @@ import {
     GUITAR_CASE__SHARED,
     MICROPHONE__SHARED,
     MONITOR__SHARED
-} from '../../shared/instruments'
+} from '../../sharedStyles/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

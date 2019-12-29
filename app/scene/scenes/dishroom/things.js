@@ -20,8 +20,8 @@ import {
     CUP__SHARED,
     DISH__SHARED,
     TRAY__SHARED
-} from '../../shared/dishroom'
-import { DOOR__SHARED } from '../../shared/home'
+} from '../../sharedStyles/dishroom'
+import { DOOR__SHARED } from '../../sharedStyles/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

@@ -9,7 +9,7 @@ import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
 } from '../../../constants/scene/things/flats'
-import { LAMPPOST__SHARED } from '../../shared/outdoor'
+import { LAMPPOST__SHARED } from '../../sharedStyles/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

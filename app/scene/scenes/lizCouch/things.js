@@ -31,28 +31,28 @@ import {
 import {
     OPAL__SHARED,
     PEAFOWL__SHARED
-} from '../../shared/animals'
+} from '../../sharedStyles/animals'
 import {
     DOOR__SHARED,
     WINDOW__SHARED,
     LIZ_GATE__SHARED
-} from '../../shared/home'
+} from '../../sharedStyles/home'
 import {
     BANJO__SHARED,
     ACOUSTIC_GUITAR__SHARED,
     MICROPHONE__SHARED,
     MONITOR__SHARED
-} from '../../shared/instruments'
+} from '../../sharedStyles/instruments'
 import {
     AMY,
     BENNETT,
     LIZ
 } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import {
     BUBBLE__SHARED,
     SHADOW__SHARED
-} from '../../shared/props'
+} from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {

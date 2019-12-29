@@ -9,13 +9,13 @@ import {
     SNOWGLOBE_PAST
 } from '../../../constants/scene/things/cardboards'
 import { SNOWGLOBE__TETHERBALL } from '../../../constants/scene/things/panels'
-import { BOOK__SHARED } from '../../shared/paper'
+import { BOOK__SHARED } from '../../sharedStyles/paper'
 import {
     ROAD__SHARED,
     SNOWGLOBE__SHARED
-} from '../../shared/props'
+} from '../../sharedStyles/props'
 import { BENNETT, CHRISTOPHER } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

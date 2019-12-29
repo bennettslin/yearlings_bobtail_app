@@ -12,7 +12,7 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_COMMERCIAL__SHARED } from '../../shared/buildings'
+import { OAKLAND_COMMERCIAL__SHARED } from '../../sharedStyles/buildings'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OAKLAND_FRONT__MIDWAY]: {

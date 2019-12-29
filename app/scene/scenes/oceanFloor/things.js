@@ -12,13 +12,13 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from '../../../constants/scene/things/panels'
-import { ODIN__SHARED } from '../../shared/animals'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import {
     BUDDHA_SHRINE__SHARED,
     TAIWAN_PILLOW__SHARED
-} from '../../shared/taiwan'
+} from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

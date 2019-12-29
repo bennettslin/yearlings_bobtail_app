@@ -16,9 +16,9 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
-import { PAPER_BAG__SHARED } from '../../shared/food'
-import { DOOR__SHARED } from '../../shared/home'
-import { PALM_TREE__SHARED } from '../../shared/plants'
+import { PAPER_BAG__SHARED } from '../../sharedStyles/food'
+import { DOOR__SHARED } from '../../sharedStyles/home'
+import { PALM_TREE__SHARED } from '../../sharedStyles/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

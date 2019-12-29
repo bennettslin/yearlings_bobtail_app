@@ -16,7 +16,7 @@ import {
     BANANA__SHARED,
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED
-} from '../../shared/food'
+} from '../../sharedStyles/food'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {

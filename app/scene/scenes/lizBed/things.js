@@ -19,12 +19,12 @@ import {
     PHONE_CALL_PANEL,
     LIZ_BED
 } from '../../../constants/scene/things/panels'
-import { LIZ_PHONE__SHARED } from '../../shared/household'
+import { LIZ_PHONE__SHARED } from '../../sharedStyles/household'
 import {
     PILLOW_BOYFRIEND__SHARED,
     PILLOW_LIZ__SHARED
-} from '../../shared/furniture'
-import { SHADOW__SHARED } from '../../shared/props'
+} from '../../sharedStyles/furniture'
+import { SHADOW__SHARED } from '../../sharedStyles/props'
 import { BENNETT } from '../../../constants/scene/actors'
 
 const ARRANGEMENTS_THINGS = {

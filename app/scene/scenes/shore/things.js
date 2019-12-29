@@ -11,10 +11,10 @@ import {
     FERRIS_WHEEL,
     ROLLER_COASTER
 } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../shared/animals'
+import { ODIN__SHARED } from '../../sharedStyles/animals'
 import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../shared/people'
-import { TAIWAN_BUOY__SHARED } from '../../shared/taiwan'
+import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
+import { TAIWAN_BUOY__SHARED } from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {

@@ -19,12 +19,12 @@ import {
     BANANA__SHARED,
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED
-} from '../../shared/food'
+} from '../../sharedStyles/food'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
-} from '../../shared/paper'
-import { SKETCH_DOGS__SHARED } from '../../shared/sketch'
+} from '../../sharedStyles/paper'
+import { SKETCH_DOGS__SHARED } from '../../sharedStyles/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
