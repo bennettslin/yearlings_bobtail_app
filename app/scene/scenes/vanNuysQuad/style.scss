@@ -1,8 +1,8 @@
 .vanNuysLogo {
-    .gray { fill: #666; }
-    .beige { fill: #ccc; }
+    .gray { fill: hsl(0, 0%, 40%); }
+    .beige { fill: hsl(0, 0%, 80%); }
     .logo,
-    .magenta { fill: #936; }
+    .magenta { fill: hsl(330, 30%, 40%); }
 }
 
 .escapePodSketch {

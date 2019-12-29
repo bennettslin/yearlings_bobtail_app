@@ -9,6 +9,7 @@ import {
     CEMETERY_HILLS_LEFT,
     CEMETERY_HILLS_RIGHT
 } from '../../../constants/scene/things/flats'
+import { PALM_TREE__SHARED } from '../../shared/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -30,14 +31,16 @@ const ARRANGEMENTS_THINGS = {
             xPosition: -1.25,
             scaleFactor: 0.4,
             trimBottom: 0.2,
-            alignLeft: true
+            alignLeft: true,
+            sharedStyle: PALM_TREE__SHARED
         },
         [CEMETERY_HILLS_RIGHT]: {
             yIndex: 2,
             xPosition: 12,
             scaleFactor: 0.4,
             trimBottom: 0.2,
-            alignRight: true
+            alignRight: true,
+            sharedStyle: PALM_TREE__SHARED
         }
     }
 }

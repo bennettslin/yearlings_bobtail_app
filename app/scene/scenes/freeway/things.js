@@ -11,6 +11,7 @@ import {
 import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
 import { GARBAGE_BAG__SHARED } from '../../shared/food'
 import { FREEWAY_SIGN__SHARED } from '../../shared/outdoor'
+import { PALM_TREE__SHARED } from '../../shared/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -40,7 +41,10 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 5.5,
             scaleFactor: 0.625,
-            sharedStyle: FREEWAY_SIGN__SHARED
+            sharedStyle: [
+                FREEWAY_SIGN__SHARED,
+                PALM_TREE__SHARED
+            ]
         }
     }
 }

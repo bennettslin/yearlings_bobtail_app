@@ -18,13 +18,15 @@ import {
 } from '../../../constants/scene/things/fixtures'
 import { PAPER_BAG__SHARED } from '../../shared/food'
 import { DOOR__SHARED } from '../../shared/home'
+import { PALM_TREE__SHARED } from '../../shared/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [SCHOOL_BACKDROP]: {
             xPosition: 5.5,
             scaleFactor: 0.66,
-            trimBottom: 0.05
+            trimBottom: 0.05,
+            sharedStyle: PALM_TREE__SHARED
         },
         [BRICK_WALL]: {
             xPosition: 5.5,
