@@ -24,6 +24,9 @@ import { BENNETT, MIRIAM } from '../../../constants/scene/actors'
 import { FREEWAY_SIGN__SHARED } from '../../shared/outdoor'
 import { ALL_PEOPLE__SHARED } from '../../shared/people'
 import {
+    FOLIAGE__SHARED
+} from '../../shared/plants'
+import {
     INTERIOR__SHARED,
     REATTA__SHARED
 } from '../../shared/vehicles'
@@ -56,12 +59,14 @@ const ARRANGEMENTS_THINGS = {
         [EL_CERRITO_FAR]: {
             xPosition: 10.1,
             scaleFactor: 0.47,
-            trimBottom: 0.05
+            trimBottom: 0.05,
+            sharedStyle: FOLIAGE__SHARED
         },
         [EL_CERRITO_NEAR]: {
             yIndex: 5,
             xPosition: 8.75,
-            scaleFactor: 0.4
+            scaleFactor: 0.4,
+            sharedStyle: FOLIAGE__SHARED
         }
     },
     [PANEL]: {
