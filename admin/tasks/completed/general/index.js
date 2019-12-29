@@ -5123,8 +5123,8 @@ export default [
         neededHours: 4
     },
     {
-        taskName: `Do shared colours of all faces.`,
-        workedHours: 4,
-        neededHours: 4
+        taskName: `Do colours of all faces.`,
+        workedHours: 6,
+        neededHours: 6
     }
 ]
