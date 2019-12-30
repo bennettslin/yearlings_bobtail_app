@@ -1,14 +1,14 @@
 .banjo#{$suffix} {
-    .banjoHeadstock { fill: #adad9c; }
-    .banjoHead { fill: #cfcfc7; }
-    .banjoSide { fill: #7d7d70; }
-    .brassDark { fill: #899399; }
-    .hoop { fill: #7b848a; }
-    .tuningKey { fill: #c2cfcf; }
-    .brassLight { fill: #9ea9b0; }
-    .banjoNeck { fill: #babaa7; }
-    .banjoFretboard { fill: #c7c6b3; }
-    .bridgeFront { fill: #a6a695; }
-    .bridgeSide { fill: #b5b5a3; }
-    .bridgeNut { fill: #ccccb7; }
+    .banjoHeadstock { fill: hsl(60, 9%, 65%); }
+    .banjoHead { fill: hsl(60, 8%, 80%); }
+    .banjoSide { fill: hsl(60, 5%, 46%); }
+    .brassDark { fill: hsl(203, 7%, 57%); }
+    .hoop { fill: hsl(204, 6%, 51%); }
+    .tuningKey { fill: hsl(180, 12%, 79%); }
+    .brassLight { fill: hsl(203, 10%, 65%); }
+    .banjoNeck { fill: hsl(60, 12%, 69%); }
+    .banjoFretboard { fill: hsl(57, 15%, 74%); }
+    .bridgeFront { fill: hsl(60, 9%, 62%); }
+    .bridgeSide { fill: hsl(60, 11%, 67%); }
+    .bridgeNut { fill: hsl(60, 17%, 76%); }
 }

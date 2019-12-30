@@ -1,239 +1,239 @@
 .backpackBennett {
-    .backpackStrapLight { fill: #7ca8a8; }
-    .backpackStrapDark { fill: #6f9696; }
-    .backpackAdjusterDark { fill: #6a7878; }
-    .backpackAdjusterLight { fill: #768585; }
-    .backpackPocketMedium { fill: #598a8a; }
-    .backpackDark { fill: #6ca9b5; }
-    .backpackLight { fill: #75b7c4; }
-    .backpackPocketLight { fill: #609696; }
-    .backpackMedium { fill: #72b1bd; }
-    .backpackReflector { fill: #97bdbd; }
-    .backpackLightest { fill: #7abecc; }
-    .backpackZipperTeeth { fill: #969ba6; }
-    .backpackZipperPull { fill: #5c5f66; }
+    .backpackStrapLight { fill: hsl(180, 20%, 57%); }
+    .backpackStrapDark { fill: hsl(180, 16%, 51%); }
+    .backpackAdjusterDark { fill: hsl(180, 6%, 44%); }
+    .backpackAdjusterLight { fill: hsl(180, 6%, 49%); }
+    .backpackPocketMedium { fill: hsl(180, 22%, 45%); }
+    .backpackDark { fill: hsl(190, 33%, 57%); }
+    .backpackLight { fill: hsl(190, 40%, 61%); }
+    .backpackPocketLight { fill: hsl(180, 22%, 48%); }
+    .backpackMedium { fill: hsl(190, 36%, 59%); }
+    .backpackReflector { fill: hsl(180, 22%, 67%); }
+    .backpackLightest { fill: hsl(190, 45%, 64%); }
+    .backpackZipperTeeth { fill: hsl(221, 8%, 62%); }
+    .backpackZipperPull { fill: hsl(222, 5%, 38%); }
 }
 
 .balledFoil {
-    .foil { fill: #b2c2cf; }
+    .foil { fill: hsl(207, 23%, 75%); }
 }
 
 .basementBeerCase {
-    .boxDark { fill: #ab6450; }
-    .boxLight { fill: #ba6d57; }
-    .flap { fill: #756b58; }
-    .flapDark { fill: #a15e4b; }
-    .flapLight { fill: #c2725b; }
-    .boxHole { fill: #4a4437; }
-    .mountainDark { fill: #9171a3; }
-    .mountainLight { fill: #a37fb8; }
-    .iceDark { fill: #7ea8b5; }
-    .iceLight { fill: #8cbbc9; }
+    .boxDark { fill: hsl(13, 36%, 49%); }
+    .boxLight { fill: hsl(13, 42%, 54%); }
+    .flap { fill: hsl(39, 14%, 40%); }
+    .flapDark { fill: hsl(13, 36%, 46%); }
+    .flapLight { fill: hsl(13, 46%, 56%); }
+    .boxHole { fill: hsl(41, 15%, 25%); }
+    .mountainDark { fill: hsl(278, 21%, 54%); }
+    .mountainLight { fill: hsl(278, 29%, 61%); }
+    .iceDark { fill: hsl(194, 27%, 60%); }
+    .iceLight { fill: hsl(194, 36%, 67%); }
 }
 
 .bennettCouchLamp {
-    .baseSide { fill: #82817b; }
-    .baseTop { fill: #a6a59d; }
-    .neck { fill: #919089; }
-    .lampshade { fill: #cccfbe; }
+    .baseSide { fill: hsl(51, 3%, 50%); }
+    .baseTop { fill: hsl(53, 5%, 63%); }
+    .neck { fill: hsl(53, 4%, 55%); }
+    .lampshade { fill: hsl(71, 15%, 78%); }
 }
 
 .bennettRecordPlayer {
-    .baseBottom { fill: #a67451; }
-    .baseFront { fill: #966949; }
-    .baseTop { fill: #b57f58; }
-    .coverFront { fill: rgba(175, 150, 125, 0.5); }
-    .coverSide { fill: rgba(150, 125, 100, 0.5); }
-    .coverRear { fill: rgba(125, 100, 75, 0.5); }
-    .silverFront { fill: #839e9d; }
-    .silverTop { fill: #94b3b1; }
-    .plasticSide { fill: #5d6b65; }
-    .plasticFront { fill: #525e59; }
-    .plasticTop { fill: #687871; }
-    .record { fill: #4a5450; }
-    .label { fill: #acb37b; }
-    .bar { fill: #8f9c9b; }
+    .baseBottom { fill: hsl(25, 34%, 48%); }
+    .baseFront { fill: hsl(25, 35%, 44%); }
+    .baseTop { fill: hsl(25, 39%, 53%); }
+    .coverFront { fill: hsla(30, 24%, 59%, 0.5); }
+    .coverSide { fill: hsla(30, 20%, 49%, 0.5); }
+    .coverRear { fill: hsla(30, 25%, 39%, 0.5); }
+    .silverFront { fill: hsl(178, 12%, 57%); }
+    .silverTop { fill: hsl(176, 17%, 64%); }
+    .plasticSide { fill: hsl(154, 7%, 39%); }
+    .plasticFront { fill: hsl(155, 7%, 35%); }
+    .plasticTop { fill: hsl(154, 7%, 44%); }
+    .record { fill: hsl(156, 6%, 31%); }
+    .label { fill: hsl(68, 27%, 59%); }
+    .bar { fill: hsl(175, 6%, 59%); }
 }
 
 .captainBedLamp {
-    .baseSide { fill: #81a371; }
-    .baseTop { fill: #93ba81; }
-    .mount { fill: #9c9c9c; }
-    .neck { fill: #bfc2b8; }
-    .dial { fill: #7c9c6c; }
-    .lampshadeInner { fill: #b5d9a3; }
-    .bulb { fill: #eaedd5; }
-    .lampshadeOuter { fill: #89ad78; }
+    .baseSide { fill: hsl(101, 21%, 54%); }
+    .baseTop { fill: hsl(101, 29%, 62%); }
+    .mount { fill: hsl(0, 0%, 61%); }
+    .neck { fill: hsl(78, 8%, 74%); }
+    .dial { fill: hsl(100, 20%, 52%); }
+    .lampshadeInner { fill: hsl(100, 42%, 75%); }
+    .bulb { fill: hsl(68, 40%, 88%); }
+    .lampshadeOuter { fill: hsl(101, 24%, 57%); }
 }
 
 .cashBox {
-    .boxDark { fill: #a38aa6; }
-    .boxMedium { fill: #bfa2c2; }
-    .boxLight { fill: #cbaccf; }
-    .boxInset { fill: #c0a3c4; }
+    .boxDark { fill: hsl(294, 14%, 60%); }
+    .boxMedium { fill: hsl(294, 21%, 70%); }
+    .boxLight { fill: hsl(293, 27%, 74%); }
+    .boxInset { fill: hsl(293, 22%, 70%); }
 }
 
 .crackedPicture {
-    .crack { fill: #b4b589; }
+    .crack { fill: hsl(61, 23%, 62%); }
 }
 
 .fridgeDrawings {
-    .trollShoes { fill: #544e3d; }
-    .trollPants { fill: #736b54; }
-    .trollShirt { fill: #7587a3; }
-    .trollHat { fill: #7b75a3; }
-    .skinTroll { fill: #75a381; }
-    .eyeBlob { fill: #616161; }
+    .trollShoes { fill: hsl(44, 16%, 28%); }
+    .trollPants { fill: hsl(45, 16%, 39%); }
+    .trollShirt { fill: hsl(217, 20%, 55%); }
+    .trollHat { fill: hsl(248, 20%, 55%); }
+    .skinTroll { fill: hsl(136, 20%, 55%); }
+    .eyeBlob { fill: hsl(0, 0%, 38%); }
 }
 
 .haircutScissors {
-    .handle { fill: #c76288; }
+    .handle { fill: hsl(337, 47%, 58%); }
 }
 
 .hospitalRecordPlayer {
-    .baseSide { fill: #73654e; }
-    .baseFront { fill: #87775c; }
-    .trimSide { fill: #bdb17f; }
-    .trimFront { fill: #aba073; }
-    .trimTop { fill: #c7ba86; }
-    .silverDark { fill: #7f9997; }
-    .hornOuter { fill: #b5a357; }
-    .hornInner { fill: #bdac66; }
-    .silverMedium { fill: #8ba8a7; }
-    .record { fill: #4a5450; }
-    .label { fill: #acb37b; }
-    .stylusSide { fill: #a9b364; }
-    .stylusFront { fill: #949c57; }
-    .silverLight { fill: #96b5b4; }
+    .baseSide { fill: hsl(37, 19%, 38%); }
+    .baseFront { fill: hsl(38, 19%, 45%); }
+    .trimSide { fill: hsl(48, 32%, 62%); }
+    .trimFront { fill: hsl(48, 25%, 56%); }
+    .trimTop { fill: hsl(48, 37%, 65%); }
+    .silverDark { fill: hsl(175, 11%, 55%); }
+    .hornOuter { fill: hsl(49, 39%, 53%); }
+    .hornInner { fill: hsl(48, 40%, 57%); }
+    .silverMedium { fill: hsl(178, 14%, 60%); }
+    .record { fill: hsl(156, 6%, 31%); }
+    .label { fill: hsl(68, 27%, 59%); }
+    .stylusSide { fill: hsl(68, 34%, 55%); }
+    .stylusFront { fill: hsl(67, 28%, 48%); }
+    .silverLight { fill: hsl(178, 17%, 65%); }
 }
 
 .keyboard {
-    .bodyBottom { fill: #7f8485; }
-    .bodySide { fill: #8b9091; }
-    .bodyFront { fill: #979d9e; }
-    .bodyTop { fill: #a5acad; }
-    .keyBlack { fill: #594c41; }
-    .keyWhiteBottom { fill: #d9d7cd; }
-    .keyWhiteTop { fill: #f2f0e6; }
+    .bodyBottom { fill: hsl(190, 2%, 51%); }
+    .bodySide { fill: hsl(190, 3%, 56%); }
+    .bodyFront { fill: hsl(189, 3%, 61%); }
+    .bodyTop { fill: hsl(188, 5%, 66%); }
+    .keyBlack { fill: hsl(28, 16%, 30%); }
+    .keyWhiteBottom { fill: hsl(50, 14%, 83%); }
+    .keyWhiteTop { fill: hsl(50, 32%, 93%); }
     .wheelDisplayLine { fill: none; }
-    .panel { fill: #b1b9ba; }
-    .dialSide { fill: #6f827d; }
-    .dialTop { fill: #c7ded7; }
-    .label { fill: #ccc395; }
-    .wheel { fill: #7a8f89; }
+    .panel { fill: hsl(187, 6%, 71%); }
+    .dialSide { fill: hsl(164, 8%, 47%); }
+    .dialTop { fill: hsl(162, 26%, 83%); }
+    .label { fill: hsl(50, 35%, 69%); }
+    .wheel { fill: hsl(163, 9%, 52%); }
 }
 
 .lightSwitch {
-    .switchPanel { fill: #d1cbae; }
-    .switchInner { fill: #adad98; }
-    .switchDark { fill: #c3c4ac; }
-    .switchLight { fill: #dddec3; }
+    .switchPanel { fill: hsl(50, 28%, 75%); }
+    .switchInner { fill: hsl(60, 11%, 64%); }
+    .switchDark { fill: hsl(63, 17%, 72%); }
+    .switchLight { fill: hsl(62, 29%, 82%); }
 }
 
 .lingerieDrawing {
-    .skinIndian { fill: #bfbfbf; }
-    .lingerie { fill: #8c8c8c; }
-    .hairBlack { fill: #363636; }
+    .skinIndian { fill: hsl(0, 0%, 75%); }
+    .lingerie { fill: hsl(0, 0%, 55%); }
+    .hairBlack { fill: hsl(0, 0%, 21%); }
 }
 
 .mannequin {
-    .pole { fill: #8f9ea8; }
-    .woodSide { fill: #a8936a; }
-    .woodBottom { fill: #96835f; }
-    .woodTopSide { fill: #b39c70; }
-    .woodTop { fill: #bfa778; }
-    .body { fill: #c3c4ba; }
+    .pole { fill: hsl(204, 13%, 61%); }
+    .woodSide { fill: hsl(40, 26%, 54%); }
+    .woodBottom { fill: hsl(39, 22%, 48%); }
+    .woodTopSide { fill: hsl(39, 31%, 57%); }
+    .woodTop { fill: hsl(40, 36%, 61%); }
+    .body { fill: hsl(66, 8%, 75%); }
 }
 
 .playgroundBall {
-    .ball { fill: #915e83; }
+    .ball { fill: hsl(316, 21%, 47%); }
 }
 
 .pushBroom {
-    .pole { fill: #bfb390; }
-    .bristle { fill: #8a8a7a; }
-    .rubber { fill: #8d7791; }
-    .base { fill: #7a705c; }
+    .pole { fill: hsl(45, 27%, 66%); }
+    .bristle { fill: hsl(60, 6%, 51%); }
+    .rubber { fill: hsl(291, 11%, 52%); }
+    .base { fill: hsl(40, 14%, 42%); }
 }
 
 .recordingBeers {
-    .bottleCap { fill: #7ea68c; }
-    .packageSideDark { fill: #598a59; }
-    .packageSideLight { fill: #82a677; }
-    .packageFrontDark { fill: #639963; }
-    .packageFrontLight { fill: #8db381; }
-    .star { fill: #ba5050; }
+    .bottleCap { fill: hsl(141, 18%, 57%); }
+    .packageSideDark { fill: hsl(120, 22%, 45%); }
+    .packageSideLight { fill: hsl(106, 21%, 56%); }
+    .packageFrontDark { fill: hsl(120, 21%, 49%); }
+    .packageFrontLight { fill: hsl(106, 25%, 60%); }
+    .star { fill: hsl(0, 43%, 52%); }
 }
 
 .recordPlayerStool {
-    .legSide { fill: #73a0de; }
-    .legFront { fill: #6b95cf; }
-    .supportBottom { fill: #b0ada7; }
-    .supportFront { fill: #d1cdc6; }
-    .surfaceSide { fill: #d9796a; }
-    .surfaceFront { fill: #c97062; }
-    .shellInnerFront { fill: #9c8a69; }
-    .shellInnerSide { fill: #a89471; }
-    .shellOuterFront { fill: #c2ac82; }
-    .shellOuterSide { fill: #b39d77; }
-    .baseSide { fill: #cbccb3; }
-    .baseTop { fill: #bcbda6; }
-    .baseFront { fill: #afb09b; }
-    .stylusBottom { fill: #b08d55; }
-    .record { fill: #4a5450; }
-    .label { fill: #acb37b; }
-    .stylusSide { fill: #cca363; }
-    .stylusTop { fill: #c49d5f; }
-    .stylusFront { fill: #bd975b; }
-    .dialSide { fill: #86689e; }
-    .dialFront { fill: #9171ab; }
-    .holderSide { fill: #c1c2aa; }
-    .holderTop { fill: #aeb09a; }
-    .holderFront { fill: #a5a692; }
+    .legSide { fill: hsl(215, 62%, 66%); }
+    .legFront { fill: hsl(215, 51%, 62%); }
+    .supportBottom { fill: hsl(40, 5%, 67%); }
+    .supportFront { fill: hsl(38, 11%, 80%); }
+    .surfaceSide { fill: hsl(8, 59%, 63%); }
+    .surfaceFront { fill: hsl(8, 49%, 59%); }
+    .shellInnerFront { fill: hsl(39, 20%, 51%); }
+    .shellInnerSide { fill: hsl(38, 24%, 55%); }
+    .shellOuterFront { fill: hsl(39, 34%, 64%); }
+    .shellOuterSide { fill: hsl(38, 28%, 58%); }
+    .baseSide { fill: hsl(62, 20%, 75%); }
+    .baseTop { fill: hsl(63, 15%, 70%); }
+    .baseFront { fill: hsl(63, 12%, 65%); }
+    .stylusBottom { fill: hsl(37, 37%, 51%); }
+    .record { fill: hsl(156, 6%, 31%); }
+    .label { fill: hsl(68, 27%, 59%); }
+    .stylusSide { fill: hsl(37, 51%, 59%); }
+    .stylusTop { fill: hsl(37, 46%, 57%); }
+    .stylusFront { fill: hsl(37, 43%, 55%); }
+    .dialSide { fill: hsl(273, 22%, 51%); }
+    .dialFront { fill: hsl(273, 26%, 56%); }
+    .holderSide { fill: hsl(63, 16%, 71%); }
+    .holderTop { fill: hsl(65, 12%, 65%); }
+    .holderFront { fill: hsl(63, 10%, 61%); }
 }
 
 .redEnvelopeMoney {
-    .redEnvelopeFlap { fill: #bfadad; }
-    .redEnvelope { fill: #8f4242; }
-    .redEnvelopeLabel { fill: #dbb16e; }
+    .redEnvelopeFlap { fill: hsl(0, 12%, 71%); }
+    .redEnvelope { fill: hsl(0, 37%, 41%); }
+    .redEnvelopeLabel { fill: hsl(37, 60%, 65%); }
 }
 
 .stepladder {
-    .rail { fill: #8f8267; }
-    .rung { fill: #ab9b7b; }
+    .rail { fill: hsl(41, 16%, 48%); }
+    .rung { fill: hsl(40, 22%, 58%); }
 }
 
 .tchotchkes {
-    .boxDarkest { fill: #9c758a; }
-    .boxDarker { fill: #a87e95; }
-    .boxDark { fill: #b3869e; }
-    .boxLight { fill: #bf8fa9; }
-    .boxLighter { fill: #cc99b4; }
-    .boxLightest { fill: #d9a3c0; }
-    .photoRight { fill: #759c7b; }
-    .photoBelow { fill: #75989c; }
-    .photoMiddle { fill: #92759c; }
-    .photoTop { fill: #75819c; }
+    .boxDarkest { fill: hsl(328, 16%, 54%); }
+    .boxDarker { fill: hsl(327, 19%, 58%); }
+    .boxDark { fill: hsl(328, 23%, 61%); }
+    .boxLight { fill: hsl(328, 27%, 65%); }
+    .boxLighter { fill: hsl(328, 33%, 70%); }
+    .boxLightest { fill: hsl(328, 42%, 75%); }
+    .photoRight { fill: hsl(129, 16%, 54%); }
+    .photoBelow { fill: hsl(186, 16%, 54%); }
+    .photoMiddle { fill: hsl(285, 16%, 54%); }
+    .photoTop { fill: hsl(222, 16%, 54%); }
 }
 
 .thrownFruit {
     .foilEdgeLine { fill: none; }
-    .puddingCupTop { fill: #f0e6da; }
-    .puddingCupInner { fill: #b3aba3; }
-    .puddingCupBottom { fill: #e8dfd4; }
-    .pudding { fill: #69593e; }
+    .puddingCupTop { fill: hsl(33, 42%, 90%); }
+    .puddingCupInner { fill: hsl(30, 10%, 67%); }
+    .puddingCupBottom { fill: hsl(33, 30%, 87%); }
+    .pudding { fill: hsl(38, 26%, 33%); }
 }
 
 .vaseline {
-    .rollTop { fill: #d9cbd8; }
-    .rollCentre { fill: #a1927f; }
-    .sheetDark { fill: #e3cce1; }
-    .sheetMedium { fill: #e6cde4; }
-    .sheetLight { fill: #e8d1e6; }
-    .vaselineDark { fill: #d6c797; }
-    .vaselineMedium { fill: #e0d19e; }
-    .vaselineLight { fill: #e6d9b8; }
-    .vaselineLabel { fill: #67bde0; }
-    .capRear { fill: #5777b3; }
-    .capFront { fill: #5270a8; }
+    .rollTop { fill: hsl(304, 16%, 82%); }
+    .rollCentre { fill: hsl(34, 15%, 56%); }
+    .sheetDark { fill: hsl(305, 29%, 85%); }
+    .sheetMedium { fill: hsl(305, 33%, 85%); }
+    .sheetLight { fill: hsl(305, 33%, 86%); }
+    .vaselineDark { fill: hsl(46, 43%, 72%); }
+    .vaselineMedium { fill: hsl(46, 52%, 75%); }
+    .vaselineLight { fill: hsl(43, 48%, 81%); }
+    .vaselineLabel { fill: hsl(197, 66%, 64%); }
+    .capRear { fill: hsl(219, 38%, 52%); }
+    .capFront { fill: hsl(219, 34%, 49%); }
 }

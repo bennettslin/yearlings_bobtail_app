@@ -1,8 +1,8 @@
 .sketchDogs#{$suffix} {
-    .head { fill: #b0b0b0; }
-    .eye { fill: #737373; }
-    .nose { fill: #5c5c5c; }
-    .tongue { fill: #858585; }
-    .body { fill: #ababab; }
-    .hindLeg { fill: #a6a6a6; }
+    .head { fill: hsl(0, 0%, 69%); }
+    .eye { fill: hsl(0, 0%, 45%); }
+    .nose { fill: hsl(0, 0%, 36%); }
+    .tongue { fill: hsl(0, 0%, 52%); }
+    .body { fill: hsl(0, 0%, 67%); }
+    .hindLeg { fill: hsl(0, 0%, 65%); }
 }

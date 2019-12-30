@@ -1,4 +1,4 @@
 .letter#{$suffix} {
-    .postalLetterMedium { fill: #c9c7ad; }
-    .postalLetterLight { fill: #f0eece; }
+    .postalLetterMedium { fill: hsl(56, 21%, 73%); }
+    .postalLetterLight { fill: hsl(56, 53%, 87%); }
 }

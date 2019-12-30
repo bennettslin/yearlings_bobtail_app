@@ -1,264 +1,264 @@
 .bedroomBus {
-    .smoke { fill: #818c7d; }
-    .body { fill: #ddc86f; }
-    .trim { fill: #595958; }
-    .turnLight { fill: #f4a82f; }
-    .window { fill: #9cdbd3; }
-    .roof { fill: #efedcb; }
+    .smoke { fill: hsl(104, 6%, 52%); }
+    .body { fill: hsl(49, 62%, 65%); }
+    .trim { fill: hsl(60, 1%, 35%); }
+    .turnLight { fill: hsl(37, 90%, 57%); }
+    .window { fill: hsl(172, 47%, 74%); }
+    .roof { fill: hsl(57, 53%, 87%); }
 }
 
 .bedroomSiren {
-    .redLight { fill: #f7b2b2; }
-    .redBrighter { fill: #e88080; }
-    .redBrightest { fill: #f24e4e; }
-    .blueLight { fill: #b2ddf9; }
-    .blueBrighter { fill: #7fc3ea; }
-    .blueBrightest { fill: #4da8f4; }
+    .redLight { fill: hsl(0, 81%, 83%); }
+    .redBrighter { fill: hsl(0, 69%, 71%); }
+    .redBrightest { fill: hsl(0, 86%, 63%); }
+    .blueLight { fill: hsl(204, 86%, 84%); }
+    .blueBrighter { fill: hsl(202, 72%, 71%); }
+    .blueBrightest { fill: hsl(207, 88%, 63%); }
 }
 
 .campanile {
-    .foliage { fill: #445e40; }
-    .spireInner { fill: #5f8770; }
-    .towerInner { fill: #d4d4cc; }
-    .towerOuter { fill: #e0e0dc; }
-    .spireOuter { fill: #67937a; }
-    .window { fill: #44453d; }
-    .hourDisplayLine { stroke: #6e7341; }
-    .handInner { fill: #5e916f; }
-    .handOuter { fill: #639473; }
-    .wallSideOuter { fill: #a2a392; }
-    .wallSideInner { fill: #999c84; }
-    .wallFrontOuter { fill: #cfd1bc; }
-    .wallFrontMiddle { fill: #c5c7b1; }
-    .wallFrontInner { fill: #b7ba9e; }
-    .ledgeSide { fill: #8fa88f; }
-    .ledgeFront { fill: #b2d1b2; }
-    .stepTop { fill: #8b94cc; }
-    .stepMiddle { fill: #9aa2d9; }
-    .stepBottom { fill: #a8b0e0; }
-    .bushSmall { fill: #68b085; }
-    .bushMiddle { fill: #69a180; }
-    .bushLarge { fill: #67937a; }
+    .foliage { fill: hsl(112, 19%, 31%); }
+    .spireInner { fill: hsl(146, 17%, 45%); }
+    .towerInner { fill: hsl(60, 9%, 82%); }
+    .towerOuter { fill: hsl(60, 6%, 87%); }
+    .spireOuter { fill: hsl(146, 18%, 49%); }
+    .window { fill: hsl(68, 6%, 25%); }
+    .hourDisplayLine { stroke: hsl(66, 28%, 35%); }
+    .handInner { fill: hsl(140, 21%, 47%); }
+    .handOuter { fill: hsl(140, 20%, 48%); }
+    .wallSideOuter { fill: hsl(64, 8%, 61%); }
+    .wallSideInner { fill: hsl(68, 11%, 56%); }
+    .wallFrontOuter { fill: hsl(66, 19%, 78%); }
+    .wallFrontMiddle { fill: hsl(65, 16%, 74%); }
+    .wallFrontInner { fill: hsl(66, 17%, 67%); }
+    .ledgeSide { fill: hsl(120, 13%, 61%); }
+    .ledgeFront { fill: hsl(120, 25%, 76%); }
+    .stepTop { fill: hsl(232, 39%, 67%); }
+    .stepMiddle { fill: hsl(232, 45%, 73%); }
+    .stepBottom { fill: hsl(231, 47%, 77%); }
+    .bushSmall { fill: hsl(144, 31%, 55%); }
+    .bushMiddle { fill: hsl(145, 23%, 52%); }
+    .bushLarge { fill: hsl(146, 18%, 49%); }
 }
 
 .cemeteryHillsLeft {
-    .foliage { fill: #063; }
-    .trunk { fill: #633; }
-    .leaves { fill: #033; }
-    .graveRight { fill: #333; }
-    .meadow { fill: #360; }
-    .graveLeft { fill: #666; }
-    .graveEdgeLine { stroke: #333; }
+    .foliage { fill: hsl(150, 100%, 20%); }
+    .trunk { fill: hsl(0, 33%, 30%); }
+    .leaves { fill: hsl(180, 100%, 10%); }
+    .graveRight { fill: hsl(0, 0%, 20%); }
+    .meadow { fill: hsl(90, 100%, 20%); }
+    .graveLeft { fill: hsl(0, 0%, 40%); }
+    .graveEdgeLine { stroke: hsl(0, 0%, 20%); }
 }
 
 .cemeteryHillsRight {
-    .foliage { fill: #063; }
-    .graveLeft { fill: #999; }
-    .graveRight { fill: #666; }
-    .postLeft { fill: #9ff; }
-    .postRight { fill: #6ff; }
-    .postEdgeLine { stroke: #488; }
-    .fence { fill: #399; }
-    .meadow { fill: #363; }
+    .foliage { fill: hsl(150, 100%, 20%); }
+    .graveLeft { fill: hsl(0, 0%, 60%); }
+    .graveRight { fill: hsl(0, 0%, 40%); }
+    .postLeft { fill: hsl(180, 100%, 80%); }
+    .postRight { fill: hsl(180, 100%, 70%); }
+    .postEdgeLine { stroke: hsl(180, 33%, 40%); }
+    .fence { fill: hsl(180, 50%, 40%); }
+    .meadow { fill: hsl(120, 33%, 30%); }
 }
 
 .cliffGravesFar {
-    .meadowRight { fill: #067037; }
-    .meadowLeft { fill: #287c33; }
-    .graveLeft { fill: #505050 }
-    .graveRight { fill: #444; }
-    .graveEdgeLine { stroke: #222; }
+    .meadowRight { fill: hsl(148, 90%, 23%); }
+    .meadowLeft { fill: hsl(128, 51%, 32%); }
+    .graveLeft { fill: hsl(0, 0%, 31%) }
+    .graveRight { fill: hsl(0, 0%, 27%); }
+    .graveEdgeLine { stroke: hsl(0, 0%, 13%); }
 }
 
 .cliffGravesNear {
-    .meadow { fill: #067037; }
-    .graveLeft { fill: #505050; }
-    .graveRight { fill: #444; }
-    .graveEdgeLine { stroke: #222; }
+    .meadow { fill: hsl(148, 90%, 23%); }
+    .graveLeft { fill: hsl(0, 0%, 31%); }
+    .graveRight { fill: hsl(0, 0%, 27%); }
+    .graveEdgeLine { stroke: hsl(0, 0%, 13%); }
 }
 
 .commercialCentre {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
 }
 
 .commercialFarLeft {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
-    .awningFront { fill: #8594bb; }
-    .awningSide { fill: #7480a3; }
-    .shutter { fill: #717a91; }
-    .shutterDisplayLine { stroke: #2c2e33; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
+    .awningFront { fill: hsl(223, 28%, 63%); }
+    .awningSide { fill: hsl(225, 20%, 55%); }
+    .shutter { fill: hsl(223, 13%, 51%); }
+    .shutterDisplayLine { stroke: hsl(223, 7%, 19%); }
 }
 
 .commercialFarRight {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
 }
 
 .commercialMiddleLeft {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
-    .signOuter { fill: #4a467d; }
-    .signInner { fill: #cdcaf0; }
-    .letterLarge { fill: #847ede; }
-    .letterDisplayLine { stroke: #5b4b63; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
+    .signOuter { fill: hsl(244, 28%, 38%); }
+    .signInner { fill: hsl(245, 56%, 87%); }
+    .letterLarge { fill: hsl(244, 59%, 68%); }
+    .letterDisplayLine { stroke: hsl(280, 14%, 34%); }
 }
 
 .commercialMiddleRight {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
 }
 
 .commercialNearLeft {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
-    .awningFront { fill: #8594bb; }
-    .awningSide { fill: #7480a3; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
+    .awningFront { fill: hsl(223, 28%, 63%); }
+    .awningSide { fill: hsl(225, 20%, 55%); }
 }
 
 .commercialNearRight {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
-    .awningTop { fill: #93a4d6; }
-    .awningFront { fill: #8594bb; }
-    .awningSide { fill: #7480a3; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
+    .awningTop { fill: hsl(225, 45%, 71%); }
+    .awningFront { fill: hsl(223, 28%, 63%); }
+    .awningSide { fill: hsl(225, 20%, 55%); }
 }
 
 .drivingHouseLeft {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
-    .leaves { fill: #376e37; }
-    .trunk { fill: #8b7d56; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
+    .leaves { fill: hsl(120, 33%, 32%); }
+    .trunk { fill: hsl(44, 24%, 44%); }
 }
 
 .drivingHouseRight {
-    .wallSide { fill: #8f759b; }
-    .wallFront { fill: #ab8bba; }
-    .leaves { fill: #376e37; }
-    .trunk { fill: #8b7d56; }
+    .wallSide { fill: hsl(281, 16%, 53%); }
+    .wallFront { fill: hsl(281, 25%, 64%); }
+    .leaves { fill: hsl(120, 33%, 32%); }
+    .trunk { fill: hsl(44, 24%, 44%); }
 }
 
 .elCerritoFar {
-    .antennaWhite { fill: #eaeaea; }
-    .antennaRed { fill: #c6674a; }
-    .buildingLeft { fill: #b5af8f; }
-    .roof { fill: #e9eae8; }
-    .buildingRight { fill: #89ccbf; }
-    .buildingNear { fill: #7d95a0; }
+    .antennaWhite { fill: hsl(0, 0%, 92%); }
+    .antennaRed { fill: hsl(14, 52%, 53%); }
+    .buildingLeft { fill: hsl(51, 20%, 64%); }
+    .roof { fill: hsl(90, 5%, 91%); }
+    .buildingRight { fill: hsl(168, 40%, 67%); }
+    .buildingNear { fill: hsl(199, 16%, 56%); }
 }
 
 .elCerritoNear {
-    .bushBack { fill: #608773; }
-    .houseLeftSide { fill: #828e99; }
-    .houseLeftFront { fill: #71787c; }
-    .houseCentre { fill: #aaaa8c; }
-    .houseRightFront { fill: #7e737f; }
-    .houseRightSide { fill: #988599; }
-    .roofFront { fill: #917066; }
-    .roofTop { fill: #b28777; }
-    .bushFront { fill: #79a890; }
-    .door { fill: #9b9180; }
-    .window { fill: #769993; }
+    .bushBack { fill: hsl(149, 17%, 45%); }
+    .houseLeftSide { fill: hsl(209, 10%, 55%); }
+    .houseLeftFront { fill: hsl(202, 5%, 46%); }
+    .houseCentre { fill: hsl(60, 15%, 61%); }
+    .houseRightFront { fill: hsl(295, 5%, 47%); }
+    .houseRightSide { fill: hsl(297, 9%, 56%); }
+    .roofFront { fill: hsl(14, 17%, 48%); }
+    .roofTop { fill: hsl(16, 28%, 58%); }
+    .bushFront { fill: hsl(149, 21%, 57%); }
+    .door { fill: hsl(38, 12%, 55%); }
+    .window { fill: hsl(170, 15%, 53%); }
 }
 
 .familyHouse {
-    .wall { fill: #f3ffa6; }
-    .bush { fill: #5c9c55; }
-    .trim { fill: #8c8a65; }
-    .door { fill: #b9b685; }
-    .stepTop { fill: #8cb5ff; }
-    .beam { fill: #bfbf76; }
-    .stepBottom { fill: #779ad9; }
-    .window { fill: #94efff; }
-    .windowDisplayLine { stroke: #317a80; }
-    .roofSide { fill: #998951; }
-    .roofTop { fill: #ad9953; }
+    .wall { fill: hsl(68, 100%, 83%); }
+    .bush { fill: hsl(114, 29%, 47%); }
+    .trim { fill: hsl(57, 16%, 47%); }
+    .door { fill: hsl(57, 27%, 62%); }
+    .stepTop { fill: hsl(219, 100%, 77%); }
+    .beam { fill: hsl(60, 36%, 61%); }
+    .stepBottom { fill: hsl(219, 56%, 66%); }
+    .window { fill: hsl(189, 100%, 79%); }
+    .windowDisplayLine { stroke: hsl(185, 45%, 35%); }
+    .roofSide { fill: hsl(47, 31%, 46%); }
+    .roofTop { fill: hsl(47, 35%, 50%); }
 }
 
 .ferrisWheel {
-    .tower { fill: #666; }
-    .towerLeftTopBottom { fill: #963; }
-    .towerLeftFront { fill: #c96; }
-    .tentTopLight { fill: #ccc; }
-    .spokes { fill: rgba(150, 100, 50, 0.5); }
-    .car { fill: #393; }
-    .wheel { fill: #696; }
-    .support { fill: #0071bc; }
-    .base { fill: #29abe2; }
-    .hub { fill: #00a99d; }
-    .tentRightWall { fill: #939; }
-    .tentWallLight { fill: #996; }
-    .tentLeftWall { fill: #36c; }
-    .towerRightTop { fill: #39c; }
-    .tentRightTop { fill: #c66; }
-    .tentLeftTop { fill: #96c; }
-    .towerRightFront { fill: #069; }
-    .tentRightFront { fill: #933; }
-    .tentLeftFront { fill: #93c; }
-    .tentFrontLight { fill: #999; }
+    .tower { fill: hsl(0, 0%, 40%); }
+    .towerLeftTopBottom { fill: hsl(30, 50%, 40%); }
+    .towerLeftFront { fill: hsl(30, 50%, 60%); }
+    .tentTopLight { fill: hsl(0, 0%, 80%); }
+    .spokes { fill: hsla(30, 50%, 39%, 0.5); }
+    .car { fill: hsl(120, 50%, 40%); }
+    .wheel { fill: hsl(120, 20%, 50%); }
+    .support { fill: hsl(204, 100%, 37%); }
+    .base { fill: hsl(198, 76%, 52%); }
+    .hub { fill: hsl(176, 100%, 33%); }
+    .tentRightWall { fill: hsl(300, 50%, 40%); }
+    .tentWallLight { fill: hsl(60, 20%, 50%); }
+    .tentLeftWall { fill: hsl(220, 60%, 50%); }
+    .towerRightTop { fill: hsl(200, 60%, 50%); }
+    .tentRightTop { fill: hsl(0, 50%, 60%); }
+    .tentLeftTop { fill: hsl(270, 50%, 60%); }
+    .towerRightFront { fill: hsl(200, 100%, 30%); }
+    .tentRightFront { fill: hsl(0, 50%, 40%); }
+    .tentLeftFront { fill: hsl(280, 60%, 50%); }
+    .tentFrontLight { fill: hsl(0, 0%, 60%); }
 }
 
 .goKartTrack {
-    .checkerBlack { fill: #44413f; }
-    .checkerWhite { fill: #fff; }
-    .pole { fill: #87796e; }
-    .tireSide { fill: #3f3f3f; }
-    .tireTop { fill: #595959; }
-    .tireCentre { fill: #353434; }
+    .checkerBlack { fill: hsl(24, 4%, 26%); }
+    .checkerWhite { fill: hsl(0, 0%, 100%); }
+    .pole { fill: hsl(26, 10%, 48%); }
+    .tireSide { fill: hsl(0, 0%, 25%); }
+    .tireTop { fill: hsl(0, 0%, 35%); }
+    .tireCentre { fill: hsl(0, 1%, 21%); }
 }
 
 .nohoHouseLeft {
-    .wall { fill: #b3b8e3; }
-    .door { fill: #b9a87e; }
-    .stepTop { fill: #a2c2bb; }
-    .stepBottom { fill: #9ab8b2; }
-    .bush { fill: #5bb96e; }
-    .trim { fill: #85764b; }
-    .window { fill: #88ccdb; }
-    .windowDisplayLine { stroke: #448f91; }
-    .roofSide { fill: #947850; }
-    .roofTop { fill: #ab8d60; }
-    .can { fill: #758b88; }
-    .handle { fill: #748a86; }
-    .lid { fill: #5c6e6b; }
+    .wall { fill: hsl(234, 46%, 80%); }
+    .door { fill: hsl(43, 30%, 61%); }
+    .stepTop { fill: hsl(167, 21%, 70%); }
+    .stepBottom { fill: hsl(168, 17%, 66%); }
+    .bush { fill: hsl(132, 40%, 54%); }
+    .trim { fill: hsl(44, 28%, 41%); }
+    .window { fill: hsl(191, 54%, 70%); }
+    .windowDisplayLine { stroke: hsl(182, 36%, 42%); }
+    .roofSide { fill: hsl(35, 30%, 45%); }
+    .roofTop { fill: hsl(36, 31%, 52%); }
+    .can { fill: hsl(172, 9%, 50%); }
+    .handle { fill: hsl(169, 9%, 50%); }
+    .lid { fill: hsl(170, 9%, 40%); }
 }
 
 .nohoHouseRight {
-    .wall { fill: #91de74; }
-    .porch { fill: #c7a16b; }
-    .beam { fill: #c2c995; }
-    .stepBottom { fill: #91bce3; }
-    .stepMiddle { fill: #96c2eb; }
-    .stepTop { fill: #99c6f0; }
-    .door { fill: #d1b97d; }
-    .trim { fill: #a19a62; }
-    .window { fill: #97f4ff; }
-    .windowDisplayLine { stroke: #007a87; }
-    .roofSide { fill: #c9bb81; }
-    .roofTop { fill: #a69a6a; }
-    .awningSide { fill: #d6c789; }
-    .awningFront { fill: #a6ff85; }
-    .bush { fill: #458753; }
-    .tree { fill: #519e61; }
+    .wall { fill: hsl(104, 62%, 66%); }
+    .porch { fill: hsl(35, 45%, 60%); }
+    .beam { fill: hsl(68, 32%, 69%); }
+    .stepBottom { fill: hsl(209, 59%, 73%); }
+    .stepMiddle { fill: hsl(209, 68%, 75%); }
+    .stepTop { fill: hsl(209, 74%, 77%); }
+    .door { fill: hsl(43, 48%, 65%); }
+    .trim { fill: hsl(53, 25%, 51%); }
+    .window { fill: hsl(186, 100%, 80%); }
+    .windowDisplayLine { stroke: hsl(186, 100%, 26%); }
+    .roofSide { fill: hsl(48, 40%, 65%); }
+    .roofTop { fill: hsl(48, 25%, 53%); }
+    .awningSide { fill: hsl(48, 48%, 69%); }
+    .awningFront { fill: hsl(104, 100%, 76%); }
+    .bush { fill: hsl(133, 32%, 40%); }
+    .tree { fill: hsl(132, 32%, 47%); }
 }
 
 .oaklandFlag {
-    .pole { fill: #706f65; }
-    .stripeWhite { fill: #e2dede; }
-    .stripeRed { fill: #c64646; }
-    .fieldBlue { fill: #4680c6; }
-    .finial { fill: #ad8c60; }
+    .pole { fill: hsl(55, 5%, 42%); }
+    .stripeWhite { fill: hsl(0, 6%, 88%); }
+    .stripeRed { fill: hsl(0, 53%, 53%); }
+    .fieldBlue { fill: hsl(213, 53%, 53%); }
+    .finial { fill: hsl(34, 32%, 53%); }
 }
 
 .oaklandSchool {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
-    .awningFront { fill: #8594bb; }
-    .awningSide { fill: #7480a3; }
-    .clockSide { fill: #aabf8e; }
-    .clockFront { fill: #bdd49f; }
-    .handDisplayLine { stroke: #888; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
+    .awningFront { fill: hsl(223, 28%, 63%); }
+    .awningSide { fill: hsl(225, 20%, 55%); }
+    .clockSide { fill: hsl(86, 28%, 65%); }
+    .clockFront { fill: hsl(86, 38%, 73%); }
+    .handDisplayLine { stroke: hsl(0, 0%, 53%); }
 }
 
 .oceanBottomMiddle {
@@ -266,202 +266,202 @@
 }
 
 .oceanBottomNear {
-    .tubeWormCavity { fill: #669; }
-    .tubeWorm { fill: #69c; }
-    .kelpBack { fill: #393; }
-    .kelpFront { fill: #696; }
-    .rockBack { fill: #666; }
-    .rockMiddle { fill: #999; }
-    .rockFront { fill: #ccc; }
-    .coralTube { fill: #993; }
-    .coralTubeCavity { fill: #cc9; }
-    .coralBrain { fill: #c96; }
-    .coralBrainCavity { fill: #963; }
-    .urchinBack { fill: #969; }
-    .urchinFront { fill: #96c; }
+    .tubeWormCavity { fill: hsl(240, 20%, 50%); }
+    .tubeWorm { fill: hsl(210, 50%, 60%); }
+    .kelpBack { fill: hsl(120, 50%, 40%); }
+    .kelpFront { fill: hsl(120, 20%, 50%); }
+    .rockBack { fill: hsl(0, 0%, 40%); }
+    .rockMiddle { fill: hsl(0, 0%, 60%); }
+    .rockFront { fill: hsl(0, 0%, 80%); }
+    .coralTube { fill: hsl(60, 50%, 40%); }
+    .coralTubeCavity { fill: hsl(60, 33%, 70%); }
+    .coralBrain { fill: hsl(30, 50%, 60%); }
+    .coralBrainCavity { fill: hsl(30, 50%, 40%); }
+    .urchinBack { fill: hsl(300, 20%, 50%); }
+    .urchinFront { fill: hsl(270, 50%, 60%); }
 }
 
 .publicFar {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
 }
 
 .publicNear {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
 }
 
 .residentialFarLeft {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
-    .deckFront { fill: #a3b38b; }
-    .deckSide { fill: #909e7b; }
-    .railFront { fill: #bdba93; }
-    .railSide { fill: #a6a481; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
+    .deckFront { fill: hsl(84, 21%, 62%); }
+    .deckSide { fill: hsl(84, 15%, 55%); }
+    .railFront { fill: hsl(56, 24%, 66%); }
+    .railSide { fill: hsl(57, 17%, 58%); }
 }
 
 .residentialFarRight {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
 }
 
 .residentialMiddleRight {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
-    .windowMiddle { fill: #64c7c7; }
-    .bayWallFront { fill: #b799ab; }
-    .bayWallMiddle { fill: #b08da0; }
-    .bayWallSide { fill: #a68a94; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
+    .windowMiddle { fill: hsl(180, 47%, 59%); }
+    .bayWallFront { fill: hsl(324, 17%, 66%); }
+    .bayWallMiddle { fill: hsl(327, 18%, 62%); }
+    .bayWallSide { fill: hsl(339, 14%, 60%); }
 }
 
 .residentialNearRight {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
-    .deckFront { fill: #a3b38b; }
-    .deckSide { fill: #909e7b; }
-    .railFront { fill: #bdba93; }
-    .railSide { fill: #a6a481; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
+    .deckFront { fill: hsl(84, 21%, 62%); }
+    .deckSide { fill: hsl(84, 15%, 55%); }
+    .railFront { fill: hsl(56, 24%, 66%); }
+    .railSide { fill: hsl(57, 17%, 58%); }
 }
 
 .rickshawTown {
-    .foliageRear { fill: #395e40; }
-    .foliageFront { fill: #497851; }
+    .foliageRear { fill: hsl(131, 25%, 30%); }
+    .foliageFront { fill: hsl(130, 24%, 38%); }
 }
 
 .rollerCoaster {
-    .platformBack { fill: rgba(150, 100, 50, 0.5); }
-    .trackBack { fill: #666; }
-    .platformFront { fill: rgba(200, 150, 100, 0.5); }
-    .trackFront { fill: #999; }
-    .flag { fill: #f6c; }
+    .platformBack { fill: hsla(30, 50%, 39%, 0.5); }
+    .trackBack { fill: hsl(0, 0%, 40%); }
+    .platformFront { fill: hsla(30, 48%, 59%, 0.5); }
+    .trackFront { fill: hsl(0, 0%, 60%); }
+    .flag { fill: hsl(320, 100%, 70%); }
 }
 
 .royceHall {
-    .roofDark { fill: #767865; }
-    .roofLight { fill: #878771; }
-    .brickDark { fill: #b26752; }
-    .brickLight { fill: #c7735c; }
-    .wallFront { fill: #acad91; }
-    .trimDark { fill: #979980; }
-    .trimLight { fill: #b8ba9c; }
-    .brickDarker { fill: #9c5a48; }
-    .brickDarkest { fill: #854d3d; }
-    .slit { fill: #47453e; }
-    .wallInner { fill: #717360; }
-    .doorFrame { fill: #626352; }
-    .door { fill: #595042; }
-    .windowOuter { fill: #7ba1ad; }
-    .windowOuterDisplayLine { stroke: #3d425e; }
-    .windowInner { fill: #6a8b96; }
-    .windowInnerDisplayLine { stroke: #282b3d; }
-    .stepInner { fill: #717994; }
-    .stepOuter { fill: #60677d; }
-    .trimOrnamentInner { fill: #8f917a; }
-    .trimOrnamentOuter { fill: #a9ab90; }
-    .brickOrnament { fill: #ba6c56; }
-    .stainedGlass { fill: #5c6896; }
+    .roofDark { fill: hsl(66, 9%, 43%); }
+    .roofLight { fill: hsl(60, 9%, 49%); }
+    .brickDark { fill: hsl(13, 38%, 51%); }
+    .brickLight { fill: hsl(13, 49%, 57%); }
+    .wallFront { fill: hsl(62, 15%, 62%); }
+    .trimDark { fill: hsl(65, 11%, 55%); }
+    .trimLight { fill: hsl(64, 18%, 67%); }
+    .brickDarker { fill: hsl(13, 37%, 45%); }
+    .brickDarkest { fill: hsl(13, 37%, 38%); }
+    .slit { fill: hsl(47, 7%, 26%); }
+    .wallInner { fill: hsl(66, 9%, 41%); }
+    .doorFrame { fill: hsl(64, 9%, 35%); }
+    .door { fill: hsl(37, 15%, 30%); }
+    .windowOuter { fill: hsl(194, 23%, 58%); }
+    .windowOuterDisplayLine { stroke: hsl(231, 21%, 30%); }
+    .windowInner { fill: hsl(195, 17%, 50%); }
+    .windowInnerDisplayLine { stroke: hsl(231, 21%, 20%); }
+    .stepInner { fill: hsl(226, 14%, 51%); }
+    .stepOuter { fill: hsl(226, 13%, 43%); }
+    .trimOrnamentInner { fill: hsl(65, 9%, 52%); }
+    .trimOrnamentOuter { fill: hsl(64, 14%, 62%); }
+    .brickOrnament { fill: hsl(13, 42%, 53%); }
+    .stainedGlass { fill: hsl(228, 24%, 47%); }
 }
 
 .schoolBungalow {
-    .wall { fill: #76b0c4; }
-    .ramp { fill: #c6c7a7; }
-    .door { fill: #929c44; }
-    .trim { fill: #ab944d; }
-    .awning { fill: #e3eb94; }
-    .window { fill: #87edff; }
-    .windowDisplayLine { stroke: #4884b8; }
-    .roof { fill: #ba8e49; }
+    .wall { fill: hsl(195, 40%, 62%); }
+    .ramp { fill: hsl(62, 22%, 72%); }
+    .door { fill: hsl(67, 39%, 44%); }
+    .trim { fill: hsl(45, 38%, 49%); }
+    .awning { fill: hsl(66, 69%, 75%); }
+    .window { fill: hsl(189, 100%, 76%); }
+    .windowDisplayLine { stroke: hsl(208, 44%, 50%); }
+    .roof { fill: hsl(37, 45%, 51%); }
 }
 
 .stJosephsAnnex {
-    .wall { fill: #a8b7e9; }
-    .trim { fill: #827144; }
-    .door { fill: #ccb16b; }
-    .window { fill: #8ffffd; }
-    .windowDisplayLine { stroke: #005d8f; }
-    .roofSide { fill: #a19065; }
-    .roofTop { fill: #b09d6e; }
+    .wall { fill: hsl(226, 60%, 79%); }
+    .trim { fill: hsl(44, 31%, 39%); }
+    .door { fill: hsl(43, 49%, 61%); }
+    .window { fill: hsl(179, 100%, 78%); }
+    .windowDisplayLine { stroke: hsl(201, 100%, 28%); }
+    .roofSide { fill: hsl(43, 24%, 51%); }
+    .roofTop { fill: hsl(43, 29%, 56%); }
 }
 
 .stJosephsChurch {
-    .foundationRear { fill: #665b63; }
-    .wallRear { fill: #b0769c; }
-    .trimRear { fill: #a3ad84; }
-    .doorRear { fill: #85785a; }
-    .roofTopRear { fill: #424d47; }
-    .foundationMiddle { fill: #7a6d76; }
-    .bushRear { fill: #43754e; }
-    .bushFront { fill: #4d875a; }
-    .wallMiddleLight { fill: #d48ebd; }
-    .wallMiddleDark { fill: #c282ad; }
-    .trimMiddleDark { fill: #a6b086; }
-    .trimMiddle { fill: #c3cf9d; }
-    .trimMiddleLight { fill: #e0edb5; }
-    .window { fill: #7aa9c4; }
-    .windowDisplayLine { stroke: #3b5b63; }
-    .slit { fill: #535451; }
-    .roofSide { fill: #4d5953; }
-    .roofTop { fill: #58665f; }
-    .cross { fill: #b39861; }
-    .ball { fill: #c4a76a; }
-    .foundationFront { fill: #8c7d88; }
-    .wallFront { fill: #e096c8; }
-    .trimBeam { fill: #bfb8ae; }
-    .beam { fill: #e0d7cc; }
-    .trimFrontLight { fill: #c7cfaa; }
-    .marbleLight { fill: #e0dccc; }
-    .trimFrontDark { fill: #9fa688; }
-    .marbleDark { fill: #adaa9e; }
-    .trimFrontDarkest { fill: #898f75; }
-    .frame { fill: #fffde3; }
-    .stainedGlass { fill: #7895e7; }
-    .door { fill: #8f8161; }
-    .step { fill: #5c649e; }
-    .lamp { fill: #dfe7a6; }
-    .lampholder { fill: #403b36; }
-    .stJosephRear { fill: #adada2; }
-    .robe { fill: #5c5641; }
-    .scroll { fill: #787871; }
-    .book { fill: #6b6b65; }
-    .stJosephFront { fill: #b7b8ac; }
+    .foundationRear { fill: hsl(316, 6%, 38%); }
+    .wallRear { fill: hsl(321, 27%, 58%); }
+    .trimRear { fill: hsl(75, 20%, 60%); }
+    .doorRear { fill: hsl(42, 19%, 44%); }
+    .roofTopRear { fill: hsl(147, 8%, 28%); }
+    .foundationMiddle { fill: hsl(318, 6%, 45%); }
+    .bushRear { fill: hsl(133, 27%, 36%); }
+    .bushFront { fill: hsl(133, 27%, 42%); }
+    .wallMiddleLight { fill: hsl(320, 45%, 69%); }
+    .wallMiddleDark { fill: hsl(320, 34%, 64%); }
+    .trimMiddleDark { fill: hsl(74, 21%, 61%); }
+    .trimMiddle { fill: hsl(74, 34%, 71%); }
+    .trimMiddleLight { fill: hsl(74, 61%, 82%); }
+    .window { fill: hsl(202, 39%, 62%); }
+    .windowDisplayLine { stroke: hsl(192, 25%, 31%); }
+    .slit { fill: hsl(80, 2%, 32%); }
+    .roofSide { fill: hsl(150, 7%, 33%); }
+    .roofTop { fill: hsl(150, 7%, 37%); }
+    .cross { fill: hsl(40, 35%, 54%); }
+    .ball { fill: hsl(41, 43%, 59%); }
+    .foundationFront { fill: hsl(316, 6%, 52%); }
+    .wallFront { fill: hsl(319, 54%, 73%); }
+    .trimBeam { fill: hsl(35, 12%, 72%); }
+    .beam { fill: hsl(33, 24%, 84%); }
+    .trimFrontLight { fill: hsl(73, 28%, 74%); }
+    .marbleLight { fill: hsl(48, 24%, 84%); }
+    .trimFrontDark { fill: hsl(74, 14%, 59%); }
+    .marbleDark { fill: hsl(48, 8%, 65%); }
+    .trimFrontDarkest { fill: hsl(74, 10%, 51%); }
+    .frame { fill: hsl(56, 100%, 95%); }
+    .stainedGlass { fill: hsl(224, 70%, 69%); }
+    .door { fill: hsl(42, 19%, 47%); }
+    .step { fill: hsl(233, 26%, 49%); }
+    .lamp { fill: hsl(67, 58%, 78%); }
+    .lampholder { fill: hsl(30, 8%, 23%); }
+    .stJosephRear { fill: hsl(60, 6%, 66%); }
+    .robe { fill: hsl(47, 17%, 31%); }
+    .scroll { fill: hsl(60, 3%, 46%); }
+    .book { fill: hsl(60, 3%, 41%); }
+    .stJosephFront { fill: hsl(65, 8%, 70%); }
 }
 
 .taiwanMountainsBridged {
-    .mountainRear { fill: #5e4452; }
-    .road { fill: #737565; }
-    .pineRear { fill: #4b824e; }
-    .pineFront { fill: #549157; }
-    .bonsaiLeavesBack { fill: #4e9475; }
-    .bonsaiTrunk { fill: #705b39; }
-    .bonsaiLeavesFront { fill: #55a17f; }
-    .bushRear { fill: #4a7343; }
-    .mountainFront { fill: #694b5b; }
-    .bushFront { fill: #54824c; }
+    .mountainRear { fill: hsl(328, 16%, 32%); }
+    .road { fill: hsl(68, 7%, 43%); }
+    .pineRear { fill: hsl(123, 27%, 40%); }
+    .pineFront { fill: hsl(123, 27%, 45%); }
+    .bonsaiLeavesBack { fill: hsl(153, 31%, 44%); }
+    .bonsaiTrunk { fill: hsl(37, 33%, 33%); }
+    .bonsaiLeavesFront { fill: hsl(153, 31%, 48%); }
+    .bushRear { fill: hsl(111, 26%, 36%); }
+    .mountainFront { fill: hsl(328, 17%, 35%); }
+    .bushFront { fill: hsl(111, 26%, 40%); }
 }
 
 .tennisCourt {
-    .treeFront { fill: #5c995d; }
-    .treeRear { fill: #67ab68; }
-    .foliage { fill: #59945a; }
-    .court { fill: #537ac7; }
-    .stripeDisplayLine { stroke: #fff; }
-    .pole { fill: #747577; }
-    .mesh { fill: #b1bd94; }
-    .net { fill: #4a4f3e; }
+    .treeFront { fill: hsl(121, 25%, 48%); }
+    .treeRear { fill: hsl(121, 29%, 54%); }
+    .foliage { fill: hsl(121, 25%, 46%); }
+    .court { fill: hsl(220, 51%, 55%); }
+    .stripeDisplayLine { stroke: hsl(0, 0%, 100%); }
+    .pole { fill: hsl(220, 1%, 46%); }
+    .mesh { fill: hsl(78, 24%, 66%); }
+    .net { fill: hsl(78, 12%, 28%); }
 }
 
 .valleyFreeway {
-    .overpass {fill: #403f36; }
-    .buildingSide {fill: #705b80; }
-    .buildingFront {fill: #866d99; }
-    .foliage {fill: #5b8c4e; }
-    .handleSide {fill: #8f946d; }
-    .handleFront {fill: #b4ba89; }
-    .wellsFargoSide {fill: #7a7a76; }
-    .wellsFargoFrontRight {fill: #afb0aa; }
-    .wellsFargoFrontCentre {fill: #b7b8b2; }
-    .wellsFargoFrontLeft {fill: #bcbdb7; }
-    .shoulder {fill: #8c8b77; }
-    .road {fill: #5c5b4e; }
-    .divider {fill: #b5b5b5; }
+    .overpass {fill: hsl(54, 8%, 23%); }
+    .buildingSide {fill: hsl(274, 17%, 43%); }
+    .buildingFront {fill: hsl(274, 18%, 51%); }
+    .foliage {fill: hsl(107, 28%, 43%); }
+    .handleSide {fill: hsl(68, 15%, 50%); }
+    .handleFront {fill: hsl(67, 26%, 63%); }
+    .wellsFargoSide {fill: hsl(60, 2%, 47%); }
+    .wellsFargoFrontRight {fill: hsl(70, 4%, 68%); }
+    .wellsFargoFrontCentre {fill: hsl(70, 4%, 71%); }
+    .wellsFargoFrontLeft {fill: hsl(70, 4%, 73%); }
+    .shoulder {fill: hsl(57, 8%, 51%); }
+    .road {fill: hsl(56, 8%, 33%); }
+    .divider {fill: hsl(0, 0%, 71%); }
 }

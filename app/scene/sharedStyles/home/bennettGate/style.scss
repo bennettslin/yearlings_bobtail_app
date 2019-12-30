@@ -1,14 +1,14 @@
 .bennettGate#{$suffix} {
-    .gateFrame { fill: #e6e2c3; }
-    .gateDark { fill: #8cc; }
-    .mesh { fill: rgba(150, 150, 200, 0.5); }
-    .gateLight { fill: #9be8e8; }
-    .gateLight { fill: #a0f0f0; }
-    .escutcheon { fill: #93a6a3; }
-    .knobMountDark { fill: #717b80; }
-    .knobMountLight { fill: #7f8b8f; }
-    .knobLight { fill: #96b3b3; }
-    .knobDark { fill: #849e9e; }
-    .bolt { fill: #424841; }
-    .faceplate { fill: #4f5759; }
+    .gateFrame { fill: hsl(53, 41%, 83%); }
+    .gateDark { fill: hsl(180, 40%, 67%); }
+    .mesh { fill: hsla(240, 31%, 69%, 0.5); }
+    .gateLight { fill: hsl(180, 63%, 76%); }
+    .gateLight { fill: hsl(180, 73%, 78%); }
+    .escutcheon { fill: hsl(171, 10%, 61%); }
+    .knobMountDark { fill: hsl(200, 6%, 47%); }
+    .knobMountLight { fill: hsl(195, 7%, 53%); }
+    .knobLight { fill: hsl(180, 16%, 65%); }
+    .knobDark { fill: hsl(180, 12%, 57%); }
+    .bolt { fill: hsl(111, 5%, 27%); }
+    .faceplate { fill: hsl(192, 6%, 33%); }
 }

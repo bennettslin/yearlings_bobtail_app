@@ -1,282 +1,282 @@
 .atticArmrest {
-    .post { fill: #726954; }
-    .cushion { fill: #7c6a89; }
-    .foot { fill: #726954; }
+    .post { fill: hsl(42, 15%, 39%); }
+    .cushion { fill: hsl(275, 13%, 48%); }
+    .foot { fill: hsl(42, 15%, 39%); }
 }
 
 .atticCouch {
-    .cushion { fill: #846896; }
-    .button { fill: #6f5970; }
+    .cushion { fill: hsl(277, 18%, 50%); }
+    .button { fill: hsl(297, 11%, 39%); }
 }
 
 .bathtub {
-    .suds { fill: #fff; }
-    .faucet { fill: #ccc; }
-    .aerator { fill: #999; }
-    .stem { fill: #9cc; }
-    .knob { fill: #ffc; }
-    .basin { fill: #6ff; }
-    .rim { fill: #9ff; }
-    .claw { fill: #699; }
+    .suds { fill: hsl(0, 0%, 100%); }
+    .faucet { fill: hsl(0, 0%, 80%); }
+    .aerator { fill: hsl(0, 0%, 60%); }
+    .stem { fill: hsl(180, 33%, 70%); }
+    .knob { fill: hsl(60, 100%, 90%); }
+    .basin { fill: hsl(180, 100%, 70%); }
+    .rim { fill: hsl(180, 100%, 80%); }
+    .claw { fill: hsl(180, 20%, 50%); }
 }
 
 .bedroomDesk {
-    .deskSide { fill: #4f463c; }
-    .drawer { fill: #c9b891; }
-    .deskFront { fill: #a08d6b; }
-    .mount { fill: #979b75; }
-    .handle { fill: #bfc6a3; }
+    .deskSide { fill: hsl(32, 14%, 27%); }
+    .drawer { fill: hsl(42, 34%, 68%); }
+    .deskFront { fill: hsl(38, 22%, 52%); }
+    .mount { fill: hsl(66, 16%, 53%); }
+    .handle { fill: hsl(72, 23%, 71%); }
 }
 
 .bedroomFence {
-    .fenceTop { fill: #cc6; }
-    .fenceFront { fill: #c96; }
-    .bushLeft { fill: #396; }
-    .bushRight { fill: #393; }
+    .fenceTop { fill: hsl(60, 50%, 60%); }
+    .fenceFront { fill: hsl(30, 50%, 60%); }
+    .bushLeft { fill: hsl(150, 50%, 40%); }
+    .bushRight { fill: hsl(120, 50%, 40%); }
 }
 
 .bennettBed {
-    .postSide { fill: #493b2e; }
-    .frame { fill: #87705b; }
-    .postFront { fill: #665340; }
+    .postSide { fill: hsl(29, 23%, 23%); }
+    .frame { fill: hsl(29, 19%, 44%); }
+    .postFront { fill: hsl(30, 23%, 33%); }
 }
 
 .captainBed {
-    .panelFront { fill: #847f76; }
-    .panelSide { fill: #665a72; }
-    .panelTop { fill: #568960; }
-    .frameTop { fill: #a5a084; }
-    .frameFront { fill: #917f60; }
-    .frameSide { fill: #6d6a51; }
-    .drawerSide { fill: #a48abc; }
-    .drawerTop { fill: #95aa77; }
-    .drawerFront { fill: #b59e3c; }
-    .mount { fill: #56663c; }
-    .handle { fill: #95aa77; }
-    .ball { fill: #847f76; }
+    .panelFront { fill: hsl(39, 6%, 49%); }
+    .panelSide { fill: hsl(270, 12%, 40%); }
+    .panelTop { fill: hsl(132, 23%, 44%); }
+    .frameTop { fill: hsl(51, 15%, 58%); }
+    .frameFront { fill: hsl(38, 20%, 47%); }
+    .frameSide { fill: hsl(54, 15%, 37%); }
+    .drawerSide { fill: hsl(271, 27%, 64%); }
+    .drawerTop { fill: hsl(85, 23%, 57%); }
+    .drawerFront { fill: hsl(49, 50%, 47%); }
+    .mount { fill: hsl(83, 26%, 32%); }
+    .handle { fill: hsl(85, 23%, 57%); }
+    .ball { fill: hsl(39, 6%, 49%); }
 }
 
 .caveShadows {
-    .wall { fill: #996; }
-    .rockBack { fill: #c96; }
-    .rockMiddle { fill: #963; }
-    .rockFront { fill: #630; }
+    .wall { fill: hsl(60, 20%, 50%); }
+    .rockBack { fill: hsl(30, 50%, 60%); }
+    .rockMiddle { fill: hsl(30, 50%, 40%); }
+    .rockFront { fill: hsl(30, 100%, 20%); }
 }
 
 .conveyorBelt {
-    .mount { fill: #878771; }
-    .carDark { fill: #6d8c7d; }
-    .carMedium { fill: #7b9e8d; }
-    .carLight { fill: #8bb39f; }
-    .carInnerDark { fill: #6d8c85; }
-    .carInnerLight { fill: #8bb3a9; }
-    .carInnerMedium { fill: #7b9e96; }
-    .cup { fill: #9fc5c9; }
-    .trayRim { fill: #978cc4; }
-    .trayBasinLight { fill: #7667b7; }
-    .shelf { fill: #83a895; }
-    .track { fill: #9e9e85; }
+    .mount { fill: hsl(60, 9%, 49%); }
+    .carDark { fill: hsl(151, 12%, 49%); }
+    .carMedium { fill: hsl(151, 15%, 55%); }
+    .carLight { fill: hsl(150, 21%, 62%); }
+    .carInnerDark { fill: hsl(166, 12%, 49%); }
+    .carInnerLight { fill: hsl(165, 21%, 62%); }
+    .carInnerMedium { fill: hsl(166, 15%, 55%); }
+    .cup { fill: hsl(186, 28%, 71%); }
+    .trayRim { fill: hsl(252, 32%, 66%); }
+    .trayBasinLight { fill: hsl(251, 36%, 56%); }
+    .shelf { fill: hsl(149, 18%, 59%); }
+    .track { fill: hsl(60, 11%, 57%); }
 }
 
 .dishroomSink {
-    .leg { fill: #666; }
-    .foot { fill: #999; }
-    .tube { fill: #333; }
-    .disposalInner { fill: #366; }
-    .disposalOuter { fill: #396; }
-    .pipe { fill: #699; }
-    .basin { fill: #9cc; }
-    .rim { fill: #6cc; }
-    .panelOuter { fill: #39c; }
-    .panelInner { fill: #6cf; }
-    .buttonStop { fill: #c33; }
-    .buttonGo { fill: #3c3; }
+    .leg { fill: hsl(0, 0%, 40%); }
+    .foot { fill: hsl(0, 0%, 60%); }
+    .tube { fill: hsl(0, 0%, 20%); }
+    .disposalInner { fill: hsl(180, 33%, 30%); }
+    .disposalOuter { fill: hsl(150, 50%, 40%); }
+    .pipe { fill: hsl(180, 20%, 50%); }
+    .basin { fill: hsl(180, 33%, 70%); }
+    .rim { fill: hsl(180, 50%, 60%); }
+    .panelOuter { fill: hsl(200, 60%, 50%); }
+    .panelInner { fill: hsl(200, 100%, 70%); }
+    .buttonStop { fill: hsl(0, 60%, 50%); }
+    .buttonGo { fill: hsl(120, 60%, 50%); }
 }
 
 .goKartExterior {
-    .cap { fill: #996; }
-    .tank { fill: #c93; }
-    .tankEdgeLine { stroke: #a71; }
-    .cooler { fill: #36c; }
-    .rod { fill: #999; }
-    .block { fill: #963; }
-    .engine { fill: #6c6; }
-    .ring { fill: #cff; }
-    .frame { fill: #666; }
-    .tire { fill: #333; }
-    .hubcap { fill: #99c; }
-    .windshield { fill: #ccc; }
-    .bumper { fill: #966; }
-    .chassis { fill: #c33; }
+    .cap { fill: hsl(60, 20%, 50%); }
+    .tank { fill: hsl(40, 60%, 50%); }
+    .tankEdgeLine { stroke: hsl(40, 82%, 37%); }
+    .cooler { fill: hsl(220, 60%, 50%); }
+    .rod { fill: hsl(0, 0%, 60%); }
+    .block { fill: hsl(30, 50%, 40%); }
+    .engine { fill: hsl(120, 50%, 60%); }
+    .ring { fill: hsl(180, 100%, 90%); }
+    .frame { fill: hsl(0, 0%, 40%); }
+    .tire { fill: hsl(0, 0%, 20%); }
+    .hubcap { fill: hsl(240, 33%, 70%); }
+    .windshield { fill: hsl(0, 0%, 80%); }
+    .bumper { fill: hsl(0, 20%, 50%); }
+    .chassis { fill: hsl(0, 60%, 50%); }
 }
 
 .goKartSeat {
-    .cushion { fill: #4e5447; }
+    .cushion { fill: hsl(88, 8%, 30%); }
 }
 
 .hospitalBed {
-    .swivel { fill: #94949b; }
-    .wheelSide { fill: #383838; }
-    .wheelFront { fill: #484849; }
-    .headBoardEdge { fill: #6b5641; }
-    .headBoardSurface { fill: #af8158; }
-    .platformBelowTop { fill: #708e8b; }
-    .platformBelowSide { fill: #4c6263; }
-    .platformBelowFront { fill: #8aaaa9; }
-    .frameSide { fill: #78668e; }
-    .frameFront { fill: #878ba0; }
-    .platformAboveSide { fill: #5a7477; }
-    .platformAboveFront { fill: #9bc4c3; }
-    .platformAboveTop { fill: #789e9a; }
-    .mattressSide { fill: #7f6671; }
-    .mattressFront { fill: #997785; }
-    .footBoardEdge { fill: #7f664b; }
-    .footBoardSurface { fill: #c69360; }
+    .swivel { fill: hsl(240, 3%, 59%); }
+    .wheelSide { fill: hsl(0, 0%, 22%); }
+    .wheelFront { fill: hsl(240, 1%, 28%); }
+    .headBoardEdge { fill: hsl(30, 24%, 34%); }
+    .headBoardSurface { fill: hsl(28, 35%, 52%); }
+    .platformBelowTop { fill: hsl(174, 12%, 50%); }
+    .platformBelowSide { fill: hsl(183, 13%, 34%); }
+    .platformBelowFront { fill: hsl(178, 16%, 60%); }
+    .frameSide { fill: hsl(267, 16%, 48%); }
+    .frameFront { fill: hsl(230, 12%, 58%); }
+    .platformAboveSide { fill: hsl(186, 14%, 41%); }
+    .platformAboveFront { fill: hsl(179, 26%, 69%); }
+    .platformAboveTop { fill: hsl(174, 16%, 55%); }
+    .mattressSide { fill: hsl(334, 11%, 45%); }
+    .mattressFront { fill: hsl(335, 14%, 53%); }
+    .footBoardEdge { fill: hsl(31, 26%, 40%); }
+    .footBoardSurface { fill: hsl(30, 47%, 58%); }
 }
 
 .lizBed {
-    .slat { fill: #938976; }
-    .frameSide { fill: #4c463b; }
-    .frameTop { fill: #685e4a; }
-    .frameFront { fill: #59513e; }
+    .slat { fill: hsl(39, 12%, 52%); }
+    .frameSide { fill: hsl(39, 13%, 26%); }
+    .frameTop { fill: hsl(40, 17%, 35%); }
+    .frameFront { fill: hsl(42, 18%, 30%); }
 }
 
 .lizCouch {
-    .foot { fill: #51483a; }
-    .pillowSurface { fill: #645b6b; }
-    .pillowEdge { fill: #584f60; }
-    .skirt { fill: #52495b; }
-    .weltDisplayLine { stroke: #3b343f; }
-    .cushion { fill: #776882; }
+    .foot { fill: hsl(37, 17%, 27%); }
+    .pillowSurface { fill: hsl(274, 8%, 39%); }
+    .pillowEdge { fill: hsl(272, 10%, 34%); }
+    .skirt { fill: hsl(270, 11%, 32%); }
+    .weltDisplayLine { stroke: hsl(278, 10%, 23%); }
+    .cushion { fill: hsl(275, 11%, 46%); }
 }
 
 .oceanCaveExterior {
-    .caveRight { fill: #963; }
-    .caveLeft { fill: #966; }
+    .caveRight { fill: hsl(30, 50%, 40%); }
+    .caveLeft { fill: hsl(0, 20%, 50%); }
 }
 
 .oceanCaveInterior {
-    .rockShadow { fill: #666; }
-    .seaweed { fill: #393; }
-    .kelpSide { fill: #060; }
-    .kelpFront { fill: #363; }
-    .tubeWormPlumeCentre { fill: #966; }
-    .tubeWormCentre { fill: #699; }
-    .tubeWormPlumeSide { fill: #c63; }
-    .tubeWormSide { fill: #366; }
-    .urchin { fill: #639; }
-    .coralBrain { fill: #930; }
-    .coralBrainCavity { fill: #300; }
-    .frondBack { fill: #069; }
-    .frondFront { fill: #399; }
-    .coralTube { fill: #669; }
-    .coralTubeCavity { fill: #336; }
-    .rockBack { fill: #963; }
-    .rockFront { fill: #663; }
+    .rockShadow { fill: hsl(0, 0%, 40%); }
+    .seaweed { fill: hsl(120, 50%, 40%); }
+    .kelpSide { fill: hsl(120, 100%, 20%); }
+    .kelpFront { fill: hsl(120, 33%, 30%); }
+    .tubeWormPlumeCentre { fill: hsl(0, 20%, 50%); }
+    .tubeWormCentre { fill: hsl(180, 20%, 50%); }
+    .tubeWormPlumeSide { fill: hsl(20, 60%, 50%); }
+    .tubeWormSide { fill: hsl(180, 33%, 30%); }
+    .urchin { fill: hsl(270, 50%, 40%); }
+    .coralBrain { fill: hsl(20, 100%, 30%); }
+    .coralBrainCavity { fill: hsl(0, 100%, 10%); }
+    .frondBack { fill: hsl(200, 100%, 30%); }
+    .frondFront { fill: hsl(180, 50%, 40%); }
+    .coralTube { fill: hsl(240, 20%, 50%); }
+    .coralTubeCavity { fill: hsl(240, 33%, 30%); }
+    .rockBack { fill: hsl(30, 50%, 40%); }
+    .rockFront { fill: hsl(60, 33%, 30%); }
 }
 
 .pampasFar {
-    .hill { fill: #7a5e5e; }
-    .treeDark { fill: #618c78; }
-    .treeLight { fill: #6c9c86; }
-    .foliageDark { fill: #638f64; }
-    .foliageLight { fill: #6c9c6d; }
+    .hill { fill: hsl(0, 13%, 42%); }
+    .treeDark { fill: hsl(152, 18%, 46%); }
+    .treeLight { fill: hsl(153, 20%, 52%); }
+    .foliageDark { fill: hsl(121, 18%, 47%); }
+    .foliageLight { fill: hsl(121, 20%, 52%); }
 }
 
 .phoneCallPanel {
-    .panel { fill: #ffc; }
+    .panel { fill: hsl(60, 100%, 90%); }
 }
 
 .reattaSeat {
-    .bar { fill: #a9a0b3; }
-    .cushion { fill: #caccbe; }
+    .bar { fill: hsl(268, 11%, 66%); }
+    .cushion { fill: hsl(69, 12%, 77%); }
 }
 
 .reattaSeatDown {
-    .bar { fill: #a9a0b3; }
-    .cushion { fill: #caccbe; }
+    .bar { fill: hsl(268, 11%, 66%); }
+    .cushion { fill: hsl(69, 12%, 77%); }
 }
 
 .saturnExterior {
-    .chassis { fill: #333; }
-    .tire { fill: #666; }
-    .hubcap { fill: #ccc; }
-    .reflection { fill: #fff; }
-    .windshield { fill: #9ff; }
-    .body { fill: #96c; }
-    .brakeLight { fill: #930; }
-    .turnLight { fill: #c60; }
-    .headLight { fill: #ffc; }
-    .bumper { fill: #999; }
+    .chassis { fill: hsl(0, 0%, 20%); }
+    .tire { fill: hsl(0, 0%, 40%); }
+    .hubcap { fill: hsl(0, 0%, 80%); }
+    .reflection { fill: hsl(0, 0%, 100%); }
+    .windshield { fill: hsl(180, 100%, 80%); }
+    .body { fill: hsl(270, 50%, 60%); }
+    .brakeLight { fill: hsl(20, 100%, 30%); }
+    .turnLight { fill: hsl(30, 100%, 40%); }
+    .headLight { fill: hsl(60, 100%, 90%); }
+    .bumper { fill: hsl(0, 0%, 60%); }
 }
 
 .saturnSeat {
-    .bar { fill: #a9a0b3; }
-    .cushion { fill: #7e6899; }
+    .bar { fill: hsl(268, 11%, 66%); }
+    .cushion { fill: hsl(267, 19%, 50%); }
 }
 
 .schoolbusExterior {
-    .chassis { fill: #330; }
-    .body { fill: #cc6; }
-    .tire { fill: #444; }
-    .hubcap { fill: #999; }
-    .reflection { fill: #ccc; }
-    .trim { fill: #555; }
-    .door { fill: #666; }
-    .window { fill: #699; }
-    .windshield { fill: #9cc; }
-    .roof { fill: #fff; }
-    .stopLight { fill: #f33; }
-    .visor { fill: #666; }
-    .turnLight { fill: #c93; }
+    .chassis { fill: hsl(60, 100%, 10%); }
+    .body { fill: hsl(60, 50%, 60%); }
+    .tire { fill: hsl(0, 0%, 27%); }
+    .hubcap { fill: hsl(0, 0%, 60%); }
+    .reflection { fill: hsl(0, 0%, 80%); }
+    .trim { fill: hsl(0, 0%, 33%); }
+    .door { fill: hsl(0, 0%, 40%); }
+    .window { fill: hsl(180, 20%, 50%); }
+    .windshield { fill: hsl(180, 33%, 70%); }
+    .roof { fill: hsl(0, 0%, 100%); }
+    .stopLight { fill: hsl(0, 100%, 60%); }
+    .visor { fill: hsl(0, 0%, 40%); }
+    .turnLight { fill: hsl(40, 60%, 50%); }
 }
 
 .schoolbusSeat {
-    .cushion { fill: #567352; }
+    .cushion { fill: hsl(113, 17%, 39%); }
 }
 
 .taiwanBridge {
-    .suspenders { fill: rgba(200, 150, 150, 0.3); }
-    .cable { fill: #d4ad8c; }
-    .planks { fill: #7d634c; }
-    .post { fill: #857a4a; }
+    .suspenders { fill: hsla(0, 6%, 93%, 0.3); }
+    .cable { fill: hsl(28, 46%, 69%); }
+    .planks { fill: hsl(28, 24%, 39%); }
+    .post { fill: hsl(49, 29%, 41%); }
 }
 
 .taiwanHaze {
-    .hazeRear { fill: rgba(200, 225, 250, 0.5); }
-    .hazeFront { fill: rgba(200, 225, 250, 0.5); }
+    .hazeRear { fill: hsla(210, 83%, 88%, 0.5); }
+    .hazeFront { fill: hsla(210, 83%, 88%, 0.5); }
 }
 
 .volkswagen {
-    .chassis { fill: #363f35; }
-    .tire { fill: #424241; }
-    .tireInner { fill: #3f3f3b; }
-    .hubcap { fill: #969695; }
-    .hubcapCentre { fill: #aaaaa7; }
-    .handleRecess { fill: #b4ba8c; }
-    .window { fill: #8cada2; }
-    .windowTrim { fill: #5a5c38; }
-    .body { fill: #dae56e; }
-    .bodySide { fill: #e2de6d; }
-    .headLight { fill: #f5f7cb; }
-    .brakeLight { fill: #f46e58; }
-    .handle { fill: #e0dc89; }
-    .mirrorMount { fill: #c9c771; }
-    .mirror { fill: #cec976; }
+    .chassis { fill: hsl(114, 9%, 23%); }
+    .tire { fill: hsl(60, 1%, 26%); }
+    .tireInner { fill: hsl(60, 3%, 24%); }
+    .hubcap { fill: hsl(60, 0%, 59%); }
+    .hubcapCentre { fill: hsl(60, 2%, 66%); }
+    .handleRecess { fill: hsl(68, 25%, 64%); }
+    .window { fill: hsl(160, 17%, 61%); }
+    .windowTrim { fill: hsl(63, 24%, 29%); }
+    .body { fill: hsl(66, 70%, 66%); }
+    .bodySide { fill: hsl(58, 67%, 66%); }
+    .headLight { fill: hsl(63, 73%, 88%); }
+    .brakeLight { fill: hsl(8, 88%, 65%); }
+    .handle { fill: hsl(57, 58%, 71%); }
+    .mirrorMount { fill: hsl(59, 45%, 62%); }
+    .mirror { fill: hsl(57, 47%, 64%); }
 }
 
 .waitingArmchair {
-    .button { fill: #7a7756; }
+    .button { fill: hsl(55, 17%, 41%); }
 }
 
 .waitingArmrest {
-    .foot { fill: #666; }
+    .foot { fill: hsl(0, 0%, 40%); }
 }
 
 .wideCouch {
-    .cushion { fill: #665a72; }
+    .cushion { fill: hsl(270, 12%, 40%); }
 }
 
 .wideArmrest {
-    .cushion { fill: #71607c; }
+    .cushion { fill: hsl(276, 13%, 43%); }
 }

@@ -1,10 +1,10 @@
 .evian#{$suffix} {
-    .bottleCap { fill: #abf4ff; }
-    .label { fill: #d6bae8; }
-    .labelReverse { fill: #bca4cc; }
-    .bottleTop { fill: rgba(200, 225, 255, 0.5); }
-    .bottleLip { fill: rgba(210, 230, 255, 0.5); }
-    .bottleSide { fill: rgba(220, 235, 255, 0.5); }
-    .waterTop { fill: rgba(200, 225, 255, 0.7); }
-    .waterSide { fill: rgba(210, 230, 255, 0.7); }
+    .bottleCap { fill: hsl(188, 100%, 84%); }
+    .label { fill: hsl(277, 50%, 82%); }
+    .labelReverse { fill: hsl(276, 28%, 72%); }
+    .bottleTop { fill: hsla(213, 100%, 89%, 0.5); }
+    .bottleLip { fill: hsla(213, 100%, 91%, 0.5); }
+    .bottleSide { fill: hsla(214, 100%, 93%, 0.5); }
+    .waterTop { fill: hsla(213, 100%, 89%, 0.7); }
+    .waterSide { fill: hsla(213, 100%, 91%, 0.7); }
 }

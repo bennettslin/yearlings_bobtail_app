@@ -1,131 +1,131 @@
 .brickWall {
-    .foliage { fill: #506d4d; }
-    .building { fill: #677b8c; }
-    .trunk { fill: #5b5040; }
-    .leavesBack { fill: #547258; }
-    .leavesFront { fill: #639369; }
-    .wall { fill: #a08975; }
-    .ledge { fill: #c6baa8; }
-    .brickDark { fill: #895540; }
-    .brickLight { fill: #99865b; }
-    .bush { fill: #54775a; }
+    .foliage { fill: hsl(114, 17%, 36%); }
+    .building { fill: hsl(208, 15%, 48%); }
+    .trunk { fill: hsl(36, 17%, 30%); }
+    .leavesBack { fill: hsl(128, 15%, 39%); }
+    .leavesFront { fill: hsl(128, 20%, 48%); }
+    .wall { fill: hsl(28, 18%, 54%); }
+    .ledge { fill: hsl(36, 21%, 72%); }
+    .brickDark { fill: hsl(17, 36%, 39%); }
+    .brickLight { fill: hsl(42, 25%, 48%); }
+    .bush { fill: hsl(130, 17%, 40%); }
 }
 
 .cityBackdrop {
-    .foliageFar { fill: #5d9157; }
-    .cityFar { fill: #5d6c89; }
-    .foliageNear { fill: #408940; }
-    .cityNear { fill: #4d607c; }
+    .foliageFar { fill: hsl(114, 25%, 45%); }
+    .cityFar { fill: hsl(220, 19%, 45%); }
+    .foliageNear { fill: hsl(120, 36%, 39%); }
+    .cityNear { fill: hsl(216, 23%, 39%); }
 }
 
 .drivingBackdrop {
-    .foliage { fill: #5b8761; }
+    .foliage { fill: hsl(128, 19%, 44%); }
 }
 
 .fenceBackdrop {
-    .roof { fill: #9b5f5f; }
-    .bush { fill: #537a53; }
-    .trunk { fill: #6b5c4f; }
-    .leavesBack { fill: #4e914e; }
-    .leavesFront { fill: #549b54; }
-    .fence { fill: #af947e; }
+    .roof { fill: hsl(0, 24%, 49%); }
+    .bush { fill: hsl(120, 19%, 40%); }
+    .trunk { fill: hsl(28, 15%, 36%); }
+    .leavesBack { fill: hsl(120, 30%, 44%); }
+    .leavesFront { fill: hsl(120, 30%, 47%); }
+    .fence { fill: hsl(27, 23%, 59%); }
 }
 
 .goldenGateBackdrop {
-    .ocean { fill: #4b92e0; }
-    .mountainFar { fill: #644872; }
-    .pier { fill: #5a5b5e; }
-    .suspenders { fill: rgba(250, 200, 200, 0.5); }
-    .tower { fill: #a06c55; }
-    .cable { fill: #aa6b50; }
-    .deck { fill: #aa6b50; }
-    .connector { fill: #a3624b; }
-    .mountainNear { fill: #7d6684; }
-    .city { fill: #484e66; }
-    .island { fill: #8e6c96; }
+    .ocean { fill: hsl(211, 71%, 59%); }
+    .mountainFar { fill: hsl(280, 23%, 36%); }
+    .pier { fill: hsl(225, 2%, 36%); }
+    .suspenders { fill: hsla(0, 83%, 88%, 0.5); }
+    .tower { fill: hsl(18, 31%, 48%); }
+    .cable { fill: hsl(18, 36%, 49%); }
+    .deck { fill: hsl(18, 36%, 49%); }
+    .connector { fill: hsl(16, 37%, 47%); }
+    .mountainNear { fill: hsl(286, 13%, 46%); }
+    .city { fill: hsl(228, 17%, 34%); }
+    .island { fill: hsl(289, 17%, 51%); }
 }
 
 .losAngelesBackdrop {
-    .cityscape { fill: #6f7e93; }
+    .cityscape { fill: hsl(215, 14%, 51%); }
 }
 
 .mountainBackdrop {
-    .mountain { fill: #8e649b; }
+    .mountain { fill: hsl(286, 22%, 50%); }
 }
 
 .nohoHousesBackdrop {
-    .mountain { fill: #826684; }
+    .mountain { fill: hsl(296, 13%, 46%); }
 }
 
 .oaklandFront {
-    .foliage { fill: #5e7054; }
+    .foliage { fill: hsl(99, 14%, 38%); }
 }
 
 .oaklandSide {
-    .foliage { fill: #5e7054; }
+    .foliage { fill: hsl(99, 14%, 38%); }
 }
 
 .oceanBottomFar {
-    .shadow { fill: #634b63; }
+    .shadow { fill: hsl(300, 14%, 34%); }
 }
 
 .oceanFloorFar {
-    .volcanoDark { fill: #564c66; }
-    .volcanoMedium { fill: #615673; }
-    .volcanoLight { fill: #6e6182; }
-    .volcanoInner { fill: #594035; }
+    .volcanoDark { fill: hsl(263, 15%, 35%); }
+    .volcanoMedium { fill: hsl(263, 14%, 39%); }
+    .volcanoLight { fill: hsl(264, 15%, 45%); }
+    .volcanoInner { fill: hsl(18, 25%, 28%); }
 }
 
 .roadPast {
-    .bookCover { fill: #507851; }
-    .romanNumeral { fill: #f3f4cb; }
+    .bookCover { fill: hsl(122, 20%, 39%); }
+    .romanNumeral { fill: hsl(61, 65%, 88%); }
 }
 
 .schoolBackdrop {
-    .mountain { fill: #ad91b7; }
+    .mountain { fill: hsl(284, 21%, 64%); }
 }
 
 .shoreBuoyBackdrop {
-    .shore { fill: #b7b3a1; }
-    .mountain { fill: #936492; }
-    .ocean { fill: #71d8ce; }
+    .shore { fill: hsl(49, 13%, 67%); }
+    .mountain { fill: hsl(301, 19%, 48%); }
+    .ocean { fill: hsl(174, 57%, 65%); }
 }
 
 .shoreRickshawBackdrop {
-    .lighthouseInner { fill: #9bba9b; }
-    .lighthouseCentre { fill: #729374; }
-    .lighthouseOuter { fill: #bdd3b8; }
-    .mountain { fill: #725a7a; }
-    .foliage { fill: #5b7755; }
-    .shore { fill: #99977a; }
-    .ocean { fill: #79bab3; }
+    .lighthouseInner { fill: hsl(120, 18%, 67%); }
+    .lighthouseCentre { fill: hsl(124, 13%, 51%); }
+    .lighthouseOuter { fill: hsl(109, 23%, 77%); }
+    .mountain { fill: hsl(285, 15%, 42%); }
+    .foliage { fill: hsl(109, 17%, 40%); }
+    .shore { fill: hsl(56, 13%, 54%); }
+    .ocean { fill: hsl(174, 32%, 60%); }
 }
 
 .taiwanMountainsBackdrop {
-    .mountainFarthest { fill: #4b6185; }
-    .mountainFar { fill: #51688f; }
-    .mountainNear { fill: #5a739e; }
-    .mountainNearer { fill: #6682b3; }
-    .mountainNearest { fill: #6d8bbf; }
+    .mountainFarthest { fill: hsl(217, 28%, 41%); }
+    .mountainFar { fill: hsl(218, 28%, 44%); }
+    .mountainNear { fill: hsl(218, 27%, 49%); }
+    .mountainNearer { fill: hsl(218, 34%, 55%); }
+    .mountainNearest { fill: hsl(218, 39%, 59%); }
 }
 
 .taiwanStairsBackdrop {
-    .mountain { fill: #735c85; }
-    .foliage { fill: #477846; }
+    .mountain { fill: hsl(274, 18%, 44%); }
+    .foliage { fill: hsl(119, 26%, 37%); }
 }
 
 .weddingBackdrop {
-    .mountainFarthest { fill: #908091; }
-    .mountainFarther { fill: #796c7a; }
-    .mountainFar { fill: #655c66; }
-    .mountainClose { fill: #504a51; }
+    .mountainFarthest { fill: hsl(296, 7%, 54%); }
+    .mountainFarther { fill: hsl(296, 6%, 45%); }
+    .mountainFar { fill: hsl(294, 5%, 38%); }
+    .mountainClose { fill: hsl(291, 5%, 30%); }
 }
 
 .valley {
-    .mountain {fill: #9c7ba3; }
-    .building {fill: #566884; }
+    .mountain {fill: hsl(290, 18%, 56%); }
+    .building {fill: hsl(217, 21%, 43%); }
 }
 
 .yardBackdrop {
-    .foliage { fill: #445e40; }
+    .foliage { fill: hsl(112, 19%, 31%); }
 }

@@ -1,10 +1,10 @@
 .wedding#{$suffix} {
-    .tableDark { fill: #6cb3b3; }
-    .tableLight { fill: #7ccccc; }
-    .leaves { fill: #5d935a; }
-    .rose { fill: #aa5e5e; }
-    .curtainFlap { fill: #88518c; }
-    .curtain { fill: #9b5ca0; }
-    .canopyDark { fill: #99a05c; }
-    .canopyLight { fill: #a8b065; }
+    .tableDark { fill: hsl(180, 32%, 56%); }
+    .tableLight { fill: hsl(180, 44%, 64%); }
+    .leaves { fill: hsl(117, 24%, 46%); }
+    .rose { fill: hsl(0, 31%, 52%); }
+    .curtainFlap { fill: hsl(296, 27%, 43%); }
+    .curtain { fill: hsl(296, 27%, 49%); }
+    .canopyDark { fill: hsl(66, 27%, 49%); }
+    .canopyLight { fill: hsl(66, 32%, 54%); }
 }

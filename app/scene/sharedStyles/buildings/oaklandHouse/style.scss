@@ -1,33 +1,33 @@
 .oaklandHouse#{$suffix} {
-    .leaves { fill: #376e37; }
-    .trunk { fill: #8b7d56; }
-    .trimFront { fill: #ad8757; }
-    .trimSide { fill: #94754e; }
-    .door { fill: #755f43; }
-    .stepFront { fill: #868fba; }
-    .stepSide { fill: #687091; }
-    .windowFront { fill: #6fd0d6; }
-    .windowSide { fill: #66bfc4; }
-    .windowDisplayLine { stroke: #396c6e; }
-    .bushRear { fill: #417849; }
-    .bushFront { fill: #4b8a54; }
-    .topiaryRear { fill: #609e5f; }
-    .topiaryFront { fill: #6bb06a; }
-    .roofSide { fill: #966; }
-    .roofBelow { fill: #825757; }
-    .roofTop { fill: #b06d6d; }
+    .leaves { fill: hsl(120, 33%, 32%); }
+    .trunk { fill: hsl(44, 24%, 44%); }
+    .trimFront { fill: hsl(33, 34%, 51%); }
+    .trimSide { fill: hsl(33, 31%, 44%); }
+    .door { fill: hsl(34, 27%, 36%); }
+    .stepFront { fill: hsl(230, 27%, 63%); }
+    .stepSide { fill: hsl(228, 16%, 49%); }
+    .windowFront { fill: hsl(183, 56%, 64%); }
+    .windowSide { fill: hsl(183, 44%, 58%); }
+    .windowDisplayLine { stroke: hsl(182, 32%, 33%); }
+    .bushRear { fill: hsl(129, 30%, 36%); }
+    .bushFront { fill: hsl(129, 30%, 42%); }
+    .topiaryRear { fill: hsl(119, 25%, 50%); }
+    .topiaryFront { fill: hsl(119, 31%, 55%); }
+    .roofSide { fill: hsl(0, 20%, 50%); }
+    .roofBelow { fill: hsl(0, 20%, 43%); }
+    .roofTop { fill: hsl(0, 30%, 56%); }
 }
 
 .oaklandHouseLeft#{$suffix} {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
-    .bayWallFront { fill: #b799ab; }
-    .bayWallSide { fill: #a68a94; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
+    .bayWallFront { fill: hsl(324, 17%, 66%); }
+    .bayWallSide { fill: hsl(339, 14%, 60%); }
 }
 
 .oaklandHouseRight#{$suffix} {
-    .wallFront { fill: #c69bc7; }
-    .wallSide { fill: #ac87ad; }
-    .bayWallFront { fill: #b799ab; }
-    .bayWallSide { fill: #a68a94; }
+    .wallFront { fill: hsl(299, 28%, 69%); }
+    .wallSide { fill: hsl(298, 19%, 60%); }
+    .bayWallFront { fill: hsl(324, 17%, 66%); }
+    .bayWallSide { fill: hsl(339, 14%, 60%); }
 }

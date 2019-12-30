@@ -1,14 +1,14 @@
 .garbageBag#{$suffix} {
-    .bottlePurpleDark { fill: #44394f; }
-    .bottlePurpleMedium { fill: #4f425c; }
-    .bottlePurpleLight { fill: #5a4c69; }
-    .bottleGreen { fill: #3f574f; }
-    .bottleLabel { fill: #5e6b8f; }
-    .bottleMagenta { fill: #63484c; }
-    .bottleCapGold { fill: #7d6f4f; }
-    .bottleCapSilver { fill: #8f8b85; }
-    .garbageBagRear {fill: #63615a; }
-    .garbageBagFront {fill: #70a0a6; }
-    .bagLiningOuter {fill: #7aafb5; }
-    .bagLiningInner {fill: #5f878c; }
+    .bottlePurpleDark { fill: hsl(270, 16%, 27%); }
+    .bottlePurpleMedium { fill: hsl(270, 16%, 31%); }
+    .bottlePurpleLight { fill: hsl(269, 16%, 35%); }
+    .bottleGreen { fill: hsl(160, 16%, 29%); }
+    .bottleLabel { fill: hsl(224, 21%, 46%); }
+    .bottleMagenta { fill: hsl(351, 16%, 34%); }
+    .bottleCapGold { fill: hsl(42, 23%, 40%); }
+    .bottleCapSilver { fill: hsl(36, 4%, 54%); }
+    .garbageBagRear {fill: hsl(47, 5%, 37%); }
+    .garbageBagFront {fill: hsl(187, 23%, 55%); }
+    .bagLiningOuter {fill: hsl(186, 29%, 59%); }
+    .bagLiningInner {fill: hsl(187, 19%, 46%); }
 }

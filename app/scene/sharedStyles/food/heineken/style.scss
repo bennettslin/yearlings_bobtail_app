@@ -1,9 +1,9 @@
 .heineken#{$suffix} {
-    .bottleSide { fill: rgba(75, 150, 100, 0.5); }
-    .bottleBottom { fill: rgba(25, 100, 50, 0.25); }
-    .beerSide { fill: rgba(150, 125, 50, 0.5); }
-    .beerTop { fill: rgba(175, 150, 75, 0.5); }
-    .labelMain { fill: #6ba66b; }
-    .labelSecondary { fill: #97bf8a; }
-    .labelReverse { fill: #65805c; }
+    .bottleSide { fill: hsla(140, 33%, 44%, 0.5); }
+    .bottleBottom { fill: hsla(140, 60%, 25%, 0.25); }
+    .beerSide { fill: hsla(45, 50%, 39%, 0.5); }
+    .beerTop { fill: hsla(45, 40%, 49%, 0.5); }
+    .labelMain { fill: hsl(120, 25%, 54%); }
+    .labelSecondary { fill: hsl(105, 29%, 65%); }
+    .labelReverse { fill: hsl(105, 16%, 43%); }
 }

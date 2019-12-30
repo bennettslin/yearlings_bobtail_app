@@ -1,13 +1,13 @@
 .drums#{$suffix} {
-    .head { fill: #bac7a9; }
-    .lug { fill: #afbdbc; }
-    .shell { fill: #9dc76a; }
-    .shellInner { fill: #91b862; }
-    .hoop { fill: #9fabaa; }
-    .hoopInner { fill: #939e9d; }
-    .claspLight { fill: #9db3a6; }
-    .claspMedium { fill: #91a69a; }
-    .claspDark { fill: #83968c; }
-    .claspInner { fill: #6f8077; }
-    .logo { fill: #454d34; }
+    .head { fill: hsl(86, 21%, 72%); }
+    .lug { fill: hsl(176, 10%, 71%); }
+    .shell { fill: hsl(87, 45%, 60%); }
+    .shellInner { fill: hsl(87, 38%, 55%); }
+    .hoop { fill: hsl(175, 7%, 65%); }
+    .hoopInner { fill: hsl(175, 5%, 60%); }
+    .claspLight { fill: hsl(145, 13%, 66%); }
+    .claspMedium { fill: hsl(146, 11%, 61%); }
+    .claspDark { fill: hsl(148, 8%, 55%); }
+    .claspInner { fill: hsl(148, 7%, 47%); }
+    .logo { fill: hsl(79, 19%, 25%); }
 }

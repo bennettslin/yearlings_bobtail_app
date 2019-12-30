@@ -8,7 +8,7 @@
             d $animationDuration__scene;
     }
 
-    stroke: rgba(225, 225, 175, 0.05);
+    stroke: hsla(60, 45%, 78%, 0.05);
     stroke-width: 1px;
 
     // TODO: Keep as reference, for now.
@@ -17,7 +17,7 @@
 
     //     &.tile {
     //         &.ceiling {
-    //             fill: rgba(25, 25, 25, 0.45);
+    //             fill: hsla(0, 0%, 10%, 0.45);
     //         }
 
     //         &.floor {
@@ -28,28 +28,28 @@
     //             &,
     //             .Face.z1
     //             & {
-    //                 fill: rgba(25, 25, 25, 0.1);
+    //                 fill: hsla(0, 0%, 10%, 0.1);
     //             }
 
     //             .Face.z2
     //             &,
     //             .Face.z3
     //             & {
-    //                 fill: rgba(25, 25, 25, 0.075);
+    //                 fill: hsla(0, 0%, 10%, 0.075);
     //             }
 
     //             .Face.z4
     //             &,
     //             .Face.z5
     //             & {
-    //                 fill: rgba(25, 25, 25, 0.05);
+    //                 fill: hsla(0, 0%, 10%, 0.05);
     //             }
 
     //             .Face.z6
     //             &,
     //             .Face.z7
     //             & {
-    //                 fill: rgba(25, 25, 25, 0.025);
+    //                 fill: hsla(0, 0%, 10%, 0.025);
     //             }
     //         }
     //     }
@@ -59,74 +59,74 @@
     //         &,
     //         .Cube.x6
     //         & {
-    //             fill: rgba(25, 25, 25, 0.1);
+    //             fill: hsla(0, 0%, 10%, 0.1);
     //         }
 
     //         .Cube.x4
     //         &,
     //         .Cube.x7
     //         & {
-    //             fill: rgba(25, 25, 25, 0.125);
+    //             fill: hsla(0, 0%, 10%, 0.125);
     //         }
 
     //         .Cube.x3
     //         &,
     //         .Cube.x8
     //         & {
-    //             fill: rgba(25, 25, 25, 0.15);
+    //             fill: hsla(0, 0%, 10%, 0.15);
     //         }
 
     //         .Cube.x2
     //         &,
     //         .Cube.x9
     //         & {
-    //             fill: rgba(25, 25, 25, 0.175);
+    //             fill: hsla(0, 0%, 10%, 0.175);
     //         }
 
     //         .Cube.x1
     //         &,
     //         .Cube.xa
     //         & {
-    //             fill: rgba(25, 25, 25, 0.2);
+    //             fill: hsla(0, 0%, 10%, 0.2);
     //         }
 
     //         .Cube.x0
     //         &,
     //         .Cube.xb
     //         & {
-    //             fill: rgba(25, 25, 25, 0.225);
+    //             fill: hsla(0, 0%, 10%, 0.225);
     //         }
     //     }
 
     //     &.front {
     //         .Cubes.y0
     //         & {
-    //             fill: rgba(25, 25, 25, 0.2);
+    //             fill: hsla(0, 0%, 10%, 0.2);
     //         }
 
     //         .Cubes.y1
     //         & {
-    //             fill: rgba(25, 25, 25, 0.225);
+    //             fill: hsla(0, 0%, 10%, 0.225);
     //         }
 
     //         .Cubes.y2
     //         & {
-    //             fill: rgba(25, 25, 25, 0.25);
+    //             fill: hsla(0, 0%, 10%, 0.25);
     //         }
 
     //         .Cubes.y3
     //         & {
-    //             fill: rgba(25, 25, 25, 0.3);
+    //             fill: hsla(0, 0%, 10%, 0.3);
     //         }
 
     //         .Cubes.y4
     //         & {
-    //             fill: rgba(25, 25, 25, 0.35);
+    //             fill: hsla(0, 0%, 10%, 0.35);
     //         }
 
     //         .Cubes.y5
     //         & {
-    //             fill: rgba(25, 25, 25, 0.4);
+    //             fill: hsla(0, 0%, 10%, 0.4);
     //         }
     //     }
     // }

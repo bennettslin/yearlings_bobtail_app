@@ -1,8 +1,8 @@
 .magazine#{$suffix} {
-    .paperRed { fill: #ad745f; }
-    .paperBlue { fill: #5f75ad; }
-    .paperPurple { fill: #9d5fad; }
-    .paperGreen { fill: #5fad75; }
-    .magazineStackDark { fill: #a3a2a0; }
-    .magazineStackLight { fill: #b0afad; }
+    .paperRed { fill: hsl(16, 32%, 53%); }
+    .paperBlue { fill: hsl(223, 32%, 53%); }
+    .paperPurple { fill: hsl(288, 32%, 53%); }
+    .paperGreen { fill: hsl(137, 32%, 53%); }
+    .magazineStackDark { fill: hsl(40, 2%, 63%); }
+    .magazineStackLight { fill: hsl(40, 2%, 68%); }
 }   

@@ -1,14 +1,14 @@
 .progressChart#{$suffix} {
-    .frame { fill: #c6c49b; }
-    .sheetTopRight { fill: #d4abd8; }
-    .sheetTopLeft { fill: #90d3ab; }
-    .blank { fill: #f2f2f0; }
-    .progress { fill: #e07255; }
-    .columnHeaderRight { fill: #e2b4ed; }
-    .columnHeaderLeft { fill: #b4b9ed; }
-    .rowHeaderEven { fill: #adead6; }
-    .rowHeaderOdd { fill: #b3ceaa; }
-    .chart { fill: #e0e0d7; }
-    .numeral { stroke: #444; }
-    .pushpin { fill: #98d8d0; }
+    .frame { fill: hsl(57, 27%, 69%); }
+    .sheetTopRight { fill: hsl(295, 37%, 76%); }
+    .sheetTopLeft { fill: hsl(144, 43%, 70%); }
+    .blank { fill: hsl(60, 7%, 95%); }
+    .progress { fill: hsl(13, 69%, 61%); }
+    .columnHeaderRight { fill: hsl(288, 61%, 82%); }
+    .columnHeaderLeft { fill: hsl(235, 61%, 82%); }
+    .rowHeaderEven { fill: hsl(160, 59%, 80%); }
+    .rowHeaderOdd { fill: hsl(105, 27%, 74%); }
+    .chart { fill: hsl(60, 13%, 86%); }
+    .numeral { stroke: hsl(0, 0%, 27%); }
+    .pushpin { fill: hsl(173, 45%, 72%); }
 }

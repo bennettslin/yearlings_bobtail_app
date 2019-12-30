@@ -1,11 +1,11 @@
 .promisePhoto#{$suffix} {
-    .frameDark { fill: #859671; }
-    .frameMedium { fill: #93a67d; }
-    .frameLight { fill: #a1b589; }
-    .frameLighter { fill: #acc293; }
-    .frameLightest { fill: #b9d19f; }
-    .background { fill: #c5bae3; }
-    .lotusRear { fill: #ca82cf; }
-    .lotusFront { fill: #e594eb; }
-    .glassCracked { fill: rgba(200, 250, 250, 0.5); }
+    .frameDark { fill: hsl(88, 15%, 52%); }
+    .frameMedium { fill: hsl(88, 19%, 57%); }
+    .frameLight { fill: hsl(87, 23%, 62%); }
+    .frameLighter { fill: hsl(88, 28%, 67%); }
+    .frameLightest { fill: hsl(89, 35%, 72%); }
+    .background { fill: hsl(256, 42%, 81%); }
+    .lotusRear { fill: hsl(296, 45%, 66%); }
+    .lotusFront { fill: hsl(296, 69%, 75%); }
+    .glassCracked { fill: hsla(180, 83%, 88%, 0.5); }
 }

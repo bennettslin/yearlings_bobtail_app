@@ -1,7 +1,7 @@
 .sketchbook#{$suffix} {
-    .sketchPaperLight { fill: #e8e4d9; }
-    .sketchPaperMedium { fill: #c9c7ad; }
-    .sketchbookWire { fill: #686364; }
-    .pencilBody { fill: #a5cc7b; }
-    .pencilMetal { fill: #b1c4c0; }
+    .sketchPaperLight { fill: hsl(44, 25%, 88%); }
+    .sketchPaperMedium { fill: hsl(56, 21%, 73%); }
+    .sketchbookWire { fill: hsl(348, 2%, 40%); }
+    .pencilBody { fill: hsl(89, 44%, 64%); }
+    .pencilMetal { fill: hsl(167, 14%, 73%); }
 }

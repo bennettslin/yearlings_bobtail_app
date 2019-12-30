@@ -1,11 +1,11 @@
 .window#{$suffix} {
-    .sill { fill: #c6c9b9; }
-    .sillDark { fill: #b5b8a9; }
-    .frame { fill: #d3d6c5; }
-    .paneStill { fill: #9aa187; }
-    .paneSliding { fill: #898f78; }
-    .blinds { fill: #c4ccac; }
-    .rail { fill: #b1b89a; }
-    .window { fill: #7c9ccf; }
-    .windowClear { fill: rgba(200, 200, 255, 0.25); }
+    .sill { fill: hsl(71, 13%, 76%); }
+    .sillDark { fill: hsl(72, 10%, 69%); }
+    .frame { fill: hsl(71, 17%, 81%); }
+    .paneStill { fill: hsl(76, 12%, 58%); }
+    .paneSliding { fill: hsl(76, 9%, 52%); }
+    .blinds { fill: hsl(75, 24%, 74%); }
+    .rail { fill: hsl(74, 17%, 66%); }
+    .window { fill: hsl(217, 46%, 65%); }
+    .windowClear { fill: hsla(240, 100%, 89%, 0.25); }
 }

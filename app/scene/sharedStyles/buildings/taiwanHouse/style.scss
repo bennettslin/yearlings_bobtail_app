@@ -1,29 +1,29 @@
 .taiwanHouse#{$suffix} {
-    .palaceWallSide { fill: #5b3433; }
-    .palaceWallFront { fill: #693938; }
-    .palaceWallInner { fill: #522c2c; }
-    .palaceTrimFront { fill: #a68f52; }
-    .palaceTrimSide { fill: #8f7b47; }
-    .palaceRoofSide { fill: #625b37; }
-    .palaceRoofFront { fill: #6a623b; }
-    .palaceRoofTrimBelow { fill: #776e44; }
-    .palaceRoofTrimAbove { fill: #857a4a; }
-    .wallSide { fill: #a29d7b; }
-    .wallFront { fill: #b9b28d; }
-    .trimFront { fill: #75664a; }
-    .trimSide { fill: #66573a; }
-    .slit { fill: #454545; }
-    .door { fill: #614f32; }
-    .stepFront { fill: #415070; }
-    .stepSide { fill: #384561; }
-    .roofSide { fill: #8f6750; }
-    .roofTop { fill: #a3755c; }
-    .roofFront { fill: #9a6e56; }
-    .roofBelow { fill: #7f5b48; }
-    .beamSide { fill: #73664d; }
-    .beamFront { fill: #64573e; }
-    .awningBelow { fill: #42597a; }
-    .awningSide { fill: #496387; }
-    .awningFront { fill: #516e96; }
-    .awningTop { fill: #5a7aa6; }
+    .palaceWallSide { fill: hsl(2, 28%, 28%); }
+    .palaceWallFront { fill: hsl(1, 30%, 32%); }
+    .palaceWallInner { fill: hsl(0, 30%, 25%); }
+    .palaceTrimFront { fill: hsl(44, 34%, 49%); }
+    .palaceTrimSide { fill: hsl(43, 34%, 42%); }
+    .palaceRoofSide { fill: hsl(50, 28%, 30%); }
+    .palaceRoofFront { fill: hsl(50, 28%, 32%); }
+    .palaceRoofTrimBelow { fill: hsl(49, 27%, 37%); }
+    .palaceRoofTrimAbove { fill: hsl(49, 29%, 41%); }
+    .wallSide { fill: hsl(52, 17%, 56%); }
+    .wallFront { fill: hsl(50, 24%, 64%); }
+    .trimFront { fill: hsl(39, 23%, 37%); }
+    .trimSide { fill: hsl(40, 28%, 31%); }
+    .slit { fill: hsl(0, 0%, 27%); }
+    .door { fill: hsl(37, 32%, 29%); }
+    .stepFront { fill: hsl(221, 27%, 35%); }
+    .stepSide { fill: hsl(221, 27%, 30%); }
+    .roofSide { fill: hsl(22, 28%, 44%); }
+    .roofTop { fill: hsl(21, 28%, 50%); }
+    .roofFront { fill: hsl(21, 28%, 47%); }
+    .roofBelow { fill: hsl(21, 28%, 39%); }
+    .beamSide { fill: hsl(39, 20%, 38%); }
+    .beamFront { fill: hsl(39, 23%, 32%); }
+    .awningBelow { fill: hsl(215, 30%, 37%); }
+    .awningSide { fill: hsl(215, 30%, 41%); }
+    .awningFront { fill: hsl(215, 30%, 45%); }
+    .awningTop { fill: hsl(215, 30%, 50%); }
 }

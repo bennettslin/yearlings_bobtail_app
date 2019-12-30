@@ -107,8 +107,8 @@
 $height: $height__stanzaTypeTab * 4;
 .bgColour__unit__pattern {
     $degrees: 60deg;
-    $lightShade: rgba(175, 175, 175, 0.125);
-    $darkShade: rgba(0, 0, 0, 0.1);
+    $lightShade: hsla(0, 0%, 69%, 0.125);
+    $darkShade: hsla(0, 0%, 0%, 0.1);
     $width: $height * 0.5773; // Square root of 3 for 30, 60, 90 triangle.
 
     background-image:

@@ -1,17 +1,17 @@
 .drumStand#{$suffix} {
-    .pole { fill: #959fa1; }
-    .rod { fill: #7a8385; }
-    .leg { fill: #a6b0b3; }
-    .legInner { fill: #9fa8ab; }
-    .pad { fill: #403928; }
-    .padding { fill: #9287a1; }
-    .bolt { fill: #828b8c; }
-    .boltLight { fill: #8e9899; }
-    .mountLight { fill: #8fa39b; }
-    .mountDark { fill: #869991; }
-    .mountDarker { fill: #708079; }
-    .pedalLight { fill: #aaad9f; }
-    .pedalDark { fill: #9ea194; }
-    .stirrupDark { fill: #56594b; }
-    .stirrupLight { fill: #6a6e5c; }
+    .pole { fill: hsl(190, 6%, 61%); }
+    .rod { fill: hsl(191, 4%, 50%); }
+    .leg { fill: hsl(194, 8%, 68%); }
+    .legInner { fill: hsl(195, 7%, 65%); }
+    .pad { fill: hsl(43, 23%, 20%); }
+    .padding { fill: hsl(265, 12%, 58%); }
+    .bolt { fill: hsl(186, 4%, 53%); }
+    .boltLight { fill: hsl(185, 5%, 58%); }
+    .mountLight { fill: hsl(156, 10%, 60%); }
+    .mountDark { fill: hsl(155, 9%, 56%); }
+    .mountDarker { fill: hsl(154, 7%, 47%); }
+    .pedalLight { fill: hsl(73, 8%, 65%); }
+    .pedalDark { fill: hsl(74, 6%, 61%); }
+    .stirrupDark { fill: hsl(73, 9%, 32%); }
+    .stirrupLight { fill: hsl(73, 9%, 40%); }
 }

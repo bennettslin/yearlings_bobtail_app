@@ -1,11 +1,11 @@
 .taiwanRickshaw#{$suffix} {
-    .rubberDark { fill: #51614f; }
-    .rubberMedium { fill: #596b57; }
-    .rubberLight { fill: #62755f; }
-    .metalDark { fill: #748783; }
-    .metalLight { fill: #8ca39e; }
-    .tire { fill: #3c424a; }
-    .rickshawDark { fill: #548263; }
-    .rickshawLight { fill: #649c77; }
-    .light { fill: #a85d4f; }
+    .rubberDark { fill: hsl(113, 10%, 35%); }
+    .rubberMedium { fill: hsl(114, 10%, 38%); }
+    .rubberLight { fill: hsl(112, 10%, 42%); }
+    .metalDark { fill: hsl(167, 8%, 49%); }
+    .metalLight { fill: hsl(167, 11%, 59%); }
+    .tire { fill: hsl(214, 10%, 26%); }
+    .rickshawDark { fill: hsl(140, 21%, 42%); }
+    .rickshawLight { fill: hsl(140, 22%, 50%); }
+    .light { fill: hsl(9, 36%, 48%); }
 }

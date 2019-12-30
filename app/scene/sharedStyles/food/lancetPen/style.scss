@@ -1,6 +1,6 @@
 .lancetPen#{$suffix} {
-    .lancetPenLight { fill: #c3e0e0; }
-    .penCapLight { fill: #80d4d4; }
-    .penCapDark { fill: #72bdbd; }
-    .penCapInner { fill: #568f8f; }
+    .lancetPenLight { fill: hsl(180, 32%, 82%); }
+    .penCapLight { fill: hsl(180, 49%, 67%); }
+    .penCapDark { fill: hsl(180, 36%, 59%); }
+    .penCapInner { fill: hsl(180, 25%, 45%); }
 }

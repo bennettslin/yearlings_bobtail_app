@@ -1,8 +1,8 @@
 .lizGate#{$suffix} {
-    .post { fill: #a6926f; }
-    .plankLight { fill: #bfb18e; }
-    .plankDark { fill: #b0ab82; }
-    .plankMedium { fill: #b8ad88; }
-    .beam { fill: #c0c290; }
-    .hinge { fill: #9eb3b1; }
+    .post { fill: hsl(38, 24%, 54%); }
+    .plankLight { fill: hsl(43, 28%, 65%); }
+    .plankDark { fill: hsl(53, 23%, 60%); }
+    .plankMedium { fill: hsl(46, 25%, 63%); }
+    .beam { fill: hsl(62, 29%, 66%); }
+    .hinge { fill: hsl(174, 12%, 66%); }
 }

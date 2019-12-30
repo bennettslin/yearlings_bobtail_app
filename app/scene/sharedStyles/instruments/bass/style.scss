@@ -1,17 +1,17 @@
 .bass#{$suffix} {
-    .strapLeather { fill: #695e54; }
-    .strapCloth { fill: #566954; }
-    .silver { fill: #769294; }
-    .silverDark { fill: #6a8385; }
-    .bodyDark { fill: #8f7c63; }
-    .bodyLight { fill: #ab9577; }
-    .pickGuard { fill: #696254; }
-    .pickupSide { fill: #3e4c4d; }
-    .pickupFront { fill: #4c5d5e; }
-    .outputJack { fill: #333f40; }
-    .headstockDark { fill: #b3b08d; }
-    .headstockLight { fill: #c4c19b; }
-    .fretboard { fill: #bdb090; }
-    .neck { fill: #b0a486; }
-    .nut { fill: #cfcca6; }
+    .strapLeather { fill: hsl(29, 11%, 37%); }
+    .strapCloth { fill: hsl(114, 11%, 37%); }
+    .silver { fill: hsl(184, 12%, 52%); }
+    .silverDark { fill: hsl(184, 11%, 47%); }
+    .bodyDark { fill: hsl(34, 18%, 47%); }
+    .bodyLight { fill: hsl(35, 24%, 57%); }
+    .pickGuard { fill: hsl(40, 11%, 37%); }
+    .pickupSide { fill: hsl(184, 11%, 27%); }
+    .pickupFront { fill: hsl(183, 11%, 33%); }
+    .outputJack { fill: hsl(185, 11%, 23%); }
+    .headstockDark { fill: hsl(55, 20%, 63%); }
+    .headstockLight { fill: hsl(56, 26%, 69%); }
+    .fretboard { fill: hsl(43, 25%, 65%); }
+    .neck { fill: hsl(43, 21%, 61%); }
+    .nut { fill: hsl(56, 30%, 73%); }
 }

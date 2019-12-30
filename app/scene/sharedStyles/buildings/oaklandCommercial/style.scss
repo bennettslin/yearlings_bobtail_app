@@ -1,10 +1,10 @@
 .oaklandCommercial#{$suffix} {
-    .trimSide { fill: #928869; }
-    .windowSide { fill: #81b6bc; }
-    .trimFront { fill: #b3a681; }
-    .windowFront { fill: #93d1d7; }
-    .door { fill: #706156; }
-    .roofFront { fill: #a47d6c; }
-    .roofBelow { fill: #967264; }
-    .roofSide { fill: #89685b; }
+    .trimSide { fill: hsl(45, 16%, 49%); }
+    .windowSide { fill: hsl(186, 31%, 62%); }
+    .trimFront { fill: hsl(44, 25%, 60%); }
+    .windowFront { fill: hsl(185, 46%, 71%); }
+    .door { fill: hsl(25, 13%, 39%); }
+    .roofFront { fill: hsl(18, 24%, 53%); }
+    .roofBelow { fill: hsl(17, 20%, 49%); }
+    .roofSide { fill: hsl(17, 20%, 45%); }
 }

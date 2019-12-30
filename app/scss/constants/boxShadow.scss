@@ -1,8 +1,8 @@
 // Box shadow colours.
-$colour__boxShadow: rgba(75, 75, 100, 0.4);
-$colour__boxShadow__dark: rgba(25, 25, 50, 0.7);
-$colour__boxShadow__darker: rgba(25, 25, 50, 0.9);
-$colour__boxShadow__cursoredBright: rgba(225, 255, 200, 0.5);
+$colour__boxShadow: hsla(240, 14%, 34%, 0.4);
+$colour__boxShadow__dark: hsla(240, 33%, 15%, 0.7);
+$colour__boxShadow__darker: hsla(240, 33%, 15%, 0.9);
+$colour__boxShadow__cursoredBright: hsla(93, 100%, 89%, 0.5);
 
 // Main.
 $boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;

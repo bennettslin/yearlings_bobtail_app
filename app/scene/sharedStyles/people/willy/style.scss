@@ -1,13 +1,5 @@
 .willy#{$suffix} {
-    .visor {
-        fill: #c9c63c;
-    }
-
-    .visorBillTop {
-        fill: #d9863d;
-    }
-
-    .visorBillBottom {
-        fill: #bd7535;
-    }
+    .visor { fill: hsl(59, 57%, 51%); }
+    .visorBillTop { fill: hsl(28, 67%, 55%); }
+    .visorBillBottom { fill: hsl(28, 56%, 47%); }
 }

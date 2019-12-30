@@ -1,489 +1,489 @@
 .apartmentPlant {
-    .stalk { fill: #685036; }
-    .leaves { fill: #427250; }
-    .pot { fill: #5d5c9b; }
-    .brim { fill: #49478e; }
+    .stalk { fill: hsl(31, 32%, 31%); }
+    .leaves { fill: hsl(138, 27%, 35%); }
+    .pot { fill: hsl(241, 26%, 48%); }
+    .brim { fill: hsl(242, 33%, 42%); }
 }
 
 .ashCan {
-    .canSide { fill: #9c9c8f; }
-    .sand { fill: #d4d4bf; }
-    .canTop { fill: #abab9d; }
+    .canSide { fill: hsl(60, 6%, 59%); }
+    .sand { fill: hsl(60, 20%, 79%); }
+    .canTop { fill: hsl(60, 8%, 64%); }
 }
 
 .bancroftShrub {
-    .bulb { fill: #030; }
-    .leavesBottom { fill: #033; }
-    .leavesRight { fill: #363; }
-    .leavesLeft { fill: #063; }
+    .bulb { fill: hsl(120, 100%, 10%); }
+    .leavesBottom { fill: hsl(180, 100%, 10%); }
+    .leavesRight { fill: hsl(120, 33%, 30%); }
+    .leavesLeft { fill: hsl(150, 100%, 20%); }
 }
 
 .bushDouble {
-    .leavesFront { fill: #578463; }
-    .leavesRear { fill: #4e7558; }
+    .leavesFront { fill: hsl(136, 21%, 43%); }
+    .leavesRear { fill: hsl(135, 20%, 38%); }
 }
 
 .bushSingle {
-    .leaves { fill: #5c8e6b; }
+    .leaves { fill: hsl(138, 21%, 46%); }
 }
 
 .cactusDouble {
-    .leavesRear { fill: #7bad77; }
-    .leavesFront { fill: #75a070; }
+    .leavesRear { fill: hsl(116, 25%, 57%); }
+    .leavesFront { fill: hsl(114, 20%, 53%); }
 }
 
 .cactusSingle {
-    .leaves { fill: #83ba7f; }
+    .leaves { fill: hsl(116, 30%, 61%); }
 }
 
 .campfire {
-    .flameOuter { fill: #f03; }
-    .flameMiddle { fill: #f60; }
-    .flameInner { fill: #ff0; }
-    .logBack { fill: #c96; }
-    .logBackLine { stroke: #754c24; }
-    .logBottom { fill: #630; }
-    .logSide { fill: #963; }
-    .logSideLine { stroke: #42210b; }
-    .logFront { fill: #fc9; }
-    .logFrontLine { stroke: #a67c52; }
-    .logBottomCut { fill: #c93; }
-    .logSideCut { fill: #fc6; }
-    .logCutLine { stroke: #b82; }
-    .stoneSide { fill: #333; }
-    .stoneSideMiddle { fill: #666; }
-    .stoneMiddleCentre { fill: #999; }
-    .stoneCentre { fill: #ccc; }
+    .flameOuter { fill: hsl(348, 100%, 50%); }
+    .flameMiddle { fill: hsl(24, 100%, 50%); }
+    .flameInner { fill: hsl(60, 100%, 50%); }
+    .logBack { fill: hsl(30, 50%, 60%); }
+    .logBackLine { stroke: hsl(30, 53%, 30%); }
+    .logBottom { fill: hsl(30, 100%, 20%); }
+    .logSide { fill: hsl(30, 50%, 40%); }
+    .logSideLine { stroke: hsl(24, 71%, 15%); }
+    .logFront { fill: hsl(30, 100%, 80%); }
+    .logFrontLine { stroke: hsl(30, 34%, 49%); }
+    .logBottomCut { fill: hsl(40, 60%, 50%); }
+    .logSideCut { fill: hsl(40, 100%, 70%); }
+    .logCutLine { stroke: hsl(40, 69%, 43%); }
+    .stoneSide { fill: hsl(0, 0%, 20%); }
+    .stoneSideMiddle { fill: hsl(0, 0%, 40%); }
+    .stoneMiddleCentre { fill: hsl(0, 0%, 60%); }
+    .stoneCentre { fill: hsl(0, 0%, 80%); }
 }
 
 .campusTreeDouble {
-    .trunkWide { fill: #57492b; }
-    .leavesWide { fill: #4f8c62; }
-    .trunkTall { fill: #635331; }
-    .leavesTall { fill: #549669; }
+    .trunkWide { fill: hsl(41, 34%, 25%); }
+    .leavesWide { fill: hsl(139, 28%, 43%); }
+    .trunkTall { fill: hsl(41, 34%, 29%); }
+    .leavesTall { fill: hsl(139, 28%, 46%); }
 }
 
 .campusTreeSingle {
-    .trunk { fill: #786c4c; }
-    .leaves { fill: #427d4b; }
+    .trunk { fill: hsl(44, 22%, 38%); }
+    .leaves { fill: hsl(129, 31%, 37%); }
 }
 
 .cavemanBones {
-    .poleSide { fill: #7e949e; }
-    .poleFront { fill: #97b0bd; }
-    .placardBottom { fill: #8a8a5c; }
-    .placardSide { fill: #9e9b7e; }
-    .placardFront { fill: #9991b5; }
-    .appendageRear { fill: #abaa97; }
-    .centreInner { fill: #b0af9d; }
-    .spine { fill: #b5b4a0; }
-    .centreOuter { fill: #bdbca7; }
-    .appendageFront { fill: #bfbea9; }
+    .poleSide { fill: hsl(199, 14%, 56%); }
+    .poleFront { fill: hsl(201, 22%, 67%); }
+    .placardBottom { fill: hsl(60, 20%, 45%); }
+    .placardSide { fill: hsl(54, 14%, 56%); }
+    .placardFront { fill: hsl(253, 20%, 64%); }
+    .appendageRear { fill: hsl(57, 11%, 63%); }
+    .centreInner { fill: hsl(57, 11%, 65%); }
+    .spine { fill: hsl(57, 12%, 67%); }
+    .centreOuter { fill: hsl(57, 14%, 70%); }
+    .appendageFront { fill: hsl(57, 15%, 71%); }
 }
 
 .cliffTree {
-    .trunk { fill: #300; }
+    .trunk { fill: hsl(0, 100%, 10%); }
 }
 
 .cypressTree {
-    .leavesRear { fill: #5c995c; }
-    .leavesFront { fill: #68a068; }
+    .leavesRear { fill: hsl(120, 25%, 48%); }
+    .leavesFront { fill: hsl(120, 23%, 52%); }
 }
 
 .dishroomDolly {
-    .wheel { fill: #46444f; }
-    .hub { fill: #a8a7af; }
-    .caster { fill: #aaa781; }
-    .base { fill: #606058; }
-    .handle { fill: #74737a; }
+    .wheel { fill: hsl(251, 7%, 29%); }
+    .hub { fill: hsl(248, 5%, 67%); }
+    .caster { fill: hsl(56, 19%, 59%); }
+    .base { fill: hsl(60, 4%, 36%); }
+    .handle { fill: hsl(249, 3%, 46%); }
 }
 
 .dispenserLeft {
-    .dispenserLight { fill: #e69081; }
-    .dispenserDark { fill: #d48577; }
-    .panel { fill: #cca9a3; }
+    .dispenserLight { fill: hsl(9, 67%, 70%); }
+    .dispenserDark { fill: hsl(9, 52%, 65%); }
+    .panel { fill: hsl(9, 29%, 72%); }
 }
 
 .dispenserRight {
-    .dispenserDark { fill: #62a684; }
-    .panel { fill: #5a7869; }
-    .dispenserLight { fill: #6eba94; }
-    .dispenserDoor { fill: #a1c9b6; }
-    .suit { fill: #6374a8; }
-    .shirt { fill: #cfb674; }
+    .dispenserDark { fill: hsl(150, 28%, 52%); }
+    .panel { fill: hsl(150, 14%, 41%); }
+    .dispenserLight { fill: hsl(150, 36%, 58%); }
+    .dispenserDoor { fill: hsl(152, 27%, 71%); }
+    .suit { fill: hsl(225, 28%, 52%); }
+    .shirt { fill: hsl(44, 49%, 63%); }
 }
 
 .dumpster {
-    .bodyFront { fill: #696; }
-    .bodyBack { fill: #063; }
-    .bodySide { fill: #030; }
-    .bodyRim { fill: #396; }
-    .ridge { fill: #009245; }
-    .slotSide { fill: #030; }
-    .slotFront { fill: #363; }
-    .slotBottom { fill: #063; }
-    .jointFront { fill: #063; }
-    .jointSide { fill: #009245; }
-    .pin { fill: #396; }
-    .lid { fill: #666; }
-    .lidRim { fill: #333; }
-    .lidTrim { fill: #999; }
-    .wheelSide { fill: #666; }
-    .wheelFront { fill: #333; }
-    .casterBack { fill: #663; }
-    .casterFront { fill: #996; }
-    .warningField { fill: #cc6; }
-    .warningLabel { fill: #c33; }
-    .garbageBack { fill: #666; }
-    .garbageFront { fill: #4d4d4d; }
+    .bodyFront { fill: hsl(120, 20%, 50%); }
+    .bodyBack { fill: hsl(150, 100%, 20%); }
+    .bodySide { fill: hsl(120, 100%, 10%); }
+    .bodyRim { fill: hsl(150, 50%, 40%); }
+    .ridge { fill: hsl(148, 100%, 29%); }
+    .slotSide { fill: hsl(120, 100%, 10%); }
+    .slotFront { fill: hsl(120, 33%, 30%); }
+    .slotBottom { fill: hsl(150, 100%, 20%); }
+    .jointFront { fill: hsl(150, 100%, 20%); }
+    .jointSide { fill: hsl(148, 100%, 29%); }
+    .pin { fill: hsl(150, 50%, 40%); }
+    .lid { fill: hsl(0, 0%, 40%); }
+    .lidRim { fill: hsl(0, 0%, 20%); }
+    .lidTrim { fill: hsl(0, 0%, 60%); }
+    .wheelSide { fill: hsl(0, 0%, 40%); }
+    .wheelFront { fill: hsl(0, 0%, 20%); }
+    .casterBack { fill: hsl(60, 33%, 30%); }
+    .casterFront { fill: hsl(60, 20%, 50%); }
+    .warningField { fill: hsl(60, 50%, 60%); }
+    .warningLabel { fill: hsl(0, 60%, 50%); }
+    .garbageBack { fill: hsl(0, 0%, 40%); }
+    .garbageFront { fill: hsl(0, 0%, 30%); }
 }
 
 .elCerritoTree {
-    .trunk { fill: #630; }
-    .leaves { fill: #393; }
+    .trunk { fill: hsl(30, 100%, 20%); }
+    .leaves { fill: hsl(120, 50%, 40%); }
 }
 
 .fireHydrant {
-    .valveOuter { fill: #bf4d4d; }
-    .valveInner { fill: #b34848; }
-    .valveOuterDark { fill: #b84a4a; }
-    .hydrant { fill: #d95757; }
-    .ridge { fill: #cc4e4e; }
-    .valveOuterLight { fill: #c44f4f; }
-    .cap { fill: #993e3e; }
-    .capLight { fill: #9e4040; }
+    .valveOuter { fill: hsl(0, 47%, 53%); }
+    .valveInner { fill: hsl(0, 43%, 49%); }
+    .valveOuterDark { fill: hsl(0, 44%, 51%); }
+    .hydrant { fill: hsl(0, 63%, 60%); }
+    .ridge { fill: hsl(0, 55%, 55%); }
+    .valveOuterLight { fill: hsl(0, 50%, 54%); }
+    .cap { fill: hsl(0, 42%, 42%); }
+    .capLight { fill: hsl(0, 42%, 44%); }
 }
 
 .forebodingTrees {
-    .treeFar { fill: #300; }
-    .treeMiddle { fill: #330; }
-    .treeNear { fill: #630; }
+    .treeFar { fill: hsl(0, 100%, 10%); }
+    .treeMiddle { fill: hsl(60, 100%, 10%); }
+    .treeNear { fill: hsl(30, 100%, 20%); }
 }
 
 .gravestone {
-    .gravestoneTop { fill: #a8b3ae; }
-    .gravestoneFront { fill: #838f8a; }
-    .stoneRear { fill: #7b7d75; }
-    .stoneMiddle { fill: #8d8f86; }
-    .stoneFront { fill: #9c9e94; }
+    .gravestoneTop { fill: hsl(153, 7%, 68%); }
+    .gravestoneFront { fill: hsl(155, 5%, 54%); }
+    .stoneRear { fill: hsl(75, 3%, 47%); }
+    .stoneMiddle { fill: hsl(73, 4%, 54%); }
+    .stoneFront { fill: hsl(72, 5%, 60%); }
 }
 
 .howieFridge {
-    .base { fill: #a683a6; }
-    .door { fill: #de8ede; }
-    .handle { fill: #ad8761; }
-    .brass { fill: #d6d654; }
+    .base { fill: hsl(300, 16%, 58%); }
+    .door { fill: hsl(300, 55%, 71%); }
+    .handle { fill: hsl(30, 32%, 53%); }
+    .brass { fill: hsl(60, 61%, 58%); }
 }
 
 .ivDrip {
-    .pole { fill: #999; }
-    .boxLight { fill: #c4a3e6; }
-    .boxMedium { fill: #ad91cc; }
-    .boxDark { fill: #997fb3; }
-    .console { fill: #8fccad; }
-    .button { fill: #e0e0a8; }
-    .bar { fill: #88b0b0; }
-    .bagCap { fill: #fff; }
-    .bagFull { fill: #9ae6e6; }
-    .bagEmpty { fill: #d7f2f2; }
+    .pole { fill: hsl(0, 0%, 60%); }
+    .boxLight { fill: hsl(270, 57%, 77%); }
+    .boxMedium { fill: hsl(268, 37%, 68%); }
+    .boxDark { fill: hsl(270, 25%, 60%); }
+    .console { fill: hsl(150, 37%, 68%); }
+    .button { fill: hsl(60, 47%, 77%); }
+    .bar { fill: hsl(180, 20%, 61%); }
+    .bagCap { fill: hsl(0, 0%, 100%); }
+    .bagFull { fill: hsl(180, 60%, 75%); }
+    .bagEmpty { fill: hsl(180, 51%, 90%); }
 }
 
 .lockerBank {
-    .frame { fill: #929475; }
-    .door { fill: #7fb8c7; }
-    .label { fill: #aba287; }
-    .lips { fill: #9c4c61; }
-    .teeth { fill: #fff; }
-    .kiss { fill: #9d64ba; }
+    .frame { fill: hsl(64, 13%, 52%); }
+    .door { fill: hsl(193, 39%, 64%); }
+    .label { fill: hsl(45, 18%, 60%); }
+    .lips { fill: hsl(344, 34%, 45%); }
+    .teeth { fill: hsl(0, 0%, 100%); }
+    .kiss { fill: hsl(280, 38%, 56%); }
 }
 
 .mirroredSink {
-    .back { fill: #fc9; }
-    .cabinet { fill: #cc9; }
-    .doorFront { fill: #ff9; }
-    .frame { fill: #cc9; }
-    .doorTop { fill: #cc6; }
-    .knob { fill: #ff9; }
-    .doorHandle { fill: #996; }
-    .mirror { fill: #9ff; }
-    .reflection { fill: #cff; }
-    .counterTop { fill: #696; }
-    .counterFront { fill: #9c9; }
-    .stem { fill: #999; }
-    .faucet { fill: #999; }
-    .aerator { fill: #ccc; }
-    .sink { fill: #663; }
-    .debbieShirt { fill: #0071bc; }
-    .debbieHat { fill: #96c; }
-    .photoBackground { fill: #666; }
-    .nkotbShirtDark { fill: #369; }
-    .nkotbShirtLight { fill: #00a99d; }
-    .nkotbShirtAverage { fill: #22b573; }
+    .back { fill: hsl(30, 100%, 80%); }
+    .cabinet { fill: hsl(60, 33%, 70%); }
+    .doorFront { fill: hsl(60, 100%, 80%); }
+    .frame { fill: hsl(60, 33%, 70%); }
+    .doorTop { fill: hsl(60, 50%, 60%); }
+    .knob { fill: hsl(60, 100%, 80%); }
+    .doorHandle { fill: hsl(60, 20%, 50%); }
+    .mirror { fill: hsl(180, 100%, 80%); }
+    .reflection { fill: hsl(180, 100%, 90%); }
+    .counterTop { fill: hsl(120, 20%, 50%); }
+    .counterFront { fill: hsl(120, 33%, 70%); }
+    .stem { fill: hsl(0, 0%, 60%); }
+    .faucet { fill: hsl(0, 0%, 60%); }
+    .aerator { fill: hsl(0, 0%, 80%); }
+    .sink { fill: hsl(60, 33%, 30%); }
+    .debbieShirt { fill: hsl(204, 100%, 37%); }
+    .debbieHat { fill: hsl(270, 50%, 60%); }
+    .photoBackground { fill: hsl(0, 0%, 40%); }
+    .nkotbShirtDark { fill: hsl(210, 50%, 40%); }
+    .nkotbShirtLight { fill: hsl(176, 100%, 33%); }
+    .nkotbShirtAverage { fill: hsl(153, 68%, 42%); }
 }
 
 .museumDisplay {
-    .displayBack { fill: #ffc; }
-    .displayLeft { fill: #cc9; }
-    .displayRight { fill: #cc9; }
-    .displayTop { fill: #cc9; }
-    .displayBottom { fill: #cc9; }
-    .case { fill: #cc6; }
-    .land { fill: #c96; }
-    .routes { fill: #c66; }
-    .oar { fill: #963; }
-    .axeHandle { fill: #963; }
-    .axeBlade { fill: #999; }
-    .axeTwine { fill: #fcc; }
-    .pot { fill: #996; }
-    .vaseLeg { fill: #366; }
-    .vase { fill: #699; }
-    .vaseBand { fill: #9c9; }
-    .pitcher { fill: #99c; }
-    .pitcherBand { fill: #c9c; }
+    .displayBack { fill: hsl(60, 100%, 90%); }
+    .displayLeft { fill: hsl(60, 33%, 70%); }
+    .displayRight { fill: hsl(60, 33%, 70%); }
+    .displayTop { fill: hsl(60, 33%, 70%); }
+    .displayBottom { fill: hsl(60, 33%, 70%); }
+    .case { fill: hsl(60, 50%, 60%); }
+    .land { fill: hsl(30, 50%, 60%); }
+    .routes { fill: hsl(0, 50%, 60%); }
+    .oar { fill: hsl(30, 50%, 40%); }
+    .axeHandle { fill: hsl(30, 50%, 40%); }
+    .axeBlade { fill: hsl(0, 0%, 60%); }
+    .axeTwine { fill: hsl(0, 100%, 90%); }
+    .pot { fill: hsl(60, 20%, 50%); }
+    .vaseLeg { fill: hsl(180, 33%, 30%); }
+    .vase { fill: hsl(180, 20%, 50%); }
+    .vaseBand { fill: hsl(120, 33%, 70%); }
+    .pitcher { fill: hsl(240, 33%, 70%); }
+    .pitcherBand { fill: hsl(300, 33%, 70%); }
 }
 
 .overpassSignBack {
-    .board {fill: #063; }
-    .lattice {fill: #666; }
-    .joint {fill: #333; }
-    .frame {fill: #999; }
+    .board {fill: hsl(150, 100%, 20%); }
+    .lattice {fill: hsl(0, 0%, 40%); }
+    .joint {fill: hsl(0, 0%, 20%); }
+    .frame {fill: hsl(0, 0%, 60%); }
 }
 
 .pharmacyAisle {
-    .rackBack { fill: #999; }
-    .boxTopFirst { fill: #c69; }
-    .labelTopFirst { fill: #7b99af; }
-    .bottleTopSecond { fill: #c96; }
-    .labelTopSecond { fill: #50a57a; }
-    .boxTopThird { fill: #cc6; }
-    .labelTopThird { fill: #ccb06a; }
-    .boxTopFourth { fill: #6c6; }
-    .labelTopFourth { fill: #a57c5d; }
-    .boxTopFifth { fill: #6cc; }
-    .labelTopFifth { fill: #dd9ec8; }
-    .boxTopMiddleFirst { fill: #96c; }
-    .labelTopMiddleFirst { fill: #a493cc; }
-    .capTopMiddleSecond { fill: #29abe2; }
-    .boxTopMiddleSecond { fill: #c99; }
-    .labelTopMiddleSecond { fill: #81b6d3; }
-    .bottleTopMiddleThird { fill: #a67c52; }
-    .capTopMiddleThird { fill: #00a99d; }
-    .boxTopMiddleThird { fill: #52a088; }
-    .labelTopMiddleThird { fill: #cc9; }
-    .boxTopMiddleFourth { fill: #9c9; }
-    .labelTopMiddleFourth { fill: #52a35f; }
-    .boxMiddleFirst { fill: #69c; }
-    .labelMiddleFirst { fill: #afc18b; }
-    .capMiddleSecond { fill: #ed1e79; }
-    .boxMiddleSecond { fill: #d5d8a3; }
-    .labelMiddleSecond { fill: #99c; }
-    .bottleMiddleThird { fill: #c69c6d; }
-    .capMiddleThird { fill: #22b573; }
-    .boxMiddleThird { fill: #c9c; }
-    .boxMiddleFourth { fill: #cc6698; }
-    .labelMiddleFourth { fill: #9ad8e2; }
-    .boxMiddleFifth { fill: #cc9965; }
-    .labelMiddleFifth { fill: #8ab7a2; }
-    .capBottomMiddleFirst { fill: #fbb03b; }
-    .boxBottomMiddleFirst { fill: #afbf9d; }
-    .labelBottomMiddleFirst { fill: #cccc65; }
-    .boxBottomMiddleSecond { fill: #66cc65; }
-    .labelBottomMiddleSecond { fill: #ddccb1; }
-    .capBottomMiddleThird { fill: #8cc63f; }
-    .boxBottomMiddleThird { fill: #66cccb; }
-    .labelBottomMiddleThird { fill: #e89ac8; }
-    .capBottomMiddleFourth { fill: #e6e6e6; }
-    .boxBottomMiddleFourth { fill: #8cb4e0; }
-    .labelBottomMiddleFourth { fill: #9966cb; }
-    .boxBottomFirst { fill: #cc9998; }
-    .labelBottomFirst { fill: #8cdae5; }
-    .boxBottomSecond { fill: #cccc98; }
-    .labelBottomSecond { fill: #524a70; }
-    .capBottomThird { fill: #ccc; }
-    .boxBottomThird { fill: #729dc1; }
-    .labelBottomThird { fill: #99cc98; }
-    .boxBottomFourth { fill: #6699cb; }
-    .labelBottomFourth { fill: #6fa5a4; }
-    .shelf { fill: #996; }
-    .rackFront { fill: #663; }
+    .rackBack { fill: hsl(0, 0%, 60%); }
+    .boxTopFirst { fill: hsl(330, 50%, 60%); }
+    .labelTopFirst { fill: hsl(205, 25%, 58%); }
+    .bottleTopSecond { fill: hsl(30, 50%, 60%); }
+    .labelTopSecond { fill: hsl(150, 35%, 48%); }
+    .boxTopThird { fill: hsl(60, 50%, 60%); }
+    .labelTopThird { fill: hsl(43, 49%, 61%); }
+    .boxTopFourth { fill: hsl(120, 50%, 60%); }
+    .labelTopFourth { fill: hsl(26, 29%, 51%); }
+    .boxTopFifth { fill: hsl(180, 50%, 60%); }
+    .labelTopFifth { fill: hsl(320, 48%, 74%); }
+    .boxTopMiddleFirst { fill: hsl(270, 50%, 60%); }
+    .labelTopMiddleFirst { fill: hsl(258, 36%, 69%); }
+    .capTopMiddleSecond { fill: hsl(198, 76%, 52%); }
+    .boxTopMiddleSecond { fill: hsl(0, 33%, 70%); }
+    .labelTopMiddleSecond { fill: hsl(201, 48%, 67%); }
+    .bottleTopMiddleThird { fill: hsl(30, 34%, 49%); }
+    .capTopMiddleThird { fill: hsl(176, 100%, 33%); }
+    .boxTopMiddleThird { fill: hsl(162, 32%, 47%); }
+    .labelTopMiddleThird { fill: hsl(60, 33%, 70%); }
+    .boxTopMiddleFourth { fill: hsl(120, 33%, 70%); }
+    .labelTopMiddleFourth { fill: hsl(130, 33%, 48%); }
+    .boxMiddleFirst { fill: hsl(210, 50%, 60%); }
+    .labelMiddleFirst { fill: hsl(80, 30%, 65%); }
+    .capMiddleSecond { fill: hsl(334, 85%, 52%); }
+    .boxMiddleSecond { fill: hsl(63, 40%, 74%); }
+    .labelMiddleSecond { fill: hsl(240, 33%, 70%); }
+    .bottleMiddleThird { fill: hsl(32, 44%, 60%); }
+    .capMiddleThird { fill: hsl(153, 68%, 42%); }
+    .boxMiddleThird { fill: hsl(300, 33%, 70%); }
+    .boxMiddleFourth { fill: hsl(331, 50%, 60%); }
+    .labelMiddleFourth { fill: hsl(188, 55%, 75%); }
+    .boxMiddleFifth { fill: hsl(30, 50%, 60%); }
+    .labelMiddleFifth { fill: hsl(152, 24%, 63%); }
+    .capBottomMiddleFirst { fill: hsl(37, 96%, 61%); }
+    .boxBottomMiddleFirst { fill: hsl(88, 21%, 68%); }
+    .labelBottomMiddleFirst { fill: hsl(60, 50%, 60%); }
+    .boxBottomMiddleSecond { fill: hsl(119, 50%, 60%); }
+    .labelBottomMiddleSecond { fill: hsl(37, 39%, 78%); }
+    .capBottomMiddleThird { fill: hsl(86, 54%, 51%); }
+    .boxBottomMiddleThird { fill: hsl(179, 50%, 60%); }
+    .labelBottomMiddleThird { fill: hsl(325, 63%, 76%); }
+    .capBottomMiddleFourth { fill: hsl(0, 0%, 90%); }
+    .boxBottomMiddleFourth { fill: hsl(211, 58%, 71%); }
+    .labelBottomMiddleFourth { fill: hsl(270, 49%, 60%); }
+    .boxBottomFirst { fill: hsl(1, 34%, 70%); }
+    .labelBottomFirst { fill: hsl(187, 63%, 72%); }
+    .boxBottomSecond { fill: hsl(60, 34%, 70%); }
+    .labelBottomSecond { fill: hsl(253, 20%, 36%); }
+    .capBottomThird { fill: hsl(0, 0%, 80%); }
+    .boxBottomThird { fill: hsl(207, 39%, 60%); }
+    .labelBottomThird { fill: hsl(119, 34%, 70%); }
+    .boxBottomFourth { fill: hsl(210, 49%, 60%); }
+    .labelBottomFourth { fill: hsl(179, 23%, 54%); }
+    .shelf { fill: hsl(60, 20%, 50%); }
+    .rackFront { fill: hsl(60, 33%, 30%); }
 }
 
 .playgroundSlide {
-    .rung { fill: #699; }
-    .bar { fill: #663; }
-    .frameSide { fill: #336; }
-    .slide { fill: #69c; }
-    .frameFront { fill: #66c; }
+    .rung { fill: hsl(180, 20%, 50%); }
+    .bar { fill: hsl(60, 33%, 30%); }
+    .frameSide { fill: hsl(240, 33%, 30%); }
+    .slide { fill: hsl(210, 50%, 60%); }
+    .frameFront { fill: hsl(240, 50%, 60%); }
 }
 
 .recyclables {
-    .bin { fill: #4595e6; }
-    .logo { fill: #fff; }
+    .bin { fill: hsl(210, 76%, 59%); }
+    .logo { fill: hsl(0, 0%, 100%); }
 }
 
 .sandbags {
-    .ropeDark { fill: #b5986c; }
-    .post { fill: #997959; }
-    .ropeLight { fill: #d1af7d; }
+    .ropeDark { fill: hsl(36, 33%, 57%); }
+    .post { fill: hsl(30, 26%, 47%); }
+    .ropeLight { fill: hsl(36, 48%, 65%); }
     .stringBorderLine { fill: none; }
-    .spindle { fill: #bfbf9c; }
-    .sandbag { fill: #cccc9d; }
-    .sandbagInner { fill: #996; }
-    .string { fill: #f0f0d1; }
+    .spindle { fill: hsl(60, 21%, 68%); }
+    .sandbag { fill: hsl(60, 32%, 71%); }
+    .sandbagInner { fill: hsl(60, 20%, 50%); }
+    .string { fill: hsl(60, 51%, 88%); }
 }
 
 .shoppingCart {
-    .wheelRear {fill: #3a404d; }
-    .hubRear {fill: #606a80; }
-    .swivelRear {fill: #8694b3; }
-    .cartRear {fill: rgba(225, 225, 250, 0.75); }
-    .mountRear {fill: #798f75; }
-    .barRear {fill: #818491; }
-    .wheelFront {fill: #434a59; }
-    .hubFront {fill: #6d7991; }
-    .swivelFront {fill: #8e9dbd; }
-    .cart {fill: #8c909e; }
-    .mountFront {fill: #869e82; }
-    .barFront {fill: #999ead; }
+    .wheelRear {fill: hsl(221, 14%, 26%); }
+    .hubRear {fill: hsl(221, 14%, 44%); }
+    .swivelRear {fill: hsl(221, 23%, 61%); }
+    .cartRear {fill: hsla(240, 71%, 93%, 0.75); }
+    .mountRear {fill: hsl(111, 10%, 51%); }
+    .barRear {fill: hsl(229, 7%, 54%); }
+    .wheelFront {fill: hsl(221, 14%, 31%); }
+    .hubFront {fill: hsl(220, 14%, 50%); }
+    .swivelFront {fill: hsl(221, 26%, 65%); }
+    .cart {fill: hsl(227, 8%, 58%); }
+    .mountFront {fill: hsl(111, 13%, 56%); }
+    .barFront {fill: hsl(225, 11%, 64%); }
 }
 
 .signpost {
-    .pole { fill: #9e9265; }
-    .signBottom { fill: #b2b3ae; }
-    .signFront { fill: #ddded8; }
+    .pole { fill: hsl(47, 23%, 51%); }
+    .signBottom { fill: hsl(72, 3%, 69%); }
+    .signFront { fill: hsl(70, 8%, 86%); }
 }
 
 .stageLights {
-    .shutterBottom { fill: #036; }
-    .shutterSurface { fill: #369; }
-    .hangerBack { fill: #666; }
-    .cableBack { fill: #903; }
-    .housing { fill: #63c; }
-    .mountBottom { fill: #630; }
-    .mountSide { fill: #963; }
-    .mountTop { fill: #fc9; }
-    .mountFront { fill: #c96; }
-    .bar { fill: #996; }
-    .shutterEdge { fill: #336; }
-    .cableFront { fill: #c03; }
-    .hangerFront { fill: #999; }
-    .hangerScrew { fill: #cc9; }
+    .shutterBottom { fill: hsl(210, 100%, 20%); }
+    .shutterSurface { fill: hsl(210, 50%, 40%); }
+    .hangerBack { fill: hsl(0, 0%, 40%); }
+    .cableBack { fill: hsl(340, 100%, 30%); }
+    .housing { fill: hsl(260, 60%, 50%); }
+    .mountBottom { fill: hsl(30, 100%, 20%); }
+    .mountSide { fill: hsl(30, 50%, 40%); }
+    .mountTop { fill: hsl(30, 100%, 80%); }
+    .mountFront { fill: hsl(30, 50%, 60%); }
+    .bar { fill: hsl(60, 20%, 50%); }
+    .shutterEdge { fill: hsl(240, 33%, 30%); }
+    .cableFront { fill: hsl(345, 100%, 40%); }
+    .hangerFront { fill: hsl(0, 0%, 60%); }
+    .hangerScrew { fill: hsl(60, 33%, 70%); }
 }
 
 .steamPipes {
-    .flange { fill: #966; }
-    .flangeSide { fill: #633; }
-    .pipeLarge { fill: #663; }
-    .pipeSmall { fill: #996; }
-    .mount { fill: #666; }
-    .spokes { fill: #c96; }
-    .wheel { fill: #c33; }
-    .cap { fill: #cc0; }
+    .flange { fill: hsl(0, 20%, 50%); }
+    .flangeSide { fill: hsl(0, 33%, 30%); }
+    .pipeLarge { fill: hsl(60, 33%, 30%); }
+    .pipeSmall { fill: hsl(60, 20%, 50%); }
+    .mount { fill: hsl(0, 0%, 40%); }
+    .spokes { fill: hsl(30, 50%, 60%); }
+    .wheel { fill: hsl(0, 60%, 50%); }
+    .cap { fill: hsl(60, 100%, 40%); }
 }
 
 .storageBoxes {
-    .boxDark { fill: #8c735a; }
-    .boxMedium { fill: #a88a6c; }
-    .boxLight { fill: #c29f7e; }
-    .boxInner { fill: #75604b; }
+    .boxDark { fill: hsl(30, 22%, 45%); }
+    .boxMedium { fill: hsl(30, 26%, 54%); }
+    .boxLight { fill: hsl(29, 36%, 63%); }
+    .boxInner { fill: hsl(30, 22%, 38%); }
 }
 
 .storageChest {
-    .chestSide { fill: #369; }
-    .chestFront { fill: #69c; }
-    .leatherSide { fill: #663; }
-    .leatherSideLine { stroke: #552; }
-    .leatherFront { fill: #996; }
-    .leatherFrontLine { stroke: #885; }
-    .handle { fill: #630; }
-    .brassSide { fill: #aa4; }
-    .brassFront { fill: #cc6; }
-    .brassLine { stroke: #993; }
-    .keyhole { fill: #333; }
+    .chestSide { fill: hsl(210, 50%, 40%); }
+    .chestFront { fill: hsl(210, 50%, 60%); }
+    .leatherSide { fill: hsl(60, 33%, 30%); }
+    .leatherSideLine { stroke: hsl(60, 43%, 23%); }
+    .leatherFront { fill: hsl(60, 20%, 50%); }
+    .leatherFrontLine { stroke: hsl(60, 23%, 43%); }
+    .handle { fill: hsl(30, 100%, 20%); }
+    .brassSide { fill: hsl(60, 43%, 47%); }
+    .brassFront { fill: hsl(60, 50%, 60%); }
+    .brassLine { stroke: hsl(60, 50%, 40%); }
+    .keyhole { fill: hsl(0, 0%, 20%); }
 }
 
 .taiwanFridge {
-    .base { fill: #666; }
-    .door { fill: #6cc; }
-    .chrome { fill: #999; }
-    .brass { fill: #cc6; }
+    .base { fill: hsl(0, 0%, 40%); }
+    .door { fill: hsl(180, 50%, 60%); }
+    .chrome { fill: hsl(0, 0%, 60%); }
+    .brass { fill: hsl(60, 50%, 60%); }
 }
 
 .taiwanTree {
-    .trunk { fill: #5c5224; }
-    .leavesFarthest { fill: #734168; }
-    .leavesFar { fill: #804974; }
-    .leavesNear { fill: #8c507f; }
-    .leavesNearer { fill: #99588b; }
-    .leavesNearest { fill: #a65e97; }
+    .trunk { fill: hsl(49, 44%, 25%); }
+    .leavesFarthest { fill: hsl(313, 28%, 35%); }
+    .leavesFar { fill: hsl(313, 27%, 39%); }
+    .leavesNear { fill: hsl(313, 27%, 43%); }
+    .leavesNearer { fill: hsl(313, 27%, 47%); }
+    .leavesNearest { fill: hsl(313, 29%, 51%); }
 }
 
 .television {
-    .side { fill: #c9af7f; }
-    .back { fill: #b8a074; }
-    .panel { fill: #96835f; }
-    .slat { fill: #7a6b4e; }
-    .tubeLight { fill: #5a696e; }
-    .tubeDark { fill: #505d61; }
-    .antennaBase { fill: #5c706e; }
-    .antennaRing { fill: #6c8582; }
-    .antennae { fill: #94b5b1; }
+    .side { fill: hsl(39, 41%, 64%); }
+    .back { fill: hsl(39, 32%, 59%); }
+    .panel { fill: hsl(39, 22%, 48%); }
+    .slat { fill: hsl(40, 22%, 39%); }
+    .tubeLight { fill: hsl(195, 10%, 39%); }
+    .tubeDark { fill: hsl(194, 10%, 35%); }
+    .antennaBase { fill: hsl(174, 10%, 40%); }
+    .antennaRing { fill: hsl(173, 10%, 47%); }
+    .antennae { fill: hsl(173, 18%, 65%); }
 }
 
 .towelRack {
-    .ball { fill: #93b386; }
-    .rack { fill: #c1d1bc; }
-    .band { fill: #d6d6b2; }
-    .towel { fill: #cccc8f; }
+    .ball { fill: hsl(103, 23%, 61%); }
+    .rack { fill: hsl(106, 19%, 78%); }
+    .band { fill: hsl(60, 31%, 77%); }
+    .towel { fill: hsl(60, 37%, 68%); }
 }
 
 .trafficLight {
-    .support { fill: #99998e; }
-    .pole { fill: #73736a; }
-    .casing { fill: #73735a; }
-    .visor { fill: #595946; }
-    .lightGreen { fill: #74ff4d; }
-    .lightOff { fill: #6b5850; }
-    .lightRed { fill: #ff4d63; }
+    .support { fill: hsl(60, 5%, 58%); }
+    .pole { fill: hsl(60, 4%, 43%); }
+    .casing { fill: hsl(60, 12%, 40%); }
+    .visor { fill: hsl(60, 12%, 31%); }
+    .lightGreen { fill: hsl(107, 100%, 65%); }
+    .lightOff { fill: hsl(18, 14%, 37%); }
+    .lightRed { fill: hsl(353, 100%, 65%); }
 }
 
 .trashCan {
-    .can { fill: #999; }
-    .ridge { fill: #8c8c8c; }
-    .mount { fill: #a6a6a6; }
-    .handle { fill: #b3b3b3; }
+    .can { fill: hsl(0, 0%, 60%); }
+    .ridge { fill: hsl(0, 0%, 55%); }
+    .mount { fill: hsl(0, 0%, 65%); }
+    .handle { fill: hsl(0, 0%, 70%); }
     .handleOverlapLine { fill: none; }
-    .boxLeft { fill: #bf7878; }
-    .boxRear { fill: #84d88c; }
-    .boxFront { fill: #bb8dd6; }
-    .boxRightMedium { fill: #6d9de2; }
-    .boxRightDark { fill: #608ac7; }
-    .boxRightLight { fill: #72a5ed; }
+    .boxLeft { fill: hsl(0, 36%, 61%); }
+    .boxRear { fill: hsl(126, 52%, 68%); }
+    .boxFront { fill: hsl(278, 47%, 70%); }
+    .boxRightMedium { fill: hsl(215, 67%, 66%); }
+    .boxRightDark { fill: hsl(216, 48%, 58%); }
+    .boxRightLight { fill: hsl(215, 77%, 69%); }
 }
 
 .uclaTree {
-    .trunk { fill: #564329; }
-    .leavesRear { fill: #4b873e; }
-    .leavesFront { fill: #599950; }
+    .trunk { fill: hsl(35, 35%, 25%); }
+    .leavesRear { fill: hsl(109, 37%, 39%); }
+    .leavesFront { fill: hsl(113, 31%, 46%); }
 }
 
 .waitingRoomPlant {
-    .frondBack { fill: #396; }
-    .frondMiddle { fill: #063; }
-    .frondFront { fill: #033; }
-    .vase { fill: #63c; }
+    .frondBack { fill: hsl(150, 50%, 40%); }
+    .frondMiddle { fill: hsl(150, 100%, 20%); }
+    .frondFront { fill: hsl(180, 100%, 10%); }
+    .vase { fill: hsl(260, 60%, 50%); }
 }
 
 .yellowTapedGrill {
     .pole { fill: gray; }
-    .tapeDark { fill: #99994e; }
-    .tapeLight { fill: #abab55; }
-    .grillInnerLight { fill: #7e826b; }
-    .grillInnerDark { fill: #717560; }
-    .grillLight { fill: #7d9996; }
-    .grillMedium { fill: #6f8784; }
-    .grillDark { fill: #607573; }
-    .coal { fill: #5c5c54; }
-    .rack { fill: #999989; }
-    .handle { fill: #899399; }
+    .tapeDark { fill: hsl(60, 32%, 45%); }
+    .tapeLight { fill: hsl(60, 34%, 50%); }
+    .grillInnerLight { fill: hsl(70, 10%, 46%); }
+    .grillInnerDark { fill: hsl(71, 10%, 42%); }
+    .grillLight { fill: hsl(174, 12%, 55%); }
+    .grillMedium { fill: hsl(173, 10%, 48%); }
+    .grillDark { fill: hsl(174, 10%, 42%); }
+    .coal { fill: hsl(60, 5%, 35%); }
+    .rack { fill: hsl(60, 7%, 57%); }
+    .handle { fill: hsl(203, 7%, 57%); }
 }

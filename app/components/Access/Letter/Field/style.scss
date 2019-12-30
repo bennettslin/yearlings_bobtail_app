@@ -1,6 +1,6 @@
 .AccessField {
     filter: $dropShadow__accessLetter;
-    .keyFront { fill: #ffffe6; }
-    .keyBottom { fill: #ccccb7; }
-    .keySide { fill: #e3e3cc; }
+    .keyFront { fill: hsl(60, 100%, 95%); }
+    .keyBottom { fill: hsl(60, 17%, 76%); }
+    .keySide { fill: hsl(60, 29%, 85%); }
 }

@@ -1,30 +1,30 @@
 .peacock {
-    .body { fill: #3981c4; }
-    .train { fill: #61a17f; }
-    .trainTop { fill: #82c282; }
-    .eyespotOuter { fill: #74c99f; }
-    .eyespotInner { fill: #5499f0; }
-    .neckBottom { fill: #3993c4; }
-    .neckTop { fill: #399fc4; }
-    .mouth { fill: #5c4f45; }
-    .head { fill: #39afc4; }
+    .body { fill: hsl(209, 55%, 50%); }
+    .train { fill: hsl(148, 25%, 51%); }
+    .trainTop { fill: hsl(120, 34%, 64%); }
+    .eyespotOuter { fill: hsl(150, 44%, 62%); }
+    .eyespotInner { fill: hsl(213, 84%, 64%); }
+    .neckBottom { fill: hsl(201, 55%, 50%); }
+    .neckTop { fill: hsl(196, 55%, 50%); }
+    .mouth { fill: hsl(26, 14%, 32%); }
+    .head { fill: hsl(189, 55%, 50%); }
 }
 
 .peahen {
-    .body { fill: #9eb0a6; }
-    .train { fill: #6d7370; }
-    .wing { fill: #828784; }
-    .neckBottom { fill: #94b0a0; }
-    .neckTop { fill: #84b097; }
-    .head { fill: #8db09c; }
+    .body { fill: hsl(147, 10%, 65%); }
+    .train { fill: hsl(150, 3%, 44%); }
+    .wing { fill: hsl(144, 2%, 52%); }
+    .neckBottom { fill: hsl(146, 15%, 64%); }
+    .neckTop { fill: hsl(146, 22%, 60%); }
+    .head { fill: hsl(146, 18%, 62%); }
 }
 
 .puppetKhariLiz {
-    .khariShoe { fill: #7a5765; }
-    .khariPajama { fill: #e6e8d4; }
-    .khariKurta { fill: #bcbf92; }
-    .khariTurban { fill: #663b4a; }
-    .lizSari { fill: #77b874; }
-    .lizSash { fill: #558894; }
-    .lizVeil { fill: #55947a; }
+    .khariShoe { fill: hsl(336, 17%, 41%); }
+    .khariPajama { fill: hsl(66, 30%, 87%); }
+    .khariKurta { fill: hsl(64, 26%, 66%); }
+    .khariTurban { fill: hsl(339, 27%, 32%); }
+    .lizSari { fill: hsl(117, 32%, 59%); }
+    .lizSash { fill: hsl(191, 27%, 46%); }
+    .lizVeil { fill: hsl(155, 27%, 46%); }
 }

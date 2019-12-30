@@ -1,9 +1,9 @@
 .lizPhone#{$suffix} {
-    .antennaMedium { fill: #88a0b8; }
-    .antennaLight { fill: #95afc9; }
-    .phoneLight { fill: #99e8be; }
-    .phoneMedium { fill: #8fd9b2; }
-    .phoneDark { fill: #86cca7; }
-    .buttonLarge { fill: #6b96c2; }
-    .buttonSmall { fill: #6abf72; }
+    .antennaMedium { fill: hsl(210, 25%, 63%); }
+    .antennaLight { fill: hsl(210, 32%, 69%); }
+    .phoneLight { fill: hsl(148, 63%, 75%); }
+    .phoneMedium { fill: hsl(148, 49%, 71%); }
+    .phoneDark { fill: hsl(148, 41%, 66%); }
+    .buttonLarge { fill: hsl(210, 42%, 59%); }
+    .buttonSmall { fill: hsl(126, 40%, 58%); }
 }

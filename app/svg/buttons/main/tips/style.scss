@@ -1,10 +1,10 @@
 .ButtonIcon__tips {
-    .mountDark { fill: #64aecc; }
-    .mountLight { fill: #70c4e6; }
-    .groove { fill: #325766; }
-    .switch { fill: #5798b3; }
-    .contact { fill: #6a757d; }
-    .screw { fill: #93a3ad; }
-    .bulbOff { fill: rgba(225, 225, 255, 0.7); }
-    .bulbOn { fill: #ffc; }
+    .mountDark { fill: hsl(197, 50%, 60%); }
+    .mountLight { fill: hsl(197, 70%, 67%); }
+    .groove { fill: hsl(197, 34%, 30%); }
+    .switch { fill: hsl(198, 38%, 52%); }
+    .contact { fill: hsl(205, 8%, 45%); }
+    .screw { fill: hsl(203, 14%, 63%); }
+    .bulbOff { fill: hsla(240, 100%, 94%, 0.7); }
+    .bulbOn { fill: hsl(60, 100%, 90%); }
 }

@@ -1,8 +1,8 @@
 .acousticGuitar#{$suffix} {
-    .guitarDark { fill: #827759; }
-    .guitarLight { fill: #9e9e8f; }
-    .guitarNeck { fill: #73735c; }
-    .guitarFretboard { fill: #87876c; }
-    .guitarHeadstock { fill: #695d46; }
-    .soundHole { fill: #343636; }
+    .guitarDark { fill: hsl(44, 19%, 43%); }
+    .guitarLight { fill: hsl(60, 7%, 59%); }
+    .guitarNeck { fill: hsl(60, 11%, 41%); }
+    .guitarFretboard { fill: hsl(60, 11%, 48%); }
+    .guitarHeadstock { fill: hsl(39, 20%, 34%); }
+    .soundHole { fill: hsl(180, 2%, 21%); }
 }

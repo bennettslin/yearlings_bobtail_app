@@ -1,6 +1,6 @@
 .lamppost#{$suffix} {
-    .pole { fill: #828281; }
-    .light { fill: #ff9; }
-    .brass { fill: #a8a876; }
-    .copper { fill: #568f71; }
+    .pole { fill: hsl(60, 0%, 51%); }
+    .light { fill: hsl(60, 100%, 80%); }
+    .brass { fill: hsl(60, 22%, 56%); }
+    .copper { fill: hsl(148, 25%, 45%); }
 }

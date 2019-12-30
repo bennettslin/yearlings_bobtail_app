@@ -1,18 +1,18 @@
 .microphone#{$suffix} {
-    .base { fill: #4b585c; }
-    .bar { fill: #b3c8cf; }
-    .handle { fill: #536266; }
-    .micInner { fill: #43454a; }
-    .micStand { fill: #71798a; }
-    .micBack { fill: #3d414a; }
-    .micBody { fill: #585e6b; }
-    .micHead { fill: #8f98ad; }
-    .micStripe { fill: #5aadbf; }
-    .partShaded { fill: #556469; }
-    .partDark { fill: #627378; }
-    .partLight { fill: #7d9399; }
-    .clip { fill: #747e80; }
-    .bolt { fill: #91abb3; }
-    .lever { fill: #9aacb3; }
-    .ball { fill: #8c9da3; }
+    .base { fill: hsl(194, 10%, 33%); }
+    .bar { fill: hsl(195, 23%, 76%); }
+    .handle { fill: hsl(193, 10%, 36%); }
+    .micInner { fill: hsl(223, 5%, 28%); }
+    .micStand { fill: hsl(221, 10%, 49%); }
+    .micBack { fill: hsl(222, 10%, 26%); }
+    .micBody { fill: hsl(221, 10%, 38%); }
+    .micHead { fill: hsl(222, 15%, 62%); }
+    .micStripe { fill: hsl(191, 44%, 55%); }
+    .partShaded { fill: hsl(195, 11%, 37%); }
+    .partDark { fill: hsl(194, 10%, 43%); }
+    .partLight { fill: hsl(193, 12%, 55%); }
+    .clip { fill: hsl(190, 5%, 48%); }
+    .bolt { fill: hsl(194, 18%, 64%); }
+    .lever { fill: hsl(197, 14%, 65%); }
+    .ball { fill: hsl(196, 11%, 59%); }
 }

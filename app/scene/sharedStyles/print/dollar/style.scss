@@ -1,7 +1,7 @@
 .dollar#{$suffix} {
-    .dollarBelow { fill: #556e4d; }
-    .dollarEdge { fill: #77996b; }
-    .dollarCentre { fill: #c9dbc3; }
-    .dollarSeal { fill: #b8b57e; }
-    .dollarPortrait { fill: #b8b7a7; }
+    .dollarBelow { fill: hsl(105, 18%, 37%); }
+    .dollarEdge { fill: hsl(104, 18%, 51%); }
+    .dollarCentre { fill: hsl(105, 25%, 81%); }
+    .dollarSeal { fill: hsl(57, 29%, 61%); }
+    .dollarPortrait { fill: hsl(56, 11%, 69%); }
 }

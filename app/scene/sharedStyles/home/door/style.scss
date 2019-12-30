@@ -1,22 +1,22 @@
 .door#{$suffix} {
-    .frame { fill: #b8b38c; }
-    .doorSide { fill: #595039; }
-    .doorFront { fill: #6e6246; }
-    .edge { fill: #595039; }
-    .panel { fill: #63593f; }
-    .knob { fill: #b39c4c; }
-    .knobMount { fill: #a89347; }
-    .faceplate { fill: #594e26; }
-    .bolt { fill: #4a4120; }
-    .escutcheon { fill: #998541; }
-    .lockSide { fill: #9e8a44; }
-    .lockFront { fill: #a69147; }
-    .peepholeFrame { fill: #a69147; }
-    .peepholeGlass { fill: #3d4d54; }
-    .window { fill: #729ebd; }
-    .windowClear { fill: rgba(200, 200, 255, 0.25); }
-    .pushBarDark { fill: #717d80; }
-    .pushBarLight { fill: #8e9ca1; }
-    .ball { fill: #b39c4c; }
-    .handle { fill: #998541; }
+    .frame { fill: hsl(53, 24%, 64%); }
+    .doorSide { fill: hsl(43, 22%, 29%); }
+    .doorFront { fill: hsl(42, 22%, 35%); }
+    .edge { fill: hsl(43, 22%, 29%); }
+    .panel { fill: hsl(43, 22%, 32%); }
+    .knob { fill: hsl(47, 40%, 50%); }
+    .knobMount { fill: hsl(47, 41%, 47%); }
+    .faceplate { fill: hsl(47, 40%, 25%); }
+    .bolt { fill: hsl(47, 40%, 21%); }
+    .escutcheon { fill: hsl(46, 40%, 43%); }
+    .lockSide { fill: hsl(47, 40%, 44%); }
+    .lockFront { fill: hsl(47, 40%, 46%); }
+    .peepholeFrame { fill: hsl(47, 40%, 46%); }
+    .peepholeGlass { fill: hsl(198, 16%, 28%); }
+    .window { fill: hsl(205, 36%, 59%); }
+    .windowClear { fill: hsla(240, 100%, 89%, 0.25); }
+    .pushBarDark { fill: hsl(192, 6%, 47%); }
+    .pushBarLight { fill: hsl(196, 9%, 59%); }
+    .ball { fill: hsl(47, 40%, 50%); }
+    .handle { fill: hsl(46, 40%, 43%); }
 }

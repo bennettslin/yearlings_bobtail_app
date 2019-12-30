@@ -1,181 +1,181 @@
 .apartSketch {
-    .boyShirt { fill: #9c9c9c; }
-    .boyPants { fill: #878787; }
-    .boyShoe { fill: #5e5e5e; }
-    .boyYarmulke { fill: #d4d4d4; }
-    .land { fill: #878787; }
-    .ocean { fill: #b8b8b8; }
-    .hatTop { fill: #adadad; }
-    .hatBottom { fill: #858585; }
-    .puppetShoe { fill: #666; }
-    .puppetShirt { fill: #949494; }
-    .puppetPants { fill: #878787; }
+    .boyShirt { fill: hsl(0, 0%, 61%); }
+    .boyPants { fill: hsl(0, 0%, 53%); }
+    .boyShoe { fill: hsl(0, 0%, 37%); }
+    .boyYarmulke { fill: hsl(0, 0%, 83%); }
+    .land { fill: hsl(0, 0%, 53%); }
+    .ocean { fill: hsl(0, 0%, 72%); }
+    .hatTop { fill: hsl(0, 0%, 68%); }
+    .hatBottom { fill: hsl(0, 0%, 52%); }
+    .puppetShoe { fill: hsl(0, 0%, 40%); }
+    .puppetShirt { fill: hsl(0, 0%, 58%); }
+    .puppetPants { fill: hsl(0, 0%, 53%); }
 }
 
 .cinemaThoughtBuying {
-    .floor { fill: #889c74; }
-    .wall { fill: #b2cc99; }
-    .posterLeft { fill: #5f75a3; }
-    .posterRight { fill: #785fa3; }
-    .albumRightTop { fill: #bf8a77; }
-    .albumLeftTop { fill: #bdbf77; }
-    .pileSide { fill: #a4a686; }
-    .pileTop { fill: #b1b391; }
-    .albumRightBottom { fill: #81bf77; }
-    .yearlingsAlbum { fill: #77b0bf; }
-    .standFront { fill: #9e9c6b; }
-    .standSide { fill: #7a7953; }
-    .binFront { fill: #bab87e; }
-    .binSide { fill: #adab75; }
-    .mask { fill: #c9c2a5; }
-    .albumHeld { fill: #bf7c9a; }
+    .floor { fill: hsl(90, 17%, 53%); }
+    .wall { fill: hsl(91, 33%, 70%); }
+    .posterLeft { fill: hsl(221, 27%, 51%); }
+    .posterRight { fill: hsl(262, 27%, 51%); }
+    .albumRightTop { fill: hsl(16, 36%, 61%); }
+    .albumLeftTop { fill: hsl(62, 36%, 61%); }
+    .pileSide { fill: hsl(64, 15%, 59%); }
+    .pileTop { fill: hsl(64, 18%, 64%); }
+    .albumRightBottom { fill: hsl(112, 36%, 61%); }
+    .yearlingsAlbum { fill: hsl(193, 36%, 61%); }
+    .standFront { fill: hsl(58, 21%, 52%); }
+    .standSide { fill: hsl(58, 19%, 40%); }
+    .binFront { fill: hsl(58, 30%, 61%); }
+    .binSide { fill: hsl(58, 25%, 57%); }
+    .mask { fill: hsl(48, 25%, 72%); }
+    .albumHeld { fill: hsl(333, 34%, 62%); }
 }
 
 .cinemaThoughtRecording {
-    .wall { fill: #88a6ae; }
-    .floor { fill: #506468; }
-    .paper { fill: #e6e6e6; }
-    .melodicaBody { fill: #b38776; }
-    .melodicaKey { fill: #cfcfc8; }
-    .popScreen { fill: rgba(100, 100, 150, 0.5); }
-    .popScreenHolder { fill: #5f5d73; }
-    .fader { fill: #a4bdb5; }
-    .consoleScreen { fill: #88a199; }
-    .console { fill: #7d948d; }
-    .consolePanel { fill: #7b918a; }
+    .wall { fill: hsl(193, 19%, 61%); }
+    .floor { fill: hsl(190, 13%, 36%); }
+    .paper { fill: hsl(0, 0%, 90%); }
+    .melodicaBody { fill: hsl(17, 29%, 58%); }
+    .melodicaKey { fill: hsl(60, 7%, 80%); }
+    .popScreen { fill: hsla(240, 20%, 49%, 0.5); }
+    .popScreenHolder { fill: hsl(245, 11%, 41%); }
+    .fader { fill: hsl(161, 16%, 69%); }
+    .consoleScreen { fill: hsl(161, 12%, 58%); }
+    .console { fill: hsl(162, 10%, 54%); }
+    .consolePanel { fill: hsl(161, 9%, 53%); }
 }
 
 .escapePodSketch {
-    .stationBottom { fill: #707070; }
-    .stationMiddle { fill: #7a7a7a; }
-    .trim { fill: #adadad; }
-    .panelFront { fill: #b5b5b5; }
-    .panelSide { fill: #a3a3a3; }
-    .bar { fill: #b5b5b5; }
-    .hatchFront { fill: #9c9c9c; }
-    .stationTop { fill: #858585; }
-    .stationInner { fill: #5e5e5e; }
-    .hatchHole { fill: #525252; }
-    .hatchSide { fill: #8f8f8f; }
-    .glass { fill: #e6e6e6; }
-    .flameOuter { fill: #8c8c8c; }
-    .flameInner { fill: #999; }
-    .podInner { fill: #616161; }
-    .podOuter { fill: #8a8a8a; }
+    .stationBottom { fill: hsl(0, 0%, 44%); }
+    .stationMiddle { fill: hsl(0, 0%, 48%); }
+    .trim { fill: hsl(0, 0%, 68%); }
+    .panelFront { fill: hsl(0, 0%, 71%); }
+    .panelSide { fill: hsl(0, 0%, 64%); }
+    .bar { fill: hsl(0, 0%, 71%); }
+    .hatchFront { fill: hsl(0, 0%, 61%); }
+    .stationTop { fill: hsl(0, 0%, 52%); }
+    .stationInner { fill: hsl(0, 0%, 37%); }
+    .hatchHole { fill: hsl(0, 0%, 32%); }
+    .hatchSide { fill: hsl(0, 0%, 56%); }
+    .glass { fill: hsl(0, 0%, 90%); }
+    .flameOuter { fill: hsl(0, 0%, 55%); }
+    .flameInner { fill: hsl(0, 0%, 60%); }
+    .podInner { fill: hsl(0, 0%, 38%); }
+    .podOuter { fill: hsl(0, 0%, 54%); }
 }
 
 .estherSpeech {
-    .bubble { fill: #9eafae; }
+    .bubble { fill: hsl(176, 10%, 65%); }
 }
 
 .lizThought {
-    .ground { fill: #a19b78; }
-    .sky { fill: #a4c9eb; }
-    .foliage { fill: #64a66e; }
-    .cloud { fill: #59646e; }
-    .windshield { fill: #6f8cbf; }
-    .headrest { fill: #6b6e51; }
-    .tireSide { fill: #3c3f4a; }
-    .tireFront { fill: #575b6b; }
-    .reattaRear { fill: #b55a50; }
-    .reattaTrimRear { fill: #6f738a; }
-    .reattaLightRear { fill: #ffa263; }
-    .reattaSide { fill: #a6493e; }
-    .reattaTrimSide { fill: #606478; }
-    .reattaLightSide { fill: #bd7849; }
-    .hubcap { fill: #71798a; }
-    .exhaust { fill: #6f7d8a; }
-    .tear { fill: #518bad; }
+    .ground { fill: hsl(51, 18%, 55%); }
+    .sky { fill: hsl(209, 64%, 78%); }
+    .foliage { fill: hsl(129, 27%, 52%); }
+    .cloud { fill: hsl(209, 11%, 39%); }
+    .windshield { fill: hsl(218, 38%, 59%); }
+    .headrest { fill: hsl(66, 15%, 37%); }
+    .tireSide { fill: hsl(227, 10%, 26%); }
+    .tireFront { fill: hsl(228, 10%, 38%); }
+    .reattaRear { fill: hsl(6, 41%, 51%); }
+    .reattaTrimRear { fill: hsl(231, 11%, 49%); }
+    .reattaLightRear { fill: hsl(24, 100%, 69%); }
+    .reattaSide { fill: hsl(6, 46%, 45%); }
+    .reattaTrimSide { fill: hsl(230, 11%, 42%); }
+    .reattaLightSide { fill: hsl(24, 47%, 51%); }
+    .hubcap { fill: hsl(221, 10%, 49%); }
+    .exhaust { fill: hsl(209, 11%, 49%); }
+    .tear { fill: hsl(202, 36%, 50%); }
 }
 
 .pharmacyCel {
-    .sheetFront { fill: #c9c9c9; }
-    .sheetBack { fill: #dbdbdb; }
+    .sheetFront { fill: hsl(0, 0%, 79%); }
+    .sheetBack { fill: hsl(0, 0%, 86%); }
 }
 
 .siblingConstellation {
     .shoe { fill: gray; }
-    .crown { fill: #adadad; }
-    .dress { fill: #a8a8a8; }
-    .spearShaft { fill: #7a7a7a; }
-    .spearHead { fill: #b8b8b8; }
-    .pommel { fill: #999; }
-    .grip { fill: #787878; }
-    .horn { fill: #d4d4d4; }
-    .blade { fill: #c4c4c4; }
-    .guard { fill: #a1a1a1; }
-    .belt { fill: #878787; }
-    .star { fill: #ebebeb; }
+    .crown { fill: hsl(0, 0%, 68%); }
+    .dress { fill: hsl(0, 0%, 66%); }
+    .spearShaft { fill: hsl(0, 0%, 48%); }
+    .spearHead { fill: hsl(0, 0%, 72%); }
+    .pommel { fill: hsl(0, 0%, 60%); }
+    .grip { fill: hsl(0, 0%, 47%); }
+    .horn { fill: hsl(0, 0%, 83%); }
+    .blade { fill: hsl(0, 0%, 77%); }
+    .guard { fill: hsl(0, 0%, 63%); }
+    .belt { fill: hsl(0, 0%, 53%); }
+    .star { fill: hsl(0, 0%, 92%); }
 }
 
 .tarpitConstellation {
-    .tar { fill: #595959; }
-    .pitSide { fill: #7a7a7a; }
-    .tigerHind { fill: #919191; }
-    .tigerBody { fill: #999; }
-    .tigerHead { fill: #9e9e9e; }
-    .mastodonHind { fill: #828282; }
-    .mastodonBody { fill: #8f8f8f; }
-    .mastodonHead { fill: #9c9c9c; }
-    .legTar { fill: #666; }
-    .eye { fill: #757575; }
-    .nose { fill: #757575; }
-    .mouth { fill: #757575; }
-    .tongue { fill: #757575; }
-    .tooth { fill: #d1d1d1; }
-    .star { fill: #ebebeb; }
+    .tar { fill: hsl(0, 0%, 35%); }
+    .pitSide { fill: hsl(0, 0%, 48%); }
+    .tigerHind { fill: hsl(0, 0%, 57%); }
+    .tigerBody { fill: hsl(0, 0%, 60%); }
+    .tigerHead { fill: hsl(0, 0%, 62%); }
+    .mastodonHind { fill: hsl(0, 0%, 51%); }
+    .mastodonBody { fill: hsl(0, 0%, 56%); }
+    .mastodonHead { fill: hsl(0, 0%, 61%); }
+    .legTar { fill: hsl(0, 0%, 40%); }
+    .eye { fill: hsl(0, 0%, 46%); }
+    .nose { fill: hsl(0, 0%, 46%); }
+    .mouth { fill: hsl(0, 0%, 46%); }
+    .tongue { fill: hsl(0, 0%, 46%); }
+    .tooth { fill: hsl(0, 0%, 82%); }
+    .star { fill: hsl(0, 0%, 92%); }
 }
 
 .togetherSketch {
-    .mountain { fill: #5c5c5c; }
-    .snow { fill: #fbfbfb; }
-    .cloud { fill: #ececec; }
-    .post { fill: #878787; }
-    .plank { fill: #a2a2a2; }
-    .suspenders { fill: #d4d4d4; }
-    .rope { fill: #969696; }
+    .mountain { fill: hsl(0, 0%, 36%); }
+    .snow { fill: hsl(0, 0%, 98%); }
+    .cloud { fill: hsl(0, 0%, 93%); }
+    .post { fill: hsl(0, 0%, 53%); }
+    .plank { fill: hsl(0, 0%, 64%); }
+    .suspenders { fill: hsl(0, 0%, 83%); }
+    .rope { fill: hsl(0, 0%, 59%); }
 }
 
 .waitingThoughtSinging {
-    .floor { fill: #4a6962; }
-    .wall { fill: #7db0a5; }
-    .lampPole { fill: #808079; }
-    .lampShade { fill: #babaa7; }
-    .lampBase { fill: #70706a; }
-    .nightstand { fill: #706d4f; }
-    .skirt { fill: #70577d; }
-    .cushionFront { fill: #775c85; }
-    .cushionTop { fill: #8c6c9c; }
-    .armrest { fill: #7d618c; }
+    .floor { fill: hsl(166, 17%, 35%); }
+    .wall { fill: hsl(167, 24%, 59%); }
+    .lampPole { fill: hsl(60, 3%, 49%); }
+    .lampShade { fill: hsl(60, 12%, 69%); }
+    .lampBase { fill: hsl(60, 3%, 43%); }
+    .nightstand { fill: hsl(55, 17%, 37%); }
+    .skirt { fill: hsl(279, 18%, 42%); }
+    .cushionFront { fill: hsl(280, 18%, 44%); }
+    .cushionTop { fill: hsl(280, 20%, 52%); }
+    .armrest { fill: hsl(279, 18%, 46%); }
 }
 
 .waitingThoughtStudying {
-    .floor { fill: #576850; }
-    .wall { fill: #93ae88; }
-    .chairLeg { fill: #6b624e; }
-    .chairSeat { fill: #697862; }
-    .pen { fill: #8c8c5f; }
-    .bookBottom { fill: #536599; }
-    .bookMiddle { fill: #969963; }
-    .bookTop { fill: #7e5a99; }
-    .cover { fill: #735361; }
-    .pageFront { fill: #b2b399; }
-    .pageSide { fill: #b2b399; }
-    .pageTop { fill: #93947e; }
-    .tableLeg { fill: #5e5645; }
-    .tableTop { fill: #736954; }
+    .floor { fill: hsl(103, 13%, 36%); }
+    .wall { fill: hsl(103, 19%, 61%); }
+    .chairLeg { fill: hsl(41, 16%, 36%); }
+    .chairSeat { fill: hsl(101, 10%, 43%); }
+    .pen { fill: hsl(60, 19%, 46%); }
+    .bookBottom { fill: hsl(225, 30%, 46%); }
+    .bookMiddle { fill: hsl(63, 21%, 49%); }
+    .bookTop { fill: hsl(274, 26%, 48%); }
+    .cover { fill: hsl(334, 16%, 39%); }
+    .pageFront { fill: hsl(62, 15%, 65%); }
+    .pageSide { fill: hsl(62, 15%, 65%); }
+    .pageTop { fill: hsl(63, 9%, 54%); }
+    .tableLeg { fill: hsl(41, 15%, 32%); }
+    .tableTop { fill: hsl(41, 16%, 39%); }
 }
 
 .waitingThoughtWalking {
-    .sky { fill: #b6e6f0; }
-    .grass { fill: #629c61; }
-    .shore { fill: #f5ffbf; }
-    .path { fill: #989e76; }
-    .lake { fill: #4a78bd; }
-    .foliage { fill: #558c54; }
-    .bush { fill: #477546; }
-    .leaves { fill: #548253; }
-    .benchLeg { fill: #4d4538; }
-    .benchRest { fill: #5c5344; }
-    .benchSeat { fill: #574f40; }
+    .sky { fill: hsl(190, 66%, 83%); }
+    .grass { fill: hsl(119, 23%, 50%); }
+    .shore { fill: hsl(69, 100%, 87%); }
+    .path { fill: hsl(69, 17%, 54%); }
+    .lake { fill: hsl(216, 47%, 52%); }
+    .foliage { fill: hsl(119, 25%, 44%); }
+    .bush { fill: hsl(119, 25%, 37%); }
+    .leaves { fill: hsl(119, 22%, 42%); }
+    .benchLeg { fill: hsl(37, 16%, 26%); }
+    .benchRest { fill: hsl(38, 15%, 31%); }
+    .benchSeat { fill: hsl(39, 15%, 30%); }
 }

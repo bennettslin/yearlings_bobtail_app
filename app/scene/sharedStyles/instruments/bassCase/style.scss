@@ -1,13 +1,13 @@
 .bassCase#{$suffix} {
-    .caseDark { fill: #807158; }
-    .caseMedium { fill: #87785d; }
-    .caseLight { fill: #948466; }
-    .brassDark { fill: #a1986a; }
-    .brassMedium { fill: #aba271; }
-    .brassLight { fill: #bab07b; }
-    .liningLight { fill: #d1d4b2; }
-    .liningMedium { fill: #c2c4a5; }
-    .liningDark { fill: #b1b396; }
-    .caseStrap { fill: #665a46; }
-    .handle { fill: #756d51; }
+    .caseDark { fill: hsl(38, 19%, 42%); }
+    .caseMedium { fill: hsl(39, 18%, 45%); }
+    .caseLight { fill: hsl(39, 18%, 49%); }
+    .brassDark { fill: hsl(50, 23%, 52%); }
+    .brassMedium { fill: hsl(51, 26%, 56%); }
+    .brassLight { fill: hsl(50, 31%, 61%); }
+    .liningLight { fill: hsl(65, 28%, 76%); }
+    .liningMedium { fill: hsl(64, 21%, 71%); }
+    .liningDark { fill: hsl(64, 16%, 65%); }
+    .caseStrap { fill: hsl(38, 19%, 34%); }
+    .handle { fill: hsl(47, 18%, 39%); }
 }

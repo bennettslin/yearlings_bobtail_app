@@ -1,5 +1,5 @@
 .goKartSteeringWheel#{$suffix} {
-    .wheelHubDark { fill: #888f9e; }
-    .wheelHubLight { fill: #9aa2b3; }
-    .wheelHandle { fill: #606a80; }
+    .wheelHubDark { fill: hsl(221, 10%, 58%); }
+    .wheelHubLight { fill: hsl(221, 14%, 65%); }
+    .wheelHandle { fill: hsl(221, 14%, 44%); }
 }

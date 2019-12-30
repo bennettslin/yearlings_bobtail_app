@@ -1,38 +1,21 @@
 .bennett#{$suffix} {
-    .goKartHelmetTrim {
-        fill: hsl(0, 0%, 48%);
-    }
+    .goKartHelmetTrim { fill: hsl(0, 0%, 48%); }
+    .goKartHelmet { fill: hsl(45, 6%, 87%); }
+    .cafeteriaHatMesh { fill: hsl(226, 19%, 86%); }
+    .cafeteriaHatDark { fill: hsl(221, 33%, 33%); }
+    .cafeteriaHat { fill: hsl(222, 32%, 40%); }
+    .cafeteriaHatAdjuster { fill: hsl(60, 14%, 79%); }
 
-    .goKartHelmet {
-        fill: hsl(45, 6%, 87%);
-    }
-
-    .cafeteriaHatMesh {
-        fill: hsl(226, 19%, 86%);
-    }
-
-    .cafeteriaHatDark {
-        fill: hsl(221, 33%, 33%);
-    }
-
-    .cafeteriaHat {
-        fill: hsl(222, 32%, 40%);
-    }
-
-    .cafeteriaHatAdjuster {
-        fill: hsl(60, 14%, 79%);
-    }
-
-    .bennettShoeLining { fill: #999289; }
-    .bennettSoleSide { fill: #d9d1c8; }
-    .bennettShoe { fill: #736b5c; }
-    .bennettShoelace { fill: #d6d1c9; }
-    .converseLogo { fill: #bf8273; }
-    .bennettSoleBottom { fill: #998675; }
-    .bennettJeans { fill: #5c7bab; }
-    .bennettJacket { fill: #575b6b; }
-    .bennettHoodie { fill: #b35e58; }
-    .bennettHood { fill: #bf7b77; }
-    .bennettSleeves { fill: #b35e58; }
-    .bennettShirt { fill: #eee; }
+    .bennettShoeLining { fill: hsl(34, 7%, 57%); }
+    .bennettSoleSide { fill: hsl(32, 18%, 82%); }
+    .bennettShoe { fill: hsl(39, 11%, 41%); }
+    .bennettShoelace { fill: hsl(37, 14%, 81%); }
+    .converseLogo { fill: hsl(12, 37%, 60%); }
+    .bennettSoleBottom { fill: hsl(28, 15%, 53%); }
+    .bennettJeans { fill: hsl(216, 32%, 52%); }
+    .bennettJacket { fill: hsl(228, 10%, 38%); }
+    .bennettHoodie { fill: hsl(4, 37%, 52%); }
+    .bennettHood { fill: hsl(3, 36%, 61%); }
+    .bennettSleeves { fill: hsl(4, 37%, 52%); }
+    .bennettShirt { fill: hsl(0, 0%, 93%); }
 }

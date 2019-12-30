@@ -1,6 +1,6 @@
 .berkeleyBuilding#{$suffix} {
-    .wall { fill: #b1babc; }
-    .window { fill: #6dbdb6; }
-    .roofTop { fill: #726e5e; }
-    .roofSide { fill: #625f50; }
+    .wall { fill: hsl(191, 8%, 72%); }
+    .window { fill: hsl(175, 38%, 58%); }
+    .roofTop { fill: hsl(48, 10%, 41%); }
+    .roofSide { fill: hsl(50, 10%, 35%); }
 }

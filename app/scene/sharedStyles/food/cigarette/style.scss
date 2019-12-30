@@ -1,5 +1,5 @@
 .cigarette#{$suffix} {
-    .cigaretteBody { fill: #d1d3d4; }
-    .cigaretteFilter { fill: #806e4a; }
-    .cigaretteTip { fill: #b39a64; }
+    .cigaretteBody { fill: hsl(200, 3%, 83%); }
+    .cigaretteFilter { fill: hsl(40, 27%, 40%); }
+    .cigaretteTip { fill: hsl(41, 34%, 55%); }
 }

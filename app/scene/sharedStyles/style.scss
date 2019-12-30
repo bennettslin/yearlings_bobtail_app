@@ -23,7 +23,7 @@ $suffix: __shared;
 [class$=Line] {
     fill: none;
     stroke-width: 1px;
-    stroke: rgba(50, 50, 50, 0.5);
+    stroke: hsla(0, 0%, 20%, 0.5);
 }
 
 [class$=CreaseLine] {
@@ -51,6 +51,6 @@ $suffix: __shared;
 }
 
 [class$=LightLine] {
-    stroke: rgba(255, 255, 255, 0.7);
+    stroke: hsla(0, 0%, 100%, 0.7);
     stroke-width: 2px;
 }

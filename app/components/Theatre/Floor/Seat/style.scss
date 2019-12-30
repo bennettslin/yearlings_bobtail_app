@@ -1,17 +1,17 @@
 .floorSeat__lit {
-    fill: #965;
+    fill: hsl(15, 29%, 47%);
 
     .PlW__logue
     & {
-        fill: #c98;
+        fill: hsl(15, 40%, 67%);
     }
 }
 
 .floorSeat__shaded {
-    fill: #333;
+    fill: hsl(0, 0%, 20%);
 
     .PlW__logue
     & {
-        fill: #555;
+        fill: hsl(0, 0%, 33%);
     }
 }

@@ -1,8 +1,8 @@
 .buddhaShrine#{$suffix} {
-    .base { fill: #9e005d; }
-    .hair { fill: #1a1a1a; }
-    .robe { fill: #c1272d; }
-    .skin { fill: #c69c6d; }
-    .flange { fill: #ee0; }
-    .faceDisplayLine { stroke: #543; }
+    .base { fill: hsl(325, 100%, 31%); }
+    .hair { fill: hsl(0, 0%, 10%); }
+    .robe { fill: hsl(358, 66%, 45%); }
+    .skin { fill: hsl(32, 44%, 60%); }
+    .flange { fill: hsl(60, 100%, 47%); }
+    .faceDisplayLine { stroke: hsl(30, 25%, 27%); }
 }
