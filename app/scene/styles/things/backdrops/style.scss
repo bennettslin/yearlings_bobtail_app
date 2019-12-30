@@ -1,5 +1,4 @@
 .brickWall {
-    .foliage { fill: hsl(114, 17%, 36%); }
     .building { fill: hsl(208, 15%, 48%); }
     .trunk { fill: hsl(36, 17%, 30%); }
     .leavesBack { fill: hsl(128, 15%, 39%); }
@@ -12,14 +11,8 @@
 }
 
 .cityBackdrop {
-    .foliageFar { fill: hsl(114, 25%, 45%); }
     .cityFar { fill: hsl(220, 19%, 45%); }
-    .foliageNear { fill: hsl(120, 36%, 39%); }
     .cityNear { fill: hsl(216, 23%, 39%); }
-}
-
-.drivingBackdrop {
-    .foliage { fill: hsl(128, 19%, 44%); }
 }
 
 .fenceBackdrop {
@@ -57,14 +50,6 @@
     .mountain { fill: hsl(296, 13%, 46%); }
 }
 
-.oaklandFront {
-    .foliage { fill: hsl(99, 14%, 38%); }
-}
-
-.oaklandSide {
-    .foliage { fill: hsl(99, 14%, 38%); }
-}
-
 .oceanBottomFar {
     .shadow { fill: hsl(300, 14%, 34%); }
 }
@@ -96,7 +81,6 @@
     .lighthouseCentre { fill: hsl(124, 13%, 51%); }
     .lighthouseOuter { fill: hsl(109, 23%, 77%); }
     .mountain { fill: hsl(285, 15%, 42%); }
-    .foliage { fill: hsl(109, 17%, 40%); }
     .shore { fill: hsl(56, 13%, 54%); }
     .ocean { fill: hsl(174, 32%, 60%); }
 }
@@ -111,7 +95,6 @@
 
 .taiwanStairsBackdrop {
     .mountain { fill: hsl(274, 18%, 44%); }
-    .foliage { fill: hsl(119, 26%, 37%); }
 }
 
 .weddingBackdrop {
@@ -124,8 +107,4 @@
 .valley {
     .mountain {fill: hsl(290, 18%, 56%); }
     .building {fill: hsl(217, 21%, 43%); }
-}
-
-.yardBackdrop {
-    .foliage { fill: hsl(112, 19%, 31%); }
 }

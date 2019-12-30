@@ -40,6 +40,7 @@ import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
 } from '../../../sharedStyles/instruments'
+import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
@@ -68,7 +69,7 @@ export default {
     [DOGS_SKETCH]: SKETCH_DOGS__SHARED,
     [ESCAPE_POD_SKETCH]: SKETCH_DOGS__SHARED,
     [ESTHER_SPEECH]: null,
-    [GO_KART_THOUGHT]: null,
+    [GO_KART_THOUGHT]: FOLIAGE__SHARED,
     [KHARI_ATTACK_SPEECH]: [
         BENNETT,
         LIZ,
@@ -87,7 +88,8 @@ export default {
     [LIZ_THOUGHT]: [
         BENNETT,
         LIZ,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        FOLIAGE__SHARED
     ],
     [PHARMACY_CEL]: null,
     [SIBLING_CONSTELLATION]: SKETCH_PEOPLE__SHARED,
@@ -114,6 +116,7 @@ export default {
     [WAITING_THOUGHT_WALKING]: [
         BENNETT,
         LIZ,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        FOLIAGE__SHARED
     ]
 }

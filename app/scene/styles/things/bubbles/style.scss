@@ -68,10 +68,16 @@
     .bubble { fill: hsl(176, 10%, 65%); }
 }
 
+.goKartThought {
+    .bubble { fill: hsl(168, 36%, 72%); }
+    .pole { fill: hsl(0, 0%, 45%); }
+    .checkerWhite { fill: hsl(0, 0%, 85%); }
+    .checkerBlack { fill: hsl(0, 0%, 19%); }
+}
+
 .lizThought {
     .ground { fill: hsl(51, 18%, 55%); }
     .sky { fill: hsl(209, 64%, 78%); }
-    .foliage { fill: hsl(129, 27%, 52%); }
     .cloud { fill: hsl(209, 11%, 39%); }
     .windshield { fill: hsl(218, 38%, 59%); }
     .headrest { fill: hsl(66, 15%, 37%); }
@@ -172,7 +178,6 @@
     .shore { fill: hsl(69, 100%, 87%); }
     .path { fill: hsl(69, 17%, 54%); }
     .lake { fill: hsl(216, 47%, 52%); }
-    .foliage { fill: hsl(119, 25%, 44%); }
     .bush { fill: hsl(119, 25%, 37%); }
     .leaves { fill: hsl(119, 22%, 42%); }
     .benchLeg { fill: hsl(37, 16%, 26%); }

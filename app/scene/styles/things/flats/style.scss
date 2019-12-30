@@ -17,7 +17,6 @@
 }
 
 .campanile {
-    .foliage { fill: hsl(112, 19%, 31%); }
     .spireInner { fill: hsl(146, 17%, 45%); }
     .towerInner { fill: hsl(60, 9%, 82%); }
     .towerOuter { fill: hsl(60, 6%, 87%); }
@@ -42,7 +41,6 @@
 }
 
 .cemeteryHillsLeft {
-    .foliage { fill: hsl(150, 100%, 20%); }
     .trunk { fill: hsl(0, 33%, 30%); }
     .leaves { fill: hsl(180, 100%, 10%); }
     .graveRight { fill: hsl(0, 0%, 20%); }
@@ -52,7 +50,6 @@
 }
 
 .cemeteryHillsRight {
-    .foliage { fill: hsl(150, 100%, 20%); }
     .graveLeft { fill: hsl(0, 0%, 60%); }
     .graveRight { fill: hsl(0, 0%, 40%); }
     .postLeft { fill: hsl(180, 100%, 80%); }
@@ -442,7 +439,6 @@
 .tennisCourt {
     .treeFront { fill: hsl(121, 25%, 48%); }
     .treeRear { fill: hsl(121, 29%, 54%); }
-    .foliage { fill: hsl(121, 25%, 46%); }
     .court { fill: hsl(220, 51%, 55%); }
     .stripeDisplayLine { stroke: hsl(0, 0%, 100%); }
     .pole { fill: hsl(220, 1%, 46%); }
@@ -454,7 +450,6 @@
     .overpass {fill: hsl(54, 8%, 23%); }
     .buildingSide {fill: hsl(274, 17%, 43%); }
     .buildingFront {fill: hsl(274, 18%, 51%); }
-    .foliage {fill: hsl(107, 28%, 43%); }
     .handleSide {fill: hsl(68, 15%, 50%); }
     .handleFront {fill: hsl(67, 26%, 63%); }
     .wellsFargoSide {fill: hsl(60, 2%, 47%); }

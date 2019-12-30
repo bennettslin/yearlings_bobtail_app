@@ -29,20 +29,11 @@ pampas
 
 # Foliage
 ## Backdrops
-taiwanStairs
-shoreRickshaw
-yard
-driving
-oaklandSide
-oaklandFront
 fence
 brickWall
-city
 
 ## Bubbles
-goKartThought
 waitingThoughtWalking
-lizThought
 
 ## Cardboard
 johnnyHortonAlbum

@@ -64,11 +64,10 @@ import {
     OAKLAND_HOUSE_RIGHT__SHARED,
     TAIWAN_HOUSE__SHARED
 } from '../../../sharedStyles/buildings'
-import { FREEWAY_SIGN__SHARED } from '../../../sharedStyles/outdoor'
 import {
     FOLIAGE__SHARED,
-    PALM_TREE__SHARED
-} from '../../../sharedStyles/plants'
+    FREEWAY_SIGN__SHARED
+} from '../../../sharedStyles/outdoor'
 import { TAIWAN_MOUNTAIN__SHARED } from '../../../sharedStyles/taiwan'
 
 export default {
@@ -76,9 +75,9 @@ export default {
     [BEDROOM_SIREN]: null,
     [BERKELEY_BUILDING_TALL]: BERKELEY_BUILDING__SHARED,
     [BERKELEY_BUILDING_WIDE]: BERKELEY_BUILDING__SHARED,
-    [CAMPANILE]: null,
-    [CEMETERY_HILLS_LEFT]: PALM_TREE__SHARED,
-    [CEMETERY_HILLS_RIGHT]: PALM_TREE__SHARED,
+    [CAMPANILE]: FOLIAGE__SHARED,
+    [CEMETERY_HILLS_LEFT]: FOLIAGE__SHARED,
+    [CEMETERY_HILLS_RIGHT]: FOLIAGE__SHARED,
     [CLIFF_GRAVES_FAR]: null,
     [CLIFF_GRAVES_NEAR]: null,
     [COMMERCIAL_CENTRE]: OAKLAND_COMMERCIAL__SHARED,
@@ -137,9 +136,9 @@ export default {
     [TAIWAN_MOUNTAINS_BRIDGED]: TAIWAN_HOUSE__SHARED,
     [TAIWAN_MOUNTAIN_LEFT]: TAIWAN_MOUNTAIN__SHARED,
     [TAIWAN_MOUNTAIN_RIGHT]: TAIWAN_MOUNTAIN__SHARED,
-    [TENNIS_COURT]: null,
+    [TENNIS_COURT]: FOLIAGE__SHARED,
     [VALLEY_FREEWAY]: [
         FREEWAY_SIGN__SHARED,
-        PALM_TREE__SHARED
+        FOLIAGE__SHARED
     ]
 }

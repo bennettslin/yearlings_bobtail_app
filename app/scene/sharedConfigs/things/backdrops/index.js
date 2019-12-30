@@ -26,23 +26,20 @@ import {
 
 import { TAIWAN_HOUSE__SHARED } from '../../../sharedStyles/buildings'
 import { BOOK__SHARED } from '../../../sharedStyles/paper'
-import {
-    FOLIAGE__SHARED,
-    PALM_TREE__SHARED
-} from '../../../sharedStyles/plants'
+import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
 import { ROAD__SHARED } from '../../../sharedStyles/props'
 
 export default {
-    [BRICK_WALL]: null,
-    [CITY_BACKDROP]: null,
-    [DRIVING_BACKDROP]: null,
+    [BRICK_WALL]: FOLIAGE__SHARED,
+    [CITY_BACKDROP]: FOLIAGE__SHARED,
+    [DRIVING_BACKDROP]: FOLIAGE__SHARED,
     [FENCE_BACKDROP]: null,
     [GOLDEN_GATE_BACKDROP]: null,
     [LOS_ANGELES_BACKDROP]: null,
     [MOUNTAIN_BACKDROP]: null,
-    [NOHO_HOUSES_BACKDROP]: PALM_TREE__SHARED,
-    [OAKLAND_FRONT]: null,
-    [OAKLAND_SIDE]: null,
+    [NOHO_HOUSES_BACKDROP]: FOLIAGE__SHARED,
+    [OAKLAND_FRONT]: FOLIAGE__SHARED,
+    [OAKLAND_SIDE]: FOLIAGE__SHARED,
     [OCEAN_BOTTOM_FAR]: null,
     [OCEAN_FLOOR_FAR]: null,
     [ROAD_FUTURE]: ROAD__SHARED,
@@ -51,12 +48,15 @@ export default {
         ROAD__SHARED
     ],
     [ROAD_PRESENT]: ROAD__SHARED,
-    [SCHOOL_BACKDROP]: PALM_TREE__SHARED,
+    [SCHOOL_BACKDROP]: FOLIAGE__SHARED,
     [SHORE_BUOY_BACKDROP]: null,
-    [SHORE_RICKSHAW_BACKDROP]: null,
+    [SHORE_RICKSHAW_BACKDROP]: FOLIAGE__SHARED,
     [TAIWAN_MOUNTAINS_BACKDROP]: null,
-    [TAIWAN_STAIRS_BACKDROP]: TAIWAN_HOUSE__SHARED,
+    [TAIWAN_STAIRS_BACKDROP]: [
+        FOLIAGE__SHARED,
+        TAIWAN_HOUSE__SHARED
+    ],
     [VALLEY]: FOLIAGE__SHARED,
     [WEDDING_BACKDROP]: null,
-    [YARD_BACKDROP]: null
+    [YARD_BACKDROP]: FOLIAGE__SHARED
 }
