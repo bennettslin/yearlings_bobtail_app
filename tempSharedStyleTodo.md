@@ -29,18 +29,6 @@ cliff graves
 
 pampas
 
-# Foliage
-
-## Cutouts
-taiwanTree
-
-## Flat
-taiwanMountainsBridged
-taiwanMountainLeft
-taiwanMountainRight
-rickshawTown
-forebodingTrees
-
 # Other shared
 rocks: cave, campfire, ocean
 ocean

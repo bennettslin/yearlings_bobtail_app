@@ -126,7 +126,7 @@ export default {
     [STORAGE_BOXES]: null,
     [STORAGE_CHEST]: null,
     [TAIWAN_FRIDGE]: null,
-    [TAIWAN_TREE]: null,
+    [TAIWAN_TREE]: FOLIAGE__SHARED,
     [TELEVISION]: null,
     [TOWEL_RACK]: null,
     [TRAFFIC_LIGHT]: null,

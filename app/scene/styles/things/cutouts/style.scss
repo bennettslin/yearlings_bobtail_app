@@ -101,12 +101,6 @@
     .capLight { fill: hsl(0, 42%, 44%); }
 }
 
-.forebodingTrees {
-    .treeFar { fill: hsl(0, 100%, 10%); }
-    .treeMiddle { fill: hsl(60, 100%, 10%); }
-    .treeNear { fill: hsl(30, 100%, 20%); }
-}
-
 .gravestone {
     .gravestoneTop { fill: hsl(153, 7%, 68%); }
     .gravestoneFront { fill: hsl(155, 5%, 54%); }
@@ -353,15 +347,6 @@
     .door { fill: hsl(180, 50%, 60%); }
     .chrome { fill: hsl(0, 0%, 60%); }
     .brass { fill: hsl(60, 50%, 60%); }
-}
-
-.taiwanTree {
-    .trunk { fill: hsl(49, 44%, 25%); }
-    .leavesFarthest { fill: hsl(313, 28%, 35%); }
-    .leavesFar { fill: hsl(313, 27%, 39%); }
-    .leavesNear { fill: hsl(313, 27%, 43%); }
-    .leavesNearer { fill: hsl(313, 27%, 47%); }
-    .leavesNearest { fill: hsl(313, 29%, 51%); }
 }
 
 .television {
