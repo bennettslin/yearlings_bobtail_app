@@ -1,13 +1,9 @@
 .brickWall {
     .building { fill: hsl(208, 15%, 48%); }
-    .trunk { fill: hsl(36, 17%, 30%); }
-    .leavesBack { fill: hsl(128, 15%, 39%); }
-    .leavesFront { fill: hsl(128, 20%, 48%); }
     .wall { fill: hsl(28, 18%, 54%); }
     .ledge { fill: hsl(36, 21%, 72%); }
     .brickDark { fill: hsl(17, 36%, 39%); }
     .brickLight { fill: hsl(42, 25%, 48%); }
-    .bush { fill: hsl(130, 17%, 40%); }
 }
 
 .cityBackdrop {
@@ -17,10 +13,6 @@
 
 .fenceBackdrop {
     .roof { fill: hsl(0, 24%, 49%); }
-    .bush { fill: hsl(120, 19%, 40%); }
-    .trunk { fill: hsl(28, 15%, 36%); }
-    .leavesBack { fill: hsl(120, 30%, 44%); }
-    .leavesFront { fill: hsl(120, 30%, 47%); }
     .fence { fill: hsl(27, 23%, 59%); }
 }
 

@@ -30,29 +30,9 @@ cliff graves
 pampas
 
 # Foliage
-## Backdrops
-fence
-brickWall
-
-## Bubbles
-waitingThoughtWalking
-
-## Cardboard
-johnnyHortonAlbum
 
 ## Cutouts
 taiwanTree
-cactuses
-bushes
-bancroftShrub
-campusTrees
-cypressTree
-apartmentPlant
-waitingRoomPlant
-uclaTree
-elCerritoTree
-weddingCrowd
-cliffTree
 
 ## Flat
 taiwanMountainsBridged
@@ -61,14 +41,11 @@ taiwanMountainRight
 rickshawTown
 forebodingTrees
 
-## Panel
-bedroomFence
-weddingPlatform
-
 # Other shared
 rocks: cave, campfire, ocean
 ocean
 sand
+grass (waiting thought)
 gravestones
 trash can
 tire

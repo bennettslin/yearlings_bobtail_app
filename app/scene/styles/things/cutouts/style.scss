@@ -1,6 +1,4 @@
 .apartmentPlant {
-    .stalk { fill: hsl(31, 32%, 31%); }
-    .leaves { fill: hsl(138, 27%, 35%); }
     .pot { fill: hsl(241, 26%, 48%); }
     .brim { fill: hsl(242, 33%, 42%); }
 }
@@ -9,13 +7,6 @@
     .canSide { fill: hsl(60, 6%, 59%); }
     .sand { fill: hsl(60, 20%, 79%); }
     .canTop { fill: hsl(60, 8%, 64%); }
-}
-
-.bancroftShrub {
-    .bulb { fill: hsl(120, 100%, 10%); }
-    .leavesBottom { fill: hsl(180, 100%, 10%); }
-    .leavesRight { fill: hsl(120, 33%, 30%); }
-    .leavesLeft { fill: hsl(150, 100%, 20%); }
 }
 
 .campfire {
@@ -38,18 +29,6 @@
     .stoneCentre { fill: hsl(0, 0%, 80%); }
 }
 
-.campusTreeDouble {
-    .trunkWide { fill: hsl(41, 34%, 25%); }
-    .leavesWide { fill: hsl(139, 28%, 43%); }
-    .trunkTall { fill: hsl(41, 34%, 29%); }
-    .leavesTall { fill: hsl(139, 28%, 46%); }
-}
-
-.campusTreeSingle {
-    .trunk { fill: hsl(44, 22%, 38%); }
-    .leaves { fill: hsl(129, 31%, 37%); }
-}
-
 .cavemanBones {
     .poleSide { fill: hsl(199, 14%, 56%); }
     .poleFront { fill: hsl(201, 22%, 67%); }
@@ -61,10 +40,6 @@
     .spine { fill: hsl(57, 12%, 67%); }
     .centreOuter { fill: hsl(57, 14%, 70%); }
     .appendageFront { fill: hsl(57, 15%, 71%); }
-}
-
-.cliffTree {
-    .trunk { fill: hsl(0, 100%, 10%); }
 }
 
 .dishroomDolly {
@@ -113,11 +88,6 @@
     .warningLabel { fill: hsl(0, 60%, 50%); }
     .garbageBack { fill: hsl(0, 0%, 40%); }
     .garbageFront { fill: hsl(0, 0%, 30%); }
-}
-
-.elCerritoTree {
-    .trunk { fill: hsl(30, 100%, 20%); }
-    .leaves { fill: hsl(120, 50%, 40%); }
 }
 
 .fireHydrant {
@@ -436,17 +406,8 @@
     .boxRightLight { fill: hsl(215, 77%, 69%); }
 }
 
-.uclaTree {
-    .trunk { fill: hsl(35, 35%, 25%); }
-    .leavesRear { fill: hsl(109, 37%, 39%); }
-    .leavesFront { fill: hsl(113, 31%, 46%); }
-}
-
 .waitingRoomPlant {
-    .frondBack { fill: hsl(150, 50%, 40%); }
-    .frondMiddle { fill: hsl(150, 100%, 20%); }
-    .frondFront { fill: hsl(180, 100%, 10%); }
-    .vase { fill: hsl(260, 60%, 50%); }
+    .vase { fill: hsl(260, 30%, 50%); }
 }
 
 .yellowTapedGrill {

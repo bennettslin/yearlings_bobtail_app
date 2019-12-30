@@ -52,6 +52,7 @@ import {
 } from '../../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
 import { ODIN__SHARED } from '../../../sharedStyles/animals'
+import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
 import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED
@@ -114,7 +115,10 @@ export default {
         POSTER_GLADIATOR__SHARED,
         ALL_PEOPLE__SHARED
     ],
-    [JOHNNY_HORTON_ALBUM]: ALL_PEOPLE__SHARED,
+    [JOHNNY_HORTON_ALBUM]: [
+        ALL_PEOPLE__SHARED,
+        FOLIAGE__SHARED
+    ],
     [LEONARD_COHEN_POSTER]: ALL_PEOPLE__SHARED,
     [MARA_GLADIATOR_POSTER]: [
         POSTER_GLADIATOR__SHARED,

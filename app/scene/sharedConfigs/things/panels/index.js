@@ -51,6 +51,7 @@ import {
     TRAY__SHARED
 } from '../../../sharedStyles/dishroom'
 import { WAITING_ARMCHAIR__SHARED } from '../../../sharedStyles/furniture'
+import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
 import {
     SHADOW__SHARED,
     SNOWGLOBE__SHARED
@@ -66,7 +67,7 @@ export default {
     [ATTIC_COUCH]: null,
     [BATHTUB]: null,
     [BEDROOM_DESK]: null,
-    [BEDROOM_FENCE]: null,
+    [BEDROOM_FENCE]: FOLIAGE__SHARED,
     [BENNETT_BED]: SHADOW__SHARED,
     [CAPTAIN_BED]: null,
     [CAVE_SHADOWS]: SHADOW__SHARED,
@@ -106,7 +107,10 @@ export default {
     [VOLKSWAGEN]: null,
     [WAITING_ARMCHAIR]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST]: WAITING_ARMCHAIR__SHARED,
-    [WEDDING_PLATFORM]: WEDDING__SHARED,
+    [WEDDING_PLATFORM]: [
+        FOLIAGE__SHARED,
+        WEDDING__SHARED
+    ],
     [WIDE_ARMREST]: null,
     [WIDE_COUCH]: null
 }
