@@ -7,7 +7,6 @@ import {
     DISPENSER_RIGHT
 } from '../../../constants/scene/things/cutouts'
 import { EL_TORITO_DOORS } from '../../../constants/scene/things/doors'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 import { NEWSPAPER__SHARED } from '../../sharedStyles/paper'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
@@ -33,8 +32,7 @@ const ARRANGEMENTS_THINGS = {
         [EL_TORITO_DOORS]: {
             yIndex: 2,
             xPosition: 5.675,
-            zOffset: -0.035,
-            sharedStyle: DOOR__SHARED
+            zOffset: -0.035
         }
     }
 }

@@ -17,7 +17,6 @@ import {
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
 import { PAPER_BAG__SHARED } from '../../sharedStyles/food'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 import { PALM_TREE__SHARED } from '../../sharedStyles/plants'
 
 const ARRANGEMENTS_THINGS = {
@@ -52,8 +51,7 @@ const ARRANGEMENTS_THINGS = {
         [NURSE_DOOR]: {
             yIndex: 2,
             xPosition: 8,
-            scaleFactor: 0.45,
-            sharedStyle: DOOR__SHARED
+            scaleFactor: 0.45
         }
     },
     [FIXTURE]: {

@@ -33,11 +33,6 @@ import {
     PEAFOWL__SHARED
 } from '../../sharedStyles/animals'
 import {
-    DOOR__SHARED,
-    WINDOW__SHARED,
-    LIZ_GATE__SHARED
-} from '../../sharedStyles/home'
-import {
     BANJO__SHARED,
     ACOUSTIC_GUITAR__SHARED,
     MICROPHONE__SHARED,
@@ -58,30 +53,25 @@ const ARRANGEMENTS_THINGS = {
         [LIZ_BLINDS_INSIDE]: {
             yIndex: 2,
             xPosition: 6,
-            zOffset: 2.25,
-            sharedStyle: WINDOW__SHARED
+            zOffset: 2.25
         },
         [LIZ_BLINDS_INSIDE_OPEN]: {
             yIndex: 2,
             xPosition: 6,
-            zOffset: 2.25,
-            sharedStyle: WINDOW__SHARED
+            zOffset: 2.25
         },
         [LIZ_DOOR]: {
             yIndex: 5,
-            xPosition: 10.16,
-            sharedStyle: DOOR__SHARED
+            xPosition: 10.16
         },
         [LIZ_DOOR_OPEN]: {
             yIndex: 5,
-            xPosition: 8.875,
-            sharedStyle: DOOR__SHARED
+            xPosition: 8.875
         },
         [LIZ_GATE_INSIDE]: {
             yIndex: 1,
             xPosition: 6,
-            zOffset: -2,
-            sharedStyle: LIZ_GATE__SHARED
+            zOffset: -2
         }
     },
     [PANEL]: {

@@ -30,7 +30,6 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 import { BANJO__SHARED } from '../../sharedStyles/instruments'
 import { BENNETT, LIZ } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
@@ -60,13 +59,11 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [WAITING_ROOM_DOOR]: {
             yIndex: 5,
-            xPosition: 10.16,
-            sharedStyle: DOOR__SHARED
+            xPosition: 10.16
         },
         [WAITING_ROOM_DOOR_OPEN]: {
             yIndex: 5,
-            xPosition: 8.81,
-            sharedStyle: DOOR__SHARED
+            xPosition: 8.81
         }
     },
     [PANEL]: {

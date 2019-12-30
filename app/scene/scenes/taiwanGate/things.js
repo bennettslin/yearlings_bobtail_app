@@ -14,7 +14,6 @@ import {
 } from '../../../constants/scene/things/flats'
 import { ODIN__SHARED } from '../../sharedStyles/animals'
 import { TAIWAN_HOUSE__SHARED } from '../../sharedStyles/buildings'
-import { TAIWAN_GATE__SHARED } from '../../sharedStyles/home'
 import { BENNETT } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import { TAIWAN_RICKSHAW__SHARED } from '../../sharedStyles/taiwan'
@@ -43,8 +42,7 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [IRON_GATE]: {
             yIndex: 5,
-            xPosition: 2,
-            sharedStyle: TAIWAN_GATE__SHARED
+            xPosition: 2
         }
     },
     [FLAT]: {

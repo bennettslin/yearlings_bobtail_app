@@ -7,7 +7,6 @@ import {
     ELLIOTT_SMITH_POSTER
 } from '../../../constants/scene/things/cardboards'
 import { BASEMENT_DOOR_SIDE } from '../../../constants/scene/things/doors'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
@@ -31,8 +30,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 4,
             xPosition: 10.16,
             zOffset: 1,
-            scaleFactor: 0.6,
-            sharedStyle: DOOR__SHARED
+            scaleFactor: 0.6
         }
     }
 }

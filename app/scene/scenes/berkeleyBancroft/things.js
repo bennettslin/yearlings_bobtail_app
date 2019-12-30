@@ -13,7 +13,6 @@ import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../constants/scene/thing
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
 import { BERKELEY_BUILDING__SHARED } from '../../sharedStyles/buildings'
 import { CIGARETTE__SHARED } from '../../sharedStyles/food'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -32,8 +31,7 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [BANCROFT_DOOR]: {
             yIndex: 3,
-            xPosition: 9,
-            sharedStyle: DOOR__SHARED
+            xPosition: 9
         }
     },
     [FLAT]: {

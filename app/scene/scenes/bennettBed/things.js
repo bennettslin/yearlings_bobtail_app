@@ -21,11 +21,7 @@ import {
 import { BENNETT_PILLOW } from '../../../constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 import { PILLOW_BENNETT__SHARED } from '../../sharedStyles/furniture'
-import {
-    BENNETT_GATE__SHARED,
-    DOOR__SHARED,
-    WINDOW__SHARED
-} from '../../sharedStyles/home'
+
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
@@ -38,36 +34,30 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 5,
             zOffset: 1.875,
-            scaleFactor: 0.6,
-            sharedStyle: WINDOW__SHARED
+            scaleFactor: 0.6
         },
         [NEIGHBOUR_DOOR]: {
             yIndex: 1,
             xPosition: 1,
-            scaleFactor: 0.6,
-            sharedStyle: DOOR__SHARED
+            scaleFactor: 0.6
         },
         [BLINDS_INSIDE_OPEN]: {
             yIndex: 3,
             xPosition: 7.5,
-            zOffset: 2.25,
-            sharedStyle: WINDOW__SHARED
+            zOffset: 2.25
         },
         [BENNETT_DOOR_INSIDE]: {
             yIndex: 3,
-            xPosition: 3,
-            sharedStyle: DOOR__SHARED
+            xPosition: 3
         },
         [BENNETT_DOOR_INSIDE_OPEN]: {
             yIndex: 3,
             xPosition: 2.76,
-            zOffset: -0.07,
-            sharedStyle: DOOR__SHARED
+            zOffset: -0.07
         },
         [BENNETT_GATE_SIDE_OPEN]: {
             yIndex: 1,
-            xPosition: 9,
-            sharedStyle: BENNETT_GATE__SHARED
+            xPosition: 9
         }
     },
     [FIXTURE]: {

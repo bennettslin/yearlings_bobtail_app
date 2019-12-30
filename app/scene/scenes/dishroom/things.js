@@ -21,7 +21,6 @@ import {
     DISH__SHARED,
     TRAY__SHARED
 } from '../../sharedStyles/dishroom'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -67,8 +66,7 @@ const ARRANGEMENTS_THINGS = {
         [DISHROOM_DOOR]: {
             yIndex: 2,
             xPosition: 9,
-            scaleFactor: 0.6,
-            sharedStyle: DOOR__SHARED
+            scaleFactor: 0.6
         }
     },
     [PANEL]: {

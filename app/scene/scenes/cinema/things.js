@@ -9,7 +9,6 @@ import {
     MARQUEE_FRAME__MARA_GLADIATOR
 } from '../../../constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 import { MARA } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import { POSTER_GLADIATOR__SHARED } from '../../sharedStyles/print'
@@ -56,8 +55,7 @@ const ARRANGEMENTS_THINGS = {
         [CINEMA_DOORS]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.675,
-            sharedStyle: DOOR__SHARED
+            scaleFactor: 0.675
         }
     }
 }

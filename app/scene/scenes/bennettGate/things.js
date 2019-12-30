@@ -10,7 +10,6 @@ import {
     BUSH_DOUBLE__BENNETT_GATE
 } from '../../../constants/scene/things/cutouts'
 import { BENNETT_GATE_FRONT } from '../../../constants/scene/things/doors'
-import { BENNETT_GATE__SHARED } from '../../sharedStyles/home'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -41,8 +40,7 @@ const ARRANGEMENTS_THINGS = {
     [DOOR]: {
         [BENNETT_GATE_FRONT]: {
             yIndex: 2,
-            xPosition: 8,
-            sharedStyle: BENNETT_GATE__SHARED
+            xPosition: 8
         }
     }
 }

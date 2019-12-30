@@ -42,7 +42,6 @@ import {
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
 import { PILLOW_PRETEEN_BENNETT__SHARED } from '../../sharedStyles/furniture'
-import { WINDOW__SHARED } from '../../sharedStyles/home'
 import { SCISSORS__SHARED } from '../../sharedStyles/household'
 import {
     BOOK__SHARED,
@@ -86,15 +85,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
-            scaleFactor: 0.65,
-            sharedStyle: WINDOW__SHARED
+            scaleFactor: 0.65
         },
         [BEDROOM_BLINDS_OPEN]: {
             yIndex: 3,
             xPosition: 2.8,
             zOffset: 0.125,
-            scaleFactor: 0.65,
-            sharedStyle: WINDOW__SHARED
+            scaleFactor: 0.65
         }
     },
     [FURNITURE]: {

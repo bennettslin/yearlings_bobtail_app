@@ -11,7 +11,6 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
-import { DOOR__SHARED } from '../../sharedStyles/home'
 import {
     BASS_CASE__SHARED,
     DRUMS__SHARED,
@@ -26,8 +25,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 2.275,
             scaleFactor: 0.6,
-            zOffset: -0.05,
-            sharedStyle: DOOR__SHARED
+            zOffset: -0.05
         }
     },
     [FIXTURE]: {

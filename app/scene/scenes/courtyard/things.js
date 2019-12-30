@@ -12,11 +12,6 @@ import {
     BENNETT_DOOR_OUTSIDE,
     BENNETT_GATE_SIDE
 } from '../../../constants/scene/things/doors'
-import {
-    BENNETT_GATE__SHARED,
-    DOOR__SHARED,
-    WINDOW__SHARED
-} from '../../sharedStyles/home'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -40,18 +35,15 @@ const ARRANGEMENTS_THINGS = {
         [BLINDS_OUTSIDE__BENNETT]: {
             yIndex: 2,
             xPosition: 3.5,
-            zOffset: 2.25,
-            sharedStyle: WINDOW__SHARED
+            zOffset: 2.25
         },
         [BENNETT_DOOR_OUTSIDE]: {
             yIndex: 2,
-            xPosition: 8,
-            sharedStyle: DOOR__SHARED
+            xPosition: 8
         },
         [BENNETT_GATE_SIDE]: {
             yIndex: 5,
-            xPosition: 0.85,
-            sharedStyle: BENNETT_GATE__SHARED
+            xPosition: 0.85
         }
     }
 }

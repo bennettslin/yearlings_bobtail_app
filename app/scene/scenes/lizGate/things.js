@@ -29,10 +29,6 @@ import {
     PUBLIC_NEAR__LIZ_GATE
 } from '../../../constants/scene/things/flats'
 import { OAKLAND_HOUSE__SHARED } from '../../sharedStyles/buildings'
-import {
-    LIZ_GATE__SHARED,
-    WINDOW__SHARED
-} from '../../sharedStyles/home'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BACKDROP]: {
@@ -94,24 +90,20 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         [LIZ_BLINDS_OUTSIDE__ENDING]: {
             yIndex: 2,
             xPosition: 7,
-            zOffset: 2.25,
-            sharedStyle: WINDOW__SHARED
+            zOffset: 2.25
         },
         [LIZ_BLINDS_OUTSIDE__ENDED]: {
             yIndex: 2,
             xPosition: 3,
-            zOffset: 2.25,
-            sharedStyle: WINDOW__SHARED
+            zOffset: 2.25
         },
         [LIZ_GATE_OUTSIDE__ENDING]: {
             yIndex: 4,
-            xPosition: 7,
-            sharedStyle: LIZ_GATE__SHARED
+            xPosition: 7
         },
         [LIZ_GATE_OUTSIDE__ENDED]: {
             yIndex: 4,
-            xPosition: 3,
-            sharedStyle: LIZ_GATE__SHARED
+            xPosition: 3
         }
     },
     [FLAT]: {
