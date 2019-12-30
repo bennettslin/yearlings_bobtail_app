@@ -8,12 +8,13 @@
 }
 
 .bedroomSiren {
-    .redLight { fill: hsl(0, 81%, 83%); }
-    .redBrighter { fill: hsl(0, 69%, 71%); }
-    .redBrightest { fill: hsl(0, 86%, 63%); }
-    .blueLight { fill: hsl(204, 86%, 84%); }
-    .blueBrighter { fill: hsl(202, 72%, 71%); }
-    .blueBrightest { fill: hsl(207, 88%, 63%); }
+    stroke: none;
+    .redLight { fill: hsla(0, 81%, 83%, 0.5); }
+    .redBrighter { fill: hsla(0, 69%, 71%, 0.5); }
+    .redBrightest { fill: hsla(0, 86%, 63%, 0.5); }
+    .blueLight { fill: hsla(204, 86%, 84%, 0.5); }
+    .blueBrighter { fill: hsla(202, 72%, 71%, 0.5); }
+    .blueBrightest { fill: hsla(207, 88%, 63%, 0.5); }
 }
 
 .campanile {
@@ -148,7 +149,6 @@
 
 .familyHouse {
     .wall { fill: hsl(68, 100%, 83%); }
-    .bush { fill: hsl(114, 29%, 47%); }
     .trim { fill: hsl(57, 16%, 47%); }
     .door { fill: hsl(57, 27%, 62%); }
     .stepTop { fill: hsl(219, 100%, 77%); }
@@ -197,7 +197,6 @@
     .door { fill: hsl(43, 30%, 61%); }
     .stepTop { fill: hsl(167, 21%, 70%); }
     .stepBottom { fill: hsl(168, 17%, 66%); }
-    .bush { fill: hsl(132, 40%, 54%); }
     .trim { fill: hsl(44, 28%, 41%); }
     .window { fill: hsl(191, 54%, 70%); }
     .windowDisplayLine { stroke: hsl(182, 36%, 42%); }
@@ -223,8 +222,6 @@
     .roofTop { fill: hsl(48, 25%, 53%); }
     .awningSide { fill: hsl(48, 48%, 69%); }
     .awningFront { fill: hsl(104, 100%, 76%); }
-    .bush { fill: hsl(133, 32%, 40%); }
-    .tree { fill: hsl(132, 32%, 47%); }
 }
 
 .oaklandFlag {

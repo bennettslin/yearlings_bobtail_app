@@ -28,7 +28,8 @@
 
 [class^=eyebrow],
 [class^=stubble],
-[class$=Blob]
+[class$=Blob],
+[class$=noStroke]
  {
     stroke: none;
 }
