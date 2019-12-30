@@ -28,25 +28,6 @@ import {
     PEACOCK,
     PEAHEN
 } from '../../../constants/scene/things/puppets'
-import {
-    OPAL__SHARED,
-    PEAFOWL__SHARED
-} from '../../sharedStyles/animals'
-import {
-    BANJO__SHARED,
-    ACOUSTIC_GUITAR__SHARED,
-    MICROPHONE__SHARED,
-    MONITOR__SHARED
-} from '../../sharedStyles/instruments'
-import {
-    AMY,
-    BENNETT,
-    LIZ
-} from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import {
-    SHADOW__SHARED
-} from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -78,8 +59,7 @@ const ARRANGEMENTS_THINGS = {
         [LIZ_COUCH]: {
             yIndex: 5,
             xPosition: 2,
-            scaleFactor: 0.27,
-            sharedStyle: SHADOW__SHARED
+            scaleFactor: 0.27
         }
     }
 }
@@ -95,8 +75,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
         [OPAL_COUCH]: {
             yIndex: 4,
             xPosition: 1,
-            scaleFactor: 0.2,
-            sharedStyle: OPAL__SHARED
+            scaleFactor: 0.2
         }
     }
 }
@@ -107,28 +86,13 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
             yIndex: 5,
             xPosition: 7,
             zOffset: 3,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                BENNETT,
-                LIZ,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         },
         [LIZ_DEFENCE_SPEECH]: {
             yIndex: 5,
             xPosition: 5,
             zOffset: 0.5,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                BANJO__SHARED,
-                ACOUSTIC_GUITAR__SHARED,
-                MICROPHONE__SHARED,
-                MONITOR__SHARED,
-                AMY,
-                BENNETT,
-                LIZ,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         }
     }
 }
@@ -157,12 +121,7 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
             yIndex: 5,
             xPosition: 7,
             zOffset: 0.5,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                BENNETT,
-                LIZ,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         }
     }
 }
@@ -172,8 +131,7 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
         [OPAL_GAZING]: {
             yIndex: 1,
             xPosition: 6,
-            scaleFactor: 0.2,
-            sharedStyle: OPAL__SHARED
+            scaleFactor: 0.2
         }
     }
 }
@@ -183,14 +141,12 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         [PEACOCK]: {
             yIndex: 5,
             xPosition: 7.5,
-            scaleFactor: 0.25,
-            sharedStyle: PEAFOWL__SHARED
+            scaleFactor: 0.25
         },
         [PEAHEN]: {
             yIndex: 5,
             xPosition: 5,
-            scaleFactor: 0.25,
-            sharedStyle: PEAFOWL__SHARED
+            scaleFactor: 0.25
         }
     }
 }

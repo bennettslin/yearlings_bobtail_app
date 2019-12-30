@@ -12,7 +12,6 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from '../../../constants/scene/things/panels'
-import { ODIN__SHARED } from '../../sharedStyles/animals'
 import { BENNETT } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 import {
@@ -41,8 +40,7 @@ const ARRANGEMENTS_THINGS = {
         [ODIN_MAT]: {
             yIndex: 2,
             xPosition: 0.8,
-            scaleFactor: 0.2,
-            sharedStyle: ODIN__SHARED
+            scaleFactor: 0.2
         }
     },
     [PANEL]: {

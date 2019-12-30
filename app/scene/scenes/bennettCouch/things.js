@@ -21,8 +21,6 @@ import {
     WIDE_ARMREST__BENNETT_LEFT,
     WIDE_ARMREST__BENNETT_RIGHT
 } from '../../../constants/scene/things/panels'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { PROGRESS_CHART__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
@@ -67,8 +65,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
             yIndex: 1,
             xPosition: 9,
             zOffset: 2,
-            scaleFactor: 0.25,
-            sharedStyle: ALL_PEOPLE__SHARED
+            scaleFactor: 0.25
         }
     }
 }
@@ -79,8 +76,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
             yIndex: 1,
             xPosition: 9,
             zOffset: 2,
-            scaleFactor: 0.25,
-            sharedStyle: ALL_PEOPLE__SHARED
+            scaleFactor: 0.25
         }
     }
 }
@@ -90,15 +86,13 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         [TELEVISION_ALBUM]: {
             yIndex: 2,
             xPosition: 9,
-            scaleFactor: 0.15,
-            sharedStyle: ALL_PEOPLE__SHARED
+            scaleFactor: 0.15
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             xPosition: 9,
             zOffset: 1,
-            scaleFactor: 0.25,
-            sharedStyle: PROGRESS_CHART__SHARED
+            scaleFactor: 0.25
         }
     }
 }
@@ -109,8 +103,7 @@ export const THINGS_BENNETT_COUCH_READING = {
             yIndex: 1,
             xPosition: 9,
             zOffset: 1,
-            scaleFactor: 0.25,
-            sharedStyle: PROGRESS_CHART__SHARED
+            scaleFactor: 0.25
         }
     },
     [FIXTURE]: {

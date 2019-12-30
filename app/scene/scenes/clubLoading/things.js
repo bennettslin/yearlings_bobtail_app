@@ -4,11 +4,6 @@ import {
 } from '../../../constants/scene/things'
 import { CLUB_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
-import {
-    DRUMS__SHARED,
-    DRUM_STAND__SHARED,
-    DRUM_THRONE__SHARED
-} from '../../sharedStyles/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -22,12 +17,7 @@ const ARRANGEMENTS_THINGS = {
         [DRUMS_STACKED__CLUB]: {
             yIndex: 3,
             xPosition: 2.5,
-            zOffset: -0.1,
-            sharedStyle: [
-                DRUMS__SHARED,
-                DRUM_STAND__SHARED,
-                DRUM_THRONE__SHARED
-            ]
+            zOffset: -0.1
         }
     }
 }

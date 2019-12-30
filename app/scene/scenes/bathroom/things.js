@@ -11,7 +11,6 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { RECORD_PLAYER_STOOL } from '../../../constants/scene/things/fixtures'
 import { BATHTUB } from '../../../constants/scene/things/panels'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [PANEL]: {
@@ -28,8 +27,7 @@ export const THINGS_BATHROOM_BATHING = {
         [MIRRORED_SINK]: {
             yIndex: 2,
             xPosition: 8,
-            scaleFactor: 0.4,
-            sharedStyle: ALL_PEOPLE__SHARED
+            scaleFactor: 0.4
         },
         [TOWEL_RACK]: {
             yIndex: 2,
@@ -48,8 +46,7 @@ export const THINGS_BATHROOM_SINGING = {
             scaleFactor: 0.15,
             perspective: 50,
             rotateY: 25,
-            skewX: 5,
-            sharedStyle: ALL_PEOPLE__SHARED
+            skewX: 5
         }
     },
     [FIXTURE]: {

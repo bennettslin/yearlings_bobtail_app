@@ -5,9 +5,22 @@ import {
     LIZ_PILLOWS_PILE_REFLECTION
 } from '../../../../constants/scene/things/furnitures'
 
+import {
+    PILLOW_BENNETT__SHARED,
+    PILLOW_BOYFRIEND__SHARED,
+    PILLOW_LIZ__SHARED,
+    PILLOW_PRETEEN_BENNETT__SHARED
+} from '../../../sharedStyles/furniture'
+
 export default {
-    [CAPTAIN_BED_PILLOW]: true,
-    [BENNETT_PILLOW]: true,
-    [LIZ_PILLOWS_PILE]: true,
-    [LIZ_PILLOWS_PILE_REFLECTION]: true
+    [CAPTAIN_BED_PILLOW]: PILLOW_PRETEEN_BENNETT__SHARED,
+    [BENNETT_PILLOW]: PILLOW_BENNETT__SHARED,
+    [LIZ_PILLOWS_PILE]: [
+        PILLOW_BOYFRIEND__SHARED,
+        PILLOW_LIZ__SHARED
+    ],
+    [LIZ_PILLOWS_PILE_REFLECTION]: [
+        PILLOW_BOYFRIEND__SHARED,
+        PILLOW_LIZ__SHARED
+    ]
 }

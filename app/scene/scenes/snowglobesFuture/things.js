@@ -18,22 +18,12 @@ import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
-import { HEINEKEN__SHARED } from '../../sharedStyles/food'
-import { MICROPHONE__SHARED } from '../../sharedStyles/instruments'
-import { BENNETT, MIRIAM } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import {
-    ROAD__SHARED,
-    SNOWGLOBE__SHARED
-} from '../../sharedStyles/props'
-import { REATTA__SHARED } from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_FUTURE]: {
             xPosition: 5.5,
-            scaleFactor: 0.6,
-            sharedStyle: ROAD__SHARED
+            scaleFactor: 0.6
         }
     },
     [CARDBOARD]: {
@@ -42,60 +32,43 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 1.15,
             zOffset: 7.7,
             scaleFactor: 0.15,
-            rotate: -5,
-            sharedStyle: SNOWGLOBE__SHARED
+            rotate: -5
         },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 1,
             xPosition: 3,
             zOffset: 7.7,
             scaleFactor: 0.5,
-            rotate: 10,
-            sharedStyle: [
-                SNOWGLOBE__SHARED,
-                BENNETT,
-                ALL_PEOPLE__SHARED
-            ]
+            rotate: 10
         },
         [SNOWGLOBE_FUTURE_REATTA]: {
             yIndex: 1,
             xPosition: 2,
             zOffset: 6.5,
             scaleFactor: 0.7,
-            rotate: -10,
-            sharedStyle: [
-                REATTA__SHARED,
-                SNOWGLOBE__SHARED,
-                BENNETT,
-                MIRIAM,
-                ALL_PEOPLE__SHARED
-            ]
+            rotate: -10
         }
     },
     [FIXTURE]: {
         [RECORDING_MIC]: {
             yIndex: 1,
-            xPosition: 10,
-            sharedStyle: MICROPHONE__SHARED
+            xPosition: 10
         },
         [RECORDING_BEERS]: {
             yIndex: 3,
-            xPosition: 7,
-            sharedStyle: HEINEKEN__SHARED
+            xPosition: 7
         }
     },
     [PANEL]: {
         [SNOWGLOBE__LIZ_KHARI]: {
             yIndex: 5,
             xPosition: 3,
-            scaleFactor: 0.4,
-            sharedStyle: SNOWGLOBE__SHARED
+            scaleFactor: 0.4
         },
         [SNOWGLOBE__BENNETT_ALONE]: {
             yIndex: 4,
             xPosition: 8.5,
-            scaleFactor: 0.3,
-            sharedStyle: SNOWGLOBE__SHARED
+            scaleFactor: 0.3
         }
     }
 }

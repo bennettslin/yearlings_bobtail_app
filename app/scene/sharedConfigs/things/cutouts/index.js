@@ -80,21 +80,50 @@ import {
     IV_DRIP
 } from '../../../../constants/scene/things/cutouts'
 
+import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import { WEDDING__SHARED } from '../../../sharedStyles/buildings'
+import {
+    CUP__SHARED,
+    DISH__SHARED,
+    TRAY__SHARED
+} from '../../../sharedStyles/dishroom'
+import {
+    BANANA__SHARED,
+    CIGARETTE__SHARED,
+    GARBAGE_BAG__SHARED,
+    PAPER_BAG__SHARED
+} from '../../../sharedStyles/food'
+import { MONITOR__SHARED } from '../../../sharedStyles/instruments'
+import {
+    LAMPPOST__SHARED,
+    FREEWAY_SIGN__SHARED
+} from '../../../sharedStyles/outdoor'
+import { NEWSPAPER__SHARED } from '../../../sharedStyles/paper'
+import { BUDDHA_SHRINE__SHARED } from '../../../sharedStyles/taiwan'
+
 export default {
     [FIRE_HYDRANT]: true,
     [PLAYGROUND_SLIDE]: true,
-    [MIRRORED_SINK]: true,
+    [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
     [TOWEL_RACK]: true,
-    [SHOPPING_CART]: true,
-    [OVERPASS_SIGN_BACK]: true,
+    [SHOPPING_CART]: GARBAGE_BAG__SHARED,
+    [OVERPASS_SIGN_BACK]: FREEWAY_SIGN__SHARED,
     [CAMPFIRE]: true,
-    [BUDDHA_SHRINE]: true,
+    [BUDDHA_SHRINE]: BUDDHA_SHRINE__SHARED,
     [TAIWAN_FRIDGE]: true,
     [TAIWAN_TREE]: true,
     [YELLOW_TAPED_GRILL]: true,
     [LOCKER_BANK]: true,
-    [TRASH_CAN__LOCKERS]: true,
-    [TRASH_CAN__QUAD]: true,
+    [TRASH_CAN__LOCKERS]: [
+        BANANA__SHARED,
+        GARBAGE_BAG__SHARED,
+        PAPER_BAG__SHARED
+    ],
+    [TRASH_CAN__QUAD]: [
+        BANANA__SHARED,
+        GARBAGE_BAG__SHARED,
+        PAPER_BAG__SHARED
+    ],
     [CACTUS_SINGLE__PORCH]: true,
     [CACTUS_DOUBLE__PORCH]: true,
     [BUSH_SINGLE__LOCKERS]: true,
@@ -109,30 +138,30 @@ export default {
     [CACTUS_SINGLE__LIZ_ENDED]: true,
     [CACTUS_DOUBLE__LIZ_GATE]: true,
     [RECYCLABLES]: true,
-    [BERKELEY_LAMPPOST]: true,
+    [BERKELEY_LAMPPOST]: LAMPPOST__SHARED,
     [SIGNPOST]: true,
     [BANCROFT_SHRUB]: true,
-    [ASH_CAN]: true,
+    [ASH_CAN]: CIGARETTE__SHARED,
     [CAMPUS_TREE_SINGLE__BANCROFT]: true,
     [CAMPUS_TREE_SINGLE__CAMPANILE]: true,
     [CAMPUS_TREE_SINGLE__TETHERBALL]: true,
     [CAMPUS_TREE_DOUBLE__CAMPANILE]: true,
     [CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT]: true,
     [CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT]: true,
-    [MONITOR_FRONT__LEFT]: true,
-    [MONITOR_FRONT__RIGHT]: true,
-    [WALL_SPEAKER_FRONT__LEFT]: true,
-    [WALL_SPEAKER_FRONT__RIGHT]: true,
+    [MONITOR_FRONT__LEFT]: MONITOR__SHARED,
+    [MONITOR_FRONT__RIGHT]: MONITOR__SHARED,
+    [WALL_SPEAKER_FRONT__LEFT]: MONITOR__SHARED,
+    [WALL_SPEAKER_FRONT__RIGHT]: MONITOR__SHARED,
     [CYPRESS_TREE]: true,
     [MUSEUM_DISPLAY]: true,
     [CAVEMAN_BONES]: true,
     [SANDBAGS]: true,
     [STAGE_LIGHTS]: true,
     [TRAFFIC_LIGHT]: true,
-    [DISH_PILE]: true,
-    [TRAY_PILE]: true,
-    [GLASS_RACK__SINK]: true,
-    [GLASS_RACK__DOLLY]: true,
+    [DISH_PILE]: DISH__SHARED,
+    [TRAY_PILE]: TRAY__SHARED,
+    [GLASS_RACK__SINK]: CUP__SHARED,
+    [GLASS_RACK__DOLLY]: CUP__SHARED,
     [DISHROOM_DOLLY__TRAY]: true,
     [DISHROOM_DOLLY__GLASS]: true,
     [APARTMENT_PLANT]: true,
@@ -146,18 +175,21 @@ export default {
     [STORAGE_CHEST]: true,
     [HOWIE_FRIDGE]: true,
     [TELEVISION]: true,
-    [MONITOR_SIDE__CROWD]: true,
-    [MONITOR_SIDE__STAGE]: true,
-    [WALL_SPEAKER_SIDE__CROWD]: true,
-    [WALL_SPEAKER_SIDE__STAGE]: true,
-    [TWIN_STREETLAMP__FAR]: true,
-    [TWIN_STREETLAMP__MIDDLE]: true,
-    [TWIN_STREETLAMP__NEAR]: true,
+    [MONITOR_SIDE__CROWD]: MONITOR__SHARED,
+    [MONITOR_SIDE__STAGE]: MONITOR__SHARED,
+    [WALL_SPEAKER_SIDE__CROWD]: MONITOR__SHARED,
+    [WALL_SPEAKER_SIDE__STAGE]: MONITOR__SHARED,
+    [TWIN_STREETLAMP__FAR]: LAMPPOST__SHARED,
+    [TWIN_STREETLAMP__MIDDLE]: LAMPPOST__SHARED,
+    [TWIN_STREETLAMP__NEAR]: LAMPPOST__SHARED,
     [EL_CERRITO_TREE]: true,
     [DUMPSTER]: true,
-    [DISPENSER_LEFT]: true,
-    [DISPENSER_RIGHT]: true,
-    [WEDDING_CROWD]: true,
+    [DISPENSER_LEFT]: NEWSPAPER__SHARED,
+    [DISPENSER_RIGHT]: [
+        NEWSPAPER__SHARED,
+        ALL_PEOPLE__SHARED
+    ],
+    [WEDDING_CROWD]: WEDDING__SHARED,
     [CLIFF_TREE]: true,
     [IV_DRIP]: true
 }

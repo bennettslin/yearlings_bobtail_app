@@ -12,61 +12,40 @@ import {
     DRUM_THRONE,
     GUITAR_CASE_OPEN
 } from '../../../constants/scene/things/fixtures'
-import {
-    DRUMS__SHARED,
-    DRUM_STAND__SHARED,
-    DRUM_THRONE__SHARED,
-    GUITAR_CASE__SHARED,
-    MICROPHONE__SHARED,
-    MONITOR__SHARED
-} from '../../sharedStyles/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [MONITOR_SIDE__STAGE]: {
             yIndex: 4,
             xPosition: 9,
-            scaleFactor: 0.3,
-            sharedStyle: MONITOR__SHARED
+            scaleFactor: 0.3
         },
         [WALL_SPEAKER_SIDE__STAGE]: {
             yIndex: 1,
             xPosition: 10,
             zOffset: 5,
             scaleFactor: 0.3,
-            rotate: 15,
-            sharedStyle: MONITOR__SHARED
+            rotate: 15
         }
     },
     [FIXTURE]: {
         [STAGE_MIC__STAGE]: {
             yIndex: 3,
-            xPosition: 8,
-            sharedStyle: MICROPHONE__SHARED
+            xPosition: 8
         },
         [KICK_DRUM]: {
             yIndex: 5,
             xPosition: 5,
-            zOffset: -0.1,
-            sharedStyle: [
-                DRUMS__SHARED,
-                DRUM_STAND__SHARED
-            ]
+            zOffset: -0.1
         },
         [DRUM_THRONE]: {
             yIndex: 5,
             xPosition: 8,
-            zOffset: -0.1,
-            sharedStyle: [
-                DRUMS__SHARED,
-                DRUM_STAND__SHARED,
-                DRUM_THRONE__SHARED
-            ]
+            zOffset: -0.1
         },
         [GUITAR_CASE_OPEN]: {
             yIndex: 4,
-            xPosition: 2.5,
-            sharedStyle: GUITAR_CASE__SHARED
+            xPosition: 2.5
         }
     }
 }

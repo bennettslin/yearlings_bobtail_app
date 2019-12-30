@@ -14,8 +14,6 @@ import {
 } from '../../../constants/scene/things/flats'
 import { WEDDING_PLATFORM } from '../../../constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../constants/scene/things/puppets'
-import { WEDDING__SHARED } from '../../sharedStyles/buildings'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -28,8 +26,7 @@ const ARRANGEMENTS_THINGS = {
         [WEDDING_CROWD]: {
             yIndex: 3,
             xPosition: 4.5,
-            scaleFactor: 0.25,
-            sharedStyle: WEDDING__SHARED
+            scaleFactor: 0.25
         }
     },
     [FLAT]: {
@@ -55,16 +52,14 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 1.3,
             zOffset: -0.125,
-            scaleFactor: 0.5,
-            sharedStyle: WEDDING__SHARED
+            scaleFactor: 0.5
         }
     },
     [PUPPET]: {
         [PUPPET_KHARI_LIZ]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.25,
-            sharedStyle: ALL_PEOPLE__SHARED
+            scaleFactor: 0.25
         }
     }
 }

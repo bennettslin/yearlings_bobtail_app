@@ -26,32 +26,99 @@ import {
     PUPPET_KHARI_LIZ
 } from '../../../../constants/scene/things/puppets'
 
-import { ODIN_GHOST__SHARED } from '../../../sharedStyles/animals'
-
+import {
+    ANITA,
+    BENNETT,
+    CHRISTOPHER,
+    FATHER,
+    MIRIAM,
+    MOTHER
+} from '../../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import {
+    ODIN_GHOST__SHARED,
+    OPAL__SHARED,
+    PEAFOWL__SHARED
+} from '../../../sharedStyles/animals'
+import { SKETCHBOOK__SHARED } from '../../../sharedStyles/sketch'
+import { REATTA__SHARED } from '../../../sharedStyles/vehicles'
 export default {
-    [PUPPET_BENNETT_BEGIN]: true,
-    [PUPPET_ANITA_BEGIN]: true,
-    [PUPPET_CHRISTOPHER_BEGIN]: true,
-    [PUPPET_FATHER_BEGIN]: true,
-    [PUPPET_MOTHER_BEGIN]: true,
-    [PUPPET_BENNETT_MIDDLE]: true,
-    [PUPPET_ANITA_MIDDLE]: true,
-    [PUPPET_CHRISTOPHER_MIDDLE]: true,
-    [PUPPET_FATHER_MIDDLE]: true,
-    [PUPPET_MOTHER_MIDDLE]: true,
-    [PUPPET_BENNETT_END]: true,
-    [PUPPET_ANITA_END]: true,
-    [PUPPET_CHRISTOPHER_END]: true,
-    [PUPPET_FATHER_END]: true,
-    [PUPPET_MOTHER_END]: true,
-    [OPAL_COUCH]: true,
-    [OPAL_GAZING]: true,
-    [PEACOCK]: true,
-    [PEAHEN]: true,
-    [PUPPET_REATTA]: true,
+    [PUPPET_BENNETT_BEGIN]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        SKETCHBOOK__SHARED
+    ],
+    [PUPPET_ANITA_BEGIN]: [
+        ALL_PEOPLE__SHARED,
+        ANITA
+    ],
+    [PUPPET_CHRISTOPHER_BEGIN]: [
+        ALL_PEOPLE__SHARED,
+        CHRISTOPHER
+    ],
+    [PUPPET_FATHER_BEGIN]: [
+        ALL_PEOPLE__SHARED,
+        FATHER
+    ],
+    [PUPPET_MOTHER_BEGIN]: [
+        ALL_PEOPLE__SHARED,
+        MOTHER
+    ],
+    [PUPPET_BENNETT_MIDDLE]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        SKETCHBOOK__SHARED
+    ],
+    [PUPPET_ANITA_MIDDLE]: [
+        ALL_PEOPLE__SHARED,
+        ANITA
+    ],
+    [PUPPET_CHRISTOPHER_MIDDLE]: [
+        ALL_PEOPLE__SHARED,
+        CHRISTOPHER
+    ],
+    [PUPPET_FATHER_MIDDLE]: [
+        ALL_PEOPLE__SHARED,
+        FATHER
+    ],
+    [PUPPET_MOTHER_MIDDLE]: [
+        ALL_PEOPLE__SHARED,
+        MOTHER
+    ],
+    [PUPPET_BENNETT_END]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        SKETCHBOOK__SHARED
+    ],
+    [PUPPET_ANITA_END]: [
+        ALL_PEOPLE__SHARED,
+        ANITA
+    ],
+    [PUPPET_CHRISTOPHER_END]: [
+        ALL_PEOPLE__SHARED,
+        CHRISTOPHER
+    ],
+    [PUPPET_FATHER_END]: [
+        ALL_PEOPLE__SHARED,
+        FATHER
+    ],
+    [PUPPET_MOTHER_END]: [
+        ALL_PEOPLE__SHARED,
+        MOTHER
+    ],
+    [OPAL_COUCH]: OPAL__SHARED,
+    [OPAL_GAZING]: OPAL__SHARED,
+    [PEACOCK]: PEAFOWL__SHARED,
+    [PEAHEN]: PEAFOWL__SHARED,
+    [PUPPET_REATTA]: [
+        REATTA__SHARED,
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        MIRIAM
+    ],
     [GHOST_ODIN_CAMPUS]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_CLUB]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_DEMONSTRATION]: ODIN_GHOST__SHARED,
-    [PUPPET_KHARI_LIZ]: true
+    [PUPPET_KHARI_LIZ]: ALL_PEOPLE__SHARED
 }

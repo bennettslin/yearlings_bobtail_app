@@ -28,7 +28,6 @@ import {
     PUBLIC_FAR__LIZ_GATE,
     PUBLIC_NEAR__LIZ_GATE
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_HOUSE__SHARED } from '../../sharedStyles/buildings'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BACKDROP]: {
@@ -111,15 +110,13 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 1,
             xPosition: 9.5,
             scaleFactor: 0.4,
-            flipHorizontal: true,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            flipHorizontal: true
         },
         [PUBLIC_NEAR__LIZ_GATE]: {
             yIndex: 3,
             xPosition: 11,
             scaleFactor: 0.5,
-            flipHorizontal: true,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            flipHorizontal: true
         }
     }
 }

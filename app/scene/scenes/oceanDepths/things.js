@@ -9,9 +9,6 @@ import {
     OCEAN_BOTTOM_MIDDLE,
     OCEAN_BOTTOM_NEAR
 } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../sharedStyles/animals'
-import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -24,12 +21,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,
             xPosition: 8,
-            scaleFactor: 0.2,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                BENNETT,
-                ODIN__SHARED
-            ]
+            scaleFactor: 0.2
         }
     },
     [FLAT]: {

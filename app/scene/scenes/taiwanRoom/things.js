@@ -12,37 +12,25 @@ import {
     TAIWAN_FRIDGE
 } from '../../../constants/scene/things/cutouts'
 import { FRIDGE_DRAWINGS } from '../../../constants/scene/things/fixtures'
-import { ODIN__SHARED } from '../../sharedStyles/animals'
-import { ACOUSTIC_GUITAR__SHARED } from '../../sharedStyles/instruments'
-import { SKETCHBOOK__SHARED } from '../../sharedStyles/paper'
-import { BENNETT, SASHA } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { BUDDHA_SHRINE__SHARED } from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [BENNETT_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 7.75,
-            scaleFactor: 0.2,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                BENNETT
-            ]
+            scaleFactor: 0.2
         },
         [ODIN_TAIWAN_STAIRS]: {
             yIndex: 2,
             xPosition: 1.5,
-            scaleFactor: 0.2,
-            sharedStyle: ODIN__SHARED
+            scaleFactor: 0.2
         }
     },
     [CUTOUT]: {
         [BUDDHA_SHRINE]: {
             yIndex: 4,
             xPosition: 5.5,
-            scaleFactor: 0.15,
-            sharedStyle: BUDDHA_SHRINE__SHARED
+            scaleFactor: 0.15
         },
         [TAIWAN_FRIDGE]: {
             yIndex: 1,
@@ -55,13 +43,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 9,
             zOffset: 1.25,
-            scaleFactor: 0.35,
-            sharedStyle: [
-                SKETCHBOOK__SHARED,
-                ALL_PEOPLE__SHARED,
-                ACOUSTIC_GUITAR__SHARED,
-                SASHA
-            ]
+            scaleFactor: 0.35
         }
     }
 }

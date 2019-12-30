@@ -21,7 +21,6 @@ import {
     SCHOOLBUS_SEAT__RIGHT,
     SCHOOLBUS_EXTERIOR
 } from '../../../constants/scene/things/panels'
-import { OAKLAND_COMMERCIAL__SHARED } from '../../sharedStyles/buildings'
 import { INTERIOR__SHARED } from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
@@ -60,14 +59,12 @@ const ARRANGEMENTS_THINGS = {
         [DRIVING_HOUSE_LEFT]: {
             yIndex: 1,
             xPosition: 2,
-            scaleFactor: 0.6,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.6
         },
         [DRIVING_HOUSE_RIGHT]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.6,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.6
         }
     },
     [PANEL]: {

@@ -12,7 +12,7 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_COMMERCIAL__SHARED } from '../../sharedStyles/buildings'
+
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OAKLAND_FRONT__MIDWAY]: {
@@ -26,44 +26,37 @@ const ARRANGEMENTS_THINGS = {
         [COMMERCIAL_CENTRE]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.4,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.4
         },
         [COMMERCIAL_FAR_LEFT]: {
             yIndex: 2,
             xPosition: 1.75,
-            scaleFactor: 0.32,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.32
         },
         [COMMERCIAL_FAR_RIGHT]: {
             yIndex: 2,
             xPosition: 9,
-            scaleFactor: 0.32,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.32
         },
         [COMMERCIAL_MIDDLE_LEFT]: {
             yIndex: 3,
             xPosition: 1,
-            scaleFactor: 0.4,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.4
         },
         [COMMERCIAL_MIDDLE_RIGHT]: {
             yIndex: 3,
             xPosition: 10,
-            scaleFactor: 0.4,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.4
         },
         [COMMERCIAL_NEAR_LEFT]: {
             yIndex: 4,
             xPosition: 0,
-            scaleFactor: 0.5,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.5
         },
         [COMMERCIAL_NEAR_RIGHT]: {
             yIndex: 4,
             xPosition: 11,
-            scaleFactor: 0.5,
-            sharedStyle: OAKLAND_COMMERCIAL__SHARED
+            scaleFactor: 0.5
         }
     }
 }

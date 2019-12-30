@@ -9,23 +9,12 @@ import {
     SNOWGLOBE_PAST
 } from '../../../constants/scene/things/cardboards'
 import { SNOWGLOBE__TETHERBALL } from '../../../constants/scene/things/panels'
-import { BOOK__SHARED } from '../../sharedStyles/paper'
-import {
-    ROAD__SHARED,
-    SNOWGLOBE__SHARED
-} from '../../sharedStyles/props'
-import { BENNETT, CHRISTOPHER } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_PAST]: {
             xPosition: 5.5,
-            scaleFactor: 0.6,
-            sharedStyle: [
-                BOOK__SHARED,
-                ROAD__SHARED
-            ]
+            scaleFactor: 0.6
         }
     },
     [CARDBOARD]: {
@@ -34,29 +23,21 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 6,
             zOffset: 6.45,
             scaleFactor: 0.15,
-            rotate: -5,
-            sharedStyle: SNOWGLOBE__SHARED
+            rotate: -5
         },
         [SNOWGLOBE_PAST]: {
             yIndex: 1,
             xPosition: 8.5,
             zOffset: 6,
             scaleFactor: 0.7,
-            rotate: 10,
-            sharedStyle: [
-                SNOWGLOBE__SHARED,
-                BENNETT,
-                CHRISTOPHER,
-                ALL_PEOPLE__SHARED
-            ]
+            rotate: 10
         }
     },
     [PANEL]: {
         [SNOWGLOBE__TETHERBALL]: {
             yIndex: 4,
             xPosition: 7,
-            scaleFactor: 0.4,
-            sharedStyle: SNOWGLOBE__SHARED
+            scaleFactor: 0.4
         }
     }
 }

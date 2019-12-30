@@ -15,19 +15,12 @@ import {
     WIDE_ARMREST__MIRIAM_LEFT,
     WIDE_ARMREST__MIRIAM_RIGHT
 } from '../../../constants/scene/things/panels'
-import {
-    ROAD__SHARED,
-    SNOWGLOBE__SHARED
-} from '../../sharedStyles/props'
-import { BENNETT, LIZ } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [ROAD_PRESENT]: {
             xPosition: 5.5,
-            scaleFactor: 0.6,
-            sharedStyle: ROAD__SHARED
+            scaleFactor: 0.6
         }
     },
     [CARDBOARD]: {
@@ -36,35 +29,26 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 10.4,
             zOffset: 7.85,
             scaleFactor: 0.15,
-            rotate: -10,
-            sharedStyle: SNOWGLOBE__SHARED
+            rotate: -10
         },
         [SNOWGLOBE_PRESENT]: {
             yIndex: 1,
             xPosition: 8.15,
             zOffset: 6.25,
             scaleFactor: 0.7,
-            rotate: 15,
-            sharedStyle: [
-                SNOWGLOBE__SHARED,
-                BENNETT,
-                LIZ,
-                ALL_PEOPLE__SHARED
-            ]
+            rotate: 15
         }
     },
     [PANEL]: {
         [SNOWGLOBE__LIZ_ALONE]: {
             yIndex: 4,
             xPosition: 2.5,
-            scaleFactor: 0.3,
-            sharedStyle: SNOWGLOBE__SHARED
+            scaleFactor: 0.3
         },
         [SNOWGLOBE__BENNETT_MIRIAM]: {
             yIndex: 5,
             xPosition: 8,
-            scaleFactor: 0.4,
-            sharedStyle: SNOWGLOBE__SHARED
+            scaleFactor: 0.4
         },
         [WIDE_COUCH__MIRIAM]: {
             yIndex: 5,

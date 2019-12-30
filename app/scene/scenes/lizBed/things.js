@@ -19,53 +19,35 @@ import {
     PHONE_CALL_PANEL,
     LIZ_BED
 } from '../../../constants/scene/things/panels'
-import { LIZ_PHONE__SHARED } from '../../sharedStyles/household'
-import {
-    PILLOW_BOYFRIEND__SHARED,
-    PILLOW_LIZ__SHARED
-} from '../../sharedStyles/furniture'
-import { SHADOW__SHARED } from '../../sharedStyles/props'
-import { BENNETT } from '../../../constants/scene/actors'
 
 const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [LIZ_PHONE]: {
             yIndex: 4,
-            xPosition: 2,
-            sharedStyle: LIZ_PHONE__SHARED
+            xPosition: 2
         },
         [LIZ_PHONE_REFLECTION]: {
             yIndex: 2,
             xPosition: 2,
-            zOffset: 6.5,
-            sharedStyle: LIZ_PHONE__SHARED
+            zOffset: 6.5
         }
     },
     [FURNITURE]: {
         [LIZ_PILLOWS_PILE]: {
             yIndex: 5,
-            xPosition: 9,
-            sharedStyle: [
-                PILLOW_BOYFRIEND__SHARED,
-                PILLOW_LIZ__SHARED
-            ]
+            xPosition: 9
         },
         [LIZ_PILLOWS_PILE_REFLECTION]: {
             yIndex: 2,
             xPosition: 9,
-            zOffset: 5.5,
-            sharedStyle: [
-                PILLOW_BOYFRIEND__SHARED,
-                PILLOW_LIZ__SHARED
-            ]
+            zOffset: 5.5
         }
     },
     [PANEL]: {
         [LIZ_BED]: {
             yIndex: 5,
             xPosition: 5,
-            scaleFactor: 0.25,
-            sharedStyle: SHADOW__SHARED
+            scaleFactor: 0.25
         }
     }
 }
@@ -74,15 +56,13 @@ export const THINGS_LIZ_BED_LOOK_BACK = {
     [FIXTURE]: {
         [BENNETT_SHOE]: {
             yIndex: 4,
-            xPosition: 9,
-            sharedStyle: BENNETT
+            xPosition: 9
         },
         [BENNETT_SHOE_REFLECTION]: {
             yIndex: 2,
             xPosition: 9,
             zOffset: 5.5,
-            rotate: 345,
-            sharedStyle: BENNETT
+            rotate: 345
         }
     }
 }
@@ -91,14 +71,12 @@ export const THINGS_LIZ_BED_VEGAN = {
     [FIXTURE]: {
         [LIZ_PHONE_BASE]: {
             yIndex: 4,
-            xPosition: 2,
-            sharedStyle: LIZ_PHONE__SHARED
+            xPosition: 2
         },
         [LIZ_PHONE_BASE_REFLECTION]: {
             yIndex: 2,
             xPosition: 2,
-            zOffset: 6.5,
-            sharedStyle: LIZ_PHONE__SHARED
+            zOffset: 6.5
         }
     },
     [PANEL]: {

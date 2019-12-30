@@ -9,7 +9,6 @@ import {
     OAKLAND_SCHOOL,
     OAKLAND_FLAG
 } from '../../../constants/scene/things/flats'
-import { OAKLAND_HOUSE__SHARED } from '../../sharedStyles/buildings'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -23,20 +22,17 @@ const ARRANGEMENTS_THINGS = {
         [PUBLIC_FAR__GOLDEN_CORD]: {
             yIndex: 1,
             xPosition: 1.5,
-            scaleFactor: 0.4,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            scaleFactor: 0.4
         },
         [PUBLIC_NEAR__GOLDEN_CORD]: {
             yIndex: 3,
             xPosition: 0,
-            scaleFactor: 0.5,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            scaleFactor: 0.5
         },
         [OAKLAND_SCHOOL]: {
             yIndex: 1,
             xPosition: 11.25,
-            scaleFactor: 0.4,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            scaleFactor: 0.4
         },
         [OAKLAND_FLAG]: {
             yIndex: 3,

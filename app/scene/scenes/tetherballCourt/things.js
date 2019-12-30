@@ -20,7 +20,6 @@ import {
     SCHOOL_BUNGALOW__LEFT,
     SCHOOL_BUNGALOW__RIGHT
 } from '../../../constants/scene/things/flats'
-import { TETHERBALL_POLE__SHARED } from '../../sharedStyles/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -70,8 +69,7 @@ const ARRANGEMENTS_THINGS = {
         [TETHERBALL_POLE]: {
             yIndex: 3,
             xPosition: 7,
-            scaleFactor: 0.225,
-            sharedStyle: TETHERBALL_POLE__SHARED
+            scaleFactor: 0.225
         }
     },
     [FLAT]: {

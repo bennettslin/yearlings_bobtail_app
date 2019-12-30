@@ -16,39 +16,30 @@ import {
     CONVEYOR_BELT,
     DISHROOM_SINK
 } from '../../../constants/scene/things/panels'
-import {
-    CUP__SHARED,
-    DISH__SHARED,
-    TRAY__SHARED
-} from '../../sharedStyles/dishroom'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [DISH_PILE]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.4,
-            sharedStyle: DISH__SHARED
+            scaleFactor: 0.4
         },
         [GLASS_RACK__SINK]: {
             yIndex: 2,
             xPosition: 5.5,
-            scaleFactor: 0.4,
-            sharedStyle: CUP__SHARED
+            scaleFactor: 0.4
         },
         [TRAY_PILE]: {
             yIndex: 4,
             xPosition: 1.75,
             zOffset: 0.55,
-            scaleFactor: 0.4,
-            sharedStyle: TRAY__SHARED
+            scaleFactor: 0.4
         },
         [GLASS_RACK__DOLLY]: {
             yIndex: 4,
             xPosition: 6.25,
             zOffset: 0.55,
-            scaleFactor: 0.4,
-            sharedStyle: CUP__SHARED
+            scaleFactor: 0.4
         },
         [DISHROOM_DOLLY__TRAY]: {
             yIndex: 4,
@@ -74,12 +65,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 4.1,
             scaleFactor: 0.36,
-            zOffset: 0.275,
-            sharedStyle: [
-                CUP__SHARED,
-                DISH__SHARED,
-                TRAY__SHARED
-            ]
+            zOffset: 0.275
         },
         [DISHROOM_SINK]: {
             yIndex: 3,

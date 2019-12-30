@@ -4,9 +4,6 @@ import {
 } from '../../../constants/scene/things'
 import { BASEMENT_DOOR } from '../../../constants/scene/things/doors'
 import { CRACKED_PICTURE } from '../../../constants/scene/things/fixtures'
-import { BENNETT, LIZ } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { PROMISE_PHOTO__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -20,13 +17,7 @@ const ARRANGEMENTS_THINGS = {
         [CRACKED_PICTURE]: {
             yIndex: 3,
             xPosition: 0.5,
-            zOffset: 4,
-            sharedStyle: [
-                PROMISE_PHOTO__SHARED,
-                ALL_PEOPLE__SHARED,
-                BENNETT,
-                LIZ
-            ]
+            zOffset: 4
         }
     }
 }

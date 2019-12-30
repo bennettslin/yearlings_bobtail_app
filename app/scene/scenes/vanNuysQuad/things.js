@@ -15,16 +15,6 @@ import {
     BUSH_SINGLE__QUAD,
     BUSH_DOUBLE__QUAD
 } from '../../../constants/scene/things/cutouts'
-import {
-    BANANA__SHARED,
-    GARBAGE_BAG__SHARED,
-    PAPER_BAG__SHARED
-} from '../../sharedStyles/food'
-import {
-    BOOK__SHARED,
-    SKETCHBOOK__SHARED
-} from '../../sharedStyles/paper'
-import { SKETCH_DOGS__SHARED } from '../../sharedStyles/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -40,8 +30,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 2.75,
             zOffset: 3.5,
             noShadow: true,
-            scaleFactor: 0.3,
-            sharedStyle: SKETCH_DOGS__SHARED
+            scaleFactor: 0.3
         },
         [SKETCHBOOK__ESCAPE_POD]: {
             yIndex: 5,
@@ -49,11 +38,7 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 2.5,
             rotate: 270,
             scaleFactor: 0.25,
-            flipHorizontal: true,
-            sharedStyle: [
-                BOOK__SHARED,
-                SKETCHBOOK__SHARED
-            ]
+            flipHorizontal: true
         }
     },
     [CARDBOARD]: {
@@ -69,12 +54,7 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 3,
             xPosition: 0.5,
             scaleFactor: 0.35,
-            flipHorizontal: true,
-            sharedStyle: [
-                BANANA__SHARED,
-                GARBAGE_BAG__SHARED,
-                PAPER_BAG__SHARED
-            ]
+            flipHorizontal: true
         },
         [BUSH_SINGLE__QUAD]: {
             yIndex: 4,

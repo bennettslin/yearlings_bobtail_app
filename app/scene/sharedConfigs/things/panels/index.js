@@ -62,18 +62,32 @@ import {
     WEDDING_PLATFORM
 } from '../../../../constants/scene/things/panels'
 
+import { WEDDING__SHARED } from '../../../sharedStyles/buildings'
+import {
+    CUP__SHARED,
+    DISH__SHARED,
+    TRAY__SHARED
+} from '../../../sharedStyles/dishroom'
 import { WAITING_ARMCHAIR__SHARED } from '../../../sharedStyles/furniture'
+import {
+    SHADOW__SHARED,
+    SNOWGLOBE__SHARED
+} from '../../../sharedStyles/props'
+import {
+    INTERIOR__SHARED,
+    REATTA__SHARED
+} from '../../../sharedStyles/vehicles'
 
 export default {
     [BATHTUB]: true,
     [BEDROOM_DESK]: true,
     [CAPTAIN_BED]: true,
     [BEDROOM_FENCE]: true,
-    [CAVE_SHADOWS]: true,
-    [STALACTITES]: true,
-    [TROLL_SHADOW_LEFT]: true,
-    [TROLL_SHADOW_RIGHT]: true,
-    [TROLL_SHADOW_FAR]: true,
+    [CAVE_SHADOWS]: SHADOW__SHARED,
+    [STALACTITES]: SHADOW__SHARED,
+    [TROLL_SHADOW_LEFT]: SHADOW__SHARED,
+    [TROLL_SHADOW_RIGHT]: SHADOW__SHARED,
+    [TROLL_SHADOW_FAR]: SHADOW__SHARED,
     [TAIWAN_BRIDGE]: true,
     [TAIWAN_HAZE__CLOUD]: true,
     [TAIWAN_HAZE__FOG]: true,
@@ -90,17 +104,21 @@ export default {
     [GO_KART_SEAT__RIGHT]: true,
     [GO_KART_EXTERIOR__LEFT]: true,
     [GO_KART_EXTERIOR__RIGHT]: true,
-    [CONVEYOR_BELT]: true,
+    [CONVEYOR_BELT]: [
+        CUP__SHARED,
+        DISH__SHARED,
+        TRAY__SHARED
+    ],
     [DISHROOM_SINK]: true,
-    [BENNETT_BED]: true,
+    [BENNETT_BED]: SHADOW__SHARED,
     [WAITING_ARMCHAIR__BENNETT]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST__BENNETT_LEFT]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST__BENNETT_RIGHT]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMCHAIR__LIZ]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST__LIZ_LEFT]: WAITING_ARMCHAIR__SHARED,
     [WAITING_ARMREST__LIZ_RIGHT]: WAITING_ARMCHAIR__SHARED,
-    [LIZ_BED]: true,
-    [SATURN_INTERIOR]: true,
+    [LIZ_BED]: SHADOW__SHARED,
+    [SATURN_INTERIOR]: INTERIOR__SHARED,
     [SATURN_SEAT__LEFT]: true,
     [SATURN_SEAT__RIGHT]: true,
     [SATURN_EXTERIOR]: true,
@@ -108,22 +126,22 @@ export default {
     [ATTIC_ARMREST__LEFT]: true,
     [ATTIC_ARMREST__RIGHT]: true,
     [VOLKSWAGEN]: true,
-    [CROWD_SIDE]: true,
-    [LIZ_COUCH]: true,
+    [CROWD_SIDE]: SHADOW__SHARED,
+    [LIZ_COUCH]: SHADOW__SHARED,
     [WIDE_COUCH__MIRIAM]: true,
     [WIDE_ARMREST__MIRIAM_LEFT]: true,
     [WIDE_ARMREST__MIRIAM_RIGHT]: true,
-    [SNOWGLOBE__TETHERBALL]: true,
-    [SNOWGLOBE__LIZ_ALONE]: true,
-    [SNOWGLOBE__BENNETT_MIRIAM]: true,
-    [SNOWGLOBE__LIZ_KHARI]: true,
-    [SNOWGLOBE__BENNETT_ALONE]: true,
-    [REATTA_INTERIOR]: true,
+    [SNOWGLOBE__TETHERBALL]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE__LIZ_ALONE]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE__BENNETT_MIRIAM]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE__LIZ_KHARI]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE__BENNETT_ALONE]: SNOWGLOBE__SHARED,
+    [REATTA_INTERIOR]: INTERIOR__SHARED,
     [REATTA_SEAT]: true,
     [REATTA_SEAT_DOWN]: true,
-    [REATTA_EXTERIOR]: true,
+    [REATTA_EXTERIOR]: REATTA__SHARED,
     [HOSPITAL_BED]: true,
     [PHONE_CALL_PANEL]: true,
-    [CROWD_BACK]: true,
-    [WEDDING_PLATFORM]: true
+    [CROWD_BACK]: SHADOW__SHARED,
+    [WEDDING_PLATFORM]: WEDDING__SHARED
 }

@@ -52,12 +52,37 @@ import {
     THOUGHT_SMALL
 } from '../../../../constants/scene/things/bubbles'
 
+import {
+    AMY,
+    BENNETT,
+    LIZ,
+    MARA
+} from '../../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
 import { BUBBLE__SHARED } from '../../../sharedStyles/props'
+import {
+    ACOUSTIC_GUITAR__SHARED,
+    BANJO__SHARED,
+    HEADPHONE__SHARED,
+    MICROPHONE__SHARED,
+    MONITOR__SHARED
+} from '../../../sharedStyles/instruments'
+import {
+    BOOK__SHARED,
+    SKETCHBOOK__SHARED
+} from '../../../sharedStyles/paper'
+import {
+    SKETCH_DOGS__SHARED,
+    SKETCH_PEOPLE__SHARED
+} from '../../../sharedStyles/sketch'
 
 export default {
     [ESTHER_SPEECH]: true,
-    [SKETCHBOOK__TOGETHER]: true,
-    [TOGETHER_SKETCH]: true,
+    [SKETCHBOOK__TOGETHER]: [
+        BOOK__SHARED,
+        SKETCHBOOK__SHARED
+    ],
+    [TOGETHER_SKETCH]: SKETCH_PEOPLE__SHARED,
     [BUBBLE_SMALL__LEFT]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__LEFT]: BUBBLE__SHARED,
     [BUBBLE_LARGE__LEFT]: BUBBLE__SHARED,
@@ -66,35 +91,83 @@ export default {
     [BUBBLE_MEDIUM__RIGHT]: BUBBLE__SHARED,
     [BUBBLE_LARGE__RIGHT]: BUBBLE__SHARED,
     [THOUGHT_LARGE__RIGHT]: BUBBLE__SHARED,
-    [SKETCHBOOK__APART]: true,
-    [APART_SKETCH]: true,
-    [SKETCHBOOK__DOGS]: true,
-    [DOGS_SKETCH]: true,
-    [SKETCHBOOK__ESCAPE_POD]: true,
-    [ESCAPE_POD_SKETCH]: true,
+    [SKETCHBOOK__APART]: [
+        BOOK__SHARED,
+        SKETCHBOOK__SHARED
+    ],
+    [APART_SKETCH]: SKETCH_PEOPLE__SHARED,
+    [SKETCHBOOK__DOGS]: [
+        BOOK__SHARED,
+        SKETCHBOOK__SHARED
+    ],
+    [DOGS_SKETCH]: SKETCH_DOGS__SHARED,
+    [SKETCHBOOK__ESCAPE_POD]: [
+        BOOK__SHARED,
+        SKETCHBOOK__SHARED
+    ],
+    [ESCAPE_POD_SKETCH]: SKETCH_DOGS__SHARED,
     [BUBBLE_SMALL__CINEMA]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__CINEMA]: BUBBLE__SHARED,
     [BUBBLE_LARGE__CINEMA]: BUBBLE__SHARED,
-    [CINEMA_THOUGHT_RECORDING]: true,
-    [CINEMA_THOUGHT_BUYING]: true,
+    [CINEMA_THOUGHT_RECORDING]: [
+        ACOUSTIC_GUITAR__SHARED,
+        HEADPHONE__SHARED,
+        MICROPHONE__SHARED,
+        BENNETT,
+        ALL_PEOPLE__SHARED
+    ],
+    [CINEMA_THOUGHT_BUYING]: [
+        MARA,
+        ALL_PEOPLE__SHARED
+    ],
     [BUBBLE_SMALL__GO_KART]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__GO_KART]: BUBBLE__SHARED,
     [GO_KART_THOUGHT]: true,
     [BUBBLE_SMALL__WAITING]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__WAITING]: BUBBLE__SHARED,
     [BUBBLE_LARGE__WAITING]: BUBBLE__SHARED,
-    [WAITING_THOUGHT_WALKING]: true,
-    [WAITING_THOUGHT_SINGING]: true,
-    [WAITING_THOUGHT_STUDYING]: true,
+    [WAITING_THOUGHT_WALKING]: [
+        BENNETT,
+        LIZ,
+        ALL_PEOPLE__SHARED
+    ],
+    [WAITING_THOUGHT_SINGING]: [
+        BANJO__SHARED,
+        BENNETT,
+        LIZ,
+        ALL_PEOPLE__SHARED
+    ],
+    [WAITING_THOUGHT_STUDYING]: [
+        BENNETT,
+        LIZ,
+        ALL_PEOPLE__SHARED
+    ],
     [PHARMACY_CEL]: true,
     [TARPIT_CONSTELLATION]: true,
-    [SIBLING_CONSTELLATION]: true,
-    [KHARI_ATTACK_SPEECH]: true,
-    [LIZ_DEFENCE_SPEECH]: true,
+    [SIBLING_CONSTELLATION]: SKETCH_PEOPLE__SHARED,
+    [KHARI_ATTACK_SPEECH]: [
+        BENNETT,
+        LIZ,
+        ALL_PEOPLE__SHARED
+    ],
+    [LIZ_DEFENCE_SPEECH]: [
+        BANJO__SHARED,
+        ACOUSTIC_GUITAR__SHARED,
+        MICROPHONE__SHARED,
+        MONITOR__SHARED,
+        AMY,
+        BENNETT,
+        LIZ,
+        ALL_PEOPLE__SHARED
+    ],
     [BUBBLE_SMALL__LIZ]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__LIZ]: BUBBLE__SHARED,
     [BUBBLE_LARGE__LIZ]: BUBBLE__SHARED,
-    [LIZ_THOUGHT]: true,
+    [LIZ_THOUGHT]: [
+        BENNETT,
+        LIZ,
+        ALL_PEOPLE__SHARED
+    ],
     [BUBBLE_SMALL__DEATHBED]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__DEATHBED]: BUBBLE__SHARED,
     [BUBBLE_LARGE__DEATHBED]: BUBBLE__SHARED,

@@ -9,46 +9,33 @@ import {
     OVERPASS_SIGN_BACK
 } from '../../../constants/scene/things/cutouts'
 import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
-import { GARBAGE_BAG__SHARED } from '../../sharedStyles/food'
-import { FREEWAY_SIGN__SHARED } from '../../sharedStyles/outdoor'
-import {
-    FOLIAGE__SHARED,
-    PALM_TREE__SHARED
-} from '../../sharedStyles/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [VALLEY__FREEWAY]: {
             xPosition: 5.5,
             scaleFactor: 0.65,
-            trimBottom: 0.05,
-            sharedStyle: FOLIAGE__SHARED
+            trimBottom: 0.05
         }
     },
     [CUTOUT]: {
         [SHOPPING_CART]: {
             yIndex: 5,
             xPosition: 8,
-            scaleFactor: 0.2,
-            sharedStyle: GARBAGE_BAG__SHARED
+            scaleFactor: 0.2
         },
         [OVERPASS_SIGN_BACK]: {
             yIndex: 2,
             xPosition: 2.5,
             scaleFactor: 0.3,
-            zOffset: 1,
-            sharedStyle: FREEWAY_SIGN__SHARED
+            zOffset: 1
         }
     },
     [FLAT]: {
         [VALLEY_FREEWAY]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.625,
-            sharedStyle: [
-                FREEWAY_SIGN__SHARED,
-                PALM_TREE__SHARED
-            ]
+            scaleFactor: 0.625
         }
     }
 }

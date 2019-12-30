@@ -20,13 +20,6 @@ import {
 } from '../../../constants/scene/things/fixtures'
 import { BENNETT_PILLOW } from '../../../constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
-import { PILLOW_BENNETT__SHARED } from '../../sharedStyles/furniture'
-
-import {
-    BOOK__SHARED,
-    SKETCHBOOK__SHARED
-} from '../../sharedStyles/paper'
-import { SHADOW__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -74,11 +67,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [LINGERIE_DRAWING]: {
             yIndex: 4,
-            xPosition: 7,
-            sharedStyle: [
-                BOOK__SHARED,
-                SKETCHBOOK__SHARED
-            ]
+            xPosition: 7
         },
         [VASELINE]: {
             yIndex: 4,
@@ -88,16 +77,14 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [BENNETT_PILLOW]: {
             yIndex: 4,
-            xPosition: 9.5,
-            sharedStyle: PILLOW_BENNETT__SHARED
+            xPosition: 9.5
         }
     },
     [PANEL]: {
         [BENNETT_BED]: {
             yIndex: 5,
             xPosition: 7.5,
-            scaleFactor: 0.25,
-            sharedStyle: SHADOW__SHARED
+            scaleFactor: 0.25
         }
     }
 }

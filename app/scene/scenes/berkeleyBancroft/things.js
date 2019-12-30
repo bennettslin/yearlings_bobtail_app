@@ -11,8 +11,6 @@ import {
 import { BANCROFT_DOOR } from '../../../constants/scene/things/doors'
 import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
-import { BERKELEY_BUILDING__SHARED } from '../../sharedStyles/buildings'
-import { CIGARETTE__SHARED } from '../../sharedStyles/food'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -24,8 +22,7 @@ const ARRANGEMENTS_THINGS = {
         [ASH_CAN]: {
             yIndex: 4,
             xPosition: 5.5,
-            scaleFactor: 0.3,
-            sharedStyle: CIGARETTE__SHARED
+            scaleFactor: 0.3
         }
     },
     [DOOR]: {
@@ -38,8 +35,7 @@ const ARRANGEMENTS_THINGS = {
         [BERKELEY_BUILDING_WIDE__BANCROFT]: {
             yIndex: 2,
             xPosition: 2.5,
-            scaleFactor: 0.4,
-            sharedStyle: BERKELEY_BUILDING__SHARED
+            scaleFactor: 0.4
         }
     }
 }

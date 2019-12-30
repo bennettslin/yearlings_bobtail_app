@@ -11,13 +11,6 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
-import {
-    BASS_CASE__SHARED,
-    DRUMS__SHARED,
-    DRUM_STAND__SHARED,
-    DRUM_THRONE__SHARED,
-    GUITAR_CASE__SHARED
-} from '../../sharedStyles/instruments'
 
 const ARRANGEMENTS_THINGS = {
     [DOOR]: {
@@ -31,23 +24,16 @@ const ARRANGEMENTS_THINGS = {
     [FIXTURE]: {
         [BASS_CASE_UPRIGHT]: {
             yIndex: 2,
-            xPosition: 7.5,
-            sharedStyle: BASS_CASE__SHARED
+            xPosition: 7.5
         },
         [GUITAR_CASE_UPRIGHT]: {
             yIndex: 2,
-            xPosition: 9.5,
-            sharedStyle: GUITAR_CASE__SHARED
+            xPosition: 9.5
         },
         [DRUMS_STACKED__BASEMENT]: {
             yIndex: 2,
             xPosition: 5,
-            zOffset: -0.1,
-            sharedStyle: [
-                DRUMS__SHARED,
-                DRUM_STAND__SHARED,
-                DRUM_THRONE__SHARED
-            ]
+            zOffset: -0.1
         },
         [BASEMENT_BEER_CASE]: {
             yIndex: 5,

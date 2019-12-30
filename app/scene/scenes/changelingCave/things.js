@@ -12,7 +12,6 @@ import {
     TROLL_SHADOW_RIGHT,
     TROLL_SHADOW_FAR
 } from '../../../constants/scene/things/panels'
-import { SHADOW__SHARED } from '../../sharedStyles/props'
 
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
@@ -33,37 +32,32 @@ const ARRANGEMENTS_THINGS = {
         [CAVE_SHADOWS]: {
             yIndex: 1,
             xPosition: 6,
-            scaleFactor: 0.7,
-            sharedStyle: SHADOW__SHARED
+            scaleFactor: 0.7
         },
         [STALACTITES]: {
             yIndex: 5,
             xPosition: 2,
             zOffset: 6,
-            scaleFactor: 0.35,
-            sharedStyle: SHADOW__SHARED
+            scaleFactor: 0.35
         },
         [TROLL_SHADOW_LEFT]: {
             yIndex: 5,
             xPosition: -0.5,
             scaleFactor: 0.35,
-            alignLeft: true,
-            sharedStyle: SHADOW__SHARED
+            alignLeft: true
         },
         [TROLL_SHADOW_RIGHT]: {
             yIndex: 5,
             xPosition: 11.5,
             scaleFactor: 0.35,
-            alignRight: true,
-            sharedStyle: SHADOW__SHARED
+            alignRight: true
         },
         [TROLL_SHADOW_FAR]: {
             yIndex: 4,
             xPosition: 11.625,
             zOffset: -0.25,
             scaleFactor: 0.35,
-            alignRight: true,
-            sharedStyle: SHADOW__SHARED
+            alignRight: true
         }
     }
 }

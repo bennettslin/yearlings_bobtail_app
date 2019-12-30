@@ -7,22 +7,19 @@ import {
     ELLIOTT_SMITH_POSTER
 } from '../../../constants/scene/things/cardboards'
 import { BASEMENT_DOOR_SIDE } from '../../../constants/scene/things/doors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [NAS_ALBUM]: {
             yIndex: 3,
             xPosition: 9.5,
-            scaleFactor: 0.15,
-            sharedStyle: ALL_PEOPLE__SHARED
+            scaleFactor: 0.15
         },
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,
             xPosition: 9,
             zOffset: 2,
-            scaleFactor: 0.25,
-            sharedStyle: ALL_PEOPLE__SHARED
+            scaleFactor: 0.25
         }
     },
     [DOOR]: {

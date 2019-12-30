@@ -9,7 +9,6 @@ import {
     ODIN_SHORE
 } from '../../../constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../sharedStyles/animals'
 import { TAIWAN_HOUSE__SHARED } from '../../sharedStyles/buildings'
 import { BENNETT } from '../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
@@ -34,8 +33,7 @@ const ARRANGEMENTS_THINGS = {
         [ODIN_SHORE]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.2,
-            sharedStyle: ODIN__SHARED
+            scaleFactor: 0.2
         }
     },
     [FLAT]: {

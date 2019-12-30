@@ -14,9 +14,6 @@ import {
     SATURN_SEAT__LEFT,
     SATURN_SEAT__RIGHT
 } from '../../../constants/scene/things/panels'
-import { EVIAN__SHARED } from '../../sharedStyles/food'
-import { SKETCH_PEOPLE__SHARED } from '../../sharedStyles/sketch'
-import { INTERIOR__SHARED } from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -30,23 +27,20 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 1,
             xPosition: 9,
             zOffset: 4.5,
-            scaleFactor: 0.4,
-            sharedStyle: SKETCH_PEOPLE__SHARED
+            scaleFactor: 0.4
         }
     },
     [FIXTURE]: {
         [EVIAN_BOTTLES]: {
             yIndex: 3,
-            xPosition: 1.5,
-            sharedStyle: EVIAN__SHARED
+            xPosition: 1.5
         }
     },
     [PANEL]: {
         [SATURN_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.5,
-            sharedStyle: INTERIOR__SHARED
+            scaleFactor: 0.5
         },
         [SATURN_SEAT__LEFT]: {
             yIndex: 4,

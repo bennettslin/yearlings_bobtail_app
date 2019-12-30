@@ -9,9 +9,6 @@ import {
     MARQUEE_FRAME__MARA_GLADIATOR
 } from '../../../constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
-import { MARA } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { POSTER_GLADIATOR__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -20,11 +17,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 1,
             zOffset: 2,
             noShadow: true,
-            scaleFactor: 0.25,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                MARA
-            ]
+            scaleFactor: 0.25
         },
         [MARQUEE_FRAME__MARA_MEMENTO]: {
             yIndex: 4,
@@ -37,12 +30,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 10,
             zOffset: 2,
             noShadow: true,
-            scaleFactor: 0.25,
-            sharedStyle: [
-                POSTER_GLADIATOR__SHARED,
-                ALL_PEOPLE__SHARED,
-                MARA
-            ]
+            scaleFactor: 0.25
         },
         [MARQUEE_FRAME__MARA_GLADIATOR]: {
             yIndex: 4,

@@ -41,17 +41,6 @@ import {
     CAPTAIN_BED,
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
-import { PILLOW_PRETEEN_BENNETT__SHARED } from '../../sharedStyles/furniture'
-import { SCISSORS__SHARED } from '../../sharedStyles/household'
-import {
-    BOOK__SHARED,
-    LETTER__SHARED,
-    MAGAZINE__SHARED,
-    SKETCHBOOK__SHARED
-} from '../../sharedStyles/paper'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { DOLLAR__SHARED } from '../../sharedStyles/print'
-import { SKETCH_DOGS__SHARED } from '../../sharedStyles/sketch'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -64,8 +53,7 @@ const ARRANGEMENTS_THINGS = {
             rotate: -15,
             rotateY: 300,
             skewX: -15,
-            skewY: 10,
-            sharedStyle: ALL_PEOPLE__SHARED
+            skewY: 10
         },
         [BLOOM_COUNTY_POSTER]: {
             yIndex: 5,
@@ -76,8 +64,7 @@ const ARRANGEMENTS_THINGS = {
             rotate: -15,
             rotateY: 300,
             skewX: -15,
-            skewY: 10,
-            sharedStyle: ALL_PEOPLE__SHARED
+            skewY: 10
         }
     },
     [DOOR]: {
@@ -97,8 +84,7 @@ const ARRANGEMENTS_THINGS = {
     [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 2,
-            xPosition: 7,
-            sharedStyle: PILLOW_PRETEEN_BENNETT__SHARED
+            xPosition: 7
         }
     },
     [PANEL]: {
@@ -125,16 +111,11 @@ export const THINGS_BEDROOM_ENRAGED = {
     [FIXTURE]: {
         [LETTER_SCRAPS__CHRISTOPHER]: {
             yIndex: 5,
-            xPosition: 4,
-            sharedStyle: MAGAZINE__SHARED
+            xPosition: 4
         },
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
-            xPosition: 5,
-            sharedStyle: [
-                MAGAZINE__SHARED,
-                SCISSORS__SHARED
-            ]
+            xPosition: 5
         }
     }
 }
@@ -156,18 +137,13 @@ export const THINGS_BEDROOM_GUILTY = {
             xPosition: 2.85,
             zOffset: 2.15,
             noShadow: true,
-            scaleFactor: 0.4,
-            sharedStyle: SKETCH_DOGS__SHARED
+            scaleFactor: 0.4
         },
         [SKETCHBOOK__DOGS]: {
             yIndex: 5,
             xPosition: 3,
             zOffset: 1.5,
-            scaleFactor: 0.25,
-            sharedStyle: [
-                BOOK__SHARED,
-                SKETCHBOOK__SHARED
-            ]
+            scaleFactor: 0.25
         }
     },
     [FIXTURE]: {
@@ -177,13 +153,11 @@ export const THINGS_BEDROOM_GUILTY = {
         },
         [LETTER_SCRAPS__BENNETT]: {
             yIndex: 5,
-            xPosition: 8,
-            sharedStyle: MAGAZINE__SHARED
+            xPosition: 8
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
-            xPosition: 8,
-            sharedStyle: MAGAZINE__SHARED
+            xPosition: 8
         }
     }
 }
@@ -192,11 +166,7 @@ export const THINGS_BEDROOM_FEIGNING = {
     [FIXTURE]: {
         [RED_ENVELOPE_MONEY]: {
             yIndex: 3,
-            xPosition: 9,
-            sharedStyle: [
-                DOLLAR__SHARED,
-                LETTER__SHARED
-            ]
+            xPosition: 9
         }
     },
     [FLAT]: {
@@ -224,8 +194,7 @@ export const THINGS_BEDROOM_SHAKEN = {
         [BEYONDER_ENVELOPE]: {
             yIndex: 3,
             xPosition: 2,
-            zOffset: 0.1,
-            sharedStyle: LETTER__SHARED
+            zOffset: 0.1
         }
     },
     [CARDBOARD]: {

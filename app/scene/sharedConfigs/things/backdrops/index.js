@@ -28,15 +28,21 @@ import {
     CITY_BACKDROP
 } from '../../../../constants/scene/things/backdrops'
 
-import { PALM_TREE__SHARED } from '../../../sharedStyles/plants'
+import { TAIWAN_HOUSE__SHARED } from '../../../sharedStyles/buildings'
+import { BOOK__SHARED } from '../../../sharedStyles/paper'
+import {
+    FOLIAGE__SHARED,
+    PALM_TREE__SHARED
+} from '../../../sharedStyles/plants'
+import { ROAD__SHARED } from '../../../sharedStyles/props'
 
 export default {
     [NOHO_HOUSES_BACKDROP]: PALM_TREE__SHARED,
     [SCHOOL_BACKDROP]: true,
-    [VALLEY__FREEWAY]: true,
+    [VALLEY__FREEWAY]: FOLIAGE__SHARED,
     [VALLEY__QUAD]: true,
     [TAIWAN_MOUNTAINS_BACKDROP]: true,
-    [TAIWAN_STAIRS_BACKDROP]: true,
+    [TAIWAN_STAIRS_BACKDROP]: TAIWAN_HOUSE__SHARED,
     [MOUNTAIN_BACKDROP]: true,
     [SHORE_RICKSHAW_BACKDROP]: true,
     [SHORE_BUOY_BACKDROP]: true,
@@ -50,9 +56,12 @@ export default {
     [OAKLAND_FRONT__MIDWAY]: true,
     [OAKLAND_FRONT__LOW]: true,
     [OAKLAND_FRONT__LIZ_GATE]: true,
-    [ROAD_PAST]: true,
-    [ROAD_PRESENT]: true,
-    [ROAD_FUTURE]: true,
+    [ROAD_PAST]: [
+        BOOK__SHARED,
+        ROAD__SHARED
+    ],
+    [ROAD_PRESENT]: ROAD__SHARED,
+    [ROAD_FUTURE]: ROAD__SHARED,
     [GOLDEN_GATE_BACKDROP]: true,
     [WEDDING_BACKDROP]: true,
     [FENCE_BACKDROP]: true,

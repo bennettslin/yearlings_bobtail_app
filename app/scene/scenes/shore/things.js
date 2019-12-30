@@ -11,10 +11,6 @@ import {
     FERRIS_WHEEL,
     ROLLER_COASTER
 } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../sharedStyles/animals'
-import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { TAIWAN_BUOY__SHARED } from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -27,13 +23,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.2,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                BENNETT,
-                ODIN__SHARED,
-                TAIWAN_BUOY__SHARED
-            ]
+            scaleFactor: 0.2
         }
     },
     [CUTOUT]: {

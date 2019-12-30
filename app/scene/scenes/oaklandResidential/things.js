@@ -17,12 +17,6 @@ import {
     RESIDENTIAL_MIDDLE_RIGHT,
     RESIDENTIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
-import {
-    OAKLAND_HOUSE__SHARED,
-    OAKLAND_HOUSE_LEFT__SHARED,
-    OAKLAND_HOUSE_RIGHT__SHARED
-} from '../../sharedStyles/buildings'
-import { LAMPPOST__SHARED } from '../../sharedStyles/outdoor'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -36,65 +30,50 @@ const ARRANGEMENTS_THINGS = {
         [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,
             xPosition: 5.45,
-            scaleFactor: 0.2,
-            sharedStyle: LAMPPOST__SHARED
+            scaleFactor: 0.2
         },
         [TWIN_STREETLAMP__MIDDLE]: {
             yIndex: 2,
             xPosition: 5.55,
             scaleFactor: 0.25,
-            sharedStyle: LAMPPOST__SHARED,
             flipHorizontal: true
         },
         [TWIN_STREETLAMP__NEAR]: {
             yIndex: 3,
             xPosition: 5.4,
-            scaleFactor: 0.3,
-            sharedStyle: LAMPPOST__SHARED
+            scaleFactor: 0.3
         }
     },
     [FLAT]: {
         [RESIDENTIAL_FAR_LEFT]: {
             yIndex: 1,
             xPosition: 2.75,
-            scaleFactor: 0.36,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            scaleFactor: 0.36
         },
         [RESIDENTIAL_FAR_RIGHT]: {
             yIndex: 1,
             xPosition: 8,
-            scaleFactor: 0.36,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            scaleFactor: 0.36
         },
         [RESIDENTIAL_MIDDLE_LEFT]: {
             yIndex: 2,
             xPosition: 1.75,
-            scaleFactor: 0.42,
-            sharedStyle: [
-                OAKLAND_HOUSE__SHARED,
-                OAKLAND_HOUSE_RIGHT__SHARED
-            ]
+            scaleFactor: 0.42
         },
         [RESIDENTIAL_MIDDLE_RIGHT]: {
             yIndex: 2,
             xPosition: 9.25,
-            scaleFactor: 0.42,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            scaleFactor: 0.42
         },
         [RESIDENTIAL_NEAR_LEFT]: {
             yIndex: 3,
             xPosition: 0.75,
-            scaleFactor: 0.5,
-            sharedStyle: [
-                OAKLAND_HOUSE__SHARED,
-                OAKLAND_HOUSE_LEFT__SHARED
-            ]
+            scaleFactor: 0.5
         },
         [RESIDENTIAL_NEAR_RIGHT]: {
             yIndex: 3,
             xPosition: 10.25,
-            scaleFactor: 0.5,
-            sharedStyle: OAKLAND_HOUSE__SHARED
+            scaleFactor: 0.5
         }
     }
 }

@@ -147,8 +147,9 @@ class PreviewerSvg extends PureComponent {
             return getGlobalActorStyle(customType, sharedStyle)
 
         } else {
+            const customType = this.getCustomType()
             return getSharedStyleForThing({
-                presenceType,
+                presenceType: customType || presenceType,
                 presenceKey
             })
         }

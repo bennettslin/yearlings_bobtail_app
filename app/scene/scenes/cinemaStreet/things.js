@@ -13,14 +13,6 @@ import {
     GLADIATOR_POSTER,
     MARQUEE_FRAME__GLADIATOR
 } from '../../../constants/scene/things/cardboards'
-import {
-    ACOUSTIC_GUITAR__SHARED,
-    HEADPHONE__SHARED,
-    MICROPHONE__SHARED
-} from '../../sharedStyles/instruments'
-import { BENNETT, MARA } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { POSTER_GLADIATOR__SHARED } from '../../sharedStyles/print'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -46,24 +38,13 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 5,
             xPosition: 8.3,
             zOffset: 4.1,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                ACOUSTIC_GUITAR__SHARED,
-                HEADPHONE__SHARED,
-                MICROPHONE__SHARED,
-                BENNETT,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,
             xPosition: 9.25,
             zOffset: 1,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                MARA,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         }
     },
     [CARDBOARD]: {
@@ -72,11 +53,7 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 1,
             zOffset: 2,
             noShadow: true,
-            scaleFactor: 0.25,
-            sharedStyle: [
-                POSTER_GLADIATOR__SHARED,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.25
         },
         [MARQUEE_FRAME__GLADIATOR]: {
             yIndex: 4,

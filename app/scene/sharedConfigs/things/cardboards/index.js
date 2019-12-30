@@ -47,52 +47,126 @@ import {
     SNOWGLOBE_FUTURE_REATTA
 } from '../../../../constants/scene/things/cardboards'
 
+import {
+    BENNETT,
+    CHRISTOPHER,
+    LIZ,
+    MARA,
+    MIRIAM
+} from '../../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import { ODIN__SHARED } from '../../../sharedStyles/animals'
+import {
+    POSTER_GLADIATOR__SHARED,
+    PROGRESS_CHART__SHARED
+} from '../../../sharedStyles/print'
+import { SNOWGLOBE__SHARED } from '../../../sharedStyles/props'
+import {
+    TAIWAN_BUOY__SHARED,
+    TAIWAN_RICKSHAW__SHARED
+} from '../../../sharedStyles/taiwan'
+import { REATTA__SHARED } from '../../../sharedStyles/vehicles'
+
 export default {
-    [JOHNNY_HORTON_ALBUM]: true,
-    [TINTIN_POSTER]: true,
-    [BENNETT_TAIWAN_STAIRS]: true,
-    [ODIN_TAIWAN_STAIRS]: true,
-    [BENNETT_TAIWAN_GATE]: true,
-    [ODIN_TAIWAN_GATE]: true,
-    [BENNETT_ODIN_RICKSHAW]: true,
+    [JOHNNY_HORTON_ALBUM]: ALL_PEOPLE__SHARED,
+    [TINTIN_POSTER]: ALL_PEOPLE__SHARED,
+    [BENNETT_TAIWAN_STAIRS]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT
+    ],
+    [ODIN_TAIWAN_STAIRS]: ODIN__SHARED,
+    [BENNETT_TAIWAN_GATE]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT
+    ],
+    [ODIN_TAIWAN_GATE]: ODIN__SHARED,
+    [BENNETT_ODIN_RICKSHAW]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        ODIN__SHARED,
+        TAIWAN_RICKSHAW__SHARED
+    ],
     [BENNETT_SHORE]: true,
-    [ODIN_SHORE]: true,
-    [BENNETT_ODIN_BUOY]: true,
-    [BENNETT_ODIN_DEPTHS]: true,
+    [ODIN_SHORE]: ODIN__SHARED,
+    [BENNETT_ODIN_BUOY]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        ODIN__SHARED,
+        TAIWAN_BUOY__SHARED
+    ],
+    [BENNETT_ODIN_DEPTHS]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        ODIN__SHARED
+    ],
     [SEA_SERPENT_LEFT]: true,
     [SEA_SERPENT_RIGHT]: true,
-    [BENNETT_ODIN_OCEAN_FLOOR]: true,
+    [BENNETT_ODIN_OCEAN_FLOOR]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        ODIN__SHARED
+    ],
     [BENNETT_MAT]: true,
-    [ODIN_MAT]: true,
-    [BLOOM_COUNTY_POSTER]: true,
+    [ODIN_MAT]: ODIN__SHARED,
+    [BLOOM_COUNTY_POSTER]: ALL_PEOPLE__SHARED,
     [PCHELKA_MUSHKA_ROCKET]: true,
     [EARTH]: true,
     [SPACE_COLONY]: true,
     [VAN_NUYS_LOGO]: true,
     [CORKBOARD]: true,
     [POLICE_ALBUM]: true,
-    [NIRVANA_POSTER]: true,
-    [LEONARD_COHEN_POSTER]: true,
-    [TELEVISION_ALBUM]: true,
-    [PROGRESS_CHART_EARLY]: true,
-    [PROGRESS_CHART_LATE]: true,
-    [MARA_MEMENTO_POSTER]: true,
+    [NIRVANA_POSTER]: ALL_PEOPLE__SHARED,
+    [LEONARD_COHEN_POSTER]: ALL_PEOPLE__SHARED,
+    [TELEVISION_ALBUM]: ALL_PEOPLE__SHARED,
+    [PROGRESS_CHART_EARLY]: PROGRESS_CHART__SHARED,
+    [PROGRESS_CHART_LATE]: PROGRESS_CHART__SHARED,
+    [MARA_MEMENTO_POSTER]: [
+        ALL_PEOPLE__SHARED,
+        MARA
+    ],
     [MARQUEE_FRAME__MARA_MEMENTO]: true,
-    [MARA_GLADIATOR_POSTER]: true,
+    [MARA_GLADIATOR_POSTER]: [
+        POSTER_GLADIATOR__SHARED,
+        ALL_PEOPLE__SHARED,
+        MARA
+    ],
     [MARQUEE_FRAME__MARA_GLADIATOR]: true,
-    [GLADIATOR_POSTER]: true,
+    [GLADIATOR_POSTER]: [
+        POSTER_GLADIATOR__SHARED,
+        ALL_PEOPLE__SHARED
+    ],
     [MARQUEE_FRAME__GLADIATOR]: true,
     [CODE_BOX]: true,
     [CLIPBOARD]: true,
     [PAINTING]: true,
-    [NAS_ALBUM]: true,
-    [ELLIOTT_SMITH_POSTER]: true,
-    [SNOWGLOBE_SMALL__PAST]: true,
-    [SNOWGLOBE_PAST]: true,
-    [SNOWGLOBE_SMALL__PRESENT]: true,
-    [SNOWGLOBE_PRESENT]: true,
-    [SNOWGLOBE_SMALL__FUTURE]: true,
-    [SNOWGLOBE_FUTURE_CORD]: true,
-    [SNOWGLOBE_FUTURE_REATTA]: true
+    [NAS_ALBUM]: ALL_PEOPLE__SHARED,
+    [ELLIOTT_SMITH_POSTER]: ALL_PEOPLE__SHARED,
+    [SNOWGLOBE_SMALL__PAST]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE_PAST]: [
+        SNOWGLOBE__SHARED,
+        BENNETT,
+        CHRISTOPHER,
+        ALL_PEOPLE__SHARED
+    ],
+    [SNOWGLOBE_SMALL__PRESENT]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE_PRESENT]: [
+        SNOWGLOBE__SHARED,
+        BENNETT,
+        LIZ,
+        ALL_PEOPLE__SHARED
+    ],
+    [SNOWGLOBE_SMALL__FUTURE]: SNOWGLOBE__SHARED,
+    [SNOWGLOBE_FUTURE_CORD]: [
+        SNOWGLOBE__SHARED,
+        BENNETT,
+        ALL_PEOPLE__SHARED
+    ],
+    [SNOWGLOBE_FUTURE_REATTA]: [
+        REATTA__SHARED,
+        SNOWGLOBE__SHARED,
+        BENNETT,
+        MIRIAM,
+        ALL_PEOPLE__SHARED
+    ]
 }
 

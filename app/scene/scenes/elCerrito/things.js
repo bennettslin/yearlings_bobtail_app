@@ -20,16 +20,6 @@ import {
     REATTA_SEAT_DOWN
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
-import { BENNETT, MIRIAM } from '../../../constants/scene/actors'
-import { FREEWAY_SIGN__SHARED } from '../../sharedStyles/outdoor'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import {
-    FOLIAGE__SHARED
-} from '../../sharedStyles/plants'
-import {
-    INTERIOR__SHARED,
-    REATTA__SHARED
-} from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -51,30 +41,26 @@ const ARRANGEMENTS_THINGS = {
             yIndex: 2,
             xPosition: 8.5,
             zOffset: -0.1,
-            scaleFactor: 0.7,
-            sharedStyle: FREEWAY_SIGN__SHARED
+            scaleFactor: 0.7
         }
     },
     [FLAT]: {
         [EL_CERRITO_FAR]: {
             xPosition: 10.1,
             scaleFactor: 0.47,
-            trimBottom: 0.05,
-            sharedStyle: FOLIAGE__SHARED
+            trimBottom: 0.05
         },
         [EL_CERRITO_NEAR]: {
             yIndex: 5,
             xPosition: 8.75,
-            scaleFactor: 0.4,
-            sharedStyle: FOLIAGE__SHARED
+            scaleFactor: 0.4
         }
     },
     [PANEL]: {
         [REATTA_INTERIOR]: {
             yIndex: 1,
             xPosition: 4.1,
-            scaleFactor: 0.35,
-            sharedStyle: INTERIOR__SHARED
+            scaleFactor: 0.35
         },
         [REATTA_SEAT]: {
             yIndex: 5,
@@ -91,8 +77,7 @@ const ARRANGEMENTS_THINGS = {
         [REATTA_EXTERIOR]: {
             yIndex: 5,
             xPosition: 4.1,
-            scaleFactor: 0.35,
-            sharedStyle: REATTA__SHARED
+            scaleFactor: 0.35
         }
     }
 }
@@ -103,13 +88,7 @@ export const THINGS_EL_CERRITO_REATTA = {
             yIndex: 3,
             xPosition: 9.5,
             zOffset: -0.025,
-            scaleFactor: 0.6,
-            sharedStyle: [
-                REATTA__SHARED,
-                ALL_PEOPLE__SHARED,
-                BENNETT,
-                MIRIAM
-            ]
+            scaleFactor: 0.6
         }
     }
 }

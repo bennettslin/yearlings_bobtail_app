@@ -12,24 +12,13 @@ import {
     TAIWAN_HOUSE_FAR,
     TAIWAN_HOUSE_NEAR
 } from '../../../constants/scene/things/flats'
-import { ODIN__SHARED } from '../../sharedStyles/animals'
-import { TAIWAN_HOUSE__SHARED } from '../../sharedStyles/buildings'
-import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import { TAIWAN_RICKSHAW__SHARED } from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
             xPosition: 7,
-            scaleFactor: 0.2,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                BENNETT,
-                ODIN__SHARED,
-                TAIWAN_RICKSHAW__SHARED
-            ]
+            scaleFactor: 0.2
         }
     },
     [CUTOUT]: {
@@ -49,20 +38,17 @@ const ARRANGEMENTS_THINGS = {
         [TAIWAN_HOUSES_CENTRE]: {
             yIndex: 1,
             xPosition: 7,
-            scaleFactor: 0.45,
-            sharedStyle: TAIWAN_HOUSE__SHARED
+            scaleFactor: 0.45
         },
         [TAIWAN_HOUSE_FAR]: {
             yIndex: 1,
             xPosition: 10.25,
-            scaleFactor: 0.45,
-            sharedStyle: TAIWAN_HOUSE__SHARED
+            scaleFactor: 0.45
         },
         [TAIWAN_HOUSE_NEAR]: {
             yIndex: 2,
             xPosition: 11.25,
-            scaleFactor: 0.5,
-            sharedStyle: TAIWAN_HOUSE__SHARED
+            scaleFactor: 0.5
         }
     }
 }

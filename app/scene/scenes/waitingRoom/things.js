@@ -30,9 +30,6 @@ import {
     WAITING_ARMREST__LIZ_LEFT,
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
-import { BANJO__SHARED } from '../../sharedStyles/instruments'
-import { BENNETT, LIZ } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
 
 const ARRANGEMENTS_THINGS = {
     [CARDBOARD]: {
@@ -127,35 +124,19 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
             yIndex: 5,
             xPosition: 3.6,
             zOffset: 3.3,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                BENNETT,
-                LIZ,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         },
         [WAITING_THOUGHT_SINGING]: {
             yIndex: 5,
             xPosition: 7.7,
             zOffset: 3.6,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                BANJO__SHARED,
-                BENNETT,
-                LIZ,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         },
         [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,
             xPosition: 8.5,
             zOffset: 0.6,
-            scaleFactor: 0.45,
-            sharedStyle: [
-                BENNETT,
-                LIZ,
-                ALL_PEOPLE__SHARED
-            ]
+            scaleFactor: 0.45
         }
     }
 }

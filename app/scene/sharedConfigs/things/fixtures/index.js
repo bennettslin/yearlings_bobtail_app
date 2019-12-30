@@ -57,35 +57,94 @@ import {
     HOSPITAL_RECORD_PLAYER
 } from '../../../../constants/scene/things/fixtures'
 
-import { BUDWEISER__SHARED } from '../../../sharedStyles/food'
+import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import {
+    BENNETT,
+    LIZ,
+    SASHA
+} from '../../../../constants/scene/actors'
+import {
+    BANANA__SHARED,
+    BUDWEISER__SHARED,
+    EVIAN__SHARED,
+    HEINEKEN__SHARED
+} from '../../../sharedStyles/food'
+import {
+    LIZ_PHONE__SHARED,
+    SCISSORS__SHARED
+} from '../../../sharedStyles/household'
+import {
+    ACOUSTIC_GUITAR__SHARED,
+    BASS_CASE__SHARED,
+    CYMBAL__SHARED,
+    DRUMS__SHARED,
+    DRUM_STAND__SHARED,
+    DRUM_THRONE__SHARED,
+    ELECTRIC_GUITAR__SHARED,
+    GUITAR_CASE__SHARED,
+    MICROPHONE__SHARED
+} from '../../../sharedStyles/instruments'
+import {
+    FREEWAY_SIGN__SHARED,
+    TETHERBALL_POLE__SHARED
+} from '../../../sharedStyles/outdoor'
+import {
+    BOOK__SHARED,
+    LETTER__SHARED,
+    MAGAZINE__SHARED,
+    SKETCHBOOK__SHARED
+} from '../../../sharedStyles/paper'
+import {
+    DOLLAR__SHARED,
+    PROMISE_PHOTO__SHARED
+} from '../../../sharedStyles/print'
 
 export default {
     [PLAYGROUND_BALL]: true,
     [SAFEWAY_BAG]: true,
     [RECORD_PLAYER_STOOL]: true,
-    [HAIRCUT_SCISSORS]: true,
-    [LETTER_SCRAPS__CHRISTOPHER]: true,
-    [CHRISTOPHER_LETTERS]: true,
+    [HAIRCUT_SCISSORS]: SCISSORS__SHARED,
+    [LETTER_SCRAPS__CHRISTOPHER]: MAGAZINE__SHARED,
+    [CHRISTOPHER_LETTERS]: [
+        MAGAZINE__SHARED,
+        SCISSORS__SHARED
+    ],
     [BACKPACK_BENNETT]: true,
-    [FRIDGE_DRAWINGS]: true,
+    [FRIDGE_DRAWINGS]: [
+        SKETCHBOOK__SHARED,
+        ALL_PEOPLE__SHARED,
+        ACOUSTIC_GUITAR__SHARED,
+        SASHA
+    ],
     [CAPTAIN_BED_LAMP]: true,
-    [RED_ENVELOPE_MONEY]: true,
-    [BEYONDER_ENVELOPE]: true,
-    [LETTER_SCRAPS__BENNETT]: true,
-    [BENNETT_LETTERS]: true,
-    [THROWN_FRUIT]: true,
+    [RED_ENVELOPE_MONEY]: [
+        DOLLAR__SHARED,
+        LETTER__SHARED
+    ],
+    [BEYONDER_ENVELOPE]: LETTER__SHARED,
+    [LETTER_SCRAPS__BENNETT]: MAGAZINE__SHARED,
+    [BENNETT_LETTERS]: MAGAZINE__SHARED,
+    [THROWN_FRUIT]: BANANA__SHARED,
     [BALLED_FOIL__LOCKERS]: true,
     [BENNETT_RECORD_PLAYER]: true,
     [BENNETT_COUCH_LAMP]: true,
     [KEYBOARD]: true,
-    [CASH_BOX]: true,
-    [ELECTRIC_GUITAR]: true,
-    [STAGE_MIC__CROWD]: true,
-    [STAGE_MIC__STAGE]: true,
-    [DRUMKIT]: true,
-    [DRUMS_STACKED__BASEMENT]: true,
-    [BASS_CASE_UPRIGHT]: true,
-    [GUITAR_CASE_UPRIGHT]: true,
+    [CASH_BOX]: DOLLAR__SHARED,
+    [ELECTRIC_GUITAR]: ELECTRIC_GUITAR__SHARED,
+    [STAGE_MIC__CROWD]: MICROPHONE__SHARED,
+    [STAGE_MIC__STAGE]: MICROPHONE__SHARED,
+    [DRUMKIT]: [
+        CYMBAL__SHARED,
+        DRUMS__SHARED,
+        DRUM_STAND__SHARED
+    ],
+    [DRUMS_STACKED__BASEMENT]: [
+        DRUMS__SHARED,
+        DRUM_STAND__SHARED,
+        DRUM_THRONE__SHARED
+    ],
+    [BASS_CASE_UPRIGHT]: BASS_CASE__SHARED,
+    [GUITAR_CASE_UPRIGHT]: GUITAR_CASE__SHARED,
     [BASEMENT_BEER_CASE]: BUDWEISER__SHARED,
     [BASEMENT_BEER_MARA]: BUDWEISER__SHARED,
     [BASEMENT_BEER_BENNETT]: BUDWEISER__SHARED,
@@ -95,25 +154,44 @@ export default {
     [MANNEQUIN]: true,
     [LIGHT_SWITCH__OFF]: true,
     [LIGHT_SWITCH__ON]: true,
-    [LINGERIE_DRAWING]: true,
+    [LINGERIE_DRAWING]: [
+        BOOK__SHARED,
+        SKETCHBOOK__SHARED
+    ],
     [VASELINE]: true,
-    [LIZ_PHONE]: true,
-    [LIZ_PHONE_REFLECTION]: true,
-    [EVIAN_BOTTLES]: true,
-    [KICK_DRUM]: true,
-    [DRUM_THRONE]: true,
-    [GUITAR_CASE_OPEN]: true,
-    [DRUMS_STACKED__CLUB]: true,
-    [BENNETT_SHOE]: true,
-    [BENNETT_SHOE_REFLECTION]: true,
+    [LIZ_PHONE]: LIZ_PHONE__SHARED,
+    [LIZ_PHONE_REFLECTION]: LIZ_PHONE__SHARED,
+    [EVIAN_BOTTLES]: EVIAN__SHARED,
+    [KICK_DRUM]: [
+        DRUMS__SHARED,
+        DRUM_STAND__SHARED
+    ],
+    [DRUM_THRONE]: [
+        DRUMS__SHARED,
+        DRUM_STAND__SHARED,
+        DRUM_THRONE__SHARED
+    ],
+    [GUITAR_CASE_OPEN]: GUITAR_CASE__SHARED,
+    [DRUMS_STACKED__CLUB]: [
+        DRUMS__SHARED,
+        DRUM_STAND__SHARED,
+        DRUM_THRONE__SHARED
+    ],
+    [BENNETT_SHOE]: BENNETT,
+    [BENNETT_SHOE_REFLECTION]: BENNETT,
     [TCHOTCHKES]: true,
-    [TETHERBALL_POLE]: true,
-    [RECORDING_MIC]: true,
-    [RECORDING_BEERS]: true,
-    [CRACKED_PICTURE]: true,
-    [FREEWAY_SIGN]: true,
+    [TETHERBALL_POLE]: TETHERBALL_POLE__SHARED,
+    [RECORDING_MIC]: MICROPHONE__SHARED,
+    [RECORDING_BEERS]: HEINEKEN__SHARED,
+    [CRACKED_PICTURE]: [
+        PROMISE_PHOTO__SHARED,
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        LIZ
+    ],
+    [FREEWAY_SIGN]: FREEWAY_SIGN__SHARED,
     [BALLED_FOIL__ALLEY]: true,
-    [LIZ_PHONE_BASE]: true,
-    [LIZ_PHONE_BASE_REFLECTION]: true,
+    [LIZ_PHONE_BASE]: LIZ_PHONE__SHARED,
+    [LIZ_PHONE_BASE_REFLECTION]: LIZ_PHONE__SHARED,
     [HOSPITAL_RECORD_PLAYER]: true
 }
