@@ -1,14 +1,3 @@
-# Mountains
-## Backdrops
-taiwanMountains
-oceanBottomFar
-oceanFloorFar
-
-## Flats
-taiwanMountainsBridged
-taiwanMountainLeft, right
-pampas
-
 # Other shared
 rocks: cave, campfire, ocean
 trash can
@@ -25,6 +14,8 @@ reatta (lizThought)
 
 # Improvements
 elCerritoTree (make multiple parts)
+oceanBottomFar
+oceanFloorFar
 buddha
 campfire
 stageLights
