@@ -101,6 +101,7 @@ roof
 door
 window
 stairs
+reatta (lizThought)
 
 # Improvements
 elCerritoTree

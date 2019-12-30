@@ -1,0 +1,282 @@
+.atticArmrest {
+    .post { fill: #726954; }
+    .cushion { fill: #7c6a89; }
+    .foot { fill: #726954; }
+}
+
+.atticCouch {
+    .cushion { fill: #846896; }
+    .button { fill: #6f5970; }
+}
+
+.bathtub {
+    .suds { fill: #fff; }
+    .faucet { fill: #ccc; }
+    .aerator { fill: #999; }
+    .stem { fill: #9cc; }
+    .knob { fill: #ffc; }
+    .basin { fill: #6ff; }
+    .rim { fill: #9ff; }
+    .claw { fill: #699; }
+}
+
+.bedroomDesk {
+    .deskSide { fill: #4f463c; }
+    .drawer { fill: #c9b891; }
+    .deskFront { fill: #a08d6b; }
+    .mount { fill: #979b75; }
+    .handle { fill: #bfc6a3; }
+}
+
+.bedroomFence {
+    .fenceTop { fill: #cc6; }
+    .fenceFront { fill: #c96; }
+    .bushLeft { fill: #396; }
+    .bushRight { fill: #393; }
+}
+
+.bennettBed {
+    .postSide { fill: #493b2e; }
+    .frame { fill: #87705b; }
+    .postFront { fill: #665340; }
+}
+
+.captainBed {
+    .panelFront { fill: #847f76; }
+    .panelSide { fill: #665a72; }
+    .panelTop { fill: #568960; }
+    .frameTop { fill: #a5a084; }
+    .frameFront { fill: #917f60; }
+    .frameSide { fill: #6d6a51; }
+    .drawerSide { fill: #a48abc; }
+    .drawerTop { fill: #95aa77; }
+    .drawerFront { fill: #b59e3c; }
+    .mount { fill: #56663c; }
+    .handle { fill: #95aa77; }
+    .ball { fill: #847f76; }
+}
+
+.caveShadows {
+    .wall { fill: #996; }
+    .rockBack { fill: #c96; }
+    .rockMiddle { fill: #963; }
+    .rockFront { fill: #630; }
+}
+
+.conveyorBelt {
+    .mount { fill: #878771; }
+    .carDark { fill: #6d8c7d; }
+    .carMedium { fill: #7b9e8d; }
+    .carLight { fill: #8bb39f; }
+    .carInnerDark { fill: #6d8c85; }
+    .carInnerLight { fill: #8bb3a9; }
+    .carInnerMedium { fill: #7b9e96; }
+    .cup { fill: #9fc5c9; }
+    .trayRim { fill: #978cc4; }
+    .trayBasinLight { fill: #7667b7; }
+    .shelf { fill: #83a895; }
+    .track { fill: #9e9e85; }
+}
+
+.dishroomSink {
+    .leg { fill: #666; }
+    .foot { fill: #999; }
+    .tube { fill: #333; }
+    .disposalInner { fill: #366; }
+    .disposalOuter { fill: #396; }
+    .pipe { fill: #699; }
+    .basin { fill: #9cc; }
+    .rim { fill: #6cc; }
+    .panelOuter { fill: #39c; }
+    .panelInner { fill: #6cf; }
+    .buttonStop { fill: #c33; }
+    .buttonGo { fill: #3c3; }
+}
+
+.goKartExterior {
+    .cap { fill: #996; }
+    .tank { fill: #c93; }
+    .tankEdgeLine { stroke: #a71; }
+    .cooler { fill: #36c; }
+    .rod { fill: #999; }
+    .block { fill: #963; }
+    .engine { fill: #6c6; }
+    .ring { fill: #cff; }
+    .frame { fill: #666; }
+    .tire { fill: #333; }
+    .hubcap { fill: #99c; }
+    .windshield { fill: #ccc; }
+    .bumper { fill: #966; }
+    .chassis { fill: #c33; }
+}
+
+.goKartSeat {
+    .cushion { fill: #4e5447; }
+}
+
+.hospitalBed {
+    .swivel { fill: #94949b; }
+    .wheelSide { fill: #383838; }
+    .wheelFront { fill: #484849; }
+    .headBoardEdge { fill: #6b5641; }
+    .headBoardSurface { fill: #af8158; }
+    .platformBelowTop { fill: #708e8b; }
+    .platformBelowSide { fill: #4c6263; }
+    .platformBelowFront { fill: #8aaaa9; }
+    .frameSide { fill: #78668e; }
+    .frameFront { fill: #878ba0; }
+    .platformAboveSide { fill: #5a7477; }
+    .platformAboveFront { fill: #9bc4c3; }
+    .platformAboveTop { fill: #789e9a; }
+    .mattressSide { fill: #7f6671; }
+    .mattressFront { fill: #997785; }
+    .footBoardEdge { fill: #7f664b; }
+    .footBoardSurface { fill: #c69360; }
+}
+
+.lizBed {
+    .slat { fill: #938976; }
+    .frameSide { fill: #4c463b; }
+    .frameTop { fill: #685e4a; }
+    .frameFront { fill: #59513e; }
+}
+
+.lizCouch {
+    .foot { fill: #51483a; }
+    .pillowSurface { fill: #645b6b; }
+    .pillowEdge { fill: #584f60; }
+    .skirt { fill: #52495b; }
+    .weltDisplayLine { stroke: #3b343f; }
+    .cushion { fill: #776882; }
+}
+
+.oceanCaveExterior {
+    .caveRight { fill: #963; }
+    .caveLeft { fill: #966; }
+}
+
+.oceanCaveInterior {
+    .rockShadow { fill: #666; }
+    .seaweed { fill: #393; }
+    .kelpSide { fill: #060; }
+    .kelpFront { fill: #363; }
+    .tubeWormPlumeCentre { fill: #966; }
+    .tubeWormCentre { fill: #699; }
+    .tubeWormPlumeSide { fill: #c63; }
+    .tubeWormSide { fill: #366; }
+    .urchin { fill: #639; }
+    .coralBrain { fill: #930; }
+    .coralBrainCavity { fill: #300; }
+    .frondBack { fill: #069; }
+    .frondFront { fill: #399; }
+    .coralTube { fill: #669; }
+    .coralTubeCavity { fill: #336; }
+    .rockBack { fill: #963; }
+    .rockFront { fill: #663; }
+}
+
+.pampasFar {
+    .hill { fill: #7a5e5e; }
+    .treeDark { fill: #618c78; }
+    .treeLight { fill: #6c9c86; }
+    .foliageDark { fill: #638f64; }
+    .foliageLight { fill: #6c9c6d; }
+}
+
+.phoneCallPanel {
+    .panel { fill: #ffc; }
+}
+
+.reattaSeat {
+    .bar { fill: #a9a0b3; }
+    .cushion { fill: #caccbe; }
+}
+
+.reattaSeatDown {
+    .bar { fill: #a9a0b3; }
+    .cushion { fill: #caccbe; }
+}
+
+.saturnExterior {
+    .chassis { fill: #333; }
+    .tire { fill: #666; }
+    .hubcap { fill: #ccc; }
+    .reflection { fill: #fff; }
+    .windshield { fill: #9ff; }
+    .body { fill: #96c; }
+    .brakeLight { fill: #930; }
+    .turnLight { fill: #c60; }
+    .headLight { fill: #ffc; }
+    .bumper { fill: #999; }
+}
+
+.saturnSeat {
+    .bar { fill: #a9a0b3; }
+    .cushion { fill: #7e6899; }
+}
+
+.schoolbusExterior {
+    .chassis { fill: #330; }
+    .body { fill: #cc6; }
+    .tire { fill: #444; }
+    .hubcap { fill: #999; }
+    .reflection { fill: #ccc; }
+    .trim { fill: #555; }
+    .door { fill: #666; }
+    .window { fill: #699; }
+    .windshield { fill: #9cc; }
+    .roof { fill: #fff; }
+    .stopLight { fill: #f33; }
+    .visor { fill: #666; }
+    .turnLight { fill: #c93; }
+}
+
+.schoolbusSeat {
+    .cushion { fill: #567352; }
+}
+
+.taiwanBridge {
+    .suspenders { fill: rgba(200, 150, 150, 0.3); }
+    .cable { fill: #d4ad8c; }
+    .planks { fill: #7d634c; }
+    .post { fill: #857a4a; }
+}
+
+.taiwanHaze {
+    .hazeRear { fill: rgba(200, 225, 250, 0.5); }
+    .hazeFront { fill: rgba(200, 225, 250, 0.5); }
+}
+
+.volkswagen {
+    .chassis { fill: #363f35; }
+    .tire { fill: #424241; }
+    .tireInner { fill: #3f3f3b; }
+    .hubcap { fill: #969695; }
+    .hubcapCentre { fill: #aaaaa7; }
+    .handleRecess { fill: #b4ba8c; }
+    .window { fill: #8cada2; }
+    .windowTrim { fill: #5a5c38; }
+    .body { fill: #dae56e; }
+    .bodySide { fill: #e2de6d; }
+    .headLight { fill: #f5f7cb; }
+    .brakeLight { fill: #f46e58; }
+    .handle { fill: #e0dc89; }
+    .mirrorMount { fill: #c9c771; }
+    .mirror { fill: #cec976; }
+}
+
+.waitingArmchair {
+    .button { fill: #7a7756; }
+}
+
+.waitingArmrest {
+    .foot { fill: #666; }
+}
+
+.wideCouch {
+    .cushion { fill: #665a72; }
+}
+
+.wideArmrest {
+    .cushion { fill: #71607c; }
+}

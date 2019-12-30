@@ -1,0 +1,489 @@
+.apartmentPlant {
+    .stalk { fill: #685036; }
+    .leaves { fill: #427250; }
+    .pot { fill: #5d5c9b; }
+    .brim { fill: #49478e; }
+}
+
+.ashCan {
+    .canSide { fill: #9c9c8f; }
+    .sand { fill: #d4d4bf; }
+    .canTop { fill: #abab9d; }
+}
+
+.bancroftShrub {
+    .bulb { fill: #030; }
+    .leavesBottom { fill: #033; }
+    .leavesRight { fill: #363; }
+    .leavesLeft { fill: #063; }
+}
+
+.bushDouble {
+    .leavesFront { fill: #578463; }
+    .leavesRear { fill: #4e7558; }
+}
+
+.bushSingle {
+    .leaves { fill: #5c8e6b; }
+}
+
+.cactusDouble {
+    .leavesRear { fill: #7bad77; }
+    .leavesFront { fill: #75a070; }
+}
+
+.cactusSingle {
+    .leaves { fill: #83ba7f; }
+}
+
+.campfire {
+    .flameOuter { fill: #f03; }
+    .flameMiddle { fill: #f60; }
+    .flameInner { fill: #ff0; }
+    .logBack { fill: #c96; }
+    .logBackLine { stroke: #754c24; }
+    .logBottom { fill: #630; }
+    .logSide { fill: #963; }
+    .logSideLine { stroke: #42210b; }
+    .logFront { fill: #fc9; }
+    .logFrontLine { stroke: #a67c52; }
+    .logBottomCut { fill: #c93; }
+    .logSideCut { fill: #fc6; }
+    .logCutLine { stroke: #b82; }
+    .stoneSide { fill: #333; }
+    .stoneSideMiddle { fill: #666; }
+    .stoneMiddleCentre { fill: #999; }
+    .stoneCentre { fill: #ccc; }
+}
+
+.campusTreeDouble {
+    .trunkWide { fill: #57492b; }
+    .leavesWide { fill: #4f8c62; }
+    .trunkTall { fill: #635331; }
+    .leavesTall { fill: #549669; }
+}
+
+.campusTreeSingle {
+    .trunk { fill: #786c4c; }
+    .leaves { fill: #427d4b; }
+}
+
+.cavemanBones {
+    .poleSide { fill: #7e949e; }
+    .poleFront { fill: #97b0bd; }
+    .placardBottom { fill: #8a8a5c; }
+    .placardSide { fill: #9e9b7e; }
+    .placardFront { fill: #9991b5; }
+    .appendageRear { fill: #abaa97; }
+    .centreInner { fill: #b0af9d; }
+    .spine { fill: #b5b4a0; }
+    .centreOuter { fill: #bdbca7; }
+    .appendageFront { fill: #bfbea9; }
+}
+
+.cliffTree {
+    .trunk { fill: #300; }
+}
+
+.cypressTree {
+    .leavesRear { fill: #5c995c; }
+    .leavesFront { fill: #68a068; }
+}
+
+.dishroomDolly {
+    .wheel { fill: #46444f; }
+    .hub { fill: #a8a7af; }
+    .caster { fill: #aaa781; }
+    .base { fill: #606058; }
+    .handle { fill: #74737a; }
+}
+
+.dispenserLeft {
+    .dispenserLight { fill: #e69081; }
+    .dispenserDark { fill: #d48577; }
+    .panel { fill: #cca9a3; }
+}
+
+.dispenserRight {
+    .dispenserDark { fill: #62a684; }
+    .panel { fill: #5a7869; }
+    .dispenserLight { fill: #6eba94; }
+    .dispenserDoor { fill: #a1c9b6; }
+    .suit { fill: #6374a8; }
+    .shirt { fill: #cfb674; }
+}
+
+.dumpster {
+    .bodyFront { fill: #696; }
+    .bodyBack { fill: #063; }
+    .bodySide { fill: #030; }
+    .bodyRim { fill: #396; }
+    .ridge { fill: #009245; }
+    .slotSide { fill: #030; }
+    .slotFront { fill: #363; }
+    .slotBottom { fill: #063; }
+    .jointFront { fill: #063; }
+    .jointSide { fill: #009245; }
+    .pin { fill: #396; }
+    .lid { fill: #666; }
+    .lidRim { fill: #333; }
+    .lidTrim { fill: #999; }
+    .wheelSide { fill: #666; }
+    .wheelFront { fill: #333; }
+    .casterBack { fill: #663; }
+    .casterFront { fill: #996; }
+    .warningField { fill: #cc6; }
+    .warningLabel { fill: #c33; }
+    .garbageBack { fill: #666; }
+    .garbageFront { fill: #4d4d4d; }
+}
+
+.elCerritoTree {
+    .trunk { fill: #630; }
+    .leaves { fill: #393; }
+}
+
+.fireHydrant {
+    .valveOuter { fill: #bf4d4d; }
+    .valveInner { fill: #b34848; }
+    .valveOuterDark { fill: #b84a4a; }
+    .hydrant { fill: #d95757; }
+    .ridge { fill: #cc4e4e; }
+    .valveOuterLight { fill: #c44f4f; }
+    .cap { fill: #993e3e; }
+    .capLight { fill: #9e4040; }
+}
+
+.forebodingTrees {
+    .treeFar { fill: #300; }
+    .treeMiddle { fill: #330; }
+    .treeNear { fill: #630; }
+}
+
+.gravestone {
+    .gravestoneTop { fill: #a8b3ae; }
+    .gravestoneFront { fill: #838f8a; }
+    .stoneRear { fill: #7b7d75; }
+    .stoneMiddle { fill: #8d8f86; }
+    .stoneFront { fill: #9c9e94; }
+}
+
+.howieFridge {
+    .base { fill: #a683a6; }
+    .door { fill: #de8ede; }
+    .handle { fill: #ad8761; }
+    .brass { fill: #d6d654; }
+}
+
+.ivDrip {
+    .pole { fill: #999; }
+    .boxLight { fill: #c4a3e6; }
+    .boxMedium { fill: #ad91cc; }
+    .boxDark { fill: #997fb3; }
+    .console { fill: #8fccad; }
+    .button { fill: #e0e0a8; }
+    .bar { fill: #88b0b0; }
+    .bagCap { fill: #fff; }
+    .bagFull { fill: #9ae6e6; }
+    .bagEmpty { fill: #d7f2f2; }
+}
+
+.lockerBank {
+    .frame { fill: #929475; }
+    .door { fill: #7fb8c7; }
+    .label { fill: #aba287; }
+    .lips { fill: #9c4c61; }
+    .teeth { fill: #fff; }
+    .kiss { fill: #9d64ba; }
+}
+
+.mirroredSink {
+    .back { fill: #fc9; }
+    .cabinet { fill: #cc9; }
+    .doorFront { fill: #ff9; }
+    .frame { fill: #cc9; }
+    .doorTop { fill: #cc6; }
+    .knob { fill: #ff9; }
+    .doorHandle { fill: #996; }
+    .mirror { fill: #9ff; }
+    .reflection { fill: #cff; }
+    .counterTop { fill: #696; }
+    .counterFront { fill: #9c9; }
+    .stem { fill: #999; }
+    .faucet { fill: #999; }
+    .aerator { fill: #ccc; }
+    .sink { fill: #663; }
+    .debbieShirt { fill: #0071bc; }
+    .debbieHat { fill: #96c; }
+    .photoBackground { fill: #666; }
+    .nkotbShirtDark { fill: #369; }
+    .nkotbShirtLight { fill: #00a99d; }
+    .nkotbShirtAverage { fill: #22b573; }
+}
+
+.museumDisplay {
+    .displayBack { fill: #ffc; }
+    .displayLeft { fill: #cc9; }
+    .displayRight { fill: #cc9; }
+    .displayTop { fill: #cc9; }
+    .displayBottom { fill: #cc9; }
+    .case { fill: #cc6; }
+    .land { fill: #c96; }
+    .routes { fill: #c66; }
+    .oar { fill: #963; }
+    .axeHandle { fill: #963; }
+    .axeBlade { fill: #999; }
+    .axeTwine { fill: #fcc; }
+    .pot { fill: #996; }
+    .vaseLeg { fill: #366; }
+    .vase { fill: #699; }
+    .vaseBand { fill: #9c9; }
+    .pitcher { fill: #99c; }
+    .pitcherBand { fill: #c9c; }
+}
+
+.overpassSignBack {
+    .board {fill: #063; }
+    .lattice {fill: #666; }
+    .joint {fill: #333; }
+    .frame {fill: #999; }
+}
+
+.pharmacyAisle {
+    .rackBack { fill: #999; }
+    .boxTopFirst { fill: #c69; }
+    .labelTopFirst { fill: #7b99af; }
+    .bottleTopSecond { fill: #c96; }
+    .labelTopSecond { fill: #50a57a; }
+    .boxTopThird { fill: #cc6; }
+    .labelTopThird { fill: #ccb06a; }
+    .boxTopFourth { fill: #6c6; }
+    .labelTopFourth { fill: #a57c5d; }
+    .boxTopFifth { fill: #6cc; }
+    .labelTopFifth { fill: #dd9ec8; }
+    .boxTopMiddleFirst { fill: #96c; }
+    .labelTopMiddleFirst { fill: #a493cc; }
+    .capTopMiddleSecond { fill: #29abe2; }
+    .boxTopMiddleSecond { fill: #c99; }
+    .labelTopMiddleSecond { fill: #81b6d3; }
+    .bottleTopMiddleThird { fill: #a67c52; }
+    .capTopMiddleThird { fill: #00a99d; }
+    .boxTopMiddleThird { fill: #52a088; }
+    .labelTopMiddleThird { fill: #cc9; }
+    .boxTopMiddleFourth { fill: #9c9; }
+    .labelTopMiddleFourth { fill: #52a35f; }
+    .boxMiddleFirst { fill: #69c; }
+    .labelMiddleFirst { fill: #afc18b; }
+    .capMiddleSecond { fill: #ed1e79; }
+    .boxMiddleSecond { fill: #d5d8a3; }
+    .labelMiddleSecond { fill: #99c; }
+    .bottleMiddleThird { fill: #c69c6d; }
+    .capMiddleThird { fill: #22b573; }
+    .boxMiddleThird { fill: #c9c; }
+    .boxMiddleFourth { fill: #cc6698; }
+    .labelMiddleFourth { fill: #9ad8e2; }
+    .boxMiddleFifth { fill: #cc9965; }
+    .labelMiddleFifth { fill: #8ab7a2; }
+    .capBottomMiddleFirst { fill: #fbb03b; }
+    .boxBottomMiddleFirst { fill: #afbf9d; }
+    .labelBottomMiddleFirst { fill: #cccc65; }
+    .boxBottomMiddleSecond { fill: #66cc65; }
+    .labelBottomMiddleSecond { fill: #ddccb1; }
+    .capBottomMiddleThird { fill: #8cc63f; }
+    .boxBottomMiddleThird { fill: #66cccb; }
+    .labelBottomMiddleThird { fill: #e89ac8; }
+    .capBottomMiddleFourth { fill: #e6e6e6; }
+    .boxBottomMiddleFourth { fill: #8cb4e0; }
+    .labelBottomMiddleFourth { fill: #9966cb; }
+    .boxBottomFirst { fill: #cc9998; }
+    .labelBottomFirst { fill: #8cdae5; }
+    .boxBottomSecond { fill: #cccc98; }
+    .labelBottomSecond { fill: #524a70; }
+    .capBottomThird { fill: #ccc; }
+    .boxBottomThird { fill: #729dc1; }
+    .labelBottomThird { fill: #99cc98; }
+    .boxBottomFourth { fill: #6699cb; }
+    .labelBottomFourth { fill: #6fa5a4; }
+    .shelf { fill: #996; }
+    .rackFront { fill: #663; }
+}
+
+.playgroundSlide {
+    .rung { fill: #699; }
+    .bar { fill: #663; }
+    .frameSide { fill: #336; }
+    .slide { fill: #69c; }
+    .frameFront { fill: #66c; }
+}
+
+.recyclables {
+    .bin { fill: #4595e6; }
+    .logo { fill: #fff; }
+}
+
+.sandbags {
+    .ropeDark { fill: #b5986c; }
+    .post { fill: #997959; }
+    .ropeLight { fill: #d1af7d; }
+    .stringBorderLine { fill: none; }
+    .spindle { fill: #bfbf9c; }
+    .sandbag { fill: #cccc9d; }
+    .sandbagInner { fill: #996; }
+    .string { fill: #f0f0d1; }
+}
+
+.shoppingCart {
+    .wheelRear {fill: #3a404d; }
+    .hubRear {fill: #606a80; }
+    .swivelRear {fill: #8694b3; }
+    .cartRear {fill: rgba(225, 225, 250, 0.75); }
+    .mountRear {fill: #798f75; }
+    .barRear {fill: #818491; }
+    .wheelFront {fill: #434a59; }
+    .hubFront {fill: #6d7991; }
+    .swivelFront {fill: #8e9dbd; }
+    .cart {fill: #8c909e; }
+    .mountFront {fill: #869e82; }
+    .barFront {fill: #999ead; }
+}
+
+.signpost {
+    .pole { fill: #9e9265; }
+    .signBottom { fill: #b2b3ae; }
+    .signFront { fill: #ddded8; }
+}
+
+.stageLights {
+    .shutterBottom { fill: #036; }
+    .shutterSurface { fill: #369; }
+    .hangerBack { fill: #666; }
+    .cableBack { fill: #903; }
+    .housing { fill: #63c; }
+    .mountBottom { fill: #630; }
+    .mountSide { fill: #963; }
+    .mountTop { fill: #fc9; }
+    .mountFront { fill: #c96; }
+    .bar { fill: #996; }
+    .shutterEdge { fill: #336; }
+    .cableFront { fill: #c03; }
+    .hangerFront { fill: #999; }
+    .hangerScrew { fill: #cc9; }
+}
+
+.steamPipes {
+    .flange { fill: #966; }
+    .flangeSide { fill: #633; }
+    .pipeLarge { fill: #663; }
+    .pipeSmall { fill: #996; }
+    .mount { fill: #666; }
+    .spokes { fill: #c96; }
+    .wheel { fill: #c33; }
+    .cap { fill: #cc0; }
+}
+
+.storageBoxes {
+    .boxDark { fill: #8c735a; }
+    .boxMedium { fill: #a88a6c; }
+    .boxLight { fill: #c29f7e; }
+    .boxInner { fill: #75604b; }
+}
+
+.storageChest {
+    .chestSide { fill: #369; }
+    .chestFront { fill: #69c; }
+    .leatherSide { fill: #663; }
+    .leatherSideLine { stroke: #552; }
+    .leatherFront { fill: #996; }
+    .leatherFrontLine { stroke: #885; }
+    .handle { fill: #630; }
+    .brassSide { fill: #aa4; }
+    .brassFront { fill: #cc6; }
+    .brassLine { stroke: #993; }
+    .keyhole { fill: #333; }
+}
+
+.taiwanFridge {
+    .base { fill: #666; }
+    .door { fill: #6cc; }
+    .chrome { fill: #999; }
+    .brass { fill: #cc6; }
+}
+
+.taiwanTree {
+    .trunk { fill: #5c5224; }
+    .leavesFarthest { fill: #734168; }
+    .leavesFar { fill: #804974; }
+    .leavesNear { fill: #8c507f; }
+    .leavesNearer { fill: #99588b; }
+    .leavesNearest { fill: #a65e97; }
+}
+
+.television {
+    .side { fill: #c9af7f; }
+    .back { fill: #b8a074; }
+    .panel { fill: #96835f; }
+    .slat { fill: #7a6b4e; }
+    .tubeLight { fill: #5a696e; }
+    .tubeDark { fill: #505d61; }
+    .antennaBase { fill: #5c706e; }
+    .antennaRing { fill: #6c8582; }
+    .antennae { fill: #94b5b1; }
+}
+
+.towelRack {
+    .ball { fill: #93b386; }
+    .rack { fill: #c1d1bc; }
+    .band { fill: #d6d6b2; }
+    .towel { fill: #cccc8f; }
+}
+
+.trafficLight {
+    .support { fill: #99998e; }
+    .pole { fill: #73736a; }
+    .casing { fill: #73735a; }
+    .visor { fill: #595946; }
+    .lightGreen { fill: #74ff4d; }
+    .lightOff { fill: #6b5850; }
+    .lightRed { fill: #ff4d63; }
+}
+
+.trashCan {
+    .can { fill: #999; }
+    .ridge { fill: #8c8c8c; }
+    .mount { fill: #a6a6a6; }
+    .handle { fill: #b3b3b3; }
+    .handleOverlapLine { fill: none; }
+    .boxLeft { fill: #bf7878; }
+    .boxRear { fill: #84d88c; }
+    .boxFront { fill: #bb8dd6; }
+    .boxRightMedium { fill: #6d9de2; }
+    .boxRightDark { fill: #608ac7; }
+    .boxRightLight { fill: #72a5ed; }
+}
+
+.uclaTree {
+    .trunk { fill: #564329; }
+    .leavesRear { fill: #4b873e; }
+    .leavesFront { fill: #599950; }
+}
+
+.waitingRoomPlant {
+    .frondBack { fill: #396; }
+    .frondMiddle { fill: #063; }
+    .frondFront { fill: #033; }
+    .vase { fill: #63c; }
+}
+
+.yellowTapedGrill {
+    .pole { fill: gray; }
+    .tapeDark { fill: #99994e; }
+    .tapeLight { fill: #abab55; }
+    .grillInnerLight { fill: #7e826b; }
+    .grillInnerDark { fill: #717560; }
+    .grillLight { fill: #7d9996; }
+    .grillMedium { fill: #6f8784; }
+    .grillDark { fill: #607573; }
+    .coal { fill: #5c5c54; }
+    .rack { fill: #999989; }
+    .handle { fill: #899399; }
+}
