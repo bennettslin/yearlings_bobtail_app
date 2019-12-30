@@ -37,15 +37,10 @@
 }
 
 .cemeteryHillsLeft {
-    .graveRight { fill: hsl(0, 0%, 20%); }
     .meadow { fill: hsl(90, 100%, 20%); }
-    .graveLeft { fill: hsl(0, 0%, 40%); }
-    .graveEdgeLine { stroke: hsl(0, 0%, 20%); }
 }
 
 .cemeteryHillsRight {
-    .graveLeft { fill: hsl(0, 0%, 60%); }
-    .graveRight { fill: hsl(0, 0%, 40%); }
     .postLeft { fill: hsl(180, 100%, 80%); }
     .postRight { fill: hsl(180, 100%, 70%); }
     .postEdgeLine { stroke: hsl(180, 33%, 40%); }
@@ -56,16 +51,10 @@
 .cliffGravesFar {
     .meadowRight { fill: hsl(148, 90%, 23%); }
     .meadowLeft { fill: hsl(128, 51%, 32%); }
-    .graveLeft { fill: hsl(0, 0%, 31%) }
-    .graveRight { fill: hsl(0, 0%, 27%); }
-    .graveEdgeLine { stroke: hsl(0, 0%, 13%); }
 }
 
 .cliffGravesNear {
     .meadow { fill: hsl(148, 90%, 23%); }
-    .graveLeft { fill: hsl(0, 0%, 31%); }
-    .graveRight { fill: hsl(0, 0%, 27%); }
-    .graveEdgeLine { stroke: hsl(0, 0%, 13%); }
 }
 
 .commercialCentre {
@@ -129,10 +118,8 @@
 .elCerritoFar {
     .antennaWhite { fill: hsl(0, 0%, 92%); }
     .antennaRed { fill: hsl(14, 52%, 53%); }
-    .buildingLeft { fill: hsl(51, 20%, 64%); }
+    .antennaBuilding { fill: hsl(51, 20%, 64%); }
     .roof { fill: hsl(90, 5%, 91%); }
-    .buildingRight { fill: hsl(168, 40%, 67%); }
-    .buildingNear { fill: hsl(199, 16%, 56%); }
 }
 
 .elCerritoNear {
@@ -414,14 +401,12 @@
     .court { fill: hsl(220, 51%, 55%); }
     .stripeDisplayLine { stroke: hsl(0, 0%, 100%); }
     .pole { fill: hsl(220, 1%, 46%); }
-    .mesh { fill: hsl(78, 24%, 66%); }
+    .mesh { fill: hsla(78, 24%, 66%, 0.5); }
     .net { fill: hsl(78, 12%, 28%); }
 }
 
 .valleyFreeway {
     .overpass {fill: hsl(54, 8%, 23%); }
-    .buildingSide {fill: hsl(274, 17%, 43%); }
-    .buildingFront {fill: hsl(274, 18%, 51%); }
     .handleSide {fill: hsl(68, 15%, 50%); }
     .handleFront {fill: hsl(67, 26%, 63%); }
     .wellsFargoSide {fill: hsl(60, 2%, 47%); }

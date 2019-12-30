@@ -1,11 +1,3 @@
-# Buildings
-## Backdrops
-valley
-losAngeles
-goldenGate
-brickWall
-city
-
 # Mountains
 ## Backdrops
 nohoHouses
@@ -34,9 +26,9 @@ rocks: cave, campfire, ocean
 ocean
 sand
 grass (waiting thought)
-gravestones
 trash can
 tire
+exhaust
 
 roof
 door
@@ -45,9 +37,9 @@ stairs
 reatta (lizThought)
 
 # Improvements
-elCerritoTree
+elCerritoTree (make multiple parts)
 buddha
 campfire
 stageLights
 pharmacyAisle
-porch cube post
+porch cube post colour

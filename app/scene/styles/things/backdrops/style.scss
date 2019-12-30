@@ -1,14 +1,8 @@
 .brickWall {
-    .building { fill: hsl(208, 15%, 48%); }
     .wall { fill: hsl(28, 18%, 54%); }
     .ledge { fill: hsl(36, 21%, 72%); }
     .brickDark { fill: hsl(17, 36%, 39%); }
     .brickLight { fill: hsl(42, 25%, 48%); }
-}
-
-.cityBackdrop {
-    .cityFar { fill: hsl(220, 19%, 45%); }
-    .cityNear { fill: hsl(216, 23%, 39%); }
 }
 
 .fenceBackdrop {
@@ -28,10 +22,6 @@
     .mountainNear { fill: hsl(286, 13%, 46%); }
     .city { fill: hsl(228, 17%, 34%); }
     .island { fill: hsl(289, 17%, 51%); }
-}
-
-.losAngelesBackdrop {
-    .cityscape { fill: hsl(215, 14%, 51%); }
 }
 
 .mountainBackdrop {
@@ -98,5 +88,4 @@
 
 .valley {
     .mountain {fill: hsl(290, 18%, 56%); }
-    .building {fill: hsl(217, 21%, 43%); }
 }

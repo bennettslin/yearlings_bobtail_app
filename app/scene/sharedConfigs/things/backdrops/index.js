@@ -24,18 +24,27 @@ import {
     YARD_BACKDROP
 } from '../../../../constants/scene/things/backdrops'
 
-import { TAIWAN_HOUSE__SHARED } from '../../../sharedStyles/buildings'
+import {
+    BUILDINGS__SHARED,
+    TAIWAN_HOUSE__SHARED
+} from '../../../sharedStyles/buildings'
 import { BOOK__SHARED } from '../../../sharedStyles/paper'
 import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
 import { ROAD__SHARED } from '../../../sharedStyles/props'
 
 export default {
-    [BRICK_WALL]: FOLIAGE__SHARED,
-    [CITY_BACKDROP]: FOLIAGE__SHARED,
+    [BRICK_WALL]: [
+        BUILDINGS__SHARED,
+        FOLIAGE__SHARED
+    ],
+    [CITY_BACKDROP]: [
+        BUILDINGS__SHARED,
+        FOLIAGE__SHARED
+    ],
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
     [FENCE_BACKDROP]: FOLIAGE__SHARED,
-    [GOLDEN_GATE_BACKDROP]: null,
-    [LOS_ANGELES_BACKDROP]: null,
+    [GOLDEN_GATE_BACKDROP]: BUILDINGS__SHARED,
+    [LOS_ANGELES_BACKDROP]: BUILDINGS__SHARED,
     [MOUNTAIN_BACKDROP]: null,
     [NOHO_HOUSES_BACKDROP]: FOLIAGE__SHARED,
     [OAKLAND_FRONT]: FOLIAGE__SHARED,
@@ -56,7 +65,10 @@ export default {
         FOLIAGE__SHARED,
         TAIWAN_HOUSE__SHARED
     ],
-    [VALLEY]: FOLIAGE__SHARED,
+    [VALLEY]: [
+        BUILDINGS__SHARED,
+        FOLIAGE__SHARED
+    ],
     [WEDDING_BACKDROP]: null,
     [YARD_BACKDROP]: FOLIAGE__SHARED
 }

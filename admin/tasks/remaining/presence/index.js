@@ -33,7 +33,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Shared mountain and foliage styles. Make saturation dependent on yIndex.`,
+        taskName: `Shared mountain and foliage styles.`,
         workedHours: 0,
         neededHours: 3
     },

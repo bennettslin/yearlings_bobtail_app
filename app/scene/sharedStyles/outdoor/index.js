@@ -1,4 +1,5 @@
 export const FOLIAGE__SHARED = 'foliage'
 export const FREEWAY_SIGN__SHARED = 'freewaySign'
+export const GRAVE__SHARED = 'grave'
 export const LAMPPOST__SHARED = 'lamppost'
 export const TETHERBALL_POLE__SHARED = 'tetherballPole'
