@@ -1,6 +1,6 @@
 import {
-    CAPTAIN_BED_PILLOW,
     BENNETT_PILLOW,
+    CAPTAIN_BED_PILLOW,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION
 } from '../../../../constants/scene/things/furnitures'
@@ -13,8 +13,8 @@ import {
 } from '../../../sharedStyles/furniture'
 
 export default {
-    [CAPTAIN_BED_PILLOW]: PILLOW_PRETEEN_BENNETT__SHARED,
     [BENNETT_PILLOW]: PILLOW_BENNETT__SHARED,
+    [CAPTAIN_BED_PILLOW]: PILLOW_PRETEEN_BENNETT__SHARED,
     [LIZ_PILLOWS_PILE]: [
         PILLOW_BOYFRIEND__SHARED,
         PILLOW_LIZ__SHARED
