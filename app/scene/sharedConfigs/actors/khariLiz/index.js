@@ -1,7 +1,3 @@
-import joking from 'assets/svgs/actors/khariLiz/jokingLaughing'
-import protectiveConcerned from 'assets/svgs/actors/khariLiz/protectiveConcerned'
-import caress from 'assets/svgs/actors/khariLiz/caress'
-
 import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
@@ -9,7 +5,7 @@ import {
 } from 'constants/scene/actors/khariLiz'
 
 export default {
-    [JOKING_LAUGHING]: joking,
-    [PROTECTIVE_CONCERNED]: protectiveConcerned,
-    [CARESS]: caress
+    [JOKING_LAUGHING]: null,
+    [PROTECTIVE_CONCERNED]: null,
+    [CARESS]: null
 }

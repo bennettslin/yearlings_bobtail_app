@@ -1,7 +1,3 @@
-import hardOnReflection from 'assets/svgs/actors/bennettLizReflection/hardOnReflection'
-import missionaryReflection from 'assets/svgs/actors/bennettLizReflection/missionaryReflection'
-import afterglowReflection from 'assets/svgs/actors/bennettLizReflection/afterglowReflection'
-
 import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
@@ -9,7 +5,7 @@ import {
 } from 'constants/scene/actors/bennettLiz'
 
 export default {
-    [HARD_ON_REFLECTION]: hardOnReflection,
-    [MISSIONARY_REFLECTION]: missionaryReflection,
-    [AFTERGLOW_REFLECTION]: afterglowReflection
+    [HARD_ON_REFLECTION]: null,
+    [MISSIONARY_REFLECTION]: null,
+    [AFTERGLOW_REFLECTION]: null
 }

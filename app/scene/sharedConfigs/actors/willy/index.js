@@ -1,8 +1,3 @@
-import collecting from 'assets/svgs/actors/willy/collecting'
-import ducking from 'assets/svgs/actors/willy/ducking'
-import crossingGuard from 'assets/svgs/actors/willy/crossingGuard'
-import epilogue from 'assets/svgs/actors/willy/epilogue'
-
 import {
     COLLECTING,
     DUCKING,
@@ -12,8 +7,8 @@ import {
 import { EPILOGUE } from 'constants/scene/actors/songs'
 
 export default {
-    [COLLECTING]: collecting,
-    [DUCKING]: ducking,
-    [CROSSING_GUARD]: crossingGuard,
-    [EPILOGUE]: epilogue
+    [COLLECTING]: null,
+    [DUCKING]: null,
+    [CROSSING_GUARD]: null,
+    [EPILOGUE]: null
 }

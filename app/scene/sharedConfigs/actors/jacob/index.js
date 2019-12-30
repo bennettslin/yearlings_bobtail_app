@@ -1,7 +1,3 @@
-import carrying from 'assets/svgs/actors/jacob/carrying'
-import flirting from 'assets/svgs/actors/jacob/flirting'
-import epilogue from 'assets/svgs/actors/jacob/epilogue'
-
 import {
     FLIRTING,
     CARRYING,
@@ -9,7 +5,7 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [CARRYING]: carrying,
-    [FLIRTING]: flirting,
-    [EPILOGUE]: epilogue
+    [CARRYING]: null,
+    [FLIRTING]: null,
+    [EPILOGUE]: null
 }

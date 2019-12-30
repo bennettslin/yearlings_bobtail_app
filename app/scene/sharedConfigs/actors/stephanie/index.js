@@ -1,11 +1,3 @@
-import bennettKeyboard from 'assets/svgs/actors/stephanie/bennettKeyboard'
-import flapper from 'assets/svgs/actors/stephanie/flapper'
-import mingling from 'assets/svgs/actors/stephanie/mingling'
-import bennettDefiant from 'assets/svgs/actors/stephanie/bennettDefiant'
-import bennettRecording from 'assets/svgs/actors/stephanie/bennettRecording'
-import protester from 'assets/svgs/actors/stephanie/protester'
-import epilogue from 'assets/svgs/actors/stephanie/epilogue'
-
 import {
     BENNETT_KEYBOARD,
     FLAPPER,
@@ -20,11 +12,11 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [BENNETT_KEYBOARD]: bennettKeyboard,
-    [FLAPPER]: flapper,
-    [MINGLING]: mingling,
-    [BENNETT_DEFIANT]: bennettDefiant,
-    [BENNETT_RECORDING]: bennettRecording,
-    [PROTESTER]: protester,
-    [EPILOGUE]: epilogue
+    [BENNETT_KEYBOARD]: null,
+    [FLAPPER]: null,
+    [MINGLING]: null,
+    [BENNETT_DEFIANT]: null,
+    [BENNETT_RECORDING]: null,
+    [PROTESTER]: null,
+    [EPILOGUE]: null
 }

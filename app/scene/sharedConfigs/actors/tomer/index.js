@@ -1,13 +1,3 @@
-import gangbanger from 'assets/svgs/actors/tomer/gangbanger'
-import shaneBuying from 'assets/svgs/actors/tomer/shaneBuying'
-import abbeyRoad from 'assets/svgs/actors/tomer/abbeyRoad'
-import walgreens from 'assets/svgs/actors/tomer/walgreens'
-import steamTunnel from 'assets/svgs/actors/tomer/steamTunnel'
-import cemetery from 'assets/svgs/actors/tomer/cemetery'
-import stationWagon from 'assets/svgs/actors/tomer/stationWagon'
-import shaneSpilling from 'assets/svgs/actors/tomer/shaneSpilling'
-import epilogue from 'assets/svgs/actors/tomer/epilogue'
-
 import {
     SHANE_BUYING,
     SHANE_SPILLING
@@ -24,13 +14,13 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [GANGBANGER]: gangbanger,
-    [SHANE_BUYING]: shaneBuying,
-    [ABBEY_ROAD]: abbeyRoad,
-    [WALGREENS]: walgreens,
-    [STEAM_TUNNEL]: steamTunnel,
-    [CEMETERY]: cemetery,
-    [STATION_WAGON]: stationWagon,
-    [SHANE_SPILLING]: shaneSpilling,
-    [EPILOGUE]: epilogue
+    [GANGBANGER]: null,
+    [SHANE_BUYING]: null,
+    [ABBEY_ROAD]: null,
+    [WALGREENS]: null,
+    [STEAM_TUNNEL]: null,
+    [CEMETERY]: null,
+    [STATION_WAGON]: null,
+    [SHANE_SPILLING]: null,
+    [EPILOGUE]: null
 }

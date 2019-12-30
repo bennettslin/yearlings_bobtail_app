@@ -1,8 +1,3 @@
-import exasperated from 'assets/svgs/actors/anita/exasperated'
-import concerned from 'assets/svgs/actors/anita/concerned'
-import cheering from 'assets/svgs/actors/anita/cheering'
-import youngChild from 'assets/svgs/actors/anita/youngChild'
-
 import {
     EXASPERATED,
     CONCERNED,
@@ -12,8 +7,8 @@ import {
 import { YOUNG_CHILD } from 'constants/scene/actors/songs'
 
 export default {
-    [EXASPERATED]: exasperated,
-    [CONCERNED]: concerned,
-    [CHEERING]: cheering,
-    [YOUNG_CHILD]: youngChild
+    [EXASPERATED]: null,
+    [CONCERNED]: null,
+    [CHEERING]: null,
+    [YOUNG_CHILD]: null
 }

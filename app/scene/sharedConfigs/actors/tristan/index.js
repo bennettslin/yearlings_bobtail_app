@@ -1,7 +1,3 @@
-import principal from 'assets/svgs/actors/tristan/principal'
-import punching from 'assets/svgs/actors/tristan/punching'
-import epilogue from 'assets/svgs/actors/tristan/epilogue'
-
 import {
     PRINCIPAL,
     PUNCHING
@@ -10,7 +6,7 @@ import {
 import { EPILOGUE } from 'constants/scene/actors/songs'
 
 export default {
-    [PRINCIPAL]: principal,
-    [PUNCHING]: punching,
-    [EPILOGUE]: epilogue
+    [PRINCIPAL]: null,
+    [PUNCHING]: null,
+    [EPILOGUE]: null
 }

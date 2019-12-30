@@ -1,12 +1,3 @@
-import usherWaiting from 'assets/svgs/actors/howie/usherWaiting'
-import usherLooking from 'assets/svgs/actors/howie/usherLooking'
-import abbeyRoad from 'assets/svgs/actors/howie/abbeyRoad'
-import walgreens from 'assets/svgs/actors/howie/walgreens'
-import steamTunnel from 'assets/svgs/actors/howie/steamTunnel'
-import stationWagon from 'assets/svgs/actors/howie/stationWagon'
-import attic from 'assets/svgs/actors/howie/attic'
-import epilogue from 'assets/svgs/actors/howie/epilogue'
-
 import {
     USHER_WAITING,
     USHER_LOOKING
@@ -22,12 +13,12 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [USHER_WAITING]: usherWaiting,
-    [USHER_LOOKING]: usherLooking,
-    [ABBEY_ROAD]: abbeyRoad,
-    [WALGREENS]: walgreens,
-    [STEAM_TUNNEL]: steamTunnel,
-    [STATION_WAGON]: stationWagon,
-    [ATTIC]: attic,
-    [EPILOGUE]: epilogue
+    [USHER_WAITING]: null,
+    [USHER_LOOKING]: null,
+    [ABBEY_ROAD]: null,
+    [WALGREENS]: null,
+    [STEAM_TUNNEL]: null,
+    [STATION_WAGON]: null,
+    [ATTIC]: null,
+    [EPILOGUE]: null
 }

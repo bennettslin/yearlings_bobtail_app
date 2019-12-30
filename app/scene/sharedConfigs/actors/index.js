@@ -104,7 +104,7 @@ import {
     KHARI_LIZ_REFLECTION
 } from '../../constants/scene/actors'
 
-const ACTOR_SVG_MAPS = {
+export default {
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
@@ -156,8 +156,4 @@ const ACTOR_SVG_MAPS = {
     [BENNETT_LIZ_REFLECTION]: bennettLizReflection,
     [LIZ_REFLECTION]: lizReflection,
     [KHARI_LIZ_REFLECTION]: khariLizReflection
-}
-
-export const getSvgMapForActor = (actorKey) => {
-    return ACTOR_SVG_MAPS[actorKey]
 }
