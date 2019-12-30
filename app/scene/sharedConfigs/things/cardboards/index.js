@@ -63,7 +63,8 @@ import {
 import { SNOWGLOBE__SHARED } from '../../../sharedStyles/props'
 import {
     TAIWAN_BUOY__SHARED,
-    TAIWAN_RICKSHAW__SHARED
+    TAIWAN_RICKSHAW__SHARED,
+    TAIWAN_PILLOW__SHARED
 } from '../../../sharedStyles/taiwan'
 import { REATTA__SHARED } from '../../../sharedStyles/vehicles'
 
@@ -86,7 +87,10 @@ export default {
         ODIN__SHARED,
         TAIWAN_RICKSHAW__SHARED
     ],
-    [BENNETT_SHORE]: true,
+    [BENNETT_SHORE]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT
+    ],
     [ODIN_SHORE]: ODIN__SHARED,
     [BENNETT_ODIN_BUOY]: [
         ALL_PEOPLE__SHARED,
@@ -99,22 +103,26 @@ export default {
         BENNETT,
         ODIN__SHARED
     ],
-    [SEA_SERPENT_LEFT]: true,
-    [SEA_SERPENT_RIGHT]: true,
+    [SEA_SERPENT_LEFT]: null,
+    [SEA_SERPENT_RIGHT]: null,
     [BENNETT_ODIN_OCEAN_FLOOR]: [
         ALL_PEOPLE__SHARED,
         BENNETT,
         ODIN__SHARED
     ],
-    [BENNETT_MAT]: true,
+    [BENNETT_MAT]: [
+        ALL_PEOPLE__SHARED,
+        BENNETT,
+        TAIWAN_PILLOW__SHARED
+    ],
     [ODIN_MAT]: ODIN__SHARED,
     [BLOOM_COUNTY_POSTER]: ALL_PEOPLE__SHARED,
-    [PCHELKA_MUSHKA_ROCKET]: true,
-    [EARTH]: true,
-    [SPACE_COLONY]: true,
-    [VAN_NUYS_LOGO]: true,
-    [CORKBOARD]: true,
-    [POLICE_ALBUM]: true,
+    [PCHELKA_MUSHKA_ROCKET]: null,
+    [EARTH]: null,
+    [SPACE_COLONY]: null,
+    [VAN_NUYS_LOGO]: null,
+    [CORKBOARD]: null,
+    [POLICE_ALBUM]: null,
     [NIRVANA_POSTER]: ALL_PEOPLE__SHARED,
     [LEONARD_COHEN_POSTER]: ALL_PEOPLE__SHARED,
     [TELEVISION_ALBUM]: ALL_PEOPLE__SHARED,
@@ -124,21 +132,21 @@ export default {
         ALL_PEOPLE__SHARED,
         MARA
     ],
-    [MARQUEE_FRAME__MARA_MEMENTO]: true,
+    [MARQUEE_FRAME__MARA_MEMENTO]: null,
     [MARA_GLADIATOR_POSTER]: [
         POSTER_GLADIATOR__SHARED,
         ALL_PEOPLE__SHARED,
         MARA
     ],
-    [MARQUEE_FRAME__MARA_GLADIATOR]: true,
+    [MARQUEE_FRAME__MARA_GLADIATOR]: null,
     [GLADIATOR_POSTER]: [
         POSTER_GLADIATOR__SHARED,
         ALL_PEOPLE__SHARED
     ],
-    [MARQUEE_FRAME__GLADIATOR]: true,
-    [CODE_BOX]: true,
-    [CLIPBOARD]: true,
-    [PAINTING]: true,
+    [MARQUEE_FRAME__GLADIATOR]: null,
+    [CODE_BOX]: null,
+    [CLIPBOARD]: null,
+    [PAINTING]: null,
     [NAS_ALBUM]: ALL_PEOPLE__SHARED,
     [ELLIOTT_SMITH_POSTER]: ALL_PEOPLE__SHARED,
     [SNOWGLOBE_SMALL__PAST]: SNOWGLOBE__SHARED,

@@ -12,12 +12,6 @@ import {
     OCEAN_CAVE_INTERIOR,
     OCEAN_CAVE_EXTERIOR
 } from '../../../constants/scene/things/panels'
-import { BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../sharedStyles/people'
-import {
-    BUDDHA_SHRINE__SHARED,
-    TAIWAN_PILLOW__SHARED
-} from '../../sharedStyles/taiwan'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
@@ -30,12 +24,7 @@ const ARRANGEMENTS_THINGS = {
         [BENNETT_MAT]: {
             yIndex: 2,
             xPosition: 2.6,
-            scaleFactor: 0.2,
-            sharedStyle: [
-                ALL_PEOPLE__SHARED,
-                BENNETT,
-                TAIWAN_PILLOW__SHARED
-            ]
+            scaleFactor: 0.2
         },
         [ODIN_MAT]: {
             yIndex: 2,
@@ -47,8 +36,7 @@ const ARRANGEMENTS_THINGS = {
         [OCEAN_CAVE_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.55,
-            sharedStyle: BUDDHA_SHRINE__SHARED
+            scaleFactor: 0.55
         },
         [OCEAN_CAVE_EXTERIOR]: {
             yIndex: 3,

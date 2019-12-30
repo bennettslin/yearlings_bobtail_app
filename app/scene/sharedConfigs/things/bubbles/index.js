@@ -77,7 +77,7 @@ import {
 } from '../../../sharedStyles/sketch'
 
 export default {
-    [ESTHER_SPEECH]: true,
+    [ESTHER_SPEECH]: null,
     [SKETCHBOOK__TOGETHER]: [
         BOOK__SHARED,
         SKETCHBOOK__SHARED
@@ -122,7 +122,7 @@ export default {
     ],
     [BUBBLE_SMALL__GO_KART]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__GO_KART]: BUBBLE__SHARED,
-    [GO_KART_THOUGHT]: true,
+    [GO_KART_THOUGHT]: null,
     [BUBBLE_SMALL__WAITING]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM__WAITING]: BUBBLE__SHARED,
     [BUBBLE_LARGE__WAITING]: BUBBLE__SHARED,
@@ -142,8 +142,8 @@ export default {
         LIZ,
         ALL_PEOPLE__SHARED
     ],
-    [PHARMACY_CEL]: true,
-    [TARPIT_CONSTELLATION]: true,
+    [PHARMACY_CEL]: null,
+    [TARPIT_CONSTELLATION]: null,
     [SIBLING_CONSTELLATION]: SKETCH_PEOPLE__SHARED,
     [KHARI_ATTACK_SPEECH]: [
         BENNETT,

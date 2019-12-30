@@ -82,6 +82,6 @@ export default {
     [LIZ_DOOR]: DOOR__SHARED,
     [LIZ_DOOR_OPEN]: DOOR__SHARED,
     [LIZ_GATE_INSIDE]: LIZ_GATE__SHARED,
-    [LOADING_DOCK_DOOR]: true,
+    [LOADING_DOCK_DOOR]: null,
     [EL_TORITO_DOORS]: DOOR__SHARED
 }

@@ -21,7 +21,6 @@ import {
     SCHOOLBUS_SEAT__RIGHT,
     SCHOOLBUS_EXTERIOR
 } from '../../../constants/scene/things/panels'
-import { INTERIOR__SHARED } from '../../sharedStyles/vehicles'
 
 const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
@@ -71,8 +70,7 @@ const ARRANGEMENTS_THINGS = {
         [SCHOOLBUS_INTERIOR]: {
             yIndex: 1,
             xPosition: 5.5,
-            scaleFactor: 0.5,
-            sharedStyle: INTERIOR__SHARED
+            scaleFactor: 0.5
         },
         [SCHOOLBUS_SEAT__LEFT]: {
             yIndex: 4,

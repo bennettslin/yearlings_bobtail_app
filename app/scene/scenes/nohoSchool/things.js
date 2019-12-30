@@ -16,16 +16,13 @@ import {
     PLAYGROUND_BALL,
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
-import { PAPER_BAG__SHARED } from '../../sharedStyles/food'
-import { PALM_TREE__SHARED } from '../../sharedStyles/plants'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [SCHOOL_BACKDROP]: {
             xPosition: 5.5,
             scaleFactor: 0.66,
-            trimBottom: 0.05,
-            sharedStyle: PALM_TREE__SHARED
+            trimBottom: 0.05
         },
         [BRICK_WALL]: {
             xPosition: 5.5,
@@ -63,8 +60,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [SAFEWAY_BAG]: {
             yIndex: 3,
-            xPosition: 10,
-            sharedStyle: PAPER_BAG__SHARED
+            xPosition: 10
         }
     }
 }
