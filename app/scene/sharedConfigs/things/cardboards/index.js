@@ -52,7 +52,7 @@ import {
 } from '../../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
 import { ODIN__SHARED } from '../../../sharedStyles/animals'
-import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
+import { FOLIAGE__SHARED, MOUNTAIN__SHARED } from '../../../sharedStyles/outdoor'
 import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED
@@ -105,7 +105,10 @@ export default {
         ALL_PEOPLE__SHARED,
         BENNETT
     ],
-    [BLOOM_COUNTY_POSTER]: ALL_PEOPLE__SHARED,
+    [BLOOM_COUNTY_POSTER]: [
+        ALL_PEOPLE__SHARED,
+        MOUNTAIN__SHARED
+    ],
     [CLIPBOARD]: null,
     [CODE_BOX]: null,
     [CORKBOARD]: null,

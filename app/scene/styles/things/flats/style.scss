@@ -36,25 +36,10 @@
     .step { fill: hsl(231, 47%, 77%); }
 }
 
-.cemeteryHillsLeft {
-    .meadow { fill: hsl(90, 100%, 20%); }
-}
-
 .cemeteryHillsRight {
     .postLeft { fill: hsl(180, 100%, 80%); }
     .postRight { fill: hsl(180, 100%, 70%); }
-    .postEdgeLine { stroke: hsl(180, 33%, 40%); }
     .fence { fill: hsl(180, 50%, 40%); }
-    .meadow { fill: hsl(120, 33%, 30%); }
-}
-
-.cliffGravesFar {
-    .meadowRight { fill: hsl(148, 90%, 23%); }
-    .meadowLeft { fill: hsl(128, 51%, 32%); }
-}
-
-.cliffGravesNear {
-    .meadow { fill: hsl(148, 90%, 23%); }
 }
 
 .commercialCentre {

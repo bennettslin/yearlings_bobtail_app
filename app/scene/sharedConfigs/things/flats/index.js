@@ -68,7 +68,8 @@ import {
 import {
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
-    GRAVE__SHARED
+    GRAVE__SHARED,
+    MOUNTAIN__SHARED
 } from '../../../sharedStyles/outdoor'
 import { TAIWAN_MOUNTAIN__SHARED } from '../../../sharedStyles/taiwan'
 
@@ -80,14 +81,22 @@ export default {
     [CAMPANILE]: FOLIAGE__SHARED,
     [CEMETERY_HILLS_LEFT]: [
         FOLIAGE__SHARED,
-        GRAVE__SHARED
+        GRAVE__SHARED,
+        MOUNTAIN__SHARED
     ],
     [CEMETERY_HILLS_RIGHT]: [
         FOLIAGE__SHARED,
-        GRAVE__SHARED
+        GRAVE__SHARED,
+        MOUNTAIN__SHARED
     ],
-    [CLIFF_GRAVES_FAR]: GRAVE__SHARED,
-    [CLIFF_GRAVES_NEAR]: GRAVE__SHARED,
+    [CLIFF_GRAVES_FAR]: [
+        GRAVE__SHARED,
+        MOUNTAIN__SHARED
+    ],
+    [CLIFF_GRAVES_NEAR]: [
+        GRAVE__SHARED,
+        MOUNTAIN__SHARED
+    ],
     [COMMERCIAL_CENTRE]: OAKLAND_COMMERCIAL__SHARED,
     [COMMERCIAL_FAR_LEFT]: OAKLAND_COMMERCIAL__SHARED,
     [COMMERCIAL_FAR_RIGHT]: OAKLAND_COMMERCIAL__SHARED,

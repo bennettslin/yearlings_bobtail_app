@@ -40,7 +40,10 @@ import {
     MICROPHONE__SHARED,
     MONITOR__SHARED
 } from '../../../sharedStyles/instruments'
-import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
+import {
+    FOLIAGE__SHARED,
+    MOUNTAIN__SHARED
+} from '../../../sharedStyles/outdoor'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
@@ -117,6 +120,7 @@ export default {
         BENNETT,
         LIZ,
         ALL_PEOPLE__SHARED,
-        FOLIAGE__SHARED
+        FOLIAGE__SHARED,
+        MOUNTAIN__SHARED
     ]
 }

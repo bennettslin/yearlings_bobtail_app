@@ -16,19 +16,16 @@ weddingBackdrop
 ## Flats
 taiwanMountainsBridged
 taiwanMountainLeft, right
-cemetery hills
-cliff graves
-
 pampas
 
 # Other shared
 rocks: cave, campfire, ocean
 ocean
 sand
-grass (waiting thought)
 trash can
 tire
 exhaust
+road (taiwan bridge, walking thought)
 
 roof
 door
