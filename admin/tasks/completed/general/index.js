@@ -5126,5 +5126,10 @@ export default [
         taskName: `Do colours of all faces.`,
         workedHours: 6,
         neededHours: 6
+    },
+    {
+        taskName: `Consolidate styles.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
