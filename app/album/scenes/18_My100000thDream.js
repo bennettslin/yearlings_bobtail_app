@@ -22,6 +22,9 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_SPRING,
+    SEASON_SUMMER,
+    SEASON_AUTUMN,
+    SEASON_WINTER,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
 import {
@@ -148,7 +151,7 @@ export default [
             }
         },
         cubes: PAMPAS_KEY,
-        sky: { time: TIME_NOON, season: SEASON_SPRING }
+        sky: { time: TIME_NOON, season: SEASON_SUMMER }
     },
     {
         unitIndex: 5,
@@ -179,7 +182,7 @@ export default [
             }
         },
         cubes: WEDDING_KEY,
-        sky: { time: TIME_AFTERNOON, season: SEASON_SPRING }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 7,
@@ -203,7 +206,7 @@ export default [
             }
         },
         cubes: CLIFF_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_SPRING }
+        sky: { time: TIME_EVENING, season: SEASON_WINTER }
     },
     {
         unitIndex: 9,

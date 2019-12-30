@@ -71,7 +71,6 @@ import {
     GRAVE__SHARED,
     MOUNTAIN__SHARED
 } from '../../../sharedStyles/outdoor'
-import { TAIWAN_MOUNTAIN__SHARED } from '../../../sharedStyles/taiwan'
 
 export default {
     [BEDROOM_BUS]: null,
@@ -140,7 +139,10 @@ export default {
     ],
     [OCEAN_BOTTOM_MIDDLE]: null,
     [OCEAN_BOTTOM_NEAR]: null,
-    [PAMPAS_FAR]: FOLIAGE__SHARED,
+    [PAMPAS_FAR]: [
+        FOLIAGE__SHARED,
+        MOUNTAIN__SHARED
+    ],
     [PUBLIC_FAR]: [
         FOLIAGE__SHARED,
         OAKLAND_HOUSE__SHARED
@@ -193,11 +195,11 @@ export default {
     ],
     [TAIWAN_MOUNTAIN_LEFT]: [
         FOLIAGE__SHARED,
-        TAIWAN_MOUNTAIN__SHARED
+        MOUNTAIN__SHARED
     ],
     [TAIWAN_MOUNTAIN_RIGHT]: [
         FOLIAGE__SHARED,
-        TAIWAN_MOUNTAIN__SHARED
+        MOUNTAIN__SHARED
     ],
     [TENNIS_COURT]: FOLIAGE__SHARED,
     [VALLEY_FREEWAY]: [

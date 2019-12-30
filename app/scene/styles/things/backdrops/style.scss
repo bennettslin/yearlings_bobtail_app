@@ -12,23 +12,12 @@
 
 .goldenGateBackdrop {
     .ocean { fill: hsl(211, 71%, 59%); }
-    .mountainFar { fill: hsl(280, 23%, 36%); }
     .pier { fill: hsl(225, 2%, 36%); }
     .suspenders { fill: hsla(0, 83%, 88%, 0.5); }
     .tower { fill: hsl(18, 31%, 48%); }
     .cable { fill: hsl(18, 36%, 49%); }
     .deck { fill: hsl(18, 36%, 49%); }
     .connector { fill: hsl(16, 37%, 47%); }
-    .mountainNear { fill: hsl(286, 13%, 46%); }
-    .island { fill: hsl(289, 17%, 51%); }
-}
-
-.mountainBackdrop {
-    .mountain { fill: hsl(286, 22%, 50%); }
-}
-
-.nohoHousesBackdrop {
-    .mountain { fill: hsl(296, 13%, 46%); }
 }
 
 .oceanBottomFar {
@@ -47,23 +36,10 @@
     .romanNumeral { fill: hsl(61, 65%, 88%); }
 }
 
-.schoolBackdrop {
-    .mountain { fill: hsl(284, 21%, 64%); }
-}
-
-.shoreBuoyBackdrop {
-    .shore { fill: hsl(49, 13%, 67%); }
-    .mountain { fill: hsl(301, 19%, 48%); }
-    .ocean { fill: hsl(174, 57%, 65%); }
-}
-
 .shoreRickshawBackdrop {
     .lighthouseInner { fill: hsl(120, 18%, 67%); }
     .lighthouseCentre { fill: hsl(124, 13%, 51%); }
     .lighthouseOuter { fill: hsl(109, 23%, 77%); }
-    .mountain { fill: hsl(285, 15%, 42%); }
-    .shore { fill: hsl(56, 13%, 54%); }
-    .ocean { fill: hsl(174, 32%, 60%); }
 }
 
 .taiwanMountainsBackdrop {
@@ -72,19 +48,4 @@
     .mountainNear { fill: hsl(218, 27%, 49%); }
     .mountainNearer { fill: hsl(218, 34%, 55%); }
     .mountainNearest { fill: hsl(218, 39%, 59%); }
-}
-
-.taiwanStairsBackdrop {
-    .mountain { fill: hsl(274, 18%, 44%); }
-}
-
-.weddingBackdrop {
-    .mountainFarthest { fill: hsl(296, 7%, 54%); }
-    .mountainFarther { fill: hsl(296, 6%, 45%); }
-    .mountainFar { fill: hsl(294, 5%, 38%); }
-    .mountainClose { fill: hsl(291, 5%, 30%); }
-}
-
-.valley {
-    .mountain {fill: hsl(290, 18%, 56%); }
 }

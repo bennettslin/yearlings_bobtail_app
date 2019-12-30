@@ -42,7 +42,8 @@ import {
 } from '../../../sharedStyles/instruments'
 import {
     FOLIAGE__SHARED,
-    MOUNTAIN__SHARED
+    MOUNTAIN__SHARED,
+    SHORE__SHARED
 } from '../../../sharedStyles/outdoor'
 import {
     BOOK__SHARED,
@@ -121,6 +122,7 @@ export default {
         LIZ,
         ALL_PEOPLE__SHARED,
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        MOUNTAIN__SHARED,
+        SHORE__SHARED
     ]
 }

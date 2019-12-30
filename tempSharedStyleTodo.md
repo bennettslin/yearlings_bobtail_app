@@ -1,17 +1,8 @@
 # Mountains
 ## Backdrops
-nohoHouses
-school
-valley
 taiwanMountains
-taiwanStairs
-mountain
-shoreRickshaw
-shoreBuoy
 oceanBottomFar
 oceanFloorFar
-goldenGateBackdrop
-weddingBackdrop
 
 ## Flats
 taiwanMountainsBridged
@@ -20,13 +11,12 @@ pampas
 
 # Other shared
 rocks: cave, campfire, ocean
-ocean
-sand
 trash can
 tire
 exhaust
 road (taiwan bridge, walking thought)
 
+nohoHouses
 roof
 door
 window
