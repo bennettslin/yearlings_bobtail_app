@@ -49,3 +49,10 @@ export const BUBBLE_SMALL__TENNIS = 'bubbleSmall__tennis'
 export const BUBBLE_MEDIUM__TENNIS = 'bubbleMedium__tennis'
 export const BUBBLE_LARGE__TENNIS = 'bubbleLarge__tennis'
 export const THOUGHT_SMALL = 'thoughtSmall'
+
+// Duplicate root names.
+export const SKETCHBOOK = 'sketchbook'
+export const BUBBLE_SMALL = 'bubbleSmall'
+export const BUBBLE_MEDIUM = 'bubbleMedium'
+export const BUBBLE_LARGE = 'bubbleLarge'
+export const THOUGHT_LARGE = 'thoughtLarge'

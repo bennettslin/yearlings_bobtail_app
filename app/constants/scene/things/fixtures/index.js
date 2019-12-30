@@ -54,3 +54,11 @@ export const LIZ_PHONE = 'lizPhone'
 export const LIZ_PHONE_REFLECTION = 'lizPhoneReflection'
 export const LIZ_PHONE_BASE = 'lizPhoneBase'
 export const LIZ_PHONE_BASE_REFLECTION = 'lizPhoneBaseReflection'
+
+// Duplicate root names.
+export const LETTER_SCRAPS = 'letterScraps'
+export const BALLED_FOIL = 'balledFoil'
+export const DRUMS_STACKED = 'drumsStacked'
+export const PUSH_BROOM = 'pushBroom'
+export const LIGHT_SWITCH = 'lightSwitch'
+export const STAGE_MIC = 'stageMic'

@@ -35,3 +35,8 @@ export const LIZ_DOOR_OPEN = 'lizDoorOpen'
 export const LIZ_GATE_INSIDE = 'lizGateInside'
 export const LOADING_DOCK_DOOR = 'loadingDockDoor'
 export const EL_TORITO_DOORS = 'elToritoDoors'
+
+// Duplicate root names.
+export const BLINDS_OUTSIDE = 'blindsOutside'
+export const LIZ_BLINDS_OUTSIDE = 'lizBlindsOutside'
+export const LIZ_GATE_OUTSIDE = 'lizGateOutside'

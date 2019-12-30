@@ -1,8 +1,6 @@
 import {
     NOHO_HOUSES_BACKDROP,
     SCHOOL_BACKDROP,
-    VALLEY__FREEWAY,
-    VALLEY__QUAD,
     TAIWAN_MOUNTAINS_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
     MOUNTAIN_BACKDROP,
@@ -14,10 +12,6 @@ import {
     OAKLAND_SIDE,
     DRIVING_BACKDROP,
     LOS_ANGELES_BACKDROP,
-    OAKLAND_FRONT__HIGH,
-    OAKLAND_FRONT__MIDWAY,
-    OAKLAND_FRONT__LOW,
-    OAKLAND_FRONT__LIZ_GATE,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
@@ -25,7 +19,10 @@ import {
     WEDDING_BACKDROP,
     FENCE_BACKDROP,
     BRICK_WALL,
-    CITY_BACKDROP
+    CITY_BACKDROP,
+
+    VALLEY,
+    OAKLAND_FRONT
 } from '../../../../constants/scene/things/backdrops'
 
 import { TAIWAN_HOUSE__SHARED } from '../../../sharedStyles/buildings'
@@ -39,8 +36,6 @@ import { ROAD__SHARED } from '../../../sharedStyles/props'
 export default {
     [NOHO_HOUSES_BACKDROP]: PALM_TREE__SHARED,
     [SCHOOL_BACKDROP]: PALM_TREE__SHARED,
-    [VALLEY__FREEWAY]: FOLIAGE__SHARED,
-    [VALLEY__QUAD]: null,
     [TAIWAN_MOUNTAINS_BACKDROP]: null,
     [TAIWAN_STAIRS_BACKDROP]: TAIWAN_HOUSE__SHARED,
     [MOUNTAIN_BACKDROP]: null,
@@ -52,10 +47,6 @@ export default {
     [DRIVING_BACKDROP]: null,
     [LOS_ANGELES_BACKDROP]: null,
     [OAKLAND_SIDE]: null,
-    [OAKLAND_FRONT__HIGH]: null,
-    [OAKLAND_FRONT__MIDWAY]: null,
-    [OAKLAND_FRONT__LOW]: null,
-    [OAKLAND_FRONT__LIZ_GATE]: null,
     [ROAD_PAST]: [
         BOOK__SHARED,
         ROAD__SHARED
@@ -66,5 +57,8 @@ export default {
     [WEDDING_BACKDROP]: null,
     [FENCE_BACKDROP]: null,
     [BRICK_WALL]: null,
-    [CITY_BACKDROP]: null
+    [CITY_BACKDROP]: null,
+
+    [VALLEY]: FOLIAGE__SHARED,
+    [OAKLAND_FRONT]: null
 }

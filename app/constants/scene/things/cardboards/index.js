@@ -44,3 +44,7 @@ export const SNOWGLOBE_PRESENT = 'snowglobePresent'
 export const SNOWGLOBE_SMALL__FUTURE = 'snowglobeSmall__future'
 export const SNOWGLOBE_FUTURE_CORD = 'snowglobeFutureCord'
 export const SNOWGLOBE_FUTURE_REATTA = 'snowglobeFutureReatta'
+
+// Duplicate root names.
+export const MARQUEE_FRAME = 'marqueeFrame'
+export const SNOWGLOBE_SMALL = 'snowglobeSmall'

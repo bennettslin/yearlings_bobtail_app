@@ -59,3 +59,10 @@ export const FOREBODING_TREES__MIDDLE = 'forebodingTrees__middle'
 export const FOREBODING_TREES__FAR = 'forebodingTrees__far'
 export const CLIFF_GRAVES_FAR = 'cliffGravesFar'
 export const CLIFF_GRAVES_NEAR = 'cliffGravesNear'
+
+// Duplicate root names.
+export const SCHOOL_BUNGALOW = 'schoolBungalow'
+export const BERKELEY_BUILDING_WIDE = 'berkeleyBuildingWide'
+export const PUBLIC_FAR = 'publicFar'
+export const PUBLIC_NEAR = 'publicNear'
+export const FOREBODING_TREES = 'forebodingTrees'

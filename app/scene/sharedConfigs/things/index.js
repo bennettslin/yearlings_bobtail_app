@@ -9,6 +9,8 @@ import furnitures from './furnitures'
 import panels from './panels'
 import puppets from './puppets'
 
+import { convertPresenceKeyToClassName } from 'helpers/format'
+
 import {
     BACKDROP,
     BUBBLE,
@@ -39,5 +41,6 @@ export const getSharedStyleForThing = ({
     presenceType,
     presenceKey
 }) => {
-    return SHARED_STYLES_MAP[presenceType][presenceKey]
+
+    return SHARED_STYLES_MAP[presenceType][convertPresenceKeyToClassName(presenceKey)]
 }

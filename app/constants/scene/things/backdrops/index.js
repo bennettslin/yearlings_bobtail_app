@@ -25,3 +25,7 @@ export const WEDDING_BACKDROP = 'weddingBackdrop'
 export const FENCE_BACKDROP = 'fenceBackdrop'
 export const BRICK_WALL = 'brickWall'
 export const CITY_BACKDROP = 'cityBackdrop'
+
+// Duplicate root names.
+export const VALLEY = 'valley'
+export const OAKLAND_FRONT = 'oaklandFront'
