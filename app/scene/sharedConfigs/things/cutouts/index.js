@@ -73,6 +73,7 @@ import {
 import { MONITOR__SHARED } from '../../../sharedStyles/instruments'
 import {
     LAMPPOST__SHARED,
+    FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED
 } from '../../../sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../sharedStyles/paper'
@@ -84,16 +85,16 @@ export default {
     [BANCROFT_SHRUB]: null,
     [BERKELEY_LAMPPOST]: LAMPPOST__SHARED,
     [BUDDHA_SHRINE]: BUDDHA_SHRINE__SHARED,
-    [BUSH_DOUBLE]: null,
-    [BUSH_SINGLE]: null,
-    [CACTUS_DOUBLE]: null,
-    [CACTUS_SINGLE]: null,
+    [BUSH_DOUBLE]: FOLIAGE__SHARED,
+    [BUSH_SINGLE]: FOLIAGE__SHARED,
+    [CACTUS_DOUBLE]: FOLIAGE__SHARED,
+    [CACTUS_SINGLE]: FOLIAGE__SHARED,
     [CAMPFIRE]: null,
     [CAMPUS_TREE_DOUBLE]: null,
     [CAMPUS_TREE_SINGLE]: null,
     [CAVEMAN_BONES]: null,
     [CLIFF_TREE]: null,
-    [CYPRESS_TREE]: null,
+    [CYPRESS_TREE]: FOLIAGE__SHARED,
     [DISHROOM_DOLLY]: null,
     [DISH_PILE]: DISH__SHARED,
     [DISPENSER_LEFT]: NEWSPAPER__SHARED,

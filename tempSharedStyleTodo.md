@@ -24,6 +24,8 @@ weddingBackdrop
 ## Flats
 taiwanMountainsBridged
 taiwanMountainLeft, right
+cemetery hills
+cliff graves
 
 pampas
 
@@ -53,28 +55,11 @@ weddingCrowd
 cliffTree
 
 ## Flat
-nohoHouseLeft
-nohoHouseRight
-valleyFreeway
-familyHouse
 taiwanMountainsBridged
 taiwanMountainLeft
 taiwanMountainRight
-drivingHouseLeft
-drivingHouseRight
 rickshawTown
-stJosephsChurch
-campanile
-cemeteryHillsLeft
-cemeteryHillsRight
-oaklandHouses
-public
-elCerritoFar
-elCerritoNear
-tennisCourt
 forebodingTrees
-cliffGraves
-pampas
 
 ## Panel
 bedroomFence

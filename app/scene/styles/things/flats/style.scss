@@ -32,17 +32,10 @@
     .wallFrontInner { fill: hsl(66, 17%, 67%); }
     .ledgeSide { fill: hsl(120, 13%, 61%); }
     .ledgeFront { fill: hsl(120, 25%, 76%); }
-    .stepTop { fill: hsl(232, 39%, 67%); }
-    .stepMiddle { fill: hsl(232, 45%, 73%); }
-    .stepBottom { fill: hsl(231, 47%, 77%); }
-    .bushSmall { fill: hsl(144, 31%, 55%); }
-    .bushMiddle { fill: hsl(145, 23%, 52%); }
-    .bushLarge { fill: hsl(146, 18%, 49%); }
+    .step { fill: hsl(231, 47%, 77%); }
 }
 
 .cemeteryHillsLeft {
-    .trunk { fill: hsl(0, 33%, 30%); }
-    .leaves { fill: hsl(180, 100%, 10%); }
     .graveRight { fill: hsl(0, 0%, 20%); }
     .meadow { fill: hsl(90, 100%, 20%); }
     .graveLeft { fill: hsl(0, 0%, 40%); }
@@ -125,15 +118,11 @@
 .drivingHouseLeft {
     .wallSide { fill: hsl(281, 16%, 53%); }
     .wallFront { fill: hsl(281, 25%, 64%); }
-    .leaves { fill: hsl(120, 33%, 32%); }
-    .trunk { fill: hsl(44, 24%, 44%); }
 }
 
 .drivingHouseRight {
     .wallSide { fill: hsl(281, 16%, 53%); }
     .wallFront { fill: hsl(281, 25%, 64%); }
-    .leaves { fill: hsl(120, 33%, 32%); }
-    .trunk { fill: hsl(44, 24%, 44%); }
 }
 
 .elCerritoFar {
@@ -146,7 +135,6 @@
 }
 
 .elCerritoNear {
-    .bushBack { fill: hsl(149, 17%, 45%); }
     .houseLeftSide { fill: hsl(209, 10%, 55%); }
     .houseLeftFront { fill: hsl(202, 5%, 46%); }
     .houseCentre { fill: hsl(60, 15%, 61%); }
@@ -154,7 +142,6 @@
     .houseRightSide { fill: hsl(297, 9%, 56%); }
     .roofFront { fill: hsl(14, 17%, 48%); }
     .roofTop { fill: hsl(16, 28%, 58%); }
-    .bushFront { fill: hsl(149, 21%, 57%); }
     .door { fill: hsl(38, 12%, 55%); }
     .window { fill: hsl(170, 15%, 53%); }
 }
@@ -278,6 +265,10 @@
     .urchinFront { fill: hsl(270, 50%, 60%); }
 }
 
+.pampasFar {
+    .hill { fill: hsl(0, 13%, 42%); }
+}
+
 .publicFar {
     .wallFront { fill: hsl(299, 28%, 69%); }
     .wallSide { fill: hsl(298, 19%, 60%); }
@@ -387,8 +378,6 @@
     .doorRear { fill: hsl(42, 19%, 44%); }
     .roofTopRear { fill: hsl(147, 8%, 28%); }
     .foundationMiddle { fill: hsl(318, 6%, 45%); }
-    .bushRear { fill: hsl(133, 27%, 36%); }
-    .bushFront { fill: hsl(133, 27%, 42%); }
     .wallMiddleLight { fill: hsl(320, 45%, 69%); }
     .wallMiddleDark { fill: hsl(320, 34%, 64%); }
     .trimMiddleDark { fill: hsl(74, 21%, 61%); }
@@ -437,8 +426,6 @@
 }
 
 .tennisCourt {
-    .treeFront { fill: hsl(121, 25%, 48%); }
-    .treeRear { fill: hsl(121, 29%, 54%); }
     .court { fill: hsl(220, 51%, 55%); }
     .stripeDisplayLine { stroke: hsl(0, 0%, 100%); }
     .pole { fill: hsl(220, 1%, 46%); }

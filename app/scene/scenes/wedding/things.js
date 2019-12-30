@@ -37,7 +37,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [FOREBODING_TREES__MIDDLE]: {
             yIndex: 2,
-            xPosition: 9.5,
+            xPosition: 9.75,
             scaleFactor: 0.5,
             flipHorizontal: true
         },

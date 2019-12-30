@@ -1,6 +1,4 @@
 .oaklandHouse#{$suffix} {
-    .leaves { fill: hsl(120, 33%, 32%); }
-    .trunk { fill: hsl(44, 24%, 44%); }
     .trimFront { fill: hsl(33, 34%, 51%); }
     .trimSide { fill: hsl(33, 31%, 44%); }
     .door { fill: hsl(34, 27%, 36%); }
@@ -9,10 +7,6 @@
     .windowFront { fill: hsl(183, 56%, 64%); }
     .windowSide { fill: hsl(183, 44%, 58%); }
     .windowDisplayLine { stroke: hsl(182, 32%, 33%); }
-    .bushRear { fill: hsl(129, 30%, 36%); }
-    .bushFront { fill: hsl(129, 30%, 42%); }
-    .topiaryRear { fill: hsl(119, 25%, 50%); }
-    .topiaryFront { fill: hsl(119, 31%, 55%); }
     .roofSide { fill: hsl(0, 20%, 50%); }
     .roofBelow { fill: hsl(0, 20%, 43%); }
     .roofTop { fill: hsl(0, 30%, 56%); }
