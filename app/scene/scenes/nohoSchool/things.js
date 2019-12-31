@@ -21,8 +21,7 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [SCHOOL_BACKDROP]: {
             xPosition: 5.5,
-            scaleFactor: 0.66,
-            trimBottom: 0.05
+            scaleFactor: 0.66
         },
         [BRICK_WALL]: {
             xPosition: 5.5,

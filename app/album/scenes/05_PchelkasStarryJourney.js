@@ -60,9 +60,9 @@ import { POPULAR_GIRL } from '../../constants/scene/actors/sasha'
 import { ASLEEP } from '../../constants/scene/actors/songs'
 import { PRINCIPAL } from '../../constants/scene/actors/tristan'
 import {
-    SCHOOL_BACKDROP,
     BRICK_WALL,
-    VALLEY__QUAD
+    NOHO_HOUSES_BACKDROP,
+    SCHOOL_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
     DOGS_SKETCH,
@@ -267,7 +267,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [SCHOOL_BACKDROP]: true,
+                [NOHO_HOUSES_BACKDROP]: true,
                 [BRICK_WALL]: true
             },
             [CUTOUT]: {
@@ -309,7 +309,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY__QUAD]: true,
+                [SCHOOL_BACKDROP]: true,
                 [BRICK_WALL]: true
             },
             [BUBBLE]: {

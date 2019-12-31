@@ -14,7 +14,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [CITY_BACKDROP]: {
             xPosition: 5.5,
-            scaleFactor: 0.7
+            scaleFactor: 0.7,
+            trimBottom: 0.15
         }
     },
     [CUTOUT]: {

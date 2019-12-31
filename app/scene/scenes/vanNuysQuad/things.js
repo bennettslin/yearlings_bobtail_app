@@ -21,7 +21,7 @@ const ARRANGEMENTS_THINGS = {
         [VALLEY__QUAD]: {
             xPosition: 5.5,
             scaleFactor: 0.65,
-            trimBottom: 0.2
+            trimBottom: 0.02
         }
     },
     [BUBBLE]: {
