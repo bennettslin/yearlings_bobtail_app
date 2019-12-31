@@ -20,14 +20,6 @@
     .claw { fill: hsl(180, 20%, 50%); }
 }
 
-.bedroomDesk {
-    .deskSide { fill: hsl(32, 14%, 27%); }
-    .drawer { fill: hsl(42, 34%, 68%); }
-    .deskFront { fill: hsl(38, 22%, 52%); }
-    .mount { fill: hsl(66, 16%, 53%); }
-    .handle { fill: hsl(72, 23%, 71%); }
-}
-
 .bedroomFence {
     .fenceTop { fill: hsl(60, 50%, 60%); }
     .fenceFront { fill: hsl(30, 50%, 60%); }
@@ -37,21 +29,6 @@
     .postSide { fill: hsl(29, 23%, 23%); }
     .frame { fill: hsl(29, 19%, 44%); }
     .postFront { fill: hsl(30, 23%, 33%); }
-}
-
-.captainBed {
-    .panelFront { fill: hsl(39, 6%, 49%); }
-    .panelSide { fill: hsl(270, 12%, 40%); }
-    .panelTop { fill: hsl(132, 23%, 44%); }
-    .frameTop { fill: hsl(51, 15%, 58%); }
-    .frameFront { fill: hsl(38, 20%, 47%); }
-    .frameSide { fill: hsl(54, 15%, 37%); }
-    .drawerSide { fill: hsl(271, 27%, 64%); }
-    .drawerTop { fill: hsl(85, 23%, 57%); }
-    .drawerFront { fill: hsl(49, 50%, 47%); }
-    .mount { fill: hsl(83, 26%, 32%); }
-    .handle { fill: hsl(85, 23%, 57%); }
-    .ball { fill: hsl(39, 6%, 49%); }
 }
 
 .caveShadows {

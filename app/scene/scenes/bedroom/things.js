@@ -49,22 +49,22 @@ const ARRANGEMENTS_THINGS = {
             xPosition: 10,
             zOffset: 3.5,
             scaleFactor: 0.225,
-            perspective: 70,
+            perspective: 140,
             rotate: -15,
             rotateY: 300,
             skewX: -15,
-            skewY: 10
+            skewY: 9
         },
         [BLOOM_COUNTY_POSTER]: {
             yIndex: 5,
             xPosition: 10,
             zOffset: 3.5,
             scaleFactor: 0.225,
-            perspective: 70,
+            perspective: 140,
             rotate: -15,
             rotateY: 300,
             skewX: -15,
-            skewY: 10
+            skewY: 9
         }
     },
     [DOOR]: {
@@ -90,13 +90,13 @@ const ARRANGEMENTS_THINGS = {
     [PANEL]: {
         [BEDROOM_DESK]: {
             yIndex: 4,
-            xPosition: 3,
+            xPosition: 3.15,
             scaleFactor: 0.225
         },
         [CAPTAIN_BED]: {
             yIndex: 5,
             xPosition: 7.5,
-            zOffset: -0.25,
+            zOffset: 0,
             scaleFactor: 0.2
         },
         [BEDROOM_FENCE]: {

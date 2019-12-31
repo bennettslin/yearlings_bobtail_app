@@ -38,11 +38,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Fix captain bed angle.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Draw buildings for Oakland front and side backdrops, change city backdrop to campus backdrop by moving distant layers to Los Angeles backdrop.`,
         workedHours: 0,
         neededHours: 1

@@ -5131,5 +5131,10 @@ export default [
         taskName: `Consolidate styles.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Fix captain bed angle.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
