@@ -1,7 +1,6 @@
 # Other shared
 rocks: cave, campfire, ocean
 ocean plants
-trash can
 exhaust
 road (taiwan bridge, walking thought)
 
