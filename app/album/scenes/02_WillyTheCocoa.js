@@ -58,9 +58,9 @@ import {
 import { REASSURING_ENCHANTED } from '../../constants/scene/actors/christopherBennettWilly'
 import { GANGBANGER } from '../../constants/scene/actors/songs'
 import {
-    NOHO_HOUSES_BACKDROP,
+    VALLEY_CLOSER_BACKDROP,
     FENCE_BACKDROP,
-    VALLEY__FREEWAY
+    VALLEY_PANORAMA_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
 import {
@@ -106,7 +106,7 @@ export default [
         cubes: FREEWAY_KEY,
         presences: {
             [BACKDROP]: {
-                [VALLEY__FREEWAY]: true
+                [VALLEY_PANORAMA_BACKDROP]: true
             },
             [CUTOUT]: {
                 [OVERPASS_SIGN_BACK]: true
@@ -128,7 +128,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [VALLEY__FREEWAY]: true
+                [VALLEY_PANORAMA_BACKDROP]: true
             },
             [CUTOUT]: {
                 [SHOPPING_CART]: true,
@@ -164,7 +164,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true,
+                [VALLEY_CLOSER_BACKDROP]: true,
                 [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
@@ -238,7 +238,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true,
+                [VALLEY_CLOSER_BACKDROP]: true,
                 [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {

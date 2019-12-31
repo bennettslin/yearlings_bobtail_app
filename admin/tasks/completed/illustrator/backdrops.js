@@ -20,12 +20,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'nohoHousesBackdrop',
+        taskName: 'valleyCloserBackdrop',
         workedHours: 1.5,
         neededHours: 1.5
     },
     {
-        taskName: 'schoolBackdrop',
+        taskName: 'valleyFurtherBackdrop',
         workedHours: 1.5,
         neededHours: 1.5
     },

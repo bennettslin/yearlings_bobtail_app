@@ -4,7 +4,7 @@ import {
     FLAT
 } from '../../../constants/scene/things'
 import {
-    NOHO_HOUSES_BACKDROP,
+    VALLEY_CLOSER_BACKDROP,
     FENCE_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 import { FIRE_HYDRANT } from '../../../constants/scene/things/cutouts'
@@ -14,7 +14,7 @@ import {
 } from '../../../constants/scene/things/flats'
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [NOHO_HOUSES_BACKDROP]: {
+        [VALLEY_CLOSER_BACKDROP]: {
             xPosition: 5.5,
             scaleFactor: 0.7
         },

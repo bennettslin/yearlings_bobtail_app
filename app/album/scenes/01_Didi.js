@@ -44,9 +44,9 @@ import {
     SNICKERING
 } from '../../constants/scene/actors/esther'
 import {
-    NOHO_HOUSES_BACKDROP,
+    VALLEY_CLOSER_BACKDROP,
     FENCE_BACKDROP,
-    SCHOOL_BACKDROP,
+    VALLEY_FURTHER_BACKDROP,
     BRICK_WALL
 } from '../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../constants/scene/things/bubbles'
@@ -75,7 +75,7 @@ export default [
         description: `North Hollywood houses.`,
         presences: {
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true,
+                [VALLEY_CLOSER_BACKDROP]: true,
                 [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
@@ -108,7 +108,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true,
+                [VALLEY_CLOSER_BACKDROP]: true,
                 [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
@@ -141,7 +141,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [SCHOOL_BACKDROP]: true,
+                [VALLEY_FURTHER_BACKDROP]: true,
                 [BRICK_WALL]: true
             },
             [BUBBLE]: {
@@ -172,7 +172,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true,
+                [VALLEY_CLOSER_BACKDROP]: true,
                 [FENCE_BACKDROP]: true
             },
             [CUTOUT]: {
@@ -201,7 +201,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NOHO_HOUSES_BACKDROP]: true,
+                [VALLEY_CLOSER_BACKDROP]: true,
                 [FENCE_BACKDROP]: true
             },
             [CARDBOARD]: {

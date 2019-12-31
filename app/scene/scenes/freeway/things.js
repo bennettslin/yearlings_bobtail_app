@@ -3,7 +3,7 @@ import {
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { VALLEY__FREEWAY } from '../../../constants/scene/things/backdrops'
+import { VALLEY_PANORAMA_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     SHOPPING_CART,
     OVERPASS_SIGN_BACK
@@ -12,7 +12,7 @@ import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [VALLEY__FREEWAY]: {
+        [VALLEY_PANORAMA_BACKDROP]: {
             xPosition: 5.5,
             scaleFactor: 0.65,
             trimBottom: 0.05

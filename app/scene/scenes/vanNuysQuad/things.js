@@ -4,7 +4,7 @@ import {
     CARDBOARD,
     CUTOUT
 } from '../../../constants/scene/things'
-import { VALLEY__QUAD } from '../../../constants/scene/things/backdrops'
+import { VALLEY_PANORAMA_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     ESCAPE_POD_SKETCH,
     SKETCHBOOK__ESCAPE_POD
@@ -18,7 +18,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [VALLEY__QUAD]: {
+        [VALLEY_PANORAMA_BACKDROP]: {
             xPosition: 5.5,
             scaleFactor: 0.65,
             trimBottom: 0.02

@@ -6,7 +6,7 @@ import {
     FIXTURE
 } from '../../../constants/scene/things'
 import {
-    SCHOOL_BACKDROP,
+    VALLEY_FURTHER_BACKDROP,
     BRICK_WALL
 } from '../../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../../constants/scene/things/bubbles'
@@ -19,7 +19,7 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
-        [SCHOOL_BACKDROP]: {
+        [VALLEY_FURTHER_BACKDROP]: {
             xPosition: 5.5,
             scaleFactor: 0.66
         },
