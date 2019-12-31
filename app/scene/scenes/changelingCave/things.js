@@ -16,7 +16,7 @@ import {
 const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [CAMPFIRE]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 2.5,
             scaleFactor: 0.25
         }
@@ -25,7 +25,7 @@ const ARRANGEMENTS_THINGS = {
         [FAMILY_HOUSE]: {
             yIndex: 0,
             xPosition: 1.5,
-            scaleFactor: 0.4
+            scaleFactor: 0.6
         }
     },
     [PANEL]: {

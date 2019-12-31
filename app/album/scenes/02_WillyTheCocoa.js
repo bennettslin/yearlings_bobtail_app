@@ -295,6 +295,10 @@ export default [
                     instance: REASSURING_ENCHANTED
                 }
             },
+            [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
+                [VALLEY_CLOSER_BACKDROP]: true
+            },
             [CUTOUT]: {
                 [CAMPFIRE]: true
             },
