@@ -1,43 +1,44 @@
 .foliage#{$suffix} {
-    .foliageFar {fill: hsl(105, 20%, 39%); }
-    .foliageMiddle {fill: hsl(104, 21%, 44%); }
-    .foliageNear {fill: hsl(103, 22%, 49%); }
-    .foliageNearest {fill: hsl(102, 23%, 54%); }
-    .foliageTaiwan {fill: hsl(337, 23%, 54%); }
+    .foliageFar {fill: hsl(105, 20%, 53%); }
+    .foliageMiddle {fill: hsl(105, 21%, 49%); }
+    .foliageNear {fill: hsl(105, 22%, 45%); }
+    .foliageNearest {fill: hsl(105, 23%, 41%); }
 
-    .cactusFurther { fill: hsl(111, 18%, 46%); }
-    .cactusCloser { fill: hsl(111, 18%, 56%); }
+    .palmFrond { fill: hsl(81, 22%, 46%); }
+    .palmTrunk { fill: hsl(35, 24%, 35%); }
 
-    .palmFrond { fill: hsl(111, 18%, 46%); }
-    .palmTrunk { fill: hsl(35, 32%, 35%); }
+    .cactusFurther { fill: hsl(65, 23%, 46%); }
+    .cactusCloser { fill: hsl(65, 23%, 51%); }
     
-    .treeFurther { fill: hsl(111, 18%, 46%); }
-    .treeCloser { fill: hsl(111, 18%, 56%); }
-    .treeTrunkCloser { fill: hsl(35, 32%, 51%); }
-    .treeTrunk { fill: hsl(35, 32%, 46%); }
-    .treeTrunkFurther { fill: hsl(35, 32%, 41%); }
+    .treeFurther { fill: hsl(121, 24%, 51%); }
+    .treeCloser { fill: hsl(121, 24%, 56%); }
+    .treeTrunkCloser { fill: hsl(35, 22%, 40%); }
+    .treeTrunk { fill: hsl(35, 22%, 36%); }
+    .treeTrunkFurther { fill: hsl(35, 22%, 32%); }
 
-    .plantFurther { fill: hsl(150, 18%, 46%); }
-    .plantMiddle { fill: hsl(150, 18%, 51%); }
-    .plantCloser { fill: hsl(150, 18%, 56%); }
-    .plantTrunk { fill: hsl(70, 32%, 46%); }
+    .bushFurther { fill: hsl(139, 24%, 48%); }
+    .bushCloser { fill: hsl(139, 24%, 52%); }
 
-    .bushFurther { fill: hsl(111, 18%, 46%); }
-    .bushCloser { fill: hsl(111, 18%, 56%); }
+    .cypressFurther { fill: hsl(158, 24%, 42%); }
+    .cypressCloser { fill: hsl(158, 24%, 46%); }
 
-    .cypressFurther { fill: hsl(111, 18%, 46%); }
-    .cypressCloser { fill: hsl(111, 18%, 56%); }
+    .shrubFurther { fill: hsl(175, 25%, 41%); }
+    .shrubCloser { fill: hsl(175, 25%, 46%); }
 
-    .shrubFurther { fill: hsl(111, 18%, 46%); }
-    .shrubCloser { fill: hsl(111, 18%, 56%); }
+    .plantFurther { fill: hsl(149, 28%, 46%); }
+    .plantMiddle { fill: hsl(151, 28%, 49%); }
+    .plantCloser { fill: hsl(153, 28%, 52%); }
+    .plantTrunk { fill: hsl(23, 22%, 36%); }
 
-    .bonsaiFurther { fill: hsl(41, 28%, 46%); }
-    .bonsaiMiddle { fill: hsl(41, 28%, 51%); }
-    .bonsaiCloser { fill: hsl(41, 28%, 56%); }
+    .foliageTaiwan {fill: hsl(5, 23%, 54%); }
 
-    .taiwanTreeFurthest { fill: hsl(359, 20%, 60%); }
-    .taiwanTreeFurther { fill: hsl(359, 20%, 64%); }
-    .taiwanTreeMiddle { fill: hsl(359, 20%, 68%); }
-    .taiwanTreeCloser { fill: hsl(359, 20%, 72%); }
-    .taiwanTreeClosest { fill: hsl(359, 20%, 76%); }
+    .taiwanTreeFurthest { fill: hsl(331, 25%, 68%); }
+    .taiwanTreeFurther { fill: hsl(331, 25%, 66%); }
+    .taiwanTreeMiddle { fill: hsl(331, 25%, 64%); }
+    .taiwanTreeCloser { fill: hsl(331, 25%, 62%); }
+    .taiwanTreeClosest { fill: hsl(331, 25%, 60%); }
+
+    .bonsaiFurther { fill: hsl(290, 23%, 56%); }
+    .bonsaiMiddle { fill: hsl(290, 23%, 61%); }
+    .bonsaiCloser { fill: hsl(290, 23%, 66%); }
 }

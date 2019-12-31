@@ -1,12 +1,12 @@
 .bedroomFurniture#{$suffix} {
-    .frameDarker { fill: #706455; }
-    .frameMedium { fill: #8f7c62; }
-    .frameLight { fill: #a08d6b; }
-    .frameDark { fill: #807161; }
-    .drawerDark { fill: #ada185; }
-    .drawerMedium { fill: #c2b595; }
-    .drawerLight { fill: #d9c9a7; }
-    .mount { fill: #a1a691; }
-    .handle { fill: #ced4ba; }
-    .ball { fill: #847f76; }
+    .frameDarker { fill: hsl(33, 14%, 39%); }
+    .frameMedium { fill: hsl(35, 19%, 47%); }
+    .frameLight { fill: hsl(38, 22%, 52%); }
+    .frameDark { fill: hsl(31, 14%, 44%); }
+    .drawerDark { fill: hsl(42, 20%, 60%); }
+    .drawerMedium { fill: hsl(43, 27%, 67%); }
+    .drawerLight { fill: hsl(41, 40%, 75%); }
+    .mount { fill: hsl(74, 11%, 61%); }
+    .handle { fill: hsl(74, 23%, 78%); }
+    .ball { fill: hsl(39, 6%, 49%); }
 }

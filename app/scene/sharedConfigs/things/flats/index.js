@@ -71,9 +71,10 @@ import {
     GRAVE__SHARED,
     MOUNTAIN__SHARED
 } from '../../../sharedStyles/outdoor'
+import { ALL_VEHICLES__SHARED } from '../../../sharedStyles/vehicles'
 
 export default {
-    [BEDROOM_BUS]: null,
+    [BEDROOM_BUS]: ALL_VEHICLES__SHARED,
     [BEDROOM_SIREN]: null,
     [BERKELEY_BUILDING_TALL]: BERKELEY_BUILDING__SHARED,
     [BERKELEY_BUILDING_WIDE]: BERKELEY_BUILDING__SHARED,
@@ -119,7 +120,7 @@ export default {
     [FAMILY_HOUSE]: FOLIAGE__SHARED,
     [FERRIS_WHEEL]: null,
     [FOREBODING_TREES]: FOLIAGE__SHARED,
-    [GO_KART_TRACK]: null,
+    [GO_KART_TRACK]: ALL_VEHICLES__SHARED,
     [NOHO_HOUSE_LEFT]: FOLIAGE__SHARED,
     [NOHO_HOUSE_RIGHT]: FOLIAGE__SHARED,
     [OAKLAND_FLAG]: null,

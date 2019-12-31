@@ -1,19 +1,19 @@
 .mountain#{$suffix} {
-    .mountainFar { fill: hsl(340, 13%, 52%); }
+    .mountainFar { fill: hsl(340, 12%, 51%); }
     .mountain { fill: hsl(340, 13%, 47%); }
-    .mountainNear { fill: hsl(340, 13%, 42%); }
+    .mountainNear { fill: hsl(340, 14%, 43%); }
 
-    .taiwanMountainFarthest { fill: hsl(218, 13%, 62%); }
-    .taiwanMountainFarther { fill: hsl(218, 13%, 57%); }
-    .taiwanMountainFar { fill: hsl(218, 13%, 52%); }
-    .taiwanMountain { fill: hsl(218, 13%, 47%); }
-    .taiwanMountainNear { fill: hsl(218, 13%, 42%); }
+    .meadowFar { fill: hsl(92, 28%, 38%); }
+    .meadowMiddle { fill: hsl(92, 28%, 36%); }
+    .meadowNear { fill: hsl(92, 28%, 34%); }
 
-    .meadowFar { fill: hsl(85, 20%, 52%); }
-    .meadowMiddle { fill: hsl(85, 20%, 55%); }
-    .meadowNear { fill: hsl(85, 20%, 58%); }
+    .taiwanMountainFarthest { fill: hsl(198, 12%, 55%); }
+    .taiwanMountainFarther { fill: hsl(198, 13%, 51%); }
+    .taiwanMountainFar { fill: hsl(198, 14%, 47%); }
+    .taiwanMountain { fill: hsl(198, 15%, 39%); }
+    .taiwanMountainNear { fill: hsl(198, 16%, 35%); }
 
-    .taiwanMeadowFar { fill: hsl(240, 20%, 52%); }
-    .taiwanMeadowMiddle { fill: hsl(240, 20%, 55%); }
-    .taiwanMeadowNear { fill: hsl(240, 20%, 58%); }
+    .taiwanMeadowFar { fill: hsl(198, 10%, 38%); }
+    .taiwanMeadowMiddle { fill: hsl(198, 12%, 35%); }
+    .taiwanMeadowNear { fill: hsl(198, 14%, 32%); }
 }

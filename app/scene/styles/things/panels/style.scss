@@ -70,18 +70,15 @@
 
 .goKartExterior {
     .cap { fill: hsl(60, 20%, 50%); }
-    .tank { fill: hsl(40, 60%, 50%); }
-    .cooler { fill: hsl(220, 60%, 50%); }
+    .cooler { fill: hsl(217, 18%, 31%); }
+    .tank { fill: hsl(37, 25%, 73%); }
     .rod { fill: hsl(0, 0%, 60%); }
-    .block { fill: hsl(30, 50%, 40%); }
-    .engine { fill: hsl(120, 50%, 60%); }
-    .ring { fill: hsl(180, 100%, 90%); }
     .frame { fill: hsl(0, 0%, 40%); }
-    .tire { fill: hsl(0, 0%, 20%); }
-    .hubcap { fill: hsl(240, 33%, 70%); }
-    .windshield { fill: hsl(0, 0%, 80%); }
-    .bumper { fill: hsl(0, 20%, 50%); }
-    .chassis { fill: hsl(0, 60%, 50%); }
+    .engine { fill: hsl(0, 38%, 38%); }
+    .ring { fill: hsl(0, 16%, 26%); }
+    .hubcap { fill: hsl(0, 0%, 80%); }
+    .guard { fill: hsl(35, 20%, 83%); }
+    .body { fill: hsl(0, 40%, 49%); }
 }
 
 .goKartSeat {
@@ -153,26 +150,8 @@
     .panel { fill: hsl(60, 100%, 90%); }
 }
 
-.reattaSeat {
-    .bar { fill: hsl(268, 11%, 66%); }
-    .cushion { fill: hsl(69, 12%, 77%); }
-}
-
-.reattaSeatDown {
-    .bar { fill: hsl(268, 11%, 66%); }
-    .cushion { fill: hsl(69, 12%, 77%); }
-}
-
 .saturnExterior {
-    .chassis { fill: hsl(0, 0%, 20%); }
-    .tire { fill: hsl(0, 0%, 40%); }
-    .hubcap { fill: hsl(0, 0%, 80%); }
-    .reflection { fill: hsl(0, 0%, 100%); }
-    .windshield { fill: hsl(180, 100%, 80%); }
-    .body { fill: hsl(270, 50%, 60%); }
-    .brakeLight { fill: hsl(20, 100%, 30%); }
-    .turnLight { fill: hsl(30, 100%, 40%); }
-    .headLight { fill: hsl(60, 100%, 90%); }
+    .body { fill: hsl(262, 26%, 49%); }
     .bumper { fill: hsl(0, 0%, 60%); }
 }
 
@@ -182,11 +161,7 @@
 }
 
 .schoolbusExterior {
-    .chassis { fill: hsl(60, 100%, 10%); }
     .body { fill: hsl(60, 50%, 60%); }
-    .tire { fill: hsl(0, 0%, 27%); }
-    .hubcap { fill: hsl(0, 0%, 60%); }
-    .reflection { fill: hsl(0, 0%, 80%); }
     .trim { fill: hsl(0, 0%, 33%); }
     .door { fill: hsl(0, 0%, 40%); }
     .window { fill: hsl(180, 20%, 50%); }
@@ -194,7 +169,6 @@
     .roof { fill: hsl(0, 0%, 100%); }
     .stopLight { fill: hsl(0, 100%, 60%); }
     .visor { fill: hsl(0, 0%, 40%); }
-    .turnLight { fill: hsl(40, 60%, 50%); }
 }
 
 .schoolbusSeat {
@@ -209,26 +183,19 @@
 }
 
 .taiwanHaze {
+    stroke: none;
     .hazeRear { fill: hsla(210, 83%, 88%, 0.5); }
     .hazeFront { fill: hsla(210, 83%, 88%, 0.5); }
 }
 
 .volkswagen {
-    .chassis { fill: hsl(114, 9%, 23%); }
-    .tire { fill: hsl(60, 1%, 26%); }
-    .tireInner { fill: hsl(60, 3%, 24%); }
-    .hubcap { fill: hsl(60, 0%, 59%); }
-    .hubcapCentre { fill: hsl(60, 2%, 66%); }
     .handleRecess { fill: hsl(68, 25%, 64%); }
     .window { fill: hsl(160, 17%, 61%); }
     .windowTrim { fill: hsl(63, 24%, 29%); }
-    .body { fill: hsl(66, 70%, 66%); }
-    .bodySide { fill: hsl(58, 67%, 66%); }
-    .headLight { fill: hsl(63, 73%, 88%); }
-    .brakeLight { fill: hsl(8, 88%, 65%); }
-    .handle { fill: hsl(57, 58%, 71%); }
-    .mirrorMount { fill: hsl(59, 45%, 62%); }
-    .mirror { fill: hsl(57, 47%, 64%); }
+    .bodyDark { fill: hsl(72, 48%, 56%); }
+    .body { fill: hsl(72, 52%, 64%); }
+    .bodyLight { fill: hsl(72, 53%, 65%); }
+
 }
 
 .waitingArmchair {

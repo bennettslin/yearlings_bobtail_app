@@ -63,7 +63,10 @@ import {
     TAIWAN_RICKSHAW__SHARED,
     TAIWAN_PILLOW__SHARED
 } from '../../../sharedStyles/taiwan'
-import { REATTA__SHARED } from '../../../sharedStyles/vehicles'
+import {
+    REATTA__SHARED,
+    ALL_VEHICLES__SHARED
+} from '../../../sharedStyles/vehicles'
 
 export default {
     [BENNETT_MAT]: [
@@ -89,6 +92,7 @@ export default {
     ],
     [BENNETT_ODIN_RICKSHAW]: [
         ALL_PEOPLE__SHARED,
+        ALL_VEHICLES__SHARED,
         BENNETT,
         ODIN__SHARED,
         TAIWAN_RICKSHAW__SHARED
@@ -156,7 +160,8 @@ export default {
         SNOWGLOBE__SHARED,
         BENNETT,
         MIRIAM,
-        ALL_PEOPLE__SHARED
+        ALL_PEOPLE__SHARED,
+        ALL_VEHICLES__SHARED
     ],
     [SNOWGLOBE_PAST]: [
         SNOWGLOBE__SHARED,

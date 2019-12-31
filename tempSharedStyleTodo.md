@@ -1,7 +1,7 @@
 # Other shared
 rocks: cave, campfire, ocean
+ocean plants
 trash can
-tire
 exhaust
 road (taiwan bridge, walking thought)
 
@@ -10,7 +10,6 @@ roof
 door
 window
 stairs
-reatta (lizThought)
 
 # Improvements
 elCerritoTree (make multiple parts)
@@ -21,3 +20,4 @@ campfire
 stageLights
 pharmacyAisle
 porch cube post colour
+cave shadows

@@ -5136,5 +5136,10 @@ export default [
         taskName: `Fix captain bed angle.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Shared foliage, mountain, and other styles.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

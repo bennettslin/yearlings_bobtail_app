@@ -53,6 +53,10 @@ import {
     SKETCH_DOGS__SHARED,
     SKETCH_PEOPLE__SHARED
 } from '../../../sharedStyles/sketch'
+import {
+    ALL_VEHICLES__SHARED,
+    REATTA__SHARED
+} from '../../../sharedStyles/vehicles'
 
 export default {
     [APART_SKETCH]: SKETCH_PEOPLE__SHARED,
@@ -93,7 +97,9 @@ export default {
         BENNETT,
         LIZ,
         ALL_PEOPLE__SHARED,
-        FOLIAGE__SHARED
+        ALL_VEHICLES__SHARED,
+        FOLIAGE__SHARED,
+        REATTA__SHARED
     ],
     [PHARMACY_CEL]: null,
     [SIBLING_CONSTELLATION]: SKETCH_PEOPLE__SHARED,

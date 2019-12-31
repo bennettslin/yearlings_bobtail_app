@@ -33,11 +33,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Shared mountain and foliage styles.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Draw buildings for Oakland front and side backdrops, change city backdrop to campus backdrop by moving distant layers to Los Angeles backdrop.`,
         workedHours: 0,
         neededHours: 1

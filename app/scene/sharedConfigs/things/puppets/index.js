@@ -41,7 +41,10 @@ import {
     PEAFOWL__SHARED
 } from '../../../sharedStyles/animals'
 import { SKETCHBOOK__SHARED } from '../../../sharedStyles/sketch'
-import { REATTA__SHARED } from '../../../sharedStyles/vehicles'
+import {
+    ALL_VEHICLES__SHARED,
+    REATTA__SHARED
+} from '../../../sharedStyles/vehicles'
 export default {
     [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_CAMPUS]: ODIN_GHOST__SHARED,
@@ -118,6 +121,7 @@ export default {
     [PUPPET_REATTA]: [
         REATTA__SHARED,
         ALL_PEOPLE__SHARED,
+        ALL_VEHICLES__SHARED,
         BENNETT,
         MIRIAM
     ]
