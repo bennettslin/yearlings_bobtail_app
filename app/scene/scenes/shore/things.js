@@ -37,12 +37,12 @@ const ARRANGEMENTS_THINGS = {
         [FERRIS_WHEEL]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.4
+            scaleFactor: 0.5
         },
         [ROLLER_COASTER]: {
             yIndex: 1,
-            xPosition: 2,
-            scaleFactor: 0.4
+            xPosition: 1.25,
+            scaleFactor: 0.5
         }
     }
 }

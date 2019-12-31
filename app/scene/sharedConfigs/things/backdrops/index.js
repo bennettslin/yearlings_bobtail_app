@@ -65,6 +65,7 @@ export default {
     ],
     [ROAD_PRESENT]: ROAD__SHARED,
     [SHORE_BUOY_BACKDROP]: [
+        FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
         SHORE__SHARED
     ],

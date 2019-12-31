@@ -4,6 +4,7 @@ ocean plants
 exhaust
 road (taiwan bridge, walking thought)
 
+fence
 nohoHouses
 roof
 door
@@ -19,4 +20,5 @@ stageLights
 pharmacyAisle
 porch cube post colour
 cave shadows
-enlarge family house and add fence and valley backdrop for cave scene
+carnival stuff, spread out
+push taiwan gate further left so Taiwan tree shows more

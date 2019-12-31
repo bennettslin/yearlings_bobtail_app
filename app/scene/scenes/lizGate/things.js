@@ -108,12 +108,12 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
     [FLAT]: {
         [PUBLIC_FAR__LIZ_GATE]: {
             yIndex: 1,
-            xPosition: 9.5,
+            xPosition: 9.75,
             scaleFactor: 0.4,
             flipHorizontal: true
         },
         [PUBLIC_NEAR__LIZ_GATE]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 11,
             scaleFactor: 0.5,
             flipHorizontal: true
