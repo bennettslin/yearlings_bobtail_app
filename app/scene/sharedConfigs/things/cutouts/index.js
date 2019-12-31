@@ -74,7 +74,8 @@ import { MONITOR__SHARED } from '../../../sharedStyles/instruments'
 import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
-    FREEWAY_SIGN__SHARED
+    FREEWAY_SIGN__SHARED,
+    TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../sharedStyles/paper'
 import { BUDDHA_SHRINE__SHARED } from '../../../sharedStyles/taiwan'
@@ -133,7 +134,8 @@ export default {
     [TRASH_CAN]: [
         BANANA__SHARED,
         GARBAGE_BAG__SHARED,
-        PAPER_BAG__SHARED
+        PAPER_BAG__SHARED,
+        TRASH_CAN__SHARED
     ],
     [TRAY_PILE]: TRAY__SHARED,
     [TWIN_STREETLAMP]: LAMPPOST__SHARED,

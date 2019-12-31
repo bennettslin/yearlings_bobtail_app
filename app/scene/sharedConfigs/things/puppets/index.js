@@ -40,7 +40,7 @@ import {
     OPAL__SHARED,
     PEAFOWL__SHARED
 } from '../../../sharedStyles/animals'
-import { SKETCHBOOK__SHARED } from '../../../sharedStyles/sketch'
+import { SKETCHBOOK__SHARED } from '../../../sharedStyles/paper'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED

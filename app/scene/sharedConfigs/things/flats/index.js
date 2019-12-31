@@ -69,7 +69,8 @@ import {
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
     GRAVE__SHARED,
-    MOUNTAIN__SHARED
+    MOUNTAIN__SHARED,
+    TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
 import { ALL_VEHICLES__SHARED } from '../../../sharedStyles/vehicles'
 
@@ -121,7 +122,10 @@ export default {
     [FERRIS_WHEEL]: null,
     [FOREBODING_TREES]: FOLIAGE__SHARED,
     [GO_KART_TRACK]: ALL_VEHICLES__SHARED,
-    [NOHO_HOUSE_LEFT]: FOLIAGE__SHARED,
+    [NOHO_HOUSE_LEFT]: [
+        FOLIAGE__SHARED,
+        TRASH_CAN__SHARED
+    ],
     [NOHO_HOUSE_RIGHT]: FOLIAGE__SHARED,
     [OAKLAND_FLAG]: null,
     [OAKLAND_HOUSE_LEFT]: [

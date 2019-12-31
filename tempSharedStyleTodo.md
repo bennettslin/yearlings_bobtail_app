@@ -15,7 +15,6 @@ stairs
 elCerritoTree (make multiple parts)
 oceanBottomFar
 oceanFloorFar
-buddha
 campfire
 stageLights
 pharmacyAisle

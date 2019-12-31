@@ -379,16 +379,12 @@
 }
 
 .trashCan {
-    .can { fill: hsl(0, 0%, 60%); }
-    .ridge { fill: hsl(0, 0%, 55%); }
-    .mount { fill: hsl(0, 0%, 65%); }
-    .handle { fill: hsl(0, 0%, 70%); }
-    .boxLeft { fill: hsl(0, 36%, 61%); }
-    .boxRear { fill: hsl(126, 52%, 68%); }
-    .boxFront { fill: hsl(278, 47%, 70%); }
-    .boxRightMedium { fill: hsl(215, 67%, 66%); }
-    .boxRightDark { fill: hsl(216, 48%, 58%); }
-    .boxRightLight { fill: hsl(215, 77%, 69%); }
+    .boxLeft { fill: hsl(0, 36%, 51%); }
+    .boxRear { fill: hsl(126, 36%, 58%); }
+    .boxFront { fill: hsl(278, 37%, 60%); }
+    .boxRightMedium { fill: hsl(215, 37%, 56%); }
+    .boxRightDark { fill: hsl(216, 38%, 48%); }
+    .boxRightLight { fill: hsl(215, 37%, 59%); }
 }
 
 .waitingRoomPlant {
