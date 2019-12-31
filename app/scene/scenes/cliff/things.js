@@ -12,7 +12,7 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [CLIFF_TREE]: {
             yIndex: 1,
-            xPosition: 2,
+            xPosition: 1,
             scaleFactor: 0.5
         }
     },

@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
     [CUTOUT]: {
         [EL_CERRITO_TREE]: {
             yIndex: 1,
-            xPosition: 2,
+            xPosition: 1,
             scaleFactor: 0.5
         }
     },
@@ -76,7 +76,7 @@ const ARRANGEMENTS_THINGS = {
         },
         [REATTA_EXTERIOR]: {
             yIndex: 5,
-            xPosition: 4.1,
+            xPosition: 4.3,
             scaleFactor: 0.35
         }
     }
@@ -86,8 +86,8 @@ export const THINGS_EL_CERRITO_REATTA = {
     [PUPPET]: {
         [PUPPET_REATTA]: {
             yIndex: 3,
-            xPosition: 9.5,
-            zOffset: -0.025,
+            xPosition: 9.75,
+            zOffset: -0.05,
             scaleFactor: 0.6
         }
     }

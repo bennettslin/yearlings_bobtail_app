@@ -14,7 +14,8 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [LOS_ANGELES_BACKDROP]: {
             xPosition: 5.5,
-            scaleFactor: 0.7
+            scaleFactor: 0.7,
+            trimBottom: 0.02
         }
     },
     [CUTOUT]: {

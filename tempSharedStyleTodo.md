@@ -19,3 +19,4 @@ stageLights
 pharmacyAisle
 porch cube post colour
 cave shadows
+enlarge family house and add fence and valley backdrop for cave scene

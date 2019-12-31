@@ -5139,7 +5139,7 @@ export default [
     },
     {
         taskName: `Shared foliage, mountain, and other styles.`,
-        workedHours: 8,
-        neededHours: 8
+        workedHours: 10,
+        neededHours: 10
     }
 ]
