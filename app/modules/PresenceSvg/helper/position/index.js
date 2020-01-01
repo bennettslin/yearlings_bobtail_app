@@ -75,7 +75,7 @@ export const getXYForPresence = ({
     cubesKey,
 
     // Where to centre on the xIndex axis. Can be a float.
-    xPosition,
+    xPosition = 5.5,
 
     // Where to position on the yIndex axis.
     yIndex,
