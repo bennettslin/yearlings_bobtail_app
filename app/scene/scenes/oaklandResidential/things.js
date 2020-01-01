@@ -16,7 +16,7 @@ import {
     RESIDENTIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,
@@ -68,5 +68,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

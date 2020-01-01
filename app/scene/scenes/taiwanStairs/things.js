@@ -8,7 +8,7 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { IRON_GATE_LOW } from '../../../constants/scene/things/doors'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
@@ -30,5 +30,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

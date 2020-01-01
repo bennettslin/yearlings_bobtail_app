@@ -10,7 +10,7 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { CINEMA_DOORS } from '../../../constants/scene/things/doors'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [MARA_MEMENTO_POSTER]: {
             yIndex: 4,
@@ -47,5 +47,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

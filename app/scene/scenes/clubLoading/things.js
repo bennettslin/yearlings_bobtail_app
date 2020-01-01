@@ -5,7 +5,7 @@ import {
 import { CLUB_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import { DRUMS_STACKED__CLUB } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [DOOR]: {
         [CLUB_DOOR_OPEN]: {
             yIndex: 3,
@@ -21,5 +21,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

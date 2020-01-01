@@ -5,7 +5,7 @@ import {
 import { CROWD_BACK } from '../../../constants/scene/things/panels'
 import { GHOST_ODIN_CLUB } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [PANEL]: {
         [CROWD_BACK]: {
             yIndex: 3,
@@ -21,5 +21,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

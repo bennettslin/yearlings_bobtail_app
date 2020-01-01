@@ -8,7 +8,7 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [SHOPPING_CART]: {
             yIndex: 5,
@@ -30,5 +30,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

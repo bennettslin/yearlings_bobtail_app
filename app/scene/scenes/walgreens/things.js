@@ -5,7 +5,7 @@ import {
 import { PHARMACY_CEL } from '../../../constants/scene/things/bubbles'
 import { PHARMACY_AISLE } from '../../../constants/scene/things/cutouts'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [PHARMACY_CEL]: {
             yIndex: 0,
@@ -21,5 +21,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

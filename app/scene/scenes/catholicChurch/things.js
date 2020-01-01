@@ -8,7 +8,7 @@ import {
     ST_JOSEPHS_CHURCH
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [LAMPPOST__CHURCH]: {
             yIndex: 4,
@@ -29,5 +29,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

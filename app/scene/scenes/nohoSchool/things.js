@@ -12,7 +12,7 @@ import {
     SAFEWAY_BAG
 } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [ESTHER_SPEECH]: {
             yIndex: 1,
@@ -48,5 +48,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

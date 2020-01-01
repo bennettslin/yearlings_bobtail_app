@@ -10,7 +10,7 @@ import {
     GO_KART_EXTERIOR__RIGHT
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FLAT]: {
         [GO_KART_TRACK]: {
             yIndex: 1,
@@ -43,5 +43,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

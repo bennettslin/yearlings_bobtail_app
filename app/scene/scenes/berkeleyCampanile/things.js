@@ -16,7 +16,7 @@ import {
 } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [SIGNPOST]: {
             yIndex: 5,
@@ -68,5 +68,3 @@ export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

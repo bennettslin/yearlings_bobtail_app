@@ -22,7 +22,7 @@ import {
     WIDE_ARMREST__BENNETT_RIGHT
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
@@ -113,5 +113,3 @@ export const THINGS_BENNETT_COUCH_READING = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

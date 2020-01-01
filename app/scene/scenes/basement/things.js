@@ -12,7 +12,7 @@ import {
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [DOOR]: {
         [BASEMENT_DOOR_OPEN]: {
             yIndex: 2,
@@ -49,5 +49,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

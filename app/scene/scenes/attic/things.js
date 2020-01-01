@@ -14,7 +14,7 @@ import {
     ATTIC_ARMREST__RIGHT
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [STORAGE_BOXES]: {
             yIndex: 1,
@@ -56,5 +56,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

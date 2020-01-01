@@ -12,7 +12,7 @@ import {
     MANNEQUIN
 } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [SANDBAGS]: {
             yIndex: 1,
@@ -43,5 +43,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

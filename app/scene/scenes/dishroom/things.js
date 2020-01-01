@@ -17,7 +17,7 @@ import {
     DISHROOM_SINK
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [DISH_PILE]: {
             yIndex: 2,
@@ -74,5 +74,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

@@ -10,7 +10,7 @@ import {
 import { STAGE_MIC__CROWD } from '../../../constants/scene/things/fixtures'
 import { CROWD_SIDE } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [MONITOR_SIDE__CROWD]: {
             yIndex: 4,
@@ -39,5 +39,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

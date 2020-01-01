@@ -5,7 +5,7 @@ import {
     SEA_SERPENT_RIGHT
 } from '../../../constants/scene/things/cardboards'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
@@ -27,5 +27,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

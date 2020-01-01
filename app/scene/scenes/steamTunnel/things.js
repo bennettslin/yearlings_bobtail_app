@@ -5,7 +5,7 @@ import {
 import { STEAM_PIPES } from '../../../constants/scene/things/cutouts'
 import { PUSH_BROOM__TUNNEL } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [STEAM_PIPES]: {
             yIndex: 1,
@@ -21,5 +21,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

@@ -14,7 +14,7 @@ import {
     MARQUEE_FRAME__GLADIATOR
 } from '../../../constants/scene/things/cardboards'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [BUBBLE_SMALL__CINEMA]: {
             yIndex: 5,
@@ -63,5 +63,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

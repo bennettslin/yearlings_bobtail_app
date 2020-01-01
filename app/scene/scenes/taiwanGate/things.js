@@ -13,7 +13,7 @@ import {
     TAIWAN_HOUSE_NEAR
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
@@ -52,5 +52,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

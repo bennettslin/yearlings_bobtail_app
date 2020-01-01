@@ -12,7 +12,7 @@ import {
 import { RECORD_PLAYER_STOOL } from '../../../constants/scene/things/fixtures'
 import { BATHTUB } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [PANEL]: {
         [BATHTUB]: {
             yIndex: 4,
@@ -57,5 +57,3 @@ export const THINGS_BATHROOM_SINGING = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

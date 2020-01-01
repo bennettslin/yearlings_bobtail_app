@@ -29,7 +29,7 @@ import {
     PEAHEN
 } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [DOOR]: {
         [LIZ_BLINDS_INSIDE]: {
             yIndex: 2,
@@ -150,5 +150,3 @@ export const THINGS_LIZ_COUCH_PEAFOWL = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

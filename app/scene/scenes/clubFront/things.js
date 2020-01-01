@@ -14,7 +14,7 @@ import {
     DRUMKIT
 } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [MONITOR_FRONT__LEFT]: {
             yIndex: 5,
@@ -63,5 +63,3 @@ export const THINGS_CLUB_FRONT_M = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

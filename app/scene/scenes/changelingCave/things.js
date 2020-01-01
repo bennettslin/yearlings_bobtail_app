@@ -13,7 +13,7 @@ import {
     TROLL_SHADOW_FAR
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [CAMPFIRE]: {
             yIndex: 5,
@@ -61,5 +61,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

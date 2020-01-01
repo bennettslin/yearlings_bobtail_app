@@ -7,7 +7,7 @@ import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
 } from '../../../constants/scene/things/flats'
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [FIRE_HYDRANT]: {
             yIndex: 5,
@@ -28,5 +28,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

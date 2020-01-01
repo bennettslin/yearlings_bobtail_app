@@ -13,7 +13,7 @@ import {
     GUITAR_CASE_OPEN
 } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [MONITOR_SIDE__STAGE]: {
             yIndex: 4,
@@ -49,5 +49,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

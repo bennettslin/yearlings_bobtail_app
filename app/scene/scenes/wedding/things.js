@@ -13,7 +13,7 @@ import {
 import { WEDDING_PLATFORM } from '../../../constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [WEDDING_CROWD]: {
             yIndex: 3,
@@ -55,5 +55,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

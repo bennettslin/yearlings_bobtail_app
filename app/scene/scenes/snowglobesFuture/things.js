@@ -17,7 +17,7 @@ import {
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__FUTURE]: {
             yIndex: 1,
@@ -64,5 +64,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

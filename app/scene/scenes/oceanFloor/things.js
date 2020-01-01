@@ -11,7 +11,7 @@ import {
     OCEAN_CAVE_EXTERIOR
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,
@@ -37,5 +37,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

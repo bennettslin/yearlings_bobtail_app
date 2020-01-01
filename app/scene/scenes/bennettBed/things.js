@@ -21,7 +21,7 @@ import {
 import { BENNETT_PILLOW } from '../../../constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [DOOR]: {
         [BLINDS_OUTSIDE__NEIGHBOUR]: {
             yIndex: 1,
@@ -88,5 +88,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

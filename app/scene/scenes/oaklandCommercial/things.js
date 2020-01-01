@@ -9,7 +9,7 @@ import {
     COMMERCIAL_NEAR_RIGHT
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FLAT]: {
         [COMMERCIAL_CENTRE]: {
             yIndex: 1,
@@ -48,5 +48,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

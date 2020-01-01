@@ -8,7 +8,7 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [BENNETT_SHORE]: {
             yIndex: 2,
@@ -29,5 +29,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

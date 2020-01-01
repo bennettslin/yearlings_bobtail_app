@@ -23,7 +23,7 @@ import { HOSPITAL_RECORD_PLAYER } from '../../../constants/scene/things/fixtures
 import { TENNIS_COURT } from '../../../constants/scene/things/flats'
 import { HOSPITAL_BED } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [BUBBLE_SMALL__DEATHBED]: {
             yIndex: 0,
@@ -128,5 +128,3 @@ export const THINGS_DEATHBED_DREAM = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

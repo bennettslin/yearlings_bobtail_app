@@ -6,7 +6,7 @@ import {
     OAKLAND_FLAG
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FLAT]: {
         [PUBLIC_FAR__GOLDEN_CORD]: {
             yIndex: 1,
@@ -30,5 +30,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

@@ -4,7 +4,7 @@ import {
     MUSEUM_DISPLAY
 } from '../../../constants/scene/things/cutouts'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [MUSEUM_DISPLAY]: {
             yIndex: 1,
@@ -18,5 +18,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

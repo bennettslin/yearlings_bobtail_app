@@ -11,7 +11,7 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { BENNETT_GATE_FRONT } from '../../../constants/scene/things/doors'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [CODE_BOX]: {
             yIndex: 2,
@@ -44,5 +44,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

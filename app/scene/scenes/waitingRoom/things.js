@@ -31,7 +31,7 @@ import {
     WAITING_ARMREST__LIZ_RIGHT
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [CLIPBOARD]: {
             yIndex: 2,
@@ -140,5 +140,3 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

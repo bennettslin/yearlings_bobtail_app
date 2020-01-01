@@ -13,7 +13,7 @@ import {
     BALLED_FOIL__LOCKERS
 } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [LOCKER_BANK]: {
             yIndex: 3,
@@ -47,5 +47,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

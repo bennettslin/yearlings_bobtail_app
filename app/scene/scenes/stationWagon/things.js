@@ -15,7 +15,7 @@ import {
     SATURN_SEAT__RIGHT
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [TARPIT_CONSTELLATION]: {
             yIndex: 5,
@@ -61,5 +61,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

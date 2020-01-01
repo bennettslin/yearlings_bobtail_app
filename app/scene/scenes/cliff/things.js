@@ -8,7 +8,7 @@ import {
     CLIFF_GRAVES_NEAR
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [CLIFF_TREE]: {
             yIndex: 1,
@@ -31,5 +31,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

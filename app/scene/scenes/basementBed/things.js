@@ -5,7 +5,7 @@ import {
 import { BASEMENT_DOOR } from '../../../constants/scene/things/doors'
 import { CRACKED_PICTURE } from '../../../constants/scene/things/fixtures'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [DOOR]: {
         [BASEMENT_DOOR]: {
             yIndex: 2,
@@ -21,5 +21,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

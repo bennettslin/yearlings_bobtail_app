@@ -12,7 +12,7 @@ import { BANCROFT_DOOR } from '../../../constants/scene/things/doors'
 import { BERKELEY_BUILDING_WIDE__BANCROFT } from '../../../constants/scene/things/flats'
 import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [CAMPUS_TREE_SINGLE__BANCROFT]: {
             yIndex: 1,
@@ -49,5 +49,3 @@ export const THINGS_BERKELEY_BANCROFT_VEGAN = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

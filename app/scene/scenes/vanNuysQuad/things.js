@@ -14,7 +14,7 @@ import {
     BUSH_DOUBLE__QUAD
 } from '../../../constants/scene/things/cutouts'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [ESCAPE_POD_SKETCH]: {
             yIndex: 5,
@@ -59,5 +59,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

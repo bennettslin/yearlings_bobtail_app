@@ -8,7 +8,7 @@ import {
 } from '../../../constants/scene/things/cardboards'
 import { BASEMENT_DOOR_SIDE } from '../../../constants/scene/things/doors'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [NAS_ALBUM]: {
             yIndex: 3,
@@ -31,5 +31,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

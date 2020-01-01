@@ -13,7 +13,7 @@ import {
     BENNETT_GATE_SIDE
 } from '../../../constants/scene/things/doors'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [RECYCLABLES]: {
             yIndex: 2,
@@ -47,5 +47,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

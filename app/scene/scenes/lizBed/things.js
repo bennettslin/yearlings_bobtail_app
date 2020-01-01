@@ -20,7 +20,7 @@ import {
     LIZ_BED
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FIXTURE]: {
         [LIZ_PHONE]: {
             yIndex: 4,
@@ -87,5 +87,3 @@ export const THINGS_LIZ_BED_VEGAN = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

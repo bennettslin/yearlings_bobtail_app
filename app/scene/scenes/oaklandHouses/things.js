@@ -8,7 +8,7 @@ import {
 } from '../../../constants/scene/things/flats'
 import { VOLKSWAGEN } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FLAT]: {
         [OAKLAND_HOUSE_LEFT]: {
             yIndex: 1,
@@ -32,5 +32,3 @@ export const THINGS_OAKLAND_HOUSES_GARRYOWEN = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

@@ -10,7 +10,7 @@ import {
     ROLLER_COASTER
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
@@ -38,5 +38,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

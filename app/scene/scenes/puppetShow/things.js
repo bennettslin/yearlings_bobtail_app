@@ -38,7 +38,7 @@ import {
     PUPPET_MOTHER_END
 } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FLAT]: {
         [TAIWAN_MOUNTAINS_BRIDGED]: {
             yIndex: 3,
@@ -218,5 +218,3 @@ export const THINGS_PUPPET_SHOW_END = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

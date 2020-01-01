@@ -8,7 +8,7 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import { EL_TORITO_DOORS } from '../../../constants/scene/things/doors'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [DISPENSER_LEFT]: {
             yIndex: 5,
@@ -29,5 +29,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

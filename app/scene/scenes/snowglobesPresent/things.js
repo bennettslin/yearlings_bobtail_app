@@ -14,7 +14,7 @@ import {
     WIDE_ARMREST__MIRIAM_RIGHT
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__PRESENT]: {
             yIndex: 1,
@@ -60,5 +60,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

@@ -19,7 +19,7 @@ import {
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [EL_CERRITO_TREE]: {
             yIndex: 1,
@@ -83,5 +83,3 @@ export const THINGS_EL_CERRITO_REATTA = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

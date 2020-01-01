@@ -42,7 +42,7 @@ import {
     BEDROOM_FENCE
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CARDBOARD]: {
         [TINTIN_POSTER]: {
             yIndex: 5,
@@ -212,5 +212,3 @@ export const THINGS_BEDROOM_SHAKEN = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

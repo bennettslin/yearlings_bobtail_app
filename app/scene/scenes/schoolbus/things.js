@@ -22,7 +22,7 @@ import {
     SCHOOLBUS_EXTERIOR
 } from '../../../constants/scene/things/panels'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [BUBBLE_SMALL__LEFT]: {
             yIndex: 0,
@@ -91,5 +91,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

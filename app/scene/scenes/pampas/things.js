@@ -1,7 +1,7 @@
 import { FLAT } from '../../../constants/scene/things'
 import { PAMPAS_FAR } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [FLAT]: {
         [PAMPAS_FAR]: {
             yIndex: 2,
@@ -10,5 +10,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

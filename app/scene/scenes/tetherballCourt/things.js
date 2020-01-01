@@ -21,7 +21,7 @@ import {
     SCHOOL_BUNGALOW__RIGHT
 } from '../../../constants/scene/things/flats'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [BUBBLE]: {
         [BUBBLE_SMALL__RIGHT]: {
             yIndex: 0,
@@ -86,5 +86,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS

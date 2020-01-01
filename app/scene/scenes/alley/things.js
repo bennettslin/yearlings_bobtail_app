@@ -9,7 +9,7 @@ import { LOADING_DOCK_DOOR } from '../../../constants/scene/things/doors'
 import { BALLED_FOIL__ALLEY } from '../../../constants/scene/things/fixtures'
 import { GHOST_ODIN_ALLEY } from '../../../constants/scene/things/puppets'
 
-const ARRANGEMENTS_THINGS = {
+export default {
     [CUTOUT]: {
         [DUMPSTER]: {
             yIndex: 2,
@@ -38,5 +38,3 @@ const ARRANGEMENTS_THINGS = {
         }
     }
 }
-
-export default ARRANGEMENTS_THINGS
