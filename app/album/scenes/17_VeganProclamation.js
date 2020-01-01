@@ -51,6 +51,7 @@ import {
 } from '../../constants/scene/actors/songs'
 import {
     BRICK_WALL,
+    DISTANT_BUILDINGS_BACKDROP,
     OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
 import {
@@ -107,6 +108,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
@@ -249,6 +251,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {

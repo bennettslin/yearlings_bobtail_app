@@ -42,7 +42,10 @@ import {
     STATION_WAGON,
     ATTIC
 } from '../../constants/scene/actors/songs'
-import { LOS_ANGELES_BACKDROP } from '../../constants/scene/things/backdrops'
+import {
+    DISTANT_BUILDINGS_BACKDROP,
+    LOS_ANGELES_BACKDROP
+} from '../../constants/scene/things/backdrops'
 import {
     PHARMACY_CEL,
     TARPIT_CONSTELLATION,
@@ -104,6 +107,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [LOS_ANGELES_BACKDROP]: true
             },
             [CUTOUT]: {
@@ -236,6 +240,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [LOS_ANGELES_BACKDROP]: true
             },
             [BUBBLE]: {

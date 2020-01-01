@@ -31,10 +31,5 @@ export default [
         taskName: `Fix Liz and Taiwan gates.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Draw buildings for Oakland front and side backdrops, change city backdrop to campus backdrop by moving distant layers to Los Angeles backdrop.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]

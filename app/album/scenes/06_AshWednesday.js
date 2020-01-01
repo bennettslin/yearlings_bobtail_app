@@ -45,6 +45,7 @@ import {
 import { CATHOLIC_GUY } from '../../constants/scene/actors/wade'
 import {
     BRICK_WALL,
+    DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
     OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
@@ -212,6 +213,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
@@ -243,6 +245,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
