@@ -3,7 +3,10 @@ import {
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { YARD_BACKDROP } from '../../../constants/scene/things/backdrops'
+import {
+    DISTANT_HOUSES_BACKDROP,
+    YARD_BACKDROP
+} from '../../../constants/scene/things/backdrops'
 import { LAMPPOST__CHURCH } from '../../../constants/scene/things/cutouts'
 import {
     ST_JOSEPHS_ANNEX,
@@ -12,6 +15,10 @@ import {
 
 const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
+        [DISTANT_HOUSES_BACKDROP]: {
+            xPosition: 5.5,
+            scaleFactor: 0.45
+        },
         [YARD_BACKDROP]: {
             xPosition: 5.5,
             scaleFactor: 0.7,

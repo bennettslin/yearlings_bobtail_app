@@ -29,7 +29,10 @@ import { TYING_TETHER } from '../../constants/scene/actors/bradBennett'
 import { CHARMED_SCHOOLBUS } from '../../constants/scene/actors/bradSasha'
 import { PANICKED } from '../../constants/scene/actors/preteenBennett'
 import { INDIGNANT } from '../../constants/scene/actors/sasha'
-import { TAIWAN_MOUNTAINS_BACKDROP } from '../../constants/scene/things/backdrops'
+import {
+    DISTANT_HOUSES_BACKDROP,
+    TAIWAN_MOUNTAINS_BACKDROP
+} from '../../constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
@@ -160,6 +163,9 @@ export default [
                     description: 'side seated, laughing, braids trailing',
                     instance: CHARMED_SCHOOLBUS
                 }
+            },
+            [BACKDROP]: {
+                [DISTANT_HOUSES_BACKDROP]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__LEFT]: true,

@@ -44,8 +44,9 @@ import {
 } from '../../constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../constants/scene/actors/wade'
 import {
-    OAKLAND_SIDE,
-    BRICK_WALL
+    BRICK_WALL,
+    DISTANT_HOUSES_BACKDROP,
+    OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__RIGHT,
@@ -174,6 +175,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {

@@ -1,5 +1,7 @@
 import {
     BRICK_WALL,
+    DISTANT_BUILDINGS_BACKDROP,
+    DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP,
     FENCE_BACKDROP,
     GOLDEN_GATE_BACKDROP,
@@ -25,6 +27,7 @@ import {
 
 import {
     BUILDINGS__SHARED,
+    DISTANT__SHARED,
     TAIWAN_HOUSE__SHARED
 } from '../../../sharedStyles/buildings'
 import { BOOK__SHARED } from '../../../sharedStyles/paper'
@@ -40,6 +43,8 @@ export default {
         BUILDINGS__SHARED,
         FOLIAGE__SHARED
     ],
+    [DISTANT_BUILDINGS_BACKDROP]: DISTANT__SHARED,
+    [DISTANT_HOUSES_BACKDROP]: DISTANT__SHARED,
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
     [FENCE_BACKDROP]: FOLIAGE__SHARED,
     [GOLDEN_GATE_BACKDROP]: [

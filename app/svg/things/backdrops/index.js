@@ -19,6 +19,8 @@ import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
 import brickWall from 'assets/svgs/backdrops/brickWall'
+import distantBuildings from 'assets/svgs/backdrops/distantBuildings'
+import distantHouses from 'assets/svgs/backdrops/distantHouses'
 import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
 
 import {
@@ -44,6 +46,8 @@ import {
     WEDDING_BACKDROP,
     FENCE_BACKDROP,
     BRICK_WALL,
+    DISTANT_BUILDINGS_BACKDROP,
+    DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
@@ -70,5 +74,7 @@ export default {
     [WEDDING_BACKDROP]: weddingBackdrop,
     [FENCE_BACKDROP]: fenceBackdrop,
     [BRICK_WALL]: brickWall,
+    [DISTANT_BUILDINGS_BACKDROP]: distantBuildings,
+    [DISTANT_HOUSES_BACKDROP]: distantHouses,
     [DRIVING_BACKDROP]: drivingBackdrop
 }

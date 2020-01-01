@@ -1,4 +1,6 @@
 export const BRICK_WALL = 'brickWall'
+export const DISTANT_BUILDINGS_BACKDROP = 'distantBuilding'
+export const DISTANT_HOUSES_BACKDROP = 'distantHouses'
 export const DRIVING_BACKDROP = 'drivingBackdrop'
 export const FENCE_BACKDROP = 'fenceBackdrop'
 export const GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop'
