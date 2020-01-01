@@ -4,6 +4,7 @@ ocean plants
 exhaust
 road (taiwan bridge, walking thought)
 
+schoolbus
 fence
 nohoHouses
 roof

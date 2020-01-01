@@ -32,7 +32,7 @@ const ARRANGEMENTS_THINGS = {
     [BUBBLE]: {
         [ESTHER_SPEECH]: {
             yIndex: 1,
-            xPosition: 8.5,
+            xPosition: 8.75,
             scaleFactor: 0.5
         }
     },
@@ -58,8 +58,9 @@ const ARRANGEMENTS_THINGS = {
             zOffset: 1
         },
         [SAFEWAY_BAG]: {
-            yIndex: 3,
-            xPosition: 10
+            yIndex: 5,
+            xPosition: 10,
+            scaleFactor: 0.25
         }
     }
 }

@@ -5141,5 +5141,10 @@ export default [
         taskName: `Shared foliage, mountain, and other styles.`,
         workedHours: 10,
         neededHours: 10
+    },
+    {
+        taskName: `Work on new backdrops.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

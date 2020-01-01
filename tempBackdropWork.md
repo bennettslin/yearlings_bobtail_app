@@ -1,7 +1,7 @@
 # New
 * new distant houses backdrop with house outlines, tree outlines and foliage
 * new distant buildings backdrop with building outlines, tree outlines and foliage
-* new bedroom backdrop with fence and plants
+* new bedroom backdrop with fence and plants, change from panel to backdrop
 * new basement backdrop with fence and plants
 
 schoolbus:

@@ -19,6 +19,7 @@ const ARRANGEMENTS_THINGS = {
             scaleFactor: 0.7
         },
         [FENCE_BACKDROP]: {
+            yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.7,
             trimBottom: 0.05
