@@ -1,7 +1,7 @@
 import { BENNETT_LIZ } from 'constants/scene/actors'
 import { BRUSH_OFF } from 'constants/scene/actors/bennettLiz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT_LIZ]: {
         [BRUSH_OFF]: {
             yIndex: 5,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

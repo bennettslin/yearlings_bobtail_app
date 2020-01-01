@@ -5,7 +5,7 @@ import {
 import { CAMPUS_ASHAMED } from 'constants/scene/actors/bennett'
 import { PROTECTIVE_CONCERNED } from 'constants/scene/actors/khariLiz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [CAMPUS_ASHAMED]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

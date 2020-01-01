@@ -7,7 +7,7 @@ import { CONCERNED } from '../../../constants/scene/actors/anita'
 import { SNICKERING } from '../../../constants/scene/actors/esther'
 import { FLUSTERED } from '../../../constants/scene/actors/youngBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [YOUNG_BENNETT]: {
         [FLUSTERED]: {
             yIndex: 4,
@@ -28,5 +28,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

@@ -5,7 +5,7 @@ import {
 import { DOCTOR } from 'constants/scene/actors/amy'
 import { FINAL_DREAM } from 'constants/scene/actors/bennettLiz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT_LIZ]: {
         [FINAL_DREAM]: {
             yIndex: 3,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

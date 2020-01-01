@@ -8,7 +8,7 @@ import { BACKSTAGE } from '../../../constants/scene/actors/songs'
 import { DOUBLE_ALBERT } from '../../../constants/scene/actors/khari'
 import { FLAPPER } from '../../../constants/scene/actors/stephanie'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [BACKSTAGE]: {
             yIndex: 5,
@@ -34,5 +34,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

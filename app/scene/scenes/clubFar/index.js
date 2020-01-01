@@ -6,7 +6,7 @@ import {
 import { SHOW_ANNOYED } from '../../../constants/scene/actors/bennett'
 import { GREETING } from '../../../constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [SHOW_ANNOYED]: {
             yIndex: 5,
@@ -26,5 +26,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

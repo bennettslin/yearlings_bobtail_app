@@ -9,7 +9,7 @@ import { ARGUING } from '../../../constants/scene/actors/mother'
 import { SHEEPISH } from '../../../constants/scene/actors/preteenBennett'
 import { PRINCIPAL } from '../../../constants/scene/actors/tristan'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [PRETEEN_BENNETT]: {
         [SHEEPISH]: {
             yIndex: 4,
@@ -35,5 +35,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

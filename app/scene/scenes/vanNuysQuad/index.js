@@ -9,7 +9,7 @@ import { SNACKING } from '../../../constants/scene/actors/brad'
 import { WISTFUL } from '../../../constants/scene/actors/preteenBennett'
 import { POPULAR_GIRL } from '../../../constants/scene/actors/sasha'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [PRETEEN_BENNETT]: {
         [WISTFUL]: {
             yIndex: 2,
@@ -35,5 +35,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

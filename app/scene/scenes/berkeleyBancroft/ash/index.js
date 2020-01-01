@@ -7,7 +7,7 @@ import { SMOKER } from 'constants/scene/actors/amy'
 import { CATHOLIC_IDEA } from 'constants/scene/actors/bennett'
 import { CATHOLIC_GUY } from 'constants/scene/actors/wade'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [CATHOLIC_IDEA]: {
             yIndex: 5,
@@ -27,5 +27,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

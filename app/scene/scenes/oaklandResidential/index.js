@@ -5,7 +5,7 @@ import {
 import { CORD_REAR } from '../../../constants/scene/actors/bennett'
 import { BENNETT_DEFIANT } from '../../../constants/scene/actors/stephanie'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [CORD_REAR]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

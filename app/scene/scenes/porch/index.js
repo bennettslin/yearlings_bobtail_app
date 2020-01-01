@@ -9,7 +9,7 @@ import { STOOPING } from '../../../constants/scene/actors/mother'
 import { CAUTIOUS } from '../../../constants/scene/actors/preteenBennett'
 import { DUCKING } from '../../../constants/scene/actors/willy'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [PRETEEN_BENNETT]: {
         [CAUTIOUS]: {
             yIndex: 4,
@@ -37,5 +37,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

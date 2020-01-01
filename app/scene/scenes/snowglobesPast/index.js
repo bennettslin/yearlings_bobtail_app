@@ -6,7 +6,7 @@ import {
 import { PAST } from '../../../constants/scene/actors/songs'
 import { COMFORTING_HUMILIATED } from '../../../constants/scene/actors/sashaBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [PAST]: {
             yIndex: 1,
@@ -26,5 +26,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

@@ -13,7 +13,7 @@ import {
     REACHING_REFLECTION
 } from 'constants/scene/actors/liz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [REMOVING_SHOES]: {
             yIndex: 5,
@@ -39,5 +39,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

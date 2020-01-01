@@ -9,7 +9,7 @@ import { FUTURE } from '../../../constants/scene/actors/songs'
 import { JOKING_LAUGHING } from '../../../constants/scene/actors/khariLiz'
 import { BENNETT_RECORDING } from '../../../constants/scene/actors/stephanie'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [FUTURE]: {
             yIndex: 1,
@@ -41,5 +41,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

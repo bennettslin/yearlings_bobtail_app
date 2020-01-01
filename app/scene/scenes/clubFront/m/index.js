@@ -10,7 +10,7 @@ import { SQUATTING } from 'constants/scene/actors/ana'
 import { DISTRACTED } from 'constants/scene/actors/bennett'
 import { SHANE_BUYING } from 'constants/scene/actors/tomer'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [DISTRACTED]: {
             yIndex: 5,
@@ -42,5 +42,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

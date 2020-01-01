@@ -4,7 +4,7 @@ import {
 } from '../../../constants/scene/actors'
 import { EL_TORITO } from '../../../constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [EL_TORITO]: {
             yIndex: 5,
@@ -18,5 +18,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

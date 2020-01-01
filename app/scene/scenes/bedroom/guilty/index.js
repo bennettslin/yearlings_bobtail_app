@@ -1,7 +1,7 @@
 import { CHRISTOPHER_BENNETT } from 'constants/scene/actors'
 import { BLISSFUL_GUILTY } from 'constants/scene/actors/christopherBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [CHRISTOPHER_BENNETT]: {
         [BLISSFUL_GUILTY]: {
             yIndex: 4,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

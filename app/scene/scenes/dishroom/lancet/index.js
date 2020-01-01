@@ -4,7 +4,7 @@ import {
 } from 'constants/scene/actors'
 import { DISHROOM_LANCET } from 'constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [DISHROOM_LANCET]: {
             yIndex: 5,
@@ -18,5 +18,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

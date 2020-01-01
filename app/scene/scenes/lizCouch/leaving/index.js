@@ -4,7 +4,7 @@ import {
 } from 'constants/scene/actors'
 import { LEAVING_CRUMBLED } from 'constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [LEAVING_CRUMBLED]: {
             yIndex: 5,
@@ -18,5 +18,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

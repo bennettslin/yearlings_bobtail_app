@@ -5,7 +5,7 @@ import {
 import { OFFICER } from '../../../constants/scene/actors/amyNestorTomer'
 import { HORSING } from '../../../constants/scene/actors/bennettStephanie'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT_STEPHANIE]: {
         [HORSING]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

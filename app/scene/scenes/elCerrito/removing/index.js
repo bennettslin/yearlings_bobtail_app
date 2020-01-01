@@ -5,7 +5,7 @@ import {
 import { REMOVING_PANTS } from 'constants/scene/actors/bennett'
 import { PERFUMING } from 'constants/scene/actors/miriam'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [REMOVING_PANTS]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

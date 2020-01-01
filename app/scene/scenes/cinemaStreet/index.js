@@ -5,7 +5,7 @@ import {
 import { MERRILY_DERANGED } from '../../../constants/scene/actors/bennett'
 import { USHER_LOOKING } from '../../../constants/scene/actors/howie'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [MERRILY_DERANGED]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

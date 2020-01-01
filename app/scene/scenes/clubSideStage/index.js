@@ -9,7 +9,7 @@ import {
     CARRYING
 } from '../../../constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [FLIRTING]: {
             yIndex: 5,
@@ -35,5 +35,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

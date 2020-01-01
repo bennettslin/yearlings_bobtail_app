@@ -5,7 +5,7 @@ import {
 import { PIOUS } from 'constants/scene/actors/bennett'
 import { PUZZLED } from 'constants/scene/actors/catherine'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [PIOUS]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

@@ -9,7 +9,7 @@ import { YOUNG_CHILD } from '../../../constants/scene/actors/songs'
 import { DRYING_TEARS } from '../../../constants/scene/actors/bennettStephanie'
 import { CROSSING_GUARD } from '../../../constants/scene/actors/willy'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [YOUNG_BENNETT]: {
         [YOUNG_CHILD]: {
             yIndex: 5,
@@ -41,5 +41,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

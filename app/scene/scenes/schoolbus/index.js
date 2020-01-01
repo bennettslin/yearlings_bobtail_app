@@ -5,7 +5,7 @@ import {
 import { CHARMED_SCHOOLBUS } from '../../../constants/scene/actors/bradSasha'
 import { PANICKED } from '../../../constants/scene/actors/preteenBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [PRETEEN_BENNETT]: {
         [PANICKED]: {
             yIndex: 3,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

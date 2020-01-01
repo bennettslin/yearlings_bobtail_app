@@ -9,7 +9,7 @@ import {
     CARESS_REFLECTION
 } from 'constants/scene/actors/khariLiz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [BROKEN_HEARTED]: {
             yIndex: 5,
@@ -29,5 +29,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

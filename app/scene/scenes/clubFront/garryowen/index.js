@@ -7,7 +7,7 @@ import { GREETING } from 'constants/scene/actors/songs'
 import { SMIRKING } from 'constants/scene/actors/ana'
 import { NOOGIE } from 'constants/scene/actors/miriamTristan'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [GREETING]: {
             yIndex: 5,
@@ -27,5 +27,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

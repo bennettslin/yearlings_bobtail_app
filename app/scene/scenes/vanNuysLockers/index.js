@@ -7,7 +7,7 @@ import { THROWING } from '../../../constants/scene/actors/andrew'
 import { GESTURING } from '../../../constants/scene/actors/brad'
 import { STOIC } from '../../../constants/scene/actors/preteenBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [PRETEEN_BENNETT]: {
         [STOIC]: {
             yIndex: 3,
@@ -27,5 +27,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

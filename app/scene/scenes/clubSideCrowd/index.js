@@ -10,7 +10,7 @@ import { SQUEEZING } from '../../../constants/scene/actors/amyStephanie'
 import { SHANE_SPILLING } from '../../../constants/scene/actors/tomer'
 import { WATCHING } from '../../../constants/scene/actors/wade'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [PERFORMING]: {
             yIndex: 5,
@@ -42,5 +42,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

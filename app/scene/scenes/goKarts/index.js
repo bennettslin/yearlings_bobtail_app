@@ -4,7 +4,7 @@ import {
 } from '../../../constants/scene/actors'
 import { GO_KARTS } from '../../../constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [GO_KARTS]: {
             yIndex: 2,
@@ -18,5 +18,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

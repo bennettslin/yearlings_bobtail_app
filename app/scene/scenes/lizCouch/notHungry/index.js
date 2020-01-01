@@ -5,7 +5,7 @@ import {
 import { CONCERNED } from 'constants/scene/actors/khari'
 import { NOT_HUNGRY } from 'constants/scene/actors/liz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [LIZ]: {
         [NOT_HUNGRY]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

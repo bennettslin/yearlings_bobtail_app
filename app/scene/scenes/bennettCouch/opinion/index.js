@@ -5,7 +5,7 @@ import {
 import { SOLICITING_OPINION } from 'constants/scene/actors/bennett'
 import { QUIPPING } from 'constants/scene/actors/catherine'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [SOLICITING_OPINION]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

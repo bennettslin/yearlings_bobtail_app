@@ -1,7 +1,7 @@
 import { PRETEEN_BENNETT } from 'constants/scene/actors'
 import { ASLEEP } from 'constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [PRETEEN_BENNETT]: {
         [ASLEEP]: {
             yIndex: 5,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

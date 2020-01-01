@@ -1,7 +1,7 @@
 import { MIRIAM_BENNETT } from 'constants/scene/actors'
 import { BLOWJOB } from 'constants/scene/actors/miriamBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [MIRIAM_BENNETT]: {
         [BLOWJOB]: {
             yIndex: 5,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

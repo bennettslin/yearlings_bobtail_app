@@ -6,7 +6,7 @@ import {
 import { PRESENT } from '../../../constants/scene/actors/songs'
 import { MISCHIEVOUS_BANJO } from '../../../constants/scene/actors/miriamStephanie'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT_FATHER]: {
         [PRESENT]: {
             yIndex: 1,
@@ -26,5 +26,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

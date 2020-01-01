@@ -1,7 +1,7 @@
 import { OLD_BENNETT } from 'constants/scene/actors'
 import { PROLOGUE } from 'constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [OLD_BENNETT]: {
         [PROLOGUE]: {
             yIndex: 4,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

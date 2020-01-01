@@ -5,7 +5,7 @@ import {
 import { CHEERING } from 'constants/scene/actors/anita'
 import { SINGING } from 'constants/scene/actors/youngBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [YOUNG_BENNETT]: {
         [SINGING]: {
             yIndex: 3,
@@ -20,5 +20,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

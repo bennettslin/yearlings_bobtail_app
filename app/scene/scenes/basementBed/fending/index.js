@@ -7,7 +7,7 @@ import { SOBBING_SHIELDING } from 'constants/scene/actors/estherMother'
 import { REELING } from 'constants/scene/actors/father'
 import { FENDING_OFF } from 'constants/scene/actors/miriamBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [ESTHER_MOTHER]: {
         [SOBBING_SHIELDING]: {
             yIndex: 5,
@@ -27,5 +27,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

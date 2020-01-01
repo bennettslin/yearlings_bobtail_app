@@ -1,7 +1,7 @@
 import { LIZ } from 'constants/scene/actors'
 import { PETTING_STANDING } from 'constants/scene/actors/liz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [LIZ]: {
         [PETTING_STANDING]: {
             yIndex: 5,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

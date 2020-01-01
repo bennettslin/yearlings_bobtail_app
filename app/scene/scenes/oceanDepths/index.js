@@ -1,7 +1,7 @@
 import { SASHA_BENNETT } from '../../../constants/scene/actors'
 import { MERMAID } from '../../../constants/scene/actors/sashaBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [SASHA_BENNETT]: {
         [MERMAID]: {
             yIndex: 5,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

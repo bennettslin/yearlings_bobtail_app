@@ -1,7 +1,7 @@
 import { YOUNG_BENNETT } from 'constants/scene/actors'
 import { BATHING } from 'constants/scene/actors/youngBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [YOUNG_BENNETT]: {
         [BATHING]: {
             yIndex: 3,
@@ -9,5 +9,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

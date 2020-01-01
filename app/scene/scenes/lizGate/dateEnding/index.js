@@ -4,7 +4,7 @@ import {
 } from 'constants/scene/actors'
 import { DATE_ENDING } from 'constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [DATE_ENDING]: {
             yIndex: 5,
@@ -18,5 +18,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

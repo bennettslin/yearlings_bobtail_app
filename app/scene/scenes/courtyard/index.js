@@ -5,7 +5,7 @@ import {
 import { BREAKUP_DEJECTED } from '../../../constants/scene/actors/bennett'
 import { WEEPING } from '../../../constants/scene/actors/catherine'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [BREAKUP_DEJECTED]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

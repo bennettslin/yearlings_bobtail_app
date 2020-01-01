@@ -7,7 +7,7 @@ import { SOBBING } from 'constants/scene/actors/christopher'
 import { ROARING } from 'constants/scene/actors/father'
 import { ENRAGED } from 'constants/scene/actors/preteenBennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [PRETEEN_BENNETT]: {
         [ENRAGED]: {
             yIndex: 5,
@@ -27,5 +27,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

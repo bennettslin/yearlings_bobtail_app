@@ -5,7 +5,7 @@ import {
 import { JUDGMENTAL } from 'constants/scene/actors/khari'
 import { DEFENDING } from 'constants/scene/actors/liz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [LIZ]: {
         [DEFENDING]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

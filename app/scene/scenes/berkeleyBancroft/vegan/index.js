@@ -7,7 +7,7 @@ import {
 import { PROTESTER } from 'constants/scene/actors/songs'
 import { DEMONSTRATION } from 'constants/scene/actors/bennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [DEMONSTRATION]: {
             yIndex: 5,
@@ -33,5 +33,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

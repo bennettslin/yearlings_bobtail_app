@@ -7,7 +7,7 @@ import { FEIGNING_FEAR } from '../../../constants/scene/actors/andrew'
 import { TYING_TETHER } from '../../../constants/scene/actors/bradBennett'
 import { INDIGNANT } from '../../../constants/scene/actors/sasha'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BRAD_BENNETT]: {
         [TYING_TETHER]: {
             yIndex: 4,
@@ -27,5 +27,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

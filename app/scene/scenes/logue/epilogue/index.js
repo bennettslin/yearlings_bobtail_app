@@ -24,7 +24,7 @@ import {
 } from 'constants/scene/actors'
 import { EPILOGUE } from 'constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETTS_CHRISTOPHER_LIZ]: {
         [EPILOGUE]: {
             yIndex: 5,
@@ -158,5 +158,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

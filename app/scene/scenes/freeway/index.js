@@ -3,7 +3,7 @@ import {
 } from '../../../constants/scene/actors'
 import { COLLECTING } from '../../../constants/scene/actors/willy'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [WILLY]: {
         [COLLECTING]: {
             yIndex: 5,
@@ -11,5 +11,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

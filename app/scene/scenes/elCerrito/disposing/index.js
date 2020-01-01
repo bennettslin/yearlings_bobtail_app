@@ -5,7 +5,7 @@ import {
 import { DISPOSING_CONDOM } from 'constants/scene/actors/bennett'
 import { REVERSING } from 'constants/scene/actors/miriam'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [DISPOSING_CONDOM]: {
             yIndex: 5,
@@ -19,5 +19,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

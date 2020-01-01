@@ -6,7 +6,7 @@ import {
 import { GATE_CODE } from 'constants/scene/actors/songs'
 import { JOGGER } from 'constants/scene/actors/nestor'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [GATE_CODE]: {
             yIndex: 5,
@@ -26,5 +26,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

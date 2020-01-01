@@ -6,7 +6,7 @@ import {
 } from '../../../constants/scene/actors'
 import { WALGREENS } from '../../../constants/scene/actors/songs'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [WALGREENS]: {
             yIndex: 5,
@@ -32,5 +32,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

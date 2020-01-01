@@ -9,7 +9,7 @@ import { DROPPING_MEATS } from 'constants/scene/actors/bennett'
 import { INJURED } from 'constants/scene/actors/nestor'
 import { PUNCHING } from 'constants/scene/actors/tristan'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [DROPPING_MEATS]: {
             yIndex: 5,
@@ -35,5 +35,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

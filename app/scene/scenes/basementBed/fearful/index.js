@@ -8,7 +8,7 @@ import { ASLEEP_FEARFUL } from 'constants/scene/actors/miriamBennett'
 import { HURT_CONSOLING } from 'constants/scene/actors/estherMother'
 import { ACCUSATORY } from 'constants/scene/actors/father'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [ESTHER_MOTHER]: {
         [HURT_CONSOLING]: {
             yIndex: 5,
@@ -32,5 +32,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

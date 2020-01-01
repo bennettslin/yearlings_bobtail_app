@@ -12,7 +12,7 @@ import {
 } from '../../../constants/scene/actors/songs'
 import { SIDELONG_HESITANCE } from '../../../constants/scene/actors/bennett'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT]: {
         [SIDELONG_HESITANCE]: {
             yIndex: 5,
@@ -50,5 +50,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS

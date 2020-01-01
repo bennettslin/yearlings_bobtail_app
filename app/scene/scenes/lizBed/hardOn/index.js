@@ -7,7 +7,7 @@ import {
     HARD_ON_REFLECTION
 } from 'constants/scene/actors/bennettLiz'
 
-const ARRANGEMENTS_ACTORS = {
+export default {
     [BENNETT_LIZ]: {
         [HARD_ON]: {
             yIndex: 5,
@@ -21,5 +21,3 @@ const ARRANGEMENTS_ACTORS = {
         }
     }
 }
-
-export default ARRANGEMENTS_ACTORS
