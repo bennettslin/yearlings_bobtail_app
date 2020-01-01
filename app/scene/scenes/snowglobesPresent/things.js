@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     CARDBOARD,
     PANEL
 } from '../../../constants/scene/things'
-import { ROAD_PRESENT } from '../../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PRESENT,
     SNOWGLOBE_PRESENT
@@ -17,12 +15,6 @@ import {
 } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [ROAD_PRESENT]: {
-            xPosition: 5.5,
-            scaleFactor: 0.6
-        }
-    },
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__PRESENT]: {
             yIndex: 1,

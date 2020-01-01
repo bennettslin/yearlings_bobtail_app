@@ -1,17 +1,7 @@
-import {
-    BACKDROP,
-    FLAT
-} from '../../../constants/scene/things'
-import { MOUNTAIN_BACKDROP } from '../../../constants/scene/things/backdrops'
+import { FLAT } from '../../../constants/scene/things'
 import { PAMPAS_FAR } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [MOUNTAIN_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.66
-        }
-    },
     [FLAT]: {
         [PAMPAS_FAR]: {
             yIndex: 2,

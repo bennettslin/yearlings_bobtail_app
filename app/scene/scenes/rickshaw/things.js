@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     CARDBOARD,
     FLAT
 } from '../../../constants/scene/things'
-import { SHORE_RICKSHAW_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_SHORE,
     ODIN_SHORE
@@ -11,12 +9,6 @@ import {
 import { RICKSHAW_TOWN } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [SHORE_RICKSHAW_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        }
-    },
     [CARDBOARD]: {
         [BENNETT_SHORE]: {
             yIndex: 2,

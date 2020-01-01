@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     CARDBOARD,
     DOOR
 } from '../../../constants/scene/things'
-import { TAIWAN_STAIRS_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_TAIWAN_GATE,
     ODIN_TAIWAN_GATE
@@ -11,14 +9,6 @@ import {
 import { IRON_GATE_LOW } from '../../../constants/scene/things/doors'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [TAIWAN_STAIRS_BACKDROP]: {
-            xPosition: 4.5,
-            zOffset: 3,
-            scaleFactor: 0.45,
-            flipHorizontal: true
-        }
-    },
     [CARDBOARD]: {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,

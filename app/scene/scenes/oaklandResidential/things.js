@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { OAKLAND_FRONT__HIGH } from '../../../constants/scene/things/backdrops'
 import {
     TWIN_STREETLAMP__FAR,
     TWIN_STREETLAMP__MIDDLE,
@@ -19,12 +17,6 @@ import {
 } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [OAKLAND_FRONT__HIGH]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        }
-    },
     [CUTOUT]: {
         [TWIN_STREETLAMP__FAR]: {
             yIndex: 1,

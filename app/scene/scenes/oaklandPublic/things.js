@@ -1,8 +1,4 @@
-import {
-    BACKDROP,
-    FLAT
-} from '../../../constants/scene/things'
-import { OAKLAND_FRONT__LOW } from '../../../constants/scene/things/backdrops'
+import { FLAT } from '../../../constants/scene/things'
 import {
     PUBLIC_FAR__GOLDEN_CORD,
     PUBLIC_NEAR__GOLDEN_CORD,
@@ -11,13 +7,6 @@ import {
 } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [OAKLAND_FRONT__LOW]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.5
-        }
-    },
     [FLAT]: {
         [PUBLIC_FAR__GOLDEN_CORD]: {
             yIndex: 1,

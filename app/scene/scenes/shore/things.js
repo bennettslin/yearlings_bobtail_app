@@ -1,10 +1,8 @@
 import {
-    BACKDROP,
     CARDBOARD,
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import { SHORE_BUOY_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { BENNETT_ODIN_BUOY } from '../../../constants/scene/things/cardboards'
 import { YELLOW_TAPED_GRILL } from '../../../constants/scene/things/cutouts'
 import {
@@ -13,12 +11,6 @@ import {
 } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [SHORE_BUOY_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        }
-    },
     [CARDBOARD]: {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,

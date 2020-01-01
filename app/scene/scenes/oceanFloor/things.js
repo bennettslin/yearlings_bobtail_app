@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     CARDBOARD,
     PANEL
 } from '../../../constants/scene/things'
-import { OCEAN_FLOOR_FAR } from '../../../constants/scene/things/backdrops'
 import {
     BENNETT_MAT,
     ODIN_MAT
@@ -14,12 +12,6 @@ import {
 } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [OCEAN_FLOOR_FAR]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        }
-    },
     [CARDBOARD]: {
         [BENNETT_MAT]: {
             yIndex: 2,

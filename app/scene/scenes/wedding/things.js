@@ -1,11 +1,9 @@
 import {
-    BACKDROP,
     CUTOUT,
     FLAT,
     PANEL,
     PUPPET
 } from '../../../constants/scene/things'
-import { WEDDING_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { WEDDING_CROWD } from '../../../constants/scene/things/cutouts'
 import {
     FOREBODING_TREES__NEAR,
@@ -16,12 +14,6 @@ import { WEDDING_PLATFORM } from '../../../constants/scene/things/panels'
 import { PUPPET_KHARI_LIZ } from '../../../constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [WEDDING_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.66
-        }
-    },
     [CUTOUT]: {
         [WEDDING_CROWD]: {
             yIndex: 3,

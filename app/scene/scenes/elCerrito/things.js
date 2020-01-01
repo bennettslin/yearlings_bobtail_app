@@ -1,12 +1,10 @@
 import {
-    BACKDROP,
     CUTOUT,
     FIXTURE,
     FLAT,
     PANEL,
     PUPPET
 } from '../../../constants/scene/things'
-import { GOLDEN_GATE_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { EL_CERRITO_TREE } from '../../../constants/scene/things/cutouts'
 import { FREEWAY_SIGN } from '../../../constants/scene/things/fixtures'
 import {
@@ -22,13 +20,6 @@ import {
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [GOLDEN_GATE_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.675,
-            trimBottom: 0.25
-        }
-    },
     [CUTOUT]: {
         [EL_CERRITO_TREE]: {
             yIndex: 1,

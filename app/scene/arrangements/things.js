@@ -1,5 +1,6 @@
 import keys from 'lodash/keys'
 
+import THINGS_BACKDROPS from 'scene/scenes/backdrops/things'
 import THINGS_NOHO_HOUSES from 'scene/scenes/nohoHouses/things'
 import THINGS_NOHO_SCHOOL from 'scene/scenes/nohoSchool/things'
 import THINGS_BATHROOM, {
@@ -113,6 +114,7 @@ import THINGS_DEATHBED, {
 } from 'scene/scenes/deathbed/things'
 
 const SCENE_ARRANGEMENTS = [
+    THINGS_BACKDROPS,
     THINGS_NOHO_HOUSES,
     THINGS_NOHO_SCHOOL,
     THINGS_BATHROOM,

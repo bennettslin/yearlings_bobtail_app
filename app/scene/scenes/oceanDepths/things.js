@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     CARDBOARD,
     FLAT
 } from '../../../constants/scene/things'
-import { OCEAN_BOTTOM_FAR } from '../../../constants/scene/things/backdrops'
 import { BENNETT_ODIN_OCEAN_FLOOR } from '../../../constants/scene/things/cardboards'
 import {
     OCEAN_BOTTOM_MIDDLE,
@@ -11,12 +9,6 @@ import {
 } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [OCEAN_BOTTOM_FAR]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        }
-    },
     [CARDBOARD]: {
         [BENNETT_ODIN_OCEAN_FLOOR]: {
             yIndex: 4,

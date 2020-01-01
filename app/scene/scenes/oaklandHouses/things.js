@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     FLAT,
     PANEL
 } from '../../../constants/scene/things'
-import { OAKLAND_SIDE } from '../../../constants/scene/things/backdrops'
 import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
@@ -11,13 +9,6 @@ import {
 import { VOLKSWAGEN } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [OAKLAND_SIDE]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.2
-        }
-    },
     [FLAT]: {
         [OAKLAND_HOUSE_LEFT]: {
             yIndex: 1,

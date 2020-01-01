@@ -1,10 +1,8 @@
 import {
-    BACKDROP,
     CARDBOARD,
     FIXTURE,
     PANEL
 } from '../../../constants/scene/things'
-import { ROAD_FUTURE } from '../../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__FUTURE,
     SNOWGLOBE_FUTURE_CORD,
@@ -20,12 +18,6 @@ import {
 } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [ROAD_FUTURE]: {
-            xPosition: 5.5,
-            scaleFactor: 0.6
-        }
-    },
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__FUTURE]: {
             yIndex: 1,

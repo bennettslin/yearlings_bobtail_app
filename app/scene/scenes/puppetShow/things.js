@@ -1,11 +1,9 @@
 import {
-    BACKDROP,
     BUBBLE,
     FLAT,
     PANEL,
     PUPPET
 } from '../../../constants/scene/things'
-import { TAIWAN_MOUNTAINS_BACKDROP } from '../../../constants/scene/things/backdrops'
 import {
     TOGETHER_SKETCH,
     SKETCHBOOK__TOGETHER,
@@ -41,12 +39,6 @@ import {
 } from '../../../constants/scene/things/puppets'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [TAIWAN_MOUNTAINS_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.6
-        }
-    },
     [FLAT]: {
         [TAIWAN_MOUNTAINS_BRIDGED]: {
             yIndex: 3,

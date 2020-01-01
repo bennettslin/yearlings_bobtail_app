@@ -1,9 +1,7 @@
 import {
-    BACKDROP,
     FLAT,
     PANEL
 } from '../../../constants/scene/things'
-import { DRIVING_BACKDROP } from '../../../constants/scene/things/backdrops'
 import { GO_KART_TRACK } from '../../../constants/scene/things/flats'
 import {
     GO_KART_SEAT__LEFT,
@@ -13,13 +11,6 @@ import {
 } from '../../../constants/scene/things/panels'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [DRIVING_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.3
-        }
-    },
     [FLAT]: {
         [GO_KART_TRACK]: {
             yIndex: 1,

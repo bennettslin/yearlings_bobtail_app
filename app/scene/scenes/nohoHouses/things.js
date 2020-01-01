@@ -1,30 +1,13 @@
 import {
-    BACKDROP,
     CUTOUT,
     FLAT
 } from '../../../constants/scene/things'
-import {
-    VALLEY_CLOSER_BACKDROP,
-    FENCE_BACKDROP
-} from '../../../constants/scene/things/backdrops'
 import { FIRE_HYDRANT } from '../../../constants/scene/things/cutouts'
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT
 } from '../../../constants/scene/things/flats'
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [VALLEY_CLOSER_BACKDROP]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        },
-        [FENCE_BACKDROP]: {
-            yIndex: 0,
-            xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.05
-        }
-    },
     [CUTOUT]: {
         [FIRE_HYDRANT]: {
             yIndex: 5,
