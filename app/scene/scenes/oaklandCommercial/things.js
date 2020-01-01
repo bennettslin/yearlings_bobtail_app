@@ -17,9 +17,7 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OAKLAND_FRONT__MIDWAY]: {
             xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.15,
-            flipHorizontal: true
+            scaleFactor: 0.7
         }
     },
     [FLAT]: {

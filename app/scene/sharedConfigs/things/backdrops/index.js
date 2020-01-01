@@ -53,8 +53,14 @@ export default {
         MOUNTAIN__SHARED
     ],
     [MOUNTAIN_BACKDROP]: MOUNTAIN__SHARED,
-    [OAKLAND_FRONT]: FOLIAGE__SHARED,
-    [OAKLAND_SIDE]: FOLIAGE__SHARED,
+    [OAKLAND_FRONT]: [
+        FOLIAGE__SHARED,
+        MOUNTAIN__SHARED
+    ],
+    [OAKLAND_SIDE]: [
+        FOLIAGE__SHARED,
+        MOUNTAIN__SHARED
+    ],
     [OCEAN_BOTTOM_FAR]: null,
     [OCEAN_FLOOR_FAR]: null,
     [ROAD_FUTURE]: ROAD__SHARED,

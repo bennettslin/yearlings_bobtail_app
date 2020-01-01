@@ -33,8 +33,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BACKDROP]: {
         [OAKLAND_FRONT__LIZ_GATE]: {
             xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.3
+            scaleFactor: 0.7
         }
     },
     [BUBBLE]: {

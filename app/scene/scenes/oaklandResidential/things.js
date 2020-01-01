@@ -22,8 +22,7 @@ const ARRANGEMENTS_THINGS = {
     [BACKDROP]: {
         [OAKLAND_FRONT__HIGH]: {
             xPosition: 5.5,
-            scaleFactor: 0.7,
-            trimBottom: 0.05
+            scaleFactor: 0.7
         }
     },
     [CUTOUT]: {
