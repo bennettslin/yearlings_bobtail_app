@@ -1,7 +1,6 @@
 # Change
 * oakland side backdrop: add mountains, pine tree outlines and foliage
 * oakland front backdrop: add mountains, pine tree outlines and foliage
-* los angeles panorama: add mountains, combine back with city backdrop
 * campanile: remove foliage
 
 # New
@@ -9,6 +8,9 @@
 * new distant buildings backdrop with building outlines, tree outlines and foliage
 * new bedroom backdrop with fence and plants
 * new basement backdrop with fence and plants
+
+schoolbus:
+add distant houses
 
 bedroom:
 add valley
@@ -30,7 +32,7 @@ ucla:
 add distant buildings
 
 stationWagon:
-add los angeles panorama
+add distant buildings.
 
 oaklandHouses:
 add distant houses

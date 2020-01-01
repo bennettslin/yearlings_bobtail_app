@@ -1,5 +1,4 @@
 export const BRICK_WALL = 'brickWall'
-export const CITY_BACKDROP = 'cityBackdrop'
 export const DRIVING_BACKDROP = 'drivingBackdrop'
 export const FENCE_BACKDROP = 'fenceBackdrop'
 export const GOLDEN_GATE_BACKDROP = 'goldenGateBackdrop'

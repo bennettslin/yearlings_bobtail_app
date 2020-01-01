@@ -44,7 +44,6 @@ import {
 } from '../../constants/scene/actors/songs'
 import {
     LOS_ANGELES_BACKDROP,
-    CITY_BACKDROP,
     DRIVING_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
@@ -108,7 +107,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [CITY_BACKDROP]: true
+                [LOS_ANGELES_BACKDROP]: true
             },
             [CUTOUT]: {
                 [UCLA_TREE__LEFT]: true,
@@ -204,8 +203,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [LOS_ANGELES_BACKDROP]: true,
-                [CITY_BACKDROP]: true
+                [LOS_ANGELES_BACKDROP]: true
             },
             [CUTOUT]: {
                 [GRAVESTONE]: true
@@ -241,7 +239,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DRIVING_BACKDROP]: true
+                [DRIVING_BACKDROP]: true,
+                [LOS_ANGELES_BACKDROP]: true
             },
             [BUBBLE]: {
                 [TARPIT_CONSTELLATION]: true,

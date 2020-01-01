@@ -20,7 +20,6 @@ import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
 import brickWall from 'assets/svgs/backdrops/brickWall'
-import cityBackdrop from 'assets/svgs/backdrops/cityBackdrop'
 
 import {
     VALLEY_CLOSER_BACKDROP,
@@ -47,8 +46,7 @@ import {
     GOLDEN_GATE_BACKDROP,
     WEDDING_BACKDROP,
     FENCE_BACKDROP,
-    BRICK_WALL,
-    CITY_BACKDROP
+    BRICK_WALL
 } from '../../../constants/scene/things/backdrops'
 
 export default {
@@ -76,6 +74,5 @@ export default {
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop,
     [FENCE_BACKDROP]: fenceBackdrop,
-    [BRICK_WALL]: brickWall,
-    [CITY_BACKDROP]: cityBackdrop
+    [BRICK_WALL]: brickWall
 }
