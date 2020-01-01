@@ -14,6 +14,7 @@ import {
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
+    LAMPPOST__LIZ_GATE,
     TRAFFIC_LIGHT
 } from '../../../constants/scene/things/cutouts'
 import {
@@ -69,6 +70,11 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             yIndex: 4,
             xPosition: 6.5,
             scaleFactor: 0.3
+        },
+        [LAMPPOST__LIZ_GATE]: {
+            yIndex: 3,
+            xPosition: 11,
+            scaleFactor: 0.15
         },
         [TRAFFIC_LIGHT]: {
             yIndex: 5,

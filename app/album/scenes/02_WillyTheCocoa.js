@@ -58,8 +58,9 @@ import {
 import { REASSURING_ENCHANTED } from '../../constants/scene/actors/christopherBennettWilly'
 import { GANGBANGER } from '../../constants/scene/actors/songs'
 import {
-    VALLEY_CLOSER_BACKDROP,
     FENCE_BACKDROP,
+    VALLEY_CLOSER_BACKDROP,
+    VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import { TINTIN_POSTER } from '../../constants/scene/things/cardboards'
@@ -199,6 +200,9 @@ export default [
                     instance: ENRAGED
                 }
             },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true
+            },
             [CARDBOARD]: {
                 [TINTIN_POSTER]: true
             },
@@ -266,6 +270,9 @@ export default [
                     description: 'lying in bed, worried, scared',
                     instance: FEARFUL
                 }
+            },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [CARDBOARD]: {
                 [TINTIN_POSTER]: true

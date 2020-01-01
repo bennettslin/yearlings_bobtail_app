@@ -16,7 +16,7 @@ import cactusDouble from 'assets/svgs/cutouts/cactusDouble'
 import bushSingle from 'assets/svgs/cutouts/bushSingle'
 import bushDouble from 'assets/svgs/cutouts/bushDouble'
 import recyclables from 'assets/svgs/cutouts/recyclables'
-import berkeleyLamppost from 'assets/svgs/cutouts/berkeleyLamppost'
+import lamppost from 'assets/svgs/cutouts/lamppost'
 import signpost from 'assets/svgs/cutouts/signpost'
 import bancroftShrub from 'assets/svgs/cutouts/bancroftShrub'
 import ashCan from 'assets/svgs/cutouts/ashCan'
@@ -84,7 +84,8 @@ import {
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
     RECYCLABLES,
-    BERKELEY_LAMPPOST,
+    LAMPPOST__CHURCH,
+    LAMPPOST__LIZ_GATE,
     SIGNPOST,
     BANCROFT_SHRUB,
     ASH_CAN,
@@ -166,7 +167,8 @@ export default {
     [CACTUS_SINGLE__LIZ_ENDED]: cactusSingle,
     [CACTUS_DOUBLE__LIZ_GATE]: cactusDouble,
     [RECYCLABLES]: recyclables,
-    [BERKELEY_LAMPPOST]: berkeleyLamppost,
+    [LAMPPOST__CHURCH]: lamppost,
+    [LAMPPOST__LIZ_GATE]: lamppost,
     [SIGNPOST]: signpost,
     [BANCROFT_SHRUB]: bancroftShrub,
     [ASH_CAN]: ashCan,

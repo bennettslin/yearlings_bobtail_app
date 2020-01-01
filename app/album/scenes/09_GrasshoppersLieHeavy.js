@@ -89,6 +89,7 @@ import {
     CACTUS_SINGLE__LIZ_ENDING,
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
+    LAMPPOST__LIZ_GATE,
     TRAFFIC_LIGHT,
     APARTMENT_PLANT,
     BUSH_SINGLE__BENNETT_GATE,
@@ -263,6 +264,7 @@ export default [
             },
             [CUTOUT]: {
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
+                [LAMPPOST__LIZ_GATE]: true,
                 [TRAFFIC_LIGHT]: true
             },
             [DOOR]: {

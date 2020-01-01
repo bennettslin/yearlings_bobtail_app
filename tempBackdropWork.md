@@ -8,7 +8,6 @@ schoolbus:
 add distant houses
 
 bedroom:
-add valley
 add bedroom
 
 catholicChurch:
@@ -16,9 +15,6 @@ add distant houses
 
 berkeley:
 add distant buildings
-
-lizGate:
-add lamppost to corner
 
 ucla:
 add distant buildings
@@ -35,11 +31,5 @@ add distant houses
 oaklandCommercial:
 add distant buildings
 
-lizCouch:
-add fence
-
 basement:
 add basement backdrop
-
-alley:
-add brick wall

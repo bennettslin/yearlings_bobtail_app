@@ -4,7 +4,7 @@ import {
     FLAT
 } from '../../../constants/scene/things'
 import { YARD_BACKDROP } from '../../../constants/scene/things/backdrops'
-import { BERKELEY_LAMPPOST } from '../../../constants/scene/things/cutouts'
+import { LAMPPOST__CHURCH } from '../../../constants/scene/things/cutouts'
 import {
     ST_JOSEPHS_ANNEX,
     ST_JOSEPHS_CHURCH
@@ -19,7 +19,7 @@ const ARRANGEMENTS_THINGS = {
         }
     },
     [CUTOUT]: {
-        [BERKELEY_LAMPPOST]: {
+        [LAMPPOST__CHURCH]: {
             yIndex: 4,
             xPosition: 1,
             scaleFactor: 0.3

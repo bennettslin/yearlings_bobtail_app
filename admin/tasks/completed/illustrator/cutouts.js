@@ -70,7 +70,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'berkeleyLamppost',
+        taskName: 'lamppost',
         workedHours: 1,
         neededHours: 1
     },
@@ -285,7 +285,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'fix berkeleyLamppost',
+        taskName: 'fix lamppost',
         workedHours: 1,
         neededHours: 1
     },

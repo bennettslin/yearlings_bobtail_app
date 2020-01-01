@@ -118,6 +118,9 @@ export default [
         unitIndex: 1,
         description: `Bennett's room, but seemingly no one is there.`,
         presences: {
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true
+            },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
@@ -145,6 +148,9 @@ export default [
                     description: 'w-sitting, blissful',
                     instance: BLISSFUL_GUILTY
                 }
+            },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [BUBBLE]: {
                 [DOGS_SKETCH]: true,
@@ -179,6 +185,9 @@ export default [
                     instance: FEIGNING_SICK
                 }
             },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true
+            },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true
             },
@@ -210,6 +219,9 @@ export default [
                     instance: ASLEEP
                 }
             },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true
+            },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true,
                 [PCHELKA_MUSHKA_ROCKET]: true
@@ -230,6 +242,9 @@ export default [
                     description: 'side, sitting, shaken, scared',
                     instance: SHAKEN
                 }
+            },
+            [BACKDROP]: {
+                [VALLEY_FURTHER_BACKDROP]: true
             },
             [CARDBOARD]: {
                 [EARTH]: true,

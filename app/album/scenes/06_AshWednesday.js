@@ -61,7 +61,7 @@ import {
     RECYCLABLES,
     BUSH_SINGLE__COURTYARD,
     BUSH_DOUBLE__COURTYARD,
-    BERKELEY_LAMPPOST,
+    LAMPPOST__CHURCH,
     SIGNPOST,
     BANCROFT_SHRUB,
     ASH_CAN,
@@ -177,7 +177,7 @@ export default [
                 [OAKLAND_SIDE]: true
             },
             [CUTOUT]: {
-                [BERKELEY_LAMPPOST]: true
+                [LAMPPOST__CHURCH]: true
             },
             [FLAT]: {
                 [ST_JOSEPHS_ANNEX]: true,

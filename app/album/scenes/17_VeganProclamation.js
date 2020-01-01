@@ -49,7 +49,10 @@ import {
     GREETING,
     PROTESTER
 } from '../../constants/scene/actors/songs'
-import { OAKLAND_SIDE } from '../../constants/scene/things/backdrops'
+import {
+    BRICK_WALL,
+    OAKLAND_SIDE
+} from '../../constants/scene/things/backdrops'
 import {
     SIGNPOST,
     BANCROFT_SHRUB,
@@ -166,7 +169,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true
+                [OAKLAND_SIDE]: true,
+                [BRICK_WALL]: true
             },
             [CUTOUT]: {
                 [DUMPSTER]: true

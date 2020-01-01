@@ -50,6 +50,7 @@ import {
     CACTUS_SINGLE__LIZ_ENDED,
     CACTUS_DOUBLE__LIZ_GATE,
     CYPRESS_TREE,
+    LAMPPOST__LIZ_GATE,
     MUSEUM_DISPLAY,
     CAVEMAN_BONES,
     SANDBAGS,
@@ -234,6 +235,7 @@ export default [
             },
             [CUTOUT]: {
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
+                [LAMPPOST__LIZ_GATE]: true,
                 [TRAFFIC_LIGHT]: true
             },
             [DOOR]: {

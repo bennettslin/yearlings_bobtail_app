@@ -41,6 +41,7 @@ import {
     ASLEEP_COUCH
 } from '../../constants/scene/actors/liz'
 import {
+    FENCE_BACKDROP,
     OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
 import {
@@ -80,6 +81,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -107,6 +109,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -134,6 +137,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -171,6 +175,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -202,6 +207,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -237,6 +243,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -270,6 +277,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -300,6 +308,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [FENCE_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
