@@ -42,10 +42,7 @@ import {
     STATION_WAGON,
     ATTIC
 } from '../../constants/scene/actors/songs'
-import {
-    LOS_ANGELES_BACKDROP,
-    DRIVING_BACKDROP
-} from '../../constants/scene/things/backdrops'
+import { LOS_ANGELES_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     PHARMACY_CEL,
     TARPIT_CONSTELLATION,
@@ -239,7 +236,6 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [DRIVING_BACKDROP]: true,
                 [LOS_ANGELES_BACKDROP]: true
             },
             [BUBBLE]: {

@@ -89,6 +89,9 @@ export default [
                     instance: BRUSH_OFF
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
                 [LIZ_DOOR]: true,
@@ -214,6 +217,9 @@ export default [
                         instance: LEAVING_CRUMBLED
                     }
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,

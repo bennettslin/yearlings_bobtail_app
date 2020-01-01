@@ -1,5 +1,6 @@
 import { ACTOR } from '../../constants/scene'
 import {
+    BACKDROP,
     BUBBLE,
     DOOR,
     FIXTURE,
@@ -40,6 +41,9 @@ import {
     ASLEEP_COUCH
 } from '../../constants/scene/actors/liz'
 import {
+    OAKLAND_SIDE
+} from '../../constants/scene/things/backdrops'
+import {
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     BUBBLE_SMALL__LIZ,
@@ -75,6 +79,9 @@ export default [
                     }
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
@@ -99,6 +106,9 @@ export default [
                     }
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
@@ -122,6 +132,9 @@ export default [
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
@@ -157,6 +170,9 @@ export default [
                     instance: ARRIVED
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR_OPEN]: true,
@@ -184,6 +200,9 @@ export default [
                     description: 'side, seated, eating, judgmental',
                     instance: JUDGMENTAL
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
                 [KHARI_ATTACK_SPEECH]: true,
@@ -217,6 +236,9 @@ export default [
                     instance: CONCERNED
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
+            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__LIZ]: true,
                 [BUBBLE_MEDIUM__LIZ]: true,
@@ -247,6 +269,9 @@ export default [
                     }
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
+            },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,
                 [LIZ_DOOR]: true,
@@ -273,6 +298,9 @@ export default [
                         instance: ASLEEP_COUCH
                     }
                 }
+            },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE_OPEN]: true,

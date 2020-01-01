@@ -1,8 +1,4 @@
-import {
-    BACKDROP,
-    FLAT
-} from '../../../constants/scene/things'
-import { OAKLAND_FRONT__MIDWAY } from '../../../constants/scene/things/backdrops'
+import { FLAT } from '../../../constants/scene/things'
 import {
     COMMERCIAL_CENTRE,
     COMMERCIAL_FAR_LEFT,
@@ -14,12 +10,6 @@ import {
 } from '../../../constants/scene/things/flats'
 
 const ARRANGEMENTS_THINGS = {
-    [BACKDROP]: {
-        [OAKLAND_FRONT__MIDWAY]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        }
-    },
     [FLAT]: {
         [COMMERCIAL_CENTRE]: {
             yIndex: 1,

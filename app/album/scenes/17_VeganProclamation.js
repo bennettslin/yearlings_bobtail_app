@@ -165,6 +165,9 @@ export default [
                     instance: ALLEY
                 }
             },
+            [BACKDROP]: {
+                [OAKLAND_SIDE]: true
+            },
             [CUTOUT]: {
                 [DUMPSTER]: true
             },

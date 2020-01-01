@@ -59,7 +59,8 @@ import {
     EATING
 } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_FRONT__MIDWAY,
+    OAKLAND_FRONT__HIGH,
+    OAKLAND_SIDE,
     YARD_BACKDROP
 } from '../../constants/scene/things/backdrops'
 import {
@@ -266,6 +267,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [OAKLAND_SIDE]: true,
                 [YARD_BACKDROP]: true
             },
             [DOOR]: {
@@ -364,7 +366,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__MIDWAY]: true
+                [OAKLAND_FRONT__HIGH]: true
             },
             [BUBBLE]: {
                 [BUBBLE_SMALL__CINEMA]: true,

@@ -58,6 +58,7 @@ import {
     FUTURE
 } from '../../constants/scene/actors/songs'
 import {
+    OAKLAND_SIDE,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
@@ -104,6 +105,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [OAKLAND_SIDE]: true,
                 [YARD_BACKDROP]: true
             },
             [DOOR]: {
@@ -137,6 +139,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [OAKLAND_SIDE]: true,
                 [YARD_BACKDROP]: true
             },
             [PANEL]: {
@@ -295,6 +298,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [OAKLAND_SIDE]: true,
                 [YARD_BACKDROP]: true
             },
             [FIXTURE]: {

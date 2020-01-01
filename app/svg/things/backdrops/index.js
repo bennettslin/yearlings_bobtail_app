@@ -8,7 +8,6 @@ import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
 import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
 import yardBackdrop from 'assets/svgs/backdrops/yardBackdrop'
-import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
 import losAngelesBackdrop from 'assets/svgs/backdrops/losAngelesBackdrop'
 import oaklandSide from 'assets/svgs/backdrops/oaklandSide'
 import oaklandFront from 'assets/svgs/backdrops/oaklandFront'
@@ -20,6 +19,7 @@ import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
 import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
 import brickWall from 'assets/svgs/backdrops/brickWall'
+import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
 
 import {
     VALLEY_CLOSER_BACKDROP,
@@ -34,19 +34,17 @@ import {
     OCEAN_FLOOR_FAR,
     YARD_BACKDROP,
     OAKLAND_SIDE,
-    DRIVING_BACKDROP,
     LOS_ANGELES_BACKDROP,
     OAKLAND_FRONT__HIGH,
-    OAKLAND_FRONT__MIDWAY,
     OAKLAND_FRONT__LOW,
-    OAKLAND_FRONT__LIZ_GATE,
     ROAD_PAST,
     ROAD_PRESENT,
     ROAD_FUTURE,
     GOLDEN_GATE_BACKDROP,
     WEDDING_BACKDROP,
     FENCE_BACKDROP,
-    BRICK_WALL
+    BRICK_WALL,
+    DRIVING_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
 export default {
@@ -61,18 +59,16 @@ export default {
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
     [YARD_BACKDROP]: yardBackdrop,
-    [DRIVING_BACKDROP]: drivingBackdrop,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
     [OAKLAND_SIDE]: oaklandSide,
     [OAKLAND_FRONT__HIGH]: oaklandFront,
-    [OAKLAND_FRONT__MIDWAY]: oaklandFront,
     [OAKLAND_FRONT__LOW]: oaklandFront,
-    [OAKLAND_FRONT__LIZ_GATE]: oaklandFront,
     [ROAD_PAST]: roadPast,
     [ROAD_PRESENT]: roadPresent,
     [ROAD_FUTURE]: roadFuture,
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop,
     [FENCE_BACKDROP]: fenceBackdrop,
-    [BRICK_WALL]: brickWall
+    [BRICK_WALL]: brickWall,
+    [DRIVING_BACKDROP]: drivingBackdrop
 }

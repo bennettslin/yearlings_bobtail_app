@@ -1,11 +1,9 @@
 import {
-    BACKDROP,
     BUBBLE,
     CUTOUT,
     DOOR,
     FLAT
 } from '../../../constants/scene/things'
-import { OAKLAND_FRONT__LIZ_GATE } from '../../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
@@ -30,12 +28,6 @@ import {
 } from '../../../constants/scene/things/flats'
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
-    [BACKDROP]: {
-        [OAKLAND_FRONT__LIZ_GATE]: {
-            xPosition: 5.5,
-            scaleFactor: 0.7
-        }
-    },
     [BUBBLE]: {
         [BUBBLE_SMALL__GO_KART]: {
             yIndex: 5,

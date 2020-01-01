@@ -51,9 +51,9 @@ import {
     RUMPLED_LINENS
 } from '../../constants/scene/actors/songs'
 import {
-    OAKLAND_SIDE,
     BRICK_WALL,
-    OAKLAND_FRONT__LIZ_GATE
+    OAKLAND_FRONT__HIGH,
+    OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
 import {
     GINGERBREAD_PRISON,
@@ -259,7 +259,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_FRONT__LIZ_GATE]: true
+                [OAKLAND_FRONT__HIGH]: true
             },
             [CUTOUT]: {
                 [CACTUS_SINGLE__LIZ_ENDED]: true,
