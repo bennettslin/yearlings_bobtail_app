@@ -1,4 +1,4 @@
-export const BERKELEY_BUILDING__SHARED = 'berkeleyBuilding'
+export const BUILDINGS_BERKELEY__SHARED = 'buildingsBerkeley'
 export const BUILDINGS__SHARED = 'buildings'
 export const DISTANT__SHARED = 'distant'
 export const OAKLAND_HOUSE__SHARED = 'oaklandHouse'

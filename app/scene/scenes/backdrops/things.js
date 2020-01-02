@@ -59,6 +59,7 @@ export default {
             scaleFactor: 0.66
         },
         [OAKLAND_FRONT__LOW]: {
+            yIndex: 0,
             scaleFactor: 0.7,
             trimBottom: 0.5
         },
