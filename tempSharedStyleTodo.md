@@ -1,7 +1,6 @@
 # Other shared
 rocks: cave, campfire, ocean
 ocean plants
-exhaust
 road (taiwan bridge, walking thought)
 
 brick wall
