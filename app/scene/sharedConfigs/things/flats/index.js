@@ -70,6 +70,7 @@ import {
     FREEWAY_SIGN__SHARED,
     GRAVE__SHARED,
     MOUNTAIN__SHARED,
+    ROAD__SHARED,
     TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
 import {
@@ -223,6 +224,7 @@ export default {
     [TAIWAN_MOUNTAINS_BRIDGED]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        ROAD__SHARED,
         TAIWAN_HOUSE__SHARED
     ],
     [TAIWAN_MOUNTAIN_LEFT]: [

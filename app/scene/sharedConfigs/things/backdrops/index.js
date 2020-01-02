@@ -33,10 +33,10 @@ import { BOOK__SHARED } from '../../../sharedStyles/paper'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
+    ROAD__SHARED,
     SHORE__SHARED,
     WALL__SHARED
 } from '../../../sharedStyles/outdoor'
-import { ROAD__SHARED } from '../../../sharedStyles/props'
 
 export default {
     [DISTANT_BUILDINGS_BACKDROP]: [

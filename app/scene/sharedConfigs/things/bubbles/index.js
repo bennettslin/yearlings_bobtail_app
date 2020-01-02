@@ -43,6 +43,7 @@ import {
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
+    ROAD__SHARED,
     SHORE__SHARED
 } from '../../../sharedStyles/outdoor'
 import {
@@ -99,7 +100,8 @@ export default {
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
         FOLIAGE__SHARED,
-        REATTA__SHARED
+        REATTA__SHARED,
+        ROAD__SHARED
     ],
     [PHARMACY_CEL]: null,
     [SIBLING_CONSTELLATION]: SKETCH_PEOPLE__SHARED,
@@ -129,6 +131,7 @@ export default {
         ALL_PEOPLE__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
+        ROAD__SHARED,
         SHORE__SHARED
     ]
 }
