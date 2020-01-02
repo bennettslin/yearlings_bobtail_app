@@ -68,7 +68,8 @@ import { BUDDHA_SHRINE__SHARED } from '../../../sharedStyles/taiwan'
 import {
     ALL_VEHICLES__SHARED,
     INTERIOR__SHARED,
-    REATTA__SHARED
+    REATTA__SHARED,
+    SCHOOLBUS__SHARED
 } from '../../../sharedStyles/vehicles'
 
 export default {
@@ -113,7 +114,10 @@ export default {
     [SATURN_EXTERIOR]: ALL_VEHICLES__SHARED,
     [SATURN_INTERIOR]: INTERIOR__SHARED,
     [SATURN_SEAT]: null,
-    [SCHOOLBUS_EXTERIOR]: ALL_VEHICLES__SHARED,
+    [SCHOOLBUS_EXTERIOR]: [
+        ALL_VEHICLES__SHARED,
+        SCHOOLBUS__SHARED
+    ],
     [SCHOOLBUS_INTERIOR]: INTERIOR__SHARED,
     [SCHOOLBUS_SEAT]: null,
     [SNOWGLOBE]: SNOWGLOBE__SHARED,

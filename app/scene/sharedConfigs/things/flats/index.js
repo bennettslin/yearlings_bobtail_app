@@ -72,10 +72,16 @@ import {
     MOUNTAIN__SHARED,
     TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
-import { ALL_VEHICLES__SHARED } from '../../../sharedStyles/vehicles'
+import {
+    ALL_VEHICLES__SHARED,
+    SCHOOLBUS__SHARED
+} from '../../../sharedStyles/vehicles'
 
 export default {
-    [BEDROOM_BUS]: ALL_VEHICLES__SHARED,
+    [BEDROOM_BUS]: [
+        ALL_VEHICLES__SHARED,
+        SCHOOLBUS__SHARED
+    ],
     [BEDROOM_SIREN]: null,
     [BERKELEY_BUILDING_TALL]: [
         CAMPUS__SHARED,

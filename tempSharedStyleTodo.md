@@ -4,7 +4,6 @@ ocean plants
 exhaust
 road (taiwan bridge, walking thought)
 
-schoolbus
 brick wall
 
 # Improvements
