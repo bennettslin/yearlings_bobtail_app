@@ -57,8 +57,7 @@ import pampasFar from 'assets/svgs/flats/pampasFar'
 import {
     NOHO_HOUSE_LEFT,
     NOHO_HOUSE_RIGHT,
-    SCHOOL_BUNGALOW__LEFT,
-    SCHOOL_BUNGALOW__RIGHT,
+    SCHOOL_BUNGALOW,
     VALLEY_FREEWAY,
     BEDROOM_BUS,
     BEDROOM_SIREN,
@@ -121,8 +120,7 @@ import {
 export default {
     [NOHO_HOUSE_LEFT]: nohoHouseLeft,
     [NOHO_HOUSE_RIGHT]: nohoHouseRight,
-    [SCHOOL_BUNGALOW__LEFT]: schoolBungalow,
-    [SCHOOL_BUNGALOW__RIGHT]: schoolBungalow,
+    [SCHOOL_BUNGALOW]: schoolBungalow,
     [VALLEY_FREEWAY]: valleyFreeway,
     [BEDROOM_BUS]: bedroomBus,
     [BEDROOM_SIREN]: bedroomSiren,

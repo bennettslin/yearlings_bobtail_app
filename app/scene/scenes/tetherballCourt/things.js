@@ -12,14 +12,10 @@ import {
 } from '../../../constants/scene/things/bubbles'
 import {
     CAMPUS_TREE_SINGLE__TETHERBALL,
-    CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT,
-    CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT
+    CAMPUS_TREE_DOUBLE__TETHERBALL
 } from '../../../constants/scene/things/cutouts'
 import { TETHERBALL_POLE } from '../../../constants/scene/things/fixtures'
-import {
-    SCHOOL_BUNGALOW__LEFT,
-    SCHOOL_BUNGALOW__RIGHT
-} from '../../../constants/scene/things/flats'
+import { SCHOOL_BUNGALOW } from '../../../constants/scene/things/flats'
 
 export default {
     [BUBBLE]: {
@@ -51,17 +47,12 @@ export default {
     [CUTOUT]: {
         [CAMPUS_TREE_SINGLE__TETHERBALL]: {
             yIndex: 1,
-            xPosition: 5.5,
+            xPosition: 3,
             scaleFactor: 0.5
         },
-        [CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT]: {
+        [CAMPUS_TREE_DOUBLE__TETHERBALL]: {
             yIndex: 1,
-            xPosition: 1.5,
-            scaleFactor: 0.5
-        },
-        [CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT]: {
-            yIndex: 1,
-            xPosition: 9.5,
+            xPosition: 8,
             scaleFactor: 0.5
         }
     },
@@ -73,16 +64,10 @@ export default {
         }
     },
     [FLAT]: {
-        [SCHOOL_BUNGALOW__LEFT]: {
+        [SCHOOL_BUNGALOW]: {
             yIndex: 2,
-            xPosition: 3.25,
+            xPosition: 5.5,
             scaleFactor: 0.5
-        },
-        [SCHOOL_BUNGALOW__RIGHT]: {
-            yIndex: 2,
-            xPosition: 7.75,
-            scaleFactor: 0.5,
-            flipHorizontal: true
         }
     }
 }

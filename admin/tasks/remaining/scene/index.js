@@ -93,7 +93,7 @@ export default [
     },
     {
         taskName: 'tetherballCourt',
-        notes: `Just one bungalow?`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },

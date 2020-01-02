@@ -49,8 +49,7 @@ import {
 } from '../../constants/scene/things/bubbles'
 import {
     CAMPUS_TREE_SINGLE__TETHERBALL,
-    CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT,
-    CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT
+    CAMPUS_TREE_DOUBLE__TETHERBALL
 } from '../../constants/scene/things/cutouts'
 import { BACKPACK_BENNETT } from '../../constants/scene/things/fixtures'
 import {
@@ -59,8 +58,7 @@ import {
     TAIWAN_MOUNTAIN_RIGHT,
     DRIVING_HOUSE_LEFT,
     DRIVING_HOUSE_RIGHT,
-    SCHOOL_BUNGALOW__LEFT,
-    SCHOOL_BUNGALOW__RIGHT
+    SCHOOL_BUNGALOW
 } from '../../constants/scene/things/flats'
 import {
     TAIWAN_BRIDGE,
@@ -216,12 +214,10 @@ export default [
             },
             [CUTOUT]: {
                 [CAMPUS_TREE_SINGLE__TETHERBALL]: true,
-                [CAMPUS_TREE_DOUBLE__TETHERBALL_LEFT]: true,
-                [CAMPUS_TREE_DOUBLE__TETHERBALL_RIGHT]: true
+                [CAMPUS_TREE_DOUBLE__TETHERBALL]: true
             },
             [FLAT]: {
-                [SCHOOL_BUNGALOW__LEFT]: true,
-                [SCHOOL_BUNGALOW__RIGHT]: true
+                [SCHOOL_BUNGALOW]: true
             }
         },
         cubes: TETHERBALL_COURT_KEY,
