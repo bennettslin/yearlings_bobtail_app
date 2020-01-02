@@ -1,5 +1,4 @@
 .shadow#{$suffix} {
-    .shadow {
-        fill: hsl(270, 14%, 20%);
-    }
+    .shadowLight { fill: hsl(32, 5%, 25%); }
+    .shadow { fill: hsl(32, 5%, 20%); }
 }

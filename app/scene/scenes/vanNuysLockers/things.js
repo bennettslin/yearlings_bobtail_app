@@ -23,7 +23,7 @@ export default {
         [TRASH_CAN__LOCKERS]: {
             yIndex: 2,
             xPosition: 10.5,
-            scaleFactor: 0.35
+            scaleFactor: 0.25
         },
         [BUSH_SINGLE__LOCKERS]: {
             yIndex: 1,

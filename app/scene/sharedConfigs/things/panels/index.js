@@ -90,10 +90,7 @@ export default {
     ],
     [BENNETT_BED]: SHADOW__SHARED,
     [CAPTAIN_BED]: BEDROOM_FURNITURE__SHARED,
-    [CAVE_SHADOWS]: [
-        ROCK__SHARED,
-        SHADOW__SHARED
-    ],
+    [CAVE_SHADOWS]: ROCK__SHARED,
     [CONVEYOR_BELT]: [
         CUP__SHARED,
         DISH__SHARED,
