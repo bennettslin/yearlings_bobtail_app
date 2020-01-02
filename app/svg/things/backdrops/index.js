@@ -16,8 +16,8 @@ import roadFuture from 'assets/svgs/backdrops/roadFuture'
 import goldenGateBackdrop from 'assets/svgs/backdrops/goldenGateBackdrop'
 import mountainBackdrop from 'assets/svgs/backdrops/mountainBackdrop'
 import weddingBackdrop from 'assets/svgs/backdrops/weddingBackdrop'
-import fenceBackdrop from 'assets/svgs/backdrops/fenceBackdrop'
-import brickWall from 'assets/svgs/backdrops/brickWall'
+import nearHouses from 'assets/svgs/backdrops/nearHouses'
+import nearBuildings from 'assets/svgs/backdrops/nearBuildings'
 import distantBuildings from 'assets/svgs/backdrops/distantBuildings'
 import distantHouses from 'assets/svgs/backdrops/distantHouses'
 import drivingBackdrop from 'assets/svgs/backdrops/drivingBackdrop'
@@ -42,8 +42,8 @@ import {
     ROAD_FUTURE,
     GOLDEN_GATE_BACKDROP,
     WEDDING_BACKDROP,
-    FENCE_BACKDROP,
-    BRICK_WALL,
+    NEAR_HOUSES,
+    NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP
@@ -69,8 +69,8 @@ export default {
     [ROAD_FUTURE]: roadFuture,
     [GOLDEN_GATE_BACKDROP]: goldenGateBackdrop,
     [WEDDING_BACKDROP]: weddingBackdrop,
-    [FENCE_BACKDROP]: fenceBackdrop,
-    [BRICK_WALL]: brickWall,
+    [NEAR_HOUSES]: nearHouses,
+    [NEAR_BUILDINGS]: nearBuildings,
     [DISTANT_BUILDINGS_BACKDROP]: distantBuildings,
     [DISTANT_HOUSES_BACKDROP]: distantHouses,
     [DRIVING_BACKDROP]: drivingBackdrop

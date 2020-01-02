@@ -49,7 +49,7 @@ import {
 } from '../../constants/scene/actors/bennettLiz'
 import {
     OAKLAND_SIDE,
-    BRICK_WALL,
+    NEAR_BUILDINGS,
     MOUNTAIN_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
@@ -102,7 +102,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
                 [DISPENSER_LEFT]: true,

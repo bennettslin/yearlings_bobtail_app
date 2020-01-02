@@ -50,7 +50,7 @@ import {
     PROTESTER
 } from '../../constants/scene/actors/songs'
 import {
-    BRICK_WALL,
+    NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
@@ -172,7 +172,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
                 [DUMPSTER]: true

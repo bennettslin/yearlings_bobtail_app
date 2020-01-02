@@ -58,7 +58,7 @@ import {
 import { REASSURING_ENCHANTED } from '../../constants/scene/actors/christopherBennettWilly'
 import { GANGBANGER } from '../../constants/scene/actors/songs'
 import {
-    FENCE_BACKDROP,
+    NEAR_HOUSES,
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP
@@ -166,7 +166,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_CLOSER_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [NEAR_HOUSES]: true
             },
             [CUTOUT]: {
                 [CACTUS_DOUBLE__PORCH]: true,
@@ -243,7 +243,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_CLOSER_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [NEAR_HOUSES]: true
             },
             [CUTOUT]: {
                 [SHOPPING_CART]: true,
@@ -303,7 +303,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [FENCE_BACKDROP]: true,
+                [NEAR_HOUSES]: true,
                 [VALLEY_CLOSER_BACKDROP]: true
             },
             [CUTOUT]: {

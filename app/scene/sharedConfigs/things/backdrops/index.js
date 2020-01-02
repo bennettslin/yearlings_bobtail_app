@@ -1,12 +1,12 @@
 import {
-    BRICK_WALL,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP,
-    FENCE_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
     MOUNTAIN_BACKDROP,
+    NEAR_BUILDINGS,
+    NEAR_HOUSES,
     OAKLAND_FRONT,
     OAKLAND_SIDE,
     OCEAN_BOTTOM_FAR,
@@ -39,10 +39,6 @@ import {
 import { ROAD__SHARED } from '../../../sharedStyles/props'
 
 export default {
-    [BRICK_WALL]: [
-        BUILDINGS__SHARED,
-        FOLIAGE__SHARED
-    ],
     [DISTANT_BUILDINGS_BACKDROP]: [
         BUILDINGS__SHARED,
         DISTANT__SHARED,
@@ -54,10 +50,6 @@ export default {
         WALL__SHARED
     ],
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
-    [FENCE_BACKDROP]: [
-        FOLIAGE__SHARED,
-        WALL__SHARED
-    ],
     [GOLDEN_GATE_BACKDROP]: [
         BUILDINGS__SHARED,
         MOUNTAIN__SHARED,
@@ -69,6 +61,14 @@ export default {
         MOUNTAIN__SHARED
     ],
     [MOUNTAIN_BACKDROP]: MOUNTAIN__SHARED,
+    [NEAR_BUILDINGS]: [
+        BUILDINGS__SHARED,
+        FOLIAGE__SHARED
+    ],
+    [NEAR_HOUSES]: [
+        FOLIAGE__SHARED,
+        WALL__SHARED
+    ],
     [OAKLAND_FRONT]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED

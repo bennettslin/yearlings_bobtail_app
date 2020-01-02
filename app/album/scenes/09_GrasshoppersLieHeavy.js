@@ -51,7 +51,7 @@ import {
     RUMPLED_LINENS
 } from '../../constants/scene/actors/songs'
 import {
-    BRICK_WALL,
+    NEAR_BUILDINGS,
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
@@ -296,7 +296,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true
@@ -331,7 +331,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [CARDBOARD]: {
                 [CODE_BOX]: true

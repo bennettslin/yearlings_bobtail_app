@@ -45,9 +45,9 @@ import {
 } from '../../constants/scene/actors/esther'
 import {
     VALLEY_CLOSER_BACKDROP,
-    FENCE_BACKDROP,
+    NEAR_HOUSES,
     VALLEY_FURTHER_BACKDROP,
-    BRICK_WALL
+    NEAR_BUILDINGS
 } from '../../constants/scene/things/backdrops'
 import { ESTHER_SPEECH } from '../../constants/scene/things/bubbles'
 import { JOHNNY_HORTON_ALBUM } from '../../constants/scene/things/cardboards'
@@ -76,7 +76,7 @@ export default [
         presences: {
             [BACKDROP]: {
                 [VALLEY_CLOSER_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [NEAR_HOUSES]: true
             },
             [CUTOUT]: {
                 [FIRE_HYDRANT]: true
@@ -109,7 +109,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_CLOSER_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [NEAR_HOUSES]: true
             },
             [CUTOUT]: {
                 [FIRE_HYDRANT]: true
@@ -142,7 +142,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_FURTHER_BACKDROP]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [BUBBLE]: {
                 [ESTHER_SPEECH]: true
@@ -173,7 +173,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_CLOSER_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [NEAR_HOUSES]: true
             },
             [CUTOUT]: {
                 [MIRRORED_SINK]: true,
@@ -202,7 +202,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_CLOSER_BACKDROP]: true,
-                [FENCE_BACKDROP]: true
+                [NEAR_HOUSES]: true
             },
             [CARDBOARD]: {
                 [JOHNNY_HORTON_ALBUM]: true

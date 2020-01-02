@@ -51,7 +51,7 @@ import {
 } from '../../constants/scene/actors/songs'
 import {
     OAKLAND_SIDE,
-    BRICK_WALL
+    NEAR_BUILDINGS
 } from '../../constants/scene/things/backdrops'
 import {
     MONITOR_SIDE__CROWD,
@@ -188,7 +188,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [DOOR]: {
                 [CLUB_DOOR_OPEN]: true

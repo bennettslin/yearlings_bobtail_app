@@ -60,7 +60,7 @@ import { POPULAR_GIRL } from '../../constants/scene/actors/sasha'
 import { ASLEEP } from '../../constants/scene/actors/songs'
 import { PRINCIPAL } from '../../constants/scene/actors/tristan'
 import {
-    BRICK_WALL,
+    NEAR_BUILDINGS,
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP
 } from '../../constants/scene/things/backdrops'
@@ -285,7 +285,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_CLOSER_BACKDROP]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
                 [LOCKER_BANK]: true,
@@ -327,7 +327,7 @@ export default [
             },
             [BACKDROP]: {
                 [VALLEY_FURTHER_BACKDROP]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [BUBBLE]: {
                 [ESCAPE_POD_SKETCH]: true,

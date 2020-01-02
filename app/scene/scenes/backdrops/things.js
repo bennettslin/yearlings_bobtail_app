@@ -1,10 +1,10 @@
 import { BACKDROP } from '../../../constants/scene/things'
 import {
-    BRICK_WALL,
+    NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP,
-    FENCE_BACKDROP,
+    NEAR_HOUSES,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
     MOUNTAIN_BACKDROP,
@@ -28,7 +28,7 @@ import {
 
 export default {
     [BACKDROP]: {
-        [BRICK_WALL]: {
+        [NEAR_BUILDINGS]: {
             scaleFactor: 0.66,
             trimBottom: 0.05
         },
@@ -42,7 +42,7 @@ export default {
             scaleFactor: 0.7,
             trimBottom: 0.45
         },
-        [FENCE_BACKDROP]: {
+        [NEAR_HOUSES]: {
             yIndex: 0,
             scaleFactor: 0.7,
             trimBottom: 0.05

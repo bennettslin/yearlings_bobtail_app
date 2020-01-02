@@ -44,7 +44,7 @@ import {
 } from '../../constants/scene/actors/catherine'
 import { CATHOLIC_GUY } from '../../constants/scene/actors/wade'
 import {
-    BRICK_WALL,
+    NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
     OAKLAND_SIDE
@@ -112,7 +112,7 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true,
-                [BRICK_WALL]: true
+                [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
                 [RECYCLABLES]: true,
