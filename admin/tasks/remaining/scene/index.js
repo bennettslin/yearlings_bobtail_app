@@ -63,25 +63,25 @@ export default [
     },
     {
         taskName: 'porch',
-        notes: `Plant colour.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'bedroom',
-        notes: `Fix bed wonkiness by making mattress part of panel, skewing more closely, accommodate cube seat, colour cubes without bed.`,
+        notes: `Accommodate cube seat, colour cubes without bed.`,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'changelingCave',
-        notes: `Fire colour, shadow colours, add Noho backdrop with night colours, Noho house with night colours and more even size.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'puppetShow',
-        notes: `Mountain colours.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -171,19 +171,19 @@ export default [
     },
     {
         taskName: 'bennettCouch',
-        notes: `Police and Television album skew, expand room.`,
+        notes: `Police and Television album skew.`,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'catholicChurch',
-        notes: `Night colours, lower backdrop.`,
+        notes: `Night colours`,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'ucBerkeley',
-        notes: `Lower backdrop, set back Bancroft building, Bancroft shrub colour.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -195,7 +195,7 @@ export default [
     },
     {
         taskName: 'basement',
-        notes: `Lower backdrop.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -207,13 +207,13 @@ export default [
     },
     {
         taskName: 'cinemaStreet',
-        notes: `Lower backdrop.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'lizGate',
-        notes: `More plants, expand window presence, add backdrops, make same in Grasshoppers.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -231,7 +231,7 @@ export default [
     },
     {
         taskName: 'goKarts',
-        notes: `Lower backdrop.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -249,7 +249,7 @@ export default [
     },
     {
         taskName: 'bennettBed',
-        notes: `Add mattress to bed panel, darken neighbour door and window, colours for lit room.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
