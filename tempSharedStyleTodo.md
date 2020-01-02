@@ -1,13 +1,9 @@
 # Other shared
-rocks: cave, campfire, ocean
 brick wall
 pole
 
 # Improvements
 elCerritoTree (make multiple parts)
-oceanBottomFar
-oceanFloorFar
-campfire
 stageLights
 pharmacyAisle
 porch cube post colour

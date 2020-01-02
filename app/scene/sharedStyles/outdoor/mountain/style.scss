@@ -1,4 +1,9 @@
 .mountain#{$suffix} {
+    .volcanoFar { fill: hsl(63, 12%, 51%); }
+    .volcanoMiddle { fill: hsl(63, 13%, 47%); }
+    .volcanoNear { fill: hsl(63, 14%, 43%); }
+    .volcanoCaldera { fill: hsl(24, 55%, 45%); }
+
     .mountainFar { fill: hsl(340, 12%, 51%); }
     .mountain { fill: hsl(340, 13%, 47%); }
     .mountainNear { fill: hsl(340, 14%, 43%); }

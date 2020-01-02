@@ -26,13 +26,6 @@
     .postFront { fill: hsl(30, 23%, 33%); }
 }
 
-.caveShadows {
-    .wall { fill: hsl(60, 20%, 50%); }
-    .rockBack { fill: hsl(30, 50%, 60%); }
-    .rockMiddle { fill: hsl(30, 50%, 40%); }
-    .rockFront { fill: hsl(30, 100%, 20%); }
-}
-
 .conveyorBelt {
     .mount { fill: hsl(60, 9%, 49%); }
     .carDark { fill: hsl(151, 12%, 49%); }
@@ -114,17 +107,6 @@
     .skirt { fill: hsl(270, 11%, 32%); }
     .weltDisplayLine { stroke: hsl(278, 10%, 23%); }
     .cushion { fill: hsl(275, 11%, 46%); }
-}
-
-.oceanCaveExterior {
-    .caveRight { fill: hsl(30, 50%, 40%); }
-    .caveLeft { fill: hsl(0, 20%, 50%); }
-}
-
-.oceanCaveInterior {
-    .rockBack { fill: hsl(30, 50%, 40%); }
-    .rockFront { fill: hsl(60, 33%, 30%); }
-    .rockShadow { fill: hsl(0, 0%, 40%); }
 }
 
 .phoneCallPanel {

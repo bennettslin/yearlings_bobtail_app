@@ -10,23 +10,10 @@
 }
 
 .campfire {
-    .flameOuter { fill: hsl(348, 100%, 50%); }
-    .flameMiddle { fill: hsl(24, 100%, 50%); }
-    .flameInner { fill: hsl(60, 100%, 50%); }
-    .logBack { fill: hsl(30, 50%, 60%); }
-    .logBackLine { stroke: hsl(30, 53%, 30%); }
-    .logBottom { fill: hsl(30, 100%, 20%); }
-    .logSide { fill: hsl(30, 50%, 40%); }
-    .logSideLine { stroke: hsl(24, 71%, 15%); }
-    .logFront { fill: hsl(30, 100%, 80%); }
-    .logFrontLine { stroke: hsl(30, 34%, 49%); }
-    .logBottomCut { fill: hsl(40, 60%, 50%); }
-    .logSideCut { fill: hsl(40, 100%, 70%); }
-    .logCutLine { stroke: hsl(40, 69%, 43%); }
-    .stoneSide { fill: hsl(0, 0%, 20%); }
-    .stoneSideMiddle { fill: hsl(0, 0%, 40%); }
-    .stoneMiddleCentre { fill: hsl(0, 0%, 60%); }
-    .stoneCentre { fill: hsl(0, 0%, 80%); }
+    .flameOuter { fill: hsla(0, 95%, 68%, 0.9); }
+    .flameMiddle { fill: hsla(24, 95%, 68%, 0.9); }
+    .flameInner { fill: hsla(56, 95%, 68%, 0.9); }
+    .wood { fill: hsl(40, 42%, 52%); }
 }
 
 .cavemanBones {

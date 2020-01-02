@@ -59,6 +59,8 @@ import {
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
+    OCEAN_CAVE__SHARED,
+    ROCK__SHARED,
     WALL__SHARED
 } from '../../../sharedStyles/outdoor'
 import {
@@ -88,7 +90,10 @@ export default {
     ],
     [BENNETT_BED]: SHADOW__SHARED,
     [CAPTAIN_BED]: BEDROOM_FURNITURE__SHARED,
-    [CAVE_SHADOWS]: SHADOW__SHARED,
+    [CAVE_SHADOWS]: [
+        ROCK__SHARED,
+        SHADOW__SHARED
+    ],
     [CONVEYOR_BELT]: [
         CUP__SHARED,
         DISH__SHARED,
@@ -102,10 +107,11 @@ export default {
     [HOSPITAL_BED]: null,
     [LIZ_BED]: SHADOW__SHARED,
     [LIZ_COUCH]: SHADOW__SHARED,
-    [OCEAN_CAVE_EXTERIOR]: null,
+    [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
     [OCEAN_CAVE_INTERIOR]: [
         BUDDHA_SHRINE__SHARED,
-        OCEAN_LIFE__SHARED
+        OCEAN_LIFE__SHARED,
+        ROCK__SHARED
     ],
     [PHONE_CALL_PANEL]: null,
     [REATTA_EXTERIOR]: [

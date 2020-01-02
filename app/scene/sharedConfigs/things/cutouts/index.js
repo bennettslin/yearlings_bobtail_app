@@ -75,6 +75,7 @@ import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
+    ROCK__SHARED,
     TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../sharedStyles/paper'
@@ -89,7 +90,10 @@ export default {
     [BUSH_SINGLE]: FOLIAGE__SHARED,
     [CACTUS_DOUBLE]: FOLIAGE__SHARED,
     [CACTUS_SINGLE]: FOLIAGE__SHARED,
-    [CAMPFIRE]: null,
+    [CAMPFIRE]: [
+        FOLIAGE__SHARED,
+        ROCK__SHARED
+    ],
     [CAMPUS_TREE_DOUBLE]: FOLIAGE__SHARED,
     [CAMPUS_TREE_SINGLE]: FOLIAGE__SHARED,
     [CAVEMAN_BONES]: null,

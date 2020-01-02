@@ -1,0 +1,7 @@
+.rock#{$suffix} {
+    .rockShadow { fill: hsl(32, 5%, 32%); stroke: none; }
+    .rockWall { fill: hsl(32, 5%, 50%); }
+    .rockBack { fill: hsl(32, 5%, 55%); }
+    .rockMiddle { fill: hsl(32, 5%, 60%); }
+    .rockFront { fill: hsl(32, 5%, 65%); }
+}

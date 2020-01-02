@@ -77,8 +77,8 @@ export default {
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED
     ],
-    [OCEAN_BOTTOM_FAR]: null,
-    [OCEAN_FLOOR_FAR]: null,
+    [OCEAN_BOTTOM_FAR]: MOUNTAIN__SHARED,
+    [OCEAN_FLOOR_FAR]: MOUNTAIN__SHARED,
     [ROAD_FUTURE]: ROAD__SHARED,
     [ROAD_PAST]: [
         BOOK__SHARED,

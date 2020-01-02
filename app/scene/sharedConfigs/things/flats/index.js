@@ -71,7 +71,9 @@ import {
     FREEWAY_SIGN__SHARED,
     GRAVE__SHARED,
     MOUNTAIN__SHARED,
+    OCEAN_CAVE__SHARED,
     ROAD__SHARED,
+    ROCK__SHARED,
     TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
 import {
@@ -167,8 +169,11 @@ export default {
         FOLIAGE__SHARED,
         HOUSE__SHARED
     ],
-    [OCEAN_BOTTOM_MIDDLE]: null,
-    [OCEAN_BOTTOM_NEAR]: OCEAN_LIFE__SHARED,
+    [OCEAN_BOTTOM_MIDDLE]: OCEAN_CAVE__SHARED,
+    [OCEAN_BOTTOM_NEAR]: [
+        OCEAN_LIFE__SHARED,
+        ROCK__SHARED
+    ],
     [PAMPAS_FAR]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED
