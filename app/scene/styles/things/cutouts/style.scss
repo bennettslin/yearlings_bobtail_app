@@ -53,28 +53,15 @@
 }
 
 .dumpster {
-    .bodyFront { fill: hsl(120, 20%, 50%); }
-    .bodyBack { fill: hsl(150, 100%, 20%); }
-    .bodySide { fill: hsl(120, 100%, 10%); }
-    .bodyRim { fill: hsl(150, 50%, 40%); }
-    .ridge { fill: hsl(148, 100%, 29%); }
-    .slotSide { fill: hsl(120, 100%, 10%); }
-    .slotFront { fill: hsl(120, 33%, 30%); }
-    .slotBottom { fill: hsl(150, 100%, 20%); }
-    .jointFront { fill: hsl(150, 100%, 20%); }
-    .jointSide { fill: hsl(148, 100%, 29%); }
-    .pin { fill: hsl(150, 50%, 40%); }
-    .lid { fill: hsl(0, 0%, 40%); }
-    .lidRim { fill: hsl(0, 0%, 20%); }
-    .lidTrim { fill: hsl(0, 0%, 60%); }
-    .wheelSide { fill: hsl(0, 0%, 40%); }
-    .wheelFront { fill: hsl(0, 0%, 20%); }
-    .casterBack { fill: hsl(60, 33%, 30%); }
-    .casterFront { fill: hsl(60, 20%, 50%); }
-    .warningField { fill: hsl(60, 50%, 60%); }
-    .warningLabel { fill: hsl(0, 60%, 50%); }
-    .garbageBack { fill: hsl(0, 0%, 40%); }
-    .garbageFront { fill: hsl(0, 0%, 30%); }
+.bodyOuterDark { fill: hsl(141, 36%, 33%); }
+.bodyOuterLight { fill: hsl(143, 36%, 43%); }
+.bodyInnerDark { fill: hsl(143, 36%, 45%); }
+.bodyInnerLight { fill: hsl(143, 36%, 48%); }
+.warningLabel { fill: hsl(56, 50%, 50%); }
+.warningField { fill: hsl(0, 50%, 50%); }
+.lidTop { fill: hsl(252, 4%, 24%); }
+.lidRidge { fill: hsl(249, 4%, 34%); }
+.lidRim { fill: hsl(240, 11%, 7%); }
 }
 
 .fireHydrant {

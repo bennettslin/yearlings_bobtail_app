@@ -80,6 +80,7 @@ import {
 } from '../../../sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../sharedStyles/paper'
 import { BUDDHA_SHRINE__SHARED } from '../../../sharedStyles/taiwan'
+import { ALL_VEHICLES__SHARED } from '../../../sharedStyles/vehicles'
 
 export default {
     [APARTMENT_PLANT]: FOLIAGE__SHARED,
@@ -106,7 +107,10 @@ export default {
         NEWSPAPER__SHARED,
         ALL_PEOPLE__SHARED
     ],
-    [DUMPSTER]: null,
+    [DUMPSTER]: [
+        ALL_VEHICLES__SHARED,
+        GARBAGE_BAG__SHARED
+    ],
     [EL_CERRITO_TREE]: FOLIAGE__SHARED,
     [FIRE_HYDRANT]: null,
     [GLASS_RACK]: CUP__SHARED,
