@@ -78,14 +78,12 @@
 }
 
 .fireHydrant {
-    .valveOuter { fill: hsl(0, 47%, 53%); }
-    .valveInner { fill: hsl(0, 43%, 49%); }
-    .valveOuterDark { fill: hsl(0, 44%, 51%); }
-    .hydrant { fill: hsl(0, 63%, 60%); }
-    .ridge { fill: hsl(0, 55%, 55%); }
-    .valveOuterLight { fill: hsl(0, 50%, 54%); }
-    .cap { fill: hsl(0, 42%, 42%); }
-    .capLight { fill: hsl(0, 42%, 44%); }
+    .valveInner { fill: hsl(0, 45%, 52%); }
+    .valveInnerLight { fill: hsl(0, 45%, 53%); }
+    .valveOuter { fill: hsl(0, 45%, 54%); }
+    .valveOuterLight { fill: hsl(0, 45%, 55%); }
+    .ridge { fill: hsl(0, 45%, 53%); }
+    .hydrant { fill: hsl(0, 45%, 55%); }
 }
 
 .gravestone {
@@ -237,11 +235,11 @@
 }
 
 .playgroundSlide {
-    .rung { fill: hsl(180, 20%, 50%); }
-    .bar { fill: hsl(60, 33%, 30%); }
-    .frameSide { fill: hsl(240, 33%, 30%); }
-    .slide { fill: hsl(210, 50%, 60%); }
-    .frameFront { fill: hsl(240, 50%, 60%); }
+    .rung { fill: hsl(155, 12%, 40%); }
+    .bar { fill: hsl(155, 12%, 45%); }
+    .slide { fill: hsl(207, 18%, 78%); }
+    .frameSide { fill: hsl(179, 29%, 49%); }
+    .frameFront { fill: hsl(179, 29%, 44%); }
 }
 
 .recyclables {
