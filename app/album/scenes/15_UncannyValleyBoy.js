@@ -61,8 +61,7 @@ import {
     OAKLAND_SIDE,
     ROAD_PAST,
     ROAD_PRESENT,
-    ROAD_FUTURE,
-    YARD_BACKDROP
+    ROAD_FUTURE
 } from '../../constants/scene/things/backdrops'
 import {
     SNOWGLOBE_SMALL__PAST,
@@ -81,6 +80,7 @@ import {
     CRACKED_PICTURE
 } from '../../constants/scene/things/fixtures'
 import {
+    BASEMENT_FENCE,
     SNOWGLOBE__TETHERBALL,
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
@@ -105,13 +105,13 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
-                [YARD_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [DOOR]: {
                 [BASEMENT_DOOR]: true
             },
             [PANEL]: {
+                [BASEMENT_FENCE]: true,
                 [BENNETT_BED]: true
             }
         },
@@ -139,10 +139,10 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
-                [YARD_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [PANEL]: {
+                [BASEMENT_FENCE]: true,
                 [BENNETT_BED]: true
             }
         },
@@ -298,13 +298,13 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
-                [YARD_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true
             },
             [PANEL]: {
+                [BASEMENT_FENCE]: true,
                 [BENNETT_BED]: true
             }
         },

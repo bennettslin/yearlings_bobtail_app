@@ -7,7 +7,6 @@ import shoreRickshawBackdrop from 'assets/svgs/backdrops/shoreRickshawBackdrop'
 import shoreBuoyBackdrop from 'assets/svgs/backdrops/shoreBuoyBackdrop'
 import oceanBottomFar from 'assets/svgs/backdrops/oceanBottomFar'
 import oceanFloorFar from 'assets/svgs/backdrops/oceanFloorFar'
-import yardBackdrop from 'assets/svgs/backdrops/yardBackdrop'
 import losAngelesBackdrop from 'assets/svgs/backdrops/losAngelesBackdrop'
 import oaklandSide from 'assets/svgs/backdrops/oaklandSide'
 import oaklandFront from 'assets/svgs/backdrops/oaklandFront'
@@ -34,7 +33,6 @@ import {
     SHORE_BUOY_BACKDROP,
     OCEAN_BOTTOM_FAR,
     OCEAN_FLOOR_FAR,
-    YARD_BACKDROP,
     OAKLAND_SIDE,
     LOS_ANGELES_BACKDROP,
     OAKLAND_FRONT__HIGH,
@@ -62,7 +60,6 @@ export default {
     [SHORE_BUOY_BACKDROP]: shoreBuoyBackdrop,
     [OCEAN_BOTTOM_FAR]: oceanBottomFar,
     [OCEAN_FLOOR_FAR]: oceanFloorFar,
-    [YARD_BACKDROP]: yardBackdrop,
     [LOS_ANGELES_BACKDROP]: losAngelesBackdrop,
     [OAKLAND_SIDE]: oaklandSide,
     [OAKLAND_FRONT__HIGH]: oaklandFront,

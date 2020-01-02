@@ -36,6 +36,7 @@ import {
     DATE_ENDED
 } from '../../constants/scene/actors/songs'
 import {
+    DISTANT_BUILDINGS_BACKDROP,
     DRIVING_BACKDROP,
     OAKLAND_FRONT__HIGH,
     OAKLAND_SIDE
@@ -193,6 +194,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_BUILDINGS_BACKDROP]: true,
                 [DRIVING_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },

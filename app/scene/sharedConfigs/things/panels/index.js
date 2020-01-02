@@ -1,6 +1,7 @@
 import {
     ATTIC_ARMREST,
     ATTIC_COUCH,
+    BASEMENT_FENCE,
     BATHTUB,
     BEDROOM_DESK,
     BEDROOM_FENCE,
@@ -54,7 +55,11 @@ import {
     BEDROOM_FURNITURE__SHARED,
     WAITING_ARMCHAIR__SHARED
 } from '../../../sharedStyles/furniture'
-import { FOLIAGE__SHARED } from '../../../sharedStyles/outdoor'
+import {
+    FOLIAGE__SHARED,
+    MOUNTAIN__SHARED,
+    WALL__SHARED
+} from '../../../sharedStyles/outdoor'
 import {
     SHADOW__SHARED,
     SNOWGLOBE__SHARED
@@ -69,9 +74,16 @@ import {
 export default {
     [ATTIC_ARMREST]: null,
     [ATTIC_COUCH]: null,
+    [BASEMENT_FENCE]: [
+        FOLIAGE__SHARED,
+        WALL__SHARED
+    ],
     [BATHTUB]: null,
     [BEDROOM_DESK]: BEDROOM_FURNITURE__SHARED,
-    [BEDROOM_FENCE]: FOLIAGE__SHARED,
+    [BEDROOM_FENCE]: [
+        MOUNTAIN__SHARED,
+        WALL__SHARED
+    ],
     [BENNETT_BED]: SHADOW__SHARED,
     [CAPTAIN_BED]: BEDROOM_FURNITURE__SHARED,
     [CAVE_SHADOWS]: SHADOW__SHARED,

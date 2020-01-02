@@ -60,8 +60,7 @@ import {
 } from '../../constants/scene/actors/songs'
 import {
     OAKLAND_FRONT__HIGH,
-    OAKLAND_SIDE,
-    YARD_BACKDROP
+    OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
 import {
     BUBBLE_SMALL__CINEMA,
@@ -113,6 +112,7 @@ import {
     COMMERCIAL_NEAR_RIGHT
 } from '../../constants/scene/things/flats'
 import {
+    BASEMENT_FENCE,
     WIDE_COUCH__BENNETT,
     WIDE_ARMREST__BENNETT_LEFT,
     WIDE_ARMREST__BENNETT_RIGHT
@@ -267,8 +267,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [OAKLAND_SIDE]: true,
-                [YARD_BACKDROP]: true
+                [OAKLAND_SIDE]: true
             },
             [DOOR]: {
                 [BASEMENT_DOOR_OPEN]: true
@@ -280,6 +279,9 @@ export default [
                 [BASEMENT_BEER_CASE]: true,
                 [BASEMENT_BEER_MARA]: true,
                 [BASEMENT_BEER_BENNETT]: true
+            },
+            [PANEL]: {
+                [BASEMENT_FENCE]: true
             }
         },
         cubes: BASEMENT_KEY,

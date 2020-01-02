@@ -227,6 +227,7 @@ export default [
                 [PCHELKA_MUSHKA_ROCKET]: true
             },
             [PANEL]: {
+                [BEDROOM_FENCE]: true,
                 [CAPTAIN_BED]: true
             }
         },
@@ -250,14 +251,15 @@ export default [
                 [EARTH]: true,
                 [SPACE_COLONY]: true
             },
-            [DOOR]: {
-                [BEDROOM_BLINDS_OPEN]: true
-            },
+            // [DOOR]: {
+            //     [BEDROOM_BLINDS_OPEN]: true
+            // },
             [FIXTURE]: {
                 [BEYONDER_ENVELOPE]: true
             },
             [PANEL]: {
-                [BEDROOM_DESK]: true
+                [BEDROOM_FENCE]: true
+                // [BEDROOM_DESK]: true
             }
         },
         cubes: BEDROOM_SPACE_KEY,

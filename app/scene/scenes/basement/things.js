@@ -1,6 +1,7 @@
 import {
     DOOR,
-    FIXTURE
+    FIXTURE,
+    PANEL
 } from '../../../constants/scene/things'
 import { BASEMENT_DOOR_OPEN } from '../../../constants/scene/things/doors'
 import {
@@ -11,6 +12,7 @@ import {
     BASEMENT_BEER_MARA,
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
+import { BASEMENT_FENCE } from '../../../constants/scene/things/panels'
 
 export default {
     [DOOR]: {
@@ -46,6 +48,11 @@ export default {
         [BASEMENT_BEER_BENNETT]: {
             yIndex: 5,
             xPosition: 8
+        }
+    },
+    [PANEL]: {
+        [BASEMENT_FENCE]: {
+            scaleFactor: 0.5
         }
     }
 }

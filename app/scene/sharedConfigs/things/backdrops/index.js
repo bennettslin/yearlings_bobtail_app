@@ -21,8 +21,7 @@ import {
     VALLEY_CLOSER_BACKDROP,
     VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
-    WEDDING_BACKDROP,
-    YARD_BACKDROP
+    WEDDING_BACKDROP
 } from '../../../../constants/scene/things/backdrops'
 
 import {
@@ -34,7 +33,8 @@ import { BOOK__SHARED } from '../../../sharedStyles/paper'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
-    SHORE__SHARED
+    SHORE__SHARED,
+    WALL__SHARED
 } from '../../../sharedStyles/outdoor'
 import { ROAD__SHARED } from '../../../sharedStyles/props'
 
@@ -50,10 +50,14 @@ export default {
     ],
     [DISTANT_HOUSES_BACKDROP]: [
         DISTANT__SHARED,
-        FOLIAGE__SHARED
+        FOLIAGE__SHARED,
+        WALL__SHARED
     ],
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
-    [FENCE_BACKDROP]: FOLIAGE__SHARED,
+    [FENCE_BACKDROP]: [
+        FOLIAGE__SHARED,
+        WALL__SHARED
+    ],
     [GOLDEN_GATE_BACKDROP]: [
         BUILDINGS__SHARED,
         MOUNTAIN__SHARED,
@@ -110,6 +114,5 @@ export default {
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED
     ],
-    [WEDDING_BACKDROP]: MOUNTAIN__SHARED,
-    [YARD_BACKDROP]: FOLIAGE__SHARED
+    [WEDDING_BACKDROP]: MOUNTAIN__SHARED
 }

@@ -23,8 +23,7 @@ import {
     TAIWAN_MOUNTAINS_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
-    WEDDING_BACKDROP,
-    YARD_BACKDROP
+    WEDDING_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
 export default {
@@ -41,7 +40,7 @@ export default {
         },
         [DRIVING_BACKDROP]: {
             scaleFactor: 0.7,
-            trimBottom: 0.3
+            trimBottom: 0.45
         },
         [FENCE_BACKDROP]: {
             yIndex: 0,
@@ -116,10 +115,6 @@ export default {
         },
         [WEDDING_BACKDROP]: {
             scaleFactor: 0.66
-        },
-        [YARD_BACKDROP]: {
-            scaleFactor: 0.7,
-            trimBottom: 0.1
         }
     }
 }

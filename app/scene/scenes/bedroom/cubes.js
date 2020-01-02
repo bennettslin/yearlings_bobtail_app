@@ -127,20 +127,20 @@ const CUBES = {
         slantDirection: LEFT,
         ceiling: {
             hslaColours: [
-                [D, D, D, D, D, Z, D, Z, Z, Z, D],
-                [D, D, D, D, D, Z, Z, Z, Z, Z, D],
-                [D, D, D, D, D, D, Z, Z, Z, Z, Z, D],
-                [D, D, D, D, D, Z, Z, Z, Z, Z, Z, D],
-                [D, D, D, D, D, Z, Z, Z, Z, Z, Z, D],
+                [D, D, D, D, D, D, D, D, D, D, D],
+                [D, D, D, D, D, Z, D, Z, Z, D, D],
+                [D, D, D, D, D, D, Z, Z, Z, Z, D, D],
+                [D, D, D, D, D, Z, Z, Z, Z, Z, D, D],
+                [D, D, D, D, D, Z, Z, Z, Z, Z, D, D],
                 [D, D, D, D, D, D, Z, Z, Z, Z, Z, Z]
             ],
             zIndices: [
-                [k, k, k, k, k, 1, k, 1, 1, 1, k],
-                [k, k, k, k, k, g, 1, g, g, 1, k],
-                [k, k, k, k, k, k, g, g, g, g, 1, k],
-                [k, k, k, k, k, g, g, g, g, g, 1, k],
-                [k, k, k, k, k, g, g, g, g, g, 1, k],
-                [k, k, k, k, k, k, g, g, g, g, g, 1]
+                [k, k, k, k, k, k, k, k, k, k, k],
+                [k, k, k, k, k, g, k, g, g, k, k],
+                [k, k, k, k, k, k, g, g, g, g, k, k],
+                [k, k, k, k, k, g, g, g, g, g, k, k],
+                [k, k, k, k, k, g, g, g, g, g, k, k],
+                [k, k, k, k, k, k, g, g, g, g, g, k]
             ]
         },
         floor: {
@@ -166,18 +166,18 @@ const CUBES = {
         slantDirection: LEFT,
         ceiling: {
             hslaColours: [
-                [D, D, D, D, D, W, D],
+                [D, D, D, D, D, D, D],
                 [D, D, D, W, W, W, D],
                 [D, D, W, W, W, W, D],
-                [W, W, W, W, W, W, D],
+                [D, W, W, W, W, W, D],
                 [W, W, W, W, W, W, D],
                 [W, W, W, W, W, W, D]
             ],
             zIndices: [
-                [k, k, k, k, k, 1, k],
+                [k, k, k, k, k, k, k],
                 [k, k, k, d, d, g, k],
                 [k, k, d, d, g, g, k],
-                [1, d, g, g, g, g, k],
+                [k, d, g, g, g, g, k],
                 [g, g, g, g, g, g, k],
                 [1, g, g, g, g, g, k]
             ]
@@ -185,19 +185,20 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G, G, G, G, G, F, G],
-                [G, G, G, W, W, F, G],
-                [G, G, W, W, R, F, G],
-                [F, W, R, R, F, F, G],
+                [G, G, G, F, F, F, G],
+                [G, G, F, F, R, F, G],
+                [F, F, R, R, F, F, G],
                 [F, F, F, F, F, F, G],
                 [F, F, F, F, F, F, G]
             ],
             zIndices: [
-                [0, 0, 0, 0, 0, 1, 0],
-                [0, 0, 0, 6, 6, 1, 0],
-                [0, 0, 6, 6, 5, 1, 0],
-                [1, 6, 5, 5, 1, 1, 0],
-                [1, 1, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 1, 0]
+                [0]
+                // [0, 0, 0, 0, 0, 1, 0],
+                // [0, 0, 0, 1, 1, 1, 0],
+                // [0, 0, 1, 1, 5, 1, 0],
+                // [1, 1, 5, 5, 1, 1, 0],
+                // [1, 1, 1, 1, 1, 1, 0],
+                // [1, 1, 1, 1, 1, 1, 0]
             ]
         }
     }

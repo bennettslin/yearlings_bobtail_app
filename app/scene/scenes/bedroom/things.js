@@ -100,8 +100,6 @@ export default {
             scaleFactor: 0.2
         },
         [BEDROOM_FENCE]: {
-            xPosition: 2.5,
-            zOffset: 2,
             scaleFactor: 0.5
         }
     }
@@ -124,7 +122,7 @@ export const THINGS_BEDROOM_FEARFUL = {
     [FLAT]: {
         [BEDROOM_SIREN]: {
             xPosition: 2,
-            zOffset: 2.75,
+            zOffset: 2.25,
             scaleFactor: 0.425
         }
     }
@@ -172,7 +170,7 @@ export const THINGS_BEDROOM_FEIGNING = {
     [FLAT]: {
         [BEDROOM_BUS]: {
             xPosition: 2,
-            zOffset: 3.25,
+            zOffset: 2.25,
             scaleFactor: 0.5
         }
     }

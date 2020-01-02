@@ -5,7 +5,7 @@ exhaust
 road (taiwan bridge, walking thought)
 
 schoolbus
-fence
+brick wall
 nohoHouses
 roof
 door
