@@ -1,8 +1,7 @@
 # Other shared
 rocks: cave, campfire, ocean
-ocean plants
-
 brick wall
+pole
 
 # Improvements
 elCerritoTree (make multiple parts)

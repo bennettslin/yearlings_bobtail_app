@@ -56,6 +56,7 @@ import {
     VALLEY_FREEWAY
 } from '../../../../constants/scene/things/flats'
 
+import { OCEAN_LIFE__SHARED } from '../../../sharedStyles/animals'
 import {
     CAMPUS__SHARED,
     BUILDINGS__SHARED,
@@ -167,7 +168,7 @@ export default {
         HOUSE__SHARED
     ],
     [OCEAN_BOTTOM_MIDDLE]: null,
-    [OCEAN_BOTTOM_NEAR]: null,
+    [OCEAN_BOTTOM_NEAR]: OCEAN_LIFE__SHARED,
     [PAMPAS_FAR]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED

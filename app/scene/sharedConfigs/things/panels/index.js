@@ -45,6 +45,7 @@ import {
     WIDE_COUCH
 } from '../../../../constants/scene/things/panels'
 
+import { OCEAN_LIFE__SHARED } from '../../../sharedStyles/animals'
 import { WEDDING__SHARED } from '../../../sharedStyles/buildings'
 import {
     CUP__SHARED,
@@ -102,7 +103,10 @@ export default {
     [LIZ_BED]: SHADOW__SHARED,
     [LIZ_COUCH]: SHADOW__SHARED,
     [OCEAN_CAVE_EXTERIOR]: null,
-    [OCEAN_CAVE_INTERIOR]: BUDDHA_SHRINE__SHARED,
+    [OCEAN_CAVE_INTERIOR]: [
+        BUDDHA_SHRINE__SHARED,
+        OCEAN_LIFE__SHARED
+    ],
     [PHONE_CALL_PANEL]: null,
     [REATTA_EXTERIOR]: [
         ALL_VEHICLES__SHARED,

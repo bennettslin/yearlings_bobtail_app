@@ -122,23 +122,9 @@
 }
 
 .oceanCaveInterior {
-    .rockShadow { fill: hsl(0, 0%, 40%); }
-    .seaweed { fill: hsl(120, 50%, 40%); }
-    .kelpSide { fill: hsl(120, 100%, 20%); }
-    .kelpFront { fill: hsl(120, 33%, 30%); }
-    .tubeWormPlumeCentre { fill: hsl(0, 20%, 50%); }
-    .tubeWormCentre { fill: hsl(180, 20%, 50%); }
-    .tubeWormPlumeSide { fill: hsl(20, 60%, 50%); }
-    .tubeWormSide { fill: hsl(180, 33%, 30%); }
-    .urchin { fill: hsl(270, 50%, 40%); }
-    .coralBrain { fill: hsl(20, 100%, 30%); }
-    .coralBrainCavity { fill: hsl(0, 100%, 10%); }
-    .frondBack { fill: hsl(200, 100%, 30%); }
-    .frondFront { fill: hsl(180, 50%, 40%); }
-    .coralTube { fill: hsl(240, 20%, 50%); }
-    .coralTubeCavity { fill: hsl(240, 33%, 30%); }
     .rockBack { fill: hsl(30, 50%, 40%); }
     .rockFront { fill: hsl(60, 33%, 30%); }
+    .rockShadow { fill: hsl(0, 0%, 40%); }
 }
 
 .phoneCallPanel {
