@@ -1,0 +1,13 @@
+.building#{$suffix} {
+    .roofSide { fill: hsl(17, 20%, 45%); }
+    .roofBelow { fill: hsl(17, 20%, 49%); }
+    .roofFront { fill: hsl(18, 24%, 53%); }
+    .awningTop { fill: hsl(225, 45%, 71%); }
+    .awningFront { fill: hsl(223, 28%, 63%); }
+    .awningSide { fill: hsl(225, 20%, 55%); }
+    .trimSide { fill: hsl(45, 16%, 49%); }
+    .trimFront { fill: hsl(44, 25%, 60%); }
+    .windowSide { fill: hsl(186, 31%, 62%); }
+    .windowFront { fill: hsl(185, 46%, 71%); }
+    .door { fill: hsl(25, 13%, 39%); }
+}

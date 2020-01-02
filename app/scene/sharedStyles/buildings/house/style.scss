@@ -1,0 +1,21 @@
+.house#{$suffix} {
+    .trimSide { fill: hsl(43, 25%, 44%); }
+    .trimFront { fill: hsl(43, 25%, 51%); }
+    .door { fill: hsl(34, 27%, 41%); }
+    .stepFront { fill: hsl(230, 16%, 73%); }
+    .stepSide { fill: hsl(228, 16%, 59%); }
+    .windowFront { fill: hsl(183, 56%, 64%); }
+    .windowMiddle { fill: hsl(180, 47%, 59%); }
+    .windowSide { fill: hsl(183, 44%, 58%); }
+    .roofBelow { fill: hsl(0, 20%, 43%); }
+    .roofSide { fill: hsl(0, 20%, 50%); }
+    .roofTop { fill: hsl(0, 20%, 56%); }
+    .beam { fill: hsl(49, 22%, 49%); }
+    .deckFront { fill: hsl(84, 21%, 62%); }
+    .deckSide { fill: hsl(84, 15%, 55%); }
+    .railFront { fill: hsl(56, 24%, 66%); }
+    .railSide { fill: hsl(57, 17%, 58%); }
+    .bayWallFront { fill: hsl(60, 18%, 66%); }
+    .bayWallMiddle { fill: hsl(60, 18%, 63%); }
+    .bayWallSide { fill: hsl(60, 18%, 60%); }
+}

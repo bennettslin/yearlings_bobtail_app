@@ -1,26 +1,9 @@
-.oaklandHouse#{$suffix} {
-    .trimFront { fill: hsl(33, 34%, 51%); }
-    .trimSide { fill: hsl(33, 31%, 44%); }
-    .door { fill: hsl(34, 27%, 36%); }
-    .stepFront { fill: hsl(230, 27%, 63%); }
-    .stepSide { fill: hsl(228, 16%, 49%); }
-    .windowFront { fill: hsl(183, 56%, 64%); }
-    .windowSide { fill: hsl(183, 44%, 58%); }
-    .roofSide { fill: hsl(0, 20%, 50%); }
-    .roofBelow { fill: hsl(0, 20%, 43%); }
-    .roofTop { fill: hsl(0, 30%, 56%); }
-}
-
 .oaklandHouseLeft#{$suffix} {
     .wallFront { fill: hsl(299, 28%, 69%); }
     .wallSide { fill: hsl(298, 19%, 60%); }
-    .bayWallFront { fill: hsl(324, 17%, 66%); }
-    .bayWallSide { fill: hsl(339, 14%, 60%); }
 }
 
 .oaklandHouseRight#{$suffix} {
     .wallFront { fill: hsl(299, 28%, 69%); }
     .wallSide { fill: hsl(298, 19%, 60%); }
-    .bayWallFront { fill: hsl(324, 17%, 66%); }
-    .bayWallSide { fill: hsl(339, 14%, 60%); }
 }

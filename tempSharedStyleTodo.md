@@ -6,11 +6,6 @@ road (taiwan bridge, walking thought)
 
 schoolbus
 brick wall
-nohoHouses
-roof
-door
-window
-stairs
 
 # Improvements
 elCerritoTree (make multiple parts)

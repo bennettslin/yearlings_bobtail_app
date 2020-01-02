@@ -32,7 +32,7 @@
     .wallFrontInner { fill: hsl(66, 17%, 67%); }
     .ledgeSide { fill: hsl(120, 13%, 61%); }
     .ledgeFront { fill: hsl(120, 25%, 76%); }
-    .step { fill: hsl(231, 47%, 77%); }
+    .stepFront { fill: hsl(231, 47%, 77%); }
 }
 
 .cemeteryHillsRight {
@@ -49,8 +49,6 @@
 .commercialFarLeft {
     .wallSide { fill: hsl(281, 16%, 53%); }
     .wallFront { fill: hsl(281, 25%, 64%); }
-    .awningFront { fill: hsl(223, 28%, 63%); }
-    .awningSide { fill: hsl(225, 20%, 55%); }
     .shutter { fill: hsl(223, 13%, 51%); }
 }
 
@@ -76,16 +74,11 @@
 .commercialNearLeft {
     .wallSide { fill: hsl(281, 16%, 53%); }
     .wallFront { fill: hsl(281, 25%, 64%); }
-    .awningFront { fill: hsl(223, 28%, 63%); }
-    .awningSide { fill: hsl(225, 20%, 55%); }
 }
 
 .commercialNearRight {
     .wallSide { fill: hsl(281, 16%, 53%); }
     .wallFront { fill: hsl(281, 25%, 64%); }
-    .awningTop { fill: hsl(225, 45%, 71%); }
-    .awningFront { fill: hsl(223, 28%, 63%); }
-    .awningSide { fill: hsl(225, 20%, 55%); }
 }
 
 .drivingHouseLeft {
@@ -102,7 +95,7 @@
     .antennaWhite { fill: hsl(0, 0%, 92%); }
     .antennaRed { fill: hsl(14, 52%, 53%); }
     .antennaBuilding { fill: hsl(51, 20%, 64%); }
-    .roof { fill: hsl(90, 5%, 91%); }
+    .antennaRoof { fill: hsl(90, 5%, 91%); }
 }
 
 .elCerritoNear {
@@ -111,23 +104,11 @@
     .houseCentre { fill: hsl(60, 15%, 61%); }
     .houseRightFront { fill: hsl(295, 5%, 47%); }
     .houseRightSide { fill: hsl(297, 9%, 56%); }
-    .roofFront { fill: hsl(14, 17%, 48%); }
-    .roofTop { fill: hsl(16, 28%, 58%); }
-    .door { fill: hsl(38, 12%, 55%); }
-    .window { fill: hsl(170, 15%, 53%); }
+
 }
 
 .familyHouse {
-    .wall { fill: hsl(68, 100%, 83%); }
-    .trim { fill: hsl(57, 16%, 47%); }
-    .door { fill: hsl(57, 27%, 62%); }
-    .stepTop { fill: hsl(219, 100%, 77%); }
-    .beam { fill: hsl(60, 36%, 61%); }
-    .stepBottom { fill: hsl(219, 56%, 66%); }
-    .window { fill: hsl(189, 100%, 79%); }
-    .windowDisplayLine { stroke: hsl(185, 45%, 35%); }
-    .roofSide { fill: hsl(47, 31%, 46%); }
-    .roofTop { fill: hsl(47, 35%, 50%); }
+    .wallFront { fill: hsl(68, 100%, 83%); }
 }
 
 .ferrisWheel {
@@ -160,33 +141,12 @@
 }
 
 .nohoHouseLeft {
-    .wall { fill: hsl(234, 46%, 80%); }
-    .door { fill: hsl(43, 30%, 61%); }
-    .stepTop { fill: hsl(167, 21%, 70%); }
-    .stepBottom { fill: hsl(168, 17%, 66%); }
-    .trim { fill: hsl(44, 28%, 41%); }
-    .window { fill: hsl(191, 54%, 70%); }
-    .roofSide { fill: hsl(35, 30%, 45%); }
-    .roofTop { fill: hsl(36, 31%, 52%); }
-    .can { fill: hsl(172, 9%, 50%); }
-    .handle { fill: hsl(169, 9%, 50%); }
-    .lid { fill: hsl(170, 9%, 40%); }
+    .wallFront { fill: hsl(234, 46%, 80%); }
 }
 
 .nohoHouseRight {
-    .wall { fill: hsl(104, 62%, 66%); }
-    .porch { fill: hsl(35, 45%, 60%); }
-    .beam { fill: hsl(68, 32%, 69%); }
-    .stepBottom { fill: hsl(209, 59%, 73%); }
-    .stepMiddle { fill: hsl(209, 68%, 75%); }
-    .stepTop { fill: hsl(209, 74%, 77%); }
-    .door { fill: hsl(43, 48%, 65%); }
-    .trim { fill: hsl(53, 25%, 51%); }
-    .window { fill: hsl(186, 100%, 80%); }
-    .roofSide { fill: hsl(48, 40%, 65%); }
-    .roofTop { fill: hsl(48, 25%, 53%); }
-    .awningSide { fill: hsl(48, 48%, 69%); }
-    .awningFront { fill: hsl(104, 100%, 76%); }
+    .wallSide { fill: hsl(104, 42%, 71%); }
+    .wallFront { fill: hsl(104, 42%, 76%); }
 }
 
 .oaklandFlag {
@@ -200,8 +160,6 @@
 .oaklandSchool {
     .wallFront { fill: hsl(299, 28%, 69%); }
     .wallSide { fill: hsl(298, 19%, 60%); }
-    .awningFront { fill: hsl(223, 28%, 63%); }
-    .awningSide { fill: hsl(225, 20%, 55%); }
     .clockSide { fill: hsl(86, 28%, 65%); }
     .clockFront { fill: hsl(86, 38%, 73%); }
     .handDisplayLine { stroke: hsl(0, 0%, 53%); }
@@ -240,10 +198,6 @@
 .residentialFarLeft {
     .wallFront { fill: hsl(299, 28%, 69%); }
     .wallSide { fill: hsl(298, 19%, 60%); }
-    .deckFront { fill: hsl(84, 21%, 62%); }
-    .deckSide { fill: hsl(84, 15%, 55%); }
-    .railFront { fill: hsl(56, 24%, 66%); }
-    .railSide { fill: hsl(57, 17%, 58%); }
 }
 
 .residentialFarRight {
@@ -254,19 +208,11 @@
 .residentialMiddleRight {
     .wallFront { fill: hsl(299, 28%, 69%); }
     .wallSide { fill: hsl(298, 19%, 60%); }
-    .windowMiddle { fill: hsl(180, 47%, 59%); }
-    .bayWallFront { fill: hsl(324, 17%, 66%); }
-    .bayWallMiddle { fill: hsl(327, 18%, 62%); }
-    .bayWallSide { fill: hsl(339, 14%, 60%); }
 }
 
 .residentialNearRight {
     .wallFront { fill: hsl(299, 28%, 69%); }
     .wallSide { fill: hsl(298, 19%, 60%); }
-    .deckFront { fill: hsl(84, 21%, 62%); }
-    .deckSide { fill: hsl(84, 15%, 55%); }
-    .railFront { fill: hsl(56, 24%, 66%); }
-    .railSide { fill: hsl(57, 17%, 58%); }
 }
 
 .rollerCoaster {
@@ -295,8 +241,8 @@
     .windowOuterDisplayLine { stroke: hsl(231, 21%, 30%); }
     .windowInner { fill: hsl(195, 17%, 50%); }
     .windowInnerDisplayLine { stroke: hsl(231, 21%, 20%); }
-    .stepInner { fill: hsl(226, 14%, 51%); }
-    .stepOuter { fill: hsl(226, 13%, 43%); }
+    .stepFront { fill: hsl(226, 14%, 51%); }
+    .stepSide { fill: hsl(226, 13%, 43%); }
     .trimOrnamentInner { fill: hsl(65, 9%, 52%); }
     .trimOrnamentOuter { fill: hsl(64, 14%, 62%); }
     .brickOrnament { fill: hsl(13, 42%, 53%); }
@@ -304,33 +250,24 @@
 }
 
 .schoolBungalow {
-    .wall { fill: hsl(195, 40%, 62%); }
-    .ramp { fill: hsl(62, 22%, 72%); }
-    .door { fill: hsl(67, 39%, 44%); }
-    .trim { fill: hsl(45, 38%, 49%); }
-    .awning { fill: hsl(66, 69%, 75%); }
-    .window { fill: hsl(189, 100%, 76%); }
-    .roof { fill: hsl(37, 45%, 51%); }
+    .wallFront { fill: hsl(195, 40%, 62%); }
 }
 
 .stJosephsAnnex {
-    .wall { fill: hsl(226, 60%, 79%); }
-    .trim { fill: hsl(44, 31%, 39%); }
-    .door { fill: hsl(43, 49%, 61%); }
-    .window { fill: hsl(179, 100%, 78%); }
-    .roofSide { fill: hsl(43, 24%, 51%); }
-    .roofTop { fill: hsl(43, 29%, 56%); }
+    .wallFront { fill: hsl(226, 60%, 79%); }
 }
 
 .stJosephsChurch {
-    .foundationRear { fill: hsl(316, 6%, 38%); }
-    .wallRear { fill: hsl(321, 27%, 58%); }
+    .foundationRear { fill: hsl(316, 6%, 41%); }
+    .foundationMiddle { fill: hsl(316, 6%, 45%); }
+    .foundationFront { fill: hsl(316, 6%, 49%); }
     .trimRear { fill: hsl(75, 20%, 60%); }
     .doorRear { fill: hsl(42, 19%, 44%); }
     .roofTopRear { fill: hsl(147, 8%, 28%); }
-    .foundationMiddle { fill: hsl(318, 6%, 45%); }
-    .wallMiddleLight { fill: hsl(320, 45%, 69%); }
-    .wallMiddleDark { fill: hsl(320, 34%, 64%); }
+    .wallRear { fill: hsl(320, 25%, 61%); }
+    .wallMiddleDark { fill: hsl(320, 25%, 65%); }
+    .wallMiddleLight { fill: hsl(320, 25%, 69%); }
+    .wallFront { fill: hsl(320, 25%, 73%); }
     .trimMiddleDark { fill: hsl(74, 21%, 61%); }
     .trimMiddle { fill: hsl(74, 34%, 71%); }
     .trimMiddleLight { fill: hsl(74, 61%, 82%); }
@@ -340,8 +277,6 @@
     .roofTop { fill: hsl(150, 7%, 37%); }
     .cross { fill: hsl(40, 35%, 54%); }
     .ball { fill: hsl(41, 43%, 59%); }
-    .foundationFront { fill: hsl(316, 6%, 52%); }
-    .wallFront { fill: hsl(319, 54%, 73%); }
     .trimBeam { fill: hsl(35, 12%, 72%); }
     .beam { fill: hsl(33, 24%, 84%); }
     .trimFrontLight { fill: hsl(73, 28%, 74%); }
@@ -352,7 +287,7 @@
     .frame { fill: hsl(56, 100%, 95%); }
     .stainedGlass { fill: hsl(224, 70%, 69%); }
     .door { fill: hsl(42, 19%, 47%); }
-    .step { fill: hsl(233, 26%, 49%); }
+    .stepFront { fill: hsl(233, 26%, 49%); }
     .lamp { fill: hsl(67, 58%, 78%); }
     .lampholder { fill: hsl(30, 8%, 23%); }
     .stJosephRear { fill: hsl(60, 6%, 66%); }
@@ -378,10 +313,10 @@
     .overpass {fill: hsl(54, 8%, 23%); }
     .handleSide {fill: hsl(68, 15%, 50%); }
     .handleFront {fill: hsl(67, 26%, 63%); }
-    .wellsFargoSide {fill: hsl(60, 2%, 47%); }
-    .wellsFargoFrontRight {fill: hsl(70, 4%, 68%); }
-    .wellsFargoFrontCentre {fill: hsl(70, 4%, 71%); }
-    .wellsFargoFrontLeft {fill: hsl(70, 4%, 73%); }
+    .valleyPlazaSide {fill: hsl(60, 2%, 47%); }
+    .valleyPlazaFrontRight {fill: hsl(70, 4%, 68%); }
+    .valleyPlazaFrontCentre {fill: hsl(70, 4%, 71%); }
+    .valleyPlazaFrontLeft {fill: hsl(70, 4%, 73%); }
     .shoulder {fill: hsl(57, 8%, 51%); }
     .road {fill: hsl(56, 8%, 33%); }
     .divider {fill: hsl(0, 0%, 71%); }
