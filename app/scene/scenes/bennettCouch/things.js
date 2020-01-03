@@ -26,7 +26,7 @@ export default {
     [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
-            xPosition: 9
+            xPosition: 8.5
         },
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,
@@ -37,17 +37,17 @@ export default {
     [PANEL]: {
         [WIDE_COUCH__BENNETT]: {
             yIndex: 3,
-            xPosition: 5,
+            xPosition: 4,
             scaleFactor: 0.25
         },
         [WIDE_ARMREST__BENNETT_LEFT]: {
             yIndex: 4,
-            xPosition: 2.2,
+            xPosition: 1.2,
             scaleFactor: 0.3
         },
         [WIDE_ARMREST__BENNETT_RIGHT]: {
             yIndex: 4,
-            xPosition: 7.8,
+            xPosition: 6.8,
             scaleFactor: 0.3,
             flipHorizontal: true
         }
@@ -63,7 +63,7 @@ export const THINGS_BENNETT_COUCH_OPINION = {
         },
         [NIRVANA_POSTER]: {
             yIndex: 1,
-            xPosition: 9,
+            xPosition: 8.5,
             zOffset: 2,
             scaleFactor: 0.25
         }
@@ -74,7 +74,7 @@ export const THINGS_BENNETT_COUCH_PONDERING = {
     [CARDBOARD]: {
         [LEONARD_COHEN_POSTER]: {
             yIndex: 1,
-            xPosition: 9,
+            xPosition: 8.5,
             zOffset: 2,
             scaleFactor: 0.25
         }
@@ -90,7 +90,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
-            xPosition: 9,
+            xPosition: 8.5,
             zOffset: 1,
             scaleFactor: 0.25
         }

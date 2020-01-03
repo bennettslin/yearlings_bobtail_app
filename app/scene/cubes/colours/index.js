@@ -91,7 +91,7 @@ const HSLA_MAP = {
     [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },
     [SOFT_WALL_COLOUR]: { h: 68, s: 31, l: 87 },
     [INDUSTRIAL_WALL_COLOUR]: { h: 96, s: 13, l: 77 },
-    [LIZ_WALL_COLOUR]: { h: 184, s: 22, l: 81 },
+    [LIZ_WALL_COLOUR]: { h: 184, s: 5, l: 81 },
     [CLUB_WALL_COLOUR]: { h: 221, s: 23, l: 65 },
     [FANCY_WALL_COLOUR]: { h: 278, s: 18, l: 81 },
     [SCHOOL_WALL_COLOUR]: { h: 334, s: 17, l: 78 },
@@ -118,10 +118,10 @@ const HSLA_MAP = {
     [ATTIC_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
     [BENNETT_COUCH_COLOUR]: { h: 125, s: 12, l: 45 },
     [LIZ_COUCH_COLOUR]: { h: 45, s: 10, l: 45 },
-    [MIRIAM_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
+    [MIRIAM_COUCH_COLOUR]: { h: 250, s: 12, l: 45 },
     [WAITING_ARMCHAIR_COLOUR]: { h: 43, s: 34, l: 44 },
     [BENNETT_BED_COLOUR]: { h: 4, s: 35, l: 60 },
-    [LIZ_BED_COLOUR]: { h: 90, s: 50, l: 75 },
+    [LIZ_BED_COLOUR]: { h: 45, s: 12, l: 60 },
     /* S. */
     [SEAT_COLOUR]: { h: 25, s: 27, l: 47 }
 }

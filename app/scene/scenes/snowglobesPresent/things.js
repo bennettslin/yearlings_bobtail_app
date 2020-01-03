@@ -43,18 +43,18 @@ export default {
             scaleFactor: 0.4
         },
         [WIDE_COUCH__MIRIAM]: {
-            yIndex: 5,
-            xPosition: 7.5,
-            scaleFactor: 0.3
+            yIndex: 3,
+            xPosition: 8,
+            scaleFactor: 0.25
         },
         [WIDE_ARMREST__MIRIAM_LEFT]: {
-            yIndex: 5,
-            xPosition: 4,
+            yIndex: 4,
+            xPosition: 5.2,
             scaleFactor: 0.3
         },
         [WIDE_ARMREST__MIRIAM_RIGHT]: {
-            yIndex: 5,
-            xPosition: 11,
+            yIndex: 4,
+            xPosition: 10.8,
             scaleFactor: 0.3,
             flipHorizontal: true
         }

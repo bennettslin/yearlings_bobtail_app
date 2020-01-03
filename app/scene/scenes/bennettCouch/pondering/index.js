@@ -5,7 +5,7 @@ export default {
     [BENNETT]: {
         [PONDERING]: {
             yIndex: 3,
-            xPosition: 8.5
+            xPosition: 7.5
         }
     }
 }

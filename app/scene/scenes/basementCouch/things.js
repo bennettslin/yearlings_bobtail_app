@@ -17,7 +17,7 @@ export default {
         },
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,
-            xPosition: 9,
+            xPosition: 8.5,
             zOffset: 2,
             scaleFactor: 0.25
         }
