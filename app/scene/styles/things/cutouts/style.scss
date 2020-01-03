@@ -30,8 +30,6 @@
 }
 
 .dishroomDolly {
-    .wheel { fill: hsl(251, 7%, 29%); }
-    .hub { fill: hsl(248, 5%, 67%); }
     .caster { fill: hsl(56, 19%, 59%); }
     .base { fill: hsl(60, 4%, 36%); }
     .handle { fill: hsl(249, 3%, 46%); }
@@ -222,11 +220,11 @@
 }
 
 .playgroundSlide {
-    .rung { fill: hsl(155, 12%, 40%); }
-    .bar { fill: hsl(155, 12%, 45%); }
-    .slide { fill: hsl(207, 18%, 78%); }
-    .frameSide { fill: hsl(179, 29%, 49%); }
-    .frameFront { fill: hsl(179, 29%, 44%); }
+    .rung { fill: hsl(165, 12%, 43%); }
+    .bar { fill: hsl(165, 12%, 48%); }
+    .slide { fill: hsl(207, 18%, 72%); }
+    .frameSide { fill: hsl(183, 29%, 49%); }
+    .frameFront { fill: hsl(183, 29%, 44%); }
 }
 
 .recyclables {

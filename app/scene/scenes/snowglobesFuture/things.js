@@ -21,24 +21,24 @@ export default {
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__FUTURE]: {
             yIndex: 1,
-            xPosition: 1.15,
-            zOffset: 7.7,
+            xPosition: 0.7,
+            zOffset: 7.2,
             scaleFactor: 0.15,
-            rotate: -5
+            rotate: -10
         },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 1,
-            xPosition: 3,
-            zOffset: 7.7,
+            xPosition: 5.2,
+            zOffset: 7.05,
             scaleFactor: 0.5,
-            rotate: 10
+            rotate: 8
         },
         [SNOWGLOBE_FUTURE_REATTA]: {
             yIndex: 1,
-            xPosition: 2,
-            zOffset: 6.5,
+            xPosition: 1.9,
+            zOffset: 6.25,
             scaleFactor: 0.7,
-            rotate: -10
+            rotate: -7
         }
     },
     [FIXTURE]: {

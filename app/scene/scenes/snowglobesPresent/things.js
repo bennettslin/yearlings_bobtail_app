@@ -19,16 +19,16 @@ export default {
         [SNOWGLOBE_SMALL__PRESENT]: {
             yIndex: 1,
             xPosition: 10.4,
-            zOffset: 7.85,
+            zOffset: 7.75,
             scaleFactor: 0.15,
             rotate: -10
         },
         [SNOWGLOBE_PRESENT]: {
             yIndex: 1,
             xPosition: 8.15,
-            zOffset: 6.25,
+            zOffset: 6.5,
             scaleFactor: 0.7,
-            rotate: 15
+            rotate: 10
         }
     },
     [PANEL]: {

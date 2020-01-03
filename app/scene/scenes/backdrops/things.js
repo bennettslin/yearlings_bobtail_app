@@ -76,12 +76,15 @@ export default {
             scaleFactor: 0.7
         },
         [ROAD_FUTURE]: {
+            yIndex: 0,
             scaleFactor: 0.6
         },
         [ROAD_PAST]: {
+            yIndex: 0,
             scaleFactor: 0.6
         },
         [ROAD_PRESENT]: {
+            yIndex: 0,
             scaleFactor: 0.6
         },
         [SHORE_BUOY_BACKDROP]: {

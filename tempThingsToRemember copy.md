@@ -7,5 +7,6 @@ Hubcap reflections on go-karts
 Make ocean bottom near more distant
 Different colours for houses and buildings
 Milk crates under keyboard
+Make snowglobe road colour consistent with nav button road
 
 Gingerbread prison, put his right arm down, bring her closer in.
