@@ -533,7 +533,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'earth and spaceColony',
+        taskName: 'earth and spaceStation',
         workedHours: 2,
         neededHours: 2
     },

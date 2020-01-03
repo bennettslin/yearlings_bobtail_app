@@ -175,12 +175,12 @@ export default [
         neededHours: 1
     },
     {
-        taskName: 'spaceColony',
+        taskName: 'spaceStation',
         workedHours: 1.5,
         neededHours: 1.5
     },
     {
-        taskName: 'pchelkaMushkaRocket',
+        taskName: 'dogsRocket',
         workedHours: 2,
         neededHours: 2
     },

@@ -14,9 +14,10 @@ import {
 import {
     TINTIN_POSTER,
     BLOOM_COUNTY_POSTER,
-    PCHELKA_MUSHKA_ROCKET,
-    EARTH,
-    SPACE_COLONY
+    EARTH__ROCKET,
+    DOGS_ROCKET,
+    EARTH__STATION,
+    SPACE_STATION
 } from '../../../constants/scene/things/cardboards'
 import {
     BEDROOM_BLINDS,
@@ -151,11 +152,12 @@ export const THINGS_BEDROOM_GUILTY = {
         },
         [LETTER_SCRAPS__BENNETT]: {
             yIndex: 5,
-            xPosition: 8
+            xPosition: 7.5
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
-            xPosition: 8
+            xPosition: 7.4,
+            zOffset: -0.05
         }
     }
 }
@@ -164,7 +166,7 @@ export const THINGS_BEDROOM_FEIGNING = {
     [FIXTURE]: {
         [RED_ENVELOPE_MONEY]: {
             yIndex: 3,
-            xPosition: 9
+            xPosition: 6.6
         }
     },
     [FLAT]: {
@@ -178,7 +180,14 @@ export const THINGS_BEDROOM_FEIGNING = {
 
 export const THINGS_BEDROOM_ASLEEP = {
     [CARDBOARD]: {
-        [PCHELKA_MUSHKA_ROCKET]: {
+        [EARTH__ROCKET]: {
+            yIndex: 4,
+            xPosition: 2.75,
+            zOffset: 0.75,
+            scaleFactor: 0.3,
+            rotate: 180
+        },
+        [DOGS_ROCKET]: {
             yIndex: 4,
             xPosition: 2.5,
             zOffset: 1.5,
@@ -191,18 +200,18 @@ export const THINGS_BEDROOM_SHAKEN = {
     [FIXTURE]: {
         [BEYONDER_ENVELOPE]: {
             yIndex: 3,
-            xPosition: 2,
-            zOffset: 0.1
+            xPosition: 2.5,
+            zOffset: -0.1
         }
     },
     [CARDBOARD]: {
-        [EARTH]: {
+        [EARTH__STATION]: {
             yIndex: 4,
             xPosition: 7.5,
             zOffset: 5,
-            scaleFactor: 0.4
+            scaleFactor: 0.3
         },
-        [SPACE_COLONY]: {
+        [SPACE_STATION]: {
             yIndex: 4,
             xPosition: 8.5,
             zOffset: 1.5,

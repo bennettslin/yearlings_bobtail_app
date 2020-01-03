@@ -72,9 +72,10 @@ import {
 } from '../../constants/scene/things/bubbles'
 import {
     BLOOM_COUNTY_POSTER,
-    PCHELKA_MUSHKA_ROCKET,
-    EARTH,
-    SPACE_COLONY,
+    DOGS_ROCKET,
+    EARTH__ROCKET,
+    EARTH__STATION,
+    SPACE_STATION,
     VAN_NUYS_LOGO,
     CORKBOARD
 } from '../../constants/scene/things/cardboards'
@@ -224,7 +225,8 @@ export default [
             },
             [CARDBOARD]: {
                 [BLOOM_COUNTY_POSTER]: true,
-                [PCHELKA_MUSHKA_ROCKET]: true
+                [EARTH__ROCKET]: true,
+                [DOGS_ROCKET]: true
             },
             [PANEL]: {
                 [BEDROOM_FENCE]: true,
@@ -248,18 +250,15 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true
             },
             [CARDBOARD]: {
-                [EARTH]: true,
-                [SPACE_COLONY]: true
+                [EARTH__STATION]: true,
+                [SPACE_STATION]: true
             },
-            // [DOOR]: {
-            //     [BEDROOM_BLINDS_OPEN]: true
-            // },
             [FIXTURE]: {
                 [BEYONDER_ENVELOPE]: true
             },
             [PANEL]: {
-                [BEDROOM_FENCE]: true
-                // [BEDROOM_DESK]: true
+                [BEDROOM_FENCE]: true,
+                [BEDROOM_DESK]: true
             }
         },
         cubes: BEDROOM_SPACE_KEY,

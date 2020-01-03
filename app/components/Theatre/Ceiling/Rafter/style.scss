@@ -1,13 +1,14 @@
-.ceilingRafter {
-    .rafterFront {
-        fill: hsl(52, 6%, 49%);
-    }
+.rafterSide {
+    fill: hsl(51, 6%, 21%);
+    .PlW__logue & { fill: hsl(51, 6%, 41%); }
+}
 
-    .rafterBottom {
-        fill: hsl(50, 8%, 58%);
-    }
+.rafterFront {
+    fill: hsl(51, 6%, 29%);
+    .PlW__logue & { fill: hsl(51, 6%, 49%); }
+}
 
-    .rafterSide {
-        fill: hsl(51, 6%, 41%);
-    }
+.rafterBottom {
+    fill: hsl(50, 8%, 38%);
+    .PlW__logue & { fill: hsl(51, 6%, 58%); }
 }

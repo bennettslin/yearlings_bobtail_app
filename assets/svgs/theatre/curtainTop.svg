@@ -1,24 +1,24 @@
 <svg viewBox="0 0 2701.48 137.57">
     <defs>
         <linearGradient id="fill__curtainTopLit" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="rgb(166,50,50)" />
-            <stop offset="50%" stop-color="rgb(191,58,34)" />
-            <stop offset="100%" stop-color="rgb(166,50,50)" />
+            <stop offset="0%" stop-color="hsl(0, 54%, 42%)" />
+            <stop offset="50%" stop-color="hsl(9, 70%, 44%)" />
+            <stop offset="100%" stop-color="hsl(0, 54%, 42%)" />
         </linearGradient>
         <linearGradient id="fill__curtainTopDark" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="rgb(166,50,50)" />
-            <stop offset="50%" stop-color="rgb(191,58,34)" />
-            <stop offset="100%" stop-color="rgb(166,50,50)" />
+            <stop offset="0%" stop-color="hsl(0, 54%, 22%)" />
+            <stop offset="50%" stop-color="hsl(9, 70%, 24%)" />
+            <stop offset="100%" stop-color="hsl(0, 54%, 22%)" />
         </linearGradient>
         <linearGradient id="fill__curtainTopBandLit" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="rgb(163,136,64)" />
-            <stop offset="50%" stop-color="rgb(189,158,74)" />
-            <stop offset="100%" stop-color="rgb(163,136,64)" />
+            <stop offset="0%" stop-color="hsl(44, 44%, 45%)" />
+            <stop offset="50%" stop-color="hsl(44, 47%, 52%)" />
+            <stop offset="100%" stop-color="hsl(44, 44%, 45%)" />
         </linearGradient>
         <linearGradient id="fill__curtainTopBandDark" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="rgb(163,136,64)" />
-            <stop offset="50%" stop-color="rgb(189,158,74)" />
-            <stop offset="100%" stop-color="rgb(163,136,64)" />
+            <stop offset="0%" stop-color="hsl(44, 44%, 25%)" />
+            <stop offset="50%" stop-color="hsl(44, 47%, 32%)" />
+            <stop offset="100%" stop-color="hsl(44, 44%, 25%)" />
         </linearGradient>
     </defs>
     <g class="curtainTop">

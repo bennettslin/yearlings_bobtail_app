@@ -50,6 +50,25 @@
     .thumbtack { fill: hsl(0, 0%, 60%); }
 }
 
+.dogsRocket {
+    .booster { fill: hsl(16, 43%, 47%); }
+    .fin { fill: hsl(16, 48%, 58%); }
+    .rocket { fill: hsl(17, 43%, 50%); }
+    .checkerWhite { fill: hsl(16, 43%, 93%); }
+    .checkerRed { fill: hsl(17, 53%, 58%); }
+    .suitHindLeg { fill: hsl(60, 13%, 63%); }
+    .suitBody { fill: hsl(249, 34%, 65%); }
+    .suitFrontLeg { fill: hsl(60, 16%, 69%); }
+    .suitInner { fill: hsl(248, 22%, 56%); }
+    .glassOuter { fill: hsl(193, 20%, 81%); }
+    .head { fill: hsl(43, 27%, 82%); }
+    .nose { fill: hsl(53, 8%, 41%); }
+    .mouth { fill: hsl(53, 8%, 38%); }
+    .tongue { fill: hsl(323, 38%, 65%); }
+    .glassInner { fill: hsla(240, 83%, 88%, 0.2); }
+    .glassOuter { fill: hsla(240, 83%, 88%, 0.1); }
+}
+
 .dogsSketch {
     .launchFront { fill: hsl(0, 0%, 58%); }
     .launchSide { fill: hsl(0, 0%, 55%); }
@@ -195,25 +214,6 @@
     .frame { fill: hsl(30, 100%, 20%); }
 }
 
-.pchelkaMushkaRocket {
-    .booster { fill: hsl(16, 43%, 47%); }
-    .fin { fill: hsl(16, 48%, 58%); }
-    .rocket { fill: hsl(17, 43%, 50%); }
-    .checkerWhite { fill: hsl(16, 43%, 93%); }
-    .checkerRed { fill: hsl(17, 53%, 58%); }
-    .suitHindLeg { fill: hsl(60, 13%, 63%); }
-    .suitBody { fill: hsl(249, 34%, 65%); }
-    .suitFrontLeg { fill: hsl(60, 16%, 69%); }
-    .suitInner { fill: hsl(248, 22%, 56%); }
-    .glassOuter { fill: hsl(193, 20%, 81%); }
-    .head { fill: hsl(43, 27%, 82%); }
-    .nose { fill: hsl(53, 8%, 41%); }
-    .mouth { fill: hsl(53, 8%, 38%); }
-    .tongue { fill: hsl(323, 38%, 65%); }
-    .glassInner { fill: hsla(240, 83%, 88%, 0.2); }
-    .glassOuter { fill: hsla(240, 83%, 88%, 0.1); }
-}
-
 .policeAlbum {
     .frame { fill: hsl(0, 21%, 11%); }
     .display { fill: hsl(0, 55%, 53%); }
@@ -238,7 +238,7 @@
     .dorsalFin { fill: hsl(148, 100%, 29%); }
 }
 
-.spaceColony {
+.spaceStation {
     .body { fill: hsl(43, 27%, 82%); }
     .stationTop { fill: hsl(248, 45%, 73%); }
     .stationMiddle { fill: hsl(249, 32%, 66%); }

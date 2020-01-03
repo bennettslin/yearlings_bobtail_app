@@ -1,17 +1,9 @@
 .floorSeat__lit {
-    fill: hsl(15, 29%, 47%);
-
-    .PlW__logue
-    & {
-        fill: hsl(15, 40%, 67%);
-    }
+    fill: hsl(3, 24%, 27%);
+    .PlW__logue & { fill: hsl(3, 24%, 47%); }
 }
 
 .floorSeat__shaded {
-    fill: hsl(0, 0%, 20%);
-
-    .PlW__logue
-    & {
-        fill: hsl(0, 0%, 33%);
-    }
+    fill: hsl(3, 12%, 7%);
+    .PlW__logue & { fill: hsl(3, 12%, 27%); }
 }

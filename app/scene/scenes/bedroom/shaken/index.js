@@ -5,8 +5,8 @@ export default {
     [PRETEEN_BENNETT]: {
         [SHAKEN]: {
             yIndex: 5,
-            xPosition: 3.6,
-            zOffset: 0.25
+            xPosition: 4.35,
+            zOffset: 0.32
         }
     }
 }

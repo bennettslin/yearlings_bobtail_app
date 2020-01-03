@@ -2,28 +2,32 @@
     z-index: $zIndex__theatre;
 }
 
-.proscenium {
-    .stageFront {
-        fill: hsl(31, 17%, 41%);
-    }
+.stageFront {
+    fill: hsl(31, 17%, 21%);
+    .PlW__logue & { fill: hsl(31, 17%, 41%); }
+}
 
-    .stageTop {
-        fill: hsl(31, 19%, 52%);
-    }
+.stageTop {
+    fill: hsl(31, 19%, 32%);
+    .PlW__logue & { fill: hsl(31, 19%, 52%); }
+}
 
-    .prosceniumBottom {
-        fill: hsl(47, 32%, 70%);
-    }
+.prosceniumBottom {
+    fill: hsl(47, 28%, 50%);
+    .PlW__logue & { fill: hsl(47, 28%, 70%); }
+}
 
-    .prosceniumSide {
-        fill: hsl(47, 26%, 66%);
-    }
+.prosceniumSide {
+    fill: hsl(47, 24%, 46%);
+    .PlW__logue & { fill: hsl(47, 24%, 66%); }
+}
 
-    .prosceniumFront {
-        fill: hsl(47, 21%, 61%);
-    }
+.prosceniumFront {
+    fill: hsl(47, 21%, 41%);
+    .PlW__logue & { fill: hsl(47, 21%, 61%); }
+}
 
-    .prosceniumInset {
-        fill: hsl(47, 18%, 57%);
-    }
+.prosceniumInset {
+    fill: hsl(47, 18%, 37%);
+    .PlW__logue & { fill: hsl(47, 18%, 57%); }
 }

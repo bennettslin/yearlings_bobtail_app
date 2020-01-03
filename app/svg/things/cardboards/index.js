@@ -15,9 +15,9 @@ import bennettOdinOceanFloor from 'assets/svgs/cardboards/bennettOdinOceanFloor'
 import bennettMat from 'assets/svgs/cardboards/bennettMat'
 import odinMat from 'assets/svgs/cardboards/odinMat'
 import bloomCountyPoster from 'assets/svgs/cardboards/bloomCountyPoster'
-import pchelkaMushkaRocket from 'assets/svgs/cardboards/pchelkaMushkaRocket'
+import dogsRocket from 'assets/svgs/cardboards/dogsRocket'
 import earth from 'assets/svgs/cardboards/earth'
-import spaceColony from 'assets/svgs/cardboards/spaceColony'
+import spaceStation from 'assets/svgs/cardboards/spaceStation'
 import vanNuysLogo from 'assets/svgs/cardboards/vanNuysLogo'
 import corkboard from 'assets/svgs/cardboards/corkboard'
 import policeAlbum from 'assets/svgs/cardboards/policeAlbum'
@@ -59,9 +59,10 @@ import {
     BENNETT_MAT,
     ODIN_MAT,
     BLOOM_COUNTY_POSTER,
-    PCHELKA_MUSHKA_ROCKET,
-    EARTH,
-    SPACE_COLONY,
+    DOGS_ROCKET,
+    EARTH__ROCKET,
+    EARTH__STATION,
+    SPACE_STATION,
     VAN_NUYS_LOGO,
     CORKBOARD,
     POLICE_ALBUM,
@@ -108,9 +109,10 @@ export default {
     [BENNETT_MAT]: bennettMat,
     [ODIN_MAT]: odinMat,
     [BLOOM_COUNTY_POSTER]: bloomCountyPoster,
-    [PCHELKA_MUSHKA_ROCKET]: pchelkaMushkaRocket,
-    [EARTH]: earth,
-    [SPACE_COLONY]: spaceColony,
+    [EARTH__ROCKET]: earth,
+    [DOGS_ROCKET]: dogsRocket,
+    [EARTH__STATION]: earth,
+    [SPACE_STATION]: spaceStation,
     [VAN_NUYS_LOGO]: vanNuysLogo,
     [CORKBOARD]: corkboard,
     [POLICE_ALBUM]: policeAlbum,

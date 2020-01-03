@@ -50,6 +50,7 @@ class ShownWrapper extends PureComponent {
                 {...{
                     className: cx(
                         'ShownWrapper',
+                        'abF',
 
                         lyricAnnotationIndex ?
                             'ShW__annotationShown' :

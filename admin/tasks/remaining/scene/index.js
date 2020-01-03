@@ -27,7 +27,7 @@ export default [
     },
     {
         taskName: 'theatre',
-        notes: `logue versus song theatre colours.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },

@@ -9,11 +9,14 @@
 
     font-size: 1.1em;
 
-    background-color: #555;
-
     user-select: none;
 
     // Keeping these together for consistency.
     @include mixin__textAndLinkColours();
     @include mixin__underlineColours();
+}
+
+.ShownWrapper {
+    background-color: hsl(0, 0%, 13%);
+    .PlW__logue & { background-color: hsl(0, 0%, 33%) }
 }
