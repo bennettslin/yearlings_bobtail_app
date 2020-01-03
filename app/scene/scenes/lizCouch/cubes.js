@@ -2,6 +2,7 @@ import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
+    LIZ_COUCH_PEAFOWL_KEY,
     LIZ_COUCH_THOUGHT_KEY
 } from '../../../constants/scene/scenes'
 
@@ -71,16 +72,16 @@ const CUBES = {
                 [A, A, A, A, A, V, V, V, A],
                 [F, F, F, F, W, W, W, W, W, F],
                 [F],
-                [F, U, U, U, F, F, F, F, F, S, F],
                 [F, U, U, U, F],
+                [F, U, U, U, F, F, F, F, F, S, F],
                 [F]
             ],
             zIndices: [
                 [7, 7, 7, 7, 7, 1, 1, 1, 7],
                 [1, 1, 1, 1, 6, 6, 6, 6, 6, 1],
                 [1],
-                [1, 7, 4, 4, 1, 1, 1, 1, 1, 3, 1],
                 [1, 7, 4, 4, 1],
+                [1, 7, 4, 4, 1, 1, 1, 1, 1, 3, 1],
                 [1]
             ]
         }
@@ -100,6 +101,21 @@ const CUBES = {
                 [Y]
             ],
             zIndices: DEFAULT_FLOOR.zIndices
+        }
+    },
+    [LIZ_COUCH_PEAFOWL_KEY]: {
+        floor: {
+            hslaColours: [
+                [Y]
+            ],
+            zIndices: [
+                [1],
+                [1],
+                [1],
+                [1, 7, 4, 4, 1],
+                [1, 7, 4, 4, 1],
+                [1]
+            ]
         }
     },
     [LIZ_COUCH_THOUGHT_KEY]: {

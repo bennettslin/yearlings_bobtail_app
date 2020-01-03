@@ -8,14 +8,14 @@ import { DEFENDING } from 'constants/scene/actors/liz'
 export default {
     [LIZ]: {
         [DEFENDING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 3.5
         }
     },
     [KHARI]: {
         [JUDGMENTAL]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 8
         }
     }
 }

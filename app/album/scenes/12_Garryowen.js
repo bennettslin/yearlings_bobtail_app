@@ -43,7 +43,7 @@ import {
     GREETING,
     LEAVING_CRUMBLED
 } from '../../constants/scene/actors/songs'
-import { OAKLAND_SIDE } from '../../constants/scene/things/backdrops'
+import { OAKLAND_SIDE, DISTANT_HOUSES_BACKDROP } from '../../constants/scene/things/backdrops'
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER
@@ -90,6 +90,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -127,6 +128,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [FLAT]: {
@@ -219,6 +221,7 @@ export default [
                 }
             },
             [BACKDROP]: {
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {

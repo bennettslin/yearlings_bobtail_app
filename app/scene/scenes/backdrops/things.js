@@ -1,14 +1,13 @@
 import { BACKDROP } from '../../../constants/scene/things'
 import {
-    NEAR_BUILDINGS,
     DISTANT_BUILDINGS_BACKDROP,
     DISTANT_HOUSES_BACKDROP,
     DRIVING_BACKDROP,
-    NEAR_HOUSES,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
     MOUNTAIN_BACKDROP,
-    VALLEY_CLOSER_BACKDROP,
+    NEAR_BUILDINGS,
+    NEAR_HOUSES,
     OAKLAND_FRONT__HIGH,
     OAKLAND_FRONT__LOW,
     OAKLAND_SIDE,
@@ -17,21 +16,18 @@ import {
     ROAD_FUTURE,
     ROAD_PAST,
     ROAD_PRESENT,
-    VALLEY_FURTHER_BACKDROP,
     SHORE_BUOY_BACKDROP,
     SHORE_RICKSHAW_BACKDROP,
     TAIWAN_MOUNTAINS_BACKDROP,
     TAIWAN_STAIRS_BACKDROP,
+    VALLEY_CLOSER_BACKDROP,
+    VALLEY_FURTHER_BACKDROP,
     VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP
 } from '../../../constants/scene/things/backdrops'
 
 export default {
     [BACKDROP]: {
-        [NEAR_BUILDINGS]: {
-            scaleFactor: 0.66,
-            trimBottom: 0.05
-        },
         [DISTANT_BUILDINGS_BACKDROP]: {
             scaleFactor: 0.45
         },
@@ -41,11 +37,6 @@ export default {
         [DRIVING_BACKDROP]: {
             scaleFactor: 0.7,
             trimBottom: 0.45
-        },
-        [NEAR_HOUSES]: {
-            yIndex: 0,
-            scaleFactor: 0.7,
-            trimBottom: 0.05
         },
         [GOLDEN_GATE_BACKDROP]: {
             scaleFactor: 0.675,
@@ -57,6 +48,14 @@ export default {
         },
         [MOUNTAIN_BACKDROP]: {
             scaleFactor: 0.66
+        },
+        [NEAR_BUILDINGS]: {
+            scaleFactor: 0.66,
+            trimBottom: 0.05
+        },
+        [NEAR_HOUSES]: {
+            scaleFactor: 0.7,
+            trimBottom: 0.05
         },
         [OAKLAND_FRONT__LOW]: {
             yIndex: 0,

@@ -50,16 +50,16 @@ export default {
             xPosition: 8.875
         },
         [LIZ_GATE_INSIDE]: {
-            yIndex: 1,
+            yIndex: -1,
             xPosition: 6,
-            zOffset: -2
+            zOffset: 0.5
         }
     },
     [PANEL]: {
         [LIZ_COUCH]: {
             yIndex: 5,
-            xPosition: 2,
-            scaleFactor: 0.27
+            xPosition: 2.075,
+            scaleFactor: 0.23
         }
     }
 }
@@ -73,7 +73,7 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     },
     [PUPPET]: {
         [OPAL_COUCH]: {
-            yIndex: 4,
+            yIndex: 3,
             xPosition: 1,
             scaleFactor: 0.2
         }
@@ -84,15 +84,15 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
     [BUBBLE]: {
         [KHARI_ATTACK_SPEECH]: {
             yIndex: 5,
-            xPosition: 7,
-            zOffset: 3,
-            scaleFactor: 0.45
+            xPosition: 5.5,
+            zOffset: 3.5,
+            scaleFactor: 0.4
         },
         [LIZ_DEFENCE_SPEECH]: {
             yIndex: 5,
-            xPosition: 5,
-            zOffset: 0.5,
-            scaleFactor: 0.45
+            xPosition: 5.5,
+            zOffset: 3.5,
+            scaleFactor: 0.4
         }
     }
 }
@@ -119,9 +119,9 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
         },
         [LIZ_THOUGHT]: {
             yIndex: 5,
-            xPosition: 7,
+            xPosition: 6.75,
             zOffset: 0.5,
-            scaleFactor: 0.45
+            scaleFactor: 0.4
         }
     }
 }
@@ -129,8 +129,9 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
 export const THINGS_LIZ_COUCH_ASLEEP = {
     [PUPPET]: {
         [OPAL_GAZING]: {
-            yIndex: 1,
-            xPosition: 6,
+            yIndex: 2,
+            xPosition: 7,
+            zOffset: 2.5,
             scaleFactor: 0.2
         }
     }
@@ -139,13 +140,13 @@ export const THINGS_LIZ_COUCH_ASLEEP = {
 export const THINGS_LIZ_COUCH_PEAFOWL = {
     [PUPPET]: {
         [PEACOCK]: {
-            yIndex: 5,
-            xPosition: 7.5,
+            yIndex: 3,
+            xPosition: 8,
             scaleFactor: 0.25
         },
         [PEAHEN]: {
-            yIndex: 5,
-            xPosition: 5,
+            yIndex: 3,
+            xPosition: 6,
             scaleFactor: 0.25
         }
     }

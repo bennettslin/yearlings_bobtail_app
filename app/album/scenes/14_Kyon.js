@@ -10,7 +10,8 @@ import {
 import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
-    LIZ_COUCH_DARK_KEY
+    LIZ_COUCH_DARK_KEY,
+    LIZ_COUCH_PEAFOWL_KEY
 } from '../../constants/scene/scenes'
 import {
     TIME_DAWN,
@@ -41,7 +42,7 @@ import {
     ASLEEP_COUCH
 } from '../../constants/scene/actors/liz'
 import {
-    NEAR_HOUSES,
+    DISTANT_HOUSES_BACKDROP,
     OAKLAND_SIDE
 } from '../../constants/scene/things/backdrops'
 import {
@@ -81,7 +82,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -109,7 +110,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -137,7 +138,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -175,7 +176,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -207,11 +208,45 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
-                [KHARI_ATTACK_SPEECH]: true,
+                [KHARI_ATTACK_SPEECH]: true
+            },
+            [DOOR]: {
+                [LIZ_BLINDS_INSIDE_OPEN]: true,
+                [LIZ_DOOR]: true,
+                [LIZ_GATE_INSIDE]: true
+            },
+            [PANEL]: {
+                [LIZ_COUCH]: true
+            }
+        },
+        cubes: LIZ_COUCH_SEAT_KEY,
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
+    },
+    {
+        unitIndex: 9,
+        description: `Sita and her friend are eating the food. In his speech bubble, Bennett is flirting with a fan, while Sita looks on jealous. In her speech bubble, she is going home with Bennett, triumphant.`,
+        presences: {
+            [ACTOR]: {
+                [LIZ]: {
+                    sita: {
+                        description: 'side, seated, defensive',
+                        instance: DEFENDING
+                    }
+                },
+                [KHARI]: {
+                    description: 'side, seated, eating, judgmental',
+                    instance: JUDGMENTAL
+                }
+            },
+            [BACKDROP]: {
+                [DISTANT_HOUSES_BACKDROP]: true,
+                [OAKLAND_SIDE]: true
+            },
+            [BUBBLE]: {
                 [LIZ_DEFENCE_SPEECH]: true
             },
             [DOOR]: {
@@ -243,7 +278,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
@@ -277,7 +312,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
             },
             [DOOR]: {
@@ -308,13 +343,8 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [NEAR_HOUSES]: true,
+                [DISTANT_HOUSES_BACKDROP]: true,
                 [OAKLAND_SIDE]: true
-            },
-            [DOOR]: {
-                [LIZ_BLINDS_INSIDE_OPEN]: true,
-                [LIZ_DOOR]: true,
-                [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
                 [LIZ_COUCH]: true
@@ -324,7 +354,7 @@ export default [
                 [PEAHEN]: true
             }
         },
-        cubes: LIZ_COUCH_DARK_KEY,
+        cubes: LIZ_COUCH_PEAFOWL_KEY,
         sky: { season: SEASON_NIGHT_MAGIC }
     }
 ]
