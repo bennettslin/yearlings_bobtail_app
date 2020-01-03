@@ -7,7 +7,7 @@ import {
     DOOR
 } from '../../constants/scene/things'
 import {
-    BASEMENT_BED_KEY,
+    BASEMENT_BED_DARK_KEY,
     BASEMENT_BED_MAGIC_KEY,
     SNOWGLOBES_PAST_KEY,
     SNOWGLOBES_PRESENT_KEY,
@@ -115,7 +115,7 @@ export default [
                 [BENNETT_BED]: true
             }
         },
-        cubes: BASEMENT_BED_KEY,
+        cubes: BASEMENT_BED_DARK_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {

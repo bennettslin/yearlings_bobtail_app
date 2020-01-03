@@ -4,8 +4,8 @@ import { ASLEEP } from 'constants/scene/actors/songs'
 export default {
     [PRETEEN_BENNETT]: {
         [ASLEEP]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 8
         }
     }
 }

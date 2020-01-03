@@ -44,6 +44,7 @@ export const CINEMA_STREET_KEY = 'cinemaStreet'
 export const BASEMENT_KEY = 'basement'
 export const BASEMENT_COUCH_KEY = 'basementCouch'
 export const BASEMENT_BED_KEY = 'basementBed'
+export const BASEMENT_BED_DARK_KEY = 'basementBedDark'
 export const BASEMENT_BED_MAGIC_KEY = 'basementBedMagic'
 
 export const MUSEUM_KEY = 'museum'

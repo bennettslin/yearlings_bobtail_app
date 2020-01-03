@@ -4,8 +4,8 @@ import { GINGERBREAD_PRISON } from 'constants/scene/actors/bennettLiz'
 export default {
     [BENNETT_LIZ]: {
         [GINGERBREAD_PRISON]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 1,
+            xPosition: 8
         }
     }
 }
