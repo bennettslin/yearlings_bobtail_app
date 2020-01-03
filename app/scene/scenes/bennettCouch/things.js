@@ -26,7 +26,7 @@ export default {
     [FIXTURE]: {
         [BENNETT_RECORD_PLAYER]: {
             yIndex: 1,
-            xPosition: 8.5
+            xPosition: 9
         },
         [BENNETT_COUCH_LAMP]: {
             yIndex: 2,
@@ -37,17 +37,17 @@ export default {
     [PANEL]: {
         [WIDE_COUCH__BENNETT]: {
             yIndex: 3,
-            xPosition: 4.5,
-            scaleFactor: 0.3
+            xPosition: 5,
+            scaleFactor: 0.25
         },
         [WIDE_ARMREST__BENNETT_LEFT]: {
             yIndex: 4,
-            xPosition: 1,
+            xPosition: 2.2,
             scaleFactor: 0.3
         },
         [WIDE_ARMREST__BENNETT_RIGHT]: {
             yIndex: 4,
-            xPosition: 8,
+            xPosition: 7.8,
             scaleFactor: 0.3,
             flipHorizontal: true
         }

@@ -116,10 +116,10 @@ const HSLA_MAP = {
     [FURNITURE_COLOUR]: { h: 25, s: 44, l: 53 },
     /* U. */
     [ATTIC_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
-    [BENNETT_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
-    [LIZ_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
+    [BENNETT_COUCH_COLOUR]: { h: 125, s: 12, l: 45 },
+    [LIZ_COUCH_COLOUR]: { h: 45, s: 10, l: 45 },
     [MIRIAM_COUCH_COLOUR]: { h: 90, s: 50, l: 75 },
-    [WAITING_ARMCHAIR_COLOUR]: { h: 90, s: 50, l: 75 },
+    [WAITING_ARMCHAIR_COLOUR]: { h: 43, s: 34, l: 44 },
     [BENNETT_BED_COLOUR]: { h: 4, s: 35, l: 60 },
     [LIZ_BED_COLOUR]: { h: 90, s: 50, l: 75 },
     /* S. */

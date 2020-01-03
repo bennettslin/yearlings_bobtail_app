@@ -5,7 +5,8 @@ export default {
     [BENNETT_LIZ]: {
         [CHEEK_UNVEILED]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 4,
+            zOffset: 0.3
         }
     }
 }

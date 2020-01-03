@@ -26,12 +26,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: 'theatre',
-        notes: ``,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: 'logue',
         notes: ``,
         workedHours: 0,

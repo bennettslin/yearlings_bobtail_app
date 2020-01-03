@@ -5146,5 +5146,10 @@ export default [
         taskName: `Work on new backdrops.`,
         workedHours: 14,
         neededHours: 14
+    },
+    {
+        taskName: `General scene work.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

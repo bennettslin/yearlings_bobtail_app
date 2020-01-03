@@ -57,6 +57,7 @@ import {
 import {
     LIZ_BLINDS_INSIDE,
     LIZ_DOOR,
+    LIZ_DOOR_OPEN,
     BASEMENT_DOOR_SIDE,
     LIZ_GATE_INSIDE
 } from '../../constants/scene/things/doors'
@@ -226,7 +227,7 @@ export default [
             },
             [DOOR]: {
                 [LIZ_BLINDS_INSIDE]: true,
-                [LIZ_DOOR]: true,
+                [LIZ_DOOR_OPEN]: true,
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
