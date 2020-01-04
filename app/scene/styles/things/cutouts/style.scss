@@ -264,20 +264,19 @@
 }
 
 .stageLights {
-    .shutterBottom { fill: hsl(210, 100%, 20%); }
-    .shutterSurface { fill: hsl(210, 50%, 40%); }
-    .hangerBack { fill: hsl(0, 0%, 40%); }
-    .cableBack { fill: hsl(340, 100%, 30%); }
-    .housing { fill: hsl(260, 60%, 50%); }
-    .mountBottom { fill: hsl(30, 100%, 20%); }
-    .mountSide { fill: hsl(30, 50%, 40%); }
-    .mountTop { fill: hsl(30, 100%, 80%); }
-    .mountFront { fill: hsl(30, 50%, 60%); }
-    .bar { fill: hsl(60, 20%, 50%); }
-    .shutterEdge { fill: hsl(240, 33%, 30%); }
-    .cableFront { fill: hsl(345, 100%, 40%); }
-    .hangerFront { fill: hsl(0, 0%, 60%); }
-    .hangerScrew { fill: hsl(60, 33%, 70%); }
+    .hangerDarker { fill: hsl(0, 0%, 49%); }
+    .shutterMiddle { fill: hsl(233, 8%, 21%); }
+    .shutterLighter { fill: hsl(235, 8%, 27%); }
+    .shutterDarker { fill: hsl(231, 8%, 17%); }
+    .housing { fill: hsl(231, 8%, 30%); }
+    .cableDarker { fill: hsl(227, 29%, 36%); }
+    .mountDarkest { fill: hsl(30, 34%, 47%); }
+    .mountDarker { fill: hsl(30, 40%, 55%); }
+    .mountLighter { fill: hsl(30, 60%, 65%); }
+    .mount { fill: hsl(30, 50%, 60%); }
+    .cable { fill: hsl(228, 28%, 42%); }
+    .hanger { fill: hsl(0, 0%, 60%); }
+    .hangerScrew { fill: hsl(0, 0%, 45%); }
 }
 
 .steamPipes {

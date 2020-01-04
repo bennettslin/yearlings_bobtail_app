@@ -1,9 +1,9 @@
 # Other shared
 brick wall
 pole
+furniture foot
 
 # Improvements
-stageLights
 pharmacyAisle
 porch cube post colour
 carnival stuff, spread out
