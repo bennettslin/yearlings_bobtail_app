@@ -133,12 +133,10 @@
 }
 
 .museumDisplay {
-    .displayBack { fill: hsl(60, 100%, 90%); }
-    .displayLeft { fill: hsl(60, 33%, 70%); }
-    .displayRight { fill: hsl(60, 33%, 70%); }
-    .displayTop { fill: hsl(60, 33%, 70%); }
-    .displayBottom { fill: hsl(60, 33%, 70%); }
-    .case { fill: hsl(60, 50%, 60%); }
+    .case { fill: #969674; }
+    .displayBack { fill: #ffc; }
+    .displayInnerDark { fill: #adad86; }
+    .displayInnerLight { fill: #c7c79a; }
     .land { fill: hsl(30, 50%, 60%); }
     .routes { fill: hsl(0, 50%, 60%); }
     .oar { fill: hsl(30, 50%, 40%); }
