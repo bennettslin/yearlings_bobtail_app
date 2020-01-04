@@ -105,25 +105,24 @@
 
 .ferrisWheel {
     .foundation { fill: hsl(0, 0%, 40%); }
-    .towerLeftTopBottom { fill: hsl(30, 50%, 40%); }
-    .towerLeftFront { fill: hsl(30, 50%, 60%); }
-    .tentTopLight { fill: hsl(0, 0%, 80%); }
-    .spokes { fill: hsla(30, 50%, 39%, 0.5); }
-    .car { fill: hsl(120, 50%, 40%); }
-    .wheel { fill: hsl(120, 20%, 50%); }
-    .support { fill: hsl(204, 100%, 37%); }
-    .base { fill: hsl(198, 76%, 52%); }
-    .hub { fill: hsl(176, 100%, 33%); }
-    .tentRightWall { fill: hsl(300, 50%, 40%); }
-    .tentWallLight { fill: hsl(60, 20%, 50%); }
-    .tentLeftWall { fill: hsl(220, 60%, 50%); }
-    .towerRightTop { fill: hsl(200, 60%, 50%); }
-    .tentRightTop { fill: hsl(0, 50%, 60%); }
-    .tentLeftTop { fill: hsl(270, 50%, 60%); }
+    .towerLeftTopBottom { fill: hsl(59, 51%, 57%); }
+    .towerLeftFront { fill: hsl(22, 51%, 57%); }
+    .spokes { fill: hsla(0, 0%, 80%, 0.5); }
+    .car { fill: hsl(1, 48%, 54%); }
+    .wheel { fill: hsl(1, 33%, 52%); }
+    .support { fill: hsl(1, 20%, 50%); }
+    .hub { fill: hsl(1, 20%, 42%); }
+    .tentLeftWall { fill: hsl(270, 34%, 40%); }
+    .tentRightWall { fill: hsl(127, 33%, 41%); }
+    .tentWallLight { fill: hsl(0, 1%, 55%); }
     .towerRightFront { fill: hsl(200, 100%, 30%); }
-    .tentRightFront { fill: hsl(0, 50%, 40%); }
-    .tentLeftFront { fill: hsl(280, 60%, 50%); }
-    .tentFrontLight { fill: hsl(0, 0%, 60%); }
+    .tentRightFront { fill: hsl(127, 33%, 48%); }
+    .tentLeftFront { fill: hsl(270, 34%, 47%); }
+    .tentFrontLight { fill: hsl(0, 2%, 65%); }
+    .towerRightTop { fill: hsl(200, 60%, 50%); }
+    .tentRightTop { fill: hsl(127, 50%, 60%); }
+    .tentLeftTop { fill: hsl(270, 50%, 60%); }
+    .tentTopLight { fill: hsl(15, 4%, 79%); }
 }
 
 .goKartTrack {
@@ -188,11 +187,11 @@
 }
 
 .rollerCoaster {
-    .platformBack { fill: hsla(30, 50%, 39%, 0.5); }
-    .trackBack { fill: hsl(0, 0%, 40%); }
-    .platformFront { fill: hsla(30, 48%, 59%, 0.5); }
-    .trackFront { fill: hsl(0, 0%, 60%); }
-    .flag { fill: hsl(320, 100%, 70%); }
+    .platformBack { fill: hsla(30, 50%, 40%, 0.5); }
+    .trackBack { fill: hsl(31, 9%, 55%); }
+    .platformFront { fill: hsla(30, 50%, 60%, 0.5); }
+    .trackFront { fill: hsl(29, 11%, 60%); }
+    .flag { fill: hsl(320, 50%, 70%); }
 }
 
 .royceHall {
