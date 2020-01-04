@@ -33,7 +33,7 @@ export default {
         },
         [ROLLER_COASTER]: {
             yIndex: 1,
-            xPosition: 1.25,
+            xPosition: 1.1,
             scaleFactor: 0.5
         }
     }
