@@ -1,6 +1,5 @@
 export const TIME_STAGE = 'stage'
-
-export const TIME_TWILIGHT = 'dawn'
+export const TIME_TWILIGHT = 'twilight'
 export const TIME_DAWN = 'dawn'
 export const TIME_MORNING = 'morning'
 export const TIME_NOON = 'noon'
