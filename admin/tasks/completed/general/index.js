@@ -5151,5 +5151,10 @@ export default [
         taskName: `General scene work.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Some cutout modifications.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]
