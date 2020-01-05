@@ -54,7 +54,7 @@ import {
 } from '../../../sharedStyles/paper'
 import {
     SKETCH_DOGS__SHARED,
-    SKETCH_PEOPLE__SHARED
+    DRAWING__SHARED
 } from '../../../sharedStyles/sketch'
 import {
     ALL_VEHICLES__SHARED,
@@ -62,7 +62,7 @@ import {
 } from '../../../sharedStyles/vehicles'
 
 export default {
-    [APART_SKETCH]: SKETCH_PEOPLE__SHARED,
+    [APART_SKETCH]: DRAWING__SHARED,
     [BUBBLE_LARGE]: BUBBLE__SHARED,
     [BUBBLE_MEDIUM]: BUBBLE__SHARED,
     [BUBBLE_SMALL]: BUBBLE__SHARED,
@@ -112,7 +112,7 @@ export default {
         ROAD__SHARED
     ],
     [PHARMACY_CEL]: null,
-    [SIBLING_CONSTELLATION]: SKETCH_PEOPLE__SHARED,
+    [SIBLING_CONSTELLATION]: DRAWING__SHARED,
     [SKETCHBOOK]: [
         BOOK__SHARED,
         SKETCHBOOK__SHARED
@@ -121,7 +121,7 @@ export default {
     [THOUGHT_LARGE]: BUBBLE__SHARED,
     [THOUGHT_MEDIUM]: BUBBLE__SHARED,
     [THOUGHT_SMALL]: BUBBLE__SHARED,
-    [TOGETHER_SKETCH]: SKETCH_PEOPLE__SHARED,
+    [TOGETHER_SKETCH]: DRAWING__SHARED,
     [WAITING_THOUGHT_SINGING]: [
         BANJO__SHARED,
         BENNETT,
