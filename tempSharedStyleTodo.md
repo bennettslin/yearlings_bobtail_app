@@ -1,6 +1,7 @@
 # Other shared
-pole
+bulb
 furniture foot
 fridges
+goKartFlag
 
 # Improvements

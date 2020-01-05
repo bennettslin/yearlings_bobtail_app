@@ -75,6 +75,7 @@ import {
     LAMPPOST__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
+    POLE__SHARED,
     ROCK__SHARED,
     TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
@@ -97,7 +98,7 @@ export default {
     ],
     [CAMPUS_TREE_DOUBLE]: FOLIAGE__SHARED,
     [CAMPUS_TREE_SINGLE]: FOLIAGE__SHARED,
-    [CAVEMAN_BONES]: null,
+    [CAVEMAN_BONES]: POLE__SHARED,
     [CLIFF_TREE]: FOLIAGE__SHARED,
     [CYPRESS_TREE]: FOLIAGE__SHARED,
     [DISHROOM_DOLLY]: ALL_VEHICLES__SHARED,
@@ -116,8 +117,11 @@ export default {
     [GLASS_RACK]: CUP__SHARED,
     [GRAVESTONE]: null,
     [HOWIE_FRIDGE]: null,
-    [IV_DRIP]: null,
-    [LAMPPOST]: LAMPPOST__SHARED,
+    [IV_DRIP]: POLE__SHARED,
+    [LAMPPOST]: [
+        LAMPPOST__SHARED,
+        POLE__SHARED
+    ],
     [LOCKER_BANK]: null,
     [MIRRORED_SINK]: ALL_PEOPLE__SHARED,
     [MONITOR_FRONT]: MONITOR__SHARED,
@@ -129,7 +133,7 @@ export default {
     [RECYCLABLES]: null,
     [SANDBAGS]: null,
     [SHOPPING_CART]: GARBAGE_BAG__SHARED,
-    [SIGNPOST]: null,
+    [SIGNPOST]: POLE__SHARED,
     [STAGE_LIGHTS]: null,
     [STEAM_PIPES]: null,
     [STORAGE_BOXES]: null,
@@ -138,7 +142,7 @@ export default {
     [TAIWAN_TREE]: FOLIAGE__SHARED,
     [TELEVISION]: null,
     [TOWEL_RACK]: null,
-    [TRAFFIC_LIGHT]: null,
+    [TRAFFIC_LIGHT]: POLE__SHARED,
     [TRASH_CAN]: [
         BANANA__SHARED,
         GARBAGE_BAG__SHARED,
@@ -146,7 +150,10 @@ export default {
         TRASH_CAN__SHARED
     ],
     [TRAY_PILE]: TRAY__SHARED,
-    [TWIN_STREETLAMP]: LAMPPOST__SHARED,
+    [TWIN_STREETLAMP]: [
+        LAMPPOST__SHARED,
+        POLE__SHARED
+    ],
     [UCLA_TREE]: FOLIAGE__SHARED,
     [WAITING_ROOM_PLANT]: FOLIAGE__SHARED,
     [WALL_SPEAKER_FRONT]: MONITOR__SHARED,
@@ -155,6 +162,6 @@ export default {
         FOLIAGE__SHARED,
         WEDDING__SHARED
     ],
-    [YELLOW_TAPED_GRILL]: null
+    [YELLOW_TAPED_GRILL]: POLE__SHARED
 }
 

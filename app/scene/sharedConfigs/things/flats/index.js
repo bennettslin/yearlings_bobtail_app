@@ -72,6 +72,7 @@ import {
     GRAVE__SHARED,
     MOUNTAIN__SHARED,
     OCEAN_CAVE__SHARED,
+    POLE__SHARED,
     ROAD__SHARED,
     ROCK__SHARED,
     TRASH_CAN__SHARED
@@ -143,7 +144,10 @@ export default {
     ],
     [FERRIS_WHEEL]: null,
     [FOREBODING_TREES]: FOLIAGE__SHARED,
-    [GO_KART_TRACK]: ALL_VEHICLES__SHARED,
+    [GO_KART_TRACK]: [
+        ALL_VEHICLES__SHARED,
+        POLE__SHARED
+    ],
     [NOHO_HOUSE_LEFT]: [
         FOLIAGE__SHARED,
         HOUSE__SHARED,
@@ -153,7 +157,7 @@ export default {
         FOLIAGE__SHARED,
         HOUSE__SHARED
     ],
-    [OAKLAND_FLAG]: null,
+    [OAKLAND_FLAG]: POLE__SHARED,
     [OAKLAND_HOUSE_LEFT]: [
         FOLIAGE__SHARED,
         HOUSE__SHARED,
@@ -241,7 +245,10 @@ export default {
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED
     ],
-    [TENNIS_COURT]: FOLIAGE__SHARED,
+    [TENNIS_COURT]: [
+        FOLIAGE__SHARED,
+        POLE__SHARED
+    ],
     [VALLEY_FREEWAY]: [
         BUILDINGS__SHARED,
         FREEWAY_SIGN__SHARED,

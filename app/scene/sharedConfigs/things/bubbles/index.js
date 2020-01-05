@@ -43,6 +43,7 @@ import {
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
+    POLE__SHARED,
     ROAD__SHARED,
     SHORE__SHARED
 } from '../../../sharedStyles/outdoor'
@@ -80,7 +81,8 @@ export default {
     [ESTHER_SPEECH]: BUBBLE__SHARED,
     [GO_KART_THOUGHT]: [
         BUBBLE__SHARED,
-        FOLIAGE__SHARED
+        FOLIAGE__SHARED,
+        POLE__SHARED
     ],
     [KHARI_ATTACK_SPEECH]: [
         BENNETT,

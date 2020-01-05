@@ -1,6 +1,6 @@
 <svg viewBox="0 0 1037.86 2443.64">
-    <rect class="poleSide" x="87.18" y="1170.63" width="30.41" height="1267.43"/>
-    <rect class="poleFront" x="68.22" y="1170.63" width="18.96" height="1267.43"/>
+    <rect class="pole" x="87.18" y="1170.63" width="30.41" height="1267.43"/>
+    <rect class="poleLight" x="68.22" y="1170.63" width="18.96" height="1267.43"/>
     <polygon class="placardBottom" points="3.89 1163.97 16 1170.63 146.54 1170.63 134.44 1163.97 3.89 1163.97"/>
     <polygon class="placardSide" points="146.54 1170.63 207.89 912.52 196.68 902.1 134.44 1163.97 146.54 1170.63"/>
     <polygon class="placardFront" points="66.13 902.1 3.89 1163.97 134.44 1163.97 196.68 902.1 66.13 902.1"/>

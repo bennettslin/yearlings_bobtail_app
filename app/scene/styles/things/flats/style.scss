@@ -128,7 +128,6 @@
 .goKartTrack {
     .checkerBlack { fill: hsl(24, 4%, 26%); }
     .checkerWhite { fill: hsl(0, 0%, 100%); }
-    .pole { fill: hsl(26, 10%, 48%); }
 }
 
 .nohoHouseLeft {
@@ -141,7 +140,6 @@
 }
 
 .oaklandFlag {
-    .pole { fill: hsl(55, 5%, 42%); }
     .stripeWhite { fill: hsl(0, 6%, 88%); }
     .stripeRed { fill: hsl(0, 53%, 53%); }
     .fieldBlue { fill: hsl(213, 53%, 53%); }
@@ -271,7 +269,6 @@
 .tennisCourt {
     .court { fill: hsl(220, 51%, 55%); }
     .stripeDisplayLine { stroke: hsl(0, 0%, 100%); }
-    .pole { fill: hsl(220, 1%, 46%); }
     .mesh { fill: hsla(78, 24%, 66%, 0.5); }
     .net { fill: hsl(78, 12%, 28%); }
 }

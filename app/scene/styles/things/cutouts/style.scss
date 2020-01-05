@@ -17,8 +17,6 @@
 }
 
 .cavemanBones {
-    .poleSide { fill: hsl(199, 14%, 56%); }
-    .poleFront { fill: hsl(201, 22%, 67%); }
     .placardBottom { fill: hsl(60, 20%, 45%); }
     .placardSide { fill: hsl(54, 14%, 56%); }
     .placardFront { fill: hsl(253, 20%, 64%); }
@@ -87,7 +85,6 @@
 }
 
 .ivDrip {
-    .pole { fill: hsl(0, 0%, 60%); }
     .boxLight { fill: hsl(270, 57%, 77%); }
     .boxMedium { fill: hsl(268, 37%, 68%); }
     .boxDark { fill: hsl(270, 25%, 60%); }
@@ -241,7 +238,6 @@
 }
 
 .signpost {
-    .pole { fill: hsl(47, 23%, 51%); }
     .signBottom { fill: hsl(72, 3%, 69%); }
     .signFront { fill: hsl(70, 8%, 86%); }
 }
@@ -322,7 +318,6 @@
 
 .trafficLight {
     .support { fill: hsl(60, 5%, 58%); }
-    .pole { fill: hsl(60, 4%, 43%); }
     .casing { fill: hsl(60, 12%, 40%); }
     .visor { fill: hsl(60, 12%, 31%); }
     .lightGreen { fill: hsl(107, 95%, 65%); }
@@ -344,7 +339,6 @@
 }
 
 .yellowTapedGrill {
-    .pole { fill: gray; }
     .tapeDark { fill: hsl(60, 32%, 45%); }
     .tapeLight { fill: hsl(60, 34%, 50%); }
     .grillInnerLight { fill: hsl(70, 10%, 46%); }
