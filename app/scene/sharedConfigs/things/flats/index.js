@@ -67,6 +67,7 @@ import {
     TAIWAN_HOUSE__SHARED
 } from '../../../sharedStyles/buildings'
 import {
+    CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     FREEWAY_SIGN__SHARED,
     GRAVE__SHARED,
@@ -146,6 +147,7 @@ export default {
     [FOREBODING_TREES]: FOLIAGE__SHARED,
     [GO_KART_TRACK]: [
         ALL_VEHICLES__SHARED,
+        CHECKER_FLAG__SHARED,
         POLE__SHARED
     ],
     [NOHO_HOUSE_LEFT]: [

@@ -41,6 +41,7 @@ import {
     MONITOR__SHARED
 } from '../../../sharedStyles/instruments'
 import {
+    CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
     POLE__SHARED,
@@ -81,6 +82,7 @@ export default {
     [ESTHER_SPEECH]: BUBBLE__SHARED,
     [GO_KART_THOUGHT]: [
         BUBBLE__SHARED,
+        CHECKER_FLAG__SHARED,
         FOLIAGE__SHARED,
         POLE__SHARED
     ],

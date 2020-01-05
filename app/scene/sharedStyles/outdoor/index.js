@@ -1,3 +1,4 @@
+export const CHECKER_FLAG__SHARED = 'checkerFlag'
 export const FOLIAGE__SHARED = 'foliage'
 export const FREEWAY_SIGN__SHARED = 'freewaySign'
 export const GRAVE__SHARED = 'grave'
