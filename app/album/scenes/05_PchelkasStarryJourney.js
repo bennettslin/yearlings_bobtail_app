@@ -25,8 +25,7 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_WINTER,
-    SEASON_NIGHT_MAGIC,
-    SEASON_FUTURE
+    SEASON_NIGHT_MAGIC
 } from '../../scene/sky/keys'
 import {
     PRETEEN_BENNETT,
@@ -224,7 +223,6 @@ export default [
                 [VALLEY_FURTHER_BACKDROP]: true
             },
             [CARDBOARD]: {
-                [BLOOM_COUNTY_POSTER]: true,
                 [EARTH__ROCKET]: true,
                 [DOGS_ROCKET]: true
             },
@@ -262,7 +260,7 @@ export default [
             }
         },
         cubes: BEDROOM_SPACE_KEY,
-        sky: { season: SEASON_FUTURE }
+        sky: { season: SEASON_NIGHT_MAGIC }
     },
     {
         unitIndex: 13,

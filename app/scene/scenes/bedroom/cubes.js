@@ -10,9 +10,8 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     BENNETT_CARPET_COLOUR as F,
-    DARK_FLOOR_COLOUR as Y,
     BENNETT_WALL_COLOUR as W,
-    // DARK_WALL_COLOUR as Z,
+    NIGHT_MAGIC_COLOUR as Z,
     FURNITURE_COLOUR as R,
     BENNETT_BED_COLOUR as U,
     SEAT_COLOUR as S
@@ -51,6 +50,17 @@ const DEFAULT_CEILING = {
         [1, d, g, g, g, g, g, g, g, g, 1, k],
         [g, g, g, g, g, g, g, g, g, g, 1, k],
         [1, g, g, g, g, g, g, g, g, g, g, 1]
+    ]
+}
+
+const DEFAULT_OPEN_FLOOR = {
+    hslaColours: [
+        [G],
+        [G, G, G, G, G, Z, Z, Z, Z, G],
+        [G, G, G, G, Z, Z, Z, Z, Z, Z, G],
+        [G, G, Z, Z, Z, Z, Z, Z, Z, Z, G],
+        [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, G],
+        [G, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, G]
     ]
 }
 
@@ -126,32 +136,28 @@ const CUBES = {
     [BEDROOM_DOGS_KEY]: {
         slantDirection: LEFT,
         floor: {
-            hslaColours: [
-                [Y]
-            ],
+            hslaColours: DEFAULT_OPEN_FLOOR.hslaColours,
             zIndices: [
-                [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
-                [0, 0, 0, 1, 1, 1, 1, 7, 7, 1, 0],
-                [0, 0, 1, 1, 1, 1, 1, 7, 7, 7, 1, 0],
-                [1, 1, 1, 1, 1, 1, 1, 7, 7, 7, 1, 0],
-                [1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 1, 0],
-                [1]
+                [0],
+                [0, 0, 0, 0, 0, 1, 1, 7, 7, 0],
+                [0, 0, 0, 0, 1, 1, 1, 7, 7, 7, 0],
+                [0, 0, 1, 1, 1, 1, 1, 7, 7, 7, 0],
+                [1, 1, 1, 1, 1, 1, 1, 7, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
     },
     [BEDROOM_SPACE_KEY]: {
         slantDirection: LEFT,
         floor: {
-            hslaColours: [
-                [Y]
-            ],
+            hslaColours: DEFAULT_OPEN_FLOOR.hslaColours,
             zIndices: [
-                [0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0],
-                [0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 0, 1, 1, 5, 1, 1, 1, 1, 1, 1, 0],
-                [1, 1, 5, 5, 1, 1, 1, 1, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 0],
-                [1]
+                [0],
+                [0, 0, 0, 0, 0, 1, 1, 1, 1, 0],
+                [0, 0, 0, 0, 5, 1, 1, 1, 1, 1, 0],
+                [0, 0, 5, 5, 1, 1, 1, 1, 1, 1, 0],
+                [1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
     }

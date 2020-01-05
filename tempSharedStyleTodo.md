@@ -1,5 +1,4 @@
 # Other shared
-brick wall
 pole
 furniture foot
 

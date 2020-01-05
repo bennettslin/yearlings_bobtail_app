@@ -52,6 +52,7 @@ export default {
     },
     [PANEL]: {
         [BASEMENT_FENCE]: {
+            yIndex: 0,
             scaleFactor: 0.5
         }
     }

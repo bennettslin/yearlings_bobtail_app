@@ -4,8 +4,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
     TAIWAN_GATE_COLOUR as A,
-    DARK_FLOOR_COLOUR as Y,
-    DARK_WALL_COLOUR as Z
+    NIGHT_COLOUR as Y
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
@@ -18,7 +17,7 @@ const CUBES = {
                 [D],
                 [D],
                 [D],
-                [Z]
+                [Y]
             ],
             zIndices: [
                 [k],
@@ -34,8 +33,7 @@ const CUBES = {
                 [A],
                 [A, A, A, V, V, V, A],
                 [A, V, V, V, V, V, V, V, V, V, A],
-                [Y, Y, Y, Z, Z, Z, Z, Y],
-                [Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y]
+                [Y]
             ],
             zIndices: [
                 [0],

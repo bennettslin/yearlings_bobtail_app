@@ -85,6 +85,7 @@ export default {
     [BATHTUB]: null,
     [BEDROOM_DESK]: BEDROOM_FURNITURE__SHARED,
     [BEDROOM_FENCE]: [
+        FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
         WALL__SHARED
     ],

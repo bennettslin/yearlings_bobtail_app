@@ -32,6 +32,7 @@ export default {
             scaleFactor: 0.45
         },
         [DISTANT_HOUSES_BACKDROP]: {
+            yIndex: 0,
             scaleFactor: 0.45
         },
         [DRIVING_BACKDROP]: {

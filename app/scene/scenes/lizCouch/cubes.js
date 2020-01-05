@@ -12,9 +12,9 @@ import {
     PAVEMENT_COLOUR as V,
     LIZ_GATE_COLOUR as A,
     LIZ_FLOOR_COLOUR as F,
-    DARK_FLOOR_COLOUR as Y,
     LIZ_WALL_COLOUR as W,
-    DARK_WALL_COLOUR as Z,
+    NIGHT_COLOUR as Y,
+    NIGHT_MAGIC_COLOUR as Z,
     LIZ_COUCH_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
@@ -60,6 +60,17 @@ const DEFAULT_FLOOR = {
     ]
 }
 
+const DEFAULT_OPEN_FLOOR = {
+    zIndices: [
+        [0],
+        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+    ]
+}
+
 const CUBES = {
     [LIZ_COUCH_KEY]: {
         ceiling: DEFAULT_CEILING,
@@ -90,14 +101,13 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [D],
-                [Z]
+                [Y]
             ],
             zIndices: DEFAULT_CEILING.zIndices
         },
         floor: {
             hslaColours: [
                 [A, A, A, A, A, V, V, V, A],
-                [Y, Y, Y, Y, Z, Z, Z, Z, Z, Y],
                 [Y]
             ],
             zIndices: DEFAULT_FLOOR.zIndices
@@ -106,16 +116,10 @@ const CUBES = {
     [LIZ_COUCH_PEAFOWL_KEY]: {
         floor: {
             hslaColours: [
-                [Y]
+                [G],
+                [G, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, G]
             ],
-            zIndices: [
-                [1],
-                [1],
-                [1],
-                [1, 7, 4, 4, 1],
-                [1, 7, 4, 4, 1],
-                [1]
-            ]
+            zIndices: DEFAULT_OPEN_FLOOR.zIndices
         }
     },
     [LIZ_COUCH_THOUGHT_KEY]: {
@@ -128,14 +132,7 @@ const CUBES = {
                 [G, F, F, F, F, F, F, F, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G]
             ],
-            zIndices: [
-                [0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
+            zIndices: DEFAULT_OPEN_FLOOR.zIndices
         }
     }
 }

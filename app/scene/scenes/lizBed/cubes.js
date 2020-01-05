@@ -9,9 +9,8 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     LIZ_FLOOR_COLOUR as F,
-    DARK_FLOOR_COLOUR as Y,
     LIZ_WALL_COLOUR as W,
-    DARK_WALL_COLOUR as Z,
+    NIGHT_COLOUR as Y,
     FURNITURE_COLOUR as R,
     LIZ_BED_COLOUR as U,
     SEAT_COLOUR as S
@@ -115,9 +114,7 @@ const CUBES = {
     [LIZ_BED_DARK_KEY]: {
         ceiling: {
             hslaColours: [
-                [Z, Y, Y, Y, Y, Y, Y, Y, Y, Y, Y, Z],
-                [Z, Z, Y, Y, Y, Y, Y, Y, Z],
-                [Z]
+                [Y]
             ],
             zIndices: DEFAULT_CEILING.zIndices
         },

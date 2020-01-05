@@ -37,15 +37,15 @@
 }
 .TimeOfDay__night {
     background: linear-gradient(
-        hsl(223, 35%, 10%),
-        hsl(203, 35%, 20%)
+        hsl(223, 35%, 7%),
+        hsl(203, 35%, 12%)
     );
 }
 
-.Season__spring { background-color: hsla(225, 75%, 60%, 0.2); }
-.Season__summer { background-color: hsla(215, 100%, 90%, 0.2); }
-.Season__autumn { background-color: hsla(225, 100%, 75%, 0.2); }
-.Season__winter { background-color: hsla(235, 75%, 25%, 0.2); }
+.Season__spring { background-color: hsla(225, 65%, 60%, 0.2); }
+.Season__summer { background-color: hsla(215, 70%, 70%, 0.2); }
+.Season__autumn { background-color: hsla(225, 50%, 65%, 0.2); }
+.Season__winter { background-color: hsla(235, 25%, 35%, 0.2); }
 
 // Prologue, Epilogue
 .Season__stage {
@@ -71,7 +71,7 @@
     );
 }
 
-// Pchelka, Uncanny
+// Uncanny
 .Season__future {
     background: linear-gradient(
         hsl(276, 46%, 70%),
@@ -87,11 +87,11 @@
     );
 }
 
-// Willy, Pchelka, Kyon, Uncanny
+// Pchelka, Kyon, Uncanny
 .Season__nightMagic {
     background: linear-gradient(
-        hsl(156, 56%, 70%),
-        hsl(50, 56%, 90%)
+        hsl(156, 35%, 7%),
+        hsl(156, 35%, 25%)
     );
 }
 

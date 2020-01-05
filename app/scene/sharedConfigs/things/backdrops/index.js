@@ -26,7 +26,7 @@ import {
 
 import {
     BUILDINGS__SHARED,
-    DISTANT__SHARED,
+    HOUSE__SHARED,
     TAIWAN_HOUSE__SHARED
 } from '../../../sharedStyles/buildings'
 import { BOOK__SHARED } from '../../../sharedStyles/paper'
@@ -41,12 +41,12 @@ import {
 export default {
     [DISTANT_BUILDINGS_BACKDROP]: [
         BUILDINGS__SHARED,
-        DISTANT__SHARED,
-        FOLIAGE__SHARED
+        FOLIAGE__SHARED,
+        WALL__SHARED
     ],
     [DISTANT_HOUSES_BACKDROP]: [
-        DISTANT__SHARED,
         FOLIAGE__SHARED,
+        HOUSE__SHARED,
         WALL__SHARED
     ],
     [DRIVING_BACKDROP]: FOLIAGE__SHARED,
@@ -63,10 +63,12 @@ export default {
     [MOUNTAIN_BACKDROP]: MOUNTAIN__SHARED,
     [NEAR_BUILDINGS]: [
         BUILDINGS__SHARED,
-        FOLIAGE__SHARED
+        FOLIAGE__SHARED,
+        WALL__SHARED
     ],
     [NEAR_HOUSES]: [
         FOLIAGE__SHARED,
+        HOUSE__SHARED,
         WALL__SHARED
     ],
     [OAKLAND_FRONT]: [

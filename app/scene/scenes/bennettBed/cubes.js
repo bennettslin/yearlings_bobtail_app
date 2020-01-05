@@ -8,10 +8,9 @@ import {
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_FLOOR_DARK_COLOUR as L,
-    DARK_FLOOR_COLOUR as Y,
     BENNETT_WALL_COLOUR as W,
+    NIGHT_COLOUR as Y,
     BENNETT_EXTERIOR_COLOUR as X,
-    DARK_WALL_COLOUR as Z,
     BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
 
@@ -73,7 +72,7 @@ const CUBES = {
             hslaColours: [
                 [V],
                 [V],
-                [V, V, Y, Y, Y, Y, Z, Z, Z, Z, V],
+                [V, V, Y, Y, Y, Y, Y, Y, Y, Y, V],
                 [Y]
             ],
             zIndices: DEFAULT_FLOOR.zIndices

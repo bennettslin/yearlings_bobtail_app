@@ -1,7 +1,6 @@
 export const CAMPUS__SHARED = 'campus'
 export const BUILDING__SHARED = 'building'
 export const BUILDINGS__SHARED = 'buildings'
-export const DISTANT__SHARED = 'distant'
 export const HOUSE__SHARED = 'house'
 export const OAKLAND_HOUSE_LEFT__SHARED = 'oaklandHouseLeft'
 export const OAKLAND_HOUSE_RIGHT__SHARED = 'oaklandHouseRight'

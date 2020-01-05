@@ -15,7 +15,8 @@ export const LINOLEUM_FLOOR_COLOUR = 'linoleumFloor'
 export const WOOD_FLOOR_COLOUR = 'woodFloor'
 export const OLD_FLOOR_COLOUR = 'oldFloor'
 export const VELVET_FLOOR_COLOUR = 'velvetFloor'
-export const DARK_FLOOR_COLOUR = 'darkFloor'
+export const NIGHT_COLOUR = 'night'
+export const NIGHT_MAGIC_COLOUR = 'nightMagic'
 export const BENNETT_CARPET_COLOUR = 'bennettCarpet'
 export const BENNETT_FLOOR_COLOUR = 'bennettFloor'
 export const LIZ_FLOOR_COLOUR = 'lizFloor'
@@ -23,7 +24,6 @@ export const DIRT_FLOOR_COLOUR = 'dirtFloor'
 export const LINOLEUM_FLOOR_DARK_COLOUR = 'linoleumFloorDark'
 export const BENNETT_FLOOR_DARK_COLOUR = 'bennettFloorDark'
 export const SOFT_WALL_COLOUR = 'softWall'
-export const DARK_WALL_COLOUR = DARK_FLOOR_COLOUR
 export const SCHOOL_WALL_COLOUR = 'schoolWall'
 export const BENNETT_WALL_COLOUR = 'bennettWall'
 export const LIZ_WALL_COLOUR = 'lizWall'
@@ -41,7 +41,6 @@ export const CINEMA_EXTERIOR_COLOUR = 'cinemaExterior'
 export const PLATFORM_COLOUR = 'platform'
 export const CONCRETE_PLATFORM_COLOUR = 'concrete'
 export const FURNITURE_COLOUR = 'furniture'
-export const ATTIC_COUCH_COLOUR = 'atticCouch'
 export const BENNETT_COUCH_COLOUR = 'bennettCouch'
 export const LIZ_COUCH_COLOUR = 'lizCouch'
 export const MIRIAM_COUCH_COLOUR = 'miriamCouch'
@@ -85,7 +84,9 @@ const HSLA_MAP = {
     [BENNETT_FLOOR_DARK_COLOUR]: { h: 26, s: 20, l: 74 }, // TODO: Consolidate.
     [LINOLEUM_FLOOR_DARK_COLOUR]: { h: 74, s: 14, l: 57 }, // TODO: Consolidate.
     /* Y. */
-    [DARK_FLOOR_COLOUR]: { h: 221, s: 17, l: 45 },
+    [NIGHT_COLOUR]: { h: 221, s: 17, l: 45 },
+    /* Z. */
+    [NIGHT_MAGIC_COLOUR]: { h: 156, s: 35, l: 20 },
     /* W. */
     [BENNETT_WALL_COLOUR]: { h: 16, s: 28, l: 74 },
     [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },
@@ -103,8 +104,6 @@ const HSLA_MAP = {
     [CINEMA_EXTERIOR_COLOUR]: { h: 143, s: 14, l: 68 },
     [LIZ_EXTERIOR_COLOUR]: { h: 181, s: 16, l: 67 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 334, s: 14, l: 63 },
-    /* Z. */
-    // DARK_WALL_COLOUR: Same as dark floor.
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },
     [LIZ_GATE_COLOUR]: { h: 46, s: 12, l: 63 },
@@ -115,7 +114,6 @@ const HSLA_MAP = {
     /* R. */
     [FURNITURE_COLOUR]: { h: 25, s: 44, l: 53 },
     /* U. */
-    [ATTIC_COUCH_COLOUR]: { h: 90, s: 15, l: 45 },
     [BENNETT_COUCH_COLOUR]: { h: 125, s: 12, l: 45 },
     [LIZ_COUCH_COLOUR]: { h: 45, s: 10, l: 45 },
     [MIRIAM_COUCH_COLOUR]: { h: 250, s: 12, l: 45 },
