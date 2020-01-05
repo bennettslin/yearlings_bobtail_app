@@ -70,6 +70,7 @@ import {
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED
 } from '../../../sharedStyles/food'
+import { BULB__SHARED } from '../../../sharedStyles/household'
 import { MONITOR__SHARED } from '../../../sharedStyles/instruments'
 import {
     LAMPPOST__SHARED,
@@ -119,6 +120,7 @@ export default {
     [HOWIE_FRIDGE]: null,
     [IV_DRIP]: POLE__SHARED,
     [LAMPPOST]: [
+        BULB__SHARED,
         LAMPPOST__SHARED,
         POLE__SHARED
     ],
@@ -151,6 +153,7 @@ export default {
     ],
     [TRAY_PILE]: TRAY__SHARED,
     [TWIN_STREETLAMP]: [
+        BULB__SHARED,
         LAMPPOST__SHARED,
         POLE__SHARED
     ],

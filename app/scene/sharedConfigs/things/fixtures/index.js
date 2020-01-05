@@ -65,6 +65,7 @@ import {
     PAPER_BAG__SHARED
 } from '../../../sharedStyles/food'
 import {
+    BULB__SHARED,
     LIZ_PHONE__SHARED,
     SCISSORS__SHARED
 } from '../../../sharedStyles/household'
@@ -108,7 +109,10 @@ export default {
     [BENNETT_SHOE]: BENNETT,
     [BENNETT_SHOE_REFLECTION]: BENNETT,
     [BEYONDER_ENVELOPE]: LETTER__SHARED,
-    [CAPTAIN_BED_LAMP]: POLE__SHARED,
+    [CAPTAIN_BED_LAMP]: [
+        BULB__SHARED,
+        POLE__SHARED
+    ],
     [CASH_BOX]: DOLLAR__SHARED,
     [CHRISTOPHER_LETTERS]: [
         MAGAZINE__SHARED,

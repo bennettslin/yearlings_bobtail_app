@@ -1,7 +1,6 @@
 # Other shared
-bulb
-furniture foot
 fridges
 goKartFlag
+wood (light and dark, includes furniture foot)
 
 # Improvements
