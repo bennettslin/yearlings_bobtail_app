@@ -1,38 +1,25 @@
-// The scene sky.
-
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import cx from 'classnames'
+import { TIME_STAGE } from '../../../../app/scene/sky/keys'
 
-const mapStateToProps = ({
-    sceneStore: {
-        sceneTime,
-        sceneSeason
-    }
-}) => ({
-    sceneTime,
-    sceneSeason
-})
-
-class Sky extends PureComponent {
+class AdminSky extends PureComponent {
 
     static propTypes = {
-        // Through Redux.
+        // From parent.
         sceneTime: PropTypes.string.isRequired,
         sceneSeason: PropTypes.string.isRequired
     }
 
     render() {
         const {
-            sceneTime,
+            sceneTime = TIME_STAGE,
             sceneSeason
         } = this.props
 
         return (
             <div className={cx(
-                'Sky',
-                'abF'
+                'AdminSky'
             )}>
                 <div
                     className={cx(
@@ -50,10 +37,21 @@ class Sky extends PureComponent {
                         'abF'
                     )}
                 />
+                <div
+                    {...{
+                        className: cx(
+                            'AdminSky__text',
+                            'PtSansNarrow',
+                            'textShadow__dark'
+                        )
+                    }}
+                >
+                    <div>{`${sceneTime} | ${sceneSeason}`}</div>
+                </div>
             </div>
         )
     }
 }
 
-export default connect(mapStateToProps)(Sky)
+export default AdminSky
 

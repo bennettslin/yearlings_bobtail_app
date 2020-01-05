@@ -1,3 +1,7 @@
+.Sky {
+    height: 100% - $height__wood;
+}
+
 .Sky__filter {
     .DW__higherProcessor
     & {
@@ -6,16 +10,16 @@
     }
 }
 
-.Sky__celestial {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0;
+// .Sky__celestial {
+//     position: absolute;
+//     border-radius: 50%;
+//     opacity: 0;
 
-    .DW__higherProcessor
-    & {
-        transition:
-            opacity $animationDuration__slow,
-            top $animationDuration__slow,
-            left $animationDuration__slow;
-    }
-}
+//     .DW__higherProcessor
+//     & {
+//         transition:
+//             opacity $animationDuration__slow,
+//             top $animationDuration__slow,
+//             left $animationDuration__slow;
+//     }
+// }

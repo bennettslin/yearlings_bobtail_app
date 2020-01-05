@@ -23,6 +23,7 @@ import './scss/app.scss'
 import Actors from 'admin/containers/Actors'
 import Annotations from 'admin/containers/Annotations'
 import LegacyPreviewer from 'admin/containers/LegacyPreviewer'
+import Skies from 'admin/containers/Skies'
 import Things from 'admin/containers/Things'
 import Progress from 'admin/containers/Progress'
 
@@ -80,6 +81,13 @@ ReactDOM.render(
                     {...{
                         path: '/Things',
                         component: Things
+                    }}
+                />
+                <Route
+                    exact
+                    {...{
+                        path: '/Skies',
+                        component: Skies
                     }}
                 />
                 <Route

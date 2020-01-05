@@ -518,7 +518,7 @@ export default [
             }
         },
         cubes: LIZ_BED_KEY,
-        sky: { season: SEASON_LOVE }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
     },
     {
         unitIndex: 17,
@@ -576,6 +576,6 @@ export default [
             }
         },
         cubes: LIZ_BED_DARK_KEY,
-        sky: { season: SEASON_LOVE }
+        sky: { time: TIME_NIGHT, season: SEASON_WINTER }
     }
 ]

@@ -51,8 +51,14 @@ import {
     MIRIAM
 } from '../../../../constants/scene/actors'
 import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
-import { ODIN__SHARED } from '../../../sharedStyles/animals'
-import { FOLIAGE__SHARED, MOUNTAIN__SHARED } from '../../../sharedStyles/outdoor'
+import {
+    ODIN__SHARED,
+    SEA_SERPENT__SHARED
+} from '../../../sharedStyles/animals'
+import {
+    FOLIAGE__SHARED,
+    MOUNTAIN__SHARED
+} from '../../../sharedStyles/outdoor'
 import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED
@@ -148,8 +154,8 @@ export default {
     [POLICE_ALBUM]: null,
     [PROGRESS_CHART_EARLY]: PROGRESS_CHART__SHARED,
     [PROGRESS_CHART_LATE]: PROGRESS_CHART__SHARED,
-    [SEA_SERPENT_LEFT]: null,
-    [SEA_SERPENT_RIGHT]: null,
+    [SEA_SERPENT_LEFT]: SEA_SERPENT__SHARED,
+    [SEA_SERPENT_RIGHT]: SEA_SERPENT__SHARED,
     [SNOWGLOBE_FUTURE_CORD]: [
         SNOWGLOBE__SHARED,
         BENNETT,

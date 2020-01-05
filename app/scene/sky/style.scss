@@ -1,23 +1,99 @@
-.TimeOfDay__stage { background-color: none; }
-.TimeOfDay__twilight { background-color: hsl(263, 49%, 21%); }
-.TimeOfDay__dawn { background-color: hsl(243, 49%, 76%); }
-.TimeOfDay__morning { background-color: hsl(223, 49%, 92%); }
-.TimeOfDay__noon { background-color: hsl(199, 42%, 87%); }
-.TimeOfDay__afternoon { background-color: hsl(227, 100%, 85%); }
-.TimeOfDay__evening { background-color: hsl(223, 49%, 60%); }
-.TimeOfDay__night { background-color: hsl(243, 49%, 29%); }
+.TimeOfDay__stage { background: none; }
+.TimeOfDay__twilight {
+    background: linear-gradient(
+        hsl(232, 40%, 22%),
+        hsl(18, 40%, 46%)
+    );
+}
+.TimeOfDay__dawn {
+    background: linear-gradient(
+        hsl(215, 50%, 56%),
+        hsl(25, 40%, 86%),
+    );
+}
+.TimeOfDay__morning {
+    background: linear-gradient(
+        hsl(200, 65%, 67%),
+        hsl(190, 40%, 87%)
+    );
+}
+.TimeOfDay__noon {
+    background: linear-gradient(
+        hsl(192, 75%, 70%),
+        hsl(182, 55%, 90%)
+    );
+}
+.TimeOfDay__afternoon {
+    background: linear-gradient(
+        hsl(203, 75%, 67%),
+        hsl(155, 55%, 87%),
+    );
+}
+.TimeOfDay__evening {
+    background: linear-gradient(
+        hsl(213, 55%, 50%),
+        hsl(5, 50%, 65%)
+    );
+}
+.TimeOfDay__night {
+    background: linear-gradient(
+        hsl(223, 35%, 10%),
+        hsl(203, 35%, 20%)
+    );
+}
 
-.Season__spring { background-color: hsl(240, 100%, 93%); }
-.Season__summer { background-color: hsl(240, 100%, 97%); }
-.Season__autumn { background-color: hsl(240, 50%, 87%); }
-.Season__winter { background-color: hsl(240, 33%, 80%); }
+.Season__spring { background-color: hsla(225, 75%, 60%, 0.2); }
+.Season__summer { background-color: hsla(215, 100%, 90%, 0.2); }
+.Season__autumn { background-color: hsla(225, 100%, 75%, 0.2); }
+.Season__winter { background-color: hsla(235, 75%, 25%, 0.2); }
 
-.Season__past { background-color: hsl(36, 56%, 70%); }
-.Season__present { background-color: hsl(30, 12%, 87%); }
-.Season__future { background-color: hsl(276, 56%, 70%); }
+.Season__stage {
+    background: linear-gradient(
+        hsl(12, 4%, 43%),
+        hsl(12, 4%, 43%)
+    );
+}
+.Season__past {
+    background: linear-gradient(
+        hsl(36, 56%, 70%),
+        hsl(36, 56%, 70%)
+    );
+}
+.Season__present {
+    background: linear-gradient(
+        hsl(30, 12%, 87%),
+        hsl(30, 12%, 87%)
+    );
+}
+.Season__future {
+    background: linear-gradient(
+        hsl(276, 56%, 70%),
+        hsl(276, 56%, 70%)
+    );
+}
 
-.Season__stage { background-color: hsl(324, 56%, 70%); }
-.Season__love { background-color: hsl(324, 56%, 70%); }
-.Season__nightMagic { background-color: hsl(156, 56%, 70%); }
-.Season__ocean { background-color: hsl(206, 78%, 70%); }
-.Season__thought { background-color: hsl(0, 14%, 23%); }
+// Grasshoppers, Vegan
+.Season__love {
+    background: linear-gradient(
+        hsl(324, 56%, 60%),
+        hsl(50, 56%, 90%)
+    );
+}
+.Season__nightMagic {
+    background: linear-gradient(
+        hsl(156, 56%, 70%),
+        hsl(156, 56%, 70%)
+    );
+}
+.Season__ocean {
+    background: linear-gradient(
+        hsl(206, 78%, 50%),
+        hsl(206, 78%, 50%)
+    );
+}
+.Season__thought {
+    background: linear-gradient(
+        hsl(0, 14%, 23%),
+        hsl(0, 14%, 23%)
+    );
+}
