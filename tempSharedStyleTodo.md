@@ -1,6 +1,6 @@
 # Other shared
 pole
 furniture foot
+fridges
 
 # Improvements
-Allow mountain backdrop to have Taiwan mountain colour

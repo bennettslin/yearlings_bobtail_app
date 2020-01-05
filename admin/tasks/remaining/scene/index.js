@@ -21,11 +21,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Choose time and season colours, logic for gradients.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: 'logue',
         notes: ``,
         workedHours: 0,
@@ -93,25 +88,25 @@ export default [
     },
     {
         taskName: 'taiwanRoom',
-        notes: `Make Buddha gold colour.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'taiwanStairs',
-        notes: `Night colours.`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'taiwanGate',
-        notes: `Night colours`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
     {
         taskName: 'rickshaw',
-        notes: `Night colours`,
+        notes: ``,
         workedHours: 0,
         neededHours: 1
     },
@@ -123,7 +118,7 @@ export default [
     },
     {
         taskName: 'buoy',
-        notes: `Make all cubes coloured, colour sea serpents.`,
+        notes: `Make all cubes coloured.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -183,7 +178,7 @@ export default [
     },
     {
         taskName: 'clubFront',
-        notes: `Expand room, rethink time allotted in M.`,
+        notes: `Rethink time allotted in M.`,
         workedHours: 0,
         neededHours: 1
     },

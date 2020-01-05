@@ -6,7 +6,7 @@
     .DW__higherProcessor
     & {
         transition:
-            background-color $animationDuration__slow;
+            background $animationDuration__slow;
     }
 }
 

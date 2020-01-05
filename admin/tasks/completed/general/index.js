@@ -5156,5 +5156,10 @@ export default [
         taskName: `Some cutout modifications.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Choose time and season gradients, have skies admin previewer.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
