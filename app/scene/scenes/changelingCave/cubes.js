@@ -1,7 +1,7 @@
 import { CHANGELING_CAVE_KEY } from '../../../constants/scene/scenes'
 
 import {
-    GROUND_CLEAR_COLOUR as G,
+    NIGHT_MAGIC_COLOUR as Z,
     PAVEMENT_COLOUR as V
 } from '../../cubes/colours'
 
@@ -10,7 +10,7 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [V],
-                [G]
+                [Z]
             ],
             zIndices: [
                 [1],
