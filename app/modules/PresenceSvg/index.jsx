@@ -208,7 +208,9 @@ class PresenceSvg extends PureComponent {
                 adjustedHeight
             } = this.state,
             containerTransform = this.getPresenceTransform(),
-            sharedStyle = this.getSharedStyle()
+            sharedStyle = this.getSharedStyle(),
+            presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
+            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey
 
         return (
             <InlineSvg
@@ -231,7 +233,8 @@ class PresenceSvg extends PureComponent {
                         }
                     },
                     svgClassName: cx(
-                        convertPresenceKeyToClassName(presenceKey),
+                        presenceKeyClassName,
+                        duplicateKeyClassName,
                         getSharedClassNames(sharedStyle)
                     ),
                     // title: convertPresenceKeyToTitle(presenceKey),
