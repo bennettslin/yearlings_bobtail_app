@@ -77,8 +77,11 @@ export default {
     ],
     [DOGS_SKETCH]: SKETCH_DOGS__SHARED,
     [ESCAPE_POD_SKETCH]: SKETCH_DOGS__SHARED,
-    [ESTHER_SPEECH]: null,
-    [GO_KART_THOUGHT]: FOLIAGE__SHARED,
+    [ESTHER_SPEECH]: BUBBLE__SHARED,
+    [GO_KART_THOUGHT]: [
+        BUBBLE__SHARED,
+        FOLIAGE__SHARED
+    ],
     [KHARI_ATTACK_SPEECH]: [
         BENNETT,
         LIZ,
@@ -99,6 +102,7 @@ export default {
         LIZ,
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
+        BUBBLE__SHARED,
         FOLIAGE__SHARED,
         REATTA__SHARED,
         ROAD__SHARED
@@ -129,6 +133,7 @@ export default {
         BENNETT,
         LIZ,
         ALL_PEOPLE__SHARED,
+        BUBBLE__SHARED,
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
         ROAD__SHARED,

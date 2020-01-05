@@ -47,28 +47,35 @@
 .Season__autumn { background-color: hsla(225, 100%, 75%, 0.2); }
 .Season__winter { background-color: hsla(235, 75%, 25%, 0.2); }
 
+// Prologue, Epilogue
 .Season__stage {
     background: linear-gradient(
-        hsl(12, 4%, 43%),
-        hsl(12, 4%, 43%)
+        hsl(12, 24%, 43%),
+        hsl(50, 56%, 73%)
     );
 }
+
+// Didi, Uncanny
 .Season__past {
     background: linear-gradient(
         hsl(36, 56%, 70%),
-        hsl(36, 56%, 70%)
+        hsl(50, 56%, 90%)
     );
 }
+
+// Saskia, Uncanny
 .Season__present {
     background: linear-gradient(
-        hsl(30, 12%, 87%),
-        hsl(30, 12%, 87%)
+        hsl(156, 32%, 70%),
+        hsl(50, 56%, 95%)
     );
 }
+
+// Pchelka, Uncanny
 .Season__future {
     background: linear-gradient(
-        hsl(276, 56%, 70%),
-        hsl(276, 56%, 70%)
+        hsl(276, 46%, 70%),
+        hsl(50, 56%, 90%)
     );
 }
 
@@ -79,21 +86,27 @@
         hsl(50, 56%, 90%)
     );
 }
+
+// Willy, Pchelka, Kyon, Uncanny
 .Season__nightMagic {
     background: linear-gradient(
         hsl(156, 56%, 70%),
-        hsl(156, 56%, 70%)
+        hsl(50, 56%, 90%)
     );
 }
+
+// Odin
 .Season__ocean {
     background: linear-gradient(
         hsl(206, 78%, 50%),
-        hsl(206, 78%, 50%)
+        hsl(50, 56%, 90%)
     );
 }
+
+// Sasha, Ash, Constellations, Golden, Cremated, Dream
 .Season__thought {
     background: linear-gradient(
-        hsl(0, 14%, 23%),
-        hsl(0, 14%, 23%)
+        hsl(0, 24%, 23%),
+        hsl(330, 14%, 45%)
     );
 }

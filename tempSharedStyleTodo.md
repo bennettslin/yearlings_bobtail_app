@@ -4,5 +4,4 @@ pole
 furniture foot
 
 # Improvements
-porch cube post colour
-push taiwan gate further left so Taiwan tree shows more
+Allow mountain backdrop to have Taiwan mountain colour

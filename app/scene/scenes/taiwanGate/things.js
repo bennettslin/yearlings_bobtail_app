@@ -17,7 +17,7 @@ export default {
     [CARDBOARD]: {
         [BENNETT_ODIN_RICKSHAW]: {
             yIndex: 2,
-            xPosition: 7,
+            xPosition: 6.75,
             scaleFactor: 0.2
         }
     },
@@ -31,7 +31,7 @@ export default {
     [DOOR]: {
         [IRON_GATE]: {
             yIndex: 5,
-            xPosition: 2
+            xPosition: 1.9
         }
     },
     [FLAT]: {

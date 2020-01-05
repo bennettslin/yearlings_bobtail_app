@@ -64,19 +64,13 @@
     .podOuter { fill: hsl(0, 0%, 54%); }
 }
 
-.estherSpeech {
-    .bubble { fill: hsl(176, 10%, 65%); }
-}
-
 .goKartThought {
-    .bubble { fill: hsl(168, 36%, 72%); }
     .pole { fill: hsl(0, 0%, 45%); }
     .checkerWhite { fill: hsl(0, 0%, 85%); }
     .checkerBlack { fill: hsl(0, 0%, 19%); }
 }
 
 .lizThought {
-    .sky { fill: hsl(209, 64%, 78%); }
     .cloud { fill: hsl(209, 11%, 39%); }
     .tear { fill: hsl(202, 36%, 64%); }
 }
@@ -160,7 +154,6 @@
 }
 
 .waitingThoughtWalking {
-    .sky { fill: hsl(190, 66%, 83%); }
     .benchLeg { fill: hsl(37, 16%, 26%); }
     .benchRest { fill: hsl(38, 15%, 31%); }
     .benchSeat { fill: hsl(39, 15%, 30%); }

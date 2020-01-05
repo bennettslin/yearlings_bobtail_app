@@ -52,7 +52,7 @@ export default {
         [LIZ_GATE_INSIDE]: {
             yIndex: -1,
             xPosition: 6,
-            zOffset: 0.5
+            zOffset: 0.7
         }
     },
     [PANEL]: {

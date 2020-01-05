@@ -63,7 +63,10 @@ import {
     POSTER_GLADIATOR__SHARED,
     PROGRESS_CHART__SHARED
 } from '../../../sharedStyles/print'
-import { SNOWGLOBE__SHARED } from '../../../sharedStyles/props'
+import {
+    BUBBLE__SHARED,
+    SNOWGLOBE__SHARED
+} from '../../../sharedStyles/props'
 import {
     TAIWAN_BUOY__SHARED,
     TAIWAN_RICKSHAW__SHARED,
@@ -130,6 +133,7 @@ export default {
     ],
     [JOHNNY_HORTON_ALBUM]: [
         ALL_PEOPLE__SHARED,
+        BUBBLE__SHARED,
         FOLIAGE__SHARED
     ],
     [LEONARD_COHEN_POSTER]: ALL_PEOPLE__SHARED,
