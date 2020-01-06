@@ -9,7 +9,6 @@ Different colours for houses and buildings
 Make snowglobe road colour consistent with nav button road
 
 Gingerbread prison, put his right arm down, bring her closer in.
-Ocean needs two seasons, one for top, other for side
 Add stars
 Allow for presence to have one yIndex position, and another yIndex size
 
