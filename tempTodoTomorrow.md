@@ -1,6 +1,5 @@
 # High energy tasks
 Finish shared styles
-Allow mountain backdrop to have Taiwan mountain colour
 Spotlight cubes on peafowl, dogs, and campfire
 
 # Low energy tasks

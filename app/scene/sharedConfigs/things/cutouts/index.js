@@ -78,6 +78,7 @@ import {
     FREEWAY_SIGN__SHARED,
     POLE__SHARED,
     ROCK__SHARED,
+    TAIWAN_FOLIAGE__SHARED,
     TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
 import { NEWSPAPER__SHARED } from '../../../sharedStyles/paper'
@@ -141,7 +142,7 @@ export default {
     [STORAGE_BOXES]: null,
     [STORAGE_CHEST]: null,
     [TAIWAN_FRIDGE]: null,
-    [TAIWAN_TREE]: FOLIAGE__SHARED,
+    [TAIWAN_TREE]: TAIWAN_FOLIAGE__SHARED,
     [TELEVISION]: null,
     [TOWEL_RACK]: null,
     [TRAFFIC_LIGHT]: POLE__SHARED,
