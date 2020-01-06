@@ -50,7 +50,7 @@ import {
 import {
     OAKLAND_SIDE,
     NEAR_BUILDINGS,
-    MOUNTAIN_BACKDROP,
+    MOUNTAIN_PAMPAS_BACKDROP,
     WEDDING_BACKDROP,
     GOLDEN_GATE_BACKDROP
 } from '../../constants/scene/things/backdrops'
@@ -144,7 +144,7 @@ export default [
                 }
             },
             [BACKDROP]: {
-                [MOUNTAIN_BACKDROP]: true
+                [MOUNTAIN_PAMPAS_BACKDROP]: true
             },
             [FLAT]: {
                 [PAMPAS_FAR]: true

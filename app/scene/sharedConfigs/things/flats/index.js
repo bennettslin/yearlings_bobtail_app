@@ -76,6 +76,7 @@ import {
     POLE__SHARED,
     ROAD__SHARED,
     ROCK__SHARED,
+    TAIWAN_MOUNTAIN__SHARED,
     TRASH_CAN__SHARED
 } from '../../../sharedStyles/outdoor'
 import {
@@ -235,17 +236,17 @@ export default {
     [TAIWAN_HOUSE_NEAR]: TAIWAN_HOUSE__SHARED,
     [TAIWAN_MOUNTAINS_BRIDGED]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED,
+        TAIWAN_MOUNTAIN__SHARED,
         ROAD__SHARED,
         TAIWAN_HOUSE__SHARED
     ],
     [TAIWAN_MOUNTAIN_LEFT]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        TAIWAN_MOUNTAIN__SHARED
     ],
     [TAIWAN_MOUNTAIN_RIGHT]: [
         FOLIAGE__SHARED,
-        MOUNTAIN__SHARED
+        TAIWAN_MOUNTAIN__SHARED
     ],
     [TENNIS_COURT]: [
         FOLIAGE__SHARED,

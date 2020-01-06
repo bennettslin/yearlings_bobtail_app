@@ -5,7 +5,8 @@ import {
     DRIVING_BACKDROP,
     GOLDEN_GATE_BACKDROP,
     LOS_ANGELES_BACKDROP,
-    MOUNTAIN_BACKDROP,
+    MOUNTAIN_TAIWAN_BACKDROP,
+    MOUNTAIN_PAMPAS_BACKDROP,
     NEAR_BUILDINGS,
     NEAR_HOUSES,
     OAKLAND_FRONT__HIGH,
@@ -47,7 +48,10 @@ export default {
             scaleFactor: 0.7,
             trimBottom: 0.13
         },
-        [MOUNTAIN_BACKDROP]: {
+        [MOUNTAIN_TAIWAN_BACKDROP]: {
+            scaleFactor: 0.66
+        },
+        [MOUNTAIN_PAMPAS_BACKDROP]: {
             scaleFactor: 0.66
         },
         [NEAR_BUILDINGS]: {

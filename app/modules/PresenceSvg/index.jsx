@@ -177,14 +177,18 @@ class PresenceSvg extends PureComponent {
                 presenceType,
                 presenceKey
             } = this.props,
-            { sharedStyle } = this.getArrangement()
+            {
+                sharedStyle,
+                sharedStyleKey
+            } = this.getArrangement()
 
         if (actorKey) {
             return getGlobalActorStyle(actorKey, sharedStyle)
         } else {
             return getSharedStyleForThing({
                 presenceType,
-                presenceKey
+                presenceKey,
+                sharedStyleKey
             })
         }
     }
