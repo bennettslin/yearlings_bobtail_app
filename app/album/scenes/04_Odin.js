@@ -19,8 +19,8 @@ import {
     OCEAN_FLOOR_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_NIGHT,
-    TIME_TWILIGHT,
+    TIME_NIGHT_TAIWAN,
+    TIME_TWILIGHT_TAIWAN,
     SEASON_AUTUMN,
     SEASON_OCEAN
 } from '../../scene/sky/keys'
@@ -112,7 +112,7 @@ export default [
             }
         },
         cubes: TAIWAN_ROOM_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 4,
@@ -136,7 +136,7 @@ export default [
             }
         },
         cubes: TAIWAN_STAIRS_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 6,
@@ -167,7 +167,7 @@ export default [
             }
         },
         cubes: TAIWAN_GATE_KEY,
-        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_NIGHT_TAIWAN, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 9,
@@ -191,7 +191,7 @@ export default [
             }
         },
         cubes: RICKSHAW_KEY,
-        sky: { time: TIME_TWILIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 11,
@@ -218,7 +218,7 @@ export default [
             }
         },
         cubes: SHORE_KEY,
-        sky: { time: TIME_TWILIGHT, season: SEASON_AUTUMN }
+        sky: { time: TIME_TWILIGHT_TAIWAN, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 14,

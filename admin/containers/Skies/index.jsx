@@ -7,6 +7,10 @@ import SkyDay from './SkyDay'
 import { removeLoadingIndicator } from 'utils/window'
 
 import {
+    TIME_TWILIGHT_TAIWAN,
+    TIME_NOON_TAIWAN,
+    TIME_NIGHT_TAIWAN,
+
     SEASON_SPRING,
     SEASON_SUMMER,
     SEASON_AUTUMN,
@@ -50,10 +54,18 @@ class Skies extends PureComponent {
                     'SkyDay',
                     'flexCentreContainer'
                 )}>
-                    <Sky {...{ sceneSeason: SEASON_STAGE }} />
                     <Sky {...{ sceneSeason: SEASON_PAST }} />
                     <Sky {...{ sceneSeason: SEASON_PRESENT }} />
                     <Sky {...{ sceneSeason: SEASON_FUTURE }} />
+                    <Sky {...{ sceneTime: TIME_NOON_TAIWAN, sceneSeason: SEASON_SUMMER }} />
+                    <Sky {...{ sceneTime: TIME_TWILIGHT_TAIWAN, sceneSeason: SEASON_AUTUMN }} />
+                    <Sky {...{ sceneTime: TIME_NIGHT_TAIWAN, sceneSeason: SEASON_AUTUMN }} />
+                </div>
+                <div className={cx(
+                    'SkyDay',
+                    'flexCentreContainer'
+                )}>
+                    <Sky {...{ sceneSeason: SEASON_STAGE }} />
                     <Sky {...{ sceneSeason: SEASON_LOVE }} />
                     <Sky {...{ sceneSeason: SEASON_NIGHT_MAGIC }} />
                     <Sky {...{ sceneSeason: SEASON_OCEAN }} />

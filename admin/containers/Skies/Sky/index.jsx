@@ -7,7 +7,7 @@ class AdminSky extends PureComponent {
 
     static propTypes = {
         // From parent.
-        sceneTime: PropTypes.string.isRequired,
+        sceneTime: PropTypes.string,
         sceneSeason: PropTypes.string.isRequired
     }
 

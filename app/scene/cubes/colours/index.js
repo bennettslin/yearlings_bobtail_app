@@ -86,7 +86,7 @@ const HSLA_MAP = {
     /* Y. */
     [NIGHT_COLOUR]: { h: 221, s: 17, l: 45 },
     /* Z. */
-    [NIGHT_MAGIC_COLOUR]: { h: 156, s: 35, l: 20 },
+    [NIGHT_MAGIC_COLOUR]: { h: 125, s: 30, l: 15 },
     /* W. */
     [BENNETT_WALL_COLOUR]: { h: 16, s: 28, l: 74 },
     [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },

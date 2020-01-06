@@ -5,7 +5,6 @@ import cx from 'classnames'
 import Sky from '../Sky'
 
 import {
-    TIME_STAGE,
     TIME_TWILIGHT,
     TIME_DAWN,
     TIME_MORNING,
@@ -30,7 +29,6 @@ class SkyDay extends PureComponent {
                 'SkyDay',
                 'flexCentreContainer'
             )}>
-                <Sky {...{ sceneTime: TIME_STAGE, sceneSeason }} />
                 <Sky {...{ sceneTime: TIME_TWILIGHT, sceneSeason }} />
                 <Sky {...{ sceneTime: TIME_DAWN, sceneSeason }} />
                 <Sky {...{ sceneTime: TIME_MORNING, sceneSeason }} />

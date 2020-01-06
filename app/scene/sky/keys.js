@@ -7,6 +7,10 @@ export const TIME_AFTERNOON = 'afternoon'
 export const TIME_EVENING = 'evening'
 export const TIME_NIGHT = 'night'
 
+export const TIME_TWILIGHT_TAIWAN = 'twilightTaiwan'
+export const TIME_NOON_TAIWAN = 'noonTaiwan'
+export const TIME_NIGHT_TAIWAN = 'nightTaiwan'
+
 export const SEASON_SPRING = 'spring'
 export const SEASON_SUMMER = 'summer'
 export const SEASON_AUTUMN = 'autumn'

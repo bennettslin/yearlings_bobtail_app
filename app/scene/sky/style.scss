@@ -42,6 +42,25 @@
     );
 }
 
+.TimeOfDay__twilightTaiwan {
+    background: linear-gradient(
+        hsl(176, 40%, 22%),
+        hsl(336, 40%, 46%)
+    );
+}
+.TimeOfDay__noonTaiwan {
+    background: linear-gradient(
+        hsl(162, 75%, 70%),
+        hsl(145, 55%, 90%)
+    );
+}
+.TimeOfDay__nightTaiwan {
+    background: linear-gradient(
+        hsl(170, 35%, 10%),
+        hsl(136, 38%, 17%)
+    );
+}
+
 .Season__spring { background-color: hsla(225, 65%, 60%, 0.2); }
 .Season__summer { background-color: hsla(215, 70%, 70%, 0.2); }
 .Season__autumn { background-color: hsla(225, 50%, 65%, 0.2); }
@@ -66,7 +85,7 @@
 // Saskia, Uncanny
 .Season__present {
     background: linear-gradient(
-        hsl(156, 32%, 70%),
+        hsl(146, 32%, 70%),
         hsl(50, 56%, 95%)
     );
 }
@@ -82,7 +101,7 @@
 // Grasshoppers, Vegan
 .Season__love {
     background: linear-gradient(
-        hsl(324, 56%, 60%),
+        hsl(334, 56%, 60%),
         hsl(50, 56%, 90%)
     );
 }
@@ -90,8 +109,8 @@
 // Pchelka, Kyon, Uncanny
 .Season__nightMagic {
     background: linear-gradient(
-        hsl(156, 35%, 7%),
-        hsl(156, 35%, 25%)
+        hsl(125, 35%, 7%),
+        hsl(125, 35%, 25%)
     );
 }
 
