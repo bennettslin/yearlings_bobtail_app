@@ -181,8 +181,7 @@ export const THINGS_PUPPET_SHOW_END = {
             xPosition: 2.75,
             zOffset: 1.5,
             rotate: 270,
-            scaleFactor: 0.25,
-            flipHorizontal: true
+            scaleFactor: 0.25
         }
     },
     [PUPPET]: {
