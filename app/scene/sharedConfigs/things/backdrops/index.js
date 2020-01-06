@@ -37,6 +37,7 @@ import {
     ROAD__SHARED,
     SHORE__SHARED,
     TAIWAN_MOUNTAIN__SHARED,
+    VOLCANO__SHARED,
     WALL__SHARED
 } from '../../../sharedStyles/outdoor'
 
@@ -82,8 +83,8 @@ export default {
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED
     ],
-    [OCEAN_BOTTOM_FAR]: MOUNTAIN__SHARED,
-    [OCEAN_FLOOR_FAR]: MOUNTAIN__SHARED,
+    [OCEAN_BOTTOM_FAR]: VOLCANO__SHARED,
+    [OCEAN_FLOOR_FAR]: VOLCANO__SHARED,
     [ROAD_FUTURE]: ROAD__SHARED,
     [ROAD_PAST]: [
         BOOK__SHARED,
