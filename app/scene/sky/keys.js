@@ -8,7 +8,6 @@ export const TIME_EVENING = 'evening'
 export const TIME_NIGHT = 'night'
 
 export const TIME_TWILIGHT_TAIWAN = 'twilightTaiwan'
-export const TIME_NOON_TAIWAN = 'noonTaiwan'
 export const TIME_NIGHT_TAIWAN = 'nightTaiwan'
 
 export const SEASON_SPRING = 'spring'
@@ -23,5 +22,6 @@ export const SEASON_FUTURE = 'future'
 
 export const SEASON_LOVE = 'love'
 export const SEASON_NIGHT_MAGIC = 'nightMagic'
-export const SEASON_OCEAN = 'ocean'
+export const SEASON_OCEAN_TOP = 'oceanTop'
+export const SEASON_OCEAN_SIDE = 'oceanSide'
 export const SEASON_THOUGHT = 'thought'

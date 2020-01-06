@@ -8,7 +8,6 @@ import { removeLoadingIndicator } from 'utils/window'
 
 import {
     TIME_TWILIGHT_TAIWAN,
-    TIME_NOON_TAIWAN,
     TIME_NIGHT_TAIWAN,
 
     SEASON_SPRING,
@@ -23,7 +22,8 @@ import {
 
     SEASON_LOVE,
     SEASON_NIGHT_MAGIC,
-    SEASON_OCEAN,
+    SEASON_OCEAN_TOP,
+    SEASON_OCEAN_SIDE,
     SEASON_THOUGHT
 } from '../../../app/scene/sky/keys'
 
@@ -57,7 +57,6 @@ class Skies extends PureComponent {
                     <Sky {...{ sceneSeason: SEASON_PAST }} />
                     <Sky {...{ sceneSeason: SEASON_PRESENT }} />
                     <Sky {...{ sceneSeason: SEASON_FUTURE }} />
-                    <Sky {...{ sceneTime: TIME_NOON_TAIWAN, sceneSeason: SEASON_SUMMER }} />
                     <Sky {...{ sceneTime: TIME_TWILIGHT_TAIWAN, sceneSeason: SEASON_AUTUMN }} />
                     <Sky {...{ sceneTime: TIME_NIGHT_TAIWAN, sceneSeason: SEASON_AUTUMN }} />
                 </div>
@@ -66,10 +65,11 @@ class Skies extends PureComponent {
                     'flexCentreContainer'
                 )}>
                     <Sky {...{ sceneSeason: SEASON_STAGE }} />
+                    <Sky {...{ sceneSeason: SEASON_OCEAN_TOP }} />
+                    <Sky {...{ sceneSeason: SEASON_OCEAN_SIDE }} />
                     <Sky {...{ sceneSeason: SEASON_LOVE }} />
-                    <Sky {...{ sceneSeason: SEASON_NIGHT_MAGIC }} />
-                    <Sky {...{ sceneSeason: SEASON_OCEAN }} />
                     <Sky {...{ sceneSeason: SEASON_THOUGHT }} />
+                    <Sky {...{ sceneSeason: SEASON_NIGHT_MAGIC }} />
                 </div>
             </div>
         )

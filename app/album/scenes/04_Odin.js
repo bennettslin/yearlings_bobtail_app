@@ -22,7 +22,8 @@ import {
     TIME_NIGHT_TAIWAN,
     TIME_TWILIGHT_TAIWAN,
     SEASON_AUTUMN,
-    SEASON_OCEAN
+    SEASON_OCEAN_TOP,
+    SEASON_OCEAN_SIDE
 } from '../../scene/sky/keys'
 import {
     PRETEEN_BENNETT,
@@ -237,7 +238,7 @@ export default [
             }
         },
         cubes: BUOY_KEY,
-        sky: { season: SEASON_OCEAN }
+        sky: { season: SEASON_OCEAN_TOP }
     },
     {
         unitIndex: 18,
@@ -261,7 +262,7 @@ export default [
             }
         },
         cubes: OCEAN_DEPTHS_KEY,
-        sky: { season: SEASON_OCEAN }
+        sky: { season: SEASON_OCEAN_SIDE }
     },
     {
         unitIndex: 20,
@@ -286,6 +287,6 @@ export default [
             }
         },
         cubes: OCEAN_FLOOR_KEY,
-        sky: { season: SEASON_OCEAN }
+        sky: { season: SEASON_OCEAN_SIDE }
     }
 ]

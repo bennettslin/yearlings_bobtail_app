@@ -14,8 +14,7 @@ import {
     TETHERBALL_COURT_KEY
 } from '../../constants/scene/scenes'
 import {
-    TIME_NOON_TAIWAN,
-    SEASON_SUMMER,
+    SEASON_PRESENT,
     SEASON_THOUGHT
 } from '../../scene/sky/keys'
 import {
@@ -115,7 +114,7 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: { time: TIME_NOON_TAIWAN, season: SEASON_SUMMER }
+        sky: { season: SEASON_PRESENT }
     },
     {
         unitIndex: 4,
@@ -147,7 +146,7 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: { time: TIME_NOON_TAIWAN, season: SEASON_SUMMER }
+        sky: { season: SEASON_PRESENT }
     },
     {
         unitIndex: 6,
@@ -254,6 +253,6 @@ export default [
             }
         },
         cubes: PUPPET_SHOW_KEY,
-        sky: { time: TIME_NOON_TAIWAN, season: SEASON_SUMMER }
+        sky: { season: SEASON_PRESENT }
     }
 ]

@@ -48,12 +48,6 @@
         hsl(336, 40%, 46%)
     );
 }
-.TimeOfDay__noonTaiwan {
-    background: linear-gradient(
-        hsl(162, 75%, 70%),
-        hsl(145, 55%, 90%)
-    );
-}
 .TimeOfDay__nightTaiwan {
     background: linear-gradient(
         hsl(170, 35%, 10%),
@@ -82,15 +76,15 @@
     );
 }
 
-// Saskia, Uncanny
+// Uncanny
 .Season__present {
     background: linear-gradient(
-        hsl(146, 32%, 70%),
+        hsl(156, 56%, 70%),
         hsl(50, 56%, 95%)
     );
 }
 
-// Uncanny
+// Pchelka, Uncanny
 .Season__future {
     background: linear-gradient(
         hsl(276, 46%, 70%),
@@ -106,7 +100,7 @@
     );
 }
 
-// Pchelka, Kyon, Uncanny
+// Pchelka
 .Season__nightMagic {
     background: linear-gradient(
         hsl(125, 35%, 7%),
@@ -115,7 +109,13 @@
 }
 
 // Odin
-.Season__ocean {
+.Season__oceanTop {
+    background: linear-gradient(
+        hsl(206, 78%, 50%),
+        hsl(50, 56%, 90%)
+    );
+}
+.Season__oceanSide {
     background: linear-gradient(
         hsl(206, 78%, 50%),
         hsl(50, 56%, 90%)

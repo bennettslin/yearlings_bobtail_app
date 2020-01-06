@@ -25,6 +25,7 @@ import {
     TIME_AFTERNOON,
     TIME_EVENING,
     SEASON_WINTER,
+    SEASON_FUTURE,
     SEASON_NIGHT_MAGIC
 } from '../../scene/sky/keys'
 import {
@@ -260,7 +261,7 @@ export default [
             }
         },
         cubes: BEDROOM_SPACE_KEY,
-        sky: { season: SEASON_NIGHT_MAGIC }
+        sky: { season: SEASON_FUTURE }
     },
     {
         unitIndex: 13,
