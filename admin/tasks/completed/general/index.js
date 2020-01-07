@@ -5149,8 +5149,8 @@ export default [
     },
     {
         taskName: `General scene work.`,
-        workedHours: 14,
-        neededHours: 14
+        workedHours: 15,
+        neededHours: 15
     },
     {
         taskName: `Some cutout modifications.`,
