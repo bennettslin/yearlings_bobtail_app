@@ -5161,5 +5161,15 @@ export default [
         taskName: `Choose time and season gradients, have skies admin previewer.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Invert mouthInner to prepare for male lips.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `Make some bubbles translucent.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

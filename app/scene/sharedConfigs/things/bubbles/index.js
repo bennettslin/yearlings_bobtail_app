@@ -52,10 +52,7 @@ import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
 } from '../../../sharedStyles/paper'
-import {
-    SKETCH_DOGS__SHARED,
-    DRAWING__SHARED
-} from '../../../sharedStyles/sketch'
+import { DRAWING__SHARED } from '../../../sharedStyles/sketch'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
@@ -78,7 +75,7 @@ export default {
         ALL_PEOPLE__SHARED
     ],
     [DOGS_SKETCH]: DRAWING__SHARED,
-    [ESCAPE_POD_SKETCH]: SKETCH_DOGS__SHARED,
+    [ESCAPE_POD_SKETCH]: DRAWING__SHARED,
     [ESTHER_SPEECH]: BUBBLE__SHARED,
     [GO_KART_THOUGHT]: [
         BUBBLE__SHARED,

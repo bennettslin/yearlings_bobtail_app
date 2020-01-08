@@ -187,7 +187,7 @@ i, em {
     font-size: $fontSize__italic;
 }
 
-circle, ellipse, path, polygon, polyline, rect {
+circle, ellipse, line, path, polygon, polyline, rect {
     // This allows the stroke width to stay constant.
     vector-effect: non-scaling-stroke;
 }
