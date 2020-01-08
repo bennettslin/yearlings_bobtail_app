@@ -22,8 +22,6 @@ howie
 tomer
 brad
 andrew
-tristan
 bennett
 wade
 jacob
-khari
