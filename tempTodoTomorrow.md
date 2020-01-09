@@ -18,10 +18,7 @@ willy
 christopher
 preteenBennett
 father
-howie
-tomer
 brad
 andrew
 bennett
-wade
 jacob
