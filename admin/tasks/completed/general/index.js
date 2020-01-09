@@ -5171,5 +5171,10 @@ export default [
         taskName: `Make some bubbles translucent.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Male lips work.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]
