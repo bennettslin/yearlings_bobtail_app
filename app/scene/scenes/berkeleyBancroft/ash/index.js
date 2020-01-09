@@ -11,19 +11,19 @@ export default {
     [BENNETT]: {
         [CATHOLIC_IDEA]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 4.5
         }
     },
     [AMY]: {
         [SMOKER]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 7.25
         }
     },
     [WADE]: {
         [CATHOLIC_GUY]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 2
         }
     }
 }

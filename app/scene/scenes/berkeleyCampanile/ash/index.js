@@ -9,13 +9,13 @@ export default {
     [BENNETT]: {
         [PIOUS]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 4
         }
     },
     [CATHERINE]: {
         [PUZZLED]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 7
         }
     }
 }

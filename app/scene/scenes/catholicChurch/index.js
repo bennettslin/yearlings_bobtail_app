@@ -5,7 +5,7 @@ export default {
     [BENNETT]: {
         [CATHOLIC_PENSIVE]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 3.5
         }
     }
 }
