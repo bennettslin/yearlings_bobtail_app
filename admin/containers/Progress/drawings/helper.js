@@ -189,8 +189,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !pupils && !eyes,
-                halfDoneForNow = !eyes
+            const doneForNow = !hands,
+                halfDoneForNow = !hands
 
             if (!doneForNow) {
                 rolesTodoCount++

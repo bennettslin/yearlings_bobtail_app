@@ -74,7 +74,6 @@ export default [
                 },
                 [WADE]: {
                     catholic: {
-                        hands: true,
                         composite: true,
                         instance: CATHOLIC_GUY
                     }

@@ -188,7 +188,6 @@ export default [
                 },
                 [WADE]: {
                     protester: {
-                        hands: true,
                         composite: true,
                         instance: PROTESTER
                     }
