@@ -8,13 +8,13 @@ export default {
     [HOWIE_WILLY]: {
         [GANGBANGER]: {
             yIndex: 5,
-            xPosition: 4.5
+            xPosition: 4
         }
     },
     [TOMER]: {
         [GANGBANGER]: {
             yIndex: 5,
-            xPosition: 6.5
+            xPosition: 8
         }
     }
 }

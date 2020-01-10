@@ -9,19 +9,21 @@ export default {
     [BENNETT]: {
         [EATING]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 9,
+            zOffset: -1
         }
     },
     [JACOB_MARA]: {
         [EATING]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 4
         }
     },
     [ANA]: {
         [EATING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 7,
+            zOffset: -1
         }
     }
 }

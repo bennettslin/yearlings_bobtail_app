@@ -4,8 +4,8 @@ import { RUBIKS_CUBE } from 'constants/scene/actors/bennett'
 export default {
     [BENNETT]: {
         [RUBIKS_CUBE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 4
         }
     }
 }

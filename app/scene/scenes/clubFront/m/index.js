@@ -13,32 +13,32 @@ import { SHANE_BUYING } from 'constants/scene/actors/tomer'
 export default {
     [BENNETT]: {
         [DISTRACTED]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 4
         }
     },
     [MARA]: {
         [FLIRTING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 4.5
         }
     },
     [JACOB]: {
         [FLIRTING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 6.5
         }
     },
     [ANA]: {
         [SQUATTING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 9
         }
     },
     [TOMER]: {
         [SHANE_BUYING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 2
         }
     }
 }

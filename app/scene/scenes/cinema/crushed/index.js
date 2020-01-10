@@ -9,13 +9,13 @@ export default {
     [BENNETT]: {
         [HOPELESSLY_CRUSHED]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 6
         }
     },
     [MIRIAM]: {
         [INFANT_CURIOUS]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 3
         }
     }
 }

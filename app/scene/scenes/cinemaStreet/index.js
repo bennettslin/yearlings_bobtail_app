@@ -15,7 +15,7 @@ export default {
     [HOWIE]: {
         [USHER_LOOKING]: {
             yIndex: 5,
-            xPosition: 1
+            xPosition: 2
         }
     }
 }

@@ -5,7 +5,8 @@ export default {
     [SASHA_BENNETT]: {
         [MERMAID]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 3,
+            zOffset: 3
         }
     }
 }
