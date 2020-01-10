@@ -10,6 +10,3 @@ Milk crates under keyboard (just do cubes)
 # Recurring tasks
 Darken presences in one-time dark scenes
 Scenes!
-
-# Male lips
-willy

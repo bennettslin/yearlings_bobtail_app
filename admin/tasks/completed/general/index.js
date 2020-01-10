@@ -5174,7 +5174,7 @@ export default [
     },
     {
         taskName: `Male lips work.`,
-        workedHours: 7,
-        neededHours: 7
+        workedHours: 8,
+        neededHours: 8
     }
 ]
