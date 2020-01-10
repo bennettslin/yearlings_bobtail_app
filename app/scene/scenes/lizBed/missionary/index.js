@@ -10,14 +10,15 @@ import {
 export default {
     [BENNETT_LIZ]: {
         [MISSIONARY]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5
         }
     },
     [BENNETT_LIZ_REFLECTION]: {
         [MISSIONARY_REFLECTION]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 5,
+            zOffset: 3
         }
     }
 }

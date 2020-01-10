@@ -10,14 +10,15 @@ import {
 export default {
     [BENNETT_LIZ]: {
         [AFTERGLOW]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5
         }
     },
     [BENNETT_LIZ_REFLECTION]: {
         [AFTERGLOW_REFLECTION]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 5,
+            zOffset: 0.5
         }
     }
 }
