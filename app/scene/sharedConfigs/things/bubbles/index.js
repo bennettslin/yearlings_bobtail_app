@@ -52,7 +52,10 @@ import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
 } from '../../../sharedStyles/paper'
-import { DRAWING__SHARED } from '../../../sharedStyles/sketch'
+import {
+    CONSTELLATION__SHARED,
+    DRAWING__SHARED
+} from '../../../sharedStyles/sketch'
 import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
@@ -114,7 +117,7 @@ export default {
         BOOK__SHARED,
         SKETCHBOOK__SHARED
     ],
-    [TARPIT_CONSTELLATION]: null,
+    [TARPIT_CONSTELLATION]: CONSTELLATION__SHARED,
     [THOUGHT_LARGE]: BUBBLE__SHARED,
     [THOUGHT_MEDIUM]: BUBBLE__SHARED,
     [THOUGHT_SMALL]: BUBBLE__SHARED,
