@@ -141,7 +141,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE

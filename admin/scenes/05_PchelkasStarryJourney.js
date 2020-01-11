@@ -153,7 +153,6 @@ export default [
                 },
                 [TRISTAN]: {
                     principal: {
-                        hands: true,
                         composite: true,
                         instance: PRINCIPAL
                     }

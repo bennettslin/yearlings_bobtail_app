@@ -75,7 +75,6 @@ export default [
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    hands: true,
                     composite: true,
                     instance: GREETING
                 },

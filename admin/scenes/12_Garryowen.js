@@ -60,7 +60,6 @@ export default [
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    hands: true,
                     composite: true,
                     instance: PUNCHING
                 },
@@ -126,7 +125,6 @@ export default [
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
-                    hands: true,
                     composite: true,
                     instance: NOOGIE
                 },
