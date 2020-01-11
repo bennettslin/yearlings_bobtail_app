@@ -154,7 +154,6 @@ export default [
                 },
                 [WILLY]: {
                     crossingGuard: {
-                        hands: true,
                         composite: true,
                         instance: CROSSING_GUARD
                     }

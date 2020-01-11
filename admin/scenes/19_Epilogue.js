@@ -87,7 +87,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'3"`,
                     instance: EPILOGUE

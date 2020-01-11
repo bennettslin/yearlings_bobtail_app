@@ -34,7 +34,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    hands: true,
                     composite: true,
                     instance: COLLECTING
                 }
@@ -45,7 +44,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    hands: true,
                     composite: true,
                     instance: DUCKING
                 },
@@ -99,7 +97,6 @@ export default [
                     }
                 },
                 [WILLY]: {
-                    hands: true,
                     composite: true,
                     instance: GANGBANGER
                 },
@@ -143,7 +140,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    hands: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 }
