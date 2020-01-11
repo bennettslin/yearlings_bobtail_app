@@ -5168,9 +5168,9 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Make some bubbles translucent.`,
-        workedHours: 3,
-        neededHours: 3
+        taskName: `Make bubbles translucent.`,
+        workedHours: 4,
+        neededHours: 4
     },
     {
         taskName: `Male lips work.`,
