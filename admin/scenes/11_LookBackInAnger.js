@@ -84,7 +84,6 @@ export default [
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    hands: true,
                     composite: true,
                     instance: CARRYING
                 },

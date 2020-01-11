@@ -169,7 +169,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'11"`,
                     instance: EPILOGUE

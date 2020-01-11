@@ -86,7 +86,6 @@ export default [
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    hands: true,
                     composite: true,
                     instance: FLIRTING
                 },
@@ -119,7 +118,6 @@ export default [
                     instance: EATING
                 },
                 [JACOB]: {
-                    hands: true,
                     composite: true,
                     instance: EATING
                 },
