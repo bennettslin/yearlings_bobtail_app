@@ -98,7 +98,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE

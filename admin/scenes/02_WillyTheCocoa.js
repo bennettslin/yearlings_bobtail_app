@@ -69,7 +69,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    hands: true,
                     composite: true,
                     instance: ROARING
                 },

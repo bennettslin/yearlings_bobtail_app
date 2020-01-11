@@ -50,7 +50,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    hands: true,
                     composite: true,
                     instance: ACCUSATORY
                 },
@@ -78,7 +77,6 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    hands: true,
                     composite: true,
                     instance: PAST
                 },
@@ -104,7 +102,6 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    hands: true,
                     composite: true,
                     instance: PRESENT
                 },
@@ -151,7 +148,6 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    hands: true,
                     composite: true,
                     instance: FUTURE
                 },
@@ -194,7 +190,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    hands: true,
                     composite: true,
                     instance: REELING
                 },
