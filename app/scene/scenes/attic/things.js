@@ -39,18 +39,18 @@ export default {
     },
     [PANEL]: {
         [ATTIC_COUCH]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 3.5,
             scaleFactor: 0.25
         },
         [ATTIC_ARMREST__LEFT]: {
             yIndex: 3,
-            xPosition: 1,
+            xPosition: 1.25,
             scaleFactor: 0.25
         },
         [ATTIC_ARMREST__RIGHT]: {
             yIndex: 3,
-            xPosition: 6,
+            xPosition: 5.75,
             scaleFactor: 0.25,
             flipHorizontal: true
         }

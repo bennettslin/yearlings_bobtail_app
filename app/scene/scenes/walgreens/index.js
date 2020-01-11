@@ -9,26 +9,26 @@ import { WALGREENS } from '../../../constants/scene/actors/songs'
 export default {
     [BENNETT]: {
         [WALGREENS]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 3
         }
     },
     [ANA]: {
         [WALGREENS]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 7
         }
     },
     [HOWIE]: {
         [WALGREENS]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5
         }
     },
     [TOMER]: {
         [WALGREENS]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 9
         }
     }
 }

@@ -10,7 +10,7 @@ export default {
     [BENNETT]: {
         [ABBEY_ROAD]: {
             yIndex: 5,
-            xPosition: 6
+            xPosition: 6.75
         }
     },
     [ANA]: {
@@ -28,7 +28,7 @@ export default {
     [TOMER]: {
         [ABBEY_ROAD]: {
             yIndex: 5,
-            xPosition: 8
+            xPosition: 9
         }
     }
 }

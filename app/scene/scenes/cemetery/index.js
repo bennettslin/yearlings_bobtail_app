@@ -8,20 +8,20 @@ import { CEMETERY } from '../../../constants/scene/actors/songs'
 export default {
     [BENNETT]: {
         [CEMETERY]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 5.5
         }
     },
     [ANA_HOWIE]: {
         [CEMETERY]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 8.5
         }
     },
     [TOMER]: {
         [CEMETERY]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 2.5
         }
     }
 }
