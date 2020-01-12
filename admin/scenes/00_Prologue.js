@@ -7,7 +7,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: PROLOGUE
                 }
