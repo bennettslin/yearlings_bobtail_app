@@ -101,7 +101,6 @@ export default [
                 },
                 [TOMER]: {
                     gangbanger: {
-                        hands: true,
                         composite: true,
                         instance: GANGBANGER
                     }

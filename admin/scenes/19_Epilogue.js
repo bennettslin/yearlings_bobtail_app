@@ -109,7 +109,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TOMER]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'6"`,
                     instance: EPILOGUE

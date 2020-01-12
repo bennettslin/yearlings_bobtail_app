@@ -101,7 +101,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        hands: true,
                         composite: true,
                         instance: SHANE_BUYING
                     }
