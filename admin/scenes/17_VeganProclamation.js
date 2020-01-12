@@ -37,7 +37,6 @@ export default [
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    hands: true,
                     composite: true,
                     instance: PROTECTIVE_CONCERNED
                 },
@@ -113,7 +112,6 @@ export default [
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    hands: true,
                     composite: true,
                     instance: CARESS
                 },
@@ -140,7 +138,6 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        hands: true,
                         composite: true,
                         instance: CARESS_REFLECTION
                     }

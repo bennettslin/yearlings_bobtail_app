@@ -152,7 +152,6 @@ export default [
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    hands: true,
                     composite: true,
                     instance: JOKING_LAUGHING
                 },
