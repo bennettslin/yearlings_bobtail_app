@@ -90,7 +90,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        hands: true,
                         composite: true,
                         instance: GANGBANGER
                     }

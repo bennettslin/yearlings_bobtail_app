@@ -29,7 +29,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    hands: true,
                     composite: true,
                     instance: ABBEY_ROAD
                 },
@@ -54,7 +53,6 @@ export default [
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    hands: true,
                     composite: true,
                     instance: WALGREENS
                 },
@@ -79,7 +77,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    hands: true,
                     composite: true,
                     instance: STEAM_TUNNEL
                 },
@@ -104,7 +101,6 @@ export default [
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    hands: true,
                     composite: true,
                     instance: CEMETERY
                 },
@@ -129,7 +125,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    hands: true,
                     composite: true,
                     instance: STATION_WAGON
                 },
@@ -149,7 +144,6 @@ export default [
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    hands: true,
                     composite: true,
                     instance: ATTIC
                 }

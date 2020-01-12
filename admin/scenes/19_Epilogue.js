@@ -103,7 +103,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    hands: true,
                     composite: true,
                     realHeight: `6'0"`,
                     instance: EPILOGUE

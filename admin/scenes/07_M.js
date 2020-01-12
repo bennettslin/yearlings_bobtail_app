@@ -175,7 +175,6 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         faceRevision: true,
-                        hands: true,
                         composite: true,
                         instance: USHER_WAITING
                     }
@@ -193,7 +192,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        hands: true,
                         composite: true,
                         instance: USHER_LOOKING
                     }
