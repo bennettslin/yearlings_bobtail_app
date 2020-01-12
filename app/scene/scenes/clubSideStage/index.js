@@ -12,26 +12,26 @@ import {
 export default {
     [BENNETT]: {
         [FLIRTING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 6
         }
     },
     [AMY]: {
         [FLIRTING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 7
         }
     },
     [MARA]: {
         [CARRYING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 4
         }
     },
     [JACOB]: {
         [CARRYING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 2
         }
     }
 }

@@ -13,32 +13,32 @@ import { WATCHING } from '../../../constants/scene/actors/wade'
 export default {
     [BENNETT]: {
         [PERFORMING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 1.5
         }
     },
     [ANA]: {
         [PERFORMING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 2.5
         }
     },
     [TOMER]: {
         [SHANE_SPILLING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 9.5
         }
     },
     [AMY_STEPHANIE]: {
         [SQUEEZING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 7
         }
     },
     [WADE]: {
         [WATCHING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5
         }
     }
 }

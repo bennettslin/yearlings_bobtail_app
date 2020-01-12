@@ -16,26 +16,28 @@ import {
 export default {
     [BENNETT]: {
         [REMOVING_SHOES]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 8
         }
     },
     [LIZ]: {
         [ASLEEP_REACHING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 4
         }
     },
     [BENNETT_REFLECTION]: {
         [SHOES_REFLECTION]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 8,
+            zOffset: 4
         }
     },
     [LIZ_REFLECTION]: {
         [REACHING_REFLECTION]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 4,
+            zOffset: 1
         }
     }
 }
