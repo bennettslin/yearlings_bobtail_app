@@ -11,19 +11,19 @@ export default {
     [BENNETT]: {
         [GREETING]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 4.5
         }
     },
     [ANA]: {
         [SMIRKING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 3.5
         }
     },
     [MIRIAM_TRISTAN]: {
         [NOOGIE]: {
             yIndex: 5,
-            xPosition: 7
+            xPosition: 7.5
         }
     }
 }

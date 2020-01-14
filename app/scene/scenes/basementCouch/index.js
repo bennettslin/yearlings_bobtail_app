@@ -4,8 +4,9 @@ import { CELIBATE_FREEZING } from '../../../constants/scene/actors/bennettLiz'
 export default {
     [BENNETT_LIZ]: {
         [CELIBATE_FREEZING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 4,
+            zOffset: 0.5
         }
     }
 }
