@@ -25,7 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: BREAKUP_DEJECTED
                 },
@@ -41,7 +40,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: SOLICITING_OPINION
                 },
@@ -57,7 +55,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: CATHOLIC_PENSIVE
                 }
@@ -68,7 +65,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: CATHOLIC_IDEA
                 },
@@ -92,7 +88,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: PIOUS
                 },

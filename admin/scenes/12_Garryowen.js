@@ -29,7 +29,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: BRUSH_OFF
                 },
@@ -55,7 +54,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: DROPPING_MEATS
                 },
@@ -87,7 +85,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: CELIBATE_FREEZING
                 },
@@ -113,7 +110,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: GREETING
                 },
@@ -140,7 +136,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: LEAVING_CRUMBLED
                 },

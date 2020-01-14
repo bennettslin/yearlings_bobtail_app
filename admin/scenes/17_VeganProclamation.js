@@ -32,7 +32,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: CAMPUS_ASHAMED
                 },
@@ -62,7 +61,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: SHOW_ANNOYED
                 },
@@ -96,7 +94,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: ALLEY
                 }
@@ -107,7 +104,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: BROKEN_HEARTED
                 },
@@ -164,7 +160,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: DEMONSTRATION
                 },

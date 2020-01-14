@@ -33,7 +33,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: DISHROOM_READING
                 }
@@ -44,7 +43,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: DISHROOM_LANCET
                 },
@@ -70,7 +68,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: MOP_SOPPED
                 },
@@ -95,7 +92,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: GATE_CODE
                 },
@@ -121,7 +117,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: GINGERBREAD_PRISON
                 },
@@ -147,7 +142,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: RUMPLED_LINENS
                 },
@@ -173,7 +167,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: WAITING_ROOM_ASLEEP
                 }
@@ -184,7 +177,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: CHEEK_UNVEILED
                 },
@@ -210,7 +202,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: HARD_ON
                 },
@@ -237,7 +228,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        hands: true,
                         composite: true,
                         instance: HARD_ON_REFLECTION
                     }
@@ -264,7 +254,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: MISSIONARY
                 },
@@ -291,7 +280,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        hands: true,
                         composite: true,
                         instance: MISSIONARY_REFLECTION
                     }
@@ -318,7 +306,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: AFTERGLOW
                 },
@@ -345,7 +332,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        hands: true,
                         composite: true,
                         instance: AFTERGLOW_REFLECTION
                     }

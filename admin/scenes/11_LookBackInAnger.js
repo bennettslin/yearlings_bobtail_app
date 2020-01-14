@@ -37,7 +37,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: PERFORMING
                 },
@@ -73,7 +72,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: FLIRTING
                 },
@@ -98,7 +96,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: SIDELONG_HESITANCE
                 },
@@ -133,7 +130,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: REMOVING_SHOES
                 },
@@ -160,7 +156,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        hands: true,
                         composite: true,
                         instance: SHOES_REFLECTION
                     }

@@ -40,7 +40,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE

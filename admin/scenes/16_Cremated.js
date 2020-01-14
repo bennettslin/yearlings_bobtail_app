@@ -23,7 +23,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: REMOVING_PANTS
                 },
@@ -48,7 +47,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: COWGIRL
                 }
@@ -66,7 +64,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: BLOWJOB
                 }
@@ -77,7 +74,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: INFIRM
                 }
@@ -101,7 +97,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: DISPOSING_CONDOM
                 },
