@@ -90,7 +90,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE

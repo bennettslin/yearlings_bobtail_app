@@ -147,7 +147,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    hands: true,
                     composite: true,
                     instance: ARGUING
                 },
