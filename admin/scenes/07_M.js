@@ -66,7 +66,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         composite: true,
                         instance: BENNETT_KEYBOARD
                     }

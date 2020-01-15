@@ -114,7 +114,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         composite: true,
                         instance: MISCHIEVOUS_BANJO
                     }
@@ -131,7 +130,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        hands: true,
                         composite: true,
                         instance: BENNETT_RECORDING
                     }

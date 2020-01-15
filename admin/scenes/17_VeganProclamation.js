@@ -172,7 +172,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     protester: {
-                        hands: true,
                         composite: true,
                         instance: PROTESTER
                     }

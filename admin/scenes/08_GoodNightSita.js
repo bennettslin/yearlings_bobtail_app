@@ -94,7 +94,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     actor: {
-                        hands: true,
                         composite: true,
                         instance: FLAPPER
                     }
