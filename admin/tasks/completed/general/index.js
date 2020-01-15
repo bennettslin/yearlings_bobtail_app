@@ -5179,7 +5179,7 @@ export default [
     },
     {
         taskName: `Actor arrangements.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 3,
+        neededHours: 3
     }
 ]

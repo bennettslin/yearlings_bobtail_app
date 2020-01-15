@@ -64,9 +64,9 @@ const DEFAULT_OPEN_FLOOR = {
     zIndices: [
         [0],
         [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-        [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
-        [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
         [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 7, 4, 4, 1, 1, 1, 1, 1, 1, 1, 0],
         [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
     ]
 }
@@ -127,9 +127,9 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
-                [G, U, U, U, F, F, F, F, F, F, F, G],
-                [G, U, U, U, F, F, F, F, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G],
+                [G, U, U, U, F, F, F, F, F, F, F, G],
+                [G, U, U, U, F, F, F, F, F, F, F, G],
                 [G, F, F, F, F, F, F, F, F, F, F, G]
             ],
             zIndices: DEFAULT_OPEN_FLOOR.zIndices

@@ -8,14 +8,15 @@ import { NOT_HUNGRY } from 'constants/scene/actors/liz'
 export default {
     [LIZ]: {
         [NOT_HUNGRY]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 3.5
         }
     },
     [KHARI]: {
         [CONCERNED]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 1,
+            xPosition: 5.5,
+            zOffset: -2.5
         }
     }
 }

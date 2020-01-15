@@ -12,32 +12,32 @@ import { CROSSING_GUARD } from '../../../constants/scene/actors/willy'
 export default {
     [YOUNG_BENNETT]: {
         [YOUNG_CHILD]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 4.5
         }
     },
     [BENNETT_STEPHANIE]: {
         [DRYING_TEARS]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 3
         }
     },
     [ANITA]: {
         [YOUNG_CHILD]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 8
         }
     },
     [ESTHER]: {
         [YOUNG_CHILD]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 6.5
         }
     },
     [WILLY]: {
         [CROSSING_GUARD]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 1,
+            xPosition: 8
         }
     }
 }

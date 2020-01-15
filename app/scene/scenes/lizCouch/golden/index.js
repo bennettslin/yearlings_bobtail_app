@@ -4,8 +4,9 @@ import { AWKWARD_CONSOLATION } from 'constants/scene/actors/bennettLiz'
 export default {
     [BENNETT_LIZ]: {
         [AWKWARD_CONSOLATION]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 3,
+            zOffset: 0
         }
     }
 }

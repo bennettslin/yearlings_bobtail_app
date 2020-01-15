@@ -11,6 +11,7 @@ Used condom for both Grasshoppers and Cremated
 Add stars
 Allow for presence to have one yIndex position, and another yIndex size
 
-Gingerbread prison, put his right arm down, bring her closer in.
+gingerbreadPrison, put his right arm down, bring her closer in.
+dryingTears, bring Stephanie's right arm up.
 
 ocean waves panel

@@ -8,14 +8,14 @@ import { OPENING_DOOR } from 'constants/scene/actors/liz'
 export default {
     [LIZ]: {
         [OPENING_DOOR]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 6.5
         }
     },
     [KHARI]: {
         [ARRIVED]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 8.5
         }
     }
 }

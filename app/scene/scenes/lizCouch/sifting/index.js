@@ -4,8 +4,9 @@ import { SIFTING_TCHOTCHKES } from 'constants/scene/actors/liz'
 export default {
     [LIZ]: {
         [SIFTING_TCHOTCHKES]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5,
+            zOffset: -0.25
         }
     }
 }
