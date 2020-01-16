@@ -71,7 +71,6 @@ export default [
                 },
                 [CATHERINE]: {
                     gopi: {
-                        hands: true,
                         composite: true,
                         instance: GOPI
                     }

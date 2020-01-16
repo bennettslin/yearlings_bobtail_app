@@ -29,7 +29,6 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    hands: true,
                     composite: true,
                     instance: WEEPING
                 }
@@ -44,7 +43,6 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    hands: true,
                     composite: true,
                     instance: QUIPPING
                 }
@@ -91,7 +89,6 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    hands: true,
                     composite: true,
                     instance: PUZZLED
                 }
