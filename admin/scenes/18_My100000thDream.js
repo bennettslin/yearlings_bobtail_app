@@ -169,7 +169,6 @@ export default [
                 },
                 [AMY]: {
                     doctor: {
-                        hands: true,
                         composite: true,
                         instance: DOCTOR
                     }

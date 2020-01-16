@@ -56,7 +56,6 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    hands: true,
                     composite: true,
                     instance: SQUEEZING
                 },
@@ -75,7 +74,6 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    hands: true,
                     composite: true,
                     instance: FLIRTING
                 },
@@ -109,7 +107,6 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    hands: true,
                     composite: true,
                     instance: MINGLING
                 },

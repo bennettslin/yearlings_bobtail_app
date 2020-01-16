@@ -165,7 +165,6 @@ export default [
                 },
                 [AMY]: {
                     protester: {
-                        hands: true,
                         composite: true,
                         instance: PROTESTER
                     }

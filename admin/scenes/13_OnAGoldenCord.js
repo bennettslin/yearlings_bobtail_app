@@ -92,7 +92,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        hands: true,
                         composite: true,
                         instance: OFFICER
                     }

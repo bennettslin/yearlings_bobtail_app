@@ -76,7 +76,6 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        hands: true,
                         composite: true,
                         instance: SMOKER
                     }
