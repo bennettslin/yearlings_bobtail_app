@@ -41,7 +41,6 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    hands: true,
                     composite: true,
                     instance: PERFORMING
                 },
@@ -97,7 +96,6 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    hands: true,
                     composite: true,
                     instance: WAITING
                 },

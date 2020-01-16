@@ -62,7 +62,6 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    hands: true,
                     composite: true,
                     instance: CHUCKLING
                 },
@@ -125,7 +124,6 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    hands: true,
                     composite: true,
                     instance: SMIRKING
                 }
