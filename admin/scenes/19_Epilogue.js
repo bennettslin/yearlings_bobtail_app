@@ -164,7 +164,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    hands: true,
                     composite: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
