@@ -135,7 +135,6 @@ export default [
                         faceRevision: true,
                         hairIllustration: true,
                         head: true,
-                        hands: true,
                         composite: true,
                         instance: INFANT_CURIOUS
                     }
@@ -155,7 +154,6 @@ export default [
                         faceRevision: true,
                         hairIllustration: true,
                         head: true,
-                        hands: true,
                         composite: true,
                         instance: INFANT_NURSING
                     }

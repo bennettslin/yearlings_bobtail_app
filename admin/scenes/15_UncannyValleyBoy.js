@@ -40,7 +40,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: ASLEEP_FEARFUL
                 },
@@ -108,7 +107,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: MISCHIEVOUS_BANJO
                 },
@@ -170,7 +168,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: FENDING_OFF
                 },

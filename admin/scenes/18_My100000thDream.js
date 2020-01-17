@@ -77,7 +77,6 @@ export default [
                 },
                 [MARA]: {
                     gopi: {
-                        hands: true,
                         composite: true,
                         instance: GOPI
                     }
@@ -86,7 +85,6 @@ export default [
                     gopi: {
                         hairIllustration: true,
                         head: true,
-                        hands: true,
                         composite: true,
                         instance: GOPI
                     }

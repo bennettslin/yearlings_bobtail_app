@@ -176,7 +176,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     realHeight: `5'1"`,
                     instance: EPILOGUE

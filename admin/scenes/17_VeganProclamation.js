@@ -67,7 +67,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: GREETING
                 },

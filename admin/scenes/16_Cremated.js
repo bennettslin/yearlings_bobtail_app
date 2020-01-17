@@ -29,7 +29,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: PERFUMING
                 }
@@ -42,7 +41,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: COWGIRL
                 },
@@ -59,7 +57,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: BLOWJOB
                 },
@@ -86,7 +83,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: TENNIS
                 }
@@ -103,7 +99,6 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    hands: true,
                     composite: true,
                     instance: REVERSING
                 }
