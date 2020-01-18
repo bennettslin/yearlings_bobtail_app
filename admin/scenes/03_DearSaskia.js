@@ -54,7 +54,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    hands: true,
                     composite: true,
                     instance: FEIGNING_FEAR
                 }

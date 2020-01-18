@@ -127,7 +127,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    hands: true,
                     composite: true,
                     realHeight: `4'7"`,
                     instance: EPILOGUE

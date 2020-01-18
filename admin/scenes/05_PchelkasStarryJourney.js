@@ -98,7 +98,6 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    hands: true,
                     composite: true,
                     instance: THROWING
                 }
@@ -119,7 +118,6 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    hands: true,
                     composite: true,
                     instance: NOODLING
                 },
