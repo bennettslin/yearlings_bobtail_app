@@ -22,7 +22,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        hands: true,
                         composite: true,
                         instance: CHARMED_SCHOOLBUS
                     }
@@ -44,7 +43,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    hands: true,
                     composite: true,
                     instance: TYING_TETHER
                 },

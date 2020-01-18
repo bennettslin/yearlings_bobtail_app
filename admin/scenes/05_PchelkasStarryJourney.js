@@ -93,7 +93,6 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    hands: true,
                     composite: true,
                     instance: GESTURING
                 },
@@ -113,7 +112,6 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    hands: true,
                     composite: true,
                     instance: SNACKING
                 },
