@@ -128,7 +128,6 @@ export default [
                     sita: {
                         faceRevision: true,
                         head: true,
-                        hands: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -155,7 +154,6 @@ export default [
                     reflection: {
                         faceRevision: true,
                         head: true,
-                        hands: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,

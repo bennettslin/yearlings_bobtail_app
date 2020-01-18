@@ -27,7 +27,6 @@ export default [
                     sita: {
                         faceRevision: true,
                         head: true,
-                        hands: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -52,7 +51,6 @@ export default [
                     sita: {
                         faceRevision: true,
                         head: true,
-                        hands: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -77,7 +75,6 @@ export default [
                     sita: {
                         faceRevision: true,
                         head: true,
-                        hands: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -112,7 +109,6 @@ export default [
                     sita: {
                         faceRevision: true,
                         head: true,
-                        hands: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -137,7 +133,6 @@ export default [
                     sita: {
                         faceRevision: true,
                         head: true,
-                        hands: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
