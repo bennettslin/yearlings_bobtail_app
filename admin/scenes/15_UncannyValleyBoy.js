@@ -82,7 +82,6 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
                 }

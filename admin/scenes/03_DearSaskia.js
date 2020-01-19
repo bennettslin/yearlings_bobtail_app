@@ -16,7 +16,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: PANICKED
                 },
@@ -38,7 +37,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: TYING_TETHER
                 },

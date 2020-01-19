@@ -115,7 +115,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE

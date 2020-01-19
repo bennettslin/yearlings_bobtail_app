@@ -39,7 +39,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: BLISSFUL_GUILTY
                 },
@@ -55,7 +54,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: FEIGNING_SICK
                 }
@@ -66,7 +64,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: ASLEEP
                 }
@@ -77,7 +74,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: SHAKEN
                 }
@@ -88,7 +84,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: STOIC
                 },
@@ -107,7 +102,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: WISTFUL
                 },
@@ -133,7 +127,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: SHEEPISH
                 },

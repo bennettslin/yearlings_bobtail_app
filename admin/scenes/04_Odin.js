@@ -19,7 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: MAT
                 }
@@ -30,7 +29,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: STAIRS
                 }
@@ -41,7 +39,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: GATE
                 }
@@ -52,7 +49,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: RICKSHAW
                 }
@@ -63,7 +59,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: SHORE
                 }
@@ -74,7 +69,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: BUOY
                 }
@@ -92,7 +86,6 @@ export default [
                     }
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: MERMAID
                 }
@@ -103,7 +96,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: OCEAN_FLOOR
                 }

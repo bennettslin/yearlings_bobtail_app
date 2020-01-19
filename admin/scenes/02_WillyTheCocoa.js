@@ -57,7 +57,6 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: CAUTIOUS
                 }
@@ -77,7 +76,6 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: ENRAGED
                 }
@@ -114,7 +112,6 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: FEARFUL
                 }
@@ -130,7 +127,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    hands: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 },
