@@ -52,7 +52,6 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    hands: true,
                     composite: true,
                     instance: TANTRUM
                 },
@@ -71,7 +70,6 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    hands: true,
                     composite: true,
                     instance: SOBBING
                 },
@@ -122,7 +120,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    hands: true,
                     composite: true,
                     instance: REASSURING_ENCHANTED
                 },
