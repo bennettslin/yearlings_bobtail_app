@@ -71,7 +71,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    hands: true,
                     composite: true,
                     realHeight: `3'6"`,
                     instance: EPILOGUE
