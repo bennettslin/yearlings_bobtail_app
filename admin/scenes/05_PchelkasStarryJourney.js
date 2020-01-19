@@ -115,7 +115,6 @@ export default [
                 },
                 [SASHA]: {
                     popularGirl: {
-                        hands: true,
                         composite: true,
                         instance: POPULAR_GIRL
                     }

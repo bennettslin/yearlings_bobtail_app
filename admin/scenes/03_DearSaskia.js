@@ -26,7 +26,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    hands: true,
                     composite: true,
                     instance: CHARMED_SCHOOLBUS
                 }
@@ -45,7 +44,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    hands: true,
                     composite: true,
                     instance: INDIGNANT
                 },

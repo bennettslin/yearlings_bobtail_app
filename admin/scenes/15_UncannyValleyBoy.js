@@ -77,7 +77,6 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    hands: true,
                     composite: true,
                     instance: COMFORTING_HUMILIATED
                 },

@@ -80,7 +80,6 @@ export default [
             [ACTOR]: {
                 [SASHA]: {
                     mermaid: {
-                        hands: true,
                         composite: true,
                         instance: MERMAID
                     }
