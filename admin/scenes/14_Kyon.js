@@ -32,7 +32,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: PETTING_SEATED
                     }
                 }
@@ -52,7 +56,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: PETTING_STANDING
                     }
                 }
@@ -72,7 +80,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
@@ -92,12 +104,20 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: OPENING_DOOR
                     }
                 },
                 [KHARI]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: ARRIVED
                 }
             }
@@ -116,12 +136,20 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: DEFENDING
                     }
                 },
                 [KHARI]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: JUDGMENTAL
                 }
             }
@@ -140,12 +168,20 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: NOT_HUNGRY
                     }
                 },
                 [KHARI]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CONCERNED
                 }
             }
@@ -164,7 +200,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: ASLEEP_COUCH
                     }
                 }

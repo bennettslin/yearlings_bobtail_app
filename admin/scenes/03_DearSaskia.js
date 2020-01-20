@@ -16,17 +16,29 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: PANICKED
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: CHARMED_SCHOOLBUS
                     }
                 },
                 [SASHA]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CHARMED_SCHOOLBUS
                 }
             }
@@ -36,19 +48,35 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: FEIGNING_FEAR
                 }
             }

@@ -32,11 +32,19 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: PROTECTIVE_CONCERNED
                 },
                 [LIZ]: {
@@ -49,7 +57,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: PROTECTIVE_CONCERNED
                     }
                 }
@@ -60,17 +72,29 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GREETING
                 },
                 [NESTOR]: {
@@ -82,7 +106,11 @@ export default [
                     lips: true,
                     eyes: true,
                     pupils: true,
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GREETING
                 }
             }
@@ -92,7 +120,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: ALLEY
                 }
             }
@@ -102,11 +134,19 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CARESS
                 },
                 [LIZ]: {
@@ -119,7 +159,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: CARESS
                     }
                 }
@@ -131,7 +175,11 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: CARESS_REFLECTION
                     }
                 },
@@ -145,7 +193,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: CARESS_REFLECTION
                     }
                 }
@@ -156,24 +208,40 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: DEMONSTRATION
                 },
                 [AMY]: {
                     protester: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: PROTESTER
                     }
                 },
                 [STEPHANIE]: {
                     protester: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: PROTESTER
                     }
                 },
                 [WADE]: {
                     protester: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: PROTESTER
                     }
                 }

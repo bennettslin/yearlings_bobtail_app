@@ -34,7 +34,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: COLLECTING
                 }
             }
@@ -44,19 +48,35 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CAUTIOUS
                 }
             }
@@ -66,15 +86,27 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: ENRAGED
                 }
             }
@@ -85,17 +117,29 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GANGBANGER
                     }
                 },
                 [WILLY]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GANGBANGER
                 },
                 [TOMER]: {
                     gangbanger: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GANGBANGER
                     }
                 }
@@ -106,11 +150,19 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: FEARFUL
                 }
             }
@@ -120,15 +172,27 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 }
             }

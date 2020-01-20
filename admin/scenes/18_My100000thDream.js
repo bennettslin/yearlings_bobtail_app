@@ -26,7 +26,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: EL_TORITO
                 },
                 [LIZ]: {
@@ -39,7 +43,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: EL_TORITO
                     }
                 }
@@ -50,7 +58,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: PAMPAS
                 },
                 [LIZ]: {
@@ -63,19 +75,31 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: PAMPAS
                     }
                 },
                 [CATHERINE]: {
                     gopi: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GOPI
                     }
                 },
                 [MARA]: {
                     gopi: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GOPI
                     }
                 },
@@ -83,7 +107,11 @@ export default [
                     gopi: {
                         hairIllustration: true,
                         head: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GOPI
                     }
                 }
@@ -94,7 +122,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GETTING_DARK
                 },
                 [LIZ]: {
@@ -107,7 +139,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GETTING_DARK
                     }
                 }
@@ -118,7 +154,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CLIFF
                 },
                 [LIZ]: {
@@ -131,7 +171,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: CLIFF
                     }
                 }
@@ -142,7 +186,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: FINAL_DREAM
                 },
                 [LIZ]: {
@@ -155,13 +203,21 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: FINAL_DREAM
                     }
                 },
                 [AMY]: {
                     doctor: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: DOCTOR
                     }
                 }

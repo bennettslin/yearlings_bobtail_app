@@ -29,7 +29,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: BRUSH_OFF
                 },
                 [LIZ]: {
@@ -42,7 +46,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: BRUSH_OFF
                     }
                 }
@@ -53,15 +61,27 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
@@ -73,7 +93,11 @@ export default [
                     lips: true,
                     eyes: true,
                     pupils: true,
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: INJURED
                 }
             }
@@ -83,7 +107,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CELIBATE_FREEZING
                 },
                 [LIZ]: {
@@ -96,7 +124,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: CELIBATE_FREEZING
                     }
                 }
@@ -107,21 +139,37 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GREETING
                 },
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: SMIRKING
                 }
             }
@@ -131,7 +179,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: LEAVING_CRUMBLED
                 },
                 [LIZ]: {
@@ -144,7 +196,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: LEAVING_CRUMBLED
                     }
                 }

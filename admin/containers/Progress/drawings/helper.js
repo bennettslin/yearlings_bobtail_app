@@ -16,7 +16,11 @@ const
     LIPS_TIME = 0.05,
     EYES_TIME = 0.1,
     PUPILS_TIME = 0.05,
-    COMPOSITE_TIME = 0.3,
+    COLOUR_LAYERS_TIME = 0.05,
+    HEAD_INSPECTION_TIME = 0.05,
+    HEAD_PLACEMENT_TIME = 0.1,
+    FINAL_SVG_TIME = 0.05,
+    SIZE_ADJUSTMENT_TIME = 0.05,
 
     // This works out to 6.25 hours per drawing.
     TOTAL_TIME =
@@ -30,7 +34,11 @@ const
         LIPS_TIME +
         EYES_TIME +
         PUPILS_TIME +
-        COMPOSITE_TIME
+        COLOUR_LAYERS_TIME +
+        HEAD_INSPECTION_TIME +
+        HEAD_PLACEMENT_TIME +
+        FINAL_SVG_TIME +
+        SIZE_ADJUSTMENT_TIME
 
 export const initialiseDrawings = (drawings, songIndex) => {
 
@@ -78,7 +86,11 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     lips,
                     eyes,
                     pupils,
-                    composite,
+                    colourLayers,
+                    headInspection,
+                    headPlacement,
+                    finalSvg,
+                    sizeAdjustment,
                     instance
                 } = instanceName
 
@@ -95,7 +107,11 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 lips,
                 eyes,
                 pupils,
-                composite,
+                colourLayers,
+                headInspection,
+                headPlacement,
+                finalSvg,
+                sizeAdjustment,
                 instance
             })
         }
@@ -135,7 +151,11 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 lips,
                 eyes,
                 pupils,
-                composite,
+                colourLayers,
+                headInspection,
+                headPlacement,
+                finalSvg,
+                sizeAdjustment,
                 instance,
                 character
             } = role
@@ -173,16 +193,28 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!pupils) {
                 workedHours += PUPILS_TIME
             }
-            if (!composite) {
-                workedHours += COMPOSITE_TIME
+            if (!colourLayers) {
+                workedHours += COLOUR_LAYERS_TIME
+            }
+            if (!headInspection) {
+                workedHours += HEAD_INSPECTION_TIME
+            }
+            if (!headPlacement) {
+                workedHours += HEAD_PLACEMENT_TIME
+            }
+            if (!finalSvg) {
+                workedHours += FINAL_SVG_TIME
+            }
+            if (!sizeAdjustment) {
+                workedHours += SIZE_ADJUSTMENT_TIME
             }
 
             /**
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !composite,
-                halfDoneForNow = !composite
+            const doneForNow = !colourLayers && !headInspection,
+                halfDoneForNow = !colourLayers
 
             if (!doneForNow) {
                 rolesTodoCount++

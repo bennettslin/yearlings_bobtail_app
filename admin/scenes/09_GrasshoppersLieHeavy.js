@@ -33,7 +33,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: DISHROOM_READING
                 }
             }
@@ -43,7 +47,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: DISHROOM_LANCET
                 },
                 [LIZ]: {
@@ -56,7 +64,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: DISHROOM_LANCET
                     }
                 }
@@ -67,7 +79,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: MOP_SOPPED
                 },
                 [NESTOR]: {
@@ -80,7 +96,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: JOGGER
                     }
                 }
@@ -91,7 +111,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GATE_CODE
                 },
                 [LIZ]: {
@@ -104,7 +128,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GATE_CODE
                     }
                 }
@@ -115,7 +143,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: GINGERBREAD_PRISON
                 },
                 [LIZ]: {
@@ -128,7 +160,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: GINGERBREAD_PRISON
                     }
                 }
@@ -139,7 +175,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: RUMPLED_LINENS
                 },
                 [LIZ]: {
@@ -152,7 +192,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: RUMPLED_LINENS
                     }
                 }
@@ -163,7 +207,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: WAITING_ROOM_ASLEEP
                 }
             }
@@ -173,7 +221,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: CHEEK_UNVEILED
                 },
                 [LIZ]: {
@@ -186,7 +238,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: CHEEK_UNVEILED
                     }
                 }
@@ -197,7 +253,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: HARD_ON
                 },
                 [LIZ]: {
@@ -210,7 +270,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: HARD_ON
                     }
                 }
@@ -222,7 +286,11 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: HARD_ON_REFLECTION
                     }
                 },
@@ -236,7 +304,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: HARD_ON_REFLECTION
                     }
                 }
@@ -247,7 +319,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: MISSIONARY
                 },
                 [LIZ]: {
@@ -260,7 +336,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: MISSIONARY
                     }
                 }
@@ -272,7 +352,11 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: MISSIONARY_REFLECTION
                     }
                 },
@@ -286,7 +370,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: MISSIONARY_REFLECTION
                     }
                 }
@@ -297,7 +385,11 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    composite: true,
+                    colourLayers: true,
+                    headInspection: true,
+                    headPlacement: true,
+                    finalSvg: true,
+                    sizeAdjustment: true,
                     instance: AFTERGLOW
                 },
                 [LIZ]: {
@@ -310,7 +402,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: AFTERGLOW
                     }
                 }
@@ -322,7 +418,11 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: AFTERGLOW_REFLECTION
                     }
                 },
@@ -336,7 +436,11 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        composite: true,
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: AFTERGLOW_REFLECTION
                     }
                 }
