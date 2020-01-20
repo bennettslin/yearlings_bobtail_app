@@ -6,10 +6,9 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 4.1,
+    BASELINE_TIME = 4.35,
     FACE_REVISION_TIME = 0.75,
     HAIR_ILLUSTRATION_TIME = 0.5,
-    HANDS_TIME = 0.25,
     HEAD_TIME = 0.25,
     EYEBROW_TIME = 0.04,
     NOSE_TIME = 0.06,
@@ -24,7 +23,6 @@ const
         BASELINE_TIME +
         FACE_REVISION_TIME +
         HAIR_ILLUSTRATION_TIME +
-        HANDS_TIME +
         HEAD_TIME +
         EYEBROW_TIME +
         NOSE_TIME +
@@ -73,7 +71,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 {
                     faceRevision,
                     hairIllustration,
-                    hands,
                     head,
                     eyebrow,
                     nose,
@@ -91,7 +88,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 character,
                 faceRevision,
                 hairIllustration,
-                hands,
                 head,
                 eyebrow,
                 nose,
@@ -132,7 +128,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 sceneIndex,
                 faceRevision,
                 hairIllustration,
-                hands,
                 head,
                 eyebrow,
                 nose,
@@ -156,9 +151,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             }
             if (!hairIllustration) {
                 workedHours += HAIR_ILLUSTRATION_TIME
-            }
-            if (!hands) {
-                workedHours += HANDS_TIME
             }
             if (!head) {
                 workedHours += HEAD_TIME
@@ -189,8 +181,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !hands,
-                halfDoneForNow = !hands
+            const doneForNow = !composite,
+                halfDoneForNow = !composite
 
             if (!doneForNow) {
                 rolesTodoCount++
