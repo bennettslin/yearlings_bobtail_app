@@ -63,7 +63,6 @@ export default [
                     }
                 },
                 [WADE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -171,7 +170,6 @@ export default [
                     instance: MINGLING
                 },
                 [WADE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

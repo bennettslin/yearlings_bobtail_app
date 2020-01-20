@@ -129,11 +129,21 @@ export default [
                 },
                 [NESTOR]: {
                     officer: {
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: OFFICER
                     }
                 },
                 [TOMER]: {
                     officer: {
+                        colourLayers: true,
+                        headInspection: true,
+                        headPlacement: true,
+                        finalSvg: true,
+                        sizeAdjustment: true,
                         instance: OFFICER
                     }
                 }
@@ -193,7 +203,6 @@ export default [
                 },
                 [WILLY]: {
                     crossingGuard: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

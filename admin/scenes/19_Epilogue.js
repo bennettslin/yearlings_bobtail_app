@@ -108,7 +108,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -207,7 +206,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WADE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

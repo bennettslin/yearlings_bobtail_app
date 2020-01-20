@@ -92,7 +92,6 @@ export default [
                 },
                 [WADE]: {
                     catholic: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
