@@ -53,7 +53,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        hands: true,
                         composite: true,
                         instance: HURT_CONSOLING
                     }
@@ -178,7 +177,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        hands: true,
                         composite: true,
                         instance: SOBBING_SHIELDING
                     }

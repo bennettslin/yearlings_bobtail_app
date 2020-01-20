@@ -75,7 +75,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    hands: true,
                     composite: true,
                     realHeight: `3'10"`,
                     instance: EPILOGUE

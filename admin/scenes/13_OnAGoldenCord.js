@@ -123,7 +123,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        hands: true,
                         composite: true,
                         instance: YOUNG_CHILD
                     }

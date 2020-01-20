@@ -25,7 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    hands: true,
                     composite: true,
                     instance: CURIOUS
                 },
@@ -48,7 +47,6 @@ export default [
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    hands: true,
                     composite: true,
                     instance: SNICKERING
                 },
