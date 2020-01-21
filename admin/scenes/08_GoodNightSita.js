@@ -110,7 +110,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

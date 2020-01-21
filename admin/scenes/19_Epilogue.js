@@ -267,7 +267,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

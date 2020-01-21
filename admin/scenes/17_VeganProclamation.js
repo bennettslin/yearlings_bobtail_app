@@ -40,7 +40,6 @@ export default [
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -140,7 +139,6 @@ export default [
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -173,7 +171,6 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

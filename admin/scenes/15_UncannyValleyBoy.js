@@ -210,7 +210,6 @@ export default [
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
