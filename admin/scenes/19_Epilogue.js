@@ -134,7 +134,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

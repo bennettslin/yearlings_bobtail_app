@@ -115,7 +115,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

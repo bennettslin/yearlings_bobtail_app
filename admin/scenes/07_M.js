@@ -228,7 +228,6 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         faceRevision: true,
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -252,7 +251,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

@@ -35,7 +35,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -72,7 +71,6 @@ export default [
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -109,7 +107,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -146,7 +143,6 @@ export default [
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -183,7 +179,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -212,7 +207,6 @@ export default [
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
