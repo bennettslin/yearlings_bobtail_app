@@ -6,4 +6,18 @@
     .wadeBeltBuckle { fill: hsl(43, 41%, 45%); }
     .wadeShoe { fill: hsl(33, 26%, 60%); }
     .wadeSole { fill: hsl(16, 9%, 47%); }
+
+    &.catholicGuy {
+        .jacket { fill: hsl(213, 5%, 60%); }
+        .jacketInner { fill: hsl(213, 4%, 49%); }
+        .backpack { fill: hsl(53, 26%, 50%); }
+        .backpackAdjuster { fill: hsl(53, 7%, 42%); }
+        .backpackStrap { fill: hsl(53, 18%, 56%); }
+        .pants { fill: hsl(31, 19%, 45%); }
+        .shoe { fill: hsl(34, 5%, 74%); }
+    }
+
+    &.protester {
+        .signDisplayLine { stroke: hsl(17, 42%, 35%); }
+    }
 }

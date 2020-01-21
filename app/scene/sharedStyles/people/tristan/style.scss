@@ -10,4 +10,11 @@
     .tristanJeans { fill: hsl(240, 3%, 40%); }
     .tristanJeansInner { fill: hsl(240, 3%, 48%); }
     .tristanBoot { fill: hsl(138, 8%, 34%); }
+
+    &.principal {
+        .shirt { fill: hsl(194, 39%, 76%); }
+        .jacket { fill: hsl(205, 5%, 56%); }
+        .lapel { fill: hsl(206, 7%, 62%); }
+        .pants { fill: hsl(62, 15%, 62%); }
+    }
 }

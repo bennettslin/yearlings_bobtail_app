@@ -5,4 +5,19 @@
     .khariSweaterTrim { fill: hsl(123, 32%, 56%); }
     .khariShorts { fill: hsl(27, 29%, 70%); }
     .khariShoe { fill: hsl(66, 8%, 49%); }
+
+    &.doubleAlbert {
+        .shirt { fill: hsl(205, 39%, 72%); }
+        .collar { fill: hsl(205, 46%, 76%); }
+        .sock { fill: hsl(13, 12%, 38%); }
+        .tie { fill: hsl(13, 27%, 36%); }
+        .vest { fill: hsl(13, 12%, 31%); }
+        .vestPocket { fill: hsl(12, 12%, 25%); }
+        .jacketInner { fill: hsl(37, 10%, 40%); }
+        .jacket { fill: hsl(36, 11%, 51%); }
+        .lapel { fill: hsl(34, 10%, 47%); }
+        .pants { fill: hsl(35, 11%, 44%); }
+        .shoeWhite { fill: hsl(10, 7%, 82%); }
+        .shoeBlack { fill: hsl(10, 21%, 22%); }
+    }
 }

@@ -1,3 +1,20 @@
 .tomer#{$suffix} {
+    .tomerShirt { fill: hsl(38, 45%, 67%); }
+    .tomerSweater { fill: hsl(57, 12%, 65%); }
+    .tomerPants { fill: hsl(210, 17%, 43%); }
+    .tomerShoe { fill: hsl(218, 12%, 60%); }
+    
+    &.gangbanger {
+        .shorts { fill: hsl(41, 19%, 54%); }
+        .shoe { fill: hsl(210, 7%, 56%); }
+        .swoosh { fill: hsl(0, 0%, 80%); }
+    }
 
+    &.shane {
+        .shaneShirt { fill: hsl(56, 52%, 71%); }
+        .shaneShorts { fill: hsl(352, 19%, 53%); }
+        .shaneSockStripe { fill: hsl(36, 49%, 59%); }
+        .shaneShoe { fill: hsl(215, 20%, 50%); }
+        .newBalanceLogo { fill: hsl(0, 0%, 80%); }
+    }
 }
