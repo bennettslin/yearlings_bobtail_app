@@ -126,7 +126,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

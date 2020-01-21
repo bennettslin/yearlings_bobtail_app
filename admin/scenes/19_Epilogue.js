@@ -143,7 +143,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TOMER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

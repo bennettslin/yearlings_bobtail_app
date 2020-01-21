@@ -138,7 +138,6 @@ export default [
                 },
                 [TOMER]: {
                     officer: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

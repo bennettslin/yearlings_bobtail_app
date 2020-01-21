@@ -132,7 +132,6 @@ export default [
                 },
                 [TOMER]: {
                     gangbanger: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
