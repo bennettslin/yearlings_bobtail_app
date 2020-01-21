@@ -16,13 +16,13 @@ const
     LIPS_TIME = 0.05,
     EYES_TIME = 0.1,
     PUPILS_TIME = 0.05,
-    COLOUR_LAYERS_TIME = 0.075,
-    HEAD_INSPECTION_TIME = 0.025,
+    COLOUR_LAYERS_TIME = 0.15,
+    HEAD_INSPECTION_TIME = 0.05,
     HEAD_PLACEMENT_TIME = 0.1,
     FINAL_SVG_TIME = 0.05,
     SIZE_ADJUSTMENT_TIME = 0.05,
 
-    // This works out to 6.25 hours per drawing.
+    // This works out to 6.35 hours per drawing.
     TOTAL_TIME =
         BASELINE_TIME +
         FACE_REVISION_TIME +
