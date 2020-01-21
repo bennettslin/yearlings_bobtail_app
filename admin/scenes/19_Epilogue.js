@@ -188,7 +188,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

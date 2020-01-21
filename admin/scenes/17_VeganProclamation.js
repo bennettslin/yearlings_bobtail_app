@@ -90,7 +90,6 @@ export default [
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

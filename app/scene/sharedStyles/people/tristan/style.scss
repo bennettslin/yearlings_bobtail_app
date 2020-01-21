@@ -1,3 +1,13 @@
 .tristan#{$suffix} {
-
+    .tristanShirtInner { fill: hsl(129, 9%, 43%); }
+    .tristanShirt { fill: hsl(131, 9%, 51%); }
+    .tristanVest { fill: hsl(201, 19%, 49%); }
+    .tristanLapel { fill: hsl(201, 23%, 55%); }
+    .tristanPatchTopLeft { fill: hsl(119, 23%, 55%); }
+    .tristanPatchTopRight { fill: hsl(29, 43%, 59%); }
+    .tristanPatchBottomLeft { fill: hsl(168, 21%, 56%); }
+    .tristanPatchBottomRight { fill: hsl(350, 35%, 61%); }
+    .tristanJeans { fill: hsl(240, 3%, 40%); }
+    .tristanJeansInner { fill: hsl(240, 3%, 48%); }
+    .tristanBoot { fill: hsl(138, 8%, 34%); }
 }

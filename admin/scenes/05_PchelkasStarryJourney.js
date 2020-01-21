@@ -198,7 +198,6 @@ export default [
                 },
                 [TRISTAN]: {
                     principal: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
