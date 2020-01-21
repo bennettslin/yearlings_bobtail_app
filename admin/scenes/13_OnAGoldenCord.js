@@ -129,7 +129,6 @@ export default [
                 },
                 [NESTOR]: {
                     officer: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

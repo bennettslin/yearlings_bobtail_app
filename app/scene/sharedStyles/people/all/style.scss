@@ -34,6 +34,9 @@
     .hairLightGray { fill: hsl(60, 1%, 61%); }
     .hairDarkGray { fill: hsl(26, 1%, 32%); }
 
-    .soleWhite { fill: #ccc; }
-    .shoelace { fill: #d9d9d9; }
+    .sockWhite { fill: hsl(0, 0%, 90%); }
+    .shoelace { fill: hsl(0, 0%, 85%); }
+    .soleWhite { fill: hsl(0, 0%, 80%); }
+    .soleTan { fill: hsl(39, 27%, 32%); }
+    .soleTanDark { fill: hsl(39, 27%, 22%); }
 }

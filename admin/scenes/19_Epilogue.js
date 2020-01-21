@@ -287,7 +287,6 @@ export default [
                     lips: true,
                     eyes: true,
                     pupils: true,
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
