@@ -16,7 +16,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -25,7 +26,8 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -34,7 +36,8 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -48,7 +51,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -56,7 +60,8 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -64,7 +69,8 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -72,7 +78,8 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

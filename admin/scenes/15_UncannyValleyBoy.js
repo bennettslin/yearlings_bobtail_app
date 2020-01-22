@@ -40,7 +40,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -48,7 +49,8 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -64,7 +66,8 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -73,7 +76,8 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -87,7 +91,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -102,7 +107,8 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -110,7 +116,8 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -124,7 +131,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -139,7 +147,8 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -149,7 +158,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -158,7 +168,8 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -173,7 +184,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -182,7 +194,8 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -191,7 +204,8 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -222,7 +236,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -239,7 +254,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -247,7 +263,8 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -263,7 +280,8 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -272,7 +290,8 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

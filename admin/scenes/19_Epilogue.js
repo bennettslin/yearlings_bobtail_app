@@ -35,7 +35,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -44,7 +45,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -62,7 +64,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -72,7 +75,8 @@ export default [
                     }
                 },
                 [CHRISTOPHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -81,7 +85,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -90,7 +95,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -99,7 +105,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -116,7 +123,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -149,7 +157,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -158,7 +167,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -167,7 +177,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -176,7 +187,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -209,7 +221,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -218,7 +231,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -235,7 +249,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -244,7 +259,8 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -255,7 +271,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

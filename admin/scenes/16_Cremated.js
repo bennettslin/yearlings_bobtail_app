@@ -23,7 +23,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -33,7 +34,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -49,7 +51,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -57,7 +60,8 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -73,7 +77,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -81,7 +86,8 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -95,7 +101,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -111,7 +118,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -125,7 +133,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -135,7 +144,8 @@ export default [
                 [MIRIAM]: {
                     hairIllustration: true,
                     head: true,
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

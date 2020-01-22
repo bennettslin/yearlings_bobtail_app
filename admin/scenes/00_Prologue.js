@@ -7,7 +7,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

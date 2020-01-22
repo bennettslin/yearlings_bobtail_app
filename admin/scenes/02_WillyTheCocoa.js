@@ -54,7 +54,8 @@ export default [
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -62,7 +63,8 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -70,7 +72,8 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -91,7 +94,8 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -99,7 +103,8 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -144,7 +149,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -152,7 +158,8 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -166,7 +173,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -174,7 +182,8 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

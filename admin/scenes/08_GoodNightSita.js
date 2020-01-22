@@ -20,7 +20,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -37,7 +38,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -52,7 +54,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -69,7 +72,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -84,7 +88,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -101,7 +106,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -118,7 +124,8 @@ export default [
                 },
                 [STEPHANIE]: {
                     actor: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -133,7 +140,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -150,7 +158,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -165,7 +174,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -182,7 +192,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

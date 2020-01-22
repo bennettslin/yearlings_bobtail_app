@@ -30,7 +30,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -44,7 +45,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -61,7 +63,8 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -76,7 +79,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -85,7 +89,8 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -100,7 +105,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -109,7 +115,8 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -119,7 +126,8 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -152,7 +160,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -161,7 +170,8 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -171,7 +181,8 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -181,7 +192,8 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -191,7 +203,8 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

@@ -41,7 +41,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -55,7 +56,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -69,7 +71,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -78,7 +81,8 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -93,7 +97,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -108,7 +113,8 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -116,7 +122,8 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -139,7 +146,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -154,7 +162,8 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -162,7 +171,8 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -176,7 +186,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -188,7 +199,8 @@ export default [
                         faceRevision: true,
                         hairIllustration: true,
                         head: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -203,7 +215,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -215,7 +228,8 @@ export default [
                         faceRevision: true,
                         hairIllustration: true,
                         head: true,
-                        colourLayers: true,
+                        layers: true,
+                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -240,7 +254,8 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    colourLayers: true,
+                    layers: true,
+                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
