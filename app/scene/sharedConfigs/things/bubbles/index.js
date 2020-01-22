@@ -31,7 +31,7 @@ import {
     LIZ,
     MARA
 } from '../../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import { ALL_PEOPLE__SHARED, ALL_CLOTHING__SHARED } from '../../../sharedStyles/people'
 import { BUBBLE__SHARED } from '../../../sharedStyles/props'
 import {
     ACOUSTIC_GUITAR__SHARED,
@@ -75,6 +75,7 @@ export default {
         HEADPHONE__SHARED,
         MICROPHONE__SHARED,
         BENNETT,
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [DOGS_SKETCH]: DRAWING__SHARED,
@@ -89,6 +90,7 @@ export default {
     [KHARI_ATTACK_SPEECH]: [
         BENNETT,
         LIZ,
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [LIZ_DEFENCE_SPEECH]: [
@@ -99,11 +101,13 @@ export default {
         AMY,
         BENNETT,
         LIZ,
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [LIZ_THOUGHT]: [
         BENNETT,
         LIZ,
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
         BUBBLE__SHARED,
@@ -126,11 +130,13 @@ export default {
         BANJO__SHARED,
         BENNETT,
         LIZ,
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [WAITING_THOUGHT_STUDYING]: [
         BENNETT,
         LIZ,
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [WAITING_THOUGHT_WALKING]: [

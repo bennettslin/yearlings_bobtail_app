@@ -34,7 +34,10 @@ import {
     MIRIAM,
     MOTHER
 } from '../../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import {
+    ALL_CLOTHING__SHARED,
+    ALL_PEOPLE__SHARED
+} from '../../../sharedStyles/people'
 import {
     ODIN_GHOST__SHARED,
     OPAL__SHARED,
@@ -67,16 +70,19 @@ export default {
         ANITA
     ],
     [PUPPET_BENNETT_BEGIN]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         SKETCHBOOK__SHARED
     ],
     [PUPPET_BENNETT_END]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         SKETCHBOOK__SHARED
     ],
     [PUPPET_BENNETT_MIDDLE]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         SKETCHBOOK__SHARED

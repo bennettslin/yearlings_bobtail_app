@@ -51,7 +51,10 @@ import {
     VASELINE
 } from '../../../../constants/scene/things/fixtures'
 
-import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import {
+    ALL_CLOTHING__SHARED,
+    ALL_PEOPLE__SHARED
+} from '../../../sharedStyles/people'
 import {
     BENNETT,
     LIZ,
@@ -106,8 +109,14 @@ export default {
     [BENNETT_COUCH_LAMP]: POLE__SHARED,
     [BENNETT_LETTERS]: MAGAZINE__SHARED,
     [BENNETT_RECORD_PLAYER]: null,
-    [BENNETT_SHOE]: BENNETT,
-    [BENNETT_SHOE_REFLECTION]: BENNETT,
+    [BENNETT_SHOE]: [
+        ALL_CLOTHING__SHARED,
+        BENNETT
+    ],
+    [BENNETT_SHOE_REFLECTION]: [
+        ALL_CLOTHING__SHARED,
+        BENNETT
+    ],
     [BEYONDER_ENVELOPE]: LETTER__SHARED,
     [CAPTAIN_BED_LAMP]: [
         BULB__SHARED,

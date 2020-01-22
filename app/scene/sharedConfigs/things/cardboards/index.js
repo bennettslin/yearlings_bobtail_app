@@ -50,7 +50,7 @@ import {
     MARA,
     MIRIAM
 } from '../../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../../sharedStyles/people'
+import { ALL_PEOPLE__SHARED, ALL_CLOTHING__SHARED } from '../../../sharedStyles/people'
 import {
     ODIN__SHARED,
     SEA_SERPENT__SHARED
@@ -79,27 +79,32 @@ import {
 
 export default {
     [BENNETT_MAT]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         TAIWAN_PILLOW__SHARED
     ],
     [BENNETT_ODIN_BUOY]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         ODIN__SHARED,
         TAIWAN_BUOY__SHARED
     ],
     [BENNETT_ODIN_DEPTHS]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         ODIN__SHARED
     ],
     [BENNETT_ODIN_OCEAN_FLOOR]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
         ODIN__SHARED
     ],
     [BENNETT_ODIN_RICKSHAW]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
         BENNETT,
@@ -107,14 +112,17 @@ export default {
         TAIWAN_RICKSHAW__SHARED
     ],
     [BENNETT_SHORE]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT
     ],
     [BENNETT_TAIWAN_GATE]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT
     ],
     [BENNETT_TAIWAN_STAIRS]: [
+        ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT
     ],
