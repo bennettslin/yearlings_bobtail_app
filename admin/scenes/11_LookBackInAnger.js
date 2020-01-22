@@ -107,7 +107,6 @@ export default [
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

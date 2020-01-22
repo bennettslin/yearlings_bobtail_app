@@ -228,7 +228,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

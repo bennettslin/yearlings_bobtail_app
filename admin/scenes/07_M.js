@@ -101,7 +101,6 @@ export default [
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -148,7 +147,6 @@ export default [
                     instance: EATING
                 },
                 [JACOB]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
