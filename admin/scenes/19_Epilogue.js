@@ -193,7 +193,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

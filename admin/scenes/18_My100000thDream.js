@@ -85,7 +85,6 @@ export default [
                 },
                 [CATHERINE]: {
                     gopi: {
-                        colourLayers: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

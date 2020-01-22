@@ -33,7 +33,6 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -55,7 +54,6 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -124,7 +122,6 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
