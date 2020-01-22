@@ -125,7 +125,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

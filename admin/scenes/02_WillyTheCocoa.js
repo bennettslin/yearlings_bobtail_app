@@ -84,7 +84,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

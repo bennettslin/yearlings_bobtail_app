@@ -1,5 +1,16 @@
 .father#{$suffix} {
-    .fatherShoe { fill: hsl(43, 14%, 25%); }
-    .fatherPants { fill: hsl(219, 13%, 58%); }
-    .fatherShirt { fill: hsl(0, 0%, 86%); }
+    .fatherShirt { fill: hsl(0, 48%, 81%); }
+    .fatherCollar { fill: hsl(0, 38%, 77%); }
+    .fatherTie { fill: hsl(221, 44%, 57%); }
+    .fatherPants { fill: hsl(201, 16%, 59%); }
+    .fatherPantsPocket { fill: hsl(201, 12%, 51%); }
+    .fatherBelt { fill: hsl(33, 5%, 32%); }
+    .fatherSock { fill: hsl(221, 30%, 58%); }
+    .fatherShoe { fill: hsl(37, 25%, 45%); }
+
+    .ghostTail { fill: hsl(139, 20%, 78%); }
+    .fatherChineseShirt { fill: hsl(3, 55%, 60%); }
+    .fatherChineseShirtInner { fill: hsl(3, 41%, 53%); }
+    .fatherChineseTrim { fill: hsl(37, 45%, 58%); }
+    .fatherChineseTie { fill: hsl(38, 18%, 46%); }
 }

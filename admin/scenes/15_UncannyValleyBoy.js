@@ -56,7 +56,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -96,7 +95,6 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -134,7 +132,6 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -202,7 +199,6 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -259,7 +255,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    colourLayers: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
