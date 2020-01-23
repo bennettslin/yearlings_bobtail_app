@@ -49,8 +49,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -91,8 +89,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -131,8 +127,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -184,8 +178,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -263,8 +255,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

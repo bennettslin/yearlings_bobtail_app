@@ -37,8 +37,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -95,8 +93,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -135,8 +131,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -193,8 +187,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -228,8 +220,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

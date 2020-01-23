@@ -45,8 +45,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
