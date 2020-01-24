@@ -1,3 +1,30 @@
 .stephanie#{$suffix} {
+    .stephanieShirt { fill: hsl(187, 45%, 60%); }
+    .stephanieUndershirt { fill: hsl(72, 46%, 65%); }
+    .stephanieJeans { fill: hsl(211, 37%, 68%); }
+    .stephanieJeansInner { fill: hsl(211, 26%, 61%); }
+    .stephanieShoe { fill: hsl(41, 18%, 69%); }
 
+    &.flapper {
+        .hatFrame { fill: hsl(35, 17%, 47%); }
+        .hatInner { fill: hsl(43, 19%, 57%); }
+        .hatDark { fill: hsl(43, 27%, 65%); }
+        .hatLight { fill: hsl(43, 42%, 74%); }
+        .hatRibbon { fill: hsl(204, 57%, 54%); }
+        .flowerPetal { fill: hsl(174, 50%, 70%); }
+        .flowerPollen { fill: hsl(63, 56%, 66%); }
+        .necklaceDisplayLine { stroke: hsl(189, 12%, 77%); }
+        .skirtInner { fill: hsl(188, 32%, 56%); }
+        .skirt { fill: hsl(188, 41%, 63%); }
+        .glove { fill: hsl(188, 15%, 81%); }
+        .shoeStrap { fill: hsl(190, 5%, 78%); }
+        .shoe { fill: hsl(190, 7%, 82%); }
+    }
+
+    &.protester {
+        .bikini { fill: hsl(0, 31%, 47%); }
+        .heel { fill: hsl(0, 37%, 49%); }
+        .shoe { fill: hsl(0, 45%, 55%); }
+        .shoeStrap { fill: hsl(0, 49%, 57%); }
+    }
 }

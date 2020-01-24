@@ -229,8 +229,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
