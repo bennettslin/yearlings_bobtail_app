@@ -114,8 +114,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

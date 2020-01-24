@@ -95,8 +95,6 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

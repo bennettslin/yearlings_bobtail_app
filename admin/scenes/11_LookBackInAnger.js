@@ -67,8 +67,6 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -96,8 +94,6 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -150,8 +146,6 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

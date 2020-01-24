@@ -215,8 +215,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
