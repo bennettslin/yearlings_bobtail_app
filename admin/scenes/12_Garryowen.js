@@ -75,8 +75,6 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -162,8 +160,6 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

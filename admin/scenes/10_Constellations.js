@@ -26,8 +26,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -62,8 +60,6 @@ export default [
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -98,8 +94,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -134,8 +128,6 @@ export default [
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -170,8 +162,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

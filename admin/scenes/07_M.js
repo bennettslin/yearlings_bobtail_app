@@ -112,8 +112,6 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -159,8 +157,6 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
