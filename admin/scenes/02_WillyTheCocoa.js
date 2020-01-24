@@ -72,8 +72,6 @@ export default [
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -103,8 +101,6 @@ export default [
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -158,8 +154,6 @@ export default [
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -182,8 +176,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

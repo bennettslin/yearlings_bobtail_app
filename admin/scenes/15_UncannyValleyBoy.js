@@ -112,8 +112,6 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
