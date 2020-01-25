@@ -71,8 +71,6 @@ export default [
                     }
                 },
                 [CHRISTOPHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

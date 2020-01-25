@@ -63,8 +63,6 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -92,8 +90,6 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -167,8 +163,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
