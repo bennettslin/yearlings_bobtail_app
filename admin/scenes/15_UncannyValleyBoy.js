@@ -74,8 +74,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -139,8 +137,6 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -190,8 +186,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -274,8 +268,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

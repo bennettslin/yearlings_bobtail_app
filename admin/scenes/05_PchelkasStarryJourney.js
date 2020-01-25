@@ -177,8 +177,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

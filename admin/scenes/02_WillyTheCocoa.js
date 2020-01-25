@@ -54,8 +54,6 @@ export default [
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -141,8 +139,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
