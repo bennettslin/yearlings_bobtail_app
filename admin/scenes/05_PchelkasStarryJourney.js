@@ -116,8 +116,6 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -147,8 +145,6 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

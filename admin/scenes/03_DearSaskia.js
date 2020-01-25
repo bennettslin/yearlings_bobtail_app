@@ -74,8 +74,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

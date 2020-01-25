@@ -179,8 +179,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
