@@ -107,8 +107,6 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -136,8 +134,6 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

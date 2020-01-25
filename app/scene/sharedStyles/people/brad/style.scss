@@ -1,3 +1,21 @@
 .brad#{$suffix} {
-    .yarmulke { fill: hsl(197, 35%, 54%); }
+    .bradShirt { fill: hsl(183, 27%, 56%); }
+    .bradHoodie { fill: hsl(183, 28%, 48%); }
+    .bradShorts { fill: hsl(305, 14%, 63%); }
+    .bradShoe { fill: hsl(31, 27%, 56%); }
+
+    &.jewishBoy {
+        .yarmulke { fill: hsl(197, 35%, 54%); }
+        .jewishBoyShirt { fill: #93b3b5; }
+        .jewishBoyShorts { fill: #8a8089; }
+        .jewishBoyShoe { fill: #7a654d; }
+    }
+
+    &.snacking {
+        .chipBag { fill: hsl(207, 52%, 61%); }
+        .sun { fill: hsl(37, 73%, 65%); }
+        .sunRay { fill: hsl(58, 73%, 65%); }
+        .chip { fill: hsl(58, 25%, 72%); }
+        .chipDark { fill: hsl(58, 18%, 65%); }
+    }
 }

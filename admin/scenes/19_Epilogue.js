@@ -169,8 +169,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

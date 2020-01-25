@@ -24,8 +24,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -56,8 +54,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
