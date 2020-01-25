@@ -1,3 +1,27 @@
 .miriam#{$suffix} {
-    .miriamDress { fill: hsl(55, 46%, 70%); }
+    .miriamJacket { fill: hsl(193, 25%, 54%); }
+    .miriamDress { fill: hsl(56, 51%, 74%); }
+    .miriamPantyhoseDense { fill: hsl(21, 12%, 56%); }
+    .miriamPantyhose { fill: hsl(21, 21%, 68%); }
+    .miriamShoe { fill: hsl(203, 15%, 52%); }
+
+    .miriamNightie { fill: hsl(193, 47%, 72%); }
+    .miriamNightieLace { fill: hsl(193, 30%, 79%); }
+    .miriamUnderwear { fill: hsl(56, 31%, 74%); }
+    .miriamWaistband { fill: hsl(55, 29%, 85%); }
+
+    .youngMomShirt { fill: hsl(56, 27%, 66%); }
+    .youngMomPants { fill: hsl(193, 9%, 62%); }
+    .youngMomSock { fill: hsl(57, 41%, 75%); }
+    .youngMomShoe { fill: hsl(52, 18%, 60%); }
+    .youngMomShoeStripe { fill: hsl(51, 25%, 68%); }
+    .harness { fill: hsl(15, 27%, 59%); }
+    .bonnet { fill: hsl(272, 40%, 72%); }
+    .babySock { fill: hsl(271, 45%, 80%); }
+
+    &.tennis {
+        .bikiniTop { fill: hsl(56, 50%, 72%); }
+        .shorts { fill: hsl(205, 31%, 63%); }
+        .shoe { fill: hsl(190, 22%, 56%); }
+    }
 }

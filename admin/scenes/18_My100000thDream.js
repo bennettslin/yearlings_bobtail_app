@@ -105,8 +105,6 @@ export default [
                     gopi: {
                         hairIllustration: true,
                         head: true,
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
