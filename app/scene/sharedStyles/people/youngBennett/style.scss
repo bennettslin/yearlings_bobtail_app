@@ -1,0 +1,24 @@
+.youngBennett#{$suffix} {
+    .backpackDark { fill: hsl(210, 33%, 57%); }
+    .backpackMedium { fill: hsl(210, 37%, 60%); }
+    .backpackLight { fill: hsl(210, 42%, 62%); }
+    .backpackStrap { fill: hsl(200, 20%, 57%); }
+    .backpackInner { fill: hsl(200, 26%, 41%); }
+    .backpackPocket { fill: hsl(200, 22%, 48%); }
+    .backpackAdjusterLight { fill: hsl(200, 6%, 49%); }
+    .backpackAdjusterDark { fill: hsl(201, 6%, 44%); }
+
+    &.flustered {
+        .overallsFlap { fill: hsl(222, 23%, 55%); }
+        .overalls { fill: hsl(221, 32%, 63%); }
+    }
+
+    &.youngChild {
+        .backpack { fill: hsl(231, 38%, 60%); }
+        .backpackStrap { fill: hsl(230, 27%, 65%); }
+        .hoodieInner { fill: hsl(207, 46%, 61%); }
+        .hoodie { fill: hsl(207, 57%, 66%); }
+        .shorts { fill: hsl(6, 39%, 61%); }
+        .shoe { fill: hsl(38, 16%, 56%); }
+    }
+}

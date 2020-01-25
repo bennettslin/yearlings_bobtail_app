@@ -43,8 +43,6 @@ export default [
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -76,8 +74,6 @@ export default [
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -91,8 +87,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -115,8 +109,6 @@ export default [
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

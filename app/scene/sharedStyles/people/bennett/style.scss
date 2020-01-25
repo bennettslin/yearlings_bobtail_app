@@ -30,4 +30,18 @@
     .dishroomApronInner { fill: hsl(64, 12%, 51%); }
     .dishroomApronLace { fill: hsl(65, 15%, 55%); }
     .dishroomApron { fill: hsl(65, 18%, 60%); }
+
+    &.flustered {
+        .overallsFlap { fill: hsl(222, 23%, 55%); }
+        .overalls { fill: hsl(221, 32%, 63%); }
+    }
+
+    &.youngChild {
+        .backpack { fill: hsl(231, 38%, 60%); }
+        .backpackStrap { fill: hsl(230, 27%, 65%); }
+        .hoodieInner { fill: hsl(207, 46%, 61%); }
+        .hoodie { fill: hsl(207, 57%, 66%); }
+        .shorts { fill: hsl(6, 39%, 61%); }
+        .shoe { fill: hsl(38, 16%, 56%); }
+    }
 }

@@ -185,8 +185,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

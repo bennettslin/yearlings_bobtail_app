@@ -91,8 +91,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
