@@ -237,8 +237,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

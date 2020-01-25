@@ -103,8 +103,6 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -148,8 +146,6 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

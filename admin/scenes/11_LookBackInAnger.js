@@ -108,8 +108,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -137,8 +135,6 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
