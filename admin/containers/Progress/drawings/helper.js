@@ -6,7 +6,7 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 4.35,
+    BASELINE_TIME = 4.5,
     FACE_REVISION_TIME = 0.75,
     HAIR_ILLUSTRATION_TIME = 0.5,
     HEAD_TIME = 0.25,
@@ -16,8 +16,6 @@ const
     LIPS_TIME = 0.05,
     EYES_TIME = 0.1,
     PUPILS_TIME = 0.05,
-    LAYERS_TIME = 0.075,
-    COLOURS_TIME = 0.075,
     HEAD_INSPECTION_TIME = 0.05,
     HEAD_PLACEMENT_TIME = 0.1,
     FINAL_SVG_TIME = 0.05,
@@ -35,8 +33,6 @@ const
         LIPS_TIME +
         EYES_TIME +
         PUPILS_TIME +
-        LAYERS_TIME +
-        COLOURS_TIME +
         HEAD_INSPECTION_TIME +
         HEAD_PLACEMENT_TIME +
         FINAL_SVG_TIME +
@@ -88,8 +84,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     lips,
                     eyes,
                     pupils,
-                    layers,
-                    colours,
                     headInspection,
                     headPlacement,
                     finalSvg,
@@ -110,8 +104,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 lips,
                 eyes,
                 pupils,
-                layers,
-                colours,
                 headInspection,
                 headPlacement,
                 finalSvg,
@@ -155,8 +147,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 lips,
                 eyes,
                 pupils,
-                layers,
-                colours,
                 headInspection,
                 headPlacement,
                 finalSvg,
@@ -198,12 +188,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             if (!pupils) {
                 workedHours += PUPILS_TIME
             }
-            if (!layers) {
-                workedHours += LAYERS_TIME
-            }
-            if (!colours) {
-                workedHours += COLOURS_TIME
-            }
             if (!headInspection) {
                 workedHours += HEAD_INSPECTION_TIME
             }
@@ -221,8 +205,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !layers && !colours,
-                halfDoneForNow = !layers
+            const doneForNow = !headInspection,
+                halfDoneForNow = !headInspection
 
             if (!doneForNow) {
                 rolesTodoCount++
