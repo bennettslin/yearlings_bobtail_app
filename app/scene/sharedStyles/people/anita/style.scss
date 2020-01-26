@@ -1,7 +1,35 @@
 .anita#{$suffix} {
-    .hairTie { fill: hsl(312, 53%, 62%); }
-
     .anitaBarrette { fill: hsl(52, 67%, 59%); }
-    .anitaShoe { fill: hsl(244, 16%, 34%); }
-    .anitaDress { fill: hsl(58, 43%, 77%); }
+    
+    .anitaDress { fill: hsl(58, 47%, 73%); }
+    .anitaJacket { fill: hsl(204, 34%, 59%); }
+    .anitaJacketSleeve { fill: hsl(205, 24%, 80%); }
+    .anitaRainbowTop { fill: hsl(0, 36%, 58%); }
+    .anitaRainbowMiddle { fill: hsl(33, 56%, 68%); }
+    .anitaRainbowBottom { fill: hsl(111, 39%, 62%); }
+    .anitaShoe { fill: hsl(190, 31%, 61%); }
+    
+    .backpackMedium { fill: hsl(269, 37%, 60%); }
+    .backpackLight { fill: hsl(270, 42%, 62%); }
+    .backpackPocket { fill: hsl(260, 22%, 48%); }
+    .backpackStrap { fill: hsl(260, 20%, 57%); }
+    .backpackAdjusterDark { fill: hsl(261, 6%, 44%); }
+    .backpackAdjusterLight { fill: hsl(260, 6%, 49%); }
+    
+    &.youngChild {
+        .hairTie { fill: hsl(312, 53%, 62%); }
+
+        .jacket { fill: hsl(48, 20%, 59%); }
+        .pants { fill: hsl(211, 24%, 57%); }
+        .shoe { fill: hsl(304, 18%, 55%); }
+
+        .backpackMedium { fill: hsl(309, 36%, 61%); }
+        .backpackLight { fill: hsl(309, 45%, 66%); }
+        .backpackPocket { fill: hsl(319, 22%, 48%); }
+        .backpackTrim { fill: hsl(320, 48%, 59%); }
+        .backpackStrap { fill: hsl(320, 20%, 57%); }
+        .backpackAdjusterDark { fill: hsl(323, 7%, 39%); }
+        .backpackAdjusterMedium { fill: hsl(321, 6%, 44%); }
+        .backpackAdjusterLight { fill: hsl(320, 6%, 49%); }
+    }
 }

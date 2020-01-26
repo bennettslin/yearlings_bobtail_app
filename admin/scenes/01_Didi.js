@@ -34,8 +34,6 @@ export default [
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -56,8 +54,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -100,8 +96,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

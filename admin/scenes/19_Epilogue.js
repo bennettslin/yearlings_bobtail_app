@@ -79,8 +79,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
