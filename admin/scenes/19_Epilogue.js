@@ -95,8 +95,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

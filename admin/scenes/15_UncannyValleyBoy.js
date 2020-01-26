@@ -62,8 +62,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -252,8 +250,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
