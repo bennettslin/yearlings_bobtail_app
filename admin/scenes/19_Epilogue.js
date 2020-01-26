@@ -60,8 +60,6 @@ export default [
                         lips: true,
                         eyes: true,
                         pupils: true,
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
