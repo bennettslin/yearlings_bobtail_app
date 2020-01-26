@@ -32,8 +32,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -61,8 +59,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

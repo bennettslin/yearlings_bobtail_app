@@ -98,8 +98,6 @@ export default [
             [ACTOR]: {
                 [SASHA]: {
                     mermaid: {
-                        layers: true,
-                        colours: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

@@ -143,8 +143,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

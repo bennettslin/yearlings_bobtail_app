@@ -97,8 +97,6 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    layers: true,
-                    colours: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
