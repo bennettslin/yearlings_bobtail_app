@@ -13,8 +13,6 @@
     .backpackLight { fill: hsl(270, 42%, 62%); }
     .backpackPocket { fill: hsl(260, 22%, 48%); }
     .backpackStrap { fill: hsl(260, 20%, 57%); }
-    .backpackAdjusterDark { fill: hsl(261, 6%, 44%); }
-    .backpackAdjusterLight { fill: hsl(260, 6%, 49%); }
     
     &.youngChild {
         .hairTie { fill: hsl(312, 53%, 62%); }
@@ -28,8 +26,5 @@
         .backpackPocket { fill: hsl(319, 22%, 48%); }
         .backpackTrim { fill: hsl(320, 48%, 59%); }
         .backpackStrap { fill: hsl(320, 20%, 57%); }
-        .backpackAdjusterDark { fill: hsl(323, 7%, 39%); }
-        .backpackAdjusterMedium { fill: hsl(321, 6%, 44%); }
-        .backpackAdjusterLight { fill: hsl(320, 6%, 49%); }
     }
 }

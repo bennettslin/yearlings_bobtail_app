@@ -1,15 +1,13 @@
 .backpackBennett {
-    .backpackStrapLight { fill: hsl(180, 20%, 57%); }
-    .backpackStrapDark { fill: hsl(180, 16%, 51%); }
-    .backpackAdjusterDark { fill: hsl(180, 6%, 44%); }
-    .backpackAdjusterLight { fill: hsl(180, 6%, 49%); }
-    .backpackPocketMedium { fill: hsl(180, 22%, 45%); }
     .backpackDark { fill: hsl(190, 33%, 57%); }
-    .backpackLight { fill: hsl(190, 40%, 61%); }
-    .backpackPocketLight { fill: hsl(180, 22%, 48%); }
     .backpackMedium { fill: hsl(190, 36%, 59%); }
-    .backpackReflector { fill: hsl(180, 22%, 67%); }
+    .backpackLight { fill: hsl(190, 40%, 61%); }
     .backpackLightest { fill: hsl(190, 45%, 64%); }
+    .backpackStrapDark { fill: hsl(180, 16%, 51%); }
+    .backpackStrapLight { fill: hsl(180, 20%, 57%); }
+    .backpackPocketMedium { fill: hsl(180, 22%, 45%); }
+    .backpackPocketLight { fill: hsl(180, 22%, 48%); }
+    .backpackReflector { fill: hsl(180, 22%, 67%); }
 }
 
 .balledFoil {

@@ -5,6 +5,7 @@
     .lizJacketInner { fill: hsl(97, 11%, 61%); }
     .lizJacket { fill: hsl(96, 14%, 65%); }
     .lizJacketLapel { fill: hsl(97, 14%, 70%); }
+    .lizCoatInner { fill: hsl(78, 24%, 61%); }
     .lizCoatBelt { fill: hsl(78, 20%, 66%); }
     .lizCoat { fill: hsl(78, 24%, 71%); }
     .lizCoatLapel { fill: hsl(77, 29%, 75%); }
@@ -15,7 +16,9 @@
     .lizShoe { fill: hsl(40, 18%, 48%); }
 
     .backpackMedium { fill: hsl(142, 35%, 54%); }
-    .backpackAdjuster { fill: hsl(151, 9%, 48%); }
+    .backpackLight { fill: hsl(142, 42%, 59%); }
+    .backpackPocket { fill: hsl(143, 22%, 48%); }
+    .backpackTrim { fill: hsl(152, 24%, 61%); }  
     .backpackStrap { fill: hsl(153, 20%, 57%); }
 
     &.brushOff {
