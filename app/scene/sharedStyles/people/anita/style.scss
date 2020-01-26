@@ -9,10 +9,12 @@
     .anitaRainbowBottom { fill: hsl(111, 39%, 62%); }
     .anitaShoe { fill: hsl(190, 31%, 61%); }
     
-    .backpackMedium { fill: hsl(269, 37%, 60%); }
-    .backpackLight { fill: hsl(270, 42%, 62%); }
-    .backpackPocket { fill: hsl(260, 22%, 48%); }
-    .backpackStrap { fill: hsl(260, 20%, 57%); }
+    &.exasperated {
+        .backpackMedium { fill: hsl(269, 37%, 60%); }
+        .backpackLight { fill: hsl(270, 42%, 62%); }
+        .backpackPocket { fill: hsl(260, 22%, 48%); }
+        .backpackStrap { fill: hsl(260, 20%, 57%); }
+    }
     
     &.youngChild {
         .hairTie { fill: hsl(312, 53%, 62%); }

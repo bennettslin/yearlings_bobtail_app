@@ -19,6 +19,10 @@
     .bonnet { fill: hsl(272, 40%, 72%); }
     .babySock { fill: hsl(271, 45%, 80%); }
 
+    &.gopi {
+        .sari { fill: hsl(59, 49%, 71%); }
+    }
+
     &.tennis {
         .bikiniTop { fill: hsl(56, 50%, 72%); }
         .shorts { fill: hsl(205, 31%, 63%); }

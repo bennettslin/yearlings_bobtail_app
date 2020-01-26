@@ -14,7 +14,10 @@
 
     .estherChineseShirt { fill: hsl(305, 54%, 72%); }
 
-    .backpackStrap { fill: hsl(90, 20%, 57%); }
+    &.curious {
+        .backpack { fill: hsl(100, 45%, 66%); }
+        .backpackStrap { fill: hsl(90, 20%, 57%); }
+    }
 
     &.youngChild {
         .lapel { fill: hsl(284, 11%, 59%); }
