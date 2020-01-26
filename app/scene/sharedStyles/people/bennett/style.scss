@@ -31,6 +31,19 @@
     .dishroomApronLace { fill: hsl(65, 15%, 55%); }
     .dishroomApron { fill: hsl(65, 18%, 60%); }
 
+    &.pampas {
+        .sash { fill: hsl(2, 59%, 65%); }
+        .bennettKurta { fill: hsl(214, 45%, 60%); }
+        .garland { fill: hsl(79, 14%, 77%); }
+        .garlandFlower { fill: hsl(15, 52%, 69%); }
+        .recorderBrass { fill: hsl(46, 28%, 61%); }
+        .recorderPadding { fill: hsl(65, 28%, 61%); }
+        .recorderLight { fill: hsl(330, 12%, 45%); }
+        .recorderTrim { fill: hsl(341, 10%, 43%); }
+        .recorderDark { fill: hsl(330, 12%, 39%); }
+        .recorderInner { fill: hsl(327, 7%, 31%); }
+    }
+
     &.flustered {
         .overallsFlap { fill: hsl(222, 23%, 55%); }
         .overalls { fill: hsl(221, 32%, 63%); }

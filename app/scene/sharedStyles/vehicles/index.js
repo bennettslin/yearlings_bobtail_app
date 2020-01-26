@@ -1,5 +1,5 @@
 export const ALL_VEHICLES__SHARED = 'allVehicles'
-export const GO_KART_STEERING_WHEEL__SHARED = 'goKartSteeringWheel'
+export const GO_KART__SHARED = 'goKart'
 export const INTERIOR__SHARED = 'interior'
 export const REATTA__SHARED = 'reatta'
 export const SCHOOLBUS__SHARED = 'schoolbus'
