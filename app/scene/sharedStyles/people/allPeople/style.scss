@@ -3,8 +3,19 @@
     .eyeBlob { fill: hsl(0, 0%, 27%); }
     .mouthBlob { fill: hsl(0, 0%, 27%); }
     .sclera { fill: hsl(216, 16%, 94%); }
+    .pupil { fill: hsla(0, 0%, 0%, 0.5); }
+    .irisBrown { fill: hsl(42, 30%, 45%); }
+    .irisGreen { fill: hsl(104, 30%, 45%); }
+    .irisHazel { fill: hsl(71, 30%, 45%); }
+    .irisAmber { fill: hsl(36, 30%, 45%); }
+    .irisBlue { fill: hsl(204, 30%, 45%); }
+    .irisDarkBrown { fill: hsl(36, 30%, 45%); }
     .gum { fill: hsl(6, 37%, 63%); }
     .lip { fill: hsl(4, 52%, 73%); }
+    .lipMaleLight__noStroke { fill: hsla(1, 24%, 61%, 0.2); }
+    .lipMaleMedium__noStroke { fill: hsla(1, 17%, 54%, 0.3); }
+    .lipMaleBrown__noStroke { fill: hsla(2, 15%, 48%, 0.3); }
+    .lipMaleDark__noStroke { fill: hsla(2, 15%, 41%, 0.4); }
     .teeth { fill: hsl(40, 17%, 89%); }
     .tongue { fill: hsl(350, 36%, 73%); }
     .mouthInner { fill: hsl(4, 31%, 44%); }
