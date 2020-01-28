@@ -16,3 +16,18 @@ gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
 ocean waves panel
+
+Amy squeezing
+Amy mingling
+
+Female lips redo
+<!-- Amy -->
+<!-- Ana -->
+<!-- Anita -->
+<!-- Catherine -->
+<!-- Esther -->
+Mara
+Miriam
+Mother
+Sasha
+Stephanie
