@@ -19,15 +19,3 @@ ocean waves panel
 
 Amy squeezing
 Amy mingling
-
-Female lips redo
-<!-- Amy -->
-<!-- Ana -->
-<!-- Anita -->
-<!-- Catherine -->
-<!-- Esther -->
-Mara
-Miriam
-Mother
-Sasha
-Stephanie

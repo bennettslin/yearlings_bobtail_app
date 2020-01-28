@@ -31,10 +31,5 @@ export default [
         taskName: `Fix Liz and Taiwan gates.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Redo female lip colours.`,
-        workedHours: 1,
-        neededHours: 2
     }
 ]
