@@ -35,7 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -43,7 +42,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -69,7 +67,6 @@ export default [
                     }
                 },
                 [CHRISTOPHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -77,7 +74,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -85,7 +81,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -93,7 +88,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -101,7 +95,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -109,7 +102,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -117,7 +109,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -125,7 +116,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -133,7 +123,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TOMER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -141,7 +130,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -149,7 +137,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -157,7 +144,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -165,7 +151,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -173,7 +158,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -181,7 +165,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -189,7 +172,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WADE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -197,7 +179,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -205,7 +186,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -213,7 +193,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -221,7 +200,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -229,7 +207,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -247,7 +224,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

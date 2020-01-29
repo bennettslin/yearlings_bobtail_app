@@ -29,7 +29,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -59,21 +58,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -101,7 +97,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -131,7 +126,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -147,14 +141,12 @@ export default [
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -167,7 +159,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

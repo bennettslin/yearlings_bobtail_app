@@ -41,7 +41,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -54,7 +53,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -67,7 +65,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -75,7 +72,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -89,28 +85,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -118,7 +110,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -132,28 +123,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: EATING
                 },
                 [JACOB]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: EATING
                 },
                 [MARA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: EATING
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -166,7 +153,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -191,7 +177,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -212,7 +197,6 @@ export default [
                 [HOWIE]: {
                     maskedUsher: {
                         faceRevision: true,
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -226,7 +210,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -234,7 +217,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,

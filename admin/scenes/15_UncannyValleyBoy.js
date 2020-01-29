@@ -47,14 +47,12 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -62,7 +60,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -70,7 +67,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -83,28 +79,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: PAST
                 },
                 [FATHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: PAST
                 },
                 [SASHA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -117,21 +109,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -148,7 +137,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -162,7 +150,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -170,7 +157,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -178,21 +164,18 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -231,14 +214,12 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -246,7 +227,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -254,7 +234,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

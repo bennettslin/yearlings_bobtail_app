@@ -19,7 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -32,7 +31,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -45,7 +43,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -58,7 +55,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -71,7 +67,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -84,7 +79,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -98,7 +92,6 @@ export default [
             [ACTOR]: {
                 [SASHA]: {
                     mermaid: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -106,7 +99,6 @@ export default [
                     }
                 },
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -119,7 +111,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

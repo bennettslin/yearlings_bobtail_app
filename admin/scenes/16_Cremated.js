@@ -23,7 +23,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -54,7 +53,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -76,7 +74,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -89,7 +86,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -117,7 +113,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

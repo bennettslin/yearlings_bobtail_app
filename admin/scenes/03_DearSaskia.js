@@ -16,7 +16,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -24,7 +23,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -32,7 +30,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -45,28 +42,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

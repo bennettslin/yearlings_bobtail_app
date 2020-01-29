@@ -19,28 +19,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -53,28 +49,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: WALGREENS
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: WALGREENS
                 },
                 [TOMER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -87,28 +79,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -121,28 +109,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: CEMETERY
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: CEMETERY
                 },
                 [TOMER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -155,28 +139,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: STATION_WAGON
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -189,14 +169,12 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

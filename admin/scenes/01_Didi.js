@@ -25,21 +25,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -52,21 +49,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -79,7 +73,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -92,14 +85,12 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

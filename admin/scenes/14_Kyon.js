@@ -109,7 +109,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -139,7 +138,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -169,7 +167,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,

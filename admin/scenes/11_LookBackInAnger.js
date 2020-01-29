@@ -37,14 +37,12 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -52,7 +50,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -60,21 +57,18 @@ export default [
                     }
                 },
                 [WADE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: WATCHING
                 },
                 [AMY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -87,28 +81,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: CARRYING
                 },
                 [MARA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -121,42 +111,36 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: WAITING
                 },
                 [MARA]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: WAITING
                 },
                 [AMY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: MINGLING
                 },
                 [WADE]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -169,7 +153,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -200,7 +183,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,

@@ -30,7 +30,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -43,7 +42,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -73,7 +71,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -81,7 +78,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -95,7 +91,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -103,7 +98,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -112,7 +106,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -121,7 +114,6 @@ export default [
                 },
                 [NESTOR]: {
                     officer: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -130,7 +122,6 @@ export default [
                 },
                 [TOMER]: {
                     officer: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -144,7 +135,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -152,7 +142,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -161,7 +150,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -170,7 +158,6 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -179,7 +166,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -188,7 +174,6 @@ export default [
                 },
                 [WILLY]: {
                     crossingGuard: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,

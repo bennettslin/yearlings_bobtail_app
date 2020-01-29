@@ -34,7 +34,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -47,28 +46,24 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -81,21 +76,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -109,7 +101,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -117,7 +108,6 @@ export default [
                     }
                 },
                 [WILLY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -125,7 +115,6 @@ export default [
                 },
                 [TOMER]: {
                     gangbanger: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         sizeAdjustment: true,
@@ -139,14 +128,12 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
@@ -159,21 +146,18 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     sizeAdjustment: true,
