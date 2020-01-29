@@ -11,24 +11,26 @@ import { ACCUSATORY } from 'constants/scene/actors/father'
 export default {
     [ESTHER_MOTHER]: {
         [HURT_CONSOLING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 2,
+            zOffset: 2
         }
     },
     [FATHER]: {
         [ACCUSATORY]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5,
+            zOffset: 0.5
         }
     },
     [MIRIAM_BENNETT]: {
         [ASLEEP]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 8
         },
         [ASLEEP_FEARFUL]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 8
         }
     }
 }

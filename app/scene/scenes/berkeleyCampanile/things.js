@@ -14,7 +14,7 @@ import {
     BERKELEY_BUILDING_TALL,
     BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../../constants/scene/things/flats'
-import { GHOST_ODIN_CAMPUS } from '../../../constants/scene/things/puppets'
+import { GHOST_ODIN_DEMONSTRATION } from '../../../constants/scene/things/puppets'
 
 export default {
     [CUTOUT]: {
@@ -61,10 +61,11 @@ export default {
 
 export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
     [PUPPET]: {
-        [GHOST_ODIN_CAMPUS]: {
+        [GHOST_ODIN_DEMONSTRATION]: {
             yIndex: 5,
-            xPosition: 5,
-            scaleFactor: 0.2
+            xPosition: 1.5,
+            scaleFactor: 0.2,
+            flipHorizontal: true
         }
     }
 }

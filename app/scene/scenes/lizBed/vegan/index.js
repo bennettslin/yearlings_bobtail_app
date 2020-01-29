@@ -12,20 +12,21 @@ import {
 export default {
     [BENNETT]: {
         [BROKEN_HEARTED]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 9
         }
     },
     [KHARI_LIZ]: {
         [CARESS]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 5
         }
     },
     [KHARI_LIZ_REFLECTION]: {
         [CARESS_REFLECTION]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 5,
+            zOffset: 0.5
         }
     }
 }

@@ -10,19 +10,19 @@ export default {
     [BENNETT]: {
         [SHOW_ANNOYED]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 2
         }
     },
     [MIRIAM_TRISTAN]: {
         [GREETING]: {
             yIndex: 5,
-            xPosition: 7
+            xPosition: 6.5
         }
     },
     [NESTOR]: {
         [GREETING]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 9
         }
     }
 }

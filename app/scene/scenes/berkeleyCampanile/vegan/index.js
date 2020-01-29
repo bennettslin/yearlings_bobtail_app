@@ -1,21 +1,35 @@
 import {
     BENNETT,
-    KHARI_LIZ
+    AMY,
+    STEPHANIE,
+    WADE
 } from 'constants/scene/actors'
-import { CAMPUS_ASHAMED } from 'constants/scene/actors/bennett'
-import { PROTECTIVE_CONCERNED } from 'constants/scene/actors/khariLiz'
+import { PROTESTER } from 'constants/scene/actors/songs'
+import { DEMONSTRATION } from 'constants/scene/actors/bennett'
 
 export default {
     [BENNETT]: {
-        [CAMPUS_ASHAMED]: {
+        [DEMONSTRATION]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 7
         }
     },
-    [KHARI_LIZ]: {
-        [PROTECTIVE_CONCERNED]: {
+    [AMY]: {
+        [PROTESTER]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 9
+        }
+    },
+    [STEPHANIE]: {
+        [PROTESTER]: {
+            yIndex: 4,
+            xPosition: 3
+        }
+    },
+    [WADE]: {
+        [PROTESTER]: {
+            yIndex: 4,
+            xPosition: 4.75
         }
     }
 }
