@@ -26,7 +26,7 @@ export default {
         },
         [BANCROFT_SHRUB]: {
             yIndex: 4,
-            xPosition: 2,
+            xPosition: 1,
             scaleFactor: 0.5
         },
         [CAMPUS_TREE_SINGLE__CAMPANILE]: {

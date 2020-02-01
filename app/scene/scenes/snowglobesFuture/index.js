@@ -13,19 +13,22 @@ export default {
     [BENNETT]: {
         [FUTURE]: {
             yIndex: 1,
-            xPosition: 6
+            xPosition: 5,
+            zOffset: 3
         }
     },
     [MOTHER]: {
         [FUTURE]: {
             yIndex: 1,
-            xPosition: 8
+            xPosition: 8,
+            zOffset: 3
         }
     },
     [FATHER]: {
         [FUTURE]: {
             yIndex: 1,
-            xPosition: 5
+            xPosition: 4,
+            zOffset: 3
         }
     },
     [KHARI_LIZ]: {

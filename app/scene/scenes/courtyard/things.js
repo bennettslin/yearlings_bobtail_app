@@ -18,7 +18,7 @@ export default {
         [RECYCLABLES]: {
             yIndex: 2,
             xPosition: 5,
-            scaleFactor: 0.4
+            scaleFactor: 0.35
         },
         [BUSH_SINGLE__COURTYARD]: {
             yIndex: 2,

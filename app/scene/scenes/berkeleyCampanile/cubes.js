@@ -16,17 +16,17 @@ const CUBES = {
     [BERKELEY_CAMPANILE_KEY]: {
         ceiling: {
             hslaColours: [
-                [C, C, C, C, D],
-                [X, X, X, C, D],
-                [X, X, X, C, D],
-                [C, C, C, C, D],
+                [C, C, C, D],
+                [X, X, C, D],
+                [X, X, C, D],
+                [C, C, C, D],
                 [D]
             ],
             zIndices: [
-                [g, g, g, g, k],
-                [3, 3, 3, g, k],
-                [3, 3, 3, g, k],
-                [g, g, g, g, k],
+                [g, g, g, k],
+                [3, 3, g, k],
+                [3, 3, g, k],
+                [g, g, g, k],
                 [k]
             ]
         },
@@ -34,17 +34,15 @@ const CUBES = {
             hslaColours: [
                 [G],
                 [V],
-                [P, P, P, A, V],
-                [P, A, A, A, V],
-                [P, V],
+                [P, P, A, V],
+                [A, A, A, V],
                 [V]
             ],
             zIndices: [
                 [0],
                 [1],
-                [3, 3, 3, 9, 1],
-                [3, 9, 9, 9, 1],
-                [2, 1],
+                [3, 3, 9, 1],
+                [9, 9, 9, 1],
                 [1]
             ]
         }

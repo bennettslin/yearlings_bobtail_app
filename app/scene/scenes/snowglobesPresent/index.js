@@ -10,19 +10,22 @@ export default {
     [BENNETT_FATHER]: {
         [PRESENT]: {
             yIndex: 1,
-            xPosition: 5
+            xPosition: 5.5,
+            zOffset: 3
         }
     },
     [MOTHER]: {
         [PRESENT]: {
             yIndex: 1,
-            xPosition: 3
+            xPosition: 3,
+            zOffset: 3.5
         }
     },
     [MIRIAM_STEPHANIE]: {
         [MISCHIEVOUS_BANJO]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 8,
+            zOffset: -1
         }
     }
 }

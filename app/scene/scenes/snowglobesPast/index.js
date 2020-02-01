@@ -10,19 +10,21 @@ export default {
     [BENNETT]: {
         [PAST]: {
             yIndex: 1,
-            xPosition: 1.5
+            xPosition: 1.5,
+            zOffset: 2
         }
     },
     [FATHER]: {
         [PAST]: {
             yIndex: 1,
-            xPosition: 3
+            xPosition: 3,
+            zOffset: 4
         }
     },
     [SASHA_BENNETT]: {
         [COMFORTING_HUMILIATED]: {
-            yIndex: 2,
-            xPosition: 8
+            yIndex: 3,
+            xPosition: 7
         }
     }
 }

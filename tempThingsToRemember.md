@@ -1,4 +1,3 @@
-Ghost makeup
 Blood on demonstrators
 Make Bennett and Odin wear past (or present?) colours
 Make Bennett and Odin more distant in certain scenes
@@ -14,10 +13,7 @@ Allow for presence to have one yIndex position, and another yIndex size
 smoker, make her left calf lower.
 gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
-campusAshamed, front foot lower
 
 ocean waves panel
 
 extend bancroft gate by one
-reduce campanile gate by one
-make Wade protester's raised fist the left
