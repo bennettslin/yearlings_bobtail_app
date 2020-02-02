@@ -5186,5 +5186,15 @@ export default [
         taskName: `Redo female lip colours.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Determine actor head sizes.`,
+        workedHours: 8,
+        neededHours: 8
+    },
+    {
+        taskName: `Some actor resizing.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]
