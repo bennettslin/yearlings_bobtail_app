@@ -27,13 +27,11 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WEEPING
                 }
             }
@@ -45,13 +43,11 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: QUIPPING
                 }
             }
@@ -63,7 +59,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CATHOLIC_PENSIVE
                 }
             }
@@ -75,14 +70,12 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CATHOLIC_IDEA
                 },
                 [WADE]: {
                     catholic: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CATHOLIC_GUY
                     }
                 },
@@ -90,7 +83,6 @@ export default [
                     smoker: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: SMOKER
                     }
                 }
@@ -103,13 +95,11 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PIOUS
                 },
                 [CATHERINE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PUZZLED
                 }
             }

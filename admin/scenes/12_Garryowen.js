@@ -31,7 +31,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BRUSH_OFF
                 },
                 [LIZ]: {
@@ -47,7 +46,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: BRUSH_OFF
                     }
                 }
@@ -60,19 +58,16 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PUNCHING
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
@@ -87,7 +82,6 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: INJURED
                 }
             }
@@ -99,7 +93,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CELIBATE_FREEZING
                 },
                 [LIZ]: {
@@ -115,7 +108,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CELIBATE_FREEZING
                     }
                 }
@@ -128,7 +120,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GREETING
                 },
                 [MIRIAM]: {
@@ -137,19 +128,16 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: NOOGIE
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SMIRKING
                 }
             }
@@ -161,7 +149,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: LEAVING_CRUMBLED
                 },
                 [LIZ]: {
@@ -177,7 +164,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: LEAVING_CRUMBLED
                     }
                 }

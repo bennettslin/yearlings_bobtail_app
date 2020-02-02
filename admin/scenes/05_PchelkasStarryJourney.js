@@ -41,13 +41,11 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BLISSFUL_GUILTY
                 }
             }
@@ -59,7 +57,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FEIGNING_SICK
                 }
             }
@@ -71,7 +68,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ASLEEP
                 }
             }
@@ -83,7 +79,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SHAKEN
                 }
             }
@@ -95,19 +90,16 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STOIC
                 },
                 [BRAD]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GESTURING
                 },
                 [ANDREW]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: THROWING
                 }
             }
@@ -119,26 +111,22 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WISTFUL
                 },
                 [BRAD]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SNACKING
                 },
                 [ANDREW]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: NOODLING
                 },
                 [SASHA]: {
                     popularGirl: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: POPULAR_GIRL
                     }
                 }
@@ -151,26 +139,22 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STARING
                 },
                 [MOTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ARGUING
                 },
                 [TRISTAN]: {
                     principal: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PRINCIPAL
                     }
                 }

@@ -19,9 +19,8 @@ const
     HEAD_INSPECTION_TIME = 0.05,
     HEAD_PLACEMENT_TIME = 0.1,
     FINAL_SVG_TIME = 0.05,
-    SIZE_ADJUSTMENT_TIME = 0.05,
 
-    // This works out to 6.35 hours per drawing.
+    // This works out to 6.3 hours per drawing.
     TOTAL_TIME =
         BASELINE_TIME +
         FACE_REVISION_TIME +
@@ -35,8 +34,7 @@ const
         PUPILS_TIME +
         HEAD_INSPECTION_TIME +
         HEAD_PLACEMENT_TIME +
-        FINAL_SVG_TIME +
-        SIZE_ADJUSTMENT_TIME
+        FINAL_SVG_TIME
 
 export const initialiseDrawings = (drawings, songIndex) => {
 
@@ -87,7 +85,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                     headInspection,
                     headPlacement,
                     finalSvg,
-                    sizeAdjustment,
                     instance
                 } = instanceName
 
@@ -107,7 +104,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 headInspection,
                 headPlacement,
                 finalSvg,
-                sizeAdjustment,
                 instance
             })
         }
@@ -150,7 +146,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 headInspection,
                 headPlacement,
                 finalSvg,
-                sizeAdjustment,
                 instance,
                 character
             } = role
@@ -196,9 +191,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             }
             if (!finalSvg) {
                 workedHours += FINAL_SVG_TIME
-            }
-            if (!sizeAdjustment) {
-                workedHours += SIZE_ADJUSTMENT_TIME
             }
 
             /**

@@ -43,7 +43,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PONDERING
                 }
             }
@@ -55,7 +54,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: RUBIKS_CUBE
                 }
             }
@@ -67,14 +65,12 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: COUCH_READING
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: BENNETT_KEYBOARD
                     }
                 }
@@ -87,32 +83,27 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DISTRACTED
                 },
                 [JACOB]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [MARA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SQUATTING
                 },
                 [TOMER]: {
                     shane: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: SHANE_BUYING
                     }
                 }
@@ -125,25 +116,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: EATING
                 },
                 [JACOB]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: EATING
                 },
                 [MARA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: EATING
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: EATING
                 }
             }
@@ -155,7 +142,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: HOPELESSLY_CRUSHED
                 },
                 [MIRIAM]: {
@@ -166,7 +152,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: INFANT_CURIOUS
                     }
                 }
@@ -179,7 +164,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WONDERING_BABY
                 },
                 [MIRIAM]: {
@@ -190,7 +174,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: INFANT_NURSING
                     }
                 },
@@ -199,7 +182,6 @@ export default [
                         faceRevision: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: USHER_WAITING
                     }
                 }
@@ -212,14 +194,12 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MERRILY_DERANGED
                 },
                 [HOWIE]: {
                     maskedUsher: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: USHER_LOOKING
                     }
                 }

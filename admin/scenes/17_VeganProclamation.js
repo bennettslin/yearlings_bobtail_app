@@ -34,13 +34,11 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PROTECTIVE_CONCERNED
                 },
                 [LIZ]: {
@@ -56,7 +54,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PROTECTIVE_CONCERNED
                     }
                 }
@@ -69,7 +66,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
@@ -78,13 +74,11 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GREETING
                 },
                 [TRISTAN]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GREETING
                 },
                 [NESTOR]: {
@@ -99,7 +93,6 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GREETING
                 }
             }
@@ -111,7 +104,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ALLEY
                 }
             }
@@ -123,13 +115,11 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CARESS
                 },
                 [LIZ]: {
@@ -145,7 +135,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CARESS
                     }
                 }
@@ -159,7 +148,6 @@ export default [
                     reflection: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CARESS_REFLECTION
                     }
                 },
@@ -176,7 +164,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CARESS_REFLECTION
                     }
                 }
@@ -189,14 +176,12 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DEMONSTRATION
                 },
                 [AMY]: {
                     protester: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PROTESTER
                     }
                 },
@@ -204,7 +189,6 @@ export default [
                     protester: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PROTESTER
                     }
                 },
@@ -212,7 +196,6 @@ export default [
                     protester: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PROTESTER
                     }
                 }

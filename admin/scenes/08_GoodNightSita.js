@@ -22,7 +22,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DATE_ENDING
                 },
                 [LIZ]: {
@@ -38,7 +37,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: DATE_ENDING
                     }
                 }
@@ -51,7 +49,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MUSEUM
                 },
                 [LIZ]: {
@@ -67,7 +64,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: MUSEUM
                     }
                 }
@@ -80,7 +76,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BACKSTAGE
                 },
                 [LIZ]: {
@@ -96,21 +91,18 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: BACKSTAGE
                     }
                 },
                 [KHARI]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DOUBLE_ALBERT
                 },
                 [STEPHANIE]: {
                     actor: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: FLAPPER
                     }
                 }
@@ -123,7 +115,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GO_KARTS
                 },
                 [LIZ]: {
@@ -139,7 +130,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GO_KARTS
                     }
                 }
@@ -152,7 +142,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DATE_ENDED
                 },
                 [LIZ]: {
@@ -168,7 +157,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: DATE_ENDED
                     }
                 }

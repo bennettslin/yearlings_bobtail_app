@@ -18,21 +18,18 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PANICKED
                 },
                 [BRAD]: {
                     jewishBoy: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CHARMED_SCHOOLBUS
                     }
                 },
                 [SASHA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CHARMED_SCHOOLBUS
                 }
             }
@@ -44,25 +41,21 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FEIGNING_FEAR
                 }
             }

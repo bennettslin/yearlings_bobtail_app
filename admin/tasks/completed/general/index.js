@@ -5194,7 +5194,7 @@ export default [
     },
     {
         taskName: `Some actor resizing.`,
-        workedHours: 4,
-        neededHours: 4
+        workedHours: 6,
+        neededHours: 6
     }
 ]

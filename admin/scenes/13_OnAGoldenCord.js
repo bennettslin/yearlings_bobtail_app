@@ -32,7 +32,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CORD_SIDE
                 }
             }
@@ -44,7 +43,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: AWKWARD_CONSOLATION
                 },
                 [LIZ]: {
@@ -60,7 +58,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: AWKWARD_CONSOLATION
                     }
                 }
@@ -73,14 +70,12 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CORD_REAR
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: BENNETT_DEFIANT
                     }
                 }
@@ -93,14 +88,12 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: HORSING
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: HORSING
                     }
                 },
@@ -108,7 +101,6 @@ export default [
                     officer: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: OFFICER
                     }
                 },
@@ -116,7 +108,6 @@ export default [
                     officer: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: OFFICER
                     }
                 },
@@ -124,7 +115,6 @@ export default [
                     officer: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: OFFICER
                     }
                 }
@@ -137,14 +127,12 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DRYING_TEARS
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: DRYING_TEARS
                     }
                 },
@@ -152,7 +140,6 @@ export default [
                     youngGirl: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: YOUNG_CHILD
                     }
                 },
@@ -160,7 +147,6 @@ export default [
                     youngGirl: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: YOUNG_CHILD
                     }
                 },
@@ -168,7 +154,6 @@ export default [
                     youngBoy: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: YOUNG_CHILD
                     }
                 },
@@ -176,7 +161,6 @@ export default [
                     crossingGuard: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CROSSING_GUARD
                     }
                 }

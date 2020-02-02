@@ -21,25 +21,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ABBEY_ROAD
                 }
             }
@@ -51,25 +47,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WALGREENS
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WALGREENS
                 },
                 [HOWIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WALGREENS
                 },
                 [TOMER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WALGREENS
                 }
             }
@@ -81,25 +73,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STEAM_TUNNEL
                 }
             }
@@ -111,25 +99,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CEMETERY
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CEMETERY
                 },
                 [HOWIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CEMETERY
                 },
                 [TOMER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CEMETERY
                 }
             }
@@ -141,25 +125,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STATION_WAGON
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STATION_WAGON
                 }
             }
@@ -171,13 +151,11 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ATTIC
                 },
                 [HOWIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ATTIC
                 }
             }

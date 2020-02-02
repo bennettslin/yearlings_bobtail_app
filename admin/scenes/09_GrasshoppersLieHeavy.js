@@ -35,7 +35,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DISHROOM_READING
                 }
             }
@@ -47,7 +46,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DISHROOM_LANCET
                 },
                 [LIZ]: {
@@ -63,7 +61,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: DISHROOM_LANCET
                     }
                 }
@@ -76,7 +73,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MOP_SOPPED
                 },
                 [NESTOR]: {
@@ -92,7 +88,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: JOGGER
                     }
                 }
@@ -105,7 +100,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GATE_CODE
                 },
                 [LIZ]: {
@@ -121,7 +115,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GATE_CODE
                     }
                 }
@@ -134,7 +127,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GINGERBREAD_PRISON
                 },
                 [LIZ]: {
@@ -150,7 +142,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GINGERBREAD_PRISON
                     }
                 }
@@ -163,7 +154,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: RUMPLED_LINENS
                 },
                 [LIZ]: {
@@ -179,7 +169,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: RUMPLED_LINENS
                     }
                 }
@@ -192,7 +181,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WAITING_ROOM_ASLEEP
                 }
             }
@@ -204,7 +192,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CHEEK_UNVEILED
                 },
                 [LIZ]: {
@@ -220,7 +207,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CHEEK_UNVEILED
                     }
                 }
@@ -233,7 +219,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: HARD_ON
                 },
                 [LIZ]: {
@@ -249,7 +234,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: HARD_ON
                     }
                 }
@@ -263,7 +247,6 @@ export default [
                     reflection: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: HARD_ON_REFLECTION
                     }
                 },
@@ -280,7 +263,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: HARD_ON_REFLECTION
                     }
                 }
@@ -293,7 +275,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MISSIONARY
                 },
                 [LIZ]: {
@@ -309,7 +290,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: MISSIONARY
                     }
                 }
@@ -323,7 +303,6 @@ export default [
                     reflection: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: MISSIONARY_REFLECTION
                     }
                 },
@@ -340,7 +319,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: MISSIONARY_REFLECTION
                     }
                 }
@@ -353,7 +331,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: AFTERGLOW
                 },
                 [LIZ]: {
@@ -369,7 +346,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: AFTERGLOW
                     }
                 }
@@ -383,7 +359,6 @@ export default [
                     reflection: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: AFTERGLOW_REFLECTION
                     }
                 },
@@ -400,7 +375,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: AFTERGLOW_REFLECTION
                     }
                 }

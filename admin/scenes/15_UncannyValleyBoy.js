@@ -43,33 +43,28 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ACCUSATORY
                 },
                 [ESTHER]: {
                     youngSita: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: HURT_CONSOLING
                     }
                 },
                 [MOTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: HURT_CONSOLING
                 }
             }
@@ -81,25 +76,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PAST
                 },
                 [FATHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PAST
                 },
                 [SASHA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: COMFORTING_HUMILIATED
                 }
             }
@@ -111,19 +102,16 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PRESENT
                 },
                 [FATHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PRESENT
                 },
                 [MOTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PRESENT
                 },
                 [MIRIAM]: {
@@ -132,14 +120,12 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MISCHIEVOUS_BANJO
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: MISCHIEVOUS_BANJO
                     }
                 }
@@ -152,33 +138,28 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FUTURE
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: BENNETT_RECORDING
                     }
                 },
                 [MOTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FUTURE
                 },
                 [FATHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FUTURE
                 },
                 [KHARI]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: JOKING_LAUGHING
                 },
                 [LIZ]: {
@@ -194,7 +175,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: JOKING_LAUGHING
                     }
                 }
@@ -210,33 +190,28 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: REELING
                 },
                 [ESTHER]: {
                     youngSita: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: SOBBING_SHIELDING
                     }
                 },
                 [MOTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SOBBING_SHIELDING
                 }
             }

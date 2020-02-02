@@ -21,7 +21,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MAT
                 }
             }
@@ -33,7 +32,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STAIRS
                 }
             }
@@ -45,7 +43,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GATE
                 }
             }
@@ -57,7 +54,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: RICKSHAW
                 }
             }
@@ -69,7 +65,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SHORE
                 }
             }
@@ -81,7 +76,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BUOY
                 }
             }
@@ -94,14 +88,12 @@ export default [
                     mermaid: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: MERMAID
                     }
                 },
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MERMAID
                 }
             }
@@ -113,7 +105,6 @@ export default [
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: OCEAN_FLOOR
                 }
             }

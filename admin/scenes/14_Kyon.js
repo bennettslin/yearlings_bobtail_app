@@ -35,7 +35,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PETTING_SEATED
                     }
                 }
@@ -58,7 +57,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PETTING_STANDING
                     }
                 }
@@ -81,7 +79,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
@@ -104,14 +101,12 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: OPENING_DOOR
                     }
                 },
                 [KHARI]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ARRIVED
                 }
             }
@@ -133,14 +128,12 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: DEFENDING
                     }
                 },
                 [KHARI]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: JUDGMENTAL
                 }
             }
@@ -162,14 +155,12 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: NOT_HUNGRY
                     }
                 },
                 [KHARI]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CONCERNED
                 }
             }
@@ -191,7 +182,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: ASLEEP_COUCH
                     }
                 }

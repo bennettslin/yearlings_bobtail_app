@@ -9,7 +9,6 @@ export default [
                 [OLD_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PROLOGUE
                 }
             }

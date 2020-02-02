@@ -39,39 +39,33 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PERFORMING
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PERFORMING
                 },
                 [TOMER]: {
                     shane: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: SHANE_SPILLING
                     }
                 },
                 [WADE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WATCHING
                 },
                 [AMY]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SQUEEZING
                 }
             }
@@ -83,25 +77,21 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [AMY]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FLIRTING
                 },
                 [JACOB]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CARRYING
                 },
                 [MARA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CARRYING
                 }
             }
@@ -113,37 +103,31 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WAITING
                 },
                 [MARA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: WAITING
                 },
                 [AMY]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MINGLING
                 },
                 [WADE]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: MINGLING
                 }
             }
@@ -155,7 +139,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: REMOVING_SHOES
                 },
                 [LIZ]: {
@@ -171,7 +154,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: ASLEEP_REACHING
                     }
                 }
@@ -185,7 +167,6 @@ export default [
                     reflection: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: SHOES_REFLECTION
                     }
                 },
@@ -202,7 +183,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: REACHING_REFLECTION
                     }
                 }

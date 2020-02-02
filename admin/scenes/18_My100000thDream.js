@@ -28,7 +28,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: EL_TORITO
                 },
                 [LIZ]: {
@@ -44,7 +43,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: EL_TORITO
                     }
                 }
@@ -57,7 +55,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PAMPAS
                 },
                 [LIZ]: {
@@ -73,7 +70,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: PAMPAS
                     }
                 },
@@ -81,7 +77,6 @@ export default [
                     gopi: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GOPI
                     }
                 },
@@ -89,7 +84,6 @@ export default [
                     gopi: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GOPI
                     }
                 },
@@ -100,7 +94,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GOPI
                     }
                 }
@@ -113,7 +106,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GETTING_DARK
                 },
                 [LIZ]: {
@@ -129,7 +121,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GETTING_DARK
                     }
                 }
@@ -142,7 +133,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CLIFF
                 },
                 [LIZ]: {
@@ -158,7 +148,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: CLIFF
                     }
                 }
@@ -171,7 +160,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FINAL_DREAM
                 },
                 [LIZ]: {
@@ -187,7 +175,6 @@ export default [
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: FINAL_DREAM
                     }
                 },
@@ -195,7 +182,6 @@ export default [
                     doctor: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: DOCTOR
                     }
                 }

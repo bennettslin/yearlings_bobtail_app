@@ -25,7 +25,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
@@ -34,7 +33,6 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PERFUMING
                 }
             }
@@ -49,13 +47,11 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: COWGIRL
                 },
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: COWGIRL
                 }
             }
@@ -70,13 +66,11 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BLOWJOB
                 }
             }
@@ -88,7 +82,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: INFIRM
                 }
             }
@@ -103,7 +96,6 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: TENNIS
                 }
             }
@@ -115,7 +107,6 @@ export default [
                 [BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {
@@ -124,7 +115,6 @@ export default [
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: REVERSING
                 }
             }

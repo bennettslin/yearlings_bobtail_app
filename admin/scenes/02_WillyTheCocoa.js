@@ -36,7 +36,6 @@ export default [
                 [WILLY]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: COLLECTING
                 }
             }
@@ -48,25 +47,21 @@ export default [
                 [WILLY]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: DUCKING
                 },
                 [MOTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CAUTIOUS
                 }
             }
@@ -78,19 +73,16 @@ export default [
                 [FATHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: ENRAGED
                 }
             }
@@ -103,21 +95,18 @@ export default [
                     gangbanger: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GANGBANGER
                     }
                 },
                 [WILLY]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: GANGBANGER
                 },
                 [TOMER]: {
                     gangbanger: {
                         headPlacement: true,
                         finalSvg: true,
-                        sizeAdjustment: true,
                         instance: GANGBANGER
                     }
                 }
@@ -130,13 +119,11 @@ export default [
                 [MOTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FEARFUL
                 }
             }
@@ -148,19 +135,16 @@ export default [
                 [CHRISTOPHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: REASSURING_ENCHANTED
                 }
             }

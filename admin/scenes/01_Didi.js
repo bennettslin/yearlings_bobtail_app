@@ -27,19 +27,16 @@ export default [
                 [ESTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CURIOUS
                 },
                 [ANITA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: PANICKED
                 }
             }
@@ -51,19 +48,16 @@ export default [
                 [ANITA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CONCERNED
                 },
                 [ESTHER]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: FLUSTERED
                 }
             }
@@ -75,7 +69,6 @@ export default [
                 [YOUNG_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: BATHING
                 }
             }
@@ -87,13 +80,11 @@ export default [
                 [ANITA]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
                     headPlacement: true,
                     finalSvg: true,
-                    sizeAdjustment: true,
                     instance: SINGING
                 }
             }
