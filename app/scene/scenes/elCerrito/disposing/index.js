@@ -8,14 +8,15 @@ import { REVERSING } from 'constants/scene/actors/miriam'
 export default {
     [BENNETT]: {
         [DISPOSING_CONDOM]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 3
         }
     },
     [MIRIAM]: {
         [REVERSING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 4.25,
+            zOffset: 1
         }
     }
 }

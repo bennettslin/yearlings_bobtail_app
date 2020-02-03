@@ -4,8 +4,9 @@ import { BLOWJOB } from 'constants/scene/actors/miriamBennett'
 export default {
     [MIRIAM_BENNETT]: {
         [BLOWJOB]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 2.5,
+            zOffset: -1
         }
     }
 }

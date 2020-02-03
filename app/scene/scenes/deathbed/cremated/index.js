@@ -9,7 +9,7 @@ export default {
     [BENNETT]: {
         [INFIRM]: {
             yIndex: 3,
-            xPosition: 2.5
+            xPosition: 3
         }
     },
     [MIRIAM]: {

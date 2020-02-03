@@ -18,7 +18,4 @@ ocean waves panel
 
 extend bancroft gate by one
 
-Sizing check
-Bennett with Father
-Esther with Mother
-awkwardConsolation
+Figure out Cremated scenes with convertible panel

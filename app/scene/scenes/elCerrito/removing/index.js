@@ -8,14 +8,15 @@ import { PERFUMING } from 'constants/scene/actors/miriam'
 export default {
     [BENNETT]: {
         [REMOVING_PANTS]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 3
         }
     },
     [MIRIAM]: {
         [PERFUMING]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 4.25,
+            zOffset: 0.75
         }
     }
 }
