@@ -4,8 +4,8 @@ import { CLIFF } from '../../../constants/scene/actors/bennettLiz'
 export default {
     [BENNETT_LIZ]: {
         [CLIFF]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 6
         }
     }
 }

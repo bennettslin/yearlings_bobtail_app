@@ -7,14 +7,14 @@ import { EL_TORITO } from '../../../constants/scene/actors/songs'
 export default {
     [BENNETT]: {
         [EL_TORITO]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 3
         }
     },
     [LIZ]: {
         [EL_TORITO]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 7
         }
     }
 }

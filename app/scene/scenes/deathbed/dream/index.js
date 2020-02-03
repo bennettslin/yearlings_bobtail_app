@@ -8,8 +8,9 @@ import { FINAL_DREAM } from 'constants/scene/actors/bennettLiz'
 export default {
     [BENNETT_LIZ]: {
         [FINAL_DREAM]: {
-            yIndex: 3,
-            xPosition: 11
+            yIndex: 4,
+            xPosition: 9,
+            zOffset: -1.5
         }
     },
     [AMY]: {
