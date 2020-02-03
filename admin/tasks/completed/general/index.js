@@ -5179,8 +5179,8 @@ export default [
     },
     {
         taskName: `Actor arrangements.`,
-        workedHours: 4,
-        neededHours: 4
+        workedHours: 6,
+        neededHours: 6
     },
     {
         taskName: `Redo female lip colours.`,

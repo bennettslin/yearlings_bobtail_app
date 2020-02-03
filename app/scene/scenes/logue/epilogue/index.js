@@ -28,133 +28,133 @@ export default {
     [BENNETTS_CHRISTOPHER_LIZ]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [ANITA_BENNETT]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [ESTHER]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [WILLY]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [MOTHER]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [FATHER]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            xPosition: 5
         }
     },
     [SASHA_BENNETT]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 1.25
         }
     },
-    [BRAD]: {
+    [ANITA_BENNETT]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 8.5
         }
     },
-    [ANDREW]: {
+    [ESTHER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 5.5
+            xPosition: 10.25
         }
     },
     [CATHERINE]: {
         [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 7.75
         }
     },
     [MARA]: {
         [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [JACOB]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [ANA]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [HOWIE]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [TOMER]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [KHARI]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 0.75
         }
     },
     [MIRIAM]: {
         [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 2.25
         }
     },
-    [TRISTAN]: {
+    [BRAD]: {
         [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 9
         }
     },
-    [NESTOR]: {
+    [ANDREW]: {
         [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
-        }
-    },
-    [AMY]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 4,
+            xPosition: 10.5
         }
     },
     [STEPHANIE]: {
         [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 3,
+            xPosition: 1
+        }
+    },
+    [AMY]: {
+        [EPILOGUE]: {
+            yIndex: 3,
+            xPosition: 2.5
+        }
+    },
+    [TOMER]: {
+        [EPILOGUE]: {
+            yIndex: 3,
+            xPosition: 4.5
+        }
+    },
+    [NESTOR]: {
+        [EPILOGUE]: {
+            yIndex: 3,
+            xPosition: 5.75
+        }
+    },
+    [WILLY]: {
+        [EPILOGUE]: {
+            yIndex: 3,
+            xPosition: 7.5
+        }
+    },
+    [MOTHER]: {
+        [EPILOGUE]: {
+            yIndex: 3,
+            xPosition: 9
+        }
+    },
+    [FATHER]: {
+        [EPILOGUE]: {
+            yIndex: 3,
+            xPosition: 10
+        }
+    },
+    [JACOB]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 6.75
+        }
+    },
+    [HOWIE]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 5
+        }
+    },
+    [ANA]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 8.25
+        }
+    },
+    [KHARI]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 2.75
+        }
+    },
+    [TRISTAN]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 10
         }
     },
     [WADE]: {
         [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 5.5
+            yIndex: 2,
+            xPosition: 1
         }
     }
 }
