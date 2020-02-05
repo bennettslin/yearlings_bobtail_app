@@ -5196,5 +5196,10 @@ export default [
         taskName: `Some actor resizing.`,
         workedHours: 6,
         neededHours: 6
+    },
+    {
+        taskName: `Ana face corrections.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
