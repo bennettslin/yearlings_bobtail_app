@@ -186,13 +186,15 @@ class PreviewerSvg extends PureComponent {
                             'Presence',
                             'Presence__visible',
                             showKilobytes && 'Presence__kilobytes',
-                            capitaliseForClassName(presenceType),
-                            getSharedClassNames(sharedStyle)
+                            capitaliseForClassName(isActor ? ACTOR : presenceType)
                         ),
                         style: {
                             height: `${adjustedHeight.toFixed(2)}%`
                         },
-                        svgClassName: convertPresenceKeyToClassName(presenceKey),
+                        svgClassName: cx(
+                            convertPresenceKeyToClassName(presenceKey),
+                            getSharedClassNames(sharedStyle)
+                        ),
                         title: convertPresenceKeyToTitle(presenceKey),
                         preProcessor: this.processSvg
                     }}
