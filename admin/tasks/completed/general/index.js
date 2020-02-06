@@ -5201,5 +5201,10 @@ export default [
         taskName: `Ana face corrections.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Hook up shared actor styling.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

@@ -24,8 +24,6 @@ import {
     BRAD,
     BRAD_BENNETT,
     BRAD_SASHA,
-    ANDREW,
-    CATHERINE,
     MARA,
     JACOB,
     JACOB_MARA,
@@ -47,7 +45,6 @@ import {
     AMY_STEPHANIE,
     AMY_NESTOR_TOMER,
     STEPHANIE,
-    WADE,
     BENNETT_REFLECTION,
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
@@ -57,54 +54,29 @@ import {
 const STYLED_ACTOR_MAP = {
     [YOUNG_BENNETT]: BENNETT,
     [PRETEEN_BENNETT]: BENNETT,
-    [BENNETT]: BENNETT,
     [BENNETT_FATHER]: [BENNETT, FATHER],
     [BENNETT_LIZ]: [BENNETT, LIZ],
     [BENNETT_STEPHANIE]: [BENNETT, STEPHANIE],
     [BENNETTS_CHRISTOPHER_LIZ]: [BENNETT, OLD_BENNETT, CHRISTOPHER, LIZ],
-    [OLD_BENNETT]: OLD_BENNETT,
-    [ANITA]: ANITA,
     [ANITA_BENNETT]: [ANITA, BENNETT],
-    [ESTHER]: ESTHER,
     [ESTHER_MOTHER]: [ESTHER, MOTHER],
-    [WILLY]: WILLY,
-    [MOTHER]: MOTHER,
-    [FATHER]: FATHER,
-    [CHRISTOPHER]: CHRISTOPHER,
     [CHRISTOPHER_BENNETT]: [CHRISTOPHER, BENNETT],
     [CHRISTOPHER_BENNETT_WILLY]: [CHRISTOPHER, BENNETT, WILLY],
-    [SASHA]: SASHA,
     [SASHA_BENNETT]: [SASHA, BENNETT],
-    [BRAD]: BRAD,
     [BRAD_BENNETT]: [BRAD, BENNETT],
     [BRAD_SASHA]: [BRAD, SASHA],
-    [ANDREW]: ANDREW,
-    [CATHERINE]: CATHERINE,
-    [MARA]: MARA,
-    [JACOB]: JACOB,
     [JACOB_MARA]: [JACOB, MARA],
-    [ANA]: ANA,
     [ANA_HOWIE]: [ANA, HOWIE],
-    [HOWIE]: HOWIE,
     [HOWIE_WILLY]: [HOWIE, WILLY],
-    [TOMER]: TOMER,
-    [LIZ]: LIZ,
-    [KHARI]: KHARI,
     [KHARI_LIZ]: [KHARI, LIZ],
-    [MIRIAM]: MIRIAM,
     [MIRIAM_BENNETT]: [MIRIAM, BENNETT],
     [MIRIAM_STEPHANIE]: [MIRIAM, STEPHANIE],
     [MIRIAM_TRISTAN]: [MIRIAM, TRISTAN],
-    [TRISTAN]: TRISTAN,
-    [NESTOR]: NESTOR,
-    [AMY]: AMY,
     [AMY_STEPHANIE]: [AMY, STEPHANIE],
     [AMY_NESTOR_TOMER]: [AMY, NESTOR, TOMER],
-    [STEPHANIE]: STEPHANIE,
-    [WADE]: WADE,
-    [BENNETT_REFLECTION]: [BENNETT],
+    [BENNETT_REFLECTION]: BENNETT,
     [BENNETT_LIZ_REFLECTION]: [BENNETT, LIZ],
-    [LIZ_REFLECTION]: [LIZ],
+    [LIZ_REFLECTION]: LIZ,
     [KHARI_LIZ_REFLECTION]: [KHARI, LIZ]
 }
 
@@ -121,19 +93,21 @@ const addStyleToSharedStyle = (sharedStyle, addedStyle) => {
     return sharedStyle
 }
 
-export const getGlobalActorStyle = (actor, sharedStyle) => {
-    const styledActors = STYLED_ACTOR_MAP[actor]
+const getStyledActorOrActors = actor => STYLED_ACTOR_MAP[actor] || actor
+
+export const getCompoundActorStyleIfNeeded = (actor, sharedStyle) => {
+    const styledActorOrActors = getStyledActorOrActors(actor)
 
     // This is the whole actor.
-    if (isString(styledActors)) {
+    if (isString(styledActorOrActors)) {
         return addStyleToSharedStyle(
             sharedStyle,
-            STYLED_ACTOR_MAP[styledActors]
+            getStyledActorOrActors(styledActorOrActors)
         )
     }
 
-    // This is a compound actor or reflection.
-    return styledActors.reduce((finalStyle, styledActor) => {
+    // This is a compound actor.
+    return styledActorOrActors.reduce((finalStyle, styledActor) => {
         return addStyleToSharedStyle(finalStyle, styledActor)
     }, sharedStyle)
 }

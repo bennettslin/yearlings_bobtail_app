@@ -1,3 +1,5 @@
+import isString from 'lodash/isstring'
+
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
 import bennett from './bennett'
@@ -51,6 +53,11 @@ import lizReflection from './lizReflection'
 import khariLizReflection from './khariLizReflection'
 
 import {
+    ALL_CLOTHING__SHARED,
+    ALL_PEOPLE__SHARED
+} from '../../sharedStyles/people'
+
+import {
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
@@ -102,9 +109,9 @@ import {
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION
-} from '../../constants/scene/actors'
+} from 'constants/scene/actors'
 
-export default {
+const SHARED_STYLES_MAP = {
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
@@ -156,4 +163,26 @@ export default {
     [BENNETT_LIZ_REFLECTION]: bennettLizReflection,
     [LIZ_REFLECTION]: lizReflection,
     [KHARI_LIZ_REFLECTION]: khariLizReflection
+}
+
+const ALL_SHARED = [
+    ALL_CLOTHING__SHARED,
+    ALL_PEOPLE__SHARED
+]
+
+export const getSharedStyleForActor = ({
+    actorKey,
+    presenceKey
+}) => {
+    const sharedStyle = SHARED_STYLES_MAP[actorKey][presenceKey]
+
+    if (!sharedStyle) {
+        return ALL_SHARED
+    }
+
+    if (isString(sharedStyle)) {
+        return [...ALL_SHARED, sharedStyle]
+    }
+
+    return [...ALL_SHARED, ...sharedStyle]
 }

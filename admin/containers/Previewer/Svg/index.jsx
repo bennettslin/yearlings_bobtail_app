@@ -13,6 +13,7 @@ import {
     getSharedClassNames
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
+import { getSharedStyleForActor } from 'scene/sharedConfigs/actors'
 import { getSharedStyleForThing } from 'scene/sharedConfigs/things'
 
 import {
@@ -24,7 +25,7 @@ import {
     getViewBoxSize,
     getSizeForPresence
 } from 'modules/PresenceSvg/helper/size'
-import { getGlobalActorStyle } from 'modules/PresenceSvg/helper/sharedStyle'
+import { getCompoundActorStyleIfNeeded } from 'modules/PresenceSvg/helper/sharedStyle'
 
 import { ACTOR } from 'constants/scene'
 import { WHOLE_ACTOR_INSTANCES } from '../../../constants/actors'
@@ -134,22 +135,24 @@ class PreviewerSvg extends PureComponent {
     }
 
     getSharedStyle() {
-        const
-            {
-                isActor,
-                presenceType,
-                presenceKey
-            } = this.props,
-            { sharedStyle } = this.getArrangement()
+        const {
+            isActor,
+            presenceType,
+            presenceKey
+        } = this.props
 
         if (isActor) {
-            const customType = this.getCustomType()
-            return getGlobalActorStyle(customType, sharedStyle)
+            return getCompoundActorStyleIfNeeded(
+                this.getCustomType(),
+                getSharedStyleForActor({
+                    actorKey: presenceType,
+                    presenceKey
+                })
+            )
 
         } else {
-            const customType = this.getCustomType()
             return getSharedStyleForThing({
-                presenceType: customType || presenceType,
+                presenceType: this.getCustomType() || presenceType,
                 presenceKey
             })
         }

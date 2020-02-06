@@ -8,10 +8,11 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from 'helpers/format'
+import { getSharedStyleForActor } from '../../scene/sharedConfigs/actors'
 import { getSharedStyleForThing } from '../../scene/sharedConfigs/things'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
-import { getGlobalActorStyle } from './helper/sharedStyle'
+import { getCompoundActorStyleIfNeeded } from './helper/sharedStyle'
 import {
     getSizeForPresence,
     getViewBoxSize
@@ -173,22 +174,23 @@ class PresenceSvg extends PureComponent {
 
     getSharedStyle() {
         const {
-                actorKey,
-                presenceType,
-                presenceKey
-            } = this.props,
-            {
-                sharedStyle,
-                sharedStyleKey
-            } = this.getArrangement()
+            actorKey,
+            presenceType,
+            presenceKey
+        } = this.props
 
         if (actorKey) {
-            return getGlobalActorStyle(actorKey, sharedStyle)
+            return getCompoundActorStyleIfNeeded(
+                actorKey,
+                getSharedStyleForActor({
+                    actorKey,
+                    presenceKey
+                })
+            )
         } else {
             return getSharedStyleForThing({
                 presenceType,
-                presenceKey,
-                sharedStyleKey
+                presenceKey
             })
         }
     }
