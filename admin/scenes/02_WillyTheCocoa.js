@@ -105,8 +105,6 @@ export default [
                 },
                 [TOMER]: {
                     gangbanger: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GANGBANGER
                     }
                 }

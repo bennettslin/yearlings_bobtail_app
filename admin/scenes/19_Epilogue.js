@@ -112,8 +112,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TOMER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'6"`,
                     instance: EPILOGUE
                 },

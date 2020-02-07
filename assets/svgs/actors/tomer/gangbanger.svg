@@ -152,7 +152,7 @@
             <ellipse cx="564.25" cy="273.26" rx="22.95" ry="14.84" transform="translate(148.38 742.42) rotate(-74.29)"/>
         </g>
         <g class="pupil">
-            <ellipse cx="681.78" cy="309.45" rx="8.93" ry="6.91" transform="translate(199.24 881.94) rotate(-74.29)"/>
+            <ellipse cx="681.78" cy="309.45" rx="8.93" ry="6.91" transform="matrix(0.27, -0.96, 0.96, 0.27, 199.24, 881.94)"/>
             <ellipse cx="560.14" cy="272.1" rx="8.92" ry="5.77" transform="translate(146.5 737.61) rotate(-74.29)"/>
         </g>
     </g>

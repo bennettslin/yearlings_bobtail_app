@@ -7,6 +7,18 @@
     &.gangbanger {
         .shorts { fill: hsl(41, 19%, 54%); }
         .shoe { fill: hsl(210, 7%, 56%); }
+
+        .wineBottleSide { fill: hsla(161, 19%, 64%, 0.6); }
+        .wineBottleBottom { fill: hsla(161, 14%, 58%, 0.3); }
+        .wineLabel { fill: hsl(235, 24%, 59%); }
+        .wineLabelReverse { fill: hsl(235, 33%, 81%); }
+    }
+
+    &.steamTunnel {
+        .broomHandle { fill: hsl(30, 22%, 63%); }
+        .bundleDark { fill: hsl(68, 16%, 60%); }
+        .bundleLight { fill: hsl(68, 23%, 69%); }
+        .string { fill: hsl(12, 41%, 56%); }
     }
 }
 
@@ -15,4 +27,8 @@
     .shaneShorts { fill: hsl(352, 19%, 53%); }
     .shaneSockStripe { fill: hsl(36, 49%, 59%); }
     .shaneShoe { fill: hsl(215, 20%, 50%); }
+
+    .outline { fill: hsl(40, 30%, 86%); }
+    .horseshoe { fill: hsl(41, 27%, 48%); }
+    .horseshoeRidge { fill: hsl(41, 27%, 42%); }
 }

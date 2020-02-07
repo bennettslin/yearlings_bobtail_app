@@ -34,8 +34,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ABBEY_ROAD
                 }
             }
@@ -60,8 +58,6 @@ export default [
                     instance: WALGREENS
                 },
                 [TOMER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WALGREENS
                 }
             }
@@ -86,8 +82,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STEAM_TUNNEL
                 }
             }
@@ -112,8 +106,6 @@ export default [
                     instance: CEMETERY
                 },
                 [TOMER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CEMETERY
                 }
             }
@@ -138,8 +130,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STATION_WAGON
                 }
             }

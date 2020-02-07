@@ -102,8 +102,6 @@ export default [
                 },
                 [TOMER]: {
                     shane: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: SHANE_BUYING
                     }
                 }

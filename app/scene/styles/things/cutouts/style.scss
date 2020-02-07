@@ -130,10 +130,10 @@
 }
 
 .museumDisplay {
-    .case { fill: #969674; }
-    .displayBack { fill: #ffc; }
-    .displayInnerDark { fill: #adad86; }
-    .displayInnerLight { fill: #c7c79a; }
+    .case { fill: hsl(60, 14%, 52%); }
+    .displayBack { fill: hsl(60, 100%, 90%); }
+    .displayInnerDark { fill: hsl(60, 19%, 60%); }
+    .displayInnerLight { fill: hsl(60, 29%, 69%); }
     .land { fill: hsl(30, 50%, 60%); }
     .routes { fill: hsl(0, 50%, 60%); }
     .oar { fill: hsl(30, 50%, 40%); }

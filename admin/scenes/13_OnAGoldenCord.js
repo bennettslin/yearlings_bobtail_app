@@ -106,15 +106,11 @@ export default [
                 },
                 [NESTOR]: {
                     officer: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: OFFICER
                     }
                 },
                 [TOMER]: {
                     officer: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: OFFICER
                     }
                 }
