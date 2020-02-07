@@ -14,8 +14,8 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [JOGGER]: jogger,
     [INJURED]: injured,
     [GREETING]: greeting,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
+    [JOGGER]: jogger
 }

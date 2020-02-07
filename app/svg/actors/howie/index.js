@@ -22,12 +22,12 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [USHER_WAITING]: usherWaiting,
-    [USHER_LOOKING]: usherLooking,
     [ABBEY_ROAD]: abbeyRoad,
     [WALGREENS]: walgreens,
     [STEAM_TUNNEL]: steamTunnel,
     [STATION_WAGON]: stationWagon,
     [ATTIC]: attic,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
+    [USHER_WAITING]: usherWaiting,
+    [USHER_LOOKING]: usherLooking
 }

@@ -5,7 +5,7 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [CARRYING]: null,
     [FLIRTING]: null,
+    [CARRYING]: null,
     [EPILOGUE]: null
 }

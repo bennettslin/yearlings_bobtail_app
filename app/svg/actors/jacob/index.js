@@ -9,7 +9,7 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [CARRYING]: carrying,
     [FLIRTING]: flirting,
+    [CARRYING]: carrying,
     [EPILOGUE]: epilogue
 }

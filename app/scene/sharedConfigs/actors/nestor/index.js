@@ -9,8 +9,8 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [JOGGER]: null,
     [INJURED]: null,
     [GREETING]: null,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
+    [JOGGER]: null
 }

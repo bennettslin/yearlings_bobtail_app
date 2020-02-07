@@ -1,22 +1,9 @@
-import {
-    NESTOR,
-    AMY_NESTOR_TOMER
-} from 'constants/scene/actors'
-import {
-    JOGGER,
-    INJURED
-} from 'constants/scene/actors/nestor'
+import { NESTOR, AMY_NESTOR_TOMER } from 'constants/scene/actors'
+import { JOGGER, INJURED } from 'constants/scene/actors/nestor'
 import { OFFICER } from 'constants/scene/actors/amyNestorTomer'
-import {
-    GREETING,
-    EPILOGUE
-} from 'constants/scene/actors/songs'
+import { GREETING, EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
-    {
-        type: NESTOR,
-        instance: JOGGER
-    },
     {
         type: NESTOR,
         instance: INJURED
@@ -28,6 +15,10 @@ const INSTANCES = [
     {
         type: NESTOR,
         instance: EPILOGUE
+    },
+    {
+        type: NESTOR,
+        instance: JOGGER
     },
     {
         type: AMY_NESTOR_TOMER,
