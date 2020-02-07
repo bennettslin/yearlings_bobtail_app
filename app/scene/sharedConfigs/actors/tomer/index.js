@@ -13,14 +13,26 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import {
+    EVIAN__SHARED,
+    GARBAGE_BAG__SHARED,
+    HEINEKEN__SHARED,
+    ROBITUSSIN__SHARED
+} from '../../../sharedStyles/food'
+
+import { SHANE__SHARED } from '../../../sharedStyles/people'
+
 export default {
-    [GANGBANGER]: null,
-    [SHANE_BUYING]: null,
     [ABBEY_ROAD]: null,
-    [WALGREENS]: null,
+    [WALGREENS]: ROBITUSSIN__SHARED,
     [STEAM_TUNNEL]: null,
-    [CEMETERY]: null,
+    [CEMETERY]: EVIAN__SHARED,
     [STATION_WAGON]: null,
-    [SHANE_SPILLING]: null,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
+    [GANGBANGER]: GARBAGE_BAG__SHARED,
+    [SHANE_BUYING]: SHANE__SHARED,
+    [SHANE_SPILLING]: [
+        SHANE__SHARED,
+        HEINEKEN__SHARED
+    ]
 }

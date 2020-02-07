@@ -189,7 +189,8 @@ class PreviewerSvg extends PureComponent {
                             'Presence',
                             'Presence__visible',
                             showKilobytes && 'Presence__kilobytes',
-                            capitaliseForClassName(isActor ? ACTOR : presenceType)
+                            isActor && capitaliseForClassName(ACTOR),
+                            capitaliseForClassName(presenceType)
                         ),
                         style: {
                             height: `${adjustedHeight.toFixed(2)}%`
