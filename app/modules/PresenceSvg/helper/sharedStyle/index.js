@@ -89,8 +89,7 @@ const addStyleToSharedStyle = (sharedStyle, addedStyle) => {
         return [sharedStyle, addedStyle]
     }
 
-    sharedStyle.push(addedStyle)
-    return sharedStyle
+    return [...sharedStyle, addedStyle]
 }
 
 const getStyledActorOrActors = actor => STYLED_ACTOR_MAP[actor] || actor

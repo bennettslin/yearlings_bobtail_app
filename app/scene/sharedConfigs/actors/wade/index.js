@@ -10,11 +10,12 @@ import {
 } from 'constants/scene/actors/songs'
 
 import { BUDWEISER__SHARED } from '../../../sharedStyles/food'
+import { BOOK__SHARED } from '../../../sharedStyles/paper'
 
 export default {
-    [CATHOLIC_GUY]: null,
     [WATCHING]: BUDWEISER__SHARED,
     [MINGLING]: BUDWEISER__SHARED,
-    [PROTESTER]: null,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
+    [CATHOLIC_GUY]: null,
+    [PROTESTER]: BOOK__SHARED
 }

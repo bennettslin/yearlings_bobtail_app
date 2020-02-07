@@ -177,7 +177,7 @@ export const getSharedStyleForActor = ({
     const sharedStyle = SHARED_STYLES_MAP[actorKey][presenceKey]
 
     if (!sharedStyle) {
-        return ALL_SHARED
+        return [...ALL_SHARED]
     }
 
     if (isString(sharedStyle)) {

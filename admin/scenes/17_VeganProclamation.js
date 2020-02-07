@@ -194,8 +194,6 @@ export default [
                 },
                 [WADE]: {
                     protester: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: PROTESTER
                     }
                 }

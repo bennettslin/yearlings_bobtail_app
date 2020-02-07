@@ -154,8 +154,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WADE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'10"`,
                     instance: EPILOGUE
                 },

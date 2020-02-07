@@ -54,8 +54,6 @@ export default [
                     }
                 },
                 [WADE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WATCHING
                 },
                 [AMY]: {
@@ -126,8 +124,6 @@ export default [
                     instance: MINGLING
                 },
                 [WADE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MINGLING
                 }
             }

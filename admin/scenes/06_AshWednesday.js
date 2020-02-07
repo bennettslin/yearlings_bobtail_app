@@ -74,8 +74,6 @@ export default [
                 },
                 [WADE]: {
                     catholic: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CATHOLIC_GUY
                     }
                 },

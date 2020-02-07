@@ -14,10 +14,6 @@ import {
 const INSTANCES = [
     {
         type: WADE,
-        instance: CATHOLIC_GUY
-    },
-    {
-        type: WADE,
         instance: WATCHING
     },
     {
@@ -27,6 +23,10 @@ const INSTANCES = [
     {
         type: WADE,
         instance: EPILOGUE
+    },
+    {
+        type: WADE,
+        instance: CATHOLIC_GUY
     },
     {
         type: WADE,
