@@ -5204,7 +5204,7 @@ export default [
     },
     {
         taskName: `Hook up shared actor styling.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 4,
+        neededHours: 4
     }
 ]
