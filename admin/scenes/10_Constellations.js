@@ -29,8 +29,6 @@ export default [
                     instance: ABBEY_ROAD
                 },
                 [HOWIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ABBEY_ROAD
                 },
                 [TOMER]: {
@@ -53,8 +51,6 @@ export default [
                     instance: WALGREENS
                 },
                 [HOWIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WALGREENS
                 },
                 [TOMER]: {
@@ -77,8 +73,6 @@ export default [
                     instance: STEAM_TUNNEL
                 },
                 [HOWIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STEAM_TUNNEL
                 },
                 [TOMER]: {
@@ -101,8 +95,6 @@ export default [
                     instance: CEMETERY
                 },
                 [HOWIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CEMETERY
                 },
                 [TOMER]: {
@@ -125,8 +117,6 @@ export default [
                     instance: STATION_WAGON
                 },
                 [HOWIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STATION_WAGON
                 },
                 [TOMER]: {
@@ -144,8 +134,6 @@ export default [
                     instance: ATTIC
                 },
                 [HOWIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ATTIC
                 }
             }

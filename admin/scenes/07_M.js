@@ -192,8 +192,6 @@ export default [
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: USHER_LOOKING
                     }
                 }

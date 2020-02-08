@@ -58,7 +58,7 @@ export default {
     [MARA]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 0.75
+            xPosition: 1
         }
     },
     [MIRIAM]: {
@@ -82,19 +82,19 @@ export default {
     [STEPHANIE]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 1
+            xPosition: 0.25
         }
     },
     [AMY]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 2.5
+            xPosition: 2
         }
     },
     [TOMER]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 4.5
+            xPosition: 4.25
         }
     },
     [NESTOR]: {
@@ -124,13 +124,13 @@ export default {
     [JACOB]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 6.75
+            xPosition: 7
         }
     },
     [HOWIE]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 5
+            xPosition: 5.25
         }
     },
     [ANA]: {
@@ -142,7 +142,7 @@ export default {
     [KHARI]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 2.75
+            xPosition: 2.5
         }
     },
     [TRISTAN]: {

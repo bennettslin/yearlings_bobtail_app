@@ -12,13 +12,19 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import { ROBITUSSIN__SHARED } from '../../../sharedStyles/food'
+
+import { MASKED_USHER__SHARED } from '../../../sharedStyles/people'
+
+import { STEAM_TUNNEL__SHARED } from '../../../sharedStyles/wardrobe'
+
 export default {
     [ABBEY_ROAD]: null,
-    [WALGREENS]: null,
-    [STEAM_TUNNEL]: null,
+    [WALGREENS]: ROBITUSSIN__SHARED,
+    [STEAM_TUNNEL]: STEAM_TUNNEL__SHARED,
     [STATION_WAGON]: null,
     [ATTIC]: null,
     [EPILOGUE]: null,
-    [USHER_WAITING]: null,
-    [USHER_LOOKING]: null
+    [USHER_WAITING]: MASKED_USHER__SHARED,
+    [USHER_LOOKING]: MASKED_USHER__SHARED
 }

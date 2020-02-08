@@ -93,8 +93,6 @@ export default [
             [ACTOR]: {
                 [HOWIE]: {
                     gangbanger: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GANGBANGER
                     }
                 },

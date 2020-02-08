@@ -106,8 +106,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [HOWIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `6'0"`,
                     instance: EPILOGUE
                 },
