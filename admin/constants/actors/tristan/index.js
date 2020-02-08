@@ -15,10 +15,6 @@ import {
 const INSTANCES = [
     {
         type: TRISTAN,
-        instance: PRINCIPAL
-    },
-    {
-        type: TRISTAN,
         instance: PUNCHING
     },
     {
@@ -32,6 +28,10 @@ const INSTANCES = [
     {
         type: TRISTAN,
         instance: EPILOGUE
+    },
+    {
+        type: TRISTAN,
+        instance: PRINCIPAL
     }
 ]
 

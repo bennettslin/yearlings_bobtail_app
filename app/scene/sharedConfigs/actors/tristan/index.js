@@ -6,7 +6,7 @@ import {
 import { EPILOGUE } from 'constants/scene/actors/songs'
 
 export default {
-    [PRINCIPAL]: null,
     [PUNCHING]: null,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
+    [PRINCIPAL]: null
 }

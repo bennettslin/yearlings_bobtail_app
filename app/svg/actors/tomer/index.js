@@ -24,13 +24,13 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [GANGBANGER]: gangbanger,
-    [SHANE_BUYING]: shaneBuying,
     [ABBEY_ROAD]: abbeyRoad,
     [WALGREENS]: walgreens,
     [STEAM_TUNNEL]: steamTunnel,
     [CEMETERY]: cemetery,
     [STATION_WAGON]: stationWagon,
-    [SHANE_SPILLING]: shaneSpilling,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
+    [GANGBANGER]: gangbanger,
+    [SHANE_BUYING]: shaneBuying,
+    [SHANE_SPILLING]: shaneSpilling
 }

@@ -16,9 +16,9 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [CATHOLIC_GUY]: catholicGuy,
     [WATCHING]: watching,
     [MINGLING]: mingling,
-    [PROTESTER]: protester,
-    [EPILOGUE]: epilogue
+    [EPILOGUE]: epilogue,
+    [CATHOLIC_GUY]: catholicGuy,
+    [PROTESTER]: protester
 }

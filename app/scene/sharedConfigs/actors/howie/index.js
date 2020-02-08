@@ -13,12 +13,12 @@ import {
 } from 'constants/scene/actors/songs'
 
 export default {
-    [USHER_WAITING]: null,
-    [USHER_LOOKING]: null,
     [ABBEY_ROAD]: null,
     [WALGREENS]: null,
     [STEAM_TUNNEL]: null,
     [STATION_WAGON]: null,
     [ATTIC]: null,
-    [EPILOGUE]: null
+    [EPILOGUE]: null,
+    [USHER_WAITING]: null,
+    [USHER_LOOKING]: null
 }
