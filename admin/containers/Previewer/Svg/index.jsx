@@ -145,7 +145,7 @@ class PreviewerSvg extends PureComponent {
             return getCompoundActorStyleIfNeeded(
                 this.getCustomType(),
                 getSharedStyleForActor({
-                    actorKey: presenceType,
+                    actorKey: this.getCustomType(),
                     presenceKey
                 })
             )
