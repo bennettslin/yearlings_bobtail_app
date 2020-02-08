@@ -105,8 +105,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ARRIVED
                 }
             }
@@ -132,8 +130,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: JUDGMENTAL
                 }
             }
@@ -159,8 +155,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CONCERNED
                 }
             }

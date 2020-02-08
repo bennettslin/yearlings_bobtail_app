@@ -158,8 +158,6 @@ export default [
                     instance: FUTURE
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: JOKING_LAUGHING
                 },
                 [LIZ]: {

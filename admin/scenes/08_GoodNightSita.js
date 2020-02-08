@@ -95,8 +95,6 @@ export default [
                     }
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DOUBLE_ALBERT
                 },
                 [STEPHANIE]: {

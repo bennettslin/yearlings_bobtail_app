@@ -37,8 +37,6 @@ export default [
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PROTECTIVE_CONCERNED
                 },
                 [LIZ]: {

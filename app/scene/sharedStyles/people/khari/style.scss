@@ -1,4 +1,8 @@
 .khari#{$suffix} {
+    .khariHatBottom { fill: hsl(28, 10%, 48%); }
+    .khariHat { fill: hsl(28, 15%, 61%); }
+    .khariHatBrim { fill: hsl(28, 13%, 56%); }
+
     .khariShirt { fill: hsl(220, 19%, 54%); }
     .khariCollar { fill: hsl(220, 22%, 58%); }
     .khariSweater { fill: hsl(123, 37%, 60%); }
@@ -7,6 +11,9 @@
     .khariShoe { fill: hsl(66, 8%, 49%); }
 
     &.doubleAlbert {
+        .hatBottom { fill: hsl(3, 11%, 38%); }
+        .hatTop { fill: hsl(5, 11%, 42%); }
+        .hatTrim { fill: hsl(9, 6%, 51%); }
         .shirt { fill: hsl(205, 39%, 72%); }
         .collar { fill: hsl(205, 46%, 76%); }
         .sock { fill: hsl(13, 12%, 38%); }

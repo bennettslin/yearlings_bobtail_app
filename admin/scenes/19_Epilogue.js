@@ -193,8 +193,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'9"`,
                     instance: EPILOGUE
                 },
