@@ -153,8 +153,6 @@ export default [
                 },
                 [TRISTAN]: {
                     principal: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: PRINCIPAL
                     }
                 }

@@ -61,8 +61,6 @@ export default [
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PUNCHING
                 },
                 [ANA]: {
@@ -131,8 +129,6 @@ export default [
                     instance: NOOGIE
                 },
                 [TRISTAN]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: NOOGIE
                 },
                 [ANA]: {

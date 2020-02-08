@@ -75,8 +75,6 @@ export default [
                     instance: GREETING
                 },
                 [TRISTAN]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GREETING
                 },
                 [NESTOR]: {

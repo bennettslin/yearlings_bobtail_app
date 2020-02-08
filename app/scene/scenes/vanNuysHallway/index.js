@@ -13,29 +13,28 @@ export default {
     [PRETEEN_BENNETT]: {
         [SHEEPISH]: {
             yIndex: 4,
-            xPosition: 8,
-            zOffset: -1
+            xPosition: 8.25,
+            zOffset: -1.25
         }
     },
     [CHRISTOPHER]: {
         [STARING]: {
             yIndex: 4,
-            xPosition: 6,
+            xPosition: 6.75,
             zOffset: -1
         }
     },
     [MOTHER]: {
         [ARGUING]: {
             yIndex: 2,
-            xPosition: 2.5,
+            xPosition: 2,
             zOffset: 3
         }
     },
     [TRISTAN]: {
         [PRINCIPAL]: {
             yIndex: 2,
-            xPosition: 3.5,
-            zOffset: 3
+            xPosition: 3.5
         }
     }
 }

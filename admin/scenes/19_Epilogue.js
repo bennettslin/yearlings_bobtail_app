@@ -138,8 +138,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [TRISTAN]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE
                 },
