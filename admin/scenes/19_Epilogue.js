@@ -168,8 +168,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [JACOB]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'11"`,
                     instance: EPILOGUE
                 },

@@ -86,8 +86,6 @@ export default [
                     instance: DISTRACTED
                 },
                 [JACOB]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FLIRTING
                 },
                 [MARA]: {
@@ -117,8 +115,6 @@ export default [
                     instance: EATING
                 },
                 [JACOB]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EATING
                 },
                 [MARA]: {

@@ -81,8 +81,6 @@ export default [
                     instance: FLIRTING
                 },
                 [JACOB]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CARRYING
                 },
                 [MARA]: {

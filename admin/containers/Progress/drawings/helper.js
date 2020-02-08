@@ -18,9 +18,9 @@ const
     PUPILS_TIME = 0.05,
     HEAD_INSPECTION_TIME = 0.05,
     HEAD_PLACEMENT_TIME = 0.1,
-    FINAL_SVG_TIME = 0.05,
+    FINAL_SVG_TIME = 0.1,
 
-    // This works out to 6.3 hours per drawing.
+    // This works out to 6.35 hours per drawing.
     TOTAL_TIME =
         BASELINE_TIME +
         FACE_REVISION_TIME +

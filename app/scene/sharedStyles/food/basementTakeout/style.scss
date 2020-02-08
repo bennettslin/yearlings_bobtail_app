@@ -1,3 +1,7 @@
 .basementTakeout#{$suffix} {
-
+    .containerDark { fill: hsl(60, 14%, 64%); }
+    .containerMedium { fill: hsl(60, 13%, 69%); }
+    .containerLight { fill: hsl(60, 16%, 74%); }
+    .nuggetDark { fill: hsl(55, 25%, 55%); }
+    .nuggetLight { fill: hsl(54, 33%, 62%); }
 }

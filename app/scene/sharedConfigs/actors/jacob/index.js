@@ -4,8 +4,17 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import {
+    CYMBAL__SHARED,
+    DRUMS__SHARED,
+    DRUM_STAND__SHARED
+} from '../../../sharedStyles/instruments'
+
 export default {
-    [CARRYING]: null,
-    [FLIRTING]: null,
+    [FLIRTING]: CYMBAL__SHARED,
+    [CARRYING]: [
+        DRUMS__SHARED,
+        DRUM_STAND__SHARED
+    ],
     [EPILOGUE]: null
 }
