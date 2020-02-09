@@ -35,8 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },

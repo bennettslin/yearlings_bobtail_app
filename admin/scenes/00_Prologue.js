@@ -7,8 +7,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [OLD_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PROLOGUE
                 }
             }
