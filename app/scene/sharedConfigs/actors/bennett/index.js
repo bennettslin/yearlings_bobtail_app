@@ -61,7 +61,10 @@ import {
     SKETCHBOOK__SHARED
 } from '../../../sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../sharedStyles/print'
-import { MESSENGER_BAG__SHARED } from '../../../sharedStyles/wardrobe'
+import {
+    GO_KART__SHARED,
+    MESSENGER_BAG__SHARED
+} from '../../../sharedStyles/wardrobe'
 
 export default {
     [BREAKUP_DEJECTED]: null,
@@ -83,7 +86,7 @@ export default {
     [DATE_ENDING]: null,
     [MUSEUM]: null,
     [BACKSTAGE]: null,
-    [GO_KARTS]: null,
+    [GO_KARTS]: GO_KART__SHARED,
     [DATE_ENDED]: null,
     [DISHROOM_READING]: null,
     [DISHROOM_LANCET]: null,

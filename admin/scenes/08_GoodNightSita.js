@@ -20,8 +20,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DATE_ENDING
                 },
                 [LIZ]: {
@@ -47,8 +45,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MUSEUM
                 },
                 [LIZ]: {
@@ -74,8 +70,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BACKSTAGE
                 },
                 [LIZ]: {
@@ -111,8 +105,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GO_KARTS
                 },
                 [LIZ]: {
@@ -138,8 +130,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DATE_ENDED
                 },
                 [LIZ]: {
