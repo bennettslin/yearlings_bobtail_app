@@ -41,8 +41,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PONDERING
                 }
             }
@@ -52,8 +50,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: RUBIKS_CUBE
                 }
             }
@@ -63,8 +59,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: COUCH_READING
                 },
                 [STEPHANIE]: {
@@ -81,8 +75,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DISTRACTED
                 },
                 [JACOB]: {
@@ -110,8 +102,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EATING
                 },
                 [JACOB]: {
@@ -134,8 +124,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: HOPELESSLY_CRUSHED
                 },
                 [MIRIAM]: {
@@ -156,8 +144,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WONDERING_BABY
                 },
                 [MIRIAM]: {
@@ -186,8 +172,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MERRILY_DERANGED
                 },
                 [HOWIE]: {

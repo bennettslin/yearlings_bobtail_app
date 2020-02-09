@@ -54,8 +54,13 @@ import {
     EL_TORITO
 } from 'constants/scene/actors/songs'
 
+import { BASEMENT_TAKEOUT__SHARED } from '../../../sharedStyles/food'
 import { ACOUSTIC_GUITAR__SHARED } from '../../../sharedStyles/instruments'
-import { SKETCHBOOK__SHARED } from '../../../sharedStyles/paper'
+import {
+    BOOK__SHARED,
+    SKETCHBOOK__SHARED
+} from '../../../sharedStyles/paper'
+import { DOLLAR__SHARED } from '../../../sharedStyles/print'
 import { MESSENGER_BAG__SHARED } from '../../../sharedStyles/wardrobe'
 
 export default {
@@ -68,13 +73,13 @@ export default {
     [CATHOLIC_IDEA]: MESSENGER_BAG__SHARED,
     [PIOUS]: MESSENGER_BAG__SHARED,
     [PONDERING]: null,
-    [COUCH_READING]: null,
+    [COUCH_READING]: BOOK__SHARED,
     [RUBIKS_CUBE]: null,
-    [DISTRACTED]: null,
+    [DISTRACTED]: DOLLAR__SHARED,
+    [EATING]: BASEMENT_TAKEOUT__SHARED,
     [HOPELESSLY_CRUSHED]: null,
     [WONDERING_BABY]: null,
     [MERRILY_DERANGED]: null,
-    [EATING]: null,
     [DATE_ENDING]: null,
     [MUSEUM]: null,
     [BACKSTAGE]: null,

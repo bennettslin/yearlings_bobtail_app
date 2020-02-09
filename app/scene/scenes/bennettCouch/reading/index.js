@@ -10,7 +10,7 @@ export default {
         [COUCH_READING]: {
             yIndex: 3,
             xPosition: 2,
-            zOffset: -1
+            zOffset: -1.25
         }
     },
     [STEPHANIE]: {

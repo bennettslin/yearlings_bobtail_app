@@ -31,6 +31,22 @@
     .dishroomApronLace { fill: hsl(65, 15%, 55%); }
     .dishroomApron { fill: hsl(65, 18%, 60%); }
 
+    &.rubiksCube {
+        .cubeBlack { fill: hsl(180, 1%, 38%); }
+        .squareWhite { fill: hsl(0, 0%, 84%); }
+        .squareBlue { fill: hsl(214, 59%, 55%); }
+        .squareGreen { fill: hsl(110, 54%, 60%); }
+        .squareYellow { fill: hsl(68, 50%, 63%); }
+        .squareOrange { fill: hsl(36, 59%, 55%); }
+        .squareRed { fill: hsl(0, 43%, 56%); }
+    }
+
+    &.couchReading {
+        .bookCoverDark { fill: hsl(114, 24%, 52%); }
+        .bookCoverMedium { fill: hsl(114, 31%, 58%); }
+        .bookCoverLight { fill: hsl(113, 38%, 63%); }
+    }
+
     &.pampas {
         .sash { fill: hsl(2, 59%, 65%); }
         .bennettKurta { fill: hsl(214, 45%, 60%); }
