@@ -54,12 +54,19 @@ import {
     EL_TORITO
 } from 'constants/scene/actors/songs'
 
+import { ACOUSTIC_GUITAR__SHARED } from '../../../sharedStyles/instruments'
+import { SKETCHBOOK__SHARED } from '../../../sharedStyles/paper'
+import { MESSENGER_BAG__SHARED } from '../../../sharedStyles/wardrobe'
+
 export default {
     [BREAKUP_DEJECTED]: null,
-    [SOLICITING_OPINION]: null,
+    [SOLICITING_OPINION]: [
+        ACOUSTIC_GUITAR__SHARED,
+        SKETCHBOOK__SHARED
+    ],
     [CATHOLIC_PENSIVE]: null,
-    [CATHOLIC_IDEA]: null,
-    [PIOUS]: null,
+    [CATHOLIC_IDEA]: MESSENGER_BAG__SHARED,
+    [PIOUS]: MESSENGER_BAG__SHARED,
     [PONDERING]: null,
     [COUCH_READING]: null,
     [RUBIKS_CUBE]: null,
