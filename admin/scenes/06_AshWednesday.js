@@ -25,8 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
@@ -41,8 +39,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
@@ -57,8 +53,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CATHOLIC_PENSIVE
                 }
             }
@@ -68,8 +62,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CATHOLIC_IDEA
                 },
                 [WADE]: {
@@ -91,8 +83,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PIOUS
                 },
                 [CATHERINE]: {

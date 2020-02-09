@@ -60,7 +60,9 @@ export const initialiseDrawings = (drawings, songIndex) => {
                  * an alternate character in this scene, rather than
                  * themselves.
                  */
-                isAlternate = keys(characterObject).length === 1,
+                isAlternate =
+                    keys(characterObject).length === 1 &&
+                    !characterObject.instance,
 
                 character =
                     isAlternate ?
