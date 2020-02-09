@@ -1,5 +1,14 @@
 .ghost#{$suffix} {
-    .ghostTail { fill: hsl(180, 42%, 68%); }
     .skinGhostLight { fill: hsl(188, 37%, 62%); }
     .skinGhostDark { fill: hsl(185, 32%, 54%); }
+    .ghostTail { fill: hsl(180, 42%, 68%); }
+
+    .chineseTrim { fill: hsl(37, 45%, 58%); }
+    .chineseTie { fill: hsl(38, 18%, 46%); }
+
+    .chineseTassel { fill: hsl(46, 38%, 47%); }
+    .chineseHatTrim { fill: hsl(47, 53%, 57%); }
+    .chineseHatButton { fill: hsl(1, 32%, 35%); }
+    .chineseHatLight { fill: hsl(2, 34%, 46%); }
+    .chineseHatDark { fill: hsl(207, 10%, 36%); }
 }

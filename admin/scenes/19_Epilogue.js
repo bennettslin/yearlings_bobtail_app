@@ -100,8 +100,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [FATHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },

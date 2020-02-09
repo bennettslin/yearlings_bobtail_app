@@ -51,8 +51,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ACCUSATORY
                 },
                 [ESTHER]: {
@@ -79,8 +77,6 @@ export default [
                     instance: PAST
                 },
                 [FATHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PAST
                 },
                 [SASHA]: {
@@ -105,8 +101,6 @@ export default [
                     instance: PRESENT
                 },
                 [FATHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PRESENT
                 },
                 [MOTHER]: {
@@ -153,8 +147,6 @@ export default [
                     instance: FUTURE
                 },
                 [FATHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FUTURE
                 },
                 [KHARI]: {
@@ -196,8 +188,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: REELING
                 },
                 [ESTHER]: {

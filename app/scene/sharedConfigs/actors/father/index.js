@@ -10,11 +10,13 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import { GHOST__SHARED } from '../../../sharedStyles/wardrobe'
+
 export default {
     [ROARING]: null,
-    [ACCUSATORY]: null,
-    [PAST]: null,
-    [FUTURE]: null,
-    [REELING]: null,
+    [ACCUSATORY]: GHOST__SHARED,
+    [PAST]: GHOST__SHARED,
+    [FUTURE]: GHOST__SHARED,
+    [REELING]: GHOST__SHARED,
     [EPILOGUE]: null
 }

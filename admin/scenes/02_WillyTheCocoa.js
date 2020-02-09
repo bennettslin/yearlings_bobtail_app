@@ -71,8 +71,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [FATHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
