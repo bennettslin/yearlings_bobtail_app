@@ -1,9 +1,4 @@
 .bennett#{$suffix} {
-    .cafeteriaHatMesh { fill: hsl(226, 19%, 86%); }
-    .cafeteriaHatDark { fill: hsl(221, 33%, 33%); }
-    .cafeteriaHat { fill: hsl(222, 32%, 40%); }
-    .cafeteriaHatAdjuster { fill: hsl(60, 14%, 79%); }
-
     .bennettJacketInner { fill: hsl(224, 12%, 31%); }
     .bennettJacketCollar { fill: hsl(226, 12%, 34%); }
     .bennettJacket { fill: hsl(228, 10%, 38%); }
@@ -23,12 +18,6 @@
     .bennettShoeLining { fill: hsl(34, 7%, 57%); }
     .converseLogo { fill: hsl(12, 37%, 60%); }
 
-    .dishroomCollar { fill: hsl(225, 30%, 48%); }
-    .dishroomShirt { fill: hsl(225, 32%, 52%); }
-    .dishroomApronInner { fill: hsl(64, 12%, 51%); }
-    .dishroomApronLace { fill: hsl(65, 15%, 55%); }
-    .dishroomApron { fill: hsl(65, 18%, 60%); }
-
     &.rubiksCube {
         .cubeBlack { fill: hsl(180, 1%, 38%); }
         .squareWhite { fill: hsl(0, 0%, 84%); }
@@ -43,6 +32,10 @@
         .bookCoverDark { fill: hsl(114, 24%, 52%); }
         .bookCoverMedium { fill: hsl(114, 31%, 58%); }
         .bookCoverLight { fill: hsl(113, 38%, 63%); }
+    }
+
+    &.dishroomLancet {
+        .bookCover { fill: hsl(154, 29%, 56%); }
     }
 
     &.pampas {

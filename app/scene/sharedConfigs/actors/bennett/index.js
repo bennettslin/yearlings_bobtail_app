@@ -54,7 +54,11 @@ import {
     EL_TORITO
 } from 'constants/scene/actors/songs'
 
-import { BASEMENT_TAKEOUT__SHARED } from '../../../sharedStyles/food'
+import { TRAY__SHARED } from '../../../sharedStyles/dishroom'
+import {
+    BASEMENT_TAKEOUT__SHARED,
+    LANCET_PEN__SHARED
+} from '../../../sharedStyles/food'
 import { ACOUSTIC_GUITAR__SHARED } from '../../../sharedStyles/instruments'
 import {
     BOOK__SHARED,
@@ -62,8 +66,10 @@ import {
 } from '../../../sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../sharedStyles/print'
 import {
+    CAFETERIA__SHARED,
     GO_KART__SHARED,
-    MESSENGER_BAG__SHARED
+    MESSENGER_BAG__SHARED,
+    WALKMAN__SHARED
 } from '../../../sharedStyles/wardrobe'
 
 export default {
@@ -88,10 +94,25 @@ export default {
     [BACKSTAGE]: null,
     [GO_KARTS]: GO_KART__SHARED,
     [DATE_ENDED]: null,
-    [DISHROOM_READING]: null,
-    [DISHROOM_LANCET]: null,
-    [MOP_SOPPED]: null,
-    [GATE_CODE]: null,
+    [DISHROOM_READING]: [
+        BOOK__SHARED,
+        CAFETERIA__SHARED,
+        LANCET_PEN__SHARED,
+        TRAY__SHARED
+    ],
+    [DISHROOM_LANCET]: [
+        BOOK__SHARED,
+        CAFETERIA__SHARED,
+        LANCET_PEN__SHARED
+    ],
+    [MOP_SOPPED]: [
+        MESSENGER_BAG__SHARED,
+        WALKMAN__SHARED
+    ],
+    [GATE_CODE]: [
+        MESSENGER_BAG__SHARED,
+        WALKMAN__SHARED
+    ],
     [RUMPLED_LINENS]: null,
     [WAITING_ROOM_ASLEEP]: null,
     [ABBEY_ROAD]: null,
