@@ -75,7 +75,7 @@ export const getCubeColour = ({
         { h, s, l, a = BASE_ALPHA } = HSLA_MAP[hslaKey],
 
         // Don't show colour if empty ceiling.
-        finalAlpha = zIndex === k ? 0 : a
+        alpha = zIndex === k ? 0 : a
 
     let luminosity
 
@@ -91,5 +91,5 @@ export const getCubeColour = ({
             break
     }
 
-    return `hsla(${h}, ${s}%, ${luminosity}%, ${finalAlpha})`
+    return `hsla(${h}, ${s}%, ${luminosity}%, ${alpha})`
 }

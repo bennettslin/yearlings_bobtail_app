@@ -44,7 +44,11 @@ const _getTileCentreForPresence = ({
         // If yIndex is -1, zIndex is automatically 0.
         zIndex = yIndex === -1 ?
             0 :
-            getValueInAbridgedMatrix(zIndices, xIndex, yIndex),
+            getValueInAbridgedMatrix({
+                matrix: zIndices,
+                xIndex,
+                yIndex
+            }),
 
         tilePercentages = getHorizontalPlaneFractions({
             xIndex,

@@ -33,14 +33,18 @@ export const getArrayOfLength = (
 
 export const getValidYIndex = (yIndex) => {
     /**
-     * Things have an extra -1 yIndex to allow them to be behind 0 yIndex
+     * Things have an extra -1 yIndex to allow them to be behind the 0 yIndex
      * cubes. For positioning and sizing, however, they will be calculated as
      * if they are 0 yIndex.
      */
     return yIndex === -1 ? 0 : yIndex
 }
 
-export const getValueInAbridgedMatrix = (matrix, xIndex, yIndex) => {
+export const getValueInAbridgedMatrix = ({
+    matrix,
+    xIndex,
+    yIndex
+}) => {
     // Assume that matrix is an array of arrays.
 
     const

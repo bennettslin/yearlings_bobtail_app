@@ -3,11 +3,6 @@ export default [
      * Do once the presence svgs are mostly done.
      */
     {
-        taskName: `Include saturation in logic to determine final face hsla.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Allow for patterned and random cube colours.`,
         workedHours: 0,
         neededHours: 8

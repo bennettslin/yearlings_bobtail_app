@@ -41,13 +41,29 @@ const
     }) => {
         const
             ceilingHslaKey =
-                getValueInAbridgedMatrix(ceilingHslaColours, xIndex, yIndex),
+                getValueInAbridgedMatrix({
+                    matrix: ceilingHslaColours,
+                    xIndex,
+                    yIndex
+                }),
             floorHslaKey =
-                getValueInAbridgedMatrix(floorHslaColours, xIndex, yIndex),
+                getValueInAbridgedMatrix({
+                    matrix: floorHslaColours,
+                    xIndex,
+                    yIndex
+                }),
             ceilingZIndex =
-                getValueInAbridgedMatrix(ceilingZIndices, xIndex, yIndex),
+                getValueInAbridgedMatrix({
+                    matrix: ceilingZIndices,
+                    xIndex,
+                    yIndex
+                }),
             floorZIndex =
-                getValueInAbridgedMatrix(floorZIndices, xIndex, yIndex)
+                getValueInAbridgedMatrix({
+                    matrix: floorZIndices,
+                    xIndex,
+                    yIndex
+                })
 
         return {
             ceilingHslaKey,
