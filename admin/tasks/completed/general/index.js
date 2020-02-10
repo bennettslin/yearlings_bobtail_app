@@ -5206,5 +5206,10 @@ export default [
         taskName: `Hook up shared actor styling.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Delete neck lines for previous characters.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
