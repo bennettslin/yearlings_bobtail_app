@@ -8,6 +8,16 @@ export default [
         neededHours: 2
     },
     {
+        taskName: `Allow for patterned and random cube colours.`,
+        workedHours: 0,
+        neededHours: 8
+    },
+    {
+        taskName: `Wire on puppets and others.`,
+        workedHours: 0,
+        neededHours: 4
+    },
+    {
         taskName: `Cube and presence transition order.`,
         workedHours: 0,
         neededHours: 8
