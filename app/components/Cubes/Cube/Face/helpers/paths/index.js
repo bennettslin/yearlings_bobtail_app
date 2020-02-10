@@ -1,10 +1,7 @@
 import {
-    getSideDirection,
-    getCubeCornerPercentages,
-    getPathString
-} from './helper'
-
-import { getPolygonPoints } from './pathHelper'
+    getCubeCornerPoints,
+    setSvgDataPathForFace
+} from './pathPoints'
 
 import {
     SLANT_DIRECTIONS,
@@ -22,10 +19,8 @@ import {
 const FACE_PATHS = {}
 
 SLANT_DIRECTIONS.forEach(slantDirection => {
-    const slantDirectionKey = slantDirection || 'default'
-
-    FACE_PATHS[slantDirectionKey] = {}
-    const levelRoot = FACE_PATHS[slantDirectionKey]
+    FACE_PATHS[slantDirection] = {}
+    const levelRoot = FACE_PATHS[slantDirection]
 
     LEVELS.forEach(level => {
         levelRoot[level] = {}
@@ -39,18 +34,13 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
 
             CUBE_X_INDICES.forEach(xIndex => {
                 xIndexRoot[xIndex] = {}
-                const
-                    zIndexRoot = xIndexRoot[xIndex],
-                    sideDirection = getSideDirection({
-                        xIndex,
-                        slantDirection
-                    })
+                const zIndexRoot = xIndexRoot[xIndex]
 
                 CUBE_Z_INDICES.forEach(zIndex => {
                     zIndexRoot[zIndex] = {}
                     const
                         faceRoot = zIndexRoot[zIndex],
-                        cubeCorners = getCubeCornerPercentages({
+                        cubeCorners = getCubeCornerPoints({
                             xIndex,
                             yIndex,
                             zIndex,
@@ -59,17 +49,13 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
                         })
 
                     FACES.forEach(face => {
-                        const
-                            polygonPoints = getPolygonPoints({
-                                face,
-                                isFloor,
-                                sideDirection,
-                                slantDirection,
-                                cubeCorners
-                            }),
-                            pathString = getPathString(polygonPoints)
-
-                        faceRoot[face] = pathString
+                        faceRoot[face] = setSvgDataPathForFace({
+                            face,
+                            isFloor,
+                            xIndex,
+                            slantDirection,
+                            cubeCorners
+                        })
                     })
                 })
             })
@@ -77,14 +63,13 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
     })
 })
 
-export const getFacePath = ({
+export const getSvgDataPathForFace = ({
     slantDirection,
     level,
     yIndex,
     xIndex,
     zIndex,
     face
-}) => {
-    const slantDirectionKey = slantDirection || 'default'
-    return FACE_PATHS[slantDirectionKey][level][yIndex][xIndex][zIndex][face]
-}
+}) => (
+    FACE_PATHS[slantDirection][level][yIndex][xIndex][zIndex][face]
+)

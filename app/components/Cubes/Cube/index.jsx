@@ -11,9 +11,10 @@ import Face from './Face'
 import { getCharStringForNumber } from 'helpers/format'
 import { getValueInAbridgedMatrix } from 'helpers/general'
 
-import { getCubeZIndexStyle } from './helpers'
+import { getCssZIndexForCube } from './helpers/zIndices'
 
 import {
+    DEFAULT,
     FACES,
     CEILING,
     FLOOR
@@ -77,6 +78,10 @@ const
 
 class Cube extends PureComponent {
 
+    static defaultProps = {
+        slantDirection: DEFAULT
+    }
+
     static propTypes = {
         // Through Redux.
         ceilingHslaKey: PropTypes.string.isRequired,
@@ -115,7 +120,7 @@ class Cube extends PureComponent {
                         'abF'
                     ),
                     style: {
-                        zIndex: getCubeZIndexStyle({
+                        zIndex: getCssZIndexForCube({
                             slantDirection,
                             yIndex,
                             xIndex

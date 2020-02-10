@@ -154,7 +154,7 @@ const getCubesForKey = (cubesKey) => {
             ...defaultStageCubes.floor,
             ...keyCubes.floor
         },
-        slantDirection: keyCubes.slantDirection || ''
+        slantDirection: keyCubes.slantDirection
     }
 }
 

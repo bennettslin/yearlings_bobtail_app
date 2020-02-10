@@ -5211,5 +5211,10 @@ export default [
         taskName: `Delete neck lines for previous characters.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Refactor face helpers.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

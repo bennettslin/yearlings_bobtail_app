@@ -2,11 +2,8 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import {
-    getCubeColour,
-    getFacePath
-} from '../helpers'
-
+import { getSvgFillForFace } from './helpers/colours'
+import { getSvgDataPathForFace } from './helpers/paths'
 import { getCharStringForNumber } from 'helpers/format'
 
 const propTypes = {
@@ -43,7 +40,7 @@ const Face = ({
                     `x${xCharIndex}`,
                     `z${zIndex}`
                 ),
-                d: getFacePath({
+                d: getSvgDataPathForFace({
                     slantDirection,
                     level,
                     yIndex,
@@ -51,7 +48,7 @@ const Face = ({
                     zIndex,
                     face
                 }),
-                fill: getCubeColour({
+                fill: getSvgFillForFace({
                     hslaKey,
                     level,
                     yIndex,

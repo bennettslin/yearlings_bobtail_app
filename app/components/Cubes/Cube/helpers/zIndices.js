@@ -17,8 +17,6 @@ const CUBE_Z_INDEX_STYLES = {}
 let xAxisZIndices = DEFAULT_X_AXIS_Z_INDICES
 
 SLANT_DIRECTIONS.forEach(slantDirection => {
-    const slantDirectionKey = slantDirection || 'default'
-
     if (slantDirection === LEFT) {
         xAxisZIndices = SLANTED_LEFT_X_AXIS_Z_INDICES
 
@@ -26,8 +24,8 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
         xAxisZIndices = SLANTED_RIGHT_X_AXIS_Z_INDICES
     }
 
-    CUBE_Z_INDEX_STYLES[slantDirectionKey] = {}
-    const yIndexRoot = CUBE_Z_INDEX_STYLES[slantDirectionKey]
+    CUBE_Z_INDEX_STYLES[slantDirection] = {}
+    const yIndexRoot = CUBE_Z_INDEX_STYLES[slantDirection]
 
     CUBE_Y_INDICES.forEach(yIndex => {
         yIndexRoot[yIndex] = {}
@@ -45,11 +43,10 @@ SLANT_DIRECTIONS.forEach(slantDirection => {
     })
 })
 
-export const getCubeZIndexStyle = ({
+export const getCssZIndexForCube = ({
     slantDirection,
     yIndex,
     xIndex
-}) => {
-    const slantDirectionKey = slantDirection || 'default'
-    return CUBE_Z_INDEX_STYLES[slantDirectionKey][yIndex][xIndex]
-}
+}) => (
+    CUBE_Z_INDEX_STYLES[slantDirection][yIndex][xIndex]
+)

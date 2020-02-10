@@ -1,17 +1,17 @@
 /* eslint-disable object-curly-newline */
-import HSLA_MAP from '../../../../../scene/cubes/colours'
+import HSLA_MAP from '../../../../../../scene/cubes/colours'
 
 import {
     CEILING,
     TILE,
     SIDE,
     FRONT
-} from '../../../../../constants/scene/cubes'
+} from '../../../../../../constants/scene/cubes'
 
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from '../../../../../constants/cubeIndex'
+} from '../../../../../../constants/cubeIndex'
 
 import { k } from 'scene/cubes/zIndices'
 
@@ -63,7 +63,7 @@ const _getLuminosityForFrontFace = ({ l, yIndex }) => {
     return l * (1 - subtractedLuminosity) * Y_INDEX_BASE_DECREASE
 }
 
-export const getCubeColour = ({
+export const getSvgFillForFace = ({
     hslaKey,
     level,
     yIndex,

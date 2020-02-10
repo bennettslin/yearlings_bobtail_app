@@ -1,7 +1,9 @@
 import { LEFT, RIGHT } from '../../lyrics'
 
+export const DEFAULT = 'default'
+
 export const SLANT_DIRECTIONS = [
-    '',
+    DEFAULT,
     LEFT,
     RIGHT
 ]
@@ -21,3 +23,5 @@ export const FACES = [
     SIDE,
     FRONT
 ]
+
+export const BASE = 'base'
