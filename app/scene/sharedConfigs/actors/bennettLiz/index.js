@@ -13,9 +13,18 @@ import {
     FINAL_DREAM
 } from 'constants/scene/actors/bennettLiz'
 
+import {
+    BACKPACK__SHARED,
+    LIZ_PURSE__SHARED,
+    MESSENGER_BAG__SHARED
+} from '../../../sharedStyles/wardrobe'
+
 export default {
-    [GINGERBREAD_PRISON]: null,
-    [CHEEK_UNVEILED]: null,
+    [GINGERBREAD_PRISON]: [
+        BACKPACK__SHARED,
+        MESSENGER_BAG__SHARED
+    ],
+    [CHEEK_UNVEILED]: LIZ_PURSE__SHARED,
     [HARD_ON]: null,
     [MISSIONARY]: null,
     [AFTERGLOW]: null,

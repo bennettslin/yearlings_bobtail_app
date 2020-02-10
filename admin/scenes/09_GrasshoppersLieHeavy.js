@@ -33,8 +33,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DISHROOM_READING
                 }
             }
@@ -44,8 +42,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DISHROOM_LANCET
                 },
                 [LIZ]: {
@@ -71,8 +67,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MOP_SOPPED
                 },
                 [NESTOR]: {
@@ -98,8 +92,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GATE_CODE
                 },
                 [LIZ]: {
@@ -125,8 +117,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GINGERBREAD_PRISON
                 },
                 [LIZ]: {
@@ -152,8 +142,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: RUMPLED_LINENS
                 },
                 [LIZ]: {
@@ -179,8 +167,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WAITING_ROOM_ASLEEP
                 }
             }
@@ -190,8 +176,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CHEEK_UNVEILED
                 },
                 [LIZ]: {

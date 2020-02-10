@@ -68,6 +68,7 @@ import { DOLLAR__SHARED } from '../../../sharedStyles/print'
 import {
     CAFETERIA__SHARED,
     GO_KART__SHARED,
+    LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
     WALKMAN__SHARED
 } from '../../../sharedStyles/wardrobe'
@@ -113,8 +114,8 @@ export default {
         MESSENGER_BAG__SHARED,
         WALKMAN__SHARED
     ],
-    [RUMPLED_LINENS]: null,
-    [WAITING_ROOM_ASLEEP]: null,
+    [RUMPLED_LINENS]: MESSENGER_BAG__SHARED,
+    [WAITING_ROOM_ASLEEP]: LIZ_PURSE__SHARED,
     [ABBEY_ROAD]: null,
     [WALGREENS]: null,
     [STEAM_TUNNEL]: null,
