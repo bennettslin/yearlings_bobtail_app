@@ -57,7 +57,8 @@ import {
 import { TRAY__SHARED } from '../../../sharedStyles/dishroom'
 import {
     BASEMENT_TAKEOUT__SHARED,
-    LANCET_PEN__SHARED
+    LANCET_PEN__SHARED,
+    ROBITUSSIN__SHARED
 } from '../../../sharedStyles/food'
 import { ACOUSTIC_GUITAR__SHARED } from '../../../sharedStyles/instruments'
 import {
@@ -117,7 +118,7 @@ export default {
     [RUMPLED_LINENS]: MESSENGER_BAG__SHARED,
     [WAITING_ROOM_ASLEEP]: LIZ_PURSE__SHARED,
     [ABBEY_ROAD]: null,
-    [WALGREENS]: null,
+    [WALGREENS]: ROBITUSSIN__SHARED,
     [STEAM_TUNNEL]: null,
     [CEMETERY]: null,
     [STATION_WAGON]: null,

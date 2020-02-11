@@ -38,6 +38,19 @@
         .bookCover { fill: hsl(154, 29%, 56%); }
     }
 
+    &.steamTunnel {
+        .yardstickDark { fill: hsl(54, 21%, 54%); }
+        .yardstickLight { fill: hsl(54, 40%, 69%); }
+        .yardstickEdgeDark { fill: hsl(180, 9%, 55%); }
+        .yardstickEdgeLight { fill: hsl(178, 13%, 62%); }
+    }
+
+    &.attic {
+        .pillow { fill: hsl(54, 26%, 61%); }
+        .blanket { fill: hsl(215, 26%, 61%); }
+        .blanketInner { fill: hsl(214, 17%, 50%); }
+    }
+
     &.pampas {
         .sash { fill: hsl(2, 59%, 65%); }
         .bennettKurta { fill: hsl(214, 45%, 60%); }
