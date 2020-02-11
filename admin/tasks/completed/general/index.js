@@ -5216,5 +5216,10 @@ export default [
         taskName: `Refactor face helpers.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Show presence name in Previewer.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

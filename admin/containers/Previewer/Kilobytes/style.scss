@@ -1,6 +1,6 @@
 .PreviewerKilobytes {
     height: $height__input;
-    font-size: 1.5em;
+    flex-direction: column;
 }
 
 .PreviewerKilobytes__hideInMobile {
@@ -10,4 +10,16 @@
     @media (min-width: 1000px) {
         display: flex;
     }
+}
+
+.PreviewerKilobytes__child {
+    height: $height__input * 0.5;
+}
+
+.PreviewerKilobytes__data {
+    font-size: 1.25em;
+}
+
+.PreviewerKilobytes__instance {
+    font-size: 1.125em;
 }
