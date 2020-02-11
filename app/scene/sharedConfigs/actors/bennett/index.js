@@ -60,7 +60,12 @@ import {
     LANCET_PEN__SHARED,
     ROBITUSSIN__SHARED
 } from '../../../sharedStyles/food'
-import { ACOUSTIC_GUITAR__SHARED } from '../../../sharedStyles/instruments'
+import {
+    ACOUSTIC_GUITAR__SHARED,
+    BASS_CASE__SHARED,
+    ELECTRIC_GUITAR__SHARED,
+    GUITAR_CASE__SHARED
+} from '../../../sharedStyles/instruments'
 import {
     BOOK__SHARED,
     SKETCHBOOK__SHARED
@@ -123,9 +128,12 @@ export default {
     [CEMETERY]: null,
     [STATION_WAGON]: null,
     [ATTIC]: null,
-    [PERFORMING]: null,
+    [PERFORMING]: ELECTRIC_GUITAR__SHARED,
     [FLIRTING]: null,
-    [SIDELONG_HESITANCE]: null,
+    [SIDELONG_HESITANCE]: [
+        BASS_CASE__SHARED,
+        GUITAR_CASE__SHARED
+    ],
     [REMOVING_SHOES]: null,
     [DROPPING_MEATS]: null,
     [GREETING]: null,
