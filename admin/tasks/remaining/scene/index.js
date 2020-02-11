@@ -16,11 +16,6 @@
 
 export default [
     {
-        taskName: `Logic to randomize sand and grass, and tile patterns.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: 'logue',
         notes: ``,
         workedHours: 0,
