@@ -4,7 +4,7 @@ export default [
      */
     {
         taskName: `Wire on puppets and others.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 4
     },
     {

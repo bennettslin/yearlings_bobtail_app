@@ -1,4 +1,10 @@
-.PresenceSvg {
+.PresenceSvg__position {
     position: absolute;
     transform: translate(-50%, -100%);
+}
+
+.PresenceSvg__highWire {
+    border-left: 1px solid hsla(0, 0%, 75%, 0.25);
+    height: 100%;
+    width: 1px;
 }

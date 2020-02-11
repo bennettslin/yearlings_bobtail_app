@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react'
+import React, { Fragment as ___, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from 'modules/InlineSvg'
 
 import {
-    // convertPresenceKeyToTitle,
+    convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from 'helpers/format'
@@ -219,37 +219,52 @@ class PresenceSvg extends PureComponent {
             duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey
 
         return (
-            <InlineSvg
-                {...{
-                    className: cx(
-                        'PresenceSvg',
-                        noShadow && 'Presence__noShadow',
-                        className
-                    ),
-                    style: {
-                        left: `${adjustedLeft.toFixed(2)}%`,
-                        top: `${adjustedTop.toFixed(2)}%`,
-                        width: `${adjustedWidth.toFixed(2)}%`,
-                        height: `${adjustedHeight.toFixed(2)}%`,
-                        ...perspective && {
-                            perspective: `${perspective}em`
-                        },
-                        ...containerTransform && {
-                            transform: containerTransform
+            <___>
+                <div
+                    {...{
+                        className: cx(
+                            'PresenceSvg__highWire',
+                            'PresenceSvg__position'
+                        ),
+                        style: {
+                            left: `${adjustedLeft.toFixed(2)}%`,
+                            top: `${(adjustedTop - adjustedHeight * 0.5).toFixed(2)}%`
                         }
-                    },
-                    svgClassName: cx(
-                        presenceKeyClassName,
-                        duplicateKeyClassName,
-                        getSharedClassNames(sharedStyle)
-                    ),
-                    // title: convertPresenceKeyToTitle(presenceKey),
-                    preProcessor: this.preProcessSvg,
-                    onLoad: this.postProcessSvg
-                }}
-            >
-                {children}
-            </InlineSvg>
+                    }}
+                />
+                <InlineSvg
+                    {...{
+                        className: cx(
+                            'PresenceSvg',
+                            'PresenceSvg__position',
+                            noShadow && 'Presence__noShadow',
+                            className
+                        ),
+                        style: {
+                            left: `${adjustedLeft.toFixed(2)}%`,
+                            top: `${adjustedTop.toFixed(2)}%`,
+                            width: `${adjustedWidth.toFixed(2)}%`,
+                            height: `${adjustedHeight.toFixed(2)}%`,
+                            ...perspective && {
+                                perspective: `${perspective}em`
+                            },
+                            ...containerTransform && {
+                                transform: containerTransform
+                            }
+                        },
+                        svgClassName: cx(
+                            presenceKeyClassName,
+                            duplicateKeyClassName,
+                            getSharedClassNames(sharedStyle)
+                        ),
+                        title: convertPresenceKeyToTitle(presenceKey),
+                        preProcessor: this.preProcessSvg,
+                        onLoad: this.postProcessSvg
+                    }}
+                >
+                    {children}
+                </InlineSvg>
+            </___>
         )
     }
 }

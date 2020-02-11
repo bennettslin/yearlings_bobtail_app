@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
-import PresenceSvg from 'modules/PresenceSvg'
+import PresenceSvg from '../../modules/PresenceSvg'
 
 import { capitaliseForClassName } from 'helpers/format'
 import { getSvgMapForActor } from '../../svg/actors'
