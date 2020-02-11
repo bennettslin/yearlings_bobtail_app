@@ -1,9 +1,6 @@
 import { ACTOR } from '../../constants/scene'
-
 import { LOGUE_KEY } from '../../constants/scene/scenes'
-
 import { SEASON_STAGE } from '../../scene/sky/keys'
-
 import {
     BENNETTS_CHRISTOPHER_LIZ,
     ANITA_BENNETT,
@@ -28,7 +25,6 @@ import {
     STEPHANIE,
     WADE
 } from '../../constants/scene/actors'
-
 import { EPILOGUE } from '../../constants/scene/actors/songs'
 
 export default [

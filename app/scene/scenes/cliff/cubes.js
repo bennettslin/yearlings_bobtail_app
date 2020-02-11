@@ -2,8 +2,7 @@ import { CLIFF_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    GRASS_COLOUR as H,
-    GRASS_DARKER_COLOUR as I
+    GRASS_COLOUR as H
 } from '../../cubes/colours'
 
 import { RIGHT } from '../../cubes/zIndices'
@@ -14,11 +13,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [H, I, I, H, H, I, I, G],
-                [I, H, H, I, I, H, H, I, G],
-                [H, I, I, H, H, I, I, H, G],
-                [H, H, I, I, H, H, I, G],
-                [I, I, H, H, I, I, G]
+                [H, H, H, H, H, H, H, G],
+                [H, H, H, H, H, H, H, H, G],
+                [H, H, H, H, H, H, H, H, G],
+                [H, H, H, H, H, H, H, G],
+                [H, H, H, H, H, H, G]
             ],
             zIndices: [
                 [0],

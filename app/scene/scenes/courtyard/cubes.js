@@ -5,7 +5,6 @@ import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
-    BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
     BENNETT_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
@@ -40,7 +39,7 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [V],
-                [V, L, X, X, X, X, F, L, F, L, F, L],
+                [V, F, X, X, X, X, F],
                 [V],
                 [V],
                 [V],

@@ -21,9 +21,7 @@ import {
 } from 'constants/scene/actors/liz'
 import { SHANE_SPILLING } from 'constants/scene/actors/tomer'
 import { WATCHING } from 'constants/scene/actors/wade'
-import {
-    SQUEEZING
-} from 'constants/scene/actors/amyStephanie'
+import { SQUEEZING } from 'constants/scene/actors/amyStephanie'
 import {
     PERFORMING,
     FLIRTING,

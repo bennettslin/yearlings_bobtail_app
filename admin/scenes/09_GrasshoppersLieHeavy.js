@@ -9,9 +9,7 @@ import {
     MOP_SOPPED,
     WAITING_ROOM_ASLEEP
 } from 'constants/scene/actors/bennett'
-import {
-    JOGGER
-} from 'constants/scene/actors/nestor'
+import { JOGGER } from 'constants/scene/actors/nestor'
 import {
     DISHROOM_LANCET,
     GATE_CODE,

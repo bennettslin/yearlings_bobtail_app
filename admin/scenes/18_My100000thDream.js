@@ -7,9 +7,7 @@ import {
     MIRIAM,
     AMY
 } from 'constants/scene/actors'
-import {
-    DOCTOR
-} from 'constants/scene/actors/amy'
+import { DOCTOR } from 'constants/scene/actors/amy'
 import {
     EL_TORITO,
     GOPI

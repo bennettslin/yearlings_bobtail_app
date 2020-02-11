@@ -6,7 +6,6 @@ import {
 import {
     GROUND_CLEAR_COLOUR as G,
     BENNETT_FLOOR_COLOUR as F,
-    BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
     FURNITURE_COLOUR as R,
     BENNETT_COUCH_COLOUR as U
@@ -28,11 +27,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [F],
-                [F, R, U, U, U, U, U, L, R, R, F, L],
-                [L, R, U, U, U, U, U, F, L, F, L, F],
-                [F, L, U, U, U, U, U, L, F, L, F, L],
-                [L, F, L, F, L, F, L, F, L, F, L, F],
-                [F, L, F, L, F, L, F, L, F, L, F, L]
+                [F, R, U, U, U, U, U, F, R, R, F],
+                [F, R, U, U, U, U, U, F],
+                [F, F, U, U, U, U, U, F],
+                [F]
             ],
             zIndices: [
                 [1],
@@ -47,11 +45,10 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [G, R, U, U, U, U, U, L, R, R, F, G],
-                [G, R, U, U, U, U, U, F, L, F, L, G],
-                [G, L, U, U, U, U, U, L, F, L, F, G],
-                [G, F, L, F, L, F, L, F, L, F, L, G],
-                [G, L, F, L, F, L, F, L, F, L, F, G]
+                [G, R, U, U, U, U, U, F, R, R, F, G],
+                [G, R, U, U, U, U, U, F, F, F, F, G],
+                [G, F, U, U, U, U, U, F, F, F, F, G],
+                [G, F, F, F, F, F, F, F, F, F, F, G]
             ],
             zIndices: [
                 [0],

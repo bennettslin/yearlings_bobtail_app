@@ -16,12 +16,8 @@ import {
     GESTURING,
     SNACKING
 } from 'constants/scene/actors/brad'
-import {
-    STARING
-} from 'constants/scene/actors/christopher'
-import {
-    BLISSFUL_GUILTY
-} from 'constants/scene/actors/christopherBennett'
+import { STARING } from 'constants/scene/actors/christopher'
+import { BLISSFUL_GUILTY } from 'constants/scene/actors/christopherBennett'
 import { ARGUING } from 'constants/scene/actors/mother'
 import {
     FEIGNING_SICK,

@@ -5216,5 +5216,10 @@ export default [
         taskName: `Refactor face helpers.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Allow for patterned and random cube colours.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

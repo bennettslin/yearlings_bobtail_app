@@ -2,8 +2,7 @@ import { PAMPAS_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    GRASS_COLOUR as H,
-    GRASS_DARKER_COLOUR as I
+    GRASS_COLOUR as H
 } from '../../cubes/colours'
 
 import { RIGHT } from '../../cubes/zIndices'
@@ -14,11 +13,7 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [H, I, I, H, H, I, I, H, H, I, I, H],
-                [I, H, H, I, I, H, H, I, I, H, H, I],
-                [H, I, I, H, H, I, I, H, H, I, I, H],
-                [H, H, I, I, H, H, I, I, H, H, I],
-                [I, I, H, H, I, I, H, H, I, I, H]
+                [H]
             ],
             zIndices: [
                 [0],

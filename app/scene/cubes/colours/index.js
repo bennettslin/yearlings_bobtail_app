@@ -1,7 +1,6 @@
 export const DEFAULT_CLEAR_COLOUR = 'clear'
 export const GROUND_CLEAR_COLOUR = 'ground'
 export const GRASS_COLOUR = 'grass'
-export const GRASS_DARKER_COLOUR = 'grassDarker'
 export const SAND_COLOUR = 'sand'
 export const STREET_COLOUR = 'street'
 export const CROSSWALK_COLOUR = 'crosswalk'
@@ -21,8 +20,6 @@ export const BENNETT_CARPET_COLOUR = 'bennettCarpet'
 export const BENNETT_FLOOR_COLOUR = 'bennettFloor'
 export const LIZ_FLOOR_COLOUR = 'lizFloor'
 export const DIRT_FLOOR_COLOUR = 'dirtFloor'
-export const LINOLEUM_FLOOR_DARK_COLOUR = 'linoleumFloorDark'
-export const BENNETT_FLOOR_DARK_COLOUR = 'bennettFloorDark'
 export const SOFT_WALL_COLOUR = 'softWall'
 export const SCHOOL_WALL_COLOUR = 'schoolWall'
 export const BENNETT_WALL_COLOUR = 'bennettWall'
@@ -57,32 +54,27 @@ const HSLA_MAP = {
     /* G. */
     [GROUND_CLEAR_COLOUR]: { h: 0, s: 0, l: 0, a: 0.2 },
     /* H. */
-    [GRASS_COLOUR]: { h: 91, s: 36, l: 42 }, // TODO: Have random.
-    /* I. */
-    [GRASS_DARKER_COLOUR]: { h: 93, s: 36, l: 27 },
+    [GRASS_COLOUR]: { h: 100, s: 36, l: 42 },
     /* T. */
     [STREET_COLOUR]: { h: 0, s: 0, l: 39 },
     /* V. */
-    [OCEAN_COLOUR]: { h: 204, s: 61, l: 43 },
+    [OCEAN_COLOUR]: { h: 204, s: 51, l: 43 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 61 },
     /* K. */
-    [SAND_COLOUR]: { h: 35, s: 51, l: 74 }, // TODO: Have random.
+    [SAND_COLOUR]: { h: 60, s: 30, l: 74 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* C. */
     [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },
     /* F. */
     [BENNETT_CARPET_COLOUR]: { h: 16, s: 31, l: 57 },
-    [BENNETT_FLOOR_COLOUR]: { h: 26, s: 15, l: 79 },
-    [WOOD_FLOOR_COLOUR]: { h: 32, s: 35, l: 64 }, // TODO: Have multiple.
+    [BENNETT_FLOOR_COLOUR]: { h: 26, s: 15, l: 69 },
+    [WOOD_FLOOR_COLOUR]: { h: 32, s: 45, l: 34 },
     [OLD_FLOOR_COLOUR]: { h: 36, s: 13, l: 46 },
     [DIRT_FLOOR_COLOUR]: { h: 51, s: 12, l: 34 },
     [LINOLEUM_FLOOR_COLOUR]: { h: 74, s: 14, l: 67 },
     [LIZ_FLOOR_COLOUR]: { h: 195, s: 22, l: 59 },
     [SCHOOL_FLOOR_COLOUR]: { h: 346, s: 13, l: 72 },
     [VELVET_FLOOR_COLOUR]: { h: 357, s: 44, l: 36 },
-    /* L. */
-    [BENNETT_FLOOR_DARK_COLOUR]: { h: 26, s: 20, l: 74 }, // TODO: Consolidate.
-    [LINOLEUM_FLOOR_DARK_COLOUR]: { h: 74, s: 14, l: 57 }, // TODO: Consolidate.
     /* Y. */
     [NIGHT_COLOUR]: { h: 221, s: 17, l: 45 },
     /* Z. */
@@ -124,5 +116,4 @@ const HSLA_MAP = {
     [SEAT_COLOUR]: { h: 25, s: 27, l: 47 }
 }
 /* eslint-enable object-curly-newline */
-
 export default HSLA_MAP

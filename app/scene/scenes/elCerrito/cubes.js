@@ -7,7 +7,6 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
-    GRASS_DARKER_COLOUR as I,
     STREET_COLOUR as T
 } from '../../cubes/colours'
 
@@ -32,11 +31,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [H, I, I, H, H, I, I, T, G],
-                [I, H, H, I, I, H, H, I, T, T, G],
-                [H, I, I, H, H, I, I, H, G, G, T],
-                [H, H, I, I, H, H, I, G, G, G, G, T],
-                [I, I, H, H, I, I, G]
+                [H, H, H, H, H, H, H, T, G],
+                [H, H, H, H, H, H, H, H, T, T, G],
+                [H, H, H, H, H, H, H, H, G, G, T],
+                [H, H, H, H, H, H, H, G, G, G, G, T],
+                [H, H, H, H, H, H, G]
             ],
             zIndices: [
                 [0],
@@ -53,11 +52,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [H, D, I, H, H, I, I, T, G],
-                [I, D, D, D, I, H, H, I, T, T, G],
-                [H, I, D, D, D, D, I, H, G, G, T],
-                [H, H, I, D, D, H, I, G, G, G, G, T],
-                [I, I, H, H, I, I, G]
+                [H, D, H, H, H, H, H, T, G],
+                [H, D, D, D, H, H, H, H, T, T, G],
+                [H, H, D, D, D, D, H, H, G, G, T],
+                [H, H, H, D, D, H, H, G, G, G, G, T],
+                [H, H, H, H, H, H, G]
             ],
             zIndices: [
                 [0],

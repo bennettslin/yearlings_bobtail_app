@@ -9,9 +9,7 @@ import {
     MIRIAM,
     STEPHANIE
 } from 'constants/scene/actors'
-import {
-    SQUATTING
-} from 'constants/scene/actors/ana'
+import { SQUATTING } from 'constants/scene/actors/ana'
 import {
     PONDERING,
     RUBIKS_CUBE,

@@ -12,7 +12,11 @@ export const getSvgFillForFace = ({
     face
 }) => {
     // eslint-disable-next-line object-curly-newline
-    const { h, s, l, a } = getBaseColour(hslaKey),
+    const { h, s, l, a } = getBaseColour({
+            hslaKey,
+            yIndex,
+            xIndex
+        }),
 
         // Don't show colour if empty ceiling.
         alpha = zIndex === k ? 0 : a,

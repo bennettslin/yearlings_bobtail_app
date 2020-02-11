@@ -43,7 +43,10 @@ import {
     GREETING,
     LEAVING_CRUMBLED
 } from '../../constants/scene/actors/songs'
-import { OAKLAND_SIDE, DISTANT_HOUSES_BACKDROP } from '../../constants/scene/things/backdrops'
+import {
+    OAKLAND_SIDE,
+    DISTANT_HOUSES_BACKDROP
+} from '../../constants/scene/things/backdrops'
 import {
     NAS_ALBUM,
     ELLIOTT_SMITH_POSTER

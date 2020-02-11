@@ -3,11 +3,6 @@ export default [
      * Do once the presence svgs are mostly done.
      */
     {
-        taskName: `Allow for patterned and random cube colours.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Wire on puppets and others.`,
         workedHours: 0,
         neededHours: 4

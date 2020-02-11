@@ -3,7 +3,6 @@ import { WEDDING_KEY } from '../../../constants/scene/scenes'
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
-    GRASS_DARKER_COLOUR as I,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
 
@@ -28,11 +27,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [P, P, I, H, H, I, I, H, H, I, I, H],
-                [P, P, P, I, I, H, H, I, I, H, H, I],
-                [P, P, P, H, H, I, I, H, H, I, I, H],
-                [H, P, I, I, H, H, I, I, H, H, I],
-                [I, I, H, H, I, I, H, H, I, I, H]
+                [P, P, H],
+                [P, P, P, H],
+                [P, P, P, H],
+                [H, P, H],
+                [H]
             ],
             zIndices: [
                 [0],

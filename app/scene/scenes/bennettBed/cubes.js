@@ -7,7 +7,6 @@ import {
     PAVEMENT_COLOUR as V,
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
-    BENNETT_FLOOR_DARK_COLOUR as L,
     BENNETT_WALL_COLOUR as W,
     NIGHT_COLOUR as Y,
     BENNETT_EXTERIOR_COLOUR as X,
@@ -35,10 +34,10 @@ const DEFAULT_FLOOR = {
     hslaColours: [
         [V],
         [V],
-        [V, V, L, F, L, V, W, W, W, W, V],
-        [F, L, F, L, F, L, F, L, F, L, F, L],
-        [L, F, L, F, L, U, U, U, U, U, U, F],
-        [F, L, F, L, F, L, F, L, F, L, F, L]
+        [V, V, F, F, F, V, W, W, W, W, V],
+        [F],
+        [F, F, F, F, F, U, U, U, U, U, U, F],
+        [F]
     ],
     zIndices: [
         [1],
