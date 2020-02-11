@@ -19,8 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ABBEY_ROAD
                 },
                 [ANA]: {
@@ -41,8 +39,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WALGREENS
                 },
                 [ANA]: {
@@ -63,8 +59,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STEAM_TUNNEL
                 },
                 [ANA]: {
@@ -85,8 +79,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CEMETERY
                 },
                 [ANA]: {
@@ -107,8 +99,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STATION_WAGON
                 },
                 [ANA]: {
@@ -129,8 +119,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ATTIC
                 },
                 [HOWIE]: {

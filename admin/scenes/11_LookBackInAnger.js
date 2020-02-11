@@ -35,8 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PERFORMING
                 },
                 [ANA]: {
@@ -69,8 +67,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FLIRTING
                 },
                 [AMY]: {
@@ -93,8 +89,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
@@ -127,8 +121,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: REMOVING_SHOES
                 },
                 [LIZ]: {
@@ -155,8 +147,6 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: SHOES_REFLECTION
                     }
                 },

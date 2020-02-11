@@ -5218,6 +5218,11 @@ export default [
         neededHours: 3
     },
     {
+        taskName: `Show presence name in Previewer.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
         taskName: `Allow for patterned and random cube colours.`,
         workedHours: 4,
         neededHours: 4

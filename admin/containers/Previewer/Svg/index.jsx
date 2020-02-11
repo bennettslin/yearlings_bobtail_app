@@ -170,6 +170,8 @@ class PreviewerSvg extends PureComponent {
                 kilobytes
             } = this.state,
 
+            presenceDisplayName = convertPresenceKeyToClassName(presenceKey),
+
             svgMap = isActor ?
                 getPreviewerSvgMapForActor(presenceType) :
                 getPreviewerSvgMapForThing(presenceType),
@@ -196,7 +198,7 @@ class PreviewerSvg extends PureComponent {
                             height: `${adjustedHeight.toFixed(2)}%`
                         },
                         svgClassName: cx(
-                            convertPresenceKeyToClassName(presenceKey),
+                            presenceDisplayName,
                             getSharedClassNames(sharedStyle)
                         ),
                         title: convertPresenceKeyToTitle(presenceKey),
@@ -215,7 +217,12 @@ class PreviewerSvg extends PureComponent {
                     )
                 }}
             >
-                <PreviewerKilobytes {...{ kilobytes }} />
+                <PreviewerKilobytes
+                    {...{
+                        kilobytes,
+                        presenceDisplayName
+                    }}
+                />
                 {svgChild}
             </div>
         ) : svgChild

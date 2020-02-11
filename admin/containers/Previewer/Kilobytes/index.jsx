@@ -4,6 +4,7 @@ import cx from 'classnames'
 
 const PreviewerKilobytes = ({
     kilobytes,
+    presenceDisplayName,
     hideInMobile,
     className
 
@@ -18,12 +19,32 @@ const PreviewerKilobytes = ({
             )
         }}
     >
-        {kilobytes.toFixed(2)} kB
+        <div
+            {...{
+                className: cx(
+                    'PreviewerKilobytes__instance',
+                    'PreviewerKilobytes__child'
+                )
+            }}
+        >
+            {presenceDisplayName}
+        </div>
+        <div
+            {...{
+                className: cx(
+                    'PreviewerKilobytes__data',
+                    'PreviewerKilobytes__child'
+                )
+            }}
+        >
+            {kilobytes.toFixed(2)} kB
+        </div>
     </div>
 )
 
 PreviewerKilobytes.propTypes = {
     kilobytes: PropTypes.number,
+    presenceDisplayName: PropTypes.string,
     hideInMobile: PropTypes.bool,
     className: PropTypes.string
 }
