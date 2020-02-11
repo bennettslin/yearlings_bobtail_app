@@ -1,7 +1,7 @@
 import {
     getCubeCornerPoints,
     setSvgDataPathForFace
-} from './pathPoints'
+} from './points'
 
 import {
     SLANT_DIRECTIONS,

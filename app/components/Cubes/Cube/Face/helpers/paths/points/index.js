@@ -53,7 +53,7 @@ export const getCubeCornerPoints = ({
     }, {})
 }
 
-const _getPolygonPointsForFrontFace = ({
+const _getOrderedPointsForFrontFace = ({
     cubeCorners: {
         tile: tl,
         base: bs
@@ -65,7 +65,7 @@ const _getPolygonPointsForFrontFace = ({
         [bs.left.front, bs.right.front, tl.right.front, tl.left.front]
 )
 
-const _getPolygonPointsForTileFace = ({
+const _getOrderedPointsForTileFace = ({
     cubeCorners: { tile: tl },
     isFloor
 }) => (
@@ -74,7 +74,7 @@ const _getPolygonPointsForTileFace = ({
         [tl.left.front, tl.right.front, tl.right.back, tl.left.back]
 )
 
-const _getPolygonPointsForSideFace = ({
+const _getOrderedPointsForSideFace = ({
     xIndex,
     slantDirection,
     cubeCorners: {
@@ -104,33 +104,22 @@ const _getPolygonPointsForSideFace = ({
     }
 }
 
-const POLYGON_POINTS_GETTER_MAP = {
-    [TILE]: _getPolygonPointsForTileFace,
-    [FRONT]: _getPolygonPointsForFrontFace,
-    [SIDE]: _getPolygonPointsForSideFace
+const ORDERED_POINTS_GETTER_MAP = {
+    [TILE]: _getOrderedPointsForTileFace,
+    [FRONT]: _getOrderedPointsForFrontFace,
+    [SIDE]: _getOrderedPointsForSideFace
 }
 
-const _getPolygonPoints = ({
-    face,
-    isFloor,
-    xIndex,
-    slantDirection,
-    cubeCorners
-}) => (
+const _getOrderedPoints = ({ face, ...props }) => (
     /**
      * This returns an array of four { x, y } coordinates in the order of a
      * polygon path.
      */
-    POLYGON_POINTS_GETTER_MAP[face]({
-        isFloor,
-        xIndex,
-        slantDirection,
-        cubeCorners
-    })
+    ORDERED_POINTS_GETTER_MAP[face](props)
 )
 
 export const setSvgDataPathForFace = (props) => (
-    _getPolygonPoints(props).map(({
+    _getOrderedPoints(props).map(({
         x, y
     }, index) => {
 
