@@ -30,8 +30,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CORD_SIDE
                 }
             }
@@ -41,8 +39,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: AWKWARD_CONSOLATION
                 },
                 [LIZ]: {
@@ -68,8 +64,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CORD_REAR
                 },
                 [STEPHANIE]: {
@@ -86,8 +80,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: HORSING
                 },
                 [STEPHANIE]: {
@@ -121,8 +113,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DRYING_TEARS
                 },
                 [STEPHANIE]: {

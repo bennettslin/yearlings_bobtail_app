@@ -2,8 +2,9 @@ import {
     HORSING,
     DRYING_TEARS
 } from 'constants/scene/actors/bennettStephanie'
+import { BRACELET__SHARED } from '../../../sharedStyles/wardrobe'
 
 export default {
-    [HORSING]: null,
-    [DRYING_TEARS]: null
+    [HORSING]: BRACELET__SHARED,
+    [DRYING_TEARS]: BRACELET__SHARED
 }

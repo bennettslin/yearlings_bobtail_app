@@ -17,6 +17,7 @@ import { HEINEKEN__SHARED } from '../../../sharedStyles/food'
 
 import {
     BACKPACK__SHARED,
+    BRACELET__SHARED,
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED
 } from '../../../sharedStyles/wardrobe'
@@ -30,9 +31,9 @@ export default {
     [HARD_ON]: null,
     [MISSIONARY]: null,
     [AFTERGLOW]: null,
-    [BRUSH_OFF]: null,
+    [BRUSH_OFF]: BRACELET__SHARED,
     [CELIBATE_FREEZING]: HEINEKEN__SHARED,
-    [AWKWARD_CONSOLATION]: null,
+    [AWKWARD_CONSOLATION]: BRACELET__SHARED,
     [PAMPAS]: null,
     [GETTING_DARK]: null,
     [CLIFF]: null,

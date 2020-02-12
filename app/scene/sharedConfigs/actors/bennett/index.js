@@ -72,6 +72,7 @@ import {
 } from '../../../sharedStyles/paper'
 import { DOLLAR__SHARED } from '../../../sharedStyles/print'
 import {
+    BRACELET__SHARED,
     CAFETERIA__SHARED,
     GO_KART__SHARED,
     LIZ_PURSE__SHARED,
@@ -138,8 +139,8 @@ export default {
     [DROPPING_MEATS]: null,
     [GREETING]: null,
     [LEAVING_CRUMBLED]: null,
-    [CORD_SIDE]: null,
-    [CORD_REAR]: null,
+    [CORD_SIDE]: BRACELET__SHARED,
+    [CORD_REAR]: BRACELET__SHARED,
     [PAST]: null,
     [FUTURE]: null,
     [REMOVING_PANTS]: null,
