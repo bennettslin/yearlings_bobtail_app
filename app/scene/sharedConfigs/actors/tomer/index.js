@@ -17,7 +17,8 @@ import {
     EVIAN__SHARED,
     GARBAGE_BAG__SHARED,
     HEINEKEN__SHARED,
-    ROBITUSSIN__SHARED
+    ROBITUSSIN__SHARED,
+    WINE__SHARED
 } from '../../../sharedStyles/food'
 
 import { SHANE__SHARED } from '../../../sharedStyles/people'
@@ -29,7 +30,10 @@ export default {
     [CEMETERY]: EVIAN__SHARED,
     [STATION_WAGON]: null,
     [EPILOGUE]: null,
-    [GANGBANGER]: GARBAGE_BAG__SHARED,
+    [GANGBANGER]: [
+        GARBAGE_BAG__SHARED,
+        WINE__SHARED
+    ],
     [SHANE_BUYING]: SHANE__SHARED,
     [SHANE_SPILLING]: [
         SHANE__SHARED,

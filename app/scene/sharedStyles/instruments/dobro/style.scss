@@ -1,0 +1,12 @@
+.dobro#{$suffix} {
+    .bodyDark { fill: hsl(44, 19%, 43%); }
+    .bodyLight { fill: hsl(60, 7%, 59%); }
+    .fretboard { fill: hsl(60, 11%, 48%); }
+    .bridgeNut { fill: hsl(70, 38%, 76%); }
+    .headstock { fill: hsl(39, 20%, 34%); }
+    .tuningKey { fill: hsl(200, 4%, 59%); }
+    .resonator { fill: hsl(198, 5%, 63%); }
+    .soundhole { fill: hsl(180, 1%, 31%); }
+    .latch { fill: hsl(195, 3%, 53%); }
+    .pegPin { fill: hsl(71, 22%, 65%); }
+}

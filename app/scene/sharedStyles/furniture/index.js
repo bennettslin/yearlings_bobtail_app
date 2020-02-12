@@ -1,5 +1,6 @@
-export const HOSPITAL_LINENS__SHARED = 'hospitalLinens'
+export const ATTIC_LINENS__SHARED = 'atticLinens'
 export const BENNETT_LINENS__SHARED = 'bennettLinens'
+export const HOSPITAL_LINENS__SHARED = 'hospitalLinens'
 export const LIZ_LINENS__SHARED = 'lizLinens'
 export const PRETEEN_FURNITURE__SHARED = 'preteenFurniture'
 export const PRETEEN_LINENS__SHARED = 'preteenLinens'

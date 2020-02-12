@@ -57,15 +57,22 @@ import {
 import { TRAY__SHARED } from '../../../sharedStyles/dishroom'
 import {
     BASEMENT_TAKEOUT__SHARED,
+    FROZEN_MEATS__SHARED,
     LANCET_PEN__SHARED,
     ROBITUSSIN__SHARED
 } from '../../../sharedStyles/food'
-import { HOSPITAL_LINENS__SHARED } from '../../../sharedStyles/furniture'
+import {
+    ATTIC_LINENS__SHARED,
+    HOSPITAL_LINENS__SHARED
+} from '../../../sharedStyles/furniture'
+import { RUBIKS_CUBE__SHARED } from '../../../sharedStyles/household'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
+    CABLE__SHARED,
     ELECTRIC_GUITAR__SHARED,
-    GUITAR_CASE__SHARED
+    GUITAR_CASE__SHARED,
+    MANDOLIN__SHARED
 } from '../../../sharedStyles/instruments'
 import {
     BOOK__SHARED,
@@ -78,6 +85,7 @@ import {
     GO_KART__SHARED,
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
+    MIRIAM_CONDOM__SHARED,
     WALKMAN__SHARED
 } from '../../../sharedStyles/wardrobe'
 
@@ -92,7 +100,7 @@ export default {
     [PIOUS]: MESSENGER_BAG__SHARED,
     [PONDERING]: null,
     [COUCH_READING]: BOOK__SHARED,
-    [RUBIKS_CUBE]: null,
+    [RUBIKS_CUBE]: RUBIKS_CUBE__SHARED,
     [DISTRACTED]: DOLLAR__SHARED,
     [EATING]: BASEMENT_TAKEOUT__SHARED,
     [HOPELESSLY_CRUSHED]: null,
@@ -129,16 +137,16 @@ export default {
     [STEAM_TUNNEL]: null,
     [CEMETERY]: null,
     [STATION_WAGON]: null,
-    [ATTIC]: null,
+    [ATTIC]: ATTIC_LINENS__SHARED,
     [PERFORMING]: ELECTRIC_GUITAR__SHARED,
-    [FLIRTING]: null,
+    [FLIRTING]: CABLE__SHARED,
     [SIDELONG_HESITANCE]: [
         BASS_CASE__SHARED,
         GUITAR_CASE__SHARED
     ],
     [REMOVING_SHOES]: null,
-    [DROPPING_MEATS]: null,
-    [GREETING]: null,
+    [DROPPING_MEATS]: FROZEN_MEATS__SHARED,
+    [GREETING]: MANDOLIN__SHARED,
     [LEAVING_CRUMBLED]: null,
     [CORD_SIDE]: BRACELET__SHARED,
     [CORD_REAR]: BRACELET__SHARED,
@@ -146,7 +154,7 @@ export default {
     [FUTURE]: null,
     [REMOVING_PANTS]: null,
     [INFIRM]: HOSPITAL_LINENS__SHARED,
-    [DISPOSING_CONDOM]: null,
+    [DISPOSING_CONDOM]: MIRIAM_CONDOM__SHARED,
     [CAMPUS_ASHAMED]: null,
     [SHOW_ANNOYED]: null,
     [ALLEY]: null,

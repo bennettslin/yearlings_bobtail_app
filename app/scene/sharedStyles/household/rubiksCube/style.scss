@@ -1,0 +1,9 @@
+.rubiksCube#{$suffix} {
+    .cubeBlack { fill: hsl(180, 1%, 38%); }
+    .squareWhite { fill: hsl(0, 0%, 84%); }
+    .squareBlue { fill: hsl(214, 59%, 55%); }
+    .squareGreen { fill: hsl(110, 54%, 60%); }
+    .squareYellow { fill: hsl(68, 50%, 63%); }
+    .squareOrange { fill: hsl(36, 59%, 55%); }
+    .squareRed { fill: hsl(0, 43%, 56%); }
+}

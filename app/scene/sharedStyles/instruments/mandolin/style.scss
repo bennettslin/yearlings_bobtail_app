@@ -1,0 +1,12 @@
+.mandolin#{$suffix} {
+    .mandolinDark { fill: hsl(58, 22%, 50%); }
+    .mandolinMedium { fill: hsl(58, 27%, 55%); }
+    .mandolinLight { fill: hsl(58, 33%, 60%); }
+    .fHole { fill: hsl(33, 14%, 38%); }
+    .fretboardDark { fill: hsl(44, 23%, 44%); }
+    .fretboardLight { fill: hsl(44, 22%, 50%); }
+    .bridgeDark { fill: hsl(41, 17%, 35%); }
+    .bridgeNutLight { fill: hsl(42, 17%, 41%); }
+    .brassDark { fill: hsl(64, 7%, 52%); }
+    .brassLight { fill: hsl(63, 9%, 57%); }
+}

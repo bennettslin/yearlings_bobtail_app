@@ -5226,5 +5226,10 @@ export default [
         taskName: `Allow for patterned and random cube colours.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Some shared styles.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
