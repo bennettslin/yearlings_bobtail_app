@@ -60,6 +60,7 @@ import {
     LANCET_PEN__SHARED,
     ROBITUSSIN__SHARED
 } from '../../../sharedStyles/food'
+import { HOSPITAL_LINENS__SHARED } from '../../../sharedStyles/furniture'
 import {
     ACOUSTIC_GUITAR__SHARED,
     BASS_CASE__SHARED,
@@ -144,7 +145,7 @@ export default {
     [PAST]: null,
     [FUTURE]: null,
     [REMOVING_PANTS]: null,
-    [INFIRM]: null,
+    [INFIRM]: HOSPITAL_LINENS__SHARED,
     [DISPOSING_CONDOM]: null,
     [CAMPUS_ASHAMED]: null,
     [SHOW_ANNOYED]: null,

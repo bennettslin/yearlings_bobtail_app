@@ -6,11 +6,12 @@ import {
 } from 'constants/scene/actors/miriamBennett'
 
 import { ASLEEP } from 'constants/scene/actors/songs'
+import { BENNETT_LINENS__SHARED } from '../../../sharedStyles/furniture'
 
 export default {
-    [ASLEEP]: null,
-    [ASLEEP_FEARFUL]: null,
-    [FENDING_OFF]: null,
+    [ASLEEP]: BENNETT_LINENS__SHARED,
+    [ASLEEP_FEARFUL]: BENNETT_LINENS__SHARED,
+    [FENDING_OFF]: BENNETT_LINENS__SHARED,
     [COWGIRL]: null,
     [BLOWJOB]: null
 }

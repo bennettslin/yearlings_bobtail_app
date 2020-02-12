@@ -53,7 +53,7 @@ import {
     TRAY__SHARED
 } from '../../../sharedStyles/dishroom'
 import {
-    BEDROOM_FURNITURE__SHARED,
+    PRETEEN_FURNITURE__SHARED,
     WAITING_ARMCHAIR__SHARED
 } from '../../../sharedStyles/furniture'
 import {
@@ -83,14 +83,14 @@ export default {
         WALL__SHARED
     ],
     [BATHTUB]: null,
-    [BEDROOM_DESK]: BEDROOM_FURNITURE__SHARED,
+    [BEDROOM_DESK]: PRETEEN_FURNITURE__SHARED,
     [BEDROOM_FENCE]: [
         FOLIAGE__SHARED,
         MOUNTAIN__SHARED,
         WALL__SHARED
     ],
     [BENNETT_BED]: SHADOW__SHARED,
-    [CAPTAIN_BED]: BEDROOM_FURNITURE__SHARED,
+    [CAPTAIN_BED]: PRETEEN_FURNITURE__SHARED,
     [CAVE_SHADOWS]: ROCK__SHARED,
     [CONVEYOR_BELT]: [
         CUP__SHARED,
