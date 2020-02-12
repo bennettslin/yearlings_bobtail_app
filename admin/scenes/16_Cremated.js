@@ -23,8 +23,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
@@ -50,8 +48,6 @@ export default [
                     instance: COWGIRL
                 },
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: COWGIRL
                 }
             }
@@ -69,8 +65,6 @@ export default [
                     instance: BLOWJOB
                 },
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BLOWJOB
                 }
             }
@@ -80,8 +74,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: INFIRM
                 }
             }
@@ -105,8 +97,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {
