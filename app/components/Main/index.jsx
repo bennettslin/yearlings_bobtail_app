@@ -54,12 +54,6 @@ class Main extends PureComponent {
 
     componentDidMount() {
         logMount('Main')
-
-        sendEvent({
-            category: 'test',
-            event: 'mount',
-            label: '013119_1542'
-        })
     }
 
     render() {
