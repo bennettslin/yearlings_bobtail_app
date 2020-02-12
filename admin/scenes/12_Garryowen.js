@@ -29,8 +29,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BRUSH_OFF
                 },
                 [LIZ]: {
@@ -56,8 +54,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DROPPING_MEATS
                 },
                 [TRISTAN]: {
@@ -89,8 +85,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CELIBATE_FREEZING
                 },
                 [LIZ]: {
@@ -116,8 +110,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GREETING
                 },
                 [MIRIAM]: {
@@ -143,8 +135,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: LEAVING_CRUMBLED
                 },
                 [LIZ]: {

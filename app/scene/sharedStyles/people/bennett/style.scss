@@ -57,6 +57,47 @@
         .cablePlug { fill: hsl(168, 8%, 63%); }
     }
 
+    &.droppingMeats {
+        .foamWhite { fill: hsl(175, 13%, 83%); }
+        .foamYellow { fill: hsl(64, 35%, 75%); }
+        .foamBlue { fill: hsl(189, 38%, 79%); }
+        .label { fill: hsl(200, 26%, 87%); }
+        .labelPrint { fill: hsl(65, 5%, 54%); }
+        .flagLabelWhite { fill: hsl(0, 0%, 90%); }
+        .flagLabelRed { fill: hsl(0, 100%, 64%); }
+        .flagLabelBlue { fill: hsl(210, 100%, 64%); }
+        .beef { fill: hsl(343, 24%, 63%); }
+        .chicken { fill: hsl(20, 43%, 67%); }
+        .porkFat { fill: hsl(346, 28%, 79%); }
+        .porkMeat { fill: hsl(345, 46%, 72%); }
+    }
+
+    &.greeting {
+        .mandolinDark { fill: hsl(58, 22%, 50%); }
+        .mandolinMedium { fill: hsl(58, 27%, 55%); }
+        .mandolinLight { fill: hsl(58, 33%, 60%); }
+        .fHole { fill: hsl(33, 14%, 38%); }
+        .fretboardDark { fill: hsl(44, 23%, 44%); }
+        .fretboardLight { fill: hsl(44, 22%, 50%); }
+        .bridgeDark { fill: hsl(41, 17%, 35%); }
+        .bridgeNutLight { fill: hsl(42, 17%, 41%); }
+        .brassDark { fill: hsl(64, 7%, 52%); }
+        .brassLight { fill: hsl(63, 9%, 57%); }
+    }
+
+    &.celibateFreezing {
+        .bodyDark { fill: hsl(44, 19%, 43%); }
+        .bodyLight { fill: hsl(60, 7%, 59%); }
+        .fretboard { fill: hsl(60, 11%, 48%); }
+        .bridgeNut { fill: hsl(70, 38%, 76%); }
+        .headstock { fill: hsl(39, 20%, 34%); }
+        .tuningKey { fill: hsl(200, 4%, 59%); }
+        .resonator { fill: hsl(198, 5%, 63%); }
+        .soundhole { fill: hsl(180, 1%, 31%); }
+        .latch { fill: hsl(195, 3%, 53%); }
+        .pegPin { fill: hsl(71, 22%, 65%); }
+    }
+
     &.pampas {
         .sash { fill: hsl(2, 59%, 65%); }
         .bennettKurta { fill: hsl(214, 45%, 60%); }

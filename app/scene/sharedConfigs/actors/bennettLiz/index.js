@@ -13,6 +13,8 @@ import {
     FINAL_DREAM
 } from 'constants/scene/actors/bennettLiz'
 
+import { HEINEKEN__SHARED } from '../../../sharedStyles/food'
+
 import {
     BACKPACK__SHARED,
     LIZ_PURSE__SHARED,
@@ -29,7 +31,7 @@ export default {
     [MISSIONARY]: null,
     [AFTERGLOW]: null,
     [BRUSH_OFF]: null,
-    [CELIBATE_FREEZING]: null,
+    [CELIBATE_FREEZING]: HEINEKEN__SHARED,
     [AWKWARD_CONSOLATION]: null,
     [PAMPAS]: null,
     [GETTING_DARK]: null,
