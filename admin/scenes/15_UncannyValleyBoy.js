@@ -46,8 +46,6 @@ export default [
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [FATHER]: {
@@ -72,8 +70,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PAST
                 },
                 [FATHER]: {
@@ -96,8 +92,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PRESENT
                 },
                 [FATHER]: {
@@ -130,8 +124,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FUTURE
                 },
                 [STEPHANIE]: {
@@ -183,8 +175,6 @@ export default [
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FENDING_OFF
                 },
                 [FATHER]: {
