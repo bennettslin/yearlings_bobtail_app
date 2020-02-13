@@ -35,6 +35,12 @@
         .yardstickEdgeLight { fill: hsl(178, 13%, 62%); }
     }
 
+    &.brokenHearted {
+        .phoneDark { fill: hsl(213, 25%, 65%); }
+        .phoneMedium { fill: hsl(213, 32%, 71%); }
+        .phoneLight { fill: hsl(214, 41%, 76%); }
+    }
+
     &.pampas {
         .sash { fill: hsl(2, 59%, 65%); }
         .bennettKurta { fill: hsl(214, 45%, 60%); }

@@ -32,8 +32,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CAMPUS_ASHAMED
                 },
                 [KHARI]: {
@@ -62,8 +60,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
@@ -98,8 +94,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ALLEY
                 }
             }
@@ -109,8 +103,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
@@ -170,8 +162,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DEMONSTRATION
                 },
                 [AMY]: {
