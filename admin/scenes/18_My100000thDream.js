@@ -24,8 +24,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EL_TORITO
                 },
                 [LIZ]: {
@@ -51,8 +49,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PAMPAS
                 },
                 [LIZ]: {
@@ -102,8 +98,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GETTING_DARK
                 },
                 [LIZ]: {
@@ -129,8 +123,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CLIFF
                 },
                 [LIZ]: {
@@ -156,8 +148,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FINAL_DREAM
                 },
                 [LIZ]: {
