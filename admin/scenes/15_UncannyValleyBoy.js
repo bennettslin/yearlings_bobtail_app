@@ -59,8 +59,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: HURT_CONSOLING
                 }
             }
@@ -98,8 +96,6 @@ export default [
                     instance: PRESENT
                 },
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PRESENT
                 },
                 [MIRIAM]: {
@@ -134,8 +130,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FUTURE
                 },
                 [FATHER]: {
@@ -188,8 +182,6 @@ export default [
                     }
                 },
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SOBBING_SHIELDING
                 }
             }

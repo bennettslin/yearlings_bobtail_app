@@ -50,8 +50,6 @@ export default [
                     instance: DUCKING
                 },
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
@@ -111,8 +109,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: COMFORTING
                 },
                 [PRETEEN_BENNETT]: {

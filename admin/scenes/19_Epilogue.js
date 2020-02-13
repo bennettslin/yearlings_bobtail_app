@@ -90,8 +90,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
                 },
