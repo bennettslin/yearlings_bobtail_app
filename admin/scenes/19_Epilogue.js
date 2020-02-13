@@ -39,8 +39,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },
