@@ -14,7 +14,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects? First implement light and dark theatre colours.`,
+        taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2
     },
