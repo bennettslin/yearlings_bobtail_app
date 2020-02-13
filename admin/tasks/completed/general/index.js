@@ -5241,5 +5241,10 @@ export default [
         taskName: `Log state selection to GA.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Setup work to have presences hang from high wire.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

@@ -21,6 +21,7 @@ import {
     setSvgTransform,
     getPresenceTransform
 } from './helper/transform'
+import { getWires } from './helper/wire'
 
 const propTypes = {
     // From parent.
@@ -210,12 +211,14 @@ class PresenceSvg extends PureComponent {
     render() {
         const {
                 className,
+                presenceType,
                 presenceKey,
                 children
             } = this.props,
             {
                 noShadow,
-                perspective
+                perspective,
+                wire
             } = this.getArrangement(),
             {
                 x: adjustedLeft,
@@ -228,55 +231,73 @@ class PresenceSvg extends PureComponent {
             containerTransform = this.getPresenceTransform(),
             sharedStyle = this.getSharedStyle(),
             presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
-            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey
+            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey,
+            wires = getWires({ presenceType, wire })
 
         return (
-            <___>
-                <div
-                    {...{
-                        className: cx(
-                            'PresenceSvg__highWire',
-                            'PresenceSvg__position'
-                        ),
-                        style: {
-                            left: `${adjustedLeft.toFixed(2)}%`,
-                            top: `${(adjustedTop - adjustedHeight * 0.5).toFixed(2)}%`
-                        }
-                    }}
-                />
-                <InlineSvg
-                    {...{
-                        className: cx(
-                            'PresenceSvg',
-                            'PresenceSvg__position',
-                            noShadow && 'Presence__noShadow',
-                            className
-                        ),
-                        style: {
-                            left: `${adjustedLeft.toFixed(2)}%`,
-                            top: `${adjustedTop.toFixed(2)}%`,
-                            width: `${adjustedWidth.toFixed(2)}%`,
-                            height: `${adjustedHeight.toFixed(2)}%`,
-                            ...perspective && {
-                                perspective: `${perspective}em`
-                            },
-                            ...containerTransform && {
-                                transform: containerTransform
-                            }
+            <InlineSvg
+                {...{
+                    className: cx(
+                        'PresenceSvg',
+                        'PresenceSvg__position',
+                        noShadow && 'Presence__noShadow',
+                        className
+                    ),
+                    style: {
+                        left: `${adjustedLeft.toFixed(2)}%`,
+                        top: `${adjustedTop.toFixed(2)}%`,
+                        width: `${adjustedWidth.toFixed(2)}%`,
+                        height: `${adjustedHeight.toFixed(2)}%`,
+                        ...perspective && {
+                            perspective: `${perspective}em`
                         },
-                        svgClassName: cx(
-                            presenceKeyClassName,
-                            duplicateKeyClassName,
-                            getSharedClassNames(sharedStyle)
-                        ),
-                        title: convertPresenceKeyToTitle(presenceKey),
-                        preProcessor: this.preProcessSvg,
-                        onLoad: this.postProcessSvg
-                    }}
-                >
-                    {children}
-                </InlineSvg>
-            </___>
+                        ...containerTransform && {
+                            transform: containerTransform
+                        }
+                    },
+                    svgClassName: cx(
+                        presenceKeyClassName,
+                        duplicateKeyClassName,
+                        getSharedClassNames(sharedStyle)
+                    ),
+                    title: convertPresenceKeyToTitle(presenceKey),
+                    preProcessor: this.preProcessSvg,
+                    onLoad: this.postProcessSvg,
+                    siblingComponent: wires && (
+                        <___>
+                            {wires.map((config, index) => {
+                                const { x = 0.5, y = 0.5 } = config,
+                                    left =
+                                        adjustedLeft +
+                                        // 0.5 is centre.
+                                        adjustedWidth * (x - 0.5),
+                                    top =
+                                        adjustedTop -
+                                        // 0 is very bottom, 1 is very top.
+                                        adjustedHeight * y
+
+                                return (
+                                    <div
+                                        {...{
+                                            key: index,
+                                            className: cx(
+                                                'PresenceSvg__highWire',
+                                                'PresenceSvg__position'
+                                            ),
+                                            style: {
+                                                left: `${left.toFixed(2)}%`,
+                                                top: `${top.toFixed(2)}%`
+                                            }
+                                        }}
+                                    />
+                                )
+                            })}
+                        </___>
+                    )
+                }}
+            >
+                {children}
+            </InlineSvg>
         )
     }
 }

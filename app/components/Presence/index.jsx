@@ -89,7 +89,6 @@ class Presence extends PureComponent {
 
             presenceComponent = presencesMap[presenceKey]
 
-        // TODO: Is CssTransition even necessary once all are configured?
         return (
             <CSSTransition
                 unmountOnExit

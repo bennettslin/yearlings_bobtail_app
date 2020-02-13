@@ -8,5 +8,10 @@ export default [
         taskName: `Three-dimensionality and painted look of cutouts.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Line stroke widths for all presence types.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

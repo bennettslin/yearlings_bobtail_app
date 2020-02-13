@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ReactInlineSvg from 'react-inlinesvg'
@@ -9,7 +9,8 @@ const propTypes = {
     className: PropTypes.string,
     style: PropTypes.object,
     svgClassName: PropTypes.string,
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    siblingComponent: PropTypes.node
 }
 
 const InlineSvg = ({
@@ -18,28 +19,34 @@ const InlineSvg = ({
     style,
     svgClassName,
     children,
+    siblingComponent,
     ...rest
 }) => (
-    <div
-        {...{
-            className: cx(
-                className,
-
-                // When not in previewer, make position absolute.
-                !notAbsoluteFullContainer && 'abF'
-            ),
-            style
-        }}
-    >
-        <ReactInlineSvg
+    <___>
+        <div
             {...{
-                className: svgClassName,
-                xmlns: 'http://www.w3.org/2000/svg',
-                src: children,
-                ...rest
+                className: cx(
+                    className,
+
+                    // When not in previewer, make position absolute.
+                    !notAbsoluteFullContainer && 'abF'
+                ),
+                style
             }}
-        />
-    </div>
+        >
+            <ReactInlineSvg
+                {...{
+                    className: svgClassName,
+                    xmlns: 'http://www.w3.org/2000/svg',
+                    src: children,
+                    ...rest
+                }}
+            />
+        </div>
+        {/* TODO: Put this behind child. */}
+        {siblingComponent}
+    </___>
+
 )
 
 InlineSvg.propTypes = propTypes
