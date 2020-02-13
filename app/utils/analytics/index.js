@@ -1,7 +1,6 @@
 let isGaTrackerCreated = false
 
-const canGaSendEvent = () => {
-
+const _canGaSendEvent = () => {
     // Not sure why isUndefined util doesn't work?
     if (typeof ga === 'undefined') {
         return false
@@ -18,21 +17,17 @@ const canGaSendEvent = () => {
 const sendEvent = ({
     category = 'category',
     action = 'action',
-    label = 'label'
+    label,
+    value
 
 }) => {
-    if (canGaSendEvent()) {
+    if (_canGaSendEvent()) {
         ga('send', {
             hitType: 'event',
             eventCategory: category,
             eventAction: action,
-            eventLabel: label
-        })
-
-        logAnalytics({
-            category,
-            action,
-            label
+            ...label && { eventLabel: label },
+            ...value && { eventValue: value }
         })
     }
 }

@@ -12,7 +12,7 @@ import {
     logSuccess,
     logError,
     logger
-} from './helper'
+} from './helpers/logs'
 
 global.logAccess = logAccess
 global.logAdmin = logAdmin

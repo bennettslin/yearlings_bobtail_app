@@ -22,8 +22,7 @@ class AdminNavRow extends PureComponent {
         isSelected: PropTypes.bool.isRequired
     }
 
-    _handleSongClick = (e) => {
-        logEvent('AdminNavRow', e)
+    _handleSongClick = () => {
         this.dispatchSong({ selectedSongIndex: this.props.songIndex })
     }
 

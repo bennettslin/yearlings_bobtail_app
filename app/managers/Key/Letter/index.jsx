@@ -144,7 +144,10 @@ class LetterManager extends PureComponent {
                 break
         }
 
-        logAccess(`Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`)
+        logAccess({
+            log: `Key "${keyName}" was ${keyWasRegistered ? '' : 'NOT '}registered.`,
+            ...keyWasRegistered && { label: keyName }
+        })
 
         return {
             annotationIndexWasAccessed,

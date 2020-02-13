@@ -5231,5 +5231,10 @@ export default [
         taskName: `Some shared styles.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Use logging for GA.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]

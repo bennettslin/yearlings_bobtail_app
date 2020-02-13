@@ -104,7 +104,12 @@ export const scrollElementIntoView = ({
                 scrollClass :
                 `${scrollClass}__${index}`
         element = document.getElementsByClassName(selector)[0]
-        logError(`${log}\nNo ref found, scrolled by selector: ${scrollClass} ${index}`)
+
+        logError({
+            log: `${log}\nNo ref found, scrolled by selector: ${scrollClass} ${index}`,
+            action: 'scroll',
+            label: `class: ${scrollClass}, index: ${index}`
+        })
     }
 
     if (element) {

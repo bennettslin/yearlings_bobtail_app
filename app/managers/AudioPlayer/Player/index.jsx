@@ -178,7 +178,11 @@ class PlayerManager extends PureComponent {
              * Promise was returned by a player that is no longer selected, so
              * now ask it to pause.
              */
-            logPlayer(`Outdated promise returned from ${songIndex}.`)
+            logPlayer({
+                log: `Outdated promise returned from ${songIndex}.`,
+                action: 'returnOutdatedPromise',
+                label: songIndex
+            })
             this.getPlayerRef(songIndex).askToPause()
         }
     }
@@ -267,7 +271,11 @@ class PlayerManager extends PureComponent {
              * we have reached the end of the song.
              */
             if (timeRelativeToSelectedVerse === 1 && !nextVerseIndex) {
-                logPlayer('Updated time will end player.')
+                logPlayer({
+                    log: 'Updated time will end player.',
+                    action: 'endByUpdatedTime',
+                    label: selectedSongIndex
+                })
                 this.props.handleSongEnd()
 
             /**
@@ -275,7 +283,11 @@ class PlayerManager extends PureComponent {
              * should never get called, so fix the code if it does!
              */
             } else {
-                logError(`Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`)
+                logError({
+                    log: `Time ${currentTime} and verse index ${selectedVerseIndex} are out of sync!`,
+                    action: 'syncTimeAndVerse',
+                    label: `song: ${selectedSongIndex}, verse: ${selectedVerseIndex}, time: ${currentTime}`
+                })
             }
 
             /**

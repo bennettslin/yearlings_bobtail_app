@@ -135,7 +135,19 @@ class PresenceSvg extends PureComponent {
             }
 
         } catch (error) {
-            logError('Error parsing viewBox!')
+            const {
+                presenceType,
+                presenceKey,
+                actorKey
+            } = this.props
+
+            logError({
+                log: 'Error parsing viewBox!',
+                action: 'parseSvg',
+                label: actorKey ?
+                    `actor: ${actorKey}, instance: ${presenceKey}` :
+                    `thing: ${presenceType}, instance: ${presenceKey}`
+            })
         }
     }
 

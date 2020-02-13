@@ -5,6 +5,11 @@ export default [
         neededHours: 3
     },
     {
+        taskName: `Log state selection to GA.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Timebox for band website.`,
         workedHours: 0,
         neededHours: 10

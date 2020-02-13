@@ -69,7 +69,11 @@ class Player extends PureComponent {
          * the promise is returned, not here.
          */
         if (this.state.isPromisingToPlay) {
-            logPlayer(`Ignoring subsequent request to pause ${songIndex}.`)
+            logPlayer({
+                log: `Ignoring subsequent request to pause ${songIndex}.`,
+                action: 'ignoreSubsequentPause',
+                label: songIndex
+            })
             return
         }
 
@@ -79,7 +83,11 @@ class Player extends PureComponent {
          * make sure the player is actually playing before pausing it.
          */
         if (!this.audioPlayer.paused) {
-            logPlayer(`Player ${this.props.songIndex} paused.`)
+            logPlayer({
+                log: `Player ${songIndex} paused.`,
+                action: 'pause',
+                label: songIndex
+            })
 
             this.audioPlayer.pause()
 
@@ -99,13 +107,21 @@ class Player extends PureComponent {
          * There's a promise to play still out there, so do nothing.
          */
         if (this.state.isPromisingToPlay) {
-            logPlayer(`Ignoring subsequent promise to play ${songIndex}.`)
+            logPlayer({
+                log: `Ignoring subsequent promise to play ${songIndex}.`,
+                action: 'ignoreSubsequentPromise',
+                label: songIndex
+            })
             return
         }
 
         const playPromise = this.audioPlayer.play()
 
-        logPlayer(`Promising to play ${this.props.songIndex}\u2026`)
+        logPlayer({
+            log: `Promising to play ${this.props.songIndex}\u2026`,
+            action: 'promisePlay',
+            label: songIndex
+        })
 
         /**
          * Browser supports the return of a promise:
@@ -128,7 +144,12 @@ class Player extends PureComponent {
 
     _handlePlayPromiseSuccess = () => {
         const { songIndex } = this.props
-        logSuccess(`Promise to play ${songIndex} succeeded.`)
+        logPlayer({
+            log: `Promise to play ${songIndex} succeeded.`,
+            action: 'play',
+            label: songIndex,
+            success: true
+        })
 
         this.props.setSelectedPlayerIsPlaying({
             isPlaying: true,
@@ -140,7 +161,11 @@ class Player extends PureComponent {
 
     _handlePlayPromiseFailure = (error) => {
         const { songIndex } = this.props
-        logError(`Promise to play ${songIndex} failed: ${error}`)
+        logError({
+            log: `Promise to play ${songIndex} failed: ${error}`,
+            action: 'promisePlay',
+            label: `song: ${songIndex}, error: ${error}`
+        })
 
         this.props.setSelectedPlayerIsPlaying({
             isPlaying: false,
@@ -171,61 +196,67 @@ class Player extends PureComponent {
     }
 
     _handleEndedEvent = () => {
-        logPlayer(`Player for ${this.props.songIndex} ended itself.`)
+        const { songIndex } = this.props
+
+        logPlayer({
+            log: `Player for ${songIndex} ended itself.`,
+            action: 'endByPlayer',
+            label: songIndex
+        })
         this.props.updateEnded()
     }
 
-    _listenForDebugStatements(onlyIfSelected) {
-        // This isn't called anywhere. Keep for now to have a list of events.
+    // _listenForDebugStatements(onlyIfSelected) {
+    //     // This isn't called anywhere. Keep for now to have a list of events.
 
-        const showDebugStatements =
-            this.props.isSelected || !onlyIfSelected
+    //     const showDebugStatements =
+    //         this.props.isSelected || !onlyIfSelected
 
-        if (showDebugStatements) {
-            this.audioPlayer.addEventListener('ended', () => {
-                logPlayer('ended')
-            })
-            this.audioPlayer.addEventListener('pause', () => {
-                logPlayer('pause')
-            })
-            this.audioPlayer.addEventListener('play', () => {
-                logPlayer('play')
-            })
-            this.audioPlayer.addEventListener('playing', () => {
-                logPlayer('playing')
-            })
-            // Determine which times ranges have been buffered.
-            this.audioPlayer.addEventListener('progress', () => {
-                logPlayer('progress')
-            })
-            // Seek operation has completed.
-            this.audioPlayer.addEventListener('seeked', () => {
-                logPlayer('seeked')
-            })
-            // Seek operation has begun.
-            this.audioPlayer.addEventListener('seeking', () => {
-                logPlayer('seeking')
-            })
-            // Data is not forthcoming.
-            this.audioPlayer.addEventListener('stalled', () => {
-                logPlayer('stalled')
-            })
-            // Download has completed.
-            this.audioPlayer.addEventListener('suspend', () => {
-                logPlayer('suspend')
-            })
-            // Enough data is available that the media can be played for now.
-            this.audioPlayer.addEventListener('canplay', () => {
-                logPlayer('canplay')
-            })
-            this.audioPlayer.addEventListener('canplaythrough', () => {
-                logPlayer('canplaythrough')
-            })
-            this.audioPlayer.addEventListener('waiting', () => {
-                logPlayer('waiting')
-            })
-        }
-    }
+    //     if (showDebugStatements) {
+    //         this.audioPlayer.addEventListener('ended', () => {
+    //             logPlayer('ended')
+    //         })
+    //         this.audioPlayer.addEventListener('pause', () => {
+    //             logPlayer('pause')
+    //         })
+    //         this.audioPlayer.addEventListener('play', () => {
+    //             logPlayer('play')
+    //         })
+    //         this.audioPlayer.addEventListener('playing', () => {
+    //             logPlayer('playing')
+    //         })
+    //         // Determine which times ranges have been buffered.
+    //         this.audioPlayer.addEventListener('progress', () => {
+    //             logPlayer('progress')
+    //         })
+    //         // Seek operation has completed.
+    //         this.audioPlayer.addEventListener('seeked', () => {
+    //             logPlayer('seeked')
+    //         })
+    //         // Seek operation has begun.
+    //         this.audioPlayer.addEventListener('seeking', () => {
+    //             logPlayer('seeking')
+    //         })
+    //         // Data is not forthcoming.
+    //         this.audioPlayer.addEventListener('stalled', () => {
+    //             logPlayer('stalled')
+    //         })
+    //         // Download has completed.
+    //         this.audioPlayer.addEventListener('suspend', () => {
+    //             logPlayer('suspend')
+    //         })
+    //         // Enough data is available that the media can be played for now.
+    //         this.audioPlayer.addEventListener('canplay', () => {
+    //             logPlayer('canplay')
+    //         })
+    //         this.audioPlayer.addEventListener('canplaythrough', () => {
+    //             logPlayer('canplaythrough')
+    //         })
+    //         this.audioPlayer.addEventListener('waiting', () => {
+    //             logPlayer('waiting')
+    //         })
+    //     }
+    // }
 
     _setAudioPlayerRef = (node) => {
         this.audioPlayer = node.audioEl
