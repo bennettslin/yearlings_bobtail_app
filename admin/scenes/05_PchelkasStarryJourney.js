@@ -143,8 +143,6 @@ export default [
                     instance: STARING
                 },
                 [MOTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ARGUING
                 },
                 [TRISTAN]: {

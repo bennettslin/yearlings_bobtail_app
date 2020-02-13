@@ -15,6 +15,7 @@ import {
 
 import { HEINEKEN__SHARED } from '../../../sharedStyles/food'
 import {
+    CYMBAL__SHARED,
     DOBRO__SHARED,
     RECORDER__SHARED
 } from '../../../sharedStyles/instruments'
@@ -22,7 +23,8 @@ import {
     BACKPACK__SHARED,
     BRACELET__SHARED,
     LIZ_PURSE__SHARED,
-    MESSENGER_BAG__SHARED
+    MESSENGER_BAG__SHARED,
+    SARI__SHARED
 } from '../../../sharedStyles/wardrobe'
 
 export default {
@@ -40,7 +42,11 @@ export default {
         DOBRO__SHARED
     ],
     [AWKWARD_CONSOLATION]: BRACELET__SHARED,
-    [PAMPAS]: RECORDER__SHARED,
+    [PAMPAS]: [
+        CYMBAL__SHARED,
+        RECORDER__SHARED,
+        SARI__SHARED
+    ],
     [GETTING_DARK]: null,
     [CLIFF]: null,
     [FINAL_DREAM]: null
