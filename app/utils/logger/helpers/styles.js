@@ -39,6 +39,7 @@ export const MOUNT = 'mount'
 export const PARSE = 'parse'
 export const PLAYER = 'player'
 export const SCROLL = 'scroll'
+export const SELECT = 'select'
 export const SUCCESS = 'style'
 export const TRANSITION = 'transition'
 
@@ -81,6 +82,10 @@ const LOG_STYLES = {
     }),
     [SCROLL]: _getStyles({
         color: '#748',
+        fontSize: '1.2em'
+    }),
+    [SELECT]: _getStyles({
+        color: '#82b',
         fontSize: '1.2em'
     }),
     [SUCCESS]: _getStyles({

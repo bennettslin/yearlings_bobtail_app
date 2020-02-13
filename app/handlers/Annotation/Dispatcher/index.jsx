@@ -59,7 +59,7 @@ class AnnotationDispatcher extends PureComponent {
             }
         }
 
-        this.props.updateSelectedStore({ selectedAnnotationIndex })
+        this.dispatchAndLog(selectedAnnotationIndex)
 
         if (selectedAnnotationIndex) {
 
@@ -104,7 +104,7 @@ class AnnotationDispatcher extends PureComponent {
                 direction
             })
 
-        this.props.updateSelectedStore({ selectedAnnotationIndex })
+        this.dispatchAndLog(selectedAnnotationIndex)
 
         if (selectedAnnotationIndex) {
             this.props.updateScrollLyricStore({
@@ -119,6 +119,18 @@ class AnnotationDispatcher extends PureComponent {
         }
 
         return selectedAnnotationIndex
+    }
+
+    dispatchAndLog = selectedAnnotationIndex => {
+        const { selectedSongIndex } = this.props
+
+        this.props.updateSelectedStore({ selectedAnnotationIndex })
+
+        logSelect({
+            action: 'annotation',
+            song: selectedSongIndex,
+            annotation: selectedAnnotationIndex
+        })
     }
 
     render() {

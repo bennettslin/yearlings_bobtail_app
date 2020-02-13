@@ -5,11 +5,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Log state selection to GA.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Have html switch from development to production for GA.`,
         workedHours: 0,
         neededHours: 1

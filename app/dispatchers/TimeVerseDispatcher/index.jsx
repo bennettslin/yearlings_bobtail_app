@@ -37,15 +37,23 @@ class TimeVerseDispatcher extends PureComponent {
     }) => {
         // This is only ever called by the player.
 
-        const { selectedSongIndex } = this.props
+        const { selectedSongIndex } = this.props,
+            selectedSceneIndex = getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                nextVerseIndex
+            )
 
         this.props.updateSelectedStore({
             selectedVerseIndex: nextVerseIndex,
-            selectedSceneIndex: getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                nextVerseIndex
-            ),
+            selectedSceneIndex,
             selectedTime: currentTime
+        })
+
+        logSelect({
+            action: 'playerVerse',
+            song: selectedSongIndex,
+            verse: nextVerseIndex,
+            scene: selectedSceneIndex
         })
 
         // If autoScroll is on, scroll to selected verse.

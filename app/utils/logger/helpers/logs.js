@@ -1,5 +1,5 @@
 import pino from 'pino'
-
+import isUndefined from 'lodash/isundefined'
 import sendEvent from '../../analytics'
 
 import { getTimeDifference } from './time'
@@ -14,6 +14,7 @@ import {
     PARSE,
     PLAYER,
     SCROLL,
+    SELECT,
     TRANSITION,
     SUCCESS,
     ERROR,
@@ -43,11 +44,13 @@ const _logInfo = ({
                 value
         )
 
-    logger[level](
-        `%c${log}`,
-        styles || getStyleForCategory(styleCategory || category),
-        timeDifference
-    )
+    if (log) {
+        logger[level](
+            `%c${log}`,
+            styles || getStyleForCategory(styleCategory || category),
+            timeDifference
+        )
+    }
 
     if (category && action) {
         sendEvent({
@@ -119,6 +122,28 @@ export const logPlayer = ({
         category: PLAYER,
         ...props
     })
+}
+export const logSelect = ({
+    action,
+    song,
+    verse,
+    annotation,
+    scene
+}) => {
+    if (!isUndefined(verse) && !isUndefined(scene)) {
+        _logInfo({
+            category: SELECT,
+            action,
+            label: `song: ${song}, scene: ${scene}, verse: ${verse}`
+        })
+    }
+    if (annotation) {
+        _logInfo({
+            category: SELECT,
+            action,
+            label: `song: ${song}, annotation: ${annotation}`
+        })
+    }
 }
 export const logError = ({
     log,

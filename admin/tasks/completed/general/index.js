@@ -5236,5 +5236,10 @@ export default [
         taskName: `Use logging for GA.`,
         workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Log state selection to GA.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

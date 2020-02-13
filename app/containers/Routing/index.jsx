@@ -62,7 +62,11 @@ class RoutingContainer extends PureComponent {
                 selectedVerseIndex,
                 selectedAnnotationIndex,
                 routingParamString
-            })
+            }),
+            routingSceneIndex = getSceneIndexForVerseIndex(
+                routingSongIndex,
+                routingVerseIndex
+            )
 
         // Update storage to be consistent with route if necessary.
         if (
@@ -71,7 +75,7 @@ class RoutingContainer extends PureComponent {
             routingAnnotationIndex !== selectedAnnotationIndex
         ) {
 
-            const routingSceneIndex = getSceneIndexForVerseIndex(
+            const selectedTime = getStartTimeForVerseIndex(
                 routingSongIndex,
                 routingVerseIndex
             )
@@ -81,10 +85,7 @@ class RoutingContainer extends PureComponent {
                 selectedVerseIndex: routingVerseIndex,
                 selectedAnnotationIndex: routingAnnotationIndex,
                 selectedSceneIndex: routingSceneIndex,
-                selectedTime: getStartTimeForVerseIndex(
-                    routingSongIndex,
-                    routingVerseIndex
-                )
+                selectedTime
             })
 
             this.props.updateLyricStore({
@@ -121,6 +122,14 @@ class RoutingContainer extends PureComponent {
          * show until this is set.
          */
         this.props.updateSelectedStore({ isRoutingComplete: true })
+
+        logSelect({
+            action: 'load',
+            song: routingSongIndex,
+            verse: routingVerseIndex,
+            annotation: routingAnnotationIndex,
+            scene: routingSceneIndex
+        })
 
         // Always replace path for consistency.
         this.replacePath(

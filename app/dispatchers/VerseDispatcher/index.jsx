@@ -36,7 +36,15 @@ class VerseDispatcher extends PureComponent {
         scrollLog
     }) => {
 
-        const { selectedSongIndex } = this.props
+        const { selectedSongIndex } = this.props,
+            selectedSceneIndex = getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            ),
+            selectedTime = getStartTimeForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
 
         this.props.updateAudioStore({
             queuedPlaySongIndex: selectedSongIndex,
@@ -45,14 +53,15 @@ class VerseDispatcher extends PureComponent {
 
         this.props.updateSelectedStore({
             selectedVerseIndex,
-            selectedSceneIndex: getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            ),
-            selectedTime: getStartTimeForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
+            selectedSceneIndex,
+            selectedTime
+        })
+
+        logSelect({
+            action: 'verse',
+            song: selectedSongIndex,
+            verse: selectedVerseIndex,
+            scene: selectedSceneIndex
         })
 
         // Ensure that no verse is activated.

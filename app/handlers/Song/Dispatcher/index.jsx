@@ -69,19 +69,31 @@ class SongDispatcher extends PureComponent {
             queuedPlayVerseIndex: selectedVerseIndex
         })
 
+        const
+            selectedSceneIndex = getSceneIndexForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            ),
+            selectedTime = getStartTimeForVerseIndex(
+                selectedSongIndex,
+                selectedVerseIndex
+            )
+
         this.props.updateSelectedStore({
             selectedSongIndex,
             selectedVerseIndex,
             selectedAnnotationIndex,
-            selectedSceneIndex: getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            ),
-            selectedTime: getStartTimeForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            ),
+            selectedSceneIndex,
+            selectedTime,
             ...isFinite(earColumnIndex) && { earColumnIndex }
+        })
+
+        logSelect({
+            action: 'song',
+            song: selectedSongIndex,
+            verse: selectedVerseIndex,
+            annotation: selectedAnnotationIndex,
+            scene: selectedSceneIndex
         })
 
         this.props.updateAccessStore({
