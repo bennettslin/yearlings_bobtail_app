@@ -27,7 +27,7 @@ class DeviceWrapper extends PureComponent {
     render() {
         const
             {
-                isHigherProcessor,
+                // isHigherProcessor,
                 deviceWidthIndex,
                 isPhoneWidth,
                 isDesktopWidth,
@@ -48,7 +48,10 @@ class DeviceWrapper extends PureComponent {
                     className: cx(
                         'DeviceWrapper',
                         `DW__${deviceWidthKey}Width`,
-                        isHigherProcessor && 'DW__higherProcessor',
+
+                        // This is only ever used for enabling transitions.
+                        // isHigherProcessor && 'DW__higherProcessor',
+                        'DW__higherProcessor',
                         isDesktopWidth ?
                             'DW__desktopWidth' :
                             'DW__mobileWidth',

@@ -5,7 +5,7 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Remove animations from mobile for performance. Transitions are done, just do animations.`,
+        taskName: `Remove animations from mobile for performance. Transitions are done, just do animations. Update: Actually, test if this is really necessary.`,
         workedHours: 1,
         neededHours: 3
     },
