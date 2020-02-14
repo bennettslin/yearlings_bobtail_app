@@ -5261,5 +5261,10 @@ export default [
         taskName: `Add album title and band name to banner.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Refactor Wires component.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

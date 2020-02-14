@@ -1,7 +1,8 @@
-import React, { Fragment as ___, PureComponent } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from 'modules/InlineSvg'
+import Wires from 'modules/Wires'
 
 import {
     convertPresenceKeyToTitle,
@@ -21,7 +22,6 @@ import {
     setSvgTransform,
     getPresenceTransform
 } from './helper/transform'
-import { getWires } from './helper/wire'
 
 const propTypes = {
     // From parent.
@@ -231,8 +231,7 @@ class PresenceSvg extends PureComponent {
             containerTransform = this.getPresenceTransform(),
             sharedStyle = this.getSharedStyle(),
             presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
-            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey,
-            wires = getWires({ presenceType, wire })
+            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey
 
         return (
             <InlineSvg
@@ -263,36 +262,17 @@ class PresenceSvg extends PureComponent {
                     title: convertPresenceKeyToTitle(presenceKey),
                     preProcessor: this.preProcessSvg,
                     onLoad: this.postProcessSvg,
-                    siblingComponent: wires && (
-                        <___>
-                            {wires.map((config, index) => {
-                                const { x = 0.5, y = 0.5 } = config,
-                                    left =
-                                        adjustedLeft +
-                                        // 0.5 is centre.
-                                        adjustedWidth * (x - 0.5),
-                                    top =
-                                        adjustedTop -
-                                        // 0 is very bottom, 1 is very top.
-                                        adjustedHeight * y
-
-                                return (
-                                    <div
-                                        {...{
-                                            key: index,
-                                            className: cx(
-                                                'PresenceSvg__highWire',
-                                                'PresenceSvg__position'
-                                            ),
-                                            style: {
-                                                left: `${left.toFixed(2)}%`,
-                                                top: `${top.toFixed(2)}%`
-                                            }
-                                        }}
-                                    />
-                                )
-                            })}
-                        </___>
+                    siblingComponent: (
+                        <Wires
+                            {...{
+                                wire,
+                                presenceType,
+                                adjustedTop,
+                                adjustedLeft,
+                                adjustedWidth,
+                                adjustedHeight
+                            }}
+                        />
                     )
                 }}
             >

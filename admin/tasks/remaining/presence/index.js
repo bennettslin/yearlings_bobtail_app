@@ -3,7 +3,7 @@ export default [
      * Do once the presence svgs are mostly done.
      */
     {
-        taskName: `Determine wire configs for all bubbles, puppets, and hanging things like ghosts. Then refactor wire into separate component.`,
+        taskName: `Determine wire configs for all bubbles, puppets, and hanging things like ghosts.`,
         workedHours: 0,
         neededHours: 2
     },
