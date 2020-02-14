@@ -3,7 +3,6 @@ import {
     getSongVersesCount,
     getSongVerseConfigs
 } from 'album/api/verses'
-
 export const getSongTotalTime = (songIndex) => {
     const { totalTime } = getSong(songIndex)
     return totalTime || Number.MAX_SAFE_INTEGER

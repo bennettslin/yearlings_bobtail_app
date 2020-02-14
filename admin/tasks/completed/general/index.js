@@ -4623,7 +4623,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Rename Cursor to Banner, and banner scenes to Filmstrip.`,
+        taskName: `Rename Cursor to SongBanner, and banner scenes to Filmstrip.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -4633,7 +4633,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Clicking on Filmstrip dismisses overlay. Ensure that clicking on Banner also does not dismiss overlay.`,
+        taskName: `Clicking on Filmstrip dismisses overlay. Ensure that clicking on SongBanner also does not dismiss overlay.`,
         workedHours: 1,
         neededHours: 1
     },
@@ -5256,5 +5256,10 @@ export default [
         taskName: `Have html switch from development to production for GA.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Add album title and band name to banner.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
