@@ -5251,5 +5251,10 @@ export default [
         taskName: `Remove transitions from mobile for performance.`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Have html switch from development to production for GA.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

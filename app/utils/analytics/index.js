@@ -1,3 +1,16 @@
+// This grabs from app, not admin, in production.
+import { GA_ACCOUNT } from 'admin/constants/analytics'
+
+/* eslint-disable */
+window.dataLayer = window.dataLayer || []
+function gtag() {
+    dataLayer.push(arguments)
+}
+gtag('js', new Date())
+gtag('config', GA_ACCOUNT)
+/* eslint-enable */
+console.log(`GA initialised with property id ${GA_ACCOUNT}.`)
+
 let isGaTrackerCreated = false
 
 const _canGaSendEvent = () => {
@@ -7,7 +20,7 @@ const _canGaSendEvent = () => {
     }
 
     if (!isGaTrackerCreated) {
-        ga('create', 'UA-133481555-1', 'auto')
+        ga('create', GA_ACCOUNT, 'auto')
         isGaTrackerCreated = true
     }
 
