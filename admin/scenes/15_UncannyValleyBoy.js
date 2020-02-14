@@ -108,8 +108,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: MISCHIEVOUS_BANJO
                     }
                 }
@@ -124,8 +122,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: BENNETT_RECORDING
                     }
                 },

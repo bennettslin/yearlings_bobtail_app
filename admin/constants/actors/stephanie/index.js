@@ -24,6 +24,18 @@ import {
 
 const INSTANCES = [
     {
+        type: AMY_STEPHANIE,
+        instance: SQUEEZING
+    },
+    {
+        type: STEPHANIE,
+        instance: MINGLING
+    },
+    {
+        type: STEPHANIE,
+        instance: EPILOGUE
+    },
+    {
         type: STEPHANIE,
         instance: BENNETT_KEYBOARD
     },
@@ -50,18 +62,6 @@ const INSTANCES = [
     {
         type: STEPHANIE,
         instance: FLAPPER
-    },
-    {
-        type: AMY_STEPHANIE,
-        instance: SQUEEZING
-    },
-    {
-        type: STEPHANIE,
-        instance: MINGLING
-    },
-    {
-        type: STEPHANIE,
-        instance: EPILOGUE
     },
     {
         type: STEPHANIE,

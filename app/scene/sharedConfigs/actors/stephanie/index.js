@@ -11,12 +11,15 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import { BENNETT } from 'constants/scene/actors'
+import { HEINEKEN__SHARED } from '../../../sharedStyles/food'
+
 export default {
-    [BENNETT_KEYBOARD]: null,
+    [BENNETT_KEYBOARD]: BENNETT,
     [FLAPPER]: null,
-    [MINGLING]: null,
-    [BENNETT_DEFIANT]: null,
-    [BENNETT_RECORDING]: null,
+    [MINGLING]: HEINEKEN__SHARED,
+    [BENNETT_DEFIANT]: BENNETT,
+    [BENNETT_RECORDING]: BENNETT,
     [PROTESTER]: null,
     [EPILOGUE]: null
 }

@@ -150,8 +150,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [STEPHANIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'4"`,
                     instance: EPILOGUE
                 },

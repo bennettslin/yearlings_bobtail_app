@@ -173,8 +173,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     protester: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: PROTESTER
                     }
                 },

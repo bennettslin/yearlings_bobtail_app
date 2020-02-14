@@ -56,8 +56,6 @@ export default [
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SQUEEZING
                 }
             }
@@ -107,8 +105,6 @@ export default [
                     instance: MINGLING
                 },
                 [STEPHANIE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MINGLING
                 },
                 [WADE]: {

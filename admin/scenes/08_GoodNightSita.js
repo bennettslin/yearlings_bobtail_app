@@ -93,8 +93,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     actor: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: FLAPPER
                     }
                 }

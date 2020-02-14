@@ -68,8 +68,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: BENNETT_DEFIANT
                     }
                 }
@@ -84,8 +82,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: HORSING
                     }
                 },
@@ -117,8 +113,6 @@ export default [
                 },
                 [STEPHANIE]: {
                     [BENNETT]: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: DRYING_TEARS
                     }
                 },
