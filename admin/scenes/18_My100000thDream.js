@@ -69,8 +69,6 @@ export default [
                 },
                 [CATHERINE]: {
                     gopi: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GOPI
                     }
                 },

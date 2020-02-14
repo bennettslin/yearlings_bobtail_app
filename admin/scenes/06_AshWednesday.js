@@ -28,8 +28,6 @@ export default [
                     instance: BREAKUP_DEJECTED
                 },
                 [CATHERINE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WEEPING
                 }
             }
@@ -42,8 +40,6 @@ export default [
                     instance: SOLICITING_OPINION
                 },
                 [CATHERINE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: QUIPPING
                 }
             }
@@ -86,8 +82,6 @@ export default [
                     instance: PIOUS
                 },
                 [CATHERINE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PUZZLED
                 }
             }

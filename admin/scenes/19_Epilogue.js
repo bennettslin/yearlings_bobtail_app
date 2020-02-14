@@ -134,8 +134,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [CATHERINE]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `4'11"`,
                     instance: EPILOGUE
                 },
