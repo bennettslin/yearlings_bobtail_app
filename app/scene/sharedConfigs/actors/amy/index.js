@@ -9,12 +9,18 @@ import {
     PROTESTER,
     EPILOGUE
 } from 'constants/scene/actors/songs'
+import {
+    CIGARETTE__SHARED,
+    HEINEKEN__SHARED
+} from '../../../sharedStyles/food'
+import { HOSPITAL_LINENS__SHARED } from '../../../sharedStyles/furniture'
+import { BOOK__SHARED } from '../../../sharedStyles/paper'
 
 export default {
-    [SMOKER]: null,
+    [SMOKER]: CIGARETTE__SHARED,
     [FLIRTING]: null,
-    [MINGLING]: null,
-    [PROTESTER]: null,
-    [DOCTOR]: null,
+    [MINGLING]: HEINEKEN__SHARED,
+    [PROTESTER]: BOOK__SHARED,
+    [DOCTOR]: HOSPITAL_LINENS__SHARED,
     [EPILOGUE]: null
 }

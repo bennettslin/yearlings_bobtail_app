@@ -1,3 +1,12 @@
 .violin#{$suffix} {
-
+    .bowButton { fill: hsl(188, 8%, 63%); }
+    .bowHair { fill: hsl(60, 25%, 69%); }
+    .bowPadding { fill: hsl(0, 17%, 21%); }
+    .bowHead { fill: hsl(0, 13%, 56%); }
+    .violinBow { fill: hsl(0, 22%, 41%); }
+    .violinLight { fill: hsl(24, 36%, 54%); }
+    .violinMedium { fill: hsl(24, 30%, 49%); }
+    .violinTrim { fill: hsl(24, 30%, 49%); }
+    .violinDark { fill: hsl(24, 30%, 44%); }
+    .shinyBlack { fill: hsl(39, 20%, 20%); }
 }

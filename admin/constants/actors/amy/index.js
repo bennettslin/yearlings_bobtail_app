@@ -18,10 +18,6 @@ import {
 
 const INSTANCES = [
     {
-        type: AMY,
-        instance: SMOKER
-    },
-    {
         type: AMY_STEPHANIE,
         instance: SQUEEZING
     },
@@ -36,6 +32,10 @@ const INSTANCES = [
     {
         type: AMY,
         instance: EPILOGUE
+    },
+    {
+        type: AMY,
+        instance: SMOKER
     },
     {
         type: AMY_NESTOR_TOMER,

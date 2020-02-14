@@ -166,8 +166,6 @@ export default [
                 },
                 [AMY]: {
                     doctor: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: DOCTOR
                     }
                 }

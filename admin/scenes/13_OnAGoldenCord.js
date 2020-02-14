@@ -87,8 +87,6 @@ export default [
                 },
                 [AMY]: {
                     officer: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: OFFICER
                     }
                 },

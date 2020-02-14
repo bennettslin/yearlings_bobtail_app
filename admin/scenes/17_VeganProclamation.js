@@ -166,8 +166,6 @@ export default [
                 },
                 [AMY]: {
                     protester: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: PROTESTER
                     }
                 },

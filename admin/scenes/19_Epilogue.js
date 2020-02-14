@@ -142,8 +142,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [AMY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'6"`,
                     instance: EPILOGUE
                 },

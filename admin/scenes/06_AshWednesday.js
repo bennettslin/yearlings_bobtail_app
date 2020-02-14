@@ -67,8 +67,6 @@ export default [
                 },
                 [AMY]: {
                     smoker: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: SMOKER
                     }
                 }

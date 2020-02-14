@@ -13,13 +13,17 @@ import {
 
 import { BENNETT } from 'constants/scene/actors'
 import { HEINEKEN__SHARED } from '../../../sharedStyles/food'
+import { VIOLIN__SHARED } from '../../../sharedStyles/instruments'
 
 export default {
     [BENNETT_KEYBOARD]: BENNETT,
     [FLAPPER]: null,
     [MINGLING]: HEINEKEN__SHARED,
     [BENNETT_DEFIANT]: BENNETT,
-    [BENNETT_RECORDING]: BENNETT,
+    [BENNETT_RECORDING]: [
+        BENNETT,
+        VIOLIN__SHARED
+    ],
     [PROTESTER]: null,
     [EPILOGUE]: null
 }

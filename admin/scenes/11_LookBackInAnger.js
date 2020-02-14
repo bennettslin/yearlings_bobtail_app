@@ -51,8 +51,6 @@ export default [
                     instance: WATCHING
                 },
                 [AMY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SQUEEZING
                 },
                 [STEPHANIE]: {
@@ -68,8 +66,6 @@ export default [
                     instance: FLIRTING
                 },
                 [AMY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FLIRTING
                 },
                 [JACOB]: {
@@ -100,8 +96,6 @@ export default [
                     instance: WAITING
                 },
                 [AMY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MINGLING
                 },
                 [STEPHANIE]: {

@@ -94,7 +94,7 @@ export default {
     [TOMER]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 4.25
+            xPosition: 4.4
         }
     },
     [NESTOR]: {
@@ -142,7 +142,7 @@ export default {
     [KHARI]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 2.5
+            xPosition: 2.9
         }
     },
     [TRISTAN]: {
