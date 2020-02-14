@@ -72,8 +72,8 @@ const LayersActor = ({
     [ESTHER]: esther,
     [ESTHER_MOTHER]: estherMother,
     [WILLY]: willy,
-    [MOTHER]: mother,
     [FATHER]: father,
+    [MOTHER]: mother,
     [CHRISTOPHER]: christopher,
     [CHRISTOPHER_BENNETT]: christopherBennett,
     [CHRISTOPHER_BENNETT_WILLY]: christopherBennettWilly,
@@ -126,8 +126,8 @@ const LayersActor = ({
         <Layer {...{ actorKey: ESTHER, instanceKey: esther }} />
         <Layer {...{ actorKey: ESTHER_MOTHER, instanceKey: estherMother }} />
         <Layer {...{ actorKey: WILLY, instanceKey: willy }} />
-        <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
         <Layer {...{ actorKey: FATHER, instanceKey: father }} />
+        <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
         <Layer {...{ actorKey: CHRISTOPHER, instanceKey: christopher }} />
         <Layer {...{ actorKey: CHRISTOPHER_BENNETT, instanceKey: christopherBennett }} />
         <Layer {...{ actorKey: CHRISTOPHER_BENNETT_WILLY, instanceKey: christopherBennettWilly }} />
