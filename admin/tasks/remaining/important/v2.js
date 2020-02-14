@@ -1,13 +1,13 @@
 export default [
     {
+        taskName: `Remove animations from mobile for performance. Update: It seems fine to keep transitions left out, but leave animations alone, as it is now.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Figure out how to let bots access sitemap.xml and robots.txt.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Have html switch from development to production for GA.`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Timebox for band website.`,

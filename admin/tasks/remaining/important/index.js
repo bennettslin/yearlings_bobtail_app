@@ -5,13 +5,13 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Remove animations from mobile for performance. Transitions are done, just do animations. Update: Actually, test if this is really necessary.`,
-        workedHours: 1,
-        neededHours: 3
-    },
-    {
         taskName: `Mailchimp email list, add to About.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Have html switch from development to production for GA.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

@@ -5246,5 +5246,10 @@ export default [
         taskName: `Setup work to have presences hang from high wire.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Remove transitions from mobile for performance.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]
