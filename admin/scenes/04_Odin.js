@@ -19,8 +19,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MAT
                 }
             }
@@ -30,8 +28,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STAIRS
                 }
             }
@@ -41,8 +37,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GATE
                 }
             }
@@ -52,8 +46,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: RICKSHAW
                 }
             }
@@ -63,8 +55,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SHORE
                 }
             }
@@ -74,8 +64,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BUOY
                 }
             }
@@ -92,8 +80,6 @@ export default [
                     }
                 },
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MERMAID
                 }
             }
@@ -103,8 +89,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: OCEAN_FLOOR
                 }
             }

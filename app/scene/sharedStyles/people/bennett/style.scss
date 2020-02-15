@@ -30,6 +30,14 @@
         }
     }
 
+    &.buoy {
+        .yellowDark { fill: hsl(58, 36%, 61%); }
+        .yellowMedium { fill: hsl(58, 39%, 64%); }
+        .yellowLight { fill: hsl(58, 46%, 67%); }
+        .orangeDark { fill: hsl(22, 29%, 44%); }
+        .orangeLight { fill: hsl(22, 29%, 48%); }
+    }
+
     &.couchReading {
         .bookCoverDark { fill: hsl(114, 24%, 52%); }
         .bookCoverMedium { fill: hsl(114, 31%, 58%); }
