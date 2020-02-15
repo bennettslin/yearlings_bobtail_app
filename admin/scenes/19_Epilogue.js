@@ -154,8 +154,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
                 },

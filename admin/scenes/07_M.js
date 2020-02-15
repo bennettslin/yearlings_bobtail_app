@@ -77,8 +77,6 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FLIRTING
                 },
                 [ANA]: {
@@ -104,8 +102,6 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EATING
                 },
                 [ANA]: {

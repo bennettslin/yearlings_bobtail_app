@@ -72,8 +72,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CARRYING
                 }
             }
@@ -91,8 +89,6 @@ export default [
                     instance: WAITING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WAITING
                 },
                 [AMY]: {
