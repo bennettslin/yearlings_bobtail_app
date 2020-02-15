@@ -118,8 +118,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `4'6"`,
                     instance: EPILOGUE
                 },

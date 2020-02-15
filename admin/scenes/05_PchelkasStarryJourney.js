@@ -89,8 +89,6 @@ export default [
                     instance: STOIC
                 },
                 [BRAD]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GESTURING
                 },
                 [ANDREW]: {
@@ -108,8 +106,6 @@ export default [
                     instance: WISTFUL
                 },
                 [BRAD]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SNACKING
                 },
                 [ANDREW]: {

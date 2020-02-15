@@ -22,8 +22,6 @@ export default [
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CHARMED_SCHOOLBUS
                     }
                 },
@@ -44,8 +42,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
