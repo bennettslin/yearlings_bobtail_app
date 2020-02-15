@@ -80,8 +80,6 @@ export default [
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SQUATTING
                 },
                 [TOMER]: {
@@ -105,8 +103,6 @@ export default [
                     instance: EATING
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EATING
                 }
             }

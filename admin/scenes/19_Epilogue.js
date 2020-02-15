@@ -158,8 +158,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE
                 },
