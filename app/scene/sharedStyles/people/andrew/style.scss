@@ -5,6 +5,11 @@
     .andrewPants { fill: hsl(214, 19%, 71%); }
     .andrewShoe { fill: hsl(231, 12%, 41%); }
 
+    &.throwing {
+        .apple { fill: hsl(97, 30%, 54%); }
+        .appleStem { fill: hsl(37, 26%, 33%); }
+    }
+
     &.noodling {
         .guitarSide { fill: hsl(67, 22%, 62%); }
         .guitarFront { fill: hsl(66, 28%, 67%); }

@@ -94,8 +94,6 @@ export default [
                     instance: GESTURING
                 },
                 [ANDREW]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: THROWING
                 }
             }
@@ -115,8 +113,6 @@ export default [
                     instance: SNACKING
                 },
                 [ANDREW]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: NOODLING
                 },
                 [SASHA]: {

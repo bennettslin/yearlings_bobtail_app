@@ -54,8 +54,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FEIGNING_FEAR
                 }
             }

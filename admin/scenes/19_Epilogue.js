@@ -124,8 +124,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `4'7"`,
                     instance: EPILOGUE
                 },
