@@ -18,6 +18,18 @@
     .bennettShoeLining { fill: hsl(34, 7%, 57%); }
     .converseLogo { fill: hsl(12, 37%, 60%); }
 
+    &.enraged {
+        .frame { fill: hsl(175, 33%, 47%); }
+        .temple { fill: hsl(175, 40%, 55%); }
+        .lens { fill: hsl(70, 32%, 50%); }
+    }
+
+    &.panicked {
+        .bookCover {
+            fill: hsl(201, 31%, 58%);
+        }
+    }
+
     &.couchReading {
         .bookCoverDark { fill: hsl(114, 24%, 52%); }
         .bookCoverMedium { fill: hsl(114, 31%, 58%); }

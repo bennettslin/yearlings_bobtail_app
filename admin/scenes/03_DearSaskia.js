@@ -16,8 +16,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PANICKED
                 },
                 [BRAD]: {
@@ -37,8 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
