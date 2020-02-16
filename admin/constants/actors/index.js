@@ -1,3 +1,4 @@
+import ashScenes from './ashScenes'
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
 import bennett from './bennett'
@@ -56,7 +57,10 @@ import {
     WADE
 } from 'constants/scene/actors'
 
+const ASH_SCENES = 'ashScenes'
+
 export default [
+    ASH_SCENES,
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
@@ -87,6 +91,7 @@ export default [
 ]
 
 export const WHOLE_ACTOR_INSTANCES = {
+    [ASH_SCENES]: ashScenes,
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
