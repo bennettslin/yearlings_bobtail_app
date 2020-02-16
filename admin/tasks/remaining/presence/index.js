@@ -8,11 +8,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Cube and presence transition order.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Unique door, window, and furniture colours. Also colour furniture cubes.`,
         workedHours: 0,
         neededHours: 2
