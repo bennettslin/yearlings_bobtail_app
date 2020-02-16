@@ -25,14 +25,20 @@ $suffix: __shared;
     stroke: hsla(0, 0%, 20%, 0.5);
 }
 
+.eyeCornerLine,
 [class$=CreaseLine] {
     stroke-width: 0.5px;
 }
 
+// For female lips, match lip edge line in males.
+[class^=lipFemale],
 [class$=EdgeLine] {
     stroke-width: 0.66px;
 }
 
+.eyeFoldLine,
+.smileLine,
+.cheekLine,
 [class$=FoldLine] {
     stroke-width: 0.75px;
 }

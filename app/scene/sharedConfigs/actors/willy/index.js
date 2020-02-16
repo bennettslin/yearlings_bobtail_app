@@ -5,9 +5,10 @@ import {
 } from 'constants/scene/actors/willy'
 
 import { EPILOGUE } from 'constants/scene/actors/songs'
+import { BUDWEISER__SHARED } from '../../../sharedStyles/food'
 
 export default {
-    [COLLECTING]: null,
+    [COLLECTING]: BUDWEISER__SHARED,
     [DUCKING]: null,
     [CROSSING_GUARD]: null,
     [EPILOGUE]: null

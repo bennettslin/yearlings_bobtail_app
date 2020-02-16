@@ -84,8 +84,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [WILLY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'3"`,
                     instance: EPILOGUE
                 },

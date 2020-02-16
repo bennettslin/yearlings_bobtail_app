@@ -7,6 +7,11 @@
     .willyPants { fill: hsl(261, 18%, 47%); }
     .willyShoe { fill: hsl(148, 14%, 54%); }
 
+    &.collecting {
+        .labelReverse { fill: hsl(189, 36%, 29%); }
+        .label { fill: hsl(193, 43%, 47%); }
+    }
+
     &.crossingGuard {
         .signWhite { fill: hsl(0, 0%, 80%); }
         .signRed { fill: hsl(0, 40%, 50%); }

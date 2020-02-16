@@ -34,8 +34,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: COLLECTING
                 }
             }
@@ -45,8 +43,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [WILLY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: DUCKING
                 },
                 [MOTHER]: {
@@ -89,8 +85,6 @@ export default [
                     }
                 },
                 [WILLY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GANGBANGER
                 },
                 [TOMER]: {
@@ -125,8 +119,6 @@ export default [
                     instance: REASSURING_ENCHANTED
                 },
                 [WILLY]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: REASSURING_ENCHANTED
                 }
             }

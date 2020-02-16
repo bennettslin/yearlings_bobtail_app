@@ -137,8 +137,6 @@ export default [
                 },
                 [WILLY]: {
                     crossingGuard: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CROSSING_GUARD
                     }
                 }
