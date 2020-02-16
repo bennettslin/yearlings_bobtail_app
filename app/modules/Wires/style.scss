@@ -1,0 +1,8 @@
+$width__wire: 1px;
+
+.Wire {
+    // TODO: Finalise styling.
+    border-left: $width__wire solid hsla(0, 0%, 75%, 0.5);
+    height: 100%;
+    width: $width__wire;
+}

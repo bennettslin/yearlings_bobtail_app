@@ -10,7 +10,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Have html switch from development to production for GA.`,
+        taskName: `Confirm that GA works for both development and production, and prevent hacking. https://neilpatel.com/blog/protect-analytics-from-hacking/`,
         workedHours: 0,
         neededHours: 1
     }

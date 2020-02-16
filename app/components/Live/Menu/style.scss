@@ -1,5 +1,7 @@
 // Constants prefixed with js *must* be the same in JavaScript.
-$js__height__menu: 72px;
+$js__height__menu: 80px;
+$padding__menuChild__mobile: $js__margin__thick;
+$padding__menuChild__desktop: $js__margin__thick * 2;
 
 .Menu__topField {
     height: $js__height__menu;
@@ -28,18 +30,18 @@ $js__height__menu: 72px;
         max-width: auto;
     }
 
-        // In desktop, when in logue, centre menu main.
-        .DW__desktopWidth
-        .PlW__logue
-        &,
+    // In desktop, when in logue, centre menu main.
+    .DW__desktopWidth
+    .PlW__logue
+    &,
 
-        // In desktop, also centre menu main in overlay.
-        .DW__desktopWidth
-        .ShW__overlayShown
-        & {
-            $js__width__menu__breakpoint: 720px;
-            max-width: $js__width__menu__breakpoint;
-        }
+    // In desktop, also centre menu main in overlay.
+    .DW__desktopWidth
+    .ShW__overlayShown
+    & {
+        $js__width__menu__breakpoint: 720px;
+        max-width: $js__width__menu__breakpoint;
+    }
 }
 
 .Menu__mainTop {
@@ -47,23 +49,28 @@ $js__height__menu: 72px;
     align-items: center;
     justify-content: space-between;
 
-    // Margin between menu children.
-    // & > :not(:last-child) {
-    //     margin-right: $js__margin__thick * 2;
-    // }
-
     /**
      * This allows the about tooltip to show above the banner and filmstrip,
      * despite being lower in stacking order.
      */
     .AboutToggle {
         order: 1;
-        margin-right: $js__margin__thick * 2;
+        margin-right: $padding__menuChild__mobile;
+
+        .DW__desktopWidth
+        & {
+            margin-right: $padding__menuChild__desktop;
+        }
     }
     .BannerFilmstrip { order: 2; }
     .Audio {
         order: 3;
-        margin-left: $js__margin__thick * 2;
+        margin-left: $padding__menuChild__mobile;
+
+        .DW__desktopWidth
+        & {
+            margin-left: $padding__menuChild__desktop;
+        }
     }
 }
 
@@ -81,6 +88,7 @@ $js__height__menu: 72px;
 }
 
 .Menu__lyricTop {
-    padding-left: $js__margin__thick * 2;
-    padding-right: $js__margin__thick * 2;
+    // This is only ever shown in desktop, so no need for mobile padding.
+    padding-left: $padding__menuChild__desktop;
+    padding-right: $padding__menuChild__desktop;
 }

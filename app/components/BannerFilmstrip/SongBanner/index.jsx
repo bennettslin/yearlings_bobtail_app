@@ -30,7 +30,7 @@ const mapStateToProps = ({
     selectedTime
 })
 
-class Banner extends PureComponent {
+class SongBanner extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -95,12 +95,12 @@ class Banner extends PureComponent {
                 {...{
                     ref: this.bannerElement,
                     className: cx(
-                        'Banner',
+                        'SongBanner',
+                        'BannerFilmstrip__child',
                         isSmallBannerText &&
                             'Cursor__smallText',
                         'dropShadow',
                         'textShadow__light',
-                        'abF',
                         'ovH',
                         'Rancho'
                     ),
@@ -127,4 +127,4 @@ class Banner extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(Banner)
+export default connect(mapStateToProps)(SongBanner)

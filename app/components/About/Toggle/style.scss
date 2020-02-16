@@ -1,3 +1,6 @@
+$height__about: $js__height__menu - $js__margin__thin * 2;
+$width__about: $height__about * 3 / 2;
+
 .AboutToggle,
 .Button__aboutSize {
     height: 100%;
@@ -6,30 +9,30 @@
 .AboutToggle {
     z-index: $zIndex__menuChild;
 
-    width: $height__overviewToggle;
-    height: $width__overviewToggle;
+    width: $width__about;
+    height: $height__about;
 
-    .DW__laptopWidth
-    & {
-        width: $height__overviewToggle__laptop;
-        height: $width__overviewToggle__laptop;
-    }
+    // .DW__laptopWidth
+    // & {
+    //     width: $height__overviewToggle__laptop;
+    //     height: $width__overviewToggle__laptop;
+    // }
 
-    .DW__tabletWidth
-    & {
-        width: $height__overviewToggle__tablet;
-        height: $width__overviewToggle__tablet;
-    }
+    // .DW__tabletWidth
+    // & {
+    //     width: $height__overviewToggle__tablet;
+    //     height: $width__overviewToggle__tablet;
+    // }
 
-    .DW__miniWidth
-    & {
-        width: $height__overviewToggle__mini;
-        height: $width__overviewToggle__mini;
-    }
+    // .DW__miniWidth
+    // & {
+    //     width: $height__overviewToggle__mini;
+    //     height: $width__overviewToggle__mini;
+    // }
 
-    .DW__phoneWidth
-    & {
-        width: $height__overviewToggle__phone;
-        height: $width__overviewToggle__phone;
-    }
+    // .DW__phoneWidth
+    // & {
+    //     width: $height__overviewToggle__phone;
+    //     height: $width__overviewToggle__phone;
+    // }
 }

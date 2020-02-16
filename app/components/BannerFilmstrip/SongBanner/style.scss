@@ -1,15 +1,14 @@
 @import "./Timer/style";
 @import "./Title/style";
 
-.Banner {
-    height: 28px;
-    top: 0;
-    padding-left: $js__margin__thin * 2;
-    padding-right: $js__margin__thin * 2;
-
+.SongBanner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    height: $height__songBanner;
+    padding-left: $js__margin__thin * 2;
+    padding-right: $js__margin__thin * 2;
 
     border-radius: $borderRadius__narrow;
 

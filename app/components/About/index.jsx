@@ -49,7 +49,7 @@ class About extends Component {
                                 )
                             }}
                         >
-                            {`The Bobtail Yearlings`}
+                            {`Bobtail Yearlings`}
                         </span>
                     </div>
                 </div>

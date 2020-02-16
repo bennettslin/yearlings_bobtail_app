@@ -17,10 +17,5 @@ export default [
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Add album title and band name to banner.`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]

@@ -2,7 +2,8 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 
-import Banner from './Banner'
+import AlbumBanner from './AlbumBanner'
+import SongBanner from './SongBanner'
 import Filmstrip from './Filmstrip'
 
 class BannerFilmstrip extends PureComponent {
@@ -12,7 +13,8 @@ class BannerFilmstrip extends PureComponent {
                 'BannerFilmstrip',
                 'flexAlignContainer'
             )}>
-                <Banner />
+                <AlbumBanner />
+                <SongBanner />
                 <Filmstrip />
             </div>
         )

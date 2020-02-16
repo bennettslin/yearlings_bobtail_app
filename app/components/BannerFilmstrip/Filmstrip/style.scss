@@ -1,11 +1,12 @@
 @import "./Scene/style";
 
-$colour__filmReel: #444;
+$colour__filmReel: hsl(0, 0%, 13%);
 
 .Filmstrip {
-    height: 32px;
-    top: auto;
-    bottom: 0;
+    height: $js__height__menu
+        - $height__albumBanner
+        - $height__songBanner
+        - $js__margin__thin;
 
     // Outer filmstrip borders.
     border-top: $length__filmPerf solid $colour__filmReel;

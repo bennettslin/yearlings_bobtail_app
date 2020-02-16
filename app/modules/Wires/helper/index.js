@@ -1,7 +1,7 @@
 import {
     BUBBLE,
     PUPPET
-} from '../../../../constants/scene/things'
+} from 'constants/scene/things'
 
 export const getWires = ({ presenceType, wire }) => {
 
