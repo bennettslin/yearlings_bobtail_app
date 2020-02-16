@@ -121,8 +121,6 @@ export default [
                 },
                 [ANITA]: {
                     youngGirl: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: YOUNG_CHILD
                     }
                 },

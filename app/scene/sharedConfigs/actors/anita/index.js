@@ -6,9 +6,11 @@ import {
 
 import { YOUNG_CHILD } from 'constants/scene/actors/songs'
 
+import { BACKPACK__SHARED } from '../../../sharedStyles/wardrobe'
+
 export default {
-    [EXASPERATED]: null,
+    [EXASPERATED]: BACKPACK__SHARED,
     [CONCERNED]: null,
     [CHEERING]: null,
-    [YOUNG_CHILD]: null
+    [YOUNG_CHILD]: BACKPACK__SHARED
 }

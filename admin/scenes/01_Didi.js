@@ -28,8 +28,6 @@ export default [
                     instance: CURIOUS
                 },
                 [ANITA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
@@ -44,8 +42,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CONCERNED
                 },
                 [ESTHER]: {
@@ -74,8 +70,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ANITA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {

@@ -66,8 +66,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ANITA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `3'9"`,
                     instance: EPILOGUE
                 },
