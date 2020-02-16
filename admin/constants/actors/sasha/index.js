@@ -25,19 +25,19 @@ const INSTANCES = [
     },
     {
         type: SASHA_BENNETT,
-        instance: MERMAID
-    },
-    {
-        type: SASHA,
-        instance: POPULAR_GIRL
-    },
-    {
-        type: SASHA_BENNETT,
         instance: COMFORTING_HUMILIATED
     },
     {
         type: SASHA_BENNETT,
         instance: EPILOGUE
+    },
+    {
+        type: SASHA_BENNETT,
+        instance: MERMAID
+    },
+    {
+        type: SASHA,
+        instance: POPULAR_GIRL
     }
 ]
 

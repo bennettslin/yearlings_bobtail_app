@@ -101,8 +101,6 @@ export default [
                 },
                 [SASHA]: {
                     popularGirl: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: POPULAR_GIRL
                     }
                 }

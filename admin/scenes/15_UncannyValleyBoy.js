@@ -74,8 +74,6 @@ export default [
                     instance: PAST
                 },
                 [SASHA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {

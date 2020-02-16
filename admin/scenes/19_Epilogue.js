@@ -104,8 +104,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [SASHA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE
                 },

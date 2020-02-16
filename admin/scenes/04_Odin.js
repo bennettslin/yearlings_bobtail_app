@@ -74,8 +74,6 @@ export default [
             [ACTOR]: {
                 [SASHA]: {
                     mermaid: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: MERMAID
                     }
                 },

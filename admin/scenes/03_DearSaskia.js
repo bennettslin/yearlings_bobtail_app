@@ -24,8 +24,6 @@ export default [
                     }
                 },
                 [SASHA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CHARMED_SCHOOLBUS
                 }
             }
@@ -41,8 +39,6 @@ export default [
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
