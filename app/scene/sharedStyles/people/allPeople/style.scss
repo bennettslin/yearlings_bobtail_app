@@ -4,12 +4,12 @@
     .mouthBlob { fill: hsl(0, 0%, 27%); }
     .sclera { fill: hsl(216, 16%, 94%); }
     .pupil { fill: hsla(0, 0%, 0%, 0.5); }
-    .irisBrown { fill: hsl(42, 30%, 45%); }
-    .irisGreen { fill: hsl(104, 25%, 50%); }
-    .irisHazel { fill: hsl(71, 30%, 45%); }
-    .irisAmber { fill: hsl(36, 30%, 45%); }
     .irisBlue { fill: hsl(204, 25%, 50%); }
-    .irisDarkBrown { fill: hsl(36, 30%, 45%); }
+    .irisGreen { fill: hsl(104, 25%, 50%); }
+    .irisHazel { fill: hsl(71, 25%, 45%); }
+    .irisAmber { fill: hsl(56, 25%, 45%); }
+    .irisBrown { fill: hsl(42, 25%, 45%); }
+    .irisDarkBrown { fill: hsl(36, 25%, 40%); }
     .gum { fill: hsl(6, 37%, 63%); }
     [class^=lipFemaleLight] { fill: hsla(1, 24%, 61%, 0.4); }
     [class^=lipFemaleMedium] { fill: hsla(1, 22%, 51%, 0.5); }
@@ -26,11 +26,11 @@
     .skinAnimal { fill: hsl(29, 55%, 80%); }
     .skinNordic { fill: hsl(21, 48%, 83%); }
     .skinGallic { fill: hsl(19, 46%, 75%); }
-    .skinAshkenazi { fill: hsl(22, 46%, 72%); }
-    .skinMestizo { fill: hsl(26, 45%, 70%); }
-    .skinHapa { fill: hsl(29, 45%, 70%); }
+    .skinAshkenazi { fill: hsl(22, 46%, 71%); }
+    .skinMestizo { fill: hsl(26, 45%, 68%); }
+    .skinHapa { fill: hsl(29, 45%, 67%); }
     .skinEastAsian { fill: hsl(32, 45%, 67%); }
-    .skinLatino { fill: hsl(20, 47%, 63%); }
+    .skinLatino { fill: hsl(20, 45%, 63%); }
     .skinFilipino { fill: hsl(24, 42%, 59%); }
     .skinIndian { fill: hsl(22, 32%, 50%); }
     .skinBlack { fill: hsl(28, 29%, 45%); }
@@ -41,12 +41,11 @@
     .eyebrowDyedRed, .hairDyedRed { fill: hsl(355, 42%, 52%); }
     .eyebrowLightBrown, .hairLightBrown { fill: hsl(19, 18%, 55%); }
     .eyebrowMediumBrown, .hairMediumBrown { fill: hsl(23, 32%, 39%); }
-    .eyebrowDarkBrown, .hairDarkBrown { fill: hsl(19, 23%, 32%); }
+    .eyebrowDarkBrown, .hairDarkBrown { fill: hsl(19, 23%, 27%); }
     .eyebrowLightGray, .hairLightGray { fill: hsl(60, 1%, 61%); }
     .eyebrowDarkGray, .hairDarkGray { fill: hsl(26, 1%, 32%); }
     .eyebrowBlack, .hairBlack { fill: hsl(26, 7%, 25%); }
     .eyebrowBlackDark, .hairBlackDark { fill: hsl(26, 7%, 22%); }
-    
     .stubbleBlonde { fill: hsl(33, 41%, 77%); }
     .stubbleBlack { fill: hsl(33, 16%, 44%); }
 
