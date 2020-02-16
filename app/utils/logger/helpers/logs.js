@@ -53,15 +53,16 @@ const _logInfo = ({
     }
 
     if (category && action) {
-        sendEvent({
+        if (sendEvent({
             category,
             action,
             label,
             value: finalValue
-        })
+        })) {
+            // Log analytics parameters to make data analysis easier.
+            logger.info(`%c${`category: ${category}\naction: ${action}${label ? `\nlabel: ${label}` : ''}${finalValue ? `\nvalue: ${finalValue}` : ''}`}`, getStyleForCategory(ANALYTICS))
+        }
 
-        // Log analytics parameters to make data analysis easier.
-        logger.info(`%c${`category: ${category}\naction: ${action}${label ? `\nlabel: ${label}` : ''}${finalValue ? `\nvalue: ${finalValue}` : ''}`}`, getStyleForCategory(ANALYTICS))
     }
 }
 

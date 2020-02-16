@@ -30,7 +30,7 @@ $suffix: __shared;
     stroke-width: 0.5px;
 }
 
-// For female lips, match lip edge line in males.
+.teeth,
 [class^=lipFemale],
 [class$=EdgeLine] {
     stroke-width: 0.66px;

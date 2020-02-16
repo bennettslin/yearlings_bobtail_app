@@ -34,15 +34,19 @@ const sendEvent = ({
     value
 
 }) => {
-    if (_canGaSendEvent()) {
-        ga('send', {
-            hitType: 'event',
-            eventCategory: category,
-            eventAction: action,
-            ...label && { eventLabel: label },
-            ...value && { eventValue: value }
-        })
+    if (!_canGaSendEvent()) {
+        return false
     }
+
+    ga('send', {
+        hitType: 'event',
+        eventCategory: category,
+        eventAction: action,
+        ...label && { eventLabel: label },
+        ...value && { eventValue: value }
+    })
+
+    return true
 }
 
 global.sendEvent = sendEvent

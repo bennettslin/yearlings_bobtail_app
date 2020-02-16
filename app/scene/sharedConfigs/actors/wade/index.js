@@ -11,11 +11,12 @@ import {
 
 import { BUDWEISER__SHARED } from '../../../sharedStyles/food'
 import { BOOK__SHARED } from '../../../sharedStyles/paper'
+import { BACKPACK__SHARED } from '../../../sharedStyles/wardrobe'
 
 export default {
     [WATCHING]: BUDWEISER__SHARED,
     [MINGLING]: BUDWEISER__SHARED,
     [EPILOGUE]: null,
-    [CATHOLIC_GUY]: null,
+    [CATHOLIC_GUY]: BACKPACK__SHARED,
     [PROTESTER]: BOOK__SHARED
 }
