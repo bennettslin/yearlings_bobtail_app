@@ -112,8 +112,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `4'1"`,
                     instance: EPILOGUE
                 },

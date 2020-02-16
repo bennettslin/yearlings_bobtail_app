@@ -18,14 +18,18 @@ import {
 } from 'constants/scene/actors/preteenBennett'
 import { ASLEEP } from 'constants/scene/actors/songs'
 
+import { PUDDING__SHARED } from '../../../sharedStyles/food'
 import {
     PRETEEN_LINENS__SHARED,
     TAIWAN_LINENS__SHARED
 } from '../../../sharedStyles/furniture'
 import {
     BOOK__SHARED,
-    MAGAZINE__SHARED
+    LETTER__SHARED,
+    MAGAZINE__SHARED,
+    SKETCHBOOK__SHARED
 } from '../../../sharedStyles/paper'
+import { DOLLAR__SHARED } from '../../../sharedStyles/print'
 import { TAIWAN_RICKSHAW__SHARED } from '../../../sharedStyles/taiwan'
 import { ALL_VEHICLES__SHARED } from '../../../sharedStyles/vehicles'
 
@@ -44,10 +48,17 @@ export default {
     [SHORE]: null,
     [BUOY]: null,
     [OCEAN_FLOOR]: null,
-    [FEIGNING_SICK]: null,
-    [ASLEEP]: null,
-    [SHAKEN]: null,
-    [STOIC]: null,
-    [WISTFUL]: null,
+    [FEIGNING_SICK]: [
+        DOLLAR__SHARED,
+        PRETEEN_LINENS__SHARED,
+        SKETCHBOOK__SHARED
+    ],
+    [ASLEEP]: PRETEEN_LINENS__SHARED,
+    [SHAKEN]: LETTER__SHARED,
+    [STOIC]: [
+        PUDDING__SHARED,
+        SKETCHBOOK__SHARED
+    ],
+    [WISTFUL]: SKETCHBOOK__SHARED,
     [SHEEPISH]: null
 }

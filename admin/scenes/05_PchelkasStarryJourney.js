@@ -35,8 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
@@ -51,8 +49,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FEIGNING_SICK
                 }
             }
@@ -62,8 +58,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ASLEEP
                 }
             }
@@ -73,8 +67,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SHAKEN
                 }
             }
@@ -84,8 +76,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STOIC
                 },
                 [BRAD]: {
@@ -101,8 +91,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WISTFUL
                 },
                 [BRAD]: {
@@ -125,8 +113,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {

@@ -79,8 +79,6 @@ export default [
                     instance: COMFORTING_HUMILIATED
                 },
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: COMFORTING_HUMILIATED
                 }
             }

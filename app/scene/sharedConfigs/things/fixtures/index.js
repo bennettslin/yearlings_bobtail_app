@@ -65,7 +65,8 @@ import {
     BUDWEISER__SHARED,
     EVIAN__SHARED,
     HEINEKEN__SHARED,
-    PAPER_BAG__SHARED
+    PAPER_BAG__SHARED,
+    PUDDING__SHARED
 } from '../../../sharedStyles/food'
 import {
     BULB__SHARED,
@@ -194,6 +195,9 @@ export default {
         POLE__SHARED,
         TETHERBALL_POLE__SHARED
     ],
-    [THROWN_FRUIT]: BANANA__SHARED,
+    [THROWN_FRUIT]: [
+        BANANA__SHARED,
+        PUDDING__SHARED
+    ],
     [VASELINE]: null
 }
