@@ -118,14 +118,10 @@ export default [
                     instance: EPILOGUE
                 },
                 [BRAD]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `4'6"`,
                     instance: EPILOGUE
                 },
                 [ANDREW]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `4'7"`,
                     instance: EPILOGUE
                 },
@@ -154,14 +150,10 @@ export default [
                     instance: EPILOGUE
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'0"`,
                     instance: EPILOGUE
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'8"`,
                     instance: EPILOGUE
                 },

@@ -50,11 +50,15 @@ import {
     MARA,
     MIRIAM
 } from '../../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED, ALL_CLOTHING__SHARED } from '../../../sharedStyles/people'
+import {
+    ALL_PEOPLE__SHARED,
+    ALL_CLOTHING__SHARED
+} from '../../../sharedStyles/people'
 import {
     ODIN__SHARED,
     SEA_SERPENT__SHARED
 } from '../../../sharedStyles/animals'
+import { TAIWAN_LINENS__SHARED } from '../../../sharedStyles/furniture'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED
@@ -69,8 +73,7 @@ import {
 } from '../../../sharedStyles/props'
 import {
     TAIWAN_BUOY__SHARED,
-    TAIWAN_RICKSHAW__SHARED,
-    TAIWAN_PILLOW__SHARED
+    TAIWAN_RICKSHAW__SHARED
 } from '../../../sharedStyles/taiwan'
 import {
     REATTA__SHARED,
@@ -82,7 +85,7 @@ export default {
         ALL_CLOTHING__SHARED,
         ALL_PEOPLE__SHARED,
         BENNETT,
-        TAIWAN_PILLOW__SHARED
+        TAIWAN_LINENS__SHARED
     ],
     [BENNETT_ODIN_BUOY]: [
         ALL_CLOTHING__SHARED,

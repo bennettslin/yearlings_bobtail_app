@@ -38,8 +38,6 @@ export default [
                     instance: PERFORMING
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PERFORMING
                 },
                 [TOMER]: {
@@ -72,8 +70,6 @@ export default [
                     instance: CARRYING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CARRYING
                 }
             }
@@ -86,13 +82,9 @@ export default [
                     instance: SIDELONG_HESITANCE
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WAITING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: WAITING
                 },
                 [AMY]: {

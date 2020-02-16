@@ -60,8 +60,6 @@ export default [
                     instance: PUNCHING
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
@@ -124,8 +122,6 @@ export default [
                     instance: NOOGIE
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SMIRKING
                 }
             }

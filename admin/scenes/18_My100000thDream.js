@@ -74,8 +74,6 @@ export default [
                 },
                 [MARA]: {
                     gopi: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GOPI
                     }
                 },

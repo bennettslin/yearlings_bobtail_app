@@ -77,13 +77,9 @@ export default [
                     instance: FLIRTING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FLIRTING
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SQUATTING
                 },
                 [TOMER]: {
@@ -104,13 +100,9 @@ export default [
                     instance: EATING
                 },
                 [MARA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EATING
                 },
                 [ANA]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: EATING
                 }
             }

@@ -16,14 +16,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PANICKED
                 },
                 [BRAD]: {
                     jewishBoy: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CHARMED_SCHOOLBUS
                     }
                 },
@@ -39,13 +35,9 @@ export default [
         presences: {
             [ACTOR]: {
                 [PRETEEN_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: TYING_TETHER
                 },
                 [BRAD]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: TYING_TETHER
                 },
                 [SASHA]: {
@@ -54,8 +46,6 @@ export default [
                     instance: INDIGNANT
                 },
                 [ANDREW]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FEIGNING_FEAR
                 }
             }

@@ -11,4 +11,9 @@
     .anaBootStrap { fill: hsl(30, 13%, 35%); }
     .anaBoot { fill: hsl(31, 12%, 49%); }
     .anaBootLeg { fill: hsl(32, 8%, 38%); }
+
+    &.chuckling {
+        .bottleSide { fill: hsl(22, 27%, 45%); }
+        .bag { fill: hsl(42, 21%, 62%); }
+    }
 }

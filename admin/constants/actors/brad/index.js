@@ -13,10 +13,6 @@ import { EPILOGUE } from 'constants/scene/actors/songs'
 
 const INSTANCES = [
     {
-        type: BRAD_SASHA,
-        instance: CHARMED_SCHOOLBUS
-    },
-    {
         type: BRAD_BENNETT,
         instance: TYING_TETHER
     },
@@ -31,6 +27,10 @@ const INSTANCES = [
     {
         type: BRAD,
         instance: EPILOGUE
+    },
+    {
+        type: BRAD_SASHA,
+        instance: CHARMED_SCHOOLBUS
     }
 ]
 

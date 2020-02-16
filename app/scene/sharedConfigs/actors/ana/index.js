@@ -15,16 +15,34 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import {
+    BASEMENT_TAKEOUT__SHARED,
+    BUDWEISER__SHARED,
+    CIGARETTE__SHARED,
+    ROBITUSSIN__SHARED
+} from '../../../sharedStyles/food'
+import {
+    BASS__SHARED,
+    BASS_CASE__SHARED
+} from '../../../sharedStyles/instruments'
+import { STEAM_TUNNEL__SHARED } from '../../../sharedStyles/wardrobe'
+
 export default {
-    [SQUATTING]: null,
-    [EATING]: null,
+    [SQUATTING]: [
+        BASS__SHARED,
+        BASS_CASE__SHARED
+    ],
+    [EATING]: [
+        BASEMENT_TAKEOUT__SHARED,
+        BUDWEISER__SHARED
+    ],
     [ABBEY_ROAD]: null,
-    [WALGREENS]: null,
-    [STEAM_TUNNEL]: null,
+    [WALGREENS]: ROBITUSSIN__SHARED,
+    [STEAM_TUNNEL]: STEAM_TUNNEL__SHARED,
     [STATION_WAGON]: null,
-    [PERFORMING]: null,
-    [WAITING]: null,
+    [PERFORMING]: BASS__SHARED,
+    [WAITING]: CIGARETTE__SHARED,
     [CHUCKLING]: null,
-    [SMIRKING]: null,
+    [SMIRKING]: BASS__SHARED,
     [EPILOGUE]: null
 }
