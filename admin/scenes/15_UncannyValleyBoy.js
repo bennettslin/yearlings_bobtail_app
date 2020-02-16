@@ -53,8 +53,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: HURT_CONSOLING
                     }
                 },
@@ -168,8 +166,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngSita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: SOBBING_SHIELDING
                     }
                 },

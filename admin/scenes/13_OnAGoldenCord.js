@@ -116,8 +116,6 @@ export default [
                 },
                 [ESTHER]: {
                     youngGirl: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: YOUNG_CHILD
                     }
                 },

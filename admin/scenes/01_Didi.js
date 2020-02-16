@@ -25,8 +25,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [ESTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CURIOUS
                 },
                 [ANITA]: {
@@ -51,8 +49,6 @@ export default [
                     instance: CONCERNED
                 },
                 [ESTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {

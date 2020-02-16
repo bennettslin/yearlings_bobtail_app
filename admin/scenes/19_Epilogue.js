@@ -78,8 +78,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [ESTHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `3'10"`,
                     instance: EPILOGUE
                 },

@@ -8,9 +8,11 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import { BACKPACK__SHARED } from '../../../sharedStyles/wardrobe'
+
 export default {
-    [CURIOUS]: null,
+    [CURIOUS]: BACKPACK__SHARED,
     [SNICKERING]: null,
-    [YOUNG_CHILD]: null,
+    [YOUNG_CHILD]: BACKPACK__SHARED,
     [EPILOGUE]: null
 }
