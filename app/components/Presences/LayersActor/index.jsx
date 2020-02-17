@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Layer from '../Layer'
 
 import {
-    YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
     BENNETT_FATHER,
@@ -13,9 +12,10 @@ import {
     BENNETTS_CHRISTOPHER_LIZ,
     BENNETT_STEPHANIE,
     OLD_BENNETT,
+    ESTHER,
     ANITA,
     ANITA_BENNETT,
-    ESTHER,
+    YOUNG_BENNETT,
     ESTHER_MOTHER,
     WILLY,
     MOTHER,
@@ -58,7 +58,6 @@ import {
 } from 'constants/scene/actors'
 
 const LayersActor = ({
-    [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
     [BENNETT_FATHER]: bennettFather,
@@ -67,9 +66,10 @@ const LayersActor = ({
     [BENNETTS_CHRISTOPHER_LIZ]: bennettsChristopherLiz,
     [BENNETT_STEPHANIE]: bennettStephanie,
     [OLD_BENNETT]: oldBennett,
+    [ESTHER]: esther,
     [ANITA]: anita,
     [ANITA_BENNETT]: anitaBennett,
-    [ESTHER]: esther,
+    [YOUNG_BENNETT]: youngBennett,
     [ESTHER_MOTHER]: estherMother,
     [WILLY]: willy,
     [FATHER]: father,
@@ -112,7 +112,6 @@ const LayersActor = ({
 
 }) => (
     <___>
-        <Layer {...{ actorKey: YOUNG_BENNETT, instanceKey: youngBennett }} />
         <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />
         <Layer {...{ actorKey: BENNETT, instanceKey: bennett }} />
         <Layer {...{ actorKey: BENNETT_FATHER, instanceKey: bennettFather }} />
@@ -121,9 +120,10 @@ const LayersActor = ({
         <Layer {...{ actorKey: BENNETTS_CHRISTOPHER_LIZ, instanceKey: bennettsChristopherLiz }} />
         <Layer {...{ actorKey: BENNETT_STEPHANIE, instanceKey: bennettStephanie }} />
         <Layer {...{ actorKey: OLD_BENNETT, instanceKey: oldBennett }} />
+        <Layer {...{ actorKey: ESTHER, instanceKey: esther }} />
         <Layer {...{ actorKey: ANITA, instanceKey: anita }} />
         <Layer {...{ actorKey: ANITA_BENNETT, instanceKey: anitaBennett }} />
-        <Layer {...{ actorKey: ESTHER, instanceKey: esther }} />
+        <Layer {...{ actorKey: YOUNG_BENNETT, instanceKey: youngBennett }} />
         <Layer {...{ actorKey: ESTHER_MOTHER, instanceKey: estherMother }} />
         <Layer {...{ actorKey: WILLY, instanceKey: willy }} />
         <Layer {...{ actorKey: FATHER, instanceKey: father }} />

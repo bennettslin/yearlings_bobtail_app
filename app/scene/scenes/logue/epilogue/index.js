@@ -46,7 +46,7 @@ export default {
     [ESTHER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 10.25
+            xPosition: 10
         }
     },
     [CATHERINE]: {
