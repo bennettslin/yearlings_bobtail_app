@@ -27,8 +27,7 @@ export default {
     [MOTHER]: {
         [ARGUING]: {
             yIndex: 2,
-            xPosition: 2,
-            zOffset: 3
+            xPosition: 2
         }
     },
     [TRISTAN]: {

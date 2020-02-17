@@ -60,8 +60,6 @@ export default [
                     }
                 },
                 [CHRISTOPHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `3'5"`,
                     instance: EPILOGUE
                 },

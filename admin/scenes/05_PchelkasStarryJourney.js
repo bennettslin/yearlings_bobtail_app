@@ -38,8 +38,6 @@ export default [
                     instance: BLISSFUL_GUILTY
                 },
                 [CHRISTOPHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BLISSFUL_GUILTY
                 }
             }
@@ -114,8 +112,6 @@ export default [
                     instance: SHEEPISH
                 },
                 [CHRISTOPHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: STARING
                 },
                 [MOTHER]: {

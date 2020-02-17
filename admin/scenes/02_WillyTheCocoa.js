@@ -49,8 +49,6 @@ export default [
                     instance: STOOPING
                 },
                 [CHRISTOPHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: TANTRUM
                 },
                 [PRETEEN_BENNETT]: {
@@ -66,8 +64,6 @@ export default [
                     instance: ROARING
                 },
                 [CHRISTOPHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SOBBING
                 },
                 [PRETEEN_BENNETT]: {
@@ -111,8 +107,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [CHRISTOPHER]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: REASSURING_ENCHANTED
                 },
                 [PRETEEN_BENNETT]: {
