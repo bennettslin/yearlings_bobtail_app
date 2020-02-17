@@ -1,4 +1,6 @@
 .bennett#{$suffix} {
+    .eyepatch { fill: hsl(18, 61%, 80%); }
+    .eyepatchGauze { fill: hsl(12, 39%, 85%); }
     .bennettJacketInner { fill: hsl(224, 12%, 31%); }
     .bennettJacketCollar { fill: hsl(226, 12%, 34%); }
     .bennettJacket { fill: hsl(228, 10%, 38%); }
@@ -25,9 +27,26 @@
     }
 
     &.panicked {
-        .bookCover {
-            fill: hsl(201, 31%, 58%);
-        }
+        .bookCover { fill: hsl(201, 31%, 58%); }
+    }
+
+    &.flustered {
+        .overallsFlap { fill: hsl(222, 23%, 55%); }
+        .overalls { fill: hsl(221, 32%, 63%); }
+    }
+
+    &.singing {
+        .cowboyHat { fill: hsl(25, 31%, 45%); }
+        .cowboyHatBrim { fill: hsl(25, 31%, 39%); }
+    }
+
+    &.youngChild {
+        .backpack { fill: hsl(231, 38%, 60%); }
+        .backpackStrap { fill: hsl(230, 27%, 65%); }
+        .hoodieInner { fill: hsl(207, 46%, 61%); }
+        .hoodie { fill: hsl(207, 57%, 66%); }
+        .shorts { fill: hsl(6, 39%, 61%); }
+        .shoe { fill: hsl(38, 16%, 56%); }
     }
 
     &.buoy {
@@ -70,19 +89,5 @@
         .bennettKurta { fill: hsl(214, 45%, 60%); }
         .garland { fill: hsl(79, 14%, 77%); }
         .garlandFlower { fill: hsl(15, 52%, 69%); }
-    }
-
-    &.flustered {
-        .overallsFlap { fill: hsl(222, 23%, 55%); }
-        .overalls { fill: hsl(221, 32%, 63%); }
-    }
-
-    &.youngChild {
-        .backpack { fill: hsl(231, 38%, 60%); }
-        .backpackStrap { fill: hsl(230, 27%, 65%); }
-        .hoodieInner { fill: hsl(207, 46%, 61%); }
-        .hoodie { fill: hsl(207, 57%, 66%); }
-        .shorts { fill: hsl(6, 39%, 61%); }
-        .shoe { fill: hsl(38, 16%, 56%); }
     }
 }

@@ -126,8 +126,6 @@ export default [
                 },
                 [YOUNG_BENNETT]: {
                     youngBoy: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: YOUNG_CHILD
                     }
                 },

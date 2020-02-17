@@ -31,8 +31,6 @@ export default [
                     instance: EXASPERATED
                 },
                 [YOUNG_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: PANICKED
                 }
             }
@@ -48,8 +46,6 @@ export default [
                     instance: SNICKERING
                 },
                 [YOUNG_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FLUSTERED
                 }
             }
@@ -59,8 +55,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [YOUNG_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BATHING
                 }
             }
@@ -73,8 +67,6 @@ export default [
                     instance: CHEERING
                 },
                 [YOUNG_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: SINGING
                 }
             }

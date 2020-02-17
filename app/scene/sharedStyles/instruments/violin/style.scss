@@ -4,9 +4,14 @@
     .bowPadding { fill: hsl(0, 17%, 21%); }
     .bowHead { fill: hsl(0, 13%, 56%); }
     .violinBow { fill: hsl(0, 22%, 41%); }
-    .violinLight { fill: hsl(24, 36%, 54%); }
-    .violinMedium { fill: hsl(24, 30%, 49%); }
-    .violinTrim { fill: hsl(24, 30%, 49%); }
+    .violinInner { fill: hsl(33, 14%, 38%); }
     .violinDark { fill: hsl(24, 30%, 44%); }
+    .violinMedium { fill: hsl(24, 30%, 49%); }
+    .violinLight { fill: hsl(24, 36%, 54%); }
+    .violinTrim { fill: hsl(24, 30%, 49%); }
     .shinyBlack { fill: hsl(39, 20%, 20%); }
+    .flatBlackDark { fill: hsl(36, 10%, 20%); }
+    .flatBlack { fill: hsl(35, 10%, 25%); }
+    .nut { fill: hsl(58, 13%, 62%); }
+    .tuner { fill: hsl(45, 42%, 46%); }
 }

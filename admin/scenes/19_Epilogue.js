@@ -70,8 +70,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [YOUNG_BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `3'6"`,
                     instance: EPILOGUE
                 },
