@@ -20,3 +20,10 @@ export default {
     [REELING]: GHOST__SHARED,
     [EPILOGUE]: null
 }
+
+export const FATHER_WIRE = {
+    [ACCUSATORY]: 2,
+    [PAST]: 2,
+    [FUTURE]: 2,
+    [REELING]: 2
+}

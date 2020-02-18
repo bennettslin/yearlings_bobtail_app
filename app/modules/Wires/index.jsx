@@ -4,11 +4,20 @@ import React, { Fragment as ___, memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { getWire } from '../../scene/sharedConfigs'
+
 import { getWires } from './helper'
 
+const defaultProps = {
+    adjustedTop: 0,
+    adjustedLeft: 0,
+    adjustedWidth: 0
+}
+
 const propTypes = {
-    wire: PropTypes.array,
-    presenceType: PropTypes.string.isRequired,
+    actorKey: PropTypes.string,
+    presenceType: PropTypes.string,
+    presenceKey: PropTypes.string.isRequired,
     adjustedTop: PropTypes.number.isRequired,
     adjustedLeft: PropTypes.number.isRequired,
     adjustedWidth: PropTypes.number.isRequired,
@@ -16,15 +25,24 @@ const propTypes = {
 }
 
 const Wires = ({
-    wire,
+    actorKey,
     presenceType,
+    presenceKey,
+
     adjustedTop,
     adjustedLeft,
     adjustedWidth,
     adjustedHeight
 
 }) => {
-    const wires = getWires({ presenceType, wire })
+    const wires = getWires({
+        presenceType,
+        wire: getWire({
+            actorKey,
+            presenceType,
+            presenceKey
+        })
+    })
 
     return Boolean(wires) && (
         <___>
@@ -59,6 +77,7 @@ const Wires = ({
     )
 }
 
+Wires.defaultProps = defaultProps
 Wires.propTypes = propTypes
 
 export default memo(Wires)

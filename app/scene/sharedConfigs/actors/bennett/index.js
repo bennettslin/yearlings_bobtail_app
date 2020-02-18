@@ -162,3 +162,8 @@ export default {
     [DEMONSTRATION]: null,
     [EL_TORITO]: null
 }
+
+export const BENNETT_WIRE = {
+    [PAST]: 2,
+    [FUTURE]: 2
+}

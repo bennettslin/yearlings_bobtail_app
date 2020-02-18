@@ -150,3 +150,30 @@ export default {
         SHORE__SHARED
     ]
 }
+
+export const BUBBLE_WIRE = {
+    [APART_SKETCH]: null,
+    [BUBBLE_LARGE]: null,
+    [BUBBLE_MEDIUM]: null,
+    [BUBBLE_SMALL]: null,
+    [CINEMA_THOUGHT_BUYING]: null,
+    [CINEMA_THOUGHT_RECORDING]: null,
+    [DOGS_SKETCH]: null,
+    [ESCAPE_POD_SKETCH]: null,
+    [ESTHER_SPEECH]: null,
+    [GO_KART_THOUGHT]: null,
+    [KHARI_ATTACK_SPEECH]: null,
+    [LIZ_DEFENCE_SPEECH]: null,
+    [LIZ_THOUGHT]: null,
+    [PHARMACY_CEL]: null,
+    [SIBLING_CONSTELLATION]: null,
+    [SKETCHBOOK]: null,
+    [TARPIT_CONSTELLATION]: null,
+    [THOUGHT_LARGE]: null,
+    [THOUGHT_MEDIUM]: null,
+    [THOUGHT_SMALL]: null,
+    [TOGETHER_SKETCH]: null,
+    [WAITING_THOUGHT_SINGING]: null,
+    [WAITING_THOUGHT_STUDYING]: null,
+    [WAITING_THOUGHT_WALKING]: null
+}

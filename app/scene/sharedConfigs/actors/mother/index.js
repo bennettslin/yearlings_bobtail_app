@@ -20,3 +20,8 @@ export default {
     [FUTURE]: GHOST__SHARED,
     [EPILOGUE]: null
 }
+
+export const MOTHER_WIRE = {
+    [PRESENT]: 2,
+    [FUTURE]: 2
+}

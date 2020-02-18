@@ -5266,5 +5266,10 @@ export default [
         taskName: `Refactor Wires component.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Rework how wire configs are passed.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

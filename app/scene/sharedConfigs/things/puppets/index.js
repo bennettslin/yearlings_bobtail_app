@@ -48,6 +48,7 @@ import {
     ALL_VEHICLES__SHARED,
     REATTA__SHARED
 } from '../../../sharedStyles/vehicles'
+
 export default {
     [GHOST_ODIN_ALLEY]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_CAMPUS]: ODIN_GHOST__SHARED,
@@ -131,4 +132,32 @@ export default {
         BENNETT,
         MIRIAM
     ]
+}
+
+export const PUPPET_WIRE = {
+    [GHOST_ODIN_ALLEY]: 2,
+    [GHOST_ODIN_CAMPUS]: 2,
+    [GHOST_ODIN_CLUB]: 2,
+    [GHOST_ODIN_DEMONSTRATION]: 2,
+    [OPAL_COUCH]: 2,
+    [OPAL_GAZING]: 2,
+    [PEACOCK]: 2,
+    [PEAHEN]: 2,
+    [PUPPET_ANITA_BEGIN]: null,
+    [PUPPET_ANITA_END]: null,
+    [PUPPET_ANITA_MIDDLE]: null,
+    [PUPPET_BENNETT_BEGIN]: null,
+    [PUPPET_BENNETT_END]: null,
+    [PUPPET_BENNETT_MIDDLE]: null,
+    [PUPPET_CHRISTOPHER_BEGIN]: null,
+    [PUPPET_CHRISTOPHER_END]: null,
+    [PUPPET_CHRISTOPHER_MIDDLE]: null,
+    [PUPPET_FATHER_BEGIN]: null,
+    [PUPPET_FATHER_END]: null,
+    [PUPPET_FATHER_MIDDLE]: null,
+    [PUPPET_KHARI_LIZ]: 2,
+    [PUPPET_MOTHER_BEGIN]: null,
+    [PUPPET_MOTHER_END]: null,
+    [PUPPET_MOTHER_MIDDLE]: null,
+    [PUPPET_REATTA]: 2
 }

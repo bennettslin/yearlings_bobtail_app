@@ -211,14 +211,14 @@ class PresenceSvg extends PureComponent {
     render() {
         const {
                 className,
+                actorKey,
                 presenceType,
                 presenceKey,
                 children
             } = this.props,
             {
                 noShadow,
-                perspective,
-                wire
+                perspective
             } = this.getArrangement(),
             {
                 x: adjustedLeft,
@@ -229,8 +229,8 @@ class PresenceSvg extends PureComponent {
                 adjustedHeight
             } = this.state,
             containerTransform = this.getPresenceTransform(),
-            sharedStyle = this.getSharedStyle(),
             presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
+            sharedStyle = this.getSharedStyle(),
             duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey
 
         return (
@@ -265,8 +265,9 @@ class PresenceSvg extends PureComponent {
                     siblingComponent: (
                         <Wires
                             {...{
-                                wire,
+                                actorKey,
                                 presenceType,
+                                presenceKey,
                                 adjustedTop,
                                 adjustedLeft,
                                 adjustedWidth,

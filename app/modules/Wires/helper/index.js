@@ -15,6 +15,6 @@ export const getWires = ({ presenceType, wire }) => {
         return [{ x: 0.3 }, { x: 0.7 }]
     }
 
-    // Return specified config.
+    // Return specified config, or undefined.
     return wire
 }
