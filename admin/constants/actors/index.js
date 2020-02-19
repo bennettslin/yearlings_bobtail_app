@@ -1,4 +1,6 @@
 import ashScenes from './ashScenes'
+import tetherballScene from './tetherballScene'
+import showScene from './showScene'
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
 import bennett from './bennett'
@@ -58,9 +60,13 @@ import {
 } from 'constants/scene/actors'
 
 const ASH_SCENES = 'ashScenes'
+const TETHERBALL_SCENE = 'tetherballScene'
+const SHOW_SCENE = 'showScene'
 
 export default [
     ASH_SCENES,
+    TETHERBALL_SCENE,
+    SHOW_SCENE,
     YOUNG_BENNETT,
     PRETEEN_BENNETT,
     BENNETT,
@@ -92,6 +98,8 @@ export default [
 
 export const WHOLE_ACTOR_INSTANCES = {
     [ASH_SCENES]: ashScenes,
+    [TETHERBALL_SCENE]: tetherballScene,
+    [SHOW_SCENE]: showScene,
     [YOUNG_BENNETT]: youngBennett,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
