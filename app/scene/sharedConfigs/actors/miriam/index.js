@@ -10,10 +10,11 @@ import {
     GOPI,
     EPILOGUE
 } from 'constants/scene/actors/songs'
+import { MARA } from '../../../../constants/scene/actors'
 
 export default {
-    [INFANT_CURIOUS]: null,
-    [INFANT_NURSING]: null,
+    [INFANT_CURIOUS]: MARA,
+    [INFANT_NURSING]: MARA,
     [PERFUMING]: null,
     [TENNIS]: null,
     [REVERSING]: null,

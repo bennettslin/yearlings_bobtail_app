@@ -12,10 +12,9 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 
+import { MARA } from '../../../../constants/scene/actors'
 import { ROBITUSSIN__SHARED } from '../../../sharedStyles/food'
-
 import { MASKED_USHER__SHARED } from '../../../sharedStyles/people'
-
 import { STEAM_TUNNEL__SHARED } from '../../../sharedStyles/wardrobe'
 
 export default {
@@ -25,6 +24,9 @@ export default {
     [STATION_WAGON]: null,
     [ATTIC]: null,
     [EPILOGUE]: null,
-    [USHER_WAITING]: MASKED_USHER__SHARED,
+    [USHER_WAITING]: [
+        MARA,
+        MASKED_USHER__SHARED
+    ],
     [USHER_LOOKING]: MASKED_USHER__SHARED
 }

@@ -116,12 +116,6 @@ export default [
                 },
                 [MIRIAM]: {
                     maskedWoman: {
-                        faceRevision: true,
-                        hairIllustration: true,
-                        head: true,
-                        headInspection: true,
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: INFANT_CURIOUS
                     }
                 }
@@ -136,20 +130,11 @@ export default [
                 },
                 [MIRIAM]: {
                     maskedWoman: {
-                        faceRevision: true,
-                        hairIllustration: true,
-                        head: true,
-                        headInspection: true,
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: INFANT_NURSING
                     }
                 },
                 [HOWIE]: {
                     maskedUsher: {
-                        faceRevision: true,
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: USHER_WAITING
                     }
                 }
