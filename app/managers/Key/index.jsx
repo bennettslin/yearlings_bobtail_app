@@ -12,6 +12,8 @@ import LetterManager from './Letter'
 
 import { populateRefs } from 'helpers/ref'
 
+import { isEmailFocused } from '../../utils/email'
+
 import {
     getKeyName,
     getIsNavKeyOrEnter,
@@ -50,6 +52,11 @@ class KeyManager extends PureComponent {
     }
 
     handleKeyDownPress = (e) => {
+
+        if (isEmailFocused()) {
+            return false
+        }
+
         const keyName = getKeyName(e)
 
         // Do not allow the event to propagate if it's one of these.
@@ -91,6 +98,10 @@ class KeyManager extends PureComponent {
     }
 
     handleKeyUpPress = (e) => {
+
+        if (isEmailFocused()) {
+            return false
+        }
 
         const keyName = getKeyName(e)
 
