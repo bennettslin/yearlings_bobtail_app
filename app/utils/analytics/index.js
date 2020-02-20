@@ -10,12 +10,12 @@ gtag('js', new Date())
 gtag('config', GA_ACCOUNT)
 /* eslint-enable */
 
-if (ga) {
-    console.log(`GA with property id ${GA_ACCOUNT} initialised.`)
+if (typeof ga !== 'undefined') {
+    console.log(`GA initialised with property id ${GA_ACCOUNT}.`)
     ga('create', GA_ACCOUNT, 'auto')
 
 } else {
-    console.log(`GA with property id ${GA_ACCOUNT} did not initialise.`)
+    console.log('GA did not initialise.')
 }
 
 const sendEvent = ({
@@ -25,7 +25,7 @@ const sendEvent = ({
     value
 
 }) => {
-    if (!ga) {
+    if (typeof ga === 'undefined') {
         return false
     }
 
