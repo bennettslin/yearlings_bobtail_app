@@ -58,6 +58,8 @@ $padding__menuChild__desktop: $js__margin__thick * 2;
         margin-right: $padding__menuChild__mobile;
 
         .DW__desktopWidth
+        &,
+        .DW__tabletWidth
         & {
             margin-right: $padding__menuChild__desktop;
         }
@@ -68,6 +70,8 @@ $padding__menuChild__desktop: $js__margin__thick * 2;
         margin-left: $padding__menuChild__mobile;
 
         .DW__desktopWidth
+        &,
+        .DW__tabletWidth
         & {
             margin-left: $padding__menuChild__desktop;
         }

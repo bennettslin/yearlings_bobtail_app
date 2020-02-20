@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Mailchimp email list, add to About.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 3
     },
     {
