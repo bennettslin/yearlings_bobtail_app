@@ -11,10 +11,17 @@ import {
     EPILOGUE
 } from 'constants/scene/actors/songs'
 import { MARA } from '../../../../constants/scene/actors'
+import { YOUNG_MOM__SHARED } from '../../../sharedStyles/wardrobe'
 
 export default {
-    [INFANT_CURIOUS]: MARA,
-    [INFANT_NURSING]: MARA,
+    [INFANT_CURIOUS]: [
+        MARA,
+        YOUNG_MOM__SHARED
+    ],
+    [INFANT_NURSING]: [
+        MARA,
+        YOUNG_MOM__SHARED
+    ],
     [PERFUMING]: null,
     [TENNIS]: null,
     [REVERSING]: null,
