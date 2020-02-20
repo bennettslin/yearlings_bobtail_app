@@ -4,6 +4,7 @@ import React, { Component, Fragment as ___ } from 'react'
 import cx from 'classnames'
 
 import Anchor from '../Anchor'
+import Email from './Email'
 
 import {
     BOBTAIL_YEARLINGS_EMAIL,
@@ -99,6 +100,7 @@ class About extends Component {
                     <br />
                     {'Website annotated, illustrated, and coded by Bennett Lin.'}
                 </div>
+                <Email />
             </div>
         )
     }

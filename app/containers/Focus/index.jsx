@@ -15,6 +15,8 @@ import RootContainer from '../Root'
 import KeyManager from '../../managers/Key'
 import AccessStylesheet from '../../components/Access/Stylesheet'
 
+import { isEmailFocused } from '../../utils/email'
+
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
@@ -96,6 +98,10 @@ class FocusContainer extends PureComponent {
 
         let focusedElement,
             focusedElementString
+
+        if (isEmailFocused()) {
+            return false
+        }
 
         if (
             (

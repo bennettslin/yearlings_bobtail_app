@@ -5271,5 +5271,10 @@ export default [
         taskName: `Rework how wire configs are passed.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Confirm that GA works for both development and production, and prevent hacking. https://neilpatel.com/blog/protect-analytics-from-hacking/`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

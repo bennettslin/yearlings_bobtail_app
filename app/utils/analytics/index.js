@@ -9,22 +9,13 @@ function gtag() {
 gtag('js', new Date())
 gtag('config', GA_ACCOUNT)
 /* eslint-enable */
-console.log(`GA initialised with property id ${GA_ACCOUNT}.`)
 
-let isGaTrackerCreated = false
+if (typeof ga !== 'undefined') {
+    console.log(`GA initialised with property id ${GA_ACCOUNT}.`)
+    ga('create', GA_ACCOUNT, 'auto')
 
-const _canGaSendEvent = () => {
-    // Not sure why isUndefined util doesn't work?
-    if (typeof ga === 'undefined') {
-        return false
-    }
-
-    if (!isGaTrackerCreated) {
-        ga('create', GA_ACCOUNT, 'auto')
-        isGaTrackerCreated = true
-    }
-
-    return true
+} else {
+    console.log('GA did not initialise.')
 }
 
 const sendEvent = ({
@@ -34,7 +25,7 @@ const sendEvent = ({
     value
 
 }) => {
-    if (!_canGaSendEvent()) {
+    if (typeof ga === 'undefined') {
         return false
     }
 

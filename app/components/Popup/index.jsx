@@ -74,6 +74,9 @@ class Popup extends PureComponent {
                         popupName,
                         'Popup',
 
+                        // FIXME: Delete this.
+                        popupName === 'AboutPopup' && 'Popup__visible',
+
                         isFullSize && 'Popup__fullSize',
 
                         // For animation styling.
