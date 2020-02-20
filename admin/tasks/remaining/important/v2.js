@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Remove animations from mobile for performance. Update: It seems fine to keep transitions left out, but leave animations alone, as it is now.`,
+        taskName: `Remove animations from mobile for performance. Update: It seems fine to leave transitions out but keep animations in, as it is now.`,
         workedHours: 0,
         neededHours: 2
     },

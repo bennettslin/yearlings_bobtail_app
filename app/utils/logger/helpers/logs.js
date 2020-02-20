@@ -83,12 +83,14 @@ export const logAccess = ({
         }
     })
 }
-export const logEvent = (componentName, { type }) => {
+export const logEvent = (componentName, { type }, doSendEvent) => {
     _logInfo({
         log: `Event "${type}" from ${componentName}.`,
         category: EVENT,
-        action: type,
-        label: componentName
+        ...doSendEvent && {
+            action: type,
+            label: componentName
+        }
     })
 }
 export const logMount = (componentName) => {

@@ -23,10 +23,5 @@ export default [
         taskName: `Scrolling upon mount sometimes doesn't happen because svg renders late.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Upgrade to Babel 7, and change to empty tags for fragments.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]

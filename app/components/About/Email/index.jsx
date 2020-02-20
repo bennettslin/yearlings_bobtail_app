@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import * as EmailValidator from 'email-validator'
 
 import { EMAIL_ID } from '../../../constants/website'
 
@@ -14,11 +15,15 @@ class Email extends Component {
         this.emailInput = React.createRef()
     }
 
-    onClick() {
+    onChange = ({ target: { value } }) => {
+        console.log(EmailValidator.validate(value))
+    }
+
+    onClick = () => {
         console.log('click')
     }
 
-    onFocus() {
+    onFocus = () => {
         console.log('on focus')
     }
 
@@ -44,7 +49,8 @@ class Email extends Component {
                         placeholder: 'email address',
                         autoComplete: 'off',
                         ref: this.emailInput,
-                        onFocus: this.onFocus
+                        onFocus: this.onFocus,
+                        onChange: this.onChange
                     }}
                 />
                 {/* Honeypot field to prevent form bot signups. */}

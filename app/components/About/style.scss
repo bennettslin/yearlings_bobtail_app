@@ -1,6 +1,6 @@
 @import "./Toggle/style";
 
-.About__child {
+.About > * {
     line-height: 1.5em;
 
     &:not(:first-child) {

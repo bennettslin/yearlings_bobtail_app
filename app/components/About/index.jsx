@@ -27,7 +27,7 @@ class About extends Component {
                     )
                 }}
             >
-                <div {...{ className: 'About__child' }}>
+                <div>
                     <i
                         {...{
                             className: cx(
@@ -54,7 +54,7 @@ class About extends Component {
                         </span>
                     </div>
                 </div>
-                <div {...{ className: 'About__child' }}>
+                <div>
                     {'Visit the '}
                     <Anchor
                         {...{
@@ -64,7 +64,7 @@ class About extends Component {
                     />
                     {'.'}
                 </div>
-                <div {...{ className: 'About__child' }}>
+                <div>
                     {'If you have an offer or opportunity that I might be interested in, please email me at '}
                     <span
                         {...{
@@ -86,12 +86,12 @@ class About extends Component {
                             </___>
                         ))}
                     </span>
-                    {`. I'll respond if it matches my interests and my schedule. Thanks!`}
+                    {`. I'll respond if it matches my interests. Thanks!`}
                 </div>
+                <Email />
                 <div
                     {...{
                         className: cx(
-                            'About__child',
                             'About__finePrint'
                         )
                     }}
@@ -100,7 +100,6 @@ class About extends Component {
                     <br />
                     {'Website annotated, illustrated, and coded by Bennett Lin.'}
                 </div>
-                <Email />
             </div>
         )
     }
