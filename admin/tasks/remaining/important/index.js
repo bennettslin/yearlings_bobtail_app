@@ -20,6 +20,11 @@ export default [
         neededHours: 1
     },
     {
+        taskName: `About child reorganisation.`,
+        workedHours: 2,
+        neededHours: 3
+    },
+    {
         taskName: `Strategically send analytics for only certain click events.`,
         workedHours: 0,
         neededHours: 1

@@ -1,34 +1,9 @@
+@import "./Child/style";
+@import "./Contact/style";
+@import "./Credits/style";
+@import "./Title/style";
 @import "./Toggle/style";
-
-.About > * {
-    line-height: 1.5em;
-
-    &:not(:first-child) {
-        margin-top: 1em;
-    }
-}
 
 .About__stylisedText {
     color: $bgColour__audioPause;
-}
-
-.About__albumTitle {
-    font-size: 3em;
-    line-height: 1.5em;
-}
-
-.About__byLine {
-    font-size: 1.25em;
-}
-
-.About__bandName {
-    font-size: 1.5em;
-}
-
-.About__email {
-    font-size: 1.25em;
-}
-
-.About__finePrint {
-    font-size: 0.75em;
 }

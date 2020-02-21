@@ -8,7 +8,7 @@ const EMAIL_ACTION = `https://yearlingsbobtail.us4.list-manage.com/subscribe/pos
 const EMAIL_NAME = 'EMAIL'
 const EMAIL_DUMMY_NAME = 'b_7a9ef82a8d139c5688d0209ef_258547592f'
 
-class Email extends Component {
+class MailingList extends Component {
 
     constructor(props) {
         super(props)
@@ -85,4 +85,4 @@ class Email extends Component {
     }
 }
 
-export default Email
+export default MailingList

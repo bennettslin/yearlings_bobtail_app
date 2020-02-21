@@ -1,0 +1,12 @@
+.AboutChild {
+    line-height: 1.5em;
+
+    &:not(:last-child) {
+        margin-bottom: 1.25em;
+    }
+}
+
+.AboutChild__header {
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+}
