@@ -25,12 +25,17 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `MailChimp confirmation event shouldn't have my physical address!`,
+        taskName: `Validate email before enabling submit button.`,
         workedHours: 0,
         neededHours: 1
     },
     {
-        taskName: `Validate email before enabling submit button.`,
+        taskName: `Full MailChimp campaign setup.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `MailChimp confirmation event shouldn't have my physical address! https://www.denisejoanne.com/remove-address-from-mailchimp-footer-confirmation/`,
         workedHours: 0,
         neededHours: 1
     },
