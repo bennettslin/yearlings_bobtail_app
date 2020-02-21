@@ -47,7 +47,7 @@ class DotsSlide extends PureComponent {
     }
 
     _handleContainerClick = (e) => {
-        logEvent('DotsSlide', e)
+        logEvent({ e, componentName: 'DotsSlide' })
         this.dispatchStopPropagation(e)
         this.props.resetActivatedDots()
     }

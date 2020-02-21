@@ -47,7 +47,8 @@ class Verse extends PureComponent {
 
     _handleInteractivatableClick = (e) => {
         const { verseIndex } = this.props
-        logEvent(`Verse ${verseIndex}`, e)
+
+        logEvent({ e, componentName: `Verse ${verseIndex}` })
 
         // Allow clicks on interactable verses.
         if (this.getIsInteractable()) {

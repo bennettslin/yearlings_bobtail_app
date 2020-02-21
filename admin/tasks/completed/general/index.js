@@ -5281,5 +5281,10 @@ export default [
         taskName: `Mailchimp email list, add to About.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Strategically send analytics for only button click events.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

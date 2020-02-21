@@ -20,7 +20,7 @@ class FilmstripScene extends PureComponent {
     }
 
     _handleSceneClick = (e) => {
-        logEvent('FilmstripScene', e)
+        logEvent({ e, componentName: 'FilmstripScene' })
 
         const { sceneIndex } = this.props
         this.props.dispatchScene(sceneIndex)

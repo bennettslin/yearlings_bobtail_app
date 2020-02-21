@@ -54,7 +54,11 @@ class Button extends Component {
 
     _handleClick = (e) => {
         const { buttonName, isDisabled } = this.props
-        logEvent(`Button ${buttonName}`, e)
+        logEvent({
+            e,
+            componentName: `Button`,
+            identifier: buttonName
+        })
 
         if (!isDisabled) {
             this.dispatchStopPropagation(e)

@@ -36,7 +36,7 @@ class Slider extends PureComponent {
     }
 
     _handleTouchDown = (e) => {
-        logEvent('Slider', e)
+        logEvent({ e, componentName: 'Slider' })
         this.dispatchTouchBegin(e, this.sliderElement.current)
     }
 

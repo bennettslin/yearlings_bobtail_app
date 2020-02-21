@@ -25,11 +25,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Strategically send analytics for only certain click events.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `MailChimp confirmation event shouldn't have my physical address!`,
         workedHours: 0,
         neededHours: 1
