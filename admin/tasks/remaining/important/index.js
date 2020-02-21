@@ -10,26 +10,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Make band name the website anchor.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Styling of email input.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `About child reorganisation.`,
-        workedHours: 2,
-        neededHours: 3
-    },
-    {
-        taskName: `Validate email before enabling submit button.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Full MailChimp campaign setup.`,
         workedHours: 0,
         neededHours: 5

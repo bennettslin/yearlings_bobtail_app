@@ -1,9 +1,10 @@
 @import "./Child/style";
 @import "./Contact/style";
 @import "./Credits/style";
+@import "./MailingList/style";
 @import "./Title/style";
 @import "./Toggle/style";
 
-.About__stylisedText {
+.About__colouredText {
     color: $bgColour__audioPause;
 }

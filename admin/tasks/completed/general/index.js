@@ -5286,5 +5286,20 @@ export default [
         taskName: `Strategically send analytics for only button click events.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make band name the website anchor.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Validate email before enabling submit button.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `About child reorganisation.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

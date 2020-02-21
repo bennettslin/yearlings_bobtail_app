@@ -1,5 +1,3 @@
-// Container to outline of a key on a keyboard, shared by all access icons.
-
 import React, { memo } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
@@ -24,7 +22,7 @@ const AboutChild = ({
                     {...{
                         className: cx(
                             'AboutChild__header',
-                            'About__stylisedText',
+                            'About__colouredText',
                             'Rancho'
                         )
                     }}

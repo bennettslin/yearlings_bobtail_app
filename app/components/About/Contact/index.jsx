@@ -1,5 +1,3 @@
-// Container to outline of a key on a keyboard, shared by all access icons.
-
 import React, { Fragment as ___ } from 'react'
 import cx from 'classnames'
 
@@ -7,12 +5,11 @@ import { BENNETT_EMAIL } from '../../../constants/website'
 
 const AboutContact = () => (
     <___>
-        {'If you have an offer or opportunity that I might be interested in, please email!'}
+        {'If you have an offer or opportunity that might interest me, please email '}
         <span
             {...{
                 className: cx(
                     'AboutContact__email',
-                    'About__stylisedText',
                     'Rancho'
                 )
             }}
@@ -22,7 +19,7 @@ const AboutContact = () => (
                     {...{ key: index }}
                 >
                     <span {...{ className: 'displayNoneContainer' }}>
-                        remove
+                        {String.fromCharCode(character.charCodeAt(0) + 1)}
                     </span>
                     <span>{character}</span>
                 </___>

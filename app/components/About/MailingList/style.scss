@@ -1,0 +1,11 @@
+.MailingList {
+    display: flex;
+
+    & > :not(:last-child) {
+        margin-right: $js__margin__thin;
+    }
+}
+
+.MailingList__inputField {
+    flex-grow: 1;
+}

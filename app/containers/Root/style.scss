@@ -9,7 +9,7 @@
 
     font-size: 1.1em;
 
-    user-select: none;
+    // user-select: none;
 
     // Keeping these together for consistency.
     @include mixin__textAndLinkColours();

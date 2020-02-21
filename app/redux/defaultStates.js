@@ -288,7 +288,7 @@ export const TOGGLE_DEFAULTS = {
     isLyricExpanded: false,
     isScoreShown: false,
     // FIXME: Change back to false.
-    isAboutShown: false
+    isAboutShown: true
 }
 
 export const TRANSIENT_DEFAULTS = {

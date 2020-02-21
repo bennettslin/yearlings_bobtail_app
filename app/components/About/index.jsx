@@ -4,10 +4,11 @@ import React, { Component } from 'react'
 import cx from 'classnames'
 
 import AboutChild from './Child'
+import AboutTitle from './Title'
 import AboutContact from './Contact'
 import AboutCredits from './Credits'
 import MailingList from './MailingList'
-import AboutTitle from './Title'
+import SocialMedia from './SocialMedia'
 
 class About extends Component {
 
@@ -24,14 +25,14 @@ class About extends Component {
                 <AboutChild>
                     <AboutTitle />
                 </AboutChild>
-                <AboutChild {...{ header: 'Contact' }}>
-                    <AboutContact />
-                </AboutChild>
                 <AboutChild {...{ header: 'Mailing List' }}>
                     <MailingList />
                 </AboutChild>
                 <AboutChild {...{ header: 'Social Media' }}>
-                    TODO
+                    <SocialMedia />
+                </AboutChild>
+                <AboutChild {...{ header: 'Contact' }}>
+                    <AboutContact />
                 </AboutChild>
                 <AboutChild {...{ header: 'Credits' }}>
                     <AboutCredits />

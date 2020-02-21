@@ -146,6 +146,10 @@ class FocusContainer extends PureComponent {
     }
 
     _handleBodyClick = (e) => {
+        if (isEmailFocused()) {
+            return false
+        }
+
         logEvent({ e, componentName: 'FocusContainer' })
 
         this.dispatchStopPropagation(e)

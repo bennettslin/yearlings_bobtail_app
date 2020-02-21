@@ -12,11 +12,19 @@ class MailingList extends Component {
 
     constructor(props) {
         super(props)
-        this.emailInput = React.createRef()
+        this.state = {
+            isValidEmail: false,
+            emailValue: ''
+        }
     }
 
     onChange = ({ target: { value } }) => {
-        console.log(EmailValidator.validate(value))
+        const emailValue = value.replace(' ', '')
+
+        this.setState({
+            isValidEmail: EmailValidator.validate(emailValue),
+            emailValue
+        })
     }
 
     onClick = () => {
@@ -27,12 +35,22 @@ class MailingList extends Component {
         console.log('on focus')
     }
 
+    onBlur = ({ target: { value } }) => {
+        console.log(`"${value}"`)
+        this.setState({ emailValue: value.trim() })
+    }
+
     render() {
+        const {
+            isValidEmail,
+            emailValue
+        } = this.state
+
         return (
             <form
                 noValidate
                 {...{
-                    className: 'Email',
+                    className: 'MailingList',
                     action: EMAIL_ACTION,
                     method: 'post',
                     target: '_blank'
@@ -41,19 +59,19 @@ class MailingList extends Component {
                 <input
                     required
                     {...{
-                        className: 'Email__input',
+                        className: 'MailingList__inputField',
                         id: EMAIL_ID,
                         name: EMAIL_NAME,
-                        type: 'email',
-                        defaultValue: '',
-                        placeholder: 'email address',
+                        type: 'text',
+                        value: emailValue,
+                        placeholder: 'Email address',
                         autoComplete: 'off',
-                        ref: this.emailInput,
                         onFocus: this.onFocus,
-                        onChange: this.onChange
+                        onChange: this.onChange,
+                        onBlur: this.onBlur
                     }}
                 />
-                {/* Honeypot field to prevent form bot signups. */}
+                {/* Honeypot field to prevent bot signups. */}
                 <div
                     {...{
                         style: {
@@ -74,9 +92,10 @@ class MailingList extends Component {
                 </div>
                 <input
                     {...{
-                        className: 'Email__button',
+                        className: 'MailingList__submitButton',
                         type: 'submit',
-                        value: 'Sign up',
+                        value: 'Sign up!',
+                        disabled: !isValidEmail,
                         onClick: this.onClick
                     }}
                 />

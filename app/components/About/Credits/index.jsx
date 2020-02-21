@@ -1,5 +1,3 @@
-// Container to outline of a key on a keyboard, shared by all access icons.
-
 import React, { Fragment as ___ } from 'react'
 
 const AboutCredits = () => (
