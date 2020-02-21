@@ -34,12 +34,19 @@ class Anchor extends PureComponent {
         stanzaDotKeys: PropTypes.object,
         text: PropTypes.any,
         textConfig: PropTypes.any,
+        analyticsIdentifier: PropTypes.string,
         setLyricAnnotationElement: PropTypes.func,
         handleAnchorClick: PropTypes.func.isRequired
     }
 
     _handleClick = (e) => {
-        logEvent({ e, componentName: 'Anchor' })
+        const { analyticsIdentifier } = this.props
+
+        logEvent({
+            e,
+            componentName: 'Anchor',
+            analyticsIdentifier
+        })
 
         if (!this.props.isDisabled) {
 

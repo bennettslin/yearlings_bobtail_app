@@ -39,6 +39,7 @@ class AboutTitle extends Component {
                         <Anchor
                             {...{
                                 text: 'Bobtail Yearlings',
+                                analyticsIdentifier: 'BobtailYearlings',
                                 handleAnchorClick: this.handleAnchorClick
                             }}
                         />

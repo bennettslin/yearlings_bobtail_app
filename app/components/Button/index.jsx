@@ -57,7 +57,7 @@ class Button extends Component {
         logEvent({
             e,
             componentName: `Button`,
-            identifier: buttonName
+            analyticsIdentifier: buttonName
         })
 
         if (!isDisabled) {

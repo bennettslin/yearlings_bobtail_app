@@ -86,14 +86,14 @@ export const logAccess = ({
 export const logEvent = ({
     componentName,
     e: { type },
-    identifier
+    analyticsIdentifier
 }) => {
     _logInfo({
         log: `Event "${type}" from ${componentName}.`,
         category: EVENT,
-        ...Boolean(identifier) && {
+        ...Boolean(analyticsIdentifier) && {
             action: type,
-            label: `${componentName} ${identifier}`
+            label: `${componentName} ${analyticsIdentifier}`
         }
     })
 }

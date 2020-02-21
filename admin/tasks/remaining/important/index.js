@@ -5,9 +5,9 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Log and send analytics for email events.`,
+        taskName: `Facebook page setup.`,
         workedHours: 0,
-        neededHours: 1
+        neededHours: 3
     },
     {
         taskName: `Full MailChimp campaign setup.`,

@@ -27,17 +27,20 @@ class MailingList extends Component {
         })
     }
 
-    onClick = () => {
-        console.log('click')
+    onInputFocus = e => {
+        logEvent({
+            e,
+            componentName: 'MailingList',
+            analyticsIdentifier: 'email'
+        })
     }
 
-    onFocus = () => {
-        console.log('on focus')
-    }
-
-    onBlur = ({ target: { value } }) => {
-        console.log(`"${value}"`)
-        this.setState({ emailValue: value.trim() })
+    onButtonClick = e => {
+        logEvent({
+            e,
+            componentName: 'MailingList',
+            analyticsIdentifier: 'submit'
+        })
     }
 
     render() {
@@ -66,7 +69,7 @@ class MailingList extends Component {
                         value: emailValue,
                         placeholder: 'Email address',
                         autoComplete: 'off',
-                        onFocus: this.onFocus,
+                        onFocus: this.onInputFocus,
                         onChange: this.onChange,
                         onBlur: this.onBlur
                     }}
@@ -96,7 +99,7 @@ class MailingList extends Component {
                         type: 'submit',
                         value: 'Sign up!',
                         disabled: !isValidEmail,
-                        onClick: this.onClick
+                        onClick: this.onButtonClick
                     }}
                 />
             </form>

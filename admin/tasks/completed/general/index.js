@@ -5301,5 +5301,10 @@ export default [
         taskName: `About child reorganisation.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Log and send analytics for email events.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

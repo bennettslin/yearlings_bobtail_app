@@ -15,6 +15,7 @@ class SocialMedia extends Component {
             <Anchor
                 {...{
                     text: 'Instagram',
+                    analyticsIdentifier: 'Instagram',
                     handleAnchorClick: this.handleAnchorClick
                 }}
             />
