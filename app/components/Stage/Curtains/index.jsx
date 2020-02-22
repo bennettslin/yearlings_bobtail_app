@@ -60,7 +60,6 @@ class Curtains extends PureComponent {
                                 'Curtains',
                                 'abF',
                                 'ovH'
-                                // 'displayNoneContainer'
                             )
                         }}
                     >

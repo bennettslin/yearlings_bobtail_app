@@ -5306,5 +5306,10 @@ export default [
         taskName: `Log and send analytics for email events.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Work on email accounts.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

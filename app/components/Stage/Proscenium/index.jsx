@@ -32,7 +32,6 @@ const Proscenium = ({
         {...{
             className: cx(
                 'Proscenium'
-                // 'displayNoneContainer'
             ),
             style: {
                 top: `${prosceniumTop}px`,

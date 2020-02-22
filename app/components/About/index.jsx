@@ -31,7 +31,7 @@ class About extends Component {
                 <AboutChild {...{ header: 'Social Media' }}>
                     <SocialMedia />
                 </AboutChild>
-                <AboutChild {...{ header: 'Contact' }}>
+                <AboutChild {...{ header: 'Contact Us' }}>
                     <AboutContact />
                 </AboutChild>
                 <AboutChild {...{ header: 'Credits' }}>
