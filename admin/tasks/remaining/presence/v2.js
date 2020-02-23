@@ -15,7 +15,7 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Cube and presence transition order.`,
+        taskName: `Cube and presence transition order. Use async and await to stagger transitions better.`,
         workedHours: 0,
         neededHours: 8
     }

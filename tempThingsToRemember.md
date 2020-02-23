@@ -8,7 +8,6 @@ Make snowglobe road colour consistent with nav button road
 Used condom for both Grasshoppers and Cremated
 
 Add stars
-Allow for presence to have one yIndex position, and another yIndex size
 
 smoker, make her left calf lower.
 gingerbreadPrison, put his right arm down, bring her closer in.
