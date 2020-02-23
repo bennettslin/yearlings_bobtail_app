@@ -5316,5 +5316,10 @@ export default [
         taskName: `Move Bobtail Yearlings website to AWS.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Upgrade to Babel 7, and change to empty tags for fragments.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
