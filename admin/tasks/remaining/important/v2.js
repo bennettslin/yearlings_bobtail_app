@@ -15,16 +15,6 @@ export default [
         neededHours: 10
     },
     {
-        taskName: `Change from Dreamhost to AWS for band website.`,
-        workedHours: 0,
-        neededHours: 10
-    },
-    {
-        taskName: `Check all emails.`,
-        workedHours: 0,
-        neededHours: 10
-    },
-    {
         taskName: `Test pass on Internet Explorer.`,
         workedHours: 0,
         neededHours: 5

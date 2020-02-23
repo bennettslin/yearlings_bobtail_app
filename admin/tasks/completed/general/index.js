@@ -5249,7 +5249,7 @@ export default [
     },
     {
         taskName: `Remove transitions from mobile for performance.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 1
     },
     {
@@ -5311,5 +5311,10 @@ export default [
         taskName: `Work on email accounts.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Move Bobtail Yearlings website to AWS.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

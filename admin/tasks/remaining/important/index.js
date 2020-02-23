@@ -10,18 +10,13 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Full MailChimp campaign setup.`,
+        taskName: `Confirm Bobtail Yearlings website is through AWS.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Delete MailChimp audience and create fresh one. Then prepare MailChimp setup: sign up form, confirmation thank you page, sign up page (including with alerts), unsubscribe form, unsubscribe success page, welcome email, campaign email. Make sure that no personal information is given.`,
         workedHours: 0,
         neededHours: 5
-    },
-    {
-        taskName: `MailChimp confirmation event shouldn't have my physical address! https://www.denisejoanne.com/remove-address-from-mailchimp-footer-confirmation/`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Confirmation should say Bobtail Yearlings, not Dogies Almondine.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]
