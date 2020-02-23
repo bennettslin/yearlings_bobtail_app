@@ -2,11 +2,11 @@
     .ashedCross { fill: hsla(9, 5%, 48%, 0.75); }
     .eyeBlob { fill: hsl(0, 0%, 27%); }
     .mouthBlob { fill: hsl(0, 0%, 27%); }
-    .sclera { fill: hsl(216, 16%, 94%); }
+    .sclera { fill: hsl(216, 16%, 91%); }
     .pupil { fill: hsla(0, 0%, 0%, 0.5); }
-    .irisBlue { fill: hsl(204, 25%, 50%); }
-    .irisGreen { fill: hsl(104, 25%, 50%); }
-    .irisHazel { fill: hsl(71, 25%, 45%); }
+    .irisBlue { fill: hsl(204, 15%, 50%); }
+    .irisGreen { fill: hsl(104, 15%, 47.5%); }
+    .irisHazel { fill: hsl(71, 20%, 45%); }
     .irisAmber { fill: hsl(56, 25%, 45%); }
     .irisBrown { fill: hsl(42, 25%, 45%); }
     .irisDarkBrown { fill: hsl(36, 25%, 40%); }
@@ -15,13 +15,13 @@
     [class^=lipFemaleMedium] { fill: hsla(1, 22%, 51%, 0.5); }
     [class^=lipFemaleBrown] { fill: hsla(2, 15%, 48%, 0.5); }
     [class^=lipFemaleDark] { fill: hsla(2, 15%, 41%, 0.6); }
-    .lipMaleLight__noStroke { fill: hsla(1, 24%, 61%, 0.2); }
-    .lipMaleMedium__noStroke { fill: hsla(1, 17%, 54%, 0.3); }
-    .lipMaleBrown__noStroke { fill: hsla(2, 15%, 48%, 0.3); }
-    .lipMaleDark__noStroke { fill: hsla(2, 15%, 41%, 0.4); }
-    .teeth { fill: hsl(40, 17%, 89%); }
+    .lipMaleLight__noStroke { fill: hsla(1, 24%, 61%, 0.25); }
+    .lipMaleMedium__noStroke { fill: hsla(1, 17%, 54%, 0.35); }
+    .lipMaleBrown__noStroke { fill: hsla(2, 15%, 48%, 0.35); }
+    .lipMaleDark__noStroke { fill: hsla(2, 15%, 41%, 0.45); }
+    .teeth { fill: hsl(40, 17%, 84%); }
     .tongue { fill: hsl(350, 33%, 63%); }
-    .mouthInner { fill: hsl(4, 31%, 44%); }
+    .mouthInner { fill: hsl(4, 31%, 39%); }
 
     .skinAnimal { fill: hsl(29, 55%, 80%); }
     .skinNordic { fill: hsl(21, 48%, 83%); }
@@ -34,7 +34,7 @@
     .skinFilipino { fill: hsl(24, 42%, 59%); }
     .skinIndian { fill: hsl(22, 32%, 50%); }
     .skinBlack { fill: hsl(28, 29%, 47%); }
-    
+
     .eyebrowBlonde, .hairBlonde { fill: hsl(41, 48%, 72%); }
     .eyebrowSandy, .hairSandy { fill: hsl(32, 37%, 61%); }
     .eyebrowRed, .hairRed { fill: hsl(21, 56%, 40%); }

@@ -31,12 +31,14 @@ $suffix: __shared;
 }
 
 .teeth,
+.mouthInner,
 [class^=lipFemale],
 [class$=EdgeLine] {
     stroke-width: 0.66px;
 }
 
 .eyeFoldLine,
+[class^=eyebrow],
 .smileLine,
 .cheekLine,
 .lipOverlapLine,
@@ -45,7 +47,7 @@ $suffix: __shared;
 }
 
 // [class$=BorderLine] {
-//     stroke-width: 1px;    
+//     stroke-width: 1px;
 // }
 
 // [class$=OverlapLine] {
