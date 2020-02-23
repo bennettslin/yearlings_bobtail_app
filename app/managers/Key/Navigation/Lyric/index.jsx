@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isFinite from 'lodash/isfinite'
@@ -110,10 +110,10 @@ class LyricNavigation extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
                 <AnnotationAccessDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

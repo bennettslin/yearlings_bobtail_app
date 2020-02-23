@@ -1,6 +1,6 @@
 // Container for text anchor.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -166,7 +166,7 @@ class TextLyricAnchor extends PureComponent {
         }
 
         return (
-            <___>
+            <>
                 {/* This space will not show if it starts the verse line. */}
                 {' '}
                 <Anchor
@@ -197,7 +197,7 @@ class TextLyricAnchor extends PureComponent {
                 {isWikiTextAnchor && (
                     <WikiDispatcher {...{ getRefs: this._getRefs }} />
                 )}
-            </___>
+            </>
         )
     }
 }

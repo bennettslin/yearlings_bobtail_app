@@ -1,4 +1,4 @@
-import React, { Fragment as ___ } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import { getStaticStyleStringForIndex } from './helper'
@@ -18,7 +18,7 @@ const StaticStylesheet = ({
     style
 
 }) => (
-    <___>
+    <>
         {indices.map(index => (
 
             getStaticStyleStringForIndex({
@@ -28,7 +28,7 @@ const StaticStylesheet = ({
                 style
             })
         ))}
-    </___>
+    </>
 )
 
 StaticStylesheet.propTypes = propTypes

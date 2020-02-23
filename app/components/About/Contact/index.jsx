@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { BENNETT_EMAIL } from '../../../constants/website'
 
 const AboutContact = () => (
-    <___>
+    <>
         {'If you have an offer or opportunity that might interest me, please email '}
         <span
             {...{
@@ -26,7 +26,7 @@ const AboutContact = () => (
             ))}
         </span>
         {`. I'll respond if it matches my interests. Thanks!`}
-    </___>
+    </>
 )
 
 export default AboutContact

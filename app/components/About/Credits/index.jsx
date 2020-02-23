@@ -1,7 +1,7 @@
-import React, { Fragment as ___ } from 'react'
+import React from 'react'
 
 const AboutCredits = () => (
-    <___>
+    <>
         <span {...{ className: 'AboutCredits__finePrint' }}>
             {`Album written, composed, and performed by Bennett Lin.`}
         </span>
@@ -9,7 +9,7 @@ const AboutCredits = () => (
         <span {...{ className: 'AboutCredits__finePrint' }}>
             {'Website annotated, illustrated, and coded by Bennett Lin.'}
         </span>
-    </___>
+    </>
 )
 
 export default AboutCredits

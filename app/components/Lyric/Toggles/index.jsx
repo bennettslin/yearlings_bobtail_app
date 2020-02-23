@@ -1,6 +1,6 @@
 // Section for lyric toggle buttons.
 
-import React, { memo, Fragment as ___ } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -22,10 +22,10 @@ const LyricToggles = ({ isBottomRight }) => (
         {isBottomRight ? (
             <LyricToggleScroll />
         ) : (
-            <___>
+            <>
                 <LyricToggleEar />
                 <LyricToggleExpand />
-            </___>
+            </>
         )}
     </div>
 )

@@ -1,6 +1,6 @@
 // Container for lyric section.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -63,7 +63,7 @@ class Lyric extends PureComponent {
         } = this.props
 
         return (
-            <___>
+            <>
                 <CSSTransition
                     appear
                     mountOnEnter
@@ -110,7 +110,7 @@ class Lyric extends PureComponent {
                         <CarouselAccess inLyric />
                     </div>
                 </CSSTransition>
-            </___>
+            </>
         )
     }
 }

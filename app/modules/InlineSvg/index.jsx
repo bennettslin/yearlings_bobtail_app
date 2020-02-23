@@ -1,4 +1,4 @@
-import React, { Fragment as ___ } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ReactInlineSvg from 'react-inlinesvg'
@@ -22,7 +22,7 @@ const InlineSvg = ({
     siblingComponent,
     ...rest
 }) => (
-    <___>
+    <>
         <div
             {...{
                 className: cx(
@@ -45,7 +45,7 @@ const InlineSvg = ({
         </div>
         {/* TODO: Put this behind child. */}
         {siblingComponent}
-    </___>
+    </>
 
 )
 

@@ -1,5 +1,5 @@
 // Button in dots section to select and deselect dot.
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -47,7 +47,7 @@ class DotsSlideSelect extends PureComponent {
         } = this.props
 
         return (
-            <___>
+            <>
                 <div
                     {...{
                         className: cx(
@@ -107,7 +107,7 @@ class DotsSlideSelect extends PureComponent {
                     />
                 </div>
                 <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

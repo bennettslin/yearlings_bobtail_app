@@ -1,4 +1,4 @@
-import React, { memo, Fragment as ___ } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 import Layer from '../Layer'
@@ -111,7 +111,7 @@ const LayersActor = ({
     [KHARI_LIZ_REFLECTION]: khariLizReflection
 
 }) => (
-    <___>
+    <>
         <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />
         <Layer {...{ actorKey: BENNETT, instanceKey: bennett }} />
         <Layer {...{ actorKey: BENNETT_FATHER, instanceKey: bennettFather }} />
@@ -163,7 +163,7 @@ const LayersActor = ({
         <Layer {...{ actorKey: BENNETT_REFLECTION, instanceKey: bennettReflection }} />
         <Layer {...{ actorKey: LIZ_REFLECTION, instanceKey: lizReflection }} />
         <Layer {...{ actorKey: KHARI_LIZ_REFLECTION, instanceKey: khariLizReflection }} />
-    </___>
+    </>
 )
 
 LayersActor.propTypes = {

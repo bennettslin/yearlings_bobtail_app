@@ -1,6 +1,6 @@
 // PureComponent to show individual annotation note or all wormholes.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
@@ -76,7 +76,7 @@ class AnnotationCard extends PureComponent {
                     'fontSize__verse'
                 )}>
                     {isTextCard ? (
-                        <___>
+                        <>
                             <DotSequence
                                 inAnnotationCard
                                 {...{ dotKeys }}
@@ -89,7 +89,7 @@ class AnnotationCard extends PureComponent {
                                     }}
                                 />
                             </div>
-                        </___>
+                        </>
                     ) : (
                         <AnnotationWormholes
                             {...{

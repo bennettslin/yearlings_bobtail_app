@@ -1,6 +1,6 @@
 // Toggle button to show, hide, and disable tips section.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -37,7 +37,7 @@ class TipsToggle extends PureComponent {
         const { selectedTipsOption } = this.props
 
         return (
-            <___>
+            <>
                 <Button
                     isLargeSize
                     {...{
@@ -49,7 +49,7 @@ class TipsToggle extends PureComponent {
                     }}
                 />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

@@ -1,4 +1,4 @@
-import React, { Fragment as ___ } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
 import { getDynamicStyleStringForIndex } from './helper'
@@ -20,7 +20,7 @@ const DynamicStylesheet = ({
     style
 
 }) => (
-    <___>
+    <>
 
         {getDynamicStyleStringForIndex({
             parentPrefixes,
@@ -28,7 +28,7 @@ const DynamicStylesheet = ({
             style
         })}
 
-    </___>
+    </>
 )
 
 DynamicStylesheet.defaultProps = defaultProps

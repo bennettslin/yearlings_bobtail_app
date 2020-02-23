@@ -1,6 +1,6 @@
 // Component that handles all user events from keyboard.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
@@ -199,10 +199,10 @@ class KeyManager extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <NavigationManager {...{ getRefs: this._getRefs }} />
                 <LetterManager {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

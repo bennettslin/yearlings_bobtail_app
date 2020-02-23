@@ -1,6 +1,6 @@
 // Component for a single line in a verse.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -62,7 +62,7 @@ class VerseLine extends PureComponent {
          * the truncated text. Applies to Golden Cord and Uncanny Valley.
          */
         return (
-            <___>
+            <>
                 <div
                     className={cx(
                         'VerseLine',
@@ -92,7 +92,7 @@ class VerseLine extends PureComponent {
                         {'\u2026'}
                     </div>
                 )}
-            </___>
+            </>
         )
     }
 }

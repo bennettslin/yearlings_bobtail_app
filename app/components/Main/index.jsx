@@ -3,7 +3,7 @@
  * should not update.
  */
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -148,10 +148,10 @@ class Main extends PureComponent {
                     <LyricToggleExpand inMain />
                     <DotsSlide />
                     {canCarouselMount && (
-                        <___>
+                        <>
                             <CarouselToggle />
                             <CarouselSelect />
-                        </___>
+                        </>
                     )}
                 </div>
             </div>

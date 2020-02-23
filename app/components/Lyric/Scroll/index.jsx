@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -102,7 +102,7 @@ class LyricScroll extends PureComponent {
         } = this.props
 
         return (
-            <___>
+            <>
                 <ScrollLyricListener {...{ getRefs: this._getRefs }} />
                 <Transition
                     {...{
@@ -153,7 +153,7 @@ class LyricScroll extends PureComponent {
                         determineVerseBars: this._handleDetermineVerseBars
                     }}
                 />
-            </___>
+            </>
         )
     }
 }

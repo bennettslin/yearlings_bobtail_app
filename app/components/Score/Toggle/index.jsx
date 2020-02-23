@@ -1,6 +1,6 @@
 // Toggle button to show, hide, and disable tips section.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -43,7 +43,7 @@ class ScoreToggle extends PureComponent {
         } = this.props
 
         return canScoreMount && (
-            <___>
+            <>
                 <Button
                     isLargeSize
                     {...{
@@ -55,7 +55,7 @@ class ScoreToggle extends PureComponent {
                     }}
                 />
                 <ScoreDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

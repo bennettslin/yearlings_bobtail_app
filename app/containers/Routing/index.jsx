@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateDotsStore } from 'flux/dots/action'
@@ -181,10 +181,10 @@ class RoutingContainer extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <ListenContainer />
                 <SceneChangeUpdateDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

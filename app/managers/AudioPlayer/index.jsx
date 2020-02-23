@@ -1,6 +1,6 @@
 // These listeners take in no props from parent, so can live anywhere.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 
 import AudioManager from './Audio'
 import PlayerManager from './Player'
@@ -23,7 +23,7 @@ class AudioPlayerManager extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <AudioManager
                     {...{
                         getRefs: this._getRefs,
@@ -36,7 +36,7 @@ class AudioPlayerManager extends PureComponent {
                         handleSongEnd: this._handleSongEnd
                     }}
                 />
-            </___>
+            </>
         )
     }
 }

@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isString from 'lodash/isstring'
@@ -124,12 +124,12 @@ class AnnotationNavigation extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <WikiDispatcher {...{ getRefs: this._getRefs }} />
                 <WikiWormholeDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
@@ -111,13 +111,13 @@ class NavigationManager extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <AnnotationNavigation {...{ getRefs: this._getRefs }} />
                 <DotsSlideNavigation {...{ getRefs: this._getRefs }} />
                 <LyricNavigation {...{ getRefs: this._getRefs }} />
                 <NavNavigation {...{ getRefs: this._getRefs }} />
                 <VerseDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

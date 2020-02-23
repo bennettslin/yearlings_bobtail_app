@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 import SongDispatcher from 'handlers/Song/Dispatcher'
@@ -44,7 +44,7 @@ class AdminNavRow extends PureComponent {
             sumTask = getSumOfTasks(albumTasks)
 
         return (
-            <___>
+            <>
                 <AdminNavRowView {...other}
                     {...{
                         isSelected,
@@ -54,7 +54,7 @@ class AdminNavRow extends PureComponent {
                     }}
                 />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

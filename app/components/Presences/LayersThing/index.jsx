@@ -1,4 +1,4 @@
-import React, { memo, Fragment as ___ } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 
 import Layer from '../Layer'
@@ -30,7 +30,7 @@ const LayersThing = ({
 
 }) => {
     return (
-        <___>
+        <>
             <Layer {...backdrops} {...{ presenceType: BACKDROP }} />
             <Layer {...flats} {...{ presenceType: FLAT }} />
             <Layer {...doors} {...{ presenceType: DOOR }} />
@@ -41,7 +41,7 @@ const LayersThing = ({
             <Layer {...puppets} {...{ presenceType: PUPPET }} />
             <Layer {...bubbles} {...{ presenceType: BUBBLE }} />
             <Layer {...cardboards} {...{ presenceType: CARDBOARD }} />
-        </___>
+        </>
     )
 }
 

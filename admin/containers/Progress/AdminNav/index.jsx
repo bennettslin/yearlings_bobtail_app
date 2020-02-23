@@ -1,4 +1,4 @@
-import React, { Fragment as ___ } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -57,7 +57,7 @@ const AdminNav = ({
                 />
             </div>
             {false && (
-                <___>
+                <>
                     <div className="row">
                         <div className="text-cell-wrapper">
                             <h3 className="text-cell text">song</h3>
@@ -74,7 +74,7 @@ const AdminNav = ({
                             )
                         })}
                     </div>
-                </___>
+                </>
             )}
         </div>
     )

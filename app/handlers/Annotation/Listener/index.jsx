@@ -1,6 +1,6 @@
 // Singleton to listen for song change.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { resetAnnotationQueue } from 'flux/annotation/action'
@@ -108,10 +108,10 @@ class AnnotationListener extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <AnnotationDispatcher {...{ getRefs: this._getRefs }} />
                 <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

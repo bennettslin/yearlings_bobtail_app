@@ -1,6 +1,6 @@
 // Component to safely render an svg by ensuring that all values are valid.
 
-import React, { Fragment as ___, memo } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -45,7 +45,7 @@ const Wires = ({
     })
 
     return Boolean(wires) && (
-        <___>
+        <>
             {wires.map((config, index) => {
                 const { x = 0.5, y = 0.5 } = config,
                     left =
@@ -73,7 +73,7 @@ const Wires = ({
                     />
                 )
             })}
-        </___>
+        </>
     )
 }
 

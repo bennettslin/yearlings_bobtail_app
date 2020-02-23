@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { Fragment as ___ } from 'react'
+import React from 'react'
 // import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -44,13 +44,13 @@ const ProgressFooter = ({
                     )}
                     <div>{thing || 'needed time'}: {neededTime}</div>
                     {!thing && (
-                        <___>
+                        <>
                             <div>worked time: {workedTime}</div>
                             <div>remaining time: {remainingTime}</div>
                             {!isV2 && (
                                 <div>finish date: {nextCheckInDate}</div>
                             )}
-                        </___>
+                        </>
                     )}
                 </div>
             }

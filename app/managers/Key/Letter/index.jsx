@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import {
@@ -206,7 +206,7 @@ class LetterManager extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <AudioOptionDispatcher {...{ getRefs: this._getRefs }} />
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
@@ -221,7 +221,7 @@ class LetterManager extends PureComponent {
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
                 <AboutDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

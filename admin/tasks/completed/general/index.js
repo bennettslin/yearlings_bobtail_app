@@ -5319,7 +5319,7 @@ export default [
     },
     {
         taskName: `Upgrade to Babel 7, and change to empty tags for fragments.`,
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 2,
+        neededHours: 2
     }
 ]

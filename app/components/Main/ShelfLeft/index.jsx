@@ -1,6 +1,6 @@
 // Section for dots and overview toggle buttons.
 
-import React, { memo, Fragment as ___ } from 'react'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
@@ -37,10 +37,10 @@ const ShelfLeft = ({
         <OverviewToggle />
         <DotsSlideToggle />
         {isDesktopWidth && (
-            <___>
+            <>
                 <ScoreToggle />
                 <TipsToggle />
-            </___>
+            </>
         )}
     </div>
 )

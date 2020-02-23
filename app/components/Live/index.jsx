@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
 import Main from '../Main'
@@ -21,7 +21,7 @@ class Live extends PureComponent {
         const { setLyricFocusElement } = this.props
 
         return (
-            <___>
+            <>
                 <Theatre />
                 <Main />
                 <LyricOverview {...{ setLyricFocusElement }} />
@@ -29,7 +29,7 @@ class Live extends PureComponent {
                 <OverlayPopups />
                 <Menu />
                 <TouchOverlay />
-            </___>
+            </>
         )
     }
 }

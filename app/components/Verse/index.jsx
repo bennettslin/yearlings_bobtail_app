@@ -1,7 +1,5 @@
 // Container for lyric audio button and all lines of a single verse.
-import React, {
-    memo, PureComponent, Fragment as ___
-} from 'react'
+import React, { memo, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -100,7 +98,7 @@ class Verse extends PureComponent {
             isInteractable = this.getIsInteractable()
 
         return (
-            <___>
+            <>
                 <VerseView {...other}
                     {...{
                         setRef: this.setVerseRef,
@@ -111,7 +109,7 @@ class Verse extends PureComponent {
                 />
                 <ActivatedVerseDispatcher {...{ getRefs: this._getRefs }} />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

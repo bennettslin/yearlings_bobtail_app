@@ -1,6 +1,6 @@
 // A single row of cubes.
 
-import React, { Component, Fragment as ___ } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -33,14 +33,13 @@ class Cubes extends Component {
                     const Cube = CubeConfig[yIndex][xIndex]
 
                     return (
-                        <___ {...{ key: `${xIndex}_${yIndex}` }}>
-                            <Cube
-                                {...{
-                                    xIndex,
-                                    yIndex
-                                }}
-                            />
-                        </___>
+                        <Cube
+                            {...{
+                                key: `${xIndex}_${yIndex}`,
+                                xIndex,
+                                yIndex
+                            }}
+                        />
                     )
                 })}
             </div>

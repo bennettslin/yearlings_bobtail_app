@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
@@ -104,10 +104,10 @@ class NavNavigation extends PureComponent {
 
     render() {
         return (
-            <___>
+            <>
                 <NavDispatcher {...{ getRefs: this._getRefs }} />
                 <SongDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }

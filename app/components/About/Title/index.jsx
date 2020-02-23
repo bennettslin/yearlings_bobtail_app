@@ -1,4 +1,4 @@
-import React, { Component, Fragment as ___ } from 'react'
+import React, { Component } from 'react'
 import cx from 'classnames'
 
 import Anchor from '../../Anchor'
@@ -13,7 +13,7 @@ class AboutTitle extends Component {
 
     render() {
         return (
-            <___>
+            <>
                 <i
                     {...{
                         className: cx(
@@ -45,7 +45,7 @@ class AboutTitle extends Component {
                         />
                     </span>
                 </div>
-            </___>
+            </>
         )
     }
 }

@@ -1,6 +1,6 @@
 // Section to show title and all notes and wormholes for each annotation.
 
-import React, { PureComponent, Fragment as ___ } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
@@ -62,7 +62,7 @@ class Annotation extends PureComponent {
 
         // If in popup, annotation won't always exist.
         return Boolean(cardsLength) && (
-            <___>
+            <>
                 <div
                     {...{
                         className: cx(
@@ -109,7 +109,7 @@ class Annotation extends PureComponent {
 
                 </div>
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
-            </___>
+            </>
         )
     }
 }
