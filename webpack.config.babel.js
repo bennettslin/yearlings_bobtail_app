@@ -1,3 +1,4 @@
+/* eslint-disable */
 import webpack from 'webpack'
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
@@ -28,7 +29,7 @@ const getConfig = ({
             ...isDevelopment ? [
                 new webpack.HotModuleReplacementPlugin(),
 
-                ...SHOW_BUNDLE_ANALYZER && [new BundleAnalyzerPlugin()]
+                ...SHOW_BUNDLE_ANALYZER ? [new BundleAnalyzerPlugin()] : []
             ] : [
                 new webpack.optimize.OccurrenceOrderPlugin(),
 
