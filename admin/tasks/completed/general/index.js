@@ -5321,5 +5321,15 @@ export default [
         taskName: `Upgrade to Babel 7, and change to empty tags for fragments.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Allow Bobtail Yearlings website to be hosted from CloudFront.`,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `Figure out Elastic Beanstalk CLI issue.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
