@@ -66,7 +66,7 @@ const getConfig = ({
                     test: /\.jsx?$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...showAdmin && [path.resolve(__dirname, './admin')]
+                        ...showAdmin ? [path.resolve(__dirname, './admin')] : []
                     ],
                     enforce: 'pre',
                     loaders: [
@@ -79,7 +79,7 @@ const getConfig = ({
                     test: /\.scss$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...showAdmin && [path.resolve(__dirname, './admin')]
+                        ...showAdmin ? [path.resolve(__dirname, './admin')] : []
                     ],
                     loaders: [
                         'style-loader',
