@@ -5331,5 +5331,10 @@ export default [
         taskName: `Figure out Elastic Beanstalk CLI issue.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Some actor svg improvements.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
