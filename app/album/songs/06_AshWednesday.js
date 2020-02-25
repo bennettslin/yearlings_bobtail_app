@@ -47,12 +47,12 @@ export default {
                                 anchor: `Arabic maqam`,
                                 wiki: `Arabic_maqam`
                             },
-                            `in the first half with`,
+                            `in the song's first half with`,
                             {
                                 anchor: `Renaissance polyphony`,
                                 wiki: `Polyphony`
                             },
-                            `in the second.`
+                            `in the second half.`
                         ],
                         dotKeys: {
                             [SONGWRITING]: true
@@ -426,10 +426,10 @@ export default {
                                 description: [
                                     `The`,
                                     {
-                                        anchor: `Irish Travellers,`,
+                                        anchor: `Irish Travellers`,
                                         wiki: `Irish_Travellers`
                                     },
-                                    `a predominantly Catholic ethnic group, speak a cryptic language known as`,
+                                    `are a predominantly Catholic ethnic group. They speak a cryptic language known as`,
                                     {
                                         anchor: `Shelta`,
                                         wiki: `Shelta`

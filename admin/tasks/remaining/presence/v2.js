@@ -18,5 +18,25 @@ export default [
         taskName: `Cube and presence transition order. Use async and await to stagger transitions better.`,
         workedHours: 0,
         neededHours: 8
+    },
+    {
+        taskName: `Add stars.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Blood on demonstrators?`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Darken presences in one-time dark scenes.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Milk crates under keyboard. Or just do cubes?`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]
