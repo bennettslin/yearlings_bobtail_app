@@ -144,7 +144,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MIRIAM]: {
-                    hairIllustration: true,
                     head: true,
                     headInspection: true,
                     headPlacement: true,

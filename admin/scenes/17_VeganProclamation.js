@@ -63,7 +63,6 @@ export default [
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
-                    hairIllustration: true,
                     head: true,
                     headInspection: true,
                     headPlacement: true,

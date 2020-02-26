@@ -111,7 +111,6 @@ export default [
                     instance: GREETING
                 },
                 [MIRIAM]: {
-                    hairIllustration: true,
                     head: true,
                     headInspection: true,
                     headPlacement: true,
