@@ -26,7 +26,6 @@ export default [
                     instance: REMOVING_PANTS
                 },
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -39,7 +38,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -55,7 +53,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -80,7 +77,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -96,7 +92,6 @@ export default [
                     instance: DISPOSING_CONDOM
                 },
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

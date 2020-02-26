@@ -38,7 +38,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -92,7 +91,6 @@ export default [
                     instance: PRESENT
                 },
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
@@ -149,7 +147,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

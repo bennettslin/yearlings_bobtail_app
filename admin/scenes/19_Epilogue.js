@@ -144,7 +144,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

@@ -111,7 +111,6 @@ export default [
                     instance: GREETING
                 },
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,

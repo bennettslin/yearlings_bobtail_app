@@ -79,8 +79,6 @@ export default [
                 },
                 [MIRIAM]: {
                     gopi: {
-                        hairIllustration: true,
-                        head: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

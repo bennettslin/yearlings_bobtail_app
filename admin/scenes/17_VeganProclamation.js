@@ -63,7 +63,6 @@ export default [
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
-                    head: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
