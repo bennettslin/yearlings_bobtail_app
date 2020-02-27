@@ -48,11 +48,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Make snowglobe road colour consistent with nav button road.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Used condom for both Grasshoppers and Cremated.`,
         workedHours: 0,
         neededHours: 2

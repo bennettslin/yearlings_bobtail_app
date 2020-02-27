@@ -2,108 +2,110 @@
  * TEXT *
  ********/
 
+$colour__road: hsl(41, 30%, 61%);
+
 // Plain text colours.
-$colour__text__dark: #555;
-$colour__text__light: #fff;
+$colour__text__dark: hsl(0, 0%, 33%);
+$colour__text__light: hsl(0, 0%, 100%);
 
 // Selected anchor colours.
-$colour__selected__dark: #b80;
-$colour__selected__light: #fb0;
+$colour__selected__dark: hsl(44, 100%, 37%);
+$colour__selected__light: hsl(44, 100%, 50%);
 
 // Default anchor colours.
-$colour__link__dark: #844;
-$colour__linkHover__dark: #b77;
-$colour__linkActive__dark: #eaa;
+$colour__link__dark: hsl(0, 33%, 40%);
+$colour__linkHover__dark: hsl(0, 33%, 60%);
+$colour__linkActive__dark: hsl(0, 67%, 80%);
 
-$colour__link__light: #fbb;
-$colour__linkHover__light: #b88;
-$colour__linkActive__light: #844;
+$colour__link__light: hsl(0, 100%, 87%);
+$colour__linkHover__light: hsl(0, 27%, 63%);
+$colour__linkActive__light: hsl(0, 33%, 40%);
 
 // Accessed anchor colours.
-$colour__accessedLink__dark: #486;
-$colour__accessedLinkHover__dark: #6a8;
+$colour__accessedLink__dark: hsl(150, 33%, 40%);
+$colour__accessedLinkHover__dark: hsl(150, 29%, 53%);
 
-$colour__accessedLink__light: #bfd;
-$colour__accessedLinkHover__light: #aec;
+$colour__accessedLink__light: hsl(150, 100%, 87%);
+$colour__accessedLinkHover__light: hsl(150, 67%, 80%);
 
 /**
  * Having accessed link active colour be the same in light and dark allows us
  * to style it upon key down without knowing its light or dark status.
  */
-$colour__accessedLinkActive: #7d9;
+$colour__accessedLinkActive: hsl(140, 60%, 67%);
 
 /*************
  * UNDERLINE *
  *************/
 
 // Selected underline colours.
-$bgColour__selectedUnderline__dark: #b80;
-$bgColour__selectedUnderline__light: #fb0;
+$bgColour__selectedUnderline__dark: hsl(44, 100%, 37%);
+$bgColour__selectedUnderline__light: hsl(44, 100%, 50%);
 
 // Default underline colours.
-$bgColour__underline__dark: #b77;
-$bgColour__underlineHover__dark: #eaa;
-$bgColour__underlineActive__dark: #fcc;
+$bgColour__underline__dark: hsl(0, 33%, 60%);
+$bgColour__underlineHover__dark: hsl(0, 67%, 80%);
+$bgColour__underlineActive__dark: hsl(0, 100%, 90%);
 
-$bgColour__underline__light: #b88;
-$bgColour__underlineHover__light: #844;
-$bgColour__underlineActive__light: #422;
+$bgColour__underline__light: hsl(0, 27%, 63%);
+$bgColour__underlineHover__light: hsl(0, 33%, 40%);
+$bgColour__underlineActive__light: hsl(0, 33%, 20%);
 
 // Accessed underline colours.
-$bgColour__accessedUnderline__dark: #6a8;
-$bgColour__accessedUnderlineHover__dark: #8ca;
+$bgColour__accessedUnderline__dark: hsl(150, 29%, 53%);
+$bgColour__accessedUnderlineHover__dark: hsl(150, 40%, 67%);
 
-$bgColour__accessedUnderline__light: #aec;
-$bgColour__accessedUnderlineHover__light: #8ca;
+$bgColour__accessedUnderline__light: hsl(150, 67%, 80%);
+$bgColour__accessedUnderlineHover__light: hsl(150, 40%, 67%);
 
 /**
  * Having accessed link active colour be the same in light and dark allows us
  * to style it upon key down without knowing its light or dark status.
  */
-$bgColour__accessedUnderlineActive: #7d9;
+$bgColour__accessedUnderlineActive: hsl(140, 60%, 67%);
 
 // Verse colours
-$bgColour__activated: #ffd;
-$bgColour__beforeSelected: #fffaef;
-$bgColour__beforeSelected__even: #eee9de;
-$bgColour__afterSelected: #faefff;
-$bgColour__afterSelected__even: #e9deee;
-$bgColour__noIndex: #ddd;
+$bgColour__activated: hsl(60, 100%, 93%);
+$bgColour__beforeSelected: hsl(41, 100%, 97%);
+$bgColour__beforeSelected__even: hsl(41, 32%, 90%);
+$bgColour__afterSelected: hsl(281, 100%, 97%);
+$bgColour__afterSelected__even: hsl(281, 32%, 90%);
+$bgColour__noIndex: hsl(0, 0%, 87%);
 
 // Slider verse colours.
-$bgColour__beforeSlider: #a87;
-$bgColour__beforeSlider__even: #976;
-$bgColour__afterSlider: #87a;
-$bgColour__afterSlider__even: #769;
-$bgColour__noIndexSlider: #888;
+$bgColour__beforeSlider: hsl(20, 23%, 57%);
+$bgColour__beforeSlider__even: hsl(20, 20%, 50%);
+$bgColour__afterSlider: hsl(260, 23%, 57%);
+$bgColour__afterSlider__even: hsl(260, 20%, 50%);
+$bgColour__noIndexSlider: hsl(0, 0%, 53%);
 
 // Audio related colours.
-$bgColour__audioPause: #79c;
-$bgColour__audioPlaying: #ca9;
-$bgColour__audioPlay: #bad;
+$bgColour__audioPause: hsl(216, 45%, 63%);
+$bgColour__audioPlaying: hsl(20, 33%, 70%);
+$bgColour__audioPlay: hsl(260, 43%, 77%);
 $bgColour__audioDisabled: lightGray;
-$bgColour__audioSelect: #fdb;
-$bgColour__audioNeutral: #ddf;
+$bgColour__audioSelect: hsl(30, 100%, 87%);
+$bgColour__audioNeutral: hsl(240, 100%, 93%);
 
-$colour__annotationWormhole__title: #bbb;
+$colour__annotationWormhole__title: hsl(0, 0%, 73%);
 
 // Dot colours.
-$bgColour__dot__narrative: #fbe;
-$bgColour__dot__backstory: #fda;
-$bgColour__dot__observation: #cf9;
-$bgColour__dot__pun: #aef;
-$bgColour__dot__reference: #9fc;
-$bgColour__dot__wormhole: #bcf;
-$bgColour__dot__songwriting: #fbb;
-$bgColour__dot__afterword: #eea;
+$bgColour__dot__narrative: hsl(315, 100%, 87%);
+$bgColour__dot__backstory: hsl(36, 100%, 83%);
+$bgColour__dot__observation: hsl(90, 100%, 80%);
+$bgColour__dot__pun: hsl(192, 100%, 83%);
+$bgColour__dot__reference: hsl(150, 100%, 80%);
+$bgColour__dot__wormhole: hsl(225, 100%, 87%);
+$bgColour__dot__songwriting: hsl(0, 100%, 87%);
+$bgColour__dot__afterword: hsl(60, 67%, 80%);
 
-$bgColour__dot__deselected: #ddd;
+$bgColour__dot__deselected: hsl(0, 0%, 87%);
 
 // Annotation and Wormhole colours.
-$bgColour__annotation: #abd;
-$bgColour__annotation__dark: #78a; // For carousel button only.
-$bgColour__annotationCard: rgba(250, 250, 255, 0.9);
-$bgColour__annotationWormhole: #fff4f4;
+$bgColour__annotation: hsl(220, 43%, 77%);
+$bgColour__annotation__dark: hsl(220, 23%, 57%); // For carousel button only.
+$bgColour__annotationCard: hsla(240, 100%, 99%, 0.9);
+$bgColour__annotationWormhole: hsl(0, 100%, 98%);
 
 // Song stanza colours.
 $bgColour__stanzaType__verse:

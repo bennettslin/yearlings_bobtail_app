@@ -5341,5 +5341,10 @@ export default [
         taskName: `Fix bug with variable song title length changing song banner width.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make snowglobe road colour consistent with nav button road.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
