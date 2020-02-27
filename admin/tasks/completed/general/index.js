@@ -5336,5 +5336,10 @@ export default [
         taskName: `Some actor svg improvements.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Fix bug with variable song title length changing song banner width.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

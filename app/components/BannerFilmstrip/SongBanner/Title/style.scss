@@ -1,6 +1,7 @@
 .SongTitle {
-    position: relative;
     font-size: 1.2em;
+    left: $padding__songBanner;
+    justify-content: flex-start;
 
     .Cursor__smallText
     & {

@@ -30,7 +30,12 @@ class SongTitle extends PureComponent {
                 {...{
                     className: cx(
                         'SongTitle',
-                        'flexCentreContainer'
+                        'flexCentreContainer',
+                        /**
+                         * Make absolute so that song title length doesn't
+                         * affect song banner width.
+                         */
+                        'abF'
                     )
                 }}
             >
