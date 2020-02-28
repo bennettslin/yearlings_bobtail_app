@@ -58,11 +58,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Spotlight cubes on peafowl, dogs, and campfire.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Colour ocean skies.`,
         workedHours: 0,
         neededHours: 1

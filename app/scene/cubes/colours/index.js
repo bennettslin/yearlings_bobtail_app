@@ -16,6 +16,9 @@ export const OLD_FLOOR_COLOUR = 'oldFloor'
 export const VELVET_FLOOR_COLOUR = 'velvetFloor'
 export const NIGHT_COLOUR = 'night'
 export const NIGHT_MAGIC_COLOUR = 'nightMagic'
+export const SPOTLIGHT_LIGHT_COLOUR = 'spotlightLight'
+export const SPOTLIGHT_LIGHTER_COLOUR = 'spotlightLighter'
+export const SPOTLIGHT_LIGHTEST_COLOUR = 'spotlightLightest'
 export const BENNETT_CARPET_COLOUR = 'bennettCarpet'
 export const BENNETT_FLOOR_COLOUR = 'bennettFloor'
 export const LIZ_FLOOR_COLOUR = 'lizFloor'
@@ -79,6 +82,10 @@ const HSLA_MAP = {
     [NIGHT_COLOUR]: { h: 221, s: 17, l: 45 },
     /* Z. */
     [NIGHT_MAGIC_COLOUR]: { h: 125, s: 30, l: 15 },
+    /* L, M, N. */
+    [SPOTLIGHT_LIGHT_COLOUR]: { h: 60, s: 46, l: 35 },
+    [SPOTLIGHT_LIGHTER_COLOUR]: { h: 60, s: 46, l: 45 },
+    [SPOTLIGHT_LIGHTEST_COLOUR]: { h: 60, s: 46, l: 55 },
     /* W. */
     [BENNETT_WALL_COLOUR]: { h: 16, s: 28, l: 74 },
     [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },

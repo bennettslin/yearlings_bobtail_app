@@ -5346,5 +5346,10 @@ export default [
         taskName: `Make snowglobe road colour consistent with nav button road.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Spotlight cubes on peafowl, dogs, and campfire.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

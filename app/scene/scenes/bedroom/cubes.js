@@ -12,6 +12,9 @@ import {
     BENNETT_CARPET_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     NIGHT_MAGIC_COLOUR as Z,
+    SPOTLIGHT_LIGHT_COLOUR as L,
+    SPOTLIGHT_LIGHTER_COLOUR as M,
+    SPOTLIGHT_LIGHTEST_COLOUR as N,
     FURNITURE_COLOUR as R,
     BENNETT_BED_COLOUR as U,
     SEAT_COLOUR as S
@@ -50,17 +53,6 @@ const DEFAULT_CEILING = {
         [1, d, g, g, g, g, g, g, g, g, 1, k],
         [g, g, g, g, g, g, g, g, g, g, 1, k],
         [1, g, g, g, g, g, g, g, g, g, g, 1]
-    ]
-}
-
-const DEFAULT_OPEN_FLOOR = {
-    hslaColours: [
-        [G],
-        [G, G, G, G, G, Z, Z, Z, Z, G],
-        [G, G, G, G, Z, Z, Z, Z, Z, Z, G],
-        [G, G, Z, Z, Z, Z, Z, Z, Z, Z, G],
-        [Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, G],
-        [G, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, G]
     ]
 }
 
@@ -136,7 +128,14 @@ const CUBES = {
     [BEDROOM_DOGS_KEY]: {
         slantDirection: LEFT,
         floor: {
-            hslaColours: DEFAULT_OPEN_FLOOR.hslaColours,
+            hslaColours: [
+                [G],
+                [G, G, G, G, G, Z, Z, Z, Z, G],
+                [G, G, G, G, Z, Z, Z, Z, Z, Z, G],
+                [G, G, M, L, L, Z, Z, Z, Z, Z, G],
+                [L, M, N, M, L, Z, Z, Z, Z, Z, G],
+                [G, M, N, N, M, Z, Z, Z, Z, Z, Z, G]
+            ],
             zIndices: [
                 [0],
                 [0, 0, 0, 0, 0, 1, 1, 7, 7, 0],
@@ -150,7 +149,14 @@ const CUBES = {
     [BEDROOM_SPACE_KEY]: {
         slantDirection: LEFT,
         floor: {
-            hslaColours: DEFAULT_OPEN_FLOOR.hslaColours,
+            hslaColours: [
+                [G],
+                [G, G, G, G, G, Z, Z, L, L, G],
+                [G, G, G, G, Z, Z, Z, Z, M, M, G],
+                [G, G, Z, Z, Z, Z, Z, L, N, N, G],
+                [Z, Z, Z, Z, Z, Z, L, M, N, N, G],
+                [G, Z, Z, Z, Z, Z, Z, L, M, M, M, G]
+            ],
             zIndices: [
                 [0],
                 [0, 0, 0, 0, 0, 1, 1, 1, 1, 0],

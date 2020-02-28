@@ -15,6 +15,9 @@ import {
     LIZ_WALL_COLOUR as W,
     NIGHT_COLOUR as Y,
     NIGHT_MAGIC_COLOUR as Z,
+    SPOTLIGHT_LIGHT_COLOUR as L,
+    SPOTLIGHT_LIGHTER_COLOUR as M,
+    SPOTLIGHT_LIGHTEST_COLOUR as N,
     LIZ_COUCH_COLOUR as U,
     SEAT_COLOUR as S
 } from '../../cubes/colours'
@@ -117,7 +120,11 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
-                [G, Z, Z, Z, Z, Z, Z, Z, Z, Z, Z, G]
+                [G, Z, Z, Z, Z, Z, L, M, M, L, Z, G],
+                [G, Z, Z, Z, Z, L, M, N, N, M, L, G],
+                [G, Z, Z, Z, Z, L, M, N, N, M, L, G],
+                [G, Z, Z, Z, Z, Z, L, M, M, L, Z, G],
+                [G, Z, Z, Z, Z, Z, Z, L, L, Z, Z, G]
             ],
             zIndices: DEFAULT_OPEN_FLOOR.zIndices
         }
