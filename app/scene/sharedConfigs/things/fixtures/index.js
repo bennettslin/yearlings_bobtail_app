@@ -48,6 +48,8 @@ import {
     TCHOTCHKES,
     TETHERBALL_POLE,
     THROWN_FRUIT,
+    USED_CONDOM_LIZ,
+    USED_CONDOM_MIRIAM,
     VASELINE
 } from '../../../../constants/scene/things/fixtures'
 
@@ -99,6 +101,10 @@ import {
     DOLLAR__SHARED,
     PROMISE_PHOTO__SHARED
 } from '../../../sharedStyles/print'
+import {
+    LIZ_CONDOM__SHARED,
+    MIRIAM_CONDOM__SHARED
+} from '../../../sharedStyles/wardrobe'
 
 export default {
     [BACKPACK_BENNETT]: null,
@@ -199,5 +205,7 @@ export default {
         BANANA__SHARED,
         PUDDING__SHARED
     ],
+    [USED_CONDOM_LIZ]: LIZ_CONDOM__SHARED,
+    [USED_CONDOM_MIRIAM]: MIRIAM_CONDOM__SHARED,
     [VASELINE]: null
 }

@@ -9,7 +9,8 @@ import {
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION,
     LIZ_PHONE_BASE,
-    LIZ_PHONE_BASE_REFLECTION
+    LIZ_PHONE_BASE_REFLECTION,
+    USED_CONDOM_LIZ
 } from '../../../constants/scene/things/fixtures'
 import {
     LIZ_PILLOWS_PILE,
@@ -30,6 +31,10 @@ export default {
             yIndex: 2,
             xPosition: 2,
             zOffset: 6.5
+        },
+        [USED_CONDOM_LIZ]: {
+            yIndex: 4,
+            xPosition: 9
         }
     },
     [FURNITURE]: {

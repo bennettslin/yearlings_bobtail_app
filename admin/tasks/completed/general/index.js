@@ -5351,5 +5351,10 @@ export default [
         taskName: `Spotlight cubes on peafowl, dogs, and campfire.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Used condom for both Grasshoppers and Cremated.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

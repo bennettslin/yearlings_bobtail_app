@@ -48,11 +48,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Used condom for both Grasshoppers and Cremated.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Ocean waves panel.`,
         workedHours: 0,
         neededHours: 2

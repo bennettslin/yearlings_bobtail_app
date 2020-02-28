@@ -118,7 +118,8 @@ import {
     LINGERIE_DRAWING,
     VASELINE,
     LIZ_PHONE,
-    LIZ_PHONE_REFLECTION
+    LIZ_PHONE_REFLECTION,
+    USED_CONDOM_LIZ
 } from '../../constants/scene/things/fixtures'
 import {
     PUBLIC_FAR__LIZ_GATE,
@@ -569,7 +570,8 @@ export default [
             },
             [FIXTURE]: {
                 [LIZ_PHONE]: true,
-                [LIZ_PHONE_REFLECTION]: true
+                [LIZ_PHONE_REFLECTION]: true,
+                [USED_CONDOM_LIZ]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true

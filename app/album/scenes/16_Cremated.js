@@ -56,7 +56,8 @@ import {
 } from '../../constants/scene/things/cutouts'
 import {
     HOSPITAL_RECORD_PLAYER,
-    FREEWAY_SIGN
+    FREEWAY_SIGN,
+    USED_CONDOM_MIRIAM
 } from '../../constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
@@ -289,7 +290,8 @@ export default [
                 [EL_CERRITO_TREE]: true
             },
             [FIXTURE]: {
-                [FREEWAY_SIGN]: true
+                [FREEWAY_SIGN]: true,
+                [USED_CONDOM_MIRIAM]: true
             },
             [FLAT]: {
                 [EL_CERRITO_FAR]: true,

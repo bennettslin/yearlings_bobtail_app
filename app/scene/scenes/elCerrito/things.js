@@ -6,7 +6,10 @@ import {
     PUPPET
 } from '../../../constants/scene/things'
 import { EL_CERRITO_TREE } from '../../../constants/scene/things/cutouts'
-import { FREEWAY_SIGN } from '../../../constants/scene/things/fixtures'
+import {
+    FREEWAY_SIGN,
+    USED_CONDOM_MIRIAM
+} from '../../../constants/scene/things/fixtures'
 import {
     EL_CERRITO_FAR,
     EL_CERRITO_NEAR
@@ -33,6 +36,10 @@ export default {
             xPosition: 8.5,
             zOffset: -0.1,
             scaleFactor: 0.7
+        },
+        [USED_CONDOM_MIRIAM]: {
+            yIndex: 4,
+            xPosition: 3
         }
     },
     [FLAT]: {

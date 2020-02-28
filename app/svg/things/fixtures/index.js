@@ -32,6 +32,7 @@ import lingerieDrawing from 'assets/svgs/fixtures/lingerieDrawing'
 import vaseline from 'assets/svgs/fixtures/vaseline'
 import lizPhone from 'assets/svgs/fixtures/lizPhone'
 import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
+import usedCondom from 'assets/svgs/fixtures/usedCondom'
 import evianBottles from 'assets/svgs/fixtures/evianBottles'
 import stageMic from 'assets/svgs/fixtures/stageMic'
 import kickDrum from 'assets/svgs/fixtures/kickDrum'
@@ -87,6 +88,7 @@ import {
     VASELINE,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
+    USED_CONDOM_LIZ,
     EVIAN_BOTTLES,
     STAGE_MIC__CROWD,
     STAGE_MIC__STAGE,
@@ -102,6 +104,7 @@ import {
     RECORDING_BEERS,
     CRACKED_PICTURE,
     FREEWAY_SIGN,
+    USED_CONDOM_MIRIAM,
     BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
@@ -148,6 +151,7 @@ export default {
     [VASELINE]: vaseline,
     [LIZ_PHONE]: lizPhone,
     [LIZ_PHONE_REFLECTION]: lizPhoneReflection,
+    [USED_CONDOM_LIZ]: usedCondom,
     [EVIAN_BOTTLES]: evianBottles,
     [KICK_DRUM]: kickDrum,
     [DRUM_THRONE]: drumThrone,
@@ -161,6 +165,7 @@ export default {
     [RECORDING_BEERS]: recordingBeers,
     [CRACKED_PICTURE]: crackedPicture,
     [FREEWAY_SIGN]: freewaySign,
+    [USED_CONDOM_MIRIAM]: usedCondom,
     [BALLED_FOIL__ALLEY]: balledFoil,
     [LIZ_PHONE_BASE]: lizPhoneBase,
     [LIZ_PHONE_BASE_REFLECTION]: lizPhoneBaseReflection,
