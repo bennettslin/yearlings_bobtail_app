@@ -7,40 +7,63 @@
 }
 
 .MailingList__input {
-    font-size: 1em;
-
-    -webkit-appearance: none;
-    color: rgb(42, 42, 51);
-    -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans", Tahoma, Geneva, sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    letter-spacing: 0px;
-    text-transform: none;
     box-sizing: border-box;
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    background-color: rgb(255, 255, 255);
-    caret-color: rgb(0, 106, 255);
-    padding-top: 8px;
-    padding-bottom: 8px;
-    height: 42px;
-    line-height: 24px;
-    margin: 0px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(209, 209, 213);
-    border-image: initial;
-    border-radius: 3px;
-
-    &:hover,
-    &:active,
-    &:focus {
-        border-color: rgb(0, 106, 255);
-    }
+    font-size: 1em;
+    padding: 0;
 }
 
 .MailingList__emailField {
     flex-grow: 1;
+    
+    height: $length__iconSmall;
+    padding-top: $js__margin__thin;
+    padding-left: $js__margin__thin * 2;
+
+    color: $colour__text__dark;
+
+    border: 1px solid $bgColour__audioDisabled;
+    border-radius: $borderRadius__narrow;
+
+    .DW__higherProcessor
+    & {
+        transition: border-color $animationDuration__default;
+    }
+
+    &::placeholder {
+        color: $colour__annotationWormhole__title;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: $bgColour__audioPause;
+    }
+}
+
+.MailingList__submitButton {
+    height: $length__iconSmall + $js__margin__thin;
+
+    border: 1px solid transparent;
+    background-color: transparent;
+    
+    color: $bgColour__audioPause;
+    
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+
+    .DW__higherProcessor
+    & {
+        transition: color $animationDuration__default;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $bgColour__audioPlay;
+    }
+
+    &:disabled {
+        color: $bgColour__audioDisabled;
+    }
 }

@@ -76,6 +76,7 @@ class MailingList extends Component {
                         value: emailValue,
                         placeholder: 'Email address',
                         autoComplete: 'off',
+                        maxLength: 254,
                         onFocus: this.onInputFocus,
                         onChange: this.onChange,
                         onBlur: this.onBlur

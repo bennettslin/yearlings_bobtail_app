@@ -5356,5 +5356,10 @@ export default [
         taskName: `Used condom for both Grasshoppers and Cremated.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Style mailing list inputs.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
