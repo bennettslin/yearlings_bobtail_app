@@ -35,9 +35,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    headInspection: true,
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: COWGIRL
                 },
                 [BENNETT]: {
@@ -50,9 +47,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    headInspection: true,
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: BLOWJOB
                 },
                 [BENNETT]: {

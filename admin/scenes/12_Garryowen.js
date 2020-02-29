@@ -111,9 +111,6 @@ export default [
                     instance: GREETING
                 },
                 [MIRIAM]: {
-                    headInspection: true,
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: NOOGIE
                 },
                 [TRISTAN]: {

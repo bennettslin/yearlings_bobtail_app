@@ -6,9 +6,8 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 4.5,
+    BASELINE_TIME = 5,
     FACE_REVISION_TIME = 0.75,
-    HAIR_ILLUSTRATION_TIME = 0.5,
     HEAD_TIME = 0.25,
     EYEBROW_TIME = 0.04,
     NOSE_TIME = 0.06,
@@ -24,7 +23,6 @@ const
     TOTAL_TIME =
         BASELINE_TIME +
         FACE_REVISION_TIME +
-        HAIR_ILLUSTRATION_TIME +
         HEAD_TIME +
         EYEBROW_TIME +
         NOSE_TIME +
@@ -76,7 +74,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
 
                 {
                     faceRevision,
-                    hairIllustration,
                     head,
                     eyebrow,
                     nose,
@@ -95,7 +92,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 sceneIndex,
                 character,
                 faceRevision,
-                hairIllustration,
                 head,
                 eyebrow,
                 nose,
@@ -137,7 +133,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
                 songIndex,
                 sceneIndex,
                 faceRevision,
-                hairIllustration,
                 head,
                 eyebrow,
                 nose,
@@ -160,9 +155,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
 
             if (!faceRevision) {
                 workedHours += FACE_REVISION_TIME
-            }
-            if (!hairIllustration) {
-                workedHours += HAIR_ILLUSTRATION_TIME
             }
             if (!head) {
                 workedHours += HEAD_TIME
@@ -199,8 +191,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !headPlacement && !finalSvg,
-                halfDoneForNow = !headPlacement
+            const doneForNow = !faceRevision,
+                halfDoneForNow = !faceRevision
 
             if (!doneForNow) {
                 rolesTodoCount++
