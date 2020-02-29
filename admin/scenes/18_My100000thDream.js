@@ -79,9 +79,6 @@ export default [
                 },
                 [MIRIAM]: {
                     gopi: {
-                        headInspection: true,
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GOPI
                     }
                 }

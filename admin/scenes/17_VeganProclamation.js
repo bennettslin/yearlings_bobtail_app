@@ -63,9 +63,6 @@ export default [
                     instance: SHOW_ANNOYED
                 },
                 [MIRIAM]: {
-                    headInspection: true,
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GREETING
                 },
                 [TRISTAN]: {

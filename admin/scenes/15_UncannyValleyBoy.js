@@ -38,9 +38,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    headInspection: true,
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: ASLEEP_FEARFUL
                 },
                 [BENNETT]: {
@@ -91,9 +88,6 @@ export default [
                     instance: PRESENT
                 },
                 [MIRIAM]: {
-                    headInspection: true,
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MISCHIEVOUS_BANJO
                 },
                 [STEPHANIE]: {
@@ -147,9 +141,6 @@ export default [
         presences: {
             [ACTOR]: {
                 [MIRIAM]: {
-                    headInspection: true,
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: FENDING_OFF
                 },
                 [BENNETT]: {
