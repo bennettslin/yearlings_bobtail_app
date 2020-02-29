@@ -20,7 +20,7 @@ class Popup extends PureComponent {
         isVisible: PropTypes.bool.isRequired,
         doMountonEnter: PropTypes.bool,
         doUnmountOnExit: PropTypes.bool,
-        isFullSize: PropTypes.bool,
+        isFullHeight: PropTypes.bool,
         noFlexCentre: PropTypes.bool,
         noAbsoluteFull: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
@@ -54,7 +54,7 @@ class Popup extends PureComponent {
                 ...other
             } = this.props,
 
-            { isFullSize } = other
+            { isFullHeight } = other
 
         return (
             <CSSTransition
@@ -75,9 +75,9 @@ class Popup extends PureComponent {
                         'Popup',
 
                         // FIXME: Delete this.
-                        popupName === 'AboutPopup' && 'Popup__visible',
+                        // popupName === 'AboutPopup' && 'Popup__visible',
 
-                        isFullSize && 'Popup__fullSize',
+                        isFullHeight && 'Popup__fullHeight',
 
                         // For animation styling.
                         {
@@ -90,8 +90,7 @@ class Popup extends PureComponent {
                     <PopupView {...other}
                         {...{
                             popupName,
-                            displaysInOverlay:
-                                displaysInOverlay || isFullSize,
+                            displaysInOverlay,
                             handlePreviousClick,
                             handleNextClick,
                             handleContainerClick: this.handleContainerClick

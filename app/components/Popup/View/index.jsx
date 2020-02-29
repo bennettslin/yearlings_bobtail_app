@@ -10,7 +10,9 @@ const propTypes = {
         bounceAnimate: PropTypes.bool,
         shrinkAnimate: PropTypes.bool,
         isCardSize: PropTypes.bool,
-        isFullSize: PropTypes.bool,
+        isFullWidth: PropTypes.bool,
+        isFullHeight: PropTypes.bool,
+        canBeFullHeight: PropTypes.bool,
         hasNarrowPadding: PropTypes.bool,
         hasWidePadding: PropTypes.bool,
         handleCloseClick: PropTypes.func,
@@ -27,7 +29,9 @@ const propTypes = {
         bounceAnimate,
         shrinkAnimate,
         isCardSize,
-        isFullSize,
+        isFullWidth,
+        isFullHeight,
+        canBeFullHeight,
         hasNarrowPadding,
         hasWidePadding,
         handleCloseClick,
@@ -45,14 +49,17 @@ const propTypes = {
                     'PopupView__bounceAnimate': bounceAnimate,
                     'PopupView__shrinkAnimate': shrinkAnimate,
                     'PopupView__cardSize': isCardSize,
-                    'PopupView__fullSize': isFullSize
+                    'PopupView__fullWidth': isFullWidth,
+                    'PopupView__fullHeight': isFullHeight,
+                    'PopupView__canBeFullHeight':
+                        canBeFullHeight || isFullHeight
                 }
             )}>
                 {Boolean(handleCloseClick) && (
                     <PopupViewButton
                         isCloseButton
                         {...{
-                            inFullSize: isFullSize,
+                            isFullWidth,
                             inCardSize: isCardSize,
                             displaysInOverlay,
                             handlePopupButtonClick: handleCloseClick
@@ -63,7 +70,6 @@ const propTypes = {
                     <PopupViewButton
                         isPreviousButton
                         {...{
-                            inFullSize: isFullSize,
                             inCardSize: isCardSize,
                             displaysInOverlay,
                             handlePopupButtonClick: handlePreviousClick
@@ -74,7 +80,6 @@ const propTypes = {
                     <PopupViewButton
                         isNextButton
                         {...{
-                            inFullSize: isFullSize,
                             inCardSize: isCardSize,
                             displaysInOverlay,
                             handlePopupButtonClick: handleNextClick
@@ -90,7 +95,6 @@ const propTypes = {
                             'PopupViewContent__widePadding': hasWidePadding
                         },
 
-                        // !isFullSize && 'PopupViewContent__notFullSize',
                         'boxShadow__popupView'
                     )}
                     {...{

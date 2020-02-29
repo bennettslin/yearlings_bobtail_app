@@ -5361,5 +5361,10 @@ export default [
         taskName: `Style mailing list inputs.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `About popup positioning with menu second row and scrolling.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

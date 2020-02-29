@@ -17,10 +17,5 @@ export default [
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `About popup positioning with menu second row and scrolling.`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]

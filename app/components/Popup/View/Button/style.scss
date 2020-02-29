@@ -39,14 +39,25 @@ $offset__popupButton: 0.75;
             display: none;
         }
     }
+}
+
+.PopupViewButton__closeFullWidth {
+
+    .DW__miniWidth
+    & {
+        top: -$js__length__iconLarge__mini + $js__margin__thick;
+    }
+
+    .DW__phoneWidth
+    & {
+        top: -$js__length__icon + $js__margin__thick;
+    }
 
     .DW__miniWidth
     &,
     .DW__phoneWidth
     & {
-        &.PopupViewButton__inFullSize {
-            left: 10%;
-        }
+        left: 10%;
     }
 }
 
@@ -74,27 +85,18 @@ $offset__popupButton: 0.75;
         bottom: -$js__length__icon * $offset__popupButton;
     }
 
-    // Using calc here because transform messes with z-indices.
     .DW__desktopWidth
-    &.PopupViewButton__inFullSize {
-        top: calc(50% - #{$js__length__iconLarge} * 0.5);
-    }
-
-    .DW__desktopWidth
-    &.PopupViewButton__notInFullSize {
+    & {
         top: $js__padding__popupContent__wide;
     }
 
     .DW__tabletWidth
-    &.PopupViewButton__inFullSize,
-
-    .DW__tabletWidth
-    &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
+    &.PopupViewButton__displaysInOverlay {
         top: calc(50% - #{$js__length__iconLarge__tablet} * 0.5);
     }
 
     .DW__miniWidth
-    &.PopupViewButton__displaysInOverlay.PopupViewButton__notInFullSize {
+    &.PopupViewButton__displaysInOverlay {
         top: calc(50% - #{$js__length__iconLarge__mini} * 0.5);
     }
 }
@@ -122,16 +124,6 @@ $offset__popupButton: 0.75;
     &.PopupViewButton__notInOverlay {
         left: 10%;
     }
-
-    .DW__miniWidth
-    &,
-    .DW__phoneWidth
-    & {
-        &.PopupViewButton__inFullSize {
-            left: auto;
-            right: 22.5%;
-        }
-    }
 }
 
 .PopupViewButton__next {
@@ -156,31 +148,5 @@ $offset__popupButton: 0.75;
     .DW__mobileWidth
     &.PopupViewButton__notInOverlay {
         right: 10%;
-    }
-
-    /**
-     * Keeping this as a separate style. They are currently the same, but this
-     * might change.
-     */
-    .DW__miniWidth
-    &,
-    .DW__phoneWidth
-    & {
-        &.PopupViewButton__inFullSize {
-            right: 10%;
-        }
-    }
-}
-
-.PopupViewButton__inFullSize {
-
-    .DW__miniWidth
-    & {
-        top: -$js__length__iconLarge__mini + $js__margin__thick;
-    }
-
-    .DW__phoneWidth
-    & {
-        top: -$js__length__icon + $js__margin__thick;
     }
 }

@@ -4,32 +4,38 @@
     position: relative;
 }
 
-.PopupView__fullSize {
+.PopupView__canBeFullHeight {
+    max-height: calc(
+        100%
+        - #{$js__length__iconLarge * 1.25}
+    );
+
+    .DW__miniWidth
+    & {
+        max-height: calc(100% - #{$js__length__iconLarge__mini});
+    }
+
+    .DW__phoneWidth
+    & {
+        max-height: calc(100% - #{$js__length__icon});
+    }
+}
+
+.PopupView__fullHeight {
+    height: 100%;
+}
+
+.PopupView__fullWidth {
     max-width: $js__width__laptop;
 
-    // These calculations are just kind of arbitrary.
     width: calc(
         100%
         - #{$js__length__iconLarge * 2 + $js__padding__popupContent__wide * 2}
-    );
-    height: calc(
-        100%
-        - #{$js__length__iconLarge * 1.25}
     );
 
     .DW__phoneOrMiniWidth
     & {
         width: 100%;
-    }
-
-    .DW__miniWidth
-    & {
-        height: calc(100% - #{$js__length__iconLarge__mini});
-    }
-
-    .DW__phoneWidth
-    & {
-        height: calc(100% - #{$js__length__icon});
     }
 }
 

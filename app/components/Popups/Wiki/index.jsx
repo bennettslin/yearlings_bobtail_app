@@ -35,7 +35,8 @@ class WikiPopup extends PureComponent {
                 doUnmountOnExit
                 shrinkAnimate
                 displaysInOverlay
-                isFullSize
+                isFullWidth
+                isFullHeight
                 {...{
                     isVisible: Boolean(selectedWikiIndex),
                     popupName: 'WikiPopup',

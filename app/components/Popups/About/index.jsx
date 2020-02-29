@@ -34,6 +34,7 @@ class AboutPopup extends PureComponent {
                 bounceAnimate
                 displaysInOverlay
                 isCardSize
+                canBeFullHeight
                 hasWidePadding
                 {...{
                     popupName: 'AboutPopup',

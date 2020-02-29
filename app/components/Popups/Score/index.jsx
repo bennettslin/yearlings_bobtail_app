@@ -32,7 +32,8 @@ class ScorePopup extends PureComponent {
 
         return (
             <Popup
-                isFullSize
+                isFullWidth
+                isFullHeight
                 displaysInOverlay
                 {...{
                     popupName: 'ScorePopup',

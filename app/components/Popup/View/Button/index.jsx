@@ -21,7 +21,7 @@ class PopupViewButton extends Component {
         isCloseButton: PropTypes.bool,
         isPreviousButton: PropTypes.bool,
         isNextButton: PropTypes.bool,
-        inFullSize: PropTypes.bool,
+        isFullWidth: PropTypes.bool,
         inCardSize: PropTypes.bool,
         displaysInOverlay: PropTypes.bool,
         handlePopupButtonClick: PropTypes.func
@@ -58,7 +58,7 @@ class PopupViewButton extends Component {
             isCloseButton,
             isPreviousButton,
             isNextButton,
-            inFullSize,
+            isFullWidth,
             inCardSize,
             displaysInOverlay
         } = this.props
@@ -85,15 +85,14 @@ class PopupViewButton extends Component {
                     'PopupViewButton',
                     {
                         'PopupViewButton__close': isCloseButton,
+                        'PopupViewButton__closeFullWidth':
+                            isCloseButton && isFullWidth,
                         'PopupViewButton__previous': isPreviousButton,
                         'PopupViewButton__next': isNextButton,
-                        'PopupViewButton__side': isPreviousButton || isNextButton,
+                        'PopupViewButton__side':
+                            isPreviousButton || isNextButton,
                         'PopupViewButton__inCardSize': inCardSize
                     },
-
-                    inFullSize ?
-                        'PopupViewButton__inFullSize' :
-                        'PopupViewButton__notInFullSize',
 
                     displaysInOverlay ?
                         'PopupViewButton__displaysInOverlay' :
