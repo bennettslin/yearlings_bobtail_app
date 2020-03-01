@@ -1,17 +1,24 @@
 import {
     ANA,
-    BENNETT
+    BENNETT,
+    MIRIAM_TRISTAN
 } from '../../../../app/constants/scene/actors'
-import { PERFORMING } from '../../../../app/constants/scene/actors/songs'
+import { SMIRKING } from '../../../../app/constants/scene/actors/ana'
+import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
+import { GREETING } from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {
-        type: BENNETT,
-        instance: PERFORMING
+        type: ANA,
+        instance: SMIRKING
     },
     {
-        type: ANA,
-        instance: PERFORMING
+        type: BENNETT,
+        instance: GREETING
+    },
+    {
+        type: MIRIAM_TRISTAN,
+        instance: NOOGIE
     }
 ]
 
