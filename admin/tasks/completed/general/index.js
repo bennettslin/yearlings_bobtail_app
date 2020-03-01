@@ -5366,5 +5366,10 @@ export default [
         taskName: `About popup positioning with menu second row and scrolling.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Confirm Bobtail Yearlings website is through AWS, and CloudFront updates.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
