@@ -5371,5 +5371,10 @@ export default [
         taskName: `Confirm Bobtail Yearlings website is through AWS, and CloudFront updates.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Tip text.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

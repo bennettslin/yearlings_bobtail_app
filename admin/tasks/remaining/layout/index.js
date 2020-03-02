@@ -1,8 +1,13 @@
 export default [
     {
-        taskName: `tip images`,
+        taskName: `Make tips hand undulate.`,
         workedHours: 0,
-        neededHours: 8
+        neededHours: 2
+    },
+    {
+        taskName: `Position tips hand for each song. When finished, delete images components as unnecessary.`,
+        workedHours: 0,
+        neededHours: 6
     },
 
     /**

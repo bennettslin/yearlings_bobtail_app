@@ -1,110 +1,92 @@
 export default {
     1: {
-        // title: 'Didi',
-        // concept: 'annotation',
-        // svgs: 'anchor',
-        description: `Click any link within a lyric to read its annotation.`
+        // Didi
+        // annotation
+        description: `Click an annotated lyric to read the meaning behind it.`
     },
     2: {
-        // title: 'Willy the Cocoa',
-        // concept: 'lyric expand',
-        // svgs: 'lyric expand',
-        description: `In mobile, rotate the screen to alternate between scene and lyric mode.`
+        // Willy the Cocoa
+        // lyric expand
+        description: `In mobile, click to expand the lyrics. You can also flip horizontal to zoom in on the stage.`
     },
     3: {
-        // title: 'Dear Saskia',
-        // concept: 'dots',
-        // svgs: 'Dots slide',
-        description: `Each annotation falls under one or more category. Show or hide each category by clicking its button.`
+        // Dear Saskia
+        // dots
+        description: `Each annotation falls under one or more categories. Click to show or hide all annotations for a given category.`
     },
     4: {
-        // title: 'Odin',
-        // concept: 'doublespeaker',
-        // svgs: 'lyricEar',
-        description: `In doublespeaker rhyme, lyrics on opposite ends of each line are sung concurrently. TODO: On wide screens. On narrower screens, click the ear button to alternate between showing left and right lyrics.`
+        // Odin
+        // doublespeaker
+        description: `In doublespeaker rhyme, lyrics in the left and right columns are sung simultaneously. On narrow screens, only one column is shown at a time. Click to alternate between them.`
     },
     5: {
-        // title: 'Pchelka's Starry Journey',
-        // concept: 'carousel',
-        // svgs: 'carouselNav or neither button',
-        description: `On desktop, click the carousel button to navigate through all of a song's annotations at once.`
+        // Pchelka's Starry Journey
+        // carousel
+        description: `On desktop, click to open the carousel and scroll through all the annotations at once.`
     },
     6: {
-        // title: 'Ash Wednesday',
-        // concept: 'activated verse, selected stanza',
-        // svgs: 'verse, text, audioRewind',
-        description: `Navigate directly to any line in the song by clicking it.`
+        // Ash Wednesday
+        // activated verse, selected stanza
+        description: `Click any line in the lyrics, then click rewind or fast forward, to have the audio player jump to that line.`
     },
     7: {
-        // title: 'M',
-        // concept: 'access',
-        // svgs: 'arrow access keys, play button with access key',
-        description: `On desktop, tap the arrow keys on your keyboard to navigate, and letter keys to select. Character icons will provide a handy guide.`
+        // M
+        // access
+        description: `On desktop, use the keyboard to navigate and select features. Type any key to show character icons and have tooltips show upon hover.`
     },
     8: {
-        // title: 'Good Night, Sita',
-        // concept: 'audio options',
-        // svgs: 'stanza tab with single verse',
-        description: `Navigate directly to any stanza by clicking on its tab.`
+        // Good Night, Sita
+        // audio options
+        description: `Click any stanza tab to have the audio player jump to that stanza.`
     },
     9: {
-        // title: 'Grasshoppers Lie Heavy',
-        // concept: 'wormholes',
-        // svgs: '1. wormhole dot, 2. wormhole in wormhole field',
-        description: `TODO: Mention selecting wormhole category. A wormhole is a thematic connection between two songs. Click on its button to navigate to the other song.`
+        // Grasshoppers Lie Heavy
+        // wormholes
+        description: `A wormhole is a thematic connection between two songs. Click to jump to the corresponding line in the other song.`
     },
     10: {
-        // title: 'Constellations!',
-        // concept: 'wiki',
-        // svgs: '1. reference dot, 2. wiki anchor in annotation card.',
-        description: `TODO: Mention selecting reference category. Click any link within an annotation to read its Wikipedia entry.`
+        // Constellations!
+        // wiki
+        description: `Click a linked reference within an annotation to read the Wikipedia entry.`
     },
     11: {
-        // title: 'Look Back in Anger',
-        // concept: 'slider',
-        // svgs: 'Slider',
-        description: `On desktop, you can go directly to a new line by selecting it from the slider above the lyrics.`
+        // Look Back in Anger
+        // slider
+        description: `On desktop, you can have the audio player jump to a new line by selecting it from the slider above the lyrics.`
     },
     12: {
-        // title: 'Garryowen',
-        // concept: 'score',
-        // svgs: 'score',
-        description: `On desktop, click the score button to read the song's musical score.`
+        // Garryowen
+        // score
+        description: `On desktop, click to see the musical score.`
     },
     13: {
-        // title: 'On a Golden Cord',
-        // concept: 'filmstrip',
-        // svgs: 'filmstrip',
-        description: `Navigate directly to any scene in the song by clicking on its panel in the title banner.`
+        // On a Golden Cord
+        // filmstrip
+        description: `Click any frame in the filmstrip to show its corresponding scene onstage. The audio player will also jump to that scene.`
     },
     14: {
-        // title: 'Kyon?',
-        // concept: 'tips',
-        // svgs: 'tip',
-        description: `Close the tip popup by clicking outside of it. To prevent it from showing when navigating to a new song, click on the light bulb directly.`
+        // Kyon?
+        // tips
+        description: `To prevent tips from showing at the start of each new song, click the lit bulb. If it is off but not disabled, first click to turn it on.`
     },
     15: {
-        // title: 'Uncanny Valley Boy',
-        // concept: 'auto scroll',
-        // svgs: 'autoScroll',
-        description: `Manually scrolling through the lyrics will turn off automatic scrolling during audio play. To turn it back on, click the scroll button.`
+        // Uncanny Valley Boy
+        // auto scroll
+        description: `The lyrics will auto scroll with the audio player, but any manual scrolling will turn it off. Click to turn auto scroll back on.`
     },
     16: {
-        // title: 'Cremated',
-        // concept: 'nav',
-        // svgs: '1. nav, 2. song',
-        description: `On desktop, click the nav button by the carousel to show the nav bar, then navigate directly to any song in the album by clicking its button.`
+        // Cremated
+        // nav
+        description: `On desktop with the carousel open, click to show the nav bar. Then click any snowglobe to have the audio player jump to its corresponding song.`
     },
     17: {
-        // title: 'Vegan Proclamation',
-        // concept: 'about',
-        // svgs: 'about',
-        description: `TODO: Show more than this. Click the about button to navigate to the Bobtail Yearlings band website.`
+        // Vegan Proclamation
+        // about
+        description: `Click to join our mailing list, visit our band website and social media pages, or contact us with interesting offers and opportunities.`
     },
     18: {
-        // title: 'My 100,000th Dream',
-        // concept: 'overview',
-        // svgs: 'overview',
-        description: `To prevent the narrative overview from showing when navigating to a new song, click the narrative button directly.`
+        // My 100,000th Dream
+        // overview
+        description: `To prevent the narrative overview from showing at the start of each new song, click Bennett while he's talking. If he is silent with eyes open, first click to have him talk.`
     }
 }
