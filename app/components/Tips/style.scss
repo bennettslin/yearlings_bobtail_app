@@ -1,3 +1,4 @@
+@import "./Hand/style";
 @import "./Image/style";
 
 .Tips {
@@ -8,25 +9,4 @@
     position: relative;
     float: left;
     margin-right: 10px;
-}
-
-.Tips__imageContainer {
-    min-width: 200px;
-    height: 250px;
-    margin-left: 10px;
-
-    // TODO: Improve these styles, obviously.
-    background-color: #b6b;
-
-    .DW__miniWidth
-    & {
-        min-width: 160px;
-        height: 200px;
-    }
-
-    .DW__phoneWidth
-    & {
-        min-width: 120px;
-        height: 150px;
-    }
 }

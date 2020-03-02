@@ -27,7 +27,7 @@ export default {
         // title: 'Pchelka's Starry Journey',
         // concept: 'carousel',
         // svgs: 'carouselNav or neither button',
-        description: `On wide desktop screens, click the carousel button to navigate through all of a song's annotations at once.`
+        description: `On desktop, click the carousel button to navigate through all of a song's annotations at once.`
     },
     6: {
         // title: 'Ash Wednesday',
@@ -39,7 +39,7 @@ export default {
         // title: 'M',
         // concept: 'access',
         // svgs: 'arrow access keys, play button with access key',
-        description: `In desktop, tap the arrow keys on your keyboard to navigate, and letter keys to select. Character icons will provide a handy guide.`
+        description: `On desktop, tap the arrow keys on your keyboard to navigate, and letter keys to select. Character icons will provide a handy guide.`
     },
     8: {
         // title: 'Good Night, Sita',
@@ -63,13 +63,13 @@ export default {
         // title: 'Look Back in Anger',
         // concept: 'slider',
         // svgs: 'Slider',
-        description: `On wide desktop screens, you can go directly to a new line by selecting it from the slider above the lyrics.`
+        description: `On desktop, you can go directly to a new line by selecting it from the slider above the lyrics.`
     },
     12: {
         // title: 'Garryowen',
         // concept: 'score',
         // svgs: 'score',
-        description: `On wide desktop screens, click the score button to read the song's musical score.`
+        description: `On desktop, click the score button to read the song's musical score.`
     },
     13: {
         // title: 'On a Golden Cord',
@@ -93,7 +93,7 @@ export default {
         // title: 'Cremated',
         // concept: 'nav',
         // svgs: '1. nav, 2. song',
-        description: `On wide desktop screens, click the nav button by the carousel to show the nav bar, then navigate directly to any song in the album by clicking its button.`
+        description: `On desktop, click the nav button by the carousel to show the nav bar, then navigate directly to any song in the album by clicking its button.`
     },
     17: {
         // title: 'Vegan Proclamation',

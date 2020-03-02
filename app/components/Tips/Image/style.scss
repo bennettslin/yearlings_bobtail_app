@@ -1,5 +1,40 @@
-@import "./Images/01_Didi/style";
+@import "./01_Didi/style";
+@import "./02_WillyTheCocoa/style";
+@import "./03_DearSaskia/style";
+@import "./04_Odin/style";
+@import "./05_PchelkasStarryJourney/style";
+@import "./06_AshWednesday/style";
+@import "./07_M/style";
+@import "./08_GoodNightSita/style";
+@import "./09_GrasshoppersLieHeavy/style";
+@import "./10_Constellations/style";
+@import "./11_LookBackInAnger/style";
+@import "./12_Garryowen/style";
+@import "./13_OnAGoldenCord/style";
+@import "./14_Kyon/style";
+@import "./15_UncannyValleyBoy/style";
+@import "./16_Cremated/style";
+@import "./17_VeganProclamation/style";
+@import "./18_My100000thDream/style";
 
 .TipImage {
+    position: relative;
+    min-width: 200px;
+    height: 250px;
+    margin-left: 10px;
 
+    // TODO: Improve these styles, obviously.
+    border: 1px solid gray;
+
+    .DW__miniWidth
+    & {
+        min-width: 160px;
+        height: 200px;
+    }
+
+    .DW__phoneWidth
+    & {
+        min-width: 120px;
+        height: 150px;
+    }
 }

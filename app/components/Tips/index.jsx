@@ -45,9 +45,7 @@ class Tips extends PureComponent {
                     )}
                 </div>
 
-                <div className="Tips__imageContainer">
-                    <TipImage {...{ songIndex: lyricSongIndex }} />
-                </div>
+                <TipImage {...{ songIndex: lyricSongIndex }} />
             </div>
         )
     }
