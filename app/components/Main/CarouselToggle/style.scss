@@ -6,7 +6,13 @@
 
     display: flex;
     justify-content: center;
-    z-index: $zIndex__carouselNavButton;
+
+    /**
+     * When annotation is selected, carousel switches z-index with lyric. So
+     * carousel toggle should have same z-index as lyric to always show above
+     * carousel.
+     */
+    z-index: $zIndex__lyricColumn;
 
     .DW__higherProcessor
     & {
