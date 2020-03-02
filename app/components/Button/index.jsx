@@ -3,11 +3,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import ReactTooltip from 'react-tooltip'
 
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import ButtonIcon from './ButtonIcon'
+import Tooltip from './Tooltip'
 import AccessLetter from '../Access/Letter'
 
 import { populateRefs } from 'helpers/ref'
@@ -19,7 +19,6 @@ import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
 import {
     getShowButtonIcon,
     getShowTooltip,
-    getTooltipPlacement,
     getTooltipText
 } from './helper'
 
@@ -135,19 +134,7 @@ class Button extends Component {
                 }}
             >
                 {showTooltip && (
-                    <ReactTooltip
-                        {...{
-                            className: cx(
-                                'ReactTooltip',
-                                'dropShadow'
-                            ),
-                            id: buttonName,
-                            effect: 'solid',
-                            delayShow: 750,
-                            type: 'light',
-                            place: getTooltipPlacement(buttonName)
-                        }}
-                    />
+                    <Tooltip {...{ buttonName }} />
                 )}
                 <div className={cx(
                     'ButtonAnimatable',

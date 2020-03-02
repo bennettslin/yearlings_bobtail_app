@@ -22,5 +22,15 @@ export default [
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Tooltip work. Only show tooltips on access. Also be smart about placement when in mobile versus desktop.`,
+        workedHours: 1,
+        neededHours: 3
+    },
+    {
+        taskName: `Nav song titles always show.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

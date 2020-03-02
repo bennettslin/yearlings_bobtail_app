@@ -1,4 +1,5 @@
 @import "./ButtonIcon/style";
+@import "./Tooltip/style";
 
 .Button {
     position: relative;
@@ -74,9 +75,4 @@
     & {
         transform: scale(0.9);
     }
-}
-
-.ReactTooltip {
-    padding: $js__margin__thin $js__margin__thick;
-    font-size: 0.8em;
 }

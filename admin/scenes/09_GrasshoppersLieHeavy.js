@@ -286,7 +286,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        faceRevision: true,
                         head: true,
                         eyebrow: true,
                         nose: true,
