@@ -29,8 +29,8 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Nav song titles always show.`,
-        workedHours: 0,
-        neededHours: 2
+        taskName: `Nav button titles work.`,
+        workedHours: 2,
+        neededHours: 3
     }
 ]

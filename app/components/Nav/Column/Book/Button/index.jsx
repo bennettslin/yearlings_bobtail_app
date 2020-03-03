@@ -14,6 +14,7 @@ import {
 } from 'constants/buttons'
 
 import NavCharacter from './Character'
+import NavButtonTitle from './Title'
 
 const mapStateToProps = ({
     transientStore: { isCarouselNavShowable },
@@ -115,7 +116,10 @@ class NavButton extends PureComponent {
                         isAccessed:
                             isAccessed &&
                             isNavigable,
-                        handleButtonClick: this._handleButtonClick
+                        handleButtonClick: this._handleButtonClick,
+                        inanimateChild: (
+                            <NavButtonTitle {...{ bookIndex, songIndex }} />
+                        )
                     }}
                 >
                     <NavCharacter

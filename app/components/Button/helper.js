@@ -103,6 +103,8 @@ const TOOLTIP_TEXT_MAP = {
 export const getShowTooltip = buttonName => {
     switch (buttonName) {
         case DOTS_SLIDE_SELECT_BUTTON_KEY:
+        case NAV_BOOK_BUTTON_KEY:
+        case NAV_SONG_BUTTON_KEY:
         case WORMHOLE_BUTTON_KEY:
             return false
     }

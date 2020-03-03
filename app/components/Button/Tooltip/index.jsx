@@ -17,9 +17,7 @@ const Tooltip = ({ buttonName }) => (
             effect: 'solid',
             delayShow: 750,
             type: 'light',
-            place: getTooltipPlacement({
-                buttonName
-            })
+            place: getTooltipPlacement({ buttonName })
         }}
     />
 )

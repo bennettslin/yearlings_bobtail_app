@@ -41,6 +41,7 @@ class Button extends Component {
         accessKey: PropTypes.string,
         isAccessed: PropTypes.bool.isRequired,
         handleButtonClick: PropTypes.func.isRequired,
+        inanimateChild: PropTypes.any,
         children: PropTypes.any
     }
 
@@ -83,6 +84,7 @@ class Button extends Component {
                 isAccessed,
                 buttonIdentifier,
                 accessKey,
+                inanimateChild,
                 children
             } = this.props,
 
@@ -136,6 +138,7 @@ class Button extends Component {
                 {showTooltip && (
                     <Tooltip {...{ buttonName }} />
                 )}
+                {inanimateChild}
                 <div className={cx(
                     'ButtonAnimatable',
                     isPopupButton && 'ButtonAnimatable__popup',

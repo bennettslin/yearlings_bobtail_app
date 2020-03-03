@@ -73,10 +73,6 @@ class Popup extends PureComponent {
                     className={cx(
                         popupName,
                         'Popup',
-
-                        // FIXME: Delete this.
-                        // popupName === 'AboutPopup' && 'Popup__visible',
-
                         isFullHeight && 'Popup__fullHeight',
 
                         // For animation styling.

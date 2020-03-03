@@ -282,12 +282,11 @@ export const SLIDER_DEFAULTS = {
 
 export const TOGGLE_DEFAULTS = {
     isAutoScroll: true,
-    isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
-    isNavShown: false,
+    isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) && false,
+    isNavShown: true,
     isDotsSlideShown: false,
     isLyricExpanded: false,
     isScoreShown: false,
-    // FIXME: Change back to false.
     isAboutShown: false
 }
 
