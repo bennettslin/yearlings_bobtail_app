@@ -33,7 +33,7 @@ const NavButtonTitle = ({ bookIndex, songIndex }) => {
                     )
                 }}
             >
-                {title.replace(/\s/g, '\u00a0')}
+                {title}
             </div>
         </div>
     )
