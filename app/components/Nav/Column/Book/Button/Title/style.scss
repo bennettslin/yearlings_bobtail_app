@@ -3,18 +3,16 @@
     top: $height__chivalry;
     opacity: 0;
 
-    .Button__accessed
-    &,
-    .Button__enabled:hover
-    & {
-        animation: bounceHover $animationDuration__default;
-    }
-
     .DW__userAgentDesktop
     & {
         transition:
             top $animationDuration__default,
             opacity $animationDuration__default;
+    }
+
+    .DW__mobileWidth
+    & {
+        top: -$height__chivalry;
     }
 
     .ShW__navExpanded
@@ -34,4 +32,24 @@
     transform: rotate(270deg);
     transform-origin: left top 0;
     float: left;
+
+    .DW__mobileWidth
+    & {
+        transform: rotate(90deg);
+        transform-origin: left bottom 0;
+        padding-left: $js__margin__thick;
+    }
+
+    .Button__accessed
+    &,
+    .Button__enabled:hover
+    & {
+        color: $bgColour__accessedUnderlineActive;
+    }
+
+    .DW__userAgentDesktop
+    & {
+        transition:
+            color $animationDuration__default;
+    }
 }

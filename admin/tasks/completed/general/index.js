@@ -5379,7 +5379,12 @@ export default [
     },
     {
         taskName: `Tooltip work. Only show tooltips on access. Also be smart about placement when in mobile versus desktop.`,
-        workedHours: 2,
+        workedHours: 3,
+        neededHours: 3
+    },
+    {
+        taskName: `Nav button titles work.`,
+        workedHours: 3,
         neededHours: 3
     }
 ]
