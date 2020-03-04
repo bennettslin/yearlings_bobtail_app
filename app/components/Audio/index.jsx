@@ -33,14 +33,47 @@ const mapStateToProps = ({
     audioStore: { isPlaying },
     sessionStore: { selectedAudioOptionIndex },
     selectedStore: { selectedSongIndex },
-    responsiveStore: { isTwoRowMenu }
+    responsiveStore: { isTwoRowMenu },
+    viewportStore: { isDesktopWidth }
 }) => ({
     isPlaying,
     playersBitNumber,
     selectedAudioOptionIndex,
     selectedSongIndex,
-    isTwoRowMenu
+    isTwoRowMenu,
+    isDesktopWidth
 })
+
+const BUTTON_CLASS_NAME = 'AudioButton'
+
+// This is the order in mobile width.
+const STATIC_BUTTON_CONFIGS = [
+    {
+        key: AUDIO_PREVIOUS_BUTTON_KEY,
+        buttonName: AUDIO_PREVIOUS_BUTTON_KEY,
+        className: BUTTON_CLASS_NAME,
+        accessKey: PREVIOUS_SONG_KEY
+    },
+    {
+        key: AUDIO_PLAY_BUTTON_KEY,
+        isLargeSize: true,
+        buttonName: AUDIO_PLAY_BUTTON_KEY,
+        className: BUTTON_CLASS_NAME,
+        accessKey: AUDIO_PLAY_KEY
+    },
+    {
+        key: AUDIO_NEXT_BUTTON_KEY,
+        buttonName: AUDIO_NEXT_BUTTON_KEY,
+        className: BUTTON_CLASS_NAME,
+        accessKey: NEXT_SONG_KEY
+    },
+    {
+        key: AUDIO_OPTIONS_BUTTON_KEY,
+        buttonName: AUDIO_OPTIONS_BUTTON_KEY,
+        className: BUTTON_CLASS_NAME,
+        accessKey: AUDIO_OPTIONS_TOGGLE_KEY
+    }
+]
 
 class Audio extends PureComponent {
 
@@ -50,7 +83,8 @@ class Audio extends PureComponent {
         playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        isTwoRowMenu: PropTypes.bool.isRequired
+        isTwoRowMenu: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired
     }
 
     _handleAudioOptionClick = () => {
@@ -69,28 +103,61 @@ class Audio extends PureComponent {
         this.dispatchSong({ direction: 1 })
     }
 
+    getDynamicButtonConfigs = () => {
+        const {
+                selectedSongIndex,
+                playersBitNumber,
+                isPlaying,
+                selectedAudioOptionIndex,
+                isDesktopWidth
+            } = this.props,
+
+            isPrologue = selectedSongIndex === 0,
+            songsCount = getSongsAndLoguesCount(),
+            isEpilogue = selectedSongIndex === songsCount - 1,
+            playerCanPlayThrough = getPlayerCanPlayThrough({
+                songIndex: selectedSongIndex,
+                playersBitNumber
+            }),
+
+            mobileOrderedConfigs = [
+                {
+                    isDisabled: isPrologue,
+                    handleButtonClick: this._handlePreviousClick
+                },
+                {
+                    buttonIdentifier: isPlaying,
+                    isDisabled: !playerCanPlayThrough,
+                    handleButtonClick: this._handlePlayClick
+                },
+                {
+                    isDisabled: isEpilogue,
+                    handleButtonClick: this._handleNextClick
+                },
+                {
+                    buttonIdentifier: selectedAudioOptionIndex,
+                    handleButtonClick: this._handleAudioOptionClick
+                }
+            ]
+
+        // If desktop width, reverse order to keep tooltips on top.
+        return (
+            isDesktopWidth ?
+                mobileOrderedConfigs.reverse() :
+                mobileOrderedConfigs
+        )
+    }
+
     _getRefs = (payload) => {
         populateRefs(this, payload)
     }
 
     render() {
         const {
-                selectedSongIndex,
-                playersBitNumber,
-
-                isPlaying,
-                selectedAudioOptionIndex,
-                isTwoRowMenu
+                isTwoRowMenu,
+                isDesktopWidth
             } = this.props,
-
-            isPrologue = selectedSongIndex === 0,
-            songsCount = getSongsAndLoguesCount(),
-            isEpilogue = selectedSongIndex === songsCount - 1,
-
-            playerCanPlayThrough = getPlayerCanPlayThrough({
-                songIndex: selectedSongIndex,
-                playersBitNumber
-            })
+            dynamicButtonConfigs = this.getDynamicButtonConfigs()
 
         return (
             <div
@@ -110,51 +177,22 @@ class Audio extends PureComponent {
                         }}
                     />
                 )}
+                {dynamicButtonConfigs.map((dynamicConfig, index) => {
 
-                {/* Previous button. */}
-                <Button
-                    {...{
-                        buttonName: AUDIO_PREVIOUS_BUTTON_KEY,
-                        className: 'AudioButton',
-                        accessKey: PREVIOUS_SONG_KEY,
-                        isDisabled: isPrologue,
-                        handleButtonClick: this._handlePreviousClick
-                    }}
-                />
+                    // If desktop width, reverse order to keep tooltips on top.
+                    const staticConfig = STATIC_BUTTON_CONFIGS[
+                        isDesktopWidth ?
+                            dynamicButtonConfigs.length - index - 1 :
+                            index
+                    ]
 
-                {/* Play button. */}
-                <Button
-                    isLargeSize
-                    {...{
-                        buttonName: AUDIO_PLAY_BUTTON_KEY,
-                        className: 'AudioButton',
-                        buttonIdentifier: isPlaying,
-                        accessKey: AUDIO_PLAY_KEY,
-                        isDisabled: !playerCanPlayThrough,
-                        handleButtonClick: this._handlePlayClick
-                    }}
-                />
-
-                {/* Next button. */}
-                <Button
-                    {...{
-                        buttonName: AUDIO_NEXT_BUTTON_KEY,
-                        className: 'AudioButton',
-                        accessKey: NEXT_SONG_KEY,
-                        isDisabled: isEpilogue,
-                        handleButtonClick: this._handleNextClick
-                    }}
-                />
-
-                <Button
-                    {...{
-                        buttonName: AUDIO_OPTIONS_BUTTON_KEY,
-                        className: 'AudioButton',
-                        buttonIdentifier: selectedAudioOptionIndex,
-                        accessKey: AUDIO_OPTIONS_TOGGLE_KEY,
-                        handleButtonClick: this._handleAudioOptionClick
-                    }}
-                />
+                    return (
+                        <Button
+                            {...dynamicConfig}
+                            {...staticConfig}
+                        />
+                    )
+                })}
 
                 {/* Placeholder to create space. */}
                 {isTwoRowMenu && (

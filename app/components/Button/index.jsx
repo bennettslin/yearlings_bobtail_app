@@ -135,9 +135,6 @@ class Button extends Component {
                     onClick: this._handleClick
                 }}
             >
-                {showTooltip && (
-                    <Tooltip {...{ buttonName }} />
-                )}
                 {inanimateChild}
                 <div className={cx(
                     'ButtonAnimatable',
@@ -165,6 +162,9 @@ class Button extends Component {
                         />
                     )}
                 </div>
+                {showTooltip && (
+                    <Tooltip {...{ buttonName }} />
+                )}
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

@@ -7,6 +7,11 @@ export default [
     {
         taskName: `Have album banner track entire album's time progress.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 5
+    },
+    {
+        taskName: `Figure out best way to deal with sticky hover of tooltips in mobile.`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

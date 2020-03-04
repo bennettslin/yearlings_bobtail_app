@@ -28,6 +28,7 @@ const Tooltip = ({ buttonName }) => {
             isDesktopWidth,
             isTabletWidth
         } = useSelector(mapStateToProps),
+
         isPhoneOrMiniWidth = !isDesktopWidth && !isTabletWidth
 
     /**
@@ -45,7 +46,10 @@ const Tooltip = ({ buttonName }) => {
                 effect: 'solid',
                 delayShow: 750,
                 type: 'light',
-                place: getTooltipPlacement({ buttonName })
+                place: getTooltipPlacement({
+                    buttonName,
+                    isDesktopWidth
+                })
             }}
         />
     )
@@ -53,10 +57,10 @@ const Tooltip = ({ buttonName }) => {
 
 Tooltip.propTypes = {
     // Through Redux.
-    isAccessOn: PropTypes.bool.isRequired,
-    isUserAgentDesktop: PropTypes.bool.isRequired,
-    isDesktopWidth: PropTypes.bool.isRequired,
-    isTabletWidth: PropTypes.bool.isRequired,
+    // isAccessOn: PropTypes.bool.isRequired,
+    // isUserAgentDesktop: PropTypes.bool.isRequired,
+    // isDesktopWidth: PropTypes.bool.isRequired,
+    // isTabletWidth: PropTypes.bool.isRequired,
 
     buttonName: PropTypes.string.isRequired
 }

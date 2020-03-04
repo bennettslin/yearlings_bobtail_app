@@ -5376,5 +5376,10 @@ export default [
         taskName: `Tip text.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Tooltip work. Only show tooltips on access. Also be smart about placement when in mobile versus desktop.`,
+        workedHours: 2,
+        neededHours: 3
     }
 ]
