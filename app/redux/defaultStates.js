@@ -340,6 +340,7 @@ export const VIEWPORT_DEFAULTS = {
     ...VIEWPORT_TRANSITION_DEFAULTS,
     deviceWidthIndex: DEVICE_WIDTH_CONFIGS.length - 1,
     isPhoneWidth: false,
+    isTabletWidth: false,
     isDesktopWidth: false,
     windowHeight: 0,
     windowWidth: 0,

@@ -26,7 +26,7 @@ $height__carouselHidden: $height__chivalry;
         padding-bottom: $js__margin__thin;
     }
 
-    .DW__higherProcessor.DW__desktopWidth
+    .DW__userAgentMobile.DW__desktopWidth
     & {
         transition:
             opacity $animationDuration__fast,
@@ -40,7 +40,7 @@ $height__carouselHidden: $height__chivalry;
         height: 100%;
     }
 
-    .DW__higherProcessor.DW__mobileWidth
+    .DW__userAgentMobile.DW__mobileWidth
     & {
         transition:
             opacity $animationDuration__fast,

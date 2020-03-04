@@ -1,5 +1,5 @@
 .ShelfLeft {
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition:
             opacity $animationDuration__default,
@@ -29,7 +29,7 @@
 
 .hidden__overviewStatus {
 
-    .DW__higherProcessor
+    .DW__userAgentMobile
     .ShelfLeft
     & {
         transition: margin-left $animationDuration__default;

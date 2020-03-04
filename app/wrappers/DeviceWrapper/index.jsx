@@ -13,7 +13,7 @@ class DeviceWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isHigherProcessor: PropTypes.bool.isRequired,
+        isUserAgentMobile: PropTypes.bool.isRequired,
         deviceWidthIndex: PropTypes.number.isRequired,
         isPhoneWidth: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
@@ -27,7 +27,7 @@ class DeviceWrapper extends PureComponent {
     render() {
         const
             {
-                isHigherProcessor,
+                isUserAgentMobile,
                 deviceWidthIndex,
                 isPhoneWidth,
                 isDesktopWidth,
@@ -49,7 +49,7 @@ class DeviceWrapper extends PureComponent {
                         'DeviceWrapper',
                         `DW__${deviceWidthKey}Width`,
 
-                        isHigherProcessor && 'DW__higherProcessor',
+                        isUserAgentMobile && 'DW__userAgentMobile',
 
                         isDesktopWidth ?
                             'DW__desktopWidth' :
@@ -76,7 +76,7 @@ class DeviceWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    appStore: { isHigherProcessor },
+    appStore: { isUserAgentMobile },
     viewportStore: {
         deviceWidthIndex,
         isPhoneWidth,
@@ -87,7 +87,7 @@ const mapStateToProps = ({
         canSliderMount
     }
 }) => ({
-    isHigherProcessor,
+    isUserAgentMobile,
     deviceWidthIndex,
     isPhoneWidth,
     isDesktopWidth,

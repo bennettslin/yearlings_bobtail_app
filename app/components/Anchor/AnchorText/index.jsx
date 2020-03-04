@@ -9,7 +9,7 @@ import { getSpaceIfNeeded, getWordsForWikiAnchor } from './helper'
 
 const propTypes = {
     // From parent.
-    isHigherProcessor: PropTypes.bool.isRequired,
+    isUserAgentMobile: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isWikiTextAnchor: PropTypes.bool,
@@ -28,7 +28,7 @@ const propTypes = {
 }
 
 const AnchorText = ({
-    isHigherProcessor,
+    isUserAgentMobile,
     isAccessed,
     isSelected,
     isWikiTextAnchor,
@@ -37,7 +37,7 @@ const AnchorText = ({
 
 }) => {
     // Only split wiki anchor text, and only in higher processor.
-    const words = isWikiTextAnchor && isHigherProcessor ?
+    const words = isWikiTextAnchor && isUserAgentMobile ?
         getWordsForWikiAnchor(text) : [text]
 
     return (
@@ -81,7 +81,7 @@ const AnchorText = ({
                         </span>
 
                         {/* See styling comment for why this is last child. */}
-                        {isHigherProcessor && (
+                        {isUserAgentMobile && (
                             <Underline
                                 {...{
                                     isAccessed,

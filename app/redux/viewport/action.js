@@ -12,6 +12,7 @@ import {
 
 import {
     getIsDesktopWidth,
+    getIsTabletWidth,
     getIsPhoneWidth
 } from '../../helpers/responsive'
 
@@ -20,6 +21,7 @@ export const updateViewportStore = (payload = VIEWPORT_DEFAULTS) => {
 
     if (hasKey(deviceWidthIndex)) {
         payload.isDesktopWidth = getIsDesktopWidth(deviceWidthIndex)
+        payload.isTabletWidth = getIsTabletWidth(deviceWidthIndex)
         payload.isPhoneWidth = getIsPhoneWidth(deviceWidthIndex)
     }
 

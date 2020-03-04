@@ -11,22 +11,22 @@ import {
 
 export const getCanScoreMount = ({
     deviceWidthIndex,
-    isHigherProcessor
+    isUserAgentMobile
 }) => {
     // Score can mount if higher processor and not phone width.
-    return isHigherProcessor && !getIsPhoneWidth(deviceWidthIndex)
+    return isUserAgentMobile && !getIsPhoneWidth(deviceWidthIndex)
 }
 
 export const getCanSliderMount = ({
     deviceWidthIndex,
-    isHigherProcessor
+    isUserAgentMobile
 }) => {
     // Slider can mount if higher processor and desktop width.
-    return isHigherProcessor && getIsDesktopWidth(deviceWidthIndex)
+    return isUserAgentMobile && getIsDesktopWidth(deviceWidthIndex)
 }
 
 export const getCanCarouselMount = ({
-    isHigherProcessor,
+    isUserAgentMobile,
     deviceWidthIndex,
     windowHeight,
     isHeightlessLyric
@@ -34,7 +34,7 @@ export const getCanCarouselMount = ({
 }) => {
 
     // Carousel can mount if higher processor...
-    return isHigherProcessor &&
+    return isUserAgentMobile &&
 
         // and not heightless lyric...
         !isHeightlessLyric &&

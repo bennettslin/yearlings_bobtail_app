@@ -9,22 +9,25 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import AccessField from './Field'
 import AccessIcon from './Icon'
 
-import { getIsDesktopWidth, getIsTabletWidth } from 'helpers/responsive'
-
 import { CHILD_ACCESS_PREFIX } from '../../../constants/prefixes'
 
 const mapStateToProps = ({
     accessStore: { isAccessOn },
-    viewportStore: { deviceWidthIndex }
+    viewportStore: {
+        isDesktopWidth,
+        isTabletWidth
+    }
 }) => ({
     isAccessOn,
-    deviceWidthIndex
+    isDesktopWidth,
+    isTabletWidth
 })
 
 const propTypes = {
     // Through Redux.
     isAccessOn: PropTypes.bool.isRequired,
-    deviceWidthIndex: PropTypes.number.isRequired,
+    isDesktopWidth: PropTypes.bool.isRequired,
+    isTabletWidth: PropTypes.bool.isRequired,
 
     // From parent.
     inButtonOrDotAnchor: PropTypes.bool,
@@ -35,17 +38,22 @@ const propTypes = {
 
 const AccessLetter = ({
     isAccessOn,
-    deviceWidthIndex,
+    isDesktopWidth,
+    isTabletWidth,
     inButtonOrDotAnchor,
     showIfAccessOn,
     animateStandaloneOnKeyDown,
     accessKey
 
 }) => {
-    // Only show access letter in tablet width or wider.
+    /**
+     * Only prevent access letters from being shown on narrow screens for UI
+     * purposes. Keyboard access is technically still available on any device,
+     * in any viewport width.
+     */
     if (
-        !getIsDesktopWidth(deviceWidthIndex) &&
-        !getIsTabletWidth(deviceWidthIndex)
+        !isDesktopWidth &&
+        !isTabletWidth
     ) {
         return null
     }

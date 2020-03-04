@@ -13,16 +13,16 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    appStore: { isHigherProcessor }
+    appStore: { isUserAgentMobile }
 }) => ({
-    isHigherProcessor
+    isUserAgentMobile
 })
 
 class Anchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isHigherProcessor: PropTypes.bool.isRequired,
+        isUserAgentMobile: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string,
@@ -66,7 +66,7 @@ class Anchor extends PureComponent {
 
         const {
                 className,
-                isHigherProcessor,
+                isUserAgentMobile,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
                 isSelected,
@@ -82,14 +82,14 @@ class Anchor extends PureComponent {
 
             // If in mobile, only show dot sequence if annotation title.
             showDotSequence = Boolean(sequenceDotKeys) && (
-                isHigherProcessor || isAnnotationTitle
+                isUserAgentMobile || isAnnotationTitle
             ),
 
             /**
              * Don't show access if in mobile, even though access behaviour is
              * still technically possible.
              */
-            isAccessed = isAccessedBeforeDesktop && isHigherProcessor
+            isAccessed = isAccessedBeforeDesktop && isUserAgentMobile
 
         return (
             <a
@@ -141,7 +141,7 @@ class Anchor extends PureComponent {
                 {isDotAnchor && (
                     <AnchorDot
                         {...{
-                            isHigherProcessor,
+                            isUserAgentMobile,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys
@@ -152,7 +152,7 @@ class Anchor extends PureComponent {
                 {Boolean(text) && (
                     <AnchorText
                         {...{
-                            isHigherProcessor,
+                            isUserAgentMobile,
                             isAccessed,
                             isSelected,
                             isWikiTextAnchor,

@@ -4,7 +4,7 @@
 .Popup {
     flex-direction: column-reverse;
 
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition: opacity $animationDuration__fast;
     }
@@ -29,7 +29,7 @@
 }
 
 .Popup__visible {
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition: opacity $animationDuration__slow;
     }

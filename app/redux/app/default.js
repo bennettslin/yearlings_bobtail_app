@@ -1,7 +1,7 @@
 import MobileDetect from 'mobile-detect'
 
 const
-    _getIsHigherProcessor = () => {
+    _getIsUserAgentMobile = () => {
         /**
          * FIXME: This uses user agent sniffing to detect whether this is a
          * mobile device, assuming that mobile devices have lower processing
@@ -25,6 +25,6 @@ const
     }
 
 export const APP_DEFAULTS = {
-    isHigherProcessor: _getIsHigherProcessor(),
+    isUserAgentMobile: _getIsUserAgentMobile(),
     isTouchSupported: _getIsTouchSupported()
 }

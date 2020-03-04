@@ -9,21 +9,21 @@ import { ORDERED_DOT_KEYS } from 'constants/dots'
 
 const propTypes = {
     // From parent.
-    isHigherProcessor: PropTypes.bool.isRequired,
+    isUserAgentMobile: PropTypes.bool.isRequired,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     stanzaDotKeys: PropTypes.object.isRequired
 }
 
 const AnchorDot = ({
-    isHigherProcessor,
+    isUserAgentMobile,
     isAccessed,
     isSelected,
     stanzaDotKeys
 
 }) => (
     <>
-        {isHigherProcessor && (
+        {isUserAgentMobile && (
             <Underline
                 isDotAnchor
                 {...{

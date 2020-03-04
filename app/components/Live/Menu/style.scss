@@ -9,7 +9,7 @@ $padding__menuChild__desktop: $js__margin__thick * 2;
 }
 
 .Menu__main {
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition:
             margin $animationDuration__slow,

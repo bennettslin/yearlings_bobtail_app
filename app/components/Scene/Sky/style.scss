@@ -3,7 +3,7 @@
 }
 
 .Sky__filter {
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition:
             background $animationDuration__slow;
@@ -15,7 +15,7 @@
 //     border-radius: 50%;
 //     opacity: 0;
 
-//     .DW__higherProcessor
+//     .DW__userAgentMobile
 //     & {
 //         transition:
 //             opacity $animationDuration__slow,

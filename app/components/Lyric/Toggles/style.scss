@@ -53,7 +53,7 @@
     z-index: $zIndex__lyricChild__topMost;
     opacity: 0;
 
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition: opacity $animationDuration__default;
     }

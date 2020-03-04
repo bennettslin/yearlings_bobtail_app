@@ -24,7 +24,7 @@
     border: 1px solid $bgColour__audioDisabled;
     border-radius: $borderRadius__narrow;
 
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition: border-color $animationDuration__default;
     }
@@ -52,7 +52,7 @@
         cursor: pointer;
     }
 
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition: color $animationDuration__default;
     }

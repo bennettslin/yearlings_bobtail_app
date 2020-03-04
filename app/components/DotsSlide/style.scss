@@ -14,7 +14,7 @@ $margin__dotsContainer__phone: 8px;
 
     z-index: $zIndex__mainShelf;
 
-    .DW__higherProcessor
+    .DW__userAgentMobile
     & {
         transition:
             opacity $animationDuration__default,
