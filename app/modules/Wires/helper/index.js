@@ -15,6 +15,10 @@ export const getWires = ({ presenceType, wire }) => {
         return [{ x: 0.3 }, { x: 0.7 }]
     }
 
+    if (wire && !Array.isArray(wire)) {
+        return [wire]
+    }
+
     // Return specified config, or undefined.
     return wire
 }
