@@ -13,16 +13,16 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    appStore: { isUserAgentMobile }
+    appStore: { isUserAgentDesktop }
 }) => ({
-    isUserAgentMobile
+    isUserAgentDesktop
 })
 
 class Anchor extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isUserAgentMobile: PropTypes.bool.isRequired,
+        isUserAgentDesktop: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string,
@@ -66,7 +66,7 @@ class Anchor extends PureComponent {
 
         const {
                 className,
-                isUserAgentMobile,
+                isUserAgentDesktop,
                 isAnnotationTitle,
                 isAccessed: isAccessedBeforeDesktop,
                 isSelected,
@@ -82,14 +82,14 @@ class Anchor extends PureComponent {
 
             // If in mobile, only show dot sequence if annotation title.
             showDotSequence = Boolean(sequenceDotKeys) && (
-                isUserAgentMobile || isAnnotationTitle
+                isUserAgentDesktop || isAnnotationTitle
             ),
 
             /**
              * Don't show access if in mobile, even though access behaviour is
              * still technically possible.
              */
-            isAccessed = isAccessedBeforeDesktop && isUserAgentMobile
+            isAccessed = isAccessedBeforeDesktop && isUserAgentDesktop
 
         return (
             <a
@@ -141,7 +141,7 @@ class Anchor extends PureComponent {
                 {isDotAnchor && (
                     <AnchorDot
                         {...{
-                            isUserAgentMobile,
+                            isUserAgentDesktop,
                             isAccessed,
                             isSelected,
                             stanzaDotKeys
@@ -152,7 +152,7 @@ class Anchor extends PureComponent {
                 {Boolean(text) && (
                     <AnchorText
                         {...{
-                            isUserAgentMobile,
+                            isUserAgentDesktop,
                             isAccessed,
                             isSelected,
                             isWikiTextAnchor,

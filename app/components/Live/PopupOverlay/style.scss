@@ -5,7 +5,7 @@
     z-index: $zIndex__popupOverlay;
     background-color: transparent;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: background-color $animationDuration__default;
     }

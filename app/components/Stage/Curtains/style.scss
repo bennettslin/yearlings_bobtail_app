@@ -14,7 +14,7 @@
     // Allow curtains to overlap a bit when closed.
     left: 0.1%;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: left $animationDuration__default;
     }
@@ -29,7 +29,7 @@
     left: auto;
     right: 0.1%;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: right $animationDuration__default;
     }

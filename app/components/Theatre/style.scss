@@ -5,7 +5,7 @@
 .Theatre {
     opacity: 0;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: opacity $animationDuration__default;
     }
@@ -29,7 +29,7 @@
 }
 
 .fillTransition__dimTheatre {
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: fill $animationDuration__slow;
     }

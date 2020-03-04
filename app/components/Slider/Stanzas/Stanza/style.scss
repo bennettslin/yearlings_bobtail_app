@@ -12,7 +12,7 @@ $width__sliderStanzaTab: 9px;
     // Default height when not cursored.
     height: $js__length__icon;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: height $animationDuration__default;
     }

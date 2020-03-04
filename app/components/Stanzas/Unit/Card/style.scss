@@ -42,7 +42,7 @@
     // Ensure that tab covers sheet.
     cursor: pointer;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: color $animationDuration__default;
     }

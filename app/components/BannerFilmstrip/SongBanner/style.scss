@@ -20,7 +20,7 @@ $padding__songBanner: $js__margin__thin * 2;
 .BannerTracker {
     background-color: $bgColour__audioPlay;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: width $animationDuration__slow;
     }

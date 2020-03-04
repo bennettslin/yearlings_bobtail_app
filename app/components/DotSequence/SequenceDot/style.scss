@@ -4,7 +4,7 @@
     opacity: 0;
 
     // Increase width first, then fade in.
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition:
             width $animationDuration__default,

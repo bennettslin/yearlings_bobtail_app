@@ -11,7 +11,7 @@
         bottom: -$js__height__nav;
     }
 
-    .DW__userAgentMobile.DW__desktopWidth
+    .DW__userAgentDesktop.DW__desktopWidth
     & {
         transition:
             bottom $animationDuration__default,
@@ -23,7 +23,7 @@
         top: -$js__height__nav;
     }
 
-    .DW__userAgentMobile.DW__miniOrTabletWidth
+    .DW__userAgentDesktop.DW__miniOrTabletWidth
     & {
         transition:
             top $animationDuration__default,

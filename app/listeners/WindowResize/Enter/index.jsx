@@ -40,7 +40,7 @@ class WindowResizeEnterDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isUserAgentMobile: PropTypes.bool.isRequired,
+        isUserAgentDesktop: PropTypes.bool.isRequired,
         updateMountStore: PropTypes.func.isRequired,
         updateResponsiveStore: PropTypes.func.isRequired,
         updateViewportStore: PropTypes.func.isRequired,
@@ -116,9 +116,9 @@ class WindowResizeEnterDispatcher extends PureComponent {
         isTwoRowMenu,
         menuHeight
     }) {
-        const { isUserAgentMobile } = this.props,
+        const { isUserAgentDesktop } = this.props,
             canCarouselMount = getCanCarouselMount({
-                isUserAgentMobile,
+                isUserAgentDesktop,
                 deviceWidthIndex,
                 windowHeight,
                 isHeightlessLyric
@@ -157,11 +157,11 @@ class WindowResizeEnterDispatcher extends PureComponent {
             canCarouselMount,
             canScoreMount: getCanScoreMount({
                 deviceWidthIndex,
-                isUserAgentMobile
+                isUserAgentDesktop
             }),
             canSliderMount: getCanSliderMount({
                 deviceWidthIndex,
-                isUserAgentMobile
+                isUserAgentDesktop
             }),
             lyricDynamicHeight: getLyricDynamicHeight({
                 canCarouselMount,
@@ -269,9 +269,9 @@ class WindowResizeEnterDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    appStore: { isUserAgentMobile }
+    appStore: { isUserAgentDesktop }
 }) => ({
-    isUserAgentMobile
+    isUserAgentDesktop
 })
 
 export default connect(

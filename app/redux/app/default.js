@@ -1,7 +1,7 @@
 import MobileDetect from 'mobile-detect'
 
 const
-    _getIsUserAgentMobile = () => {
+    _getIsUserAgentDesktop = () => {
         /**
          * FIXME: This uses user agent sniffing to detect whether this is a
          * mobile device, assuming that mobile devices have lower processing
@@ -25,6 +25,6 @@ const
     }
 
 export const APP_DEFAULTS = {
-    isUserAgentMobile: _getIsUserAgentMobile(),
+    isUserAgentDesktop: _getIsUserAgentDesktop(),
     isTouchSupported: _getIsTouchSupported()
 }

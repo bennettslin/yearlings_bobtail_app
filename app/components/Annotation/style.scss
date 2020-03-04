@@ -31,7 +31,7 @@
 .bgColour__annotation {
     background-color: $bgColour__annotation;
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition: background-color $animationDuration__default;
     }

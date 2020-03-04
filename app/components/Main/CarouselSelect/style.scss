@@ -19,7 +19,7 @@
         margin-bottom: $margin__scrollBar;
     }
 
-    .DW__userAgentMobile.DW__desktopWidth
+    .DW__userAgentDesktop.DW__desktopWidth
     & {
         transition:
             bottom $animationDuration__default,
@@ -35,7 +35,7 @@
             - $js__margin__thin * 2;
     }
 
-    .DW__userAgentMobile.DW__miniOrTabletWidth
+    .DW__userAgentDesktop.DW__miniOrTabletWidth
     & {
         transition:
             top $animationDuration__default,

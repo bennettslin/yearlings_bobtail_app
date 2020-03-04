@@ -1,5 +1,5 @@
 .ShelfLeft {
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     & {
         transition:
             opacity $animationDuration__default,
@@ -29,7 +29,7 @@
 
 .hidden__overviewStatus {
 
-    .DW__userAgentMobile
+    .DW__userAgentDesktop
     .ShelfLeft
     & {
         transition: margin-left $animationDuration__default;

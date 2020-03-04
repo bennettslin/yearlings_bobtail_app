@@ -8,13 +8,13 @@ import cx from 'classnames'
 import { getVerseDurationForVerseIndex } from './helper'
 
 const mapStateToProps = ({
-    appStore: { isUserAgentMobile },
+    appStore: { isUserAgentDesktop },
     lyricStore: {
         lyricSongIndex,
         lyricVerseIndex
     }
 }) => ({
-    isUserAgentMobile,
+    isUserAgentDesktop,
     lyricSongIndex,
     lyricVerseIndex
 })
@@ -23,7 +23,7 @@ class VerseTracker extends Component {
 
     static propTypes = {
         // Through Redux.
-        isUserAgentMobile: PropTypes.bool.isRequired,
+        isUserAgentDesktop: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
 
@@ -69,7 +69,7 @@ class VerseTracker extends Component {
 
     render() {
         const {
-                isUserAgentMobile,
+                isUserAgentDesktop,
                 lyricSongIndex,
 
                 verseIndex,
@@ -110,7 +110,7 @@ class VerseTracker extends Component {
 
                         'abF'
                     ),
-                    ...isUserAgentMobile && {
+                    ...isUserAgentDesktop && {
                         style: {
                             transition: `${transitionStyle} ${verseDuration}s linear`
                         }
