@@ -1,12 +1,10 @@
 @import "./Hand/style";
-@import "./Image/style";
 
 .Tips {
     display: flex;
 }
 
-.Tips__toggleFloatContainer {
-    position: relative;
+.Button__tips {
     float: left;
-    margin-right: 10px;
+    margin-right: $js__margin__thick;
 }

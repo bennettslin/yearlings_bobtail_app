@@ -164,6 +164,6 @@ export default {
 }
 
 export const BENNETT_WIRE = {
-    [PAST]: 2,
-    [FUTURE]: 2
+    [PAST]: {},
+    [FUTURE]: {}
 }

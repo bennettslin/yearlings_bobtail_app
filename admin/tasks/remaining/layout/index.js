@@ -1,13 +1,18 @@
 export default [
     {
-        taskName: `Make tips hand undulate.`,
+        taskName: `Style Tip popup.`,
         workedHours: 0,
-        neededHours: 2
+        neededHours: 1
     },
     {
-        taskName: `Position tips hand for each song. When finished, delete images components as unnecessary.`,
+        taskName: `Position tips hand for each song.`,
         workedHours: 0,
         neededHours: 6
+    },
+    {
+        taskName: `Allow wire to render either behind or in front of svg. Have it based on individual wires.`,
+        workedHours: 1,
+        neededHours: 2
     },
 
     /**

@@ -5,6 +5,7 @@ $animationDuration__default: 0.2s;
 $animationDuration__slow: 0.25s;
 $animationDuration__slower: 0.5s;
 $animationDuration__scene: 1s;
+$animationDuration__pulse: 1.5s;
 $animationDuration__debug: 2s;
 
 @keyframes bounceHover {
@@ -91,5 +92,17 @@ $animationDuration__debug: 2s;
     }
     100% {
         font-size: 1em;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
     }
 }

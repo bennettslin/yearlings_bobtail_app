@@ -49,3 +49,5 @@ $zIndex__menuChild: $zIndex__popupButton + 1;
 
 // The overlay preventing popup interaction should be the highest.
 $zIndex__touchOverlay: $zIndex__menuChild + 1;
+
+$zIndex__tipsHand: $zIndex__touchOverlay + 1;

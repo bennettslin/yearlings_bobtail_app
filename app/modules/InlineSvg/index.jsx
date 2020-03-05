@@ -3,14 +3,17 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import ReactInlineSvg from 'react-inlinesvg'
 
+import { FRONT, REAR } from '../../constants/scene/wires'
+
 const propTypes = {
     // From parent.
     notAbsoluteFullContainer: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
     svgClassName: PropTypes.string,
-    children: PropTypes.node.isRequired,
-    siblingComponent: PropTypes.node
+    siblingPlacement: PropTypes.string,
+    siblingComponent: PropTypes.node,
+    children: PropTypes.node.isRequired
 }
 
 const InlineSvg = ({
@@ -19,15 +22,16 @@ const InlineSvg = ({
     style,
     svgClassName,
     children,
+    siblingPlacement,
     siblingComponent,
     ...rest
 }) => (
     <>
+        {siblingPlacement === REAR && siblingComponent}
         <div
             {...{
                 className: cx(
                     className,
-
                     // When not in previewer, make position absolute.
                     !notAbsoluteFullContainer && 'abF'
                 ),
@@ -43,10 +47,8 @@ const InlineSvg = ({
                 }}
             />
         </div>
-        {/* TODO: Put this behind child. */}
-        {siblingComponent}
+        {siblingPlacement === FRONT && siblingComponent}
     </>
-
 )
 
 InlineSvg.propTypes = propTypes

@@ -24,6 +24,6 @@ export default {
 }
 
 export const ESTHER_MOTHER_WIRE = {
-    [HURT_CONSOLING]: 2,
-    [SOBBING_SHIELDING]: 2
+    [HURT_CONSOLING]: {},
+    [SOBBING_SHIELDING]: {}
 }

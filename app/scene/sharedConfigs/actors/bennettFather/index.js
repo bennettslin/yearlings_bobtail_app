@@ -7,5 +7,5 @@ export default {
 }
 
 export const BENNETT_FATHER_WIRE = {
-    [PRESENT]: 2
+    [PRESENT]: {}
 }

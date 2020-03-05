@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { useSelector } from 'react-redux'
@@ -65,4 +65,4 @@ Tooltip.propTypes = {
     buttonName: PropTypes.string.isRequired
 }
 
-export default memo(Tooltip)
+export default Tooltip

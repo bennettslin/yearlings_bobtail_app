@@ -1,4 +1,20 @@
 .TipsHand {
-    width: 44px;
-    height: 44px;
+    width: $js__length__iconLarge;
+    height: $js__length__iconLarge;
+
+    animation: pulse $animationDuration__pulse infinite;
+    animation-timing-function: ease-in-out;
+
+    z-index: $zIndex__tipsHand;
+
+    // TODO: Improve styling.
+    filter: drop-shadow(0 0 5px hsla(200, 50%, 50%, 0.5));
+}
+
+.tipsHand {
+    stroke-width: 0.25px;
+    stroke: hsla(200, 20%, 20%, 0.6);
+
+    .hand { fill: hsl(199, 38%, 82%); }
+    .handInner { fill: hsl(201, 10%, 55%); }
 }

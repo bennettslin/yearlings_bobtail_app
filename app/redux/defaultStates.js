@@ -282,8 +282,8 @@ export const SLIDER_DEFAULTS = {
 
 export const TOGGLE_DEFAULTS = {
     isAutoScroll: true,
-    isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) && false,
-    isNavShown: true,
+    isCarouselShown: getBoolFromStorage(IS_CAROUSEL_SHOWN) || false,
+    isNavShown: false,
     isDotsSlideShown: false,
     isLyricExpanded: false,
     isScoreShown: false,

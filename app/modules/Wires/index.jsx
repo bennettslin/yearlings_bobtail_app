@@ -4,9 +4,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getWire } from '../../scene/sharedConfigs'
-
-import { getWires } from './helper'
+import { getWires } from '../../scene/sharedConfigs'
 
 const defaultProps = {
     adjustedTop: 0,
@@ -36,26 +34,23 @@ const Wires = ({
 
 }) => {
     const wires = getWires({
+        actorKey,
         presenceType,
-        wire: getWire({
-            actorKey,
-            presenceType,
-            presenceKey
-        })
+        presenceKey
     })
 
     return Boolean(wires) && (
         <>
             {wires.map((config, index) => {
-                const { x = 0.5, y = 0.5 } = config,
+                const { x = 0.5, y = 0.1 } = config,
                     left =
                         adjustedLeft +
                         // 0.5 is centre.
                         adjustedWidth * (x - 0.5),
                     top =
                         adjustedTop -
-                        // 0 is very bottom, 1 is very top.
-                        adjustedHeight * y
+                        // 0 is very top, 1 is very bottom.
+                        adjustedHeight * (1 - y)
 
                 return (
                     <div

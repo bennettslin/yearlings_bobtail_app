@@ -5386,5 +5386,10 @@ export default [
         taskName: `Nav button titles work.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Make tips hand pulsate.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

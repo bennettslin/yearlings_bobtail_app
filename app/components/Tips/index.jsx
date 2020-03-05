@@ -1,13 +1,12 @@
 // Section to show song tip.
 
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React from 'react'
+// import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 import cx from 'classnames'
 
 import TipsToggle from './Toggle'
 import Texts from '../Texts'
-import TipImage from './Image'
 
 import { getSongTip } from './helper'
 
@@ -17,38 +16,24 @@ const mapStateToProps = ({
     lyricSongIndex
 })
 
-class Tips extends PureComponent {
+const Tips = () => {
+    const { lyricSongIndex } = useSelector(mapStateToProps)
 
-    static propTypes = {
-        // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired
-    }
+    return (
 
-    render() {
-        const { lyricSongIndex } = this.props,
-            tipText = getSongTip(lyricSongIndex)
-
-        return (
-            <div className={cx(
-                'Tips'
-            )}>
-                <div className={cx(
-                    'Tips__textContainer',
-                    'fontSize__verse'
-                )}>
-                    <div className="Tips__toggleFloatContainer">
-                        <TipsToggle />
-                    </div>
-
-                    {tipText && (
-                        <Texts {...{ text: tipText }} />
-                    )}
-                </div>
-
-                <TipImage {...{ songIndex: lyricSongIndex }} />
-            </div>
-        )
-    }
+        <div className={cx(
+            'Tips',
+            'fontSize__verse'
+        )}>
+            <TipsToggle />
+            <Texts {...{ text: getSongTip(lyricSongIndex) }} />
+        </div>
+    )
 }
 
-export default connect(mapStateToProps)(Tips)
+Tips.propTypes = {
+    // Through Redux.
+    // lyricSongIndex: PropTypes.number.isRequired
+}
+
+export default Tips

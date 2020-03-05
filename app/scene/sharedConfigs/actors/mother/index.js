@@ -22,6 +22,6 @@ export default {
 }
 
 export const MOTHER_WIRE = {
-    [PRESENT]: 2,
-    [FUTURE]: 2
+    [PRESENT]: {},
+    [FUTURE]: {}
 }

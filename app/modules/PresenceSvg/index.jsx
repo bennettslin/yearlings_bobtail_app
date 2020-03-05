@@ -9,6 +9,7 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from 'helpers/format'
+import { getWirePlacement } from '../../scene/sharedConfigs'
 import { getSharedStyleForActor } from '../../scene/sharedConfigs/actors'
 import { getSharedStyleForThing } from '../../scene/sharedConfigs/things'
 import { getArrangementForPresence } from 'components/Presence/helper'
@@ -231,7 +232,12 @@ class PresenceSvg extends PureComponent {
             containerTransform = this.getPresenceTransform(),
             presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
             sharedStyle = this.getSharedStyle(),
-            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey
+            duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey,
+            wirePlacement = getWirePlacement({
+                actorKey,
+                presenceType,
+                presenceKey
+            })
 
         return (
             <InlineSvg
@@ -262,19 +268,22 @@ class PresenceSvg extends PureComponent {
                     title: convertPresenceKeyToTitle(presenceKey),
                     preProcessor: this.preProcessSvg,
                     onLoad: this.postProcessSvg,
-                    siblingComponent: (
-                        <Wires
-                            {...{
-                                actorKey,
-                                presenceType,
-                                presenceKey,
-                                adjustedTop,
-                                adjustedLeft,
-                                adjustedWidth,
-                                adjustedHeight
-                            }}
-                        />
-                    )
+                    ...Boolean(wirePlacement) && {
+                        siblingPlacement: wirePlacement,
+                        siblingComponent: (
+                            <Wires
+                                {...{
+                                    actorKey,
+                                    presenceType,
+                                    presenceKey,
+                                    adjustedTop,
+                                    adjustedLeft,
+                                    adjustedWidth,
+                                    adjustedHeight
+                                }}
+                            />
+                        )
+                    }
                 }}
             >
                 {children}
