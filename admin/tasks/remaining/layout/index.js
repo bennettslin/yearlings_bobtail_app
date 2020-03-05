@@ -11,8 +11,8 @@ export default [
     },
     {
         taskName: `Allow wire to render either behind or in front of svg. Have it based on individual wires.`,
-        workedHours: 1,
-        neededHours: 2
+        workedHours: 2,
+        neededHours: 3
     },
 
     /**

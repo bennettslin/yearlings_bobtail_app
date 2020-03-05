@@ -151,29 +151,3 @@ export default {
     ]
 }
 
-export const BUBBLE_WIRE = {
-    [APART_SKETCH]: {},
-    [BUBBLE_LARGE]: {},
-    [BUBBLE_MEDIUM]: {},
-    [BUBBLE_SMALL]: {},
-    [CINEMA_THOUGHT_BUYING]: {},
-    [CINEMA_THOUGHT_RECORDING]: {},
-    [DOGS_SKETCH]: {},
-    [ESCAPE_POD_SKETCH]: {},
-    [ESTHER_SPEECH]: {},
-    [GO_KART_THOUGHT]: {},
-    [KHARI_ATTACK_SPEECH]: {},
-    [LIZ_DEFENCE_SPEECH]: {},
-    [LIZ_THOUGHT]: {},
-    [PHARMACY_CEL]: {},
-    [SIBLING_CONSTELLATION]: {},
-    [SKETCHBOOK]: {},
-    [TARPIT_CONSTELLATION]: {},
-    [THOUGHT_LARGE]: {},
-    [THOUGHT_MEDIUM]: {},
-    [THOUGHT_SMALL]: {},
-    [TOGETHER_SKETCH]: {},
-    [WAITING_THOUGHT_SINGING]: {},
-    [WAITING_THOUGHT_STUDYING]: {},
-    [WAITING_THOUGHT_WALKING]: {}
-}

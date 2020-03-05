@@ -162,8 +162,3 @@ export default {
     [DEMONSTRATION]: null,
     [EL_TORITO]: null
 }
-
-export const BENNETT_WIRE = {
-    [PAST]: {},
-    [FUTURE]: {}
-}

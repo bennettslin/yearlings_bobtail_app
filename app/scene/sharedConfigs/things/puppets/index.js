@@ -133,31 +133,3 @@ export default {
         MIRIAM
     ]
 }
-
-export const PUPPET_WIRE = {
-    [GHOST_ODIN_ALLEY]: {},
-    [GHOST_ODIN_CAMPUS]: {},
-    [GHOST_ODIN_CLUB]: {},
-    [GHOST_ODIN_DEMONSTRATION]: {},
-    [OPAL_COUCH]: {},
-    [OPAL_GAZING]: {},
-    [PEACOCK]: {},
-    [PEAHEN]: {},
-    [PUPPET_ANITA_BEGIN]: { x: 0.55 },
-    [PUPPET_ANITA_END]: {},
-    [PUPPET_ANITA_MIDDLE]: { x: 0.45 },
-    [PUPPET_BENNETT_BEGIN]: { x: 0.4 },
-    [PUPPET_BENNETT_END]: {},
-    [PUPPET_BENNETT_MIDDLE]: { x: 0.55 },
-    [PUPPET_CHRISTOPHER_BEGIN]: {},
-    [PUPPET_CHRISTOPHER_END]: {},
-    [PUPPET_CHRISTOPHER_MIDDLE]: { x: 0.55 },
-    [PUPPET_FATHER_BEGIN]: { x: 0.4 },
-    [PUPPET_FATHER_END]: {},
-    [PUPPET_FATHER_MIDDLE]: { x: 0.45 },
-    [PUPPET_KHARI_LIZ]: {},
-    [PUPPET_MOTHER_BEGIN]: { x: 0.7 },
-    [PUPPET_MOTHER_END]: { x: 0.4 },
-    [PUPPET_MOTHER_MIDDLE]: {},
-    [PUPPET_REATTA]: [{ x: 0.2, y: 0.8 }, { x: 0.7, y: 0.6 }] // TODO
-}

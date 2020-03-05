@@ -2,8 +2,8 @@ import isString from 'lodash/isstring'
 
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
-import bennett, { BENNETT_WIRE } from './bennett'
-import bennettFather, { BENNETT_FATHER_WIRE } from './bennettFather'
+import bennett from './bennett'
+import bennettFather from './bennettFather'
 import bennettLiz from './bennettLiz'
 import bennettStephanie from './bennettStephanie'
 import bennettsChristopherLiz from './bennettsChristopherLiz'
@@ -11,10 +11,10 @@ import oldBennett from './oldBennett'
 import anita from './anita'
 import anitaBennett from './anitaBennett'
 import esther from './esther'
-import estherMother, { ESTHER_MOTHER_WIRE } from './estherMother'
+import estherMother from './estherMother'
 import willy from './willy'
-import mother, { MOTHER_WIRE } from './mother'
-import father, { FATHER_WIRE } from './father'
+import mother from './mother'
+import father from './father'
 import christopher from './christopher'
 import christopherBennett from './christopherBennett'
 import christopherBennettWilly from './christopherBennettWilly'
@@ -186,18 +186,3 @@ export const getSharedStyleForActor = ({
 
     return [...ALL_SHARED, ...sharedStyle]
 }
-
-const WIRES_MAP = {
-    [BENNETT]: BENNETT_WIRE,
-    [BENNETT_FATHER]: BENNETT_FATHER_WIRE,
-    [ESTHER_MOTHER]: ESTHER_MOTHER_WIRE,
-    [FATHER]: FATHER_WIRE,
-    [MOTHER]: MOTHER_WIRE
-}
-
-export const getWireForActor = ({
-    actorKey,
-    presenceKey
-}) => (
-    WIRES_MAP[actorKey] || {}
-)[presenceKey]

@@ -22,8 +22,3 @@ export default {
     ],
     [SOBBING_SHIELDING]: GHOST__SHARED
 }
-
-export const ESTHER_MOTHER_WIRE = {
-    [HURT_CONSOLING]: {},
-    [SOBBING_SHIELDING]: {}
-}

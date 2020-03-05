@@ -1,5 +1,5 @@
-import { getWireForActor } from './actors'
-import { getWireForThing } from './things'
+import { getWireForActor } from './wires/actors'
+import { getWireForThing } from './wires/things'
 
 import { REAR } from '../../constants/scene/wires'
 
