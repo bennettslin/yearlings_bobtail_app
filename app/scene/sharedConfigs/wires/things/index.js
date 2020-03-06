@@ -112,7 +112,14 @@ const WIRES_MAP = {
         [PUPPET_MOTHER_BEGIN]: { x: 0.7 },
         [PUPPET_MOTHER_END]: { x: 0.4 },
         [PUPPET_MOTHER_MIDDLE]: {},
-        [PUPPET_REATTA]: [{ x: 0.2, y: 0.8 }, { x: 0.7, y: 0.6 }] // TODO
+        [PUPPET_REATTA]: {
+            // TODO.
+            wires: [
+                { x: 0.2, y: 0.8 },
+                { x: 0.7, y: 0.6 }
+            ],
+            placedFront: true
+        }
     }
 }
 

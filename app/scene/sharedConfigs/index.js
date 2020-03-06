@@ -1,21 +1,15 @@
 import { getWireForActor } from './wires/actors'
 import { getWireForThing } from './wires/things'
 
-import { REAR } from '../../constants/scene/wires'
-
-export const getWire = ({
+export const getWireConfig = ({
     actorKey,
     presenceType,
     presenceKey
 
 }) => (
-    actorKey ? getWireForActor({
-        actorKey,
-        presenceKey
-    }) : getWireForThing({
-        presenceType,
-        presenceKey
-    })
+    actorKey ?
+        getWireForActor({ actorKey, presenceKey }) :
+        getWireForThing({ presenceType, presenceKey })
 )
 
 export const getWires = ({
@@ -24,38 +18,45 @@ export const getWires = ({
     presenceKey
 
 }) => {
-    const wire = getWire({
+    const wire = getWireConfig({
         actorKey,
         presenceType,
         presenceKey
     })
 
-    // If there is a wire, wrap it in an array.
-    if (wire && !Array.isArray(wire)) {
-        return [wire]
-    }
+    if (wire) {
+        const { wires } = wire
 
-    // This is either an array or undefined.
-    return wire
+        return (
+            wires ?
+                // This is an array of wires.
+                wires :
+                // This is a single wire, so wrap it in an array.
+                [wire]
+        )
+    } else {
+
+        return null
+    }
 }
 
-export const getWirePlacement = ({
+export const getWirePlacedFront = ({
     actorKey,
     presenceType,
     presenceKey
 
 }) => {
-    const wire = getWire({
+    const wire = getWireConfig({
         actorKey,
         presenceType,
         presenceKey
     })
 
-    // There is no placement if there is no wire.
+    // If there is no wire, return null.
     if (!wire) {
         return null
     }
 
-    // If there is a wire but no placement, set default as rear.
-    return wire.placement || REAR
+    // If there is a wire, return a boolean.
+    return wire.placedFront || false
 }

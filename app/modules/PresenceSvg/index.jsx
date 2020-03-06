@@ -9,7 +9,7 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from 'helpers/format'
-import { getWirePlacement } from '../../scene/sharedConfigs'
+import { getWirePlacedFront } from '../../scene/sharedConfigs'
 import { getSharedStyleForActor } from '../../scene/sharedConfigs/actors'
 import { getSharedStyleForThing } from '../../scene/sharedConfigs/things'
 import { getArrangementForPresence } from 'components/Presence/helper'
@@ -233,7 +233,7 @@ class PresenceSvg extends PureComponent {
             presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
             sharedStyle = this.getSharedStyle(),
             duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey,
-            wirePlacement = getWirePlacement({
+            placedFront = getWirePlacedFront({
                 actorKey,
                 presenceType,
                 presenceKey
@@ -268,8 +268,10 @@ class PresenceSvg extends PureComponent {
                     title: convertPresenceKeyToTitle(presenceKey),
                     preProcessor: this.preProcessSvg,
                     onLoad: this.postProcessSvg,
-                    ...Boolean(wirePlacement) && {
-                        siblingPlacement: wirePlacement,
+
+                    // If it's null, then there is no wire.
+                    ...typeof placedFront === 'boolean' && {
+                        siblingPlacedFront: placedFront,
                         siblingComponent: (
                             <Wires
                                 {...{

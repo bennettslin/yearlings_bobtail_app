@@ -5391,5 +5391,10 @@ export default [
         taskName: `Make tips hand pulsate.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Allow wires to render either behind or in front of svg.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
