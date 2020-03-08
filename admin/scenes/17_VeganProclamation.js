@@ -68,7 +68,6 @@ export default [
                     instance: GREETING
                 },
                 [NESTOR]: {
-                    faceRevision: true,
                     head: true,
                     eyebrow: true,
                     nose: true,

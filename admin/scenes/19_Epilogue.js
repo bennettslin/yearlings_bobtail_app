@@ -151,7 +151,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [NESTOR]: {
-                    faceRevision: true,
                     head: true,
                     eyebrow: true,
                     nose: true,

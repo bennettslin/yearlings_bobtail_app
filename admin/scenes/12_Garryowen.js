@@ -62,7 +62,6 @@ export default [
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
-                    faceRevision: true,
                     head: true,
                     eyebrow: true,
                     nose: true,
