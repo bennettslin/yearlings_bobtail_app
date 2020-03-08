@@ -58,6 +58,8 @@ import {
 } from 'constants/scene/actors'
 
 const LayersActor = ({
+    [FATHER]: father,
+    [MOTHER]: mother,
     [PRETEEN_BENNETT]: preteenBennett,
     [BENNETT]: bennett,
     [BENNETT_FATHER]: bennettFather,
@@ -72,8 +74,6 @@ const LayersActor = ({
     [YOUNG_BENNETT]: youngBennett,
     [ESTHER_MOTHER]: estherMother,
     [WILLY]: willy,
-    [FATHER]: father,
-    [MOTHER]: mother,
     [CHRISTOPHER]: christopher,
     [CHRISTOPHER_BENNETT]: christopherBennett,
     [CHRISTOPHER_BENNETT_WILLY]: christopherBennettWilly,
@@ -112,6 +112,8 @@ const LayersActor = ({
 
 }) => (
     <>
+        <Layer {...{ actorKey: FATHER, instanceKey: father }} />
+        <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
         <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />
         <Layer {...{ actorKey: BENNETT, instanceKey: bennett }} />
         <Layer {...{ actorKey: BENNETT_FATHER, instanceKey: bennettFather }} />
@@ -126,8 +128,6 @@ const LayersActor = ({
         <Layer {...{ actorKey: YOUNG_BENNETT, instanceKey: youngBennett }} />
         <Layer {...{ actorKey: ESTHER_MOTHER, instanceKey: estherMother }} />
         <Layer {...{ actorKey: WILLY, instanceKey: willy }} />
-        <Layer {...{ actorKey: FATHER, instanceKey: father }} />
-        <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
         <Layer {...{ actorKey: CHRISTOPHER, instanceKey: christopher }} />
         <Layer {...{ actorKey: CHRISTOPHER_BENNETT, instanceKey: christopherBennett }} />
         <Layer {...{ actorKey: CHRISTOPHER_BENNETT_WILLY, instanceKey: christopherBennettWilly }} />

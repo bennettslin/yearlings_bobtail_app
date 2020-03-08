@@ -3,16 +3,6 @@ export default [
      * Do once the presence svgs are mostly done.
      */
     {
-        taskName: `Determine wire configs for all bubbles, puppets, and hanging things like ghosts.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Allow wires to be both front and back, and reverse y coordinate so that lower is on top. Refactor where wire configs live. Add Array.isArray to lodash util.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Unique door, window, and furniture colours. Also colour furniture cubes.`,
         workedHours: 0,
         neededHours: 2

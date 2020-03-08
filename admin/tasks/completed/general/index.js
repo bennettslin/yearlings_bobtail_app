@@ -5396,5 +5396,10 @@ export default [
         taskName: `Allow wires to render either behind or in front of svg.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Determine wire configs for all bubbles, puppets, and hanging things like ghosts.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
