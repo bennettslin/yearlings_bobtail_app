@@ -25,7 +25,7 @@ const InlineSvg = ({
     ...rest
 }) => (
     <>
-        {!siblingPlacedFront && siblingComponent}
+
         <div
             {...{
                 className: cx(
@@ -45,6 +45,7 @@ const InlineSvg = ({
                 }}
             />
         </div>
+        {!siblingPlacedFront && siblingComponent}
         {siblingPlacedFront && siblingComponent}
     </>
 )
