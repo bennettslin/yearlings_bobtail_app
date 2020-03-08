@@ -42,7 +42,7 @@ const Wires = ({
     return Boolean(wires) && (
         <>
             {wires.map((config, index) => {
-                const { x = 0.5, y = 0.1 } = config,
+                const { x = 0.5, y = 0.2 } = config,
                     left =
                         adjustedLeft +
                         // 0.5 is centre.

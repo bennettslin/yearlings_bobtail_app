@@ -6,27 +6,21 @@ import {
 } from '../../../../constants/scene/things'
 
 import {
-    APART_SKETCH,
     BUBBLE_LARGE,
     BUBBLE_MEDIUM,
     BUBBLE_SMALL,
     CINEMA_THOUGHT_BUYING,
     CINEMA_THOUGHT_RECORDING,
-    DOGS_SKETCH,
-    ESCAPE_POD_SKETCH,
     ESTHER_SPEECH,
     GO_KART_THOUGHT,
     KHARI_ATTACK_SPEECH,
     LIZ_DEFENCE_SPEECH,
     LIZ_THOUGHT,
     PHARMACY_CEL,
-    SIBLING_CONSTELLATION,
     SKETCHBOOK,
-    TARPIT_CONSTELLATION,
     THOUGHT_LARGE,
     THOUGHT_MEDIUM,
     THOUGHT_SMALL,
-    TOGETHER_SKETCH,
     WAITING_THOUGHT_SINGING,
     WAITING_THOUGHT_STUDYING,
     WAITING_THOUGHT_WALKING
@@ -60,32 +54,33 @@ import {
     PUPPET_REATTA
 } from '../../../../constants/scene/things/puppets'
 
+const BUBBLE_DEFAULT = {
+    wires: [
+        { x: 0.25, y: 0.5 },
+        { x: 0.75, y: 0.5 }
+    ]
+}
+
 const WIRES_MAP = {
     [BUBBLE]: {
-        [APART_SKETCH]: {},
+        [ESTHER_SPEECH]: BUBBLE_DEFAULT,
+        [SKETCHBOOK]: BUBBLE_DEFAULT,
         [BUBBLE_LARGE]: {},
         [BUBBLE_MEDIUM]: {},
         [BUBBLE_SMALL]: {},
-        [CINEMA_THOUGHT_BUYING]: {},
-        [CINEMA_THOUGHT_RECORDING]: {},
-        [DOGS_SKETCH]: {},
-        [ESCAPE_POD_SKETCH]: {},
-        [ESTHER_SPEECH]: {},
-        [GO_KART_THOUGHT]: {},
-        [KHARI_ATTACK_SPEECH]: {},
-        [LIZ_DEFENCE_SPEECH]: {},
-        [LIZ_THOUGHT]: {},
-        [PHARMACY_CEL]: {},
-        [SIBLING_CONSTELLATION]: {},
-        [SKETCHBOOK]: {},
-        [TARPIT_CONSTELLATION]: {},
-        [THOUGHT_LARGE]: {},
-        [THOUGHT_MEDIUM]: {},
-        [THOUGHT_SMALL]: {},
-        [TOGETHER_SKETCH]: {},
-        [WAITING_THOUGHT_SINGING]: {},
-        [WAITING_THOUGHT_STUDYING]: {},
-        [WAITING_THOUGHT_WALKING]: {}
+        [CINEMA_THOUGHT_BUYING]: BUBBLE_DEFAULT,
+        [CINEMA_THOUGHT_RECORDING]: BUBBLE_DEFAULT,
+        [GO_KART_THOUGHT]: BUBBLE_DEFAULT,
+        [WAITING_THOUGHT_SINGING]: BUBBLE_DEFAULT,
+        [WAITING_THOUGHT_STUDYING]: BUBBLE_DEFAULT,
+        [WAITING_THOUGHT_WALKING]: BUBBLE_DEFAULT,
+        [PHARMACY_CEL]: BUBBLE_DEFAULT,
+        [KHARI_ATTACK_SPEECH]: BUBBLE_DEFAULT,
+        [LIZ_DEFENCE_SPEECH]: BUBBLE_DEFAULT,
+        [LIZ_THOUGHT]: BUBBLE_DEFAULT,
+        [THOUGHT_LARGE]: BUBBLE_DEFAULT,
+        [THOUGHT_MEDIUM]: BUBBLE_DEFAULT,
+        [THOUGHT_SMALL]: BUBBLE_DEFAULT
     },
     [PUPPET]: {
         [PUPPET_ANITA_BEGIN]: { x: 0.55 },
@@ -105,7 +100,7 @@ const WIRES_MAP = {
         [PUPPET_MOTHER_END]: { x: 0.4 },
         [OPAL_COUCH]: {
             wires: [
-                { x: 0.37, y: 0.18 },
+                { x: 0.37, y: 0.58 },
                 { x: 0.62, y: 0.45 }
             ],
             placedFront: true
@@ -113,7 +108,7 @@ const WIRES_MAP = {
         [OPAL_GAZING]: {
             wires: [
                 { x: 0.27, y: 0.47 },
-                { x: 0.65, y: 0.1 }
+                { x: 0.65, y: 0.5 }
             ],
             placedFront: true
         },
@@ -140,7 +135,7 @@ const WIRES_MAP = {
         [GHOST_ODIN_CAMPUS]: {
             wires: [
                 { x: 0.54, y: 0.37 },
-                { x: 0.85, y: 0.12 }
+                { x: 0.85, y: 0.52 }
             ],
             placedFront: true
         },
@@ -161,7 +156,7 @@ const WIRES_MAP = {
         [GHOST_ODIN_DEMONSTRATION]: {
             wires: [
                 { x: 0.54, y: 0.33 },
-                { x: 0.84, y: 0.11 }
+                { x: 0.84, y: 0.51 }
             ],
             placedFront: true
         },
