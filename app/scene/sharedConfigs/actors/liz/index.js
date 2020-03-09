@@ -22,11 +22,13 @@ import {
     EL_TORITO
 } from 'constants/scene/actors/songs'
 
+import { GO_KART__SHARED } from '../../../sharedStyles/wardrobe'
+
 export default {
     [DATE_ENDING]: null,
     [MUSEUM]: null,
     [BACKSTAGE]: null,
-    [GO_KARTS]: null,
+    [GO_KARTS]: GO_KART__SHARED,
     [DATE_ENDED]: null,
     [DISHROOM_LANCET]: null,
     [GATE_CODE]: null,

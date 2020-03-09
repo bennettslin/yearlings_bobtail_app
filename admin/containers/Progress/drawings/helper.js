@@ -6,8 +6,7 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 5.75,
-    HEAD_TIME = 0.25,
+    BASELINE_TIME = 6,
     EYEBROW_TIME = 0.04,
     NOSE_TIME = 0.06,
     MOUTH_TIME = 0.05,
@@ -21,7 +20,6 @@ const
     // This works out to 6.4 hours per drawing.
     TOTAL_TIME =
         BASELINE_TIME +
-        HEAD_TIME +
         EYEBROW_TIME +
         NOSE_TIME +
         MOUTH_TIME +
@@ -71,7 +69,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                         characterObject,
 
                 {
-                    head,
                     eyebrow,
                     nose,
                     mouth,
@@ -88,7 +85,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 songIndex,
                 sceneIndex,
                 character,
-                head,
                 eyebrow,
                 nose,
                 mouth,
@@ -128,7 +124,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             const {
                 songIndex,
                 sceneIndex,
-                head,
                 eyebrow,
                 nose,
                 mouth,
@@ -148,9 +143,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              */
             let workedHours = BASELINE_TIME
 
-            if (!head) {
-                workedHours += HEAD_TIME
-            }
             if (!eyebrow) {
                 workedHours += EYEBROW_TIME
             }
@@ -183,8 +175,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !head,
-                halfDoneForNow = !head
+            const doneForNow = !eyebrow && !nose,
+                halfDoneForNow = !eyebrow
 
             if (!doneForNow) {
                 rolesTodoCount++

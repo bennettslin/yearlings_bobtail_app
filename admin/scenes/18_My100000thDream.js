@@ -28,7 +28,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -52,7 +51,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -91,7 +89,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -115,7 +112,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -139,7 +135,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,

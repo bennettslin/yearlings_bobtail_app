@@ -44,7 +44,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -151,7 +150,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [NESTOR]: {
-                    head: true,
                     eyebrow: true,
                     nose: true,
                     mouth: true,

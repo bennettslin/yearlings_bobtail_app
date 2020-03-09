@@ -24,7 +24,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -45,7 +44,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -66,7 +64,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -87,7 +84,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -111,7 +107,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -135,7 +130,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
@@ -159,7 +153,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        head: true,
                         eyebrow: true,
                         nose: true,
                         mouth: true,
