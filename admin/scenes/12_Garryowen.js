@@ -33,7 +33,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        eyebrow: true,
                         nose: true,
                         mouth: true,
                         lips: true,
@@ -61,7 +60,6 @@ export default [
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
-                    eyebrow: true,
                     nose: true,
                     mouth: true,
                     lips: true,
@@ -83,7 +81,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        eyebrow: true,
                         nose: true,
                         mouth: true,
                         lips: true,
@@ -124,7 +121,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        eyebrow: true,
                         nose: true,
                         mouth: true,
                         lips: true,
