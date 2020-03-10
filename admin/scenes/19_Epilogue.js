@@ -149,11 +149,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [NESTOR]: {
-                    nose: true,
-                    mouth: true,
-                    lips: true,
-                    eyes: true,
-                    pupils: true,
                     headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
