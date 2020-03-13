@@ -44,7 +44,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        nose: true,
                         mouth: true,
                         lips: true,
                         eyes: true,

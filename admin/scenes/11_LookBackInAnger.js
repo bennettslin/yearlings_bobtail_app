@@ -107,7 +107,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        nose: true,
                         mouth: true,
                         lips: true,
                         eyes: true,
@@ -131,7 +130,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        nose: true,
                         mouth: true,
                         lips: true,
                         eyes: true,
