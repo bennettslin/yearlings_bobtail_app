@@ -9,9 +9,9 @@
 }
 
 .campanile {
-    .spireInner { fill: hsl(146, 17%, 45%); }
     .towerInner { fill: hsl(60, 9%, 82%); }
     .towerOuter { fill: hsl(60, 6%, 87%); }
+    .spireInner { fill: hsl(146, 17%, 45%); }
     .spireOuter { fill: hsl(146, 18%, 49%); }
     .window { fill: hsl(68, 6%, 25%); }
     .hourDisplayLine { stroke: hsl(66, 28%, 35%); }
@@ -142,10 +142,10 @@
 }
 
 .oaklandSchool {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
-    .clockSide { fill: hsl(86, 28%, 65%); }
-    .clockFront { fill: hsl(86, 38%, 73%); }
+    .wallFront { fill: hsl(12, 28%, 69%); }
+    .wallSide { fill: hsl(12, 19%, 60%); }
+    .clockSide { fill: hsl(60, 28%, 65%); }
+    .clockFront { fill: hsl(60, 38%, 73%); }
     .handDisplayLine { stroke: hsl(0, 0%, 53%); }
 }
 
@@ -190,21 +190,19 @@
 .royceHall {
     .roofDark { fill: hsl(66, 9%, 43%); }
     .roofLight { fill: hsl(60, 9%, 49%); }
-    .brickDark { fill: hsl(13, 38%, 51%); }
-    .brickLight { fill: hsl(13, 49%, 57%); }
+    .brickDarkest { fill: hsl(25, 37%, 38%); }
+    .brickDarker { fill: hsl(25, 37%, 45%); }
+    .brickDark { fill: hsl(25, 38%, 51%); }
+    .brickLight { fill: hsl(25, 49%, 57%); }
+    .wallInner { fill: hsl(66, 9%, 41%); }
     .wallFront { fill: hsl(62, 15%, 62%); }
     .trimDark { fill: hsl(65, 11%, 55%); }
     .trimLight { fill: hsl(64, 18%, 67%); }
-    .brickDarker { fill: hsl(13, 37%, 45%); }
-    .brickDarkest { fill: hsl(13, 37%, 38%); }
     .slit { fill: hsl(47, 7%, 26%); }
-    .wallInner { fill: hsl(66, 9%, 41%); }
     .doorFrame { fill: hsl(64, 9%, 35%); }
     .door { fill: hsl(37, 15%, 30%); }
     .windowOuter { fill: hsl(194, 23%, 58%); }
-    .windowOuterDisplayLine { stroke: hsl(231, 21%, 30%); }
     .windowInner { fill: hsl(195, 17%, 50%); }
-    .windowInnerDisplayLine { stroke: hsl(231, 21%, 20%); }
     .stepFront { fill: hsl(226, 14%, 51%); }
     .stepSide { fill: hsl(226, 13%, 43%); }
     .trimOrnamentInner { fill: hsl(65, 9%, 52%); }
@@ -225,40 +223,40 @@
     .foundationRear { fill: hsl(316, 6%, 41%); }
     .foundationMiddle { fill: hsl(316, 6%, 45%); }
     .foundationFront { fill: hsl(316, 6%, 49%); }
-    .trimRear { fill: hsl(75, 20%, 60%); }
-    .doorRear { fill: hsl(42, 19%, 44%); }
     .roofTopRear { fill: hsl(147, 8%, 28%); }
-    .wallRear { fill: hsl(320, 25%, 61%); }
-    .wallMiddleDark { fill: hsl(320, 25%, 65%); }
-    .wallMiddleLight { fill: hsl(320, 25%, 69%); }
-    .wallFront { fill: hsl(320, 25%, 73%); }
-    .trimMiddleDark { fill: hsl(74, 21%, 61%); }
-    .trimMiddle { fill: hsl(74, 34%, 71%); }
-    .trimMiddleLight { fill: hsl(74, 61%, 82%); }
+    .wallRear { fill: hsl(24, 25%, 51%); }
+    .wallMiddleDark { fill: hsl(24, 25%, 55%); }
+    .wallMiddleLight { fill: hsl(24, 25%, 59%); }
+    .wallFront { fill: hsl(24, 25%, 63%); }
     .window { fill: hsl(202, 39%, 62%); }
     .slit { fill: hsl(80, 2%, 32%); }
     .roofSide { fill: hsl(150, 7%, 33%); }
     .roofTop { fill: hsl(150, 7%, 37%); }
     .cross { fill: hsl(40, 35%, 54%); }
     .ball { fill: hsl(41, 43%, 59%); }
-    .trimBeam { fill: hsl(35, 12%, 72%); }
-    .beam { fill: hsl(33, 24%, 84%); }
-    .trimFrontLight { fill: hsl(73, 28%, 74%); }
-    .marbleLight { fill: hsl(48, 24%, 84%); }
-    .trimFrontDark { fill: hsl(74, 14%, 59%); }
-    .marbleDark { fill: hsl(48, 8%, 65%); }
-    .trimFrontDarkest { fill: hsl(74, 10%, 51%); }
-    .frame { fill: hsl(56, 100%, 95%); }
+    .beam { fill: hsl(33, 24%, 64%); }
+    .marbleDark { fill: hsl(48, 8%, 59%); }
+    .marbleLight { fill: hsl(48, 24%, 64%); }
+    .trimBeam { fill: hsl(35, 12%, 62%); }
+    .trimRear { fill: hsl(75, 20%, 50%); }
+    .trimFrontDarkest { fill: hsl(74, 19%, 49%); }
+    .trimFrontDark { fill: hsl(74, 19%, 57%); }
+    .trimFrontLight { fill: hsl(73, 19%, 64%); }
+    .trimMiddleDark { fill: hsl(74, 14%, 51%); }
+    .trimMiddle { fill: hsl(74, 14%, 61%); }
+    .trimMiddleLight { fill: hsl(74, 14%, 72%); }
+    .frame { fill: hsl(56, 100%, 85%); }
     .stainedGlass { fill: hsl(224, 70%, 69%); }
     .door { fill: hsl(42, 19%, 47%); }
-    .stepFront { fill: hsl(233, 26%, 49%); }
+    .doorRear { fill: hsl(42, 19%, 44%); }
+    .stepFront { fill: hsl(233, 16%, 69%); }
     .lamp { fill: hsl(67, 58%, 78%); }
     .lampholder { fill: hsl(30, 8%, 23%); }
     .stJosephRear { fill: hsl(60, 6%, 66%); }
+    .stJosephFront { fill: hsl(65, 8%, 70%); }
     .robe { fill: hsl(47, 17%, 31%); }
     .scroll { fill: hsl(60, 3%, 46%); }
     .book { fill: hsl(60, 3%, 41%); }
-    .stJosephFront { fill: hsl(65, 8%, 70%); }
 }
 
 .tennisCourt {

@@ -5,17 +5,19 @@ dryingTears, bring Stephanie's right arm up.
 # Houses to colour
 
 ## Flats
-Berkeley buildings (tall and wide)
-Commercial buildings (16)
 Driving houses (left and right)
 El Cerrito near (3)
 Family house
 Noho houses (left and right)
 Oakland houses (left and right)
-Oakland school
 Public houses (near and far)
 Residential houses (6)
-Royce Hall
+
+# Buildings to colour
+<!-- Berkeley buildings (tall and wide) -->
+Commercial buildings (16)
+<!-- Oakland school -->
+<!-- Royce Hall -->
 School bungalow
 St Josephs Church
 St Josephs Annex
