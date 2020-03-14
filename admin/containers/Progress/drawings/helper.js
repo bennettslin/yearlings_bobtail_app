@@ -6,12 +6,9 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 6.04,
-    NOSE_TIME = 0.06,
+    BASELINE_TIME = 6.25,
     MOUTH_TIME = 0.05,
     LIPS_TIME = 0.05,
-    EYES_TIME = 0.1,
-    PUPILS_TIME = 0.05,
     HEAD_INSPECTION_TIME = 0.05,
     HEAD_PLACEMENT_TIME = 0.1,
     FINAL_SVG_TIME = 0.15,
@@ -19,11 +16,8 @@ const
     // This works out to 6.4 hours per drawing.
     TOTAL_TIME =
         BASELINE_TIME +
-        NOSE_TIME +
         MOUTH_TIME +
         LIPS_TIME +
-        EYES_TIME +
-        PUPILS_TIME +
         HEAD_INSPECTION_TIME +
         HEAD_PLACEMENT_TIME +
         FINAL_SVG_TIME
@@ -67,11 +61,8 @@ export const initialiseDrawings = (drawings, songIndex) => {
                         characterObject,
 
                 {
-                    nose,
                     mouth,
                     lips,
-                    eyes,
-                    pupils,
                     headInspection,
                     headPlacement,
                     finalSvg,
@@ -82,11 +73,8 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 songIndex,
                 sceneIndex,
                 character,
-                nose,
                 mouth,
                 lips,
-                eyes,
-                pupils,
                 headInspection,
                 headPlacement,
                 finalSvg,
@@ -120,11 +108,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             const {
                 songIndex,
                 sceneIndex,
-                nose,
                 mouth,
                 lips,
-                eyes,
-                pupils,
                 headInspection,
                 headPlacement,
                 finalSvg,
@@ -138,20 +123,11 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              */
             let workedHours = BASELINE_TIME
 
-            if (!nose) {
-                workedHours += NOSE_TIME
-            }
             if (!mouth) {
                 workedHours += MOUTH_TIME
             }
             if (!lips) {
                 workedHours += LIPS_TIME
-            }
-            if (!eyes) {
-                workedHours += EYES_TIME
-            }
-            if (!pupils) {
-                workedHours += PUPILS_TIME
             }
             if (!headInspection) {
                 workedHours += HEAD_INSPECTION_TIME
@@ -167,8 +143,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !nose && !mouth,
-                halfDoneForNow = !nose
+            const doneForNow = !lips && !mouth,
+                halfDoneForNow = !lips
 
             if (!doneForNow) {
                 rolesTodoCount++

@@ -26,8 +26,6 @@ export default [
                     sita: {
                         mouth: true,
                         lips: true,
-                        eyes: true,
-                        pupils: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -44,8 +42,6 @@ export default [
                     sita: {
                         mouth: true,
                         lips: true,
-                        eyes: true,
-                        pupils: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -62,8 +58,6 @@ export default [
                     sita: {
                         mouth: true,
                         lips: true,
-                        eyes: true,
-                        pupils: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -80,8 +74,6 @@ export default [
                     sita: {
                         mouth: true,
                         lips: true,
-                        eyes: true,
-                        pupils: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -101,8 +93,6 @@ export default [
                     sita: {
                         mouth: true,
                         lips: true,
-                        eyes: true,
-                        pupils: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -122,8 +112,6 @@ export default [
                     sita: {
                         mouth: true,
                         lips: true,
-                        eyes: true,
-                        pupils: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -143,8 +131,6 @@ export default [
                     sita: {
                         mouth: true,
                         lips: true,
-                        eyes: true,
-                        pupils: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
