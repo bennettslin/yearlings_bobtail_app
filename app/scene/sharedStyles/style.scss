@@ -25,6 +25,10 @@ $suffix: __shared;
     stroke: hsla(0, 5%, 20%, 0.6);
 }
 
+.cheekLine {
+    stroke: hsla(0, 5%, 20%, 0.4);
+}
+
 .eyeCornerLine,
 [class$=CreaseLine] {
     stroke-width: 0.5px;

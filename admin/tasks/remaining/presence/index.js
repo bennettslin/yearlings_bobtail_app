@@ -39,8 +39,8 @@ export default [
     },
     {
         taskName: `Different colours for houses and buildings.`,
-        workedHours: 0,
-        neededHours: 2
+        workedHours: 2,
+        neededHours: 4
     },
     {
         taskName: `Ocean waves panel.`,
