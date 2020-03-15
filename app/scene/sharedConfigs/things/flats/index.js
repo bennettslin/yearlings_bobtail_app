@@ -66,6 +66,7 @@ import {
     OAKLAND_HOUSE_RIGHT__SHARED,
     TAIWAN_HOUSE__SHARED
 } from '../../../sharedStyles/buildings'
+import { BULB__SHARED } from '../../../sharedStyles/household'
 import {
     CHECKER_FLAG__SHARED,
     FOLIAGE__SHARED,
@@ -231,7 +232,10 @@ export default {
         HOUSE__SHARED
     ],
     [ST_JOSEPHS_ANNEX]: HOUSE__SHARED,
-    [ST_JOSEPHS_CHURCH]: FOLIAGE__SHARED,
+    [ST_JOSEPHS_CHURCH]: [
+        BULB__SHARED,
+        FOLIAGE__SHARED
+    ],
     [TAIWAN_HOUSES_CENTRE]: TAIWAN_HOUSE__SHARED,
     [TAIWAN_HOUSE_FAR]: TAIWAN_HOUSE__SHARED,
     [TAIWAN_HOUSE_NEAR]: TAIWAN_HOUSE__SHARED,

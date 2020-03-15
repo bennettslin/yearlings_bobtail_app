@@ -18,9 +18,9 @@ Residential houses (6)
 Commercial buildings (16)
 <!-- Oakland school -->
 <!-- Royce Hall -->
-School bungalow
-St Josephs Church
-St Josephs Annex
+<!-- School bungalow -->
+<!-- St Josephs Church -->
+<!-- St Josephs Annex -->
 
 # Taiwan houses to colour
 
