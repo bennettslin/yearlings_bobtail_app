@@ -44,8 +44,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        mouth: true,
-                        lips: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,

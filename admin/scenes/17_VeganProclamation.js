@@ -39,8 +39,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        mouth: true,
-                        lips: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -93,8 +91,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        mouth: true,
-                        lips: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
@@ -116,8 +112,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        mouth: true,
-                        lips: true,
                         headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
