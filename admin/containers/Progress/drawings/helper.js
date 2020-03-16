@@ -6,15 +6,13 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 6.35,
-    HEAD_INSPECTION_TIME = 0.05,
+    BASELINE_TIME = 6.4,
     HEAD_PLACEMENT_TIME = 0.1,
     FINAL_SVG_TIME = 0.15,
 
     // This works out to 6.4 hours per drawing.
     TOTAL_TIME =
         BASELINE_TIME +
-        HEAD_INSPECTION_TIME +
         HEAD_PLACEMENT_TIME +
         FINAL_SVG_TIME
 
@@ -57,7 +55,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                         characterObject,
 
                 {
-                    headInspection,
                     headPlacement,
                     finalSvg,
                     instance
@@ -67,7 +64,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 songIndex,
                 sceneIndex,
                 character,
-                headInspection,
                 headPlacement,
                 finalSvg,
                 instance
@@ -100,7 +96,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             const {
                 songIndex,
                 sceneIndex,
-                headInspection,
                 headPlacement,
                 finalSvg,
                 instance,
@@ -113,9 +108,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              */
             let workedHours = BASELINE_TIME
 
-            if (!headInspection) {
-                workedHours += HEAD_INSPECTION_TIME
-            }
             if (!headPlacement) {
                 workedHours += HEAD_PLACEMENT_TIME
             }
@@ -127,8 +119,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              * TODO: Keep modifying this conditional so that it reflects the
              * latest task.
              */
-            const doneForNow = !headInspection && !headPlacement,
-                halfDoneForNow = !headInspection
+            const doneForNow = !finalSvg && !headPlacement,
+                halfDoneForNow = !headPlacement
 
             if (!doneForNow) {
                 rolesTodoCount++

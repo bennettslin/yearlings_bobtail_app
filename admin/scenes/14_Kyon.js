@@ -24,7 +24,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: PETTING_SEATED
@@ -38,7 +37,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: PETTING_STANDING
@@ -52,7 +50,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: SIFTING_TCHOTCHKES
@@ -66,7 +63,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: OPENING_DOOR
@@ -83,7 +79,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: DEFENDING
@@ -100,7 +95,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: NOT_HUNGRY
@@ -117,7 +111,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: ASLEEP_COUCH

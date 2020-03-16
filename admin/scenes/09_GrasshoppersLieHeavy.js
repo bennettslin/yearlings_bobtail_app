@@ -44,7 +44,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: DISHROOM_LANCET
@@ -61,7 +60,6 @@ export default [
                 },
                 [NESTOR]: {
                     jogger: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: JOGGER
@@ -78,7 +76,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: GATE_CODE
@@ -95,7 +92,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: GINGERBREAD_PRISON
@@ -112,7 +108,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: RUMPLED_LINENS
@@ -138,7 +133,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: CHEEK_UNVEILED
@@ -157,7 +151,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: HARD_ON
@@ -178,7 +171,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: HARD_ON_REFLECTION
@@ -197,7 +189,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: MISSIONARY
@@ -218,7 +209,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: MISSIONARY_REFLECTION
@@ -237,7 +227,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: AFTERGLOW
@@ -258,7 +247,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: AFTERGLOW_REFLECTION

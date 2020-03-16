@@ -44,7 +44,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         realHeight: `4'9"`,
@@ -144,7 +143,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [NESTOR]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     realHeight: `5'7"`,

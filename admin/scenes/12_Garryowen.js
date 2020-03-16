@@ -33,7 +33,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: BRUSH_OFF
@@ -55,7 +54,6 @@ export default [
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     instance: INJURED
@@ -71,7 +69,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: CELIBATE_FREEZING
@@ -106,7 +103,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: LEAVING_CRUMBLED

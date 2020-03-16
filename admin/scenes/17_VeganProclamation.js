@@ -39,7 +39,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: PROTECTIVE_CONCERNED
@@ -61,7 +60,6 @@ export default [
                     instance: GREETING
                 },
                 [NESTOR]: {
-                    headInspection: true,
                     headPlacement: true,
                     finalSvg: true,
                     instance: GREETING
@@ -91,7 +89,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: CARESS
@@ -112,7 +109,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        headInspection: true,
                         headPlacement: true,
                         finalSvg: true,
                         instance: CARESS_REFLECTION
