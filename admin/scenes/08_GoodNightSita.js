@@ -24,8 +24,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: DATE_ENDING
                     }
                 }
@@ -40,8 +38,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: MUSEUM
                     }
                 }
@@ -56,8 +52,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: BACKSTAGE
                     }
                 },
@@ -80,8 +74,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GO_KARTS
                     }
                 }
@@ -96,8 +88,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: DATE_ENDED
                     }
                 }

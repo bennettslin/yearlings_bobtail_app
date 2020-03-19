@@ -22,6 +22,7 @@ import {
     EL_TORITO
 } from 'constants/scene/actors/songs'
 
+import { LIZ_LINENS__SHARED } from '../../../sharedStyles/furniture'
 import { GO_KART__SHARED } from '../../../sharedStyles/wardrobe'
 
 export default {
@@ -41,6 +42,6 @@ export default {
     [OPENING_DOOR]: null,
     [DEFENDING]: null,
     [NOT_HUNGRY]: null,
-    [ASLEEP_COUCH]: null,
+    [ASLEEP_COUCH]: LIZ_LINENS__SHARED,
     [EL_TORITO]: null
 }

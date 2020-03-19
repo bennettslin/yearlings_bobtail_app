@@ -44,8 +44,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         realHeight: `4'9"`,
                         instance: EPILOGUE
                     }

@@ -111,8 +111,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: ASLEEP_COUCH
                     }
                 }
