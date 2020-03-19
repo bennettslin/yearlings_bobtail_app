@@ -60,8 +60,6 @@ export default [
                 },
                 [NESTOR]: {
                     jogger: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: JOGGER
                     }
                 }

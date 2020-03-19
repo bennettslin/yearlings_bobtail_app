@@ -54,8 +54,6 @@ export default [
                     instance: CHUCKLING
                 },
                 [NESTOR]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: INJURED
                 }
             }

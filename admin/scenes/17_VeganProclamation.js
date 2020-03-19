@@ -60,8 +60,6 @@ export default [
                     instance: GREETING
                 },
                 [NESTOR]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: GREETING
                 }
             }

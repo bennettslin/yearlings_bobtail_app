@@ -143,8 +143,6 @@ export default [
                     instance: EPILOGUE
                 },
                 [NESTOR]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     realHeight: `5'7"`,
                     instance: EPILOGUE
                 }
