@@ -44,8 +44,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: DISHROOM_LANCET
                     }
                 }
@@ -74,8 +72,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GATE_CODE
                     }
                 }
@@ -106,8 +102,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: RUMPLED_LINENS
                     }
                 }
