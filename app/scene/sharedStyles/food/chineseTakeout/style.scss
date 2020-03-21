@@ -1,6 +1,10 @@
 .chineseTakeout#{$suffix} {
     .takeoutBag { fill: hsla(190, 37%, 87%, 0.5); }
+    .cartonDarker { fill: hsl(67, 16%, 78%); }
     .cartonDark { fill: hsl(66, 22%, 83%); }
     .cartonMedium { fill: hsl(66, 33%, 88%); }
+    .cartonLight { fill: hsl(66, 39%, 90%); }
     .chopstick { fill: hsl(38, 24%, 61%); }
+    .printDark { fill: hsl(13, 38%, 55%); }
+    .printLight { fill: hsl(12, 53%, 64%); }
 }

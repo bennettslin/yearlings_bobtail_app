@@ -22,6 +22,9 @@ import {
     EL_TORITO
 } from 'constants/scene/actors/songs'
 
+import { BENNETT } from 'constants/scene/actors'
+import { OPAL__SHARED } from '../../../sharedStyles/animals'
+import { CHINESE_TAKEOUT__SHARED } from '../../../sharedStyles/food'
 import { LIZ_LINENS__SHARED } from '../../../sharedStyles/furniture'
 import { GO_KART__SHARED } from '../../../sharedStyles/wardrobe'
 
@@ -36,12 +39,12 @@ export default {
     [RUMPLED_LINENS]: null,
     [ASLEEP_REACHING]: null,
     [LEAVING_CRUMBLED]: null,
-    [PETTING_SEATED]: null,
-    [PETTING_STANDING]: null,
-    [SIFTING_TCHOTCHKES]: null,
+    [PETTING_SEATED]: OPAL__SHARED,
+    [PETTING_STANDING]: OPAL__SHARED,
+    [SIFTING_TCHOTCHKES]: BENNETT,
     [OPENING_DOOR]: null,
-    [DEFENDING]: null,
-    [NOT_HUNGRY]: null,
+    [DEFENDING]: CHINESE_TAKEOUT__SHARED,
+    [NOT_HUNGRY]: CHINESE_TAKEOUT__SHARED,
     [ASLEEP_COUCH]: LIZ_LINENS__SHARED,
     [EL_TORITO]: null
 }

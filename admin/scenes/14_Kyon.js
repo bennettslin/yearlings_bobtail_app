@@ -24,8 +24,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: PETTING_SEATED
                     }
                 }
@@ -37,8 +35,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: PETTING_STANDING
                     }
                 }
@@ -50,8 +46,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: SIFTING_TCHOTCHKES
                     }
                 }
@@ -63,8 +57,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: OPENING_DOOR
                     }
                 },
@@ -79,8 +71,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: DEFENDING
                     }
                 },
@@ -95,8 +85,6 @@ export default [
             [ACTOR]: {
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: NOT_HUNGRY
                     }
                 },

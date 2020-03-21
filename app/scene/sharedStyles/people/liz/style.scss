@@ -12,6 +12,8 @@
     .lizPanties { fill: hsl(152, 32%, 66%); }
     .lizJeans { fill: hsl(225, 25%, 54%); }
     .lizJeansCuff { fill: hsl(225, 27%, 62%); }
+    .lizShortsInner { fill: hsl(225, 18%, 59%); }
+    .lizShorts { fill: hsl(226, 26%, 68%); }
     .lizSock { fill: hsl(186, 19%, 78%); }
     .lizShoe { fill: hsl(40, 18%, 48%); }
 
@@ -34,6 +36,13 @@
         .gown { fill: hsl(188, 24%, 67%); }
         .gownStrapDark { fill: hsl(188, 14%, 54%); }
         .gownStrap { fill: hsl(188, 19%, 62%); }
+    }
+
+    &.siftingTchotchkes {
+        .wishboneDark { fill: hsl(41, 22%, 48%); }
+        .wishboneLight { fill: hsl(40, 29%, 56%); }
+        .photoFrame { fill: hsl(180, 24%, 41%); }
+        .photoCel { fill: hsl(177, 39%, 79%); }
     }
 
     &.elTorito {

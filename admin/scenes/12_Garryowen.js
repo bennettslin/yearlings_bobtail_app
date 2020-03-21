@@ -101,8 +101,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: LEAVING_CRUMBLED
                     }
                 }
