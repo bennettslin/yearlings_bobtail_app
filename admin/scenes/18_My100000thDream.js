@@ -73,8 +73,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GETTING_DARK
                     }
                 }
@@ -89,8 +87,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CLIFF
                     }
                 }
@@ -105,8 +101,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: FINAL_DREAM
                     }
                 },
