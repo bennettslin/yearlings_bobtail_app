@@ -3,6 +3,7 @@ import {
     BACKDROP,
     CARDBOARD,
     FIXTURE,
+    FURNITURE,
     PANEL,
     DOOR
 } from '../../constants/scene/things'
@@ -79,6 +80,7 @@ import {
     RECORDING_BEERS,
     CRACKED_PICTURE
 } from '../../constants/scene/things/fixtures'
+import { BENNETT_PILLOW } from '../../constants/scene/things/furnitures'
 import {
     BASEMENT_FENCE,
     SNOWGLOBE__TETHERBALL,
@@ -110,6 +112,9 @@ export default [
             [DOOR]: {
                 [BASEMENT_DOOR]: true
             },
+            [FURNITURE]: {
+                [BENNETT_PILLOW]: true
+            },
             [PANEL]: {
                 [BASEMENT_FENCE]: true,
                 [BENNETT_BED]: true
@@ -140,6 +145,9 @@ export default [
             },
             [BACKDROP]: {
                 [OAKLAND_SIDE]: true
+            },
+            [FURNITURE]: {
+                [BENNETT_PILLOW]: true
             },
             [PANEL]: {
                 [BASEMENT_FENCE]: true,
@@ -302,6 +310,9 @@ export default [
             },
             [FIXTURE]: {
                 [CRACKED_PICTURE]: true
+            },
+            [FURNITURE]: {
+                [BENNETT_PILLOW]: true
             },
             [PANEL]: {
                 [BASEMENT_FENCE]: true,

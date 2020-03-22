@@ -26,11 +26,13 @@ export default {
     [MIRIAM_BENNETT]: {
         [ASLEEP]: {
             yIndex: 4,
-            xPosition: 8
+            xPosition: 7.25,
+            zOffset: -0.2
         },
         [ASLEEP_FEARFUL]: {
             yIndex: 4,
-            xPosition: 8
+            xPosition: 7.25,
+            zOffset: -0.2
         }
     }
 }
