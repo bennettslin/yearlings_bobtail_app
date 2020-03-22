@@ -1,5 +1,6 @@
 import {
     CUTOUT,
+    FURNITURE,
     PANEL
 } from '../../../constants/scene/things'
 import {
@@ -8,6 +9,7 @@ import {
     HOWIE_FRIDGE,
     TELEVISION
 } from '../../../constants/scene/things/cutouts'
+import { ATTIC_PILLOW } from '../../../constants/scene/things/furnitures'
 import {
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
@@ -35,6 +37,12 @@ export default {
             yIndex: 4,
             xPosition: 3.5,
             scaleFactor: 0.3
+        }
+    },
+    [FURNITURE]: {
+        [ATTIC_PILLOW]: {
+            yIndex: 2,
+            xPosition: 5
         }
     },
     [PANEL]: {

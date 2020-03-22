@@ -3,6 +3,7 @@ import {
     BUBBLE,
     FIXTURE,
     FLAT,
+    FURNITURE,
     PANEL
 } from '../../../constants/scene/things'
 import {
@@ -21,6 +22,7 @@ import {
 import { IV_DRIP } from '../../../constants/scene/things/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from '../../../constants/scene/things/fixtures'
 import { TENNIS_COURT } from '../../../constants/scene/things/flats'
+import { DEATHBED_PILLOW } from '../../../constants/scene/things/furnitures'
 import { HOSPITAL_BED } from '../../../constants/scene/things/panels'
 
 export default {
@@ -60,6 +62,12 @@ export default {
         [HOSPITAL_RECORD_PLAYER]: {
             yIndex: 1,
             xPosition: 6
+        }
+    },
+    [FURNITURE]: {
+        [DEATHBED_PILLOW]: {
+            yIndex: 3,
+            xPosition: 2
         }
     },
     [PANEL]: {

@@ -5,7 +5,6 @@ import cx from 'classnames'
 
 import AdminNavItem from './AdminNavItem'
 import ProgressFooter from '../ProgressFooter'
-import ProgressThing from '../ProgressThing'
 
 import { getSongsAndLoguesCount } from 'album/api/songs'
 import { getArrayOfLength } from 'helpers/general'
@@ -50,7 +49,6 @@ const AdminNav = ({
             <h2>progress</h2>
             <div className="row">
                 <ProgressFooter {...{ sumTask: sumAllTasks }} />
-                <ProgressThing />
                 <ProgressFooter
                     isV2
                     {...{ sumTask: sumAllTasksV2 }}

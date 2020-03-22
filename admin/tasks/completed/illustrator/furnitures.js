@@ -73,5 +73,10 @@ export default [
         taskName: `Blanket covering dead Bennett by Amy in Dream.`,
         workedHours: 1.5,
         neededHours: 1.5
+    },
+    {
+        taskName: 'Pillows * 12 (preteen Bennett * 3, Bennett * 3, Liz * 4, Miriam * 2).',
+        workedHours: 4,
+        neededHours: 4
     }
 ]

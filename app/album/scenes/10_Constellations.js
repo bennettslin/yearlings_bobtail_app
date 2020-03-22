@@ -9,6 +9,7 @@ import {
     CUTOUT,
     FIXTURE,
     FLAT,
+    FURNITURE,
     PANEL
 } from '../../constants/scene/things'
 import {
@@ -81,6 +82,7 @@ import {
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT
 } from '../../constants/scene/things/panels'
+import { ATTIC_PILLOW } from '../../constants/scene/things/furnitures'
 
 export default [
     {
@@ -282,6 +284,9 @@ export default [
                 [STORAGE_CHEST]: true,
                 [HOWIE_FRIDGE]: true,
                 [TELEVISION]: true
+            },
+            [FURNITURE]: {
+                [ATTIC_PILLOW]: true
             },
             [PANEL]: {
                 [ATTIC_COUCH]: true,

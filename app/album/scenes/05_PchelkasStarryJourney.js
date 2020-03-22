@@ -201,6 +201,9 @@ export default [
             [FLAT]: {
                 [BEDROOM_BUS]: true
             },
+            [FURNITURE]: {
+                [CAPTAIN_BED_PILLOW]: true
+            },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED]: true,
@@ -226,6 +229,9 @@ export default [
             [CARDBOARD]: {
                 [EARTH__ROCKET]: true,
                 [DOGS_ROCKET]: true
+            },
+            [FURNITURE]: {
+                [CAPTAIN_BED_PILLOW]: true
             },
             [PANEL]: {
                 [BEDROOM_FENCE]: true,

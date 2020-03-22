@@ -283,6 +283,9 @@ export default [
             [FLAT]: {
                 [BEDROOM_SIREN]: true
             },
+            [FURNITURE]: {
+                [CAPTAIN_BED_PILLOW]: true
+            },
             [PANEL]: {
                 [BEDROOM_DESK]: true,
                 [CAPTAIN_BED]: true,

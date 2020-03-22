@@ -5,6 +5,7 @@ import {
     CUTOUT,
     FIXTURE,
     FLAT,
+    FURNITURE,
     PANEL,
     PUPPET
 } from '../../constants/scene/things'
@@ -64,6 +65,7 @@ import {
     EL_CERRITO_NEAR,
     TENNIS_COURT
 } from '../../constants/scene/things/flats'
+import { DEATHBED_PILLOW } from '../../constants/scene/things/furnitures'
 import {
     REATTA_INTERIOR,
     REATTA_SEAT,
@@ -196,6 +198,9 @@ export default [
             [FIXTURE]: {
                 [HOSPITAL_RECORD_PLAYER]: true
             },
+            [FURNITURE]: {
+                [DEATHBED_PILLOW]: true
+            },
             [PANEL]: {
                 [HOSPITAL_BED]: true
             }
@@ -235,6 +240,9 @@ export default [
             },
             [FLAT]: {
                 [TENNIS_COURT]: true
+            },
+            [FURNITURE]: {
+                [DEATHBED_PILLOW]: true
             },
             [PANEL]: {
                 [HOSPITAL_BED]: true

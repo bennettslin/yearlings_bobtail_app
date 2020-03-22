@@ -1,13 +1,17 @@
-import captainBedPillow from 'assets/svgs/furnitures/captainBedPillow'
+import atticPillow from 'assets/svgs/furnitures/atticPillow'
 import bennettPillow from 'assets/svgs/furnitures/bennettPillow'
+import captainBedPillow from 'assets/svgs/furnitures/captainBedPillow'
+import deathbedPillow from 'assets/svgs/furnitures/deathbedPillow'
 import lizPillows from 'assets/svgs/furnitures/lizPillows'
 import lizPillowsReflection from 'assets/svgs/furnitures/lizPillowsReflection'
 import lizPillowsPile from 'assets/svgs/furnitures/lizPillowsPile'
 import lizPillowsPileReflection from 'assets/svgs/furnitures/lizPillowsPileReflection'
 
 import {
-    CAPTAIN_BED_PILLOW,
+    ATTIC_PILLOW,
     BENNETT_PILLOW,
+    CAPTAIN_BED_PILLOW,
+    DEATHBED_PILLOW,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
@@ -15,8 +19,10 @@ import {
 } from '../../../constants/scene/things/furnitures'
 
 export default {
-    [CAPTAIN_BED_PILLOW]: captainBedPillow,
+    [ATTIC_PILLOW]: atticPillow,
     [BENNETT_PILLOW]: bennettPillow,
+    [CAPTAIN_BED_PILLOW]: captainBedPillow,
+    [DEATHBED_PILLOW]: deathbedPillow,
     [LIZ_PILLOWS]: lizPillows,
     [LIZ_PILLOWS_REFLECTION]: lizPillowsReflection,
     [LIZ_PILLOWS_PILE]: lizPillowsPile,
