@@ -79,14 +79,10 @@ export default [
                     instance: BROKEN_HEARTED
                 },
                 [KHARI]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: CARESS
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CARESS
                     }
                 }
@@ -98,15 +94,11 @@ export default [
             [ACTOR]: {
                 [KHARI]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CARESS_REFLECTION
                     }
                 },
                 [LIZ]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CARESS_REFLECTION
                     }
                 }

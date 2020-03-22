@@ -25,8 +25,7 @@ export default {
     [KHARI_LIZ_REFLECTION]: {
         [CARESS_REFLECTION]: {
             yIndex: 2,
-            xPosition: 5,
-            zOffset: 0.5
+            xPosition: 5
         }
     }
 }

@@ -6,15 +6,10 @@ import { ACTOR } from 'constants/scene'
 
 const
     // The time spent thus far per drawing.
-    BASELINE_TIME = 6.4,
-    HEAD_PLACEMENT_TIME = 0.1,
-    FINAL_SVG_TIME = 0.15,
+    BASELINE_TIME = 6.65,
 
-    // This works out to 6.4 hours per drawing.
     TOTAL_TIME =
-        BASELINE_TIME +
-        HEAD_PLACEMENT_TIME +
-        FINAL_SVG_TIME
+        BASELINE_TIME
 
 export const initialiseDrawings = (drawings, songIndex) => {
 
@@ -55,8 +50,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                         characterObject,
 
                 {
-                    headPlacement,
-                    finalSvg,
                     instance
                 } = instanceName
 
@@ -64,8 +57,6 @@ export const initialiseDrawings = (drawings, songIndex) => {
                 songIndex,
                 sceneIndex,
                 character,
-                headPlacement,
-                finalSvg,
                 instance
             })
         }
@@ -96,8 +87,6 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             const {
                 songIndex,
                 sceneIndex,
-                headPlacement,
-                finalSvg,
                 instance,
                 character
             } = role
@@ -108,19 +97,8 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
              */
             let workedHours = BASELINE_TIME
 
-            if (!headPlacement) {
-                workedHours += HEAD_PLACEMENT_TIME
-            }
-            if (!finalSvg) {
-                workedHours += FINAL_SVG_TIME
-            }
-
-            /**
-             * TODO: Keep modifying this conditional so that it reflects the
-             * latest task.
-             */
-            const doneForNow = !finalSvg && !headPlacement,
-                halfDoneForNow = !headPlacement
+            const doneForNow = true,
+                halfDoneForNow = true
 
             if (!doneForNow) {
                 rolesTodoCount++
