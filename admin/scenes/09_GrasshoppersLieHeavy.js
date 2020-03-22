@@ -86,8 +86,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: GINGERBREAD_PRISON
                     }
                 }
@@ -125,8 +123,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CHEEK_UNVEILED
                     }
                 }
@@ -137,14 +133,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: HARD_ON
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: HARD_ON
                     }
                 }
@@ -156,15 +148,11 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: HARD_ON_REFLECTION
                     }
                 },
                 [LIZ]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: HARD_ON_REFLECTION
                     }
                 }
@@ -175,14 +163,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: MISSIONARY
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: MISSIONARY
                     }
                 }
@@ -194,15 +178,11 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: MISSIONARY_REFLECTION
                     }
                 },
                 [LIZ]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: MISSIONARY_REFLECTION
                     }
                 }
@@ -213,14 +193,10 @@ export default [
         presences: {
             [ACTOR]: {
                 [BENNETT]: {
-                    headPlacement: true,
-                    finalSvg: true,
                     instance: AFTERGLOW
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: AFTERGLOW
                     }
                 }
@@ -232,15 +208,11 @@ export default [
             [ACTOR]: {
                 [BENNETT]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: AFTERGLOW_REFLECTION
                     }
                 },
                 [LIZ]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: AFTERGLOW_REFLECTION
                     }
                 }

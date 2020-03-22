@@ -22,6 +22,7 @@ import {
 import {
     BACKPACK__SHARED,
     BRACELET__SHARED,
+    LIZ_CONDOM__SHARED,
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
     SARI__SHARED
@@ -33,7 +34,7 @@ export default {
         MESSENGER_BAG__SHARED
     ],
     [CHEEK_UNVEILED]: LIZ_PURSE__SHARED,
-    [HARD_ON]: null,
+    [HARD_ON]: LIZ_CONDOM__SHARED,
     [MISSIONARY]: null,
     [AFTERGLOW]: null,
     [BRUSH_OFF]: BRACELET__SHARED,

@@ -4,6 +4,7 @@ import {
     CUTOUT,
     DOOR,
     FIXTURE,
+    FURNITURE,
     PANEL
 } from '../../constants/scene/things'
 import {
@@ -72,6 +73,10 @@ import {
     BENNETT_SHOE,
     BENNETT_SHOE_REFLECTION
 } from '../../constants/scene/things/fixtures'
+import {
+    LIZ_PILLOWS,
+    LIZ_PILLOWS_REFLECTION
+} from '../../constants/scene/things/furnitures'
 import {
     CROWD_SIDE,
     LIZ_BED
@@ -233,6 +238,10 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true,
                 [BENNETT_SHOE]: true,
                 [BENNETT_SHOE_REFLECTION]: true
+            },
+            [FURNITURE]: {
+                [LIZ_PILLOWS]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true

@@ -37,7 +37,7 @@ export default {
     [DISHROOM_LANCET]: null,
     [GATE_CODE]: null,
     [RUMPLED_LINENS]: null,
-    [ASLEEP_REACHING]: null,
+    [ASLEEP_REACHING]: LIZ_LINENS__SHARED,
     [LEAVING_CRUMBLED]: null,
     [PETTING_SEATED]: OPAL__SHARED,
     [PETTING_STANDING]: OPAL__SHARED,

@@ -107,8 +107,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: ASLEEP_REACHING
                     }
                 }
@@ -125,8 +123,6 @@ export default [
                 },
                 [LIZ]: {
                     reflection: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: REACHING_REFLECTION
                     }
                 }

@@ -65,8 +65,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: CELIBATE_FREEZING
                     }
                 }

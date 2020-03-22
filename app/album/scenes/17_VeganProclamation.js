@@ -5,6 +5,7 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
+    FURNITURE,
     PANEL,
     PUPPET
 } from '../../constants/scene/things'
@@ -80,6 +81,10 @@ import {
     BERKELEY_BUILDING_WIDE__BANCROFT,
     BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../constants/scene/things/flats'
+import {
+    LIZ_PILLOWS,
+    LIZ_PILLOWS_REFLECTION
+} from '../../constants/scene/things/furnitures'
 import {
     CROWD_BACK,
     LIZ_BED,
@@ -213,6 +218,10 @@ export default [
             [FIXTURE]: {
                 [LIZ_PHONE_BASE]: true,
                 [LIZ_PHONE_BASE_REFLECTION]: true
+            },
+            [FURNITURE]: {
+                [LIZ_PILLOWS]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true,

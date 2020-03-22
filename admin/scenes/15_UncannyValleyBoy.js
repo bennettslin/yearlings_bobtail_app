@@ -120,8 +120,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: JOKING_LAUGHING
                     }
                 }

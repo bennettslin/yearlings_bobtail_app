@@ -13,6 +13,8 @@ import {
     USED_CONDOM_LIZ
 } from '../../../constants/scene/things/fixtures'
 import {
+    LIZ_PILLOWS,
+    LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION
 } from '../../../constants/scene/things/furnitures'
@@ -38,6 +40,16 @@ export default {
         }
     },
     [FURNITURE]: {
+        [LIZ_PILLOWS]: {
+            yIndex: 5,
+            xPosition: 5,
+            zOffset: 1.55
+        },
+        [LIZ_PILLOWS_REFLECTION]: {
+            yIndex: 2,
+            xPosition: 5,
+            zOffset: 4.65
+        },
         [LIZ_PILLOWS_PILE]: {
             yIndex: 5,
             xPosition: 9

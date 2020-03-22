@@ -39,8 +39,6 @@ export default [
                 },
                 [LIZ]: {
                     sita: {
-                        headPlacement: true,
-                        finalSvg: true,
                         instance: PROTECTIVE_CONCERNED
                     }
                 }

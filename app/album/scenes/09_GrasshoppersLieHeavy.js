@@ -127,6 +127,8 @@ import {
 } from '../../constants/scene/things/flats'
 import {
     BENNETT_PILLOW,
+    LIZ_PILLOWS,
+    LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION
 } from '../../constants/scene/things/furnitures'
@@ -511,8 +513,8 @@ export default [
                 [LIZ_PHONE_REFLECTION]: true
             },
             [FURNITURE]: {
-                [LIZ_PILLOWS_PILE]: true,
-                [LIZ_PILLOWS_PILE_REFLECTION]: true
+                [LIZ_PILLOWS]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true
@@ -572,6 +574,10 @@ export default [
                 [LIZ_PHONE]: true,
                 [LIZ_PHONE_REFLECTION]: true,
                 [USED_CONDOM_LIZ]: true
+            },
+            [FURNITURE]: {
+                [LIZ_PILLOWS]: true,
+                [LIZ_PILLOWS_REFLECTION]: true
             },
             [PANEL]: {
                 [LIZ_BED]: true
