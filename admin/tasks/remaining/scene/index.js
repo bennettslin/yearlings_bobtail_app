@@ -18,8 +18,8 @@ export default [
     {
         taskName: 'logue',
         notes: ``,
-        workedHours: 0,
-        neededHours: 1
+        workedHours: 2,
+        neededHours: 2
     },
     {
         taskName: 'nohoHouses',

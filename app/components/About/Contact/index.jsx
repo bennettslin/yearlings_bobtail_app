@@ -5,7 +5,7 @@ import { BENNETT_EMAIL } from '../../../constants/website'
 
 const AboutContact = () => (
     <>
-        {'If you have an offer or opportunity that might interest me, please email '}
+        {'If you have an offer or opportunity that might intrigue me, please email '}
         <span
             {...{
                 className: cx(

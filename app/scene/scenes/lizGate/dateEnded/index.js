@@ -14,8 +14,7 @@ export default {
     [LIZ]: {
         [DATE_ENDED]: {
             yIndex: 3,
-            xPosition: 3,
-            zOffset: 2.5
+            xPosition: 3
         }
     }
 }
