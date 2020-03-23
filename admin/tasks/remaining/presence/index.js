@@ -39,7 +39,7 @@ export default [
     },
     {
         taskName: `Different colours for houses and buildings.`,
-        workedHours: 2,
+        workedHours: 3,
         neededHours: 4
     },
     {

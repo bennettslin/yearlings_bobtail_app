@@ -10,7 +10,7 @@ dryingTears, bring Stephanie's right arm up.
 Taiwan stairs
 
 ## Flats
-Rickshaw town (5)
+Taiwan mountains bridged
 Taiwan houses (near and far)
 Taiwan houses centre (5)
-Taiwan mountains bridged
+Rickshaw town (5)
