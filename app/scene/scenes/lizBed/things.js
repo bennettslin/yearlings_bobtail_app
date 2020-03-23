@@ -10,7 +10,10 @@ import {
     BENNETT_SHOE_REFLECTION,
     LIZ_PHONE_BASE,
     LIZ_PHONE_BASE_REFLECTION,
-    USED_CONDOM_LIZ
+    CONDOM_WRAPPER_LIZ,
+    CONDOM_WRAPPER_REFLECTION,
+    USED_CONDOM_LIZ,
+    USED_CONDOM_REFLECTION
 } from '../../../constants/scene/things/fixtures'
 import {
     LIZ_PILLOWS,
@@ -34,9 +37,23 @@ export default {
             xPosition: 2,
             zOffset: 6.5
         },
+        [CONDOM_WRAPPER_LIZ]: {
+            yIndex: 5,
+            xPosition: 8.5
+        },
+        [CONDOM_WRAPPER_REFLECTION]: {
+            yIndex: 1,
+            xPosition: 8.5,
+            zOffset: 6.5
+        },
         [USED_CONDOM_LIZ]: {
-            yIndex: 4,
-            xPosition: 9
+            yIndex: 3,
+            xPosition: 8
+        },
+        [USED_CONDOM_REFLECTION]: {
+            yIndex: 1,
+            xPosition: 8,
+            zOffset: 3.5
         }
     },
     [FURNITURE]: {
@@ -51,13 +68,13 @@ export default {
             zOffset: 4.65
         },
         [LIZ_PILLOWS_PILE]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 9
         },
         [LIZ_PILLOWS_PILE_REFLECTION]: {
-            yIndex: 2,
+            yIndex: 1,
             xPosition: 9,
-            zOffset: 5.5
+            zOffset: 4
         }
     },
     [PANEL]: {

@@ -2,9 +2,6 @@ smoker, make her left calf higher.
 gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
-# Need
-Condom reflection, separate condom wrapper to its own fixture, and add to Cremated.
-
 # Houses to colour
 
 ## Flats

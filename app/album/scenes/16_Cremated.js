@@ -58,6 +58,7 @@ import {
 import {
     HOSPITAL_RECORD_PLAYER,
     FREEWAY_SIGN,
+    CONDOM_WRAPPER_MIRIAM,
     USED_CONDOM_MIRIAM
 } from '../../constants/scene/things/fixtures'
 import {
@@ -129,6 +130,7 @@ export default [
                 [EL_CERRITO_TREE]: true
             },
             [FIXTURE]: {
+                [CONDOM_WRAPPER_MIRIAM]: true,
                 [FREEWAY_SIGN]: true
             },
             [FLAT]: {
@@ -161,6 +163,7 @@ export default [
                 [EL_CERRITO_TREE]: true
             },
             [FIXTURE]: {
+                [CONDOM_WRAPPER_MIRIAM]: true,
                 [FREEWAY_SIGN]: true
             },
             [FLAT]: {
@@ -272,6 +275,7 @@ export default [
                 [EL_CERRITO_TREE]: true
             },
             [FIXTURE]: {
+                [CONDOM_WRAPPER_MIRIAM]: true,
                 [FREEWAY_SIGN]: true
             },
             [FLAT]: {
@@ -299,6 +303,7 @@ export default [
             },
             [FIXTURE]: {
                 [FREEWAY_SIGN]: true,
+                [CONDOM_WRAPPER_MIRIAM]: true,
                 [USED_CONDOM_MIRIAM]: true
             },
             [FLAT]: {

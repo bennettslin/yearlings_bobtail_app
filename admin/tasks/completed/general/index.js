@@ -5401,5 +5401,10 @@ export default [
         taskName: `Determine wire configs for all bubbles, puppets, and hanging things like ghosts.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Separate condom fixtures.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

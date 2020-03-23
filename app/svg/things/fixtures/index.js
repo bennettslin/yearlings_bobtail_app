@@ -32,7 +32,10 @@ import lingerieDrawing from 'assets/svgs/fixtures/lingerieDrawing'
 import vaseline from 'assets/svgs/fixtures/vaseline'
 import lizPhone from 'assets/svgs/fixtures/lizPhone'
 import lizPhoneReflection from 'assets/svgs/fixtures/lizPhoneReflection'
+import condomWrapper from 'assets/svgs/fixtures/condomWrapper'
+import condomWrapperReflection from 'assets/svgs/fixtures/condomWrapperReflection'
 import usedCondom from 'assets/svgs/fixtures/usedCondom'
+import usedCondomReflection from 'assets/svgs/fixtures/usedCondomReflection'
 import evianBottles from 'assets/svgs/fixtures/evianBottles'
 import stageMic from 'assets/svgs/fixtures/stageMic'
 import kickDrum from 'assets/svgs/fixtures/kickDrum'
@@ -88,7 +91,10 @@ import {
     VASELINE,
     LIZ_PHONE,
     LIZ_PHONE_REFLECTION,
+    CONDOM_WRAPPER_LIZ,
+    CONDOM_WRAPPER_REFLECTION,
     USED_CONDOM_LIZ,
+    USED_CONDOM_REFLECTION,
     EVIAN_BOTTLES,
     STAGE_MIC__CROWD,
     STAGE_MIC__STAGE,
@@ -104,6 +110,7 @@ import {
     RECORDING_BEERS,
     CRACKED_PICTURE,
     FREEWAY_SIGN,
+    CONDOM_WRAPPER_MIRIAM,
     USED_CONDOM_MIRIAM,
     BALLED_FOIL__ALLEY,
     LIZ_PHONE_BASE,
@@ -151,7 +158,10 @@ export default {
     [VASELINE]: vaseline,
     [LIZ_PHONE]: lizPhone,
     [LIZ_PHONE_REFLECTION]: lizPhoneReflection,
+    [CONDOM_WRAPPER_LIZ]: condomWrapper,
+    [CONDOM_WRAPPER_REFLECTION]: condomWrapperReflection,
     [USED_CONDOM_LIZ]: usedCondom,
+    [USED_CONDOM_REFLECTION]: usedCondomReflection,
     [EVIAN_BOTTLES]: evianBottles,
     [KICK_DRUM]: kickDrum,
     [DRUM_THRONE]: drumThrone,
@@ -165,6 +175,7 @@ export default {
     [RECORDING_BEERS]: recordingBeers,
     [CRACKED_PICTURE]: crackedPicture,
     [FREEWAY_SIGN]: freewaySign,
+    [CONDOM_WRAPPER_MIRIAM]: condomWrapper,
     [USED_CONDOM_MIRIAM]: usedCondom,
     [BALLED_FOIL__ALLEY]: balledFoil,
     [LIZ_PHONE_BASE]: lizPhoneBase,
