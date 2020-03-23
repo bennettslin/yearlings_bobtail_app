@@ -1,9 +1,9 @@
 .oaklandHouseLeft#{$suffix} {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(30, 19%, 50%); }
+    .wallFront { fill: hsl(30, 25%, 56%); }
 }
 
 .oaklandHouseRight#{$suffix} {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(210, 19%, 50%); }
+    .wallFront { fill: hsl(210, 25%, 56%); }
 }

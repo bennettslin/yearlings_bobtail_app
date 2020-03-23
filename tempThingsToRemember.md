@@ -4,24 +4,6 @@ dryingTears, bring Stephanie's right arm up.
 
 # Houses to colour
 
-## Flats
-<!-- Driving houses (left and right) -->
-El Cerrito near (3)
-Family house
-Noho houses (left and right)
-Oakland houses (left and right)
-Public houses (near and far)
-Residential houses (6)
-
-# Buildings to colour
-<!-- Berkeley buildings (tall and wide) -->
-<!-- Commercial buildings (16) -->
-<!-- Oakland school -->
-<!-- Royce Hall -->
-<!-- School bungalow -->
-<!-- St Josephs Church -->
-<!-- St Josephs Annex -->
-
 # Taiwan houses to colour
 
 ## Backdrops

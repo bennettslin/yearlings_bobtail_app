@@ -37,11 +37,11 @@
     .shutter { fill: hsl(223, 13%, 51%); }
 }
 
-.commercialMiddleLeft {
-    .signOuter { fill: hsl(244, 28%, 38%); }
-    .signInner { fill: hsl(245, 56%, 87%); }
-    .letterLarge { fill: hsl(244, 59%, 68%); }
-    .letterDisplayLine { stroke: hsl(280, 14%, 34%); }
+.commercialNearLeft {
+    .signOuter { fill: hsl(180, 18%, 42%); }
+    .signInner { fill: hsl(180, 26%, 80%); }
+    .letterLarge { fill: hsl(180, 29%, 58%); }
+    .letterDisplayLine { stroke: hsl(180, 14%, 44%); }
 }
 
 .elCerritoFar {
@@ -51,17 +51,8 @@
     .antennaRoof { fill: hsl(90, 5%, 91%); }
 }
 
-.elCerritoNear {
-    .houseLeftSide { fill: hsl(209, 10%, 55%); }
-    .houseLeftFront { fill: hsl(202, 5%, 46%); }
-    .houseCentre { fill: hsl(60, 15%, 61%); }
-    .houseRightFront { fill: hsl(295, 5%, 47%); }
-    .houseRightSide { fill: hsl(297, 9%, 56%); }
-
-}
-
 .familyHouse {
-    .wallFront { fill: hsl(68, 100%, 83%); }
+    .wallFront { fill: hsl(60, 46%, 65%); }
 }
 
 .ferrisWheel {
@@ -87,12 +78,12 @@
 }
 
 .nohoHouseLeft {
-    .wallFront { fill: hsl(234, 36%, 70%); }
+    .wallFront { fill: hsl(240, 20%, 75%); }
 }
 
 .nohoHouseRight {
-    .wallSide { fill: hsl(104, 36%, 61%); }
-    .wallFront { fill: hsl(104, 36%, 66%); }
+    .wallSide { fill: hsl(330, 20%, 66%); }
+    .wallFront { fill: hsl(330, 20%, 71%); }
 }
 
 .oaklandFlag {
@@ -103,41 +94,41 @@
 }
 
 .oaklandSchool {
-    .wallFront { fill: hsl(12, 28%, 69%); }
-    .wallSide { fill: hsl(12, 19%, 60%); }
+    .wallSide { fill: hsl(0, 19%, 60%); }
+    .wallFront { fill: hsl(0, 25%, 69%); }
     .clockSide { fill: hsl(60, 28%, 65%); }
     .clockFront { fill: hsl(60, 38%, 73%); }
     .handDisplayLine { stroke: hsl(0, 0%, 53%); }
 }
 
 .publicFar {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(300, 19%, 60%); }
+    .wallFront { fill: hsl(300, 25%, 69%); }
 }
 
 .publicNear {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(150, 19%, 60%); }
+    .wallFront { fill: hsl(150, 25%, 69%); }
 }
 
 .residentialFarLeft {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(270, 14%, 50%); }
+    .wallFront { fill: hsl(270, 20%, 56%); }
 }
 
 .residentialFarRight {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(60, 14%, 45%); }
+    .wallFront { fill: hsl(60, 20%, 51%); }
 }
 
 .residentialMiddleRight {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(0, 4%, 50%); }
+    .wallFront { fill: hsl(0, 10%, 56%); }
 }
 
 .residentialNearRight {
-    .wallFront { fill: hsl(299, 28%, 69%); }
-    .wallSide { fill: hsl(298, 19%, 60%); }
+    .wallSide { fill: hsl(180, 19%, 45%); }
+    .wallFront { fill: hsl(180, 25%, 51%); }
 }
 
 .rollerCoaster {
