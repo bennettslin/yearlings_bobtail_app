@@ -25,6 +25,7 @@ $suffix: __shared;
     stroke: hsla(0, 5%, 20%, 0.6);
 }
 
+.clothesFoldLine,
 .cheekLine {
     stroke: hsla(0, 5%, 20%, 0.4);
 }
@@ -34,6 +35,8 @@ $suffix: __shared;
     stroke-width: 0.5px;
 }
 
+[class^=eyebrow],
+.gum,
 .teeth,
 .mouthInner,
 [class^=lipFemale],
@@ -41,8 +44,6 @@ $suffix: __shared;
     stroke-width: 0.66px;
 }
 
-.eyeFoldLine,
-[class^=eyebrow],
 .smileLine,
 .cheekLine,
 .lipOverlapLine,
