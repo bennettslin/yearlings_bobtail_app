@@ -4,7 +4,8 @@ import {
     BENNETT_FATHER,
     ESTHER_MOTHER,
     FATHER,
-    MOTHER
+    MOTHER,
+    PRETEEN_BENNETT
 } from '../../../../../constants/scene/actors'
 import {
     HURT_CONSOLING,
@@ -18,6 +19,7 @@ import {
     PETTING_SEATED,
     PETTING_STANDING
 } from '../../../../../constants/scene/actors/liz'
+import { BUOY } from '../../../../../constants/scene/actors/preteenBennett'
 import {
     PAST,
     PRESENT,
@@ -25,16 +27,27 @@ import {
 } from '../../../../../constants/scene/actors/songs'
 
 const WIRES_MAP = {
+    [PRETEEN_BENNETT]: {
+        [BUOY]: {
+            wires: [
+                { x: 0.4 },
+                { x: 0.81 }
+            ]
+        }
+    },
     [LIZ]: {
         [PETTING_SEATED]: {
             wires: [
-
-            ]
+                { x: 0.55, y: 0.5 }
+            ],
+            placedFront: true
         },
         [PETTING_STANDING]: {
             wires: [
-
-            ]
+                { x: 0.68, y: 0.41 },
+                { x: 0.81, y: 0.4 }
+            ],
+            placedFront: true
         }
     },
     [BENNETT]: {
