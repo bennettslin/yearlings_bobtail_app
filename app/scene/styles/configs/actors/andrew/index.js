@@ -3,7 +3,6 @@ import {
     THROWING,
     NOODLING
 } from '../../../../../constants/scene/actors/andrew'
-
 import { EPILOGUE } from '../../../../../constants/scene/actors/songs'
 
 export default {

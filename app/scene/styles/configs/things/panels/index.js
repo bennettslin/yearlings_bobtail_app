@@ -44,7 +44,6 @@ import {
     WIDE_ARMREST,
     WIDE_COUCH
 } from '../../../../../constants/scene/things/panels'
-
 import { OCEAN_LIFE__SHARED } from '../../../shared/animals'
 import { WEDDING__SHARED } from '../../../shared/buildings'
 import {

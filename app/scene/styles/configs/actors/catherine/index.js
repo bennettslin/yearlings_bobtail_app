@@ -3,7 +3,6 @@ import {
     QUIPPING,
     PUZZLED
 } from '../../../../../constants/scene/actors/catherine'
-
 import {
     GOPI,
     EPILOGUE

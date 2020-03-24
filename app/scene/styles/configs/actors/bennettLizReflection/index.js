@@ -3,7 +3,6 @@ import {
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
 } from '../../../../../constants/scene/actors/bennettLiz'
-
 import { LIZ_CONDOM__SHARED } from '../../../shared/wardrobe'
 
 export default {

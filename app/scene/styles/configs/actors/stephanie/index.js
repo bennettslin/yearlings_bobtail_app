@@ -4,13 +4,11 @@ import {
     BENNETT_DEFIANT,
     BENNETT_RECORDING
 } from '../../../../../constants/scene/actors/stephanie'
-
 import {
     MINGLING,
     PROTESTER,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
 import { BENNETT } from '../../../../../constants/scene/actors'
 import { HEINEKEN__SHARED } from '../../../shared/food'
 import { VIOLIN__SHARED } from '../../../shared/instruments'

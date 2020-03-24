@@ -1,5 +1,4 @@
 import { TYING_TETHER } from '../../../../../constants/scene/actors/bradBennett'
-
 import {
     POLE__SHARED,
     TETHERBALL_POLE__SHARED

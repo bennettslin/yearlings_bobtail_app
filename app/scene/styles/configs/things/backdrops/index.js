@@ -24,7 +24,6 @@ import {
     VALLEY_PANORAMA_BACKDROP,
     WEDDING_BACKDROP
 } from '../../../../../constants/scene/things/backdrops'
-
 import {
     BUILDINGS__SHARED,
     HOUSE__SHARED,

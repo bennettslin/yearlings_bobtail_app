@@ -56,7 +56,6 @@ import {
     USED_CONDOM_MIRIAM,
     VASELINE
 } from '../../../../../constants/scene/things/fixtures'
-
 import {
     ALL_CLOTHING__SHARED,
     ALL_PEOPLE__SHARED

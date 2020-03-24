@@ -8,7 +8,6 @@ import {
     LIZ_PILLOWS_PILE,
     LIZ_PILLOWS_PILE_REFLECTION
 } from '../../../../../constants/scene/things/furnitures'
-
 import {
     ATTIC_LINENS__SHARED,
     BENNETT_LINENS__SHARED,

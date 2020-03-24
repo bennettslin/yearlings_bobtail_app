@@ -3,7 +3,6 @@ import {
     CARRYING,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
 import {
     CYMBAL__SHARED,
     DRUMS__SHARED,

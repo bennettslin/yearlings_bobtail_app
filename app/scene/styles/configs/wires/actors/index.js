@@ -6,22 +6,18 @@ import {
     FATHER,
     MOTHER
 } from '../../../../../constants/scene/actors'
-
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
 } from '../../../../../constants/scene/actors/estherMother'
-
 import {
     ACCUSATORY,
     REELING
 } from '../../../../../constants/scene/actors/father'
-
 import {
     PETTING_SEATED,
     PETTING_STANDING
 } from '../../../../../constants/scene/actors/liz'
-
 import {
     PAST,
     PRESENT,

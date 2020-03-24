@@ -3,13 +3,11 @@ import {
     ACCUSATORY,
     REELING
 } from '../../../../../constants/scene/actors/father'
-
 import {
     PAST,
     FUTURE,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
 import { GHOST__SHARED } from '../../../shared/wardrobe'
 
 export default {

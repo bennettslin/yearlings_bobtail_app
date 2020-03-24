@@ -34,7 +34,6 @@ import {
     WAITING_ROOM_DOOR,
     WAITING_ROOM_DOOR_OPEN
 } from '../../../../../constants/scene/things/doors'
-
 import {
     BENNETT_GATE__SHARED,
     DOOR__SHARED,

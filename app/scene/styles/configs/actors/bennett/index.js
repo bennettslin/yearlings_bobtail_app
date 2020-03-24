@@ -28,7 +28,6 @@ import {
     BROKEN_HEARTED,
     DEMONSTRATION
 } from '../../../../../constants/scene/actors/bennett'
-
 import {
     EATING,
     DATE_ENDING,
@@ -53,7 +52,6 @@ import {
     FUTURE,
     EL_TORITO
 } from '../../../../../constants/scene/actors/songs'
-
 import { TRAY__SHARED } from '../../../shared/dishroom'
 import {
     BASEMENT_TAKEOUT__SHARED,

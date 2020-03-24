@@ -3,7 +3,6 @@ import {
     CHUCKLING,
     SMIRKING
 } from '../../../../../constants/scene/actors/ana'
-
 import {
     EATING,
     ABBEY_ROAD,
@@ -14,7 +13,6 @@ import {
     WAITING,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
 import {
     BASEMENT_TAKEOUT__SHARED,
     BUDWEISER__SHARED,

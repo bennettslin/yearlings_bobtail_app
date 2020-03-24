@@ -25,7 +25,6 @@ import {
     PUPPET_MOTHER_MIDDLE,
     PUPPET_REATTA
 } from '../../../../../constants/scene/things/puppets'
-
 import {
     ANITA,
     BENNETT,

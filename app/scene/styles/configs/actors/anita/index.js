@@ -3,9 +3,7 @@ import {
     CONCERNED,
     CHEERING
 } from '../../../../../constants/scene/actors/anita'
-
 import { YOUNG_CHILD } from '../../../../../constants/scene/actors/songs'
-
 import { BACKPACK__SHARED } from '../../../shared/wardrobe'
 
 export default {

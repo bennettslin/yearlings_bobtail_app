@@ -12,7 +12,6 @@ import {
     CLIFF,
     FINAL_DREAM
 } from '../../../../../constants/scene/actors/bennettLiz'
-
 import { HEINEKEN__SHARED } from '../../../shared/food'
 import {
     CYMBAL__SHARED,

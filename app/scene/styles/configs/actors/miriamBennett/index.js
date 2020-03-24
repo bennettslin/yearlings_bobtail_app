@@ -4,7 +4,6 @@ import {
     COWGIRL,
     BLOWJOB
 } from '../../../../../constants/scene/actors/miriamBennett'
-
 import { ASLEEP } from '../../../../../constants/scene/actors/songs'
 import { BENNETT_LINENS__SHARED } from '../../../shared/furniture'
 

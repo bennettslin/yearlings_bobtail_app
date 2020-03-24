@@ -5,7 +5,6 @@ import {
     TENNIS,
     REVERSING
 } from '../../../../../constants/scene/actors/miriam'
-
 import {
     GOPI,
     EPILOGUE

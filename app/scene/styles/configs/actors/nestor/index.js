@@ -2,7 +2,6 @@ import {
     JOGGER,
     INJURED
 } from '../../../../../constants/scene/actors/nestor'
-
 import {
     GREETING,
     EPILOGUE

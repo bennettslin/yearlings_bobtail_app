@@ -2,12 +2,10 @@ import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
 } from '../../../../../constants/scene/actors/estherMother'
-
 import {
     BENNETT,
     LIZ
 } from '../../../../../constants/scene/actors'
-
 import { ALL_PEOPLE__SHARED } from '../../../actors'
 import { PROMISE_PHOTO__SHARED } from '../../../shared/print'
 import { GHOST__SHARED } from '../../../shared/wardrobe'

@@ -3,13 +3,11 @@ import {
     COMFORTING,
     ARGUING
 } from '../../../../../constants/scene/actors/mother'
-
 import {
     PRESENT,
     FUTURE,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
 import { GHOST__SHARED } from '../../../shared/wardrobe'
 
 export default {

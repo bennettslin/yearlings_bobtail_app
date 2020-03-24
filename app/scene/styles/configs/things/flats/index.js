@@ -55,7 +55,6 @@ import {
     TENNIS_COURT,
     VALLEY_FREEWAY
 } from '../../../../../constants/scene/things/flats'
-
 import { OCEAN_LIFE__SHARED } from '../../../shared/animals'
 import {
     CAMPUS__SHARED,

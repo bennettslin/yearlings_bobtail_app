@@ -2,12 +2,10 @@ import {
     CURIOUS,
     SNICKERING
 } from '../../../../../constants/scene/actors/esther'
-
 import {
     YOUNG_CHILD,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
 import { BACKPACK__SHARED } from '../../../shared/wardrobe'
 
 export default {

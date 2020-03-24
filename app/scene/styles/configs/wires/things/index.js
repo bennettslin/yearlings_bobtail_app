@@ -1,10 +1,8 @@
 import { convertPresenceKeyToClassName } from 'helpers/format'
-
 import {
     BUBBLE,
     PUPPET
 } from '../../../../../constants/scene/things'
-
 import {
     BUBBLE_LARGE,
     BUBBLE_MEDIUM,
@@ -25,7 +23,6 @@ import {
     WAITING_THOUGHT_STUDYING,
     WAITING_THOUGHT_WALKING
 } from '../../../../../constants/scene/things/bubbles'
-
 import {
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_CAMPUS,

@@ -4,7 +4,6 @@ import {
     BATHING,
     SINGING
 } from '../../../../../constants/scene/actors/youngBennett'
-
 import { YOUNG_CHILD } from '../../../../../constants/scene/actors/songs'
 import { VIOLIN__SHARED } from '../../../shared/instruments'
 import {

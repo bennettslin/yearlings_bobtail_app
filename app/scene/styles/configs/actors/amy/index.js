@@ -2,7 +2,6 @@ import {
     SMOKER,
     DOCTOR
 } from '../../../../../constants/scene/actors/amy'
-
 import {
     FLIRTING,
     MINGLING,

@@ -4,9 +4,7 @@ import {
     JUDGMENTAL,
     CONCERNED
 } from '../../../../../constants/scene/actors/khari'
-
 import { EPILOGUE } from '../../../../../constants/scene/actors/songs'
-
 import { CHINESE_TAKEOUT__SHARED } from '../../../shared/food'
 
 export default {

@@ -8,7 +8,6 @@ import {
     NOT_HUNGRY,
     ASLEEP_COUCH
 } from '../../../../../constants/scene/actors/liz'
-
 import {
     DATE_ENDING,
     MUSEUM,
@@ -21,7 +20,6 @@ import {
     LEAVING_CRUMBLED,
     EL_TORITO
 } from '../../../../../constants/scene/actors/songs'
-
 import { BENNETT } from '../../../../../constants/scene/actors'
 import { OPAL__SHARED } from '../../../shared/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../shared/food'

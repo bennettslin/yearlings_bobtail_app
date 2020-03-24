@@ -2,7 +2,6 @@ import {
     USHER_WAITING,
     USHER_LOOKING
 } from '../../../../../constants/scene/actors/howie'
-
 import {
     ABBEY_ROAD,
     WALGREENS,
@@ -11,7 +10,6 @@ import {
     ATTIC,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
 import { MARA } from '../../../../../constants/scene/actors'
 import { MASKED_USHER__SHARED } from '../../../actors'
 import { ROBITUSSIN__SHARED } from '../../../shared/food'

@@ -42,7 +42,6 @@ import {
     TINTIN_POSTER,
     VAN_NUYS_LOGO
 } from '../../../../../constants/scene/things/cardboards'
-
 import {
     BENNETT,
     CHRISTOPHER,
