@@ -9,9 +9,9 @@ import {
     convertPresenceKeyToClassName,
     getSharedClassNames
 } from 'helpers/format'
-import { getWirePlacedFront } from '../../scene/sharedConfigs'
-import { getSharedStyleForActor } from '../../scene/sharedConfigs/actors'
-import { getSharedStyleForThing } from '../../scene/sharedConfigs/things'
+import { getWirePlacedFront } from '../../scene/styles/configs/wires'
+import { getSharedStyleForActor } from '../../scene/styles/configs/actors'
+import { getSharedStyleForThing } from '../../scene/styles/configs/things'
 import { getArrangementForPresence } from 'components/Presence/helper'
 import { getXYForPresence } from './helper/position'
 import { getCompoundActorStyleIfNeeded } from './helper/sharedStyle'

@@ -13,8 +13,8 @@ import {
     getSharedClassNames
 } from 'helpers/format'
 import { getArrangementForPresence } from 'components/Presence/helper'
-import { getSharedStyleForActor } from 'scene/sharedConfigs/actors'
-import { getSharedStyleForThing } from 'scene/sharedConfigs/things'
+import { getSharedStyleForActor } from 'scene/styles/configs/actors'
+import { getSharedStyleForThing } from 'scene/styles/configs/things'
 
 import {
     getPreviewerSvgMapForActor,

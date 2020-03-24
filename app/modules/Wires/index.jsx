@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getWires } from '../../scene/sharedConfigs'
+import { getWires } from '../../scene/styles/configs/wires'
 
 const defaultProps = {
     adjustedTop: 0,
