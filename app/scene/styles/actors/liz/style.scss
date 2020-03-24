@@ -1,0 +1,58 @@
+.liz#{$suffix} {
+    .lizUndershirt { fill: hsl(149, 26%, 65%); }
+    .lizShirt { fill: hsl(159, 28%, 57%); }
+    .lizShirtCollar { fill: hsl(159, 32%, 62%); }
+    .lizJacketInner { fill: hsl(97, 11%, 61%); }
+    .lizJacket { fill: hsl(96, 14%, 65%); }
+    .lizJacketLapel { fill: hsl(97, 14%, 70%); }
+    .lizCoatInner { fill: hsl(78, 24%, 61%); }
+    .lizCoatBelt { fill: hsl(78, 20%, 66%); }
+    .lizCoat { fill: hsl(78, 24%, 71%); }
+    .lizCoatLapel { fill: hsl(77, 29%, 75%); }
+    .lizPanties { fill: hsl(152, 32%, 66%); }
+    .lizJeans { fill: hsl(225, 12%, 54%); }
+    .lizJeansCuff { fill: hsl(225, 14%, 62%); }
+    .lizShortsInner { fill: hsl(225, 18%, 59%); }
+    .lizShorts { fill: hsl(226, 26%, 68%); }
+    .lizSock { fill: hsl(186, 19%, 78%); }
+    .lizShoe { fill: hsl(40, 18%, 48%); }
+
+    .backpackMedium { fill: hsl(142, 35%, 54%); }
+    .backpackLight { fill: hsl(142, 42%, 59%); }
+    .backpackPocket { fill: hsl(143, 22%, 48%); }
+    .backpackTrim { fill: hsl(152, 24%, 61%); }  
+    .backpackStrap { fill: hsl(153, 20%, 57%); }
+
+    &.brushOff {
+        .negligeeTop { fill: hsl(130, 28%, 57%); }
+        .ribbonDark { fill: hsl(138, 31%, 44%); }
+        .ribbon { fill: hsl(138, 33%, 51%); }
+        .negligeeMesh { fill: hsla(126, 32%, 56%, 0.5); }
+        .negligeeTrim { fill: hsla(129, 30%, 50%, 0.7); }
+        .lizPanties { fill: hsl(129, 32%, 56%); }
+    }
+
+    &.cheekUnveiled {
+        .gown { fill: hsl(188, 24%, 67%); }
+        .gownStrapDark { fill: hsl(188, 14%, 54%); }
+        .gownStrap { fill: hsl(188, 19%, 62%); }
+    }
+
+    &.siftingTchotchkes {
+        .wishboneDark { fill: hsl(41, 22%, 48%); }
+        .wishboneLight { fill: hsl(40, 29%, 56%); }
+        .photoFrame { fill: hsl(180, 24%, 41%); }
+        .photoCel { fill: hsl(177, 39%, 79%); }
+    }
+
+    &.elTorito {
+        .senoritaDress { fill: hsl(157, 15%, 83%); }
+        .senoritaStripe { fill: hsl(159, 28%, 57%); }
+        .senoritaBelt { fill: hsl(346, 34%, 53%); }
+    }
+
+    &.pampas {
+        .sari { fill: hsl(120, 52%, 69%); }
+        .cymbalBand { fill: hsl(119, 26%, 46%); }
+    }
+}

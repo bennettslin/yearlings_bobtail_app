@@ -8,13 +8,13 @@ import {
     OVERVIEW_BUTTON_KEY
 } from '../../../constants/buttons'
 
-import { getSharedClassNames } from '../../../helpers/format'
-
+import { OLD_BENNETT } from '../../../constants/scene/actors'
+import { ALL_PEOPLE__SHARED } from '../../../scene/styles/actors'
 import { HEADPHONE__SHARED } from '../../../scene/styles/shared/instruments'
 import { BOOK__SHARED } from '../../../scene/styles/shared/paper'
-import { OLD_BENNETT } from '../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED } from '../../../scene/styles/shared/people'
 import { SNOWGLOBE__SHARED } from '../../../scene/styles/shared/props'
+
+import { getSharedClassNames } from '../../../helpers/format'
 
 export const getButtonIconClassNames = ({ buttonName, buttonIdentifier }) => {
     let className

@@ -13,8 +13,8 @@ import {
 } from '../../../../../constants/scene/actors/songs'
 
 import { MARA } from '../../../../../constants/scene/actors'
+import { MASKED_USHER__SHARED } from '../../../actors'
 import { ROBITUSSIN__SHARED } from '../../../shared/food'
-import { MASKED_USHER__SHARED } from '../../../shared/people'
 import { STEAM_TUNNEL__SHARED } from '../../../shared/wardrobe'
 
 export default {

@@ -1,0 +1,12 @@
+.mara#{$suffix} {
+    .maraDress { fill: hsl(32, 33%, 52%); }
+    .maraHeadband { fill: hsl(32, 39%, 44%); }
+    .maraWatchBand { fill: hsl(30, 65%, 60%); }
+    .maraStrap { fill: hsl(25, 38%, 53%); }
+    .maraShoe { fill: hsl(25, 34%, 49%); }
+    .maskBand { fill: hsl(0, 0%, 80%); }
+
+    &.gopi {
+        .sari { fill: hsl(25, 61%, 62%); }
+    }
+}

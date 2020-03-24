@@ -1,0 +1,24 @@
+.brad#{$suffix} {
+    .bradShirt { fill: hsl(183, 27%, 56%); }
+    .bradHoodie { fill: hsl(183, 28%, 48%); }
+    .bradShorts { fill: hsl(305, 14%, 63%); }
+    .bradShoe { fill: hsl(31, 27%, 56%); }
+
+    &.charmedSchoolbus {
+        .yarmulke { fill: hsl(197, 35%, 54%); }
+        .jewishBoyShirt { fill: hsl(184, 19%, 64%); }
+        .jewishBoyShorts { fill: hsl(306, 4%, 52%); }
+        .jewishBoyShoe { fill: hsl(32, 23%, 39%); }
+
+        .bookCoverDark { fill: hsl(319, 30%, 57%); }
+        .bookCoverLight { fill: hsl(319, 38%, 63%); }
+    }
+
+    &.snacking {
+        .chipBag { fill: hsl(207, 52%, 61%); }
+        .sun { fill: hsl(37, 73%, 65%); }
+        .sunRay { fill: hsl(58, 73%, 65%); }
+        .chip { fill: hsl(58, 25%, 72%); }
+        .chipDark { fill: hsl(58, 18%, 65%); }
+    }
+}

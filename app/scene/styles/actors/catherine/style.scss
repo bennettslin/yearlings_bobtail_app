@@ -1,0 +1,24 @@
+.catherine#{$suffix} {
+    .catherineGlasses { fill: hsl(358, 40%, 39%); }
+    .catherineShirt { fill: hsl(343, 54%, 83%); }
+    .catherineSweater { fill: hsl(344, 50%, 74%); }
+    .catherineShorts { fill: hsl(221, 32%, 59%); }
+    .catherineShoe { fill: hsl(180, 30%, 53%); }
+    .catherineShoeStripe { fill: hsl(312, 35%, 62%); }
+
+    &.weeping {
+        .purseDark { fill: hsl(223, 49%, 63%); }
+        .purseLight { fill: hsl(223, 67%, 70%); }
+        .purseStrap { fill: hsl(229, 24%, 62%); }
+    }
+
+    &.puzzled {
+        .bookCoverLight { fill: hsl(249, 38%, 63%); }
+        .bookCoverDark { fill: hsl(249, 31%, 58%); }
+        .backpackStrap { fill: hsl(279, 16%, 57%); }
+    }
+
+    &.gopi {
+        .sari { fill: hsl(344, 50%, 74%); }
+    }
+}

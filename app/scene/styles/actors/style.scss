@@ -1,3 +1,5 @@
+@import "./allClothing/style";
+@import "./allPeople/style";
 @import "./amy/style";
 @import "./ana/style";
 @import "./andrew/style";
@@ -23,3 +25,13 @@
 @import "./tristan/style";
 @import "./wade/style";
 @import "./willy/style";
+
+.sclera,
+.pupil,
+[class^=iris],
+[class^=nipple],
+[class$=Blob],
+[class$=noStroke]
+ {
+    stroke: none;
+}

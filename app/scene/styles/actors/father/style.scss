@@ -1,0 +1,13 @@
+.father#{$suffix} {
+    .fatherGlassesDisplayLine { stroke: hsl(37, 30%, 45%); }
+    .fatherShirt { fill: hsl(0, 48%, 81%); }
+    .fatherCollar { fill: hsl(0, 38%, 77%); }
+    .fatherTie { fill: hsl(221, 44%, 57%); }
+    .fatherPants { fill: hsl(201, 16%, 59%); }
+    .fatherPantsPocket { fill: hsl(201, 12%, 51%); }
+    .fatherSock { fill: hsl(221, 30%, 58%); }
+    .fatherShoe { fill: hsl(37, 25%, 45%); }
+
+    .fatherChineseShirt { fill: hsl(3, 55%, 60%); }
+    .fatherChineseShirtInner { fill: hsl(3, 41%, 53%); }
+}

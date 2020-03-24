@@ -1,0 +1,93 @@
+.bennett#{$suffix} {
+    .eyepatch { fill: hsl(18, 61%, 80%); }
+    .eyepatchGauze { fill: hsl(12, 39%, 85%); }
+    .bennettJacketInner { fill: hsl(224, 12%, 31%); }
+    .bennettJacketCollar { fill: hsl(226, 12%, 34%); }
+    .bennettJacket { fill: hsl(228, 10%, 38%); }
+    .bennettHoodieInner { fill: hsl(2, 39%, 50%); }
+    .bennettUndershirtInner { fill: hsl(2, 42%, 59%); }
+    .bennettUndershirt { fill: hsl(2, 57%, 66%); }
+    .bennettHoodie { fill: hsl(4, 37%, 52%); }
+    .bennettHood { fill: hsl(3, 36%, 61%); }
+    .bennettSleeves { fill: hsl(4, 37%, 52%); }
+    .bennettUnderwearInner { fill: hsl(214, 28%, 53%); }
+    .bennettUnderwear { fill: hsl(214, 39%, 61%); }
+    .bennettWaistband { fill: hsl(215, 47%, 72%); }
+    .bennettJeansInner { fill: hsl(216, 27%, 42%); }
+    .bennettJeans { fill: hsl(216, 27%, 47%); }
+    .bennettSoleBottom { fill: hsl(28, 15%, 53%); }
+    .bennettShoe { fill: hsl(39, 11%, 41%); }
+    .bennettShoeLining { fill: hsl(34, 7%, 57%); }
+    .converseLogo { fill: hsl(12, 37%, 60%); }
+
+    &.enraged {
+        .frame { fill: hsl(175, 33%, 47%); }
+        .temple { fill: hsl(175, 40%, 55%); }
+        .lens { fill: hsl(70, 32%, 50%); }
+    }
+
+    &.panicked {
+        .bookCover { fill: hsl(201, 31%, 58%); }
+    }
+
+    &.flustered {
+        .overallsFlap { fill: hsl(222, 23%, 55%); }
+        .overalls { fill: hsl(221, 32%, 63%); }
+    }
+
+    &.singing {
+        .cowboyHat { fill: hsl(25, 31%, 45%); }
+        .cowboyHatBrim { fill: hsl(25, 31%, 39%); }
+    }
+
+    &.youngChild {
+        .backpack { fill: hsl(231, 38%, 60%); }
+        .backpackStrap { fill: hsl(230, 27%, 65%); }
+        .hoodieInner { fill: hsl(207, 46%, 61%); }
+        .hoodie { fill: hsl(207, 57%, 66%); }
+        .shorts { fill: hsl(6, 39%, 61%); }
+        .shoe { fill: hsl(38, 16%, 56%); }
+    }
+
+    &.buoy {
+        .yellowDark { fill: hsl(58, 36%, 61%); }
+        .yellowMedium { fill: hsl(58, 39%, 64%); }
+        .yellowLight { fill: hsl(58, 46%, 67%); }
+        .orangeDark { fill: hsl(22, 29%, 44%); }
+        .orangeLight { fill: hsl(22, 29%, 48%); }
+    }
+
+    &.feigningSick {
+        .stamp { fill: hsl(204, 100%, 75%); }
+    }
+
+    &.couchReading {
+        .bookCoverDark { fill: hsl(114, 24%, 52%); }
+        .bookCoverMedium { fill: hsl(114, 31%, 58%); }
+        .bookCoverLight { fill: hsl(113, 38%, 63%); }
+    }
+
+    &.dishroomLancet {
+        .bookCover { fill: hsl(154, 29%, 56%); }
+    }
+
+    &.steamTunnel {
+        .yardstickDark { fill: hsl(54, 21%, 54%); }
+        .yardstickLight { fill: hsl(54, 40%, 69%); }
+        .yardstickEdgeDark { fill: hsl(180, 9%, 55%); }
+        .yardstickEdgeLight { fill: hsl(178, 13%, 62%); }
+    }
+
+    &.brokenHearted {
+        .phoneDark { fill: hsl(213, 25%, 65%); }
+        .phoneMedium { fill: hsl(213, 32%, 71%); }
+        .phoneLight { fill: hsl(214, 41%, 76%); }
+    }
+
+    &.pampas {
+        .sash { fill: hsl(2, 59%, 65%); }
+        .bennettKurta { fill: hsl(214, 45%, 60%); }
+        .garland { fill: hsl(79, 14%, 77%); }
+        .garlandFlower { fill: hsl(15, 52%, 69%); }
+    }
+}

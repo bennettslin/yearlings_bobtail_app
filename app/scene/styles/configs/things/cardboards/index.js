@@ -53,7 +53,7 @@ import {
 import {
     ALL_PEOPLE__SHARED,
     ALL_CLOTHING__SHARED
-} from '../../../shared/people'
+} from '../../../actors'
 import {
     ODIN__SHARED,
     SEA_SERPENT__SHARED

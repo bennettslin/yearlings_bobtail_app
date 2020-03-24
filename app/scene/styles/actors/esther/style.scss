@@ -1,0 +1,34 @@
+.esther#{$suffix} {
+    .bow { fill: hsl(120, 29%, 67%); }
+
+    .estherShirt { fill: hsl(328, 42%, 65%); }
+    .estherCollar { fill: hsl(326, 29%, 83%); }
+    .estherJacketTrim { fill: hsl(328, 31%, 54%); }
+    .estherJacket { fill: hsl(328, 49%, 61%); }
+    .estherJacketStripe { fill: hsl(326, 29%, 83%); }
+    .estherShorts { fill: hsl(203, 47%, 62%); }
+    .estherShortsTrim { fill: hsl(204, 33%, 78%); }
+    .estherSockStripe { fill: hsl(353, 48%, 69%); }
+    .estherShoeStrap { fill: hsl(220, 47%, 59%); }
+    .estherShoe { fill: hsl(220, 57%, 65%); }
+
+    .estherChineseShirt { fill: hsl(305, 54%, 72%); }
+
+    &.curious {
+        .backpack { fill: hsl(100, 45%, 66%); }
+        .backpackStrap { fill: hsl(90, 20%, 57%); }
+    }
+
+    &.youngChild {
+        .lapel { fill: hsl(284, 11%, 59%); }
+        .jacket { fill: hsl(284, 16%, 68%); }
+        .skirt { fill: hsl(219, 25%, 55%); }
+        .boot { fill: hsl(306, 19%, 62%); }
+
+        .backpackDark { fill: hsl(150, 37%, 60%); }
+        .backpackLight { fill: hsl(150, 42%, 62%); }
+        .backpackStrap { fill: hsl(162, 20%, 57%); }
+        .backpackLeatherDark { fill: hsl(41, 19%, 53%); }
+        .backpackLeatherLight { fill: hsl(41, 21%, 56%); }
+    }
+}

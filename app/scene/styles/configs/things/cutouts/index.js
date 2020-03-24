@@ -56,8 +56,7 @@ import {
     WEDDING_CROWD,
     YELLOW_TAPED_GRILL
 } from '../../../../../constants/scene/things/cutouts'
-
-import { ALL_PEOPLE__SHARED } from '../../../shared/people'
+import { ALL_PEOPLE__SHARED } from '../../../actors'
 import { WEDDING__SHARED } from '../../../shared/buildings'
 import {
     CUP__SHARED,

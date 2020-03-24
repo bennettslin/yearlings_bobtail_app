@@ -2,7 +2,6 @@ import {
     SHANE_BUYING,
     SHANE_SPILLING
 } from '../../../../../constants/scene/actors/tomer'
-
 import {
     GANGBANGER,
     ABBEY_ROAD,
@@ -12,7 +11,7 @@ import {
     STATION_WAGON,
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
-
+import { SHANE__SHARED } from '../../../actors'
 import {
     EVIAN__SHARED,
     GARBAGE_BAG__SHARED,
@@ -20,8 +19,6 @@ import {
     ROBITUSSIN__SHARED,
     WINE__SHARED
 } from '../../../shared/food'
-
-import { SHANE__SHARED } from '../../../shared/people'
 
 export default {
     [ABBEY_ROAD]: null,

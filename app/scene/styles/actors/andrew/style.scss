@@ -1,0 +1,30 @@
+.andrew#{$suffix} {
+    .andrewTurtleneck { fill: hsl(116, 34%, 55%); }
+    .andrewShirt { fill: hsl(116, 52%, 69%); }
+    .andrewShirtInner { fill: hsl(115, 19%, 74%); }
+    .andrewPants { fill: hsl(214, 19%, 71%); }
+    .andrewShoe { fill: hsl(231, 12%, 41%); }
+
+    &.throwing {
+        .apple { fill: hsl(97, 30%, 54%); }
+        .appleStem { fill: hsl(37, 26%, 33%); }
+    }
+
+    &.noodling {
+        .guitarSide { fill: hsl(67, 22%, 62%); }
+        .guitarFront { fill: hsl(66, 28%, 67%); }
+        .bridgeDark { fill: hsl(63, 16%, 75%); }
+        .bridgeGuardLight { fill: hsl(65, 23%, 81%); }
+        .guitarNeck { fill: hsl(81, 13%, 65%); }
+        .fretboard { fill: hsl(58, 20%, 69%); }
+        .silverDark { fill: hsl(172, 7%, 58%); }
+        .silverMedium { fill: hsl(173, 10%, 66%); }
+        .silverLight { fill: hsl(174, 14%, 73%); }
+        .plasticDark { fill: hsl(71, 8%, 27%); }
+        .plasticLight { fill: hsl(69, 8%, 33%); }
+        .metalDark { fill: hsl(200, 10%, 60%); }
+        .metalLight { fill: hsl(198, 14%, 67%); }
+        .strap { fill: hsl(224, 17%, 48%); }
+        .leather { fill: hsl(15, 16%, 39%); }
+    }
+}

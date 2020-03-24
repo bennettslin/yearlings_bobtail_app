@@ -1,0 +1,31 @@
+.howie#{$suffix} {
+    .howieShirt { fill: hsl(206, 15%, 64%); }
+    .howieLongSleeveInner { fill: hsl(65, 16%, 47%); }
+    .howieCollar { fill: hsl(65, 16%, 50%); }
+    .howieLongSleeve { fill: hsl(66, 18%, 53%); }
+    .howiePants { fill: hsl(56, 7%, 47%); }
+    .howieShoe { fill: hsl(213, 8%, 42%); }
+
+    &.gangbanger {
+        .gangbangerWaistband { fill: hsl(0, 0%, 65%); }
+        .gangbangerPants { fill: hsl(0, 0%, 51%); }
+        .gangbangerPantsInner { fill: hsl(0, 0%, 47%); }
+        .gangbangerShoe { fill: hsl(40, 4%, 40%); }
+    }
+
+    &.stationWagon {
+        .wheelHandle { fill: hsl(234, 22%, 59%); }
+        .wheelHub { fill: hsl(231, 8%, 54%); }
+    }
+}
+
+.maskedUsher#{$suffix} {
+    .usherShirt { fill: hsl(0, 23%, 50%); }
+    .usherShirtInner { fill: hsl(0, 23%, 42%); }
+    .usherLabelSide { fill: hsl(58, 21%, 49%); }
+    .usherLabelFront { fill: hsl(57, 30%, 59%); }
+    .usherWatchBand { fill: hsl(219, 28%, 44%); }
+    .usherPants { fill: hsl(219, 8%, 34%); }
+    .usherPantsButton { fill: hsl(220, 8%, 28%); }
+    .usherShoe { fill: hsl(23, 11%, 33%); }
+}

@@ -24,14 +24,16 @@ import {
     WAITING_THOUGHT_STUDYING,
     WAITING_THOUGHT_WALKING
 } from '../../../../../constants/scene/things/bubbles'
-
 import {
     AMY,
     BENNETT,
     LIZ,
     MARA
 } from '../../../../../constants/scene/actors'
-import { ALL_PEOPLE__SHARED, ALL_CLOTHING__SHARED } from '../../../shared/people'
+import {
+    ALL_PEOPLE__SHARED,
+    ALL_CLOTHING__SHARED
+} from '../../../actors'
 import { BUBBLE__SHARED } from '../../../shared/props'
 import {
     ACOUSTIC_GUITAR__SHARED,
