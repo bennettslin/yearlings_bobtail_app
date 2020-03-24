@@ -5406,5 +5406,10 @@ export default [
         taskName: `Separate condom fixtures.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Wires on Odin ocean presences.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

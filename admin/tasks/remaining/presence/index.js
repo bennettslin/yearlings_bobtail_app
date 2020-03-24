@@ -43,11 +43,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Wires on Odin ocean presences.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Colour ocean skies.`,
         workedHours: 0,
         neededHours: 1

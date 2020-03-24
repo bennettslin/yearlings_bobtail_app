@@ -1,6 +1,7 @@
 import { convertPresenceKeyToClassName } from 'helpers/format'
 import {
     BUBBLE,
+    CARDBOARD,
     PUPPET
 } from '../../../../../constants/scene/things'
 import {
@@ -23,6 +24,11 @@ import {
     WAITING_THOUGHT_STUDYING,
     WAITING_THOUGHT_WALKING
 } from '../../../../../constants/scene/things/bubbles'
+import {
+    SEA_SERPENT_LEFT,
+    SEA_SERPENT_RIGHT,
+    BENNETT_ODIN_DEPTHS
+} from '../../../../../constants/scene/things/cardboards'
 import {
     GHOST_ODIN_ALLEY,
     GHOST_ODIN_CAMPUS,
@@ -78,6 +84,26 @@ const WIRES_MAP = {
         [THOUGHT_LARGE]: BUBBLE_DEFAULT,
         [THOUGHT_MEDIUM]: BUBBLE_DEFAULT,
         [THOUGHT_SMALL]: BUBBLE_DEFAULT
+    },
+    [CARDBOARD]: {
+        [BENNETT_ODIN_DEPTHS]: {
+            wires: [
+                { x: 0.57, y: 0.5 },
+                { x: 0.7 }
+            ]
+        },
+        [SEA_SERPENT_LEFT]: {
+            wires: [
+                { x: 0.29, y: 0.5 },
+                { x: 0.55, y: 0.13 }
+            ]
+        },
+        [SEA_SERPENT_RIGHT]: {
+            wires: [
+                { x: 0.32, y: 0.9 },
+                { x: 0.69, y: 0.6 }
+            ]
+        }
     },
     [PUPPET]: {
         [PUPPET_ANITA_BEGIN]: { x: 0.55 },

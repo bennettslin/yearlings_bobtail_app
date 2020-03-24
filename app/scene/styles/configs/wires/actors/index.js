@@ -5,7 +5,8 @@ import {
     ESTHER_MOTHER,
     FATHER,
     MOTHER,
-    PRETEEN_BENNETT
+    PRETEEN_BENNETT,
+    SASHA_BENNETT
 } from '../../../../../constants/scene/actors'
 import {
     HURT_CONSOLING,
@@ -20,6 +21,7 @@ import {
     PETTING_STANDING
 } from '../../../../../constants/scene/actors/liz'
 import { BUOY } from '../../../../../constants/scene/actors/preteenBennett'
+import { MERMAID } from '../../../../../constants/scene/actors/sashaBennett'
 import {
     PAST,
     PRESENT,
@@ -32,6 +34,16 @@ const WIRES_MAP = {
             wires: [
                 { x: 0.4 },
                 { x: 0.81 }
+            ]
+        }
+    },
+    [SASHA_BENNETT]: {
+        [MERMAID]: {
+            wires: [
+                { x: 0.35, y: 0.4 },
+                { x: 0.52, y: 0.3 },
+                { x: 0.54, y: 0.6 },
+                { x: 0.7, y: 0.4 }
             ]
         }
     },
