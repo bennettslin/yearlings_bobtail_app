@@ -26,7 +26,10 @@ import { BENNETT } from 'constants/scene/actors'
 import { OPAL__SHARED } from '../../../sharedStyles/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../sharedStyles/food'
 import { LIZ_LINENS__SHARED } from '../../../sharedStyles/furniture'
-import { GO_KART__SHARED } from '../../../sharedStyles/wardrobe'
+import {
+    BACKPACK__SHARED,
+    GO_KART__SHARED
+} from '../../../sharedStyles/wardrobe'
 
 export default {
     [DATE_ENDING]: null,
@@ -35,8 +38,8 @@ export default {
     [GO_KARTS]: GO_KART__SHARED,
     [DATE_ENDED]: null,
     [DISHROOM_LANCET]: null,
-    [GATE_CODE]: null,
-    [RUMPLED_LINENS]: null,
+    [GATE_CODE]: BACKPACK__SHARED,
+    [RUMPLED_LINENS]: BACKPACK__SHARED,
     [ASLEEP_REACHING]: LIZ_LINENS__SHARED,
     [LEAVING_CRUMBLED]: null,
     [PETTING_SEATED]: OPAL__SHARED,
