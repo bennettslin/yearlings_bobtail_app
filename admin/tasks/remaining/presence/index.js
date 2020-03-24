@@ -13,11 +13,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Fix Liz and Taiwan gates.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Allow for actors to have different yIndex sizing.`,
         workedHours: 0,
         neededHours: 2
@@ -44,6 +39,11 @@ export default [
     },
     {
         taskName: `Ocean waves panel.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
+        taskName: `Wires on Odin ocean presences.`,
         workedHours: 0,
         neededHours: 2
     },
