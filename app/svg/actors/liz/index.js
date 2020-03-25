@@ -20,6 +20,7 @@ import elTorito from 'assets/svgs/actors/liz/elTorito'
 import {
     ASLEEP_REACHING,
     PETTING_SEATED,
+    PETTING_SEATED_PRESENT,
     PETTING_STANDING,
     SIFTING_TCHOTCHKES,
     OPENING_DOOR,
@@ -53,6 +54,7 @@ export default {
     [ASLEEP_REACHING]: asleepReaching,
     [LEAVING_CRUMBLED]: leavingCrumbled,
     [PETTING_SEATED]: pettingSeated,
+    [PETTING_SEATED_PRESENT]: pettingSeated,
     [PETTING_STANDING]: pettingStanding,
     [SIFTING_TCHOTCHKES]: siftingTchotchkes,
     [OPENING_DOOR]: openingDoor,

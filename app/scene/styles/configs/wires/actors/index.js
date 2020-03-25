@@ -18,6 +18,7 @@ import {
 } from '../../../../../constants/scene/actors/father'
 import {
     PETTING_SEATED,
+    PETTING_SEATED_PRESENT,
     PETTING_STANDING
 } from '../../../../../constants/scene/actors/liz'
 import { BUOY } from '../../../../../constants/scene/actors/preteenBennett'
@@ -27,6 +28,13 @@ import {
     PRESENT,
     FUTURE
 } from '../../../../../constants/scene/actors/songs'
+
+const PETTING_SEATED_CONFIG = {
+    wires: [
+        { x: 0.55, y: 0.5 }
+    ],
+    placedFront: true
+}
 
 const WIRES_MAP = {
     [PRETEEN_BENNETT]: {
@@ -48,12 +56,8 @@ const WIRES_MAP = {
         }
     },
     [LIZ]: {
-        [PETTING_SEATED]: {
-            wires: [
-                { x: 0.55, y: 0.5 }
-            ],
-            placedFront: true
-        },
+        [PETTING_SEATED]: PETTING_SEATED_CONFIG,
+        [PETTING_SEATED_PRESENT]: PETTING_SEATED_CONFIG,
         [PETTING_STANDING]: {
             wires: [
                 { x: 0.68, y: 0.41 },

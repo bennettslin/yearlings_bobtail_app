@@ -24,6 +24,7 @@ import { TCHOTCHKES } from '../../../constants/scene/things/fixtures'
 import { LIZ_COUCH } from '../../../constants/scene/things/panels'
 import {
     OPAL_COUCH,
+    OPAL_COUCH_FUTURE,
     OPAL_GAZING,
     PEACOCK,
     PEAHEN
@@ -64,6 +65,12 @@ export default {
     }
 }
 
+const OPAL_COUCH_CONFIG = {
+    yIndex: 3,
+    xPosition: 1,
+    scaleFactor: 0.2
+}
+
 export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [FIXTURE]: {
         [TCHOTCHKES]: {
@@ -72,11 +79,8 @@ export const THINGS_LIZ_COUCH_TCHOTCHKES = {
         }
     },
     [PUPPET]: {
-        [OPAL_COUCH]: {
-            yIndex: 3,
-            xPosition: 1,
-            scaleFactor: 0.2
-        }
+        [OPAL_COUCH]: OPAL_COUCH_CONFIG,
+        [OPAL_COUCH_FUTURE]: OPAL_COUCH_CONFIG
     }
 }
 

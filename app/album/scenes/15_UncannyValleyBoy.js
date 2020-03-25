@@ -2,10 +2,11 @@ import { ACTOR } from '../../constants/scene'
 import {
     BACKDROP,
     CARDBOARD,
+    DOOR,
     FIXTURE,
     FURNITURE,
     PANEL,
-    DOOR
+    PUPPET
 } from '../../constants/scene/things'
 import {
     BASEMENT_BED_DARK_KEY,
@@ -44,7 +45,7 @@ import {
     REELING
 } from '../../constants/scene/actors/father'
 import { JOKING_LAUGHING } from '../../constants/scene/actors/khariLiz'
-import { PETTING_SEATED } from '../../constants/scene/actors/liz'
+import { PETTING_SEATED_PRESENT } from '../../constants/scene/actors/liz'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF
@@ -94,6 +95,7 @@ import {
     WIDE_ARMREST__MIRIAM_LEFT,
     WIDE_ARMREST__MIRIAM_RIGHT
 } from '../../constants/scene/things/panels'
+import { OPAL_COUCH_FUTURE } from '../../constants/scene/things/puppets'
 
 export default [
     {
@@ -208,7 +210,7 @@ export default [
                 [LIZ]: {
                     sita: {
                         description: 'side, seated, pensive',
-                        instance: PETTING_SEATED
+                        instance: PETTING_SEATED_PRESENT
                     }
                 },
                 [MIRIAM_STEPHANIE]: {
@@ -280,6 +282,9 @@ export default [
             [PANEL]: {
                 [SNOWGLOBE__LIZ_KHARI]: true,
                 [SNOWGLOBE__BENNETT_ALONE]: true
+            },
+            [PUPPET]: {
+                [OPAL_COUCH_FUTURE]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,

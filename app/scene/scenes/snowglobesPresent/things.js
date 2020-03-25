@@ -25,8 +25,8 @@ export default {
         },
         [SNOWGLOBE_PRESENT]: {
             yIndex: 1,
-            xPosition: 8.15,
-            zOffset: 6.5,
+            xPosition: 9,
+            zOffset: 6.3,
             scaleFactor: 0.7,
             rotate: 10
         }

@@ -1,6 +1,7 @@
 import {
     ASLEEP_REACHING,
     PETTING_SEATED,
+    PETTING_SEATED_PRESENT,
     PETTING_STANDING,
     SIFTING_TCHOTCHKES,
     OPENING_DOOR,
@@ -21,7 +22,11 @@ import {
     EL_TORITO
 } from '../../../../../constants/scene/actors/songs'
 import { BENNETT } from '../../../../../constants/scene/actors'
-import { OPAL__SHARED } from '../../../shared/animals'
+import { LIZ_PRESENT__SHARED } from '../../../actors'
+import {
+    OPAL__SHARED,
+    OPAL_PRESENT__SHARED
+} from '../../../shared/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../shared/food'
 import { LIZ_LINENS__SHARED } from '../../../shared/furniture'
 import {
@@ -41,6 +46,10 @@ export default {
     [ASLEEP_REACHING]: LIZ_LINENS__SHARED,
     [LEAVING_CRUMBLED]: null,
     [PETTING_SEATED]: OPAL__SHARED,
+    [PETTING_SEATED_PRESENT]: [
+        LIZ_PRESENT__SHARED,
+        OPAL_PRESENT__SHARED
+    ],
     [PETTING_STANDING]: OPAL__SHARED,
     [SIFTING_TCHOTCHKES]: BENNETT,
     [OPENING_DOOR]: null,

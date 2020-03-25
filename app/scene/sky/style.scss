@@ -71,7 +71,7 @@
 // Didi, Uncanny
 .Season__past {
     background: linear-gradient(
-        hsl(36, 56%, 70%),
+        hsl($hue__past, 56%, 70%),
         hsl(50, 56%, 90%)
     );
 }
@@ -79,7 +79,7 @@
 // Uncanny
 .Season__present {
     background: linear-gradient(
-        hsl(156, 56%, 70%),
+        hsl($hue__present, 56%, 70%),
         hsl(50, 56%, 95%)
     );
 }
@@ -87,7 +87,7 @@
 // Pchelka, Uncanny
 .Season__future {
     background: linear-gradient(
-        hsl(276, 46%, 70%),
+        hsl($hue__future, 46%, 70%),
         hsl(50, 56%, 90%)
     );
 }

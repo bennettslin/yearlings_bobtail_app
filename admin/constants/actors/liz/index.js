@@ -11,6 +11,7 @@ import {
     ASLEEP_REACHING,
     REACHING_REFLECTION,
     PETTING_SEATED,
+    PETTING_SEATED_PRESENT,
     PETTING_STANDING,
     SIFTING_TCHOTCHKES,
     OPENING_DOOR,
@@ -171,6 +172,10 @@ const INSTANCES = [
     {
         type: LIZ,
         instance: ASLEEP_COUCH
+    },
+    {
+        type: LIZ,
+        instance: PETTING_SEATED_PRESENT
     },
     {
         type: KHARI_LIZ,

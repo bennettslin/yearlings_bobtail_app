@@ -10,6 +10,7 @@ import {
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
 import { BENNETT } from '../../../../../constants/scene/actors'
+import { BENNETT_FUTURE__SHARED } from '../../../actors'
 import { HEINEKEN__SHARED } from '../../../shared/food'
 import { VIOLIN__SHARED } from '../../../shared/instruments'
 
@@ -19,7 +20,7 @@ export default {
     [MINGLING]: HEINEKEN__SHARED,
     [BENNETT_DEFIANT]: BENNETT,
     [BENNETT_RECORDING]: [
-        BENNETT,
+        BENNETT_FUTURE__SHARED,
         VIOLIN__SHARED
     ],
     [PROTESTER]: null,

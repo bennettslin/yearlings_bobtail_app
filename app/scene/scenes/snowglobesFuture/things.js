@@ -28,8 +28,8 @@ export default {
         },
         [SNOWGLOBE_FUTURE_CORD]: {
             yIndex: 1,
-            xPosition: 5.2,
-            zOffset: 7.05,
+            xPosition: 6.3,
+            zOffset: 6.9,
             scaleFactor: 0.5,
             rotate: 8
         },

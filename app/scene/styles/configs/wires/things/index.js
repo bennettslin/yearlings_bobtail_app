@@ -35,6 +35,7 @@ import {
     GHOST_ODIN_CLUB,
     GHOST_ODIN_DEMONSTRATION,
     OPAL_COUCH,
+    OPAL_COUCH_FUTURE,
     OPAL_GAZING,
     PEACOCK,
     PEAHEN,
@@ -62,6 +63,14 @@ const BUBBLE_DEFAULT = {
         { x: 0.25, y: 0.5 },
         { x: 0.75, y: 0.5 }
     ]
+}
+
+const OPAL_COUCH_CONFIG = {
+    wires: [
+        { x: 0.37, y: 0.18 },
+        { x: 0.62, y: 0.45 }
+    ],
+    placedFront: true
 }
 
 const WIRES_MAP = {
@@ -121,13 +130,8 @@ const WIRES_MAP = {
         [PUPPET_CHRISTOPHER_END]: {},
         [PUPPET_FATHER_END]: {},
         [PUPPET_MOTHER_END]: { x: 0.4 },
-        [OPAL_COUCH]: {
-            wires: [
-                { x: 0.37, y: 0.18 },
-                { x: 0.62, y: 0.45 }
-            ],
-            placedFront: true
-        },
+        [OPAL_COUCH]: OPAL_COUCH_CONFIG,
+        [OPAL_COUCH_FUTURE]: OPAL_COUCH_CONFIG,
         [OPAL_GAZING]: {
             wires: [
                 { x: 0.27, y: 0.47 },

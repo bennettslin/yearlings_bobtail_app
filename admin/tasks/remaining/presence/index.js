@@ -19,8 +19,8 @@ export default [
     },
     {
         taskName: `Past colours for Bennett and Odin. Also, past, present, and future colours for Uncanny Valley actors.`,
-        workedHours: 0,
-        neededHours: 2
+        workedHours: 3,
+        neededHours: 4
     },
     {
         taskName: `Make ocean bottom near more distant.`,

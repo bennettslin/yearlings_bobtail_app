@@ -1,6 +1,7 @@
 export const ASLEEP_REACHING = 'asleepReaching'
 export const REACHING_REFLECTION = 'reachingReflection'
 export const PETTING_SEATED = 'pettingSeated'
+export const PETTING_SEATED_PRESENT = 'pettingSeatedPresent'
 export const PETTING_STANDING = 'pettingStanding'
 export const SIFTING_TCHOTCHKES = 'siftingTchotchkes'
 export const OPENING_DOOR = 'openingDoor'

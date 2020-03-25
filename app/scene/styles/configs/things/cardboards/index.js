@@ -42,19 +42,19 @@ import {
     TINTIN_POSTER,
     VAN_NUYS_LOGO
 } from '../../../../../constants/scene/things/cardboards'
+import { MARA } from '../../../../../constants/scene/actors'
 import {
-    BENNETT,
-    CHRISTOPHER,
-    LIZ,
-    MARA,
-    MIRIAM
-} from '../../../../../constants/scene/actors'
-import {
+    ALL_PAST__SHARED,
     ALL_PEOPLE__SHARED,
-    ALL_CLOTHING__SHARED
+    BENNETT_PAST__SHARED,
+    BENNETT_PRESENT__SHARED,
+    CHRISTOPHER_PAST__SHARED,
+    BENNETT_FUTURE__SHARED,
+    LIZ_PRESENT__SHARED,
+    MIRIAM_FUTURE__SHARED
 } from '../../../actors'
 import {
-    ODIN__SHARED,
+    ODIN_PAST__SHARED,
     SEA_SERPENT__SHARED
 } from '../../../shared/animals'
 import { TAIWAN_LINENS__SHARED } from '../../../shared/furniture'
@@ -81,52 +81,52 @@ import {
 
 export default {
     [BENNETT_MAT]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
-        BENNETT,
+        BENNETT_PAST__SHARED,
         TAIWAN_LINENS__SHARED
     ],
     [BENNETT_ODIN_BUOY]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
-        BENNETT,
-        ODIN__SHARED,
+        BENNETT_PAST__SHARED,
+        ODIN_PAST__SHARED,
         TAIWAN_BUOY__SHARED
     ],
     [BENNETT_ODIN_DEPTHS]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
-        BENNETT,
-        ODIN__SHARED
+        BENNETT_PAST__SHARED,
+        ODIN_PAST__SHARED
     ],
     [BENNETT_ODIN_OCEAN_FLOOR]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
-        BENNETT,
-        ODIN__SHARED
+        BENNETT_PAST__SHARED,
+        ODIN_PAST__SHARED
     ],
     [BENNETT_ODIN_RICKSHAW]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED,
-        BENNETT,
-        ODIN__SHARED,
+        BENNETT_PAST__SHARED,
+        ODIN_PAST__SHARED,
         TAIWAN_RICKSHAW__SHARED
     ],
     [BENNETT_SHORE]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
-        BENNETT
+        BENNETT_PAST__SHARED
     ],
     [BENNETT_TAIWAN_GATE]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
-        BENNETT
+        BENNETT_PAST__SHARED
     ],
     [BENNETT_TAIWAN_STAIRS]: [
-        ALL_CLOTHING__SHARED,
+        ALL_PAST__SHARED,
         ALL_PEOPLE__SHARED,
-        BENNETT
+        BENNETT_PAST__SHARED
     ],
     [BLOOM_COUNTY_POSTER]: [
         ALL_PEOPLE__SHARED,
@@ -159,10 +159,10 @@ export default {
     [MARQUEE_FRAME]: null,
     [NAS_ALBUM]: ALL_PEOPLE__SHARED,
     [NIRVANA_POSTER]: ALL_PEOPLE__SHARED,
-    [ODIN_MAT]: ODIN__SHARED,
-    [ODIN_SHORE]: ODIN__SHARED,
-    [ODIN_TAIWAN_GATE]: ODIN__SHARED,
-    [ODIN_TAIWAN_STAIRS]: ODIN__SHARED,
+    [ODIN_MAT]: ODIN_PAST__SHARED,
+    [ODIN_SHORE]: ODIN_PAST__SHARED,
+    [ODIN_TAIWAN_GATE]: ODIN_PAST__SHARED,
+    [ODIN_TAIWAN_STAIRS]: ODIN_PAST__SHARED,
     [PAINTING]: null,
     [DOGS_ROCKET]: null,
     [POLICE_ALBUM]: null,
@@ -172,27 +172,27 @@ export default {
     [SEA_SERPENT_RIGHT]: SEA_SERPENT__SHARED,
     [SNOWGLOBE_FUTURE_CORD]: [
         SNOWGLOBE__SHARED,
-        BENNETT,
+        BENNETT_FUTURE__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [SNOWGLOBE_FUTURE_REATTA]: [
         REATTA__SHARED,
         SNOWGLOBE__SHARED,
-        BENNETT,
-        MIRIAM,
+        BENNETT_FUTURE__SHARED,
+        MIRIAM_FUTURE__SHARED,
         ALL_PEOPLE__SHARED,
         ALL_VEHICLES__SHARED
     ],
     [SNOWGLOBE_PAST]: [
         SNOWGLOBE__SHARED,
-        BENNETT,
-        CHRISTOPHER,
+        BENNETT_PAST__SHARED,
+        CHRISTOPHER_PAST__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [SNOWGLOBE_PRESENT]: [
         SNOWGLOBE__SHARED,
-        BENNETT,
-        LIZ,
+        BENNETT_PRESENT__SHARED,
+        LIZ_PRESENT__SHARED,
         ALL_PEOPLE__SHARED
     ],
     [SNOWGLOBE_SMALL]: SNOWGLOBE__SHARED,
