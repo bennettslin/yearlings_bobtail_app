@@ -14,8 +14,8 @@ export default {
     [CARDBOARD]: {
         [BENNETT_ODIN_BUOY]: {
             yIndex: 1,
-            xPosition: 9,
-            scaleFactor: 0.2
+            xPosition: 8,
+            scaleFactor: 0.15
         }
     },
     [CUTOUT]: {

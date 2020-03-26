@@ -64,7 +64,7 @@ const HSLA_MAP = {
     [OCEAN_COLOUR]: { h: 204, s: 51, l: 43 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 61 },
     /* K. */
-    [SAND_COLOUR]: { h: 60, s: 30, l: 74 },
+    [SAND_COLOUR]: { h: 60, s: 30, l: 64 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* C. */
     [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },

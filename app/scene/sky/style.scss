@@ -110,15 +110,12 @@
 
 // Odin
 .Season__oceanTop {
-    background: linear-gradient(
-        hsl(206, 78%, 50%),
-        hsl(50, 56%, 90%)
-    );
+    background: hsl($hue__ocean, 70%, 40%);
 }
 .Season__oceanSide {
     background: linear-gradient(
-        hsl(206, 78%, 50%),
-        hsl(50, 56%, 90%)
+        hsl($hue__ocean, 70%, 50%),
+        hsl($hue__ocean, 70%, 30%)
     );
 }
 

@@ -23,31 +23,6 @@ export default [
         neededHours: 4
     },
     {
-        taskName: `Make ocean bottom near more distant.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Make Bennett and Odin more distant for certain scenes.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Different colours for houses and buildings.`,
-        workedHours: 3,
-        neededHours: 4
-    },
-    {
-        taskName: `Ocean waves panel.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Colour ocean skies.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Figure out Cremated scenes with convertible panel.`,
         workedHours: 0,
         neededHours: 2

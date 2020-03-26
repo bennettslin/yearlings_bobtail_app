@@ -38,5 +38,10 @@ export default [
         taskName: `Milk crates under keyboard. Or just do cubes?`,
         workedHours: 0,
         neededHours: 1
+    },
+    {
+        taskName: `Ocean waves panel.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

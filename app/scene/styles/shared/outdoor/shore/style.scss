@@ -1,4 +1,4 @@
 .shore#{$suffix} {
-    .sand { fill: hsl(69, 47%, 87%); }
-    .water { fill: hsl(216, 53%, 62%); }
+    .sand { fill: hsl(60, 30%, 64%); }
+    .water { fill: hsl($hue__ocean, 51%, 43%); }
 }

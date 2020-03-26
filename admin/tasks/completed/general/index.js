@@ -5411,5 +5411,20 @@ export default [
         taskName: `Wires on Odin ocean presences.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Make Bennett and Odin more distant for certain scenes.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Colour ocean skies.`,
+        workedHours: 1,
+        neededHours: 1
+    },
+    {
+        taskName: `Different colours for houses and buildings.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

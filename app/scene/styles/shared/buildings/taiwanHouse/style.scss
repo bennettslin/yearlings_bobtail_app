@@ -8,8 +8,12 @@
     .palaceRoofFront { fill: hsl(50, 28%, 32%); }
     .palaceRoofTrimBelow { fill: hsl(49, 27%, 37%); }
     .palaceRoofTrimAbove { fill: hsl(49, 29%, 41%); }
-    .wallSide { fill: hsl(52, 17%, 56%); }
-    .wallFront { fill: hsl(50, 24%, 64%); }
+
+    .wallLowSide { fill: hsl(35, 15%, 56%); }
+    .wallLowFront { fill: hsl(35, 22%, 64%); }
+    .wallHighSide { fill: hsl(45, 15%, 50%); }
+    .wallHighFront { fill: hsl(45, 22%, 58%); }
+
     .trimFront { fill: hsl(39, 23%, 37%); }
     .trimSide { fill: hsl(40, 28%, 31%); }
     .slit { fill: hsl(0, 0%, 27%); }

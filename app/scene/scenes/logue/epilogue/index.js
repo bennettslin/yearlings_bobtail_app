@@ -58,8 +58,7 @@ export default {
     [MIRIAM]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 10.5,
-            flipHorizontal: true
+            xPosition: 10.5
         }
     },
     [CATHERINE]: {

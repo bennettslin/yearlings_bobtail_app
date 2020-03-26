@@ -29,7 +29,10 @@ import {
     SKETCHBOOK__SHARED
 } from '../../../shared/paper'
 import { DOLLAR__SHARED } from '../../../shared/print'
-import { TAIWAN_RICKSHAW__SHARED } from '../../../shared/taiwan'
+import {
+    TAIWAN_BUOY__SHARED,
+    TAIWAN_RICKSHAW__SHARED
+} from '../../../shared/taiwan'
 import { ALL_VEHICLES__SHARED } from '../../../shared/vehicles'
 
 export default {
@@ -45,7 +48,7 @@ export default {
         TAIWAN_RICKSHAW__SHARED
     ],
     [SHORE]: null,
-    [BUOY]: null,
+    [BUOY]: TAIWAN_BUOY__SHARED,
     [OCEAN_FLOOR]: null,
     [FEIGNING_SICK]: [
         DOLLAR__SHARED,

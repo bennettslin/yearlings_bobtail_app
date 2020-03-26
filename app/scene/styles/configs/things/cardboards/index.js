@@ -60,7 +60,8 @@ import {
 import { TAIWAN_LINENS__SHARED } from '../../../shared/furniture'
 import {
     FOLIAGE__SHARED,
-    MOUNTAIN__SHARED
+    MOUNTAIN__SHARED,
+    SHORE__SHARED
 } from '../../../shared/outdoor'
 import {
     POSTER_GLADIATOR__SHARED,
@@ -91,6 +92,7 @@ export default {
         ALL_PEOPLE__SHARED,
         BENNETT_PAST__SHARED,
         ODIN_PAST__SHARED,
+        SHORE__SHARED,
         TAIWAN_BUOY__SHARED
     ],
     [BENNETT_ODIN_DEPTHS]: [

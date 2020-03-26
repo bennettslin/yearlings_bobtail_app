@@ -104,8 +104,7 @@ export default {
         [TAIWAN_STAIRS_BACKDROP]: {
             xPosition: 4.5,
             zOffset: 3,
-            scaleFactor: 0.45,
-            flipHorizontal: true
+            scaleFactor: 0.45
         },
         [VALLEY_PANORAMA_BACKDROP]: {
             scaleFactor: 0.65,

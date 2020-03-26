@@ -12,14 +12,14 @@ export default {
     [CARDBOARD]: {
         [BENNETT_TAIWAN_GATE]: {
             yIndex: 2,
-            xPosition: 5,
-            scaleFactor: 0.2,
-            zOffset: 0.875
+            xPosition: 4.75,
+            scaleFactor: 0.25,
+            zOffset: 0.8
         },
         [ODIN_TAIWAN_GATE]: {
             yIndex: 1,
-            xPosition: 6,
-            scaleFactor: 0.2
+            xPosition: 6.25,
+            scaleFactor: 0.25
         }
     },
     [DOOR]: {

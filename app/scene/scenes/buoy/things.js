@@ -10,7 +10,7 @@ export default {
         [BENNETT_ODIN_DEPTHS]: {
             yIndex: 0,
             xPosition: 2.5,
-            scaleFactor: 0.2,
+            scaleFactor: 0.175,
             zOffset: 2.5
         },
         [SEA_SERPENT_LEFT]: {
