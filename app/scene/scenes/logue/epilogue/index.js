@@ -21,8 +21,8 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from 'constants/scene/actors'
-import { EPILOGUE } from 'constants/scene/actors/songs'
+} from '../../../../constants/scene/actors'
+import { EPILOGUE } from '../../../../constants/scene/actors/songs'
 
 export default {
     [BENNETTS_CHRISTOPHER_LIZ]: {

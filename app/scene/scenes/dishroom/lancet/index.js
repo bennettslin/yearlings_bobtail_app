@@ -1,8 +1,8 @@
 import {
     BENNETT,
     LIZ
-} from 'constants/scene/actors'
-import { DISHROOM_LANCET } from 'constants/scene/actors/songs'
+} from '../../../../constants/scene/actors'
+import { DISHROOM_LANCET } from '../../../../constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

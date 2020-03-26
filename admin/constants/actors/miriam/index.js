@@ -3,27 +3,27 @@ import {
     MIRIAM_BENNETT,
     MIRIAM_STEPHANIE,
     MIRIAM_TRISTAN
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     INFANT_CURIOUS,
     INFANT_NURSING,
     PERFUMING,
     TENNIS,
     REVERSING
-} from 'constants/scene/actors/miriam'
+} from '../../../../app/constants/scene/actors/miriam'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF,
     COWGIRL,
     BLOWJOB
-} from 'constants/scene/actors/miriamBennett'
-import { MISCHIEVOUS_BANJO } from 'constants/scene/actors/miriamStephanie'
-import { NOOGIE } from 'constants/scene/actors/miriamTristan'
+} from '../../../../app/constants/scene/actors/miriamBennett'
+import { MISCHIEVOUS_BANJO } from '../../../../app/constants/scene/actors/miriamStephanie'
+import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
 import {
     GREETING,
     EPILOGUE,
     GOPI
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

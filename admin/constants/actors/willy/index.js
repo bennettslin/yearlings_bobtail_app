@@ -2,17 +2,17 @@ import {
     WILLY,
     CHRISTOPHER_BENNETT_WILLY,
     HOWIE_WILLY
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     COLLECTING,
     DUCKING,
     CROSSING_GUARD
-} from 'constants/scene/actors/willy'
-import { REASSURING_ENCHANTED } from 'constants/scene/actors/christopherBennettWilly'
+} from '../../../../app/constants/scene/actors/willy'
+import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import {
     GANGBANGER,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

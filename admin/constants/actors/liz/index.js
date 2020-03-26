@@ -6,7 +6,7 @@ import {
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION,
@@ -18,7 +18,7 @@ import {
     DEFENDING,
     NOT_HUNGRY,
     ASLEEP_COUCH
-} from 'constants/scene/actors/liz'
+} from '../../../../app/constants/scene/actors/liz'
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -35,13 +35,13 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from 'constants/scene/actors/bennettLiz'
+} from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION
-} from 'constants/scene/actors/khariLiz'
+} from '../../../../app/constants/scene/actors/khariLiz'
 import {
     DATE_ENDING,
     MUSEUM,
@@ -54,7 +54,7 @@ import {
     LEAVING_CRUMBLED,
     EL_TORITO,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

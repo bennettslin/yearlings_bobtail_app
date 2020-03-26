@@ -1,12 +1,12 @@
 import {
     TOMER,
     AMY_NESTOR_TOMER
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     SHANE_BUYING,
     SHANE_SPILLING
-} from 'constants/scene/actors/tomer'
-import { OFFICER } from 'constants/scene/actors/amyNestorTomer'
+} from '../../../../app/constants/scene/actors/tomer'
+import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
 import {
     GANGBANGER,
     ABBEY_ROAD,
@@ -15,7 +15,7 @@ import {
     CEMETERY,
     STATION_WAGON,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

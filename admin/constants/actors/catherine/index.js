@@ -1,15 +1,15 @@
 import {
     CATHERINE
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     WEEPING,
     QUIPPING,
     PUZZLED
-} from 'constants/scene/actors/catherine'
+} from '../../../../app/constants/scene/actors/catherine'
 import {
     EPILOGUE,
     GOPI
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

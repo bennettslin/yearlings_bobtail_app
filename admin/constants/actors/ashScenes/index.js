@@ -3,14 +3,14 @@ import {
     BENNETT,
     CATHERINE,
     WADE
-} from 'constants/scene/actors'
-import { SMOKER } from 'constants/scene/actors/amy'
+} from '../../../../app/constants/scene/actors'
+import { SMOKER } from '../../../../app/constants/scene/actors/amy'
 import {
     CATHOLIC_IDEA,
     PIOUS
-} from 'constants/scene/actors/bennett'
-import { PUZZLED } from 'constants/scene/actors/catherine'
-import { CATHOLIC_GUY } from 'constants/scene/actors/wade'
+} from '../../../../app/constants/scene/actors/bennett'
+import { PUZZLED } from '../../../../app/constants/scene/actors/catherine'
+import { CATHOLIC_GUY } from '../../../../app/constants/scene/actors/wade'
 
 const INSTANCES = [
     {

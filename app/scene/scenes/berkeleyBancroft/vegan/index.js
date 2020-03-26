@@ -1,9 +1,9 @@
 import {
     BENNETT,
     KHARI_LIZ
-} from 'constants/scene/actors'
-import { CAMPUS_ASHAMED } from 'constants/scene/actors/bennett'
-import { PROTECTIVE_CONCERNED } from 'constants/scene/actors/khariLiz'
+} from '../../../../constants/scene/actors'
+import { CAMPUS_ASHAMED } from '../../../../constants/scene/actors/bennett'
+import { PROTECTIVE_CONCERNED } from '../../../../constants/scene/actors/khariLiz'
 
 export default {
     [BENNETT]: {

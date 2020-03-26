@@ -3,15 +3,15 @@ import {
     LIZ,
     BENNETT_REFLECTION,
     LIZ_REFLECTION
-} from 'constants/scene/actors'
+} from '../../../../constants/scene/actors'
 import {
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from 'constants/scene/actors/bennett'
+} from '../../../../constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from 'constants/scene/actors/liz'
+} from '../../../../constants/scene/actors/liz'
 
 export default {
     [BENNETT]: {

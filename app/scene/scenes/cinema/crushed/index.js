@@ -1,9 +1,9 @@
 import {
     BENNETT,
     MIRIAM
-} from 'constants/scene/actors'
-import { HOPELESSLY_CRUSHED } from 'constants/scene/actors/bennett'
-import { INFANT_CURIOUS } from 'constants/scene/actors/miriam'
+} from '../../../../constants/scene/actors'
+import { HOPELESSLY_CRUSHED } from '../../../../constants/scene/actors/bennett'
+import { INFANT_CURIOUS } from '../../../../constants/scene/actors/miriam'
 
 export default {
     [BENNETT]: {

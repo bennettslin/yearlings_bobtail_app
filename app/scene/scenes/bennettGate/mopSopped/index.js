@@ -1,9 +1,9 @@
 import {
     BENNETT,
     NESTOR
-} from 'constants/scene/actors'
-import { MOP_SOPPED } from 'constants/scene/actors/bennett'
-import { JOGGER } from 'constants/scene/actors/nestor'
+} from '../../../../constants/scene/actors'
+import { MOP_SOPPED } from '../../../../constants/scene/actors/bennett'
+import { JOGGER } from '../../../../constants/scene/actors/nestor'
 
 export default {
     [BENNETT]: {

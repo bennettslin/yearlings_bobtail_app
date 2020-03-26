@@ -1,9 +1,9 @@
 import {
     PRETEEN_BENNETT,
     MOTHER
-} from 'constants/scene/actors'
-import { COMFORTING } from 'constants/scene/actors/mother'
-import { FEARFUL } from 'constants/scene/actors/preteenBennett'
+} from '../../../../constants/scene/actors'
+import { COMFORTING } from '../../../../constants/scene/actors/mother'
+import { FEARFUL } from '../../../../constants/scene/actors/preteenBennett'
 
 export default {
     [PRETEEN_BENNETT]: {

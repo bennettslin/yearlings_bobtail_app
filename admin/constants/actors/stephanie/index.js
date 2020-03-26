@@ -3,24 +3,24 @@ import {
     AMY_STEPHANIE,
     BENNETT_STEPHANIE,
     MIRIAM_STEPHANIE
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     BENNETT_KEYBOARD,
     FLAPPER,
     BENNETT_DEFIANT,
     BENNETT_RECORDING
-} from 'constants/scene/actors/stephanie'
-import { SQUEEZING } from 'constants/scene/actors/amyStephanie'
+} from '../../../../app/constants/scene/actors/stephanie'
+import { SQUEEZING } from '../../../../app/constants/scene/actors/amyStephanie'
 import {
     HORSING,
     DRYING_TEARS
-} from 'constants/scene/actors/bennettStephanie'
-import { MISCHIEVOUS_BANJO } from 'constants/scene/actors/miriamStephanie'
+} from '../../../../app/constants/scene/actors/bennettStephanie'
+import { MISCHIEVOUS_BANJO } from '../../../../app/constants/scene/actors/miriamStephanie'
 import {
     MINGLING,
     EPILOGUE,
     PROTESTER
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

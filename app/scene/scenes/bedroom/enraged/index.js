@@ -2,10 +2,10 @@ import {
     PRETEEN_BENNETT,
     FATHER,
     CHRISTOPHER
-} from 'constants/scene/actors'
-import { SOBBING } from 'constants/scene/actors/christopher'
-import { ROARING } from 'constants/scene/actors/father'
-import { ENRAGED } from 'constants/scene/actors/preteenBennett'
+} from '../../../../constants/scene/actors'
+import { SOBBING } from '../../../../constants/scene/actors/christopher'
+import { ROARING } from '../../../../constants/scene/actors/father'
+import { ENRAGED } from '../../../../constants/scene/actors/preteenBennett'
 
 export default {
     [PRETEEN_BENNETT]: {

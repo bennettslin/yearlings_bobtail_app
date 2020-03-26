@@ -1,7 +1,7 @@
 import {
     MARA,
     JACOB_MARA
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     FLIRTING,
     EATING,
@@ -9,7 +9,7 @@ import {
     WAITING,
     GOPI,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

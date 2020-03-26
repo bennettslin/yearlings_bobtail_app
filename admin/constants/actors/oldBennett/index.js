@@ -1,11 +1,11 @@
 import {
     OLD_BENNETT,
     BENNETTS_CHRISTOPHER_LIZ
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     PROLOGUE,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

@@ -1,16 +1,16 @@
 import {
     TRISTAN,
     MIRIAM_TRISTAN
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     PRINCIPAL,
     PUNCHING
-} from 'constants/scene/actors/tristan'
-import { NOOGIE } from 'constants/scene/actors/miriamTristan'
+} from '../../../../app/constants/scene/actors/tristan'
+import { NOOGIE } from '../../../../app/constants/scene/actors/miriamTristan'
 import {
     GREETING,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

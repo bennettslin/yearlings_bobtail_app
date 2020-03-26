@@ -1,19 +1,19 @@
 import {
     ESTHER,
     ESTHER_MOTHER
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     CURIOUS,
     SNICKERING
-} from 'constants/scene/actors/esther'
+} from '../../../../app/constants/scene/actors/esther'
 import {
     HURT_CONSOLING,
     SOBBING_SHIELDING
-} from 'constants/scene/actors/estherMother'
+} from '../../../../app/constants/scene/actors/estherMother'
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

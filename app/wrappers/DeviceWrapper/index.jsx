@@ -5,9 +5,9 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
+import { DEVICE_WIDTH_CONFIGS } from '../../constants/responsive/deviceWidth'
 
-import { getIsTabletWidth } from 'helpers/responsive'
+import { getIsTabletWidth } from '../../helpers/responsive'
 
 class DeviceWrapper extends PureComponent {
 

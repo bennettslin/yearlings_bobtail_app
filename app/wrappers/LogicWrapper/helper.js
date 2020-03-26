@@ -1,4 +1,4 @@
-import { getSongVerseConfigs } from 'album/api/verses'
+import { getSongVerseConfigs } from '../../album/api/verses'
 
 export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
 

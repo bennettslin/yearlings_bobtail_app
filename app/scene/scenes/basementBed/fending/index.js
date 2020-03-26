@@ -2,10 +2,10 @@ import {
     ESTHER_MOTHER,
     FATHER,
     MIRIAM_BENNETT
-} from 'constants/scene/actors'
-import { SOBBING_SHIELDING } from 'constants/scene/actors/estherMother'
-import { REELING } from 'constants/scene/actors/father'
-import { FENDING_OFF } from 'constants/scene/actors/miriamBennett'
+} from '../../../../constants/scene/actors'
+import { SOBBING_SHIELDING } from '../../../../constants/scene/actors/estherMother'
+import { REELING } from '../../../../constants/scene/actors/father'
+import { FENDING_OFF } from '../../../../constants/scene/actors/miriamBennett'
 
 export default {
     [ESTHER_MOTHER]: {

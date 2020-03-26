@@ -1,12 +1,12 @@
 import {
     ANA,
     ANA_HOWIE
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     SQUATTING,
     CHUCKLING,
     SMIRKING
-} from 'constants/scene/actors/ana'
+} from '../../../../app/constants/scene/actors/ana'
 import {
     EATING,
     ABBEY_ROAD,
@@ -17,7 +17,7 @@ import {
     PERFORMING,
     WAITING,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

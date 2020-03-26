@@ -7,7 +7,7 @@ import {
     BENNETTS_CHRISTOPHER_LIZ,
     BENNETT_LIZ_REFLECTION,
     BENNETT_REFLECTION
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     BREAKUP_DEJECTED,
     SOLICITING_OPINION,
@@ -38,7 +38,7 @@ import {
     ALLEY,
     BROKEN_HEARTED,
     DEMONSTRATION
-} from 'constants/scene/actors/bennett'
+} from '../../../../app/constants/scene/actors/bennett'
 import {
     GINGERBREAD_PRISON,
     CHEEK_UNVEILED,
@@ -55,17 +55,17 @@ import {
     GETTING_DARK,
     CLIFF,
     FINAL_DREAM
-} from 'constants/scene/actors/bennettLiz'
+} from '../../../../app/constants/scene/actors/bennettLiz'
 import {
     HORSING,
     DRYING_TEARS
-} from 'constants/scene/actors/bennettStephanie'
+} from '../../../../app/constants/scene/actors/bennettStephanie'
 import {
     ASLEEP_FEARFUL,
     FENDING_OFF,
     COWGIRL,
     BLOWJOB
-} from 'constants/scene/actors/miriamBennett'
+} from '../../../../app/constants/scene/actors/miriamBennett'
 import {
     EATING,
     DATE_ENDING,
@@ -91,7 +91,7 @@ import {
     FUTURE,
     EL_TORITO,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

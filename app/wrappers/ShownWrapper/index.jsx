@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { SHOWN } from 'constants/options'
+import { SHOWN } from '../../constants/options'
 
 class ShownWrapper extends PureComponent {
 

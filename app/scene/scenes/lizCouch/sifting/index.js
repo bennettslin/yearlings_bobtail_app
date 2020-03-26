@@ -1,5 +1,5 @@
-import { LIZ } from 'constants/scene/actors'
-import { SIFTING_TCHOTCHKES } from 'constants/scene/actors/liz'
+import { LIZ } from '../../../../constants/scene/actors'
+import { SIFTING_TCHOTCHKES } from '../../../../constants/scene/actors/liz'
 
 export default {
     [LIZ]: {

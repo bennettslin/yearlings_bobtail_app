@@ -1,9 +1,9 @@
 import {
     BENNETT,
     CATHERINE
-} from 'constants/scene/actors'
-import { PIOUS } from 'constants/scene/actors/bennett'
-import { PUZZLED } from 'constants/scene/actors/catherine'
+} from '../../../../constants/scene/actors'
+import { PIOUS } from '../../../../constants/scene/actors/bennett'
+import { PUZZLED } from '../../../../constants/scene/actors/catherine'
 
 export default {
     [BENNETT]: {

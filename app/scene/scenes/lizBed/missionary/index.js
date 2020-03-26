@@ -1,11 +1,11 @@
 import {
     BENNETT_LIZ,
     BENNETT_LIZ_REFLECTION
-} from 'constants/scene/actors'
+} from '../../../../constants/scene/actors'
 import {
     MISSIONARY,
     MISSIONARY_REFLECTION
-} from 'constants/scene/actors/bennettLiz'
+} from '../../../../constants/scene/actors/bennettLiz'
 
 export default {
     [BENNETT_LIZ]: {

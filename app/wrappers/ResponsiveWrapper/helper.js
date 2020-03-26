@@ -1,4 +1,4 @@
-import { EAR_COLUMN_KEYS } from 'constants/lyrics'
+import { EAR_COLUMN_KEYS } from '../../constants/lyrics'
 
 export const getSingleShownEarColumnKey = ({
     isEarShown,

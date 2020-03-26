@@ -1,18 +1,18 @@
 import {
     FATHER,
     BENNETT_FATHER
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     ROARING,
     ACCUSATORY,
     REELING
-} from 'constants/scene/actors/father'
+} from '../../../../app/constants/scene/actors/father'
 import {
     PAST,
     PRESENT,
     FUTURE,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

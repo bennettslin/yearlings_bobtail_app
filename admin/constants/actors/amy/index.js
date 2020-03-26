@@ -2,19 +2,19 @@ import {
     AMY,
     AMY_NESTOR_TOMER,
     AMY_STEPHANIE
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     SMOKER,
     DOCTOR
-} from 'constants/scene/actors/amy'
-import { OFFICER } from 'constants/scene/actors/amyNestorTomer'
-import { SQUEEZING } from 'constants/scene/actors/amyStephanie'
+} from '../../../../app/constants/scene/actors/amy'
+import { OFFICER } from '../../../../app/constants/scene/actors/amyNestorTomer'
+import { SQUEEZING } from '../../../../app/constants/scene/actors/amyStephanie'
 import {
     FLIRTING,
     MINGLING,
     EPILOGUE,
     PROTESTER
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

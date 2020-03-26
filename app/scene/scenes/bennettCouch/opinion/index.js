@@ -1,9 +1,9 @@
 import {
     BENNETT,
     CATHERINE
-} from 'constants/scene/actors'
-import { SOLICITING_OPINION } from 'constants/scene/actors/bennett'
-import { QUIPPING } from 'constants/scene/actors/catherine'
+} from '../../../../constants/scene/actors'
+import { SOLICITING_OPINION } from '../../../../constants/scene/actors/bennett'
+import { QUIPPING } from '../../../../constants/scene/actors/catherine'
 
 export default {
     [BENNETT]: {

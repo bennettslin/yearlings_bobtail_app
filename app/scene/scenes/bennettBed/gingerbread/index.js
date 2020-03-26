@@ -1,5 +1,5 @@
-import { BENNETT_LIZ } from 'constants/scene/actors'
-import { GINGERBREAD_PRISON } from 'constants/scene/actors/bennettLiz'
+import { BENNETT_LIZ } from '../../../../constants/scene/actors'
+import { GINGERBREAD_PRISON } from '../../../../constants/scene/actors/bennettLiz'
 
 export default {
     [BENNETT_LIZ]: {

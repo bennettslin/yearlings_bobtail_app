@@ -1,10 +1,10 @@
-import { ANDREW } from 'constants/scene/actors'
+import { ANDREW } from '../../../../app/constants/scene/actors'
 import {
     FEIGNING_FEAR,
     THROWING,
     NOODLING
-} from 'constants/scene/actors/andrew'
-import { EPILOGUE } from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/andrew'
+import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

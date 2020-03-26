@@ -1,5 +1,5 @@
-import { BENNETT } from 'constants/scene/actors'
-import { WAITING_ROOM_ASLEEP } from 'constants/scene/actors/bennett'
+import { BENNETT } from '../../../../constants/scene/actors'
+import { WAITING_ROOM_ASLEEP } from '../../../../constants/scene/actors/bennett'
 
 export default {
     [BENNETT]: {

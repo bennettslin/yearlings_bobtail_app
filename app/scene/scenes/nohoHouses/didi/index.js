@@ -2,10 +2,10 @@ import {
     YOUNG_BENNETT,
     ANITA,
     ESTHER
-} from 'constants/scene/actors'
-import { EXASPERATED } from 'constants/scene/actors/anita'
-import { CURIOUS } from 'constants/scene/actors/esther'
-import { PANICKED } from 'constants/scene/actors/youngBennett'
+} from '../../../../constants/scene/actors'
+import { EXASPERATED } from '../../../../constants/scene/actors/anita'
+import { CURIOUS } from '../../../../constants/scene/actors/esther'
+import { PANICKED } from '../../../../constants/scene/actors/youngBennett'
 
 export default {
     [YOUNG_BENNETT]: {

@@ -4,11 +4,11 @@ import {
     JACOB,
     ANA,
     TOMER
-} from 'constants/scene/actors'
-import { FLIRTING } from 'constants/scene/actors/songs'
-import { SQUATTING } from 'constants/scene/actors/ana'
-import { DISTRACTED } from 'constants/scene/actors/bennett'
-import { SHANE_BUYING } from 'constants/scene/actors/tomer'
+} from '../../../../constants/scene/actors'
+import { FLIRTING } from '../../../../constants/scene/actors/songs'
+import { SQUATTING } from '../../../../constants/scene/actors/ana'
+import { DISTRACTED } from '../../../../constants/scene/actors/bennett'
+import { SHANE_BUYING } from '../../../../constants/scene/actors/tomer'
 
 export default {
     [BENNETT]: {

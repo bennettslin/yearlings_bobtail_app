@@ -2,11 +2,11 @@ import {
     HOWIE,
     HOWIE_WILLY,
     ANA_HOWIE
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'constants/scene/actors/howie'
+} from '../../../../app/constants/scene/actors/howie'
 import {
     GANGBANGER,
     ABBEY_ROAD,
@@ -16,7 +16,7 @@ import {
     STATION_WAGON,
     ATTIC,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

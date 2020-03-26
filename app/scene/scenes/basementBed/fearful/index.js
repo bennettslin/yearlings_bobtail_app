@@ -2,11 +2,11 @@ import {
     ESTHER_MOTHER,
     FATHER,
     MIRIAM_BENNETT
-} from 'constants/scene/actors'
-import { ASLEEP } from 'constants/scene/actors/songs'
-import { ASLEEP_FEARFUL } from 'constants/scene/actors/miriamBennett'
-import { HURT_CONSOLING } from 'constants/scene/actors/estherMother'
-import { ACCUSATORY } from 'constants/scene/actors/father'
+} from '../../../../constants/scene/actors'
+import { ASLEEP } from '../../../../constants/scene/actors/songs'
+import { ASLEEP_FEARFUL } from '../../../../constants/scene/actors/miriamBennett'
+import { HURT_CONSOLING } from '../../../../constants/scene/actors/estherMother'
+import { ACCUSATORY } from '../../../../constants/scene/actors/father'
 
 export default {
     [ESTHER_MOTHER]: {

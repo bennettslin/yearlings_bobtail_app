@@ -2,20 +2,20 @@ import {
     KHARI,
     KHARI_LIZ,
     KHARI_LIZ_REFLECTION
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     DOUBLE_ALBERT,
     ARRIVED,
     JUDGMENTAL,
     CONCERNED
-} from 'constants/scene/actors/khari'
+} from '../../../../app/constants/scene/actors/khari'
 import {
     JOKING_LAUGHING,
     PROTECTIVE_CONCERNED,
     CARESS,
     CARESS_REFLECTION
-} from 'constants/scene/actors/khariLiz'
-import { EPILOGUE } from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/khariLiz'
+import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

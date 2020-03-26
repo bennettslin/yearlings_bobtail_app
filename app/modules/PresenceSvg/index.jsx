@@ -1,18 +1,18 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import InlineSvg from 'modules/InlineSvg'
-import Wires from 'modules/Wires'
+import InlineSvg from '../../modules/InlineSvg'
+import Wires from '../../modules/Wires'
 
 import {
     convertPresenceKeyToTitle,
     convertPresenceKeyToClassName,
     getSharedClassNames
-} from 'helpers/format'
+} from '../../helpers/format'
 import { getWirePlacedFront } from '../../scene/styles/configs/wires'
 import { getSharedStyleForActor } from '../../scene/styles/configs/actors'
 import { getSharedStyleForThing } from '../../scene/styles/configs/things'
-import { getArrangementForPresence } from 'components/Presence/helper'
+import { getArrangementForPresence } from '../../components/Presence/helper'
 import { getXYForPresence } from './helper/position'
 import { getCompoundActorStyleIfNeeded } from './helper/sharedStyle'
 import {

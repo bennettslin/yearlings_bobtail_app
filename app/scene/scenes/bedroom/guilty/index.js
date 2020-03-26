@@ -1,5 +1,5 @@
-import { CHRISTOPHER_BENNETT } from 'constants/scene/actors'
-import { BLISSFUL_GUILTY } from 'constants/scene/actors/christopherBennett'
+import { CHRISTOPHER_BENNETT } from '../../../../constants/scene/actors'
+import { BLISSFUL_GUILTY } from '../../../../constants/scene/actors/christopherBennett'
 
 export default {
     [CHRISTOPHER_BENNETT]: {

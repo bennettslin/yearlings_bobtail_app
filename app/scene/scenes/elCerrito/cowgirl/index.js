@@ -1,5 +1,5 @@
-import { MIRIAM_BENNETT } from 'constants/scene/actors'
-import { COWGIRL } from 'constants/scene/actors/miriamBennett'
+import { MIRIAM_BENNETT } from '../../../../constants/scene/actors'
+import { COWGIRL } from '../../../../constants/scene/actors/miriamBennett'
 
 export default {
     [MIRIAM_BENNETT]: {

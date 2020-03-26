@@ -2,14 +2,14 @@ import {
     BRAD,
     BRAD_BENNETT,
     BRAD_SASHA
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     GESTURING,
     SNACKING
-} from 'constants/scene/actors/brad'
-import { TYING_TETHER } from 'constants/scene/actors/bradBennett'
-import { CHARMED_SCHOOLBUS } from 'constants/scene/actors/bradSasha'
-import { EPILOGUE } from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/brad'
+import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
+import { CHARMED_SCHOOLBUS } from '../../../../app/constants/scene/actors/bradSasha'
+import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

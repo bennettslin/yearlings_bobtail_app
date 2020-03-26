@@ -3,15 +3,15 @@ import {
     CHRISTOPHER_BENNETT,
     CHRISTOPHER_BENNETT_WILLY,
     BENNETTS_CHRISTOPHER_LIZ
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     TANTRUM,
     SOBBING,
     STARING
-} from 'constants/scene/actors/christopher'
-import { BLISSFUL_GUILTY } from 'constants/scene/actors/christopherBennett'
-import { REASSURING_ENCHANTED } from 'constants/scene/actors/christopherBennettWilly'
-import { EPILOGUE } from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/christopher'
+import { BLISSFUL_GUILTY } from '../../../../app/constants/scene/actors/christopherBennett'
+import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
+import { EPILOGUE } from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

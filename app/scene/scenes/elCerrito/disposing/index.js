@@ -1,9 +1,9 @@
 import {
     BENNETT,
     MIRIAM
-} from 'constants/scene/actors'
-import { DISPOSING_CONDOM } from 'constants/scene/actors/bennett'
-import { REVERSING } from 'constants/scene/actors/miriam'
+} from '../../../../constants/scene/actors'
+import { DISPOSING_CONDOM } from '../../../../constants/scene/actors/bennett'
+import { REVERSING } from '../../../../constants/scene/actors/miriam'
 
 export default {
     [BENNETT]: {

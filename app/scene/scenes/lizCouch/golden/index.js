@@ -1,5 +1,5 @@
-import { BENNETT_LIZ } from 'constants/scene/actors'
-import { AWKWARD_CONSOLATION } from 'constants/scene/actors/bennettLiz'
+import { BENNETT_LIZ } from '../../../../constants/scene/actors'
+import { AWKWARD_CONSOLATION } from '../../../../constants/scene/actors/bennettLiz'
 
 export default {
     [BENNETT_LIZ]: {

@@ -4,7 +4,7 @@ import {
     CHRISTOPHER_BENNETT,
     CHRISTOPHER_BENNETT_WILLY,
     SASHA_BENNETT
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     CAUTIOUS,
     ENRAGED,
@@ -22,18 +22,18 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH
-} from 'constants/scene/actors/preteenBennett'
-import { TYING_TETHER } from 'constants/scene/actors/bradBennett'
-import { BLISSFUL_GUILTY } from 'constants/scene/actors/christopherBennett'
-import { REASSURING_ENCHANTED } from 'constants/scene/actors/christopherBennettWilly'
+} from '../../../../app/constants/scene/actors/preteenBennett'
+import { TYING_TETHER } from '../../../../app/constants/scene/actors/bradBennett'
+import { BLISSFUL_GUILTY } from '../../../../app/constants/scene/actors/christopherBennett'
+import { REASSURING_ENCHANTED } from '../../../../app/constants/scene/actors/christopherBennettWilly'
 import {
     MERMAID,
     COMFORTING_HUMILIATED
-} from 'constants/scene/actors/sashaBennett'
+} from '../../../../app/constants/scene/actors/sashaBennett'
 import {
     ASLEEP,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

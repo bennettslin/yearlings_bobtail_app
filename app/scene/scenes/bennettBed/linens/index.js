@@ -1,8 +1,8 @@
 import {
     BENNETT,
     LIZ
-} from 'constants/scene/actors'
-import { RUMPLED_LINENS } from 'constants/scene/actors/songs'
+} from '../../../../constants/scene/actors'
+import { RUMPLED_LINENS } from '../../../../constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

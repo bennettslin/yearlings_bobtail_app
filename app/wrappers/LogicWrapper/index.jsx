@@ -6,7 +6,7 @@ import cx from 'classnames'
 import {
     getDotKeysFromBitNumber,
     getPrefixedDotLetterClassNames
-} from 'helpers/dot'
+} from '../../helpers/dot'
 import { getStanzaIndexForVerseIndex } from './helper'
 
 class LogicWrapper extends PureComponent {

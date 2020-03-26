@@ -6,12 +6,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Have eslint error on unresolved path.`,
-        resource: `https://www.npmjs.com/package/eslint-plugin-import`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Raise car seats.`,
         workedHours: 0,
         neededHours: 1

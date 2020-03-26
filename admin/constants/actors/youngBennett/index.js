@@ -1,17 +1,17 @@
 import {
     YOUNG_BENNETT,
     ANITA_BENNETT
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     PANICKED,
     FLUSTERED,
     BATHING,
     SINGING
-} from 'constants/scene/actors/youngBennett'
+} from '../../../../app/constants/scene/actors/youngBennett'
 import {
     YOUNG_CHILD,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {

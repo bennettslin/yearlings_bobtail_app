@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { PARENT_ACCESS_PREFIX } from 'constants/prefixes'
+import { PARENT_ACCESS_PREFIX } from '../../constants/prefixes'
 
 class PlayingWrapper extends PureComponent {
 

@@ -1,8 +1,8 @@
 import {
     BENNETT,
     LIZ
-} from 'constants/scene/actors'
-import { GATE_CODE } from 'constants/scene/actors/songs'
+} from '../../../../constants/scene/actors'
+import { GATE_CODE } from '../../../../constants/scene/actors/songs'
 
 export default {
     [BENNETT]: {

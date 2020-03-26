@@ -1,8 +1,8 @@
-import { LIZ } from 'constants/scene/actors'
+import { LIZ } from '../../../../constants/scene/actors'
 import {
     PETTING_SEATED,
     PETTING_SEATED_PRESENT
-} from 'constants/scene/actors/liz'
+} from '../../../../constants/scene/actors/liz'
 
 const PETTING_SEATED_CONFIG = {
     yIndex: 4,

@@ -1,9 +1,9 @@
 import {
     BENNETT,
     STEPHANIE
-} from 'constants/scene/actors'
-import { COUCH_READING } from 'constants/scene/actors/bennett'
-import { BENNETT_KEYBOARD } from 'constants/scene/actors/stephanie'
+} from '../../../../constants/scene/actors'
+import { COUCH_READING } from '../../../../constants/scene/actors/bennett'
+import { BENNETT_KEYBOARD } from '../../../../constants/scene/actors/stephanie'
 
 export default {
     [BENNETT]: {

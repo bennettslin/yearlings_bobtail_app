@@ -1,15 +1,15 @@
 import {
     WADE
-} from 'constants/scene/actors'
+} from '../../../../app/constants/scene/actors'
 import {
     CATHOLIC_GUY,
     WATCHING
-} from 'constants/scene/actors/wade'
+} from '../../../../app/constants/scene/actors/wade'
 import {
     MINGLING,
     EPILOGUE,
     PROTESTER
-} from 'constants/scene/actors/songs'
+} from '../../../../app/constants/scene/actors/songs'
 
 const INSTANCES = [
     {
