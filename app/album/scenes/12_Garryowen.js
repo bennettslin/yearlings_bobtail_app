@@ -76,9 +76,9 @@ import {
 } from '../../constants/scene/things/flats'
 import {
     VOLKSWAGEN,
-    WIDE_COUCH__BENNETT,
-    WIDE_ARMREST__BENNETT_LEFT,
-    WIDE_ARMREST__BENNETT_RIGHT,
+    WIDE_COUCH_BENNETT,
+    WIDE_ARMREST_BENNETT__LEFT,
+    WIDE_ARMREST_BENNETT__RIGHT,
     LIZ_COUCH
 } from '../../constants/scene/things/panels'
 
@@ -168,9 +168,9 @@ export default [
                 [BENNETT_RECORD_PLAYER]: true
             },
             [PANEL]: {
-                [WIDE_COUCH__BENNETT]: true,
-                [WIDE_ARMREST__BENNETT_LEFT]: true,
-                [WIDE_ARMREST__BENNETT_RIGHT]: true
+                [WIDE_COUCH_BENNETT]: true,
+                [WIDE_ARMREST_BENNETT__LEFT]: true,
+                [WIDE_ARMREST_BENNETT__RIGHT]: true
             }
         },
         cubes: BASEMENT_COUCH_KEY,

@@ -17,9 +17,9 @@ import {
     KEYBOARD
 } from '../../../constants/scene/things/fixtures'
 import {
-    WIDE_COUCH__BENNETT,
-    WIDE_ARMREST__BENNETT_LEFT,
-    WIDE_ARMREST__BENNETT_RIGHT
+    WIDE_COUCH_BENNETT,
+    WIDE_ARMREST_BENNETT__LEFT,
+    WIDE_ARMREST_BENNETT__RIGHT
 } from '../../../constants/scene/things/panels'
 
 export default {
@@ -35,17 +35,17 @@ export default {
         }
     },
     [PANEL]: {
-        [WIDE_COUCH__BENNETT]: {
+        [WIDE_COUCH_BENNETT]: {
             yIndex: 3,
             xPosition: 4,
             scaleFactor: 0.25
         },
-        [WIDE_ARMREST__BENNETT_LEFT]: {
+        [WIDE_ARMREST_BENNETT__LEFT]: {
             yIndex: 4,
             xPosition: 1.2,
             scaleFactor: 0.3
         },
-        [WIDE_ARMREST__BENNETT_RIGHT]: {
+        [WIDE_ARMREST_BENNETT__RIGHT]: {
             yIndex: 4,
             xPosition: 6.8,
             scaleFactor: 0.3,

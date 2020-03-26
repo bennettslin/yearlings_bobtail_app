@@ -9,9 +9,9 @@ import {
 import {
     SNOWGLOBE__LIZ_ALONE,
     SNOWGLOBE__BENNETT_MIRIAM,
-    WIDE_COUCH__MIRIAM,
-    WIDE_ARMREST__MIRIAM_LEFT,
-    WIDE_ARMREST__MIRIAM_RIGHT
+    WIDE_COUCH_MIRIAM,
+    WIDE_ARMREST_MIRIAM__LEFT,
+    WIDE_ARMREST_MIRIAM__RIGHT
 } from '../../../constants/scene/things/panels'
 
 export default {
@@ -42,17 +42,17 @@ export default {
             xPosition: 8,
             scaleFactor: 0.4
         },
-        [WIDE_COUCH__MIRIAM]: {
+        [WIDE_COUCH_MIRIAM]: {
             yIndex: 3,
             xPosition: 8,
             scaleFactor: 0.25
         },
-        [WIDE_ARMREST__MIRIAM_LEFT]: {
+        [WIDE_ARMREST_MIRIAM__LEFT]: {
             yIndex: 4,
             xPosition: 5.2,
             scaleFactor: 0.3
         },
-        [WIDE_ARMREST__MIRIAM_RIGHT]: {
+        [WIDE_ARMREST_MIRIAM__RIGHT]: {
             yIndex: 4,
             xPosition: 10.8,
             scaleFactor: 0.3,

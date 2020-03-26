@@ -90,9 +90,9 @@ import {
     BERKELEY_BUILDING_WIDE__CAMPANILE
 } from '../../constants/scene/things/flats'
 import {
-    WIDE_COUCH__BENNETT,
-    WIDE_ARMREST__BENNETT_LEFT,
-    WIDE_ARMREST__BENNETT_RIGHT
+    WIDE_COUCH_BENNETT,
+    WIDE_ARMREST_BENNETT__LEFT,
+    WIDE_ARMREST_BENNETT__RIGHT
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -157,9 +157,9 @@ export default [
                 [BENNETT_COUCH_LAMP]: true
             },
             [PANEL]: {
-                [WIDE_COUCH__BENNETT]: true,
-                [WIDE_ARMREST__BENNETT_LEFT]: true,
-                [WIDE_ARMREST__BENNETT_RIGHT]: true
+                [WIDE_COUCH_BENNETT]: true,
+                [WIDE_ARMREST_BENNETT__LEFT]: true,
+                [WIDE_ARMREST_BENNETT__RIGHT]: true
             }
         },
         cubes: BENNETT_COUCH_THOUGHT_KEY,

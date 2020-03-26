@@ -41,8 +41,10 @@ import {
     WAITING_ARMCHAIR,
     WAITING_ARMREST,
     WEDDING_PLATFORM,
-    WIDE_ARMREST,
-    WIDE_COUCH
+    WIDE_ARMREST_BENNETT,
+    WIDE_ARMREST_MIRIAM,
+    WIDE_COUCH_BENNETT,
+    WIDE_COUCH_MIRIAM
 } from '../../../../../constants/scene/things/panels'
 import { OCEAN_LIFE__SHARED } from '../../../shared/animals'
 import { WEDDING__SHARED } from '../../../shared/buildings'
@@ -141,6 +143,8 @@ export default {
         FOLIAGE__SHARED,
         WEDDING__SHARED
     ],
-    [WIDE_ARMREST]: null,
-    [WIDE_COUCH]: null
+    [WIDE_ARMREST_BENNETT]: null,
+    [WIDE_ARMREST_MIRIAM]: null,
+    [WIDE_COUCH_BENNETT]: null,
+    [WIDE_COUCH_MIRIAM]: null
 }

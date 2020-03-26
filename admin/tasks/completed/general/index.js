@@ -5431,5 +5431,10 @@ export default [
         taskName: `Shared fridge style.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Hook up past colours for Bennett and Odin. Also, past, present, and future colours for Uncanny Valley actors.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]
