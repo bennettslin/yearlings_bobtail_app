@@ -14,7 +14,10 @@ $padding__songBanner: $js__margin__thin * 2;
 
     background-color: $bgColour__audioPause;
 
-    cursor: pointer;
+    .PlW__song
+    & {
+        cursor: pointer;
+    }
 }
 
 .BannerTracker {

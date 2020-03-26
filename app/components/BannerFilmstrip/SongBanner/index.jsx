@@ -10,7 +10,8 @@ import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 import PlayTimer from './Timer'
 import SongTitle from './Title'
 
-import { getSongTotalTime } from 'album/api/time'
+import { getSongIsLogue } from '../../../album/api/songs'
+import { getSongTotalTime } from '../../../album/api/time'
 
 import { getClientX, getElementRatioForClientX } from 'helpers/dom'
 import { populateRefs } from 'helpers/ref'
@@ -57,6 +58,13 @@ class SongBanner extends PureComponent {
     }
 
     handleBannerClick = (e) => {
+
+        const { selectedSongIndex } = this.props
+
+        if (getSongIsLogue(selectedSongIndex)) {
+            return
+        }
+
         const clientX = getClientX(e),
             { left, width } = this.bannerElement.current.getBoundingClientRect()
 
