@@ -69,7 +69,10 @@ import {
     GARBAGE_BAG__SHARED,
     PAPER_BAG__SHARED
 } from '../../../shared/food'
-import { BULB__SHARED } from '../../../shared/household'
+import {
+    BULB__SHARED,
+    FRIDGE__SHARED
+} from '../../../shared/household'
 import { MONITOR__SHARED } from '../../../shared/instruments'
 import {
     LAMPPOST__SHARED,
@@ -117,7 +120,7 @@ export default {
     [FIRE_HYDRANT]: null,
     [GLASS_RACK]: CUP__SHARED,
     [GRAVESTONE]: null,
-    [HOWIE_FRIDGE]: null,
+    [HOWIE_FRIDGE]: FRIDGE__SHARED,
     [IV_DRIP]: POLE__SHARED,
     [LAMPPOST]: [
         BULB__SHARED,
@@ -140,7 +143,7 @@ export default {
     [STEAM_PIPES]: null,
     [STORAGE_BOXES]: null,
     [STORAGE_CHEST]: null,
-    [TAIWAN_FRIDGE]: null,
+    [TAIWAN_FRIDGE]: FRIDGE__SHARED,
     [TAIWAN_TREE]: TAIWAN_FOLIAGE__SHARED,
     [TELEVISION]: null,
     [TOWEL_RACK]: null,

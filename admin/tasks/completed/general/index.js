@@ -5426,5 +5426,10 @@ export default [
         taskName: `Different colours for houses and buildings.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Shared fridge style.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
