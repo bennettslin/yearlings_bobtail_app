@@ -13,14 +13,14 @@
 .top__lyricChild {
     // Position at same level as play button.
     top: (
-        $js__height__menu
-        - $js__length__iconLarge
+        $jsx__height__menu
+        - $jsx__length__iconLarge
     ) * 0.5;
 
     .DW__canSliderMount
     & {
-        top: $js__height__menu
-            + $js__margin__thin;
+        top: $jsx__height__menu
+            + $jsx__margin__thin;
     }
 }
 
@@ -39,14 +39,14 @@
     & {
         // This overrides the top lyric child rule, so make sure it's after it.
         top: auto;
-        bottom: $js__margin__thin;
+        bottom: $jsx__margin__thin;
     }
 }
 
 
 .LyricToggles__bottomRight {
     right: $margin__scrollBar;
-    bottom: $js__margin__thin;
+    bottom: $jsx__margin__thin;
 }
 
 .LyricToggle {

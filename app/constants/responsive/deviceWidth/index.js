@@ -5,28 +5,30 @@ import {
     CSS_LENGTH_ICON_LARGE_MINI,
     CSS_MARGIN_THIN
 } from '..'
-import { JS_HEIGHT_NAV } from '../../../scss/constants/nav'
 import {
     CSS_COUNT_GAPS_SINGLE,
-    CSS_COUNT_GAPS_DOUBLE
-} from '../../../components/Nav/variables'
-import { getJavascriptFromSassVariable } from '../../../helpers/format'
+    CSS_COUNT_GAPS_DOUBLE,
+    JS_HEIGHT_NAV,
+    JS_WIDTH_LAPTOP,
+    JS_WIDTH_MENU_BREAKPOINT,
+    JS_WIDTH_GOLDEN_CORD,
+    JS_WIDTH_UNCANNY_VALLEY
+} from '../../../scss/app'
+
+import { getJsFromSass } from '../../../helpers/format'
 
 export const BANNER_SMALL_TEXT_WIDTH = 400 // Eyeballed.
-export const LS_WIDTH_GOLDEN_CORD = 745
-export const LS_WIDTH_UNCANNY_VALLEY = 570
-export const LS_WIDTH_MENU_BREAKPOINT = 720
+export const CSS_WIDTH_GOLDEN_CORD = getJsFromSass(JS_WIDTH_GOLDEN_CORD)
+export const CSS_WIDTH_UNCANNY_VALLEY = getJsFromSass(JS_WIDTH_UNCANNY_VALLEY)
+export const CSS_WIDTH_MENU_BREAKPOINT = getJsFromSass(JS_WIDTH_MENU_BREAKPOINT)
 
 /**************
  * NAV VALUES *
  **************/
 
-export const CSS_HEIGHT_NAV = getJavascriptFromSassVariable(JS_HEIGHT_NAV)
+export const CSS_HEIGHT_NAV = getJsFromSass(JS_HEIGHT_NAV)
 
 const
-    // Keep for now.
-    LS_MARGIN_NAV_LAST_TITLE = 0,
-
     SHRINK_ICON_DIAMETER = 36,
 
     DOUBLE_COLUMN_STATIC_BREAKPOINT =
@@ -47,9 +49,9 @@ const
  ************************/
 
 export const PHONE_WIDTH_KEY = 'phone'
-export const LS_MINI_WIDTH_KEY = 'mini'
+export const MINI_WIDTH_KEY = 'mini'
 export const TABLET_WIDTH_KEY = 'tablet'
-export const LS_LAPTOP_WIDTH_KEY = 'laptop'
+export const LAPTOP_WIDTH_KEY = 'laptop'
 export const MONITOR_WIDTH_KEY = 'monitor'
 
 const PHONE_WIDTH_CONFIG = {
@@ -57,8 +59,8 @@ const PHONE_WIDTH_CONFIG = {
     maxWidth: 475
 }
 export const MINI_WIDTH_CONFIG = {
-    deviceWidthKey: LS_MINI_WIDTH_KEY,
-    maxWidth: LS_WIDTH_MENU_BREAKPOINT,
+    deviceWidthKey: MINI_WIDTH_KEY,
+    maxWidth: CSS_WIDTH_MENU_BREAKPOINT,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + CSS_LENGTH_ICON_LARGE_MINI
@@ -77,30 +79,26 @@ const TABLET_WIDTH_CONFIG = {
         + CSS_LENGTH_ICON_LARGE_TABLET
 }
 const LAPTOP_WIDTH_CONFIG = {
-    deviceWidthKey: LS_LAPTOP_WIDTH_KEY,
-    maxWidth: 1400,
+    deviceWidthKey: LAPTOP_WIDTH_KEY,
+    maxWidth: getJsFromSass(JS_WIDTH_LAPTOP),
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
-        + LS_MARGIN_NAV_LAST_TITLE
-        + LS_WIDTH_UNCANNY_VALLEY
+        + CSS_WIDTH_UNCANNY_VALLEY
         + CSS_LENGTH_ICON_LARGE
 }
 const MONITOR_WIDTH_CONFIG = {
     deviceWidthKey: MONITOR_WIDTH_KEY,
     doubleColumnStaticBreakpoint:
         DOUBLE_COLUMN_STATIC_BREAKPOINT
-        + LS_MARGIN_NAV_LAST_TITLE
-        + LS_WIDTH_GOLDEN_CORD
+        + CSS_WIDTH_GOLDEN_CORD
         + CSS_LENGTH_ICON_LARGE,
     doubleColumnShrinkBreakpoint:
         DOUBLE_COLUMN_SHRINK_BREAKPOINT
-        + LS_MARGIN_NAV_LAST_TITLE
-        + LS_WIDTH_GOLDEN_CORD
+        + CSS_WIDTH_GOLDEN_CORD
         + CSS_LENGTH_ICON_LARGE,
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
-        + LS_MARGIN_NAV_LAST_TITLE
-        + LS_WIDTH_GOLDEN_CORD
+        + CSS_WIDTH_GOLDEN_CORD
         + CSS_LENGTH_ICON_LARGE
 }
 

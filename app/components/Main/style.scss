@@ -4,8 +4,6 @@
 @import "./CarouselToggle/style";
 @import "./ShelfRight/style";
 
-$js__height__lyricCollapsed: 32%;
-
 .Main {
     overflow: hidden;
 }
@@ -23,7 +21,7 @@ $js__height__lyricCollapsed: 32%;
 
     .DW__phoneWidth
     & {
-        padding-top: $js__margin__thin;
+        padding-top: $jsx__margin__thin;
     }
 }
 
@@ -47,12 +45,12 @@ $js__height__lyricCollapsed: 32%;
 
     .DW__monitorWidth
     & {
-        max-width: calc(100% - #{$js__width__goldenCord});
+        max-width: calc(100% - #{$jsx__width__goldenCord});
     }
 
     .DW__laptopWidth
     & {
-        max-width: calc(100% - #{$js__width__uncannyValley});
+        max-width: calc(100% - #{$jsx__width__uncannyValley});
     }
 
     .DW__mobileWidth

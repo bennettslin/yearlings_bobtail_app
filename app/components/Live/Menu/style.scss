@@ -1,11 +1,12 @@
-// Constants prefixed with js *must* be the same in JavaScript.
-$js__height__menu: 80px;
+$jsx__height__menu: 80px;
+$jsx__width__menu__breakpoint: 720px;
+
 $padding__menuChild__mobile: $margin__thick;
 $padding__menuChild__desktop: $margin__thick * 2;
 
 .Menu__topField {
-    height: $js__height__menu;
-    padding: $js__margin__thin;
+    height: $jsx__height__menu;
+    padding: $jsx__margin__thin;
 }
 
 .Menu__main {
@@ -39,8 +40,7 @@ $padding__menuChild__desktop: $margin__thick * 2;
     .DW__desktopWidth
     .ShW__overlayShown
     & {
-        $js__width__menu__breakpoint: 720px;
-        max-width: $js__width__menu__breakpoint;
+        max-width: $jsx__width__menu__breakpoint;
     }
 }
 
@@ -79,12 +79,12 @@ $padding__menuChild__desktop: $margin__thick * 2;
 }
 
 .Menu__mainBottom {
-    top: $js__height__menu;
-    padding-top: $js__margin__thin;
+    top: $jsx__height__menu;
+    padding-top: $jsx__margin__thin;
 
     height:
-        $js__length__iconLarge
-        + $js__margin__thin;
+        $jsx__length__iconLarge
+        + $jsx__margin__thin;
 
     display: flex;
     flex-direction: column;

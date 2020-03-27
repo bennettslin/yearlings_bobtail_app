@@ -6,7 +6,7 @@ import {
 import { getCentreFieldHeight } from './theatre'
 
 import {
-    LS_STAGE_ASPECT_RATIO,
+    STAGE_ASPECT_RATIO,
     STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
 } from 'constants/stage'
 
@@ -20,12 +20,12 @@ import {
 
 import {
     CSS_HEIGHT_NAV,
-    LS_WIDTH_GOLDEN_CORD,
-    LS_WIDTH_UNCANNY_VALLEY,
+    CSS_WIDTH_GOLDEN_CORD,
+    CSS_WIDTH_UNCANNY_VALLEY,
     PHONE_WIDTH_KEY,
-    LS_MINI_WIDTH_KEY,
+    MINI_WIDTH_KEY,
     TABLET_WIDTH_KEY,
-    LS_LAPTOP_WIDTH_KEY,
+    LAPTOP_WIDTH_KEY,
     MONITOR_WIDTH_KEY,
     DEVICE_WIDTH_CONFIGS
 } from 'constants/responsive/deviceWidth'
@@ -35,13 +35,13 @@ const _getLeftShelfOverflow = (deviceWidthIndex) => {
 
     switch (DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey) {
         case MONITOR_WIDTH_KEY:
-        case LS_LAPTOP_WIDTH_KEY:
+        case LAPTOP_WIDTH_KEY:
             toggleButtonWidth = CSS_LENGTH_ICON_LARGE * 0.9
             break
         case TABLET_WIDTH_KEY:
             toggleButtonWidth = CSS_LENGTH_ICON_LARGE_TABLET
             break
-        case LS_MINI_WIDTH_KEY:
+        case MINI_WIDTH_KEY:
             toggleButtonWidth = CSS_LENGTH_ICON_LARGE_MINI
             break
         case PHONE_WIDTH_KEY:
@@ -63,9 +63,9 @@ const _getCentreFieldWidth = (
         overflowPercentage = STAGE_WIDTH_DESKTOP_OVERFLOW_PERCENTAGE
 
         if (getIsMonitorWidth(deviceWidthIndex)) {
-            lyricWidth = LS_WIDTH_GOLDEN_CORD
+            lyricWidth = CSS_WIDTH_GOLDEN_CORD
         } else {
-            lyricWidth = LS_WIDTH_UNCANNY_VALLEY
+            lyricWidth = CSS_WIDTH_UNCANNY_VALLEY
         }
     }
 
@@ -109,12 +109,12 @@ export const getStageCoordinates = ({
         height = centreFieldHeight
 
     // Maintain stage width, adjust stage height.
-    if (centreFieldRatio < LS_STAGE_ASPECT_RATIO) {
-        height *= centreFieldRatio / LS_STAGE_ASPECT_RATIO
+    if (centreFieldRatio < STAGE_ASPECT_RATIO) {
+        height *= centreFieldRatio / STAGE_ASPECT_RATIO
 
     // Maintain stage height, adjust stage width.
-    } else if (centreFieldRatio > LS_STAGE_ASPECT_RATIO) {
-        width *= LS_STAGE_ASPECT_RATIO / centreFieldRatio
+    } else if (centreFieldRatio > STAGE_ASPECT_RATIO) {
+        width *= STAGE_ASPECT_RATIO / centreFieldRatio
     }
 
     if (isDesktopWidth) {

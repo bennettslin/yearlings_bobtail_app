@@ -33,13 +33,13 @@
     .DW__monitorWidth
     &:after {
         padding-right:
-            $js__width__goldenCord;
+            $jsx__width__goldenCord;
     }
 
     .DW__laptopWidth
     &:after {
         padding-right:
-            $js__width__uncannyValley;
+            $jsx__width__uncannyValley;
     }
 
     /**
@@ -47,12 +47,12 @@
     * mobile. The carousel select itself does not use them.
     */
     $width__carouselSelect__tablet:
-        $js__length__iconLarge__tablet * 2
-        + $js__margin__thin * 3;
+        $jsx__length__iconLarge__tablet * 2
+        + $jsx__margin__thin * 3;
 
     $width__carouselSelect__mini:
-        $js__length__iconLarge__mini * 2
-        + $js__margin__thin * 3;
+        $jsx__length__iconLarge__mini * 2
+        + $jsx__margin__thin * 3;
 
     .DW__tabletWidth
     &:after {

@@ -1,7 +1,7 @@
 .CarouselSelect {
     right: 0;
     display: flex;
-    padding: $js__margin__thin;
+    padding: $jsx__margin__thin;
 
     // Remain visible as it fades out.
     z-index: $zIndex__lyricChild__topMost;
@@ -12,8 +12,8 @@
     & {
         position: fixed;
         bottom:
-            -$js__length__iconLarge
-            - $js__margin__thin * 2
+            -$jsx__length__iconLarge
+            - $jsx__margin__thin * 2
             - $margin__scrollBar;
 
         margin-bottom: $margin__scrollBar;
@@ -31,8 +31,8 @@
     & {
         position: absolute;
         top:
-            -$js__length__iconLarge__tablet
-            - $js__margin__thin * 2;
+            -$jsx__length__iconLarge__tablet
+            - $jsx__margin__thin * 2;
     }
 
     .DW__userAgentDesktop.DW__miniOrTabletWidth
@@ -66,6 +66,6 @@
     }
 
     .Button:first-child {
-        margin-right: $js__margin__thin;
+        margin-right: $jsx__margin__thin;
     }
 }

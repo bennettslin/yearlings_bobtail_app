@@ -7,17 +7,17 @@
 .PopupView__canBeFullHeight {
     max-height: calc(
         100%
-        - #{$js__length__iconLarge * 1.25}
+        - #{$jsx__length__iconLarge * 1.25}
     );
 
     .DW__miniWidth
     & {
-        max-height: calc(100% - #{$js__length__iconLarge__mini});
+        max-height: calc(100% - #{$jsx__length__iconLarge__mini});
     }
 
     .DW__phoneWidth
     & {
-        max-height: calc(100% - #{$js__length__icon});
+        max-height: calc(100% - #{$jsx__length__icon});
     }
 }
 
@@ -26,11 +26,11 @@
 }
 
 .PopupView__fullWidth {
-    max-width: $js__width__laptop;
+    max-width: $jsx__width__laptop;
 
     width: calc(
         100%
-        - #{$js__length__iconLarge * 2 + $js__padding__popupContent__wide * 2}
+        - #{$jsx__length__iconLarge * 2 + $jsx__padding__popupContent__wide * 2}
     );
 
     .DW__phoneOrMiniWidth
@@ -52,7 +52,7 @@
     & {
         // Multiplier is .98, just like for lyric text in phone.
         max-width: $width__popupCard__phone;
-        padding: $js__margin__thin;
+        padding: $jsx__margin__thin;
     }
 }
 
@@ -102,5 +102,5 @@
 
 .PopupViewContent__widePadding {
     // Wider padding to accommodate popup buttons.
-    padding: $js__padding__popupContent__wide;
+    padding: $jsx__padding__popupContent__wide;
 }

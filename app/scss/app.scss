@@ -53,3 +53,27 @@
 @import "../scene/styles/style";
 
 @import "../svg/style";
+
+:export {
+    CSS_COUNT_GAPS_SINGLE: $jsx__count__gaps__single;
+    CSS_COUNT_GAPS_DOUBLE: $jsx__count__gaps__double;
+    JS_HEIGHT_MENU: $jsx__height__menu;
+    JS_HEIGHT_NAV: $jsx__height__nav;
+    JS_LENGTH_ICON: $jsx__length__icon;
+    JS_LENGTH_ICON_LARGE: $jsx__length__iconLarge;
+    JS_LENGTH_ICON_LARGE_TABLET: $jsx__length__iconLarge__tablet;
+    JS_LENGTH_ICON_LARGE_MINI: $jsx__length__iconLarge__mini;
+    JS_MARGIN_THIN: $jsx__margin__thin;
+    JS_OVERLAP_MARGIN_X_SLIDER: $jsx__overlap__marginX__slider;
+    JS_PADDING_POPUP_CONTENT_WIDE: $jsx__padding__popupContent__wide;
+
+    JS_WIDTH_MENU_BREAKPOINT: $jsx__width__menu__breakpoint;
+    JS_WIDTH_LAPTOP: $jsx__width__laptop;
+    JS_WIDTH_GOLDEN_CORD: $jsx__width__goldenCord;
+    JS_WIDTH_UNCANNY_VALLEY: $jsx__width__uncannyValley;
+
+    HUE_PAST: $hue__past;
+    HUE_PRESENT: $hue__present;
+    HUE_FUTURE: $hue__future;
+    HUE_OCEAN: $hue__ocean;
+}

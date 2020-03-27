@@ -1,8 +1,8 @@
 @import "./Verses/style";
 
-$js__marginX__slider: 4px;
-$js__marginY__slider: 6px;
-$js__overlap__marginX__slider: 2px;
+$marginX__slider: 4px;
+$marginY__slider: 6px;
+$jsx__overlap__marginX__slider: 2px;
 $height__sliderStanzaTab: 3px;
 $width__sliderStanzaTab: 9px;
 
@@ -10,7 +10,7 @@ $width__sliderStanzaTab: 9px;
     position: absolute;
 
     // Default height when not cursored.
-    height: $js__length__icon;
+    height: $jsx__length__icon;
 
     .DW__userAgentDesktop
     & {
@@ -57,10 +57,10 @@ $width__sliderStanzaTab: 9px;
 
 .SliderStanza__sheet {
     padding:
-        $js__marginY__slider
-        $js__overlap__marginX__slider
+        $marginY__slider
+        $jsx__overlap__marginX__slider
         0
-        $js__marginX__slider;
+        $marginX__slider;
 
     display: flex;
     border-top-right-radius: $borderRadius__narrow;

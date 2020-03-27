@@ -58,10 +58,10 @@
             box-shadow: $boxShadow__cursorVerse;
 
             border-radius: $borderRadius__narrow;
-            top: -$js__margin__thin;
-            left: -$js__margin__thin;
-            height: calc(100% + #{$js__margin__thin * 2});
-            width: calc(100% + #{$js__margin__thin * 2});
+            top: -$jsx__margin__thin;
+            left: -$jsx__margin__thin;
+            height: calc(100% + #{$jsx__margin__thin * 2});
+            width: calc(100% + #{$jsx__margin__thin * 2});
         }
     }
 

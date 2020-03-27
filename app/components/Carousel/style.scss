@@ -23,7 +23,7 @@ $height__carouselHidden: $height__chivalry;
         bottom: -$height__carouselHidden;
 
         height: $height__chivalry;
-        padding-bottom: $js__margin__thin;
+        padding-bottom: $jsx__margin__thin;
     }
 
     .DW__userAgentDesktop.DW__desktopWidth
@@ -77,10 +77,10 @@ $height__carouselHidden: $height__chivalry;
         linear-gradient(
             to left,
             rgba(0, 0, 0, 0.1),
-            rgba(0, 0, 0, 0) $js__width__goldenCord * 0.25,
-            rgba(0, 0, 0, 0) $js__width__goldenCord * 0.75,
-            rgba(0, 0, 0, 0.4) $js__width__goldenCord,
-            black $js__width__goldenCord * 1.1,
+            rgba(0, 0, 0, 0) $jsx__width__goldenCord * 0.25,
+            rgba(0, 0, 0, 0) $jsx__width__goldenCord * 0.75,
+            rgba(0, 0, 0, 0.4) $jsx__width__goldenCord,
+            black $jsx__width__goldenCord * 1.1,
             black
         );
     .DW__monitorWidth
@@ -94,10 +94,10 @@ $height__carouselHidden: $height__chivalry;
         linear-gradient(
             to left,
             rgba(0, 0, 0, 0.1),
-            rgba(0, 0, 0, 0) $js__width__uncannyValley * 0.25,
-            rgba(0, 0, 0, 0) $js__width__uncannyValley * 0.75,
-            rgba(0, 0, 0, 0.4) $js__width__uncannyValley,
-            black $js__width__uncannyValley * 1.1,
+            rgba(0, 0, 0, 0) $jsx__width__uncannyValley * 0.25,
+            rgba(0, 0, 0, 0) $jsx__width__uncannyValley * 0.75,
+            rgba(0, 0, 0, 0.4) $jsx__width__uncannyValley,
+            black $jsx__width__uncannyValley * 1.1,
             black
         );
     .DW__laptopWidth

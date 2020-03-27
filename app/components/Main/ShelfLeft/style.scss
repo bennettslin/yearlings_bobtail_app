@@ -6,12 +6,12 @@
             margin-left $animationDuration__default;
     }
 
-    padding-left: $js__margin__thin;
+    padding-left: $jsx__margin__thin;
 
     opacity: 0;
 
     // This value only needs to be accurate for phone.
-    margin-left: -$js__length__icon - $js__margin__thin;
+    margin-left: -$jsx__length__icon - $jsx__margin__thin;
 
     z-index: $zIndex__theatre;
 
@@ -77,7 +77,7 @@
     .DW__phoneWidth
     & {
         & > :not(:last-child) {
-            margin-bottom: $js__margin__thin * 2;
+            margin-bottom: $jsx__margin__thin * 2;
         }
     }
 }

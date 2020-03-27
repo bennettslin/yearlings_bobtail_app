@@ -1,4 +1,4 @@
-import { LS_HEIGHT_MENU } from '../../constants/responsive'
+import { CSS_HEIGHT_MENU } from '../../constants/responsive'
 
 const _getLyricSectionRect = ({
     isLyricExpandable,
@@ -12,7 +12,7 @@ const _getLyricSectionRect = ({
     const bottom = windowHeight
     let top =
         isDesktopWidth ?
-            LS_HEIGHT_MENU :
+            CSS_HEIGHT_MENU :
             menuHeight
 
     if (!isLyricExpandable && !canSliderMount) {

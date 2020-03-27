@@ -8,7 +8,7 @@ import { getSongTotalTime } from 'album/api/time'
 
 import SliderVerses from './Verses'
 
-import { LS_OVERLAP_MARGIN_X_SLIDER } from 'constants/responsive'
+import { CSS_OVERLAP_MARGIN_X_SLIDER } from 'constants/responsive'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -57,7 +57,7 @@ class SliderStanza extends PureComponent {
 
             formattedStanzaRight =
                 `calc(${stanzaRightPercentage}% - ${
-                    LS_OVERLAP_MARGIN_X_SLIDER
+                    CSS_OVERLAP_MARGIN_X_SLIDER
                 }px)`,
 
             /**
@@ -70,7 +70,7 @@ class SliderStanza extends PureComponent {
 
             formattedStanzaWidth =
                 `calc(${stanzaWidthPercentage}% + ${
-                    LS_OVERLAP_MARGIN_X_SLIDER
+                    CSS_OVERLAP_MARGIN_X_SLIDER
                 }px)`,
 
             stanzaStyle = {

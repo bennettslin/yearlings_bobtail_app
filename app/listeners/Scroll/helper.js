@@ -7,8 +7,8 @@ import {
 } from 'helpers/responsive'
 
 import {
-    LS_WIDTH_GOLDEN_CORD,
-    LS_WIDTH_UNCANNY_VALLEY
+    CSS_WIDTH_GOLDEN_CORD,
+    CSS_WIDTH_UNCANNY_VALLEY
 } from 'constants/responsive/deviceWidth'
 
 const _getLyricTopAlign = (deviceWidthIndex, isLyricExpanded) => {
@@ -41,8 +41,8 @@ const _getCarouselLeftAlign = (
         const
             earColumnWidth =
                 getIsMonitorWidth(deviceWidthIndex) ?
-                    LS_WIDTH_GOLDEN_CORD :
-                    LS_WIDTH_UNCANNY_VALLEY,
+                    CSS_WIDTH_GOLDEN_CORD :
+                    CSS_WIDTH_UNCANNY_VALLEY,
 
             centreFieldWidth = windowWidth - earColumnWidth,
 

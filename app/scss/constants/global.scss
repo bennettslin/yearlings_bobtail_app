@@ -1,15 +1,13 @@
-// Values prefixed with "js" *must* be the same on the JavaScript side.
-
 $length__iconSmall: 28px;
 $length__iconSmaller: 24px;
 $length__iconAccess: 20px;
 
-$js__length__icon: 44px;
-$js__length__iconLarge: 54px;
-$js__length__iconLarge__tablet: 50px;
-$js__length__iconLarge__mini: 47px;
+$jsx__length__icon: 44px;
+$jsx__length__iconLarge: 54px;
+$jsx__length__iconLarge__tablet: 50px;
+$jsx__length__iconLarge__mini: 47px;
 
-$js__margin__thin: 4px;
+$jsx__margin__thin: 4px;
 $margin__thick: 12px;
 
 // Dot diameters.
@@ -41,11 +39,3 @@ $fontSize__verse__phone:
     $fontSize__verse
     * $multiplier__fontSize__phone;
 $fontSize__title__phone: 1em;
-
-:export {
-    JS_LENGTH_ICON: $js__length__icon;
-    JS_LENGTH_ICON_LARGE: $js__length__iconLarge;
-    JS_LENGTH_ICON_LARGE_TABLET: $js__length__iconLarge__tablet;
-    JS_LENGTH_ICON_LARGE_MINI: $js__length__iconLarge__mini;
-    JS_MARGIN_THIN: $js__margin__thin;
-}

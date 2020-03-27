@@ -6,7 +6,7 @@ import {
 
 import {
     MIN_HEIGHT_WINDOW_FOR_CAROUSEL_NAV,
-    LS_HEIGHT_LYRIC_COLLAPSED
+    HEIGHT_LYRIC_COLLAPSED
 } from 'constants/responsive'
 
 export const getCanScoreMount = ({
@@ -72,7 +72,7 @@ export const getLyricDynamicHeight = ({
      * room. In which case, set the lyric to this constant value.
      */
     } else if (canCarouselMount) {
-        return LS_HEIGHT_LYRIC_COLLAPSED
+        return HEIGHT_LYRIC_COLLAPSED
     }
 
     const lyricDynamicHeight = (

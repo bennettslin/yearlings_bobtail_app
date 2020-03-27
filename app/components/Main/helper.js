@@ -1,4 +1,4 @@
-import { LS_HEIGHT_LYRIC_COLLAPSED } from '../../constants/responsive'
+import { HEIGHT_LYRIC_COLLAPSED } from '../../constants/responsive'
 
 export const getMainHeight = ({
     canCarouselMount,
@@ -16,7 +16,7 @@ export const getMainHeight = ({
 
     // Otherwise, if carousel can mount, subtract collapsed lyric height.
     } else if (canCarouselMount) {
-        basePercentage = 100 * (1 - LS_HEIGHT_LYRIC_COLLAPSED)
+        basePercentage = 100 * (1 - HEIGHT_LYRIC_COLLAPSED)
 
     // Otherwise, subtract dynamic lyric height.
     } else {

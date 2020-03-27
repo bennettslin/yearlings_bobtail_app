@@ -11,14 +11,14 @@
 .width__lyricColumn__desktop {
     .DW__desktopWidth
     & {
-        width: $js__width__goldenCord;
+        width: $jsx__width__goldenCord;
         left: auto;
         right: 0;
     }
 
     .DW__laptopWidth
     & {
-        width: $js__width__uncannyValley;
+        width: $jsx__width__uncannyValley;
     }
 }
 

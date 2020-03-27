@@ -6,7 +6,7 @@ $margin__dotsContainer__phone: 8px;
 .DotsSlide {
     position: absolute;
     top: 0;
-    left: -$js__length__iconLarge;
+    left: -$jsx__length__iconLarge;
     opacity: 0;
     margin-top: $margin__dotsContainer;
     margin-left: $margin__dotsContainer;
@@ -36,8 +36,8 @@ $margin__dotsContainer__phone: 8px;
 
     .DW__phoneWidth
     & {
-        margin-left: $js__margin__thin;
-        margin-top: $js__margin__thin;
+        margin-left: $jsx__margin__thin;
+        margin-top: $jsx__margin__thin;
     }
 }
 

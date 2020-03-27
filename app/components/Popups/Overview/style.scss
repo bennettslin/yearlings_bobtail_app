@@ -3,8 +3,8 @@
     .DW__mobileWidth
     .LyricOverview
     & {
-        margin-left: $js__margin__thin;
-        margin-right: $js__margin__thin;
+        margin-left: $jsx__margin__thin;
+        margin-right: $jsx__margin__thin;
     }
 
     .RW__lyricHeighted
@@ -30,12 +30,12 @@
 
         .DW__mobileWidth
         & {
-            margin-right: $js__margin__thin;
+            margin-right: $jsx__margin__thin;
         }
 
         .DW__phoneWidth
         & {
-            margin-left: $js__margin__thin;
+            margin-left: $jsx__margin__thin;
         }
     }
 }

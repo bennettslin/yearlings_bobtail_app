@@ -14,7 +14,7 @@
 
     padding:
         $margin__thick
-        $js__padding__popupContent__wide
+        $jsx__padding__popupContent__wide
         0;
 
     &:before {
@@ -35,5 +35,5 @@
 
 .AnnotationTitle__dot {
     // Dots have a different padding top.
-    padding-top: $js__margin__thin;
+    padding-top: $jsx__margin__thin;
 }

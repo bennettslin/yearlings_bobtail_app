@@ -21,8 +21,8 @@
 }
 
 .Button__defaultSize {
-    width: $js__length__icon;
-    height: $js__length__icon;
+    width: $jsx__length__icon;
+    height: $jsx__length__icon;
 }
 
 .Button__smallSize {
@@ -31,25 +31,25 @@
 }
 
 .Button__largeSize {
-    width: $js__length__iconLarge;
-    height: $js__length__iconLarge;
+    width: $jsx__length__iconLarge;
+    height: $jsx__length__iconLarge;
 
     .DW__tabletWidth
     & {
-        width: $js__length__iconLarge__tablet;
-        height: $js__length__iconLarge__tablet;
+        width: $jsx__length__iconLarge__tablet;
+        height: $jsx__length__iconLarge__tablet;
     }
 
     .DW__miniWidth
     & {
-        width: $js__length__iconLarge__mini;
-        height: $js__length__iconLarge__mini;
+        width: $jsx__length__iconLarge__mini;
+        height: $jsx__length__iconLarge__mini;
     }
 
     .DW__phoneWidth
     & {
-        width: $js__length__icon;
-        height: $js__length__icon;
+        width: $jsx__length__icon;
+        height: $jsx__length__icon;
     }
 }
 

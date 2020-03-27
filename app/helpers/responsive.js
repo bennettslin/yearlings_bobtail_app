@@ -1,8 +1,8 @@
 import {
     PHONE_WIDTH_KEY,
-    LS_MINI_WIDTH_KEY,
+    MINI_WIDTH_KEY,
     TABLET_WIDTH_KEY,
-    LS_LAPTOP_WIDTH_KEY,
+    LAPTOP_WIDTH_KEY,
     MONITOR_WIDTH_KEY,
     DEVICE_WIDTH_CONFIGS
 } from 'constants/responsive/deviceWidth'
@@ -14,7 +14,7 @@ export const getIsPhoneWidth = (deviceWidthIndex) => {
 
 export const getIsMiniWidth = (deviceWidthIndex) => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
-    return deviceWidthKey === LS_MINI_WIDTH_KEY
+    return deviceWidthKey === MINI_WIDTH_KEY
 }
 
 export const getIsTabletWidth = (deviceWidthIndex) => {
@@ -24,7 +24,7 @@ export const getIsTabletWidth = (deviceWidthIndex) => {
 
 export const getIsLaptopWidth = (deviceWidthIndex) => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]
-    return deviceWidthKey === LS_LAPTOP_WIDTH_KEY
+    return deviceWidthKey === LAPTOP_WIDTH_KEY
 }
 
 export const getIsMonitorWidth = (deviceWidthIndex) => {
