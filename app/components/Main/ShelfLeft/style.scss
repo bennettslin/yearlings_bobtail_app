@@ -59,7 +59,7 @@
     flex-direction: column;
 
     & > :not(:last-child) {
-        margin-bottom: $js__margin__thick * 1.5;
+        margin-bottom: $margin__thick * 1.5;
     }
 
     .DW__desktopWidth.DW__cannotCarouselMount
@@ -69,7 +69,7 @@
         flex-direction: column-reverse;
 
         & > :not(:last-child) {
-            margin-top: $js__margin__thick;
+            margin-top: $margin__thick;
             margin-bottom: 0;
         }
     }

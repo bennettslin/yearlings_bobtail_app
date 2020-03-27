@@ -79,12 +79,12 @@
 
     .Unit__column__main
     & {
-        padding-left: $js__margin__thick;
+        padding-left: $margin__thick;
     }
 
     .UnitCard__tabbed
     & {
-        padding-top: $js__margin__thick * 1.5;
+        padding-top: $margin__thick * 1.5;
         border-top-left-radius: 0;
     }
 }

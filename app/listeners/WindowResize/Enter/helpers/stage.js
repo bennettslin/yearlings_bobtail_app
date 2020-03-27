@@ -11,15 +11,15 @@ import {
 } from 'constants/stage'
 
 import {
-    LS_LENGTH_ICON,
-    LS_LENGTH_ICON_LARGE_MINI,
-    LS_LENGTH_ICON_LARGE_TABLET,
-    LS_LENGTH_ICON_LARGE,
-    LS_MARGIN_THIN
+    CSS_LENGTH_ICON,
+    CSS_LENGTH_ICON_LARGE_MINI,
+    CSS_LENGTH_ICON_LARGE_TABLET,
+    CSS_LENGTH_ICON_LARGE,
+    CSS_MARGIN_THIN
 } from 'constants/responsive'
 
 import {
-    LS_HEIGHT_NAV,
+    CSS_HEIGHT_NAV,
     LS_WIDTH_GOLDEN_CORD,
     LS_WIDTH_UNCANNY_VALLEY,
     PHONE_WIDTH_KEY,
@@ -36,20 +36,20 @@ const _getLeftShelfOverflow = (deviceWidthIndex) => {
     switch (DEVICE_WIDTH_CONFIGS[deviceWidthIndex].deviceWidthKey) {
         case MONITOR_WIDTH_KEY:
         case LS_LAPTOP_WIDTH_KEY:
-            toggleButtonWidth = LS_LENGTH_ICON_LARGE * 0.9
+            toggleButtonWidth = CSS_LENGTH_ICON_LARGE * 0.9
             break
         case TABLET_WIDTH_KEY:
-            toggleButtonWidth = LS_LENGTH_ICON_LARGE_TABLET
+            toggleButtonWidth = CSS_LENGTH_ICON_LARGE_TABLET
             break
         case LS_MINI_WIDTH_KEY:
-            toggleButtonWidth = LS_LENGTH_ICON_LARGE_MINI
+            toggleButtonWidth = CSS_LENGTH_ICON_LARGE_MINI
             break
         case PHONE_WIDTH_KEY:
-            toggleButtonWidth = LS_LENGTH_ICON
+            toggleButtonWidth = CSS_LENGTH_ICON
             break
     }
 
-    return (toggleButtonWidth + LS_MARGIN_THIN)
+    return (toggleButtonWidth + CSS_MARGIN_THIN)
 }
 
 const _getCentreFieldWidth = (
@@ -92,7 +92,7 @@ export const getStageCoordinates = ({
             windowWidth
         ) - leftShelfOverflow,
 
-        navHeight = canCarouselMount ? LS_HEIGHT_NAV : 0,
+        navHeight = canCarouselMount ? CSS_HEIGHT_NAV : 0,
 
         centreFieldHeight = getCentreFieldHeight({
             deviceWidthIndex,

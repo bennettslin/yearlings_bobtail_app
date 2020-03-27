@@ -1,7 +1,7 @@
 // Constants prefixed with js *must* be the same in JavaScript.
 $js__height__menu: 80px;
-$padding__menuChild__mobile: $js__margin__thick;
-$padding__menuChild__desktop: $js__margin__thick * 2;
+$padding__menuChild__mobile: $margin__thick;
+$padding__menuChild__desktop: $margin__thick * 2;
 
 .Menu__topField {
     height: $js__height__menu;

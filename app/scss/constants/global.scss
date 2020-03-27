@@ -10,7 +10,7 @@ $js__length__iconLarge__tablet: 50px;
 $js__length__iconLarge__mini: 47px;
 
 $js__margin__thin: 4px;
-$js__margin__thick: 12px;
+$margin__thick: 12px;
 
 // Dot diameters.
 $length__annotationDot: 24px;
@@ -41,3 +41,11 @@ $fontSize__verse__phone:
     $fontSize__verse
     * $multiplier__fontSize__phone;
 $fontSize__title__phone: 1em;
+
+:export {
+    JS_LENGTH_ICON: $js__length__icon;
+    JS_LENGTH_ICON_LARGE: $js__length__iconLarge;
+    JS_LENGTH_ICON_LARGE_TABLET: $js__length__iconLarge__tablet;
+    JS_LENGTH_ICON_LARGE_MINI: $js__length__iconLarge__mini;
+    JS_MARGIN_THIN: $js__margin__thin;
+}

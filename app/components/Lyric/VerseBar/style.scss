@@ -9,7 +9,7 @@
             opacity $animationDuration__fast;
     }
 
-    $js__margin__thick__double: $js__margin__thick * 2;
+    $js__margin__thick__double: $margin__thick * 2;
     max-width: calc(100% - #{$js__margin__thick__double});
 }
 
@@ -60,5 +60,5 @@
 }
 
 .Verse__inBar {
-    padding: $js__margin__thin $js__margin__thick;
+    padding: $js__margin__thin $margin__thick;
 }

@@ -56,11 +56,11 @@ $margin__dotsContainer__phone: 8px;
     display: flex;
     flex-direction: column;
 
-    padding: $js__margin__thick;
+    padding: $margin__thick;
 
     .DW__phoneOrMiniWidth
     & {
-        padding: $js__margin__thick * 0.75;
+        padding: $margin__thick * 0.75;
     }
 }
 

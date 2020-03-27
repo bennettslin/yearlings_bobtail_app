@@ -223,3 +223,8 @@ $width__navToggle:
 $width__navToggle__tablet:
     $js__length__iconLarge__tablet +
     $js__padding__navColumnChild * 2;
+
+:export {
+    CSS_COUNT_GAPS_SINGLE: $js__count__gaps__single;
+    CSS_COUNT_GAPS_DOUBLE: $js__count__gaps__double;
+}

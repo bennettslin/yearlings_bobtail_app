@@ -24,7 +24,7 @@
 
 .NavButtonTitle__text {
     height: 100%;
-    padding-left: $js__margin__thick / 2;
+    padding-left: $margin__thick / 2;
 
     font-size: 1.25em;
     white-space: nowrap;
@@ -37,7 +37,7 @@
     & {
         transform: rotate(90deg);
         transform-origin: left bottom 0;
-        padding-left: $js__margin__thick;
+        padding-left: $margin__thick;
     }
 
     .Button__accessed

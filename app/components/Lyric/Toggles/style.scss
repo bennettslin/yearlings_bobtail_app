@@ -6,7 +6,7 @@
     flex-direction: column;
 
     & > :not(:last-child) {
-        margin-bottom: $js__margin__thick;
+        margin-bottom: $margin__thick;
     }
 }
 
