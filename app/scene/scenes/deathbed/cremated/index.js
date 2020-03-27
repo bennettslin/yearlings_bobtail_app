@@ -15,7 +15,7 @@ export default {
     [MIRIAM]: {
         [TENNIS]: {
             yIndex: 3,
-            xPosition: 10
+            xPosition: 9.5
         }
     }
 }

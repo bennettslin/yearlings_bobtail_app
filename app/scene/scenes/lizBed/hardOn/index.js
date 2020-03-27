@@ -18,7 +18,7 @@ export default {
         [HARD_ON_REFLECTION]: {
             yIndex: 2,
             xPosition: 8,
-            zOffset: 5
+            zOffset: 5.3
         }
     }
 }

@@ -39,24 +39,24 @@ export default {
     [PANEL]: {
         [SATURN_INTERIOR]: {
             yIndex: 1,
-            xPosition: 5.5,
+            xPosition: 5.7,
             scaleFactor: 0.5
         },
         [SATURN_SEAT__LEFT]: {
             yIndex: 4,
             xPosition: 3,
-            zOffset: 0.75,
+            zOffset: 1.2,
             scaleFactor: 0.4
         },
         [SATURN_SEAT__RIGHT]: {
             yIndex: 4,
             xPosition: 6,
-            zOffset: 0.75,
+            zOffset: 1.2,
             scaleFactor: 0.4
         },
         [SATURN_EXTERIOR]: {
             yIndex: 4,
-            xPosition: 5.5,
+            xPosition: 5.7,
             scaleFactor: 0.5
         }
     }

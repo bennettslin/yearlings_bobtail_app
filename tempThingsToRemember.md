@@ -87,7 +87,7 @@ wideCouchMiriam (cubes and panels)
 HOSPITAL_LINENS__SHARED
 hospitalBed (cubes)
 
-# Car seats (colour as well)
+# Car seats (platforms, lower station wagon seat, colour as well)
 schoolbus
 
 goKart

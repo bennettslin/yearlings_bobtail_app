@@ -44,16 +44,16 @@ export default {
         [CONDOM_WRAPPER_REFLECTION]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 6.5
+            zOffset: 6.8
         },
         [USED_CONDOM_LIZ]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 8
         },
         [USED_CONDOM_REFLECTION]: {
             yIndex: 1,
             xPosition: 8,
-            zOffset: 3.5
+            zOffset: 2
         }
     },
     [FURNITURE]: {
@@ -68,13 +68,13 @@ export default {
             zOffset: 4.65
         },
         [LIZ_PILLOWS_PILE]: {
-            yIndex: 4,
+            yIndex: 3,
             xPosition: 9
         },
         [LIZ_PILLOWS_PILE_REFLECTION]: {
             yIndex: 1,
             xPosition: 9,
-            zOffset: 4
+            zOffset: 3
         }
     },
     [PANEL]: {

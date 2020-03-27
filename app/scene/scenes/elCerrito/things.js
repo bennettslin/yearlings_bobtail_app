@@ -41,7 +41,7 @@ export default {
         [CONDOM_WRAPPER_MIRIAM]: {
             yIndex: 5,
             xPosition: 1.25,
-            zOffset: 0.15
+            zOffset: 0.1
         },
         [USED_CONDOM_MIRIAM]: {
             yIndex: 5,
@@ -70,13 +70,13 @@ export default {
         [REATTA_SEAT]: {
             yIndex: 5,
             xPosition: 2,
-            zOffset: 0.85,
+            zOffset: 1,
             scaleFactor: 0.4
         },
         [REATTA_SEAT_DOWN]: {
             yIndex: 5,
             xPosition: 1.66,
-            zOffset: 0.85,
+            zOffset: 1,
             scaleFactor: 0.4
         },
         [REATTA_EXTERIOR]: {

@@ -5436,5 +5436,11 @@ export default [
         taskName: `Hook up past colours for Bennett and Odin. Also, past, present, and future colours for Uncanny Valley actors.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Share scss variables with JavaScript.`,
+        resource: `https://til.hashrocket.com/posts/sxbrscjuqu-share-scss-variables-with-javascript`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

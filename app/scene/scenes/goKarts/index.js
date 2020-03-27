@@ -8,13 +8,13 @@ export default {
     [BENNETT]: {
         [GO_KARTS]: {
             yIndex: 2,
-            xPosition: 2
+            xPosition: 2.6
         }
     },
     [LIZ]: {
         [GO_KARTS]: {
             yIndex: 2,
-            xPosition: 8
+            xPosition: 8.7
         }
     }
 }
