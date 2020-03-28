@@ -6,27 +6,27 @@ import {
     CSS_MARGIN_THIN
 } from '..'
 import {
-    CSS_COUNT_GAPS_SINGLE,
-    CSS_COUNT_GAPS_DOUBLE,
-    JS_HEIGHT_NAV,
-    JS_WIDTH_LAPTOP,
-    JS_WIDTH_MENU_BREAKPOINT,
-    JS_WIDTH_GOLDEN_CORD,
-    JS_WIDTH_UNCANNY_VALLEY
+    COUNT_GAPS_SINGLE,
+    COUNT_GAPS_DOUBLE,
+    HEIGHT_NAV,
+    WIDTH_LAPTOP,
+    WIDTH_MENU_BREAKPOINT,
+    WIDTH_GOLDEN_CORD,
+    WIDTH_UNCANNY_VALLEY
 } from '../../../scss/app'
 
 import { getJsFromSass } from '../../../helpers/format'
 
 export const BANNER_SMALL_TEXT_WIDTH = 400 // Eyeballed.
-export const CSS_WIDTH_GOLDEN_CORD = getJsFromSass(JS_WIDTH_GOLDEN_CORD)
-export const CSS_WIDTH_UNCANNY_VALLEY = getJsFromSass(JS_WIDTH_UNCANNY_VALLEY)
-export const CSS_WIDTH_MENU_BREAKPOINT = getJsFromSass(JS_WIDTH_MENU_BREAKPOINT)
+export const CSS_WIDTH_GOLDEN_CORD = getJsFromSass(WIDTH_GOLDEN_CORD)
+export const CSS_WIDTH_UNCANNY_VALLEY = getJsFromSass(WIDTH_UNCANNY_VALLEY)
+export const CSS_WIDTH_MENU_BREAKPOINT = getJsFromSass(WIDTH_MENU_BREAKPOINT)
 
 /**************
  * NAV VALUES *
  **************/
 
-export const CSS_HEIGHT_NAV = getJsFromSass(JS_HEIGHT_NAV)
+export const CSS_HEIGHT_NAV = getJsFromSass(HEIGHT_NAV)
 
 const
     SHRINK_ICON_DIAMETER = 36,
@@ -34,15 +34,15 @@ const
     DOUBLE_COLUMN_STATIC_BREAKPOINT =
         CSS_LENGTH_ICON * 20
         + CSS_MARGIN_THIN * 10
-        + CSS_COUNT_GAPS_DOUBLE,
+        + parseInt(COUNT_GAPS_DOUBLE),
     DOUBLE_COLUMN_SHRINK_BREAKPOINT =
         SHRINK_ICON_DIAMETER * 20
         + CSS_MARGIN_THIN * 10
-        + CSS_COUNT_GAPS_DOUBLE,
+        + parseInt(COUNT_GAPS_DOUBLE),
     SINGLE_COLUMN_STATIC_BREAKPOINT =
         CSS_LENGTH_ICON * 11
         + CSS_MARGIN_THIN * 8
-        + CSS_COUNT_GAPS_SINGLE
+        + parseInt(COUNT_GAPS_SINGLE)
 
 /************************
  * DEVICE WIDTH CONFIGS *
@@ -80,7 +80,7 @@ const TABLET_WIDTH_CONFIG = {
 }
 const LAPTOP_WIDTH_CONFIG = {
     deviceWidthKey: LAPTOP_WIDTH_KEY,
-    maxWidth: getJsFromSass(JS_WIDTH_LAPTOP),
+    maxWidth: getJsFromSass(WIDTH_LAPTOP),
     singleColumnStaticBreakpoint:
         SINGLE_COLUMN_STATIC_BREAKPOINT
         + CSS_WIDTH_UNCANNY_VALLEY

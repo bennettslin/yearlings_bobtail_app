@@ -2,9 +2,9 @@
     .AnnotationTitle
     & {
         position: relative;
-        top: $jsx__margin__thin * 0.5;
+        top: $MARGIN_THIN * 0.5;
         margin-left: $margin__thick * 0.5;
-        margin-bottom: $jsx__margin__thin * 0.5;
+        margin-bottom: $MARGIN_THIN * 0.5;
     }
 
     .PlW__accessOff
@@ -22,5 +22,5 @@
 }
 
 .AccessLetters__annotationUpDown {
-    left: $jsx__margin__thin;
+    left: $MARGIN_THIN;
 }

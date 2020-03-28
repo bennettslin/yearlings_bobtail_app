@@ -1,9 +1,9 @@
 .ShelfRight {
-    padding-right: $jsx__margin__thin;
+    padding-right: $MARGIN_THIN;
 
     margin-right:
-        -$jsx__length__iconLarge__tablet
-        - $jsx__margin__thin * 2;
+        -$LENGTH_ICON_LARGE_TABLET
+        - $MARGIN_THIN * 2;
 
         .DW__userAgentDesktop
         & {

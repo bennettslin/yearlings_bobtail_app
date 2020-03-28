@@ -9,9 +9,9 @@
     flex-direction: column;
 
     padding:
-        $jsx__padding__popupContent__wide * 1.5
-        $jsx__padding__popupContent__wide
-        $jsx__padding__popupContent__wide * 0.5;
+        $PADDING_POPUP_CONTENT_WIDE * 1.5
+        $PADDING_POPUP_CONTENT_WIDE
+        $PADDING_POPUP_CONTENT_WIDE * 0.5;
 }
 
 .Annotation__cardField {

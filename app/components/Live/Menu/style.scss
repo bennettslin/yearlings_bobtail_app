@@ -1,12 +1,12 @@
-$jsx__height__menu: 80px;
-$jsx__width__menu__breakpoint: 720px;
+$HEIGHT_MENU: 80px;
+$WIDTH_MENU_BREAKPOINT: 720px;
 
 $padding__menuChild__mobile: $margin__thick;
 $padding__menuChild__desktop: $margin__thick * 2;
 
 .Menu__topField {
-    height: $jsx__height__menu;
-    padding: $jsx__margin__thin;
+    height: $HEIGHT_MENU;
+    padding: $MARGIN_THIN;
 }
 
 .Menu__main {
@@ -40,7 +40,7 @@ $padding__menuChild__desktop: $margin__thick * 2;
     .DW__desktopWidth
     .ShW__overlayShown
     & {
-        max-width: $jsx__width__menu__breakpoint;
+        max-width: $WIDTH_MENU_BREAKPOINT;
     }
 }
 
@@ -79,12 +79,12 @@ $padding__menuChild__desktop: $margin__thick * 2;
 }
 
 .Menu__mainBottom {
-    top: $jsx__height__menu;
-    padding-top: $jsx__margin__thin;
+    top: $HEIGHT_MENU;
+    padding-top: $MARGIN_THIN;
 
     height:
-        $jsx__length__iconLarge
-        + $jsx__margin__thin;
+        $LENGTH_ICON_LARGE
+        + $MARGIN_THIN;
 
     display: flex;
     flex-direction: column;

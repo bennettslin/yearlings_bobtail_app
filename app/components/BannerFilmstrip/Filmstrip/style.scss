@@ -3,10 +3,10 @@
 $colour__filmReel: hsl(0, 0%, 13%);
 
 .Filmstrip {
-    height: $jsx__height__menu
+    height: $HEIGHT_MENU
         - $height__albumBanner
         - $height__songBanner
-        - $jsx__margin__thin;
+        - $MARGIN_THIN;
 
     // Outer filmstrip borders.
     border-top: $length__filmPerf solid $colour__filmReel;

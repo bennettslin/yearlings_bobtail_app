@@ -2,13 +2,13 @@
 
 .NavColumn {
     position: absolute;
-    height: $jsx__height__nav;
+    height: $HEIGHT_NAV;
 
     opacity: 0;
 
     .DW__desktopWidth
     & {
-        bottom: -$jsx__height__nav;
+        bottom: -$HEIGHT_NAV;
     }
 
     .DW__userAgentDesktop.DW__desktopWidth
@@ -20,7 +20,7 @@
 
     .DW__miniOrTabletWidth
     & {
-        top: -$jsx__height__nav;
+        top: -$HEIGHT_NAV;
     }
 
     .DW__userAgentDesktop.DW__miniOrTabletWidth

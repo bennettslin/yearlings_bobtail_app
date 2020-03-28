@@ -74,7 +74,7 @@
 .UnitCard__sheet {
     position: relative;
 
-    padding: $jsx__margin__thin / 2;
+    padding: $MARGIN_THIN / 2;
     border-radius: $borderRadius__narrow;
 
     .Unit__column__main
@@ -92,8 +92,8 @@
 .UnitCard__tabText {
     position: relative;
     top: 0.6em;
-    padding-left: $jsx__margin__thin;
-    padding-right: $jsx__margin__thin * 1.5;
+    padding-left: $MARGIN_THIN;
+    padding-right: $MARGIN_THIN * 1.5;
 
     &:hover {
         animation: bounceHover $animationDuration__default;

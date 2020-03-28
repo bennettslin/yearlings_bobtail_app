@@ -5,6 +5,6 @@
      * bottom left over if the last unit is a hidden dot unit.
      */
     &:not(:first-child) {
-        margin-top: $jsx__margin__thin;
+        margin-top: $MARGIN_THIN;
     }
 }

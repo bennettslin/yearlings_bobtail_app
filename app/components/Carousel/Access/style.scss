@@ -1,18 +1,18 @@
 .AccessLetters__carousel {
-    left: $jsx__margin__thin;
+    left: $MARGIN_THIN;
 
     .DW__desktopWidth
     & {
         bottom:
             $margin__scrollBar
-            + $jsx__length__iconLarge
-            + $jsx__margin__thin * 2;
+            + $LENGTH_ICON_LARGE
+            + $MARGIN_THIN * 2;
     }
 
     .DW__mobileWidth
     & {
         top:
-            $jsx__length__iconLarge
-            + $jsx__margin__thin * 2;
+            $LENGTH_ICON_LARGE
+            + $MARGIN_THIN * 2;
     }
 }

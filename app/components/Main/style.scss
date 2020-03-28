@@ -21,7 +21,7 @@
 
     .DW__phoneWidth
     & {
-        padding-top: $jsx__margin__thin;
+        padding-top: $MARGIN_THIN;
     }
 }
 
@@ -45,12 +45,12 @@
 
     .DW__monitorWidth
     & {
-        max-width: calc(100% - #{$jsx__width__goldenCord});
+        max-width: calc(100% - #{$WIDTH_GOLDEN_CORD});
     }
 
     .DW__laptopWidth
     & {
-        max-width: calc(100% - #{$jsx__width__uncannyValley});
+        max-width: calc(100% - #{$WIDTH_UNCANNY_VALLEY});
     }
 
     .DW__mobileWidth
