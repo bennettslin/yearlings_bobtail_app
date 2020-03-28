@@ -52,7 +52,7 @@
 }
 
 .familyHouse {
-    .wallFront { fill: hsl(60, 46%, 65%); }
+    .wallFront { fill: hsl($HUE_FAMILY_HOUSE, 46%, 65%); }
 }
 
 .ferrisWheel {
@@ -102,13 +102,13 @@
 }
 
 .publicFar {
-    .wallSide { fill: hsl(300, 19%, 60%); }
-    .wallFront { fill: hsl(300, 25%, 69%); }
+    .wallSide { fill: hsl(300, 19%, 65%); }
+    .wallFront { fill: hsl(300, 25%, 74%); }
 }
 
 .publicNear {
-    .wallSide { fill: hsl(150, 19%, 60%); }
-    .wallFront { fill: hsl(150, 25%, 69%); }
+    .wallSide { fill: hsl(150, 19%, 65%); }
+    .wallFront { fill: hsl(150, 25%, 74%); }
 }
 
 .residentialFarLeft {
@@ -164,7 +164,7 @@
 }
 
 .schoolBungalow {
-    .wallFront { fill: hsl(195, 30%, 72%); }
+    .wallFront { fill: hsl(195, 25%, 75%); }
 }
 
 .stJosephsAnnex {
@@ -181,7 +181,6 @@
     .wallDark { fill: hsl(24, 25%, 51%); }
     .wallMedium { fill: hsl(24, 25%, 54%); }
     .wallLight { fill: hsl(24, 25%, 57%); }
-    .window { fill: hsl(202, 39%, 62%); }
     .slit { fill: hsl(80, 2%, 32%); }
     .ball { fill: hsl(40, 35%, 51%); }
     .cross { fill: hsl(41, 43%, 59%); }
@@ -192,8 +191,6 @@
     .trimLight { fill: hsl(74, 14%, 61%); }
     .stainedGlassFrame { fill: hsl(56, 30%, 65%); }
     .stainedGlass { fill: hsl(224, 70%, 69%); }
-    .door { fill: hsl(42, 19%, 47%); }
-    .doorRear { fill: hsl(42, 19%, 44%); }
     .stepFront { fill: hsl(233, 16%, 59%); }
     .lampholder { fill: hsl(30, 8%, 33%); }
     .stJosephRear { fill: hsl(60, 6%, 66%); }

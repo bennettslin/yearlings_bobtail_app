@@ -1,4 +1,5 @@
 import {
+    HUE_FAMILY_HOUSE,
     HUE_OCEAN,
     HUE_SAND
 } from '../../../scss/app'
@@ -103,7 +104,7 @@ const HSLA_MAP = {
     /* X. */
     [BENNETT_EXTERIOR_COLOUR]: { h: 1, s: 11, l: 53 },
     [GENERIC_EXTERIOR_COLOUR]: { h: 12, s: 16, l: 75 },
-    [FAMILY_EXTERIOR_COLOUR]: { h: 68, s: 24, l: 78 },
+    [FAMILY_EXTERIOR_COLOUR]: { h: parseInt(HUE_FAMILY_HOUSE), s: 24, l: 78 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 143, s: 14, l: 68 },
     [LIZ_EXTERIOR_COLOUR]: { h: 181, s: 16, l: 67 },

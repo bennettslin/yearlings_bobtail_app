@@ -1,4 +1,9 @@
 .window#{$suffix} {
+    .windowSide { fill: hsl(183, 31%, 68%); }
+    .windowMiddle { fill: hsl(183, 31%, 71%); }
+    .windowFront { fill: hsl(183, 31%, 74%); }
+    .windowClear { fill: hsla(240, 100%, 89%, 0.25); }
+
     .sill { fill: hsl(71, 13%, 76%); }
     .sillDark { fill: hsl(72, 10%, 69%); }
     .frame { fill: hsl(71, 17%, 81%); }
@@ -6,6 +11,4 @@
     .paneSliding { fill: hsl(76, 9%, 52%); }
     .blinds { fill: hsl(75, 24%, 74%); }
     .rail { fill: hsl(74, 17%, 66%); }
-    .window { fill: hsl(217, 46%, 65%); }
-    .windowClear { fill: hsla(240, 100%, 89%, 0.25); }
 }
