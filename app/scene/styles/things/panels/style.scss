@@ -112,18 +112,9 @@
     .panel { fill: hsl(60, 100%, 90%); }
 }
 
-.saturnExterior {
-    .body { fill: hsl(262, 26%, 49%); }
-    .bumper { fill: hsl(0, 0%, 60%); }
-}
-
-.saturnSeat {
-    .bar { fill: hsl(268, 11%, 66%); }
-    .cushion { fill: hsl(267, 19%, 50%); }
-}
-
 .schoolbusSeat {
-    .cushion { fill: hsl(113, 17%, 39%); }
+    .cushion { fill: hsl(214, 17%, 39%); }
+    .metalDark { fill: hsl(214, 15%, 25%); }
 }
 
 .taiwanBridge {

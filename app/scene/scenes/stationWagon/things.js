@@ -11,8 +11,8 @@ import { EVIAN_BOTTLES } from '../../../constants/scene/things/fixtures'
 import {
     SATURN_INTERIOR,
     SATURN_EXTERIOR,
-    SATURN_SEAT__LEFT,
-    SATURN_SEAT__RIGHT
+    SATURN_SEAT,
+    SATURN_SEAT_DOWN
 } from '../../../constants/scene/things/panels'
 
 export default {
@@ -42,16 +42,16 @@ export default {
             xPosition: 5.7,
             scaleFactor: 0.5
         },
-        [SATURN_SEAT__LEFT]: {
+        [SATURN_SEAT]: {
             yIndex: 4,
-            xPosition: 3,
-            zOffset: 1.2,
+            xPosition: 2.8,
+            zOffset: 0.8,
             scaleFactor: 0.4
         },
-        [SATURN_SEAT__RIGHT]: {
+        [SATURN_SEAT_DOWN]: {
             yIndex: 4,
-            xPosition: 6,
-            zOffset: 1.2,
+            xPosition: 5.8,
+            zOffset: 0.8,
             scaleFactor: 0.4
         },
         [SATURN_EXTERIOR]: {

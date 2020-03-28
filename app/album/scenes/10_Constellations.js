@@ -76,8 +76,8 @@ import {
 import {
     SATURN_EXTERIOR,
     SATURN_INTERIOR,
-    SATURN_SEAT__LEFT,
-    SATURN_SEAT__RIGHT,
+    SATURN_SEAT,
+    SATURN_SEAT_DOWN,
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
     ATTIC_ARMREST__RIGHT
@@ -258,8 +258,8 @@ export default [
             [PANEL]: {
                 [SATURN_EXTERIOR]: true,
                 [SATURN_INTERIOR]: true,
-                [SATURN_SEAT__LEFT]: true,
-                [SATURN_SEAT__RIGHT]: true
+                [SATURN_SEAT]: true,
+                [SATURN_SEAT_DOWN]: true
             }
         },
         cubes: STATION_WAGON_KEY,

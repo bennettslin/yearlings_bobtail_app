@@ -105,12 +105,13 @@ import {
     PROMISE_PHOTO__SHARED
 } from '../../../shared/print'
 import {
+    BACKPACK__SHARED,
     LIZ_CONDOM__SHARED,
     MIRIAM_CONDOM__SHARED
 } from '../../../shared/wardrobe'
 
 export default {
-    [BACKPACK_BENNETT]: null,
+    [BACKPACK_BENNETT]: BACKPACK__SHARED,
     [BALLED_FOIL]: null,
     [BASEMENT_BEER_BENNETT]: BUDWEISER__SHARED,
     [BASEMENT_BEER_CASE]: BUDWEISER__SHARED,

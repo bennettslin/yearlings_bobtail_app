@@ -2,12 +2,6 @@ export default [
     /**
      * Do once the presence svgs are mostly done.
      */
-
-    {
-        taskName: `Colour doors, windows, couches, linens, furniture cubes, and car seats.`,
-        workedHours: 0,
-        neededHours: 3
-    },
     {
         taskName: `Audit seated presences.`,
         workedHours: 0,

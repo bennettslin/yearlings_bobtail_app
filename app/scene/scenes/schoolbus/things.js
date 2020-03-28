@@ -75,13 +75,13 @@ export default {
         [SCHOOLBUS_SEAT__LEFT]: {
             yIndex: 4,
             xPosition: 1.9,
-            zOffset: 2.6,
+            zOffset: 2,
             scaleFactor: 0.4
         },
         [SCHOOLBUS_SEAT__RIGHT]: {
             yIndex: 4,
             xPosition: 4.9,
-            zOffset: 2.6,
+            zOffset: 2,
             scaleFactor: 0.4
         },
         [SCHOOLBUS_EXTERIOR]: {

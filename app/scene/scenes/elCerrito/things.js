@@ -70,13 +70,13 @@ export default {
         [REATTA_SEAT]: {
             yIndex: 5,
             xPosition: 2,
-            zOffset: 1,
+            zOffset: 0.8,
             scaleFactor: 0.4
         },
         [REATTA_SEAT_DOWN]: {
             yIndex: 5,
             xPosition: 1.66,
-            zOffset: 1,
+            zOffset: 0.8,
             scaleFactor: 0.4
         },
         [REATTA_EXTERIOR]: {

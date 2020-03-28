@@ -27,6 +27,7 @@ import waitingArmrest from 'assets/svgs/panels/waitingArmrest'
 import lizBed from 'assets/svgs/panels/lizBed'
 import saturnInterior from 'assets/svgs/panels/saturnInterior'
 import saturnSeat from 'assets/svgs/panels/saturnSeat'
+import saturnSeatDown from 'assets/svgs/panels/saturnSeatDown'
 import saturnExterior from 'assets/svgs/panels/saturnExterior'
 import atticCouch from 'assets/svgs/panels/atticCouch'
 import atticArmrest from 'assets/svgs/panels/atticArmrest'
@@ -81,8 +82,8 @@ import {
     WAITING_ARMREST__LIZ_RIGHT,
     LIZ_BED,
     SATURN_INTERIOR,
-    SATURN_SEAT__LEFT,
-    SATURN_SEAT__RIGHT,
+    SATURN_SEAT,
+    SATURN_SEAT_DOWN,
     SATURN_EXTERIOR,
     ATTIC_COUCH,
     ATTIC_ARMREST__LEFT,
@@ -146,8 +147,8 @@ export default {
     [WAITING_ARMREST__LIZ_RIGHT]: waitingArmrest,
     [LIZ_BED]: lizBed,
     [SATURN_INTERIOR]: saturnInterior,
-    [SATURN_SEAT__LEFT]: saturnSeat,
-    [SATURN_SEAT__RIGHT]: saturnSeat,
+    [SATURN_SEAT]: saturnSeat,
+    [SATURN_SEAT_DOWN]: saturnSeatDown,
     [SATURN_EXTERIOR]: saturnExterior,
     [ATTIC_COUCH]: atticCouch,
     [ATTIC_ARMREST__LEFT]: atticArmrest,
