@@ -5,8 +5,8 @@ export default {
     [MIRIAM_BENNETT]: {
         [COWGIRL]: {
             yIndex: 3,
-            xPosition: 2.5,
-            zOffset: -1
+            xPosition: 1.9,
+            zOffset: -1.1
         }
     }
 }

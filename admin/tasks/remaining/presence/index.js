@@ -3,11 +3,6 @@ export default [
      * Do once the presence svgs are mostly done.
      */
     {
-        taskName: `Audit seated presences.`,
-        workedHours: 0,
-        neededHours: 4
-    },
-    {
         taskName: `Allow for actors to have different yIndex sizing.`,
         workedHours: 0,
         neededHours: 2
@@ -19,7 +14,7 @@ export default [
     },
     {
         taskName: `Figure out Cremated scenes with convertible panel.`,
-        workedHours: 0,
-        neededHours: 2
+        workedHours: 2,
+        neededHours: 4
     }
 ]

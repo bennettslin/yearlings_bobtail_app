@@ -9,7 +9,8 @@ export default {
     [BENNETT]: {
         [REMOVING_PANTS]: {
             yIndex: 3,
-            xPosition: 3
+            xPosition: 2.56,
+            zOffset: 0.1
         }
     },
     [MIRIAM]: {
