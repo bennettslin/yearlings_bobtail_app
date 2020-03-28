@@ -2,9 +2,6 @@ smoker, make her left calf higher.
 gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
-# TODO
-Have shared js and scss constants.
-
 # Doors and windows
 NURSE_DOOR
 
@@ -87,7 +84,7 @@ wideCouchMiriam (cubes and panels)
 HOSPITAL_LINENS__SHARED
 hospitalBed (cubes)
 
-# Car seats (platforms, lower station wagon seat, colour as well)
+# Car seats
 schoolbus
 
 goKart

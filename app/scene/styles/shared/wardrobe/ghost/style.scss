@@ -1,20 +1,15 @@
 .ghost#{$suffix} {
-    .skinGhostLight { fill: hsl(188, 37%, 62%); }
-    .skinGhostDark { fill: hsl(185, 32%, 54%); }
-    .ghostTail { fill: hsl(180, 42%, 68%); }
+    .ghostTail { fill: hsl(180, 30%, 63%); }
+    .skinGhostDark { fill: hsl(185, 10%, 59%); }
+    .skinGhostLight { fill: hsl(188, 15%, 67%); }
 
-    .chineseTrim { fill: hsl(37, 45%, 58%); }
-    .chineseTie { fill: hsl(38, 18%, 46%); }
+    .chineseTie { fill: hsl(46, 25%, 46%); }
+    .chineseTassel { fill: hsl(46, 38%, 55%); }
+    .chineseTrim { fill: hsl(46, 45%, 65%); }
 
-    .chineseTassel { fill: hsl(46, 38%, 47%); }
-    .chineseHatTrim { fill: hsl(47, 53%, 57%); }
-    .chineseHatButton { fill: hsl(11, 47%, 35%); }
-    .chineseHatLight { fill: hsl(11, 34%, 46%); }
-    .chineseHatDark { fill: hsl(228, 7%, 36%); }
-
-    .chineseRedDark { fill: hsl(3, 38%, 52%); }
-    .chineseRed { fill: hsl(3, 55%, 60%); }
-    .chineseSilver { fill: hsl(198, 8%, 77%); }
-    .chineseBlack { fill: hsl(200, 8%, 35%); }
-    .chinesePink { fill: hsl(305, 54%, 72%); }
+    .chineseRedDark { fill: hsl(3, 32%, 40%); }
+    .chineseRed { fill: hsl(3, 32%, 50%); }
+    .chineseSilver { fill: hsl(71, 20%, 77%); }
+    .chineseBlack { fill: hsl(228, 8%, 28%); }
+    .chinesePink { fill: hsl(305, 20%, 45%); }
 }

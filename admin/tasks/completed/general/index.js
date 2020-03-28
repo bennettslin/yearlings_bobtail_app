@@ -5442,5 +5442,15 @@ export default [
         resource: `https://til.hashrocket.com/posts/sxbrscjuqu-share-scss-variables-with-javascript`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Chinese ghost styling.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Raise car seats.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
