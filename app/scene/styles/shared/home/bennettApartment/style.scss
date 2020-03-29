@@ -1,0 +1,9 @@
+.bennettApartment#{$suffix} {
+    .frameExterior { fill: hsl($HUE_APARTMENT, 10%, 50%); }
+    .doorExterior { fill: hsl($HUE_APARTMENT, 10%, 55%); }
+
+    .paneStill { fill: hsl($HUE_APARTMENT, 12%, 58%); }
+    .paneSliding { fill: hsl($HUE_APARTMENT, 9%, 52%); }
+    .blinds { fill: hsl($HUE_APARTMENT, 14%, 70%); }
+    .rail { fill: hsl($HUE_APARTMENT, 17%, 62%); }
+}

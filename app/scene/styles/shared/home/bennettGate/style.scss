@@ -1,9 +1,7 @@
 .bennettGate#{$suffix} {
-    .gateFrame { fill: hsl(53, 41%, 83%); }
-    .gateDark { fill: hsl(180, 40%, 67%); }
-    .mesh { fill: hsla(240, 31%, 69%, 0.5); }
-    .gateLight { fill: hsl(180, 63%, 76%); }
-    .gateLight { fill: hsl(180, 73%, 78%); }
+    .gateDark { fill: hsl(180, 15%, 48%); }
+    .gateLight { fill: hsl(180, 15%, 53%); }
+    .mesh { fill: hsla(180, 31%, 20%, 0.2); }
     .escutcheon { fill: hsl(171, 10%, 61%); }
     .knobMountDark { fill: hsl(200, 6%, 47%); }
     .knobMountLight { fill: hsl(195, 7%, 53%); }

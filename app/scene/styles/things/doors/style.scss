@@ -9,7 +9,6 @@
 .loadingDockDoor {
     .trimBlack { fill: hsl(60, 35%, 14%); }
     .trimYellow { fill: hsl(60, 44%, 55%); }
-    .shutter { fill: hsl(8, 9%, 54%); }
     .awning { fill: hsl(284, 20%, 36%); }
 }
 
@@ -20,8 +19,4 @@
 .porchDoor {
     .mailSlotFrame { fill: hsl(47, 40%, 42%); }
     .mailSlotLid { fill: hsl(46, 41%, 45%); }
-}
-
-.principalDoor {
-    .window { fill: hsla(0, 0%, 100%, 0.1); }
 }

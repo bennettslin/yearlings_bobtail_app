@@ -1,5 +1,8 @@
 import {
+    HUE_APARTMENT,
+    HUE_BENNETT_WALL,
     HUE_FAMILY_HOUSE,
+    HUE_LIZ_APARTMENT,
     HUE_OCEAN,
     HUE_SAND
 } from '../../../scss/app'
@@ -40,7 +43,7 @@ export const FANCY_WALL_COLOUR = 'fancyWall'
 export const GENERIC_EXTERIOR_COLOUR = 'genericExterior'
 export const FAMILY_EXTERIOR_COLOUR = 'familyExterior'
 export const VAN_NUYS_EXTERIOR_COLOUR = 'vanNuysExterior'
-export const BENNETT_EXTERIOR_COLOUR = 'bennettExterior'
+export const APARTMENT_EXTERIOR_COLOUR = 'apartmentExterior'
 export const LIZ_EXTERIOR_COLOUR = 'lizExterior'
 export const BANCROFT_EXTERIOR_COLOUR = 'bancroftExterior'
 export const CINEMA_EXTERIOR_COLOUR = 'cinemaExterior'
@@ -93,21 +96,21 @@ const HSLA_MAP = {
     [SPOTLIGHT_LIGHTER_COLOUR]: { h: 60, s: 46, l: 45 },
     [SPOTLIGHT_LIGHTEST_COLOUR]: { h: 60, s: 46, l: 55 },
     /* W. */
-    [BENNETT_WALL_COLOUR]: { h: 16, s: 28, l: 74 },
+    [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT_WALL), s: 15, l: 81 },
     [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },
     [SOFT_WALL_COLOUR]: { h: 68, s: 31, l: 87 },
     [INDUSTRIAL_WALL_COLOUR]: { h: 96, s: 13, l: 77 },
-    [LIZ_WALL_COLOUR]: { h: 184, s: 5, l: 81 },
+    [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ_APARTMENT), s: 15, l: 81 },
     [CLUB_WALL_COLOUR]: { h: 221, s: 23, l: 65 },
     [FANCY_WALL_COLOUR]: { h: 278, s: 18, l: 81 },
     [SCHOOL_WALL_COLOUR]: { h: 334, s: 17, l: 78 },
     /* X. */
-    [BENNETT_EXTERIOR_COLOUR]: { h: 1, s: 11, l: 53 },
+    [APARTMENT_EXTERIOR_COLOUR]: { h: parseInt(HUE_APARTMENT), s: 11, l: 53 },
     [GENERIC_EXTERIOR_COLOUR]: { h: 12, s: 16, l: 75 },
     [FAMILY_EXTERIOR_COLOUR]: { h: parseInt(HUE_FAMILY_HOUSE), s: 24, l: 78 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 143, s: 14, l: 68 },
-    [LIZ_EXTERIOR_COLOUR]: { h: 181, s: 16, l: 67 },
+    [LIZ_EXTERIOR_COLOUR]: { h: parseInt(HUE_LIZ_APARTMENT), s: 11, l: 72 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 334, s: 14, l: 63 },
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },

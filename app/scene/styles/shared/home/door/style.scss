@@ -1,24 +1,26 @@
 .door#{$suffix} {
-    // .frameFront { fill: hsl(53, 14%, 64%); }
-    // .doorSide { fill: hsl(43, 22%, 29%); }
-    // .doorFront { fill: hsl(42, 22%, 35%); }
-    // .edge { fill: hsl(43, 22%, 29%); }
-    // .panel { fill: hsl(43, 22%, 32%); }
-
     .frameDarkSide { fill: hsl(33, 13%, 41%); }
     .frameDarkFront { fill: hsl(33, 15%, 46%); }
     .doorDarkSide { fill: hsl(33, 23%, 29%); }
     .doorDarkFront { fill: hsl(33, 23%, 35%); }
+    .edgeDark { fill: hsl(33, 22%, 29%); }
+    .panelDark { fill: hsl(33, 22%, 32%); }
 
     .frameMediumSide { fill: hsl(33, 16%, 48%); }
     .frameMediumFront { fill: hsl(33, 19%, 53%); }
-    .doorMediumFront { fill: hsl(33, 27%, 40%); }
+    .doorMediumSide { fill: hsl(33, 27%, 37%); }
+    .doorMediumFront { fill: hsl(33, 27%, 43%); }
+    .edgeMedium { fill: hsl(33, 22%, 37%); }
+    .panelMedium { fill: hsl(33, 22%, 40%); }
 
     .frameLightSide { fill: hsl(33, 14%, 55%); }
     .frameLightFront { fill: hsl(33, 17%,60%); }
-    .doorLightFront { fill: hsl(33, 22%, 45%); }
-    .edgeLight { fill: hsl(33, 22%, 49%); }
-    .panelLight { fill: hsl(33, 22%, 52%); }
+    .doorLightSide { fill: hsl(33, 22%, 44%); }
+    .doorLightFront { fill: hsl(33, 22%, 50%); }
+    .edgeLight { fill: hsl(33, 22%, 44%); }
+    .panelLight { fill: hsl(33, 22%, 47%); }
+
+    .shutter { fill: hsl(223, 13%, 51%); }
 
     .knob { fill: hsl(47, 40%, 50%); }
     .knobMount { fill: hsl(47, 41%, 47%); }

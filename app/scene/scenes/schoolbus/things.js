@@ -13,7 +13,7 @@ import {
 import { BACKPACK_BENNETT } from '../../../constants/scene/things/fixtures'
 import {
     DRIVING_HOUSE_LEFT,
-    DRIVING_HOUSE_RIGHT
+    DRIVING_HOUSE__RIGHT
 } from '../../../constants/scene/things/flats'
 import {
     SCHOOLBUS_INTERIOR,
@@ -57,12 +57,12 @@ export default {
     [FLAT]: {
         [DRIVING_HOUSE_LEFT]: {
             yIndex: 1,
-            xPosition: 2,
+            xPosition: 1.7,
             scaleFactor: 0.6
         },
-        [DRIVING_HOUSE_RIGHT]: {
+        [DRIVING_HOUSE__RIGHT]: {
             yIndex: 1,
-            xPosition: 9,
+            xPosition: 9.3,
             scaleFactor: 0.6
         }
     },

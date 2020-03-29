@@ -3,7 +3,7 @@ import { BENNETT_GATE_KEY } from '../../../constants/scene/scenes'
 import {
     DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    BENNETT_EXTERIOR_COLOUR as X,
+    APARTMENT_EXTERIOR_COLOUR as X,
     ROOF_COLOUR as C
 } from '../../cubes/colours'
 

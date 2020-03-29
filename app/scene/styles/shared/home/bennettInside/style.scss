@@ -1,0 +1,13 @@
+.bennettInside#{$suffix} {
+    .frameFront { fill: hsl($HUE_BENNETT_WALL, 17%, 65%); }
+    .doorSide { fill: hsl($HUE_BENNETT_WALL, 15%, 60%); }
+    .doorFront { fill: hsl($HUE_BENNETT_WALL, 15%, 55%); }
+
+    .sill { fill: hsl($HUE_BENNETT_WALL, 13%, 64%); }
+    .sillDark { fill: hsl($HUE_BENNETT_WALL, 10%, 58%); }
+
+    .paneStill { fill: hsl($HUE_BENNETT_WALL, 12%, 62%); }
+    .paneSliding { fill: hsl($HUE_BENNETT_WALL, 9%, 56%); }
+    .blinds { fill: hsl($HUE_BENNETT_WALL, 14%, 74%); }
+    .rail { fill: hsl($HUE_BENNETT_WALL, 17%, 66%); }
+}

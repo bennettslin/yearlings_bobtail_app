@@ -6,7 +6,7 @@ import {
     ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
-    BENNETT_EXTERIOR_COLOUR as X
+    APARTMENT_EXTERIOR_COLOUR as X
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline

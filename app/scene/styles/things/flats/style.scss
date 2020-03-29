@@ -13,7 +13,7 @@
     .towerOuter { fill: hsl(60, 6%, 87%); }
     .spireInner { fill: hsl(146, 17%, 45%); }
     .spireOuter { fill: hsl(146, 18%, 49%); }
-    .window { fill: hsl(68, 6%, 25%); }
+    .slit { fill: hsl(68, 6%, 25%); }
     .hourDisplayLine { stroke: hsl(66, 28%, 35%); }
     .handInner { fill: hsl(140, 21%, 47%); }
     .handOuter { fill: hsl(140, 20%, 48%); }
@@ -33,10 +33,6 @@
     .fence { fill: hsl(180, 30%, 60%); }
 }
 
-.commercialFarLeft {
-    .shutter { fill: hsl(223, 13%, 51%); }
-}
-
 .commercialNearLeft {
     .signOuter { fill: hsl(180, 18%, 42%); }
     .signInner { fill: hsl(180, 26%, 80%); }
@@ -45,10 +41,10 @@
 }
 
 .elCerritoFar {
-    .antennaWhite { fill: hsl(0, 0%, 92%); }
+    .antennaWhite { fill: hsl(0, 0%, 82%); }
     .antennaRed { fill: hsl(14, 52%, 53%); }
     .antennaBuilding { fill: hsl(51, 20%, 64%); }
-    .antennaRoof { fill: hsl(90, 5%, 91%); }
+    .antennaRoof { fill: hsl(90, 5%, 82%); }
 }
 
 .familyHouse {
@@ -151,10 +147,6 @@
     .trimDark { fill: hsl(65, 11%, 55%); }
     .trimLight { fill: hsl(64, 18%, 67%); }
     .slit { fill: hsl(47, 7%, 26%); }
-    .doorFrame { fill: hsl(64, 9%, 35%); }
-    .door { fill: hsl(37, 15%, 30%); }
-    .windowOuter { fill: hsl(194, 23%, 58%); }
-    .windowInner { fill: hsl(195, 17%, 50%); }
     .stepFront { fill: hsl(226, 14%, 51%); }
     .stepSide { fill: hsl(226, 13%, 43%); }
     .trimOrnamentInner { fill: hsl(65, 9%, 52%); }

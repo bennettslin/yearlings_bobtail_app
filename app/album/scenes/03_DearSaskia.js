@@ -57,7 +57,7 @@ import {
     TAIWAN_MOUNTAIN_LEFT,
     TAIWAN_MOUNTAIN_RIGHT,
     DRIVING_HOUSE_LEFT,
-    DRIVING_HOUSE_RIGHT,
+    DRIVING_HOUSE__RIGHT,
     SCHOOL_BUNGALOW
 } from '../../constants/scene/things/flats'
 import {
@@ -176,7 +176,7 @@ export default [
             },
             [FLAT]: {
                 [DRIVING_HOUSE_LEFT]: true,
-                [DRIVING_HOUSE_RIGHT]: true
+                [DRIVING_HOUSE__RIGHT]: true
             },
             [PANEL]: {
                 [SCHOOLBUS_INTERIOR]: true,

@@ -68,10 +68,9 @@ import {
 } from '../../constants/scene/things/fixtures'
 import {
     ROYCE_HALL,
-    DRIVING_HOUSE_LEFT,
-    DRIVING_HOUSE_RIGHT,
     CEMETERY_HILLS_LEFT,
-    CEMETERY_HILLS_RIGHT
+    CEMETERY_HILLS_RIGHT,
+    DRIVING_HOUSE__SINGLE
 } from '../../constants/scene/things/flats'
 import {
     SATURN_EXTERIOR,
@@ -252,8 +251,7 @@ export default [
                 [EVIAN_BOTTLES]: true
             },
             [FLAT]: {
-                [DRIVING_HOUSE_LEFT]: true,
-                [DRIVING_HOUSE_RIGHT]: true
+                [DRIVING_HOUSE__SINGLE]: true
             },
             [PANEL]: {
                 [SATURN_EXTERIOR]: true,

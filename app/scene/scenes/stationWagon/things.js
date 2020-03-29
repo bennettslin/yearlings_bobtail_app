@@ -1,6 +1,7 @@
 import {
     BUBBLE,
     FIXTURE,
+    FLAT,
     PANEL
 } from '../../../constants/scene/things'
 import {
@@ -8,6 +9,7 @@ import {
     SIBLING_CONSTELLATION
 } from '../../../constants/scene/things/bubbles'
 import { EVIAN_BOTTLES } from '../../../constants/scene/things/fixtures'
+import { DRIVING_HOUSE__SINGLE } from '../../../constants/scene/things/flats'
 import {
     SATURN_INTERIOR,
     SATURN_EXTERIOR,
@@ -19,13 +21,13 @@ export default {
     [BUBBLE]: {
         [TARPIT_CONSTELLATION]: {
             yIndex: 5,
-            xPosition: 3,
-            zOffset: 4.5,
-            scaleFactor: 0.4
+            xPosition: 2.7,
+            zOffset: 4.8,
+            scaleFactor: 0.35
         },
         [SIBLING_CONSTELLATION]: {
             yIndex: 1,
-            xPosition: 9,
+            xPosition: 9.5,
             zOffset: 4.5,
             scaleFactor: 0.4
         }
@@ -34,6 +36,13 @@ export default {
         [EVIAN_BOTTLES]: {
             yIndex: 3,
             xPosition: 1.5
+        }
+    },
+    [FLAT]: {
+        [DRIVING_HOUSE__SINGLE]: {
+            yIndex: 1,
+            xPosition: 6.5,
+            scaleFactor: 0.6
         }
     },
     [PANEL]: {

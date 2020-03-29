@@ -9,7 +9,7 @@ import {
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     NIGHT_COLOUR as Y,
-    BENNETT_EXTERIOR_COLOUR as X,
+    APARTMENT_EXTERIOR_COLOUR as X,
     BENNETT_BED_COLOUR as U
 } from '../../cubes/colours'
 
