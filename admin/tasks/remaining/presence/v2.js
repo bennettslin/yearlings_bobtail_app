@@ -43,5 +43,10 @@ export default [
         taskName: `Ocean waves panel.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Another recyclables bin for neighbour.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

@@ -50,7 +50,8 @@ export default {
         },
         [BENNETT_GATE_SIDE_OPEN]: {
             yIndex: 1,
-            xPosition: 8
+            xPosition: 8.4,
+            zOffset: -0.3
         }
     },
     [FIXTURE]: {

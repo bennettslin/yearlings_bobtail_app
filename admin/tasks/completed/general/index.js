@@ -5455,7 +5455,12 @@ export default [
     },
     {
         taskName: `Colour doors and windows.`,
-        workedHours: 9,
+        workedHours: 8,
         neededHours: 8
+    },
+    {
+        taskName: `Work on Bennett bed scene.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
