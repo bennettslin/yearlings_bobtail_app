@@ -6,6 +6,7 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
+    FURNITURE,
     PANEL,
     PUPPET
 } from '../../constants/scene/things'
@@ -77,6 +78,10 @@ import {
     FOREBODING_TREES__MIDDLE,
     FOREBODING_TREES__FAR
 } from '../../constants/scene/things/flats'
+import {
+    DEATHBED_BLANKET,
+    DEATHBED_PILLOW
+} from '../../constants/scene/things/furnitures'
 import {
     WEDDING_PLATFORM,
     HOSPITAL_BED
@@ -238,6 +243,10 @@ export default [
             },
             [FLAT]: {
                 [CLIFF_GRAVES_FAR]: true
+            },
+            [FURNITURE]: {
+                [DEATHBED_BLANKET]: true,
+                [DEATHBED_PILLOW]: true
             },
             [PANEL]: {
                 [HOSPITAL_BED]: true

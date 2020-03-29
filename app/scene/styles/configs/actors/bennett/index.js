@@ -77,10 +77,10 @@ import {
     SKETCHBOOK__SHARED
 } from '../../../shared/paper'
 import { DOLLAR__SHARED } from '../../../shared/print'
+import { GO_KART__SHARED } from '../../../shared/vehicles'
 import {
     BRACELET__SHARED,
     CAFETERIA__SHARED,
-    GO_KART__SHARED,
     LIZ_PURSE__SHARED,
     MESSENGER_BAG__SHARED,
     MIRIAM_CONDOM__SHARED,

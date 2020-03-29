@@ -1,5 +1,6 @@
 .atticLinens#{$suffix} {
-    .pillow { fill: hsl(54, 26%, 61%); }
-    .blanket { fill: hsl(215, 26%, 61%); }
-    .blanketInner { fill: hsl(214, 17%, 50%); }
+    .cushion { fill: hsl($hue__attic__linens, 15%, 42%); }
+    .pillow { fill: hsl($hue__attic__linens + 10, 26%, 57%); }
+    .blanket { fill: hsl($hue__attic__linens + 20, 26%, 61%); }
+    .blanketInner { fill: hsl($hue__attic__linens + 20, 26%, 50%); }
 }

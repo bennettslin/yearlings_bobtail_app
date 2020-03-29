@@ -55,9 +55,14 @@ import {
     TRAY__SHARED
 } from '../../../shared/dishroom'
 import {
+    ATTIC_LINENS__SHARED,
+    BENNETT_LINENS__SHARED,
+    LIZ_LINENS__SHARED,
+    MIRIAM_LINENS__SHARED,
     PRETEEN_FURNITURE__SHARED,
     WAITING_ARMCHAIR__SHARED
 } from '../../../shared/furniture'
+import { WINDOW__SHARED } from '../../../shared/home'
 import {
     FOLIAGE__SHARED,
     MOUNTAIN__SHARED,
@@ -72,6 +77,7 @@ import {
 import { BUDDHA_SHRINE__SHARED } from '../../../shared/taiwan'
 import {
     ALL_VEHICLES__SHARED,
+    GO_KART__SHARED,
     INTERIOR__SHARED,
     REATTA__SHARED,
     SATURN__SHARED,
@@ -79,8 +85,8 @@ import {
 } from '../../../shared/vehicles'
 
 export default {
-    [ATTIC_ARMREST]: null,
-    [ATTIC_COUCH]: null,
+    [ATTIC_ARMREST]: ATTIC_LINENS__SHARED,
+    [ATTIC_COUCH]: ATTIC_LINENS__SHARED,
     [BASEMENT_FENCE]: [
         FOLIAGE__SHARED,
         WALL__SHARED
@@ -103,11 +109,17 @@ export default {
     [CROWD_BACK]: SHADOW__SHARED,
     [CROWD_SIDE]: SHADOW__SHARED,
     [DISHROOM_SINK]: null,
-    [GO_KART_EXTERIOR]: ALL_VEHICLES__SHARED,
-    [GO_KART_SEAT]: null,
+    [GO_KART_EXTERIOR]: [
+        ALL_VEHICLES__SHARED,
+        GO_KART__SHARED
+    ],
+    [GO_KART_SEAT]: GO_KART__SHARED,
     [HOSPITAL_BED]: null,
     [LIZ_BED]: SHADOW__SHARED,
-    [LIZ_COUCH]: SHADOW__SHARED,
+    [LIZ_COUCH]: [
+        LIZ_LINENS__SHARED,
+        SHADOW__SHARED
+    ],
     [OCEAN_CAVE_EXTERIOR]: OCEAN_CAVE__SHARED,
     [OCEAN_CAVE_INTERIOR]: [
         BUDDHA_SHRINE__SHARED,
@@ -117,7 +129,8 @@ export default {
     [PHONE_CALL_PANEL]: null,
     [REATTA_EXTERIOR]: [
         ALL_VEHICLES__SHARED,
-        REATTA__SHARED
+        REATTA__SHARED,
+        WINDOW__SHARED
     ],
     [REATTA_INTERIOR]: INTERIOR__SHARED,
     [REATTA_SEAT]: REATTA__SHARED,
@@ -149,8 +162,8 @@ export default {
         FOLIAGE__SHARED,
         WEDDING__SHARED
     ],
-    [WIDE_ARMREST_BENNETT]: null,
-    [WIDE_ARMREST_MIRIAM]: null,
-    [WIDE_COUCH_BENNETT]: null,
-    [WIDE_COUCH_MIRIAM]: null
+    [WIDE_ARMREST_BENNETT]: BENNETT_LINENS__SHARED,
+    [WIDE_ARMREST_MIRIAM]: MIRIAM_LINENS__SHARED,
+    [WIDE_COUCH_BENNETT]: BENNETT_LINENS__SHARED,
+    [WIDE_COUCH_MIRIAM]: MIRIAM_LINENS__SHARED
 }

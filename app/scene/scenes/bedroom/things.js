@@ -165,8 +165,8 @@ export const THINGS_BEDROOM_GUILTY = {
 export const THINGS_BEDROOM_FEIGNING = {
     [FIXTURE]: {
         [RED_ENVELOPE_MONEY]: {
-            yIndex: 3,
-            xPosition: 6.6
+            yIndex: 5,
+            xPosition: 5.4
         }
     },
     [FLAT]: {

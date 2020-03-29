@@ -1,6 +1,6 @@
 .taiwanLinens#{$suffix} {
-    .cushion { fill: hsl(338, 39%, 54%); }
-    .welt { fill: hsl(62, 32%, 53%); }
-    .taiwanBlanket { fill: hsl(214, 57%, 66%); }
-    .taiwanBlanketInner { fill: hsl(214, 40%, 58%); }
+    .welt { fill: hsl(62, 32%, 54%); }
+    .cushion { fill: hsl($hue__taiwan__linens + 10, 39%, 54%); }
+    .taiwanBlanket { fill: hsl($hue__taiwan__linens, 40%, 61%); }
+    .taiwanBlanketInner { fill: hsl($hue__taiwan__linens, 40%, 53%); }
 }

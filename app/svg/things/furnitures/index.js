@@ -1,6 +1,7 @@
 import atticPillow from 'assets/svgs/furnitures/atticPillow'
 import bennettPillow from 'assets/svgs/furnitures/bennettPillow'
 import captainBedPillow from 'assets/svgs/furnitures/captainBedPillow'
+import deathbedBlanket from 'assets/svgs/furnitures/deathbedBlanket'
 import deathbedPillow from 'assets/svgs/furnitures/deathbedPillow'
 import lizPillows from 'assets/svgs/furnitures/lizPillows'
 import lizPillowsReflection from 'assets/svgs/furnitures/lizPillowsReflection'
@@ -12,6 +13,7 @@ import {
     BENNETT_PILLOW,
     CAPTAIN_BED_PILLOW,
     DEATHBED_PILLOW,
+    DEATHBED_BLANKET,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
@@ -23,6 +25,7 @@ export default {
     [BENNETT_PILLOW]: bennettPillow,
     [CAPTAIN_BED_PILLOW]: captainBedPillow,
     [DEATHBED_PILLOW]: deathbedPillow,
+    [DEATHBED_BLANKET]: deathbedBlanket,
     [LIZ_PILLOWS]: lizPillows,
     [LIZ_PILLOWS_REFLECTION]: lizPillowsReflection,
     [LIZ_PILLOWS_PILE]: lizPillowsPile,

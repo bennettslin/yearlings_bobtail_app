@@ -33,12 +33,4 @@
         .racketStrings { fill: hsl(72, 21%, 81%); }
         .tennisRacket { fill: hsl(72, 42%, 65%); }
     }
-
-    &.reversing {
-        .wheelHandle { fill: hsl(52, 26%, 61%); }
-        .wheelHubLight { fill: hsl(339, 20%, 55%); }
-        .wheelHubMedium { fill: hsl(339, 17%, 51%); }
-        .wheelHubDark { fill: hsl(338, 16%, 46%); }
-        .wheelSpoke { fill: hsl(183, 11%, 64%); }
-    }
 }

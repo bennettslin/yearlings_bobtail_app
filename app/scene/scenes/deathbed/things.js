@@ -22,7 +22,10 @@ import {
 import { IV_DRIP } from '../../../constants/scene/things/cutouts'
 import { HOSPITAL_RECORD_PLAYER } from '../../../constants/scene/things/fixtures'
 import { TENNIS_COURT } from '../../../constants/scene/things/flats'
-import { DEATHBED_PILLOW } from '../../../constants/scene/things/furnitures'
+import {
+    DEATHBED_BLANKET,
+    DEATHBED_PILLOW
+} from '../../../constants/scene/things/furnitures'
 import { HOSPITAL_BED } from '../../../constants/scene/things/panels'
 
 export default {
@@ -54,26 +57,31 @@ export default {
     [CUTOUT]: {
         [IV_DRIP]: {
             yIndex: 1,
-            xPosition: 2,
+            xPosition: 4,
             scaleFactor: 0.35
         }
     },
     [FIXTURE]: {
         [HOSPITAL_RECORD_PLAYER]: {
             yIndex: 1,
-            xPosition: 6
+            xPosition: 7
         }
     },
     [FURNITURE]: {
+        [DEATHBED_BLANKET]: {
+            yIndex: 3,
+            xPosition: 2.6
+        },
         [DEATHBED_PILLOW]: {
             yIndex: 3,
-            xPosition: 2
+            xPosition: 1.5,
+            zOffset: 0.5
         }
     },
     [PANEL]: {
         [HOSPITAL_BED]: {
             yIndex: 5,
-            xPosition: 3.25,
+            xPosition: 3.1,
             scaleFactor: 0.27
         }
     }

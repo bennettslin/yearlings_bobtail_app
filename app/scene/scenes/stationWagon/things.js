@@ -35,7 +35,7 @@ export default {
     [FIXTURE]: {
         [EVIAN_BOTTLES]: {
             yIndex: 3,
-            xPosition: 1.5
+            xPosition: 1.2
         }
     },
     [FLAT]: {

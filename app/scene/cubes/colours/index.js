@@ -1,8 +1,12 @@
 import {
     HUE_APARTMENT,
-    HUE_BENNETT,
+    HUE_BENNETT_LINENS,
+    HUE_BENNETT_ROOM,
     HUE_FAMILY,
-    HUE_LIZ,
+    HUE_LIZ_LINENS,
+    HUE_LIZ_ROOM,
+    HUE_MIRIAM_LINENS,
+    HUE_WAITING,
     HUE_ROOF,
     HUE_OCEAN,
     HUE_SAND
@@ -79,9 +83,9 @@ const HSLA_MAP = {
     /* C. */
     [ROOF_COLOUR]: { h: parseInt(HUE_ROOF), s: 24, l: 51 },
     /* F. */
-    [BENNETT_CARPET_COLOUR]: { h: parseInt(HUE_BENNETT), s: 25, l: 57 },
-    [BENNETT_FLOOR_COLOUR]: { h: parseInt(HUE_BENNETT) + 15, s: 15, l: 69 },
-    [LIZ_FLOOR_COLOUR]: { h: parseInt(HUE_LIZ) + 15, s: 22, l: 59 },
+    [BENNETT_CARPET_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM), s: 25, l: 57 },
+    [BENNETT_FLOOR_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM) + 15, s: 15, l: 69 },
+    [LIZ_FLOOR_COLOUR]: { h: parseInt(HUE_LIZ_ROOM) + 15, s: 22, l: 59 },
     [WOOD_FLOOR_COLOUR]: { h: 32, s: 45, l: 34 },
     [OLD_FLOOR_COLOUR]: { h: 36, s: 13, l: 46 },
     [DIRT_FLOOR_COLOUR]: { h: 51, s: 12, l: 34 },
@@ -97,8 +101,8 @@ const HSLA_MAP = {
     [SPOTLIGHT_LIGHTER_COLOUR]: { h: 60, s: 46, l: 45 },
     [SPOTLIGHT_LIGHTEST_COLOUR]: { h: 60, s: 46, l: 55 },
     /* W. */
-    [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT), s: 15, l: 81 },
-    [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ), s: 15, l: 81 },
+    [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT_ROOM), s: 15, l: 81 },
+    [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ_ROOM), s: 15, l: 81 },
     [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },
     [SOFT_WALL_COLOUR]: { h: 68, s: 31, l: 87 },
     [INDUSTRIAL_WALL_COLOUR]: { h: 96, s: 13, l: 77 },
@@ -108,7 +112,7 @@ const HSLA_MAP = {
     /* X. */
     [APARTMENT_EXTERIOR_COLOUR]: { h: parseInt(HUE_APARTMENT), s: 11, l: 58 },
     [FAMILY_EXTERIOR_COLOUR]: { h: parseInt(HUE_FAMILY), s: 24, l: 78 },
-    [LIZ_EXTERIOR_COLOUR]: { h: parseInt(HUE_LIZ), s: 11, l: 72 },
+    [LIZ_EXTERIOR_COLOUR]: { h: parseInt(HUE_LIZ_ROOM), s: 11, l: 72 },
     [GENERIC_EXTERIOR_COLOUR]: { h: 12, s: 16, l: 75 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 143, s: 14, l: 68 },
@@ -123,12 +127,12 @@ const HSLA_MAP = {
     /* R. */
     [FURNITURE_COLOUR]: { h: 25, s: 44, l: 53 },
     /* U. */
-    [BENNETT_COUCH_COLOUR]: { h: 125, s: 12, l: 45 },
-    [LIZ_COUCH_COLOUR]: { h: 45, s: 10, l: 45 },
-    [MIRIAM_COUCH_COLOUR]: { h: 250, s: 12, l: 45 },
-    [WAITING_ARMCHAIR_COLOUR]: { h: 43, s: 34, l: 44 },
-    [BENNETT_BED_COLOUR]: { h: 4, s: 35, l: 60 },
-    [LIZ_BED_COLOUR]: { h: 45, s: 12, l: 60 },
+    [BENNETT_COUCH_COLOUR]: { h: parseInt(HUE_BENNETT_LINENS), s: 25, l: 45 },
+    [BENNETT_BED_COLOUR]: { h: parseInt(HUE_BENNETT_LINENS), s: 35, l: 60 },
+    [LIZ_COUCH_COLOUR]: { h: parseInt(HUE_LIZ_LINENS), s: 15, l: 50 },
+    [LIZ_BED_COLOUR]: { h: parseInt(HUE_LIZ_LINENS), s: 25, l: 65 },
+    [WAITING_ARMCHAIR_COLOUR]: { h: parseInt(HUE_WAITING), s: 34, l: 44 },
+    [MIRIAM_COUCH_COLOUR]: { h: parseInt(HUE_MIRIAM_LINENS), s: 25, l: 45 },
     /* S. */
     [SEAT_COLOUR]: { h: 25, s: 27, l: 47 }
 }

@@ -10,6 +10,7 @@ import {
     EPILOGUE
 } from '../../../../../constants/scene/actors/songs'
 import { MARA } from '../../../../../constants/scene/actors'
+import { REATTA__SHARED } from '../../../shared/vehicles'
 import {
     SARI__SHARED,
     YOUNG_MOM__SHARED
@@ -26,7 +27,7 @@ export default {
     ],
     [PERFUMING]: null,
     [TENNIS]: null,
-    [REVERSING]: null,
+    [REVERSING]: REATTA__SHARED,
     [GOPI]: SARI__SHARED,
     [EPILOGUE]: null
 }

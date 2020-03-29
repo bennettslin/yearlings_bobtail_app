@@ -20,7 +20,7 @@ export default {
     [CUTOUT]: {
         [STORAGE_BOXES]: {
             yIndex: 1,
-            xPosition: 5.5,
+            xPosition: 6.5,
             scaleFactor: 0.2
         },
         [STORAGE_CHEST]: {

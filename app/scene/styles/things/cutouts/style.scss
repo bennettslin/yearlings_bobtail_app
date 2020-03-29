@@ -274,16 +274,16 @@
 }
 
 .storageChest {
-    .chestSide { fill: hsl(210, 50%, 40%); }
-    .chestFront { fill: hsl(210, 50%, 60%); }
+    .chestSide { fill: hsl(210, 40%, 40%); }
+    .chestFront { fill: hsl(210, 40%, 50%); }
     .leatherSide { fill: hsl(60, 33%, 30%); }
     .leatherSideLine { stroke: hsl(60, 43%, 23%); }
     .leatherFront { fill: hsl(60, 20%, 50%); }
     .leatherFrontLine { stroke: hsl(60, 23%, 43%); }
     .handle { fill: hsl(30, 100%, 20%); }
-    .brassSide { fill: hsl(60, 43%, 47%); }
-    .brassFront { fill: hsl(60, 50%, 60%); }
-    .brassLine { stroke: hsl(60, 50%, 40%); }
+    .brassSide { fill: hsl(60, 43%, 45%); }
+    .brassFront { fill: hsl(60, 43%, 50%); }
+    .brassLine { stroke: hsl(60, 43%, 40%); }
     .keyhole { fill: hsl(0, 0%, 20%); }
 }
 
@@ -292,15 +292,15 @@
 }
 
 .television {
-    .side { fill: hsl(39, 41%, 64%); }
-    .back { fill: hsl(39, 32%, 59%); }
-    .panel { fill: hsl(39, 22%, 48%); }
-    .slat { fill: hsl(40, 22%, 39%); }
+    .side { fill: hsl(39, 32%, 54%); }
+    .back { fill: hsl(39, 32%, 49%); }
+    .panel { fill: hsl(39, 22%, 43%); }
+    .slat { fill: hsl(40, 22%, 34%); }
     .tubeLight { fill: hsl(195, 10%, 39%); }
     .tubeDark { fill: hsl(194, 10%, 35%); }
     .antennaBase { fill: hsl(174, 10%, 40%); }
     .antennaRing { fill: hsl(173, 10%, 47%); }
-    .antennae { fill: hsl(173, 18%, 65%); }
+    .antennae { fill: hsl(173, 18%, 53%); }
 }
 
 .towelRack {

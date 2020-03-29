@@ -1,5 +1,10 @@
 .lizLinens#{$suffix} {
-    .boyfriendPillow { fill: hsl(225, 27%, 67%); }
-    .lizPillow { fill: hsl(273, 27%, 67%); }
-    .lizBlanket { fill: hsl(273, 25%, 54%); }
+    .cushion { fill: hsl($HUE_LIZ_LINENS, 11%, 46%); }
+    .pillowSurface { fill: hsl($HUE_LIZ_LINENS, 8%, 39%); }
+    .pillowEdge { fill: hsl($HUE_LIZ_LINENS, 10%, 34%); }
+    .skirt { fill: hsl($HUE_LIZ_LINENS, 11%, 32%); }
+
+    .boyfriendPillow { fill: hsl($HUE_LIZ_LINENS - 35, 32%, 62%); }
+    .lizPillow { fill: hsl($HUE_LIZ_LINENS + 15, 27%, 59%); }
+    .lizBlanket { fill: hsl($HUE_LIZ_LINENS, 25%, 60%); }
 }

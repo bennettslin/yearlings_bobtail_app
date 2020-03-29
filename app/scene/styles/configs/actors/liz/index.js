@@ -29,10 +29,8 @@ import {
 } from '../../../shared/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../shared/food'
 import { LIZ_LINENS__SHARED } from '../../../shared/furniture'
-import {
-    BACKPACK__SHARED,
-    GO_KART__SHARED
-} from '../../../shared/wardrobe'
+import { GO_KART__SHARED } from '../../../shared/vehicles'
+import { BACKPACK__SHARED } from '../../../shared/wardrobe'
 
 export default {
     [DATE_ENDING]: null,

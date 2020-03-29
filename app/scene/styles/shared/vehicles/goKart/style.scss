@@ -1,0 +1,20 @@
+.goKart#{$suffix} {
+    .wheelHubDark { fill: hsl(0, 10%, 58%); }
+    .wheelHubLight { fill: hsl(0, 14%, 65%); }
+    .wheelHandle { fill: hsl(0, 14%, 44%); }
+
+    .goKartHelmetTrim { fill: hsl(0, 0%, 48%); }
+    .goKartHelmet { fill: hsl(0, 6%, 87%); }
+    
+    .cushion { fill: hsl(0, 10%, 30%); }
+
+    .cap { fill: hsl(60, 20%, 50%); }
+    .cooler { fill: hsl(217, 18%, 31%); }
+    .tank { fill: hsl(37, 25%, 73%); }
+    .rod { fill: hsl(0, 0%, 60%); }
+    .frame { fill: hsl(0, 0%, 40%); }
+    .engine { fill: hsl(0, 38%, 38%); }
+    .ring { fill: hsl(0, 16%, 26%); }
+    .guard { fill: hsl(0, 20%, 83%); }
+    .body { fill: hsl(0, 40%, 49%); }
+}

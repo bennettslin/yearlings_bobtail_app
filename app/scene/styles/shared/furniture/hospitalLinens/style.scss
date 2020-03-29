@@ -1,5 +1,5 @@
 .hospitalLinens#{$suffix} {
-    .hospitalPillow { fill: hsl(48, 19%, 75%); }
-    .hospitalBlanket { fill: hsl(54, 19%, 62%); }
-    .hospitalBlanketInner { fill: hsl(54, 14%, 54%); }
+    .hospitalPillow { fill: hsl($hue__hospital__linens, 19%, 75%); }
+    .hospitalBlanket { fill: hsl($hue__hospital__linens + 10, 19%, 62%); }
+    .hospitalBlanketInner { fill: hsl($hue__hospital__linens + 10, 14%, 54%); }
 }

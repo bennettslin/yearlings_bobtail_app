@@ -1,14 +1,14 @@
 .lizApartment#{$suffix} {
-    .frameSide { fill: hsl($HUE_LIZ, 17%, 54%); }
-    .frameFront { fill: hsl($HUE_LIZ, 17%, 60%); }
-    .doorSide { fill: hsl($HUE_LIZ + 20, 22%, 50%); }
-    .doorFront { fill: hsl($HUE_LIZ + 20, 22%, 55%); }
+    .frameSide { fill: hsl($HUE_LIZ_ROOM, 17%, 54%); }
+    .frameFront { fill: hsl($HUE_LIZ_ROOM, 17%, 60%); }
+    .doorSide { fill: hsl($HUE_LIZ_ROOM + 20, 22%, 50%); }
+    .doorFront { fill: hsl($HUE_LIZ_ROOM + 20, 22%, 55%); }
 
-    .sill { fill: hsl($HUE_LIZ, 13%, 64%); }
-    .sillDark { fill: hsl($HUE_LIZ, 10%, 58%); }
+    .sill { fill: hsl($HUE_LIZ_ROOM, 13%, 64%); }
+    .sillDark { fill: hsl($HUE_LIZ_ROOM, 10%, 58%); }
 
-    .paneStill { fill: hsl($HUE_LIZ, 12%, 58%); }
-    .paneSliding { fill: hsl($HUE_LIZ, 9%, 52%); }
-    .blinds { fill: hsl($HUE_LIZ, 5%, 74%); }
-    .rail { fill: hsl($HUE_LIZ, 17%, 66%); }
+    .paneStill { fill: hsl($HUE_LIZ_ROOM, 12%, 58%); }
+    .paneSliding { fill: hsl($HUE_LIZ_ROOM, 9%, 52%); }
+    .blinds { fill: hsl($HUE_LIZ_ROOM, 5%, 74%); }
+    .rail { fill: hsl($HUE_LIZ_ROOM, 17%, 66%); }
 }
