@@ -5,27 +5,27 @@ dryingTears, bring Stephanie's right arm up.
 # Furniture and linens
 TAIWAN_LINENS__SHARED
 
-PRETEEN_LINENS__SHARED
+PRETEEN_LINENS__SHARED (blue)
 captainBed (cubes)
 
-wideCouchBennett (cubes and panels)
+wideCouchBennett (cubes and panels) (orange)
+
+BENNETT_LINENS__SHARED (orange)
+bennettBed (cubes)
 
 waitingArmchair (cubes and panels)
 
-ATTIC_LINENS__SHARED
+ATTIC_LINENS__SHARED (red)
 atticCouch (cubes and panels)
 
-LIZ_LINENS__SHARED
+LIZ_LINENS__SHARED (purple)
 lizBed (cubes)
 
-BENNETT_LINENS__SHARED
-bennettBed (cubes)
+lizCouch (cubes and panels) (purple)
 
-lizCouch (cubes and panels)
+wideCouchMiriam (cubes and panels) (green)
 
-wideCouchMiriam (cubes and panels)
-
-HOSPITAL_LINENS__SHARED
+HOSPITAL_LINENS__SHARED (yellow, plain)
 hospitalBed (cubes)
 
 # Car seats
