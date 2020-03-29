@@ -1,9 +1,9 @@
 .house#{$suffix} {
     .stepFront { fill: hsl(230, 16%, 68%); }
     .stepSide { fill: hsl(228, 16%, 59%); }
-    .roofBelow { fill: hsl(0, 20%, 43%); }
-    .roofSide { fill: hsl(0, 20%, 50%); }
-    .roofTop { fill: hsl(0, 20%, 56%); }
+    .roofBelow { fill: hsl($HUE_ROOF, 20%, 43%); }
+    .roofSide { fill: hsl($HUE_ROOF, 20%, 50%); }
+    .roofTop { fill: hsl($HUE_ROOF, 20%, 56%); }
     .beam { fill: hsl(49, 10%, 49%); }
     .railFront { fill: hsl(40, 24%, 61%); }
     .railSide { fill: hsl(40, 17%, 56%); }

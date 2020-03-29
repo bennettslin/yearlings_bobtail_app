@@ -50,28 +50,28 @@ export default {
         },
         [BENNETT_GATE_SIDE_OPEN]: {
             yIndex: 1,
-            xPosition: 9
+            xPosition: 8
         }
     },
     [FIXTURE]: {
         [LIGHT_SWITCH__OFF]: {
             yIndex: 3,
             xPosition: 5,
-            zOffset: 3.5,
+            zOffset: 3.6,
             rotate: 180
         },
         [LIGHT_SWITCH__ON]: {
             yIndex: 3,
             xPosition: 5,
-            zOffset: 3.5
+            zOffset: 3.6
         },
         [LINGERIE_DRAWING]: {
             yIndex: 4,
-            xPosition: 7
+            xPosition: 6.2
         },
         [VASELINE]: {
             yIndex: 4,
-            xPosition: 8
+            xPosition: 7.7
         }
     },
     [FURNITURE]: {

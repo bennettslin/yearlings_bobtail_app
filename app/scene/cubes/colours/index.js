@@ -1,8 +1,9 @@
 import {
     HUE_APARTMENT,
-    HUE_BENNETT_WALL,
-    HUE_FAMILY_HOUSE,
-    HUE_LIZ_APARTMENT,
+    HUE_BENNETT,
+    HUE_FAMILY,
+    HUE_LIZ,
+    HUE_ROOF,
     HUE_OCEAN,
     HUE_SAND
 } from '../../../scss/app'
@@ -76,15 +77,15 @@ const HSLA_MAP = {
     [SAND_COLOUR]: { h: parseInt(HUE_SAND), s: 30, l: 64 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },
     /* C. */
-    [ROOF_COLOUR]: { h: 14, s: 24, l: 51 },
+    [ROOF_COLOUR]: { h: parseInt(HUE_ROOF), s: 24, l: 51 },
     /* F. */
-    [BENNETT_CARPET_COLOUR]: { h: 16, s: 31, l: 57 },
-    [BENNETT_FLOOR_COLOUR]: { h: 26, s: 15, l: 69 },
+    [BENNETT_CARPET_COLOUR]: { h: parseInt(HUE_BENNETT), s: 25, l: 57 },
+    [BENNETT_FLOOR_COLOUR]: { h: parseInt(HUE_BENNETT) + 15, s: 15, l: 69 },
+    [LIZ_FLOOR_COLOUR]: { h: parseInt(HUE_LIZ) + 15, s: 22, l: 59 },
     [WOOD_FLOOR_COLOUR]: { h: 32, s: 45, l: 34 },
     [OLD_FLOOR_COLOUR]: { h: 36, s: 13, l: 46 },
     [DIRT_FLOOR_COLOUR]: { h: 51, s: 12, l: 34 },
     [LINOLEUM_FLOOR_COLOUR]: { h: 74, s: 14, l: 67 },
-    [LIZ_FLOOR_COLOUR]: { h: 195, s: 22, l: 59 },
     [SCHOOL_FLOOR_COLOUR]: { h: 346, s: 13, l: 72 },
     [VELVET_FLOOR_COLOUR]: { h: 357, s: 44, l: 36 },
     /* Y. */
@@ -96,21 +97,21 @@ const HSLA_MAP = {
     [SPOTLIGHT_LIGHTER_COLOUR]: { h: 60, s: 46, l: 45 },
     [SPOTLIGHT_LIGHTEST_COLOUR]: { h: 60, s: 46, l: 55 },
     /* W. */
-    [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT_WALL), s: 15, l: 81 },
+    [BENNETT_WALL_COLOUR]: { h: parseInt(HUE_BENNETT), s: 15, l: 81 },
+    [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ), s: 15, l: 81 },
     [UNDERGROUND_WALL_COLOUR]: { h: 61, s: 18, l: 65 },
     [SOFT_WALL_COLOUR]: { h: 68, s: 31, l: 87 },
     [INDUSTRIAL_WALL_COLOUR]: { h: 96, s: 13, l: 77 },
-    [LIZ_WALL_COLOUR]: { h: parseInt(HUE_LIZ_APARTMENT), s: 15, l: 81 },
     [CLUB_WALL_COLOUR]: { h: 221, s: 23, l: 65 },
     [FANCY_WALL_COLOUR]: { h: 278, s: 18, l: 81 },
     [SCHOOL_WALL_COLOUR]: { h: 334, s: 17, l: 78 },
     /* X. */
-    [APARTMENT_EXTERIOR_COLOUR]: { h: parseInt(HUE_APARTMENT), s: 11, l: 53 },
+    [APARTMENT_EXTERIOR_COLOUR]: { h: parseInt(HUE_APARTMENT), s: 11, l: 58 },
+    [FAMILY_EXTERIOR_COLOUR]: { h: parseInt(HUE_FAMILY), s: 24, l: 78 },
+    [LIZ_EXTERIOR_COLOUR]: { h: parseInt(HUE_LIZ), s: 11, l: 72 },
     [GENERIC_EXTERIOR_COLOUR]: { h: 12, s: 16, l: 75 },
-    [FAMILY_EXTERIOR_COLOUR]: { h: parseInt(HUE_FAMILY_HOUSE), s: 24, l: 78 },
     [BANCROFT_EXTERIOR_COLOUR]: { h: 102, s: 6, l: 68 },
     [CINEMA_EXTERIOR_COLOUR]: { h: 143, s: 14, l: 68 },
-    [LIZ_EXTERIOR_COLOUR]: { h: parseInt(HUE_LIZ_APARTMENT), s: 11, l: 72 },
     [VAN_NUYS_EXTERIOR_COLOUR]: { h: 334, s: 14, l: 63 },
     /* A. */
     [TAIWAN_GATE_COLOUR]: { h: 18, s: 17, l: 46 },

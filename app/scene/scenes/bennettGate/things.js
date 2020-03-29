@@ -15,32 +15,32 @@ export default {
     [CARDBOARD]: {
         [CODE_BOX]: {
             yIndex: 2,
-            xPosition: 5,
-            zOffset: 2.5,
+            xPosition: 4,
+            zOffset: 3,
             scaleFactor: 0.275
         }
     },
     [CUTOUT]: {
         [APARTMENT_PLANT]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 1,
             scaleFactor: 0.35
         },
         [BUSH_SINGLE__BENNETT_GATE]: {
-            yIndex: 2,
-            xPosition: 10.5,
+            yIndex: 3,
+            xPosition: 10.4,
             scaleFactor: 0.3
         },
         [BUSH_DOUBLE__BENNETT_GATE]: {
             yIndex: 2,
-            xPosition: 3.25,
-            scaleFactor: 0.25
+            xPosition: 3.9,
+            scaleFactor: 0.23
         }
     },
     [DOOR]: {
         [BENNETT_GATE_FRONT]: {
             yIndex: 2,
-            xPosition: 8
+            xPosition: 7
         }
     }
 }

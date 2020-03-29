@@ -8,7 +8,7 @@ export default {
     [BENNETT]: {
         [DATE_ENDED]: {
             yIndex: 5,
-            xPosition: 8
+            xPosition: 8.4
         }
     },
     [LIZ]: {

@@ -57,7 +57,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         },
         [CACTUS_SINGLE__LIZ_ENDING]: {
             yIndex: 4,
-            xPosition: 10.5,
+            xPosition: 10.2,
             scaleFactor: 0.3
         },
         [CACTUS_DOUBLE__LIZ_GATE]: {
@@ -68,7 +68,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
         },
         [CACTUS_SINGLE__LIZ_ENDED]: {
             yIndex: 4,
-            xPosition: 6.5,
+            xPosition: 6.2,
             scaleFactor: 0.3
         },
         [LAMPPOST__LIZ_GATE]: {

@@ -8,7 +8,7 @@ export default {
     [BENNETT]: {
         [RUMPLED_LINENS]: {
             yIndex: 3,
-            xPosition: 3.4
+            xPosition: 3.6
         }
     },
     [LIZ]: {

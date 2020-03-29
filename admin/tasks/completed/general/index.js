@@ -5452,5 +5452,10 @@ export default [
         taskName: `Raise car seats.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Colour doors and windows.`,
+        workedHours: 9,
+        neededHours: 8
     }
 ]

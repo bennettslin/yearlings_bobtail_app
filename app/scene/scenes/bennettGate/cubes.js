@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BENNETT_GATE_KEY } from '../../../constants/scene/scenes'
 
 import {
@@ -19,13 +20,15 @@ const CUBES = {
             hslaColours: [
                 [X],
                 [X],
+                [X, X, X, C, C, C, C, C, C, C, X],
                 [C],
                 [C],
                 [D]
             ],
             zIndices: [
                 [1],
-                [1, 1, 1, 1, 1, 1, 1, d, d, d, 1],
+                [1, 1, 1, 1, 1, 1, d, d, d, 1, 1],
+                [1, 1, 1, f, f, f, f, f, f, f, 1],
                 [f],
                 [f],
                 [k]

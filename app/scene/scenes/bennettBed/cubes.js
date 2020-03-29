@@ -4,8 +4,8 @@ import {
 } from '../../../constants/scene/scenes'
 
 import {
+    DEFAULT_CLEAR_COLOUR as D,
     PAVEMENT_COLOUR as V,
-    ROOF_COLOUR as C,
     BENNETT_FLOOR_COLOUR as F,
     BENNETT_WALL_COLOUR as W,
     NIGHT_COLOUR as Y,
@@ -14,17 +14,17 @@ import {
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { d, f, g } from '../../cubes/zIndices'
+import { d, g, k } from '../../cubes/zIndices'
 
 const DEFAULT_CEILING = {
     hslaColours: [
         [X],
-        [C],
+        [D, D, D, D, D, D, D, D, D, X],
         [W]
     ],
     zIndices: [
         [1],
-        [f],
+        [k, k, k, k, k, k, k, k, k, k, 1],
         [1, 1, d, d, d, 1, d, d, d, d, 1],
         [1, g, g, g, g, g, g, g, g, g, g, 1]
     ]
@@ -62,7 +62,7 @@ const CUBES = {
         ceiling: {
             hslaColours: [
                 [X],
-                [C],
+                [D, D, D, D, D, D, D, D, D, X],
                 [Y]
             ],
             zIndices: DEFAULT_CEILING.zIndices

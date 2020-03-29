@@ -7,14 +7,14 @@ import { GATE_CODE } from '../../../../constants/scene/actors/songs'
 export default {
     [BENNETT]: {
         [GATE_CODE]: {
-            yIndex: 5,
-            xPosition: 6.5
+            yIndex: 4,
+            xPosition: 5.5
         }
     },
     [LIZ]: {
         [GATE_CODE]: {
-            yIndex: 5,
-            xPosition: 1.5
+            yIndex: 4,
+            xPosition: 1
         }
     }
 }
