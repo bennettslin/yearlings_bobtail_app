@@ -88,7 +88,7 @@ export default {
     [AMY]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 4.2
+            xPosition: 4.3
         }
     },
     [TOMER]: {
@@ -100,7 +100,7 @@ export default {
     [NESTOR]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 2
+            xPosition: 2.1
         }
     },
     [WILLY]: {
@@ -136,7 +136,7 @@ export default {
     [ANA]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 5.1
+            xPosition: 5.2
         }
     },
     [KHARI]: {
