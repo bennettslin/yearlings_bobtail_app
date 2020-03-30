@@ -15,7 +15,7 @@ export default {
     [MIRIAM]: {
         [INFANT_CURIOUS]: {
             yIndex: 5,
-            xPosition: 3
+            xPosition: 3.5
         }
     }
 }

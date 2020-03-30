@@ -20,7 +20,7 @@ export default {
     [WILLY]: {
         [DUCKING]: {
             yIndex: 5,
-            xPosition: 1.75
+            xPosition: 2
         }
     },
     [MOTHER]: {

@@ -17,13 +17,13 @@ export default {
     [HOWIE]: {
         [USHER_WAITING]: {
             yIndex: 5,
-            xPosition: 9.5
+            xPosition: 10
         }
     },
     [MIRIAM]: {
         [INFANT_NURSING]: {
             yIndex: 5,
-            xPosition: 3
+            xPosition: 2.5
         }
     }
 }
