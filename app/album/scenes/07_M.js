@@ -11,6 +11,7 @@ import {
 } from '../../constants/scene/things'
 import {
     BENNETT_COUCH_KEY,
+    BENNETT_COUCH_KEYBOARD_KEY,
     CLUB_FRONT_KEY,
     BASEMENT_KEY,
     CINEMA_KEY,
@@ -202,7 +203,7 @@ export default [
                 [WIDE_ARMREST_BENNETT__RIGHT]: true
             }
         },
-        cubes: BENNETT_COUCH_KEY,
+        cubes: BENNETT_COUCH_KEYBOARD_KEY,
         sky: { time: TIME_EVENING, season: SEASON_SUMMER }
     },
     {

@@ -4,7 +4,7 @@ import {
 } from '../../../constants/scene/things'
 import {
     MONITOR_SIDE__STAGE,
-    WALL_SPEAKER_SIDE__STAGE
+    WALL_SPEAKER_SIDE
 } from '../../../constants/scene/things/cutouts'
 import {
     STAGE_MIC__STAGE,
@@ -20,10 +20,10 @@ export default {
             xPosition: 9,
             scaleFactor: 0.3
         },
-        [WALL_SPEAKER_SIDE__STAGE]: {
+        [WALL_SPEAKER_SIDE]: {
             yIndex: 1,
-            xPosition: 10,
-            zOffset: 5,
+            xPosition: 1.5,
+            zOffset: 4.5,
             scaleFactor: 0.3,
             rotate: 15
         }

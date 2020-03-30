@@ -114,6 +114,9 @@ const LayersActor = ({
     <>
         <Layer {...{ actorKey: FATHER, instanceKey: father }} />
         <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
+        <Layer {...{ actorKey: MARA, instanceKey: mara }} />
+        <Layer {...{ actorKey: JACOB, instanceKey: jacob }} />
+        <Layer {...{ actorKey: JACOB_MARA, instanceKey: jacobMara }} />
         <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />
         <Layer {...{ actorKey: BENNETT, instanceKey: bennett }} />
         <Layer {...{ actorKey: BENNETT_FATHER, instanceKey: bennettFather }} />
@@ -138,9 +141,6 @@ const LayersActor = ({
         <Layer {...{ actorKey: BRAD_SASHA, instanceKey: bradSasha }} />
         <Layer {...{ actorKey: ANDREW, instanceKey: andrew }} />
         <Layer {...{ actorKey: CATHERINE, instanceKey: catherine }} />
-        <Layer {...{ actorKey: MARA, instanceKey: mara }} />
-        <Layer {...{ actorKey: JACOB, instanceKey: jacob }} />
-        <Layer {...{ actorKey: JACOB_MARA, instanceKey: jacobMara }} />
         <Layer {...{ actorKey: ANA, instanceKey: ana }} />
         <Layer {...{ actorKey: ANA_HOWIE, instanceKey: anaHowie }} />
         <Layer {...{ actorKey: HOWIE, instanceKey: howie }} />
@@ -155,11 +155,11 @@ const LayersActor = ({
         <Layer {...{ actorKey: MIRIAM_TRISTAN, instanceKey: miriamTristan }} />
         <Layer {...{ actorKey: TRISTAN, instanceKey: tristan }} />
         <Layer {...{ actorKey: NESTOR, instanceKey: nestor }} />
+        <Layer {...{ actorKey: WADE, instanceKey: wade }} />
+        <Layer {...{ actorKey: STEPHANIE, instanceKey: stephanie }} />
         <Layer {...{ actorKey: AMY, instanceKey: amy }} />
         <Layer {...{ actorKey: AMY_STEPHANIE, instanceKey: amyStephanie }} />
         <Layer {...{ actorKey: AMY_NESTOR_TOMER, instanceKey: amyNestorTomer }} />
-        <Layer {...{ actorKey: STEPHANIE, instanceKey: stephanie }} />
-        <Layer {...{ actorKey: WADE, instanceKey: wade }} />
         <Layer {...{ actorKey: BENNETT_REFLECTION, instanceKey: bennettReflection }} />
         <Layer {...{ actorKey: LIZ_REFLECTION, instanceKey: lizReflection }} />
         <Layer {...{ actorKey: KHARI_LIZ_REFLECTION, instanceKey: khariLizReflection }} />

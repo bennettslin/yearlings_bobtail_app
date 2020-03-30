@@ -16,7 +16,7 @@ export default {
     [STEPHANIE]: {
         [BENNETT_KEYBOARD]: {
             yIndex: 5,
-            xPosition: 8
+            xPosition: 7
         }
     }
 }

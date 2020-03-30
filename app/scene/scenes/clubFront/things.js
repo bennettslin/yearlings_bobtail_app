@@ -17,26 +17,26 @@ import {
 export default {
     [CUTOUT]: {
         [MONITOR_FRONT__LEFT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 2.5,
             scaleFactor: 0.3
         },
         [MONITOR_FRONT__RIGHT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 8.5,
             scaleFactor: 0.3,
             flipHorizontal: true
         },
         [WALL_SPEAKER_FRONT__LEFT]: {
-            yIndex: 5,
+            yIndex: 1,
             xPosition: 1.5,
-            zOffset: 5,
+            zOffset: 4.5,
             scaleFactor: 0.3
         },
         [WALL_SPEAKER_FRONT__RIGHT]: {
-            yIndex: 5,
+            yIndex: 1,
             xPosition: 9.5,
-            zOffset: 5,
+            zOffset: 4.5,
             scaleFactor: 0.3,
             flipHorizontal: true
         }
@@ -49,7 +49,7 @@ export default {
         [DRUMKIT]: {
             yIndex: 1,
             xPosition: 5.5,
-            zOffset: -0.25
+            zOffset: -0.1
         }
     }
 }
@@ -57,7 +57,7 @@ export default {
 export const THINGS_CLUB_FRONT_M = {
     [FIXTURE]: {
         [CASH_BOX]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 3,
             zOffset: -0.1
         }

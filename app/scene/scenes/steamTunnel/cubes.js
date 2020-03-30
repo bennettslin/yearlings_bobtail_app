@@ -5,7 +5,7 @@ import {
     UNDERGROUND_WALL_COLOUR as W
 } from '../../cubes/colours'
 
-import { b, d } from '../../cubes/zIndices'
+import { d } from '../../cubes/zIndices'
 
 const CUBES = {
     [STEAM_TUNNEL_KEY]: {
@@ -16,9 +16,9 @@ const CUBES = {
             zIndices: [
                 [0],
                 [0, d, d, d, d, d, d, d, d, d, d, 0],
-                [0, d, d, d, d, d, d, d, d, d, d, 0],
-                [b, d, d, d, d, d, d, d, d, d, d, b],
-                [b, d, d, d, d, d, d, d, d, d, d, b],
+                [d],
+                [d],
+                [d],
                 [0, d, d, d, d, d, d, d, d, d, d, 0]
             ]
         },

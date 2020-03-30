@@ -57,8 +57,7 @@ import {
 import {
     MONITOR_SIDE__CROWD,
     MONITOR_SIDE__STAGE,
-    WALL_SPEAKER_SIDE__CROWD,
-    WALL_SPEAKER_SIDE__STAGE
+    WALL_SPEAKER_SIDE
 } from '../../constants/scene/things/cutouts'
 import { CLUB_DOOR_OPEN } from '../../constants/scene/things/doors'
 import {
@@ -112,8 +111,7 @@ export default [
                 }
             },
             [CUTOUT]: {
-                [MONITOR_SIDE__CROWD]: true,
-                [WALL_SPEAKER_SIDE__CROWD]: true
+                [MONITOR_SIDE__CROWD]: true
             },
             [FIXTURE]: {
                 [STAGE_MIC__CROWD]: true
@@ -149,7 +147,7 @@ export default [
             },
             [CUTOUT]: {
                 [MONITOR_SIDE__STAGE]: true,
-                [WALL_SPEAKER_SIDE__STAGE]: true
+                [WALL_SPEAKER_SIDE]: true
             },
             [FIXTURE]: {
                 [STAGE_MIC__STAGE]: true,

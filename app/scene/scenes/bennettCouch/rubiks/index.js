@@ -5,7 +5,8 @@ export default {
     [BENNETT]: {
         [RUBIKS_CUBE]: {
             yIndex: 3,
-            xPosition: 4
+            xPosition: 4.8,
+            zOffset: -0.08
         }
     }
 }

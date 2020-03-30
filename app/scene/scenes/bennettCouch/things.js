@@ -91,7 +91,7 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 1,
+            zOffset: 2,
             scaleFactor: 0.25
         }
     }
@@ -101,15 +101,16 @@ export const THINGS_BENNETT_COUCH_READING = {
     [CARDBOARD]: {
         [PROGRESS_CHART_LATE]: {
             yIndex: 1,
-            xPosition: 9,
-            zOffset: 1,
+            xPosition: 8.5,
+            zOffset: 2,
             scaleFactor: 0.25
         }
     },
     [FIXTURE]: {
         [KEYBOARD]: {
             yIndex: 4,
-            xPosition: 8
+            xPosition: 7,
+            zOffset: 0.5
         }
     }
 }

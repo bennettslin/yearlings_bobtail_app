@@ -3,14 +3,7 @@ gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
 # TODO
-keyboard on cubes
-organise clubFront scene
-backstage cubes have passageways
-organise club side scene crowd
-organise club side scene stage
-organise club loading scene
-remove wires from floor bubbles and small bubbles
-deathbed floor make plain cubes
+Make Bennett blinds single pane
 
 # Seated audit
 

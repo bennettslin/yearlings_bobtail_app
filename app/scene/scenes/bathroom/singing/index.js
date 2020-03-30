@@ -9,8 +9,7 @@ export default {
     [YOUNG_BENNETT]: {
         [SINGING]: {
             yIndex: 3,
-            xPosition: 6,
-            zOffset: 0.25
+            xPosition: 6
         }
     },
     [ANITA]: {

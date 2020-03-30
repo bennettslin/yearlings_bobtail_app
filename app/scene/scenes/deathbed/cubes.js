@@ -8,7 +8,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H,
-    LINOLEUM_FLOOR_COLOUR as F,
+    DEATHBED_FLOOR_COLOUR as F,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
 

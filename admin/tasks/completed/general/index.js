@@ -5467,5 +5467,10 @@ export default [
         taskName: `Colour couches, linens, furniture cubes, and car seats.`,
         workedHours: 4,
         neededHours: 4
+    },
+    {
+        taskName: `Various needed fixes.`,
+        workedHours: 6,
+        neededHours: 6
     }
 ]

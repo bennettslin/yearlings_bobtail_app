@@ -1,5 +1,6 @@
 import {
     BENNETT_COUCH_KEY,
+    BENNETT_COUCH_KEYBOARD_KEY,
     BENNETT_COUCH_THOUGHT_KEY
 } from '../../../constants/scene/scenes'
 
@@ -13,17 +14,19 @@ import {
 
 import { g } from '../../cubes/zIndices'
 
+export const DEFAULT_CEILING = {
+    hslaColours: [
+        [W]
+    ],
+    zIndices: [
+        [1],
+        [1, g, g, g, g, g, g, g, g, g, g, 1]
+    ]
+}
+
 const CUBES = {
     [BENNETT_COUCH_KEY]: {
-        ceiling: {
-            hslaColours: [
-                [W]
-            ],
-            zIndices: [
-                [1],
-                [1, g, g, g, g, g, g, g, g, g, g, 1]
-            ]
-        },
+        ceiling: DEFAULT_CEILING,
         floor: {
             hslaColours: [
                 [F],
@@ -37,6 +40,27 @@ const CUBES = {
                 [1, 5, 7, 7, 7, 7, 7, 1, 4, 4, 1],
                 [1, 5, 4, 4, 4, 4, 4, 1],
                 [1, 1, 4, 4, 4, 4, 4, 1],
+                [1]
+            ]
+        }
+    },
+    [BENNETT_COUCH_KEYBOARD_KEY]: {
+        ceiling: DEFAULT_CEILING,
+        floor: {
+            hslaColours: [
+                [F],
+                [F, R, U, U, U, U, U, F, R, R, F],
+                [F, R, U, U, U, U, U, F],
+                [F, F, U, U, U, U, U, F],
+                [F, F, F, F, F, R, F, F, F, R, F],
+                [F]
+            ],
+            zIndices: [
+                [1],
+                [1, 5, 7, 7, 7, 7, 7, 1, 4, 4, 1],
+                [1, 5, 4, 4, 4, 4, 4, 1],
+                [1, 1, 4, 4, 4, 4, 4, 1],
+                [1, 1, 1, 1, 1, 2, 1, 1, 1, 2, 1],
                 [1]
             ]
         }

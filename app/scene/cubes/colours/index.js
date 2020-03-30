@@ -25,6 +25,7 @@ export const LIZ_GATE_COLOUR = 'lizGate'
 export const ROOF_COLOUR = 'roof'
 export const SCHOOL_FLOOR_COLOUR = 'schoolFloor'
 export const LINOLEUM_FLOOR_COLOUR = 'linoleumFloor'
+export const DEATHBED_FLOOR_COLOUR = 'deathbedFloor'
 export const WOOD_FLOOR_COLOUR = 'woodFloor'
 export const OLD_FLOOR_COLOUR = 'oldFloor'
 export const VELVET_FLOOR_COLOUR = 'velvetFloor'
@@ -90,6 +91,7 @@ const HSLA_MAP = {
     [OLD_FLOOR_COLOUR]: { h: 36, s: 13, l: 46 },
     [DIRT_FLOOR_COLOUR]: { h: 51, s: 12, l: 34 },
     [LINOLEUM_FLOOR_COLOUR]: { h: 74, s: 14, l: 67 },
+    [DEATHBED_FLOOR_COLOUR]: { h: 84, s: 14, l: 67 },
     [SCHOOL_FLOOR_COLOUR]: { h: 346, s: 13, l: 72 },
     [VELVET_FLOOR_COLOUR]: { h: 357, s: 44, l: 36 },
     /* Y. */
