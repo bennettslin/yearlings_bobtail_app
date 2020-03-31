@@ -11,25 +11,25 @@ export default {
     [BENNETT_LIZ]: {
         [PAMPAS]: {
             yIndex: 5,
-            xPosition: 4
-        }
-    },
-    [CATHERINE]: {
-        [GOPI]: {
-            yIndex: 3,
-            xPosition: 9
+            xPosition: 3.5
         }
     },
     [MARA]: {
         [GOPI]: {
-            yIndex: 3,
-            xPosition: 7
+            yIndex: 2,
+            xPosition: 6.5
         }
     },
     [MIRIAM]: {
         [GOPI]: {
-            yIndex: 3,
-            xPosition: 8
+            yIndex: 2,
+            xPosition: 8.5
+        }
+    },
+    [CATHERINE]: {
+        [GOPI]: {
+            yIndex: 2,
+            xPosition: 10
         }
     }
 }

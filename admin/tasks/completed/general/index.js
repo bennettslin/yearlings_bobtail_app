@@ -5470,7 +5470,7 @@ export default [
     },
     {
         taskName: `Various needed fixes.`,
-        workedHours: 6,
-        neededHours: 6
+        workedHours: 11,
+        neededHours: 11
     }
 ]

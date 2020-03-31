@@ -25,70 +25,71 @@ import {
 import { EPILOGUE } from '../../../../constants/scene/actors/songs'
 
 export default {
+    [SASHA_BENNETT]: {
+        [EPILOGUE]: {
+            yIndex: 5,
+            xPosition: 1.4
+        }
+    },
     [BENNETTS_CHRISTOPHER_LIZ]: {
         [EPILOGUE]: {
             yIndex: 5,
             xPosition: 5.3
         }
     },
-    [SASHA_BENNETT]: {
-        [EPILOGUE]: {
-            yIndex: 5,
-            xPosition: 1.6
-        }
-    },
     [ANITA_BENNETT]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 8.7
+            xPosition: 8.8
         }
     },
     [ESTHER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 10.2
+            xPosition: 10.3
         }
     },
-    [MARA]: {
-        [EPILOGUE]: {
-            yIndex: 4,
-            xPosition: 10.5
-        }
-    },
+
     [MIRIAM]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 1.4
+            xPosition: 1.3
         }
     },
     [CATHERINE]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 2.75
+            xPosition: 2.6
+        }
+    },
+    [AMY]: {
+        [EPILOGUE]: {
+            yIndex: 4,
+            xPosition: 4.4
+        }
+    },
+    [STEPHANIE]: {
+        [EPILOGUE]: {
+            yIndex: 4,
+            xPosition: 6.3
         }
     },
     [BRAD]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 8
+            xPosition: 8.1
         }
     },
     [ANDREW]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 9.2
+            xPosition: 9.4
         }
     },
-    [STEPHANIE]: {
+    [MARA]: {
         [EPILOGUE]: {
-            yIndex: 3,
-            xPosition: 6.2
-        }
-    },
-    [AMY]: {
-        [EPILOGUE]: {
-            yIndex: 3,
-            xPosition: 4.3
+            yIndex: 4,
+            xPosition: 10.6
         }
     },
     [TOMER]: {
@@ -100,43 +101,32 @@ export default {
     [NESTOR]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 2.1
+            xPosition: 2
         }
     },
     [WILLY]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 7.4
+            xPosition: 7.5
         }
     },
     [MOTHER]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 8.6
+            xPosition: 8.8
         }
     },
     [FATHER]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 9.6
+            xPosition: 9.7
         }
     },
-    [JACOB]: {
+
+    [WADE]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 8.2
-        }
-    },
-    [HOWIE]: {
-        [EPILOGUE]: {
-            yIndex: 2,
-            xPosition: 6.9
-        }
-    },
-    [ANA]: {
-        [EPILOGUE]: {
-            yIndex: 2,
-            xPosition: 5.2
+            xPosition: 1.2
         }
     },
     [KHARI]: {
@@ -145,16 +135,28 @@ export default {
             xPosition: 3
         }
     },
+    [ANA]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 5.3
+        }
+    },
+    [HOWIE]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 6.9
+        }
+    },
+    [JACOB]: {
+        [EPILOGUE]: {
+            yIndex: 2,
+            xPosition: 8.2
+        }
+    },
     [TRISTAN]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 9.4
-        }
-    },
-    [WADE]: {
-        [EPILOGUE]: {
-            yIndex: 2,
-            xPosition: 1.2
+            xPosition: 9.5
         }
     }
 }

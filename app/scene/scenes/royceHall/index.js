@@ -7,28 +7,28 @@ import {
 import { ABBEY_ROAD } from '../../../constants/scene/actors/songs'
 
 export default {
-    [BENNETT]: {
+    [HOWIE]: {
         [ABBEY_ROAD]: {
-            yIndex: 5,
-            xPosition: 6.75
+            yIndex: 4,
+            xPosition: 1.5
         }
     },
     [ANA]: {
         [ABBEY_ROAD]: {
-            yIndex: 5,
-            xPosition: 4
+            yIndex: 4,
+            xPosition: 4.6
         }
     },
-    [HOWIE]: {
+    [BENNETT]: {
         [ABBEY_ROAD]: {
-            yIndex: 5,
-            xPosition: 2
+            yIndex: 4,
+            xPosition: 7.4
         }
     },
     [TOMER]: {
         [ABBEY_ROAD]: {
-            yIndex: 5,
-            xPosition: 9
+            yIndex: 4,
+            xPosition: 9.9
         }
     }
 }

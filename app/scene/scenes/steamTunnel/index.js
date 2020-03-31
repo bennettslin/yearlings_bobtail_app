@@ -10,13 +10,13 @@ export default {
     [BENNETT]: {
         [STEAM_TUNNEL]: {
             yIndex: 4,
-            xPosition: 2
+            xPosition: 1.6
         }
     },
     [ANA]: {
         [STEAM_TUNNEL]: {
             yIndex: 4,
-            xPosition: 5.5
+            xPosition: 5.7
         }
     },
     [HOWIE]: {

@@ -13,25 +13,25 @@ export default {
     [BENNETT]: {
         [DROPPING_MEATS]: {
             yIndex: 5,
-            xPosition: 2
+            xPosition: 1.5
         }
     },
     [ANA]: {
         [CHUCKLING]: {
             yIndex: 5,
-            xPosition: 4
+            xPosition: 3.8
         }
     },
     [TRISTAN]: {
         [PUNCHING]: {
             yIndex: 5,
-            xPosition: 7
+            xPosition: 5.9
         }
     },
     [NESTOR]: {
         [INJURED]: {
             yIndex: 5,
-            xPosition: 9
+            xPosition: 9.5
         }
     }
 }
