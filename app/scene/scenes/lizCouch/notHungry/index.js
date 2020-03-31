@@ -14,9 +14,8 @@ export default {
     },
     [KHARI]: {
         [CONCERNED]: {
-            yIndex: 1,
-            xPosition: 5.5,
-            zOffset: -2.5
+            yIndex: 0,
+            xPosition: 6.5
         }
     }
 }
