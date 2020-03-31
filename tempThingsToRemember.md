@@ -2,9 +2,6 @@ smoker, make her left calf higher.
 gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
-# TODO
-Make Bennett blinds single pane
-
 # Seated audit
 
 ## Didi

@@ -34,7 +34,7 @@ export const getSeatingRowCoordinates = ({
 }) => {
     const
         stageCentreFromLeft = prosceniumLeft + (prosceniumWidth / 2),
-        firstRowSeatWidth = prosceniumWidth / 9, // Arbitrary value.
+        firstRowSeatWidth = prosceniumWidth / 7, // Arbitrary value.
         firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
         rowCoordinatesArray = getArrayOfCoordinatesForFactoredLengths({

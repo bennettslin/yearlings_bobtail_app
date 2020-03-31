@@ -1,13 +1,13 @@
 .walkman#{$suffix} {
-    .headphoneEarpad { fill: hsl(190, 10%, 55%); }
-    .headphoneBand { fill: hsl(190, 10%, 76%); }
+    .headphoneEarpad { fill: hsl(3, 10%, 55%); }
+    .headphoneBand { fill: hsl(3, 10%, 76%); }
 
     .cassette { fill: hsl(52, 12%, 65%); }
     .cassetteTape { fill: hsl(68, 7%, 47%); }
     .cassetteReel { fill: hsl(68, 10%, 72%); }
-    .walkmanButton { fill: hsl(191, 12%, 65%); }
-    .walkmanDark { fill: hsl(190, 18%, 56%); }
-    .walkmanMedium { fill: hsl(191, 22%, 60%); }
-    .walkmanLight { fill: hsl(191, 26%, 65%); }
-    .walkmanWindow { fill: hsl(188, 7%, 42%); }
+    .walkmanButton { fill: hsl(3, 12%, 65%); }
+    .walkmanDark { fill: hsl(3, 28%, 56%); }
+    .walkmanMedium { fill: hsl(3, 32%, 60%); }
+    .walkmanLight { fill: hsl(3, 36%, 65%); }
+    .walkmanWindow { fill: hsl(3, 7%, 42%); }
 }
