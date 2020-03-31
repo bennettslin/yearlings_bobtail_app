@@ -60,8 +60,8 @@ const WIRES_MAP = {
         [PETTING_SEATED_PRESENT]: PETTING_SEATED_CONFIG,
         [PETTING_STANDING]: {
             wires: [
-                { x: 0.68, y: 0.41 },
-                { x: 0.81, y: 0.4 }
+                { x: 0.68, y: 0.37 },
+                { x: 0.81, y: 0.36 }
             ],
             placedFront: true
         }

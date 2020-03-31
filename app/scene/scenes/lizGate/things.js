@@ -20,8 +20,8 @@ import {
 import {
     LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_BLINDS_OUTSIDE__ENDED,
-    LIZ_GATE_OUTSIDE__ENDING,
-    LIZ_GATE_OUTSIDE__ENDED
+    LIZ_GATE_OUTSIDE,
+    LIZ_GATE_OUTSIDE_OPEN
 } from '../../../constants/scene/things/doors'
 import {
     PUBLIC_FAR__LIZ_GATE,
@@ -93,11 +93,11 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             xPosition: 3,
             zOffset: 2.25
         },
-        [LIZ_GATE_OUTSIDE__ENDING]: {
+        [LIZ_GATE_OUTSIDE]: {
             yIndex: 4,
             xPosition: 7
         },
-        [LIZ_GATE_OUTSIDE__ENDED]: {
+        [LIZ_GATE_OUTSIDE_OPEN]: {
             yIndex: 4,
             xPosition: 3
         }

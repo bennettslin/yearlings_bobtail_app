@@ -100,8 +100,8 @@ import {
     DISHROOM_DOOR,
     LIZ_BLINDS_OUTSIDE__ENDING,
     LIZ_BLINDS_OUTSIDE__ENDED,
-    LIZ_GATE_OUTSIDE__ENDING,
-    LIZ_GATE_OUTSIDE__ENDED,
+    LIZ_GATE_OUTSIDE,
+    LIZ_GATE_OUTSIDE_OPEN,
     NEIGHBOUR_DOOR,
     BLINDS_OUTSIDE__NEIGHBOUR,
     BLINDS_INSIDE_OPEN,
@@ -242,7 +242,7 @@ export default [
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDING]: true,
-                [LIZ_GATE_OUTSIDE__ENDING]: true
+                [LIZ_GATE_OUTSIDE]: true
             }
         },
         cubes: LIZ_GATE_KEY,
@@ -275,7 +275,7 @@ export default [
             },
             [DOOR]: {
                 [LIZ_BLINDS_OUTSIDE__ENDED]: true,
-                [LIZ_GATE_OUTSIDE__ENDED]: true
+                [LIZ_GATE_OUTSIDE_OPEN]: true
             },
             [FLAT]: {
                 [PUBLIC_FAR__LIZ_GATE]: true,
