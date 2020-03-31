@@ -52,13 +52,13 @@ export default {
     [MARA]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 1.4
+            xPosition: 10.5
         }
     },
     [MIRIAM]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 10.5
+            xPosition: 1.4
         }
     },
     [CATHERINE]: {
