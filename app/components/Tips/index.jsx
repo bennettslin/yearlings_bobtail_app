@@ -1,14 +1,14 @@
 // Section to show song tip.
 
 import React from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 
 import TipsToggle from './Toggle'
 import Texts from '../Texts'
 
-import { getSongTip } from './helper'
+import { getSongTipText } from '../../album/api/tips'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -26,14 +26,14 @@ const Tips = () => {
             'fontSize__verse'
         )}>
             <TipsToggle />
-            <Texts {...{ text: getSongTip(lyricSongIndex) }} />
+            <Texts {...{ text: getSongTipText(lyricSongIndex) }} />
         </div>
     )
 }
 
 Tips.propTypes = {
     // Through Redux.
-    // lyricSongIndex: PropTypes.number.isRequired
+    lyricSongIndex: PropTypes.number.isRequired
 }
 
 export default Tips
