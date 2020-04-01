@@ -1,13 +1,20 @@
 import albumTips from '../tips'
 import { getSongIsLogue } from './songs'
 
-export const getSongTipText = (songIndex) => {
-
+const getSongTip = songIndex => {
     const isLogue = getSongIsLogue(songIndex)
 
     if (isLogue) {
-        return null
+        return {}
     }
 
-    return albumTips[songIndex - 1].description
+    return albumTips[songIndex - 1]
 }
+
+export const getSongTipText = songIndex => (
+    getSongTip(songIndex).description
+)
+
+export const getSongTipType = songIndex => (
+    getSongTip(songIndex).type
+)

@@ -7,8 +7,19 @@
 
     z-index: $zIndex__tipsHand;
 
+    opacity: 0;
+
     // TODO: Improve styling.
     filter: drop-shadow(0 0 5px hsla(200, 50%, 50%, 0.5));
+
+    .DW__userAgentDesktop
+    & {
+        transition: opacity $animationDuration__default;
+    }
+}
+
+.TipsHand__shown {
+    opacity: 1;
 }
 
 .tipsHand {

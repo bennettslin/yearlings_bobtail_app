@@ -5,11 +5,13 @@ import cx from 'classnames'
 
 import AboutDispatcher from '../../../dispatchers/About'
 import Button from '../../Button'
+import TipsHand from '../../Tips/Hand'
 
 import { populateRefs } from 'helpers/ref'
 
-import { ABOUT_TOGGLE_KEY } from 'constants/access'
-import { ABOUT_BUTTON_KEY } from 'constants/buttons'
+import { ABOUT_TOGGLE_KEY } from '../../../constants/access'
+import { ABOUT_BUTTON_KEY } from '../../../constants/buttons'
+import { ABOUT } from '../../../constants/tips'
 
 class AboutToggle extends PureComponent {
 
@@ -26,6 +28,7 @@ class AboutToggle extends PureComponent {
             <div className={cx(
                 'AboutToggle'
             )}>
+                <TipsHand {...{ tipType: ABOUT }} />
                 <Button
                     isCustomSize
                     {...{
