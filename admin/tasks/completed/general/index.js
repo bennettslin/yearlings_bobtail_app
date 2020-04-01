@@ -5477,5 +5477,10 @@ export default [
         taskName: `Allow for actors to have different yIndex sizing.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Style Tip popup.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

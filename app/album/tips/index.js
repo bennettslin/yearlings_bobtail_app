@@ -6,7 +6,7 @@ import {
     CAROUSEL,
     ACTIVATED_VERSE,
     ACCESS,
-    AUDIO_OPTIONS,
+    STANZA_TAB,
     WORMHOLES,
     WIKI,
     SLIDER,
@@ -31,26 +31,26 @@ export default [
         type: LYRIC_EXPAND,
         tempPosition: 'lyric expand toggle',
         mobileOnly: true,
-        description: `In mobile, click to expand the lyrics. You can also flip horizontal to zoom in on the stage.`
+        description: `In mobile, click the lyric expand button to expand the lyrics. You can also flip horizontal to zoom in on the stage.`
     },
     {
         // Dear Saskia
         type: DOTS,
         tempPosition: 'dots slide toggle',
-        description: `Each annotation falls under one or more categories. Click to show or hide all annotations for a given category.`
+        description: `Each annotation falls under one or more categories. Click a category button to show or hide all annotations for a given category.`
     },
     {
         // Odin
         type: DOUBLESPEAKER,
         tempPosition: 'ear toggle',
-        description: `In doublespeaker rhyme, lyrics in the left and right columns are sung simultaneously. On narrow screens, only one column is shown at a time. Click to alternate between them.`
+        description: `In doublespeaker rhyme, lyrics in the left and right columns are sung together. On narrow screens, only one column is shown at a time. Click the ear button to alternate between them.`
     },
     {
         // Pchelka's Starry Journey
         type: CAROUSEL,
         tempPosition: 'carousel toggle',
         desktopOnly: true,
-        description: `On desktop, click to open the carousel and scroll through all the annotations at once.`
+        description: `On desktop, click the carousel button to open the carousel and scroll through all the annotations at once.`
     },
     {
         // Ash Wednesday
@@ -61,13 +61,12 @@ export default [
     {
         // M
         type: ACCESS,
-        tempPosition: 'none',
         desktopOnly: true,
         description: `On desktop, use the keyboard to navigate and select features. Type any key to show character icons and have tooltips show upon hover.`
     },
     {
         // Good Night, Sita
-        type: AUDIO_OPTIONS,
+        type: STANZA_TAB,
         tempPosition: 'any stanza tab',
         description: `Click any stanza tab to have the audio player jump to that stanza.`
     },
@@ -75,7 +74,7 @@ export default [
         // Grasshoppers Lie Heavy
         type: WORMHOLES,
         tempPosition: 'first wormhole',
-        description: `A wormhole is a thematic connection between two songs. Click to jump to the corresponding line in the other song.`
+        description: `A wormhole is a thematic connection between two songs. Click a wormhole button to jump to the corresponding line in the other song.`
     },
     {
         // Constellations!
@@ -95,7 +94,7 @@ export default [
         type: SCORE,
         tempPosition: 'score toggle',
         desktopOnly: true,
-        description: `On desktop, click to see the musical score.`
+        description: `On desktop, click the score button to see the musical score.`
     },
     {
         // On a Golden Cord
@@ -107,31 +106,30 @@ export default [
         // Kyon?
         type: TIPS,
         tempPosition: 'tips toggle',
-        description: `To prevent tips from showing at the start of each new song, click the lit bulb. If it is off but not disabled, first click to turn it on.`
+        description: `To prevent tips from showing at the start of each new song, click the light bulb until it is removed from its socket.`
     },
     {
         // Uncanny Valley Boy
         type: AUTOSCROLL,
         tempPosition: 'auto scroll',
-        description: `The lyrics will auto scroll with the audio player, but any manual scrolling will turn it off. Click to turn auto scroll back on.`
+        description: `The lyrics will auto scroll with the audio player, but any manual scrolling will turn it off. Click the scroll button to turn auto scroll back on.`
     },
     {
         // Cremated
         type: NAV,
         tempPosition: 'nav',
         desktopOnly: true,
-        description: `On desktop with the carousel open, click to show the nav bar. Then click any snowglobe to have the audio player jump to its corresponding song.`
+        description: `On desktop with the carousel open, click the nav button to show the nav bar. Then click any snowglobe button to have the audio player jump to its corresponding song.`
     },
     {
         // Vegan Proclamation
         type: ABOUT,
-        tempPosition: 'about',
-        description: `Click to join our mailing list, visit our band website and social media pages, or contact us with interesting offers and opportunities.`
+        description: `Click the Bobtail Yearlings button to join our mailing list, or to visit our band website and social media pages.`
     },
     {
         // My 100,000th Dream
         type: OVERVIEW,
         tempPosition: 'overview',
-        description: `To prevent the narrative overview from showing at the start of each new song, click Bennett while he's talking. If he is silent with eyes open, first click to have him talk.`
+        description: `To prevent the narrative overview from showing at the start of each new song, click the Bennett button until he is wearing headphones.`
     }
 ]

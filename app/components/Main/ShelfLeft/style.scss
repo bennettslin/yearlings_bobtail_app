@@ -1,17 +1,5 @@
 .ShelfLeft {
-    .DW__userAgentDesktop
-    & {
-        transition:
-            opacity $animationDuration__default,
-            margin-left $animationDuration__default;
-    }
-
     padding-left: $MARGIN_THIN;
-
-    opacity: 0;
-
-    // This value only needs to be accurate for phone.
-    margin-left: -$LENGTH_ICON - $MARGIN_THIN;
 
     z-index: $zIndex__theatre;
 
@@ -22,11 +10,27 @@
     }
 }
 
-.ShelfLeft__shown {
-    opacity: 1;
-    margin-left: 0;
+.ShelfLeft__child {
+    opacity: 0;
+
+    // This value only needs to be accurate for phone.
+    margin-left: -$LENGTH_ICON - $MARGIN_THIN;
+
+    .DW__userAgentDesktop
+    & {
+        transition:
+            opacity $animationDuration__default,
+            margin-left $animationDuration__default;
+    }
+
+    .ShelfLeft__shown
+    & {
+        opacity: 1;
+        margin-left: 0;
+    }
 }
 
+// TODO: Simplify?
 .hidden__overviewStatus {
 
     .DW__userAgentDesktop

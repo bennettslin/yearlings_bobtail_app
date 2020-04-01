@@ -24,6 +24,8 @@ const propTypes = {
     isShelfLeftShown: PropTypes.bool.isRequired
 }
 
+const CHILD_SELECTOR = 'ShelfLeft__child'
+
 const ShelfLeft = ({
     isDesktopWidth,
     isShelfLeftShown
@@ -34,12 +36,12 @@ const ShelfLeft = ({
         isShelfLeftShown && 'ShelfLeft__shown',
         'flex__mainSideButtons'
     )}>
-        <OverviewToggle />
-        <DotsSlideToggle />
+        <OverviewToggle {...{ className: CHILD_SELECTOR }} />
+        <DotsSlideToggle {...{ className: CHILD_SELECTOR }} />
         {isDesktopWidth && (
             <>
-                <ScoreToggle />
-                <TipsToggle />
+                <ScoreToggle {...{ className: CHILD_SELECTOR }} />
+                <TipsToggle {...{ className: CHILD_SELECTOR }} />
             </>
         )}
     </div>

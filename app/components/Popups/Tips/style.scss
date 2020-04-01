@@ -4,3 +4,10 @@
         margin-right: $margin__thick;
     }
 }
+
+.TipsPopupView {
+    .TipsPopup
+    & {
+        max-width: 270px;
+    }
+}

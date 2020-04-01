@@ -1,14 +1,16 @@
 .ShelfRight {
     padding-right: $MARGIN_THIN;
+}
 
+.ShelfRight__child {
     margin-right:
         -$LENGTH_ICON_LARGE_TABLET
         - $MARGIN_THIN * 2;
 
-        .DW__userAgentDesktop
-        & {
-            transition: margin-right $animationDuration__default;
-        }
+    .DW__userAgentDesktop
+    & {
+        transition: margin-right $animationDuration__default;
+    }
 
     .RW__carouselNavShowable
     .ShW__annotationHidden.ShW__dotsHidden

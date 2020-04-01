@@ -7,11 +7,13 @@ import cx from 'classnames'
 
 import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import Button from '../../Button'
+import TipsHand from '../../Tips/Hand'
 
 import { populateRefs } from 'helpers/ref'
 
 import { OVERVIEW_TOGGLE_KEY } from '../../../constants/access'
 import { OVERVIEW_BUTTON_KEY } from '../../../constants/buttons'
+import { OVERVIEW } from '../../../constants/tips'
 
 import { getOverviewToggleIdentifier } from './helper'
 
@@ -30,7 +32,8 @@ class OverviewToggle extends PureComponent {
         selectedOverviewOption: PropTypes.string.isRequired,
 
         // From parent.
-        isToggleInOverview: PropTypes.bool
+        isToggleInOverview: PropTypes.bool,
+        className: PropTypes.string
     }
 
     handleOverviewClick = () => {
@@ -46,7 +49,8 @@ class OverviewToggle extends PureComponent {
         const {
                 isLyricLogue,
                 selectedOverviewOption,
-                isToggleInOverview
+                isToggleInOverview,
+                className
             } = this.props,
 
             buttonIdentifier = getOverviewToggleIdentifier({
@@ -57,8 +61,10 @@ class OverviewToggle extends PureComponent {
 
         return (
             <div className={cx(
-                'OverviewToggle'
+                'OverviewToggle',
+                className
             )}>
+                <TipsHand {...{ tipType: OVERVIEW }} />
                 <Button
                     isCustomSize
                     {...{

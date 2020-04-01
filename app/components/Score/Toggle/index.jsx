@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
 
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import Button from '../../Button'
@@ -25,7 +26,10 @@ class ScoreToggle extends PureComponent {
     static propTypes = {
         // Through Redux.
         canScoreMount: PropTypes.bool.isRequired,
-        isScoreLoaded: PropTypes.bool.isRequired
+        isScoreLoaded: PropTypes.bool.isRequired,
+
+        // From parent.
+        className: PropTypes.string
     }
 
     _handleScoreButtonClick = () => {
@@ -39,15 +43,18 @@ class ScoreToggle extends PureComponent {
     render() {
         const {
             isScoreLoaded,
-            canScoreMount
+            canScoreMount,
+            className
         } = this.props
 
         return canScoreMount && (
-            <>
+            <div {...{ className }}>
                 <Button
                     isLargeSize
                     {...{
-                        className: 'hidden__overviewStatus',
+                        className: cx(
+                            'hidden__overviewStatus'
+                        ),
                         buttonName: SCORES_BUTTON_KEY,
                         accessKey: SCORE_TOGGLE_KEY,
                         isDisabled: !isScoreLoaded,
@@ -55,7 +62,7 @@ class ScoreToggle extends PureComponent {
                     }}
                 />
                 <ScoreDispatcher {...{ getRefs: this._getRefs }} />
-            </>
+            </div>
         )
     }
 }

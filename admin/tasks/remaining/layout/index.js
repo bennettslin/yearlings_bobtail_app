@@ -1,15 +1,4 @@
 export default [
-    {
-        taskName: `Style Tip popup.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Position tips hand for each song.`,
-        workedHours: 2,
-        neededHours: 6
-    },
-
     /**
      * Final UI.
      */

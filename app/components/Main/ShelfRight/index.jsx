@@ -6,13 +6,15 @@ import cx from 'classnames'
 import ScoreToggle from '../../Score/Toggle'
 import TipsToggle from '../../Tips/Toggle'
 
+const CHILD_SELECTOR = 'ShelfRight__child'
+
 const ShelfRight = () => (
     <div className={cx(
         'ShelfRight',
         'flex__mainSideButtons'
     )}>
-        <TipsToggle />
-        <ScoreToggle />
+        <TipsToggle {...{ className: CHILD_SELECTOR }} />
+        <ScoreToggle {...{ className: CHILD_SELECTOR }} />
     </div>
 )
 

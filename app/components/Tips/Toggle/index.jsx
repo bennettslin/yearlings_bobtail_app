@@ -3,6 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import cx from 'classnames'
 
 import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import Button from '../../Button'
@@ -21,8 +22,11 @@ const mapStateToProps = ({
 class TipsToggle extends PureComponent {
 
     static propTypes = {
-    // Through Redux.
-        selectedTipsOption: PropTypes.string.isRequired
+        // Through Redux.
+        selectedTipsOption: PropTypes.string.isRequired,
+
+        // From parent.
+        className: PropTypes.string
     }
 
     handleTipsClick = () => {
@@ -34,14 +38,19 @@ class TipsToggle extends PureComponent {
     }
 
     render() {
-        const { selectedTipsOption } = this.props
+        const {
+            selectedTipsOption,
+            className
+        } = this.props
 
         return (
-            <>
+            <div {...{ className }}>
                 <Button
                     isLargeSize
                     {...{
-                        className: 'hidden__overviewStatus',
+                        className: cx(
+                            'hidden__overviewStatus'
+                        ),
                         buttonName: TIPS_BUTTON_KEY,
                         buttonIdentifier: selectedTipsOption,
                         accessKey: TIPS_TOGGLE_KEY,
@@ -49,7 +58,7 @@ class TipsToggle extends PureComponent {
                     }}
                 />
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
-            </>
+            </div>
         )
     }
 }

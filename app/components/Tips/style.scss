@@ -5,6 +5,8 @@
 }
 
 .Button__tips {
-    float: left;
-    margin-right: $margin__thick;
+    .TipsPopup
+    & {
+        margin-right: $margin__thick;
+    }
 }

@@ -1,7 +1,7 @@
 // Button to toggle dots slide.
 
 import React, { PureComponent } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
@@ -14,6 +14,11 @@ import { DOTS_SLIDE_BUTTON_KEY } from 'constants/buttons'
 
 class DotsSlideToggle extends PureComponent {
 
+    static propTypes = {
+        // From parent.
+        className: PropTypes.string
+    }
+
     handleButtonClick = () => {
         this.dispatchDotsSlide()
     }
@@ -23,12 +28,15 @@ class DotsSlideToggle extends PureComponent {
     }
 
     render() {
+        const { className } = this.props
+
         return (
             <div
                 {...{
                     className: cx(
                         'DotsSlideToggle',
-                        'hidden__overviewStatus'
+                        'hidden__overviewStatus',
+                        className
                     )
                 }}
             >
