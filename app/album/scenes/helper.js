@@ -1,3 +1,4 @@
+import isFinite from 'lodash/isfinite'
 import keys from 'lodash/keys'
 
 import ALL_ARRANGEMENTS_ACTORS from '../../scene/arrangements/actors'
@@ -14,8 +15,16 @@ const _addPresenceToSceneLayer = ({
 
 }) => {
     const
-        { yIndex = -1 } = arrangementObject,
-        layerKey = `layer${yIndex}`
+        {
+            yIndex = -1,
+            layerYIndex
+        } = arrangementObject,
+
+        /**
+         * If layerYIndex exists, then presence will be arranged and scaled
+         * according to yIndex, but placed in the layerYIndex layer.
+         */
+        layerKey = `layer${isFinite(layerYIndex) ? layerYIndex : yIndex}`
 
     // Initialise this layer if necessary.
     if (!layers[layerKey]) {

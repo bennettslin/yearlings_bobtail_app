@@ -5472,5 +5472,10 @@ export default [
         taskName: `Various needed fixes.`,
         workedHours: 11,
         neededHours: 11
+    },
+    {
+        taskName: `Allow for actors to have different yIndex sizing.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

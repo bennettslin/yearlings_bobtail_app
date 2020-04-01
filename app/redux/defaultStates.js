@@ -17,16 +17,16 @@ import {
     SEASON_STAGE
 } from 'scene/sky/keys'
 
-import { getScene } from 'album/api/scenes'
-import { getStartTimeForVerseIndex } from 'album/api/time'
-import { getSceneIndexForVerseIndex } from 'album/api/verses'
+import { getScene } from '../album/api/scenes'
+import { getStartTimeForVerseIndex } from '../album/api/time'
+import { getSceneIndexForVerseIndex } from '../album/api/verses'
 import {
     getSongIsLogue,
     getBookForSongIndex
-} from 'album/api/songs'
-import { getAnnotationColumnIndex } from 'album/api/annotations'
+} from '../album/api/songs'
+import { getAnnotationColumnIndex } from '../album/api/annotations'
 
-import { getBoolFromStorage } from 'utils/window'
+import { getBoolFromStorage } from '../utils/window'
 
 import {
     IS_ACCESS_ON,
