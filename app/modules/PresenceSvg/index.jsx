@@ -23,19 +23,20 @@ import {
     setSvgTransform,
     getPresenceTransform
 } from './helper/transform'
+import { DEV_RENDER_ONLY_PRESENCES } from '../../constants/dev'
 
-const propTypes = {
-    // From parent.
-    className: PropTypes.string,
-    cubesKey: PropTypes.string.isRequired,
-    presenceType: PropTypes.string.isRequired,
-    actorKey: PropTypes.string,
-    presenceKey: PropTypes.string.isRequired,
-    showProcessedSvg: PropTypes.func.isRequired,
-    children: PropTypes.node.isRequired
-}
+export default class PresenceSvg extends PureComponent {
+    static propTypes = {
+        // From parent.
+        className: PropTypes.string,
+        cubesKey: PropTypes.string.isRequired,
+        presenceType: PropTypes.string.isRequired,
+        actorKey: PropTypes.string,
+        presenceKey: PropTypes.string.isRequired,
+        showProcessedSvg: PropTypes.func.isRequired,
+        children: PropTypes.node.isRequired
+    }
 
-class PresenceSvg extends PureComponent {
     state = {
         adjustedWidth: 0,
         adjustedHeight: 0
@@ -219,7 +220,8 @@ class PresenceSvg extends PureComponent {
             } = this.props,
             {
                 noShadow,
-                perspective
+                perspective,
+                onlyOne
             } = this.getArrangement(),
             {
                 x: adjustedLeft,
@@ -239,7 +241,7 @@ class PresenceSvg extends PureComponent {
                 presenceKey
             })
 
-        return (
+        return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && (
             <InlineSvg
                 {...{
                     className: cx(
@@ -293,7 +295,3 @@ class PresenceSvg extends PureComponent {
         )
     }
 }
-
-PresenceSvg.propTypes = propTypes
-
-export default PresenceSvg

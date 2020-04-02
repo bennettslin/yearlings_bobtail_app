@@ -5482,5 +5482,10 @@ export default [
         taskName: `Style Tip popup.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make presence arrangement easier by allowing cubes and presences to not render.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
