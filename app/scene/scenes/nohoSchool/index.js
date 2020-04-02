@@ -11,8 +11,8 @@ export default {
     [YOUNG_BENNETT]: {
         [FLUSTERED]: {
             yIndex: 4,
-            xPosition: 9.6,
-            zOffset: -0.95
+            xPosition: 9.4,
+            zOffset: 0.57
         }
     },
     [ANITA]: {

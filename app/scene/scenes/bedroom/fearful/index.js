@@ -9,7 +9,9 @@ export default {
     [PRETEEN_BENNETT]: {
         [FEARFUL]: {
             yIndex: 3,
-            xPosition: 8
+            xPosition: 7.7,
+            zOffset: -0.02,
+            layerYIndex: 4
         }
     },
     [MOTHER]: {

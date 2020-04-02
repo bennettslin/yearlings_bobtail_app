@@ -64,7 +64,6 @@ class OverviewToggle extends PureComponent {
                 'OverviewToggle',
                 className
             )}>
-                <TipsHand {...{ tipType: OVERVIEW }} />
                 <Button
                     isCustomSize
                     {...{
@@ -74,6 +73,7 @@ class OverviewToggle extends PureComponent {
                         handleButtonClick: this.handleOverviewClick
                     }}
                 />
+                <TipsHand {...{ tipType: OVERVIEW }} />
                 <OverviewDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

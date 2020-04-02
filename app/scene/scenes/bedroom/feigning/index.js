@@ -5,8 +5,9 @@ export default {
     [PRETEEN_BENNETT]: {
         [FEIGNING_SICK]: {
             yIndex: 3,
-            xPosition: 7.6,
-            zOffset: -0.1
+            xPosition: 7.7,
+            zOffset: -0.04,
+            layerYIndex: 4
         }
     }
 }

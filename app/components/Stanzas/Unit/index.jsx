@@ -108,7 +108,13 @@ class Unit extends PureComponent {
                                 {...{
                                     versesArray: mainVerses,
                                     stanzaType,
-                                    isTruncatable: hasSide
+                                    isTruncatable: hasSide,
+
+                                    // Not ideal to hard-code like this...
+                                    doRenderTipsHand: (
+                                        lyricSongIndex === 1 &&
+                                        unitIndex === 3
+                                    )
                                 }}
                                 {...!subsequent && {
                                     stanzaTypeIndex

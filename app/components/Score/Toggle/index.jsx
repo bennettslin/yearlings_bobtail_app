@@ -7,11 +7,13 @@ import cx from 'classnames'
 
 import ScoreDispatcher from '../../../handlers/Score/Dispatcher'
 import Button from '../../Button'
+import TipsHand from '../../Tips/Hand'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
-import { SCORE_TOGGLE_KEY } from 'constants/access'
-import { SCORES_BUTTON_KEY } from 'constants/buttons'
+import { SCORE_TOGGLE_KEY } from '../../../constants/access'
+import { SCORES_BUTTON_KEY } from '../../../constants/buttons'
+import { SCORE } from '../../../constants/tips'
 
 const mapStateToProps = ({
     loadStore: { isScoreLoaded },
@@ -48,7 +50,14 @@ class ScoreToggle extends PureComponent {
         } = this.props
 
         return canScoreMount && (
-            <div {...{ className }}>
+            <div
+                {...{
+                    className: cx(
+                        'ScoreToggle',
+                        className
+                    )
+                }}
+            >
                 <Button
                     isLargeSize
                     {...{
@@ -61,6 +70,7 @@ class ScoreToggle extends PureComponent {
                         handleButtonClick: this._handleScoreButtonClick
                     }}
                 />
+                <TipsHand {...{ tipType: SCORE }} />
                 <ScoreDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

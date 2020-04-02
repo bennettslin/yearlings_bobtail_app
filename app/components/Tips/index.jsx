@@ -25,7 +25,7 @@ const Tips = () => {
             'Tips',
             'fontSize__verse'
         )}>
-            <TipsToggle />
+            <TipsToggle inPopup />
             <Texts {...{ text: getSongTipText(lyricSongIndex) }} />
         </div>
     )

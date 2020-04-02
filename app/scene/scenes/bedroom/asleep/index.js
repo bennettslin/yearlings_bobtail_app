@@ -5,7 +5,8 @@ export default {
     [PRETEEN_BENNETT]: {
         [ASLEEP]: {
             yIndex: 3,
-            xPosition: 8
+            xPosition: 7.7,
+            xOffset: -0.02
         }
     }
 }

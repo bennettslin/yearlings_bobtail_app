@@ -21,7 +21,7 @@ export default {
         [STARING]: {
             yIndex: 4,
             xPosition: 6.75,
-            zOffset: -1
+            zOffset: -0.95
         }
     },
     [MOTHER]: {

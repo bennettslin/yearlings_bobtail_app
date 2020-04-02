@@ -52,6 +52,7 @@ const TipsHand = ({
             {...{
                 className: cx(
                     'TipsHand',
+                    `TipsHand__${tipType}`,
                     'abF'
                 ),
                 svgClassName: cx(

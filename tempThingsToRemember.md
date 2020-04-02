@@ -8,19 +8,14 @@ Make audio rewind and fast forward have past and future colours.
 
 # Seated audit
 
-## Didi
-bennett on bench
-
 ## Willy
-mother comforting, preteenBennett fearful
+mother comforting
 
 ## Sasha
 schoolbus
 
 ## Pchelka
-preteenBennett asleep
 preteenBennett shaken
-principal's office
 
 ## Ash
 couch scene

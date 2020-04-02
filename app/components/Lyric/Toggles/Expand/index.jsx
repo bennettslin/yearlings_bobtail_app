@@ -8,11 +8,13 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import LyricDispatcher from '../../../../handlers/Lyric/Dispatcher'
 import Button from '../../../Button'
+import TipsHand from '../../../Tips/Hand'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../../helpers/ref'
 
-import { LYRIC_SECTION_EXPAND_KEY } from 'constants/access'
-import { LYRIC_EXPAND_BUTTON_KEY } from 'constants/buttons'
+import { LYRIC_SECTION_EXPAND_KEY } from '../../../../constants/access'
+import { LYRIC_EXPAND_BUTTON_KEY } from '../../../../constants/buttons'
+import { LYRIC_EXPAND } from '../../../../constants/tips'
 
 const mapStateToProps = ({
     viewportStore: { deviceWidthIndex },
@@ -91,6 +93,7 @@ class LyricToggleExpand extends PureComponent {
                             handleButtonClick: this.handleLyricClick
                         }}
                     />
+                    <TipsHand {...{ tipType: LYRIC_EXPAND }} />
                     <LyricDispatcher {...{ getRefs: this._getRefs }} />
                 </div>
             </CSSTransition>

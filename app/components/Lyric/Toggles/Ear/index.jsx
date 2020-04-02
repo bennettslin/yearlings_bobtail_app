@@ -8,12 +8,14 @@ import { connect } from 'react-redux'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import EarColumnDispatcher from '../../../../dispatchers/EarColumnDispatcher'
 import Button from '../../../Button'
+import TipsHand from '../../../Tips/Hand'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../../helpers/ref'
 
-import { LYRIC_COLUMN_TOGGLE_KEY } from 'constants/access'
-import { LYRIC_EAR_BUTTON_KEY } from 'constants/buttons'
-import { EAR_COLUMN_KEYS } from 'constants/lyrics'
+import { LYRIC_COLUMN_TOGGLE_KEY } from '../../../../constants/access'
+import { LYRIC_EAR_BUTTON_KEY } from '../../../../constants/buttons'
+import { EAR_COLUMN_KEYS } from '../../../../constants/lyrics'
+import { DOUBLESPEAKER } from '../../../../constants/tips'
 
 const mapStateToProps = ({
     transientStore: { isEarShown },
@@ -75,6 +77,7 @@ class LyricToggleEar extends PureComponent {
                             handleButtonClick: this.handleDoublespeakerClick
                         }}
                     />
+                    <TipsHand {...{ tipType: DOUBLESPEAKER }} />
                     <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
                 </div>
             </CSSTransition>

@@ -8,11 +8,13 @@ import { getParentOfVerseClassNamesForIndices } from '../../helper'
 
 import VerseHoc from '../../../Verse/Hoc'
 import Verse from '../../../Verse'
+import TipsHand from '../../../Tips/Hand'
 
 import {
     RESPONSE,
     RHYME
-} from 'constants/lyrics'
+} from '../../../../constants/lyrics'
+import { ANNOTATION } from '../../../../constants/tips'
 
 /*************
  * CONTAINER *
@@ -88,6 +90,8 @@ const propTypes = {
         versesArray: PropTypes.array.isRequired,
         stanzaType: PropTypes.string.isRequired,
 
+        doRenderTipsHand: PropTypes.bool,
+
         handleStanzaTabClick: PropTypes.func.isRequired
     },
 
@@ -95,6 +99,7 @@ const propTypes = {
         versesArray,
         stanzaTypeIndex,
         stanzaType,
+        doRenderTipsHand,
         handleStanzaTabClick,
 
         ...other
@@ -171,6 +176,9 @@ const propTypes = {
                             {tabText}
                         </div>
                     </div>
+                )}
+                {Boolean(doRenderTipsHand) && (
+                    <TipsHand {...{ tipType: ANNOTATION }} />
                 )}
             </div>
         )

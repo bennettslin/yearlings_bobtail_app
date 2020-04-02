@@ -7,11 +7,14 @@ import cx from 'classnames'
 
 import CarouselNavDispatcher from '../../../handlers/CarouselNav/Dispatcher'
 import Button from '../../Button'
+import TipsHand from '../../Tips/Hand'
+
 import { CAROUSEL_TOGGLE_KEY } from 'constants/access'
 import { CAROUSEL_NAV_BUTTON_KEY } from 'constants/buttons'
 
 import { populateRefs } from '../../../helpers/ref'
 import { getCarouselNavIdentifier } from '../../../constants/options'
+import { CAROUSEL, NAV } from '../../../constants/tips'
 
 const mapStateToProps = ({
     toggleStore: {
@@ -61,6 +64,8 @@ class CarouselToggle extends PureComponent {
                         handleButtonClick: this.handleButtonClick
                     }}
                 />
+                <TipsHand {...{ tipType: CAROUSEL }} />
+                <TipsHand {...{ tipType: NAV }} />
                 <CarouselNavDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

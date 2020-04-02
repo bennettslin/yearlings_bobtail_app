@@ -4,19 +4,22 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 
 import FilmstripScene from './Scene'
+import TipsHand from '../../Tips/Hand'
+
 import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 
-import { getSongSceneConfigs } from 'album/api/scenes'
-import { getSongTotalTime } from 'album/api/time'
+import { getSongSceneConfigs } from '../../../album/api/scenes'
+import { getSongTotalTime } from '../../../album/api/time'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 import {
     PREVIOUS_SCENE_KEY,
     NEXT_SCENE_KEY
-} from 'constants/access'
+} from '../../../constants/access'
+import { FILMSTRIP } from '../../../constants/tips'
 
 const mapStateToProps = ({
     lyricStore: {
@@ -109,7 +112,7 @@ class Filmstrip extends PureComponent {
                     isNext
                     {...{ accessKey: NEXT_SCENE_KEY }}
                 />
-
+                <TipsHand {...{ tipType: FILMSTRIP }} />
                 <SceneDispatcher {...{ getRefs: this._getRefs }} />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>

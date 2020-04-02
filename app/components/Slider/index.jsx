@@ -9,13 +9,15 @@ import SliderTouchDispatcher from '../../dispatchers/SliderTouchDispatcher'
 import SliderStanzas from './Stanzas'
 import SliderTimes from './Times'
 import AccessDirectionLetter from '../Access/DirectionLetter'
+import TipsHand from '../Tips/Hand'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 import {
     PREVIOUS_VERSE_KEY,
     NEXT_VERSE_KEY
-} from 'constants/access'
+} from '../../constants/access'
+import { SLIDER } from '../../constants/tips'
 
 const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter }
@@ -71,6 +73,7 @@ class Slider extends PureComponent {
                     isNext
                     {...{ accessKey: NEXT_VERSE_KEY }}
                 />
+                <TipsHand {...{ tipType: SLIDER }} />
                 <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

@@ -28,7 +28,6 @@ class AboutToggle extends PureComponent {
             <div className={cx(
                 'AboutToggle'
             )}>
-                <TipsHand {...{ tipType: ABOUT }} />
                 <Button
                     isCustomSize
                     {...{
@@ -37,6 +36,7 @@ class AboutToggle extends PureComponent {
                         handleButtonClick: this._handleButtonClick
                     }}
                 />
+                <TipsHand {...{ tipType: ABOUT }} />
                 <AboutDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

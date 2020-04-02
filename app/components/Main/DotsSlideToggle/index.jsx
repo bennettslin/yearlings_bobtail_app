@@ -6,11 +6,13 @@ import cx from 'classnames'
 
 import DotsSlideDispatcher from '../../../handlers/DotsSlide/Dispatcher'
 import Button from '../../Button'
+import TipsHand from '../../Tips/Hand'
 
 import { populateRefs } from '../../../helpers/ref'
 
-import { DOTS_SLIDE_TOGGLE_KEY } from 'constants/access'
-import { DOTS_SLIDE_BUTTON_KEY } from 'constants/buttons'
+import { DOTS_SLIDE_TOGGLE_KEY } from '../../../constants/access'
+import { DOTS_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
+import { DOTS } from '../../../constants/tips'
 
 class DotsSlideToggle extends PureComponent {
 
@@ -48,6 +50,7 @@ class DotsSlideToggle extends PureComponent {
                         handleButtonClick: this.handleButtonClick
                     }}
                 />
+                <TipsHand {...{ tipType: DOTS }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

@@ -7,11 +7,13 @@ import cx from 'classnames'
 
 import TipsDispatcher from '../../../handlers/Tips/Dispatcher'
 import Button from '../../Button'
+import TipsHand from '../../Tips/Hand'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
-import { TIPS_TOGGLE_KEY } from 'constants/access'
-import { TIPS_BUTTON_KEY } from 'constants/buttons'
+import { TIPS_TOGGLE_KEY } from '../../../constants/access'
+import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
+import { TIPS } from '../../../constants/tips'
 
 const mapStateToProps = ({
     optionStore: { selectedTipsOption }
@@ -26,6 +28,7 @@ class TipsToggle extends PureComponent {
         selectedTipsOption: PropTypes.string.isRequired,
 
         // From parent.
+        inPopup: PropTypes.bool,
         className: PropTypes.string
     }
 
@@ -40,6 +43,7 @@ class TipsToggle extends PureComponent {
     render() {
         const {
             selectedTipsOption,
+            inPopup,
             className
         } = this.props
 
@@ -57,6 +61,9 @@ class TipsToggle extends PureComponent {
                         handleButtonClick: this.handleTipsClick
                     }}
                 />
+                {inPopup && (
+                    <TipsHand {...{ tipType: TIPS }} />
+                )}
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )
