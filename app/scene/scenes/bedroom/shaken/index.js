@@ -4,9 +4,9 @@ import { SHAKEN } from '../../../../constants/scene/actors/preteenBennett'
 export default {
     [PRETEEN_BENNETT]: {
         [SHAKEN]: {
-            yIndex: 5,
-            xPosition: 4.35,
-            zOffset: 0.32
+            yIndex: 4,
+            xPosition: 3.4,
+            zOffset: 0.02
         }
     }
 }

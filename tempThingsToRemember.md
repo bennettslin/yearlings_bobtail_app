@@ -8,12 +8,6 @@ Make audio rewind and fast forward have past and future colours.
 
 # Seated audit
 
-## Willy
-mother comforting
-
-## Pchelka
-preteenBennett shaken
-
 ## Ash
 couch scene
 

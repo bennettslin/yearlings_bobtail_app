@@ -92,7 +92,8 @@ export default {
         [BEDROOM_DESK]: {
             yIndex: 4,
             xPosition: 3.15,
-            scaleFactor: 0.225
+            scaleFactor: 0.225,
+            layerYIndex: 3
         },
         [CAPTAIN_BED]: {
             yIndex: 5,
@@ -200,7 +201,7 @@ export const THINGS_BEDROOM_SHAKEN = {
     [FIXTURE]: {
         [BEYONDER_ENVELOPE]: {
             yIndex: 3,
-            xPosition: 2.5,
+            xPosition: 2,
             zOffset: -0.1
         }
     },

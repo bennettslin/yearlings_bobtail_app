@@ -17,8 +17,9 @@ export default {
     [MOTHER]: {
         [COMFORTING]: {
             yIndex: 4,
-            xPosition: 5,
-            zOffset: -0.1
+            xPosition: 4.2,
+            zOffset: -1.35,
+            layerYIndex: 5
         }
     }
 }
