@@ -5,8 +5,8 @@ export default {
     [BENNETT_LIZ]: {
         [AWKWARD_CONSOLATION]: {
             yIndex: 4,
-            xPosition: 3,
-            zOffset: 0
+            xPosition: 3.8,
+            zOffset: -0.05
         }
     }
 }

@@ -49,12 +49,12 @@ export default {
         },
         [WIDE_ARMREST_MIRIAM__LEFT]: {
             yIndex: 4,
-            xPosition: 5.2,
+            xPosition: 5.1,
             scaleFactor: 0.3
         },
         [WIDE_ARMREST_MIRIAM__RIGHT]: {
             yIndex: 4,
-            xPosition: 10.8,
+            xPosition: 10.9,
             scaleFactor: 0.3,
             flipHorizontal: true
         }

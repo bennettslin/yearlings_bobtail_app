@@ -114,9 +114,15 @@ const LayersActor = ({
     <>
         <Layer {...{ actorKey: FATHER, instanceKey: father }} />
         <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
+        <Layer {...{ actorKey: CATHERINE, instanceKey: catherine }} />
         <Layer {...{ actorKey: MARA, instanceKey: mara }} />
         <Layer {...{ actorKey: JACOB, instanceKey: jacob }} />
         <Layer {...{ actorKey: JACOB_MARA, instanceKey: jacobMara }} />
+        <Layer {...{ actorKey: ANA, instanceKey: ana }} />
+        <Layer {...{ actorKey: ANA_HOWIE, instanceKey: anaHowie }} />
+        <Layer {...{ actorKey: HOWIE, instanceKey: howie }} />
+        <Layer {...{ actorKey: HOWIE_WILLY, instanceKey: howieWilly }} />
+        <Layer {...{ actorKey: TOMER, instanceKey: tomer }} />
         <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />
         <Layer {...{ actorKey: BENNETT, instanceKey: bennett }} />
         <Layer {...{ actorKey: BENNETT_FATHER, instanceKey: bennettFather }} />
@@ -140,12 +146,6 @@ const LayersActor = ({
         <Layer {...{ actorKey: BRAD_BENNETT, instanceKey: bradBennett }} />
         <Layer {...{ actorKey: BRAD_SASHA, instanceKey: bradSasha }} />
         <Layer {...{ actorKey: ANDREW, instanceKey: andrew }} />
-        <Layer {...{ actorKey: CATHERINE, instanceKey: catherine }} />
-        <Layer {...{ actorKey: ANA, instanceKey: ana }} />
-        <Layer {...{ actorKey: ANA_HOWIE, instanceKey: anaHowie }} />
-        <Layer {...{ actorKey: HOWIE, instanceKey: howie }} />
-        <Layer {...{ actorKey: HOWIE_WILLY, instanceKey: howieWilly }} />
-        <Layer {...{ actorKey: TOMER, instanceKey: tomer }} />
         <Layer {...{ actorKey: LIZ, instanceKey: liz }} />
         <Layer {...{ actorKey: KHARI, instanceKey: khari }} />
         <Layer {...{ actorKey: KHARI_LIZ, instanceKey: khariLiz }} />

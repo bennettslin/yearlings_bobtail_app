@@ -1,6 +1,7 @@
 import {
     CARDBOARD,
     FIXTURE,
+    FURNITURE,
     PANEL
 } from '../../../constants/scene/things'
 import {
@@ -16,6 +17,7 @@ import {
     BENNETT_COUCH_LAMP,
     KEYBOARD
 } from '../../../constants/scene/things/fixtures'
+import { BENNETT_PILLOW__COUCH } from '../../../constants/scene/things/furnitures'
 import {
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
@@ -34,6 +36,12 @@ export default {
             scaleFactor: 0.3
         }
     },
+    [FURNITURE]: {
+        [BENNETT_PILLOW__COUCH]: {
+            yIndex: 3,
+            xPosition: 6
+        }
+    },
     [PANEL]: {
         [WIDE_COUCH_BENNETT]: {
             yIndex: 3,
@@ -42,12 +50,12 @@ export default {
         },
         [WIDE_ARMREST_BENNETT__LEFT]: {
             yIndex: 4,
-            xPosition: 1.2,
+            xPosition: 1.1,
             scaleFactor: 0.3
         },
         [WIDE_ARMREST_BENNETT__RIGHT]: {
             yIndex: 4,
-            xPosition: 6.8,
+            xPosition: 6.9,
             scaleFactor: 0.3,
             flipHorizontal: true
         }

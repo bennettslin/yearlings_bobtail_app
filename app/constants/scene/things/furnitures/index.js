@@ -1,5 +1,7 @@
 export const ATTIC_PILLOW = 'atticPillow'
 export const BENNETT_PILLOW = 'bennettPillow'
+export const BENNETT_PILLOW__BED = 'bennettPillow__bed'
+export const BENNETT_PILLOW__COUCH = 'bennettPillow__couch'
 export const CAPTAIN_BED_PILLOW = 'captainBedPillow'
 export const DEATHBED_BLANKET = 'deathbedBlanket'
 export const DEATHBED_PILLOW = 'deathbedPillow'

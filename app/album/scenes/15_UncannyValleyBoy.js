@@ -81,7 +81,7 @@ import {
     RECORDING_BEERS,
     CRACKED_PICTURE
 } from '../../constants/scene/things/fixtures'
-import { BENNETT_PILLOW } from '../../constants/scene/things/furnitures'
+import { BENNETT_PILLOW__BED } from '../../constants/scene/things/furnitures'
 import {
     BASEMENT_FENCE,
     SNOWGLOBE__TETHERBALL,
@@ -115,7 +115,7 @@ export default [
                 [BASEMENT_DOOR]: true
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW]: true
+                [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
                 [BASEMENT_FENCE]: true,
@@ -149,7 +149,7 @@ export default [
                 [OAKLAND_SIDE]: true
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW]: true
+                [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
                 [BASEMENT_FENCE]: true,
@@ -317,7 +317,7 @@ export default [
                 [CRACKED_PICTURE]: true
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW]: true
+                [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
                 [BASEMENT_FENCE]: true,

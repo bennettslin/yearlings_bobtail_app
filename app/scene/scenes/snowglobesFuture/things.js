@@ -16,6 +16,7 @@ import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE
 } from '../../../constants/scene/things/panels'
+import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../constants/scene'
 
 export default {
     [CARDBOARD]: {
@@ -48,7 +49,8 @@ export default {
         },
         [RECORDING_BEERS]: {
             yIndex: 3,
-            xPosition: 7
+            xPosition: 7,
+            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR
         }
     },
     [PANEL]: {

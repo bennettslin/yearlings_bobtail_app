@@ -18,7 +18,7 @@ import {
     LINGERIE_DRAWING,
     VASELINE
 } from '../../../constants/scene/things/fixtures'
-import { BENNETT_PILLOW } from '../../../constants/scene/things/furnitures'
+import { BENNETT_PILLOW__BED } from '../../../constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 
 export default {
@@ -76,7 +76,7 @@ export default {
         }
     },
     [FURNITURE]: {
-        [BENNETT_PILLOW]: {
+        [BENNETT_PILLOW__BED]: {
             yIndex: 4,
             xPosition: 9.5
         }

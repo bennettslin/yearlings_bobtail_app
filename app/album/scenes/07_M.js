@@ -7,6 +7,7 @@ import {
     DOOR,
     FIXTURE,
     FLAT,
+    FURNITURE,
     PANEL
 } from '../../constants/scene/things'
 import {
@@ -112,6 +113,7 @@ import {
     COMMERCIAL_MIDDLE_RIGHT,
     COMMERCIAL_NEAR_RIGHT
 } from '../../constants/scene/things/flats'
+import { BENNETT_PILLOW__COUCH } from '../../constants/scene/things/furnitures'
 import {
     BASEMENT_FENCE,
     WIDE_COUCH_BENNETT,
@@ -163,6 +165,9 @@ export default [
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true
+            },
+            [FURNITURE]: {
+                [BENNETT_PILLOW__COUCH]: true
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,

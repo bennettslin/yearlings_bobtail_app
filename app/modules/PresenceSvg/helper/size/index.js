@@ -2,7 +2,13 @@ import isFinite from 'lodash/isfinite'
 
 import { Y_INDEX_SCALE_FACTORS } from 'constants/cubeRender'
 import { getValidYIndex } from 'helpers/general'
-import { ACTOR } from '../../../../constants/scene'
+import {
+    ACTOR,
+    ACTOR_DEFAULT_SCALE_FACTOR,
+    DOOR_DEFAULT_SCALE_FACTOR,
+    FIXTURE_DEFAULT_SCALE_FACTOR,
+    FURNITURE_DEFAULT_SCALE_FACTOR
+} from '../../../../constants/scene'
 import {
     DOOR,
     FIXTURE,
@@ -12,11 +18,7 @@ import {
 // Illustrator artboards are 1623 by 1082.
 const
     ARTBOARD_WIDTH = 1623 / 100,
-    ARTBOARD_HEIGHT = 1082 / 100,
-    ACTOR_DEFAULT_SCALE_FACTOR = 0.25,
-    DOOR_DEFAULT_SCALE_FACTOR = 0.7,
-    FIXTURE_DEFAULT_SCALE_FACTOR = 0.3,
-    FURNITURE_DEFAULT_SCALE_FACTOR = 0.25
+    ARTBOARD_HEIGHT = 1082 / 100
 
 const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
     // Override default if custom scale factor is given.

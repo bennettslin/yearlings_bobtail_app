@@ -129,7 +129,7 @@ import {
     PUBLIC_NEAR__LIZ_GATE
 } from '../../constants/scene/things/flats'
 import {
-    BENNETT_PILLOW,
+    BENNETT_PILLOW__BED,
     LIZ_PILLOWS,
     LIZ_PILLOWS_REFLECTION,
     LIZ_PILLOWS_PILE,
@@ -377,7 +377,7 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW]: true
+                [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true
@@ -414,7 +414,7 @@ export default [
                 [VASELINE]: true
             },
             [FURNITURE]: {
-                [BENNETT_PILLOW]: true
+                [BENNETT_PILLOW__BED]: true
             },
             [PANEL]: {
                 [BENNETT_BED]: true

@@ -10,7 +10,8 @@ import lizPillowsPileReflection from 'assets/svgs/furnitures/lizPillowsPileRefle
 
 import {
     ATTIC_PILLOW,
-    BENNETT_PILLOW,
+    BENNETT_PILLOW__BED,
+    BENNETT_PILLOW__COUCH,
     CAPTAIN_BED_PILLOW,
     DEATHBED_PILLOW,
     DEATHBED_BLANKET,
@@ -22,7 +23,8 @@ import {
 
 export default {
     [ATTIC_PILLOW]: atticPillow,
-    [BENNETT_PILLOW]: bennettPillow,
+    [BENNETT_PILLOW__BED]: bennettPillow,
+    [BENNETT_PILLOW__COUCH]: bennettPillow,
     [CAPTAIN_BED_PILLOW]: captainBedPillow,
     [DEATHBED_PILLOW]: deathbedPillow,
     [DEATHBED_BLANKET]: deathbedBlanket,

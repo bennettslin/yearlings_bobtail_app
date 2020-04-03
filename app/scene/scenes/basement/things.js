@@ -13,6 +13,7 @@ import {
     BASEMENT_BEER_BENNETT
 } from '../../../constants/scene/things/fixtures'
 import { BASEMENT_FENCE } from '../../../constants/scene/things/panels'
+import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../constants/scene'
 
 export default {
     [DOOR]: {
@@ -39,15 +40,18 @@ export default {
         },
         [BASEMENT_BEER_CASE]: {
             yIndex: 5,
-            xPosition: 1.5
+            xPosition: 1.5,
+            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR
         },
         [BASEMENT_BEER_MARA]: {
             yIndex: 5,
-            xPosition: 5
+            xPosition: 4.1,
+            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR
         },
         [BASEMENT_BEER_BENNETT]: {
             yIndex: 5,
-            xPosition: 8
+            xPosition: 7.1,
+            scaleFactor: ACTOR_DEFAULT_SCALE_FACTOR
         }
     },
     [PANEL]: {

@@ -6,24 +6,25 @@ import {
 import { EATING } from '../../../constants/scene/actors/songs'
 
 export default {
-    [BENNETT]: {
-        [EATING]: {
-            yIndex: 5,
-            xPosition: 9,
-            zOffset: -1
-        }
-    },
     [JACOB_MARA]: {
         [EATING]: {
             yIndex: 5,
-            xPosition: 4
+            xPosition: 3.9,
+            zOffset: 0
         }
     },
     [ANA]: {
         [EATING]: {
             yIndex: 4,
-            xPosition: 7,
-            zOffset: -1
+            xPosition: 6.6,
+            zOffset: -1.15,
+            layerYIndex: 5
+        }
+    },
+    [BENNETT]: {
+        [EATING]: {
+            yIndex: 5,
+            xPosition: 8.2
         }
     }
 }

@@ -3,19 +3,14 @@ gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
 # TODO
+Make couches have seat cushions
 Make Liz gate outside open
 Make audio rewind and fast forward have past and future colours.
 
 # Seated audit
 
-## Ash
-couch scene
-
 ## M
-pondering
-rubik's
 reading and playing
-basement
 
 ## Grasshoppers
 waiting room thoughts
