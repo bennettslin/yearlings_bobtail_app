@@ -35,6 +35,10 @@
         <path class="lizShirtCollar" d="M442.71,808.26c25.27-3.72,40.13,29,56.48,43.85-21.05-76.3-66.29-165-88.45-162.78Z"/>
     </g>
     <g class="eye">
+        <g class="sclera">
+            <circle cx="776.2" cy="373.12" r="141.4"/>
+            <circle cx="263.2" cy="532.89" r="118.63"/>
+        </g>
         <g class="irisDarkBrown">
             <ellipse cx="685.92" cy="341.1" rx="21.85" ry="21.92" transform="translate(130.93 869.13) rotate(-70.01)"/>
             <ellipse cx="830.13" cy="396.21" rx="21.85" ry="21.92" transform="translate(174.06 1040.93) rotate(-70.01)"/>
@@ -44,7 +48,7 @@
         <g class="pupil">
             <ellipse cx="685.92" cy="341.1" rx="8.5" ry="8.53" transform="translate(130.93 869.13) rotate(-70.01)"/>
             <ellipse cx="830.13" cy="396.21" rx="8.5" ry="8.53" transform="translate(174.06 1040.93) rotate(-70.01)"/>
-            <ellipse cx="279.27" cy="542.73" rx="8" ry="8.4" transform="translate(-78.52 48.22) rotate(-8.66)"/>
+            <ellipse cx="279.27" cy="542.73" rx="8" ry="8.4" transform="matrix(0.99, -0.15, 0.15, 0.99, -78.52, 48.22)"/>
             <ellipse cx="162.16" cy="549.85" rx="7.44" ry="8.4" transform="translate(-80.92 30.68) rotate(-8.66)"/>
         </g>
     </g>

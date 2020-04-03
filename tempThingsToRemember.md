@@ -11,9 +11,6 @@ Make audio rewind and fast forward have past and future colours.
 ## Willy
 mother comforting
 
-## Sasha
-schoolbus
-
 ## Pchelka
 preteenBennett shaken
 
@@ -26,20 +23,13 @@ rubik's
 reading and playing
 basement
 
-## Good Night
-go karts
-
 ## Grasshoppers
 waiting room thoughts
 waiting room surprised
-three sex scenes
 
 ## Constellations
 station wagon
 attic
-
-## Look Back
-bed scene
 
 ## Garryowen
 drinking couch scene

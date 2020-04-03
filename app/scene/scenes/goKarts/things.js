@@ -21,13 +21,13 @@ export default {
     [PANEL]: {
         [GO_KART_SEAT__LEFT]: {
             yIndex: 3,
-            xPosition: 1.8,
+            xPosition: 1.6,
             zOffset: 0.75,
             scaleFactor: 0.4
         },
         [GO_KART_SEAT__RIGHT]: {
             yIndex: 3,
-            xPosition: 7.8,
+            xPosition: 7.9,
             zOffset: 0.75,
             scaleFactor: 0.4
         },

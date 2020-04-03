@@ -38,22 +38,22 @@ export default {
             zOffset: 6.5
         },
         [CONDOM_WRAPPER_LIZ]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 8.5
         },
         [CONDOM_WRAPPER_REFLECTION]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 6.8
+            zOffset: 6
         },
         [USED_CONDOM_LIZ]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 8
         },
         [USED_CONDOM_REFLECTION]: {
             yIndex: 1,
             xPosition: 8,
-            zOffset: 2
+            zOffset: 4
         }
     },
     [FURNITURE]: {
@@ -89,13 +89,13 @@ export default {
 export const THINGS_LIZ_BED_LOOK_BACK = {
     [FIXTURE]: {
         [BENNETT_SHOE]: {
-            yIndex: 4,
-            xPosition: 9
+            yIndex: 3,
+            xPosition: 9.5
         },
         [BENNETT_SHOE_REFLECTION]: {
-            yIndex: 2,
-            xPosition: 9,
-            zOffset: 5.5,
+            yIndex: 1,
+            xPosition: 9.5,
+            zOffset: 4.5,
             rotate: 345
         }
     }
