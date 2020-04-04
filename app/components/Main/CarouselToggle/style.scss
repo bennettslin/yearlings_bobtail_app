@@ -7,6 +7,18 @@
     display: flex;
     justify-content: center;
 
+    margin-left: -$width__overviewToggle;
+
+    .RW__carouselNavShowable
+    .TrW__canLyricCarouselEnter
+    &,
+    .ShW__tipsShown__nav
+    &,
+    .ShW__tipsShown__carousel
+    & {
+        margin-left: 0;
+    }
+
     /**
      * When annotation is selected, carousel switches z-index with lyric. So
      * carousel toggle should have same z-index as lyric to always show above
@@ -32,12 +44,5 @@
     & {
         top: 0;
         bottom: auto;
-    }
-
-    .RW__carouselNavUnshowable
-    &,
-    .TrW__cannotLyricCarouselEnter
-    & {
-        margin-left: -$width__overviewToggle;
     }
 }

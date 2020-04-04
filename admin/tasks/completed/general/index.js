@@ -5514,5 +5514,10 @@ export default [
         taskName: `Place tip hand on dot if dot category not selected for it.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Show toggle buttons for tips.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

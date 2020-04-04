@@ -46,8 +46,8 @@ class ResponsiveWrapper extends PureComponent {
                             'RW__navIconShrunk' :
                             'RW__navIconStatic',
 
-                        isCarouselNavShowable ?
-                            'RW__carouselNavShowable' : 'RW__carouselNavUnshowable',
+                        isCarouselNavShowable &&
+                            'RW__carouselNavShowable',
 
                         singleShownEarColumnKey ?
                             `RW__${singleShownEarColumnKey}EarColumnOnly` :

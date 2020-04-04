@@ -31,6 +31,12 @@ $height__overviewToggle__phone:
 
 .OverviewToggle {
     position: relative;
+
+    .ShW__tipsShown__overview
+    & {
+        opacity: 1;
+        margin-left: 0;
+    }
 }
 
 .Button__overviewSize {
