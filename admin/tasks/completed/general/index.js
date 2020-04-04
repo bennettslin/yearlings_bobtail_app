@@ -5497,5 +5497,10 @@ export default [
         taskName: `Adjust couch heights.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Don't show tips hands in phone width.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

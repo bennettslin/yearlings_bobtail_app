@@ -81,7 +81,7 @@ class WikiSection extends PureComponent {
                     {...{
                         className: cx(
                             'iframeContainer__iframe',
-                            { 'iframeLoading': iframeLoading }
+                            { iframeLoading }
                         ),
                         tabIndex: -1,
                         src: selectedWikiUrl,

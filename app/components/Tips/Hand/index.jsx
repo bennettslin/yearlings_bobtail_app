@@ -76,7 +76,7 @@ TipsHand.propTypes = {
     selectedTipsOption: PropTypes.string.isRequired,
 
     // From parent.
-    tipType: PropTypes.number.isRequired
+    tipType: PropTypes.string.isRequired
 }
 
 export default connect(mapStateToProps)(TipsHand)

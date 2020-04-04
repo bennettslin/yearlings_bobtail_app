@@ -64,12 +64,12 @@ class DotsSlideSelect extends PureComponent {
                                  * Button know to update its children. Not
                                  * ideal, but it will do for now.
                                  */
-                                'isSelected': isSelected,
-                                'isActivated': isActivated
+                                isSelected,
+                                isActivated
                             }),
                             buttonName: DOTS_SLIDE_SELECT_BUTTON_KEY,
                             accessKey: ENTER,
-                            isAccessed: isAccessed,
+                            isAccessed,
                             handleButtonClick: this._toggleSelectedDot
                         }}
                     >

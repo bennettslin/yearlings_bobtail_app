@@ -45,9 +45,9 @@ const mapStateToProps = ({
 
 // Kind of silly, but easiest approach for now.
 const LOGUE_DUMMY_PLAYER = {
-    promiseToPlay: () => {},
-    askToPause: () => {},
-    setCurrentTime: () => {}
+    promiseToPlay() {},
+    askToPause() {},
+    setCurrentTime() {}
 }
 
 class PlayerManager extends PureComponent {

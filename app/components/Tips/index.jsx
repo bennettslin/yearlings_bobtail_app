@@ -1,7 +1,6 @@
 // Section to show song tip.
 
 import React from 'react'
-import PropTypes from 'prop-types'
 import { useSelector } from 'react-redux'
 import cx from 'classnames'
 
@@ -29,11 +28,6 @@ const Tips = () => {
             <Texts {...{ text: getSongTipText(lyricSongIndex) }} />
         </div>
     )
-}
-
-Tips.propTypes = {
-    // Through Redux.
-    lyricSongIndex: PropTypes.number.isRequired
 }
 
 export default Tips

@@ -250,7 +250,7 @@ module.exports = {
                 "defaultAssignment": true
             }
         ],
-        "no-unused-expressions": 'off',
+        "no-unused-expressions": 'error',
         "no-use-before-define": 'off',
         "no-useless-call": 'error',
         "no-useless-computed-key": 'error',
@@ -280,7 +280,7 @@ module.exports = {
                 "allowMultiplePropertiesPerLine": true
             }
         ],
-        "object-shorthand": 'off',
+        "object-shorthand": ['error', 'always'],
         "one-var": 'off',
         "one-var-declaration-per-line": 'error',
         "operator-assignment": 'off',

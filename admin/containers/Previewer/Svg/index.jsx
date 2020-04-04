@@ -33,7 +33,7 @@ import { CUSTOM_THING_INSTANCES } from '../../../constants/things'
 
 class PreviewerSvg extends PureComponent {
     static defaultProps = {
-        handleProcessSvg: () => {}
+        handleProcessSvg() {}
     }
 
     static propTypes = {
