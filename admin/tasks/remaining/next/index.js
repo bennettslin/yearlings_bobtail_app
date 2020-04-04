@@ -1,6 +1,6 @@
 export default [
     {
-        taskName: `Position tips hand for each song. Don't show in phone width.`,
+        taskName: `Position tips hand for each song.`,
         workedHours: 5,
         neededHours: 8
     },
