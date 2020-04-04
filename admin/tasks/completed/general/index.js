@@ -5492,5 +5492,10 @@ export default [
         taskName: `Make Liz gate outside open.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Adjust couch heights.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

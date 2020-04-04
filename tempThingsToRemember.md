@@ -3,13 +3,9 @@ gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
 # TODO
-Make couches have seat cushions
 Make audio rewind and fast forward have past and future colours.
 
 # Seated audit
-
-## M
-reading and playing
 
 ## Grasshoppers
 waiting room thoughts

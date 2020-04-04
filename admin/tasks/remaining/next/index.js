@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Give couch panels seat cushions.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Don't show tips hands in phone width.`,
         workedHours: 0,
         neededHours: 1

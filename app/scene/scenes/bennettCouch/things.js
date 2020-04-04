@@ -44,7 +44,7 @@ export default {
     },
     [PANEL]: {
         [WIDE_COUCH_BENNETT]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 4,
             scaleFactor: 0.25
         },
@@ -117,7 +117,7 @@ export const THINGS_BENNETT_COUCH_READING = {
     [FIXTURE]: {
         [KEYBOARD]: {
             yIndex: 4,
-            xPosition: 7,
+            xPosition: 6.5,
             zOffset: 0.5
         }
     }
