@@ -13,6 +13,7 @@ class OverviewDispatcher extends PureComponent {
         // Through Redux.
         isSelectedLogue: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
+        isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         toggleShowsOverviewImmediately: PropTypes.bool.isRequired,

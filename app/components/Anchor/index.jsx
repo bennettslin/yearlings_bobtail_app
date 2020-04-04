@@ -29,6 +29,7 @@ class Anchor extends PureComponent {
         isAnnotationTitle: PropTypes.bool,
         isAccessed: PropTypes.bool,
         isSelected: PropTypes.bool,
+        isDisabled: PropTypes.bool,
         isWikiTextAnchor: PropTypes.bool,
         sequenceDotKeys: PropTypes.object,
         stanzaDotKeys: PropTypes.object,

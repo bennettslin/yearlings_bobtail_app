@@ -29,6 +29,7 @@ class OverviewToggle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isLyricLogue: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
 
         // From parent.

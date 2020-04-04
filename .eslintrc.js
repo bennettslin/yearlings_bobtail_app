@@ -303,8 +303,8 @@ module.exports = {
         ],
         "react/display-name": 'off',
         "react/jsx-key": 'off',
-        "react/prop-types": 'off',
-        "react/no-unused-prop-types": 'off',
+        "react/prop-types": 'error',
+        "react/no-unused-prop-types": 'error',
         "require-await": 'error',
         "require-jsdoc": 'error',
         "rest-spread-spacing": [

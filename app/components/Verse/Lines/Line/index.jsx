@@ -22,6 +22,7 @@ class VerseLine extends PureComponent {
     static propTypes = {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
+        dispatch: PropTypes.func.isRequired,
 
         // From parent.
         text: PropTypes.oneOfType([

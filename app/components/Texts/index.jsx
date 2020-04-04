@@ -19,7 +19,9 @@ const propTypes = {
             PropTypes.string,
             PropTypes.array,
             PropTypes.object
-        ])
+        ]),
+        beginsVerse: PropTypes.bool,
+        endsVerse: PropTypes.bool
     },
 
     Texts = ({

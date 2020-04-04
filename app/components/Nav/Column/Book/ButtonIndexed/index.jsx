@@ -28,6 +28,7 @@ class NavButtonIndexed extends PureComponent {
         isAccessOn: PropTypes.bool.isRequired,
         isDotsSlideShown: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
+        dispatch: PropTypes.func.isRequired,
 
         // From parent.
         songIndex: PropTypes.number.isRequired

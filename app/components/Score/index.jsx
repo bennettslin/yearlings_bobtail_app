@@ -18,7 +18,8 @@ class Score extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired
+        lyricSongIndex: PropTypes.number.isRequired,
+        updateLoadStore: PropTypes.func.isRequired
     }
 
     onIframeLoad = () => {

@@ -33,6 +33,7 @@ class Verse extends PureComponent {
     static propTypes = {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
+        dispatch: PropTypes.func.isRequired,
 
         // From parent.
         verseObject: PropTypes.object.isRequired,
@@ -121,6 +122,7 @@ class Verse extends PureComponent {
 const verseViewPropTypes = {
     // From parent.
         logicSelectors: PropTypes.string,
+        verseClassName: PropTypes.string,
         verseIndex: PropTypes.number,
 
         inVerseBar: PropTypes.bool.isRequired,

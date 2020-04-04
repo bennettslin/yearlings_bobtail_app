@@ -3,7 +3,6 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
 import { updateLoadStore } from 'flux/load/action'
 import {
     updateSessionStore,
@@ -19,7 +18,6 @@ class SongListener extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedSongIndex: PropTypes.number.isRequired,
-        updateAccessStore: PropTypes.func.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
         resetActivated: PropTypes.func.isRequired,
@@ -60,7 +58,6 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        updateAccessStore,
         updateLoadStore,
         updateSessionStore,
         resetActivated,

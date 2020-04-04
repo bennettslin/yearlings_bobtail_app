@@ -45,6 +45,7 @@ class TextLyricAnchor extends PureComponent {
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
 
         updateAnnotationStore: PropTypes.func.isRequired,
+        dispatch: PropTypes.func.isRequired,
 
         // From parent.
         wikiIndex: PropTypes.number,
@@ -69,7 +70,8 @@ class TextLyricAnchor extends PureComponent {
         endsVerse: PropTypes.bool,
 
         dotKeys: PropTypes.object,
-        setLyricAnnotationElement: PropTypes.func
+        setLyricAnnotationElement: PropTypes.func,
+        handleAnchorClick: PropTypes.func.isRequired
     }
 
     _handleAnchorClick = () => {

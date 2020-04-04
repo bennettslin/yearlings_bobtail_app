@@ -17,20 +17,23 @@ const mapStateToProps = ({
     },
     optionStore: {
         selectedTipsOption
-    }
+    },
+    viewportStore: { isPhoneWidth }
 }) => ({
     didLyricUpdate,
     lyricSongIndex,
-    selectedTipsOption
+    selectedTipsOption,
+    isPhoneWidth
 })
 
 const TipsHand = ({
+    isPhoneWidth,
     didLyricUpdate,
     lyricSongIndex,
     selectedTipsOption,
     tipType
 
-}) => (
+}) => !isPhoneWidth && (
     <CSSTransition
         appear
         mountOnEnter
@@ -67,6 +70,7 @@ const TipsHand = ({
 
 TipsHand.propTypes = {
     // Through Redux.
+    isPhoneWidth: PropTypes.bool.isRequired,
     didLyricUpdate: PropTypes.bool.isRequired,
     lyricSongIndex: PropTypes.number.isRequired,
     selectedTipsOption: PropTypes.string.isRequired,

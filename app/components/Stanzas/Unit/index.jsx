@@ -32,6 +32,7 @@ class Unit extends PureComponent {
     static propTypes = {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
+        dispatch: PropTypes.func.isRequired,
 
         // From parent.
         unitIndex: PropTypes.number.isRequired

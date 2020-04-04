@@ -11,11 +11,11 @@ import TextSpan from './Span'
 const propTypes = {
     // From parent.
         inVerseBar: PropTypes.bool,
-
         text: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.object
-        ])
+        ]),
+        wormholeAnnotationIndex: PropTypes.number
     },
 
     Text = ({
