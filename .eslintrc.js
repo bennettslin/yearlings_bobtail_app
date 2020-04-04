@@ -197,7 +197,7 @@ module.exports = {
         "no-magic-numbers": 'off',
         "no-mixed-operators": 'off',
         "no-mixed-requires": 'off',
-        "no-multi-spaces": 'off',
+        "no-multi-spaces": 'error',
         "no-multi-str": 'error',
         "no-multiple-empty-lines": [
             'error',

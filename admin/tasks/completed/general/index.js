@@ -3842,7 +3842,8 @@ export default [
         taskName: `Furniture transition, just opacity.`,
         workedHours: 1,
         neededHours: 1
-    },    {
+    },
+    {
         taskName: `Main task to add thing components.`,
         workedHours: 30,
         neededHours: 30
@@ -4326,7 +4327,8 @@ export default [
         taskName: `Dots slide refactor in preparation for activated text fix.`,
         workedHours: 2,
         neededHours: 2
-    },    {
+    },
+    {
         taskName: `Activated dot text in dots slide doesn't work. Fixed by just passing a class name. Not ideal, but it's too much work, at least right now, to have each dot and description hooked into Redux.`,
         workedHours: 1,
         neededHours: 1
@@ -5507,5 +5509,10 @@ export default [
         taskName: `Place tips hand for each song.`,
         workedHours: 6,
         neededHours: 6
+    },
+    {
+        taskName: `Place tip hand on dot if dot category not selected for it.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -3,13 +3,18 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import { getSongTipType } from '../../album/api/tips'
 import { SHOWN } from '../../constants/options'
+import { WIKI, WORMHOLES } from '../../constants/tips'
 
 class ShownWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        wormhole: PropTypes.bool.isRequired,
+        reference: PropTypes.bool.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
@@ -26,7 +31,10 @@ class ShownWrapper extends PureComponent {
 
     render() {
         const {
+                wormhole,
+                reference,
                 isLyricLogue,
+                lyricSongIndex,
                 lyricAnnotationIndex,
                 isLogueOverviewShown,
                 selectedOverviewOption,
@@ -43,7 +51,9 @@ class ShownWrapper extends PureComponent {
                 isLyricLogue ?
                     isLogueOverviewShown :
                     selectedOverviewOption === SHOWN,
-            tipsShown = selectedTipsOption === SHOWN
+            tipsShown = selectedTipsOption === SHOWN,
+
+            tipType = getSongTipType(lyricSongIndex)
 
         return (
             <div
@@ -59,9 +69,18 @@ class ShownWrapper extends PureComponent {
                         overviewShown ?
                             'ShW__overviewShown' :
                             'ShW__overviewHidden',
-                        tipsShown &&
+                        tipsShown && [
                             'ShW__tipsShown',
-
+                            `ShW__tipsShown__${tipType}`,
+                            (
+                                /**
+                                 * If dot is not selected, render the tips hand
+                                 * that is pointed at dots toggle.
+                                 */
+                                (tipType === WIKI && !reference) ||
+                                (tipType === WORMHOLES && !wormhole)
+                            ) && 'ShW__tipsShown__isPointedAtDots'
+                        ],
                         isCarouselShown &&
                             'ShW__carouselExpanded',
                         isNavShown &&
@@ -87,8 +106,13 @@ class ShownWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
+    dotsStore: {
+        wormhole,
+        reference
+    },
     lyricStore: {
         isLyricLogue,
+        lyricSongIndex,
         lyricAnnotationIndex
     },
     optionStore: {
@@ -104,7 +128,10 @@ const mapStateToProps = ({
     },
     transientStore: { isOverlayShown }
 }) => ({
+    wormhole,
+    reference,
     isLyricLogue,
+    lyricSongIndex,
     lyricAnnotationIndex,
     isLogueOverviewShown,
     selectedOverviewOption,

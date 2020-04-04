@@ -12,7 +12,11 @@ import { populateRefs } from '../../../helpers/ref'
 
 import { DOTS_SLIDE_TOGGLE_KEY } from '../../../constants/access'
 import { DOTS_SLIDE_BUTTON_KEY } from '../../../constants/buttons'
-import { DOTS } from '../../../constants/tips'
+import {
+    DOTS,
+    WORMHOLES,
+    WIKI
+} from '../../../constants/tips'
 
 class DotsSlideToggle extends PureComponent {
 
@@ -51,6 +55,8 @@ class DotsSlideToggle extends PureComponent {
                     }}
                 />
                 <TipsHand {...{ tipType: DOTS }} />
+                <TipsHand isPointedAtDots {...{ tipType: WORMHOLES }} />
+                <TipsHand isPointedAtDots {...{ tipType: WIKI }} />
                 <DotsSlideDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

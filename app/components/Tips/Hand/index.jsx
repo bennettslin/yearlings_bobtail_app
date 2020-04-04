@@ -9,8 +9,16 @@ import tipsHand from '../../../../assets/svgs/app/tips/tipsHand'
 
 import { getSongTipType } from '../../../album/api/tips'
 import { SHOWN } from '../../../constants/options'
+import {
+    WORMHOLES,
+    WIKI
+} from '../../../constants/tips'
 
 const mapStateToProps = ({
+    dotsStore: {
+        reference,
+        wormhole
+    },
     lyricStore: {
         didLyricUpdate,
         lyricSongIndex
@@ -20,6 +28,8 @@ const mapStateToProps = ({
     },
     viewportStore: { isPhoneWidth }
 }) => ({
+    reference,
+    wormhole,
     didLyricUpdate,
     lyricSongIndex,
     selectedTipsOption,
@@ -27,56 +37,82 @@ const mapStateToProps = ({
 })
 
 const TipsHand = ({
-    isPhoneWidth,
+    reference,
+    wormhole,
     didLyricUpdate,
     lyricSongIndex,
     selectedTipsOption,
-    tipType
+    isPhoneWidth,
+    tipType,
+    isPointedAtDots
 
-}) => !isPhoneWidth && (
-    <CSSTransition
-        appear
-        mountOnEnter
-        unmountOnExit
-        {...{
-            in: (
-                didLyricUpdate &&
-                selectedTipsOption === SHOWN &&
-                getSongTipType(lyricSongIndex) === tipType
-            ),
-            timeout: 200,
-            classNames: {
-                enterActive: 'TipsHand__shown',
-                enterDone: 'TipsHand__shown'
-            }
-        }}
-    >
-        <InlineSvg
+}) => {
+    let canRender = true
+
+    // Don't render in phone, as it takes up too much space.
+    if (isPhoneWidth) {
+        canRender = false
+
+    // If dot is selected, render the one that is not pointed at dots toggle.
+    } else if (tipType === WORMHOLES) {
+        canRender = wormhole !== isPointedAtDots
+    } else if (tipType === WIKI) {
+        canRender = reference !== isPointedAtDots
+    }
+
+    return canRender && (
+        <CSSTransition
+            appear
+            mountOnEnter
+            unmountOnExit
             {...{
-                className: cx(
-                    'TipsHand',
-                    `TipsHand__${tipType}`,
-                    'abF'
+                in: (
+                    didLyricUpdate &&
+                    selectedTipsOption === SHOWN &&
+                    getSongTipType(lyricSongIndex) === tipType
                 ),
-                svgClassName: cx(
-                    'tipsHand'
-                )
+                timeout: 200,
+                classNames: {
+                    enterActive: 'TipsHand__shown',
+                    enterDone: 'TipsHand__shown'
+                }
             }}
         >
-            {tipsHand}
-        </InlineSvg>
-    </CSSTransition>
-)
+            <InlineSvg
+                {...{
+                    className: cx(
+                        'TipsHand',
+                        `TipsHand__${tipType}`,
+                        isPointedAtDots && 'TipsHand__pointedAtDots',
+                        'abF'
+                    ),
+                    svgClassName: cx(
+                        'tipsHand'
+                    )
+                }}
+            >
+                {tipsHand}
+            </InlineSvg>
+        </CSSTransition>
+    )
+}
+
+TipsHand.defaultProps = {
+    isPointedAtDots: false
+}
 
 TipsHand.propTypes = {
     // Through Redux.
+    reference: PropTypes.bool.isRequired,
+    wormhole: PropTypes.bool.isRequired,
     isPhoneWidth: PropTypes.bool.isRequired,
     didLyricUpdate: PropTypes.bool.isRequired,
     lyricSongIndex: PropTypes.number.isRequired,
     selectedTipsOption: PropTypes.string.isRequired,
 
     // From parent.
-    tipType: PropTypes.string.isRequired
+    tipType: PropTypes.string.isRequired,
+    isPointedAtDots: PropTypes.bool.isRequired
 }
 
 export default connect(mapStateToProps)(TipsHand)

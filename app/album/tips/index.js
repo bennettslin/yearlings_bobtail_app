@@ -73,15 +73,13 @@ export default [
         // Grasshoppers Lie Heavy
         type: WORMHOLES,
         tempPosition: 'TODO: Dot or annotation',
-        // TODO:
-        description: `A wormhole is a thematic connection between two songs. Click a wormhole button to jump to the corresponding line in the other song.`
+        description: `A wormhole is a thematic connection between two songs. First turn on the "wormhole" category. Then click the wormhole button in any annotation that has one. The audio player will jump to the corresponding line in the other song.`
     },
     {
         // Constellations!
         type: WIKI,
         tempPosition: 'TODO: Dot or annotation',
-        // TODO:
-        description: `Click a linked reference within an annotation to read the Wikipedia entry.`
+        description: `Some annotations link to a Wikipedia page. Turn on the "reference" category to show all linked references.`
     },
     {
         // Look Back in Anger

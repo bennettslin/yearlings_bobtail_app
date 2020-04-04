@@ -40,7 +40,7 @@ const AnchorDot = ({
                         'AnchorDot',
 
                         isAccessed && !isSelected && 'DotAnchor__accessed',
-                        !isSelected  && 'DotAnchor__selectable',
+                        !isSelected && 'DotAnchor__selectable',
 
                         // "Child dot anchor letter."
                         `CdA${dotKey[0]}`

@@ -96,11 +96,11 @@ const propTypes = {
         versesArray: PropTypes.array.isRequired,
         stanzaType: PropTypes.string.isRequired,
 
-        showAnnotationTip: PropTypes.bool.isRequired,
-        showActivatedTip: PropTypes.bool.isRequired,
-        showStanzaTabTip: PropTypes.bool.isRequired,
-        showWormholesTip: PropTypes.bool.isRequired,
-        showWikiTip: PropTypes.bool.isRequired,
+        showAnnotationTip: PropTypes.bool,
+        showActivatedTip: PropTypes.bool,
+        showStanzaTabTip: PropTypes.bool,
+        showWormholesTip: PropTypes.bool,
+        showWikiTip: PropTypes.bool,
 
         handleStanzaTabClick: PropTypes.func.isRequired
     },

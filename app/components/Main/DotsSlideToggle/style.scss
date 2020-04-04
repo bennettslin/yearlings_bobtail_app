@@ -1,3 +1,11 @@
 .DotsSlideToggle {
     position: relative;
+
+    .ShW__tipsShown__dots
+    &,
+    .ShW__tipsShown__isPointedAtDots
+    & {
+        opacity: 1;
+        margin-left: 0;
+    }
 }
