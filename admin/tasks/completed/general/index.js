@@ -5502,5 +5502,10 @@ export default [
         taskName: `Don't show tips hands in phone width.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Place tips hand for each song.`,
+        workedHours: 6,
+        neededHours: 6
     }
 ]

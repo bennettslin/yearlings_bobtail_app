@@ -17,6 +17,14 @@ import { getIndexedVersesForUnit } from 'album/api/verses'
 import { getUnit } from 'album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
+import {
+    getShowAnnotationTip,
+    getShowActivatedTip,
+    getShowStanzaTabTip,
+    getShowWormholesTip,
+    getShowWikiTip
+} from '../../../album/api/tips'
+
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
 }) => ({
@@ -111,11 +119,26 @@ class Unit extends PureComponent {
                                     stanzaType,
                                     isTruncatable: hasSide,
 
-                                    // Not ideal to hard-code like this...
-                                    doRenderTipsHand: (
-                                        lyricSongIndex === 1 &&
-                                        unitIndex === 3
-                                    )
+                                    showAnnotationTip: getShowAnnotationTip({
+                                        songIndex: lyricSongIndex,
+                                        unitIndex
+                                    }),
+                                    showStanzaTabTip: getShowStanzaTabTip({
+                                        songIndex: lyricSongIndex,
+                                        unitIndex
+                                    }),
+                                    showActivatedTip: getShowActivatedTip({
+                                        songIndex: lyricSongIndex,
+                                        unitIndex
+                                    }),
+                                    showWormholesTip: getShowWormholesTip({
+                                        songIndex: lyricSongIndex,
+                                        unitIndex
+                                    }),
+                                    showWikiTip: getShowWikiTip({
+                                        songIndex: lyricSongIndex,
+                                        unitIndex
+                                    })
                                 }}
                                 {...!subsequent && {
                                     stanzaTypeIndex

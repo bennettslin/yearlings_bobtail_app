@@ -14,7 +14,13 @@ import {
     RESPONSE,
     RHYME
 } from '../../../../constants/lyrics'
-import { ANNOTATION } from '../../../../constants/tips'
+import {
+    ANNOTATION,
+    ACTIVATED_VERSE,
+    STANZA_TAB,
+    WORMHOLES,
+    WIKI
+} from '../../../../constants/tips'
 
 /*************
  * CONTAINER *
@@ -90,7 +96,11 @@ const propTypes = {
         versesArray: PropTypes.array.isRequired,
         stanzaType: PropTypes.string.isRequired,
 
-        doRenderTipsHand: PropTypes.bool,
+        showAnnotationTip: PropTypes.bool.isRequired,
+        showActivatedTip: PropTypes.bool.isRequired,
+        showStanzaTabTip: PropTypes.bool.isRequired,
+        showWormholesTip: PropTypes.bool.isRequired,
+        showWikiTip: PropTypes.bool.isRequired,
 
         handleStanzaTabClick: PropTypes.func.isRequired
     },
@@ -99,7 +109,11 @@ const propTypes = {
         versesArray,
         stanzaTypeIndex,
         stanzaType,
-        doRenderTipsHand,
+        showAnnotationTip,
+        showActivatedTip,
+        showStanzaTabTip,
+        showWormholesTip,
+        showWikiTip,
         handleStanzaTabClick,
 
         ...other
@@ -177,8 +191,20 @@ const propTypes = {
                         </div>
                     </div>
                 )}
-                {Boolean(doRenderTipsHand) && (
+                {showAnnotationTip && (
                     <TipsHand {...{ tipType: ANNOTATION }} />
+                )}
+                {showActivatedTip && (
+                    <TipsHand {...{ tipType: ACTIVATED_VERSE }} />
+                )}
+                {showStanzaTabTip && (
+                    <TipsHand {...{ tipType: STANZA_TAB }} />
+                )}
+                {showWormholesTip && (
+                    <TipsHand {...{ tipType: WORMHOLES }} />
+                )}
+                {showWikiTip && (
+                    <TipsHand {...{ tipType: WIKI }} />
                 )}
             </div>
         )
