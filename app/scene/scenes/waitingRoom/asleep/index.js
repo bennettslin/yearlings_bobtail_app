@@ -4,8 +4,10 @@ import { WAITING_ROOM_ASLEEP } from '../../../../constants/scene/actors/bennett'
 export default {
     [BENNETT]: {
         [WAITING_ROOM_ASLEEP]: {
-            yIndex: 5,
-            xPosition: 2.5
+            yIndex: 3,
+            xPosition: 2,
+            zOffset: -1.3,
+            layerYIndex: 5
         }
     }
 }

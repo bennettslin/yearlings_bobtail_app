@@ -48,7 +48,7 @@ export default {
     },
     [CUTOUT]: {
         [WAITING_ROOM_PLANT]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 7.5,
             scaleFactor: 0.45
         }
@@ -65,36 +65,37 @@ export default {
     },
     [PANEL]: {
         [WAITING_ARMCHAIR__BENNETT]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 2.5,
             scaleFactor: 0.3
         },
-        [WAITING_ARMREST__BENNETT_LEFT]: {
-            yIndex: 5,
-            xPosition: 1.3,
-            scaleFactor: 0.22
-        },
-        [WAITING_ARMREST__BENNETT_RIGHT]: {
-            yIndex: 5,
-            xPosition: 3.7,
-            scaleFactor: 0.22,
-            flipHorizontal: true
-        },
         [WAITING_ARMCHAIR__LIZ]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 5.5,
             scaleFactor: 0.3,
             flipHorizontal: true
         },
+        [WAITING_ARMREST__BENNETT_LEFT]: {
+            yIndex: 4,
+            xPosition: 1.3,
+            scaleFactor: 0.23
+        },
+        [WAITING_ARMREST__BENNETT_RIGHT]: {
+            yIndex: 4,
+            xPosition: 3.7,
+            scaleFactor: 0.23,
+            flipHorizontal: true,
+            layerYIndex: 5
+        },
         [WAITING_ARMREST__LIZ_LEFT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 4.3,
-            scaleFactor: 0.22
+            scaleFactor: 0.23
         },
         [WAITING_ARMREST__LIZ_RIGHT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 6.7,
-            scaleFactor: 0.22,
+            scaleFactor: 0.23,
             flipHorizontal: true
         }
     }

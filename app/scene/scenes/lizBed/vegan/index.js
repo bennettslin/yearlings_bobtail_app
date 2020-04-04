@@ -13,7 +13,9 @@ export default {
     [BENNETT]: {
         [BROKEN_HEARTED]: {
             yIndex: 4,
-            xPosition: 9
+            xPosition: 9,
+            zOffset: -0.09,
+            layerYIndex: 5
         }
     },
     [KHARI_LIZ]: {

@@ -7,16 +7,9 @@ Make audio rewind and fast forward have past and future colours.
 
 # Seated audit
 
-## Grasshoppers
-waiting room thoughts
-waiting room surprised
-
 ## Constellations
 station wagon
 attic
-
-## Garryowen
-drinking couch scene
 
 ## Golden Cord
 awkward consolation scene
@@ -31,9 +24,6 @@ couch scenes
 ## Cremated
 all scenes
 (will need to incorporate seat)
-
-## Vegan
-bed scene
 
 ## Dream
 deathbed alignment
