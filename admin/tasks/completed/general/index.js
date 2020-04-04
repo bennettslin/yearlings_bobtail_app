@@ -5487,5 +5487,10 @@ export default [
         taskName: `Make presence arrangement easier by allowing cubes and presences to not render.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Make Liz gate outside open.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Make Liz gate outside open.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Give couch panels seat cushions.`,
         workedHours: 0,
         neededHours: 1

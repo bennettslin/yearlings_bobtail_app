@@ -15,7 +15,7 @@ import basementDoorSide from 'assets/svgs/doors/basementDoorSide'
 import cinemaDoors from 'assets/svgs/doors/cinemaDoors'
 import lizBlindsOutside from 'assets/svgs/doors/lizBlindsOutside'
 import lizGateOutside from 'assets/svgs/doors/lizGateOutside'
-// import lizGateOutsideOpen from 'assets/svgs/doors/lizGateOutsideOpen'
+import lizGateOutsideOpen from 'assets/svgs/doors/lizGateOutsideOpen'
 import dishroomDoor from 'assets/svgs/doors/dishroomDoor'
 import bennettGateFront from 'assets/svgs/doors/bennettGateFront'
 import neighbourDoor from 'assets/svgs/doors/neighbourDoor'
@@ -93,7 +93,7 @@ export default {
     [LIZ_BLINDS_OUTSIDE__ENDING]: lizBlindsOutside,
     [LIZ_BLINDS_OUTSIDE__ENDED]: lizBlindsOutside,
     [LIZ_GATE_OUTSIDE]: lizGateOutside,
-    [LIZ_GATE_OUTSIDE_OPEN]: lizGateOutside,
+    [LIZ_GATE_OUTSIDE_OPEN]: lizGateOutsideOpen,
     [DISHROOM_DOOR]: dishroomDoor,
     [BENNETT_GATE_FRONT]: bennettGateFront,
     [BLINDS_OUTSIDE__NEIGHBOUR]: blindsOutside,

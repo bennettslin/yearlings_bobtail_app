@@ -13,8 +13,9 @@ export default {
     },
     [LIZ]: {
         [DATE_ENDED]: {
-            yIndex: 3,
-            xPosition: 3
+            yIndex: 5,
+            xPosition: 3.3,
+            layerYIndex: 3
         }
     }
 }
