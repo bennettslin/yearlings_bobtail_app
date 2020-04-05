@@ -1,21 +1,46 @@
 .TipsHand {
     width: $LENGTH_ICON_LARGE;
     height: $LENGTH_ICON_LARGE;
-
-    animation: pulse $animationDuration__pulse infinite;
-    animation-timing-function: ease-in-out;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    left: 100%;
+    margin-left: $MARGIN_THIN;
 
     z-index: $zIndex__tipsHand;
 
     opacity: 0;
 
-    // TODO: Improve styling.
-    filter: drop-shadow(0 0 5px hsla(200, 50%, 50%, 0.5));
-
     .DW__userAgentDesktop
     & {
         transition: opacity $animationDuration__default;
     }
+
+    .DW__tabletWidth
+    & {
+        width: $LENGTH_ICON_LARGE_TABLET;
+        height: $LENGTH_ICON_LARGE_TABLET;
+    }
+
+    .DW__miniWidth
+    & {
+        width: $LENGTH_ICON_LARGE_MINI;
+        height: $LENGTH_ICON_LARGE_MINI;
+    }
+}
+
+.TipsHand__reverse {
+    left: -100%;
+    margin-left: auto;
+    margin-right: $MARGIN_THIN;
+}
+
+.TipsHand__animatable {
+    animation: pulse $animationDuration__pulse infinite;
+    animation-timing-function: ease-in-out;
+
+    // TODO: Improve styling.
+    filter: drop-shadow(0 0 5px hsla(200, 50%, 50%, 0.5));
 }
 
 .TipsHand__shown {
@@ -29,25 +54,7 @@
     .hand { fill: hsl(199, 38%, 82%); }
     .handInner { fill: hsl(201, 10%, 55%); }
 
-    .DW__desktopWidth
-    .ShW__tips__doublespeaker
-    &,
-    .ShW__tips__activatedVerse
-    &,
-    .ShW__tips__stanzaTab
-    &,
-    .ShW__tips__wiki
-    &,
-    .ShW__tips__slider
-    &,
-    .DW__mobileWidth
-    .ShW__tips__score
-    &,
-    .ShW__tips__filmstrip
-    &,
-    .ShW__tips__tips
-    &,
-    .ShW__tips__autoscroll
+    .TipsHand__reverse
     & {
         transform: scaleX(-1);
     }

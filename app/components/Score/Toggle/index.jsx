@@ -17,10 +17,12 @@ import { SCORE } from '../../../constants/tips'
 
 const mapStateToProps = ({
     loadStore: { isScoreLoaded },
-    mountStore: { canScoreMount }
+    mountStore: { canScoreMount },
+    viewportStore: { isDesktopWidth }
 }) => ({
     isScoreLoaded,
-    canScoreMount
+    canScoreMount,
+    isDesktopWidth
 })
 
 class ScoreToggle extends PureComponent {
@@ -29,6 +31,7 @@ class ScoreToggle extends PureComponent {
         // Through Redux.
         canScoreMount: PropTypes.bool.isRequired,
         isScoreLoaded: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string
@@ -45,6 +48,7 @@ class ScoreToggle extends PureComponent {
     render() {
         const {
             isScoreLoaded,
+            isDesktopWidth,
             canScoreMount,
             className
         } = this.props
@@ -70,7 +74,12 @@ class ScoreToggle extends PureComponent {
                         handleButtonClick: this._handleScoreButtonClick
                     }}
                 />
-                <TipsHand {...{ tipType: SCORE }} />
+                <TipsHand
+                    {...{
+                        tipType: SCORE,
+                        reverse: !isDesktopWidth
+                    }}
+                />
                 <ScoreDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

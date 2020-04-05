@@ -62,7 +62,7 @@ class TipsToggle extends PureComponent {
                     }}
                 />
                 {inPopup && (
-                    <TipsHand {...{ tipType: TIPS }} />
+                    <TipsHand reverse {...{ tipType: TIPS }} />
                 )}
                 <TipsDispatcher {...{ getRefs: this._getRefs }} />
             </div>

@@ -66,7 +66,7 @@ class LyricToggleScroll extends PureComponent {
                             handleButtonClick: this._handleScrollClick
                         }}
                     />
-                    <TipsHand {...{ tipType: AUTOSCROLL }} />
+                    <TipsHand reverse {...{ tipType: AUTOSCROLL }} />
                     <ScrollVerseDispatcher {...{ getRefs: this._getRefs }} />
                 </div>
             </CSSTransition>

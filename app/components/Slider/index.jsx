@@ -73,7 +73,7 @@ class Slider extends PureComponent {
                     isNext
                     {...{ accessKey: NEXT_VERSE_KEY }}
                 />
-                <TipsHand {...{ tipType: SLIDER }} />
+                <TipsHand reverse {...{ tipType: SLIDER }} />
                 <SliderTouchDispatcher {...{ getRefs: this._getRefs }} />
             </div>
         )

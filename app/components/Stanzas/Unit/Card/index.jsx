@@ -198,13 +198,13 @@ const propTypes = {
                     <TipsHand {...{ tipType: ACTIVATED_VERSE }} />
                 )}
                 {showStanzaTabTip && (
-                    <TipsHand {...{ tipType: STANZA_TAB }} />
+                    <TipsHand reverse {...{ tipType: STANZA_TAB }} />
                 )}
                 {showWormholesTip && (
                     <TipsHand {...{ tipType: WORMHOLES }} />
                 )}
                 {showWikiTip && (
-                    <TipsHand {...{ tipType: WIKI }} />
+                    <TipsHand reverse {...{ tipType: WIKI }} />
                 )}
             </div>
         )

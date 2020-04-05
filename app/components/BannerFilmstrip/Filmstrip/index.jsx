@@ -112,7 +112,7 @@ class Filmstrip extends PureComponent {
                     isNext
                     {...{ accessKey: NEXT_SCENE_KEY }}
                 />
-                <TipsHand {...{ tipType: FILMSTRIP }} />
+                <TipsHand reverse {...{ tipType: FILMSTRIP }} />
                 <SceneDispatcher {...{ getRefs: this._getRefs }} />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </div>

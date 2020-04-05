@@ -19,10 +19,12 @@ import { DOUBLESPEAKER } from '../../../../constants/tips'
 
 const mapStateToProps = ({
     transientStore: { isEarShown },
-    selectedStore: { earColumnIndex }
+    selectedStore: { earColumnIndex },
+    viewportStore: { isDesktopWidth }
 }) => ({
     isEarShown,
-    earColumnIndex
+    earColumnIndex,
+    isDesktopWidth
 })
 
 class LyricToggleEar extends PureComponent {
@@ -30,7 +32,8 @@ class LyricToggleEar extends PureComponent {
     static propTypes = {
     // Through Redux.
         isEarShown: PropTypes.bool.isRequired,
-        earColumnIndex: PropTypes.number.isRequired
+        earColumnIndex: PropTypes.number.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired
     }
 
     handleDoublespeakerClick = () => {
@@ -44,7 +47,8 @@ class LyricToggleEar extends PureComponent {
     render() {
         const {
                 isEarShown,
-                earColumnIndex
+                earColumnIndex,
+                isDesktopWidth
             } = this.props,
 
             buttonIdentifier = EAR_COLUMN_KEYS[earColumnIndex]
@@ -77,7 +81,12 @@ class LyricToggleEar extends PureComponent {
                             handleButtonClick: this.handleDoublespeakerClick
                         }}
                     />
-                    <TipsHand {...{ tipType: DOUBLESPEAKER }} />
+                    <TipsHand
+                        {...{
+                            tipType: DOUBLESPEAKER,
+                            reverse: isDesktopWidth
+                        }}
+                    />
                     <EarColumnDispatcher {...{ getRefs: this._getRefs }} />
                 </div>
             </CSSTransition>

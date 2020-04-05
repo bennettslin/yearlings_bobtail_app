@@ -42,7 +42,8 @@ const TipsHand = ({
     selectedTipsOption,
     isPhoneWidth,
     tipType,
-    isPointedAtDots
+    isPointedAtDots,
+    reverse
 
 }) => {
     let canRender = true
@@ -51,14 +52,14 @@ const TipsHand = ({
     if (isPhoneWidth) {
         canRender = false
 
-    // If dot is selected, render the one that is not pointed at dots toggle.
+        // If dot is selected, render the one that is not pointed at dots toggle.
     } else if (tipType === WORMHOLES) {
         canRender = wormhole !== isPointedAtDots
     } else if (tipType === WIKI) {
         canRender = reference !== isPointedAtDots
     }
 
-    return canRender && (
+    return (
         <CSSTransition
             appear
             mountOnEnter
@@ -67,7 +68,8 @@ const TipsHand = ({
                 in: (
                     didLyricUpdate &&
                     selectedTipsOption === SHOWN &&
-                    getSongTipType(lyricSongIndex) === tipType
+                    getSongTipType(lyricSongIndex) === tipType &&
+                    canRender
                 ),
                 timeout: 200,
                 classNames: {
@@ -76,21 +78,30 @@ const TipsHand = ({
                 }
             }}
         >
-            <InlineSvg
+            <div
                 {...{
                     className: cx(
                         'TipsHand',
                         `TipsHand__${tipType}`,
                         isPointedAtDots && 'TipsHand__pointedAtDots',
+                        reverse && 'TipsHand__reverse',
                         'abF'
-                    ),
-                    svgClassName: cx(
-                        'tipsHand'
                     )
                 }}
             >
-                {tipsHand}
-            </InlineSvg>
+                <InlineSvg
+                    {...{
+                        className: cx(
+                            'TipsHand__animatable'
+                        ),
+                        svgClassName: cx(
+                            'tipsHand'
+                        )
+                    }}
+                >
+                    {tipsHand}
+                </InlineSvg>
+            </div>
         </CSSTransition>
     )
 }
@@ -110,7 +121,8 @@ TipsHand.propTypes = {
 
     // From parent.
     tipType: PropTypes.string.isRequired,
-    isPointedAtDots: PropTypes.bool.isRequired
+    isPointedAtDots: PropTypes.bool.isRequired,
+    reverse: PropTypes.bool.isRequired
 }
 
 export default connect(mapStateToProps)(TipsHand)

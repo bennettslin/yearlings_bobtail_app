@@ -1,7 +1,7 @@
 export default [
     {
         taskName: `Fine position tips hand for each song.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 3
     },
     {
