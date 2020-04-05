@@ -5,11 +5,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Only show tip if relevant to mobile or desktop.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Adjust seated presences.`,
         workedHours: 6,
         neededHours: 8

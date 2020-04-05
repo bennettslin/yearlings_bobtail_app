@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 
 import { updateOptionStore } from 'flux/option/action'
 
+import { getShowTipForDevice } from '../../../album/api/tips'
+
 import {
     SHOWN,
     HIDDEN
@@ -15,10 +17,13 @@ class TipsListener extends PureComponent {
         // Through Redux.
         isRoutingComplete: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
-        selectedAnnotationIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
+        lyricAnnotationIndex: PropTypes.number.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         isForcedShownOverview: PropTypes.bool.isRequired,
+        isPhoneWidth: PropTypes.bool.isRequired,
+        isTabletWidth: PropTypes.bool.isRequired,
+        isDesktopWidth: PropTypes.bool.isRequired,
         updateOptionStore: PropTypes.func.isRequired
     }
 
@@ -40,29 +45,53 @@ class TipsListener extends PureComponent {
 
     _handleSongChange(prevProps) {
         const
-            { selectedSongIndex } = this.props,
-            { selectedSongIndex: prevSongIndex } = prevProps
+            { lyricSongIndex } = this.props,
+            { lyricSongIndex: prevSongIndex } = prevProps
 
-        if (selectedSongIndex !== prevSongIndex) {
+        /**
+         * Technically, this should also check for updates to the viewport
+         * width as well, in case the tip is not to be shown for certain
+         * widths. However, this should happen so infrequently that I won't
+         * bother for now.
+         */
+        if (lyricSongIndex !== prevSongIndex) {
             this._handleTipsUpdate()
         }
     }
 
     _handleTipsUpdate() {
-        const
-            { selectedAnnotationIndex } = this.props
+        const {
+            lyricSongIndex,
+            lyricAnnotationIndex,
+            isPhoneWidth,
+            isTabletWidth,
+            isDesktopWidth
+        } = this.props
 
         // There also cannot be a selected annotation.
-        if (!selectedAnnotationIndex) {
+        if (!lyricAnnotationIndex) {
             const {
                 isSelectedLogue,
                 selectedTipsOption
             } = this.props
 
-            // If just hidden, show tips for new song.
-            if (!isSelectedLogue && selectedTipsOption === HIDDEN) {
+            // Show tips for new song.
+            if (
+                !isSelectedLogue && (
+                    selectedTipsOption === HIDDEN ||
+                    selectedTipsOption === SHOWN
+                )
+            ) {
+                // Ensure this song's tip can be shown for this viewport width.
+                const showTipForDevice = getShowTipForDevice({
+                    songIndex: lyricSongIndex,
+                    isPhoneWidth,
+                    isTabletWidth,
+                    isDesktopWidth
+                })
+
                 this.props.updateOptionStore({
-                    selectedTipsOption: SHOWN,
+                    selectedTipsOption: showTipForDevice ? SHOWN : HIDDEN,
                     isSongShownTips: true
                 })
 
@@ -100,23 +129,33 @@ class TipsListener extends PureComponent {
 }
 
 const mapStateToProps = ({
+    lyricStore: {
+        lyricSongIndex,
+        lyricAnnotationIndex
+    },
     selectedStore: {
         isRoutingComplete,
-        isSelectedLogue,
-        selectedSongIndex,
-        selectedAnnotationIndex
+        isSelectedLogue
     },
     optionStore: {
         selectedTipsOption,
         isForcedShownOverview
+    },
+    viewportStore: {
+        isPhoneWidth,
+        isTabletWidth,
+        isDesktopWidth
     }
 }) => ({
     isRoutingComplete,
     isSelectedLogue,
     selectedTipsOption,
     isForcedShownOverview,
-    selectedSongIndex,
-    selectedAnnotationIndex
+    lyricSongIndex,
+    lyricAnnotationIndex,
+    isPhoneWidth,
+    isTabletWidth,
+    isDesktopWidth
 })
 
 export default connect(

@@ -23,5 +23,10 @@ export default [
         taskName: `Scrolling upon mount sometimes doesn't happen because svg renders late.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Tips listener should also update for changes to viewport width.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

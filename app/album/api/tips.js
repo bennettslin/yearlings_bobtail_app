@@ -1,5 +1,12 @@
 import albumTips from '../tips'
 import { getSongIsLogue } from './songs'
+import {
+    LYRIC_EXPAND,
+    CAROUSEL,
+    ACCESS,
+    SLIDER,
+    NAV
+} from '../../constants/tips'
 
 const getSongTip = songIndex => {
     const isLogue = getSongIsLogue(songIndex)
@@ -18,6 +25,35 @@ export const getSongTipText = songIndex => (
 export const getSongTipType = songIndex => (
     getSongTip(songIndex).type
 )
+
+export const getShowTipForDevice = ({
+    songIndex,
+    isPhoneWidth,
+    isTabletWidth,
+    isDesktopWidth
+
+}) => {
+    if (isPhoneWidth) {
+        return false
+    }
+
+    const tipType = getSongTipType(songIndex)
+
+    if (tipType === LYRIC_EXPAND) {
+        return !isDesktopWidth
+    }
+    if (
+        tipType === CAROUSEL ||
+        tipType === ACCESS ||
+        tipType === NAV
+    ) {
+        return isTabletWidth || isDesktopWidth
+    }
+    if (tipType === SLIDER) {
+        return isDesktopWidth
+    }
+    return true
+}
 
 // Not ideal to hard-code like this...
 export const getShowAnnotationTip = ({

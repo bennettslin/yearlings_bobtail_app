@@ -9,7 +9,7 @@ class TipsDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isSelectedLogue: PropTypes.bool.isRequired,
+        isLyricLogue: PropTypes.bool.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         toggleShowsTipsImmediately: PropTypes.bool.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
@@ -28,14 +28,13 @@ class TipsDispatcher extends PureComponent {
         isToggled,
         tipsOption
     } = {}) => {
-
         const {
-            isSelectedLogue,
+            isLyricLogue,
             toggleShowsTipsImmediately
         } = this.props
 
         // Don't allow toggling if in logue.
-        if (isSelectedLogue) {
+        if (isLyricLogue) {
             return false
         }
 
@@ -56,11 +55,11 @@ class TipsDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    selectedStore: { isSelectedLogue },
+    lyricStore: { isLyricLogue },
     optionStore: { selectedTipsOption },
     transientStore: { toggleShowsTipsImmediately }
 }) => ({
-    isSelectedLogue,
+    isLyricLogue,
     selectedTipsOption,
     toggleShowsTipsImmediately
 })

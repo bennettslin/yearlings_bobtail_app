@@ -30,24 +30,24 @@
     .handInner { fill: hsl(201, 10%, 55%); }
 
     .DW__desktopWidth
-    .ShW__tipsShown__doublespeaker
+    .ShW__tips__doublespeaker
     &,
-    .ShW__tipsShown__activatedVerse
+    .ShW__tips__activatedVerse
     &,
-    .ShW__tipsShown__stanzaTab
+    .ShW__tips__stanzaTab
     &,
-    .ShW__tipsShown__wiki
+    .ShW__tips__wiki
     &,
-    .ShW__tipsShown__slider
+    .ShW__tips__slider
     &,
     .DW__mobileWidth
-    .ShW__tipsShown__score
+    .ShW__tips__score
     &,
-    .ShW__tipsShown__filmstrip
+    .ShW__tips__filmstrip
     &,
-    .ShW__tipsShown__tips
+    .ShW__tips__tips
     &,
-    .ShW__tipsShown__autoscroll
+    .ShW__tips__autoscroll
     & {
         transform: scaleX(-1);
     }

@@ -28,7 +28,6 @@ export default [
     {
         // Willy the Cocoa
         type: LYRIC_EXPAND,
-        mobileOnly: true,
         description: `On narrow screens, click the lyric expand button to expand the lyrics. You can also flip horizontal to zoom in on the stage.`
     },
     {
@@ -44,7 +43,6 @@ export default [
     {
         // Pchelka's Starry Journey
         type: CAROUSEL,
-        desktopOnly: true,
         description: `On wide screens, click the carousel button to open the carousel and scroll through all the annotations at once.`
     },
     {
@@ -55,7 +53,6 @@ export default [
     {
         // M
         type: ACCESS,
-        desktopOnly: true,
         description: `On wide screens, use the keyboard to navigate and select features. Type any key to show character icons and have tooltips show upon hover.`
     },
     {
@@ -76,13 +73,12 @@ export default [
     {
         // Look Back in Anger
         type: SLIDER,
-        desktopOnly: true,
+        // devices: desktop
         description: `On wide screens, you can have the audio player jump to a new line by selecting it from the slider above the lyrics.`
     },
     {
         // Garryowen
         type: SCORE,
-        desktopOnly: true,
         description: `On wide screens, click the score button to see the musical score.`
     },
     {
@@ -103,7 +99,7 @@ export default [
     {
         // Cremated
         type: NAV,
-        desktopOnly: true,
+        // devices: not phone or mini
         description: `On wide screens with the carousel open, click the nav button to show the nav bar. Then click any snowglobe button to have the audio player jump to its corresponding song.`
     },
     {

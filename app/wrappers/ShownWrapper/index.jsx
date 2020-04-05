@@ -69,18 +69,18 @@ class ShownWrapper extends PureComponent {
                         overviewShown ?
                             'ShW__overviewShown' :
                             'ShW__overviewHidden',
-                        tipsShown && [
-                            'ShW__tipsShown',
-                            `ShW__tipsShown__${tipType}`,
-                            (
-                                /**
-                                 * If dot is not selected, render the tips hand
-                                 * that is pointed at dots toggle.
-                                 */
-                                (tipType === WIKI && !reference) ||
-                                (tipType === WORMHOLES && !wormhole)
-                            ) && 'ShW__tipsShown__isPointedAtDots'
-                        ],
+
+                        tipsShown && 'ShW__tipsShown',
+                        `ShW__tips__${tipType}`,
+                        (
+                            /**
+                             * If dot is not selected, render the tips hand
+                             * that is pointed at dots toggle.
+                             */
+                            (tipType === WIKI && !reference) ||
+                            (tipType === WORMHOLES && !wormhole)
+                        ) && 'ShW__tips__isPointedAtDots',
+
                         isCarouselShown &&
                             'ShW__carouselExpanded',
                         isNavShown &&

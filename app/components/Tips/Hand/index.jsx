@@ -23,9 +23,7 @@ const mapStateToProps = ({
         didLyricUpdate,
         lyricSongIndex
     },
-    optionStore: {
-        selectedTipsOption
-    },
+    optionStore: { selectedTipsOption },
     viewportStore: { isPhoneWidth }
 }) => ({
     reference,

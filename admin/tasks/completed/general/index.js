@@ -5524,5 +5524,10 @@ export default [
         taskName: `Allow hand to reverse.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Only show tip if relevant to mobile or desktop.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
