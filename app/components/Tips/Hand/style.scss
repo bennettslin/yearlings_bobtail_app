@@ -2,10 +2,8 @@
     width: $LENGTH_ICON_LARGE;
     height: $LENGTH_ICON_LARGE;
     top: 50%;
-    transform: translateY(-50%);
-    
     left: 100%;
-    margin-left: $MARGIN_THIN;
+    transform: translate(5%, -50%);
 
     z-index: $zIndex__tipsHand;
 
@@ -30,9 +28,9 @@
 }
 
 .TipsHand__reverse {
-    left: -100%;
-    margin-left: auto;
-    margin-right: $MARGIN_THIN;
+    left: auto;
+    right: 100%;
+    transform: translate(-5%, -50%);
 }
 
 .TipsHand__animatable {

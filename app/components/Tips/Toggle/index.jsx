@@ -48,7 +48,14 @@ class TipsToggle extends PureComponent {
         } = this.props
 
         return (
-            <div {...{ className }}>
+            <div
+                {...{
+                    className: cx(
+                        'TipsToggle',
+                        className
+                    )
+                }}
+            >
                 <Button
                     isLargeSize
                     {...{

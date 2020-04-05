@@ -1,7 +1,9 @@
 @import "./Hand/style";
+@import "./Toggle/style";
 
 .Tips {
     display: flex;
+    align-items: flex-start;
 }
 
 .Button__tips {
