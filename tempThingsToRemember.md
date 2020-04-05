@@ -4,6 +4,7 @@ dryingTears, bring Stephanie's right arm up.
 
 # TODO:
 Liz couch needs to be tall enough to show Opal.
+Make tips hand more like it's pointing.
 
 # Seated audit
 

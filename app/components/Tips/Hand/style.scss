@@ -48,11 +48,8 @@
 }
 
 .tipsHand {
-    stroke-width: 0.25px;
-    stroke: hsla(200, 20%, 20%, 0.6);
-
-    .hand { fill: hsl(199, 38%, 82%); }
-    .handInner { fill: hsl(201, 10%, 55%); }
+    .hand { fill: hsl(60, 38%, 92%); }
+    .handInner { fill: hsl(60, 10%, 65%); }
 
     .TipsHand__reverse
     & {
