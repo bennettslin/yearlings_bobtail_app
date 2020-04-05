@@ -2,10 +2,6 @@ smoker, make her left calf higher.
 gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
-# TODO:
-Liz couch needs to be tall enough to show Opal.
-Make tips hand more like it's pointing.
-
 # Seated audit
 
 ## Constellations

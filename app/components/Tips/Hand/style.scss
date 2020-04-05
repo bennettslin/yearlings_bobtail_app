@@ -38,7 +38,7 @@
     animation-timing-function: ease-in-out;
 
     // TODO: Improve styling.
-    filter: drop-shadow(0 0 5px hsla(200, 50%, 50%, 0.5));
+    filter: drop-shadow(0 0 5px hsla(0, 0, 0, 0.5));
 }
 
 .TipsHand__shown {
@@ -46,8 +46,8 @@
 }
 
 .tipsHand {
-    .hand { fill: hsl(60, 38%, 92%); }
-    .handInner { fill: hsl(60, 10%, 65%); }
+    .hand { fill: hsl(60, 50%, 90%); }
+    .handInner { fill: hsl(60, 10%, 50%); }
 
     .TipsHand__reverse
     & {
