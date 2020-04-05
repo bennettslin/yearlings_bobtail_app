@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Allow hand to reverse.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Fine position tips hand for each song.`,
         workedHours: 0,
         neededHours: 3

@@ -28,4 +28,27 @@
 
     .hand { fill: hsl(199, 38%, 82%); }
     .handInner { fill: hsl(201, 10%, 55%); }
+
+    .DW__desktopWidth
+    .ShW__tipsShown__doublespeaker
+    &,
+    .ShW__tipsShown__activatedVerse
+    &,
+    .ShW__tipsShown__stanzaTab
+    &,
+    .ShW__tipsShown__wiki
+    &,
+    .ShW__tipsShown__slider
+    &,
+    .DW__mobileWidth
+    .ShW__tipsShown__score
+    &,
+    .ShW__tipsShown__filmstrip
+    &,
+    .ShW__tipsShown__tips
+    &,
+    .ShW__tipsShown__autoscroll
+    & {
+        transform: scaleX(-1);
+    }
 }

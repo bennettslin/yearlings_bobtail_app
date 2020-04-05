@@ -5519,5 +5519,10 @@ export default [
         taskName: `Show toggle buttons for tips.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Allow hand to reverse.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
