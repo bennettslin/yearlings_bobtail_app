@@ -2,6 +2,24 @@
     width: $LENGTH_ICON_LARGE;
     height: $LENGTH_ICON_LARGE;
     top: 50%;
+
+    .ShW__tips__activatedVerse
+    & {
+        top: 62.5%;
+    }
+    .ShW__tips__stanzaTab
+    & {
+        top: 22.5%;
+    }
+    .ShW__tips__wormholes.ShW__tips__isPointedAtLyrics
+    & {
+        top: 72.5%;
+    }
+    .ShW__tips__wiki.ShW__tips__isPointedAtLyrics
+    & {
+        top: 40%;
+    }
+
     left: 100%;
     transform: translate(5%, -25%);
 
@@ -62,6 +80,7 @@
 }
 
 .tipsHand {
+    stroke: hsla(60, 10%, 50%, 0.5);
     .hand { fill: hsl(60, 50%, 90%); }
     .handInner { fill: hsl(60, 10%, 50%); }
 

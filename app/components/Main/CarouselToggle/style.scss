@@ -35,7 +35,7 @@
     }
 
     .DW__desktopWidth
-    .ShW__carouselExpanded
+    .ShW__carouselExpanded:not(.ShW__tipsShown)
     & {
         bottom: $margin__scrollBar;
     }

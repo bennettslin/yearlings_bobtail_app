@@ -24,7 +24,7 @@
     &,
     .ShW__overlayShown
     &,
-    .ShW__tipsShown
+    .ShW__tipsShown:not(.ShW__tips__lyricExpand)
     &,
     .ShW__annotationShown
     &,
@@ -34,4 +34,8 @@
     & {
         opacity: 0;
     }
+}
+
+.LyricToggleExpand__inLyric {
+    position: relative;
 }

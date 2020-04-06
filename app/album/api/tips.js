@@ -86,5 +86,5 @@ export const getShowWikiTip = ({
     unitIndex
 }) => (
     // TODO: Depend on dot category
-    songIndex === 10 && unitIndex === 1
+    songIndex === 10 && unitIndex === 2
 )

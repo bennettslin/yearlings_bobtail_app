@@ -80,8 +80,9 @@ class LyricToggleExpand extends PureComponent {
                 <div className={cx(
                     'LyricToggleExpand',
                     'LyricToggle',
-                    inMain &&
-                        'LyricToggleExpand__inMain',
+                    inMain ?
+                        'LyricToggleExpand__inMain' :
+                        'LyricToggleExpand__inLyric',
                     'length__buttonLarge'
                 )}>
                     <Button

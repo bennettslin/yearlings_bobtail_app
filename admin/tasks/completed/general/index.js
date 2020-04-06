@@ -5529,5 +5529,10 @@ export default [
         taskName: `Only show tip if relevant to mobile or desktop.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Fine position tips hand for each song.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

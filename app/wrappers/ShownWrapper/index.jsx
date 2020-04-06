@@ -79,7 +79,9 @@ class ShownWrapper extends PureComponent {
                              */
                             (tipType === WIKI && !reference) ||
                             (tipType === WORMHOLES && !wormhole)
-                        ) && 'ShW__tips__isPointedAtDots',
+                        ) ?
+                            'ShW__tips__isPointedAtDots' :
+                            'ShW__tips__isPointedAtLyrics',
 
                         isCarouselShown &&
                             'ShW__carouselExpanded',

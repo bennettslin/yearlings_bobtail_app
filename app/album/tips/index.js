@@ -23,13 +23,12 @@ export default [
     {
         // Didi.
         type: ANNOTATION,
-        todo: true,
-        description: `Click an annotated lyric to read the meaning behind it.`
+        description: `Some lyrics link to an annotation that explains the underlying meaning. Click the link to read it.`
     },
     {
         // Willy the Cocoa
         type: LYRIC_EXPAND,
-        description: `On narrow screens, click the lyric expand button to expand the lyrics. You can also flip horizontal to zoom in on the stage.`
+        description: `To expand the lyrics to full height on narrow screens, click the expand button. Or rotate your device to zoom in on the stage.`
     },
     {
         // Dear Saskia
@@ -44,75 +43,71 @@ export default [
     {
         // Pchelka's Starry Journey
         type: CAROUSEL,
-        description: `On wide screens, click the carousel button to open the carousel and scroll through all the annotations at once.`
+        description: `On wide screens, click the carousel button to scroll through several annotations at once.`
     },
     {
         // Ash Wednesday
         type: ACTIVATED_VERSE,
-        todo: true,
-        description: `Click any line in the lyrics, then click rewind or fast forward, to have the audio player jump to that line.`
+        description: `To have the audio jump to a line in the lyrics, click the line, then click the rewind or fast forward button that appears.`
     },
     {
         // M
         type: ACCESS,
-        description: `On wide screens, use the keyboard to navigate and select features. Type any key to show character icons and have tooltips show upon hover.`
+        description: `On wide screens, you can use the keyboard to navigate and select features. Type any key to show character icons and have tooltips show upon hover.`
     },
     {
         // Good Night, Sita
         type: STANZA_TAB,
-        todo: true,
-        description: `Click any stanza tab to have the audio player jump to that stanza.`
+        description: `To have the audio jump to a stanza, click the stanza tab.`
     },
     {
         // Grasshoppers Lie Heavy
         type: WORMHOLES,
-        todo: true,
-        description: `A wormhole is a thematic connection between two songs. First turn on the "wormhole" category. Then click the wormhole button in any annotation that has one. The audio player will jump to the corresponding line in the other song.`
+        description: `A wormhole is a thematic connection between two songs. First turn on the "wormhole" category to show all wormhole annotations. To have the audio jump through a wormhole, click the annotation, then click the wormhole button.`
     },
     {
         // Constellations!
         type: WIKI,
-        todo: true,
-        description: `Some annotations link to a Wikipedia page. Turn on the "reference" category to show all linked references.`
+        description: `Some annotations link to a Wikipedia page. First turn on the "reference" category to show all linked references.`
     },
     {
         // Look Back in Anger
         type: SLIDER,
-        description: `On wide screens, you can select a new line from the slider above the lyrics. The audio player will jump to that line.`
+        description: `On wide screens, you can have the audio jump to a new line from the slider above the lyrics.`
     },
     {
         // Garryowen
         type: SCORE,
-        description: `On wide screens, click the score button to see the musical score.`
+        description: `On wide screens, click the score button to show the musical score.`
     },
     {
         // On a Golden Cord
         type: FILMSTRIP,
-        description: `Click any frame in the filmstrip to show that scene onstage. The audio player will also jump to that scene.`
+        description: `Each frame in the filmstrip represents a different scene onstage. Clicking one will also have the audio jump to that scene.`
     },
     {
         // Kyon?
         type: TIPS,
-        description: `To prevent tips from showing at the start of each new song, click the light bulb until it is removed from its socket.`
+        description: `To prevent tips from showing at the start of each new song, click the light bulb once or twice until it is no longer in the socket.`
     },
     {
         // Uncanny Valley Boy
         type: AUTOSCROLL,
-        description: `With auto scroll, the lyrics will scroll along with the audio player. Manually scroll to turn it off. Then click the scroll button to turn it back on.`
+        description: `With auto scroll, the lyrics will scroll along with the audio. Manually scroll to turn it off, or click the scroll button to turn it on.`
     },
     {
         // Cremated
         type: NAV,
-        description: `On wide screens with the carousel open, click the nav button to show the nav bar. Then click any snowglobe button to have the audio player jump to that song.`
+        description: `On wide screens, you can show the nav menu by clicking the carousel button once or twice. Then click any snowglobe button to have the audio jump to that song.`
     },
     {
         // Vegan Proclamation
         type: ABOUT,
-        description: `Click the Bobtail Yearlings button to join our mailing list or visit our band website and social media pages.`
+        description: `To join our mailing list or visit our band website, click the Bobtail Yearlings button.`
     },
     {
         // My 100,000th Dream
         type: OVERVIEW,
-        description: `To prevent the narrative overview from showing at the start of each new song, click the Bennett button until he is wearing headphones.`
+        description: `To prevent the narrative overview from showing at the start of each new song, click the Bennett button once or twice until he is wearing headphones.`
     }
 ]
