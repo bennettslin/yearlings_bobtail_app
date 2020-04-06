@@ -25,11 +25,6 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Tips listener should also update for changes to viewport width.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
         taskName: `Annotation tip still shows hand when annotation's dot is not selected.`,
         workedHours: 0,
         neededHours: 1

@@ -21,6 +21,7 @@ class TipsListener extends PureComponent {
         lyricAnnotationIndex: PropTypes.number.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         isForcedShownOverview: PropTypes.bool.isRequired,
+        deviceWidthIndex: PropTypes.number.isRequired,
         isPhoneWidth: PropTypes.bool.isRequired,
         isTabletWidth: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
@@ -31,6 +32,7 @@ class TipsListener extends PureComponent {
         this._handleRoutingComplete(prevProps)
         this._handleSongChange(prevProps)
         this._handleForcedOverview(prevProps)
+        this._handleDeviceWidthChange(prevProps)
     }
 
     _handleRoutingComplete(prevProps) {
@@ -60,13 +62,7 @@ class TipsListener extends PureComponent {
     }
 
     _handleTipsUpdate() {
-        const {
-            lyricSongIndex,
-            lyricAnnotationIndex,
-            isPhoneWidth,
-            isTabletWidth,
-            isDesktopWidth
-        } = this.props
+        const { lyricAnnotationIndex } = this.props
 
         // There also cannot be a selected annotation.
         if (!lyricAnnotationIndex) {
@@ -83,16 +79,11 @@ class TipsListener extends PureComponent {
                 )
             ) {
                 // Ensure this song's tip can be shown for this viewport width.
-                const showTipForDevice = getShowTipForDevice({
-                    songIndex: lyricSongIndex,
-                    isPhoneWidth,
-                    isTabletWidth,
-                    isDesktopWidth
-                })
+                const showTipForDevice = this._getShowTipForDevice()
 
                 this.props.updateOptionStore({
                     selectedTipsOption: showTipForDevice ? SHOWN : HIDDEN,
-                    isSongShownTips: true
+                    ...showTipForDevice && { isSongShownTips: true }
                 })
 
             // If shown, hide when now in logue.
@@ -123,6 +114,41 @@ class TipsListener extends PureComponent {
         }
     }
 
+    _handleDeviceWidthChange(prevProps) {
+        const {
+                deviceWidthIndex,
+                selectedTipsOption
+            } = this.props,
+            { deviceWidthIndex: prevDeviceWidthIndex } = prevProps
+
+        if (
+            selectedTipsOption === SHOWN &&
+            deviceWidthIndex !== prevDeviceWidthIndex &&
+            !this._getShowTipForDevice()
+        ) {
+            this.props.updateOptionStore({
+                selectedTipsOption: HIDDEN
+            })
+        }
+    }
+
+    // TODO: This is duplicated in the dispatcher.
+    _getShowTipForDevice() {
+        const {
+            lyricSongIndex,
+            isPhoneWidth,
+            isTabletWidth,
+            isDesktopWidth
+        } = this.props
+
+        return getShowTipForDevice({
+            songIndex: lyricSongIndex,
+            isPhoneWidth,
+            isTabletWidth,
+            isDesktopWidth
+        })
+    }
+
     render() {
         return null
     }
@@ -142,6 +168,7 @@ const mapStateToProps = ({
         isForcedShownOverview
     },
     viewportStore: {
+        deviceWidthIndex,
         isPhoneWidth,
         isTabletWidth,
         isDesktopWidth
@@ -153,6 +180,7 @@ const mapStateToProps = ({
     isForcedShownOverview,
     lyricSongIndex,
     lyricAnnotationIndex,
+    deviceWidthIndex,
     isPhoneWidth,
     isTabletWidth,
     isDesktopWidth

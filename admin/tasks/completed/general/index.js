@@ -5534,5 +5534,10 @@ export default [
         taskName: `Fine position tips hand for each song.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Tips listener should also update for changes to viewport width.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
