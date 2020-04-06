@@ -3,7 +3,18 @@
     height: $LENGTH_ICON_LARGE;
     top: 50%;
     left: 100%;
-    transform: translate(5%, -50%);
+    transform: translate(5%, -25%);
+
+    .ShW__tips__lyricExpand
+    &,
+    .DW__desktopWidth
+    .ShW__tips__carousel
+    &,
+    .DW__desktopWidth
+    .ShW__tips__nav
+    & {
+        transform: translate(5%, -50%);
+    }
 
     z-index: $zIndex__tipsHand;
 
@@ -30,7 +41,12 @@
 .TipsHand__reverse {
     left: auto;
     right: 100%;
-    transform: translate(-5%, -50%);
+    transform: translate(-5%, -25%);
+
+    .ShW__tips__autoscroll
+    & {
+        transform: translate(-5%, -50%);
+    }
 }
 
 .TipsHand__animatable {

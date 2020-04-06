@@ -88,7 +88,6 @@ export default [
     {
         // On a Golden Cord
         type: FILMSTRIP,
-        todo: true,
         description: `Click any frame in the filmstrip to show that scene onstage. The audio player will also jump to that scene.`
     },
     {

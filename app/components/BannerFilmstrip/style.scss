@@ -16,6 +16,11 @@ $height__songBanner: 30px;
     height: 100%;
 
     z-index: $zIndex__menuChild;
+
+    .ShW__tips__filmstrip
+    & {
+        z-index: $zIndex__menuChild__topMost;
+    }
 }
 
 .BannerFilmstrip__child {

@@ -95,4 +95,9 @@ $padding__menuChild__desktop: $margin__thick * 2;
     // This is only ever shown in desktop, so no need for mobile padding.
     padding-left: $padding__menuChild__desktop;
     padding-right: $padding__menuChild__desktop;
+
+    .ShW__tips__slider
+    & {
+        z-index: $zIndex__menuChild__topMost;
+    }
 }
