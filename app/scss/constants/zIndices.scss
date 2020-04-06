@@ -47,7 +47,10 @@ $zIndex__popupButton: $zIndex__popupOverlayContent + 1;
 // MenuTopRow should be higher than popup overlay.
 $zIndex__menuChild: $zIndex__popupButton + 1;
 
+// If a menu child has the tips hand, it will be on top.
+$zIndex__menuChild__topMost: $zIndex__menuChild + 1;
+
 // The overlay preventing popup interaction should be the highest.
-$zIndex__touchOverlay: $zIndex__menuChild + 1;
+$zIndex__touchOverlay: $zIndex__menuChild__topMost + 1;
 
 $zIndex__tipsHand: $zIndex__touchOverlay + 1;

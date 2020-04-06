@@ -74,8 +74,10 @@ const OPAL_COUCH_CONFIG = {
 export const THINGS_LIZ_COUCH_TCHOTCHKES = {
     [FIXTURE]: {
         [TCHOTCHKES]: {
-            yIndex: 5,
-            xPosition: 6.5
+            yIndex: 4,
+            xPosition: 6.6,
+            zOffset: -0.2,
+            layerYIndex: 5
         }
     },
     [PUPPET]: {

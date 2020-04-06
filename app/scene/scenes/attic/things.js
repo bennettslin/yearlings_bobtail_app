@@ -31,7 +31,7 @@ export default {
         [HOWIE_FRIDGE]: {
             yIndex: 1,
             xPosition: 9,
-            scaleFactor: 0.35
+            scaleFactor: 0.4
         },
         [TELEVISION]: {
             yIndex: 4,

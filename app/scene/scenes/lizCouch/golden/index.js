@@ -6,7 +6,7 @@ export default {
         [AWKWARD_CONSOLATION]: {
             yIndex: 4,
             xPosition: 3.8,
-            zOffset: -0.05
+            zOffset: -0.07
         }
     }
 }

@@ -6,7 +6,8 @@ export default {
         [SIFTING_TCHOTCHKES]: {
             yIndex: 4,
             xPosition: 5,
-            zOffset: -0.25
+            zOffset: -0.2,
+            layerYIndex: 5
         }
     }
 }

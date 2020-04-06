@@ -50,6 +50,7 @@
 }
 
 .LyricToggle {
+    position: relative;
     z-index: $zIndex__lyricChild__topMost;
     opacity: 0;
 

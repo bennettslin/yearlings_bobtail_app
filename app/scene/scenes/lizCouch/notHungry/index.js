@@ -9,7 +9,7 @@ export default {
     [LIZ]: {
         [NOT_HUNGRY]: {
             yIndex: 4,
-            xPosition: 3.5
+            xPosition: 3.6
         }
     },
     [KHARI]: {

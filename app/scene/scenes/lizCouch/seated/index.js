@@ -6,8 +6,8 @@ import {
 
 const PETTING_SEATED_CONFIG = {
     yIndex: 4,
-    xPosition: 3,
-    zOffset: -1
+    xPosition: 3.4,
+    zOffset: -0.95
 }
 
 export default {

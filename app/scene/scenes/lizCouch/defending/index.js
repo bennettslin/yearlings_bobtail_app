@@ -9,13 +9,14 @@ export default {
     [LIZ]: {
         [DEFENDING]: {
             yIndex: 4,
-            xPosition: 3.5
+            xPosition: 3.6
         }
     },
     [KHARI]: {
         [JUDGMENTAL]: {
             yIndex: 4,
-            xPosition: 8
+            xPosition: 8.2,
+            zOffset: -0.06
         }
     }
 }

@@ -798,7 +798,8 @@ export default {
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 },
@@ -817,7 +818,8 @@ export default {
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }
-                            }
+                            },
+                            todo: true
                         }
                     ]
                 }

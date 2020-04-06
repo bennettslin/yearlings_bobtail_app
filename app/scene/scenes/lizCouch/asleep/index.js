@@ -5,8 +5,8 @@ export default {
     [LIZ]: {
         [ASLEEP_COUCH]: {
             yIndex: 4,
-            xPosition: 2.8,
-            zOffset: -0.5
+            xPosition: 2.65,
+            zOffset: -0.6
         }
     }
 }

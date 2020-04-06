@@ -75,19 +75,6 @@ class Menu extends PureComponent {
                     }
                 }}
             >
-                {canSliderMount && (
-                    <div
-                        className={cx(
-                            'Menu__lyricTop',
-                            'Menu__topField',
-                            'width__lyricColumn__desktop',
-                            'abF'
-                        )}
-                    >
-                        <Slider />
-                    </div>
-                )}
-
                 <div
                     {...{
                         className: cx(
@@ -130,6 +117,18 @@ class Menu extends PureComponent {
                         </div>
                     )}
                 </div>
+                {canSliderMount && (
+                    <div
+                        className={cx(
+                            'Menu__lyricTop',
+                            'Menu__topField',
+                            'width__lyricColumn__desktop',
+                            'abF'
+                        )}
+                    >
+                        <Slider />
+                    </div>
+                )}
             </div>
         )
     }
