@@ -8,7 +8,6 @@ dryingTears, bring Stephanie's right arm up.
 attic
 
 ## Uncanny
-bed scenes
 couch scenes
 
 ## Cremated

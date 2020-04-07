@@ -25,7 +25,8 @@ export default {
     [MIRIAM_BENNETT]: {
         [FENDING_OFF]: {
             yIndex: 4,
-            xPosition: 7.25
+            xPosition: 7.25,
+            zOffset: -0.03
         }
     }
 }
