@@ -168,7 +168,9 @@
     .buildingMiddleSide { fill: hsl(0, 43%, 33%); }
     .buildingRearFront { fill: hsl(0, 38%, 41%); }
     .buildingRearSide { fill: hsl(0, 43%, 33%); }
-    .shirt { fill: hsl(22, 64%, 50%); }
+    .shirt { fill: hsla(22, 64%, 50%, 0.7); }
+    .skinBlack { fill: hsla(28, 29%, 50%, 0.7); }
+    .hairBlack { fill: hsla(26, 7%, 25%, 0.7); }
 }
 
 .nirvanaPoster {

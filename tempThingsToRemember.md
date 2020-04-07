@@ -16,4 +16,3 @@ all scenes
 
 ## Dream
 deathbed alignment
-graves scene

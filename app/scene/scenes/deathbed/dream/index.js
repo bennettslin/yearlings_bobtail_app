@@ -9,7 +9,7 @@ export default {
     [BENNETT_LIZ]: {
         [FINAL_DREAM]: {
             yIndex: 4,
-            xPosition: 9,
+            xPosition: 9.2,
             zOffset: -1.5
         }
     },

@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Adjust seated presences.`,
-        workedHours: 8,
-        neededHours: 10
+        workedHours: 11,
+        neededHours: 13
     }
 ]

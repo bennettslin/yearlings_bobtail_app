@@ -159,7 +159,7 @@ export default {
         MARA
     ],
     [MARQUEE_FRAME]: null,
-    [NAS_ALBUM]: ALL_PEOPLE__SHARED,
+    [NAS_ALBUM]: null,
     [NIRVANA_POSTER]: ALL_PEOPLE__SHARED,
     [ODIN_MAT]: ODIN_PAST__SHARED,
     [ODIN_SHORE]: ODIN_PAST__SHARED,
