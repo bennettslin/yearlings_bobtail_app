@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Drawing from '../Drawing'
 import NotesSection from './notes/notes-section'
@@ -33,6 +34,10 @@ const Shared = ({
     )
 }
 
+Shared.propTypes = {
+    selectedSongIndex: PropTypes.number.isRequired
+}
+
 /****************
  * PRESENTATION *
  ****************/
@@ -64,6 +69,14 @@ const SharedView = ({
         />
     </div>
 )
+
+SharedView.propTypes = {
+    tasks: PropTypes.array.isRequired,
+    adminDotUnitsCount: PropTypes.number.isRequired,
+    lyricUnits: PropTypes.array.isRequired,
+    annotations: PropTypes.array.isRequired,
+    adminPluralCardsCount: PropTypes.number.isRequired
+}
 
 export default connect(({
     selectedStore: { selectedSongIndex }

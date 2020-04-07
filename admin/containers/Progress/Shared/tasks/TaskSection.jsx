@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import TaskBlock from './TaskBlock'
 import ProgressFooter from '../../ProgressFooter'
 import { getSumOfTasks } from '../../AdminNav/helper'
@@ -27,6 +28,10 @@ const TaskSection = (props) => {
             </div>
         </div>
     )
+}
+
+TaskSection.propTypes = {
+    tasks: PropTypes.array.isRequired
 }
 
 export default TaskSection

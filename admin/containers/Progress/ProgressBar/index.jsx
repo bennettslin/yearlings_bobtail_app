@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { getBarWidthStyle } from './helper'
 
 const ProgressBar = ({
@@ -30,6 +31,14 @@ const ProgressBar = ({
             />
         </div>
     )
+}
+
+ProgressBar.propTypes = {
+    sumTask: PropTypes.shape({
+        workedHours: PropTypes.number.isRequired,
+        neededHours: PropTypes.number.isRequired
+    }),
+    maxTotalNeededHours: PropTypes.number.isRequired
 }
 
 export default ProgressBar
