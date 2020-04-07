@@ -5,7 +5,6 @@ dryingTears, bring Stephanie's right arm up.
 # Seated audit
 
 ## Constellations
-station wagon
 attic
 
 ## Uncanny

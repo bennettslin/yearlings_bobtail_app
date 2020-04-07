@@ -48,7 +48,7 @@ export default {
     [PANEL]: {
         [SATURN_INTERIOR]: {
             yIndex: 1,
-            xPosition: 5.7,
+            xPosition: 5.3,
             scaleFactor: 0.5
         },
         [SATURN_SEAT]: {
@@ -59,13 +59,13 @@ export default {
         },
         [SATURN_SEAT_DOWN]: {
             yIndex: 4,
-            xPosition: 5.8,
+            xPosition: 5.39,
             zOffset: 0.8,
             scaleFactor: 0.4
         },
         [SATURN_EXTERIOR]: {
             yIndex: 4,
-            xPosition: 5.7,
+            xPosition: 5.3,
             scaleFactor: 0.5
         }
     }
