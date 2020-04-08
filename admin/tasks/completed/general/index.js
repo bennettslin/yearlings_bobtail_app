@@ -5539,5 +5539,10 @@ export default [
         taskName: `Tips listener should also update for changes to viewport width.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Decide on actor colours.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
