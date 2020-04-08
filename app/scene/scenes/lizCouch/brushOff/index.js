@@ -5,7 +5,7 @@ export default {
     [BENNETT_LIZ]: {
         [BRUSH_OFF]: {
             yIndex: 4,
-            xPosition: 7
+            xPosition: 6.5
         }
     }
 }

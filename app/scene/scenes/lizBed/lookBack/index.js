@@ -17,13 +17,13 @@ export default {
     [LIZ]: {
         [ASLEEP_REACHING]: {
             yIndex: 4,
-            xPosition: 4.9
+            xPosition: 5
         }
     },
     [LIZ_REFLECTION]: {
         [REACHING_REFLECTION]: {
             yIndex: 2,
-            xPosition: 4.9,
+            xPosition: 5,
             zOffset: 1
         }
     },
