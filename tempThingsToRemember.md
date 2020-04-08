@@ -46,12 +46,12 @@ kid: sasha
 guy: jacob
 woman: liz
 
-## todo next
-
 ## Blue
 kid: christopher
 guy: tristan
 woman: stephanie
+
+## todo next
 
 ## Purple
 kid: brad
