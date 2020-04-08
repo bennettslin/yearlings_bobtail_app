@@ -9,14 +9,14 @@ import { COMFORTING_HUMILIATED } from '../../../constants/scene/actors/sashaBenn
 export default {
     [BENNETT]: {
         [PAST]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 1.5,
             zOffset: 2
         }
     },
     [FATHER]: {
         [PAST]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 3,
             zOffset: 4
         }

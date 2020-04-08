@@ -6,7 +6,10 @@ import {
     SNOWGLOBE_SMALL__PAST,
     SNOWGLOBE_PAST
 } from '../../../constants/scene/things/cardboards'
-import { SNOWGLOBE__TETHERBALL } from '../../../constants/scene/things/panels'
+import {
+    SNOWGLOBE__TETHERBALL,
+    LIZ_COUCH__FUTURE
+} from '../../../constants/scene/things/panels'
 
 export default {
     [CARDBOARD]: {
@@ -27,9 +30,14 @@ export default {
     },
     [PANEL]: {
         [SNOWGLOBE__TETHERBALL]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 7,
-            scaleFactor: 0.4
+            scaleFactor: 0.42
+        },
+        [LIZ_COUCH__FUTURE]: {
+            yIndex: 5,
+            xPosition: 2.075,
+            scaleFactor: 0.23
         }
     }
 }

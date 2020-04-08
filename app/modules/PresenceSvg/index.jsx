@@ -221,6 +221,7 @@ export default class PresenceSvg extends PureComponent {
             {
                 noShadow,
                 perspective,
+                hide,
                 onlyOne
             } = this.getArrangement(),
             {
@@ -241,7 +242,7 @@ export default class PresenceSvg extends PureComponent {
                 presenceKey
             })
 
-        return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && (
+        return (Boolean(onlyOne) || !DEV_RENDER_ONLY_PRESENCES) && !hide && (
             <InlineSvg
                 {...{
                     className: cx(

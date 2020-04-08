@@ -7,9 +7,11 @@ import {
     HUE_LIZ_ROOM,
     HUE_MIRIAM_LINENS,
     HUE_WAITING,
-    HUE_ROOF,
     HUE_OCEAN,
-    HUE_SAND
+    HUE_ROOF,
+    HUE_SAND,
+    HUE_SNOW,
+    HUE_SNOWGLOBE
 } from '../../../scss/app'
 
 export const DEFAULT_CLEAR_COLOUR = 'clear'
@@ -29,6 +31,7 @@ export const DEATHBED_FLOOR_COLOUR = 'deathbedFloor'
 export const WOOD_FLOOR_COLOUR = 'woodFloor'
 export const OLD_FLOOR_COLOUR = 'oldFloor'
 export const VELVET_FLOOR_COLOUR = 'velvetFloor'
+export const SNOW_FLOOR_COLOUR = 'snowFloor'
 export const NIGHT_COLOUR = 'night'
 export const NIGHT_MAGIC_COLOUR = 'nightMagic'
 export const SPOTLIGHT_LIGHT_COLOUR = 'spotlightLight'
@@ -54,6 +57,7 @@ export const LIZ_EXTERIOR_COLOUR = 'lizExterior'
 export const BANCROFT_EXTERIOR_COLOUR = 'bancroftExterior'
 export const CINEMA_EXTERIOR_COLOUR = 'cinemaExterior'
 export const PLATFORM_COLOUR = 'platform'
+export const SNOWGLOBE_PLATFORM_COLOUR = 'snowglobePlatform'
 export const CONCRETE_PLATFORM_COLOUR = 'concrete'
 export const FURNITURE_COLOUR = 'furniture'
 export const BENNETT_COUCH_COLOUR = 'bennettCouch'
@@ -94,6 +98,7 @@ const HSLA_MAP = {
     [DEATHBED_FLOOR_COLOUR]: { h: 84, s: 14, l: 67 },
     [SCHOOL_FLOOR_COLOUR]: { h: 346, s: 13, l: 72 },
     [VELVET_FLOOR_COLOUR]: { h: 357, s: 44, l: 36 },
+    [SNOW_FLOOR_COLOUR]: { h: parseInt(HUE_SNOW), s: 30, l: 87 },
     /* Y. */
     [NIGHT_COLOUR]: { h: 221, s: 17, l: 45 },
     /* Z. */
@@ -126,6 +131,7 @@ const HSLA_MAP = {
     /* P. */
     [CONCRETE_PLATFORM_COLOUR]: { h: 0, s: 0, l: 65 },
     [PLATFORM_COLOUR]: { h: 13, s: 16, l: 33 },
+    [SNOWGLOBE_PLATFORM_COLOUR]: { h: parseInt(HUE_SNOWGLOBE), s: 42, l: 55 },
     /* R. */
     [FURNITURE_COLOUR]: { h: 25, s: 44, l: 53 },
     /* U. */

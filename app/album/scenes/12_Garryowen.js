@@ -79,7 +79,7 @@ import {
     WIDE_COUCH_BENNETT,
     WIDE_ARMREST_BENNETT__LEFT,
     WIDE_ARMREST_BENNETT__RIGHT,
-    LIZ_COUCH
+    LIZ_COUCH__ROOM
 } from '../../constants/scene/things/panels'
 
 export default [
@@ -103,7 +103,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -234,7 +234,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

@@ -1,5 +1,5 @@
 .snowglobe#{$suffix} {
-    .base { fill: hsl(33, 42%, 55%); }
+    .base { fill: hsl($HUE_SNOWGLOBE, 42%, 55%); }
     .rim { fill: hsl(33, 42%, 51%); }
     .globeOuter {fill: hsla(240, 100%, 94%, 0.7); stroke: none; }
     .globeCentre {fill: hsla(240, 100%, 94%, 0.5); stroke: none; }
@@ -7,6 +7,6 @@
     .reflectionOuter {fill: hsla(240, 100%, 94%, 0.2); stroke: none; }
     .reflectionCentre {fill: hsla(240, 100%, 94%, 0.4); stroke: none; }
     .reflectionInner {fill: hsla(240, 100%, 94%, 0.6); stroke: none; }
-    .snowSide { fill: hsl(186, 30%, 87%); }
+    .snowSide { fill: hsl($HUE_SNOW, 30%, 87%); }
     .snowTop { fill: hsl(0, 0%, 100%); }
 }

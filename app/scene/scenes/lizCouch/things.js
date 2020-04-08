@@ -21,7 +21,7 @@ import {
     LIZ_GATE_INSIDE
 } from '../../../constants/scene/things/doors'
 import { TCHOTCHKES } from '../../../constants/scene/things/fixtures'
-import { LIZ_COUCH } from '../../../constants/scene/things/panels'
+import { LIZ_COUCH__ROOM } from '../../../constants/scene/things/panels'
 import {
     OPAL_COUCH,
     OPAL_COUCH_FUTURE,
@@ -57,7 +57,7 @@ export default {
         }
     },
     [PANEL]: {
-        [LIZ_COUCH]: {
+        [LIZ_COUCH__ROOM]: {
             yIndex: 5,
             xPosition: 2.075,
             scaleFactor: 0.23

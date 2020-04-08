@@ -84,7 +84,7 @@ import {
     OAKLAND_SCHOOL,
     OAKLAND_FLAG
 } from '../../constants/scene/things/flats'
-import { LIZ_COUCH } from '../../constants/scene/things/panels'
+import { LIZ_COUCH__ROOM } from '../../constants/scene/things/panels'
 
 export default [
     {
@@ -126,7 +126,7 @@ export default [
                 [THOUGHT_LARGE__LEFT]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,

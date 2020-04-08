@@ -60,7 +60,7 @@ import {
     LIZ_GATE_INSIDE
 } from '../../constants/scene/things/doors'
 import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
-import { LIZ_COUCH } from '../../constants/scene/things/panels'
+import { LIZ_COUCH__ROOM } from '../../constants/scene/things/panels'
 import {
     OPAL_COUCH,
     OPAL_GAZING,
@@ -91,7 +91,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -119,7 +119,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -150,7 +150,7 @@ export default [
                 [TCHOTCHKES]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             },
             [PUPPET]: {
                 [OPAL_COUCH]: true
@@ -185,7 +185,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -220,7 +220,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
@@ -255,7 +255,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_SEAT_KEY,
@@ -293,7 +293,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_KEY,
@@ -321,7 +321,7 @@ export default [
                 [LIZ_GATE_INSIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             },
             [PUPPET]: {
                 [OPAL_GAZING]: true
@@ -347,7 +347,7 @@ export default [
                 [OAKLAND_SIDE]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__ROOM]: true
             },
             [PUPPET]: {
                 [PEACOCK]: true,

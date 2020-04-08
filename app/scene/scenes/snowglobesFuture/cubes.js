@@ -2,7 +2,7 @@ import { SNOWGLOBES_FUTURE_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
-    PLATFORM_COLOUR as P,
+    SNOWGLOBE_PLATFORM_COLOUR as P,
     BENNETT_FLOOR_COLOUR as F,
     LIZ_COUCH_COLOUR as U
 } from '../../cubes/colours'

@@ -90,7 +90,8 @@ import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE,
     BENNETT_BED,
-    LIZ_COUCH,
+    LIZ_COUCH__PRESENT,
+    LIZ_COUCH__FUTURE,
     WIDE_COUCH_MIRIAM,
     WIDE_ARMREST_MIRIAM__LEFT,
     WIDE_ARMREST_MIRIAM__RIGHT
@@ -228,6 +229,7 @@ export default [
             [PANEL]: {
                 [SNOWGLOBE__LIZ_ALONE]: true,
                 [SNOWGLOBE__BENNETT_MIRIAM]: true,
+                [LIZ_COUCH__PRESENT]: true,
                 [WIDE_COUCH_MIRIAM]: true,
                 [WIDE_ARMREST_MIRIAM__LEFT]: true,
                 [WIDE_ARMREST_MIRIAM__RIGHT]: true
@@ -277,7 +279,7 @@ export default [
                 [RECORDING_BEERS]: true
             },
             [PANEL]: {
-                [LIZ_COUCH]: true
+                [LIZ_COUCH__FUTURE]: true
             },
             [PANEL]: {
                 [SNOWGLOBE__LIZ_KHARI]: true,
