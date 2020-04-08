@@ -10,36 +10,37 @@ import { JOKING_LAUGHING } from '../../../constants/scene/actors/khariLiz'
 import { BENNETT_RECORDING } from '../../../constants/scene/actors/stephanie'
 
 export default {
+    [FATHER]: {
+        [FUTURE]: {
+            yIndex: 0,
+            xPosition: 4.3,
+            zOffset: 1.25
+        }
+    },
     [BENNETT]: {
         [FUTURE]: {
-            yIndex: 1,
-            xPosition: 5,
+            yIndex: 0,
+            xPosition: 6,
             zOffset: 3
         }
     },
     [MOTHER]: {
         [FUTURE]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 8,
-            zOffset: 3
-        }
-    },
-    [FATHER]: {
-        [FUTURE]: {
-            yIndex: 1,
-            xPosition: 4,
-            zOffset: 3
+            zOffset: 2.8
         }
     },
     [KHARI_LIZ]: {
         [JOKING_LAUGHING]: {
             yIndex: 2,
-            xPosition: 3
+            xPosition: 3.8,
+            zOffset: 0
         }
     },
     [STEPHANIE]: {
         [BENNETT_RECORDING]: {
-            yIndex: 3,
+            yIndex: 2,
             xPosition: 8.5
         }
     }

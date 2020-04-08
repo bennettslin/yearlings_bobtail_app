@@ -3,15 +3,12 @@ gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
 # TODO
-Make Opal not have present and future colours.
+Opal on couch needs future presence
 
 # Seated audit
 
 ## Constellations
 attic
-
-## Uncanny
-couch scenes
 
 ## Cremated
 all scenes

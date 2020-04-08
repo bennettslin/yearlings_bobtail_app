@@ -41,7 +41,6 @@ import {
 import {
     ODIN_GHOST__SHARED,
     OPAL__SHARED,
-    OPAL_FUTURE__SHARED,
     PEAFOWL__SHARED
 } from '../../../shared/animals'
 import { SKETCHBOOK__SHARED } from '../../../shared/paper'
@@ -56,7 +55,7 @@ export default {
     [GHOST_ODIN_CLUB]: ODIN_GHOST__SHARED,
     [GHOST_ODIN_DEMONSTRATION]: ODIN_GHOST__SHARED,
     [OPAL_COUCH]: OPAL__SHARED,
-    [OPAL_COUCH_FUTURE]: OPAL_FUTURE__SHARED,
+    [OPAL_COUCH_FUTURE]: OPAL__SHARED,
     [OPAL_GAZING]: OPAL__SHARED,
     [PEACOCK]: PEAFOWL__SHARED,
     [PEAHEN]: PEAFOWL__SHARED,

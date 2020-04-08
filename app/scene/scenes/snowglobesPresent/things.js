@@ -18,16 +18,16 @@ import {
 export default {
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__PRESENT]: {
-            yIndex: 1,
+            yIndex: 0,
             xPosition: 10.4,
-            zOffset: 5.25,
+            zOffset: 3.9,
             scaleFactor: 0.15,
             rotate: -10
         },
         [SNOWGLOBE_PRESENT]: {
-            yIndex: 1,
-            xPosition: 9,
-            zOffset: 3.8,
+            yIndex: 0,
+            xPosition: 8.8,
+            zOffset: 2.7,
             scaleFactor: 0.7,
             rotate: 10
         }

@@ -279,11 +279,9 @@ export default [
                 [RECORDING_BEERS]: true
             },
             [PANEL]: {
-                [LIZ_COUCH__FUTURE]: true
-            },
-            [PANEL]: {
                 [SNOWGLOBE__LIZ_KHARI]: true,
-                [SNOWGLOBE__BENNETT_ALONE]: true
+                [SNOWGLOBE__BENNETT_ALONE]: true,
+                [LIZ_COUCH__FUTURE]: true
             },
             [PUPPET]: {
                 [OPAL_COUCH_FUTURE]: true

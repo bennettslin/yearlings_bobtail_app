@@ -23,10 +23,7 @@ import {
 } from '../../../../../constants/scene/actors/songs'
 import { BENNETT } from '../../../../../constants/scene/actors'
 import { LIZ_PRESENT__SHARED } from '../../../actors'
-import {
-    OPAL__SHARED,
-    OPAL_PRESENT__SHARED
-} from '../../../shared/animals'
+import { OPAL__SHARED } from '../../../shared/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../shared/food'
 import { LIZ_LINENS__SHARED } from '../../../shared/furniture'
 import { GO_KART__SHARED } from '../../../shared/vehicles'
@@ -46,7 +43,7 @@ export default {
     [PETTING_SEATED]: OPAL__SHARED,
     [PETTING_SEATED_PRESENT]: [
         LIZ_PRESENT__SHARED,
-        OPAL_PRESENT__SHARED
+        OPAL__SHARED
     ],
     [PETTING_STANDING]: OPAL__SHARED,
     [SIFTING_TCHOTCHKES]: BENNETT,
