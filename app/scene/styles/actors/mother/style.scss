@@ -1,12 +1,12 @@
 .mother#{$suffix} {
-    .motherShirt { fill: hsl(26, 39%, 61%); }
-    .motherShirtCollar { fill: hsl(26, 34%, 65%); }
-    .motherShortsInner { fill: hsl(205, 32%, 49%); }
+    .motherShirt { fill: hsl(26, 49%, 61%); }
+    .motherShirtCollar { fill: hsl(26, 44%, 65%); }
+    .motherShortsInner { fill: hsl(205, 32%, 54%); }
     .motherShorts { fill: hsl(205, 32%, 59%); }
-    .motherShortsCuff { fill: hsl(204, 38%, 65%); }
-    .motherSole { fill: hsl(230, 22%, 58%); }
-    .motherSandal { fill: hsl(231, 16%, 48%); }
-    .motherSandalStrap { fill: hsl(231, 29%, 59%); }
+    .motherShortsCuff { fill: hsl(204, 28%, 65%); }
+    .motherSandal { fill: hsl(228, 16%, 48%); }
+    .motherSole { fill: hsl(228, 23%, 54%); }
+    .motherSandalStrap { fill: hsl(228, 26%, 59%); }
 
     &.stooping {
         .frameDark { fill: hsl(41, 13%, 43%); }

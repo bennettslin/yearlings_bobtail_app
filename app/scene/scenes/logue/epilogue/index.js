@@ -34,7 +34,8 @@ export default {
     [BENNETTS_CHRISTOPHER_LIZ]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 5.3
+            xPosition: 5.3,
+            zOffset: -0.04
         }
     },
     [ANITA_BENNETT]: {
@@ -46,7 +47,8 @@ export default {
     [ESTHER]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 10.3
+            xPosition: 10.3,
+            zOffset: -0.02
         }
     },
 
@@ -59,7 +61,8 @@ export default {
     [CATHERINE]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 2.6
+            xPosition: 2.6,
+            zOffset: -0.07
         }
     },
     [AMY]: {
@@ -89,13 +92,15 @@ export default {
     [MARA]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 10.6
+            xPosition: 10.6,
+            zOffset: -0.05
         }
     },
     [TOMER]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 0.4
+            xPosition: 0.4,
+            zOffset: -0.06
         }
     },
     [NESTOR]: {
@@ -113,7 +118,8 @@ export default {
     [MOTHER]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 8.8
+            xPosition: 8.8,
+            zOffset: -0.06
         }
     },
     [FATHER]: {
@@ -126,7 +132,8 @@ export default {
     [WADE]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 1.2
+            xPosition: 1.2,
+            zOffset: -0.05
         }
     },
     [KHARI]: {

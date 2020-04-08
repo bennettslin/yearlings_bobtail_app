@@ -2,10 +2,16 @@ smoker, make her left calf higher.
 gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
-# Seated audit
+# TODO
+Flip storage chest horizontal
+Make storage boxes one box higher.
+Rotate constellations.
+Make basement door more narrow.
 
-## Constellations
-attic
+# FIXME
+Bennett epilogue shoes, raise Christopher's shoes
+
+# Seated audit
 
 ## Cremated
 all scenes
@@ -29,6 +35,8 @@ woman: catherine
 older: mother
 guy: tomer
 woman: mara
+
+### Done so far
 
 ## Yellow
 kid: anita

@@ -24,9 +24,9 @@ export default {
             scaleFactor: 0.2
         },
         [STORAGE_CHEST]: {
-            yIndex: 4,
-            xPosition: 1.5,
-            scaleFactor: 0.2
+            yIndex: 1,
+            xPosition: 6.5,
+            scaleFactor: 0.18
         },
         [HOWIE_FRIDGE]: {
             yIndex: 1,
@@ -35,14 +35,16 @@ export default {
         },
         [TELEVISION]: {
             yIndex: 4,
-            xPosition: 3.5,
-            scaleFactor: 0.3
+            xPosition: 2,
+            scaleFactor: 0.3,
+            layerYIndex: 5
         }
     },
     [FURNITURE]: {
         [ATTIC_PILLOW]: {
             yIndex: 2,
-            xPosition: 5
+            xPosition: 5,
+            layerYIndex: 3
         }
     },
     [PANEL]: {
@@ -54,7 +56,8 @@ export default {
         [ATTIC_ARMREST__LEFT]: {
             yIndex: 3,
             xPosition: 1.25,
-            scaleFactor: 0.25
+            scaleFactor: 0.25,
+            layerYIndex: 4
         },
         [ATTIC_ARMREST__RIGHT]: {
             yIndex: 3,

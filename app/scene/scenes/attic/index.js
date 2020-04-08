@@ -7,8 +7,10 @@ import { ATTIC } from '../../../constants/scene/actors/songs'
 export default {
     [BENNETT]: {
         [ATTIC]: {
-            yIndex: 3,
-            xPosition: 3.5
+            yIndex: 2,
+            xPosition: 3.5,
+            zOffset: -0.11,
+            layerYIndex: 3
         }
     },
     [HOWIE]: {
