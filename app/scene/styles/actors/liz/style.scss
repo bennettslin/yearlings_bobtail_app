@@ -1,7 +1,7 @@
 .liz#{$suffix} {
     .lizUndershirt { fill: hsl(149, 26%, 59%); }
-    .lizShirt { fill: hsl(159, 28%, 57%); }
-    .lizShirtCollar { fill: hsl(159, 32%, 62%); }
+    .lizShirt { fill: hsl(159, 35%, 59%); }
+    .lizShirtCollar { fill: hsl(159, 37%, 64%); }
     .lizJacketInner { fill: hsl(97, 11%, 61%); }
     .lizJacket { fill: hsl(96, 14%, 65%); }
     .lizJacketLapel { fill: hsl(97, 14%, 70%); }
@@ -10,9 +10,9 @@
     .lizCoat { fill: hsl(78, 24%, 71%); }
     .lizCoatLapel { fill: hsl(77, 29%, 75%); }
     .lizPanties { fill: hsl(152, 32%, 66%); }
-    .lizJeans { fill: hsl(225, 12%, 54%); }
-    .lizJeansCuff { fill: hsl(225, 14%, 62%); }
-    .lizShortsInner { fill: hsl(225, 18%, 59%); }
+    .lizJeans { fill: hsl(225, 18%, 54%); }
+    .lizJeansCuff { fill: hsl(225, 21%, 62%); }
+    .lizShortsInner { fill: hsl(225, 25%, 59%); }
     .lizShorts { fill: hsl(226, 26%, 68%); }
     .lizSock { fill: hsl(186, 19%, 78%); }
     .lizShoe { fill: hsl(40, 18%, 48%); }
@@ -20,7 +20,7 @@
     .backpackMedium { fill: hsl(242, 30%, 54%); }
     .backpackLight { fill: hsl(242, 37%, 59%); }
     .backpackPocket { fill: hsl(243, 18%, 48%); }
-    .backpackTrim { fill: hsl(252, 19%, 61%); }  
+    .backpackTrim { fill: hsl(252, 19%, 61%); }
     .backpackStrap { fill: hsl(253, 15%, 57%); }
 
     &.brushOff {

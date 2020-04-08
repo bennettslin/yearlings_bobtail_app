@@ -1,22 +1,22 @@
 .anita#{$suffix} {
-    .anitaBarrette { fill: hsl(52, 67%, 59%); }
-    
-    .anitaDress { fill: hsl(58, 47%, 73%); }
-    .anitaBelt { fill: hsl(58, 26%, 62%); }
+    .anitaBarrette { fill: hsl(25, 67%, 59%); }
+
+    .anitaDress { fill: hsl(58, 55%, 73%); }
+    .anitaBelt { fill: hsl(38, 35%, 48%); }
     .anitaJacket { fill: hsl(204, 34%, 59%); }
     .anitaJacketSleeve { fill: hsl(205, 24%, 80%); }
     .anitaRainbowTop { fill: hsl(0, 36%, 58%); }
     .anitaRainbowMiddle { fill: hsl(33, 56%, 68%); }
     .anitaRainbowBottom { fill: hsl(111, 39%, 62%); }
-    .anitaShoe { fill: hsl(190, 31%, 61%); }
-    
+    .anitaShoe { fill: hsl(0, 31%, 61%); }
+
     &.exasperated {
         .backpackMedium { fill: hsl(309, 37%, 60%); }
         .backpackLight { fill: hsl(310, 42%, 62%); }
         .backpackPocket { fill: hsl(300, 22%, 48%); }
         .backpackStrap { fill: hsl(300, 20%, 57%); }
     }
-    
+
     &.youngChild {
         .hairTie { fill: hsl(30, 53%, 67%); }
 

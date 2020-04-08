@@ -28,12 +28,15 @@ export default {
     [SASHA_BENNETT]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 1.4
+            onlyOne: true,
+            xPosition: 1.4,
+            zOffset: -0.03
         }
     },
     [BENNETTS_CHRISTOPHER_LIZ]: {
         [EPILOGUE]: {
             yIndex: 5,
+            onlyOne: true,
             xPosition: 5.3,
             zOffset: -0.04
         }
@@ -41,7 +44,8 @@ export default {
     [ANITA_BENNETT]: {
         [EPILOGUE]: {
             yIndex: 5,
-            xPosition: 8.8
+            xPosition: 8.8,
+            zOffset: -0.04
         }
     },
     [ESTHER]: {
@@ -55,7 +59,8 @@ export default {
     [MIRIAM]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 1.3
+            xPosition: 1.3,
+            zOffset: -0.06
         }
     },
     [CATHERINE]: {
@@ -157,7 +162,9 @@ export default {
     [JACOB]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 8.2
+            onlyOne: true,
+            xPosition: 8.2,
+            zOffset: -0.07
         }
     },
     [TRISTAN]: {

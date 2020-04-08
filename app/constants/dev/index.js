@@ -8,4 +8,4 @@ export const DEV_MAXIMUM_Y_INDEX_CUBES = 5
 * For development purposes. If true, only instances with "onlyOne" in their
 * arrangement will be rendered.
 */
-export const DEV_RENDER_ONLY_PRESENCES = false
+export const DEV_RENDER_ONLY_PRESENCES = true

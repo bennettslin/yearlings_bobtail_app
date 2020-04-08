@@ -36,8 +36,6 @@ older: mother
 guy: tomer
 woman: mara
 
-### Done so far
-
 ## Yellow
 kid: anita
 guy: shane
@@ -47,6 +45,8 @@ woman: miriam
 kid: sasha
 guy: jacob
 woman: liz
+
+## todo next
 
 ## Blue
 kid: christopher
