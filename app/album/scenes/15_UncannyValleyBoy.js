@@ -96,7 +96,7 @@ import {
     WIDE_ARMREST_MIRIAM__LEFT,
     WIDE_ARMREST_MIRIAM__RIGHT
 } from '../../constants/scene/things/panels'
-import { OPAL_COUCH_FUTURE } from '../../constants/scene/things/puppets'
+import { OPAL_COUCH__FUTURE } from '../../constants/scene/things/puppets'
 
 export default [
     {
@@ -284,7 +284,7 @@ export default [
                 [LIZ_COUCH__FUTURE]: true
             },
             [PUPPET]: {
-                [OPAL_COUCH_FUTURE]: true
+                [OPAL_COUCH__FUTURE]: true
             }
         },
         cubes: SNOWGLOBES_FUTURE_KEY,

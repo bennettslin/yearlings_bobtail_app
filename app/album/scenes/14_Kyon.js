@@ -62,7 +62,7 @@ import {
 import { TCHOTCHKES } from '../../constants/scene/things/fixtures'
 import { LIZ_COUCH__ROOM } from '../../constants/scene/things/panels'
 import {
-    OPAL_COUCH,
+    OPAL_COUCH__ROOM,
     OPAL_GAZING,
     PEACOCK,
     PEAHEN
@@ -153,7 +153,7 @@ export default [
                 [LIZ_COUCH__ROOM]: true
             },
             [PUPPET]: {
-                [OPAL_COUCH]: true
+                [OPAL_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_KEY,

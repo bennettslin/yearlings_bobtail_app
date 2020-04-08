@@ -27,7 +27,6 @@ import {
     GHOST_ODIN_CLUB,
     GHOST_ODIN_DEMONSTRATION,
     OPAL_COUCH,
-    OPAL_COUCH_FUTURE,
     OPAL_GAZING,
     PEACOCK,
     PEAHEN,
@@ -115,7 +114,6 @@ const WIRES_MAP = {
         [PUPPET_FATHER_END]: {},
         [PUPPET_MOTHER_END]: { x: 0.4 },
         [OPAL_COUCH]: OPAL_COUCH_CONFIG,
-        [OPAL_COUCH_FUTURE]: OPAL_COUCH_CONFIG,
         [OPAL_GAZING]: {
             wires: [
                 { x: 0.27, y: 0.47 },

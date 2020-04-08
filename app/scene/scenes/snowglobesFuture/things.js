@@ -1,7 +1,8 @@
 import {
     CARDBOARD,
     FIXTURE,
-    PANEL
+    PANEL,
+    PUPPET
 } from '../../../constants/scene/things'
 import {
     SNOWGLOBE_SMALL__FUTURE,
@@ -17,6 +18,7 @@ import {
     SNOWGLOBE__BENNETT_ALONE,
     LIZ_COUCH__FUTURE
 } from '../../../constants/scene/things/panels'
+import { OPAL_COUCH__FUTURE } from '../../../constants/scene/things/puppets'
 import { ACTOR_DEFAULT_SCALE_FACTOR } from '../../../constants/scene'
 
 export default {
@@ -69,6 +71,13 @@ export default {
             yIndex: 3,
             xPosition: 2.075,
             scaleFactor: 0.23
+        }
+    },
+    [PUPPET]: {
+        [OPAL_COUCH__FUTURE]: {
+            yIndex: 1,
+            xPosition: 1,
+            scaleFactor: 0.2
         }
     }
 }
