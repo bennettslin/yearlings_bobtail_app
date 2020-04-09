@@ -9,15 +9,15 @@ export default {
     [BENNETT]: {
         [REMOVING_PANTS]: {
             yIndex: 3,
-            xPosition: 2.56,
-            zOffset: 0.1
+            xPosition: 2.6,
+            zOffset: 0
         }
     },
     [MIRIAM]: {
         [PERFUMING]: {
             yIndex: 3,
-            xPosition: 4.25,
-            zOffset: 0.75
+            xPosition: 3.5,
+            zOffset: 1
         }
     }
 }

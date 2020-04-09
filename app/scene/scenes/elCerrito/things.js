@@ -81,7 +81,7 @@ export default {
         },
         [REATTA_EXTERIOR]: {
             yIndex: 5,
-            xPosition: 4.3,
+            xPosition: 4.2,
             scaleFactor: 0.35
         }
     }

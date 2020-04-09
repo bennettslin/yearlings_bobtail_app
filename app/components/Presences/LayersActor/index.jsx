@@ -123,6 +123,7 @@ const LayersActor = ({
         <Layer {...{ actorKey: HOWIE, instanceKey: howie }} />
         <Layer {...{ actorKey: HOWIE_WILLY, instanceKey: howieWilly }} />
         <Layer {...{ actorKey: TOMER, instanceKey: tomer }} />
+        <Layer {...{ actorKey: MIRIAM, instanceKey: miriam }} />
         <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />
         <Layer {...{ actorKey: BENNETT, instanceKey: bennett }} />
         <Layer {...{ actorKey: BENNETT_FATHER, instanceKey: bennettFather }} />
@@ -149,7 +150,6 @@ const LayersActor = ({
         <Layer {...{ actorKey: LIZ, instanceKey: liz }} />
         <Layer {...{ actorKey: KHARI, instanceKey: khari }} />
         <Layer {...{ actorKey: KHARI_LIZ, instanceKey: khariLiz }} />
-        <Layer {...{ actorKey: MIRIAM, instanceKey: miriam }} />
         <Layer {...{ actorKey: MIRIAM_BENNETT, instanceKey: miriamBennett }} />
         <Layer {...{ actorKey: MIRIAM_STEPHANIE, instanceKey: miriamStephanie }} />
         <Layer {...{ actorKey: MIRIAM_TRISTAN, instanceKey: miriamTristan }} />

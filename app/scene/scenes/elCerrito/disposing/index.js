@@ -9,14 +9,14 @@ export default {
     [BENNETT]: {
         [DISPOSING_CONDOM]: {
             yIndex: 3,
-            xPosition: 2.2,
-            zOffset: -0.9
+            xPosition: 2.1,
+            zOffset: -0.95
         }
     },
     [MIRIAM]: {
         [REVERSING]: {
             yIndex: 3,
-            xPosition: 4.25,
+            xPosition: 3.4,
             zOffset: 1
         }
     }
