@@ -8,9 +8,6 @@ Make storage boxes one box higher.
 Rotate constellations.
 Make basement door more narrow.
 
-# FIXME
-Bennett epilogue shoes, raise Christopher's shoes
-
 # Seated audit
 
 ## Cremated
