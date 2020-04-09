@@ -274,17 +274,14 @@
 }
 
 .storageChest {
-    .chestSide { fill: hsl(210, 40%, 40%); }
-    .chestFront { fill: hsl(210, 40%, 50%); }
-    .leatherSide { fill: hsl(60, 33%, 30%); }
-    .leatherSideLine { stroke: hsl(60, 43%, 23%); }
-    .leatherFront { fill: hsl(60, 20%, 50%); }
-    .leatherFrontLine { stroke: hsl(60, 23%, 43%); }
+    .chestDark { fill: hsl(210, 40%, 40%); }
+    .chestLight { fill: hsl(210, 40%, 50%); }
+    .leatherDark { fill: hsl(60, 33%, 30%); }
+    .leatherLight { fill: hsl(60, 20%, 50%); }
+    .brassDark { fill: hsl(60, 43%, 45%); }
+    .brassLight { fill: hsl(60, 43%, 50%); }
     .handle { fill: hsl(30, 100%, 20%); }
-    .brassSide { fill: hsl(60, 43%, 45%); }
-    .brassFront { fill: hsl(60, 43%, 50%); }
-    .brassLine { stroke: hsl(60, 43%, 40%); }
-    .keyhole { fill: hsl(0, 0%, 20%); }
+    .slit { fill: hsl(0, 0%, 20%); }
 }
 
 .taiwanFridge {

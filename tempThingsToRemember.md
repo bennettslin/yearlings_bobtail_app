@@ -3,8 +3,6 @@ gingerbreadPrison, put his right arm down, bring her closer in.
 dryingTears, bring Stephanie's right arm up.
 
 # TODO
-Flip storage chest horizontal
-Make storage boxes one box higher.
 Rotate constellations.
 Make basement door more narrow.
 
