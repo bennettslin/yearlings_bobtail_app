@@ -4,7 +4,6 @@ dryingTears, bring Stephanie's right arm up.
 
 # TODO
 Rotate constellations.
-Make basement door more narrow.
 
 # Seated audit
 

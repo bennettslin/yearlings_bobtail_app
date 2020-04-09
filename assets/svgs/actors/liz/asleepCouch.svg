@@ -1,42 +1,4 @@
 <svg viewBox="0 0 1211.24 962.73">
-    <defs>
-        <style>
-      .cls-1 {
-        fill: #6ba698;
-      }
-
-      .cls-1, .cls-2, .cls-3, .cls-4, .cls-6, .cls-7 {
-        stroke: #000;
-        stroke-miterlimit: 10;
-        stroke-width: 2px;
-      }
-
-      .cls-2 {
-        fill: none;
-      }
-
-      .cls-3 {
-        fill: #8ebda5;
-      }
-
-      .cls-4 {
-        fill: #a87557;
-      }
-
-      .cls-5 {
-        fill: #8a6161;
-        opacity: 0.5;
-      }
-
-      .cls-6 {
-        fill: #443f3b;
-      }
-
-      .cls-7 {
-        fill: #9ab3ab;
-      }
-        </style>
-    </defs>
     <g class="blanket">
         <path class="lizBlanket" d="M587.62,141.36C697.33-26.19,1080.38-13.3,1080.38,158.58c67.64,59.31,121.79,120.27,89.27,172.36,3.46,26.68,14.44,40.89,14.88,64.48,25.27,16.61,27.57,39,24.8,66.95-11.16,112.84-210.79,105.4-233.11,67Z"/>
         <g class="blanketFoldLine">

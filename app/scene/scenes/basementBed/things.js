@@ -9,6 +9,7 @@ export default {
     [DOOR]: {
         [BASEMENT_DOOR]: {
             yIndex: 2,
+            // hide: true,
             xPosition: 2.5,
             scaleFactor: 0.6
         }
