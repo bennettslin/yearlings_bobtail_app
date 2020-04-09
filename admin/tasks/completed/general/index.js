@@ -5544,5 +5544,10 @@ export default [
         taskName: `Decide on actor colours.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Log minor tasks.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

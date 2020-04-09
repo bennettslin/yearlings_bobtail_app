@@ -22,7 +22,7 @@ export default {
         [TARPIT_CONSTELLATION]: {
             yIndex: 5,
             xPosition: 2.7,
-            zOffset: 4.8,
+            zOffset: 4.5,
             scaleFactor: 0.35
         },
         [SIBLING_CONSTELLATION]: {
