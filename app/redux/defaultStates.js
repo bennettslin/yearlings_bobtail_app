@@ -296,6 +296,7 @@ export const TRANSIENT_DEFAULTS = {
     isOverlayingAnnotation: false,
     isOverlayShown: false,
     isEarShown: false,
+    isTipsShowable: false,
     isPopupAnnotationVisible: false,
     popupAnnotationIndex: storedAnnotationIndex,
     toggleShowsOverviewImmediately: false,

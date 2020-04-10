@@ -5549,5 +5549,10 @@ export default [
         taskName: `Log minor tasks.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Have value in store for whether tip can be shown for device.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

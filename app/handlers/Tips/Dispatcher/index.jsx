@@ -5,19 +5,14 @@ import { updateOptionStore } from 'flux/option/action'
 
 import { getNextOption } from '../../../helpers/options'
 
-import { getShowTipForDevice } from '../../../album/api/tips'
-
 class TipsDispatcher extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isLyricLogue: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
+        isTipsShowable: PropTypes.bool.isRequired,
         toggleShowsTipsImmediately: PropTypes.bool.isRequired,
-        isPhoneWidth: PropTypes.bool.isRequired,
-        isTabletWidth: PropTypes.bool.isRequired,
-        isDesktopWidth: PropTypes.bool.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -30,34 +25,18 @@ class TipsDispatcher extends PureComponent {
         })
     }
 
-    // TODO: This is duplicated in the listener.
-    _getShowTipForDevice() {
-        const {
-            lyricSongIndex,
-            isPhoneWidth,
-            isTabletWidth,
-            isDesktopWidth
-        } = this.props
-
-        return getShowTipForDevice({
-            songIndex: lyricSongIndex,
-            isPhoneWidth,
-            isTabletWidth,
-            isDesktopWidth
-        })
-    }
-
     dispatchTips = ({
         isToggled,
         tipsOption
     } = {}) => {
         const {
             isLyricLogue,
+            isTipsShowable,
             toggleShowsTipsImmediately
         } = this.props
 
         // Don't allow toggling in logue, or if no tip for this device width.
-        if (isLyricLogue || !this._getShowTipForDevice()) {
+        if (isLyricLogue || !isTipsShowable) {
             return false
         }
 
@@ -78,25 +57,17 @@ class TipsDispatcher extends PureComponent {
 }
 
 const mapStateToProps = ({
-    lyricStore: {
-        isLyricLogue,
-        lyricSongIndex
-    },
+    lyricStore: { isLyricLogue },
     optionStore: { selectedTipsOption },
-    transientStore: { toggleShowsTipsImmediately },
-    viewportStore: {
-        isPhoneWidth,
-        isTabletWidth,
-        isDesktopWidth
+    transientStore: {
+        isTipsShowable,
+        toggleShowsTipsImmediately
     }
 }) => ({
     isLyricLogue,
-    lyricSongIndex,
     selectedTipsOption,
-    toggleShowsTipsImmediately,
-    isPhoneWidth,
-    isTabletWidth,
-    isDesktopWidth
+    isTipsShowable,
+    toggleShowsTipsImmediately
 })
 
 export default connect(

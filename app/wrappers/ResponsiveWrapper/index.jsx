@@ -9,8 +9,9 @@ class ResponsiveWrapper extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isCarouselNavShowable: PropTypes.bool.isRequired,
         earColumnIndex: PropTypes.number.isRequired,
+        isCarouselNavShowable: PropTypes.bool.isRequired,
+        isTipsShowable: PropTypes.bool.isRequired,
         isEarShown: PropTypes.bool.isRequired,
         isHeightlessLyric: PropTypes.bool.isRequired,
         isLyricExpandable: PropTypes.bool.isRequired,
@@ -24,6 +25,7 @@ class ResponsiveWrapper extends PureComponent {
         const {
                 earColumnIndex,
                 isCarouselNavShowable,
+                isTipsShowable,
                 isEarShown,
                 isHeightlessLyric,
                 isLyricExpandable,
@@ -49,6 +51,9 @@ class ResponsiveWrapper extends PureComponent {
                         isCarouselNavShowable &&
                             'RW__carouselNavShowable',
 
+                        !isTipsShowable &&
+                            'RW__tipsNotShowable',
+
                         singleShownEarColumnKey ?
                             `RW__${singleShownEarColumnKey}EarColumnOnly` :
                             'RW__bothEarColumnsShown',
@@ -72,6 +77,7 @@ const mapStateToProps = ({
     selectedStore: { earColumnIndex },
     transientStore: {
         isCarouselNavShowable,
+        isTipsShowable,
         isEarShown
     },
     responsiveStore: {
@@ -80,8 +86,9 @@ const mapStateToProps = ({
         showShrunkNavIcon
     }
 }) => ({
-    isCarouselNavShowable,
     earColumnIndex,
+    isCarouselNavShowable,
+    isTipsShowable,
     isEarShown,
     isHeightlessLyric,
     isLyricExpandable,

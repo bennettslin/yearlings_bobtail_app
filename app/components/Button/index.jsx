@@ -104,7 +104,7 @@ class Button extends Component {
                 isAccessed
             ),
 
-            showTooltip = getShowTooltip(buttonName)
+            showTooltip = getShowTooltip(buttonName) && !isDisabled
 
         return (
             <div

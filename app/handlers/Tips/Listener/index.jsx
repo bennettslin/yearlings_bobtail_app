@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 import { updateOptionStore } from 'flux/option/action'
+import { updateTransientStore } from 'flux/transient/action'
 
 import { getShowTipForDevice } from '../../../album/api/tips'
 
@@ -25,7 +26,8 @@ class TipsListener extends PureComponent {
         isPhoneWidth: PropTypes.bool.isRequired,
         isTabletWidth: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired,
-        updateOptionStore: PropTypes.func.isRequired
+        updateOptionStore: PropTypes.func.isRequired,
+        updateTransientStore: PropTypes.func.isRequired
     }
 
     componentDidUpdate(prevProps) {
@@ -41,7 +43,7 @@ class TipsListener extends PureComponent {
             { isRoutingComplete: wasRoutingComplete } = prevProps
 
         if (isRoutingComplete && !wasRoutingComplete) {
-            this._handleTipsUpdate()
+            this._handleTipsUpdate(this._getIsTipsShowable())
         }
     }
 
@@ -57,11 +59,55 @@ class TipsListener extends PureComponent {
          * bother for now.
          */
         if (lyricSongIndex !== prevSongIndex) {
-            this._handleTipsUpdate()
+            const isTipsShowable = this._getIsTipsShowable()
+            this._handleTipsUpdate(isTipsShowable)
         }
     }
 
-    _handleTipsUpdate() {
+    _getIsTipsShowable() {
+        const {
+                lyricSongIndex,
+                isPhoneWidth,
+                isTabletWidth,
+                isDesktopWidth
+            } = this.props,
+
+            // Ensure this song's tip can be shown for this viewport width.
+            isTipsShowable = getShowTipForDevice({
+                songIndex: lyricSongIndex,
+                isPhoneWidth,
+                isTabletWidth,
+                isDesktopWidth
+            })
+
+        this.props.updateTransientStore({
+            isTipsShowable
+        })
+
+        return isTipsShowable
+    }
+
+    _handleDeviceWidthChange(prevProps) {
+        const {
+                deviceWidthIndex,
+                selectedTipsOption
+            } = this.props,
+            { deviceWidthIndex: prevDeviceWidthIndex } = prevProps
+
+        if (deviceWidthIndex !== prevDeviceWidthIndex) {
+            const isTipsShowable = this._getIsTipsShowable()
+            if (
+                !isTipsShowable &&
+                selectedTipsOption === SHOWN
+            ) {
+                this.props.updateOptionStore({
+                    selectedTipsOption: HIDDEN
+                })
+            }
+        }
+    }
+
+    _handleTipsUpdate(isTipsShowable) {
         const { lyricAnnotationIndex } = this.props
 
         // There also cannot be a selected annotation.
@@ -78,12 +124,9 @@ class TipsListener extends PureComponent {
                     selectedTipsOption === SHOWN
                 )
             ) {
-                // Ensure this song's tip can be shown for this viewport width.
-                const showTipForDevice = this._getShowTipForDevice()
-
                 this.props.updateOptionStore({
-                    selectedTipsOption: showTipForDevice ? SHOWN : HIDDEN,
-                    ...showTipForDevice && { isSongShownTips: true }
+                    selectedTipsOption: isTipsShowable ? SHOWN : HIDDEN,
+                    ...isTipsShowable && { isSongShownTips: true }
                 })
 
             // If shown, hide when now in logue.
@@ -112,41 +155,6 @@ class TipsListener extends PureComponent {
                 isForcedShownOverview: false
             })
         }
-    }
-
-    _handleDeviceWidthChange(prevProps) {
-        const {
-                deviceWidthIndex,
-                selectedTipsOption
-            } = this.props,
-            { deviceWidthIndex: prevDeviceWidthIndex } = prevProps
-
-        if (
-            selectedTipsOption === SHOWN &&
-            deviceWidthIndex !== prevDeviceWidthIndex &&
-            !this._getShowTipForDevice()
-        ) {
-            this.props.updateOptionStore({
-                selectedTipsOption: HIDDEN
-            })
-        }
-    }
-
-    // TODO: This is duplicated in the dispatcher.
-    _getShowTipForDevice() {
-        const {
-            lyricSongIndex,
-            isPhoneWidth,
-            isTabletWidth,
-            isDesktopWidth
-        } = this.props
-
-        return getShowTipForDevice({
-            songIndex: lyricSongIndex,
-            isPhoneWidth,
-            isTabletWidth,
-            isDesktopWidth
-        })
     }
 
     render() {
@@ -188,5 +196,8 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { updateOptionStore }
+    {
+        updateOptionStore,
+        updateTransientStore
+    }
 )(TipsListener)

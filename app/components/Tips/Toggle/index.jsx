@@ -16,9 +16,11 @@ import { TIPS_BUTTON_KEY } from '../../../constants/buttons'
 import { TIPS } from '../../../constants/tips'
 
 const mapStateToProps = ({
-    optionStore: { selectedTipsOption }
+    optionStore: { selectedTipsOption },
+    transientStore: { isTipsShowable }
 }) => ({
-    selectedTipsOption
+    selectedTipsOption,
+    isTipsShowable
 })
 
 class TipsToggle extends PureComponent {
@@ -26,6 +28,7 @@ class TipsToggle extends PureComponent {
     static propTypes = {
         // Through Redux.
         selectedTipsOption: PropTypes.string.isRequired,
+        isTipsShowable: PropTypes.bool.isRequired,
 
         // From parent.
         inPopup: PropTypes.bool,
@@ -43,6 +46,7 @@ class TipsToggle extends PureComponent {
     render() {
         const {
             selectedTipsOption,
+            isTipsShowable,
             inPopup,
             className
         } = this.props
@@ -65,6 +69,7 @@ class TipsToggle extends PureComponent {
                         buttonName: TIPS_BUTTON_KEY,
                         buttonIdentifier: selectedTipsOption,
                         accessKey: TIPS_TOGGLE_KEY,
+                        isDisabled: !isTipsShowable,
                         handleButtonClick: this.handleTipsClick
                     }}
                 />
