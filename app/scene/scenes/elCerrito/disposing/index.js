@@ -9,8 +9,9 @@ export default {
     [BENNETT]: {
         [DISPOSING_CONDOM]: {
             yIndex: 3,
-            xPosition: 2.1,
-            zOffset: -0.95
+            xPosition: 2.2,
+            zOffset: -0.95,
+            layerYIndex: 4
         }
     },
     [MIRIAM]: {

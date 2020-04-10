@@ -16,10 +16,13 @@ import {
     EL_CERRITO_NEAR
 } from '../../../constants/scene/things/flats'
 import {
-    REATTA_EXTERIOR,
+    REATTA_EXTERIOR_FRONT,
+    REATTA_EXTERIOR_REAR,
     REATTA_INTERIOR,
-    REATTA_SEAT,
-    REATTA_SEAT_DOWN
+    REATTA_SEAT_BOTTOM__FRONT,
+    REATTA_SEAT_BOTTOM__REAR,
+    REATTA_SEAT_BACK,
+    REATTA_SEAT_BACK_DOWN
 } from '../../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../../constants/scene/things/puppets'
 
@@ -41,11 +44,11 @@ export default {
         [CONDOM_WRAPPER_MIRIAM]: {
             yIndex: 5,
             xPosition: 1.25,
-            zOffset: 0.1
+            zOffset: 0.11
         },
         [USED_CONDOM_MIRIAM]: {
             yIndex: 5,
-            xPosition: 2.25,
+            xPosition: 1.8,
             zOffset: 0.05
         }
     },
@@ -67,22 +70,46 @@ export default {
             xPosition: 4.1,
             scaleFactor: 0.35
         },
-        [REATTA_SEAT]: {
+        [REATTA_SEAT_BOTTOM__FRONT]: {
             yIndex: 5,
-            xPosition: 2,
-            zOffset: 0.8,
-            scaleFactor: 0.4
+            xPosition: 2.07,
+            zOffset: 0.79,
+            scaleFactor: 0.4,
+            layerYIndex: 4
         },
-        [REATTA_SEAT_DOWN]: {
+        [REATTA_SEAT_BOTTOM__REAR]: {
             yIndex: 5,
-            xPosition: 1.66,
-            zOffset: 0.8,
-            scaleFactor: 0.4
+            xPosition: 2.07,
+            zOffset: 0.79,
+            scaleFactor: 0.4,
+            layerYIndex: 3
         },
-        [REATTA_EXTERIOR]: {
+        [REATTA_SEAT_BACK]: {
             yIndex: 5,
-            xPosition: 4.2,
+            xPosition: 1.68,
+            zOffset: 1.47,
+            scaleFactor: 0.4,
+            layerYIndex: 3
+        },
+        [REATTA_SEAT_BACK_DOWN]: {
+            yIndex: 5,
+            xPosition: 1.26,
+            zOffset: 1.3,
+            scaleFactor: 0.4,
+            layerYIndex: 4
+        },
+        [REATTA_EXTERIOR_FRONT]: {
+            yIndex: 5,
+            xPosition: 5.51,
+            zOffset: 1.5,
             scaleFactor: 0.35
+        },
+        [REATTA_EXTERIOR_REAR]: {
+            yIndex: 5,
+            xPosition: 1.87,
+            zOffset: 0.24,
+            scaleFactor: 0.35,
+            layerYIndex: 4
         }
     }
 }

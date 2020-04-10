@@ -36,9 +36,11 @@ import crowdSide from 'assets/svgs/panels/crowdSide'
 import lizCouch from 'assets/svgs/panels/lizCouch'
 import snowglobe from 'assets/svgs/panels/snowglobe'
 import reattaInterior from 'assets/svgs/panels/reattaInterior'
-import reattaSeat from 'assets/svgs/panels/reattaSeat'
-import reattaSeatDown from 'assets/svgs/panels/reattaSeatDown'
-import reattaExterior from 'assets/svgs/panels/reattaExterior'
+import reattaSeatBottom from 'assets/svgs/panels/reattaSeatBottom'
+import reattaSeatBack from 'assets/svgs/panels/reattaSeatBack'
+import reattaSeatBackDown from 'assets/svgs/panels/reattaSeatBackDown'
+import reattaExteriorFront from 'assets/svgs/panels/reattaExteriorFront'
+import reattaExteriorRear from 'assets/svgs/panels/reattaExteriorRear'
 import hospitalBed from 'assets/svgs/panels/hospitalBed'
 import phoneCallPanel from 'assets/svgs/panels/phoneCallPanel'
 import crowdBack from 'assets/svgs/panels/crowdBack'
@@ -102,9 +104,12 @@ import {
     SNOWGLOBE__LIZ_KHARI,
     SNOWGLOBE__BENNETT_ALONE,
     REATTA_INTERIOR,
-    REATTA_SEAT,
-    REATTA_SEAT_DOWN,
-    REATTA_EXTERIOR,
+    REATTA_SEAT_BOTTOM__FRONT,
+    REATTA_SEAT_BOTTOM__REAR,
+    REATTA_SEAT_BACK,
+    REATTA_SEAT_BACK_DOWN,
+    REATTA_EXTERIOR_FRONT,
+    REATTA_EXTERIOR_REAR,
     HOSPITAL_BED,
     PHONE_CALL_PANEL,
     CROWD_BACK,
@@ -169,9 +174,12 @@ export default {
     [SNOWGLOBE__LIZ_KHARI]: snowglobe,
     [SNOWGLOBE__BENNETT_ALONE]: snowglobe,
     [REATTA_INTERIOR]: reattaInterior,
-    [REATTA_SEAT]: reattaSeat,
-    [REATTA_SEAT_DOWN]: reattaSeatDown,
-    [REATTA_EXTERIOR]: reattaExterior,
+    [REATTA_SEAT_BOTTOM__FRONT]: reattaSeatBottom,
+    [REATTA_SEAT_BOTTOM__REAR]: reattaSeatBottom,
+    [REATTA_SEAT_BACK]: reattaSeatBack,
+    [REATTA_SEAT_BACK_DOWN]: reattaSeatBackDown,
+    [REATTA_EXTERIOR_FRONT]: reattaExteriorFront,
+    [REATTA_EXTERIOR_REAR]: reattaExteriorRear,
     [HOSPITAL_BED]: hospitalBed,
     [PHONE_CALL_PANEL]: phoneCallPanel,
     [CROWD_BACK]: crowdBack,

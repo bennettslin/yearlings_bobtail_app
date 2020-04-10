@@ -69,9 +69,12 @@ import {
 import { DEATHBED_PILLOW } from '../../constants/scene/things/furnitures'
 import {
     REATTA_INTERIOR,
-    REATTA_SEAT,
-    REATTA_SEAT_DOWN,
-    REATTA_EXTERIOR,
+    REATTA_SEAT_BOTTOM__FRONT,
+    REATTA_SEAT_BOTTOM__REAR,
+    REATTA_SEAT_BACK,
+    REATTA_SEAT_BACK_DOWN,
+    REATTA_EXTERIOR_FRONT,
+    REATTA_EXTERIOR_REAR,
     HOSPITAL_BED
 } from '../../constants/scene/things/panels'
 import { PUPPET_REATTA } from '../../constants/scene/things/puppets'
@@ -106,8 +109,10 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT]: true,
-                [REATTA_EXTERIOR]: true
+                [REATTA_SEAT_BOTTOM__FRONT]: true,
+                [REATTA_SEAT_BACK]: true,
+                [REATTA_EXTERIOR_FRONT]: true,
+                [REATTA_EXTERIOR_REAR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -139,8 +144,10 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT_DOWN]: true,
-                [REATTA_EXTERIOR]: true
+                [REATTA_SEAT_BOTTOM__REAR]: true,
+                [REATTA_SEAT_BACK_DOWN]: true,
+                [REATTA_EXTERIOR_FRONT]: true,
+                [REATTA_EXTERIOR_REAR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -172,8 +179,10 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT_DOWN]: true,
-                [REATTA_EXTERIOR]: true
+                [REATTA_SEAT_BOTTOM__FRONT]: true,
+                [REATTA_SEAT_BACK_DOWN]: true,
+                [REATTA_EXTERIOR_FRONT]: true,
+                [REATTA_EXTERIOR_REAR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,
@@ -284,8 +293,10 @@ export default [
             },
             [PANEL]: {
                 [REATTA_INTERIOR]: true,
-                [REATTA_SEAT]: true,
-                [REATTA_EXTERIOR]: true
+                [REATTA_SEAT_BOTTOM__REAR]: true,
+                [REATTA_SEAT_BACK]: true,
+                [REATTA_EXTERIOR_FRONT]: true,
+                [REATTA_EXTERIOR_REAR]: true
             }
         },
         cubes: EL_CERRITO_CAR_KEY,

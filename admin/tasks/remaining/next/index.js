@@ -1,8 +1,8 @@
 export default [
     {
         taskName: `Adjust seated presences.`,
-        workedHours: 18,
-        neededHours: 21
+        workedHours: 21,
+        neededHours: 24
     },
     {
         taskName: `Actor colours.`,

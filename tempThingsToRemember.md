@@ -4,10 +4,6 @@ dryingTears, bring Stephanie's right arm up.
 
 # Seated audit
 
-## Cremated
-all scenes
-(will need to incorporate seat)
-
 ## Dream
 deathbed alignment
 
