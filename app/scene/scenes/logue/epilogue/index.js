@@ -71,7 +71,8 @@ export default {
     [AMY]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 4.4
+            xPosition: 4.4,
+            zOffset: -0.08
         }
     },
     [STEPHANIE]: {
@@ -84,7 +85,8 @@ export default {
     [BRAD]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 8.1
+            xPosition: 8.1,
+            zOffset: -0.06
         }
     },
     [ANDREW]: {
@@ -155,7 +157,8 @@ export default {
     [HOWIE]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 6.9
+            xPosition: 6.9,
+            zOffset: -0.04
         }
     },
     [JACOB]: {

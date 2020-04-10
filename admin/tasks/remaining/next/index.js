@@ -6,7 +6,7 @@ export default [
     },
     {
         taskName: `Actor colours.`,
-        workedHours: 4,
-        neededHours: 6
+        workedHours: 5,
+        neededHours: 7
     }
 ]

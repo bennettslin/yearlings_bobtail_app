@@ -38,12 +38,12 @@ kid: christopher
 guy: tristan
 woman: stephanie
 
-## todo next
-
 ## Purple
 kid: brad
 guy: howie
 woman: amy
+
+## todo next
 
 ## Tan
 kid: andrew
