@@ -68,11 +68,11 @@ export default {
         },
         [LINGERIE_DRAWING]: {
             yIndex: 4,
-            xPosition: 6.2
+            xPosition: 5.9
         },
         [VASELINE]: {
             yIndex: 4,
-            xPosition: 7.7
+            xPosition: 7.5
         }
     },
     [FURNITURE]: {

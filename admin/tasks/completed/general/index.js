@@ -5559,5 +5559,10 @@ export default [
         taskName: `Adjust seated presences.`,
         workedHours: 23,
         neededHours: 23
+    },
+    {
+        taskName: `General scene work.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

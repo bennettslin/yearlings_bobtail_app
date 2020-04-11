@@ -165,7 +165,8 @@ export default [
             },
             [FIXTURE]: {
                 [BENNETT_COUCH_LAMP]: true,
-                [BENNETT_RECORD_PLAYER]: true
+                [BENNETT_RECORD_PLAYER]: true,
+                [ELECTRIC_GUITAR]: true
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
@@ -201,7 +202,6 @@ export default [
                 [WALL_SPEAKER_FRONT__RIGHT]: true
             },
             [FIXTURE]: {
-                [ELECTRIC_GUITAR]: true,
                 [DRUMKIT]: true
             }
         },

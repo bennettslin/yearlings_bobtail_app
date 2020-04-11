@@ -10,7 +10,6 @@ import {
 } from '../../../constants/scene/things/cutouts'
 import {
     CASH_BOX,
-    ELECTRIC_GUITAR,
     DRUMKIT
 } from '../../../constants/scene/things/fixtures'
 
@@ -18,12 +17,12 @@ export default {
     [CUTOUT]: {
         [MONITOR_FRONT__LEFT]: {
             yIndex: 4,
-            xPosition: 2.5,
+            xPosition: 2,
             scaleFactor: 0.3
         },
         [MONITOR_FRONT__RIGHT]: {
             yIndex: 4,
-            xPosition: 8.5,
+            xPosition: 9,
             scaleFactor: 0.3,
             flipHorizontal: true
         },
@@ -42,14 +41,11 @@ export default {
         }
     },
     [FIXTURE]: {
-        [ELECTRIC_GUITAR]: {
-            yIndex: 3,
-            xPosition: 1
-        },
         [DRUMKIT]: {
             yIndex: 1,
             xPosition: 5.5,
-            zOffset: -0.1
+            zOffset: -0.2,
+            layerYIndex: 2
         }
     }
 }
@@ -58,8 +54,8 @@ export const THINGS_CLUB_FRONT_M = {
     [FIXTURE]: {
         [CASH_BOX]: {
             yIndex: 5,
-            xPosition: 3,
-            zOffset: -0.1
+            xPosition: 2.8,
+            zOffset: -0.25
         }
     }
 }

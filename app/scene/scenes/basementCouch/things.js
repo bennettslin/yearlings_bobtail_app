@@ -24,9 +24,9 @@ export default {
     },
     [DOOR]: {
         [BASEMENT_DOOR_SIDE]: {
-            yIndex: 4,
-            xPosition: 10.16,
-            zOffset: 1,
+            yIndex: 5,
+            xPosition: 10.14,
+            zOffset: 1.06,
             scaleFactor: 0.6
         }
     }

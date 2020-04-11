@@ -137,7 +137,8 @@ export default [
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
-                [BENNETT_COUCH_LAMP]: true
+                [BENNETT_COUCH_LAMP]: true,
+                [ELECTRIC_GUITAR]: true
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
@@ -164,7 +165,8 @@ export default [
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
-                [BENNETT_COUCH_LAMP]: true
+                [BENNETT_COUCH_LAMP]: true,
+                [ELECTRIC_GUITAR]: true
             },
             [FURNITURE]: {
                 [BENNETT_PILLOW__COUCH]: true
@@ -200,6 +202,7 @@ export default [
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
                 [BENNETT_COUCH_LAMP]: true,
+                [ELECTRIC_GUITAR]: true,
                 [KEYBOARD]: true
             },
             [PANEL]: {
@@ -247,7 +250,6 @@ export default [
             },
             [FIXTURE]: {
                 [CASH_BOX]: true,
-                [ELECTRIC_GUITAR]: true,
                 [DRUMKIT]: true
             }
         },

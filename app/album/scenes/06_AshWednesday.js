@@ -79,7 +79,8 @@ import {
 } from '../../constants/scene/things/doors'
 import {
     BENNETT_RECORD_PLAYER,
-    BENNETT_COUCH_LAMP
+    BENNETT_COUCH_LAMP,
+    ELECTRIC_GUITAR
 } from '../../constants/scene/things/fixtures'
 import {
     ST_JOSEPHS_CHURCH,
@@ -154,7 +155,8 @@ export default [
             },
             [FIXTURE]: {
                 [BENNETT_RECORD_PLAYER]: true,
-                [BENNETT_COUCH_LAMP]: true
+                [BENNETT_COUCH_LAMP]: true,
+                [ELECTRIC_GUITAR]: true
             },
             [PANEL]: {
                 [WIDE_COUCH_BENNETT]: true,
