@@ -15,8 +15,9 @@ export default {
     },
     [AMY]: {
         [DOCTOR]: {
-            yIndex: 5,
-            xPosition: 2.5
+            yIndex: 4,
+            xPosition: 1.65,
+            layerYIndex: 5
         }
     }
 }

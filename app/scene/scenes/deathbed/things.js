@@ -57,25 +57,26 @@ export default {
     [CUTOUT]: {
         [IV_DRIP]: {
             yIndex: 1,
-            xPosition: 4,
+            xPosition: 3.8,
             scaleFactor: 0.35
         }
     },
     [FIXTURE]: {
         [HOSPITAL_RECORD_PLAYER]: {
             yIndex: 1,
-            xPosition: 7
+            xPosition: 6
         }
     },
     [FURNITURE]: {
         [DEATHBED_BLANKET]: {
             yIndex: 3,
-            xPosition: 2.6
+            xPosition: 2.4,
+            zOffset: -0.06
         },
         [DEATHBED_PILLOW]: {
             yIndex: 3,
-            xPosition: 1.5,
-            zOffset: 0.5
+            xPosition: 1.55,
+            zOffset: 0.4
         }
     },
     [PANEL]: {

@@ -5554,5 +5554,10 @@ export default [
         taskName: `Have value in store for whether tip can be shown for device.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Adjust seated presences.`,
+        workedHours: 23,
+        neededHours: 23
     }
 ]
