@@ -17,7 +17,7 @@ export default {
     [AMY]: {
         [SMOKER]: {
             yIndex: 5,
-            xPosition: 7.25
+            xPosition: 7.4
         }
     },
     [WADE]: {
