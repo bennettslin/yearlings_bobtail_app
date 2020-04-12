@@ -31,7 +31,7 @@ export default {
     [FIXTURE]: {
         [STAGE_MIC__STAGE]: {
             yIndex: 3,
-            xPosition: 8
+            xPosition: 8.65
         },
         [KICK_DRUM]: {
             yIndex: 5,

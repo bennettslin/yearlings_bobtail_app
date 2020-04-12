@@ -14,19 +14,19 @@ export default {
     [BENNETT]: {
         [PERFORMING]: {
             yIndex: 4,
-            xPosition: 1.5
+            xPosition: 0.8
         }
     },
     [ANA]: {
         [PERFORMING]: {
             yIndex: 2,
-            xPosition: 2.5
+            xPosition: 2.4
         }
     },
-    [TOMER]: {
-        [SHANE_SPILLING]: {
+    [WADE]: {
+        [WATCHING]: {
             yIndex: 4,
-            xPosition: 9.5
+            xPosition: 4.7
         }
     },
     [AMY_STEPHANIE]: {
@@ -35,10 +35,10 @@ export default {
             xPosition: 7
         }
     },
-    [WADE]: {
-        [WATCHING]: {
+    [TOMER]: {
+        [SHANE_SPILLING]: {
             yIndex: 4,
-            xPosition: 5
+            xPosition: 9.5
         }
     }
 }

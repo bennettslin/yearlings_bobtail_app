@@ -18,7 +18,7 @@ export default {
     [FIXTURE]: {
         [STAGE_MIC__CROWD]: {
             yIndex: 3,
-            xPosition: 3
+            xPosition: 2.65
         }
     },
     [PANEL]: {

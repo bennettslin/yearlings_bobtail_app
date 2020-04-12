@@ -21,7 +21,7 @@ export default {
     [TOMER]: {
         [CEMETERY]: {
             yIndex: 4,
-            xPosition: 2.5
+            xPosition: 2.52
         }
     }
 }

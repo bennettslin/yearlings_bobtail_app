@@ -10,19 +10,19 @@ export default {
     [HOWIE]: {
         [ABBEY_ROAD]: {
             yIndex: 4,
-            xPosition: 1.5
+            xPosition: 1.4
         }
     },
     [ANA]: {
         [ABBEY_ROAD]: {
             yIndex: 4,
-            xPosition: 4.6
+            xPosition: 4.46
         }
     },
     [BENNETT]: {
         [ABBEY_ROAD]: {
             yIndex: 4,
-            xPosition: 7.4
+            xPosition: 7.34
         }
     },
     [TOMER]: {

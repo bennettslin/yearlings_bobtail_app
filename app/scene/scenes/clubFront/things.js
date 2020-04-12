@@ -44,7 +44,7 @@ export default {
         [DRUMKIT]: {
             yIndex: 1,
             xPosition: 5.5,
-            zOffset: -0.2,
+            zOffset: -0.1,
             layerYIndex: 2
         }
     }

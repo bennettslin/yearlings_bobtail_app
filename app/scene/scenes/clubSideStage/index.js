@@ -12,14 +12,14 @@ import {
 export default {
     [BENNETT]: {
         [FLIRTING]: {
-            yIndex: 4,
-            xPosition: 6
+            yIndex: 3,
+            xPosition: 6.5
         }
     },
     [AMY]: {
         [FLIRTING]: {
-            yIndex: 4,
-            xPosition: 7
+            yIndex: 3,
+            xPosition: 8
         }
     },
     [MARA]: {

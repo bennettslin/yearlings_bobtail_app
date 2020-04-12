@@ -1,6 +1,3 @@
-# TODO
-Make drum kit level
-
 # Colors
 
 ## Red
