@@ -38,7 +38,7 @@ export const getSeatingRowCoordinates = ({
         firstRowSeatHeight = firstRowSeatWidth * SEAT_HEIGHT_TO_WIDTH_RATIO,
 
         rowCoordinatesArray = getArrayOfCoordinatesForFactoredLengths({
-            maxCount: 5,
+            maxCount: 8,
 
             minLength: floorHeight,
             firstLength: firstRowSeatHeight,
