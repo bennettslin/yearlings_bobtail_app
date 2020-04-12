@@ -11,9 +11,12 @@ import { BASEMENT_DOOR_SIDE } from '../../../constants/scene/things/doors'
 export default {
     [CARDBOARD]: {
         [NAS_ALBUM]: {
-            yIndex: 3,
-            xPosition: 9.5,
-            scaleFactor: 0.15
+            yIndex: 2,
+            xPosition: 8,
+            scaleFactor: 0.15,
+            perspective: 50,
+            rotateX: 10,
+            skewX: 4
         },
         [ELLIOTT_SMITH_POSTER]: {
             yIndex: 1,

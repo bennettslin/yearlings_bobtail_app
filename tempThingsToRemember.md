@@ -1,4 +1,20 @@
+# Scene pre fixes
+bedroom letters
+ghosts
+liz couch too sparse
+Bubble positions
+
+# Scene fix
+Improve faces if possible
+Make sure eyes are pointed in right direction.
+If feet position is needed for one, do it for all.
+
+# TODO
+Share configs for posters and albums
+See about sharing configs for couches and others.
+
 # Colors
+Do feet position too
 
 ## Red
 bennett

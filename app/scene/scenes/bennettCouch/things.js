@@ -72,8 +72,11 @@ export const THINGS_BENNETT_COUCH_OPINION = {
     [CARDBOARD]: {
         [POLICE_ALBUM]: {
             yIndex: 2,
-            xPosition: 9,
-            scaleFactor: 0.15
+            xPosition: 8,
+            scaleFactor: 0.15,
+            perspective: 50,
+            rotateX: 10,
+            skewX: 4
         },
         [NIRVANA_POSTER]: {
             yIndex: 1,
@@ -99,8 +102,11 @@ export const THINGS_BENNETT_COUCH_RUBIKS = {
     [CARDBOARD]: {
         [TELEVISION_ALBUM]: {
             yIndex: 2,
-            xPosition: 9,
-            scaleFactor: 0.15
+            xPosition: 8,
+            scaleFactor: 0.15,
+            perspective: 50,
+            rotateX: 10,
+            skewX: 4
         },
         [PROGRESS_CHART_EARLY]: {
             yIndex: 1,
