@@ -13,40 +13,46 @@ import {
 import { SIDELONG_HESITANCE } from '../../../constants/scene/actors/bennett'
 
 export default {
-    [BENNETT]: {
-        [SIDELONG_HESITANCE]: {
-            yIndex: 4,
-            xPosition: 4.5
+    [ANA]: {
+        [WAITING]: {
+            yIndex: 3,
+            xPosition: 0.5,
+            zOffset: -0.07
         }
     },
     [MARA]: {
         [WAITING]: {
-            yIndex: 4,
-            xPosition: 2.5
+            yIndex: 3,
+            xPosition: 2.3,
+            zOffset: -0.07
         }
     },
-    [ANA]: {
-        [WAITING]: {
-            yIndex: 4,
-            xPosition: 1
+    [BENNETT]: {
+        [SIDELONG_HESITANCE]: {
+            yIndex: 3,
+            xPosition: 4.7,
+            zOffset: -0.05
         }
     },
     [AMY]: {
         [MINGLING]: {
-            yIndex: 4,
-            xPosition: 7
-        }
-    },
-    [STEPHANIE]: {
-        [MINGLING]: {
-            yIndex: 4,
-            xPosition: 10
+            yIndex: 3,
+            xPosition: 7.3,
+            zOffset: -0.06
         }
     },
     [WADE]: {
         [MINGLING]: {
-            yIndex: 4,
-            xPosition: 8.5
+            yIndex: 3,
+            xPosition: 8.7,
+            zOffset: -0.05
+        }
+    },
+    [STEPHANIE]: {
+        [MINGLING]: {
+            yIndex: 3,
+            xPosition: 10.5,
+            zOffset: -0.06
         }
     }
 }

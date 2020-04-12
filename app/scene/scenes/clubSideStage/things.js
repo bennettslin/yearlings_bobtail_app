@@ -29,23 +29,24 @@ export default {
         }
     },
     [FIXTURE]: {
+        [KICK_DRUM]: {
+            yIndex: 2,
+            xPosition: 3
+        },
+        [DRUM_THRONE]: {
+            yIndex: 1,
+            xPosition: 5,
+            zOffset: -0.1,
+            layerYIndex: 2
+        },
         [STAGE_MIC__STAGE]: {
             yIndex: 3,
             xPosition: 8.65
         },
-        [KICK_DRUM]: {
-            yIndex: 5,
-            xPosition: 5,
-            zOffset: -0.1
-        },
-        [DRUM_THRONE]: {
-            yIndex: 5,
-            xPosition: 8,
-            zOffset: -0.1
-        },
         [GUITAR_CASE_OPEN]: {
-            yIndex: 4,
-            xPosition: 2.5
+            yIndex: 5,
+            xPosition: 9,
+            zOffset: -0.07
         }
     }
 }
