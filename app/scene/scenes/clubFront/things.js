@@ -17,6 +17,7 @@ export default {
     [CUTOUT]: {
         [MONITOR_FRONT__LEFT]: {
             yIndex: 4,
+            hide: true,
             xPosition: 2,
             scaleFactor: 0.3
         },

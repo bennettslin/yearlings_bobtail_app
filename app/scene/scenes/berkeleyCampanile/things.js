@@ -63,9 +63,8 @@ export const THINGS_BERKELEY_CAMPANILE_VEGAN = {
     [PUPPET]: {
         [GHOST_ODIN_DEMONSTRATION]: {
             yIndex: 5,
-            xPosition: 1.5,
-            scaleFactor: 0.2,
-            flipHorizontal: true
+            xPosition: 1.2,
+            scaleFactor: 0.2
         }
     }
 }

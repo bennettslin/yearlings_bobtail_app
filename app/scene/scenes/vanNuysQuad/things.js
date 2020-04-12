@@ -36,7 +36,7 @@ export default {
         [VAN_NUYS_LOGO]: {
             yIndex: 3,
             xPosition: 7.5,
-            zOffset: 2.5,
+            zOffset: 3,
             scaleFactor: 0.35
         }
     },

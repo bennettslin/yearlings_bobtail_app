@@ -16,20 +16,23 @@ export default {
     },
     [MARA]: {
         [GOPI]: {
-            yIndex: 2,
-            xPosition: 6.5
+            yIndex: 3,
+            xPosition: 6.5,
+            zOffset: -0.05
         }
     },
     [MIRIAM]: {
         [GOPI]: {
-            yIndex: 2,
-            xPosition: 8.5
+            yIndex: 3,
+            xPosition: 8.5,
+            zOffset: -0.05
         }
     },
     [CATHERINE]: {
         [GOPI]: {
-            yIndex: 2,
-            xPosition: 10
+            yIndex: 3,
+            xPosition: 10,
+            zOffset: -0.05
         }
     }
 }

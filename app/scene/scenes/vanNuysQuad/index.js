@@ -16,22 +16,22 @@ export default {
             xPosition: 3.5
         }
     },
+    [ANDREW]: {
+        [NOODLING]: {
+            yIndex: 5,
+            xPosition: 6.4
+        }
+    },
     [SASHA]: {
         [POPULAR_GIRL]: {
             yIndex: 5,
-            xPosition: 7.5
+            xPosition: 7.85
         }
     },
     [BRAD]: {
         [SNACKING]: {
             yIndex: 5,
-            xPosition: 9
-        }
-    },
-    [ANDREW]: {
-        [NOODLING]: {
-            yIndex: 5,
-            xPosition: 6
+            xPosition: 9.6
         }
     }
 }

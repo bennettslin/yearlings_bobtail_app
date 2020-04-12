@@ -16,13 +16,13 @@ export default {
     [MIRIAM_TRISTAN]: {
         [GREETING]: {
             yIndex: 5,
-            xPosition: 6.5
+            xPosition: 7
         }
     },
     [NESTOR]: {
         [GREETING]: {
             yIndex: 5,
-            xPosition: 9
+            xPosition: 8.9
         }
     }
 }

@@ -1,5 +1,4 @@
-<svg class="presence" 
-    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1523.39 3171.81">
+<svg viewBox="0 0 1523.39 3171.81">
     <g class="cigarette">
         <path class="cigaretteFilter" d="M33.85,1427.43,12,1473.65a64.13,64.13,0,0,1,15.33,7.24L49,1435C46.88,1432.15,37.62,1427.34,33.85,1427.43Z"/>
         <path class="cigaretteBody" d="M3.52,1491.62c3.62,4.2,9.08,3.83,15.64,6.2l8.14-16.93A64.13,64.13,0,0,0,12,1473.65Z"/>

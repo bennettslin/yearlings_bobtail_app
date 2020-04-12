@@ -16,7 +16,7 @@ export default {
     [PUPPET]: {
         [GHOST_ODIN_CLUB]: {
             yIndex: 5,
-            xPosition: 4,
+            xPosition: 3.3,
             scaleFactor: 0.2
         }
     }
