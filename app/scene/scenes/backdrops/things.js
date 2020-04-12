@@ -104,10 +104,6 @@ export default {
             zOffset: 3,
             scaleFactor: 0.45
         },
-        [VALLEY_PANORAMA_BACKDROP]: {
-            scaleFactor: 0.65,
-            trimBottom: 0.05
-        },
         [VALLEY_CLOSER_BACKDROP]: {
             scaleFactor: 0.7
         },

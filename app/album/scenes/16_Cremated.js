@@ -45,7 +45,7 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
-    THOUGHT_MEDIUM,
+    THOUGHT_MEDIUM__FAR,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
@@ -202,7 +202,7 @@ export default [
                 [BUBBLE_SMALL__DEATHBED]: true,
                 [BUBBLE_MEDIUM__DEATHBED]: true,
                 [BUBBLE_LARGE__DEATHBED]: true,
-                [THOUGHT_MEDIUM]: true
+                [THOUGHT_MEDIUM__FAR]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true
@@ -238,7 +238,7 @@ export default [
                 [BUBBLE_SMALL__DEATHBED]: true,
                 [BUBBLE_MEDIUM__DEATHBED]: true,
                 [BUBBLE_LARGE__DEATHBED]: true,
-                [THOUGHT_MEDIUM]: true,
+                [THOUGHT_MEDIUM__FAR]: true,
                 [BUBBLE_SMALL__TENNIS]: true,
                 [BUBBLE_MEDIUM__TENNIS]: true,
                 [BUBBLE_LARGE__TENNIS]: true,

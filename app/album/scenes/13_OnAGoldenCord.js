@@ -15,11 +15,9 @@ import {
 } from '../../constants/scene/scenes'
 import {
     TIME_NIGHT,
-    TIME_EVENING,
     TIME_TWILIGHT,
     TIME_DAWN,
-    SEASON_AUTUMN,
-    SEASON_THOUGHT
+    SEASON_AUTUMN
 } from '../../scene/sky/keys'
 import {
     YOUNG_BENNETT,
@@ -56,7 +54,7 @@ import {
     BUBBLE_SMALL__LEFT,
     BUBBLE_MEDIUM__LEFT,
     BUBBLE_LARGE__LEFT,
-    THOUGHT_LARGE__LEFT
+    THOUGHT_MEDIUM__NEAR
 } from '../../constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
@@ -119,18 +117,26 @@ export default [
                     instance: AWKWARD_CONSOLATION
                 }
             },
+            [BACKDROP]: {
+                [DISTANT_HOUSES_BACKDROP]: true,
+                [OAKLAND_SIDE]: true
+            },
             [BUBBLE]: {
                 [BUBBLE_SMALL__LEFT]: true,
                 [BUBBLE_MEDIUM__LEFT]: true,
                 [BUBBLE_LARGE__LEFT]: true,
-                [THOUGHT_LARGE__LEFT]: true
+                [THOUGHT_MEDIUM__NEAR]: true
+            },
+            [FLAT]: {
+                [OAKLAND_HOUSE_LEFT]: true,
+                [OAKLAND_HOUSE_RIGHT]: true
             },
             [PANEL]: {
                 [LIZ_COUCH__ROOM]: true
             }
         },
         cubes: LIZ_COUCH_THOUGHT_KEY,
-        sky: { time: TIME_EVENING, season: SEASON_THOUGHT }
+        sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 4,

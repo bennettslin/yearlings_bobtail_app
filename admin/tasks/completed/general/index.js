@@ -5562,7 +5562,7 @@ export default [
     },
     {
         taskName: `General scene work.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 9,
+        neededHours: 9
     }
 ]

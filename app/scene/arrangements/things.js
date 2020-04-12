@@ -90,7 +90,8 @@ import THINGS_CEMETERY from 'scene/scenes/cemetery/things'
 import THINGS_STATION_WAGON from 'scene/scenes/stationWagon/things'
 import THINGS_ATTIC from 'scene/scenes/attic/things'
 import THINGS_OAKLAND_HOUSES, {
-    THINGS_OAKLAND_HOUSES_GARRYOWEN
+    THINGS_OAKLAND_HOUSES_GARRYOWEN,
+    THINGS_OAKLAND_HOUSES_GOLDEN
 } from 'scene/scenes/oaklandHouses/things'
 import THINGS_OAKLAND_RESIDENTIAL from 'scene/scenes/oaklandResidential/things'
 import THINGS_OAKLAND_COMMERCIAL from 'scene/scenes/oaklandCommercial/things'
@@ -194,6 +195,7 @@ const SCENE_ARRANGEMENTS = [
     THINGS_ATTIC,
     THINGS_OAKLAND_HOUSES,
     THINGS_OAKLAND_HOUSES_GARRYOWEN,
+    THINGS_OAKLAND_HOUSES_GOLDEN,
     THINGS_BASEMENT_SOFA,
     THINGS_OAKLAND_RESIDENTIAL,
     THINGS_OAKLAND_COMMERCIAL,

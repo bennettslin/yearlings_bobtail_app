@@ -10,6 +10,7 @@ import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
+    STREET_COLOUR as T,
     LIZ_GATE_COLOUR as A,
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
@@ -60,17 +61,6 @@ const DEFAULT_FLOOR = {
         [1, 7, 3, 3, 1],
         [1, 7, 3, 3, 1],
         [1]
-    ]
-}
-
-const DEFAULT_OPEN_FLOOR = {
-    zIndices: [
-        [0],
-        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
-        [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
-        [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
-        [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
     ]
 }
 
@@ -126,20 +116,34 @@ const CUBES = {
                 [G, Z, Z, Z, Z, Z, L, M, M, L, Z, G],
                 [G, Z, Z, Z, Z, Z, Z, L, L, Z, Z, G]
             ],
-            zIndices: DEFAULT_OPEN_FLOOR.zIndices
+            zIndices: [
+                [0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
+            ]
         }
     },
     [LIZ_COUCH_THOUGHT_KEY]: {
         floor: {
             hslaColours: [
                 [G],
-                [G, F, F, F, F, F, F, F, F, F, F, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G],
-                [G, U, U, U, F, F, F, F, F, F, F, G],
-                [G, U, U, U, F, F, F, F, F, F, F, G],
-                [G, F, F, F, F, F, F, F, F, F, F, G]
+                [V],
+                [T],
+                [T, U, U, U, F, F, F, T],
+                [T, U, U, U, F, F, F, T],
+                [T, F, F, F, F, F, F, T]
             ],
-            zIndices: DEFAULT_OPEN_FLOOR.zIndices
+            zIndices: [
+                [0],
+                [1],
+                [0],
+                [0, 7, 3, 3, 1, 1, 1, 0],
+                [0, 7, 3, 3, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 0]
+            ]
         }
     }
 }

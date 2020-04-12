@@ -10,7 +10,7 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
-    THOUGHT_MEDIUM,
+    THOUGHT_MEDIUM__FAR,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
@@ -48,7 +48,7 @@ export default {
             zOffset: 6,
             scaleFactor: 0.4
         },
-        [THOUGHT_MEDIUM]: {
+        [THOUGHT_MEDIUM__FAR]: {
             yIndex: 0,
             xPosition: 3.25,
             scaleFactor: 0.55
