@@ -11,7 +11,7 @@ export default {
         [PAST]: {
             yIndex: 0,
             xPosition: 1,
-            zOffset: 2
+            zOffset: 2.4
         }
     },
     [FATHER]: {

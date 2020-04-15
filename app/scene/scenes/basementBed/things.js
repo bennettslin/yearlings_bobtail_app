@@ -9,16 +9,15 @@ export default {
     [DOOR]: {
         [BASEMENT_DOOR]: {
             yIndex: 2,
-            // hide: true,
             xPosition: 2.5,
             scaleFactor: 0.6
         }
     },
     [FIXTURE]: {
         [CRACKED_PICTURE]: {
-            yIndex: 3,
-            xPosition: 0.5,
-            zOffset: 4
+            yIndex: 4,
+            xPosition: 0.2,
+            zOffset: 3.7
         }
     }
 }

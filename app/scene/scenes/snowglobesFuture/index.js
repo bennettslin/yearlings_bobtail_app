@@ -28,7 +28,7 @@ export default {
         [FUTURE]: {
             yIndex: 0,
             xPosition: 8,
-            zOffset: 2.8
+            zOffset: 3.3
         }
     },
     [KHARI_LIZ]: {

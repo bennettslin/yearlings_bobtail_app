@@ -4,7 +4,6 @@ Make hospital area smaller?
 
 # Scene pre fixes
 bedroom letters
-ghosts
 
 # Scene fix
 Times for each scene

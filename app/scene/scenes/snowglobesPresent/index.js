@@ -11,8 +11,8 @@ import { MISCHIEVOUS_BANJO } from '../../../constants/scene/actors/miriamStephan
 export default {
     [MOTHER]: {
         [PRESENT]: {
-            xPosition: 3,
-            zOffset: 3.5
+            xPosition: 3.2,
+            zOffset: 3.3
         }
     },
     [BENNETT_FATHER]: {

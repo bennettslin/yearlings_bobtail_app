@@ -11,15 +11,15 @@ export default {
     [ESTHER_MOTHER]: {
         [SOBBING_SHIELDING]: {
             yIndex: 4,
-            xPosition: 2,
-            zOffset: 2.5
+            xPosition: 2.4,
+            zOffset: 2.6
         }
     },
     [FATHER]: {
         [REELING]: {
             yIndex: 4,
-            xPosition: 4,
-            zOffset: 2
+            xPosition: 4.5,
+            zOffset: 0.7
         }
     },
     [MIRIAM_BENNETT]: {

@@ -12,14 +12,14 @@ export default {
     [ESTHER_MOTHER]: {
         [HURT_CONSOLING]: {
             yIndex: 4,
-            xPosition: 2,
+            xPosition: 2.2,
             zOffset: 2
         }
     },
     [FATHER]: {
         [ACCUSATORY]: {
             yIndex: 4,
-            xPosition: 5,
+            xPosition: 5.5,
             zOffset: 0.5
         }
     },
