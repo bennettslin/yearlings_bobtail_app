@@ -1,12 +1,15 @@
 import {
     OAKLAND_HOUSES_KEY,
+    OAKLAND_COUCH_THOUGHT_KEY,
     OAKLAND_VOLKSWAGEN_KEY
 } from '../../../constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     STREET_COLOUR as T,
-    PAVEMENT_COLOUR as V
+    PAVEMENT_COLOUR as V,
+    LIZ_FLOOR_COLOUR as F,
+    LIZ_COUCH_COLOUR as U
 } from '../../cubes/colours'
 
 const CUBES = {
@@ -21,6 +24,26 @@ const CUBES = {
                 [0],
                 [1],
                 [0]
+            ]
+        }
+    },
+    [OAKLAND_COUCH_THOUGHT_KEY]: {
+        floor: {
+            hslaColours: [
+                [G],
+                [V],
+                [T],
+                [T, U, U, U, F, F, F, T],
+                [T, U, U, U, F, F, F, T],
+                [T, F, F, F, F, F, F, T]
+            ],
+            zIndices: [
+                [0],
+                [1],
+                [0],
+                [0, 7, 3, 3, 1, 1, 1, 0],
+                [0, 7, 3, 3, 1, 1, 1, 0],
+                [0, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
     },

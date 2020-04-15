@@ -92,7 +92,8 @@ export default {
     [ANDREW]: {
         [EPILOGUE]: {
             yIndex: 4,
-            xPosition: 9.4
+            xPosition: 9.4,
+            zOffset: -0.05
         }
     },
     [MARA]: {
@@ -112,13 +113,15 @@ export default {
     [NESTOR]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 2
+            xPosition: 2,
+            zOffset: -0.07
         }
     },
     [WILLY]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 7.5
+            xPosition: 7.5,
+            zOffset: -0.05
         }
     },
     [MOTHER]: {
@@ -131,7 +134,8 @@ export default {
     [FATHER]: {
         [EPILOGUE]: {
             yIndex: 3,
-            xPosition: 9.7
+            xPosition: 9.7,
+            zOffset: -0.06
         }
     },
 
@@ -145,13 +149,15 @@ export default {
     [KHARI]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 3
+            xPosition: 3,
+            zOffset: -0.05
         }
     },
     [ANA]: {
         [EPILOGUE]: {
             yIndex: 2,
-            xPosition: 5.3
+            xPosition: 5.3,
+            zOffset: -0.05
         }
     },
     [HOWIE]: {

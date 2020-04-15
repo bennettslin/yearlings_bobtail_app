@@ -2,15 +2,13 @@ import {
     LIZ_COUCH_KEY,
     LIZ_COUCH_SEAT_KEY,
     LIZ_COUCH_DARK_KEY,
-    LIZ_COUCH_PEAFOWL_KEY,
-    LIZ_COUCH_THOUGHT_KEY
+    LIZ_COUCH_PEAFOWL_KEY
 } from '../../../constants/scene/scenes'
 
 import {
     DEFAULT_CLEAR_COLOUR as D,
     GROUND_CLEAR_COLOUR as G,
     PAVEMENT_COLOUR as V,
-    STREET_COLOUR as T,
     LIZ_GATE_COLOUR as A,
     LIZ_FLOOR_COLOUR as F,
     LIZ_WALL_COLOUR as W,
@@ -123,26 +121,6 @@ const CUBES = {
                 [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 7, 3, 3, 1, 1, 1, 1, 1, 1, 1, 0],
                 [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0]
-            ]
-        }
-    },
-    [LIZ_COUCH_THOUGHT_KEY]: {
-        floor: {
-            hslaColours: [
-                [G],
-                [V],
-                [T],
-                [T, U, U, U, F, F, F, T],
-                [T, U, U, U, F, F, F, T],
-                [T, F, F, F, F, F, F, T]
-            ],
-            zIndices: [
-                [0],
-                [1],
-                [0],
-                [0, 7, 3, 3, 1, 1, 1, 0],
-                [0, 7, 3, 3, 1, 1, 1, 0],
-                [0, 1, 1, 1, 1, 1, 1, 0]
             ]
         }
     }

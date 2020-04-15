@@ -1,5 +1,4 @@
 # TODO
-Move Liz Couch thought key to Oakland houses
 Change Cremated deathbed to keep Bay Area
 Extend Ana station wagon boots.
 Make hospital area smaller?
@@ -56,15 +55,15 @@ kid: brad
 guy: howie
 woman: amy
 
-## todo next
-
 ## Tan
-kid: andrew
 older: willy
 guy: khari
 woman: ana
 
+## todo next
+
 ## White/Black
+kid: andrew
 older: father
 guy: nestor
 

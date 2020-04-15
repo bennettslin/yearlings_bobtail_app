@@ -5564,5 +5564,10 @@ export default [
         taskName: `General scene work.`,
         workedHours: 9,
         neededHours: 9
+    },
+    {
+        taskName: `Actor colours.`,
+        workedHours: 7,
+        neededHours: 7
     }
 ]

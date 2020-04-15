@@ -7,7 +7,7 @@ import {
     PANEL
 } from '../../constants/scene/things'
 import {
-    LIZ_COUCH_THOUGHT_KEY,
+    OAKLAND_COUCH_THOUGHT_KEY,
     OAKLAND_HOUSES_KEY,
     OAKLAND_RESIDENTIAL_KEY,
     OAKLAND_COMMERCIAL_KEY,
@@ -135,7 +135,7 @@ export default [
                 [LIZ_COUCH__ROOM]: true
             }
         },
-        cubes: LIZ_COUCH_THOUGHT_KEY,
+        cubes: OAKLAND_COUCH_THOUGHT_KEY,
         sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {

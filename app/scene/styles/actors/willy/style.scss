@@ -1,11 +1,7 @@
 .willy#{$suffix} {
-    .visor { fill: hsl(59, 57%, 51%); }
-    .visorBillTop { fill: hsl(28, 67%, 55%); }
-    .visorBillBottom { fill: hsl(28, 56%, 47%); }
-
-    .willyShirt { fill: hsl(197, 17%, 66%); }
-    .willyPants { fill: hsl(261, 18%, 47%); }
-    .willyShoe { fill: hsl(148, 14%, 54%); }
+    .willyShirt { fill: hsl(36, 17%, 66%); }
+    .willyPants { fill: hsl(221, 14%, 47%); }
+    .willyShoe { fill: hsl(148, 8%, 54%); }
 
     &.collecting {
         .labelReverse { fill: hsl(189, 36%, 29%); }
@@ -13,6 +9,10 @@
     }
 
     &.crossingGuard {
+        .visor { fill: hsl(59, 57%, 51%); }
+        .visorBillTop { fill: hsl(28, 67%, 55%); }
+        .visorBillBottom { fill: hsl(28, 56%, 47%); }
+
         .signWhite { fill: hsl(0, 0%, 80%); }
         .signRed { fill: hsl(0, 40%, 50%); }
         .signHandle { fill: hsl(38, 22%, 62%); }
