@@ -115,13 +115,13 @@ const LayersActor = ({
         <Layer {...{ actorKey: FATHER, instanceKey: father }} />
         <Layer {...{ actorKey: MOTHER, instanceKey: mother }} />
         <Layer {...{ actorKey: CATHERINE, instanceKey: catherine }} />
+        <Layer {...{ actorKey: HOWIE, instanceKey: howie }} />
+        <Layer {...{ actorKey: HOWIE_WILLY, instanceKey: howieWilly }} />
         <Layer {...{ actorKey: MARA, instanceKey: mara }} />
         <Layer {...{ actorKey: JACOB, instanceKey: jacob }} />
         <Layer {...{ actorKey: JACOB_MARA, instanceKey: jacobMara }} />
         <Layer {...{ actorKey: ANA, instanceKey: ana }} />
         <Layer {...{ actorKey: ANA_HOWIE, instanceKey: anaHowie }} />
-        <Layer {...{ actorKey: HOWIE, instanceKey: howie }} />
-        <Layer {...{ actorKey: HOWIE_WILLY, instanceKey: howieWilly }} />
         <Layer {...{ actorKey: TOMER, instanceKey: tomer }} />
         <Layer {...{ actorKey: MIRIAM, instanceKey: miriam }} />
         <Layer {...{ actorKey: PRETEEN_BENNETT, instanceKey: preteenBennett }} />

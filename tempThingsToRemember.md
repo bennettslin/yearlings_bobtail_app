@@ -1,6 +1,5 @@
 # TODO
 Change Cremated deathbed to keep Bay Area
-Extend Ana station wagon boots.
 Make hospital area smaller?
 
 # Scene pre fixes

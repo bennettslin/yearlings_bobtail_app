@@ -24,14 +24,15 @@ export default {
         [STATION_WAGON]: {
             yIndex: 3,
             xPosition: 5.8,
-            zOffset: -0.53
+            zOffset: -0.6
         }
     },
     [HOWIE]: {
         [STATION_WAGON]: {
             yIndex: 2,
             xPosition: 6.7,
-            zOffset: -0.04
+            zOffset: -0.04,
+            layerYIndex: 3
         }
     }
 }
