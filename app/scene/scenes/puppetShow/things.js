@@ -47,15 +47,13 @@ export default {
         },
         [TAIWAN_MOUNTAIN_LEFT]: {
             yIndex: 5,
-            xPosition: -0.5,
-            scaleFactor: 0.4,
-            alignLeft: true
+            xPosition: 1.3,
+            scaleFactor: 0.4
         },
         [TAIWAN_MOUNTAIN_RIGHT]: {
             yIndex: 5,
-            xPosition: 11.5,
-            scaleFactor: 0.4,
-            alignRight: true
+            xPosition: 9.2,
+            scaleFactor: 0.4
         }
     },
     [PANEL]: {

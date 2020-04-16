@@ -21,8 +21,7 @@ export default {
         [SIGNPOST]: {
             yIndex: 5,
             xPosition: 10.5,
-            scaleFactor: 0.35,
-            flipHorizontal: true
+            scaleFactor: 0.35
         },
         [BANCROFT_SHRUB]: {
             yIndex: 4,

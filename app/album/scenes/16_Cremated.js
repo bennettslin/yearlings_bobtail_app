@@ -204,11 +204,19 @@ export default [
                 [BUBBLE_LARGE__DEATHBED]: true,
                 [THOUGHT_MEDIUM__FAR]: true
             },
+            [BACKDROP]: {
+                [GOLDEN_GATE_BACKDROP]: true
+            },
             [CUTOUT]: {
                 [IV_DRIP]: true
             },
             [FIXTURE]: {
-                [HOSPITAL_RECORD_PLAYER]: true
+                [HOSPITAL_RECORD_PLAYER]: true,
+                [FREEWAY_SIGN]: true
+            },
+            [FLAT]: {
+                [EL_CERRITO_FAR]: true,
+                [EL_CERRITO_NEAR]: true
             },
             [FURNITURE]: {
                 [DEATHBED_PILLOW]: true
@@ -218,7 +226,7 @@ export default [
             }
         },
         cubes: EL_CERRITO_DEATHBED_KEY,
-        sky: { season: SEASON_THOUGHT }
+        sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
         unitIndex: 8,

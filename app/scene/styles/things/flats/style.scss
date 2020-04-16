@@ -193,7 +193,7 @@
 }
 
 .tennisCourt {
-    .court { fill: hsl(220, 51%, 55%); }
+    .court { fill: hsl($HUE_TENNIS, 51%, 55%); }
     .stripeDisplayLine { stroke: hsl(0, 0%, 100%); }
     .mesh { fill: hsla(78, 24%, 66%, 0.5); }
     .net { fill: hsl(78, 12%, 28%); }

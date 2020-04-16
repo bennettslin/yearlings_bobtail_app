@@ -19,10 +19,7 @@ import {
     getSizeForPresence,
     getViewBoxSize
 } from './helper/size'
-import {
-    setSvgTransform,
-    getPresenceTransform
-} from './helper/transform'
+import { setSvgTransform } from './helper/transform'
 import { DEV_RENDER_ONLY_PRESENCES } from '../../constants/dev'
 
 export default class PresenceSvg extends PureComponent {
@@ -175,18 +172,6 @@ export default class PresenceSvg extends PureComponent {
         })
     }
 
-    getPresenceTransform() {
-        const {
-            alignLeft,
-            alignRight
-        } = this.getArrangement()
-
-        return getPresenceTransform({
-            alignLeft,
-            alignRight
-        })
-    }
-
     getSharedStyle() {
         const {
             actorKey,
@@ -232,7 +217,6 @@ export default class PresenceSvg extends PureComponent {
                 adjustedWidth,
                 adjustedHeight
             } = this.state,
-            containerTransform = this.getPresenceTransform(),
             presenceKeyClassName = convertPresenceKeyToClassName(presenceKey),
             sharedStyle = this.getSharedStyle(),
             duplicateKeyClassName = presenceKey !== presenceKeyClassName && presenceKey,
@@ -258,9 +242,6 @@ export default class PresenceSvg extends PureComponent {
                         height: `${adjustedHeight.toFixed(2)}%`,
                         ...perspective && {
                             perspective: `${perspective}em`
-                        },
-                        ...containerTransform && {
-                            transform: containerTransform
                         }
                     },
                     svgClassName: cx(

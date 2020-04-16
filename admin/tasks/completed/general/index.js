@@ -5569,5 +5569,10 @@ export default [
         taskName: `Actor colours.`,
         workedHours: 7,
         neededHours: 7
+    },
+    {
+        taskName: `Deathbed work.`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

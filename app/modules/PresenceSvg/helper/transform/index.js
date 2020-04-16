@@ -1,32 +1,4 @@
-const
-    SCALE_STYLE = 'scaleX(-1)',
-    DEFAULT_TRANSLATE_X = 50
-
-const _getTranslateStyle = ({ alignLeft, alignRight }) => {
-    let translateX
-
-    if (alignLeft) {
-        translateX = 0
-    } else if (alignRight) {
-        translateX = 100
-    } else {
-        translateX = DEFAULT_TRANSLATE_X
-    }
-
-    return `translate(-${translateX}%, -100%)`
-}
-
-export const getPresenceTransform = ({
-    alignLeft,
-    alignRight
-}) => {
-    if (alignLeft || alignRight) {
-        return _getTranslateStyle({ alignLeft, alignRight })
-
-    } else {
-        return null
-    }
-}
+const SCALE_STYLE = 'scaleX(-1)'
 
 const _getSvgTransformForPresence = ({
     flipHorizontal,

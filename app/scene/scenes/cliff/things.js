@@ -18,16 +18,13 @@ export default {
     },
     [FLAT]: {
         [CLIFF_GRAVES_FAR]: {
-            yIndex: 1,
-            xPosition: 12.25,
-            scaleFactor: 0.48,
-            alignRight: true
+            xPosition: 9.8,
+            scaleFactor: 0.48
         },
         [CLIFF_GRAVES_NEAR]: {
-            yIndex: 4,
-            xPosition: 11.5,
-            scaleFactor: 0.4,
-            alignRight: true
+            yIndex: 5,
+            xPosition: 8.6,
+            scaleFactor: 0.4
         }
     }
 }

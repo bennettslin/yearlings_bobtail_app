@@ -11,7 +11,8 @@ import {
     HUE_ROOF,
     HUE_SAND,
     HUE_SNOW,
-    HUE_SNOWGLOBE
+    HUE_SNOWGLOBE,
+    HUE_TENNIS
 } from '../../../scss/app'
 
 export const DEFAULT_CLEAR_COLOUR = 'clear'
@@ -21,6 +22,7 @@ export const SAND_COLOUR = 'sand'
 export const STREET_COLOUR = 'street'
 export const CROSSWALK_COLOUR = 'crosswalk'
 export const PAVEMENT_COLOUR = 'pavement'
+export const TENNIS_COLOUR = 'tennis'
 export const TAIWAN_GATE_COLOUR = 'taiwanGate'
 export const BANCROFT_GATE_COLOUR = 'bancroftGate'
 export const LIZ_GATE_COLOUR = 'lizGate'
@@ -82,6 +84,7 @@ const HSLA_MAP = {
     /* V. */
     [OCEAN_COLOUR]: { h: parseInt(HUE_OCEAN), s: 51, l: 43 },
     [PAVEMENT_COLOUR]: { h: 0, s: 0, l: 61 },
+    [TENNIS_COLOUR]: { h: parseInt(HUE_TENNIS), s: 51, l: 55 },
     /* K. */
     [SAND_COLOUR]: { h: parseInt(HUE_SAND), s: 30, l: 64 },
     [CROSSWALK_COLOUR]: { h: 48, s: 6, l: 82 },

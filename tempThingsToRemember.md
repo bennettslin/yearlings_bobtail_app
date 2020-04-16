@@ -1,7 +1,3 @@
-# TODO
-Change Cremated deathbed to keep Bay Area
-Make hospital area smaller?
-
 # Scene pre fixes
 bedroom letters
 

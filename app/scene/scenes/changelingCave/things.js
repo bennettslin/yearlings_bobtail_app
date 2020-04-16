@@ -42,22 +42,18 @@ export default {
         },
         [TROLL_SHADOW_LEFT]: {
             yIndex: 5,
-            xPosition: -0.5,
-            scaleFactor: 0.35,
-            alignLeft: true
+            xPosition: 1,
+            scaleFactor: 0.35
         },
         [TROLL_SHADOW_RIGHT]: {
             yIndex: 5,
-            xPosition: 11.5,
-            scaleFactor: 0.35,
-            alignRight: true
+            xPosition: 9.3,
+            scaleFactor: 0.35
         },
         [TROLL_SHADOW_FAR]: {
             yIndex: 4,
-            xPosition: 11.625,
-            zOffset: -0.25,
-            scaleFactor: 0.35,
-            alignRight: true
+            xPosition: 10,
+            scaleFactor: 0.35
         }
     }
 }

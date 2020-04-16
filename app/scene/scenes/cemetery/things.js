@@ -19,17 +19,15 @@ export default {
     [FLAT]: {
         [CEMETERY_HILLS_LEFT]: {
             yIndex: 1,
-            xPosition: -1.25,
+            xPosition: 1.2,
             scaleFactor: 0.4,
-            trimBottom: 0.2,
-            alignLeft: true
+            trimBottom: 0.2
         },
         [CEMETERY_HILLS_RIGHT]: {
             yIndex: 2,
-            xPosition: 12,
+            xPosition: 8.8,
             scaleFactor: 0.4,
-            trimBottom: 0.2,
-            alignRight: true
+            trimBottom: 0.2
         }
     }
 }
