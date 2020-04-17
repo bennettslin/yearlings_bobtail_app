@@ -11,19 +11,19 @@ export default {
     [PRETEEN_BENNETT]: {
         [ENRAGED]: {
             yIndex: 5,
-            xPosition: 2.5
-        }
-    },
-    [FATHER]: {
-        [ROARING]: {
-            yIndex: 5,
-            xPosition: 8.5
+            xPosition: 1.5
         }
     },
     [CHRISTOPHER]: {
         [SOBBING]: {
             yIndex: 5,
-            xPosition: 4
+            xPosition: 3.9
+        }
+    },
+    [FATHER]: {
+        [ROARING]: {
+            yIndex: 5,
+            xPosition: 8.1
         }
     }
 }

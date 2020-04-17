@@ -48,9 +48,14 @@
     .bar { fill: hsl(175, 6%, 59%); }
 }
 
-.captainBedLamp {
-    .lampLight { fill: hsl(100, 42%, 75%); }
-    .lampDark { fill: hsl(101, 24%, 57%); }
+.bedroomLamp {
+    .lampDark { fill: hsl(1, 37%, 57%); }
+    .lampLight { fill: hsl(1, 37%, 75%); }
+}
+
+.bedroomLamp__desk {
+    // TODO: Not the best approach. Duplicate styling.
+    .bulbOn { fill: hsla(240, 100%, 94%, 0.7); }
 }
 
 .cashBox {

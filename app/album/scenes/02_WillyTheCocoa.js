@@ -77,7 +77,9 @@ import {
     BEDROOM_BLINDS_OPEN
 } from '../../constants/scene/things/doors'
 import {
+    BEDROOM_LAMP__DESK,
     LETTER_SCRAPS__CHRISTOPHER,
+    TORN_MAGAZINES__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
     HAIRCUT_SCISSORS
 } from '../../constants/scene/things/fixtures'
@@ -210,7 +212,9 @@ export default [
                 [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURE]: {
+                [BEDROOM_LAMP__DESK]: true,
                 [LETTER_SCRAPS__CHRISTOPHER]: true,
+                [TORN_MAGAZINES__CHRISTOPHER]: true,
                 [CHRISTOPHER_LETTERS]: true
             },
             [FURNITURE]: {
@@ -279,6 +283,9 @@ export default [
             },
             [DOOR]: {
                 [BEDROOM_BLINDS_OPEN]: true
+            },
+            [FIXTURE]: {
+                [BEDROOM_LAMP__DESK]: true
             },
             [FLAT]: {
                 [BEDROOM_SIREN]: true

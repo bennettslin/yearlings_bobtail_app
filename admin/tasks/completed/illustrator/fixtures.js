@@ -35,7 +35,7 @@ export default [
         neededHours: 0.5
     },
     {
-        taskName: 'captainBedLamp',
+        taskName: 'bedroomLamp',
         workedHours: 0.5,
         neededHours: 0.5
     },

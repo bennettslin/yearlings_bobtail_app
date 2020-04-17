@@ -3,10 +3,11 @@ import safewayBag from 'assets/svgs/fixtures/safewayBag'
 import recordPlayerStool from 'assets/svgs/fixtures/recordPlayerStool'
 import haircutScissors from 'assets/svgs/fixtures/haircutScissors'
 import letterScraps from 'assets/svgs/fixtures/letterScraps'
+import tornMagazines from 'assets/svgs/fixtures/tornMagazines'
 import christopherLetters from 'assets/svgs/fixtures/christopherLetters'
 import backpackBennett from 'assets/svgs/fixtures/backpackBennett'
 import fridgeDrawings from 'assets/svgs/fixtures/fridgeDrawings'
-import captainBedLamp from 'assets/svgs/fixtures/captainBedLamp'
+import bedroomLamp from 'assets/svgs/fixtures/bedroomLamp'
 import redEnvelopeMoney from 'assets/svgs/fixtures/redEnvelopeMoney'
 import beyonderEnvelope from 'assets/svgs/fixtures/beyonderEnvelope'
 import bennettLetters from 'assets/svgs/fixtures/bennettLetters'
@@ -59,12 +60,15 @@ import {
     RECORD_PLAYER_STOOL,
     HAIRCUT_SCISSORS,
     LETTER_SCRAPS__CHRISTOPHER,
+    TORN_MAGAZINES__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
     BACKPACK_BENNETT,
     FRIDGE_DRAWINGS,
     LETTER_SCRAPS__BENNETT,
+    TORN_MAGAZINES__BENNETT,
     BENNETT_LETTERS,
-    CAPTAIN_BED_LAMP,
+    BEDROOM_LAMP__BED,
+    BEDROOM_LAMP__DESK,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
     THROWN_FRUIT,
@@ -124,13 +128,16 @@ export default {
     [RECORD_PLAYER_STOOL]: recordPlayerStool,
     [HAIRCUT_SCISSORS]: haircutScissors,
     [LETTER_SCRAPS__CHRISTOPHER]: letterScraps,
+    [TORN_MAGAZINES__CHRISTOPHER]: tornMagazines,
     [CHRISTOPHER_LETTERS]: christopherLetters,
     [BACKPACK_BENNETT]: backpackBennett,
     [FRIDGE_DRAWINGS]: fridgeDrawings,
-    [CAPTAIN_BED_LAMP]: captainBedLamp,
+    [BEDROOM_LAMP__BED]: bedroomLamp,
+    [BEDROOM_LAMP__DESK]: bedroomLamp,
     [RED_ENVELOPE_MONEY]: redEnvelopeMoney,
     [BEYONDER_ENVELOPE]: beyonderEnvelope,
     [LETTER_SCRAPS__BENNETT]: letterScraps,
+    [TORN_MAGAZINES__BENNETT]: tornMagazines,
     [BENNETT_LETTERS]: bennettLetters,
     [THROWN_FRUIT]: thrownFruit,
     [BALLED_FOIL__LOCKERS]: balledFoil,

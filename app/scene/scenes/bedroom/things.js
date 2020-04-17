@@ -25,9 +25,12 @@ import {
 } from '../../../constants/scene/things/doors'
 import {
     LETTER_SCRAPS__CHRISTOPHER,
+    TORN_MAGAZINES__CHRISTOPHER,
     CHRISTOPHER_LETTERS,
-    CAPTAIN_BED_LAMP,
+    BEDROOM_LAMP__BED,
+    BEDROOM_LAMP__DESK,
     LETTER_SCRAPS__BENNETT,
+    TORN_MAGAZINES__BENNETT,
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE
@@ -82,6 +85,14 @@ export default {
             scaleFactor: 0.65
         }
     },
+    [FIXTURE]: {
+        [BEDROOM_LAMP__DESK]: {
+            yIndex: 2,
+            xPosition: 3.6,
+            zOffset: -0.04,
+            layerYIndex: 3
+        }
+    },
     [FURNITURE]: {
         [CAPTAIN_BED_PILLOW]: {
             yIndex: 2,
@@ -109,12 +120,17 @@ export default {
 export const THINGS_BEDROOM_ENRAGED = {
     [FIXTURE]: {
         [LETTER_SCRAPS__CHRISTOPHER]: {
+            yIndex: 4,
+            xPosition: 5.3
+        },
+        [TORN_MAGAZINES__CHRISTOPHER]: {
             yIndex: 5,
-            xPosition: 4
+            xPosition: 3,
+            zOffset: -0.1
         },
         [CHRISTOPHER_LETTERS]: {
             yIndex: 5,
-            xPosition: 5
+            xPosition: 5.1
         }
     }
 }
@@ -146,13 +162,17 @@ export const THINGS_BEDROOM_GUILTY = {
         }
     },
     [FIXTURE]: {
-        [CAPTAIN_BED_LAMP]: {
+        [BEDROOM_LAMP__BED]: {
             yIndex: 4,
             xPosition: 9
         },
         [LETTER_SCRAPS__BENNETT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 7.5
+        },
+        [TORN_MAGAZINES__BENNETT]: {
+            yIndex: 4,
+            xPosition: 6
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,

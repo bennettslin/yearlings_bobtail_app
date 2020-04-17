@@ -94,8 +94,10 @@ import {
     PRINCIPAL_DOOR
 } from '../../constants/scene/things/doors'
 import {
-    CAPTAIN_BED_LAMP,
+    BEDROOM_LAMP__BED,
+    BEDROOM_LAMP__DESK,
     LETTER_SCRAPS__BENNETT,
+    TORN_MAGAZINES__BENNETT,
     BENNETT_LETTERS,
     RED_ENVELOPE_MONEY,
     BEYONDER_ENVELOPE,
@@ -164,8 +166,9 @@ export default [
                 [BEDROOM_BLINDS]: true
             },
             [FIXTURE]: {
-                [CAPTAIN_BED_LAMP]: true,
+                [BEDROOM_LAMP__BED]: true,
                 [LETTER_SCRAPS__BENNETT]: true,
+                [TORN_MAGAZINES__BENNETT]: true,
                 [BENNETT_LETTERS]: true
             },
             [PANEL]: {
@@ -196,6 +199,7 @@ export default [
                 [BEDROOM_BLINDS_OPEN]: true
             },
             [FIXTURE]: {
+                [BEDROOM_LAMP__DESK]: true,
                 [RED_ENVELOPE_MONEY]: true
             },
             [FLAT]: {
@@ -259,6 +263,7 @@ export default [
                 [SPACE_STATION]: true
             },
             [FIXTURE]: {
+                [BEDROOM_LAMP__DESK]: true,
                 [BEYONDER_ENVELOPE]: true
             },
             [PANEL]: {
