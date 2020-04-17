@@ -1,6 +1,3 @@
-# Scene pre fixes
-bedroom letters
-
 # Scene fix
 Times for each scene
 Improve faces if possible

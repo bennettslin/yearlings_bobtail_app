@@ -164,19 +164,24 @@ export const THINGS_BEDROOM_GUILTY = {
     [FIXTURE]: {
         [BEDROOM_LAMP__BED]: {
             yIndex: 4,
-            xPosition: 9
+            xPosition: 9.3,
+            zOffset: -0.05,
+            layerYIndex: 5
         },
         [LETTER_SCRAPS__BENNETT]: {
             yIndex: 4,
-            xPosition: 7.5
+            xPosition: 6,
+            zOffset: -0.07,
+            layerYIndex: 5
         },
         [TORN_MAGAZINES__BENNETT]: {
             yIndex: 4,
-            xPosition: 6
+            xPosition: 5.8,
+            layerYIndex: 5
         },
         [BENNETT_LETTERS]: {
             yIndex: 5,
-            xPosition: 7.4,
+            xPosition: 7.2,
             zOffset: -0.05
         }
     }
