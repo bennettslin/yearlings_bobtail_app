@@ -5574,5 +5574,10 @@ export default [
         taskName: `Deathbed work.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Bedroom letters work.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

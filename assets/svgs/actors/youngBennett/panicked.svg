@@ -1,4 +1,5 @@
-<svg viewBox="0 0 1718.04 1944.63">
+<svg class="presence" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1718.04 1944.63">
     <g class="sockWhite">
         <path d="M1159.92,1499.29l-23.87-8.53-38.13,92.15c52.08,11.54,86.3,29.28,124,71.47Z"/>
         <path d="M360.12,1684c-24,39.76-55,80.72-90.18,122.39,60,58.29,149.33-40.41,149.33-40.41Z"/>
@@ -156,8 +157,8 @@
     </g>
     <g class="eye">
         <circle class="sclera" cx="655.39" cy="279.28" r="42.69"/>
-        <ellipse class="irisDarkBrown" cx="651.6" cy="280.86" rx="18.86" ry="16.15" transform="translate(180.74 811.66) rotate(-71.74)"/>
-        <ellipse class="pupil" cx="649.24" cy="280.08" rx="7.34" ry="6.28" transform="translate(179.85 808.89) rotate(-71.74)"/>
+        <ellipse class="irisDarkBrown" cx="650.6" cy="276.86" rx="18.86" ry="16.15" transform="translate(183.85 807.97) rotate(-71.74)"/>
+        <ellipse class="pupil" cx="648.24" cy="276.08" rx="7.34" ry="6.28" transform="translate(182.97 805.19) rotate(-71.74)"/>
     </g>
     <g class="skinEastAsian">
         <path d="M575,387.51c43.16,21.88,57.6,65.68,54.38,118.16,1.05,66.17,147.85,34.07,159.72,1.71,3.89-43.23,9.86-65.63,60.63-92.51"/>
