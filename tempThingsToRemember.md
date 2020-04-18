@@ -27,9 +27,6 @@ Bennett breakup
 Catherine quipping
 Bennett soliciting
 
-## M
-Ana eating
-
 ## Grasshoppers
 Bennett dishroom lancet (too young?)
 Liz lower receiving arm
@@ -37,10 +34,6 @@ Bennett mop sopped
 Bennett gate code (head back is weird)
 Bennett gingerbread prison (too young?)
 Liz missionary (too old?)
-
-## Constellations
-Tomer Abbey Road (neck too thin)
-Ana station wagon (cut neck line)
 
 ## Look Back
 Bennett flirting
@@ -54,14 +47,10 @@ Bennett leaving (head shape a little weird)
 ## Golden Cord
 Bennett cord side
 Bennett cord back
-Bennett drying tears
-Stephanie drying tears (needs neck)
-young Bennett child
 anita young child
 
 ## Uncanny Valley
 Miriam asleep
-Stephanie Bennett recording (neck lines)
 
 ## Cremated
 Miriam perfuming (have eye shadow lines?)
@@ -73,6 +62,3 @@ Miriam reversing
 ## Vegan
 Stephanie demonstrator
 Bennett demonstration
-
-## Dream
-Amy doctor (neck line?)
