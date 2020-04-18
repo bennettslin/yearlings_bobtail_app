@@ -1,11 +1,11 @@
 <svg viewBox="0 0 252 1002">
   <defs>
-    <linearGradient id="fill__theatreLit" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient class="fill__theatreLit" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="hsl(52, 6%, 58%)" />
       <stop offset="25%" stop-color="hsl(52, 6%, 49%)" />
       <stop offset="100%" stop-color="hsl(52, 6%, 41%)" />
     </linearGradient>
-    <linearGradient id="fill__theatreDark" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient class="fill__theatreDark" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="hsl(52, 6%, 38%)" />
       <stop offset="25%" stop-color="hsl(52, 6%, 29%)" />
       <stop offset="100%" stop-color="hsl(52, 6%, 21%)" />
