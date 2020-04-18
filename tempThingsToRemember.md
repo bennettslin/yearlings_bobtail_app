@@ -16,20 +16,12 @@ Revisit Mara's head?
 
 # Face improvements
 
-## Didi
-young Bennett flustered
-
-## Odin
-preteen Bennett shore
-
 ## Ash
 Bennett breakup
-Catherine quipping
 Bennett soliciting
 
 ## Grasshoppers
 Bennett dishroom lancet (too young?)
-Liz lower receiving arm
 Bennett mop sopped
 Bennett gate code (head back is weird)
 Bennett gingerbread prison (too young?)
@@ -47,7 +39,6 @@ Bennett leaving (head shape a little weird)
 ## Golden Cord
 Bennett cord side
 Bennett cord back
-anita young child
 
 ## Uncanny Valley
 Miriam asleep
