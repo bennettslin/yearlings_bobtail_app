@@ -14,7 +14,7 @@ export default {
     [LIZ]: {
         [MUSEUM]: {
             yIndex: 4,
-            xPosition: 5
+            xPosition: 5.8
         }
     }
 }

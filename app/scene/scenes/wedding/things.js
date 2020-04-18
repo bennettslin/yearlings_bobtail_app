@@ -43,15 +43,18 @@ export default {
         [WEDDING_PLATFORM]: {
             yIndex: 3,
             xPosition: 1.3,
-            zOffset: -0.125,
-            scaleFactor: 0.5
+            zOffset: -0.09,
+            scaleFactor: 0.5,
+            layerYIndex: 4
         }
     },
     [PUPPET]: {
         [PUPPET_KHARI_LIZ]: {
             yIndex: 2,
             xPosition: 2,
-            scaleFactor: 0.25
+            zOffset: -0.07,
+            scaleFactor: 0.25,
+            layerYIndex: 3
         }
     }
 }

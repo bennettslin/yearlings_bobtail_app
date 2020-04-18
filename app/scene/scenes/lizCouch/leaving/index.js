@@ -14,7 +14,7 @@ export default {
     [LIZ]: {
         [LEAVING_CRUMBLED]: {
             yIndex: 5,
-            xPosition: 5.7,
+            xPosition: 6.2,
             zOffset: -0.2
         }
     }

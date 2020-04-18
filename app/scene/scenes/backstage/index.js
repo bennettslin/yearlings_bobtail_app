@@ -9,6 +9,12 @@ import { DOUBLE_ALBERT } from '../../../constants/scene/actors/khari'
 import { FLAPPER } from '../../../constants/scene/actors/stephanie'
 
 export default {
+    [STEPHANIE]: {
+        [FLAPPER]: {
+            yIndex: 2,
+            xPosition: 1.7
+        }
+    },
     [BENNETT]: {
         [BACKSTAGE]: {
             yIndex: 4,
@@ -25,12 +31,6 @@ export default {
         [DOUBLE_ALBERT]: {
             yIndex: 4,
             xPosition: 8
-        }
-    },
-    [STEPHANIE]: {
-        [FLAPPER]: {
-            yIndex: 5,
-            xPosition: 3
         }
     }
 }

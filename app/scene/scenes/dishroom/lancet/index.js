@@ -8,13 +8,13 @@ export default {
     [BENNETT]: {
         [DISHROOM_LANCET]: {
             yIndex: 5,
-            xPosition: 4
+            xPosition: 4.5
         }
     },
     [LIZ]: {
         [DISHROOM_LANCET]: {
             yIndex: 5,
-            xPosition: 6.5
+            xPosition: 6.7
         }
     }
 }
