@@ -1,26 +1,26 @@
 <svg viewBox="0 0 1613.55 500.33">
-    <g class="redLight">
-        <circle cx="535.55" cy="268.78" r="230.55"/>
-        <circle cx="1142.14" cy="203.89" r="202.89"/>
-    </g>
-    <g class="redBrighter">
-        <circle cx="535.55" cy="268.78" r="199"/>
-        <circle cx="1142.14" cy="203.89" r="175.12"/>
-    </g>
-    <g class="redBrightest">
-        <circle cx="535.55" cy="268.78" r="167"/>
-        <circle cx="1142.14" cy="203.89" r="146.96"/>
-    </g>
-    <g class="blueLight">
-        <circle cx="231.55" cy="248.78" r="230.55"/>
-        <circle cx="1409.66" cy="213.89" r="202.89"/>
-    </g>
-    <g class="blueBrighter">
-        <circle cx="231.55" cy="248.78" r="199"/>
-        <circle cx="1409.66" cy="213.89" r="175.12"/>
-    </g>
-    <g class="blueBrightest">
-        <circle cx="231.55" cy="248.78" r="167"/>
-        <circle cx="1409.66" cy="213.89" r="146.96"/>
-    </g>
+  <g class="redLight">
+    <circle cx="535.55" cy="268.78" r="230.55"/>
+    <circle cx="1142.14" cy="203.89" r="202.89"/>
+  </g>
+  <g class="redBrighter">
+    <circle cx="535.55" cy="268.78" r="199"/>
+    <circle cx="1142.14" cy="203.89" r="175.12"/>
+  </g>
+  <g class="redBrightest">
+    <circle cx="535.55" cy="268.78" r="167"/>
+    <circle cx="1142.14" cy="203.89" r="146.96"/>
+  </g>
+  <g class="blueLight">
+    <circle cx="231.55" cy="248.78" r="230.55"/>
+    <circle cx="1409.66" cy="213.89" r="202.89"/>
+  </g>
+  <g class="blueBrighter">
+    <circle cx="231.55" cy="248.78" r="199"/>
+    <circle cx="1409.66" cy="213.89" r="175.12"/>
+  </g>
+  <g class="blueBrightest">
+    <circle cx="231.55" cy="248.78" r="167"/>
+    <circle cx="1409.66" cy="213.89" r="146.96"/>
+  </g>
 </svg>
