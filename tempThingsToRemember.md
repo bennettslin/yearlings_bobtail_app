@@ -44,11 +44,7 @@ Bennett cord back
 Miriam asleep
 
 ## Cremated
-Miriam perfuming (have eye shadow lines?)
-Miriam cowgirl (eye shadow lines?)
 Bennett infirm
-Miriam tennis
-Miriam reversing
 
 ## Vegan
 Stephanie demonstrator
