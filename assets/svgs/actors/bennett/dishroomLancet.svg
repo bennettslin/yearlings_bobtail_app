@@ -1,4 +1,5 @@
-<svg viewBox="0 0 1344.77 2954.9">
+<svg class="presence" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1344.77 2954.9">
     <g class="soleWhite">
         <path d="M874,2645.67c39.65-4.72,99.18-41.23,118.37,9.42,4.62,93.8-118.84,101.7-240.63,165.23-36,18.79-90.48,33.33-100.79,27.78-10.92-7.89-16.88-17.8-17.61-29.83Z"/>
         <path d="M376.88,2848.85c44.72,3.93,64.52,41.31,59,73.06-102.38,64.29-157.15,14.33-242.07-.8-37.59-6.69-95.82-20.85-106.14-38.31-6-13-5.6-25.73-.73-39.87Z"/>
@@ -114,12 +115,12 @@
     <g class="eye">
         <path class="sclera" d="M693,407.49,359.68,351.44l341.71-10.31C705.39,359.54,704.93,386.35,693,407.49Z"/>
         <g class="irisDarkBrown">
-            <ellipse cx="563.68" cy="372.15" rx="21.76" ry="17.42" transform="translate(132.88 892.38) rotate(-83.81)"/>
-            <ellipse cx="688.85" cy="379.56" rx="21.76" ry="13.86" transform="translate(237.18 1023.44) rotate(-83.81)"/>
+            <ellipse cx="564.68" cy="367.15" rx="21.76" ry="17.42" transform="translate(138.74 888.91) rotate(-83.81)"/>
+            <ellipse cx="689.85" cy="374.56" rx="21.76" ry="13.86" transform="translate(243.04 1019.97) rotate(-83.81)"/>
         </g>
         <g class="pupil">
-            <ellipse cx="566.84" cy="373.5" rx="8.46" ry="6.78" transform="translate(134.36 896.73) rotate(-83.81)"/>
-            <ellipse cx="691.35" cy="380.84" rx="8.46" ry="5.39" transform="translate(238.13 1027.06) rotate(-83.81)"/>
+            <ellipse cx="567.84" cy="368.5" rx="8.46" ry="6.78" transform="translate(140.22 893.26) rotate(-83.81)"/>
+            <ellipse cx="692.35" cy="375.84" rx="8.46" ry="5.39" transform="translate(244 1023.59) rotate(-83.81)"/>
         </g>
     </g>
     <g class="skinEastAsian">

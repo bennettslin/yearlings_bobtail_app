@@ -1,4 +1,5 @@
-<svg viewBox="0 0 1368.62 1435.71">
+<svg class="presence" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1368.62 1435.71">
     <path class="bennettUndershirt" d="M9.79,879c-18.47-1.14-2.24-8.35-1.33-122.91.66-83.92,83.49-107.33,130-142.88L320.2,598c51.54,9.26,109.48-16.9,132.3,81.84C646.16,920.22,405.33,1173.67,297.44,1278c-8.88-13.16-22.77-44.94-32.09-68.61-5.88-14.91-16-10.84-18.48-25.35-5.77-11.84-19.61-8.21-19.34-22.78-3.24-12.93-18.78-10.9-17.2-25.79-3.75-14.37-15.59-33.82-29.27-52.52Z"/>
     <path class="clothesOverlapLine" d="M134.15,877.51c6.3-5.1-1.35-34.79-4.71-56.94"/>
     <g class="clothesFoldLine">
@@ -40,12 +41,12 @@
     <g class="eye">
         <circle class="sclera" cx="343.94" cy="385.44" r="103.87"/>
         <g class="irisDarkBrown">
-            <ellipse cx="415.72" cy="389.42" rx="19.42" ry="17.61" transform="translate(-11.87 765.77) rotate(-84.48)"/>
-            <ellipse cx="286.62" cy="376.95" rx="19.42" ry="17.61" transform="translate(-116.14 626) rotate(-84.48)"/>
+            <ellipse cx="414.72" cy="394.42" rx="19.42" ry="17.61" transform="translate(-17.75 769.3) rotate(-84.48)"/>
+            <ellipse cx="285.62" cy="381.95" rx="19.42" ry="17.61" transform="translate(-122.02 629.52) rotate(-84.48)"/>
         </g>
         <g class="pupil">
-            <ellipse cx="413.51" cy="388.72" rx="7.55" ry="6.85" transform="translate(-13.16 762.94) rotate(-84.48)"/>
-            <ellipse cx="284.41" cy="376.24" rx="7.55" ry="6.85" transform="translate(-117.44 623.16) rotate(-84.48)"/>
+            <ellipse cx="412.51" cy="393.72" rx="7.55" ry="6.85" transform="translate(-19.04 766.46) rotate(-84.48)"/>
+            <ellipse cx="283.41" cy="381.24" rx="7.55" ry="6.85" transform="translate(-123.32 626.69) rotate(-84.48)"/>
         </g>
     </g>
     <g class="skinEastAsian">

@@ -5579,5 +5579,10 @@ export default [
         taskName: `Bedroom letters work.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Figure out Cremated scenes with convertible panel.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]
