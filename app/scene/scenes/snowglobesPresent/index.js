@@ -12,7 +12,7 @@ export default {
     [MOTHER]: {
         [PRESENT]: {
             xPosition: 3.2,
-            zOffset: 3.3
+            zOffset: 3.4
         }
     },
     [BENNETT_FATHER]: {

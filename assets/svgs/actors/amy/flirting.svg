@@ -1,4 +1,5 @@
-<svg viewBox="0 0 720.55 3086.09">
+<svg class="presence" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720.55 3086.09">
     <g class="soleLightTan">
         <path d="M92.51,2997.45c-4.59,7.31-1.12,33.31,5,39.89,12.72,13.63,38.87,13.8,66.06,11.17Z"/>
         <path d="M500.11,3017.68c3.69,10.77,4.93,19.3-1.31,26.72-31.73,37.74-141.57,29-218,36.74-60.86,6.15-134.88,7.6-154.39-14.29-5.53-6.19-7.15-29-4-36.62Z"/>
@@ -66,11 +67,11 @@
         <path class="sclera" d="M201.74,451.55l204.17-86.79-225.36,15C176.6,400.08,186.75,440.73,201.74,451.55Z"/>
         <g class="irisHazel">
             <ellipse cx="313.99" cy="388.77" rx="15.73" ry="22.95" transform="translate(-87.91 91.78) rotate(-14.61)"/>
-            <ellipse cx="197.07" cy="419.01" rx="12.59" ry="22.95" transform="translate(-99.32 63.26) rotate(-14.61)"/>
+            <ellipse cx="197.07" cy="415.01" rx="12.59" ry="22.95" transform="translate(-98.32 63.13) rotate(-14.61)"/>
         </g>
         <g class="pupil">
             <ellipse cx="310.56" cy="389.67" rx="6.12" ry="8.93" transform="translate(-88.25 90.94) rotate(-14.61)"/>
-            <ellipse cx="193.34" cy="419.99" rx="4.9" ry="8.93" transform="matrix(0.97, -0.25, 0.25, 0.97, -99.69, 62.35)"/>
+            <ellipse cx="193.34" cy="415.99" rx="4.9" ry="8.93" transform="translate(-98.68 62.22) rotate(-14.61)"/>
         </g>
     </g>
     <g class="skinGallic">

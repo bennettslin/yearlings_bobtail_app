@@ -157,12 +157,12 @@
     <g class="eye">
         <circle class="sclera" cx="1248.45" cy="349.5" r="138.3"/>
         <g class="irisDarkBrown">
-            <ellipse cx="1347" cy="367.05" rx="22.5" ry="21.42" transform="translate(744.05 1626.25) rotate(-79.66)"/>
-            <ellipse cx="1190.91" cy="339.96" rx="22.5" ry="21.42" transform="translate(642.63 1450.47) rotate(-79.66)"/>
+            <ellipse cx="1349" cy="363.05" rx="22.5" ry="21.42" transform="translate(749.63 1624.93) rotate(-79.66)"/>
+            <ellipse cx="1192.91" cy="335.96" rx="22.5" ry="21.42" transform="translate(648.21 1449.16) rotate(-79.66)"/>
         </g>
         <g class="pupil">
-            <ellipse cx="1348.47" cy="367.32" rx="8.75" ry="8.33" transform="translate(745 1627.92) rotate(-79.66)"/>
-            <ellipse cx="1192.39" cy="340.23" rx="8.75" ry="8.33" transform="translate(643.58 1452.15) rotate(-79.66)"/>
+            <ellipse cx="1350.47" cy="363.32" rx="8.75" ry="8.33" transform="translate(750.57 1626.61) rotate(-79.66)"/>
+            <ellipse cx="1194.39" cy="336.23" rx="8.75" ry="8.33" transform="translate(649.15 1450.83) rotate(-79.66)"/>
         </g>
     </g>
     <g class="skinEastAsian">

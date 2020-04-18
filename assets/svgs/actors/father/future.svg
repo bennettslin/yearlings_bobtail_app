@@ -1,4 +1,5 @@
-<svg viewBox="0 0 895.87 3064.91">
+<svg class="presence" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 895.87 3064.91">
     <g class="chineseRedDark">
         <path d="M149.9,1507.18c14.17-218.46,49-230.32,44.46-2.85C174.53,1504.13,160.85,1505,149.9,1507.18Z"/>
         <path d="M300.65,44.88c-41-43.23,78.44-66.12,57.48-13.18Z"/>
@@ -72,11 +73,11 @@
     <g class="eye">
         <circle class="sclera" cx="484.2" cy="411.19" r="106.05"/>
         <g class="irisDarkBrown">
-            <ellipse cx="436.11" cy="404.79" rx="22.5" ry="19.42" transform="translate(-5.7 803.35) rotate(-84.92)"/>
+            <ellipse cx="442.11" cy="404.79" rx="22.5" ry="19.42" transform="translate(-0.23 809.32) rotate(-84.92)"/>
             <ellipse cx="571.44" cy="416.82" rx="22.5" ry="14.48" transform="translate(105.67 949.11) rotate(-84.92)"/>
         </g>
         <g class="pupil">
-            <ellipse cx="438.6" cy="405.01" rx="8.75" ry="7.55" transform="translate(-3.65 806.03) rotate(-84.92)"/>
+            <ellipse cx="444.6" cy="405.01" rx="8.75" ry="7.55" transform="translate(1.82 812.01) rotate(-84.92)"/>
             <ellipse cx="574.29" cy="417.07" rx="8.75" ry="5.63" transform="matrix(0.09, -1, 1, 0.09, 108.02, 952.18)"/>
         </g>
     </g>
