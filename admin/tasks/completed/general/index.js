@@ -5592,6 +5592,11 @@ export default [
     },
     {
         taskName: `Final face improvements.`,
+        workedHours: 12,
+        neededHours: 12
+    },
+    {
+        taskName: `Finalise times for scenes.`,
         workedHours: 2,
         neededHours: 2
     }

@@ -1,26 +1,26 @@
 <svg viewBox="0 0 1803.12 2384.83">
   <defs>
-    <linearGradient class="fill__curtainSideLit" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fill__curtainSideLit" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="hsla(0, 54%, 42%, 0.85)" />
       <stop offset="50%" stop-color="hsla(9, 70%, 44%, 0.85)" />
       <stop offset="100%" stop-color="hsla(0, 54%, 42%, 0.85)" />
     </linearGradient>
-    <linearGradient class="fill__curtainSideDark" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fill__curtainSideDark" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="hsla(0, 54%, 22%, 0.85)" />
       <stop offset="50%" stop-color="hsla(9, 70%, 24%, 0.85)" />
       <stop offset="100%" stop-color="hsla(0, 54%, 22%, 0.85)" />
     </linearGradient>
-    <linearGradient class="fill__curtainSideBandLit" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fill__curtainSideBandLit" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="hsl(44, 44%, 45%)" />
       <stop offset="50%" stop-color="hsl(44, 47%, 52%)" />
       <stop offset="100%" stop-color="hsl(44, 44%, 45%)" />
     </linearGradient>
-    <linearGradient class="fill__curtainSideBandDark" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="fill__curtainSideBandDark" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="hsl(44, 44%, 25%)" />
       <stop offset="50%" stop-color="hsl(44, 47%, 32%)" />
       <stop offset="100%" stop-color="hsl(44, 44%, 25%)" />
     </linearGradient>
-    <linearGradient class="fill__curtainRear" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="fill__curtainRear" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="hsl(0, 0%, 0%)" />
       <stop offset="100%" stop-color="hsl(357, 88%, 40%)" />
     </linearGradient>

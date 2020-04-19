@@ -160,7 +160,7 @@ export default [
         sky: { time: TIME_NOON, season: SEASON_AUTUMN }
     },
     {
-        unitIndex: 7,
+        unitIndex: 6,
         description: `Sita is still thinking. In the last thought bubble, Bennett is walking away, rejected by Sita. Sita has gotten up and opened the door. Sita's friend is in the doorway, having arrived with Chinese takeout.`,
         presences: {
             [ACTOR]: {

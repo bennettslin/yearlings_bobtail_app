@@ -181,7 +181,7 @@ export default [
         sky: { time: TIME_EVENING, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 4,
+        unitIndex: 3,
         description: `Bennett is in his room, doing many things, such that there are many copies of him. One is playing a keyboard and writing stuff down on a notepad, another is reading a book.`,
         presences: {
             [ACTOR]: {
@@ -215,7 +215,7 @@ export default [
         sky: { time: TIME_EVENING, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 5,
+        unitIndex: 4,
         description: `It's after a show, and the Yearlings are breaking down their set. Jacob is flirting with Mara. Bennett is selling a CD to a hipster, but is distracted by the sight of Mara.`,
         presences: {
             [ACTOR]: {
@@ -257,7 +257,7 @@ export default [
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 7,
+        unitIndex: 6,
         description: `The Yearlings are taking a break from band practise, eating burgers around a table. Mara is with them, cuddling with Jacob. Bennett is visibly agitated.`,
         presences: {
             [ACTOR]: {
@@ -296,7 +296,7 @@ export default [
         sky: { time: TIME_NOON, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 9,
+        unitIndex: 8,
         description: `Bennett is walking along outside. He sees Mara's face everywhere he looks: in clouds, on the sides of buildings, and so forth.`,
         presences: {
             [ACTOR]: {
@@ -325,7 +325,7 @@ export default [
         sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 11,
+        unitIndex: 10,
         description: `Bennett is looking at the woman holding a baby who just passed by.`,
         presences: {
             [ACTOR]: {
@@ -360,7 +360,7 @@ export default [
         sky: { time: TIME_AFTERNOON, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 14,
+        unitIndex: 12,
         description: `Bennett suddenly has an epiphany. In sketches in his head, he imagines himself recording all the instruments in a band. Finally, he imagines Mara finding his album in a record store.`,
         presences: {
             [ACTOR]: {

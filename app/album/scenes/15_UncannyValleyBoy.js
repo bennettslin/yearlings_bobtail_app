@@ -161,7 +161,7 @@ export default [
         sky: { season: SEASON_NIGHT_MAGIC }
     },
     {
-        unitIndex: 4,
+        unitIndex: 5,
         description: `Bennett's father takes him to visit his childhood past. They watch as young Bennett, having just been bullied, lashes out in anger, to no one in particular. Sasha is with him, and is understanding but clearly keeping her distance. Bennett winces.`,
         presences: {
             [ACTOR]: {
@@ -291,7 +291,7 @@ export default [
         sky: { season: SEASON_FUTURE }
     },
     {
-        unitIndex: 14,
+        unitIndex: 15,
         description: `Bringing him back, Bennett unrepentantly crawls into Miriam's arms, who is casting an imaginary spell to release him from their grasp. His father flinches, while his mother shields Sita from the view.`,
         presences: {
             [ACTOR]: {

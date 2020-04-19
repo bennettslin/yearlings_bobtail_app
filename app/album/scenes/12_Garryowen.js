@@ -110,7 +110,7 @@ export default [
         sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
-        unitIndex: 4,
+        unitIndex: 3,
         description: `Tristan and another crust punk are smashing a car window. Ana is laughing at them. Bennett is sorting through the meat packages in his jacket.`,
         presences: {
             [ACTOR]: {
@@ -147,7 +147,7 @@ export default [
         sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
-        unitIndex: 7,
+        unitIndex: 6,
         description: `Bennett and Sita are on the couch. Bennett is drunk, with a guitar in his lap, writing a song. Sita is naked and has taken his right hand and placed it on her breast, but he is unresponsive`,
         presences: {
             [ACTOR]: {
@@ -209,7 +209,7 @@ export default [
         sky: { time: TIME_NIGHT, season: SEASON_AUTUMN }
     },
     {
-        unitIndex: 14,
+        unitIndex: 13,
         description: `Bennett is leaving Sita. She is crumbled on the floor, desperately begging him to stay.`,
         presences: {
             [ACTOR]: {

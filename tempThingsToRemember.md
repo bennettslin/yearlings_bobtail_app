@@ -1,5 +1,4 @@
 # Scene fix
-Times for each scene
 Fix bubble positions
 If feet position is needed for one, do it for all.
 
@@ -7,3 +6,5 @@ If feet position is needed for one, do it for all.
 Share configs for posters and albums
 See about sharing configs for couches and others.
 Make cardboards stroke line different
+
+Delete head groupings.

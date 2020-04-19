@@ -84,6 +84,20 @@ import {
 export default [
     {
         unitIndex: 1,
+        description: `Empty club.`,
+        presences: {
+            [CUTOUT]: {
+                [MONITOR_SIDE__CROWD]: true
+            },
+            [FIXTURE]: {
+                [STAGE_MIC__CROWD]: true
+            }
+        },
+        cubes: CLUB_SIDE_CROWD_KEY,
+        sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
+    },
+    {
+        unitIndex: 2,
         description: `Bennett is onstage performing with his band, a speech bubble showing the scene of Sita rejecting him. A redheaded woman is arriving late, and making her way through the crowd.`,
         presences: {
             [ACTOR]: {
@@ -124,7 +138,7 @@ export default [
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 5,
+        unitIndex: 6,
         description: `After the show, Bennett is breaking down the set. Another band is setting up. The redhead has introduced herself to Bennett, and is flirting with him.`,
         presences: {
             [ACTOR]: {
@@ -160,7 +174,7 @@ export default [
         sky: { time: TIME_NIGHT, season: SEASON_SUMMER }
     },
     {
-        unitIndex: 8,
+        unitIndex: 9,
         description: `At the end of the show, Bennett and his bandmates are loading their equipment into their van. The redhead and her friends are looking in his direction, but Bennett walks by them.`,
         presences: {
             [ACTOR]: {

@@ -115,7 +115,7 @@ export default [
         sky: { time: TIME_EVENING, season: SEASON_AUTUMN }
     },
     {
-        unitIndex: 5,
+        unitIndex: 4,
         description: `In a thought bubble, Bennett and Sita are at a museum, looking at the skeleton of an early human. Bennett is standing behind the display case, leaning in towards Sita.`,
         presences: {
             [ACTOR]: {
@@ -139,7 +139,7 @@ export default [
         sky: { time: TIME_AFTERNOON, season: SEASON_AUTUMN }
     },
     {
-        unitIndex: 8,
+        unitIndex: 7,
         description: `In a thought bubble, Bennett and Sita are backstage after a play. While Sita and her friend are chatting away, Bennett looks away and is visibly uncomfortable.`,
         presences: {
             [ACTOR]: {
