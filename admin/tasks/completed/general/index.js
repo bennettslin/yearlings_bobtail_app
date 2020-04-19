@@ -5589,5 +5589,10 @@ export default [
         taskName: `Eye directions.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Final face improvements.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

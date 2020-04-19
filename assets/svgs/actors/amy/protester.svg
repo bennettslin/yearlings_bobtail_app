@@ -1,5 +1,4 @@
-<svg class="presence" 
-  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1471.21 3753.11">
+<svg viewBox="0 0 1471.21 3753.11">
   <g class="sign">
     <rect class="signHandle" x="1219.51" y="612.33" width="45.01" height="477.75" transform="translate(-17.87 26.68) rotate(-1.22)"/>
     <polygon class="bookPageMedium" points="1470.21 665.74 1039.69 586.35 1029.29 98.68 1456.04 1 1470.21 665.74"/>
