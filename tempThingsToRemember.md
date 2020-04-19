@@ -2,7 +2,6 @@
 Times for each scene
 Fix bubble positions
 If feet position is needed for one, do it for all.
-Back of head.
 
 # TODO
 Share configs for posters and albums
