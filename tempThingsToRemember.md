@@ -13,26 +13,11 @@ Make cardboards stroke line different
 # Face improvements
 
 ## Ash
-Bennett breakup
 Bennett soliciting
 
 ## Grasshoppers
 Bennett dishroom lancet (too young?)
-Bennett mop sopped
-Bennett gate code (head back is weird)
 Bennett gingerbread prison (too young?)
-
-## Look Back
-Bennett flirting
-Bennett sidelong hesitance (narrow face?)
-
-## Garryowen
-Bennett greeting
-Bennett leaving (head shape a little weird)
-
-## Golden Cord
-Bennett cord side
-Bennett cord back
 
 ## Cremated
 Bennett infirm
