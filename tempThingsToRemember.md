@@ -9,7 +9,6 @@ Back of head.
 Share configs for posters and albums
 See about sharing configs for couches and others.
 Make cardboards stroke line different
-Make Nestor's head consistently smaller?
 Revisit Amy's head?
 Revisit Mara's head?
 
