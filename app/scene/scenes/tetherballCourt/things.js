@@ -21,21 +21,18 @@ export default {
     [BUBBLE]: {
         [BUBBLE_SMALL__RIGHT]: {
             yIndex: 0,
-            xPosition: 9,
-            zOffset: 8,
-            scaleFactor: 0.4
+            xPosition: 10.2,
+            zOffset: 8
         },
         [BUBBLE_MEDIUM__RIGHT]: {
             yIndex: 0,
-            xPosition: 9.5,
-            zOffset: 7.75,
-            scaleFactor: 0.4
+            xPosition: 10.7,
+            zOffset: 7.6
         },
         [BUBBLE_LARGE__RIGHT]: {
             yIndex: 0,
-            xPosition: 10,
-            zOffset: 7,
-            scaleFactor: 0.4
+            xPosition: 11,
+            zOffset: 6.45
         },
         [THOUGHT_LARGE__RIGHT]: {
             yIndex: 0,

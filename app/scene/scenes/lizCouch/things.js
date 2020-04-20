@@ -92,7 +92,7 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
         },
         [LIZ_DEFENCE_SPEECH]: {
             yIndex: 5,
-            xPosition: 5.5,
+            xPosition: 6.2,
             zOffset: 3.5,
             scaleFactor: 0.4
         }
@@ -101,29 +101,32 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
 
 export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
     [BUBBLE]: {
-        [BUBBLE_SMALL__LIZ]: {
+        [LIZ_THOUGHT]: {
             yIndex: 5,
-            xPosition: 3.4,
-            zOffset: 2.4,
-            scaleFactor: 0.4
-        },
-        [BUBBLE_MEDIUM__LIZ]: {
-            yIndex: 5,
-            xPosition: 3.75,
-            zOffset: 2.5,
-            scaleFactor: 0.4
+            xPosition: 2.8,
+            zOffset: 3.5,
+            layerYIndex: 4
         },
         [BUBBLE_LARGE__LIZ]: {
             yIndex: 5,
-            xPosition: 4.5,
-            zOffset: 2.5,
-            scaleFactor: 0.4
+            xPosition: 5.1,
+            zOffset: 3.5,
+            scaleFactor: 0.3,
+            layerYIndex: 4
         },
-        [LIZ_THOUGHT]: {
+        [BUBBLE_MEDIUM__LIZ]: {
             yIndex: 5,
-            xPosition: 6.75,
-            zOffset: 0.5,
-            scaleFactor: 0.4
+            xPosition: 4.9,
+            zOffset: 2.95,
+            scaleFactor: 0.3,
+            layerYIndex: 4
+        },
+        [BUBBLE_SMALL__LIZ]: {
+            yIndex: 5,
+            xPosition: 4.43,
+            zOffset: 3,
+            scaleFactor: 0.3,
+            layerYIndex: 4
         }
     }
 }

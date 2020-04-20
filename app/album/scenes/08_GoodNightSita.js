@@ -44,6 +44,7 @@ import {
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
+    BUBBLE_LARGE__GO_KART,
     GO_KART_THOUGHT
 } from '../../constants/scene/things/bubbles'
 import {
@@ -233,7 +234,8 @@ export default [
             [BUBBLE]: {
                 [GO_KART_THOUGHT]: true,
                 [BUBBLE_SMALL__GO_KART]: true,
-                [BUBBLE_MEDIUM__GO_KART]: true
+                [BUBBLE_MEDIUM__GO_KART]: true,
+                [BUBBLE_LARGE__GO_KART]: true
             },
             [CUTOUT]: {
                 [CACTUS_SINGLE__LIZ_ENDED]: true,

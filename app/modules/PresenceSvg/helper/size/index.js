@@ -5,11 +5,13 @@ import { getValidYIndex } from 'helpers/general'
 import {
     ACTOR,
     ACTOR_DEFAULT_SCALE_FACTOR,
+    BUBBLE_DEFAULT_SCALE_FACTOR,
     DOOR_DEFAULT_SCALE_FACTOR,
     FIXTURE_DEFAULT_SCALE_FACTOR,
     FURNITURE_DEFAULT_SCALE_FACTOR
 } from '../../../../constants/scene'
 import {
+    BUBBLE,
     DOOR,
     FIXTURE,
     FURNITURE
@@ -28,6 +30,10 @@ const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
 
     if (presenceType === ACTOR) {
         return ACTOR_DEFAULT_SCALE_FACTOR
+    }
+
+    if (presenceType === BUBBLE) {
+        return BUBBLE_DEFAULT_SCALE_FACTOR
     }
 
     if (presenceType === DOOR) {

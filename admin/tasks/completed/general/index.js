@@ -5599,5 +5599,10 @@ export default [
         taskName: `Finalise times for scenes.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Final placement of bubbles.`,
+        workedHours: 4,
+        neededHours: 4
     }
 ]

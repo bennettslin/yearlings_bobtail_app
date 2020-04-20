@@ -12,17 +12,17 @@ const CUBES = {
         floor: {
             hslaColours: [
                 [G],
+                [V],
+                [V],
                 [V, V, V, V, V, V, V, F, F, F, F, V],
-                [V, V, V, V, V, V, V, F, F, F, S, V],
-                [V, V, V, V, V, V, V, F, F, F, S, V],
                 [V, V, V, V, V, V, V, F, F, F, S, V],
                 [V, V, V, V, V, V, V, F, F, F, F, V]
             ],
             zIndices: [
                 [0],
                 [1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
-                [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
+                [1],
+                [1],
                 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1],
                 [1]
             ]

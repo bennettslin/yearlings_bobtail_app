@@ -15,9 +15,9 @@ import {
 export default {
     [BUBBLE]: {
         [ESTHER_SPEECH]: {
-            yIndex: 1,
-            xPosition: 8.75,
-            scaleFactor: 0.5
+            yIndex: 3,
+            xPosition: 8.2,
+            scaleFactor: 0.45
         }
     },
     [CUTOUT]: {
@@ -29,15 +29,16 @@ export default {
     },
     [DOOR]: {
         [NURSE_DOOR]: {
-            yIndex: 2,
+            yIndex: 3,
             xPosition: 8,
-            scaleFactor: 0.45
+            scaleFactor: 0.4,
+            layerYIndex: 4
         }
     },
     [FIXTURE]: {
         [PLAYGROUND_BALL]: {
             yIndex: 4,
-            xPosition: 2,
+            xPosition: 1.5,
             scaleFactor: 0.25,
             zOffset: 1
         },

@@ -151,8 +151,7 @@ export const THINGS_BEDROOM_GUILTY = {
             yIndex: 5,
             xPosition: 2.85,
             zOffset: 2.15,
-            noShadow: true,
-            scaleFactor: 0.4
+            noShadow: true
         },
         [SKETCHBOOK__DOGS]: {
             yIndex: 5,

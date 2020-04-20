@@ -11,20 +11,20 @@ export default {
     [YOUNG_BENNETT]: {
         [FLUSTERED]: {
             yIndex: 4,
-            xPosition: 9.4,
-            zOffset: 0.57
+            xPosition: 9.6,
+            zOffset: -1.02
         }
     },
     [ANITA]: {
         [CONCERNED]: {
             yIndex: 4,
-            xPosition: 3
+            xPosition: 2.5
         }
     },
     [ESTHER]: {
         [SNICKERING]: {
             yIndex: 4,
-            xPosition: 5.5
+            xPosition: 4.7
         }
     }
 }

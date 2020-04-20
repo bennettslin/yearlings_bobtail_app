@@ -10,7 +10,7 @@ import {
     BUBBLE_SMALL__DEATHBED,
     BUBBLE_MEDIUM__DEATHBED,
     BUBBLE_LARGE__DEATHBED,
-    THOUGHT_MEDIUM__FAR,
+    THOUGHT_MEDIUM__DEATHBED,
     BUBBLE_SMALL__TENNIS,
     BUBBLE_MEDIUM__TENNIS,
     BUBBLE_LARGE__TENNIS,
@@ -32,23 +32,20 @@ export default {
     [BUBBLE]: {
         [BUBBLE_SMALL__DEATHBED]: {
             yIndex: 0,
-            xPosition: 2,
-            zOffset: 7,
-            scaleFactor: 0.4
+            xPosition: 2.51,
+            zOffset: 7
         },
         [BUBBLE_MEDIUM__DEATHBED]: {
             yIndex: 0,
-            xPosition: 1.5,
-            zOffset: 6.75,
-            scaleFactor: 0.4
+            xPosition: 2,
+            zOffset: 7
         },
         [BUBBLE_LARGE__DEATHBED]: {
             yIndex: 0,
-            xPosition: 1,
-            zOffset: 6,
-            scaleFactor: 0.4
+            xPosition: 1.1,
+            zOffset: 6.42
         },
-        [THOUGHT_MEDIUM__FAR]: {
+        [THOUGHT_MEDIUM__DEATHBED]: {
             yIndex: 0,
             xPosition: 3.25,
             scaleFactor: 0.55
@@ -94,21 +91,18 @@ export const THINGS_DEATHBED_CREMATED = {
     [BUBBLE]: {
         [BUBBLE_SMALL__TENNIS]: {
             yIndex: 0,
-            xPosition: 6,
-            zOffset: 3.25,
-            scaleFactor: 0.4
+            xPosition: 7,
+            zOffset: 4.65
         },
         [BUBBLE_MEDIUM__TENNIS]: {
             yIndex: 0,
-            xPosition: 6.5,
-            zOffset: 3,
-            scaleFactor: 0.4
+            xPosition: 7.5,
+            zOffset: 4.25
         },
         [BUBBLE_LARGE__TENNIS]: {
             yIndex: 0,
-            xPosition: 7.25,
-            zOffset: 2.5,
-            scaleFactor: 0.4
+            xPosition: 8.2,
+            zOffset: 3.35
         },
         [THOUGHT_SMALL]: {
             yIndex: 0,
@@ -127,23 +121,20 @@ export const THINGS_DEATHBED_CREMATED = {
 
 export const THINGS_DEATHBED_DREAM = {
     [BUBBLE]: {
-        [BUBBLE_SMALL__INVERSE]: {
+        [BUBBLE_LARGE__INVERSE]: {
             yIndex: 0,
-            xPosition: 7.75,
-            zOffset: 5.5,
-            scaleFactor: 0.4
+            xPosition: 7,
+            zOffset: 5
         },
         [BUBBLE_MEDIUM__INVERSE]: {
             yIndex: 0,
-            xPosition: 7.25,
-            zOffset: 5.5,
-            scaleFactor: 0.45
+            xPosition: 7.95,
+            zOffset: 5
         },
-        [BUBBLE_LARGE__INVERSE]: {
+        [BUBBLE_SMALL__INVERSE]: {
             yIndex: 0,
-            xPosition: 6.5,
-            zOffset: 5,
-            scaleFactor: 0.4
+            xPosition: 8.43,
+            zOffset: 4.9
         }
     }
 }

@@ -28,8 +28,7 @@ export default {
         [SIBLING_CONSTELLATION]: {
             yIndex: 1,
             xPosition: 9.5,
-            zOffset: 4.5,
-            scaleFactor: 0.4
+            zOffset: 4.5
         }
     },
     [FIXTURE]: {

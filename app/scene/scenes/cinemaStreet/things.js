@@ -18,33 +18,31 @@ export default {
     [BUBBLE]: {
         [BUBBLE_SMALL__CINEMA]: {
             yIndex: 5,
-            xPosition: 4.5,
-            zOffset: 5.1,
-            scaleFactor: 0.4
+            xPosition: 4.7,
+            zOffset: 5.15,
+            scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__CINEMA]: {
             yIndex: 5,
-            xPosition: 4.75,
-            zOffset: 5.3,
-            scaleFactor: 0.4
+            xPosition: 4.67,
+            zOffset: 5.42,
+            scaleFactor: 0.3
         },
         [BUBBLE_LARGE__CINEMA]: {
             yIndex: 5,
-            xPosition: 5.5,
-            zOffset: 5.5,
-            scaleFactor: 0.4
+            xPosition: 5.35,
+            zOffset: 5.6,
+            scaleFactor: 0.3
         },
         [CINEMA_THOUGHT_RECORDING]: {
             yIndex: 5,
-            xPosition: 8.3,
-            zOffset: 4.1,
-            scaleFactor: 0.45
+            xPosition: 8.1,
+            zOffset: 4.2
         },
         [CINEMA_THOUGHT_BUYING]: {
             yIndex: 5,
-            xPosition: 9.25,
-            zOffset: 1,
-            scaleFactor: 0.45
+            xPosition: 9.3,
+            zOffset: 1.2
         }
     },
     [CARDBOARD]: {

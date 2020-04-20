@@ -15,7 +15,7 @@ export default {
     [KHARI]: {
         [CONCERNED]: {
             yIndex: 0,
-            xPosition: 6.5
+            xPosition: 7
         }
     }
 }

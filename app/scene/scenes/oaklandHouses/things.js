@@ -7,7 +7,12 @@ import {
     OAKLAND_HOUSE_LEFT,
     OAKLAND_HOUSE_RIGHT
 } from '../../../constants/scene/things/flats'
-import { THOUGHT_MEDIUM__NEAR } from '../../../constants/scene/things/bubbles'
+import {
+    BUBBLE_SMALL__GOLDEN,
+    BUBBLE_MEDIUM__GOLDEN,
+    BUBBLE_LARGE__GOLDEN,
+    THOUGHT_MEDIUM__GOLDEN
+} from '../../../constants/scene/things/bubbles'
 import { VOLKSWAGEN } from '../../../constants/scene/things/panels'
 
 export default {
@@ -37,7 +42,22 @@ export const THINGS_OAKLAND_HOUSES_GARRYOWEN = {
 
 export const THINGS_OAKLAND_HOUSES_GOLDEN = {
     [BUBBLE]: {
-        [THOUGHT_MEDIUM__NEAR]: {
+        [BUBBLE_SMALL__GOLDEN]: {
+            yIndex: 2,
+            xPosition: 2.19,
+            zOffset: 7.3
+        },
+        [BUBBLE_MEDIUM__GOLDEN]: {
+            yIndex: 2,
+            xPosition: 1.65,
+            zOffset: 7.3
+        },
+        [BUBBLE_LARGE__GOLDEN]: {
+            yIndex: 2,
+            xPosition: 0.75,
+            zOffset: 6.63
+        },
+        [THOUGHT_MEDIUM__GOLDEN]: {
             yIndex: 2,
             xPosition: 3.25,
             scaleFactor: 0.55

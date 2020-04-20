@@ -59,7 +59,7 @@ import {
     BUBBLE_SMALL__INVERSE,
     BUBBLE_MEDIUM__INVERSE,
     BUBBLE_LARGE__INVERSE,
-    THOUGHT_MEDIUM__FAR
+    THOUGHT_MEDIUM__DEATHBED
 } from '../../constants/scene/things/bubbles'
 import {
     DISPENSER_LEFT,
@@ -233,7 +233,7 @@ export default [
                 [BUBBLE_SMALL__INVERSE]: true,
                 [BUBBLE_MEDIUM__INVERSE]: true,
                 [BUBBLE_LARGE__INVERSE]: true,
-                [THOUGHT_MEDIUM__FAR]: true
+                [THOUGHT_MEDIUM__DEATHBED]: true
             },
             [CUTOUT]: {
                 [IV_DRIP]: true

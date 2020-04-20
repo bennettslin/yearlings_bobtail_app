@@ -24,28 +24,25 @@ import {
 
 export default {
     [BUBBLE]: {
-        [BUBBLE_SMALL__LEFT]: {
-            yIndex: 0,
-            xPosition: 2,
-            zOffset: 8,
-            scaleFactor: 0.4
-        },
-        [BUBBLE_MEDIUM__LEFT]: {
-            yIndex: 0,
-            xPosition: 1.5,
-            zOffset: 7.75,
-            scaleFactor: 0.4
-        },
-        [BUBBLE_LARGE__LEFT]: {
-            yIndex: 0,
-            xPosition: 1,
-            zOffset: 7,
-            scaleFactor: 0.4
-        },
         [THOUGHT_LARGE__LEFT]: {
             yIndex: 0,
             xPosition: 5.5,
             scaleFactor: 0.6
+        },
+        [BUBBLE_LARGE__LEFT]: {
+            yIndex: 0,
+            xPosition: 0,
+            zOffset: 6.5
+        },
+        [BUBBLE_MEDIUM__LEFT]: {
+            yIndex: 0,
+            xPosition: 0.3,
+            zOffset: 7.6
+        },
+        [BUBBLE_SMALL__LEFT]: {
+            yIndex: 0,
+            xPosition: 0.8,
+            zOffset: 8
         }
     },
     [FIXTURE]: {

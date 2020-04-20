@@ -51,10 +51,10 @@ import {
     OAKLAND_FRONT__LOW
 } from '../../constants/scene/things/backdrops'
 import {
-    BUBBLE_SMALL__LEFT,
-    BUBBLE_MEDIUM__LEFT,
-    BUBBLE_LARGE__LEFT,
-    THOUGHT_MEDIUM__NEAR
+    BUBBLE_SMALL__GOLDEN,
+    BUBBLE_MEDIUM__GOLDEN,
+    BUBBLE_LARGE__GOLDEN,
+    THOUGHT_MEDIUM__GOLDEN
 } from '../../constants/scene/things/bubbles'
 import {
     TWIN_STREETLAMP__FAR,
@@ -122,10 +122,10 @@ export default [
                 [OAKLAND_SIDE]: true
             },
             [BUBBLE]: {
-                [BUBBLE_SMALL__LEFT]: true,
-                [BUBBLE_MEDIUM__LEFT]: true,
-                [BUBBLE_LARGE__LEFT]: true,
-                [THOUGHT_MEDIUM__NEAR]: true
+                [BUBBLE_SMALL__GOLDEN]: true,
+                [BUBBLE_MEDIUM__GOLDEN]: true,
+                [BUBBLE_LARGE__GOLDEN]: true,
+                [THOUGHT_MEDIUM__GOLDEN]: true
             },
             [FLAT]: {
                 [OAKLAND_HOUSE_LEFT]: true,

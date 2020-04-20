@@ -105,39 +105,36 @@ export const THINGS_WAITING_ROOM_ASLEEP = {
     [BUBBLE]: {
         [BUBBLE_SMALL__WAITING]: {
             yIndex: 5,
-            xPosition: 1,
-            zOffset: 3.2,
-            scaleFactor: 0.4
+            xPosition: 1.55,
+            zOffset: 3.25,
+            scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__WAITING]: {
             yIndex: 5,
-            xPosition: 0.75,
-            zOffset: 3.5,
-            scaleFactor: 0.4
+            xPosition: 1.15,
+            zOffset: 3.37,
+            scaleFactor: 0.3
         },
         [BUBBLE_LARGE__WAITING]: {
             yIndex: 5,
-            xPosition: 1.1,
-            zOffset: 4,
-            scaleFactor: 0.4
+            xPosition: 1.05,
+            zOffset: 3.9,
+            scaleFactor: 0.3
         },
         [WAITING_THOUGHT_WALKING]: {
             yIndex: 5,
-            xPosition: 3.6,
-            zOffset: 3.3,
-            scaleFactor: 0.45
+            xPosition: 3.37,
+            zOffset: 3.4
         },
         [WAITING_THOUGHT_SINGING]: {
             yIndex: 5,
-            xPosition: 7.7,
-            zOffset: 3.6,
-            scaleFactor: 0.45
+            xPosition: 7.23,
+            zOffset: 3.8
         },
         [WAITING_THOUGHT_STUDYING]: {
             yIndex: 5,
-            xPosition: 8.5,
-            zOffset: 0.6,
-            scaleFactor: 0.45
+            xPosition: 7.35,
+            zOffset: 0.77
         }
     }
 }

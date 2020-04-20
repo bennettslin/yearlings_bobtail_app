@@ -7,6 +7,7 @@ import {
 import {
     BUBBLE_SMALL__GO_KART,
     BUBBLE_MEDIUM__GO_KART,
+    BUBBLE_LARGE__GO_KART,
     GO_KART_THOUGHT
 } from '../../../constants/scene/things/bubbles'
 import {
@@ -30,23 +31,28 @@ import {
 
 export const THINGS_LIZ_GATE_DATE_ENDED = {
     [BUBBLE]: {
-        [BUBBLE_SMALL__GO_KART]: {
+        [GO_KART_THOUGHT]: {
             yIndex: 5,
-            xPosition: 7.5,
-            zOffset: 4,
-            scaleFactor: 0.4
+            xPosition: 5,
+            zOffset: 4
+        },
+        [BUBBLE_LARGE__GO_KART]: {
+            yIndex: 5,
+            xPosition: 6.9,
+            zOffset: 5.4,
+            scaleFactor: 0.3
         },
         [BUBBLE_MEDIUM__GO_KART]: {
             yIndex: 5,
-            xPosition: 7,
-            zOffset: 3.75,
-            scaleFactor: 0.4
+            xPosition: 7.68,
+            zOffset: 5.45,
+            scaleFactor: 0.3
         },
-        [GO_KART_THOUGHT]: {
+        [BUBBLE_SMALL__GO_KART]: {
             yIndex: 5,
-            xPosition: 6,
-            zOffset: 4,
-            scaleFactor: 0.4
+            xPosition: 8.1,
+            zOffset: 5.4,
+            scaleFactor: 0.3
         }
     },
     [CUTOUT]: {
@@ -77,7 +83,7 @@ export const THINGS_LIZ_GATE_DATE_ENDED = {
             scaleFactor: 0.15
         },
         [TRAFFIC_LIGHT]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 7.5,
             scaleFactor: 0.3
         }
