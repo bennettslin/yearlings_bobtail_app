@@ -9,7 +9,7 @@ export default {
     [CATHERINE]: {
         [QUIPPING]: {
             yIndex: 3,
-            xPosition: 2.5,
+            xPosition: 3,
             zOffset: -1.22,
             layerYIndex: 4
         }

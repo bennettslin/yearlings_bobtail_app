@@ -9,7 +9,7 @@ export default {
     [BENNETT_STEPHANIE]: {
         [HORSING]: {
             yIndex: 5,
-            xPosition: 4.5
+            xPosition: 4
         }
     },
     [AMY_NESTOR_TOMER]: {

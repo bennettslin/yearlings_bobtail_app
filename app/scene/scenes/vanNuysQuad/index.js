@@ -13,7 +13,7 @@ export default {
     [PRETEEN_BENNETT]: {
         [WISTFUL]: {
             yIndex: 2,
-            xPosition: 3.5
+            xPosition: 3.6
         }
     },
     [ANDREW]: {

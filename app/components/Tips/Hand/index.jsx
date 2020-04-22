@@ -122,7 +122,7 @@ TipsHand.propTypes = {
     // From parent.
     tipType: PropTypes.string.isRequired,
     isPointedAtDots: PropTypes.bool.isRequired,
-    reverse: PropTypes.bool.isRequired
+    reverse: PropTypes.bool
 }
 
 export default connect(mapStateToProps)(TipsHand)

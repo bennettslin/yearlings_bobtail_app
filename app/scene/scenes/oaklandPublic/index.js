@@ -13,31 +13,31 @@ export default {
     [BENNETT_STEPHANIE]: {
         [DRYING_TEARS]: {
             yIndex: 5,
-            xPosition: 3
+            xPosition: 3.1
         }
     },
     [YOUNG_BENNETT]: {
         [YOUNG_CHILD]: {
             yIndex: 2,
-            xPosition: 4.8
-        }
-    },
-    [ANITA]: {
-        [YOUNG_CHILD]: {
-            yIndex: 2,
-            xPosition: 8.6
+            xPosition: 4.9
         }
     },
     [ESTHER]: {
         [YOUNG_CHILD]: {
             yIndex: 2,
-            xPosition: 6.8
+            xPosition: 6.9
         }
     },
     [WILLY]: {
         [CROSSING_GUARD]: {
             yIndex: 1,
-            xPosition: 7.5
+            xPosition: 7.7
+        }
+    },
+    [ANITA]: {
+        [YOUNG_CHILD]: {
+            yIndex: 2,
+            xPosition: 8.8
         }
     }
 }

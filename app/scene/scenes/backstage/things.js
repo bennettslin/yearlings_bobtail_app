@@ -16,30 +16,30 @@ export default {
     [CUTOUT]: {
         [SANDBAGS]: {
             yIndex: 1,
-            xPosition: 3,
-            scaleFactor: 0.3
+            xPosition: 2.8,
+            scaleFactor: 0.37
         },
         [STAGE_LIGHTS]: {
             yIndex: 1,
             xPosition: 3,
-            scaleFactor: 0.25,
+            scaleFactor: 0.28,
             zOffset: 4
         }
     },
     [FIXTURE]: {
-        [PUSH_BROOM__BACKSTAGE]: {
-            yIndex: 2,
-            xPosition: 6
-        },
         [STEPLADDER]: {
-            yIndex: 2,
-            xPosition: 7.75,
+            yIndex: 1,
+            xPosition: 5.8,
             scaleFactor: 0.4
         },
         [MANNEQUIN]: {
-            yIndex: 2,
-            xPosition: 9.5,
+            yIndex: 1,
+            xPosition: 7.5,
             scaleFactor: 0.35
+        },
+        [PUSH_BROOM__BACKSTAGE]: {
+            yIndex: 1,
+            xPosition: 9.3
         }
     }
 }

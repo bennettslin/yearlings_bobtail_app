@@ -23,27 +23,27 @@ export default {
         [TRASH_CAN__LOCKERS]: {
             yIndex: 2,
             xPosition: 10.5,
-            scaleFactor: 0.25
+            scaleFactor: 0.27
         },
         [BUSH_SINGLE__LOCKERS]: {
             yIndex: 1,
             xPosition: 0.5,
-            scaleFactor: 0.33
+            scaleFactor: 0.25
         },
         [BUSH_DOUBLE__LOCKERS]: {
             yIndex: 1,
-            xPosition: 8,
-            scaleFactor: 0.33
+            xPosition: 7.5,
+            scaleFactor: 0.25
         }
     },
     [FIXTURE]: {
         [THROWN_FRUIT]: {
             yIndex: 4,
-            xPosition: 6.5
+            xPosition: 5.8
         },
         [BALLED_FOIL__LOCKERS]: {
             yIndex: 4,
-            xPosition: 7.5
+            xPosition: 8.1
         }
     }
 }

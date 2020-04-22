@@ -4,7 +4,7 @@ import { RICKSHAW } from '../../../constants/scene/actors/preteenBennett'
 export default {
     [PRETEEN_BENNETT]: {
         [RICKSHAW]: {
-            yIndex: 4,
+            yIndex: 5,
             xPosition: 6
         }
     }

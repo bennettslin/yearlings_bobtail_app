@@ -86,15 +86,13 @@ export const THINGS_LIZ_COUCH_DEFENDING = {
     [BUBBLE]: {
         [KHARI_ATTACK_SPEECH]: {
             yIndex: 5,
-            xPosition: 5.5,
-            zOffset: 3.5,
-            scaleFactor: 0.4
+            xPosition: 5.6,
+            zOffset: 3.25
         },
         [LIZ_DEFENCE_SPEECH]: {
             yIndex: 5,
             xPosition: 6.2,
-            zOffset: 3.5,
-            scaleFactor: 0.4
+            zOffset: 3.4
         }
     }
 }
@@ -123,7 +121,7 @@ export const THINGS_LIZ_COUCH_NOT_HUNGRY = {
         },
         [BUBBLE_SMALL__LIZ]: {
             yIndex: 5,
-            xPosition: 4.43,
+            xPosition: 4.46,
             zOffset: 3,
             scaleFactor: 0.3,
             layerYIndex: 4

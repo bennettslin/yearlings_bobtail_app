@@ -14,7 +14,7 @@ export default {
     },
     [CATHERINE]: {
         [PUZZLED]: {
-            yIndex: 4,
+            yIndex: 3,
             xPosition: 7
         }
     }

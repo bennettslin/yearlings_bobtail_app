@@ -24,15 +24,15 @@ export default {
 
 export const THINGS_BATHROOM_BATHING = {
     [CUTOUT]: {
-        [MIRRORED_SINK]: {
-            yIndex: 2,
-            xPosition: 8,
-            scaleFactor: 0.4
-        },
         [TOWEL_RACK]: {
             yIndex: 2,
-            xPosition: 3,
+            xPosition: 2.5,
             zOffset: 1.5,
+            scaleFactor: 0.32
+        },
+        [MIRRORED_SINK]: {
+            yIndex: 2,
+            xPosition: 8.5,
             scaleFactor: 0.32
         }
     }
@@ -41,8 +41,8 @@ export const THINGS_BATHROOM_BATHING = {
 export const THINGS_BATHROOM_SINGING = {
     [CARDBOARD]: {
         [JOHNNY_HORTON_ALBUM]: {
-            yIndex: 5,
-            xPosition: 9.25,
+            yIndex: 4,
+            xPosition: 9,
             scaleFactor: 0.15,
             perspective: 50,
             rotateY: 25,
@@ -51,8 +51,8 @@ export const THINGS_BATHROOM_SINGING = {
     },
     [FIXTURE]: {
         [RECORD_PLAYER_STOOL]: {
-            yIndex: 5,
-            xPosition: 8,
+            yIndex: 4,
+            xPosition: 7.7,
             scaleFactor: 0.25
         }
     }
