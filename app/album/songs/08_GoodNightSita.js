@@ -43,7 +43,7 @@ export default {
                                 isItalic: true,
                                 lyric: `Ulysses,`
                             },
-                            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed the technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
+                            `the narrator daydreams in an uninterrupted stream of consciousness. I borrowed this technique to capture the torrent of unspoken thoughts rushing through my head as Sita extends her good wishes before I depart.`
                         ],
                         dotKeys: {
                             [REFERENCE]: true,
@@ -434,7 +434,7 @@ export default {
                                             isItalic: true,
                                             lyric: `The Devil's Dictionary.`
                                         },
-                                        `My sense of humour at the time was a naive approximation of his brand of cynical wit.`
+                                        `My sense of humor at the time was a naive approximation of this brand of cynical wit.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true,
@@ -509,7 +509,7 @@ export default {
                         {
                             anchor: `disastrous play`,
                             card: {
-                                description: `On our second date, Sita invited me to see her friend perform in a play, which I ended up hating. In retrospect, it probably wasn't bad. My impression of the night was just coloured by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
+                                description: `On our second date, Sita invited me to see her friend perform in a play, which I ended up hating. In retrospect, it probably wasn't bad. My impression of the night was just colored by my insecurities, given the warm rapport between Sita and her friend backstage, in contrast to my own inability to get a word in edgewise.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -555,7 +555,7 @@ export default {
                         {
                             anchor: `tactic is to stall`,
                             card: {
-                                description: `I was advised by friends to wait three days before calling a woman back, and yet it was always agony when she invariably did the same.`,
+                                description: `I was advised by friends to wait three days before calling a woman back. Yet it was always agony when she invariably did the same.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [OBSERVATION]: true
@@ -576,12 +576,12 @@ export default {
                             anchor: `understudy sought`,
                             card: {
                                 description: [
-                                    `Dating as a low-status male felt comparable to being an`,
+                                    `Dating as a low-status male is like being an`,
                                     {
                                         anchor: `understudy,`,
                                         wiki: `Understudy`
                                     },
-                                    `a performer in theatre who serves as a replacement on short notice, as I undertook all of the same preparation yet was rewarded with almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
+                                    `a performer in theatre who serves as a replacement on short notice. You undertake the exact same preparation, yet was rewarded with almost none of the action. I finally accepted that I had to be proactive and branch out, like a freelancer without steady gigs advertising on a cork board.`
                                 ],
                                 dotKeys: {
                                     [NARRATIVE]: true,
@@ -674,7 +674,7 @@ export default {
                         {
                             anchor: `kind new ultimatum`,
                             card: {
-                                description: `Like the deals that natives were forced at gunpoint to make with settlers, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home alone.`,
+                                description: `Like the deals that natives were forced to make with settlers at gunpoint, Sita's proposition for us to see her friend's play offered only an illusion of choice. She was going either way. I could either tag along or stay home alone.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [OBSERVATION]: true
@@ -794,7 +794,7 @@ export default {
                         {
                             anchor: `endless flowchart`,
                             card: {
-                                description: `One strategy I considered was to prepare a mental flowchart of all the possible ways a date might unfold. I could then take one optimal action after another to nudge the events of that evening towards my desired outcome.`,
+                                description: `I often wondered at the time if it was possible to prepare a mental flowchart of all the myriad ways a date might unfold. I could then take one optimal action after another to nudge the events of the evening towards my desired outcome.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

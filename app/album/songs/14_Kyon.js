@@ -721,7 +721,7 @@ export default {
                         {
                             anchor: `practise cuts…`,
                             card: {
-                                description: `Even in anguish, Sita never lost her sardonic sense of humour. When I expressed concern about her cutting herself, she sweetly assured me that it was only for practise.`,
+                                description: `Even in anguish, Sita never lost her sardonic sense of humor. When I expressed concern about her cutting herself, she sweetly assured me that it was only for practise.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

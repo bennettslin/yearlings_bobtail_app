@@ -248,15 +248,28 @@ export default {
                     lyric: [
                         `and now I know why the`,
                         {
-                            // TODO: Maya Angelou.
                             anchor: `battered kitten purrs…`,
-                            card: {
-                                description: `Of course, Sita, in turn, was my first pet. It blew my mind how I was able to live with myself while hurting her for as long as I did. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a way to cope. I had allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
-                                dotKeys: {
-                                    [BACKSTORY]: true,
-                                    [OBSERVATION]: true
+                            cards: [
+                                {
+                                    description: `Of course, Sita, in turn, was my first pet. It blew my mind how I was able to live with myself while hurting her for as long as I did. But in hindsight, it's because I accepted at face value the facade of sanity she had constructed as a way to cope. I had allowed myself to believe that our fleeting moments of intimacy, which she clung to and cherished as if that's how it always was, were truly how it always was for her.`,
+                                    dotKeys: {
+                                        [BACKSTORY]: true,
+                                        [OBSERVATION]: true
+                                    }
+                                },
+                                {
+                                    description: [
+                                        `Also a reference to the Maya Angelou book,`,
+                                        {
+                                            isItalic: true,
+                                            lyric: {
+                                                anchor: `I Know Why the Caged Bird Sings.`,
+                                                wiki: `I_Know_Why_the_Caged_Bird_Sings`
+                                            }
+                                        }
+                                    ]
                                 }
-                            }
+                            ]
                         }
                     ]
                 }

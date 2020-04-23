@@ -1062,11 +1062,15 @@ export default {
                                 description: [
                                     `I wore an eyepatch as a child to correct my`,
                                     {
-                                        anchor: `lazy eye.`,
+                                        anchor: `lazy eye,`,
                                         wiki: `Amblyopia`
                                     },
-                                    // TODO: Tintin comic book reference.
-                                    `Since I lacked depth perception and naturally understood the world in two dimensions, my early drawings reflected an advanced understanding of perspective. Impressed, my mother insisted that I was destined to become a great artist, and encouraged every impulse I had to explore new mediums. So I always had it in my head that one day I would create an epic masterpiece, perhaps something like the Tintin comic books I adored at the time.`
+                                    `which naturally led to an interest in drawing. Since I lacked depth perception,  it was just less of a struggle for me to render the things I saw onto paper. Impressed by my ability, my mother insisted that I was destined to become a great artist. So I always had it in my head that I would one day create a masterpiece, something like the`,
+                                    {
+                                        anchor: `Tintin comic books`,
+                                        wiki: `The_Adventures_of_Tintin`
+                                    },
+                                    `I adored at the time.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true
@@ -1100,9 +1104,9 @@ export default {
                             ],
                             card: {
                                 description: [
-                                    `My favorite word as a child was "bobtail." I think I was just so proud of myself when I realised that the line "bells on bobtail ring" from the song`,
+                                    `My favorite word as a child was "bobtail." I was just so proud of myself the day I realised that the line "bells on bobtail ring," from the song`,
                                     {
-                                        anchor: `"Jingle Bells"`,
+                                        anchor: `"Jingle Bells,"`,
                                         wiki: `Jingle_Bells`
                                     },
                                     `isn't actually a nonsensical phrase. In any case,`,
@@ -1110,7 +1114,7 @@ export default {
                                         isItalic: true,
                                         lyric: `Bobtail`
                                     },
-                                    `became my catchall title for the great artistic work that I would one day create.`
+                                    `became my catchall title for the great artistic work I would one day create.`
                                 ],
                                 dotKeys: {
                                     [BACKSTORY]: true

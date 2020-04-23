@@ -216,7 +216,7 @@ export default {
                         {
                             anchor: `music cred`,
                             card: {
-                                description: `I could always detect a whiff of disdain from the Berkeley record store clerks as they rang up my purchases. This mysterious league of enlightened insiders clearly knew something that I didn't. With my quest for self-betterment, I finally overcame my feelings of intimidation and began to ask them for recommended listening.`,
+                                description: `I always detected a whiff of disdain from the Berkeley record store clerks who they rang up my purchases. This mysterious league of enlightened insiders clearly knew something that I didn't. With my quest for self-betterment, I finally overcame my feelings of intimidation and began to ask them for recommended listening.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }

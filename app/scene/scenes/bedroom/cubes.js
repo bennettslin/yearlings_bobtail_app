@@ -36,7 +36,6 @@ import { d, g, k, LEFT } from '../../cubes/zIndices'
  * ---------..#.-
  * -----------#--
  */
-// TODO: Dark floor patterns.
 const DEFAULT_CEILING = {
     hslaColours: [
         [D, D, D, D, D, W, D, W, W, W, D],

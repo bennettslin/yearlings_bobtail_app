@@ -399,7 +399,7 @@ export default {
                         {
                             anchor: `maraschino red,`,
                             card: {
-                                description: `Having sworn some time ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer's hair colour matches "Mara's sheen of red," which is the bright red of maraschino cherries.`,
+                                description: `Having sworn some time ago to be alert and ready when the next Mara shows up in my life, I notice that the latecomer's hair color matches "Mara's sheen of red," which is the bright red of maraschino cherries.`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true

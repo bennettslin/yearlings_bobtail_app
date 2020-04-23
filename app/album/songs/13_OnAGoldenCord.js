@@ -962,7 +962,7 @@ export default {
                         {
                             anchor: `master mind`,
                             card: {
-                                description: `In college, I learned that being drunk made it easy to single-mindedly perform unpleasant tasks such as writing papers, and humoured myself by comparing my drunken half to a slave taking orders from his master, my sober half. I am now pursuing this very same strategy to break up with Sita.`,
+                                description: `In college, I learned that being drunk made it easy to single-mindedly perform unpleasant tasks such as writing papers, and humored myself by comparing my drunken half to a slave taking orders from his master, my sober half. I am now pursuing this very same strategy to break up with Sita.`,
                                 dotKeys: {
                                     [BACKSTORY]: true,
                                     [NARRATIVE]: true

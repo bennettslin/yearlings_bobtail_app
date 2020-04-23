@@ -258,7 +258,7 @@ export default {
                             anchor: `amber eyes—`,
                             card: {
                                 description: [
-                                    `Sasha's eyes were of an amber colour. Also,`,
+                                    `Sasha's eyes were of an amber color. Also,`,
                                     {
                                         anchor: `amber`,
                                         wiki: `Amber`
@@ -668,7 +668,7 @@ export default {
                         {
                             anchor: `rat turds choked.`,
                             card: {
-                                description: `I wasn't sure how to end a song about a painful stage of my life that seems comical in retrospect. I decided I was happier to err on the side of humour.`,
+                                description: `I wasn't sure how to end a song about a painful stage of my life that seems comical in retrospect. I decided I was happier to err on the side of humor.`,
                                 dotKeys: {
                                     [OBSERVATION]: true,
                                     [SONGWRITING]: true

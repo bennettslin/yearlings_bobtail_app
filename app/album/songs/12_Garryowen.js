@@ -387,7 +387,7 @@ export default {
                             anchor: `choler turned up,`,
                             cards: [
                                 {
-                                    description: `In Hippocratic medicine, choler, or yellow bile, is the humour that induces aggression.`,
+                                    description: `In Hippocratic medicine, choler, or yellow bile, is the humor that induces aggression.`,
                                     dotKeys: {
                                         [REFERENCE]: true
                                     }

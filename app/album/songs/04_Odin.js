@@ -169,7 +169,7 @@ export default {
                 },
                 {
                     time: 17,
-                    left: `silent poll of colours overused.`,
+                    left: `silent poll of colors overused.`,
                     right: `sigh and pull the covers over you.`
                 }
             ]
@@ -198,7 +198,7 @@ export default {
                                             anchor: `soft pastels`,
                                             wiki: `Pastel`
                                         },
-                                        `and thus more powdery than waxy, which meant that they ran out quickly. By the end of our trip, I was left with the least used colours.`
+                                        `and thus more powdery than waxy, which meant that they ran out quickly. By the end of our trip, I was left with the least used colors.`
                                     ],
                                     dotKeys: {
                                         [BACKSTORY]: true
