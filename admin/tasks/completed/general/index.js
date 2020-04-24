@@ -5609,5 +5609,10 @@ export default [
         taskName: `Final audit of scenes.`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `Wrap up unfinished annotations.`,
+        workedHours: 6,
+        neededHours: 6
     }
 ]

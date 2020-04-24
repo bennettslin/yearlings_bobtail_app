@@ -805,16 +805,12 @@ export default {
                 },
                 {
                     time: 99,
-                    // TODO: Cycle of rejection becomes infinite loop.
                     lyric: [
                         `with every given`,
                         {
                             anchor: `answer a no`,
                             card: {
-                                description: `Of course, if each date takes the least optimal action herself, to ensure the evening only ever ends on a friendly note,
-                                
-                                
-                                leaving me right where I started at the beginning of the flowchart. And I'll be doomed to spend my life cycling through an infinite loop of polite rejection.`,
+                                description: `But if I was never given any openings to take action, then each date would end with me going right back to the beginning of the flowchart. And I would be doomed to spend my life cycling through an infinite loop of polite rejection.`,
                                 dotKeys: {
                                     [OBSERVATION]: true
                                 }

@@ -1131,8 +1131,7 @@ export default {
                         {
                             anchor: `hard-on in a sleeve."`,
                             card: {
-                                // TODO: Not technically my quote.
-                                description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with a past self-assessment of mine. I had once judged myself to be too upfront about my feelings, or as I had put it, to wear my "heart on my sleeve."`,
+                                description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with my self-assessment of being one who wears his "heart on his sleeve."`,
                                 dotKeys: {
                                     [NARRATIVE]: true,
                                     [PUN]: true
