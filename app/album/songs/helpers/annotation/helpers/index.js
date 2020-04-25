@@ -33,7 +33,7 @@ export const registerAnnotation = ({
         annotationIndex = song.annotations.length + 1,
 
         // Create new annotation object to be known by song.
-        annotation = {},
+        annotation = { todo: lyricAnnotation.todo },
         dotKeys = {}
 
     // Tell verse object its annotation anchors.

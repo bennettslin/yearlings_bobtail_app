@@ -6,7 +6,6 @@ import { connect } from 'react-redux'
 
 import album from 'album'
 
-import { getGlobalAnnotation } from 'album/api/admin'
 import {
     getSongSceneConfigs,
     getScene
@@ -37,7 +36,6 @@ class LogManager extends PureComponent {
 
     _assignDebugLogFunctions() {
         global.a = this.logAlbum
-        global.g = this.logGlobalAnnotation
         global.n = this.logAnnotation
         global.z = this.logScene
         global.s = this.logSong
@@ -85,12 +83,6 @@ class LogManager extends PureComponent {
             )
 
         return this._logObject('selected verse', selectedVerse)
-    }
-
-    logGlobalAnnotation = (globalIndex) => {
-        return this._logObject(
-            'global annotation', getGlobalAnnotation(globalIndex)
-        )
     }
 
     logScene = () => {
