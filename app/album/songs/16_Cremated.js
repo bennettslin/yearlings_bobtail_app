@@ -25,6 +25,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `A childhood playmate once asked me if I knew what cremation was. I didn't, and assumed it must be fun and tasty. That contrast between expectation and reality neatly sums up the seemingly innocent day trip that ended with Miriam breaking up with me.`,
                         dotKeys: {
@@ -39,6 +40,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `It made more sense for the line "or another…" to open this song rather than to close the previous one, which gave me the idea to chain them together as a medley, à la`,
@@ -64,6 +66,7 @@ export default {
                     isCentre: true,
                     lyric: {
                         anchor: `Or another…`,
+                        todo: true,
                         card: {
                             description: `Even if I couldn't be with Mara, I could still be with someone like her. Namely, Miriam.`,
                             dotKeys: {
@@ -78,6 +81,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `A`,
@@ -110,6 +114,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `This song uses doublespeaker rhyme because my original plan was to contrast Miriam's inner thoughts with mine. I gave up after I kept getting the two voices mixed up, which made me realise that no such contrast existed. We were both of the same mind in thinking the relationship was doomed to fail. It was only a question of when.`,
                         dotKeys: {
@@ -126,6 +131,7 @@ export default {
                     left: [
                         {
                             anchor: `At a vista,`,
+                            todo: true,
                             card: {
                                 description: `Driving in her car, Miriam and I arrive at a secluded spot on a cliff overlooking the San Francisco Bay.`,
                                 dotKeys: {
@@ -136,6 +142,7 @@ export default {
                         {
                             // NOTE: There are actually two 'key turned's in this song?
                             anchor: `key turned`,
+                            todo: true,
                             card: {
                                 wormhole: `key_turned`
                             }
@@ -144,6 +151,7 @@ export default {
                     right: [
                         {
                             anchor: `Atavist`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -170,6 +178,7 @@ export default {
                         `stuck`,
                         {
                             anchor: `feet first,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `My brother was a`,
@@ -192,6 +201,7 @@ export default {
                         `to`,
                         {
                             anchor: `first switch`,
+                            todo: true,
                             card: {
                                 description: `After parking the car, Miriam turns the stereo on by flipping the ignition switch to the accessory position.`,
                                 dotKeys: {
@@ -206,6 +216,7 @@ export default {
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
                             anchor: `inner lotus-eater,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology, the`,
@@ -230,6 +241,7 @@ export default {
                         `an everlasting`,
                         {
                             anchor: `doublespeaker,`,
+                            todo: true,
                             card: {
                                 description: `The first month with Miriam was one of the happiest of my life, as all my efforts to improve myself during my first five-year plan finally came to fruition. Everything I did or could do seemed to amaze her, and the icing on top was doublespeaker rhyme, which I came up with while we were together. So Miriam became my sounding board for all the ways I planned to use it, such as to juxtapose my sober and drunken thoughts.`,
                                 dotKeys: {
@@ -245,6 +257,7 @@ export default {
                         `this`,
                         {
                             anchor: `phoenix risen limp`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology, the`,
@@ -266,6 +279,7 @@ export default {
                         `his`,
                         {
                             anchor: `beaten wit and id`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Freudian psychology, the`,
@@ -288,6 +302,7 @@ export default {
                     left: [
                         {
                             anchor: `pinkish slip,`,
+                            todo: true,
                             card: {
                                 description: `Miriam is wearing a silky pink undergarment under her skirt. Of course, a pink slip is also a notice given to inform an employee that they've been fired…`,
                                 dotKeys: {
@@ -303,6 +318,7 @@ export default {
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes.`,
+                            todo: true,
                             card: {
                                 description: `Though Miriam was entertained by my character, it wasn't in the way one should hope, which blew apart my theory that being interesting at all costs is the key to dating. I was to be the oddball ex-boyfriend providing grist for a lifetime of amusing tales, not the life companion with whom she would one day share them.`,
                                 dotKeys: {
@@ -326,6 +342,7 @@ export default {
                     left: [
                         {
                             anchor: `His god humming "Freebird,"`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Affixed to the dashboard is an ornament of a native Hawaiian man in a grass skirt. As the stereo blares Lynyrd Skynyrd's`,
@@ -343,6 +360,7 @@ export default {
                         `the`,
                         {
                             anchor: `hula guy`,
+                            todo: true,
                             card: {
                                 description: `Some may protest that these dashboard ornaments objectify certain ethnic groups. And rightfully so. But I wasn't thinking in those terms at the time. I was just so happy to be wanted.`,
                                 dotKeys: {
@@ -359,6 +377,7 @@ export default {
                         `nods as`,
                         {
                             anchor: `she drums her toes.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Of course, he actually sways because Miriam, who happens to be`,
@@ -379,6 +398,7 @@ export default {
                         `not`,
                         {
                             anchor: `at each other's throats.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Some comedy duos famously did not get along, which enlivened their dynamic when the tapes were rolling. Like`,
@@ -414,6 +434,7 @@ export default {
                     right: [
                         {
                             anchor: `Trophy bronzed from a Trojan`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Having climaxed first, Miriam wraps up our little tryst by giving me a blowjob. As she yanks the condom off, I'm reminded of the first time I had sex with a woman other than Sita. I was so amazed that I left the used condom on the nightstand for days, much like proud parents might bronze their baby's first pair of shoes.`,
@@ -435,6 +456,7 @@ export default {
                         `born from a`,
                         {
                             anchor: `forced conversion`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Historically, conquered peoples were`,
@@ -455,6 +477,7 @@ export default {
                         `for some`,
                         {
                             anchor: `unforeskinned virgin`,
+                            todo: true,
                             card: {
                                 description: `During these years, I avoided having strong personal convictions, as it seemed absurd that something so trivial should limit the size of my dating pool. The ideal was to present myself as the blankest of blank slates for each new woman. So if her faith required me to undergo ritual circumcision, then my foreskin was still intact. And if her moral beliefs required me to be sexually inexperienced, then I was still a virgin.`,
                                 dotKeys: {
@@ -470,6 +493,7 @@ export default {
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
+                            todo: true,
                             card: {
                                 description: `Of course, I was ultimately the one forcing myself. It's as if I had presided over my own conversion ritual, then surgically removed my own foreskin.`,
                                 dotKeys: {
@@ -488,6 +512,7 @@ export default {
                         `to remain`,
                         {
                             anchor: `inherently perfect,`,
+                            todo: true,
                             card: {
                                 description: `I never told Miriam that my real purpose in having a drunken personality was to remain above reproach myself, while blaming it for all the selfish things I desired but was too cowardly to own up to. Which makes sense, since the latest thing that I selfishly desired was her.`,
                                 dotKeys: {
@@ -504,6 +529,7 @@ export default {
                         `This swarm pumped and`,
                         {
                             anchor: `kissed off, she purges up.`,
+                            todo: true,
                             card: {
                                 description: `Bringing me to orgasm, Miriam sucks up the ejaculate, then leans over the car door to spit it out. I imagine this to be her symbolic rejection of the sperm that carries my defective genes, which must never be allowed to mingle with hers.`,
                                 dotKeys: {
@@ -517,6 +543,7 @@ export default {
                         `as`,
                         {
                             anchor: `worn puppet`,
+                            todo: true,
                             card: {
                                 description: `Imagining the discarded condom to be a lifeless puppet, I realise that having a drunken personality is like being a ventriloquist. My dummy can then be used to say and do all the crude and questionable things needed to get what I want, while I just sit by as an innocent onlooker.`,
                                 dotKeys: {
@@ -528,6 +555,7 @@ export default {
                         `his`,
                         {
                             anchor: `offscreen person dubs.`,
+                            todo: true,
                             card: {
                                 description: `Of course, during the frequent and lengthy periods when I was drunk, it sure didn't seem obvious that my drunken self was the dummy whose words and actions were being dictated by the sober me, rather than the other way around.`,
                                 dotKeys: {
@@ -556,6 +584,7 @@ export default {
                         `which she swore when scarcely`,
                         {
                             anchor: `twenty-one.`,
+                            todo: true,
                             card: {
                                 description: `Miriam was several years younger than me, and thus eager to live it up just as I was ready to settle down.`,
                                 dotKeys: {
@@ -567,6 +596,7 @@ export default {
                     right: [
                         {
                             anchor: `twitching sword`,
+                            todo: true,
                             card: {
                                 description: [
                                     `While dubbing may refer to the replacement of an actor's voice in post-production, it also refers to the ritual of`,
@@ -606,6 +636,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         // NOTE: Change in recording? Connect to Uncanny Valley?
                         description: `The bouncing ping pong ball here evokes the ticking of a wall clock by my deathbed. As I fade away in my infirm state, the echoes reverberate like the sound of a ball being volleyed back and forth, and I picture Miriam in a leisurely tennis match with her new beau.`,
@@ -623,6 +654,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Needle done`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Having gone all the way with Miriam, I am at peace with our inevitable breakup. As I bask in my post-coital glow, then, an exaggerated scenario plays out in my mind of how things will end. I picture myself as a terminally ill patient being put to sleep, as my favourite record finishes playing in the background.`,
@@ -637,6 +669,7 @@ export default {
                         },
                         {
                             anchor: `will not retract,`,
+                            todo: true,
                             card: {
                                 description: `Some record players lack an auto-return function, so the needle will coast along in the lead-out groove until lifted. Also, during euthanasia, the needle is left in the vein as the barbiturate is slowly injected.`,
                                 dotKeys: {
@@ -653,6 +686,7 @@ export default {
                         `it`,
                         {
                             anchor: `hums a typo`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Like a typo, Miriam's involvement with me was a simple mistake that she could easily correct. And like a`,
@@ -670,6 +704,7 @@ export default {
                         },
                         {
                             anchor: `fragile ex`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Knowing the kind of fragile ex-boyfriend I was sure to be, Miriam must have dreaded the breakup. Of course, she had no choice, since who knows what horrors lurk in my genetic makeup? I might very well be a carrier of`,
@@ -695,6 +730,7 @@ export default {
                         `With his`,
                         {
                             anchor: `vinyl, exit`,
+                            todo: true,
                             card: {
                                 description: [
                                     `After Miriam helps me to my "final exit," a euphemism used by proponents of`,
@@ -720,6 +756,7 @@ export default {
                         `Undeluded, she'll bask in`,
                         {
                             anchor: `selfish cut-off jeans,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In`,
@@ -747,6 +784,7 @@ export default {
                         `and`,
                         {
                             anchor: `in her pool,`,
+                            todo: true,
                             card: {
                                 description: `Lying sedated on my deathbed, I see Miriam lounging by a pool, eternally radiant in her youth. I exhaust my last breath to wish her well, but she plunges back into the deep end and doesn't hear me. In every which way, she has already moved on.`,
                                 dotKeys: {
@@ -757,6 +795,7 @@ export default {
                         `hears not a`,
                         {
                             anchor: `worrisome`,
+                            todo: true,
                             card: {
                                 description: `I genuinely wished Miriam the best and continued to care about her well-being after our breakup. This surprised me, given the contrast of how selfishly I behaved every time I broke up with Sita. But despite how much I gave of myself and how little Miriam gave in return, I still came away knowing that someone like her could want me, even if just for a while. As far as I was concerned, then, I got the best end of that deal.`,
                                 dotKeys: {
@@ -767,6 +806,7 @@ export default {
                         },
                         {
                             anchor: `"Bless her,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The title of Mark Medoff's play`,
@@ -792,6 +832,7 @@ export default {
                         {
                             anchor: `Godspeed…"`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -827,6 +868,7 @@ export default {
                         `The`,
                         {
                             anchor: `seat hurt`,
+                            todo: true,
                             card: {
                                 description: `I somehow threw out my back while reclining the seat with Miriam on top of me. The pain has now worsened, and I facetiously reason that it's because I'm getting on in my years.`,
                                 dotKeys: {
@@ -844,6 +886,7 @@ export default {
                         `though no worse but for`,
                         {
                             anchor: `his soreness,`,
+                            todo: true,
                             card: {
                                 description: `Miriam wanted sex far more than Sita did, which ran me ragged as I was always still recovering from the last time. But here once again, I suppose that it's old age doing me in.`,
                                 dotKeys: {
@@ -857,6 +900,7 @@ export default {
                         `so`,
                         {
                             anchor: `homeward the sport's escorted,`,
+                            todo: true,
                             card: {
                                 description: `Having plied me with sex to ensure that I'll be a "good sport," Miriam now prepares to drive me home.`,
                                 dotKeys: {
@@ -872,6 +916,7 @@ export default {
                         `this geezer's`,
                         {
                             anchor: `life support's abortive.`,
+                            todo: true,
                             card: {
                                 description: `Based on the perceived motives of younger women who date much older men, I assume that Miriam would jump at the first excuse to remove me from life support.`,
                                 dotKeys: {
@@ -885,6 +930,7 @@ export default {
                         `the`,
                         {
                             anchor: `cleaved horizon`,
+                            todo: true,
                             card: {
                                 description: `As we make our way downhill, I picture the horizon as a cleaver splitting the sky open. The road we drive on then becomes cement spilling down on me from the rupture.`,
                                 dotKeys: {
@@ -902,6 +948,7 @@ export default {
                         `He's`,
                         {
                             anchor: `vegging with his boner shortened;`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Zoned out in my flaccid state, I'm about to be blindsided by Miriam's true intention for today's outing.`,
@@ -918,6 +965,7 @@ export default {
                     right: [
                         {
                             anchor: `Redressed,`,
+                            todo: true,
                             card: {
                                 description: `As I get "redressed" by putting my clothes back on, I'm about to learn that the sex followed by a blowjob was meant to serve as redress for the bad news that is forthcoming.`,
                                 dotKeys: {
@@ -935,6 +983,7 @@ export default {
                         `a pop, and she`,
                         {
                             anchor: `pulls the plug.`,
+                            todo: true,
                             card: {
                                 description: `Upon hearing the cigarette lighter pop out, Miriam pulls it from the socket to light her cigarette. Having satisfied me with an orgasmic "pop," she now feels less troubled to "pull the plug" on our relationship.`,
                                 dotKeys: {
@@ -961,6 +1010,7 @@ export default {
                         `Life's a dumb`,
                         {
                             anchor: `ex-dromedary,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -980,6 +1030,7 @@ export default {
                         `puff,`,
                         {
                             anchor: `preparing the scoop,`,
+                            todo: true,
                             card: {
                                 description: `Miriam searches for a way to deliver the bad news in the least messy way possible, as if swooping in with "scoop" in hand after a pet takes its "dump" on her freshly manicured lawn.`,
                                 dotKeys: {
@@ -995,6 +1046,7 @@ export default {
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump.`,
+                            todo: true,
                             card: {
                                 description: `A camel stores fat in its hump, allowing it to travel for days without eating. And in trading away Sita's love for the ego boost I gained from "humping" other women, I was like a starving camel who sacrificed his only meal just to wear a flashy new adornment on his back.`,
                                 dotKeys: {

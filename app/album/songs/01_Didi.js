@@ -29,6 +29,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `In Mandarin Chinese,`,
@@ -54,6 +55,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `Toy instruments abound in this song sung in the character of my sister as a child. Here, autoharp and glockenspiel lead the pack with an intro that recalls the first measures of "Wouldn't It Be Nice," the opening song of the 1966 Beach Boys album`,
@@ -102,6 +104,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `My ambition for this album was to do for rock music what James Joyce did for modern literature. When faced with a creative decision, I would ask myself what Joyce would do. Since his semi-autobiographical first novel,`,
@@ -132,6 +135,7 @@ export default {
                         `wondering to himself, who would`,
                         {
                             anchor: `tie his shoes?`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -177,6 +181,7 @@ export default {
                         `Didi, you've been following, I`,
                         {
                             anchor: `didn't want you here.`,
+                            todo: true,
                             card: {
                                 description: `I was always tagging along with my sister, who was fiercely protective of me. But there were times when she and her friends preferred to do girl stuff by themselves. This would leave me in a panic, since I had few playmates of my own.`,
                                 dotKeys: {
@@ -196,6 +201,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `I wanted the music here to evoke the flurry of activity and transience of emotion experienced by a child from one day to the next. And so the rhythm lurches to and from a`,
@@ -224,6 +230,7 @@ export default {
                         `Cause I get sick of hearing,`,
                         {
                             anchor: `"Zeizei,`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -257,6 +264,7 @@ export default {
                         `Didi`,
                         {
                             anchor: `made an "accident"`,
+                            todo: true,
                             card: {
                                 description: `Upon pooping my pants, I kept quiet at my desk. I think someone finally noticed the stink and alerted the teacher, who then brought me to the nurse's office.`,
                                 dotKeys: {
@@ -278,6 +286,7 @@ export default {
                         {
                             anchor: `Safeway paper bag,`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -302,6 +311,7 @@ export default {
                     lyric: [
                         {
                             anchor: `decked in overalls`,
+                            todo: true,
                             card: {
                                 description: `Since I was the smallest child in my grade, the only item of clothing that fit me was an abandoned pair of girls' overalls. After helping me dress, the nurse placed my soiled pants in a shopping bag for me to take home.`,
                                 dotKeys: {
@@ -335,6 +345,7 @@ export default {
                         `Didi, you've`,
                         {
                             anchor: `been in the bath`,
+                            todo: true,
                             card: {
                                 description: `After my mother came to pick me up and drop me off at home, I spent a good long while trying to bathe myself. Since I didn't know how to take showers and was too afraid to try, I had to just keep draining and refilling the bathtub until I was clean.`,
                                 dotKeys: {
@@ -355,6 +366,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `The song once again evokes "Wouldn't It Be Nice," this time by modulating down a minor third to segue into the bridge. In its time,`,
@@ -385,6 +397,7 @@ export default {
                     lyric: [
                         {
                             anchor: `crooked thieves`,
+                            todo: true,
                             card: {
                                 description: ``,
                                 wormhole: `crooked_thieves`
@@ -393,6 +406,7 @@ export default {
                         `with your`,
                         {
                             anchor: `sheriff's badge and gun…`,
+                            todo: true,
                             card: {
                                 description: `While the Taiwanese teenagers of my mother's generation prized all things that America had to offer, their tastes were shaped by a bootleg industry that largely recycled American popular culture from decades past. Years later, my sister and I would grow up listening to my mother's old country records and sharing her fondness for old Westerns.`,
                                 dotKeys: {
@@ -408,6 +422,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `To mimic the subdued twangs of music boxes and thumb pianos that characterize children's music, I dampened the lead guitar strings by wrapping tissue around them near the bridge.`,
                         dotKeys: {
@@ -429,6 +444,7 @@ export default {
                         `taped to all the`,
                         {
                             anchor: `girls' mirrors.`,
+                            todo: true,
                             card: {
                                 description: `My sister used to cut out pictures of pop stars from teenybopper magazines and tape them to her mirror.`,
                                 dotKeys: {
@@ -448,6 +464,7 @@ export default {
                         `you'd`,
                         {
                             anchor: `finally become someone?`,
+                            todo: true,
                             card: {
                                 wormhole: `finally_become_someone`
                             }
@@ -505,6 +522,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `A, C, and E\u2011flat, the three distantly related major keys we have visited thus far, also comprise three of the four triads of an`,
@@ -552,6 +570,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `Since`,

@@ -55,7 +55,7 @@ const TempGlobalAnnotation = ({
 
     return (
         <div className="TempGlobalAnnotation">
-            {false && JSON.stringify(annotationObject, null, 3)}
+            {true && JSON.stringify(annotationObject, null, 3)}
 
             <div className="TempGlobalAnnotation__header">
                 <span>

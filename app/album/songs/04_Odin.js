@@ -30,6 +30,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `It's likely that Odin's original name meant something in Chinese, which my sister and I later anglicised into the name of the`,
@@ -62,6 +63,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `I wanted to convey the despair in making binary choices whose differences are illusory, as well as the disorienting cycle between days amongst the foreign and dreams of the familiar. So I invented a literary technique called doublespeaker rhyme, in which two sets of lyrics that rhyme syllable for syllable are sung in harmony, one in each audio speaker. It's the musical version of a cinematic split screen.`,
                         dotKeys: {
@@ -79,6 +81,7 @@ export default {
                     right: [
                         {
                             anchor: `By lot,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Lots are drawn by chance to decide an outcome, and it was my lot not to be born a Jew.`,
@@ -109,6 +112,7 @@ export default {
                     left: [
                         {
                             anchor: `hiding place of retreat`,
+                            todo: true,
                             card: {
                                 description: `The "asleep" voice in the doublespeaker set narrates a dream that confusedly melds the familiar setting of Los Angeles with the foreign sights of Taiwan. The dream begins abruptly, as I come out from the dusty crawl space beneath my bed to which I often snuck away as a child.`,
                                 dotKeys: {
@@ -122,6 +126,7 @@ export default {
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth.`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -144,6 +149,7 @@ export default {
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
+                            todo: true,
                             card: {
                                 description: `The cobwebs trailing from my clothes happen to snag some drawings of mine that my mother has attached to the refigerator, scattering them on the floor.`,
                                 dotKeys: {
@@ -156,6 +162,7 @@ export default {
                     right: [
                         {
                             anchor: `Indifferent galaxies`,
+                            todo: true,
                             card: {
                                 description: `The Buddhism of my upbringing didn't make much sense to me, partly because it clashed with the various faiths of my classmates. At the same time, it didn't make any more sense for them to be right and my parents wrong. So with all beliefs equally suspect, I could only conceive of the universe as an endless stretch of cold, empty space in which we live and die to no greater concern.`,
                                 dotKeys: {
@@ -190,6 +197,7 @@ export default {
                         `you drew with`,
                         {
                             anchor: `crayons least whittled…`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -217,6 +225,7 @@ export default {
                         `you`,
                         {
                             anchor: `ruminate on these riddles…`,
+                            todo: true,
                             card: {
                                 description: `The "awake" voice in the doublespeaker set echoes my thoughts as I lie on the floor mat, unable to sleep. However terrifying, the vastness of the universe does suggest unlimited possibilities. Yet somehow, being with Sasha is not one of them.`,
                                 dotKeys: {
@@ -240,6 +249,7 @@ export default {
                         `The`,
                         {
                             anchor: `house settled in sheets,`,
+                            todo: true,
                             card: {
                                 description: `The rest of the house is asleep, snug under their blankets. Of course, sheets are also pulled over the deceased.`,
                                 dotKeys: {
@@ -259,6 +269,7 @@ export default {
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -288,6 +299,7 @@ export default {
                         `By the`,
                         {
                             anchor: `alabaster balustrade,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `At the time, buildings in Taiwan made heavy use of iron grates and stone slabs, such that even ordinary living quarters had the feel of a mausoleum adorned with`,
@@ -307,6 +319,7 @@ export default {
                         `Like a`,
                         {
                             anchor: `salamander`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Since writing doublespeaker rhyme could get daunting, I would challenge myself with fun exercises. One of them was to mention each of the four elementals of`,
@@ -335,6 +348,7 @@ export default {
                         `baby steps inch towards`,
                         {
                             anchor: `crevice rays.`,
+                            todo: true,
                             card: {
                                 description: `I especially dreaded bedtime in Taiwan because the lack of ambient light kept my grandmother's house pitch black all through the night. Whenever I woke to use the bathroom, I had to tiptoe towards the door, guided only by a sliver of moonlight peeking in from underneath.`,
                                 dotKeys: {
@@ -346,6 +360,7 @@ export default {
                     right: [
                         {
                             anchor: `trading breath's bliss`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Like all amphibians,`,
@@ -369,6 +384,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `While the two voices seem to proceed independently, each plants subtle ideas along the path of the other, much as our conscious thoughts affect our dreams, and vice versa. In this stanza, for example, the mention of a staircase by the "asleep" voice precedes the plummeting spoken of by the "awake" voice.`,
                         dotKeys: {
@@ -387,6 +403,7 @@ export default {
                         `Then down`,
                         {
                             anchor: `stygian stairs,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology, the river`,
@@ -410,6 +427,7 @@ export default {
                         `through`,
                         {
                             anchor: `sickle-lit`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The crescent moon is shaped like the blade of the scythe wielded by the`,
@@ -425,6 +443,7 @@ export default {
                         },
                         {
                             anchor: `oriental`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The word`,
@@ -446,6 +465,7 @@ export default {
                         `proves`,
                         {
                             anchor: `shibboleth`,
+                            todo: true,
                             card: {
                                 description: [
                                     [
@@ -462,6 +482,7 @@ export default {
                         `for these`,
                         {
                             anchor: `gentle means!`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Or else`,
@@ -485,6 +506,7 @@ export default {
                         `As you plummet down from`,
                         {
                             anchor: `couplets past;`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -507,6 +529,7 @@ export default {
                         `till a`,
                         {
                             anchor: `rickshaw hiccoughs`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -535,6 +558,7 @@ export default {
                         `still, but`,
                         {
                             anchor: `missed bat mitzvahs`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Being in Taiwan at the time, I was unable to attend Sasha's`,
@@ -565,6 +589,7 @@ export default {
                         `You seek the`,
                         {
                             anchor: `dunes once deemed a haven`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The narrator Ishmael in Herman Melville's`,
@@ -587,6 +612,7 @@ export default {
                         `To`,
                         {
                             anchor: `dreams of whom`,
+                            todo: true,
                             card: {
                                 wormhole: {
                                     wormholeKey: `dreams_of_whom`,
@@ -603,6 +629,7 @@ export default {
                         `that was`,
                         {
                             anchor: `safe for a heathen…`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In the Book of Genesis, God promised to make`,
@@ -626,6 +653,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `The drums were the one instrument for which I had to score parts that were far more advanced than my own abilities. So when it came time to record, I tried many workarounds. On this song, I recorded the kick, snare, and toms separately from the cymbals.`,
                         dotKeys: {
@@ -643,6 +671,7 @@ export default {
                         `And if`,
                         {
                             anchor: `summer trips to Paris`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `In middle school, students who completed two years of French class were eligible to attend a summer program in France. This excited Sasha, and so it excited me as well.`,
@@ -688,6 +717,7 @@ export default {
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
+                            todo: true,
                             card: {
                                 description: [
                                     `A`,
@@ -708,6 +738,7 @@ export default {
                     time: 70,
                     left: {
                         anchor: `dream your whims instead?`,
+                        todo: true,
                         card: {
                             description: [
                                 `Uncertain of whether I am asleep or awake, I recall the ancient Chinese philosopher`,
@@ -726,6 +757,7 @@ export default {
                         `be`,
                         {
                             anchor: `stored in this neck?`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Due to another mistranslation, the phrase "man's swelling" in Biblical Hebrew entered the Western lexicon as`,
@@ -762,6 +794,7 @@ export default {
                         `But`,
                         {
                             anchor: `cored gifts fall to discord`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -793,6 +826,7 @@ export default {
                         `like Odin's ashes back from`,
                         {
                             anchor: `the Society,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Odin's remains had been taken to the`,
@@ -812,6 +846,7 @@ export default {
                         `by`,
                         {
                             anchor: `opened latches`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In Greek mythology,`,
@@ -826,6 +861,7 @@ export default {
                         `that come undone by`,
                         {
                             anchor: `undine—`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -862,6 +898,7 @@ export default {
                         {
                             // CONSIDER: wormhole: Hope chest in M?
                             anchor: `hopeless rests.`,
+                            todo: true,
                             card: {
                                 description: `Hope was all that remained in Pandora's box. By contrast, upon having the hard truths of the world revealed to me by Sasha, I was left only with my own hopeless state.`,
                                 dotKeys: {
@@ -878,6 +915,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `Recording vocals in doublespeaker rhyme proved to be trickier than I had anticipated. I came to discover that, when singing, we tend to delay or shorten certain syllables to adjust for phrasing and consonant clusters. As such, even when each voice in a doublespeaker set sounds fine on its own, they can turn into a jumbled mush once heard together. So to keep the syllabic durations and offsets in perfect sync, I ended up devising a system of notation that kind of looked like medieval`,
@@ -901,6 +939,7 @@ export default {
                         `Your`,
                         {
                             anchor: `seizures of spleen,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -922,6 +961,7 @@ export default {
                         `to be a`,
                         {
                             anchor: `guard's whistle`,
+                            todo: true,
                             card: {
                                 description: `Standing on the ocean beach, I notice a steel whistle buried in the sand. Having once been blown by a lifeguard to warn of danger, it is now forever lost. Some dangers come with no warning, after all.`,
                                 dotKeys: {
@@ -936,6 +976,7 @@ export default {
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -964,6 +1005,7 @@ export default {
                         `and brought your raft behind the`,
                         {
                             anchor: `yellow-taped grills`,
+                            todo: true,
                             card: {
                                 description: `Barricade tape has been tied along the barbecue grills that line the shore, in an effort to prevent beachgoers from wading into the shark-infested waters.`,
                                 dotKeys: {
@@ -976,6 +1018,7 @@ export default {
                         `as not for wrapping by a`,
                         {
                             anchor: `cellophane sylph,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In the works of Paracelsus, the`,
@@ -998,6 +1041,7 @@ export default {
                         `to`,
                         {
                             anchor: `stand onshore`,
+                            todo: true,
                             card: {
                                 wormhole: `stand_onshore`
                             }
@@ -1015,6 +1059,7 @@ export default {
                         {
                             anchor: `didn't impart warmth`,
                             // CONSIDER: Wormhole Foreshadow M?
+                            todo: true,
                             card: {
                                 description: `Like cellophane, Sasha's intentions were fully transparent. I could always count on her as my friend to sympathize during my bouts of frustration. But also like cellophane, she couldn't truly return warmth where none was offered. Once I became more open about my petty and vindictive thoughts towards the bullies, I could feel her keeping her distance. And then I knew that any chance for us to be more than friends was gone forever.`,
                                 dotKeys: {
@@ -1039,6 +1084,7 @@ export default {
                     left: [
                         {
                             anchor: `Buoy bobs`,
+                            todo: true,
                             card: {
                                 description: `As buoys bob in the ocean, who's to say that this "boy" isn't also bobbing through life, oblivious to dangers lurking everywhere?`,
                                 dotKeys: {
@@ -1055,6 +1101,7 @@ export default {
                     time: 107,
                     left: {
                         anchor: `shivering for shivs unsheathed.`,
+                        todo: true,
                         cards: [
                             {
                                 // CONSIDER: Wormhole Kyon for shank?
@@ -1077,6 +1124,7 @@ export default {
                     },
                     right: {
                         anchor: `shivaree towards shivah seat`,
+                        todo: true,
                         cards: [
                             {
                                 description: [
@@ -1108,6 +1156,7 @@ export default {
                         `has`,
                         {
                             anchor: `pulled your floater away`,
+                            todo: true,
                             card: {
                                 description: `Pining after Sasha was like trying to stare at an off-center floater on the surface of one's eyeball. Despite my frantic efforts to bring myself closer, her inner world always remained a fixed distance apart from me.`,
                                 dotKeys: {
@@ -1124,6 +1173,7 @@ export default {
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
+                            todo: true,
                             card: {
                                 description: `Watching the ocean waves rise and fall in my dream, I am reminded of roller coasters that shaped the skyline of my youth, which were erected and dismantled with a similar transience.`,
                                 dotKeys: {
@@ -1169,6 +1219,7 @@ export default {
                         `when your`,
                         {
                             anchor: `day to die`,
+                            todo: true,
                             card: {
                                 description: [
                                     `As a child, I experienced night terrors related to my constant fear of death. Whenever I woke up screaming, my mother would console me with the promise of reincarnation. But this only confused me, since the end goal of Buddhism is`,
@@ -1201,6 +1252,7 @@ export default {
                         `Can a`,
                         {
                             anchor: `holed up hostage`,
+                            todo: true,
                             card: {
                                 description: `And yet, the thought of being stuck with a soul forever, a fate promised by the faiths of my classmates, seemed every bit as dreadful.`,
                                 dotKeys: {
@@ -1219,6 +1271,7 @@ export default {
                             anchor: `soulless solace`,
                             // From Willy the Cocoa ("unsalvaged souls")
                             // But as a child, I came to a slightly different conclusion. If my brother and I could be so alike in physical makeup yet so different in mental presence, then it made more sense to believe that no one has a soul.
+                            todo: true,
                             card: {
                                 description: `It seemed bizarre to me that if a true spiritual path did indeed exist, then it wouldn't offer a reward so obviously desirable, for which I could mindlessly strive without being troubled by existential questions on the nature of souls.`,
                                 dotKeys: {
@@ -1261,6 +1314,7 @@ export default {
                         {
                             // CONSIDER: Wormhole to Ash Wednesday?
                             anchor: `foetus force-fed,`,
+                            todo: true,
                             card: {
                                 description: `Most maddening of all was that one has no say in being brought into this world, given how distressing the knowledge of one's mortality must always be.`,
                                 dotKeys: {
@@ -1275,6 +1329,7 @@ export default {
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The tortoise defeats the hare in`,
@@ -1325,6 +1380,7 @@ export default {
                         `Though`,
                         {
                             anchor: `no slave parts these seas,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `In the Book of Exodus, Moses led the Israelites out of slavery in Egypt by`,
@@ -1341,6 +1397,7 @@ export default {
                         `Though, no`,
                         {
                             anchor: `grey starling's beak`,
+                            todo: true,
                             card: {
                                 wormhole: `grey_starling`
                             }
@@ -1353,6 +1410,7 @@ export default {
                         `then returns them as a`,
                         {
                             anchor: `buffer zone…`,
+                            todo: true,
                             card: {
                                 description: `God then brought the waters together behind Moses and the Israelites, drowning the Egyptian army in pursuit. Unfortunately, the certainty of death following me at every turn would not be overcome so easily.`,
                                 dotKeys: {
@@ -1379,6 +1437,7 @@ export default {
                         `The sudsy ocean shapes its`,
                         {
                             anchor: `padded bed,`,
+                            todo: true,
                             card: {
                                 description: `As I slowly make peace with the inevitable, the ocean begins to feel more calm and inviting. But my dream is also ending, and I will soon awake in the comfort of a bed.`,
                                 dotKeys: {
@@ -1395,6 +1454,7 @@ export default {
                     right: [
                         {
                             anchor: `his litter`,
+                            todo: true,
                             card: {
                                 description: `Referring to the disposal of Odin's cat litter, of course, but also to his lack of progeny. At this time, my own odds of leaving behind a litter don't seem any better.`,
                                 dotKeys: {
@@ -1413,6 +1473,7 @@ export default {
                         `while`,
                         {
                             anchor: `mermaids smile`,
+                            todo: true,
                             card: {
                                 description: [
                                     `T.S. Eliot's`,
@@ -1434,6 +1495,7 @@ export default {
                         {
                             anchor: `Thursday's child`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: `Wednesday is "Odin's day" in Old English, and I was born on a Thursday. So my day literally begins as Odin's day ends.`,
                                 dotKeys: {
@@ -1450,6 +1512,7 @@ export default {
                         `past a`,
                         {
                             anchor: `guileless garden gnome…`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1475,6 +1538,7 @@ export default {
                         `has a`,
                         {
                             anchor: `mile less far to go…`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -1512,6 +1576,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `I stayed in touch with Sasha over the years. After the album's release went nowhere, I moved to New York City to regain my bearings, and reconnected with her there. As it became clear that we were dating, I studied Hebrew and undertook a yearlong course required for conversion to Judaism. We didn't last long enough for me to stand before the rabbinical court, however, which would have been the final step. So, I'm still not Jewish.`

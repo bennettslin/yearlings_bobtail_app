@@ -24,6 +24,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             {
@@ -40,6 +41,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `For a song about two people who couldn't be any more different, I juxtaposed`,
@@ -68,6 +70,7 @@ export default {
                         {
                             anchor: `O Catherine! My Catherine!`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `Walt Whitman wrote his elegy`,
@@ -85,6 +88,7 @@ export default {
                         `our`,
                         {
                             anchor: `futile trip`,
+                            todo: true,
                             card: {
                                 description: [
                                     `I headed for the`,
@@ -97,8 +101,7 @@ export default {
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
-                            },
-                            todo: true
+                            }
                         },
                         `is done`
                     ]
@@ -108,17 +111,18 @@ export default {
                     lyric: [
                         {
                             anchor: `where it commenced:`,
+                            todo: true,
                             card: {
                                 description: `My relationship with Catherine began much in the same way as my friendship with Sasha had a decade earlier. That is, I latched onto the first cute person to show me any small kindness in a new environment, then tried to make myself indispensable in countless small ways.`,
                                 dotKeys: {
                                     [BACKSTORY]: true
                                 }
-                            },
-                            todo: true
+                            }
                         },
                         `in my`,
                         {
                             anchor: `bookless room,`,
+                            todo: true,
                             card: {
                                 description: `Glancing around my room one night, Catherine remarked that she didn't see any books. "I don't read," I said, only partly in jest.`,
                                 dotKeys: {
@@ -134,6 +138,7 @@ export default {
                         {
                             anchor: `Ulysses' tomb,`,
                             properNoun: true,
+                            todo: true,
                             card: {
                                 description: [
                                     `A reference to the classic "Who's buried in`,
@@ -163,6 +168,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `The shrieking whistles, which remind me of`,
@@ -187,6 +193,7 @@ export default {
                         `First we`,
                         {
                             anchor: `laid Tourette's,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -216,6 +223,7 @@ export default {
                         `the`,
                         {
                             anchor: `last day she rose`,
+                            todo: true,
                             card: {
                                 description: `Jesus rose as well on the third day.`,
                                 dotKeys: {
@@ -226,6 +234,7 @@ export default {
                         `up and left, hers the`,
                         {
                             anchor: `sole assent…`,
+                            todo: true,
                             card: {
                                 description: `Catherine wanted to break up; I didn't. And as the one believer between us, only she was to feel an "ascent."`,
                                 dotKeys: {
@@ -258,6 +267,7 @@ export default {
                         `I purge, with a`,
                         {
                             anchor: `dirge she'd deride,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -293,6 +303,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `The parts with quartertones were recorded in two takes, the second time with the instrument detuned a quarter step. An interesting thing about quartertones is that a note can sit exactly halfway between a minor third interval, creating the impression of a squished major third. I loved the confusion this caused my ears, and possibly went overboard in scoring such three-note runs for the`,
@@ -315,6 +326,7 @@ export default {
                         `Oh Catherine,`,
                         {
                             anchor: `pressed for an opinion,`,
+                            todo: true,
                             card: {
                                 description: `After committing to be a better lyricist, I would often ask Catherine for an honest critique. In this imagined scenario that's perfectly telling of our relationship, she puts down the James Joyce novel that she's reading to compliment my attempt at writing a clever verse.`,
                                 dotKeys: {
@@ -331,6 +343,7 @@ export default {
                     lyric: [
                         {
                             anchor: `"My, what wit, man,"`,
+                            todo: true,
                             card: {
                                 description: `Her compliment is insincere, however, as she secretly amuses herself by drolly observing, "My, Walt Whitman."`,
                                 dotKeys: {
@@ -341,6 +354,7 @@ export default {
                         },
                         {
                             anchor: `putting down her Joyce,`,
+                            todo: true,
                             card: {
                                 description: `After all, referencing a poet typically studied by middle schoolers is hardly an artistic feat. And so Catherine is also figuratively "putting me down," for naively daring to become the James Joyce of lyricists.`,
                                 dotKeys: {
@@ -358,6 +372,7 @@ export default {
                         `with`,
                         {
                             anchor: `"Joyce" oblivious`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Of course, not knowing that I couldn't be the next Joyce is precisely why I dared to try. The idea began to congeal in my head that I could do for rock music what`,
@@ -398,6 +413,7 @@ export default {
                         `who tried but failed to win her heart`,
                         {
                             anchor: `poised with brains?`,
+                            todo: true,
                             card: {
                                 description: `Catherine didn't value the artistic strengths that I had always counted on to cover up my other weaknesses. Which made me realise that if I wanted to keep dating those so very unlike me, then I couldn't have any real weaknesses.`,
                                 dotKeys: {
@@ -421,6 +437,7 @@ export default {
                         `And as I pace, stranded here`,
                         {
                             anchor: `outside her Shelta,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The`,
@@ -449,6 +466,7 @@ export default {
                         `in`,
                         {
                             anchor: `famous raincoat`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Catherine introduced me to the music of Leonard Cohen. It was her impassioned reading of his song`,
@@ -466,6 +484,7 @@ export default {
                         },
                         {
                             anchor: `unknown to roam,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `If Catherine is a figurative Traveller, then I am unwelcome to follow her itinerant community that is well-known to roam.`,
@@ -491,6 +510,7 @@ export default {
                         `my`,
                         {
                             anchor: `girl in glasses`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The critic`,
@@ -507,6 +527,7 @@ export default {
                         },
                         {
                             anchor: `went clear—`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Having decided to win Catherine back by reading more books, I began with those we'd discussed. Catherine had mentioned that "Famous Blue Raincoat" echoes a similar theme of purification through betrayal found in Cohen's earlier novel`,
@@ -524,6 +545,7 @@ export default {
                         },
                         {
                             anchor: `my Tekakwitha—`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The story of`,
@@ -552,6 +574,7 @@ export default {
                         `for I lack the wit to spare a`,
                         {
                             anchor: `safe Algonquin abode.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Kateri Tekakwitha was born to a Mohawk chief and an Algonquin woman whom he had captured after a raid upon her village. Dorothy Parker was a member of the`,
@@ -571,6 +594,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `I wanted the rainstick, rustling papers, and tambourine to fill in the gaps between the lead parts without being obvious about it, and experimented with a few versions before settling on this one.`,
                         dotKeys: {
@@ -587,6 +611,7 @@ export default {
                         `Well yes, I`,
                         {
                             anchor: `faked this "X,"`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `On Ash Wednesday, the priest smears ash in the shape of a cross on each parishioner's forehead. I ashed myself without the benefit of a mirror, so my cross was slanted like the letter X.`,
@@ -621,6 +646,7 @@ export default {
                         `Well no, I know it's wrong, but I did`,
                         {
                             anchor: `burn my palms,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `The ash used comes from burning the palm branches that were blessed on the previous year's`,
@@ -652,6 +678,7 @@ export default {
                                 {
                                     anchor: `Catherine vaut bien une messe…`,
                                     properNoun: true,
+                                    todo: true,
                                     card: {
                                         description: [
                                             {
@@ -675,6 +702,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `Not knowing much about orchestration at the time, I wrote a three-part counterpoint for mandolins and banjo that I didn't realise would crowd out the vocals until after I recorded it. I solved the problem by pitch shifting some tracks up an octave, giving them a metallic sheen that I think better suits the ambience of a rainy`,
@@ -702,6 +730,7 @@ export default {
                         `us wretched souls`,
                         {
                             anchor: `cursed to be born,`,
+                            todo: true,
                             card: {
                                 description: `It always confused me why the Catholic Church should extend its pro-life stance to the unborn of other faiths, since this means trading an aborted fetus's certainty of going to heaven for a living child's likelihood of going to hell.`,
                                 dotKeys: {
@@ -717,6 +746,7 @@ export default {
                         `a`,
                         {
                             anchor: `spark zips through my head`,
+                            todo: true,
                             card: {
                                 wormhole: `spark_zips`
                             }
@@ -734,6 +764,7 @@ export default {
                         `to wear it like a`,
                         {
                             anchor: `tragic mask.`,
+                            todo: true,
                             card: {
                                 description: `At some point, I learned to see comedy and tragedy as two sides of the same coin. After all, any misfortune can be turned into a song, writing a song calls for the broader view, and taking the broader view exposes the comedic underbelly of every misfortune. So I always preferred a negative outcome to no outcome at all, which then made it hard to deny that everything I did was just a stage act.`,
                                 dotKeys: {
@@ -750,6 +781,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `While fleshing out the lyrics in this chorus, I noticed that a handful of words in the first stanza were`,
@@ -777,6 +809,7 @@ export default {
                         `in`,
                         {
                             anchor: `spreading mole`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `By day's end, the ash was pretty smudged.`,

@@ -28,6 +28,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     cards: [
                         {
                             description: [
@@ -64,6 +65,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `Just as`,
@@ -94,6 +96,7 @@ export default {
                             `L.A. to the Bay,`,
                             {
                                 anchor: `pompous autumn waits.`,
+                                todo: true,
                                 cards: [
                                     {
                                         description: `In high school, I soldiered on with the same gutless reputation to which I had tied myself in middle school. It just didn't seem possible to remake myself into a whole new person while surrounded by all the same classmates. But in my head, I was busy crafting a future persona as an artist of superior ability and judgment, which was raring to go the minute I could hightail it out of Los Angeles.`,
@@ -116,6 +119,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `I wanted the music to sound sentimental with a few rough edges, so channelling`,
@@ -147,6 +151,7 @@ export default {
                         `and their`,
                         {
                             anchor: `molls perched on pedestals,`,
+                            todo: true,
                             card: {
                                 description: [
                                     {
@@ -168,6 +173,7 @@ export default {
                         `noses in`,
                         {
                             anchor: `penny dreadfuls.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -206,6 +212,7 @@ export default {
                         `death of`,
                         {
                             anchor: `dull dishroom days`,
+                            todo: true,
                             card: {
                                 description: `I got a job washing dishes at a dorm cafeteria. While the work was uneventful and offered no social interaction, that was actually its appeal. Between meals, I could sit and read while the dishes piled up, then clean them all at once. When it got really busy, I would switch to writing song lyrics in my head.`,
                                 dotKeys: {
@@ -221,6 +228,7 @@ export default {
                         `stalled by`,
                         {
                             anchor: `keys left on dumbwaiter trays.`,
+                            todo: true,
                             card: {
                                 description: `The students would bus their trays, which were then transported by conveyor belt to the dishroom. Every so often, someone would leave a personal item on the tray by accident. The crew always got a kick when that happened, as it broke up the monotony.`,
                                 dotKeys: {
@@ -242,6 +250,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Down the steps`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `The dishroom was on the floor below the dining area.`,
@@ -257,6 +266,7 @@ export default {
                         `to`,
                         {
                             anchor: `fetch her lancet pen,`,
+                            todo: true,
                             card: {
                                 description: [
                                     `As a diabetic, Sita regularly checked her blood sugar level before meals by pricking her finger with a`,
@@ -279,6 +289,7 @@ export default {
                         `and stunned, by`,
                         {
                             anchor: `reflex you asked.`,
+                            todo: true,
                             card: {
                                 description: `Blown away by her beauty, I handed Sita back her lancing device and immediately tried to make small talk. By then, I was mostly on autopilot when it came to hitting on random women in random situations.`,
                                 dotKeys: {
@@ -294,6 +305,7 @@ export default {
                         `At first she hedged, but then`,
                         {
                             anchor: `laying qualms to rest:`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `It was well known to the students that the cafeteria hired most of its workers through a rehabilitation program. For this reason, along with feeling unfairly ambushed, Sita was hesitant to say yes to a date. But as we chatted, my taste in literature and familiarity with underground culture ultimately won her over.`,
@@ -315,6 +327,7 @@ export default {
                         {
                             anchor: `Schwa stickers`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -336,6 +349,7 @@ export default {
                         `attached to your`,
                         {
                             anchor: `sci-fi paperback.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `At the time, I was obsessed with Philip K. Dick's stories of altered states and dystopian worlds, and never left home without one of his novels under my arm. Sita would soon hear all about it on our first date.`,
@@ -365,6 +379,7 @@ export default {
                         `First date`,
                         {
                             anchor: `nosebleed`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `After I picked Sita up, my nose started to bleed, which prompted me to recount past fights in middle school that ended with me suffering a bloody nose.`,
@@ -380,6 +395,7 @@ export default {
                         `spurs tales of`,
                         {
                             anchor: `bare-knuckle defeats…`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Sita seemed intrigued by my rough-and-tumble past, despite my honest admission that these were literal beatdowns in which I never threw a single punch.`,
@@ -415,6 +431,7 @@ export default {
                         `Her`,
                         {
                             anchor: `show played in mimes,`,
+                            todo: true,
                             card: {
                                 description: `The world of dating was awash in hidden cues and gestures that, as far as I knew, no one could be expected to recognise or understand. So I desperately wanted everything to be plainly spelled out, and it baffled me that I was alone in feeling this way.`,
                                 dotKeys: {
@@ -432,6 +449,7 @@ export default {
                         `Then just like the drift,`,
                         {
                             anchor: `she disappeared…`,
+                            todo: true,
                             card: {
                                 description: `Shortly after our third date, I called Sita to tell her I was in love with her. She admitted that she didn't feel the same way, yet wished to remain friends. We hung up with the understanding that I would continue to invite her out for casual excursions. But in truth, I was so dejected and embarrassed that I had no desire to see her again.`,
                                 dotKeys: {
@@ -454,6 +472,7 @@ export default {
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites.`,
+                            todo: true,
                             card: {
                                 description: `Shortly after Sita and I stopped talking, I began to play open mic nights. The first few times were a disaster, but I eventually learned to conquer my stagefright with just the right amount of alcohol.`,
                                 dotKeys: {
@@ -470,6 +489,7 @@ export default {
                         `But`,
                         {
                             anchor: `no convert's missed,`,
+                            todo: true,
                             card: {
                                 description: `In asking for the largest payments upfront, the mail-order cult correctly guessed that I would grow disillusioned sooner rather than later. Sita's abrupt departure from my life, after she had so profoundly made an impact, seemed like evidence that I was once again the sucker in a similarly perfected scam.`,
                                 dotKeys: {
@@ -484,6 +504,7 @@ export default {
                         `and so off her list,`,
                         {
                             anchor: `sunken Tirpitz lies.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -526,6 +547,7 @@ export default {
                         `Tonight, just`,
                         {
                             anchor: `sour grapes, bitter sweets`,
+                            todo: true,
                             card: {
                                 description: `At the end of each shift, I would head to the dining area to scavenge enough leftovers for my next meal. Busy days were doubly cruel because after staying late and working myself to exhaustion, I would be left with only the dried-out scraps that no one else wanted.`,
                                 dotKeys: {
@@ -544,12 +566,14 @@ export default {
                     lyric: [
                         {
                             anchor: `chimneys weep`,
+                            todo: true,
                             card: {
                                 wormhole: `chimney_sweep`
                             }
                         },
                         {
                             anchor: `sooty dust.`,
+                            todo: true,
                             card: {
                                 wormhole: `suttee_dust`
                             }
@@ -569,6 +593,7 @@ export default {
                     lyric: [
                         {
                             anchor: `Phantom limbs`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -598,6 +623,7 @@ export default {
                         `them`,
                         {
                             anchor: `tripped on runner's high.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -625,6 +651,7 @@ export default {
                         `Below the`,
                         {
                             anchor: `window of your Walkman`,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -661,6 +688,7 @@ export default {
                         `Your gate code punched, when a`,
                         {
                             anchor: `looming shadow nears,`,
+                            todo: true,
                             card: {
                                 description: `I lived along the path between the campus and Sita's boarding house. By chance, Sita has been walking half a block behind me this evening, debating whether to flag me down. After I turn to open the gate and notice her presence, a few seconds awkwardly pass as neither of us is sure what to do next.`,
                                 dotKeys: {
@@ -677,6 +705,7 @@ export default {
                         `as your`,
                         {
                             anchor: `heartbeats,`,
+                            todo: true,
                             card: {
                                 wormhole: `harpies`
                             }
@@ -694,6 +723,7 @@ export default {
                         `"Hey, you know`,
                         {
                             anchor: `you're my password?"`,
+                            todo: true,
                             card: {
                                 description: `Watching as I enter the passcode to unlock my front gate, Sita breaks the ice by mentioning that a topic we had once discussed is now part of a password that she recently created.`,
                                 dotKeys: {
@@ -721,6 +751,7 @@ export default {
                         `She`,
                         {
                             anchor: `locks your arm.`,
+                            todo: true,
                             card: {
                                 description: `Shivering from the winter chill, Sita tucks her hand underneath my arm as I invite her into my apartment.`,
                                 dotKeys: {
@@ -730,6 +761,7 @@ export default {
                         },
                         {
                             anchor: `Key turned,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `As we catch up on recent happenings, I unlock the door to my apartment.`,
@@ -744,6 +776,7 @@ export default {
                         },
                         {
                             anchor: `returned to your guard…`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `And just like that, I am once again on guard, second-guessing everything I say and do.`,
@@ -768,6 +801,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `The highlight of Nirvana's`,
@@ -794,6 +828,7 @@ export default {
                         `In her`,
                         {
                             anchor: `gingerbread prison,`,
+                            todo: true,
                             card: {
                                 description: `But even if not totally fulfilling, the prison to which I'm returning is at least sweet to taste. It's also readily escapable, and ultimately of my own making.`,
                                 dotKeys: {
@@ -810,6 +845,7 @@ export default {
                         `Though`,
                         {
                             anchor: `never full, you're fed;`,
+                            todo: true,
                             card: {
                                 description: `Like a tired fugitive relieved to come back to a warm bed and regular meals, I concede that platonic friendship is better than the cold, bleak alternative.`,
                                 dotKeys: {
@@ -821,6 +857,7 @@ export default {
                         `so you`,
                         {
                             anchor: `hit the switch.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `As all these thoughts swirl in my head, I turn on the light switch in my apartment.`,
@@ -841,6 +878,7 @@ export default {
                         `On your bed's rumpled linens, a`,
                         {
                             anchor: `lidless Vaseline sits.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Sitting on my bed is an open jar of Vaseline, which I clearly used recently to masturbate.`,
@@ -861,6 +899,7 @@ export default {
                         `"Shall I leave you," she says,`,
                         {
                             anchor: `"here to Philip Dick?"`,
+                            todo: true,
                             card: {
                                 description: `Or else, "Shall I leave you here to feel up dick?" Sita lightens the awkwardness by taking a gentle jab at the bookish exterior that I've carefully crafted.`,
                                 dotKeys: {
@@ -884,6 +923,7 @@ export default {
                         `Thoughts sift in the`,
                         {
                             anchor: `waiting room:`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `One night, Sita has a severe hypoglycemic episode. I drive her to the hospital and sit in the waiting room while she is being examined.`,
@@ -908,6 +948,7 @@ export default {
                         `Why does she play`,
                         {
                             anchor: `bright to your gloom`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `When we first met, what I stood to gain from Sita was obvious. Less so was what she gained from me, given my moody temperament and cynical outlook. But as our friendship grew, I came to learn that her cheery exterior masked a severe depression, which gave me an opening to win her over with simple, kind gestures.`,
@@ -949,6 +990,7 @@ export default {
                         `and the`,
                         {
                             anchor: `organ on which it struck,`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `As the minutes tick away, I am more than a little worried, having heard in passing that organ failure is one of the dangers of hypoglycemia.`,
@@ -973,6 +1015,7 @@ export default {
                         `in the`,
                         {
                             anchor: `ever-present scent`,
+                            todo: true,
                             card: {
                                 wormhole: 'present_sent'
                             }
@@ -995,12 +1038,14 @@ export default {
                         `Then you`,
                         {
                             anchor: `wake by a bell`,
+                            todo: true,
                             card: {
                                 wormhole: `belle`
                             }
                         },
                         {
                             anchor: `with a ring.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Having dozed off, I am roused by the ringing of a bell to indicate that a patient has been released from care and is returning to the waiting room.`,
@@ -1028,6 +1073,7 @@ export default {
                         `In her`,
                         {
                             anchor: `white gown,`,
+                            todo: true,
                             card: {
                                 description: `White gowns are common attire in both wedding ceremonies and hospitals.`,
                                 dotKeys: {
@@ -1044,6 +1090,7 @@ export default {
                         `and you marvel, glimmer of her`,
                         {
                             anchor: `cheek unveiled.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `Glancing up, I'm startled to find Sita flashing a "cheeky" smile as she hovers over me. Having quietly unclasped her purse from my grip, she returns to the emergency room, only to inadvertently flash some "cheek" from beneath her revealing hospital gown.`,
@@ -1069,6 +1116,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: `The ascending chord progression here symbolises falling in love, and eventually, sexual climax. Simple enough.`,
                         dotKeys: {
@@ -1083,6 +1131,7 @@ export default {
                     time: 193,
                     lyric: {
                         anchor: `She loves you…`,
+                        todo: true,
                         card: {
                             description: `It took a long, long while for Sita and I to become fully comfortable around each other. During the first year or so of our friendship, we mainly just studied together. Then at some point, those study sessions progressed into long walks, followed by cuddling. It all happened so fast towards the end that I was still processing what exactly had triggered it.`,
                             dotKeys: {
@@ -1105,6 +1154,7 @@ export default {
                         `You`,
                         {
                             anchor: `stand unsure.`,
+                            todo: true,
                             cards: [
                                 {
                                     description: `The night that we decide to have sex, I am suddenly overcome with a weary unease. As Sita lies naked under the covers, I stand forlornly by the bedside for what seems like several minutes.`,
@@ -1130,6 +1180,7 @@ export default {
                         `you wear your`,
                         {
                             anchor: `hard-on in a sleeve."`,
+                            todo: true,
                             card: {
                                 description: `Pointing to the condom on my erection, Sita lightens the mood by feigning to agree with my self-assessment of being one who wears his "heart on his sleeve."`,
                                 dotKeys: {
@@ -1146,6 +1197,7 @@ export default {
                         `So`,
                         {
                             anchor: `how's that compromise?`,
+                            todo: true,
                             card: {
                                 description: `I had spent so long constructing a facade behind which to tuck away my emotions, that I am now hesitant to compromise the safety of this position. I just don't want to be vulnerable again, and I have so little faith that my desires won't be used against me, were I to reveal them to Sita as I had once before.`,
                                 dotKeys: {
@@ -1179,6 +1231,7 @@ export default {
                         {
                             anchor: `Grace Darling's beacon`,
                             properNoun: true,
+                            todo: true,
                             cards: [
                                 {
                                     description: [
@@ -1206,6 +1259,7 @@ export default {
                         `light`,
                         {
                             anchor: `fell an oar.`,
+                            todo: true,
                             card: {
                                 description: [
                                     `Or "fell Lenore." Edgar Allan Poe's wife also died from tuberculosis, at age 24. Her prolonged illness likely inspired his poem`,
@@ -1228,6 +1282,7 @@ export default {
                         `Let`,
                         {
                             anchor: `pure lose to pure…`,
+                            todo: true,
                             card: {
                                 description: `Sita and I were both virgins, which ultimately made it easier to lower my defences, as it was a reminder that neither of us really knew what we were doing.`,
                                 dotKeys: {
@@ -1252,6 +1307,7 @@ export default {
                         `You`,
                         {
                             anchor: `stroke her temples.`,
+                            todo: true,
                             card: {
                                 description: `Referring to her literal temples. And possibly to her figurative ones as well.`,
                                 dotKeys: {
@@ -1273,6 +1329,7 @@ export default {
             unitMap: {
                 unitDot: {
                     anchor: IS_UNIT_DOT,
+                    todo: true,
                     card: {
                         description: [
                             `The French expression`,
