@@ -4,7 +4,11 @@ import cx from 'classnames'
 
 import AnnotationCards from './AnnotationCards'
 
-import { getNextGlobalAnnotationForInterval } from '../../../app/album/api/admin'
+import {
+    getNextGlobalAnnotationForInterval,
+    getGlobalAnnotationsCount,
+    getGlobalAnnotationsDoneCount
+} from '../../../app/album/api/admin'
 
 import { getArrayOfLength } from 'helpers/general'
 
@@ -13,6 +17,14 @@ import { removeLoadingIndicator } from 'utils/window'
 const INTERVALS_COUNT = 4
 
 import './style.scss'
+
+const TempGlobalAnnotationsCounter = () => (
+    <div className="TempGlobalAnnotationsCounter">
+        <div className="TempGlobalAnnotation__header">
+            {getGlobalAnnotationsDoneCount()} / {getGlobalAnnotationsCount()} done!
+        </div>
+    </div>
+)
 
 const TempGlobalAnnotation = ({ intervalIndex }) => {
 
@@ -36,9 +48,7 @@ const TempGlobalAnnotation = ({ intervalIndex }) => {
             {/* {true && JSON.stringify(annotationObject)} */}
 
             <div className="TempGlobalAnnotation__header">
-                <span>
-                    {globalIndex}. {title}
-                </span>
+                {globalIndex}. {title}
             </div>
 
             <AnnotationCards {...{ cards }} />
@@ -63,6 +73,7 @@ class TempGlobalAnnotations extends PureComponent {
                     )
                 }}
             >
+                <TempGlobalAnnotationsCounter />
                 {getArrayOfLength(INTERVALS_COUNT).map(intervalIndex => (
                     <TempGlobalAnnotation
                         {...{

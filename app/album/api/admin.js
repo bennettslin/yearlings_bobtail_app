@@ -64,7 +64,7 @@ export const getNextGlobalAnnotationForInterval = ({
         }
 
         // This is the annotation we want.
-        if (globalAnnotation) {
+        if (globalAnnotation.todo) {
             return {
                 ...globalAnnotation,
                 globalIndex
@@ -80,4 +80,9 @@ export const getNextGlobalAnnotationForInterval = ({
 export const getGlobalAnnotationsCount = () => {
     const { globalAnnotationIndices } = album
     return globalAnnotationIndices.length
+}
+
+export const getGlobalAnnotationsDoneCount = () => {
+    const { globalAnnotationIndicesDone } = album
+    return globalAnnotationIndicesDone
 }

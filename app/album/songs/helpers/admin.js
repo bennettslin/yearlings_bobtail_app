@@ -38,6 +38,8 @@ export const addGlobalAnnotationIndices = (album) => {
         { songs } = album,
         annotationIndices = []
 
+    let globalAnnotationIndicesDone = 0
+
     songs.forEach(song => {
         const {
             annotations,
@@ -51,6 +53,10 @@ export const addGlobalAnnotationIndices = (album) => {
                 // Let annotation object know its global index.
                 annotation.globalIndex = annotationIndices.length
 
+                if (!annotation.todo) {
+                    globalAnnotationIndicesDone += 1
+                }
+
                 annotationIndices.push({
                     songIndex,
                     annotationIndex
@@ -59,5 +65,6 @@ export const addGlobalAnnotationIndices = (album) => {
         }
     })
 
+    album.globalAnnotationIndicesDone = globalAnnotationIndicesDone
     album.globalAnnotationIndices = annotationIndices
 }

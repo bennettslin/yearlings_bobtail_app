@@ -13,10 +13,5 @@ export default [
         taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Improve annotation editor`,
-        workedHours: 0,
-        neededHours: 5
     }
 ]

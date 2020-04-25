@@ -5614,5 +5614,10 @@ export default [
         taskName: `Wrap up unfinished annotations.`,
         workedHours: 6,
         neededHours: 6
+    },
+    {
+        taskName: `Improve annotation editor`,
+        workedHours: 3,
+        neededHours: 3
     }
 ]

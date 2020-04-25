@@ -52,7 +52,6 @@ class LogManager extends PureComponent {
         const copiedAlbum = { ...album }
 
         copiedAlbum.songs = `songs: ${copiedAlbum.songs.length}`
-        copiedAlbum.globalAnnotationIndices = `globalAnnotationIndices: ${copiedAlbum.globalAnnotationIndices.length}`
 
         return this._logObject('album', copiedAlbum)
     }

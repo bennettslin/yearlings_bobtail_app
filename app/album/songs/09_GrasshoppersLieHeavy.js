@@ -1015,7 +1015,6 @@ export default {
                         `in the`,
                         {
                             anchor: `ever-present scent`,
-                            todo: true,
                             card: {
                                 wormhole: 'present_sent'
                             }

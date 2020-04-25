@@ -721,7 +721,7 @@ export default {
                     todo: true,
                     card: {
                         description: [
-                            `I learned about Tuvan throat singing after a woman I dated took me to see a documentary called`,
+                            `I learned about Tuvan throat singing after my first girlfriend Catherine took me to see a documentary called`,
                             {
                                 isItalic: true,
                                 lyric: {
