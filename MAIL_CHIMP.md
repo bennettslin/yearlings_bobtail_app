@@ -17,7 +17,7 @@ Final welcome email [x]
 Signup form with alerts (for signup errors) [x]
 
 ### Update
-"To update your preferences, click the button below." (Isn't in form builder)
+"To update your preferences, click the button below." (Isn't in form builder.)
 Profile update email sent [x] (Can't really edit.)
 Profile update email [x] (Can't really edit.)
 Update profile form [x]
