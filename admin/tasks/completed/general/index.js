@@ -5619,5 +5619,10 @@ export default [
         taskName: `Improve annotation editor`,
         workedHours: 3,
         neededHours: 3
+    },
+    {
+        taskName: `MailChimp setup. Remove personal address from standard templates.`,
+        workedHours: 5,
+        neededHours: 5
     }
 ]

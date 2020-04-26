@@ -5,21 +5,14 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `tenses and categorisation`,
+        taskName: `review tense and categorisation`,
         workedHours: 6,
         neededHours: 7
     },
     {
         taskName: `annotations`,
         workedHours: 34,
-        neededHours: 34,
-        subtasks: [
-            {
-                taskName: `make less wordy`,
-                workedHours: 0,
-                neededHours: 1
-            }
-        ]
+        neededHours: 34
     },
     {
         taskName: `include wiki urls`,

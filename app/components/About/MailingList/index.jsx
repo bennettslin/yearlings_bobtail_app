@@ -5,9 +5,9 @@ import * as EmailValidator from 'email-validator'
 import { EMAIL_ID } from '../../../constants/website'
 
 // MailChimp constants.
-const EMAIL_ACTION = `https://bobtailyearlings.us4.list-manage.com/subscribe/post?u=7a9ef82a8d139c5688d0209ef&amp;id=86ff9e92a5`
+const EMAIL_ACTION = `https://bobtailyearlings.us4.list-manage.com/subscribe/post?u=7a9ef82a8d139c5688d0209ef&amp;id=13ca4c5861`
 const EMAIL_NAME = 'EMAIL'
-const EMAIL_DUMMY_NAME = 'b_7a9ef82a8d139c5688d0209ef_86ff9e92a5'
+const EMAIL_DUMMY_NAME = 'b_7a9ef82a8d139c5688d0209ef_13ca4c5861'
 
 class MailingList extends Component {
 
