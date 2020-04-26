@@ -269,7 +269,7 @@ export default [
     {
         taskName: `make dots section accessible`,
         workedHours: 1,
-        neededHours: 2
+        neededHours: 1
     },
     {
         taskName: `change overview`,
@@ -1039,7 +1039,7 @@ export default [
     },
     {
         taskName: `Stanza shows stanza type`,
-        workedHours: 0,
+        workedHours: 4,
         neededHours: 4
     },
     {
@@ -1139,7 +1139,7 @@ export default [
     },
     {
         taskName: `Remove unneeded class names from side stanzas.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 1
     },
     {
@@ -1149,7 +1149,7 @@ export default [
     },
     {
         taskName: `Animate dots in anchor block.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 1
     },
     {
@@ -1169,7 +1169,7 @@ export default [
     },
     {
         taskName: `Bug where verse bar is shown going from mobile to desktop.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 1
     },
     {
@@ -1334,7 +1334,7 @@ export default [
     },
     {
         taskName: `Begin webpack modification, including minification.`,
-        workedHours: 0,
+        workedHours: 8,
         neededHours: 8
     },
     {
@@ -1344,7 +1344,7 @@ export default [
     },
     {
         taskName: `Add scrolling to annotation and verse selection.`,
-        workedHours: 0,
+        workedHours: 2,
         neededHours: 2
     },
     {
@@ -2529,17 +2529,17 @@ export default [
     },
     {
         taskName: `Modify storyboards up to Ash Wednesday.`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 3
     },
     {
         taskName: `Modify storyboards up to Golden Cord.`,
-        workedHours: 0,
+        workedHours: 3,
         neededHours: 3
     },
     {
         taskName: `Finish modifying storyboards.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 1
     },
     {
@@ -2635,7 +2635,7 @@ export default [
     {
         taskName: `Limit width of theatre seating and ceiling, balconies gradually increase height`,
         workedHours: 2,
-        neededHours: 3
+        neededHours: 2
     },
     {
         taskName: `Make proscenium a child of stage, not theatre.`,
@@ -3791,7 +3791,7 @@ export default [
     {
         taskName: `Work on method to access new annotation index only if current invalid. I no longer have the context for what I'm saying here...`,
         workedHours: 3,
-        neededHours: 4
+        neededHours: 3
     },
     {
         taskName: `Move scene constants to scene folder.`,
@@ -5629,5 +5629,15 @@ export default [
         taskName: `Dot descriptions.`,
         workedHours: 1,
         neededHours: 1
+    },
+    {
+        taskName: `Finish removing head groupings.`,
+        workedHours: 2,
+        neededHours: 2
+    },
+    {
+        taskName: `Old editing timebox.`,
+        workedHours: 11,
+        neededHours: 11
     }
 ]
