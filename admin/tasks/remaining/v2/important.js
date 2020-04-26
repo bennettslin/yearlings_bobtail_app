@@ -10,11 +10,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Switch band website to static server-side page, with routing. Running Elastic server is expensive?`,
-        workedHours: 0,
-        neededHours: 40
-    },
-    {
         taskName: `Timebox for band website.`,
         workedHours: 0,
         neededHours: 10

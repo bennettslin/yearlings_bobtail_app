@@ -1,19 +1,9 @@
 import general from './general'
 import illustrator from './illustrator'
 import legacy from './legacy'
-import scene from './scene'
 
-const completed = [
+export default [
     ...general,
     ...illustrator,
-    ...legacy,
-    ...scene
+    ...legacy
 ]
-
-completed.forEach(task => {
-    if (task.workedHours !== task.neededHours) {
-        console.log(task.taskName)
-    }
-})
-
-export default completed

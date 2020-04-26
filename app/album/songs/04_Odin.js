@@ -1313,7 +1313,7 @@ export default {
                         `But for a`,
                         {
                             // CONSIDER: Wormhole to Ash Wednesday?
-                            anchor: `foetus force-fed,`,
+                            anchor: `fetus force-fed,`,
                             todo: true,
                             card: {
                                 description: `Most maddening of all was that one has no say in being brought into this world, given how distressing the knowledge of one's mortality must always be.`,
