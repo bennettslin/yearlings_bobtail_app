@@ -22,12 +22,12 @@ export const ORDERED_DOT_KEYS = [
 ]
 
 export const DOT_DESCRIPTIONS = {
-    [NARRATIVE]: 'the story',
-    [BACKSTORY]: 'backstory description',
-    [OBSERVATION]: 'my two cents',
-    [PUN]: 'Of both the "literary" and "bad" variety.',
-    [REFERENCE]: 'wiki description',
-    [WORMHOLE]: 'wormhole description',
-    [SONGWRITING]: 'music description',
-    [AFTERWORD]: 'after the album'
+    [NARRATIVE]: 'The story as it happens.',
+    [BACKSTORY]: 'What took place before.',
+    [OBSERVATION]: 'Just my two cents.',
+    [PUN]: 'Both the "literary" and "bad" variety.',
+    [REFERENCE]: 'Link to a Wikipedia page.',
+    [WORMHOLE]: 'Portal to another song.',
+    [SONGWRITING]: 'How the music was made.',
+    [AFTERWORD]: 'What came next.'
 }

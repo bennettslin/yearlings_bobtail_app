@@ -1,6 +1,6 @@
 .snowglobe#{$suffix} {
     .base { fill: hsl($HUE_SNOWGLOBE, 42%, 55%); }
-    .rim { fill: hsl(33, 42%, 51%); }
+    .rim { fill: hsl($HUE_SNOWGLOBE, 42%, 51%); }
     .globeOuter {fill: hsla(240, 100%, 94%, 0.7); stroke: none; }
     .globeCentre {fill: hsla(240, 100%, 94%, 0.5); stroke: none; }
     .globeInner { fill: hsla(180, 100%, 89%, 0.4); stroke: none; }

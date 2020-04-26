@@ -5624,5 +5624,10 @@ export default [
         taskName: `MailChimp setup. Remove personal address from standard templates.`,
         workedHours: 5,
         neededHours: 5
+    },
+    {
+        taskName: `Dot descriptions.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
