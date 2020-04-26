@@ -28,10 +28,15 @@ export const getSumOfTasks = (tasks = []) => {
 const _addTaskToSum = (sumTasks, task) => {
     if (isFinite(task.workedHours)) {
         sumTasks.workedHours += task.workedHours
-    }
-    if (isFinite(task.neededHours)) {
+
+        // Completed tasks do not have needed hours.
+        if (!isFinite(task.neededHours)) {
+            task.neededHours = task.workedHours
+        }
+
         sumTasks.neededHours += task.neededHours
     }
+
 }
 
 export const getAllTasks = () => (
