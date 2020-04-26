@@ -1,4 +1,4 @@
-import albumTasks from '../../../tasks/songs'
+import albumTasks from '../../../tasks/completed/songs'
 import tasks from '../../../tasks'
 import tasksV2 from '../../../tasks/v2'
 import isFinite from 'lodash/isfinite'
@@ -47,11 +47,10 @@ export const getAllTasksV2 = () => (
     tasksV2
 )
 
-export const getMaxTotalNeededHoursFromSongs = () => {
-
-    return albumTasks.reduce((maxTotalNeededHours, songTasks) => {
+export const getMaxTotalNeededHoursFromSongs = () => (
+    albumTasks.reduce((maxTotalNeededHours, songTasks) => {
 
         const totalNeededHours = getSumOfTasks(songTasks).neededHours
         return Math.max(totalNeededHours, maxTotalNeededHours)
     }, 0)
-}
+)
