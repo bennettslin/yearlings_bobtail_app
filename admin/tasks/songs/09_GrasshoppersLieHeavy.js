@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Look Back wormhole`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `tenses and categorisation`,
         workedHours: 6,
         neededHours: 6

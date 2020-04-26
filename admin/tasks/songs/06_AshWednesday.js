@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `review tense and categorisation`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `categorisation`,
         workedHours: 5,
         neededHours: 5

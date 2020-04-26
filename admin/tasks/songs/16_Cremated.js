@@ -2,7 +2,7 @@ export default [
     {
         taskName: `tenses and categorisation`,
         workedHours: 13,
-        neededHours: 14
+        neededHours: 13
     },
     {
         taskName: `annotations`,
