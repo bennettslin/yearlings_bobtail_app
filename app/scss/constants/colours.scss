@@ -4,8 +4,28 @@
 
 $colour__road: hsl(41, 30%, 61%);
 
+$hue__past: 36;
+$hue__present: 156;
+$hue__future: 276;
+
+// past: orange (light, bold, dark)
+// future: purple (light, bold, dark)
+// paused: blue (light, bold)
+// playing: green (light, bold)
+
+$bgColour__beforeSelected: hsl(41, 100%, 97%);
+$bgColour__beforeSelected__even: hsl(41, 32%, 90%);
+
+// Audio related colours.
+$bgColour__audioPause: hsl(216, 45%, 63%);
+$bgColour__audioPlaying: hsl(20, 33%, 70%);
+$bgColour__audioPlay: hsl(260, 43%, 73%);
+$bgColour__audioDisabled: hsl(0, 0%, 83%);
+$bgColour__audioSelect: hsl(30, 100%, 87%);
+$bgColour__audioNeutral: hsl(240, 100%, 93%);
+
 // Plain text colours.
-$colour__text__dark: hsl(0, 0%, 33%);
+$colour__text__dark: hsl(0, 0%, 35%);
 $colour__text__light: hsl(0, 0%, 100%);
 
 // Selected anchor colours.
@@ -79,14 +99,6 @@ $bgColour__afterSlider: hsl(260, 23%, 57%);
 $bgColour__afterSlider__even: hsl(260, 20%, 50%);
 $bgColour__noIndexSlider: hsl(0, 0%, 53%);
 
-// Audio related colours.
-$bgColour__audioPause: hsl(216, 45%, 63%);
-$bgColour__audioPlaying: hsl(20, 33%, 70%);
-$bgColour__audioPlay: hsl(260, 43%, 73%);
-$bgColour__audioDisabled: hsl(0, 0%, 83%);
-$bgColour__audioSelect: hsl(30, 100%, 87%);
-$bgColour__audioNeutral: hsl(240, 100%, 93%);
-
 $colour__annotationWormhole__title: hsl(0, 0%, 73%);
 
 // Dot colours.
@@ -108,40 +120,12 @@ $bgColour__annotationCard: hsla(240, 100%, 99%, 0.9);
 $bgColour__annotationWormhole: hsl(0, 100%, 98%);
 
 // Song stanza colours.
-$bgColour__stanzaType__verse:
-    hsl(210, 35, 40);
-$bgColour__stanzaType__prechorus:
-    hsl(120, 25, 40);
-$bgColour__stanzaType__chorus:
-    hsl(300, 25, 40);
-$bgColour__stanzaType__postchorus:
-    hsl(30, 40, 40);
-$bgColour__stanzaType__bridge:
-    hsl(180, 40, 30);
-$bgColour__stanzaType__refrain:
-    hsl(60, 40, 35);
-$bgColour__stanzaType__coda:
-    hsl(90, 40, 35);
-$bgColour__stanzaType__instrumental:
-    hsl(270, 25, 40);
-$bgColour__stanzaType__none:
-    hsl(0, 0, 45);
-
-$bgColour__stanzaType__verse__light:
-    hsl(210, 35, 40);
-$bgColour__stanzaType__prechorus__light:
-    hsl(120, 25, 40);
-$bgColour__stanzaType__chorus__light:
-    hsl(300, 25, 40);
-$bgColour__stanzaType__postchorus__light:
-    hsl(30, 40, 40);
-$bgColour__stanzaType__bridge__light:
-    hsl(180, 40, 30);
-$bgColour__stanzaType__refrain__light:
-    hsl(60, 40, 35);
-$bgColour__stanzaType__coda__light:
-    hsl(90, 40, 35);
-$bgColour__stanzaType__instrumental__light:
-    hsl(270, 25, 40);
-$bgColour__stanzaType__none__light:
-    hsl(0, 0, 45);
+$bgColour__stanzaType__verse: hsl(210, 35, 40);
+$bgColour__stanzaType__prechorus: hsl(120, 25, 40);
+$bgColour__stanzaType__chorus: hsl(300, 25, 40);
+$bgColour__stanzaType__postchorus: hsl(30, 40, 40);
+$bgColour__stanzaType__bridge: hsl(180, 40, 30);
+$bgColour__stanzaType__refrain: hsl(60, 40, 35);
+$bgColour__stanzaType__coda: hsl(90, 40, 35);
+$bgColour__stanzaType__instrumental: hsl(270, 25, 40);
+$bgColour__stanzaType__none: hsl(0, 0, 45);

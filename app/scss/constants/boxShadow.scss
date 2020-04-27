@@ -2,17 +2,18 @@
 $colour__boxShadow: hsla(240, 14%, 34%, 0.4);
 $colour__boxShadow__dark: hsla(240, 33%, 15%, 0.7);
 $colour__boxShadow__darker: hsla(240, 33%, 15%, 0.9);
-$colour__boxShadow__cursoredBright: hsla(93, 100%, 89%, 0.5);
+$colour__boxShadow__light: hsla(90, 100%, 90%, 0.4);
 
 // Main.
 $boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;
 $boxShadow__mainCard__selected:
-    0 0 15px 4px $colour__boxShadow__cursoredBright,
+    0 0 15px 4px $colour__boxShadow__light,
     0 3px 10px 3px $colour__boxShadow__dark;
 
 $dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);
 $dropShadow__button: drop-shadow(0 3px 4px $colour__boxShadow__dark);
 $dropShadow__buttonOverlay: drop-shadow(0 3px 4px $colour__boxShadow__darker);
+$dropShadow__buttonLight: drop-shadow(0 3px 4px $colour__boxShadow__light);
 
 // Lyric.
 $boxShadow__verseBar__above: 0 3px 10px 6px $colour__boxShadow__dark;

@@ -8,18 +8,22 @@ Move Liz hand down towards knob
 Rethink some dot category shapes?
 
 # Colours
-past: orange
-future: purple
-paused: blue
-playing: green
-accessed: red
+past: orange (light, bold, dark)
+future: purple (light, bold, dark)
+paused: blue (light, bold)
+playing: green (light, bold)
+
+anchor: 
+accessed:
 hovered:
+clicked:
 selected:
 
 # Drop Shadow
-Light for About, Banner/Filmstip, and Audio buttons
+For filmstrip [x]
 
 # Audio buttons
+Bold
 
 # Banner
 paused: dark
@@ -34,9 +38,9 @@ playing: bold
 past and future, playing and paused, accessed and hovered
 
 # Verse
-paused: light verse, dark cursor
-playing: light verse, light cursor
-slider: dark verse, light cursor
+paused: light verse, bold cursor
+playing: light verse, light/bold cursor
+sliderTouched: dark verse, light cursor
 
 past and future, playing and paused, accessed and hovered
 
@@ -47,5 +51,5 @@ accessed and hovered, clicked, selected
 accessed and hovered, clicked, selected
 TODO: Cannot select present song
 
-# Button
-Disabled
+# Email submit
+disabled, hovered, clicked
