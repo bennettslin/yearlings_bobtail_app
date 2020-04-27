@@ -4512,5 +4512,9 @@ export default [
     {
         taskName: `Old editing timebox.`,
         workedHours: 11
+    },
+    {
+        taskName: `Switch band website to React Static.`,
+        workedHours: 7
     }
 ]
