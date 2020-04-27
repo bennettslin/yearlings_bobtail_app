@@ -4,11 +4,11 @@
 
     .TW__sliderNotMoving
     & {
-        background-color: $bgColour__beforeSelected;
+        background-color: $colour__past__lighter;
 
         // "Granchild verse colour even."
         &.GcE {
-            background-color: $bgColour__beforeSelected__even;
+            background-color: $colour__past__light;
         }
     }
 }
@@ -30,17 +30,17 @@
         // "Grandchild verse colour."
         .GcV {
             // Use !important to override hover highlight.
-            background-color: $bgColour__audioPause !important;
+            background-color: $colour__paused__dark !important;
         }
 
         ~ .ChV {
             // Grandchildren of all subsequent "child verse" siblings.
             .GcV {
-                background-color: $bgColour__afterSelected;
+                background-color: $colour__future__lighter;
 
                 // "Granchild verse colour even."
                 &.GcE {
-                    background-color: $bgColour__afterSelected__even;
+                    background-color: $colour__future__light;
                 }
             }
         }
@@ -55,11 +55,11 @@
 
         // Grandchildren of all subsequent "parent of verse" siblings.
         ~ .PoV .GcV {
-            background-color: $bgColour__afterSelected;
+            background-color: $colour__future__lighter;
 
             // "Granchild verse colour even."
             &.GcE {
-                background-color: $bgColour__afterSelected__even;
+                background-color: $colour__future__light;
             }
         }
     }

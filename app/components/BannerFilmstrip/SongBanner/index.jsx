@@ -18,6 +18,7 @@ import { populateRefs } from 'helpers/ref'
 import { getVerseIndexforRatio } from 'helpers/verse'
 
 const mapStateToProps = ({
+    audioStore: { isPlaying },
     responsiveStore: { isSmallBannerText },
     lyricStore: { lyricSongIndex },
     selectedStore: {
@@ -25,6 +26,7 @@ const mapStateToProps = ({
         selectedTime
     }
 }) => ({
+    isPlaying,
     isSmallBannerText,
     lyricSongIndex,
     selectedSongIndex,
@@ -35,6 +37,7 @@ class SongBanner extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isPlaying: PropTypes.bool.isRequired,
         isSmallBannerText: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -95,7 +98,10 @@ class SongBanner extends PureComponent {
     }
 
     render() {
-        const { isSmallBannerText } = this.props,
+        const {
+                isPlaying,
+                isSmallBannerText
+            } = this.props,
             cursorWidth = this.getCursorWidth()
 
         return (
@@ -108,7 +114,7 @@ class SongBanner extends PureComponent {
                         isSmallBannerText &&
                             'Cursor__smallText',
                         'dropShadow',
-                        'textShadow__light',
+                        isPlaying ? 'textShadow__dark' : 'textShadow__light',
                         'ovH',
                         'Rancho'
                     ),

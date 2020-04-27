@@ -75,13 +75,13 @@
 }
 
 .textShadow__light {
-    color: #ffe;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    color: $colour__text__light;
+    text-shadow: $textShadow__light;
 }
 
 .textShadow__dark {
     color: $colour__text__dark;
-    text-shadow: 1px 1px rgba(255, 255, 255, 0.5);
+    text-shadow: $textShadow__dark;
 }
 
 .boxShadow__popupView {
@@ -98,12 +98,12 @@
 
     .ShW__overlayShown
     & {
-        filter: $dropShadow__buttonOverlay;
+        filter: $dropShadow__button__overlay;
     }
 }
 
 .dropShadowLight {
-    filter: $dropShadow__buttonLight;
+    filter: $dropShadow__light;
 }
 
 .strokeShadow {

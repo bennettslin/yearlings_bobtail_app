@@ -21,7 +21,7 @@
 
     color: $colour__text__dark;
 
-    border: 1px solid $bgColour__audioDisabled;
+    border: 1px solid $colour__neutral__light;
     border-radius: $borderRadius__narrow;
 
     .DW__userAgentDesktop
@@ -36,7 +36,7 @@
     &:hover,
     &:active,
     &:focus {
-        border-color: $bgColour__audioPause;
+        border-color: $colour__paused__bold;
     }
 }
 
@@ -46,7 +46,7 @@
     border: 1px solid transparent;
     background-color: transparent;
     
-    color: $bgColour__audioPause;
+    color: $colour__paused__bold;
     
     &:not(:disabled) {
         cursor: pointer;
@@ -60,10 +60,10 @@
     &:hover,
     &:active,
     &:focus {
-        color: $bgColour__audioPlay;
+        color: $colour__playing__bold;
     }
 
     &:disabled {
-        color: $bgColour__audioDisabled;
+        color: $colour__neutral__light;
     }
 }

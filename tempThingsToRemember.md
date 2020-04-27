@@ -8,16 +8,16 @@ Move Liz hand down towards knob
 Rethink some dot category shapes?
 
 # Colours
-past: orange (light, bold, dark)
-future: purple (light, bold, dark)
-paused: blue (light, bold)
-playing: green (light, bold)
+past: orange
+future: purple
+paused: blue
+playing: blue-green
 
-anchor: 
-accessed:
-hovered:
-clicked:
-selected:
+anchor: red
+accessed: green
+hovered: yellow
+clicked: lighter
+selected: golden
 
 # Drop Shadow
 For filmstrip [x]
@@ -49,7 +49,10 @@ accessed and hovered, clicked, selected
 
 # Snowglobe
 accessed and hovered, clicked, selected
-TODO: Cannot select present song
 
 # Email submit
 disabled, hovered, clicked
+
+# TODO
+Prevent selecting selected verse, scene, snowglobe
+Filmstrip shows tracker

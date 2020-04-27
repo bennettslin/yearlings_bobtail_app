@@ -47,14 +47,6 @@ $width__sliderStanzaTab: 9px;
     }
 }
 
-.boxShadow__sliderStanza {
-    filter: $dropShadow__sliderStanza;
-}
-
-.boxShadow__sliderStanzaTab:before {
-    box-shadow: $boxShadow__sliderStanza;
-}
-
 .SliderStanza__sheet {
     padding:
         $marginY__slider
@@ -133,4 +125,14 @@ $width__sliderStanzaTab: 9px;
 
 .bgColour__sliderStanza__pattern__reverse {
     background-position: bottom left 5px;
+}
+
+.dropShadow__sliderStanza__sheet {
+    // Not sure why this was a drop shadow. Keeping for now, just in case.
+    // filter: $dropShadow__sliderStanza__sheet;
+    box-shadow: $dropShadow__sliderStanza__sheet;
+}
+
+.boxShadow__sliderStanza__tab:before {
+    box-shadow: $boxShadow__sliderStanza__tab;
 }

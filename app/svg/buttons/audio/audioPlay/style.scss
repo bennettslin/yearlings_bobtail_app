@@ -1,11 +1,11 @@
 .ButtonIcon__audioPlay {
     .PlW__isPlaying
     & {
-        fill: $bgColour__audioPause;
+        fill: $colour__playing__bold;
     }
 
     .PlW__isPaused
     & {
-        fill: $bgColour__audioPlay;
+        fill: $colour__paused__bold;
     }
 }

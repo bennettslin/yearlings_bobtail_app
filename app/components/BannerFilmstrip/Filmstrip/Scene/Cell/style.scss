@@ -21,25 +21,30 @@
 }
 
 .FilmstripCell__odd {
-    background-color: $bgColour__beforeSlider;
+    background-color: $colour__past__medLight;
 }
 
 .FilmstripCell__even {
-    background-color: $bgColour__beforeSlider__even;
+    background-color: $colour__past__medium;
 }
 
 .FilmstripCell__selected {
-    background-color: $bgColour__audioNeutral;
+    background-color: $colour__paused__medium;
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__playing__medium;
+    }
 }
 
 .FilmstripCell__afterSelected {
 
     &.FilmstripCell__odd {
-        background-color: $bgColour__afterSlider;
+        background-color: $colour__future__medLight;
     }
-
+    
     &.FilmstripCell__even {
-        background-color: $bgColour__afterSlider__even;
+        background-color: $colour__future__medium;
     }
 }
 

@@ -1,22 +1,20 @@
 @mixin mixin__textShadow($bgColour, $important: false) {
-    $offset: 1px;
+    $offset: 0.5px;
     $offset__negative: -$offset;
     $blur: 0.75px;
 
-    .textShadow__text {
-        @if $important {
-            text-shadow:
-                $offset__negative $offset__negative $blur $bgColour,
-                $offset $offset__negative $blur $bgColour,
-                $offset__negative $offset $blur $bgColour,
-                $offset $offset $blur $bgColour !important;
-        } @else {
-            text-shadow:
-                $offset__negative $offset__negative $blur $bgColour,
-                $offset $offset__negative $blur $bgColour,
-                $offset__negative $offset $blur $bgColour,
-                $offset $offset $blur $bgColour;
-        }
+    @if $important {
+        text-shadow:
+            $offset__negative $offset__negative $blur $bgColour,
+            $offset $offset__negative $blur $bgColour,
+            $offset__negative $offset $blur $bgColour,
+            $offset $offset $blur $bgColour !important;
+    } @else {
+        text-shadow:
+            $offset__negative $offset__negative $blur $bgColour,
+            $offset $offset__negative $blur $bgColour,
+            $offset__negative $offset $blur $bgColour,
+            $offset $offset $blur $bgColour;
     }
 }
 
@@ -30,7 +28,7 @@
         }
 
         @include mixin__textShadow(
-            hsla(0, 0%, 0%, 0.2),
+            hsla(0, 0%, 0%, 0.3),
             $important: $important
         );
 
@@ -42,7 +40,7 @@
         }
 
         @include mixin__textShadow(
-            hsla(0, 0%, 100%, 0.5),
+            hsla(0, 0%, 100%, 0.3),
             $important: $important
         );
     }

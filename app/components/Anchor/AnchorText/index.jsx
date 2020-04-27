@@ -73,9 +73,7 @@ const AnchorText = ({
                                 'TextAnchor__linkText__default',
 
                             isSelected &&
-                                'TextAnchor__linkText__selected',
-
-                            'textShadow__text'
+                                'TextAnchor__linkText__selected'
                         )}>
                             {wordComponent}
                         </span>

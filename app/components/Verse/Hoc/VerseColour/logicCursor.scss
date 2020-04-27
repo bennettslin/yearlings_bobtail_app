@@ -71,14 +71,14 @@
 
         // "Child in lyric."
         &.ChL {
-            @include mixin__textAndLinkColours($light: true, $important: true);
-            @include mixin__underlineColours($light: true, $important: true);
+            @include mixin__textAndLinkColours($light: false, $important: true);
+            @include mixin__underlineColours($light: false, $important: true);
         }
 
         // "Grandchild verse colour."
         .GcV {
             // Use !important to override hover highlight.
-            background-color: $bgColour__audioPlay !important;
+            background-color: $colour__playing__medium !important;
         }
     }
 }

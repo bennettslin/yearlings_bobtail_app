@@ -6,14 +6,14 @@ $colour__boxShadow__light: hsla(90, 100%, 90%, 0.4);
 
 // Main.
 $boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;
-$boxShadow__mainCard__selected:
-    0 0 15px 4px $colour__boxShadow__light,
-    0 3px 10px 3px $colour__boxShadow__dark;
+// $boxShadow__mainCard__selected:
+//     0 0 15px 4px $colour__boxShadow__light,
+//     0 3px 10px 3px $colour__boxShadow__dark;
 
 $dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);
 $dropShadow__button: drop-shadow(0 3px 4px $colour__boxShadow__dark);
-$dropShadow__buttonOverlay: drop-shadow(0 3px 4px $colour__boxShadow__darker);
-$dropShadow__buttonLight: drop-shadow(0 3px 4px $colour__boxShadow__light);
+$dropShadow__button__overlay: drop-shadow(0 3px 4px $colour__boxShadow__darker);
+$dropShadow__light: drop-shadow(0 3px 4px $colour__boxShadow__light);
 
 // Lyric.
 $boxShadow__verseBar__above: 0 3px 10px 6px $colour__boxShadow__dark;
@@ -28,8 +28,10 @@ $boxShadow__activeVerse: inset 0 0 5px $colour__boxShadow__dark;
 $boxShadow__cursorVerse: $boxShadow__mainCard;
 
 // Slider.
-$boxShadow__sliderStanza: 0 3px 6px 2px $colour__boxShadow__dark;
-$dropShadow__sliderStanza: drop-shadow(0 2px 4px $colour__boxShadow__darker);
+// Not sure why this was a drop shadow. Keeping for now, just in case.
+// $dropShadow__sliderStanza__sheet: drop-shadow(0 2px 4px $colour__boxShadow__darker);
+$dropShadow__sliderStanza__sheet: 0 3px 6px 2px $colour__boxShadow__dark;
+$boxShadow__sliderStanza__tab: 0 3px 6px 2px $colour__boxShadow__dark;
 $boxShadow__cursorVerse__slider: 0 1px 4px 2px $colour__boxShadow__dark;
 
 // Popup.

@@ -12,7 +12,12 @@ $padding__songBanner: $MARGIN_THIN * 2;
 
     border-radius: $borderRadius__narrow;
 
-    background-color: $bgColour__audioPause;
+    background-color: $colour__paused__medium;
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__playing__medium;
+    }
 
     .PlW__song
     & {
@@ -21,10 +26,15 @@ $padding__songBanner: $MARGIN_THIN * 2;
 }
 
 .BannerTracker {
-    background-color: $bgColour__audioPlay;
+    background-color: $colour__paused__dark;
 
     .DW__userAgentDesktop
     & {
         transition: width $animationDuration__slow;
+    }
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__playing__dark;
     }
 }
