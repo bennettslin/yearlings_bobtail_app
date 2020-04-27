@@ -1,8 +1,18 @@
 export default [
     {
+        taskName: `Band website favicon.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Band website design.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Band website.`,
         workedHours: 0,
-        neededHours: 20
+        neededHours: 10
     },
     {
         taskName: `Establish selected, activated/hovered, and accessed colours for anchors, and before, after, and on cursor colours for verses, banners and filmstrip.`,
