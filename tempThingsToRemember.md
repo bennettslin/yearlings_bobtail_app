@@ -50,9 +50,15 @@ accessed and hovered, clicked, selected
 # Snowglobe
 accessed and hovered, clicked, selected
 
+# Stanza
+hovered, clicked
+
 # Email submit
 disabled, hovered, clicked
 
 # TODO
 Prevent selecting selected verse, scene, snowglobe
 Filmstrip shows tracker
+
+# FIXME
+Hover verse doesn't work in mobile

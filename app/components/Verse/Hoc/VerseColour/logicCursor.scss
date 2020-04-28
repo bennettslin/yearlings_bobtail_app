@@ -1,10 +1,5 @@
 // Default styling. Kept in this stylesheet for consistency.
 .VerseColour {
-    .DW__desktopWidth
-    .TW__verseCanHover
-    .verseColour__hoverParent:hover
-    &,
-
     .TW__sliderNotMoving.TW__verseActive
     &.VerseColour__activated {
 
@@ -12,6 +7,13 @@
         &, &.GcE {
             background-color: $bgColour__activated;
         }
+    }
+
+    .DW__desktopWidth
+    .TW__verseCanHover
+    .verseColour__hoverParent:hover
+    & {
+        background-color: $bgColour__activated; 
     }
 }
 

@@ -172,7 +172,7 @@ const propTypes = {
                             'UnitCard__tab',
                             'UnitCard__tabTop',
                             'boxShadow__stanzaTab',
-                            'textShadow__light',
+                            'textShadow__dark',
                             'bgColour__unit__pattern',
                             'bgColour__unit__pattern__reverse',
                             `bgColour__stanzaType__${stanzaType}`

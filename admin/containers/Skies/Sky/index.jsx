@@ -42,7 +42,7 @@ class AdminSky extends PureComponent {
                         className: cx(
                             'AdminSky__text',
                             'PtSansNarrow',
-                            'textShadow__dark'
+                            'textShadow__light'
                         )
                     }}
                 >

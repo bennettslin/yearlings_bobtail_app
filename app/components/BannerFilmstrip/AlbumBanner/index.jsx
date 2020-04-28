@@ -16,7 +16,7 @@ class AlbumBanner extends PureComponent {
                     className: cx(
                         'AlbumBanner',
                         'BannerFilmstrip__child',
-                        'textShadow__light',
+                        'textShadow__dark',
                         'ovH',
                         'Rancho'
                     )

@@ -99,15 +99,15 @@
             .TextAnchor__linkText {
                 @if $light {
                     @if $important {
-                        color: $colour__linkHover__light !important;
+                        color: $colour__hover__light !important;
                     } @else {
-                        color: $colour__linkHover__light;
+                        color: $colour__hover__light;
                     }
                 } @else {
                     @if $important {
-                        color: $colour__linkHover__dark !important;
+                        color: $colour__hover__dark !important;
                     } @else {
-                        color: $colour__linkHover__dark;
+                        color: $colour__hover__dark;
                     }
                 }
             }

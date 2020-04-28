@@ -15,11 +15,11 @@ const NavCharacter = ({ bookIndex, songIndex }) => {
             {...{
                 className: cx(
                     'NavCharacter',
-                    getSongIsLogue(songIndex) && 'textShadow__dark',
+                    getSongIsLogue(songIndex) && 'textShadow__light',
                     'Rancho',
                     'abF',
                     'flexCentreContainer',
-                    'textShadow__light'
+                    'textShadow__dark'
                 )
             }}
         >

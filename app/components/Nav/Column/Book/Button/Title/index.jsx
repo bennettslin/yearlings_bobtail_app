@@ -28,7 +28,7 @@ const NavButtonTitle = ({ bookIndex, songIndex }) => {
                     className: cx(
                         'NavButtonTitle__text',
                         'Rancho',
-                        'textShadow__light',
+                        'textShadow__dark',
                         'flexCentreContainer'
                     )
                 }}

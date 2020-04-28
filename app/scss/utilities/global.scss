@@ -74,14 +74,14 @@
     align-items: center;
 }
 
-.textShadow__light {
+.textShadow__dark {
     color: $colour__text__light;
-    text-shadow: $textShadow__light;
+    text-shadow: $textShadow__dark;
 }
 
-.textShadow__dark {
+.textShadow__light {
     color: $colour__text__dark;
-    text-shadow: $textShadow__dark;
+    text-shadow: $textShadow__light;
 }
 
 .boxShadow__popupView {
