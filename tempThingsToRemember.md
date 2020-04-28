@@ -2,8 +2,6 @@
 Share configs for posters and albums.
 See about sharing configs for couches and others.
 Make cardboards stroke line different.
-
-# FIXME
 Rethink some dot category shapes?
 
 # Colours
@@ -23,38 +21,45 @@ For filmstrip [x]
 Bold [x]
 
 # Banner
-paused: dark 
-playing: bold
+paused: medium/dark [x]
+playing: medium/dark [x]
 
-playing and paused, hovered
+playing and paused, hovered [x]
 
 # Filmstrip
-paused: dark
-playing: bold
+paused: medium/dark [x]
+playing: medium/dark [x]
 
-past and future, playing and paused, accessed and hovered
+past and future, playing and paused, accessed and hovered [x]
 
 # Verse
-paused: light verse, bold cursor
-playing: light verse, light/bold cursor
-sliderTouched: dark verse, light cursor
+paused: light verse, medium/dark cursor [ ]
+playing: light verse, medium/dark cursor [x]
+sliderTouched: dark verse, light cursor [x]
 
-past and future, playing and paused, accessed and hovered
+past and future, playing and paused, accessed and hovered [x]
 
 # Anchor
-accessed and hovered, clicked, selected
+accessed and hovered, active, selected [ ]
 
 # Snowglobe
-accessed and hovered, clicked, selected
+accessed and hovered, active, selected [x]
 
-# Stanza
-hovered, clicked
+# Stanza tab
+hovered, active [x]
 
 # Selected dots
 selected
 
 # Email submit
-disabled, hovered, clicked
+disabled, hovered, active [x]
 
 # TODO
 Filmstrip shows tracker
+Raise filmstrip slightly so its holes are on light areas?
+Rethink light text for paused cursor?
+Light drop shadow on any hovered element?
+Underline for dot anchor?
+Song title in lyrics
+Dot sequence styling (also consider light/dark background)
+Zoom option

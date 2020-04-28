@@ -16,8 +16,8 @@ export default [
     },
     {
         taskName: `Implement selected, activated/hovered, and accessed colours for anchors, and before, after, and on cursor colours for verses, banners and filmstrip.`,
-        workedHours: 0,
-        neededHours: 7
+        workedHours: 1,
+        neededHours: 5
     },
     {
         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
@@ -38,5 +38,15 @@ export default [
         taskName: `Begin content revision.`,
         workedHours: 0,
         neededHours: 10
+    },
+    {
+        taskName: `Scene tracker.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Album tracker.`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

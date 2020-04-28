@@ -14,7 +14,7 @@ $hue__past: 36;
 $hue__present: 156;
 $hue__future: 276;
 
-$hue__playing: 186;
+$hue__playing: $hue__present;
 $hue__paused: 216;
 
 $sat__bold: 90%;
@@ -42,7 +42,7 @@ $colour__past__dark: hsl($hue__past, $sat__dark, $lum__dark);
 $colour__past__darker: hsl($hue__past, $sat__darker, $lum__darker);
 
 $colour__playing__bold: hsl($hue__playing, $sat__bold, $lum__bold);
-$colour__playing__medium: hsl($hue__playing, $sat__medium, $lum__medium + 15%);
+$colour__playing__medium: hsl($hue__playing, $sat__medium, $lum__medium + 20%);
 $colour__playing__dark: hsl($hue__playing, $sat__dark, $lum__dark + 10%);
 
 $colour__paused__bold: hsl($hue__paused, $sat__bold, $lum__bold);
@@ -60,20 +60,19 @@ $colour__future__darker: hsl($hue__future, $sat__darker, $lum__darker);
 $colour__neutral__light: hsl(0, 0%, $lum__light);
 $colour__neutral__dark: hsl(0, 0%, $lum__dark);
 
-$colour__present__bold: hsl($hue__present, $sat__bold, $lum__bold);
 $colour__present__light: hsl($hue__present, $sat__light, $lum__light);
 
 $hue__link: 6;
 $hue__selected: 66;
-$hue__access: 150;
+$hue__access: 126;
 
-$sat__link: 45%;
+$sat__link: 35%;
 
 $lum__link__dark: 43%;
 $lum__hover__dark: 54%;
 $lum__active: 65%;
-$lum__hover__light: 74%;
-$lum__link__light: 83%;
+$lum__hover__light: 78%;
+$lum__link__light: 92%;
 
 $colour__link__dark: hsl($hue__link, $sat__link, $lum__link__dark);
 $colour__linkHover__dark: hsl($hue__link, $sat__link, $lum__hover__dark);
@@ -92,7 +91,7 @@ $colour__selected__medium: hsl($hue__selected, $sat__link, $lum__active);
 $colour__selected__light: hsl($hue__selected, $sat__link, $lum__link__light);
 
 // Verse colours
-$hue__hover: 90;
+$hue__hover: 66;
 $colour__hover__light: hsl($hue__hover, $sat__light, $lum__light);
 
 // Annotation and Wormhole colours.

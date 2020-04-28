@@ -41,6 +41,7 @@
 .UnitCard__tabTop {
     // Ensure that tab covers sheet.
     cursor: pointer;
+    user-select: none;
 
     .DW__userAgentDesktop
     & {
@@ -48,11 +49,11 @@
     }
 
     &:hover {
-        color: $colour__link__light;
+        color: $colour__linkHover__light;
     }
 
     &:active {
-        color: $colour__linkHover__light;
+        color: $colour__linkActive;
     }
 }
 

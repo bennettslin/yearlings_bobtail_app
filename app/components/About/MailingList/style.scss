@@ -21,7 +21,7 @@
 
     color: $colour__text__dark;
 
-    border: 1px solid $colour__neutral__light;
+    border: 1px solid $colour__neutral__dark;
     border-radius: $borderRadius__narrow;
 
     .DW__userAgentDesktop
@@ -36,7 +36,7 @@
     &:hover,
     &:active,
     &:focus {
-        border-color: $colour__paused__bold;
+        border-color: $colour__paused__medium;
     }
 }
 
@@ -46,7 +46,7 @@
     border: 1px solid transparent;
     background-color: transparent;
     
-    color: $colour__paused__bold;
+    color: $colour__link__dark;
     
     &:not(:disabled) {
         cursor: pointer;
@@ -57,13 +57,15 @@
         transition: color $animationDuration__default;
     }
 
-    &:hover,
-    &:active,
-    &:focus {
-        color: $colour__playing__bold;
+    &:hover {
+        color: $colour__linkHover__dark;
+    }
+
+    &:active {
+        color: $colour__linkActive;
     }
 
     &:disabled {
-        color: $colour__neutral__light;
+        color: $colour__neutral__dark;
     }
 }
