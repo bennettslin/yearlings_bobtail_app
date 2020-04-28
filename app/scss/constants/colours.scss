@@ -63,47 +63,44 @@ $colour__neutral__dark: hsl(0, 0%, $lum__dark);
 // Audio related colours.
 $bgColour__audioNeutral: hsl(240, 100%, 93%);
 
-$hue__link: 0;
-$hue__hover: 60;
+$hue__link: 6;
+$hue__selected: 66;
 $hue__access: 150;
 
-// Accessed anchor colours.
-$colour__accessedLink__dark: hsl($hue__access, 33%, 40%);
-$colour__accessedLinkHover__dark: hsl($hue__hover, 29%, 53%);
-$bgColour__accessedUnderline__dark: hsl($hue__access, 29%, 53%);
-$bgColour__accessedUnderlineHover__dark: hsl($hue__hover, 40%, 67%);
-$colour__accessedLinkActive: hsl($hue__access, 60%, 67%);
+$sat__link: 45%;
 
-$colour__accessedLink__light: hsl($hue__access, 100%, 87%);
-$colour__accessedLinkHover__light: hsl($hue__hover, 67%, 80%);
-$bgColour__accessedUnderline__light: hsl($hue__access, 67%, 80%);
-$bgColour__accessedUnderlineHover__light: hsl($hue__hover, 40%, 67%);
-$bgColour__accessedUnderlineActive: hsl($hue__access, 60%, 67%);
+$lum__link__dark: 43%;
+$lum__hover__dark: 54%;
+$lum__active: 65%;
+$lum__hover__light: 76%;
+$lum__link__light: 87%;
 
-// Default underline colours.
-$colour__link__dark: hsl($hue__link, 33%, 40%);
-$colour__hover__dark: hsl($hue__hover, 33%, 60%);
+$colour__link__dark: hsl($hue__link, $sat__link, $lum__link__dark);
+$colour__hover__dark: hsl($hue__link, $sat__link, $lum__hover__dark);
+$colour__active: hsl($hue__link, $sat__link, $lum__active);
+$colour__hover__light: hsl($hue__link, $sat__link, $lum__hover__light);
+$colour__link__light: hsl($hue__link, $sat__link, $lum__link__light);
 
-$colour__link__light: hsl($hue__link, 100%, 87%);
-$colour__hover__light: hsl($hue__hover, 27%, 63%);
+$colour__access__dark: hsl($hue__access, $sat__link, $lum__link__dark);
+$colour__accessHover__dark: hsl($hue__access, $sat__link, $lum__hover__dark);
+$colour__accessActive: hsl($hue__access, $sat__link, $lum__active);
+$colour__accessHover__light: hsl($hue__access, $sat__link, $lum__hover__light);
+$colour__access__light: hsl($hue__access, $sat__link, $lum__link__light);
 
-$bgColour__underline__dark: hsl($hue__link, 33%, 60%);
-$bgColour__underlineHover__dark: hsl($hue__hover, 67%, 80%);
-$colour__linkActive__dark: hsl($hue__link, 67%, 80%);
-$bgColour__underlineActive__dark: hsl($hue__link, 100%, 90%);
-
-$bgColour__underline__light: hsl($hue__link, 27%, 63%);
-$bgColour__underlineHover__light: hsl($hue__hover, 33%, 40%);
-$colour__linkActive__light: hsl($hue__link, 33%, 40%);
-$bgColour__underlineActive__light: hsl($hue__link, 33%, 20%);
-
-$colour__selected__dark: hsl(44, 100%, 37%);
-$colour__selected__light: hsl(44, 100%, 50%);
-$bgColour__selectedUnderline__dark: hsl(44, 100%, 37%);
-$bgColour__selectedUnderline__light: hsl(44, 100%, 50%);
+$colour__selected__dark: hsl($hue__selected, $sat__link, $lum__link__dark);
+$colour__selected__light: hsl($hue__selected, $sat__link, $lum__link__light);
 
 // Verse colours
+$hue__hover: 96;
 $bgColour__activated: hsl($hue__hover, $sat__light, $lum__light);
+
+// Annotation and Wormhole colours.
+$bgColour__annotation__dark: hsl(220, 13%, 57%); // For carousel button only.
+$bgColour__annotation: hsl(220, 13%, 77%);
+$colour__annotation__selected: hsl($hue__selected, 100%, 93%);
+$bgColour__annotationCard: hsla(240, 100%, 99%, 0.9);
+$bgColour__annotationWormhole: hsl(0, 100%, 98%);
+$colour__annotationWormhole__title: hsl(0, 0%, 73%);
 
 // Dot colours.
 $bgColour__dot__narrative: hsl(315, 100%, 87%);
@@ -114,15 +111,7 @@ $bgColour__dot__reference: hsl(150, 100%, 80%);
 $bgColour__dot__wormhole: hsl(225, 100%, 87%);
 $bgColour__dot__songwriting: hsl(0, 100%, 87%);
 $bgColour__dot__afterword: hsl(60, 67%, 80%);
-
 $bgColour__dot__deselected: hsl(0, 0%, 87%);
-
-// Annotation and Wormhole colours.
-$bgColour__annotation: hsl(220, 43%, 77%);
-$bgColour__annotation__dark: hsl(220, 23%, 57%); // For carousel button only.
-$bgColour__annotationCard: hsla(240, 100%, 99%, 0.9);
-$bgColour__annotationWormhole: hsl(0, 100%, 98%);
-$colour__annotationWormhole__title: hsl(0, 0%, 73%);
 
 // Song stanza colours.
 $bgColour__stanzaType__verse: hsl(210, 35, 40);

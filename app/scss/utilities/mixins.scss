@@ -64,15 +64,15 @@
     .TextAnchor__linkText__accessed {
         @if $light {
             @if $important {
-                color: $colour__accessedLink__light !important;
+                color: $colour__access__light !important;
             } @else {
-                color: $colour__accessedLink__light;
+                color: $colour__access__light;
             }
         } @else {
             @if $important {
-                color: $colour__accessedLink__dark !important;
+                color: $colour__access__dark !important;
             } @else {
-                color: $colour__accessedLink__dark;
+                color: $colour__access__dark;
             }
         }
     }
@@ -114,15 +114,15 @@
             .TextAnchor__linkText__accessed {
                 @if $light {
                     @if $important {
-                        color: $colour__accessedLinkHover__light !important;
+                        color: $colour__accessHover__light !important;
                     } @else {
-                        color: $colour__accessedLinkHover__light;
+                        color: $colour__accessHover__light;
                     }
                 } @else {
                     @if $important {
-                        color: $colour__accessedLinkHover__dark !important;
+                        color: $colour__accessHover__dark !important;
                     } @else {
-                        color: $colour__accessedLinkHover__dark;
+                        color: $colour__accessHover__dark;
                     }
                 }
             }
@@ -130,25 +130,17 @@
 
         &:active {
             .TextAnchor__linkText {
-                @if $light {
-                    @if $important {
-                        color: $colour__linkActive__light !important;
-                    } @else {
-                        color: $colour__linkActive__light;
-                    }
+                @if $important {
+                    color: $colour__active !important;
                 } @else {
-                    @if $important {
-                        color: $colour__linkActive__dark !important;
-                    } @else {
-                        color: $colour__linkActive__dark;
-                    }
+                    color: $colour__active;
                 }
             }
             .TextAnchor__linkText__accessed {
                 @if $important {
-                    color: $colour__accessedLinkActive !important;
+                    color: $colour__accessActive !important;
                 } @else {
-                    color: $colour__accessedLinkActive;
+                    color: $colour__accessActive;
                 }
             }
         }
@@ -160,15 +152,15 @@
     .Underline__default {
         @if $light {
             @if $important {
-                background-color: $bgColour__underline__light !important;
+                background-color: $colour__link__light !important;
             } @else {
-                background-color: $bgColour__underline__light;
+                background-color: $colour__link__light;
             }
         } @else {
             @if $important {
-                background-color: $bgColour__underline__dark !important;
+                background-color: $colour__link__dark !important;
             } @else {
-                background-color: $bgColour__underline__dark;
+                background-color: $colour__link__dark;
             }
         }
     }
@@ -176,15 +168,15 @@
     .Underline__accessed {
         @if $light {
             @if $important {
-                background-color: $bgColour__accessedUnderline__light !important;
+                background-color: $colour__access__light !important;
             } @else {
-                background-color: $bgColour__accessedUnderline__light;
+                background-color: $colour__access__light;
             }
         } @else {
             @if $important {
-                background-color: $bgColour__accessedUnderline__dark !important;
+                background-color: $colour__access__dark !important;
             } @else {
-                background-color: $bgColour__accessedUnderline__dark;
+                background-color: $colour__access__dark;
             }
         }
     }
@@ -192,15 +184,15 @@
     .Underline__selected {
         @if $light {
             @if $important {
-                background-color: $bgColour__selectedUnderline__light !important;
+                background-color: $colour__selected__light !important;
             } @else {
-                background-color: $bgColour__selectedUnderline__light;
+                background-color: $colour__selected__light;
             }
         } @else {
             @if $important {
-                background-color: $bgColour__selectedUnderline__dark !important;
+                background-color: $colour__selected__dark !important;
             } @else {
-                background-color: $bgColour__selectedUnderline__dark;
+                background-color: $colour__selected__dark;
             }
         }
     }
@@ -211,30 +203,30 @@
             .Underline {
                 @if $light {
                     @if $important {
-                        background-color: $bgColour__underlineHover__light !important;
+                        background-color: $colour__hover__light !important;
                     } @else {
-                        background-color: $bgColour__underlineHover__light;
+                        background-color: $colour__hover__light;
                     }
                 } @else {
                     @if $important {
-                        background-color: $bgColour__underlineHover__dark !important;
+                        background-color: $colour__hover__dark !important;
                     } @else {
-                        background-color: $bgColour__underlineHover__dark;
+                        background-color: $colour__hover__dark;
                     }
                 }
             }
             .Underline__accessed {
                 @if $light {
                     @if $important {
-                        background-color: $bgColour__accessedUnderlineHover__light !important;
+                        background-color: $colour__accessHover__light !important;
                     } @else {
-                        background-color: $bgColour__accessedUnderlineHover__light;
+                        background-color: $colour__accessHover__light;
                     }
                 } @else {
                     @if $important {
-                        background-color: $bgColour__accessedUnderlineHover__dark !important;
+                        background-color: $colour__accessHover__dark !important;
                     } @else {
-                        background-color: $bgColour__accessedUnderlineHover__dark;
+                        background-color: $colour__accessHover__dark;
                     }
                 }
             }
@@ -242,25 +234,17 @@
 
         &:active {
             .Underline {
-                @if $light {
-                    @if $important {
-                        background-color: $bgColour__underlineActive__light !important;
-                    } @else {
-                        background-color: $bgColour__underlineActive__light;
-                    }
+                @if $important {
+                    background-color: $colour__active !important;
                 } @else {
-                    @if $important {
-                        background-color: $bgColour__underlineActive__dark !important;
-                    } @else {
-                        background-color: $bgColour__underlineActive__dark;
-                    }
+                    background-color: $colour__active;
                 }
             }
             .Underline__accessed {
                 @if $important {
-                    background-color: $bgColour__accessedUnderlineActive !important;
+                    background-color: $colour__accessActive !important;
                 } @else {
-                    background-color: $bgColour__accessedUnderlineActive;
+                    background-color: $colour__accessActive;
                 }
             }
         }
