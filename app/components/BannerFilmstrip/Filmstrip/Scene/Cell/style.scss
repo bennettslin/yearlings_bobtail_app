@@ -8,13 +8,13 @@
         transition: background-color $animationDuration__default;
     }
 
-    .FilmstripScene:hover
+    .FilmstripScene__interactable:hover
     & {
         animation: bounceHoverY $animationDuration__default;
         background-color: $colour__hover__light;
     }
 
-    .FilmstripScene:active
+    .FilmstripScene__interactable:active
     & {
         transform: scaleY(0.9);
     }

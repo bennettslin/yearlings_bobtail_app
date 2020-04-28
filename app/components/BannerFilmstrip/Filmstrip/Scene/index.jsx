@@ -20,9 +20,17 @@ class FilmstripScene extends PureComponent {
     }
 
     _handleSceneClick = (e) => {
+        const {
+            isSelected,
+            sceneIndex
+        } = this.props
+
+        if (isSelected) {
+            return
+        }
+
         logEvent({ e, componentName: 'FilmstripScene' })
 
-        const { sceneIndex } = this.props
         this.props.dispatchScene(sceneIndex)
         this.props.dispatchStopPropagation(e)
     }
@@ -42,6 +50,9 @@ class FilmstripScene extends PureComponent {
                 {...{
                     className: cx(
                         'FilmstripScene',
+                        isSelected ?
+                            'FilmstripScene__selected' :
+                            'FilmstripScene__interactable',
                         'abF'
                     ),
                     style: {

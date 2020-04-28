@@ -57,5 +57,4 @@ selected
 disabled, hovered, clicked
 
 # TODO
-Prevent selecting scene
 Filmstrip shows tracker

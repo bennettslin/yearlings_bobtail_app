@@ -4524,5 +4524,14 @@ export default [
     {
         taskName: `Prevent nav from selecting currently selected song.`,
         workedHours: 1
+    },
+    {
+        taskName: `Prevent filmstrip from selecting currently selected scene.`,
+        workedHours: 1
+    },
+    {
+        taskName: `Establish selected, activated/hovered, and accessed colours for anchors, and before, after, and on cursor colours for verses, banners and filmstrip.`,
+        workedHours: 8,
+        neededHours: 8
     }
 ]
