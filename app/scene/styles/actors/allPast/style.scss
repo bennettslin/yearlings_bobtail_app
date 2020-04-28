@@ -1,34 +1,5 @@
 .allPast#{$suffix} {
-    // .clothingBrass { fill: hsl(45, 15%, 55%); }
-    // .clothingSilver { fill: hsl(210, 14%, 65%); }
-    // .clothingGold { fill: hsl(41, 50%, 53%); }
-    // .clothingPearl { fill: hsl(230, 41%, 83%); }
-
-    // .hoodieLace { fill: hsl(0, 0%, 80%); }
-    // .zipperDisplayLine { stroke: hsla(0, 0%, 80%, 0.5); }
-
-    // .watchFace { fill: hsl(0, 0%, 80%); }
-    // .watchSide { fill: hsl(42, 31%, 50%); }
-
-    // .beltTan { fill: hsl(29, 26%, 40%); }
-    // .beltBlack { fill: hsl(213, 8%, 27%); }
-    
     .shirtWhite { fill: hsl($hue__past, 20%, 90%); }
-    // .shirtWhiteDark { fill: hsl(0, 0%, 80%); }
-    // .shirtLogo { fill: hsl(0, 0%, 80%); }
-    
-    // .sockWhite { fill: hsl(0, 0%, 90%); }
-    // .sockWhiteDark { fill: hsl(0, 0%, 80%); }
-    
-    // .shoelace { fill: hsl(0, 0%, 85%); }
-    // .shoeLogo { fill: hsl(0, 0%, 82.5%); }
-    
     .soleWhite { fill: hsl($hue__past, 20%, 80%); }
     .soleWhiteDark { fill: hsl($hue__past, 20%, 70%); }
-    // .soleLightTan { fill: hsl(60, 13%, 60%); }
-    // .soleLightTanDark { fill: hsl(60, 13%, 50%); }
-    // .soleTan { fill: hsl(39, 27%, 32%); }
-    // .soleTanDark { fill: hsl(39, 27%, 22%); }
-    // .soleBlackDark { fill: hsl(231, 9%, 30%); }
-    // .soleBlack { fill: hsl(229, 9%, 39%); }
 }

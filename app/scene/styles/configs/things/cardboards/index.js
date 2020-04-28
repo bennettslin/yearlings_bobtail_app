@@ -42,15 +42,17 @@ import {
     TINTIN_POSTER,
     VAN_NUYS_LOGO
 } from '../../../../../constants/scene/things/cardboards'
-import { MARA } from '../../../../../constants/scene/actors'
+import {
+    BENNETT,
+    LIZ,
+    MARA
+} from '../../../../../constants/scene/actors'
 import {
     ALL_PAST__SHARED,
     ALL_PEOPLE__SHARED,
     BENNETT_PAST__SHARED,
-    BENNETT_PRESENT__SHARED,
     CHRISTOPHER_PAST__SHARED,
     BENNETT_FUTURE__SHARED,
-    LIZ_PRESENT__SHARED,
     MIRIAM_FUTURE__SHARED
 } from '../../../actors'
 import {
@@ -193,8 +195,8 @@ export default {
     ],
     [SNOWGLOBE_PRESENT]: [
         SNOWGLOBE__SHARED,
-        BENNETT_PRESENT__SHARED,
-        LIZ_PRESENT__SHARED,
+        BENNETT,
+        LIZ,
         ALL_PEOPLE__SHARED
     ],
     [SNOWGLOBE_SMALL]: SNOWGLOBE__SHARED,

@@ -22,7 +22,6 @@ import {
     EL_TORITO
 } from '../../../../../constants/scene/actors/songs'
 import { BENNETT } from '../../../../../constants/scene/actors'
-import { LIZ_PRESENT__SHARED } from '../../../actors'
 import { OPAL__SHARED } from '../../../shared/animals'
 import { CHINESE_TAKEOUT__SHARED } from '../../../shared/food'
 import { LIZ_LINENS__SHARED } from '../../../shared/furniture'
@@ -42,7 +41,6 @@ export default {
     [LEAVING_CRUMBLED]: null,
     [PETTING_SEATED]: OPAL__SHARED,
     [PETTING_SEATED_PRESENT]: [
-        LIZ_PRESENT__SHARED,
         OPAL__SHARED
     ],
     [PETTING_STANDING]: OPAL__SHARED,

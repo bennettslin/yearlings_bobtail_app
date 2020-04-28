@@ -30,11 +30,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Finalise actual past, present, and future colours.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Some await async for scene rendering.`,
         workedHours: 0,
         neededHours: 10

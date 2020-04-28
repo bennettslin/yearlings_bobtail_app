@@ -4531,7 +4531,10 @@ export default [
     },
     {
         taskName: `Establish selected, activated/hovered, and accessed colours for anchors, and before, after, and on cursor colours for verses, banners and filmstrip.`,
-        workedHours: 8,
-        neededHours: 8
+        workedHours: 8
+    },
+    {
+        taskName: `Finalise actual past, present, and future colours.`,
+        workedHours: 1
     }
 ]
