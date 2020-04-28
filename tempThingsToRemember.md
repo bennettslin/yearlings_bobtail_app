@@ -4,7 +4,6 @@ See about sharing configs for couches and others.
 Make cardboards stroke line different.
 
 # FIXME
-Move Liz hand down towards knob
 Rethink some dot category shapes?
 
 # Colours

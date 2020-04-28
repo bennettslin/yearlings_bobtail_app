@@ -9,13 +9,13 @@ export default {
     [LIZ]: {
         [OPENING_DOOR]: {
             yIndex: 4,
-            xPosition: 6.5
+            xPosition: 6.43
         }
     },
     [KHARI]: {
         [ARRIVED]: {
             yIndex: 5,
-            xPosition: 8.5
+            xPosition: 8.8
         }
     }
 }
