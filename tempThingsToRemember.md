@@ -15,18 +15,16 @@ playing: blue-green
 
 anchor: red
 accessed: green
-hovered: yellow
-clicked: lighter
-selected: golden
+selected: yellow
 
 # Drop Shadow
 For filmstrip [x]
 
 # Audio buttons
-Bold
+Bold [x]
 
 # Banner
-paused: dark
+paused: dark 
 playing: bold
 
 playing and paused, hovered
@@ -53,12 +51,12 @@ accessed and hovered, clicked, selected
 # Stanza
 hovered, clicked
 
+# Selected dots
+selected
+
 # Email submit
 disabled, hovered, clicked
 
 # TODO
-Prevent selecting selected verse, scene, snowglobe
+Prevent selecting scene
 Filmstrip shows tracker
-
-# FIXME
-Hover verse doesn't work in mobile

@@ -8,7 +8,11 @@ import { getSongTitle } from 'album/api/songs'
 
 import { getIndexCharacter } from '../Character/helper'
 
-const NavButtonTitle = ({ bookIndex, songIndex }) => {
+const NavButtonTitle = ({
+    bookIndex,
+    songIndex,
+    isSelected
+}) => {
 
     const title = isFinite(bookIndex) ?
         `Book ${getIndexCharacter({ bookIndex })}` :
@@ -27,6 +31,9 @@ const NavButtonTitle = ({ bookIndex, songIndex }) => {
                 {...{
                     className: cx(
                         'NavButtonTitle__text',
+                        isSelected ?
+                            'Nav__text__selected' :
+                            'Nav__text__interactable',
                         'Rancho',
                         'textShadow__dark',
                         'flexCentreContainer'
@@ -41,7 +48,8 @@ const NavButtonTitle = ({ bookIndex, songIndex }) => {
 
 NavButtonTitle.propTypes = {
     bookIndex: PropTypes.number,
-    songIndex: PropTypes.number
+    songIndex: PropTypes.number,
+    isSelected: PropTypes.bool
 }
 
 export default NavButtonTitle

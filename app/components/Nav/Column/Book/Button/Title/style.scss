@@ -39,17 +39,4 @@
         transform-origin: left bottom 0;
         padding-left: $margin__thick;
     }
-
-    .Button__accessed
-    &,
-    .Button__enabled:hover
-    & {
-        color: $colour__accessActive;
-    }
-
-    .DW__userAgentDesktop
-    & {
-        transition:
-            color $animationDuration__default;
-    }
 }

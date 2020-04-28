@@ -51,3 +51,41 @@
         height: 100%;
     }
 }
+
+.Nav__text__selected {
+    color: $colour__selected__medium;
+}
+
+.Nav__text__interactable {
+
+    .Button__enabled:hover
+    & {
+        color: $colour__linkHover__light;
+    }
+
+    .Button__enabled:active
+    & {
+        color: $colour__linkActive;
+    }
+
+    .Button__accessed
+    & {
+        color: $colour__accessActive;
+    }
+
+    .Button__accessed:hover
+    & {
+        color: $colour__accessHover__dark;
+    }
+
+    .Button__accessed:active
+    & {
+        color: $colour__access__dark;
+    }
+
+    .DW__userAgentDesktop
+    & {
+        transition:
+            color $animationDuration__default;
+    }
+}

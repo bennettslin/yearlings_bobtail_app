@@ -61,12 +61,16 @@
 
 .Button__enabled {
     cursor: pointer;
+}
+
+.Button__clickDisabled,
+.Button__enabled {
     opacity: 1;
 }
 
 .ButtonAnimatable {
 
-    .Button__accessed
+    .Button__accessed.Button__enabled
     &,
     .Button__enabled:hover
     & {
@@ -75,7 +79,7 @@
 
     // "Root accessed letter Enter."
     .PaLEnter
-    .Button__accessed
+    .Button__accessed.Button__enabled
     &,
     .Button__enabled:active
     & {

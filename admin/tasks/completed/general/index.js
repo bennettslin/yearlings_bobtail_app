@@ -4516,5 +4516,13 @@ export default [
     {
         taskName: `Switch band website to React Static.`,
         workedHours: 7
+    },
+    {
+        taskName: `Finalise thinking on shadows for dots, dot anchors, dot fields, anchors. Glow effects?`,
+        workedHours: 1
+    },
+    {
+        taskName: `Prevent nav from selecting currently selected song.`,
+        workedHours: 1
     }
 ]

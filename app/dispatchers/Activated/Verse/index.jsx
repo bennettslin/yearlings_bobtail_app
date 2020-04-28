@@ -56,11 +56,20 @@ class ActivatedVerseDispatcher extends PureComponent {
     }
 
     activateVerseIndex = (activatedVerseIndex) => {
-        const { selectedSongIndex } = this.props,
-            activatedSceneIndex = getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                activatedVerseIndex
-            )
+        const {
+            selectedSongIndex,
+            selectedVerseIndex
+        } = this.props
+
+        // Do not allow selected verse to be activated.
+        if (selectedVerseIndex === activatedVerseIndex) {
+            return
+        }
+
+        const activatedSceneIndex = getSceneIndexForVerseIndex(
+            selectedSongIndex,
+            activatedVerseIndex
+        )
 
         this.props.updateSessionStore({
             activatedSceneIndex,

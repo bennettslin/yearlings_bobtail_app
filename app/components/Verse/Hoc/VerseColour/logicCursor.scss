@@ -5,15 +5,16 @@
 
         // Override even verse shading.
         &, &.GcE {
-            background-color: $bgColour__activated;
+            background-color: $colour__access__light;
         }
     }
 
-    .DW__desktopWidth
+    // Hacky extra class added to override future even verse.
+    .DeviceWrapper
     .TW__verseCanHover
     .verseColour__hoverParent:hover
     & {
-        background-color: $bgColour__activated; 
+        background-color: $colour__hover__light; 
     }
 }
 

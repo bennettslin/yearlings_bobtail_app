@@ -111,21 +111,26 @@ class NavButton extends PureComponent {
                             NAV_SONG_BUTTON_KEY,
                         buttonIdentifier,
                         isDisabled: !isEnabled,
-                        isIndexSelected: isSelected,
+                        isClickDisabled: isSelected,
                         accessKey: isToggle ? '' : ENTER,
                         isAccessed:
                             isAccessed &&
                             isNavigable,
                         handleButtonClick: this._handleButtonClick,
                         inanimateChild: (
-                            <NavButtonTitle {...{ bookIndex, songIndex }} />
+                            <NavButtonTitle {...{
+                                bookIndex,
+                                songIndex,
+                                isSelected
+                            }} />
                         )
                     }}
                 >
                     <NavCharacter
                         {...{
                             bookIndex,
-                            songIndex
+                            songIndex,
+                            isSelected
                         }}
                     />
                 </Button>

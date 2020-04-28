@@ -22,8 +22,8 @@ class NavNavigation extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        isAccessOn: PropTypes.bool.isRequired,
         accessedNavIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
         shownNavBookIndex: PropTypes.number.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
 
@@ -38,27 +38,24 @@ class NavNavigation extends PureComponent {
     }
 
     navigateNav = (keyName) => {
-        const { isAccessOn } = this.props
-
         let annotationIndexWasAccessed = false,
             keyWasRegistered = true
 
-        /**
-         * Only navigate once access is already on.
-         */
-        if (isAccessOn) {
-            let { accessedNavIndex } = this.props,
-                direction
+        const { selectedSongIndex } = this.props
+        let { accessedNavIndex } = this.props,
+            direction
 
-            // Skip appropriate songs if showing single book column.
-            switch (keyName) {
-                case ARROW_LEFT:
-                    direction = -1
-                    break
-                case ARROW_RIGHT:
-                    direction = 1
-                    break
-                case ENTER:
+        // Skip appropriate songs if showing single book column.
+        switch (keyName) {
+            case ARROW_LEFT:
+                direction = -1
+                break
+            case ARROW_RIGHT:
+                direction = 1
+                break
+            case ENTER:
+                // Do not allow currently selected song to be selected.
+                if (selectedSongIndex !== accessedNavIndex) {
                     keyWasRegistered = this.dispatchSong({
                         selectedSongIndex: accessedNavIndex,
                         doDismissNav: true
@@ -68,28 +65,29 @@ class NavNavigation extends PureComponent {
                      * was also accessed.
                      */
                     annotationIndexWasAccessed = keyWasRegistered
-                    break
-                default:
-                    keyWasRegistered = false
-            }
-
-            if (direction) {
-                const { shownNavBookIndex } = this.props,
-                    songsCount = getSongsAndLoguesCount()
-
-                accessedNavIndex = (
-                    accessedNavIndex + songsCount + direction
-                ) % songsCount
-
-                // Select the book column that contains the accessed song index.
-                if (
-                    shownNavBookIndex !== getBookForSongIndex(accessedNavIndex)
-                ) {
-                    this.dispatchNavBook()
                 }
 
-                this.props.updateAccessStore({ accessedNavIndex })
+                break
+            default:
+                keyWasRegistered = false
+        }
+
+        if (direction) {
+            const { shownNavBookIndex } = this.props,
+                songsCount = getSongsAndLoguesCount()
+
+            accessedNavIndex = (
+                accessedNavIndex + songsCount + direction
+            ) % songsCount
+
+            // Select the book column that contains the accessed song index.
+            if (
+                shownNavBookIndex !== getBookForSongIndex(accessedNavIndex)
+            ) {
+                this.dispatchNavBook()
             }
+
+            this.props.updateAccessStore({ accessedNavIndex })
         }
 
         return {
@@ -113,14 +111,12 @@ class NavNavigation extends PureComponent {
 }
 
 const mapStateToProps = ({
-    sessionStore: { shownNavBookIndex },
-    accessStore: {
-        isAccessOn,
-        accessedNavIndex
-    }
+    accessStore: { accessedNavIndex },
+    selectedStore: { selectedSongIndex },
+    sessionStore: { shownNavBookIndex }
 }) => ({
-    isAccessOn,
     accessedNavIndex,
+    selectedSongIndex,
     shownNavBookIndex
 })
 

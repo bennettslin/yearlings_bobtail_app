@@ -11,7 +11,7 @@
     .FilmstripScene:hover
     & {
         animation: bounceHoverY $animationDuration__default;
-        background-color: $bgColour__activated;
+        background-color: $colour__hover__light;
     }
 
     .FilmstripScene:active
@@ -52,6 +52,6 @@
 
     // Make selector specific to override default colour.
     &.FilmstripCell {
-        background-color: $bgColour__activated;
+        background-color: $colour__access__light;
     }
 }

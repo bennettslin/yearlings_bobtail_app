@@ -6,7 +6,11 @@ import cx from 'classnames'
 import { getSongIsLogue } from '../../../../../../album/api/songs'
 import { getIndexCharacter } from './helper'
 
-const NavCharacter = ({ bookIndex, songIndex }) => {
+const NavCharacter = ({
+    bookIndex,
+    songIndex,
+    isSelected
+}) => {
 
     const indexCharacter = getIndexCharacter({ bookIndex, songIndex })
 
@@ -15,6 +19,9 @@ const NavCharacter = ({ bookIndex, songIndex }) => {
             {...{
                 className: cx(
                     'NavCharacter',
+                    isSelected ?
+                        'Nav__text__selected' :
+                        'Nav__text__interactable',
                     getSongIsLogue(songIndex) && 'textShadow__light',
                     'Rancho',
                     'abF',
@@ -30,7 +37,8 @@ const NavCharacter = ({ bookIndex, songIndex }) => {
 
 NavCharacter.propTypes = {
     bookIndex: PropTypes.number,
-    songIndex: PropTypes.number
+    songIndex: PropTypes.number,
+    isSelected: PropTypes.bool
 }
 
 export default NavCharacter

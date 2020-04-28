@@ -34,7 +34,7 @@ class Button extends Component {
         isCustomSize: PropTypes.bool,
         isSmallSize: PropTypes.bool,
         isLargeSize: PropTypes.bool,
-        isIndexSelected: PropTypes.bool, // Passed by nav button.
+        isClickDisabled: PropTypes.bool, // Passed by nav button.
         isDisabled: PropTypes.bool,
         isPopupButton: PropTypes.bool,
         buttonIdentifier: PropTypes.any,
@@ -53,17 +53,26 @@ class Button extends Component {
     }
 
     _handleClick = (e) => {
-        const { buttonName, isDisabled } = this.props
-        logEvent({
-            e,
-            componentName: `Button`,
-            analyticsIdentifier: buttonName
-        })
+        const {
+            buttonName,
+            isDisabled,
+            isClickDisabled
+        } = this.props
 
         if (!isDisabled) {
             this.dispatchStopPropagation(e)
-            this.props.handleButtonClick(e)
+
+            if (!isClickDisabled) {
+                logEvent({
+                    e,
+                    componentName: `Button`,
+                    analyticsIdentifier: buttonName
+                })
+
+                this.props.handleButtonClick(e)
+            }
         }
+
     }
 
     _getRefs = (payload) => {
@@ -75,11 +84,11 @@ class Button extends Component {
         const {
                 buttonName,
                 className,
-                isIndexSelected,
                 isCustomSize,
                 isSmallSize,
                 isLargeSize,
                 isDisabled,
+                isClickDisabled,
                 isPopupButton,
                 isAccessed,
                 buttonIdentifier,
@@ -120,8 +129,8 @@ class Button extends Component {
                         } : `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
                         {
-                            'Button__indexSelected': isIndexSelected,
-                            'Button__enabled': !isDisabled,
+                            'Button__enabled': !isDisabled && !isClickDisabled,
+                            'Button__clickDisabled': isClickDisabled,
                             'Button__defaultSize': isDefaultSize,
                             'Button__smallSize': isSmallSize,
                             'Button__largeSize': isLargeSize
@@ -152,7 +161,7 @@ class Button extends Component {
 
                     {children}
 
-                    {accessKey && (
+                    {accessKey && !isDisabled && !isClickDisabled && (
                         <AccessLetter
                             inButtonOrDotAnchor
                             {...{
