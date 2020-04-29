@@ -12,7 +12,7 @@
     .FilmstripScene__interactable:hover
     & {
         animation: bounceHoverY $animationDuration__default;
-        background-color: $colour__hover__light;
+        background-color: $colour__mouseHover__light;
     }
 
     .FilmstripScene__interactable:active
@@ -39,11 +39,11 @@
 }
 
 .FilmstripCell__selected {
-    background-color: $colour__paused__medium;
+    background-color: $colour__paused__empty;
 
     .PlW__isPlaying
     & {
-        background-color: $colour__playing__medium;
+        background-color: $colour__playing__empty;
     }
 }
 

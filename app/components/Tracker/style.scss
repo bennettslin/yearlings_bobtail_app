@@ -1,6 +1,6 @@
 .Tracker {
     opacity: 0;
-    background-color: $colour__paused__dark;
+    background-color: $colour__paused__filled;
 
     .DW__userAgentDesktop
     & {
@@ -11,7 +11,7 @@
 
     .PlW__isPlaying
     & {
-        background-color: $colour__playing__dark;
+        background-color: $colour__playing__filled;
     }
 }
 

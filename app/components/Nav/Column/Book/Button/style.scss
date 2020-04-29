@@ -71,17 +71,17 @@
 
     .Button__accessed
     & {
-        color: $colour__accessActive;
+        color: $colour__accessHover__light;
     }
 
     .Button__accessed:hover
     & {
-        color: $colour__accessHover__dark;
+        color: $colour__accessActive;
     }
 
     .Button__accessed:active
     & {
-        color: $colour__access__dark;
+        color: $colour__accessHover__dark;
     }
 
     .DW__userAgentDesktop

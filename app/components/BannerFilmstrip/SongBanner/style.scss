@@ -12,11 +12,11 @@ $padding__songBanner: $MARGIN_THIN * 2;
 
     border-radius: $borderRadius__narrow;
 
-    background-color: $colour__paused__medium;
+    background-color: $colour__paused__empty;
 
     .PlW__isPlaying
     & {
-        background-color: $colour__playing__medium;
+        background-color: $colour__playing__empty;
     }
 
     .PlW__song

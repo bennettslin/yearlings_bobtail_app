@@ -181,12 +181,8 @@ $height: $height__stanzaTypeTab * 4;
 .bgColour__stanzaType__outro {
     background-color: $bgColour__stanzaType__instrumental;
 }
-.bgColour__stanzaType__rhyme {
-    background-color: $bgColour__stanzaType__none;
-}
-.bgColour__stanzaType__backing {
-    background-color: $bgColour__stanzaType__none;
-}
+.bgColour__stanzaType__rhyme,
+.bgColour__stanzaType__backing,
 .bgColour__stanzaType__response {
     background-color: $bgColour__stanzaType__none;
 }

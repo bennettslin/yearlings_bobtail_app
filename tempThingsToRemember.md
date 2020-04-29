@@ -33,14 +33,14 @@ playing: medium/dark [x]
 past and future, playing and paused, accessed and hovered [x]
 
 # Verse
-paused: light verse, medium/dark cursor [ ]
+paused: light verse, medium/dark cursor [x]
 playing: light verse, medium/dark cursor [x]
 sliderTouched: dark verse, light cursor [x]
 
 past and future, playing and paused, accessed and hovered [x]
 
 # Anchor
-accessed and hovered, active, selected [ ]
+accessed and hovered, active, selected [x]
 
 # Snowglobe
 accessed and hovered, active, selected [x]
@@ -55,10 +55,12 @@ selected
 disabled, hovered, active [x]
 
 # TODO
-Rethink light text for paused cursor?
 Light drop shadow on any hovered element?
 Underline for dot anchor?
 Song title in lyrics
 Dot sequence styling (also consider light/dark background)
 Zoom option
-Don't annotation annotation cards in popup
+
+# FIXME
+Fast forward and rewind buttons don't hover bounce?
+Don't animate annotation cards in popup

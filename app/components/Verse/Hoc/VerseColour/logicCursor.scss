@@ -14,7 +14,7 @@
     .TW__verseCanHover
     .verseColour__hoverParent:hover
     & {
-        background-color: $colour__hover__light; 
+        background-color: $colour__mouseHover__light; 
     }
 }
 
@@ -81,7 +81,7 @@
         // "Grandchild verse colour."
         .GcV {
             // Use !important to override hover highlight.
-            background-color: $colour__playing__medium !important;
+            background-color: $colour__playing__empty !important;
         }
     }
 }

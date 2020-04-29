@@ -42,12 +42,12 @@ $colour__past__dark: hsl($hue__past, $sat__dark, $lum__dark);
 $colour__past__darker: hsl($hue__past, $sat__darker, $lum__darker);
 
 $colour__playing__bold: hsl($hue__playing, $sat__bold, $lum__bold);
-$colour__playing__medium: hsl($hue__playing, $sat__medium, $lum__medium + 20%);
-$colour__playing__dark: hsl($hue__playing, $sat__dark, $lum__dark + 10%);
+$colour__playing__empty: hsl($hue__playing, $sat__medium, $lum__medium + 20%);
+$colour__playing__filled: hsl($hue__playing, $sat__dark, $lum__dark + 10%);
 
 $colour__paused__bold: hsl($hue__paused, $sat__bold, $lum__bold);
-$colour__paused__medium: hsl($hue__paused, $sat__medium, $lum__medium - 5%);
-$colour__paused__dark: hsl($hue__paused, $sat__dark, $lum__dark - 10%);
+$colour__paused__filled: hsl($hue__paused, $sat__medium, $lum__medium);
+$colour__paused__empty: hsl($hue__paused, $sat__dark, $lum__dark - 5%);
 
 $colour__future__bold: hsl($hue__future, $sat__bold, $lum__bold);
 $colour__future__lighter: hsl($hue__future, $sat__lighter, $lum__lighter);
@@ -66,33 +66,30 @@ $hue__link: 6;
 $hue__selected: 66;
 $hue__access: 126;
 
-$sat__link: 35%;
-
 $lum__link__dark: 43%;
-$lum__hover__dark: 54%;
-$lum__active: 65%;
-$lum__hover__light: 78%;
-$lum__link__light: 92%;
+$lum__hover__dark: 53%;
+$lum__active: 63%;
+$lum__hover__light: 73%;
+$lum__link__light: 83%;
 
-$colour__link__dark: hsl($hue__link, $sat__link, $lum__link__dark);
-$colour__linkHover__dark: hsl($hue__link, $sat__link, $lum__hover__dark);
-$colour__linkActive: hsl($hue__link, $sat__link, $lum__active);
-$colour__linkHover__light: hsl($hue__link, $sat__link, $lum__hover__light);
-$colour__link__light: hsl($hue__link, $sat__link, $lum__link__light);
+$colour__link__dark: hsl($hue__link, $sat__darker, $lum__link__dark);
+$colour__linkHover__dark: hsl($hue__link, $sat__darker, $lum__hover__dark);
+$colour__linkActive: hsl($hue__link, $sat__medium, $lum__active);
+$colour__linkHover__light: hsl($hue__link, $sat__light, $lum__hover__light);
+$colour__link__light: hsl($hue__link, $sat__light, $lum__link__light);
 
-$colour__access__dark: hsl($hue__access, $sat__link, $lum__link__dark);
-$colour__accessHover__dark: hsl($hue__access, $sat__link, $lum__hover__dark);
-$colour__accessActive: hsl($hue__access, $sat__link, $lum__active);
-$colour__accessHover__light: hsl($hue__access, $sat__link, $lum__hover__light);
-$colour__access__light: hsl($hue__access, $sat__link, $lum__link__light);
+$colour__access__dark: hsl($hue__access, $sat__darker, $lum__link__dark);
+$colour__accessHover__dark: hsl($hue__access, $sat__darker, $lum__hover__dark);
+$colour__accessActive: hsl($hue__access, $sat__medium, $lum__active);
+$colour__accessHover__light: hsl($hue__access, $sat__light, $lum__hover__light);
+$colour__access__light: hsl($hue__access, $sat__light, $lum__link__light);
 
-$colour__selected__dark: hsl($hue__selected, $sat__link, $lum__link__dark);
-$colour__selected__medium: hsl($hue__selected, $sat__link, $lum__active);
-$colour__selected__light: hsl($hue__selected, $sat__link, $lum__link__light);
+$colour__selected__dark: hsl($hue__selected, $sat__darker, $lum__link__dark);
+$colour__selected__medium: hsl($hue__selected, $sat__medium, $lum__active);
+$colour__selected__light: hsl($hue__selected, $sat__light, $lum__link__light);
 
 // Verse colours
-$hue__hover: 66;
-$colour__hover__light: hsl($hue__hover, $sat__light, $lum__light);
+$colour__mouseHover__light: hsl($hue__selected, $sat__light, $lum__link__light);
 
 // Annotation and Wormhole colours.
 $bgColour__annotation__dark: hsl(220, 13%, 62%); // For carousel button only.

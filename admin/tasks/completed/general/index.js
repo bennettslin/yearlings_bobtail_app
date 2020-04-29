@@ -4540,5 +4540,9 @@ export default [
     {
         taskName: `Scene tracker.`,
         workedHours: 3
+    },
+    {
+        taskName: `More colour work.`,
+        workedHours: 2
     }
 ]
