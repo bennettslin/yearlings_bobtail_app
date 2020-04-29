@@ -55,10 +55,10 @@ selected
 disabled, hovered, active [x]
 
 # TODO
-Raise filmstrip slightly so its holes are on light areas?
 Rethink light text for paused cursor?
 Light drop shadow on any hovered element?
 Underline for dot anchor?
 Song title in lyrics
 Dot sequence styling (also consider light/dark background)
 Zoom option
+Don't annotation annotation cards in popup

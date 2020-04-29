@@ -100,10 +100,10 @@
     & {
         filter: $dropShadow__button__overlay;
     }
-}
 
-.dropShadowLight {
-    filter: $dropShadow__light;
+    &:hover {
+        filter: $dropShadow__light;
+    }
 }
 
 .strokeShadow {

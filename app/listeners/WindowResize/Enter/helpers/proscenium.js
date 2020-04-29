@@ -1,4 +1,4 @@
-const PROSCENIUM_MULTIPLIER = 0.05
+const PROSCENIUM_MULTIPLIER = 0.054
 
 export const getProsceniumCoordinates = ({
     stageTop,
