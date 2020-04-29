@@ -2,29 +2,39 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import CSSTransition from 'react-transition-group/CSSTransition'
+
 const propTypes = {
     // From parent.
-    cursorWidth: PropTypes.number,
-    className: PropTypes.string
+    cursorWidth: PropTypes.number
 }
 
 const Tracker = ({
-    cursorWidth,
-    className
+    cursorWidth
 
-}) => Boolean(cursorWidth) && (
-    <div
+}) => (
+    <CSSTransition
+        appear
+        unmountOnExit
+        mountOnEnter
         {...{
-            className: cx(
-                'Tracker',
-                className,
-                'abF'
-            ),
-            style: {
-                width: `${cursorWidth}%`
-            }
+            in: Boolean(cursorWidth),
+            timeout: 200,
+            classNames: { enterDone: 'Tracker__visible' }
         }}
-    />
+    >
+        <div
+            {...{
+                className: cx(
+                    'Tracker',
+                    'abF'
+                ),
+                style: {
+                    width: `${cursorWidth}%`
+                }
+            }}
+        />
+    </CSSTransition>
 )
 
 Tracker.propTypes = propTypes

@@ -40,11 +40,6 @@ export default [
         neededHours: 10
     },
     {
-        taskName: `Scene tracker.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Album tracker.`,
         workedHours: 0,
         neededHours: 5

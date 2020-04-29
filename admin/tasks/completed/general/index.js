@@ -4536,5 +4536,9 @@ export default [
     {
         taskName: `Finalise actual past, present, and future colours.`,
         workedHours: 1
+    },
+    {
+        taskName: `Scene tracker.`,
+        workedHours: 3
     }
 ]

@@ -1,13 +1,20 @@
 .Tracker {
+    opacity: 0;
     background-color: $colour__paused__dark;
 
     .DW__userAgentDesktop
     & {
-        transition: width $animationDuration__slow;
+        transition:
+            opacity $animationDuration__fast,
+            width $animationDuration__slow;
     }
 
     .PlW__isPlaying
     & {
         background-color: $colour__playing__dark;
     }
+}
+
+.Tracker__visible {
+    opacity: 1;
 }

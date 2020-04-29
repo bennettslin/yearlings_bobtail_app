@@ -21,8 +21,12 @@
     }
 }
 
-.FilmstripCell__tracker {
-    // Accommodate padding between cells.
+.FilmstripCell__trackerContainer {
+    /**
+     * Accommodate padding between cells. This is a little hacky, but it can't
+     * be helped, because cells are solid elements rather than masks.
+     */
+    width: calc(100% + #{$length__filmPerf});
     left: -$length__filmPerf / 2;
 }
 

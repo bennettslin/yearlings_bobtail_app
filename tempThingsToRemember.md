@@ -55,7 +55,6 @@ selected
 disabled, hovered, active [x]
 
 # TODO
-Filmstrip shows tracker
 Raise filmstrip slightly so its holes are on light areas?
 Rethink light text for paused cursor?
 Light drop shadow on any hovered element?
@@ -63,7 +62,3 @@ Underline for dot anchor?
 Song title in lyrics
 Dot sequence styling (also consider light/dark background)
 Zoom option
-
-# TODO
-Consolidate single tracker component
-Make filmstrip scene tracker 1px to the left

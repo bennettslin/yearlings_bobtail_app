@@ -38,12 +38,18 @@ const FilmstripCell = ({
             )
         }}
     >
-        <Tracker
-            {...{
-                className: 'FilmstripCell__tracker',
-                cursorWidth
-            }}
-        />
+        {Boolean(cursorWidth) && (
+            <div
+                {...{
+                    className: cx(
+                        'FilmstripCell__trackerContainer',
+                        'abF'
+                    )
+                }}
+            >
+                <Tracker {...{ cursorWidth }} />
+            </div>
+        )}
     </div>
 )
 
