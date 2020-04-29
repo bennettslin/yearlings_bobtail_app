@@ -1,4 +1,5 @@
 .FilmstripCell {
+    position: relative;
     width: 100%;
     height: 100%;
     border-radius: 1px;
@@ -18,6 +19,11 @@
     & {
         transform: scaleY(0.9);
     }
+}
+
+.FilmstripCell__tracker {
+    // Accommodate padding between cells.
+    left: -$length__filmPerf / 2;
 }
 
 .FilmstripCell__odd {

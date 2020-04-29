@@ -2,19 +2,24 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
+import Tracker from '../../../../Tracker'
+
 const propTypes = {
     // From parent.
     isOdd: PropTypes.bool.isRequired,
     isActivated: PropTypes.bool.isRequired,
     isSelected: PropTypes.bool.isRequired,
-    isAfterSelected: PropTypes.bool.isRequired
+    isAfterSelected: PropTypes.bool.isRequired,
+    cursorWidth: PropTypes.number
 }
 
 const FilmstripCell = ({
     isOdd,
     isActivated,
     isSelected,
-    isAfterSelected
+    isAfterSelected,
+    cursorWidth
+
 }) => (
     <div
         {...{
@@ -28,10 +33,18 @@ const FilmstripCell = ({
                 isSelected &&
                     'FilmstripCell__selected',
                 isAfterSelected &&
-                    'FilmstripCell__afterSelected'
+                    'FilmstripCell__afterSelected',
+                'ovH'
             )
         }}
-    />
+    >
+        <Tracker
+            {...{
+                className: 'FilmstripCell__tracker',
+                cursorWidth
+            }}
+        />
+    </div>
 )
 
 FilmstripCell.propTypes = propTypes

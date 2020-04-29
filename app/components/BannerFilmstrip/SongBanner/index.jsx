@@ -7,6 +7,7 @@ import isFinite from 'lodash/isfinite'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 
+import Tracker from '../../Tracker'
 import PlayTimer from './Timer'
 import SongTitle from './Title'
 
@@ -121,17 +122,7 @@ class SongBanner extends PureComponent {
                     onClick: this.handleBannerClick
                 }}
             >
-                <div
-                    {...{
-                        className: cx(
-                            'BannerTracker',
-                            'abF'
-                        ),
-                        style: {
-                            width: `${cursorWidth}%`
-                        }
-                    }}
-                />
+                <Tracker {...{ cursorWidth }} />
                 <SongTitle />
                 <PlayTimer />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />

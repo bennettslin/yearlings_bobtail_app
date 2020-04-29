@@ -63,3 +63,7 @@ Underline for dot anchor?
 Song title in lyrics
 Dot sequence styling (also consider light/dark background)
 Zoom option
+
+# TODO
+Consolidate single tracker component
+Make filmstrip scene tracker 1px to the left

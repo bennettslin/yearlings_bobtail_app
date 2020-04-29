@@ -1,3 +1,5 @@
+// Order matters!
+
 @import "./constants/global";
 @import "./constants/logic";
 @import "./constants/boxShadow";
@@ -41,6 +43,7 @@
 @import "../components/Stanzas/style";
 @import "../components/Theatre/style";
 @import "../components/Texts/style";
+@import "../components/Tracker/style";
 @import "../components/Tips/style";
 @import "../components/Verse/style";
 

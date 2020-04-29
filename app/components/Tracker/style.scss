@@ -1,0 +1,13 @@
+.Tracker {
+    background-color: $colour__paused__dark;
+
+    .DW__userAgentDesktop
+    & {
+        transition: width $animationDuration__slow;
+    }
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__playing__dark;
+    }
+}

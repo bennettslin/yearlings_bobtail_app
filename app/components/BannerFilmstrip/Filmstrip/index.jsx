@@ -26,10 +26,12 @@ const mapStateToProps = ({
         lyricSongIndex,
         lyricSceneIndex
     },
+    selectedStore: { selectedTime },
     sessionStore: { activatedSceneIndex }
 }) => ({
     lyricSongIndex,
     lyricSceneIndex,
+    selectedTime,
     activatedSceneIndex
 })
 
@@ -39,6 +41,7 @@ class Filmstrip extends PureComponent {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
         lyricSceneIndex: PropTypes.number.isRequired,
+        selectedTime: PropTypes.number.isRequired,
         activatedSceneIndex: PropTypes.number.isRequired
     }
 
@@ -52,6 +55,14 @@ class Filmstrip extends PureComponent {
 
     dispatchStopPropagation = (e) => {
         this.dispatchStopPropagation(e)
+    }
+
+    getCursorWidth({
+        sceneStartTime,
+        sceneDuration
+    }) {
+        const { selectedTime } = this.props
+        return (selectedTime - sceneStartTime) / sceneDuration * 100
     }
 
     render() {
@@ -88,7 +99,12 @@ class Filmstrip extends PureComponent {
                         isAfterSelected = lyricSceneIndex < sceneIndex,
 
                         sceneLeft = sceneStartTime / totalTime * 100,
-                        sceneWidth = sceneDuration / totalTime * 100
+                        sceneWidth = sceneDuration / totalTime * 100,
+
+                        cursorWidth = this.getCursorWidth({
+                            sceneStartTime,
+                            sceneDuration
+                        })
 
                     return (
                         <FilmstripScene
@@ -101,6 +117,7 @@ class Filmstrip extends PureComponent {
                                 sceneIndex,
                                 sceneLeft,
                                 sceneWidth,
+                                ...isSelected && { cursorWidth },
                                 dispatchScene: this.dispatchScene,
                                 dispatchStopPropagation: this.dispatchStopPropagation
                             }}

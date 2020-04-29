@@ -28,17 +28,3 @@ $padding__songBanner: $MARGIN_THIN * 2;
         filter: $dropShadow__light;
     }
 }
-
-.BannerTracker {
-    background-color: $colour__paused__dark;
-
-    .DW__userAgentDesktop
-    & {
-        transition: width $animationDuration__slow;
-    }
-
-    .PlW__isPlaying
-    & {
-        background-color: $colour__playing__dark;
-    }
-}

@@ -15,6 +15,7 @@ class FilmstripScene extends PureComponent {
         sceneIndex: PropTypes.number.isRequired,
         sceneLeft: PropTypes.number.isRequired,
         sceneWidth: PropTypes.number.isRequired,
+        cursorWidth: PropTypes.number,
         dispatchScene: PropTypes.func.isRequired,
         dispatchStopPropagation: PropTypes.func.isRequired
     }
@@ -42,7 +43,8 @@ class FilmstripScene extends PureComponent {
             isSelected,
             isAfterSelected,
             sceneLeft,
-            sceneWidth
+            sceneWidth,
+            cursorWidth
         } = this.props
 
         return (
@@ -67,7 +69,8 @@ class FilmstripScene extends PureComponent {
                         isOdd,
                         isActivated,
                         isSelected,
-                        isAfterSelected
+                        isAfterSelected,
+                        cursorWidth
                     }}
                 />
             </div>
