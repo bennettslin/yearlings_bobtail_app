@@ -78,9 +78,7 @@ class Annotation extends PureComponent {
                                 'bgColour__annotation',
                                 'bgColour__annotation__pattern',
                                 isSelected && 'bgColour__annotation__selected',
-                                isSelected ?
-                                    'boxShadow__annotation__selected' :
-                                    'boxShadow__annotation',
+                                'boxShadow__annotation',
                                 'abF'
                             )
                         }}
