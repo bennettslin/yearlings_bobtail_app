@@ -102,7 +102,8 @@ class DotsSlide extends PureComponent {
                                  * will prevent mouse from hovering, but this
                                  * is an acceptable tradeoff, at least for now.
                                  */
-                                !isTouchSupported && 'DotsSlide__canHover'
+                                !isTouchSupported && 'DotsSlide__canHover',
+                                'dropShadowContainer__brightMode'
                             ),
                             onClick: this._handleContainerClick
                         }}

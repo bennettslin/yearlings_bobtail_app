@@ -65,11 +65,9 @@ Lyric expand doesn't hide dots button
 Dear Saskia, dots button isn't shown upon loading with tip, when overview.
 Tips Hand on ear is misaligned.
 Selected annotation lost drop shadow...
+In Grasshoppers, clicking wormhole pops dots toggle in and out...
 
 fast forward and rewind buttons don't bounce animate, wormhole doesn't animate once annotation is selected
-
-Dots in dots section:
-    access and hover (dark mode)
 
 Dot anchor in lyrics:
     access, hover, and selected
