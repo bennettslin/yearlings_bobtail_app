@@ -4543,6 +4543,6 @@ export default [
     },
     {
         taskName: `More colour work.`,
-        workedHours: 2
+        workedHours: 7
     }
 ]
