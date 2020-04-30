@@ -2,19 +2,26 @@
 $colour__boxShadow: hsla(240, 14%, 34%, 0.4);
 $colour__boxShadow__dark: hsla(240, 33%, 15%, 0.7);
 $colour__boxShadow__darker: hsla(240, 33%, 15%, 0.9);
-// $colour__boxShadow__light: hsla(90, 100%, 90%, 0.3);
-$colour__boxShadow__light: hsla(90, 100%, 90%, 0.7);
+$colour__boxShadow__hover: hsla($hue__select, 100%, 90%, 0.5);
+$colour__boxShadow__light: hsla(90, 100%, 90%, 0.7);	
+$colour__boxShadow__access: hsla($hue__access, 100%, 90%, 0.7);
+$colour__boxShadow__select: hsla($hue__select, 100%, 90%, 0.7);
 
-// Main.
-$boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;
-// $boxShadow__mainCard__selected:
-//     0 0 15px 4px $colour__boxShadow__light,
-//     0 3px 10px 3px $colour__boxShadow__dark;
 
-$dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);
-$dropShadow__button: drop-shadow(0 3px 4px $colour__boxShadow__dark);
-$dropShadow__button__overlay: drop-shadow(0 3px 4px $colour__boxShadow__darker);
-$dropShadow__light: drop-shadow(0 3px 4px $colour__boxShadow__light);
+// Main.	// Main.
+$boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;	$boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;
+// $boxShadow__mainCard__selected:	// $boxShadow__mainCard__selected:
+//     0 0 15px 4px $colour__boxShadow__light,	//     0 0 15px 4px $colour__boxShadow__hover,
+//     0 3px 10px 3px $colour__boxShadow__dark;	//     0 3px 10px 3px $colour__boxShadow__dark;
+
+
+$dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);	$dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);
+$dropShadow__button: drop-shadow(0 3px 4px $colour__boxShadow__dark);	$dropShadow__button: drop-shadow(0 2px 4px $colour__boxShadow__dark);
+$dropShadow__button__overlay: drop-shadow(0 3px 4px $colour__boxShadow__darker);	$dropShadow__button__overlay: drop-shadow(0 2px 4px $colour__boxShadow__darker);
+$dropShadow__light: drop-shadow(0 3px 4px $colour__boxShadow__light);	$dropShadow__hover: drop-shadow(0 2px 4px $colour__boxShadow__hover);
+
+$dropShadow__access: drop-shadow(0 2px 8px $colour__boxShadow__access);
+$dropShadow__select: drop-shadow(0 2px 8px $colour__boxShadow__select);
 
 // Lyric.
 $boxShadow__verseBar__above: 0 3px 10px 6px $colour__boxShadow__dark;

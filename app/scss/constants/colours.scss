@@ -63,7 +63,7 @@ $colour__neutral__dark: hsl(0, 0%, $lum__dark);
 $colour__present__light: hsl($hue__present, $sat__light, $lum__light);
 
 $hue__link: 6;
-$hue__selected: 66;
+$hue__select: 66;
 $hue__access: 126;
 
 $lum__link__dark: 43%;
@@ -84,17 +84,17 @@ $colour__accessActive: hsl($hue__access, $sat__medium, $lum__active);
 $colour__accessHover__light: hsl($hue__access, $sat__light, $lum__hover__light);
 $colour__access__light: hsl($hue__access, $sat__light, $lum__link__light);
 
-$colour__selected__dark: hsl($hue__selected, $sat__darker, $lum__link__dark);
-$colour__selected__medium: hsl($hue__selected, $sat__medium, $lum__active);
-$colour__selected__light: hsl($hue__selected, $sat__light, $lum__link__light);
+$colour__select__dark: hsl($hue__select, $sat__darker, $lum__link__dark);
+$colour__select__medium: hsl($hue__select, $sat__medium, $lum__active);
+$colour__select__light: hsl($hue__select, $sat__light, $lum__link__light);
 
 // Verse colours
-$colour__mouseHover__light: hsl($hue__selected, $sat__light, $lum__link__light);
+$colour__mouseHover__light: hsl($hue__select, $sat__light, $lum__link__light);
 
 // Annotation and Wormhole colours.
 $bgColour__annotation__dark: hsl(220, 13%, 62%); // For carousel button only.
 $bgColour__annotation: hsl(220, 13%, 82%);
-$colour__annotation__selected: hsl($hue__selected, 100%, 93%);
+$colour__annotation__selected: hsl($hue__select, 100%, 93%);
 $bgColour__annotationCard: hsla(240, 100%, 99%, 0.9);
 $bgColour__annotationWormhole: hsl(0, 100%, 98%);
 $colour__annotationWormhole__title: hsl(0, 0%, 73%);

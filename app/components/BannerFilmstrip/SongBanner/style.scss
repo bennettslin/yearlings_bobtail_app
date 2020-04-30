@@ -23,8 +23,4 @@ $padding__songBanner: $MARGIN_THIN * 2;
     & {
         cursor: pointer;
     }
-
-    &:hover {
-        filter: $dropShadow__light;
-    }
 }

@@ -36,7 +36,6 @@ class Button extends Component {
         isLargeSize: PropTypes.bool,
         isDisabled: PropTypes.bool,
         isClickDisabled: PropTypes.bool, // Passed by nav button.
-        noDropShadowLight: PropTypes.bool,
         isPopupButton: PropTypes.bool,
         buttonIdentifier: PropTypes.any,
         accessKey: PropTypes.string,
@@ -90,7 +89,6 @@ class Button extends Component {
                 isLargeSize,
                 isDisabled,
                 isClickDisabled,
-                noDropShadowLight,
                 isPopupButton,
                 isAccessed,
                 buttonIdentifier,
@@ -156,8 +154,7 @@ class Button extends Component {
                         <ButtonIcon
                             {...{
                                 buttonName,
-                                buttonIdentifier,
-                                noDropShadowLight
+                                buttonIdentifier
                             }}
                         />
                     )}

@@ -80,15 +80,15 @@
     .TextAnchor__linkText__selected {
         @if $light {
             @if $important {
-                color: $colour__selected__light !important;
+                color: $colour__select__light !important;
             } @else {
-                color: $colour__selected__light;
+                color: $colour__select__light;
             }
         } @else {
             @if $important {
-                color: $colour__selected__dark !important;
+                color: $colour__select__dark !important;
             } @else {
-                color: $colour__selected__dark;
+                color: $colour__select__dark;
             }
         }
     }
@@ -184,15 +184,15 @@
     .Underline__selected {
         @if $light {
             @if $important {
-                background-color: $colour__selected__light !important;
+                background-color: $colour__select__light !important;
             } @else {
-                background-color: $colour__selected__light;
+                background-color: $colour__select__light;
             }
         } @else {
             @if $important {
-                background-color: $colour__selected__dark !important;
+                background-color: $colour__select__dark !important;
             } @else {
-                background-color: $colour__selected__dark;
+                background-color: $colour__select__dark;
             }
         }
     }

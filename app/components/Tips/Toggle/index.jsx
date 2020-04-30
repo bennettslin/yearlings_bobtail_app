@@ -70,7 +70,6 @@ class TipsToggle extends PureComponent {
                         buttonIdentifier: selectedTipsOption,
                         accessKey: TIPS_TOGGLE_KEY,
                         isDisabled: !isTipsShowable,
-                        noDropShadowLight: inPopup,
                         handleButtonClick: this.handleTipsClick
                     }}
                 />
