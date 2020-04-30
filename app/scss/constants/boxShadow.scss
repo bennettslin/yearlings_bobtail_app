@@ -2,7 +2,8 @@
 $colour__boxShadow: hsla(240, 14%, 34%, 0.4);
 $colour__boxShadow__dark: hsla(240, 33%, 15%, 0.7);
 $colour__boxShadow__darker: hsla(240, 33%, 15%, 0.9);
-$colour__boxShadow__light: hsla(90, 100%, 90%, 0.3);
+// $colour__boxShadow__light: hsla(90, 100%, 90%, 0.3);
+$colour__boxShadow__light: hsla(90, 100%, 90%, 0.7);
 
 // Main.
 $boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;

@@ -13,12 +13,14 @@ import { NAV_SONG_BUTTON_KEY } from 'constants/buttons'
 const propTypes = {
     // From parent.
     buttonName: PropTypes.string.isRequired,
-    buttonIdentifier: PropTypes.any
+    buttonIdentifier: PropTypes.any,
+    noDropShadowLight: PropTypes.bool
 }
 
 const ButtonIcon = ({
     buttonName,
-    buttonIdentifier
+    buttonIdentifier,
+    noDropShadowLight
 
 }) => {
     const buttonIconSvg = BUTTON_ICONS_MAP[buttonName]({ buttonIdentifier })
@@ -28,7 +30,8 @@ const ButtonIcon = ({
             {...{
                 className: cx(
                     'ButtonIcon',
-                    'dropShadow'
+                    'dropShadow',
+                    !noDropShadowLight && 'dropShadow__light'
                 ),
                 svgClassName: cx(
                     `ButtonIcon__${buttonName}`,

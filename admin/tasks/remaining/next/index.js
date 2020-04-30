@@ -30,18 +30,8 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Some await async for scene rendering.`,
-        workedHours: 0,
-        neededHours: 10
-    },
-    {
         taskName: `Begin content revision.`,
         workedHours: 0,
         neededHours: 10
-    },
-    {
-        taskName: `Album tracker.`,
-        workedHours: 0,
-        neededHours: 5
     }
 ]

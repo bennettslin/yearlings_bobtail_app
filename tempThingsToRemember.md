@@ -57,10 +57,13 @@ disabled, hovered, active [x]
 # TODO
 Light drop shadow on any hovered element?
 Underline for dot anchor?
-Song title in lyrics
 Dot sequence styling (also consider light/dark background)
-Zoom option
 
 # FIXME
 Fast forward and rewind buttons don't hover bounce?
 Don't animate annotation cards in popup
+Lyric expand doesn't hide dots button
+Dear Saskia, dots button isn't shown upon loading with tip, when overview.
+Tips Hand on ear is misaligned.
+
+Don't show drop shadow light for tips button in tip, dot anchor in annotation

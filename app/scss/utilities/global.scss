@@ -101,7 +101,7 @@
         filter: $dropShadow__button__overlay;
     }
 
-    &:hover {
+    &.dropShadow__light:hover {
         filter: $dropShadow__light;
     }
 }

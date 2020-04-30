@@ -13,5 +13,20 @@ export default [
         taskName: `Figure out best way to deal with sticky hover of tooltips in mobile.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Have option to zoom in on stage.`,
+        workedHours: 0,
+        neededHours: 20
+    },
+    {
+        taskName: `Reconsider implementation of past/future, and playing/paused colors in Filmstrip, or in general.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
+        taskName: `Show song title in lyrics.`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]
