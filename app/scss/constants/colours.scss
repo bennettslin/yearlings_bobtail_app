@@ -108,7 +108,7 @@ $bgColour__dot__reference: hsl(150, 100%, 80%);
 $bgColour__dot__wormhole: hsl(225, 100%, 87%);
 $bgColour__dot__songwriting: hsl(0, 100%, 87%);
 $bgColour__dot__afterword: hsl(60, 67%, 80%);
-$bgColour__dot__deselected: hsl(0, 0%, 87%);
+$bgColour__dot__deselected: $colour__neutral__light;
 
 // Song stanza colours.
 $bgColour__stanzaType__verse: hsl(210, 35, 40);
