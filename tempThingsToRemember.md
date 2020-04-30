@@ -64,11 +64,9 @@ Don't animate annotation cards in popup
 Lyric expand doesn't hide dots button
 Dear Saskia, dots button isn't shown upon loading with tip, when overview.
 Tips Hand on ear is misaligned.
+Selected annotation lost drop shadow...
 
 fast forward and rewind buttons don't bounce animate, wormhole doesn't animate once annotation is selected
-
-Wormhole in annotation:
-    access and hover (dark mode)
 
 Dots in dots section:
     access and hover (dark mode)
@@ -78,3 +76,4 @@ Dot anchor in lyrics:
 
 Dot anchor in annotation:
     access, hover, and selected (dark mode)
+

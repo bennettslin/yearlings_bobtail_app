@@ -93,6 +93,19 @@
     }
 }
 
+.dropShadow__accessed {
+    .PlW__accessOn
+    & {
+        filter: $dropShadow__access;
+    }
+
+    .PlW__accessOn
+    .dropShadowContainer__brightMode
+    & {
+        filter: $dropShadow__accessDark;
+    }
+}
+
 .dropShadow {
     filter: $dropShadow__button;
 
@@ -102,9 +115,20 @@
     }
 
     &:hover {
-        filter: $dropShadow__light;
+        filter: $dropShadow__hover;
+    }
+
+    .dropShadowContainer__brightMode
+    &:hover {
+        filter: $dropShadow__hoverDark;
     }
 }
+
+// Specific selectors to override hover drop shadow.
+.dropShadow.dropShadow__selected {
+    filter: $dropShadow__select;
+}
+
 
 .strokeShadow {
     stroke-width: 0.5px;

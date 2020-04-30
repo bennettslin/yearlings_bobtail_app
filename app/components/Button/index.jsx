@@ -124,9 +124,9 @@ class Button extends Component {
                         isPopupButton && 'Button__popup',
                         isCustomSize && `Button__${buttonName}Size`,
 
-                        isAccessEnter ? {
-                            'Button__accessed': showIfAccessOn
-                        } : `${CHILD_ACCESS_PREFIX}${accessKey}`,
+                        isAccessEnter && showIfAccessOn && 'Button__accessed',
+
+                        `${CHILD_ACCESS_PREFIX}${accessKey}`,
 
                         {
                             'Button__enabled': !isDisabled && !isClickDisabled,
@@ -147,6 +147,8 @@ class Button extends Component {
                 {inanimateChild}
                 <div className={cx(
                     'ButtonAnimatable',
+                    'dropShadow',
+                    isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
                     isPopupButton && 'ButtonAnimatable__popup',
                     'abF'
                 )}>

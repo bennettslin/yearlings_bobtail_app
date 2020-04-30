@@ -7,14 +7,3 @@
         fill: $bgColour__dot__deselected;
     }
 }
-
-// Specific selectors to override hover drop shadow.
-.dropShadow {
-    &.dropShadow__accessed {
-        filter: $dropShadow__access;
-    }
-
-    &.dropShadow__selected {
-        filter: $dropShadow__select;
-    }
-}

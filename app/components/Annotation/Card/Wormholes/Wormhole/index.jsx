@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import SongDispatcher from '../../../../../handlers/Song/Dispatcher'
@@ -99,7 +100,14 @@ class AnnotationWormhole extends PureComponent {
             <div className="AnnotationWormhole">
 
                 {/* Wrap button so it won't get squished if text wraps. */}
-                <div className="AnnotationWormhole__button">
+                <div
+                    {...{
+                        className: cx(
+                            'AnnotationWormhole__button',
+                            'dropShadowContainer__brightMode'
+                        )
+                    }}
+                >
                     <Button
                         {...{
                             accessKey: ENTER,
