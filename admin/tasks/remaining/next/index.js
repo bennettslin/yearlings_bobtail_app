@@ -15,11 +15,6 @@ export default [
         neededHours: 10
     },
     {
-        taskName: `Implement selected, activated/hovered, and accessed colours for anchors, and before, after, and on cursor colours for verses, banners and filmstrip.`,
-        workedHours: 1,
-        neededHours: 5
-    },
-    {
         taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
         workedHours: 0,
         neededHours: 5

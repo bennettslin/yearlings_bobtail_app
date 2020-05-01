@@ -4544,5 +4544,15 @@ export default [
     {
         taskName: `More colour work.`,
         workedHours: 7
+    },
+    {
+        taskName: `Drop shadow work.`,
+        workedHours: 7,
+        neededHours: 7
+    },
+    {
+        taskName: `Some bug fixes.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]
