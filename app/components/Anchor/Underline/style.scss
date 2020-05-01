@@ -41,8 +41,16 @@ $width__underline__bleed: 0.125em;
 .Underline__accessed,
 .Underline__selected,
 .Anchor__selectable:hover .Underline {
-    filter: $dropShadow__small;
     height: 35%;
+}
+
+.Underline__isNotWiki {
+    &.Underline__accessed,
+    &.Underline__selected,
+    .Anchor__selectable:hover
+    & {
+        filter: $dropShadow__small;
+    }
 }
 
 .Underline__accessed.Underline__isDot,

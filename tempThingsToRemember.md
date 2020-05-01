@@ -20,6 +20,4 @@ fast forward and rewind buttons don't bounce animate, wormhole doesn't animate o
 
 * Buttons are light hover by default, but bright hover as prop
 
-* No drop shadow on annotation anchor underline
-
 * selected verse can't hover
