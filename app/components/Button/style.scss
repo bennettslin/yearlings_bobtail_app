@@ -70,6 +70,7 @@
 
 .ButtonAnimatable {
 
+    .PlW__accessOn
     .Button__accessed.Button__enabled
     &,
     .Button__enabled:hover
@@ -78,6 +79,7 @@
     }
 
     // "Root accessed letter Enter."
+    .PlW__accessOn
     .PaLEnter
     .Button__accessed.Button__enabled
     &,
