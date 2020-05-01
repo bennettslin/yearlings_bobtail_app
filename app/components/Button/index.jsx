@@ -37,9 +37,10 @@ class Button extends Component {
         isDisabled: PropTypes.bool,
         isClickDisabled: PropTypes.bool, // Passed by nav button.
         isPopupButton: PropTypes.bool,
+        isAccessed: PropTypes.bool.isRequired,
+        isBrightHover: PropTypes.bool,
         buttonIdentifier: PropTypes.any,
         accessKey: PropTypes.string,
-        isAccessed: PropTypes.bool.isRequired,
         handleButtonClick: PropTypes.func.isRequired,
         inanimateChild: PropTypes.any,
         children: PropTypes.any
@@ -91,6 +92,7 @@ class Button extends Component {
                 isClickDisabled,
                 isPopupButton,
                 isAccessed,
+                isBrightHover,
                 buttonIdentifier,
                 accessKey,
                 inanimateChild,
@@ -147,7 +149,12 @@ class Button extends Component {
                 {inanimateChild}
                 <div className={cx(
                     'ButtonAnimatable',
+
                     'dropShadow',
+                    isBrightHover ?
+                        'dropShadow__brightHover' :
+                        'dropShadow__lightHover',
+
                     isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
                     isPopupButton && 'ButtonAnimatable__popup',
                     'abF'

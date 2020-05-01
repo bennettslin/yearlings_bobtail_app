@@ -6,7 +6,6 @@ $width__underline__bleed: 0.125em;
     right: 0;
     bottom: 10%;
     height: 2px;
-    opacity: 0.5;
     transform: translateY(50%);
 
     visibility: hidden;
@@ -42,6 +41,7 @@ $width__underline__bleed: 0.125em;
 .Underline__accessed,
 .Underline__selected,
 .Anchor__selectable:hover .Underline {
+    filter: $dropShadow__small;
     height: 35%;
 }
 

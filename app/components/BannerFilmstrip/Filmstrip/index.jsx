@@ -81,8 +81,9 @@ class Filmstrip extends PureComponent {
                     className: cx(
                         'Filmstrip',
                         'BannerFilmstrip__child',
+
                         'dropShadow',
-                        'dropShadow__brightHover'
+                        'dropShadow__lightHover'
                     )
                 }}
             >

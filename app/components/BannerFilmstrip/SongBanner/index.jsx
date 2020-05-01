@@ -114,9 +114,14 @@ class SongBanner extends PureComponent {
                         'BannerFilmstrip__child',
                         isSmallBannerText &&
                             'Cursor__smallText',
+
+                        isPlaying ?
+                            'textShadow__light' :
+                            'textShadow__dark',
+
                         'dropShadow',
-                        'dropShadow__brightHover',
-                        isPlaying ? 'textShadow__light' : 'textShadow__dark',
+                        'dropShadow__lightHover',
+
                         'ovH',
                         'Rancho'
                     ),

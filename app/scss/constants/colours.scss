@@ -5,8 +5,8 @@
  // Plain text colours.
 $colour__text__light: hsl(0, 0%, 100%);
 $colour__text__dark: hsl(0, 0%, 30%);
-$textShadow__light: 1px 1px hsla(0, 0%, 100%, 0.5);
-$textShadow__dark: 1px 1px hsla(0, 0%, 0%, 0.5);
+$textShadow__light: 0.5px 1px hsla(0, 0%, 100%, 0.5);
+$textShadow__dark: 0.5px 1px hsla(0, 0%, 0%, 0.5);
 
 $colour__road: hsl(41, 30%, 61%);
 
@@ -18,22 +18,21 @@ $hue__playing: $hue__present;
 $hue__paused: 216;
 
 $sat__bold: 90%;
-$sat__lighter: 72%;
-$sat__light: 65%;
-$sat__medLight: 57%;
+$sat__lighter: 71%;
+$sat__light: 67%;
+$sat__medLight: 56%;
 $sat__medium: 52%;
-$sat__dark: 43%;
+$sat__dark: 42%;
 $sat__darker: 38%;
 
-$lum__bold: 80%;
-$lum__lighter: 97%;
-$lum__light: 92%;
+$lum__lighter: 94%;
+$lum__light: 90%;
 $lum__medLight: 78%;
 $lum__medium: 73%;
 $lum__dark: 63%;
-$lum__darker: 58%;
+$lum__darker: 59%;
 
-$colour__past__bold: hsl($hue__past, $sat__bold, $lum__bold);
+$colour__past__bold: hsl($hue__past, $sat__bold, $lum__medLight);
 $colour__past__lighter: hsl($hue__past, $sat__lighter, $lum__lighter);
 $colour__past__light: hsl($hue__past, $sat__light, $lum__light);
 $colour__past__medLight: hsl($hue__past, $sat__medLight, $lum__medLight);
@@ -41,15 +40,15 @@ $colour__past__medium: hsl($hue__past, $sat__medium, $lum__medium);
 $colour__past__dark: hsl($hue__past, $sat__dark, $lum__dark);
 $colour__past__darker: hsl($hue__past, $sat__darker, $lum__darker);
 
-$colour__playing__bold: hsl($hue__playing, $sat__bold, $lum__bold);
+$colour__playing__bold: hsl($hue__playing, $sat__bold, $lum__medLight);
 $colour__playing__empty: hsl($hue__playing, $sat__medium, $lum__medium + 20%);
 $colour__playing__filled: hsl($hue__playing, $sat__dark, $lum__dark + 10%);
 
-$colour__paused__bold: hsl($hue__paused, $sat__bold, $lum__bold);
+$colour__paused__bold: hsl($hue__paused, $sat__bold, $lum__medLight);
 $colour__paused__filled: hsl($hue__paused, $sat__medium, $lum__medium);
 $colour__paused__empty: hsl($hue__paused, $sat__dark, $lum__dark - 5%);
 
-$colour__future__bold: hsl($hue__future, $sat__bold, $lum__bold);
+$colour__future__bold: hsl($hue__future, $sat__bold, $lum__medLight);
 $colour__future__lighter: hsl($hue__future, $sat__lighter, $lum__lighter);
 $colour__future__light: hsl($hue__future, $sat__light, $lum__light);
 $colour__future__medLight: hsl($hue__future, $sat__medLight, $lum__medLight);
@@ -85,11 +84,21 @@ $colour__accessHover__light: hsl($hue__access, $sat__light, $lum__hover__light);
 $colour__access__light: hsl($hue__access, $sat__light, $lum__link__light);
 
 $colour__select__dark: hsl($hue__select, $sat__darker, $lum__link__dark);
-$colour__select__medium: hsl($hue__select, $sat__medium, $lum__active);
 $colour__select__light: hsl($hue__select, $sat__light, $lum__link__light);
 
-// Verse colours
-$colour__mouseHover__light: hsl($hue__select, $sat__light, $lum__link__light);
+// Just used by nav title.
+$colour__select__medium: hsl($hue__select, $sat__medium, $lum__active);
+
+// Underline colours.
+$colour__underline: hsl($hue__link, $sat__darker, $lum__medium);
+$colour__underlineAccess: hsl($hue__access, $sat__darker, $lum__medium);
+$colour__underlineSelect: hsl($hue__select, $sat__darker, $lum__medium);
+
+// Interactable hover colours.
+$hue__interact: 186;
+$colour__interact__lighter: hsl($hue__interact, $sat__light, $lum__link__light);
+$colour__interact__light: hsl($hue__interact, $sat__light, $lum__link__light);
+$colour__interact__medium: hsl($hue__interact, $sat__medium, $lum__medium);
 
 // Annotation and Wormhole colours.
 $bgColour__annotation__dark: hsl(220, 13%, 62%); // For carousel button only.

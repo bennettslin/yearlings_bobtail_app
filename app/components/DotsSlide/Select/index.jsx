@@ -73,10 +73,11 @@ class DotsSlideSelect extends PureComponent {
                             handleButtonClick: this._toggleSelectedDot
                         }}
                     >
+                        {/* Button handles all drop shadow styling. */}
                         <Dot
+                            noDropShadow
                             {...{
                                 dotKey,
-                                isAccessed,
                                 isDeselected: !isSelected
                             }}
                         />

@@ -103,8 +103,7 @@ class AnnotationWormhole extends PureComponent {
                 <div
                     {...{
                         className: cx(
-                            'AnnotationWormhole__button',
-                            'dropShadowContainer__brightMode'
+                            'AnnotationWormhole__button'
                         )
                     }}
                 >

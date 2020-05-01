@@ -12,7 +12,7 @@
     .FilmstripScene__interactable:hover
     & {
         animation: bounceHoverY $animationDuration__default;
-        background-color: $colour__mouseHover__light;
+        background-color: $colour__interact__medium;
     }
 
     .FilmstripScene__interactable:active

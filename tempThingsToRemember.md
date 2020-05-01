@@ -13,12 +13,13 @@ Lyric expand doesn't hide dots button
 Dear Saskia, dots button isn't shown upon loading with tip, when overview.
 Tips Hand on ear is misaligned.
 In Grasshoppers, clicking wormhole pops dots toggle in and out...
+meta-referential in Grasshoppers has overlapping underline
+Accessed verse makes filmstrip weird
 
 fast forward and rewind buttons don't bounce animate, wormhole doesn't animate once annotation is selected
 
-Dot anchor in lyrics:
-    access, hover, and selected
+* Buttons are light hover by default, but bright hover as prop
 
-Dot anchor in annotation:
-    access, hover, and selected (dark mode)
+* No drop shadow on annotation anchor underline
 
+* selected verse can't hover

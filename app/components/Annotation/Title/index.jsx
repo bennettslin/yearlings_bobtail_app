@@ -96,8 +96,7 @@ class AnnotationTitle extends PureComponent {
                             'boxShadow__annotationTab__selected' :
                             'boxShadow__annotationTab',
 
-                        'fontSize__title',
-                        'dropShadowContainer__brightMode'
+                        'fontSize__title'
                     )
                 }}
             >

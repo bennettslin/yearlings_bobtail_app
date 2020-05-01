@@ -9,6 +9,7 @@ import { getDotIcon } from '../../svg/dots'
 const propTypes = {
     // From parent.
     className: PropTypes.string,
+    noDropShadow: PropTypes.bool,
     isAccessed: PropTypes.bool,
     isSelected: PropTypes.bool,
     isDeselected: PropTypes.bool,
@@ -18,6 +19,8 @@ const propTypes = {
 
 const Dot = ({
     className,
+
+    noDropShadow,
 
     isAccessed,
 
@@ -47,8 +50,13 @@ const Dot = ({
                     // Only used by DotsSlideSelect.
                     isDeselected && `Dot__deselected`,
 
-                    isAccessed && `dropShadow__accessed`,
-                    isSelected && `dropShadow__selected`,
+                    !isSequenceDot && !noDropShadow && [
+                        'dropShadow',
+                        'dropShadow__anchorHover',
+
+                        isAccessed && `dropShadow__accessed`,
+                        isSelected && `dropShadow__selected`
+                    ],
 
                     className
                 )

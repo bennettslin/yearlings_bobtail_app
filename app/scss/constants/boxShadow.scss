@@ -1,44 +1,51 @@
 // Box shadow colours.
-$colour__boxShadow: hsla(240, 14%, 34%, 0.4);
-$colour__boxShadow__dark: hsla(240, 33%, 15%, 0.7);
-$colour__boxShadow__darker: hsla(240, 33%, 15%, 0.9);
+$colour__shadow__light: hsla(240, 14%, 34%, 0.4);
+$colour__shadow__medium: hsla(240, 33%, 15%, 0.7);
+$colour__shadow__dark: hsla(240, 33%, 15%, 0.9);
 
-$colour__boxShadow__hover: hsla($hue__select, 100%, 90%, 0.7);
-$colour__boxShadow__hoverDark: hsla($hue__select, 63%, 45%, 0.7);
-$colour__boxShadow__access: hsla($hue__access, 100%, 90%, 0.7);
-$colour__boxShadow__accessDark: hsla($hue__access, 63%, 45%, 0.7);
-$colour__boxShadow__select: hsla($hue__select, 100%, 90%, 0.7);
+$colour__shadow__lightHover: hsla($hue__select, 100%, 93%, 0.9);
+$colour__shadow__brightHover: hsla($hue__select, 83%, 70%, 0.9);
+
+$colour__shadow__access: hsla($hue__access, 63%, 45%, 0.9);
+$colour__shadow__accessHover: hsla($hue__access, 83%, 70%, 0.9);
+
+$colour__shadow__anchor: hsla($hue__link, 63%, 45%, 0.9);
+$colour__shadow__anchorHover: hsla($hue__link, 83%, 70%, 0.9);
+
+$colour__shadow__select: hsla($hue__select, 63%, 45%, 0.9);
 
 // Main.
-$boxShadow__mainCard: 0 3px 5px 2px $colour__boxShadow__dark;
+$boxShadow__mainCard: 0 3px 5px 2px $colour__shadow__medium;
 
-$dropShadow__accessLetter: drop-shadow(0 2px 2px $colour__boxShadow__dark);
-$dropShadow__button: drop-shadow(0 2px 4px $colour__boxShadow__dark);
-$dropShadow__button__overlay: drop-shadow(0 2px 4px $colour__boxShadow__darker);
+$dropShadow__small: drop-shadow(0 2px 2px $colour__shadow__medium);
+$dropShadow: drop-shadow(0 2px 4px $colour__shadow__medium);
+$dropShadow__overlay: drop-shadow(0 2px 4px $colour__shadow__dark);
 
-$dropShadow__hover: drop-shadow(0 2px 8px $colour__boxShadow__hover);
-$dropShadow__hoverDark: drop-shadow(0 2px 8px $colour__boxShadow__hoverDark);
-$dropShadow__access: drop-shadow(0 2px 8px $colour__boxShadow__access);
-$dropShadow__accessDark: drop-shadow(0 2px 8px $colour__boxShadow__accessDark);
-$dropShadow__select: drop-shadow(0 2px 8px $colour__boxShadow__select);
+$dropShadow__lightHover: drop-shadow(0 2px 8px $colour__shadow__lightHover);
+$dropShadow__brightHover: drop-shadow(0 2px 12px $colour__shadow__brightHover);
+$dropShadow__access: drop-shadow(0 2px 12px $colour__shadow__access);
+$dropShadow__accessHover: drop-shadow(0 2px 12px $colour__shadow__accessHover);
+$dropShadow__anchor: drop-shadow(0 2px 12px $colour__shadow__anchor);
+$dropShadow__anchorHover: drop-shadow(0 2px 12px $colour__shadow__anchorHover);
+$dropShadow__select: drop-shadow(0 2px 12px $colour__shadow__select);
 
 // Lyric.
-$boxShadow__verseBar__above: 0 3px 10px 6px $colour__boxShadow__dark;
-$boxShadow__verseBar__below: 0 0 10px 6px $colour__boxShadow__dark;
+$boxShadow__verseBar__above: 0 3px 10px 6px $colour__shadow__medium;
+$boxShadow__verseBar__below: 0 0 10px 6px $colour__shadow__medium;
 
 // Annotation.
-$boxShadow__annotationCard: 0 1px 1px 1px $colour__boxShadow;
-$boxShadow__annotationWormhole: inset 0 2px 2px $colour__boxShadow;
+$boxShadow__annotationCard: 0 1px 1px 1px $colour__shadow__light;
+$boxShadow__annotationWormhole: inset 0 2px 2px $colour__shadow__light;
 
 // Verse.
-$boxShadow__activeVerse: inset 0 0 5px $colour__boxShadow__dark;
+$boxShadow__activeVerse: inset 0 0 5px $colour__shadow__medium;
 $boxShadow__cursorVerse: $boxShadow__mainCard;
 
 // Slider.
-$dropShadow__sliderStanza__sheet: 0 3px 6px 2px $colour__boxShadow__dark;
-$boxShadow__sliderStanza__tab: 0 3px 6px 2px $colour__boxShadow__dark;
-$boxShadow__cursorVerse__slider: 0 1px 4px 2px $colour__boxShadow__dark;
+$dropShadow__sliderStanza__sheet: 0 3px 6px 2px $colour__shadow__medium;
+$boxShadow__sliderStanza__tab: 0 3px 6px 2px $colour__shadow__medium;
+$boxShadow__cursorVerse__slider: 0 1px 4px 2px $colour__shadow__medium;
 
 // Popup.
 $boxShadow__popupView: $boxShadow__mainCard;
-$boxShadow__popupView__inOverlay: 0 3px 5px 2px $colour__boxShadow__darker;
+$boxShadow__popupView__inOverlay: 0 3px 5px 2px $colour__shadow__dark;

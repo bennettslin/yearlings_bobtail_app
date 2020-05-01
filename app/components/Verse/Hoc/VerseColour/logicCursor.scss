@@ -9,12 +9,11 @@
         }
     }
 
-    // Hacky extra class added to override future even verse.
-    .DeviceWrapper
+    // Override even verse shading.
     .TW__verseCanHover
     .verseColour__hoverParent:hover
     & {
-        background-color: $colour__mouseHover__light; 
+        background-color: $colour__interact__light !important;
     }
 }
 
@@ -74,8 +73,8 @@
 
         // "Child in lyric."
         &.ChL {
-            @include mixin__textAndLinkColours($light: false, $important: true);
-            @include mixin__underlineColours($light: false, $important: true);
+            @include mixin__textAndLinkColours($important: true);
+            @include mixin__underlineColours($important: true);
         }
 
         // "Grandchild verse colour."

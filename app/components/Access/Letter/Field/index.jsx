@@ -12,7 +12,8 @@ const AccessField = () => {
         <InlineSvg
             {...{
                 svgClassName: cx(
-                    'AccessField'
+                    'AccessField',
+                    'dropShadow__small'
                 )
             }}
         >

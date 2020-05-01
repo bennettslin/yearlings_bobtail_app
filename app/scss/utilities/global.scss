@@ -93,40 +93,52 @@
     }
 }
 
+.dropShadow {
+    filter: $dropShadow;
+
+    .ShW__overlayShown
+    & {
+        filter: $dropShadow__overlay;
+    }
+}
+
+.dropShadow__small {
+    filter: $dropShadow__small;
+}
+
+.dropShadow__lightHover {
+    &:hover {
+        filter: $dropShadow__lightHover;
+    }
+}
+
+.dropShadow__brightHover {
+    &:hover {
+        filter: $dropShadow__brightHover;
+    }
+}
+
+.dropShadow__anchorHover {
+    &:hover {
+        filter: $dropShadow__anchorHover;
+    }
+}
+
 .dropShadow__accessed {
+
     .PlW__accessOn
     & {
         filter: $dropShadow__access;
     }
 
-    .PlW__accessOn
-    .dropShadowContainer__brightMode
-    & {
-        filter: $dropShadow__accessDark;
+    &:hover {
+        filter: $dropShadow__accessHover;
     }
 }
 
-.dropShadow {
-    filter: $dropShadow__button;
-
-    .ShW__overlayShown
-    & {
-        filter: $dropShadow__button__overlay;
-    }
-
-    &:hover {
-        filter: $dropShadow__hover;
-    }
-
-    .dropShadowContainer__brightMode
-    &:hover {
-        filter: $dropShadow__hoverDark;
-    }
-}
-
-// Specific selectors to override hover drop shadow.
-.dropShadow.dropShadow__selected {
-    filter: $dropShadow__select;
+.dropShadow__selected {
+    // Selected should override hover.
+    filter: $dropShadow__select !important;
 }
 
 
