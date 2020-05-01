@@ -108,6 +108,7 @@ class AnnotationWormhole extends PureComponent {
                     }}
                 >
                     <Button
+                        isBrightHover
                         {...{
                             accessKey: ENTER,
                             isAccessed: isAccessed && isSelected,

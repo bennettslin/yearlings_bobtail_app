@@ -129,10 +129,10 @@
     .PlW__accessOn
     & {
         filter: $dropShadow__access;
-    }
 
-    &:hover {
-        filter: $dropShadow__accessHover;
+        &:hover {
+            filter: $dropShadow__accessHover;
+        }
     }
 }
 

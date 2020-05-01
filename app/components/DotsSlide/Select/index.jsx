@@ -57,6 +57,7 @@ class DotsSlideSelect extends PureComponent {
                 >
                     <Button
                         isCustomSize
+                        isBrightHover
                         {...{
                             className: cx({
                                 /**

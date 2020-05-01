@@ -66,6 +66,7 @@ class TipsToggle extends PureComponent {
                         className: cx(
                             'hidden__overviewStatus'
                         ),
+                        isBrightHover: inPopup,
                         buttonName: TIPS_BUTTON_KEY,
                         buttonIdentifier: selectedTipsOption,
                         accessKey: TIPS_TOGGLE_KEY,

@@ -3,17 +3,18 @@
     .TW__sliderNotMoving.TW__verseActive
     &.VerseColour__activated {
 
-        // Override even verse shading.
+        // Override even verse.
         &, &.GcE {
             background-color: $colour__access__light;
         }
     }
 
-    // Override even verse shading.
+    // Hack to override even verse, but not selected verse.
+    .DeviceWrapper
     .TW__verseCanHover
     .verseColour__hoverParent:hover
     & {
-        background-color: $colour__interact__light !important;
+        background-color: $colour__interact__light;
     }
 }
 

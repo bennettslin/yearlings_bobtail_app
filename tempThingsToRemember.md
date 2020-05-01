@@ -17,7 +17,3 @@ meta-referential in Grasshoppers has overlapping underline
 Accessed verse makes filmstrip weird
 
 fast forward and rewind buttons don't bounce animate, wormhole doesn't animate once annotation is selected
-
-* Buttons are light hover by default, but bright hover as prop
-
-* selected verse can't hover
