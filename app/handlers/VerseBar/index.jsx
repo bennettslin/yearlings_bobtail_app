@@ -8,6 +8,7 @@ import {
 } from 'flux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
+import { getVerseIndexForVerseBar } from '../../helpers/verse'
 
 class VerseBar extends PureComponent {
 
@@ -27,6 +28,7 @@ class VerseBar extends PureComponent {
         isVerseBarBelow: PropTypes.bool.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         updateVerseBarsStore: PropTypes.func.isRequired,
         resetVerseBarsQueue: PropTypes.func.isRequired,
 
@@ -49,6 +51,7 @@ class VerseBar extends PureComponent {
     componentDidUpdate(prevProps) {
         this._determineVerseBarsFromDispatch(prevProps)
         this._determineVerseBarsFromSlider(prevProps)
+        this._determineVerseBarsFromActivatedVerse(prevProps)
     }
 
     _determineVerseBarsFromDispatch(prevProps) {
@@ -74,9 +77,24 @@ class VerseBar extends PureComponent {
             sliderVerseIndex > -1 &&
             sliderVerseIndex !== prevVerseIndex
         ) {
-            this._dispatchVerseBars({
-                verseIndex: sliderVerseIndex
-            })
+            this._dispatchVerseBars({ sliderVerseIndex })
+        }
+    }
+
+    _determineVerseBarsFromActivatedVerse(prevProps) {
+        /**
+         * This is needed because a verse might get activated or deactivated,
+         * while the selected verse needs to be shown in a verse bar.
+         */
+
+        const
+            { activatedVerseIndex } = this.props,
+            { activatedVerseIndex: prevVerseIndex } = prevProps
+
+        if (
+            activatedVerseIndex !== prevVerseIndex
+        ) {
+            this._dispatchVerseBars({ activatedVerseIndex })
         }
     }
 
@@ -99,10 +117,7 @@ class VerseBar extends PureComponent {
         })
     }
 
-    _dispatchVerseBars = ({
-        verseIndex = this.props.selectedVerseIndex
-    } = {}) => {
-
+    _dispatchVerseBars = ({ sliderVerseIndex = -1 } = {}) => {
         const {
                 isLyricExpandable,
                 canSliderMount,
@@ -111,9 +126,16 @@ class VerseBar extends PureComponent {
                 isLyricExpanded,
                 lyricDynamicHeight,
                 isHeightlessLyric,
+                selectedVerseIndex,
+                activatedVerseIndex,
                 menuHeight
             } = this.props,
-            verseElement = this.props.getVerseElement(verseIndex)
+
+            verseElement = this.props.getVerseElement(getVerseIndexForVerseBar({
+                sliderVerseIndex,
+                activatedVerseIndex,
+                verseIndex: selectedVerseIndex
+            }))
 
         // Check for verse element in case we are loading from a logue.
         if (verseElement) {
@@ -176,9 +198,8 @@ const mapStateToProps = ({
         isVerseBarAbove,
         isVerseBarBelow
     },
-    selectedStore: {
-        selectedVerseIndex
-    },
+    selectedStore: { selectedVerseIndex },
+    sessionStore: { activatedVerseIndex },
     sliderStore: { sliderVerseIndex }
 }) => ({
     queuedDetermineVerseBars,
@@ -194,6 +215,7 @@ const mapStateToProps = ({
     isHeightlessLyric,
     menuHeight,
     selectedVerseIndex,
+    activatedVerseIndex,
     sliderVerseIndex
 })
 

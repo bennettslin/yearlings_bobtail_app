@@ -11,13 +11,15 @@ import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 
 import { getVerse } from 'album/api/verses'
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
+import { getVerseIndexForVerseBar } from '../../../helpers/verse'
 
 const mapStateToProps = ({
     lyricStore: {
         lyricSongIndex,
         lyricVerseIndex
     },
+    sessionStore: { activatedVerseIndex },
     sliderStore: { sliderVerseIndex },
     verseBarsStore: {
         isVerseBarAbove,
@@ -26,6 +28,7 @@ const mapStateToProps = ({
 }) => ({
     lyricSongIndex,
     lyricVerseIndex,
+    activatedVerseIndex,
     sliderVerseIndex,
     isVerseBarAbove,
     isVerseBarBelow
@@ -41,6 +44,7 @@ class VerseBar extends PureComponent {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
         isVerseBarAbove: PropTypes.bool.isRequired,
         isVerseBarBelow: PropTypes.bool.isRequired,
@@ -85,13 +89,16 @@ class VerseBar extends PureComponent {
                 lyricSongIndex,
                 lyricVerseIndex,
                 sliderVerseIndex,
+                activatedVerseIndex,
 
                 handleVerseBarWheel
             } = this.props,
 
-            verseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex :
-                lyricVerseIndex,
+            verseIndex = getVerseIndexForVerseBar({
+                sliderVerseIndex,
+                activatedVerseIndex,
+                verseIndex: lyricVerseIndex
+            }),
 
             verseObject = getVerse(lyricSongIndex, verseIndex),
 

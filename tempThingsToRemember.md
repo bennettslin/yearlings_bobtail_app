@@ -26,6 +26,6 @@ Make filmstrip past and future colours light or dark based on paused or playing.
 Can selected verse have text shadow?
 
 # TODO in lyrics locked mode:
-* Make VerseBar activated verse, with same colour. [ ]
 * Make slider cursor just inset shadow as well. [ ]
 * Disable song banner and filmstrip. [ ]
+* No inset shadow on VerseBar. [ ]

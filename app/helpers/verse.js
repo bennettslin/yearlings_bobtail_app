@@ -79,3 +79,17 @@ export const getVerseIndexforRatio = (
 
     return verseIndex
 }
+
+export const getVerseIndexForVerseBar = ({
+    sliderVerseIndex,
+    activatedVerseIndex,
+    verseIndex
+}) => {
+    if (sliderVerseIndex >= 0) {
+        return sliderVerseIndex
+    } else if (activatedVerseIndex >= 0) {
+        return activatedVerseIndex
+    } else {
+        return verseIndex
+    }
+}
