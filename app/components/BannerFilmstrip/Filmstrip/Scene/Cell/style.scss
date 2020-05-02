@@ -38,6 +38,14 @@
     background-color: $colour__past__medium;
 }
 
+.FilmstripCell__activated {
+
+    // Make selector specific to override default colour.
+    &.FilmstripCell {
+        background-color: $colour__access__light;
+    }
+}
+
 .FilmstripCell__selected {
     background-color: $colour__paused__empty;
 
@@ -55,13 +63,5 @@
     
     &.FilmstripCell__even {
         background-color: $colour__future__medium;
-    }
-}
-
-.FilmstripCell__activated {
-
-    // Make selector specific to override default colour.
-    &.FilmstripCell {
-        background-color: $colour__access__light;
     }
 }

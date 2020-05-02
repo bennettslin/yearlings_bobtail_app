@@ -4552,7 +4552,7 @@ export default [
     },
     {
         taskName: `Some bug fixes.`,
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 4,
+        neededHours: 4
     }
 ]

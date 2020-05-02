@@ -28,7 +28,7 @@ const FilmstripCell = ({
                 isOdd ?
                     'FilmstripCell__even' :
                     'FilmstripCell__odd',
-                isActivated &&
+                isActivated && !isSelected &&
                     'FilmstripCell__activated',
                 isSelected &&
                     'FilmstripCell__selected',
