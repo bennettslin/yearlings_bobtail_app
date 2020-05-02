@@ -31,6 +31,7 @@ class CloseHandler extends PureComponent {
         selectedAnnotationIndex: PropTypes.number.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
+        isSliderMoving: PropTypes.bool.isRequired,
         isSongShownOverview: PropTypes.bool.isRequired,
         isSongShownTips: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
@@ -55,9 +56,9 @@ class CloseHandler extends PureComponent {
         this._handleCarouselNavToggle(prevProps)
         this._handleDotsSlideOpen(prevProps)
         this._handleLyricExpand(prevProps)
+        this._handleLyricsLocked(prevProps)
         this._handleOverviewShown(prevProps)
         this._handleTipsShown(prevProps)
-        this._handleVerseActivate(prevProps)
         this._handleScoreOpen(prevProps)
         this._handleWikiSelect(prevProps)
     }
@@ -131,6 +132,29 @@ class CloseHandler extends PureComponent {
         }
     }
 
+    _handleLyricsLocked(prevProps) {
+        const
+            {
+                activatedVerseIndex,
+                isSliderMoving
+            } = this.props,
+            {
+                activatedVerseIndex: prevVerseIndex,
+                isSliderMoving: wasSliderMoving
+            } = prevProps
+
+        if (
+            (isSliderMoving && !wasSliderMoving) ||
+            (activatedVerseIndex >= 0 && prevVerseIndex < 0)
+        ) {
+            this.closeOverlayPopups()
+            this.closeMainSections({
+                exemptActivatedVerse: true,
+                exemptLyric: true
+            })
+        }
+    }
+
     _handleOverviewShown(prevProps = {}) {
         const
             { selectedOverviewOption } = this.props,
@@ -180,20 +204,6 @@ class CloseHandler extends PureComponent {
                     exemptOverview: true
                 })
             }
-        }
-    }
-
-    _handleVerseActivate(prevProps) {
-        const
-            { activatedVerseIndex } = this.props,
-            { activatedVerseIndex: prevVerseIndex } = prevProps
-
-        if (activatedVerseIndex > -1 && prevVerseIndex === -1) {
-            this.closeOverlayPopups()
-            this.closeMainSections({
-                exemptActivatedVerse: true,
-                exemptLyric: true
-            })
         }
     }
 
@@ -324,6 +334,7 @@ const mapStateToProps = ({
         isSongShownTips
     },
     selectedStore: { selectedAnnotationIndex },
+    sliderStore: { isSliderMoving },
     toggleStore: {
         isCarouselShown,
         isDotsSlideShown,
@@ -337,6 +348,7 @@ const mapStateToProps = ({
     }
 }) => ({
     selectedAnnotationIndex,
+    isSliderMoving,
     isCarouselShown,
     isDotsSlideShown,
     isLyricExpanded,

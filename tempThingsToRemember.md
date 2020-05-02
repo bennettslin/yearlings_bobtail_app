@@ -29,5 +29,3 @@ Can selected verse have text shadow?
 * Make VerseBar activated verse, with same colour. [ ]
 * Make slider cursor just inset shadow as well. [ ]
 * Disable song banner and filmstrip. [ ]
-* Hide dots section upon slider. [ ]
-* Hide popup annotation upon slider. [ ]

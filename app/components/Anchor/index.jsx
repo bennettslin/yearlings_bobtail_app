@@ -27,7 +27,7 @@ class Anchor extends PureComponent {
     static propTypes = {
         // Through Redux.
         isUserAgentDesktop: PropTypes.bool.isRequired,
-        activatedVerseIndex: PropTypes.bool.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
 
         // From parent.
