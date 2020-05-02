@@ -29,4 +29,3 @@ Can selected verse have text shadow?
 
 # FIXME
 Access of future filmstrip cells being overridden.
-Touched slider should show activation colour for cursor.

@@ -14,8 +14,13 @@ $hue__past: 36;
 $hue__present: 156;
 $hue__future: 276;
 
-$hue__playing: $hue__present;
+$hue__playing: 156;
 $hue__paused: 216;
+
+$hue__link: 6;
+$hue__select: 66;
+$hue__access: 126;
+$hue__interact: 186;
 
 $sat__bold: 90%;
 $sat__lighter: 71%;
@@ -59,12 +64,6 @@ $colour__future__darker: hsl($hue__future, $sat__darker, $lum__darker);
 $colour__neutral__light: hsl(0, 0%, $lum__light);
 $colour__neutral__dark: hsl(0, 0%, $lum__dark);
 
-$colour__present__light: hsl($hue__present, $sat__light, $lum__light);
-
-$hue__link: 6;
-$hue__select: 66;
-$hue__access: 126;
-
 $lum__link__dark: 43%;
 $lum__hover__dark: 54%;
 $lum__active: 65%;
@@ -95,7 +94,6 @@ $colour__underlineAccess: hsl($hue__access, $sat__darker, $lum__medium);
 $colour__underlineSelect: hsl($hue__select, $sat__darker, $lum__medium);
 
 // Interactable hover colours.
-$hue__interact: 186;
 $colour__interact__lighter: hsl($hue__interact, $sat__light, $lum__link__light);
 $colour__interact__light: hsl($hue__interact, $sat__light, $lum__link__light);
 $colour__interact__medium: hsl($hue__interact, $sat__medium, $lum__medium);
