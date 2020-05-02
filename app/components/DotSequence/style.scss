@@ -7,8 +7,8 @@
 }
 
 .DotSequence__inTextAnchor {
-    left: -$length__lyricAnchorDot * 0.32;
-    top: -$length__lyricAnchorDot * 0.28;
+    left: -$length__lyricSequenceDot * 0.2;
+    top: -$length__lyricSequenceDot * 0.3;
 
     .VerseLine__right
     & {
@@ -24,8 +24,8 @@
 
 .gradientMask__dotSequence {
     $gradient__dotSequence: linear-gradient(
-        rgba(0, 0, 0, 1.0),
-        rgba(0, 0, 0, 0.5)
+        hsl(0, 0%, 0%),
+        hsla(0, 0%, 0%, 0.1)
     );
 
     mask-image: $gradient__dotSequence;

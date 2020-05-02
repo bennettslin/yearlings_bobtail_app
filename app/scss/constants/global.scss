@@ -11,8 +11,8 @@ $MARGIN_THIN: 4px;
 $margin__thick: 12px;
 
 // Dot diameters.
-$length__annotationDot: 24px;
-$length__lyricAnchorDot: 0.9em;
+$length__annotationDot: $length__iconSmaller;
+$length__lyricSequenceDot: 1.05em;
 
 $width__hangingIndent: 1.5em;
 
