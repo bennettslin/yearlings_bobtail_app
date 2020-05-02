@@ -11,8 +11,8 @@
 
     .FilmstripScene__interactable:hover
     & {
-        animation: bounceHoverY $animationDuration__default;
         background-color: $colour__interact__medium;
+        box-shadow: $boxShadow__activeVerse;
     }
 
     .FilmstripScene__interactable:active

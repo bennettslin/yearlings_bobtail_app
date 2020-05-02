@@ -8,9 +8,6 @@ Rethink some dot category shapes?
 Lower light switch, and Bennett's arm
 
 # TODO
-Hover of filmstrip should show inset shadow, not hover bounce.
-Hover of verse also should show inset shadow.
-
 Access of scene should show inset shadow.
 Activation or access of verse should show inset shadow.
 
@@ -25,5 +22,5 @@ Make filmstrip past and future colours light or dark based on paused or playing.
 
 Can selected verse have text shadow?
 
-# TODO in lyrics locked mode:
-Touch slider or access or activation disable song banner and filmstrip.
+Touch slider should disable song banner and filmstrip.
+Accessed or activated scene or verse should should show song banner and filmstrip just like slider and lyrics.

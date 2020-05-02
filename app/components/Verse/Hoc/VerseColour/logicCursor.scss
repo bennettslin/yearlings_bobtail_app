@@ -15,6 +15,7 @@
     .verseColour__hoverParent:hover
     & {
         background-color: $colour__interact__light;
+        box-shadow: $boxShadow__activeVerse;
     }
 }
 
