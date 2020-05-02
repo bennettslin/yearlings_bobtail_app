@@ -54,6 +54,7 @@
     // Make selector specific to override default colour.
     &.FilmstripCell {
         background-color: $colour__access__light;
+        box-shadow: $boxShadow__activeVerse;
     }
 }
 
