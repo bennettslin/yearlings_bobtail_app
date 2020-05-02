@@ -39,7 +39,8 @@
 
         // "Grandchild in slider."
         .GcS {
-            box-shadow: $boxShadow__cursorVerse__slider;
+            // Override hover inset box shadow.
+            box-shadow: $boxShadow__cursorVerse__slider !important;
 
             border-radius:
                 $borderRadius__narrow
@@ -59,7 +60,8 @@
 
         // "Grandchild in lyric."
         .GcL {
-            box-shadow: $boxShadow__cursorVerse;
+            // Override hover inset box shadow.
+            box-shadow: $boxShadow__cursorVerse !important;
 
             border-radius: $borderRadius__narrow;
             top: -$MARGIN_THIN;

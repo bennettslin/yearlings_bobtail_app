@@ -23,4 +23,14 @@ $padding__songBanner: $MARGIN_THIN * 2;
     & {
         cursor: pointer;
     }
+
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__access__light;
+    }
+
+    .TW__verseActive
+    & {
+        box-shadow: $boxShadow__activeVerse;
+    }
 }

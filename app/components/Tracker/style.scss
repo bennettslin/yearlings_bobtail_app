@@ -5,7 +5,7 @@
     .DW__userAgentDesktop
     & {
         transition:
-            opacity $animationDuration__fast,
+            opacity $animationDuration__instant,
             width $animationDuration__slow;
     }
 
@@ -16,5 +16,8 @@
 }
 
 .Tracker__visible {
-    opacity: 1;
+    .TW__lyricsUnlocked
+    & {
+        opacity: 1;
+    }
 }

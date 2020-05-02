@@ -25,13 +25,17 @@ const mapStateToProps = ({
     selectedStore: {
         selectedSongIndex,
         selectedTime
-    }
+    },
+    sessionStore: { activatedVerseIndex },
+    sliderStore: { isSliderMoving }
 }) => ({
     isPlaying,
     isSmallBannerText,
     lyricSongIndex,
     selectedSongIndex,
-    selectedTime
+    selectedTime,
+    activatedVerseIndex,
+    isSliderMoving
 })
 
 class SongBanner extends PureComponent {
@@ -42,7 +46,9 @@ class SongBanner extends PureComponent {
         isSmallBannerText: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
-        selectedTime: PropTypes.number.isRequired
+        selectedTime: PropTypes.number.isRequired,
+        activatedVerseIndex: PropTypes.number.isRequired,
+        isSliderMoving: PropTypes.number.isRequired
     }
 
     constructor(props) {
@@ -101,7 +107,9 @@ class SongBanner extends PureComponent {
     render() {
         const {
                 isPlaying,
-                isSmallBannerText
+                isSmallBannerText,
+                isSliderMoving,
+                activatedVerseIndex
             } = this.props,
             cursorWidth = this.getCursorWidth()
 
@@ -115,7 +123,11 @@ class SongBanner extends PureComponent {
                         isSmallBannerText &&
                             'Cursor__smallText',
 
-                        isPlaying ?
+                        (
+                            isPlaying ||
+                            isSliderMoving ||
+                            activatedVerseIndex >= 0
+                        ) ?
                             'textShadow__light' :
                             'textShadow__dark',
 

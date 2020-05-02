@@ -11,4 +11,13 @@ Can selected verse have text shadow?
 
 Touch slider should disable song banner and filmstrip.
 
-Accessed or activated scene or verse should show in styling of song banner and filmstrip just like slider and lyrics.
+Accessed or activated scene or verse should show in styling of filmstrip just like slider and lyrics.
+
+Song banner should not be interactable when accessed verse or slider.
+
+# FIXME
+Make Anchor not know about activated verse index and slider moving.
+
+When activated verse, song banner should show inset shadow, no tracker, and activated colour.
+
+Selected verse should really still show selected colouring when accessed or activated verse.
