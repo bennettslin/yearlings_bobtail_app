@@ -21,8 +21,6 @@ Access or activation of scene or verse should show selected verse as light text 
 
 Touch slider should show selected verse as light text on dark background, and hide tracker.
 
-Access or activation of scene or verse should turn off auto scroll.
-
 Make filmstrip past and future colours light or dark based on paused or playing.
 
 Can selected verse have text shadow?

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSessionStore } from 'flux/session/action'
+import { updateToggleStore } from 'flux/toggle/action'
 
 import { getSceneIndexForVerseIndex } from 'album/api/verses'
 import { getActivatedVerseForDirection } from './helper'
@@ -19,6 +20,7 @@ class ActivatedVerseDispatcher extends PureComponent {
         activatedVerseIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
+        updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -75,6 +77,11 @@ class ActivatedVerseDispatcher extends PureComponent {
             activatedSceneIndex,
             activatedVerseIndex
         })
+
+        // Turn off auto scroll once verse or scene is activated.
+        this.props.updateToggleStore({
+            isAutoScroll: false
+        })
     }
 
     _queueScrollToActivatedVerse = (activatedVerseIndex) => {
@@ -109,6 +116,7 @@ export default connect(
     mapStateToProps,
     {
         updateScrollLyricStore,
-        updateSessionStore
+        updateSessionStore,
+        updateToggleStore
     }
 )(ActivatedVerseDispatcher)
