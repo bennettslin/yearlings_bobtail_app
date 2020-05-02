@@ -1,21 +1,21 @@
-@mixin mixin__textShadow($bgColour, $important: false) {
+@mixin mixin__textAnchorShadow($bgColour, $important: false) {
     $offset: 0.5px;
     $offset__negative: -$offset;
-    $blur: 0.75px;
+    $blur: 0.5px;
 
     .TextAnchor__linkText {
         @if $important {
             text-shadow:
-                $offset__negative $offset__negative $blur $bgColour,
-                $offset $offset__negative $blur $bgColour,
-                $offset__negative $offset $blur $bgColour,
-                $offset $offset $blur $bgColour !important;
+                0 $offset__negative $blur $bgColour,
+                $offset 0 $blur $bgColour,
+                $offset__negative 0 $blur $bgColour,
+                0 $offset * 1.5 $blur $bgColour !important;
         } @else {
             text-shadow:
-                $offset__negative $offset__negative $blur $bgColour,
-                $offset $offset__negative $blur $bgColour,
-                $offset__negative $offset $blur $bgColour,
-                $offset $offset $blur $bgColour;
+                0 $offset__negative $blur $bgColour,
+                $offset 0 $blur $bgColour,
+                $offset__negative 0 $blur $bgColour,
+                0 $offset * 1.5 $blur $bgColour;
         }
     }
 }
@@ -29,8 +29,8 @@
             color: $colour__text__light;
         }
 
-        @include mixin__textShadow(
-            hsla(0, 0%, 0%, 0.3),
+        @include mixin__textAnchorShadow(
+            hsla(0, 0%, 0%, 0.2),
             $important: $important
         );
 
@@ -41,8 +41,8 @@
             color: $colour__text__dark;
         }
 
-        @include mixin__textShadow(
-            hsla(0, 0%, 100%, 0.3),
+        @include mixin__textAnchorShadow(
+            hsla(0, 0%, 100%, 0.5),
             $important: $important
         );
     }

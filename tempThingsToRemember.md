@@ -6,7 +6,6 @@ Rethink some dot category shapes?
 
 # TODO
 Dot sequence styling (also consider light/dark background)
-Improve anchor text shadow
 
 # FIXME
 Don't animate annotation cards in popup
