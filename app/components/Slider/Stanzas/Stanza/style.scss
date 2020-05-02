@@ -81,6 +81,11 @@ $width__sliderStanzaTab: 9px;
     }
 }
 
+.SliderStanza__sheet,
+.SliderStanza__tab:before {
+    box-shadow: $boxShadow__sliderStanza;
+}
+
 .bgColour__sliderStanza__pattern {
     $degrees: 60deg;
     $lightShade: rgba(255, 255, 255, 0.125);
@@ -125,13 +130,4 @@ $width__sliderStanzaTab: 9px;
 
 .bgColour__sliderStanza__pattern__reverse {
     background-position: bottom left 5px;
-}
-
-.dropShadow__sliderStanza__sheet {
-    // Not sure why this was a drop shadow. Keeping for now, just in case.
-    box-shadow: $dropShadow__sliderStanza__sheet;
-}
-
-.boxShadow__sliderStanza__tab:before {
-    box-shadow: $boxShadow__sliderStanza__tab;
 }

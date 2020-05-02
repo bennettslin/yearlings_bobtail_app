@@ -91,7 +91,6 @@ class SliderStanza extends PureComponent {
             >
                 <div className={cx(
                     'SliderStanza__sheet',
-                    'dropShadow__sliderStanza__sheet',
                     'bgColour__sliderStanza__pattern',
                     `bgColour__stanzaType__${stanzaType}`,
                     'abF'
@@ -107,7 +106,6 @@ class SliderStanza extends PureComponent {
                 {/* This tab covers the sheet's box shadow. */}
                 <div className={cx(
                     'SliderStanza__tab',
-                    'boxShadow__sliderStanza__tab',
                     'bgColour__sliderStanza__pattern',
                     'bgColour__sliderStanza__pattern__reverse',
                     `bgColour__stanzaType__${stanzaType}`

@@ -42,8 +42,8 @@ $boxShadow__activeVerse: inset 0 0 5px $colour__shadow__medium;
 $boxShadow__cursorVerse: $boxShadow__mainCard;
 
 // Slider.
-$dropShadow__sliderStanza__sheet: 0 3px 6px 2px $colour__shadow__medium;
-$boxShadow__sliderStanza__tab: 0 3px 6px 2px $colour__shadow__medium;
+$boxShadow__sliderStanza: 0 3px 6px 2px $colour__shadow__medium;
+$boxShadow__sliderStanza__hover: 0 3px 6px 2px $colour__shadow__lightHover;
 $boxShadow__cursorVerse__slider: 0 1px 4px 2px $colour__shadow__medium;
 
 // Popup.
