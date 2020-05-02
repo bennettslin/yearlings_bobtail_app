@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import AccessReducer from './access/reducer'
+import ActivatedReducer from './activated/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AppReducer from './app/reducer'
 import AudioReducer from './audio/reducer'
@@ -25,6 +26,7 @@ import ViewportReducer from './viewport/reducer'
 
 import {
     ACCESS_STORE,
+    ACTIVATED_STORE,
     ANNOTATION_STORE,
     AUDIO_STORE,
     VIEWPORT_STORE,
@@ -50,6 +52,7 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [ACTIVATED_STORE]: ActivatedReducer,
     [VIEWPORT_STORE]: ViewportReducer,
     [ACCESS_STORE]: AccessReducer,
     [TOGGLE_STORE]: ToggleReducer,

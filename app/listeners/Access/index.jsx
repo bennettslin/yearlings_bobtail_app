@@ -13,7 +13,7 @@ const mapStateToProps = ({
         isLyricExpanded
     },
     lyricStore: { lyricAnnotationIndex },
-    sessionStore: { activatedVerseIndex }
+    activatedStore: { activatedVerseIndex }
 }) => ({
     isAccessOn,
     isNavShown,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isFinite from 'lodash/isfinite'
 
-import { resetActivated } from 'flux/session/action'
+import { resetActivated } from 'flux/activated/action'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
@@ -123,7 +123,7 @@ const mapStateToProps = ({
         isAccessOn,
         accessedAnnotationIndex
     },
-    sessionStore: { activatedVerseIndex },
+    activatedStore: { activatedVerseIndex },
     selectedStore: { selectedVerseIndex }
 }) => ({
     isAccessOn,

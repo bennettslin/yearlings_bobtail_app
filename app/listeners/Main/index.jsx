@@ -135,10 +135,8 @@ const mapStateToProps = ({
         lyricAnnotationIndex,
         isLyricLogue
     },
-    sessionStore: {
-        activatedVerseIndex,
-        selectedWikiIndex
-    },
+    activatedStore: { activatedVerseIndex },
+    sessionStore: { selectedWikiIndex },
     optionStore: {
         isLogueOverviewShown,
         selectedOverviewOption,

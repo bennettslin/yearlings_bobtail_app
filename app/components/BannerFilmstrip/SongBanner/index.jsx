@@ -26,7 +26,7 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedTime
     },
-    sessionStore: { activatedVerseIndex },
+    activatedStore: { activatedVerseIndex },
     sliderStore: { isSliderMoving }
 }) => ({
     isPlaying,

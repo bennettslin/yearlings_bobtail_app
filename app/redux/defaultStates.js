@@ -252,9 +252,11 @@ export const SELECTED_DEFAULTS = {
     earColumnIndex: storedEarColumnIndex || 0
 }
 
-export const SESSION_ACTIVATED_DEFAULTS = {
+export const ACTIVATED_DEFAULTS = {
+    isActivated: false,
     activatedVerseIndex: -1,
-    activatedSceneIndex: -1
+    activatedSceneIndex: -1,
+    activatedTime: 0
 }
 
 export const SESSION_WIKI_DEFAULTS = {
@@ -264,7 +266,6 @@ export const SESSION_WIKI_DEFAULTS = {
 }
 
 export const SESSION_DEFAULTS = {
-    ...SESSION_ACTIVATED_DEFAULTS,
     ...SESSION_WIKI_DEFAULTS,
     shownNavBookIndex: getBookForSongIndex(storedSongIndex),
     selectedAudioOptionIndex:

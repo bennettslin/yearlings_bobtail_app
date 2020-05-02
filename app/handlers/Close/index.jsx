@@ -6,11 +6,9 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { resetActivated } from 'flux/activated/action'
 import { updateOptionStore } from 'flux/option/action'
-import {
-    resetActivated,
-    resetWiki
-} from 'flux/session/action'
+import { resetWiki } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
@@ -342,10 +340,8 @@ const mapStateToProps = ({
         isScoreShown,
         isAboutShown
     },
-    sessionStore: {
-        selectedWikiIndex,
-        activatedVerseIndex
-    }
+    activatedStore: { activatedVerseIndex },
+    sessionStore: { selectedWikiIndex }
 }) => ({
     selectedAnnotationIndex,
     isSliderMoving,

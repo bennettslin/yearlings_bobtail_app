@@ -134,10 +134,8 @@ const mapStateToProps = ({
         selectedAnnotationIndex,
         isSelectedLogue
     },
-    sessionStore: {
-        activatedVerseIndex,
-        selectedWikiIndex
-    }
+    activatedStore: { activatedVerseIndex },
+    sessionStore: { selectedWikiIndex }
 }) => ({
     isHeightlessLyric,
     isLyricExpanded,

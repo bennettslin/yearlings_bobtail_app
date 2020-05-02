@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
-import { resetActivated } from 'flux/session/action'
+import { resetActivated } from 'flux/activated/action'
 
 class SliderListener extends PureComponent {
 

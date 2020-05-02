@@ -199,7 +199,7 @@ const mapStateToProps = ({
         isVerseBarBelow
     },
     selectedStore: { selectedVerseIndex },
-    sessionStore: { activatedVerseIndex },
+    activatedStore: { activatedVerseIndex },
     sliderStore: { sliderVerseIndex }
 }) => ({
     queuedDetermineVerseBars,

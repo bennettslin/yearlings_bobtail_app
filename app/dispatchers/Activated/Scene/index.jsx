@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateSessionStore } from 'flux/session/action'
+import { updateActivatedStore } from 'flux/activated/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import { getVerseIndexForSceneIndex } from 'album/api/scenes'
@@ -19,7 +19,7 @@ class ActivatedSceneDispatcher extends PureComponent {
         selectedSceneIndex: PropTypes.number.isRequired,
         activatedSceneIndex: PropTypes.number.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        updateSessionStore: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -62,7 +62,7 @@ class ActivatedSceneDispatcher extends PureComponent {
                 activatedSceneIndex
             )
 
-        this.props.updateSessionStore({
+        this.props.updateActivatedStore({
             activatedSceneIndex,
             activatedVerseIndex
         })
@@ -101,7 +101,7 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedSceneIndex
     },
-    sessionStore: { activatedSceneIndex }
+    activatedStore: { activatedSceneIndex }
 }) => ({
     isSelectedLogue,
     selectedSongIndex,
@@ -113,7 +113,7 @@ export default connect(
     mapStateToProps,
     {
         updateScrollLyricStore,
-        updateSessionStore,
+        updateActivatedStore,
         updateToggleStore
     }
 )(ActivatedSceneDispatcher)

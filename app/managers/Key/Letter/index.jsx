@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import {
-    resetActivated,
-    resetWiki
-} from 'flux/session/action'
-import { updateSelectedStore } from 'flux/selected/action'
 import { updateAccessStore } from 'flux/access/action'
+import { resetActivated } from 'flux/activated/action'
+import { updateSelectedStore } from 'flux/selected/action'
+import { resetWiki } from 'flux/session/action'
 
 import AboutDispatcher from '../../../dispatchers/About'
 import AudioOptionDispatcher from '../../../dispatchers/AudioOptionDispatcher'

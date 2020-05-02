@@ -13,8 +13,8 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
+    activatedStore: { activatedVerseIndex },
     appStore: { isUserAgentDesktop },
-    sessionStore: { activatedVerseIndex },
     sliderStore: { isSliderMoving }
 }) => ({
     isUserAgentDesktop,

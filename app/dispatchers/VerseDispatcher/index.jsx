@@ -1,10 +1,10 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { resetActivated } from 'flux/activated/action'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSelectedStore } from 'flux/selected/action'
-import { resetActivated } from 'flux/session/action'
 import { resetVerseBars } from 'flux/verseBars/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'

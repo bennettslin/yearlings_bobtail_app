@@ -27,7 +27,7 @@ const mapStateToProps = ({
         lyricSceneIndex
     },
     selectedStore: { selectedTime },
-    sessionStore: { activatedSceneIndex }
+    activatedStore: { activatedSceneIndex }
 }) => ({
     lyricSongIndex,
     lyricSceneIndex,

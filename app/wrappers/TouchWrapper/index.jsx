@@ -62,7 +62,7 @@ class TouchWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    sessionStore: { activatedVerseIndex },
+    activatedStore: { activatedVerseIndex },
     toggleStore: { isAutoScroll },
     sliderStore: {
         isSliderTouched,

@@ -8,7 +8,7 @@ import VerseColour from './VerseColour'
 import VerseNav from './VerseNav'
 
 const mapStateToProps = ({
-    sessionStore: { activatedVerseIndex }
+    activatedStore: { activatedVerseIndex }
 }) => ({
     activatedVerseIndex
 })

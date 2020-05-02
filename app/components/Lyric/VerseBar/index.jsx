@@ -19,7 +19,7 @@ const mapStateToProps = ({
         lyricSongIndex,
         lyricVerseIndex
     },
-    sessionStore: { activatedVerseIndex },
+    activatedStore: { activatedVerseIndex },
     sliderStore: { sliderVerseIndex },
     verseBarsStore: {
         isVerseBarAbove,

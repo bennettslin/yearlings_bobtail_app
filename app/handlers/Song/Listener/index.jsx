@@ -3,10 +3,10 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { resetActivated } from 'flux/activated/action'
 import { updateLoadStore } from 'flux/load/action'
 import {
     updateSessionStore,
-    resetActivated,
     resetWiki
 } from 'flux/session/action'
 import { resetVerseBars } from 'flux/verseBars/action'
