@@ -58,13 +58,13 @@ export default {
         [LIGHT_SWITCH__OFF]: {
             yIndex: 3,
             xPosition: 5,
-            zOffset: 3.6,
+            zOffset: 3.15,
             rotate: 180
         },
         [LIGHT_SWITCH__ON]: {
             yIndex: 3,
             xPosition: 5,
-            zOffset: 3.6
+            zOffset: 3.15
         },
         [LINGERIE_DRAWING]: {
             yIndex: 4,
