@@ -69,9 +69,20 @@ class SongBanner extends PureComponent {
 
     handleBannerClick = (e) => {
 
-        const { selectedSongIndex } = this.props
+        const {
+            selectedSongIndex,
+            isSliderMoving,
+            activatedVerseIndex
+        } = this.props
 
         if (getSongIsLogue(selectedSongIndex)) {
+            // Do nothing in logue.
+            return
+        }
+
+        if (isSliderMoving || activatedVerseIndex >= 0) {
+            // Do nothing if lyrics locked, but still register click event.
+            this.dispatchStopPropagation(e)
             return
         }
 
@@ -132,7 +143,9 @@ class SongBanner extends PureComponent {
                             'textShadow__dark',
 
                         'dropShadow',
-                        'dropShadow__lightHover',
+
+                        !isSliderMoving && activatedVerseIndex < 0 &&
+                            'dropShadow__lightHover',
 
                         'ovH',
                         'Rancho'

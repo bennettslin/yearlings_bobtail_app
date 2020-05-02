@@ -74,7 +74,7 @@ class LogicWrapper extends PureComponent {
                         `RcS${cursorStanzaIndex}`,
 
                         (isSliderMoving || activatedVerseIndex >= 0) ?
-                            // "Root slider verse index."
+                            // "Root slider (or activated) verse index."
                             `RsV${cursorVerseIndex}` :
                             // "Root default verse index."
                             `RdV${cursorVerseIndex}`,
