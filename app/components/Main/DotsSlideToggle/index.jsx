@@ -41,7 +41,6 @@ class DotsSlideToggle extends PureComponent {
                 {...{
                     className: cx(
                         'DotsSlideToggle',
-                        'hidden__overviewStatus',
                         className
                     )
                 }}

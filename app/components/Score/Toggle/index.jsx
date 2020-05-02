@@ -65,9 +65,6 @@ class ScoreToggle extends PureComponent {
                 <Button
                     isLargeSize
                     {...{
-                        className: cx(
-                            'hidden__overviewStatus'
-                        ),
                         buttonName: SCORES_BUTTON_KEY,
                         accessKey: SCORE_TOGGLE_KEY,
                         isDisabled: !isScoreLoaded,

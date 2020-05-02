@@ -16,7 +16,6 @@ class ShownWrapper extends PureComponent {
         isLyricLogue: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
-        isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
         isCarouselShown: PropTypes.bool.isRequired,
@@ -36,7 +35,6 @@ class ShownWrapper extends PureComponent {
                 isLyricLogue,
                 lyricSongIndex,
                 lyricAnnotationIndex,
-                isLogueOverviewShown,
                 selectedOverviewOption,
                 selectedTipsOption,
                 isCarouselShown,
@@ -47,10 +45,8 @@ class ShownWrapper extends PureComponent {
                 children
             } = this.props,
 
-            overviewShown =
-                isLyricLogue ?
-                    isLogueOverviewShown :
-                    selectedOverviewOption === SHOWN,
+            songOverviewShown =
+                !isLyricLogue && selectedOverviewOption === SHOWN,
             tipsShown = selectedTipsOption === SHOWN,
 
             tipType = getSongTipType(lyricSongIndex)
@@ -66,9 +62,9 @@ class ShownWrapper extends PureComponent {
                             'ShW__annotationShown' :
                             'ShW__annotationHidden',
 
-                        overviewShown ?
-                            'ShW__overviewShown' :
-                            'ShW__overviewHidden',
+                        songOverviewShown ?
+                            'ShW__songOverviewShown' :
+                            'ShW__songOverviewHidden',
 
                         tipsShown && [
                             'ShW__tipsShown',
@@ -120,7 +116,6 @@ const mapStateToProps = ({
         lyricAnnotationIndex
     },
     optionStore: {
-        isLogueOverviewShown,
         selectedOverviewOption,
         selectedTipsOption
     },
@@ -137,7 +132,6 @@ const mapStateToProps = ({
     isLyricLogue,
     lyricSongIndex,
     lyricAnnotationIndex,
-    isLogueOverviewShown,
     selectedOverviewOption,
     selectedTipsOption,
     isCarouselShown,

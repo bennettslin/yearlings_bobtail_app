@@ -3,7 +3,7 @@
 
     z-index: $zIndex__theatre;
 
-    .ShW__overviewShown
+    .ShW__songOverviewShown
     & {
         // Show overview tooltip above overview when it's shown.
         z-index: $zIndex__popupButton;
@@ -23,36 +23,12 @@
             margin-left $animationDuration__default;
     }
 
+    .PlW__song
+    .ShW__songOverviewHidden
     .ShelfLeft__shown
     & {
         opacity: 1;
         margin-left: 0;
-    }
-}
-
-// TODO: Simplify?
-.hidden__overviewStatus {
-
-    .DW__userAgentDesktop
-    .ShelfLeft
-    & {
-        transition: margin-left $animationDuration__default;
-    }
-
-    .ShelfLeft
-    & {
-        /**
-         * When overview is shown in song or hidden in logue, the overview
-         * toggle should be the only left shelf child shown. So hide the rest.
-         */
-        .PlW__song
-        .ShW__overviewShown
-        &,
-        .PlW__logue
-        .ShW__overviewHidden
-        & {
-            margin-left: -$width__overviewToggle;
-        }
     }
 }
 

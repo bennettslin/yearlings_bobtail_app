@@ -63,9 +63,6 @@ class TipsToggle extends PureComponent {
                 <Button
                     isLargeSize
                     {...{
-                        className: cx(
-                            'hidden__overviewStatus'
-                        ),
                         isBrightHover: inPopup,
                         buttonName: TIPS_BUTTON_KEY,
                         buttonIdentifier: selectedTipsOption,
