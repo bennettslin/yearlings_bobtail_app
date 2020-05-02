@@ -2,7 +2,7 @@
     position: relative;
 
     // Specific selector to override.
-    .TW__sliderMoving
+    .TW__lyricsLocked
     .Anchor
     & {
         display: inline;
@@ -46,7 +46,7 @@
     }
 
     // Specific selector to override.
-    .TW__sliderMoving
+    .TW__lyricsLocked
     .Anchor
     & {
         display: none;

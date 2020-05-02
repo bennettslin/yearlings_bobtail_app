@@ -13,9 +13,13 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    appStore: { isUserAgentDesktop }
+    appStore: { isUserAgentDesktop },
+    sessionStore: { activatedVerseIndex },
+    sliderStore: { isSliderMoving }
 }) => ({
-    isUserAgentDesktop
+    isUserAgentDesktop,
+    activatedVerseIndex,
+    isSliderMoving
 })
 
 class Anchor extends PureComponent {
@@ -23,6 +27,8 @@ class Anchor extends PureComponent {
     static propTypes = {
         // Through Redux.
         isUserAgentDesktop: PropTypes.bool.isRequired,
+        activatedVerseIndex: PropTypes.bool.isRequired,
+        isSliderMoving: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string,
@@ -41,7 +47,12 @@ class Anchor extends PureComponent {
     }
 
     _handleClick = (e) => {
-        const { analyticsIdentifier } = this.props
+        const {
+            analyticsIdentifier,
+            isDisabled,
+            activatedVerseIndex,
+            isSliderMoving
+        } = this.props
 
         logEvent({
             e,
@@ -49,7 +60,16 @@ class Anchor extends PureComponent {
             analyticsIdentifier
         })
 
-        if (!this.props.isDisabled) {
+        if (
+            !isDisabled &&
+
+            /**
+             * Not all anchors need to care about this logic, only the ones in
+             * lyrics.
+             */
+            !isSliderMoving &&
+            activatedVerseIndex < 0
+        ) {
 
             if (this.props.handleAnchorClick(e)) {
 

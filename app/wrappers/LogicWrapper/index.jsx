@@ -7,7 +7,10 @@ import {
     getDotKeysFromBitNumber,
     getPrefixedDotLetterClassNames
 } from '../../helpers/dot'
-import { getStanzaIndexForVerseIndex } from './helper'
+import {
+    getStanzaIndexForVerseIndex,
+    getCursorVerseIndex
+} from './helper'
 
 class LogicWrapper extends PureComponent {
 
@@ -51,9 +54,11 @@ class LogicWrapper extends PureComponent {
              * If slider touched, compare stanza to slider verse. Otherwise,
              * compare it to selected verse.
              */
-            cursorVerseIndex = sliderVerseIndex > -1 ?
-                sliderVerseIndex :
-                lyricVerseIndex,
+            cursorVerseIndex = getCursorVerseIndex({
+                sliderVerseIndex,
+                activatedVerseIndex,
+                lyricVerseIndex
+            }),
 
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
                 lyricSongIndex, cursorVerseIndex
@@ -68,15 +73,15 @@ class LogicWrapper extends PureComponent {
                         // "Root cursored stanza index."
                         `RcS${cursorStanzaIndex}`,
 
-                        isSliderMoving ?
+                        (isSliderMoving || activatedVerseIndex >= 0) ?
                             // "Root slider verse index."
-                            `RsV${sliderVerseIndex}` :
+                            `RsV${cursorVerseIndex}` :
                             // "Root default verse index."
-                            `RdV${lyricVerseIndex}`,
+                            `RdV${cursorVerseIndex}`,
 
                         isPlaying &&
                             // "Root playing verse index."
-                            `RpV${lyricVerseIndex}`,
+                            `RpV${cursorVerseIndex}`,
 
                         activatedVerseIndex < 0 &&
                             // "Root non-activated verse index."

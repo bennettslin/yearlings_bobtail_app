@@ -19,7 +19,6 @@ $width__underline__bleed: 0.125em;
     & {
         transition:
             height $animationDuration__faster,
-            visibility $animationDuration__fast,
             background-color $animationDuration__fast;
     }
 
@@ -31,7 +30,7 @@ $width__underline__bleed: 0.125em;
     }
 
     // Specific selector to override.
-    .TW__sliderMoving
+    .TW__lyricsLocked
     .Anchor
     & {
         visibility: hidden;

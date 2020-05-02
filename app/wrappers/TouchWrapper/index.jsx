@@ -38,12 +38,15 @@ class TouchWrapper extends PureComponent {
                             'TW__sliderTouched',
 
                         // Relevant to verse index classes.
-                        isSliderMoving ?
-                            'TW__sliderMoving' :
-                            'TW__sliderNotMoving',
+                        isSliderMoving &&
+                            'TW__sliderMoving',
 
                         activatedVerseIndex >= 0 &&
                             'TW__verseActive',
+
+                        (isSliderMoving || activatedVerseIndex >= 0) ?
+                            'TW__lyricsLocked' :
+                            'TW__lyricsUnlocked',
 
                         // Make it easier to override this selector.
                         !isSliderMoving &&

@@ -84,6 +84,8 @@ class TextLyricAnchor extends PureComponent {
 
             isSelected = annotationIndex === lyricAnnotationIndex
 
+        console.error('hi')
+
         if (isSelected) {
             return false
         }

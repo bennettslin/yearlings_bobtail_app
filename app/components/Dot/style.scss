@@ -2,8 +2,8 @@
     // TODO: Better way to override the verse line styling?
     text-indent: 0;
 
-    .TW__sliderMoving
+    .TW__lyricsLocked
     & {
-        fill: $bgColour__dot__deselected;
+        visibility: hidden;
     }
 }
