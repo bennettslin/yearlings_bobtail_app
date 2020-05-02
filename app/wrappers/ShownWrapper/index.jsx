@@ -13,6 +13,7 @@ class ShownWrapper extends PureComponent {
         // Through Redux.
         wormhole: PropTypes.bool.isRequired,
         reference: PropTypes.bool.isRequired,
+        canLyricCarouselEnter: PropTypes.bool.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
@@ -32,6 +33,7 @@ class ShownWrapper extends PureComponent {
         const {
                 wormhole,
                 reference,
+                canLyricCarouselEnter,
                 isLyricLogue,
                 lyricSongIndex,
                 lyricAnnotationIndex,
@@ -66,7 +68,8 @@ class ShownWrapper extends PureComponent {
                             'ShW__songOverviewShown' :
                             'ShW__songOverviewHidden',
 
-                        tipsShown && [
+                        // Don't show these class names between songs.
+                        canLyricCarouselEnter && tipsShown && [
                             'ShW__tipsShown',
                             `ShW__tips__${tipType}`,
                             (
@@ -111,6 +114,7 @@ const mapStateToProps = ({
         reference
     },
     lyricStore: {
+        canLyricCarouselEnter,
         isLyricLogue,
         lyricSongIndex,
         lyricAnnotationIndex
@@ -129,6 +133,7 @@ const mapStateToProps = ({
 }) => ({
     wormhole,
     reference,
+    canLyricCarouselEnter,
     isLyricLogue,
     lyricSongIndex,
     lyricAnnotationIndex,

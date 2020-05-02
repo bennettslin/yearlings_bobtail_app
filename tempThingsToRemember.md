@@ -10,8 +10,4 @@ Improve anchor text shadow
 
 # FIXME
 Don't animate annotation cards in popup
-Dear Saskia, lyric expand hides dots button, but animation is weird.
-In Grasshoppers, clicking wormhole pops dots toggle in and out...
 Accessed verse makes filmstrip weird
-
-ShownWrapper tips status should be turned off between songs.
