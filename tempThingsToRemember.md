@@ -26,6 +26,3 @@ Access or activation of scene or verse should turn off auto scroll.
 Make filmstrip past and future colours light or dark based on paused or playing.
 
 Can selected verse have text shadow?
-
-# FIXME
-Access of future filmstrip cells being overridden.

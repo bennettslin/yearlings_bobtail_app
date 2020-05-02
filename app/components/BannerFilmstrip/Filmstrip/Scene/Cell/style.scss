@@ -38,6 +38,17 @@
     background-color: $colour__past__medium;
 }
 
+.FilmstripCell__afterSelected {
+
+    &.FilmstripCell__odd {
+        background-color: $colour__future__medLight;
+    }
+    
+    &.FilmstripCell__even {
+        background-color: $colour__future__medium;
+    }
+}
+
 .FilmstripCell__activated {
 
     // Make selector specific to override default colour.
@@ -52,16 +63,5 @@
     .PlW__isPlaying
     & {
         background-color: $colour__playing__empty;
-    }
-}
-
-.FilmstripCell__afterSelected {
-
-    &.FilmstripCell__odd {
-        background-color: $colour__future__medLight;
-    }
-    
-    &.FilmstripCell__even {
-        background-color: $colour__future__medium;
     }
 }
