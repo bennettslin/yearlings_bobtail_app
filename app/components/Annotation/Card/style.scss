@@ -1,10 +1,13 @@
 @import "./logic";
 @import "./Wormholes/style";
 
-.AnnotationCardAnimatable {
+.AnnotationCardContainer {
     position: relative;
     max-height: 0;
     opacity: 0;
+}
+
+.AnnotationCardContainer__animated {
 
     .DW__userAgentDesktop
     & {

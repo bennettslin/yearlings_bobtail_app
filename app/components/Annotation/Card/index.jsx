@@ -59,7 +59,8 @@ class AnnotationCard extends PureComponent {
 
         return (
             <div className={cx(
-                'AnnotationCardAnimatable',
+                'AnnotationCardContainer',
+                inCarousel && 'AnnotationCardContainer__animated',
                 getPrefixedDotLetterClassNames(
                     dotKeys,
 

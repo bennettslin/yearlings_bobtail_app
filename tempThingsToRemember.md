@@ -8,5 +8,4 @@ Rethink some dot category shapes?
 Dot sequence styling (also consider light/dark background)
 
 # FIXME
-Don't animate annotation cards in popup
 Accessed verse makes filmstrip weird
