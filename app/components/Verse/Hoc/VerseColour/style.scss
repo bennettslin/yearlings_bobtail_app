@@ -17,7 +17,13 @@
 }
 
 .VerseColour__activated {
-    box-shadow: $boxShadow__activeVerse;
+    // Do not apply if in VerseBar.
+    .Slider
+    &,
+    .Stanzas
+    & {
+        box-shadow: $boxShadow__activeVerse;
+    }
 }
 
 /**
