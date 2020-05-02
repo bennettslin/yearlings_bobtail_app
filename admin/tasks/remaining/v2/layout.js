@@ -20,6 +20,11 @@ export default [
         neededHours: 20
     },
     {
+        taskName: `Once zoom mode is possible, modify tip.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Reconsider implementation of past/future, and playing/paused colors in Filmstrip, or in general.`,
         workedHours: 0,
         neededHours: 5

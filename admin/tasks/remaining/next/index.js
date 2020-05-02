@@ -23,10 +23,5 @@ export default [
         taskName: `Facebook page setup.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Begin content revision.`,
-        workedHours: 0,
-        neededHours: 10
     }
 ]
