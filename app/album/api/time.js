@@ -9,6 +9,10 @@ export const getSongTotalTime = (songIndex) => {
 }
 
 export const getStartTimeForVerseIndex = (songIndex, verseIndex) => {
+    if (verseIndex === -1) {
+        return 0
+    }
+
     const songVerseConfigs = getSongVerseConfigs(songIndex)
     return songVerseConfigs.length ?
         songVerseConfigs[verseIndex].verseStartTime :
