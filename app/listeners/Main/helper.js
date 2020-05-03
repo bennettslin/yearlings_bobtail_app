@@ -2,7 +2,7 @@ export const getIsShelfLeftShown = ({
     isPhoneWidth,
     isDotsSlideShown,
     isLyricExpanded,
-    activatedVerseIndex,
+    isActivated,
     isOverlayShown,
     canLyricCarouselEnter,
     lyricAnnotationIndex,
@@ -31,7 +31,7 @@ export const getIsShelfLeftShown = ({
         !isOverlayShown &&
         !lyricAnnotationIndex &&
         !tipsShown &&
-        activatedVerseIndex < 0
+        !isActivated
     )
 }
 
@@ -72,7 +72,7 @@ export const getToggleShowsImmediately = ({
     isDotsSlideShown,
     isOverlayShown,
     isLyricExpanded,
-    activatedVerseIndex,
+    isActivated,
     overviewShown,
     tipsShown
 }) => {
@@ -82,7 +82,7 @@ export const getToggleShowsImmediately = ({
             isDotsSlideShown ||
             isOverlayShown ||
             isLyricExpanded ||
-            activatedVerseIndex > -1,
+            isActivated,
 
         // Toggle overview immediately under these conditions.
         toggleShowsOverviewImmediately =

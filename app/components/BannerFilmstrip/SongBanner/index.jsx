@@ -26,7 +26,7 @@ const mapStateToProps = ({
         selectedSongIndex,
         selectedTime
     },
-    activatedStore: { activatedVerseIndex },
+    activatedStore: { isActivated },
     sliderStore: { isSliderMoving }
 }) => ({
     isPlaying,
@@ -34,7 +34,7 @@ const mapStateToProps = ({
     lyricSongIndex,
     selectedSongIndex,
     selectedTime,
-    activatedVerseIndex,
+    isActivated,
     isSliderMoving
 })
 
@@ -47,7 +47,7 @@ class SongBanner extends PureComponent {
         lyricSongIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired
     }
 
@@ -72,7 +72,7 @@ class SongBanner extends PureComponent {
         const {
             selectedSongIndex,
             isSliderMoving,
-            activatedVerseIndex
+            isActivated
         } = this.props
 
         if (getSongIsLogue(selectedSongIndex)) {
@@ -80,7 +80,7 @@ class SongBanner extends PureComponent {
             return
         }
 
-        if (isSliderMoving || activatedVerseIndex >= 0) {
+        if (isSliderMoving || isActivated) {
             // Do nothing if lyrics locked, but still register click event.
             this.dispatchStopPropagation(e)
             return
@@ -120,7 +120,7 @@ class SongBanner extends PureComponent {
                 isPlaying,
                 isSmallBannerText,
                 isSliderMoving,
-                activatedVerseIndex
+                isActivated
             } = this.props,
             cursorWidth = this.getCursorWidth()
 
@@ -137,14 +137,14 @@ class SongBanner extends PureComponent {
                         (
                             isPlaying ||
                             isSliderMoving ||
-                            activatedVerseIndex >= 0
+                            isActivated
                         ) ?
                             'textShadow__light' :
                             'textShadow__dark',
 
                         'dropShadow',
 
-                        !isSliderMoving && activatedVerseIndex < 0 &&
+                        !isSliderMoving && !isActivated &&
                             'dropShadow__lightHover',
 
                         'ovH',

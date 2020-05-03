@@ -13,12 +13,12 @@ import { getPrefixedDotLetterClassNames } from 'helpers/dot'
 import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    activatedStore: { activatedVerseIndex },
+    activatedStore: { isActivated },
     appStore: { isUserAgentDesktop },
     sliderStore: { isSliderMoving }
 }) => ({
     isUserAgentDesktop,
-    activatedVerseIndex,
+    isActivated,
     isSliderMoving
 })
 
@@ -27,7 +27,7 @@ class Anchor extends PureComponent {
     static propTypes = {
         // Through Redux.
         isUserAgentDesktop: PropTypes.bool.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
 
         // From parent.
@@ -50,7 +50,7 @@ class Anchor extends PureComponent {
         const {
             analyticsIdentifier,
             isDisabled,
-            activatedVerseIndex,
+            isActivated,
             isSliderMoving
         } = this.props
 
@@ -68,7 +68,7 @@ class Anchor extends PureComponent {
              * lyrics.
              */
             !isSliderMoving &&
-            activatedVerseIndex < 0
+            !isActivated < 0
         ) {
 
             if (this.props.handleAnchorClick(e)) {

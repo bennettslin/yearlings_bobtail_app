@@ -7,10 +7,8 @@ import {
     getDotKeysFromBitNumber,
     getPrefixedDotLetterClassNames
 } from '../../helpers/dot'
-import {
-    getStanzaIndexForVerseIndex,
-    getCursorVerseIndex
-} from './helper'
+import { getCursorVerseIndex } from '../../helpers/verse'
+import { getStanzaIndexForVerseIndex } from './helper'
 
 class LogicWrapper extends PureComponent {
 
@@ -59,7 +57,7 @@ class LogicWrapper extends PureComponent {
             cursorVerseIndex = getCursorVerseIndex({
                 sliderVerseIndex,
                 activatedVerseIndex,
-                lyricVerseIndex
+                verseIndex: lyricVerseIndex
             }),
 
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
@@ -87,11 +85,11 @@ class LogicWrapper extends PureComponent {
                             // "Root playing verse index."
                             `RpV${cursorVerseIndex}`,
 
-                        activatedVerseIndex < 0 &&
+                        !isActivated &&
                             // "Root non-activated verse index."
                             `RnV${cursorVerseIndex}`,
 
-                        areVerseBarsHidden && activatedVerseIndex < 0 &&
+                        areVerseBarsHidden && !isActivated &&
                             // "Root cursored lyric verse."
                             `RlV${cursorVerseIndex}`,
 

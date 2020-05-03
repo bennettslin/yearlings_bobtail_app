@@ -80,7 +80,7 @@ export const getVerseIndexforRatio = (
     return verseIndex
 }
 
-export const getVerseIndexForVerseBar = ({
+export const getCursorVerseIndex = ({
     sliderVerseIndex,
     activatedVerseIndex,
     verseIndex

@@ -26,7 +26,7 @@ class MainListener extends PureComponent {
         canLyricCarouselEnter: PropTypes.bool.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
         isLyricLogue: PropTypes.bool.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         isLogueOverviewShown: PropTypes.bool.isRequired,
         selectedOverviewOption: PropTypes.string.isRequired,
         selectedTipsOption: PropTypes.string.isRequired,
@@ -52,7 +52,7 @@ class MainListener extends PureComponent {
                 selectedOverviewOption,
                 selectedTipsOption,
                 selectedWikiIndex,
-                activatedVerseIndex
+                isActivated
             } = this.props,
 
             isOverlayingAnnotation = getIsOverlayingAnnotation({
@@ -77,13 +77,13 @@ class MainListener extends PureComponent {
                 !tipsShown &&
                 !isLyricLogue &&
                 !isLyricExpanded &&
-                activatedVerseIndex < 0,
+                !isActivated,
 
             isShelfLeftShown = getIsShelfLeftShown({
                 isPhoneWidth,
                 isDotsSlideShown,
                 isLyricExpanded,
-                activatedVerseIndex,
+                isActivated,
                 isOverlayShown,
                 canLyricCarouselEnter,
                 lyricAnnotationIndex,
@@ -102,7 +102,7 @@ class MainListener extends PureComponent {
                 isDotsSlideShown,
                 isOverlayShown,
                 isLyricExpanded,
-                activatedVerseIndex,
+                isActivated,
                 overviewShown,
                 tipsShown
             })
@@ -135,7 +135,7 @@ const mapStateToProps = ({
         lyricAnnotationIndex,
         isLyricLogue
     },
-    activatedStore: { activatedVerseIndex },
+    activatedStore: { isActivated },
     sessionStore: { selectedWikiIndex },
     optionStore: {
         isLogueOverviewShown,
@@ -151,7 +151,7 @@ const mapStateToProps = ({
     canLyricCarouselEnter,
     lyricAnnotationIndex,
     isLyricLogue,
-    activatedVerseIndex,
+    isActivated,
     isLogueOverviewShown,
     selectedOverviewOption,
     selectedTipsOption,

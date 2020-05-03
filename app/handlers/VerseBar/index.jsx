@@ -8,7 +8,7 @@ import {
 } from 'flux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
-import { getVerseIndexForVerseBar } from '../../helpers/verse'
+import { getCursorVerseIndex } from '../../helpers/verse'
 
 class VerseBar extends PureComponent {
 
@@ -131,7 +131,7 @@ class VerseBar extends PureComponent {
                 menuHeight
             } = this.props,
 
-            verseElement = this.props.getVerseElement(getVerseIndexForVerseBar({
+            verseElement = this.props.getVerseElement(getCursorVerseIndex({
                 sliderVerseIndex,
                 activatedVerseIndex,
                 verseIndex: selectedVerseIndex
