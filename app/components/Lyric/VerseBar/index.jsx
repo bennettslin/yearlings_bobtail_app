@@ -12,7 +12,7 @@ import Verse from '../../Verse'
 
 import { getVerse } from 'album/api/verses'
 import { populateRefs } from '../../../helpers/ref'
-import { getCursorVerseIndex } from '../../../helpers/verse'
+import { getCursorIndex } from '../../../helpers/verse'
 
 const mapStateToProps = ({
     lyricStore: {
@@ -94,11 +94,11 @@ class VerseBar extends PureComponent {
                 handleVerseBarWheel
             } = this.props,
 
-            verseIndex = getCursorVerseIndex({
+            verseIndex = getCursorIndex(
                 sliderVerseIndex,
                 activatedVerseIndex,
-                verseIndex: lyricVerseIndex
-            }),
+                lyricVerseIndex
+            ),
 
             verseObject = getVerse(lyricSongIndex, verseIndex),
 

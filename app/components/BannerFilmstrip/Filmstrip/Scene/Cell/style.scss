@@ -30,47 +30,67 @@
     left: -$length__filmPerf / 2;
 }
 
-.FilmstripCell__odd {
+// Keep redundancy for now, as I'm still playing around with these colours.
+.FilmstripCell__oddBefore {
     background-color: $colour__past__medLight;
-
-    &.FilmstripCell__afterSelected {
-        background-color: $colour__future__dark;
-    }
 
     .PlW__isPlaying
     & {
         background-color: $colour__past__medLight;
     }
 
-    .PlW__isPlaying
-    &.FilmstripCell__afterSelected {
-        background-color: $colour__future__lighter;
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__past__dark;
     }
 }
 
-.FilmstripCell__even {
+.FilmstripCell__evenBefore {
     background-color: $colour__past__medium;
-
-    &.FilmstripCell__afterSelected {
-        background-color: $colour__future__darker;
-    }
 
     .PlW__isPlaying
     & {
         background-color: $colour__past__medium;
     }
 
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__past__darker;
+    }
+}
+
+.FilmstripCell__oddAfter {
+    background-color: $colour__future__dark;
+
     .PlW__isPlaying
-    &.FilmstripCell__afterSelected {
+    & {
+        background-color: $colour__future__lighter;
+    }
+
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__future__dark;
+    }
+}
+
+.FilmstripCell__evenAfter {
+    background-color: $colour__future__darker;
+
+    .PlW__isPlaying
+    & {
         background-color: $colour__future__light;
+    }
+
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__future__darker;
     }
 }
 
 .FilmstripCell__activated {
 
-    // Make selector specific to override default colour.
-    &.FilmstripCell {
-        background-color: $colour__access__light;
+    .TW__lyricsLocked
+    & {
         box-shadow: $boxShadow__activeVerse;
     }
 }
@@ -87,4 +107,23 @@
     & {
         background-color: $colour__neutral__dark;
     }
+}
+
+.FilmstripCell__lyricsLocked {
+
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__access__light;
+    }
+}
+
+.TW__lyricsLocked
+.FilmstripCell__slider,
+
+.TW__lyricsUnlocked
+.FilmstripCell__selected {
+    box-shadow: $boxShadow__cursorVerse;
+    border-radius: $borderRadius__narrow;
+    top: -1.5px;
+    height: calc(100% + 3px);
 }

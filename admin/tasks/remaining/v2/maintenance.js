@@ -8,5 +8,10 @@ export default [
         taskName: `Move to React Static.`,
         workedHours: 0,
         neededHours: 20
+    },
+    {
+        taskName: `Remove convoluted CSS verse logic?`,
+        workedHours: 0,
+        neededHours: 20
     }
 ]

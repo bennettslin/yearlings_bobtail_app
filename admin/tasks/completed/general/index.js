@@ -4560,5 +4560,9 @@ export default [
     {
         taskName: `Write down svg preparation steps, before I forget them.`,
         workedHours: 1
+    },
+    {
+        taskName: `Style filmstrip for activated verse and slider moving.`,
+        workedHours: 4
     }
 ]

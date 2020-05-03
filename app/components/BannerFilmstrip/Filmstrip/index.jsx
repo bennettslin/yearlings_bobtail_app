@@ -14,6 +14,7 @@ import { getSongSceneConfigs } from '../../../album/api/scenes'
 import { getSongTotalTime } from '../../../album/api/time'
 
 import { populateRefs } from '../../../helpers/ref'
+import { getCursorIndex } from '../../../helpers/verse'
 
 import {
     PREVIOUS_SCENE_KEY,
@@ -27,12 +28,14 @@ const mapStateToProps = ({
         lyricSceneIndex
     },
     selectedStore: { selectedTime },
-    activatedStore: { activatedSceneIndex }
+    activatedStore: { activatedSceneIndex },
+    sliderStore: { sliderSceneIndex }
 }) => ({
     lyricSongIndex,
     lyricSceneIndex,
     selectedTime,
-    activatedSceneIndex
+    activatedSceneIndex,
+    sliderSceneIndex
 })
 
 class Filmstrip extends PureComponent {
@@ -42,7 +45,8 @@ class Filmstrip extends PureComponent {
         lyricSongIndex: PropTypes.number.isRequired,
         lyricSceneIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
-        activatedSceneIndex: PropTypes.number.isRequired
+        activatedSceneIndex: PropTypes.number.isRequired,
+        sliderSceneIndex: PropTypes.number.isRequired
     }
 
     _getRefs = (payload) => {
@@ -69,7 +73,8 @@ class Filmstrip extends PureComponent {
         const {
                 lyricSongIndex,
                 lyricSceneIndex,
-                activatedSceneIndex
+                activatedSceneIndex,
+                sliderSceneIndex
             } = this.props,
 
             totalTime = getSongTotalTime(lyricSongIndex),
@@ -94,11 +99,16 @@ class Filmstrip extends PureComponent {
                         } = sceneConfig,
 
                         isOdd = Boolean(sceneIndex % 2),
-                        isActivated =
-                            activatedSceneIndex === sceneIndex,
-                        isSelected =
-                            lyricSceneIndex === sceneIndex,
-                        isAfterSelected = lyricSceneIndex < sceneIndex,
+                        isSelectedScene = lyricSceneIndex === sceneIndex,
+                        isActivatedScene = activatedSceneIndex === sceneIndex,
+                        isSliderScene = sliderSceneIndex === sceneIndex,
+
+                        cursorIndex = getCursorIndex(
+                            activatedSceneIndex,
+                            sliderSceneIndex,
+                            lyricSceneIndex
+                        ),
+                        isAfterCursor = cursorIndex < sceneIndex,
 
                         sceneLeft = sceneStartTime / totalTime * 100,
                         sceneWidth = sceneDuration / totalTime * 100,
@@ -113,13 +123,14 @@ class Filmstrip extends PureComponent {
                             {...{
                                 key: sceneIndex,
                                 isOdd,
-                                isActivated,
-                                isSelected,
-                                isAfterSelected,
+                                isActivatedScene,
+                                isSliderScene,
+                                isSelectedScene,
+                                isAfterCursor,
                                 sceneIndex,
                                 sceneLeft,
                                 sceneWidth,
-                                ...isSelected && { cursorWidth },
+                                ...isSelectedScene && { cursorWidth },
                                 dispatchScene: this.dispatchScene,
                                 dispatchStopPropagation: this.dispatchStopPropagation
                             }}

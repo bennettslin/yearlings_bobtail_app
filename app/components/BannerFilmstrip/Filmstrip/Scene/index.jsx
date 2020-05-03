@@ -9,9 +9,10 @@ class FilmstripScene extends PureComponent {
     static propTypes = {
         // From parent.
         isOdd: PropTypes.bool.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        isSelected: PropTypes.bool.isRequired,
-        isAfterSelected: PropTypes.bool.isRequired,
+        isActivatedScene: PropTypes.bool.isRequired,
+        isSliderScene: PropTypes.bool.isRequired,
+        isSelectedScene: PropTypes.bool.isRequired,
+        isAfterCursor: PropTypes.bool.isRequired,
         sceneIndex: PropTypes.number.isRequired,
         sceneLeft: PropTypes.number.isRequired,
         sceneWidth: PropTypes.number.isRequired,
@@ -22,26 +23,28 @@ class FilmstripScene extends PureComponent {
 
     _handleSceneClick = (e) => {
         const {
-            isSelected,
+            isSelectedScene,
             sceneIndex
         } = this.props
 
-        if (isSelected) {
+        this.props.dispatchStopPropagation(e)
+
+        if (isSelectedScene) {
             return
         }
 
         logEvent({ e, componentName: 'FilmstripScene' })
 
         this.props.dispatchScene(sceneIndex)
-        this.props.dispatchStopPropagation(e)
     }
 
     render() {
         const {
             isOdd,
-            isActivated,
-            isSelected,
-            isAfterSelected,
+            isActivatedScene,
+            isSliderScene,
+            isSelectedScene,
+            isAfterCursor,
             sceneLeft,
             sceneWidth,
             cursorWidth
@@ -52,7 +55,7 @@ class FilmstripScene extends PureComponent {
                 {...{
                     className: cx(
                         'FilmstripScene',
-                        isSelected ?
+                        isSelectedScene ?
                             'FilmstripScene__selected' :
                             'FilmstripScene__interactable',
                         'abF'
@@ -67,9 +70,10 @@ class FilmstripScene extends PureComponent {
                 <FilmstripCell
                     {...{
                         isOdd,
-                        isActivated,
-                        isSelected,
-                        isAfterSelected,
+                        isActivatedScene,
+                        isSliderScene,
+                        isSelectedScene,
+                        isAfterCursor,
                         cursorWidth
                     }}
                 />

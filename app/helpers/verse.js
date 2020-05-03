@@ -80,16 +80,16 @@ export const getVerseIndexforRatio = (
     return verseIndex
 }
 
-export const getCursorVerseIndex = ({
-    sliderVerseIndex,
-    activatedVerseIndex,
-    verseIndex
-}) => {
-    if (sliderVerseIndex >= 0) {
-        return sliderVerseIndex
-    } else if (activatedVerseIndex >= 0) {
-        return activatedVerseIndex
+export const getCursorIndex = (
+    sliderIndex,
+    activatedIndex,
+    defaultIndex
+) => {
+    if (sliderIndex >= 0) {
+        return sliderIndex
+    } else if (activatedIndex >= 0) {
+        return activatedIndex
     } else {
-        return verseIndex
+        return defaultIndex
     }
 }

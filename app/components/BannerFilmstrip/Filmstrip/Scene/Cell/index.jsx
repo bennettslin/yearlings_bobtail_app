@@ -7,17 +7,19 @@ import Tracker from '../../../../Tracker'
 const propTypes = {
     // From parent.
     isOdd: PropTypes.bool.isRequired,
-    isActivated: PropTypes.bool.isRequired,
-    isSelected: PropTypes.bool.isRequired,
-    isAfterSelected: PropTypes.bool.isRequired,
+    isActivatedScene: PropTypes.bool.isRequired,
+    isSliderScene: PropTypes.bool.isRequired,
+    isSelectedScene: PropTypes.bool.isRequired,
+    isAfterCursor: PropTypes.bool.isRequired,
     cursorWidth: PropTypes.number
 }
 
 const FilmstripCell = ({
     isOdd,
-    isActivated,
-    isSelected,
-    isAfterSelected,
+    isActivatedScene,
+    isSliderScene,
+    isSelectedScene,
+    isAfterCursor,
     cursorWidth
 
 }) => (
@@ -25,15 +27,18 @@ const FilmstripCell = ({
         {...{
             className: cx(
                 'FilmstripCell',
-                isOdd ?
-                    'FilmstripCell__even' :
-                    'FilmstripCell__odd',
-                isActivated && !isSelected &&
+                isOdd && !isAfterCursor && 'FilmstripCell__oddBefore',
+                !isOdd && !isAfterCursor && 'FilmstripCell__evenBefore',
+                isOdd && isAfterCursor && 'FilmstripCell__oddAfter',
+                !isOdd && isAfterCursor && 'FilmstripCell__evenAfter',
+                (isActivatedScene || isSliderScene) &&
+                    'FilmstripCell__lyricsLocked',
+                isActivatedScene &&
                     'FilmstripCell__activated',
-                isSelected &&
+                isSliderScene &&
+                    'FilmstripCell__slider',
+                isSelectedScene &&
                     'FilmstripCell__selected',
-                isAfterSelected &&
-                    'FilmstripCell__afterSelected',
                 'ovH'
             )
         }}

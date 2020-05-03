@@ -25,11 +25,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Style filmstrip for activated verse and slider moving.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Scrolling is janky because of inset shadow on hover. Need an isScrolling flag in Redux, and a scroll overlay?`,
         workedHours: 0,
         neededHours: 5
