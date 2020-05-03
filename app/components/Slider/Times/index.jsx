@@ -12,10 +12,22 @@ import { getFormattedTime } from 'helpers/format'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex },
-    sliderStore: { sliderTime }
+    selectedStore: { selectedTime },
+    sliderStore: {
+        isSliderMoving,
+        sliderTime
+    },
+    activatedStore: {
+        isActivated,
+        activatedTime
+    }
 }) => ({
     lyricSongIndex,
-    sliderTime
+    selectedTime,
+    isSliderMoving,
+    sliderTime,
+    isActivated,
+    activatedTime
 })
 
 class SliderTimes extends PureComponent {
@@ -23,17 +35,35 @@ class SliderTimes extends PureComponent {
     static propTypes = {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
-        sliderTime: PropTypes.number.isRequired
+        selectedTime: PropTypes.number.isRequired,
+        isSliderMoving: PropTypes.bool.isRequired,
+        sliderTime: PropTypes.number.isRequired,
+        isActivated: PropTypes.bool.isRequired,
+        activatedTime: PropTypes.number.isRequired
     }
 
     render() {
 
         const {
-                lyricSongIndex,
-                sliderTime: spentTime
-            } = this.props,
+            lyricSongIndex,
+            selectedTime,
+            isSliderMoving,
+            sliderTime,
+            isActivated,
+            activatedTime
+        } = this.props
 
-            remainTime = getSongTotalTime(lyricSongIndex) - spentTime
+        let time = selectedTime
+
+        if (isSliderMoving) {
+            time = sliderTime
+        }
+
+        if (isActivated) {
+            time = activatedTime
+        }
+
+        const remainTime = getSongTotalTime(lyricSongIndex) - time
 
         return (
             <div className={cx(
@@ -43,7 +73,7 @@ class SliderTimes extends PureComponent {
 
                 <SliderTime
                     isSpent
-                    time={getFormattedTime(spentTime)}
+                    time={getFormattedTime(time)}
                 />
 
                 <SliderTime

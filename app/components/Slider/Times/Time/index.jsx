@@ -8,7 +8,6 @@ const sliderTimePropTypes = {
     },
 
     SliderTime = ({
-
         isSpent,
         time
 

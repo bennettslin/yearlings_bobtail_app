@@ -15,12 +15,18 @@ const mapStateToProps = ({
     sliderStore: {
         isSliderMoving,
         sliderTime
+    },
+    activatedStore: {
+        isActivated,
+        activatedTime
     }
 }) => ({
     isSelectedLogue,
     selectedTime,
     isSliderMoving,
-    sliderTime
+    sliderTime,
+    isActivated,
+    activatedTime
 })
 
 class PlayTimer extends PureComponent {
@@ -30,7 +36,9 @@ class PlayTimer extends PureComponent {
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedTime: PropTypes.number.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
-        sliderTime: PropTypes.number.isRequired
+        sliderTime: PropTypes.number.isRequired,
+        isActivated: PropTypes.bool.isRequired,
+        activatedTime: PropTypes.number.isRequired
     }
 
     render() {
@@ -38,13 +46,19 @@ class PlayTimer extends PureComponent {
             isSelectedLogue,
             selectedTime,
             isSliderMoving,
-            sliderTime
+            sliderTime,
+            isActivated,
+            activatedTime
         } = this.props
 
-        let displayedTime = selectedTime
+        let time = selectedTime
 
         if (isSliderMoving) {
-            displayedTime = sliderTime
+            time = sliderTime
+        }
+
+        if (isActivated) {
+            time = activatedTime
         }
 
         return !isSelectedLogue && (
@@ -53,7 +67,7 @@ class PlayTimer extends PureComponent {
                 'flexCentreContainer',
                 'abF'
             )}>
-                {getFormattedTime(displayedTime)}
+                {getFormattedTime(time)}
             </div>
         )
     }

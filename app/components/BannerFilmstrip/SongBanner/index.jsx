@@ -48,7 +48,7 @@ class SongBanner extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
         activatedVerseIndex: PropTypes.number.isRequired,
-        isSliderMoving: PropTypes.number.isRequired
+        isSliderMoving: PropTypes.bool.isRequired
     }
 
     constructor(props) {

@@ -8,6 +8,7 @@ import { updateActivatedStore } from 'flux/activated/action'
 import { updateToggleStore } from 'flux/toggle/action'
 
 import { getVerseIndexForSceneIndex } from 'album/api/scenes'
+import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getActivatedSceneForDirection } from './helper'
 
 class ActivatedSceneDispatcher extends PureComponent {
@@ -64,7 +65,11 @@ class ActivatedSceneDispatcher extends PureComponent {
 
         this.props.updateActivatedStore({
             activatedSceneIndex,
-            activatedVerseIndex
+            activatedVerseIndex,
+            activatedTime: getStartTimeForVerseIndex(
+                selectedSongIndex,
+                activatedVerseIndex
+            )
         })
 
         // Turn off auto scroll once verse or scene is activated.
