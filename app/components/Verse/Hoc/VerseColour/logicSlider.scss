@@ -15,7 +15,23 @@
 
 @for $verseIndex from 0 through $verseMax {
 
-    // "Root slider verse index, child verse index."
+    // "Root selected verse index, child verse index."
+    .RxV#{$verseIndex} .ChV#{$verseIndex} {
+        // This styling overrides hover, but not slider cursor.
+
+        &.ChL {
+            color: $colour__text__light;
+        }
+
+        // "Grandchild verse colour."
+        .GcV {
+            // Use !important to override hover highlight.
+            background-color: $colour__neutral__dark !important;
+            box-shadow: none !important;
+        }
+    }
+
+    // "Root slider (or activated) verse index, child verse index."
     .RsV#{$verseIndex} .ChV#{$verseIndex} {
         // Styling for cursored verse.
 
@@ -43,7 +59,7 @@
         }
     }
 
-    // "Root slider verse index, parent of verse index."
+    // "Root slider (or activated) verse index, parent of verse index."
     .RsV#{$verseIndex} .PoV#{$verseIndex} {
         /**
         * Styling for verse colours in some parent of verse. In this case, the

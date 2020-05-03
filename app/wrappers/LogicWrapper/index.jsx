@@ -81,6 +81,10 @@ class LogicWrapper extends PureComponent {
                             // "Root default verse index."
                             `RdV${cursorVerseIndex}`,
 
+                        isLyricsLocked &&
+                            // "Root selected verse index."
+                            `RxV${lyricVerseIndex}`,
+
                         isPlaying && !isLyricsLocked &&
                             // "Root playing verse index."
                             `RpV${cursorVerseIndex}`,
