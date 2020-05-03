@@ -82,10 +82,9 @@
     & {
         background-color: $colour__playing__empty;
     }
+
+    .TW__lyricsLocked
+    & {
+        background-color: $colour__neutral__dark;
+    }
 }
-
-// $colour__playing__empty: hsl($hue__playing, $sat__medium, $lum__lighter);
-// $colour__playing__filled: hsl($hue__playing, $sat__dark, $lum__medium);
-
-// $colour__paused__filled: hsl($hue__paused, $sat__medium, $lum__medium);
-// $colour__paused__empty: hsl($hue__paused, $sat__dark, $lum__darker);
