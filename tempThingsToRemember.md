@@ -6,6 +6,5 @@ Rethink some dot category shapes?
 
 # TODO next
 Style filmstrip for activated verse and slider moving.
-* Need a slider scene index.
 * Past/future is based on activated or slider index.
 * When activated or slider moving, past and future colours are same luminosity.
