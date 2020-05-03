@@ -4,14 +4,14 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
-import { resetActivated } from 'flux/activated/action'
+import { updateActivatedStore } from 'flux/activated/action'
 
 class SliderListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
         isSliderTouched: PropTypes.bool.isRequired,
-        resetActivated: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
         updateAccessStore: PropTypes.func.isRequired
     }
 
@@ -25,7 +25,7 @@ class SliderListener extends PureComponent {
             { isSliderTouched: wasSliderTouched } = prevProps
 
         if (isSliderTouched && !wasSliderTouched) {
-            this.props.resetActivated()
+            this.props.updateActivatedStore()
             this.props.updateAccessStore({ isAccessOn: false })
         }
     }
@@ -45,6 +45,6 @@ export default connect(
     mapStateToProps,
     {
         updateAccessStore,
-        resetActivated
+        updateActivatedStore
     }
 )(SliderListener)

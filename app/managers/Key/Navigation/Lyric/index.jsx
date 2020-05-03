@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isFinite from 'lodash/isfinite'
 
-import { resetActivated } from 'flux/activated/action'
+import { updateActivatedStore } from 'flux/activated/action'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
@@ -24,7 +24,7 @@ class LyricNavigation extends PureComponent {
         activatedVerseIndex: PropTypes.number.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
-        resetActivated: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
 
         // From parent.
         getRefs: PropTypes.func.isRequired
@@ -80,7 +80,7 @@ class LyricNavigation extends PureComponent {
             })
 
             if (isVerseActivated) {
-                this.props.resetActivated()
+                this.props.updateActivatedStore()
             }
 
         /**
@@ -134,5 +134,5 @@ const mapStateToProps = ({
 
 export default connect(
     mapStateToProps,
-    { resetActivated }
+    { updateActivatedStore }
 )(LyricNavigation)

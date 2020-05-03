@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetActivated } from 'flux/activated/action'
+import { updateActivatedStore } from 'flux/activated/action'
 import { updateLoadStore } from 'flux/load/action'
 import {
     updateSessionStore,
@@ -20,7 +20,7 @@ class SongListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         updateLoadStore: PropTypes.func.isRequired,
         updateSessionStore: PropTypes.func.isRequired,
-        resetActivated: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired
     }
@@ -38,7 +38,7 @@ class SongListener extends PureComponent {
             const shownNavBookIndex = getBookForSongIndex(selectedSongIndex)
             this.props.updateSessionStore({ shownNavBookIndex })
             this.props.updateLoadStore({ isScoreLoaded: false })
-            this.props.resetActivated()
+            this.props.updateActivatedStore()
             this.props.resetWiki()
             this.props.resetVerseBars()
         }
@@ -60,7 +60,7 @@ export default connect(
     {
         updateLoadStore,
         updateSessionStore,
-        resetActivated,
+        updateActivatedStore,
         resetWiki,
         resetVerseBars
     }

@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetActivated } from 'flux/activated/action'
+import { updateActivatedStore } from 'flux/activated/action'
 import { updateAudioStore } from 'flux/audio/action'
 import { updateScrollLyricStore } from 'flux/scrollLyric/action'
 import { updateSelectedStore } from 'flux/selected/action'
@@ -17,7 +17,7 @@ class VerseDispatcher extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         updateAudioStore: PropTypes.func.isRequired,
         updateScrollLyricStore: PropTypes.func.isRequired,
-        resetActivated: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         resetVerseBars: PropTypes.func.isRequired,
 
@@ -65,7 +65,7 @@ class VerseDispatcher extends PureComponent {
         })
 
         // Ensure that no verse is activated.
-        this.props.resetActivated()
+        this.props.updateActivatedStore()
 
         // Selecting a verse necessarily resets the verse bars.
         this.props.resetVerseBars()
@@ -96,7 +96,7 @@ export default connect(
         updateAudioStore,
         updateScrollLyricStore,
         updateSelectedStore,
-        resetActivated,
+        updateActivatedStore,
         resetVerseBars
     }
 )(VerseDispatcher)

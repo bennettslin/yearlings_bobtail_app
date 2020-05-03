@@ -19,10 +19,3 @@ export const updateActivatedStore = (payload = ACTIVATED_DEFAULTS) => {
         payload: getDefinedOnlyPayload(payload)
     })
 }
-
-export const resetActivated = () => {
-    return ({
-        type: ACTIVATED_STORE,
-        payload: ACTIVATED_DEFAULTS
-    })
-}

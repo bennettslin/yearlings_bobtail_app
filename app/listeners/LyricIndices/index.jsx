@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetActivated } from 'flux/activated/action'
+import { updateActivatedStore } from 'flux/activated/action'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import { getSceneIndexForVerseIndex } from 'album/api/verses'
@@ -15,7 +15,7 @@ class LyricIndicesListener extends PureComponent {
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
-        resetActivated: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired
     }
 
@@ -82,7 +82,7 @@ class LyricIndicesListener extends PureComponent {
              * index, then reset activation.
              */
             if (selectedVerseIndex === activatedVerseIndex) {
-                this.props.resetActivated()
+                this.props.updateActivatedStore()
             }
         }
     }
@@ -113,7 +113,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
-        resetActivated,
+        updateActivatedStore,
         updateLyricStore
     }
 )(LyricIndicesListener)

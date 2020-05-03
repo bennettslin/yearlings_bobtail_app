@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateAccessStore } from 'flux/access/action'
-import { resetActivated } from 'flux/activated/action'
+import { updateActivatedStore } from 'flux/activated/action'
 import { updateSelectedStore } from 'flux/selected/action'
 import { resetWiki } from 'flux/session/action'
 
@@ -64,7 +64,7 @@ class LetterManager extends PureComponent {
         selectedWikiIndex: PropTypes.number.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateAccessStore: PropTypes.func.isRequired,
-        resetActivated: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
 
         // From parent.
@@ -194,7 +194,7 @@ class LetterManager extends PureComponent {
         // Turn access off.
         } else {
             this.props.updateAccessStore({ isAccessOn: false })
-            this.props.resetActivated()
+            this.props.updateActivatedStore()
         }
     }
 
@@ -257,7 +257,7 @@ export default connect(
     {
         updateSelectedStore,
         updateAccessStore,
-        resetActivated,
+        updateActivatedStore,
         resetWiki
     }
 )(LetterManager)

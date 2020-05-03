@@ -273,11 +273,12 @@ export const SESSION_DEFAULTS = {
 }
 
 export const SLIDER_DEFAULTS = {
-    isSliderMoving: false,
-    isSliderTouched: false,
     sliderLeft: 0,
     sliderWidth: 0,
+    isSliderMoving: false,
+    isSliderTouched: false,
     sliderVerseIndex: -1,
+    sliderSceneIndex: -1,
     sliderTime: 0
 }
 

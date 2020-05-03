@@ -6,7 +6,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetActivated } from 'flux/activated/action'
+import { updateActivatedStore } from 'flux/activated/action'
 import { updateOptionStore } from 'flux/option/action'
 import { resetWiki } from 'flux/session/action'
 import { updateSelectedStore } from 'flux/selected/action'
@@ -37,7 +37,7 @@ class CloseHandler extends PureComponent {
         updateOptionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
-        resetActivated: PropTypes.func.isRequired,
+        updateActivatedStore: PropTypes.func.isRequired,
         resetWiki: PropTypes.func.isRequired,
 
         // From parent.
@@ -315,7 +315,7 @@ class CloseHandler extends PureComponent {
         }
 
         if (!exemptActivatedVerse) {
-            this.props.resetActivated()
+            this.props.updateActivatedStore()
         }
     }
 
@@ -364,7 +364,7 @@ export default connect(
         updateOptionStore,
         updateSelectedStore,
         updateToggleStore,
-        resetActivated,
+        updateActivatedStore,
         resetWiki
     }
 )(CloseHandler)
