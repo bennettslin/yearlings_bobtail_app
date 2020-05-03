@@ -18,8 +18,6 @@ Make Anchor not know about activated verse index and slider moving.
 
 Selected verse should really still show selected colouring when accessed or activated verse.
 
-
-
 # TODO now
 When lyrics are locked, selected verse is always text white on neutral dark background.
 
