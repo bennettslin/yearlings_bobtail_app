@@ -21,9 +21,6 @@ Selected verse should really still show selected colouring when accessed or acti
 
 
 # TODO now
-
-No tracker shows when lyrics are locked.
-
 When lyrics are locked, there are no playing colours.
 
 When lyrics are locked, selected verse is always text white on neutral dark background.

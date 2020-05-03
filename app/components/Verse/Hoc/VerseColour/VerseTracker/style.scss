@@ -18,6 +18,12 @@
     &.VerseTracker__selected {
         background-color: $colour__playing__filled;
     }
+
+    // TODO: Maybe better not to run tracker at all when lyrics are locked?
+    .TW__lyricsLocked
+    & {
+        opacity: 0;
+    }
 }
 
 .VerseTracker__inSlider {
