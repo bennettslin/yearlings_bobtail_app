@@ -4555,6 +4555,10 @@ export default [
     },
     {
         taskName: `Remaining hover, access, and activation colours.`,
-        workedHours: 12
+        workedHours: 13
+    },
+    {
+        taskName: `Write down svg preparation steps, before I forget them.`,
+        workedHours: 1
     }
 ]

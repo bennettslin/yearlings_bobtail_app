@@ -4,8 +4,6 @@ See about sharing configs for couches and others.
 Make cardboards stroke line different.
 Rethink some dot category shapes?
 
-Notes for finalising svgs.
-
 # TODO next
 Style filmstrip for activated verse and slider moving.
 * Need a slider scene index.
