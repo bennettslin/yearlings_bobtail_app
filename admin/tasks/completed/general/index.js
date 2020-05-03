@@ -4547,12 +4547,14 @@ export default [
     },
     {
         taskName: `Drop shadow work.`,
-        workedHours: 7,
-        neededHours: 7
+        workedHours: 7
     },
     {
         taskName: `Some bug fixes.`,
-        workedHours: 4,
-        neededHours: 4
+        workedHours: 4
+    },
+    {
+        taskName: `Remaining hover, access, and activation colours.`,
+        workedHours: 12
     }
 ]

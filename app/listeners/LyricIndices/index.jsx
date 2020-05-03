@@ -1,6 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
+import { resetActivated } from 'flux/activated/action'
 import { updateLyricStore } from 'flux/lyric/action'
 
 import { getSceneIndexForVerseIndex } from 'album/api/verses'
@@ -10,9 +11,11 @@ class LyricIndicesListener extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        activatedVerseIndex: PropTypes.number.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedVerseIndex: PropTypes.number.isRequired,
         selectedAnnotationIndex: PropTypes.number.isRequired,
+        resetActivated: PropTypes.func.isRequired,
         updateLyricStore: PropTypes.func.isRequired
     }
 
@@ -49,6 +52,7 @@ class LyricIndicesListener extends PureComponent {
     _checkVerseSelectForSameSong(prevProps) {
         const
             {
+                activatedVerseIndex,
                 selectedSongIndex,
                 selectedVerseIndex
             } = this.props,
@@ -72,6 +76,14 @@ class LyricIndicesListener extends PureComponent {
                     selectedVerseIndex
                 )
             })
+
+            /**
+             * If selected verse index plays on to become the activated verse
+             * index, then reset activation.
+             */
+            if (selectedVerseIndex === activatedVerseIndex) {
+                this.props.resetActivated()
+            }
         }
     }
 
@@ -85,12 +97,14 @@ class LyricIndicesListener extends PureComponent {
 }
 
 const mapStateToProps = ({
+    activatedStore: { activatedVerseIndex },
     selectedStore: {
         selectedSongIndex,
         selectedVerseIndex,
         selectedAnnotationIndex
     }
 }) => ({
+    activatedVerseIndex,
     selectedSongIndex,
     selectedVerseIndex,
     selectedAnnotationIndex
@@ -99,6 +113,7 @@ const mapStateToProps = ({
 export default connect(
     mapStateToProps,
     {
+        resetActivated,
         updateLyricStore
     }
 )(LyricIndicesListener)

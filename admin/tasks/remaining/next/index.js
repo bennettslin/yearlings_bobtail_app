@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Band website favicon.`,
         workedHours: 0,
         neededHours: 1
@@ -15,17 +20,12 @@ export default [
         neededHours: 10
     },
     {
-        taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Facebook page setup.`,
         workedHours: 0,
         neededHours: 3
     },
     {
-        taskName: `Remaining hover, access, and activation colours.`,
+        taskName: `Style filmstrip for activated verse and slider moving.`,
         workedHours: 0,
         neededHours: 5
     }
