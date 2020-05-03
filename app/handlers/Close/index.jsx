@@ -33,7 +33,7 @@ class CloseHandler extends PureComponent {
         isSongShownOverview: PropTypes.bool.isRequired,
         isSongShownTips: PropTypes.bool.isRequired,
         selectedWikiIndex: PropTypes.number.isRequired,
-        activatedVerseIndex: PropTypes.number.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         updateOptionStore: PropTypes.func.isRequired,
         updateSelectedStore: PropTypes.func.isRequired,
         updateToggleStore: PropTypes.func.isRequired,
@@ -133,17 +133,17 @@ class CloseHandler extends PureComponent {
     _handleLyricsLocked(prevProps) {
         const
             {
-                activatedVerseIndex,
+                isActivated,
                 isSliderMoving
             } = this.props,
             {
-                activatedVerseIndex: prevVerseIndex,
+                isActivated: wasActivated,
                 isSliderMoving: wasSliderMoving
             } = prevProps
 
         if (
             (isSliderMoving && !wasSliderMoving) ||
-            (activatedVerseIndex >= 0 && prevVerseIndex < 0)
+            (isActivated && !wasActivated)
         ) {
             this.closeOverlayPopups()
             this.closeMainSections({
@@ -340,7 +340,7 @@ const mapStateToProps = ({
         isScoreShown,
         isAboutShown
     },
-    activatedStore: { activatedVerseIndex },
+    activatedStore: { isActivated },
     sessionStore: { selectedWikiIndex }
 }) => ({
     selectedAnnotationIndex,
@@ -355,7 +355,7 @@ const mapStateToProps = ({
     isSongShownOverview,
     isSongShownTips,
     selectedWikiIndex,
-    activatedVerseIndex
+    isActivated
 })
 
 export default connect(

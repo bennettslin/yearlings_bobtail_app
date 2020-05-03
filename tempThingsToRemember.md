@@ -21,8 +21,6 @@ Selected verse should really still show selected colouring when accessed or acti
 
 
 # TODO now
-When lyrics are locked, there are no playing colours.
-
 When lyrics are locked, selected verse is always text white on neutral dark background.
 
 When lyrics are locked, selected verse upon hover does not show inset shadow, black text, or hover background.

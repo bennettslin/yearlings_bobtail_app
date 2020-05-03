@@ -22,6 +22,7 @@ class LogicWrapper extends PureComponent {
 
         isPlaying: PropTypes.bool.isRequired,
         isSliderMoving: PropTypes.bool.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         activatedVerseIndex: PropTypes.number.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
@@ -40,6 +41,7 @@ class LogicWrapper extends PureComponent {
                 lyricSongIndex,
                 lyricVerseIndex,
                 sliderVerseIndex,
+                isActivated,
                 activatedVerseIndex,
                 isVerseBarAbove,
                 isVerseBarBelow,
@@ -62,7 +64,9 @@ class LogicWrapper extends PureComponent {
 
             cursorStanzaIndex = getStanzaIndexForVerseIndex(
                 lyricSongIndex, cursorVerseIndex
-            )
+            ),
+
+            isLyricsLocked = isSliderMoving || isActivated
 
         return (
             <div
@@ -73,13 +77,13 @@ class LogicWrapper extends PureComponent {
                         // "Root cursored stanza index."
                         `RcS${cursorStanzaIndex}`,
 
-                        (isSliderMoving || activatedVerseIndex >= 0) ?
+                        isLyricsLocked ?
                             // "Root slider (or activated) verse index."
                             `RsV${cursorVerseIndex}` :
                             // "Root default verse index."
                             `RdV${cursorVerseIndex}`,
 
-                        isPlaying &&
+                        isPlaying && !isLyricsLocked &&
                             // "Root playing verse index."
                             `RpV${cursorVerseIndex}`,
 
@@ -108,7 +112,10 @@ class LogicWrapper extends PureComponent {
 }
 
 const mapStateToProps = ({
-    activatedStore: { activatedVerseIndex },
+    activatedStore: {
+        isActivated,
+        activatedVerseIndex
+    },
     audioStore: { isPlaying },
     dotsStore: { dotsBitNumber },
     verseBarsStore: {
@@ -124,6 +131,7 @@ const mapStateToProps = ({
         sliderVerseIndex
     }
 }) => ({
+    isActivated,
     activatedVerseIndex,
     dotsBitNumber,
     isPlaying,
