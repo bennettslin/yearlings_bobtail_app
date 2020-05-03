@@ -7,9 +7,9 @@ Rethink some dot category shapes?
 # TODO
 Make filmstrip past and future colours light or dark based on paused or playing.
 
-Can selected verse have text shadow?
-
 Accessed or activated scene or verse should show in styling of filmstrip just like slider and lyrics.
 
 # FIXME
 Make Anchor not know about activated verse index and slider moving.
+
+# TODO now
