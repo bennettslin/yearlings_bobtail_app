@@ -15,5 +15,3 @@ Accessed or activated scene or verse should show in styling of filmstrip just li
 Make Anchor not know about activated verse index and slider moving.
 
 Selected verse should really still show selected colouring when accessed or activated verse.
-
-Don't show verse hover styling when text anchor is the one being hovered? Might not be doable.
