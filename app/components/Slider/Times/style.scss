@@ -7,4 +7,9 @@
         // When slider is moving, it's above stanzas.
         z-index: $zIndex__touchOverlay;
     }
+
+    .Slider:hover
+    & {
+        z-index: 0;
+    }
 }

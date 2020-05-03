@@ -46,12 +46,7 @@ class TouchWrapper extends PureComponent {
 
                         (isSliderMoving || activatedVerseIndex >= 0) ?
                             'TW__lyricsLocked' :
-                            'TW__lyricsUnlocked',
-
-                        // Make it easier to override this selector.
-                        !isSliderMoving &&
-                        activatedVerseIndex < 0 &&
-                            'TW__verseCanHover'
+                            'TW__lyricsUnlocked'
                     )
                 }}
             >

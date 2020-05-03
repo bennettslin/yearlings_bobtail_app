@@ -53,6 +53,10 @@
     & {
         @include mixin__textAndLinkColours($light: true);
     }
+
+    &:hover {
+        color: $colour__text__dark;
+    }
 }
 
 .Verse__interactable {

@@ -9,9 +9,9 @@
         }
     }
 
-    // Extra selector to override even verse, but not selected verse.
+    // Extra selectors to override even verse, but not selected verse.
     .DeviceWrapper
-    .TW__verseCanHover
+    .TouchWrapper
     .verseColour__hoverParent:hover
     & {
         background-color: $colour__interact__light;
