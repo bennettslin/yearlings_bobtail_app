@@ -32,20 +32,37 @@
 
 .FilmstripCell__odd {
     background-color: $colour__past__medLight;
+
+    &.FilmstripCell__afterSelected {
+        background-color: $colour__future__dark;
+    }
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__past__medLight;
+    }
+
+    .PlW__isPlaying
+    &.FilmstripCell__afterSelected {
+        background-color: $colour__future__lighter;
+    }
 }
 
 .FilmstripCell__even {
     background-color: $colour__past__medium;
-}
 
-.FilmstripCell__afterSelected {
-
-    &.FilmstripCell__odd {
-        background-color: $colour__future__medLight;
+    &.FilmstripCell__afterSelected {
+        background-color: $colour__future__darker;
     }
-    
-    &.FilmstripCell__even {
-        background-color: $colour__future__medium;
+
+    .PlW__isPlaying
+    & {
+        background-color: $colour__past__medium;
+    }
+
+    .PlW__isPlaying
+    &.FilmstripCell__afterSelected {
+        background-color: $colour__future__light;
     }
 }
 
@@ -66,3 +83,9 @@
         background-color: $colour__playing__empty;
     }
 }
+
+// $colour__playing__empty: hsl($hue__playing, $sat__medium, $lum__lighter);
+// $colour__playing__filled: hsl($hue__playing, $sat__dark, $lum__medium);
+
+// $colour__paused__filled: hsl($hue__paused, $sat__medium, $lum__medium);
+// $colour__paused__empty: hsl($hue__paused, $sat__dark, $lum__darker);

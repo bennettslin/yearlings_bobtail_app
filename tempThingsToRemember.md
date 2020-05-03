@@ -5,8 +5,6 @@ Make cardboards stroke line different.
 Rethink some dot category shapes?
 
 # TODO
-Make filmstrip past and future colours light or dark based on paused or playing.
-
 Accessed or activated scene or verse should show in styling of filmstrip just like slider and lyrics.
 
 # FIXME
