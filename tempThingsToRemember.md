@@ -6,3 +6,5 @@ Rethink some dot category shapes?
 
 # FIXME
 Make Anchor not know about activated verse index and slider moving.
+
+Filmstrip like slider

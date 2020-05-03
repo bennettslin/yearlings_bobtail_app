@@ -17,11 +17,15 @@ const mapStateToProps = ({
         isAccessedIndexedAnchorShown,
         accessedAnnotationIndex
     },
-    lyricStore: { lyricAnnotationIndex }
+    lyricStore: { lyricAnnotationIndex },
+    activatedStore: { isActivated },
+    sliderStore: { isSliderMoving }
 }) => ({
     isAccessedIndexedAnchorShown,
     accessedAnnotationIndex,
-    lyricAnnotationIndex
+    lyricAnnotationIndex,
+    isActivated,
+    isSliderMoving
 })
 
 /*************
@@ -35,6 +39,8 @@ class UnitDot extends PureComponent {
         isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         lyricAnnotationIndex: PropTypes.number.isRequired,
+        isSliderMoving: PropTypes.bool.isRequired,
+        isActivated: PropTypes.bool.isRequired,
         updateAnnotationStore: PropTypes.func.isRequired,
 
         // From parent.
@@ -45,12 +51,14 @@ class UnitDot extends PureComponent {
     _handleDotButtonClick = () => {
         const {
                 unitDot: { annotationIndex },
-                lyricAnnotationIndex
+                lyricAnnotationIndex,
+                isSliderMoving,
+                isActivated
             } = this.props,
 
             isSelected = annotationIndex === lyricAnnotationIndex
 
-        if (isSelected) {
+        if (isSelected || isSliderMoving || isActivated) {
             return false
         }
 

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import DotSelectDispatcher from '../../../dispatchers/DotSelectDispatcher'
+import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import Button from '../../Button'
 import Dot from '../../Dot'
 import Anchor from '../../Anchor'
@@ -29,8 +30,12 @@ class DotsSlideSelect extends PureComponent {
         this.dispatchSelectDot(this.props.dotIndex)
     }
 
-    _toggleActivatedDot = () => {
+    _toggleActivatedDot = (e) => {
         this.dispatchActivatedDot(this.props.dotIndex)
+
+        // Stop propagation if anchor click is valid.
+        this.dispatchStopPropagation(e)
+
         return true
     }
 
@@ -109,6 +114,7 @@ class DotsSlideSelect extends PureComponent {
                     />
                 </div>
                 <DotSelectDispatcher {...{ getRefs: this._getRefs }} />
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
     }

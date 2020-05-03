@@ -6,6 +6,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 import { updateAnnotationStore } from 'flux/annotation/action'
 
+import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
 import Anchor from '../../../Anchor'
 
@@ -22,7 +23,9 @@ const mapStateToProps = ({
         isAccessedIndexedAnchorShown,
         accessedAnnotationIndex,
         accessedWikiWormholeIndex
-    }
+    },
+    activatedStore: { isActivated },
+    sliderStore: { isSliderMoving }
 }) => ({
     lyricAnnotationIndex,
 
@@ -31,7 +34,9 @@ const mapStateToProps = ({
 
     isAccessedIndexedAnchorShown,
     accessedAnnotationIndex,
-    accessedWikiWormholeIndex
+    accessedWikiWormholeIndex,
+    isActivated,
+    isSliderMoving
 })
 
 class TextLyricAnchor extends PureComponent {
@@ -43,7 +48,8 @@ class TextLyricAnchor extends PureComponent {
         isAccessedIndexedAnchorShown: PropTypes.bool.isRequired,
         accessedAnnotationIndex: PropTypes.number.isRequired,
         accessedWikiWormholeIndex: PropTypes.number.isRequired,
-
+        isActivated: PropTypes.bool.isRequired,
+        isSliderMoving: PropTypes.bool.isRequired,
         updateAnnotationStore: PropTypes.func.isRequired,
         dispatch: PropTypes.func,
 
@@ -74,21 +80,24 @@ class TextLyricAnchor extends PureComponent {
         handleAnchorClick: PropTypes.func
     }
 
-    _handleAnchorClick = () => {
+    _handleAnchorClick = (e) => {
         const {
                 lyricAnnotationIndex,
                 annotationIndex,
                 wikiIndex,
-                wikiAnnotationIndex
+                wikiAnnotationIndex,
+                isSliderMoving,
+                isActivated
             } = this.props,
 
             isSelected = annotationIndex === lyricAnnotationIndex
 
-        console.error('hi')
-
-        if (isSelected) {
+        if (isSelected || isSliderMoving || isActivated) {
             return false
         }
+
+        // Stop propagation if anchor click is valid.
+        this.dispatchStopPropagation(e)
 
         if (wikiIndex) {
             return this.dispatchWiki(
@@ -201,6 +210,7 @@ class TextLyricAnchor extends PureComponent {
                 {isWikiTextAnchor && (
                     <WikiDispatcher {...{ getRefs: this._getRefs }} />
                 )}
+                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </>
         )
     }

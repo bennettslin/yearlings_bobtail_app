@@ -3,23 +3,17 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import DotSequence from '../DotSequence'
 
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
 
 import { getPrefixedDotLetterClassNames } from 'helpers/dot'
-import { populateRefs } from 'helpers/ref'
 
 const mapStateToProps = ({
-    activatedStore: { isActivated },
-    appStore: { isUserAgentDesktop },
-    sliderStore: { isSliderMoving }
+    appStore: { isUserAgentDesktop }
 }) => ({
-    isUserAgentDesktop,
-    isActivated,
-    isSliderMoving
+    isUserAgentDesktop
 })
 
 class Anchor extends PureComponent {
@@ -27,8 +21,6 @@ class Anchor extends PureComponent {
     static propTypes = {
         // Through Redux.
         isUserAgentDesktop: PropTypes.bool.isRequired,
-        isActivated: PropTypes.bool.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired,
 
         // From parent.
         className: PropTypes.string,
@@ -49,38 +41,18 @@ class Anchor extends PureComponent {
     _handleClick = (e) => {
         const {
             analyticsIdentifier,
-            isDisabled,
-            isActivated,
-            isSliderMoving
+            isDisabled
         } = this.props
 
-        logEvent({
-            e,
-            componentName: 'Anchor',
-            analyticsIdentifier
-        })
+        if (!isDisabled) {
+            logEvent({
+                e,
+                componentName: 'Anchor',
+                analyticsIdentifier
+            })
 
-        if (
-            !isDisabled &&
-
-            /**
-             * Not all anchors need to care about this logic, only the ones in
-             * lyrics.
-             */
-            !isSliderMoving &&
-            !isActivated < 0
-        ) {
-
-            if (this.props.handleAnchorClick(e)) {
-
-                // Stop propagation only if anchor click is valid.
-                this.dispatchStopPropagation(e)
-            }
+            this.props.handleAnchorClick(e)
         }
-    }
-
-    _getRefs = (payload) => {
-        populateRefs(this, payload)
     }
 
     render() {
@@ -182,8 +154,6 @@ class Anchor extends PureComponent {
                         }}
                     />
                 )}
-
-                <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
             </a>
         )
     }
