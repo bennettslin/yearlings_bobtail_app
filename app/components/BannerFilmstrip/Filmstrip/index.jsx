@@ -24,6 +24,7 @@ import { FILMSTRIP } from '../../../constants/tips'
 
 const mapStateToProps = ({
     lyricStore: {
+        isLyricLogue,
         lyricSongIndex,
         lyricSceneIndex
     },
@@ -31,6 +32,7 @@ const mapStateToProps = ({
     activatedStore: { activatedSceneIndex },
     sliderStore: { sliderSceneIndex }
 }) => ({
+    isLyricLogue,
     lyricSongIndex,
     lyricSceneIndex,
     selectedTime,
@@ -44,6 +46,7 @@ class Filmstrip extends PureComponent {
         // Through Redux.
         lyricSongIndex: PropTypes.number.isRequired,
         lyricSceneIndex: PropTypes.number.isRequired,
+        isLyricLogue: PropTypes.bool.isRequired,
         selectedTime: PropTypes.number.isRequired,
         activatedSceneIndex: PropTypes.number.isRequired,
         sliderSceneIndex: PropTypes.number.isRequired
@@ -74,7 +77,8 @@ class Filmstrip extends PureComponent {
                 lyricSongIndex,
                 lyricSceneIndex,
                 activatedSceneIndex,
-                sliderSceneIndex
+                sliderSceneIndex,
+                isLyricLogue
             } = this.props,
 
             totalTime = getSongTotalTime(lyricSongIndex),
@@ -88,7 +92,7 @@ class Filmstrip extends PureComponent {
                         'BannerFilmstrip__child',
 
                         'dropShadow',
-                        'dropShadow__lightHover__songOnly'
+                        !isLyricLogue && 'dropShadow__lightHover'
                     )
                 }}
             >
