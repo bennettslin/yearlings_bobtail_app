@@ -29,7 +29,7 @@ const mapStateToProps = ({
     activatedTime
 })
 
-class PlayTimer extends PureComponent {
+class SongBannerTimer extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -63,7 +63,7 @@ class PlayTimer extends PureComponent {
 
         return !isSelectedLogue && (
             <div className={cx(
-                'PlayTimer',
+                'SongBannerTimer',
                 'flexCentreContainer',
                 'abF'
             )}>
@@ -73,4 +73,4 @@ class PlayTimer extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(PlayTimer)
+export default connect(mapStateToProps)(SongBannerTimer)

@@ -8,8 +8,8 @@ import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 
 import Tracker from '../../Tracker'
-import PlayTimer from './Timer'
-import SongTitle from './Title'
+import SongBannerTimer from './Timer'
+import SongBannerTitle from './Title'
 
 import { getSongIsLogue } from '../../../album/api/songs'
 import { getSongTotalTime } from '../../../album/api/time'
@@ -154,8 +154,8 @@ class SongBanner extends PureComponent {
                 }}
             >
                 <Tracker {...{ cursorWidth }} />
-                <SongTitle />
-                <PlayTimer />
+                <SongBannerTitle />
+                <SongBannerTimer />
                 <StopPropagationDispatcher {...{ getRefs: this._getRefs }} />
                 <VerseDispatcher {...{ getRefs: this._getRefs }} />
             </div>

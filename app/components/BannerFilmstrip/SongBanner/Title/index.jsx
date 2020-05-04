@@ -13,7 +13,7 @@ const mapStateToProps = ({
     selectedSongIndex
 })
 
-class SongTitle extends PureComponent {
+class SongBannerTitle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
@@ -29,7 +29,7 @@ class SongTitle extends PureComponent {
             <div
                 {...{
                     className: cx(
-                        'SongTitle',
+                        'SongBannerTitle',
                         'flexCentreContainer',
                         /**
                          * Make absolute so that song title length doesn't
@@ -45,4 +45,4 @@ class SongTitle extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(SongTitle)
+export default connect(mapStateToProps)(SongBannerTitle)
