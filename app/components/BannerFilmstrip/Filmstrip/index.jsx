@@ -88,7 +88,7 @@ class Filmstrip extends PureComponent {
                         'BannerFilmstrip__child',
 
                         'dropShadow',
-                        'dropShadow__lightHover'
+                        'dropShadow__lightHover__songOnly'
                     )
                 }}
             >

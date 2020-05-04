@@ -9,6 +9,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
+import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
@@ -198,6 +199,9 @@ class Unit extends PureComponent {
                         )}
                     </div>
                 }
+                {unitIndex === 0 && (
+                    <SongStanzasTitle />
+                )}
                 {unitDot &&
                     <UnitDot
                         {...{

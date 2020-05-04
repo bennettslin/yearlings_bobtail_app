@@ -145,7 +145,7 @@ class SongBanner extends PureComponent {
                         'dropShadow',
 
                         !isSliderMoving && !isActivated &&
-                            'dropShadow__lightHover',
+                            'dropShadow__lightHover__songOnly',
 
                         'ovH',
                         'Rancho'

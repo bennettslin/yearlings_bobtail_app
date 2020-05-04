@@ -112,6 +112,14 @@
     }
 }
 
+.dropShadow__lightHover__songOnly {
+
+    .PlW__song
+    &:hover {
+        filter: $dropShadow__lightHover;
+    }
+}
+
 .dropShadow__brightHover {
     &:hover {
         filter: $dropShadow__brightHover;

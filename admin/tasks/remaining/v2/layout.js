@@ -30,11 +30,6 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Show song title in lyrics.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Don't show verse hover styling when text anchor is the one being hovered? Might not be doable.`,
         workedHours: 0,
         neededHours: 5
