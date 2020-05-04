@@ -16,5 +16,7 @@ Add band members to About page?
 Make audio options and score button colour more neutral.
 
 # FIXME
+Adjust Shopping Cart in Willy.
 Adjust tetherball pole in Uncanny scene.
 Popup annotation shouldn't have popup shadow, it already has its own.
+Change Audio and BannerFilmstrip back to reflecting selected song index, not lyric song index.
