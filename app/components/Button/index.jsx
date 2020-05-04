@@ -151,9 +151,12 @@ class Button extends Component {
                     'ButtonAnimatable',
 
                     'dropShadow',
-                    isBrightHover ?
-                        'dropShadow__brightHover' :
-                        'dropShadow__lightHover',
+
+                    !isDisabled && (
+                        isBrightHover ?
+                            'dropShadow__brightHover' :
+                            'dropShadow__lightHover'
+                    ),
 
                     isAccessEnter && showIfAccessOn && 'dropShadow__accessed',
                     isPopupButton && 'ButtonAnimatable__popup',
