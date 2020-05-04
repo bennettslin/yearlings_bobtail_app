@@ -4564,5 +4564,9 @@ export default [
     {
         taskName: `Style filmstrip for activated verse and slider moving.`,
         workedHours: 4
+    },
+    {
+        taskName: `Scrolling is janky because of inset shadow on hover. Fix by disabling hover styles when scrolling.`,
+        workedHours: 3
     }
 ]

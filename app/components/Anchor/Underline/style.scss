@@ -39,13 +39,18 @@ $width__underline__bleed: 0.125em;
 
 .Underline__accessed,
 .Underline__selected,
-.Anchor__selectable:hover .Underline {
+
+.TW__isStationary
+.Anchor__selectable:hover
+.Underline {
     height: 35%;
 }
 
 .Underline__isNotWiki {
     &.Underline__accessed,
     &.Underline__selected,
+
+    .TW__isStationary
     .Anchor__selectable:hover
     & {
         filter: $dropShadow__small;
@@ -54,7 +59,10 @@ $width__underline__bleed: 0.125em;
 
 .Underline__accessed.Underline__isDot,
 .Underline__selected.Underline__isDot,
-.Anchor__selectable:hover .Underline__isDot {
+
+.TW__isStationary
+.Anchor__selectable:hover
+.Underline__isDot {
     height: 25%;
 }
 

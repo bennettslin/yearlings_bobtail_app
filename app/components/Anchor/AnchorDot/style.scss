@@ -18,9 +18,9 @@
 
 .DotAnchor__selectable {
 
-    .TW__isStationary
     .Anchor__accessed
     &,
+    .TW__isStationary
     .Anchor__selectable:hover
     & {
         animation: bounceHover $animationDuration__slow;

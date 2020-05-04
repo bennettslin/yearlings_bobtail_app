@@ -23,10 +23,5 @@ export default [
         taskName: `Facebook page setup.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Scrolling is janky because of inset shadow on hover. Need an isScrolling flag in Redux, and a scroll overlay?`,
-        workedHours: 0,
-        neededHours: 5
     }
 ]
