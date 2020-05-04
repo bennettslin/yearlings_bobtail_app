@@ -7,7 +7,7 @@ import { updateLyricStore } from 'flux/lyric/action'
 import Transition from 'react-transition-group/Transition'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
-import ScrollHandler from '../../../handlers/Scroll'
+import ScrollOverlayHandler from '../../../handlers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 
@@ -147,7 +147,7 @@ class LyricScroll extends PureComponent {
                         />
                     </div>
                 </Transition>
-                <ScrollHandler
+                <ScrollOverlayHandler
                     {...{
                         getRefs: this._getRefs,
                         getLyricElement: this._getLyricElement

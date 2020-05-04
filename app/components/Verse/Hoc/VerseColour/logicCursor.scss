@@ -3,7 +3,7 @@
 
     // Extra selectors to override even verse, but not selected verse.
     .DeviceWrapper
-    .TouchWrapper
+    .TW__isStationary
     .verseColour__hoverParent:hover
     & {
         background-color: $colour__interact__light;

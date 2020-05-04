@@ -235,6 +235,11 @@ export const SCROLL_LYRIC_DEFAULTS = {
     queuedSceneChangeExitScrollCallback: false
 }
 
+export const SCROLL_OVERLAY_DEFAULTS = {
+    isScrolling: false,
+    lyricScrollTop: 0
+}
+
 const storedTime = getStartTimeForVerseIndex(
     storedSongIndex,
     storedVerseIndex

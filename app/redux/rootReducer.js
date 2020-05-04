@@ -16,6 +16,7 @@ import ResponsiveReducer from './responsive/reducer'
 import SceneReducer from './scene/reducer'
 import ScrollCarouselReducer from './scrollCarousel/reducer'
 import ScrollLyricReducer from './scrollLyric/reducer'
+import ScrollOverlayReducer from './scrollOverlay/reducer'
 import SelectedReducer from './selected/reducer'
 import SessionReducer from './session/reducer'
 import SliderReducer from './slider/reducer'
@@ -43,6 +44,7 @@ import {
     SCENE_STORE,
     SCROLL_CAROUSEL_STORE,
     SCROLL_LYRIC_STORE,
+    SCROLL_OVERLAY_STORE,
     SELECTED_STORE,
     SESSION_STORE,
     SLIDER_STORE,
@@ -52,6 +54,7 @@ import {
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [SCROLL_OVERLAY_STORE]: ScrollOverlayReducer,
     [ACTIVATED_STORE]: ActivatedReducer,
     [VIEWPORT_STORE]: ViewportReducer,
     [ACCESS_STORE]: AccessReducer,

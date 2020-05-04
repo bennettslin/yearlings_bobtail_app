@@ -19,12 +19,12 @@
 .SequenceDot__textAnchor {
     height: $length__lyricSequenceDot;
 
-    .Anchor__accessed
-    &,
-    .Anchor__selectable:hover
-    & {
-        animation: bounceHover $animationDuration__slow;
-    }
+    // .Anchor__accessed
+    // &,
+    // .Anchor__selectable:hover
+    // & {
+    //     animation: bounceHover $animationDuration__slow;
+    // }
 
     // "Root accessed letter Enter."
     .PaLEnter
