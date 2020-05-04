@@ -91,8 +91,7 @@ class RoutingContainer extends PureComponent {
             this.props.updateLyricStore({
                 lyricSongIndex: routingSongIndex,
                 lyricVerseIndex: routingVerseIndex,
-                lyricAnnotationIndex: routingAnnotationIndex,
-                lyricSceneIndex: routingSceneIndex
+                lyricAnnotationIndex: routingAnnotationIndex
             })
 
             // If annotation is selected, preemptively select all eight dots.

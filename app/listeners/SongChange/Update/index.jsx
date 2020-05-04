@@ -5,7 +5,6 @@ import { updateLyricStore } from 'flux/lyric/action'
 
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 
-import { getSceneIndexForVerseIndex } from 'album/api/verses'
 import { populateRefs } from 'helpers/ref'
 
 class SongChangeUpdateListener extends PureComponent {
@@ -85,11 +84,7 @@ class SongChangeUpdateListener extends PureComponent {
             canLyricCarouselUpdate: true,
             lyricSongIndex: selectedSongIndex,
             lyricVerseIndex: selectedVerseIndex,
-            lyricAnnotationIndex: selectedAnnotationIndex,
-            lyricSceneIndex: getSceneIndexForVerseIndex(
-                selectedSongIndex,
-                selectedVerseIndex
-            )
+            lyricAnnotationIndex: selectedAnnotationIndex
         })
     }
 
