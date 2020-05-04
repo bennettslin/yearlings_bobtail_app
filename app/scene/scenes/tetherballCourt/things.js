@@ -1,7 +1,6 @@
 import {
     BUBBLE,
     CUTOUT,
-    FIXTURE,
     FLAT
 } from '../../../constants/scene/things'
 import {
@@ -14,7 +13,6 @@ import {
     CAMPUS_TREE_SINGLE__TETHERBALL,
     CAMPUS_TREE_DOUBLE__TETHERBALL
 } from '../../../constants/scene/things/cutouts'
-import { TETHERBALL_POLE } from '../../../constants/scene/things/fixtures'
 import { SCHOOL_BUNGALOW } from '../../../constants/scene/things/flats'
 
 export default {
@@ -51,13 +49,6 @@ export default {
             yIndex: 1,
             xPosition: 8,
             scaleFactor: 0.5
-        }
-    },
-    [FIXTURE]: {
-        [TETHERBALL_POLE]: {
-            yIndex: 3,
-            xPosition: 7,
-            scaleFactor: 0.225
         }
     },
     [FLAT]: {

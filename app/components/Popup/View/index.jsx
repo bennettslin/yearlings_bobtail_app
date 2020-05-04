@@ -15,6 +15,7 @@ const propTypes = {
         canBeFullHeight: PropTypes.bool,
         hasNarrowPadding: PropTypes.bool,
         hasWidePadding: PropTypes.bool,
+        noBoxShadow: PropTypes.bool,
         handleCloseClick: PropTypes.func,
         handlePreviousClick: PropTypes.func,
         handleNextClick: PropTypes.func,
@@ -34,6 +35,7 @@ const propTypes = {
         canBeFullHeight,
         hasNarrowPadding,
         hasWidePadding,
+        noBoxShadow,
         handleCloseClick,
         handlePreviousClick,
         handleNextClick,
@@ -95,7 +97,7 @@ const propTypes = {
                             'PopupViewContent__widePadding': hasWidePadding
                         },
 
-                        'boxShadow__popupView'
+                        !noBoxShadow && 'boxShadow__popupView'
                     )}
                     {...{
                         onClick: handleContainerClick

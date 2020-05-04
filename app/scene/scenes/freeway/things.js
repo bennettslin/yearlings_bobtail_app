@@ -11,7 +11,7 @@ import { VALLEY_FREEWAY } from '../../../constants/scene/things/flats'
 export default {
     [CUTOUT]: {
         [SHOPPING_CART]: {
-            yIndex: 5,
+            yIndex: 4,
             xPosition: 8,
             scaleFactor: 0.2
         },

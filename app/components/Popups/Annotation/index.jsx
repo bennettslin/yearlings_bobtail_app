@@ -60,6 +60,7 @@ class AnnotationPopup extends PureComponent {
                 doUnmountOnExit
                 showArrows
                 bounceAnimate
+                noBoxShadow
                 {...{
                     popupName: 'AnnotationPopup',
                     isVisible:

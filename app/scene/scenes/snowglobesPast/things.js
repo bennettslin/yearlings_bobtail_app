@@ -1,11 +1,13 @@
 import {
     CARDBOARD,
+    FIXTURE,
     PANEL
 } from '../../../constants/scene/things'
 import {
     SNOWGLOBE_SMALL__PAST,
     SNOWGLOBE_PAST
 } from '../../../constants/scene/things/cardboards'
+import { TETHERBALL_POLE } from '../../../constants/scene/things/fixtures'
 import { SNOWGLOBE__TETHERBALL } from '../../../constants/scene/things/panels'
 
 export default {
@@ -23,6 +25,13 @@ export default {
             zOffset: 6.1,
             scaleFactor: 0.7,
             rotate: 10
+        }
+    },
+    [FIXTURE]: {
+        [TETHERBALL_POLE]: {
+            yIndex: 1,
+            xPosition: 7,
+            scaleFactor: 0.225
         }
     },
     [PANEL]: {
