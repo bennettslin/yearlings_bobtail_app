@@ -4568,5 +4568,10 @@ export default [
     {
         taskName: `Scrolling is janky because of inset shadow on hover. Fix by disabling hover styles when scrolling.`,
         workedHours: 3
+    },
+    {
+        taskName: `Pulsate play button in Prologue.`,
+        workedHours: 2,
+        neededHours: 2
     }
 ]

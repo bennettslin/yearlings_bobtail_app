@@ -32,14 +32,14 @@ const mapStateToProps = ({
     playersStore: { playersBitNumber },
     audioStore: { isPlaying },
     sessionStore: { selectedAudioOptionIndex },
-    selectedStore: { selectedSongIndex },
+    lyricStore: { lyricSongIndex },
     responsiveStore: { isTwoRowMenu },
     viewportStore: { isDesktopWidth }
 }) => ({
     isPlaying,
     playersBitNumber,
     selectedAudioOptionIndex,
-    selectedSongIndex,
+    lyricSongIndex,
     isTwoRowMenu,
     isDesktopWidth
 })
@@ -82,7 +82,7 @@ class Audio extends PureComponent {
         isPlaying: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
-        selectedSongIndex: PropTypes.number.isRequired,
+        lyricSongIndex: PropTypes.number.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired
     }
@@ -105,27 +105,28 @@ class Audio extends PureComponent {
 
     getDynamicButtonConfigs = () => {
         const {
-                selectedSongIndex,
+                lyricSongIndex,
                 playersBitNumber,
                 isPlaying,
                 selectedAudioOptionIndex,
                 isDesktopWidth
             } = this.props,
 
-            isPrologue = selectedSongIndex === 0,
+            isPrologue = lyricSongIndex === 0,
             songsCount = getSongsAndLoguesCount(),
-            isEpilogue = selectedSongIndex === songsCount - 1,
+            isEpilogue = lyricSongIndex === songsCount - 1,
             playerCanPlayThrough = getPlayerCanPlayThrough({
-                songIndex: selectedSongIndex,
+                songIndex: lyricSongIndex,
                 playersBitNumber
             }),
 
-            mobileOrderedConfigs = [
+            dynamicButtonConfigs = [
                 {
                     isDisabled: isPrologue,
                     handleButtonClick: this._handlePreviousClick
                 },
                 {
+                    isPulsateAnimated: isPrologue,
                     buttonIdentifier: isPlaying,
                     isDisabled: !playerCanPlayThrough,
                     handleButtonClick: this._handlePlayClick
@@ -143,8 +144,8 @@ class Audio extends PureComponent {
         // If desktop width, reverse order to keep tooltips on top.
         return (
             isDesktopWidth ?
-                mobileOrderedConfigs.reverse() :
-                mobileOrderedConfigs
+                dynamicButtonConfigs.reverse() :
+                dynamicButtonConfigs
         )
     }
 

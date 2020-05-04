@@ -8,22 +8,22 @@ import cx from 'classnames'
 import { getSongTitle } from 'album/api/songs'
 
 const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
+    lyricStore: { lyricSongIndex }
 }) => ({
-    selectedSongIndex
+    lyricSongIndex
 })
 
 class SongBannerTitle extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired
+        lyricSongIndex: PropTypes.number.isRequired
     }
 
     render() {
         const
-            { selectedSongIndex } = this.props,
-            songTitle = getSongTitle({ songIndex: selectedSongIndex })
+            { lyricSongIndex } = this.props,
+            songTitle = getSongTitle({ songIndex: lyricSongIndex })
 
         return (
             <div

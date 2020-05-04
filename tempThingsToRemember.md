@@ -5,8 +5,16 @@ Make cardboards stroke line different.
 Rethink some dot category shapes?
 
 # TODO
-Make play button pulsate in prologue.
-Adjust tetherball pole in Uncanny scene.
 Show nav in logues?
 
 Hover on Song Banner more interactive? Tracker moves with mouse?
+
+Update React Audio Player
+
+Add band members to About page?
+
+Make audio options and score button colour more neutral.
+
+# FIXME
+Adjust tetherball pole in Uncanny scene.
+Popup annotation shouldn't have popup shadow, it already has its own.

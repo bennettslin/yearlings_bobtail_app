@@ -67,14 +67,6 @@
     }
 }
 
-.TipsHand__animatable {
-    animation: pulse $animationDuration__pulse infinite;
-    animation-timing-function: ease-in-out;
-
-    // TODO: Improve styling.
-    filter: drop-shadow(0 0 5px hsla(0, 0, 0, 0.5));
-}
-
 .TipsHand__shown {
     opacity: 1;
 }
@@ -88,4 +80,9 @@
     & {
         transform: scaleX(-1);
     }
+}
+
+.TipsHand__animatable {
+    // TODO: Improve styling.
+    filter: drop-shadow(0 0 5px hsla(0, 0, 0, 0.5));
 }

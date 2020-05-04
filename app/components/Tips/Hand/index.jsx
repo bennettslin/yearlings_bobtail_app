@@ -92,7 +92,8 @@ const TipsHand = ({
                 <InlineSvg
                     {...{
                         className: cx(
-                            'TipsHand__animatable'
+                            'TipsHand__animatable',
+                            'pulsateAnimated'
                         ),
                         svgClassName: cx(
                             'tipsHand'

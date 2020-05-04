@@ -31,6 +31,7 @@ class Button extends Component {
     static propTypes = {
         buttonName: PropTypes.string.isRequired,
         className: PropTypes.string,
+        isPulsateAnimated: PropTypes.bool,
         isCustomSize: PropTypes.bool,
         isSmallSize: PropTypes.bool,
         isLargeSize: PropTypes.bool,
@@ -85,6 +86,7 @@ class Button extends Component {
         const {
                 buttonName,
                 className,
+                isPulsateAnimated,
                 isCustomSize,
                 isSmallSize,
                 isLargeSize,
@@ -137,6 +139,7 @@ class Button extends Component {
                             'Button__smallSize': isSmallSize,
                             'Button__largeSize': isLargeSize
                         },
+                        isPulsateAnimated && 'pulsateAnimated',
                         className
                     ),
                     ...showTooltip && {
