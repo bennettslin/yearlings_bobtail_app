@@ -7,6 +7,7 @@ import { updateLyricStore } from 'flux/lyric/action'
 import Transition from 'react-transition-group/Transition'
 import LyricWheelDispatcher from '../../../dispatchers/LyricWheelDispatcher'
 import ScrollLyricListener from '../../../listeners/Scroll/Lyric'
+import ScrollHandler from '../../../handlers/Scroll'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 
@@ -60,6 +61,10 @@ class LyricScroll extends PureComponent {
         return this.getVerseElement(verseIndex)
     }
 
+    _getLyricElement = () => {
+        return this.lyricElement
+    }
+
     _setVerseElement = (payload) => {
         return this.setVerseElement(payload)
     }
@@ -81,6 +86,7 @@ class LyricScroll extends PureComponent {
 
     _handleDetermineVerseBars = () => {
         this.dispatchVerseBarsTimeout()
+        this.dispatchScrollTimeout()
     }
 
     _handleDetermineAutoScroll = (e) => {
@@ -141,6 +147,12 @@ class LyricScroll extends PureComponent {
                         />
                     </div>
                 </Transition>
+                <ScrollHandler
+                    {...{
+                        getRefs: this._getRefs,
+                        getLyricElement: this._getLyricElement
+                    }}
+                />
                 <VerseBarHandler
                     {...{
                         getRefs: this._getRefs,
