@@ -31,15 +31,15 @@ import { getPlayerCanPlayThrough } from 'helpers/player'
 const mapStateToProps = ({
     playersStore: { playersBitNumber },
     audioStore: { isPlaying },
+    selectedStore: { selectedSongIndex },
     sessionStore: { selectedAudioOptionIndex },
-    lyricStore: { lyricSongIndex },
     responsiveStore: { isTwoRowMenu },
     viewportStore: { isDesktopWidth }
 }) => ({
     isPlaying,
     playersBitNumber,
     selectedAudioOptionIndex,
-    lyricSongIndex,
+    selectedSongIndex,
     isTwoRowMenu,
     isDesktopWidth
 })
@@ -82,7 +82,7 @@ class Audio extends PureComponent {
         isPlaying: PropTypes.bool.isRequired,
         playersBitNumber: PropTypes.number.isRequired,
         selectedAudioOptionIndex: PropTypes.number.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
         isTwoRowMenu: PropTypes.bool.isRequired,
         isDesktopWidth: PropTypes.bool.isRequired
     }
@@ -105,18 +105,18 @@ class Audio extends PureComponent {
 
     getDynamicButtonConfigs = () => {
         const {
-                lyricSongIndex,
+                selectedSongIndex,
                 playersBitNumber,
                 isPlaying,
                 selectedAudioOptionIndex,
                 isDesktopWidth
             } = this.props,
 
-            isPrologue = lyricSongIndex === 0,
+            isPrologue = selectedSongIndex === 0,
             songsCount = getSongsAndLoguesCount(),
-            isEpilogue = lyricSongIndex === songsCount - 1,
+            isEpilogue = selectedSongIndex === songsCount - 1,
             playerCanPlayThrough = getPlayerCanPlayThrough({
-                songIndex: lyricSongIndex,
+                songIndex: selectedSongIndex,
                 playersBitNumber
             }),
 

@@ -23,18 +23,18 @@ import {
 import { FILMSTRIP } from '../../../constants/tips'
 
 const mapStateToProps = ({
-    lyricStore: {
-        isLyricLogue,
-        lyricSongIndex,
-        lyricSceneIndex
+    selectedStore: {
+        isSelectedLogue,
+        selectedSongIndex,
+        selectedSceneIndex,
+        selectedTime
     },
-    selectedStore: { selectedTime },
     activatedStore: { activatedSceneIndex },
     sliderStore: { sliderSceneIndex }
 }) => ({
-    isLyricLogue,
-    lyricSongIndex,
-    lyricSceneIndex,
+    isSelectedLogue,
+    selectedSongIndex,
+    selectedSceneIndex,
     selectedTime,
     activatedSceneIndex,
     sliderSceneIndex
@@ -44,9 +44,9 @@ class Filmstrip extends PureComponent {
 
     static propTypes = {
         // Through Redux.
-        lyricSongIndex: PropTypes.number.isRequired,
-        lyricSceneIndex: PropTypes.number.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
+        selectedSongIndex: PropTypes.number.isRequired,
+        selectedSceneIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
         activatedSceneIndex: PropTypes.number.isRequired,
         sliderSceneIndex: PropTypes.number.isRequired
@@ -74,15 +74,15 @@ class Filmstrip extends PureComponent {
 
     render() {
         const {
-                lyricSongIndex,
-                lyricSceneIndex,
+                selectedSongIndex,
+                selectedSceneIndex,
                 activatedSceneIndex,
                 sliderSceneIndex,
-                isLyricLogue
+                isSelectedLogue
             } = this.props,
 
-            totalTime = getSongTotalTime(lyricSongIndex),
-            songSceneConfigs = getSongSceneConfigs(lyricSongIndex)
+            totalTime = getSongTotalTime(selectedSongIndex),
+            songSceneConfigs = getSongSceneConfigs(selectedSongIndex)
 
         return (
             <div
@@ -92,7 +92,7 @@ class Filmstrip extends PureComponent {
                         'BannerFilmstrip__child',
 
                         'dropShadow',
-                        !isLyricLogue && 'dropShadow__lightHover'
+                        !isSelectedLogue && 'dropShadow__lightHover'
                     )
                 }}
             >
@@ -103,14 +103,14 @@ class Filmstrip extends PureComponent {
                         } = sceneConfig,
 
                         isOdd = Boolean(sceneIndex % 2),
-                        isSelectedScene = lyricSceneIndex === sceneIndex,
+                        isSelectedScene = selectedSceneIndex === sceneIndex,
                         isActivatedScene = activatedSceneIndex === sceneIndex,
                         isSliderScene = sliderSceneIndex === sceneIndex,
 
                         cursorIndex = getCursorIndex(
                             activatedSceneIndex,
                             sliderSceneIndex,
-                            lyricSceneIndex
+                            selectedSceneIndex
                         ),
                         isAfterCursor = cursorIndex < sceneIndex,
 

@@ -21,11 +21,8 @@ import { getVerseIndexforRatio } from 'helpers/verse'
 const mapStateToProps = ({
     audioStore: { isPlaying },
     responsiveStore: { isSmallBannerText },
-    lyricStore: {
-        isLyricLogue,
-        lyricSongIndex
-    },
     selectedStore: {
+        isSelectedLogue,
         selectedSongIndex,
         selectedTime
     },
@@ -34,8 +31,7 @@ const mapStateToProps = ({
 }) => ({
     isPlaying,
     isSmallBannerText,
-    isLyricLogue,
-    lyricSongIndex,
+    isSelectedLogue,
     selectedSongIndex,
     selectedTime,
     isActivated,
@@ -48,8 +44,7 @@ class SongBanner extends PureComponent {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
         isSmallBannerText: PropTypes.bool.isRequired,
-        isLyricLogue: PropTypes.bool.isRequired,
-        lyricSongIndex: PropTypes.number.isRequired,
+        isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
         isActivated: PropTypes.bool.isRequired,
@@ -63,11 +58,11 @@ class SongBanner extends PureComponent {
 
     getCursorWidth() {
         const {
-                lyricSongIndex,
+                selectedSongIndex,
                 selectedTime
             } = this.props,
 
-            totalTime = getSongTotalTime(lyricSongIndex)
+            totalTime = getSongTotalTime(selectedSongIndex)
 
         return selectedTime / totalTime * 100
     }
@@ -126,7 +121,7 @@ class SongBanner extends PureComponent {
                 isSmallBannerText,
                 isSliderMoving,
                 isActivated,
-                isLyricLogue
+                isSelectedLogue
             } = this.props,
             cursorWidth = this.getCursorWidth()
 
@@ -150,7 +145,7 @@ class SongBanner extends PureComponent {
 
                         'dropShadow',
 
-                        !isSliderMoving && !isActivated && !isLyricLogue &&
+                        !isSliderMoving && !isActivated && !isSelectedLogue &&
                             'dropShadow__lightHover',
 
                         'ovH',
