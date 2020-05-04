@@ -38,7 +38,7 @@ class NavButton extends PureComponent {
         // From parents.
         isToggle: PropTypes.bool,
         isAccessed: PropTypes.bool,
-        isSelected: PropTypes.bool.isRequired,
+        isSelected: PropTypes.bool,
         isInShownColumn: PropTypes.bool,
 
         bookIndex: PropTypes.number,
