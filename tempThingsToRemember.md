@@ -17,6 +17,3 @@ Make audio options and score button colour more neutral.
 
 # FIXME
 Adjust tetherball pole in Uncanny scene. Sasha and Bennett too.
-Book button in single book nav is broken.
-
-Delete lyric scene index?

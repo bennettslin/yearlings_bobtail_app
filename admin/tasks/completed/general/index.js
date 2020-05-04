@@ -4573,5 +4573,9 @@ export default [
         taskName: `Pulsate play button in Prologue.`,
         workedHours: 2,
         neededHours: 2
+    },
+    {
+        taskName: `Various bug fixes.`,
+        workedHours: 1
     }
 ]

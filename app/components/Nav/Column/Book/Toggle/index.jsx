@@ -1,58 +1,33 @@
 // Button in nav section to select book.
-
-import React, { PureComponent } from 'react'
-import { connect } from 'react-redux'
+import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import NavButton from '../Button'
 
-import { getBookForSongIndex } from 'album/api/songs'
+const NavBookToggle = ({
+    bookIndex,
+    handleButtonClick
 
-const mapStateToProps = ({
-    selectedStore: { selectedSongIndex }
-}) => ({
-    selectedSongIndex
-})
-
-class NavBookToggle extends PureComponent {
-
-    static propTypes = {
-        // Through Redux.
-        selectedSongIndex: PropTypes.number.isRequired,
-
-        // From parent.
-        bookIndex: PropTypes.number.isRequired,
-        handleButtonClick: PropTypes.func.isRequired
-    }
-
-    render() {
-
-        const {
-                selectedSongIndex,
+}) => (
+    <div className={cx(
+        'NavBookToggle',
+        'NavBook'
+    )}>
+        <NavButton
+            isToggle
+            {...{
                 bookIndex,
                 handleButtonClick
-            } = this.props,
+            }}
+        />
+    </div>
+)
 
-            hasSelectedSong =
-                bookIndex === getBookForSongIndex(selectedSongIndex)
-
-        return (
-            <div className={cx(
-                'NavBookToggle',
-                'NavBook'
-            )}>
-                <NavButton
-                    isToggle
-                    {...{
-                        isSelected: hasSelectedSong,
-                        bookIndex,
-                        handleButtonClick
-                    }}
-                />
-            </div>
-        )
-    }
+NavBookToggle.propTypes = {
+    // From parent.
+    bookIndex: PropTypes.number.isRequired,
+    handleButtonClick: PropTypes.func.isRequired
 }
 
-export default connect(mapStateToProps)(NavBookToggle)
+export default memo(NavBookToggle)
