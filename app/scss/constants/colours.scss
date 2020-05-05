@@ -48,10 +48,14 @@ $colour__past__darker: hsl($hue__past, $sat__darker, $lum__darker);
 $colour__playing__bold: hsl($hue__playing, $sat__bold, $lum__medLight);
 $colour__playing__empty: hsl($hue__playing, $sat__medium, $lum__lighter);
 $colour__playing__filled: hsl($hue__playing, $sat__dark, $lum__medium);
+$colour__interactPlay__empty: hsl($hue__interact, $sat__medium, $lum__lighter);
+$colour__interactPlay__filled: hsl($hue__interact, $sat__dark, $lum__medium);
 
 $colour__paused__bold: hsl($hue__paused, $sat__bold, $lum__medLight);
 $colour__paused__filled: hsl($hue__paused, $sat__medium, $lum__medium);
 $colour__paused__empty: hsl($hue__paused, $sat__dark, $lum__darker);
+$colour__interactPause__filled: hsl($hue__interact, $sat__medium, $lum__medium);
+$colour__interactPause__empty: hsl($hue__interact, $sat__dark, $lum__darker);
 
 $colour__future__bold: hsl($hue__future, $sat__bold, $lum__medLight);
 $colour__future__lighter: hsl($hue__future, $sat__lighter, $lum__lighter);

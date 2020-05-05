@@ -5,8 +5,6 @@ Make cardboards stroke line different.
 Rethink some dot category shapes?
 
 # TODO
-Show nav in logues?
-
 Hover on Song Banner more interactive? Tracker moves with mouse?
 
 Add band members to About page?
@@ -15,3 +13,8 @@ Make audio options and score button colour more neutral.
 
 # FIXME
 Adjust tetherball pole in Uncanny scene. Sasha and Bennett too.
+
+On Song Banner hover:
+* Song title and timer disappear.
+
+* Tracker follows mouse.

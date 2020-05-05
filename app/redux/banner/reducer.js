@@ -1,13 +1,13 @@
-// Reducers for activated state.
-import { ACTIVATED_STORE } from '../storeKeys'
-import { ACTIVATED_DEFAULTS } from '../defaultStates'
+// Reducers for banner state.
+import { BANNER_STORE } from '../storeKeys'
+import { BANNER_DEFAULTS } from '../defaultStates'
 
 export default (
-    state = ACTIVATED_DEFAULTS,
+    state = BANNER_DEFAULTS,
     action
 ) => {
     switch (action.type) {
-        case ACTIVATED_STORE:
+        case BANNER_STORE:
             return {
                 ...state,
                 ...action.payload

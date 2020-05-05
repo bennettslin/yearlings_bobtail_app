@@ -34,4 +34,31 @@ $padding__songBanner: $MARGIN_THIN * 2;
     & {
         box-shadow: $boxShadow__activeVerse;
     }
+
+    .TW__lyricsUnlocked
+    &:hover {
+        background-color: $colour__interactPause__empty;
+    }
+
+    .PlW__isPlaying
+    .TW__lyricsUnlocked
+    &:hover {
+        background-color: $colour__interactPlay__empty;
+    }
+}
+
+.Tracker {
+
+    .TW__lyricsUnlocked
+    .SongBanner:hover
+    & {
+        background-color: $colour__interactPause__filled;
+    }
+
+    .PlW__isPlaying
+    .TW__lyricsUnlocked
+    .SongBanner:hover
+    & {
+        background-color: $colour__interactPlay__filled;
+    }
 }

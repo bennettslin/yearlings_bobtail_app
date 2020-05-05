@@ -4,6 +4,8 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import isFinite from 'lodash/isfinite'
 
+import { updateBannerStore } from 'flux/banner/action'
+
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'
 
@@ -20,6 +22,7 @@ import { getVerseIndexforRatio } from 'helpers/verse'
 
 const mapStateToProps = ({
     audioStore: { isPlaying },
+    bannerStore: { isBannerMoving },
     responsiveStore: { isSmallBannerText },
     selectedStore: {
         isSelectedLogue,
@@ -30,6 +33,7 @@ const mapStateToProps = ({
     sliderStore: { isSliderMoving }
 }) => ({
     isPlaying,
+    isBannerMoving,
     isSmallBannerText,
     isSelectedLogue,
     selectedSongIndex,
@@ -43,12 +47,14 @@ class SongBanner extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
+        isBannerMoving: PropTypes.bool.isRequired,
         isSmallBannerText: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
         selectedTime: PropTypes.number.isRequired,
         isActivated: PropTypes.bool.isRequired,
-        isSliderMoving: PropTypes.bool.isRequired
+        isSliderMoving: PropTypes.bool.isRequired,
+        updateBannerStore: PropTypes.func.isRequired
     }
 
     constructor(props) {
@@ -111,6 +117,18 @@ class SongBanner extends PureComponent {
         this.dispatchStopPropagation(e)
     }
 
+    onMouseEnter = () => {
+        this.props.updateBannerStore({ isBannerMoving: true })
+    }
+
+    onMouseLeave = () => {
+        this.props.updateBannerStore()
+    }
+
+    onMouseMove = () => {
+        console.log('hello')
+    }
+
     _getRefs = (payload) => {
         populateRefs(this, payload)
     }
@@ -151,7 +169,10 @@ class SongBanner extends PureComponent {
                         'ovH',
                         'Rancho'
                     ),
-                    onClick: this.handleBannerClick
+                    onClick: this.handleBannerClick,
+                    onMouseEnter: this.onMouseEnter,
+                    onMouseLeave: this.onMouseLeave,
+                    onMouseMove: this.onMouseMove
                 }}
             >
                 <Tracker {...{ cursorWidth }} />
@@ -164,4 +185,7 @@ class SongBanner extends PureComponent {
     }
 }
 
-export default connect(mapStateToProps)(SongBanner)
+export default connect(
+    mapStateToProps,
+    { updateBannerStore }
+)(SongBanner)

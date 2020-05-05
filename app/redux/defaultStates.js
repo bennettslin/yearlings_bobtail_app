@@ -125,6 +125,10 @@ export const AUDIO_DEFAULTS = {
     queuedPlayVerseIndex: -1
 }
 
+export const BANNER_DEFAULTS = {
+    isBannerMoving: false
+}
+
 /**
  * All dotKeys plus dotsBitNumber. Components only ever retrieve the bit
  * number. The individual dots are never used, just visible in the store

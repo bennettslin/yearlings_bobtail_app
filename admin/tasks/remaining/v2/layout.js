@@ -33,5 +33,10 @@ export default [
         taskName: `Don't show verse hover styling when text anchor is the one being hovered? Might not be doable.`,
         workedHours: 0,
         neededHours: 5
+    },
+    {
+        taskName: `Show nav in logue?`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

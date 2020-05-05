@@ -4,6 +4,7 @@ import ActivatedReducer from './activated/reducer'
 import AnnotationReducer from './annotation/reducer'
 import AppReducer from './app/reducer'
 import AudioReducer from './audio/reducer'
+import BannerReducer from './banner/reducer'
 import DotsReducer from './dots/reducer'
 import DotsSlideReducer from './dotsSlide/reducer'
 import FocusReducer from './focus/reducer'
@@ -30,7 +31,7 @@ import {
     ACTIVATED_STORE,
     ANNOTATION_STORE,
     AUDIO_STORE,
-    VIEWPORT_STORE,
+    BANNER_STORE,
     DOTS_STORE,
     DOTS_SLIDE_STORE,
     FOCUS_STORE,
@@ -50,10 +51,12 @@ import {
     SLIDER_STORE,
     TOGGLE_STORE,
     TRANSIENT_STORE,
-    VERSE_BARS_STORE
+    VERSE_BARS_STORE,
+    VIEWPORT_STORE
 } from './storeKeys'
 
 const rootReducer = combineReducers({
+    [BANNER_STORE]: BannerReducer,
     [SCROLL_OVERLAY_STORE]: ScrollOverlayReducer,
     [ACTIVATED_STORE]: ActivatedReducer,
     [VIEWPORT_STORE]: ViewportReducer,
