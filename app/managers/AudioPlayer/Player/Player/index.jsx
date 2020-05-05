@@ -206,60 +206,8 @@ class Player extends PureComponent {
         this.props.updateEnded()
     }
 
-    // _listenForDebugStatements(onlyIfSelected) {
-    //     // This isn't called anywhere. Keep for now to have a list of events.
-
-    //     const showDebugStatements =
-    //         this.props.isSelected || !onlyIfSelected
-
-    //     if (showDebugStatements) {
-    //         this.audioPlayer.addEventListener('ended', () => {
-    //             logPlayer('ended')
-    //         })
-    //         this.audioPlayer.addEventListener('pause', () => {
-    //             logPlayer('pause')
-    //         })
-    //         this.audioPlayer.addEventListener('play', () => {
-    //             logPlayer('play')
-    //         })
-    //         this.audioPlayer.addEventListener('playing', () => {
-    //             logPlayer('playing')
-    //         })
-    //         // Determine which times ranges have been buffered.
-    //         this.audioPlayer.addEventListener('progress', () => {
-    //             logPlayer('progress')
-    //         })
-    //         // Seek operation has completed.
-    //         this.audioPlayer.addEventListener('seeked', () => {
-    //             logPlayer('seeked')
-    //         })
-    //         // Seek operation has begun.
-    //         this.audioPlayer.addEventListener('seeking', () => {
-    //             logPlayer('seeking')
-    //         })
-    //         // Data is not forthcoming.
-    //         this.audioPlayer.addEventListener('stalled', () => {
-    //             logPlayer('stalled')
-    //         })
-    //         // Download has completed.
-    //         this.audioPlayer.addEventListener('suspend', () => {
-    //             logPlayer('suspend')
-    //         })
-    //         // Enough data is available that the media can be played for now.
-    //         this.audioPlayer.addEventListener('canplay', () => {
-    //             logPlayer('canplay')
-    //         })
-    //         this.audioPlayer.addEventListener('canplaythrough', () => {
-    //             logPlayer('canplaythrough')
-    //         })
-    //         this.audioPlayer.addEventListener('waiting', () => {
-    //             logPlayer('waiting')
-    //         })
-    //     }
-    // }
-
     _setAudioPlayerRef = (node) => {
-        this.audioPlayer = node.audioEl
+        this.audioPlayer = node.audioEl.current
     }
 
     render() {

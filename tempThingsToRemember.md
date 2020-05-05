@@ -9,8 +9,6 @@ Show nav in logues?
 
 Hover on Song Banner more interactive? Tracker moves with mouse?
 
-Update React Audio Player
-
 Add band members to About page?
 
 Make audio options and score button colour more neutral.
