@@ -23,5 +23,10 @@ export default [
         taskName: `Facebook page setup.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Hover work on SongBanner.`,
+        workedHours: 2,
+        neededHours: 5
     }
 ]

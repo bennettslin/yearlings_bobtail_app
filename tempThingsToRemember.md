@@ -14,7 +14,6 @@ Make audio options and score button colour more neutral.
 # FIXME
 Adjust tetherball pole in Uncanny scene. Sasha and Bennett too.
 
-On Song Banner hover:
-* Song title and timer disappear.
-
-* Tracker follows mouse.
+On Song Banner hover, Tracker follows mouse.
+Allow hover of SongBanner to show times?
+Allow hover of Slider to show times as well?

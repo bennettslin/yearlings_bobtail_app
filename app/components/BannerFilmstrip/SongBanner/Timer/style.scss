@@ -8,4 +8,9 @@
     & {
         font-size: 0.8em;
     }
+
+    .SongBanner:hover
+    & {
+        visibility: hidden;
+    }
 }
