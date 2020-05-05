@@ -25,8 +25,8 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Hover work on SongBanner.`,
-        workedHours: 2,
-        neededHours: 5
+        taskName: `Finalise Banner hover.`,
+        workedHours: 0,
+        neededHours: 2
     }
 ]

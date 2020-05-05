@@ -1,10 +1,5 @@
 export default [
     {
-        taskName: `Consider whether to transition slider hide for anchor text and underline.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Have album banner track entire album's time progress.`,
         workedHours: 0,
         neededHours: 5
@@ -38,5 +33,15 @@ export default [
         taskName: `Show nav in logue?`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Handle slider hover through state?`,
+        workedHours: 0,
+        neededHours: 10
+    },
+    {
+        taskName: `Consolidate all banner, filmstrip, slider, and lyric hovering; slider moving; and filmstrip, slider, and lyric access and activation; to all reflect the same cursor index and time? Is this even desirable?`,
+        workedHours: 0,
+        neededHours: 20
     }
 ]

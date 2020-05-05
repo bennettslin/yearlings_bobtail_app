@@ -35,6 +35,7 @@ $padding__songBanner: $MARGIN_THIN * 2;
         box-shadow: $boxShadow__activeVerse;
     }
 
+    .PlW__song
     .TW__lyricsUnlocked
     &:hover {
         background-color: $colour__interactPause__empty;
@@ -49,6 +50,7 @@ $padding__songBanner: $MARGIN_THIN * 2;
 
 .Tracker {
 
+    .PlW__song
     .TW__lyricsUnlocked
     .SongBanner:hover
     & {

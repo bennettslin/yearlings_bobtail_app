@@ -4577,5 +4577,9 @@ export default [
     {
         taskName: `Various bug fixes.`,
         workedHours: 1
+    },
+    {
+        taskName: `Hover work on SongBanner.`,
+        workedHours: 3
     }
 ]

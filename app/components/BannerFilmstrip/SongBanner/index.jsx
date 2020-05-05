@@ -14,7 +14,10 @@ import SongBannerTimer from './Timer'
 import SongBannerTitle from './Title'
 
 import { getSongIsLogue } from '../../../album/api/songs'
-import { getSongTotalTime } from '../../../album/api/time'
+import {
+    getSongTotalTime,
+    getStartTimeForVerseIndex
+} from '../../../album/api/time'
 
 import { getClientX, getElementRatioForClientX } from 'helpers/dom'
 import { populateRefs } from 'helpers/ref'
@@ -22,7 +25,11 @@ import { getVerseIndexforRatio } from 'helpers/verse'
 
 const mapStateToProps = ({
     audioStore: { isPlaying },
-    bannerStore: { isBannerMoving },
+    bannerStore: {
+        isBannerHovering,
+        bannerHoverVerseIndex,
+        bannerHoverTime
+    },
     responsiveStore: { isSmallBannerText },
     selectedStore: {
         isSelectedLogue,
@@ -33,7 +40,9 @@ const mapStateToProps = ({
     sliderStore: { isSliderMoving }
 }) => ({
     isPlaying,
-    isBannerMoving,
+    isBannerHovering,
+    bannerHoverVerseIndex,
+    bannerHoverTime,
     isSmallBannerText,
     isSelectedLogue,
     selectedSongIndex,
@@ -47,7 +56,9 @@ class SongBanner extends PureComponent {
     static propTypes = {
         // Through Redux.
         isPlaying: PropTypes.bool.isRequired,
-        isBannerMoving: PropTypes.bool.isRequired,
+        isBannerHovering: PropTypes.bool.isRequired,
+        bannerHoverVerseIndex: PropTypes.number.isRequired,
+        bannerHoverTime: PropTypes.number.isRequired,
         isSmallBannerText: PropTypes.bool.isRequired,
         isSelectedLogue: PropTypes.bool.isRequired,
         selectedSongIndex: PropTypes.number.isRequired,
@@ -64,38 +75,27 @@ class SongBanner extends PureComponent {
 
     getCursorWidth() {
         const {
+                isBannerHovering,
                 selectedSongIndex,
-                selectedTime
+                selectedTime,
+                bannerHoverTime
             } = this.props,
 
+            playedTime = isBannerHovering ? bannerHoverTime : selectedTime,
             totalTime = getSongTotalTime(selectedSongIndex)
 
-        return selectedTime / totalTime * 100
+        return playedTime / totalTime * 100
     }
 
-    handleBannerClick = (e) => {
-
-        const {
-            selectedSongIndex,
-            isSliderMoving,
-            isActivated
-        } = this.props
-
-        if (getSongIsLogue(selectedSongIndex)) {
-            // Do nothing in logue.
-            return
-        }
-
-        if (isSliderMoving || isActivated) {
-            // Do nothing if lyrics locked, but still register click event.
-            this.dispatchStopPropagation(e)
-            return
-        }
-
+    getVerseIndexFromEvent = e => {
         const clientX = getClientX(e),
-            { left, width } = this.bannerElement.current.getBoundingClientRect()
+            {
+                left,
+                width
+            } = this.bannerElement.current.getBoundingClientRect()
 
         if (isFinite(clientX)) {
+
             const { selectedSongIndex } = this.props,
                 bannerRatio = getElementRatioForClientX({
                     clientX,
@@ -103,30 +103,92 @@ class SongBanner extends PureComponent {
                     elementWidth: width
                 })
 
-            const selectedVerseIndex = getVerseIndexforRatio(
+            return getVerseIndexforRatio(
                 selectedSongIndex,
                 bannerRatio
             )
+        }
 
-            this.dispatchVerse({
-                selectedVerseIndex,
-                scrollLog: `Select banner verse ${selectedVerseIndex}.`
-            })
+        return null
+    }
+
+    handleBannerClick = (e) => {
+
+        const {
+            selectedSongIndex,
+            isSliderMoving,
+            isActivated,
+            bannerHoverVerseIndex
+        } = this.props
+
+        if (getSongIsLogue(selectedSongIndex)) {
+            // Do not register click in logue.
+            return
         }
 
         this.dispatchStopPropagation(e)
+
+        if (isSliderMoving || isActivated) {
+            // Do nothing if lyrics locked, but still register click.
+            return
+        }
+
+        this.dispatchVerse({
+            selectedVerseIndex: bannerHoverVerseIndex,
+            scrollLog: `Select banner verse ${bannerHoverVerseIndex}.`
+        })
     }
 
-    onMouseEnter = () => {
-        this.props.updateBannerStore({ isBannerMoving: true })
+    onMouseEnter = e => {
+        const {
+            selectedSongIndex,
+            selectedTime,
+            isSliderMoving,
+            isActivated
+        } = this.props
+
+        if (
+            isSliderMoving ||
+            isActivated ||
+            getSongIsLogue(selectedSongIndex)
+        ) {
+            // Do not toggle banner hovering state.
+            return
+        }
+
+        this.props.updateBannerStore({
+            isBannerHovering: true,
+
+            // Begin from selected time to keep tracker animation smooth.
+            bannerHoverTime: selectedTime
+        })
+        this.onMouseMove(e)
+    }
+
+    onMouseMove = e => {
+        const {
+            isBannerHovering,
+            selectedSongIndex
+        } = this.props
+
+        if (!isBannerHovering) {
+            // Do not proceed if we are not in banner hovering state.
+            return
+        }
+
+        const bannerHoverVerseIndex = this.getVerseIndexFromEvent(e) || -1
+
+        this.props.updateBannerStore({
+            bannerHoverVerseIndex,
+            bannerHoverTime: getStartTimeForVerseIndex(
+                selectedSongIndex,
+                bannerHoverVerseIndex
+            )
+        })
     }
 
     onMouseLeave = () => {
         this.props.updateBannerStore()
-    }
-
-    onMouseMove = () => {
-        console.log('hello')
     }
 
     _getRefs = (payload) => {

@@ -126,7 +126,9 @@ export const AUDIO_DEFAULTS = {
 }
 
 export const BANNER_DEFAULTS = {
-    isBannerMoving: false
+    isBannerHovering: false,
+    bannerHoverVerseIndex: -1,
+    bannerHoverTime: 0
 }
 
 /**

@@ -19,6 +19,10 @@ const mapStateToProps = ({
     activatedStore: {
         isActivated,
         activatedTime
+    },
+    bannerStore: {
+        isBannerHovering,
+        bannerHoverTime
     }
 }) => ({
     isSelectedLogue,
@@ -26,7 +30,9 @@ const mapStateToProps = ({
     isSliderMoving,
     sliderTime,
     isActivated,
-    activatedTime
+    activatedTime,
+    isBannerHovering,
+    bannerHoverTime
 })
 
 class SongBannerTimer extends PureComponent {
@@ -38,7 +44,9 @@ class SongBannerTimer extends PureComponent {
         isSliderMoving: PropTypes.bool.isRequired,
         sliderTime: PropTypes.number.isRequired,
         isActivated: PropTypes.bool.isRequired,
-        activatedTime: PropTypes.number.isRequired
+        activatedTime: PropTypes.number.isRequired,
+        isBannerHovering: PropTypes.bool.isRequired,
+        bannerHoverTime: PropTypes.number.isRequired
     }
 
     render() {
@@ -48,7 +56,9 @@ class SongBannerTimer extends PureComponent {
             isSliderMoving,
             sliderTime,
             isActivated,
-            activatedTime
+            activatedTime,
+            isBannerHovering,
+            bannerHoverTime
         } = this.props
 
         let time = selectedTime
@@ -59,6 +69,10 @@ class SongBannerTimer extends PureComponent {
 
         if (isActivated) {
             time = activatedTime
+        }
+
+        if (isBannerHovering) {
+            time = bannerHoverTime
         }
 
         return !isSelectedLogue && (
