@@ -51,7 +51,10 @@ const _validateIndexForKey = (key) => {
 
         // These are dependent on the album object.
         case SELECTED_SONG_INDEX:
-            isValid = valueIsNumber && parsedValue < album.songs.length
+            isValid =
+                valueIsNumber &&
+                parsedValue > -1 &&
+                parsedValue < album.songs.length
             break
         case SELECTED_ANNOTATION_INDEX:
         {
@@ -69,9 +72,12 @@ const _validateIndexForKey = (key) => {
             )
 
             // Logues do not have songVersesCount.
-            isValid = valueIsNumber && songVersesCount ?
-                parsedValue < songVersesCount :
-                parsedValue === 0
+            isValid =
+                valueIsNumber &&
+                parsedValue > -1 &&
+                songVersesCount ?
+                    parsedValue < songVersesCount :
+                    parsedValue === 0
             break
         }
         // These must be less than the length of options.

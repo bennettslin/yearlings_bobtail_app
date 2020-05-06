@@ -12,6 +12,7 @@ class TouchWrapper extends PureComponent {
         isSliderMoving: PropTypes.bool.isRequired,
         isSliderTouched: PropTypes.bool.isRequired,
         isActivated: PropTypes.bool.isRequired,
+        isBannerHovering: PropTypes.bool.isRequired,
 
         // From parent.
         children: PropTypes.any.isRequired
@@ -24,6 +25,7 @@ class TouchWrapper extends PureComponent {
             isSliderTouched,
             isSliderMoving,
             isActivated,
+            isBannerHovering,
             children
         } = this.props
 
@@ -38,6 +40,7 @@ class TouchWrapper extends PureComponent {
                         isSliderTouched && 'TW__sliderTouched',
                         isSliderMoving && 'TW__sliderMoving',
                         isActivated && 'TW__verseActive',
+                        isBannerHovering && 'TW__bannerHovering',
 
                         (isSliderMoving || isActivated) ?
                             'TW__lyricsLocked' :
@@ -58,13 +61,15 @@ const mapStateToProps = ({
     sliderStore: {
         isSliderTouched,
         isSliderMoving
-    }
+    },
+    bannerStore: { isBannerHovering }
 }) => ({
     isAutoScroll,
     isScrolling,
     isSliderTouched,
     isSliderMoving,
-    isActivated
+    isActivated,
+    isBannerHovering
 })
 
 export default connect(mapStateToProps)(TouchWrapper)

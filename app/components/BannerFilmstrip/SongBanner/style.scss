@@ -20,7 +20,7 @@ $padding__songBanner: $MARGIN_THIN * 2;
     }
 
     .PlW__song
-    .TW__lyricsUnlocked
+    .TW__lyricsUnlocked.TW__bannerHovering
     & {
         cursor: pointer;
     }
@@ -35,14 +35,16 @@ $padding__songBanner: $MARGIN_THIN * 2;
         box-shadow: $boxShadow__activeVerse;
     }
 
+    .DW__userAgentDesktop
     .PlW__song
-    .TW__lyricsUnlocked
+    .TW__lyricsUnlocked.TW__bannerHovering
     &:hover {
         background-color: $colour__interactPause__empty;
     }
 
+    .DW__userAgentDesktop
     .PlW__isPlaying
-    .TW__lyricsUnlocked
+    .TW__lyricsUnlocked.TW__bannerHovering
     &:hover {
         background-color: $colour__interactPlay__empty;
     }
@@ -50,15 +52,17 @@ $padding__songBanner: $MARGIN_THIN * 2;
 
 .Tracker {
 
+    .DW__userAgentDesktop
     .PlW__song
-    .TW__lyricsUnlocked
+    .TW__lyricsUnlocked.TW__bannerHovering
     .SongBanner:hover
     & {
         background-color: $colour__interactPause__filled;
     }
 
+    .DW__userAgentDesktop
     .PlW__isPlaying
-    .TW__lyricsUnlocked
+    .TW__lyricsUnlocked.TW__bannerHovering
     .SongBanner:hover
     & {
         background-color: $colour__interactPlay__filled;

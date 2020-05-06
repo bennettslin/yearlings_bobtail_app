@@ -24,6 +24,7 @@ $height__songBanner: 30px;
 }
 
 .BannerFilmstrip__child {
+    position: relative;
     width: 100%;
 
     &:not(:last-child) {

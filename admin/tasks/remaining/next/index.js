@@ -23,10 +23,5 @@ export default [
         taskName: `Facebook page setup.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Finalise Banner hover.`,
-        workedHours: 0,
-        neededHours: 2
     }
 ]

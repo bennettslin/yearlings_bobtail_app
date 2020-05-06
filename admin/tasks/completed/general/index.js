@@ -4581,5 +4581,9 @@ export default [
     {
         taskName: `Hover work on SongBanner.`,
         workedHours: 3
+    },
+    {
+        taskName: `Banner hover works between songs and in mobile.`,
+        workedHours: 2
     }
 ]
