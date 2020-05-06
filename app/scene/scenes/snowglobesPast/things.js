@@ -14,7 +14,7 @@ export default {
     [CARDBOARD]: {
         [SNOWGLOBE_SMALL__PAST]: {
             yIndex: 0,
-            xPosition: 6,
+            xPosition: 6.5,
             zOffset: 7.6,
             scaleFactor: 0.15,
             rotate: -5
@@ -29,8 +29,8 @@ export default {
     },
     [FIXTURE]: {
         [TETHERBALL_POLE]: {
-            yIndex: 1,
-            xPosition: 7,
+            yIndex: 3,
+            xPosition: 5.5,
             scaleFactor: 0.225
         }
     },

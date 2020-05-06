@@ -24,7 +24,8 @@ export default {
     [SASHA_BENNETT]: {
         [COMFORTING_HUMILIATED]: {
             yIndex: 3,
-            xPosition: 7
+            xPosition: 7.5,
+            zOffset: -0.1
         }
     }
 }
