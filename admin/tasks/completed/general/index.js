@@ -4585,5 +4585,9 @@ export default [
     {
         taskName: `Banner hover works between songs and in mobile.`,
         workedHours: 2
+    },
+    {
+        taskName: `Change some button colours.`,
+        workedHours: 
     }
 ]

@@ -1,4 +1,4 @@
-# bobtail_yearlings_app
+# yearlings_bobtail_app
 
 ## Development
 

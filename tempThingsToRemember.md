@@ -6,4 +6,10 @@ Rethink some dot category shapes?
 
 Add band members to About page?
 
-Make audio options and score and ear button colours more neutral.
+Facebook page
+* Avatar
+* Splash picture
+* Page info
+* Instagram (link)
+* Twitter (create and link)
+* YouTube (create and link)

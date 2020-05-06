@@ -98,7 +98,7 @@ $colour__underlineAccess: hsl($hue__access, $sat__darker, $lum__medium);
 $colour__underlineSelect: hsl($hue__select, $sat__darker, $lum__medium);
 
 // Interactable hover colours.
-$colour__interact__bold: hsl($hue__interact, $sat__bold, $lum__medLight);
+$colour__interact__bold: hsl($hue__interact, $sat__lighter, $lum__medium);
 $colour__interact__lighter: hsl($hue__interact, $sat__light, $lum__link__light);
 $colour__interact__light: hsl($hue__interact, $sat__light, $lum__link__light);
 $colour__interact__medium: hsl($hue__interact, $sat__medium, $lum__medium);
@@ -112,13 +112,13 @@ $bgColour__annotationWormhole: hsl(0, 100%, 98%);
 $colour__annotationWormhole__title: hsl(0, 0%, 73%);
 
 // Dot colours.
-$bgColour__dot__narrative: hsl(315, 100%, 87%);
-$bgColour__dot__backstory: hsl(36, 100%, 83%);
-$bgColour__dot__observation: hsl(90, 100%, 80%);
-$bgColour__dot__pun: hsl(192, 100%, 83%);
-$bgColour__dot__reference: hsl(150, 100%, 80%);
-$bgColour__dot__wormhole: hsl(225, 100%, 87%);
-$bgColour__dot__songwriting: hsl(0, 100%, 87%);
+$bgColour__dot__narrative: hsl(315, 87%, 87%);
+$bgColour__dot__backstory: hsl(36, 87%, 83%);
+$bgColour__dot__observation: hsl(90, 87%, 80%);
+$bgColour__dot__pun: hsl(192, 87%, 83%);
+$bgColour__dot__reference: hsl(150, 87%, 80%);
+$bgColour__dot__wormhole: hsl(225, 87%, 87%);
+$bgColour__dot__songwriting: hsl(0, 87%, 87%);
 $bgColour__dot__afterword: hsl(60, 67%, 80%);
 $bgColour__dot__deselected: $colour__neutral__light;
 
