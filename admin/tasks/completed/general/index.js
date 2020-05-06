@@ -4588,6 +4588,6 @@ export default [
     },
     {
         taskName: `Change some button colours.`,
-        workedHours: 
+        workedHours: 2
     }
 ]
