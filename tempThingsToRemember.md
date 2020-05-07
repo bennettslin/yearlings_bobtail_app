@@ -7,9 +7,21 @@ Rethink some dot category shapes?
 Add band members to About page?
 
 Facebook page
-* Avatar
-* Splash picture
+* Avatar (Bobtail Yearlings logo)
+* Splash picture (Yearling's Bobtail screenshot)
 * Page info
 * Instagram (link)
-* Twitter (create and link)
-* YouTube (create and link)
+* Twitter (link)
+
+Twitter page
+* Avatar (same)
+* Splah picture (same)
+* Page info
+
+Do React Static work for Yearling's Bobtail first?
+
+Band website
+* Favicon (Pony head)
+* Band name logo
+* Yearling's Bobtail link (different Yearling's Bobtail screenshot)
+* Email list input
