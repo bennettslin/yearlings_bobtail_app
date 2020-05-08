@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../../utils/lodash/isfinite'
 
 import { updateBannerStore } from '../../../redux/banner/action'
 

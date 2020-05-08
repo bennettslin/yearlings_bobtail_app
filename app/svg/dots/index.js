@@ -16,7 +16,7 @@ import {
     WORMHOLE,
     SONGWRITING,
     AFTERWORD
-} from 'constants/dots'
+} from '../../constants/dots'
 
 const DOT_ICONS_MAP = {
     [NARRATIVE]: narrative,

@@ -1,4 +1,4 @@
-import { getSongsNotLoguesCount } from 'album/api/songs'
+import { getSongsNotLoguesCount } from '../../../../album/api/songs'
 
 export const getNextPlayerIndexToRender = (
     selectedSongIndex,

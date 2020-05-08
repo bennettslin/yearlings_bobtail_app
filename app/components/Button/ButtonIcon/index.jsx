@@ -2,13 +2,13 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import InlineSvg from 'modules/InlineSvg'
+import InlineSvg from '../../../modules/InlineSvg'
 
 import BUTTON_ICONS_MAP from '../../../svg/buttons'
 
 import { getButtonIconClassNames } from './helper'
 
-import { NAV_SONG_BUTTON_KEY } from 'constants/buttons'
+import { NAV_SONG_BUTTON_KEY } from '../../../constants/buttons'
 
 const propTypes = {
     // From parent.

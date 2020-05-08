@@ -1,8 +1,8 @@
 import {
     LEFT,
     RIGHT
-} from 'constants/lyrics'
-import { SLANT_DIRECTIONS } from 'constants/scene/cubes'
+} from '../../../../constants/lyrics'
+import { SLANT_DIRECTIONS } from '../../../../constants/scene/cubes'
 
 import {
     CUBE_X_INDICES,
@@ -11,7 +11,7 @@ import {
     DEFAULT_X_AXIS_Z_INDICES,
     SLANTED_LEFT_X_AXIS_Z_INDICES,
     SLANTED_RIGHT_X_AXIS_Z_INDICES
-} from 'constants/cubeIndex'
+} from '../../../../constants/cubeIndex'
 
 const CUBE_Z_INDEX_STYLES = {}
 let xAxisZIndices = DEFAULT_X_AXIS_Z_INDICES

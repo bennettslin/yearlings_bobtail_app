@@ -10,11 +10,11 @@ import ButtonIcon from './ButtonIcon'
 import Tooltip from './Tooltip'
 import AccessLetter from '../Access/Letter'
 
-import { populateRefs } from 'helpers/ref'
-import { getPropsAreShallowEqual } from 'helpers/general'
+import { populateRefs } from '../../helpers/ref'
+import { getPropsAreShallowEqual } from '../../helpers/general'
 
-import { ENTER } from 'constants/access'
-import { CHILD_ACCESS_PREFIX } from 'constants/prefixes'
+import { ENTER } from '../../constants/access'
+import { CHILD_ACCESS_PREFIX } from '../../constants/prefixes'
 
 import {
     getShowButtonIcon,

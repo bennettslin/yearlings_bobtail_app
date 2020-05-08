@@ -13,7 +13,7 @@ import LyricToggles from './Toggles'
 import VerseBar from './VerseBar'
 import CarouselAccess from '../Carousel/Access'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter }

@@ -1,10 +1,10 @@
 import mp3s from '../../../../assets/mp3s'
 
-import { getSongVersesCount } from 'album/api/verses'
+import { getSongVersesCount } from '../../../album/api/verses'
 import {
     getStartTimeForVerseIndex,
     getEndTimeForVerseIndex
-} from 'album/api/time'
+} from '../../../album/api/time'
 
 export const getMp3s = () => (
     mp3s

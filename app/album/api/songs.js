@@ -1,4 +1,4 @@
-import songs from 'album/songs'
+import songs from '../../album/songs'
 
 export const getSongsAndLoguesCount = () => {
     return songs.length

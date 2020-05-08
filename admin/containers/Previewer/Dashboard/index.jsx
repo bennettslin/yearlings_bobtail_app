@@ -1,11 +1,11 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from 'lodash/keys'
+import keys from '../../../../app/utils/lodash/keys'
 
 import PreviewerKilobytes from '../Kilobytes'
 
-import { convertPresenceKeyToClassName } from 'helpers/format'
+import { convertPresenceKeyToClassName } from '../../../../app/helpers/format'
 
 import {
     getPreviewerSvgMapForActor,

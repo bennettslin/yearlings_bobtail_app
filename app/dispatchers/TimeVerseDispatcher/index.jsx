@@ -8,7 +8,7 @@ import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 
-import { getSceneIndexForVerseIndex } from 'album/api/verses'
+import { getSceneIndexForVerseIndex } from '../../album/api/verses'
 
 class TimeVerseDispatcher extends PureComponent {
 

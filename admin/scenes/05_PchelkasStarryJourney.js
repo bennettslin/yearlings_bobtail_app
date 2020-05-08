@@ -1,4 +1,4 @@
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../app/constants/scene'
 import {
     PRETEEN_BENNETT,
     MOTHER,
@@ -7,28 +7,28 @@ import {
     BRAD,
     ANDREW,
     TRISTAN
-} from 'constants/scene/actors'
+} from '../../app/constants/scene/actors'
 import {
     THROWING,
     NOODLING
-} from 'constants/scene/actors/andrew'
+} from '../../app/constants/scene/actors/andrew'
 import {
     GESTURING,
     SNACKING
-} from 'constants/scene/actors/brad'
-import { STARING } from 'constants/scene/actors/christopher'
-import { BLISSFUL_GUILTY } from 'constants/scene/actors/christopherBennett'
-import { ARGUING } from 'constants/scene/actors/mother'
+} from '../../app/constants/scene/actors/brad'
+import { STARING } from '../../app/constants/scene/actors/christopher'
+import { BLISSFUL_GUILTY } from '../../app/constants/scene/actors/christopherBennett'
+import { ARGUING } from '../../app/constants/scene/actors/mother'
 import {
     FEIGNING_SICK,
     SHAKEN,
     STOIC,
     WISTFUL,
     SHEEPISH
-} from 'constants/scene/actors/preteenBennett'
-import { POPULAR_GIRL } from 'constants/scene/actors/sasha'
-import { ASLEEP } from 'constants/scene/actors/songs'
-import { PRINCIPAL } from 'constants/scene/actors/tristan'
+} from '../../app/constants/scene/actors/preteenBennett'
+import { POPULAR_GIRL } from '../../app/constants/scene/actors/sasha'
+import { ASLEEP } from '../../app/constants/scene/actors/songs'
+import { PRINCIPAL } from '../../app/constants/scene/actors/tristan'
 
 export default [
     {

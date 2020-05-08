@@ -1,4 +1,4 @@
-import isString from 'lodash/isstring'
+import isString from '../../../../utils/lodash/isstring'
 
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
@@ -109,7 +109,7 @@ import {
     BENNETT_LIZ_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION
-} from 'constants/scene/actors'
+} from '../../../../constants/scene/actors'
 
 const SHARED_STYLES_MAP = {
     [YOUNG_BENNETT]: youngBennett,

@@ -11,7 +11,7 @@ import epilogue from '../../../../assets/svgs/actors/tomer/epilogue'
 import {
     SHANE_BUYING,
     SHANE_SPILLING
-} from 'constants/scene/actors/tomer'
+} from '../../../constants/scene/actors/tomer'
 
 import {
     GANGBANGER,
@@ -21,7 +21,7 @@ import {
     CEMETERY,
     STATION_WAGON,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../constants/scene/actors/songs'
 
 export default {
     [ABBEY_ROAD]: abbeyRoad,

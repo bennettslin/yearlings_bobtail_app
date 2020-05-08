@@ -1,5 +1,5 @@
-import album from 'album'
-import { getAnnotation } from 'album/api/annotations'
+import album from '../../album'
+import { getAnnotation } from '../../album/api/annotations'
 
 const getAnnotationIndexForInterval = ({
     intervalIndex,

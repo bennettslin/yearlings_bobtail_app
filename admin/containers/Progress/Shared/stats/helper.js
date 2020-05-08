@@ -1,8 +1,8 @@
 // For dev purposes. Calculate words in lyrics and annotations.
 
-import keys from 'lodash/keys'
+import keys from '../../../../../app/utils/lodash/keys'
 
-import { STAT_TEXT_KEYS } from 'constants/lyrics'
+import { STAT_TEXT_KEYS } from '../../../../../app/constants/lyrics'
 
 export default {
 

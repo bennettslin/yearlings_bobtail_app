@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { updateActivatedStore } from '../../redux/activated/action'
 import { updateLyricStore } from '../../redux/lyric/action'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 class LyricIndicesListener extends PureComponent {
 

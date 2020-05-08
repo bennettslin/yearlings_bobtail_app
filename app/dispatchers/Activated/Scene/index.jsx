@@ -7,8 +7,8 @@ import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 
-import { getVerseIndexForSceneIndex } from 'album/api/scenes'
-import { getStartTimeForVerseIndex } from 'album/api/time'
+import { getVerseIndexForSceneIndex } from '../../../album/api/scenes'
+import { getStartTimeForVerseIndex } from '../../../album/api/time'
 import { getActivatedSceneForDirection } from './helper'
 
 class ActivatedSceneDispatcher extends PureComponent {

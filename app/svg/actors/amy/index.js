@@ -8,14 +8,14 @@ import epilogue from '../../../../assets/svgs/actors/amy/epilogue'
 import {
     SMOKER,
     DOCTOR
-} from 'constants/scene/actors/amy'
+} from '../../../constants/scene/actors/amy'
 
 import {
     FLIRTING,
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../constants/scene/actors/songs'
 
 export default {
     [SMOKER]: smoker,

@@ -1,8 +1,8 @@
 import ALL_ARRANGEMENTS_ACTORS from '../../scene/arrangements/actors'
 import ALL_ARRANGEMENTS_THINGS from '../../scene/arrangements/things'
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../utils/lodash/isfinite'
 
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../constants/scene'
 
 export const getArrangementForPresence = ({
     presenceType,

@@ -1,9 +1,9 @@
 // TODO: Separate further into smaller files?
 
-import keys from 'lodash/keys'
+import keys from '../../../../../utils/lodash/keys'
 
-import { REFERENCE } from 'constants/dots'
-import { WIKI } from 'constants/lyrics'
+import { REFERENCE } from '../../../../../constants/dots'
+import { WIKI } from '../../../../../constants/lyrics'
 
 const _addWikiDotKeyToCard = (card) => {
     const { description } = card

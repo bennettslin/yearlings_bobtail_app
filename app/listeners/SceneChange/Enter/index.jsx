@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import SceneChangeUpdateDispatcher from '../Update'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 class SceneChangeEnterListener extends PureComponent {
 

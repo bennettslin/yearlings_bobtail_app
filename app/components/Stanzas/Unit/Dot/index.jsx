@@ -8,9 +8,9 @@ import { updateAnnotationStore } from '../../../../redux/annotation/action'
 
 import Anchor from '../../../Anchor'
 
-import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { getPrefixedDotLetterClassNames } from '../../../../helpers/dot'
 
-import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
+import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 
 const mapStateToProps = ({
     accessStore: {

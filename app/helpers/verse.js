@@ -1,7 +1,7 @@
-import findIndex from 'lodash/findindex'
+import findIndex from '../utils/lodash/findindex'
 
-import { getSongTotalTime } from 'album/api/time'
-import { getSongStanzaConfigs } from 'album/api/stanzas'
+import { getSongTotalTime } from '../album/api/time'
+import { getSongStanzaConfigs } from '../album/api/stanzas'
 
 export const getVerseIndexforRatio = (
     songIndex,

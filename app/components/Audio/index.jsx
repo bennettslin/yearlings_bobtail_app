@@ -15,18 +15,18 @@ import {
     AUDIO_OPTIONS_TOGGLE_KEY,
     PREVIOUS_SONG_KEY,
     NEXT_SONG_KEY
-} from 'constants/access'
+} from '../../constants/access'
 
 import {
     AUDIO_NEXT_BUTTON_KEY,
     AUDIO_OPTIONS_BUTTON_KEY,
     AUDIO_PLAY_BUTTON_KEY,
     AUDIO_PREVIOUS_BUTTON_KEY
-} from 'constants/buttons'
+} from '../../constants/buttons'
 
-import { getSongsAndLoguesCount } from 'album/api/songs'
-import { populateRefs } from 'helpers/ref'
-import { getPlayerCanPlayThrough } from 'helpers/player'
+import { getSongsAndLoguesCount } from '../../album/api/songs'
+import { populateRefs } from '../../helpers/ref'
+import { getPlayerCanPlayThrough } from '../../helpers/player'
 
 const mapStateToProps = ({
     playersStore: { playersBitNumber },

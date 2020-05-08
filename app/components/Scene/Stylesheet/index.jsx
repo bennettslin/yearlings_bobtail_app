@@ -1,8 +1,8 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 
-import Stylesheet from 'modules/Stylesheet'
-import DynamicStylesheet from 'modules/Stylesheet/Dynamic'
+import Stylesheet from '../../../modules/Stylesheet'
+import DynamicStylesheet from '../../../modules/Stylesheet/Dynamic'
 
 import {
     CUBE_X_AXIS_LENGTH,

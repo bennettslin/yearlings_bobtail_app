@@ -1,7 +1,7 @@
 import {
     getCardWormholeLinksArray,
     parseWormholeLinkForDispatch
-} from 'helpers/wormhole'
+} from '../../../../../helpers/wormhole'
 
 export const getCardWormholeLink = ({
     songIndex,

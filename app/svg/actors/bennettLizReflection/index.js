@@ -6,7 +6,7 @@ import {
     HARD_ON_REFLECTION,
     MISSIONARY_REFLECTION,
     AFTERGLOW_REFLECTION
-} from 'constants/scene/actors/bennettLiz'
+} from '../../../constants/scene/actors/bennettLiz'
 
 export default {
     [HARD_ON_REFLECTION]: hardOnReflection,

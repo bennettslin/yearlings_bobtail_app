@@ -6,7 +6,7 @@ import {
     SHOWN,
     HIDDEN,
     DISABLED
-} from 'constants/options'
+} from '../../../../constants/options'
 
 const TIPS_MAP = {
     [SHOWN]: tipsShown,

@@ -17,7 +17,7 @@ import AccessStylesheet from '../../components/Access/Stylesheet'
 
 import { isEmailFocused } from '../../utils/email'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 const mapStateToProps = ({
     mountStore: { canSliderMount },

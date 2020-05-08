@@ -5,7 +5,7 @@ import cx from 'classnames'
 import Dot from '../../Dot'
 import Underline from '../Underline'
 
-import { ORDERED_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from '../../../constants/dots'
 
 const propTypes = {
     // From parent.

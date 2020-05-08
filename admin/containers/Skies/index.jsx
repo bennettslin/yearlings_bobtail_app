@@ -4,7 +4,7 @@ import cx from 'classnames'
 import Sky from './Sky'
 import SkyDay from './SkyDay'
 
-import { removeLoadingIndicator } from 'utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/window'
 
 import {
     TIME_TWILIGHT_TAIWAN,

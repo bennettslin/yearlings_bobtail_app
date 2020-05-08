@@ -1,13 +1,13 @@
 import {
     getAnnotation,
     getAnnotationsCount
-} from 'album/api/annotations'
-import { getVerse } from 'album/api/verses'
+} from '../../../album/api/annotations'
+import { getVerse } from '../../../album/api/verses'
 import {
     getShowAnnotationForColumn,
     getAnnotationIndexForDirection
-} from 'helpers/annotation'
-import { intersects } from 'helpers/dot'
+} from '../../../helpers/annotation'
+import { intersects } from '../../../helpers/dot'
 
 export const getAnnotationIndexForVerseIndex = ({
     isEarShown,

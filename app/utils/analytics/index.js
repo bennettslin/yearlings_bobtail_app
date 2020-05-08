@@ -1,7 +1,7 @@
+/* eslint-disable */
 // This grabs from app, not admin, in production.
 import { GA_ACCOUNT } from 'admin/constants/analytics'
 
-/* eslint-disable */
 window.dataLayer = window.dataLayer || []
 function gtag() {
     dataLayer.push(arguments)

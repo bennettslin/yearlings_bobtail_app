@@ -3,7 +3,7 @@ import React from 'react'
 // import PropTypes from 'prop-types'
 
 import StatsHelper from './helper'
-import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
+import { LYRIC_TEXT_KEYS } from '../../../../../app/constants/lyrics'
 
 /*************
  * CONTAINER *

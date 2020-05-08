@@ -10,9 +10,9 @@ import {
     getGlobalAnnotationsDoneCount
 } from '../../../app/album/api/admin'
 
-import { getArrayOfLength } from 'helpers/general'
+import { getArrayOfLength } from '../../../app/helpers/general'
 
-import { removeLoadingIndicator } from 'utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/window'
 
 const INTERVALS_COUNT = 4
 

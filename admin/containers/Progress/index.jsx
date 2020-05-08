@@ -5,7 +5,7 @@ import Shared from './Shared'
 import AdminNav from './AdminNav'
 
 import { logSvgCount } from '../../utils/log'
-import { removeLoadingIndicator } from 'utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/window'
 
 import './style.scss'
 

@@ -7,15 +7,15 @@ import {
     getEmptyDotsStore
 } from './storageHelper'
 
-import { SHOWN } from 'constants/options'
-import { DEVICE_WIDTH_CONFIGS } from 'constants/responsive/deviceWidth'
+import { SHOWN } from '../constants/options'
+import { DEVICE_WIDTH_CONFIGS } from '../constants/responsive/deviceWidth'
 
-import { getCubesForKey } from 'scene/arrangements/cubes'
+import { getCubesForKey } from '../scene/arrangements/cubes'
 
 import {
     TIME_STAGE,
     SEASON_STAGE
-} from 'scene/sky/keys'
+} from '../scene/sky/keys'
 
 import { getScene } from '../album/api/scenes'
 import { getStartTimeForVerseIndex } from '../album/api/time'

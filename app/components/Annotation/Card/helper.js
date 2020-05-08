@@ -1,5 +1,5 @@
-import { getAnnotationCardObject } from 'album/api/annotations'
-import { WORMHOLE } from 'constants/dots'
+import { getAnnotationCardObject } from '../../../album/api/annotations'
+import { WORMHOLE } from '../../../constants/dots'
 
 export const getAnnotationCard = ({
     songIndex,

@@ -13,9 +13,9 @@ import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 
-import { getStartTimeForVerseIndex } from 'album/api/time'
-import { populateRefs } from 'helpers/ref'
-import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
+import { getStartTimeForVerseIndex } from '../../../album/api/time'
+import { populateRefs } from '../../../helpers/ref'
+import { getPlayersCanPlayThroughFromBitNumber } from '../../../helpers/player'
 
 import {
     getMp3s,

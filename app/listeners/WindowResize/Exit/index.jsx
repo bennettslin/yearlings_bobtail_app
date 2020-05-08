@@ -6,7 +6,7 @@ import { resetViewportForTransition } from '../../../redux/viewport/action'
 
 import WindowResizeEnterDispatcher from '../Enter'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 import { getWindowHeightAndWidth } from '../helper'
 

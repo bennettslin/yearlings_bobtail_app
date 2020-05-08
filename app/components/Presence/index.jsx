@@ -5,12 +5,12 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import PresenceSvg from '../../modules/PresenceSvg'
 
-import { capitaliseForClassName } from 'helpers/format'
+import { capitaliseForClassName } from '../../helpers/format'
 import { getSvgMapForActor } from '../../svg/actors'
 import { getSvgMapForThing } from '../../svg/things'
 
-import { ACTOR } from 'constants/scene'
-import { DEFAULT_STAGE_KEY } from 'constants/scene/scenes'
+import { ACTOR } from '../../constants/scene'
+import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 
 class Presence extends PureComponent {
 

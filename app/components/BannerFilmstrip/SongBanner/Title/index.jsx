@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getSongTitle } from 'album/api/songs'
+import { getSongTitle } from '../../../../album/api/songs'
 
 const mapStateToProps = ({
     selectedStore: { selectedSongIndex }

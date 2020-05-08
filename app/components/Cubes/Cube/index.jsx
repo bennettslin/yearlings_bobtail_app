@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import Svg from 'modules/Svg'
+import Svg from '../../../modules/Svg'
 import Face from './Face'
 
-import { getCharStringForNumber } from 'helpers/format'
-import { getValueInAbridgedMatrix } from 'helpers/general'
+import { getCharStringForNumber } from '../../../helpers/format'
+import { getValueInAbridgedMatrix } from '../../../helpers/general'
 
 import { getCssZIndexForCube } from './helpers/zIndices'
 
@@ -18,11 +18,11 @@ import {
     FACES,
     CEILING,
     FLOOR
-} from 'constants/scene/cubes'
+} from '../../../constants/scene/cubes'
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES
-} from 'constants/cubeIndex'
+} from '../../../constants/cubeIndex'
 
 const
     getMapStateToProps = (yIndex, xIndex) => ({

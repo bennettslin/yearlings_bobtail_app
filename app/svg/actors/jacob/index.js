@@ -6,7 +6,7 @@ import {
     FLIRTING,
     CARRYING,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../constants/scene/actors/songs'
 
 export default {
     [FLIRTING]: flirting,

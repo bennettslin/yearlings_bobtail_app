@@ -11,13 +11,13 @@ import { updateTransientStore } from '../../redux/transient/action'
 import ListenContainer from '../Listen'
 import SceneChangeUpdateDispatcher from '../../listeners/SceneChange/Update'
 
-import { getStartTimeForVerseIndex } from 'album/api/time'
-import { getSceneIndexForVerseIndex } from 'album/api/verses'
+import { getStartTimeForVerseIndex } from '../../album/api/time'
+import { getSceneIndexForVerseIndex } from '../../album/api/verses'
 import {
     getValidRoutingIndices,
     getPathForIndices
 } from './helper'
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 class RoutingContainer extends PureComponent {
 

@@ -7,7 +7,7 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import PopupView from './View'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 /*************
  * CONTAINER *

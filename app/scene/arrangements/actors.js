@@ -1,4 +1,4 @@
-import keys from 'lodash/keys'
+import keys from '../../utils/lodash/keys'
 
 /**
  * Organising actor instances by scene just makes it easier to tweak the
@@ -9,29 +9,29 @@ import keys from 'lodash/keys'
 import {
     ACTORS_LOGUE_PROLOGUE,
     ACTORS_LOGUE_EPILOGUE
-} from 'scene/scenes/logue'
+} from '../../scene/scenes/logue'
 import {
     ACTORS_NOHO_HOUSES_DIDI,
     ACTORS_NOHO_HOUSES_WILLY
-} from 'scene/scenes/nohoHouses'
-import ACTORS_NOHO_SCHOOL from 'scene/scenes/nohoSchool'
+} from '../../scene/scenes/nohoHouses'
+import ACTORS_NOHO_SCHOOL from '../../scene/scenes/nohoSchool'
 import {
     ACTORS_BATHROOM_BATHING,
     ACTORS_BATHROOM_SINGING
-} from 'scene/scenes/bathroom'
-import ACTORS_FREEWAY from 'scene/scenes/freeway'
-import ACTORS_PORCH from 'scene/scenes/porch'
-import ACTORS_CHANGELING_CAVE from 'scene/scenes/changelingCave'
-import ACTORS_SCHOOLBUS from 'scene/scenes/schoolbus'
-import ACTORS_TETHERBALL_COURT from 'scene/scenes/tetherballCourt'
-import ACTORS_TAIWAN_ROOM from 'scene/scenes/taiwanRoom'
-import ACTORS_TAIWAN_STAIRS from 'scene/scenes/taiwanStairs'
-import ACTORS_TAIWAN_GATE from 'scene/scenes/taiwanGate'
-import ACTORS_RICKSHAW from 'scene/scenes/rickshaw'
-import ACTORS_SHORE from 'scene/scenes/shore'
-import ACTORS_BUOY from 'scene/scenes/buoy'
-import ACTORS_OCEAN_DEPTHS from 'scene/scenes/oceanDepths'
-import ACTORS_OCEAN_FLOOR from 'scene/scenes/oceanFloor'
+} from '../../scene/scenes/bathroom'
+import ACTORS_FREEWAY from '../../scene/scenes/freeway'
+import ACTORS_PORCH from '../../scene/scenes/porch'
+import ACTORS_CHANGELING_CAVE from '../../scene/scenes/changelingCave'
+import ACTORS_SCHOOLBUS from '../../scene/scenes/schoolbus'
+import ACTORS_TETHERBALL_COURT from '../../scene/scenes/tetherballCourt'
+import ACTORS_TAIWAN_ROOM from '../../scene/scenes/taiwanRoom'
+import ACTORS_TAIWAN_STAIRS from '../../scene/scenes/taiwanStairs'
+import ACTORS_TAIWAN_GATE from '../../scene/scenes/taiwanGate'
+import ACTORS_RICKSHAW from '../../scene/scenes/rickshaw'
+import ACTORS_SHORE from '../../scene/scenes/shore'
+import ACTORS_BUOY from '../../scene/scenes/buoy'
+import ACTORS_OCEAN_DEPTHS from '../../scene/scenes/oceanDepths'
+import ACTORS_OCEAN_FLOOR from '../../scene/scenes/oceanFloor'
 import {
     ACTORS_BEDROOM_ENRAGED,
     ACTORS_BEDROOM_FEARFUL,
@@ -39,66 +39,66 @@ import {
     ACTORS_BEDROOM_FEIGNING,
     ACTORS_BEDROOM_ASLEEP,
     ACTORS_BEDROOM_SHAKEN
-} from 'scene/scenes/bedroom'
-import ACTORS_VAN_NUYS_LOCKERS from 'scene/scenes/vanNuysLockers'
-import ACTORS_VAN_NUYS_QUAD from 'scene/scenes/vanNuysQuad'
-import ACTORS_VAN_NUYS_HALLWAY from 'scene/scenes/vanNuysHallway'
-import ACTORS_CATHOLIC_CHURCH from 'scene/scenes/catholicChurch'
+} from '../../scene/scenes/bedroom'
+import ACTORS_VAN_NUYS_LOCKERS from '../../scene/scenes/vanNuysLockers'
+import ACTORS_VAN_NUYS_QUAD from '../../scene/scenes/vanNuysQuad'
+import ACTORS_VAN_NUYS_HALLWAY from '../../scene/scenes/vanNuysHallway'
+import ACTORS_CATHOLIC_CHURCH from '../../scene/scenes/catholicChurch'
 import {
     ACTORS_BERKELEY_BANCROFT_ASH,
     ACTORS_BERKELEY_BANCROFT_VEGAN
-} from 'scene/scenes/berkeleyBancroft'
+} from '../../scene/scenes/berkeleyBancroft'
 import {
     ACTORS_BERKELEY_CAMPANILE_ASH,
     ACTORS_BERKELEY_CAMPANILE_VEGAN
-} from 'scene/scenes/berkeleyCampanile'
+} from '../../scene/scenes/berkeleyCampanile'
 import {
     ACTORS_CINEMA_CRUSHED,
     ACTORS_CINEMA_WONDERING
-} from 'scene/scenes/cinema'
-import ACTORS_CINEMA_STREET from 'scene/scenes/cinemaStreet'
-import ACTORS_BASEMENT from 'scene/scenes/basement'
-import ACTORS_MUSEUM from 'scene/scenes/museum'
-import ACTORS_BACKSTAGE from 'scene/scenes/backstage'
-import ACTORS_GO_KARTS from 'scene/scenes/goKarts'
+} from '../../scene/scenes/cinema'
+import ACTORS_CINEMA_STREET from '../../scene/scenes/cinemaStreet'
+import ACTORS_BASEMENT from '../../scene/scenes/basement'
+import ACTORS_MUSEUM from '../../scene/scenes/museum'
+import ACTORS_BACKSTAGE from '../../scene/scenes/backstage'
+import ACTORS_GO_KARTS from '../../scene/scenes/goKarts'
 import {
     ACTORS_DISHROOM_READING,
     ACTORS_DISHROOM_LANCET
-} from 'scene/scenes/dishroom'
+} from '../../scene/scenes/dishroom'
 import {
     ACTORS_WAITING_ROOM_ASLEEP,
     ACTORS_WAITING_ROOM_CHEEK
-} from 'scene/scenes/waitingRoom'
+} from '../../scene/scenes/waitingRoom'
 import {
     ACTORS_CLUB_FRONT_M,
     ACTORS_CLUB_FRONT_GARRYOWEN
-} from 'scene/scenes/clubFront'
-import ACTORS_CLUB_SIDE_CROWD from 'scene/scenes/clubSideCrowd'
-import ACTORS_CLUB_SIDE_STAGE from 'scene/scenes/clubSideStage'
-import ACTORS_CLUB_FAR from 'scene/scenes/clubFar'
-import ACTORS_CLUB_LOADING from 'scene/scenes/clubLoading'
+} from '../../scene/scenes/clubFront'
+import ACTORS_CLUB_SIDE_CROWD from '../../scene/scenes/clubSideCrowd'
+import ACTORS_CLUB_SIDE_STAGE from '../../scene/scenes/clubSideStage'
+import ACTORS_CLUB_FAR from '../../scene/scenes/clubFar'
+import ACTORS_CLUB_LOADING from '../../scene/scenes/clubLoading'
 import {
     ACTORS_BENNETT_BED_GINGERBREAD,
     ACTORS_BENNETT_BED_LINENS
-} from 'scene/scenes/bennettBed'
+} from '../../scene/scenes/bennettBed'
 import {
     ACTORS_BENNETT_COUCH_OPINION,
     ACTORS_BENNETT_COUCH_PONDERING,
     ACTORS_BENNETT_COUCH_RUBIKS,
     ACTORS_BENNETT_COUCH_READING
-} from 'scene/scenes/bennettCouch'
-import ACTORS_COURTYARD from 'scene/scenes/courtyard'
+} from '../../scene/scenes/bennettCouch'
+import ACTORS_COURTYARD from '../../scene/scenes/courtyard'
 import {
     ACTORS_BENNETT_GATE_MOP_SOPPED,
     ACTORS_BENNETT_GATE_GATE_CODE
-} from 'scene/scenes/bennettGate'
+} from '../../scene/scenes/bennettGate'
 import {
     ACTORS_LIZ_BED_HARD_ON,
     ACTORS_LIZ_BED_MISSIONARY,
     ACTORS_LIZ_BED_AFTERGLOW,
     ACTORS_LIZ_BED_LOOK_BACK,
     ACTORS_LIZ_BED_VEGAN
-} from 'scene/scenes/lizBed'
+} from '../../scene/scenes/lizBed'
 import {
     ACTORS_LIZ_COUCH_ASLEEP,
     ACTORS_LIZ_COUCH_GOLDEN,
@@ -110,47 +110,47 @@ import {
     ACTORS_LIZ_COUCH_SEATED,
     ACTORS_LIZ_COUCH_SIFTING,
     ACTORS_LIZ_COUCH_STANDING
-} from 'scene/scenes/lizCouch'
+} from '../../scene/scenes/lizCouch'
 import {
     ACTORS_LIZ_GATE_DATE_ENDING,
     ACTORS_LIZ_GATE_DATE_ENDED
-} from 'scene/scenes/lizGate'
-import ACTORS_ROYCE_HALL from 'scene/scenes/royceHall'
-import ACTORS_WALGREENS from 'scene/scenes/walgreens'
-import ACTORS_STEAM_TUNNEL from 'scene/scenes/steamTunnel'
-import ACTORS_CEMETERY from 'scene/scenes/cemetery'
-import ACTORS_STATION_WAGON from 'scene/scenes/stationWagon'
-import ACTORS_ATTIC from 'scene/scenes/attic'
+} from '../../scene/scenes/lizGate'
+import ACTORS_ROYCE_HALL from '../../scene/scenes/royceHall'
+import ACTORS_WALGREENS from '../../scene/scenes/walgreens'
+import ACTORS_STEAM_TUNNEL from '../../scene/scenes/steamTunnel'
+import ACTORS_CEMETERY from '../../scene/scenes/cemetery'
+import ACTORS_STATION_WAGON from '../../scene/scenes/stationWagon'
+import ACTORS_ATTIC from '../../scene/scenes/attic'
 import {
     ACTORS_OAKLAND_HOUSES_GARRYOWEN,
     ACTORS_OAKLAND_HOUSES_GOLDEN
-} from 'scene/scenes/oaklandHouses'
-import ACTORS_BASEMENT_SOFA from 'scene/scenes/basementCouch'
-import ACTORS_OAKLAND_RESIDENTIAL from 'scene/scenes/oaklandResidential'
-import ACTORS_OAKLAND_COMMERCIAL from 'scene/scenes/oaklandCommercial'
-import ACTORS_OAKLAND_PUBLIC from 'scene/scenes/oaklandPublic'
+} from '../../scene/scenes/oaklandHouses'
+import ACTORS_BASEMENT_SOFA from '../../scene/scenes/basementCouch'
+import ACTORS_OAKLAND_RESIDENTIAL from '../../scene/scenes/oaklandResidential'
+import ACTORS_OAKLAND_COMMERCIAL from '../../scene/scenes/oaklandCommercial'
+import ACTORS_OAKLAND_PUBLIC from '../../scene/scenes/oaklandPublic'
 import {
     ACTORS_BASEMENT_BED_FEARFUL,
     ACTORS_BASEMENT_BED_FENDING
-} from 'scene/scenes/basementBed'
-import ACTORS_SNOWGLOBES_PAST from 'scene/scenes/snowglobesPast'
-import ACTORS_SNOWGLOBES_PRESENT from 'scene/scenes/snowglobesPresent'
-import ACTORS_SNOWGLOBES_FUTURE from 'scene/scenes/snowglobesFuture'
+} from '../../scene/scenes/basementBed'
+import ACTORS_SNOWGLOBES_PAST from '../../scene/scenes/snowglobesPast'
+import ACTORS_SNOWGLOBES_PRESENT from '../../scene/scenes/snowglobesPresent'
+import ACTORS_SNOWGLOBES_FUTURE from '../../scene/scenes/snowglobesFuture'
 import {
     ACTORS_EL_CERRITO_REMOVING,
     ACTORS_EL_CERRITO_COWGIRL,
     ACTORS_EL_CERRITO_BLOWJOB,
     ACTORS_EL_CERRITO_DISPOSING
-} from 'scene/scenes/elCerrito'
-import ACTORS_ALLEY from 'scene/scenes/alley'
-import ACTORS_EL_TORITO from 'scene/scenes/elTorito'
-import ACTORS_PAMPAS from 'scene/scenes/pampas'
-import ACTORS_WEDDING from 'scene/scenes/wedding'
-import ACTORS_CLIFF from 'scene/scenes/cliff'
+} from '../../scene/scenes/elCerrito'
+import ACTORS_ALLEY from '../../scene/scenes/alley'
+import ACTORS_EL_TORITO from '../../scene/scenes/elTorito'
+import ACTORS_PAMPAS from '../../scene/scenes/pampas'
+import ACTORS_WEDDING from '../../scene/scenes/wedding'
+import ACTORS_CLIFF from '../../scene/scenes/cliff'
 import {
     ACTORS_DEATHBED_CREMATED,
     ACTORS_DEATHBED_DREAM
-} from 'scene/scenes/deathbed'
+} from '../../scene/scenes/deathbed'
 
 const SCENE_ARRANGEMENTS = [
     ACTORS_LOGUE_PROLOGUE,

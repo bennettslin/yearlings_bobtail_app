@@ -1,4 +1,4 @@
-import { getIndexedVersesForUnit } from 'album/api/verses'
+import { getIndexedVersesForUnit } from '../../../album/api/verses'
 
 export const addIndexedVerses = (song) => {
     const { lyricUnits } = song

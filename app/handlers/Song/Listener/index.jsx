@@ -11,7 +11,7 @@ import {
 } from '../../../redux/session/action'
 import { resetVerseBars } from '../../../redux/verseBars/action'
 
-import { getBookForSongIndex } from 'album/api/songs'
+import { getBookForSongIndex } from '../../../album/api/songs'
 
 class SongListener extends PureComponent {
 

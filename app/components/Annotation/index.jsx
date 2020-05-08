@@ -9,8 +9,8 @@ import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import AnnotationHeader from './Header'
 import AnnotationCard from './Card'
 
-import { populateRefs } from 'helpers/ref'
-import { getArrayOfLength } from 'helpers/general'
+import { populateRefs } from '../../helpers/ref'
+import { getArrayOfLength } from '../../helpers/general'
 import { getAnnotationCardsLength } from './helper'
 
 const mapStateToProps = ({

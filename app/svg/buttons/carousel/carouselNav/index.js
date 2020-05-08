@@ -6,7 +6,7 @@ import {
     IS_CAROUSEL_SHOWN,
     IS_NAV_SHOWN,
     IS_NEITHER_SHOWN
-} from 'constants/options'
+} from '../../../../constants/options'
 
 const CAROUSEL_NAV_MAP = {
     [IS_CAROUSEL_SHOWN]: carouselShown,

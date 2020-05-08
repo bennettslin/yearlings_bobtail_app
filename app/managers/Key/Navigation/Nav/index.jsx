@@ -9,14 +9,14 @@ import SongDispatcher from '../../../../handlers/Song/Dispatcher'
 import {
     getSongsAndLoguesCount,
     getBookForSongIndex
-} from 'album/api/songs'
-import { populateRefs } from 'helpers/ref'
+} from '../../../../album/api/songs'
+import { populateRefs } from '../../../../helpers/ref'
 
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ENTER
-} from 'constants/access'
+} from '../../../../constants/access'
 
 class NavNavigation extends PureComponent {
 

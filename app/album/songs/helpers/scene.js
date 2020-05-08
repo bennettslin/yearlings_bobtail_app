@@ -1,5 +1,5 @@
-import isFinite from 'lodash/isfinite'
-import albumScenes from 'album/scenes'
+import isFinite from '../../../utils/lodash/isfinite'
+import albumScenes from '../../../album/scenes'
 
 const _addDurationsToSceneConfigs = (sceneConfigs, { totalTime }) => {
     // This is a duplicate of the same method for verse configs.

@@ -11,7 +11,7 @@ import ScrollOverlayHandler from '../../../handlers/ScrollOverlay'
 import VerseBarHandler from '../../../handlers/VerseBar'
 import Stanzas from '../../Stanzas'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 const mapStateToProps = ({
     lyricStore: {

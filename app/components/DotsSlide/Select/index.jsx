@@ -9,11 +9,11 @@ import Button from '../../Button'
 import Dot from '../../Dot'
 import Anchor from '../../Anchor'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
-import { ENTER } from 'constants/access'
-import { DOTS_SLIDE_SELECT_BUTTON_KEY } from 'constants/buttons'
-import { DOT_DESCRIPTIONS } from 'constants/dots'
+import { ENTER } from '../../../constants/access'
+import { DOTS_SLIDE_SELECT_BUTTON_KEY } from '../../../constants/buttons'
+import { DOT_DESCRIPTIONS } from '../../../constants/dots'
 
 class DotsSlideSelect extends PureComponent {
 

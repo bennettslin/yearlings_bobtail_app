@@ -9,13 +9,13 @@ import {
     STOOPING,
     COMFORTING,
     ARGUING
-} from 'constants/scene/actors/mother'
+} from '../../../constants/scene/actors/mother'
 
 import {
     PRESENT,
     FUTURE,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../constants/scene/actors/songs'
 
 export default {
     [STOOPING]: stooping,

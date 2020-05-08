@@ -4,17 +4,17 @@ import {
     SIDE,
     TILE,
     BASE
-} from 'constants/scene/cubes'
+} from '../../../../../../../constants/scene/cubes'
 import {
     LEFT,
     RIGHT
-} from 'constants/lyrics'
+} from '../../../../../../../constants/lyrics'
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from 'constants/cubeIndex'
+} from '../../../../../../../constants/cubeIndex'
 
-import { getHorizontalPlaneFractions } from 'helpers/cube'
+import { getHorizontalPlaneFractions } from '../../../../../../../helpers/cube'
 
 const MID_X_INDEX = CUBE_X_AXIS_LENGTH / 2
 

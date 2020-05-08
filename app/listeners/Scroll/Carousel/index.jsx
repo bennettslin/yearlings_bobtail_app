@@ -8,7 +8,7 @@ import {
     setChildElement
 } from '../helper'
 
-import { CAROUSEL_SCROLL } from 'constants/scroll'
+import { CAROUSEL_SCROLL } from '../../../constants/scroll'
 
 class ScrollCarouselListener extends PureComponent {
 

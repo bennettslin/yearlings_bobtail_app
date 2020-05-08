@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSessionStore } from '../../redux/session/action'
 
-import { AUDIO_OPTIONS } from 'constants/options'
+import { AUDIO_OPTIONS } from '../../constants/options'
 
 class AudioOptionDispatcher extends PureComponent {
 

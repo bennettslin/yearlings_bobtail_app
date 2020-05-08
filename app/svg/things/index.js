@@ -20,7 +20,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene/things'
+} from '../../constants/scene/things'
 
 const THING_SVG_MAPS = {
     [BACKDROP]: backdrops,

@@ -5,9 +5,9 @@ import epilogue from '../../../../assets/svgs/actors/tristan/epilogue'
 import {
     PRINCIPAL,
     PUNCHING
-} from 'constants/scene/actors/tristan'
+} from '../../../constants/scene/actors/tristan'
 
-import { EPILOGUE } from 'constants/scene/actors/songs'
+import { EPILOGUE } from '../../../constants/scene/actors/songs'
 
 export default {
     [PUNCHING]: punching,

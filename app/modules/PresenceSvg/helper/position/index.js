@@ -1,9 +1,9 @@
-import { CUBE_X_AXIS_LENGTH } from 'constants/cubeIndex'
+import { CUBE_X_AXIS_LENGTH } from '../../../../constants/cubeIndex'
 
-import { getHorizontalPlaneFractions } from 'helpers/cube'
-import { getValueInAbridgedMatrix } from 'helpers/general'
+import { getHorizontalPlaneFractions } from '../../../../helpers/cube'
+import { getValueInAbridgedMatrix } from '../../../../helpers/general'
 
-import { getCubesForKey } from 'scene/arrangements/cubes'
+import { getCubesForKey } from '../../../../scene/arrangements/cubes'
 
 const _getNearestXIndex = (xPosition) => {
     let xIndex

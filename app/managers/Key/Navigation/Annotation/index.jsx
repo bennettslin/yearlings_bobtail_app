@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isString from 'lodash/isstring'
+import isString from '../../../../utils/lodash/isstring'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'
 import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
 import WikiWormholeDispatcher from '../../../../handlers/WikiWormhole/Dispatcher'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../../helpers/ref'
 
 import {
     getWikiWormholeEntity,
@@ -21,7 +21,7 @@ import {
     ARROW_UP,
     ARROW_DOWN,
     ENTER
-} from 'constants/access'
+} from '../../../../constants/access'
 
 class AnnotationNavigation extends PureComponent {
 

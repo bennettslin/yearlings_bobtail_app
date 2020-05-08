@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import WikiWormholeDispatcher from '../Dispatcher'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 class WikiWormholeListener extends PureComponent {
 

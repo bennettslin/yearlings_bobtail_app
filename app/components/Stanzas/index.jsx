@@ -12,10 +12,10 @@ import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
 
-import { getSongStanzasCount } from 'album/api/stanzas'
-import { getLastUnitDotCardIndex } from 'album/api/units'
-import { getArrayOfLength } from 'helpers/general'
-import { populateRefs } from 'helpers/ref'
+import { getSongStanzasCount } from '../../album/api/stanzas'
+import { getLastUnitDotCardIndex } from '../../album/api/units'
+import { getArrayOfLength } from '../../helpers/general'
+import { populateRefs } from '../../helpers/ref'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }

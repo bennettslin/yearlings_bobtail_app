@@ -7,7 +7,7 @@ import AccessLetters from '../../Access/Letters'
 import {
     ARROW_UP,
     ARROW_DOWN
-} from 'constants/access'
+} from '../../../constants/access'
 
 const mapStateToProps = ({
     lyricStore: { lyricAnnotationIndex },

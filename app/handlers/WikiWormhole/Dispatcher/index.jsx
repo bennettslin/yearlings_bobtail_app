@@ -3,13 +3,13 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../../utils/lodash/isfinite'
 
 import { updateAccessStore } from '../../../redux/access/action'
 
 import { getWikiWormholeIndexForDirection } from './helper'
 
-import { getDotKeysFromBitNumber } from 'helpers/dot'
+import { getDotKeysFromBitNumber } from '../../../helpers/dot'
 
 class WikiWormholeDispatcher extends PureComponent {
 

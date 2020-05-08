@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 
 import AnnotationAccessDispatcher from '../Dispatcher'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 class AnnotationAccessListener extends PureComponent {
 

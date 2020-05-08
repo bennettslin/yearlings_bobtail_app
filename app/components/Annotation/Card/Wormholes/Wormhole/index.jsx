@@ -9,17 +9,17 @@ import SongDispatcher from '../../../../../handlers/Song/Dispatcher'
 import Texts from '../../../../Texts'
 import Button from '../../../../Button'
 
-import { ENTER } from 'constants/access'
-import { WORMHOLE_BUTTON_KEY } from 'constants/buttons'
+import { ENTER } from '../../../../../constants/access'
+import { WORMHOLE_BUTTON_KEY } from '../../../../../constants/buttons'
 
 import {
     EAR_COLUMN_KEYS,
     LYRIC
-} from 'constants/lyrics'
+} from '../../../../../constants/lyrics'
 
-import { getSongTitle } from 'album/api/songs'
-import { getVerse } from 'album/api/verses'
-import { populateRefs } from 'helpers/ref'
+import { getSongTitle } from '../../../../../album/api/songs'
+import { getVerse } from '../../../../../album/api/verses'
+import { populateRefs } from '../../../../../helpers/ref'
 
 import { getCardWormholeLink } from './helper'
 

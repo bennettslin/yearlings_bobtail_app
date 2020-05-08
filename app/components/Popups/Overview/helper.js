@@ -1,4 +1,4 @@
-import { SHOWN } from 'constants/options'
+import { SHOWN } from '../../../constants/options'
 
 export const getIsOverviewVisibleBySection = ({
     inMain,

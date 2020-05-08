@@ -8,7 +8,7 @@ import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Annotation from '../../Annotation'
 import Popup from '../../Popup'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 const mapStateToProps = ({
     transientStore: { isOverlayingAnnotation },

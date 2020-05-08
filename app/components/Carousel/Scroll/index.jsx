@@ -9,9 +9,9 @@ import Transition from 'react-transition-group/Transition'
 import ScrollCarouselListener from '../../../listeners/Scroll/Carousel'
 import CarouselAnnotation from '../Annotation'
 
-import { getAnnotationsCount } from 'album/api/annotations'
-import { getArrayOfLength } from 'helpers/general'
-import { populateRefs } from 'helpers/ref'
+import { getAnnotationsCount } from '../../../album/api/annotations'
+import { getArrayOfLength } from '../../../helpers/general'
+import { populateRefs } from '../../../helpers/ref'
 
 const mapStateToProps = ({
     lyricStore: {

@@ -10,11 +10,11 @@ import cx from 'classnames'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Button from '../../../Button'
 
-import { ENTER } from 'constants/access'
+import { ENTER } from '../../../../constants/access'
 import {
     AUDIO_FAST_FORWARD_BUTTON_KEY,
     AUDIO_REWIND_BUTTON_KEY
-} from 'constants/buttons'
+} from '../../../../constants/buttons'
 
 const mapStateToProps = ({
     selectedStore: { selectedVerseIndex }

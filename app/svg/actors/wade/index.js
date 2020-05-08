@@ -7,13 +7,13 @@ import epilogue from '../../../../assets/svgs/actors/wade/epilogue'
 import {
     CATHOLIC_GUY,
     WATCHING
-} from 'constants/scene/actors/wade'
+} from '../../../constants/scene/actors/wade'
 
 import {
     MINGLING,
     PROTESTER,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../constants/scene/actors/songs'
 
 export default {
     [WATCHING]: watching,

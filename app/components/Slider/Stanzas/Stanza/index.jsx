@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { getStanzaConfig } from 'album/api/stanzas'
-import { getSongTotalTime } from 'album/api/time'
+import { getStanzaConfig } from '../../../../album/api/stanzas'
+import { getSongTotalTime } from '../../../../album/api/time'
 
 import SliderVerses from './Verses'
 
-import { CSS_OVERLAP_MARGIN_X_SLIDER } from 'constants/responsive'
+import { CSS_OVERLAP_MARGIN_X_SLIDER } from '../../../../constants/responsive'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }

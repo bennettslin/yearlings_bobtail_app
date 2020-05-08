@@ -1,9 +1,9 @@
-import keys from 'lodash/keys'
+import keys from '../../app/utils/lodash/keys'
 
 import {
     getWindowStorage,
     setInStorage
-} from 'utils/window'
+} from '../../app/utils/window'
 
 import WHOLE_ACTORS_LIST from '../constants/actors'
 import THINGS_LIST from '../constants/things'
@@ -12,7 +12,7 @@ import {
     getPreviewerSvgMapForThing
 } from './svg'
 
-import { convertPresenceKeyToClassName } from 'helpers/format'
+import { convertPresenceKeyToClassName } from '../../app/helpers/format'
 
 const getPresencePrefix = (isActor) => {
     return isActor ? 'actor' : 'thing'

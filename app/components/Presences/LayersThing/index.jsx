@@ -14,7 +14,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene/things'
+} from '../../../constants/scene/things'
 
 const LayersThing = ({
     [BACKDROP]: backdrops,

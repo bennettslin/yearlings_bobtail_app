@@ -1,4 +1,4 @@
-import keys from 'lodash/keys'
+import keys from '../../../utils/lodash/keys'
 
 export const getStaticStyleStringForIndex = ({
 

@@ -44,18 +44,8 @@ const getConfig = ({
                 admin: showAdmin ?
                     path.resolve(__dirname, './admin') :
                     path.resolve(__dirname, './app'),
-                album: path.resolve(__dirname, './app/album'),
-                components: path.resolve(__dirname, './app/components'),
-                constants: path.resolve(__dirname, './app/constants'),
-                handlers: path.resolve(__dirname, './app/handlers'),
-                helpers: path.resolve(__dirname, './app/helpers'),
-                managers: path.resolve(__dirname, './app/managers'),
                 // Replace the lodash package with vanilla code.
-                lodash: path.resolve(__dirname, './app/utils/lodash'),
-                modules: path.resolve(__dirname, './app/modules'),
-                scene: path.resolve(__dirname, './app/scene'),
-                svg: path.resolve(__dirname, './app/svg'),
-                utils: path.resolve(__dirname, './app/utils')
+                lodash: path.resolve(__dirname, './app/utils/lodash')
             }
         },
         module: {

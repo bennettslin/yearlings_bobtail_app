@@ -1,5 +1,5 @@
 // TODO: This could be a little neater.
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../../../utils/lodash/isfinite'
 import { registerAnnotation } from './helpers'
 
 import {
@@ -7,7 +7,7 @@ import {
     ANCHOR,
     LEFT,
     RIGHT
-} from 'constants/lyrics'
+} from '../../../../constants/lyrics'
 
 const _recurseToFindAnnotations = ({
     song,

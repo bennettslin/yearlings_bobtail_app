@@ -1,19 +1,19 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../utils/lodash/isfinite'
 
 import { updateSliderStore } from '../../redux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 
-import { getStartTimeForVerseIndex } from 'album/api/time'
-import { getSceneIndexForVerseIndex } from 'album/api/verses'
+import { getStartTimeForVerseIndex } from '../../album/api/time'
+import { getSceneIndexForVerseIndex } from '../../album/api/verses'
 
-import { getClientX, getElementRatioForClientX } from 'helpers/dom'
-import { populateRefs } from 'helpers/ref'
+import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
+import { populateRefs } from '../../helpers/ref'
 
-import { getVerseIndexforRatio } from 'helpers/verse'
+import { getVerseIndexforRatio } from '../../helpers/verse'
 
 class SliderTouchDispatcher extends PureComponent {
 

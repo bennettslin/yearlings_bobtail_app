@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { getStanzaConfig } from 'album/api/stanzas'
+import { getStanzaConfig } from '../../../album/api/stanzas'
 
 import Unit from '../Unit'
 

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 import Texts from '../../../../../app/components/Texts'
 
-import { ORDERED_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from '../../../../../app/constants/dots'
 
 class AnnotationCard extends PureComponent {
 

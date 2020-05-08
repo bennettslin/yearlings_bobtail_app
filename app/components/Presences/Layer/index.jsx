@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import keys from 'lodash/keys'
+import keys from '../../../utils/lodash/keys'
 
 import Presence from '../../Presence'
 import { getSvgMapForActor } from '../../../svg/actors'
 import { getSvgMapForThing } from '../../../svg/things'
 
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../../constants/scene'
 
 const mapStateToProps = ({
     sceneStore: { sceneCubesKey }

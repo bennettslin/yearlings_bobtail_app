@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
-import isUndefined from 'lodash/isundefined'
+import isUndefined from '../../../../utils/lodash/isundefined'
 
 class Player extends PureComponent {
 

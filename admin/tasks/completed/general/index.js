@@ -4592,6 +4592,6 @@ export default [
     },
     {
         taskName: `Change some aliased paths to relative paths.`,
-        workedHours: 2
+        workedHours: 3
     }
 ]

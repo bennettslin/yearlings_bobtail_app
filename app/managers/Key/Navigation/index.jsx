@@ -8,9 +8,9 @@ import DotsSlideNavigation from './DotsSlide'
 import LyricNavigation from './Lyric'
 import NavNavigation from './Nav'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
-import { ENTER } from 'constants/access'
+import { ENTER } from '../../../constants/access'
 
 class NavigationManager extends PureComponent {
 

@@ -1,10 +1,10 @@
-import isFinite from 'lodash/isfinite'
+import isFinite from '../utils/lodash/isfinite'
 import {
     getAnnotation,
     getAnnotationColumnIndex,
     getAnnotationsCount
-} from 'album/api/annotations'
-import { intersects } from 'helpers/dot'
+} from '../album/api/annotations'
+import { intersects } from '../helpers/dot'
 
 export const getShowAnnotationForColumn = ({
     selectedSongIndex,

@@ -8,7 +8,7 @@ import {
     resetAccessedNav
 } from '../../../redux/access/action'
 import { updateSessionStore } from '../../../redux/session/action'
-import { getBookForSongIndex } from 'album/api/songs'
+import { getBookForSongIndex } from '../../../album/api/songs'
 
 class NavListener extends PureComponent {
 

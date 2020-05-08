@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSelectedStore } from '../../redux/selected/action'
 
-import { getStartTimeForVerseIndex } from 'album/api/time'
+import { getStartTimeForVerseIndex } from '../../album/api/time'
 
 class AudioListener extends PureComponent {
 

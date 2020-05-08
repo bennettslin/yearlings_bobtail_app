@@ -7,7 +7,7 @@ import cx from 'classnames'
 import NavButtonIndexed from '../ButtonIndexed'
 import NavRoad from '../Road'
 
-import { getSongsAndLoguesCount } from 'album/api/songs'
+import { getSongsAndLoguesCount } from '../../../../../album/api/songs'
 
 const navBookLoguePropTypes = {
     // From parent.

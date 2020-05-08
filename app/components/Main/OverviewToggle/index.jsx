@@ -9,7 +9,7 @@ import OverviewDispatcher from '../../../handlers/Overview/Dispatcher'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 import { OVERVIEW_TOGGLE_KEY } from '../../../constants/access'
 import { OVERVIEW_BUTTON_KEY } from '../../../constants/buttons'

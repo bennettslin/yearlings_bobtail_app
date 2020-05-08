@@ -1,4 +1,4 @@
-import { getSongScenesCount } from 'album/api/scenes'
+import { getSongScenesCount } from '../../../album/api/scenes'
 
 export const getActivatedSceneForDirection = ({
     selectedSongIndex,

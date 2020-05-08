@@ -1,10 +1,10 @@
-import keys from 'lodash/keys'
-import isString from 'lodash/isstring'
+import keys from '../../../../../utils/lodash/keys'
+import isString from '../../../../../utils/lodash/isstring'
 
 import {
     WIKI,
     WIKI_INDEX
-} from 'constants/lyrics'
+} from '../../../../../constants/lyrics'
 
 const _registerWikiLinksForCard = ({
     annotation,

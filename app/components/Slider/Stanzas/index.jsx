@@ -8,7 +8,7 @@ import cx from 'classnames'
 import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
 
-import { getSongStanzasCount } from 'album/api/stanzas'
+import { getSongStanzasCount } from '../../../album/api/stanzas'
 import { getArrayOfLength } from '../../../helpers/general'
 
 const mapStateToProps = ({

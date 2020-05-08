@@ -4,7 +4,7 @@ import lyricEarRight from '../../../../../assets/svgs/app/lyric/lyricEarRight'
 import {
     LEFT,
     RIGHT
-} from 'constants/lyrics'
+} from '../../../../constants/lyrics'
 
 const LYRIC_EAR_MAP = {
     [LEFT]: lyricEarLeft,

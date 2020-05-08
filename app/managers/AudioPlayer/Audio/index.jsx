@@ -5,12 +5,12 @@ import { updateAudioStore } from '../../../redux/audio/action'
 import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 
 import SongDispatcher from '../../../handlers/Song/Dispatcher'
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 import {
     CONTINUE,
     AUDIO_OPTIONS
-} from 'constants/options'
+} from '../../../constants/options'
 
 class AudioManager extends PureComponent {
 

@@ -6,7 +6,7 @@ import { updateOptionStore } from '../../../redux/option/action'
 import {
     SHOWN,
     HIDDEN
-} from 'constants/options'
+} from '../../../constants/options'
 
 class OverviewListener extends PureComponent {
 

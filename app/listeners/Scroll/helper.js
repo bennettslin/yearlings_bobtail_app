@@ -1,15 +1,15 @@
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../utils/lodash/isfinite'
 import scrollIntoView from 'scroll-into-view'
 
 import {
     getIsDesktopWidth,
     getIsMonitorWidth
-} from 'helpers/responsive'
+} from '../../helpers/responsive'
 
 import {
     CSS_WIDTH_GOLDEN_CORD,
     CSS_WIDTH_UNCANNY_VALLEY
-} from 'constants/responsive/deviceWidth'
+} from '../../constants/responsive/deviceWidth'
 
 const _getLyricTopAlign = (deviceWidthIndex, isLyricExpanded) => {
 

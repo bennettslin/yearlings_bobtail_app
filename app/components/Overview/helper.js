@@ -1,4 +1,4 @@
-import { getSong } from 'album/api/songs'
+import { getSong } from '../../album/api/songs'
 
 export const getSongOverview = (songIndex) => {
     const song = getSong(songIndex)

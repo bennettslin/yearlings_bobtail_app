@@ -11,7 +11,7 @@ import VerseLine from './Line'
 
 import {
     EAR_COLUMN_KEYS, CENTRE, LYRIC
-} from 'constants/lyrics'
+} from '../../../constants/lyrics'
 
 const verseLinesPropTypes = {
     // From parent.

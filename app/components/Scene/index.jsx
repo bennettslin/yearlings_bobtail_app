@@ -9,7 +9,7 @@ import Cubes from '../Cubes'
 import PresencesConfig from '../Presences'
 import PresenceZIndexStylesheet from './Stylesheet'
 
-import { CUBE_Y_INDICES_WITH_NEG } from 'constants/cubeIndex'
+import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
 const mapStateToProps = ({
     sceneStore: { canSceneUpdate }

@@ -1,4 +1,4 @@
-import { getAnnotationCardObject } from 'album/api/annotations'
+import { getAnnotationCardObject } from '../album/api/annotations'
 
 export const parseWormholeLinkForDispatch = (wormholeLink) => {
     const {

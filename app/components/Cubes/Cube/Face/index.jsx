@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import { getSvgFillForFace } from './helpers/colours'
 import { getSvgDataPathForFace } from './helpers/paths'
-import { getCharStringForNumber } from 'helpers/format'
+import { getCharStringForNumber } from '../../../../helpers/format'
 
 const propTypes = {
     // From parent.

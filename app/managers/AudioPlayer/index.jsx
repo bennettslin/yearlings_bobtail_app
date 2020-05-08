@@ -5,7 +5,7 @@ import React, { PureComponent } from 'react'
 import AudioManager from './Audio'
 import PlayerManager from './Player'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 class AudioPlayerManager extends PureComponent {
 

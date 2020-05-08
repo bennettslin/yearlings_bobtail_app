@@ -17,7 +17,7 @@ import LogicWrapper from '../../wrappers/LogicWrapper'
 import WindowResizeExitListener from '../../listeners/WindowResize/Exit'
 import Live from '../../components/Live'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 class RootContainer extends PureComponent {
 

@@ -1,4 +1,4 @@
-import { getAnnotation } from 'album/api/annotations'
+import { getAnnotation } from '../../../album/api/annotations'
 
 export const getWikiUrl = ({
     selectedSongIndex,

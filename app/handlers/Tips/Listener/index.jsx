@@ -10,7 +10,7 @@ import { getShowTipForDevice } from '../../../album/api/tips'
 import {
     SHOWN,
     HIDDEN
-} from 'constants/options'
+} from '../../../constants/options'
 
 class TipsListener extends PureComponent {
 

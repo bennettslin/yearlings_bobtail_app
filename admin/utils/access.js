@@ -1,5 +1,5 @@
-import findIndex from 'lodash/findindex'
-import keys from 'lodash/keys'
+import findIndex from '../../app/utils/lodash/findindex'
+import keys from '../../app/utils/lodash/keys'
 
 import {
     getPreviewerSvgMapForActor,
@@ -14,9 +14,9 @@ import {
     ARROW_DOWN,
     ARROW_LEFT,
     ARROW_RIGHT
-} from 'constants/access'
+} from '../../app/constants/access'
 
-import { getKeyName } from 'managers/Key/helper'
+import { getKeyName } from '../../app/managers/Key/helper'
 
 const accessPresenceType = ({
     isActor,

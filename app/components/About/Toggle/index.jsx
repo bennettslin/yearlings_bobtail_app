@@ -7,7 +7,7 @@ import AboutDispatcher from '../../../dispatchers/About'
 import Button from '../../Button'
 import TipsHand from '../../Tips/Hand'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 import { ABOUT_TOGGLE_KEY } from '../../../constants/access'
 import { ABOUT_BUTTON_KEY } from '../../../constants/buttons'

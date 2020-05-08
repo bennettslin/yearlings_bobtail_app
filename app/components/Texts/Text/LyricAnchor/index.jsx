@@ -10,9 +10,9 @@ import StopPropagationDispatcher from '../../../../dispatchers/StopPropagation'
 import WikiDispatcher from '../../../../handlers/Wiki/Dispatcher'
 import Anchor from '../../../Anchor'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../../helpers/ref'
 
-import { LYRIC_ANNOTATION_SCROLL } from 'constants/scroll'
+import { LYRIC_ANNOTATION_SCROLL } from '../../../../constants/scroll'
 
 const mapStateToProps = ({
     lyricStore: {

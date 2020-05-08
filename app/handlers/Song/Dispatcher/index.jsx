@@ -7,17 +7,17 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../../utils/lodash/isfinite'
 
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateAudioStore } from '../../../redux/audio/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 
-import { getStartTimeForVerseIndex } from 'album/api/time'
-import { getSceneIndexForVerseIndex } from 'album/api/verses'
+import { getStartTimeForVerseIndex } from '../../../album/api/time'
+import { getSceneIndexForVerseIndex } from '../../../album/api/verses'
 
-import { getSongsAndLoguesCount } from 'album/api/songs'
+import { getSongsAndLoguesCount } from '../../../album/api/songs'
 
 class SongDispatcher extends PureComponent {
 

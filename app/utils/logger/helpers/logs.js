@@ -1,5 +1,5 @@
 import pino from 'pino'
-import isUndefined from 'lodash/isundefined'
+import isUndefined from '../../../utils/lodash/isundefined'
 import sendEvent from '../../analytics'
 
 import { getTimeDifference } from './time'

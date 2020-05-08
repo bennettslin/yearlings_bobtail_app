@@ -12,7 +12,7 @@ import {
 import {
     LYRIC_ANNOTATION_SCROLL,
     VERSE_SCROLL
-} from 'constants/scroll'
+} from '../../../constants/scroll'
 
 class ScrollLyricListener extends PureComponent {
 

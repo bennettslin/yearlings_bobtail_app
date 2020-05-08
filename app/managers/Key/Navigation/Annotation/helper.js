@@ -1,5 +1,5 @@
-import { getAnnotation } from 'album/api/annotations'
-import { parseWormholeLinkForDispatch } from 'helpers/wormhole'
+import { getAnnotation } from '../../../../album/api/annotations'
+import { parseWormholeLinkForDispatch } from '../../../../helpers/wormhole'
 
 export const getWormholeLinkFromIndex = ({
     songIndex,

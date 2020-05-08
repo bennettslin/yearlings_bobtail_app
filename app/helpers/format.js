@@ -1,7 +1,7 @@
 // Helpers for parsing text objects.
-import isString from 'lodash/isstring'
+import isString from '../utils/lodash/isstring'
 
-import { LYRIC_TEXT_KEYS } from 'constants/lyrics'
+import { LYRIC_TEXT_KEYS } from '../constants/lyrics'
 
 const appendSharedSuffix = (style) => (
     `${style}__shared`

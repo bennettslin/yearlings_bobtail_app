@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSceneStore } from '../../../redux/scene/action'
 
-import { getScene } from 'album/api/scenes'
+import { getScene } from '../../../album/api/scenes'
 
 import {
     TIME_STAGE,
     SEASON_STAGE
-} from 'scene/sky/keys'
+} from '../../../scene/sky/keys'
 
 class SceneChangeUpdateDispatcher extends PureComponent {
 

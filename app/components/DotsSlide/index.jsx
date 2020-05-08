@@ -10,8 +10,8 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 import DotsSlideSelect from './Select'
 
-import { getDotKeysFromBitNumber } from 'helpers/dot'
-import { populateRefs } from 'helpers/ref'
+import { getDotKeysFromBitNumber } from '../../helpers/dot'
+import { populateRefs } from '../../helpers/ref'
 
 import { DOT_KEYS_ARRAY_CONFIGS } from './constants'
 

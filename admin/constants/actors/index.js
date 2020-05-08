@@ -57,7 +57,7 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from 'constants/scene/actors'
+} from '../../../app/constants/scene/actors'
 
 const ASH_SCENES = 'ashScenes'
 const TETHERBALL_SCENE = 'tetherballScene'

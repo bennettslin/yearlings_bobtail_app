@@ -4,17 +4,17 @@ import React, { PureComponent } from 'react'
 import AnnotationDispatcher from '../../../handlers/Annotation/Dispatcher'
 import Button from '../../Button'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 import {
     ARROW_LEFT,
     ARROW_RIGHT
-} from 'constants/access'
+} from '../../../constants/access'
 
 import {
     CAROUSEL_PREVIOUS_BUTTON_KEY,
     CAROUSEL_NEXT_BUTTON_KEY
-} from 'constants/buttons'
+} from '../../../constants/buttons'
 
 class CarouselSelect extends PureComponent {
 

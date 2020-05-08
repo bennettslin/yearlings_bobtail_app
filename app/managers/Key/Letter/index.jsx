@@ -46,7 +46,7 @@ import {
 import {
     SHOWN,
     HIDDEN
-} from 'constants/options'
+} from '../../../constants/options'
 
 class LetterManager extends PureComponent {
 

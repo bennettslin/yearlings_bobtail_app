@@ -5,7 +5,7 @@ import {
     LAPTOP_WIDTH_KEY,
     MONITOR_WIDTH_KEY,
     DEVICE_WIDTH_CONFIGS
-} from 'constants/responsive/deviceWidth'
+} from '../constants/responsive/deviceWidth'
 
 export const getIsPhoneWidth = (deviceWidthIndex) => {
     const { deviceWidthKey } = DEVICE_WIDTH_CONFIGS[deviceWidthIndex]

@@ -9,7 +9,7 @@ import { updateLyricStore } from '../../../redux/lyric/action'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AspectRatio from '../AspectRatio'
 
-import InlineSvg from 'modules/InlineSvg'
+import InlineSvg from '../../../modules/InlineSvg'
 import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
 import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 

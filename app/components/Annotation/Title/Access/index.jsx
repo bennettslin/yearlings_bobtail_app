@@ -6,7 +6,7 @@ import AccessLetters from '../../../Access/Letters'
 import {
     ARROW_UP,
     ARROW_DOWN
-} from 'constants/access'
+} from '../../../../constants/access'
 
 class AnnotationAccess extends PureComponent {
 

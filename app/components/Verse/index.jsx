@@ -3,16 +3,16 @@ import React, { memo, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../utils/lodash/isfinite'
 
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
 
 import VerseLines from './Lines'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
-import { VERSE_SCROLL } from 'constants/scroll'
+import { VERSE_SCROLL } from '../../constants/scroll'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }

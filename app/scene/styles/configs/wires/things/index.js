@@ -1,4 +1,4 @@
-import { convertPresenceKeyToClassName } from 'helpers/format'
+import { convertPresenceKeyToClassName } from '../../../../../helpers/format'
 import {
     BUBBLE,
     CARDBOARD,

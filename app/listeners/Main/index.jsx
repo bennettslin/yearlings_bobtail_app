@@ -12,7 +12,7 @@ import {
     getToggleShowsImmediately
 } from './helper'
 
-import { SHOWN } from 'constants/options'
+import { SHOWN } from '../../constants/options'
 
 class MainListener extends PureComponent {
 

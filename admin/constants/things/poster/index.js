@@ -1,4 +1,4 @@
-import { CARDBOARD } from 'constants/scene/things'
+import { CARDBOARD } from '../../../../app/constants/scene/things'
 
 import {
     TINTIN_POSTER,
@@ -6,7 +6,7 @@ import {
     NIRVANA_POSTER,
     LEONARD_COHEN_POSTER,
     ELLIOTT_SMITH_POSTER
-} from 'constants/scene/things/cardboards'
+} from '../../../../app/constants/scene/things/cardboards'
 
 const INSTANCES = [
     {

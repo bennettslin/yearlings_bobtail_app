@@ -46,7 +46,7 @@ import {
     WORMHOLE_BUTTON_KEY,
     SCORES_BUTTON_KEY,
     TIPS_BUTTON_KEY
-} from 'constants/buttons'
+} from '../../constants/buttons'
 
 const BUTTON_ICONS_MAP = {
     [ABOUT_BUTTON_KEY]: about,

@@ -9,7 +9,7 @@ import DotSequence from '../../DotSequence'
 import Texts from '../../Texts'
 import AnnotationWormholes from './Wormholes'
 
-import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { getPrefixedDotLetterClassNames } from '../../../helpers/dot'
 
 import { getAnnotationCard } from './helper'
 

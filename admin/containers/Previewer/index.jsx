@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from 'lodash/keys'
+import keys from '../../../app/utils/lodash/keys'
 import scrollIntoView from 'scroll-into-view'
 
 import PreviewerSvg from './Svg'
@@ -10,9 +10,9 @@ import PreviewerDashboard from './Dashboard'
 import {
     capitaliseForClassName,
     convertPresenceKeyToClassName
-} from 'helpers/format'
+} from '../../../app/helpers/format'
 
-import { removeLoadingIndicator } from 'utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/window'
 
 import { accessPresence } from '../../utils/access'
 
@@ -28,7 +28,7 @@ import {
     getPreviewerSvgMapForThing
 } from '../../utils/svg'
 
-import { BACKDROP } from 'constants/scene/things'
+import { BACKDROP } from '../../../app/constants/scene/things'
 
 import './style.scss'
 

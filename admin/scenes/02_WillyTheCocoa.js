@@ -1,4 +1,4 @@
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../app/constants/scene'
 import {
     PRETEEN_BENNETT,
     WILLY,
@@ -7,27 +7,27 @@ import {
     CHRISTOPHER,
     HOWIE,
     TOMER
-} from 'constants/scene/actors'
+} from '../../app/constants/scene/actors'
 import {
     CAUTIOUS,
     ENRAGED,
     FEARFUL
-} from 'constants/scene/actors/preteenBennett'
+} from '../../app/constants/scene/actors/preteenBennett'
 import {
     COLLECTING,
     DUCKING
-} from 'constants/scene/actors/willy'
+} from '../../app/constants/scene/actors/willy'
 import {
     STOOPING,
     COMFORTING
-} from 'constants/scene/actors/mother'
-import { ROARING } from 'constants/scene/actors/father'
+} from '../../app/constants/scene/actors/mother'
+import { ROARING } from '../../app/constants/scene/actors/father'
 import {
     TANTRUM,
     SOBBING
-} from 'constants/scene/actors/christopher'
-import { REASSURING_ENCHANTED } from 'constants/scene/actors/christopherBennettWilly'
-import { GANGBANGER } from 'constants/scene/actors/songs'
+} from '../../app/constants/scene/actors/christopher'
+import { REASSURING_ENCHANTED } from '../../app/constants/scene/actors/christopherBennettWilly'
+import { GANGBANGER } from '../../app/constants/scene/actors/songs'
 
 export default [
     {

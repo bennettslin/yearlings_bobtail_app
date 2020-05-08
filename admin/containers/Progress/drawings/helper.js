@@ -1,8 +1,8 @@
-import isFinite from 'lodash/isfinite'
-import keys from 'lodash/keys'
+import isFinite from '../../../../app/utils/lodash/isfinite'
+import keys from '../../../../app/utils/lodash/keys'
 import albumScenes from '../../../scenes'
 
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../../../app/constants/scene'
 
 const
     // The time spent thus far per drawing.

@@ -1,4 +1,4 @@
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../app/constants/scene'
 import {
     BENNETT,
     MARA,
@@ -9,26 +9,26 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from 'constants/scene/actors'
+} from '../../app/constants/scene/actors'
 import {
     SIDELONG_HESITANCE,
     REMOVING_SHOES,
     SHOES_REFLECTION
-} from 'constants/scene/actors/bennett'
+} from '../../app/constants/scene/actors/bennett'
 import {
     ASLEEP_REACHING,
     REACHING_REFLECTION
-} from 'constants/scene/actors/liz'
-import { SHANE_SPILLING } from 'constants/scene/actors/tomer'
-import { WATCHING } from 'constants/scene/actors/wade'
-import { SQUEEZING } from 'constants/scene/actors/amyStephanie'
+} from '../../app/constants/scene/actors/liz'
+import { SHANE_SPILLING } from '../../app/constants/scene/actors/tomer'
+import { WATCHING } from '../../app/constants/scene/actors/wade'
+import { SQUEEZING } from '../../app/constants/scene/actors/amyStephanie'
 import {
     PERFORMING,
     FLIRTING,
     CARRYING,
     MINGLING,
     WAITING
-} from 'constants/scene/actors/songs'
+} from '../../app/constants/scene/actors/songs'
 
 export default [
     {

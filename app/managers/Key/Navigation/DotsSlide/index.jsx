@@ -5,7 +5,7 @@ import { updateAccessStore } from '../../../../redux/access/action'
 
 import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../../helpers/ref'
 
 import {
     ARROW_LEFT,
@@ -13,8 +13,8 @@ import {
     ARROW_UP,
     ARROW_DOWN,
     ENTER
-} from 'constants/access'
-import { ORDERED_DOT_KEYS } from 'constants/dots'
+} from '../../../../constants/access'
+import { ORDERED_DOT_KEYS } from '../../../../constants/dots'
 
 class DotsSlideNavigation extends PureComponent {
 

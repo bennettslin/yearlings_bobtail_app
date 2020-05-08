@@ -5,7 +5,7 @@ import {
     NEXT_VERSE_KEY,
     PREVIOUS_SCENE_KEY,
     NEXT_SCENE_KEY
-} from 'constants/access'
+} from '../../constants/access'
 
 export const getKeyName = (e) => {
     // Do not handle at all if any modifier keys are present.

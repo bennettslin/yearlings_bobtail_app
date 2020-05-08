@@ -7,8 +7,8 @@ import cx from 'classnames'
 
 import SliderTime from './Time'
 
-import { getSongTotalTime } from 'album/api/time'
-import { getFormattedTime } from 'helpers/format'
+import { getSongTotalTime } from '../../../album/api/time'
+import { getFormattedTime } from '../../../helpers/format'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex },

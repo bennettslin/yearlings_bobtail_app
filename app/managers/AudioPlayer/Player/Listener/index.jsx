@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { updatePlayersStore } from '../../../../redux/players/action'
 import { resetAudioQueue } from '../../../../redux/audio/action'
 
-import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
+import { getPlayersCanPlayThroughFromBitNumber } from '../../../../helpers/player'
 import { getNextPlayerIndexToRender } from './helper'
 
 class PlayerListener extends PureComponent {

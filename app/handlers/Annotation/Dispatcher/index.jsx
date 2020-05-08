@@ -9,7 +9,7 @@ import {
     intersects,
     getDotKeysFromBitNumber
 } from '../../../helpers/dot'
-import { getAnnotation } from 'album/api/annotations'
+import { getAnnotation } from '../../../album/api/annotations'
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 
 class AnnotationDispatcher extends PureComponent {

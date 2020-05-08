@@ -1,12 +1,12 @@
-import keys from 'lodash/keys'
+import keys from '../../app/utils/lodash/keys'
 
-import { getSvgMapForActor } from 'svg/actors'
-import { getSvgMapForThing } from 'svg/things'
+import { getSvgMapForActor } from '../../app/svg/actors'
+import { getSvgMapForThing } from '../../app/svg/things'
 
 import { WHOLE_ACTOR_INSTANCES } from '../constants/actors'
 import { CUSTOM_THING_INSTANCES } from '../constants/things'
 
-import { convertPresenceKeyToClassName } from 'helpers/format'
+import { convertPresenceKeyToClassName } from '../../app/helpers/format'
 
 const getSvgMapForMultipleTypes = ({ isActor, presenceType }) => {
     // Actors and custom lists may include difference presence types.

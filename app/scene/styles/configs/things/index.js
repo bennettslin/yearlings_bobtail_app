@@ -9,7 +9,7 @@ import furnitures from './furnitures'
 import panels from './panels'
 import puppets from './puppets'
 
-import { convertPresenceKeyToClassName } from 'helpers/format'
+import { convertPresenceKeyToClassName } from '../../../../helpers/format'
 
 import {
     BACKDROP,
@@ -22,7 +22,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene/things'
+} from '../../../../constants/scene/things'
 
 const SHARED_STYLES_MAP = {
     [BACKDROP]: backdrops,

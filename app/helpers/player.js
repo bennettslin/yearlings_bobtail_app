@@ -1,12 +1,12 @@
 import {
     getSongsAndLoguesCount,
     getSongsNotLoguesCount
-} from 'album/api/songs'
+} from '../album/api/songs'
 import {
     getObjectFromBitNumber,
     getValueInBitNumber
-} from 'helpers/bit'
-import { getArrayOfLength } from 'helpers/general'
+} from '../helpers/bit'
+import { getArrayOfLength } from '../helpers/general'
 
 export const getPlayersCanPlayThroughFromBitNumber = (bitNumber) => {
     return getObjectFromBitNumber({

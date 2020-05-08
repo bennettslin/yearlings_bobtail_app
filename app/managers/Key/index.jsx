@@ -10,7 +10,7 @@ import { updateVerseBarsStore } from '../../redux/verseBars/action'
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 import { isEmailFocused } from '../../utils/email'
 
@@ -29,7 +29,7 @@ import {
     ESCAPE,
     SPACE,
     TAB
-} from 'constants/access'
+} from '../../constants/access'
 
 class KeyManager extends PureComponent {
 

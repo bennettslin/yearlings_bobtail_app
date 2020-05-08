@@ -1,6 +1,6 @@
-import { getSong } from 'album/api/songs'
+import { getSong } from '../../album/api/songs'
 
-import { COLUMN_INDEX } from 'constants/lyrics'
+import { COLUMN_INDEX } from '../../constants/lyrics'
 
 export const getAnnotationsCount = (songIndex) => {
     const { annotations } = getSong(songIndex)

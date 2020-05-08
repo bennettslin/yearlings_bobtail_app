@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 
-import InlineSvg from 'modules/InlineSvg'
+import InlineSvg from '../../modules/InlineSvg'
 import dramaMasks from '../../../assets/svgs/theatre/dramaMasks'
 
 const Spinner = () => (

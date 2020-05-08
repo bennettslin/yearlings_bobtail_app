@@ -1,5 +1,5 @@
-import isFinite from 'lodash/isfinite'
-import keys from 'lodash/keys'
+import isFinite from '../../utils/lodash/isfinite'
+import keys from '../../utils/lodash/keys'
 
 import ALL_ARRANGEMENTS_ACTORS from '../../scene/arrangements/actors'
 import ALL_ARRANGEMENTS_THINGS from '../../scene/arrangements/things'

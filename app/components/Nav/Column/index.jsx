@@ -11,7 +11,7 @@ import NavBookLogue from './Book/Logue'
 import NavBookSongs from './Book/Songs'
 import NavBookToggle from './Book/Toggle'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 const mapStateToProps = ({
     responsiveStore: { showSingleNavBook },

@@ -1,16 +1,16 @@
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH
-} from 'constants/cubeIndex'
+} from '../constants/cubeIndex'
 
 import {
     VANISHING_POINT_Y_PERCENTAGE,
     TILE_Y_PERCENTAGES,
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH
-} from 'constants/cubeRender'
+} from '../constants/cubeRender'
 
-import { getValidYIndex } from 'helpers/general'
+import { getValidYIndex } from '../helpers/general'
 
 /***************
  * COORDINATES *

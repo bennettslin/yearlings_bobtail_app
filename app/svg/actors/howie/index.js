@@ -10,7 +10,7 @@ import epilogue from '../../../../assets/svgs/actors/howie/epilogue'
 import {
     USHER_WAITING,
     USHER_LOOKING
-} from 'constants/scene/actors/howie'
+} from '../../../constants/scene/actors/howie'
 
 import {
     ABBEY_ROAD,
@@ -19,7 +19,7 @@ import {
     STATION_WAGON,
     ATTIC,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../constants/scene/actors/songs'
 
 export default {
     [ABBEY_ROAD]: abbeyRoad,

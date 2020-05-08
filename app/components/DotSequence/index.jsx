@@ -4,7 +4,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { ORDERED_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from '../../constants/dots'
 
 import SequenceDot from './SequenceDot'
 

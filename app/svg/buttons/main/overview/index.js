@@ -6,7 +6,7 @@ import {
     SHOWN,
     HIDDEN,
     DISABLED
-} from 'constants/options'
+} from '../../../../constants/options'
 
 const OVERVIEW_MAP = {
     [SHOWN]: overviewShown,

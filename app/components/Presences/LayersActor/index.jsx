@@ -55,7 +55,7 @@ import {
     BENNETT_REFLECTION,
     LIZ_REFLECTION,
     KHARI_LIZ_REFLECTION
-} from 'constants/scene/actors'
+} from '../../../constants/scene/actors'
 
 const LayersActor = ({
     [FATHER]: father,

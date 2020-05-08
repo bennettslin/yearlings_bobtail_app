@@ -4,7 +4,7 @@ import {
     getDefinedOnlyPayload
 } from '../actionHelper'
 
-import { getCubesForKey } from 'scene/arrangements/cubes'
+import { getCubesForKey } from '../../scene/arrangements/cubes'
 
 import { SCENE_STORE } from '../storeKeys'
 import { SCENE_DEFAULTS } from '../defaultStates'

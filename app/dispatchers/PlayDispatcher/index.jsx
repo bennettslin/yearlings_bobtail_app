@@ -7,8 +7,8 @@ import { updateAudioStore } from '../../redux/audio/action'
 
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 
-import { populateRefs } from 'helpers/ref'
-import { getPlayerCanPlayThrough } from 'helpers/player'
+import { populateRefs } from '../../helpers/ref'
+import { getPlayerCanPlayThrough } from '../../helpers/player'
 
 class PlayDispatcher extends PureComponent {
 

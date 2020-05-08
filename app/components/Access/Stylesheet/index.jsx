@@ -1,14 +1,14 @@
 import React, { memo } from 'react'
 import cx from 'classnames'
 
-import Stylesheet from 'modules/Stylesheet'
-import StaticStylesheet from 'modules/Stylesheet/Static'
+import Stylesheet from '../../../modules/Stylesheet'
+import StaticStylesheet from '../../../modules/Stylesheet/Static'
 
-import { STYLE_LOGIC_ACCESS_LETTERS } from 'constants/access'
+import { STYLE_LOGIC_ACCESS_LETTERS } from '../../../constants/access'
 import {
     PARENT_ACCESS_PREFIX,
     CHILD_ACCESS_PREFIX
-} from 'constants/prefixes'
+} from '../../../constants/prefixes'
 
 const AccessStylesheet = () => {
 

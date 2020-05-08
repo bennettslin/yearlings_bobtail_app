@@ -5,10 +5,10 @@ import { updateAccessStore } from '../../redux/access/action'
 import { updateDotsStore } from '../../redux/dots/action'
 import { updateDotsSlideStore } from '../../redux/dotsSlide/action'
 
-import { setNewValueInBitNumber } from 'helpers/bit'
-import { getDotKeysFromBitNumber } from 'helpers/dot'
+import { setNewValueInBitNumber } from '../../helpers/bit'
+import { getDotKeysFromBitNumber } from '../../helpers/dot'
 
-import { ORDERED_DOT_KEYS } from 'constants/dots'
+import { ORDERED_DOT_KEYS } from '../../constants/dots'
 
 class DotSelectDispatcher extends PureComponent {
 

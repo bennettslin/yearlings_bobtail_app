@@ -6,7 +6,7 @@ import {
     TANTRUM,
     SOBBING,
     STARING
-} from 'constants/scene/actors/christopher'
+} from '../../../constants/scene/actors/christopher'
 
 export default {
     [TANTRUM]: tantrum,

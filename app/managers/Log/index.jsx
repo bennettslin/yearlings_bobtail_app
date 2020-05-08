@@ -4,21 +4,21 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import album from 'album'
+import album from '../../album'
 
 import {
     getSongSceneConfigs,
     getScene
-} from 'album/api/scenes'
-import { getSong } from 'album/api/songs'
-import { getSongStanzaConfigs } from 'album/api/stanzas'
+} from '../../album/api/scenes'
+import { getSong } from '../../album/api/songs'
+import { getSongStanzaConfigs } from '../../album/api/stanzas'
 import {
     getSongVerseConfigs,
     getVerse
-} from 'album/api/verses'
+} from '../../album/api/verses'
 
 import { getWindowStorage } from '../../utils/window'
-import { getAnnotation } from 'album/api/annotations'
+import { getAnnotation } from '../../album/api/annotations'
 
 class LogManager extends PureComponent {
 
@@ -53,7 +53,7 @@ class LogManager extends PureComponent {
 
         copiedAlbum.songs = `songs: ${copiedAlbum.songs.length}`
 
-        return this._logObject('album', copiedAlbum)
+        return this._logObject('../../album', copiedAlbum)
     }
 
     logAnnotation = () => {

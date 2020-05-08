@@ -8,13 +8,13 @@ import {
     LEVELS,
     FLOOR,
     FACES
-} from 'constants/scene/cubes'
+} from '../../../../../../constants/scene/cubes'
 
 import {
     CUBE_X_INDICES,
     CUBE_Y_INDICES,
     CUBE_Z_INDICES
-} from 'constants/cubeIndex'
+} from '../../../../../../constants/cubeIndex'
 
 const FACE_PATHS = {}
 

@@ -1,20 +1,20 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../../../utils/lodash/isfinite'
 
 import { updateActivatedStore } from '../../../../redux/activated/action'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import AnnotationAccessDispatcher from '../../../../handlers/AnnotationAccess/Dispatcher'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../../helpers/ref'
 
 import {
     ARROW_LEFT,
     ARROW_RIGHT,
     ENTER
-} from 'constants/access'
+} from '../../../../constants/access'
 
 class LyricNavigation extends PureComponent {
 

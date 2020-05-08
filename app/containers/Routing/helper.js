@@ -1,9 +1,9 @@
 // Helper for getting param values from routing.
-import isFinite from 'lodash/isfinite'
+import isFinite from '../../utils/lodash/isfinite'
 
-import { getSongsAndLoguesCount } from 'album/api/songs'
-import { getVerse } from 'album/api/verses'
-import { getAnnotation } from 'album/api/annotations'
+import { getSongsAndLoguesCount } from '../../album/api/songs'
+import { getVerse } from '../../album/api/verses'
+import { getAnnotation } from '../../album/api/annotations'
 
 import { HYPHENATED_SONG_PATHS } from '../../constants/paths'
 

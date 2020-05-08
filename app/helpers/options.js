@@ -2,7 +2,7 @@ import {
     SHOWN,
     HIDDEN,
     DISABLED
-} from 'constants/options'
+} from '../constants/options'
 
 export const getNextOption = ({
     isToggled,

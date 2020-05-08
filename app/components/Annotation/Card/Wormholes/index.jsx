@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import AnnotationWormhole from './Wormhole'
-import { getCardWormholeLinksArray } from 'helpers/wormhole'
+import { getCardWormholeLinksArray } from '../../../../helpers/wormhole'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex },

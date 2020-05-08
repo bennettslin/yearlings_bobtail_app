@@ -9,8 +9,8 @@ import AnnotationTitleText from './TitleText'
 
 import AnnotationAccess from './Access'
 
-import { getDotKeysFromBitNumber } from 'helpers/dot'
-import { IS_UNIT_DOT } from 'constants/lyrics'
+import { getDotKeysFromBitNumber } from '../../../helpers/dot'
+import { IS_UNIT_DOT } from '../../../constants/lyrics'
 
 import { getAnnotationTitleData } from './helper'
 

@@ -1,25 +1,25 @@
 // Helper for getting and setting state persisted in user's local storage.
-import isFinite from 'lodash/isfinite'
-import album from 'album'
+import isFinite from '../utils/lodash/isfinite'
+import album from '../album'
 
-import { getSongVersesCount } from 'album/api/verses'
+import { getSongVersesCount } from '../album/api/verses'
 
 import {
     getTwoToThePowerOfN,
     getObjectFromBitNumber
-} from 'helpers/bit'
+} from '../helpers/bit'
 
 import {
     ORDERED_DOT_KEYS,
     INITIAL_DOTS_BIT_NUMBER
-} from 'constants/dots'
+} from '../constants/dots'
 import {
     SHOWN,
     HIDDEN,
     DISABLED,
     AUDIO_OPTIONS
-} from 'constants/options'
-import { getWindowStorage, setInStorage } from 'utils/window'
+} from '../constants/options'
+import { getWindowStorage, setInStorage } from '../utils/window'
 
 import {
     DOTS_BIT_NUMBER,

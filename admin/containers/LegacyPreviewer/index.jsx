@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import debounce from 'debounce'
-import keys from 'lodash/keys'
+import keys from '../../../app/utils/lodash/keys'
 
 import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'
 
-import { getViewBoxSize } from 'modules/PresenceSvg/helper/size'
+import { getViewBoxSize } from '../../../app/modules/PresenceSvg/helper/size'
 
-import { removeLoadingIndicator } from 'utils/window'
+import { removeLoadingIndicator } from '../../../app/utils/window'
 
 import { accessPresence } from '../../utils/access'
 

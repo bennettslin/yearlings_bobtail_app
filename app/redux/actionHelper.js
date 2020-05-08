@@ -1,4 +1,4 @@
-import isUndefined from 'lodash/isundefined'
+import isUndefined from '../utils/lodash/isundefined'
 
 // Don't pass a key with no value.
 export const hasKey = (value) => {

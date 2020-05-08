@@ -6,10 +6,10 @@ import { connect } from 'react-redux'
 import LayersActor from './LayersActor'
 import LayersThing from './LayersThing'
 
-import { getScene } from 'album/api/scenes'
-import { CUBE_Y_INDICES_WITH_NEG } from 'constants/cubeIndex'
+import { getScene } from '../../album/api/scenes'
+import { CUBE_Y_INDICES_WITH_NEG } from '../../constants/cubeIndex'
 
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../constants/scene'
 
 const
     getMapStateToProps = (yIndex) => ({

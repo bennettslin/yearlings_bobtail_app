@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import VerseDispatcher from '../VerseDispatcher'
 
 import { getVerseIndexForSceneIndex } from '../../album/api/scenes'
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../helpers/ref'
 
 class SceneDispatcher extends PureComponent {
 

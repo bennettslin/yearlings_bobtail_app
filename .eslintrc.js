@@ -135,7 +135,7 @@ module.exports = {
         "id-blacklist": 'error',
         "id-length": 'off',
         "id-match": 'error',
-        "import/no-unresolved": 'off',
+        "import/no-unresolved": 'error',
         "indent": ['error', 4, { 'SwitchCase': 1 }],
         "init-declarations": 'off',
         "jsx-quotes": [
@@ -303,7 +303,6 @@ module.exports = {
         "prefer-spread": 'error',
         "prefer-template": 'off',
         "quote-props": 'off',
-        "quotes": 'off',
         "radix": [
             'error',
             'as-needed'

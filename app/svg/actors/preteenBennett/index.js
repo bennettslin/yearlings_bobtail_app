@@ -33,9 +33,9 @@ import {
     STOIC,
     WISTFUL,
     SHEEPISH
-} from 'constants/scene/actors/preteenBennett'
+} from '../../../constants/scene/actors/preteenBennett'
 
-import { ASLEEP } from 'constants/scene/actors/songs'
+import { ASLEEP } from '../../../constants/scene/actors/songs'
 
 export default {
     [CAUTIOUS]: cautious,

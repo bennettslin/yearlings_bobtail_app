@@ -10,7 +10,7 @@ import ScrollVerseDispatcher from '../../../dispatchers/ScrollVerseDispatcher'
 import VerseHoc from '../../Verse/Hoc'
 import Verse from '../../Verse'
 
-import { getVerse } from 'album/api/verses'
+import { getVerse } from '../../../album/api/verses'
 import { populateRefs } from '../../../helpers/ref'
 import { getCursorIndex } from '../../../helpers/verse'
 

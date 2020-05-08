@@ -9,13 +9,13 @@ import {
     ROARING,
     ACCUSATORY,
     REELING
-} from 'constants/scene/actors/father'
+} from '../../../constants/scene/actors/father'
 
 import {
     PAST,
     FUTURE,
     EPILOGUE
-} from 'constants/scene/actors/songs'
+} from '../../../constants/scene/actors/songs'
 
 export default {
     [ROARING]: roaring,

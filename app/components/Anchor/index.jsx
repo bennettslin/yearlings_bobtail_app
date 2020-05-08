@@ -8,7 +8,7 @@ import DotSequence from '../DotSequence'
 import AnchorDot from './AnchorDot'
 import AnchorText from './AnchorText'
 
-import { getPrefixedDotLetterClassNames } from 'helpers/dot'
+import { getPrefixedDotLetterClassNames } from '../../helpers/dot'
 
 const mapStateToProps = ({
     appStore: { isUserAgentDesktop }

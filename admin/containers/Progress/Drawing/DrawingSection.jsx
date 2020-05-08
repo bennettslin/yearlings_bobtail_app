@@ -4,7 +4,7 @@ import React from 'react'
 
 import DrawingActor from './DrawingActor'
 
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../../../app/constants/scene'
 
 const DrawingSection = ({
 

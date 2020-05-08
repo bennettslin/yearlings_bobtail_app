@@ -1,4 +1,4 @@
-import { getIndexedVersesForUnit } from 'album/api/verses'
+import { getIndexedVersesForUnit } from '../../../album/api/verses'
 
 const _getVerseConfigForStanzaConfig = (verse) => {
     const {

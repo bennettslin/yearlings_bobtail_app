@@ -5,7 +5,7 @@ import { updateLyricStore } from '../../../redux/lyric/action'
 
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 
-import { populateRefs } from 'helpers/ref'
+import { populateRefs } from '../../../helpers/ref'
 
 class SongChangeUpdateListener extends PureComponent {
 

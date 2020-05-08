@@ -10,7 +10,7 @@ import NavRoad from '../Road'
 import {
     getSongsAndLoguesCount,
     getStartingIndexForBook
-} from 'album/api/songs'
+} from '../../../../../album/api/songs'
 
 const navBookSongsPropTypes = {
     // From parent.

@@ -1,4 +1,4 @@
-import { ACTOR } from 'constants/scene'
+import { ACTOR } from '../../app/constants/scene'
 import {
     OLD_BENNETT,
     BENNETT,
@@ -27,8 +27,8 @@ import {
     AMY,
     STEPHANIE,
     WADE
-} from 'constants/scene/actors'
-import { EPILOGUE } from 'constants/scene/actors/songs'
+} from '../../app/constants/scene/actors'
+import { EPILOGUE } from '../../app/constants/scene/actors/songs'
 
 export default [
     {

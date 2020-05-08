@@ -1,4 +1,4 @@
-import keys from 'lodash/keys'
+import keys from '../../app/utils/lodash/keys'
 
 import { getPreviewerSvgMapForThing } from './svg'
 
@@ -13,7 +13,7 @@ import {
     FURNITURE,
     PANEL,
     PUPPET
-} from 'constants/scene/things'
+} from '../../app/constants/scene/things'
 
 const _getSvgCount = (presenceType) => {
     const svgBooleanMap = getPreviewerSvgMapForThing(presenceType)

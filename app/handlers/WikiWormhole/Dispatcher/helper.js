@@ -1,12 +1,12 @@
-import isFinite from 'lodash/isfinite'
-import isString from 'lodash/isstring'
+import isFinite from '../../../utils/lodash/isfinite'
+import isString from '../../../utils/lodash/isstring'
 
-import { getAnnotation } from 'album/api/annotations'
+import { getAnnotation } from '../../../album/api/annotations'
 
 import {
     WORMHOLE,
     REFERENCE
-} from 'constants/dots'
+} from '../../../constants/dots'
 
 export const getWikiWormholeIndexForDirection = ({
     selectedSongIndex,

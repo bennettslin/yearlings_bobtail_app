@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import InlineSvg from 'modules/InlineSvg'
+import InlineSvg from '../../../modules/InlineSvg'
 import proscenium from '../../../../assets/svgs/theatre/proscenium'
 
 const mapStateToProps = ({
