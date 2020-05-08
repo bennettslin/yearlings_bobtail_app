@@ -1,12 +1,12 @@
 const pkg = require('./package.json')
 
 const reactVersion = () => {
-  if (pkg.dependencies && pkg.dependencies.react) {
-    return { version: pkg.dependencies.react.replace(/[^0-9.]/g, '') }
-  }
-  if (pkg.devDependencies && pkg.devDependencies.react) {
-    return { version: pkg.devDependencies.react.replace(/[^0-9.]/g, '') }
-  }
+    if (pkg.dependencies && pkg.dependencies.react) {
+        return { version: pkg.dependencies.react.replace(/[^0-9.]/g, '') }
+    }
+    if (pkg.devDependencies && pkg.devDependencies.react) {
+        return { version: pkg.devDependencies.react.replace(/[^0-9.]/g, '') }
+    }
 }
 
 module.exports = {
@@ -49,9 +49,16 @@ module.exports = {
         "sourceType": 'module'
     },
     "plugins": [
+        'import',
         'react'
     ],
     "settings": {
+        'import/resolver': {
+            node: {
+                extensions: ['.js', '.jsx', '.svg'],
+                paths: ['./admin', './app']
+            }
+        },
         "react": {
             ...reactVersion()
         }
@@ -129,7 +136,8 @@ module.exports = {
         "id-blacklist": 'error',
         "id-length": 'off',
         "id-match": 'error',
-        "indent": ['error', 4, {'SwitchCase': 1}],
+        "import/no-unresolved": 'error',
+        "indent": ['error', 4, { 'SwitchCase': 1 }],
         "init-declarations": 'off',
         "jsx-quotes": [
             'error',

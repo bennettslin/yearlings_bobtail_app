@@ -19,13 +19,19 @@ import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
 
-// These reroute to the routing container in production.
+/**
+ * These reroute to the routing container in production. A hacky approach
+ * because I don't know what I'm doing...
+ */
+
+/* eslint-disable */
 import Actors from 'admin/containers/Actors'
 import Annotations from 'admin/containers/Annotations'
 import LegacyPreviewer from 'admin/containers/LegacyPreviewer'
 import Skies from 'admin/containers/Skies'
 import Things from 'admin/containers/Things'
 import Progress from 'admin/containers/Progress'
+/* eslint-enable */
 
 import RoutingContainer from './containers/Routing'
 
