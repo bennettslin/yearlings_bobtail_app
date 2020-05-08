@@ -3,8 +3,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 
 class LyricListener extends PureComponent {
 

@@ -55,8 +55,7 @@ module.exports = {
     "settings": {
         'import/resolver': {
             node: {
-                extensions: ['.js', '.jsx', '.scss', '.svg'],
-                paths: ['./admin', './app']
+                extensions: ['.js', '.jsx', '.scss', '.svg']
             }
         },
         "react": {
@@ -136,7 +135,7 @@ module.exports = {
         "id-blacklist": 'error',
         "id-length": 'off',
         "id-match": 'error',
-        "import/no-unresolved": 'error',
+        "import/no-unresolved": 'off',
         "indent": ['error', 4, { 'SwitchCase': 1 }],
         "init-declarations": 'off',
         "jsx-quotes": [

@@ -44,11 +44,9 @@ const getConfig = ({
                 admin: showAdmin ?
                     path.resolve(__dirname, './admin') :
                     path.resolve(__dirname, './app'),
-                assets: path.resolve(__dirname, './assets'),
                 album: path.resolve(__dirname, './app/album'),
                 components: path.resolve(__dirname, './app/components'),
                 constants: path.resolve(__dirname, './app/constants'),
-                flux: path.resolve(__dirname, './app/redux'),
                 handlers: path.resolve(__dirname, './app/handlers'),
                 helpers: path.resolve(__dirname, './app/helpers'),
                 managers: path.resolve(__dirname, './app/managers'),

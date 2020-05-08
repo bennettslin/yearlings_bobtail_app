@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateAnnotationStore } from 'flux/annotation/action'
+import { updateAnnotationStore } from '../../../redux/annotation/action'
 
 import AnnotationTitleDot from './TitleDot'
 import AnnotationTitleText from './TitleText'

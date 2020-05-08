@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import cx from 'classnames'
 import isFinite from 'lodash/isfinite'
 
-import { updateBannerStore } from 'flux/banner/action'
+import { updateBannerStore } from '../../../redux/banner/action'
 
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 import VerseDispatcher from '../../../dispatchers/VerseDispatcher'

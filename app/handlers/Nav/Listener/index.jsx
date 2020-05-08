@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import {
     updateAccessStore,
     resetAccessedNav
-} from 'flux/access/action'
-import { updateSessionStore } from 'flux/session/action'
+} from '../../../redux/access/action'
+import { updateSessionStore } from '../../../redux/session/action'
 import { getBookForSongIndex } from 'album/api/songs'
 
 class NavListener extends PureComponent {

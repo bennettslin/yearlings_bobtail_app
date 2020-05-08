@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 
 import About from '../../About'
 import Popup from '../../Popup'

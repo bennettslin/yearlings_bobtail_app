@@ -3,8 +3,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAudioStore } from 'flux/audio/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateAudioStore } from '../../redux/audio/action'
+import { updateToggleStore } from '../../redux/toggle/action'
 
 class LogueListener extends PureComponent {
 

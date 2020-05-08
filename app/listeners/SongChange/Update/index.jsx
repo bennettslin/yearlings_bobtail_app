@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateLyricStore } from 'flux/lyric/action'
+import { updateLyricStore } from '../../../redux/lyric/action'
 
 import SceneChangeUpdateDispatcher from '../../SceneChange/Update'
 

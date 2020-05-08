@@ -1,9 +1,9 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
-import { updateDotsStore } from 'flux/dots/action'
-import { updateDotsSlideStore } from 'flux/dotsSlide/action'
+import { updateAccessStore } from '../../redux/access/action'
+import { updateDotsStore } from '../../redux/dots/action'
+import { updateDotsSlideStore } from '../../redux/dotsSlide/action'
 
 import { setNewValueInBitNumber } from 'helpers/bit'
 import { getDotKeysFromBitNumber } from 'helpers/dot'

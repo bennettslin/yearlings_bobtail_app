@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 import {
     updateAccessStore,
     resetAccessedDot
-} from 'flux/access/action'
-import { resetActivatedDots } from 'flux/dotsSlide/action'
+} from '../../../redux/access/action'
+import { resetActivatedDots } from '../../../redux/dotsSlide/action'
 
 class DotsSlideListener extends PureComponent {
 

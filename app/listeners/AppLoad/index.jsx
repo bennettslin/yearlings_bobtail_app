@@ -1,8 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateLyricStore } from 'flux/lyric/action'
-import { updateSceneStore } from 'flux/scene/action'
+import { updateLyricStore } from '../../redux/lyric/action'
+import { updateSceneStore } from '../../redux/scene/action'
 
 class AppLoadListener extends PureComponent {
 

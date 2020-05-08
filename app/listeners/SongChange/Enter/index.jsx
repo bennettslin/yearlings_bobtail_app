@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateLyricStore } from 'flux/lyric/action'
+import { updateLyricStore } from '../../../redux/lyric/action'
 
 class SongChangeEnterListener extends PureComponent {
 

@@ -2,7 +2,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { updateScrollOverlayStore } from 'flux/scrollOverlay/action'
+import { updateScrollOverlayStore } from '../../redux/scrollOverlay/action'
 
 class ScrollOverlayHandler extends PureComponent {
 

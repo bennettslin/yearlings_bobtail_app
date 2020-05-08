@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import InlineSvg from 'modules/InlineSvg'
-import floorSeat from 'assets/svgs/theatre/floorSeat'
+import floorSeat from '../../../../../../assets/svgs/theatre/floorSeat'
 
 const propTypes = {
     className: PropTypes.string.isRequired,

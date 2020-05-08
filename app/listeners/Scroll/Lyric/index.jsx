@@ -1,8 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSceneStore } from 'flux/scene/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { updateSceneStore } from '../../../redux/scene/action'
+import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 
 import {
     scrollElementIntoView,

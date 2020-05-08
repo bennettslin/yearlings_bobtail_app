@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isFinite from 'lodash/isfinite'
 
-import { updateAccessStore } from 'flux/access/action'
+import { updateAccessStore } from '../../../redux/access/action'
 
 import { getWikiWormholeIndexForDirection } from './helper'
 

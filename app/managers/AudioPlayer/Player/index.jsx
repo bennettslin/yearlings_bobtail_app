@@ -5,8 +5,8 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { updateAudioStore } from 'flux/audio/action'
-import { updateSelectedStore } from 'flux/selected/action'
+import { updateAudioStore } from '../../../redux/audio/action'
+import { updateSelectedStore } from '../../../redux/selected/action'
 
 import PlayerDispatcher from './Dispatcher'
 import PlayerListener from './Listener'

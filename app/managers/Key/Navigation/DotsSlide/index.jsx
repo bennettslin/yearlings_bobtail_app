@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
+import { updateAccessStore } from '../../../../redux/access/action'
 
 import DotSelectDispatcher from '../../../../dispatchers/DotSelectDispatcher'
 

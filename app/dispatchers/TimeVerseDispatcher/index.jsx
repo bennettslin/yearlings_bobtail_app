@@ -3,10 +3,10 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSceneStore } from 'flux/scene/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateSelectedStore } from 'flux/selected/action'
-import { updateVerseBarsStore } from 'flux/verseBars/action'
+import { updateSceneStore } from '../../redux/scene/action'
+import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
+import { updateSelectedStore } from '../../redux/selected/action'
+import { updateVerseBarsStore } from '../../redux/verseBars/action'
 
 import { getSceneIndexForVerseIndex } from 'album/api/verses'
 

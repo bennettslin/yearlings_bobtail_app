@@ -3,9 +3,9 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateActivatedStore } from 'flux/activated/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { updateActivatedStore } from '../../../redux/activated/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 
 import { getStartTimeForVerseIndex } from 'album/api/time'
 import { getSceneIndexForVerseIndex } from 'album/api/verses'

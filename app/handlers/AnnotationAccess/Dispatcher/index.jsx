@@ -3,9 +3,9 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
-import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { updateAccessStore } from '../../../redux/access/action'
+import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
+import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
 
 import { getAnnotationIndexForDirection } from '../../../helpers/annotation'
 import { getDotKeysFromBitNumber } from '../../../helpers/dot'

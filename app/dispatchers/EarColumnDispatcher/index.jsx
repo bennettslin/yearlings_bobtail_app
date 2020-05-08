@@ -4,7 +4,7 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { updateSelectedStore } from 'flux/selected/action'
+import { updateSelectedStore } from '../../redux/selected/action'
 
 class EarColumnDispatcher extends PureComponent {
 

@@ -3,8 +3,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetAccessedNav } from 'flux/access/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { resetAccessedNav } from '../../../redux/access/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 
 class CarouselNavListener extends PureComponent {
 

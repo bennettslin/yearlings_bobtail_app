@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import isFinite from 'lodash/isfinite'
 
-import { updateSliderStore } from 'flux/slider/action'
+import { updateSliderStore } from '../../redux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 

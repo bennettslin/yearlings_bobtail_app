@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 // import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 
 import Score from '../../Score'
 import Popup from '../../Popup'

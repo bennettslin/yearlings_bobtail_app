@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateLoadStore } from 'flux/load/action'
+import { updateLoadStore } from '../../redux/load/action'
 
 import { getSongScore } from './helper'
 

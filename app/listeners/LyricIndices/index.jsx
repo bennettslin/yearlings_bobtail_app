@@ -1,8 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateActivatedStore } from 'flux/activated/action'
-import { updateLyricStore } from 'flux/lyric/action'
+import { updateActivatedStore } from '../../redux/activated/action'
+import { updateLyricStore } from '../../redux/lyric/action'
 
 import { populateRefs } from 'helpers/ref'
 

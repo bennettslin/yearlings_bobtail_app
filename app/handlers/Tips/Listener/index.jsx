@@ -2,8 +2,8 @@ import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import { updateOptionStore } from 'flux/option/action'
-import { updateTransientStore } from 'flux/transient/action'
+import { updateOptionStore } from '../../../redux/option/action'
+import { updateTransientStore } from '../../../redux/transient/action'
 
 import { getShowTipForDevice } from '../../../album/api/tips'
 

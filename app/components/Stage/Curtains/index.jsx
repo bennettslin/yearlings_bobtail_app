@@ -4,14 +4,14 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateLyricStore } from 'flux/lyric/action'
+import { updateLyricStore } from '../../../redux/lyric/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import AspectRatio from '../AspectRatio'
 
 import InlineSvg from 'modules/InlineSvg'
-import curtainSide from 'assets/svgs/theatre/curtainSide'
-import curtainTop from 'assets/svgs/theatre/curtainTop'
+import curtainSide from '../../../../assets/svgs/theatre/curtainSide'
+import curtainTop from '../../../../assets/svgs/theatre/curtainTop'
 
 const mapStateToProps = ({
     lyricStore: { canLyricCarouselEnter }

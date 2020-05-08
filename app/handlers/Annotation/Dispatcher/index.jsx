@@ -1,9 +1,9 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
-import { updateSelectedStore } from 'flux/selected/action'
+import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
+import { updateScrollLyricStore } from '../../../redux/scrollLyric/action'
+import { updateSelectedStore } from '../../../redux/selected/action'
 
 import {
     intersects,

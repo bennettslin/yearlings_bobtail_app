@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateTransientStore } from 'flux/transient/action'
+import { updateTransientStore } from '../../redux/transient/action'
 
 const mapStateToProps = ({
     lyricStore: {

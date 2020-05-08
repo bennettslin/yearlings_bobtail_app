@@ -3,8 +3,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updatePlayersStore } from 'flux/players/action'
-import { resetAudioQueue } from 'flux/audio/action'
+import { updatePlayersStore } from '../../../../redux/players/action'
+import { resetAudioQueue } from '../../../../redux/audio/action'
 
 import { getPlayersCanPlayThroughFromBitNumber } from 'helpers/player'
 import { getNextPlayerIndexToRender } from './helper'

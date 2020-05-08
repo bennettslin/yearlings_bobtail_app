@@ -3,12 +3,12 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateMountStore } from 'flux/mount/action'
-import { updateResponsiveStore } from 'flux/responsive/action'
-import { updateViewportStore } from 'flux/viewport/action'
-import { updateProsceniumStore } from 'flux/viewport/proscenium/action'
-import { updateStageStore } from 'flux/viewport/stage/action'
-import { updateTheatreStore } from 'flux/viewport/theatre/action'
+import { updateMountStore } from '../../../redux/mount/action'
+import { updateResponsiveStore } from '../../../redux/responsive/action'
+import { updateViewportStore } from '../../../redux/viewport/action'
+import { updateProsceniumStore } from '../../../redux/viewport/proscenium/action'
+import { updateStageStore } from '../../../redux/viewport/stage/action'
+import { updateTheatreStore } from '../../../redux/viewport/theatre/action'
 
 import {
     getDeviceWidthIndex,

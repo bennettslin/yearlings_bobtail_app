@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateViewportStore } from 'flux/viewport/action'
+import { updateViewportStore } from '../../redux/viewport/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Stage from '../Stage'

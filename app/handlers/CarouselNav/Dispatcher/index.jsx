@@ -1,8 +1,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 
 class CarouselNavDispatcher extends PureComponent {
 

@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
+import { updateScrollCarouselStore } from '../../../redux/scrollCarousel/action'
 
 import {
     scrollElementIntoView,

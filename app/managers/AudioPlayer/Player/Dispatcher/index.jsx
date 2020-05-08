@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updatePlayersStore } from 'flux/players/action'
+import { updatePlayersStore } from '../../../../redux/players/action'
 
 import { getSongsNotLoguesCount } from 'album/api/songs'
 import { setNewValueInBitNumber } from 'helpers/bit'

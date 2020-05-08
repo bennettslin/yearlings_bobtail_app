@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAudioStore } from 'flux/audio/action'
+import { updateAudioStore } from '../../redux/audio/action'
 
 import SongDispatcher from '../../handlers/Song/Dispatcher'
 

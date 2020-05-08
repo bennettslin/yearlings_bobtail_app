@@ -3,9 +3,9 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
-import { updateToggleStore } from 'flux/toggle/action'
-import { updateVerseBarsStore } from 'flux/verseBars/action'
+import { updateAccessStore } from '../../redux/access/action'
+import { updateToggleStore } from '../../redux/toggle/action'
+import { updateVerseBarsStore } from '../../redux/verseBars/action'
 
 import NavigationManager from './Navigation'
 import LetterManager from './Letter'

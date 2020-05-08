@@ -3,8 +3,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateAccessStore } from 'flux/access/action'
-import { updateActivatedStore } from 'flux/activated/action'
+import { updateAccessStore } from '../../redux/access/action'
+import { updateActivatedStore } from '../../redux/activated/action'
 
 class SliderListener extends PureComponent {
 

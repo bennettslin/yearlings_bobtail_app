@@ -6,11 +6,11 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateActivatedStore } from 'flux/activated/action'
-import { updateOptionStore } from 'flux/option/action'
-import { resetWiki } from 'flux/session/action'
-import { updateSelectedStore } from 'flux/selected/action'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateActivatedStore } from '../../redux/activated/action'
+import { updateOptionStore } from '../../redux/option/action'
+import { resetWiki } from '../../redux/session/action'
+import { updateSelectedStore } from '../../redux/selected/action'
+import { updateToggleStore } from '../../redux/toggle/action'
 
 import {
     SHOWN,

@@ -3,8 +3,8 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateScrollCarouselStore } from 'flux/scrollCarousel/action'
-import { updateScrollLyricStore } from 'flux/scrollLyric/action'
+import { updateScrollCarouselStore } from '../../redux/scrollCarousel/action'
+import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 
 class ScrollRenderListener extends PureComponent {
 

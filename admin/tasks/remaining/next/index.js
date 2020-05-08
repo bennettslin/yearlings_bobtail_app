@@ -5,11 +5,6 @@ export default [
         neededHours: 5
     },
     {
-        taskName: `Move to React Static.`,
-        workedHours: 0,
-        neededHours: 20
-    },
-    {
         taskName: `Band website favicon.`,
         workedHours: 0,
         neededHours: 1
@@ -21,7 +16,7 @@ export default [
     },
     {
         taskName: `Band website.`,
-        workedHours: 1,
+        workedHours: 3,
         neededHours: 11
     },
     {

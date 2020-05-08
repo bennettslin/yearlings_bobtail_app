@@ -3,13 +3,13 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateActivatedStore } from 'flux/activated/action'
-import { updateLoadStore } from 'flux/load/action'
+import { updateActivatedStore } from '../../../redux/activated/action'
+import { updateLoadStore } from '../../../redux/load/action'
 import {
     updateSessionStore,
     resetWiki
-} from 'flux/session/action'
-import { resetVerseBars } from 'flux/verseBars/action'
+} from '../../../redux/session/action'
+import { resetVerseBars } from '../../../redux/verseBars/action'
 
 import { getBookForSongIndex } from 'album/api/songs'
 

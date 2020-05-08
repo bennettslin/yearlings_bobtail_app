@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSessionStore } from 'flux/session/action'
+import { updateSessionStore } from '../../../redux/session/action'
 
 import { REFERENCE } from '../../../constants/dots'
 

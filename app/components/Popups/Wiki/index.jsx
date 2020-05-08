@@ -3,7 +3,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { resetWiki } from 'flux/session/action'
+import { resetWiki } from '../../../redux/session/action'
 
 import Wiki from '../../Wiki'
 import Popup from '../../Popup'

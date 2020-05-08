@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import debounce from 'debounce'
 import { connect } from 'react-redux'
-import { resetViewportForTransition } from 'flux/viewport/action'
+import { resetViewportForTransition } from '../../../redux/viewport/action'
 
 import WindowResizeEnterDispatcher from '../Enter'
 

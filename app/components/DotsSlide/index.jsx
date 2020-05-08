@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { resetActivatedDots } from 'flux/dotsSlide/action'
+import { resetActivatedDots } from '../../redux/dotsSlide/action'
 
 import CSSTransition from 'react-transition-group/CSSTransition'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'

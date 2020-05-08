@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateToggleStore } from 'flux/toggle/action'
+import { updateToggleStore } from '../../../redux/toggle/action'
 
 class ScoreListener extends PureComponent {
 

@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment as ___ } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import { updateSceneStore } from 'flux/scene/action'
+import { updateSceneStore } from '../../redux/scene/action'
 
 import Transition from 'react-transition-group/Transition'
 import Cubes from '../Cubes'

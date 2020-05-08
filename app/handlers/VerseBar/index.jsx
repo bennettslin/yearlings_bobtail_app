@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import {
     updateVerseBarsStore,
     resetVerseBarsQueue
-} from 'flux/verseBars/action'
+} from '../../redux/verseBars/action'
 
 import { getVerseBarStatus } from './helper'
 import { getCursorIndex } from '../../helpers/verse'

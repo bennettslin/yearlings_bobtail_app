@@ -4589,5 +4589,9 @@ export default [
     {
         taskName: `Change some button colours.`,
         workedHours: 1
+    },
+    {
+        taskName: `Change some aliased paths to relative paths.`,
+        workedHours: 2
     }
 ]

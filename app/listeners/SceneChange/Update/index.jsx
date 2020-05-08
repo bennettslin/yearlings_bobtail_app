@@ -3,7 +3,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateSceneStore } from 'flux/scene/action'
+import { updateSceneStore } from '../../../redux/scene/action'
 
 import { getScene } from 'album/api/scenes'
 

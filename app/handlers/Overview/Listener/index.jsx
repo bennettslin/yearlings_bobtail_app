@@ -1,7 +1,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { updateOptionStore } from 'flux/option/action'
+import { updateOptionStore } from '../../../redux/option/action'
 
 import {
     SHOWN,
