@@ -1,5 +1,5 @@
-import navLogue from 'assets/svgs/app/nav/navLogue'
-import navSong from 'assets/svgs/app/nav/navSong'
+import navLogue from '../../../../../assets/svgs/app/nav/navLogue'
+import navSong from '../../../../../assets/svgs/app/nav/navSong'
 
 import { getSongIsLogue } from 'album/api/songs'
 

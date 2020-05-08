@@ -1,4 +1,4 @@
-import scores from 'assets/svgs/app/main/scores'
+import scores from '../../../../../assets/svgs/app/main/scores'
 
 const getIcon = () => scores
 

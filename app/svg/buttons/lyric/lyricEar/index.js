@@ -1,5 +1,5 @@
-import lyricEarLeft from 'assets/svgs/app/lyric/lyricEarLeft'
-import lyricEarRight from 'assets/svgs/app/lyric/lyricEarRight'
+import lyricEarLeft from '../../../../../assets/svgs/app/lyric/lyricEarLeft'
+import lyricEarRight from '../../../../../assets/svgs/app/lyric/lyricEarRight'
 
 import {
     LEFT,

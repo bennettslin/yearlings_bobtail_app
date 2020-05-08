@@ -1,4 +1,4 @@
-import mp3s from 'assets/mp3s'
+import mp3s from '../../../../assets/mp3s'
 
 import { getSongVersesCount } from 'album/api/verses'
 import {

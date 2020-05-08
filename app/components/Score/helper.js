@@ -1,4 +1,4 @@
-import scoresArray from 'assets/scores'
+import scoresArray from '../../../assets/scores'
 
 export const getSongScore = (songIndex) => {
     return scoresArray[songIndex - 1]

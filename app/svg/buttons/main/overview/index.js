@@ -1,6 +1,6 @@
-import overviewShown from 'assets/svgs/app/overview/overviewShown'
-import overviewHidden from 'assets/svgs/app/overview/overviewHidden'
-import overviewDisabled from 'assets/svgs/app/overview/overviewDisabled'
+import overviewShown from '../../../../../assets/svgs/app/overview/overviewShown'
+import overviewHidden from '../../../../../assets/svgs/app/overview/overviewHidden'
+import overviewDisabled from '../../../../../assets/svgs/app/overview/overviewDisabled'
 
 import {
     SHOWN,

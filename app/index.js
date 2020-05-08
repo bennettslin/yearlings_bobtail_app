@@ -36,12 +36,12 @@ import Progress from 'admin/containers/Progress'
 import RoutingContainer from './containers/Routing'
 
 // Force Webpack to pick these up, as they're only referenced in the HTML file.
-require('assets/favicon/android-chrome-192x192.png')
-require('assets/favicon/android-chrome-512x512.png')
-require('assets/favicon/apple-touch-icon.png')
-require('assets/favicon/favicon-16x16.png')
-require('assets/favicon/favicon-32x32.png')
-require('assets/favicon/favicon.ico')
+require('../assets/favicon/android-chrome-192x192.png')
+require('../assets/favicon/android-chrome-512x512.png')
+require('../assets/favicon/apple-touch-icon.png')
+require('../assets/favicon/favicon-16x16.png')
+require('../assets/favicon/favicon-32x32.png')
+require('../assets/favicon/favicon.ico')
 
 const store = createStore(
     rootReducer,

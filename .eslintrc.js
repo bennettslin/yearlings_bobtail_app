@@ -55,7 +55,7 @@ module.exports = {
     "settings": {
         'import/resolver': {
             node: {
-                extensions: ['.js', '.jsx', '.svg'],
+                extensions: ['.js', '.jsx', '.scss', '.svg'],
                 paths: ['./admin', './app']
             }
         },

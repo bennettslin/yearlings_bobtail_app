@@ -1,6 +1,6 @@
-import carouselShown from 'assets/svgs/app/carouselNav/carouselShown'
-import navShown from 'assets/svgs/app/carouselNav/navShown'
-import neitherShown from 'assets/svgs/app/carouselNav/neitherShown'
+import carouselShown from '../../../../../assets/svgs/app/carouselNav/carouselShown'
+import navShown from '../../../../../assets/svgs/app/carouselNav/navShown'
+import neitherShown from '../../../../../assets/svgs/app/carouselNav/neitherShown'
 
 import {
     IS_CAROUSEL_SHOWN,

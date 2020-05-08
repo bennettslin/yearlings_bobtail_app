@@ -1,4 +1,4 @@
-import wormhole from 'assets/svgs/app/dots/wormhole'
+import wormhole from '../../../../../assets/svgs/app/dots/wormhole'
 
 const getIcon = () => wormhole
 

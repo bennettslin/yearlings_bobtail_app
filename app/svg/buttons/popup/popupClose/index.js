@@ -1,4 +1,4 @@
-import popupClose from 'assets/svgs/app/direction/popupClose'
+import popupClose from '../../../../../assets/svgs/app/direction/popupClose'
 
 const getIcon = () => popupClose
 
