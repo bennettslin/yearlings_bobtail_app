@@ -1,6 +1,6 @@
-import hardOnReflection from 'assets/svgs/actors/bennettLizReflection/hardOnReflection'
-import missionaryReflection from 'assets/svgs/actors/bennettLizReflection/missionaryReflection'
-import afterglowReflection from 'assets/svgs/actors/bennettLizReflection/afterglowReflection'
+import hardOnReflection from '../../../../assets/svgs/actors/bennettLizReflection/hardOnReflection'
+import missionaryReflection from '../../../../assets/svgs/actors/bennettLizReflection/missionaryReflection'
+import afterglowReflection from '../../../../assets/svgs/actors/bennettLizReflection/afterglowReflection'
 
 import {
     HARD_ON_REFLECTION,

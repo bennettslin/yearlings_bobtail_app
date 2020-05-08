@@ -1,8 +1,8 @@
-import asleep from 'assets/svgs/actors/miriamBennett/asleep'
-import asleepFearful from 'assets/svgs/actors/miriamBennett/asleepFearful'
-import fendingOff from 'assets/svgs/actors/miriamBennett/fendingOff'
-import cowgirl from 'assets/svgs/actors/miriamBennett/cowgirl'
-import blowjob from 'assets/svgs/actors/miriamBennett/blowjob'
+import asleep from '../../../../assets/svgs/actors/miriamBennett/asleep'
+import asleepFearful from '../../../../assets/svgs/actors/miriamBennett/asleepFearful'
+import fendingOff from '../../../../assets/svgs/actors/miriamBennett/fendingOff'
+import cowgirl from '../../../../assets/svgs/actors/miriamBennett/cowgirl'
+import blowjob from '../../../../assets/svgs/actors/miriamBennett/blowjob'
 
 import {
     ASLEEP_FEARFUL,

@@ -1,8 +1,8 @@
-import panicked from 'assets/svgs/actors/youngBennett/panicked'
-import flustered from 'assets/svgs/actors/youngBennett/flustered'
-import bathing from 'assets/svgs/actors/youngBennett/bathing'
-import singing from 'assets/svgs/actors/youngBennett/singing'
-import youngChild from 'assets/svgs/actors/youngBennett/youngChild'
+import panicked from '../../../../assets/svgs/actors/youngBennett/panicked'
+import flustered from '../../../../assets/svgs/actors/youngBennett/flustered'
+import bathing from '../../../../assets/svgs/actors/youngBennett/bathing'
+import singing from '../../../../assets/svgs/actors/youngBennett/singing'
+import youngChild from '../../../../assets/svgs/actors/youngBennett/youngChild'
 
 import {
     PANICKED,

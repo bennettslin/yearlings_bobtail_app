@@ -1,9 +1,9 @@
-import smoker from 'assets/svgs/actors/amy/smoker'
-import flirting from 'assets/svgs/actors/amy/flirting'
-import mingling from 'assets/svgs/actors/amy/mingling'
-import protester from 'assets/svgs/actors/amy/protester'
-import doctor from 'assets/svgs/actors/amy/doctor'
-import epilogue from 'assets/svgs/actors/amy/epilogue'
+import smoker from '../../../../assets/svgs/actors/amy/smoker'
+import flirting from '../../../../assets/svgs/actors/amy/flirting'
+import mingling from '../../../../assets/svgs/actors/amy/mingling'
+import protester from '../../../../assets/svgs/actors/amy/protester'
+import doctor from '../../../../assets/svgs/actors/amy/doctor'
+import epilogue from '../../../../assets/svgs/actors/amy/epilogue'
 
 import {
     SMOKER,

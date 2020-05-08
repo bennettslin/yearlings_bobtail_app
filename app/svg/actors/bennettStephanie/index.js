@@ -1,5 +1,5 @@
-import horsing from 'assets/svgs/actors/bennettStephanie/horsing'
-import dryingTears from 'assets/svgs/actors/bennettStephanie/dryingTears'
+import horsing from '../../../../assets/svgs/actors/bennettStephanie/horsing'
+import dryingTears from '../../../../assets/svgs/actors/bennettStephanie/dryingTears'
 
 import {
     HORSING,
