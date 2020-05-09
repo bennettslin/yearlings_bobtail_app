@@ -10,14 +10,9 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Band website design.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Band website.`,
-        workedHours: 3,
-        neededHours: 11
+        workedHours: 6,
+        neededHours: 14
     },
     {
         taskName: `Facebook page setup.`,

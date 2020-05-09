@@ -70,14 +70,6 @@ module.exports = {
         ],
         "array-callback-return": 'error',
         "arrow-body-style": 'off',
-        // "array-bracket-newline": [
-        //     'error',
-        //     'always'
-        // ],
-        // "array-element-newline": [
-        //     'error',
-        //     'always'
-        // ],
         "arrow-parens": 'off',
         "arrow-spacing": [
             'error',
