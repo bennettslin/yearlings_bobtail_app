@@ -4593,5 +4593,10 @@ export default [
     {
         taskName: `Change some aliased paths to relative paths.`,
         workedHours: 3
+    },
+    {
+        taskName: `Band website.`,
+        workedHours: 15,
+        neededHours: 15
     }
 ]

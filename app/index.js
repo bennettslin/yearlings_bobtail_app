@@ -10,10 +10,8 @@ import { devToolsEnhancer } from 'redux-devtools-extension'
 import { Provider } from 'react-redux'
 
 // Import these here just to make them available.
-/* eslint-disable no-unused-vars */
-import logger from './utils/logger'
-import sendEvent from './utils/analytics'
-/* eslint-enable no-unused-vars */
+import './utils/logger'
+import './utils/analytics'
 
 import rootReducer from './redux/rootReducer'
 
@@ -35,7 +33,10 @@ import Progress from 'admin/containers/Progress'
 
 import RoutingContainer from './containers/Routing'
 
-// Force Webpack to pick these up, as they're only referenced in the HTML file.
+/**
+ * Force Webpack to pick these up, as they're only referenced in the HTML file.
+ * From https://favicon.io.
+ */
 require('../assets/favicon/android-chrome-192x192.png')
 require('../assets/favicon/android-chrome-512x512.png')
 require('../assets/favicon/apple-touch-icon.png')

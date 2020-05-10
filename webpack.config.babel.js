@@ -38,7 +38,7 @@ const getConfig = ({
         ],
         resolve: {
             // Import from files without specifying extensions.
-            extensions: ['.js', '.jsx', '.scss', '.mp3', '.pdf', '.svg'],
+            extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
                 // In production, admin just reroutes to app.
                 admin: showAdmin ?
