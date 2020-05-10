@@ -11,7 +11,7 @@ export default [
     },
     {
         taskName: `Band website analytics.`,
-        workedHours: 0,
+        workedHours: 1,
         neededHours: 3
     },
     {

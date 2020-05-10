@@ -63,7 +63,7 @@ const albumSongs = [
 logParse({
     log: 'Begin parsing album.',
     action: 'begin',
-    label: '../../album'
+    label: 'album'
 })
 
 addSongIndices(albumSongs)
@@ -92,7 +92,7 @@ albumSongs.forEach(song => {
 logParse({
     log: 'End parsing album.',
     action: 'end',
-    label: '../../album'
+    label: 'album'
 })
 
 export default albumSongs
