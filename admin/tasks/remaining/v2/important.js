@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `When song finishes playing, proceed to next more smoothly. Especially for medley songs.`,
+        workedHours: 0,
+        neededHours: 5
+    },
+    {
         taskName: `Remove animations from mobile for performance. Update: It seems fine to leave transitions out but keep animations in, as it is now.`,
         workedHours: 0,
         neededHours: 2
@@ -8,11 +13,6 @@ export default [
         taskName: `Figure out how to let bots access sitemap.xml and robots.txt.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Timebox for band website.`,
-        workedHours: 0,
-        neededHours: 10
     },
     {
         taskName: `Test pass on Internet Explorer.`,
