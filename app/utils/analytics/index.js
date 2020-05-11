@@ -1,14 +1,14 @@
-/* eslint-disable */
 // This grabs from app, not admin, in production.
+// eslint-disable-next-line import/no-unresolved
 import { GA_ACCOUNT } from 'admin/constants/analytics'
 
 window.dataLayer = window.dataLayer || []
 function gtag() {
+    // eslint-disable-next-line prefer-rest-params
     dataLayer.push(arguments)
 }
 gtag('js', new Date())
 gtag('config', GA_ACCOUNT)
-/* eslint-enable */
 
 if (typeof ga !== 'undefined') {
     console.log(`GA initialised with property id ${GA_ACCOUNT}.`)
@@ -39,7 +39,5 @@ const sendEvent = ({
 
     return true
 }
-
-global.sendEvent = sendEvent
 
 export default sendEvent

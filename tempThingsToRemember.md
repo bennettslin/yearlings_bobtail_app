@@ -17,11 +17,3 @@ Twitter page
 * Avatar (same)
 * Splah picture (same)
 * Page info
-
-Do React Static work for Yearling's Bobtail first?
-
-Band website
-* Favicon (Pony head)
-* Band name logo
-* Yearling's Bobtail link (different Yearling's Bobtail screenshot)
-* Email list input

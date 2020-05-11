@@ -4598,5 +4598,13 @@ export default [
         taskName: `Band website.`,
         workedHours: 15,
         neededHours: 15
+    },
+    {
+        taskName: `Band website analytics.`,
+        workedHours: 4
+    },
+    {
+        taskName: `Dynamic asset load should not reposition elements.`,
+        workedHours: 1
     }
 ]

@@ -10,14 +10,9 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Band website analytics.`,
-        workedHours: 1,
-        neededHours: 3
-    },
-    {
-        taskName: `Dynamic asset load should not reposition elements.`,
+        taskName: `Create social media assets.`,
         workedHours: 0,
-        neededHours: 3
+        neededHours: 1
     },
     {
         taskName: `Social media setup.`,

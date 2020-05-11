@@ -22,6 +22,7 @@ module.exports = {
     ],
     "globals": {
         "__dirname": true,
+        "dataLayer": true,
         "expect": true,
         "ga": true,
         "logAccess": true,
@@ -116,10 +117,7 @@ module.exports = {
         "func-call-spacing": 'off',
         "func-name-matching": 'error',
         "func-names": 'error',
-        "func-style": [
-            'error',
-            'expression'
-        ],
+        "func-style": 'off',
         "generator-star-spacing": 'error',
         "global-require": 'off',
         "guard-for-in": 'off',
@@ -304,7 +302,6 @@ module.exports = {
         "react/prop-types": 'error',
         "react/no-unused-prop-types": 'error',
         "require-await": 'error',
-        "require-jsdoc": 'error',
         "rest-spread-spacing": [
             'error',
             'never'
