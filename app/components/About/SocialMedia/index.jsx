@@ -1,24 +1,47 @@
 import React, { Component } from 'react'
+import cx from 'classnames'
 
 import Anchor from '../../Anchor'
 
-import { INSTAGRAM_PAGE } from '../../../constants/website'
+import {
+    FACEBOOK_PAGE,
+    INSTAGRAM_PAGE
+} from '../../../constants/website'
 
 class SocialMedia extends Component {
 
-    handleAnchorClick = () => {
+    handleFacebookClick = () => {
+        window.open(FACEBOOK_PAGE)
+    }
+
+    handleInstagramClick = () => {
         window.open(INSTAGRAM_PAGE)
     }
 
     render() {
         return (
-            <Anchor
+            <div
                 {...{
-                    text: 'Instagram',
-                    analyticsIdentifier: 'Instagram',
-                    handleAnchorClick: this.handleAnchorClick
+                    className: cx(
+                        'SocialMedia'
+                    )
                 }}
-            />
+            >
+                <Anchor
+                    {...{
+                        text: 'Facebook',
+                        analyticsIdentifier: 'facebook',
+                        handleAnchorClick: this.handleFacebookClick
+                    }}
+                />
+                <Anchor
+                    {...{
+                        text: 'Instagram',
+                        analyticsIdentifier: 'Instagram',
+                        handleAnchorClick: this.handleInstagramClick
+                    }}
+                />
+            </div>
         )
     }
 }

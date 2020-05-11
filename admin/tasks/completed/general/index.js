@@ -4606,5 +4606,9 @@ export default [
     {
         taskName: `Dynamic asset load should not reposition elements.`,
         workedHours: 1
+    },
+    {
+        taskName: `Social media setup.`,
+        workedHours: 3
     }
 ]
