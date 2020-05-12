@@ -4609,5 +4609,9 @@ export default [
     {
         taskName: `Social media setup.`,
         workedHours: 3
+    },
+    {
+        taskName: `Band website favicon.`,
+        workedHours: 4
     }
 ]

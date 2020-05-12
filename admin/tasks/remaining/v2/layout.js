@@ -43,5 +43,10 @@ export default [
         taskName: `Consolidate all banner, filmstrip, slider, and lyric hovering; slider moving; and filmstrip, slider, and lyric access and activation; to all reflect the same cursor index and time? Is this even desirable?`,
         workedHours: 0,
         neededHours: 20
+    },
+    {
+        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]
