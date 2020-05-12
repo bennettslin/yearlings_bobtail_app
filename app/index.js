@@ -37,12 +37,12 @@ import RoutingContainer from './containers/Routing'
  * Force Webpack to pick these up, as they're only referenced in the HTML file.
  * From https://favicon.io.
  */
-require('../assets/favicon/android-chrome-192x192.png')
-require('../assets/favicon/android-chrome-512x512.png')
-require('../assets/favicon/apple-touch-icon.png')
-require('../assets/favicon/favicon-16x16.png')
-require('../assets/favicon/favicon-32x32.png')
-require('../assets/favicon/favicon.ico')
+import '../assets/favicon/android-chrome-192x192.png'
+import '../assets/favicon/android-chrome-512x512.png'
+import '../assets/favicon/apple-touch-icon.png'
+import '../assets/favicon/favicon-16x16.png'
+import '../assets/favicon/favicon-32x32.png'
+import '../assets/favicon/favicon.ico'
 
 const store = createStore(
     rootReducer,
