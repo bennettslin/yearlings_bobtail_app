@@ -1,9 +1,6 @@
 .ButtonIcon__about {
-    .eyeDark { fill: hsl(225, 20%, 20%); }
-    .eyeLight { fill: hsl(225, 20%, 90%); }
-    .hoof { fill: hsl(225, 20%, 35%); }
-    .letter { fill: hsl(30, 22%, 49%); }
-    .head { fill: hsl(30, 30%, 57%); }
-    .snout { fill: hsl(30, 22%, 45%); }
-    .ear { fill: hsl(29, 22%, 50%); }
+    .primaryDark { fill: hsl(30, 22%, 45%); }
+    .primaryLight { fill: hsl(30, 30%, 57%); }
+    .secondaryDark { fill: hsl(225, 20%, 35%); }
+    .sclera { fill: hsl(225, 20%, 90%); }
 }
