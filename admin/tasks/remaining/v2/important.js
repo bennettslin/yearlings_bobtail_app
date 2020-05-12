@@ -15,11 +15,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Test pass on Internet Explorer.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `If lyric expandable, always have either expanded lyric or heightless lyric in low processor. Include rotate screen icon in place of lyric expand button. Wait until after dynamic asset loading, to see if still needed. (Maybe not needed.)`,
         workedHours: 0,
         neededHours: 5
@@ -37,11 +32,5 @@ export default [
         taskName: `Finalise wormholes`,
         workedHours: 0,
         neededHours: 1
-    },
-
-    {
-        taskName: `Cutout render revisions.`,
-        workedHours: 0,
-        neededHours: 10
     }
 ]

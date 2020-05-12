@@ -1,21 +1,6 @@
 export default [
     {
-        taskName: `Have album banner track entire album's time progress.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Figure out best way to deal with sticky hover of tooltips in mobile.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
-        taskName: `Have option to zoom in on stage.`,
-        workedHours: 0,
-        neededHours: 20
-    },
-    {
-        taskName: `Once zoom mode is possible, modify tip.`,
         workedHours: 0,
         neededHours: 5
     },
@@ -45,8 +30,18 @@ export default [
         neededHours: 20
     },
     {
-        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled.`,
+        taskName: `Have option to zoom in on stage.`,
+        workedHours: 0,
+        neededHours: 20
+    },
+    {
+        taskName: `Show lyric in zoom stage.`,
         workedHours: 0,
         neededHours: 3
+    },
+    {
+        taskName: `Once zoom mode is possible, modify tip.`,
+        workedHours: 0,
+        neededHours: 5
     }
 ]

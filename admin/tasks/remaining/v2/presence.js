@@ -15,19 +15,9 @@ export default [
         neededHours: 2
     },
     {
-        taskName: `Cube and presence transition order. Use async and await to stagger transitions better.`,
-        workedHours: 0,
-        neededHours: 8
-    },
-    {
         taskName: `Add stars.`,
         workedHours: 0,
         neededHours: 3
-    },
-    {
-        taskName: `Blood on demonstrators?`,
-        workedHours: 0,
-        neededHours: 1
     },
     {
         taskName: `Darken presences in one-time dark scenes.`,
@@ -38,10 +28,5 @@ export default [
         taskName: `Ocean waves panel.`,
         workedHours: 0,
         neededHours: 2
-    },
-    {
-        taskName: `Another recyclables bin for neighbour.`,
-        workedHours: 0,
-        neededHours: 1
     }
 ]
