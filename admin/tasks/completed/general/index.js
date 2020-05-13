@@ -4571,8 +4571,7 @@ export default [
     },
     {
         taskName: `Pulsate play button in Prologue.`,
-        workedHours: 2,
-        neededHours: 2
+        workedHours: 2
     },
     {
         taskName: `Various bug fixes.`,
@@ -4616,7 +4615,14 @@ export default [
     },
     {
         taskName: `Another recyclables bin for neighbour.`,
-        workedHours: 1,
-        neededHours: 1
+        workedHours: 1
+    },
+    {
+        taskName: `Confirm favicons get picked up for both websites, and fix favicon corners.`,
+        workedHours: 1
+    },
+    {
+        taskName: `Fix gangbanger's wet shoe. Make so it looks three-dimensional.`,
+        workedHours: 1
     }
 ]

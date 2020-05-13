@@ -18,11 +18,6 @@ export default [
 
     /* Week work. */
     {
-        taskName: `Confirm new favicons are picked up for both websites.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Confirm whether assets get rehashed when rebuilt.`,
         workedHours: 0,
         neededHours: 1
@@ -33,12 +28,7 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Fix gangbanger's wet shoe. Make so it looks three-dimensional.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Blood on demonstrators1`,
+        taskName: `Blood on demonstrators.`,
         workedHours: 0,
         neededHours: 1
     },
