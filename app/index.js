@@ -22,12 +22,12 @@ import './scss/app.scss'
  * because I don't know what I'm doing...
  */
 /* eslint-disable */
-import Actors from 'admin/containers/Actors'
-import Annotations from 'admin/containers/Annotations'
-import LegacyPreviewer from 'admin/containers/LegacyPreviewer'
-import Skies from 'admin/containers/Skies'
-import Things from 'admin/containers/Things'
-import Progress from 'admin/containers/Progress'
+import Actors from 'env/containers/Actors'
+import Annotations from 'env/containers/Annotations'
+import LegacyPreviewer from 'env/containers/LegacyPreviewer'
+import Progress from 'env/containers/Progress'
+import Skies from 'env/containers/Skies'
+import Things from 'env/containers/Things'
 /* eslint-enable */
 
 import RoutingContainer from './containers/Routing'

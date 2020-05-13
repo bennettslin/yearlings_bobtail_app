@@ -1,6 +1,6 @@
 // This grabs from app, not admin, in production.
 // eslint-disable-next-line import/no-unresolved
-import { GA_ACCOUNT } from 'admin/constants/analytics'
+import { GA_ACCOUNT } from 'env/constants/analytics'
 
 window.dataLayer = window.dataLayer || []
 function gtag() {

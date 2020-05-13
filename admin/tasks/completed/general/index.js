@@ -4628,5 +4628,9 @@ export default [
     {
         taskName: `Fix Liz's hair in condom scene. Too bouffant like.`,
         workedHours: 1
+    },
+    {
+        taskName: `Change admin to env alias.`,
+        workedHours: 1
     }
 ]

@@ -18,11 +18,6 @@ export default [
 
     /* Week work. */
     {
-        taskName: `Change admin to env alias.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Confirm whether assets get rehashed when rebuilt.`,
         workedHours: 0,
         neededHours: 1
@@ -58,5 +53,10 @@ export default [
         taskName: `Editing. Include overviews.`,
         workedHours: 0,
         neededHours: 200
+    },
+    {
+        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled.`,
+        workedHours: 0,
+        neededHours: 3
     }
 ]

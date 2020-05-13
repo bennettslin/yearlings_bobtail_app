@@ -8,10 +8,5 @@ export default [
         taskName: `Annotation tip still shows hand when annotation's dot is not selected.`,
         workedHours: 0,
         neededHours: 1
-    },
-    {
-        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled.`,
-        workedHours: 0,
-        neededHours: 3
     }
 ]

@@ -41,11 +41,9 @@ const getConfig = ({
             extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
                 // In production, admin just reroutes to app.
-                admin: showAdmin ?
+                env: showAdmin ?
                     path.resolve(__dirname, './admin') :
-                    path.resolve(__dirname, './app'),
-                // Replace the lodash package with vanilla code.
-                lodash: path.resolve(__dirname, './app/utils/lodash')
+                    path.resolve(__dirname, './app/env')
             }
         },
         module: {
