@@ -36,13 +36,3 @@
 @import "./usher/style";
 @import "./wade/style";
 @import "./willy/style";
-
-.sclera,
-.pupil,
-[class^=iris],
-[class^=nipple],
-[class$=Blob],
-[class$=noStroke]
- {
-    stroke: none;
-}
