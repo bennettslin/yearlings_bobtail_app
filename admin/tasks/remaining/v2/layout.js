@@ -1,5 +1,10 @@
 export default [
     {
+        taskName: `Finalise button colours.`,
+        workedHours: 0,
+        neededHours: 2
+    },
+    {
         taskName: `Figure out best way to deal with sticky hover of tooltips in mobile.`,
         workedHours: 0,
         neededHours: 5

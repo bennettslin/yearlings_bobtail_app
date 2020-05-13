@@ -29,4 +29,4 @@ const DOT_ICONS_MAP = {
     [AFTERWORD]: afterword
 }
 
-export const getDotIcon = dotKey => DOT_ICONS_MAP[dotKey]
+export const getSvgForDot = dotKey => DOT_ICONS_MAP[dotKey]

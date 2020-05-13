@@ -37,6 +37,10 @@ class Layer extends PureComponent {
 
             isActor = Boolean(actorKey),
 
+            /**
+             * TODO: This is ugly. There should be a better way to get these
+             * presence keys.
+             */
             presenceKeys = isActor ?
                 keys(getSvgMapForActor(actorKey)) :
                 keys(getSvgMapForThing(presenceType))

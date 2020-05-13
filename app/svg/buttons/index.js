@@ -74,4 +74,9 @@ const BUTTON_ICONS_MAP = {
     [TIPS_BUTTON_KEY]: tips
 }
 
-export default BUTTON_ICONS_MAP
+export const getSvgForButton = ({
+    buttonName,
+    buttonIdentifier
+}) => (
+    BUTTON_ICONS_MAP[buttonName]({ buttonIdentifier })
+)

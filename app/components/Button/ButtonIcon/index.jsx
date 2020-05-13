@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import InlineSvg from '../../../modules/InlineSvg'
 
-import BUTTON_ICONS_MAP from '../../../svg/buttons'
+import { getSvgForButton } from '../../../svg/buttons'
 
 import { getButtonIconClassNames } from './helper'
 
@@ -21,7 +21,10 @@ const ButtonIcon = ({
     buttonIdentifier
 
 }) => {
-    const buttonIconSvg = BUTTON_ICONS_MAP[buttonName]({ buttonIdentifier })
+    const buttonIconSvg = getSvgForButton({
+        buttonName,
+        buttonIdentifier
+    })
 
     return Boolean(buttonIconSvg) && (
         <InlineSvg

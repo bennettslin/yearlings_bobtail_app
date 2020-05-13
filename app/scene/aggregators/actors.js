@@ -260,7 +260,7 @@ const SCENE_ARRANGEMENTS = [
     ACTORS_DEATHBED_DREAM
 ]
 
-export default SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
+const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
     const actorKeys = keys(arrangements)
 
     actorKeys.forEach(actorKey => {
@@ -272,3 +272,5 @@ export default SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
 
     return allArrangements
 }, {})
+
+export default ALL_ARRANGEMENTS

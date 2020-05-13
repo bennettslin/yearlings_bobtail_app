@@ -4,7 +4,7 @@ import cx from 'classnames'
 
 import InlineSvg from '../../modules/InlineSvg'
 
-import { getDotIcon } from '../../svg/dots'
+import { getSvgForDot } from '../../svg/dots'
 
 const propTypes = {
     // From parent.
@@ -35,7 +35,7 @@ const Dot = ({
     dotKey
 
 }) => {
-    const dotIconSvg = getDotIcon(dotKey)
+    const dotIconSvg = getSvgForDot(dotKey)
 
     return (
         <InlineSvg
