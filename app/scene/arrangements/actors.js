@@ -1,10 +1,10 @@
 import keys from '../../utils/lodash/keys'
 
 /**
- * Organising actor instances by scene just makes it easier to tweak the
- * allArrangements of all the various presences within the same scene together.
- * They are actually compiled into a single object used for lookup by the
- * components, which do not distinguish by scene.
+ * Arrangements are organised by scene to make it easier to adjust the various
+ * presences within the same scene together. They are then compiled into a
+ * single object used for lookup by the components, which do not distinguish by
+ * scene.
  */
 import {
     ACTORS_LOGUE_PROLOGUE,
