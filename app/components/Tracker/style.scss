@@ -5,8 +5,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            opacity $animationDuration__instant,
-            width $animationDuration__slow;
+            opacity $transitionDuration__instant,
+            width $transitionDuration__slow;
     }
 
     .PlW__isPlaying

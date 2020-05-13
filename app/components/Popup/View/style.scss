@@ -60,7 +60,7 @@
 
     .Popup__visible
     & {
-        animation: bounceIn $animationDuration__slow;
+        animation: bounceIn $transitionDuration__slow;
     }
 
     .Popup__invisible
@@ -68,7 +68,7 @@
     .ShW__overlayShown
     .Popup__notInOverlay
     & {
-        animation: bounceOut $animationDuration__fast;
+        animation: bounceOut $transitionDuration__fast;
     }
 }
 
@@ -76,7 +76,7 @@
 
     .Popup__visible
     & {
-        animation: shrinkIn $animationDuration__slow;
+        animation: shrinkIn $transitionDuration__slow;
     }
 
     .Popup__invisible
@@ -84,7 +84,7 @@
     .ShW__overlayShown
     .Popup__notInOverlay
     & {
-        animation: shrinkOut $animationDuration__fast;
+        animation: shrinkOut $transitionDuration__fast;
     }
 }
 

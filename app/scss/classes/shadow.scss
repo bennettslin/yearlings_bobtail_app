@@ -1,0 +1,71 @@
+.textShadow__dark {
+    color: $colour__text__light;
+    text-shadow: $textShadow__dark;
+}
+
+.textShadow__light {
+    color: $colour__text__dark;
+    text-shadow: $textShadow__light;
+}
+
+.boxShadow__popupView {
+    box-shadow: $boxShadow__popupView;
+
+    .ShW__overlayShown
+    & {
+        box-shadow: $boxShadow__popupView__inOverlay;
+    }
+}
+
+.dropShadow {
+    filter: $dropShadow;
+
+    .ShW__overlayShown
+    & {
+        filter: $dropShadow__overlay;
+    }
+}
+
+.dropShadow__small {
+    filter: $dropShadow__small;
+}
+
+.dropShadow__lightHover {
+    &:hover {
+        filter: $dropShadow__lightHover;
+    }
+}
+
+.dropShadow__brightHover {
+    &:hover {
+        filter: $dropShadow__brightHover;
+    }
+}
+
+.dropShadow__anchorHover {
+    &:hover {
+        filter: $dropShadow__anchorHover;
+    }
+}
+
+.dropShadow__accessed {
+
+    .PlW__accessOn
+    & {
+        filter: $dropShadow__access;
+
+        &:hover {
+            filter: $dropShadow__accessHover;
+        }
+    }
+}
+
+.dropShadow__selected {
+    // Selected should override hover.
+    filter: $dropShadow__select !important;
+}
+
+.strokeShadow {
+    stroke-width: 0.5px;
+    stroke: hsla(0, 0%, 0%, 0.25);
+}

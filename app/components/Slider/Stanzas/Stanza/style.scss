@@ -2,7 +2,6 @@
 
 $marginX__slider: 4px;
 $marginY__slider: 6px;
-$OVERLAP_MARGIN_X_SLIDER: 2px;
 $height__sliderStanzaTab: 3px;
 $width__sliderStanzaTab: 9px;
 
@@ -14,7 +13,7 @@ $width__sliderStanzaTab: 9px;
 
     .DW__userAgentDesktop
     & {
-        transition: height $animationDuration__default;
+        transition: height $transitionDuration__default;
     }
 
     bottom: 0;

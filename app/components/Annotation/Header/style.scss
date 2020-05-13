@@ -17,8 +17,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            height $animationDuration__default,
-            opacity $animationDuration__default;
+            height $transitionDuration__default,
+            opacity $transitionDuration__default;
     }
 }
 

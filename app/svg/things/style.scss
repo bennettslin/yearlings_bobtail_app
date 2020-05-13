@@ -1,12 +1,12 @@
-@import "./backdrops/style";
-@import "./bubbles/style";
-@import "./cardboards/style";
-@import "./cutouts/style";
-@import "./fixtures/style";
-@import "./flats/style";
-@import "./furnitures/style";
-@import "./panels/style";
-@import "./puppets/style";
+@import './backdrops/style';
+@import './bubbles/style';
+@import './cardboards/style';
+@import './cutouts/style';
+@import './fixtures/style';
+@import './flats/style';
+@import './furnitures/style';
+@import './panels/style';
+@import './puppets/style';
 
 .Presence:not(.Presence__noShadow) {
     filter: drop-shadow( 0 0 1.5px hsla(0, 0, 0, 0.5));

@@ -26,7 +26,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: border-color $animationDuration__default;
+        transition: border-color $transitionDuration__default;
     }
 
     &::placeholder {
@@ -54,7 +54,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: color $animationDuration__default;
+        transition: color $transitionDuration__default;
     }
 
     &:hover {

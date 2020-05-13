@@ -23,7 +23,7 @@
     .TW__isStationary
     .Anchor__selectable:hover
     & {
-        animation: bounceHover $animationDuration__slow;
+        animation: bounceHover $transitionDuration__slow;
     }
 
     // "Root accessed letter Enter."

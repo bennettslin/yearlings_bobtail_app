@@ -29,8 +29,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            color $animationDuration__fast,
-            visibility $animationDuration__fast;
+            color $transitionDuration__fast,
+            visibility $transitionDuration__fast;
     }
 
     // "Root accessed letter Enter, child accessed letter Enter."

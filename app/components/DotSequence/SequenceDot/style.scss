@@ -7,8 +7,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            width $animationDuration__default,
-            opacity $animationDuration__default $animationDuration__fast;
+            width $transitionDuration__default,
+            opacity $transitionDuration__default $transitionDuration__fast;
     }
 }
 
@@ -23,7 +23,7 @@
     // &,
     // .Anchor__selectable:hover
     // & {
-    //     animation: bounceHover $animationDuration__slow;
+    //     animation: bounceHover $transitionDuration__slow;
     // }
 
     // "Root accessed letter Enter."

@@ -6,7 +6,7 @@
     .DW__userAgentDesktop
     & {
         transition:
-            background $animationDuration__slow;
+            background $transitionDuration__slow;
     }
 }
 
@@ -18,8 +18,8 @@
 //     .DW__userAgentDesktop
 //     & {
 //         transition:
-//             opacity $animationDuration__slow,
-//             top $animationDuration__slow,
-//             left $animationDuration__slow;
+//             opacity $transitionDuration__slow,
+//             top $transitionDuration__slow,
+//             left $transitionDuration__slow;
 //     }
 // }

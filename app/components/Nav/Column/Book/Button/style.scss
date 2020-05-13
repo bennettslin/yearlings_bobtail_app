@@ -18,8 +18,8 @@
     .Nav__showSingleBook
     & {
         transition:
-            width $animationDuration__default,
-            margin $animationDuration__default;
+            width $transitionDuration__default,
+            margin $transitionDuration__default;
     }
 
     .RW__navIconStatic
@@ -87,6 +87,6 @@
     .DW__userAgentDesktop
     & {
         transition:
-            color $animationDuration__default;
+            color $transitionDuration__default;
     }
 }

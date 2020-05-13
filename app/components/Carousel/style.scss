@@ -29,8 +29,8 @@ $height__carouselHidden: $height__chivalry;
     .DW__userAgentDesktop.DW__desktopWidth
     & {
         transition:
-            opacity $animationDuration__fast,
-            bottom $animationDuration__fast;
+            opacity $transitionDuration__fast,
+            bottom $transitionDuration__fast;
     }
 
 
@@ -43,8 +43,8 @@ $height__carouselHidden: $height__chivalry;
     .DW__userAgentDesktop.DW__mobileWidth
     & {
         transition:
-            opacity $animationDuration__fast,
-            top $animationDuration__fast;
+            opacity $transitionDuration__fast,
+            top $transitionDuration__fast;
     }
 
 

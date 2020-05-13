@@ -7,7 +7,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: opacity $animationDuration__default;
+        transition: opacity $transitionDuration__default;
     }
 }
 
@@ -31,6 +31,6 @@
 .fillTransition__dimTheatre {
     .DW__userAgentDesktop
     & {
-        transition: fill $animationDuration__slow;
+        transition: fill $transitionDuration__slow;
     }
 }

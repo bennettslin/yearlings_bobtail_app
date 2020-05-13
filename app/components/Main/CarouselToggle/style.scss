@@ -29,9 +29,9 @@
     .DW__userAgentDesktop
     & {
         transition:
-            margin $animationDuration__fast,
-            bottom $animationDuration__fast,
-            box-shadow $animationDuration__fast;
+            margin $transitionDuration__fast,
+            bottom $transitionDuration__fast,
+            box-shadow $transitionDuration__fast;
     }
 
     .DW__desktopWidth

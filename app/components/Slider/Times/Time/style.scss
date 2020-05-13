@@ -7,7 +7,7 @@ $margin__sliderTime: 5px;
 
     .DW__userAgentDesktop
     & {
-        transition: opacity $animationDuration__default;
+        transition: opacity $transitionDuration__default;
     }
 
     font-size: 1.1em;

@@ -17,10 +17,10 @@
     .DW__userAgentDesktop
     & {
         transition:
-            opacity $animationDuration__default,
-            max-width $animationDuration__default,
-            max-height $animationDuration__default,
-            margin-top $animationDuration__default,
-            margin-left $animationDuration__default;
+            opacity $transitionDuration__default,
+            max-width $transitionDuration__default,
+            max-height $transitionDuration__default,
+            margin-top $transitionDuration__default,
+            margin-left $transitionDuration__default;
     }
 }

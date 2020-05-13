@@ -55,7 +55,7 @@ $length__dotsSlideSelect__tablet:
 
     .DW__userAgentDesktop
     & {
-        transition: opacity $animationDuration__default;
+        transition: opacity $transitionDuration__default;
     }
 
     .DotsSlide__canHover

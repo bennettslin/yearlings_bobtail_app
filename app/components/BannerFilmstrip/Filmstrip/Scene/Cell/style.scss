@@ -6,7 +6,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: background-color $animationDuration__default;
+        transition: background-color $transitionDuration__default;
     }
 
     .FilmstripScene__interactable:hover

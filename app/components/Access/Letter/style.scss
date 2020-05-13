@@ -9,8 +9,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            opacity $animationDuration__default,
-            transform $animationDuration__instant;
+            opacity $transitionDuration__default,
+            transform $transitionDuration__instant;
     }
 
     opacity: 0;

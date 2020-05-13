@@ -21,7 +21,6 @@ import './scss/app.scss'
  * These reroute to the routing container in production. A hacky approach
  * because I don't know what I'm doing...
  */
-
 /* eslint-disable */
 import Actors from 'admin/containers/Actors'
 import Annotations from 'admin/containers/Annotations'

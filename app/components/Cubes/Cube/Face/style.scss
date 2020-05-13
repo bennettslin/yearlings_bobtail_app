@@ -3,9 +3,9 @@
     .TrW__canLyricCarouselEnter
     & {
         transition:
-            stroke $animationDuration__scene,
-            fill $animationDuration__scene,
-            d $animationDuration__scene;
+            stroke $transitionDuration__scene,
+            fill $transitionDuration__scene,
+            d $transitionDuration__scene;
     }
 
     stroke: hsla(60, 45%, 78%, 0.05);

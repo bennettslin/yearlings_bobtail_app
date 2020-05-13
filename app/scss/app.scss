@@ -1,95 +1,65 @@
+@import './constants/annotation';
+@import './constants/border';
+@import './constants/colour';
+@import './constants/font';
+@import './constants/icon';
+@import './constants/logic';
+@import './constants/lyric';
+@import './constants/menu';
+@import './constants/nav';
+@import './constants/popup';
+@import './constants/responsive';
+@import './constants/shadow';
+@import './constants/slider';
+@import './constants/transition';
+@import './constants/zIndex';
+
+@import './classes/animation';
+@import './classes/dom';
+@import './classes/font';
+@import './classes/global';
+@import './classes/iframe';
+@import './classes/mixin';
+@import './classes/shadow';
+
+@import '../scene/styles/style';
+@import '../svg/style';
+
+@import './exports/style';
+
 // Order matters!
+@import '../containers/Root/style';
+@import '../components/Live/style';
+@import '../components/Main/style';
 
-@import "./constants/global";
-@import "./constants/logic";
-@import "./constants/colours";
-@import "./constants/boxShadow";
-@import "./constants/zIndices";
-@import "./constants/annotation";
-@import "./constants/lyric";
-@import "./constants/nav";
-@import "./constants/popup";
-
-@import "./utilities/global";
-@import "./utilities/animations";
-@import "./utilities/iframe";
-@import "./utilities/mixins";
-
-@import "../containers/Root/style";
-
-@import "../components/Live/style";
-@import "../components/Main/style";
-
-@import "../components/About/style";
-@import "../components/Access/style";
-@import "../components/Annotation/style";
-@import "../components/Audio/style";
-@import "../components/BannerFilmstrip/style";
-@import "../components/Carousel/style";
-@import "../components/Cubes/style";
-@import "../components/Dot/style";
-@import "../components/DotSequence/style";
-@import "../components/DotsSlide/style";
-@import "../components/Lyric/style";
-@import "../components/Nav/style";
-@import "../components/Overview/style";
-@import "../components/Popup/style";
-@import "../components/Popups/style";
-@import "../components/Presence/style";
-@import "../components/Slider/style";
-@import "../components/Scene/style";
-@import "../components/Score/style";
-@import "../components/Stage/style";
-@import "../components/Stanzas/style";
-@import "../components/Theatre/style";
-@import "../components/Texts/style";
-@import "../components/Tracker/style";
-@import "../components/Tips/style";
-@import "../components/Verse/style";
-
-@import "../components/Anchor/style";
-@import "../components/Button/style";
-
-@import "../modules/PresenceSvg/style";
-@import "../modules/Spinner/style";
-@import "../modules/Wires/style";
-
-@import "../scene/styles/style";
-
-@import "../svg/style";
-
-// Sass constants are uppercase when exported to JavaScript.
-:export {
-    COUNT_GAPS_SINGLE: $COUNT_GAPS_SINGLE;
-    COUNT_GAPS_DOUBLE: $COUNT_GAPS_DOUBLE;
-    HEIGHT_MENU: $HEIGHT_MENU;
-    HEIGHT_NAV: $HEIGHT_NAV;
-    LENGTH_ICON: $LENGTH_ICON;
-    LENGTH_ICON_LARGE: $LENGTH_ICON_LARGE;
-    LENGTH_ICON_LARGE_TABLET: $LENGTH_ICON_LARGE_TABLET;
-    LENGTH_ICON_LARGE_MINI: $LENGTH_ICON_LARGE_MINI;
-    MARGIN_THIN: $MARGIN_THIN;
-    OVERLAP_MARGIN_X_SLIDER: $OVERLAP_MARGIN_X_SLIDER;
-    PADDING_POPUP_CONTENT_WIDE: $PADDING_POPUP_CONTENT_WIDE;
-
-    WIDTH_MENU_BREAKPOINT: $WIDTH_MENU_BREAKPOINT;
-    WIDTH_LAPTOP: $WIDTH_LAPTOP;
-    WIDTH_GOLDEN_CORD: $WIDTH_GOLDEN_CORD;
-    WIDTH_UNCANNY_VALLEY: $WIDTH_UNCANNY_VALLEY;
-
-    HUE_APARTMENT: $HUE_APARTMENT;
-    HUE_BENNETT_LINENS: $HUE_BENNETT_LINENS;
-    HUE_BENNETT_ROOM: $HUE_BENNETT_ROOM;
-    HUE_FAMILY: $HUE_FAMILY;
-    HUE_LIZ_LINENS: $HUE_LIZ_LINENS;
-    HUE_LIZ_ROOM: $HUE_LIZ_ROOM;
-    HUE_MIRIAM_LINENS: $HUE_MIRIAM_LINENS;
-    HUE_WAITING: $HUE_WAITING;
-
-    HUE_OCEAN: $HUE_OCEAN;
-    HUE_ROOF: $HUE_ROOF;
-    HUE_SAND: $HUE_SAND;
-    HUE_SNOW: $HUE_SNOW;
-    HUE_SNOWGLOBE: $HUE_SNOWGLOBE;
-    HUE_TENNIS: $HUE_TENNIS;
-}
+@import '../components/About/style';
+@import '../components/Access/style';
+@import '../components/Annotation/style';
+@import '../components/Audio/style';
+@import '../components/BannerFilmstrip/style';
+@import '../components/Carousel/style';
+@import '../components/Cubes/style';
+@import '../components/Dot/style';
+@import '../components/DotSequence/style';
+@import '../components/DotsSlide/style';
+@import '../components/Lyric/style';
+@import '../components/Nav/style';
+@import '../components/Overview/style';
+@import '../components/Popup/style';
+@import '../components/Popups/style';
+@import '../components/Presence/style';
+@import '../components/Slider/style';
+@import '../components/Scene/style';
+@import '../components/Score/style';
+@import '../components/Stage/style';
+@import '../components/Stanzas/style';
+@import '../components/Theatre/style';
+@import '../components/Texts/style';
+@import '../components/Tracker/style';
+@import '../components/Tips/style';
+@import '../components/Verse/style';
+@import '../components/Anchor/style';
+@import '../components/Button/style';
+@import '../modules/PresenceSvg/style';
+@import '../modules/Spinner/style';
+@import '../modules/Wires/style';

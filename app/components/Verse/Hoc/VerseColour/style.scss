@@ -8,11 +8,11 @@
     .TW__lyricsUnlocked
     & {
         transition:
-            top $animationDuration__faster,
-            left $animationDuration__faster,
-            width $animationDuration__faster,
-            height $animationDuration__faster,
-            background-color $animationDuration__faster;
+            top $transitionDuration__faster,
+            left $transitionDuration__faster,
+            width $transitionDuration__faster,
+            height $transitionDuration__faster,
+            background-color $transitionDuration__faster;
     }
 }
 

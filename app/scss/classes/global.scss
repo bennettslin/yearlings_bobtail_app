@@ -1,0 +1,26 @@
+.displayNoneContainer {
+    display: none;
+}
+
+.abF {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.ovH {
+    overflow: hidden;
+}
+
+.flexCentreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexAlignContainer {
+    display: flex;
+    align-items: center;
+}

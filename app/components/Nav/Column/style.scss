@@ -14,8 +14,8 @@
     .DW__userAgentDesktop.DW__desktopWidth
     & {
         transition:
-            bottom $animationDuration__default,
-            opacity $animationDuration__default;
+            bottom $transitionDuration__default,
+            opacity $transitionDuration__default;
     }
 
     .DW__miniOrTabletWidth
@@ -26,8 +26,8 @@
     .DW__userAgentDesktop.DW__miniOrTabletWidth
     & {
         transition:
-            top $animationDuration__default,
-            opacity $animationDuration__default;
+            top $transitionDuration__default,
+            opacity $transitionDuration__default;
     }
 }
 

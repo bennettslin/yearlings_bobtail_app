@@ -8,9 +8,9 @@
     .DW__userAgentDesktop
     & {
         transition:
-            opacity $animationDuration__default,
-            background-color $animationDuration__default,
-            transform $animationDuration__instant;
+            opacity $transitionDuration__default,
+            background-color $transitionDuration__default,
+            transform $transitionDuration__instant;
     }
 }
 
@@ -75,7 +75,7 @@
     &,
     .Button__enabled:hover
     & {
-        animation: bounceHover $animationDuration__default;
+        animation: bounceHover $transitionDuration__default;
     }
 
     // "Root accessed letter Enter."

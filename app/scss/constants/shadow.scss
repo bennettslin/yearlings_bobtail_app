@@ -1,4 +1,3 @@
-// Box shadow colours.
 $colour__shadow__light: hsla(240, 14%, 34%, 0.4);
 $colour__shadow__medium: hsla(240, 33%, 15%, 0.7);
 $colour__shadow__dark: hsla(240, 33%, 15%, 0.9);
@@ -14,7 +13,6 @@ $colour__shadow__anchorHover: hsla($hue__link, 83%, 70%, 0.9);
 
 $colour__shadow__select: hsla($hue__select, 63%, 45%, 0.9);
 
-// Main.
 $boxShadow__mainCard: 0 3px 5px 2px $colour__shadow__medium;
 
 $dropShadow__small: drop-shadow(0 2px 2px $colour__shadow__medium);

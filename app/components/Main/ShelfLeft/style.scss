@@ -19,8 +19,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            opacity $animationDuration__default,
-            margin-left $animationDuration__default;
+            opacity $transitionDuration__default,
+            margin-left $transitionDuration__default;
     }
 
     .PlW__song

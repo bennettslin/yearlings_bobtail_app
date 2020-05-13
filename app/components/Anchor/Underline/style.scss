@@ -18,8 +18,8 @@ $width__underline__bleed: 0.125em;
     .DW__userAgentDesktop
     & {
         transition:
-            height $animationDuration__faster,
-            background-color $animationDuration__fast;
+            height $transitionDuration__faster,
+            background-color $transitionDuration__fast;
     }
 
     // "Root accessed letter Enter, child accessed letter Enter."

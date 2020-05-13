@@ -6,8 +6,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            top $animationDuration__default,
-            opacity $animationDuration__default;
+            top $transitionDuration__default,
+            opacity $transitionDuration__default;
     }
 
     .DW__mobileWidth

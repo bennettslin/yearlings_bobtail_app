@@ -1,6 +1,3 @@
-$HEIGHT_MENU: 80px;
-$WIDTH_MENU_BREAKPOINT: 800px;
-
 $padding__menuChild__mobile: $margin__thick;
 $padding__menuChild__desktop: $margin__thick * 2;
 
@@ -13,8 +10,8 @@ $padding__menuChild__desktop: $margin__thick * 2;
     .DW__userAgentDesktop
     & {
         transition:
-            margin $animationDuration__slow,
-            max-width $animationDuration__slow;
+            margin $transitionDuration__slow,
+            max-width $transitionDuration__slow;
     }
 
     /**

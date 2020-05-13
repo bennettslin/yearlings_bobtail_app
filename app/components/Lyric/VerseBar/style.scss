@@ -5,8 +5,8 @@
     .DW__userAgentDesktop
     & {
         transition:
-            transform $animationDuration__fast,
-            opacity $animationDuration__fast;
+            transform $transitionDuration__fast,
+            opacity $transitionDuration__fast;
     }
 
     max-width: calc(100% - #{$margin__thick * 2});
@@ -41,7 +41,7 @@
 
     .VerseBar:hover
     & {
-        animation: bounceHover $animationDuration__default;
+        animation: bounceHover $transitionDuration__default;
     }
 
     .VerseBar:active

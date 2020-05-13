@@ -6,7 +6,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: opacity $animationDuration__fast;
+        transition: opacity $transitionDuration__fast;
     }
 
     opacity: 0;
@@ -31,7 +31,7 @@
 .Popup__visible {
     .DW__userAgentDesktop
     & {
-        transition: opacity $animationDuration__slow;
+        transition: opacity $transitionDuration__slow;
     }
 
     opacity: 1;

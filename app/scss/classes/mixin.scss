@@ -21,7 +21,6 @@
 }
 
 @mixin mixin__textAndLinkColours($light: false, $important: false) {
-
     @if $light {
         @if $important {
             color: $colour__text__light !important;
@@ -150,7 +149,6 @@
 }
 
 @mixin mixin__underlineColours($important: false) {
-
     .Underline__default {
         @if $important {
             background-color: $colour__underline !important;

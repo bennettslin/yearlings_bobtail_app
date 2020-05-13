@@ -17,8 +17,8 @@ $margin__dotsContainer__phone: 8px;
     .DW__userAgentDesktop
     & {
         transition:
-            opacity $animationDuration__default,
-            left $animationDuration__slow;
+            opacity $transitionDuration__default,
+            left $transitionDuration__slow;
     }
 
     box-shadow: $boxShadow__mainCard;

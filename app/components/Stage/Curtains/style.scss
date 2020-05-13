@@ -16,7 +16,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: left $animationDuration__default;
+        transition: left $transitionDuration__default;
     }
 
     .Curtains__parted
@@ -31,7 +31,7 @@
 
     .DW__userAgentDesktop
     & {
-        transition: right $animationDuration__default;
+        transition: right $transitionDuration__default;
     }
 
     .Curtains__parted

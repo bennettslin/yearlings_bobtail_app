@@ -5,9 +5,9 @@
     .NavColumn__left
     & {
         transition:
-            max-width $animationDuration__default,
-            opacity $animationDuration__default,
-            left $animationDuration__default;
+            max-width $transitionDuration__default,
+            opacity $transitionDuration__default,
+            left $transitionDuration__default;
     }
 
     .NavColumn__left.NavColumn__hidden
@@ -19,9 +19,9 @@
     .NavColumn__right
     & {
         transition:
-            max-width $animationDuration__default,
-            opacity $animationDuration__default,
-            right $animationDuration__default;
+            max-width $transitionDuration__default,
+            opacity $transitionDuration__default,
+            right $transitionDuration__default;
     }
 
     .NavColumn__right
