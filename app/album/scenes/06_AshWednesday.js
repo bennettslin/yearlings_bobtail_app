@@ -60,7 +60,7 @@ import {
     NIRVANA_POSTER
 } from '../../constants/scene/things/cardboards'
 import {
-    RECYCLABLES,
+    RECYCLABLES__BENNETT,
     BUSH_SINGLE__COURTYARD,
     BUSH_DOUBLE__COURTYARD,
     LAMPPOST__CHURCH,
@@ -116,7 +116,7 @@ export default [
                 [NEAR_BUILDINGS]: true
             },
             [CUTOUT]: {
-                [RECYCLABLES]: true,
+                [RECYCLABLES__BENNETT]: true,
                 [BUSH_SINGLE__COURTYARD]: true,
                 [BUSH_DOUBLE__COURTYARD]: true
             },

@@ -1,4 +1,5 @@
 import {
+    CUTOUT,
     DOOR,
     FIXTURE,
     FURNITURE,
@@ -18,10 +19,18 @@ import {
     LINGERIE_DRAWING,
     VASELINE
 } from '../../../constants/scene/things/fixtures'
+import { RECYCLABLES__NEIGHBOUR } from '../../../constants/scene/things/cutouts'
 import { BENNETT_PILLOW__BED } from '../../../constants/scene/things/furnitures'
 import { BENNETT_BED } from '../../../constants/scene/things/panels'
 
 export default {
+    [CUTOUT]: {
+        [RECYCLABLES__NEIGHBOUR]: {
+            yIndex: 1,
+            xPosition: 3.5,
+            scaleFactor: 0.3
+        }
+    },
     [DOOR]: {
         [BLINDS_OUTSIDE__NEIGHBOUR]: {
             yIndex: 1,

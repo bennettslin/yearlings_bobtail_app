@@ -4613,5 +4613,10 @@ export default [
     {
         taskName: `Band website favicon.`,
         workedHours: 4
+    },
+    {
+        taskName: `Another recyclables bin for neighbour.`,
+        workedHours: 1,
+        neededHours: 1
     }
 ]

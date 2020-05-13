@@ -28,11 +28,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Another recyclables bin for neighbour.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Fix Liz's hair in condom scene. Too bouffant like.`,
         workedHours: 0,
         neededHours: 1

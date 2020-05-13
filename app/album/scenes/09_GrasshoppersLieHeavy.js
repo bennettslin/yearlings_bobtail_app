@@ -94,6 +94,7 @@ import {
     APARTMENT_PLANT,
     BUSH_SINGLE__BENNETT_GATE,
     BUSH_DOUBLE__BENNETT_GATE,
+    RECYCLABLES__NEIGHBOUR,
     WAITING_ROOM_PLANT
 } from '../../constants/scene/things/cutouts'
 import {
@@ -364,6 +365,9 @@ export default [
                     instance: GINGERBREAD_PRISON
                 }
             },
+            [CUTOUT]: {
+                [RECYCLABLES__NEIGHBOUR]: true
+            },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,
                 [BLINDS_OUTSIDE__NEIGHBOUR]: true,
@@ -401,6 +405,9 @@ export default [
                         instance: RUMPLED_LINENS
                     }
                 }
+            },
+            [CUTOUT]: {
+                [RECYCLABLES__NEIGHBOUR]: true
             },
             [DOOR]: {
                 [NEIGHBOUR_DOOR]: true,
