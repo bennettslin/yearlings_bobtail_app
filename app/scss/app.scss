@@ -16,6 +16,7 @@
 @import './constants/zIndex';
 
 @import './classes/animation';
+@import './classes/button';
 @import './classes/dom';
 @import './classes/dot';
 @import './classes/font';
@@ -24,10 +25,8 @@
 @import './classes/mixin';
 @import './classes/shadow';
 
-@import '../scene/style';
-@import '../svg/style';
-
 @import './exports/style';
+@import '../scene/style';
 
 // Order matters!
 @import '../containers/Root/style';

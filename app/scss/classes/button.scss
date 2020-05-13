@@ -1,0 +1,116 @@
+.ButtonIcon__audioFastForward {
+    fill: $colour__future__bold;
+    transform: scaleX(-1);
+}
+
+.ButtonIcon__audioNext {
+    fill: $colour__future__bold;
+    transform: scaleX(-1);
+}
+
+.ButtonIcon__audioOptions {
+    fill: $colour__interact__bold;
+}
+
+.ButtonIcon__audioPlay {
+    .PlW__isPlaying
+    & {
+        fill: $colour__paused__bold;
+    }
+
+    .PlW__isPaused
+    & {
+        fill: $colour__playing__bold;
+    }
+}
+
+.ButtonIcon__audioPrevious {
+    fill: $colour__past__bold;
+}
+
+.ButtonIcon__audioRewind {
+    fill: $colour__past__bold;
+}
+
+.ButtonIcon__carouselNav {
+    fill: hsl(165, 67%, 80%);
+    .cardBack { fill: $bgColour__annotation__dark; }
+    .cardFront { fill: $bgColour__annotation; }
+    .annotation { fill: $bgColour__annotationCard; }
+}
+
+.ButtonIcon__carouselNext {
+    transform: scaleX(-1);
+
+    .arrow { fill: hsl(27, 100%, 75%) };
+}
+
+.ButtonIcon__carouselPrevious {
+    .arrow { fill: hsl(27, 100%, 75%); };
+}
+
+.ButtonIcon__wormhole {
+    fill: hsl(240, 33%, 80%);
+}
+
+.ButtonIcon__lyricEar {
+    fill: $colour__interact__bold;
+}
+
+.ButtonIcon__lyricExpand {
+    .arrow { fill: hsl(27, 100%, 75%) };
+    .line { fill: $colour__past__lighter };
+    .stanzaVerse { fill: $bgColour__stanzaType__verse };
+    .stanzaPrechorus { fill: $bgColour__stanzaType__prechorus };
+    .stanzaChorus { fill: $bgColour__stanzaType__chorus };
+}
+
+.ButtonIcon__about {
+    .primaryDark { fill: hsl(30, 22%, 45%); }
+    .primaryLight { fill: hsl(30, 30%, 57%); }
+    .secondaryDark { fill: hsl(225, 20%, 35%); }
+    .sclera { fill: hsl(225, 20%, 90%); }
+}
+
+.ButtonIcon__dotsSlide {
+    .narrative { fill: $bgColour__dot__narrative; }
+    .backstory { fill: $bgColour__dot__backstory; }
+    .observation { fill: $bgColour__dot__observation; }
+}
+
+.ButtonIcon__overview {
+    stroke-width: 0.5px;
+    stroke: rgba(50, 50, 50, 0.5);
+}
+
+.ButtonIcon__scores {
+    fill: $colour__interact__bold;
+}
+
+.ButtonIcon__tips {
+    .mountDark { fill: hsl(197, 50%, 60%); }
+    .mountLight { fill: hsl(197, 70%, 67%); }
+    .groove { fill: hsl(197, 34%, 30%); }
+    .switch { fill: hsl(198, 38%, 52%); }
+    .contact { fill: hsl(205, 8%, 45%); }
+    .screw { fill: hsl(203, 14%, 63%); }
+    .bulbOff { fill: hsla(240, 100%, 94%, 0.7); }
+    .bulbOn { fill: hsl(60, 100%, 90%); }
+}
+
+.ButtonIcon__navSong__19 {
+    transform: scaleX(-1);
+}
+
+.ButtonIcon__popupClose {
+    fill: hsl(320, 43%, 77%);
+}
+
+.ButtonIcon__popupNext {
+    fill: hsl(80, 43%, 77%);
+    transform: scaleX(-1);
+}
+
+.ButtonIcon__popupPrevious {
+    fill: hsl(160, 43%, 77%);
+}

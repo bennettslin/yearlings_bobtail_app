@@ -1,3 +1,9 @@
+@import './things/style';
+
+.Presence:not(.Presence__noShadow) {
+    filter: drop-shadow( 0 0 1.5px hsla(0, 0, 0, 0.5));
+}
+
 .sclera,
 .pupil,
 [class^=iris],

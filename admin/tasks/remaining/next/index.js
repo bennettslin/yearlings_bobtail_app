@@ -6,8 +6,8 @@ export default [
         neededHours: 10
     },
     {
-        taskName: `Import styles directly in components, do away with App import.`,
-        workedHours: 0,
+        taskName: `Styling refactor.`,
+        workedHours: 2,
         neededHours: 10
     },
 
