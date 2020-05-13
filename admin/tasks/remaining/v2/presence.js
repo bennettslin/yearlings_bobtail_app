@@ -28,5 +28,10 @@ export default [
         taskName: `Ocean waves panel.`,
         workedHours: 0,
         neededHours: 2
+    },
+    {
+        taskName: `Blood on demonstrators.`,
+        workedHours: 0,
+        neededHours: 1
     }
 ]

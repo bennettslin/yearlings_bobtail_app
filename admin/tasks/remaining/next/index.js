@@ -1,11 +1,6 @@
 export default [
     /* Just ongoing. */
     {
-        taskName: `Editing. Include overviews.`,
-        workedHours: 0,
-        neededHours: 200
-    },
-    {
         taskName: `Cutout render revisions.`,
         workedHours: 0,
         neededHours: 10
@@ -19,16 +14,6 @@ export default [
     /* Week work. */
     {
         taskName: `Confirm whether assets get rehashed when rebuilt.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Fix Liz's hair in condom scene. Too bouffant like.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
-        taskName: `Blood on demonstrators.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -60,13 +45,8 @@ export default [
 
     /* Weekend work. */
     {
-        taskName: `Use async and await to fix all that canEnter and didEnter weirdness.`,
+        taskName: `Editing. Include overviews.`,
         workedHours: 0,
-        neededHours: 8
-    },
-    {
-        taskName: `Cube and presence transition order.`,
-        workedHours: 0,
-        neededHours: 8
+        neededHours: 200
     }
 ]

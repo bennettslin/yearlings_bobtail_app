@@ -4624,5 +4624,9 @@ export default [
     {
         taskName: `Fix gangbanger's wet shoe. Make so it looks three-dimensional.`,
         workedHours: 1
+    },
+    {
+        taskName: `Fix Liz's hair in condom scene. Too bouffant like.`,
+        workedHours: 1
     }
 ]

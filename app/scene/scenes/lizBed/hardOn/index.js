@@ -10,16 +10,16 @@ import {
 export default {
     [BENNETT_LIZ]: {
         [HARD_ON]: {
-            yIndex: 3,
-            xPosition: 8,
+            yIndex: 4,
+            xPosition: 8.1,
             layerYIndex: 4
         }
     },
     [BENNETT_LIZ_REFLECTION]: {
         [HARD_ON_REFLECTION]: {
             yIndex: 2,
-            xPosition: 8,
-            zOffset: 4.6
+            xPosition: 8.1,
+            zOffset: 5
         }
     }
 }

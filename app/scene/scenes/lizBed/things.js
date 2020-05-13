@@ -38,13 +38,14 @@ export default {
             zOffset: 6.5
         },
         [CONDOM_WRAPPER_LIZ]: {
-            yIndex: 4,
-            xPosition: 8.5
+            yIndex: 5,
+            xPosition: 8.5,
+            zOffset: 0.05
         },
         [CONDOM_WRAPPER_REFLECTION]: {
             yIndex: 1,
             xPosition: 8.5,
-            zOffset: 6
+            zOffset: 6.5
         },
         [USED_CONDOM_LIZ]: {
             yIndex: 3,
