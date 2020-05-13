@@ -273,4 +273,8 @@ const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangement
     return allArrangements
 }, {})
 
+export const getKeysForActor = (actorKey) => (
+    keys(ALL_ARRANGEMENTS[actorKey])
+)
+
 export default ALL_ARRANGEMENTS

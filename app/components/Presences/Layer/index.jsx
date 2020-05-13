@@ -1,11 +1,10 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import keys from '../../../utils/lodash/keys'
 
 import Presence from '../../Presence'
-import { getSvgMapForActor } from '../../../svg/actors'
-import { getSvgMapForThing } from '../../../svg/things'
+import { getKeysForActor } from '../../../scene/aggregators/actors'
+import { getKeysForThing } from '../../../scene/aggregators/things'
 
 import { ACTOR } from '../../../constants/scene'
 
@@ -37,13 +36,9 @@ class Layer extends PureComponent {
 
             isActor = Boolean(actorKey),
 
-            /**
-             * TODO: This is ugly. There should be a better way to get these
-             * presence keys.
-             */
             presenceKeys = isActor ?
-                keys(getSvgMapForActor(actorKey)) :
-                keys(getSvgMapForThing(presenceType))
+                getKeysForActor(actorKey) :
+                getKeysForThing(presenceType)
 
         return (
             presenceKeys.map(presenceKey => {

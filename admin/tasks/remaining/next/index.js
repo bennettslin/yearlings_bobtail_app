@@ -10,8 +10,18 @@ export default [
         workedHours: 2,
         neededHours: 10
     },
+    {
+        taskName: `Logic refactor.`,
+        workedHours: 1,
+        neededHours: 10
+    },
 
     /* Week work. */
+    {
+        taskName: `Change admin to env alias.`,
+        workedHours: 0,
+        neededHours: 1
+    },
     {
         taskName: `Confirm whether assets get rehashed when rebuilt.`,
         workedHours: 0,
