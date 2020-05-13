@@ -2,6 +2,7 @@
 @import './constants/border';
 @import './constants/colour';
 @import './constants/font';
+@import './constants/hue';
 @import './constants/icon';
 @import './constants/logic';
 @import './constants/lyric';
@@ -22,7 +23,7 @@
 @import './classes/mixin';
 @import './classes/shadow';
 
-@import '../scene/styles/style';
+@import '../scene/style';
 @import '../svg/style';
 
 @import './exports/style';

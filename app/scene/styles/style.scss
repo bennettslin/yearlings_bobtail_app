@@ -1,26 +1,5 @@
 $suffix: __shared;
 
-$HUE_BENNETT_ROOM: 26;
-$HUE_FAMILY: 60;
-$HUE_LIZ_ROOM: 182;
-$HUE_APARTMENT: 330;
-
-$HUE_BENNETT_LINENS: 4;
-$HUE_WAITING: 43;
-$hue__hospital__linens: 54;
-$hue__attic__linens: 90;
-$HUE_MIRIAM_LINENS: 145;
-$hue__taiwan__linens: 214;
-$HUE_LIZ_LINENS: 270;
-
-$HUE_OCEAN: 204;
-$HUE_ROOF: 7;
-$HUE_SAND: 60;
-$HUE_SNOW: 186;
-$HUE_SNOWGLOBE: 3;
-$HUE_TENNIS: 220;
-
-@import "../sky/style";
 @import "./actors/style";
 @import "./shared/style";
 @import "./things/style";
