@@ -216,7 +216,7 @@ const SCENE_ARRANGEMENTS = [
     THINGS_DEATHBED_DREAM
 ]
 
-const ALL_ARRANGEMENTS_THINGS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
+export default SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
     const thingKeys = keys(arrangements)
 
     thingKeys.forEach(thingKey => {
@@ -228,5 +228,3 @@ const ALL_ARRANGEMENTS_THINGS = SCENE_ARRANGEMENTS.reduce((allArrangements, arra
 
     return allArrangements
 }, {})
-
-export default ALL_ARRANGEMENTS_THINGS
