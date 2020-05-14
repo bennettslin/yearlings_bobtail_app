@@ -1,4 +1,15 @@
 // Basic helpers that only know math and pure JavaScript.
+import './polyfill'
+
+export const getArrayOfLength = (
+    length,
+    indexBase = 0
+) => (
+    Array.from(
+        { length },
+        (nothing, i) => i + indexBase
+    )
+)
 
 export const getPropsAreShallowEqual = ({
     props = {},
@@ -20,16 +31,6 @@ export const getPropsAreShallowEqual = ({
 
     return true
 }
-
-export const getArrayOfLength = (
-    length,
-    indexBase = 0
-) => (
-    Array.from(
-        { length },
-        (nothing, i) => i + indexBase
-    )
-)
 
 export const getValidYIndex = (yIndex) => {
     /**

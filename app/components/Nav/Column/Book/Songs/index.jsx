@@ -12,6 +12,8 @@ import {
     getStartingIndexForBook
 } from '../../../../../album/api/songs'
 
+import { getArrayOfLength } from '../../../../../helpers/general'
+
 const navBookSongsPropTypes = {
     // From parent.
         bookIndex: PropTypes.number.isRequired
@@ -39,7 +41,7 @@ const navBookSongsPropTypes = {
                 'NavBook'
             )}>
                 <NavRoad />
-                {Array.from(Array(endArrayIndex - beginArrayIndex).keys()).map(currentIndex => {
+                {getArrayOfLength(endArrayIndex - beginArrayIndex).map(currentIndex => {
                     const songIndex = rowReverse ? endArrayIndex - 1 - currentIndex : currentIndex + beginArrayIndex
                     return (
                         <NavButtonIndexed {...other}
