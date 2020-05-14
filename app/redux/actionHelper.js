@@ -1,4 +1,5 @@
 import isUndefined from 'lodash/isUndefined'
+import keys from 'lodash/keys'
 
 // Don't pass a key with no value.
 export const hasKey = (value) => {
@@ -15,8 +16,7 @@ export const getDefinedOnlyPayload = (payload) => {
     }
 
     if (
-        Object.keys(payload).length !==
-            Object.keys(definedOnlyPayload).length
+        keys(payload).length !== keys(definedOnlyPayload).length
     ) {
         /**
          * TODO: Eventually get rid of getDefinedOnlyPayload if it's not

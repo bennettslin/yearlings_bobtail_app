@@ -6,3 +6,4 @@
 
 # Internet Explorer
 
+* When access on, play button pulsate animation is weird.
