@@ -60,7 +60,7 @@ const albumSongs = [
     Song_19
 ]
 
-logParse({
+logServe({
     log: 'Begin parsing album.',
     action: 'begin',
     label: 'album'
@@ -89,7 +89,7 @@ albumSongs.forEach(song => {
     addPluralCardsCount(song)
 })
 
-logParse({
+logServe({
     log: 'End parsing album.',
     action: 'end',
     label: 'album'

@@ -1,17 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+
 import {
     BrowserRouter as Router, Route, Switch
 } from 'react-router-dom'
+
+// Import these here just to make them available.
+import './utils/logger'
+import './utils/analytics'
 
 import { createStore } from 'redux'
 import { devToolsEnhancer } from 'redux-devtools-extension'
 
 import { Provider } from 'react-redux'
-
-// Import these here just to make them available.
-import './utils/logger'
-import './utils/analytics'
 
 import rootReducer from './redux/rootReducer'
 

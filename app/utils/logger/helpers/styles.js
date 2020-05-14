@@ -36,10 +36,10 @@ export const ERROR = 'error'
 export const EVENT = 'event'
 export const FOCUS = 'focus'
 export const MOUNT = 'mount'
-export const PARSE = 'parse'
 export const PLAYER = 'player'
 export const SCROLL = 'scroll'
 export const SELECT = 'select'
+export const SERVE = 'serve'
 export const SUCCESS = 'style'
 export const TRANSITION = 'transition'
 
@@ -73,9 +73,6 @@ const LOG_STYLES = {
         color: '#66b',
         fontSize: '1.1em'
     }),
-    [PARSE]: _getStyles({
-        fontSize: '1.1em'
-    }),
     [PLAYER]: _getStyles({
         color: '#487',
         fontSize: '1.35em'
@@ -87,6 +84,9 @@ const LOG_STYLES = {
     [SELECT]: _getStyles({
         color: '#82b',
         fontSize: '1.2em'
+    }),
+    [SERVE]: _getStyles({
+        fontSize: '1.1em'
     }),
     [SUCCESS]: _getStyles({
         color: '#4b4',

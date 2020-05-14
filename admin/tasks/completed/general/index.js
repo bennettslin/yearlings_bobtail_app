@@ -4636,5 +4636,13 @@ export default [
     {
         taskName: `Confirm whether unchanged asset gets same hash when rebuilt. It does.`,
         workedHours: 1
+    },
+    {
+        taskName: `Audit browsers.`,
+        workedHours: 3
+    },
+    {
+        taskName: `Log build date time.`,
+        workedHours: 1
     }
 ]

@@ -4,7 +4,7 @@ import {
     logEvent,
     logFocus,
     logMount,
-    logParse,
+    logServe,
     logPlayer,
     logScroll,
     logSelect,
@@ -13,12 +13,18 @@ import {
     logger
 } from './helpers/logs'
 
+logServe({
+    log: `Built ${BUILD_DATE_TIME}.`,
+    action: 'load',
+    label: BUILD_DATE_TIME
+})
+
 global.logAccess = logAccess
 global.logAdmin = logAdmin
 global.logEvent = logEvent
 global.logFocus = logFocus
 global.logMount = logMount
-global.logParse = logParse
+global.logServe = logServe
 global.logPlayer = logPlayer
 global.logScroll = logScroll
 global.logSelect = logSelect

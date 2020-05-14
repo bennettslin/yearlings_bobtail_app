@@ -23,21 +23,6 @@ export default [
         neededHours: 1
     },
     {
-        taskName: `Test pass on Firefox.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Test pass on Safari.`,
-        workedHours: 0,
-        neededHours: 2
-    },
-    {
-        taskName: `Test pass on Internet Explorer.`,
-        workedHours: 0,
-        neededHours: 5
-    },
-    {
         taskName: `Have album banner track entire album's time progress.`,
         workedHours: 0,
         neededHours: 5

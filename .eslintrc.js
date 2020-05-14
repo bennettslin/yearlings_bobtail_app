@@ -22,6 +22,7 @@ module.exports = {
     ],
     "globals": {
         "__dirname": true,
+        "BUILD_DATE_TIME": true,
         "dataLayer": true,
         "expect": true,
         "ga": true,
@@ -31,7 +32,7 @@ module.exports = {
         "logEvent": true,
         "logFocus": true,
         "logMount": true,
-        "logParse": true,
+        "logServe": true,
         "logPlayer": true,
         "logScroll": true,
         "logSelect": true,

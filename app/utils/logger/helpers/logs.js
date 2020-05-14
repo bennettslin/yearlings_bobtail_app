@@ -11,10 +11,10 @@ import {
     EVENT,
     FOCUS,
     MOUNT,
-    PARSE,
     PLAYER,
     SCROLL,
     SELECT,
+    SERVE,
     TRANSITION,
     SUCCESS,
     ERROR,
@@ -107,17 +107,6 @@ export const logMount = (componentName) => {
         useTimeForValue: true
     })
 }
-export const logParse = ({
-    log,
-    ...props
-}) => {
-    _logInfo({
-        log,
-        category: PARSE,
-        useTimeForValue: true,
-        ...props
-    })
-}
 export const logPlayer = ({
     log,
     success,
@@ -151,6 +140,17 @@ export const logSelect = ({
             label: `song: ${song}, annotation: ${annotation}`
         })
     }
+}
+export const logServe = ({
+    log,
+    ...props
+}) => {
+    _logInfo({
+        log,
+        category: SERVE,
+        useTimeForValue: true,
+        ...props
+    })
 }
 export const logError = ({
     log,
