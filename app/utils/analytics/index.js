@@ -1,3 +1,5 @@
+import isUndefined from 'lodash/isUndefined'
+
 // This grabs from app, not admin, in production.
 // eslint-disable-next-line import/no-unresolved
 import { GA_ACCOUNT } from 'env/constants/analytics'
@@ -10,12 +12,11 @@ function gtag() {
 gtag('js', new Date())
 gtag('config', GA_ACCOUNT)
 
-if (typeof ga !== 'undefined') {
+if (isUndefined(ga)) {
+    console.log('GA did not initialise.')
+} else {
     console.log(`GA initialised with property id ${GA_ACCOUNT}.`)
     ga('create', GA_ACCOUNT, 'auto')
-
-} else {
-    console.log('GA did not initialise.')
 }
 
 const sendEvent = ({
@@ -25,7 +26,7 @@ const sendEvent = ({
     value
 
 }) => {
-    if (typeof ga === 'undefined') {
+    if (isUndefined(ga)) {
         return false
     }
 
