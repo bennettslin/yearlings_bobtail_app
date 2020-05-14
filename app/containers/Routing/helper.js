@@ -1,4 +1,5 @@
 // Helper for getting param values from routing.
+import includes from 'lodash/includes'
 import isFinite from 'lodash/isFinite'
 
 import { getSongsAndLoguesCount } from '../../album/api/songs'
@@ -54,7 +55,7 @@ const _getRoutingIndices = (routingParamString = '') => {
             rawAnnotationIndex
 
         // Verse can only be second param.
-        if (routingIndices[1].includes('v')) {
+        if (includes(routingIndices[1], 'v')) {
             rawVerseIndex = _getIndexForPrefix(routingIndices[1], 'v')
 
             // If verse is present, annotation can only be third param.
@@ -63,7 +64,7 @@ const _getRoutingIndices = (routingParamString = '') => {
             }
 
         // If verse is absent, annotation can only be second param.
-        } else if (routingIndices[1].includes('a')) {
+        } else if (includes(routingIndices[1], 'a')) {
             rawAnnotationIndex = _getIndexForPrefix(routingIndices[1], 'a')
         }
 

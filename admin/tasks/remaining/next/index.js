@@ -2,23 +2,37 @@ export default [
     /* Just ongoing. */
     {
         taskName: `Cutout render revisions.`,
-        workedHours: 0,
-        neededHours: 10
+        workedHours: 0
     },
     {
-        taskName: `Styling refactor.`,
-        workedHours: 2,
-        neededHours: 10
-    },
-    {
-        taskName: `Logic refactor.`,
-        workedHours: 1,
-        neededHours: 10
+        taskName: `Refactor.`,
+        workedHours: 3
     },
 
     /* Week work. */
     {
+        taskName: `Improve logging. Only show analytics logging in development. In production, just change background colour. Make event logs more minimal.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
+        taskName: `Use global constants to avoid admin rerouting weirdness.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled. Store png with Illustrator files.`,
+        resource: `https://www.npmjs.com/package/webpack-pwa-manifest`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Add contact us in Bobtail Yearlings website.`,
+        workedHours: 0,
+        neededHours: 1
+    },
+    {
+        taskName: `Add build date time in Bobtail Yearlings website.`,
         workedHours: 0,
         neededHours: 1
     },
@@ -31,12 +45,6 @@ export default [
     /* Weekend work. */
     {
         taskName: `Editing. Include overviews.`,
-        workedHours: 0,
-        neededHours: 200
-    },
-    {
-        taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled.`,
-        workedHours: 0,
-        neededHours: 3
+        workedHours: 0
     }
 ]

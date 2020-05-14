@@ -1,3 +1,5 @@
+import includes from 'lodash/includes'
+
 import {
     SPACE,
     ENTER,
@@ -37,9 +39,9 @@ export const getKeyName = (e) => {
     return keyName
 }
 
-const _getIsNavKey = (keyName) => {
-    return keyName.includes('Arrow')
-}
+const _getIsNavKey = (keyName) => (
+    includes(keyName, 'Arrow')
+)
 
 export const getIsNavKeyOrEnter = (keyName) => {
     return _getIsNavKey(keyName) || keyName === ENTER

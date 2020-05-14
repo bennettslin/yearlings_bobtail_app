@@ -1,4 +1,5 @@
 import flatten from 'lodash/flatten'
+import includes from 'lodash/includes'
 
 const HYPHEN = '-'
 
@@ -6,7 +7,7 @@ export const getWordsForWikiAnchor = text => {
     // First split along space.
     const words = text.split(' ').map(word => {
 
-        if (word.includes(HYPHEN)) {
+        if (includes(word, HYPHEN)) {
             // Split along hyphen if it has one.
             const subWords = word.split(HYPHEN)
 

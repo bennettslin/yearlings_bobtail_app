@@ -23,5 +23,4 @@
 
 # Internet Explorer
 
-* Object doesn't support property or method 'includes'
 * Unable to get property 'getBoundingClientRect' of undefined or null reference

@@ -4638,7 +4638,7 @@ export default [
         workedHours: 1
     },
     {
-        taskName: `Audit browsers.`,
+        taskName: `Browser audits and initial fixes.`,
         workedHours: 3
     },
     {
