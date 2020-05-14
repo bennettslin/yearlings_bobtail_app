@@ -1,6 +1,5 @@
-import {
-    addDays, format
-} from 'date-fns'
+import addDays from 'date-fns/addDays'
+import format from 'date-fns/format'
 
 const WORK_HOURS_IN_DAY = 36 / 7,
     DAYS_IN_WEEK = 7,

@@ -18,11 +18,6 @@ export default [
 
     /* Week work. */
     {
-        taskName: `Confirm whether assets get rehashed when rebuilt.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Add contact us in Bobtail Yearlings website.`,
         workedHours: 0,
         neededHours: 1

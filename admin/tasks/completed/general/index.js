@@ -4632,5 +4632,9 @@ export default [
     {
         taskName: `Change admin to env alias.`,
         workedHours: 1
+    },
+    {
+        taskName: `Confirm whether unchanged asset gets same hash when rebuilt. It does.`,
+        workedHours: 1
     }
 ]
