@@ -1,5 +1,5 @@
 // Helper for getting and setting state persisted in user's local storage.
-import isFinite from '../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 import album from '../album'
 
 import { getSongVersesCount } from '../album/api/verses'

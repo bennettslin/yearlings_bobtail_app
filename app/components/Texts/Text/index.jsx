@@ -2,7 +2,7 @@
 
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import isString from '../../../utils/lodash/isstring'
+import isString from 'lodash/isString'
 
 import TextLyricAnchor from './LyricAnchor'
 import Texts from '..'

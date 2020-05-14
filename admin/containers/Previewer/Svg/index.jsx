@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import findIndex from '../../../../app/utils/lodash/findindex'
+import findIndex from 'lodash/findIndex'
 import InlineSvg from '../../../../app/modules/InlineSvg'
 
 import PreviewerKilobytes from '../Kilobytes'

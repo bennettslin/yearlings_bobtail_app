@@ -1,10 +1,10 @@
+import flatten from 'lodash/flatten'
+
 const HYPHEN = '-'
 
 export const getWordsForWikiAnchor = text => {
     // First split along space.
-    const words = text.split(' ')
-
-    return words.map(word => {
+    const words = text.split(' ').map(word => {
 
         if (word.includes(HYPHEN)) {
             // Split along hyphen if it has one.
@@ -18,9 +18,10 @@ export const getWordsForWikiAnchor = text => {
         } else {
             return word
         }
+    })
 
-    // Flatten array.
-    }).flat()
+    // Finally, flatten array.
+    return flatten(words)
 }
 
 export const getSpaceIfNeeded = ({

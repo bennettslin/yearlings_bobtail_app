@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isFinite from '../../../../../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 import { getSongTitle } from '../../../../../../album/api/songs'
 

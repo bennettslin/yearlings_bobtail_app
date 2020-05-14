@@ -1,4 +1,4 @@
-import isFinite from '../../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 import { getAnnotation } from '../../../album/api/annotations'
 import { EAR_COLUMN_KEYS } from '../../../constants/lyrics'
 

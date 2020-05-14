@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import debounce from 'debounce'
-import keys from '../../../app/utils/lodash/keys'
+import keys from 'lodash/keys'
 
 import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'

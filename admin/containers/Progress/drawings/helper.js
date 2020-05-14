@@ -1,5 +1,5 @@
-import isFinite from '../../../../app/utils/lodash/isfinite'
-import keys from '../../../../app/utils/lodash/keys'
+import isFinite from 'lodash/isFinite'
+import keys from 'lodash/keys'
 import albumScenes from '../../../scenes'
 
 import { ACTOR } from '../../../../app/constants/scene'

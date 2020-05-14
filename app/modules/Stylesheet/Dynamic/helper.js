@@ -1,4 +1,4 @@
-import keys from '../../../utils/lodash/keys'
+import keys from 'lodash/keys'
 
 export const getDynamicStyleStringForIndex = ({
 

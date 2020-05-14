@@ -1,6 +1,6 @@
 // TODO: Separate further into smaller files?
 
-import keys from '../../../../../utils/lodash/keys'
+import keys from 'lodash/keys'
 
 import { REFERENCE } from '../../../../../constants/dots'
 import { WIKI } from '../../../../../constants/lyrics'

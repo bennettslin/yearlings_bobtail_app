@@ -34,6 +34,7 @@
     "classnames": "^2.2.6",
     "debounce": "^1.2.0",
     "email-validator": "^2.0.4",
+    "lodash": "^4.17.15",
     "mobile-detect": "^1.4.4",
     "pino": "^5.16.0",
     "prop-types": "^15.7.2",

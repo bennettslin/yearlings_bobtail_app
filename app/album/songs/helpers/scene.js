@@ -1,4 +1,4 @@
-import isFinite from '../../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 import albumScenes from '../../../album/scenes'
 
 const _addDurationsToSceneConfigs = (sceneConfigs, { totalTime }) => {

@@ -1,5 +1,5 @@
 // Helper for getting param values from routing.
-import isFinite from '../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 import { getSongsAndLoguesCount } from '../../album/api/songs'
 import { getVerse } from '../../album/api/verses'

@@ -6,4 +6,3 @@
 
 # Internet Explorer
 
-* Broken.

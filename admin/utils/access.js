@@ -1,5 +1,5 @@
-import findIndex from '../../app/utils/lodash/findindex'
-import keys from '../../app/utils/lodash/keys'
+import findIndex from 'lodash/findIndex'
+import keys from 'lodash/keys'
 
 import {
     getPreviewerSvgMapForActor,

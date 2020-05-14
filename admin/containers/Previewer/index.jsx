@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from '../../../app/utils/lodash/keys'
+import keys from 'lodash/keys'
 import scrollIntoView from 'scroll-into-view'
 
 import PreviewerSvg from './Svg'

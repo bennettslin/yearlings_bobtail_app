@@ -1,4 +1,4 @@
-import keys from '../../utils/lodash/keys'
+import keys from 'lodash/keys'
 
 import THINGS_BACKDROPS from '../../scene/scenes/backdrops/things'
 import THINGS_NOHO_HOUSES from '../../scene/scenes/nohoHouses/things'

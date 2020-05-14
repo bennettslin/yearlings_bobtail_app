@@ -1,4 +1,4 @@
-import isFinite from '../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 export const getParentOfVerseClassNamesForIndices = ({
     entities = [],

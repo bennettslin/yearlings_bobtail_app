@@ -7,7 +7,7 @@
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isFinite from '../../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 import { updateAccessStore } from '../../../redux/access/action'
 import { updateAudioStore } from '../../../redux/audio/action'

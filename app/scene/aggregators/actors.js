@@ -1,4 +1,4 @@
-import keys from '../../utils/lodash/keys'
+import keys from 'lodash/keys'
 
 /**
  * Arrangements are organised by scene to make it easier to adjust the various

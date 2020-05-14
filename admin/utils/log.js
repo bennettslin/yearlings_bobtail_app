@@ -1,4 +1,4 @@
-import keys from '../../app/utils/lodash/keys'
+import keys from 'lodash/keys'
 
 import { getPreviewerSvgMapForThing } from './svg'
 

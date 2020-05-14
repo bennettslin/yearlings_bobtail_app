@@ -1,4 +1,4 @@
-import isUndefined from '../../utils/lodash/isundefined'
+import isUndefined from 'lodash/isUndefined'
 
 import { getSongTitle } from '../../album/api/songs'
 

@@ -3,7 +3,7 @@ import React, { memo, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import isFinite from '../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'

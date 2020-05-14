@@ -2,7 +2,7 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from '../../../../app/utils/lodash/keys'
+import keys from 'lodash/keys'
 
 const DrawingActor = ({
 

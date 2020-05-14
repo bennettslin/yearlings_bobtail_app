@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
-import isFinite from '../../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 import { getStanzaConfig } from '../../../album/api/stanzas'

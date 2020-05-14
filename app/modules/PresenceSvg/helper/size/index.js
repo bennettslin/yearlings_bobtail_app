@@ -1,4 +1,4 @@
-import isFinite from '../../../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 import { Y_INDEX_SCALE_FACTORS } from '../../../../constants/cubeRender'
 import { getValidYIndex } from '../../../../helpers/general'

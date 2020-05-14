@@ -1,6 +1,6 @@
 import ALL_ARRANGEMENTS_ACTORS from '../../scene/aggregators/actors'
 import ALL_ARRANGEMENTS_THINGS from '../../scene/aggregators/things'
-import isFinite from '../../utils/lodash/isfinite'
+import isFinite from 'lodash/isFinite'
 
 import { ACTOR } from '../../constants/scene'
 
