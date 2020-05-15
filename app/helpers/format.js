@@ -1,5 +1,5 @@
 // Helpers for parsing text objects.
-import isString from 'lodash/isString'
+import { isString } from './general'
 
 import { LYRIC_TEXT_KEYS } from '../constants/lyrics'
 

@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isString from 'lodash/isString'
+import { isString } from '../../../../helpers/general'
 
 import AnnotationDispatcher from '../../../../handlers/Annotation/Dispatcher'
 import SongDispatcher from '../../../../handlers/Song/Dispatcher'

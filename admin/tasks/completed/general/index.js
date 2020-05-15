@@ -4644,5 +4644,9 @@ export default [
     {
         taskName: `Log build date time.`,
         workedHours: 1
+    },
+    {
+        taskName: `Remove lodash.`,
+        workedHours: 2
     }
 ]

@@ -5,6 +5,11 @@ export const flatten = array => (
     [].concat(...array)
 )
 
+// https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_isString
+export const isString = (string) => (
+    string && typeof string.valueOf() === "string"
+)
+
 // https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_pickby
 export const pickBy = object => {
     const newObject = {}

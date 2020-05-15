@@ -1,4 +1,4 @@
-import isString from 'lodash/isString'
+import { isString } from '../../../../helpers/general'
 
 import youngBennett from './youngBennett'
 import preteenBennett from './preteenBennett'
