@@ -2,13 +2,13 @@ import lyricEarLeft from '../../../../../assets/svgs/app/lyric/lyricEarLeft'
 import lyricEarRight from '../../../../../assets/svgs/app/lyric/lyricEarRight'
 
 import {
-    LEFT,
-    RIGHT
+    LYRIC_LEFT,
+    LYRIC_RIGHT
 } from '../../../../constants/lyrics'
 
 const LYRIC_EAR_MAP = {
-    [LEFT]: lyricEarLeft,
-    [RIGHT]: lyricEarRight
+    [LYRIC_LEFT]: lyricEarLeft,
+    [LYRIC_RIGHT]: lyricEarRight
 }
 
 const getIcon = ({ buttonIdentifier: direction }) => {

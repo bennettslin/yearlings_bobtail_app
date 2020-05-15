@@ -1,15 +1,15 @@
 const LYRIC = 'lyric',
-    LEFT = 'left',
+    LYRIC_LEFT = 'left',
     LYRIC_CENTRE = 'lyricCentre',
-    RIGHT = 'right',
+    LYRIC_RIGHT = 'right',
     ANCHOR = 'anchor'
 
 module.exports = {
 
     LYRIC,
-    LEFT,
+    LYRIC_LEFT,
     LYRIC_CENTRE,
-    RIGHT,
+    LYRIC_RIGHT,
     ANCHOR,
 
     WIKI: 'wiki',
@@ -45,8 +45,8 @@ module.exports = {
     ANNOTATION_SEARCH_KEYS: [
         LYRIC,
         LYRIC_CENTRE,
-        LEFT,
-        RIGHT,
+        LYRIC_LEFT,
+        LYRIC_RIGHT,
         'subVerse',
         'sideCard',
         'sideSubCard',
@@ -60,21 +60,21 @@ module.exports = {
     LYRIC_TEXT_KEYS: [
         LYRIC,
         LYRIC_CENTRE,
-        LEFT,
-        RIGHT,
+        LYRIC_LEFT,
+        LYRIC_RIGHT,
         ANCHOR
     ],
 
     WORMHOLE_SEARCH_KEYS: [
         LYRIC,
         LYRIC_CENTRE,
-        LEFT,
-        RIGHT
+        LYRIC_LEFT,
+        LYRIC_RIGHT
     ],
 
     EAR_COLUMN_KEYS: [
-        LEFT,
-        RIGHT
+        LYRIC_LEFT,
+        LYRIC_RIGHT
     ],
 
     // This is only used by the stats helper.

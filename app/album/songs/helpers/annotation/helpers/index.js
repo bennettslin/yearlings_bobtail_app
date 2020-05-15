@@ -8,8 +8,8 @@ import {
 import { getFormattedAnnotationTitle } from '../../../../../helpers/format'
 
 import {
-    LEFT,
-    RIGHT,
+    LYRIC_LEFT,
+    LYRIC_RIGHT,
     COLUMN_INDEX
 } from '../../../../../constants/lyrics'
 
@@ -64,16 +64,16 @@ export const registerAnnotation = ({
 
     if (
         // Let annotation know if it's in a doublespeaker column.
-        textKey === LEFT ||
+        textKey === LYRIC_LEFT ||
 
         // Or else let it know if its unit has a side card.
-        columnKey === LEFT
+        columnKey === LYRIC_LEFT
     ) {
         annotation[COLUMN_INDEX] = 0
 
     } else if (
-        textKey === RIGHT ||
-        columnKey === RIGHT
+        textKey === LYRIC_RIGHT ||
+        columnKey === LYRIC_RIGHT
     ) {
         annotation[COLUMN_INDEX] = 1
     }

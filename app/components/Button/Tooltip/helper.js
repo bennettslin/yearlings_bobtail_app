@@ -16,10 +16,8 @@ import {
     TIPS_BUTTON_KEY
 } from '../../../constants/buttons'
 
-import {
-    LEFT,
-    RIGHT
-} from '../../../constants/lyrics'
+const TOOLTIP_LEFT = 'left'
+const TOOLTIP_RIGHT = 'right'
 
 export const getTooltipPlacement = ({
     buttonName,
@@ -29,14 +27,14 @@ export const getTooltipPlacement = ({
     if (isDesktopWidth) {
         switch (buttonName) {
             case LYRIC_EAR_BUTTON_KEY:
-                return LEFT
+                return TOOLTIP_LEFT
             case AUDIO_PREVIOUS_BUTTON_KEY:
             case AUDIO_PLAY_BUTTON_KEY:
             case AUDIO_NEXT_BUTTON_KEY:
             case AUDIO_OPTIONS_BUTTON_KEY:
             case SCORES_BUTTON_KEY:
             case TIPS_BUTTON_KEY:
-                return RIGHT
+                return TOOLTIP_RIGHT
         }
     }
 
@@ -48,7 +46,7 @@ export const getTooltipPlacement = ({
         case LYRIC_SCROLL_BUTTON_KEY:
         case SCORES_BUTTON_KEY:
         case TIPS_BUTTON_KEY:
-            return LEFT
+            return TOOLTIP_LEFT
         case ABOUT_BUTTON_KEY:
         case AUDIO_REWIND_BUTTON_KEY:
         case AUDIO_FAST_FORWARD_BUTTON_KEY:
@@ -57,6 +55,6 @@ export const getTooltipPlacement = ({
         case LYRIC_EAR_BUTTON_KEY:
         case LYRIC_EXPAND_BUTTON_KEY:
         case OVERVIEW_BUTTON_KEY:
-            return RIGHT
+            return TOOLTIP_RIGHT
     }
 }

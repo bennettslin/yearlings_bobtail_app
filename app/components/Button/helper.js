@@ -22,7 +22,7 @@ import {
 } from '../../constants/buttons'
 
 import {
-    LEFT,
+    LYRIC_LEFT,
     RIGHT
 } from '../../constants/lyrics'
 
@@ -66,7 +66,7 @@ const TOOLTIP_TEXT_MAP = {
     [DOTS_SLIDE_BUTTON_KEY]: 'annotation categories',
     get lyricEar() {
         return {
-            [LEFT]: 'left speaker',
+            [LYRIC_LEFT]: 'left speaker',
             [RIGHT]: 'right speaker'
         }
     },

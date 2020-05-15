@@ -4,8 +4,8 @@ import { registerAnnotation } from './helpers'
 import {
     ANNOTATION_SEARCH_KEYS,
     ANCHOR,
-    LEFT,
-    RIGHT
+    LYRIC_LEFT,
+    LYRIC_RIGHT
 } from '../../../../constants/lyrics'
 
 const _recurseToFindAnnotations = ({
@@ -102,11 +102,11 @@ export const addAnnotations = (song) => {
 
                     // ... and this verse is in it, show in right column.
                     if (verse.sideCard) {
-                        columnKey = RIGHT
+                        columnKey = LYRIC_RIGHT
 
                     // ... otherwise, show in left column.
                     } else {
-                        columnKey = LEFT
+                        columnKey = LYRIC_LEFT
                     }
                 }
 
