@@ -1,5 +1,3 @@
-import findIndex from 'lodash/findIndex'
-
 import {
     getPreviewerSvgMapForActor,
     getPreviewerSvgMapForThing
@@ -25,8 +23,7 @@ const accessPresenceType = ({
 }) => {
     const typesList = isActor ? WHOLE_ACTORS_LIST : THINGS_LIST
 
-    const selectedIndex = findIndex(
-        typesList,
+    const selectedIndex = typesList.findIndex(
         type => type === presenceType
     )
 
@@ -57,8 +54,7 @@ const accessPresenceKey = ({
     const
         mapGetter = isActor ? getPreviewerSvgMapForActor : getPreviewerSvgMapForThing,
         svgArray = Object.keys(mapGetter(presenceType)),
-        selectedIndex = findIndex(
-            svgArray,
+        selectedIndex = svgArray.findIndex(
             key => key === presenceKey
         )
 

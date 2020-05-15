@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import findIndex from 'lodash/findIndex'
 import InlineSvg from '../../../../app/modules/InlineSvg'
 
 import PreviewerKilobytes from '../Kilobytes'
@@ -109,10 +108,10 @@ class PreviewerSvg extends PureComponent {
         // Actors and custom lists may include difference presence types.
         if (isActor || instanceList[presenceType]) {
             customType = instanceList[presenceType][
-                findIndex(
-                    instanceList[presenceType],
+                instanceList[presenceType].findIndex(
                     object => object.instance === presenceKey
                 )
+
             ].type
         }
 
