@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { updateOptionStore } from '../../../redux/option/action'
 import { updateTransientStore } from '../../../redux/transient/action'
 
-import { getShowTipForDevice } from '../../../album/api/tips'
+import { getShowTipForDevice } from '../../../album/tips'
 
 import {
     SHOWN,

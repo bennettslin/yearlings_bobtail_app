@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import { getSongTipType } from '../../album/api/tips'
+import { getSongTipType } from '../../album/tips'
 import { SHOWN } from '../../constants/options'
 import { WIKI, WORMHOLES } from '../../constants/tips'
 
