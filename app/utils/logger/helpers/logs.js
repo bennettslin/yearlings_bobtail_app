@@ -1,5 +1,4 @@
 import pino from 'pino'
-import isUndefined from 'lodash/isUndefined'
 import sendEvent from '../../analytics'
 
 import { getTimeDifference } from './time'
@@ -126,7 +125,7 @@ export const logSelect = ({
     annotation,
     scene
 }) => {
-    if (!isUndefined(verse) && !isUndefined(scene)) {
+    if (verse !== undefined && scene !== undefined) {
         _logInfo({
             category: SELECT,
             action,

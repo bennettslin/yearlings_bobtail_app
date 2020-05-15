@@ -1,5 +1,3 @@
-import isUndefined from 'lodash/isUndefined'
-
 import { getSongTitle } from '../../album/api/songs'
 
 import {
@@ -127,7 +125,7 @@ export const getTooltipText = ({ buttonName, buttonIdentifier }) => {
         return `Book ${buttonIdentifier === 0 ? 'I' : 'II'}`
     }
 
-    if (!isUndefined(buttonIdentifier)) {
+    if (buttonIdentifier !== undefined) {
         return TOOLTIP_TEXT_MAP[buttonName][buttonIdentifier]
     }
     return TOOLTIP_TEXT_MAP[buttonName]

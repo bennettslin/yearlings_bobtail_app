@@ -3,7 +3,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import ReactAudioPlayer from 'react-audio-player'
-import isUndefined from 'lodash/isUndefined'
 
 class Player extends PureComponent {
 
@@ -127,7 +126,7 @@ class Player extends PureComponent {
          * Browser supports the return of a promise:
          https://developers.google.com/web/updates/2016/03/play-returns-promise
          */
-        if (!isUndefined(playPromise)) {
+        if (playPromise !== undefined) {
             playPromise
                 .then(this._handlePlayPromiseSuccess)
                 .catch(this._handlePlayPromiseFailure)
