@@ -1,5 +1,4 @@
 // Helper for getting and setting state persisted in user's local storage.
-import isFinite from 'lodash/isFinite'
 import album from '../album'
 
 import { getSongVersesCount } from '../album/api/verses'
@@ -43,7 +42,7 @@ const _getValidatedStoredSongIndex = () => {
 const _validateIndexForKey = (key) => {
     const
         parsedValue = parseInt(getWindowStorage()[key]),
-        valueIsNumber = isFinite(parsedValue)
+        valueIsNumber = Number.isFinite(parsedValue)
 
     let isValid
 
@@ -105,7 +104,7 @@ const _validateIndexForKey = (key) => {
 const _getValidatedDotsBitNumber = () => {
     const
         parsedBitNumber = parseInt(getWindowStorage()[DOTS_BIT_NUMBER]),
-        valueIsNumber = isFinite(parsedBitNumber),
+        valueIsNumber = Number.isFinite(parsedBitNumber),
         maxBitNumber = getTwoToThePowerOfN(ORDERED_DOT_KEYS.length),
         isValid = valueIsNumber && parsedBitNumber < maxBitNumber
 

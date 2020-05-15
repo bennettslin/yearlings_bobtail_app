@@ -1,4 +1,3 @@
-
 import { getSvgMapForActor } from '../../app/svg/actors'
 import { getSvgMapForThing } from '../../app/svg/things'
 

@@ -12,7 +12,7 @@ if (!Array.from) {
         var toInteger = function (value) {
             var number = Number(value);
             if (isNaN(number)) { return 0; }
-            if (number === 0 || !isFinite(number)) { return number; }
+            if (number === 0 || !Number.isFinite(number)) { return number; }
             return (number > 0 ? 1 : -1) * Math.floor(Math.abs(number));
         };
         var maxSafeInteger = Math.pow(2, 53) - 1;

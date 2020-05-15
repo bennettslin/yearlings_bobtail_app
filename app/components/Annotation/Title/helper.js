@@ -1,4 +1,3 @@
-import isFinite from 'lodash/isFinite'
 import isString from 'lodash/isString'
 
 import { getAnnotation } from '../../../album/api/annotations'
@@ -29,7 +28,7 @@ const _getAccessibleWikiWormholesLength = ({
 
                 ) || (
                     // It's a wormhole index, and wormhole dot is selected.
-                    isFinite(wikiWormhole) && dotKeys[WORMHOLE]
+                    Number.isFinite(wikiWormhole) && dotKeys[WORMHOLE]
                 )
             ) ? sum + 1 : sum
         }, 0)

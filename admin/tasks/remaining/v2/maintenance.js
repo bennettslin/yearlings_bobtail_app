@@ -1,11 +1,5 @@
 export default [
     {
-        taskName: `Is isFinite from lodash needed?`,
-        resource: `https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/isFinite`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Move to Gatsby.`,
         workedHours: 0,
         neededHours: 20

@@ -2,7 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import isFinite from 'lodash/isFinite'
 
 import { getSongTitle } from '../../../../../../album/api/songs'
 
@@ -14,7 +13,7 @@ const NavButtonTitle = ({
     isSelected
 }) => {
 
-    const title = isFinite(bookIndex) ?
+    const title = Number.isFinite(bookIndex) ?
         `Book ${getIndexCharacter({ bookIndex })}` :
         getSongTitle({ songIndex, showIndex: false })
 

@@ -1,9 +1,7 @@
 // Child that knows rules to toggle admin.
-
 import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isFinite from 'lodash/isFinite'
 
 import { updateAccessStore } from '../../../redux/access/action'
 
@@ -44,7 +42,7 @@ class WikiWormholeDispatcher extends PureComponent {
 
             initialWikiWormholeIndex =
                 // If no direction is given, reset the index.
-                !isFinite(direction) ?
+                !Number.isFinite(direction) ?
                     1 :
                     prevWikiWormholeIndex,
 

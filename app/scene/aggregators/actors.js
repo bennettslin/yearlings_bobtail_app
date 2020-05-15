@@ -1,4 +1,3 @@
-
 /**
  * Arrangements are organised by scene to make it easier to adjust the various
  * presences within the same scene together. They are then compiled into a

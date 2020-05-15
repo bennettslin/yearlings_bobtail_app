@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import isFinite from 'lodash/isFinite'
 
 import { updateBannerStore } from '../../../redux/banner/action'
 
@@ -112,7 +111,7 @@ class SongBanner extends PureComponent {
                 width
             } = this.bannerElement.current.getBoundingClientRect()
 
-        if (isFinite(clientX)) {
+        if (Number.isFinite(clientX)) {
             this.setState({ clientX })
 
             const { selectedSongIndex } = this.props,

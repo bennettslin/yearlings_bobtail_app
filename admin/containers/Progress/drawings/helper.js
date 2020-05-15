@@ -1,4 +1,3 @@
-import isFinite from 'lodash/isFinite'
 import albumScenes from '../../../scenes'
 
 import { ACTOR } from '../../../../app/constants/scene'
@@ -128,14 +127,14 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
             }
 
             // Let song know its individual todos.
-            if (!isFinite(drawings.songTasks[songIndex].actorsTodoCount)) {
+            if (!Number.isFinite(drawings.songTasks[songIndex].actorsTodoCount)) {
                 drawings.songTasks[songIndex].actorsTodoCount = 0
                 drawings.songTasks[songIndex].actorsTotalCount = 0
             }
-            if (!isFinite(drawings.songTasks[songIndex].actorsWorkedHours)) {
+            if (!Number.isFinite(drawings.songTasks[songIndex].actorsWorkedHours)) {
                 drawings.songTasks[songIndex].actorsWorkedHours = 0
             }
-            if (!isFinite(drawings.songTasks[songIndex].actorsNeededHours)) {
+            if (!Number.isFinite(drawings.songTasks[songIndex].actorsNeededHours)) {
                 drawings.songTasks[songIndex].actorsNeededHours = 0
             }
 

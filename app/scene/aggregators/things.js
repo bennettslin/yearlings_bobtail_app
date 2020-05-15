@@ -1,4 +1,3 @@
-
 import THINGS_BACKDROPS from '../../scene/scenes/backdrops/things'
 import THINGS_NOHO_HOUSES from '../../scene/scenes/nohoHouses/things'
 import THINGS_NOHO_SCHOOL from '../../scene/scenes/nohoSchool/things'

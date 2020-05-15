@@ -1,4 +1,3 @@
-import isFinite from 'lodash/isFinite'
 import { getAnnotation } from '../../../album/api/annotations'
 import { EAR_COLUMN_KEYS } from '../../../constants/lyrics'
 
@@ -17,7 +16,7 @@ export const getCarouselAnnotationData = ({
             dotKeys
         } = annotationObject,
 
-        columnKey = isFinite(columnIndex) ? EAR_COLUMN_KEYS[columnIndex] : ''
+        columnKey = Number.isFinite(columnIndex) ? EAR_COLUMN_KEYS[columnIndex] : ''
 
     return {
         columnKey,

@@ -1,7 +1,6 @@
 import albumTasks from '../../../tasks/completed/songs'
 import tasks from '../../../tasks'
 import tasksV2 from '../../../tasks/v2'
-import isFinite from 'lodash/isFinite'
 
 export const getSongTasks = (songIndex) => (
     albumTasks[songIndex]
@@ -26,11 +25,11 @@ export const getSumOfTasks = (tasks = []) => {
 }
 
 const _addTaskToSum = (sumTasks, task) => {
-    if (isFinite(task.workedHours)) {
+    if (Number.isFinite(task.workedHours)) {
         sumTasks.workedHours += task.workedHours
 
         // Completed tasks do not have needed hours.
-        if (!isFinite(task.neededHours)) {
+        if (!Number.isFinite(task.neededHours)) {
             task.neededHours = task.workedHours
         }
 

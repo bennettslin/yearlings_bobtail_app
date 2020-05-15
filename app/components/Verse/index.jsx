@@ -3,7 +3,6 @@ import React, { memo, PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
-import isFinite from 'lodash/isFinite'
 
 import ActivatedVerseDispatcher from '../../dispatchers/Activated/Verse'
 import StopPropagationDispatcher from '../../dispatchers/StopPropagation'
@@ -62,7 +61,7 @@ class Verse extends PureComponent {
             verseIndex
         } = this.props
 
-        return isFinite(verseIndex) && !inVerseBar
+        return Number.isFinite(verseIndex) && !inVerseBar
     }
 
     setVerseRef = (node) => {
@@ -163,7 +162,7 @@ const verseViewPropTypes = {
 
                         inVerseBar ? 'Verse__inBar' : 'Verse__inLyric',
 
-                        isFinite(verseIndex) &&
+                        Number.isFinite(verseIndex) &&
                             `${VERSE_SCROLL}__${verseIndex}`,
 
                         // title, even, odd, inSide.

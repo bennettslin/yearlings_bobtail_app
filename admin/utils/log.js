@@ -1,4 +1,3 @@
-
 import { getPreviewerSvgMapForThing } from './svg'
 
 import {

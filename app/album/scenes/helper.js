@@ -1,5 +1,3 @@
-import isFinite from 'lodash/isFinite'
-
 import ALL_ARRANGEMENTS_ACTORS from '../../scene/aggregators/actors'
 import ALL_ARRANGEMENTS_THINGS from '../../scene/aggregators/things'
 
@@ -23,7 +21,7 @@ const _addPresenceToSceneLayer = ({
          * If layerYIndex exists, then presence will be arranged and scaled
          * according to yIndex, but placed in the layerYIndex layer.
          */
-        layerKey = `layer${isFinite(layerYIndex) ? layerYIndex : yIndex}`
+        layerKey = `layer${Number.isFinite(layerYIndex) ? layerYIndex : yIndex}`
 
     // Initialise this layer if necessary.
     if (!layers[layerKey]) {

@@ -1,4 +1,3 @@
-import isFinite from 'lodash/isFinite'
 import albumScenes from '../../../album/scenes'
 
 const _addDurationsToSceneConfigs = (sceneConfigs, { totalTime }) => {
@@ -41,7 +40,7 @@ export const addSceneConfigs = (song) => {
             } = scene
 
             // Scene either has a unit index or a verse index.
-            if (isFinite(unitIndex)) {
+            if (Number.isFinite(unitIndex)) {
                 const
                     unit = lyricUnits[unitIndex],
                     { mainVerses } = unit

@@ -1,7 +1,5 @@
-import isFinite from 'lodash/isFinite'
-
 export const getIndexCharacter = ({ bookIndex, songIndex }) => {
-    if (isFinite(bookIndex)) {
+    if (Number.isFinite(bookIndex)) {
         return bookIndex === 0 ? 'I' : 'II'
     }
 

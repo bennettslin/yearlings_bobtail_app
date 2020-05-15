@@ -1,4 +1,3 @@
-import isFinite from 'lodash/isFinite'
 import isString from 'lodash/isString'
 
 import { getAnnotation } from '../../../album/api/annotations'
@@ -32,7 +31,7 @@ export const getWikiWormholeIndexForDirection = ({
         // Consider each anchor index only once.
         while (counter < wikiWormholesCount) {
             // If no direction given, start at first index...
-            if (!isFinite(direction)) {
+            if (!Number.isFinite(direction)) {
                 direction = 0
 
             // ... then proceed in forward direction.

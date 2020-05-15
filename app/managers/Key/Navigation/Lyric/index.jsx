@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import isFinite from 'lodash/isFinite'
 
 import { updateActivatedStore } from '../../../../redux/activated/action'
 
@@ -93,7 +92,7 @@ class LyricNavigation extends PureComponent {
                     selectedAnnotationIndex: accessedAnnotationIndex
                 })
 
-            } else if (isFinite(direction)) {
+            } else if (Number.isFinite(direction)) {
                 this.dispatchAccessedAnnotation({
                     annotationIndex: accessedAnnotationIndex,
                     direction

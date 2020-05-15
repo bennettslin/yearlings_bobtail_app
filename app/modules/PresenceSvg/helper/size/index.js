@@ -1,5 +1,3 @@
-import isFinite from 'lodash/isFinite'
-
 import { Y_INDEX_SCALE_FACTORS } from '../../../../constants/cubeRender'
 import { getValidYIndex } from '../../../../helpers/general'
 import {
@@ -24,7 +22,7 @@ const
 
 const getPresenceScaleFactor = ({ presenceType, scaleFactor }) => {
     // Override default if custom scale factor is given.
-    if (isFinite(scaleFactor)) {
+    if (Number.isFinite(scaleFactor)) {
         return scaleFactor
     }
 
@@ -89,7 +87,7 @@ export const getViewBoxSize = (svgString) => {
         viewBoxWidth = parseFloat(dimensions[2]),
         viewBoxHeight = parseFloat(dimensions[3])
 
-    return isFinite(viewBoxWidth) && isFinite(viewBoxHeight) ? (
+    return Number.isFinite(viewBoxWidth) && Number.isFinite(viewBoxHeight) ? (
         {
             viewBoxWidth,
             viewBoxHeight
