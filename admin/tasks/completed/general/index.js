@@ -4648,5 +4648,9 @@ export default [
     {
         taskName: `Remove lodash.`,
         workedHours: 2
+    },
+    {
+        taskName: `Improve admin routes.`,
+        workedHours: 2
     }
 ]

@@ -28,7 +28,7 @@ const getConfig = ({
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
-                IS_DEVELOPMENT: isDevelopment,
+                IS_DEVELOPMENT: isDevelopment, // Not presently used.
                 SHOW_ADMIN: showAdmin
             }),
             new HtmlWebpackPlugin({
@@ -49,10 +49,10 @@ const getConfig = ({
             // Import from files without specifying extensions.
             extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
-                // In production, admin just reroutes to app.
-                env: showAdmin ?
-                    path.resolve(__dirname, './admin') :
-                    path.resolve(__dirname, './app/env')
+                // Allow admin routes only in delivery.
+                routes: showAdmin ?
+                    path.resolve(__dirname, './admin/routes') :
+                    path.resolve(__dirname, './app/routes')
             }
         },
         module: {

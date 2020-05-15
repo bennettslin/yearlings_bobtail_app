@@ -21,11 +21,6 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Use global constants to avoid admin rerouting weirdness.`,
-        workedHours: 0,
-        neededHours: 1
-    },
-    {
         taskName: `Android favicons are not being added because site.webmanifest isn't getting pulled. Store png with Illustrator files.`,
         resource: `https://www.npmjs.com/package/webpack-pwa-manifest`,
         workedHours: 0,

@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import {
-    BrowserRouter as Router, Route, Switch
-} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 // Import these here just to make them available.
 import './utils/logger'
@@ -18,20 +16,9 @@ import rootReducer from './redux/rootReducer'
 
 import './scss/app.scss'
 
-/**
- * These reroute to the routing container in production. A hacky approach
- * because I don't know what I'm doing...
- */
-/* eslint-disable */
-import Actors from 'env/containers/Actors'
-import Annotations from 'env/containers/Annotations'
-import LegacyPreviewer from 'env/containers/LegacyPreviewer'
-import Progress from 'env/containers/Progress'
-import Skies from 'env/containers/Skies'
-import Things from 'env/containers/Things'
-/* eslint-enable */
-
-import RoutingContainer from './containers/Routing'
+// Get routes depending on whether in delivery or production.
+// eslint-disable-next-line import/no-unresolved
+import Routes from 'routes'
 
 /**
  * Force Webpack to pick these up, as they're only referenced in the HTML file.
@@ -50,69 +37,10 @@ const store = createStore(
 )
 
 ReactDOM.render(
-    <Provider
-        {...{ store }}
-    >
-        <Router>
-            <Switch>
-                <Route
-                    exact
-                    {...{
-                        path: '/',
-                        component: RoutingContainer
-                    }}
-                />
-                <Route
-                    exact
-                    {...{
-                        path: '/Actors',
-                        component: Actors
-                    }}
-                />
-                <Route
-                    exact
-                    {...{
-                        path: '/Annotations',
-                        component: Annotations
-                    }}
-                />
-                <Route
-                    exact
-                    {...{
-                        path: '/Previewer',
-                        component: LegacyPreviewer
-                    }}
-                />
-                <Route
-                    exact
-                    {...{
-                        path: '/Things',
-                        component: Things
-                    }}
-                />
-                <Route
-                    exact
-                    {...{
-                        path: '/Skies',
-                        component: Skies
-                    }}
-                />
-                <Route
-                    exact
-                    {...{
-                        path: '/Progress',
-                        component: Progress
-                    }}
-                />
-                <Route
-                    exact
-                    {...{
-                        path: '/:routingParamString/',
-                        component: RoutingContainer
-                    }}
-                />
-            </Switch>
-        </Router>
+    <Provider {...{ store }} >
+        <BrowserRouter>
+            <Routes />
+        </BrowserRouter>
     </Provider>,
     document.getElementById('app')
 )
