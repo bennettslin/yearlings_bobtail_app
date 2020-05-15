@@ -23,8 +23,7 @@ module.exports = {
     "globals": {
         "__dirname": true,
         "BUILD_DATE_TIME": true,
-        "IS_DEVELOPMENT": true,
-        "SHOW_ADMIN": true,
+        "IS_DELIVERY": true,
         "dataLayer": true,
         "expect": true,
         "ga": true,

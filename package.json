@@ -5,12 +5,12 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "build:delivery": "webpack --mode production --env.admin",
+    "build:delivery": "webpack --mode production --env.delivery",
     "deploy": "aws s3 sync build/ s3://yearlingsbobtail",
     "deploy:delivery": "aws s3 sync build__delivery/ s3://yearlingsbobtail--delivery",
     "release": "npm run build && npm run deploy",
     "release:delivery": "npm run build:delivery && npm run deploy:delivery",
-    "start": "webpack-dev-server --mode development --env.admin --env.development",
+    "start": "webpack-dev-server --mode development --env.local --env.delivery",
     "lint": "eslint --ext js,jsx app",
     "lint:fix": "eslint --ext js,jsx --fix app",
     "test": "jest"

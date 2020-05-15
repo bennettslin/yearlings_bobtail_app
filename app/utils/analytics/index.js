@@ -8,7 +8,7 @@ const isGaUndefined = () => (
 )
 
 const createGa = () => {
-    const gaAccount = SHOW_ADMIN ?
+    const gaAccount = IS_DELIVERY ?
         GA_ACCOUNT__DELIVERY :
         GA_ACCOUNT__PRODUCTION
 

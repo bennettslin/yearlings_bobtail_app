@@ -64,7 +64,7 @@ const _logInfo = ({
             value: finalValue
         })
 
-        if (SHOW_ADMIN && didGaSucceed) {
+        if (IS_DELIVERY && didGaSucceed) {
             // Log analytics parameters to make data analysis easier.
             logger.info(`%c${`category: ${category}\naction: ${action}${label ? `\nlabel: ${label}` : ''}${finalValue ? `\nvalue: ${finalValue}` : ''}`}`, getStyleForCategory({ category: ANALYTICS }))
         }

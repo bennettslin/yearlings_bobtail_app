@@ -8,17 +8,20 @@ import format from 'date-fns/format'
 const SHOW_BUNDLE_ANALYZER = false
 
 const getConfig = ({
-    development: isDevelopment = false,
-    admin: showAdmin = false
+    // Applies to just local development
+    local: isLocalDevelopment = false,
+
+    // Applies to both local development and delivery release.
+    delivery: isDeliveryEnvironment = false
 } = {}) => {
     return {
         entry: path.resolve(__dirname, 'app'),
         output: {
-            path: showAdmin ?
+            path: isDeliveryEnvironment ?
                 path.resolve(__dirname, 'build__delivery') :
                 path.resolve(__dirname, 'build'),
             filename: '[name]-[hash].js',
-            ...isDevelopment && {
+            ...isLocalDevelopment && {
                 devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]'
             }
         },
@@ -28,13 +31,12 @@ const getConfig = ({
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
                 ),
-                IS_DEVELOPMENT: isDevelopment, // Not presently used.
-                SHOW_ADMIN: showAdmin
+                IS_DELIVERY: isDeliveryEnvironment
             }),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'app/index.html')
             }),
-            ...isDevelopment ? [
+            ...isLocalDevelopment ? [
                 new webpack.HotModuleReplacementPlugin(),
 
                 ...SHOW_BUNDLE_ANALYZER ? [new BundleAnalyzerPlugin()] : []
@@ -50,7 +52,7 @@ const getConfig = ({
             extensions: ['.js', '.jsx', '.mp3', '.pdf', '.scss', '.svg'],
             alias: {
                 // Allow admin routes only in delivery.
-                routes: showAdmin ?
+                routes: isDeliveryEnvironment ?
                     path.resolve(__dirname, './admin/routes') :
                     path.resolve(__dirname, './app/routes')
             }
@@ -61,7 +63,7 @@ const getConfig = ({
                     test: /\.jsx?$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...showAdmin ? [path.resolve(__dirname, './admin')] : []
+                        ...isDeliveryEnvironment ? [path.resolve(__dirname, './admin')] : []
                     ],
                     enforce: 'pre',
                     loaders: [
@@ -74,7 +76,7 @@ const getConfig = ({
                     test: /\.scss$/,
                     include: [
                         path.resolve(__dirname, './app'),
-                        ...showAdmin ? [path.resolve(__dirname, './admin')] : []
+                        ...isDeliveryEnvironment ? [path.resolve(__dirname, './admin')] : []
                     ],
                     loaders: [
                         'style-loader',
@@ -125,7 +127,7 @@ const getConfig = ({
                 }
             ]
         },
-        ...isDevelopment && {
+        ...isLocalDevelopment && {
             devServer: {
                 host: process.env.HOST,
                 port: 1113 || process.env.PORT,
