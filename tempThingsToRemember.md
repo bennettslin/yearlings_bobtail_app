@@ -5,9 +5,31 @@ Make cardboards stroke line different.
 Rethink some dot category shapes?
 
 # Album refactor
+
+## Figure out what these need, build them from scratch
+* annotations
+    * TODO
+
 * indexedVerses
-    * isCentre
-    * lyric, left, or right
-    * verseIndex
+    * lyric, centre, left, or right
+        * delete anchor metadata?
     * verseAnnotationIndices
     * lastAnnotationIndex
+    * delete verseIndex?
+    * delete time?
+
+* lyricUnits
+    * TODO
+
+* songSceneConfigs
+    * TODO
+
+* songStanzaConfigs
+    * TODO
+
+* songVerseConfigs
+    * TODO
+
+# Can be completely separate
+    * times
+    * tips
