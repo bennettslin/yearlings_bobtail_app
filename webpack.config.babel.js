@@ -27,7 +27,9 @@ const getConfig = ({
             new webpack.DefinePlugin({
                 BUILD_DATE_TIME: JSON.stringify(
                     `${format(new Date(), 'MMMM d, yyyy, h:mmaaaaa')}m`
-                )
+                ),
+                IS_DEVELOPMENT: isDevelopment,
+                SHOW_ADMIN: showAdmin
             }),
             new HtmlWebpackPlugin({
                 template: path.resolve(__dirname, 'app/index.html')

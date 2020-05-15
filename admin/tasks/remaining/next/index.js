@@ -16,7 +16,7 @@ export default [
         neededHours: 3
     },
     {
-        taskName: `Do not support Internet Explorer. Reconsider all lodash functions in this light.`,
+        taskName: `Do not support Internet Explorer.`,
         workedHours: 0,
         neededHours: 3
     },

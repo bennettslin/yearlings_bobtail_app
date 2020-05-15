@@ -1,25 +1,34 @@
-// This grabs from app, not admin, in production.
-// eslint-disable-next-line import/no-unresolved
-import { GA_ACCOUNT } from 'env/constants/analytics'
+import {
+    GA_ACCOUNT__DELIVERY,
+    GA_ACCOUNT__PRODUCTION
+} from '../../constants/analytics'
 
 const isGaUndefined = () => (
     typeof ga === 'undefined'
 )
 
-window.dataLayer = window.dataLayer || []
-function gtag() {
-    // eslint-disable-next-line prefer-rest-params
-    dataLayer.push(arguments)
-}
-gtag('js', new Date())
-gtag('config', GA_ACCOUNT)
+const createGa = () => {
+    const gaAccount = SHOW_ADMIN ?
+        GA_ACCOUNT__DELIVERY :
+        GA_ACCOUNT__PRODUCTION
 
-if (isGaUndefined()) {
-    console.log('GA did not initialise.')
-} else {
-    console.log(`GA initialised with property id ${GA_ACCOUNT}.`)
-    ga('create', GA_ACCOUNT, 'auto')
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+        // eslint-disable-next-line prefer-rest-params
+        dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+    gtag('config', gaAccount)
+
+    if (isGaUndefined()) {
+        console.log('GA did not initialise.')
+    } else {
+        console.log(`GA initialised with property id ${gaAccount}.`)
+        ga('create', gaAccount, 'auto')
+    }
 }
+
+createGa()
 
 const sendEvent = ({
     category = 'category',
