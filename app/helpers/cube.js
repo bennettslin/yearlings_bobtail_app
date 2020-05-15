@@ -9,6 +9,10 @@ import {
     SLANTED_TILE_Y_PERCENTAGES,
     SLANTED_TILE_X_UNITS_LENGTH
 } from '../constants/cubeRender'
+import {
+    LEFT,
+    RIGHT
+} from '../constants/scene/cubes'
 
 import { getValidYIndex } from '../helpers/general'
 
@@ -55,10 +59,10 @@ const _getXPercentage = (
     let addend = 0,
         multiplier = 1
 
-    if (slantDirection === 'left') {
+    if (slantDirection === LEFT) {
         addend = -2.5
         multiplier = 1.0575
-    } else if (slantDirection === 'right') {
+    } else if (slantDirection === RIGHT) {
         multiplier = 1.0475
     }
 
@@ -227,18 +231,18 @@ const _getHorizontalPlaneFractionsForSlantedLeft = (
     return {
         left: {
             back: _getXYPercentages(
-                refXIndex, refYIndex + 1, refZIndex, 'left'
+                refXIndex, refYIndex + 1, refZIndex, LEFT
             ),
             front: _getXYPercentages(
-                refXIndex + 1, refYIndex + 3, refZIndex, 'left'
+                refXIndex + 1, refYIndex + 3, refZIndex, LEFT
             )
         },
         right: {
             back: _getXYPercentages(
-                refXIndex + 2, refYIndex, refZIndex, 'left'
+                refXIndex + 2, refYIndex, refZIndex, LEFT
             ),
             front: _getXYPercentages(
-                refXIndex + 3, refYIndex + 2, refZIndex, 'left'
+                refXIndex + 3, refYIndex + 2, refZIndex, LEFT
             )
         }
     }
@@ -282,18 +286,18 @@ const _getHorizontalPlaneFractionsForSlantedRight = (
     return {
         left: {
             back: _getXYPercentages(
-                refXIndex + 1, refYIndex, refZIndex, 'right'
+                refXIndex + 1, refYIndex, refZIndex, RIGHT
             ),
             front: _getXYPercentages(
-                refXIndex, refYIndex + 2, refZIndex, 'right'
+                refXIndex, refYIndex + 2, refZIndex, RIGHT
             )
         },
         right: {
             back: _getXYPercentages(
-                refXIndex + 3, refYIndex + 1, refZIndex, 'right'
+                refXIndex + 3, refYIndex + 1, refZIndex, RIGHT
             ),
             front: _getXYPercentages(
-                refXIndex + 2, refYIndex + 3, refZIndex, 'right'
+                refXIndex + 2, refYIndex + 3, refZIndex, RIGHT
             )
         }
     }
@@ -316,12 +320,12 @@ export const getHorizontalPlaneFractions = ({
         validYIndex = getValidYIndex(yIndex),
         adjustedZOffset = zOffset * 2
 
-    if (slantDirection === 'left') {
+    if (slantDirection === LEFT) {
         return _getHorizontalPlaneFractionsForSlantedLeft(
             xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
         )
 
-    } else if (slantDirection === 'right') {
+    } else if (slantDirection === RIGHT) {
         return _getHorizontalPlaneFractionsForSlantedRight(
             xIndex, validYIndex, zIndex, xOffset, adjustedZOffset
         )

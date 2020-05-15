@@ -1,7 +1,7 @@
 const LYRIC = 'lyric',
-    LYRIC_LEFT = 'left',
+    LYRIC_LEFT = 'lyricLeft',
     LYRIC_CENTRE = 'lyricCentre',
-    LYRIC_RIGHT = 'right',
+    LYRIC_RIGHT = 'lyricRight',
     ANCHOR = 'anchor'
 
 module.exports = {
