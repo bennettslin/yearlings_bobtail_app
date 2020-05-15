@@ -30,7 +30,7 @@ const createGa = () => {
 
 createGa()
 
-const sendEvent = ({
+const sendToGa = ({
     category = 'category',
     action = 'action',
     label,
@@ -52,4 +52,4 @@ const sendEvent = ({
     return true
 }
 
-export default sendEvent
+export default sendToGa

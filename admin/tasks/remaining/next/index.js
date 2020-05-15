@@ -11,11 +11,6 @@ export default [
 
     /* Week work. */
     {
-        taskName: `Improve logging. Only show analytics logging in development. In production, just change background colour. Make event logs more minimal.`,
-        workedHours: 0,
-        neededHours: 3
-    },
-    {
         taskName: `Do not support Internet Explorer.`,
         workedHours: 0,
         neededHours: 3

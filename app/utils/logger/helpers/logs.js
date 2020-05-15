@@ -1,5 +1,5 @@
 import pino from 'pino'
-import sendEvent from '../../analytics'
+import sendToGa from '../../analytics'
 
 import { getTimeDifference } from './time'
 
@@ -35,6 +35,7 @@ const _logInfo = ({
 
 }) => {
     const
+        isGaCall = Boolean(category && action),
         timeDifference = getTimeDifference(),
         finalValue = parseInt(
             useTimeForValue ?
@@ -46,20 +47,26 @@ const _logInfo = ({
     if (log) {
         logger[level](
             `%c${log}`,
-            styles || getStyleForCategory(styleCategory || category),
+            styles || getStyleForCategory({
+                category: styleCategory || category,
+                isGaCall
+            }),
             timeDifference
         )
     }
 
-    if (category && action) {
-        if (sendEvent({
+    if (isGaCall) {
+
+        const didGaSucceed = sendToGa({
             category,
             action,
             label,
             value: finalValue
-        })) {
+        })
+
+        if (SHOW_ADMIN && didGaSucceed) {
             // Log analytics parameters to make data analysis easier.
-            logger.info(`%c${`category: ${category}\naction: ${action}${label ? `\nlabel: ${label}` : ''}${finalValue ? `\nvalue: ${finalValue}` : ''}`}`, getStyleForCategory(ANALYTICS))
+            logger.info(`%c${`category: ${category}\naction: ${action}${label ? `\nlabel: ${label}` : ''}${finalValue ? `\nvalue: ${finalValue}` : ''}`}`, getStyleForCategory({ category: ANALYTICS }))
         }
 
     }
@@ -126,17 +133,21 @@ export const logSelect = ({
     scene
 }) => {
     if (verse !== undefined && scene !== undefined) {
+        const message = `song: ${song}, scene: ${scene}, verse: ${verse}`
         _logInfo({
+            log: message,
             category: SELECT,
             action,
-            label: `song: ${song}, scene: ${scene}, verse: ${verse}`
+            label: message
         })
     }
     if (annotation) {
+        const message = `song: ${song}, annotation: ${annotation}`
         _logInfo({
+            log: message,
             category: SELECT,
             action,
-            label: `song: ${song}, annotation: ${annotation}`
+            label: message
         })
     }
 }

@@ -8,23 +8,19 @@ const BASE_STYLES = {
     fontSize: '1.25em'
 }
 
-const _getStyles = ({
-    baseStyles = BASE_STYLES,
-    ...styles
-}) => {
-    const finalStyles = {
-            ...baseStyles,
-            ...styles
-        },
-        stylesArray = []
+const GA_STYLE = {
+    backgroundColor: '#fffff0'
+}
 
-    for (const key in finalStyles) {
+const _getStyles = (styles) => {
+    const stylesArray = []
 
+    for (const key in styles) {
         // Change camel case to dashed case.
         const dashedKey =
             key.replace(/([A-Z])/g, (g) => `-${g[0].toLowerCase()}`)
 
-        stylesArray.push(`${dashedKey}: ${finalStyles[key]};`)
+        stylesArray.push(`${dashedKey}: ${styles[key]};`)
     }
     return stylesArray.join(' ')
 }
@@ -44,60 +40,67 @@ export const SUCCESS = 'style'
 export const TRANSITION = 'transition'
 
 const LOG_STYLES = {
-    [ACCESS]: _getStyles({
+    [ACCESS]: {
         color: '#b82',
         fontSize: '1.1em'
-    }),
-    [ADMIN]: _getStyles({
+    },
+    [ADMIN]: {
         color: '#2b8',
         fontSize: '1.2em'
-    }),
-    [ANALYTICS]: _getStyles({
-        baseStyles: {},
+    },
+    [ANALYTICS]: {
         color: '#888',
         fontSize: '0.6em'
-    }),
-    [ERROR]: _getStyles({
+    },
+    [ERROR]: {
         color: '#b44',
         fontSize: '2em'
-    }),
-    [EVENT]: _getStyles({
+    },
+    [EVENT]: {
         color: '#8ad',
-        fontSize: '1em'
-    }),
-    [FOCUS]: _getStyles({
+        fontSize: '0.8em'
+    },
+    [FOCUS]: {
         color: '#874',
-        fontSize: '1em'
-    }),
-    [MOUNT]: _getStyles({
+        fontSize: '0.8em'
+    },
+    [MOUNT]: {
         color: '#66b',
         fontSize: '1.1em'
-    }),
-    [PLAYER]: _getStyles({
+    },
+    [PLAYER]: {
         color: '#487',
         fontSize: '1.35em'
-    }),
-    [SCROLL]: _getStyles({
+    },
+    [SCROLL]: {
         color: '#748',
         fontSize: '1.2em'
-    }),
-    [SELECT]: _getStyles({
+    },
+    [SELECT]: {
         color: '#82b',
         fontSize: '1.2em'
-    }),
-    [SERVE]: _getStyles({
+    },
+    [SERVE]: {
         fontSize: '1.1em'
-    }),
-    [SUCCESS]: _getStyles({
+    },
+    [SUCCESS]: {
         color: '#4b4',
         fontSize: '2em'
-    }),
-    [TRANSITION]: _getStyles({
+    },
+    [TRANSITION]: {
         color: '#b4b',
         fontSize: '1.35em'
-    })
+    }
 }
 
-export const getStyleForCategory = category => (
-    LOG_STYLES[category]
+export const getStyleForCategory = ({
+    category,
+    isGaCall
+
+}) => (
+    _getStyles({
+        ...category !== ANALYTICS && BASE_STYLES,
+        ...LOG_STYLES[category],
+        ...isGaCall && GA_STYLE
+    })
 )

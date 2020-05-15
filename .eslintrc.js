@@ -42,7 +42,7 @@ module.exports = {
         "logTransition": true,
         "logError": true,
         "process": true,
-        "sendEvent": true
+        "sendToGa": true
     },
     "parser": 'babel-eslint',
     "parserOptions": {

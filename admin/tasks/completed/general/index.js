@@ -4652,5 +4652,9 @@ export default [
     {
         taskName: `Improve admin routes.`,
         workedHours: 2
+    },
+    {
+        taskName: `Improve logging. Only show analytics logging in development. In production, just change background colour. Make event logs more minimal.`,
+        workedHours: 1
     }
 ]
