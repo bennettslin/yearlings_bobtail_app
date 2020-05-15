@@ -16,6 +16,7 @@ import { getCursorIndex } from '../../../helpers/verse'
 
 const mapStateToProps = ({
     lyricStore: {
+        isLyricLogue,
         lyricSongIndex,
         lyricVerseIndex
     },
@@ -26,6 +27,7 @@ const mapStateToProps = ({
         isVerseBarBelow
     }
 }) => ({
+    isLyricLogue,
     lyricSongIndex,
     lyricVerseIndex,
     activatedVerseIndex,
@@ -42,6 +44,7 @@ class VerseBar extends PureComponent {
 
     static propTypes = {
         // Through Redux.
+        isLyricLogue: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
         activatedVerseIndex: PropTypes.number.isRequired,
@@ -86,6 +89,7 @@ class VerseBar extends PureComponent {
 
         const {
                 isAbove,
+                isLyricLogue,
                 lyricSongIndex,
                 lyricVerseIndex,
                 sliderVerseIndex,
@@ -100,12 +104,10 @@ class VerseBar extends PureComponent {
                 lyricVerseIndex
             ),
 
-            verseObject = getVerse(lyricSongIndex, verseIndex),
-
             isShown = this.getIsShown()
 
         // Logue will not have verse object.
-        return Boolean(verseObject) && (
+        return !isLyricLogue && (
             <div
                 className={cx(
                     'VerseBar',
@@ -143,7 +145,10 @@ class VerseBar extends PureComponent {
                             {...{
                                 isShownInVerseBar: isShown,
                                 verseIndex,
-                                verseObject,
+                                verseObject: getVerse(
+                                    lyricSongIndex,
+                                    verseIndex
+                                ),
                                 VerseComponent: Verse
                             }}
                         />

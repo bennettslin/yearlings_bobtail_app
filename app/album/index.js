@@ -8,4 +8,7 @@ const album = { songs }
 addWormholeStuff(album)
 addGlobalAnnotationIndices(album)
 
+// FIXME: Remove.
+global.album = album
+
 export default album

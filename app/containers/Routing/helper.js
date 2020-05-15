@@ -1,6 +1,6 @@
 // Helper for getting param values from routing.
 import { getSongsAndLoguesCount } from '../../album/api/songs'
-import { getVerse } from '../../album/api/verses'
+import { isValidVerse } from '../../album/api/verses'
 import { getAnnotation } from '../../album/api/annotations'
 
 import { HYPHENATED_SONG_PATHS } from '../../constants/paths'
@@ -80,10 +80,6 @@ const _isValidSongIndex = (songIndex) => {
     return songIndex >= 0 && songIndex < getSongsAndLoguesCount()
 }
 
-const _isValidVerseIndex = (songIndex, verseIndex) => {
-    return Boolean(getVerse(songIndex, verseIndex))
-}
-
 const _isValidAnnotationIndex = (songIndex, annotationIndex) => {
     return Boolean(getAnnotation(songIndex, annotationIndex))
 }
@@ -129,7 +125,7 @@ export const getValidRoutingIndices = ({
          * Default to 0.
          */
         if (
-            _isValidVerseIndex(
+            isValidVerse(
                 rawSongIndex,
                 rawVerseIndex
             )

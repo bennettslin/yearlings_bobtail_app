@@ -26,6 +26,10 @@ export const getVerse = (
         null
 }
 
+export const isValidVerse = (songIndex, verseIndex) => {
+    return Boolean(getVerse(songIndex, verseIndex))
+}
+
 export const getSongVerseConfigs = (songIndex) => {
     const { songVerseConfigs } = getSong(songIndex)
     return songVerseConfigs || []

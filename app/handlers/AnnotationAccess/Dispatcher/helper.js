@@ -20,10 +20,10 @@ export const getAnnotationIndexForVerseIndex = ({
 
     direction = -1
 }) => {
-    const verse = getVerse(selectedSongIndex, verseIndex),
+    const verseObject = getVerse(selectedSongIndex, verseIndex),
         annotationsCount = getAnnotationsCount(selectedSongIndex)
 
-    if (!verse) {
+    if (!verseObject) {
         return -1
     }
 
@@ -31,7 +31,7 @@ export const getAnnotationIndexForVerseIndex = ({
         returnToLoop
 
     // If the verse has its own annotation, pick it.
-    const { verseAnnotationIndices } = verse
+    const { verseAnnotationIndices } = verseObject
     if (verseAnnotationIndices) {
         const annotationIndicesCount = verseAnnotationIndices.length
 
@@ -74,8 +74,8 @@ export const getAnnotationIndexForVerseIndex = ({
     // Otherwise, return either previous or next depending on direction.
     } else {
         returnIndex = direction === -1 ?
-            verse.lastAnnotationIndex :
-            (verse.lastAnnotationIndex + 1) % annotationsCount
+            verseObject.lastAnnotationIndex :
+            (verseObject.lastAnnotationIndex + 1) % annotationsCount
     }
 
     /**

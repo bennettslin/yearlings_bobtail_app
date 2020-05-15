@@ -15,12 +15,8 @@ export const getIsDoublespeakerShown = ({
             isDoublespeaker
         } = selectedSong
 
-    // Applies to Uncanny Valley Boy.
-    if (hasSideCards && !isDoublespeaker) {
-        return getIsPhoneWidth(deviceWidthIndex)
-
     // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
-    } else if (isDoublespeaker) {
+    if (isDoublespeaker) {
         /**
          * In tablet width, lyrics section takes up full width of bottom,
          * while in monitor width, the screen is wide enough as well.
@@ -29,6 +25,10 @@ export const getIsDoublespeakerShown = ({
             !getIsMonitorWidth(deviceWidthIndex) &&
             !getIsTabletWidth(deviceWidthIndex)
         )
+
+    // Applies to Uncanny Valley Boy.
+    } else if (hasSideCards) {
+        return getIsPhoneWidth(deviceWidthIndex)
 
     // Doesn't apply to other songs.
     } else {
