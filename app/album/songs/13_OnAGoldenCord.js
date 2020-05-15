@@ -254,7 +254,7 @@ export default {
             mainVerses: [
                 {
                     time: 54,
-                    left: [
+                    lyricLeft: [
                         {
                             anchor: `Immerse the moulted form`,
                             todo: true,
@@ -267,7 +267,7 @@ export default {
                         },
                         `in holy foggy night,`
                     ],
-                    right: [
+                    lyricRight: [
                         `Returned a golden cord, this`,
                         {
                             anchor: `sole belonging signed.`,
@@ -283,7 +283,7 @@ export default {
                 },
                 {
                     time: 57,
-                    left: [
+                    lyricLeft: [
                         `emerged beside a`,
                         {
                             anchor: `paupers' grave`,
@@ -305,16 +305,16 @@ export default {
                         },
                         `from dreams.`
                     ],
-                    right: `Leave early, time's up, cross your date released.`
+                    lyricRight: `Leave early, time's up, cross your date released.`
                 },
                 {
                     time: 61,
-                    left: `The wraith surveys the widow on his pyre;`,
-                    right: `The jailer waves a bit, though uninspired,`
+                    lyricLeft: `The wraith surveys the widow on his pyre;`,
+                    lyricRight: `The jailer waves a bit, though uninspired,`
                 },
                 {
                     time: 64,
-                    left: [
+                    lyricLeft: [
                         `torched the`,
                         {
                             anchor: `bellyaches on suttee.`,
@@ -333,7 +333,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `for the`,
                         {
                             anchor: `well-behaved on the wing.`,
@@ -357,8 +357,8 @@ export default {
             mainVerses: [
                 {
                     time: 65,
-                    left: `Had I grown dispirited in all this act,`,
-                    right: [
+                    lyricLeft: `Had I grown dispirited in all this act,`,
+                    lyricRight: [
                         `As I soak in spirits amidst`,
                         {
                             anchor: `wanted ads—`,
@@ -376,12 +376,12 @@ export default {
                 },
                 {
                     time: 68,
-                    left: `by disparate elements, like kindling gathered up?`,
-                    right: `my desperate ailments tied in this shambler's dusk—`
+                    lyricLeft: `by disparate elements, like kindling gathered up?`,
+                    lyricRight: `my desperate ailments tied in this shambler's dusk—`
                 },
                 {
                     time: 72,
-                    left: [
+                    lyricLeft: [
                         `Guilt pardons the`,
                         {
                             anchor: `spectre taunting twin streetlamps;`,
@@ -394,7 +394,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `still hardened against her`,
                         {
                             anchor: `fawning, misty glance,`,
@@ -410,7 +410,7 @@ export default {
                 },
                 {
                     time: 75,
-                    left: [
+                    lyricLeft: [
                         {
                             anchor: `hatchet man`,
                             todo: true,
@@ -431,7 +431,7 @@ export default {
                         },
                         `who's burnt enough.`
                     ],
-                    right: [
+                    lyricRight: [
                         `past this`,
                         {
                             anchor: `avenue Möbius.`,
@@ -467,17 +467,17 @@ export default {
             mainVerses: [
                 {
                     time: 76,
-                    left: `But a precious gift as a shedded chain,`,
-                    right: `But the present slips past a debt unpaid,`
+                    lyricLeft: `But a precious gift as a shedded chain,`,
+                    lyricRight: `But the present slips past a debt unpaid,`
                 },
                 {
                     time: 79,
-                    left: `has lain to rust, one more cruel memento.`,
-                    right: `that slays you once before you'll let it go.`
+                    lyricLeft: `has lain to rust, one more cruel memento.`,
+                    lyricRight: `that slays you once before you'll let it go.`
                 },
                 {
                     time: 83,
-                    left: [
+                    lyricLeft: [
                         `Then if`,
                         {
                             anchor: `life were real,`,
@@ -491,7 +491,7 @@ export default {
                         },
                         `not just drunken play…`
                     ],
-                    right: [
+                    lyricRight: [
                         `And if`,
                         {
                             anchor: `night were peeled`,
@@ -757,12 +757,12 @@ export default {
             mainVerses: [
                 {
                     time: 144,
-                    left: `Of fateful thoughts hung on a gilded clasp,`,
-                    right: `Once navels locked upon the wilted grass,`
+                    lyricLeft: `Of fateful thoughts hung on a gilded clasp,`,
+                    lyricRight: `Once navels locked upon the wilted grass,`
                 },
                 {
                     time: 147,
-                    left: [
+                    lyricLeft: [
                         `which this`,
                         {
                             anchor: {
@@ -796,7 +796,7 @@ export default {
                         },
                         `reavowed he'd come to snip.`
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `digging through her innie`,
                             todo: true,
@@ -813,8 +813,8 @@ export default {
                 },
                 {
                     time: 150,
-                    left: `And a smarting head throbs once his brain's warring halves,`,
-                    right: [
+                    lyricLeft: `And a smarting head throbs once his brain's warring halves,`,
+                    lyricRight: [
                         `Then the`,
                         {
                             anchor: `guardian knot`,
@@ -853,7 +853,7 @@ export default {
                 },
                 {
                     time: 154,
-                    left: [
+                    lyricLeft: [
                         `each`,
                         {
                             anchor: `attack with the proper fist.`,
@@ -868,7 +868,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `leaked the bandage`,
                             todo: true,
@@ -892,12 +892,12 @@ export default {
             mainVerses: [
                 {
                     time: 155,
-                    left: `A sober plea finds the present you,`,
-                    right: `The former me might have left a clue`
+                    lyricLeft: `A sober plea finds the present you,`,
+                    lyricRight: `The former me might have left a clue`
                 },
                 {
                     time: 158,
-                    left: [
+                    lyricLeft: [
                         `my`,
                         {
                             anchor: `alias drunk, in panic`,
@@ -911,7 +911,7 @@ export default {
                         },
                         `and starved for leads.`
                     ],
-                    right: [
+                    lyricRight: [
                         `by`,
                         {
                             anchor: `trail of crumbs,`,
@@ -929,12 +929,12 @@ export default {
                 },
                 {
                     time: 161,
-                    left: `And will she label lies oaths we vowed we could,`,
-                    right: `Until we strangle cries knowing how we stood,`
+                    lyricLeft: `And will she label lies oaths we vowed we could,`,
+                    lyricRight: `Until we strangle cries knowing how we stood,`
                 },
                 {
                     time: 164,
-                    left: [
+                    lyricLeft: [
                         `with`,
                         {
                             anchor: `Garry's sole witness`,
@@ -950,7 +950,7 @@ export default {
                         },
                         `relieved?`
                     ],
-                    right: `when buried whole with the deceased.`
+                    lyricRight: `when buried whole with the deceased.`
                 }
             ]
         },
@@ -962,8 +962,8 @@ export default {
             mainVerses: [
                 {
                     time: 166,
-                    left: `So a plan devised divides a slave once wed;`,
-                    right: [
+                    lyricLeft: `So a plan devised divides a slave once wed;`,
+                    lyricRight: [
                         `Though, the`,
                         {
                             anchor: `master mind`,
@@ -981,7 +981,7 @@ export default {
                 },
                 {
                     time: 169,
-                    left: [
+                    lyricLeft: [
                         `a bid for greatness' sake, he's sold on as`,
                         {
                             anchor: `holy war.`,
@@ -1002,16 +1002,16 @@ export default {
                             }
                         }
                     ],
-                    right: `a bigger plate awaiting nulls one half full before.`
+                    lyricRight: `a bigger plate awaiting nulls one half full before.`
                 },
                 {
                     time: 172,
-                    left: `When longed by nothing you then fight the best,`,
-                    right: `And fond sighs of reunion I must rest;`
+                    lyricLeft: `When longed by nothing you then fight the best,`,
+                    lyricRight: `And fond sighs of reunion I must rest;`
                 },
                 {
                     time: 176,
-                    left: [
+                    lyricLeft: [
                         `for`,
                         {
                             anchor: `kohl-eyed`,
@@ -1045,7 +1045,7 @@ export default {
                         },
                         `as reward.`
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `forego like jewelry`,
                             todo: true,

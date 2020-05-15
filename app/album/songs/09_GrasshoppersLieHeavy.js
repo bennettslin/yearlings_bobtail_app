@@ -468,7 +468,7 @@ export default {
             mainVerses: [
                 {
                     time: 77,
-                    left: [
+                    lyricLeft: [
                         `Alone his first gig,`,
                         {
                             anchor: `stagefright ignites.`,
@@ -481,11 +481,11 @@ export default {
                             }
                         }
                     ],
-                    right: `With no sister ship slain by his side,`
+                    lyricRight: `With no sister ship slain by his side,`
                 },
                 {
                     time: 87,
-                    left: [
+                    lyricLeft: [
                         `But`,
                         {
                             anchor: `no convert's missed,`,
@@ -500,7 +500,7 @@ export default {
                         },
                         `once assured his tithe.`
                     ],
-                    right: [
+                    lyricRight: [
                         `and so off her list,`,
                         {
                             anchor: `sunken Tirpitz lies.`,

@@ -1,7 +1,7 @@
 $margin__gutter: 15px;
 
 .VerseLine__lyric,
-.VerseLine__left {
+.VerseLine__lyricLeft {
 
     .Verse__inLyric
     & {
@@ -10,14 +10,14 @@ $margin__gutter: 15px;
     }
 }
 
-.VerseLine__centre {
+.VerseLine__lyricCentre {
     width: 100%;
     text-indent: 0;
     padding-left: 0;
     text-align: center;
 }
 
-.VerseLine__right {
+.VerseLine__lyricRight {
 
     /**
      * Styling for hanging indent with right-aligned text. The hidden
@@ -50,10 +50,10 @@ $margin__gutter: 15px;
     }
 }
 
-.RW__leftEarColumnOnly
-.VerseLine__right,
-.RW__rightEarColumnOnly
-.VerseLine__left {
+.RW__lyricLeftEarColumnOnly
+.VerseLine__lyricRight,
+.RW__lyricRightEarColumnOnly
+.VerseLine__lyricLeft {
     width: 0;
     padding: 0;
     max-height: 0;
@@ -64,7 +64,7 @@ $margin__gutter: 15px;
     position: relative;
     display: none;
 
-    .RW__rightEarColumnOnly
+    .RW__lyricRightEarColumnOnly
     & {
         display: block;
         z-index: $zIndex__cursorVerse;
@@ -73,7 +73,7 @@ $margin__gutter: 15px;
 
 .VerseLine__truncatable {
 
-    .RW__rightEarColumnOnly
+    .RW__lyricRightEarColumnOnly
     & {
         display: none;
     }

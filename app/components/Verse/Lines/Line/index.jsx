@@ -74,7 +74,7 @@ class VerseLine extends PureComponent {
                          */
                         !inVerseBar && 'sibling__verseCursor',
 
-                        // Stanzas, left, centre, right.
+                        // Lyric, left, centre, right.
                         `VerseLine__${columnKey}`,
 
                         { 'VerseLine__truncatable': isTruncatable }

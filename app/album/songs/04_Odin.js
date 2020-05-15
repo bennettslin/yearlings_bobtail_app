@@ -76,8 +76,8 @@ export default {
             mainVerses: [
                 {
                     time: 8,
-                    left: `Lights off, from your`,
-                    right: [
+                    lyricLeft: `Lights off, from your`,
+                    lyricRight: [
                         {
                             anchor: `By lot,`,
                             todo: true,
@@ -108,7 +108,7 @@ export default {
                 },
                 {
                     time: 10,
-                    left: [
+                    lyricLeft: [
                         {
                             anchor: `hiding place of retreat`,
                             todo: true,
@@ -121,7 +121,7 @@ export default {
                         },
                         `emerged.`
                     ],
-                    right: [
+                    lyricRight: [
                         `trifling`,
                         {
                             anchor: `tref must reseed the earth.`,
@@ -144,7 +144,7 @@ export default {
                 },
                 {
                     time: 14,
-                    left: [
+                    lyricLeft: [
                         `This`,
                         {
                             anchor: `fridge's gallery in web's wake`,
@@ -158,7 +158,7 @@ export default {
                         },
                         `was strewn,`
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `Indifferent galaxies`,
                             todo: true,
@@ -175,8 +175,8 @@ export default {
                 },
                 {
                     time: 17,
-                    left: `silent poll of colors overused.`,
-                    right: `sigh and pull the covers over you.`
+                    lyricLeft: `silent poll of colors overused.`,
+                    lyricRight: `sigh and pull the covers over you.`
                 }
             ]
         },
@@ -187,12 +187,12 @@ export default {
             mainVerses: [
                 {
                     time: 20,
-                    left: `This latest piece`,
-                    right: `In safest sleep,`
+                    lyricLeft: `This latest piece`,
+                    lyricRight: `In safest sleep,`
                 },
                 {
                     time: 23,
-                    left: [
+                    lyricLeft: [
                         `you drew with`,
                         {
                             anchor: `crayons least whittled…`,
@@ -220,7 +220,7 @@ export default {
                             ]
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `you`,
                         {
                             anchor: `ruminate on these riddles…`,
@@ -244,7 +244,7 @@ export default {
             mainVerses: [
                 {
                     time: 26,
-                    left: [
+                    lyricLeft: [
                         `The`,
                         {
                             anchor: `house settled in sheets,`,
@@ -259,12 +259,12 @@ export default {
                             }
                         }
                     ],
-                    right: `But how dreadful indeed,`
+                    lyricRight: `But how dreadful indeed,`
                 },
                 {
                     time: 28,
-                    left: `you swing the iron screen.`,
-                    right: [
+                    lyricLeft: `you swing the iron screen.`,
+                    lyricRight: [
                         `do`,
                         {
                             anchor: `sweet dream's ichors`,
@@ -294,7 +294,7 @@ export default {
                 },
                 {
                     time: 32,
-                    left: [
+                    lyricLeft: [
                         `By the`,
                         {
                             anchor: `alabaster balustrade,`,
@@ -314,7 +314,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `Like a`,
                         {
                             anchor: `salamander`,
@@ -343,7 +343,7 @@ export default {
                 },
                 {
                     time: 35,
-                    left: [
+                    lyricLeft: [
                         `baby steps inch towards`,
                         {
                             anchor: `crevice rays.`,
@@ -356,7 +356,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `trading breath's bliss`,
                             todo: true,
@@ -398,7 +398,7 @@ export default {
             mainVerses: [
                 {
                     time: 38,
-                    left: [
+                    lyricLeft: [
                         `Then down`,
                         {
                             anchor: `stygian stairs,`,
@@ -418,11 +418,11 @@ export default {
                             }
                         }
                     ],
-                    right: `And how stingy and scarce`
+                    lyricRight: `And how stingy and scarce`
                 },
                 {
                     time: 40,
-                    left: [
+                    lyricLeft: [
                         `through`,
                         {
                             anchor: `sickle-lit`,
@@ -460,7 +460,7 @@ export default {
                         },
                         `streets.`
                     ],
-                    right: [
+                    lyricRight: [
                         `proves`,
                         {
                             anchor: `shibboleth`,
@@ -500,8 +500,8 @@ export default {
                 },
                 {
                     time: 44,
-                    left: `Raccoons rummage round some rubbish bags,`,
-                    right: [
+                    lyricLeft: `Raccoons rummage round some rubbish bags,`,
+                    lyricRight: [
                         `As you plummet down from`,
                         {
                             anchor: `couplets past;`,
@@ -524,7 +524,7 @@ export default {
                 },
                 {
                     time: 47,
-                    left: [
+                    lyricLeft: [
                         `till a`,
                         {
                             anchor: `rickshaw hiccoughs`,
@@ -553,7 +553,7 @@ export default {
                         },
                         `from grating cracks.`
                     ],
-                    right: [
+                    lyricRight: [
                         `still, but`,
                         {
                             anchor: `missed bat mitzvahs`,
@@ -584,7 +584,7 @@ export default {
             mainVerses: [
                 {
                     time: 50,
-                    left: [
+                    lyricLeft: [
                         `You seek the`,
                         {
                             anchor: `dunes once deemed a haven`,
@@ -607,7 +607,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `To`,
                         {
                             anchor: `dreams of whom`,
@@ -624,7 +624,7 @@ export default {
                 },
                 {
                     time: 53,
-                    left: [
+                    lyricLeft: [
                         `that was`,
                         {
                             anchor: `safe for a heathen…`,
@@ -644,7 +644,7 @@ export default {
                             }
                         }
                     ],
-                    right: `as a slave for the seasons?`
+                    lyricRight: `as a slave for the seasons?`
                 }
             ]
         },
@@ -665,8 +665,8 @@ export default {
             mainVerses: [
                 {
                     time: 59,
-                    left: `And if flutters with the fairest`,
-                    right: [
+                    lyricLeft: `And if flutters with the fairest`,
+                    lyricRight: [
                         `And if`,
                         {
                             anchor: `summer trips to Paris`,
@@ -697,8 +697,8 @@ export default {
                 },
                 {
                     time: 63,
-                    left: `were just sins simply dreamt,`,
-                    right: `weren't just myths between friends,`
+                    lyricLeft: `were just sins simply dreamt,`,
+                    lyricRight: `weren't just myths between friends,`
                 }
             ]
         },
@@ -711,8 +711,8 @@ export default {
                 {
                     time: 67,
                     // CONSIDER: Wormhole: Reference to insect in jar in Vegan Proclamation?
-                    left: `could some bottled butterfly`,
-                    right: [
+                    lyricLeft: `could some bottled butterfly`,
+                    lyricRight: [
                         `would the`,
                         {
                             anchor: `rondel of her eye`,
@@ -735,7 +735,7 @@ export default {
                 },
                 {
                     time: 70,
-                    left: {
+                    lyricLeft: {
                         anchor: `dream your whims instead?`,
                         todo: true,
                         card: {
@@ -752,7 +752,7 @@ export default {
                             }
                         }
                     },
-                    right: [
+                    lyricRight: [
                         `be`,
                         {
                             anchor: `stored in this neck?`,
@@ -788,8 +788,8 @@ export default {
             mainVerses: [
                 {
                     time: 73,
-                    left: `What's more, if all you live for`,
-                    right: [
+                    lyricLeft: `What's more, if all you live for`,
+                    lyricRight: [
                         `But`,
                         {
                             anchor: `cored gifts fall to discord`,
@@ -808,8 +808,8 @@ export default {
                 },
                 {
                     time: 76,
-                    left: `still die at the end—`,
-                    right: `till lives acquiesce,`
+                    lyricLeft: `still die at the end—`,
+                    lyricRight: `till lives acquiesce,`
                 }
             ]
         },
@@ -821,7 +821,7 @@ export default {
             mainVerses: [
                 {
                     time: 79,
-                    left: [
+                    lyricLeft: [
                         `like Odin's ashes back from`,
                         {
                             anchor: `the Society,`,
@@ -841,7 +841,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `by`,
                         {
                             anchor: `opened latches`,
@@ -881,18 +881,18 @@ export default {
                 },
                 {
                     time: 84,
-                    left: `which filled a chasm dug up underneath—`,
-                    right: `which spilled a basket among other things—`
+                    lyricLeft: `which filled a chasm dug up underneath—`,
+                    lyricRight: `which spilled a basket among other things—`
                 },
                 {
                     time: 87,
-                    left: `can that which kills a cat`,
-                    right: `a casket tilted back`
+                    lyricLeft: `can that which kills a cat`,
+                    lyricRight: `a casket tilted back`
                 },
                 {
                     time: 90,
-                    left: `spare his home if spread?`,
-                    right: [
+                    lyricLeft: `spare his home if spread?`,
+                    lyricRight: [
                         `where its`,
                         {
                             // CONSIDER: wormhole: Hope chest in M?
@@ -933,8 +933,8 @@ export default {
             mainVerses: [
                 {
                     time: 93,
-                    left: `You researched a gleam`,
-                    right: [
+                    lyricLeft: `You researched a gleam`,
+                    lyricRight: [
                         `Your`,
                         {
                             anchor: `seizures of spleen,`,
@@ -956,7 +956,7 @@ export default {
                 },
                 {
                     time: 95,
-                    left: [
+                    lyricLeft: [
                         `to be a`,
                         {
                             anchor: `guard's whistle`,
@@ -971,7 +971,7 @@ export default {
                         },
                         `at your feet,`
                     ],
-                    right: [
+                    lyricRight: [
                         `you see the`,
                         {
                             anchor: `jarred sibyl`,
@@ -1000,7 +1000,7 @@ export default {
                 },
                 {
                     time: 99,
-                    left: [
+                    lyricLeft: [
                         `and brought your raft behind the`,
                         {
                             anchor: `yellow-taped grills`,
@@ -1013,7 +1013,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `as not for wrapping by a`,
                         {
                             anchor: `cellophane sylph,`,
@@ -1036,7 +1036,7 @@ export default {
                 },
                 {
                     time: 102,
-                    left: [
+                    lyricLeft: [
                         `to`,
                         {
                             anchor: `stand onshore`,
@@ -1047,14 +1047,14 @@ export default {
                         },
                         `keen to drift`
                     ],
-                    right: `who cannot warm he who`
+                    lyricRight: `who cannot warm he who`
                 },
                 {
                     time: 103,
-                    left: [
+                    lyricLeft: [
                         `if shark swarms withheld.`
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `didn't impart warmth`,
                             // CONSIDER: Wormhole Foreshadow M?
@@ -1080,7 +1080,7 @@ export default {
             mainVerses: [
                 {
                     time: 105,
-                    left: [
+                    lyricLeft: [
                         {
                             anchor: `Buoy bobs`,
                             todo: true,
@@ -1094,11 +1094,11 @@ export default {
                         },
                         `through sea serpents,`
                     ],
-                    right: `Coin toss to be hers from`
+                    lyricRight: `Coin toss to be hers from`
                 },
                 {
                     time: 107,
-                    left: {
+                    lyricLeft: {
                         anchor: `shivering for shivs unsheathed.`,
                         todo: true,
                         cards: [
@@ -1121,7 +1121,7 @@ export default {
                             }
                         ]
                     },
-                    right: {
+                    lyricRight: {
                         anchor: `shivaree towards shivah seat`,
                         todo: true,
                         cards: [
@@ -1150,8 +1150,8 @@ export default {
                 },
                 {
                     time: 111,
-                    left: `As roller coasters of waves comfort sighs,`,
-                    right: [
+                    lyricLeft: `As roller coasters of waves comfort sighs,`,
+                    lyricRight: [
                         `has`,
                         {
                             anchor: `pulled your floater away`,
@@ -1168,7 +1168,7 @@ export default {
                 },
                 {
                     time: 114,
-                    left: [
+                    lyricLeft: [
                         `you frame`,
                         {
                             anchor: `silhouettes of torn rides`,
@@ -1182,7 +1182,7 @@ export default {
                             }
                         }
                     ],
-                    right: `You chase till dew sheds from your eyes`
+                    lyricRight: `You chase till dew sheds from your eyes`
                 }
             ]
         },
@@ -1193,13 +1193,13 @@ export default {
             mainVerses: [
                 {
                     time: 117,
-                    left: `in your dim, lingering gaze,`,
-                    right: `with your beleaguered remains,`
+                    lyricLeft: `in your dim, lingering gaze,`,
+                    lyricRight: `with your beleaguered remains,`
                 },
                 {
                     time: 120,
-                    left: `a victim of erosion.`,
-                    right: `amidst dustbunnies frozen.`
+                    lyricLeft: `a victim of erosion.`,
+                    lyricRight: `amidst dustbunnies frozen.`
                 }
             ]
         },
@@ -1308,7 +1308,7 @@ export default {
             mainVerses: [
                 {
                     time: 147,
-                    left: [
+                    lyricLeft: [
                         `But for a`,
                         {
                             // CONSIDER: Wormhole to Ash Wednesday?
@@ -1324,7 +1324,7 @@ export default {
                         },
                         `born preaborted,`
                     ],
-                    right: [
+                    lyricRight: [
                         `Yet your`,
                         {
                             anchor: `defeat of tortoise,`,
@@ -1348,8 +1348,8 @@ export default {
                 },
                 {
                     time: 150,
-                    left: `your ouija board said, "Son, just hum along."`,
-                    right: `sworn feat aforesaid, doesn't come anon.`
+                    lyricLeft: `your ouija board said, "Son, just hum along."`,
+                    lyricRight: `sworn feat aforesaid, doesn't come anon.`
                 }
             ]
         },
@@ -1374,7 +1374,7 @@ export default {
             mainVerses: [
                 {
                     time: 166,
-                    left: [
+                    lyricLeft: [
                         `Though`,
                         {
                             anchor: `no slave parts these seas,`,
@@ -1391,7 +1391,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `Though, no`,
                         {
                             anchor: `grey starling's beak`,
@@ -1404,7 +1404,7 @@ export default {
                 },
                 {
                     time: 168,
-                    left: [
+                    lyricLeft: [
                         `then returns them as a`,
                         {
                             anchor: `buffer zone…`,
@@ -1419,7 +1419,7 @@ export default {
                         }
                     ],
                     // CONSIDER: Wormhole: Nora Barnacle in Good Night, Sita?
-                    right: `can reach urchins smashed from undertows…`
+                    lyricRight: `can reach urchins smashed from undertows…`
                 }
             ]
         },
@@ -1431,7 +1431,7 @@ export default {
             mainVerses: [
                 {
                     time: 173,
-                    left: [
+                    lyricLeft: [
                         `The sudsy ocean shapes its`,
                         {
                             anchor: `padded bed,`,
@@ -1444,12 +1444,12 @@ export default {
                             }
                         }
                     ],
-                    right: `But suddenly Odin's day is at its end;`
+                    lyricRight: `But suddenly Odin's day is at its end;`
                 },
                 {
                     time: 177,
-                    left: `which hitherto snubbed and spurned a wreck,`,
-                    right: [
+                    lyricLeft: `which hitherto snubbed and spurned a wreck,`,
+                    lyricRight: [
                         {
                             anchor: `his litter`,
                             todo: true,
@@ -1467,7 +1467,7 @@ export default {
                 },
                 {
                     time: 180,
-                    left: [
+                    lyricLeft: [
                         `while`,
                         {
                             anchor: `mermaids smile`,
@@ -1488,7 +1488,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `while`,
                         {
                             anchor: `Thursday's child`,
@@ -1506,7 +1506,7 @@ export default {
                 },
                 {
                     time: 183,
-                    left: [
+                    lyricLeft: [
                         `past a`,
                         {
                             anchor: `guileless garden gnome…`,
@@ -1532,7 +1532,7 @@ export default {
                             ]
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `has a`,
                         {
                             anchor: `mile less far to go…`,

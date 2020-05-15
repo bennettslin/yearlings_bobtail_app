@@ -126,7 +126,7 @@ export default {
             mainVerses: [
                 {
                     time: 24,
-                    left: [
+                    lyricLeft: [
                         {
                             anchor: `At a vista,`,
                             todo: true,
@@ -146,7 +146,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `Atavist`,
                             todo: true,
@@ -195,7 +195,7 @@ export default {
                 },
                 {
                     time: 27,
-                    left: [
+                    lyricLeft: [
                         `to`,
                         {
                             anchor: `first switch`,
@@ -209,7 +209,7 @@ export default {
                         },
                         `in her low two-seater,`
                     ],
-                    right: [
+                    lyricRight: [
                         `subversive`,
                         {
                             // NOTE: I added a hyphen in the lyrics as well.
@@ -234,8 +234,8 @@ export default {
                 },
                 {
                     time: 30,
-                    left: `and deaf from blasting frontal speakers,`,
-                    right: [
+                    lyricLeft: `and deaf from blasting frontal speakers,`,
+                    lyricRight: [
                         `an everlasting`,
                         {
                             anchor: `doublespeaker,`,
@@ -251,7 +251,7 @@ export default {
                 },
                 {
                     time: 34,
-                    left: [
+                    lyricLeft: [
                         `this`,
                         {
                             anchor: `phoenix risen limp`,
@@ -273,7 +273,7 @@ export default {
                         },
                         `beneath her`
                     ],
-                    right: [
+                    lyricRight: [
                         `his`,
                         {
                             anchor: `beaten wit and id`,
@@ -297,7 +297,7 @@ export default {
                 },
                 {
                     time: 37,
-                    left: [
+                    lyricLeft: [
                         {
                             anchor: `pinkish slip,`,
                             todo: true,
@@ -312,7 +312,7 @@ export default {
                         },
                         `making scroonched her pantyhose.`
                     ],
-                    right: [
+                    lyricRight: [
                         `sinking ship, maybe`,
                         {
                             anchor: `good for anecdotes.`,
@@ -337,7 +337,7 @@ export default {
             mainVerses: [
                 {
                     time: 39,
-                    left: [
+                    lyricLeft: [
                         {
                             anchor: `His god humming "Freebird,"`,
                             todo: true,
@@ -367,11 +367,11 @@ export default {
                             }
                         }
                     ],
-                    right: `As comedy teams work, a hoot the times`
+                    lyricRight: `As comedy teams work, a hoot the times`
                 },
                 {
                     time: 42,
-                    left: [
+                    lyricLeft: [
                         `nods as`,
                         {
                             anchor: `she drums her toes.`,
@@ -392,7 +392,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `not`,
                         {
                             anchor: `at each other's throats.`,
@@ -428,8 +428,8 @@ export default {
             mainVerses: [
                 {
                     time: 46,
-                    left: `Though, she ponders the children`,
-                    right: [
+                    lyricLeft: `Though, she ponders the children`,
+                    lyricRight: [
                         {
                             anchor: `Trophy bronzed from a Trojan`,
                             todo: true,
@@ -450,7 +450,7 @@ export default {
                 },
                 {
                     time: 49,
-                    left: [
+                    lyricLeft: [
                         `born from a`,
                         {
                             anchor: `forced conversion`,
@@ -471,7 +471,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `for some`,
                         {
                             anchor: `unforeskinned virgin`,
@@ -487,7 +487,7 @@ export default {
                 },
                 {
                     time: 52,
-                    left: [
+                    lyricLeft: [
                         `on a`,
                         {
                             anchor: `self-servicing cleric surgeon`,
@@ -501,12 +501,12 @@ export default {
                             }
                         }
                     ],
-                    right: `on the shelf, serves his declared assertion:`
+                    lyricRight: `on the shelf, serves his declared assertion:`
                 },
                 {
                     time: 56,
-                    left: `duly may inherit his burdens.`,
-                    right: [
+                    lyricLeft: `duly may inherit his burdens.`,
+                    lyricRight: [
                         `to remain`,
                         {
                             anchor: `inherently perfect,`,
@@ -523,7 +523,7 @@ export default {
                 },
                 {
                     time: 59,
-                    left: [
+                    lyricLeft: [
                         `This swarm pumped and`,
                         {
                             anchor: `kissed off, she purges up.`,
@@ -537,7 +537,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `as`,
                         {
                             anchor: `worn puppet`,
@@ -573,12 +573,12 @@ export default {
             mainVerses: [
                 {
                     time: 61,
-                    left: `Despite once promising forever,`,
-                    right: `His silent dramedy works better;`
+                    lyricLeft: `Despite once promising forever,`,
+                    lyricRight: `His silent dramedy works better;`
                 },
                 {
                     time: 64,
-                    left: [
+                    lyricLeft: [
                         `which she swore when scarcely`,
                         {
                             anchor: `twenty-one.`,
@@ -591,7 +591,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `twitching sword`,
                             todo: true,
@@ -856,7 +856,7 @@ export default {
             mainVerses: [
                 {
                     time: 112,
-                    left: [
+                    lyricLeft: [
                         `The`,
                         {
                             anchor: `seat hurt`,
@@ -870,11 +870,11 @@ export default {
                         },
                         `when he lowered it,`
                     ],
-                    right: `The key turned and she floors it,`
+                    lyricRight: `The key turned and she floors it,`
                 },
                 {
                     time: 115,
-                    left: [
+                    lyricLeft: [
                         `though no worse but for`,
                         {
                             anchor: `his soreness,`,
@@ -888,7 +888,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `so`,
                         {
                             anchor: `homeward the sport's escorted,`,
@@ -904,7 +904,7 @@ export default {
                 },
                 {
                     time: 118,
-                    left: [
+                    lyricLeft: [
                         `this geezer's`,
                         {
                             anchor: `life support's abortive.`,
@@ -918,7 +918,7 @@ export default {
                             }
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         `the`,
                         {
                             anchor: `cleaved horizon`,
@@ -936,7 +936,7 @@ export default {
                 },
                 {
                     time: 121,
-                    left: [
+                    lyricLeft: [
                         `He's`,
                         {
                             anchor: `vegging with his boner shortened;`,
@@ -954,7 +954,7 @@ export default {
                             ]
                         }
                     ],
-                    right: [
+                    lyricRight: [
                         {
                             anchor: `Redressed,`,
                             todo: true,
@@ -971,7 +971,7 @@ export default {
                 },
                 {
                     time: 124,
-                    left: [
+                    lyricLeft: [
                         `a pop, and she`,
                         {
                             anchor: `pulls the plug.`,
@@ -985,7 +985,7 @@ export default {
                             }
                         }
                     ],
-                    right: `apology, bold and blunt.`
+                    lyricRight: `apology, bold and blunt.`
                 }
             ]
         },
@@ -997,8 +997,8 @@ export default {
             mainVerses: [
                 {
                     time: 127,
-                    left: `Lights one up then draws a daring`,
-                    right: [
+                    lyricLeft: `Lights one up then draws a daring`,
+                    lyricRight: [
                         `Life's a dumb`,
                         {
                             anchor: `ex-dromedary,`,
@@ -1018,7 +1018,7 @@ export default {
                 },
                 {
                     time: 130,
-                    left: [
+                    lyricLeft: [
                         `puff,`,
                         {
                             anchor: `preparing the scoop,`,
@@ -1034,7 +1034,7 @@ export default {
                         },
                         `he's getting dumped.`
                     ],
-                    right: [
+                    lyricRight: [
                         `hungry carrying this groovy`,
                         {
                             anchor: `second hump.`,
