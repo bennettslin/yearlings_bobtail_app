@@ -1,5 +1,10 @@
 // Basic helpers that only know math and pure JavaScript.
 
+// https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_flatten
+export const flatten = array => (
+    [].concat(...array)
+)
+
 // https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_pickby
 export const pickBy = object => {
     const newObject = {}

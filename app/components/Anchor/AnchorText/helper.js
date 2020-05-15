@@ -1,4 +1,4 @@
-import flatten from 'lodash/flatten'
+import { flatten } from '../../../helpers/general'
 
 const HYPHEN = '-'
 
@@ -20,7 +20,7 @@ export const getWordsForWikiAnchor = text => {
         }
     })
 
-    // Finally, flatten array.
+    // Finally, flatten array. Just need one level deep.
     return flatten(words)
 }
 
