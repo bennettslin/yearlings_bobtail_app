@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from 'lodash/keys'
 import scrollIntoView from 'scroll-into-view'
 
 import PreviewerSvg from './Svg'
@@ -98,7 +97,7 @@ class Previewer extends PureComponent {
             presenceKey = key
 
         if (type) {
-            presenceKey = keys(this.getPreviewerMapGetter()(type))[0]
+            presenceKey = Object.keys(this.getPreviewerMapGetter()(type))[0]
         } else if (key) {
             presenceType = this.state.presenceType
         }
@@ -195,7 +194,7 @@ class Previewer extends PureComponent {
                     }}
                 >
                     {/* Render all instances. */}
-                    {keys(svgMap).map(presenceKey => (
+                    {Object.keys(svgMap).map(presenceKey => (
                         <PreviewerSvg
                             showKilobytes
                             {...{

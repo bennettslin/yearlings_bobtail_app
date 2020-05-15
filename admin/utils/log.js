@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 
 import { getPreviewerSvgMapForThing } from './svg'
 
@@ -17,7 +16,7 @@ import {
 
 const _getSvgCount = (presenceType) => {
     const svgBooleanMap = getPreviewerSvgMapForThing(presenceType)
-    return keys(svgBooleanMap).reduce((count, thing) => {
+    return Object.keys(svgBooleanMap).reduce((count, thing) => {
         const
             workedIncrement = svgBooleanMap[thing] ? 1 : 0,
             neededIncrement = 1

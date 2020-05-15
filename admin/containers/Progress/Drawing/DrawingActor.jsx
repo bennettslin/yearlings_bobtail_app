@@ -2,7 +2,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from 'lodash/keys'
 
 const DrawingActor = ({
 
@@ -20,7 +19,7 @@ const DrawingActor = ({
             {actor}
         </div>
         <div className="actor-info-row">
-            {keys(characters).map(characterName => {
+            {Object.keys(characters).map(characterName => {
                 return (
                     <div
                         key={characterName}

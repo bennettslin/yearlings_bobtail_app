@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 import isString from 'lodash/isString'
 
 import {
@@ -40,7 +39,7 @@ const _registerWikiLinksForCard = ({
             })
         }
 
-        return keys(entity).reduce((keyFound, currentKey) => {
+        return Object.keys(entity).reduce((keyFound, currentKey) => {
             const hasWiki = Boolean(entity[WIKI])
 
             if (!entity[WIKI_INDEX] && isString(entity[WIKI])) {

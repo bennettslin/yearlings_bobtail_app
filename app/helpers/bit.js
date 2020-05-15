@@ -1,5 +1,4 @@
 // Methods to switch between a bit number and a true false object.
-import keys from 'lodash/keys'
 
 import { getArrayOfLength } from './general'
 
@@ -26,7 +25,7 @@ export const convertTrueFalseKeysToBitNumber = ({
 
     // If no keys array is given, assume 1-based indices.
     keysArray = keysArray || getArrayOfLength(
-        keys(trueFalseObject).length,
+        Object.keys(trueFalseObject).length,
         1
     )
 

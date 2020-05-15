@@ -1,5 +1,4 @@
 import isFinite from 'lodash/isFinite'
-import keys from 'lodash/keys'
 
 import ALL_ARRANGEMENTS_ACTORS from '../../scene/aggregators/actors'
 import ALL_ARRANGEMENTS_THINGS from '../../scene/aggregators/things'
@@ -60,7 +59,7 @@ const _addPresenceToSceneLayerByType = ({
          * character object.
          */
         if (!instance) {
-            const characterName = keys(actor)[0]
+            const characterName = Object.keys(actor)[0]
             instance = actor[characterName].instance
         }
 
@@ -90,10 +89,10 @@ export const addLayersToScenes = (albumScenes) => {
                 layers = {}
 
             // Iterate through actors, cutouts, fixtures.
-            keys(presences).forEach(presenceType => {
+            Object.keys(presences).forEach(presenceType => {
 
                 // Iterate through presences for each presenceType.
-                keys(presences[presenceType]).forEach(presenceName => {
+                Object.keys(presences[presenceType]).forEach(presenceName => {
 
                     _addPresenceToSceneLayerByType({
                         presences,

@@ -1,5 +1,4 @@
 // Check if at least one present key is selected.
-import keys from 'lodash/keys'
 import pickBy from 'lodash/pickBy'
 
 import { getObjectFromBitNumber } from './bit'
@@ -7,7 +6,7 @@ import { ORDERED_DOT_KEYS } from '../constants/dots'
 
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {
 
-    const presentKeysArray = keys(presentKeys)
+    const presentKeysArray = Object.keys(presentKeys)
 
     // If presentKeys is empty, return true.
     if (presentKeysArray.length === 0) {
@@ -35,7 +34,7 @@ export const getPrefixedDotLetterClassNames = (entity, prefix) => {
 
     const classNamesArray =
         typeof entity === 'object' ?
-            keys(pickBy(entity)) : entity.split(' ')
+            Object.keys(pickBy(entity)) : entity.split(' ')
 
     return classNamesArray.map(name => (
         `${prefix}${name[0]}`

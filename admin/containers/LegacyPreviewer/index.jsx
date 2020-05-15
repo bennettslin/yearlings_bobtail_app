@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import cx from 'classnames'
 import debounce from 'debounce'
-import keys from 'lodash/keys'
 
 import PreviewerDashboard from '../Previewer/Dashboard'
 import PreviewerSvg from '../Previewer/Svg'
@@ -60,7 +59,7 @@ class LegacyPreviewer extends PureComponent {
         let presenceType = type,
             presenceKey = key
         if (type) {
-            presenceKey = keys(getPreviewerSvgMapForThing(type))[0]
+            presenceKey = Object.keys(getPreviewerSvgMapForThing(type))[0]
         } else if (key) {
             presenceType = this.state.presenceType
         }

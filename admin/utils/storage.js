@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 
 import {
     getWindowStorage,
@@ -46,7 +45,7 @@ const getPresenceOrDefaultPresence = ({
 
     return {
         presenceType: typesList[0],
-        presenceKey: keys(
+        presenceKey: Object.keys(
             mapGetter(typesList[0])
         )[0]
     }

@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 
 export const getDynamicStyleStringForIndex = ({
 
@@ -24,7 +23,7 @@ export const getDynamicStyleStringForIndex = ({
             `${parentPrefixSelector} ${childPrefixSelector}` :
             childPrefixSelector,
 
-        properties = keys(style),
+        properties = Object.keys(style),
 
         styleStrings = properties.map(property => (
             `    ${property}: ${style[property]};`

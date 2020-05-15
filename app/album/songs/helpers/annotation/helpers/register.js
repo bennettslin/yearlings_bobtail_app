@@ -1,6 +1,5 @@
 // TODO: Separate further into smaller files?
 import find from 'lodash/find'
-import keys from 'lodash/keys'
 
 import { REFERENCE } from '../../../../../constants/dots'
 import { WIKI } from '../../../../../constants/lyrics'
@@ -36,7 +35,7 @@ const _getHasWikiAnchor = (description) => {
         ))
 
     } else {
-        return find(keys(description), currentKey => {
+        return find(Object.keys(description), currentKey => {
             const hasWiki = Boolean(description[WIKI])
             return hasWiki || _getHasWikiAnchor(description[currentKey])
         })
@@ -46,7 +45,7 @@ const _getHasWikiAnchor = (description) => {
 const _addCardDotKeysToAnnotation = (card, dotKeys) => {
     // Add dot keys to both song and annotation card.
     if (card.dotKeys) {
-        keys(card.dotKeys).forEach(dotKey => {
+        Object.keys(card.dotKeys).forEach(dotKey => {
             dotKeys[dotKey] = true
         })
     }

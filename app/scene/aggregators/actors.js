@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 
 /**
  * Arrangements are organised by scene to make it easier to adjust the various
@@ -261,7 +260,7 @@ const SCENE_ARRANGEMENTS = [
 ]
 
 const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
-    const actorKeys = keys(arrangements)
+    const actorKeys = Object.keys(arrangements)
 
     actorKeys.forEach(actorKey => {
         allArrangements[actorKey] = {
@@ -274,7 +273,7 @@ const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangement
 }, {})
 
 export const getKeysForActor = (actorKey) => (
-    keys(ALL_ARRANGEMENTS[actorKey])
+    Object.keys(ALL_ARRANGEMENTS[actorKey])
 )
 
 export default ALL_ARRANGEMENTS

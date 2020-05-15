@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 
 export const getStaticStyleStringForIndex = ({
 
@@ -11,7 +10,7 @@ export const getStaticStyleStringForIndex = ({
 
     const selector = `.${parentPrefix}${index} .${childPrefix}${index}`,
 
-        properties = keys(style),
+        properties = Object.keys(style),
 
         styleStrings = properties.map(property => (
             `    ${property}: ${style[property]};`

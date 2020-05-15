@@ -1,5 +1,4 @@
 import isFinite from 'lodash/isFinite'
-import keys from 'lodash/keys'
 import albumScenes from '../../../scenes'
 
 import { ACTOR } from '../../../../app/constants/scene'
@@ -36,12 +35,12 @@ export const initialiseDrawings = (drawings, songIndex) => {
                  * themselves.
                  */
                 isAlternate =
-                    keys(characterObject).length === 1 &&
+                    Object.keys(characterObject).length === 1 &&
                     !characterObject.instance,
 
                 character =
                     isAlternate ?
-                        keys(characterObject)[0] :
+                        Object.keys(characterObject)[0] :
                         actor,
 
                 instanceName =
@@ -74,7 +73,7 @@ export const addActorTasksToSongDrawingTasks = (drawings) => {
         actorsTodoCount = 0,
         actorsHalfTodoCount = 0
 
-    keys(drawings[ACTOR]).forEach(actor => {
+    Object.keys(drawings[ACTOR]).forEach(actor => {
         const roles = drawings[ACTOR][actor],
             rolesTotalCount = roles.length,
             characters = {}

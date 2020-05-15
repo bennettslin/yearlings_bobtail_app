@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 
 import THINGS_BACKDROPS from '../../scene/scenes/backdrops/things'
 import THINGS_NOHO_HOUSES from '../../scene/scenes/nohoHouses/things'
@@ -217,7 +216,7 @@ const SCENE_ARRANGEMENTS = [
 ]
 
 const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangements) => {
-    const thingKeys = keys(arrangements)
+    const thingKeys = Object.keys(arrangements)
 
     thingKeys.forEach(thingKey => {
         allArrangements[thingKey] = {
@@ -230,7 +229,7 @@ const ALL_ARRANGEMENTS = SCENE_ARRANGEMENTS.reduce((allArrangements, arrangement
 }, {})
 
 export const getKeysForThing = (thingKey) => (
-    keys(ALL_ARRANGEMENTS[thingKey])
+    Object.keys(ALL_ARRANGEMENTS[thingKey])
 )
 
 export default ALL_ARRANGEMENTS

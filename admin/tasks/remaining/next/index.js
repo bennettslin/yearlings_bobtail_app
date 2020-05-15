@@ -16,6 +16,11 @@ export default [
         neededHours: 3
     },
     {
+        taskName: `Do not support Internet Explorer. Reconsider all lodash functions in this light.`,
+        workedHours: 0,
+        neededHours: 3
+    },
+    {
         taskName: `Use global constants to avoid admin rerouting weirdness.`,
         workedHours: 0,
         neededHours: 1

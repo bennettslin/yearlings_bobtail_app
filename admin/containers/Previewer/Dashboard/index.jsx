@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import keys from 'lodash/keys'
 
 import PreviewerKilobytes from '../Kilobytes'
 
@@ -83,7 +82,7 @@ class PreviewerDashboard extends PureComponent {
                         onChange: this.selectPresenceKey
                     }}
                 >
-                    {keys(svgMap)
+                    {Object.keys(svgMap)
                         .map(presenceKey => (
                             <option
                                 {...{

@@ -1,4 +1,3 @@
-import keys from 'lodash/keys'
 
 import { getSvgMapForActor } from '../../app/svg/actors'
 import { getSvgMapForThing } from '../../app/svg/things'
@@ -54,7 +53,7 @@ export const getPreviewerSvgMapForThing = (presenceType) => {
         svgMap = {}
 
     // Ensure that there are no duplicates.
-    keys(presenceMap).forEach(rawPresenceKey => {
+    Object.keys(presenceMap).forEach(rawPresenceKey => {
         const presenceKey = convertPresenceKeyToClassName(rawPresenceKey)
 
         // Only add one presence per duplicate.
