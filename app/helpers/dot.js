@@ -1,7 +1,6 @@
 // Check if at least one present key is selected.
-import pickBy from 'lodash/pickBy'
-
 import { getObjectFromBitNumber } from './bit'
+import { pickBy } from '../helpers/general'
 import { ORDERED_DOT_KEYS } from '../constants/dots'
 
 export const intersects = (presentKeys = {}, selectedKeys = {}) => {

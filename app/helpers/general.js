@@ -1,5 +1,15 @@
 // Basic helpers that only know math and pure JavaScript.
-import './polyfill'
+
+// https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_pickby
+export const pickBy = object => {
+    const newObject = {}
+    for (const key in object) {
+        if (object[key]) {
+            newObject[key] = object[key]
+        }
+    }
+    return newObject
+}
 
 export const getArrayOfLength = (
     length,
