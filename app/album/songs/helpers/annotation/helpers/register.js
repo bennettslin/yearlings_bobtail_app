@@ -1,6 +1,4 @@
 // TODO: Separate further into smaller files?
-import find from 'lodash/find'
-
 import { REFERENCE } from '../../../../../constants/dots'
 import { WIKI } from '../../../../../constants/lyrics'
 
@@ -30,15 +28,19 @@ const _getHasWikiAnchor = (description) => {
         return false
 
     } else if (Array.isArray(description)) {
-        return find(description, childEntity => (
-            _getHasWikiAnchor(childEntity)
-        ))
+        return description.find(
+            childEntity => (
+                _getHasWikiAnchor(childEntity)
+            )
+        )
 
     } else {
-        return find(Object.keys(description), currentKey => {
-            const hasWiki = Boolean(description[WIKI])
-            return hasWiki || _getHasWikiAnchor(description[currentKey])
-        })
+        return Object.keys(description).find(
+            currentKey => {
+                const hasWiki = Boolean(description[WIKI])
+                return hasWiki || _getHasWikiAnchor(description[currentKey])
+            }
+        )
     }
 }
 
