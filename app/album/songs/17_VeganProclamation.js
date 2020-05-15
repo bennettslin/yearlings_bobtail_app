@@ -589,8 +589,7 @@ export default {
             mainVerses: [
                 {
                     time: 123,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(solo)`
                     }
@@ -674,8 +673,7 @@ export default {
             mainVerses: [
                 {
                     time: 170,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`
                     }
@@ -828,8 +826,7 @@ export default {
             mainVerses: [
                 {
                     time: 218,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(refrain)`
                     }

@@ -74,8 +74,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Garry's theme)`
                     }
@@ -499,8 +498,7 @@ export default {
             mainVerses: [
                 {
                     time: 84,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(bagpipes)`
                     }
@@ -804,8 +802,7 @@ export default {
             mainVerses: [
                 {
                     time: 162,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Garry's theme)`
                     }

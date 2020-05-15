@@ -61,8 +61,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(hums)`
                     }
@@ -643,8 +642,7 @@ export default {
             mainVerses: [
                 {
                     time: 150,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(hums)`
                     }
@@ -789,8 +787,7 @@ export default {
             mainVerses: [
                 {
                     time: 197,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(peafowl)`
                     }

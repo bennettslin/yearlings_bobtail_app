@@ -67,8 +67,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Willy's theme)`
                     }
@@ -619,8 +618,7 @@ export default {
             mainVerses: [
                 {
                     time: 96,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Willy's theme)`
                     }

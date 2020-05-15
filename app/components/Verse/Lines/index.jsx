@@ -10,7 +10,7 @@ import cx from 'classnames'
 import VerseLine from './Line'
 
 import {
-    EAR_COLUMN_KEYS, CENTRE, LYRIC
+    EAR_COLUMN_KEYS, LYRIC_CENTRE, LYRIC
 } from '../../../constants/lyrics'
 
 const verseLinesPropTypes = {
@@ -71,14 +71,18 @@ const verseLinesPropTypes = {
         if (doublespeakerKey) {
             columnKey = doublespeakerKey
 
-        } else if (verseObject.isCentre) {
-            columnKey = CENTRE
+        } else if (verseObject.lyricCentre) {
+            columnKey = LYRIC_CENTRE
         }
 
         return (
             <VerseLine {...other}
                 {...{
-                    text: verseObject[doublespeakerKey] || verseObject[LYRIC],
+                    text: (
+                        verseObject[LYRIC_CENTRE] ||
+                        verseObject[doublespeakerKey] ||
+                        verseObject[LYRIC]
+                    ),
                     columnKey
                 }}
             />

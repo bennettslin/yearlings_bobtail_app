@@ -65,8 +65,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(intro)`
                     }
@@ -819,8 +818,7 @@ export default {
             mainVerses: [
                 {
                     time: 161,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(outro)`
                     }

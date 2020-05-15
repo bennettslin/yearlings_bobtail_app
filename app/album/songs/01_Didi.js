@@ -77,8 +77,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Bennett's theme)`
                     }
@@ -92,8 +91,7 @@ export default {
             mainVerses: [
                 {
                     time: 11,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(whistles)`
                     }
@@ -480,8 +478,7 @@ export default {
             mainVerses: [
                 {
                     time: 123,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(whistles)`
                     }
@@ -558,8 +555,7 @@ export default {
             mainVerses: [
                 {
                     time: 163,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(fade out)`
                     }

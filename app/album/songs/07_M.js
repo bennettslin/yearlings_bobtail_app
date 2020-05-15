@@ -50,8 +50,7 @@ export default {
                 subVerse: [
                     {
                         time: 33,
-                        isCentre: true,
-                        lyric: {
+                        lyricCentre: {
                             anchor: `Maravijaya…`,
                             properNoun: true,
                             todo: true,
@@ -81,8 +80,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Mara's theme)`
                     }
@@ -998,8 +996,7 @@ export default {
             mainVerses: [
                 {
                     time: 192,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(glockenspiel)`
                     }

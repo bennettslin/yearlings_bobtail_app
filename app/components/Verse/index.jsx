@@ -92,7 +92,7 @@ class Verse extends PureComponent {
 
             {
                 lyric,
-                isCentre
+                lyricCentre
             } = verseObject,
 
             isInteractable = this.getIsInteractable()
@@ -103,7 +103,7 @@ class Verse extends PureComponent {
                     {...{
                         setRef: this.setVerseRef,
                         isInteractable,
-                        isDoublespeakerLine: !lyric && !isCentre,
+                        isDoublespeakerLine: !lyric && !lyricCentre,
                         handleInteractivatableClick: this._handleInteractivatableClick
                     }}
                 />

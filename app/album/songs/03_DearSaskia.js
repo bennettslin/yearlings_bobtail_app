@@ -59,8 +59,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Sasha's theme)`
                     }
@@ -74,8 +73,7 @@ export default {
             mainVerses: [
                 {
                     time: 5,
-                    isCentre: true,
-                    lyric: `Dearest Sasha,`
+                    lyricCentre: `Dearest Sasha,`
                 }
             ]
         },
@@ -346,8 +344,7 @@ export default {
             mainVerses: [
                 {
                     time: 70,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Sasha's theme)`
                     }
@@ -623,8 +620,7 @@ export default {
             mainVerses: [
                 {
                     time: 138,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Sasha's theme)`
                     }

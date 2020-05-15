@@ -65,8 +65,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(intro)`
                     }
@@ -1362,8 +1361,7 @@ export default {
             mainVerses: [
                 {
                     time: 199,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Mara's theme)`
                     }

@@ -130,8 +130,7 @@ export default {
             mainVerses: [
                 {
                     time: 5,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Christopher's theme)`
                     }
@@ -789,8 +788,7 @@ export default {
             mainVerses: [
                 {
                     time: 128,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Christopher's theme)`
                     }

@@ -1351,8 +1351,7 @@ export default {
             mainVerses: [
                 {
                     time: 245,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Odin's theme)`
                     }

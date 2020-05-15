@@ -54,8 +54,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(recorders)`
                     }
@@ -306,8 +305,7 @@ export default {
             mainVerses: [
                 {
                     time: 135,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Sita's theme)`
                     }
@@ -322,8 +320,7 @@ export default {
             mainVerses: [
                 {
                     time: 149,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Sita's theme)`
                     }
@@ -487,8 +484,7 @@ export default {
             mainVerses: [
                 {
                     time: 223,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Bennett's theme)`
                     }

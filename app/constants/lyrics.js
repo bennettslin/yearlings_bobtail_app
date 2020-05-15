@@ -1,6 +1,6 @@
 const LYRIC = 'lyric',
     LEFT = 'left',
-    CENTRE = 'centre',
+    LYRIC_CENTRE = 'lyricCentre',
     RIGHT = 'right',
     ANCHOR = 'anchor'
 
@@ -8,7 +8,7 @@ module.exports = {
 
     LYRIC,
     LEFT,
-    CENTRE,
+    LYRIC_CENTRE,
     RIGHT,
     ANCHOR,
 
@@ -44,6 +44,7 @@ module.exports = {
     // This is the order by which annotations will be assigned.
     ANNOTATION_SEARCH_KEYS: [
         LYRIC,
+        LYRIC_CENTRE,
         LEFT,
         RIGHT,
         'subVerse',
@@ -58,6 +59,7 @@ module.exports = {
      */
     LYRIC_TEXT_KEYS: [
         LYRIC,
+        LYRIC_CENTRE,
         LEFT,
         RIGHT,
         ANCHOR
@@ -65,6 +67,7 @@ module.exports = {
 
     WORMHOLE_SEARCH_KEYS: [
         LYRIC,
+        LYRIC_CENTRE,
         LEFT,
         RIGHT
     ],

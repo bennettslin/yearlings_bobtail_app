@@ -63,8 +63,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         anchor: `Or another…`,
                         todo: true,
                         card: {
@@ -102,8 +101,7 @@ export default {
             mainVerses: [
                 {
                     time: 4,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Miriam's theme)`
                     }
@@ -624,8 +622,7 @@ export default {
             mainVerses: [
                 {
                     time: 70,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Miriam's theme)`
                     }
@@ -650,8 +647,7 @@ export default {
             mainVerses: [
                 {
                     time: 90,
-                    isCentre: true,
-                    lyric: [
+                    lyricCentre: [
                         {
                             anchor: `Needle done`,
                             todo: true,
@@ -681,8 +677,7 @@ export default {
                 },
                 {
                     time: 94,
-                    isCentre: true,
-                    lyric: [
+                    lyricCentre: [
                         `it`,
                         {
                             anchor: `hums a typo`,
@@ -725,8 +720,7 @@ export default {
                 },
                 {
                     time: 98,
-                    isCentre: true,
-                    lyric: [
+                    lyricCentre: [
                         `With his`,
                         {
                             anchor: `vinyl, exit`,
@@ -751,8 +745,7 @@ export default {
                 },
                 {
                     time: 102,
-                    isCentre: true,
-                    lyric: [
+                    lyricCentre: [
                         `Undeluded, she'll bask in`,
                         {
                             anchor: `selfish cut-off jeans,`,
@@ -779,8 +772,7 @@ export default {
                 },
                 {
                     time: 106,
-                    isCentre: true,
-                    lyric: [
+                    lyricCentre: [
                         `and`,
                         {
                             anchor: `in her pool,`,
@@ -1067,8 +1059,7 @@ export default {
             mainVerses: [
                 {
                     time: 135,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Miriam's theme)`
                     }

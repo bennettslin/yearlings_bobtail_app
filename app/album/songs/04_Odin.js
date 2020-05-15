@@ -54,8 +54,7 @@ export default {
             mainVerses: [
                 {
                     time: 0,
-                    isCentre: true,
-                    lyric: `Mr. Odin died today.`
+                    lyricCentre: `Mr. Odin died today.`
                 }
             ]
         },
@@ -1361,8 +1360,7 @@ export default {
             mainVerses: [
                 {
                     time: 153,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(electric mandolin)`
                     }
@@ -1564,8 +1562,7 @@ export default {
             mainVerses: [
                 {
                     time: 186,
-                    isCentre: true,
-                    lyric: {
+                    lyricCentre: {
                         isItalic: true,
                         lyric: `(Odin's theme)`
                     }
