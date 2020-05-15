@@ -1,14 +1,12 @@
 import {
     DEFAULT,
+    LEFT,
+    RIGHT,
     FRONT,
     SIDE,
     TILE,
     BASE
 } from '../../../../../../../constants/scene/cubes'
-import {
-    LEFT,
-    RIGHT
-} from '../../../../../../../constants/lyrics'
 import {
     CUBE_X_AXIS_LENGTH,
     CUBE_Z_AXIS_LENGTH

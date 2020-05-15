@@ -1,3 +1,4 @@
+import { RIGHT } from '../../../constants/scene/cubes'
 import {
     EL_CERRITO_KEY,
     EL_CERRITO_CAR_KEY
@@ -9,8 +10,6 @@ import {
     GRASS_COLOUR as H,
     STREET_COLOUR as T
 } from '../../cubes/colours'
-
-import { RIGHT } from '../../cubes/zIndices'
 
 /**
  * ...........-..

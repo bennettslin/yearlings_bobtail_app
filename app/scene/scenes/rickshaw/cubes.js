@@ -1,11 +1,10 @@
+import { LEFT } from '../../../constants/scene/cubes'
 import { RICKSHAW_KEY } from '../../../constants/scene/scenes'
 
 import {
     SAND_COLOUR as K,
     STREET_COLOUR as T
 } from '../../cubes/colours'
-
-import { LEFT } from '../../cubes/zIndices'
 
 const CUBES = {
     [RICKSHAW_KEY]: {

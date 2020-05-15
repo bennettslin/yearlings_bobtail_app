@@ -1,11 +1,10 @@
+import { RIGHT } from '../../../constants/scene/cubes'
 import { CLIFF_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H
 } from '../../cubes/colours'
-
-import { RIGHT } from '../../cubes/zIndices'
 
 const CUBES = {
     [CLIFF_KEY]: {

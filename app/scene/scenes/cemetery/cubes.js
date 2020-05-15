@@ -1,11 +1,10 @@
+import { LEFT } from '../../../constants/scene/cubes'
 import { CEMETERY_KEY } from '../../../constants/scene/scenes'
 
 import {
     GROUND_CLEAR_COLOUR as G,
     GRASS_COLOUR as H
 } from '../../cubes/colours'
-
-import { LEFT } from '../../cubes/zIndices'
 
 const CUBES = {
     [CEMETERY_KEY]: {

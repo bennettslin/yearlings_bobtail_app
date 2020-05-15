@@ -8,6 +8,3 @@ export const g = 16
 
 // For not showing any ceiling pixels.
 export const k = 17
-
-export const LEFT = 'left'
-export const RIGHT = 'right'

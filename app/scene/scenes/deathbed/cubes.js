@@ -1,3 +1,4 @@
+import { RIGHT } from '../../../constants/scene/cubes'
 import {
     EL_CERRITO_DEATHBED_KEY,
     EL_CERRITO_TENNIS_KEY,
@@ -14,8 +15,6 @@ import {
     DEATHBED_FLOOR_COLOUR as F,
     FURNITURE_COLOUR as R
 } from '../../cubes/colours'
-
-import { RIGHT } from '../../cubes/zIndices'
 
 /**
  * ...........-..

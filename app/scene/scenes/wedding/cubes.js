@@ -1,3 +1,4 @@
+import { RIGHT } from '../../../constants/scene/cubes'
 import { WEDDING_KEY } from '../../../constants/scene/scenes'
 
 import {
@@ -5,8 +6,6 @@ import {
     GRASS_COLOUR as H,
     PLATFORM_COLOUR as P
 } from '../../cubes/colours'
-
-import { RIGHT } from '../../cubes/zIndices'
 
 /**
  * ...........-..

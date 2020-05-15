@@ -1,8 +1,7 @@
+import { RIGHT } from '../../../constants/scene/cubes'
 import { BUOY_KEY } from '../../../constants/scene/scenes'
 
 import { OCEAN_COLOUR as V } from '../../cubes/colours'
-
-import { RIGHT } from '../../cubes/zIndices'
 
 const CUBES = {
     [BUOY_KEY]: {

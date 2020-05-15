@@ -1,8 +1,8 @@
 import {
+    SLANT_DIRECTIONS,
     LEFT,
     RIGHT
-} from '../../../../constants/lyrics'
-import { SLANT_DIRECTIONS } from '../../../../constants/scene/cubes'
+} from '../../../../constants/scene/cubes'
 
 import {
     CUBE_X_INDICES,

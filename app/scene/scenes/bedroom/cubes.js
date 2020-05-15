@@ -1,3 +1,4 @@
+import { LEFT } from '../../../constants/scene/cubes'
 import {
     BEDROOM_KEY,
     BEDROOM_STOOL_KEY,
@@ -21,7 +22,7 @@ import {
 } from '../../cubes/colours'
 
 // eslint-disable-next-line object-curly-newline
-import { d, g, k, LEFT } from '../../cubes/zIndices'
+import { d, g, k } from '../../cubes/zIndices'
 
 /**
  * --.-----------
