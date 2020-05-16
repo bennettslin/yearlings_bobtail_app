@@ -1,28 +1,28 @@
 import { getSong } from './songs'
 import { getSongVerseConfigs } from './verses'
 
-export const getSongStanzaConfigs = (songIndex) => {
-    const { songStanzaConfigs } = getSong(songIndex)
-    return songStanzaConfigs || []
+export const getSongStanzaTimes = (songIndex) => {
+    const { stanzaTimes } = getSong(songIndex)
+    return stanzaTimes || []
 }
 
 export const getSongStanzasCount = (songIndex) => {
-    const { songStanzaConfigs } = getSong(songIndex)
-    return songStanzaConfigs ?
-        songStanzaConfigs.length :
+    const { stanzaTimes } = getSong(songIndex)
+    return stanzaTimes ?
+        stanzaTimes.length :
         0
 }
 
-export const getStanzaConfig = (songIndex, stanzaIndex) => {
-    const songStanzaConfigs = getSongStanzaConfigs(songIndex)
+export const getStanzaTime = (songIndex, stanzaIndex) => {
+    const stanzaTimes = getSongStanzaTimes(songIndex)
 
-    return songStanzaConfigs ?
-        songStanzaConfigs[stanzaIndex] :
+    return stanzaTimes ?
+        stanzaTimes[stanzaIndex] :
         null
 }
 
 export const getStanzaVerseConfigs = (songIndex, stanzaIndex) => {
-    const { stanzaVerseIndices } = getStanzaConfig(songIndex, stanzaIndex),
+    const { stanzaVerseIndices } = getStanzaTime(songIndex, stanzaIndex),
         songVerseConfigs = getSongVerseConfigs(songIndex)
 
     return stanzaVerseIndices.map(verseIndex => ({

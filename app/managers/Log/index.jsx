@@ -11,7 +11,7 @@ import {
     getScene
 } from '../../album/api/scenes'
 import { getSong } from '../../album/api/songs'
-import { getSongStanzaConfigs } from '../../album/api/stanzas'
+import { getSongStanzaTimes } from '../../album/api/stanzas'
 import {
     getSongVerseConfigs,
     getVerse
@@ -43,7 +43,7 @@ class LogManager extends PureComponent {
         global.v = this.logVerse
 
         global.sa = this.logSongAnnotations
-        global.ssc = this.logSongStanzaConfigs
+        global.ssc = this.logSongStanzaTimes
         global.svc = this.logSongVerseConfigs
         global.szc = this.logSongSceneConfigs
     }
@@ -107,7 +107,7 @@ class LogManager extends PureComponent {
 
         delete copiedSong.annotations
         copiedSong.lyricUnits = `lyricUnits: ${copiedSong.lyricUnits.length}`
-        delete copiedSong.songStanzaConfigs
+        delete copiedSong.stanzaTimes
         delete copiedSong.songVerseConfigs
         delete copiedSong.songSceneConfigs
 
@@ -120,10 +120,10 @@ class LogManager extends PureComponent {
         return this._logObject('Song annotations', song.annotations)
     }
 
-    logSongStanzaConfigs = () => {
+    logSongStanzaTimes = () => {
         const { selectedSongIndex } = this.props,
-            songStanzaConfigs = getSongStanzaConfigs(selectedSongIndex)
-        return this._logObject('Song stanza configs', songStanzaConfigs)
+            stanzaTimes = getSongStanzaTimes(selectedSongIndex)
+        return this._logObject('Song stanza configs', stanzaTimes)
     }
 
     logSongVerseConfigs = () => {

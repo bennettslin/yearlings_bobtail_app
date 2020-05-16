@@ -26,7 +26,7 @@ import {
 } from './helpers/verse'
 import { addHasSideCardStatus } from './helpers/unit'
 import { addStanzaTypes } from './helpers/stanzaType'
-import { addStanzaConfigs } from './helpers/stanzaConfig'
+import { addStanzaTimes } from './helpers/stanzaTime'
 import {
     addSceneConfigs,
     addSceneIndicesToVerseConfigs
@@ -77,7 +77,7 @@ songs.forEach(song => {
     addStanzaTypes(song)
 
     // This needs to come after verse configs.
-    addStanzaConfigs(song)
+    addStanzaTimes(song)
     addSceneConfigs(song)
 
     // This needs to come after verse configs and scene configs.

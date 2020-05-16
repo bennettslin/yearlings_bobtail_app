@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { getStanzaConfig } from '../../../album/api/stanzas'
+import { getStanzaTime } from '../../../album/api/stanzas'
 
 import Unit from '../Unit'
 
@@ -36,7 +36,7 @@ const propTypes = {
     }) => {
 
         const
-            { stanzaUnitIndices } = getStanzaConfig(
+            { stanzaUnitIndices } = getStanzaTime(
                 lyricSongIndex,
                 stanzaIndex
             )

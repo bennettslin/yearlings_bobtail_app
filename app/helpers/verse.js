@@ -1,21 +1,21 @@
 import { getSongTotalTime } from '../album/api/time'
-import { getSongStanzaConfigs, getStanzaVerseConfigs } from '../album/api/stanzas'
+import { getSongStanzaTimes, getStanzaVerseConfigs } from '../album/api/stanzas'
 
 export const getVerseIndexforRatio = (
     songIndex,
     touchInElementRatio
 
 ) => {
-    const songStanzaConfigs = getSongStanzaConfigs(songIndex),
+    const stanzaTimes = getSongStanzaTimes(songIndex),
 
         totalTime = getSongTotalTime(songIndex),
 
         // Figure out which stanza the touch is in.
-        stanzaIndex = songStanzaConfigs.findIndex(
+        stanzaIndex = stanzaTimes.findIndex(
             (stanzaObject, index) => {
 
                 // If it's the last stanza, just return true.
-                if (index === songStanzaConfigs.length - 1) {
+                if (index === stanzaTimes.length - 1) {
                     return true
                 }
 
@@ -34,7 +34,7 @@ export const getVerseIndexforRatio = (
         ),
 
         // Get needed values for stanza.
-        { stanzaEndTime } = songStanzaConfigs[stanzaIndex],
+        { stanzaEndTime } = stanzaTimes[stanzaIndex],
 
         stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex
 
