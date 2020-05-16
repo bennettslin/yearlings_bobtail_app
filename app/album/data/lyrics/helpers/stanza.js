@@ -33,7 +33,7 @@ const _addInitialStanzaMetadata = ({
             if (!subsequent) {
                 /**
                  * Only let initial unit increment the stanza index. Which
-                 * array we count is arbitrary.
+                 * stanza array we count is arbitrary.
                  */
                 stanzaIndex = stanzaFormTypes.length
             }

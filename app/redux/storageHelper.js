@@ -1,7 +1,7 @@
 // Helper for getting and setting state persisted in user's local storage.
 import album from '../album'
 
-import { getSongVersesCount } from '../album/api/verses'
+import { getVerseCountForSong } from '../album/api/verses'
 
 import {
     getTwoToThePowerOfN,
@@ -66,7 +66,7 @@ const _validateIndexForKey = (key) => {
         }
         case SELECTED_VERSE_INDEX:
         {
-            const songVersesCount = getSongVersesCount(
+            const songVersesCount = getVerseCountForSong(
                 _getValidatedStoredSongIndex()
             )
 

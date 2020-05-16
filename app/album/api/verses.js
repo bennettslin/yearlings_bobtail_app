@@ -1,4 +1,9 @@
-import { getSong, getFinalSong } from './songs'
+import {
+    getSong,
+    getFinalSong,
+    getFinalSongIsLogue
+} from './songs'
+import { getArrayOfLength } from '../../helpers/general'
 
 export const getVerse = (
     songIndex,
@@ -14,13 +19,22 @@ export const isValidVerse = (songIndex, verseIndex) => {
     return Boolean(getVerse(songIndex, verseIndex))
 }
 
-export const getSongVerseConfigs = (songIndex) => {
+export const getVerseIndicesArray = (songIndex) => (
+    getFinalSongIsLogue(songIndex) ?
+        [] :
+        getArrayOfLength(
+            // Which verse array we use is arbitrary.
+            getFinalSong(songIndex).verseDurations.length
+        )
+)
+
+export const getVerseCountForSong = (songIndex) => (
+    getVerseIndicesArray(songIndex).length
+)
+
+const getSongVerseConfigs = (songIndex) => {
     const { verseConfigs } = getSong(songIndex)
     return verseConfigs || []
-}
-
-export const getSongVersesCount = (songIndex) => {
-    return getSongVerseConfigs(songIndex).length
 }
 
 export const getSceneIndexForVerse = (songIndex, verseIndex) => {

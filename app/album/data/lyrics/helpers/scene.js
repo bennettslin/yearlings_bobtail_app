@@ -23,8 +23,7 @@ const _addDurationsToSceneConfigs = (sceneConfigs, { totalTime }) => {
 export const addSceneConfigs = (song) => {
     const {
         songIndex,
-        lyricUnits,
-        verseConfigs
+        lyricUnits
     } = song
 
     if (lyricUnits) {
@@ -33,29 +32,16 @@ export const addSceneConfigs = (song) => {
             sceneConfigs = []
 
         scenes.forEach(scene => {
-            const {
-                unitIndex,
-                verseIndex
-            } = scene
+            const { unitIndex } = scene
 
-            // Scene either has a unit index or a verse index.
-            if (Number.isFinite(unitIndex)) {
-                const
-                    unit = lyricUnits[unitIndex],
-                    { mainVerses } = unit
+            const
+                unit = lyricUnits[unitIndex],
+                { mainVerses } = unit
 
-                sceneConfigs.push({
-                    firstVerseIndex: mainVerses[0].verseIndex,
-                    sceneStartTime: mainVerses[0].time
-                })
-
-            } else {
-                sceneConfigs.push({
-                    firstVerseIndex: verseIndex,
-                    sceneStartTime:
-                        verseConfigs[verseIndex].verseStartTime
-                })
-            }
+            sceneConfigs.push({
+                firstVerseIndex: mainVerses[0].verseIndex,
+                sceneStartTime: mainVerses[0].time
+            })
         })
 
         _addDurationsToSceneConfigs(sceneConfigs, song)

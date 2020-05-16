@@ -6,7 +6,6 @@ import { PROLOGUE } from '../../../constants/scene/actors/songs'
 
 export default [
     {
-        unitIndex: 1,
         description: `Old Bennett is standing onstage, addressing the audience.`,
         presences: {
             [ACTOR]: {

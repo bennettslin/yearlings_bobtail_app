@@ -5,7 +5,7 @@ export const getStanzaIndicesArray = (songIndex) => (
     getFinalSongIsLogue(songIndex) ?
         [] :
         getArrayOfLength(
-            // Which array we use is arbitrary.
+            // Which stanza array we use is arbitrary.
             getFinalSong(songIndex).stanzaFormTypes.length
         )
 )

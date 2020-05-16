@@ -29,7 +29,6 @@ import { EPILOGUE } from '../../../constants/scene/actors/songs'
 
 export default [
     {
-        verseIndex: 0,
         description: `Everyone is standing at the end of the play. We are all really just actors.`,
         presences: {
             [ACTOR]: {

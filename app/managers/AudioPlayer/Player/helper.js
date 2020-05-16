@@ -1,6 +1,6 @@
 import mp3s from '../../../../assets/mp3s'
 
-import { getSongVersesCount } from '../../../album/api/verses'
+import { getVerseCountForSong } from '../../../album/api/verses'
 import {
     getStartTimeForVerse,
     getEndTimeForVerse
@@ -14,7 +14,7 @@ export const getNextVerseIndex = (
     songIndex,
     verseIndex
 ) => {
-    const songVersesCount = getSongVersesCount(songIndex)
+    const songVersesCount = getVerseCountForSong(songIndex)
 
     /**
      * If it's not the last verse, return the next verse. Otherwise, return

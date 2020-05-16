@@ -101,7 +101,7 @@ songs.forEach(song => {
             verseStartTimes
         } = addIndexedVerses(song, finalSong)
 
-        // TODO
+        // TODO: Get rid of verse configs after scene metadata.
         addVerseMetadata(song, indexedVerses, finalSong)
 
         addStanzaMetadata({

@@ -1,6 +1,6 @@
 import { getSong, getFinalSong } from './songs'
 import { getVerseIndicesForStanza } from './stanzas'
-import { getSongVerseConfigs } from './verses'
+import { getVerseCountForSong } from './verses'
 
 export const getSongTotalTime = (songIndex) => {
     const { totalTime } = getSong(songIndex)
@@ -13,20 +13,15 @@ export const getStartTimeForVerse = (songIndex, verseIndex) => {
 }
 
 export const getEndTimeForVerse = (songIndex, verseIndex) => {
-    const verseConfigs = getSongVerseConfigs(songIndex)
+    const verseCount = getVerseCountForSong(songIndex)
 
-    if (verseConfigs.length) {
-        /**
-         * If it's the last verse, the end time is the song's total time.
-         * Otherwise, it's the start time of the next verse.
-         */
-        return verseIndex < verseConfigs.length - 1 ?
-            getStartTimeForVerse(songIndex, verseIndex + 1) :
-            getSongTotalTime(songIndex)
-
-    } else {
-        return 0
-    }
+    /**
+     * If it's the last verse, the end time is the song's total time.
+     * Otherwise, it's the start time of the next verse.
+     */
+    return verseIndex < verseCount - 1 ?
+        getStartTimeForVerse(songIndex, verseIndex + 1) :
+        getSongTotalTime(songIndex)
 }
 
 export const getStartTimeForStanza = (songIndex, stanzaIndex) => (
