@@ -30,8 +30,8 @@ class UnitCard extends PureComponent {
 
     static propTypes = {
         // From parent.
-        stanzaTypeIndex: PropTypes.number,
-        stanzaType: PropTypes.string.isRequired,
+        formTypeIndex: PropTypes.number,
+        formType: PropTypes.string.isRequired,
 
         versesArray: PropTypes.array.isRequired,
         handleVerseSelect: PropTypes.func
@@ -57,8 +57,8 @@ class UnitCard extends PureComponent {
 
         const {
             // From props.
-            stanzaTypeIndex,
-            stanzaType,
+            formTypeIndex,
+            formType,
 
             // From controller.
             versesArray,
@@ -71,8 +71,8 @@ class UnitCard extends PureComponent {
                 <UnitCardView {...other}
                     {...{
                         versesArray,
-                        stanzaTypeIndex,
-                        stanzaType,
+                        formTypeIndex,
+                        formType,
                         handleStanzaTabClick: this.handleStanzaTabClick
                     }}
                 />
@@ -89,12 +89,12 @@ class UnitCard extends PureComponent {
 
 const propTypes = {
     // From parent.
-        stanzaTypeIndex: PropTypes.oneOfType([
+        formTypeIndex: PropTypes.oneOfType([
             PropTypes.bool,
             PropTypes.number
         ]),
         versesArray: PropTypes.array.isRequired,
-        stanzaType: PropTypes.string.isRequired,
+        formType: PropTypes.string.isRequired,
 
         showAnnotationTip: PropTypes.bool,
         showActivatedTip: PropTypes.bool,
@@ -107,8 +107,8 @@ const propTypes = {
 
     UnitCardView = ({
         versesArray,
-        stanzaTypeIndex,
-        stanzaType,
+        formTypeIndex,
+        formType,
         showAnnotationTip,
         showActivatedTip,
         showStanzaTabTip,
@@ -119,15 +119,15 @@ const propTypes = {
         ...other
     }) => {
 
-        const isTabbed = Boolean(stanzaTypeIndex),
+        const isTabbed = Boolean(formTypeIndex),
 
             tabText = `${
-                stanzaType
+                formType
             }${
-                stanzaTypeIndex > 0 ? ` ${stanzaTypeIndex}` : ''
+                formTypeIndex > 0 ? ` ${formTypeIndex}` : ''
             }`,
 
-            isSubCard = stanzaType === RESPONSE || stanzaType === RHYME
+            isSubCard = formType === RESPONSE || formType === RHYME
 
         return (
             <div className={cx(
@@ -145,7 +145,7 @@ const propTypes = {
                     'UnitCard__sheet',
                     'boxShadow__stanza',
                     'bgColour__unit__pattern',
-                    `bgColour__stanzaType__${stanzaType}`
+                    `bgColour__formType__${formType}`
                 )}>
                     {versesArray.map((verseObject, stanzaVerseIndex) => {
                         const { verseIndex } = verseObject
@@ -175,7 +175,7 @@ const propTypes = {
                             'textShadow__dark',
                             'bgColour__unit__pattern',
                             'bgColour__unit__pattern__reverse',
-                            `bgColour__stanzaType__${stanzaType}`
+                            `bgColour__formType__${formType}`
                         )}
                         {...{ onClick: handleStanzaTabClick }}
                     >

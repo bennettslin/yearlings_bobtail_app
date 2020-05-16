@@ -12,9 +12,8 @@ import StanzaHoc from './Hoc'
 import Stanza from './Stanza'
 import Unit from './Unit'
 
-import { getSongStanzasCount } from '../../album/api/stanzas'
+import { getStanzaIndicesArray } from '../../album/api/stanzas'
 import { getLastUnitDotCardIndex } from '../../album/api/units'
-import { getArrayOfLength } from '../../helpers/general'
 import { populateRefs } from '../../helpers/ref'
 
 const mapStateToProps = ({
@@ -55,11 +54,10 @@ class Stanzas extends PureComponent {
                 setVerseRef
             } = this.props,
 
-            songStanzasCount = getSongStanzasCount(lyricSongIndex),
-            stanzaIndicesArray = getArrayOfLength(songStanzasCount),
+            stanzaIndicesArray = getStanzaIndicesArray(lyricSongIndex),
             lastUnitDotCardIndex = getLastUnitDotCardIndex(lyricSongIndex)
 
-        return songStanzasCount && (
+        return stanzaIndicesArray.length && (
             <div
                 {...{ className: 'Stanzas' }}
             >

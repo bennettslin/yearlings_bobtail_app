@@ -1,28 +1,32 @@
 import { getFinalSong } from './songs'
 import { getSongVerseConfigs } from './verses'
+import { getArrayOfLength } from '../../helpers/general'
 
-export const getSongStanzaTimes = (songIndex) => {
-    const { stanzaTimes } = getFinalSong(songIndex)
-    return stanzaTimes || []
-}
-
-export const getSongStanzasCount = (songIndex) => {
-    const { stanzaTimes } = getFinalSong(songIndex)
-    return stanzaTimes ?
-        stanzaTimes.length :
-        0
-}
+export const getStanzaIndicesArray = (songIndex) => (
+    getArrayOfLength(
+        getFinalSong(songIndex).stanzaFormTypes.length
+    )
+)
 
 export const getStanzaTime = (songIndex, stanzaIndex) => {
-    const stanzaTimes = getSongStanzaTimes(songIndex)
+    const {
+        stanzaFormTypes,
+        stanzaUnitIndicesList,
+        stanzaVerseIndicesList,
+        stanzaEndTimes
+    } = getFinalSong(songIndex)
 
-    return stanzaTimes ?
-        stanzaTimes[stanzaIndex] :
-        null
+    return {
+        stanzaFormType: stanzaFormTypes[stanzaIndex],
+        stanzaUnitIndices: stanzaUnitIndicesList[stanzaIndex],
+        stanzaVerseIndices: stanzaVerseIndicesList[stanzaIndex],
+        stanzaEndTime: stanzaEndTimes[stanzaIndex]
+    }
 }
 
 export const getStanzaVerseConfigs = (songIndex, stanzaIndex) => {
-    const { stanzaVerseIndices } = getStanzaTime(songIndex, stanzaIndex),
+    const { stanzaVerseIndicesList } = getFinalSong(songIndex)
+    const stanzaVerseIndices = stanzaVerseIndicesList[stanzaIndex],
         songVerseConfigs = getSongVerseConfigs(songIndex)
 
     return stanzaVerseIndices.map(verseIndex => ({
@@ -33,7 +37,22 @@ export const getStanzaVerseConfigs = (songIndex, stanzaIndex) => {
     }))
 }
 
-export const getStanzaTypeIndex = (songIndex, unitIndex) => {
-    const { unitStanzaTypeIndices } = getFinalSong(songIndex)
-    return unitStanzaTypeIndices[unitIndex]
+export const getStanzaFormType = (songIndex, stanzaIndex) => {
+    const { stanzaFormTypes } = getFinalSong(songIndex)
+    return stanzaFormTypes[stanzaIndex]
+}
+
+export const getStanzaUnitIndices = (songIndex, stanzaIndex) => {
+    const { stanzaUnitIndicesList } = getFinalSong(songIndex)
+    return stanzaUnitIndicesList[stanzaIndex]
+}
+
+export const getStanzaEndTime = (songIndex, stanzaIndex) => {
+    const { stanzaEndTimes } = getFinalSong(songIndex)
+    return stanzaEndTimes[stanzaIndex]
+}
+
+export const getUnitFormTypeIndex = (songIndex, unitIndex) => {
+    const { unitFormTypeIndices } = getFinalSong(songIndex)
+    return unitFormTypeIndices[unitIndex]
 }

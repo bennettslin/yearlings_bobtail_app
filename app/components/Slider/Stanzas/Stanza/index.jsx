@@ -3,7 +3,11 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { getStanzaTime, getStanzaVerseConfigs } from '../../../../album/api/stanzas'
+import {
+    getStanzaFormType,
+    getStanzaEndTime,
+    getStanzaVerseConfigs
+} from '../../../../album/api/stanzas'
 import { getSongTotalTime } from '../../../../album/api/time'
 
 import SliderVerses from './Verses'
@@ -33,13 +37,8 @@ class SliderStanza extends PureComponent {
                 stanzaIndex,
                 logicSelectors
             } = this.props,
-            {
-                stanzaEndTime,
-                stanzaType
-            } = getStanzaTime(
-                lyricSongIndex,
-                stanzaIndex
-            ),
+            stanzaEndTime = getStanzaEndTime(lyricSongIndex, stanzaIndex),
+            stanzaFormType = getStanzaFormType(lyricSongIndex, stanzaIndex),
             stanzaVerseConfigs = getStanzaVerseConfigs(
                 lyricSongIndex,
                 stanzaIndex
@@ -85,7 +84,7 @@ class SliderStanza extends PureComponent {
                 {...{
                     className: cx(
                         'SliderStanza',
-                        `SliderStanza__${stanzaType}`,
+                        `SliderStanza__${stanzaFormType}`,
                         logicSelectors
                     ),
                     style: stanzaStyle
@@ -94,7 +93,7 @@ class SliderStanza extends PureComponent {
                 <div className={cx(
                     'SliderStanza__sheet',
                     'bgColour__sliderStanza__pattern',
-                    `bgColour__stanzaType__${stanzaType}`,
+                    `bgColour__formType__${stanzaFormType}`,
                     'abF'
                 )}>
                     <SliderVerses
@@ -110,7 +109,7 @@ class SliderStanza extends PureComponent {
                     'SliderStanza__tab',
                     'bgColour__sliderStanza__pattern',
                     'bgColour__sliderStanza__pattern__reverse',
-                    `bgColour__stanzaType__${stanzaType}`
+                    `bgColour__formType__${stanzaFormType}`
                 )}/>
             </div>
         )

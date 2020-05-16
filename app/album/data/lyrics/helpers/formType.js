@@ -1,36 +1,36 @@
-export const addStanzaTypeIndices = (song, finalSong) => {
+export const addFormTypeIndices = (song, finalSong) => {
     /**
      * Associate a type and index for each stanza, like verse, chorus, and so
      * forth.
      */
     const { lyricUnits } = song,
-        unitStanzaTypeIndices = []
+        unitFormTypeIndices = []
 
     if (lyricUnits) {
-        const stanzaTypeCounters = {}
+        const formTypeCounters = {}
 
         // Initial loop through all lyric units.
         lyricUnits.forEach(unit => {
             const { unitMap } = unit,
                 {
-                    stanzaType,
+                    formType,
                     subsequent
                 } = unitMap
 
             // Unless it's a dot card, it has a stanza type.
-            if (stanzaType) {
+            if (formType) {
 
                 // If it's not a subsequent unit, establish new index.
                 if (!subsequent) {
-                    stanzaTypeCounters[stanzaType] = (
-                        stanzaTypeCounters[stanzaType] || 0
+                    formTypeCounters[formType] = (
+                        formTypeCounters[formType] || 0
                     ) + 1
                 }
 
-                unitStanzaTypeIndices.push(stanzaTypeCounters[stanzaType])
+                unitFormTypeIndices.push(formTypeCounters[formType])
 
             } else {
-                unitStanzaTypeIndices.push(-1)
+                unitFormTypeIndices.push(-1)
             }
         })
 
@@ -41,19 +41,19 @@ export const addStanzaTypeIndices = (song, finalSong) => {
         lyricUnits.forEach((unit, unitIndex) => {
             const
                 { unitMap } = unit,
-                { stanzaType } = unitMap
+                { formType } = unitMap
 
-            if (stanzaType) {
+            if (formType) {
                 /**
                  * Don't show index if there is only one stanza of that type
                  * for the entire song.
                  */
-                if (stanzaTypeCounters[stanzaType] === 1) {
-                    unitStanzaTypeIndices[unitIndex] = -1
+                if (formTypeCounters[formType] === 1) {
+                    unitFormTypeIndices[unitIndex] = -1
                 }
             }
         })
     }
 
-    finalSong.unitStanzaTypeIndices = unitStanzaTypeIndices
+    finalSong.unitFormTypeIndices = unitFormTypeIndices
 }

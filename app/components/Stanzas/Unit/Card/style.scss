@@ -4,8 +4,8 @@
 
 .UnitCard__tab {
     position: absolute;
-    height: $height__stanzaTypeTab;
-    top: -$height__stanzaTypeTab;
+    height: $height__formTypeTab;
+    top: -$height__formTypeTab;
     left: 0;
 
     padding: 0 5px;
@@ -23,7 +23,7 @@
         /**
         * Minimise overlap of tab and sheet box shadows. Not exactly accurate.
         */
-        height: $height__stanzaTypeTab - 4px;
+        height: $height__formTypeTab - 4px;
         z-index: -1;
     }
 
@@ -105,7 +105,7 @@
     }
 }
 
-$height: $height__stanzaTypeTab * 4;
+$height: $height__formTypeTab * 4;
 .bgColour__unit__pattern {
     $degrees: 60deg;
     $lightShade: hsla(0, 0%, 69%, 0.125);
@@ -151,38 +151,38 @@ $height: $height__stanzaTypeTab * 4;
     background-position: bottom left 5px;
 }
 
-.bgColour__stanzaType__refrain {
-    background-color: $bgColour__stanzaType__refrain;
+.bgColour__formType__refrain {
+    background-color: $bgColour__formType__refrain;
 }
-.bgColour__stanzaType__verse {
-    background-color: $bgColour__stanzaType__verse;
+.bgColour__formType__verse {
+    background-color: $bgColour__formType__verse;
 }
-.bgColour__stanzaType__prechorus {
-    background-color: $bgColour__stanzaType__prechorus;
+.bgColour__formType__prechorus {
+    background-color: $bgColour__formType__prechorus;
 }
-.bgColour__stanzaType__chorus {
-    background-color: $bgColour__stanzaType__chorus;
+.bgColour__formType__chorus {
+    background-color: $bgColour__formType__chorus;
 }
-.bgColour__stanzaType__postchorus {
-    background-color: $bgColour__stanzaType__postchorus;
+.bgColour__formType__postchorus {
+    background-color: $bgColour__formType__postchorus;
 }
-.bgColour__stanzaType__bridge {
-    background-color: $bgColour__stanzaType__bridge;
+.bgColour__formType__bridge {
+    background-color: $bgColour__formType__bridge;
 }
-.bgColour__stanzaType__coda {
-    background-color: $bgColour__stanzaType__coda;
+.bgColour__formType__coda {
+    background-color: $bgColour__formType__coda;
 }
-.bgColour__stanzaType__intro {
-    background-color: $bgColour__stanzaType__instrumental;
+.bgColour__formType__intro {
+    background-color: $bgColour__formType__instrumental;
 }
-.bgColour__stanzaType__solo {
-    background-color: $bgColour__stanzaType__instrumental;
+.bgColour__formType__solo {
+    background-color: $bgColour__formType__instrumental;
 }
-.bgColour__stanzaType__outro {
-    background-color: $bgColour__stanzaType__instrumental;
+.bgColour__formType__outro {
+    background-color: $bgColour__formType__instrumental;
 }
-.bgColour__stanzaType__rhyme,
-.bgColour__stanzaType__backing,
-.bgColour__stanzaType__response {
-    background-color: $bgColour__stanzaType__none;
+.bgColour__formType__rhyme,
+.bgColour__formType__backing,
+.bgColour__formType__response {
+    background-color: $bgColour__formType__none;
 }

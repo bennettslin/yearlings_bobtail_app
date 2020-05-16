@@ -61,7 +61,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -183,7 +183,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -253,7 +253,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -317,7 +317,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -395,7 +395,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -428,7 +428,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -602,7 +602,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: BRIDGE
+                formType: BRIDGE
             },
             mainVerses: [
                 {
@@ -717,7 +717,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -795,7 +795,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: CHORUS,
+                formType: CHORUS,
                 subsequent: true
             },
             mainVerses: [

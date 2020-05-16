@@ -58,7 +58,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: INTRO
+                formType: INTRO
             },
             mainVerses: [
                 {
@@ -96,7 +96,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: REFRAIN
+                formType: REFRAIN
             },
             mainVerses: [
                 {
@@ -121,7 +121,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -331,7 +331,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -423,7 +423,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -567,7 +567,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -617,7 +617,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: REFRAIN
+                formType: REFRAIN
             },
             mainVerses: [
                 {
@@ -642,7 +642,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: BRIDGE
+                formType: BRIDGE
             },
             mainVerses: [
                 {
@@ -851,7 +851,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -991,7 +991,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -1054,7 +1054,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: REFRAIN
+                formType: REFRAIN
             },
             mainVerses: [
                 {

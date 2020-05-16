@@ -60,7 +60,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: INTRO
+                formType: INTRO
             },
             mainVerses: [
                 {
@@ -74,7 +74,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -216,7 +216,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -286,7 +286,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -341,7 +341,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS,
+                formType: PRECHORUS,
                 subsequent: true
             },
             mainVerses: [
@@ -417,7 +417,7 @@ export default {
                         }
                     }
                 ],
-                stanzaType: CHORUS,
+                formType: CHORUS,
                 subCardType: RHYME,
                 sideCardType: BACKING
             },
@@ -484,7 +484,7 @@ export default {
                         }
                     }
                 ],
-                stanzaType: CHORUS,
+                formType: CHORUS,
                 subCardType: RHYME,
                 sideCardType: BACKING,
                 subsequent: true
@@ -575,7 +575,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -619,7 +619,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -729,7 +729,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS,
+                formType: PRECHORUS,
                 subsequent: true
             },
             mainVerses: [
@@ -758,7 +758,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: BRIDGE
+                formType: BRIDGE
             },
             mainVerses: [
                 {
@@ -915,7 +915,7 @@ export default {
                         }
                     }
                 ],
-                stanzaType: PRECHORUS,
+                formType: PRECHORUS,
                 subCardType: RESPONSE
             },
             mainVerses: [
@@ -1005,7 +1005,7 @@ export default {
                         }
                     }
                 ],
-                stanzaType: PRECHORUS,
+                formType: PRECHORUS,
                 subCardType: RESPONSE,
                 subsequent: true
             },
@@ -1099,7 +1099,7 @@ export default {
                         }
                     }
                 ],
-                stanzaType: CHORUS,
+                formType: CHORUS,
                 subCardType: RHYME,
                 sideCardType: BACKING
             },
@@ -1182,7 +1182,7 @@ export default {
                         }
                     }
                 ],
-                stanzaType: CHORUS,
+                formType: CHORUS,
                 subCardType: RHYME,
                 sideCardType: BACKING,
                 subsequent: true
@@ -1276,7 +1276,7 @@ export default {
                     }
                 ],
                 hasTopSideCard: true,
-                stanzaType: CODA,
+                formType: CODA,
                 sideCardType: BACKING,
                 sideSubCardType: RESPONSE
             },
@@ -1356,7 +1356,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: OUTRO
+                formType: OUTRO
             },
             mainVerses: [
                 {

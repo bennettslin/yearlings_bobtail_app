@@ -13,7 +13,7 @@ import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
-import { getStanzaTypeIndex } from '../../../album/api/stanzas'
+import { getUnitFormTypeIndex } from '../../../album/api/stanzas'
 import { getIndexedVersesForUnit } from '../../../album/api/verses'
 
 import { getUnit } from '../../../album/api/units'
@@ -70,7 +70,7 @@ class Unit extends PureComponent {
             } = unit,
 
             {
-                stanzaType,
+                formType,
                 subCardType,
                 sideCardType,
                 sideSubCardType,
@@ -83,7 +83,7 @@ class Unit extends PureComponent {
                 hasBottomSideCard
             } = unitMap,
 
-            stanzaTypeIndex = getStanzaTypeIndex(lyricSongIndex, unitIndex),
+            formTypeIndex = getUnitFormTypeIndex(lyricSongIndex, unitIndex),
             hasSide = Boolean(hasTopSideCard || hasBottomSideCard),
             isLoneUnitDot = Boolean(unitDot) && !mainVerses
 
@@ -118,7 +118,7 @@ class Unit extends PureComponent {
                                 {...other}
                                 {...{
                                     versesArray: mainVerses,
-                                    stanzaType,
+                                    formType,
                                     isTruncatable: hasSide,
 
                                     showAnnotationTip: getShowAnnotationTip({
@@ -143,7 +143,7 @@ class Unit extends PureComponent {
                                     })
                                 }}
                                 {...!subsequent && {
-                                    stanzaTypeIndex
+                                    formTypeIndex
                                 }}
                             />
                         )}
@@ -152,7 +152,7 @@ class Unit extends PureComponent {
                                 {...other}
                                 {...{
                                     versesArray: subVerse,
-                                    stanzaType: subCardType,
+                                    formType: subCardType,
                                     isTruncatable: hasSide
                                 }}
                             />
@@ -176,7 +176,7 @@ class Unit extends PureComponent {
                                 {...other}
                                 {...{
                                     versesArray: sideCard,
-                                    stanzaType: sideCardType
+                                    formType: sideCardType
                                 }}
                             />
                         )}
@@ -185,7 +185,7 @@ class Unit extends PureComponent {
                                 {...other}
                                 {...{
                                     versesArray: sideCard,
-                                    stanzaType: sideCardType
+                                    formType: sideCardType
                                 }}
                             />
                         )}
@@ -194,7 +194,7 @@ class Unit extends PureComponent {
                                 {...other}
                                 {...{
                                     versesArray: sideSubCard,
-                                    stanzaType: sideSubCardType
+                                    formType: sideSubCardType
                                 }}
                             />
                         )}

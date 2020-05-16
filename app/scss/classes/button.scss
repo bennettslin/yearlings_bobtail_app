@@ -60,9 +60,9 @@
 .ButtonIcon__lyricExpand {
     .arrow { fill: hsl(27, 100%, 75%) };
     .line { fill: $colour__past__lighter };
-    .stanzaVerse { fill: $bgColour__stanzaType__verse };
-    .stanzaPrechorus { fill: $bgColour__stanzaType__prechorus };
-    .stanzaChorus { fill: $bgColour__stanzaType__chorus };
+    .stanzaVerse { fill: $bgColour__formType__verse };
+    .stanzaPrechorus { fill: $bgColour__formType__prechorus };
+    .stanzaChorus { fill: $bgColour__formType__chorus };
 }
 
 .ButtonIcon__about {

@@ -49,7 +49,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: INTRO
+                formType: INTRO
             },
             mainVerses: [
                 {
@@ -73,7 +73,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -131,7 +131,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -181,7 +181,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -263,7 +263,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -300,7 +300,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: SOLO
+                formType: SOLO
             },
             mainVerses: [
                 {
@@ -314,7 +314,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: SOLO,
+                formType: SOLO,
                 subsequent: true
             },
             mainVerses: [
@@ -339,7 +339,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -408,7 +408,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -479,7 +479,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: OUTRO
+                formType: OUTRO
             },
             mainVerses: [
                 {

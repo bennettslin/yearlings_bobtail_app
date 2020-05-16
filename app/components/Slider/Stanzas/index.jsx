@@ -8,8 +8,7 @@ import cx from 'classnames'
 import StanzaHoc from '../../Stanzas/Hoc'
 import SliderStanza from './Stanza'
 
-import { getSongStanzasCount } from '../../../album/api/stanzas'
-import { getArrayOfLength } from '../../../helpers/general'
+import { getStanzaIndicesArray } from '../../../album/api/stanzas'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -27,9 +26,7 @@ class SliderStanzas extends PureComponent {
     render() {
         const
             { lyricSongIndex } = this.props,
-            stanzaIndicesArray = getArrayOfLength(
-                getSongStanzasCount(lyricSongIndex)
-            )
+            stanzaIndicesArray = getStanzaIndicesArray(lyricSongIndex)
 
         return (
             <div className={cx(

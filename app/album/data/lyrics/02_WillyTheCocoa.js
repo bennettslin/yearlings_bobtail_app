@@ -62,7 +62,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: INTRO
+                formType: INTRO
             },
             mainVerses: [
                 {
@@ -88,7 +88,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -165,7 +165,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
                 subVerse: [
@@ -243,7 +243,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -286,7 +286,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -358,7 +358,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -488,7 +488,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: POSTCHORUS
+                formType: POSTCHORUS
             },
             mainVerses: [
                 {
@@ -613,7 +613,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: SOLO
+                formType: SOLO
             },
             mainVerses: [
                 {
@@ -627,7 +627,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -707,7 +707,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subCardType: RHYME,
                 subsequent: true,
                 subVerse: [
@@ -775,7 +775,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -821,7 +821,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -909,7 +909,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -1004,7 +1004,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: POSTCHORUS
+                formType: POSTCHORUS
             },
             mainVerses: [
                 {
@@ -1132,7 +1132,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: POSTCHORUS,
+                formType: POSTCHORUS,
                 subsequent: true
             },
             mainVerses: [

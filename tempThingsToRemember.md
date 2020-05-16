@@ -24,7 +24,7 @@ Rethink some dot category shapes?
 * songSceneConfigs
     * minimal [x]
 
-* stanzaTimes
+* stanzaData
     * minimal [x]
 
 * songVerseConfigs

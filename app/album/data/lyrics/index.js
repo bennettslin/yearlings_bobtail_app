@@ -28,9 +28,9 @@ import {
     addIndexedVerses,
     addVerseConfigs
 } from './helpers/verse'
+import { addFormTypeIndices } from './helpers/formType'
 import { addHasSideCardStatus } from './helpers/unit'
-import { addStanzaTypeIndices } from './helpers/stanzaType'
-import { addStanzaTimes } from './helpers/stanzaTime'
+import { addStanzaData } from './helpers/stanzaTime'
 import {
     addSceneConfigs,
     addSceneIndicesToVerseConfigs
@@ -88,10 +88,10 @@ songs.forEach(song => {
 
         addIsDoublespeaker(song, finalSong)
         addHasSideCardStatus(song, finalSong)
-        addStanzaTypeIndices(song, finalSong)
+        addFormTypeIndices(song, finalSong)
 
         // This needs to come after verse configs.
-        addStanzaTimes(song, finalSong)
+        addStanzaData(song, finalSong)
         addSceneConfigs(song)
 
         // This needs to come after verse configs and scene configs.

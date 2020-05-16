@@ -60,7 +60,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: INTRO
+                formType: INTRO
             },
             mainVerses: [
                 {
@@ -125,7 +125,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: REFRAIN
+                formType: REFRAIN
             },
             mainVerses: [
                 {
@@ -139,7 +139,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -174,7 +174,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -236,7 +236,7 @@ export default {
                         }
                     }
                 ],
-                stanzaType: PRECHORUS,
+                formType: PRECHORUS,
                 subCardType: RESPONSE
             },
             mainVerses: [
@@ -278,7 +278,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -344,7 +344,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -396,7 +396,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -451,7 +451,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -648,7 +648,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: POSTCHORUS
+                formType: POSTCHORUS
             },
             mainVerses: [
                 {
@@ -690,7 +690,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: POSTCHORUS,
+                formType: POSTCHORUS,
                 subsequent: true
             },
             mainVerses: [
@@ -736,7 +736,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: BRIDGE
+                formType: BRIDGE
             },
             mainVerses: [
                 {
@@ -783,7 +783,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: REFRAIN
+                formType: REFRAIN
             },
             mainVerses: [
                 {
@@ -797,7 +797,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES
+                formType: VERSES
             },
             mainVerses: [
                 {
@@ -853,7 +853,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: VERSES,
+                formType: VERSES,
                 subsequent: true
             },
             mainVerses: [
@@ -908,7 +908,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: PRECHORUS
+                formType: PRECHORUS
             },
             mainVerses: [
                 {
@@ -1005,7 +1005,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: CHORUS
+                formType: CHORUS
             },
             mainVerses: [
                 {
@@ -1155,7 +1155,7 @@ export default {
                         }
                     }
                 },
-                stanzaType: POSTCHORUS
+                formType: POSTCHORUS
             },
             mainVerses: [
                 {
@@ -1212,7 +1212,7 @@ export default {
         },
         {
             unitMap: {
-                stanzaType: POSTCHORUS,
+                formType: POSTCHORUS,
                 subsequent: true
             },
             mainVerses: [
