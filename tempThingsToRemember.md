@@ -21,7 +21,7 @@ Rethink some dot category shapes?
 * lyricUnits
     * TODO
 
-* Need unitVerseIndices
+* Need unitVerseIndicesList
 
 # Can be completely separate
     * times

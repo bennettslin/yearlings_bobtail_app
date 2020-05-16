@@ -6,7 +6,9 @@ export const getParentOfVerseClassNamesForIndices = ({
 }) => {
 
     const classNames = entities.map(entity => {
-        const { verseIndex } = entity
+        const verseIndex = typeof entity === 'object' ?
+            entity.verseIndex :
+            entity
 
         return Number.isFinite(verseIndex) ?
             `${prefix}${verseIndex}` :

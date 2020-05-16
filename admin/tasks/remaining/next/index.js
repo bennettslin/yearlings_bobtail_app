@@ -5,8 +5,12 @@ export default [
         workedHours: 0
     },
     {
-        taskName: `Refactor.`,
+        taskName: `File organisation refactor.`,
         workedHours: 3
+    },
+    {
+        taskName: `Data refactor.`,
+        workedHours: 8
     },
 
     /* Week work. */

@@ -25,12 +25,13 @@ import {
     addOverview,
     addIsDoublespeaker
 } from './helpers/song'
-import {
-    addIndexedVerses,
-    addVerseConfigs
-} from './helpers/verse'
+import { addVerseConfigs } from './helpers/verse'
 import { addFormTypeIndices } from './helpers/formType'
-import { addHasSideCardStatus } from './helpers/unit'
+import { addHasSideCard } from './helpers/sideCard'
+import {
+    addUnitVerseIndices,
+    addIndexedVerses
+} from './helpers/unit'
 import { addStanzaData } from './helpers/stanza'
 import {
     addSceneConfigs,
@@ -84,20 +85,22 @@ songs.forEach(song => {
 
     if (!song.isLogue) {
         addIsDoublespeaker(song, finalSong)
-        addHasSideCardStatus(song, finalSong)
+        addHasSideCard(song, finalSong)
         addFormTypeIndices(song, finalSong)
 
-        // TODO: Add unit verse indices here. Used by both data and components.
+        const unitVerseIndicesList =
+            addUnitVerseIndices(song, finalSong)
 
-        // TODO
-        addIndexedVerses(song, finalSong)
+        // TODO: Still need to cleanup.
+        const indexedVerses =
+            addIndexedVerses(song, finalSong)
 
         // TODO
         // This needs to come after indexed verses.
-        addVerseConfigs(song, finalSong)
+        addVerseConfigs(song, indexedVerses, finalSong)
 
         // This needs to come after verse configs.
-        addStanzaData(song, finalSong)
+        addStanzaData(song, unitVerseIndicesList, finalSong)
         addSceneConfigs(song)
 
         // This needs to come after verse configs and scene configs.

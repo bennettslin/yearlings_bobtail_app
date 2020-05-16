@@ -1,27 +1,3 @@
-import { getIndexedVersesForUnit } from '../../../api/verses'
-
-export const addIndexedVerses = (song, finalSong) => {
-    const { lyricUnits } = song
-
-    const indexedVerses = []
-    let verseIndexCounter = 0
-
-    lyricUnits.forEach(unit => {
-
-        getIndexedVersesForUnit(unit).forEach(verse => {
-
-            // Also tell verse its index.
-            verse.verseIndex = verseIndexCounter
-            verseIndexCounter++
-
-            indexedVerses.push(verse)
-        })
-    })
-
-    song.indexedVerses = indexedVerses
-    finalSong.indexedVerses = indexedVerses
-}
-
 const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
 
     verseConfigs.forEach((verseConfig, verseIndex) => {

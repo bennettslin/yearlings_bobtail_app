@@ -1,29 +1,56 @@
-export const addHasSideCardStatus = (song, finalSong) => {
+export const _getIndexedVersesForUnit = (unit) => {
     /**
-     * Let app know that song has side stanzas. Only applies to "On a Golden
-     * Cord" and "Uncanny Valley Boy."
+     * Only main verses and sub verses are indexed. Side cards and unit dots
+     * are not indexed.
      */
+    const {
+        mainVerses,
+        unitMap: { subVerse }
+    } = unit
+
+    return [
+        ...mainVerses || [],
+        ...subVerse || []
+    ]
+}
+
+export const addUnitVerseIndices = (song, finalSong) => {
     const { lyricUnits } = song
-    let hasSideCards = false
+
+    const unitVerseIndicesList = []
+    let verseIndex = 0
 
     lyricUnits.forEach(unit => {
-        const {
-                unitMap: {
-                    hasTopSideCard,
-                    hasBottomSideCard
-                }
-            } = unit,
+        const verseIndices = []
 
-            unitHasSideCards = Boolean(
-                hasTopSideCard ||
-                hasBottomSideCard
-            )
+        _getIndexedVersesForUnit(unit).forEach(() => {
+            verseIndices.push(verseIndex)
+            verseIndex++
+        })
 
-        /**
-         * Tell song it has side stanzas so ear button can be shown if needed.
-         */
-        if (unitHasSideCards || hasSideCards) {
-            finalSong.hasSideCards = true
-        }
+        unitVerseIndicesList.push(verseIndices)
     })
+
+    finalSong.unitVerseIndicesList = unitVerseIndicesList
+    return unitVerseIndicesList
+}
+
+export const addIndexedVerses = (song, finalSong) => {
+    const { lyricUnits } = song
+
+    const indexedVerses = []
+    let verseIndex = 0
+
+    lyricUnits.forEach(unit => {
+
+        _getIndexedVersesForUnit(unit).forEach(verse => {
+            // Also tell verse its index.
+            verse.verseIndex = verseIndex
+            indexedVerses.push(verse)
+            verseIndex++
+        })
+    })
+
+    song.indexedVerses = indexedVerses
+    finalSong.indexedVerses = indexedVerses
 }

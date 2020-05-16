@@ -116,12 +116,12 @@ const _spreadStanzaData = (stanzaData, finalSong) => {
     finalSong.stanzaEndTimes = endTimes
 }
 
-export const addStanzaData = (song, finalSong) => {
+export const addStanzaData = (song, unitVerseIndicesList, finalSong) => {
     /**
      * These configs let the audio slider know the relative width of each unit
      * based on its time length.
      */
-    const stanzaData = _initialiseStanzaData(song)
+    const stanzaData = _initialiseStanzaData(song, unitVerseIndicesList)
     _addEndTimesToStanzaData(stanzaData, song)
     _spreadStanzaData(stanzaData, finalSong)
 }

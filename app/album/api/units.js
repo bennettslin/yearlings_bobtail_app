@@ -36,3 +36,8 @@ export const getUnitFormTypeIndex = (songIndex, unitIndex) => {
     const { unitFormTypeIndices } = getFinalSong(songIndex)
     return unitFormTypeIndices[unitIndex]
 }
+
+export const getUnitVerseIndices = (songIndex, unitIndex) => {
+    const { unitVerseIndicesList } = getFinalSong(songIndex)
+    return unitVerseIndicesList[unitIndex]
+}

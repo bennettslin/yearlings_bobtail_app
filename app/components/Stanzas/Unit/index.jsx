@@ -13,9 +13,11 @@ import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
-import { getIndexedVersesForUnit } from '../../../album/api/verses'
-
-import { getUnit, getUnitFormTypeIndex } from '../../../album/api/units'
+import {
+    getUnit,
+    getUnitFormTypeIndex,
+    getUnitVerseIndices
+} from '../../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 import {
@@ -91,7 +93,7 @@ class Unit extends PureComponent {
                 className={cx(
                     // "Parent of verse index."
                     getParentOfVerseClassNamesForIndices({
-                        entities: getIndexedVersesForUnit(unit)
+                        entities: getUnitVerseIndices(lyricSongIndex, unitIndex)
                     }),
 
                     'Unit',
