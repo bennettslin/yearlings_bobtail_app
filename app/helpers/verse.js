@@ -1,5 +1,5 @@
 import { getSongTotalTime } from '../album/api/time'
-import { getSongStanzaConfigs } from '../album/api/stanzas'
+import { getSongStanzaConfigs, getStanzaVerseConfigs } from '../album/api/stanzas'
 
 export const getVerseIndexforRatio = (
     songIndex,
@@ -28,11 +28,13 @@ export const getVerseIndexforRatio = (
             }
         ),
 
+        stanzaVerseConfigs = getStanzaVerseConfigs(
+            songIndex,
+            stanzaIndex
+        ),
+
         // Get needed values for stanza.
-        {
-            stanzaVerseConfigs,
-            stanzaEndTime
-        } = songStanzaConfigs[stanzaIndex],
+        { stanzaEndTime } = songStanzaConfigs[stanzaIndex],
 
         stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex
 

@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { connect } from 'react-redux'
 
 import { getParentOfVerseClassNamesForIndices } from '../helper'
-import { getStanzaConfig } from '../../../album/api/stanzas'
+import { getStanzaVerseConfigs } from '../../../album/api/stanzas'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }
@@ -29,7 +29,7 @@ const propTypes = {
 
         const { stanzaIndex } = other,
 
-            { stanzaVerseConfigs } = getStanzaConfig(
+            stanzaVerseConfigs = getStanzaVerseConfigs(
                 lyricSongIndex,
                 stanzaIndex
             ),

@@ -22,13 +22,13 @@ Rethink some dot category shapes?
     * TODO
 
 * songSceneConfigs
-    * TODO
+    * minimal [x]
 
 * songStanzaConfigs
-    * TODO
+    * minimal [x]
 
 * songVerseConfigs
-    * TODO
+    * minimal [x]
 
 # Can be completely separate
     * times

@@ -1,17 +1,5 @@
 import { getIndexedVersesForUnit } from '../../../api/verses'
 
-const _getVerseConfigForStanzaConfig = (verse) => {
-    const {
-        verseIndex,
-        time
-    } = verse
-
-    return {
-        verseStartTime: time,
-        verseIndex
-    }
-}
-
 const _addStanzaIndexToVerseConfig = ({
     stanzaIndex,
     verse: { verseIndex },
@@ -21,7 +9,13 @@ const _addStanzaIndexToVerseConfig = ({
     songVerseConfigs[verseIndex].stanzaIndex = stanzaIndex
 }
 
-const _getInitialStanzaConfigs = (lyricUnits, song) => {
+const _getInitialStanzaConfigs = (song) => {
+    const { lyricUnits } = song
+
+    if (!lyricUnits) {
+        return null
+    }
+
     const stanzaConfigs = []
 
     let stanzaIndex
@@ -43,7 +37,7 @@ const _getInitialStanzaConfigs = (lyricUnits, song) => {
                 stanzaConfigs[stanzaConfigs.length - 1] :
                 {
                     stanzaType,
-                    stanzaVerseConfigs: [],
+                    stanzaVerseIndices: [],
                     stanzaUnitIndices: []
                 }
 
@@ -60,9 +54,7 @@ const _getInitialStanzaConfigs = (lyricUnits, song) => {
 
             getIndexedVersesForUnit(unit).forEach(verse => {
 
-                stanzaConfig.stanzaVerseConfigs.push(
-                    _getVerseConfigForStanzaConfig(verse)
-                )
+                stanzaConfig.stanzaVerseIndices.push(verse.verseIndex)
 
                 _addStanzaIndexToVerseConfig({
                     stanzaIndex,
@@ -80,7 +72,7 @@ const _getInitialStanzaConfigs = (lyricUnits, song) => {
     return stanzaConfigs
 }
 
-const _addVerseDurationsToStanzaConfigs = (
+const _addEndTimesToStanzaConfigs = (
     stanzaConfigs,
     {
         songVerseConfigs,
@@ -88,21 +80,12 @@ const _addVerseDurationsToStanzaConfigs = (
     }
 ) => {
     stanzaConfigs.forEach((stanzaConfig, stanzaIndex) => {
-        const { stanzaVerseConfigs } = stanzaConfig
+        const { stanzaVerseIndices } = stanzaConfig
         let stanzaEndTime
 
-        stanzaVerseConfigs.forEach((stanzaVerseConfig, stanzaVerseIndex) => {
-            const { verseIndex } = stanzaVerseConfig,
-                { verseDuration } = songVerseConfigs[verseIndex]
-
-            /**
-             * Get the verse duration from the song verse configs that were
-             * previously created.
-             */
-            stanzaVerseConfig.verseDuration = verseDuration
-
+        stanzaVerseIndices.forEach((verseIndex, index) => {
             // If this is the last verse of the stanza...
-            if (stanzaVerseIndex === stanzaVerseConfigs.length - 1) {
+            if (index === stanzaVerseIndices.length - 1) {
 
                 // If it is followed by another stanza...
                 if (stanzaIndex < stanzaConfigs.length - 1) {
@@ -126,14 +109,12 @@ export const addStanzaConfigs = (song) => {
      * These configs let the audio slider know the relative width of each unit
      * based on its time length.
      */
-    const { lyricUnits } = song
+    // Initialise the stanza configs.
+    const stanzaConfigs = _getInitialStanzaConfigs(song)
 
-    if (lyricUnits) {
-        // Initialise the stanza configs.
-        const stanzaConfigs = _getInitialStanzaConfigs(lyricUnits, song)
-
+    if (stanzaConfigs) {
         // Add verse durations.
-        _addVerseDurationsToStanzaConfigs(stanzaConfigs, song)
+        _addEndTimesToStanzaConfigs(stanzaConfigs, song)
 
         song.songStanzaConfigs = stanzaConfigs
     }

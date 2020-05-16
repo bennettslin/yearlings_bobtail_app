@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { getStanzaConfig } from '../../../../album/api/stanzas'
+import { getStanzaConfig, getStanzaVerseConfigs } from '../../../../album/api/stanzas'
 import { getSongTotalTime } from '../../../../album/api/time'
 
 import SliderVerses from './Verses'
@@ -34,14 +34,16 @@ class SliderStanza extends PureComponent {
                 logicSelectors
             } = this.props,
             {
-                stanzaVerseConfigs,
                 stanzaEndTime,
                 stanzaType
             } = getStanzaConfig(
                 lyricSongIndex,
                 stanzaIndex
             ),
-
+            stanzaVerseConfigs = getStanzaVerseConfigs(
+                lyricSongIndex,
+                stanzaIndex
+            ),
             { verseStartTime: stanzaStartTime } = stanzaVerseConfigs[0],
 
             songTotalTime = getSongTotalTime(lyricSongIndex),
