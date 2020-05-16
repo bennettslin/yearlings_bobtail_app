@@ -1,5 +1,5 @@
 import {
-    getSongTotalTime,
+    getDurationForSong,
     getStartTimeForVerse,
     getStartTimeForStanza,
     getEndTimeForStanza
@@ -16,7 +16,7 @@ export const getVerseIndexforRatio = (
 ) => {
     const stanzaIndicesArray = getStanzaIndicesArray(songIndex),
 
-        totalTime = getSongTotalTime(songIndex),
+        songDuration = getDurationForSong(songIndex),
 
         // Figure out which stanza the touch is in.
         stanzaIndex = stanzaIndicesArray.findIndex(
@@ -29,7 +29,7 @@ export const getVerseIndexforRatio = (
 
                 const endTime = getEndTimeForStanza(songIndex, index),
 
-                    endRatio = endTime / totalTime,
+                    endRatio = endTime / songDuration,
 
                     // Stanza's end ratio should be greater than touch ratio.
                     isTouchInStanza = endRatio > touchInElementRatio
@@ -53,8 +53,8 @@ export const getVerseIndexforRatio = (
     }
 
     const stanzaStartTime = getStartTimeForStanza(songIndex, stanzaIndex),
-        stanzaStartRatio = stanzaStartTime / totalTime,
-        stanzaEndRatio = stanzaEndTime / totalTime,
+        stanzaStartRatio = stanzaStartTime / songDuration,
+        stanzaEndRatio = stanzaEndTime / songDuration,
 
         // Width of stanza relative to element.
         stanzaWidthRatio = stanzaEndRatio - stanzaStartRatio,

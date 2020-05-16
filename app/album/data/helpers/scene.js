@@ -1,7 +1,7 @@
-import albumScenes from '../../scenes'
+import albumScenes from '../scenes'
 
 const _addDurationsToSceneConfigs = ({
-    totalTime,
+    songDuration,
     sceneStartTimes,
     finalSong
 
@@ -17,7 +17,7 @@ const _addDurationsToSceneConfigs = ({
 
         // It is the last scene.
         } else {
-            nextTime = totalTime
+            nextTime = songDuration
         }
 
         sceneDurations.push(nextTime - sceneStartTime)
@@ -68,14 +68,12 @@ export const _addVerseSceneIndices = ({
 }
 
 export const addSceneMetadata = ({
-    song,
-    totalTime,
-    verseStartTimes,
+    songIndex,
+    songDuration,
     unitVerseIndicesList,
+    verseStartTimes,
     finalSong
 }) => {
-    const { songIndex } = song
-
     const
         scenes = albumScenes[songIndex],
         sceneVerseIndices = [],
@@ -95,7 +93,7 @@ export const addSceneMetadata = ({
     finalSong.sceneStartTimes = sceneStartTimes
 
     _addDurationsToSceneConfigs({
-        totalTime,
+        songDuration,
         sceneStartTimes,
         finalSong
     })

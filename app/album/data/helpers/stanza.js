@@ -1,10 +1,12 @@
+import albumLyrics from '../lyrics'
+
 const _addInitialStanzaMetadata = ({
-    lyricUnits,
+    songIndex,
     unitVerseIndicesList,
     finalSong
 
 }) => {
-    const
+    const { lyricUnits } = albumLyrics[songIndex],
         stanzaFormTypes = [],
         stanzaUnitIndicesList = [],
         stanzaVerseIndicesList = [],
@@ -63,8 +65,8 @@ const _addInitialStanzaMetadata = ({
 }
 
 const _addStanzaEndTimes = ({
+    songDuration,
     stanzaVerseIndicesList,
-    totalTime,
     verseStartTimes,
     finalSong
 
@@ -84,7 +86,7 @@ const _addStanzaEndTimes = ({
 
                 // If it is the last stanza...
                 } else {
-                    endTime = totalTime
+                    endTime = songDuration
                 }
             }
         })
@@ -96,11 +98,12 @@ const _addStanzaEndTimes = ({
 }
 
 export const addStanzaMetadata = ({
-    lyricUnits,
-    totalTime,
+    songIndex,
+    songDuration,
     unitVerseIndicesList,
     verseStartTimes,
     finalSong
+
 }) => {
     /**
      * These configs let the audio slider know the relative width of each unit
@@ -108,14 +111,15 @@ export const addStanzaMetadata = ({
      */
     const stanzaVerseIndicesList =
         _addInitialStanzaMetadata({
-            lyricUnits,
+            songIndex,
             unitVerseIndicesList,
             finalSong
         })
 
     _addStanzaEndTimes({
+        songIndex,
+        songDuration,
         stanzaVerseIndicesList,
-        totalTime,
         verseStartTimes,
         finalSong
     })

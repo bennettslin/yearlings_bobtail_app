@@ -19,28 +19,9 @@ import _17_VeganProclamation from './17_VeganProclamation'
 import _18_My100000thDream from './18_My100000thDream'
 import _19_Epilogue from './19_Epilogue'
 
-import {
-    addSongIndices,
-    addIsLogue,
-    addOverview,
-    addIsDoublespeaker
-} from './helpers/song'
-import { addVerseDurations } from './helpers/verse'
-import { addFormTypeIndices } from './helpers/formType'
-import { addHasSideCard } from './helpers/sideCard'
-import {
-    addUnitVerseIndices,
-    addIndexedVerses
-} from './helpers/unit'
-import { addStanzaMetadata } from './helpers/stanza'
-import { addSceneMetadata } from './helpers/scene'
-import { addAnnotations } from './helpers/annotation'
-import {
-    addDotUnitsCount,
-    addPluralCardsCount
-} from './helpers/admin'
+import { getArrayOfLength } from '../../../helpers/general'
 
-const songs = [
+const albumLyrics = [
     _00_Prologue,
     _01_Didi,
     _02_WillyTheCocoa,
@@ -63,73 +44,13 @@ const songs = [
     _19_Epilogue
 ]
 
-logServe({
-    log: 'Begin parsing album.',
-    action: 'begin',
-    label: 'album'
+// TODO: Eventually get rid of this?
+albumLyrics.forEach((albumLyric, index) => {
+    albumLyric.songIndex = index
 })
 
-addSongIndices(songs)
+export const getSongIndicesArray = () => (
+    getArrayOfLength(albumLyrics.length)
+)
 
-export const finalSongs = []
-
-songs.forEach(song => {
-
-    const {
-            lyricUnits,
-            totalTime
-        } = song,
-        finalSong = {}
-
-    addIsLogue(song, finalSong)
-    addOverview(song, finalSong)
-
-    if (!song.isLogue) {
-        addIsDoublespeaker(song, finalSong)
-        addHasSideCard(song, finalSong)
-        addFormTypeIndices(song, finalSong)
-
-        const unitVerseIndicesList =
-            addUnitVerseIndices(song, finalSong)
-
-        // TODO: Still need to remove annotations from verses.
-        const { verseStartTimes } = addIndexedVerses(song, finalSong)
-
-        addVerseDurations({
-            totalTime,
-            verseStartTimes,
-            finalSong
-        })
-
-        addStanzaMetadata({
-            lyricUnits,
-            totalTime,
-            unitVerseIndicesList,
-            verseStartTimes,
-            finalSong
-        })
-
-        addSceneMetadata({
-            song,
-            totalTime,
-            verseStartTimes,
-            unitVerseIndicesList,
-            finalSong
-        })
-
-        addAnnotations(song)
-
-        addDotUnitsCount(song)
-        addPluralCardsCount(song)
-    }
-
-    finalSongs.push(finalSong)
-})
-
-logServe({
-    log: 'End parsing album.',
-    action: 'end',
-    label: 'album'
-})
-
-export default songs
+export default albumLyrics

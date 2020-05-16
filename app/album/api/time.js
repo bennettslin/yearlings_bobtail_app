@@ -1,10 +1,10 @@
-import { getSong, getFinalSong } from './songs'
+import { getFinalSong } from './songs'
 import { getVerseIndicesForStanza } from './stanzas'
 import { getVerseCountForSong } from './verses'
 
-export const getSongTotalTime = (songIndex) => {
-    const { totalTime } = getSong(songIndex)
-    return totalTime || Number.MAX_SAFE_INTEGER
+export const getDurationForSong = (songIndex) => {
+    const { songDuration } = getFinalSong(songIndex)
+    return songDuration || Number.MAX_SAFE_INTEGER
 }
 
 export const getStartTimeForVerse = (songIndex, verseIndex) => {
@@ -21,7 +21,7 @@ export const getEndTimeForVerse = (songIndex, verseIndex) => {
      */
     return verseIndex < verseCount - 1 ?
         getStartTimeForVerse(songIndex, verseIndex + 1) :
-        getSongTotalTime(songIndex)
+        getDurationForSong(songIndex)
 }
 
 export const getDurationForVerse = (songIndex, verseIndex) => {

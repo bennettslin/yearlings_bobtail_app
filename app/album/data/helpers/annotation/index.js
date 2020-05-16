@@ -6,7 +6,7 @@ import {
     ANCHOR,
     LYRIC_LEFT,
     LYRIC_RIGHT
-} from '../../../../../constants/lyrics'
+} from '../../../../constants/lyrics'
 
 const _recurseToFindAnnotations = ({
     song,

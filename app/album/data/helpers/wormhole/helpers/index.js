@@ -1,9 +1,9 @@
-import { isString } from '../../../../../../helpers/general'
+import { isString } from '../../../../../helpers/general'
 
 import {
     WIKI,
     WIKI_INDEX
-} from '../../../../../../constants/lyrics'
+} from '../../../../../constants/lyrics'
 
 const _registerWikiLinksForCard = ({
     annotation,

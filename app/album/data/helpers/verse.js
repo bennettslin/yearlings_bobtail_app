@@ -1,7 +1,8 @@
 export const addVerseDurations = ({
-    totalTime,
+    songDuration,
     verseStartTimes,
     finalSong
+
 }) => {
     const verseDurations = []
 
@@ -14,7 +15,7 @@ export const addVerseDurations = ({
 
         // It is the last verse.
         } else {
-            nextTime = totalTime
+            nextTime = songDuration
         }
 
         verseDurations.push(nextTime - verseStartTime)

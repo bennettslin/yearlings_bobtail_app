@@ -5,13 +5,13 @@ import {
     registerCardsWormholes
 } from './register'
 
-import { getFormattedAnnotationTitle } from '../../../../../../helpers/format'
+import { getFormattedAnnotationTitle } from '../../../../../helpers/format'
 
 import {
     LYRIC_LEFT,
     LYRIC_RIGHT,
     COLUMN_INDEX
-} from '../../../../../../constants/lyrics'
+} from '../../../../../constants/lyrics'
 
 export const registerAnnotation = ({
     song,

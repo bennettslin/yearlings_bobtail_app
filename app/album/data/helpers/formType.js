@@ -1,9 +1,11 @@
-export const addFormTypeIndices = (song, finalSong) => {
+import albumLyrics from '../lyrics'
+
+export const addFormTypeIndices = (songIndex, finalSong) => {
     /**
      * Associate a type and index for each stanza, like verse, chorus, and so
      * forth.
      */
-    const { lyricUnits } = song,
+    const { lyricUnits } = albumLyrics[songIndex],
         unitFormTypeIndices = []
 
     if (lyricUnits) {

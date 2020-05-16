@@ -1,7 +1,7 @@
 // FIXME: Data methods should not rely on API methods.
-import { getAnnotation } from '../../../../../album/api/annotations'
+import { getAnnotation } from '../../../../album/api/annotations'
 import { registerWikiAndWormholeLinksForCard } from './helpers'
-import { WORMHOLE } from '../../../../../constants/dots'
+import { WORMHOLE } from '../../../../constants/dots'
 
 const tempAlbumLinks = {}
 

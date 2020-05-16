@@ -14,7 +14,7 @@ import SongBannerTitle from './Title'
 
 import { getSongIsLogue } from '../../../album/api/songs'
 import {
-    getSongTotalTime,
+    getDurationForSong,
     getStartTimeForVerse
 } from '../../../album/api/time'
 
@@ -99,9 +99,9 @@ class SongBanner extends PureComponent {
             } = this.props,
 
             playedTime = isBannerHovering ? bannerHoverTime : selectedTime,
-            totalTime = getSongTotalTime(selectedSongIndex)
+            songDuration = getDurationForSong(selectedSongIndex)
 
-        return playedTime / totalTime * 100
+        return playedTime / songDuration * 100
     }
 
     getVerseIndexFromEvent = e => {

@@ -25,7 +25,7 @@ import {
  */
 export default {
     title: `Pchelka's Starry Journey`,
-    totalTime: 211,
+    duration: 211,
     overview: `At the height of my years of getting bullied, a strange letter arrived promising spiritual answers. With each new payment I sent, it was revealed to me that I belonged to a race of interstellar beings, with a mission to shut myself from the world. I did so by being unresponsive like my brother, and felt a psychic bond with him as a result. But as my sanity chipped away, I came to see that I was in a mail-order cult.`,
     lyricUnits: [
         {

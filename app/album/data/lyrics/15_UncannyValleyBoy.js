@@ -23,7 +23,7 @@ import {
 
 export default {
     title: 'Uncanny Valley Boy',
-    totalTime: 204,
+    duration: 204,
     overview: `Upon learning of my brother's autism, my parents were too harried to notice that I was being bullied at school. In guilt, they later indulged every whim I had to find myself in my own way. But as I got older, they grew concerned that I wasn't maturing as I went. On top of this, they were devastated when I left Sita, whom they adored. Naturally, I felt crushed by the weight of having disappointed them. Still, I had a master plan to follow, and wasn't about to change my ways.`,
     lyricUnits: [
         {

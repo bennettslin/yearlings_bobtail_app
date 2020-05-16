@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import { getFormTypeForStanza } from '../../../../album/api/stanzas'
 import {
-    getSongTotalTime,
+    getDurationForSong,
     getStartTimeForStanza,
     getEndTimeForStanza
 } from '../../../../album/api/time'
@@ -44,7 +44,7 @@ class SliderStanza extends PureComponent {
                 stanzaIndex
             ),
 
-            songTotalTime = getSongTotalTime(lyricSongIndex),
+            songDuration = getDurationForSong(lyricSongIndex),
 
             /**
              * Width of stanza is exactly proportionate to its duration within
@@ -53,7 +53,7 @@ class SliderStanza extends PureComponent {
              * within the stanza, but *not* within the song.
              */
             stanzaRightPercentage =
-                (songTotalTime - stanzaEndTime) / songTotalTime * 100,
+                (songDuration - stanzaEndTime) / songDuration * 100,
 
             formattedStanzaRight =
                 `calc(${stanzaRightPercentage}% - ${
@@ -66,7 +66,7 @@ class SliderStanza extends PureComponent {
              * touch calculations. The last stanza has no overlapped right edge.
              */
             stanzaWidthPercentage =
-                (stanzaEndTime - stanzaStartTime) / songTotalTime * 100,
+                (stanzaEndTime - stanzaStartTime) / songDuration * 100,
 
             formattedStanzaWidth =
                 `calc(${stanzaWidthPercentage}% + ${

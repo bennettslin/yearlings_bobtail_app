@@ -7,7 +7,7 @@ import cx from 'classnames'
 
 import SliderTime from './Time'
 
-import { getSongTotalTime } from '../../../album/api/time'
+import { getDurationForSong } from '../../../album/api/time'
 import { getFormattedTime } from '../../../helpers/format'
 
 const mapStateToProps = ({
@@ -63,7 +63,7 @@ class SliderTimes extends PureComponent {
             time = activatedTime
         }
 
-        const remainTime = getSongTotalTime(lyricSongIndex) - time
+        const remainTime = getDurationForSong(lyricSongIndex) - time
 
         return (
             <div className={cx(

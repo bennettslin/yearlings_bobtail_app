@@ -12,7 +12,7 @@ import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 
 import { getSceneIndicesArray } from '../../../album/api/scenes'
 import {
-    getSongTotalTime,
+    getDurationForSong,
     getStartTimeForScene,
     getDurationForScene
 } from '../../../album/api/time'
@@ -85,7 +85,7 @@ class Filmstrip extends PureComponent {
                 isSelectedLogue
             } = this.props,
 
-            totalTime = getSongTotalTime(selectedSongIndex),
+            songDuration = getDurationForSong(selectedSongIndex),
             sceneIndicesArray = getSceneIndicesArray(selectedSongIndex)
 
         return (
@@ -123,8 +123,8 @@ class Filmstrip extends PureComponent {
                         ),
                         isAfterCursor = cursorIndex < sceneIndex,
 
-                        sceneLeft = sceneStartTime / totalTime * 100,
-                        sceneWidth = sceneDuration / totalTime * 100,
+                        sceneLeft = sceneStartTime / songDuration * 100,
+                        sceneWidth = sceneDuration / songDuration * 100,
 
                         cursorWidth = this.getCursorWidth({
                             sceneStartTime,

@@ -1,3 +1,5 @@
+import albumLyrics from '../lyrics'
+
 export const _getIndexedVersesForUnit = (unit) => {
     /**
      * Only main verses and sub verses are indexed. Side cards and unit dots
@@ -14,8 +16,8 @@ export const _getIndexedVersesForUnit = (unit) => {
     ]
 }
 
-export const addUnitVerseIndices = (song, finalSong) => {
-    const { lyricUnits } = song
+export const addUnitVerseIndices = (songIndex, finalSong) => {
+    const { lyricUnits } = albumLyrics[songIndex]
 
     const unitVerseIndicesList = []
     let verseIndex = 0
@@ -35,8 +37,8 @@ export const addUnitVerseIndices = (song, finalSong) => {
     return unitVerseIndicesList
 }
 
-export const addIndexedVerses = (song, finalSong) => {
-    const { lyricUnits } = song
+export const addIndexedVerses = (songIndex, finalSong) => {
+    const { lyricUnits } = albumLyrics[songIndex]
 
     const
         indexedVerses = [],
@@ -58,8 +60,5 @@ export const addIndexedVerses = (song, finalSong) => {
     finalSong.indexedVerses = indexedVerses
     finalSong.verseStartTimes = verseStartTimes
 
-    return {
-        indexedVerses,
-        verseStartTimes
-    }
+    return verseStartTimes
 }
