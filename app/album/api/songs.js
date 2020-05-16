@@ -46,6 +46,10 @@ export const getFinalSong = songIndex => {
     return getFinalSongs()[songIndex]
 }
 
+export const getFinalSongIsLogue = songIndex => {
+    return getFinalSong(songIndex).isLogue
+}
+
 export const getSongOverview = songIndex => {
     return getFinalSong(songIndex).overview
 }

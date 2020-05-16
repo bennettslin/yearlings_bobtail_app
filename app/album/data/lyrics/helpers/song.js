@@ -4,6 +4,12 @@ export const addSongIndices = (albumSongs) => {
     })
 }
 
+export const addIsLogue = (song, finalSong) => {
+    if (song.isLogue) {
+        finalSong.isLogue = song.isLogue
+    }
+}
+
 export const addOverview = (song, finalSong) => {
     finalSong.overview = song.overview
 }

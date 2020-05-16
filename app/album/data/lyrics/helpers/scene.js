@@ -68,10 +68,10 @@ export const addSceneIndicesToVerseConfigs = (song) => {
     const {
         songSceneConfigs,
         songVerseConfigs,
-        logue
+        isLogue
     } = song
 
-    if (!logue) {
+    if (!isLogue) {
         // Then, allow each verse to know its scene index.
         songSceneConfigs.forEach((sceneConfig, sceneIndex) => {
             const { firstVerseIndex } = sceneConfig

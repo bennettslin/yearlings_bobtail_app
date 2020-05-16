@@ -21,6 +21,7 @@ import _19_Epilogue from './19_Epilogue'
 
 import {
     addSongIndices,
+    addIsLogue,
     addOverview,
     addIsDoublespeaker
 } from './helpers/song'
@@ -78,8 +79,10 @@ songs.forEach(song => {
 
     const finalSong = {}
 
-    if (!song.logue) {
-        addOverview(song, finalSong)
+    addIsLogue(song, finalSong)
+    addOverview(song, finalSong)
+
+    if (!song.isLogue) {
         addIsDoublespeaker(song, finalSong)
         addHasSideCardStatus(song, finalSong)
         addFormTypeIndices(song, finalSong)
@@ -87,6 +90,7 @@ songs.forEach(song => {
         // TODO
         addIndexedVerses(song, finalSong)
 
+        // TODO
         // This needs to come after indexed verses.
         addVerseConfigs(song, finalSong)
 

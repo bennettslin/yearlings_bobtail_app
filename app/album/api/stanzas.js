@@ -1,11 +1,13 @@
-import { getFinalSong } from './songs'
+import { getFinalSong, getFinalSongIsLogue } from './songs'
 import { getSongVerseConfigs } from './verses'
 import { getArrayOfLength } from '../../helpers/general'
 
 export const getStanzaIndicesArray = (songIndex) => (
-    getArrayOfLength(
-        getFinalSong(songIndex).stanzaFormTypes.length
-    )
+    getFinalSongIsLogue(songIndex) ?
+        [] :
+        getArrayOfLength(
+            getFinalSong(songIndex).stanzaFormTypes.length
+        )
 )
 
 export const getStanzaVerseConfigs = (songIndex, stanzaIndex) => {
