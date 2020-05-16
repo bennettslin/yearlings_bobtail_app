@@ -5,9 +5,9 @@ import { connect } from 'react-redux'
 import { getVerseIndicesForStanza } from '../../../../../album/api/stanzas'
 import {
     getStartTimeForStanza,
-    getStartTimeForVerse
+    getStartTimeForVerse,
+    getDurationForVerse
 } from '../../../../../album/api/time'
-import { getDurationForVerse } from '../../../../../album/api/verses'
 
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'

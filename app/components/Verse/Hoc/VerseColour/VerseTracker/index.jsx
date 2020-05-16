@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getDurationForVerse } from '../../../../../album/api/verses'
+import { getDurationForVerse } from '../../../../../album/api/time'
 
 const mapStateToProps = ({
     appStore: { isUserAgentDesktop },

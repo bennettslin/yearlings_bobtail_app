@@ -1,5 +1,9 @@
-import { getSong } from './songs'
+import {
+    getFinalSong,
+    getFinalSongIsLogue
+} from './songs'
 import albumScenes from '../data/scenes'
+import { getArrayOfLength } from '../../helpers/general'
 
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import {
@@ -16,26 +20,22 @@ const DEFAULT_SCENE = {
     }
 }
 
-export const getSongSceneConfigs = (songIndex) => {
-    const { songSceneConfigs } = getSong(songIndex)
-    return songSceneConfigs || []
-}
+export const getSceneIndicesArray = (songIndex) => (
+    getFinalSongIsLogue(songIndex) ?
+        [] :
+        getArrayOfLength(
+            // Which scene array we use is arbitrary.
+            getFinalSong(songIndex).sceneDurations.length
+        )
+)
 
-export const getSongScenesCount = (songIndex) => {
-    return getSongSceneConfigs(songIndex).length
-}
+export const getSceneCountForSong = (songIndex) => (
+    getSceneIndicesArray(songIndex).length
+)
 
-export const getVerseIndexForSceneIndex = (
-    songIndex,
-    sceneIndex
-
-) => {
-    if (sceneIndex === -1) {
-        return -1
-    }
-
-    const songSceneConfigs = getSongSceneConfigs(songIndex)
-    return songSceneConfigs[sceneIndex].firstVerseIndex
+export const getVerseIndexForScene = (songIndex, sceneIndex) => {
+    const { sceneVerseIndices } = getFinalSong(songIndex)
+    return sceneVerseIndices[sceneIndex]
 }
 
 // TODO: This should be the one that knows the defaults.

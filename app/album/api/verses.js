@@ -49,8 +49,3 @@ export const getStanzaIndexForVerse = (songIndex, verseIndex) => {
     return verseStanzaIndicesList[verseIndex]
 }
 
-export const getDurationForVerse = (songIndex, verseIndex) => {
-    const { verseDurations } = getFinalSong(songIndex)
-    return verseDurations[verseIndex]
-}
-

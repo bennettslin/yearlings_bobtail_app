@@ -10,8 +10,12 @@ import AccessDirectionLetter from '../../Access/DirectionLetter'
 import SceneDispatcher from '../../../dispatchers/Scene'
 import StopPropagationDispatcher from '../../../dispatchers/StopPropagation'
 
-import { getSongSceneConfigs } from '../../../album/api/scenes'
-import { getSongTotalTime } from '../../../album/api/time'
+import { getSceneIndicesArray } from '../../../album/api/scenes'
+import {
+    getSongTotalTime,
+    getStartTimeForScene,
+    getDurationForScene
+} from '../../../album/api/time'
 
 import { populateRefs } from '../../../helpers/ref'
 import { getCursorIndex } from '../../../helpers/verse'
@@ -82,7 +86,7 @@ class Filmstrip extends PureComponent {
             } = this.props,
 
             totalTime = getSongTotalTime(selectedSongIndex),
-            songSceneConfigs = getSongSceneConfigs(selectedSongIndex)
+            sceneIndicesArray = getSceneIndicesArray(selectedSongIndex)
 
         return (
             <div
@@ -96,11 +100,16 @@ class Filmstrip extends PureComponent {
                     )
                 }}
             >
-                {songSceneConfigs.map((sceneConfig, sceneIndex) => {
-                    const {
-                            sceneStartTime,
-                            sceneDuration
-                        } = sceneConfig,
+                {sceneIndicesArray.map(sceneIndex => {
+                    const
+                        sceneStartTime = getStartTimeForScene(
+                            selectedSongIndex,
+                            sceneIndex
+                        ),
+                        sceneDuration = getDurationForScene(
+                            selectedSongIndex,
+                            sceneIndex
+                        ),
 
                         isOdd = Boolean(sceneIndex % 2),
                         isSelectedScene = selectedSceneIndex === sceneIndex,

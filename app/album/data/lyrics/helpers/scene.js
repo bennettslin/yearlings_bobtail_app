@@ -1,52 +1,29 @@
 import albumScenes from '../../scenes'
 
-const _addDurationsToSceneConfigs = (sceneConfigs, { totalTime }) => {
-    // This is a duplicate of the same method for verse configs.
+const _addDurationsToSceneConfigs = ({
+    totalTime,
+    sceneStartTimes,
+    finalSong
 
-    sceneConfigs.forEach((sceneConfig, sceneIndex) => {
-        const { sceneStartTime } = sceneConfig
+}) => {
+    const sceneDurations = []
+
+    sceneStartTimes.forEach((sceneStartTime, sceneIndex) => {
         let nextTime
 
         // It is followed by another scene.
-        if (sceneIndex < sceneConfigs.length - 1) {
-            nextTime = sceneConfigs[sceneIndex + 1].sceneStartTime
+        if (sceneIndex < sceneStartTimes.length - 1) {
+            nextTime = sceneStartTimes[sceneIndex + 1]
 
         // It is the last scene.
         } else {
             nextTime = totalTime
         }
 
-        sceneConfig.sceneDuration = nextTime - sceneStartTime
+        sceneDurations.push(nextTime - sceneStartTime)
     })
-}
 
-export const addSceneConfigs = (song) => {
-    const {
-        songIndex,
-        lyricUnits
-    } = song
-
-    if (lyricUnits) {
-        const
-            scenes = albumScenes[songIndex],
-            sceneConfigs = []
-
-        scenes.forEach(scene => {
-            const { unitIndex } = scene
-
-            const
-                unit = lyricUnits[unitIndex],
-                { mainVerses } = unit
-
-            sceneConfigs.push({
-                firstVerseIndex: mainVerses[0].verseIndex,
-                sceneStartTime: mainVerses[0].time
-            })
-        })
-
-        _addDurationsToSceneConfigs(sceneConfigs, song)
-        song.songSceneConfigs = sceneConfigs
-    }
+    finalSong.sceneDurations = sceneDurations
 }
 
 export const addSceneIndicesToVerseConfigs = (song) => {
@@ -91,3 +68,52 @@ export const addSceneIndicesToVerseConfigs = (song) => {
         })
     }
 }
+
+export const addSceneMetadata = ({
+    song,
+    totalTime,
+    verseStartTimes,
+    unitVerseIndicesList,
+    finalSong
+}) => {
+    const {
+        songIndex,
+        lyricUnits
+    } = song
+
+    const
+        scenes = albumScenes[songIndex],
+        sceneConfigs = [],
+        sceneVerseIndices = [],
+        sceneStartTimes = []
+
+    scenes.forEach(scene => {
+        const { unitIndex } = scene
+
+        const
+            unit = lyricUnits[unitIndex],
+            { mainVerses } = unit
+
+        const unitVerseIndices = unitVerseIndicesList[unitIndex],
+            firstVerseIndex = unitVerseIndices[0]
+
+        sceneConfigs.push({
+            firstVerseIndex: mainVerses[0].verseIndex,
+            sceneStartTime: mainVerses[0].time
+        })
+
+        sceneVerseIndices.push(firstVerseIndex)
+        sceneStartTimes.push(verseStartTimes[firstVerseIndex])
+    })
+
+    song.songSceneConfigs = sceneConfigs
+    finalSong.sceneVerseIndices = sceneVerseIndices
+    finalSong.sceneStartTimes = sceneStartTimes
+
+    _addDurationsToSceneConfigs({
+        totalTime,
+        sceneStartTimes,
+        finalSong
+    })
+}
+

@@ -24,6 +24,11 @@ export const getEndTimeForVerse = (songIndex, verseIndex) => {
         getSongTotalTime(songIndex)
 }
 
+export const getDurationForVerse = (songIndex, verseIndex) => {
+    const { verseDurations } = getFinalSong(songIndex)
+    return verseDurations[verseIndex]
+}
+
 export const getStartTimeForStanza = (songIndex, stanzaIndex) => (
     getStartTimeForVerse(
         songIndex,
@@ -37,4 +42,14 @@ export const getStartTimeForStanza = (songIndex, stanzaIndex) => (
 export const getEndTimeForStanza = (songIndex, stanzaIndex) => {
     const { stanzaEndTimes } = getFinalSong(songIndex)
     return stanzaEndTimes[stanzaIndex]
+}
+
+export const getStartTimeForScene = (songIndex, sceneIndex) => {
+    const { sceneStartTimes } = getFinalSong(songIndex)
+    return sceneStartTimes[sceneIndex]
+}
+
+export const getDurationForScene = (songIndex, sceneIndex) => {
+    const { sceneDurations } = getFinalSong(songIndex)
+    return sceneDurations[sceneIndex]
 }

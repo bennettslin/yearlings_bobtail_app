@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 import VerseDispatcher from '../VerseDispatcher'
 
-import { getVerseIndexForSceneIndex } from '../../album/api/scenes'
+import { getVerseIndexForScene } from '../../album/api/scenes'
 import { populateRefs } from '../../helpers/ref'
 
 class SceneDispatcher extends PureComponent {
@@ -24,7 +24,7 @@ class SceneDispatcher extends PureComponent {
 
     dispatchSceneIndex = (selectedSceneIndex) => {
         const { selectedSongIndex } = this.props,
-            selectedVerseIndex = getVerseIndexForSceneIndex(
+            selectedVerseIndex = getVerseIndexForScene(
                 selectedSongIndex,
                 selectedSceneIndex
             )
