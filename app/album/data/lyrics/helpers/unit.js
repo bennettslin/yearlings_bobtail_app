@@ -19,13 +19,11 @@ export const addHasSideCardStatus = (song, finalSong) => {
                 hasBottomSideCard
             )
 
-        hasSideCards = unitHasSideCards || hasSideCards
+        /**
+         * Tell song it has side stanzas so ear button can be shown if needed.
+         */
+        if (unitHasSideCards || hasSideCards) {
+            finalSong.hasSideCards = true
+        }
     })
-
-    /**
-     * Tell song it has side stanzas so ear button can be shown if needed.
-     */
-    if (hasSideCards) {
-        finalSong.hasSideCards = true
-    }
 }

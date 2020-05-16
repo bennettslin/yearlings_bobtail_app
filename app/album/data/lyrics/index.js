@@ -21,14 +21,15 @@ import _19_Epilogue from './19_Epilogue'
 
 import {
     addSongIndices,
-    addOverview
+    addOverview,
+    addIsDoublespeaker
 } from './helpers/song'
 import {
     addIndexedVerses,
     addVerseConfigs
 } from './helpers/verse'
 import { addHasSideCardStatus } from './helpers/unit'
-import { addStanzaTypeIndices } from './helpers/stanzaTypeIndices'
+import { addStanzaTypeIndices } from './helpers/stanzaType'
 import { addStanzaTimes } from './helpers/stanzaTime'
 import {
     addSceneConfigs,
@@ -85,6 +86,7 @@ songs.forEach(song => {
         // This needs to come after indexed verses.
         addVerseConfigs(song)
 
+        addIsDoublespeaker(song, finalSong)
         addHasSideCardStatus(song, finalSong)
         addStanzaTypeIndices(song, finalSong)
 

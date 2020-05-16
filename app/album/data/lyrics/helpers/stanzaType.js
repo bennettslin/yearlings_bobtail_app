@@ -4,7 +4,7 @@ export const addStanzaTypeIndices = (song, finalSong) => {
      * forth.
      */
     const { lyricUnits } = song,
-        stanzaTypeIndices = []
+        unitStanzaTypeIndices = []
 
     if (lyricUnits) {
         const stanzaTypeCounters = {}
@@ -27,10 +27,10 @@ export const addStanzaTypeIndices = (song, finalSong) => {
                     ) + 1
                 }
 
-                stanzaTypeIndices.push(stanzaTypeCounters[stanzaType])
+                unitStanzaTypeIndices.push(stanzaTypeCounters[stanzaType])
 
             } else {
-                stanzaTypeIndices.push(-1)
+                unitStanzaTypeIndices.push(-1)
             }
         })
 
@@ -49,11 +49,11 @@ export const addStanzaTypeIndices = (song, finalSong) => {
                  * for the entire song.
                  */
                 if (stanzaTypeCounters[stanzaType] === 1) {
-                    stanzaTypeIndices[unitIndex] = -1
+                    unitStanzaTypeIndices[unitIndex] = -1
                 }
             }
         })
     }
 
-    finalSong.stanzaTypeIndices = stanzaTypeIndices
+    finalSong.unitStanzaTypeIndices = unitStanzaTypeIndices
 }

@@ -1,4 +1,4 @@
-import { getSong, getSongHasSideCards } from '../../album/api/songs'
+import { getEarStatusForSong } from '../../album/api/songs'
 import {
     getIsPhoneWidth,
     getIsTabletWidth,
@@ -9,11 +9,10 @@ export const getIsDoublespeakerShown = ({
     deviceWidthIndex,
     songIndex
 }) => {
-    const selectedSong = getSong(songIndex),
-        hasSideCards = getSongHasSideCards(songIndex),
-        {
-            isDoublespeaker
-        } = selectedSong
+    const {
+        hasSideCards,
+        isDoublespeaker
+    } = getEarStatusForSong(songIndex)
 
     // Applies to doublespeaker songs, including Grasshoppers Lie Heavy.
     if (isDoublespeaker) {

@@ -7,3 +7,9 @@ export const addSongIndices = (albumSongs) => {
 export const addOverview = (song, finalSong) => {
     finalSong.overview = song.overview
 }
+
+export const addIsDoublespeaker = (song, finalSong) => {
+    if (song.isDoublespeaker) {
+        finalSong.isDoublespeaker = true
+    }
+}

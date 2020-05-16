@@ -43,11 +43,11 @@ const _initialiseStanzaTimes = (song) => {
             // Tell stanza that it owns this unit.
             stanzaTime.stanzaUnitIndices.push(unitIndex)
 
-            // TODO: Do this in verse config.
             getIndexedVersesForUnit(unit).forEach(verse => {
 
                 stanzaTime.stanzaVerseIndices.push(verse.verseIndex)
 
+                // TODO: Do this in verse config, not here.
                 _addStanzaIndexToVerseConfig({
                     stanzaIndex,
                     verse,
@@ -96,6 +96,29 @@ const _addEndTimesToStanzaTimes = (
     })
 }
 
+const _spreadStanzaTimes = (stanzaTimes, finalSong) => {
+    const
+        stanzaTypes = [],
+        stanzaUnitIndicesList = [],
+        stanzaVerseIndicesList = [],
+        stanzaEndTimes = []
+
+    stanzaTimes.forEach(stanzaTime => {
+        stanzaTypes.push(stanzaTime.stanzaType)
+        stanzaUnitIndicesList.push(stanzaTime.stanzaUnitIndices)
+        stanzaVerseIndicesList.push(stanzaTime.stanzaVerseIndices)
+        stanzaEndTimes.push(stanzaTime.stanzaEndTime)
+    })
+
+    finalSong.stanzaTypes = stanzaTypes
+    finalSong.stanzaUnitIndicesList = stanzaUnitIndicesList
+    finalSong.stanzaVerseIndicesList = stanzaVerseIndicesList
+    finalSong.stanzaEndTimes = stanzaEndTimes
+
+    // TODO: Remove
+    finalSong.stanzaTimes = stanzaTimes
+}
+
 export const addStanzaTimes = (song, finalSong) => {
     /**
      * These configs let the audio slider know the relative width of each unit
@@ -103,5 +126,5 @@ export const addStanzaTimes = (song, finalSong) => {
      */
     const stanzaTimes = _initialiseStanzaTimes(song)
     _addEndTimesToStanzaTimes(stanzaTimes, song)
-    finalSong.stanzaTimes = stanzaTimes
+    _spreadStanzaTimes(stanzaTimes, finalSong)
 }

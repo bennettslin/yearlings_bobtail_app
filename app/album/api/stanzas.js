@@ -34,6 +34,6 @@ export const getStanzaVerseConfigs = (songIndex, stanzaIndex) => {
 }
 
 export const getStanzaTypeIndex = (songIndex, unitIndex) => {
-    const { stanzaTypeIndices } = getFinalSong(songIndex)
-    return stanzaTypeIndices[unitIndex]
+    const { unitStanzaTypeIndices } = getFinalSong(songIndex)
+    return unitStanzaTypeIndices[unitIndex]
 }
