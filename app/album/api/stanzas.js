@@ -13,10 +13,10 @@ export const getStanzaIndicesArray = (songIndex) => (
 export const getStanzaVerseConfigs = (songIndex, stanzaIndex) => {
     const { stanzaVerseIndicesList } = getFinalSong(songIndex)
     const stanzaVerseIndices = stanzaVerseIndicesList[stanzaIndex],
-        songVerseConfigs = getSongVerseConfigs(songIndex)
+        verseConfigs = getSongVerseConfigs(songIndex)
 
     return stanzaVerseIndices.map(verseIndex => ({
-        ...songVerseConfigs[verseIndex],
+        ...verseConfigs[verseIndex],
 
         // Let verse know its own verse index.
         verseIndex

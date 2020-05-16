@@ -31,25 +31,31 @@ export const isValidVerse = (songIndex, verseIndex) => {
 }
 
 export const getSongVerseConfigs = (songIndex) => {
-    const { songVerseConfigs } = getSong(songIndex)
-    return songVerseConfigs || []
+    const { verseConfigs } = getSong(songIndex)
+    return verseConfigs || []
 }
 
 export const getSongVersesCount = (songIndex) => {
     return getSongVerseConfigs(songIndex).length
 }
 
-export const getSceneIndexForVerseIndex = (
-    songIndex,
-    verseIndex
+export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
+    const verseConfigs = getSongVerseConfigs(songIndex)
+    return verseConfigs.length ?
+        verseConfigs[verseIndex].sceneIndex :
+        0
+}
 
-) => {
-    if (verseIndex === -1) {
-        return -1
-    }
+export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
+    const verseConfigs = getSongVerseConfigs(songIndex)
+    return verseConfigs.length ?
+        verseConfigs[verseIndex].stanzaIndex :
+        0
+}
 
-    const songVerseConfigs = getSongVerseConfigs(songIndex)
-    return songVerseConfigs.length ?
-        songVerseConfigs[verseIndex].sceneIndex :
+export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
+    const verseConfigs = getSongVerseConfigs(songIndex)
+    return verseConfigs.length ?
+        verseConfigs[verseIndex].verseDuration :
         0
 }

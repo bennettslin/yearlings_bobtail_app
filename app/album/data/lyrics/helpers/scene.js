@@ -24,7 +24,7 @@ export const addSceneConfigs = (song) => {
     const {
         songIndex,
         lyricUnits,
-        songVerseConfigs
+        verseConfigs
     } = song
 
     if (lyricUnits) {
@@ -53,7 +53,7 @@ export const addSceneConfigs = (song) => {
                 sceneConfigs.push({
                     firstVerseIndex: verseIndex,
                     sceneStartTime:
-                        songVerseConfigs[verseIndex].verseStartTime
+                        verseConfigs[verseIndex].verseStartTime
                 })
             }
         })
@@ -67,7 +67,7 @@ export const addSceneIndicesToVerseConfigs = (song) => {
 
     const {
         songSceneConfigs,
-        songVerseConfigs,
+        verseConfigs,
         isLogue
     } = song
 
@@ -89,7 +89,7 @@ export const addSceneIndicesToVerseConfigs = (song) => {
                      * If this is the last scene, iterate through the
                      * remaining verse indices.
                      */
-                    currentVerseIndex < songVerseConfigs.length :
+                    currentVerseIndex < verseConfigs.length :
 
                     /**
                      * Otherwise, keep going until we've reached the first
@@ -99,7 +99,7 @@ export const addSceneIndicesToVerseConfigs = (song) => {
                     songSceneConfigs[sceneIndex + 1].firstVerseIndex
             ) {
 
-                songVerseConfigs[currentVerseIndex].sceneIndex = sceneIndex
+                verseConfigs[currentVerseIndex].sceneIndex = sceneIndex
                 currentVerseIndex++
             }
         })

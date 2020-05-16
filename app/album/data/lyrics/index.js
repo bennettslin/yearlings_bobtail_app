@@ -91,15 +91,14 @@ songs.forEach(song => {
         const unitVerseIndicesList =
             addUnitVerseIndices(song, finalSong)
 
-        // TODO: Still need to cleanup.
+        // TODO: Still need to remove annotations from verses.
         const indexedVerses =
             addIndexedVerses(song, finalSong)
 
         // TODO
-        // This needs to come after indexed verses.
         addVerseConfigs(song, indexedVerses, finalSong)
 
-        // This needs to come after verse configs.
+        // TODO
         addStanzaData(song, unitVerseIndicesList, finalSong)
         addSceneConfigs(song)
 

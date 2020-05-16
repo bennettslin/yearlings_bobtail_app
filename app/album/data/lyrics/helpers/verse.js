@@ -1,3 +1,18 @@
+const _initialiseVerseConfigs = (indexedVerses) => {
+
+    const verseConfigs = []
+
+    indexedVerses.forEach(verse => {
+        const { time } = verse
+
+        verseConfigs.push({
+            verseStartTime: time
+        })
+    })
+
+    return verseConfigs
+}
+
 const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
 
     verseConfigs.forEach((verseConfig, verseIndex) => {
@@ -17,21 +32,9 @@ const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
     })
 }
 
-export const addVerseConfigs = (song) => {
-    const { indexedVerses } = song
-
-    if (indexedVerses) {
-        const verseConfigs = []
-
-        indexedVerses.forEach(verse => {
-            const { time } = verse
-
-            verseConfigs.push({
-                verseStartTime: time
-            })
-        })
-
-        _addDurationsToVerseConfigs(verseConfigs, song)
-        song.songVerseConfigs = verseConfigs
-    }
+export const addVerseConfigs = (song, indexedVerses, finalSong) => {
+    const verseConfigs = _initialiseVerseConfigs(indexedVerses)
+    _addDurationsToVerseConfigs(verseConfigs, song)
+    song.verseConfigs = verseConfigs
+    finalSong.verseConfigs = verseConfigs
 }

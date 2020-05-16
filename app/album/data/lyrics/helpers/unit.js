@@ -53,4 +53,5 @@ export const addIndexedVerses = (song, finalSong) => {
 
     song.indexedVerses = indexedVerses
     finalSong.indexedVerses = indexedVerses
+    return indexedVerses
 }

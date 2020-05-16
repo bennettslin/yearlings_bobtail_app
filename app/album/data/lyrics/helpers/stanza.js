@@ -3,10 +3,10 @@ import { getIndexedVersesForUnit } from '../../../api/verses'
 const _addStanzaIndexToVerseConfig = ({
     stanzaIndex,
     verse: { verseIndex },
-    song: { songVerseConfigs }
+    song: { verseConfigs }
 
 }) => {
-    songVerseConfigs[verseIndex].stanzaIndex = stanzaIndex
+    verseConfigs[verseIndex].stanzaIndex = stanzaIndex
 }
 
 const _initialiseStanzaData = (song) => {
@@ -67,7 +67,7 @@ const _initialiseStanzaData = (song) => {
 const _addEndTimesToStanzaData = (
     stanzaData,
     {
-        songVerseConfigs,
+        verseConfigs,
         totalTime
     }
 ) => {
@@ -82,7 +82,7 @@ const _addEndTimesToStanzaData = (
                 // If it is followed by another stanza...
                 if (stanzaIndex < stanzaData.length - 1) {
                     endTime =
-                        songVerseConfigs[verseIndex + 1]
+                        verseConfigs[verseIndex + 1]
                             .verseStartTime
 
                 // If it is the last stanza...

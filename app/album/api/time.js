@@ -11,21 +11,21 @@ export const getStartTimeForVerseIndex = (songIndex, verseIndex) => {
         return 0
     }
 
-    const songVerseConfigs = getSongVerseConfigs(songIndex)
-    return songVerseConfigs.length ?
-        songVerseConfigs[verseIndex].verseStartTime :
+    const verseConfigs = getSongVerseConfigs(songIndex)
+    return verseConfigs.length ?
+        verseConfigs[verseIndex].verseStartTime :
         0
 }
 
 export const getEndTimeForVerseIndex = (songIndex, verseIndex) => {
-    const songVerseConfigs = getSongVerseConfigs(songIndex)
+    const verseConfigs = getSongVerseConfigs(songIndex)
 
-    if (songVerseConfigs.length) {
+    if (verseConfigs.length) {
         /**
          * If it's the last verse, the end time is the song's total time.
          * Otherwise, it's the start time of the next verse.
          */
-        return verseIndex < songVerseConfigs.length - 1 ?
+        return verseIndex < verseConfigs.length - 1 ?
             getStartTimeForVerseIndex(songIndex, verseIndex + 1) :
             getSongTotalTime(songIndex)
 
