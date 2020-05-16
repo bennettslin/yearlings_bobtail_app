@@ -1,23 +1,23 @@
-import Song_00 from './00_Prologue'
-import Song_01 from './01_Didi'
-import Song_02 from './02_WillyTheCocoa'
-import Song_03 from './03_DearSaskia'
-import Song_04 from './04_Odin'
-import Song_05 from './05_PchelkasStarryJourney'
-import Song_06 from './06_AshWednesday'
-import Song_07 from './07_M'
-import Song_08 from './08_GoodNightSita'
-import Song_09 from './09_GrasshoppersLieHeavy'
-import Song_10 from './10_Constellations'
-import Song_11 from './11_LookBackInAnger'
-import Song_12 from './12_Garryowen'
-import Song_13 from './13_OnAGoldenCord'
-import Song_14 from './14_Kyon'
-import Song_15 from './15_UncannyValleyBoy'
-import Song_16 from './16_Cremated'
-import Song_17 from './17_VeganProclamation'
-import Song_18 from './18_My100000thDream'
-import Song_19 from './19_Epilogue'
+import _00_Prologue from './00_Prologue'
+import _01_Didi from './01_Didi'
+import _02_WillyTheCocoa from './02_WillyTheCocoa'
+import _03_DearSaskia from './03_DearSaskia'
+import _04_Odin from './04_Odin'
+import _05_PchelkasStarryJourney from './05_PchelkasStarryJourney'
+import _06_AshWednesday from './06_AshWednesday'
+import _07_M from './07_M'
+import _08_GoodNightSita from './08_GoodNightSita'
+import _09_GrasshoppersLieHeavy from './09_GrasshoppersLieHeavy'
+import _10_Constellations from './10_Constellations'
+import _11_LookBackInAnger from './11_LookBackInAnger'
+import _12_Garryowen from './12_Garryowen'
+import _13_OnAGoldenCord from './13_OnAGoldenCord'
+import _14_Kyon from './14_Kyon'
+import _15_UncannyValleyBoy from './15_UncannyValleyBoy'
+import _16_Cremated from './16_Cremated'
+import _17_VeganProclamation from './17_VeganProclamation'
+import _18_My100000thDream from './18_My100000thDream'
+import _19_Epilogue from './19_Epilogue'
 
 import { addSongIndices } from './helpers/song'
 import {
@@ -37,27 +37,27 @@ import {
     addPluralCardsCount
 } from './helpers/admin'
 
-const albumSongs = [
-    Song_00,
-    Song_01,
-    Song_02,
-    Song_03,
-    Song_04,
-    Song_05,
-    Song_06,
-    Song_07,
-    Song_08,
-    Song_09,
-    Song_10,
-    Song_11,
-    Song_12,
-    Song_13,
-    Song_14,
-    Song_15,
-    Song_16,
-    Song_17,
-    Song_18,
-    Song_19
+const songs = [
+    _00_Prologue,
+    _01_Didi,
+    _02_WillyTheCocoa,
+    _03_DearSaskia,
+    _04_Odin,
+    _05_PchelkasStarryJourney,
+    _06_AshWednesday,
+    _07_M,
+    _08_GoodNightSita,
+    _09_GrasshoppersLieHeavy,
+    _10_Constellations,
+    _11_LookBackInAnger,
+    _12_Garryowen,
+    _13_OnAGoldenCord,
+    _14_Kyon,
+    _15_UncannyValleyBoy,
+    _16_Cremated,
+    _17_VeganProclamation,
+    _18_My100000thDream,
+    _19_Epilogue
 ]
 
 logServe({
@@ -66,9 +66,9 @@ logServe({
     label: 'album'
 })
 
-addSongIndices(albumSongs)
+addSongIndices(songs)
 
-albumSongs.forEach(song => {
+songs.forEach(song => {
     addIndexedVerses(song)
 
     // This needs to come after indexed verses.
@@ -95,4 +95,4 @@ logServe({
     label: 'album'
 })
 
-export default albumSongs
+export default songs

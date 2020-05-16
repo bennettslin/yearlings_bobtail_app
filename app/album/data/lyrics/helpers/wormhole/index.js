@@ -1,4 +1,4 @@
-import { getAnnotation } from '../../../../api/annotations'
+import { getAnnotation } from '../../../../../album/api/annotations'
 import { registerWikiAndWormholeLinksForCard } from './helpers'
 import { WORMHOLE } from '../../../../../constants/dots'
 
@@ -62,7 +62,7 @@ const _addTempWormholeLinksFromCard = ({
     delete card.wormhole
 }
 
-const gatherTempWormholeLinks = ({ songs }) => {
+const gatherTempWormholeLinks = (songs) => {
 
     songs.forEach(song => {
         const {
@@ -126,7 +126,7 @@ const giveEachSourceLinkItsDestination = () => {
     }
 }
 
-const establishWikiWormholeIndices = ({ songs }) => {
+const establishWikiWormholeIndices = (songs) => {
 
     songs.forEach((song) => {
         const {
@@ -242,9 +242,9 @@ const addWormholeLinksToCard = () => {
     }
 }
 
-export const addWormholeStuff = (album) => {
-    gatherTempWormholeLinks(album)
+export const addWormholeStuff = (songs) => {
+    gatherTempWormholeLinks(songs)
     giveEachSourceLinkItsDestination()
-    establishWikiWormholeIndices(album)
+    establishWikiWormholeIndices(songs)
     addWormholeLinksToCard()
 }

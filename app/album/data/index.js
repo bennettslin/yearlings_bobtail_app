@@ -5,7 +5,7 @@ import { addGlobalAnnotationIndices } from './lyrics/helpers/admin'
 
 const album = { songs }
 
-addWormholeStuff(album)
+addWormholeStuff(songs)
 addGlobalAnnotationIndices(album)
 
 // FIXME: Remove.
