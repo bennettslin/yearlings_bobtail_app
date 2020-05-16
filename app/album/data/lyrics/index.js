@@ -68,25 +68,35 @@ logServe({
 
 addSongIndices(songs)
 
-songs.forEach(song => {
-    addIndexedVerses(song)
+export const finalSongs = []
 
-    // This needs to come after indexed verses.
-    addVerseConfigs(song)
-    addHasSideCardStatus(song)
-    addStanzaTypes(song)
+songs.forEach((song, index) => {
 
-    // This needs to come after verse configs.
-    addStanzaTimes(song)
-    addSceneConfigs(song)
+    const finalSong = {}
 
-    // This needs to come after verse configs and scene configs.
-    addSceneIndicesToVerseConfigs(song)
+    // TODO: Make this better.
+    if (index !== 0 && index !== 19) {
+        addIndexedVerses(song)
 
-    addAnnotations(song)
+        // This needs to come after indexed verses.
+        addVerseConfigs(song)
+        addHasSideCardStatus(song)
+        addStanzaTypes(song)
 
-    addDotUnitsCount(song)
-    addPluralCardsCount(song)
+        // This needs to come after verse configs.
+        finalSong.stanzaTimes = addStanzaTimes(song)
+        addSceneConfigs(song)
+
+        // This needs to come after verse configs and scene configs.
+        addSceneIndicesToVerseConfigs(song)
+
+        addAnnotations(song)
+
+        addDotUnitsCount(song)
+        addPluralCardsCount(song)
+    }
+
+    finalSongs.push(finalSong)
 })
 
 logServe({

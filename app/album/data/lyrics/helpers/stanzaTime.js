@@ -114,6 +114,6 @@ export const addStanzaTimes = (song) => {
         // Add verse durations.
         _addEndTimesToStanzaTimes(stanzaTimes, song)
 
-        song.stanzaTimes = stanzaTimes
+        return stanzaTimes
     }
 }

@@ -38,3 +38,9 @@ Rethink some dot category shapes?
     * lyrics
     * scenes
     * tips
+
+# Logue
+logue
+overview
+songIndex
+title

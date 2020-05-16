@@ -1,13 +1,13 @@
-import { getSong } from './songs'
+import { getFinalSong } from './songs'
 import { getSongVerseConfigs } from './verses'
 
 export const getSongStanzaTimes = (songIndex) => {
-    const { stanzaTimes } = getSong(songIndex)
+    const { stanzaTimes } = getFinalSong(songIndex)
     return stanzaTimes || []
 }
 
 export const getSongStanzasCount = (songIndex) => {
-    const { stanzaTimes } = getSong(songIndex)
+    const { stanzaTimes } = getFinalSong(songIndex)
     return stanzaTimes ?
         stanzaTimes.length :
         0

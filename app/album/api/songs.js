@@ -1,4 +1,5 @@
 import songs from '../data/lyrics'
+import { finalAlbum } from '..'
 
 export const getSongsAndLoguesCount = () => {
     return songs.length
@@ -11,6 +12,10 @@ export const getSongsNotLoguesCount = () => {
 // TODO: Don't pass song object directly.
 export const getSong = (songIndex) => {
     return songs[songIndex]
+}
+
+export const getFinalSong = (songIndex) => {
+    return finalAlbum.finalSongs[songIndex]
 }
 
 export const getSongIsLogue = (songIndex) => {
