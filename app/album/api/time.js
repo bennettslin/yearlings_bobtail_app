@@ -9,7 +9,7 @@ export const getSongTotalTime = (songIndex) => {
 
 export const getStartTimeForVerse = (songIndex, verseIndex) => {
     const { verseStartTimes } = getFinalSong(songIndex)
-    return verseStartTimes[verseIndex]
+    return verseStartTimes ? verseStartTimes[verseIndex] : 0
 }
 
 export const getEndTimeForVerse = (songIndex, verseIndex) => {

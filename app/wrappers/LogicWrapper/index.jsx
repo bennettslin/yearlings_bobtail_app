@@ -22,6 +22,7 @@ class LogicWrapper extends PureComponent {
         isSliderMoving: PropTypes.bool.isRequired,
         isActivated: PropTypes.bool.isRequired,
         activatedVerseIndex: PropTypes.number.isRequired,
+        isLyricLogue: PropTypes.bool.isRequired,
         lyricSongIndex: PropTypes.number.isRequired,
         lyricVerseIndex: PropTypes.number.isRequired,
         sliderVerseIndex: PropTypes.number.isRequired,
@@ -36,6 +37,7 @@ class LogicWrapper extends PureComponent {
                 dotsBitNumber,
                 isPlaying,
                 isSliderMoving,
+                isLyricLogue,
                 lyricSongIndex,
                 lyricVerseIndex,
                 sliderVerseIndex,
@@ -60,10 +62,6 @@ class LogicWrapper extends PureComponent {
                 lyricVerseIndex
             ),
 
-            cursorStanzaIndex = getStanzaIndexForVerse(
-                lyricSongIndex, cursorVerseIndex
-            ),
-
             isLyricsLocked = isSliderMoving || isActivated
 
         return (
@@ -72,38 +70,44 @@ class LogicWrapper extends PureComponent {
                     className: cx(
                         'LogicWrapper',
 
-                        // "Root cursored stanza index."
-                        `RcS${cursorStanzaIndex}`,
+                        !isLyricLogue && [
 
-                        isLyricsLocked ?
-                            // "Root slider (or activated) verse index."
-                            `RsV${cursorVerseIndex}` :
-                            // "Root default verse index."
-                            `RdV${cursorVerseIndex}`,
+                            // "Root cursored stanza index."
+                            `RcS${getStanzaIndexForVerse(
+                                lyricSongIndex,
+                                cursorVerseIndex
+                            )}`,
 
-                        isLyricsLocked &&
-                            // "Root selected verse index."
-                            `RxV${lyricVerseIndex}`,
+                            isLyricsLocked ?
+                                // "Root slider (or activated) verse index."
+                                `RsV${cursorVerseIndex}` :
+                                // "Root default verse index."
+                                `RdV${cursorVerseIndex}`,
 
-                        isPlaying && !isLyricsLocked &&
-                            // "Root playing verse index."
-                            `RpV${cursorVerseIndex}`,
+                            isLyricsLocked &&
+                                // "Root selected verse index."
+                                `RxV${lyricVerseIndex}`,
 
-                        !isActivated &&
-                            // "Root non-activated verse index."
-                            `RnV${cursorVerseIndex}`,
+                            isPlaying && !isLyricsLocked &&
+                                // "Root playing verse index."
+                                `RpV${cursorVerseIndex}`,
 
-                        areVerseBarsHidden && !isActivated &&
-                            // "Root cursored lyric verse."
-                            `RlV${cursorVerseIndex}`,
+                            !isActivated &&
+                                // "Root non-activated verse index."
+                                `RnV${cursorVerseIndex}`,
 
-                        getPrefixedDotLetterClassNames(
-                            selectedDotKeys,
-                            // "Root selected dot letter."
-                            'RsD'
-                        ),
+                            areVerseBarsHidden && !isActivated &&
+                                // "Root cursored lyric verse."
+                                `RlV${cursorVerseIndex}`,
 
-                        !dotsBitNumber && 'LW__noSelectedDots'
+                            getPrefixedDotLetterClassNames(
+                                selectedDotKeys,
+                                // "Root selected dot letter."
+                                'RsD'
+                            ),
+
+                            !dotsBitNumber && 'LW__noSelectedDots'
+                        ]
                     )
                 }}
             >
@@ -125,6 +129,7 @@ const mapStateToProps = ({
         isVerseBarBelow
     },
     lyricStore: {
+        isLyricLogue,
         lyricSongIndex,
         lyricVerseIndex
     },
@@ -137,6 +142,7 @@ const mapStateToProps = ({
     activatedVerseIndex,
     dotsBitNumber,
     isPlaying,
+    isLyricLogue,
     lyricSongIndex,
     lyricVerseIndex,
     isSliderMoving,
