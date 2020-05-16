@@ -9,9 +9,12 @@ const _addStanzaIndexToVerseConfig = ({
     verseConfigs[verseIndex].stanzaIndex = stanzaIndex
 }
 
-const _initialiseStanzaData = (song) => {
+const _initialiseStanzaData = (song, unitVerseIndicesList, finalSong) => {
     const { lyricUnits } = song
-    const stanzaData = []
+    const stanzaData = [],
+        formTypes = [],
+        unitIndicesList = [],
+        verseIndicesList = []
     let stanzaIndex
 
     lyricUnits.forEach((unit, unitIndex) => {
@@ -57,10 +60,17 @@ const _initialiseStanzaData = (song) => {
 
             if (!subsequent) {
                 stanzaData.push(stanzaTime)
+                formTypes.push(stanzaTime.formType)
+                unitIndicesList.push(stanzaTime.unitIndices)
+                verseIndicesList.push(stanzaTime.verseIndices)
             }
         }
     })
 
+    finalSong.stanzaFormTypes = formTypes
+    finalSong.stanzaUnitIndicesList = unitIndicesList
+    finalSong.stanzaVerseIndicesList = verseIndicesList
+    // TODO: Get rid of stanza data.
     return stanzaData
 }
 
@@ -69,8 +79,11 @@ const _addEndTimesToStanzaData = (
     {
         verseConfigs,
         totalTime
-    }
+    },
+    finalSong
 ) => {
+    const endTimes = []
+
     stanzaData.forEach((stanzaTime, stanzaIndex) => {
         const { verseIndices } = stanzaTime
         let endTime
@@ -93,26 +106,9 @@ const _addEndTimesToStanzaData = (
         })
 
         stanzaTime.endTime = endTime
-    })
-}
-
-const _spreadStanzaData = (stanzaData, finalSong) => {
-    const
-        formTypes = [],
-        unitIndicesList = [],
-        verseIndicesList = [],
-        endTimes = []
-
-    stanzaData.forEach(stanzaTime => {
-        formTypes.push(stanzaTime.formType)
-        unitIndicesList.push(stanzaTime.unitIndices)
-        verseIndicesList.push(stanzaTime.verseIndices)
-        endTimes.push(stanzaTime.endTime)
+        endTimes.push(endTime)
     })
 
-    finalSong.stanzaFormTypes = formTypes
-    finalSong.stanzaUnitIndicesList = unitIndicesList
-    finalSong.stanzaVerseIndicesList = verseIndicesList
     finalSong.stanzaEndTimes = endTimes
 }
 
@@ -121,7 +117,6 @@ export const addStanzaData = (song, unitVerseIndicesList, finalSong) => {
      * These configs let the audio slider know the relative width of each unit
      * based on its time length.
      */
-    const stanzaData = _initialiseStanzaData(song, unitVerseIndicesList)
-    _addEndTimesToStanzaData(stanzaData, song)
-    _spreadStanzaData(stanzaData, finalSong)
+    const stanzaData = _initialiseStanzaData(song, unitVerseIndicesList, finalSong)
+    _addEndTimesToStanzaData(stanzaData, song, finalSong)
 }
