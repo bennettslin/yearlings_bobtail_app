@@ -1,20 +1,4 @@
-import { getSong } from './songs'
-
-export const getIndexedVersesForUnit = (unit) => {
-    /**
-     * Only main verses and sub verses are indexed. Side cards and unit dots
-     * are not indexed.
-     */
-    const {
-        mainVerses,
-        unitMap: { subVerse }
-    } = unit
-
-    return [
-        ...mainVerses || [],
-        ...subVerse || []
-    ]
-}
+import { getSong, getFinalSong } from './songs'
 
 export const getVerse = (
     songIndex,
@@ -46,11 +30,9 @@ export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
         0
 }
 
-export const getStanzaIndexForVerseIndex = (songIndex, verseIndex) => {
-    const verseConfigs = getSongVerseConfigs(songIndex)
-    return verseConfigs.length ?
-        verseConfigs[verseIndex].stanzaIndex :
-        0
+export const getStanzaIndexForVerseIndex = (songIndex, stanzaIndex) => {
+    const { verseStanzaIndicesList } = getFinalSong(songIndex)
+    return verseStanzaIndicesList[stanzaIndex]
 }
 
 export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
