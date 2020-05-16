@@ -33,10 +33,7 @@ import {
     addIndexedVerses
 } from './helpers/unit'
 import { addStanzaMetadata } from './helpers/stanza'
-import {
-    addSceneMetadata,
-    addSceneIndicesToVerseConfigs
-} from './helpers/scene'
+import { addSceneMetadata } from './helpers/scene'
 import { addAnnotations } from './helpers/annotation'
 import {
     addDotUnitsCount,
@@ -111,6 +108,7 @@ songs.forEach(song => {
             verseStartTimes,
             finalSong
         })
+
         addSceneMetadata({
             song,
             totalTime,
@@ -118,9 +116,6 @@ songs.forEach(song => {
             unitVerseIndicesList,
             finalSong
         })
-
-        // This needs to come after verse configs and scene configs.
-        addSceneIndicesToVerseConfigs(song)
 
         addAnnotations(song)
 

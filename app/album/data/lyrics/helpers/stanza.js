@@ -8,7 +8,7 @@ const _addInitialStanzaMetadata = ({
         stanzaFormTypes = [],
         stanzaUnitIndicesList = [],
         stanzaVerseIndicesList = [],
-        verseStanzaIndicesList = []
+        verseStanzaIndices = []
     let stanzaIndex
 
     lyricUnits.forEach(({
@@ -43,7 +43,7 @@ const _addInitialStanzaMetadata = ({
 
             unitVerseIndicesList[unitIndex].forEach(verseIndex => {
                 verseIndices.push(verseIndex)
-                verseStanzaIndicesList.push(stanzaIndex)
+                verseStanzaIndices.push(stanzaIndex)
             })
 
             if (!subsequent) {
@@ -57,7 +57,7 @@ const _addInitialStanzaMetadata = ({
     finalSong.stanzaFormTypes = stanzaFormTypes
     finalSong.stanzaUnitIndicesList = stanzaUnitIndicesList
     finalSong.stanzaVerseIndicesList = stanzaVerseIndicesList
-    finalSong.verseStanzaIndicesList = verseStanzaIndicesList
+    finalSong.verseStanzaIndices = verseStanzaIndices
 
     return stanzaVerseIndicesList
 }
