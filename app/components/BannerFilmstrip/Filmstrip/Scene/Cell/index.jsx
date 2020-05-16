@@ -43,7 +43,8 @@ const FilmstripCell = ({
             )
         }}
     >
-        {Boolean(cursorWidth) && (
+        {/* TODO: Don't rely on cursor width to determine render. */}
+        {Number.isFinite(cursorWidth) && (
             <div
                 {...{
                     className: cx(

@@ -18,7 +18,7 @@ const Tracker = ({
         unmountOnExit
         mountOnEnter
         {...{
-            in: Boolean(cursorWidth),
+            in: Number.isFinite(cursorWidth),
             timeout: 200,
             classNames: { enterDone: 'Tracker__visible' }
         }}

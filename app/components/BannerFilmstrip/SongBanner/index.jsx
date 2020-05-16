@@ -127,7 +127,7 @@ class SongBanner extends PureComponent {
             )
         }
 
-        return null
+        return -1
     }
 
     handleBannerClick = (e) => {
@@ -210,7 +210,7 @@ class SongBanner extends PureComponent {
             return
         }
 
-        const bannerHoverVerseIndex = this.getVerseIndexFromEvent(e) || -1
+        const bannerHoverVerseIndex = this.getVerseIndexFromEvent(e)
 
         this.props.updateBannerStore({
             bannerHoverVerseIndex,
