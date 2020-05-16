@@ -21,7 +21,6 @@ const _addDurationsToSceneConfigs = (sceneConfigs, { totalTime }) => {
 }
 
 export const addSceneConfigs = (song) => {
-
     const {
         songIndex,
         lyricUnits,

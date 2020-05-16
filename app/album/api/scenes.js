@@ -38,6 +38,7 @@ export const getVerseIndexForSceneIndex = (
     return songSceneConfigs[sceneIndex].firstVerseIndex
 }
 
+// TODO: This should be the one that knows the defaults.
 export const getScene = (
     songIndex,
     sceneIndex = -1

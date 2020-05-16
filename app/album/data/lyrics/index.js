@@ -79,18 +79,16 @@ songs.forEach(song => {
     const finalSong = {}
 
     if (!song.logue) {
-
         addOverview(song, finalSong)
+        addIsDoublespeaker(song, finalSong)
+        addHasSideCardStatus(song, finalSong)
+        addFormTypeIndices(song, finalSong)
 
         // TODO
         addIndexedVerses(song, finalSong)
 
         // This needs to come after indexed verses.
-        addVerseConfigs(song)
-
-        addIsDoublespeaker(song, finalSong)
-        addHasSideCardStatus(song, finalSong)
-        addFormTypeIndices(song, finalSong)
+        addVerseConfigs(song, finalSong)
 
         // This needs to come after verse configs.
         addStanzaData(song, finalSong)
