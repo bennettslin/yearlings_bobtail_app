@@ -13,10 +13,9 @@ import SongStanzasTitle from '../Title'
 import UnitCard from './Card'
 import UnitDot from './Dot'
 
-import { getUnitFormTypeIndex } from '../../../album/api/stanzas'
 import { getIndexedVersesForUnit } from '../../../album/api/verses'
 
-import { getUnit } from '../../../album/api/units'
+import { getUnit, getUnitFormTypeIndex } from '../../../album/api/units'
 import { getParentOfVerseClassNamesForIndices } from '../helper'
 
 import {

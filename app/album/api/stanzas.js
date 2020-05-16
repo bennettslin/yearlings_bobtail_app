@@ -8,22 +8,6 @@ export const getStanzaIndicesArray = (songIndex) => (
     )
 )
 
-export const getStanzaTime = (songIndex, stanzaIndex) => {
-    const {
-        stanzaFormTypes,
-        stanzaUnitIndicesList,
-        stanzaVerseIndicesList,
-        stanzaEndTimes
-    } = getFinalSong(songIndex)
-
-    return {
-        stanzaFormType: stanzaFormTypes[stanzaIndex],
-        stanzaUnitIndices: stanzaUnitIndicesList[stanzaIndex],
-        stanzaVerseIndices: stanzaVerseIndicesList[stanzaIndex],
-        stanzaEndTime: stanzaEndTimes[stanzaIndex]
-    }
-}
-
 export const getStanzaVerseConfigs = (songIndex, stanzaIndex) => {
     const { stanzaVerseIndicesList } = getFinalSong(songIndex)
     const stanzaVerseIndices = stanzaVerseIndicesList[stanzaIndex],
@@ -50,9 +34,4 @@ export const getStanzaUnitIndices = (songIndex, stanzaIndex) => {
 export const getStanzaEndTime = (songIndex, stanzaIndex) => {
     const { stanzaEndTimes } = getFinalSong(songIndex)
     return stanzaEndTimes[stanzaIndex]
-}
-
-export const getUnitFormTypeIndex = (songIndex, unitIndex) => {
-    const { unitFormTypeIndices } = getFinalSong(songIndex)
-    return unitFormTypeIndices[unitIndex]
 }

@@ -30,7 +30,7 @@ import {
 } from './helpers/verse'
 import { addFormTypeIndices } from './helpers/formType'
 import { addHasSideCardStatus } from './helpers/unit'
-import { addStanzaData } from './helpers/stanzaTime'
+import { addStanzaData } from './helpers/stanza'
 import {
     addSceneConfigs,
     addSceneIndicesToVerseConfigs
@@ -81,7 +81,9 @@ songs.forEach(song => {
     if (!song.logue) {
 
         addOverview(song, finalSong)
-        addIndexedVerses(song)
+
+        // TODO
+        addIndexedVerses(song, finalSong)
 
         // This needs to come after indexed verses.
         addVerseConfigs(song)
