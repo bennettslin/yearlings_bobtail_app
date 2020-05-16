@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import cx from 'classnames'
 
-import { getVerseDurationForVerseIndex } from '../../../../../album/api/verses'
+import { getDurationForVerse } from '../../../../../album/api/verses'
 
 const mapStateToProps = ({
     appStore: { isUserAgentDesktop },
@@ -82,7 +82,7 @@ class VerseTracker extends Component {
 
             isSelected = this.getIsSelectedVerse(this.props),
 
-            verseDuration = getVerseDurationForVerseIndex(
+            verseDuration = getDurationForVerse(
                 lyricSongIndex,
                 verseIndex
             ),

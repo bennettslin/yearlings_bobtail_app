@@ -8,7 +8,7 @@ import { updateActivatedStore } from '../../../redux/activated/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 
 import { getVerseIndexForSceneIndex } from '../../../album/api/scenes'
-import { getStartTimeForVerseIndex } from '../../../album/api/time'
+import { getStartTimeForVerse } from '../../../album/api/time'
 import { getActivatedSceneForDirection } from './helper'
 
 class ActivatedSceneDispatcher extends PureComponent {
@@ -66,7 +66,7 @@ class ActivatedSceneDispatcher extends PureComponent {
         this.props.updateActivatedStore({
             activatedSceneIndex,
             activatedVerseIndex,
-            activatedTime: getStartTimeForVerseIndex(
+            activatedTime: getStartTimeForVerse(
                 selectedSongIndex,
                 activatedVerseIndex
             )

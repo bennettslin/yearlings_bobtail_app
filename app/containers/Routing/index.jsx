@@ -11,8 +11,8 @@ import { updateTransientStore } from '../../redux/transient/action'
 import ListenContainer from '../Listen'
 import SceneChangeUpdateDispatcher from '../../listeners/SceneChange/Update'
 
-import { getStartTimeForVerseIndex } from '../../album/api/time'
-import { getSceneIndexForVerseIndex } from '../../album/api/verses'
+import { getStartTimeForVerse } from '../../album/api/time'
+import { getSceneIndexForVerse } from '../../album/api/verses'
 import {
     getValidRoutingIndices,
     getPathForIndices
@@ -63,7 +63,7 @@ class RoutingContainer extends PureComponent {
                 selectedAnnotationIndex,
                 routingParamString
             }),
-            routingSceneIndex = getSceneIndexForVerseIndex(
+            routingSceneIndex = getSceneIndexForVerse(
                 routingSongIndex,
                 routingVerseIndex
             )
@@ -75,7 +75,7 @@ class RoutingContainer extends PureComponent {
             routingAnnotationIndex !== selectedAnnotationIndex
         ) {
 
-            const selectedTime = getStartTimeForVerseIndex(
+            const selectedTime = getStartTimeForVerse(
                 routingSongIndex,
                 routingVerseIndex
             )

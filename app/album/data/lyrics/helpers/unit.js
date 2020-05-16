@@ -38,7 +38,9 @@ export const addUnitVerseIndices = (song, finalSong) => {
 export const addIndexedVerses = (song, finalSong) => {
     const { lyricUnits } = song
 
-    const indexedVerses = []
+    const
+        indexedVerses = [],
+        verseStartTimes = []
     let verseIndex = 0
 
     lyricUnits.forEach(unit => {
@@ -47,11 +49,18 @@ export const addIndexedVerses = (song, finalSong) => {
             // Also tell verse its index.
             verse.verseIndex = verseIndex
             indexedVerses.push(verse)
+
+            verseStartTimes.push(verse.time)
             verseIndex++
         })
     })
 
     song.indexedVerses = indexedVerses
     finalSong.indexedVerses = indexedVerses
-    return indexedVerses
+    finalSong.verseStartTimes = verseStartTimes
+
+    return {
+        indexedVerses,
+        verseStartTimes
+    }
 }

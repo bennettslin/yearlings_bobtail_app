@@ -13,7 +13,7 @@ import PlayerListener from './Listener'
 import TimeVerseDispatcher from '../../../dispatchers/TimeVerseDispatcher'
 import Player from './Player'
 
-import { getStartTimeForVerseIndex } from '../../../album/api/time'
+import { getStartTimeForVerse } from '../../../album/api/time'
 import { populateRefs } from '../../../helpers/ref'
 import { getPlayersCanPlayThroughFromBitNumber } from '../../../helpers/player'
 
@@ -136,7 +136,7 @@ class PlayerManager extends PureComponent {
         nextVerseIndex
 
     }) => {
-        const nextCurrentTime = getStartTimeForVerseIndex(
+        const nextCurrentTime = getStartTimeForVerse(
             nextSongIndex,
             nextVerseIndex
         )
@@ -196,7 +196,7 @@ class PlayerManager extends PureComponent {
         return songIndex === selectedSongIndex ?
 
             // If player is selected, get current time from selected verse.
-            getStartTimeForVerseIndex(
+            getStartTimeForVerse(
                 selectedSongIndex,
                 selectedVerseIndex
 

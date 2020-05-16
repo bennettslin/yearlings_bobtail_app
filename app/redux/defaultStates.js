@@ -18,8 +18,8 @@ import {
 } from '../scene/sky/keys'
 
 import { getScene } from '../album/api/scenes'
-import { getStartTimeForVerseIndex } from '../album/api/time'
-import { getSceneIndexForVerseIndex } from '../album/api/verses'
+import { getStartTimeForVerse } from '../album/api/time'
+import { getSceneIndexForVerse } from '../album/api/verses'
 import {
     getSongIsLogue,
     getBookForSongIndex
@@ -88,7 +88,7 @@ const
         storedSongIndex,
         storedAnnotationIndex
     ),
-    storedSceneIndex = getSceneIndexForVerseIndex(
+    storedSceneIndex = getSceneIndexForVerse(
         storedSongIndex,
         storedVerseIndex
     )
@@ -245,7 +245,7 @@ export const SCROLL_OVERLAY_DEFAULTS = {
     lyricScrollTop: 0
 }
 
-const storedTime = getStartTimeForVerseIndex(
+const storedTime = getStartTimeForVerse(
     storedSongIndex,
     storedVerseIndex
 )

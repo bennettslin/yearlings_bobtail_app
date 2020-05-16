@@ -23,21 +23,20 @@ export const getSongVersesCount = (songIndex) => {
     return getSongVerseConfigs(songIndex).length
 }
 
-export const getSceneIndexForVerseIndex = (songIndex, verseIndex) => {
+export const getSceneIndexForVerse = (songIndex, verseIndex) => {
     const verseConfigs = getSongVerseConfigs(songIndex)
     return verseConfigs.length ?
         verseConfigs[verseIndex].sceneIndex :
         0
 }
 
-export const getStanzaIndexForVerseIndex = (songIndex, stanzaIndex) => {
+export const getStanzaIndexForVerse = (songIndex, verseIndex) => {
     const { verseStanzaIndicesList } = getFinalSong(songIndex)
-    return verseStanzaIndicesList[stanzaIndex]
+    return verseStanzaIndicesList[verseIndex]
 }
 
-export const getVerseDurationForVerseIndex = (songIndex, verseIndex) => {
-    const verseConfigs = getSongVerseConfigs(songIndex)
-    return verseConfigs.length ?
-        verseConfigs[verseIndex].verseDuration :
-        0
+export const getDurationForVerse = (songIndex, verseIndex) => {
+    const { verseDurations } = getFinalSong(songIndex)
+    return verseDurations[verseIndex]
 }
+

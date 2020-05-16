@@ -13,7 +13,8 @@ const _initialiseVerseConfigs = (indexedVerses) => {
     return verseConfigs
 }
 
-const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
+const _addVerseDurations = (verseConfigs, { totalTime }, finalSong) => {
+    const verseDurations = []
 
     verseConfigs.forEach((verseConfig, verseIndex) => {
         const { verseStartTime } = verseConfig
@@ -28,13 +29,15 @@ const _addDurationsToVerseConfigs = (verseConfigs, { totalTime }) => {
             nextTime = totalTime
         }
 
-        verseConfig.verseDuration = nextTime - verseStartTime
+        verseDurations.push(nextTime - verseStartTime)
     })
+
+    finalSong.verseDurations = verseDurations
 }
 
-export const addVerseConfigs = (song, indexedVerses, finalSong) => {
+export const addVerseMetadata = (song, indexedVerses, finalSong) => {
     const verseConfigs = _initialiseVerseConfigs(indexedVerses)
-    _addDurationsToVerseConfigs(verseConfigs, song)
+    _addVerseDurations(verseConfigs, song, finalSong)
     song.verseConfigs = verseConfigs
     finalSong.verseConfigs = verseConfigs
 }

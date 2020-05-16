@@ -15,7 +15,7 @@ import SongBannerTitle from './Title'
 import { getSongIsLogue } from '../../../album/api/songs'
 import {
     getSongTotalTime,
-    getStartTimeForVerseIndex
+    getStartTimeForVerse
 } from '../../../album/api/time'
 
 import { getClientX, getElementRatioForClientX } from '../../../helpers/dom'
@@ -214,7 +214,7 @@ class SongBanner extends PureComponent {
 
         this.props.updateBannerStore({
             bannerHoverVerseIndex,
-            bannerHoverTime: getStartTimeForVerseIndex(
+            bannerHoverTime: getStartTimeForVerse(
                 selectedSongIndex,
                 bannerHoverVerseIndex
             )

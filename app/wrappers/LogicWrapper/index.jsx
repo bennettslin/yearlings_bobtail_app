@@ -8,7 +8,7 @@ import {
     getPrefixedDotLetterClassNames
 } from '../../helpers/dot'
 import { getCursorIndex } from '../../helpers/verse'
-import { getStanzaIndexForVerseIndex } from '../../album/api/verses'
+import { getStanzaIndexForVerse } from '../../album/api/verses'
 
 class LogicWrapper extends PureComponent {
 
@@ -60,7 +60,7 @@ class LogicWrapper extends PureComponent {
                 lyricVerseIndex
             ),
 
-            cursorStanzaIndex = getStanzaIndexForVerseIndex(
+            cursorStanzaIndex = getStanzaIndexForVerse(
                 lyricSongIndex, cursorVerseIndex
             ),
 

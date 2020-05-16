@@ -1,9 +1,13 @@
 import React, { memo } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import { connect } from 'react-redux'
 
-import { getStanzaVerseConfigs } from '../../../../../album/api/stanzas'
+import { getStanzaVerseIndices } from '../../../../../album/api/stanzas'
+import {
+    getStartTimeForStanza,
+    getStartTimeForVerse
+} from '../../../../../album/api/time'
+import { getDurationForVerse } from '../../../../../album/api/verses'
 
 import VerseHoc from '../../../../Verse/Hoc'
 import SliderVerse from './Verse'
@@ -30,40 +34,40 @@ const SliderVerses = ({
 }) => {
 
     const
-        stanzaVerseConfigs = getStanzaVerseConfigs(
+        stanzaVerseIndices = getStanzaVerseIndices(
             lyricSongIndex,
             stanzaIndex
         ),
-        stanzaFirstVerseIndex = stanzaVerseConfigs[0].verseIndex,
-        stanzaStartTime = stanzaVerseConfigs[0].verseStartTime
+        stanzaStartTime = getStartTimeForStanza(lyricSongIndex, stanzaIndex)
 
     return (
-        <div className={cx(
-            'SliderVerses'
-        )}>
-            {stanzaVerseConfigs.map((verseConfig, index) => {
+        <div {...{ className: 'SliderVerses' }}>
+            {stanzaVerseIndices.map((verseIndex, index) => {
                 /**
                  * Slider verses are not concerned with their times
                  * respective to the song's total time. They only know
                  * their times relative to the stanza.
                  */
                 const
-                    {
-                        verseStartTime,
-                        verseDuration
-                    } = verseConfig,
+                    verseStartTime = getStartTimeForVerse(
+                        lyricSongIndex,
+                        verseIndex
+                    ),
+                    verseDuration = getDurationForVerse(
+                        lyricSongIndex,
+                        verseIndex
+                    ),
 
                     relativeStartTime = verseStartTime - stanzaStartTime,
-
                     isLastVerseOfStanza =
-                        index === stanzaVerseConfigs.length - 1
+                        index === stanzaVerseIndices.length - 1
 
                 return (
                     <VerseHoc
                         inSlider
                         {...{
                             key: index,
-                            verseIndex: stanzaFirstVerseIndex + index,
+                            verseIndex,
                             isLastVerseOfStanza,
                             relativeStartTime,
                             verseDuration,

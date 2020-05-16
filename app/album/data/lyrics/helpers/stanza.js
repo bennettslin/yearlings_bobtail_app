@@ -1,5 +1,9 @@
-const _initialiseStanzaData = (song, unitVerseIndicesList, finalSong) => {
-    const { lyricUnits } = song
+const _addInitialStanzaMetadata = ({
+    lyricUnits,
+    unitVerseIndicesList,
+    finalSong
+
+}) => {
     const
         stanzaFormTypes = [],
         stanzaUnitIndicesList = [],
@@ -58,14 +62,13 @@ const _initialiseStanzaData = (song, unitVerseIndicesList, finalSong) => {
     return stanzaVerseIndicesList
 }
 
-const _addEndTimesToStanzaData = (
+const _addStanzaEndTimes = ({
     stanzaVerseIndicesList,
-    {
-        verseConfigs,
-        totalTime
-    },
+    totalTime,
+    verseStartTimes,
     finalSong
-) => {
+
+}) => {
     const endTimes = []
 
     stanzaVerseIndicesList.forEach((verseIndices, stanzaIndex) => {
@@ -77,9 +80,7 @@ const _addEndTimesToStanzaData = (
 
                 // If it is followed by another stanza...
                 if (stanzaIndex < stanzaVerseIndicesList.length - 1) {
-                    endTime =
-                        verseConfigs[verseIndex + 1]
-                            .verseStartTime
+                    endTime = verseStartTimes[verseIndex + 1]
 
                 // If it is the last stanza...
                 } else {
@@ -94,13 +95,28 @@ const _addEndTimesToStanzaData = (
     finalSong.stanzaEndTimes = endTimes
 }
 
-export const addStanzaData = (song, unitVerseIndicesList, finalSong) => {
+export const addStanzaMetadata = ({
+    lyricUnits,
+    totalTime,
+    unitVerseIndicesList,
+    verseStartTimes,
+    finalSong
+}) => {
     /**
      * These configs let the audio slider know the relative width of each unit
      * based on its time length.
      */
     const stanzaVerseIndicesList =
-        _initialiseStanzaData(song, unitVerseIndicesList, finalSong)
+        _addInitialStanzaMetadata({
+            lyricUnits,
+            unitVerseIndicesList,
+            finalSong
+        })
 
-    _addEndTimesToStanzaData(stanzaVerseIndicesList, song, finalSong)
+    _addStanzaEndTimes({
+        stanzaVerseIndicesList,
+        totalTime,
+        verseStartTimes,
+        finalSong
+    })
 }

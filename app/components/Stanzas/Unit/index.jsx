@@ -93,7 +93,10 @@ class Unit extends PureComponent {
                 className={cx(
                     // "Parent of verse index."
                     getParentOfVerseClassNamesForIndices({
-                        entities: getUnitVerseIndices(lyricSongIndex, unitIndex)
+                        entities: getUnitVerseIndices(
+                            lyricSongIndex,
+                            unitIndex
+                        )
                     }),
 
                     'Unit',

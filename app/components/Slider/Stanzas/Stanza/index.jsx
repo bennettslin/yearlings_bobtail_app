@@ -5,10 +5,12 @@ import { connect } from 'react-redux'
 
 import {
     getStanzaFormType,
-    getStanzaEndTime,
-    getStanzaVerseConfigs
+    getStanzaEndTime
 } from '../../../../album/api/stanzas'
-import { getSongTotalTime } from '../../../../album/api/time'
+import {
+    getSongTotalTime,
+    getStartTimeForStanza
+} from '../../../../album/api/time'
 
 import SliderVerses from './Verses'
 
@@ -39,11 +41,10 @@ class SliderStanza extends PureComponent {
             } = this.props,
             stanzaEndTime = getStanzaEndTime(lyricSongIndex, stanzaIndex),
             stanzaFormType = getStanzaFormType(lyricSongIndex, stanzaIndex),
-            stanzaVerseConfigs = getStanzaVerseConfigs(
+            stanzaStartTime = getStartTimeForStanza(
                 lyricSongIndex,
                 stanzaIndex
             ),
-            { verseStartTime: stanzaStartTime } = stanzaVerseConfigs[0],
 
             songTotalTime = getSongTotalTime(lyricSongIndex),
 

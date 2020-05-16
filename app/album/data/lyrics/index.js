@@ -25,14 +25,14 @@ import {
     addOverview,
     addIsDoublespeaker
 } from './helpers/song'
-import { addVerseConfigs } from './helpers/verse'
+import { addVerseMetadata } from './helpers/verse'
 import { addFormTypeIndices } from './helpers/formType'
 import { addHasSideCard } from './helpers/sideCard'
 import {
     addUnitVerseIndices,
     addIndexedVerses
 } from './helpers/unit'
-import { addStanzaData } from './helpers/stanza'
+import { addStanzaMetadata } from './helpers/stanza'
 import {
     addSceneConfigs,
     addSceneIndicesToVerseConfigs
@@ -78,7 +78,11 @@ export const finalSongs = []
 
 songs.forEach(song => {
 
-    const finalSong = {}
+    const {
+            lyricUnits,
+            totalTime
+        } = song,
+        finalSong = {}
 
     addIsLogue(song, finalSong)
     addOverview(song, finalSong)
@@ -92,14 +96,22 @@ songs.forEach(song => {
             addUnitVerseIndices(song, finalSong)
 
         // TODO: Still need to remove annotations from verses.
-        const indexedVerses =
-            addIndexedVerses(song, finalSong)
+        const {
+            indexedVerses,
+            verseStartTimes
+        } = addIndexedVerses(song, finalSong)
 
         // TODO
-        addVerseConfigs(song, indexedVerses, finalSong)
+        addVerseMetadata(song, indexedVerses, finalSong)
 
-        // TODO
-        addStanzaData(song, unitVerseIndicesList, finalSong)
+        // TODO: Clean up end times method after verse configs.
+        addStanzaMetadata({
+            lyricUnits,
+            totalTime,
+            unitVerseIndicesList,
+            verseStartTimes,
+            finalSong
+        })
         addSceneConfigs(song)
 
         // This needs to come after verse configs and scene configs.

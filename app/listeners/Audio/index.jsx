@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { updateSelectedStore } from '../../redux/selected/action'
 
-import { getStartTimeForVerseIndex } from '../../album/api/time'
+import { getStartTimeForVerse } from '../../album/api/time'
 
 class AudioListener extends PureComponent {
 
@@ -33,7 +33,7 @@ class AudioListener extends PureComponent {
                     selectedVerseIndex
                 } = this.props,
 
-                selectedTime = getStartTimeForVerseIndex(
+                selectedTime = getStartTimeForVerse(
                     selectedSongIndex,
                     selectedVerseIndex
                 )

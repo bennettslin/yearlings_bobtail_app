@@ -6,8 +6,8 @@ import { updateSliderStore } from '../../redux/slider/action'
 
 import VerseDispatcher from '../VerseDispatcher'
 
-import { getStartTimeForVerseIndex } from '../../album/api/time'
-import { getSceneIndexForVerseIndex } from '../../album/api/verses'
+import { getStartTimeForVerse } from '../../album/api/time'
+import { getSceneIndexForVerse } from '../../album/api/verses'
 
 import { getClientX, getElementRatioForClientX } from '../../helpers/dom'
 import { populateRefs } from '../../helpers/ref'
@@ -81,11 +81,11 @@ class SliderTouchDispatcher extends PureComponent {
             sliderLeft,
             sliderWidth,
             sliderVerseIndex,
-            sliderSceneIndex: getSceneIndexForVerseIndex(
+            sliderSceneIndex: getSceneIndexForVerse(
                 selectedSongIndex,
                 sliderVerseIndex
             ),
-            sliderTime: getStartTimeForVerseIndex(
+            sliderTime: getStartTimeForVerse(
                 selectedSongIndex,
                 sliderVerseIndex
             )
@@ -140,11 +140,11 @@ class SliderTouchDispatcher extends PureComponent {
         if (sliderVerseIndex !== prevVerseIndex) {
             this.props.updateSliderStore({
                 sliderVerseIndex,
-                sliderSceneIndex: getSceneIndexForVerseIndex(
+                sliderSceneIndex: getSceneIndexForVerse(
                     selectedSongIndex,
                     sliderVerseIndex
                 ),
-                sliderTime: getStartTimeForVerseIndex(
+                sliderTime: getStartTimeForVerse(
                     selectedSongIndex,
                     sliderVerseIndex
                 )

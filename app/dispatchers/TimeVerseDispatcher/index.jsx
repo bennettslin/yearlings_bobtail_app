@@ -8,7 +8,7 @@ import { updateScrollLyricStore } from '../../redux/scrollLyric/action'
 import { updateSelectedStore } from '../../redux/selected/action'
 import { updateVerseBarsStore } from '../../redux/verseBars/action'
 
-import { getSceneIndexForVerseIndex } from '../../album/api/verses'
+import { getSceneIndexForVerse } from '../../album/api/verses'
 
 class TimeVerseDispatcher extends PureComponent {
 
@@ -38,7 +38,7 @@ class TimeVerseDispatcher extends PureComponent {
         // This is only ever called by the player.
 
         const { selectedSongIndex } = this.props,
-            selectedSceneIndex = getSceneIndexForVerseIndex(
+            selectedSceneIndex = getSceneIndexForVerse(
                 selectedSongIndex,
                 nextVerseIndex
             )

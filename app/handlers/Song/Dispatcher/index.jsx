@@ -13,8 +13,8 @@ import { updateAudioStore } from '../../../redux/audio/action'
 import { updateSelectedStore } from '../../../redux/selected/action'
 import { updateToggleStore } from '../../../redux/toggle/action'
 
-import { getStartTimeForVerseIndex } from '../../../album/api/time'
-import { getSceneIndexForVerseIndex } from '../../../album/api/verses'
+import { getStartTimeForVerse } from '../../../album/api/time'
+import { getSceneIndexForVerse } from '../../../album/api/verses'
 
 import { getSongsAndLoguesCount } from '../../../album/api/songs'
 
@@ -69,11 +69,11 @@ class SongDispatcher extends PureComponent {
         })
 
         const
-            selectedSceneIndex = getSceneIndexForVerseIndex(
+            selectedSceneIndex = getSceneIndexForVerse(
                 selectedSongIndex,
                 selectedVerseIndex
             ),
-            selectedTime = getStartTimeForVerseIndex(
+            selectedTime = getStartTimeForVerse(
                 selectedSongIndex,
                 selectedVerseIndex
             )

@@ -34,6 +34,11 @@ export const getStanzaUnitIndices = (songIndex, stanzaIndex) => {
     return stanzaUnitIndicesList[stanzaIndex]
 }
 
+export const getStanzaVerseIndices = (songIndex, stanzaIndex) => {
+    const { stanzaVerseIndicesList } = getFinalSong(songIndex)
+    return stanzaVerseIndicesList[stanzaIndex]
+}
+
 export const getStanzaEndTime = (songIndex, stanzaIndex) => {
     const { stanzaEndTimes } = getFinalSong(songIndex)
     return stanzaEndTimes[stanzaIndex]
