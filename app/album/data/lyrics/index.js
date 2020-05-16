@@ -87,6 +87,8 @@ songs.forEach(song => {
         addHasSideCardStatus(song, finalSong)
         addFormTypeIndices(song, finalSong)
 
+        // TODO: Add unit verse indices here. Used by both data and components.
+
         // TODO
         addIndexedVerses(song, finalSong)
 

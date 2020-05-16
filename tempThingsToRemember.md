@@ -21,14 +21,7 @@ Rethink some dot category shapes?
 * lyricUnits
     * TODO
 
-* songSceneConfigs
-    * minimal [x]
-
-* stanzaData
-    * minimal [x]
-
-* songVerseConfigs
-    * minimal [x]
+* Need unitVerseIndices
 
 # Can be completely separate
     * times
