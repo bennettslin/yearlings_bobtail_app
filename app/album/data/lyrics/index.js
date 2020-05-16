@@ -25,7 +25,7 @@ import {
     addOverview,
     addIsDoublespeaker
 } from './helpers/song'
-import { addVerseMetadata } from './helpers/verse'
+import { addVerseDurations } from './helpers/verse'
 import { addFormTypeIndices } from './helpers/formType'
 import { addHasSideCard } from './helpers/sideCard'
 import {
@@ -93,13 +93,13 @@ songs.forEach(song => {
             addUnitVerseIndices(song, finalSong)
 
         // TODO: Still need to remove annotations from verses.
-        const {
-            indexedVerses,
-            verseStartTimes
-        } = addIndexedVerses(song, finalSong)
+        const { verseStartTimes } = addIndexedVerses(song, finalSong)
 
-        // TODO: Get rid of verse configs after scene metadata.
-        addVerseMetadata(song, indexedVerses, finalSong)
+        addVerseDurations({
+            totalTime,
+            verseStartTimes,
+            finalSong
+        })
 
         addStanzaMetadata({
             lyricUnits,

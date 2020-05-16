@@ -55,7 +55,6 @@ export const addIndexedVerses = (song, finalSong) => {
         })
     })
 
-    song.indexedVerses = indexedVerses
     finalSong.indexedVerses = indexedVerses
     finalSong.verseStartTimes = verseStartTimes
 
