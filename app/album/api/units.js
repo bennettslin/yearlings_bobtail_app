@@ -1,4 +1,4 @@
-import { getSong } from '../../album/api/songs'
+import { getSong } from './songs'
 
 export const getUnit = (songIndex, unitIndex) => {
     const { lyricUnits } = getSong(songIndex)

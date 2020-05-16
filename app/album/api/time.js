@@ -1,5 +1,5 @@
-import { getSong } from '../../album/api/songs'
-import { getSongVerseConfigs } from '../../album/api/verses'
+import { getSong } from './songs'
+import { getSongVerseConfigs } from './verses'
 
 export const getSongTotalTime = (songIndex) => {
     const { totalTime } = getSong(songIndex)
