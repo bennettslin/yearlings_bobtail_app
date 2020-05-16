@@ -1,5 +1,5 @@
 import { getSong } from './songs'
-import albumScenes from '../../album/scenes'
+import albumScenes from '../data/scenes'
 
 import { DEFAULT_STAGE_KEY } from '../../constants/scene/scenes'
 import {

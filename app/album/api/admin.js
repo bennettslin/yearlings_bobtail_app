@@ -1,4 +1,4 @@
-import album from '../../album'
+import album from '..'
 import { getAnnotation } from './annotations'
 
 const getAnnotationIndexForInterval = ({

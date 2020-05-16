@@ -7,7 +7,7 @@ import CSSTransition from 'react-transition-group/CSSTransition'
 import InlineSvg from '../../../modules/InlineSvg'
 import tipsHand from '../../../../assets/svgs/app/tips/tipsHand'
 
-import { getSongTipType } from '../../../album/tips'
+import { getSongTipType } from '../../../album/data/tips'
 import { SHOWN } from '../../../constants/options'
 import {
     WORMHOLES,

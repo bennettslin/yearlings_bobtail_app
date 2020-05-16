@@ -1,14 +1,3 @@
-import songs from './songs'
-
-import { addGlobalAnnotationIndices } from './songs/helpers/admin'
-import { addWormholeStuff } from './songs/helpers/wormhole'
-
-const album = { songs }
-
-addWormholeStuff(album)
-addGlobalAnnotationIndices(album)
-
-// FIXME: Remove.
-global.album = album
+import album from './data'
 
 export default album

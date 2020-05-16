@@ -7,7 +7,7 @@ import cx from 'classnames'
 import TipsToggle from './Toggle'
 import Texts from '../Texts'
 
-import { getSongTipText } from '../../album/tips'
+import { getSongTipText } from '../../album/data/tips'
 
 const mapStateToProps = ({
     lyricStore: { lyricSongIndex }

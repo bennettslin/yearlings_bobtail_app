@@ -33,3 +33,8 @@ Rethink some dot category shapes?
 # Can be completely separate
     * times
     * tips
+
+* songs
+    * lyrics
+    * scenes
+    * tips
