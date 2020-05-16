@@ -11,13 +11,7 @@ const _addStanzaIndexToVerseConfig = ({
 
 const _initialiseStanzaTimes = (song) => {
     const { lyricUnits } = song
-
-    if (!lyricUnits) {
-        return null
-    }
-
     const stanzaTimes = []
-
     let stanzaIndex
 
     lyricUnits.forEach((unit, unitIndex) => {
@@ -102,18 +96,12 @@ const _addEndTimesToStanzaTimes = (
     })
 }
 
-export const addStanzaTimes = (song) => {
+export const addStanzaTimes = (song, finalSong) => {
     /**
      * These configs let the audio slider know the relative width of each unit
      * based on its time length.
      */
-    // Initialise the stanza configs.
     const stanzaTimes = _initialiseStanzaTimes(song)
-
-    if (stanzaTimes) {
-        // Add verse durations.
-        _addEndTimesToStanzaTimes(stanzaTimes, song)
-
-        return stanzaTimes
-    }
+    _addEndTimesToStanzaTimes(stanzaTimes, song)
+    finalSong.stanzaTimes = stanzaTimes
 }

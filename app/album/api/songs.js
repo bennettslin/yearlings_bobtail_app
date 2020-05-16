@@ -33,6 +33,14 @@ export const getSongTitle = ({
     return `${showIndex && !isLogue ? songIndex + '. ' : ''}${song.title}`
 }
 
+export const getSongOverview = (songIndex) => {
+    return finalAlbum.finalSongs[songIndex].overview
+}
+
+export const getSongHasSideCards = (songIndex) => {
+    return finalAlbum.finalSongs[songIndex].hasSideCards
+}
+
 export const getStartingIndexForBook = (bookIndex) => {
     const bookLength = getSongsNotLoguesCount() / 2
     return bookIndex * bookLength + 1

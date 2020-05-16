@@ -1,31 +1,31 @@
-export const addHasSideCardStatus = (song) => {
+export const addHasSideCardStatus = (song, finalSong) => {
     /**
      * Let app know that song has side stanzas. Only applies to "On a Golden
      * Cord" and "Uncanny Valley Boy."
      */
     const { lyricUnits } = song
+    let hasSideCards = false
 
-    if (lyricUnits) {
-        let songHasSideCards = false
+    lyricUnits.forEach(unit => {
+        const {
+                unitMap: {
+                    hasTopSideCard,
+                    hasBottomSideCard
+                }
+            } = unit,
 
-        lyricUnits.forEach(unit => {
-            const {
-                    unitMap: {
-                        hasTopSideCard,
-                        hasBottomSideCard
-                    }
-                } = unit,
+            unitHasSideCards = Boolean(
+                hasTopSideCard ||
+                hasBottomSideCard
+            )
 
-                unitHasSideCards = Boolean(
-                    hasTopSideCard || hasBottomSideCard
-                )
+        hasSideCards = unitHasSideCards || hasSideCards
+    })
 
-            songHasSideCards = unitHasSideCards || songHasSideCards
-        })
-
-        /**
-         * Tell song it has side stanzas, so ear button can be shown if needed.
-         */
-        song.hasSideCards = songHasSideCards
+    /**
+     * Tell song it has side stanzas so ear button can be shown if needed.
+     */
+    if (hasSideCards) {
+        finalSong.hasSideCards = true
     }
 }

@@ -19,7 +19,10 @@ import _17_VeganProclamation from './17_VeganProclamation'
 import _18_My100000thDream from './18_My100000thDream'
 import _19_Epilogue from './19_Epilogue'
 
-import { addSongIndices } from './helpers/song'
+import {
+    addSongIndices,
+    addOverview
+} from './helpers/song'
 import {
     addIndexedVerses,
     addVerseConfigs
@@ -75,15 +78,18 @@ songs.forEach(song => {
     const finalSong = {}
 
     if (!song.logue) {
+
+        addOverview(song, finalSong)
         addIndexedVerses(song)
 
         // This needs to come after indexed verses.
         addVerseConfigs(song)
-        addHasSideCardStatus(song)
-        finalSong.stanzaTypeIndices = addStanzaTypeIndices(song)
+
+        addHasSideCardStatus(song, finalSong)
+        addStanzaTypeIndices(song, finalSong)
 
         // This needs to come after verse configs.
-        finalSong.stanzaTimes = addStanzaTimes(song)
+        addStanzaTimes(song, finalSong)
         addSceneConfigs(song)
 
         // This needs to come after verse configs and scene configs.

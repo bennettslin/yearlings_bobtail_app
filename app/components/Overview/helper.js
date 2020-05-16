@@ -1,10 +1,3 @@
-import { getSong } from '../../album/api/songs'
-
-export const getSongOverview = (songIndex) => {
-    const song = getSong(songIndex)
-    return song ? song.overview : ''
-}
-
 export const getIsToggleInOverview = ({
     isPhoneWidth,
     isHeightlessLyric,

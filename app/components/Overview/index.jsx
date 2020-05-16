@@ -8,10 +8,8 @@ import cx from 'classnames'
 import Texts from '../Texts'
 import OverviewToggle from '../Main/OverviewToggle'
 
-import {
-    getSongOverview,
-    getIsToggleInOverview
-} from './helper'
+import { getSongOverview } from '../../album/api/songs'
+import { getIsToggleInOverview } from './helper'
 
 const mapStateToProps = ({
     viewportStore: { isPhoneWidth },

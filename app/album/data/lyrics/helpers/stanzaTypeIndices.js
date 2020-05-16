@@ -1,4 +1,4 @@
-export const addStanzaTypeIndices = (song) => {
+export const addStanzaTypeIndices = (song, finalSong) => {
     /**
      * Associate a type and index for each stanza, like verse, chorus, and so
      * forth.
@@ -55,5 +55,5 @@ export const addStanzaTypeIndices = (song) => {
         })
     }
 
-    return stanzaTypeIndices
+    finalSong.stanzaTypeIndices = stanzaTypeIndices
 }
